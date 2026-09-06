@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, ShieldCheck, Brain, Compass } from 'lucide-react'
+import { ArrowUpRight, ShieldCheck, Brain, Compass, BarChart2 } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
-const ICONS = [ShieldCheck, Brain, Compass]
+const ICONS = [ShieldCheck, Brain, Compass, BarChart2]
 
 export function AdvisoryTechStrip() {
   const t        = useTranslations('advisory')
@@ -58,7 +58,7 @@ export function AdvisoryTechStrip() {
         </div>
 
         {/* Pillars grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border border border-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-ag-border border border-ag-border">
           {pillarKeys.map((key, i) => {
             const pillar = pillars[key]
             const Icon   = ICONS[i] ?? ShieldCheck

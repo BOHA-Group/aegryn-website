@@ -268,7 +268,7 @@
     "cta": "Contact opnemen",
     "hero": {
       "title": "Begeleiden wat jij bouwt.",
-      "desc": "Wij begeleiden ondernemers en overnemers bij hun strategische beslissingen, technologische transformatie en M&A-operaties. Geen presentaties. Operationele expertise ten dienste van uw groei."
+      "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Strategie, technologie, M&A, board advisory: één gesprekspartner, van diagnose tot uitvoering."
     },
     "pillars": {
       "strategy": {
@@ -426,6 +426,29 @@
             "desc": "Asset-scheiding, extractie van bedrijfseenheden, transitional service agreements en IT-autonomisering."
           }
         ]
+      },
+      "board": {
+        "title": "Strategie & Board Advisory",
+        "desc": "Begeleiding van leidinggevenden, oprichters en bestuurders bij strategische beslissingen met hoge inzet. Governance, 3-5 jaar plannen, voorbereiding op overdracht.",
+        "dimensions": [
+          {
+            "label": "Governance & Board",
+            "desc": "Structurering van de raad van bestuur, onafhankelijke bestuurdersrollen, aandeelhoudersovereenkomsten."
+          },
+          {
+            "label": "Langetermijn strategisch plan",
+            "desc": "Visie op 3-5 jaar, prioritering, waarde-KPI’s."
+          },
+          {
+            "label": "Voorbereiding op overdracht",
+            "desc": "Documentatie, waardering, verkooproadmap."
+          },
+          {
+            "label": "Operating partner voor oprichters",
+            "desc": "Operationele ondersteuning van de oprichter tijdens kritieke fasen."
+          }
+        ],
+        "href": "/advisory/strategy"
       }
     },
     "network": {
@@ -639,27 +662,27 @@
   "missionSection": {
     "label": "Het Aegryn Model",
     "title": "Vijf geïntegreerde disciplines. Één standaard.",
-    "sub": "Elke discipline versterkt de andere. Dat is wat weinig groepen echt kunnen bieden.",
+    "sub": "Vijf disciplines die elkaar versterken. Dat is wat slechts weinig spelers echt kunnen aanbieden.",
     "items": [
       {
         "title": "ADVISEREN",
-        "desc": "Strategie-, tech- en M&A-advies. We stappen in wanneer beslissingen de koers van uw organisatie bepalen. Wij treden op als aanvulling op de financiële partners die ondernemers begeleiden. Waar financiering ophoudt, begint advies."
+        "desc": "Strategisch, organisatorisch en M&A-advies. We interveniëren wanneer beslissingen de koers van een organisatie bepalen. Geen aanbevelingen. Resultaten."
       },
       {
         "title": "BOUWEN",
-        "desc": "Duurzame digitale assets, tegen volledig eigendom van de klant. Ontworpen om de bedrijfswaarde te verhogen, niet om vervangen te worden."
+        "desc": "Duurzame digitale assets, vaste prijs, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten. TECHNOLOGISCHE ONAFHANKELIJKHEID."
       },
       {
         "title": "OVERDRAGEN",
-        "desc": "Tech-asset certificering en transactie. Een vertrouwelijk proces binnen een kring van gekwalificeerde kopers."
+        "desc": "Onafhankelijke CIFSO-certificering en asset-transacties. Een rigoureus protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie."
       },
       {
         "title": "REKRUTEREN",
-        "desc": "Executive-, tech- en innovatieprofielen. Van CTO tot Directeur-Generaal: we plaatsen de talenten die transformaties uitvoeren."
+        "desc": "Executive-, tech- en innovatieprofielen. Van CTO tot DG, we plaatsen de talenten die transformatie uitvoeren."
       },
       {
         "title": "INFORMEREN",
-        "desc": "Magazine, artikelen en marktintelligentie. We documenteren wat we observeren en wat we meemaken."
+        "desc": "Referentiekwartaalmagazine, artikelen en marktinformatie. We documenteren wat we observeren en beleven."
       }
     ]
   },
@@ -694,14 +717,14 @@
       {
         "key": "funds",
         "title": "Fondsen & Investeerders",
-        "desc": "Gekwalificeerde dealflow, certificering van activa, ondersteuning na acquisitie, werving van directieteams.\n\nWij werken in synergie met de financiële partners die ondernemers begeleiden : banken, fondsen, family offices : om in te grijpen waar financiering alleen niet meer volstaat."
+        "desc": "Gekwalificeerde dealflow, asset-certificering, ondersteuning na acquisitie, werving van managementteams.\n\nWe werken in synergie met de financiële partners van ondernemers: banken, investeringsfondsen, family offices. We interveniëren waar financiering alleen niet langer volstaat."
       }
     ]
   },
   "homeHybrid": {
     "label": "HYBRIDE MODEL",
     "title": "Wij bouwen.\nWij adviseren.\nWij overdragen.",
-    "desc": "Aegryn is geen kantoor. Geen investeringsbank. Geen incubator.\n\nHet is een operationele groep die eigen assets opbouwt, oprichters en leidinggevenden adviseert en complexe transacties structureert.\n\nAegryn treedt op waar de theorie ophoudt en de uitvoering begint."
+    "desc": "Aegryn is geen adviesbureau. Geen investeringsbank. Geen incubator.\n\nHet is een geïntegreerde adviesfirma die besluitvormers, oprichters en leidinggevenden helpt de waarde van hun organisatie te creëren, documenteren en realiseren.\n\nWe interveniëren waar theorie eindigt en uitvoering begint. Van strategie tot overdracht."
   },
   "whyapps": {
     "label": "Waarom Aegryn",
@@ -709,28 +732,28 @@
     "items": [
       {
         "num": "01",
-        "title": "ONAFHANKELIJKE CERTIFICERING",
-        "desc": "Elk Aegryn-grade-rapport wordt uitgegeven door onze gecertificeerde analisten, volgens een reproduceerbaar en traceerbaar protocol. Geen mening, een certificering."
+        "title": "EEN CERTIFICERING DIE AAN DE PRIJS VOORAFGAAT",
+        "desc": "Het CIFSO-protocol wordt vastgesteld vóór elke marktintroductie, vóór elke onderhandeling."
       },
       {
         "num": "02",
-        "title": "TRACEERBAARHEID BIJ OVERDRACHT",
-        "desc": "Elke asset-overdracht wordt nauwkeurig gedocumenteerd, staat van de codebase, datum, exact perimeter. Een blockchain-certificeringslaag zal deze traceerbaarheid op termijn versterken."
+        "title": "VIJF DISCIPLINES. ÉÉN FIRMA.",
+        "desc": "Advies, asset-opbouw, certificering, talent en marktinformatie. Vijf disciplines die elkaar versterken."
       },
       {
         "num": "03",
-        "title": "INSTITUTIONEEL DEPOT",
-        "desc": "10% van de transactieprijs wordt bij ondertekening van de Hoofdovereenkomst op een bankrekening gestort. De verkoper is beschermd. De koper is gebonden. Aegryn raakt de fondsen nooit aan."
+        "title": "VERANKERD IN ZWITSERLAND. ACTIEF IN EUROPA.",
+        "desc": "Zwitsers recht regelt elk mandaat. Discretie is structureel."
       },
       {
         "num": "04",
-        "title": "GESLOTEN KRING",
-        "desc": "Geen asset is openbaar zichtbaar voordat het de grade heeft doorstaan. Geen koper krijgt toegang tot de catalogus zonder bewijs van capaciteit. Discretie is structureel, niet optioneel."
+        "title": "TECHNOLOGISCHE ONAFHANKELIJKHEID",
+        "desc": "Onze assets zijn ontworpen met volledig eigendom van de klant, inzetbaar op elke infrastructuur."
       },
       {
         "num": "05",
-        "title": "EUROPESE REFERENTIE",
-        "desc": "Verankerd in Zwitserland, actief in Europa. Onze transactiesessies, ons kwartaalrapport over de markt en onze historische catalogus bouwen de standaard die de Europese tech-M&A-markt verwachtte."
+        "title": "REFERENTIEKWARTAALMAGAZINE",
+        "desc": "We documenteren de markt die we beleven. Echte transacties, multiples per verticaal, oprichtersportretten. Vier edities per jaar."
       }
     ]
   },
@@ -1491,14 +1514,14 @@
     "dataProtection": "Gegevensbeschermingsverklaring",
     "neediuLegal": "neediu is een geregistreerd handelsmerk van Aegryn. Alle rechten voorbehouden.",
     "tagline": "CERTIFIED TO TRANSACT.",
-    "swissTagline": "Onafhankelijke Zwitserse tech groep. Advisory, Transacties, Assets.",
+    "swissTagline": "Adviesfirma, verankerd in Zwitserland. Strategie, Transacties, Assets.",
     "navLabel": "Aegryn",
     "companyLabel": "Bedrijf",
     "servicesLabel": "Diensten",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advies",
-    "advisoryDesc": "Bedrijfsstrategie, tech en M&A-advies. Één partner voor de structurering, verkoop of overname van een digitaal asset.",
+    "advisoryDesc": "Bedrijfsstrategie, organisatorisch advies en M&A. Één gesprekspartner voor het structureren, ontwikkelen of verkopen van uw organisatie.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",
@@ -1516,8 +1539,8 @@
     "col1Transact": "M&A-transactie",
     "col2Title": "Onze oplossingen",
     "col2Subblink": "Contractintelligentie",
-    "col2Code": "Digital Trust",
-    "col2Grade": "CIFS-certificering",
+    "col2Code": "Blockchain-certificering",
+    "col2Grade": "CIFSO-certificering",
     "col2DataRoom": "Dataruimte",
     "col2ViewAll": "Onze portfolio",
     "col3Title": "Onze overtuigingen",
@@ -3626,35 +3649,35 @@
   },
   "gradeStrip": {
     "label": "Certificeringssysteem",
-    "title": "Geen cijfer.\nEen certificering.",
-    "desc": "Er is een fundamenteel verschil tussen een cijfer geven en certificeren. Aegryn certificeert via een onafhankelijk, reproduceerbaar en traceerbaar protocol.",
+    "title": "Vijf niveaus. Één protocol. CIFSO v4.0.",
+    "desc": "Het CIFSO v4.0-protocol certificeert vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie. Reproduceerbaar, traceerbaar, definitief.",
     "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
-    "cta": "Lees de volledige methodologie",
+    "cta": "Methodologie ontdekken",
     "grades": [
       {
         "grade": "★",
         "label": "Uitzonderlijk",
-        "desc": "Topkwaliteit asset. Onberispelijk IP, uitzonderlijke statistieken, gecertificeerde beveiliging. < 5% van gecertificeerde assets."
+        "desc": "Absolute excellentie op alle 5 CIFSO-dimensies. Minder dan 5% van gecertificeerde assets."
       },
       {
         "grade": "AAA",
         "label": "Uitstekend",
-        "desc": "Hoogwaardig asset op alle dimensies. Slechts kleine optimalisatiepunten. Zeer liquide."
+        "desc": "Hoge kwaliteit op alle dimensies. Enkele kleinere optimalisatiepunten."
       },
       {
         "grade": "AA",
         "label": "Zeer goed",
-        "desc": "Solide asset met gedocumenteerde en gekwantificeerde voorbehouden. Aangepaste waardering. Onvoorwaardelijk aanbevolen."
+        "desc": "Solide asset met gedocumenteerde en gekwantificeerde reserves."
       },
       {
         "grade": "A",
         "label": "Goed",
-        "desc": "Levensvatbaar asset met een of meer significante voorbehouden. Saneringsplan geleverd."
+        "desc": "Levensvatbaar asset met een of meer significante voorbehouden."
       },
       {
         "grade": "B",
-        "label": "Correct",
-        "desc": "Advies aanbevolen vóór transactie. Niet in aanmerking voor de belangrijkste Aegryn-sessies."
+        "label": "Voldoende",
+        "desc": "Advies aanbevolen voor transactie."
       }
     ]
   },
@@ -3718,14 +3741,14 @@
     "magDesc": "Het magazine voor Europese tech-oprichters en de kopers die hen in de gaten houden. Echte transacties ontcijferd, marktdata, ondernemersportretten, multiples per verticaal en het leven van wie iets bouwt dat ertoe doet.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
-    "label": "Artikelen",
-    "title": "De Europese tech M&A-markt.\nDoor degenen die het doen.",
-    "article1Title": "Stand van de Europese tech M&A-markt, Q2 2026",
-    "article1Cat": "Marktrapport",
-    "article2Title": "Wat maakt een tech-asset echt certificeerbaar?",
-    "article2Cat": "Gids voor verkopers",
-    "article3Title": "Hoe PE-kopers een SaaS in 2026 beoordelen",
-    "article3Cat": "Gids voor kopers",
+    "label": "Perspectieven",
+    "title": "De markt, door degenen die hem bedienen.",
+    "article1Title": "Bedrijfswaardering in 2026: wat er echt toe doet",
+    "article1Cat": "Strategie & Waardering",
+    "article2Title": "CIFSO v4.0: waarom de dimensie Organisatie alles verandert",
+    "article2Cat": "Certificering",
+    "article3Title": "Een kmo overdragen in Zwitserland: 7 hefbomen voor een succesvolle verkoop",
+    "article3Cat": "M&A-overdracht",
     "cta": "Bekijk alle artikelen",
     "readMore": "Artikel lezen"
   },
@@ -3784,24 +3807,24 @@
     "label": "De markt in cijfers, 2026",
     "stats": [
       {
-        "value": "+42%",
-        "label": "Groei tech-M&A Europa 2025–2026",
-        "source": "Synergy AI 2026"
-      },
-      {
-        "value": "€12Mrd",
-        "label": "Getransageerd volume SME-tech Q1 2026",
-        "source": "Synergy AI 2026"
-      },
-      {
-        "value": "< 30 dagen",
-        "label": "Gemiddelde transactieduur gecertificeerde assets",
+        "value": "3,1x ARR",
+        "label": "Mediaan privaat SaaS-multiple Europa, Q1 2026",
         "source": "Aventis Advisors"
       },
       {
-        "value": "68%",
-        "label": "Deals zonder openbare aanbesteding",
-        "source": "Aegryn | 2026"
+        "value": "+38%",
+        "label": "M&A-volumegroei MKB tech FR-CH 2025",
+        "source": "Aegryn Research 2026"
+      },
+      {
+        "value": "< 25%",
+        "label": "Aegryn-certificeringspercentage: strengheid toegepast",
+        "source": "Aegryn 2026"
+      },
+      {
+        "value": "72 dagen",
+        "label": "Mediaan Aegryn-sluitingstijd (mandaat tot ondertekening)",
+        "source": "Aegryn 2026"
       }
     ]
   },
@@ -4478,15 +4501,15 @@
   "transactNarrative": {
     "label": "M&A Transactions",
     "title": "Certification changes the conversation.\nThe transaction follows.",
-    "desc": "Aegryn certifies tech assets according to an independent protocol across four dimensions: code, IP, finance, security. Certified assets enter a confidential off-market disposal process, between documented sellers and pre-qualified buyers.\n\nThis is not a listing. This is not an auction. This is a market standard.",
+    "desc": "Aegryn certificeert organisaties onder het CIFSO v4.0-protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie.\n\nGecertificeerde assets treden toe tot een vertrouwelijk off-market overdrachtsproces, tussen gedocumenteerde verkopers en voorgekwalificeerde kopers. Geen listing. Geen veiling. Een marktstandaard.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptance rate of submitted assets",
     "stat2Val": "60d max",
     "stat2Label": "Exclusive seller mandate",
     "stat3Val": "100%",
     "stat3Label": "Pre-qualified buyers",
-    "ctaSell": "Submit an asset for certification",
-    "ctaBuy": "Access the buyer circle",
+    "ctaSell": "Een asset overdragen",
+    "ctaBuy": "Koper worden",
     "stat4Val": "Switzerland",
     "stat4Label": "Institutional anchor"
   },
@@ -7224,9 +7247,10 @@
     "title": "Volledige IP-eigendom. Certificeringsklaar.",
     "chip1": "VOLLEDIGE IP-EIGENDOM KLANT",
     "chip2": "CERTIFICERINGSKLAAR",
-    "chip3": "NUL LEVERANCIERSAFHANKELIJKHEID",
+    "chip3": "TECHNOLOGISCHE ONAFHANKELIJKHEID",
     "chip4": "CERTIFICEERBARE MAATCODE",
-    "cta": "See asset engineering"
+    "cta": "See asset engineering",
+    "chip5": "BUILT TO LAST"
   },
   "techStack": {
     "label": "Tech Stack",

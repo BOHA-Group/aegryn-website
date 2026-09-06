@@ -268,7 +268,7 @@
     "cta": "Kontakt aufnehmen",
     "hero": {
       "title": "Begleiten, was Sie aufbauen.",
-      "desc": "Wir begleiten Unternehmer und Erwerber bei strategischen Entscheidungen, technologischer Transformation und M&A-Operationen. Keine Folien. Operative Expertise im Dienst Ihres Wachstums."
+      "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Strategie, Technologie, M&A, Board Advisory: ein Ansprechpartner, von der Diagnose bis zur Ausführung."
     },
     "pillars": {
       "strategy": {
@@ -426,6 +426,29 @@
             "desc": "Asset-Trennung, Geschäftsbereichsextraktion, Übergangsdienstleistungsvereinbarungen und IT-Autonomisierung."
           }
         ]
+      },
+      "board": {
+        "title": "Strategie & Board Advisory",
+        "desc": "Begleitung von Führungskräften, Gründern und Verwaltungsräten bei strategischen Entscheidungen mit hohem Einsatz. Governance, 3-5-Jahrespläne, Vorbereitung der Übertragung.",
+        "dimensions": [
+          {
+            "label": "Governance & Board",
+            "desc": "Strukturierung des Verwaltungsrats, unabhängige Direktorenrollen, Gesellschafterverträge."
+          },
+          {
+            "label": "Langfristiger Strategieplan",
+            "desc": "3-5-Jahresvision, Priorisierung, Wert-KPIs."
+          },
+          {
+            "label": "Vorbereitung der Übertragung",
+            "desc": "Dokumentation, Bewertung, Veräufafahrplan."
+          },
+          {
+            "label": "Operating Partner für Gründer",
+            "desc": "Operative Unterstützung von Gründern in kritischen Phasen."
+          }
+        ],
+        "href": "/advisory/strategy"
       }
     },
     "network": {
@@ -639,27 +662,27 @@
   "missionSection": {
     "label": "Das Aegryn-Modell",
     "title": "Fünf integrierte Disziplinen. Ein Standard.",
-    "sub": "Jede Disziplin stärkt die anderen. Das ist es, was nur wenige Unternehmen wirklich bieten können.",
+    "sub": "Fünf Disziplinen, die sich gegenseitig stärken. Das können nur sehr wenige Akteure wirklich anbieten.",
     "items": [
       {
         "title": "BERATEN",
-        "desc": "Strategie-, Tech- und M&A-Beratung. Wir treten ein, wenn Entscheidungen die Entwicklung Ihrer Organisation bestimmen. Wir ergänzen die Finanzpartner, die Unternehmer begleiten. Dort, wo die Finanzierung aufhört, beginnt die Beratung."
+        "desc": "Strategie-, Organisations- und M&A-Beratung. Wir intervenieren, wenn Entscheidungen die Bahn einer Organisation definieren: Transformation, Pivot, Akquisition, Übertragung. Keine Empfehlungen. Ergebnisse."
       },
       {
         "title": "AUFBAUEN",
-        "desc": "Dauerhafte digitale Assets, vollständig im Eigentum des Kunden. Entwickelt, um den Unternehmenswert zu steigern, nicht um ersetzt zu werden."
+        "desc": "Nachhaltige digitale Assets, Pauschalpreis, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. TECHNOLOGISCHE UNABHÄNGIGKEIT."
       },
       {
         "title": "ÜBERTRAGEN",
-        "desc": "Tech-Asset-Zertifizierung und -Transaktion. Ein vertraulicher Prozess innerhalb eines Kreises qualifizierter Käufer."
+        "desc": "Unabhängige CIFSO-Zertifizierung und Asset-Transaktionen. Ein strenges Protokoll auf fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Ein geschlossener Kreis qualifizierter Käufer."
       },
       {
         "title": "REKRUTIEREN",
-        "desc": "Executive-, Tech- und Innovationsprofile. Vom CTO zum Geschäftsführer: Wir platzieren Talente, die Transformationen umsetzen."
+        "desc": "Führungskräfte-, Tech- und Innovationsprofile. Vom CTO bis zum GF platzieren wir die Talente, die Transformation ausführen."
       },
       {
         "title": "INFORMIEREN",
-        "desc": "Magazin, Artikel und Marktintelligenz. Wir dokumentieren, was wir beobachten und erleben."
+        "desc": "Referenz-Quartalsmagazin, Artikel und Marktbeobachtung. Wir dokumentieren, was wir beobachten und erleben."
       }
     ]
   },
@@ -694,14 +717,14 @@
       {
         "key": "funds",
         "title": "Fonds & Investoren",
-        "desc": "Qualifizierter Deal Flow, Vermögenszertifizierung, Post-Akquisitionsbegleitung, Führungskräfterekrutierung.\n\nWir arbeiten in Synergie mit den Finanzpartnern, die Unternehmer begleiten : Banken, Fonds, Family Offices : um dort einzugreifen, wo die Finanzierung allein nicht mehr ausreicht."
+        "desc": "Qualifizierter Deal-Flow, Asset-Zertifizierung, Post-Akquisitionsbegleitung, Rekrutierung von Führungsteams.\n\nWir arbeiten synergetisch mit den Finanzpartnern der Unternehmer: Banken, Investmentfonds, Family Offices. Wir intervenieren dort, wo Finanzierung allein nicht mehr ausreicht."
       }
     ]
   },
   "homeHybrid": {
     "label": "HYBRIDES MODELL",
     "title": "Wir bauen.\nWir beraten.\nWir übertragen.",
-    "desc": "Aegryn ist keine Kanzlei. Keine Investmentbank. Kein Inkubator.\n\nEs ist eine operative Gruppe, die eigene Assets aufbaut, Gründer und Führungskräfte berät und komplexe Transaktionen strukturiert.\n\nAegryn greift dort ein, wo die Theorie aufhört und die Umsetzung beginnt."
+    "desc": "Aegryn ist keine Beratungsfirma. Keine Investmentbank. Kein Inkubator.\n\nEs ist eine integrierte Beratungsfirma, die Entscheider, Gründer und Führungskräfte dabei unterstützt, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren.\n\nWir intervenieren dort, wo die Theorie aufhört und die Ausführung beginnt. Von der Strategie bis zum Abschluss."
   },
   "whyapps": {
     "label": "Warum Aegryn",
@@ -709,28 +732,28 @@
     "items": [
       {
         "num": "01",
-        "title": "UNABHÄNGIGE ZERTIFIZIERUNG",
-        "desc": "Jeder Aegryn-Grade-Bericht wird von unseren zertifizierten Analysten nach einem reproduzierbaren und nachvollziehbaren Protokoll ausgestellt. Keine Meinung, eine Zertifizierung."
+        "title": "EINE ZERTIFIZIERUNG, DIE DEM PREIS VORAUSGEHT",
+        "desc": "Das CIFSO-Protokoll wird vor jeder Markteinführung, vor jeder Verhandlung erstellt. Kein Bewertungsgutachten: eine Zertifizierung dessen, was die Organisation wirklich ist."
       },
       {
         "num": "02",
-        "title": "NACHVOLLZIEHBARKEIT BEI ÜBERTRAGUNG",
-        "desc": "Jede Asset-Übertragung wird präzise dokumentiert, Codebase-Zustand, Datum, genauer Umfang. Eine Blockchain-Zertifizierungsschicht wird diese Nachvollziehbarkeit langfristig verstärken."
+        "title": "FÜNF DISZIPLINEN. EINE FIRMA.",
+        "desc": "Beratung, Asset-Aufbau, Zertifizierung, Talent und Marktintelligenz. Fünf Disziplinen, die sich gegenseitig stärken."
       },
       {
         "num": "03",
-        "title": "INSTITUTIONELLES TREUHAND",
-        "desc": "10% des Transaktionspreises werden bei Unterzeichnung der Grundsatzvereinbarung auf einem Bankkonto hinterlegt. Der Verkäufer ist geschützt. Der Käufer ist verpflichtet. Aegryn berührt die Gelder nie."
+        "title": "VERANKERT IN DER SCHWEIZ. AKTIV IN EUROPA.",
+        "desc": "Schweizer Recht regelt jedes Mandat. Diskretion ist strukturell. Schweizer institutionelle Standards sind ein glaubwürdiger Anker für grenzüberschreitende Transaktionen."
       },
       {
         "num": "04",
-        "title": "GESCHLOSSENER KREIS",
-        "desc": "Kein Asset ist öffentlich sichtbar, bevor es den Grade-Prozess bestanden hat. Kein Käufer erhält Zugang zum Katalog ohne Kapazitätsnachweis. Diskretion ist strukturell, nicht optional."
+        "title": "TECHNOLOGISCHE UNABHÄNGIGKEIT",
+        "desc": "Unsere Assets sind auf vollständiges Kundeneigentum ausgelegt, auf jeder Infrastruktur einsetzbar. Keine kritische externe Abhängigkeit."
       },
       {
         "num": "05",
-        "title": "EUROPÄISCHE REFERENZ",
-        "desc": "In der Schweiz verankert, in Europa tätig. Unsere Transaktionssessions, unser vierteljährlicher Marktbericht und unser historischer Katalog setzen den Standard, auf den der europäische Tech-M&A-Markt gewartet hat."
+        "title": "REFERENZ-QUARTALSMAGAZIN",
+        "desc": "Wir dokumentieren den Markt, den wir leben. Echte Transaktionen, Multiples nach Vertikale, Gründerporträts, CH/EU-Marktdaten. Vier Ausgaben pro Jahr."
       }
     ]
   },
@@ -1491,14 +1514,14 @@
     "dataProtection": "Datenschutzhinweis",
     "neediuLegal": "neediu ist eine eingetragene Marke der Aegryn. Alle Rechte vorbehalten.",
     "tagline": "CERTIFIED TO TRANSACT.",
-    "swissTagline": "Unabhängige Schweizer Tech-Gruppe. Beratung, Transaktionen, Assets.",
+    "swissTagline": "Beratungsfirma, verankert in der Schweiz. Strategie, Transaktionen, Assets.",
     "navLabel": "Aegryn",
     "companyLabel": "Unternehmen",
     "servicesLabel": "Dienstleistungen",
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
     "advisoryLabel": "Beratung",
-    "advisoryDesc": "Unternehmensstrategie, Tech- und M&A-Beratung. Ein Ansprechpartner für die Strukturierung, Veräußerung oder Akquisition eines digitalen Assets.",
+    "advisoryDesc": "Unternehmensstrategie, Organisationsberatung und M&A. Ein Ansprechpartner für Strukturierung, Entwicklung oder Verkauf Ihrer Organisation.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
     "contactLabel": "Kontaktieren Sie uns",
@@ -1516,8 +1539,8 @@
     "col1Transact": "M&A-Transaktion",
     "col2Title": "Unsere Lösungen",
     "col2Subblink": "Vertragsintelligenz",
-    "col2Code": "Digital Trust",
-    "col2Grade": "CIFS-Zertifizierung",
+    "col2Code": "Blockchain-Zertifizierung",
+    "col2Grade": "CIFSO-Zertifizierung",
     "col2DataRoom": "Datenraum",
     "col2ViewAll": "Unser Portfolio",
     "col3Title": "Unsere Überzeugungen",
@@ -3626,35 +3649,35 @@
   },
   "gradeStrip": {
     "label": "Zertifizierungssystem",
-    "title": "Keine Bewertung.\nEine Zertifizierung.",
-    "desc": "Es gibt einen grundlegenden Unterschied zwischen einer Bewertung und einer Zertifizierung. Aegryn zertifiziert, nach einem unabhängigen, reproduzierbaren und nachvollziehbaren Protokoll.",
+    "title": "Fünf Stufen. Ein Protokoll. CIFSO v4.0.",
+    "desc": "Das CIFSO v4.0-Protokoll zertifiziert fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Reproduzierbar, nachvollziehbar, definitiv.",
     "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein Aegryn Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
-    "cta": "Vollständige Methodik lesen",
+    "cta": "Methodik entdecken",
     "grades": [
       {
         "grade": "★",
         "label": "Außergewöhnlich",
-        "desc": "Erstklassiges Asset. Einwandfreies IP, außergewöhnliche Kennzahlen, zertifizierte Sicherheit. < 5% der zertifizierten Assets."
+        "desc": "Absolute Exzellenz in allen 5 CIFSO-Dimensionen. Weniger als 5% der zertifizierten Assets."
       },
       {
         "grade": "AAA",
         "label": "Ausgezeichnet",
-        "desc": "Hochwertiges Asset in allen Dimensionen. Nur geringfügige Optimierungspunkte. Sehr liquide."
+        "desc": "Hohe Qualität in allen Dimensionen. Einige kleinere Optimierungspunkte."
       },
       {
         "grade": "AA",
         "label": "Sehr gut",
-        "desc": "Solides Asset mit dokumentierten und bezifferten Vorbehalten. Angepasste Bewertung. Uneingeschränkt empfohlen."
+        "desc": "Solides Asset mit dokumentierten und bezifferten Vorbehalten."
       },
       {
         "grade": "A",
         "label": "Gut",
-        "desc": "Lebensfähiges Asset mit einem oder mehreren wesentlichen Vorbehalten. Abhilfeplan geliefert."
+        "desc": "Lebensfähiges Asset mit einem oder mehreren wesentlichen Vorbehalten."
       },
       {
         "grade": "B",
-        "label": "Korrekt",
-        "desc": "Advisory vor der Transaktion empfohlen. Nicht für Aegryn-Hauptsessions zugelassen."
+        "label": "Ausreichend",
+        "desc": "Beratung vor Transaktion empfohlen."
       }
     ]
   },
@@ -3718,14 +3741,14 @@
     "magDesc": "Das Magazin für europäische Tech-Gründer und die Erwerber, die sie beobachten. Echte Transaktionen entschlüsselt, Marktdaten, Unternehmerporträts, Multiples nach Branche und das Leben derer, die etwas Bedeutendes aufbauen.",
     "magFooter": "Vier Ausgaben pro Jahr.",
     "magCta": "Das Magazin entdecken",
-    "label": "Artikel",
-    "title": "Der europäische Tech-M&A-Markt.\nVon denen, die ihn gestalten.",
-    "article1Title": "Stand des europäischen Tech-M&A-Markts, Q2 2026",
-    "article1Cat": "Marktbericht",
-    "article2Title": "Was macht ein Tech-Asset wirklich zertifizierbar?",
-    "article2Cat": "Verkäufer-Guide",
-    "article3Title": "Wie PE-Käufer ein SaaS im Jahr 2026 bewerten",
-    "article3Cat": "Käufer-Guide",
+    "label": "Perspektiven",
+    "title": "Der Markt, von denen, die ihn betreiben.",
+    "article1Title": "Unternehmensbewertung 2026: was wirklich zählt",
+    "article1Cat": "Strategie & Bewertung",
+    "article2Title": "CIFSO v4.0: Warum die Dimension Organisation alles verändert",
+    "article2Cat": "Zertifizierung",
+    "article3Title": "Übertragung eines KMU in der Schweiz: 7 Hebel für einen erfolgreichen Verkauf",
+    "article3Cat": "M&A-Übertragung",
     "cta": "Alle Artikel ansehen",
     "readMore": "Artikel lesen"
   },
@@ -3784,24 +3807,24 @@
     "label": "Der Markt in Zahlen, 2026",
     "stats": [
       {
-        "value": "+42%",
-        "label": "Wachstum Tech-M&A Europa 2025–2026",
-        "source": "Synergy AI 2026"
-      },
-      {
-        "value": "€12Mrd",
-        "label": "Transagiertes Volumen SME-Tech Q1 2026",
-        "source": "Synergy AI 2026"
-      },
-      {
-        "value": "< 30 Tage",
-        "label": "Ø Transaktionsdauer zertifizierter Assets",
+        "value": "3,1x ARR",
+        "label": "Medianer privater SaaS-Multiple Europa, Q1 2026",
         "source": "Aventis Advisors"
       },
       {
-        "value": "68%",
-        "label": "Deals ohne öffentliche Ausschreibung",
-        "source": "Aegryn | 2026"
+        "value": "+38%",
+        "label": "M&A-Volumenwachstum KMU Tech FR-CH 2025",
+        "source": "Aegryn Research 2026"
+      },
+      {
+        "value": "< 25%",
+        "label": "Aegryn-Zertifizierungsrate: Strenge angewandt",
+        "source": "Aegryn 2026"
+      },
+      {
+        "value": "72 Tage",
+        "label": "Medianer Aegryn-Abschluss (Mandat bis Unterzeichnung)",
+        "source": "Aegryn 2026"
       }
     ]
   },
@@ -7214,9 +7237,10 @@
     "title": "Vollständiges IP-Eigentum. Zertifizierungsbereit.",
     "chip1": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
     "chip2": "ZERTIFIZIERUNGSBEREIT",
-    "chip3": "NULL ANBIETERABHÄNGIGKEIT",
+    "chip3": "TECHNOLOGISCHE UNABHÄNGIGKEIT",
     "chip4": "ZERTIFIZIERBARER CUSTOM CODE",
-    "cta": "Asset-Ingenieurwesen ansehen"
+    "cta": "Asset-Ingenieurwesen ansehen",
+    "chip5": "BUILT TO LAST"
   },
   "techStack": {
     "label": "Tech-Stack",
@@ -7957,15 +7981,15 @@
   "transactNarrative": {
     "label": "Vertrauliche M&A-Transaktionen",
     "title": "Die Zertifizierung verändert das Gespräch.\nDie Transaktion folgt.",
-    "desc": "Aegryn zertifiziert Tech-Assets nach einem unabhängigen Protokoll auf vier Dimensionen: Code, IP, Finanzen, Sicherheit. Zertifizierte Assets gelangen in einen vertraulichen Off-Market-Veräußerungsprozess zwischen dokumentierten Verkäufern und vorqualifizierten Käufern.\n\nKeine Liste. Keine Auktion. Ein Marktstandard.",
+    "desc": "Aegryn zertifiziert Organisationen gemäß dem CIFSO v4.0-Protokoll auf fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation.\n\nZertifizierte Assets treten in einen vertraulichen Off-Market-Übertragungsprozess ein, zwischen dokumentierten Verkäufern und vorqualifizierten Käufern. Kein Listing. Keine Auktion. Ein Marktstandard.",
     "stat1Val": "< 25%",
     "stat1Label": "Akzeptanzrate eingereichter Vermögenswerte",
     "stat2Val": "60 T max",
     "stat2Label": "Exklusives Verkäufermandat",
     "stat3Val": "100%",
     "stat3Label": "Vorqualifizierte Käufer",
-    "ctaSell": "Asset zur Zertifizierung einreichen",
-    "ctaBuy": "Zugang zum Käuferkreis",
+    "ctaSell": "Ein Asset übertragen",
+    "ctaBuy": "Käufer werden",
     "stat4Val": "Schweiz",
     "stat4Label": "Institutionelle Verankerung"
   },

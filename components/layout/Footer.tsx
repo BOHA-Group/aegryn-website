@@ -213,7 +213,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href="/grade/methodology" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2Code')}
                 </Link>
               </li>
@@ -225,11 +225,6 @@ export default function Footer() {
               <li>
                 <Link href="/grade/methodology" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2DataRoom')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/assets" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col2ViewAll')}
                 </Link>
               </li>
             </ul>
