@@ -271,6 +271,29 @@
       "desc": "Nous intervenons aux moments où les décisions définissent la trajectoire d’une organisation. Stratégie, technologie, M&A, board advisory : un seul interlocuteur, du diagnostic à l’exécution."
     },
     "pillars": {
+      "board": {
+        "title": "Board advisory",
+        "desc": "Nous agissons comme partenaires stratégiques des fondateurs et administrateurs sur les décisions à fort enjeu et horizon long.",
+        "dimensions": [
+          {
+            "label": "Gouvernance et composition du board",
+            "desc": ""
+          },
+          {
+            "label": "Plan stratégique 3 à 5 ans",
+            "desc": ""
+          },
+          {
+            "label": "Préparation à la valorisation (avant toute décision de transmission)",
+            "desc": ""
+          },
+          {
+            "label": "Operating partner fondateur",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/strategy"
+      },
       "strategy": {
         "title": "Conseil en stratégie",
         "desc": "Nous définissons avec les dirigeants la trajectoire de leur organisation et les conditions de son exécution.",
@@ -422,29 +445,6 @@
             "desc": ""
           }
         ]
-      },
-      "board": {
-        "title": "BOARD ADVISORY",
-        "desc": "Nous agissons comme partenaires stratégiques des fondateurs et administrateurs sur les décisions à fort enjeu et horizon long.",
-        "dimensions": [
-          {
-            "label": "Gouvernance et composition du board",
-            "desc": ""
-          },
-          {
-            "label": "Plan stratégique 3 à 5 ans",
-            "desc": ""
-          },
-          {
-            "label": "Préparation à la valorisation (avant toute décision de transmission)",
-            "desc": ""
-          },
-          {
-            "label": "Operating partner fondateur",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
       }
     },
     "network": {

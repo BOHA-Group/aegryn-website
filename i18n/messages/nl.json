@@ -271,6 +271,29 @@
       "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Strategie, technologie, M&A, board advisory: één gesprekspartner, van diagnose tot uitvoering."
     },
     "pillars": {
+      "board": {
+        "title": "Board advisory",
+        "desc": "Wij treden op als strategische partners van oprichters en bestuurders bij beslissingen met hoge inzet en lange horizon.",
+        "dimensions": [
+          {
+            "label": "Governance en samenstelling van het board",
+            "desc": ""
+          },
+          {
+            "label": "Strategisch plan van 3 tot 5 jaar",
+            "desc": ""
+          },
+          {
+            "label": "Voorbereiding op waardering (voor elke beslissing over overdracht)",
+            "desc": ""
+          },
+          {
+            "label": "Oprichter als operating partner",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/strategy"
+      },
       "strategy": {
         "title": "Strategieadvies",
         "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor uitvoering.",
@@ -422,29 +445,6 @@
             "desc": ""
           }
         ]
-      },
-      "board": {
-        "title": "BOARD ADVISORY",
-        "desc": "Wij treden op als strategische partners van oprichters en bestuurders bij beslissingen met hoge inzet en lange horizon.",
-        "dimensions": [
-          {
-            "label": "Governance en samenstelling van het board",
-            "desc": ""
-          },
-          {
-            "label": "Strategisch plan van 3 tot 5 jaar",
-            "desc": ""
-          },
-          {
-            "label": "Voorbereiding op waardering (voor elke beslissing over overdracht)",
-            "desc": ""
-          },
-          {
-            "label": "Oprichter als operating partner",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
       }
     },
     "network": {

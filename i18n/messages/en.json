@@ -271,6 +271,29 @@
       "desc": "We intervene at the moments when decisions define the trajectory of an organisation. Strategy, technology, M&A, board advisory: one firm, from diagnosis to execution."
     },
     "pillars": {
+      "board": {
+        "title": "Board advisory",
+        "desc": "We act as strategic partners to founders and board members on high-stakes, long-horizon decisions.",
+        "dimensions": [
+          {
+            "label": "Governance and board composition",
+            "desc": ""
+          },
+          {
+            "label": "3 to 5 year strategic plan",
+            "desc": ""
+          },
+          {
+            "label": "Valuation preparation (ahead of any transmission decision)",
+            "desc": ""
+          },
+          {
+            "label": "Founder operating partner",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/strategy"
+      },
       "strategy": {
         "title": "Strategy advisory",
         "desc": "We define with leaders the trajectory of their organisation and the conditions for its execution.",
@@ -422,29 +445,6 @@
             "desc": ""
           }
         ]
-      },
-      "board": {
-        "title": "BOARD ADVISORY",
-        "desc": "We act as strategic partners to founders and board members on high-stakes, long-horizon decisions.",
-        "dimensions": [
-          {
-            "label": "Governance and board composition",
-            "desc": ""
-          },
-          {
-            "label": "3 to 5 year strategic plan",
-            "desc": ""
-          },
-          {
-            "label": "Valuation preparation (ahead of any transmission decision)",
-            "desc": ""
-          },
-          {
-            "label": "Founder operating partner",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
       }
     },
     "network": {

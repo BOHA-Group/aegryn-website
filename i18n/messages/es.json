@@ -271,6 +271,29 @@
       "desc": "Intervenimos en los momentos en que las decisiones definen la trayectoria de una organización. Estrategia, tecnología, M&A, board advisory: un solo interlocutor, del diagnóstico a la ejecución."
     },
     "pillars": {
+      "board": {
+        "title": "Board advisory",
+        "desc": "Actuamos como socios estratégicos de los fundadores y administradores en las decisiones de alto riesgo y horizonte largo.",
+        "dimensions": [
+          {
+            "label": "Gobierno corporativo y composición del board",
+            "desc": ""
+          },
+          {
+            "label": "Plan estratégico de 3 a 5 años",
+            "desc": ""
+          },
+          {
+            "label": "Preparación a la valoración (antes de cualquier decisión de transmisión)",
+            "desc": ""
+          },
+          {
+            "label": "Operating partner fundador",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/strategy"
+      },
       "strategy": {
         "title": "Consultoría en estrategia",
         "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su ejecución.",
@@ -422,29 +445,6 @@
             "desc": ""
           }
         ]
-      },
-      "board": {
-        "title": "BOARD ADVISORY",
-        "desc": "Actuamos como socios estratégicos de los fundadores y administradores en las decisiones de alto riesgo y horizonte largo.",
-        "dimensions": [
-          {
-            "label": "Gobierno corporativo y composición del board",
-            "desc": ""
-          },
-          {
-            "label": "Plan estratégico de 3 a 5 años",
-            "desc": ""
-          },
-          {
-            "label": "Preparación a la valoración (antes de cualquier decisión de transmisión)",
-            "desc": ""
-          },
-          {
-            "label": "Operating partner fundador",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
       }
     },
     "network": {

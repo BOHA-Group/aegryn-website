@@ -271,6 +271,29 @@
       "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Strategie, Technologie, M&A, Board Advisory: ein Ansprechpartner, von der Diagnose bis zur Ausführung."
     },
     "pillars": {
+      "board": {
+        "title": "Board advisory",
+        "desc": "Wir agieren als strategische Partner für Gründer und Vorstandsmitglieder bei Entscheidungen mit hohem Einsatz und langem Horizont.",
+        "dimensions": [
+          {
+            "label": "Governance und Board-Zusammensetzung",
+            "desc": ""
+          },
+          {
+            "label": "Strategischer 3 bis 5 Jahresplan",
+            "desc": ""
+          },
+          {
+            "label": "Bewertungsvorbereitung (vor jeder Übertragungsentscheidung)",
+            "desc": ""
+          },
+          {
+            "label": "Gründer als Operating Partner",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/strategy"
+      },
       "strategy": {
         "title": "Strategieberatung",
         "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Umsetzung.",
@@ -422,29 +445,6 @@
             "desc": ""
           }
         ]
-      },
-      "board": {
-        "title": "BOARD ADVISORY",
-        "desc": "Wir agieren als strategische Partner für Gründer und Vorstandsmitglieder bei Entscheidungen mit hohem Einsatz und langem Horizont.",
-        "dimensions": [
-          {
-            "label": "Governance und Board-Zusammensetzung",
-            "desc": ""
-          },
-          {
-            "label": "Strategischer 3 bis 5 Jahresplan",
-            "desc": ""
-          },
-          {
-            "label": "Bewertungsvorbereitung (vor jeder Übertragungsentscheidung)",
-            "desc": ""
-          },
-          {
-            "label": "Gründer als Operating Partner",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
       }
     },
     "network": {
