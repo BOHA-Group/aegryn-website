@@ -42,41 +42,87 @@ export function GradeDimensions() {
           {t('title')}
         </h2>
 
-        {/* Layout Mahjong — desktop */}
-        <div className="hidden md:block relative" style={{ paddingBottom: '8rem' }}>
-
-          {/* Grille 2x2 des 4 coins */}
-          <div className="grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
-            {corners.map(({ code, name, desc }) => (
-              <div key={code} className="dim-corner bg-ag-white p-10 flex gap-5">
-                <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
-                  <span className="font-sans font-bold text-ag-apex text-[13px]">{code}</span>
-                </div>
-                <div>
-                  <p className="font-sans font-semibold text-ag-black text-[16px] mb-1.5">{name}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
+        {/* Layout Mahjong — desktop : grille 3×3, coins + centre */}
+        <div
+          className="hidden md:grid"
+          style={{
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateRows: '1fr 1fr 1fr',
+            gridAutoRows: '1fr',
+            gap: '1px',
+            background: 'var(--color-ag-border, #e2e6ea)',
+            border: '1px solid var(--color-ag-border, #e2e6ea)',
+            minHeight: '520px',
+          }}
+        >
+          {/* C — haut gauche */}
+          <div className="dim-corner bg-ag-white p-8 flex gap-5 col-start-1 row-start-1">
+            <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
+              <span className="font-sans font-bold text-ag-apex text-[13px]">{corners[0].code}</span>
+            </div>
+            <div>
+              <p className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{corners[0].name}</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{corners[0].desc}</p>
+            </div>
           </div>
 
-          {/* O — carte centrale superposée */}
+          {/* vide haut centre */}
+          <div className="bg-ag-white col-start-2 row-start-1" />
+
+          {/* I — haut droit */}
+          <div className="dim-corner bg-ag-white p-8 flex gap-5 col-start-3 row-start-1">
+            <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
+              <span className="font-sans font-bold text-ag-apex text-[13px]">{corners[1].code}</span>
+            </div>
+            <div>
+              <p className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{corners[1].name}</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{corners[1].desc}</p>
+            </div>
+          </div>
+
+          {/* vide milieu gauche */}
+          <div className="bg-ag-white col-start-1 row-start-2" />
+
+          {/* O — centre */}
           {center && (
-            <div
-              className="dim-center absolute left-1/2 -translate-x-1/2 -bottom-14 z-10"
-              style={{ width: 'min(400px, 70%)' }}
-            >
-              <div className="bg-ag-navy border-2 border-ag-apex/60 shadow-2xl p-8 flex gap-5">
-                <div className="w-9 h-9 bg-ag-apex flex items-center justify-center shrink-0">
-                  <span className="font-sans font-bold text-ag-navy text-[13px]">{center.code}</span>
-                </div>
-                <div>
-                  <p className="font-sans font-semibold text-white text-[16px] mb-1.5">{center.name}</p>
-                  <p className="font-sans text-[13px] text-white/65 leading-relaxed">{center.desc}</p>
-                </div>
+            <div className="dim-center bg-ag-navy p-8 flex gap-5 col-start-2 row-start-2 z-10 shadow-2xl" style={{ outline: '2px solid rgba(90,221,164,0.5)', outlineOffset: '-2px' }}>
+              <div className="w-9 h-9 bg-ag-apex flex items-center justify-center shrink-0">
+                <span className="font-sans font-bold text-ag-navy text-[13px]">{center.code}</span>
+              </div>
+              <div>
+                <p className="font-sans font-semibold text-white text-[15px] mb-1.5">{center.name}</p>
+                <p className="font-sans text-[13px] text-white/65 leading-relaxed">{center.desc}</p>
               </div>
             </div>
           )}
+
+          {/* vide milieu droit */}
+          <div className="bg-ag-white col-start-3 row-start-2" />
+
+          {/* F — bas gauche */}
+          <div className="dim-corner bg-ag-white p-8 flex gap-5 col-start-1 row-start-3">
+            <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
+              <span className="font-sans font-bold text-ag-apex text-[13px]">{corners[2].code}</span>
+            </div>
+            <div>
+              <p className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{corners[2].name}</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{corners[2].desc}</p>
+            </div>
+          </div>
+
+          {/* vide bas centre */}
+          <div className="bg-ag-white col-start-2 row-start-3" />
+
+          {/* S — bas droit */}
+          <div className="dim-corner bg-ag-white p-8 flex gap-5 col-start-3 row-start-3">
+            <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
+              <span className="font-sans font-bold text-ag-apex text-[13px]">{corners[3].code}</span>
+            </div>
+            <div>
+              <p className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{corners[3].name}</p>
+              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{corners[3].desc}</p>
+            </div>
+          </div>
         </div>
 
         {/* Layout mobile — liste simple */}
