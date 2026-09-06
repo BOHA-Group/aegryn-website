@@ -132,8 +132,10 @@ export function GradeDimensions() {
                 padding: '1.5rem',
               }}
             >
-              <DimBadge code={center.code} dark />
-              <div className="mt-3">
+              <div className="flex justify-center mb-3">
+                <DimBadge code={center.code} dark />
+              </div>
+              <div>
                 <p className="font-sans font-semibold text-white text-[14px] mb-1">{center.name}</p>
                 <p className="font-sans text-[12px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{center.desc}</p>
               </div>
