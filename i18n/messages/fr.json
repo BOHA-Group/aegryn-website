@@ -533,22 +533,32 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "Le marché tech européen a besoin de conseil stratégique, de logiciels à propriété totale, et de certification indépendante.\nNous construisons les trois.",
+    "conviction": "La valeur d’une organisation se crée, se documente et se réalise.\nNous accompagnons les trois.",
     "items": [
       {
         "num": "01",
-        "title": "Le conseil est la clé.",
-        "desc": "Dans un monde qui bouge plus vite que jamais, les dirigeants tech ont besoin d'une vision claire et d'un plan d'exécution. Aegryn Conseil accompagne les décisions stratégiques, les transformations technologiques et les opérations M&A avec une expertise opérationnelle, sans détour."
+        "title": "La valeur se construit avant de se céder.",
+        "desc": "Une entreprise qui se transmet bien est une entreprise qui a été bien construite. Nous intervenons en amont : stratégie, organisation, actifs, documentation. Pour que la valeur soit réelle avant d’être reconnue."
       },
       {
         "num": "02",
-        "title": "L'indépendance technologique manquait.",
-        "desc": "Le vrai enjeu du cloud n'est pas la localisation des machines, c'est le logiciel. Aegryn conçoit des logiciels européens à propriété totale, déployables sur infrastructures locales, pour entreprises et institutionnels. Sécurité, conformité, indépendance."
+        "title": "Le conseil doit être opérationnel.",
+        "desc": "Un cabinet qui ne construit pas ne peut pas conseiller. Nos propres actifs passent par nos propres méthodes. Ce que nous recommandons, nous l’exécutons. Cette cohérence est notre première crédibilité."
       },
       {
         "num": "03",
-        "title": "La certification indépendante comme standard.",
-        "desc": "Acheter un actif tech sans certification indépendante, c'est acheter une montre sans papiers. Aegryn certifie et transmet des actifs tech selon un protocole rigoureux : Code, IP, Finance, Sécurité. Ancré en Suisse, référence en Europe."
+        "title": "L’indépendance technologique est une condition de durabilité.",
+        "desc": "Dépendre d’un éditeur unique, c’est exposer l’organisation à un risque non maîtrisé. Nous concevons des logiciels à propriété totale, déployables sur toute infrastructure. INDÉPENDANCE TECHNOLOGIQUE."
+      },
+      {
+        "num": "04",
+        "title": "La certification change la conversation.",
+        "desc": "Pas une note, un protocole. Avant toute mise en marché, avant toute négociation. Un actif certifié Aegryn n’est pas une promesse, c’est une certitude documentée."
+      },
+      {
+        "num": "05",
+        "title": "Le talent est un actif comme les autres.",
+        "desc": "Les organisations qui durent placent les bonnes personnes au bon moment. CTO, CISO, DG, Head of AI : nous identifions les profils qui font réellement avancer une organisation."
       }
     ]
   },
@@ -559,8 +569,8 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq métiers.\nUn seul cabinet.",
-    "desc": "Aegryn est à la fois un cabinet de conseil et une entreprise tech. Nous conseillons en stratégie, en technologie et en M&A. Nous construisons des actifs numériques durables pour nos clients. Nous accompagnons les transactions. Nous recrutons les dirigeants qui exécutent. Et nous documentons le marché.\n\nCe que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cet ADN hybride, cabinet de conseil et entreprise tech, est ce que peu d'acteurs peuvent revendiquer sur le marché.",
-    "tagline": "CONSEIL EN STRATÉGIE, TECH ET M&A. UN SEUL STANDARD.",
+    "desc": "Aegryn accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation. De la stratégie à la transmission.\n\nNous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d’une entreprise : conseil, construction d’actifs, certification, talent et intelligence de marché.",
+    "tagline": "CABINET DE CONSEIL, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
     "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cette cohérence est notre première crédibilité.",
@@ -575,17 +585,17 @@
       {
         "val": "23+",
         "label": "Industries couvertes",
-        "sub": "Toutes tailles, toutes géographies EU"
+        "sub": "Tous secteurs, Suisse. Europe"
       },
       {
         "val": "< 25%",
-        "label": "Taux de sélection",
+        "label": "Taux de certification",
         "sub": "Rigueur appliquée à chaque engagement"
       },
       {
         "val": "100%",
         "label": "Alignement client",
-        "sub": "Ce que nous conseillons, nous nous l'appliquons"
+        "sub": "Ce que nous conseillons, nous nous l’appliquons"
       }
     ]
   },

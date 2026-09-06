@@ -533,22 +533,32 @@
   },
   "whatwedo": {
     "label": "Our Conviction",
-    "conviction": "The European tech market needs strategic consulting, software with full ownership, and independent certification.\nWe build all three.",
+    "conviction": "Organisational value is created, documented and realised.\nWe support all three.",
     "items": [
       {
         "num": "01",
-        "title": "Advisory is the key.",
-        "desc": "In a world moving faster than ever, tech leaders need a clear vision and an execution plan. Aegryn Advisory supports strategic decisions, technology transformations and M&A operations with operational expertise : not slides."
+        "title": "Value is built before it is sold.",
+        "desc": "A well-transmitted company is a well-built company. We intervene upstream: strategy, organisation, assets, documentation. So that value is real before it is recognised."
       },
       {
         "num": "02",
-        "title": "Technological independence was missing.",
-        "desc": "The real challenge of the cloud is not where the machines are: it's the software. Aegryn designs fully owned European software, deployable on local infrastructure, for enterprises and institutions. Security, compliance, independence."
+        "title": "Advisory must be operational.",
+        "desc": "A firm that does not build cannot advise. Our own assets go through our own methods. What we recommend, we execute. That consistency is our first credibility."
       },
       {
         "num": "03",
-        "title": "Independent certification as a standard.",
-        "desc": "Buying a tech asset without independent certification is like buying a watch without papers. Aegryn certifies and transfers tech assets under a rigorous protocol: Code, IP, Finance, Security. Rooted in Switzerland, reference in Europe."
+        "title": "Technological independence is a condition of durability.",
+        "desc": "Depending on a single vendor exposes the organisation to uncontrolled risk. We design fully owned software, deployable on any infrastructure. TECHNOLOGICAL INDEPENDENCE."
+      },
+      {
+        "num": "04",
+        "title": "Certification changes the conversation.",
+        "desc": "Not a rating, a protocol. Before any go-to-market, before any negotiation. An Aegryn-certified asset is not a promise, it is a documented certainty."
+      },
+      {
+        "num": "05",
+        "title": "Talent is an asset like any other.",
+        "desc": "Organisations that last place the right people at the right time. CTO, CISO, CEO, Head of AI: we identify profiles that genuinely advance an organisation."
       }
     ]
   },
@@ -596,8 +606,8 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne firm.",
-    "desc": "Aegryn is both a consulting firm and a tech company. We advise on strategy, technology and M&A. We build lasting digital assets for our clients. We structure transactions. We recruit the executives who execute. And we document the market.\n\nWhat we do for our clients, we do for ourselves. Our own assets go through our own methods. This hybrid DNA, consulting firm and tech company, is what very few players can genuinely claim.",
-    "tagline": "STRATEGY, TECH AND M&A ADVISORY. ONE STANDARD.",
+    "desc": "Aegryn helps decision-makers, founders and executives create, document and realise the value of their organisation. From strategy to closing.\n\nWe are neither a classic consulting firm, nor a tech agency, nor an M&A boutique. We are an integrated advisory firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: advisory, asset building, certification, talent and market intelligence.",
+    "tagline": "ADVISORY FIRM, ROOTED IN SWITZERLAND.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
     "quote": "What we do for our clients, we apply to ourselves. Our own assets go through our own methods. This consistency is our first credibility.",
@@ -612,11 +622,11 @@
       {
         "val": "23+",
         "label": "Industries covered",
-        "sub": "All sizes, all EU geographies"
+        "sub": "All sectors, Switzerland. Europe"
       },
       {
         "val": "< 25%",
-        "label": "Selection rate",
+        "label": "Certification rate",
         "sub": "Rigour applied to every engagement"
       },
       {

@@ -533,22 +533,32 @@
   },
   "whatwedo": {
     "label": "Unsere Überzeugung",
-    "conviction": "Der europäische Tech-Markt braucht strategische Beratung, Software mit vollständigem Eigentum und unabhängige Zertifizierung.\nWir bauen alle drei.",
+    "conviction": "Organisationswert wird geschaffen, dokumentiert und realisiert.\nWir begleiten alle drei.",
     "items": [
       {
         "num": "01",
-        "title": "Beratung ist der Schlüssel.",
-        "desc": "In einer Welt, die sich schneller bewegt als je zuvor, brauchen Tech-Führungskräfte eine klare Vision und einen Ausführungsplan. Aegryn Conseil begleitet strategische Entscheidungen, technologische Transformationen und M&A-Operationen mit operativer Expertise : nicht mit Folien."
+        "title": "Wert wird aufgebaut, bevor er verkauft wird.",
+        "desc": "Ein gut übertragenes Unternehmen ist ein gut aufgebautes Unternehmen. Wir intervenieren vorgelagert: Strategie, Organisation, Assets, Dokumentation."
       },
       {
         "num": "02",
-        "title": "Technologische Unabhängigkeit fehlte.",
-        "desc": "Die eigentliche Herausforderung der Cloud liegt nicht im Standort der Maschinen, sondern in der Software. Aegryn entwickelt europäische Software mit vollständigem Eigentum, die auf lokaler Infrastruktur betrieben werden kann, für Unternehmen und Institutionen. Sicherheit, Compliance, Unabhängigkeit."
+        "title": "Beratung muss operationell sein.",
+        "desc": "Eine Beratungsfirma, die nicht aufbaut, kann nicht beraten. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Was wir empfehlen, führen wir aus."
       },
       {
         "num": "03",
-        "title": "Unabhängige Zertifizierung als Standard.",
-        "desc": "Ein Tech-Asset ohne unabhängige Zertifizierung zu kaufen, ist wie eine Uhr ohne Papiere zu kaufen. Aegryn zertifiziert und überträgt Tech-Assets nach einem strengen Protokoll: Code, IP, Finanzen, Sicherheit. Verwurzelt in der Schweiz, Referenz in Europa."
+        "title": "Technologische Unabhängigkeit ist eine Bedingung der Nachhaltigkeit.",
+        "desc": "Von einem einzigen Anbieter abhängig zu sein, setzt die Organisation einem unkontrollierten Risiko aus. Wir entwickeln vollständig eigene Software. TECHNOLOGISCHE UNABHÄNGIGKEIT."
+      },
+      {
+        "num": "04",
+        "title": "Zertifizierung verändert das Gespräch.",
+        "desc": "Kein Rating, ein Protokoll. Vor jeder Markteinführung, vor jeder Verhandlung. Ein von Aegryn zertifiziertes Asset ist kein Versprechen, sondern eine dokumentierte Gewissheit."
+      },
+      {
+        "num": "05",
+        "title": "Talent ist ein Asset wie jedes andere.",
+        "desc": "Organisationen, die Bestand haben, platzieren die richtigen Personen zum richtigen Zeitpunkt. CTO, CISO, GF, Head of AI."
       }
     ]
   },
@@ -596,8 +606,8 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Unternehmen.",
-    "desc": "Aegryn ist sowohl eine Unternehmensberatung als auch ein Tech-Unternehmen. Wir beraten in Strategie, Technologie und M&A. Wir bauen dauerhafte digitale Assets für unsere Kunden. Wir strukturieren Transaktionen. Wir rekrutieren die Führungskräfte, die umsetzen. Und wir dokumentieren den Markt.\n\nWas wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese hybride DNA, Beratung und Tech-Unternehmen, ist das, was nur wenige Akteure wirklich vorweisen können.",
-    "tagline": "STRATEGIE-, TECH- UND M&A-BERATUNG. EIN STANDARD.",
+    "desc": "Aegryn begleitet Entscheider, Gründer und Führungskräfte dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.\n\nWir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind.",
+    "tagline": "BERATUNGSFIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
     "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
@@ -612,17 +622,17 @@
       {
         "val": "23+",
         "label": "Abgedeckte Branchen",
-        "sub": "Alle Größen, alle EU-Geographien"
+        "sub": "Alle Sektoren, Schweiz. Europa"
       },
       {
         "val": "< 25%",
-        "label": "Auswahlquote",
-        "sub": "Strenge bei jedem Engagement"
+        "label": "Zertifizierungsrate",
+        "sub": "Strenge bei jedem Mandat"
       },
       {
         "val": "100%",
-        "label": "Kundenausrichtung",
-        "sub": "Was wir raten, wenden wir auf uns selbst an"
+        "label": "Kundenbindung",
+        "sub": "Was wir empfehlen, wenden wir an"
       }
     ]
   },

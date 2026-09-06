@@ -533,22 +533,32 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "De Europese techmarkt heeft strategisch advies nodig, software met volledig eigendom, en onafhankelijke certificering.\nWij bouwen alle drie.",
+    "conviction": "Organisatiewaarde wordt gecreëerd, gedocumenteerd en gerealiseerd.\nWij begeleiden alle drie.",
     "items": [
       {
         "num": "01",
-        "title": "De certificering ontbrak.",
-        "desc": "Een tech-asset kopen zonder onafhankelijke certificering is als een horloge kopen zonder papieren. Aegryn levert de papieren, gecertificeerd, verifieerbaar, gedocumenteerd."
+        "title": "Waarde wordt opgebouwd voor de verkoop.",
+        "desc": "Een goed overgedragen bedrijf is een goed opgebouwd bedrijf. We interveniëren vroeg: strategie, organisatie, assets, documentatie."
       },
       {
         "num": "02",
-        "title": "Technologische onafhankelijkheid ontbrak.",
-        "desc": "De echte uitdaging van de cloud ligt niet in de locatie van de machines: het gaat om de software. Aegryn ontwerpt Europese software met volledig eigendom, inzetbaar op lokale infrastructuur, voor ondernemingen en instellingen. Veiligheid, compliance, onafhankelijkheid."
+        "title": "Advies moet operationeel zijn.",
+        "desc": "Een firma die niet bouwt, kan niet adviseren. Onze eigen assets doorlopen onze eigen methoden. Wat we aanbevelen, voeren we uit."
       },
       {
         "num": "03",
-        "title": "Zwitserland als certificeringsstandaard.",
-        "desc": "Verankerd in Zwitserland. Helvetische nauwkeurigheid, institutionele discretie, en toegang tot de meest selectieve family offices en privéfondsen van het continent."
+        "title": "Technologische onafhankelijkheid is een voorwaarde voor duurzaamheid.",
+        "desc": "Afhankelijk zijn van één leverancier stelt de organisatie bloot aan een ongecontroleerd risico. We ontwerpen volledig eigen software. TECHNOLOGISCHE ONAFHANKELIJKHEID."
+      },
+      {
+        "num": "04",
+        "title": "Certificering verandert het gesprek.",
+        "desc": "Geen beoordeling, een protocol. Voor elke marktintroductie, voor elke onderhandeling. Een door Aegryn gecertificeerd asset is geen belofte, maar een gedocumenteerde zekerheid."
+      },
+      {
+        "num": "05",
+        "title": "Talent is een asset zoals elke andere.",
+        "desc": "Organisaties die standhouden plaatsen de juiste mensen op het juiste moment. CTO, CISO, DG, Head of AI."
       }
     ]
   },
@@ -596,8 +606,8 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "Aegryn is zowel een adviesbureau als een tech-bedrijf. We adviseren over strategie, technologie en M&A. We bouwen duurzame digitale assets voor onze klanten. We structureren transacties. We werven de leidinggevenden die uitvoeren. En we documenteren de markt.\n\nWat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Dit hybride DNA, adviesbureau en tech-bedrijf, is wat slechts weinig spelers echt kunnen claimen.",
-    "tagline": "STRATEGIE-, TECH- EN M&A-ADVIES. ÉÉN STANDAARD.",
+    "desc": "Aegryn begeleidt besluitvormers, oprichters en leidinggevenden bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.\n\nWe zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde.",
+    "tagline": "ADVIESFIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
     "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze eerste geloofwaardigheid.",
@@ -607,22 +617,22 @@
       {
         "val": "5",
         "label": "Geïntegreerde disciplines",
-        "sub": "Advies · Bouw · Transactie · Talent · Intelligence"
+        "sub": "Advies · Opbouw · Transactie · Talent · Intelligence"
       },
       {
         "val": "23+",
         "label": "Gedekte sectoren",
-        "sub": "Alle groottes, alle EU-geografieën"
+        "sub": "Alle sectoren, Zwitserland. Europa"
       },
       {
         "val": "< 25%",
-        "label": "Selectiepercentage",
-        "sub": "Strengheid toegepast op elke opdracht"
+        "label": "Certificeringspercentage",
+        "sub": "Strengheid bij elk mandaat"
       },
       {
         "val": "100%",
-        "label": "Klantafstemming",
-        "sub": "Wat we adviseren, passen we op onszelf toe"
+        "label": "Klantalignement",
+        "sub": "Wat we adviseren, passen we toe"
       }
     ]
   },

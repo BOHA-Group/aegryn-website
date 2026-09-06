@@ -533,22 +533,32 @@
   },
   "whatwedo": {
     "label": "La Nostra Convinzione",
-    "conviction": "Il mercato tech europeo ha bisogno di consulenza strategica, software a proprietà totale e certificazione indipendente.\nLi costruiamo tutti e tre.",
+    "conviction": "Il valore organizzativo si crea, si documenta e si realizza.\nAccompagniamo tutti e tre.",
     "items": [
       {
         "num": "01",
-        "title": "Mancava la certificazione.",
-        "desc": "Acquistare un asset tech senza certificazione indipendente è come acquistare un orologio senza documenti. Aegryn fornisce i documenti, certificati, verificabili, documentati."
+        "title": "Il valore si costruisce prima di essere ceduto.",
+        "desc": "Un'azienda ben trasmessa è un'azienda ben costruita. Interveniamo a monte: strategia, organizzazione, asset, documentazione."
       },
       {
         "num": "02",
-        "title": "L'indipendenza tecnologica mancava.",
-        "desc": "La vera sfida del cloud non riguarda la posizione delle macchine: riguarda il software. Aegryn progetta software europeo a proprietà totale, distribuibile su infrastrutture locali, per imprese e istituzioni. Sicurezza, conformità, indipendenza."
+        "title": "La consulenza deve essere operativa.",
+        "desc": "Una firma che non costruisce non può consigliare. I nostri asset passano per i nostri metodi. Ciò che raccomandiamo, lo eseguiamo."
       },
       {
         "num": "03",
-        "title": "La Svizzera come standard di certificazione.",
-        "desc": "Radicato in Svizzera. Il rigore elvetico, la discrezione istituzionale, e l'accesso ai family office e fondi privati più selettivi del continente."
+        "title": "L'indipendenza tecnologica è condizione di durabilità.",
+        "desc": "Dipendere da un solo fornitore espone l'organizzazione a un rischio non controllato. Progettiamo software a proprietà totale. INDIPENDENZA TECNOLOGICA."
+      },
+      {
+        "num": "04",
+        "title": "La certificazione cambia la conversazione.",
+        "desc": "Non una valutazione, un protocollo. Prima di qualsiasi go-to-market, prima di qualsiasi trattativa. Un asset certificato Aegryn è una certezza documentata."
+      },
+      {
+        "num": "05",
+        "title": "Il talento è un asset come qualsiasi altro.",
+        "desc": "Le organizzazioni che durano collocano le persone giuste al momento giusto. CTO, CISO, DG, Head of AI."
       }
     ]
   },
@@ -596,8 +606,8 @@
   "aboutSection": {
     "label": "Chi è Aegryn",
     "title": "Cinque discipline.\nUna sola azienda.",
-    "desc": "Aegryn è allo stesso tempo una società di consulenza e un'azienda tech. Consigliamo su strategia, tecnologia e M&A. Costruiamo asset digitali duraturi per i nostri clienti. Strutturiamo transazioni. Reclut iamo i dirigenti che eseguono. E documentiamo il mercato.\n\nCiò che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri stessi metodi. Questo DNA ibrido, società di consulenza e azienda tech, è ciò che pochissimi attori possono realmente rivendicare.",
-    "tagline": "CONSULENZA IN STRATEGIA, TECH E M&A. UN SOLO STANDARD.",
+    "desc": "Aegryn accompagna decisori, fondatori e dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.\n\nNon siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione.",
+    "tagline": "STUDIO DI CONSULENZA, RADICATO IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
     "quote": "Quello che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri metodi. Questa coerenza è la nostra prima credibilità.",
@@ -612,17 +622,17 @@
       {
         "val": "23+",
         "label": "Settori coperti",
-        "sub": "Tutte le dimensioni, tutte le geografie EU"
+        "sub": "Tutti i settori, Svizzera. Europa"
       },
       {
         "val": "< 25%",
-        "label": "Tasso di selezione",
-        "sub": "Rigore applicato ad ogni impegno"
+        "label": "Tasso di certificazione",
+        "sub": "Rigore applicato a ogni mandato"
       },
       {
         "val": "100%",
-        "label": "Allineamento cliente",
-        "sub": "Ciò che consigliamo, lo applichiamo a noi stessi"
+        "label": "Allineamento con il cliente",
+        "sub": "Ciò che consigliamo, lo applichiamo"
       }
     ]
   },
