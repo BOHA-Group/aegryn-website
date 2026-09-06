@@ -292,9 +292,8 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   const tInd = useTranslations('industries')
   const locale = useLocale()
-  const allIndustries = (tInd.raw('list') as { name: string }[]).map(i => i.name)
-  const indLeft  = allIndustries.slice(0, 11)
-  const indRight = allIndustries.slice(11)
+  const [openCluster, setOpenCluster] = useState<number | null>(null)
+  const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
   const founderHref = `/${locale}/about#fondateur`
 
   return (
@@ -340,25 +339,38 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </div>
         </div>
 
-        {/* Nos industries — 2 sous-colonnes, noms traduits via i18n */}
-        <div className="bg-ag-white p-4">
+        {/* Nos industries — clusters dépliables */}
+        <div className="bg-ag-white p-4 overflow-y-auto" style={{ maxHeight: 420 }}>
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('whoIndustriesDesc')}
           </p>
-          <div className="grid grid-cols-2 gap-x-3">
-            <div className="flex flex-col gap-1.5">
-              {indLeft.map(name => (
-                <span key={name} className="font-sans text-[13px] text-ag-gray leading-snug">{name}</span>
-              ))}
-            </div>
-            <div className="flex flex-col gap-1.5">
-              {indRight.map(name => (
-                <span key={name} className="font-sans text-[13px] text-ag-gray leading-snug">{name}</span>
-              ))}
-            </div>
+          <div className="divide-y divide-ag-border border-t border-ag-border">
+            {clusters.map((cluster, ci) => {
+              const isOpen = openCluster === ci
+              return (
+                <div key={ci}>
+                  <button
+                    onClick={() => setOpenCluster(isOpen ? null : ci)}
+                    className="w-full flex items-center justify-between py-2 text-left group"
+                  >
+                    <span className="font-sans font-semibold text-[11px] uppercase tracking-[0.14em] text-ag-navy group-hover:text-ag-black transition-colors">
+                      {cluster.cluster}
+                    </span>
+                    <span className="text-ag-gray-light text-[14px] leading-none">{isOpen ? '−' : '+'}</span>
+                  </button>
+                  {isOpen && (
+                    <div className="pb-2 pl-1 flex flex-col gap-1">
+                      {cluster.items.map(item => (
+                        <span key={item.name} className="font-sans text-[12px] text-ag-gray leading-snug">{item.name}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
 
