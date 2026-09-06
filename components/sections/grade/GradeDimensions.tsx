@@ -15,16 +15,7 @@ function Card({ code, name, desc, dark = false, className = '' }: {
       <DimBadge code={code} dark={dark} />
       <div className="min-w-0">
         <p className={`font-sans font-semibold text-[14px] mb-1 ${dark ? 'text-white' : 'text-ag-black'}`}>{name}</p>
-        <p
-          className="font-sans text-[12px] leading-relaxed"
-          style={{
-            color: dark ? 'rgba(255,255,255,0.6)' : '#6b7280',
-            display: '-webkit-box',
-            WebkitLineClamp: 4,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}
-        >{desc}</p>
+        <p className="font-sans text-[12px] leading-relaxed line-clamp-4" style={{ color: dark ? 'rgba(255,255,255,0.6)' : '#6b7280' }}>{desc}</p>
       </div>
     </div>
   )
@@ -81,7 +72,7 @@ export function GradeDimensions() {
           className="hidden md:grid"
           style={{
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gridTemplateRows: 'repeat(3, 220px)',
+            gridTemplateRows: 'repeat(3, auto)',
             gap: '12px',
           }}
         >
