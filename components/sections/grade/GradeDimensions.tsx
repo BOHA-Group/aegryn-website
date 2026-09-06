@@ -100,22 +100,22 @@ export function GradeDimensions() {
             {/* C — haut gauche, badge top-left */}
             <CornerCard
               code={corners[0].code} name={corners[0].name} desc={corners[0].desc}
-              badgeAlign="top-left" className="pb-16"
+              badgeAlign="top-left" className="pb-28"
             />
             {/* I — haut droit, badge top-right */}
             <CornerCard
               code={corners[1].code} name={corners[1].name} desc={corners[1].desc}
-              badgeAlign="top-right" className="pb-16"
+              badgeAlign="top-right" className="pb-28"
             />
             {/* F — bas gauche, badge bottom-left */}
             <CornerCard
               code={corners[2].code} name={corners[2].name} desc={corners[2].desc}
-              badgeAlign="bottom-left" className="pt-16"
+              badgeAlign="bottom-left" className="pt-28"
             />
             {/* S — bas droit, badge bottom-right */}
             <CornerCard
               code={corners[3].code} name={corners[3].name} desc={corners[3].desc}
-              badgeAlign="bottom-right" className="pt-16"
+              badgeAlign="bottom-right" className="pt-28"
             />
           </div>
 
