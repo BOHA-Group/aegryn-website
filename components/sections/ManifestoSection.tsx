@@ -201,11 +201,13 @@ export function ManifestoSection() {
                 >
                   &ldquo;{tA('quote')}&rdquo;
                 </p>
-                <footer>
-                  <p className="font-sans font-normal text-[11px] text-ag-gray-light">
-                    {tA('ceoTitle')}
-                  </p>
-                </footer>
+                {tA('ceoTitle') && (
+                  <footer>
+                    <p className="font-sans font-normal text-[11px] text-ag-gray-light">
+                      {tA('ceoTitle')}
+                    </p>
+                  </footer>
+                )}
               </blockquote>
 
               <div className="about-stats grid grid-cols-2 lg:grid-cols-4 border-t border-ag-border pt-8 gap-6">
