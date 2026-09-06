@@ -272,8 +272,8 @@
     },
     "pillars": {
       "strategy": {
-        "title": "Strategy Consulting",
-        "desc": "We help leaders define and execute their strategic vision in a constantly evolving environment.",
+        "title": "STRATEGY ADVISORY",
+        "desc": "We define with leaders the trajectory of their organisation and the conditions for its execution.",
         "why": {
           "title": "Why strategy consulting?",
           "desc": "In a fragmented European market where 70% of strategies fail to generate sustainable growth, tech leaders face critical choices: international expansion, operating model transformation, capital allocation between organic growth and acquisitions. Our approach combines strategic vision and operational execution to transform ambition into measurable results."
@@ -302,30 +302,30 @@
         },
         "dimensions": [
           {
-            "label": "International strategy",
-            "desc": "Geographic expansion, subsidiary establishment, local market adaptation and strategic partnerships."
+            "label": "Growth strategy and business model",
+            "desc": ""
           },
           {
-            "label": "Business transformation",
-            "desc": "Operating model redesign, process digitalization, change management and organizational alignment."
+            "label": "International expansion",
+            "desc": ""
           },
           {
-            "label": "Cost optimization",
-            "desc": "Cost structure analysis, efficiency lever identification, restructuring and profitability improvement."
+            "label": "Operational optimisation",
+            "desc": ""
           },
           {
-            "label": "Innovation & growth",
-            "desc": "Product strategy, new markets, diversification, technology partnerships and revenue models."
+            "label": "Innovation and new markets",
+            "desc": ""
           },
           {
-            "label": "Talent & organization",
-            "desc": "Organizational design, HR strategy, company culture, talent retention and leadership."
+            "label": "Organisational transformation",
+            "desc": ""
           }
         ]
       },
       "technology": {
-        "title": "Technology Consulting",
-        "desc": "We support companies' technology transformation with a pragmatic and operational approach.",
+        "title": "TECHNOLOGY ADVISORY",
+        "desc": "We intervene on the technology layer of the organisation, from architecture to compliance.",
         "why": {
           "title": "Why technology consulting?",
           "desc": "Only 30% of digital transformations achieve their objectives. Technology is no longer support: it defines your operating model, customer experience and ability to innovate. We help leaders transform technological ambition into measurable competitive advantage, combining strategic vision and technical execution."
@@ -354,34 +354,30 @@
         },
         "dimensions": [
           {
-            "label": "Digital transformation",
-            "desc": "Digital strategy, legacy system overhaul, application modernization and user experience."
+            "label": "Digital transformation and systems",
+            "desc": ""
           },
           {
-            "label": "Data & Analytics",
-            "desc": "Data architecture, governance, data lake/warehouse, BI, advanced analytics and data monetization."
+            "label": "Data and Artificial Intelligence",
+            "desc": ""
           },
           {
-            "label": "Artificial Intelligence",
-            "desc": "AI strategy, use cases, MLOps, generative AI, EU AI Act compliance and model auditing."
+            "label": "Cybersecurity and compliance (NIS2, GDPR, EU AI Act)",
+            "desc": ""
           },
           {
-            "label": "Cybersecurity",
-            "desc": "Security audit, pentest, NIS2/ISO27001 compliance, cyber governance and resilience."
+            "label": "Cloud and Infrastructure",
+            "desc": ""
           },
           {
-            "label": "Cloud & Infrastructure",
-            "desc": "Cloud migration, multi-cloud architecture, DevOps, SRE, scalability and cloud cost optimization."
-          },
-          {
-            "label": "Blockchain & Web3",
-            "desc": "Blockchain strategy, tokenization, smart contracts, DeFi and regulatory compliance."
+            "label": "Sovereignty and technological independence",
+            "desc": ""
           }
         ]
       },
       "ma": {
-        "title": "M&A Consulting",
-        "desc": "We support M&A operations and post-acquisition integration with tech expertise.",
+        "title": "M&A ADVISORY",
+        "desc": "We structure external growth operations and support their integration.",
         "why": {
           "title": "Why M&A consulting?",
           "desc": "Tech acquisitions rarely fail on strategy, but on execution: underestimation of technical debt, botched IT integration, flight of key talents, unrealized technology synergies. We intervene from the due diligence phase to identify technical risks and value creation opportunities, then support integration through closing and beyond."
@@ -410,42 +406,42 @@
         },
         "dimensions": [
           {
-            "label": "Transaction Advisory",
-            "desc": "Divestiture structuring, acquisitions, fundraising, tech asset valuation and negotiation."
+            "label": "Acquisition strategy and sourcing",
+            "desc": ""
           },
           {
-            "label": "Tech Due Diligence",
-            "desc": "Technical audit, technical debt assessment, intellectual property analysis and risk evaluation."
+            "label": "Due diligence (technical, financial, organisational)",
+            "desc": ""
           },
           {
-            "label": "Post-Merger Integration (PMI)",
-            "desc": "IT systems integration, process harmonization, technology synergies and change management."
+            "label": "Post-acquisition integration",
+            "desc": ""
           },
           {
-            "label": "Carve-out & Spin-off",
-            "desc": "Asset separation, business unit extraction, transition services agreements and IT autonomization."
+            "label": "Carve-out and subsidiary disposal",
+            "desc": ""
           }
         ]
       },
       "board": {
-        "title": "Board Advisory",
-        "desc": "Supporting executives, founders and board members in high-stakes strategic decisions. Governance, 3-5 year plans, preparation for transmission.",
+        "title": "BOARD ADVISORY",
+        "desc": "We act as strategic partners to founders and board members on high-stakes, long-horizon decisions.",
         "dimensions": [
           {
-            "label": "Governance & Board",
-            "desc": "Board structuring, independent director roles, shareholder agreements."
+            "label": "Governance and board composition",
+            "desc": ""
           },
           {
-            "label": "Long-term strategic plan",
-            "desc": "3-5 year vision, prioritisation, value KPIs."
+            "label": "3 to 5 year strategic plan",
+            "desc": ""
           },
           {
-            "label": "Transmission preparation",
-            "desc": "Documentation, valuation, sale roadmap."
+            "label": "Valuation preparation (ahead of any transmission decision)",
+            "desc": ""
           },
           {
-            "label": "Operating partner for founders",
-            "desc": "Operational support for founders during critical phases."
+            "label": "Founder operating partner",
+            "desc": ""
           }
         ],
         "href": "/advisory/strategy"

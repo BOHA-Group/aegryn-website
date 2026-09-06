@@ -272,8 +272,8 @@
     },
     "pillars": {
       "strategy": {
-        "title": "Strategieadvies",
-        "desc": "Wij helpen leiders hun strategische visie te definiëren en uit te voeren in een voortdurend veranderende omgeving.",
+        "title": "STRATEGISCH ADVIES",
+        "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor uitvoering.",
         "why": {
           "title": "Waarom strategieadvies?",
           "desc": "In een gefragmenteerde Europese markt waar 70% van de strategieën geen duurzame groei genereert, staan tech-leiders voor kritieke beslissingen: internationale expansie, transformatie van het operationeel model, kapitaalallocatie tussen organische groei en overnames. Onze aanpak combineert strategische visie en operationele uitvoering om ambitie om te zetten in meetbare resultaten."
@@ -302,30 +302,30 @@
         },
         "dimensions": [
           {
-            "label": "Internationale strategie",
-            "desc": "Geografische expansie, vestiging van dochterondernemingen, aanpassing aan lokale markten en strategische partnerschappen."
+            "label": "Groeistrategie en businessmodel",
+            "desc": ""
           },
           {
-            "label": "Bedrijfstransformatie",
-            "desc": "Herontwerp van het operationele model, digitalisering van processen, verandermanagement en organisatorische afstemming."
+            "label": "Internationale expansie",
+            "desc": ""
           },
           {
-            "label": "Kostenoptimalisatie",
-            "desc": "Analyse van kostenstructuur, identificatie van efficiëntie-hefbomen, herstructurering en verbetering van winstgevendheid."
+            "label": "Operationele optimalisatie",
+            "desc": ""
           },
           {
-            "label": "Innovatie & groei",
-            "desc": "Productstrategie, nieuwe markten, diversificatie, technologische partnerschappen en inkomstenmodellen."
+            "label": "Innovatie en nieuwe markten",
+            "desc": ""
           },
           {
-            "label": "Talent & organisatie",
-            "desc": "Organisatieontwerp, HR-strategie, bedrijfscultuur, talentbehoud en leiderschap."
+            "label": "Organisatorische transformatie",
+            "desc": ""
           }
         ]
       },
       "technology": {
-        "title": "Technologieadvies",
-        "desc": "Wij begeleiden de technologische transformatie van bedrijven met een pragmatische en operationele aanpak.",
+        "title": "TECHNOLOGISCH ADVIES",
+        "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
         "why": {
           "title": "Waarom technologieadvies?",
           "desc": "Slechts 30% van de digitale transformaties bereikt zijn doelstellingen. Technologie is geen ondersteuning meer: het definieert uw operationeel model, klantervaring en innovatievermogen. Wij helpen leiders technologische ambitie om te zetten in meetbaar concurrentievoordeel door strategische visie en technische uitvoering te combineren."
@@ -354,34 +354,30 @@
         },
         "dimensions": [
           {
-            "label": "Digitale transformatie",
-            "desc": "Digitale strategie, vernieuwing van legacy-systemen, applicatiemodernisering en gebruikerservaring."
+            "label": "Digitale transformatie en systemen",
+            "desc": ""
           },
           {
-            "label": "Data & Analytics",
-            "desc": "Data-architectuur, governance, data lake/warehouse, BI, geavanceerde analytics en datamonetisatie."
+            "label": "Data en Kunstmatige Intelligentie",
+            "desc": ""
           },
           {
-            "label": "Kunstmatige Intelligentie",
-            "desc": "AI-strategie, use cases, MLOps, generatieve AI, EU AI Act-conformiteit en modelaudit."
+            "label": "Cyberbeveiliging en compliance (NIS2, AVG, EU AI Act)",
+            "desc": ""
           },
           {
-            "label": "Cyberbeveiliging",
-            "desc": "Beveiligingsaudit, pentest, NIS2/ISO27001-conformiteit, cybergovernance en veerkracht."
+            "label": "Cloud en Infrastructuur",
+            "desc": ""
           },
           {
-            "label": "Cloud & Infrastructuur",
-            "desc": "Cloudmigratie, multi-cloud-architectuur, DevOps, SRE, schaalbaarheid en cloudkostenoptimalisatie."
-          },
-          {
-            "label": "Blockchain & Web3",
-            "desc": "Blockchain-strategie, tokenisatie, smart contracts, DeFi en regelgevende compliance."
+            "label": "Technologische soevereiniteit en onafhankelijkheid",
+            "desc": ""
           }
         ]
       },
       "ma": {
-        "title": "M&A-advies",
-        "desc": "Wij begeleiden fusies, overnames en post-acquisitie-integratie met tech-expertise.",
+        "title": "M&A ADVIES",
+        "desc": "Wij structureren externe groeioperaties en begeleiden hun integratie.",
         "why": {
           "title": "Waarom M&A-advies?",
           "desc": "Tech-acquisities mislukken zelden op strategie, maar op uitvoering: onderschatting van technische schuld, mislukte IT-integratie, verlies van sleuteltalenten, niet gerealiseerde technologische synergieën. Wij interveniëren vanaf de due diligence-fase om technische risico's en waardecreatiemogelijkheden te identificeren, en begeleiden vervolgens de integratie tot closing en daarna."
@@ -410,42 +406,42 @@
         },
         "dimensions": [
           {
-            "label": "Transactieadvies",
-            "desc": "Structurering van overdrachten, overnames, fundraising, waardering van tech-assets en onderhandeling."
+            "label": "Acquistiestrategie en sourcing",
+            "desc": ""
           },
           {
-            "label": "Tech Due Diligence",
-            "desc": "Technische audit, beoordeling van technische schuld, analyse van intellectueel eigendom en risico's."
+            "label": "Due diligence (technisch, financieel, organisatorisch)",
+            "desc": ""
           },
           {
-            "label": "Post-Merger Integratie (PMI)",
-            "desc": "IT-systeemintegratie, procesharmonisatie, technologische synergieën en verandermanagement."
+            "label": "Post-acquisitie integratie",
+            "desc": ""
           },
           {
-            "label": "Carve-out & Spin-off",
-            "desc": "Asset-scheiding, extractie van bedrijfseenheden, transitional service agreements en IT-autonomisering."
+            "label": "Carve-out en verkoop van dochterondernemingen",
+            "desc": ""
           }
         ]
       },
       "board": {
-        "title": "Board Advisory",
-        "desc": "Begeleiding van leidinggevenden, oprichters en bestuurders bij strategische beslissingen met hoge inzet. Governance, 3-5 jaar plannen, voorbereiding op overdracht.",
+        "title": "BOARD ADVISORY",
+        "desc": "Wij treden op als strategische partners van oprichters en bestuurders bij beslissingen met hoge inzet en lange horizon.",
         "dimensions": [
           {
-            "label": "Governance & Board",
-            "desc": "Structurering van de raad van bestuur, onafhankelijke bestuurdersrollen, aandeelhoudersovereenkomsten."
+            "label": "Governance en samenstelling van het board",
+            "desc": ""
           },
           {
-            "label": "Langetermijn strategisch plan",
-            "desc": "Visie op 3-5 jaar, prioritering, waarde-KPI’s."
+            "label": "Strategisch plan van 3 tot 5 jaar",
+            "desc": ""
           },
           {
-            "label": "Voorbereiding op overdracht",
-            "desc": "Documentatie, waardering, verkooproadmap."
+            "label": "Voorbereiding op waardering (voor elke beslissing over overdracht)",
+            "desc": ""
           },
           {
-            "label": "Operating partner voor oprichters",
-            "desc": "Operationele ondersteuning van de oprichter tijdens kritieke fasen."
+            "label": "Oprichter als operating partner",
+            "desc": ""
           }
         ],
         "href": "/advisory/strategy"

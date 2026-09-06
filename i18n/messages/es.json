@@ -272,8 +272,8 @@
     },
     "pillars": {
       "strategy": {
-        "title": "Consultoría Estratégica",
-        "desc": "Ayudamos a los líderes a definir y ejecutar su visión estratégica en un entorno en constante evolución.",
+        "title": "CONSULTORÍA ESTRATÉGICA",
+        "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su ejecución.",
         "why": {
           "title": "¿Por qué consultoría estratégica?",
           "desc": "En un mercado europeo fragmentado donde el 70% de las estrategias no logran generar crecimiento sostenible, los líderes tech enfrentan decisiones críticas: expansión internacional, transformación del modelo operativo, asignación de capital entre crecimiento orgánico y adquisiciones. Nuestro enfoque combina visión estratégica y ejecución operativa para transformar la ambición en resultados medibles."
@@ -302,30 +302,30 @@
         },
         "dimensions": [
           {
-            "label": "Estrategia internacional",
-            "desc": "Expansión geográfica, implantación de filiales, adaptación a mercados locales y alianzas estratégicas."
+            "label": "Estrategia de crecimiento y modelo de negocio",
+            "desc": ""
           },
           {
-            "label": "Transformación empresarial",
-            "desc": "Rediseño del modelo operativo, digitalización de procesos, gestión del cambio y alineación organizacional."
+            "label": "Expansión internacional",
+            "desc": ""
           },
           {
-            "label": "Optimización de costes",
-            "desc": "Análisis de estructura de costes, identificación de palancas de eficiencia, reestructuración y mejora de rentabilidad."
+            "label": "Optimización operacional",
+            "desc": ""
           },
           {
-            "label": "Innovación y crecimiento",
-            "desc": "Estrategia de producto, nuevos mercados, diversificación, alianzas tecnológicas y modelos de ingresos."
+            "label": "Innovación y nuevos mercados",
+            "desc": ""
           },
           {
-            "label": "Talento y organización",
-            "desc": "Diseño organizacional, estrategia de RRHH, cultura empresarial, retención de talento y liderazgo."
+            "label": "Transformación organizacional",
+            "desc": ""
           }
         ]
       },
       "technology": {
-        "title": "Consultoría Tecnológica",
-        "desc": "Acompañamos la transformación tecnológica de las empresas con un enfoque pragmático y operativo.",
+        "title": "CONSULTORÍA TECNOLÓGICA",
+        "desc": "Intervenimos en la capa tecnológica de la organización, desde la arquitectura hasta la conformidad.",
         "why": {
           "title": "¿Por qué consultoría tecnológica?",
           "desc": "Solo el 30% de las transformaciones digitales alcanzan sus objetivos. La tecnología ya no es soporte: define su modelo operativo, experiencia del cliente y capacidad de innovación. Ayudamos a los líderes a transformar la ambición tecnológica en ventaja competitiva medible, combinando visión estratégica y ejecución técnica."
@@ -354,34 +354,30 @@
         },
         "dimensions": [
           {
-            "label": "Transformación digital",
-            "desc": "Estrategia digital, renovación de sistemas legacy, modernización de aplicaciones y experiencia de usuario."
+            "label": "Transformación digital y sistemas",
+            "desc": ""
           },
           {
-            "label": "Data & Analytics",
-            "desc": "Arquitectura de datos, gobernanza, data lake/warehouse, BI, analítica avanzada y monetización de datos."
+            "label": "Datos e Inteligencia Artificial",
+            "desc": ""
           },
           {
-            "label": "Inteligencia Artificial",
-            "desc": "Estrategia IA, casos de uso, MLOps, IA generativa, cumplimiento EU AI Act y auditoría de modelos."
-          },
-          {
-            "label": "Ciberseguridad",
-            "desc": "Auditoría de seguridad, pentest, cumplimiento NIS2/ISO27001, gobernanza cyber y resiliencia."
+            "label": "Ciberseguridad y cumplimiento (NIS2, RGPD, EU AI Act)",
+            "desc": ""
           },
           {
             "label": "Cloud e Infraestructura",
-            "desc": "Migración cloud, arquitectura multi-cloud, DevOps, SRE, escalabilidad y optimización de costes cloud."
+            "desc": ""
           },
           {
-            "label": "Blockchain & Web3",
-            "desc": "Estrategia blockchain, tokenización, smart contracts, DeFi y cumplimiento regulatorio."
+            "label": "Soberanía e independencia tecnológica",
+            "desc": ""
           }
         ]
       },
       "ma": {
-        "title": "Consultoría M&A",
-        "desc": "Acompañamos operaciones de fusiones-adquisiciones e integración post-adquisición con experiencia tech.",
+        "title": "CONSULTORÍA M&A",
+        "desc": "Estructuramos las operaciones de crecimiento externo y acompañamos su integración.",
         "why": {
           "title": "¿Por qué consultoría M&A?",
           "desc": "Las adquisiciones tech rara vez fracasan en la estrategia, sino en la ejecución: subestimación de deuda técnica, integración IT fallida, fuga de talentos clave, sinergias tecnológicas no realizadas. Intervenimos desde la fase de due diligence para identificar riesgos técnicos y oportunidades de creación de valor, luego acompañamos la integración hasta el cierre y más allá."
@@ -410,42 +406,42 @@
         },
         "dimensions": [
           {
-            "label": "Advisory Transacciones",
-            "desc": "Estructuración de cesiones, adquisiciones, levantamiento de fondos, valoración de activos tech y negociación."
+            "label": "Estrategia de adquisición y sourcing",
+            "desc": ""
           },
           {
-            "label": "Due Diligence Tech",
-            "desc": "Auditoría técnica, evaluación de deuda técnica, análisis de propiedad intelectual y riesgos."
+            "label": "Due diligence (técnica, financiera, organizacional)",
+            "desc": ""
           },
           {
-            "label": "Integración Post-Fusión (PMI)",
-            "desc": "Integración de sistemas IT, armonización de procesos, sinergias tecnológicas y gestión del cambio."
+            "label": "Integración post-adquisición",
+            "desc": ""
           },
           {
-            "label": "Carve-out & Spin-off",
-            "desc": "Separación de activos, extracción de unidades de negocio, acuerdos de servicios de transición y autonomización IT."
+            "label": "Carve-out y cesión de filiales",
+            "desc": ""
           }
         ]
       },
       "board": {
-        "title": "Board Advisory",
-        "desc": "Acompañamiento de ejecutivos, fundadores y consejeros en decisiones estratégicas de alto impacto. Gobernanza, planes a 3-5 años, preparación para la transmisión.",
+        "title": "BOARD ADVISORY",
+        "desc": "Actuamos como socios estratégicos de los fundadores y administradores en las decisiones de alto riesgo y horizonte largo.",
         "dimensions": [
           {
-            "label": "Gobernanza & Consejo",
-            "desc": "Estructuración del consejo de administración, roles de consejeros independientes, pactos de socios."
+            "label": "Gobierno corporativo y composición del board",
+            "desc": ""
           },
           {
-            "label": "Plan estratégico a largo plazo",
-            "desc": "Visión a 3-5 años, priorización, KPIs de valor."
+            "label": "Plan estratégico de 3 a 5 años",
+            "desc": ""
           },
           {
-            "label": "Preparación para la transmisión",
-            "desc": "Documentación, valoración, hoja de ruta de venta."
+            "label": "Preparación a la valoración (antes de cualquier decisión de transmisión)",
+            "desc": ""
           },
           {
-            "label": "Operating partner para fundadores",
-            "desc": "Apoyo operacional al fundador en fases críticas."
+            "label": "Operating partner fundador",
+            "desc": ""
           }
         ],
         "href": "/advisory/strategy"

@@ -272,8 +272,8 @@
     },
     "pillars": {
       "strategy": {
-        "title": "Strategieberatung",
-        "desc": "Wir helfen Führungskräften, ihre strategische Vision in einem sich ständig verändernden Umfeld zu definieren und umzusetzen.",
+        "title": "STRATEGIEBERATUNG",
+        "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Umsetzung.",
         "why": {
           "title": "Warum Strategieberatung?",
           "desc": "In einem fragmentierten europäischen Markt, in dem 70% der Strategien kein nachhaltiges Wachstum generieren, stehen Tech-Führungskräfte vor kritischen Entscheidungen: internationale Expansion, Transformation des Betriebsmodells, Kapitalallokation zwischen organischem Wachstum und Akquisitionen. Unser Ansatz kombiniert strategische Vision und operative Umsetzung, um Ambitionen in messbare Ergebnisse zu verwandeln."
@@ -302,30 +302,30 @@
         },
         "dimensions": [
           {
-            "label": "Internationale Strategie",
-            "desc": "Geografische Expansion, Tochtergesellschaften, lokale Marktanpassung und strategische Partnerschaften."
+            "label": "Wachstumsstrategie und Geschäftsmodell",
+            "desc": ""
           },
           {
-            "label": "Business-Transformation",
-            "desc": "Neugestaltung des Betriebsmodells, Digitalisierung der Prozesse, Change Management und organisatorische Ausrichtung."
+            "label": "Internationale Expansion",
+            "desc": ""
           },
           {
-            "label": "Kostenoptimierung",
-            "desc": "Kostenstrukturanalyse, Identifizierung von Effizienzhebeln, Restrukturierung und Rentabilitätsverbesserung."
+            "label": "Operative Optimierung",
+            "desc": ""
           },
           {
-            "label": "Innovation & Wachstum",
-            "desc": "Produktstrategie, neue Märkte, Diversifizierung, Technologiepartnerschaften und Ertragsmodelle."
+            "label": "Innovation und neue Märkte",
+            "desc": ""
           },
           {
-            "label": "Talent & Organisation",
-            "desc": "Organisationsdesign, HR-Strategie, Unternehmenskultur, Talentbindung und Führung."
+            "label": "Organisatorische Transformation",
+            "desc": ""
           }
         ]
       },
       "technology": {
-        "title": "Technologieberatung",
-        "desc": "Wir begleiten die technologische Transformation von Unternehmen mit einem pragmatischen und operativen Ansatz.",
+        "title": "TECHNOLOGIEBERATUNG",
+        "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
         "why": {
           "title": "Warum Technologieberatung?",
           "desc": "Nur 30% der digitalen Transformationen erreichen ihre Ziele. Technologie ist keine Unterstützung mehr: Sie definiert Ihr Betriebsmodell, Ihre Kundenerfahrung und Ihre Innovationsfähigkeit. Wir helfen Führungskräften, technologische Ambitionen in messbaren Wettbewerbsvorteil zu verwandeln, indem wir strategische Vision und technische Umsetzung kombinieren."
@@ -354,34 +354,30 @@
         },
         "dimensions": [
           {
-            "label": "Digitale Transformation",
-            "desc": "Digitalstrategie, Legacy-System-Überholung, Anwendungsmodernisierung und Benutzererfahrung."
+            "label": "Digitale Transformation und Systeme",
+            "desc": ""
           },
           {
-            "label": "Data & Analytics",
-            "desc": "Datenarchitektur, Governance, Data Lake/Warehouse, BI, erweiterte Analysen und Datenmonetarisierung."
+            "label": "Daten und Künstliche Intelligenz",
+            "desc": ""
           },
           {
-            "label": "Künstliche Intelligenz",
-            "desc": "KI-Strategie, Anwendungsfälle, MLOps, generative KI, EU-KI-Gesetz-Konformität und Modellprüfung."
+            "label": "Cybersicherheit und Compliance (NIS2, DSGVO, EU AI Act)",
+            "desc": ""
           },
           {
-            "label": "Cybersicherheit",
-            "desc": "Sicherheitsaudit, Pentest, NIS2/ISO27001-Konformität, Cyber-Governance und Resilienz."
+            "label": "Cloud und Infrastruktur",
+            "desc": ""
           },
           {
-            "label": "Cloud & Infrastruktur",
-            "desc": "Cloud-Migration, Multi-Cloud-Architektur, DevOps, SRE, Skalierbarkeit und Cloud-Kostenoptimierung."
-          },
-          {
-            "label": "Blockchain & Web3",
-            "desc": "Blockchain-Strategie, Tokenisierung, Smart Contracts, DeFi und regulatorische Compliance."
+            "label": "Technologische Souveränität und Unabhängigkeit",
+            "desc": ""
           }
         ]
       },
       "ma": {
-        "title": "M&A-Beratung",
-        "desc": "Wir begleiten M&A-Operationen und Post-Akquisitions-Integration mit Tech-Expertise.",
+        "title": "M&A-BERATUNG",
+        "desc": "Wir strukturieren externe Wachstumsoperationen und begleiten deren Integration.",
         "why": {
           "title": "Warum M&A-Beratung?",
           "desc": "Tech-Akquisitionen scheitern selten an der Strategie, sondern an der Umsetzung: Unterschätzung technischer Schulden, verpfuschte IT-Integration, Flucht von Schlüsseltalenten, nicht realisierte Technologie-Synergien. Wir greifen ab der Due-Diligence-Phase ein, um technische Risiken und Wertschöpfungschancen zu identifizieren, und begleiten dann die Integration bis zum Closing und darüber hinaus."
@@ -410,42 +406,42 @@
         },
         "dimensions": [
           {
-            "label": "Transaction Advisory",
-            "desc": "Strukturierung von Veräußerungen, Akquisitionen, Fundraising, Tech-Asset-Bewertung und Verhandlung."
+            "label": "Akquisitionsstrategie und Sourcing",
+            "desc": ""
           },
           {
-            "label": "Tech Due Diligence",
-            "desc": "Technisches Audit, Bewertung technischer Schulden, IP-Analyse und Risikobewertung."
+            "label": "Due Diligence (technisch, finanziell, organisatorisch)",
+            "desc": ""
           },
           {
-            "label": "Post-Merger Integration (PMI)",
-            "desc": "IT-Systemintegration, Prozessharmonisierung, Technologiesynergien und Change Management."
+            "label": "Post-Akquisitions-Integration",
+            "desc": ""
           },
           {
-            "label": "Carve-out & Spin-off",
-            "desc": "Asset-Trennung, Geschäftsbereichsextraktion, Übergangsdienstleistungsvereinbarungen und IT-Autonomisierung."
+            "label": "Carve-out und Veräußerung von Tochtergesellschaften",
+            "desc": ""
           }
         ]
       },
       "board": {
-        "title": "Board Advisory",
-        "desc": "Begleitung von Führungskräften, Gründern und Verwaltungsräten bei strategischen Entscheidungen mit hohem Einsatz. Governance, 3-5-Jahrespläne, Vorbereitung der Übertragung.",
+        "title": "BOARD ADVISORY",
+        "desc": "Wir agieren als strategische Partner für Gründer und Vorstandsmitglieder bei Entscheidungen mit hohem Einsatz und langem Horizont.",
         "dimensions": [
           {
-            "label": "Governance & Board",
-            "desc": "Strukturierung des Verwaltungsrats, unabhängige Direktorenrollen, Gesellschafterverträge."
+            "label": "Governance und Board-Zusammensetzung",
+            "desc": ""
           },
           {
-            "label": "Langfristiger Strategieplan",
-            "desc": "3-5-Jahresvision, Priorisierung, Wert-KPIs."
+            "label": "Strategischer 3 bis 5 Jahresplan",
+            "desc": ""
           },
           {
-            "label": "Vorbereitung der Übertragung",
-            "desc": "Dokumentation, Bewertung, Veräufafahrplan."
+            "label": "Bewertungsvorbereitung (vor jeder Übertragungsentscheidung)",
+            "desc": ""
           },
           {
-            "label": "Operating Partner für Gründer",
-            "desc": "Operative Unterstützung von Gründern in kritischen Phasen."
+            "label": "Gründer als Operating Partner",
+            "desc": ""
           }
         ],
         "href": "/advisory/strategy"
