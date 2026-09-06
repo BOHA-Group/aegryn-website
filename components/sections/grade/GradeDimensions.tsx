@@ -48,7 +48,7 @@ export function GradeDimensions() {
           {/* Grille 2x2 des 4 coins */}
           <div className="grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
             {corners.map(({ code, name, desc }) => (
-              <div key={code} className="dim-corner bg-ag-white p-10 flex gap-5" style={{ opacity: 0 }}>
+              <div key={code} className="dim-corner bg-ag-white p-10 flex gap-5">
                 <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
                   <span className="font-sans font-bold text-ag-apex text-[13px]">{code}</span>
                 </div>
@@ -64,7 +64,7 @@ export function GradeDimensions() {
           {center && (
             <div
               className="dim-center absolute left-1/2 -translate-x-1/2 -bottom-14 z-10"
-              style={{ opacity: 0, width: 'min(400px, 70%)' }}
+              style={{ width: 'min(400px, 70%)' }}
             >
               <div className="bg-ag-navy border-2 border-ag-apex/60 shadow-2xl p-8 flex gap-5">
                 <div className="w-9 h-9 bg-ag-apex flex items-center justify-center shrink-0">
@@ -82,7 +82,7 @@ export function GradeDimensions() {
         {/* Layout mobile — liste simple */}
         <div className="md:hidden grid grid-cols-1 gap-px bg-ag-border border border-ag-border">
           {corners.map(({ code, name, desc }) => (
-            <div key={code} className="dim-corner bg-ag-white p-8 flex gap-5" style={{ opacity: 0 }}>
+            <div key={code} className="dim-corner bg-ag-white p-8 flex gap-5">
               <div className="w-9 h-9 bg-ag-navy flex items-center justify-center shrink-0">
                 <span className="font-sans font-bold text-ag-apex text-[13px]">{code}</span>
               </div>
@@ -93,7 +93,7 @@ export function GradeDimensions() {
             </div>
           ))}
           {center && (
-            <div className="dim-center bg-ag-navy border-t-2 border-ag-apex p-8 flex gap-5" style={{ opacity: 0 }}>
+            <div className="dim-center bg-ag-navy border-t-2 border-ag-apex p-8 flex gap-5">
               <div className="w-9 h-9 bg-ag-apex flex items-center justify-center shrink-0">
                 <span className="font-sans font-bold text-ag-navy text-[13px]">{center.code}</span>
               </div>
