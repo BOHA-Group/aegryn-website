@@ -51,9 +51,18 @@ export function GradeDimensions() {
         </h2>
 
         {/* Grille 2×2 — C I F S */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ background: '#e2e6ea', border: '1px solid #e2e6ea' }}>
-          {corners.map(({ code, name, desc }) => (
-            <div key={code} className="dim-item bg-ag-white p-8 md:p-10 flex gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-ag-border">
+          {corners.map(({ code, name, desc }, i) => (
+            <div
+              key={code}
+              className={[
+                'dim-item bg-ag-white p-8 md:p-10 flex gap-5',
+                'border-b border-ag-border',
+                i === corners.length - 1 ? 'border-b-0' : '',         // mobile : retirer sur la toute dernière
+                i >= 2 ? 'md:border-b-0' : '',                        // desktop : retirer sur la 2e ligne
+                i % 2 === 0 ? 'md:border-r md:border-ag-border' : '', // desktop : séparateur vertical
+              ].join(' ')}
+            >
               <DimBadge code={code} />
               <div>
                 <p className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{name}</p>
@@ -65,7 +74,7 @@ export function GradeDimensions() {
 
         {/* O — ligne centrée seule, visuellement distincte */}
         {center && (
-          <div className="mt-px flex justify-center" style={{ background: '#e2e6ea' }}>
+          <div className="flex justify-center border-x border-b border-ag-border">
             <div
               className="dim-item w-full md:w-1/2 p-8 md:p-10 flex gap-5"
               style={{ background: '#0D1F3C', borderTop: '2px solid rgba(90,221,164,0.6)' }}
