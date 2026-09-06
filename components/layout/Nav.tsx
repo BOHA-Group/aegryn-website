@@ -416,8 +416,11 @@ export interface NavUser {
 
 export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
+  const tInd = useTranslations('industries')
   const pathname = usePathname()
   const locale = useLocale()
+  const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
+  const [mobileOpenCluster, setMobileOpenCluster] = useState<number | null>(null)
   
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
@@ -695,6 +698,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
+                  <Link href="/assets" onClick={closeMobile}
+                    className="mt-1 py-1.5 font-sans text-[13px] text-ag-apex hover:text-white transition-colors flex items-center gap-1">
+                    {t('solutionsViewAll')} <span>→</span>
+                  </Link>
                 </div>
               )}
             </div>
@@ -745,6 +752,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'who' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
+
+                  {/* Le groupe */}
                   <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('whoGroup')}</p>
                   {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
@@ -756,6 +765,45 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                     {t('whoFounder')}
                   </a>
+
+                  {/* Nos bureaux */}
+                  <div className="mt-2 pt-2 border-t border-white/10">
+                    <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mb-1.5">{t('whoOffices')}</p>
+                    <p className="font-sans text-[12px] text-white/40 leading-relaxed">
+                      Switzerland, Rue du Centre 142, 1025 St-Sulpice
+                    </p>
+                  </div>
+
+                  {/* Nos industries — clusters dépliables */}
+                  <div className="mt-2 pt-2 border-t border-white/10">
+                    <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mb-2">{t('whoIndustries')}</p>
+                    <div className="divide-y divide-white/10">
+                      {clusters.map((cluster, ci) => {
+                        const isOpen = mobileOpenCluster === ci
+                        return (
+                          <div key={ci}>
+                            <button
+                              onClick={() => setMobileOpenCluster(isOpen ? null : ci)}
+                              style={{ fontWeight: 400 }}
+                              className="w-full flex items-center justify-between py-2 font-sans text-[13px] text-white/50 hover:text-white transition-colors text-left"
+                            >
+                              <span>{cluster.cluster}</span>
+                              <span className="text-white/30 leading-none">{isOpen ? '−' : '+'}</span>
+                            </button>
+                            {isOpen && (
+                              <div className="pb-2 pl-3 flex flex-col gap-1">
+                                {cluster.items.map(item => (
+                                  <span key={item.name} className="font-sans text-[12px] text-white/35 leading-snug">{item.name}</span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Nous rejoindre */}
                   <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('whoJoin')}</p>
                   {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
