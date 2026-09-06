@@ -42,7 +42,6 @@ export function BuildEngineeringStrip() {
     t('chip2'),
     t('chip3'),
     t('chip4'),
-    t('chip5'),
   ] as const
 
   return (

@@ -329,7 +329,7 @@
             "desc": ""
           },
           {
-            "label": "Internationale Expansion",
+            "label": "Geografische Expansion",
             "desc": ""
           },
           {
@@ -7276,7 +7276,6 @@
     "chip3": "TECHNOLOGISCHE UNABHÄNGIGKEIT",
     "chip4": "ZERTIFIZIERBARER CUSTOM CODE",
     "cta": "Asset-Ingenieurwesen ansehen",
-    "chip5": "BUILT TO LAST",
     "builtToLastQuote": "In einer Welt, in der Technologie in Monaten veraltet, ist das Entwerfen für die Dauer ein Akt des Widerstands. Jedes Asset, das wir bauen, steigert den Wert Ihrer Organisation, nicht Ihre monatliche Cloud-Rechnung."
   },
   "techStack": {

@@ -329,7 +329,7 @@
             "desc": ""
           },
           {
-            "label": "Expansion internationale",
+            "label": "Expansion géographique",
             "desc": ""
           },
           {
@@ -7199,7 +7199,6 @@
     "chip3": "INDÉPENDANCE TECHNOLOGIQUE",
     "chip4": "CODE SUR-MESURE CERTIFIABLE",
     "cta": "Voir la conception d'actifs",
-    "chip5": "BUILT TO LAST",
     "builtToLastQuote": "Dans un monde où la technologie s’obsolète en quelques mois, concevoir pour durer est un acte de résistance. Chaque actif que nous construisons augmente la valeur de votre organisation, pas votre facture mensuelle cloud."
   },
   "techStack": {

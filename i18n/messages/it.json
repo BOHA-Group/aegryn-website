@@ -329,7 +329,7 @@
             "desc": ""
           },
           {
-            "label": "Espansione internazionale",
+            "label": "Espansione geografica",
             "desc": ""
           },
           {
@@ -7276,7 +7276,6 @@
     "chip3": "INDIPENDENZA TECNOLOGICA",
     "chip4": "CODICE PERSONALIZZATO CERTIFICABILE",
     "cta": "Vedere la progettazione di asset",
-    "chip5": "BUILT TO LAST",
     "builtToLastQuote": "In un mondo in cui la tecnologia diventa obsoleta in pochi mesi, progettare per durare è un atto di resistenza. Ogni asset che costruiamo aumenta il valore della vostra organizzazione, non la vostra bolletta mensile cloud."
   },
   "techStack": {

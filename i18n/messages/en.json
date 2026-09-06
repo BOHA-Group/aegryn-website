@@ -329,7 +329,7 @@
             "desc": ""
           },
           {
-            "label": "International expansion",
+            "label": "Geographic expansion",
             "desc": ""
           },
           {
@@ -7269,7 +7269,6 @@
     "chip3": "TECHNOLOGICAL INDEPENDENCE",
     "chip4": "CERTIFIABLE CUSTOM CODE",
     "cta": "See asset engineering",
-    "chip5": "BUILT TO LAST",
     "builtToLastQuote": "In a world where technology becomes obsolete in months, designing to last is an act of resistance. Every asset we build increases the value of your organisation, not your monthly cloud bill."
   },
   "techStack": {

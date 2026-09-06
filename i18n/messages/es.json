@@ -329,7 +329,7 @@
             "desc": ""
           },
           {
-            "label": "Expansión internacional",
+            "label": "Expansión geográfica",
             "desc": ""
           },
           {
@@ -7276,7 +7276,6 @@
     "chip3": "INDEPENDENCIA TECNOLÓGICA",
     "chip4": "CÓDIGO PERSONALIZADO CERTIFICABLE",
     "cta": "Ver concepción de activos",
-    "chip5": "BUILT TO LAST",
     "builtToLastQuote": "En un mundo donde la tecnología se vuelve obsoleta en meses, diseñar para durar es un acto de resistencia. Cada activo que construimos aumenta el valor de su organización, no su factura mensual en la nube."
   },
   "techStack": {
