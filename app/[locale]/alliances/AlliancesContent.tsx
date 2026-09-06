@@ -89,9 +89,6 @@ export default function AlliancesContent() {
           <aside className="hidden lg:flex flex-col shrink-0 w-56 border-r border-ag-border sticky top-0 self-start pt-10 pb-10 min-h-[calc(100vh-80px)]">
             {/* Section principale */}
             <div className="mb-6">
-              <p className="font-mono text-[8px] uppercase tracking-[0.26em] text-ag-gray-light px-5 mb-3">
-                {t('disciplines.label')}
-              </p>
               <nav className="flex flex-col gap-0">
                 <button
                   onClick={() => setTab('overview')}
@@ -168,10 +165,6 @@ export default function AlliancesContent() {
               <div className="flex flex-col gap-16">
                 {/* Disciplines */}
                 <div>
-                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10 flex items-center gap-3">
-                    <span className="w-6 h-px bg-ag-border inline-block" />
-                    {t('disciplines.label')}
-                  </p>
                   <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-10">
                     {t('disciplines.intro')}
                   </p>
