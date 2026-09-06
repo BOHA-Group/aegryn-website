@@ -1,6 +1,6 @@
 'use client'
 
-import { Link, usePathname } from '@/i18n/navigation'
+import { Link, usePathname, useRouter } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
@@ -294,7 +294,18 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
   const locale = useLocale()
   const [openCluster, setOpenCluster] = useState<number | null>(null)
   const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
+  const router = useRouter()
   const founderHref = `/${locale}/about#fondateur`
+
+  function goToFounder() {
+    onClose()
+    const el = document.getElementById('fondateur')
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      router.push(founderHref as never)
+    }
+  }
 
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
@@ -318,13 +329,12 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 {t(labelKey)}
               </Link>
             ))}
-            <a
-              href={founderHref}
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+            <button
+              onClick={goToFounder}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 text-left"
             >
               {t('whoFounder')}
-            </a>
+            </button>
           </div>
           {/* Nos bureaux */}
           <div className="mt-4 pt-4 border-t border-ag-border">
