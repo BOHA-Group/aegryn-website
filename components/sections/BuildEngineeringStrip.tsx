@@ -80,6 +80,11 @@ export function BuildEngineeringStrip() {
             {t('cta')} <ArrowUpRight size={11} />
           </Link>
         </div>
+
+        {/* Built to Last quote */}
+        <p className="mt-8 pt-8 border-t border-ag-border font-sans text-[13px] text-ag-gray leading-relaxed max-w-3xl">
+          {t('builtToLastQuote')}
+        </p>
       </div>
     </section>
   )
