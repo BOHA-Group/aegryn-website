@@ -4,13 +4,16 @@ import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
-function Card({ code, name, desc, dark = false, className = '' }: {
-  code: string; name: string; desc: string; dark?: boolean; className?: string
+function Card({ code, name, desc, dark = false, elevated = false, className = '' }: {
+  code: string; name: string; desc: string; dark?: boolean; elevated?: boolean; className?: string
 }) {
   return (
     <div
       className={`dim-item flex flex-col gap-3 p-6 border border-ag-border ${className}`}
-      style={{ background: dark ? '#0D1F3C' : '#ffffff' }}
+      style={{
+        background: dark ? '#0D1F3C' : '#ffffff',
+        boxShadow: elevated ? '0 8px 32px rgba(13,31,60,0.22), 0 2px 8px rgba(0,0,0,0.12)' : undefined,
+      }}
     >
       <DimBadge code={code} dark={dark} />
       <div className="min-w-0">
@@ -73,29 +76,32 @@ export function GradeDimensions() {
           style={{
             gridTemplateColumns: 'repeat(3, 1fr)',
             gridTemplateRows: 'repeat(3, auto)',
-            gap: '12px',
+            gap: '0',
           }}
         >
-          {/* C — haut gauche [1,1] */}
-          <div style={{ gridColumn: 1, gridRow: 1 }}>
+          {/* C — haut gauche, coin bas-droit glisse sous O */}
+          <div style={{ gridColumn: 1, gridRow: 1, paddingRight: '12px', paddingBottom: '12px' }}>
             <Card code={corners[0].code} name={corners[0].name} desc={corners[0].desc} className="h-full" />
           </div>
-          {/* I — haut droit [3,1] */}
-          <div style={{ gridColumn: 3, gridRow: 1 }}>
+          {/* I — haut droit, coin bas-gauche glisse sous O */}
+          <div style={{ gridColumn: 3, gridRow: 1, paddingLeft: '12px', paddingBottom: '12px' }}>
             <Card code={corners[1].code} name={corners[1].name} desc={corners[1].desc} className="h-full" />
           </div>
-          {/* O — centre [2,2] */}
+          {/* O — centre, z-index élevé, ombre pour effet de surélévation */}
           {center && (
-            <div style={{ gridColumn: 2, gridRow: 2 }}>
-              <Card code={center.code} name={center.name} desc={center.desc} dark className="h-full" />
+            <div style={{ gridColumn: 2, gridRow: 2, zIndex: 10, position: 'relative' }}>
+              <Card
+                code={center.code} name={center.name} desc={center.desc} dark elevated
+                className="h-full"
+              />
             </div>
           )}
-          {/* F — bas gauche [1,3] */}
-          <div style={{ gridColumn: 1, gridRow: 3 }}>
+          {/* F — bas gauche, coin haut-droit glisse sous O */}
+          <div style={{ gridColumn: 1, gridRow: 3, paddingRight: '12px', paddingTop: '12px' }}>
             <Card code={corners[2].code} name={corners[2].name} desc={corners[2].desc} className="h-full" />
           </div>
-          {/* S — bas droit [3,3] */}
-          <div style={{ gridColumn: 3, gridRow: 3 }}>
+          {/* S — bas droit, coin haut-gauche glisse sous O */}
+          <div style={{ gridColumn: 3, gridRow: 3, paddingLeft: '12px', paddingTop: '12px' }}>
             <Card code={corners[3].code} name={corners[3].name} desc={corners[3].desc} className="h-full" />
           </div>
         </div>
