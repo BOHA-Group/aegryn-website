@@ -78,11 +78,17 @@ function defaultInput(): GradeInput {
       rgpdTransferReadiness: undefined,
       accessManagement: 'no' as 'yes' | 'no',
     },
+    organisation: {
+      keyPersonCount: 0, successionPlanDocumented: 'no', operationalDocsComplete: 'no',
+      lowKeyTalentTurnover: 'no', formalizedManagement: 'no', founderLeadsSales: 'yes',
+      cultureDocumented: 'no', independentAdvisor: 'no',
+    },
     proofQualities: {
-      code:     'declarative' as ProofQuality,
-      ip:       'declarative' as ProofQuality,
-      finance:  'declarative' as ProofQuality,
-      security: 'declarative' as ProofQuality,
+      code:         'declarative' as ProofQuality,
+      ip:           'declarative' as ProofQuality,
+      finance:      'declarative' as ProofQuality,
+      security:     'declarative' as ProofQuality,
+      organisation: 'declarative' as ProofQuality,
     },
   }
 }
@@ -736,8 +742,9 @@ export default function GradeEngineForm({
           const pq = input.proofQualities
           if (!pq) return null
           const ceilings: Record<ProofQuality, number> = { declarative: 1, verifiable: 2, audited: 3 }
+          const pqDims = ['code', 'ip', 'finance', 'security', 'organisation'] as const
           const minCeiling = (['declarative', 'verifiable', 'audited'] as ProofQuality[]).find(pqLevel =>
-            (['code', 'ip', 'finance', 'security'] as const).some(d => pq[d] === pqLevel && ceilings[pq[d]] === Math.min(...['code','ip','finance','security'].map(dd => ceilings[pq[dd as keyof typeof pq]])))
+            pqDims.some(d => pq[d] === pqLevel && ceilings[pq[d] ?? 'declarative'] === Math.min(...pqDims.map(dd => ceilings[pq[dd] ?? 'declarative'])))
           ) ?? 'declarative'
           const ceilingLabel: Record<ProofQuality, string> = { declarative: 'AA (plafond déclaratif)', verifiable: 'AAA (plafond vérifiable)', audited: '★ (aucun plafond)' }
           return (

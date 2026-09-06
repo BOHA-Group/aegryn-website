@@ -105,17 +105,30 @@ export interface SecurityInput {
   accessManagement?: YesNo            // CIFS v3.0 V3 — règle MFA/S-15
 }
 
+/** CIFSO v4.0 — Dimension O : Organisation & Talent (20 pts) */
+export interface OrganisationInput {
+  keyPersonCount:           number   // nb de N-1 autonomes
+  successionPlanDocumented: YesNo
+  operationalDocsComplete:  YesNo
+  lowKeyTalentTurnover:     YesNo
+  formalizedManagement:     YesNo
+  founderLeadsSales:        YesNo
+  cultureDocumented:        YesNo
+  independentAdvisor:       YesNo
+}
+
 export interface GradeInput {
-  code:     CodeInput
-  ip:       IPInput
-  finance:  FinanceInput
-  security: SecurityInput
-  /** Niveau de preuve par dimension — pilote le plafond de grade (CIFS v3.0) */
+  code:         CodeInput
+  ip:           IPInput
+  finance:      FinanceInput
+  security:     SecurityInput
+  organisation: OrganisationInput
   proofQualities?: {
-    code:     ProofQuality
-    ip:       ProofQuality
-    finance:  ProofQuality
-    security: ProofQuality
+    code:         ProofQuality
+    ip:           ProofQuality
+    finance:      ProofQuality
+    security:     ProofQuality
+    organisation?: ProofQuality
   }
 }
 
@@ -150,6 +163,7 @@ export interface GradeResultPublic {
   scoreI:      number
   scoreF:      number
   scoreS:      number
+  scoreO:      number
   trs:         TRSLevel
   autoRefusal: boolean
 }
@@ -157,11 +171,11 @@ export interface GradeResultPublic {
 /** Niveau POST-NDA — exposé à l'acheteur qualifié après double NDA */
 export interface GradeResultPostNda extends GradeResultPublic {
   gradeCeiling?:          GradeLetter
-  proofQualities?:        { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality }
+  proofQualities?:        { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality; organisation?: ProofQuality }
   founderDependencyScore: number  // 0-5 critères à risque
   trsReasons:             string[]
   recommendations:        GradeRecommendation[]
-  rationaleByDimension:   { code: string[]; ip: string[]; finance: string[]; security: string[] }
+  rationaleByDimension:   { code: string[]; ip: string[]; finance: string[]; security: string[]; organisation: string[] }
 }
 
 /** Niveau ADMIN UNIQUEMENT — ne jamais exposer hors routes authentifiées admin */
@@ -183,6 +197,7 @@ export function toPublicResult(r: GradeResult): GradeResultPublic {
     scoreI:      r.dimensions.ip.score,
     scoreF:      r.dimensions.finance.score,
     scoreS:      r.dimensions.security.score,
+    scoreO:      r.dimensions.organisation.score,
     trs:         r.trs,
     autoRefusal: r.autoRefusal,
   }
@@ -201,10 +216,11 @@ export function toPostNdaResult(r: GradeResult, input?: GradeInput): GradeResult
     trsReasons:            r.trsReasons,
     recommendations:       r.recommendations,
     rationaleByDimension: {
-      code:     r.dimensions.code.rationale,
-      ip:       r.dimensions.ip.rationale,
-      finance:  r.dimensions.finance.rationale,
-      security: r.dimensions.security.rationale,
+      code:         r.dimensions.code.rationale,
+      ip:           r.dimensions.ip.rationale,
+      finance:      r.dimensions.finance.rationale,
+      security:     r.dimensions.security.rationale,
+      organisation: r.dimensions.organisation.rationale,
     },
   }
 }
@@ -223,7 +239,7 @@ export type TRSLevel = 'ready' | 'conditional' | 'remediation' | 'blocked'
 
 /** Recommandation actionnable générée automatiquement par le moteur */
 export interface GradeRecommendation {
-  dimension: 'C' | 'I' | 'F' | 'S'
+  dimension: 'C' | 'I' | 'F' | 'S' | 'O'
   subcode:   string
   priority:  'blocking' | 'high' | 'medium'
   action:    string
@@ -233,10 +249,11 @@ export interface GradeRecommendation {
 
 export interface GradeResult {
   dimensions: {
-    code:     DimensionResult
-    ip:       DimensionResult
-    finance:  DimensionResult
-    security: DimensionResult
+    code:         DimensionResult
+    ip:           DimensionResult
+    finance:      DimensionResult
+    security:     DimensionResult
+    organisation: DimensionResult
   }
   totalScore:      number        // 0-100
   grade:           GradeLetter
@@ -251,9 +268,10 @@ export interface GradeResult {
   publicRationale: string        // résumé qualitatif exposable côté actif catalogué
   /** Métadonnées proof_quality dérivées effectivement appliquées (après règle ARR) */
   effectiveProofQualities?: {
-    code:     ProofQuality
-    ip:       ProofQuality
-    finance:  ProofQuality
+    code:          ProofQuality
+    ip:            ProofQuality
+    finance:       ProofQuality
+    organisation?: ProofQuality
     security: ProofQuality
   }
 }
@@ -646,6 +664,52 @@ function buildPublicRationale(results: GradeResult['dimensions']): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// DIMENSION O — ORGANISATION & TALENT (20 pts) — CIFSO v4.0
+// ─────────────────────────────────────────────────────────────────────────────
+
+function scoreOrganisation(input: OrganisationInput): DimensionResult {
+  const rationale: string[] = []
+
+  if (input.founderLeadsSales === 'yes' && input.operationalDocsComplete === 'no'
+      && input.successionPlanDocumented === 'no' && input.keyPersonCount === 0) {
+    return {
+      score: 0, autoRefusal: true,
+      refusalReason: 'Dépendance fondateur totale : aucun N-1, aucune documentation, aucun plan de succession',
+      rationale: [],
+    }
+  }
+
+  let score = 0
+
+  if      (input.keyPersonCount >= 3) { score += 5; rationale.push(`Équipe de direction autonome (${input.keyPersonCount} N-1 opérationnels)`) }
+  else if (input.keyPersonCount === 2) { score += 3; rationale.push('2 dirigeants N-1 identifiés — autonomie partielle') }
+  else if (input.keyPersonCount === 1) { score += 1; rationale.push('1 seul N-1 identifié — autonomie fragile') }
+  else                                 {             rationale.push('Aucun N-1 capable de piloter sans le fondateur') }
+
+  if (input.successionPlanDocumented === 'yes') { score += 4; rationale.push('Plan de succession documenté et formalisé') }
+  else                                          {             rationale.push('Aucun plan de succession documenté') }
+
+  if (input.operationalDocsComplete === 'yes') { score += 3; rationale.push('Runbooks et SOPs couvrant les processus critiques') }
+  else                                         {             rationale.push('Documentation opérationnelle absente ou incomplète') }
+
+  if (input.lowKeyTalentTurnover === 'yes') { score += 3; rationale.push('Faible turnover des talents clés sur 24 mois') }
+  else                                      {             rationale.push('Turnover élevé des talents clés — risque post-closing') }
+
+  if (input.formalizedManagement === 'yes') { score += 2; rationale.push('Comité de direction formalisé avec comptes-rendus réguliers') }
+  else                                      {             rationale.push('Absence de comité de direction formalisé') }
+
+  if (input.founderLeadsSales === 'yes') { score -= 2; rationale.push('Fondateur pilote >50% du CA commercial — risque de perte revenu post-closing') }
+  else                                   { score += 1; rationale.push('Ventes indépendantes du fondateur') }
+
+  if (input.cultureDocumented === 'yes') { score += 1; rationale.push('Culture d\'entreprise documentée (valeurs, handbook, onboarding)') }
+
+  if (input.independentAdvisor === 'yes') { score += 2; rationale.push('Administrateur indépendant ou conseil consultatif actif') }
+  else                                    {             rationale.push('Aucun administrateur ou conseil consultatif externe') }
+
+  return { score: Math.max(0, Math.min(score, 20)), autoRefusal: false, rationale }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // EXPORT PRINCIPAL
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -661,10 +725,11 @@ export function runGradeEngine(input: GradeInput): GradeResult {
     arrForceNote = 'Proof quality F forcée à Declarative car ARR auto-déclaré (règle de dérivation Sprint 1A)'
   }
 
-  const code     = scoreCode(input.code)
-  const ip       = scoreIP(input.ip)
-  const finance  = scoreFinance(input.finance)
-  const security = scoreSecurity(input.security)
+  const code         = scoreCode(input.code)
+  const ip           = scoreIP(input.ip)
+  const finance      = scoreFinance(input.finance)
+  const security     = scoreSecurity(input.security)
+  const organisation = scoreOrganisation(input.organisation)
 
   // ── Règles de cohérence entre sous-codes contradictoires (Sprint 3C) ────────
   const consistencyWarnings: string[] = []
@@ -681,14 +746,14 @@ export function runGradeEngine(input: GradeInput): GradeResult {
     consistencyWarnings.push('Vulnérabilités critiques non résolues + certification externe obtenue : incohérence — vérifier les dates de certification et de scan')
   }
 
-  const anyRefusal = code.autoRefusal || ip.autoRefusal || finance.autoRefusal || security.autoRefusal
-  const refusalReasons = [code, ip, finance, security]
+  const anyRefusal = code.autoRefusal || ip.autoRefusal || finance.autoRefusal || security.autoRefusal || organisation.autoRefusal
+  const refusalReasons = [code, ip, finance, security, organisation]
     .filter(d => d.autoRefusal && d.refusalReason)
     .map(d => d.refusalReason!)
 
   const totalScore = anyRefusal
     ? 0
-    : code.score + ip.score + finance.score + security.score
+    : code.score + ip.score + finance.score + security.score + organisation.score
 
   const { grade: rawGrade } = calculateGrade(totalScore, anyRefusal)
 
@@ -704,7 +769,7 @@ export function runGradeEngine(input: GradeInput): GradeResult {
   }
   const { gradeLabel } = calculateGrade(totalScore, anyRefusal, grade)
 
-  const dimensions = { code, ip, finance, security }
+  const dimensions = { code, ip, finance, security, organisation }
 
   // ── TRS — Transaction Readiness Score (Sprint 1D) ─────────────────────
   const { trs, trsReasons } = computeTRS(input, grade, effectivePQ)

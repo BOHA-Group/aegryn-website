@@ -2203,76 +2203,81 @@
   },
   "grade": {
     "meta": {
-      "title": "Aegryn Grade System, Tech asset certification",
-      "desc": "The Aegryn Grade protocol objectively certifies every tech asset across 4 dimensions: Code, IP, Finance, Security."
+      "title": "Aegryn Certification — Quality label for organisations",
+      "desc": "Aegryn Certification, an independent quality label for organisations seeking to create and realise their value. CIFSO protocol: Capital, Integrity, Finance, Security, Organisation."
     },
     "index": {
-      "label": "Aegryn Grade System",
-      "title": "Objective truth\nabout every tech asset.",
-      "desc": "No estimation. No gut feeling. A rigorous 4-dimension evaluation protocol producing a public, auditable and traceable grade.",
+      "label": "Aegryn Certification",
+      "title": "Aegryn Certification.\nA quality label\nfor organisations seeking to acquire or transfer at fair value.",
+      "desc": "An organisation's value is not invented in a negotiation. It is documented well before. The Aegryn grade is that documentation: independent, reproducible, defensible.",
       "ctaSubmit": "Submit for certification",
       "ctaMethod": "Read the methodology",
       "marketLabel": "Why certify now",
       "marketTitle": "Certification creates\nmeasurable value.",
-      "marketDesc": "The tech M&A market has developed a clear premium for assets whose quality is verifiable. This premium is not a projection, it is observable on completed transactions.",
-      "marketCta": "Submit my asset",
-      "marketCtaSecondary": "View the methodology"
+      "marketDesc": "The M&A market has developed a clear premium for organisations whose quality is verifiable. This premium is not a projection, it is observable in completed transactions.",
+      "marketCta": "Submit my organisation",
+      "marketCtaSecondary": "View methodology"
     },
     "grades": [
       {
         "code": "AEG ★",
         "name": "Exceptional",
         "color": "grade-star",
-        "desc": "Top 1% of submitted assets. Ready for immediate institutional transaction."
+        "desc": "Top 1% of certified organisations. Excellence across all 5 CIFSO dimensions. Immediate institutional transaction."
       },
       {
         "code": "AAA",
         "name": "Excellent",
         "color": "grade-aaa",
-        "desc": "Mature, documented asset. Reliable valuation. Standard transaction without reservation."
+        "desc": "Mature organisation, documented across 5 dimensions. Reliable valuation, standard transaction without reservation."
       },
       {
         "code": "AA",
         "name": "Solid",
         "color": "grade-aa",
-        "desc": "Strong metrics, some optimisations recommended. Confirmed valuation."
+        "desc": "Strong CIFSO fundamentals, some optimisations recommended. Confirmed valuation with improvement plan."
       },
       {
         "code": "A",
         "name": "Developing",
         "color": "grade-a",
-        "desc": "Identified potential, documented improvement areas. Value plan proposed."
+        "desc": "Identified potential across several dimensions. Documented improvement areas, value plan provided."
       },
       {
         "code": "B",
         "name": "Emerging",
         "color": "grade-b",
-        "desc": "Asset in development. Remediation plan required before transaction."
+        "desc": "Organisation in structuring phase. CIFSO remediation plan required before any transaction."
       }
     ],
     "dimensions": {
-      "label": "The 4 evaluation dimensions",
-      "title": "One grade, four truths.",
+      "label": "The CIFSO protocol — 5 dimensions",
+      "title": "One grade, five truths.",
       "items": [
         {
           "code": "C",
-          "name": "Code",
-          "desc": "Code quality, technical debt, test coverage, application security, developer documentation."
+          "name": "Capital & IP",
+          "desc": "Code, intellectual property, brand, proprietary data, chain of title. All intangible assets that form the transferable value."
         },
         {
           "code": "I",
-          "name": "IP & Rights",
-          "desc": "Coverage of software rights, registered trademarks, proprietary licences, patents and exclusivity agreements. Assesses the legal robustness and transferability of the intellectual asset."
+          "name": "Integrity & Governance",
+          "desc": "Legal structure, cap table, regulatory compliance, client/supplier contracts, disputes, IP chain. The legal and organisational soundness of the entity."
         },
         {
           "code": "F",
-          "name": "Finance",
-          "desc": "ARR/MRR, growth trajectory, margins, CAC, LTV, burn rate."
+          "name": "Finance & Metrics",
+          "desc": "ARR/MRR, recurring revenue, auditability, cashflow, burn, client concentration, financial history. The economic reality of the organisation."
         },
         {
           "code": "S",
-          "name": "Security",
-          "desc": "GDPR compliance, penetration testing, secrets management, MFA, zero-trust architecture and absence of known critical vulnerabilities. Assesses cyber risk at transfer."
+          "name": "Security & Sovereignty",
+          "desc": "Cybersecurity, NIS2/DORA/EU AI Act compliance, technological independence, GDPR. Resilience against digital and regulatory risks."
+        },
+        {
+          "code": "O",
+          "name": "Organisation & Talent",
+          "desc": "Founder dependency, management team quality, succession plan, culture and retention. Organisations too dependent on their founder are systematically worth 20-30% less at transfer."
         }
       ]
     },

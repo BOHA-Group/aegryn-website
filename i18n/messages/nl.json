@@ -2831,76 +2831,81 @@
   },
   "grade": {
     "meta": {
-      "title": "Aegryn Grade-systeem, Tech-assetcertificering",
-      "desc": "Het Aegryn Grade-protocol certificeert elk tech-asset objectief op 4 dimensies."
+      "title": "Aegryn-certificering — Kwaliteitslabel voor organisaties",
+      "desc": "Aegryn-certificering, een onafhankelijk kwaliteitslabel voor organisaties die hun waarde willen creëren en realiseren. CIFSO-protocol: Kapitaal, Integriteit, Financiën, Veiligheid, Organisatie."
     },
     "index": {
-      "label": "Aegryn Grade-systeem",
-      "title": "Objectieve waarheid\nover elk tech-asset.",
-      "desc": "Geen schatting. Geen gevoel. Een rigoureus 4-dimensie-beoordelingsprotocol.",
+      "label": "Aegryn-certificering",
+      "title": "Aegryn-certificering.\nEen kwaliteitslabel\nvoor organisaties die willen overnemen of overdragen tegen een eerlijke prijs.",
+      "desc": "De waarde van een organisatie wordt niet uitgevonden in een onderhandeling. Ze wordt lang van tevoren gedocumenteerd. Het Aegryn-grade is die documentatie: onafhankelijk, reproduceerbaar, verdedigbaar.",
       "ctaSubmit": "Indienen voor certificering",
       "ctaMethod": "Methodologie lezen",
       "marketLabel": "Waarom nu certificeren",
       "marketTitle": "Certificering creëert\nmeetbare waarde.",
-      "marketDesc": "De tech-M&A-markt heeft een duidelijke premie ontwikkeld voor assets waarvan de kwaliteit verifieerbaar is. Deze premie is geen projectie, ze is waarneembaar op afgeronde transacties.",
-      "marketCta": "Mijn asset indienen",
-      "marketCtaSecondary": "Bekijk de methodologie"
+      "marketDesc": "De M&A-markt heeft een duidelijke premie ontwikkeld voor organisaties waarvan de kwaliteit verifieerbaar is. Deze premie is geen projectie, maar observeerbaar in voltooide transacties.",
+      "marketCta": "Mijn organisatie indienen",
+      "marketCtaSecondary": "Methodologie bekijken"
     },
     "grades": [
       {
         "code": "AEG ★",
         "name": "Uitzonderlijk",
         "color": "grade-star",
-        "desc": "Top 1% van ingediende assets. Klaar voor directe institutionele transactie."
+        "desc": "Top 1% van gecertificeerde organisaties. Excellentie in alle 5 CIFSO-dimensies. Directe institutionele transactie."
       },
       {
         "code": "AAA",
         "name": "Uitstekend",
         "color": "grade-aaa",
-        "desc": "Volwassen, gedocumenteerd asset. Betrouwbare waardering. Standaardtransactie zonder voorbehoud."
+        "desc": "Volwassen organisatie, gedocumenteerd in 5 dimensies. Betrouwbare waardering, standaardtransactie zonder voorbehoud."
       },
       {
         "code": "AA",
         "name": "Solide",
         "color": "grade-aa",
-        "desc": "Goede metrieken, enkele optimalisaties aanbevolen. Waardering bevestigd."
+        "desc": "Goede CIFSO-grondslagen, enkele optimalisaties aanbevolen. Bevestigde waardering met verbeterplan."
       },
       {
         "code": "A",
         "name": "In ontwikkeling",
         "color": "grade-a",
-        "desc": "Potentieel geïdentificeerd, verbeterpunten gedocumenteerd. Waardeplan voorgesteld."
+        "desc": "Potentieel geïdentificeerd in meerdere dimensies. Gedocumenteerde verbeterpunten, waardeplan voorgesteld."
       },
       {
         "code": "B",
         "name": "Opkomend",
         "color": "grade-b",
-        "desc": "Asset in ontwikkeling. Saneringsplan vereist vóór transactie."
+        "desc": "Organisatie in structureringsfase. CIFSO-herstelplan vereist vóór elke transactie."
       }
     ],
     "dimensions": {
-      "label": "De 4 beoordelingsdimensies",
-      "title": "Één grade, vier waarheden.",
+      "label": "Het CIFSO-protocol — 5 dimensies",
+      "title": "Één grade, vijf waarheden.",
       "items": [
         {
           "code": "C",
-          "name": "Code",
-          "desc": "Codekwaliteit, technische schuld, testdekking, applicatiebeveiliging."
+          "name": "Kapitaal & IP",
+          "desc": "Code, intellectueel eigendom, merk, eigen data, eigendomsketen. Alle immateriële activa die de overdraagbare waarde vormen."
         },
         {
           "code": "I",
-          "name": "IP & Rechten",
-          "desc": "Dekking van softwarerechten, geregistreerde handelsmerken, eigendomslicenties, octrooien en exclusiviteitscontracten. Beoordeelt de juridische robuustheid en overdraagbaarheid van het intellectuele actief."
+          "name": "Integriteit & Governance",
+          "desc": "Juridische structuur, cap table, regelgevingsnaleving, klant/leverancierscontracten, geschillen, IP-keten. De juridische en organisatorische soliditeit van de entiteit."
         },
         {
           "code": "F",
-          "name": "Financiën",
-          "desc": "ARR/MRR, groeitraject, marges, CAC, LTV, burn rate."
+          "name": "Financiën & Metrics",
+          "desc": "ARR/MRR, terugkerende omzet, controleerbaarheid, cashflow, burn, klantconcentratie, financiële geschiedenis. De economische werkelijkheid van de organisatie."
         },
         {
           "code": "S",
-          "name": "Beveiliging",
-          "desc": "AVG-naleving, penetratietests, secretsbeheer, MFA, zero-trust-architectuur en afwezigheid van bekende kritieke kwetsbaarheden. Beoordeelt het cyberrisico bij overdracht."
+          "name": "Veiligheid & Soevereiniteit",
+          "desc": "Cyberbeveiliging, NIS2/DORA/EU AI Act-naleving, technologische onafhankelijkheid, AVG. Veerkracht tegen digitale en regelgevingsrisico's."
+        },
+        {
+          "code": "O",
+          "name": "Organisatie & Talent",
+          "desc": "Oprichterafhankelijkheid, kwaliteit van het managementteam, opvolgingsplan, cultuur en retentie. Organisaties die te afhankelijk zijn van hun oprichter zijn bij overdracht systematisch 20-30% minder waard."
         }
       ]
     },

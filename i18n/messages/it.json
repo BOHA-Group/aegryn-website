@@ -2831,76 +2831,81 @@
   },
   "grade": {
     "meta": {
-      "title": "Sistema Grade Aegryn | Certificazione asset tech",
-      "desc": "Il protocollo Aegryn Grade certifica obiettivamente ogni asset tech in 4 dimensioni."
+      "title": "Certificazione Aegryn — Marchio qualità per organizzazioni",
+      "desc": "Certificazione Aegryn, un marchio di qualità indipendente per le organizzazioni che vogliono creare e realizzare il proprio valore. Protocollo CIFSO: Capitale, Integrità, Finanze, Sicurezza, Organizzazione."
     },
     "index": {
-      "label": "Sistema Aegryn Grade",
-      "title": "Verità oggettiva\nsu ogni asset tech.",
-      "desc": "Nessuna stima. Nessuna intuizione. Un rigoroso protocollo di valutazione in 4 dimensioni.",
-      "ctaSubmit": "Invia per certificazione",
-      "ctaMethod": "Leggi la metodologia",
+      "label": "Certificazione Aegryn",
+      "title": "Certificazione Aegryn.\nUn marchio qualità\nper le organizzazioni che vogliono acquisire o trasmettere al giusto prezzo.",
+      "desc": "Il valore di un'organizzazione non si inventa in una trattativa. Si documenta molto prima. Il grade Aegryn è quella documentazione: indipendente, riproducibile, difendibile.",
+      "ctaSubmit": "Inviare per certificazione",
+      "ctaMethod": "Leggere la metodologia",
       "marketLabel": "Perché certificare ora",
       "marketTitle": "La certificazione crea\nvalore misurabile.",
-      "marketDesc": "Il mercato M&A tech ha sviluppato un premio chiaro per gli asset la cui qualità è verificabile. Questo premio non è una proiezione, è osservabile sulle transazioni realizzate.",
-      "marketCta": "Inviare il mio asset",
-      "marketCtaSecondary": "Vedi la metodologia"
+      "marketDesc": "Il mercato M&A ha sviluppato un premio chiaro per le organizzazioni la cui qualità è verificabile. Questo premio non è una proiezione, è osservabile nelle transazioni completate.",
+      "marketCta": "Invia la mia organizzazione",
+      "marketCtaSecondary": "Vedere metodologia"
     },
     "grades": [
       {
         "code": "AEG ★",
         "name": "Eccezionale",
         "color": "grade-star",
-        "desc": "Top 1% degli asset inviati. Pronto per transazione istituzionale immediata."
+        "desc": "Top 1% delle organizzazioni certificate. Eccellenza in tutte e 5 le dimensioni CIFSO. Transazione istituzionale immediata."
       },
       {
         "code": "AAA",
         "name": "Eccellente",
         "color": "grade-aaa",
-        "desc": "Asset maturo e documentato. Valutazione affidabile. Transazione standard senza riserve."
+        "desc": "Organizzazione matura, documentata in 5 dimensioni. Valutazione affidabile, transazione standard senza riserve."
       },
       {
         "code": "AA",
-        "name": "Solido",
+        "name": "Solida",
         "color": "grade-aa",
-        "desc": "Buone metriche, alcune ottimizzazioni raccomandate. Valutazione confermata."
+        "desc": "Buoni fondamentali CIFSO, alcune ottimizzazioni raccomandate. Valutazione confermata con piano di miglioramento."
       },
       {
         "code": "A",
         "name": "In sviluppo",
         "color": "grade-a",
-        "desc": "Potenziale identificato, aree di miglioramento documentate. Piano di valore proposto."
+        "desc": "Potenziale identificato in più dimensioni. Aree di miglioramento documentate, piano di valore proposto."
       },
       {
         "code": "B",
         "name": "Emergente",
         "color": "grade-b",
-        "desc": "Asset in sviluppo. Piano di rimedio richiesto prima della transazione."
+        "desc": "Organizzazione in fase di strutturazione. Piano di rimediazione CIFSO richiesto prima di qualsiasi transazione."
       }
     ],
     "dimensions": {
-      "label": "Le 4 dimensioni di valutazione",
-      "title": "Un grade, quattro verità.",
+      "label": "Il protocollo CIFSO — 5 dimensioni",
+      "title": "Un grade, cinque verità.",
       "items": [
         {
           "code": "C",
-          "name": "Codice",
-          "desc": "Qualità del codice, debito tecnico, copertura test, sicurezza applicativa."
+          "name": "Capitale & PI",
+          "desc": "Codice, proprietà intellettuale, marchio, dati proprietari, catena di titolarità. Tutti gli asset intangibili che formano il valore trasmissibile."
         },
         {
           "code": "I",
-          "name": "IP & Diritti",
-          "desc": "Copertura dei diritti software, marchi registrati, licenze proprietarie, brevetti e contratti di esclusiva. Valuta la solidità giuridica e la cedibilità dell'asset intellettuale."
+          "name": "Integrità & Governance",
+          "desc": "Struttura legale, cap table, conformità normativa, contratti clienti/fornitori, controversie, catena PI. La solidità giuridica e organizzativa dell'entità."
         },
         {
           "code": "F",
-          "name": "Finanze",
-          "desc": "ARR/MRR, crescita, margini, CAC, LTV, burn rate."
+          "name": "Finanze & Metriche",
+          "desc": "ARR/MRR, ricorrenza, verificabilità, cashflow, burn, concentrazione clienti, storico finanziario. La realtà economica dell'organizzazione."
         },
         {
           "code": "S",
-          "name": "Sicurezza",
-          "desc": "Conformità RGPD, test di penetrazione, gestione dei segreti, MFA, architettura zero-trust e assenza di vulnerabilità critiche note. Valuta il rischio cyber al trasferimento."
+          "name": "Sicurezza & Sovranità",
+          "desc": "Cybersicurezza, conformità NIS2/DORA/EU AI Act, indipendenza tecnologica, GDPR. Resilienza contro i rischi digitali e normativi."
+        },
+        {
+          "code": "O",
+          "name": "Organizzazione & Talento",
+          "desc": "Dipendenza dal fondatore, qualità del team dirigenziale, piano di successione, cultura e retention. Le organizzazioni troppo dipendenti dal fondatore valgono sistematicamente il 20-30% in meno alla trasmissione."
         }
       ]
     },

@@ -179,6 +179,7 @@ export function applyAutoFillToGradeInput(
       ...(overrides.externalCertification   !== undefined && { externalCertification:   overrides.externalCertification }),
       ...(overrides.criticalVulnsResolved   !== undefined && { criticalVulnsResolved:   overrides.criticalVulnsResolved }),
     },
+    organisation: base.organisation,
   }
 }
 
