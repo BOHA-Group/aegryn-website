@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "Plan estratégico de 3 a 5 años",
-            "desc": ""
-          },
-          {
             "label": "Preparación a la valoración (antes de cualquier decisión de transmisión)",
             "desc": ""
           },
           {
-            "label": "Operating partner fundador",
+            "label": "Socio estratégico del fundador",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Estrategia de crecimiento y modelo de negocio",
+            "desc": ""
+          },
+          {
+            "label": "Plan estratégico a 3-5 años",
             "desc": ""
           },
           {

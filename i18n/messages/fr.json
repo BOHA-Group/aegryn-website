@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "Plan stratégique 3 à 5 ans",
-            "desc": ""
-          },
-          {
             "label": "Préparation à la valorisation (avant toute décision de transmission)",
             "desc": ""
           },
           {
-            "label": "Operating partner fondateur",
+            "label": "Bras droit stratégique du fondateur",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Stratégie de croissance et business model",
+            "desc": ""
+          },
+          {
+            "label": "Plan stratégique 3 à 5 ans",
             "desc": ""
           },
           {

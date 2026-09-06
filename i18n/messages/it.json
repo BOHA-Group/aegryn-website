@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "Piano strategico da 3 a 5 anni",
-            "desc": ""
-          },
-          {
             "label": "Preparazione alla valorizzazione (prima di qualsiasi decisione di trasmissione)",
             "desc": ""
           },
           {
-            "label": "Operating partner fondatore",
+            "label": "Partner strategico del fondatore",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Strategia di crescita e modello di business",
+            "desc": ""
+          },
+          {
+            "label": "Piano strategico 3-5 anni",
             "desc": ""
           },
           {

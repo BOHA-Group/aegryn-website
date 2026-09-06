@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "Strategisch plan van 3 tot 5 jaar",
-            "desc": ""
-          },
-          {
             "label": "Voorbereiding op waardering (voor elke beslissing over overdracht)",
             "desc": ""
           },
           {
-            "label": "Oprichter als operating partner",
+            "label": "Strategische rechterhand van de oprichter",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Groeistrategie en businessmodel",
+            "desc": ""
+          },
+          {
+            "label": "Strategisch plan 3 tot 5 jaar",
             "desc": ""
           },
           {

@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "Strategischer 3 bis 5 Jahresplan",
-            "desc": ""
-          },
-          {
             "label": "Bewertungsvorbereitung (vor jeder Übertragungsentscheidung)",
             "desc": ""
           },
           {
-            "label": "Gründer als Operating Partner",
+            "label": "Strategischer Partner des Gründers",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Wachstumsstrategie und Geschäftsmodell",
+            "desc": ""
+          },
+          {
+            "label": "Strategischer Plan 3 bis 5 Jahre",
             "desc": ""
           },
           {

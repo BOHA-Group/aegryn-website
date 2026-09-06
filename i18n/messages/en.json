@@ -280,15 +280,11 @@
             "desc": ""
           },
           {
-            "label": "3 to 5 year strategic plan",
-            "desc": ""
-          },
-          {
             "label": "Valuation preparation (ahead of any transmission decision)",
             "desc": ""
           },
           {
-            "label": "Founder operating partner",
+            "label": "Strategic right-hand partner to the founder",
             "desc": ""
           }
         ],
@@ -326,6 +322,10 @@
         "dimensions": [
           {
             "label": "Growth strategy and business model",
+            "desc": ""
+          },
+          {
+            "label": "3 to 5 year strategic plan",
             "desc": ""
           },
           {
