@@ -289,6 +289,9 @@ export default function Footer() {
             <p className="font-sans text-[10px] text-white/30">
               {t('aiNotice')}
             </p>
+            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/25 mt-1">
+              {t('taglines')}
+            </p>
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             {legal.map(({ key, href, external }) => (
