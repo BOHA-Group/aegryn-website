@@ -4,22 +4,32 @@ import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
-function Card({ code, name, desc, dark = false, elevated = false, className = '' }: {
-  code: string; name: string; desc: string; dark?: boolean; elevated?: boolean; className?: string
+/* badgeAlign: où placer le badge dans la carte (coin extérieur) */
+type BadgeAlign = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-left-default'
+
+function CornerCard({
+  code, name, desc, badgeAlign, className = '',
+}: {
+  code: string; name: string; desc: string; badgeAlign: BadgeAlign; className?: string
 }) {
+  const isRight  = badgeAlign === 'top-right'  || badgeAlign === 'bottom-right'
+  const isBottom = badgeAlign === 'bottom-left' || badgeAlign === 'bottom-right'
+
   return (
     <div
-      className={`dim-item flex flex-col gap-3 p-6 border border-ag-border ${className}`}
-      style={{
-        background: dark ? '#0D1F3C' : '#ffffff',
-        boxShadow: elevated ? '0 8px 32px rgba(13,31,60,0.22), 0 2px 8px rgba(0,0,0,0.12)' : undefined,
-      }}
+      className={`dim-item flex flex-col border border-ag-border bg-white p-6 ${className}`}
     >
-      <DimBadge code={code} dark={dark} />
-      <div className="min-w-0">
-        <p className={`font-sans font-semibold text-[14px] mb-1 ${dark ? 'text-white' : 'text-ag-black'}`}>{name}</p>
-        <p className="font-sans text-[12px] leading-relaxed" style={{ color: dark ? 'rgba(255,255,255,0.6)' : '#6b7280' }}>{desc}</p>
+      {/* Badge dans le coin extérieur */}
+      <div className={`flex mb-3 ${isRight ? 'justify-end' : 'justify-start'}`}>
+        <DimBadge code={code} />
       </div>
+      {/* Texte poussé vers le bas si badge en bas */}
+      {isBottom && <div className="flex-1" />}
+      <div className="min-w-0">
+        <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
+        <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
+      </div>
+      {!isBottom && <div className="flex-1" />}
     </div>
   )
 }
@@ -70,49 +80,67 @@ export function GradeDimensions() {
           {t('title')}
         </h2>
 
-        {/* Desktop — grille 3×3, 5 cartes aux positions C/I/F/S/O */}
-        <div
-          className="hidden md:grid"
-          style={{
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gridTemplateRows: 'repeat(3, auto)',
-            gap: '0',
-          }}
-        >
-          {/* C — haut gauche, coin bas-droit glisse sous O */}
-          <div style={{ gridColumn: 1, gridRow: 1, paddingRight: '12px', paddingBottom: '12px' }}>
-            <Card code={corners[0].code} name={corners[0].name} desc={corners[0].desc} className="h-full" />
+        {/* Desktop — grille 2×2 + O absolument centré qui chevauche les 4 coins */}
+        <div className="hidden md:block relative">
+          {/* Grille 2×2 CIFS */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* C — haut gauche, badge top-left */}
+            <CornerCard
+              code={corners[0].code} name={corners[0].name} desc={corners[0].desc}
+              badgeAlign="top-left" className="pb-16"
+            />
+            {/* I — haut droit, badge top-right */}
+            <CornerCard
+              code={corners[1].code} name={corners[1].name} desc={corners[1].desc}
+              badgeAlign="top-right" className="pb-16"
+            />
+            {/* F — bas gauche, badge bottom-left */}
+            <CornerCard
+              code={corners[2].code} name={corners[2].name} desc={corners[2].desc}
+              badgeAlign="bottom-left" className="pt-16"
+            />
+            {/* S — bas droit, badge bottom-right */}
+            <CornerCard
+              code={corners[3].code} name={corners[3].name} desc={corners[3].desc}
+              badgeAlign="bottom-right" className="pt-16"
+            />
           </div>
-          {/* I — haut droit, coin bas-gauche glisse sous O */}
-          <div style={{ gridColumn: 3, gridRow: 1, paddingLeft: '12px', paddingBottom: '12px' }}>
-            <Card code={corners[1].code} name={corners[1].name} desc={corners[1].desc} className="h-full" />
-          </div>
-          {/* O — centre, z-index élevé, ombre pour effet de surélévation */}
+
+          {/* O — absolument centré, passe au-dessus des 4 coins */}
           {center && (
-            <div style={{ gridColumn: 2, gridRow: 2, zIndex: 10, position: 'relative' }}>
-              <Card
-                code={center.code} name={center.name} desc={center.desc} dark elevated
-                className="h-full"
-              />
+            <div
+              className="dim-item absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{
+                width: 'calc(50% - 6px)',
+                background: '#0D1F3C',
+                border: '1px solid rgba(90,221,164,0.5)',
+                boxShadow: '0 12px 40px rgba(13,31,60,0.30), 0 2px 8px rgba(0,0,0,0.15)',
+                zIndex: 10,
+                padding: '1.5rem',
+              }}
+            >
+              <DimBadge code={center.code} dark />
+              <div className="mt-3">
+                <p className="font-sans font-semibold text-white text-[14px] mb-1">{center.name}</p>
+                <p className="font-sans text-[12px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{center.desc}</p>
+              </div>
             </div>
           )}
-          {/* F — bas gauche, coin haut-droit glisse sous O */}
-          <div style={{ gridColumn: 1, gridRow: 3, paddingRight: '12px', paddingTop: '12px' }}>
-            <Card code={corners[2].code} name={corners[2].name} desc={corners[2].desc} className="h-full" />
-          </div>
-          {/* S — bas droit, coin haut-gauche glisse sous O */}
-          <div style={{ gridColumn: 3, gridRow: 3, paddingLeft: '12px', paddingTop: '12px' }}>
-            <Card code={corners[3].code} name={corners[3].name} desc={corners[3].desc} className="h-full" />
-          </div>
         </div>
 
         {/* Mobile — liste verticale */}
         <div className="md:hidden flex flex-col gap-3">
           {corners.map(({ code, name, desc }) => (
-            <Card key={code} code={code} name={name} desc={desc} />
+            <CornerCard key={code} code={code} name={name} desc={desc} badgeAlign="top-left" />
           ))}
           {center && (
-            <Card code={center.code} name={center.name} desc={center.desc} dark />
+            <div className="dim-item p-6 flex flex-col gap-3" style={{ background: '#0D1F3C', border: '1px solid rgba(90,221,164,0.5)' }}>
+              <DimBadge code={center.code} dark />
+              <div>
+                <p className="font-sans font-semibold text-white text-[14px] mb-1">{center.name}</p>
+                <p className="font-sans text-[12px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{center.desc}</p>
+              </div>
+            </div>
           )}
         </div>
 
