@@ -1,6 +1,6 @@
 'use client'
 
-import { Link, usePathname, useRouter } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { useState, useRef, useEffect, type ComponentProps } from 'react'
@@ -294,7 +294,6 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
   const locale = useLocale()
   const [openCluster, setOpenCluster] = useState<number | null>(null)
   const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
-  const router = useRouter()
   const founderHref = `/${locale}/about#fondateur`
 
   function goToFounder() {
@@ -303,7 +302,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
-      router.push(founderHref as never)
+      window.location.href = founderHref
     }
   }
 
