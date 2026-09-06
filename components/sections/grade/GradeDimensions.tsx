@@ -9,13 +9,13 @@ function Card({ code, name, desc, dark = false, className = '' }: {
 }) {
   return (
     <div
-      className={`dim-item flex flex-col gap-3 p-6 border border-ag-border overflow-hidden ${className}`}
+      className={`dim-item flex flex-col gap-3 p-6 border border-ag-border ${className}`}
       style={{ background: dark ? '#0D1F3C' : '#ffffff' }}
     >
       <DimBadge code={code} dark={dark} />
       <div className="min-w-0">
         <p className={`font-sans font-semibold text-[14px] mb-1 ${dark ? 'text-white' : 'text-ag-black'}`}>{name}</p>
-        <p className="font-sans text-[12px] leading-relaxed line-clamp-4" style={{ color: dark ? 'rgba(255,255,255,0.6)' : '#6b7280' }}>{desc}</p>
+        <p className="font-sans text-[12px] leading-relaxed" style={{ color: dark ? 'rgba(255,255,255,0.6)' : '#6b7280' }}>{desc}</p>
       </div>
     </div>
   )
