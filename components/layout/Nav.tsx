@@ -330,6 +330,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
             ))}
             <button
               onClick={goToFounder}
+              style={{ fontWeight: 400 }}
               className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 text-left w-full"
             >
               {t('whoFounder')}
@@ -363,6 +364,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 <div key={ci}>
                   <button
                     onClick={() => setOpenCluster(isOpen ? null : ci)}
+                    style={{ fontWeight: 400 }}
                     className="w-full flex items-center justify-between py-2 text-left group font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
                   >
                     <span>{cluster.cluster}</span>
