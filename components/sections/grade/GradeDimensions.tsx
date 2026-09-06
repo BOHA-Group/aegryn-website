@@ -17,19 +17,32 @@ function CornerCard({
 
   return (
     <div
-      className={`dim-item flex flex-col border border-ag-border bg-white p-6 ${className}`}
+      className={`dim-item flex flex-col bg-white p-6 ${className}`}
+      style={{ border: '1px solid #b0b8c1' }}
     >
-      {/* Badge dans le coin extérieur */}
-      <div className={`flex mb-3 ${isRight ? 'justify-end' : 'justify-start'}`}>
-        <DimBadge code={code} />
-      </div>
-      {/* Texte poussé vers le bas si badge en bas */}
-      {isBottom && <div className="flex-1" />}
-      <div className="min-w-0">
-        <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
-        <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
-      </div>
-      {!isBottom && <div className="flex-1" />}
+      {isBottom ? (
+        /* Badge bas + texte au-dessus du badge */
+        <>
+          <div className="min-w-0 mb-4">
+            <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
+            <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
+          </div>
+          <div className={`flex ${isRight ? 'justify-end' : 'justify-start'}`}>
+            <DimBadge code={code} />
+          </div>
+        </>
+      ) : (
+        /* Badge haut + texte en dessous */
+        <>
+          <div className={`flex mb-4 ${isRight ? 'justify-end' : 'justify-start'}`}>
+            <DimBadge code={code} />
+          </div>
+          <div className="min-w-0">
+            <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
+            <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
+          </div>
+        </>
+      )}
     </div>
   )
 }
