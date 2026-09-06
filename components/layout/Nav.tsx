@@ -365,7 +365,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                     onClick={() => setOpenCluster(isOpen ? null : ci)}
                     className="w-full flex items-center justify-between py-2 text-left group"
                   >
-                    <span className="font-sans font-semibold text-[12px] tracking-[0.02em] text-ag-navy group-hover:text-ag-black transition-colors">
+                    <span className="font-sans text-[13px] text-ag-gray group-hover:text-ag-black transition-colors">
                       {cluster.cluster}
                     </span>
                     <span className="text-ag-gray-light text-[14px] leading-none">{isOpen ? '−' : '+'}</span>
