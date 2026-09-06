@@ -22,7 +22,7 @@ export default function IndustriesSection() {
               onClick={() => setOpenCluster(isOpen ? null : ci)}
               className="w-full flex items-center justify-between gap-4 py-5 px-2 group text-left hover:bg-ag-white transition-colors"
             >
-              <span className="font-sans font-bold text-[13px] uppercase tracking-[0.16em] text-ag-navy group-hover:text-ag-black transition-colors">
+              <span className="font-sans font-bold text-[14px] tracking-[-0.01em] text-ag-navy group-hover:text-ag-black transition-colors">
                 {cluster.cluster}
               </span>
               <span className="shrink-0 text-ag-apex">
