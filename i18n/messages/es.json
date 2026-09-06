@@ -8335,7 +8335,7 @@
     }
   },
   "industries": {
-    "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "desc": "Intervenimos en todas las industrias donde la valoración y la transformación crean valor.",
     "footerNote": "Todas las industrias",
     "list": [
       {
@@ -8427,7 +8427,122 @@
         "desc": "Optimización IA rutas y capacidades, contratos multimodales, cumplimiento emisiones, visibilidad flota."
       }
     ],
-    "title": "Industrias cubiertas"
+    "title": "Industrias cubiertas",
+    "clusters": [
+      {
+        "cluster": "Finanzas & Capital",
+        "items": [
+          {
+            "name": "Banca & Servicios Financieros",
+            "desc": "Cumplimiento regulatorio (DORA, Basilea IV), IA de riesgo crediticio, automatización back-office."
+          },
+          {
+            "name": "FinTech & Pagos",
+            "desc": "PSD2, open banking, cumplimiento AML/KYC, arquitecturas de pago en tiempo real, tokenización."
+          },
+          {
+            "name": "PropTech & Inmobiliario",
+            "desc": "Valoración de activos, IA de scoring de inquilinos, cumplimiento de datos, plataforma de transacciones."
+          }
+        ]
+      },
+      {
+        "cluster": "Salud & Ciencias de la Vida",
+        "items": [
+          {
+            "name": "Salud & Farmacéutica",
+            "desc": "Datos de salud RGPD, interoperabilidad HL7/FHIR, cumplimiento EMA, cadena de suministro segura."
+          },
+          {
+            "name": "HealthTech & MedTech",
+            "desc": "IA diagnóstica, cumplimiento MDR/IVDR, datos de salud RGPD, interoperabilidad HL7/FHIR."
+          }
+        ]
+      },
+      {
+        "cluster": "Industria, Energía & Infraestructura",
+        "items": [
+          {
+            "name": "Aeroespacial & Defensa",
+            "desc": "Sistemas embebidos, IA de misión, cumplimiento ITAR/EAR, gestión de subcontratistas estratégicos."
+          },
+          {
+            "name": "Agricultura & Agroalimentario",
+            "desc": "Trazabilidad de la cadena de suministro, IA de previsión de rendimiento, cumplimiento sanitario y ESG."
+          },
+          {
+            "name": "Automoción & Movilidad",
+            "desc": "Transformación digital, IA embebida, gestión de proveedores Tier-1/2, MaaS."
+          },
+          {
+            "name": "Química & Materiales Avanzados",
+            "desc": "Datos de I+D, cumplimiento REACH, gestión de contratos con proveedores, propiedad intelectual."
+          },
+          {
+            "name": "Construcción & Infraestructura",
+            "desc": "BIM, IA de mantenimiento predictivo, contratos complejos, gestión de subcontratistas multinivel."
+          },
+          {
+            "name": "Energía & Utilities",
+            "desc": "Transición energética, smart grid, cumplimiento EU ETS, IA de gestión de activos."
+          },
+          {
+            "name": "Industria & Manufactura",
+            "desc": "Industria 4.0, mantenimiento predictivo, integración MES/ERP, cumplimiento ISO."
+          },
+          {
+            "name": "Logística & Supply Chain",
+            "desc": "Visibilidad en tiempo real, IA de optimización de flujos, cumplimiento aduanero, contratos 3PL/4PL."
+          },
+          {
+            "name": "Transporte & Carga",
+            "desc": "Optimización de flota, cumplimiento regulatorio del transporte, plataformas digitales de gestión."
+          }
+        ]
+      },
+      {
+        "cluster": "Comercio, Servicios & Experiencia del Cliente",
+        "items": [
+          {
+            "name": "Hostelería & Turismo",
+            "desc": "Revenue management IA, CRM unificado, cumplimiento de datos de clientes, digitalización de experiencia."
+          },
+          {
+            "name": "Lujo & Retail Premium",
+            "desc": "Autenticidad de producto blockchain, experiencia omnicanal, clienteling data, cumplimiento ESG."
+          },
+          {
+            "name": "Medios & Entertainment",
+            "desc": "Monetización de contenido, recomendación IA, derechos digitales, cumplimiento DSA."
+          },
+          {
+            "name": "Retail & E-commerce",
+            "desc": "Experiencia omnicanal, personalización IA, logística last-mile, cumplimiento de datos."
+          },
+          {
+            "name": "Telecomunicaciones",
+            "desc": "Modernización legacy, 5G edge computing, cumplimiento BEREC, gestión de dependencias tecnológicas."
+          }
+        ]
+      },
+      {
+        "cluster": "Tech, Innovación & Sector Público",
+        "items": [
+          {
+            "name": "Educación & EdTech",
+            "desc": "Plataformas de aprendizaje adaptativo, cumplimiento RGPD educativo, IA de personalización."
+          },
+          {
+            "name": "GovTech & Sector Público",
+            "desc": "Transformación digital de instituciones, soberanía de datos, cumplimiento NIS2 y DORA."
+          },
+          {
+            "name": "Tecnología & SaaS",
+            "desc": "Arquitectura multi-tenant, escalabilidad, deuda técnica, cumplimiento EU AI Act, preparación para el exit."
+          }
+        ]
+      }
+    ]
   },
   "aboutPage": {
     "intro": "Creemos que el valor de una empresa no se negocia bajo presión. Se construye con rigor estratégico, se refuerza con tecnología, se valida en la transparencia y se realiza en la confianza.\n\nPor eso existe Aegryn: para acompañar a los dirigentes que se niegan a que su trayectoria les sea impuesta.",

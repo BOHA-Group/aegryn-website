@@ -8350,7 +8350,7 @@
     }
   },
   "industries": {
-    "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "desc": "Wij opereren in alle sectoren waar waardering en transformatie waarde creëren.",
     "footerNote": "All industries",
     "list": [
       {
@@ -8442,7 +8442,122 @@
         "desc": "Route- en capaciteits-AI-optimalisatie, multimodale contracten, emissie-compliance, vlootzichtbaarheid."
       }
     ],
-    "title": "Gedekte sectoren"
+    "title": "Gedekte sectoren",
+    "clusters": [
+      {
+        "cluster": "Financiën & Kapitaal",
+        "items": [
+          {
+            "name": "Banken & Financiële Diensten",
+            "desc": "Regelgevende compliance (DORA, Bazel IV), kredietrisico-AI, back-office automatisering."
+          },
+          {
+            "name": "FinTech & Betalingen",
+            "desc": "PSD2, open banking, AML/KYC-compliance, real-time betalingsarchitecturen, tokenisatie."
+          },
+          {
+            "name": "PropTech & Vastgoed",
+            "desc": "Asset-waardering, huurder scoring AI, data-compliance, transactieplatform."
+          }
+        ]
+      },
+      {
+        "cluster": "Gezondheid & Biowetenschappen",
+        "items": [
+          {
+            "name": "Gezondheidszorg & Farmacie",
+            "desc": "AVG gezondheidsgegevens, HL7/FHIR interoperabiliteit, EMA-compliance, veilige supply chain."
+          },
+          {
+            "name": "HealthTech & MedTech",
+            "desc": "Diagnostische AI, MDR/IVDR-compliance, AVG gezondheidsgegevens, HL7/FHIR interoperabiliteit."
+          }
+        ]
+      },
+      {
+        "cluster": "Industrie, Energie & Infrastructuur",
+        "items": [
+          {
+            "name": "Lucht- en Ruimtevaart & Defensie",
+            "desc": "Ingebedde systemen, missie-AI, ITAR/EAR-compliance, strategisch onderaannemersbeheer."
+          },
+          {
+            "name": "Landbouw & Voeding",
+            "desc": "Toeleveringsketen traceerbaarheid, opbrengstvoorspelling AI, sanitaire en ESG-compliance."
+          },
+          {
+            "name": "Automotive & Mobiliteit",
+            "desc": "Digitale transformatie, ingebedde AI, Tier-1/2 leveranciersbeheer, MaaS."
+          },
+          {
+            "name": "Chemie & Geavanceerde Materialen",
+            "desc": "R&D-data, REACH-compliance, leverancierscontractbeheer, IP."
+          },
+          {
+            "name": "Bouw & Infrastructuur",
+            "desc": "BIM, voorspellende onderhouds-AI, complexe contracten, meerlagig onderaannemersbeheer."
+          },
+          {
+            "name": "Energie & Nutsbedrijven",
+            "desc": "Energietransitie, smart grid, EU ETS-compliance, asset management AI."
+          },
+          {
+            "name": "Industrie & Productie",
+            "desc": "Industrie 4.0, voorspellend onderhoud, MES/ERP-integratie, ISO-compliance."
+          },
+          {
+            "name": "Logistiek & Supply Chain",
+            "desc": "Real-time zichtbaarheid, stroomoptimalisatie AI, douane-compliance, 3PL/4PL-contracten."
+          },
+          {
+            "name": "Transport & Vracht",
+            "desc": "Vlootoptimalisatie, transport regelgevende compliance, digitale beheerplatforms."
+          }
+        ]
+      },
+      {
+        "cluster": "Handel, Diensten & Klantervaring",
+        "items": [
+          {
+            "name": "Horeca & Toerisme",
+            "desc": "AI revenue management, unified CRM, klantdata compliance, ervaringsdigitalisering."
+          },
+          {
+            "name": "Luxe & Premium Retail",
+            "desc": "Blockchain productauthenticiteit, omnichannel-ervaring, data clienteling, ESG-compliance."
+          },
+          {
+            "name": "Media & Entertainment",
+            "desc": "Content monetisering, AI aanbevelingen, digitale rechten, DSA-compliance."
+          },
+          {
+            "name": "Retail & E-commerce",
+            "desc": "Omnichannel-ervaring, AI personalisering, last-mile logistiek, data-compliance."
+          },
+          {
+            "name": "Telecommunicatie",
+            "desc": "Legacy modernisering, 5G edge computing, BEREC-compliance, technologieafhankelijkheidsbeheer."
+          }
+        ]
+      },
+      {
+        "cluster": "Tech, Innovatie & Publieke Sector",
+        "items": [
+          {
+            "name": "Onderwijs & EdTech",
+            "desc": "Adaptieve leerplatforms, AVG-compliance onderwijs, personalisatie AI."
+          },
+          {
+            "name": "GovTech & Publieke Sector",
+            "desc": "Digitale transformatie van instellingen, data-soevereiniteit, NIS2- en DORA-compliance."
+          },
+          {
+            "name": "Technologie & SaaS",
+            "desc": "Multi-tenant architectuur, schaalbaarheid, technische schulden, EU AI Act compliance, exit readiness."
+          }
+        ]
+      }
+    ]
   },
   "aboutPage": {
     "intro": "Wij geloven dat de waarde van een bedrijf niet onder druk wordt onderhandeld. Ze wordt opgebouwd door strategische strengheid, versterkt door technologie, gevalideerd in transparantie en gerealiseerd in vertrouwen.\n\nDaarom bestaat Aegryn: om leidinggevenden te begeleiden die weigeren hun koers te laten bepalen.",

@@ -8499,7 +8499,7 @@
     }
   },
   "industries": {
-    "desc": "Aegryn intervient dans tous les secteurs d'activité : conception d'actifs tech, advisory stratégique, recrutement executive, fusions & acquisitions. Notre expertise couvre l'ensemble de l'économie européenne.",
+    "desc": "Wir sind in allen Branchen tätig, in denen Bewertung und Transformation Wert schaffen.",
     "footerNote": "Alle Branchen",
     "list": [
       {
@@ -8591,7 +8591,122 @@
         "desc": "Routen- und Kapazitäts-KI-Optimierung, multimodale Verträge, Emissions-Compliance, Flottenvisibilität."
       }
     ],
-    "title": "Abgedeckte Branchen"
+    "title": "Abgedeckte Branchen",
+    "clusters": [
+      {
+        "cluster": "Finanzen & Kapital",
+        "items": [
+          {
+            "name": "Banken & Finanzdienstleistungen",
+            "desc": "Regulatorische Compliance (DORA, Basel IV), Kreditrisiko-KI, Back-Office-Automatisierung."
+          },
+          {
+            "name": "FinTech & Zahlungen",
+            "desc": "PSD2, Open Banking, AML/KYC-Compliance, Echtzeit-Zahlungsarchitekturen, Tokenisierung."
+          },
+          {
+            "name": "PropTech & Immobilien",
+            "desc": "Asset-Bewertung, Mieter-Scoring-KI, Daten-Compliance, Transaktionsplattform."
+          }
+        ]
+      },
+      {
+        "cluster": "Gesundheit & Biowissenschaften",
+        "items": [
+          {
+            "name": "Gesundheit & Pharma",
+            "desc": "DSGVO-Gesundheitsdaten, HL7/FHIR-Interoperabilität, EMA-Compliance, sichere Lieferkette."
+          },
+          {
+            "name": "HealthTech & MedTech",
+            "desc": "Diagnostik-KI, MDR/IVDR-Compliance, DSGVO-Gesundheitsdaten, HL7/FHIR-Interoperabilität."
+          }
+        ]
+      },
+      {
+        "cluster": "Industrie, Energie & Infrastruktur",
+        "items": [
+          {
+            "name": "Luft- und Raumfahrt & Verteidigung",
+            "desc": "Eingebettete Systeme, Missions-KI, ITAR/EAR-Compliance, strategisches Subunternehmer-Management."
+          },
+          {
+            "name": "Landwirtschaft & Lebensmittel",
+            "desc": "Lieferketten-Rückverfolgbarkeit, Ertragsvorhersage-KI, sanitäre und ESG-Compliance."
+          },
+          {
+            "name": "Automobil & Mobilität",
+            "desc": "Digitale Transformation, eingebettete KI, Tier-1/2-Lieferantenmanagement, MaaS."
+          },
+          {
+            "name": "Chemie & Werkstoffe",
+            "desc": "F&E-Daten, REACH-Compliance, Lieferantenvertragsmanagement, IP."
+          },
+          {
+            "name": "Bau & Infrastruktur",
+            "desc": "BIM, prädiktive Wartungs-KI, komplexe Verträge, mehrstufiges Subunternehmer-Management."
+          },
+          {
+            "name": "Energie & Versorgung",
+            "desc": "Energiewende, Smart Grid, EU ETS-Compliance, Asset-Management-KI."
+          },
+          {
+            "name": "Industrie & Fertigung",
+            "desc": "Industrie 4.0, prädiktive Wartung, MES/ERP-Integration, ISO-Compliance."
+          },
+          {
+            "name": "Logistik & Supply Chain",
+            "desc": "Echtzeit-Sichtbarkeit, Flussoptimierungs-KI, Zoll-Compliance, 3PL/4PL-Verträge."
+          },
+          {
+            "name": "Transport & Fracht",
+            "desc": "Flottenoptimierung, Transport-Compliance, digitale Managementplattformen."
+          }
+        ]
+      },
+      {
+        "cluster": "Handel, Dienstleistungen & Kundenerfahrung",
+        "items": [
+          {
+            "name": "Hotellerie & Tourismus",
+            "desc": "KI-Revenue-Management, einheitliches CRM, Kundendaten-Compliance, Erlebnis-Digitalisierung."
+          },
+          {
+            "name": "Luxus & Premium-Handel",
+            "desc": "Blockchain-Produktauthentizität, Omnichannel-Erlebnis, Daten-Clienteling, ESG-Compliance."
+          },
+          {
+            "name": "Medien & Entertainment",
+            "desc": "Content-Monetarisierung, KI-Empfehlung, digitale Rechte, DSA-Compliance."
+          },
+          {
+            "name": "Handel & E-Commerce",
+            "desc": "Omnichannel-Erlebnis, KI-Personalisierung, Last-Mile-Logistik, Daten-Compliance."
+          },
+          {
+            "name": "Telekommunikation",
+            "desc": "Legacy-Modernisierung, 5G Edge Computing, BEREC-Compliance, Technologieabhängigkeitsmanagement."
+          }
+        ]
+      },
+      {
+        "cluster": "Tech, Innovation & Öffentlicher Sektor",
+        "items": [
+          {
+            "name": "Bildung & EdTech",
+            "desc": "Adaptive Lernplattformen, DSGVO-Compliance im Bildungsbereich, Personalisierungs-KI."
+          },
+          {
+            "name": "GovTech & Öffentlicher Sektor",
+            "desc": "Digitale Transformation von Institutionen, Datensouveränität, NIS2- und DORA-Compliance."
+          },
+          {
+            "name": "Technologie & SaaS",
+            "desc": "Multi-Tenant-Architektur, Skalierbarkeit, technische Schulden, EU AI Act-Compliance, Exit-Vorbereitung."
+          }
+        ]
+      }
+    ]
   },
   "aboutPage": {
     "intro": "Wir glauben, dass der Wert eines Unternehmens nicht unter Druck verhandelt wird. Er wird durch strategische Strenge aufgebaut, durch Technologie gestärkt, in Transparenz validiert und in Vertrauen realisiert.\n\nDeshalb existiert Aegryn: um Führungskräfte zu begleiten, die es ablehnen, ihren Kurs diktiert zu bekommen.",
