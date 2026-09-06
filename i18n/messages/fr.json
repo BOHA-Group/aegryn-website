@@ -1348,7 +1348,28 @@
           "desc": "Audit RGAA 4.1 / WCAG 2.1 AA, conformité European Accessibility Act (obligatoire EU depuis juin 2025). Critique pour HealthTech et EdTech."
         }
       ],
-      "intro": "Nos propres actifs passent par nos propres méthodes. Quand nous conseillons sur la cybersécurité, l'IA ou l'architecture, nous le faisons depuis l'intérieur d'un groupe qui construit et opère ses propres systèmes."
+      "intro": "Nos propres actifs passent par nos propres méthodes. Quand nous conseillons sur la cybersécurité, l'IA ou l'architecture, nous le faisons depuis l'intérieur d'un groupe qui construit et opère ses propres systèmes.",
+      "useCases": {
+        "label": "Cas d'usage métiers",
+        "items": [
+          {
+            "profile": "Institution financière",
+            "desc": "Conformité réglementaire (NIS2, DORA, EU AI Act), scoring de risque, intégration d'API sécurisées, audit de souveraineté des données."
+          },
+          {
+            "profile": "Scale-up en croissance",
+            "desc": "Architecture scalable, gestion de la dette technique, stratégie data et IA, accompagnement CTO as a service en phase de scale."
+          },
+          {
+            "profile": "PME sans DSI interne",
+            "desc": "DSI de transition, migration cloud, déploiement d'outils métiers propriétaires, sécurisation des systèmes sans compétence IT en interne."
+          },
+          {
+            "profile": "Grand groupe en transformation",
+            "desc": "Audit de cybersécurité, cartographie des risques IT, feuille de route IA, gouvernance des données à l'échelle de l'entreprise."
+          }
+        ]
+      }
     },
     "approach": {
       "label": "Notre approche",

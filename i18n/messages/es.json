@@ -1412,7 +1412,28 @@
           "desc": "Auditoría WCAG 2.1 AA, conformidad con el European Accessibility Act (obligatorio en la UE desde junio de 2025). Crítico para HealthTech y EdTech."
         }
       ],
-      "intro": "Nuestros propios activos pasan por nuestros propios métodos. Cuando asesoramos sobre ciberseguridad, IA o arquitectura, lo hacemos desde el interior de un grupo que construye y opera sus propios sistemas."
+      "intro": "Nuestros propios activos pasan por nuestros propios métodos. Cuando asesoramos sobre ciberseguridad, IA o arquitectura, lo hacemos desde el interior de un grupo que construye y opera sus propios sistemas.",
+      "useCases": {
+        "label": "Casos de uso empresariales",
+        "items": [
+          {
+            "profile": "Institución financiera",
+            "desc": "Cumplimiento regulatorio (NIS2, DORA, EU AI Act), scoring de riesgo, integración de APIs seguras, auditoría de soberanía de datos."
+          },
+          {
+            "profile": "Scale-up en crecimiento",
+            "desc": "Arquitectura escalable, gestión de deuda técnica, estrategia de datos e IA, acompañamiento CTO as a service en fase de escala."
+          },
+          {
+            "profile": "PYME sin DSI interno",
+            "desc": "DSI de transición, migración cloud, despliegue de herramientas empresariales propietarias, segurización sin competencia IT interna."
+          },
+          {
+            "profile": "Gran grupo en transformación",
+            "desc": "Auditoría de ciberseguridad, mapeo de riesgos IT, hoja de ruta IA, gobernanza de datos a escala empresarial."
+          }
+        ]
+      }
     },
     "approach": {
       "label": "Nuestro enfoque",

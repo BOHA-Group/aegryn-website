@@ -38,10 +38,11 @@ export default async function AdvisoryPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'advisoryPage' })
 
-  const whoFor      = t.raw('whoFor.items')      as { title: string; desc: string }[]
-  const experts     = t.raw('experts.items')     as { title: string; desc: string }[]
-  const stratItems  = t.raw('strategy.items')    as { num: string; title: string; desc: string }[]
-  const maPhases    = t.raw('ma.phases')         as { num: string; title: string; desc: string }[]
+  const whoFor      = t.raw('whoFor.items')             as { title: string; desc: string }[]
+  const experts     = t.raw('experts.items')            as { title: string; desc: string }[]
+  const useCases    = t.raw('experts.useCases.items')   as { profile: string; desc: string }[]
+  const stratItems  = t.raw('strategy.items')           as { num: string; title: string; desc: string }[]
+  const maPhases    = t.raw('ma.phases')                as { num: string; title: string; desc: string }[]
 
   return (
     <>
@@ -175,6 +176,32 @@ export default async function AdvisoryPage({ params }: Props) {
                   </div>
                 ))}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Use Cases accordéon ── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-14">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+            / {t('experts.useCases.label')}
+          </p>
+          <div className="divide-y divide-ag-border border-t border-b border-ag-border">
+            {useCases.map((uc, i) => (
+              <details key={i} className="group">
+                <summary className="flex items-center justify-between py-5 cursor-pointer list-none">
+                  <span className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] group-open:text-ag-navy transition-colors">
+                    {uc.profile}
+                  </span>
+                  <span className="font-sans text-[18px] text-ag-gray-light group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <p className="pb-6 text-[13px] text-ag-gray leading-relaxed max-w-2xl">
+                  {uc.desc}
+                </p>
+              </details>
             ))}
           </div>
         </div>

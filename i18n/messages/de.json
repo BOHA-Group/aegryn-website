@@ -1412,7 +1412,28 @@
           "desc": "WCAG 2.1 AA-Audit, Konformität mit dem European Accessibility Act (EU-Pflicht seit Juni 2025). Kritisch für HealthTech und EdTech."
         }
       ],
-      "intro": "Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Wenn wir zu Cybersicherheit, KI oder Architektur beraten, tun wir das aus dem Inneren einer Gruppe, die ihre eigenen Systeme aufbaut und betreibt."
+      "intro": "Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Wenn wir zu Cybersicherheit, KI oder Architektur beraten, tun wir das aus dem Inneren einer Gruppe, die ihre eigenen Systeme aufbaut und betreibt.",
+      "useCases": {
+        "label": "Geschäftliche Anwendungsfälle",
+        "items": [
+          {
+            "profile": "Finanzinstitut",
+            "desc": "Regulatorische Compliance (NIS2, DORA, EU AI Act), Risikoscoring, sichere API-Integration, Datensouveränitätsaudit."
+          },
+          {
+            "profile": "Wachstumsstarkes Scale-up",
+            "desc": "Skalierbare Architektur, Management technischer Schulden, Daten- und KI-Strategie, CTO as a Service in der Scale-Phase."
+          },
+          {
+            "profile": "KMU ohne interne IT",
+            "desc": "Interim-CTO, Cloud-Migration, Einsatz proprietärer Geschäftswerkzeuge, Systemsicherung ohne interne IT-Kompetenz."
+          },
+          {
+            "profile": "Grosskonzern in Transformation",
+            "desc": "Cybersicherheitsaudit, IT-Risikoanalyse, KI-Roadmap, unternehmensweite Datenverwaltung."
+          }
+        ]
+      }
     },
     "approach": {
       "label": "Unser Ansatz",

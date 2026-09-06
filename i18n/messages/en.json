@@ -1412,7 +1412,28 @@
           "desc": "WCAG 2.1 AA audit, European Accessibility Act compliance (mandatory EU since June 2025). Critical for HealthTech and EdTech."
         }
       ],
-      "intro": "Our own assets go through our own methods. When we advise on cybersecurity, AI or architecture, we do so from inside a group that builds and operates its own systems."
+      "intro": "Our own assets go through our own methods. When we advise on cybersecurity, AI or architecture, we do so from inside a group that builds and operates its own systems.",
+      "useCases": {
+        "label": "Business use cases",
+        "items": [
+          {
+            "profile": "Financial institution",
+            "desc": "Regulatory compliance (NIS2, DORA, EU AI Act), risk scoring, secure API integration, data sovereignty audit."
+          },
+          {
+            "profile": "High-growth scale-up",
+            "desc": "Scalable architecture, technical debt management, data and AI strategy, CTO as a service support during scale phase."
+          },
+          {
+            "profile": "SME without internal IT",
+            "desc": "Interim CTO, cloud migration, deployment of proprietary business tools, system security without in-house IT expertise."
+          },
+          {
+            "profile": "Large group in transformation",
+            "desc": "Cybersecurity audit, IT risk mapping, AI roadmap, enterprise-wide data governance."
+          }
+        ]
+      }
     },
     "approach": {
       "label": "Our approach",
