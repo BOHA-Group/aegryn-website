@@ -330,7 +330,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
             ))}
             <button
               onClick={goToFounder}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 text-left"
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 text-left w-full"
             >
               {t('whoFounder')}
             </button>
@@ -363,12 +363,10 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 <div key={ci}>
                   <button
                     onClick={() => setOpenCluster(isOpen ? null : ci)}
-                    className="w-full flex items-center justify-between py-2 text-left group"
+                    className="w-full flex items-center justify-between py-2 text-left group font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
                   >
-                    <span className="font-sans text-[13px] text-ag-gray group-hover:text-ag-black transition-colors">
-                      {cluster.cluster}
-                    </span>
-                    <span className="text-ag-gray-light text-[14px] leading-none">{isOpen ? '−' : '+'}</span>
+                    <span>{cluster.cluster}</span>
+                    <span className="text-ag-gray-light leading-none">{isOpen ? '−' : '+'}</span>
                   </button>
                   {isOpen && (
                     <div className="pb-2 pl-1 flex flex-col gap-1">
