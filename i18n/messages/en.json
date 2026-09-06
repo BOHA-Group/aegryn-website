@@ -1524,6 +1524,11 @@
     "industries": {
       "label": "INDUSTRIES COVERED",
       "intro": "We work across all industries where tech, data and valuation create or protect value."
+    },
+    "midCta": {
+      "title": "A topic to explore together?",
+      "cta": "Let's talk",
+      "href": "/contact"
     }
   },
   "stats": {

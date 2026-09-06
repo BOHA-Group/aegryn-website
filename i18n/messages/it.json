@@ -1524,6 +1524,11 @@
     "industries": {
       "label": "SETTORI COPERTI",
       "intro": "Interveniamo in tutti i settori dove tech, dati e valorizzazione creano o proteggono valore."
+    },
+    "midCta": {
+      "title": "Un argomento da esplorare insieme?",
+      "cta": "Parliamone",
+      "href": "/contact"
     }
   },
   "stats": {

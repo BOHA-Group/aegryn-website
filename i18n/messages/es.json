@@ -1524,6 +1524,11 @@
     "industries": {
       "label": "INDUSTRIAS CUBIERTAS",
       "intro": "Trabajamos en todas las industrias donde la tech, los datos y la valoración crean o protegen valor."
+    },
+    "midCta": {
+      "title": "¿Un tema para explorar juntos?",
+      "cta": "Hablemos",
+      "href": "/contact"
     }
   },
   "stats": {

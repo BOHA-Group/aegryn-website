@@ -207,6 +207,21 @@ export default async function AdvisoryPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Mid CTA ── */}
+      <section className="border-b border-ag-border bg-ag-navy/5">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p className="font-sans font-bold text-ag-navy text-[18px] tracking-[-0.01em]">
+            {t('midCta.title')}
+          </p>
+          <Link
+            href={t('midCta.href') as never}
+            className="shrink-0 inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+          >
+            {t('midCta.cta')} <ArrowUpRight size={14} />
+          </Link>
+        </div>
+      </section>
+
       {/* ── BLOC C — Advisory M&A ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">

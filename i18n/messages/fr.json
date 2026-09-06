@@ -1460,6 +1460,11 @@
     "industries": {
       "label": "INDUSTRIES COUVERTES",
       "intro": "Nous intervenons dans toutes les industries où la tech, la donnée et la valorisation créent ou protègent de la valeur."
+    },
+    "midCta": {
+      "title": "Un sujet à explorer ensemble ?",
+      "cta": "Parlons-en",
+      "href": "/contact"
     }
   },
   "stats": {

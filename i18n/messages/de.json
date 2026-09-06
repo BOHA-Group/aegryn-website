@@ -1524,6 +1524,11 @@
     "industries": {
       "label": "ABGEDECKTE BRANCHEN",
       "intro": "Wir arbeiten in allen Branchen, wo Tech, Daten und Bewertung Wert schaffen oder schützen."
+    },
+    "midCta": {
+      "title": "Ein Thema gemeinsam erkunden?",
+      "cta": "Sprechen wir",
+      "href": "/contact"
     }
   },
   "stats": {

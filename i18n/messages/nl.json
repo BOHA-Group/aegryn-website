@@ -1524,6 +1524,11 @@
     "industries": {
       "label": "GEDEKTE SECTOREN",
       "intro": "We zijn actief in alle sectoren waar tech, data en waardering waarde creëren of beschermen."
+    },
+    "midCta": {
+      "title": "Een onderwerp om samen te verkennen?",
+      "cta": "Laten we praten",
+      "href": "/contact"
     }
   },
   "stats": {
