@@ -68,9 +68,9 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
   }, [])
 
   const articles = [
-    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog/marche-ma-tech-europe-q3-2026' },
-    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog/5-erreurs-valorisation-saas'   },
-    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog/actif-tech-certifiable'        },
+    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog/preparer-organisation-cession-levee-5-points' },
+    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog/small-mid-cap-enjeux-entreprises-50-300m'     },
+    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog/execution-apres-financement-banque-fonds'     },
   ]
 
   return (
