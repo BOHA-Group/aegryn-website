@@ -3801,27 +3801,27 @@
     }
   },
   "marketStats": {
-    "label": "Der Markt in Zahlen, 2026",
+    "label": "Markt in Zahlen, 2026",
     "stats": [
       {
-        "value": "3,1x ARR",
-        "label": "Medianer privater SaaS-Multiple Europa, Q1 2026",
-        "source": "Aventis Advisors"
+        "value": "+59%",
+        "label": "Wachstum der PE-Exits in Europa, H1 2026",
+        "source": "Pitchbook 2026"
       },
       {
-        "value": "+38%",
-        "label": "M&A-Volumenwachstum KMU Tech FR-CH 2025",
-        "source": "Aegryn Research 2026"
+        "value": "64%",
+        "label": "der EU-KMU nennen regulatorische Komplexität als größtes Wachstumshemmnis",
+        "source": "Eurostat 2026"
       },
       {
-        "value": "< 25%",
-        "label": "Aegryn-Zertifizierungsrate: Strenge angewandt",
-        "source": "Aegryn 2026"
+        "value": "30 bis 50%",
+        "label": "Bewertungsabschlag europäischer Unternehmen vs. US-Äquivalente bei identischen Kennzahlen",
+        "source": "EY M&A Barometer 2026"
       },
       {
-        "value": "72 Tage",
-        "label": "Medianer Aegryn-Abschluss (Mandat bis Unterzeichnung)",
-        "source": "Aegryn 2026"
+        "value": "Nr.1",
+        "label": "Small und Mid-Cap: am stärksten wachsendes Segment 2026, laut 64% der europäischen PE-Befragten",
+        "source": "Bain PE Report 2026"
       }
     ]
   },

@@ -1617,27 +1617,27 @@
     }
   },
   "marketStats": {
-    "label": "The market in numbers, 2026",
+    "label": "Market in figures, 2026",
     "stats": [
       {
-        "value": "3.1x ARR",
-        "label": "Median private SaaS multiple Europe, Q1 2026",
-        "source": "Aventis Advisors"
+        "value": "+59%",
+        "label": "Growth in PE exits in Europe, H1 2026",
+        "source": "Pitchbook 2026"
       },
       {
-        "value": "+38%",
-        "label": "M&A volume growth SME tech FR-CH 2025",
-        "source": "Aegryn Research 2026"
+        "value": "64%",
+        "label": "of EU SMEs cite regulatory complexity as their primary growth barrier",
+        "source": "Eurostat 2026"
       },
       {
-        "value": "< 25%",
-        "label": "Aegryn certification rate: rigour applied",
-        "source": "Aegryn 2026"
+        "value": "30 to 50%",
+        "label": "valuation discount for EU companies vs US equivalents at identical metrics",
+        "source": "EY M&A Barometer 2026"
       },
       {
-        "value": "72 days",
-        "label": "Median Aegryn closing time (mandate to signing)",
-        "source": "Aegryn 2026"
+        "value": "No.1",
+        "label": "Small and mid-cap: fastest-growing segment expected in 2026, per 64% of EU PE respondents",
+        "source": "Bain PE Report 2026"
       }
     ]
   },

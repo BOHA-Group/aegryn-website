@@ -3804,24 +3804,24 @@
     "label": "De markt in cijfers, 2026",
     "stats": [
       {
-        "value": "3,1x ARR",
-        "label": "Mediaan privaat SaaS-multiple Europa, Q1 2026",
-        "source": "Aventis Advisors"
+        "value": "+59%",
+        "label": "Groei van PE-exits in Europa, H1 2026",
+        "source": "Pitchbook 2026"
       },
       {
-        "value": "+38%",
-        "label": "M&A-volumegroei MKB tech FR-CH 2025",
-        "source": "Aegryn Research 2026"
+        "value": "64%",
+        "label": "van EU-kmo’s noemt regelgevingscomplexiteit als voornaamste groeibelemmering",
+        "source": "Eurostat 2026"
       },
       {
-        "value": "< 25%",
-        "label": "Aegryn-certificeringspercentage: strengheid toegepast",
-        "source": "Aegryn 2026"
+        "value": "30 tot 50%",
+        "label": "waarderingskorting voor EU-bedrijven vs Amerikaanse equivalenten bij identieke metrics",
+        "source": "EY M&A Barometer 2026"
       },
       {
-        "value": "72 dagen",
-        "label": "Mediaan Aegryn-sluitingstijd (mandaat tot ondertekening)",
-        "source": "Aegryn 2026"
+        "value": "Nr.1",
+        "label": "Small en mid-cap: snelst groeiend segment verwacht in 2026, volgens 64% van de EU PE-respondenten",
+        "source": "Bain PE Report 2026"
       }
     ]
   },

@@ -3804,24 +3804,24 @@
     "label": "El mercado en cifras, 2026",
     "stats": [
       {
-        "value": "3,1x ARR",
-        "label": "Múltiplo mediano SaaS privado Europa, T1 2026",
-        "source": "Aventis Advisors"
+        "value": "+59%",
+        "label": "Crecimiento de exits PE en Europa, H1 2026",
+        "source": "Pitchbook 2026"
       },
       {
-        "value": "+38%",
-        "label": "Crecimiento volumen M&A pyme tech FR-CH 2025",
-        "source": "Aegryn Research 2026"
+        "value": "64%",
+        "label": "de las PYME EU citan la complejidad regulatoria como principal freno al crecimiento",
+        "source": "Eurostat 2026"
       },
       {
-        "value": "< 25%",
-        "label": "Tasa de certificación Aegryn: rigor aplicado",
-        "source": "Aegryn 2026"
+        "value": "30 a 50%",
+        "label": "de descuento de valoración de empresas EU vs equivalentes US a métricas idénticas",
+        "source": "EY M&A Barometer 2026"
       },
       {
-        "value": "72 días",
-        "label": "Plazo mediano de cierre Aegryn (mandato a firma)",
-        "source": "Aegryn 2026"
+        "value": "Nº1",
+        "label": "Small y mid-cap: segmento de mayor crecimiento esperado en 2026, según el 64% de los encuestados PE EU",
+        "source": "Bain PE Report 2026"
       }
     ]
   },
