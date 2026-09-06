@@ -20,22 +20,14 @@ export function TransactNarrative() {
           scrollTrigger: { trigger: ref.current, start: 'top 72%', once: true },
         },
       )
-      gsap.fromTo('.transact-stat',
-        { opacity: 0, y: 16 },
-        {
-          opacity: 1, y: 0,
-          stagger: 0.09, duration: 0.6, ease: 'expo.out',
-          scrollTrigger: { trigger: '.transact-stats-strip', start: 'top 80%', once: true },
-        },
-      )
     }, ref)
     return () => ctx.revert()
   }, [])
 
   return (
     <section ref={ref} className="bg-ag-navy border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-0">
-        <div className="transact-narr-text max-w-3xl pb-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <div className="transact-narr-text max-w-3xl">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
             {t('label')}
@@ -62,32 +54,6 @@ export function TransactNarrative() {
             >
               {t('ctaBuy')} <ArrowUpRight size={13} />
             </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats strip */}
-      <div className="transact-stats-strip border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-            {[
-              { val: t('stat1Val'), label: t('stat1Label') },
-              { val: t('stat2Val'), label: t('stat2Label') },
-              { val: t('stat3Val'), label: t('stat3Label') },
-              { val: t('stat4Val'), label: t('stat4Label') },
-            ].map((s) => (
-              <div key={s.label} className="transact-stat py-8 px-6 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
-                <p
-                  className="font-sans font-bold text-white tracking-[-0.03em] mb-1"
-                  style={{ fontSize: 'clamp(26px,2.8vw,38px)' }}
-                >
-                  {s.val}
-                </p>
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/40">
-                  {s.label}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

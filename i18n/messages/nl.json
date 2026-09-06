@@ -4498,7 +4498,7 @@
   "transactNarrative": {
     "label": "M&A Transactions",
     "title": "Certification changes the conversation.\nThe transaction follows.",
-    "desc": "Aegryn certificeert organisaties onder het CIFSO v4.0-protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie.\n\nGecertificeerde assets treden toe tot een vertrouwelijk off-market overdrachtsproces, tussen gedocumenteerde verkopers en voorgekwalificeerde kopers. Geen listing. Geen veiling. Een marktstandaard.",
+    "desc": "Onafhankelijke certificering. Vertrouwelijke overdracht.\nKring van vooraf gekwalificeerde kopers. Institutioneel escrow.",
     "stat1Val": "< 25%",
     "stat1Label": "Acceptance rate of submitted assets",
     "stat2Val": "60d max",

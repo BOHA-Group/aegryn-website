@@ -1576,7 +1576,7 @@
   "transactNarrative": {
     "label": "Cessions M&A confidentielles",
     "title": "La certification change la conversation.\nLa transaction suit.",
-    "desc": "Aegryn certifie les organisations selon le protocole CIFSO v4.0 sur cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation.\n\nLes actifs certifiés entrent dans un processus de transmission offmarket confidentiel, entre cédants documentés et acquéreurs pré-qualifiés. Ce n'est pas une liste. Ce n'est pas une enchère. C'est un standard de marché.",
+    "desc": "Certification indépendante. Transmission confidentielle.\nCercle d’acquéreurs pré-qualifiés. Séquestre institutionnel.",
     "stat1Val": "< 25%",
     "stat1Label": "Taux d'acceptation des actifs soumis",
     "stat2Val": "60 j max",
