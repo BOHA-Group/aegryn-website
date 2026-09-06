@@ -1507,7 +1507,10 @@
           "title": "Closing & Post-acquisition",
           "desc": "Signing support, escrow, post-acquisition integration, recruitment of execution teams."
         }
-      ]
+      ],
+      "fundsNote": "We also support funds and family offices as a transitional, outsourced operating partner on their portfolio companies.",
+      "fundsHref": "/investisseurs",
+      "fundsLink": "Learn more about our investor role"
     },
     "network": {
       "label": "EXPERT NETWORK : SKILLS ACTIVATED PER MISSION",

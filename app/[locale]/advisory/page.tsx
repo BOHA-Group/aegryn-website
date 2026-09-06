@@ -229,6 +229,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
+          <p className="mt-10 text-[14px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex/30 pl-5">
+            {t('ma.fundsNote')}{' '}
+            <Link href={t('ma.fundsHref') as never} className="underline underline-offset-2 hover:text-ag-navy transition-colors">
+              {t('ma.fundsLink')} ↗
+            </Link>
+          </p>
         </div>
       </section>
 
