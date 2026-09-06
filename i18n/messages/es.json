@@ -657,7 +657,8 @@
         "label": "Alineamiento con el cliente",
         "sub": "Lo que aconsejamos, lo aplicamos"
       }
-    ]
+    ],
+    "text": "Hemos pasado más de veinte años construyendo, asesorando y reestructurando organizaciones. Lo que hemos adquirido no tiene precio. Las empresas que perduran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han comprendido eso."
   },
   "missionSection": {
     "label": "El Modelo Aegryn",
@@ -670,7 +671,7 @@
       },
       {
         "title": "CONSTRUIR",
-        "desc": "Activos digitales duraderos, precio fijo, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. INDEPENDENCIA TECNOLÓGICA."
+        "desc": "Activos digitales duraderos, precio fijo, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. Independencia tecnológica."
       },
       {
         "title": "TRANSMITIR",

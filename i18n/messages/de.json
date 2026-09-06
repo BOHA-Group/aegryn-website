@@ -657,7 +657,8 @@
         "label": "Kundenbindung",
         "sub": "Was wir empfehlen, wenden wir an"
       }
-    ]
+    ],
+    "text": "Wir haben mehr als zwanzig Jahre damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gewonnen haben, ist unbezahlbar. Unternehmen, die Bestand haben, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen. Aegryn existiert für diejenigen, die das verstanden haben."
   },
   "missionSection": {
     "label": "Das Aegryn-Modell",
@@ -670,7 +671,7 @@
       },
       {
         "title": "AUFBAUEN",
-        "desc": "Nachhaltige digitale Assets, Pauschalpreis, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. TECHNOLOGISCHE UNABHÄNGIGKEIT."
+        "desc": "Nachhaltige digitale Assets, Pauschalpreis, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. Technologische Unabhängigkeit."
       },
       {
         "title": "ÜBERTRAGEN",

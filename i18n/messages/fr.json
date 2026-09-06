@@ -620,7 +620,8 @@
         "label": "Alignement client",
         "sub": "Ce que nous conseillons, nous nous l’appliquons"
       }
-    ]
+    ],
+    "text": "Nous avons passé plus de vingt ans à construire, conseiller et restructurer des organisations. Ce que nous avons acquis n’a pas de prix. Les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble. Aegryn existe pour ceux qui ont compris ça."
   },
   "missionSection": {
     "label": "Le Modèle Aegryn",
@@ -633,7 +634,7 @@
       },
       {
         "title": "CONSTRUIRE",
-        "desc": "Actifs numériques durables, à prix forfaitaire, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. INDÉPENDANCE TECHNOLOGIQUE."
+        "desc": "Actifs numériques durables, à prix forfaitaire, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. Indépendance technologique."
       },
       {
         "title": "TRANSMETTRE",

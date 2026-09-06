@@ -657,7 +657,8 @@
         "label": "Client alignment",
         "sub": "What we advise, we apply to ourselves"
       }
-    ]
+    ],
+    "text": "We have spent more than twenty years building, advising and restructuring organisations. What we have gained is priceless. Companies that last do not choose between strategy and technology. They think them together. Aegryn exists for those who have understood that."
   },
   "missionSection": {
     "label": "The Aegryn Model",
@@ -670,7 +671,7 @@
       },
       {
         "title": "BUILD",
-        "desc": "Durable digital assets, flat-fee, full client ownership. Each asset is designed to enhance company value and withstand certification. TECHNOLOGICAL INDEPENDENCE."
+        "desc": "Durable digital assets, flat-fee, full client ownership. Each asset is designed to enhance company value and withstand certification. Technological independence."
       },
       {
         "title": "TRANSACT",
