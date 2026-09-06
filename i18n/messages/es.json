@@ -1322,14 +1322,19 @@
   },
   "advisoryPage": {
     "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Estrategia, Tech, M&A.\nUn solo interlocutor.",
-      "desc1": "Aegryn Advisory acompaña a fundadores, directivos y organizaciones en sus decisiones estratégicas, transformación tecnológica y operaciones de M&A. Experiencia operativa construida por operadores, no por consultores de despacho.",
-      "desc2": "Lo que aconsejamos, lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Esa coherencia es lo que diferencia a Aegryn de una firma de consultoría convencional.",
+      "label": "Aegryn Consultoría",
+      "title": "Claridad Estratégica.\nProfundidad Operacional.\nRed Activada.",
+      "desc1": "Acompañamos a los dirigentes en sus decisiones estratégicas, transformación y operaciones M&A a nivel de board, con experiencia operacional y una red de especialistas activada por misión.",
+      "desc2": "Lo que aconsejamos, lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Esta coherencia es lo que diferencia a Aegryn de una firma de consultoría clásica.",
       "quote": "No tenemos playbooks genéricos.\nTenemos métodos probados en entornos reales.",
-      "cta": "Reservar sesión",
-      "metaTitle": "Aegryn Advisory : Estrategia, Tech & M&A | Un solo interlocutor",
-      "metaDesc": "Consultoría estratégica, tecnológica y de M&A. Experiencia operacional construida por operadores. Activos propietarios, red de expertos, reclutamiento directivo. Suiza & Europa."
+      "cta": "Mandato de consultoría",
+      "ctaHref": "/contact?subject=advisory",
+      "cta2": "Encontrar un experto",
+      "cta2Href": "/alliances",
+      "cta3": "Hablar de mi proyecto",
+      "cta3Href": "/contact",
+      "metaTitle": "Aegryn Advisory: Estrategia, Tech & M&A | Suiza & Europa",
+      "metaDesc": "Consultoría en estrategia, tech y M&A para dirigentes. Board advisory, transformación, operating partner para inversores. Red de expertos activada por misión. Suiza & Europa."
     },
     "why": {
       "label": "¿Por qué Aegryn Advisory?",

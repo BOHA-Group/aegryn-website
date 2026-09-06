@@ -1322,14 +1322,19 @@
   },
   "advisoryPage": {
     "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Strategie, Tech, M&A.\nÉén partner.",
-      "desc1": "Aegryn Advisory begeleidt oprichters, leidinggevenden en organisaties bij strategische beslissingen, technologische transformatie en M&A-operaties. Operationele expertise gebouwd door operators, niet door managementconsultants.",
-      "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Die coherentie is wat Aegryn onderscheidt van een conventioneel adviesbureau.",
-      "quote": "We hebben geen generieke playbooks.\nWe hebben methoden die bewezen zijn in echte omgevingen.",
-      "cta": "Sessie boeken",
-      "metaTitle": "Aegryn Advisory : Strategie, Tech & M&A | Één partner",
-      "metaDesc": "Strategisch, technologisch en M&A-advies. Operationele expertise opgebouwd door operators. Eigen assets, expertennetwerk, executive recruitment. Zwitserland & Europa."
+      "label": "Aegryn Advies",
+      "title": "Strategische Helderheid.\nOperationele Diepgang.\nGeactiveerd Netwerk.",
+      "desc1": "Wij ondersteunen leiders bij strategische beslissingen, transformatie en M&A-operaties op boardniveau, met operationele expertise en een netwerk van specialisten dat per missie wordt geactiveerd.",
+      "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is wat Aegryn onderscheidt van een klassiek adviesbureau.",
+      "quote": "We hebben geen generieke playbooks.\nWe hebben methoden bewezen in echte omgevingen.",
+      "cta": "Adviesopdracht",
+      "ctaHref": "/contact?subject=advisory",
+      "cta2": "Vind een expert",
+      "cta2Href": "/alliances",
+      "cta3": "Over mijn project praten",
+      "cta3Href": "/contact",
+      "metaTitle": "Aegryn Advisory: Strategie, Tech & M&A | Zwitserland & Europa",
+      "metaDesc": "Strategie-, tech- en M&A-advies voor leiders. Board advisory, transformatie, operating partner voor investeerders. Expertnetwerk per missie. Zwitserland & Europa."
     },
     "why": {
       "label": "Waarom Aegryn Advisory?",

@@ -1323,13 +1323,18 @@
   "advisoryPage": {
     "hero": {
       "label": "Aegryn Advisory",
-      "title": "Strategy, Tech, M&A.\nOne partner.",
-      "desc1": "Aegryn Advisory works with founders, executives and organisations on strategic decisions, technology transformation and M&A operations. Operational expertise built by operators, not management consultants.",
-      "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. That coherence is what differentiates Aegryn from a conventional advisory firm.",
-      "quote": "We don't have generic playbooks.\nWe have methods proven in real environments.",
-      "cta": "Book a session",
-      "metaTitle": "Aegryn Advisory : Strategy, Tech & M&A | One partner",
-      "metaDesc": "Strategic, technology and M&A advisory. Operational expertise built by operators. Proprietary assets, expert network, executive recruitment. Switzerland & Europe."
+      "title": "Strategic Clarity.\nOperational Depth.\nActivated Network.",
+      "desc1": "We support leaders in their strategic decisions, transformation and M&A operations at board level, with operational expertise and a network of specialists activated for each mission.",
+      "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. This coherence is what differentiates Aegryn from a traditional advisory firm.",
+      "quote": "We have no generic playbooks.\nWe have methods proven in real environments.",
+      "cta": "Advisory mandate",
+      "ctaHref": "/contact?subject=advisory",
+      "cta2": "Find an expert",
+      "cta2Href": "/alliances",
+      "cta3": "Discuss my project",
+      "cta3Href": "/contact",
+      "metaTitle": "Aegryn Advisory: Strategy, Tech & M&A | Switzerland & Europe",
+      "metaDesc": "Strategy, tech and M&A advisory for leaders and organisations. Board advisory, transformation, operating partner for investors. Expert network activated per mission. Switzerland & Europe."
     },
     "why": {
       "label": "Why Aegryn Advisory?",

@@ -1322,14 +1322,19 @@
   },
   "advisoryPage": {
     "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Strategia, Tech, M&A.\nUn solo interlocutore.",
-      "desc1": "Aegryn Advisory accompagna fondatori, dirigenti e organizzazioni nelle loro decisioni strategiche, trasformazione tecnologica e operazioni di M&A. Competenza operativa costruita da operatori, non da consulenti di studio.",
-      "desc2": "Ciò che consigliamo, lo applichiamo a noi stessi. I nostri asset propri passano per i nostri stessi metodi. Questa coerenza è ciò che differenzia Aegryn da una società di consulenza convenzionale.",
+      "label": "Aegryn Consulenza",
+      "title": "Chiarezza Strategica.\nProfondità Operativa.\nRete Attivata.",
+      "desc1": "Affianchiamo i dirigenti nelle loro decisioni strategiche, trasformazione e operazioni M&A a livello di board, con expertise operativa e una rete di specialisti attivata per ogni missione.",
+      "desc2": "Quello che consigliamo, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri metodi. Questa coerenza è ciò che differenzia Aegryn da un cabinet di consulenza classico.",
       "quote": "Non abbiamo playbook generici.\nAbbiamo metodi collaudati in ambienti reali.",
-      "cta": "Prenota una sessione",
-      "metaTitle": "Aegryn Advisory : Strategia, Tech & M&A | Un unico interlocutore",
-      "metaDesc": "Consulenza strategica, tecnologica e M&A. Expertise operativa costruita da operatori. Asset proprietari, rete di esperti, recruiting esecutivo. Svizzera & Europa."
+      "cta": "Mandato di consulenza",
+      "ctaHref": "/contact?subject=advisory",
+      "cta2": "Trovare un esperto",
+      "cta2Href": "/alliances",
+      "cta3": "Parlare del mio progetto",
+      "cta3Href": "/contact",
+      "metaTitle": "Aegryn Advisory: Strategia, Tech & M&A | Svizzera & Europa",
+      "metaDesc": "Consulenza in strategia, tech e M&A per dirigenti. Board advisory, trasformazione, operating partner per investitori. Rete di esperti attivata per missione. Svizzera & Europa."
     },
     "why": {
       "label": "Perché Aegryn Advisory?",

@@ -1322,14 +1322,19 @@
   },
   "advisoryPage": {
     "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Strategie, Tech, M&A.\nEin einziger Partner.",
-      "desc1": "Aegryn Advisory begleitet Gründer, Führungskräfte und Organisationen bei strategischen Entscheidungen, technologischer Transformation und M&A-Operationen. Operative Expertise von Praktikern, nicht von Unternehmensberatern.",
-      "desc2": "Was wir beraten, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist es, was Aegryn von einem klassischen Beratungsunternehmen unterscheidet.",
-      "quote": "Wir haben keine generischen Playbooks.\nWir haben Methoden, die in realen Umgebungen erprobt wurden.",
-      "cta": "Gespräch vereinbaren",
-      "metaTitle": "Aegryn Advisory : Strategie, Tech & M&A | Ein Ansprechpartner",
-      "metaDesc": "Strategische, technologische und M&A-Beratung. Operative Expertise von Operators. Eigene Assets, Expertennetzwerk, Führungskräfterekrutierung. Schweiz & Europa."
+      "label": "Aegryn Beratung",
+      "title": "Strategische Klarheit.\nOperative Tiefe.\nAktiviertes Netzwerk.",
+      "desc1": "Wir begleiten Führungskräfte bei strategischen Entscheidungen, Transformationen und M&A-Operationen auf Board-Ebene, mit operativer Expertise und einem für jede Mission aktivierten Spezialistennetzwerk.",
+      "desc2": "Was wir empfehlen, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz unterscheidet Aegryn von einer klassischen Unternehmensberatung.",
+      "quote": "Wir haben keine generischen Playbooks.\nWir haben in realen Umgebungen bewährte Methoden.",
+      "cta": "Beratungsmandat",
+      "ctaHref": "/contact?subject=advisory",
+      "cta2": "Experten finden",
+      "cta2Href": "/alliances",
+      "cta3": "Mein Projekt besprechen",
+      "cta3Href": "/contact",
+      "metaTitle": "Aegryn Advisory: Strategie, Tech & M&A | Schweiz & Europa",
+      "metaDesc": "Strategie-, Tech- und M&A-Beratung für Führungskräfte. Board Advisory, Transformation, Operating Partner. Expertennetzwerk pro Mission. Schweiz & Europa."
     },
     "why": {
       "label": "Warum Aegryn Advisory?",

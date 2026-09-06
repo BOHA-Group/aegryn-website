@@ -68,12 +68,26 @@ export default async function AdvisoryPage({ params }: Props) {
               <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
-          >
-            {t('hero.cta')} <ArrowUpRight size={14} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href={t('hero.ctaHref') as never}
+              className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
+            >
+              {t('hero.cta')} <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href={t('hero.cta2Href') as never}
+              className="inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
+            >
+              {t('hero.cta2')} <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href={t('hero.cta3Href') as never}
+              className="inline-flex items-center gap-3 border border-white/10 text-white/60 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-white/30 hover:text-white transition-colors"
+            >
+              {t('hero.cta3')} <ArrowUpRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 
