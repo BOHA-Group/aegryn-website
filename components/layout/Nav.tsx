@@ -170,7 +170,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
 // Mega-menu Nos convictions (2 colonnes Magazine + Notre regard)
 function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <div className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-lg z-50">
       <div className="grid grid-cols-2 gap-px bg-ag-border">
         {/* The Aegryn Magazine */}
         <div className="bg-ag-white p-4">
@@ -186,7 +186,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 whitespace-nowrap"
               >
                 {t(labelKey)}
               </Link>
