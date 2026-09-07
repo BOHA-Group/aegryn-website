@@ -18,7 +18,7 @@ const SECTION_DEFS: {
 }[] = [
   { permission: 'catalog.manage_access', label: 'Accès catalogue',   desc: 'Valider et révoquer les accès qualifiés acquéreurs.',       icon: BookOpen,    href: '/client/internal/catalog'  },
   { permission: 'kyc.review',            label: 'Revue KYC',         desc: 'Instruire et valider les dossiers de vérification.',        icon: ShieldCheck, href: '/client/internal/kyc'      },
-  { permission: 'grading.review',        label: 'Revue grading',     desc: 'Conduire des revues de notation CIFS en interne.',          icon: Star,        href: '/client/internal/grading'  },
+  { permission: 'grading.review',        label: 'Revue grading',     desc: 'Conduire des revues de notation CIFSO en interne.',          icon: Star,        href: '/client/internal/grading'  },
   { permission: 'dataroom.manage',       label: 'Data room',         desc: 'Gérer les documents et accès aux data rooms des actifs.',   icon: FolderOpen,  href: '/client/internal/dataroom' },
   { permission: 'magazine.publish',      label: 'Magazine',          desc: 'Publier et programmer les numéros du magazine Aegryn.',     icon: Newspaper,   href: '/client/internal/magazine' },
 ]

@@ -59,7 +59,7 @@ export default async function AdminAssetsPage({
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis pour certification CIFS</h1>
+            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis pour certification CIFSO v4.0O v4.0</h1>
             <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
           </div>
           <div className="flex gap-2">
@@ -118,10 +118,10 @@ export default async function AdminAssetsPage({
         {params.partner_id && (
           <div className="mb-4 bg-indigo-50 border border-indigo-200 px-4 py-3 flex items-center justify-between gap-4">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 mb-0.5">Assignation CIFS en cours</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 mb-0.5">Assignation CIFSO en cours</p>
               <p className="font-sans text-[12px] text-indigo-800">
                 Ouvrez le <strong>Moteur Grade</strong> d&apos;un actif pour co-certifier avec le partenaire sélectionné.
-                La co-certification CIFS s&apos;enregistre dans la fiche partenaire via l&apos;onglet Certifications.
+                La co-certification CIFSOO v4.0 s&apos;enregistre dans la fiche partenaire via l&apos;onglet Certifications.
               </p>
             </div>
             <Link

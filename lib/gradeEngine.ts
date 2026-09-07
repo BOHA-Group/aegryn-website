@@ -22,7 +22,7 @@ import { capAegByProofQuality } from './gradingSystem'
 
 export type YesNo         = 'yes' | 'no'
 
-/** Niveau de preuve pour l'ARR — remplace le booléen arrAudited (CIFS v3.0) */
+/** Niveau de preuve pour l'ARR — remplace le booléen arrAudited (CIFSO v4.0) */
 export type ArrAuditLevel = 'declarative' | 'verifiable' | 'audited'
 export type YesNoNA       = 'yes' | 'no' | 'na'
 export type Coverage      = 'complete' | 'partial' | 'absent'
@@ -54,7 +54,7 @@ export interface IPInput {
   rgpdCompliance: Coverage
 }
 
-/** Score de dépendance fondateur — 5 critères objectifs (CIFS v3.0 F-42) */
+/** Score de dépendance fondateur — 5 critères objectifs (CIFSO v4.0 F-42) */
 export interface FounderDependencyInput {
   /** Fondateur présent dans >50% des appels commerciaux */
   founderLeadsSales: YesNo
@@ -71,14 +71,14 @@ export interface FounderDependencyInput {
 export interface FinanceInput {
   arr: number                        // ARR en €
   revenueAgeMonths: number           // ancienneté revenus
-  arrAudited: ArrAuditLevel          // niveau de preuve ARR (CIFS v3.0)
+  arrAudited: ArrAuditLevel          // niveau de preuve ARR (CIFSO v4.0)
   nrr: number | null                 // % ou null si <12 mois
   monthlyChurn: number               // %
   grossMargin: number                // %
   yoyGrowth: number                  // %
   topClientConcentration: number     // % du top 1 client (ancien champ — déprécié)
   runwayMonths: number               // mois (valeur manuelle — déprécié)
-  founderDependency?: FounderDependencyInput  // optionnel — CIFS v3.0
+  founderDependency?: FounderDependencyInput  // optionnel — CIFSO v4.0
   // ── Nouveaux champs Sprint 1 ──
   topCustomerPct?: number            // % CA du 1er client (0-100)
   top3CustomerPct?: number           // % CA des 3 premiers clients (0-100)
@@ -98,11 +98,11 @@ export interface SecurityInput {
   rgpdDocumented: YesNo
   activeSecurityIncident: YesNo
   externalCertification: Certification
-  pentestMethodology?: PentestMethodology  // CIFS v3.0
-  pentestAuditorCert?: PentestAuditorCert  // CIFS v3.0
-  rgpdTransferReadiness?: 'clean' | 'warning' | 'blocking'  // CIFS v3.0 I-27
+  pentestMethodology?: PentestMethodology  // CIFSO v4.0
+  pentestAuditorCert?: PentestAuditorCert  // CIFSO v4.0
+  rgpdTransferReadiness?: 'clean' | 'warning' | 'blocking'  // CIFSO v4.0 I-27
   /** S-15 — Politique de gestion des accès documentée (RBAC/IAM) */
-  accessManagement?: YesNo            // CIFS v3.0 V3 — règle MFA/S-15
+  accessManagement?: YesNo            // CIFSO v4.0 V3 — règle MFA/S-15
 }
 
 /** CIFSO v4.0 — Dimension O : Organisation & Talent (20 pts) */
@@ -258,7 +258,7 @@ export interface GradeResult {
   totalScore:      number        // 0-100
   grade:           GradeLetter
   gradeLabel:      string        // AEG ★ | AAA | AA | A | B | Non certifiable
-  gradeCeiling?:   GradeLetter   // plafond appliqué par proof_quality (CIFS v3.0)
+  gradeCeiling?:   GradeLetter   // plafond appliqué par proof_quality (CIFSO v4.0)
   /** Transaction Readiness Score — readiness opérationnelle à transiger */
   trs:             TRSLevel
   trsReasons:      string[]       // justifications du TRS
@@ -435,7 +435,7 @@ function scoreFinance(input: FinanceInput): DimensionResult {
   else if (input.revenueAgeMonths >=  6) { score += 1; rationale.push(`Revenus récents (${input.revenueAgeMonths} mois)`) }
   else                                   {             rationale.push('Historique de revenus insuffisant (<6 mois)') }
 
-  // ARR — niveau de preuve (CIFS v3.0) — max 2 pts
+  // ARR — niveau de preuve (CIFSO v4.0) — max 2 pts
   if      (input.arrAudited === 'audited')    { score += 2; rationale.push('ARR audité par commissaire aux comptes co-signataire') }
   else if (input.arrAudited === 'verifiable') { score += 1; rationale.push('ARR vérifiable (export certifié Stripe/Chargebee)') }
   else                                        {             rationale.push('ARR déclaratif non audité') }
@@ -487,7 +487,7 @@ function scoreFinance(input: FinanceInput): DimensionResult {
     }
   }
 
-  // Score dépendance fondateur — pénalité max -3 pts (CIFS v3.0 F-42)
+  // Score dépendance fondateur — pénalité max -3 pts (CIFSO v4.0 F-42)
   if (input.founderDependency) {
     const fd = input.founderDependency
     const riskCount = [fd.founderLeadsSales, fd.noSigningDelegation, fd.revenueAtRisk, fd.noOperationalDocs, fd.noSuccessionPlan]
@@ -549,7 +549,7 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
 
   let score = 0
 
-  // Pentest — max 7 pts de base + bonus qualification (CIFS v3.0)
+  // Pentest — max 7 pts de base + bonus qualification (CIFSO v4.0)
   let pentestBase = 0
   if      (input.lastPentestMonthsAgo <= 6)   { pentestBase = 7; rationale.push('Pentest récent (≤6 mois)') }
   else if (input.lastPentestMonthsAgo <= 12)   { pentestBase = 5; rationale.push('Pentest dans l\'année (≤12 mois)') }
@@ -569,7 +569,7 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
   else if (input.criticalVulnsResolved === 'na')  { score += 3; rationale.push('Aucune vulnérabilité critique identifiée (N/A)') }
   else                                            {             rationale.push('Vulnérabilités critiques non résolues') }
 
-  // MFA admin — max 5 pts (CIFS v3.0 V3 : pénalité S-15 si accessManagement sans MFA)
+  // MFA admin — max 5 pts (CIFSO v4.0 V3 : pénalité S-15 si accessManagement sans MFA)
   if (input.mfaOnAdminAccess === 'yes') {
     score += 5; rationale.push('MFA actif sur tous les accès admin')
   } else {
@@ -589,7 +589,7 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
   if (input.rgpdDocumented === 'yes') { score += 2; rationale.push('Conformité RGPD/LPD documentée') }
   else                                {             rationale.push('Documentation RGPD/LPD absente') }
 
-  // Transferts RGPD (I-27) — blocage auto ou pénalité (CIFS v3.0)
+  // Transferts RGPD (I-27) — blocage auto ou pénalité (CIFSO v4.0)
   if (input.rgpdTransferReadiness === 'blocking') {
     return { score: 0, autoRefusal: true, refusalReason: 'Transferts de données RGPD bloquants non résolus (I-29)', rationale: [] }
   }
@@ -757,7 +757,7 @@ export function runGradeEngine(input: GradeInput): GradeResult {
 
   const { grade: rawGrade } = calculateGrade(totalScore, anyRefusal)
 
-  // ── Plafond proof_quality avec effectivePQ (CIFS v3.0 + Sprint 1A) ─────────
+  // ── Plafond proof_quality avec effectivePQ (CIFSO v4.0 + Sprint 1A) ─────────
   let grade = rawGrade
   let gradeCeiling: GradeLetter | undefined
   if (!anyRefusal && effectivePQ) {

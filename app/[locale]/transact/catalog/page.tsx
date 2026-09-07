@@ -5,7 +5,7 @@ import { Link }                    from '@/i18n/navigation'
 import NextLink                    from 'next/link'
 import { cookies }                 from 'next/headers'
 import { createServerClient }      from '@supabase/ssr'
-import { ArrowUpRight, Info, Calendar, MapPin, Bell, Lock, Users } from 'lucide-react'
+import { ArrowUpRight, Info, Calendar, MapPin, Bell, Users } from 'lucide-react'
 import Image                       from 'next/image'
 import CatalogFilters              from './CatalogFilters'
 import CatalogNotifyForm           from './CatalogNotifyForm'
@@ -133,35 +133,7 @@ export default async function TransactCatalogPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Bloc accès conditionnel — visible si non qualifié, avant "Actifs à venir" ── */}
-      {!hasLotAccess && publishedAssets.length > 0 && (
-        <section className="py-10 px-6 bg-ag-navy/3 border-b border-ag-border">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-            <div className="flex items-start gap-4">
-              <div className="w-9 h-9 border border-ag-apex/40 bg-ag-apex/10 flex items-center justify-center shrink-0 mt-0.5">
-                <Lock size={14} className="text-ag-apex" />
-              </div>
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-1">
-                  {tc('conditionalAccess')}
-                </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-                  <span className="font-semibold text-ag-black">{publishedAssets.length}</span>
-                  {' '}{tc('assetsAvailable', { count: publishedAssets.length })}
-                </p>
-              </div>
-            </div>
-            <NextLink
-              href={user
-                ? `/${locale}/client/buyer/kyc`
-                : `/${locale}/client/register?next=/${locale}/transact/catalog`}
-              className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors whitespace-nowrap"
-            >
-              {tc('requestQualifiedAccess')} <ArrowUpRight size={12} />
-            </NextLink>
-          </div>
-        </section>
-      )}
+      {/* ── Accès conditionnel — masqué intentionnellement : section ouverte uniquement sur déblocage admin ── */}
 
       {/* ── Actifs à venir — visible uniquement si accès qualifié validé par l'admin ── */}
       {hasLotAccess && (

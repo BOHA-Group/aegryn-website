@@ -757,7 +757,7 @@ export default function GradeEngineForm({
         })()}
       </div>
 
-      {/* SOUS-CODES DÉTAILLÉS CIFS */}
+      {/* SOUS-CODES DÉTAILLÉS CIFSO */}
       <div className="border border-gray-200 bg-white">
         <div className="px-5 py-3 bg-gray-50 flex items-center justify-between">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">

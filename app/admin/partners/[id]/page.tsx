@@ -68,7 +68,7 @@ export default async function AdminPartnerDetailPage({
                   className="border border-gray-300 text-gray-600 text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:border-gray-500 transition-colors"
                   title="Sélectionner un actif, puis ouvrir Moteur Grade pour co-certification CAS 1"
                 >
-                  + Assignation CIFS
+                  + Assignation CIFSO
                 </Link>
                 <Link
                   href={`/admin/partners/${id}/create-mandate`}

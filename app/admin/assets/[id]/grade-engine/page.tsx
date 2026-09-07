@@ -133,7 +133,7 @@ export default async function GradeEnginePage({
         <div className="mt-12 border border-gray-200 bg-white">
           <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Référentiel CIFS v3.0</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Référentiel CIFSO v4.0</p>
               <h2 className="font-sans font-bold text-gray-900 text-[15px] mt-0.5">Grille des 128 codes de certification</h2>
             </div>
             <span className="font-mono text-[9px] uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-2 py-1">Confidentiel — usage interne</span>

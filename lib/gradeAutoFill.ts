@@ -6,7 +6,7 @@
  * inferGradeFromDocs() :
  *   Prend la liste des documents data room d'un actif (avec admin_quality)
  *   et produit :
- *     1. Les sous-codes CIFS à pré-cocher par dimension
+ *     1. Les sous-codes CIFSO à pré-cocher par dimension
  *     2. Les champs GradeInput booléens/énums déductibles des documents
  *     3. Un récapitulatif des sources (quel document a déclenché quoi)
  *

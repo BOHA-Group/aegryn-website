@@ -131,7 +131,7 @@ export const DATA_01: IssueData = {
   ],
 
   indexMetrics: [
-    { val: '< 25%', label: 'CIFS acceptance rate',            note: 'Fewer than 1 in 4 submitted assets reaches Full Grade' },
+    { val: '< 25%', label: 'CIFSO acceptance rate',            note: 'Fewer than 1 in 4 submitted assets reaches Full Grade' },
     { val: '+28%',  label: 'Price premium — certified',        note: 'vs comparable uncertified assets — H1 2025–H1 2026'    },
     { val: '−38%',  label: 'Time-to-close reduction',          note: 'For certified assets vs equivalent uncertified'        },
     { val: '11w',   label: 'Pre-Grade to Grade A — avg time',  note: 'With standard preparation effort'                     },

@@ -195,9 +195,9 @@ export default async function PartnerCertificationDetailPage({
 
       {/* Info processus */}
       <div className="mt-6 bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/50 mb-2">Processus CIFS</p>
+        <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/50 mb-2">Processus CIFSO v4.0</p>
         <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
-          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel Aegryn. Le score global CIFS est la somme des quatre dimensions.
+          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel Aegryn. Le score global CIFSO est la somme des cinq dimensions.
         </p>
       </div>
     </div>

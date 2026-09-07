@@ -572,7 +572,7 @@ export default function GradeForm({
 
       {/* ── 4 sous-scores + notation Antiquorum-style ── */}
       <div className={sectionCls}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Scores CIFS (0-25 chacun)</h2>
+        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Scores CIFSO (0-25 chacun)</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {DIMS.map(({ key, label, desc }) => {
             const note = scoreToNote(scores[key])
@@ -825,7 +825,7 @@ export default function GradeForm({
         </div>
       </div>
 
-      {/* ── Score partenaire — CAS 1 (co-certification CIFS) ── */}
+      {/* ── Score partenaire — CAS 1 (co-certification CIFSOO v4.0) ── */}
       {(isFull || isReviewPlus) && (
         <div className={sectionCls}>
           <div>

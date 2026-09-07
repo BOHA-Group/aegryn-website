@@ -191,7 +191,7 @@ export const FINANCE_SUBCODES: SubcodeDef[] = [
   { code: 'F-39', group: 'Structure client', fr: 'Concentration élevée (1 client > 30%)', en: 'High concentration (1 client > 30%)' },
   { code: 'F-40', group: 'Structure client', fr: 'LTV:CAC > 5:1', en: 'LTV:CAC > 5:1' },
   { code: 'F-41', group: 'Structure client', fr: 'LTV:CAC 3:1–5:1', en: 'LTV:CAC 3:1–5:1' },
-  { code: 'F-42', group: 'Dépendance fondateur', fr: 'Score dépendance fondateur — 5 critères objectifs (voir protocole CIFS v3.0)', en: 'Founder dependency score — 5 objective criteria (see CIFS v3.0 protocol)' },
+  { code: 'F-42', group: 'Dépendance fondateur', fr: 'Score dépendance fondateur — 5 critères objectifs (voir protocole CIFSO v4.0)', en: 'Founder dependency score — 5 objective criteria (see CIFSO v4.0 protocol)' },
   // Ancienneté & Piste
   { code: 'F-43', group: 'Ancienneté & Piste', fr: 'Revenus prouvés > 24 mois', en: 'Revenues proven > 24 months' },
   { code: 'F-44', group: 'Ancienneté & Piste', fr: 'Revenus prouvés 12–24 mois', en: 'Revenues proven 12–24 months' },
@@ -386,7 +386,7 @@ export function capAegByMaturity(aeg: AEGGrade, tier: MaturityTier): AEGGrade {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
- * PROOF QUALITY — plafond de grade par niveau de preuve (CIFS v3.0)
+ * PROOF QUALITY — plafond de grade par niveau de preuve (CIFSO v4.0)
  * ────────────────────────────────────────────────────────────────────── */
 
 /**

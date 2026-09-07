@@ -176,7 +176,7 @@ export default async function BuyerAssetDetailPage({
         </div>
       )}
 
-      {/* ── CIFS Synthesis ── */}
+      {/* ── CIFSO Synthesis ── */}
       {assessment && assessment.computed_grade && (
         <div className="bg-white border border-gray-200 p-6 mb-6">
           {/* Header */}
@@ -245,7 +245,7 @@ export default async function BuyerAssetDetailPage({
           {/* Disclaimer */}
           <div className="border-t border-gray-100 pt-4">
             <p className="font-sans text-[10px] text-gray-400 leading-relaxed">
-              <strong className="text-gray-500">Note AEGRYN :</strong> Le score CIFS certifie l&apos;état structurel de l&apos;actif au moment de son évaluation. Il constitue un point de départ documenté, non un substitut à la due diligence acquéreur. Tout investissement en session Transaction implique un séquestre et reste soumis aux conditions contractuelles AEGRYN.
+              <strong className="text-gray-500">Note AEGRYN :</strong> Le score CIFSO certifie l&apos;état structurel de l&apos;actif au moment de son évaluation. Il constitue un point de départ documenté, non un substitut à la due diligence acquéreur. Tout investissement en session Transaction implique un séquestre et reste soumis aux conditions contractuelles AEGRYN.
             </p>
           </div>
         </div>

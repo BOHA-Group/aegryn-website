@@ -73,7 +73,7 @@ export default async function PartnerCertificationsPage() {
     <div className="p-8 max-w-4xl">
       <div className="mb-8">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Co-signatures CIFS</h1>
+        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">Co-signatures CIFSO</h1>
         <p className="font-sans text-[13px] text-gray-400 mt-1">
           Missions de co-certification par dimension attribuées par l&apos;équipe Aegryn.
         </p>

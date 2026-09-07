@@ -9,7 +9,7 @@
     "career": "Carrières",
     "contact": "Contact",
     "transact": "TRANSACTION",
-    "transactCatalog": "Catalogue offmarket",
+    "transactCatalog": "Transaction offmarket",
     "transactSell": "Mandat de cession",
     "transactBuy": "Mandat d'acquisition",
     "transactMandate": "Déposer un mandat",
@@ -79,7 +79,7 @@
     "craftTransact": "Transmettre",
     "craftTransactDesc": "Certification indépendante, cession, acquisition d'actifs tech",
     "craftTransactGrade": "Système de certification indépendante",
-    "craftTransactCatalog": "Catalogue offmarket",
+    "craftTransactCatalog": "Transaction offmarket",
     "craftTransactSell": "Céder un actif",
     "craftTransactBuy": "Devenir acquéreur",
     "_disabled_craftTransactResults": "Transactions clôturées",
@@ -3062,7 +3062,7 @@
     "index": {
       "eyebrow": "AEGRYN TRANSACT | AGENCE DE TRANSACTIONS TECH",
       "heroTitle": "La référence des transactions\ntech sélectives en Europe.",
-      "heroDesc": "Catalogue offmarket fermé sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFSO v4.0. Aucune transaction sans protection NDA maximale.",
+      "heroDesc": "Transaction offmarket sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFSO v4.0. Aucune transaction sans protection NDA maximale.",
       "ctaCatalog": "Accéder au catalogue",
       "ctaMandate": "Déposer un mandat",
       "segmentsLabel": "QUATRE SEGMENTS DE TRANSACTION",
@@ -3149,7 +3149,7 @@
           "title": "Rechercher une cible d'acquisition",
           "desc": "Vous êtes entrepreneur, corporate ou family office. Vous souhaitez acquérir un actif tech selon des critères précis.",
           "points": [
-            "Accès au catalogue offmarket certifié CIFSO v4.0",
+            "Accès à la transaction offmarket certifiée CIFSO v4.0",
             "Matching selon vos critères (secteur, ARR, grade, taille)",
             "NDA mutuel avant toute divulgation",
             "Accompagnement due diligence et structuration",
@@ -3307,7 +3307,7 @@
         },
         "s2": {
           "title": "Présentation sous NDA",
-          "desc": "L'actif certifié entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel."
+          "desc": "L'actif certifié entre dans le processus de transaction offmarket. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel."
         },
         "s3": {
           "title": "Closing sécurisé",
@@ -3344,7 +3344,7 @@
       "step1Title": "Certification CIFSO v4.0",
       "step1Desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel AEG est attribué avant toute présentation.",
       "step2Title": "Présentation sous NDA",
-      "step2Desc": "L'organisation certifiée entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
+      "step2Desc": "L'organisation certifiée entre dans le processus de transaction offmarket. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
       "step3Title": "Term sheet & négociation",
       "step3Desc": "Les acquéreurs qualifiés soumettent des offres structurées. Aegryn encadre la négociation et les contre-propositions jusqu'à l'accord.",
       "step4Title": "Closing sécurisé",
@@ -3359,7 +3359,7 @@
     "buy": {
       "label": "AEGRYN TRANSACT | MANDAT D'ACQUISITION",
       "title": "Acquérir un actif tech certifié.\nSans bruit. Sous NDA.",
-      "desc": "Accédez au catalogue offmarket Aegryn : organisations certifiées CIFSO v4.0, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
+      "desc": "Accédez à la transaction offmarket Aegryn : organisations certifiées CIFSO v4.0, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
       "cta": "Déposer un mandat d'acquisition",
       "qualifTitle": "PROFIL ACQUÉREUR QUALIFIÉ",
       "qualifDesc": "Le catalogue Aegryn est réservé aux acquéreurs ayant complété la procédure de qualification. Cette exigence protège la confidentialité des vendeurs et garantit la qualité des échanges.",
@@ -3398,7 +3398,7 @@
   "transaction": {
     "meta": {
       "title": "Cessions M&A : Organisations certifiées CIFSO v4.0",
-      "desc": "Processus Aegryn : achetez ou vendez des organisations certifiées CIFSO v4.0. Catalogue offmarket, mandat exclusif, transactions encadrées."
+      "desc": "Processus Aegryn : achetez ou vendez des organisations certifiées CIFSO v4.0. Transaction offmarket, mandat exclusif, organisations encadrées."
     },
     "index": {
       "label": "Processus de cession Aegryn",
@@ -3450,7 +3450,7 @@
         {
           "num": "03",
           "title": "Présentation",
-          "desc": "L'actif certifié est présenté aux acquéreurs qualifiés dans le catalogue offmarket. Vous fixez votre prix de cession cible."
+          "desc": "L'actif certifié est présenté aux acquéreurs qualifiés dans le cadre de la transaction offmarket. Vous fixez votre prix de cession cible."
         },
         {
           "num": "04",
@@ -4072,7 +4072,7 @@
     "alliancePartners": {
       "label": "PARTENAIRES ALLIANCE",
       "title": "Des partenaires qui partagent notre standard.",
-      "desc": "Les Partenaires Alliance sont des organisations ayant signé un accord de partenariat formel avec Aegryn. Ils bénéficient d'un accès prioritaire aux opportunités de deal flow, d'une visibilité sur le catalogue offmarket et d'une collaboration directe sur les transactions en cours.",
+      "desc": "Les Partenaires Alliance sont des organisations ayant signé un accord de partenariat formel avec Aegryn. Ils bénéficient d'un accès prioritaire aux opportunités de deal flow, d'une visibilité sur les transactions offmarket et d'une collaboration directe sur les transactions en cours.",
       "cta": "Devenir Partenaire Alliance →",
       "ctaHref": "/alliances?tab=apply"
     }

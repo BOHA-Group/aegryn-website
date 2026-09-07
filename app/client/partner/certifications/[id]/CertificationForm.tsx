@@ -109,7 +109,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
         {/* Sous-codes CIFS */}
         <div>
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500 mb-3">
-            Critères validés (sous-codes CIFS)
+            Critères validés (sous-codes CIFSO)
           </p>
           <div className="flex flex-col gap-2">
             {(SUBCODES[dimension as keyof typeof SUBCODES] ?? SUBCODES.ip).map(({ code, label }) => (

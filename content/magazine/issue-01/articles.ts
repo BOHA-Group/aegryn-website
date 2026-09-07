@@ -9,9 +9,9 @@ export const ARTICLES_01: MagazineArticle[] = [
     excerpt:
       'The European SaaS M&A market reached its highest recorded volume in 2026. Yet fragmentation and opacity persist. AEGRYN exists to change that — one certified asset at a time.',
     readingTimeMinutes: 4,
-    seoKeywords: ['European tech M&A', 'SaaS certification', 'AEGRYN', 'CIFS protocol', 'tech M&A standard'],
+    seoKeywords: ['European tech M&A', 'SaaS certification', 'AEGRYN', 'CIFSO v4.0 protocol', 'tech M&A standard'],
     ctaTarget: 'grade',
-    ctaLabel: 'Get your CIFS grade',
+    ctaLabel: 'Get your CIFSO v4.0 grade',
     publishedAt: '2027-01-01',
   },
   {
@@ -46,9 +46,9 @@ export const ARTICLES_01: MagazineArticle[] = [
     pillar: 'build',
     title: 'What We See From the Certification Table',
     excerpt:
-      'Less than 25% of submitted assets pass the CIFS certification threshold. Here is what the top 5 refusal reasons tell us about the state of European tech.',
+      'Less than 25% of submitted assets pass the CIFSO v4.0 certification threshold. Here is what the top 5 refusal reasons tell us about the state of European tech.',
     readingTimeMinutes: 7,
-    seoKeywords: ['CIFS certification', 'tech asset certification', 'M&A readiness', 'due diligence Europe', 'asset grade'],
+    seoKeywords: ['CIFSO v4.0 certification', 'tech asset certification', 'M&A readiness', 'due diligence Europe', 'asset grade'],
     ctaTarget: 'grade',
     ctaLabel: 'Start your certification',
     publishedAt: '2027-01-01',
@@ -59,7 +59,7 @@ export const ARTICLES_01: MagazineArticle[] = [
     pillar: 'money',
     title: 'Deal Watch — Transactions That Shaped H1 2026',
     excerpt:
-      'Five transactions from H1 2026 analysed through the CIFS lens. From Windsor.ai to OneStream — what worked, what did not, and what each grade would have signalled.',
+      'Five transactions from H1 2026 analysed through the CIFSO v4.0 lens. From Windsor.ai to OneStream — what worked, what did not, and what each grade would have signalled.',
     readingTimeMinutes: 8,
     seoKeywords: ['European tech deals 2026', 'SaaS acquisition analysis', 'M&A case study', 'Windsor AI acquisition', 'HealthTech deal'],
     ctaTarget: 'transaction',
@@ -100,7 +100,7 @@ export const ARTICLES_01: MagazineArticle[] = [
     excerpt:
       'Our certification database, made public for the first time. Acceptance rate, dimension scores, grade distribution — the baseline against which every future edition will be measured.',
     readingTimeMinutes: 3,
-    seoKeywords: ['AEGRYN Index', 'CIFS certification data', 'tech asset grade distribution', 'certification acceptance rate', 'AEGRYN methodology'],
+    seoKeywords: ['AEGRYN Index', 'CIFSO v4.0 certification data', 'tech asset grade distribution', 'certification acceptance rate', 'AEGRYN methodology'],
     ctaTarget: 'grade',
     ctaLabel: 'Get your AEGRYN grade',
     publishedAt: '2027-01-01',
@@ -126,7 +126,7 @@ export const ARTICLES_01: MagazineArticle[] = [
     excerpt:
       'He built the first version of his product almost entirely with AI coding tools. A buyer\'s technical reviewer found something he had not thought to check. The fix took twelve weeks.',
     readingTimeMinutes: 4,
-    seoKeywords: ['AI code review', 'technical due diligence', 'AI-generated code risk', 'tech asset audit', 'CIFS code review'],
+    seoKeywords: ['AI code review', 'technical due diligence', 'AI-generated code risk', 'tech asset audit', 'CIFSO code review'],
     ctaTarget: 'grade',
     ctaLabel: 'Get a technical review',
     publishedAt: '2027-01-01',

@@ -261,7 +261,7 @@ export default function SellerAssetTabs({
           {/* Grade + scores */}
           {assessment && (
             <div className="bg-white border border-gray-200 p-6">
-              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Grade CIFS</p>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Grade CIFSO</p>
               <div className="flex items-center gap-4 mb-6">
                 {assetAegGrade && GRADE_LABEL[assetAegGrade] && (
                   <span className={`border px-4 py-2 font-mono font-bold text-[22px] ${GRADE_CLS[assetAegGrade] ?? ''}`}>
