@@ -11,7 +11,7 @@ import CatalogFilters              from './CatalogFilters'
 import CatalogNotifyForm           from './CatalogNotifyForm'
 import { checkTransactCatalogAccess } from '@/lib/transactAccess'
 import { createServiceClient }     from '@/lib/supabase'
-import CatalogDomains             from './CatalogDomains'
+import { EcosystemDomains }        from '@/components/sections/EcosystemDomains'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -263,8 +263,8 @@ export default async function TransactCatalogPage({ params }: Props) {
         }}
       />
 
-      {/* ── Domaines couverts — accordéon compact ── */}
-      <CatalogDomains />
+      {/* ── LES MARCHÉS — EcosystemDomains ── */}
+      <EcosystemDomains />
 
       {/* ── Notification + Seller + Buyer CTA — layout 3 colonnes ── */}
       <section id="notify" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
