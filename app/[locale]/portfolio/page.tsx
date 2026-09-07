@@ -48,8 +48,8 @@ export default async function PortfolioPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Grille complète des actifs du groupe */}
-      <AssetsGrid />
+      {/* Grille complète des actifs du groupe — subblink exclu (assets only) */}
+      <AssetsGrid excludeIds={['subblink']} />
     </main>
   )
 }

@@ -28,7 +28,7 @@ const GRADE_LABELS: Record<string, string> = {
   pending: '—',
 }
 
-export function AssetsGrid() {
+export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) {
   const t = useTranslations('assets.page')
   const tStatus = useTranslations('assetStatus')
   const tItems = useTranslations('assets.items')
@@ -36,9 +36,13 @@ export function AssetsGrid() {
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
+  const visibleAssets = excludeIds.length > 0
+    ? Aegryn_ASSETS.filter((a) => !excludeIds.includes(a.id))
+    : Aegryn_ASSETS
+
   const filtered = active === 'all'
-    ? Aegryn_ASSETS
-    : Aegryn_ASSETS.filter((a) => a.category === active)
+    ? visibleAssets
+    : visibleAssets.filter((a) => a.category === active)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
