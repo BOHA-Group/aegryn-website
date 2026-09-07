@@ -433,7 +433,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     isActive('/alliances') || isActive('/experts') ||
     isActive('/grade') || isActive('/transact')
   
-  const isSolutionsActive = isActive('/assets')
   
   const isThinkingActive = 
     isActive('/magazine') || isActive('/blog')
@@ -544,23 +543,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             {activeDropdown === 'craft' && <CraftMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
           </div>
 
-          {/* Nos solutions */}
-          <div className="nav-link-item relative">
-            <button
-              onClick={() => toggleDropdown('solutions')}
-              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isSolutionsActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'solutions'}
-              aria-current={isSolutionsActive ? 'page' : undefined}
-            >
-              {t('ourSolutions')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
-              {isSolutionsActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            {activeDropdown === 'solutions' && <SolutionsMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
-          </div>
-
           {/* Nos convictions */}
           <div className="nav-link-item relative">
             <button
@@ -664,15 +646,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'craft' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('craftBuild')}</p>
-                  {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('craftSupport')}</p>
+                  {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftSupport')}</p>
-                  {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftBuild')}</p>
+                  {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
@@ -692,35 +674,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                </div>
-              )}
-            </div>
-
-            {/* Nos solutions accordion */}
-            <div className="mobile-nav-item">
-              <button
-                onClick={() => toggleMobileAccordion('solutions')}
-                aria-current={isSolutionsActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isSolutionsActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
-                }`}
-              >
-                {t('ourSolutions')}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'solutions' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileAccordion === 'solutions' && (
-                <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-apex mt-2">{t('solutionsDomainsLabel')}</p>
-                  {[...SOLUTIONS_DOMAINS_LEFT, ...SOLUTIONS_DOMAINS_RIGHT].map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  <Link href="/services/build" onClick={closeMobile}
-                    className="mt-1 py-1.5 font-sans text-[13px] text-ag-apex hover:text-white transition-colors flex items-center gap-1">
-                    {t('solutionsViewAll')} <span>→</span>
-                  </Link>
                 </div>
               )}
             </div>
