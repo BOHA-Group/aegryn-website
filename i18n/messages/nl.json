@@ -197,8 +197,8 @@
       },
       "label": "Onze Groep",
       "title": "De deelnemingen\nvan de Aegryn-groep.",
-      "sub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
-      "note": "Deze deelnemingen zijn eigen activa van de groep. Ze zijn geen aan derden gecommercialiseerde oplossingen. Ze illustreren de capaciteit van Aegryn om activa op lange termijn te bouwen, te beheren en te valoriseren."
+      "sub": "Een portfolio van activa ontworpen, beheerd en geselecteerd door de Aegryn-groep. Elk activum beantwoordt aan een reale operationele behoefte voor onze eigen operaties, die van onze klanten, of beide.",
+      "note": "Deze participaties zijn activa waarin de groep gelooft vanwege hun antwoord op reale operationele behoeften, hun marktgroeipotentieel en hun vermogen om ons CIFSO-certificeringsprotocol te doorstaan. Sommige richten zich op particulieren, andere op professionals of instellingen. Alle zijn gebouwd om te duren en te valoriseren."
     },
     "page": {
       "label": "Aegryn Ecosysteem",
@@ -220,6 +220,7 @@
       "gradePending": "Certificering bezig",
       "visitSite": "Website bezoeken",
       "visitPage": "Pagina bekijken",
+      "comingSoon": "Binnenkort",
       "viewDetails": "Details bekijken",
       "transactionEligible": "Geschikt voor transactie",
       "internalOnly": "Intern gebruik",
@@ -244,13 +245,13 @@
     },
     "items": {
       "subblink": {
-        "badge": "AI contractintelligentie",
+        "badge": "Contractintelligentie",
         "tagline": "Publieke naam: subblink",
         "description": "Analyseert al uw contracten in seconden met een AI gekalibreerd op Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles in duidelijke taal geïdentificeerd. Eigen dual-use asset: interne Aegryn-operaties en clienttoegang via abonnement."
       },
       "kryv": {
-        "badge": "Protocol · Blockchain",
-        "tagline": "AI-code-integriteitscertificering",
+        "badge": "AI-code-integriteit",
+        "tagline": "Publieke naam: kryv",
         "description": "Blockchain-protocol voor certificering van de integriteit van AI-code. De SSL van kunstmatige code: elke implementatie, onveranderlijk verzegeld."
       },
       "neediu": {
@@ -271,7 +272,7 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Beveiligde data room voor assettransacties",
-        "description": "Actieve data room-infrastructuur, gebruikt door Aegryn voor eigen assettransacties. Automatische RLS, dynamisch watermerk, volledig auditspoor. Licentieerbaar voor M&A-boutiques en transactietussenpersonen die een veilige omgeving willen zonder zelf te bouwen."
+        "description": "Actieve data room-infrastructuur, gebruikt voor assettransacties. Automatische RLS, dynamisch watermerk, volledig auditspoor. Licentieerbaar voor M&A-boutiques en transactietussenpersonen die een veilige omgeving willen zonder zelf te bouwen."
       },
       "cifso": {
         "badge": "Protocol · Certificering",

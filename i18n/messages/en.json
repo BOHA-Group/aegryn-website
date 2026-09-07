@@ -192,8 +192,8 @@
       },
       "label": "Our Group",
       "title": "The holdings\nof the Aegryn group.",
-      "sub": "Assets owned by the Aegryn group | not submitted by third parties. Used for our operations and those of our clients, on demand.",
-      "note": "These holdings are the group's own assets. They are not solutions marketed to third parties. They illustrate Aegryn's ability to build, operate and value assets over time."
+      "sub": "A portfolio of assets designed, operated and selected by the Aegryn group. Each asset addresses a real operational need for our own operations, those of our clients, or both.",
+      "note": "These participations are assets in which the group believes for their response to real operational needs, their market growth potential, and their ability to pass our CIFSO certification protocol. Some address individuals, others professionals or institutions. All are built to last and to be valued."
     },
     "categories": {
       "ai": "AI & Protocols",
@@ -220,6 +220,7 @@
       "gradePending": "Certification in progress",
       "visitSite": "Visit site",
       "visitPage": "View page",
+      "comingSoon": "Coming soon",
       "viewDetails": "View details",
       "transactionEligible": "M&A eligible",
       "internalOnly": "Internal use",
@@ -244,13 +245,13 @@
     },
     "items": {
       "subblink": {
-        "badge": "AI contract intelligence",
+        "badge": "Contract intelligence",
         "tagline": "Public name: subblink",
         "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Proprietary dual-use asset: Aegryn internal operations and client access on subscription."
       },
       "kryv": {
-        "badge": "Protocol · Blockchain",
-        "tagline": "AI code integrity certification",
+        "badge": "AI code integrity",
+        "tagline": "Public name: kryv",
         "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code: every deployment, immutably sealed."
       },
       "neediu": {
@@ -271,7 +272,7 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Secure data room for asset transactions",
-        "description": "Active data room infrastructure, used by Aegryn for its own asset transactions. Automatic RLS, dynamic watermarking, full audit trail. Licensable to M&A boutiques and transaction intermediaries who want a secure environment without building their own."
+        "description": "Active data room infrastructure, used for asset transactions. Automatic RLS, dynamic watermarking, full audit trail. Licensable to M&A boutiques and transaction intermediaries who want a secure environment without building their own."
       },
       "cifso": {
         "badge": "Protocol · Certification",

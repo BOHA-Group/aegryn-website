@@ -193,8 +193,8 @@
       },
       "label": "Notre Groupe",
       "title": "Les participations\ndu groupe Aegryn.",
-      "sub": "Actifs appartenant au groupe Aegryn | non soumis par des tiers. Utilisés pour nos opérations et celles de nos clients, à la demande.",
-      "note": "Ces participations sont des actifs propres du groupe. Elles ne sont pas des solutions commercialisées à des tiers. Elles illustrent la capacité d'Aegryn à construire, opérer et valoriser des actifs dans la durée."
+      "sub": "Un portefeuille d'actifs conçus, opérés et sélectionnés par le groupe Aegryn. Chaque actif répond à un besoin opérationnel réel pour nos propres opérations, celles de nos clients, ou les deux.",
+      "note": "Ces participations sont des actifs auxquels le groupe croit pour leur réponse à des besoins opérationnels réels, leur potentiel de croissance de marché, et leur capacité à passer l'épreuve de notre protocole de certification CIFSO. Certaines s'adressent aux particuliers, d'autres aux professionnels ou aux institutions. Toutes sont construites pour durer et pour valoir."
     },
     "categories": {
       "ai": "AI & Protocoles",
@@ -221,6 +221,7 @@
       "gradePending": "Certification en cours",
       "visitSite": "Visiter le site",
       "visitPage": "Voir la page",
+      "comingSoon": "A venir",
       "viewDetails": "Voir les détails",
       "transactionEligible": "Éligible au processus de cession",
       "internalOnly": "Usage interne",
@@ -245,13 +246,13 @@
     },
     "items": {
       "subblink": {
-        "badge": "Intelligence contractuelle IA",
+        "badge": "Intelligence contractuelle",
         "tagline": "Nom public : subblink",
         "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées : tout identifié en langage clair. Actif propriétaire à double usage : opérations internes Aegryn et accès client sur abonnement."
       },
       "kryv": {
-        "badge": "Protocole · Blockchain",
-        "tagline": "Certification d'intégrité du code IA",
+        "badge": "Intégrité du code IA",
+        "tagline": "Nom public : kryv",
         "description": "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel, chaque déploiement, immuablement scellé."
       },
       "neediu": {
@@ -277,7 +278,7 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Data room sécurisée pour transactions d'actifs",
-        "description": "Infrastructure de data room active, utilisée par Aegryn pour ses propres transactions d'actifs. RLS automatique, watermarking dynamique, audit trail complet. Licenciable aux boutiques M&A et aux intermédiaires en transactions qui souhaitent disposer d'un environnement sécurisé sans le construire."
+        "description": "Infrastructure de data room active, utilisée pour les transactions d'actifs. RLS automatique, watermarking dynamique, audit trail complet. Licenciable aux boutiques M&A et aux intermédiaires en transactions qui souhaitent disposer d'un environnement sécurisé sans le construire."
       },
       "cifso": {
         "badge": "Protocole · Certification",

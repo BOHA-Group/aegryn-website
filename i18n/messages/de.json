@@ -197,8 +197,8 @@
       },
       "label": "Unsere Gruppe",
       "title": "Die Beteiligungen\nder Aegryn Gruppe.",
-      "sub": "Assets der Aegryn Gruppe | nicht von Dritten eingereicht. Genutzt für unsere Operationen und die unserer Kunden, auf Anfrage.",
-      "note": "Diese Beteiligungen sind eigene Assets der Gruppe. Sie werden nicht als Lösungen an Dritte vermarktet. Sie verdeutlichen die Fähigkeit von Aegryn, Assets langfristig aufzubauen, zu betreiben und zu valorisieren."
+      "sub": "Ein Portfolio von Assets, das von der Aegryn-Gruppe konzipiert, betrieben und ausgewählt wurde. Jedes Asset adressiert einen realen operativen Bedarf für unsere eigenen Operationen, die unserer Kunden oder beides.",
+      "note": "Diese Beteiligungen sind Assets, an die die Gruppe glaubt, aufgrund ihrer Antwort auf reale operative Bedürfnisse, ihres Marktpotenzials und ihrer Fähigkeit, unser CIFSO-Zertifizierungsprotokoll zu bestehen. Einige richten sich an Privatpersonen, andere an Fachleute oder Institutionen. Alle sind gebaut, um zu dauern und zu wachsen."
     },
     "page": {
       "label": "Aegryn Ökosystem",
@@ -220,6 +220,7 @@
       "gradePending": "Zertifizierung läuft",
       "visitSite": "Website besuchen",
       "visitPage": "Seite ansehen",
+      "comingSoon": "Demnächst",
       "viewDetails": "Details ansehen",
       "transactionEligible": "M&A-fähig",
       "internalOnly": "Interner Gebrauch",
@@ -244,13 +245,13 @@
     },
     "items": {
       "subblink": {
-        "badge": "KI-Vertragsanalyse",
+        "badge": "Vertragsanalyse",
         "tagline": "Öffentlicher Name: subblink",
         "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Proprietäres Dual-Use-Asset: interne Aegryn-Operationen und Kundenzugang per Abonnement."
       },
       "kryv": {
-        "badge": "Protokoll, Blockchain",
-        "tagline": "KI-Code-Integritätszertifizierung",
+        "badge": "KI-Code-Integrität",
+        "tagline": "Öffentlicher Name: kryv",
         "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes: jede Bereitstellung, unveränderlich versiegelt."
       },
       "neediu": {
@@ -271,7 +272,7 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Sicherer Data Room für Asset-Transaktionen",
-        "description": "Aktive Data-Room-Infrastruktur, von Aegryn für eigene Asset-Transaktionen genutzt. Automatisches RLS, dynamisches Wasserzeichen, vollständiger Audit-Trail. Lizenzierbar für M&A-Boutiquen und Transaktionsvermittler, die eine sichere Umgebung ohne eigene Entwicklung wünschen."
+        "description": "Aktive Data-Room-Infrastruktur, für Asset-Transaktionen genutzt. Automatisches RLS, dynamisches Wasserzeichen, vollständiger Audit-Trail. Lizenzierbar für M&A-Boutiquen und Transaktionsvermittler, die eine sichere Umgebung ohne eigene Entwicklung wünschen."
       },
       "cifso": {
         "badge": "Protokoll · Zertifizierung",

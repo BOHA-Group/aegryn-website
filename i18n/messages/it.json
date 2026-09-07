@@ -197,8 +197,8 @@
       },
       "label": "Il nostro Gruppo",
       "title": "Le partecipazioni\ndel gruppo Aegryn.",
-      "sub": "Asset del gruppo Aegryn | non inviati da terzi. Utilizzati per le nostre operazioni e quelle dei nostri clienti, su richiesta.",
-      "note": "Queste partecipazioni sono asset propri del gruppo. Non sono soluzioni commercializzate a terzi. Illustrano la capacità di Aegryn di costruire, operare e valorizzare asset nel tempo."
+      "sub": "Un portafoglio di asset concepiti, operati e selezionati dal gruppo Aegryn. Ogni asset risponde a un bisogno operativo reale per le nostre operazioni, quelle dei nostri clienti, o entrambe.",
+      "note": "Queste partecipazioni sono asset in cui il gruppo crede per la loro risposta a bisogni operativi reali, il loro potenziale di crescita di mercato e la loro capacità di superare il nostro protocollo di certificazione CIFSO. Alcune si rivolgono ai privati, altre ai professionisti o alle istituzioni. Tutte sono costruite per durare e per valere."
     },
     "page": {
       "label": "Ecosistema Aegryn",
@@ -220,6 +220,7 @@
       "gradePending": "Certificazione in corso",
       "visitSite": "Visita il sito",
       "visitPage": "Vedi la pagina",
+      "comingSoon": "Prossimamente",
       "viewDetails": "Vedi dettagli",
       "transactionEligible": "Idoneo alla transazione",
       "internalOnly": "Uso interno",
@@ -244,19 +245,19 @@
     },
     "items": {
       "subblink": {
-        "badge": "Intelligenza contrattuale IA",
+        "badge": "Intelligenza contrattuale",
         "tagline": "Nome pubblico: subblink",
-        "description": "Analizza tutti i tuoi contratti in pochi secondi con una IA calibrata per il diritto svizzero ed europeo. Rischi, clausole critiche, obblighi nascosti: tutto identificato in linguaggio chiaro. Asset proprietario a doppio uso: operazioni interne di Aegryn e accesso clienti su abbonamento."
+        "description": "Analizza tutti i vostri contratti in pochi secondi con una IA calibrata per il diritto svizzero ed europeo. Rischi, clausole critiche, obblighi nascosti: tutto identificato in linguaggio chiaro. Asset proprietario a doppio uso: operazioni interne Aegryn e accesso clienti su abbonamento."
       },
       "kryv": {
-        "badge": "Protocollo · Blockchain",
-        "tagline": "Certificazione dell'integrità del codice IA",
-        "description": "Protocollo blockchain di certificazione dell'integrità del codice IA. Il SSL del codice artificiale: ogni distribuzione, sigillata in modo immutabile."
+        "badge": "Integrità del codice IA",
+        "tagline": "Nome pubblico: kryv",
+        "description": "Protocollo blockchain di certificazione dell'integrità del codice IA. Il SSL del codice artificiale: ogni distribuzione, immuabilmente sigillata."
       },
       "neediu": {
         "badge": "B2C · Marketplace",
         "tagline": "Servizi a domicilio, collegamento intelligente",
-        "description": "Collega privati e professionisti ai migliori fornitori di servizi a domicilio, basandosi sulla localizzazione e le recensioni verificate."
+        "description": "Connette privati e professionisti con i migliori fornitori di servizi a domicilio, in base alla localizzazione e alle recensioni verificate."
       },
       "movtoo": {
         "badge": "B2C · Trasporto",
@@ -271,7 +272,7 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Data room sicura per transazioni di asset",
-        "description": "Infrastruttura di data room attiva, utilizzata da Aegryn per le proprie transazioni di asset. RLS automatico, watermarking dinamico, audit trail completo. Licenziabile a boutique M&A e intermediari in transazioni che desiderano un ambiente sicuro senza costruirlo."
+        "description": "Infrastruttura di data room attiva, utilizzata per le transazioni di asset. RLS automatico, watermarking dinamico, audit trail completo. Licenziabile a boutique M&A e intermediari in transazioni che desiderano un ambiente sicuro senza costruirlo."
       },
       "cifso": {
         "badge": "Protocollo · Certificazione",

@@ -40,25 +40,6 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     ownership:        'core' as const,
     transactionEligible:  false,
   },
-  {
-    id:               'kryv',
-    name:             'KRYV Protocol',
-    slug:             'kryv',
-    url:              null as string | null,
-    badge:            'Protocole — Blockchain',
-    tagline:          'Certification d\'intégrité du code IA',
-    description:      "Protocole blockchain de certification de l'intégrité du code IA. Le SSL du code artificiel — chaque déploiement, immuablement scellé.",
-    category:         'ai',
-    status:           'beta' as const,
-    featured:         false,
-    grade:            'pending' as const,
-    gradeCode:        undefined,
-    tier:             1 as const,
-    ownership:        'core' as const,
-    transactionEligible:  false,
-    internalOnly:     true,
-  },
-
   // ── SERVICES & LIFESTYLE ─────────────────────────────────────
   {
     id:               'neediu',

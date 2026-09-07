@@ -39,7 +39,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:          'kryv',
-    name:        'KRYV Protocol',
+    name:        'Intégrité du code IA',
     url:         null,
     badgeKey:    'kryv.badge',
     taglineKey:  'kryv.tagline',
@@ -61,6 +61,7 @@ const PROP_ASSETS: PropAsset[] = [
     status:      'live',
     ownership:   'domain',
     publisherReady: true,
+    visitPageHref: '/transact/how-to-sell',
   },
   {
     id:          'cifso',
@@ -83,7 +84,7 @@ const PROP_ASSETS: PropAsset[] = [
     taglineKey:  'compliance.tagline',
     descKey:     'compliance.description',
     category:    'compliance',
-    status:      'live',
+    status:      'dev',
     ownership:   'domain',
     publisherReady: true,
   },
@@ -98,6 +99,7 @@ const PROP_ASSETS: PropAsset[] = [
     status:      'live',
     ownership:   'domain',
     publisherReady: true,
+    visitPageHref: '/client/login',
   },
 ]
 
@@ -187,13 +189,6 @@ export function ProprietaryAssetsGrid() {
                     <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
                       {tItems(asset.badgeKey)}
                     </p>
-                    <span className={`font-mono text-[9px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
-                      asset.ownership === 'core'
-                        ? 'border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink'
-                        : 'border-ag-navy/20 bg-ag-navy/5 text-ag-navy'
-                    }`}>
-                      {asset.ownership === 'core' ? 'CORE' : 'DOMAINE'}
-                    </span>
                   </div>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {asset.name}
@@ -252,7 +247,7 @@ export function ProprietaryAssetsGrid() {
                   </a>
                 ) : (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-                    {asset.status === 'live' ? t('visitSite') : t('statusDev')}
+                    {asset.status === 'dev' ? t('comingSoon') : t('visitSite')}
                   </span>
                 )}
                 {asset.url && (
