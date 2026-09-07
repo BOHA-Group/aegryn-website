@@ -3464,9 +3464,9 @@
       "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
-      "label": "Catalogue Aegryn | Actifs certifiés CIFS",
+      "label": "Catalogue Aegryn | Organisations certifiées CIFSO",
       "title": "Actifs certifiés\ndisponibles.",
-      "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification CIFS Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
+      "desc": "Organisations soumises par des vendeurs tiers ayant passé le protocole de certification CIFSO Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
       "thirdPartyNote": "Ces actifs sont proposés sous mandat exclusif par des vendeurs indépendants certifiés. Aegryn agit comme intermédiaire certifié et organisateur de la transaction, équivalent d'un conseil en cession spécialisé tech.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
@@ -3522,21 +3522,21 @@
       "notifySuccessCtaAcquirer": "Créer mon compte acquéreur",
       "assetsAvailable": "actifs certifiés disponibles au catalogue",
       "requestQualifiedAccess": "Accéder au catalogue certifié",
-      "intro": "Le catalogue offmarket Aegryn regroupe des actifs numériques certifiés, préparés à la transaction et accessibles aux acquéreurs qualifiés. Chaque dossier a été audité, valorisé et structuré selon le protocole Aegryn avant toute mise en accès.",
+      "intro": "Actifs certifiés selon le protocole CIFSO Aegryn. Accessibles aux acquéreurs qualifiés sous NDA. Toutes industries, tous types d'organisations. Moins de 25% des soumissions retenues.",
       "upcomingAssets": "Actifs à venir",
       "seller": {
-        "label": "CÉDER UN ACTIF",
-        "title": "Vous souhaitez céder votre actif tech ?",
-        "desc": "Aegryn accompagne les fondateurs et dirigeants dans la structuration et la transmission de leurs actifs numériques. Audit, valorisation, data room, identification d'acquéreurs, signing. Un processus discret et rigoureux.",
-        "cta": "Déposer un mandat de cession",
-        "ctaHref": "/transact/sell"
+        "label": "CÉDER VOTRE ORGANISATION",
+        "title": "Votre organisation est-elle prête à être transmise ?",
+        "desc": "Aegryn accompagne les fondateurs et dirigeants dans la structuration et la transmission de leur organisation. Certification CIFSO, data room, identification d'acquéreurs qualifiés. Un processus discret et rigoureux.",
+        "cta": "Soumettre à la certification",
+        "ctaHref": "/grade/submit"
       },
       "notifySectorOther": "Autre",
       "notifySectorOtherPlaceholder": "Précisez votre secteur…",
       "buyer": {
         "label": "DEVENIR ACQUÉREUR",
-        "title": "Vous souhaitez acquérir un actif tech ?",
-        "desc": "Aegryn identifie et vous présente des actifs certifiés correspondant à votre profil d'acquisition : secteur, ticket, structure. Un processus confidentiel, réservé aux acquéreurs qualifiés.",
+        "title": "Vous souhaitez acquérir une organisation certifiée ?",
+        "desc": "Aegryn identifie et vous présente des organisations certifiées correspondant à votre profil d'acquisition : secteur, ticket, structure. Un processus confidentiel, réservé aux acquéreurs qualifiés.",
         "cta": "En savoir plus sur le processus",
         "ctaHref": "/transact/how-to-buy"
       },
