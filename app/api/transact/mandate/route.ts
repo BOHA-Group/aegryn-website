@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
     }
 
     const typeLabel = TYPE_LABELS[body.type]
-    const internal  = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
 
     await Promise.allSettled([
       /* ─ Email confirmation soumettant ─ */
