@@ -71,8 +71,8 @@ const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Nos convictions - Notre regard sur le marché
 const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMarketArticles',   href: '/blog' },
-  { labelKey: 'thinkingMarketGlossary',   href: '/blog' },
-  { labelKey: 'thinkingMarketFAQ',        href: '/blog' },
+  { labelKey: 'thinkingMarketGlossary',   href: '/glossaire' as LinkHref },
+  { labelKey: 'thinkingMarketFAQ',        href: '/help/faq' as LinkHref },
 ]
 
 // Qui sommes-nous - Le groupe (hors fondateur qui a un hash natif)
@@ -97,9 +97,9 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftSupportDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
               <Link
@@ -119,9 +119,9 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftBuildDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
               <Link
@@ -141,9 +141,9 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftTransactDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
               <Link
@@ -163,9 +163,9 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftRecruit')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftRecruitDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             {CRAFT_RECRUIT_LINKS.map(({ labelKey, href }) => (
               <Link
