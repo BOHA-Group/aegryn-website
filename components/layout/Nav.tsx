@@ -30,6 +30,7 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Nos métiers - Transaction M&A section
 const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftTransactOverview',     href: '/transact' as LinkHref },
   { labelKey: 'craftTransactGradeNew',     href: '/grade' },
   { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
   { labelKey: 'craftTransactCatalog',      href: '/transact/catalog' },
