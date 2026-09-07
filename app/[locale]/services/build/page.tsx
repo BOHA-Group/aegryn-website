@@ -115,7 +115,7 @@ export default async function BuildServicePage({ params }: Props) {
             {t('formatsSection.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-            {formatCards.map((card, i) => (
+            {formatCards.map((card, _i) => (
               <div key={card.key} className={`p-8 flex flex-col gap-4 ${
                 card.key === 'btl' ? 'bg-ag-navy' : 'bg-ag-white'
               }`}>
