@@ -4,7 +4,7 @@ export const ISSUE_01: MagazineIssue = {
   number: 1,
   slug: 'issue-01',
   title: 'Built to Last.',
-  theme: "The anatomy of a tech asset that sells and one that doesn't.",
+  theme: "The anatomy of enterprise assets that sell and those that don't.",
   publishedAt: '2027-01-01',
   coverStat: '€262B',
   coverStatLabel: 'EU M&A volume — Q2 2026 · 3,315 transactions',

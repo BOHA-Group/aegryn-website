@@ -7705,7 +7705,7 @@
   "magazine": {
     "nav": "Magazine",
     "hub": {
-      "title": "AEGRYN Magazine",
+      "title": "Aegryn Magazine",
       "desc": "Deals, multiples, portraits et art de vivre. Trimestriel.",
       "reportLabel": "Rapport annuel",
       "reportDesc": "Aegryn Magazine | Intelligence M&A Tech Européenne",
@@ -7720,7 +7720,7 @@
       "charteLangLabel": "Langue",
       "charteLangVal": "Anglais",
       "charteAccesLabel": "Accès",
-      "charteAccesVal": "Gratuit, accès digital permanent",
+      "charteAccesVal": "Accès digital permanent",
       "allIssuesLabel": "Tous les numéros",
       "nextIssuesTitle": "Prochains numéros",
       "issue01Date": "Janvier 2027",

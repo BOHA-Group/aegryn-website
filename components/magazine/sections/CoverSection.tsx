@@ -108,7 +108,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
           className="font-sans uppercase text-white leading-snug mb-8"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
-          The anatomy of a tech asset that sells and one that doesn&apos;t.
+          The anatomy of enterprise assets that sell and those that don&apos;t.
         </p>
 
         {/* ── Deux CTAs style Barnes ── */}
