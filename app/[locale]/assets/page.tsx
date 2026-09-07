@@ -1,10 +1,10 @@
-import { getTranslations }          from 'next-intl/server'
-import type { Metadata }             from 'next'
-import Link                          from 'next/link'
-import { ArrowUpRight, Info }        from 'lucide-react'
-import { AssetHeroBannerVideo }      from '@/components/sections/AssetHeroBannerVideo'
-import { AssetsGrid }                from '@/components/sections/assets/AssetsGrid'
-import { generateAegrynMetadata }    from '@/lib/seo'
+import { getTranslations }               from 'next-intl/server'
+import type { Metadata }                  from 'next'
+import Link                               from 'next/link'
+import { ArrowUpRight, Info }             from 'lucide-react'
+import { AssetHeroBannerVideo }           from '@/components/sections/AssetHeroBannerVideo'
+import { ProprietaryAssetsGrid }          from '@/components/sections/assets/ProprietaryAssetsGrid'
+import { generateAegrynMetadata }         from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -26,7 +26,7 @@ export default async function AssetsPage({ params }: Props) {
         sub={t('heroSub')}
       />
 
-      {/* Bannière éditoriale — portefeuille propriétaire vs tiers */}
+      {/* Bannière éditoriale */}
       <div className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-start gap-3">
@@ -44,7 +44,7 @@ export default async function AssetsPage({ params }: Props) {
         </div>
       </div>
 
-      <AssetsGrid />
+      <ProprietaryAssetsGrid />
     </main>
   )
 }

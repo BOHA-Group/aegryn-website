@@ -52,6 +52,8 @@ export default async function BuildServicePage({ params }: Props) {
   const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string; tag?: string; dep?: string | null }[]
   const platformApps            = t.raw('platformSection.apps')          as string[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
+  const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
+  const useCaseItems            = t.raw('useCasesSection.items')        as string[]
 
   return (
     <main>
@@ -74,7 +76,102 @@ export default async function BuildServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Section 1b : Why Sovereign Software ────────────────────────── */}
+      {/* ── Section 1b : Conviction Built to Last ──────────────────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6">
+            {t('builtToLast.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-8"
+            style={{ fontSize: 'clamp(32px,4.5vw,60px)' }}
+          >
+            {t('builtToLast.title')}
+          </h2>
+          <div className="max-w-2xl space-y-4">
+            <p className="text-[16px] text-ag-black font-medium leading-relaxed">
+              {t('builtToLast.p1')}
+            </p>
+            <p className="text-[15px] text-ag-gray leading-relaxed">
+              {t('builtToLast.p2')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1c : 3 formats de mission ──────────────────────────── */}
+      <section className="border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('formatsSection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('formatsSection.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
+            {t('formatsSection.desc')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {formatCards.map((card, i) => (
+              <div key={card.key} className={`p-8 flex flex-col gap-4 ${
+                card.key === 'btl' ? 'bg-ag-navy' : 'bg-ag-white'
+              }`}>
+                <div className="flex items-center gap-3">
+                  <span className={`font-mono text-[9px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
+                    card.key === 'btl'
+                      ? 'border-ag-apex/40 bg-ag-apex/10 text-ag-apex'
+                      : 'border-ag-border bg-ag-off-white text-ag-gray'
+                  }`}>
+                    {card.badge}
+                  </span>
+                </div>
+                <p className={`font-mono text-[10px] tracking-[0.14em] uppercase ${
+                  card.key === 'btl' ? 'text-white/50' : 'text-ag-gray-light'
+                }`}>
+                  {card.subtitle}
+                </p>
+                <h3 className={`font-sans font-bold text-[17px] leading-snug ${
+                  card.key === 'btl' ? 'text-white' : 'text-ag-black'
+                }`}>
+                  {card.title}
+                </h3>
+                <p className={`font-sans text-[13px] leading-relaxed flex-1 ${
+                  card.key === 'btl' ? 'text-white/70' : 'text-ag-gray'
+                }`}>
+                  {card.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1d : Cas d'usage rapides ───────────────────────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('useCasesSection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('useCasesSection.title')}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {useCaseItems.map((item, i) => (
+              <div key={i} className="bg-ag-white px-6 py-5">
+                <p className="font-sans font-semibold text-ag-black text-[14px]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 1e : Why Sovereign Software ─────────────────────────── */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
@@ -357,6 +454,48 @@ export default async function BuildServicePage({ params }: Props) {
           </div>
           <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
             {t('fees.coInvestNote')}
+          </p>
+        </div>
+      </section>
+
+      {/* ── Section : Construire pour transmettre ────────────────────── */}
+      <section className="border-b border-ag-border bg-ag-navy">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-6">
+            {t('transmissionSection.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-6 whitespace-pre-line max-w-2xl"
+            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+          >
+            {t('transmissionSection.title')}
+          </h2>
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-10">
+            {t('transmissionSection.desc')}
+          </p>
+          <Link
+            href="/transact"
+            className="inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
+          >
+            {t('transmissionSection.cta')} →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── Section : Note acheteurs institutionnels ─────────────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+            {t('buyerNoteSection.label')}
+          </p>
+          <h3
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
+            style={{ fontSize: 'clamp(20px,2.5vw,32px)' }}
+          >
+            {t('buyerNoteSection.title')}
+          </h3>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex pl-4">
+            {t('buyerNoteSection.desc')}
           </p>
         </div>
       </section>

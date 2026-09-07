@@ -77,8 +77,9 @@ const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Qui sommes-nous - Le groupe (hors fondateur qui a un hash natif)
 const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'whoAbout',   href: '/about' },
-  { labelKey: 'whoContact', href: '/contact' },
+  { labelKey: 'whoAbout',     href: '/about' },
+  { labelKey: 'whoPortfolio', href: '/portfolio' as LinkHref },
+  { labelKey: 'whoContact',   href: '/contact' },
 ]
 
 // Qui sommes-nous - Nous rejoindre
@@ -225,7 +226,7 @@ function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslation
       {/* Footer link */}
       <div className="border-t border-ag-border p-3 bg-ag-off-white">
         <Link
-          href="/assets"
+          href="/services/build"
           onClick={onClose}
           className="font-sans text-[11px] text-ag-gray hover:text-ag-black transition-colors flex items-center gap-2"
         >
@@ -716,7 +717,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <Link href="/assets" onClick={closeMobile}
+                  <Link href="/services/build" onClick={closeMobile}
                     className="mt-1 py-1.5 font-sans text-[13px] text-ag-apex hover:text-white transition-colors flex items-center gap-1">
                     {t('solutionsViewAll')} <span>→</span>
                   </Link>
