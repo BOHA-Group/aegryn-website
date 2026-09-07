@@ -97,7 +97,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
             {t('craftSupportDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -119,7 +119,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
             {t('craftBuildDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -141,7 +141,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
             {t('craftTransactDesc')}
           </p>
           <div className="flex flex-col gap-1">
@@ -163,7 +163,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftRecruit')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed min-h-7.5">
             {t('craftRecruitDesc')}
           </p>
           <div className="flex flex-col gap-1">
