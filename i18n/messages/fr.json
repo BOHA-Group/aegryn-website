@@ -3466,7 +3466,7 @@
     "catalog": {
       "label": "Catalogue Aegryn | Organisations certifiées CIFSO",
       "title": "Actifs certifiés\ndisponibles.",
-      "desc": "Organisations soumises par des vendeurs tiers ayant passé le protocole de certification CIFSO Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire du groupe.",
+      "desc": "Organisations soumises par des vendeurs tiers ayant passé le protocole de certification CIFSO Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire Aegryn.",
       "thirdPartyNote": "Ces actifs sont proposés sous mandat exclusif par des vendeurs indépendants certifiés. Aegryn agit comme intermédiaire certifié et organisateur de la transaction, équivalent d'un conseil en cession spécialisé tech.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
