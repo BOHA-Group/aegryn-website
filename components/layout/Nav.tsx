@@ -45,24 +45,6 @@ const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftRecruitExecutiveMA',   href: '/talent' as LinkHref },
 ]
 
-// Nos solutions - Top 10 domaines logiciels (colonne gauche)
-const SOLUTIONS_DOMAINS_LEFT: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsDomain1', href: '/services/build' },
-  { labelKey: 'solutionsDomain2', href: '/services/build' },
-  { labelKey: 'solutionsDomain3', href: '/services/build' },
-  { labelKey: 'solutionsDomain4', href: '/services/build' },
-  { labelKey: 'solutionsDomain5', href: '/services/build' },
-]
-
-// Nos solutions - Top 10 domaines logiciels (colonne droite)
-const SOLUTIONS_DOMAINS_RIGHT: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'solutionsDomain6',  href: '/services/build' },
-  { labelKey: 'solutionsDomain7',  href: '/services/build' },
-  { labelKey: 'solutionsDomain8',  href: '/services/build' },
-  { labelKey: 'solutionsDomain9',  href: '/services/build' },
-  { labelKey: 'solutionsDomain10', href: '/services/build' },
-]
-
 // Nos convictions - Magazine
 const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMagazineIssues', href: '/magazine' },
@@ -180,59 +162,6 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             ))}
           </div>
         </div>
-      </div>
-    </div>
-  )
-}
-
-// Mega-menu Nos solutions (2 colonnes — top 10 domaines logiciels)
-function SolutionsMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  return (
-    <div className="absolute top-full left-0 mt-2 w-[500px] bg-ag-white border border-ag-border shadow-lg z-50">
-      <div className="px-4 pt-4 pb-2 border-b border-ag-border">
-        <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">{t('solutionsDomainsLabel')}</p>
-        <p className="font-sans text-[10px] text-ag-gray-light leading-relaxed">{t('solutionsDomainsDesc')}</p>
-      </div>
-      <div className="grid grid-cols-2 gap-px bg-ag-border">
-        {/* Domaines 1–5 */}
-        <div className="bg-ag-white p-4">
-          <div className="flex flex-col gap-1">
-            {SOLUTIONS_DOMAINS_LEFT.map(({ labelKey }) => (
-              <span
-                key={labelKey}
-                className="font-sans text-[13px] text-ag-gray py-1 cursor-default select-none"
-              >
-                {t(labelKey)}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Domaines 6–10 */}
-        <div className="bg-ag-white p-4">
-          <div className="flex flex-col gap-1">
-            {SOLUTIONS_DOMAINS_RIGHT.map(({ labelKey }) => (
-              <span
-                key={labelKey}
-                className="font-sans text-[13px] text-ag-gray py-1 cursor-default select-none"
-              >
-                {t(labelKey)}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Footer link */}
-      <div className="border-t border-ag-border p-3 bg-ag-off-white">
-        <Link
-          href="/services/build"
-          onClick={onClose}
-          className="font-sans text-[11px] text-ag-gray hover:text-ag-black transition-colors flex items-center gap-2"
-        >
-          {t('solutionsViewAll')}
-          <span className="text-ag-apex-ink">→</span>
-        </Link>
       </div>
     </div>
   )
