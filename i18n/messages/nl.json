@@ -122,6 +122,7 @@
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
+    "whoPortfolio": "Onze groep (deelnemingen)",
     "whoOffices": "Onze kantoren",
     "whoContact": "Contact",
     "whoJoin": "Sluit je bij ons aan",
@@ -189,6 +190,16 @@
       "lifestyle": "Services & Lifestyle",
       "transactions": "Transacties & Netwerk"
     },
+    "portfolio": {
+      "meta": {
+        "title": "Aegryn Groep | Deelnemingen en portfolio",
+        "desc": "Strategische deelnemingen van de Aegryn-groep: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Eigen activa, niet te koop."
+      },
+      "label": "Onze Groep",
+      "title": "De deelnemingen\nvan de Aegryn-groep.",
+      "sub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
+      "note": "Deze deelnemingen zijn eigen activa van de groep. Ze zijn geen aan derden gecommercialiseerde oplossingen. Ze illustreren de capaciteit van Aegryn om activa op lange termijn te bouwen, te beheren en te valoriseren."
+    },
     "page": {
       "label": "Aegryn Ecosysteem",
       "title": "Zes eigen assets.\nÉén gedeelde visie.",
@@ -199,21 +210,24 @@
       },
       "filterAll": "Alle",
       "filterAI": "AI & Protocollen",
-      "filterLifestyle": "Services & Lifestyle",
-      "filterTransactions": "Transacties & Netwerk",
+      "filterTransactions": "Transacties & M&A",
+      "filterCompliance": "Compliance & Regelgeving",
+      "filterIdentity": "Identiteit & Vertrouwen",
       "statusLive": "Live",
       "statusBeta": "Beta",
       "statusDev": "In ontwikkeling",
       "gradeLabel": "Aegryn Grade",
       "gradePending": "Certificering bezig",
       "visitSite": "Website bezoeken",
+      "visitPage": "Pagina bekijken",
       "viewDetails": "Details bekijken",
       "transactionEligible": "Geschikt voor transactie",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
-      "heroLabel": "Aegryn | Eigen ecosysteem",
-      "heroTitle": "Wat we\nbouwen.",
-      "heroSub": "6 activa · 3 categorieën · Zwitserland & Europa",
+      "heroLabel": "Aegryn | Eigen activa",
+      "heroTitle": "Onze operationele\nactiva.",
+      "heroSub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
+      "publisherNote": "Deze activa zijn beschikbaar als directe toegang of licentie voor organisaties die ze willen integreren zonder ze zelf te bouwen.",
       "ownedNote": "Deze activa behoren tot de Aegryn-groep. Ze staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
       "transactionEligibleNote": "Activum geschikt voor transactie, investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
@@ -230,9 +244,9 @@
     },
     "items": {
       "subblink": {
-        "badge": "B2B · SaaS",
-        "tagline": "Contractanalyse via AI",
-        "description": "Analyseert al uw contracten in seconden met een AI gekalibreerd op Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles in duidelijke taal geïdentificeerd."
+        "badge": "AI contractintelligentie",
+        "tagline": "Publieke naam: subblink",
+        "description": "Analyseert al uw contracten in seconden met een AI gekalibreerd op Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles in duidelijke taal geïdentificeerd. Eigen dual-use asset: interne Aegryn-operaties en clienttoegang via abonnement."
       },
       "kryv": {
         "badge": "Protocol · Blockchain",
@@ -253,6 +267,27 @@
         "badge": "B2C · Vastgoed",
         "tagline": "Vastgoedtransactie gericht op de verkoper",
         "description": "Herdefinieert de vastgoedtransactie door de verkoper centraal te stellen. Waardering, marktanalyse en persoonlijke begeleiding van A tot Z."
+      },
+      "dataroom": {
+        "badge": "Data Room · M&A",
+        "tagline": "Beveiligde data room voor assettransacties",
+        "description": "Actieve data room-infrastructuur, gebruikt door Aegryn voor eigen assettransacties. Automatische RLS, dynamisch watermerk, volledig auditspoor. Licentieerbaar voor M&A-boutiques en transactietussenpersonen die een veilige omgeving willen zonder zelf te bouwen."
+      },
+      "cifso": {
+        "badge": "Protocol · Certificering",
+        "tagline": "Algoritmisch protocol voor activacertificering",
+        "description": "CIFSO-protocol in productie, gebruikt door Aegryn voor de certificering van eigen activa en die van klanten. Dekt 5 dimensies: Kapitaal, Integriteit, Financien, Beveiliging, Organisatie. Licentieerbaar voor accountants- en adviesbureaus die hun eigen klanten willen certificeren.",
+        "visitPage": "Certificeringspagina bekijken"
+      },
+      "compliance": {
+        "badge": "RegTech · Compliance",
+        "tagline": "Geautomatiseerde regulatoire compliance-engine",
+        "description": "Compliance-engine in productie, gebruikt door Aegryn voor het bewaken van eigen regelgevingsverplichtingen. Verwerkingsregister, geautomatiseerde AI Act-, NIS2-, DORA-, AVG-controles. Licentieerbaar voor integratie in compliance-adviesaanbod of implementatie bij institutionele klanten."
+      },
+      "kyb": {
+        "badge": "Identiteit · KYB/KYC",
+        "tagline": "Zakelijke onboarding en identiteitsverificatie",
+        "description": "Actieve KYB/KYC-engine, gebruikt door Aegryn voor client-onboarding en verificatie van tegenpartijen in mandaten. Identiteitsverificatie, KYB, uiteindelijk belanghebbenden, sancties en credentials. Licentieerbaar voor financiële actoren, advocaten en notarissen die hun due diligence willen automatiseren."
       },
       "hobconnect": {
         "badge": "B2C · Sociaal",
@@ -4558,8 +4593,70 @@
       "title": "Maatwerk digitale asset ontwikkeling - Aegryn",
       "desc": "Maatwerk digitale assets: B2B SaaS, AI, mobiele apps. Volledige documentatie, certificeringsklaar. Geen overschrijdingen, waardevol vanaf dag één."
     },
-    "label": "Engineering: Maatwerksoftware",
-    "title": "Aegryn bouwt de software\nvan uw bedrijfsvoering.",
+    "label": "Engineering: Maatwerk software",
+    "title": "Maatwerk software\nvoor uw activiteiten.",
+    "builtToLast": {
+      "label": "ONZE OVERTUIGING",
+      "title": "Built to Last.",
+      "p1": "In een wereld waar technologie in maanden veroudert, is ontwerpen voor de lange termijn een daad van weerstand.",
+      "p2": "Wij creëren activa die de waarde van uw organisatie verhogen, niet uw maandelijkse factuur. Een activum dat voor u werkt, en voor uw investeerders."
+    },
+    "formatsSection": {
+      "label": "Drie missieformaten",
+      "title": "Kies uw formaat.",
+      "desc": "Afhankelijk van uw horizon, middelen en doelstelling passen wij het engagementformaat aan.",
+      "cards": [
+        {
+          "key": "quick",
+          "badge": "QUICK BUILD",
+          "subtitle": "4 tot 8 weken",
+          "title": "Een operationeel hulpmiddel, snel.",
+          "desc": "Om een use case te testen, een proces te automatiseren of een leemte op te vullen. Strakke scope, snelle levering, volledige eigendom."
+        },
+        {
+          "key": "btl",
+          "badge": "BUILD TO LAST",
+          "subtitle": "Duurzaam eigen activum",
+          "title": "Een activum gebouwd om te duren en te valoriseren.",
+          "desc": "Volledige IP, certificeerbare architectuur, volledige documentatie. Ontworpen voor een mogelijke exit of institutionele waardering. Prijs vastgelegd bij Discovery."
+        },
+        {
+          "key": "bto",
+          "badge": "BUILD TO OPERATE",
+          "subtitle": "Build + terugkerende onderhoud",
+          "title": "Wij bouwen en beheren.",
+          "desc": "Voor organisaties zonder intern techteam. Wij leveren het activum en nemen de operaties over: onderhoud, evoluties, beveiliging. Één aanspreekpunt op lange termijn."
+        }
+      ]
+    },
+    "useCasesSection": {
+      "label": "Snelle gebruikscases",
+      "title": "Wat wij in 4 tot 8 weken leveren.",
+      "items": [
+        "Volgdashboard",
+        "Scoringtool",
+        "Geautomatiseerde workflow",
+        "Mobiele veld-app",
+        "Regulatorische rapportage",
+        "AI-contractanalyse"
+      ]
+    },
+    "transmissionSection": {
+      "label": "Bouwen om over te dragen",
+      "title": "Een activum zonder overdrachtsplan\nverliest 20 tot 30% bij exit.",
+      "desc": "Bij Aegryn is elk activum ontworpen om certificeerbaar te zijn vanaf de eerste sprint.",
+      "cta": "Mijn exit voorbereiden",
+      "href": "/transact"
+    },
+    "buyerNoteSection": {
+      "label": "Noot voor institutionele kopers",
+      "title": "Wat institutionele kopers eisen.",
+      "desc": "Een CIFSO-gecertificeerd activum trekt institutionele kopers aan die verdedigbare documentatie eisen. 58% van de EU-tech-acquisities komt van private equity. Hun vereiste: traceerbaarheid."
+    },
+    "independenceSection": {
+      "label": "Technologische onafhankelijkheid",
+      "badge": "TECHNOLOGISCHE ONAFHANKELIJKHEID"
+    },
     "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Geen afhankelijkheid van grote leveranciers. Geen generalistisch SaaS-abonnement. Beheerste code, integreerbaar in uw infrastructuur.",
     "whySection": {
       "label": "Waarom maatwerksoftware",

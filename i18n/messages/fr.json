@@ -118,6 +118,7 @@
     "solutionsDomain9": "Identité, KYC/KYB & vérification numérique",
     "solutionsDomain10": "Actifs d'entreprise & intelligence des processus",
     "solutionsViewAll": "Voir toutes les solutions",
+    "solutionsViewAllLink": "/services/build",
     "solutionsSubblink": "subblink (Contrats IA)",
     "solutionsKryv": "kryv (Code IA)",
     "solutionsNeediu": "neediu",
@@ -135,6 +136,7 @@
     "whoGroup": "Le groupe",
     "whoGroupDesc": "Histoire, mission, valeurs",
     "whoAbout": "À propos d'Aegryn",
+    "whoPortfolio": "Notre groupe (participations)",
     "whoOffices": "Nos bureaux",
     "whoContact": "Nous contacter",
     "whoJoin": "Nous rejoindre",
@@ -182,8 +184,18 @@
     "chip2": "BUILT TO LAST"
   },
   "assets": {
-    "title": "Notre écosystème propre.",
-    "sub": "Six actifs propriétaires. Une maison commune.",
+    "title": "Nos outils. Votre infrastructure.",
+    "sub": "Actifs propriétaires Aegryn, disponibles en accès direct ou sous licence.",
+    "portfolio": {
+      "meta": {
+        "title": "Groupe Aegryn | Participations et portfolio",
+        "desc": "Participations stratégiques du groupe Aegryn : Subblink, Neediu, Primiom, Movtoo, Hobconnect. Actifs propriétaires, non soumis à la vente."
+      },
+      "label": "Notre Groupe",
+      "title": "Les participations\ndu groupe Aegryn.",
+      "sub": "Actifs appartenant au groupe Aegryn | non soumis par des tiers. Utilisés pour nos opérations et celles de nos clients, à la demande.",
+      "note": "Ces participations sont des actifs propres du groupe. Elles ne sont pas des solutions commercialisées à des tiers. Elles illustrent la capacité d'Aegryn à construire, opérer et valoriser des actifs dans la durée."
+    },
     "categories": {
       "ai": "AI & Protocoles",
       "lifestyle": "Services & Lifestyle",
@@ -199,21 +211,24 @@
       },
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
-      "filterLifestyle": "Services & Lifestyle",
-      "filterTransactions": "Transactions & Réseau",
+      "filterTransactions": "Transactions & M&A",
+      "filterCompliance": "Compliance & Réglementation",
+      "filterIdentity": "Identité & Confiance",
       "statusLive": "En ligne",
       "statusBeta": "Bêta",
       "statusDev": "En développement",
       "gradeLabel": "Grade Aegryn",
       "gradePending": "Certification en cours",
       "visitSite": "Visiter le site",
+      "visitPage": "Voir la page",
       "viewDetails": "Voir les détails",
       "transactionEligible": "Éligible au processus de cession",
       "internalOnly": "Usage interne",
       "confidential": "Confidentiel",
-      "heroLabel": "Aegryn | Portefeuille propriétaire",
-      "heroTitle": "Ce que nous\nconstruisons.",
-      "heroSub": "Actifs appartenant au groupe Aegryn | non soumis par des tiers",
+      "heroLabel": "Aegryn | Actifs propriétaires",
+      "heroTitle": "Nos actifs\nopérationnels.",
+      "heroSub": "Actifs appartenant au groupe Aegryn | non soumis par des tiers. Utilisés pour nos opérations et celles de nos clients, à la demande.",
+      "publisherNote": "Ces actifs sont disponibles en accès direct ou sous licence pour les organisations qui souhaitent les intégrer sans construire la leur.",
       "ownedNote": "Ces actifs appartiennent au groupe Aegryn. Ils ne sont pas en vente par défaut. Certains peuvent exceptionnellement faire l'objet d'un processus de cession sur décision stratégique du groupe.",
       "transactionEligibleNote": "Actif éligible au processus de cession Aegryn | contact investisseurs sur demande.",
       "ctaBottom": "Vous souhaitez soumettre votre propre actif pour certification ?",
@@ -230,9 +245,9 @@
     },
     "items": {
       "subblink": {
-        "badge": "B2B · SaaS",
-        "tagline": "Analyse contractuelle par IA",
-        "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées : tout identifié en langage clair."
+        "badge": "Intelligence contractuelle IA",
+        "tagline": "Nom public : subblink",
+        "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées : tout identifié en langage clair. Actif propriétaire à double usage : opérations internes Aegryn et accès client sur abonnement."
       },
       "kryv": {
         "badge": "Protocole · Blockchain",
@@ -258,6 +273,27 @@
         "badge": "B2C · Social",
         "tagline": "Réseau social centré sur les passions partagées",
         "description": "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations."
+      },
+      "dataroom": {
+        "badge": "Data Room · M&A",
+        "tagline": "Data room sécurisée pour transactions d'actifs",
+        "description": "Infrastructure de data room active, utilisée par Aegryn pour ses propres transactions d'actifs. RLS automatique, watermarking dynamique, audit trail complet. Licenciable aux boutiques M&A et aux intermédiaires en transactions qui souhaitent disposer d'un environnement sécurisé sans le construire."
+      },
+      "cifso": {
+        "badge": "Protocole · Certification",
+        "tagline": "Protocole algorithmique de certification d'actifs",
+        "description": "Protocole CIFSO en production, utilisé par Aegryn pour la certification de ses propres actifs et de ceux de ses clients. Couvre 5 dimensions : Capital, Intégrité, Finance, Sécurité, Organisation. Licenciable aux cabinets d'audit et de conseil souhaitant certifier leurs propres clients.",
+        "visitPage": "Voir la page certification"
+      },
+      "compliance": {
+        "badge": "RegTech · Conformité",
+        "tagline": "Moteur de conformité réglementaire automatisé",
+        "description": "Moteur de conformité en production, utilisé par Aegryn pour le suivi de ses obligations réglementaires. Registre des traitements, contrôles automatisés AI Act, NIS2, DORA, LPD. Licenciable pour intégration dans des offres de conseil compliance ou déploiement chez des clients institutionnels."
+      },
+      "kyb": {
+        "badge": "Identity · KYB/KYC",
+        "tagline": "Onboarding entreprise et vérification d'identité",
+        "description": "Moteur KYB/KYC actif, utilisé par Aegryn pour l'onboarding de ses clients et la vérification des contreparties dans ses mandats. Vérification d'identité, KYB, bénéficiaires effectifs, sanctions et credentials. Licenciable aux acteurs financiers, avocats et notaires souhaitant automatiser leur due diligence."
       },
       "categories": {
         "ai": "AI & Protocoles",
@@ -4476,7 +4512,69 @@
       "desc": "Actifs numériques sur-mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
     "label": "Conception : Logiciels sur mesure",
-    "title": "Aegryn construit le logiciel\nde vos opérations.",
+    "title": "Logiciels sur-mesure\npour vos opérations.",
+    "builtToLast": {
+      "label": "NOTRE CONVICTION",
+      "title": "Built to Last.",
+      "p1": "Dans un monde où la technologie s'obsolète en quelques mois, concevoir pour durer est un acte de résistance.",
+      "p2": "Nous créons des actifs qui augmentent la valeur de votre organisation, pas votre facture mensuelle. Un actif qui travaille pour vous, et pour vos investisseurs."
+    },
+    "formatsSection": {
+      "label": "Trois formats de mission",
+      "title": "Choisissez votre format.",
+      "desc": "Selon votre horizon, vos ressources et votre objectif, nous adaptons le format d'intervention.",
+      "cards": [
+        {
+          "key": "quick",
+          "badge": "QUICK BUILD",
+          "subtitle": "4 à 8 semaines",
+          "title": "Un outil opérationnel rapidement.",
+          "desc": "Pour tester un cas d'usage, automatiser un process, ou combler un vide. Périmètre serré, livraison rapide, ownership total."
+        },
+        {
+          "key": "btl",
+          "badge": "BUILD TO LAST",
+          "subtitle": "Actif propriétaire durable",
+          "title": "Un actif conçu pour durer et valoriser.",
+          "desc": "IP totale, architecture certifiable, documentation complète. Conçu pour une sortie éventuelle ou une valorisation institutionnelle. Prix verrouillé au Discovery."
+        },
+        {
+          "key": "bto",
+          "badge": "BUILD TO OPERATE",
+          "subtitle": "Build + maintenance récurrente",
+          "title": "Nous construisons et nous opérons.",
+          "desc": "Pour les organisations sans équipe tech interne. Nous livrons l'actif et assurons les opérations : maintenance, évolutions, sécurité. Un seul interlocuteur sur le long terme."
+        }
+      ]
+    },
+    "useCasesSection": {
+      "label": "Cas d'usage rapides",
+      "title": "Ce que nous livrons en 4 à 8 semaines.",
+      "items": [
+        "Dashboard de suivi",
+        "Outil de scoring",
+        "Workflow automatisé",
+        "App mobile terrain",
+        "Reporting réglementaire",
+        "Analyse contractuelle IA"
+      ]
+    },
+    "transmissionSection": {
+      "label": "Construire pour transmettre",
+      "title": "Un actif conçu sans plan de transmission\nperd 20 à 30% à la cession.",
+      "desc": "Chez Aegryn, chaque actif est conçu certifiable dès le premier sprint.",
+      "cta": "Préparer ma transmission",
+      "href": "/transact"
+    },
+    "buyerNoteSection": {
+      "label": "Note pour les acheteurs institutionnels",
+      "title": "Ce que les acheteurs institutionnels exigent.",
+      "desc": "Un actif certifié CIFSO attire les acheteurs institutionnels qui exigent une documentation défendable. 58% des acquisitions tech EU viennent du private equity. Leur prérequis : la traçabilité."
+    },
+    "independenceSection": {
+      "label": "Indépendance technologique",
+      "badge": "INDÉPENDANCE TECHNOLOGIQUE"
+    },
     "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
     "whySection": {
       "label": "Pourquoi des logiciels sur mesure",
@@ -4645,7 +4743,7 @@
         },
         {
           "key": "vendor",
-          "title": "Zéro vendor lock-in",
+          "title": "Indépendance technologique",
           "desc": "Architecture open source ou standards ouverts. Vous pouvez changer d'intégrateur à tout moment sans dépendre d'Aegryn."
         },
         {
