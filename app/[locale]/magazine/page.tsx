@@ -80,9 +80,10 @@ export default async function MagazineHubPage({ params }: Props) {
           <div>
             <h1
               className="font-sans font-bold text-magazine-black mb-6"
-              style={{ fontSize: 'clamp(40px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.03em' }}
+              style={{ fontSize: 'clamp(40px,6vw,80px)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
             >
-              {tHub('title')}
+              <span className="block">The Aegryn</span>
+              <span className="block">Business Magazine</span>
             </h1>
             <p className="text-body-mag text-magazine-black/60 max-w-prose leading-[1.75]">
               {tHub('desc')}
