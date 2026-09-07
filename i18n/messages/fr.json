@@ -825,7 +825,7 @@
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "Aegryn certifie et transmet aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFS.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
+      "desc": "Aegryn certifie et transmet aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFSO v4.0.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {
@@ -1653,7 +1653,7 @@
       {
         "category": "Étude de cas",
         "title": "Grader un SaaS B2B : exercice méthodologique sur une cession publique",
-        "desc": "Application illustrative du protocole CIFS sur une transaction tech publiée, pour comprendre comment chaque dimension C/I/F/S influence le grade final. Exercice pédagogique, non contractuel."
+        "desc": "Application illustrative du protocole CIFSO v4.0 sur une transaction publiée, pour comprendre comment chaque dimension (C, I, F, S, O) influence le grade final. Exercice pédagogique, non contractuel."
       }
     ]
   },
@@ -1894,7 +1894,7 @@
   "roadmapPage": {
     "meta": {
       "title": "Plateforme | Aegryn Cessions M&A Switzerland",
-      "desc": "La plateforme Aegryn : certification CIFS, processus de cession privés, droit suisse, ouverture internationale."
+      "desc": "La plateforme Aegryn : certification CIFSO v4.0, processus de cession privés, droit suisse, ouverture internationale."
     },
     "label": "Aegryn Cessions M&A Switzerland",
     "title": "La plateforme.\nSes fonctionnalités.",
@@ -1904,7 +1904,7 @@
     "features": {
       "certification": {
         "title": "Certification Aegryn Grade",
-        "desc": "Chaque actif mis en vente est certifié selon le protocole CIFS avant tout processus. Aucun actif non certifié n'est admis."
+        "desc": "Chaque organisation mise en vente est certifiée selon le protocole CIFSO v4.0 avant tout processus. Aucune organisation non certifiée n'est admise."
       },
       "swissLaw": {
         "title": "Droit suisse : 100 %",
@@ -1942,7 +1942,7 @@
       {
         "iconKey": "certification",
         "theme": "Certification",
-        "title": "Certification CIFS : Protocole Aegryn Grade",
+        "title": "Certification CIFSO v4.0 : Protocole Aegryn Grade",
         "desc": "Chaque actif est évalué sur 4 dimensions (Code, IP, Finance, Sécurité) avant toute mise en vente. Aucun actif non certifié n'est admis.",
         "live": true
       },
@@ -2026,7 +2026,7 @@
       {
         "iconKey": "certifiers",
         "theme": "Partenaires",
-        "title": "Réseau de certifieurs CIFS",
+        "title": "Réseau de certifieurs CIFSO",
         "desc": "Programme partenaire expert : mandats de certification, tableau de bord missions, commissions trackées.",
         "live": true
       },
@@ -2075,20 +2075,20 @@
       {
         "iconKey": "onChain",
         "theme": "Protocole",
-        "title": "Extension CIFS aux actifs numériques",
-        "desc": "Extension du protocole CIFS aux tokens utilitaires et protocoles DeFi. Cadre juridique suisse appliqué aux actifs on-chain.",
+        "title": "Extension CIFSO aux actifs numériques",
+        "desc": "Extension du protocole CIFSO aux tokens utilitaires et protocoles DeFi. Cadre juridique suisse appliqué aux actifs on-chain.",
         "live": false
       }
     ],
     "currentLabel": "Déjà disponible",
     "current": [
       "Sessions de cession privées",
-      "Certification Aegryn Grade : protocole CIFS",
+      "Certification Aegryn Grade : protocole CIFSO v4.0",
       "Escrow institutionnel",
       "NDA digital automatisé",
       "Qualification et espace acquéreurs",
       "Espace vendeur : soumission et suivi d'actifs",
-      "Réseau partenaires certifieurs CIFS",
+      "Réseau partenaires certifieurs CIFSO",
       "KYC intégré multi-rôles",
       "Filtrage catalogue par grade, catégorie et ARR"
     ],
@@ -2304,7 +2304,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Système de Certification : Protocole Aegryn Grade",
-      "desc": "Le protocole Aegryn Grade : grille CIFS, définitions des grades AEG ★ à AEG B, sous-codes, processus d'analyse et principes d'indépendance."
+      "desc": "Le protocole Aegryn Grade : grille CIFSO v4.0, définitions des grades AEG ★ à AEG B, sous-codes, processus d'analyse et principes d'indépendance."
     },
     "label": "Aegryn | Système de Certification",
     "version": "2026",
@@ -2312,7 +2312,7 @@
     "intro": "Aegryn introduit son propre système de certification pour les actifs tech, avec une transparence totale sur les 4 dimensions fondamentales de la valeur.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
-    "cifsTitle": "Le cadre CIFS",
+    "cifsTitle": "Le cadre CIFSO v4.0",
     "cifsDesc": "Chaque actif est évalué selon quatre dimensions indépendantes, notées chacune de 0 à 25 points. Le score total sur 100 détermine le grade.",
     "cifs": [
       {
@@ -2611,7 +2611,7 @@
         "rule": "Valorisation sur actifs tangibles uniquement. Dimension F note spéciale \"Pre-revenue\" sans note numérique. AEG maximum : A."
       }
     ],
-    "fullCodesTitle": "Table complète des sous-codes CIFS",
+    "fullCodesTitle": "Table complète des sous-codes CIFSO",
     "fullCodesDesc": "Chaque sous-code identifie un critère précis évalué lors de la certification. Les codes marqués ⛔ sont des conditions de refus automatique.",
     "fullCodesTable": [
       {
@@ -3062,7 +3062,7 @@
     "index": {
       "eyebrow": "AEGRYN TRANSACT | AGENCE DE TRANSACTIONS TECH",
       "heroTitle": "La référence des transactions\ntech sélectives en Europe.",
-      "heroDesc": "Catalogue offmarket fermé sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFS. Aucune transaction sans protection NDA maximale.",
+      "heroDesc": "Catalogue offmarket fermé sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFSO v4.0. Aucune transaction sans protection NDA maximale.",
       "ctaCatalog": "Accéder au catalogue",
       "ctaMandate": "Déposer un mandat",
       "segmentsLabel": "QUATRE SEGMENTS DE TRANSACTION",
@@ -3071,7 +3071,7 @@
         "sell": {
           "kicker": "Cession d'actif",
           "title": "Vous souhaitez vendre",
-          "desc": "Cédez votre actif tech ou votre société à un acquéreur qualifié. Certification CIFS, mandat exclusif, NDA systématique.",
+          "desc": "Cédez votre organisation à un acquéreur qualifié. Certification CIFSO v4.0, mandat exclusif, NDA systématique.",
           "cta": "Mandat de cession"
         },
         "buy": {
@@ -3095,7 +3095,7 @@
       },
       "valueLabel": "LA VALEUR AEGRYN TRANSACT",
       "valueTitle": "Une base de profils qualifiés.\nDes actifs certifiés.",
-      "valueDesc": "Aegryn ne travaille qu'avec des acheteurs ayant passé la procédure KYC et signé le NDA. Chaque actif est noté CIFS avant d'être présenté. C'est la différence entre une transaction qui aboutit et une qui échoue.",
+      "valueDesc": "Aegryn ne travaille qu'avec des acheteurs ayant passé la procédure KYC et signé le NDA. Chaque organisation est évaluée CIFSO v4.0 avant d'être présentée. C'est la différence entre une transaction qui aboutit et une qui échoue.",
       "valueCta": "Voir le catalogue certifié",
       "howLabel": "PROCESSUS TRANSACT EN 4 ÉTAPES",
       "how": {
@@ -3136,7 +3136,7 @@
           "title": "Vendre un actif ou une société",
           "desc": "Vous êtes fondateur, holding ou studio. Vous souhaitez céder votre actif tech ou votre société dans les meilleures conditions.",
           "points": [
-            "Certification CIFS obligatoire avant présentation",
+            "Certification CIFSO v4.0 obligatoire avant présentation",
             "Présentation sous NDA aux acheteurs qualifiés uniquement",
             "Prix de cession cible fixé par le vendeur",
             "Escrow institutionnel et closing sécurisé",
@@ -3149,7 +3149,7 @@
           "title": "Rechercher une cible d'acquisition",
           "desc": "Vous êtes entrepreneur, corporate ou family office. Vous souhaitez acquérir un actif tech selon des critères précis.",
           "points": [
-            "Accès au catalogue offmarket certifié CIFS",
+            "Accès au catalogue offmarket certifié CIFSO v4.0",
             "Matching selon vos critères (secteur, ARR, grade, taille)",
             "NDA mutuel avant toute divulgation",
             "Accompagnement due diligence et structuration",
@@ -3177,7 +3177,7 @@
           "points": [
             "Partenaire opérationnel, financier ou industriel",
             "Cession de 5% à 49% du capital",
-            "Valorisation CIFS avant toute négociation",
+            "Valorisation CIFSO avant toute négociation",
             "Pacte d'associés encadré par nos conseils juridiques",
             "Confidentialité absolue tout au long du processus"
           ],
@@ -3359,7 +3359,7 @@
     "buy": {
       "label": "AEGRYN TRANSACT | MANDAT D'ACQUISITION",
       "title": "Acquérir un actif tech certifié.\nSans bruit. Sous NDA.",
-      "desc": "Accédez au catalogue offmarket Aegryn : actifs certifiés CIFS, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
+      "desc": "Accédez au catalogue offmarket Aegryn : organisations certifiées CIFSO v4.0, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
       "cta": "Déposer un mandat d'acquisition",
       "qualifTitle": "PROFIL ACQUÉREUR QUALIFIÉ",
       "qualifDesc": "Le catalogue Aegryn est réservé aux acquéreurs ayant complété la procédure de qualification. Cette exigence protège la confidentialité des vendeurs et garantit la qualité des échanges.",
@@ -3397,13 +3397,13 @@
   },
   "transaction": {
     "meta": {
-      "title": "Cessions M&A : Actifs tech certifiés CIFS",
-      "desc": "Processus Aegryn : achetez ou vendez des actifs tech certifiés CIFS. Catalogue offmarket, mandat exclusif, transactions encadrées."
+      "title": "Cessions M&A : Organisations certifiées CIFSO v4.0",
+      "desc": "Processus Aegryn : achetez ou vendez des organisations certifiées CIFSO v4.0. Catalogue offmarket, mandat exclusif, transactions encadrées."
     },
     "index": {
       "label": "Processus de cession Aegryn",
       "title": "La plateforme de cession certifiée\npour les actifs tech européens.",
-      "desc": "Pas d'enchères en temps réel. Un processus offmarket structuré, réservé aux vendeurs certifiés CIFS et aux acquéreurs pré-qualifiés. Chaque actif est gradé. Chaque transaction est encadrée par mandat exclusif.",
+      "desc": "Pas d'enchères en temps réel. Un processus offmarket structuré, réservé aux organisations certifiées CIFSO v4.0 et aux acquéreurs pré-qualifiés. Chaque actif est gradé. Chaque transaction est encadrée par mandat exclusif.",
       "ctaCatalog": "Voir le catalogue",
       "ctaSession": "Le processus",
       "ctaSubmit": "Soumettre un actif",
@@ -3590,7 +3590,7 @@
     "sell": {
       "meta": {
         "title": "Céder votre actif | Aegryn",
-        "desc": "Parcours cédant Aegryn : valorisation indicative, score de préparation, mandat exclusif. Certification CIFS, grade officiel, acquéreurs pré-qualifiés."
+        "desc": "Parcours cédant Aegryn : valorisation indicative, score de préparation, mandat exclusif. Certification CIFSO v4.0, grade officiel, acquéreurs pré-qualifiés."
       },
       "hero": {
         "label": "Céder votre actif",
@@ -3615,7 +3615,7 @@
         },
         "s3": {
           "title": "Dépôt de mandat",
-          "desc": "Soumettez votre actif à l'équipe Aegryn. Certification CIFS indépendante, attribution de grade officiel, entrée dans le processus de cession sous mandat exclusif 60 jours.",
+          "desc": "Soumettez votre organisation à l'équipe Aegryn. Certification CIFSO v4.0 indépendante, attribution de grade officiel, entrée dans le processus de cession sous mandat exclusif 60 jours.",
           "cta": "Déposer votre mandat →"
         }
       },
@@ -3635,7 +3635,7 @@
           "desc": "10% du prix au HoT via séquestre institutionnel. Aucun transfert d'actifs avant libération des fonds. Juridiction suisse."
         },
         "g4": {
-          "title": "Certification CIFS indépendante",
+          "title": "Certification CIFSO v4.0 indépendante",
           "desc": "Grade ★/AAA/AA/A/B attribué par un auditeur indépendant, finance, code, IP, sécurité. Opposable et documenté."
         }
       },
@@ -4786,7 +4786,7 @@
         {
           "num": "02",
           "title": "Architecture et Design",
-          "desc": "L'actif est architecturé selon les critères CIFS : code documenté, IP déposée, sécurité by design, métriques trackées. Le grade est le plan de construction."
+          "desc": "L'organisation est architecturée selon les critères CIFSO v4.0 : capital documenté, intégrité gouvernance, finances auditables, sécurité by design, structure organisationnelle. Le grade est le plan de construction."
         },
         {
           "num": "03",
@@ -4801,7 +4801,7 @@
         {
           "num": "05",
           "title": "Certification (et sortie optionnelle)",
-          "desc": "Soumission au protocole CIFS si souhaité. Grade officiel émis si les critères sont remplis. La transaction via Aegryn TRANSACT ou confidentielle n'est engagée que sur votre décision. L'actif peut aussi être conservé avec maintenance."
+          "desc": "Soumission au protocole CIFSO v4.0 si souhaité. Grade officiel émis si les critères sont remplis. La transaction via Aegryn TRANSACT ou confidentielle n'est engagée que sur votre décision. L'organisation peut aussi être conservée avec maintenance."
         }
       ]
     },
@@ -6466,7 +6466,7 @@
     "experts": "Réseau d'experts",
     "valuation": "Valorisation",
     "grade": "Système de grade",
-    "gradeMethod": "Méthodologie CIFS",
+    "gradeMethod": "Méthodologie CIFSO v4.0",
     "gradeSubmit": "Soumettre pour certification",
     "gradePartners": "Experts certifiants",
     "transaction": "Catalogue d'actifs",
@@ -7633,7 +7633,7 @@
       "subscribeTitle": "Recevez chaque numéro 48h avant sa publication.",
       "subscribeBody": "Aegryn Magazine paraît en janvier, avril, juillet et octobre. L'accès digital est permanent et gratuit. Les abonnés reçoivent chaque numéro 48h avant la mise en ligne publique.",
       "subscribeBullet1": "Données M&A européennes, mises à jour chaque trimestre",
-      "subscribeBullet2": "Index CIFS : données de certification exclusives",
+      "subscribeBullet2": "Index CIFSO : données de certification exclusives",
       "subscribeBullet3": "Analyses non disponibles ailleurs, sans conflit d'intérêt",
       "subscribePlaceholder": "votre@email.com",
       "subscribeCta": "S'abonner",
@@ -7644,7 +7644,7 @@
       "contactEditTitle": "Partenariat, contribution, droits de reproduction",
       "contactEditBody": "Pour toute demande relative au contenu éditorial, aux droits de reproduction, ou aux partenariats de contenu, contactez l'équipe éditoriale d'Aegryn directement.",
       "contactEditCta": "media@boha-group.com →",
-      "cifsLabel": "Certification CIFS",
+      "cifsLabel": "Certification CIFSO v4.0",
       "cifsBody": "Moins de 25 % des actifs soumis atteignent le statut Full Grade. Découvrez où se situe votre actif avant qu'un acheteur ne le fasse.",
       "cifsCta": "Démarrer la certification →",
       "footerLegal": "Aegryn, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",

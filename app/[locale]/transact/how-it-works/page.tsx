@@ -47,10 +47,10 @@ const PROCESS_STEPS = [
   {
     num:    '03',
     icon:   <ShieldCheck size={22} className="text-ag-apex" />,
-    title:  'Certification CIFS & attribution de grade',
+    title:  'Certification CIFSO v4.0 & attribution de grade',
     label:  'Aegryn',
-    desc:   "Un auditeur CIFS indépendant examine le code, les finances, l'IP et la sécurité. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec toute autre plateforme de cession.",
-    detail: "Audit indépendant · 4 dimensions · Grade officiel et opposable · Rapport complet remis",
+    desc:   "Un auditeur CIFSO indépendant examine les 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec toute autre plateforme de cession.",
+    detail: "Audit indépendant · 5 dimensions CIFSO · Grade officiel et opposable · Rapport complet remis",
     cta:    { label: 'Comprendre les grades', href: '/grade/grading-system' as const },
     side:   'aegryn',
   },
@@ -69,7 +69,7 @@ const PROCESS_STEPS = [
     icon:   <FileText size={22} className="text-ag-apex" />,
     title:  'Processus TRANSACT & data room',
     label:  'Acheteurs + Cédant',
-    desc:   "Le processus s'ouvre avec accès à la data room complète (financières, KPIs, contrats, rapport CIFS). Les acheteurs qualifiés soumettent leurs offres dans le délai imparti. Le cédant choisit l'offre retenue.",
+    desc:   "Le processus s'ouvre avec accès à la data room complète (financières, KPIs, contrats, rapport CIFSO). Les acheteurs qualifiés soumettent leurs offres dans le délai imparti. Le cédant choisit l'offre retenue.",
     detail: "Data room sécurisée · Durée définie · Offres sous enveloppe · Cédant décide",
     cta:    null,
     side:   'both',
@@ -87,7 +87,7 @@ const PROCESS_STEPS = [
 ]
 
 const COMPARE_ROWS = [
-  { label: 'Certification actif',       aegryn: 'CIFS indépendant · 4 dimensions',  other: 'Vetting interne informel' },
+  { label: 'Certification actif',       aegryn: 'CIFSO indépendant · 5 dimensions',  other: 'Vetting interne informel' },
   { label: 'Confidentialité',           aegryn: 'Actif invisible avant double NDA',  other: 'Listing semi-public + NDA auto' },
   { label: 'Acheteurs',                 aegryn: '100% pré-qualifiés, preuve de fonds', other: 'Base ouverte, qualité variable' },
   { label: 'Séquestre',                 aegryn: 'Bancaire institutionnel suisse',    other: 'Escrow.com (US)' },

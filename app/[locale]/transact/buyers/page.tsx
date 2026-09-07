@@ -53,7 +53,7 @@ const COMMITMENTS = [
   {
     icon:  <ShieldCheck size={16} className="text-ag-apex shrink-0 mt-0.5" />,
     title: 'Actifs certifiés et gradés',
-    desc:  'Chaque actif en transaction a reçu une certification CIFS indépendante (finance, code, IP, sécurité) et un grade ★/AAA/AA/A/B opposable.',
+    desc:  'Chaque actif en transaction a reçu une certification CIFSO v4.0 indépendante (Capital, Intégrité, Finances, Sécurité, Organisation) et un grade ★/AAA/AA/A/B opposable.',
   },
   {
     icon:  <Users size={16} className="text-ag-apex shrink-0 mt-0.5" />,
