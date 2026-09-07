@@ -284,18 +284,18 @@
       "cifso": {
         "badge": "Protocole · Certification",
         "tagline": "Protocole algorithmique de certification d'actifs",
-        "description": "Protocole CIFSO en production, utilisé par Aegryn pour la certification de ses propres actifs et de ceux de ses clients. Couvre 5 dimensions : Capital, Intégrité, Finance, Sécurité, Organisation. Licenciable aux cabinets d'audit et de conseil souhaitant certifier leurs propres clients.",
+        "description": "Protocole CIFSO en production, utilisé pour la certification des actifs propres et de ceux des clients. Couvre 5 dimensions : Capital, Intégrité, Finance, Sécurité, Organisation. Licenciable aux cabinets d'audit et de conseil souhaitant certifier leurs propres clients.",
         "visitPage": "Voir la page certification"
       },
       "compliance": {
         "badge": "RegTech · Conformité",
         "tagline": "Moteur de conformité réglementaire automatisé",
-        "description": "Moteur de conformité, utilisé par Aegryn pour le suivi de ses obligations réglementaires. Registre des traitements, contrôles automatisés AI Act, NIS2, DORA, LPD. Licenciable pour intégration dans des offres de conseil compliance ou déploiement chez des clients institutionnels."
+        "description": "Moteur de conformité, utilisé pour le suivi des obligations réglementaires. Registre des traitements, contrôles automatisés AI Act, NIS2, DORA, LPD. Licenciable pour intégration dans des offres de conseil compliance ou déploiement chez des clients institutionnels."
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",
         "tagline": "Onboarding entreprise et vérification d'identité",
-        "description": "Moteur KYB/KYC actif, utilisé par Aegryn pour l'onboarding de ses clients et la vérification des contreparties dans ses mandats. Vérification d'identité, KYB, bénéficiaires effectifs, sanctions et credentials. Licenciable aux acteurs financiers, avocats et notaires souhaitant automatiser leur due diligence."
+        "description": "Moteur KYB/KYC actif, utilisé pour l'onboarding clients et la vérification des contreparties dans les mandats. Vérification d'identité, KYB, bénéficiaires effectifs, sanctions et credentials. Licenciable aux acteurs financiers, avocats et notaires souhaitant automatiser leur due diligence."
       },
       "categories": {
         "ai": "AI & Protocoles",

@@ -278,18 +278,18 @@
       "cifso": {
         "badge": "Protocol · Certificering",
         "tagline": "Algoritmisch protocol voor activacertificering",
-        "description": "CIFSO-protocol in productie, gebruikt door Aegryn voor de certificering van eigen activa en die van klanten. Dekt 5 dimensies: Kapitaal, Integriteit, Financien, Beveiliging, Organisatie. Licentieerbaar voor accountants- en adviesbureaus die hun eigen klanten willen certificeren.",
+        "description": "CIFSO-protocol in productie, gebruikt voor de certificering van eigen activa en die van klanten. Dekt 5 dimensies: Kapitaal, Integriteit, Financien, Beveiliging, Organisatie. Licentieerbaar voor accountants- en adviesbureaus die hun eigen klanten willen certificeren.",
         "visitPage": "Certificeringspagina bekijken"
       },
       "compliance": {
         "badge": "RegTech · Compliance",
         "tagline": "Geautomatiseerde regulatoire compliance-engine",
-        "description": "Compliance-engine, gebruikt door Aegryn voor het bewaken van eigen regelgevingsverplichtingen. Verwerkingsregister, geautomatiseerde AI Act-, NIS2-, DORA-, AVG-controles. Licentieerbaar voor integratie in compliance-adviesaanbod of implementatie bij institutionele klanten."
+        "description": "Compliance-engine, gebruikt voor het bewaken van regelgevingsverplichtingen. Verwerkingsregister, geautomatiseerde AI Act-, NIS2-, DORA-, AVG-controles. Licentieerbaar voor integratie in compliance-adviesaanbod of implementatie bij institutionele klanten."
       },
       "kyb": {
         "badge": "Identiteit · KYB/KYC",
         "tagline": "Zakelijke onboarding en identiteitsverificatie",
-        "description": "Actieve KYB/KYC-engine, gebruikt door Aegryn voor client-onboarding en verificatie van tegenpartijen in mandaten. Identiteitsverificatie, KYB, uiteindelijk belanghebbenden, sancties en credentials. Licentieerbaar voor financiële actoren, advocaten en notarissen die hun due diligence willen automatiseren."
+        "description": "Actieve KYB/KYC-engine, gebruikt voor client-onboarding en verificatie van tegenpartijen in mandaten. Identiteitsverificatie, KYB, uiteindelijk belanghebbenden, sancties en credentials. Licentieerbaar voor financiële actoren, advocaten en notarissen die hun due diligence willen automatiseren."
       },
       "hobconnect": {
         "badge": "B2C · Sociaal",

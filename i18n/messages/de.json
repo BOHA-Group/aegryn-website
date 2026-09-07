@@ -278,18 +278,18 @@
       "cifso": {
         "badge": "Protokoll · Zertifizierung",
         "tagline": "Algorithmisches Protokoll zur Asset-Zertifizierung",
-        "description": "CIFSO-Protokoll im Einsatz, von Aegryn zur Zertifizierung eigener und Kunden-Assets genutzt. Umfasst 5 Dimensionen: Kapital, Integrität, Finanzen, Sicherheit, Organisation. Lizenzierbar für Wirtschaftsprüfer und Beratungsunternehmen, die ihre eigenen Kunden zertifizieren möchten.",
+        "description": "CIFSO-Protokoll im Einsatz, zur Zertifizierung eigener und Kunden-Assets genutzt. Umfasst 5 Dimensionen: Kapital, Integrität, Finanzen, Sicherheit, Organisation. Lizenzierbar für Wirtschaftsprüfer und Beratungsunternehmen, die ihre eigenen Kunden zertifizieren möchten.",
         "visitPage": "Zertifizierungsseite ansehen"
       },
       "compliance": {
         "badge": "RegTech · Compliance",
         "tagline": "Automatisierte regulatorische Compliance-Engine",
-        "description": "Compliance-Engine, von Aegryn zur Überwachung eigener regulatorischer Pflichten genutzt. Verarbeitungsverzeichnis, automatisierte KI-Gesetz-, NIS2-, DORA-, DSGVO-Kontrollen. Lizenzierbar zur Integration in Compliance-Beratungsangebote oder zum Einsatz bei institutionellen Kunden."
+        "description": "Compliance-Engine, zur Überwachung regulatorischer Pflichten genutzt. Verarbeitungsverzeichnis, automatisierte KI-Gesetz-, NIS2-, DORA-, DSGVO-Kontrollen. Lizenzierbar zur Integration in Compliance-Beratungsangebote oder zum Einsatz bei institutionellen Kunden."
       },
       "kyb": {
         "badge": "Identität · KYB/KYC",
         "tagline": "Unternehmens-Onboarding und Identitätsprüfung",
-        "description": "Aktive KYB/KYC-Engine, von Aegryn für das Onboarding von Kunden und die Überprüfung von Gegenparteien in Mandaten genutzt. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Nachweise. Lizenzierbar für Finanzakteure, Rechtsanwälte und Notare, die ihre Due Diligence automatisieren möchten."
+        "description": "Aktive KYB/KYC-Engine, für das Onboarding von Kunden und die Überprüfung von Gegenparteien in Mandaten genutzt. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Nachweise. Lizenzierbar für Finanzakteure, Rechtsanwälte und Notare, die ihre Due Diligence automatisieren möchten."
       },
       "hobconnect": {
         "badge": "B2C · Sozial",

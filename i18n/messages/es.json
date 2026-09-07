@@ -278,18 +278,18 @@
       "cifso": {
         "badge": "Protocolo · Certificación",
         "tagline": "Protocolo algorítmico de certificación de activos",
-        "description": "Protocolo CIFSO en producción, utilizado por Aegryn para la certificación de sus propios activos y los de sus clientes. Cubre 5 dimensiones: Capital, Integridad, Finanzas, Seguridad, Organización. Licenciable a firmas de auditoría y consultoría que deseen certificar a sus propios clientes.",
+        "description": "Protocolo CIFSO en producción, utilizado para la certificación de activos propios y los de sus clientes. Cubre 5 dimensiones: Capital, Integridad, Finanzas, Seguridad, Organización. Licenciable a firmas de auditoría y consultoría que deseen certificar a sus propios clientes.",
         "visitPage": "Ver página de certificación"
       },
       "compliance": {
         "badge": "RegTech · Compliance",
         "tagline": "Motor de compliance regulatorio automatizado",
-        "description": "Motor de compliance, utilizado por Aegryn para el seguimiento de sus obligaciones regulatorias. Registro de tratamientos, controles automatizados IA Act, NIS2, DORA, RGPD. Licenciable para integración en servicios de asesoría compliance o despliegue en clientes institucionales."
+        "description": "Motor de compliance, utilizado para el seguimiento de las obligaciones regulatorias. Registro de tratamientos, controles automatizados IA Act, NIS2, DORA, RGPD. Licenciable para integración en servicios de asesoría compliance o despliegue en clientes institucionales."
       },
       "kyb": {
         "badge": "Identidad · KYB/KYC",
         "tagline": "Onboarding empresarial y verificación de identidad",
-        "description": "Motor KYB/KYC activo, utilizado por Aegryn para el onboarding de sus clientes y la verificación de contrapartes en sus mandatos. Verificación de identidad, KYB, beneficiarios reales, sanciones y credenciales. Licenciable a actores financieros, abogados y notarios que deseen automatizar su due diligence."
+        "description": "Motor KYB/KYC activo, utilizado para el onboarding de clientes y la verificación de contrapartes en los mandatos. Verificación de identidad, KYB, beneficiarios reales, sanciones y credenciales. Licenciable a actores financieros, abogados y notarios que deseen automatizar su due diligence."
       },
       "hobconnect": {
         "badge": "B2C · Social",

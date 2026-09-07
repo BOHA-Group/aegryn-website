@@ -278,18 +278,18 @@
       "cifso": {
         "badge": "Protocol · Certification",
         "tagline": "Algorithmic asset certification protocol",
-        "description": "CIFSO protocol in production, used by Aegryn to certify its own assets and those of its clients. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms wishing to certify their own clients.",
+        "description": "CIFSO protocol in production, used to certify proprietary assets and those of clients. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms wishing to certify their own clients.",
         "visitPage": "View certification page"
       },
       "compliance": {
         "badge": "RegTech · Compliance",
         "tagline": "Automated regulatory compliance engine",
-        "description": "Compliance engine, used by Aegryn to monitor its own regulatory obligations. Treatment register, automated AI Act, NIS2, DORA, GDPR controls. Licensable for integration into compliance advisory offerings or deployment with institutional clients."
+        "description": "Compliance engine, used to monitor regulatory obligations. Treatment register, automated AI Act, NIS2, DORA, GDPR controls. Licensable for integration into compliance advisory offerings or deployment with institutional clients."
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",
         "tagline": "Business onboarding and identity verification",
-        "description": "Active KYB/KYC engine, used by Aegryn for client onboarding and counterparty verification in its mandates. Identity verification, KYB, beneficial owners, sanctions and credentials. Licensable to financial actors, lawyers and notaries wishing to automate their due diligence."
+        "description": "Active KYB/KYC engine, used for client onboarding and counterparty verification in mandates. Identity verification, KYB, beneficial owners, sanctions and credentials. Licensable to financial actors, lawyers and notaries wishing to automate their due diligence."
       },
       "hobconnect": {
         "badge": "B2C · Social",
