@@ -437,8 +437,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isThinkingActive = 
     isActive('/magazine') || isActive('/blog')
   
+  const isContactActive = isActive('/contact')
+
   const isWhoActive = 
-    isActive('/about') || isActive('/contact') || 
+    isActive('/about') || 
     isActive('/career')
 
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -590,6 +592,20 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               {isWhoActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
             {activeDropdown === 'who' && <WhoMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+          </div>
+
+          {/* Contact */}
+          <div className="nav-link-item relative">
+            <Link
+              href="/contact"
+              className={`relative font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+                isContactActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+              }`}
+              aria-current={isContactActive ? 'page' : undefined}
+            >
+              {t('navContact')}
+              {isContactActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+            </Link>
           </div>
         </nav>
 
@@ -815,6 +831,20 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   ))}
                 </div>
               )}
+            </div>
+
+            {/* Contact */}
+            <div className="mobile-nav-item">
+              <Link
+                href="/contact"
+                onClick={closeMobile}
+                aria-current={isContactActive ? 'page' : undefined}
+                className={`flex items-center py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
+                  isContactActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                }`}
+              >
+                {t('navContact')}
+              </Link>
             </div>
 
             {/* Bottom CTAs */}
