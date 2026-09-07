@@ -117,11 +117,19 @@ export default async function TransactCatalogPage({ params }: Props) {
       {/* ── Bannière tiers ── */}
       <div className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="flex items-start gap-3">
-            <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
-            <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-2xl">
-              {tc('thirdPartyNote')}
-            </p>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-start gap-3">
+              <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
+              <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-2xl">
+                {tc('thirdPartyNote')}
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
+              <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-2xl">
+                {tc('thirdPartyNote2')}
+              </p>
+            </div>
           </div>
           <Link
             href="/assets"

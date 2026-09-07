@@ -3464,10 +3464,11 @@
       "marketCta": "Estimer la valeur de mon actif"
     },
     "catalog": {
-      "label": "Transaction Aegryn | Actifs certifiés CIFSO",
+      "label": "Transaction Aegryn | Actifs certifiés",
       "title": "Actifs certifiés\ndisponibles.",
       "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification CIFSO Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire Aegryn.",
       "thirdPartyNote": "Ces actifs sont proposés sous mandat exclusif par des vendeurs indépendants certifiés. Aegryn agit comme intermédiaire certifié et organisateur de la transaction, équivalent d'un conseil en cession spécialisé tech.",
+      "thirdPartyNote2": "Chaque actif présenté a obtenu le grade CIFSO Aegryn : protocole d'évaluation en 5 dimensions (Capital, Intégrité, Finances, Sécurité, Organisation). Seuls les actifs atteignant le seuil Grade A ou supérieur sont admis au processus de transaction.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
