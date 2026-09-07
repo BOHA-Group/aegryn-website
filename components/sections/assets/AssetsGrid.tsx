@@ -96,11 +96,11 @@ export function AssetsGrid() {
         </div>
 
         {/* Grid */}
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((asset) => (
             <div
               key={asset.id}
-              className="asset-card bg-ag-white p-8 flex flex-col gap-5 group hover:bg-ag-off-white transition-colors"
+              className="asset-card bg-ag-white p-8 flex flex-col gap-5 group hover:bg-ag-off-white transition-colors border border-ag-border -mt-px -ml-px"
             >
               {/* Top row */}
               <div className="flex items-start justify-between gap-3">
