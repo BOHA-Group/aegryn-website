@@ -21,10 +21,11 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Nos métiers - Support section
 const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftSupportStrategy',    href: '/advisory/strategy' as LinkHref },
-  { labelKey: 'craftSupportTechnology',  href: '/advisory/technology' as LinkHref },
-  { labelKey: 'craftSupportMA',          href: '/advisory/ma' as LinkHref },
-  { labelKey: 'craftSupportNetworkNew',  href: '/network' as LinkHref },
+  { labelKey: 'craftSupportStrategy',      href: '/advisory/strategy' as LinkHref },
+  { labelKey: 'craftSupportTechnology',    href: '/advisory/technology' as LinkHref },
+  { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
+  { labelKey: 'craftSupportNetworkNew',    href: '/network' as LinkHref },
+  { labelKey: 'craftSupportInvestors',     href: '/investisseurs' as LinkHref },
 ]
 
 // Nos métiers - Transaction M&A section
