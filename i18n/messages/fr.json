@@ -3281,28 +3281,28 @@
     },
     "sell": {
       "meta": {
-        "title": "Céder votre actif | Aegryn TRANSACT",
-        "desc": "Mandat de cession exclusif. Certification CIFS, grade officiel, acquéreurs pré-qualifiés sous NDA. Commission au succès uniquement."
+        "title": "Céder votre organisation | Aegryn TRANSACT",
+        "desc": "Mandat de cession exclusif. Certification CIFSO v4.0, grade officiel, acquéreurs pré-qualifiés sous NDA. Commission au succès uniquement."
       },
       "hero": {
         "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
-        "title": "Céder votre actif tech\nau prix qu'il mérite.",
-        "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+        "title": "Céder votre organisation\nau prix qu'elle mérite.",
+        "desc": "Aegryn certifie votre organisation selon le protocole CIFSO v4.0 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
         "ctaValuation": "Valorisation indicative",
         "ctaMandat": "Déposer un mandat"
       },
       "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
-      "title": "Céder votre actif tech\nau prix qu'il mérite.",
-      "desc": "Aegryn certifie votre actif CIFS, fixe le grade officiel et le présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+      "title": "Céder votre organisation\nau prix qu'elle mérite.",
+      "desc": "Aegryn certifie votre organisation selon le protocole CIFSO v4.0 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
       "ctaButton": "Déposer un mandat de cession",
       "steps": {
         "label": "PARCOURS CÉDANT EN 3 ÉTAPES",
         "title": "Un processus structuré de la certification au closing.",
         "step2Label": "SCORE DE PRÉPARATION",
-        "step2Title": "Évaluez la maturité de votre actif avant la certification.",
+        "step2Title": "Évaluez la maturité de votre organisation avant la certification.",
         "s1": {
-          "title": "Certification CIFS",
-          "desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
+          "title": "Certification CIFSO v4.0",
+          "desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel AEG est attribué avant toute présentation.",
           "cta": "Obtenir la certification"
         },
         "s2": {
@@ -3329,30 +3329,30 @@
           "desc": "Escrow institutionnel. Closing sécurisé sous juridiction suisse."
         },
         "g4": {
-          "title": "Certification CIFS obligatoire",
-          "desc": "Grade officiel attribué avant toute présentation. Transparence totale."
+          "title": "Certification CIFSO obligatoire",
+          "desc": "Grade officiel attribué sur 5 dimensions avant toute présentation. Transparence totale."
         },
         "label": "GARANTIES AEGRYN",
         "title": "Protection maximale pour chaque transaction."
       },
       "cta": {
-        "title": "Prêt à céder votre actif ?",
-        "desc": "Notre équipe vous accompagne de la valorisation au closing.",
+        "title": "Prête à transmettre votre organisation ?",
+        "desc": "Notre équipe vous accompagne de la certification CIFSO au closing.",
         "ctaMandat": "Déposer un mandat",
         "ctaAdvisor": "Parler à un conseiller"
       },
-      "step1Title": "Certification CIFS",
-      "step1Desc": "Votre actif passe le protocole d'évaluation Aegryn sur 4 dimensions : Code, Infra, Finance, Sécurité. Un grade officiel AEG est attribué avant toute présentation.",
+      "step1Title": "Certification CIFSO v4.0",
+      "step1Desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel AEG est attribué avant toute présentation.",
       "step2Title": "Présentation sous NDA",
-      "step2Desc": "L'actif certifié entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
+      "step2Desc": "L'organisation certifiée entre dans le catalogue offmarket fermé. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
       "step3Title": "Term sheet & négociation",
       "step3Desc": "Les acquéreurs qualifiés soumettent des offres structurées. Aegryn encadre la négociation et les contre-propositions jusqu'à l'accord.",
       "step4Title": "Closing sécurisé",
       "step4Desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse. Protection maximale pour le vendeur et l'acquéreur.",
       "feesTitle": "STRUCTURE DE RÉMUNÉRATION",
-      "feesDesc": "Aucun frais d'entrée. Aegryn est rémunéré exclusivement au succès de la transaction. La certification CIFS est facturée séparément selon le grade attribué.",
-      "feesCert": "CERTIFICATION CIFS",
-      "feesCertValue": "Facturée à la remise du grade officiel. Montant selon complexité de l'actif, communiqué lors de la prise de mandat.",
+      "feesDesc": "Aucun frais d'entrée. Aegryn est rémunéré exclusivement au succès de la transaction. La certification CIFSO v4.0 est facturée séparément selon le grade attribué.",
+      "feesCert": "CERTIFICATION CIFSO v4.0",
+      "feesCertValue": "Facturée à la remise du grade officiel. Montant selon la complexité de l'organisation, communiqué lors de la prise de mandat.",
       "feesSuccess": "COMMISSION DE SUCCÈS",
       "feesSuccessValue": "Prélevée à la clôture uniquement. Calculée sur le prix de cession net. Taux communiqué lors de la signature du mandat exclusif."
     },
