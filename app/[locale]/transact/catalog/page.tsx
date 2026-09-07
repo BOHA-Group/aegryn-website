@@ -205,35 +205,37 @@ export default async function TransactCatalogPage({ params }: Props) {
         </section>
       )}
 
-      {/* ── Grille actifs avec filtres ── */}
-      <CatalogFilters
-        assets={publishedAssets}
-        locale={locale}
-        accessStatus={accessStatus}
-        isAuthenticated={!!user}
-        labels={{
-          filterAll:         tc('filterAll'),
-          filterStar:        tc('filterStar'),
-          filterAAA:         tc('filterAAA'),
-          filterAA:          tc('filterAA'),
-          filterA:           tc('filterA'),
-          filterB:           tc('filterB'),
-          arrRanges:         [tc('arrAll'), tc('arrBelow100k'), tc('arr100kTo1m'), tc('arr1mTo5m'), tc('arrAbove5m')],
-          noResults:         tc('noResults'),
-          resetFilters:      tc('resetFilters'),
-          resetFiltersShort: tc('resetFiltersShort'),
-          viewFullDossier:   tc('viewFullDossier'),
-          conditionalAccess: tc('conditionalAccess'),
-          qualifiedOnly:     tc('qualifiedOnly'),
-          accessDesc:        tc('accessDesc'),
-          step1:             tc('step1'),
-          step2:             tc('step2'),
-          step3:             tc('step3'),
-          loginCta:          tc('loginCta'),
-          registerCta:       tc('registerCta'),
-          kycPending:        tc('kycPending'),
-        }}
-      />
+      {/* ── Grille actifs avec filtres — visible uniquement si accès débloqué par admin ── */}
+      {hasLotAccess && (
+        <CatalogFilters
+          assets={publishedAssets}
+          locale={locale}
+          accessStatus={accessStatus}
+          isAuthenticated={!!user}
+          labels={{
+            filterAll:         tc('filterAll'),
+            filterStar:        tc('filterStar'),
+            filterAAA:         tc('filterAAA'),
+            filterAA:          tc('filterAA'),
+            filterA:           tc('filterA'),
+            filterB:           tc('filterB'),
+            arrRanges:         [tc('arrAll'), tc('arrBelow100k'), tc('arr100kTo1m'), tc('arr1mTo5m'), tc('arrAbove5m')],
+            noResults:         tc('noResults'),
+            resetFilters:      tc('resetFilters'),
+            resetFiltersShort: tc('resetFiltersShort'),
+            viewFullDossier:   tc('viewFullDossier'),
+            conditionalAccess: tc('conditionalAccess'),
+            qualifiedOnly:     tc('qualifiedOnly'),
+            accessDesc:        tc('accessDesc'),
+            step1:             tc('step1'),
+            step2:             tc('step2'),
+            step3:             tc('step3'),
+            loginCta:          tc('loginCta'),
+            registerCta:       tc('registerCta'),
+            kycPending:        tc('kycPending'),
+          }}
+        />
+      )}
 
       {/* ── LES MARCHÉS — EcosystemDomains ── */}
       <EcosystemDomains />
