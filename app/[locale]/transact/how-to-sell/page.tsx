@@ -15,9 +15,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/transact/how-to-sell',
     locale,
     keywords: [
-      'sell tech company', 'vendre entreprise tech', 'sell SaaS', 'cession actif numérique',
-      'sell digital asset', 'vendre startup', 'exit tech', 'M&A exit', 'transact sell digital business',
-      'how to sell SaaS', 'structured sale tech asset', 'vente structurée actif tech',
+      'vendre son entreprise', 'cession organisation', 'sell company Europe', 'cession PME',
+      'transmission organisation', 'exit fondateur', 'M&A exit', 'transact sell organisation',
+      'structured sale', 'vente structurée', 'processus cession confidentiel',
     ],
   })
 }

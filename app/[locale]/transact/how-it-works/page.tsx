@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/transact/how-it-works',
     locale,
     keywords: [
-      'processus transaction tech', 'certification CIFS', 'grade actif numérique',
-      'cession SaaS structurée', 'séquestre suisse M&A', 'comment vendre entreprise tech',
-      'how to sell SaaS Europe', 'M&A process Switzerland',
+      'processus cession organisation', 'certification CIFSO', 'grade organisation',
+      'cession structurée', 'séquestre suisse M&A', 'comment vendre son organisation',
+      'how to sell a company Europe', 'M&A process Switzerland',
     ],
   })
 }

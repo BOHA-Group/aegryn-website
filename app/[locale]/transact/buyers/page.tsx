@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/transact/buyers',
     locale,
     keywords: [
-      'acheter entreprise tech', 'buy SaaS Europe', 'acquisition startup',
-      'deal flow confidentiel', 'acheteur qualifié M&A', 'tech acquisition Switzerland',
-      'buy digital asset', 'achat actif numérique', 'investisseur tech',
+      'acquérir organisation Europe', 'acquisition PME confidentielle', 'acquisition entreprise',
+      'deal flow confidentiel', 'acheteur qualifié M&A', 'acquisition Suisse',
+      'reprise organisation', 'investisseur institutionnel',
     ],
   })
 }

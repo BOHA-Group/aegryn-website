@@ -25,9 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     image: '/og/transact.jpg',
     keywords: [
-      'transact catalog', 'catalogue cession tech', 'buy SaaS company', 'acheter SaaS',
-      'digital asset for sale', 'actif numérique à vendre', 'tech M&A deal', 'SaaS for sale',
-      'sell digital business', 'acquire tech startup', 'NDA dossier',
+      'catalogue cession offmarket', 'organisations à céder', 'entreprises en vente Europe',
+      'cession organisation confidentielle', 'M&A deal offmarket', 'PME à vendre',
+      'transmission entreprise', 'acquisition organisation', 'NDA dossier',
     ],
   })
 }
