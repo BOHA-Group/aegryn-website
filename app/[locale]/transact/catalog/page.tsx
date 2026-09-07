@@ -155,7 +155,7 @@ export default async function TransactCatalogPage({ params }: Props) {
 
             {/* Card lot */}
             <div className="border border-ag-border bg-ag-white flex flex-col md:flex-row gap-0 md:gap-8 hover:border-ag-black/30 transition-colors">
-              <div className="relative w-full md:w-[140px] shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
+              <div className="relative w-full md:w-35 shrink-0 bg-ag-off-white overflow-hidden" style={{ aspectRatio: '9 / 16' }}>
                 <Image
                   src="/images/transact/transact_legal-tech_T32026.jpg"
                   alt={ts('sessionCardTitle')}
