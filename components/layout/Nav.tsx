@@ -203,6 +203,14 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
             {t('thinkingMarketDesc')}
           </p>
           <div className="flex flex-col gap-1">
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+            >
+              {t('thinkingMarketNewsletter')}
+            </a>
             {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
@@ -629,6 +637,14 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </Link>
                   ))}
                   <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingMarket')}</p>
+                  <a
+                    href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors"
+                  >
+                    {t('thinkingMarketNewsletter')}
+                  </a>
                   {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
