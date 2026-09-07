@@ -595,7 +595,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           </div>
 
           {/* Contact */}
-          <div className="nav-link-item relative">
+          <div className="nav-link-item relative flex items-center">
             <Link
               href="/contact"
               className={`relative flex items-center font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
