@@ -290,7 +290,7 @@
       "compliance": {
         "badge": "RegTech · Conformité",
         "tagline": "Moteur de conformité réglementaire automatisé",
-        "description": "Moteur de conformité en production, utilisé par Aegryn pour le suivi de ses obligations réglementaires. Registre des traitements, contrôles automatisés AI Act, NIS2, DORA, LPD. Licenciable pour intégration dans des offres de conseil compliance ou déploiement chez des clients institutionnels."
+        "description": "Moteur de conformité, utilisé par Aegryn pour le suivi de ses obligations réglementaires. Registre des traitements, contrôles automatisés AI Act, NIS2, DORA, LPD. Licenciable pour intégration dans des offres de conseil compliance ou déploiement chez des clients institutionnels."
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",

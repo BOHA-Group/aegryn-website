@@ -284,7 +284,7 @@
       "compliance": {
         "badge": "RegTech · Compliance",
         "tagline": "Automated regulatory compliance engine",
-        "description": "Compliance engine in production, used by Aegryn to monitor its own regulatory obligations. Treatment register, automated AI Act, NIS2, DORA, GDPR controls. Licensable for integration into compliance advisory offerings or deployment with institutional clients."
+        "description": "Compliance engine, used by Aegryn to monitor its own regulatory obligations. Treatment register, automated AI Act, NIS2, DORA, GDPR controls. Licensable for integration into compliance advisory offerings or deployment with institutional clients."
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",
