@@ -198,7 +198,7 @@ export async function POST(req: NextRequest) {
         stripe_payment_intent_id: paymentIntentId,
       }).eq('id', assetId)
 
-      const internal  = process.env.Aegryn_INTERNAL_EMAIL ?? 'tech@boha-group.com'
+      const internal  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
       const typeLabel = meta.evaluationType === 'review_partner' ? 'Aegryn Review+' : 'Aegryn Review'
 
       await Promise.allSettled([

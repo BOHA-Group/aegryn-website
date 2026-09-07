@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     const resendKey   = process.env.RESEND_API_KEY
     const fromEmail   = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-    const internalTo  = process.env.Aegryn_INTERNAL_EMAIL ?? 'contact@boha-group.com'
+    const internalTo  = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
 
     if (!resendKey) {
       console.warn('[contact] RESEND_API_KEY not set — logging submission:', data)

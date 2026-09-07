@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     }
 
     const supa  = createServiceClient()
-    const adminEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
+    const adminEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
 
     /* ── Récupérer le profil cédant ── */
     const { data: profile } = await supa

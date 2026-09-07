@@ -187,7 +187,7 @@ export async function POST(req: NextRequest) {
 
   const buyerEmail = (profile as Record<string, unknown> | null)?.email as string ?? user.email ?? ''
   const buyerName  = (profile as Record<string, unknown> | null)?.full_name as string ?? buyerEmail
-  const internal   = process.env.Aegryn_INTERNAL_EMAIL ?? 'tech@boha-group.com'
+  const internal   = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
 
   await Promise.allSettled([
     sendEmail(
