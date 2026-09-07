@@ -1294,9 +1294,10 @@
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {
         "general": "Algemene vraag",
-        "advisory": "Advisory",
+        "advisory": "Strategisch advies",
+        "tech": "Technologisch advies",
         "grade": "Activumcertificering (Grade)",
-        "transaction": "M&A-proces",
+        "transaction": "M&A-transactie",
         "partnership": "Partnerschap",
         "investor": "Investeerder",
         "press": "Pers & Media",

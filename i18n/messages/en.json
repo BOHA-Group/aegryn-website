@@ -1294,9 +1294,10 @@
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
         "general": "General inquiry",
-        "advisory": "Advisory",
+        "advisory": "Strategy advisory",
+        "tech": "Technology advisory",
         "grade": "Asset certification (Grade)",
-        "transaction": "M&A process",
+        "transaction": "M&A transaction",
         "partnership": "Partnership",
         "investor": "Investor",
         "press": "Press & Media",

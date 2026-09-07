@@ -1294,9 +1294,10 @@
       "subjectPlaceholder": "Elegir un asunto",
       "subjects": {
         "general": "Consulta general",
-        "advisory": "Advisory",
+        "advisory": "Consultoría estratégica",
+        "tech": "Consultoría tecnológica",
         "grade": "Certificación de activo (Grade)",
-        "transaction": "Proceso M&A",
+        "transaction": "Transacción M&A",
         "partnership": "Asociación",
         "investor": "Inversor",
         "press": "Prensa & Medios",

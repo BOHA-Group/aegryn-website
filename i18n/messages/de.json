@@ -1294,9 +1294,10 @@
       "subjectPlaceholder": "Betreff wählen",
       "subjects": {
         "general": "Allgemeine Anfrage",
-        "advisory": "Advisory",
+        "advisory": "Strategieberatung",
+        "tech": "Technologieberatung",
         "grade": "Vermögenszertifizierung (Grade)",
-        "transaction": "M&A-Prozess",
+        "transaction": "M&A-Transaktion",
         "partnership": "Partnerschaft",
         "investor": "Investor",
         "press": "Presse & Medien",
