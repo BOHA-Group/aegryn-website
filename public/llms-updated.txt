@@ -69,14 +69,21 @@ Professional Services, Telecommunications, Transport & Logistics
 
 ## Proprietary Assets
 
-- **Subblink** (https://subblink.app) — B2B SaaS, AI-powered contract analysis
-- **Neediu** (https://neediu.com) — B2C marketplace, home services
-- **Primiom** (https://primiom.com) — B2C, AI-assisted real estate
+Six core software assets, available under direct access or licence:
+
+- **Subblink** (https://subblink.app) — B2B SaaS, AI-powered contract analysis, risk and obligation detection
+- **Neediu** (https://neediu.com) — B2C marketplace, home services (cleaning, plumbing, childcare)
+- **Primiom** (https://primiom.com) — B2C PropTech, AI-assisted real estate across Europe
 - **Movtoo** (https://movtoo.com) — B2C, on-demand urban delivery
-- **Hobconnect** (https://hobconnect.com) — B2C, social network around passions
+- **Hobconnect** (https://hobconnect.com) — B2C, social network around shared passions
+- **CIFSO Protocol** — Algorithmic asset certification (Capital, Integrity, Finance, Security, Organisation). Licensable.
+- **Compliance Engine** — Automated regulatory compliance. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
+- **KYB/KYC Engine** — Business onboarding, identity verification, beneficial owners, sanctions. Licensable.
+- **Data Room** — Secure M&A data room. RLS, watermarking, full audit trail. Licensable.
 - **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory
 
 Each asset: "An Aegryn company."
+Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
 ## Advisory — Three Pillars (https://aegryn.com/advisory)
 
@@ -154,17 +161,20 @@ Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms
 
 ## Recent Updates (September 2026)
 
-- Role "internal" (Accès interne): collaborator space with admin-controlled granular permissions (/client/internal)
+- Asset cards (cifso, compliance, kyb, dataroom): descriptions updated, "utilisé par Aegryn" removed for neutrality
+- Compliance Engine description: "en production" removed
+- /assets page: publisherNote and ownedNote merged into single info block
+- /portfolio page: added to sitemap and LLM files
+- Software domain filters on /assets aligned: AI & Protocoles, Transactions & M&A, Compliance & Reglementation, Identite & Confiance
+- Role "internal" (Acces interne): collaborator space with admin-controlled granular permissions (/client/internal)
 - Granular permissions extended: catalog, kyc, grading, dataroom, magazine, auditeurs externes (migration 101)
 - Advisory sub-pages launched: /advisory/technology, /advisory/strategy, /advisory/ma
 - Talent platform launched: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
 - Magazine Issue 01 web reader + flipbook published
 - Annual report pages: /magazine/report, /magazine/report/2027
 - AI Usage Terms page: /terms/ai-usage
-- Expert profile + subscription (€89/month) hidden pending product decision
-- All LLM/SEO files updated: /auction → /transact, Subblink URL corrected
 
 ---
 
-Last updated: September 3, 2026
-Version: 2.3
+Last updated: September 7, 2026
+Version: 2.4

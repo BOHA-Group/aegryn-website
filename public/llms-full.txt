@@ -1,5 +1,5 @@
 # Aegryn — Full LLM Context File
-> https://aegryn.com | Updated: 2026-09-03
+> https://aegryn.com | Updated: 2026-09-07
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -40,6 +40,12 @@ Aegryn designs, funds and operates its own portfolio of digital assets AND build
 - Primiom (https://primiom.com) — B2C PropTech, AI-assisted real estate across Europe
 - Movtoo (https://movtoo.com) — B2C on-demand urban delivery for individuals and businesses
 - Hobconnect (https://hobconnect.com) — B2C social network around shared passions
+- CIFSO Protocol — Algorithmic asset certification protocol. 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms.
+- Compliance Engine — Automated regulatory compliance engine. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
+- KYB/KYC Engine — Business onboarding and identity verification. KYB, beneficial owners, sanctions, credentials. Licensable.
+- Data Room — Secure M&A data room. RLS, watermarking, audit trail. Licensable to M&A boutiques.
+
+Pages: /assets (core proprietary ecosystem), /portfolio (group participations)
 
 **Custom build for third parties** (Asset Engineering service):
 - Fixed price contract at discovery — no scope creep
@@ -195,7 +201,7 @@ Pages:
 
 ## Compliance & Geography
 
-Headquarters: St-Sulpice, Switzerland (VD) — Coordinates: 46.5147, 6.5600
+Headquarters: Saint-Sulpice, Switzerland (VD) — Coordinates: 46.5147, 6.5600
 Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
 Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
 Incorporated: BOHA-Group Sàrl
@@ -240,7 +246,8 @@ Incorporated: BOHA-Group Sàrl
 | Talent | /fr/talent | Executive recruitment |
 | Experts | /fr/experts | Expert network |
 | Network | /fr/network | Partner certifications |
-| Assets | /fr/assets | Proprietary portfolio |
+| Assets | /fr/assets | Proprietary ecosystem (6 core assets) |
+| Portfolio | /fr/portfolio | Group participations |
 | Build Services | /fr/services/build | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
 | Magazine | /fr/magazine | Magazine hub |

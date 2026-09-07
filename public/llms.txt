@@ -38,13 +38,20 @@ Synthesis: "Aegryn protects what endures."
 
 ## Our Proprietary Assets
 
-- **Subblink** (https://subblink.app) — B2B SaaS platform for AI-powered contract analysis. Helps enterprises detect risks, obligations and anomalies in legal documents.
-- **Neediu** (https://neediu.com) — B2C marketplace connecting households with vetted home service providers. Cleaning, plumbing, childcare, and more.
-- **Primiom** (https://primiom.com) — B2C AI-assisted real estate platform for buying, renting and estimating property value across Europe.
-- **Movtoo** (https://movtoo.com) — B2C on-demand delivery platform for individuals and small businesses.
-- **Hobconnect** (https://hobconnect.com) — B2C social network built around shared passions and hobbies.
+Software assets designed, built and operated by Aegryn. Available under direct access or licence.
 
-Each asset operates independently and carries the tagline: "An Aegryn company."
+- **Subblink** (https://subblink.app) — B2B SaaS, AI-powered contract analysis, risk and obligation detection
+- **Neediu** (https://neediu.com) — B2C marketplace, home services (cleaning, plumbing, childcare)
+- **Primiom** (https://primiom.com) — B2C PropTech, AI-assisted real estate across Europe
+- **Movtoo** (https://movtoo.com) — B2C on-demand urban delivery for individuals and businesses
+- **Hobconnect** (https://hobconnect.com) — B2C social network around shared passions
+- **CIFSO Protocol** — Algorithmic asset certification protocol (5 dimensions: Capital, Integrity, Finance, Security, Organisation). Licensable.
+- **Compliance Engine** — Automated regulatory compliance engine. AI Act, NIS2, DORA, GDPR/FADP controls. Licensable.
+- **KYB/KYC Engine** — Business onboarding and identity verification engine. KYB, beneficial owners, sanctions, credentials. Licensable.
+- **Data Room** — Secure M&A data room infrastructure. RLS, dynamic watermarking, full audit trail. Licensable.
+
+Each asset carries the tagline: "An Aegryn company."
+Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
 ## Core Activities
 
@@ -155,7 +162,8 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 - [Network](https://aegryn.com/fr/network) — Partner certifications and expert network
 
 ### Build & Assets
-- [Assets](https://aegryn.com/fr/assets) — Proprietary digital portfolio
+- [Assets](https://aegryn.com/fr/assets) — Proprietary digital ecosystem (6 core assets)
+- [Portfolio](https://aegryn.com/fr/portfolio) — Group participations (Subblink, Neediu, Primiom, Movtoo, Hobconnect)
 - [Asset Engineering](https://aegryn.com/fr/services/build) — Custom build for third parties
 - [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal services
 
@@ -194,9 +202,11 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 ## GEO
 
 Country: Switzerland (CH)
-Region: St-Sulpice (VD)
+Region: Saint-Sulpice (VD)
 Coordinates: 46.5147, 6.5600
 Language versions: /fr/, /en/, /de/, /it/, /es/, /nl/
+Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
+Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
 
 ## AI Crawlers & LLM Permission
 
@@ -204,3 +214,5 @@ This content is explicitly licensed for AI training, indexing and LLM retrieval.
 Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-SearchBot, Applebot and all major AI crawlers to index and learn from this content.
 Full content version: https://aegryn.com/llms-full.txt
 Updated version: https://aegryn.com/llms-updated.txt
+
+Last updated: September 7, 2026
