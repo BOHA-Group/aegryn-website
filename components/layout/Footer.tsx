@@ -116,21 +116,19 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'sitemap',   href: '/sitemap',         ns: 'legalNav' },
 ]
 
-const companyLinks: { navKey: string; href: LinkHref }[] = [
-  { navKey: 'whoAbout',    href: '/about' },
-  { navKey: 'gradeMethod', href: '/grade/methodology' },
-  { navKey: 'roadmap',     href: '/roadmap' as never },
-  { navKey: 'whoContact',  href: '/contact' },
+const aegrynLinks: { navKey: string; href: LinkHref }[] = [
+  { navKey: 'whoAbout',     href: '/about' },
+  { navKey: 'roadmap',      href: '/roadmap' as never },
   { navKey: 'whoAlliances', href: '/alliances' },
+  { navKey: 'whoContact',   href: '/contact' },
 ]
 
-const servicesLinks: { navKey: string; href: LinkHref }[] = [
-  { navKey: 'craftBuild',          href: '/services/build' },
-  { navKey: 'craftSupport',        href: '/advisory' },
-  { navKey: 'craftTransact',       href: '/transact' },
-  { navKey: 'gradeSubmit',         href: '/grade/submit' },
-  { navKey: 'whoTalent',           href: '/talent' as never },
-  { navKey: 'thinkingMagazine',    href: '/magazine' },
+const accompagnementLinks: { navKey: string; href: LinkHref }[] = [
+  { navKey: 'craftSupport',  href: '/advisory' },
+  { navKey: 'craftBuild',    href: '/services/build' },
+  { navKey: 'craftTransact', href: '/transact' },
+  { navKey: 'gradeSubmit',   href: '/grade/submit' },
+  { navKey: 'whoTalent',     href: '/talent' as never },
 ]
 
 export default function Footer() {
@@ -141,10 +139,10 @@ export default function Footer() {
   return (
     <footer className="bg-ag-navy border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-10">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="grid gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
 
           {/* Brand */}
-          <div className="col-span-full lg:col-span-1">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Image
               src="/images/logo-aegryn.png"
               alt="Aegryn"
@@ -169,13 +167,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Entreprise */}
+          {/* Col 1 — Aegryn (institutionnel) */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('companyLabel')}
+              {t('footerCol1Title')}
             </p>
             <ul className="space-y-2.5">
-              {companyLinks.map(({ navKey, href }) => (
+              {aegrynLinks.map(({ navKey, href }) => (
                 <li key={navKey}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
                     {tNav(navKey)}
@@ -185,13 +183,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Col 2 — Accompagnement (services) */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('servicesLabel')}
+              {t('footerCol2Title')}
             </p>
             <ul className="space-y-2.5">
-              {servicesLinks.map(({ navKey, href }) => (
+              {accompagnementLinks.map(({ navKey, href }) => (
                 <li key={navKey}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
                     {tNav(navKey)}
@@ -201,10 +199,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Nos solutions */}
+          {/* Col 3 — Plateforme (outils) */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('col2Title')}
+              {t('footerCol3Title')}
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -230,10 +228,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Nos convictions */}
+          {/* Col 4 — Publications (éditorial) */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
-              {t('col3Title')}
+              {t('footerCol4Title')}
             </p>
             <ul className="space-y-2.5">
               <li>
