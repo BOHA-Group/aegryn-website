@@ -125,7 +125,6 @@ export default async function MagazineHubPage({ params }: Props) {
                   labelDownloadPdf={tHub('downloadPdf')}
                   labelSubscribe={tHub('subscribe')}
                   labelComingSoon={tHub('comingSoon')}
-                  labelDesc={tHub('issue01Desc')}
                   isPublic={flags[`magazine_issue_${pad(featuredIssue.number)}_public`] ?? false}
                   isPreview={isPreview}
                 />

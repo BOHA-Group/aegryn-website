@@ -59,7 +59,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
               <div style={{ paddingBottom: 52 }}>
                 <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
                 <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
-                <div style={{ fontSize: 17, fontWeight: 400, letterSpacing: '0.02em', color: '#fff', lineHeight: 1.3, maxWidth: 290 }}>{labelDesc ?? "The anatomy of enterprise assets that sell and those that don't."}</div>
+                <div style={{ fontSize: 17, fontWeight: 400, letterSpacing: '0.02em', color: '#fff', lineHeight: 1.3, maxWidth: 290 }}>The anatomy of enterprise assets that sell and those that don&apos;t.</div>
               </div>
             </div>
             {/* QR code */}
