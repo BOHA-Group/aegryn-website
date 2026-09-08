@@ -7,16 +7,17 @@ import type { MagazineIssue, IssueStat } from '@/lib/magazine/types'
 import { useCoverReveal } from '../hooks/useCoverReveal'
 
 interface Props {
-  issue:     MagazineIssue
-  _stats?:   IssueStat[]
-  ctaScroll: string
+  issue:      MagazineIssue
+  _stats?:    IssueStat[]
+  ctaScroll:  string
+  labelDesc?: string
 }
 
 /**
  * Cover section — style Salford / magazine print cover.
  * Dark background, AEGRYN massive, accent tagline, theme text.
  */
-export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { locale?: string }) {
+export function CoverSection({ issue, ctaScroll, labelDesc, locale = 'fr' }: Props & { locale?: string }) {
   const ref      = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
@@ -108,7 +109,7 @@ export function CoverSection({ issue, ctaScroll, locale = 'fr' }: Props & { loca
           className="font-sans uppercase text-white leading-snug mb-8"
           style={{ fontSize: '10px', letterSpacing: '0.07em' }}
         >
-          The anatomy of enterprise assets that sell and those that don&apos;t.
+          {labelDesc ?? "The anatomy of enterprise assets that sell and those that don't."}
         </p>
 
         {/* ── Deux CTAs style Barnes ── */}

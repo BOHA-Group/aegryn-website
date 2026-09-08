@@ -8,6 +8,7 @@ interface Props {
   labelDownloadPdf?:  string
   labelSubscribe?:    string
   labelComingSoon?:   string
+  labelDesc?:         string
   isPublic?:          boolean
   isPreview?:         boolean
 }
@@ -16,7 +17,7 @@ interface Props {
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', isPublic = false, isPreview = false }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', labelDesc, isPublic = false, isPreview = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
@@ -58,7 +59,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
               <div style={{ paddingBottom: 52 }}>
                 <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 5 }}>Built</div>
                 <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.02em', color: '#fff', lineHeight: 1.0, marginBottom: 9 }}>to Last.</div>
-                <div style={{ fontSize: 17, fontWeight: 400, letterSpacing: '0.02em', color: '#fff', lineHeight: 1.3, maxWidth: 290 }}>The anatomy of enterprise assets that sell and those that don&apos;t.</div>
+                <div style={{ fontSize: 17, fontWeight: 400, letterSpacing: '0.02em', color: '#fff', lineHeight: 1.3, maxWidth: 290 }}>{labelDesc ?? "The anatomy of enterprise assets that sell and those that don't."}</div>
               </div>
             </div>
             {/* QR code */}
