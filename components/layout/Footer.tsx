@@ -223,7 +223,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/grade/methodology" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href="/transact" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2DataRoom')}
                 </Link>
               </li>

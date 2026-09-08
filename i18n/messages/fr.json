@@ -1551,9 +1551,9 @@
     "col1Transact": "Transaction M&A",
     "col2Title": "Nos solutions",
     "col2Subblink": "Intelligence contractuelle",
-    "col2Code": "Certification blockchain",
+    "col2Code": "Protocole de certification CIFSO",
     "col2Grade": "Certification CIFSO",
-    "col2DataRoom": "Data Room",
+    "col2DataRoom": "Data Room & Due Diligence",
     "col2ViewAll": "Notre portfolio",
     "col3Title": "Nos convictions",
     "col3Magazine": "Magazine",
@@ -1597,7 +1597,7 @@
   "gradeShowcase": {
     "label": "Le système Aegryn Grade",
     "title": "Un actif sans grade\nest un actif sans prix.",
-    "desc": "Notre protocole de certification évalue chaque actif sur 4 dimensions : Code, IP & Droits, Finance, Sécurité. Un grade objectif, reproductible, opposable.",
+    "desc": "Notre protocole de certification évalue chaque actif sur 5 dimensions : Code, IP, Finance, Sécurité et Organisation. Un grade objectif, reproductible, opposable.",
     "cta": "Comprendre le système de grade",
     "exceptional": "Exceptionnel",
     "premium": "Premium",
@@ -1857,7 +1857,7 @@
       "items": [
         {
           "title": "Actifs certifiés, risque réduit",
-          "desc": "Chaque actif du pipeline a été audité sur 4 dimensions (C/I/F/S) avant d'y figurer. Vous négociez sur des grades vérifiés, pas sur des déclaratifs."
+          "desc": "Chaque actif du pipeline a été audité sur 5 dimensions CIFSO avant d'y figurer. Vous négociez sur des grades vérifiés, pas sur des déclaratifs."
         },
         {
           "title": "Off-market en priorité",
@@ -1987,7 +1987,7 @@
         "iconKey": "certification",
         "theme": "Certification",
         "title": "Certification CIFSO v4.0 : Protocole Aegryn Grade",
-        "desc": "Chaque actif est évalué sur 4 dimensions (Code, IP, Finance, Sécurité) avant toute mise en vente. Aucun actif non certifié n'est admis.",
+        "desc": "Chaque actif est évalué sur 5 dimensions CIFSO (Code, IP, Finance, Sécurité, Organisation) avant toute mise en vente. Aucun actif non certifié n'est admis.",
         "live": true
       },
       {
@@ -2269,7 +2269,7 @@
         {
           "num": "02",
           "title": "Analyse",
-          "desc": "Accès data room. Évaluation sur 4 dimensions par nos analystes certifiés."
+          "desc": "Accès data room. Évaluation sur 5 dimensions CIFSO par nos analystes certifiés."
         },
         {
           "num": "03",
@@ -2348,23 +2348,23 @@
   "gradingSystem": {
     "meta": {
       "title": "Système de Certification : Protocole CIFSO v4.0",
-      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Code, IP, Finance, Security, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
+      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
     "label": "Aegryn | Système de Certification",
     "version": "2026",
     "title": "Aegryn\nSystème de Certification.",
-    "intro": "Aegryn certifie les actifs tech selon le protocole CIFSO v4.0 : cinq dimensions indépendantes, un score sur 100, un grade opposable. Transparence totale sur la méthode, traçabilité complète du rapport.",
+    "intro": "Aegryn certifie les actifs tech selon le protocole CIFSO v4.0 : cinq dimensions indépendantes (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), un score sur 100, un grade opposable. Transparence totale sur la méthode, traçabilité complète du rapport.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
-    "cifsTitle": "Le cadre CIFSO v4.0 : cinq dimensions",
+    "cifsTitle": "Le cadre CIFSO v4.0 : cinq dimensions (C, I, F, S, O)",
     "cifsDesc": "Chaque actif est évalué selon cinq dimensions indépendantes : C, I, F, S, O. Chaque dimension est notée de 0 à 20 points. Le score total sur 100 détermine le grade. Aucune compensation inter-dimensionnelle n'est possible : une note insuffisante sur une dimension ne peut pas être rachetée par une excellente sur une autre.",
     "cifs": [
       {
         "code": "C",
-        "name": "Code",
-        "full": "Code Quality & Architecture",
+        "name": "Capital & IP",
+        "full": "Capital, IP & Architecture",
         "weight": "20 pts",
-        "desc": "Qualité du code source, couverture de tests, dette technique, documentation, sécurité de l'implémentation et architecture scalable. Revue par des ingénieurs seniors certifiés.",
+        "desc": "Qualité du code source, couverture de tests, dette technique, propriété intellectuelle, marque, data propriétaire. L'ensemble des actifs immatériels qui fondent la valeur transmissible. Revue par des ingénieurs seniors certifiés.",
         "criteria": [
           "Couverture tests ≥ 70%",
           "Dette technique documentée",
@@ -2375,10 +2375,10 @@
       },
       {
         "code": "I",
-        "name": "IP",
-        "full": "Intellectual Property & Moat",
+        "name": "Intégrité & Gouvernance",
+        "full": "Integrity, Legal & Compliance",
         "weight": "20 pts",
-        "desc": "Propriété intellectuelle, barrières à l'entrée, marques déposées, brevets, exclusivités contractuelles et différenciation durable sur le marché cible.",
+        "desc": "Structure juridique, cap table, conformité réglementaire, contrats clients et fournisseurs, litiges, IP chain, barrières à l'entrée et différenciation durable. La solidité légale et organisationnelle de l'entité.",
         "criteria": [
           "Marques déposées dans les juridictions cibles",
           "Absence de litiges IP actifs",
@@ -2389,7 +2389,7 @@
       },
       {
         "code": "F",
-        "name": "Finance",
+        "name": "Finances & Métriques",
         "full": "Financial Health & Traction",
         "weight": "20 pts",
         "desc": "Métriques financières clés : ARR, MRR, churn, LTV/CAC, burn rate, runway, marges et historique de croissance. Toutes les données sont auditées sur pièces.",
@@ -2403,8 +2403,8 @@
       },
       {
         "code": "S",
-        "name": "Security",
-        "full": "Security & Governance",
+        "name": "Sécurité & Souveraineté",
+        "full": "Security, Sovereignty & Resilience",
         "weight": "20 pts",
         "desc": "Conformité RGPD et LPD suisse, sécurité infrastructure, gestion des accès, audits de sécurité tiers, politique de divulgation des vulnérabilités et gouvernance des données.",
         "criteria": [
@@ -2417,8 +2417,8 @@
       },
       {
         "code": "O",
-        "name": "Organisation",
-        "full": "Organisation & Talent",
+        "name": "Organisation & Talent",
+        "full": "Organisation, Talent & Succession",
         "weight": "20 pts",
         "desc": "Structure humaine et gouvernance opérationnelle de l'actif. Dépendance fondateur, qualité de l'équipe dirigeante, plan de succession, documentation des processus et capacité de transfert. Une entreprise trop dépendante de son fondateur se négocie systématiquement 20 à 30% en dessous de sa valeur intrinsèque.",
         "criteria": [
