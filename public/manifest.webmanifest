@@ -1,7 +1,7 @@
 {
-  "name": "Aegryn — Swiss Tech Asset Builder",
+  "name": "Aegryn — Swiss Advisory Firm",
   "short_name": "Aegryn",
-  "description": "Proprietary digital ecosystems engineered to last. Swiss Tech Asset Builder.",
+  "description": "Aegryn helps founders, boards and investors create, document and realise the value of their organisation. Strategy, CIFSO v4.0 certified transactions, expert network and Aegryn Magazine. Switzerland & Europe.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F8FAFC",
@@ -10,6 +10,12 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "categories": ["business", "technology", "finance"],
+  "shortcuts": [
+    { "name": "Valorisation", "url": "/fr/valuation", "description": "Outil de valorisation illustratif gratuit" },
+    { "name": "Transact", "url": "/fr/transact", "description": "Plateforme de transactions certifiées" },
+    { "name": "Aegryn Grade", "url": "/fr/grade", "description": "Certification CIFSO v4.0" },
+    { "name": "Contact", "url": "/fr/contact", "description": "Nous contacter" }
+  ],
   "icons": [
     { "src": "/favicon-32x32.png",  "sizes": "32x32",   "type": "image/png" },
     { "src": "/favicon-180x180.png","sizes": "180x180",  "type": "image/png" },

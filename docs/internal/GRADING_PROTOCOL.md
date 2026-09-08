@@ -1,18 +1,20 @@
-# GRADING_PROTOCOL, CIFS v1.0
+# GRADING_PROTOCOL, CIFSO v4.0
 
-> **Audience:** Internal, Aegryn team + certified CIFS partners  
+> **Audience:** Internal, Aegryn team + certified CIFSO partners  
 > **Confidentiality:** Scoring weights are proprietary, never publish them.  
 > **Implementation:** `lib/gradeEngine.ts` (admin-only, never imported client-side)  
-> **Last updated:** 2026-08
+> **Last updated:** 2026-09
 
 ---
 
 ## 1. Protocol Overview
 
-**CIFS** stands for **Code · IP · Finance · Security**.
+**CIFSO** stands for **Capital & IP · Integrity & Governance · Finance & Metrics · Security & Sovereignty · Organisation & Talent**.
 
-Each dimension is scored 0–25. Maximum total: 100 points.
+Each of the 5 dimensions is scored 0 to 20. Maximum total: 100 points.
 The final grade is derived from the total score, subject to automatic refusal triggers.
+
+Version 4.0 adds the O (Organisation) dimension and reformulates C and I to reflect the expanded scope beyond pure code/IP.
 
 ---
 
@@ -31,7 +33,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 3. Dimension C, Code & Architecture (25 pts)
+## 3. Dimension C, Capital & IP (20 pts)
 
 ### Evaluated criteria (qualitative, weights are internal)
 - Test coverage
@@ -54,7 +56,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 4. Dimension I, IP & Rights (25 pts)
+## 4. Dimension I, Integrity & Governance (20 pts)
 
 ### Evaluated criteria
 - Trademark registrations (number of jurisdictions)
@@ -76,7 +78,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 5. Dimension F, Finance (25 pts)
+## 5. Dimension F, Finance & Metrics (20 pts)
 
 ### Evaluated criteria
 - ARR level and revenue track record length
@@ -98,7 +100,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 6. Dimension S, Security (25 pts)
+## 6. Dimension S, Security & Sovereignty (20 pts)
 
 ### Evaluated criteria
 - Last external pentest recency
@@ -121,18 +123,40 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 7. Subcode System
+## 7. Dimension O, Organisation & Talent (20 pts)
+
+### Evaluated criteria
+- Founder dependency: % of commercial deals led by founder
+- Signing delegation: N-1 capable of signing without founder
+- Revenue at risk if founder departs
+- Operational documentation completeness
+- Succession plan documented
+- Key-person risk across C-suite
+- Talent retention rate (annualised)
+- Board / governance maturity
+
+### Automatic refusal triggers
+1. All 5 founder dependency criteria triggered simultaneously
+2. Zero operational documentation AND no succession plan
+
+### Supporting documents
+`O-01` Org chart, `O-02` Succession plan, `O-03` Employment contracts (key staff)  
+`O-04` Delegation of authority matrix, `O-05` Operational runbook, `O-06` Retention data
+
+---
+
+## 8. Subcode System
 
 Each certified asset receives a set of subcodes per dimension (e.g. `C-11`, `C-17`, `S-23`).
 These are internal granularity tags, displayed in Antiquorum-style notation on lot sheets.
 They do not change the total score calculation.
 
 Mapping logic: `lib/docToSubcodeMap.ts` (admin-only)  
-DB columns: `subcodes_code`, `subcodes_ip`, `subcodes_finance`, `subcodes_security` on `assets` table
+DB columns: `subcodes_code`, `subcodes_ip`, `subcodes_finance`, `subcodes_security`, `subcodes_org` on `assets` table
 
 ---
 
-## 8. Certification Output
+## 9. Certification Output
 
 Upon completion, the grade engine produces:
 - `totalScore` (0–100)
@@ -143,9 +167,9 @@ Upon completion, the grade engine produces:
 
 ---
 
-## 9. Eligibility Rules
+## 10. Eligibility Rules
 
-- Minimum grade to enter the catalogue: **B** (score ≥ 30, no auto-refusal)
+- Minimum grade to enter the catalogue: **B** (score >= 30, no auto-refusal)
 - `refused` assets receive a formal rejection with listed reasons
-- Grading version is stored in `grading_version` column (current: `1.0`)
+- Grading version is stored in `grading_version` column (current: `4.0`)
 - Re-certification possible after remediation, new assessment created, history preserved

@@ -145,6 +145,13 @@ Conclusion: no technical path exists for Supabase to call these routes, and no o
 
 ---
 
+### D-019, Protocol rename: CIFS → CIFSO v4.0 + 5th dimension Organisation
+**Date:** 2026-09-08  
+**Decision:** The grading protocol is renamed from CIFS to CIFSO v4.0. The 5th dimension O (Organisation & Talent) is officially added: founder dependency, succession plan, signing delegation, operational docs, key-person risk, talent retention, board maturity. Each dimension is now scored 0 to 20 pts (total /100) instead of 0 to 25. The public valuation calculator is confirmed as a light illustrative tool only, not a substitute for official Aegryn certification. Certification is mandatory for any certified transaction via Aegryn Transact. Updated: `docs/internal/GRADING_PROTOCOL.md`, `docs/CIFS_STANDARDS_MAPPING.md` (renamed to CIFSO), all 6 i18n files (`disclaimer`), `sitemap.ts`, `lib/seo.ts`, `app/robots.ts`, `public/manifest.webmanifest`, `public/humans.txt`, `public/llms.txt`, `public/llms-full.txt`, `public/llms-updated.txt`.  
+**Status:** Implemented — commit b88813c + current batch
+
+---
+
 ## Pending Decisions
 
 | # | Topic | Context | Due |

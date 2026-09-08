@@ -1,11 +1,12 @@
-# AEGRYN CIFS Standards Mapping, v3.0 (Août 2026)
+# AEGRYN CIFSO Standards Mapping, v4.0 (Septembre 2026)
 
 > Document éditorial interne, NE PAS exposer publiquement.  
-> Référence : `lib/gradingSystem.ts` (source de vérité des sous-codes) et `lib/gradeEngine.ts` (logique de scoring).
+> Référence : `lib/gradingSystem.ts` (source de vérité des sous-codes) et `lib/gradeEngine.ts` (logique de scoring).  
+> Protocole : CIFSO v4.0 (5 dimensions : Capital, Integrity, Finance, Security, Organisation). Chaque dimension 0-20 pts, total /100.
 
 ---
 
-## 1. Vue d'ensemble des améliorations CIFS v3.0
+## 1. Vue d'ensemble des améliorations CIFSO v4.0
 
 | Amélioration | Impact scoring | Fichiers modifiés |
 |---|---|---|
@@ -15,6 +16,7 @@
 | F-42 Founder Dependency Score (5 critères objectifs) | Pénalité -1/-2/-3 pts sur F | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
 | S-16 Qualification pentest (OWASP/PTES + OSCP/CREST) | Bonus +1 pt méthodo + +1 pt cert (max 7 pts pentest) | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx`, `route.ts` |
 | Renommage I-27→I-40, I-28→I-41, I-29→I-42 | Éditorial uniquement, 0 impact scoring | `gradingSystem.ts`, `docToSubcodeMap.ts` |
+| Dimension O (Organisation & Talent) ajoutée | 5e dimension 0-20 pts, F-42 migré sur O, sous-codes O-01→O-06 | `gradingSystem.ts`, `gradeEngine.ts`, `GradeEngineForm.tsx` |
 
 ---
 
@@ -26,8 +28,8 @@
 | `verifiable` | Au moins une donnée vérifiable par tiers (export certifié, URL) | **AAA** (★ non accessible) |
 | `audited` | Au moins une donnée auditée par tiers indépendant (CAC, expert certifié) | **★** (aucun plafond) |
 
-> **Règle** : le plafond global est le **minimum** des plafonds des 4 dimensions (C/I/F/S).  
-> Exemple : C=audited, I=audited, F=verifiable, S=declarative → plafond = AA.
+> **Règle** : le plafond global est le **minimum** des plafonds des 5 dimensions (C/I/F/S/O).  
+> Exemple : C=audited, I=audited, F=verifiable, S=declarative, O=audited → plafond = AA.
 
 ---
 
@@ -111,10 +113,10 @@ Le score pentest est désormais en deux temps :
 
 | Fichier | Nature des changements |
 |---|---|
-| `lib/gradingSystem.ts` | Version 3.0, I-27→I-40, I-28→I-41, I-29→I-42, nouveaux I-27/I-28/I-29 (RGPD Transfer), F-11a/b/c, F-42 reformaté, S-16 enrichi, `ProofQuality` type + `capAegByProofQuality()` |
-| `lib/gradeEngine.ts` | `ArrAuditLevel`, `FounderDependencyInput`, `PentestMethodology`, `PentestAuditorCert`, `rgpdTransferReadiness`, `proofQualities` dans `GradeInput`, `gradeCeiling` dans `GradeResult`, scoring mis à jour |
-| `lib/docToSubcodeMap.ts` | `I-28→I-41` dans `onMissing`, `arrAudited: 'yes'→'audited'` |
+| `lib/gradingSystem.ts` | Version 4.0, I-27→I-40, I-28→I-41, I-29→I-42, nouveaux I-27/I-28/I-29 (RGPD Transfer), F-11a/b/c, F-42 migré sur O, S-16 enrichi, O-01→O-06 sous-codes, `ProofQuality` type + `capAegByProofQuality()` |
+| `lib/gradeEngine.ts` | `ArrAuditLevel`, `FounderDependencyInput` (migré dimension O), `PentestMethodology`, `PentestAuditorCert`, `rgpdTransferReadiness`, `proofQualities` dans `GradeInput`, `gradeCeiling` dans `GradeResult`, scoring 5 dimensions mis à jour |
+| `lib/docToSubcodeMap.ts` | `I-28→I-41` dans `onMissing`, `arrAudited: 'yes'→'audited'`, O-01→O-06 |
 | `lib/gradeAutoFill.ts` | Cast `ArrAuditLevel` |
-| `app/api/…/grade-engine/route.ts` | Zod schemas : `arrAudited`, `founderDependencySchema`, pentest/rgpd champs optionnels, `proofQualityDimensionSchema` |
-| `app/admin/…/GradeEngineForm.tsx` | Sélecteur 3 niveaux ARR, section F-42 checkboxes, champs S-16 + I-27, section proof_quality avec plafond live, sous-codes F-11a/b/c, S-16, affichage `gradeCeiling` |
-| `docs/CIFS_STANDARDS_MAPPING.md` | Ce document |
+| `app/api/.../grade-engine/route.ts` | Zod schemas : `arrAudited`, `founderDependencySchema` (dimension O), pentest/rgpd champs optionnels, `proofQualityDimensionSchema` |
+| `app/admin/.../GradeEngineForm.tsx` | Sélecteur 3 niveaux ARR, section O (Organisation) checkboxes F-42, champs S-16 + I-27, section proof_quality avec plafond live, sous-codes F-11a/b/c, S-16, O-01→O-06, affichage `gradeCeiling` |
+| `docs/CIFSO_STANDARDS_MAPPING.md` | Ce document (renommé depuis CIFS_STANDARDS_MAPPING.md) |

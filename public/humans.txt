@@ -7,8 +7,8 @@ Location: Switzerland
 Built with Next.js, Tailwind CSS, GSAP and next-intl.
 
 /* SITE */
-Last update: 2026/05
+Last update: 2026/09
 Language: FR / EN / DE / IT / ES / NL
 Doctype: HTML5
 IDE: Windsurf
-Standards: W3C, Schema.org, Open Graph, hreflang, WCAG 2.1 AA
+Standards: W3C, Schema.org, Open Graph, hreflang, WCAG 2.1 AA, CIFSO v4.0
