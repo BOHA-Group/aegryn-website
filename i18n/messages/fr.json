@@ -2228,7 +2228,7 @@
       }
     ],
     "dimensions": {
-      "label": "Le protocole CIFSO — 5 dimensions",
+      "label": "Le protocole CIFSO : 5 dimensions",
       "title": "Un grade, cinq vérités.",
       "items": [
         {
@@ -2315,7 +2315,7 @@
         }
       ],
       "scoringLabel": "Système de notation",
-      "scoringDesc": "Chaque dimension est notée de 0 à 25 points. Le total détermine le grade selon une grille publiée.",
+      "scoringDesc": "Chaque dimension est notée de 0 à 20 points. Le total sur 100 détermine le grade selon une grille publiée.",
       "scores": [
         {
           "range": "90–100",
@@ -2347,23 +2347,23 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Système de Certification : Protocole Aegryn Grade",
-      "desc": "Le protocole Aegryn Grade : grille CIFSO v4.0, définitions des grades AEG ★ à AEG B, sous-codes, processus d'analyse et principes d'indépendance."
+      "title": "Système de Certification : Protocole CIFSO v4.0",
+      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Code, IP, Finance, Security, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
     "label": "Aegryn | Système de Certification",
     "version": "2026",
     "title": "Aegryn\nSystème de Certification.",
-    "intro": "Aegryn introduit son propre système de certification pour les actifs tech, avec une transparence totale sur les 4 dimensions fondamentales de la valeur.",
+    "intro": "Aegryn certifie les actifs tech selon le protocole CIFSO v4.0 : cinq dimensions indépendantes, un score sur 100, un grade opposable. Transparence totale sur la méthode, traçabilité complète du rapport.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
-    "cifsTitle": "Le cadre CIFSO v4.0",
-    "cifsDesc": "Chaque actif est évalué selon quatre dimensions indépendantes, notées chacune de 0 à 25 points. Le score total sur 100 détermine le grade.",
+    "cifsTitle": "Le cadre CIFSO v4.0 : cinq dimensions",
+    "cifsDesc": "Chaque actif est évalué selon cinq dimensions indépendantes : C, I, F, S, O. Chaque dimension est notée de 0 à 20 points. Le score total sur 100 détermine le grade. Aucune compensation inter-dimensionnelle n'est possible : une note insuffisante sur une dimension ne peut pas être rachetée par une excellente sur une autre.",
     "cifs": [
       {
         "code": "C",
         "name": "Code",
         "full": "Code Quality & Architecture",
-        "weight": "25 pts",
+        "weight": "20 pts",
         "desc": "Qualité du code source, couverture de tests, dette technique, documentation, sécurité de l'implémentation et architecture scalable. Revue par des ingénieurs seniors certifiés.",
         "criteria": [
           "Couverture tests ≥ 70%",
@@ -2377,7 +2377,7 @@
         "code": "I",
         "name": "IP",
         "full": "Intellectual Property & Moat",
-        "weight": "25 pts",
+        "weight": "20 pts",
         "desc": "Propriété intellectuelle, barrières à l'entrée, marques déposées, brevets, exclusivités contractuelles et différenciation durable sur le marché cible.",
         "criteria": [
           "Marques déposées dans les juridictions cibles",
@@ -2391,7 +2391,7 @@
         "code": "F",
         "name": "Finance",
         "full": "Financial Health & Traction",
-        "weight": "25 pts",
+        "weight": "20 pts",
         "desc": "Métriques financières clés : ARR, MRR, churn, LTV/CAC, burn rate, runway, marges et historique de croissance. Toutes les données sont auditées sur pièces.",
         "criteria": [
           "ARR documenté sur 24 mois minimum",
@@ -2405,7 +2405,7 @@
         "code": "S",
         "name": "Security",
         "full": "Security & Governance",
-        "weight": "25 pts",
+        "weight": "20 pts",
         "desc": "Conformité RGPD et LPD suisse, sécurité infrastructure, gestion des accès, audits de sécurité tiers, politique de divulgation des vulnérabilités et gouvernance des données.",
         "criteria": [
           "Conformité RGPD / LPD documentée",
@@ -2413,6 +2413,20 @@
           "Chiffrement des données au repos et en transit",
           "Audit de sécurité tiers dans les 18 derniers mois",
           "Politique de gestion des incidents documentée"
+        ]
+      },
+      {
+        "code": "O",
+        "name": "Organisation",
+        "full": "Organisation & Talent",
+        "weight": "20 pts",
+        "desc": "Structure humaine et gouvernance opérationnelle de l'actif. Dépendance fondateur, qualité de l'équipe dirigeante, plan de succession, documentation des processus et capacité de transfert. Une entreprise trop dépendante de son fondateur se négocie systématiquement 20 à 30% en dessous de sa valeur intrinsèque.",
+        "criteria": [
+          "Dépendance fondateur ≤ 50% du CA (F-42)",
+          "Au moins un N-1 capable de signer sans le fondateur",
+          "Processus opérationnels documentés (runbooks, SOPs)",
+          "Plan de succession formalisé pour les postes clés",
+          "Culture et rétention : turnover ≤ 15% / an sur 2 ans"
         ]
       }
     ],
@@ -2422,7 +2436,7 @@
       {
         "grade": "AEG ★",
         "label": "Exceptionnel",
-        "range": "90–100 / 100",
+        "range": "90 a 100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% des actifs certifiés",
         "profile": "Actif d'exception. Architecture de référence, IP forte, métriques financières top décile, conformité parfaite. Éligible aux transactions institutionnelles.",
@@ -2431,97 +2445,107 @@
           "C-01",
           "I-01",
           "F-01",
-          "S-01"
+          "S-01",
+          "O-01"
         ],
         "dimensionRationale": {
           "C": "Code niveau 1 : couverture tests >90%, CI/CD mature, dette technique quasi nulle, architecture scalable documentée.",
           "I": "IP niveau 1 : marques déposées dans 3+ juridictions, droits logiciels intégralement cédés, aucun litige, moat clair.",
           "F": "Finance niveau 1 : ARR audité >2M€, NRR >120%, churn <1%, marges >75%, croissance YoY >40%.",
-          "S": "Sécurité niveau 1 : pentest <6 mois sans vulnérabilité critique, MFA complet, chiffrement bout-en-bout, conformité RGPD/LPD documentée."
+          "S": "Sécurité niveau 1 : pentest <6 mois sans vulnérabilité critique, MFA complet, chiffrement bout-en-bout, conformité RGPD/LPD documentée.",
+          "O": "Organisation niveau 1 : dépendance fondateur ≤20% du CA, N-1 autonome sur 2 fonctions clés, plan de succession documenté, turnover <10%."
         }
       },
       {
         "grade": "AAA",
         "label": "Excellent",
-        "range": "75–89 / 100",
+        "range": "75 a 89 / 100",
         "color": "#C9A84C",
-        "rarity": "10–15% des actifs certifiés",
-        "profile": "Actif de haute qualité avec des fondamentaux solides dans l'ensemble des quatre dimensions. Quelques axes d'amélioration documentés mais non bloquants.",
+        "rarity": "10 a 15% des actifs certifiés",
+        "profile": "Actif de haute qualité avec des fondamentaux solides dans les cinq dimensions. Quelques axes d'amélioration documentés mais non bloquants.",
         "typical": "SaaS ARR > 500K€, croissance > 30% YoY, dette technique maîtrisée, conformité RGPD complète.",
         "subcodes": [
           "C-01, C-02",
           "I-01, I-02",
           "F-01, F-02",
-          "S-01, S-02"
+          "S-01, S-02",
+          "O-01, O-02"
         ],
         "dimensionRationale": {
-          "C": "Code niveau 1–2 : tests solides (>70%), dette technique mineure documentée, CI/CD fonctionnel.",
-          "I": "IP niveau 1–2 : marque déposée, droits formalisés, réserves mineures possibles sur licences tierces.",
-          "F": "Finance niveau 1–2 : ARR audité >500K€, NRR >100%, croissance >25% YoY, marges >60%.",
-          "S": "Sécurité niveau 1–2 : pentest <12 mois, MFA actif, conformité RGPD substantielle."
+          "C": "Code niveau 1 a 2 : tests solides (>70%), dette technique mineure documentée, CI/CD fonctionnel.",
+          "I": "IP niveau 1 a 2 : marque déposée, droits formalisés, réserves mineures possibles sur licences tierces.",
+          "F": "Finance niveau 1 a 2 : ARR audité >500K€, NRR >100%, croissance >25% YoY, marges >60%.",
+          "S": "Sécurité niveau 1 a 2 : pentest <12 mois, MFA actif, conformité RGPD substantielle.",
+          "O": "Organisation niveau 1 a 2 : dépendance fondateur <35%, au moins un N-1 en place, documentation opérationnelle partielle."
         }
       },
       {
         "grade": "AA",
         "label": "Solide",
-        "range": "60–74 / 100",
+        "range": "60 a 74 / 100",
         "color": "#9BA8B0",
-        "rarity": "25–30% des actifs certifiés",
+        "rarity": "25 a 30% des actifs certifiés",
         "profile": "Actif de qualité correcte avec des points forts identifiés et des axes d'amélioration clairement documentés. Éligible au processus de cession standard.",
         "typical": "SaaS en croissance, quelques lacunes en tests ou conformité, IP en cours de consolidation.",
         "subcodes": [
           "C-02, C-03",
           "I-02, I-03",
           "F-02, F-03",
-          "S-02, S-03"
+          "S-02, S-03",
+          "O-02, O-03"
         ],
         "dimensionRationale": {
-          "C": "Code niveau 2–3 : tests partiels, dette technique identifiée et chiffrée, quelques axes d'amélioration documentés.",
-          "I": "IP niveau 2–3 : marque en cours ou déposée localement, droits partiellement formalisés.",
-          "F": "Finance niveau 2–3 : ARR documenté >12 mois, NRR proche de 100%, croissance stable.",
-          "S": "Sécurité niveau 2–3 : audit sécurité existant mais >12 mois, conformité RGPD partielle."
+          "C": "Code niveau 2 a 3 : tests partiels, dette technique identifiée et chiffrée, quelques axes d'amélioration documentés.",
+          "I": "IP niveau 2 a 3 : marque en cours ou déposée localement, droits partiellement formalisés.",
+          "F": "Finance niveau 2 a 3 : ARR documenté >12 mois, NRR proche de 100%, croissance stable.",
+          "S": "Sécurité niveau 2 a 3 : audit sécurité existant mais >12 mois, conformité RGPD partielle.",
+          "O": "Organisation niveau 2 a 3 : dépendance fondateur identifiée et chiffrée, processus partiellement documentés."
         }
       },
       {
         "grade": "A",
         "label": "En développement",
-        "range": "45–59 / 100",
+        "range": "45 a 59 / 100",
         "color": "#4A90D9",
-        "rarity": "30–35% des actifs certifiés",
+        "rarity": "30 a 35% des actifs certifiés",
         "profile": "Actif en développement avec un potentiel identifiable mais des faiblesses structurelles à adresser. Éligible à l'Aegryn Review avec plan de remédiation.",
         "typical": "Produit en early traction, dette technique significative, métriques financières partiellement documentées.",
         "subcodes": [
           "C-03, C-04",
           "I-03, I-04",
           "F-03, F-04",
-          "S-03, S-04"
+          "S-03, S-04",
+          "O-03, O-04"
         ],
         "dimensionRationale": {
-          "C": "Code niveau 3–4 : dette technique significative, tests insuffisants, documentation à construire.",
-          "I": "IP niveau 3–4 : marque non déposée ou récente, droits à formaliser.",
-          "F": "Finance niveau 3–4 : traction précoce (<12 mois), métriques partiellement documentées.",
-          "S": "Sécurité niveau 3–4 : pas d'audit récent, conformité à construire."
+          "C": "Code niveau 3 a 4 : dette technique significative, tests insuffisants, documentation à construire.",
+          "I": "IP niveau 3 a 4 : marque non déposée ou récente, droits à formaliser.",
+          "F": "Finance niveau 3 a 4 : traction précoce (<12 mois), métriques partiellement documentées.",
+          "S": "Sécurité niveau 3 a 4 : pas d'audit récent, conformité à construire.",
+          "O": "Organisation niveau 3 a 4 : forte dépendance fondateur, équipe peu structurée, plan de succession inexistant."
         }
       },
       {
         "grade": "B",
         "label": "Émergent",
-        "range": "30–44 / 100",
+        "range": "30 a 44 / 100",
         "color": "#D4820A",
-        "rarity": "15–20% des actifs certifiés",
+        "rarity": "15 a 20% des actifs certifiés",
         "profile": "Actif early stage avec fondamentaux partiels. Certification accompagnée d'un rapport de remédiation détaillé. Non éligible à la cession sans amélioration.",
         "typical": "MVP ou produit pré-revenue, architecture non documentée, conformité à construire.",
         "subcodes": [
           "C-04",
           "I-04",
           "F-04",
-          "S-04"
+          "S-04",
+          "O-04"
         ],
         "dimensionRationale": {
           "C": "Code niveau 4 : architecture non documentée, dette technique non maîtrisée.",
           "I": "IP niveau 4 : aucune protection formalisée.",
           "F": "Finance niveau 4 : pre-revenue ou traction minimale.",
-          "S": "Sécurité niveau 4 : conformité inexistante, pas d'audit."
+          "S": "Sécurité niveau 4 : conformité inexistante, pas d'audit.",
+          "O": "Organisation niveau 4 : fondateur seul sur toutes les fonctions, aucune documentation, aucun plan de succession."
         }
       }
     ],
@@ -2579,12 +2603,12 @@
       {
         "num": "02",
         "title": "Analyse technique (Code + Security)",
-        "desc": "Revue du code par deux ingénieurs seniors certifiés Aegryn. Scan de sécurité automatisé suivi d'une revue manuelle des composants critiques. Durée : 5–10 jours."
+        "desc": "Revue du code par deux ingénieurs seniors certifiés Aegryn. Scan de sécurité automatisé suivi d'une revue manuelle des composants critiques. Durée : 5 a 10 jours."
       },
       {
         "num": "03",
-        "title": "Analyse commerciale (IP + Finance)",
-        "desc": "Audit des métriques financières sur pièces, vérification IP auprès des registres compétents (INPI, IGE/IPI, EUIPO). Entretien avec le fondateur. Durée : 5–10 jours."
+        "title": "Analyse IP + Finance + Organisation",
+        "desc": "Audit des métriques financières sur pièces, vérification IP auprès des registres compétents (INPI, IGE/IPI, EUIPO), évaluation de la structure organisationnelle et de la dépendance fondateur. Entretien structuré avec le fondateur et les managers clés. Durée : 5 a 10 jours."
       },
       {
         "num": "04",
@@ -2605,7 +2629,7 @@
       },
       {
         "title": "Reproductibilité",
-        "desc": "Deux analystes indépendants appliquant le protocole v2.1 doivent aboutir au même grade à ±1 sous-code près. Un écart supérieur déclenche une procédure d'arbitrage."
+        "desc": "Deux analystes indépendants appliquant le protocole v4.0 doivent aboutir au même grade à plus ou moins 1 sous-code près. Un écart supérieur déclenche une procédure d'arbitrage."
       },
       {
         "title": "Traçabilité",
@@ -2629,21 +2653,22 @@
       "Contentieux de marque actif (I-18) ou droits non formalisés sur un codebase produit par des tiers (I-21) → Refus dimension IP",
       "Vulnérabilités critiques non résolues (S-17) ou incident de sécurité en cours non résolu (S-37) → Refus dimension Sécurité",
       "Données financières non vérifiables malgré demande → Refus dimension Finance",
+      "Dépendance fondateur >80% du CA sans plan de mitigation (O-11) ou refus de l'entretien organisationnel → Refus dimension Organisation",
       "Refus de coopération lors de l'audit → Refus global de la certification"
     ],
     "maturityTitle": "Éligibilité au catalogue par maturité",
-    "maturityDesc": "Aegryn adapte ses critères d'évaluation selon la maturité de l'actif.",
+    "maturityDesc": "Aegryn adapte ses critères d'évaluation selon la maturité de l'actif sur les cinq dimensions CIFSO. Les seuils de la dimension O s'appliquent à tous les stades.",
     "maturityRules": [
       {
         "tier": "Pre-revenue / < 6 mois de traction",
         "rule": "Grade ★/AAA/AA impossible sur F. Grade C possible uniquement si I=1 et C=1. AEG maximum : A."
       },
       {
-        "tier": "6–12 mois de revenus",
+        "tier": "6 a 12 mois de revenus",
         "rule": "NRR non significatif (période trop courte). F basé sur croissance et qualité des métriques unitaires (LTV:CAC, churn)."
       },
       {
-        "tier": "12–24 mois de revenus",
+        "tier": "12 a 24 mois de revenus",
         "rule": "Évaluation standard complète. Tous les grades possibles."
       },
       {
@@ -2655,8 +2680,8 @@
         "rule": "Valorisation sur actifs tangibles uniquement. Dimension F note spéciale \"Pre-revenue\" sans note numérique. AEG maximum : A."
       }
     ],
-    "fullCodesTitle": "Table complète des sous-codes CIFSO",
-    "fullCodesDesc": "Chaque sous-code identifie un critère précis évalué lors de la certification. Les codes marqués ⛔ sont des conditions de refus automatique.",
+    "fullCodesTitle": "Table complète des sous-codes CIFSO v4.0",
+    "fullCodesDesc": "Chaque sous-code identifie un critère précis évalué lors de la certification. Les codes marqués ⛔ sont des conditions de refus automatique. Cinq dimensions : C (Code), I (IP), F (Finance), S (Sécurité), O (Organisation & Talent).",
     "fullCodesTable": [
       {
         "dim": "C",
@@ -3095,6 +3120,72 @@
         "code": "S-40",
         "label": "Gouvernance des données",
         "desc": "Responsable des données désigné, politique de classification et de rétention documentée."
+      },
+      {
+        "dim": "O",
+        "code": "O-11",
+        "label": "Dépendance fondateur",
+        "desc": "Part du CA portée directement par le(s) fondateur(s). Seuil niveau 1 : ≤20%. Bloquant si >80% sans plan de mitigation."
+      },
+      {
+        "dim": "O",
+        "code": "O-12",
+        "label": "Profondeur de l'équipe",
+        "desc": "Présence d'un N-1 capable de signer, recruter et décider sans le fondateur sur au moins 2 fonctions clés."
+      },
+      {
+        "dim": "O",
+        "code": "O-13",
+        "label": "Plan de succession",
+        "desc": "Document formalisé identifiant les postes clés, les successeurs internes ou externes et le délai de transition."
+      },
+      {
+        "dim": "O",
+        "code": "O-14",
+        "label": "Documentation opérationnelle",
+        "desc": "Runbooks, SOPs, wikis internes couvrant les processus critiques. Onboarding d'un nouveau manager : délai estimé documenté."
+      },
+      {
+        "dim": "O",
+        "code": "O-15",
+        "label": "Rétention des talents clés",
+        "desc": "Turnover annuel sur les postes critiques (tech, commercial, produit). Seuil niveau 1 : ≤10% / an sur 2 ans."
+      },
+      {
+        "dim": "O",
+        "code": "O-16",
+        "label": "Gouvernance et cap table",
+        "desc": "Structure d'actionnariat claire, pacte d'associés ou statuts alignés, droits de vote documentés, pas de litige entre associés."
+      },
+      {
+        "dim": "O",
+        "code": "O-17",
+        "label": "Culture et valeurs",
+        "desc": "Valeurs d'entreprise formalisées, NPS interne ou enquête d'engagement annuelle documentée."
+      },
+      {
+        "dim": "O",
+        "code": "O-21",
+        "label": "Processus de recrutement",
+        "desc": "Procédure d'embauche documentée, descriptifs de poste à jour, parcours d'intégration formalisé."
+      },
+      {
+        "dim": "O",
+        "code": "O-22",
+        "label": "Contrats employés et prestataires",
+        "desc": "Contrats de travail conformes, clauses de confidentialité et de non-concurrence pour les postes clés, inventions assignées à l'entité."
+      },
+      {
+        "dim": "O",
+        "code": "O-31",
+        "label": "Capacité de transfert",
+        "desc": "Estimation documentée du temps nécessaire à un acquiséreur pour prendre les commandes opérationnelles (target : ≤90 jours)."
+      },
+      {
+        "dim": "O",
+        "code": "O-32",
+        "label": "Relation clients portée par l'équipe",
+        "desc": "Part des comptes clients gérés entièrement par l'équipe (hors fondateur). Risque de churn post-cession évalué."
       }
     ]
   },
