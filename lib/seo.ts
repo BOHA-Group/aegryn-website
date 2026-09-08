@@ -26,7 +26,7 @@ const BASE_KEYWORDS = [
   'acheter SaaS Europe', 'deal flow tech Europe', 'acquisition SaaS structurée',
   'family office tech acquisition', 'fund SaaS acquisition', 'buy SaaS business Europe',
   // Certification & process
-  'certification CIFS', 'audit code indépendant', 'CIFS tech audit',
+  'certification CIFSO', 'audit code indépendant', 'CIFSO tech audit',
   'séquestre suisse M&A', 'séquestre bancaire institutionnel', 'Swiss escrow M&A', 'Aegryn TRANSACT',
   'closing tech sécurisé', 'NDA cession tech', 'data room cession',
   // M&A

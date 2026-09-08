@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
     title: 'Comment ça marche — Aegryn TRANSACT',
-    description: "Le processus Aegryn en 6 étapes : certification CIFS, grade indépendant, data room confidentielle, matching acheteurs, processus de transaction, séquestre bancaire suisse.",
+    description: "Le processus Aegryn en 6 étapes : certification CIFSO, grade indépendant, data room confidentielle, matching acheteurs, processus de transaction, séquestre bancaire suisse.",
     path: '/transact/how-it-works',
     locale,
     keywords: [

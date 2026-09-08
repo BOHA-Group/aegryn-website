@@ -131,7 +131,7 @@ export const DOC_TO_SUBCODE_MAP: Record<string, DocSubcodeRule> = {
 
   'I-06': {
     onSufficient: ['I-25'],              // Licences conformes uniquement
-    onMissing:    ['I-41'],              // Licences non auditées (I-41 depuis CIFS v3.0)
+    onMissing:    ['I-41'],              // Licences non auditées (I-41 depuis CIFSO v4.0)
     gradeInputHints: { openSourceRisk: 'no' },
   },
 

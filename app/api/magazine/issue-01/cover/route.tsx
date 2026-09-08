@@ -209,7 +209,7 @@ function CoverDocument() {
       title="Aegryn | Build to Last | Issue 01"
       author="AEGRYN"
       subject="European Tech M&A Intelligence | January 2027"
-      keywords="M&A, SaaS, Europe, tech, CIFS, certification, Aegryn"
+      keywords="M&A, SaaS, Europe, tech, CIFSO, certification, Aegryn"
       creator="Aegryn Magazine"
       producer="@react-pdf/renderer"
     >

@@ -31,7 +31,7 @@ In 2026, the European SaaS M&A market reached its highest recorded volume. AI is
 
 The European discount — 15 to 25% below comparable US multiples — has narrowed, but has not disappeared. Part of the explanation is structural: a less mature advisory ecosystem, fewer standardised due diligence frameworks, and a cultural reluctance around price transparency. AEGRYN exists to change that.
 
-The CIFS certification protocol — covering Code integrity, IP ownership, Financial reliability, and Security posture — provides both sides of a transaction with a shared, auditable language. The Grade is not a valuation. It is a certification of transactability: a verified statement that an asset has been prepared, structured, and documented to a standard that makes closing possible.
+The CIFSO certification protocol — covering Code integrity, IP ownership, Financial reliability, Security posture, and Organisation & Talent — provides both sides of a transaction with a shared, auditable language. The Grade is not a valuation. It is a certification of transactability: a verified statement that an asset has been prepared, structured, and documented to a standard that makes closing possible.
 
 This report is not a commissioned market study. It is our reading of the market — drawn from our data, our protocol, our point of view. Each year, as our certification database grows, the data will become more ours. This first edition establishes the baseline. Everything that follows will build on it.`,
 
@@ -47,15 +47,15 @@ The remaining gap is structural, not fundamental. It reflects the absence of sta
 
     'ai-recomposition-of-tech-value': `72% of SaaS M&A targets now reference AI. Median EV/Revenue for AI-native SaaS sits at 12.5x. But the premium is fragile — and the commoditisation trap is real.
 
-The AI valuation premium is being driven by a genuine recomposition of tech value. Buyers are no longer pricing software on revenue multiples alone. They are pricing proprietary data, contractual moats, regulatory compliance, and net revenue retention. These are the four AI attributes that the CIFS protocol has formalised.
+The AI valuation premium is being driven by a genuine recomposition of tech value. Buyers are no longer pricing software on revenue multiples alone. They are pricing proprietary data, contractual moats, regulatory compliance, and net revenue retention. These are the core AI attributes that the CIFSO protocol has formalised.
 
-Proprietary data (I-16 in the CIFS framework) is the foundation. Datasets that cannot be replicated are the primary source of durable AI value. If a competitor can rebuild your training data from scratch in six months, the asset has no certifiable moat in the AI dimension.
+Proprietary data (I-16 in the CIFSO framework) is the foundation. Datasets that cannot be replicated are the primary source of durable AI value. If a competitor can rebuild your training data from scratch in six months, the asset has no certifiable moat in the AI dimension.
 
-The commoditisation trap is the inverse. 40% of submitted assets present AI features built on thin wrappers around public LLMs — Claude, GPT, Gemini — without proprietary data, contractual depth, or technical differentiation. The valuation premium these assets claim is not supported by the CIFS assessment.
+The commoditisation trap is the inverse. 40% of submitted assets present AI features built on thin wrappers around public LLMs — Claude, GPT, Gemini — without proprietary data, contractual depth, or technical differentiation. The valuation premium these assets claim is not supported by the CIFSO assessment.
 
 EU AI Act compliance (S-42) is emerging as a binary filter. Assets that cannot demonstrate compliance with Articles 9–15 face a structural devaluation. Assets that can demonstrate compliance — and have documented it at submission — command a verifiable premium. This is the first regulatory certification arbitrage in European tech M&A history.`,
 
-    'perspective-certification-table': `Less than 25% of submitted assets pass the CIFS certification threshold. Here is what the top 5 refusal reasons tell us about the state of European tech.
+    'perspective-certification-table': `Less than 25% of submitted assets pass the CIFSO certification threshold. Here is what the top 5 refusal reasons tell us about the state of European tech.
 
 The most common refusal reason is F-11a: ARR declared without Stripe or billing access. This affects 34% of submitted assets. Sellers declare revenue figures that they cannot substantiate with billing system access. Buyers walk away. This is the most preventable reason for a deal to fail.
 
@@ -67,9 +67,9 @@ S-16 — no pentest in the past 18 months — affects 19% of submissions. Securi
 
 I-27 — no legal basis for personal data transfer under GDPR — affects 17% of submissions. Data controllers that have not established a legal basis for cross-border data flows face acquisition blockers in due diligence. This is particularly common in SaaS companies with US buyers.`,
 
-    'deal-watch-h1-2026': `Five transactions from H1 2026 analysed through the CIFS lens. What worked, what did not, and what each grade would have signalled.
+    'deal-watch-h1-2026': `Five transactions from H1 2026 analysed through the CIFSO lens. What worked, what did not, and what each grade would have signalled.
 
-team.blue × Windsor.ai (Switzerland, Q1 2026) represents the archetype of a clean AI acquisition. Windsor.ai's dataset was proprietary, its IP stack clean, and its NRR above 130%. An estimated CIFS grade of AA reflects the quality of preparation — not just the product. The transaction closed at an estimated 7–10x ARR, a premium to the FinTech median.
+team.blue × Windsor.ai (Switzerland, Q1 2026) represents the archetype of a clean AI acquisition. Windsor.ai's dataset was proprietary, its IP stack clean, and its NRR above 130%. An estimated CIFSO grade of AA reflects the quality of preparation — not just the product. The transaction closed at an estimated 7–10x ARR, a premium to the FinTech median.
 
 Hg × OneStream (UK/EU, Q1 2026) is the defining upper mid-market deal of the period. OneStream's position as a category leader in financial performance management, combined with mission-critical enterprise embedding and PE-grade financial documentation, puts this firmly in AAA territory. The estimated multiple of 12–15x ARR reflects the premium for category leadership.
 
@@ -81,17 +81,17 @@ The Dutch HealthTech Platform (Q2 2026) is the benchmark for regulated-sector ce
 
     'buyers-who-is-buying-european-tech': `PE funds, search funds, strategic acquirers, family offices — four buyer profiles, four sets of criteria, and what each one actually looks for in a certified asset.
 
-PE lower mid-market funds (target: 2–15M€ EV) are the most process-driven buyers in the market. They will not engage without certified financials. ARR certification with billing access (F-11a), founder dependency below 40% (F-42), and net revenue retention above 110% (F-22) are the three filters that determine whether a conversation progresses to LOI. A CIFS grade of AA or above significantly accelerates their process — not because they trust the grade unconditionally, but because it signals a seller who has prepared seriously.
+PE lower mid-market funds (target: 2–15M€ EV) are the most process-driven buyers in the market. They will not engage without certified financials. ARR certification with billing access (F-11a), founder dependency below 40% (F-42), and net revenue retention above 110% (F-22) are the three filters that determine whether a conversation progresses to LOI. A CIFSO grade of AA or above significantly accelerates their process — not because they trust the grade unconditionally, but because it signals a seller who has prepared seriously.
 
-Search funds and ETA operators (target: 300K–3M€) are the buyer profile most likely to pay a premium for CIFS certification. Their typical thesis is operational: they acquire, replace the founder, and scale through execution. They need documented SOPs, customer playbooks, and a founder committed to a genuine transition period. The CIFS certification gives them a standardised language for the quality they are buying.
+Search funds and ETA operators (target: 300K–3M€) are the buyer profile most likely to pay a premium for CIFSO certification. Their typical thesis is operational: they acquire, replace the founder, and scale through execution. They need documented SOPs, customer playbooks, and a founder committed to a genuine transition period. The CIFSO certification gives them a standardised language for the quality they are buying.
 
-Strategic acquirers (target: 500K–10M€) filter primarily on IP. They need to know that all software rights are formally assigned to the entity (I-21), that there are no open-source licence conflicts (I-14), and that the technology is complementary to their existing stack. The I-dimension of the CIFS assessment is their primary due diligence tool. IP certification is not a nice-to-have. It is a transaction enabler.
+Strategic acquirers (target: 500K–10M€) filter primarily on IP. They need to know that all software rights are formally assigned to the entity (I-21), that there are no open-source licence conflicts (I-14), and that the technology is complementary to their existing stack. The I-dimension of the CIFSO assessment is their primary due diligence tool. IP certification is not a nice-to-have. It is a transaction enabler.
 
 Family offices (target: 1–20M€ EV) are growing rapidly as direct buyers of European tech. They have a 10+ year investment horizon, a preference for cashflow-positive assets, and a strong preference for discreet, structured processes. They are AEGRYN's core Transact audience. Minimal founder involvement post-close is their primary operational requirement.`,
 
     'outlook-2027-three-forces': `The EU AI Act enters into force. The founder succession wave accelerates. PE dry powder reaches record levels. Three structural forces that will define the next 12 months.
 
-The EU AI Act represents the first regulatory certification arbitrage in European tech M&A history. Assets that can demonstrate compliance with Articles 9–15 — particularly those that have documented their compliance within a CIFS assessment — will command a verifiable premium. Assets that cannot demonstrate compliance face a structural devaluation estimated at 20–30% of enterprise value. The compliance window is now. Buyers are already filtering on this.
+The EU AI Act represents the first regulatory certification arbitrage in European tech M&A history. Assets that can demonstrate compliance with Articles 9–15 — particularly those that have documented their compliance within a CIFSO assessment — will command a verifiable premium. Assets that cannot demonstrate compliance face a structural devaluation estimated at 20–30% of enterprise value. The compliance window is now. Buyers are already filtering on this.
 
 The founder succession wave is the largest untapped deal pipeline in European tech. More than 3.5 million European SMEs are currently without a successor. The tech segment — particularly bootstrapped SaaS companies founded between 2008 and 2016 — is entering its peak succession window. These founders are often first-time sellers, unfamiliar with M&A processes, and underserved by the advisory ecosystem. AEGRYN operates at the intersection of this market and the certification infrastructure it lacks.
 
@@ -99,13 +99,13 @@ PE dry powder at record levels creates a structural advantage for prepared selle
 
     'aegryn-index-edition-1': `Our certification database, made public for the first time. Acceptance rate, dimension scores, grade distribution — the baseline against which every future edition will be measured.
 
-The AEGRYN Certification Index represents the aggregate output of every CIFS assessment conducted since launch. It is the most granular dataset available on the structural quality of European tech assets preparing for exit.
+The AEGRYN Certification Index represents the aggregate output of every CIFSO assessment conducted since launch. It is the most granular dataset available on the structural quality of European tech assets preparing for exit.
 
 The acceptance rate — under 25% — is the most cited number in this index. It is not a reflection of market quality. It is a reflection of market preparation. The majority of assets that fail certification are not fundamentally flawed. They are structurally underprepared. Revenue not certified with billing access. Software rights not formally assigned. No pentest in the past 18 months. These are solvable problems.
 
-The four CIFS dimensions — Code integrity, IP ownership, Financial reliability, Security posture — are each scored on a 25-point scale. The minimum threshold for certification requires a score above the threshold in each dimension, not just in the aggregate. This is deliberate. An asset with perfect financial documentation and no IP assignment is not certifiable. The certification is a signal of comprehensive readiness.
+The five CIFSO dimensions — Code integrity, IP ownership, Financial reliability, Security posture, and Organisation & Talent — are each scored on a 20-point scale. The minimum threshold for certification requires a score above the threshold in each dimension, not just in the aggregate. This is deliberate. An asset with perfect financial documentation and no IP assignment is not certifiable. The certification is a signal of comprehensive readiness.
 
-The grade distribution — from AEG ★ (5%) through AAA (12%), AA (27%), A (32%), to B (17%) — reflects the current state of the market. Most assets that pass certification are A or AA grade. The AEG ★ grade is reserved for assets that represent the top of market in every CIFS dimension. As our certification database grows, this distribution will become the definitive benchmark for European tech M&A quality.`,
+The grade distribution — from AEG ★ (5%) through AAA (12%), AA (27%), A (32%), to B (17%) — reflects the current state of the market. Most assets that pass certification are A or AA grade. The AEG ★ grade is reserved for assets that represent the top of market in every CIFSO dimension. As our certification database grows, this distribution will become the definitive benchmark for European tech M&A quality.`,
 
     'build-the-habit-that-changes-everything': `He did not set out to build a company that would sell well. He set out to build one that would not embarrass him. So from the very first month, every contractor signed a proper agreement. Every invoice got filed the same day. It felt excessive at the time — a single person running a company nobody had heard of, filing paperwork like it mattered.
 
@@ -113,7 +113,7 @@ Ten years later, it mattered enormously. When a buyer's team opened his records,
 
 The habit he started out of simple discomfort with mess turned out to be exactly the infrastructure a transaction requires. Not because he planned it that way. Because the habits that make a company easy to run are the same habits that make it easy to sell.
 
-The most common refusal reason in CIFS certification is not a technical problem or a financial problem. It is a documentation problem. Revenue figures that cannot be substantiated with billing access. Software rights that were never formally assigned to the company entity. Security assessments that were planned but never commissioned. These are not signs of a bad company. They are signs of a company that never built the habit.
+The most common refusal reason in CIFSO certification is not a technical problem or a financial problem. It is a documentation problem. Revenue figures that cannot be substantiated with billing access. Software rights that were never formally assigned to the company entity. Security assessments that were planned but never commissioned. These are not signs of a bad company. They are signs of a company that never built the habit.
 
 The founders who navigate sale processes most cleanly tend to share one characteristic: they prepared for a transaction they were not sure they would ever want. The preparation was its own form of discipline. The transaction, when it came, was a test they had already studied for without knowing it.
 
@@ -239,7 +239,7 @@ export default async function ArticlePage({ params }: Props) {
           sub="AEGRYN | European Tech M&A Intelligence"
           line="Certified by AEGRYN | Switzerland"
           ctaEstimate="Get a valuation estimate"
-          ctaGrade="Request CIFS certification"
+          ctaGrade="Request CIFSO certification"
         />
       </main>
     </>

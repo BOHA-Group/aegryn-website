@@ -16,7 +16,7 @@ export type DocumentAdminQuality = 'pending_review' | 'sufficient' | 'insufficie
 
 export type DocumentDimension = 'C' | 'I' | 'F' | 'S' | 'T'
 
-/** Niveau de data room : 'light' = préliminaire (12 docs), 'full' = complète CIFS */
+/** Niveau de data room : 'light' = préliminaire (12 docs), 'full' = complète CIFSO */
 export type DataRoomLevel = 'light' | 'full'
 
 export interface DataRoomDocument {

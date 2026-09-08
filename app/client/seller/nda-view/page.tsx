@@ -212,7 +212,7 @@ export default async function SellerNdaViewPage() {
               Dans le cas où l&apos;actif admis en Certification TRANSACT serait retiré du catalogue ou
               qu&apos;aucune transaction ne se réalise à l&apos;issue du processus Aegryn, des frais fixes
               minimaux de <strong>CHF 2 000 HT</strong> sont dus à Aegryn en contrepartie du travail
-              engagé par ses équipes : analyse C/I/F/S, attribution du grade officiel, préparation du
+              engagé par ses équipes : analyse CIFSO v4.0, attribution du grade officiel, préparation du
               dossier catalogue, communication, marketing, et visibilité produit acquise durant la présence
               de l&apos;actif au catalogue. Ces frais sont exigibles à la date de retrait ou de clôture
               sans transaction, facturés directement au Cédant. Non applicable en cas de condition

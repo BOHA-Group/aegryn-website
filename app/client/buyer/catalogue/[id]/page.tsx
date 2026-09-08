@@ -182,7 +182,7 @@ export default async function BuyerAssetDetailPage({
           {/* Header */}
           <div className="flex items-center gap-2 mb-5">
             <ShieldCheck size={14} className="text-ag-navy shrink-0" />
-            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Synthèse CIFS — État des lieux certifié</p>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Synthèse CIFSO — État des lieux certifié</p>
           </div>
 
           {/* Grade + Score */}
@@ -196,7 +196,7 @@ export default async function BuyerAssetDetailPage({
               <p className="font-mono font-bold text-[28px] text-gray-900 leading-none">
                 {assessment.computed_score ?? '—'}<span className="text-[13px] font-normal text-gray-400">/100</span>
               </p>
-              <p className="font-sans text-[11px] text-gray-400 mt-0.5">Score CIFS</p>
+              <p className="font-sans text-[11px] text-gray-400 mt-0.5">Score CIFSO</p>
             </div>
           </div>
 

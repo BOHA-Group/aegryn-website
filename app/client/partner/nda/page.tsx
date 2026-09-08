@@ -147,7 +147,7 @@ export default async function PartnerNdaPage() {
               'Les informations sur les actifs en cours de certification ou de cession',
               'Les conditions financières des transactions et le détail des mandats Aegryn',
               'Les informations relatives aux autres partenaires du réseau Aegryn',
-              'Les méthodes, processus et outils propriétaires Aegryn (protocole C/I/F/S, grade engine)',
+              'Les méthodes, processus et outils propriétaires Aegryn (protocole CIFSO v4.0, grade engine)',
               'Toute information transmise dans le cadre d\'une introduction ou d\'un apport d\'affaires',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">

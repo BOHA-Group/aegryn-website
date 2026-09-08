@@ -1,7 +1,7 @@
 /**
  * Aegryn Valuation Engine v1.0
  *
- * Mirrors the 4-dimension CIFS grading protocol from /grade/methodology.
+ * Mirrors the 5-dimension CIFSO grading protocol from /grade/methodology.
  * Thresholds are calibrated to match the published grade grid:
  *   90-100 → ★   | 75-89 → AAA | 60-74 → AA
  *   45-59  → A   | 30-44 → B   | < 30  → Non gradable

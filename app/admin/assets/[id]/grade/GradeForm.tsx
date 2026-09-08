@@ -130,7 +130,7 @@ export default function GradeForm({
   const [benchmarkCategory,  setBenchmarkCategory]  = useState(initialAsset?.benchmark_category ?? '')
   const [aegOverride,        setAegOverride]        = useState<AEGGrade | ''>((initialAsset?.aeg_grade as AEGGrade) ?? '')
 
-  // Score partenaire — dimension P (0-25, même grille que CIFS)
+  // Score partenaire — dimension P (0-25, même grille que CIFSO)
   const [partnerScore,       setPartnerScore]       = useState(0)
   const [partnerEmail,       setPartnerEmail]       = useState('')
   const [partnerDim,         setPartnerDim]         = useState<'code' | 'ip' | 'finance' | 'security'>('code')
@@ -406,7 +406,7 @@ export default function GradeForm({
         <div className="grid grid-cols-2 divide-x divide-gray-100 bg-gray-50 px-0">
           <div className={`px-5 py-2.5 ${ activeTab === 'grader' ? 'bg-white' : ''}`}>
             <p className="text-[10px] text-gray-500 leading-snug">
-              <span className="font-semibold text-gray-700">Grade officiel</span> — Saisie manuelle des scores CIFS (0–25/dim). Chaque sous-code coché ajuste le score automatiquement. Le grade live se calcule en temps réel.
+              <span className="font-semibold text-gray-700">Grade officiel</span> — Saisie manuelle des scores CIFSO (0–20/dim). Chaque sous-code coché ajuste le score automatiquement. Le grade live se calcule en temps réel.
             </p>
           </div>
           <div className={`px-5 py-2.5 ${ activeTab === 'moteur' ? 'bg-white' : ''}`}>
@@ -833,7 +833,7 @@ export default function GradeForm({
           <div>
             <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Score partenaire — Dimension P</h2>
             <p className="text-[10px] text-gray-400 mt-0.5">
-              Évaluation de la contribution du partenaire co-signataire. Même grille 0-25 que les dimensions CIFS.
+              Évaluation de la contribution du partenaire co-signataire. Même grille 0-25 que les dimensions CIFSO.
               Documenter les points de conformité et observations pour archive Aegryn.
             </p>
           </div>
@@ -866,7 +866,7 @@ export default function GradeForm({
             </div>
           </div>
 
-          {/* Score 0-25 — même format que CIFS */}
+          {/* Score 0-20 — même format que CIFSO */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
               <label className={labelCls}>Score 0-25</label>

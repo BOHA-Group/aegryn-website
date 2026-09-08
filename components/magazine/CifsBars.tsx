@@ -14,7 +14,7 @@ interface Props {
 }
 
 /**
- * Animated CIFS dimension bars.
+ * Animated CIFSO dimension bars.
  * Extracted from editions/2027/shared.tsx.
  * Data is passed via props — no hardcoded defaults.
  */

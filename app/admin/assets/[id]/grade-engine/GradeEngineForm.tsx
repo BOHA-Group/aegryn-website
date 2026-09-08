@@ -569,7 +569,7 @@ export default function GradeEngineForm({
         <Field label="Ancienneté des revenus (mois)" source={inputSources['revenueAgeMonths'] as SourceType}>
           <NumInput value={input.finance.revenueAgeMonths} onChange={v => setFin('revenueAgeMonths', v)} />
         </Field>
-        <Field label="Niveau de preuve ARR (CIFS v3.0)" hint="Declaratif = auto-déclaré · Vérifiable = export certifié · Audité = CAC co-signataire" source={inputSources['arrAudited'] as SourceType}>
+        <Field label="Niveau de preuve ARR (CIFSO v4.0)" hint="Declaratif = auto-déclaré · Vérifiable = export certifié · Audité = CAC co-signataire" source={inputSources['arrAudited'] as SourceType}>
           <select value={input.finance.arrAudited} onChange={e => setFin('arrAudited', e.target.value as ArrAuditLevel)} className={selectCls}>
             <option value="declarative">Déclaratif (auto-déclaré)</option>
             <option value="verifiable">Vérifiable (Stripe / Chargebee certifié)</option>
@@ -684,7 +684,7 @@ export default function GradeEngineForm({
             <option value="no">Non</option>
           </select>
         </Field>
-        {/* S-16 — Qualification pentest (CIFS v3.0) */}
+        {/* S-16 — Qualification pentest (CIFSO v4.0) */}
         <Field label="Méthodologie pentest (S-16)" hint="OWASP/PTES = méthodologie reconnue" source="declarative">
           <select value={input.security.pentestMethodology ?? 'unknown'} onChange={e => setSec('pentestMethodology', e.target.value as PentestMethodology)} className={selectCls}>
             <option value="owasp_ptes">OWASP / PTES (reconnue)</option>
@@ -706,7 +706,7 @@ export default function GradeEngineForm({
             <option value="yes">Documentée (RBAC / IAM)</option>
           </select>
         </Field>
-        {/* I-27 — Transferts RGPD (CIFS v3.0) */}
+        {/* I-27 — Transferts RGPD (CIFSO v4.0) */}
         <Field label="Transferts RGPD (I-27)" hint="Transferts hors UE : SCCs, décision d'adéquation, ou bloquant" source="declarative">
           <select
             value={input.security.rgpdTransferReadiness ?? ''}
@@ -942,7 +942,7 @@ export default function GradeEngineForm({
             </p>
             <DocList dims={['F']} docsByCategory={docsByCategory} />
             <div className="mb-3" />
-            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit (niveaux CIFS v3.0)</p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">ARR & Audit (niveaux CIFSO v4.0)</p>
             {([
               { id: 'F-11a', label: 'ARR audité — CAC co-signataire',            action: () => setFin('arrAudited', 'audited' as ArrAuditLevel, 'subcode') },
               { id: 'F-11b', label: 'ARR vérifiable — export Stripe/Chargebee',  action: () => setFin('arrAudited', 'verifiable' as ArrAuditLevel, 'subcode') },
@@ -989,7 +989,7 @@ export default function GradeEngineForm({
             </p>
             <DocList dims={['S']} docsByCategory={docsByCategory} />
             <div className="mb-3" />
-            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & Qualification (CIFS v3.0)</p>
+            <p className="font-sans text-[10px] text-gray-400 mb-2 uppercase tracking-widest">Pentest & Qualification (CIFSO v4.0)</p>
             {([
               { id: 'S-16', label: 'Pentest qualifié OWASP/PTES + auditeur OSCP/CREST', action: () => { setSec('pentestMethodology', 'owasp_ptes', 'subcode'); setSec('pentestAuditorCert', 'oscp_crest', 'subcode') } },
               { id: 'S-11', label: 'Pentest < 12 mois',   action: () => setSec('lastPentestMonthsAgo', 6, 'subcode') },

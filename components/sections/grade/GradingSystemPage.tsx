@@ -176,7 +176,7 @@ export function GradingSystemPage() {
         </div>
       </section>
 
-      {/* ── CADRE CIFS ── */}
+      {/* ── CADRE CIFSO ── */}
       <section ref={cifsRef} className="py-28 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">

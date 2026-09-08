@@ -286,7 +286,7 @@ export function gradeSheetHtml(asset: GradeSheetAsset): string {
       </div>
       <div class="meta-item">
         <label>Version référentiel</label>
-        <span>CIFS v${asset.grading_version ?? '1.0'}</span>
+        <span>CIFSO v${asset.grading_version ?? '4.0'}</span>
       </div>
     </div>
 
@@ -313,7 +313,7 @@ export function gradeSheetHtml(asset: GradeSheetAsset): string {
 
     <!-- Disclaimer -->
     <div class="disclaimer">
-      Cette fiche est un document de synthèse produit par AEGRYN à titre informatif. La certification CIFS constitue un outil d'aide à la décision et ne constitue pas un conseil en investissement au sens de la directive MiFID II. AEGRYN n'est pas partie à la transaction et ne garantit pas la valeur de l'actif ni l'issue de toute cession.
+      Cette fiche est un document de synthèse produit par AEGRYN à titre informatif. La certification CIFSO constitue un outil d'aide à la décision et ne constitue pas un conseil en investissement au sens de la directive MiFID II. AEGRYN n'est pas partie à la transaction et ne garantit pas la valeur de l'actif ni l'issue de toute cession.
     </div>
 
     <!-- Footer -->

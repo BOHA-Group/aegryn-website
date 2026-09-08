@@ -95,7 +95,7 @@ export function GradeDimensions() {
 
         {/* Desktop — grille 2×2 + O absolument centré qui chevauche les 4 coins */}
         <div className="hidden md:block relative">
-          {/* Grille 2×2 CIFS */}
+          {/* Grille 2×2 CIFSO */}
           <div className="grid grid-cols-2 gap-3">
             {/* C — haut gauche, badge top-left */}
             <CornerCard

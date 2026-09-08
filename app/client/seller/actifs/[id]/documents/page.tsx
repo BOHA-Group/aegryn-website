@@ -122,7 +122,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
           </p>
         </div>
 
-        {/* Section par dimension CIFS+T */}
+        {/* Section par dimension CIFSO */}
         {DIMENSIONS.map((dim) => {
           const dimCatalog   = catalog.filter((c) => c.dimension === dim)
           if (dimCatalog.length === 0) return null

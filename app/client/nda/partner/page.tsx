@@ -66,7 +66,7 @@ export default async function PartnerNdaPage() {
               <li>Les informations sur les actifs en cours de certification ou de cession</li>
               <li>Les conditions financières des transactions et le détail des mandats Aegryn</li>
               <li>Les informations relatives aux autres partenaires du réseau Aegryn</li>
-              <li>Les méthodes, processus et outils propriétaires Aegryn (protocole C/I/F/S, grade engine)</li>
+              <li>Les méthodes, processus et outils propriétaires Aegryn (protocole CIFSO v4.0, grade engine)</li>
               <li>Toute information transmise dans le cadre d'une introduction ou d'un apport d'affaires</li>
             </ul>
           </section>

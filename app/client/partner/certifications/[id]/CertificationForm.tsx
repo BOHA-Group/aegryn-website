@@ -106,7 +106,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
           />
         </div>
 
-        {/* Sous-codes CIFS */}
+        {/* Sous-codes CIFSO */}
         <div>
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500 mb-3">
             Critères validés (sous-codes CIFSO)

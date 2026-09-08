@@ -222,7 +222,7 @@ export default async function IssuePage({ params }: Props) {
                 { val: '€44.1B', label: 'EU Tech H1 2026',     sub: '~1,740 deals' },
                 { val: '+77%',  label: 'EMEA Strategic value', sub: 'through May 2026' },
                 { val: '+28%',  label: 'Certified premium',    sub: 'vs uncertified' },
-                { val: '<25%',  label: 'CIFS acceptance rate', sub: '1 in 4 pass' },
+                { val: '<25%',  label: 'CIFSO acceptance rate', sub: '1 in 4 pass' },
               ].map(s => (
                 <div key={s.val} className="px-6 py-8 first:pl-0">
                   <p className="font-sans font-bold text-magazine-black tabular-nums" style={{ fontSize: 'clamp(28px,3.5vw,44px)', letterSpacing: '-0.03em', fontWeight: 800, lineHeight: 1 }}>
@@ -567,7 +567,7 @@ export default async function IssuePage({ params }: Props) {
                   </div>
                 ))}
               </div>
-              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Source — CB Insights / EU Commission AI Innovation Report 2026 · Aegryn CIFS Protocol S-16</p>
+              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Source — CB Insights / EU Commission AI Innovation Report 2026 · Aegryn CIFSO Protocol S-16</p>
             </div>
           </div>
 
@@ -612,7 +612,7 @@ export default async function IssuePage({ params }: Props) {
                 Not a Valuation. A Certification.
               </h3>
               <div className="space-y-5 text-body-mag text-magazine-black/70 leading-[1.75]">
-                <p>The most common question we hear from founders who have just completed their CIFS grade is: does this change what I can ask for? The honest answer is: sometimes directly, and almost always indirectly.</p>
+                <p>The most common question we hear from founders who have just completed their CIFSO grade is: does this change what I can ask for? The honest answer is: sometimes directly, and almost always indirectly.</p>
                 <p>Directly, a certified asset eliminates a category of buyer uncertainty. The conversation shifts from &ldquo;can we trust these numbers and this documentation&rdquo; to &ldquo;do we want to own this specific company.&rdquo; That is a different and more productive conversation, and it tends to happen faster.</p>
                 <p>Indirectly, certification changes who approaches you. There is a growing category of buyer, particularly in regulated industries, who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
                 <p>We grade assets because we believe verification is the foundation of a fair transaction. A grade makes the process faster, the conversations better, and the outcomes more predictable.</p>
@@ -626,11 +626,11 @@ export default async function IssuePage({ params }: Props) {
                 Not a Valuation. A Certification.
               </h3>
               <div className="space-y-5 text-body-mag text-magazine-black/70 leading-[1.75]">
-                <p>The CIFS methodology assesses four dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, and security posture and compliance. Each is scored through independent review, not self-assessment.</p>
+                <p>The CIFSO methodology assesses five dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, security posture and compliance, and organisation & talent. Each is scored through independent review, not self-assessment.</p>
                 <p>In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation — contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. It is almost always fixable. It takes, on average, eleven weeks to resolve properly once identified.</p>
                 <p>The second most common finding was financial statements that had not been independently reviewed for more than 24 months. Buyers apply a discount for the uncertainty this creates.</p>
               </div>
-              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Aegryn CIFS Protocol v3.0 · Aegryn Transaction Desk H1 2026 observations</p>
+              <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">Aegryn CIFSO Protocol v4.0 · Aegryn Transaction Desk H1 2026 observations</p>
             </div>
           </div>
 
@@ -674,7 +674,7 @@ export default async function IssuePage({ params }: Props) {
               ))}
             </div>
             <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
-              Source — CIFS Protocol v3.0, Issue 01 Base Reference (multi-select — assets can trigger more than one reason)
+              Source — CIFSO Protocol v4.0, Issue 01 Base Reference (multi-select — assets can trigger more than one reason)
             </p>
           </div>
         </section>
@@ -699,7 +699,7 @@ export default async function IssuePage({ params }: Props) {
             <div className="bg-magazine-ivory p-10">
               <p className="font-sans font-bold text-magazine-accent tabular-nums" style={{ fontSize: 'clamp(48px,6vw,80px)', lineHeight: 1, letterSpacing: '-0.04em', fontWeight: 800 }}>+28%</p>
               <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-magazine-black/50 mt-3">Typical premium when properly reviewed and certified before going to market</p>
-              <p className="text-[12px] text-magazine-black/40 mt-1">Source: Aegryn CIFS Protocol v3.0</p>
+              <p className="text-[12px] text-magazine-black/40 mt-1">Source: Aegryn CIFSO Protocol v4.0</p>
             </div>
           </div>
 
@@ -876,7 +876,9 @@ export default async function IssuePage({ params }: Props) {
         {/* ── Transaction : Deal Watch ── */}
         <section id="s-transaction" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Transaction — Deal Watch H1 2026</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">Five Deals. Five Completely Different Stories.</h2>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">
+            Five Deals. Five Completely Different Stories.
+          </h2>
           <p className="text-body-mag text-magazine-black/55 max-w-prose mb-16 leading-[1.75]">All real. Names, companies, and identifying details anonymised or inferred from public registry data. Multiples confirmed through documented processes only. The deal that did not close is included because it is the most instructive of all.</p>
 
           {/* Deal 01 & 02 */}
@@ -1043,8 +1045,7 @@ export default async function IssuePage({ params }: Props) {
             ].map((f, i, arr) => (
               <div key={f.num} className={`py-12 grid grid-cols-[auto_1fr] gap-10 items-start ${i < arr.length - 1 ? 'border-b border-magazine-black/10' : ''}`}>
                 <div>
-                  <p className="font-sans font-bold text-magazine-black/15 tabular-nums"
-                    style={{ fontSize: 'clamp(40px,5vw,72px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>
+                  <p className="font-sans font-bold text-magazine-black/15 tabular-nums mb-4" style={{ fontSize: 'clamp(40px,5vw,72px)', lineHeight: 1, letterSpacing: '-0.03em', fontWeight: 800 }}>
                     {f.num}
                   </p>
                   <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-magazine-black/35 mt-2">{f.label}</p>
@@ -1094,7 +1095,9 @@ export default async function IssuePage({ params }: Props) {
         {/* ── AEGRYN Index ── */}
         <section id="s-index" className="bg-magazine-white px-6 md:px-[120px] py-32">
           <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-8">Aegryn Index — Edition I</p>
-          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">What we tracked and what it showed.</h2>
+          <h2 className="text-h1-mag font-sans font-bold text-magazine-black mb-6 max-w-[720px]">
+            What we tracked and what it showed.
+          </h2>
           <p className="text-label-mag text-magazine-black/35 uppercase tracking-[0.1em] mb-12">Aegryn Transaction and Grade Desks · H1 2026</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
@@ -1103,9 +1106,9 @@ export default async function IssuePage({ params }: Props) {
               <p>Two patterns held consistently enough that we are prepared to state them as working hypotheses. The first: time-to-close correlates more strongly with data room preparation quality than with any other observable variable we tracked. The second: the largest discounts from initial offer to final signed price occurred in companies where the financial statements had not been independently reviewed in the 24 months preceding the sale.</p>
             </div>
             <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">
-              <p>The CIFS methodology assesses four dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, and security posture and compliance. Each is scored through independent review, not self-assessment. The final grade reflects what a reviewer found, not what the founder believes to be true.</p>
+              <p>The CIFSO methodology assesses five dimensions: code quality and technical documentation, intellectual property ownership and assignment, financial record completeness and accuracy, security posture and compliance, and organisation & talent. Each is scored through independent review, not self-assessment. The final grade reflects what a reviewer found, not what the founder believes to be true.</p>
               <p>In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation — contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. The cost of not fixing it is a discount in the final offer, a slower process, or both.</p>
-              <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-magazine-black/30">Aegryn CIFS Protocol v3.0 · Aegryn Transaction Desk H1 2026 observations</p>
+              <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-magazine-black/30">Aegryn CIFSO Protocol v4.0 · Aegryn Transaction Desk H1 2026 observations</p>
             </div>
           </div>
 
@@ -1270,7 +1273,7 @@ export default async function IssuePage({ params }: Props) {
                 { title: 'Good to Great', author: 'Jim Collins', note: 'The discipline of doing less, extremely well, for a very long time.' },
                 { title: 'The Innovator\'s Dilemma', author: 'Clayton Christensen', note: 'Why good companies fail when the market moves. Relevant to every founder who has incumbents as both competitors and potential acquirers.' },
                 { title: 'The Art of the Deal (M&A edition)', author: 'Alexandra Reed Lajoux', note: 'The practical mechanics of M&A, explained without the investment banking jargon. The reference every seller should read before signing an LOI.' },
-                { title: 'Built to Sell', author: 'John Warrillow', note: 'A short novel about building a company that doesn\'t depend on its founder. The framework translates directly to the CIFS F-42 dimension.' },
+                { title: 'Built to Sell', author: 'John Warrillow', note: 'A short novel about building a company that doesn\'t depend on its founder. The framework translates directly to the CIFSO O-dimension (founder dependency).' },
                 { title: 'Acquired (Podcast)', author: 'Ben Gilbert & David Rosenthal', note: 'Business history as strategy school. The Berkshire, TSMC, and Costco episodes are required listening for anyone thinking about acquirers.' },
                 { title: 'Indie Hackers (Podcast)', author: 'Courtland Allen', note: 'Real founders, real revenue numbers. Filter for bootstrap-to-exit stories. The signal-to-noise ratio is higher than most business media.' },
               ].map(b => (

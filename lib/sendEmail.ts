@@ -178,7 +178,7 @@ export async function emailPartnerScoreValidated(opts: {
     : ''
 
   const html = WRAP(`
-    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Certification CIFS — CAS 1</p>
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Certification CIFSO — CAS 1</p>
     <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Contribution validée</h1>
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>
@@ -218,7 +218,7 @@ export async function emailPartnerScoreRejected(opts: {
   const subject = `[Aegryn] Retour sur votre contribution ${dim} — ${opts.assetName}`
 
   const html = WRAP(`
-    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">Certification CIFS — CAS 1</p>
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">Certification CIFSO — CAS 1</p>
     <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#0F1C3F;line-height:1.25;">Retour sur votre contribution</h1>
     <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">
       Bonjour <strong style="color:#0F1C3F;">${opts.partnerName}</strong>,<br/>

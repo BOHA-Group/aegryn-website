@@ -114,7 +114,7 @@ export default async function AdminAssetsPage({
           ))}
         </div>
 
-        {/* Bannière contextuelle CIFS si provenance partenaire */}
+        {/* Bannière contextuelle CIFSO si provenance partenaire */}
         {params.partner_id && (
           <div className="mb-4 bg-indigo-50 border border-indigo-200 px-4 py-3 flex items-center justify-between gap-4">
             <div>
