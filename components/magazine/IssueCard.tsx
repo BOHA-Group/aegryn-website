@@ -17,7 +17,7 @@ interface Props {
  * Style Barnes : cover portrait centré sur fond blanc, titre sous le cover, 3 boutons d'accès rapide.
  * Boutons désactivés avec tooltip "publication prochainement" au survol.
  */
-export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', labelDesc, isPublic = false, isPreview = false }: Props) {
+export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', labelDesc: _labelDesc, isPublic = false, isPreview = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
   const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
