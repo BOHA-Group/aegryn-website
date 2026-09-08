@@ -123,12 +123,12 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoContact',   href: '/contact' },
 ]
 
-const accompagnementLinks: { navKey: string; href: LinkHref }[] = [
-  { navKey: 'craftSupport',  href: '/advisory' },
-  { navKey: 'craftBuild',    href: '/services/build' },
-  { navKey: 'craftTransact', href: '/transact' },
-  { navKey: 'gradeSubmit',   href: '/grade/submit' },
-  { navKey: 'whoTalent',     href: '/talent' as never },
+const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
+  { footerKey: 'footerCraftSupport',  href: '/advisory' },
+  { footerKey: 'footerCraftBuild',    href: '/services/build' },
+  { footerKey: 'footerCraftTransact', href: '/transact' },
+  { footerKey: 'footerGradeSubmit',   href: '/grade/submit' },
+  { footerKey: 'footerWhoTalent',     href: '/talent' as never },
 ]
 
 export default function Footer() {
@@ -183,16 +183,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2 — Accompagnement (services) */}
+          {/* Col 2 — Services */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/60 uppercase mb-4">
               {t('footerCol2Title')}
             </p>
             <ul className="space-y-2.5">
-              {accompagnementLinks.map(({ navKey, href }) => (
-                <li key={navKey}>
+              {accompagnementLinks.map(({ footerKey, href }) => (
+                <li key={footerKey}>
                   <Link href={href} className="text-sm text-white/75 hover:text-white transition-colors">
-                    {tNav(navKey)}
+                    {t(footerKey)}
                   </Link>
                 </li>
               ))}
@@ -238,6 +238,11 @@ export default function Footer() {
                 <Link href="/magazine" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col3Magazine')}
                 </Link>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/newsletters/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Newsletter')}
+                </a>
               </li>
               <li>
                 <Link href="/blog" className="text-sm text-white/75 hover:text-white transition-colors">
