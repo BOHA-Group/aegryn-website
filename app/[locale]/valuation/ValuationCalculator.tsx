@@ -346,7 +346,7 @@ export default function ValuationCalculator() {
                     <label className={labelCls}>{t('finance.arr')} *</label>
                     <input type="number" min="0"
                       value={finance.arr ?? ''}
-                      onChange={e => f(setFinance, 'arr', parseFloat(e.target.value) || 0)}
+                      onChange={e => f(setFinance, 'arr', e.target.value === '' ? undefined : parseFloat(e.target.value))}
                       placeholder={t('finance.arrPlaceholder')} className={inputCls} />
                     <p className={hintCls}>{t('finance.arrHint')}</p>
                   </div>
@@ -354,21 +354,21 @@ export default function ValuationCalculator() {
                     <label className={labelCls}>{t('finance.growth')} *</label>
                     <input type="number"
                       value={finance.growth ?? ''}
-                      onChange={e => f(setFinance, 'growth', parseFloat(e.target.value) || 0)}
+                      onChange={e => f(setFinance, 'growth', e.target.value === '' ? undefined : parseFloat(e.target.value))}
                       placeholder={t('finance.growthPlaceholder')} className={inputCls} />
                   </div>
                   <div>
                     <label className={labelCls}>{t('finance.churn')} *</label>
                     <input type="number" min="0" max="100" step="0.1"
                       value={finance.churn ?? ''}
-                      onChange={e => f(setFinance, 'churn', parseFloat(e.target.value) || 0)}
+                      onChange={e => f(setFinance, 'churn', e.target.value === '' ? undefined : parseFloat(e.target.value))}
                       placeholder={t('finance.churnPlaceholder')} className={inputCls} />
                   </div>
                   <div>
                     <label className={labelCls}>{t('finance.nrr')} *</label>
                     <input type="number" min="0" max="300"
                       value={finance.nrr ?? ''}
-                      onChange={e => f(setFinance, 'nrr', parseFloat(e.target.value) || 0)}
+                      onChange={e => f(setFinance, 'nrr', e.target.value === '' ? undefined : parseFloat(e.target.value))}
                       placeholder={t('finance.nrrPlaceholder')} className={inputCls} />
                     <p className={hintCls}>{t('finance.nrrHint')}</p>
                   </div>
@@ -376,7 +376,7 @@ export default function ValuationCalculator() {
                     <label className={labelCls}>{t('finance.margin')} *</label>
                     <input type="number" min="0" max="100"
                       value={finance.margin ?? ''}
-                      onChange={e => f(setFinance, 'margin', parseFloat(e.target.value) || 0)}
+                      onChange={e => f(setFinance, 'margin', e.target.value === '' ? undefined : parseFloat(e.target.value))}
                       placeholder={t('finance.marginPlaceholder')} className={inputCls} />
                   </div>
                 </div>

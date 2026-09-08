@@ -19,10 +19,11 @@ const schema = z.object({
   estimated_grade: z.enum(['★', 'AAA', 'AA', 'A', 'B', 'NG']),
   score_total:     z.number().int().min(0).max(100),
   score_breakdown: z.object({
-    finance:  z.number(),
-    code:     z.number(),
-    ip:       z.number(),
-    security: z.number(),
+    capital:   z.number(),
+    integrity: z.number(),
+    finance:   z.number(),
+    security:  z.number(),
+    org:       z.number(),
   }),
   valuation_low:    z.number().optional(),
   valuation_high:   z.number().optional(),
@@ -45,11 +46,12 @@ Aegryn VALUATION — RAPPORT INDICATIF
 Grade estimé   : ${d.estimated_grade}
 Score total    : ${d.score_total} / 100
 
-Détail par dimension :
-  Finance       : ${d.score_breakdown.finance} / 25
-  Code          : ${d.score_breakdown.code} / 25
-  IP & Droits   : ${d.score_breakdown.ip} / 25
-  Sécurité      : ${d.score_breakdown.security} / 25
+Détail par dimension (CIFSO v4.0, /20 chacune) :
+  Capital & IP           : ${d.score_breakdown.capital} / 20
+  Intégrité & Gouvernance : ${d.score_breakdown.integrity} / 20
+  Finances & Métriques   : ${d.score_breakdown.finance} / 20
+  Sécurité & Souveraineté : ${d.score_breakdown.security} / 20
+  Organisation & Talent  : ${d.score_breakdown.org} / 20
 
 ${d.pre_revenue ? 'Mode pre-revenue — valorisation IP+Code uniquement' : `Fourchette de valorisation indicative :
   Basse  : ${fmtEur(d.valuation_low)}
@@ -65,9 +67,7 @@ Elle ne constitue pas un Grade Aegryn officiel.
 Pour démarrer une certification officielle :
 → https://aegryn.com/grade/submit
 
-Pour réserver un Assessment Day gratuit :
-→ https://aegryn.com/transact/assessment-days
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   `.trim()
 }
 
@@ -83,7 +83,7 @@ Pre-revenue    : ${d.pre_revenue ? 'Oui' : 'Non'}
 Fourchette     : ${fmtEur(d.valuation_low)} — ${fmtEur(d.valuation_high)}
 Locale         : ${d.locale ?? '—'}
 
-Breakdown : F${d.score_breakdown.finance}/C${d.score_breakdown.code}/I${d.score_breakdown.ip}/S${d.score_breakdown.security}
+Breakdown (CIFSO v4.0) : C${d.score_breakdown.capital}/I${d.score_breakdown.integrity}/F${d.score_breakdown.finance}/S${d.score_breakdown.security}/O${d.score_breakdown.org}
 
 → Voir leads : https://aegryn.com/admin/leads
   `.trim()
