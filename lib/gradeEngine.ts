@@ -277,7 +277,7 @@ export interface GradeResult {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DIMENSION C — CODE (25 pts)
+// DIMENSION C — CODE (20 pts)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function scoreCode(input: CodeInput): DimensionResult {
@@ -301,20 +301,20 @@ function scoreCode(input: CodeInput): DimensionResult {
 
   let score = 0
 
-  // Couverture tests — max 7 pts
-  if      (input.testCoverage >= 80) { score += 7; rationale.push('Couverture de tests élevée (≥80%)') }
-  else if (input.testCoverage >= 70) { score += 5; rationale.push('Couverture de tests satisfaisante (≥70%)') }
+  // Couverture tests — max 6 pts
+  if      (input.testCoverage >= 80) { score += 6; rationale.push('Couverture de tests élevée (≥80%)') }
+  else if (input.testCoverage >= 70) { score += 4; rationale.push('Couverture de tests satisfaisante (≥70%)') }
   else if (input.testCoverage >= 40) { score += 2; rationale.push('Couverture de tests partielle (40-70%)') }
   else                               {             rationale.push('Couverture de tests insuffisante (<40%)') }
 
-  // Vulnérabilités — max 5 pts
-  if      (input.criticalVulnOpen === 0 && input.majorVulnOpen === 0) { score += 5; rationale.push('Aucune vulnérabilité critique ou majeure ouverte') }
-  else if (input.criticalVulnOpen === 0 && input.majorVulnOpen <= 3)  { score += 3; rationale.push('Pas de vulnérabilités critiques, quelques vulnérabilités majeures en cours') }
+  // Vulnérabilités — max 4 pts
+  if      (input.criticalVulnOpen === 0 && input.majorVulnOpen === 0) { score += 4; rationale.push('Aucune vulnérabilité critique ou majeure ouverte') }
+  else if (input.criticalVulnOpen === 0 && input.majorVulnOpen <= 3)  { score += 2; rationale.push('Pas de vulnérabilités critiques, quelques vulnérabilités majeures en cours') }
   else if (input.criticalVulnOpen <= 2)                                { score += 1; rationale.push(`${input.criticalVulnOpen} vulnérabilité(s) critique(s) ouverte(s)`) }
   else                                                                 {             rationale.push(`${input.criticalVulnOpen} vulnérabilités critiques ouvertes — situation préoccupante`) }
 
-  // Architecture — max 4 pts
-  if      (input.architecture === 'decoupled')  { score += 4; rationale.push('Architecture découplée et scalable') }
+  // Architecture — max 3 pts
+  if      (input.architecture === 'decoupled')  { score += 3; rationale.push('Architecture découplée et scalable') }
   else if (input.architecture === 'partial')    { score += 2; rationale.push('Architecture partiellement découplée') }
   else                                          {             rationale.push('Architecture monolithique non scalable') }
 
@@ -327,24 +327,24 @@ function scoreCode(input: CodeInput): DimensionResult {
   else if (input.apiDocumentation === 'partial')  { score += 1; rationale.push('Documentation technique partielle') }
   else                                            {             rationale.push('Documentation technique absente') }
 
-  // Dette technique documentée — max 2 pts
-  if (input.techDebtDocumented === 'yes') { score += 2; rationale.push('Dette technique documentée et maîtrisée') }
+  // Dette technique documentée — max 1 pt
+  if (input.techDebtDocumented === 'yes') { score += 1; rationale.push('Dette technique documentée et maîtrisée') }
   else                                    {             rationale.push('Dette technique non documentée') }
 
-  // Dépendances obsolètes — max 2 pts (pénalités)
-  if      (input.obsoleteDependencies === 0)   { score += 2; rationale.push('Aucune dépendance obsolète (>24 mois)') }
-  else if (input.obsoleteDependencies <= 3)    { score += 1; rationale.push(`${input.obsoleteDependencies} dépendance(s) obsolète(s)`) }
+  // Dépendances obsolètes — max 1 pt
+  if      (input.obsoleteDependencies === 0)   { score += 1; rationale.push('Aucune dépendance obsolète (>24 mois)') }
+  else if (input.obsoleteDependencies <= 3)    {             rationale.push(`${input.obsoleteDependencies} dépendance(s) obsolète(s)`) }
   else                                         {             rationale.push(`${input.obsoleteDependencies} dépendances obsolètes — remédiation nécessaire`) }
 
   // Audit code externe — bonus/malus
-  if      (input.lastCodeAuditMonthsAgo <= 12)  { score = Math.min(25, score + 1); rationale.push('Audit de code externe récent (≤12 mois)') }
+  if      (input.lastCodeAuditMonthsAgo <= 12)  { score = Math.min(20, score + 1); rationale.push('Audit de code externe récent (≤12 mois)') }
   else if (input.lastCodeAuditMonthsAgo >= 9999) {                                  rationale.push('Aucun audit de code externe réalisé') }
 
-  return { score: Math.min(score, 25), autoRefusal: false, rationale }
+  return { score: Math.min(score, 20), autoRefusal: false, rationale }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DIMENSION I — IP & DROITS (25 pts)
+// DIMENSION I — IP & DROITS (20 pts)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function scoreIP(input: IPInput): DimensionResult {
@@ -361,14 +361,14 @@ function scoreIP(input: IPInput): DimensionResult {
 
   let score = 0
 
-  // Marques déposées — max 5 pts
-  if      (input.trademarksJurisdictions >= 3) { score += 5; rationale.push(`Marques déposées dans ${input.trademarksJurisdictions} juridictions`) }
-  else if (input.trademarksJurisdictions === 2) { score += 4; rationale.push('Marques déposées dans 2 juridictions') }
+  // Marques déposées — max 4 pts
+  if      (input.trademarksJurisdictions >= 3) { score += 4; rationale.push(`Marques déposées dans ${input.trademarksJurisdictions} juridictions`) }
+  else if (input.trademarksJurisdictions === 2) { score += 3; rationale.push('Marques déposées dans 2 juridictions') }
   else if (input.trademarksJurisdictions === 1) { score += 2; rationale.push('Marque déposée dans 1 juridiction') }
   else                                          {             rationale.push('Aucune marque déposée') }
 
-  // Litige IP — max 5 pts (pénalité)
-  if      (input.activeIPLitigation === 'no')  { score += 5; rationale.push('Aucun litige IP en cours') }
+  // Litige IP — max 4 pts (pénalité)
+  if      (input.activeIPLitigation === 'no')  { score += 4; rationale.push('Aucun litige IP en cours') }
   else                                          { score -= 3; rationale.push('Litige IP actif — risque significatif') }
 
   // Droits cession — max 6 pts
@@ -376,29 +376,29 @@ function scoreIP(input: IPInput): DimensionResult {
   else if (input.employeeIPRights === 'partial')  { score += 3; rationale.push('Droits de cession partiellement couverts') }
   else                                            {             rationale.push('Droits de cession absents — risque de revendication') }
 
-  // Risque open source GPL — max 3 pts
-  if (input.openSourceRisk === 'no') { score += 3; rationale.push('Aucune dépendance open source à risque (GPL)') }
+  // Risque open source GPL — max 2 pts
+  if (input.openSourceRisk === 'no') { score += 2; rationale.push('Aucune dépendance open source à risque (GPL)') }
   else                               {             rationale.push('Dépendances GPL critiques identifiées') }
 
   // API tierce contractualisée — max 2 pts
   if      (input.thirdPartyAPIContracted === 'yes') { score += 2; rationale.push('API tierce critique contractualisée') }
   else                                              {             rationale.push('API tierce critique sans contrat formalisé') }
 
-  // Moat — max 2 pts
-  if      (input.moat === 'network' || input.moat === 'data') { score += 2; rationale.push(`Moat identifiable : ${input.moat === 'network' ? 'effet réseau' : 'data propriétaire'}`) }
-  else if (input.moat === 'regulatory')                        { score += 2; rationale.push('Moat réglementaire identifié') }
+  // Moat — max 1 pt
+  if      (input.moat === 'network' || input.moat === 'data') { score += 1; rationale.push(`Moat identifiable : ${input.moat === 'network' ? 'effet réseau' : 'data propriétaire'}`) }
+  else if (input.moat === 'regulatory')                        { score += 1; rationale.push('Moat réglementaire identifié') }
   else                                                         {             rationale.push('Aucun moat défensif identifié') }
 
-  // Conformité RGPD/LPD — max 2 pts
-  if      (input.rgpdCompliance === 'complete') { score += 2; rationale.push('Conformité RGPD/LPD complète') }
-  else if (input.rgpdCompliance === 'partial')  { score += 1; rationale.push('Conformité RGPD/LPD partielle') }
+  // Conformité RGPD/LPD — max 1 pt
+  if      (input.rgpdCompliance === 'complete') { score += 1; rationale.push('Conformité RGPD/LPD complète') }
+  else if (input.rgpdCompliance === 'partial')  {             rationale.push('Conformité RGPD/LPD partielle') }
   else                                          {             rationale.push('Non-conformité RGPD/LPD documentée') }
 
-  return { score: Math.max(0, Math.min(score, 25)), autoRefusal: false, rationale }
+  return { score: Math.max(0, Math.min(score, 20)), autoRefusal: false, rationale }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DIMENSION F — FINANCE (25 pts)
+// DIMENSION F — FINANCE (20 pts)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function scoreFinance(input: FinanceInput): DimensionResult {
@@ -422,16 +422,16 @@ function scoreFinance(input: FinanceInput): DimensionResult {
 
   let score = 0
 
-  // ARR — max 6 pts
-  if      (input.arr >= 5_000_000) { score += 6; rationale.push(`ARR de ${fmtK(input.arr)} — position mature`) }
-  else if (input.arr >= 1_000_000) { score += 5; rationale.push(`ARR de ${fmtK(input.arr)} — traction significative`) }
-  else if (input.arr >= 500_000)   { score += 4; rationale.push(`ARR de ${fmtK(input.arr)} — revenus établis`) }
-  else if (input.arr >= 100_000)   { score += 2; rationale.push(`ARR de ${fmtK(input.arr)} — revenus en construction`) }
+  // ARR — max 5 pts
+  if      (input.arr >= 5_000_000) { score += 5; rationale.push(`ARR de ${fmtK(input.arr)} — position mature`) }
+  else if (input.arr >= 1_000_000) { score += 4; rationale.push(`ARR de ${fmtK(input.arr)} — traction significative`) }
+  else if (input.arr >= 500_000)   { score += 3; rationale.push(`ARR de ${fmtK(input.arr)} — revenus établis`) }
+  else if (input.arr >= 100_000)   { score += 1; rationale.push(`ARR de ${fmtK(input.arr)} — revenus en construction`) }
   else                             {             rationale.push('ARR insuffisant pour une évaluation fiable') }
 
-  // Ancienneté des revenus — max 3 pts
-  if      (input.revenueAgeMonths >= 24) { score += 3; rationale.push(`Revenus établis depuis ${input.revenueAgeMonths} mois`) }
-  else if (input.revenueAgeMonths >= 12) { score += 2; rationale.push(`Historique de revenus de ${input.revenueAgeMonths} mois`) }
+  // Ancienneté des revenus — max 2 pts
+  if      (input.revenueAgeMonths >= 24) { score += 2; rationale.push(`Revenus établis depuis ${input.revenueAgeMonths} mois`) }
+  else if (input.revenueAgeMonths >= 12) { score += 1; rationale.push(`Historique de revenus de ${input.revenueAgeMonths} mois`) }
   else if (input.revenueAgeMonths >=  6) { score += 1; rationale.push(`Revenus récents (${input.revenueAgeMonths} mois)`) }
   else                                   {             rationale.push('Historique de revenus insuffisant (<6 mois)') }
 
@@ -450,9 +450,9 @@ function scoreFinance(input: FinanceInput): DimensionResult {
     rationale.push('NRR non applicable (historique <12 mois)')
   }
 
-  // Churn mensuel — max 4 pts (pénalité croissante)
-  if      (input.monthlyChurn < 1)  { score += 4; rationale.push('Churn mensuel excellent (<1%)') }
-  else if (input.monthlyChurn < 3)  { score += 3; rationale.push(`Churn mensuel maîtrisé (${input.monthlyChurn}%)`) }
+  // Churn mensuel — max 3 pts (pénalité croissante)
+  if      (input.monthlyChurn < 1)  { score += 3; rationale.push('Churn mensuel excellent (<1%)') }
+  else if (input.monthlyChurn < 3)  { score += 2; rationale.push(`Churn mensuel maîtrisé (${input.monthlyChurn}%)`) }
   else if (input.monthlyChurn < 5)  { score += 1; rationale.push(`Churn mensuel élevé (${input.monthlyChurn}%) — vigilance requise`) }
   else                              {             rationale.push(`Churn mensuel critique (${input.monthlyChurn}%)`) }
 
@@ -503,15 +503,14 @@ function scoreFinance(input: FinanceInput): DimensionResult {
     }
   }
 
-  // Marge brute — max 3 pts
-  if      (input.grossMargin >= 70) { score += 3; rationale.push(`Marge brute élevée (${input.grossMargin}%)`) }
-  else if (input.grossMargin >= 50) { score += 2; rationale.push(`Marge brute satisfaisante (${input.grossMargin}%)`) }
-  else if (input.grossMargin >= 30) { score += 1; rationale.push(`Marge brute en développement (${input.grossMargin}%)`) }
+  // Marge brute — max 2 pts
+  if      (input.grossMargin >= 70) { score += 2; rationale.push(`Marge brute élevée (${input.grossMargin}%)`) }
+  else if (input.grossMargin >= 50) { score += 1; rationale.push(`Marge brute satisfaisante (${input.grossMargin}%)`) }
+  else if (input.grossMargin >= 30) {             rationale.push(`Marge brute en développement (${input.grossMargin}%)`) }
   else                              {             rationale.push(`Marge brute insuffisante (${input.grossMargin}%)`) }
 
-  // Croissance YoY — max 2 pts
-  if      (input.yoyGrowth >= 100) { score += 2; rationale.push(`Croissance YoY exceptionnelle (+${input.yoyGrowth}%)`) }
-  else if (input.yoyGrowth >= 50)  { score += 2; rationale.push(`Forte croissance YoY (+${input.yoyGrowth}%)`) }
+  // Croissance YoY — max 1 pt
+  if      (input.yoyGrowth >= 50)  { score += 1; rationale.push(`Forte croissance YoY (+${input.yoyGrowth}%)`) }
   else if (input.yoyGrowth >= 20)  { score += 1; rationale.push(`Croissance YoY modérée (+${input.yoyGrowth}%)`) }
   else if (input.yoyGrowth >= 0)   {             rationale.push(`Croissance YoY faible (+${input.yoyGrowth}%)`) }
   else                             {             rationale.push(`Décroissance YoY (${input.yoyGrowth}%)`) }
@@ -521,11 +520,11 @@ function scoreFinance(input: FinanceInput): DimensionResult {
   else if (input.topClientConcentration <= 25) { score += 1; rationale.push(`Concentration client modérée (top 1 = ${input.topClientConcentration}%)`) }
   else                                         {             rationale.push(`Forte concentration client (top 1 = ${input.topClientConcentration}%) — risque de départ`) }
 
-  return { score: Math.max(0, Math.min(score, 25)), autoRefusal: false, rationale }
+  return { score: Math.max(0, Math.min(score, 20)), autoRefusal: false, rationale }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DIMENSION S — SÉCURITÉ (25 pts)
+// DIMENSION S — SÉCURITÉ (20 pts)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function scoreSecurity(input: SecurityInput): DimensionResult {
@@ -549,29 +548,29 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
 
   let score = 0
 
-  // Pentest — max 7 pts de base + bonus qualification (CIFSO v4.0)
+  // Pentest — max 6 pts de base + bonus qualification (CIFSO v4.0)
   let pentestBase = 0
-  if      (input.lastPentestMonthsAgo <= 6)   { pentestBase = 7; rationale.push('Pentest récent (≤6 mois)') }
-  else if (input.lastPentestMonthsAgo <= 12)   { pentestBase = 5; rationale.push('Pentest dans l\'année (≤12 mois)') }
+  if      (input.lastPentestMonthsAgo <= 6)   { pentestBase = 6; rationale.push('Pentest récent (≤6 mois)') }
+  else if (input.lastPentestMonthsAgo <= 12)   { pentestBase = 4; rationale.push('Pentest dans l\'année (≤12 mois)') }
   else if (input.lastPentestMonthsAgo <= 24)   { pentestBase = 2; rationale.push(`Pentest ancien (${input.lastPentestMonthsAgo} mois) — renouvellement recommandé`) }
   else                                          {                  rationale.push('Aucun pentest réalisé') }
   // Bonus qualification pentest (max +1 pt)
   if (pentestBase > 0 && input.pentestMethodology === 'owasp_ptes') {
-    pentestBase = Math.min(pentestBase + 1, 7); rationale.push('Méthodologie OWASP/PTES utilisée')
+    pentestBase = Math.min(pentestBase + 1, 6); rationale.push('Méthodologie OWASP/PTES utilisée')
   }
   if (pentestBase > 0 && input.pentestAuditorCert === 'oscp_crest') {
-    pentestBase = Math.min(pentestBase + 1, 7); rationale.push('Auditeur certifié OSCP/CREST')
+    pentestBase = Math.min(pentestBase + 1, 6); rationale.push('Auditeur certifié OSCP/CREST')
   }
   score += pentestBase
 
-  // Vulnérabilités critiques résolues — max 5 pts
-  if      (input.criticalVulnsResolved === 'yes') { score += 5; rationale.push('Toutes les vulnérabilités critiques résolues') }
-  else if (input.criticalVulnsResolved === 'na')  { score += 3; rationale.push('Aucune vulnérabilité critique identifiée (N/A)') }
+  // Vulnérabilités critiques résolues — max 4 pts
+  if      (input.criticalVulnsResolved === 'yes') { score += 4; rationale.push('Toutes les vulnérabilités critiques résolues') }
+  else if (input.criticalVulnsResolved === 'na')  { score += 2; rationale.push('Aucune vulnérabilité critique identifiée (N/A)') }
   else                                            {             rationale.push('Vulnérabilités critiques non résolues') }
 
-  // MFA admin — max 5 pts (CIFSO v4.0 V3 : pénalité S-15 si accessManagement sans MFA)
+  // MFA admin — max 4 pts (CIFSO v4.0 V3 : pénalité S-15 si accessManagement sans MFA)
   if (input.mfaOnAdminAccess === 'yes') {
-    score += 5; rationale.push('MFA actif sur tous les accès admin')
+    score += 4; rationale.push('MFA actif sur tous les accès admin')
   } else {
     rationale.push('MFA absent sur les accès admin — non-conformité critique')
     // Règle V3 : accessManagement=true sans MFA = contrôle incomplet → S-15 pénalisé
@@ -580,9 +579,9 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
     }
   }
 
-  // Chiffrement — max 4 pts
-  if      (input.encryption === 'full')    { score += 4; rationale.push('Chiffrement complet (repos + transit)') }
-  else if (input.encryption === 'partial') { score += 2; rationale.push('Chiffrement partiel') }
+  // Chiffrement — max 3 pts
+  if      (input.encryption === 'full')    { score += 3; rationale.push('Chiffrement complet (repos + transit)') }
+  else if (input.encryption === 'partial') { score += 1; rationale.push('Chiffrement partiel') }
   else                                     {             rationale.push('Absence de chiffrement documenté') }
 
   // RGPD documenté — max 2 pts
@@ -599,12 +598,12 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
     rationale.push('Transferts RGPD conformes (SCCs / décision d\'adéquation)')
   }
 
-  // Certification externe — max 2 pts
-  if      (input.externalCertification === 'yes')         { score += 2; rationale.push('Certification externe obtenue (ISO 27001 / SOC 2)') }
+  // Certification externe — max 1 pt
+  if      (input.externalCertification === 'yes')         { score += 1; rationale.push('Certification externe obtenue (ISO 27001 / SOC 2)') }
   else if (input.externalCertification === 'in_progress') { score += 1; rationale.push('Certification externe en cours') }
   else                                                     {             rationale.push('Aucune certification externe') }
 
-  return { score: Math.max(0, Math.min(score, 25)), autoRefusal: false, rationale }
+  return { score: Math.max(0, Math.min(score, 20)), autoRefusal: false, rationale }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -7,8 +7,9 @@
  *
  * Principe : Antiquorum a introduit son grading (C=Case, D=Dial, M=Movement
  * + Expert's Overall Opinion) dans ses catalogues d'enchères horlogères.
- * Aegryn adapte ce format aux actifs tech avec 4 dimensions (C/I/F/S) au
- * lieu de 3, la 4ème (Sécurité) n'ayant pas d'équivalent en horlogerie.
+ * Aegryn adapte ce format aux actifs tech avec 5 dimensions (C/I/F/S/O) au
+ * lieu de 3, la 4ème (Sécurité) et la 5ème (Organisation & Talent) n'ayant
+ * pas d'équivalent en horlogerie.
  */
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -244,11 +245,46 @@ export const SECURITY_SUBCODES: SubcodeDef[] = [
   { code: 'S-**', group: 'Spécial', fr: 'Remédiation sécurité requise avant transfert', en: 'Security remediation required before transfer' },
 ]
 
+export const ORGANISATION_SUBCODES: SubcodeDef[] = [
+  // Autonomie & succession
+  { code: 'O-11', group: 'Autonomie & succession', fr: 'Dépendance fondateur ≤20% du CA (faible risque)', en: 'Founder dependency ≤20% of revenue (low risk)' },
+  { code: 'O-12', group: 'Autonomie & succession', fr: 'Dépendance fondateur 20-50% du CA (risque modéré)', en: 'Founder dependency 20-50% of revenue (moderate risk)' },
+  { code: 'O-13', group: 'Autonomie & succession', fr: 'Dépendance fondateur >50% du CA (risque élevé)', en: 'Founder dependency >50% of revenue (high risk)' },
+  { code: 'O-14', group: 'Autonomie & succession', fr: 'Dépendance fondateur >80% sans plan de mitigation — refus automatique', en: 'Founder dependency >80% without mitigation plan — automatic refusal' },
+  { code: 'O-15', group: 'Autonomie & succession', fr: 'Plan de succession formalisé pour les postes clés', en: 'Formalised succession plan for key positions' },
+  { code: 'O-16', group: 'Autonomie & succession', fr: 'Plan de succession absent', en: 'No succession plan' },
+  // Profondeur équipe
+  { code: 'O-21', group: 'Profondeur équipe', fr: '3 N-1 ou plus opérationnels et autonomes', en: '3 or more autonomous N-1 managers' },
+  { code: 'O-22', group: 'Profondeur équipe', fr: '2 N-1 identifiés — autonomie partielle', en: '2 N-1 identified — partial autonomy' },
+  { code: 'O-23', group: 'Profondeur équipe', fr: '1 seul N-1 — autonomie fragile', en: '1 N-1 only — fragile autonomy' },
+  { code: 'O-24', group: 'Profondeur équipe', fr: 'Aucun N-1 capable de piloter sans le fondateur', en: 'No N-1 able to operate without founder' },
+  // Documentation opérationnelle
+  { code: 'O-31', group: 'Documentation opérationnelle', fr: 'Runbooks et SOPs couvrant les processus critiques', en: 'Runbooks and SOPs covering critical processes' },
+  { code: 'O-32', group: 'Documentation opérationnelle', fr: 'Documentation opérationnelle partielle', en: 'Partial operational documentation' },
+  { code: 'O-33', group: 'Documentation opérationnelle', fr: 'Documentation opérationnelle absente', en: 'No operational documentation' },
+  // Talent & culture
+  { code: 'O-41', group: 'Talent & culture', fr: 'Faible turnover talents clés (≤10% / an sur 24 mois)', en: 'Low key talent turnover (≤10% / year over 24 months)' },
+  { code: 'O-42', group: 'Talent & culture', fr: 'Turnover talents clés élevé (>10%) — risque post-closing', en: 'High key talent turnover (>10%) — post-closing risk' },
+  { code: 'O-43', group: 'Talent & culture', fr: 'Culture d\'entreprise documentée (valeurs, handbook)', en: 'Documented company culture (values, handbook)' },
+  // Gouvernance
+  { code: 'O-51', group: 'Gouvernance', fr: 'Comité de direction formalisé avec comptes-rendus réguliers', en: 'Formalised management committee with regular minutes' },
+  { code: 'O-52', group: 'Gouvernance', fr: 'Administrateur indépendant ou conseil consultatif actif', en: 'Independent director or active advisory board' },
+  { code: 'O-53', group: 'Gouvernance', fr: 'Cap table claire — pacte d\'associés ou statuts alignés', en: 'Clear cap table — aligned shareholders agreement or bylaws' },
+  { code: 'O-54', group: 'Gouvernance', fr: 'Litige entre associés identifié', en: 'Dispute between shareholders identified' },
+  // Contrats & RH
+  { code: 'O-61', group: 'Contrats & RH', fr: 'Contrats employés conformes avec clauses IP et non-concurrence', en: 'Compliant employee contracts with IP and non-compete clauses' },
+  { code: 'O-62', group: 'Contrats & RH', fr: 'Contrats employés partiels — régularisation recommandée', en: 'Partial employee contracts — regularisation recommended' },
+  // Spécial
+  { code: 'O-*',  group: 'Spécial', fr: 'Plan de remédiation organisationnelle recommandé avant closing', en: 'Organisational remediation plan recommended before closing' },
+  { code: 'O-**', group: 'Spécial', fr: 'Restructuration organisationnelle requise avant transfert', en: 'Organisational restructuring required before transfer' },
+]
+
 export const SUBCODES_BY_DIMENSION = {
-  code:     CODE_SUBCODES,
-  ip:       IP_SUBCODES,
-  finance:  FINANCE_SUBCODES,
-  security: SECURITY_SUBCODES,
+  code:         CODE_SUBCODES,
+  ip:           IP_SUBCODES,
+  finance:      FINANCE_SUBCODES,
+  security:     SECURITY_SUBCODES,
+  organisation: ORGANISATION_SUBCODES,
 } as const
 
 export type DimensionKey = keyof typeof SUBCODES_BY_DIMENSION
@@ -301,6 +337,7 @@ export function checkAutoRefusal(subcodes: {
   ip: string[]
   finance: string[]
   security: string[]
+  organisation?: string[]
 }): AutoRefusalResult {
   const reasons: string[] = []
 
@@ -318,6 +355,9 @@ export function checkAutoRefusal(subcodes: {
   }
   if (subcodes.security.includes('S-37')) {
     reasons.push('Incident de sécurité en cours non résolu (S-37)')
+  }
+  if (subcodes.organisation?.includes('O-14')) {
+    reasons.push('Dépendance fondateur >80% du CA sans plan de mitigation (O-14)')
   }
 
   return { refused: reasons.length > 0, reasons }
@@ -404,18 +444,19 @@ export const PROOF_QUALITY_LABEL: Record<ProofQuality, { fr: string; en: string;
 }
 
 /**
- * Calcule le plafond de grade résultant des niveaux de preuve des 4 dimensions.
+ * Calcule le plafond de grade résultant des niveaux de preuve des 5 dimensions.
  * Règle : le plafond global = min(plafond de chaque dimension)
  */
 export function capAegByProofQuality(
   aeg: AEGGrade,
-  proofQualities: { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality },
+  proofQualities: { code: ProofQuality; ip: ProofQuality; finance: ProofQuality; security: ProofQuality; organisation?: ProofQuality },
 ): AEGGrade {
   const ceilings = [
     PROOF_QUALITY_LABEL[proofQualities.code].ceiling,
     PROOF_QUALITY_LABEL[proofQualities.ip].ceiling,
     PROOF_QUALITY_LABEL[proofQualities.finance].ceiling,
     PROOF_QUALITY_LABEL[proofQualities.security].ceiling,
+    ...(proofQualities.organisation ? [PROOF_QUALITY_LABEL[proofQualities.organisation].ceiling] : []),
   ]
   const minCeiling = ceilings.reduce((min, c) =>
     AEG_RANK[c] < AEG_RANK[min] ? c : min
@@ -427,7 +468,7 @@ export function capAegByProofQuality(
  * FORMATAGE NOTATION — style Antiquorum : "C 2-11-14-17  I 1-11-16-25 ..."
  * ────────────────────────────────────────────────────────────────────── */
 
-export function formatDimensionNotation(prefix: 'C' | 'I' | 'F' | 'S', note: GradeNote, subcodes: string[]): string {
+export function formatDimensionNotation(prefix: 'C' | 'I' | 'F' | 'S' | 'O', note: GradeNote, subcodes: string[]): string {
   const numbers = subcodes
     .map(c => c.split('-')[1])
     .filter(Boolean)
@@ -435,13 +476,14 @@ export function formatDimensionNotation(prefix: 'C' | 'I' | 'F' | 'S', note: Gra
 }
 
 export function formatGradeNotation(input: {
-  scoreCode: number; scoreIp: number; scoreFinance: number; scoreSecurity: number
-  subcodesCode: string[]; subcodesIp: string[]; subcodesFinance: string[]; subcodesSecurity: string[]
+  scoreCode: number; scoreIp: number; scoreFinance: number; scoreSecurity: number; scoreOrganisation: number
+  subcodesCode: string[]; subcodesIp: string[]; subcodesFinance: string[]; subcodesSecurity: string[]; subcodesOrganisation: string[]
 }): string {
   return [
-    formatDimensionNotation('C', scoreToNote(input.scoreCode),     input.subcodesCode),
-    formatDimensionNotation('I', scoreToNote(input.scoreIp),       input.subcodesIp),
-    formatDimensionNotation('F', scoreToNote(input.scoreFinance),  input.subcodesFinance),
-    formatDimensionNotation('S', scoreToNote(input.scoreSecurity), input.subcodesSecurity),
+    formatDimensionNotation('C', scoreToNote(input.scoreCode),         input.subcodesCode),
+    formatDimensionNotation('I', scoreToNote(input.scoreIp),           input.subcodesIp),
+    formatDimensionNotation('F', scoreToNote(input.scoreFinance),      input.subcodesFinance),
+    formatDimensionNotation('S', scoreToNote(input.scoreSecurity),     input.subcodesSecurity),
+    formatDimensionNotation('O', scoreToNote(input.scoreOrganisation), input.subcodesOrganisation),
   ].join('   ')
 }

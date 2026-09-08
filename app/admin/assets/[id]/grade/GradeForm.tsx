@@ -278,8 +278,10 @@ export default function GradeForm({
   const notation = formatGradeNotation({
     scoreCode: scores.score_code, scoreIp: scores.score_ip,
     scoreFinance: scores.score_finance, scoreSecurity: scores.score_security,
+    scoreOrganisation: 0,
     subcodesCode: subcodes.subcodes_code, subcodesIp: subcodes.subcodes_ip,
     subcodesFinance: subcodes.subcodes_finance, subcodesSecurity: subcodes.subcodes_security,
+    subcodesOrganisation: [],
   })
 
   /* ── Benchmark marché — comparables pour la catégorie sélectionnée ── */

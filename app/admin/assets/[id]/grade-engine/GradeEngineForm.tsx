@@ -27,7 +27,7 @@ const DOC_QUALITY_LABELS: Record<string, string> = {
   sufficient: 'Suffisant', pending_review: 'À évaluer', insufficient: 'Insuffisant', missing: 'Manquant',
 }
 const CIFS_TO_CATEGORY: Record<string, string> = {
-  C: 'code', I: 'ip', F: 'finance', S: 'security',
+  C: 'code', I: 'ip', F: 'finance', S: 'security', O: 'organisation',
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -176,7 +176,7 @@ function YesNoNASelect({ value, onChange }: { value: string; onChange: (v: strin
 function ScoreBar({ label, score, max = 25, dim }: { label: string; score: number; max?: number; dim?: string }) {
   const pct = Math.round((score / max) * 100)
   const color = pct >= 80 ? 'bg-emerald-500' : pct >= 60 ? 'bg-blue-500' : pct >= 40 ? 'bg-amber-500' : 'bg-red-400'
-  const dimLabel: Record<string, string> = { C: 'Code', I: 'IP', F: 'Finance', S: 'Sécurité' }
+  const dimLabel: Record<string, string> = { C: 'Code', I: 'IP', F: 'Finance', S: 'Sécurité', O: 'Org.' }
   return (
     <div className="flex items-center gap-3">
       <p className="font-mono text-[11px] text-gray-500 w-16 shrink-0">{dim ? dimLabel[dim] ?? label : label}</p>
@@ -227,10 +227,11 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
         <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Score live</p>
       </div>
 
-      <ScoreBar label="Code"     score={live.dimensions.code.score} />
-      <ScoreBar label="IP"       score={live.dimensions.ip.score} />
-      <ScoreBar label="Finance"  score={live.dimensions.finance.score} />
-      <ScoreBar label="Sécurité" score={live.dimensions.security.score} />
+      <ScoreBar label="Code"     score={live.dimensions.code.score}         max={20} />
+      <ScoreBar label="IP"        score={live.dimensions.ip.score}           max={20} />
+      <ScoreBar label="Finance"   score={live.dimensions.finance.score}      max={20} />
+      <ScoreBar label="Sécurité"  score={live.dimensions.security.score}     max={20} />
+      <ScoreBar label="Org."      score={live.dimensions.organisation.score} max={20} />
 
       <div className="border-t border-gray-100 pt-3 flex items-center justify-between">
         <div>
@@ -262,9 +263,9 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
 
       {!live.autoRefusal && live.totalScore > 0 && (
         <div className="space-y-1">
-          {(['code', 'ip', 'finance', 'security'] as const).map(dim => {
+          {(['code', 'ip', 'finance', 'security', 'organisation'] as const).map(dim => {
             const d = live.dimensions[dim]
-            const dimNames: Record<string, string> = { code: 'Code', ip: 'IP', finance: 'Finance', security: 'Sécu' }
+            const dimNames: Record<string, string> = { code: 'Code', ip: 'IP', finance: 'Finance', security: 'Sécu', organisation: 'Org.' }
             return d.rationale.slice(0, 2).map((r, i) => (
               <p key={`${dim}-${i}`} className="font-sans text-[10px] text-gray-500 leading-tight">
                 <span className="font-mono text-ag-navy text-[9px]">[{dimNames[dim]}]</span> {r}
@@ -315,7 +316,7 @@ export default function GradeEngineForm({
   autoFillOverrides?: AutoFillResult['gradeInputOverrides']
 }) {
   const [step, setStep] = useState<FormStep>('input')
-  const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false })
+  const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false, organisation: false })
   const [input, setInput] = useState<GradeInput>(defaultInput())
   const [inputSources, setInputSources] = useState<Record<string, SourceType>>(() => {
     const defaults: Record<string, SourceType> = {}
@@ -386,6 +387,10 @@ export default function GradeEngineForm({
   }
   function setSec<K extends keyof GradeInput['security']>(k: K, v: GradeInput['security'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, security: { ...p.security, [k]: v } }))
+    markSource(k, src)
+  }
+  function setOrg<K extends keyof GradeInput['organisation']>(k: K, v: GradeInput['organisation'][K], src: SourceType = 'declarative') {
+    setInput(p => ({ ...p, organisation: { ...p.organisation, [k]: v } }))
     markSource(k, src)
   }
   function setFounderDep<K extends keyof FounderDependencyInput>(k: K, v: 'yes' | 'no') {
@@ -480,7 +485,7 @@ export default function GradeEngineForm({
       <div className="space-y-3">
 
       {/* DIMENSION CODE */}
-      <Section title="Dimension C : Code (25 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
+      <Section title="Dimension C : Code (20 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
         <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale" source={inputSources['testCoverage'] as SourceType}>
           <NumInput value={input.code.testCoverage} onChange={v => setCode('testCoverage', v)} max={100} />
         </Field>
@@ -519,7 +524,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION IP */}
-      <Section title="Dimension I : IP & Droits (25 pts)" open={open.ip} onToggle={() => setOpen(p => ({ ...p, ip: !p.ip }))}>
+      <Section title="Dimension I : IP & Droits (20 pts)" open={open.ip} onToggle={() => setOpen(p => ({ ...p, ip: !p.ip }))}>
         <Field label="Marques déposées (nb de juridictions)" source={inputSources['trademarksJurisdictions'] as SourceType}>
           <NumInput value={input.ip.trademarksJurisdictions} onChange={v => setIP('trademarksJurisdictions', v)} />
         </Field>
@@ -557,7 +562,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION FINANCE */}
-      <Section title="Dimension F : Finance (25 pts)" open={open.finance} onToggle={() => setOpen(p => ({ ...p, finance: !p.finance }))}>
+      <Section title="Dimension F : Finance (20 pts)" open={open.finance} onToggle={() => setOpen(p => ({ ...p, finance: !p.finance }))}>
         <Field label="ARR (€)" source={inputSources['arr'] as SourceType}>
           <NumInput value={input.finance.arr} onChange={v => setFin('arr', v)} step={1000} />
         </Field>
@@ -649,7 +654,7 @@ export default function GradeEngineForm({
       </Section>
 
       {/* DIMENSION SECURITE */}
-      <Section title="Dimension S : Sécurité (25 pts)" open={open.security} onToggle={() => setOpen(p => ({ ...p, security: !p.security }))}>
+      <Section title="Dimension S : Sécurité (20 pts)" open={open.security} onToggle={() => setOpen(p => ({ ...p, security: !p.security }))}>
         <Field label="Dernier pentest (mois)" hint="9999 = jamais réalisé" source={inputSources['lastPentestMonthsAgo'] as SourceType}>
           <NumInput value={input.security.lastPentestMonthsAgo} onChange={v => setSec('lastPentestMonthsAgo', v)} />
         </Field>
@@ -715,15 +720,43 @@ export default function GradeEngineForm({
         </Field>
       </Section>
 
-      {/* PROOF QUALITY — plafond de grade par niveau de preuve (CIFS v3.0) */}
+      {/* DIMENSION O — ORGANISATION & TALENT */}
+      <Section title="Dimension O : Organisation & Talent (20 pts)" open={open.organisation} onToggle={() => setOpen(p => ({ ...p, organisation: !p.organisation }))}>
+        <Field label="Nombre de N-1 autonomes" hint="N-1 = manager capable de piloter sans le fondateur">
+          <NumInput value={input.organisation.keyPersonCount} onChange={v => setOrg('keyPersonCount', v)} max={20} />
+        </Field>
+        <Field label="Plan de succession documenté">
+          <YesNoSelect value={input.organisation.successionPlanDocumented} onChange={v => setOrg('successionPlanDocumented', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Documentation opérationnelle complète" hint="Runbooks, SOPs couvrant les processus critiques">
+          <YesNoSelect value={input.organisation.operationalDocsComplete} onChange={v => setOrg('operationalDocsComplete', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Faible turnover talents clés (24 mois)" hint="Turnover ≤10% / an = faible">
+          <YesNoSelect value={input.organisation.lowKeyTalentTurnover} onChange={v => setOrg('lowKeyTalentTurnover', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Comité de direction formalisé" hint="Avec comptes-rendus réguliers">
+          <YesNoSelect value={input.organisation.formalizedManagement} onChange={v => setOrg('formalizedManagement', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Fondateur pilote >50% des ventes" hint="Oui = pénalité — risque commercial post-closing">
+          <YesNoSelect value={input.organisation.founderLeadsSales} onChange={v => setOrg('founderLeadsSales', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Culture d'entreprise documentée" hint="Valeurs, handbook, onboarding">
+          <YesNoSelect value={input.organisation.cultureDocumented} onChange={v => setOrg('cultureDocumented', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Administrateur indépendant ou advisory board actif">
+          <YesNoSelect value={input.organisation.independentAdvisor} onChange={v => setOrg('independentAdvisor', v as 'yes' | 'no')} />
+        </Field>
+      </Section>
+
+      {/* PROOF QUALITY — plafond de grade par niveau de preuve (CIFSO v4.0) */}
       <div className="border border-gray-200 bg-white">
         <div className="px-5 py-3 bg-gray-50">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Niveau de preuve par dimension (plafond grade)</p>
           <p className="font-sans text-[10px] text-gray-400 mt-0.5">Déclaratif → plafond AA · Vérifiable → plafond AAA · Audité → grade ★ accessible</p>
         </div>
-        <div className="px-5 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {(['code', 'ip', 'finance', 'security'] as const).map(dim => {
-            const labels: Record<string, string> = { code: 'C — Code', ip: 'I — IP', finance: 'F — Finance', security: 'S — Sécurité' }
+        <div className="px-5 py-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
+          {(['code', 'ip', 'finance', 'security', 'organisation'] as const).map(dim => {
+            const labels: Record<string, string> = { code: 'C — Code', ip: 'I — IP', finance: 'F — Finance', security: 'S — Sécurité', organisation: 'O — Org.' }
             const ceiling: Record<ProofQuality, string> = { declarative: 'plafond AA', verifiable: 'plafond AAA', audited: '★ accessible' }
             const val = input.proofQualities?.[dim] ?? 'declarative'
             return (
@@ -1118,12 +1151,12 @@ export default function GradeEngineForm({
         {/* Rationnel par dimension */}
         <div className="bg-white border border-gray-200 p-5 space-y-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Rationnel par dimension</p>
-          {(['code', 'ip', 'finance', 'security'] as const).map(dim => {
+          {(['code', 'ip', 'finance', 'security', 'organisation'] as const).map(dim => {
             const d = result.dimensions[dim]
-            const labels: Record<string, string> = { code: 'Code', ip: 'IP & Droits', finance: 'Finance', security: 'Sécurité' }
+            const labels: Record<string, string> = { code: 'Code', ip: 'IP & Droits', finance: 'Finance', security: 'Sécurité', organisation: 'Organisation & Talent' }
             return (
               <div key={dim}>
-                <p className="font-sans font-semibold text-[12px] text-gray-700 mb-1">{labels[dim]} — {d.score}/25</p>
+                <p className="font-sans font-semibold text-[12px] text-gray-700 mb-1">{labels[dim]} — {d.score}/20</p>
                 <ul className="space-y-0.5">
                   {d.rationale.map((r, i) => (
                     <li key={i} className="font-sans text-[12px] text-gray-500">· {r}</li>
