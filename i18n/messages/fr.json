@@ -5488,21 +5488,85 @@
     "hero": {
       "label": "Aegryn VALUATION",
       "title": "Estimez la valeur\nde votre actif.",
-      "desc": "Notre calculatrice simule le protocole de grade Aegryn sur 4 dimensions, Finance, Code, IP, Sécurité, et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
+      "desc": "Notre calculatrice simule le protocole de grade Aegryn CIFSO v4.0 sur 5 dimensions, Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent, et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
     },
     "progress": {
       "step": "Étape",
       "of": "sur"
     },
     "steps": {
-      "finance": "Finance",
-      "code": "Code",
-      "ip": "IP & Droits",
-      "security": "Sécurité"
+      "capital": "Capital & IP",
+      "integrity": "Intégrité & Gouvernance",
+      "finance": "Finances & Métriques",
+      "security": "Sécurité & Souveraineté",
+      "org": "Organisation & Talent"
+    },
+    "capital": {
+      "title": "Capital & IP",
+      "subtitle": "Dimension C : Capital & IP (0–20 pts)",
+      "tests": "Tests automatisés en place ?",
+      "testsOptions": {
+        "full": "Oui, couverture complète (≥ 70%)",
+        "partial": "Partielle",
+        "none": "Non"
+      },
+      "docs": "Documentation technique ?",
+      "docsOptions": {
+        "full": "Complète (API + architecture)",
+        "partial": "Partielle",
+        "none": "Absente"
+      },
+      "cicd": "Pipeline CI/CD configuré ?",
+      "cicdOptions": {
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "techDebt": "Dette technique ?",
+      "techDebtOptions": {
+        "documented": "Documentée et chiffrée",
+        "known": "Identifiée, non chiffrée",
+        "unknown": "Non évaluée"
+      },
+      "trademark": "Marque déposée ?",
+      "trademarkOptions": {
+        "yes": "Oui (territoire ou zone précisé)",
+        "pending": "Dépôt en cours",
+        "no": "Non"
+      },
+      "stack": "Technologies principales",
+      "stackPlaceholder": "Ex. Next.js, Supabase, Python"
+    },
+    "integrity": {
+      "title": "Intégrité & Gouvernance",
+      "subtitle": "Dimension I : Intégrité & Gouvernance (0–20 pts)",
+      "structure": "Structure juridique et cap table ?",
+      "structureOptions": {
+        "clean": "Propre et documentée",
+        "partial": "Partiellement organisée",
+        "none": "Non formalisée"
+      },
+      "contracts": "Contrats clients et fournisseurs ?",
+      "contractsOptions": {
+        "full": "Tous signés et archivés",
+        "partial": "Partiellement en place",
+        "none": "Absents ou non archivés"
+      },
+      "litiges": "Litiges ou contentieux actifs ?",
+      "litigesOptions": {
+        "none": "Aucun",
+        "minor": "Mineurs, en cours de résolution",
+        "active": "Actifs et significatifs"
+      },
+      "moat": "Barrières à l'entrée (moat) ?",
+      "moatOptions": {
+        "strong": "Solides (réseau, data propriétaire, réglementation)",
+        "moderate": "Identifiées mais réplicables",
+        "none": "Inexistantes"
+      }
     },
     "finance": {
       "title": "Données financières",
-      "subtitle": "Dimension F : Finance (0–25 pts)",
+      "subtitle": "Dimension F : Finances & Métriques (0–20 pts)",
       "arr": "ARR annuel (€)",
       "arrPlaceholder": "Ex. 500000",
       "arrHint": "Entrez 0 si vous êtes pre-revenue",
@@ -5530,7 +5594,7 @@
     },
     "code": {
       "title": "Qualité du code",
-      "subtitle": "Dimension C : Code (0–25 pts)",
+      "subtitle": "Dimension C : Code (0–20 pts)",
       "tests": "Tests automatisés en place ?",
       "testsOptions": {
         "full": "Oui, couverture complète",
@@ -5566,7 +5630,7 @@
     },
     "ip": {
       "title": "Propriété intellectuelle",
-      "subtitle": "Dimension I : IP & Droits (0–25 pts)",
+      "subtitle": "Dimension I : IP & Droits (0–20 pts)",
       "trademark": "Marque déposée ?",
       "trademarkOptions": {
         "yes": "Oui (pays ou zone précisée)",
@@ -5594,7 +5658,7 @@
     },
     "security": {
       "title": "Sécurité & conformité",
-      "subtitle": "Dimension S : Sécurité (0–25 pts)",
+      "subtitle": "Dimension S : Sécurité & Souveraineté (0–20 pts)",
       "pentest": "Pentest réalisé ?",
       "pentestOptions": {
         "under6m": "Oui, il y a moins de 6 mois",
@@ -5618,6 +5682,40 @@
         "vault": "Vault / chiffrement (ex. Doppler, AWS Secrets)",
         "partial": "Partiellement sécurisé",
         "none": "Non sécurisé"
+      },
+      "infra": "Isolation prod / staging ?",
+      "infraOptions": {
+        "isolated": "Environnements séparés",
+        "partial": "Partiellement isolés",
+        "mixed": "Environnements mélangés"
+      }
+    },
+    "org": {
+      "title": "Organisation & Talent",
+      "subtitle": "Dimension O : Organisation & Talent (0–20 pts)",
+      "founderDep": "Dépendance fondateur (part du CA/revenus dépendant de lui) ?",
+      "founderDepOptions": {
+        "low": "Faible (≤ 20% du CA)",
+        "moderate": "Modérée (20–50% du CA)",
+        "high": "Forte (> 50% du CA)"
+      },
+      "nMinus1": "N-1 autonome sur les fonctions clés ?",
+      "nMinus1Options": {
+        "yes": "Oui, au moins 2 fonctions autonomes",
+        "partial": "Partiellement (1 fonction)",
+        "no": "Non, le fondateur est seul décisionnaire"
+      },
+      "succession": "Plan de succession formalisé ?",
+      "successionOptions": {
+        "documented": "Documenté pour les postes clés",
+        "partial": "Partiel",
+        "none": "Inexistant"
+      },
+      "turnover": "Turnover équipe sur 2 ans ?",
+      "turnoverOptions": {
+        "low": "Faible (< 10% / an)",
+        "moderate": "Modéré (10–20% / an)",
+        "high": "Élevé (> 20% / an)"
       }
     },
     "next": "Étape suivante",
@@ -5632,27 +5730,29 @@
       "multipleLabel": "Multiple ARR",
       "basisLabel": "Basé sur votre ARR de",
       "dimBreakdown": "Détail par dimension",
-      "dimMax": "pts / 25",
+      "dimMax": "/ 20 pts",
       "weakTitle": "Ce qui plombe votre score",
       "strongTitle": "Ce qui tire votre score vers le haut",
       "weakMessages": {
-        "finance": "Votre score Finance est le plus faible. Un ARR audité et un NRR > 100% sont les leviers les plus impactants.",
-        "code": "Votre dimension Code limite votre grade. Ajouter des tests automatisés et une CI/CD peut faire gagner 8 à 10 points.",
-        "ip": "Votre IP n'est pas encore sécurisée. C'est le facteur #1 qui limite votre grade, une marque déposée seule vaut +8 points.",
-        "security": "Aucun pentest récent. Les acquéreurs institutionnels exigent un rapport < 12 mois. C'est un bloquant fréquent en due diligence."
+        "capital": "Votre Capital & IP est le point faible. Tests automatisés, CI/CD et marque déposée sont les leviers prioritaires.",
+        "integrity": "Votre structure juridique ou vos contrats sont insuffisants. C'est le premier signal de risque pour un acquéreur.",
+        "finance": "Vos métriques financières limitent votre grade. Un ARR audité et un NRR > 100% sont les leviers les plus impactants.",
+        "security": "Aucun pentest récent. Les acquéreurs institutionnels exigent un rapport < 12 mois. C'est un bloquant fréquent en due diligence.",
+        "org": "Forte dépendance fondateur détectée. C'est le facteur qui décote le plus une valorisation (20–30% en dessous du potentiel)."
       },
       "strongMessages": {
-        "finance": "Vos métriques financières sont solides. Excellent signal pour les acquéreurs.",
-        "code": "Votre base de code est bien maintenue. Signal fort de maintenabilité pour l'acquéreur.",
-        "ip": "Votre propriété intellectuelle est correctement sécurisée. Bon signal de protection des actifs.",
-        "security": "Pentest récent et conformité RGPD en ordre. Excellent signal pour les acquéreurs institutionnels."
+        "capital": "Votre base de code et votre IP sont bien protégées. Signal fort de valeur transmissible.",
+        "integrity": "Votre gouvernance légale et vos contrats sont en ordre. Excellent signal de solidité pour un acquéreur.",
+        "finance": "Vos métriques financières sont solides. Excellent signal pour les acquéreurs institutionnels.",
+        "security": "Pentest récent et conformité RGPD en ordre. Excellent signal pour les acquéreurs institutionnels.",
+        "org": "Organisation structurée et faible dépendance fondateur. C'est ce qui permet d'accéder aux multiples les plus élevés."
       },
       "preRevenueTitle": "Actif pre-revenue",
       "preRevenueDesc": "Sans ARR, la valorisation est basée sur votre score IP et Code combiné. La fourchette indicative reflète la valeur de l'actif brut.",
       "preRevenueRange": "Fourchette indicative",
       "preRevenueNote": "Pour un actif pre-revenue, le grade Aegryn C est l'étape naturelle. Il permet de valoriser l'IP et le code avant toute transaction.",
       "ngNote": "Votre score actuel est en dessous du seuil de gradabilité. Un Assessment Day gratuit vous permettra d'identifier les 3 actions prioritaires.",
-      "disclaimer": "Cette estimation est générée par un algorithme à partir de données que vous déclarez sans vérification. Elle ne constitue pas un Grade Aegryn officiel. Le Grade Aegryn n'est attribué qu'après audit réel par nos équipes d'analystes certifiés Aegryn.",
+      "disclaimer": "Cet outil est une version light publique et illustrative. L'estimation est générée par un algorithme à partir de données que vous déclarez sans vérification indépendante. Elle ne constitue pas un Grade Aegryn officiel et ne saurait remplacer une certification Aegryn indépendante. La certification Aegryn (protocole CIFSO v4.0, audit par des analystes certifiés Aegryn) est obligatoire pour toute transaction certifiée via la plateforme Aegryn Transact.",
       "ctaGrade": "Démarrer ma certification officielle",
       "ctaContact": "Prendre contact avec un advisor",
       "emailTitle": "Recevoir mon rapport détaillé par email.",

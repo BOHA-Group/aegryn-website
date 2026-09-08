@@ -5464,26 +5464,90 @@
   "valuation": {
     "meta": {
       "title": "Estime el valor de su activo tech | Aegryn Valuation",
-      "desc": "Valoración SaaS B2B basada en el protocolo Aegryn. 4 dimensiones, puntuación sobre 100, múltiplo ARR. Resultado inmediato, gratuito y confidencial."
+      "desc": "Calculadora de valoración SaaS B2B basada en el protocolo Aegryn CIFSO v4.0. 5 dimensiones, puntuación /100, rango de valoración. Gratuito. Confidencial."
     },
     "hero": {
       "label": "Aegryn VALUATION",
       "title": "Estime el valor\nde su activo.",
-      "desc": "Nuestra calculadora simula el protocolo de grade Aegryn en 4 dimensiones, Finanzas, Código, IP, Seguridad, y le da una horquilla de valoración calibrada sobre los múltiplos del mercado 2026. Gratuito. Confidencial. Sin compromiso."
+      "desc": "Nuestra calculadora simula el protocolo Aegryn CIFSO v4.0 en 5 dimensiones, Capital & IP, Integridad & Gobernanza, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento, y proporciona un rango de valoración calibrado en los múltiplos de mercado 2026. Gratuito. Confidencial. Sin compromiso."
     },
     "progress": {
       "step": "Paso",
       "of": "de"
     },
     "steps": {
-      "finance": "Finanzas",
-      "code": "Código",
-      "ip": "IP & Derechos",
-      "security": "Seguridad"
+      "capital": "Capital & IP",
+      "integrity": "Integridad & Gobernanza",
+      "finance": "Finanzas & Métricas",
+      "security": "Seguridad & Soberanía",
+      "org": "Organización & Talento"
+    },
+    "capital": {
+      "title": "Capital & IP",
+      "subtitle": "Dimensión C: Capital & IP (0–20 pts)",
+      "tests": "¿Tests automatizados en marcha?",
+      "testsOptions": {
+        "full": "Sí, cobertura completa (≥ 70%)",
+        "partial": "Parcial",
+        "none": "No"
+      },
+      "docs": "¿Documentación técnica?",
+      "docsOptions": {
+        "full": "Completa (API + arquitectura)",
+        "partial": "Parcial",
+        "none": "Ausente"
+      },
+      "cicd": "¿Pipeline CI/CD configurado?",
+      "cicdOptions": {
+        "yes": "Sí",
+        "no": "No"
+      },
+      "techDebt": "¿Deuda técnica?",
+      "techDebtOptions": {
+        "documented": "Documentada y cuantificada",
+        "known": "Identificada, no cuantificada",
+        "unknown": "No evaluada"
+      },
+      "trademark": "¿Marca registrada?",
+      "trademarkOptions": {
+        "yes": "Sí (territorio o zona especificada)",
+        "pending": "En trámite",
+        "no": "No"
+      },
+      "stack": "Tecnologías principales",
+      "stackPlaceholder": "Ej. Next.js, Supabase, Python"
+    },
+    "integrity": {
+      "title": "Integridad & Gobernanza",
+      "subtitle": "Dimensión I: Integridad & Gobernanza (0–20 pts)",
+      "structure": "¿Estructura jurídica y cap table?",
+      "structureOptions": {
+        "clean": "Limpia y documentada",
+        "partial": "Parcialmente organizada",
+        "none": "No formalizada"
+      },
+      "contracts": "¿Contratos con clientes y proveedores?",
+      "contractsOptions": {
+        "full": "Todos firmados y archivados",
+        "partial": "Parcialmente en vigor",
+        "none": "Ausentes o no archivados"
+      },
+      "litiges": "¿Disputas o litigios activos?",
+      "litigesOptions": {
+        "none": "Ninguno",
+        "minor": "Menores, en resolución",
+        "active": "Activos y significativos"
+      },
+      "moat": "¿Barreras de entrada (moat)?",
+      "moatOptions": {
+        "strong": "Sólidas (red, datos propios, regulación)",
+        "moderate": "Identificadas pero replicables",
+        "none": "Inexistentes"
+      }
     },
     "finance": {
       "title": "Datos financieros",
-      "subtitle": "Dimensión F: Finanzas (0–25 pts)",
+      "subtitle": "Dimensión F: Finanzas & Métricas (0–20 pts)",
       "arr": "ARR anual (€)",
       "arrPlaceholder": "Ej. 500000",
       "arrHint": "Ingrese 0 si es pre-revenue",
@@ -5511,7 +5575,7 @@
     },
     "code": {
       "title": "Calidad del código",
-      "subtitle": "Dimensión C: Código (0–25 pts)",
+      "subtitle": "Dimensión C: Código (0–20 pts)",
       "tests": "¿Tests automatizados?",
       "testsOptions": {
         "full": "Sí, cobertura completa",
@@ -5599,6 +5663,40 @@
         "vault": "Vault / cifrado (ej. Doppler)",
         "partial": "Parcialmente seguro",
         "none": "No seguro"
+      },
+      "infra": "¿Aislamiento prod / staging?",
+      "infraOptions": {
+        "isolated": "Entornos separados",
+        "partial": "Parcialmente aislados",
+        "mixed": "Entornos mezclados"
+      }
+    },
+    "org": {
+      "title": "Organización & Talento",
+      "subtitle": "Dimensión O: Organización & Talento (0–20 pts)",
+      "founderDep": "¿Dependencia del fundador (parte de ingresos que depende de él)?",
+      "founderDepOptions": {
+        "low": "Baja (≤ 20% de ingresos)",
+        "moderate": "Moderada (20–50% de ingresos)",
+        "high": "Alta (> 50% de ingresos)"
+      },
+      "nMinus1": "¿N-1 autónomo en funciones clave?",
+      "nMinus1Options": {
+        "yes": "Sí, al menos 2 funciones autónomas",
+        "partial": "Parcialmente (1 función)",
+        "no": "No, el fundador es el único decisor"
+      },
+      "succession": "¿Plan de sucesión formalizado?",
+      "successionOptions": {
+        "documented": "Documentado para puestos clave",
+        "partial": "Parcial",
+        "none": "Inexistente"
+      },
+      "turnover": "¿Rotación del equipo en 2 años?",
+      "turnoverOptions": {
+        "low": "Baja (< 10% / año)",
+        "moderate": "Moderada (10–20% / año)",
+        "high": "Alta (> 20% / año)"
       }
     },
     "next": "Siguiente paso",
@@ -5613,27 +5711,29 @@
       "multipleLabel": "Múltiplo ARR",
       "basisLabel": "Basado en su ARR de",
       "dimBreakdown": "Desglose por dimensión",
-      "dimMax": "pts / 25",
+      "dimMax": "/ 20 pts",
       "weakTitle": "Lo que perjudica su puntuación",
       "strongTitle": "Lo que eleva su puntuación",
       "weakMessages": {
-        "finance": "Su puntuación de Finanzas es la más débil. Un ARR auditado y NRR > 100% son los mayores palancas.",
-        "code": "Su dimensión Código limita el grade. Tests y CI/CD pueden sumar 8–10 puntos.",
-        "ip": "Su IP no está asegurada. Es el factor #1, una marca registrada vale +8 puntos.",
-        "security": "Sin pentest reciente. Los compradores institucionales exigen un informe < 12 meses."
+        "capital": "Su Capital & IP es el punto débil. Tests automatizados, CI/CD y marca registrada son las palancas prioritarias.",
+        "integrity": "Su estructura jurídica o contratos son insuficientes. Es la primera señal de riesgo para un comprador.",
+        "finance": "Sus métricas financieras limitan el grade. Un ARR auditado y NRR > 100% son las palancas más impactantes.",
+        "security": "Sin pentest reciente. Los compradores institucionales exigen un informe < 12 meses.",
+        "org": "Alta dependencia del fundador detectada. Es el factor que más descuenta una valoración (20–30% por debajo del potencial)."
       },
       "strongMessages": {
-        "finance": "Sus métricas financieras son sólidas. Excelente señal.",
-        "code": "Su base de código está bien mantenida.",
-        "ip": "Su propiedad intelectual está correctamente asegurada.",
-        "security": "Pentest reciente y conformidad RGPD en orden."
+        "capital": "Su código e IP están bien protegidos. Fuerte señal de valor transferible.",
+        "integrity": "Su gobernanza legal y contratos están en orden. Excelente señal de solidez para un comprador.",
+        "finance": "Sus métricas financieras son sólidas. Excelente señal para compradores institucionales.",
+        "security": "Pentest reciente y conformidad RGPD en orden. Excelente señal para compradores institucionales.",
+        "org": "Organización estructurada y baja dependencia del fundador. Esto permite acceder a los múltiplos más altos."
       },
       "preRevenueTitle": "Activo pre-revenue",
       "preRevenueDesc": "Sin ARR, la valoración se basa en la puntuación combinada de IP y Código.",
       "preRevenueRange": "Horquilla indicativa",
       "preRevenueNote": "Para un activo pre-revenue, el Grade C de Aegryn es el paso natural siguiente.",
       "ngNote": "Su puntuación está por debajo del umbral de gradabilidad. Un Assessment Day gratuito identificará las 3 acciones prioritarias.",
-      "disclaimer": "Esta estimación es generada por un algoritmo a partir de datos que usted declara sin verificación. No constituye un Grade Aegryn oficial. El Grade Aegryn solo se otorga tras una auditoría real por nuestros equipos de analistas certificados Aegryn.",
+      "disclaimer": "Esta herramienta es una versión light pública con fines meramente ilustrativos. La estimación es generada por un algoritmo a partir de datos que usted declara sin verificación independiente. No constituye un Grade Aegryn oficial y no puede sustituir a una certificación Aegryn independiente. La certificación Aegryn (protocolo CIFSO v4.0, auditoría por analistas certificados Aegryn) es obligatoria para cualquier transacción certificada a través de la plataforma Aegryn Transact.",
       "ctaGrade": "Iniciar mi certificación oficial",
       "ctaAssessment": "Reservar un Assessment Day gratuito",
       "emailTitle": "Recibir mi informe detallado por email.",

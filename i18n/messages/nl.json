@@ -5474,26 +5474,90 @@
   "valuation": {
     "meta": {
       "title": "Estimate the value of your tech asset | Aegryn Valuation",
-      "desc": "B2B SaaS valuation calculator based on the Aegryn grade protocol. 4 dimensions, score out of 100, estimated grade and valuation range. Free. Confidential."
+      "desc": "B2B SaaS waarderingsrekenmachine gebaseerd op het Aegryn CIFSO v4.0 protocol. 5 dimensies, score op 100, geschatte grade en waarderingsbereik. Gratis. Vertrouwelijk."
     },
     "hero": {
       "label": "Aegryn VALUATION",
       "title": "Estimate the value\nof your asset.",
-      "desc": "Our calculator simulates the Aegryn grade protocol across 4 dimensions, Finance, Code, IP, Security, and gives you a valuation range calibrated on 2026 market multiples. Free. Confidential. No commitment."
+      "desc": "Onze rekenmachine simuleert het Aegryn CIFSO v4.0 protocol over 5 dimensies, Kapitaal & IP, Integriteit & Governance, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent, en geeft u een waarderingsbereik gekalibreerd op de marktmultiples van 2026. Gratis. Vertrouwelijk. Vrijblijvend."
     },
     "progress": {
       "step": "Step",
       "of": "of"
     },
     "steps": {
-      "finance": "Finance",
-      "code": "Code",
-      "ip": "IP & Rights",
-      "security": "Security"
+      "capital": "Kapitaal & IP",
+      "integrity": "Integriteit & Governance",
+      "finance": "Financiën & Metrics",
+      "security": "Veiligheid & Soevereiniteit",
+      "org": "Organisatie & Talent"
+    },
+    "capital": {
+      "title": "Kapitaal & IP",
+      "subtitle": "Dimensie C: Kapitaal & IP (0–20 pt)",
+      "tests": "Geautomatiseerde tests aanwezig?",
+      "testsOptions": {
+        "full": "Ja, volledige dekking (≥ 70%)",
+        "partial": "Gedeeltelijk",
+        "none": "Nee"
+      },
+      "docs": "Technische documentatie?",
+      "docsOptions": {
+        "full": "Volledig (API + architectuur)",
+        "partial": "Gedeeltelijk",
+        "none": "Afwezig"
+      },
+      "cicd": "CI/CD pipeline geconfigureerd?",
+      "cicdOptions": {
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "techDebt": "Technische schuld?",
+      "techDebtOptions": {
+        "documented": "Gedocumenteerd en gekwantificeerd",
+        "known": "Geïdentificeerd, niet gekwantificeerd",
+        "unknown": "Niet geëvalueerd"
+      },
+      "trademark": "Merk geregistreerd?",
+      "trademarkOptions": {
+        "yes": "Ja (gebied of zone opgegeven)",
+        "pending": "In behandeling",
+        "no": "Nee"
+      },
+      "stack": "Belangrijkste technologieën",
+      "stackPlaceholder": "Bijv. Next.js, Supabase, Python"
+    },
+    "integrity": {
+      "title": "Integriteit & Governance",
+      "subtitle": "Dimensie I: Integriteit & Governance (0–20 pt)",
+      "structure": "Juridische structuur en cap table?",
+      "structureOptions": {
+        "clean": "Schoon en gedocumenteerd",
+        "partial": "Gedeeltelijk georganiseerd",
+        "none": "Niet geformaliseerd"
+      },
+      "contracts": "Contracten met klanten en leveranciers?",
+      "contractsOptions": {
+        "full": "Alle getekend en gearchiveerd",
+        "partial": "Gedeeltelijk aanwezig",
+        "none": "Afwezig of niet gearchiveerd"
+      },
+      "litiges": "Actieve geschillen of rechtszaken?",
+      "litigesOptions": {
+        "none": "Geen",
+        "minor": "Klein, in oplossing",
+        "active": "Actief en significant"
+      },
+      "moat": "Toetredingsbarrières (moat)?",
+      "moatOptions": {
+        "strong": "Sterk (netwerk, eigen data, regulering)",
+        "moderate": "Geïdentificeerd maar repliceerbaar",
+        "none": "Niet aanwezig"
+      }
     },
     "finance": {
       "title": "Financial data",
-      "subtitle": "Dimensie F: Financiën (0–25 pt)",
+      "subtitle": "Dimensie F: Financiën & Metrics (0–20 pt)",
       "arr": "Annual ARR (€)",
       "arrPlaceholder": "E.g. 500000",
       "arrHint": "Enter 0 if pre-revenue",
@@ -5521,7 +5585,7 @@
     },
     "code": {
       "title": "Code quality",
-      "subtitle": "Dimensie C: Code (0–25 pt)",
+      "subtitle": "Dimensie C: Code (0–20 pt)",
       "tests": "Automated tests in place?",
       "testsOptions": {
         "full": "Yes, full coverage",
@@ -5557,7 +5621,7 @@
     },
     "ip": {
       "title": "Intellectual property",
-      "subtitle": "Dimension I : IP & Rights (0–25 pts)",
+      "subtitle": "Dimensie I: IP & Rechten (0–20 pt)",
       "trademark": "Trademark filed?",
       "trademarkOptions": {
         "yes": "Yes (country or zone specified)",
@@ -5585,7 +5649,7 @@
     },
     "security": {
       "title": "Security & compliance",
-      "subtitle": "Dimension S : Security (0–25 pts)",
+      "subtitle": "Dimensie S: Veiligheid & Soevereiniteit (0–20 pt)",
       "pentest": "Pentest performed?",
       "pentestOptions": {
         "under6m": "Yes, less than 6 months ago",
@@ -5606,12 +5670,46 @@
       },
       "secrets": "Secrets management?",
       "secretsOptions": {
-        "vault": "Vault / encrypted (e.g. Doppler, AWS Secrets)",
-        "partial": "Partially secured",
-        "none": "Not secured"
+        "vault": "Vault / versleuteld (bijv. Doppler, AWS Secrets)",
+        "partial": "Gedeeltelijk beveiligd",
+        "none": "Niet beveiligd"
+      },
+      "infra": "Prod / staging isolatie?",
+      "infraOptions": {
+        "isolated": "Aparte omgevingen",
+        "partial": "Gedeeltelijk geïsoleerd",
+        "mixed": "Gemengde omgevingen"
       }
     },
-    "next": "Next step",
+    "org": {
+      "title": "Organisatie & Talent",
+      "subtitle": "Dimensie O: Organisatie & Talent (0–20 pt)",
+      "founderDep": "Oprichtersafhankelijkheid (deel van inkomsten dat van hem afhangt)?",
+      "founderDepOptions": {
+        "low": "Laag (≤ 20% van inkomsten)",
+        "moderate": "Matig (20–50% van inkomsten)",
+        "high": "Hoog (> 50% van inkomsten)"
+      },
+      "nMinus1": "N-1 autonoom op sleutelfuncties?",
+      "nMinus1Options": {
+        "yes": "Ja, minstens 2 autonome functies",
+        "partial": "Gedeeltelijk (1 functie)",
+        "no": "Nee, de oprichter is de enige beslisser"
+      },
+      "succession": "Opvolgingsplan geformaliseerd?",
+      "successionOptions": {
+        "documented": "Gedocumenteerd voor sleutelposities",
+        "partial": "Gedeeltelijk",
+        "none": "Niet aanwezig"
+      },
+      "turnover": "Teamverloop over 2 jaar?",
+      "turnoverOptions": {
+        "low": "Laag (< 10% / jaar)",
+        "moderate": "Matig (10–20% / jaar)",
+        "high": "Hoog (> 20% / jaar)"
+      }
+    },
+    "next": "Volgende stap",
     "back": "Back",
     "calculate": "Calculate my valuation",
     "result": {
@@ -5623,27 +5721,29 @@
       "multipleLabel": "ARR multiple",
       "basisLabel": "Based on your ARR of",
       "dimBreakdown": "Breakdown by dimension",
-      "dimMax": "pts / 25",
-      "weakTitle": "What's hurting your score",
-      "strongTitle": "What's lifting your score",
+      "dimMax": "/ 20 pt",
+      "weakTitle": "Wat uw score schaadt",
+      "strongTitle": "Wat uw score verhoogt",
       "weakMessages": {
-        "finance": "Your Finance score is the weakest. An audited ARR and NRR > 100% are the highest-impact levers.",
-        "code": "Your Code dimension limits your grade. Adding automated tests and CI/CD can gain 8 to 10 points.",
-        "ip": "Your IP is not yet secured. This is the #1 factor limiting your grade, a filed trademark alone is worth +8 points.",
-        "security": "No recent pentest. Institutional buyers require a report < 12 months old. This is a frequent blocker in due diligence."
+        "capital": "Uw Kapitaal & IP is het zwakke punt. Geautomatiseerde tests, CI/CD en een geregistreerd merk zijn de prioritaire hefbomen.",
+        "integrity": "Uw juridische structuur of contracten zijn onvoldoende. Dit is het eerste risicosignaal voor een koper.",
+        "finance": "Uw financiële metrics beperken de grade. Een geauditeerde ARR en NRR > 100% zijn de meest impactvolle hefbomen.",
+        "security": "Geen recente pentest. Institutionele kopers vereisen een rapport < 12 maanden oud.",
+        "org": "Hoge oprichtersafhankelijkheid gedetecteerd. Dit is de factor die een waardering het meest verlaagt (20–30% onder het potentieel)."
       },
       "strongMessages": {
-        "finance": "Your financial metrics are strong. Excellent signal for buyers.",
-        "code": "Your codebase is well-maintained. Strong maintainability signal for buyers.",
-        "ip": "Your intellectual property is properly secured. Good asset protection signal.",
-        "security": "Recent pentest and GDPR compliance in order. Excellent signal for institutional buyers."
+        "capital": "Uw codebasis en IP zijn goed beschermd. Sterk signaal van overdraagbare waarde.",
+        "integrity": "Uw juridisch bestuur en contracten zijn in orde. Uitstekend soliditeitssignaal voor een koper.",
+        "finance": "Uw financiële metrics zijn solide. Uitstekend signaal voor institutionele kopers.",
+        "security": "Recente pentest en GDPR-conformiteit in orde. Uitstekend signaal voor institutionele kopers.",
+        "org": "Gestructureerde organisatie en lage oprichtersafhankelijkheid. Dit maakt toegang tot de hoogste multiples mogelijk."
       },
       "preRevenueTitle": "Pre-revenue asset",
       "preRevenueDesc": "Without ARR, valuation is based on your combined IP and Code score. The indicative range reflects the raw asset value.",
       "preRevenueRange": "Indicative range",
       "preRevenueNote": "For a pre-revenue asset, Aegryn Grade C is the natural next step. It values IP and code before any transaction.",
       "ngNote": "Your current score is below the gradability threshold. A free Assessment Day will help identify the 3 priority actions.",
-      "disclaimer": "This estimate is generated by an algorithm from data you declare without verification. It does not constitute an official Aegryn Grade. The Aegryn Grade is only awarded after a real audit by our certified Aegryn analyst teams.",
+      "disclaimer": "Dit hulpmiddel is een publieke light-versie uitsluitend voor illustratieve doeleinden. De schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder onafhankelijke verificatie. Het vormt geen officieel Aegryn Grade en kan een onafhankelijke Aegryn-certificering niet vervangen. De Aegryn-certificering (CIFSO v4.0 protocol, audit door gecertificeerde Aegryn-analisten) is verplicht voor elke gecertificeerde transactie via het Aegryn Transact platform.",
       "ctaGrade": "Start my official certification",
       "ctaAssessment": "Book a free Assessment Day",
       "emailTitle": "Receive my detailed report by email.",
@@ -5655,8 +5755,8 @@
       "emailError": "Error, please try again.",
       "restart": "New estimate",
       "estimated": "estimated",
-      "disclaimerLabel": "Non-official estimate",
-      "disclaimerCta": "Start an official certification",
+      "disclaimerLabel": "Niet-officiële schatting",
+      "disclaimerCta": "Start een officiële certificering",
       "ctaContact": "Contact an advisor"
     },
     "marketContext": {

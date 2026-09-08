@@ -14,6 +14,8 @@ const STATIC_ROUTES = [
   { path: '/career',                             priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/alliances',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/glossaire',                          priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/platform',                           priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
   // ── Transact ─────────────────────────────────────────────────────────────────
   { path: '/transact',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
   { path: '/transact/catalog',                   priority: 1.0,  changeFrequency: 'daily'   as const },
@@ -27,30 +29,33 @@ const STATIC_ROUTES = [
   { path: '/transact/buyers',                    priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/transact/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/transact/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
-  // ── Grade ─────────────────────────────────────────────────────────────────────
-  { path: '/grade',                              priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/grade/methodology',                  priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/grade/grading-system',               priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/grade/partners',                     priority: 0.6,  changeFrequency: 'monthly' as const },
-  { path: '/grade/submit',                       priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Valuation ─────────────────────────────────────────────────────────────────
-  { path: '/valuation',                          priority: 0.9,  changeFrequency: 'monthly' as const },
-  // ── Advisory ──────────────────────────────────────────────────────────────────
+  // ── Grade & Certification CIFSO v4.0 ─────────────────────────────────────────
+  { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
+  { path: '/grade/methodology',                  priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/grade/grading-system',               priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/grade/cifso',                        priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/grade/partners',                     priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/grade/submit',                       priority: 0.9,  changeFrequency: 'monthly' as const },
+  // ── Valuation ────────────────────────────────────────────────────────────────
+  { path: '/valuation',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
+  { path: '/valuation/guide',                    priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Advisory ─────────────────────────────────────────────────────────────────
   { path: '/advisory',                           priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/advisory/technology',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/strategy',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/ma',                        priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Talent ────────────────────────────────────────────────────────────────────
+  { path: '/advisory/ai',                        priority: 0.7,  changeFrequency: 'monthly' as const },
+  // ── Talent ───────────────────────────────────────────────────────────────────
   { path: '/talent',                             priority: 0.9,  changeFrequency: 'weekly'  as const },
-  // ── Network ───────────────────────────────────────────────────────────────────
+  // ── Network ──────────────────────────────────────────────────────────────────
   { path: '/network',                            priority: 0.7,  changeFrequency: 'monthly' as const },
-  // ── Assets (portfolio) ────────────────────────────────────────────────────────
+  // ── Assets & Portfolio ───────────────────────────────────────────────────────
   { path: '/assets',                             priority: 0.8,  changeFrequency: 'weekly'  as const },
   { path: '/portfolio',                          priority: 0.7,  changeFrequency: 'monthly' as const },
-  // ── Services ──────────────────────────────────────────────────────────────────
+  // ── Services ─────────────────────────────────────────────────────────────────
   { path: '/services/acquisition-support',       priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/services/build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
-  // ── Magazine ──────────────────────────────────────────────────────────────────
+  // ── Magazine ─────────────────────────────────────────────────────────────────
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/magazine/issue-01/cover',            priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
@@ -58,10 +63,9 @@ const STATIC_ROUTES = [
   { path: '/magazine/report',                    priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/report/2027',               priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/magazine/report/2027/pdf',           priority: 0.5,  changeFrequency: 'yearly'  as const },
-  { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
-  // ── Help / FAQ ────────────────────────────────────────────────────────────────
+  // ── Help / FAQ ───────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
-  // ── Legal ─────────────────────────────────────────────────────────────────────
+  // ── Legal ────────────────────────────────────────────────────────────────────
   { path: '/terms/use',                          priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/terms/cgv',                          priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/terms/ai-usage',                     priority: 0.3,  changeFrequency: 'yearly'  as const },

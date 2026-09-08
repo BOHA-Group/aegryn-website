@@ -119,10 +119,11 @@ Key Pages:
 - /transact/bid-models — Offer structures
 - /transact/results — Past transactions
 
-## AEGRYN Grade (CIFS) (/grade)
+## AEGRYN Grade (CIFSO v4.0) (/grade)
 
+Proprietary independent certification. Protocol CIFSO v4.0: 5 dimensions (Capital, Integrity, Finance, Security, Organisation), each 0-20 pts, total /100. MANDATORY for any certified transaction via Aegryn Transact.
 5 immutable grades: AEG ★ (Apex, #5ADDA4), AAA (Gold, #C9A84C), AA (Silver, #9BA8B0), A (Blue, #4A90D9), B (Amber, #D4820A)
-Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/cifso, /grade/submit, /grade/partners
 
 ## Talent (/talent)
 
@@ -131,7 +132,7 @@ Confidential search. Pre-qualified candidates. 48h mandate response. All 23+ ind
 
 ## Valuation (/valuation)
 
-Free instant preliminary valuation. Multi-criteria: ARR, NRR, churn, TAM, tech stack, team.
+Free PUBLIC LIGHT TOOL. Illustrative algorithmic estimate from user-declared data without independent verification. Covers 5 CIFSO v4.0 dimensions. NOT an official Aegryn Grade. Aegryn certification is mandatory for any certified transaction via Aegryn Transact.
 
 ## Expert Network (/experts, /network)
 

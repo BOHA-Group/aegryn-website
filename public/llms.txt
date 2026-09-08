@@ -73,19 +73,28 @@ Pages: /transact, /transact/catalog, /transact/sessions, /transact/mandate, /tra
 Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
 Pages: /talent
 
-## Grade System — AEGRYN Grade (CIFS)
+## Grade System — AEGRYN Grade (CIFSO v4.0)
 
-Proprietary grading methodology for digital assets — equivalent to a credit rating for tech companies. 5 grades immutable:
+Proprietary independent certification of digital assets, equivalent to a credit rating for tech companies. Protocol: CIFSO v4.0, 5 dimensions each scored 0-20 pts (total /100):
+- C: Capital and IP (code quality, technical debt, IP, trademark, stack)
+- I: Integrity and Governance (legal structure, contracts, compliance, moat)
+- F: Finance and Metrics (ARR, NRR, churn, TAM, auditability)
+- S: Security and Sovereignty (cybersecurity, GDPR, prod isolation, certifications)
+- O: Organisation and Talent (founder dependency, key-person risk, succession, retention)
+
+5 grades immutable:
 - AEG ★ — Apex (absolute excellence) #5ADDA4
 - AAA — Gold (premium) #C9A84C
 - AA  — Silver (solid) #9BA8B0
 - A   — Blue (standard) #4A90D9
 - B   — Amber (early stage) #D4820A
-Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
+
+IMPORTANT: The Aegryn Grade (CIFSO v4.0 certification, audit by certified Aegryn analysts) is MANDATORY for any certified transaction via the Aegryn Transact platform. It cannot be replaced by a self-assessment or any third-party estimate.
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/cifso, /grade/submit, /grade/partners
 
 ## Valuation
 
-Free instant preliminary valuation of digital assets. Multi-criteria: ARR, NRR, churn, TAM, tech stack, team. Benchmarked against European comparable transactions.
+Free public light valuation tool for digital assets. Illustrative estimate only: the calculator is a client-side algorithmic tool based on user-declared data without independent verification. It covers the 5 CIFSO v4.0 dimensions (Capital, Integrity, Finance, Security, Organisation) and benchmarks against European comparable transactions. The result is NOT an official Aegryn Grade and does NOT replace an independent Aegryn certification. Aegryn certification is mandatory for any certified transaction via Aegryn Transact.
 Page: /valuation
 
 ## Expert Network
@@ -143,7 +152,8 @@ French (fr), English (en), German (de), Italian (it), Spanish (es), Dutch (nl)
 ### Grade & Valuation
 - [Grade](https://aegryn.com/fr/grade) — Grading system overview
 - [Methodology](https://aegryn.com/fr/grade/methodology) — Scoring methodology
-- [Grading System](https://aegryn.com/fr/grade/grading-system) — Full CIFS reference
+- [Grading System](https://aegryn.com/fr/grade/grading-system) — Full CIFSO v4.0 reference
+- [CIFSO Protocol](https://aegryn.com/fr/grade/cifso) — 5-dimension CIFSO v4.0 certification protocol
 - [Submit for Grade](https://aegryn.com/fr/grade/submit) — Request a grade
 - [Grade Partners](https://aegryn.com/fr/grade/partners) — Grading partners
 - [Valuation](https://aegryn.com/fr/valuation) — Free instant SaaS valuation
@@ -215,4 +225,4 @@ Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-Sea
 Full content version: https://aegryn.com/llms-full.txt
 Updated version: https://aegryn.com/llms-updated.txt
 
-Last updated: September 7, 2026
+Last updated: September 8, 2026

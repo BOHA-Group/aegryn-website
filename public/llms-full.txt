@@ -1,5 +1,5 @@
 # Aegryn — Full LLM Context File
-> https://aegryn.com | Updated: 2026-09-07
+> https://aegryn.com | Updated: 2026-09-08
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -129,9 +129,16 @@ Page: /talent
 
 ---
 
-## AEGRYN Grade System — CIFS Protocol
+## AEGRYN Grade System — CIFSO v4.0 Protocol
 
-Proprietary grading methodology for digital assets. 5 grades, immutable, based on Code, Infrastructure, Finance, and Strategy scoring.
+Proprietary independent certification of digital assets. 5 grades, immutable. Protocol CIFSO v4.0: 5 dimensions each scored 0-20 pts (total /100):
+- C: Capital and IP (code quality, technical debt, IP, trademark, stack)
+- I: Integrity and Governance (legal structure, contracts, compliance, moat)
+- F: Finance and Metrics (ARR, NRR, churn, TAM, auditability)
+- S: Security and Sovereignty (cybersecurity, GDPR, prod isolation, certifications)
+- O: Organisation and Talent (founder dependency, key-person risk, succession, retention)
+
+MANDATORY for any certified transaction via Aegryn Transact. Cannot be replaced by any self-assessment or third-party estimate.
 
 | Grade | DB Key | Color | Meaning |
 |---|---|---|---|
@@ -142,15 +149,14 @@ Proprietary grading methodology for digital assets. 5 grades, immutable, based o
 | B | b | #D4820A (amber) | Early stage |
 
 Only graded assets are eligible for AEGRYN Transact auction.
-Pages: /grade, /grade/methodology, /grade/grading-system, /grade/submit, /grade/partners
+Pages: /grade, /grade/methodology, /grade/grading-system, /grade/cifso, /grade/submit, /grade/partners
 
 ---
 
 ## Valuation Tool
 
-Free, instant preliminary valuation of digital assets.
-Criteria: ARR, NRR, churn, MRR, CAC, LTV, TAM, tech stack, team, IP, compliance.
-Benchmarked against European comparable M&A transactions.
+Free public light valuation tool. ILLUSTRATIVE only: client-side algorithmic estimate from user-declared data without independent verification. Covers the 5 CIFSO v4.0 dimensions benchmarked against European comparable transactions. NOT an official Aegryn Grade. Aegryn certification is mandatory for any certified transaction via Aegryn Transact.
+
 Page: /valuation
 
 ---
@@ -235,7 +241,8 @@ Incorporated: BOHA-Group Sàrl
 | Results | /fr/transact/results | Past transactions |
 | Grade | /fr/grade | Grading system |
 | Grade Methodology | /fr/grade/methodology | Scoring methodology |
-| Grading System | /fr/grade/grading-system | Full CIFS reference |
+| Grading System | /fr/grade/grading-system | Full CIFSO v4.0 reference |
+| CIFSO Protocol | /fr/grade/cifso | 5-dimension CIFSO v4.0 certification |
 | Grade Submit | /fr/grade/submit | Submit for grading |
 | Grade Partners | /fr/grade/partners | Grading partners |
 | Valuation | /fr/valuation | Free valuation tool |

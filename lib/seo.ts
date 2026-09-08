@@ -67,9 +67,12 @@ const BASE_KEYWORDS = [
   'développement actif sur mesure', 'forfait fixe développement', 'fixed price digital build',
   'certification-ready SaaS', 'IP propriétaire développement', 'zéro dette technique',
   'build digital asset Switzerland', 'construire SaaS forfait fixe',
-  // Grade
+  // Grade & CIFSO
   'Aegryn Grade', 'asset grading', 'notation actif numérique',
   'grade SaaS', 'certification actif numérique', 'tech credit rating',
+  'CIFSO v4.0', 'protocole CIFSO', 'CIFSO protocol', 'certification CIFSO obligatoire',
+  'certification independante SaaS', 'audit certifié actif numérique', 'grade officiel SaaS',
+  'valorisation illustrative SaaS', 'outil valorisation public', 'SaaS valuation light tool',
   // Magazine
   'Aegryn Magazine', 'magazine tech fondateurs', 'magazine tech Europe', 'magazine startup',
   'magazine entrepreneurs tech', 'publication tech M&A', 'revue tech business',
@@ -229,7 +232,10 @@ export const aegrynOrganizationSchema = {
     'SaaS',
     'Swiss Technology',
     'M&A Advisory',
+    'CIFSO v4.0 Certification Protocol',
     'Digital Asset Valuation',
+    'Illustrative SaaS Valuation Tool',
+    'Mandatory Asset Certification for Transaction',
     'Tech Asset Transaction',
     'Due Diligence',
     'EU AI Act Compliance',
@@ -283,7 +289,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Valuation',
-          description: 'Free instant preliminary valuation of digital assets using proprietary SaaS scoring models benchmarked against European comparable transactions.',
+          description: 'Free public light valuation tool for digital assets. Illustrative estimate using the CIFSO v4.0 scoring model (5 dimensions: Capital, Integrity, Finance, Security, Organisation), benchmarked against European comparable transactions. Not a substitute for official Aegryn certification, which is mandatory for any certified transaction via Aegryn Transact.',
           url: `${BASE_URL}/en/valuation`,
         },
       },
@@ -292,7 +298,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Grade',
-          description: 'Proprietary grading methodology for digital assets, equivalent to a credit rating for tech companies. 5 grades: AEG★, AAA, AA, A, B.',
+          description: 'Independent certification of digital assets under the CIFSO v4.0 protocol (5 dimensions: Capital, Integrity, Finance, Security, Organisation). 5 immutable grades: AEG★, AAA, AA, A, B. Mandatory for any certified transaction via Aegryn Transact.',
           url: `${BASE_URL}/en/grade`,
         },
       },
