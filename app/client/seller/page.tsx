@@ -232,7 +232,7 @@ export default async function SellerDashboardPage() {
                 <span className="ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-                Processus complet : audit C/I/F/S, grade officiel, mise au catalogue privé Aegryn, ouverture aux acquéreurs membres qualifiés.
+                Processus complet : audit CIFSO (5 dimensions), grade officiel, mise au catalogue privé Aegryn, ouverture aux acquéreurs membres qualifiés.
               </p>
               <ul className="flex flex-col gap-1.5">
                 {[

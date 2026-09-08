@@ -255,7 +255,7 @@ export default async function SellerAssetDetailPage({
         <div className="bg-white border border-ag-border px-5 py-4 mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Fiche de grade officielle</p>
-            <p className="font-sans text-[12px] text-gray-600">Document de synthèse CIFS horodaté — grade, scores C/I/F/S, référence certifiée.</p>
+            <p className="font-sans text-[12px] text-gray-600">Document de synthèse CIFSO horodaté — grade, scores C/I/F/S/O, référence certifiée.</p>
           </div>
           <a
             href={`/api/seller/assets/${id}/grade-sheet`}

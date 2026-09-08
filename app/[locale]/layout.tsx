@@ -70,7 +70,7 @@ return {
     'céder SaaS', 'cession SaaS Europe', 'vendre SaaS', 'SaaS exit Europe',
     'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',
     'SaaS valuation', 'valorisation SaaS', 'ARR multiple',
-    'certification CIFS', 'séquestre suisse M&A', 'Swiss escrow M&A',
+    'certification CIFSO', 'séquestre suisse M&A', 'Swiss escrow M&A',
     'M&A experts', 'expert network', 'due diligence tech', 'W&I insurance',
     'cybersecurity', 'AI', 'EU AI Act', 'advisory', 'RGPD compliance',
     'Switzerland startup', 'Swiss holding', 'holding suisse tech',

@@ -18,7 +18,7 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   market:        ['M&A tech Europe', 'transaction actifs numériques', 'multiple valorisation SaaS', 'marché cession tech', 'deal flow Europe'],
   seller:        ['vendre son SaaS', 'cession startup tech', 'exit fondateur', 'valorisation SaaS', 'due diligence vendeur'],
   buyer:         ['acheter un SaaS', 'acquisition tech Europe', 'search fund', 'family office tech', 'private equity SaaS'],
-  certification: ['certification actif tech', 'grade Aegryn', 'audit SaaS', 'CIFS Protocol', 'due diligence indépendante'],
+  certification: ['certification actif tech', 'grade Aegryn', 'audit SaaS', 'CIFSO Protocol', 'due diligence indépendante'],
   strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'Aegryn Transaction', 'Swiss tech hub'],
   case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'Aegryn Grade'],
   legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
