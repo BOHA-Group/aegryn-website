@@ -177,9 +177,9 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMagazine')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('thinkingMagazineDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
               <Link
@@ -199,9 +199,9 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMarket')}
           </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('thinkingMarketDesc')}
-          </p>
+          </div>
           <div className="flex flex-col gap-1">
             <a
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
