@@ -8,7 +8,7 @@ import {
   RotateCcw, CheckCircle2, Mail,
 } from 'lucide-react'
 import {
-  type FinanceData, type CodeData, type IPData, type SecurityData,
+  type CapitalData, type IntegrityData, type FinanceData, type SecurityData, type OrgData,
   type ValuationResult,
   runValuation, fmtEur, preRevenueRange,
 } from '@/lib/valuationEngine'
@@ -47,7 +47,7 @@ function RadioGroup<T extends string>({
 }
 
 /* ─── Score bar ──────────────────────────────────────────── */
-function ScoreBar({ score, max = 25 }: { score: number; max?: number }) {
+function ScoreBar({ score, max = 20 }: { score: number; max?: number }) {
   const pct = Math.round((score / max) * 100)
   return (
     <div className="flex items-center gap-3">
@@ -83,17 +83,18 @@ export default function ValuationCalculator() {
   const t    = useTranslations('valuation')
   const _tNav = useTranslations('nav')
 
-  const STEPS = ['finance', 'code', 'ip', 'security'] as const
+  const STEPS = ['capital', 'integrity', 'finance', 'security', 'org'] as const
   type Step = typeof STEPS[number] | 'result'
 
-  const [step, setStep]     = useState<Step>('finance')
+  const [step, setStep]     = useState<Step>('capital')
   const [result, setResult] = useState<ValuationResult | null>(null)
 
   /* ── Form state ── */
-  const [finance, setFinance] = useState<Partial<FinanceData>>({})
-  const [code,    setCode]    = useState<Partial<CodeData>>({})
-  const [ip,      setIp]      = useState<Partial<IPData>>({})
-  const [security, setSecurity] = useState<Partial<SecurityData>>({})
+  const [capital,   setCapital]   = useState<Partial<CapitalData>>({})
+  const [integrity, setIntegrity] = useState<Partial<IntegrityData>>({})
+  const [finance,   setFinance]   = useState<Partial<FinanceData>>({})
+  const [security,  setSecurity]  = useState<Partial<SecurityData>>({})
+  const [org,       setOrg]       = useState<Partial<OrgData>>({})
 
   /* ── Email ── */
   const [email, setEmail]           = useState('')
@@ -108,10 +109,11 @@ export default function ValuationCalculator() {
 
   /* ── Validation ── */
   function canAdvance(): boolean {
-    if (step === 'finance')  return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
-    if (step === 'code')     return !!(code.tests && code.docs && code.cicd && code.techDebt && code.deps)
-    if (step === 'ip')       return !!(ip.trademark && ip.copyright && ip.opensource && ip.apiContracts)
-    if (step === 'security') return !!(security.pentest && security.gdpr && security.mfa && security.secrets)
+    if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.trademark)
+    if (step === 'integrity') return !!(integrity.structure && integrity.contracts && integrity.litiges && integrity.moat)
+    if (step === 'finance')   return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
+    if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra)
+    if (step === 'org')       return !!(org.founderDep && org.nMinus1 && org.succession && org.turnover)
     return false
   }
 
@@ -121,10 +123,11 @@ export default function ValuationCalculator() {
       setStep(STEPS[idx + 1])
     } else {
       const input = {
-        finance:  finance as FinanceData,
-        code:     code    as CodeData,
-        ip:       ip      as IPData,
-        security: security as SecurityData,
+        capital:   capital   as CapitalData,
+        integrity: integrity as IntegrityData,
+        finance:   finance   as FinanceData,
+        security:  security  as SecurityData,
+        org:       org       as OrgData,
       }
       setResult(runValuation(input))
       setStep('result')
@@ -137,11 +140,12 @@ export default function ValuationCalculator() {
   }
 
   function restart() {
-    setStep('finance')
+    setStep('capital')
+    setCapital({})
+    setIntegrity({})
     setFinance({})
-    setCode({})
-    setIp({})
     setSecurity({})
+    setOrg({})
     setResult(null)
     setEmail('')
     setEmailSent(false)
@@ -162,10 +166,11 @@ export default function ValuationCalculator() {
           estimated_grade:  result.grade.grade,
           score_total:      result.grade.totalScore,
           score_breakdown:  {
-            finance:  result.scores.finance,
-            code:     result.scores.code,
-            ip:       result.scores.ip,
-            security: result.scores.security,
+            capital:   result.scores.capital,
+            integrity: result.scores.integrity,
+            finance:   result.scores.finance,
+            security:  result.scores.security,
+            org:       result.scores.org,
           },
           arr:          finance.arr,
           growth_yoy:   finance.growth,
@@ -272,10 +277,69 @@ export default function ValuationCalculator() {
           {/* ── Form panels ── */}
           <div>
 
-            {/* STEP — FINANCE */}
+            {/* STEP — CAPITAL & IP */}
+            {step === 'capital' && (
+              <div className="flex flex-col gap-6">
+                <StepHeader title={t('capital.title')} subtitle={t('capital.subtitle')} step={1} total={5} t={t} />
+
+                {([
+                  { key: 'tests',    label: t('capital.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`capital.testsOptions.${k}`) })) },
+                  { key: 'docs',     label: t('capital.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`capital.docsOptions.${k}`) })) },
+                  { key: 'cicd',     label: t('capital.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`capital.cicdOptions.${k}`) })) },
+                  { key: 'techDebt', label: t('capital.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`capital.techDebtOptions.${k}`) })) },
+                  { key: 'trademark', label: t('capital.trademark'), opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`capital.trademarkOptions.${k}`) })) },
+                ] as { key: keyof CapitalData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(capital[key] ?? '') as never}
+                      onChange={(v) => f(setCapital, key, v)}
+                    />
+                  </div>
+                ))}
+
+                <div>
+                  <label className={labelCls}>{t('capital.stack')}</label>
+                  <input type="text"
+                    value={capital.stack ?? ''}
+                    onChange={e => f(setCapital, 'stack', e.target.value)}
+                    placeholder={t('capital.stackPlaceholder')} className={inputCls} />
+                </div>
+
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack={false} onBack={back} nextLabel={t('next')} backLabel={t('back')} />
+              </div>
+            )}
+
+            {/* STEP — INTÉGRITÉ & GOUVERNANCE */}
+            {step === 'integrity' && (
+              <div className="flex flex-col gap-6">
+                <StepHeader title={t('integrity.title')} subtitle={t('integrity.subtitle')} step={2} total={5} t={t} />
+
+                {([
+                  { key: 'structure', label: t('integrity.structure'), opts: (['clean','partial','none'] as const).map(k => ({ key: k, label: t(`integrity.structureOptions.${k}`) })) },
+                  { key: 'contracts', label: t('integrity.contracts'), opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`integrity.contractsOptions.${k}`) })) },
+                  { key: 'litiges',   label: t('integrity.litiges'),   opts: (['none','minor','active'] as const).map(k => ({ key: k, label: t(`integrity.litigesOptions.${k}`) })) },
+                  { key: 'moat',      label: t('integrity.moat'),      opts: (['strong','moderate','none'] as const).map(k => ({ key: k, label: t(`integrity.moatOptions.${k}`) })) },
+                ] as { key: keyof IntegrityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(integrity[key] ?? '') as never}
+                      onChange={(v) => f(setIntegrity, key, v)}
+                    />
+                  </div>
+                ))}
+
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
+              </div>
+            )}
+
+            {/* STEP — FINANCES & MÉTRIQUES */}
             {step === 'finance' && (
               <div className="flex flex-col gap-6">
-                <StepHeader title={t('finance.title')} subtitle={t('finance.subtitle')} step={1} total={4} t={t} />
+                <StepHeader title={t('finance.title')} subtitle={t('finance.subtitle')} step={3} total={5} t={t} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
@@ -335,79 +399,21 @@ export default function ValuationCalculator() {
                   />
                 </div>
 
-                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack={false} onBack={back} nextLabel={t('next')} backLabel={t('back')} />
-              </div>
-            )}
-
-            {/* STEP — CODE */}
-            {step === 'code' && (
-              <div className="flex flex-col gap-6">
-                <StepHeader title={t('code.title')} subtitle={t('code.subtitle')} step={2} total={4} t={t} />
-
-                {([ 
-                  { key: 'tests',    label: t('code.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.testsOptions.${k}`) })) },
-                  { key: 'docs',     label: t('code.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.docsOptions.${k}`) })) },
-                  { key: 'cicd',     label: t('code.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`code.cicdOptions.${k}`) })) },
-                  { key: 'techDebt', label: t('code.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`code.techDebtOptions.${k}`) })) },
-                  { key: 'deps',     label: t('code.deps'),     opts: (['under1y','one_to_two','above2y','unknown'] as const).map(k => ({ key: k, label: t(`code.depsOptions.${k}`) })) },
-                ] as { key: keyof CodeData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
-                  <div key={key as string}>
-                    <label className={labelCls}>{label} *</label>
-                    <RadioGroup
-                      options={opts as {key: never; label: string}[]}
-                      value={(code[key] ?? '') as never}
-                      onChange={(v) => f(setCode, key, v)}
-                    />
-                  </div>
-                ))}
-
-                <div>
-                  <label className={labelCls}>{t('code.stack')}</label>
-                  <input type="text"
-                    value={code.stack ?? ''}
-                    onChange={e => f(setCode, 'stack', e.target.value)}
-                    placeholder={t('code.stackPlaceholder')} className={inputCls} />
-                </div>
-
                 <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
             )}
 
-            {/* STEP — IP */}
-            {step === 'ip' && (
-              <div className="flex flex-col gap-6">
-                <StepHeader title={t('ip.title')} subtitle={t('ip.subtitle')} step={3} total={4} t={t} />
-
-                {([
-                  { key: 'trademark',    label: t('ip.trademark'),    opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`ip.trademarkOptions.${k}`) })) },
-                  { key: 'copyright',    label: t('ip.copyright'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.copyrightOptions.${k}`) })) },
-                  { key: 'opensource',   label: t('ip.opensource'),   opts: (['clean','gpl','unaudited'] as const).map(k => ({ key: k, label: t(`ip.opensourceOptions.${k}`) })) },
-                  { key: 'apiContracts', label: t('ip.apiContracts'), opts: (['yes','partial','no'] as const).map(k => ({ key: k, label: t(`ip.apiContractsOptions.${k}`) })) },
-                ] as { key: keyof IPData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
-                  <div key={key as string}>
-                    <label className={labelCls}>{label} *</label>
-                    <RadioGroup
-                      options={opts as {key: never; label: string}[]}
-                      value={(ip[key] ?? '') as never}
-                      onChange={(v) => f(setIp, key, v)}
-                    />
-                  </div>
-                ))}
-
-                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
-              </div>
-            )}
-
-            {/* STEP — SECURITY */}
+            {/* STEP — SÉCURITÉ & SOUVERAINETÉ */}
             {step === 'security' && (
               <div className="flex flex-col gap-6">
-                <StepHeader title={t('security.title')} subtitle={t('security.subtitle')} step={4} total={4} t={t} />
+                <StepHeader title={t('security.title')} subtitle={t('security.subtitle')} step={4} total={5} t={t} />
 
                 {([
                   { key: 'pentest', label: t('security.pentest'), opts: (['under6m','six_to_12m','above12m','never'] as const).map(k => ({ key: k, label: t(`security.pentestOptions.${k}`) })) },
                   { key: 'gdpr',    label: t('security.gdpr'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`security.gdprOptions.${k}`) })) },
                   { key: 'mfa',     label: t('security.mfa'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`security.mfaOptions.${k}`) })) },
                   { key: 'secrets', label: t('security.secrets'), opts: (['vault','partial','none'] as const).map(k => ({ key: k, label: t(`security.secretsOptions.${k}`) })) },
+                  { key: 'infra',   label: t('security.infra'),   opts: (['isolated','partial','mixed'] as const).map(k => ({ key: k, label: t(`security.infraOptions.${k}`) })) },
                 ] as { key: keyof SecurityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
@@ -415,6 +421,31 @@ export default function ValuationCalculator() {
                       options={opts as {key: never; label: string}[]}
                       value={(security[key] ?? '') as never}
                       onChange={(v) => f(setSecurity, key, v)}
+                    />
+                  </div>
+                ))}
+
+                <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
+              </div>
+            )}
+
+            {/* STEP — ORGANISATION & TALENT */}
+            {step === 'org' && (
+              <div className="flex flex-col gap-6">
+                <StepHeader title={t('org.title')} subtitle={t('org.subtitle')} step={5} total={5} t={t} />
+
+                {([
+                  { key: 'founderDep',  label: t('org.founderDep'),  opts: (['low','moderate','high'] as const).map(k => ({ key: k, label: t(`org.founderDepOptions.${k}`) })) },
+                  { key: 'nMinus1',     label: t('org.nMinus1'),     opts: (['yes','partial','no'] as const).map(k => ({ key: k, label: t(`org.nMinus1Options.${k}`) })) },
+                  { key: 'succession',  label: t('org.succession'),  opts: (['documented','partial','none'] as const).map(k => ({ key: k, label: t(`org.successionOptions.${k}`) })) },
+                  { key: 'turnover',    label: t('org.turnover'),    opts: (['low','moderate','high'] as const).map(k => ({ key: k, label: t(`org.turnoverOptions.${k}`) })) },
+                ] as { key: keyof OrgData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                  <div key={key as string}>
+                    <label className={labelCls}>{label} *</label>
+                    <RadioGroup
+                      options={opts as {key: never; label: string}[]}
+                      value={(org[key] ?? '') as never}
+                      onChange={(v) => f(setOrg, key, v)}
                     />
                   </div>
                 ))}
@@ -496,10 +527,13 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
   const { grade, scores, range, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
   const prRange = preRevenue ? preRevenueRange(preRevenueScore) : null
 
-  const dimKeys = ['finance', 'code', 'ip', 'security'] as const
+  const dimKeys = ['capital', 'integrity', 'finance', 'security', 'org'] as const
   const dimLabels: Record<string, string> = {
-    finance: t('steps.finance'), code: t('steps.code'),
-    ip: t('steps.ip'), security: t('steps.security'),
+    capital:   t('steps.capital'),
+    integrity: t('steps.integrity'),
+    finance:   t('steps.finance'),
+    security:  t('steps.security'),
+    org:       t('steps.org'),
   }
 
   return (
@@ -576,7 +610,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
           <div key={dim} className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <span className="font-sans font-semibold text-[12px] text-ag-black">{dimLabels[dim]}</span>
-              <span className="font-sans text-[11px] text-ag-gray-light">{t('result.dimMax')}</span>
+              <span className="font-sans text-[11px] text-ag-gray-light">{scores[dim as keyof typeof scores] as number} {t('result.dimMax')}</span>
             </div>
             <ScoreBar score={scores[dim as keyof typeof scores] as number} />
           </div>

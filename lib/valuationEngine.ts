@@ -1,19 +1,40 @@
 /**
- * Aegryn Valuation Engine v1.0
+ * Aegryn Valuation Engine v2.0 — CIFSO v4.0
  *
- * Mirrors the 5-dimension CIFSO grading protocol from /grade/methodology.
- * Thresholds are calibrated to match the published grade grid:
+ * Five independent dimensions, each scored 0–20 pts. Total /100.
+ *   C — Capital & IP (code, architecture, IP, marque)
+ *   I — Intégrité & Gouvernance (juridique, cap table, contrats, moat)
+ *   F — Finances & Métriques (ARR, churn, NRR, marges, croissance)
+ *   S — Sécurité & Souveraineté (pentest, RGPD, MFA, secrets, infra)
+ *   O — Organisation & Talent (dépendance fondateur, N-1, succession)
+ *
+ * Grade grid (mirrors /grade/methodology):
  *   90-100 → ★   | 75-89 → AAA | 60-74 → AA
  *   45-59  → A   | 30-44 → B   | < 30  → Non gradable
  *
- * Each dimension scores 0-25 pts. Total /100 → grade → multiplier range.
  * 100% client-side — zero API calls.
  */
 
 /* ─── Input types ────────────────────────────────────────── */
 
+export interface CapitalData {
+  tests:      'full' | 'partial' | 'none'        // Code coverage
+  docs:       'full' | 'partial' | 'none'        // Technical docs
+  cicd:       'yes' | 'no'                       // CI/CD pipeline
+  techDebt:   'documented' | 'known' | 'unknown' // Tech debt
+  trademark:  'yes' | 'pending' | 'no'           // Brand registered
+  stack:      string                              // label only
+}
+
+export interface IntegrityData {
+  structure:     'clean' | 'partial' | 'none'    // Legal structure / cap table
+  contracts:     'full' | 'partial' | 'none'     // Client/supplier contracts
+  litiges:       'none' | 'minor' | 'active'     // Active disputes
+  moat:          'strong' | 'moderate' | 'none'  // Competitive moat
+}
+
 export interface FinanceData {
-  arr:        number   // Annual Recurring Revenue €
+  arr:        number
   growth:     number   // YoY %
   churn:      number   // Monthly churn %
   nrr:        number   // Net Revenue Retention %
@@ -22,132 +43,140 @@ export interface FinanceData {
   arrAudited: 'yes' | 'no' | 'not_yet'
 }
 
-export interface CodeData {
-  tests:      'full' | 'partial' | 'none'
-  docs:       'full' | 'partial' | 'none'
-  cicd:       'yes' | 'no'
-  techDebt:   'documented' | 'known' | 'unknown'
-  deps:       'under1y' | 'one_to_two' | 'above2y' | 'unknown'
-  stack:      string   // label only, no score impact
-}
-
-export interface IPData {
-  trademark:  'yes' | 'pending' | 'no'
-  copyright:  'full' | 'partial' | 'none'
-  opensource: 'clean' | 'gpl' | 'unaudited'
-  apiContracts: 'yes' | 'partial' | 'no'
-}
-
 export interface SecurityData {
   pentest:    'under6m' | 'six_to_12m' | 'above12m' | 'never'
   gdpr:       'full' | 'partial' | 'none'
   mfa:        'yes' | 'no'
   secrets:    'vault' | 'partial' | 'none'
+  infra:      'isolated' | 'partial' | 'mixed'   // Prod/staging isolation
+}
+
+export interface OrgData {
+  founderDep:   'low' | 'moderate' | 'high'      // ≤20% / 20-50% / >50% CA
+  nMinus1:      'yes' | 'partial' | 'no'         // N-1 autonome sur fonctions clés
+  succession:   'documented' | 'partial' | 'none'
+  turnover:     'low' | 'moderate' | 'high'      // <10% / 10-20% / >20%
 }
 
 export interface ValuationInput {
-  finance:  FinanceData
-  code:     CodeData
-  ip:       IPData
-  security: SecurityData
+  capital:   CapitalData
+  integrity: IntegrityData
+  finance:   FinanceData
+  security:  SecurityData
+  org:       OrgData
 }
 
-/* ─── Score functions (0-25 each) ───────────────────────── */
+/* ─── Score functions (0-20 each) ───────────────────────── */
+
+export function scoreCapital(d: CapitalData): number {
+  let s = 0
+
+  // Tests / code coverage (max 6)
+  s += d.tests === 'full' ? 6 : d.tests === 'partial' ? 3 : 0
+
+  // Docs (max 4)
+  s += d.docs  === 'full' ? 4 : d.docs  === 'partial' ? 2 : 0
+
+  // CI/CD (max 4)
+  s += d.cicd  === 'yes' ? 4 : 0
+
+  // Tech debt (max 3)
+  s += d.techDebt === 'documented' ? 3 : d.techDebt === 'known' ? 1 : 0
+
+  // Trademark (max 3)
+  s += d.trademark === 'yes' ? 3 : d.trademark === 'pending' ? 1 : 0
+
+  return Math.min(s, 20)
+}
+
+export function scoreIntegrity(d: IntegrityData): number {
+  let s = 0
+
+  // Legal structure / cap table (max 7)
+  s += d.structure === 'clean' ? 7 : d.structure === 'partial' ? 3 : 0
+
+  // Contracts (max 6)
+  s += d.contracts === 'full' ? 6 : d.contracts === 'partial' ? 3 : 0
+
+  // Litiges (max 4)
+  s += d.litiges === 'none' ? 4 : d.litiges === 'minor' ? 2 : 0
+
+  // Moat (max 3)
+  s += d.moat === 'strong' ? 3 : d.moat === 'moderate' ? 1 : 0
+
+  return Math.min(s, 20)
+}
 
 export function scoreFinance(d: FinanceData): number {
   let s = 0
 
-  // ARR audited (max 5)
-  s += d.arrAudited === 'yes' ? 5 : d.arrAudited === 'not_yet' ? 2 : 0
+  // ARR audited (max 4)
+  s += d.arrAudited === 'yes' ? 4 : d.arrAudited === 'not_yet' ? 1 : 0
 
-  // NRR (max 7)
-  s += d.nrr >= 120 ? 7 : d.nrr >= 110 ? 6 : d.nrr >= 100 ? 4 : d.nrr >= 90 ? 2 : 0
+  // NRR (max 5)
+  s += d.nrr >= 120 ? 5 : d.nrr >= 110 ? 4 : d.nrr >= 100 ? 3 : d.nrr >= 90 ? 1 : 0
 
-  // Churn (max 6)
-  s += d.churn <= 1   ? 6
-    : d.churn <= 2   ? 5
-    : d.churn <= 4   ? 4
-    : d.churn <= 6   ? 2
-    : d.churn <= 10  ? 1
+  // Churn (max 5)
+  s += d.churn <= 1  ? 5
+    : d.churn <= 2  ? 4
+    : d.churn <= 3  ? 3
+    : d.churn <= 5  ? 2
+    : d.churn <= 10 ? 1
     : 0
 
-  // Growth YoY (max 5)
-  s += d.growth >= 50 ? 5
-    : d.growth >= 25 ? 4
-    : d.growth >= 10 ? 3
+  // Growth YoY (max 4)
+  s += d.growth >= 50 ? 4
+    : d.growth >= 25 ? 3
+    : d.growth >= 10 ? 2
     : d.growth >= 0  ? 1
     : 0
 
   // Seniority (max 2)
-  s += d.seniority === 'above3'      ? 2
-    : d.seniority === 'one_to_three' ? 1
-    : 0
+  s += d.seniority === 'above3' ? 2 : d.seniority === 'one_to_three' ? 1 : 0
 
-  return Math.min(s, 25)
-}
-
-export function scoreCode(d: CodeData): number {
-  let s = 0
-
-  // Tests (max 8)
-  s += d.tests === 'full'    ? 8 : d.tests === 'partial' ? 4 : 0
-
-  // Documentation (max 6)
-  s += d.docs  === 'full'    ? 6 : d.docs  === 'partial' ? 3 : 0
-
-  // CI/CD (max 5)
-  s += d.cicd  === 'yes' ? 5 : 0
-
-  // Tech debt (max 4)
-  s += d.techDebt === 'documented' ? 4
-    : d.techDebt === 'known'       ? 2
-    : 0
-
-  // Dependencies (max 2)
-  s += d.deps === 'under1y'    ? 2
-    : d.deps === 'one_to_two'  ? 1
-    : 0
-
-  return Math.min(s, 25)
-}
-
-export function scoreIP(d: IPData): number {
-  let s = 0
-
-  // Trademark (max 8)
-  s += d.trademark  === 'yes'     ? 8 : d.trademark  === 'pending' ? 4 : 0
-
-  // Copyright / software rights (max 8)
-  s += d.copyright  === 'full'    ? 8 : d.copyright  === 'partial' ? 4 : 0
-
-  // Open-source compliance (max 6)
-  s += d.opensource === 'clean'   ? 6 : d.opensource === 'gpl' ? 2 : 1
-
-  // API contracts (max 3)
-  s += d.apiContracts === 'yes'   ? 3 : d.apiContracts === 'partial' ? 1 : 0
-
-  return Math.min(s, 25)
+  return Math.min(s, 20)
 }
 
 export function scoreSecurity(d: SecurityData): number {
   let s = 0
 
-  // Pentest (max 10)
-  s += d.pentest === 'under6m'    ? 10
-    : d.pentest === 'six_to_12m'  ?  6
-    : d.pentest === 'above12m'    ?  2
+  // Pentest (max 7)
+  s += d.pentest === 'under6m'   ? 7
+    : d.pentest === 'six_to_12m' ? 4
+    : d.pentest === 'above12m'   ? 1
     : 0
 
-  // GDPR (max 7)
-  s += d.gdpr    === 'full'       ?  7 : d.gdpr    === 'partial' ? 3 : 0
+  // GDPR (max 5)
+  s += d.gdpr    === 'full'    ? 5 : d.gdpr    === 'partial' ? 2 : 0
 
-  // MFA (max 5)
-  s += d.mfa     === 'yes'        ?  5 : 0
+  // MFA (max 4)
+  s += d.mfa     === 'yes'     ? 4 : 0
 
-  // Secrets management (max 3)
-  s += d.secrets === 'vault'      ?  3 : d.secrets === 'partial' ? 1 : 0
+  // Secrets management (max 2)
+  s += d.secrets === 'vault'   ? 2 : d.secrets === 'partial' ? 1 : 0
 
-  return Math.min(s, 25)
+  // Infra isolation (max 2)
+  s += d.infra   === 'isolated' ? 2 : d.infra === 'partial' ? 1 : 0
+
+  return Math.min(s, 20)
+}
+
+export function scoreOrg(d: OrgData): number {
+  let s = 0
+
+  // Founder dependency (max 8)
+  s += d.founderDep === 'low' ? 8 : d.founderDep === 'moderate' ? 4 : 0
+
+  // N-1 autonomy (max 6)
+  s += d.nMinus1 === 'yes' ? 6 : d.nMinus1 === 'partial' ? 3 : 0
+
+  // Succession plan (max 4)
+  s += d.succession === 'documented' ? 4 : d.succession === 'partial' ? 2 : 0
+
+  // Turnover (max 2)
+  s += d.turnover === 'low' ? 2 : d.turnover === 'moderate' ? 1 : 0
+
+  return Math.min(s, 20)
 }
 
 /* ─── Grade estimation (mirrors /grade/methodology grid) ─── */
@@ -173,74 +202,65 @@ export function estimateGrade(total: number): GradeEstimate {
 
 /* ─── Valuation output ───────────────────────────────────── */
 
+export type DimKey = 'capital' | 'integrity' | 'finance' | 'security' | 'org'
+
 export interface ValuationResult {
   scores: {
-    finance:  number
-    code:     number
-    ip:       number
-    security: number
-    total:    number
+    capital:   number
+    integrity: number
+    finance:   number
+    security:  number
+    org:       number
+    total:     number
   }
   grade:    GradeEstimate
   range: {
     low:    number
     high:   number
     median: number
-  } | null  // null = pre-revenue mode
-  preRevenue: boolean
-  preRevenueScore: number  // IP + Code combined → proxy for asset value
-  /** Weakest dimension key for targeted CTA */
-  weakestDim:   'finance' | 'code' | 'ip' | 'security'
-  /** Strongest dimension key for positive reinforcement */
-  strongestDim: 'finance' | 'code' | 'ip' | 'security'
+  } | null
+  preRevenue:      boolean
+  preRevenueScore: number
+  weakestDim:   DimKey
+  strongestDim: DimKey
 }
 
 export function runValuation(input: ValuationInput): ValuationResult {
+  const sc = scoreCapital(input.capital)
+  const si = scoreIntegrity(input.integrity)
   const sf = scoreFinance(input.finance)
-  const sc = scoreCode(input.code)
-  const si = scoreIP(input.ip)
   const ss = scoreSecurity(input.security)
-  const total = sf + sc + si + ss
+  const so = scoreOrg(input.org)
+  const total = sc + si + sf + ss + so
 
   const grade = estimateGrade(total)
   const arr   = input.finance.arr
 
-  const scores = { finance: sf, code: sc, ip: si, security: ss, total }
+  const scores = { capital: sc, integrity: si, finance: sf, security: ss, org: so, total }
 
-  // Find weakest / strongest
-  const dimScores = { finance: sf, code: sc, ip: si, security: ss } as const
-  type DimKey = keyof typeof dimScores
+  const dimScores = { capital: sc, integrity: si, finance: sf, security: ss, org: so } as const
   const sorted = (Object.keys(dimScores) as DimKey[]).sort((a, b) => dimScores[a] - dimScores[b])
   const weakestDim   = sorted[0]
   const strongestDim = sorted[sorted.length - 1]
 
-  // Pre-revenue branch
   if (arr <= 0) {
-    const preRevenueScore = si + sc  // IP + Code only
+    const preRevenueScore = sc + si
     return {
-      scores,
-      grade,
-      range: null,
-      preRevenue: true,
-      preRevenueScore,
-      weakestDim,
-      strongestDim,
+      scores, grade, range: null,
+      preRevenue: true, preRevenueScore,
+      weakestDim, strongestDim,
     }
   }
 
-  // Normal branch
   const low    = arr * grade.multLow
   const high   = arr * grade.multHigh
   const median = arr * ((grade.multLow + grade.multHigh) / 2)
 
   return {
-    scores,
-    grade,
+    scores, grade,
     range: { low, high, median },
-    preRevenue: false,
-    preRevenueScore: 0,
-    weakestDim,
-    strongestDim,
+    preRevenue: false, preRevenueScore: 0,
+    weakestDim, strongestDim,
   }
 }
 
