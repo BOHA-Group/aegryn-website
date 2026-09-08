@@ -270,11 +270,6 @@ export default function AboutPage() {
               {ta('founder.desc').split('\n\n').map((para, i) => (
                 <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
               ))}
-              <div className="border-l-2 border-ag-apex pl-5 mt-6 space-y-1">
-                {ta('founder.storytelling').split('\n').map((line, i) => (
-                  <p key={i} className="text-[13px] text-ag-gray italic leading-relaxed">{line}</p>
-                ))}
-              </div>
               <div className="flex flex-wrap gap-3 mt-4">
                 <Link
                   href="/advisory"

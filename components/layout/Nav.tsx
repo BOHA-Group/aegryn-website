@@ -242,7 +242,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
-      window.location.href = founderHref
+      window.location.assign(founderHref)
     }
   }
 
@@ -678,10 +678,17 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <a href={`/${locale}/about#fondateur`} onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                  <button
+                    onClick={() => {
+                      closeMobile()
+                      const el = document.getElementById('fondateur')
+                      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+                      else { window.location.assign(`/${locale}/about#fondateur`) }
+                    }}
+                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors text-left w-full"
+                  >
                     {t('whoFounder')}
-                  </a>
+                  </button>
 
                   {/* Nos bureaux */}
                   <div className="mt-2 pt-2 border-t border-white/10">
