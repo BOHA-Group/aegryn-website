@@ -760,7 +760,7 @@
     "hero": {
       "label": "À propos d'Aegryn",
       "title": "Nous ne vendons pas des deals.\nNous protégeons ce qui dure.",
-      "desc": "Nous croyons que la valeur réelle d'un actif tech ne se négocie pas dans l'urgence. Elle se construit dans la rigueur, se certifie dans la transparence, et se transfère dans la confiance."
+      "desc": "Nous croyons que la valeur d'une organisation ne se négocie pas dans l'urgence. Elle se construit dans la rigueur stratégique, se renforce par ses actifs, se valide dans la transparence, et se réalise dans la confiance. Aegryn existe pour les dirigeants qui refusent de subir leur trajectoire."
     },
     "name": {
       "label": "Le nom",
@@ -780,22 +780,22 @@
         }
       ],
       "synthesis": "Trois mots issus de trois civilisations. Une synthèse : une entité qui protège (AEGIS), facilite les flux (AEGIR), et construit pour la permanence (AEON). Aegryn.",
-      "history": "Aegryn s'appelait autrefois . À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non.",
-      "formerly": "Aegryn s'appelait autrefois . À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
+      "history": "Aegryn s'appelait différent autrefois. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non.",
+      "formerly": "Aegryn s'appelait différent autrefois. À mesure que le positionnement de l'entreprise s'est affiné, de constructeur d'actifs numériques à infrastructure de certification et de transaction, son identité s'est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
-      "text": "Notre vision est celle d'un groupe de conseil européen qui accompagne les entreprises de bout en bout, de la stratégie au capital, de la transformation à la valorisation.\n\nNous sommes des opérateurs : nous construisons et opérons nos propres actifs tech. Ce que nous conseillons, nous le vivons. Cette cohérence est notre première crédibilité.\n\nAegryn n'est ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. C'est un groupe hybride, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d'une entreprise."
+      "text": "Notre vision est celle d'un groupe de conseil européen qui accompagne les entreprises de bout en bout, de la stratégie au capital, de la transformation à la valorisation.\n\nNous sommes des opérateurs : nous construisons et opérons nos propres actifs. Ce que nous conseillons, nous le vivons. Cette cohérence est notre première crédibilité.\n\nAegryn n'est ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. C'est un groupe hybride, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d'une entreprise."
     },
     "contribution": {
       "label": "Notre contribution",
       "title": "Pas un remplacement.\nUne couche d'infrastructure.",
-      "desc": "Les transactions M&A tech rigoureuses existent déjà. Aegryn ne remplace pas les conseillers, avocats et experts-comptables qui les structurent. Il apporte ce qui manquait structurellement : une notation indépendante, émise avant toute mise en marché, qui donne aux deux parties un point de départ certifié et documenté. Moins de temps à débattre de la valeur fondamentale. Plus de temps à closer.",
+      "desc": "Les transactions M&A rigoureuses existent déjà. Aegryn ne remplace pas les conseillers, avocats et experts-comptables qui les structurent. Il apporte ce qui manquait structurellement : une notation indépendante, émise avant toute mise en marché, qui donne aux deux parties un point de départ certifié et documenté. Moins de temps à débattre de la valeur fondamentale. Plus de temps à closer.",
       "items": [
         {
           "num": "01",
           "title": "Une notation avant un prix",
-          "desc": "La notation C/I/F/S d'Aegryn est établie avant toute mise en marché, avant toute négociation. Pas un avis de valorisation, une certification de ce que l'actif est réellement, documentée, versionnée et reproductible. Le prix suit la notation. La notation n'en dépend pas."
+          "desc": "La notation C/I/F/S/O d'Aegryn est établie avant toute mise en marché, avant toute négociation. Pas un avis de valorisation, une certification de ce que l'actif est réellement, documentée, versionnée et reproductible. Le prix suit la notation. La notation n'en dépend pas."
         },
         {
           "num": "02",
@@ -854,13 +854,15 @@
       "groupLabel": "Aegryn",
       "title": "Ancré en Suisse.\nLa référence européenne.",
       "desc": "La Suisse a été choisie délibérément, non pour ses avantages d'incorporation, mais pour ses standards institutionnels : la rigueur du droit suisse, la discrétion de son écosystème financier, et la neutralité qui en fait une ancre crédible pour les transactions transfrontalières entre un vendeur français, un acquéreur allemand et un fonds luxembourgeois. Chaque transaction Aegryn est régie par le droit suisse, quelle que soit la nationalité des parties ou l'origine de l'actif.",
-      "cta": "Voir le catalogue"
+      "cta": "Nos disciplines"
     },
     "founder": {
       "label": "La conviction fondatrice",
       "title": "Construit de l'intérieur.",
-      "bio1": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A. Ancien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux et institutions à travers leurs transformations les plus complexes.",
-      "bio2": "Il a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché. Sa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble.",
+      "bio1": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux et institutions à travers leurs transformations les plus complexes, cross-industries, cross-continents, de la stratégie aux opérations, de la finance aux ressources humaines, du conseil M&A à l'intégration post-acquisition.\n\nIl est ensuite devenu entrepreneur. Actifs tech, intelligence artificielle, plateformes numériques. Il a géré seul ce qu'il conseillait à d'autres : la stratégie produit, le recrutement, le juridique, la finance, la propriété intellectuelle, le commercial, les partenariats. Il a réussi sur certains projets. Il a appris sur d'autres. Et capitalisé sur ce qu'aucune mission de conseil ne peut enseigner.\n\nCe double parcours est l'origine d'Aegryn.",
+      "bio2": "Aujourd'hui, le marché confirme ce que ce parcours avait anticipé. Les grandes firmes de conseil pivotent vers les entreprises de taille intermédiaire parce que leur modèle économique traditionnel est sous pression, parce que l'intelligence artificielle recompose l'équation des services, et parce que les dirigeants exigent désormais davantage : vitesse d'exécution, responsabilité réelle, résultats mesurables, sans la complexité et les coûts des grands engagements de transformation.\n\nCe mouvement du marché crée un espace.\n\nAegryn l'occupe depuis le début, non pas comme une réponse défensive à une disruption, mais comme une conviction construite dans le temps : les scale-ups, PME et organisations ambitieuses méritent un partenaire qui combine la rigueur du conseil stratégique mondial et l'expérience concrète du fondateur qui a construit, échoué et appris.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché.\n\nSa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble.\n\nEt elles ne construisent jamais seules.",
+      "storytelling": "Conseiller sans construire, c'est livrer une carte sans territoire.\nConstruire sans certifier, c'est livrer sans preuve.\nCertifier sans transmettre, c'est préparer sans conclure.\nTransmettre sans recruter, c'est céder sans assurer la suite.\nInformer sans agir, c'est commenter sans responsabilité.",
+      "disciplinesCta": "Nos disciplines",
       "cta": "Prendre contact"
     },
     "whatsnext": {
@@ -8526,7 +8528,9 @@
     "founder": {
       "label": "LE FONDATEUR",
       "title": "Un fondateur issu du terrain.",
-      "desc": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux, institutions à travers leurs transformations les plus complexes.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché.\n\nSa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble.",
+      "desc": "Le fondateur d'Aegryn est un dirigeant et opérateur avec plus de vingt ans d'expérience internationale en stratégie, technologie et M&A.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux et institutions à travers leurs transformations les plus complexes, cross-industries, cross-continents, de la stratégie aux opérations, de la finance aux ressources humaines, du conseil M&A à l'intégration post-acquisition.\n\nIl est ensuite devenu entrepreneur. Actifs tech, intelligence artificielle, plateformes numériques. Il a géré seul ce qu'il conseillait à d'autres : la stratégie produit, le recrutement, le juridique, la finance, la propriété intellectuelle, le commercial, les partenariats. Il a réussi sur certains projets. Il a appris sur d'autres. Et capitalisé sur ce qu'aucune mission de conseil ne peut enseigner.\n\nCe double parcours est l'origine d'Aegryn.\n\nAujourd'hui, le marché confirme ce que ce parcours avait anticipé. Les grandes firmes de conseil pivotent vers les entreprises de taille intermédiaire parce que leur modèle économique traditionnel est sous pression, parce que l'intelligence artificielle recompose l'équation des services, et parce que les dirigeants exigent désormais davantage : vitesse d'exécution, responsabilité réelle, résultats mesurables, sans la complexité et les coûts des grands engagements de transformation.\n\nCe mouvement du marché crée un espace.\n\nAegryn l'occupe depuis le début, non pas comme une réponse défensive à une disruption, mais comme une conviction construite dans le temps : les scale-ups, PME et organisations ambitieuses méritent un partenaire qui combine la rigueur du conseil stratégique mondial et l'expérience concrète du fondateur qui a construit, échoué et appris.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le conseil, la construction, la transaction, le talent et la connaissance du marché.\n\nSa conviction : les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble.\n\nEt elles ne construisent jamais seules.",
+      "storytelling": "Conseiller sans construire, c'est livrer une carte sans territoire.\nConstruire sans certifier, c'est livrer sans preuve.\nCertifier sans transmettre, c'est préparer sans conclure.\nTransmettre sans recruter, c'est céder sans assurer la suite.\nInformer sans agir, c'est commenter sans responsabilité.",
+      "disciplinesCta": "Nos disciplines",
       "cta": "Prendre contact"
     },
     "whyAegryn": {

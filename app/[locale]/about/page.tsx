@@ -270,12 +270,25 @@ export default function AboutPage() {
               {ta('founder.desc').split('\n\n').map((para, i) => (
                 <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
               ))}
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all mt-4"
-              >
-                {ta('founder.cta')} <ArrowUpRight size={14} />
-              </Link>
+              <div className="border-l-2 border-ag-apex pl-5 mt-6 space-y-1">
+                {ta('founder.storytelling').split('\n').map((line, i) => (
+                  <p key={i} className="text-[13px] text-ag-gray italic leading-relaxed">{line}</p>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3 mt-4">
+                <Link
+                  href="/advisory"
+                  className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+                >
+                  {ta('founder.disciplinesCta')} <ArrowUpRight size={14} />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-gray border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+                >
+                  {ta('founder.cta')} <ArrowUpRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -337,7 +350,7 @@ export default function AboutPage() {
                 {t('swiss.title')}
               </h2>
               <Link
-                href="/transact"
+                href="/advisory"
                 className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
               >
                 {t('swiss.cta')} <ArrowUpRight size={14} />
