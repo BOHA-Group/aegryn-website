@@ -240,7 +240,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://www.linkedin.com/newsletters/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/newsletters/7449391102052257793/?displayConfirmation=true" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col3Newsletter')}
                 </a>
               </li>
