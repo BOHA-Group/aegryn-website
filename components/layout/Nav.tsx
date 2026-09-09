@@ -456,9 +456,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     return () => ctx.revert()
   }, [mobileOpen])
 
-  const toggleDropdown = (key: DropdownKey) =>
-    setActiveDropdown(prev => (prev === key ? null : key))
-
   const toggleMobileAccordion = (key: DropdownKey) =>
     setMobileAccordion(prev => (prev === key ? null : key))
 
