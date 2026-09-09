@@ -3,7 +3,8 @@
 import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { useState, useRef, useEffect, type ComponentProps } from 'react'
+import { useState, useRef, useEffect, useCallback, type ComponentProps } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
@@ -73,7 +74,13 @@ const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Mega-menu Nos métiers (4 sections)
 function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <motion.div
+      initial={{ opacity: 0, y: -6 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -4 }}
+      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-lg z-50"
+    >
       <div className="grid grid-cols-4 gap-px bg-ag-border">
         {/* Support — ACCOMPAGNER en 1er */}
         <div className="bg-ag-white p-4">
@@ -163,14 +170,20 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 // Mega-menu Nos convictions (2 colonnes Magazine + Notre regard)
 function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <motion.div
+      initial={{ opacity: 0, y: -6 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -4 }}
+      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-lg z-50"
+    >
       <div className="grid grid-cols-2 gap-px bg-ag-border">
         {/* The Aegryn Magazine */}
         <div className="bg-ag-white p-4">
@@ -224,7 +237,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -247,7 +260,13 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
   }
 
   return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50">
+    <motion.div
+      initial={{ opacity: 0, y: -6 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -4 }}
+      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50"
+    >
       <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
@@ -345,7 +364,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -389,15 +408,19 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const linksRef  = useRef<HTMLElement>(null)
   const rightRef  = useRef<HTMLDivElement>(null)
   const drawerRef = useRef<HTMLDivElement>(null)
+  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+  const openMenu = useCallback((key: DropdownKey) => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current)
+    setActiveDropdown(key)
+  }, [])
+
+  const closeMenu = useCallback(() => {
+    hoverTimer.current = setTimeout(() => setActiveDropdown(null), 150)
+  }, [])
+
+  const cancelClose = useCallback(() => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current)
   }, [])
 
   useEffect(() => {
@@ -464,9 +487,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         <nav ref={linksRef} className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
 
           {/* Nos métiers */}
-          <div className="nav-link-item relative">
+          <div
+            className="nav-link-item relative"
+            onMouseEnter={() => openMenu('craft')}
+            onMouseLeave={closeMenu}
+          >
             <button
-              onClick={() => toggleDropdown('craft')}
+              onFocus={() => openMenu('craft')}
               className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isCraftActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
@@ -477,13 +504,23 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'craft' ? 'rotate-180' : ''}`} />
               {isCraftActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'craft' && <CraftMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+            <AnimatePresence>
+              {activeDropdown === 'craft' && (
+                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
+                  <CraftMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
+                </div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Nos convictions */}
-          <div className="nav-link-item relative">
+          <div
+            className="nav-link-item relative"
+            onMouseEnter={() => openMenu('thinking')}
+            onMouseLeave={closeMenu}
+          >
             <button
-              onClick={() => toggleDropdown('thinking')}
+              onFocus={() => openMenu('thinking')}
               className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isThinkingActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
@@ -494,13 +531,23 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'thinking' ? 'rotate-180' : ''}`} />
               {isThinkingActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'thinking' && <ThinkingMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+            <AnimatePresence>
+              {activeDropdown === 'thinking' && (
+                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
+                  <ThinkingMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
+                </div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Qui sommes-nous */}
-          <div className="nav-link-item relative">
+          <div
+            className="nav-link-item relative"
+            onMouseEnter={() => openMenu('who')}
+            onMouseLeave={closeMenu}
+          >
             <button
-              onClick={() => toggleDropdown('who')}
+              onFocus={() => openMenu('who')}
               className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isWhoActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
@@ -511,7 +558,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'who' ? 'rotate-180' : ''}`} />
               {isWhoActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
             </button>
-            {activeDropdown === 'who' && <WhoMegaMenu t={t} onClose={() => setActiveDropdown(null)} />}
+            <AnimatePresence>
+              {activeDropdown === 'who' && (
+                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
+                  <WhoMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
+                </div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Contact */}
