@@ -279,7 +279,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-1/2 -translate-x-[25%] mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
+      className="absolute top-full left-0 -ml-[205px] mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
     >
       <div className="grid gap-px bg-ag-border rounded-xl overflow-hidden" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
