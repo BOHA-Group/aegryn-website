@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Plus, Minus } from 'lucide-react'
 
@@ -11,20 +11,6 @@ export default function IndustriesSection() {
   const t = useTranslations('industries')
   const clusters = t.raw('clusters') as IndustryCluster[]
   const [openCluster, setOpenCluster] = useState<number | null>(null)
-  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  const openItem = useCallback((ci: number) => {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current)
-    setOpenCluster(ci)
-  }, [])
-
-  const closeItem = useCallback(() => {
-    hoverTimer.current = setTimeout(() => setOpenCluster(null), 150)
-  }, [])
-
-  const cancelClose = useCallback(() => {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current)
-  }, [])
 
   return (
     <div className="divide-y divide-ag-border border-t border-b border-ag-border">
@@ -33,8 +19,6 @@ export default function IndustriesSection() {
         return (
           <div key={ci}>
             <button
-              onMouseEnter={() => openItem(ci)}
-              onMouseLeave={closeItem}
               onClick={() => setOpenCluster(isOpen ? null : ci)}
               className="w-full flex items-center justify-between gap-4 py-5 px-2 group text-left hover:bg-ag-white transition-colors"
             >
@@ -46,11 +30,7 @@ export default function IndustriesSection() {
               </span>
             </button>
             {isOpen && (
-              <div
-                className="pb-5 pl-2 pr-2"
-                onMouseEnter={cancelClose}
-                onMouseLeave={closeItem}
-              >
+              <div className="pb-5 pl-2 pr-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                   {cluster.items.map((item, ii) => (
                     <div key={ii} className="bg-ag-white p-4 border border-ag-border">
