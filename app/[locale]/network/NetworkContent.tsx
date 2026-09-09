@@ -7,6 +7,7 @@ import {
   ArrowUpRight, BrainCircuit, Scale, Cpu,
   Building2, Users, Globe, UserSearch, Landmark,
 } from 'lucide-react'
+import PartnersCarousel from '@/components/sections/PartnersCarousel'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
 type DimensionKey = 'board' | 'strategy' | 'technology' | 'ma' | 'talent'
@@ -228,6 +229,9 @@ export default function NetworkContent() {
           <p className="font-sans text-[11px] text-ag-gray-light italic">
             {t('partners.note')}
           </p>
+          <div className="mt-10">
+            <PartnersCarousel />
+          </div>
         </div>
       </section>
 
