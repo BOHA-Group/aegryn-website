@@ -14,7 +14,7 @@ export const PARTNER_LOGOS: PartnerLogo[] = [
   { src: '/images/partners/partner-01-cofidex.png', alt: 'Cofidex' },
 ]
 
-const LOGO_HEIGHT = 40
+const LOGO_HEIGHT = 36
 const GAP         = 64
 
 export default function PartnersCarousel() {
@@ -74,10 +74,10 @@ export default function PartnersCarousel() {
     >
       {p.href ? (
         <a href={p.href} target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity duration-200">
-          <Image src={p.src} alt={p.alt} height={LOGO_HEIGHT} width={160} className="h-10 w-auto object-contain" />
+          <Image src={p.src} alt={p.alt} height={LOGO_HEIGHT} width={160} className="h-9 w-auto object-contain" />
         </a>
       ) : (
-        <Image src={p.src} alt={p.alt} height={LOGO_HEIGHT} width={160} className="h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200" />
+        <Image src={p.src} alt={p.alt} height={LOGO_HEIGHT} width={160} className="h-9 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200" />
       )}
     </div>
   ))
