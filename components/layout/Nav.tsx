@@ -79,9 +79,9 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-lg z-50"
+      className="absolute top-full left-0 mt-2 w-[860px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
     >
-      <div className="grid grid-cols-4 gap-px bg-ag-border">
+      <div className="grid grid-cols-4 gap-px bg-ag-border rounded-xl overflow-hidden">
         {/* Support — ACCOMPAGNER en 1er */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -182,9 +182,9 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-lg z-50"
+      className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
     >
-      <div className="grid grid-cols-2 gap-px bg-ag-border">
+      <div className="grid grid-cols-2 gap-px bg-ag-border rounded-xl overflow-hidden">
         {/* The Aegryn Magazine */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -265,9 +265,9 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-lg z-50"
+      className="absolute top-full right-0 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
     >
-      <div className="grid gap-px bg-ag-border" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
+      <div className="grid gap-px bg-ag-border rounded-xl overflow-hidden" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
           <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -468,6 +468,20 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   }
 
   return (
+    <>
+      <AnimatePresence>
+        {activeDropdown !== null && (
+          <motion.div
+            key="nav-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 top-16 z-40 bg-ag-navy/30 backdrop-blur-[2px]"
+            onClick={() => setActiveDropdown(null)}
+          />
+        )}
+      </AnimatePresence>
     <header ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-ag-white border-b border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
@@ -836,5 +850,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         </div>
       )}
     </header>
+    </>
   )
 }

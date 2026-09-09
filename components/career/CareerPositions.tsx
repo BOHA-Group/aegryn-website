@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import Link         from 'next/link'
 import { ArrowUpRight, ChevronDown } from 'lucide-react'
 
@@ -33,6 +33,20 @@ export default function CareerPositions({
 }: Props) {
   const [selected, setSelected] = useState<DomainKey | 'all'>('all')
   const [open, setOpen]         = useState(false)
+  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openDropdown = useCallback(() => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current)
+    setOpen(true)
+  }, [])
+
+  const closeDropdown = useCallback(() => {
+    hoverTimer.current = setTimeout(() => setOpen(false), 150)
+  }, [])
+
+  const cancelClose = useCallback(() => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current)
+  }, [])
 
   const filtered = selected === 'all'
     ? positions
@@ -56,7 +70,11 @@ export default function CareerPositions({
           </div>
 
           {/* Domain filter dropdown */}
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdown}
+          >
             <button
               onClick={() => setOpen(!open)}
               className="flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
@@ -69,9 +87,14 @@ export default function CareerPositions({
             </button>
 
             {open && (
-              <div className="absolute right-0 top-full mt-1 z-30 bg-white border border-ag-border shadow-lg min-w-[200px]">
+              <div
+                className="absolute right-0 top-full mt-1 z-30 bg-white border border-ag-border shadow-xl rounded-xl overflow-hidden min-w-[200px]"
+                onMouseEnter={cancelClose}
+                onMouseLeave={closeDropdown}
+              >
                 <button
                   onClick={() => { setSelected('all'); setOpen(false) }}
+                  onMouseEnter={cancelClose}
                   className={`w-full text-left px-4 py-2.5 font-sans font-semibold text-[10px] tracking-[0.12em] uppercase transition-colors hover:bg-ag-off-white ${selected === 'all' ? 'text-ag-black bg-ag-off-white' : 'text-ag-gray'}`}
                 >
                   {allDomainsLabel}
@@ -80,6 +103,7 @@ export default function CareerPositions({
                   <button
                     key={key}
                     onClick={() => { setSelected(key); setOpen(false) }}
+                    onMouseEnter={cancelClose}
                     className={`w-full text-left px-4 py-2.5 font-sans font-semibold text-[10px] tracking-[0.12em] uppercase transition-colors hover:bg-ag-off-white border-t border-ag-border/50 ${selected === key ? 'text-ag-black bg-ag-off-white' : 'text-ag-gray'}`}
                   >
                     {label}
