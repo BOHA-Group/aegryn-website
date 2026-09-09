@@ -246,7 +246,21 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
   const tInd = useTranslations('industries')
   const locale = useLocale()
   const [openCluster, setOpenCluster] = useState<number | null>(null)
+  const clusterTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
+
+  const openClusterItem = useCallback((ci: number) => {
+    if (clusterTimer.current) clearTimeout(clusterTimer.current)
+    setOpenCluster(ci)
+  }, [])
+
+  const closeClusterItem = useCallback(() => {
+    clusterTimer.current = setTimeout(() => setOpenCluster(null), 150)
+  }, [])
+
+  const cancelClusterClose = useCallback(() => {
+    if (clusterTimer.current) clearTimeout(clusterTimer.current)
+  }, [])
   const founderHref = `/${locale}/about#fondateur`
 
   function goToFounder() {
@@ -265,7 +279,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full right-0 mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
+      className="absolute top-full left-1/2 -translate-x-[25%] mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-xl overflow-hidden z-50"
     >
       <div className="grid gap-px bg-ag-border rounded-xl overflow-hidden" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
@@ -322,6 +336,8 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
               return (
                 <div key={ci}>
                   <button
+                    onMouseEnter={() => openClusterItem(ci)}
+                    onMouseLeave={closeClusterItem}
                     onClick={() => setOpenCluster(isOpen ? null : ci)}
                     style={{ fontWeight: 400 }}
                     className="w-full flex items-center justify-between py-2 text-left group font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
@@ -330,7 +346,11 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                     <span className="text-ag-gray-light leading-none">{isOpen ? '−' : '+'}</span>
                   </button>
                   {isOpen && (
-                    <div className="pb-2 pl-1 flex flex-col gap-1">
+                    <div
+                      className="pb-2 pl-1 flex flex-col gap-1"
+                      onMouseEnter={cancelClusterClose}
+                      onMouseLeave={closeClusterItem}
+                    >
                       {cluster.items.map(item => (
                         <span key={item.name} className="font-sans text-[12px] text-ag-gray leading-snug">{item.name}</span>
                       ))}
