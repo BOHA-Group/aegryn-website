@@ -2190,20 +2190,232 @@
   },
   "grade": {
     "meta": {
-      "title": "Certification Aegryn — Label qualité pour organisations",
-      "desc": "Certification Aegryn, un label qualité indépendant pour les organisations qui veulent créer et réaliser leur valeur. Protocole CIFSO : Capital, Intégrité, Finance, Sécurité, Organisation."
+      "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
+      "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions — Capital, Intégrité, Finance, Sécurité, Organisation."
     },
     "index": {
-      "label": "Certification Aegryn",
-      "title": "Certification Aegryn.\nUn label qualité\npour les organisations qui veulent acquérir ou transmettre au juste prix.",
-      "desc": "La valeur d'une organisation ne s'invente pas dans une négociation. Elle se documente bien avant. Le grade Aegryn est cette documentation, indépendante, reproductible, défendable.",
+      "label": "Aegryn Certification",
+      "title": "Certification CIFSO 5000.\nUn label qualité indépendant\npour les organisations conçues pour durer.",
+      "desc": "La valeur d'une organisation ne s'invente pas dans une négociation. Elle se documente bien avant. La Certification CIFSO 5000, c'est cette documentation : indépendante, reproductible, opposable.",
       "ctaSubmit": "Soumettre pour certification",
       "ctaMethod": "Lire la méthodologie",
       "marketLabel": "Pourquoi certifier maintenant",
-      "marketTitle": "La certification crée\nde la valeur mesurable.",
-      "marketDesc": "Le marché M&A a développé un premium clair pour les organisations dont la qualité est vérifiable. Ce premium n'est pas une projection, il est observable sur les transactions réalisées.",
+      "marketTitle": "La certification crée\nune valeur mesurable.",
+      "marketDesc": "Le marché M&A a développé une prime claire pour les organisations dont la qualité est vérifiable. Cette prime n'est pas une projection, elle s'observe dans les transactions complétées.",
       "marketCta": "Soumettre mon organisation",
-      "marketCtaSecondary": "Voir la méthodologie"
+      "marketCtaSecondary": "Voir la méthodologie",
+      "useCasesLabel": "Qui certifie, et pourquoi",
+      "useCasesTitle": "La Certification CIFSO 5000\ns'adresse à tous les acteurs.",
+      "useCasesDesc": "La certification n'est pas réservée aux organisations qui veulent se vendre. C'est un outil pour tout dirigeant qui veut documenter, prouver et communiquer la valeur de son organisation — à n'importe quelle étape.",
+      "useCases": [
+        {
+          "num": "01",
+          "tag": "Rapport annuel & communication investisseurs",
+          "title": "Un label qualité qui figure dans votre rapport annuel.",
+          "audience": "PME en croissance, ETI avec investisseurs actifs, sociétés cotées",
+          "desc": "Comme un standard indépendant existant, la Certification CIFSO 5000 peut être référencée dans votre rapport annuel, vos documents d'investisseurs ou vos présentations de conseil. Elle signale à vos actionnaires, prêteurs et partenaires que votre valeur a été vérifiée indépendamment — pas seulement déclarée.",
+          "signal": "Signal aux actionnaires et partenaires : la valeur organisationnelle est documentée indépendamment."
+        },
+        {
+          "num": "02",
+          "tag": "Financement bancaire & conditions de crédit",
+          "title": "Un score qui renforce votre position auprès des prêteurs.",
+          "audience": "PME et ETI en recherche de financement, refinancement ou renouvellement de ligne de crédit",
+          "desc": "Les banques évaluent la solvabilité principalement via les bilans et l'EBITDA. La Certification CIFSO 5000 ajoute ce que les états financiers ne montrent pas : la chaîne de titres IP, la qualité de la gouvernance, la posture cybersécurité et la résilience organisationnelle. Une organisation certifiée présente un profil de risque plus complet et défendable.",
+          "signal": "Signal aux prêteurs : la valeur immatérielle de cette organisation est documentée, pas estimée."
+        },
+        {
+          "num": "03",
+          "tag": "Due diligence pré-investissement (PE / VC / FO)",
+          "title": "Une base indépendante avant de committer des capitaux.",
+          "audience": "Fonds de private equity, venture capital, family offices, comités d'investissement",
+          "desc": "Un comité d'investissement a besoin d'une vision indépendante de ce qu'il acquiert — pas seulement les finances, mais la gouvernance, l'IP, la sécurité et la dépendance organisationnelle. La Certification CIFSO 5000 fournit exactement cela : une évaluation structurée, reproductible et documentée qui complète la due diligence financière.",
+          "signal": "Signal aux comités d'investissement : cet actif a été évalué indépendamment avant l'engagement du capital."
+        },
+        {
+          "num": "04",
+          "tag": "Certification pré-levée de fonds (Séries A–C)",
+          "title": "Démontrez votre investment-readiness sur toutes les dimensions.",
+          "audience": "Startups et scale-ups préparant un tour de table",
+          "desc": "Les investisseurs attendent de plus en plus des fondateurs qu'ils démontrent leur préparation non seulement sur les finances mais sur la propriété IP, l'architecture technique, la sécurité et la gouvernance. Une Certification CIFSO 5000 devient un document de data room qui anticipe les questions de due diligence et accélère la décision d'investissement.",
+          "signal": "Signal aux investisseurs : investment-ready sur les cinq dimensions — pas seulement le modèle financier."
+        },
+        {
+          "num": "05",
+          "tag": "Succession familiale & transmission d'entreprise",
+          "title": "Un document neutre pour une conversation complexe.",
+          "audience": "Dirigeants planifiant leur succession, entreprises familiales, MBO",
+          "desc": "Plus de 3,5 millions de PME européennes font face à des défis de transmission sans acheteur qualifié ni valorisation claire. La Certification CIFSO 5000 fournit une évaluation neutre et documentée sur laquelle toutes les parties — cédant, héritiers, acheteurs et conseillers — peuvent s'appuyer. Indépendante. Reproductible. Opposable.",
+          "signal": "Signal à toutes les parties : la valeur de cette organisation a été documentée indépendamment avant la transmission."
+        }
+      ],
+      "audienceLabel": "Ce que votre grade communique",
+      "audienceTitle": "Chaque interlocuteur lit votre grade différemment.",
+      "audienceDesc": "Un grade Certification CIFSO 5000 est un signal structuré. Chaque profil y lit une signification différente selon le niveau de grade.",
+      "audienceGradeHeaders": [
+        "Grade ★",
+        "Grade AAA",
+        "Grade AA",
+        "Grade A",
+        "Grade B"
+      ],
+      "audienceRows": [
+        {
+          "profile": "Acquéreur PE",
+          "icon": "building",
+          "readings": [
+            "Actif de niveau institutionnel. Exécutable à valorisation premium. Due diligence accélérée.",
+            "Cible de haute qualité. Processus standard, aucun signal de risque matériel. Base de valorisation fiable.",
+            "Actif solide avec réserves documentées. Deal exécutable avec clause d'escrow ou d'ajustement de prix.",
+            "Actif viable, zones de remédiation identifiées. Plan de valeur requis avant processus complet.",
+            "Plan de remédiation CIFSO requis avant transaction. Calendrier à prolonger en conséquence."
+          ]
+        },
+        {
+          "profile": "Banque d'affaires / Conseil M&A",
+          "icon": "landmark",
+          "readings": [
+            "Mandat certifiable. Soutient un processus premium et un pool d'acheteurs de premier rang.",
+            "Mandat standard, processus complet exécutable. Documentation complète pour memorandum d'information.",
+            "Mandat avec réserves documentées. Plan d'amélioration recommandé dans la data room.",
+            "Mandat conditionné. Pool d'acheteurs potentiellement réduit. Le plan de valeur renforce le positionnement.",
+            "Phase de remédiation préalable requise. Impact calendrier : 60 à 90 jours supplémentaires."
+          ]
+        },
+        {
+          "profile": "Banque / Prêteur",
+          "icon": "landmark",
+          "readings": [
+            "Documentation exceptionnelle des actifs immatériels. Soutient des conditions de crédit premium.",
+            "Profil de risque complet et auditable. Réduit l'incertitude du prêteur sur la valeur immatérielle.",
+            "Profil solide avec écarts documentés. Soutient des conditions de crédit standard.",
+            "Profil acceptable. Les écarts identifiés peuvent influencer le taux ou les conditions.",
+            "Documentation incomplète. Le prêteur peut exiger des garanties supplémentaires ou une remédiation CIFSO."
+          ]
+        },
+        {
+          "profile": "Investisseur venture / croissance",
+          "icon": "trending",
+          "readings": [
+            "Actif top-décile. Confiance maximale du comité d'investissement sur toutes les dimensions.",
+            "Investment-ready sur les cinq dimensions. Due diligence significativement accélérée.",
+            "Investment-ready avec points d'optimisation. Plan de suivi structuré suffisant.",
+            "Finançable avec zones identifiées. Plan de remédiation à accompagner la documentation.",
+            "Remédiation CIFSO pré-investissement recommandée avant engagement du capital."
+          ]
+        },
+        {
+          "profile": "Actionnaire / Conseil d'administration",
+          "icon": "users",
+          "readings": [
+            "Actif de référence. Pleine confiance pour le rapport annuel et l'AG.",
+            "Qualité organisationnelle documentée et vérifiable. Soutient le reporting et les relations investisseurs.",
+            "Organisation solide avec zones d'amélioration. Le comité d'audit peut suivre la remédiation.",
+            "Requiert un plan d'amélioration structuré avec visibilité au niveau du conseil.",
+            "Requiert un plan de remédiation prioritaire avec supervision et engagement de calendrier du conseil."
+          ]
+        },
+        {
+          "profile": "Acquéreur stratégique",
+          "icon": "target",
+          "readings": [
+            "Actif prêt à clôturer. Documentation complète disponible. Prime exceptionnelle justifiée.",
+            "Calendrier d'acquisition standard. Documentation complète. Base fiable pour le SPA.",
+            "Acquisition avec réserves identifiées. Mécanisme d'escrow ou d'ajustement de prix recommandé.",
+            "Acquisition sous conditions. Plan d'intégration et ajustement de valeur à négocier.",
+            "Transaction non recommandée sans phase de remédiation préalable. Risque acheteur élevé."
+          ]
+        }
+      ],
+      "isoLabel": "CIFSO 5000 et les standards de certification existants",
+      "isoTitle": "Là où les standards existants s'arrêtent.\nLà où le CIFSO 5000 commence.",
+      "isoDesc": "Les standards de certification existants vérifient les systèmes et les processus. La Certification CIFSO 5000 vérifie la valeur organisationnelle et la transmissibilité. Ce sont deux objets différents — complémentaires, pas concurrents.",
+      "isoStatement": "Là où les standards existants certifient les systèmes, le CIFSO 5000 certifie la valeur et la transmissibilité.",
+      "isoRows": [
+        {
+          "dimension": "C — Capital & IP",
+          "existing": "Aucun standard existant ne couvre la chaîne de titres IP dans un contexte M&A.",
+          "cifso": "Certifie la propriété du code, la chaîne de transmission IP, la marque et les données propriétaires comme valeur transmissible."
+        },
+        {
+          "dimension": "I — Intégrité & Gouvernance",
+          "existing": "Les standards de management de la qualité couvrent partiellement la gouvernance des processus.",
+          "cifso": "Certifie l'intégrité du cap table, la conformité réglementaire, la gouvernance contractuelle et la structure juridique en contexte M&A."
+        },
+        {
+          "dimension": "F — Finance & Métriques",
+          "existing": "Aucun standard ne certifie l'ARR/MRR, la concentration client ou la transmissibilité financière.",
+          "cifso": "Certifie la vérifiabilité des revenus récurrents, l'auditabilité financière, le burn rate et la transmissibilité économique."
+        },
+        {
+          "dimension": "S — Sécurité & Souveraineté",
+          "existing": "Les standards de sécurité de l'information certifient les systèmes de management dans un périmètre fixe.",
+          "cifso": "Certifie la posture cybersécurité, la conformité réglementaire UE et l'indépendance technologique dans un contexte M&A."
+        },
+        {
+          "dimension": "O — Organisation & Talent",
+          "existing": "Aucun standard existant ne couvre la dépendance fondateur ou la préparation à la succession.",
+          "cifso": "Certifie la résilience organisationnelle, la profondeur managériale, le plan de succession et la rétention — la dimension la plus sous-valorisée dans les transactions."
+        }
+      ],
+      "pricingLabel": "Certification CIFSO 5000 — Tarification",
+      "pricingTitle": "Une certification.\nCinq dimensions de valeur.",
+      "pricingDesc": "Tous les forfaits incluent l'audit complet CIFSO 5000 sur cinq dimensions, le rapport de certification indépendant, le grade officiel et l'inscription au registre certifié Aegryn.",
+      "pricingNote": "Prix hors taxes. Juridiction suisse. Indicatif — devis définitif émis après pré-qualification.",
+      "pricingCta": "Soumettre pour certification",
+      "pricingCtaSecondary": "Télécharger la méthodologie",
+      "pricingTiers": [
+        {
+          "name": "Express",
+          "target": "Organisations de moins de 20 collaborateurs, site unique",
+          "price": "Dès 5 000 €",
+          "duration": "15 jours ouvrés",
+          "highlight": false,
+          "includes": [
+            "Audit CIFSO 5000 complet sur 5 dimensions",
+            "Rapport de certification indépendant",
+            "Grade officiel (★ à B)",
+            "Inscription au registre certifié Aegryn",
+            "Validité du certificat : 12 mois"
+          ]
+        },
+        {
+          "name": "Standard",
+          "target": "20 à 100 collaborateurs, un ou deux sites",
+          "price": "Dès 9 000 €",
+          "duration": "25 jours ouvrés",
+          "highlight": true,
+          "includes": [
+            "Audit CIFSO 5000 complet sur 5 dimensions",
+            "Rapport indépendant avec sous-codes",
+            "Grade officiel + recommandations d'amélioration",
+            "Inscription au registre certifié Aegryn",
+            "Validité du certificat : 12 mois",
+            "Une session de révision incluse"
+          ]
+        },
+        {
+          "name": "Premium",
+          "target": "100+ collaborateurs ou organisation multi-sites",
+          "price": "Dès 15 000 €",
+          "duration": "35 jours ouvrés",
+          "highlight": false,
+          "includes": [
+            "Audit CIFSO 5000 étendu sur 5 dimensions",
+            "Rapport complet avec tableau de sous-codes",
+            "Grade officiel + feuille de route de remédiation structurée",
+            "Inscription au registre certifié Aegryn",
+            "Validité du certificat : 18 mois",
+            "Deux sessions de révision incluses",
+            "Interlocuteur dédié Aegryn tout au long du processus"
+          ]
+        }
+      ],
+      "whitepaperLabel": "Documentation officielle",
+      "whitepaperTitle": "Télécharger la méthodologie CIFSO 5000",
+      "whitepaperDesc": "Vue d'ensemble du protocole, cinq dimensions, échelle de grades, processus de certification et principes d'indépendance.",
+      "whitepaperCta": "Télécharger la méthodologie (PDF)",
+      "whitepaperVersion": "Certification CIFSO 5000 v4.0 — Aegryn SA"
     },
     "grades": [
       {
@@ -2269,27 +2481,52 @@
       ]
     },
     "process": {
-      "label": "Le processus de certification",
+      "label": "Processus de certification",
+      "duration": "15 à 35 jours ouvrés selon le forfait",
+      "contestLabel": "Révision & contestation",
+      "contestDesc": "Un grade peut être contesté dans les 15 jours ouvrés suivant son émission. La demande de révision est examinée par un analyste senior Aegryn différent de l'analyste original. En cas d'écart significatif, une procédure d'arbitrage indépendante est déclenchée. Toutes les révisions sont versionnées et le grade original reste visible dans le registre public.",
       "steps": [
         {
           "num": "01",
-          "title": "Soumission",
-          "desc": "Formulaire en ligne + documentation initiale. Pré-qualification sous 5 jours ouvrés."
+          "title": "Soumission & pré-qualification",
+          "desc": "Formulaire en ligne + documentation initiale. Pré-qualification sous 5 jours ouvrés.",
+          "detail": "L'accès à la data room est établi. La complétude de la documentation soumise est vérifiée. Une lettre de pré-qualification est émise sous 5 jours ouvrés confirmant le périmètre, le calendrier et les éventuels éléments manquants.",
+          "data": "Documents de l'organisation, états financiers (2 derniers exercices), registre IP, contrats clés, organigramme"
         },
         {
           "num": "02",
-          "title": "Analyse",
-          "desc": "Accès data room. Évaluation sur 5 dimensions CIFSO par nos analystes certifiés."
+          "title": "Analyse technique & sécurité (C + S)",
+          "desc": "Revue du code et audit de sécurité par des analystes certifiés Aegryn.",
+          "detail": "Revue du code source, vérification de la chaîne de titres IP, audit de sécurité automatisé et manuel, scan CVE, revue de conformité réglementaire UE (NIS2, DORA, RGPD). Deux analystes seniors travaillent de façon indépendante.",
+          "data": "Dépôt de code source, politiques de sécurité, rapports de scan de vulnérabilités, registre de traitement RGPD, documentation de l'architecture cloud"
         },
         {
           "num": "03",
-          "title": "Rapport",
-          "desc": "Rapport de certification complet avec grade, sous-codes et recommandations."
+          "title": "Analyse financière & gouvernance (F + I)",
+          "desc": "Audit des métriques financières et revue de l'intégrité de la gouvernance.",
+          "detail": "Vérification ARR/MRR sur documents sources, analyse de la concentration client, revue du cap table, vérification de la conformité réglementaire et contractuelle, formalisation des droits IP, historique des litiges.",
+          "data": "Documents comptables, justificatifs de revenus, cap table, pactes d'actionnaires, contrats clients, dépôts réglementaires"
         },
         {
           "num": "04",
-          "title": "Publication",
-          "desc": "Le grade est publié dans le catalogue Aegryn et versionné dans le registre officiel."
+          "title": "Analyse organisationnelle (O)",
+          "desc": "Évaluation de la résilience organisationnelle et de la préparation à la succession.",
+          "detail": "Évaluation de la dépendance fondateur, entretien sur la profondeur de l'équipe de direction, revue du plan de succession, analyse de la rétention et évaluation du risque personne-clé. Les organisations avec une dépendance critique à une personne-clé sont systématiquement signalées.",
+          "data": "Organigramme, contrats des personnes-clés, documentation de succession, CV de l'équipe de direction, données de rétention"
+        },
+        {
+          "num": "05",
+          "title": "Délibération & détermination du grade",
+          "desc": "Les deux analystes délibèrent et produisent le rapport conclusif selon le protocole CIFSO 5000.",
+          "detail": "Les deux analystes délibèrent sur leurs constats indépendants. Le protocole exige un accord à ±1 sous-code. Un écart déclenche une procédure d'arbitrage. Le grade final est documenté avec la justification complète du scoring.",
+          "data": "Tous les outputs d'analyse précédents, grille de scoring, justification des sous-codes, journal de désaccord le cas échéant"
+        },
+        {
+          "num": "06",
+          "title": "Émission & publication",
+          "desc": "Grade émis, enregistré et certificat remis à l'organisation.",
+          "detail": "Le grade officiel est émis et le certificat est remis à l'organisation certifiée. Le grade est versionné et publié dans le registre certifié Aegryn. Validité : 12 mois (Express/Standard) ou 18 mois (Premium).",
+          "data": "Rapport de certification final, document de certificat, entrée au registre, tableau de sous-codes"
         }
       ]
     },
@@ -2357,12 +2594,12 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Système de Certification : Protocole CIFSO v4.0",
+      "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
       "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
-    "label": "Aegryn | Système de Certification",
-    "version": "2026",
-    "title": "Aegryn\nSystème de Certification.",
+    "label": "Certification CIFSO 5000 — Méthodologie",
+    "version": "Certification CIFSO 5000 v4.0",
+    "title": "Aegryn\nCertification CIFSO 5000.",
     "intro": "Aegryn certifie les actifs tech selon le protocole CIFSO v4.0 : cinq dimensions indépendantes (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), un score sur 100, un grade opposable. Transparence totale sur la méthode, traçabilité complète du rapport.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
@@ -3887,7 +4124,7 @@
     }
   },
   "gradeStrip": {
-    "label": "Système de Certification",
+    "label": "Certification CIFSO 5000",
     "title": "Un label qualité indépendant pour les organisations\nqui veulent acquérir ou transmettre au juste prix.",
     "desc": "Le protocole CIFSO v4.0 certifie cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Reproductible, traçable, définitif.",
     "quote": "Un actif sans certification indépendante, c'est une valeur sans preuve. Un actif Aegryn Grade AAA, c'est une certitude documentée et traçable.",

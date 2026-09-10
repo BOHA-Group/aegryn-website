@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useRef }  from 'react'
-import Link                    from 'next/link'
-import { useTranslations }     from 'next-intl'
-import { ArrowUpRight, Check } from 'lucide-react'
-import { gsap }                from '@/lib/gsap'
+import { useEffect, useRef }         from 'react'
+import Link                          from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
+import { ArrowUpRight, Check, FileText } from 'lucide-react'
+import { gsap }                      from '@/lib/gsap'
 
 const _GRADE_COLORS: Record<string, string> = {
   '#5ADDA4': '#5ADDA4',
@@ -63,6 +63,8 @@ type MaturityRuleItem = {
 
 export function GradingSystemPage() {
   const t         = useTranslations('gradingSystem')
+  const tG        = useTranslations('grade.index')
+  const locale    = useLocale()
   const heroRef   = useRef<HTMLDivElement>(null)
   const cifsRef   = useRef<HTMLElement>(null)
   const gradesRef = useRef<HTMLElement>(null)
@@ -139,7 +141,7 @@ export function GradingSystemPage() {
                 {t('intro')}
               </p>
             </div>
-            <div className="gs-hero-version shrink-0">
+            <div className="gs-hero-version shrink-0 flex flex-col gap-3">
               <div className="border border-white/10 px-5 py-4 text-right">
                 <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/30 mb-1">
                   {t('downloadLabel')}
@@ -148,6 +150,13 @@ export function GradingSystemPage() {
                   {t('version')}
                 </p>
               </div>
+              <Link
+                href={`/${locale}/grade/whitepaper`}
+                className="inline-flex items-center gap-2 bg-ag-apex/10 border border-ag-apex/30 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-apex/20 transition-colors"
+              >
+                <FileText size={11} />
+                {tG('whitepaperCta')}
+              </Link>
             </div>
           </div>
 

@@ -5,6 +5,10 @@ import { ArrowUpRight } from 'lucide-react'
 import { GradeHero } from '@/components/sections/grade/GradeHero'
 import { GradeCards } from '@/components/sections/grade/GradeCards'
 import { GradeDimensions } from '@/components/sections/grade/GradeDimensions'
+import { GradeUseCases } from '@/components/sections/grade/GradeUseCases'
+import { GradeAudienceTable } from '@/components/sections/grade/GradeAudienceTable'
+import { GradeISOMapping } from '@/components/sections/grade/GradeISOMapping'
+import { GradePricing } from '@/components/sections/grade/GradePricing'
 import { GradeProcess } from '@/components/sections/grade/GradeProcess'
 import { generateAegrynMetadata } from '@/lib/seo'
 
@@ -26,6 +30,20 @@ export default async function GradePage({ params }: Props) {
       <GradeHero />
       <GradeCards />
       <GradeDimensions />
+
+      {/* Use cases — who certifies and why */}
+      <GradeUseCases />
+
+      {/* Audience table — what each grade says to each profile */}
+      <GradeAudienceTable />
+
+      {/* ISO mapping — CIFSO 5000 vs existing standards */}
+      <GradeISOMapping />
+
+      {/* Pricing */}
+      <GradePricing />
+
+      {/* Certification process */}
       <GradeProcess />
 
       {/* Submit CTA */}
