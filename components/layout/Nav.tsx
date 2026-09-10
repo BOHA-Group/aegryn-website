@@ -241,6 +241,14 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 }
 
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
+const INDUSTRY_CLUSTERS: { id: string; labelKey: string }[] = [
+  { id: 'finance',   labelKey: 'clusterFinance'   },
+  { id: 'sante',     labelKey: 'clusterSante'     },
+  { id: 'industrie', labelKey: 'clusterIndustrie' },
+  { id: 'commerce',  labelKey: 'clusterCommerce'  },
+  { id: 'tech',      labelKey: 'clusterTech'      },
+]
+
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   const locale = useLocale()
   const founderHref = `/${locale}/about#fondateur`
@@ -263,7 +271,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
       className="absolute top-full left-0 -ml-[205px] mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
     >
-      <div className="grid gap-px bg-ag-border rounded-2xl overflow-hidden" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
+      <div className="grid gap-px bg-ag-border rounded-2xl overflow-hidden" style={{ gridTemplateColumns: '1fr 1.4fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
@@ -304,20 +312,33 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </div>
         </div>
 
-        {/* Nos industries — lien direct */}
-        <div className="bg-ag-white p-4 flex flex-col gap-3">
+        {/* Nos industries — liste statique des clusters */}
+        <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('whoIndustriesDesc')}
           </p>
+          <div className="flex flex-col divide-y divide-ag-border border-t border-ag-border">
+            {INDUSTRY_CLUSTERS.map(({ id, labelKey }) => (
+              <Link
+                key={id}
+                href={`/industries#${id}` as LinkHref}
+                onClick={onClose}
+                className="flex items-center justify-between py-2 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors group"
+              >
+                <span>{t(labelKey as Parameters<typeof t>[0])}</span>
+                <ArrowUpRight size={11} className="text-ag-gray-light group-hover:text-ag-black transition-colors shrink-0" />
+              </Link>
+            ))}
+          </div>
           <Link
             href={'/industries' as LinkHref}
             onClick={onClose}
-            className="inline-flex items-center gap-2 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
+            className="inline-flex items-center gap-1 mt-3 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex hover:text-ag-black transition-colors"
           >
-            {t('whoIndustriesLink')} <ArrowUpRight size={12} />
+            {t('whoIndustriesLink')} <ArrowUpRight size={10} />
           </Link>
         </div>
 
@@ -738,12 +759,21 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </p>
                   </div>
 
-                  {/* Nos industries — lien direct */}
+                  {/* Nos industries — liste statique mobile */}
                   <div className="mt-2 pt-2 border-t border-white/10">
                     <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-2">{t('whoIndustries')}</p>
+                    <div className="flex flex-col">
+                      {INDUSTRY_CLUSTERS.map(({ id, labelKey }) => (
+                        <Link key={id} href={`/industries#${id}` as LinkHref} onClick={closeMobile}
+                          className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors flex items-center justify-between group">
+                          <span>{t(labelKey as Parameters<typeof t>[0])}</span>
+                          <ArrowUpRight size={11} className="text-white/30 group-hover:text-white/70 transition-colors shrink-0" />
+                        </Link>
+                      ))}
+                    </div>
                     <Link href={'/industries' as LinkHref} onClick={closeMobile}
-                      className="inline-flex items-center gap-2 py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                      {t('whoIndustriesLink')} <ArrowUpRight size={12} />
+                      className="inline-flex items-center gap-1 mt-2 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex hover:text-white transition-colors">
+                      {t('whoIndustriesLink')} <ArrowUpRight size={10} />
                     </Link>
                   </div>
 

@@ -155,7 +155,12 @@
     "craftTransactAuditors": "Revisori indipendenti",
     "whoIndustries": "I nostri settori",
     "whoIndustriesDesc": "Tutti i settori coperti",
-    "whoIndustriesLink": "Vedi tutti i settori"
+    "whoIndustriesLink": "Vedi tutti i settori",
+    "clusterFinance": "Finanza & Capitale",
+    "clusterSante": "Sanità & Scienze della Vita",
+    "clusterIndustrie": "Industria, Energia & Infrastrutture",
+    "clusterCommerce": "Commercio, Servizi & Esperienza Cliente",
+    "clusterTech": "Tecnologia, Innovazione & Settore Pubblico"
   },
   "hero": {
     "tagline": "Aegryn. Dalla strategia alla trasmissione. Svizzera.",

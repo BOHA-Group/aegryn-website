@@ -155,7 +155,12 @@
     "craftTransactAuditors": "Onafhankelijke auditoren",
     "whoIndustries": "Onze sectoren",
     "whoIndustriesDesc": "Alle gedekte sectoren",
-    "whoIndustriesLink": "Alle sectoren bekijken"
+    "whoIndustriesLink": "Alle sectoren bekijken",
+    "clusterFinance": "Financiën & Kapitaal",
+    "clusterSante": "Gezondheidszorg & Life Sciences",
+    "clusterIndustrie": "Industrie, Energie & Infrastructuur",
+    "clusterCommerce": "Handel, Diensten & Klantervaring",
+    "clusterTech": "Technologie, Innovatie & Publieke Sector"
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",

@@ -155,7 +155,12 @@
     "craftTransactAuditors": "Independent auditors",
     "whoIndustries": "Our industries",
     "whoIndustriesDesc": "All covered sectors",
-    "whoIndustriesLink": "View all industries"
+    "whoIndustriesLink": "View all industries",
+    "clusterFinance": "Finance & Capital",
+    "clusterSante": "Health & Life Sciences",
+    "clusterIndustrie": "Industry, Energy & Infrastructure",
+    "clusterCommerce": "Commerce, Services & Customer Experience",
+    "clusterTech": "Tech, Innovation & Public Sector"
   },
   "hero": {
     "tagline": "Aegryn. From strategy to closing. Switzerland & Europe.",

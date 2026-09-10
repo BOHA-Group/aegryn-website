@@ -155,7 +155,12 @@
     "craftTransactAuditors": "Unabhängige Prüfer",
     "whoIndustries": "Unsere Branchen",
     "whoIndustriesDesc": "Alle abgedeckten Sektoren",
-    "whoIndustriesLink": "Alle Branchen ansehen"
+    "whoIndustriesLink": "Alle Branchen ansehen",
+    "clusterFinance": "Finanzen & Kapital",
+    "clusterSante": "Gesundheit & Life Sciences",
+    "clusterIndustrie": "Industrie, Energie & Infrastruktur",
+    "clusterCommerce": "Handel, Dienstleistungen & Kundenerlebnis",
+    "clusterTech": "Technologie, Innovation & Öffentlicher Sektor"
   },
   "hero": {
     "tagline": "Aegryn. Von der Strategie bis zum Abschluss. Schweiz.",
