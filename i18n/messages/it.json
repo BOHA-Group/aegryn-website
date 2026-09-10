@@ -14,7 +14,7 @@
     "transactBuy": "Mandato di acquisizione",
     "transactMandate": "Depositare un mandato",
     "_disabled_transactResults": "Transazioni chiuse",
-    "grade": "Grade",
+    "grade": "Certificazione",
     "assets": "Asset",
     "services": "Servizi",
     "discover": "Blog",
@@ -27,7 +27,7 @@
     "transactionBidModels": "Modelli di proposta",
     "transactionSession": "Processo",
     "_disabled_transactionResults": "Transazioni concluse",
-    "gradeSystem": "Sistema di grade",
+    "gradeSystem": "Sistema di certificazione",
     "gradeMethod": "Metodologia",
     "gradeSubmit": "Certificare un asset",
     "gradePartners": "Rete di esperti",
@@ -89,7 +89,7 @@
     "craftRecruitBoard": "Membri del Consiglio & C-Level",
     "craftRecruitExecutiveTech": "Executive Tech",
     "craftRecruitExecutiveMA": "Executive M&A",
-    "craftGrade": "Certificare",
+    "craftGrade": "Certificazione",
     "craftGradeDesc": "Sistema di valutazione indipendente",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
@@ -1254,7 +1254,7 @@
     }
   },
   "gradePartners": {
-    "back": "← Aegryn Grade",
+    "back": "← Certificazione CIFSO 5000",
     "eyebrow": "Aegryn GRADE",
     "title": "Una rete di revisori indipendenti, non un obbligo.",
     "intro1": "L'Aegryn Grade è una certificazione indipendente: Aegryn valuta asset tech senza revisori imposti. Professionisti indipendenti possono essere incaricati per approfondire aree specifiche.",
@@ -2907,7 +2907,13 @@
           "title": "A quality label that appears in your annual report.",
           "audience": "Growing SMEs, ETIs with active investors, listed companies",
           "desc": "Like an existing independent standard, the Certification CIFSO 5000 can be referenced in your annual report, investor documentation, or board presentation. It signals to shareholders, lenders, and partners that your value has been independently verified, not just declared.",
-          "signal": "Signal to shareholders and partners: your organisational value is independently documented."
+          "signal": "Signal to shareholders and partners: your organisational value is independently documented.",
+          "chips": [
+            "PMI in crescita",
+            "ETI",
+            "Investitori",
+            "Azionisti"
+          ]
         },
         {
           "num": "02",
@@ -2915,7 +2921,13 @@
           "title": "A score that strengthens your position with lenders.",
           "audience": "SMEs and ETIs seeking financing, refinancing, or credit facility renewal",
           "desc": "Banks assess creditworthiness primarily through balance sheets and EBITDA. The Certification CIFSO 5000 adds what financial statements cannot show: IP chain of title, governance quality, cybersecurity posture, and organisational resilience. A certified organisation presents a more complete and defensible risk profile.",
-          "signal": "Signal to lenders: the intangible value of this organisation is documented, not estimated."
+          "signal": "Signal to lenders: the intangible value of this organisation is documented, not estimated.",
+          "chips": [
+            "PMI & ETI",
+            "CFO",
+            "Banche",
+            "Prestatori"
+          ]
         },
         {
           "num": "03",
@@ -2923,7 +2935,13 @@
           "title": "An independent baseline before you commit capital.",
           "audience": "Private equity funds, venture capital, family offices, investment committees",
           "desc": "An investment committee needs an independent view of what it is acquiring: not only financials, but governance, IP, security, and organisational dependency. The Certification CIFSO 5000 provides exactly this: a structured, reproducible, and documented assessment that complements financial due diligence.",
-          "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed."
+          "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed.",
+          "chips": [
+            "Fondi PE",
+            "Venture Capital",
+            "Family Office",
+            "Comitati d'investimento"
+          ]
         },
         {
           "num": "04",
@@ -2931,7 +2949,13 @@
           "title": "Demonstrate investment-readiness across all dimensions.",
           "audience": "Startups and scale-ups preparing a fundraising round",
           "desc": "Investors increasingly expect founders to demonstrate readiness not just on financials but on IP ownership, technical architecture, security, and governance. A Certification CIFSO 5000 becomes a data room document that pre-empts due diligence questions and accelerates the investment decision.",
-          "signal": "Signal to investors: investment-ready across all five dimensions, not just the financial model."
+          "signal": "Signal to investors: investment-ready across all five dimensions, not just the financial model.",
+          "chips": [
+            "Startup",
+            "Scale-up",
+            "Fondatori",
+            "Investitori"
+          ]
         },
         {
           "num": "05",
@@ -2939,7 +2963,13 @@
           "title": "A neutral document for a complex conversation.",
           "audience": "Founders planning succession, family businesses, management buyouts",
           "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties — ceding founder, heirs, buyers, and advisors — can rely on. Independent. Reproducible. Defensible.",
-          "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer."
+          "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer.",
+          "chips": [
+            "Fondatori",
+            "Aziende familiari",
+            "Eredi",
+            "Consulenti M&A"
+          ]
         }
       ],
       "audienceLabel": "What your grade communicates",
@@ -6945,7 +6975,7 @@
     "navPartnerNda": "NDA firmato",
     "filterLabel": "Filtri",
     "filterAll": "Tutti",
-    "filterGrade": "Grade",
+    "filterGrade": "Certificazione",
     "filterType": "Tipo",
     "viewDetails": "Vedi scheda",
     "noAssets": "Nessun asset disponibile con questi criteri.",
@@ -6980,7 +7010,7 @@
     "subtitle": "Panoramica di tutte le pagine e sezioni del sito.",
     "groupBuild": "Build",
     "groupAdvisory": "Advisory",
-    "groupGrade": "Grade",
+    "groupGrade": "Certificazione",
     "groupTransaction": "Transact",
     "groupDiscover": "Scoprire",
     "groupCompany": "Azienda",
@@ -6992,7 +7022,7 @@
     "alliances": "Alleanze & Partner",
     "experts": "Rete di esperti",
     "valuation": "Valutazione",
-    "grade": "Sistema di grade",
+    "grade": "Sistema di certificazione",
     "gradeMethod": "Metodologia CIFS",
     "gradeSubmit": "Inviare per la certificazione",
     "gradePartners": "Esperti certificatori",
@@ -8185,7 +8215,10 @@
       "downloadPdf": "Sfoglia il PDF",
       "subscribe": "Ricevere",
       "comingSoon": "Pubblicazione prossimamente",
-      "comingSoonBadge": "Prossimamente"
+      "comingSoonBadge": "Prossimamente",
+      "canceledMsg": "Pagamento annullato.",
+      "manage": "Gestisci abbonamento",
+      "successMsg": "Abbonamento attivato con successo."
     },
     "report": {
       "title": "Aegryn Magazine",
@@ -8299,6 +8332,23 @@
       },
       "placeholder": "Il tuo indirizzo email",
       "unsubscribed": "Sei stato cancellato dalla lista."
+    },
+    "nda": {
+      "addressLabel": "Indirizzo di consegna",
+      "civilityLabel": "Titolo",
+      "civilityM": "Sig.",
+      "civilityMme": "Sig.ra",
+      "countryPlaceholder": "Paese",
+      "legalNotice": "Le informazioni raccolte sono trattate da Aegryn (Canton Vaud, Svizzera) in conformità con il GDPR (UE 2016/679) e la nLPD svizzera riveduta (in vigore dal 1° settembre 2023).",
+      "meta": "NDA | Spazio partner Aegryn",
+      "phonePlaceholder": "Telefono",
+      "postalCodePlaceholder": "Codice postale",
+      "rgpdLabel": "Accetto che Aegryn utilizzi i miei dati personali per contattarmi riguardo a questa richiesta di edizione stampata.",
+      "subtitle": "Accordo di riservatezza firmato nell'ambito della vostra partnership.",
+      "title": "Accordo di non divulgazione",
+      "wishlistDesc": "L'edizione stampata della rivista Aegryn è un'iniziativa riservata ai clienti registrati.",
+      "wishlistSectionLabel": "Edizione stampata, lista dei desideri",
+      "wishlistTitle": "Ricevere la rivista Aegryn in formato stampato"
     }
   },
   "transactNarrative": {

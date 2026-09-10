@@ -22,6 +22,7 @@ type UseCase = {
   audience: string
   desc: string
   signal: string
+  chips?: string[]
 }
 
 // Per use-case config: image, audience chips with Lucide icon
@@ -151,15 +152,18 @@ export function GradeUseCases() {
 
                     {/* Audience chips */}
                     <div className="flex flex-wrap gap-2 mb-5">
-                      {meta.chips.map(({ label, Icon }) => (
-                        <span
-                          key={label}
-                          className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
-                        >
-                          <Icon size={10} className="text-ag-apex shrink-0" />
-                          {label}
-                        </span>
-                      ))}
+                      {(uc.chips ?? meta.chips.map(c => c.label)).map((label, ci) => {
+                        const Icon = meta.chips[ci]?.Icon ?? Users
+                        return (
+                          <span
+                            key={label}
+                            className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
+                          >
+                            <Icon size={10} className="text-ag-apex shrink-0" />
+                            {label}
+                          </span>
+                        )
+                      })}
                     </div>
 
                     {/* Signal */}

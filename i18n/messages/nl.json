@@ -14,7 +14,7 @@
     "transactBuy": "Acquisitiemandat",
     "transactMandate": "Mandaat indienen",
     "_disabled_transactResults": "Afgesloten transacties",
-    "grade": "Grade",
+    "grade": "Certificering",
     "assets": "Assets",
     "services": "Diensten",
     "discover": "Blog",
@@ -27,7 +27,7 @@
     "transactionBidModels": "Voorstelmodellen",
     "transactionSession": "Proces",
     "_disabled_transactionResults": "Afgesloten transacties",
-    "gradeSystem": "Grade-systeem",
+    "gradeSystem": "Certificeringssysteem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Een asset certificeren",
     "gradePartners": "Expertennetwerk",
@@ -89,7 +89,7 @@
     "craftRecruitBoard": "Bestuursleden & C-Level",
     "craftRecruitExecutiveTech": "Executive Tech",
     "craftRecruitExecutiveMA": "Executive M&A",
-    "craftGrade": "Certificeren",
+    "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
     "solutionsPortfolio": "PORTFOLIO",
@@ -1254,7 +1254,7 @@
     }
   },
   "gradePartners": {
-    "back": "← Aegryn Grade",
+    "back": "← Certificering CIFSO 5000",
     "eyebrow": "Aegryn GRADE",
     "title": "Een netwerk van onafhankelijke auditoren, geen verplichting.",
     "intro1": "Het Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt tech-activa zonder opgelegde auditoren. Onafhankelijke professionals kunnen worden gemandateerd voor specifieke gebieden.",
@@ -2907,7 +2907,13 @@
           "title": "A quality label that appears in your annual report.",
           "audience": "Growing SMEs, ETIs with active investors, listed companies",
           "desc": "Like an existing independent standard, the Certification CIFSO 5000 can be referenced in your annual report, investor documentation, or board presentation. It signals to shareholders, lenders, and partners that your value has been independently verified, not just declared.",
-          "signal": "Signal to shareholders and partners: your organisational value is independently documented."
+          "signal": "Signal to shareholders and partners: your organisational value is independently documented.",
+          "chips": [
+            "Groeiende kmo's",
+            "ETI's",
+            "Investeerders",
+            "Aandeelhouders"
+          ]
         },
         {
           "num": "02",
@@ -2915,7 +2921,13 @@
           "title": "A score that strengthens your position with lenders.",
           "audience": "SMEs and ETIs seeking financing, refinancing, or credit facility renewal",
           "desc": "Banks assess creditworthiness primarily through balance sheets and EBITDA. The Certification CIFSO 5000 adds what financial statements cannot show: IP chain of title, governance quality, cybersecurity posture, and organisational resilience. A certified organisation presents a more complete and defensible risk profile.",
-          "signal": "Signal to lenders: the intangible value of this organisation is documented, not estimated."
+          "signal": "Signal to lenders: the intangible value of this organisation is documented, not estimated.",
+          "chips": [
+            "KMO's & ETI's",
+            "CFO's",
+            "Banken",
+            "Kredietverstrekkers"
+          ]
         },
         {
           "num": "03",
@@ -2923,7 +2935,13 @@
           "title": "An independent baseline before you commit capital.",
           "audience": "Private equity funds, venture capital, family offices, investment committees",
           "desc": "An investment committee needs an independent view of what it is acquiring: not only financials, but governance, IP, security, and organisational dependency. The Certification CIFSO 5000 provides exactly this: a structured, reproducible, and documented assessment that complements financial due diligence.",
-          "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed."
+          "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed.",
+          "chips": [
+            "PE-fondsen",
+            "Durfkapitaal",
+            "Family offices",
+            "Investeringscommissies"
+          ]
         },
         {
           "num": "04",
@@ -2931,7 +2949,13 @@
           "title": "Demonstrate investment-readiness across all dimensions.",
           "audience": "Startups and scale-ups preparing a fundraising round",
           "desc": "Investors increasingly expect founders to demonstrate readiness not just on financials but on IP ownership, technical architecture, security, and governance. A Certification CIFSO 5000 becomes a data room document that pre-empts due diligence questions and accelerates the investment decision.",
-          "signal": "Signal to investors: investment-ready across all five dimensions, not just the financial model."
+          "signal": "Signal to investors: investment-ready across all five dimensions, not just the financial model.",
+          "chips": [
+            "Startups",
+            "Scale-ups",
+            "Oprichters",
+            "Investeerders"
+          ]
         },
         {
           "num": "05",
@@ -2939,7 +2963,13 @@
           "title": "A neutral document for a complex conversation.",
           "audience": "Founders planning succession, family businesses, management buyouts",
           "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties — ceding founder, heirs, buyers, and advisors — can rely on. Independent. Reproducible. Defensible.",
-          "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer."
+          "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer.",
+          "chips": [
+            "Oprichters",
+            "Familiebedrijven",
+            "Erfgenamen",
+            "M&A-adviseurs"
+          ]
         }
       ],
       "audienceLabel": "What your grade communicates",
@@ -5053,7 +5083,8 @@
         "Supply chain & logistiek",
         "Cyberbeveiliging & anomalieën",
         "ESG-rapportage & audit"
-      ]
+      ],
+      "subtitle": "Een geïntegreerde architectuur. Vier complementaire lagen."
     },
     "sovereigntySection": {
       "label": "Onafhankelijkheid door architectuur",
@@ -6955,7 +6986,7 @@
     "navPartnerNda": "Signed NDA",
     "filterLabel": "Filters",
     "filterAll": "All",
-    "filterGrade": "Grade",
+    "filterGrade": "Certificering",
     "filterType": "Type",
     "viewDetails": "View details",
     "noAssets": "No assets available with these criteria.",
@@ -6990,7 +7021,7 @@
     "subtitle": "Overview of all pages and sections of the site.",
     "groupBuild": "Build",
     "groupAdvisory": "Advisory",
-    "groupGrade": "Grade",
+    "groupGrade": "Certificering",
     "groupTransaction": "Transact",
     "groupDiscover": "Discover",
     "groupCompany": "Company",
@@ -7002,7 +7033,7 @@
     "alliances": "Alliances & Partners",
     "experts": "Expert Network",
     "valuation": "Valuation",
-    "grade": "Grade system",
+    "grade": "Certificeringssysteem",
     "gradeMethod": "CIFS Methodology",
     "gradeSubmit": "Submit for certification",
     "gradePartners": "Certifying experts",

@@ -27,7 +27,7 @@
     "transactionBidModels": "Modèles de proposition",
     "transactionSession": "Processus",
     "_disabled_transactionResults": "Transactions clôturées",
-    "gradeSystem": "Système de grade",
+    "gradeSystem": "Système de certification",
     "gradeMethod": "Méthodologie",
     "gradeSubmit": "Certifier un actif",
     "gradePartners": "Réseau d'experts",
@@ -89,7 +89,7 @@
     "craftRecruitBoard": "Board Members & C-Level",
     "craftRecruitExecutiveTech": "Executive Tech",
     "craftRecruitExecutiveMA": "Executive M&A",
-    "craftGrade": "Certifier",
+    "craftGrade": "Certification",
     "craftGradeDesc": "Système de notation indépendant",
     "solutionsCore": "CATÉGORIES PRINCIPALES",
     "solutionsPortfolio": "CATÉGORIES COMPLÉMENTAIRES",
@@ -958,6 +958,30 @@
       "title": "Pas de postes ouverts pour le moment.",
       "desc": "Nous grandissons prudemment, par cooptation et candidature spontanée. Si vous incarnez l'un de nos métiers avec l'exigence qu'ils demandent, envoyez-nous un message.",
       "cta": "Candidature spontanée"
+    },
+    "apply": "Postuler",
+    "spontaneous": "Candidature spontanée",
+    "statement": {
+      "cta": "Découvrir Advisory",
+      "label": "Aegryn Advisory",
+      "title": "Certifiés pour transacter, construits par des experts qui y croient."
+    },
+    "positions": {
+      "count": "08",
+      "domain": "Domaine",
+      "label": "Postes à venir",
+      "type": "Type"
+    },
+    "domains": {
+      "ai": "IA & Données",
+      "all": "Tous les domaines",
+      "architecture": "Architecture",
+      "cyber": "Cybersécurité",
+      "finance": "Finance",
+      "growth": "Croissance & Marque",
+      "product": "Produit",
+      "strategy": "Stratégie",
+      "ux": "UX & Design"
     }
   },
   "assetStatus": {
@@ -1193,7 +1217,7 @@
     }
   },
   "gradePartners": {
-    "back": "← Grade Aegryn",
+    "back": "← Certification CIFSO 5000",
     "eyebrow": "Aegryn GRADE",
     "title": "Un réseau d'auditeurs indépendants, pas une obligation.",
     "intro1": "L'Aegryn Grade est une certification indépendante : Aegryn évalue et note la qualité des actifs tech mis en vente sans dépendre d'auditeurs imposés. Des professionnels indépendants peuvent être mandatés pour approfondir certains axes.",
@@ -1602,6 +1626,10 @@
     "transact": {
       "label": "TRANSACT",
       "desc": "Transactions institutionnelles encadrées"
+    },
+    "transaction": {
+      "desc": "Transactions institutionnelles supervisées",
+      "label": "TRANSACT"
     }
   },
   "gradeShowcase": {
@@ -2214,7 +2242,13 @@
           "title": "Un label qualité qui figure dans votre rapport annuel.",
           "audience": "PME en croissance, ETI avec investisseurs actifs, sociétés cotées",
           "desc": "Comme un standard indépendant existant, la Certification CIFSO 5000 peut être référencée dans votre rapport annuel, vos documents d'investisseurs ou vos présentations de conseil. Elle signale à vos actionnaires, prêteurs et partenaires que votre valeur a été vérifiée indépendamment, pas seulement déclarée.",
-          "signal": "Signal aux actionnaires et partenaires : la valeur organisationnelle est documentée indépendamment."
+          "signal": "Signal aux actionnaires et partenaires : la valeur organisationnelle est documentée indépendamment.",
+          "chips": [
+            "PME en croissance",
+            "ETI",
+            "Investisseurs",
+            "Actionnaires"
+          ]
         },
         {
           "num": "02",
@@ -2222,7 +2256,13 @@
           "title": "Un score qui renforce votre position auprès des prêteurs.",
           "audience": "PME et ETI en recherche de financement, refinancement ou renouvellement de ligne de crédit",
           "desc": "Les banques évaluent la solvabilité principalement via les bilans et l'EBITDA. La Certification CIFSO 5000 ajoute ce que les états financiers ne montrent pas : la chaîne de titres IP, la qualité de la gouvernance, la posture cybersécurité et la résilience organisationnelle. Une organisation certifiée présente un profil de risque plus complet et défendable.",
-          "signal": "Signal aux prêteurs : la valeur immatérielle de cette organisation est documentée, pas estimée."
+          "signal": "Signal aux prêteurs : la valeur immatérielle de cette organisation est documentée, pas estimée.",
+          "chips": [
+            "PME & ETI",
+            "DAF",
+            "Banques",
+            "Prêteurs"
+          ]
         },
         {
           "num": "03",
@@ -2230,7 +2270,13 @@
           "title": "Une base indépendante avant de committer des capitaux.",
           "audience": "Fonds de private equity, venture capital, family offices, comités d'investissement",
           "desc": "Un comité d'investissement a besoin d'une vision indépendante de ce qu'il acquiert, pas seulement les finances, mais la gouvernance, l'IP, la sécurité et la dépendance organisationnelle. La Certification CIFSO 5000 fournit exactement cela : une évaluation structurée, reproductible et documentée qui complète la due diligence financière.",
-          "signal": "Signal aux comités d'investissement : cet actif a été évalué indépendamment avant l'engagement du capital."
+          "signal": "Signal aux comités d'investissement : cet actif a été évalué indépendamment avant l'engagement du capital.",
+          "chips": [
+            "Fonds PE",
+            "Venture Capital",
+            "Family Offices",
+            "Comités d'investissement"
+          ]
         },
         {
           "num": "04",
@@ -2238,7 +2284,13 @@
           "title": "Démontrez votre investment-readiness sur toutes les dimensions.",
           "audience": "Startups et scale-ups préparant un tour de table",
           "desc": "Les investisseurs attendent de plus en plus des fondateurs qu'ils démontrent leur préparation non seulement sur les finances mais sur la propriété IP, l'architecture technique, la sécurité et la gouvernance. Une Certification CIFSO 5000 devient un document de data room qui anticipe les questions de due diligence et accélère la décision d'investissement.",
-          "signal": "Signal aux investisseurs : investment-ready sur les cinq dimensions, pas seulement le modèle financier."
+          "signal": "Signal aux investisseurs : investment-ready sur les cinq dimensions, pas seulement le modèle financier.",
+          "chips": [
+            "Startups",
+            "Scale-ups",
+            "Fondateurs",
+            "Investisseurs"
+          ]
         },
         {
           "num": "05",
@@ -2246,7 +2298,13 @@
           "title": "Un document neutre pour une conversation complexe.",
           "audience": "Dirigeants planifiant leur succession, entreprises familiales, MBO",
           "desc": "Plus de 3,5 millions de PME européennes font face à des défis de transmission sans acheteur qualifié ni valorisation claire. La Certification CIFSO 5000 fournit une évaluation neutre et documentée sur laquelle toutes les parties — cédant, héritiers, acheteurs et conseillers — peuvent s'appuyer. Indépendante. Reproductible. Opposable.",
-          "signal": "Signal à toutes les parties : la valeur de cette organisation a été documentée indépendamment avant la transmission."
+          "signal": "Signal à toutes les parties : la valeur de cette organisation a été documentée indépendamment avant la transmission.",
+          "chips": [
+            "Fondateurs",
+            "Entreprises familiales",
+            "Héritiers",
+            "Conseillers M&A"
+          ]
         }
       ],
       "audienceLabel": "Ce que votre grade communique",
@@ -5062,7 +5120,8 @@
         "Supply chain & logistique",
         "Cybersécurité & anomalies",
         "Reporting ESG & audit"
-      ]
+      ],
+      "subtitle": "Une architecture intégrée. Quatre couches complémentaires."
     },
     "sovereigntySection": {
       "label": "Indépendance par l'architecture",
@@ -6002,7 +6061,8 @@
       "restart": "Nouvelle estimation",
       "estimated": "estimé",
       "disclaimerLabel": "Estimation non officielle",
-      "disclaimerCta": "Démarrer une certification officielle"
+      "disclaimerCta": "Démarrer une certification officielle",
+      "ctaAssessment": "Réserver un Assessment Day gratuit"
     },
     "marketContext": {
       "label": "Contexte marché 2026",
@@ -6963,7 +7023,7 @@
     "navPartnerNda": "NDA signé",
     "filterLabel": "Filtres",
     "filterAll": "Tous",
-    "filterGrade": "Grade",
+    "filterGrade": "Certification",
     "filterType": "Type",
     "viewDetails": "Voir la fiche",
     "noAssets": "Aucun actif disponible avec ces critères.",
@@ -6998,7 +7058,7 @@
     "subtitle": "Vue d'ensemble de toutes les pages et sections du site.",
     "groupBuild": "Build",
     "groupAdvisory": "Conseil",
-    "groupGrade": "Grade",
+    "groupGrade": "Certification",
     "groupTransaction": "Transact",
     "groupDiscover": "Découvrir",
     "groupCompany": "Entreprise",
@@ -7010,7 +7070,7 @@
     "alliances": "Alliances & Partenaires",
     "experts": "Réseau d'experts",
     "valuation": "Valorisation",
-    "grade": "Système de grade",
+    "grade": "Système de certification",
     "gradeMethod": "Méthodologie CIFSO v4.0",
     "gradeSubmit": "Soumettre pour certification",
     "gradePartners": "Experts certifiants",
@@ -8203,7 +8263,10 @@
       "downloadPdf": "Feuilleter le PDF",
       "subscribe": "Recevoir",
       "comingSoon": "Publication prochainement",
-      "comingSoonBadge": "À venir"
+      "comingSoonBadge": "À venir",
+      "canceledMsg": "Paiement annulé.",
+      "manage": "Gérer l'abonnement",
+      "successMsg": "Abonnement activé avec succès."
     },
     "report": {
       "title": "Aegryn Magazine",
@@ -8317,6 +8380,23 @@
         "excerpt": "neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
         "context": "Couverture dans Gala, magazine grand public de référence. Reportage vidéo sur neediu, actif Aegryn dans le secteur des services à domicile."
       }
+    },
+    "nda": {
+      "addressLabel": "Adresse de livraison",
+      "civilityLabel": "Civilité",
+      "civilityM": "M.",
+      "civilityMme": "Mme",
+      "countryPlaceholder": "Pays",
+      "legalNotice": "Les informations collectées sont traitées par Aegryn (Canton de Vaud, Suisse) conformément au RGPD (UE 2016/679) et à la LPD suisse révisée (en vigueur depuis le 1er septembre 2023). Elles sont utilisées exclusivement pour la gestion de la liste de souhaits de l'édition imprimée. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à media@boha-group.com ou depuis votre espace client.",
+      "meta": "NDA | Espace partenaire Aegryn",
+      "phonePlaceholder": "Téléphone",
+      "postalCodePlaceholder": "Code postal",
+      "rgpdLabel": "J'accepte qu'Aegryn utilise mes données personnelles pour me contacter au sujet de cette demande d'édition imprimée.",
+      "subtitle": "Accord de confidentialité signé dans le cadre de votre partenariat.",
+      "title": "Accord de non-divulgation",
+      "wishlistDesc": "L'édition imprimée du magazine Aegryn est une initiative réservée aux clients enregistrés. Ce formulaire vous permet d'exprimer vos centres d'intérêt pour être ajouté à la liste de souhaits. Nous vous contacterons lors du lancement de la production.",
+      "wishlistSectionLabel": "Édition imprimée, liste de souhaits",
+      "wishlistTitle": "Recevoir le magazine Aegryn en version imprimée"
     }
   },
   "talent": {
@@ -8460,6 +8540,49 @@
           "title": "Placement & suivi",
           "desc": "Accompagnement jusqu'à l'intégration réussie. Garantie de remplacement et suivi post-placement."
         }
+      },
+      "profiles": {
+        "intro": "Profils Tech & Digital recherchés.",
+        "cdo": {
+          "title": "Chief Digital Officer",
+          "desc": "Pilotage de la transformation digitale."
+        },
+        "cio": {
+          "title": "Chief Information Officer",
+          "desc": "Gouvernance des systèmes d'information."
+        },
+        "ciso": {
+          "title": "Chief Information Security Officer",
+          "desc": "Sécurité de l'information et conformité."
+        },
+        "cpo": {
+          "title": "Chief Product Officer",
+          "desc": "Vision et roadmap produit."
+        },
+        "cto": {
+          "title": "Chief Technology Officer",
+          "desc": "Architecture technique et stack technologique."
+        },
+        "headAI": {
+          "title": "Head of AI",
+          "desc": "Développement et déploiement de modèles IA."
+        },
+        "headML": {
+          "title": "Head of ML",
+          "desc": "Machine learning et traitement de données."
+        },
+        "headPlatform": {
+          "title": "Head of Platform",
+          "desc": "Infrastructure et plateformes cloud."
+        },
+        "headQA": {
+          "title": "Head of QA",
+          "desc": "Qualité et tests produit."
+        },
+        "vpe": {
+          "title": "VP Engineering",
+          "desc": "Direction de l'ingénierie logicielle."
+        }
       }
     },
     "forms": {
@@ -8574,7 +8697,28 @@
           "title": "Opportunités triées sur mesure",
           "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence."
         }
-      }
+      },
+      "availability": "Disponibilité",
+      "availabilityPlaceholder": "Ex : immédiate, 3 mois",
+      "cv": "CV",
+      "cvUpload": "Télécharger votre CV",
+      "cvUploaded": "CV téléchargé",
+      "desc": "Postulez pour rejoindre un projet Aegryn.",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "formTitle": "Candidature",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Prénom Nom",
+      "linkedin": "LinkedIn",
+      "linkedinPlaceholder": "https://linkedin.com/in/...",
+      "motivation": "Lettre de motivation",
+      "motivationPlaceholder": "Décrivez votre motivation...",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+41 ...",
+      "submit": "Envoyer ma candidature",
+      "success": "Candidature envoyée avec succès.",
+      "title": "Postuler"
     },
     "coverage": {
       "coverageTitle": "Notre couverture",
@@ -8703,7 +8847,34 @@
           "Technology & Software",
           "Tourisme & Hôtellerie"
         ]
-      }
+      },
+      "budget": "Budget",
+      "budgetPlaceholder": "Ex : 120 000 CHF/an",
+      "company": "Entreprise",
+      "companyPlaceholder": "Nom de votre entreprise",
+      "contactName": "Contact",
+      "contactNamePlaceholder": "Prénom Nom",
+      "desc": "Décrivez votre besoin de recrutement.",
+      "email": "Email",
+      "emailPlaceholder": "contact@entreprise.com",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "formTitle": "Demande de recrutement",
+      "location": "Localisation",
+      "locationPlaceholder": "Ex : Genève, hybride",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+41 ...",
+      "roleDesc": "Description du poste",
+      "roleDescPlaceholder": "Décrivez les responsabilités...",
+      "roleTitle": "Intitulé du poste",
+      "roleTitlePlaceholder": "Ex : CTO, Head of AI",
+      "submit": "Envoyer ma demande",
+      "success": "Demande envoyée avec succès.",
+      "title": "Recruter via Aegryn",
+      "urgency": "Urgence",
+      "urgencyFlexible": "Flexible",
+      "urgencyImmediate": "Immédiate",
+      "urgencyMonth": "Dans le mois",
+      "urgencyQuarter": "Ce trimestre"
     }
   },
   "industries": {
