@@ -143,7 +143,7 @@ export function GradingSystemPage() {
             </div>
             <div className="gs-hero-version shrink-0 flex flex-col gap-3">
               <div className="border border-white/10 px-5 py-4 text-right">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/30 mb-1">
+                <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/60 mb-1">
                   {t('downloadLabel')}
                 </p>
                 <p className="font-mono text-[11px] tracking-[0.1em] text-ag-apex">
@@ -174,7 +174,7 @@ export function GradingSystemPage() {
             {grades.map((g) => (
               <div key={g.grade} className="flex-1 text-center">
                 <span
-                  className="font-mono text-[9px] tracking-[0.08em]"
+                  className="font-mono text-[11px] tracking-[0.08em]"
                   style={{ color: g.color }}
                 >
                   {g.grade}
@@ -298,7 +298,7 @@ export function GradingSystemPage() {
 
                 {/* Subcodes */}
                 <div className="flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">
+                  <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">
                     Sous-codes typiques
                   </p>
                   <div className="flex flex-wrap gap-1.5">
@@ -333,9 +333,9 @@ export function GradingSystemPage() {
             </p>
             <div className="border border-ag-border rounded-2xl">
               <div className="grid grid-cols-[56px_120px_1fr] border-b border-ag-border bg-ag-light-gray">
-                <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3">N°</p>
-                <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Label</p>
-                <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Définition</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3">N°</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Label</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Définition</p>
               </div>
               {subcodes.map(({ code, label, desc }) => (
                 <div
@@ -361,9 +361,9 @@ export function GradingSystemPage() {
 
             {/* Code badge */}
             <div className="bg-ag-navy px-8 py-6 mb-8 font-mono text-[14px] tracking-[0.08em] text-ag-apex">
-              C1-D01 <span className="text-white/30 mx-2">|</span>
-              I2-M02 <span className="text-white/30 mx-2">|</span>
-              F1-A01 <span className="text-white/30 mx-2">|</span>
+              C1-D01 <span className="text-white/60 mx-2">|</span>
+              I2-M02 <span className="text-white/60 mx-2">|</span>
+              F1-A01 <span className="text-white/60 mx-2">|</span>
               S2
             </div>
 
@@ -469,10 +469,10 @@ export function GradingSystemPage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 text-left px-6 py-3 font-normal">Grade</th>
-                  <th className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 text-left px-6 py-3 font-normal">Label</th>
-                  <th className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 text-left px-6 py-3 font-normal">Score</th>
-                  <th className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/30 text-left px-6 py-3 font-normal">Rareté</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Grade</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Label</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Score</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Rareté</th>
                 </tr>
               </thead>
               <tbody>
@@ -490,7 +490,7 @@ export function GradingSystemPage() {
                       <span className="font-sans text-[13px] text-white/70">{g.label}</span>
                     </td>
                     <td className="px-6 py-4">
-                      <span className="font-mono text-[12px] text-white/50">{g.range}</span>
+                      <span className="font-mono text-[12px] text-white/65">{g.range}</span>
                     </td>
                     <td className="px-6 py-4">
                       <span
@@ -555,10 +555,10 @@ export function GradingSystemPage() {
       {/* ── DISCLAIMER ── */}
       <section className="py-16 px-6 border-t border-ag-border bg-ag-navy">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex/60 mb-3">
+          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex/60 mb-3">
             {t('disclaimerTitle')}
           </p>
-          <p className="font-sans text-[13px] text-white/50 leading-relaxed max-w-3xl">
+          <p className="font-sans text-[13px] text-white/65 leading-relaxed max-w-3xl">
             {t('disclaimerText')}
           </p>
         </div>

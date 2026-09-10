@@ -85,7 +85,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-ag-border">
         <div>
-          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex mb-0.5">Grade {grade}</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-0.5">Grade {grade}</p>
           <p className="font-sans font-semibold text-ag-black text-[13px]">{t('formTitle')}</p>
         </div>
         <button onClick={() => setOpen(false)} className="text-ag-gray-light hover:text-ag-black transition-colors">

@@ -102,7 +102,7 @@ export default async function TransactBuyPage({ params }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex mb-2">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-2">
                 {tm('segment.buy.kicker')}
               </p>
               <h2 className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em] mb-3">
@@ -113,7 +113,7 @@ export default async function TransactBuyPage({ params }: Props) {
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-gray-light mb-2">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2">
                 Ce mandat inclut
               </p>
               <ul className="flex flex-col gap-2">

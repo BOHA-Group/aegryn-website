@@ -89,7 +89,7 @@ function SitemapSection({ group }: { group: SitemapGroup }) {
   const t = useTranslations('sitemap')
   return (
     <div>
-      <h2 className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex mb-3">
+      <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-3">
         {t(group.labelKey)}
       </h2>
       <ul className="flex flex-col gap-1">
@@ -116,7 +116,7 @@ export default function SitemapPage() {
       <div className="max-w-5xl mx-auto">
 
         <div className="mb-12">
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex mb-4 flex items-center gap-2">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4 flex items-center gap-2">
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
             Aegryn
           </p>

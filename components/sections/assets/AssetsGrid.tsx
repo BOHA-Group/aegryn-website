@@ -115,7 +115,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                     </p>
                     {/* Badge CORE/PORTFOLIO */}
                     <span
-                      className={`font-mono text-[9px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
+                      className={`font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
                         asset.ownership === 'core'
                           ? 'border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink'
                           : 'border-ag-border bg-ag-off-white text-ag-gray'

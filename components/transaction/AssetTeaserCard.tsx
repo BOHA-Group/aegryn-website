@@ -57,7 +57,7 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
 
       {/* Context label */}
       {lot.catalog_context && (
-        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
           {lot.catalog_context}
         </p>
       )}
@@ -83,7 +83,7 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
       <div className="mt-auto pt-4 border-t border-ag-border">
         <div className="flex items-center gap-2 mb-2">
           <Lock size={11} className="text-ag-gray-light" />
-          <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-gray-light">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
             {labels.ndaLabel}
           </span>
         </div>

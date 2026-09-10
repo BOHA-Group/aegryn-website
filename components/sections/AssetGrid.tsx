@@ -90,12 +90,12 @@ export function AssetGrid() {
           </div>
 
           {isNotStarted && (
-            <span className="font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500 mb-1">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500 mb-1">
               {t('notStarted')}
             </span>
           )}
           {!isNotStarted && isLive && (
-            <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500 mb-1">
+            <span className="inline-flex items-center gap-1 font-sans font-semibold text-[10px] tracking-[0.1em] uppercase text-emerald-500 group-hover:text-emerald-300 transition-colors duration-500 mb-1">
               <span className="relative flex w-1.5 h-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-50" />
                 <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-emerald-400" />
@@ -104,7 +104,7 @@ export function AssetGrid() {
             </span>
           )}
           {!isNotStarted && !isLive && (
-            <span className="inline-flex items-center gap-1 font-sans font-semibold text-[9px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500 mb-1">
+            <span className="inline-flex items-center gap-1 font-sans font-semibold text-[10px] tracking-[0.1em] uppercase text-orange-400 group-hover:text-orange-300 transition-colors duration-500 mb-1">
               <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
               {tStatus('building')}
             </span>

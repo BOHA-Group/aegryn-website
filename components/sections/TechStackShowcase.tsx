@@ -114,7 +114,7 @@ function TechBadge({ item }: { item: TechItem }) {
       </div>
       {/* Label */}
       <span
-        className="font-sans text-[9px] tracking-[0.04em] text-center leading-tight transition-colors duration-200"
+        className="font-sans text-[10px] tracking-[0.04em] text-center leading-tight transition-colors duration-200"
         style={{ color: hovered ? '#0D1B2A' : '#6B7280', maxWidth: '48px' }}
       >
         {item.name}
@@ -178,7 +178,7 @@ export function TechStackShowcase() {
         <div className="flex flex-wrap gap-1.5 mb-8">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`tss-tab font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
+            className={`tss-tab font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
               activeCategory === null
                 ? 'bg-ag-navy text-white border-ag-navy'
                 : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
@@ -190,7 +190,7 @@ export function TechStackShowcase() {
             <button
               key={cat.labelKey}
               onClick={() => setActiveCategory(activeCategory === i ? null : i)}
-              className={`tss-tab font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
+              className={`tss-tab font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
                 activeCategory === i
                   ? 'bg-ag-navy text-white border-ag-navy'
                   : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
@@ -206,7 +206,7 @@ export function TechStackShowcase() {
           {displayedCategories.map((cat) => (
             <div key={cat.labelKey} className="flex flex-col sm:flex-row sm:items-start gap-4">
               {/* Category label — fixed width, navy, readable */}
-              <p className="font-mono text-[9px] tracking-[0.20em] uppercase text-ag-navy font-semibold shrink-0 sm:w-28 pt-1">
+              <p className="font-mono text-[10px] tracking-[0.20em] uppercase text-ag-navy font-semibold shrink-0 sm:w-28 pt-1">
                 {t(cat.labelKey)}
               </p>
               {/* Badges row */}

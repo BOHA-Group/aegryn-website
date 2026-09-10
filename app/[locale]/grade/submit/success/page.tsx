@@ -20,7 +20,7 @@ export default function GradeSubmitSuccessPage() {
         <p className="font-sans text-[15px] text-white/60 leading-relaxed mb-3">
           Votre dossier a bien été soumis. Notre équipe vous contactera sous les délais convenus.
         </p>
-        <p className="font-sans text-[13px] text-white/30 mb-10">
+        <p className="font-sans text-[13px] text-white/65 mb-10">
           Un email de confirmation vous a été envoyé.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

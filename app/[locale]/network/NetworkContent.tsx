@@ -66,7 +66,7 @@ function ExpertiseCardItem({ card }: { card: ExpertiseCard }) {
         {card.tags.map(tag => (
           <span
             key={tag}
-            className="font-sans text-[9px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
+            className="font-sans text-[10px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
             style={{ borderColor: hovered ? `${card.color}55` : undefined }}
           >
             {tag}
@@ -210,10 +210,10 @@ export default function NetworkContent() {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center gap-4 mb-8">
-            <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
               {t('partners.label')}
             </span>
-            <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
               {t('partners.badge')}
             </span>
           </div>
@@ -242,10 +242,10 @@ export default function NetworkContent() {
           {/* Header */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-mono text-[9px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
                 {t('experts.label')}
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex">
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
                 {t('experts.badge')}
               </span>
             </div>

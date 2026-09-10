@@ -30,7 +30,7 @@ export function BuildStrip() {
   return (
     <section ref={ref} className="border-t border-ag-border bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-6">
-        <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light mb-8 md:mb-10">
+        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8 md:mb-10">
           {t('label')}
         </p>
       </div>
@@ -39,7 +39,7 @@ export function BuildStrip() {
 
         {/* Panneau gauche — Actifs propriétaires */}
         <div className="build-panel bg-ag-white px-8 md:px-12 py-12 md:py-16 flex flex-col gap-6">
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light">
             {t('assetsLabel')}
           </p>
           <h2
@@ -61,7 +61,7 @@ export function BuildStrip() {
 
         {/* Panneau droit — Asset Engineering */}
         <div className="build-panel bg-ag-navy px-8 md:px-12 py-12 md:py-16 flex flex-col gap-6">
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-white/50">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-white/65">
             {t('engineeringLabel')}
           </p>
           <h2

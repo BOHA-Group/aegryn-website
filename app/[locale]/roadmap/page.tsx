@@ -138,13 +138,13 @@ export default async function RoadmapPage({ params }: Props) {
                         <Icon size={15} className="text-ag-apex" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}
                         </h3>
                         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
-                      <span className="shrink-0 self-start font-mono text-[9px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-2 py-1">
+                      <span className="shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-2 py-1">
                         ● {t('statusLive')}
                       </span>
                     </div>
@@ -171,13 +171,13 @@ export default async function RoadmapPage({ params }: Props) {
                         <Icon size={15} className="text-ag-gray-light" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}
                         </h3>
                         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
-                      <span className="shrink-0 self-start font-mono text-[9px] uppercase tracking-widest text-ag-gray-light border border-ag-border px-2 py-1">
+                      <span className="shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-gray-light border border-ag-border px-2 py-1">
                         ○ {t('statusUpcoming')}
                       </span>
                     </div>

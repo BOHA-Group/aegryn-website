@@ -120,7 +120,7 @@ export default async function BuildServicePage({ params }: Props) {
                 card.key === 'btl' ? 'bg-ag-navy' : 'bg-ag-white'
               }`}>
                 <div className="flex items-center gap-3">
-                  <span className={`font-mono text-[9px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
+                  <span className={`font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
                     card.key === 'btl'
                       ? 'border-ag-apex/40 bg-ag-apex/10 text-ag-apex'
                       : 'border-ag-border bg-ag-off-white text-ag-gray'
@@ -221,7 +221,7 @@ export default async function BuildServicePage({ params }: Props) {
               <div key={item.num} className="bg-ag-white p-8 flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
-                  <span className="inline-flex font-mono text-[9px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
+                  <span className="inline-flex font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
                     {item.badge}
                   </span>
                 </div>
@@ -327,9 +327,9 @@ export default async function BuildServicePage({ params }: Props) {
             <table className="w-full min-w-[640px] text-left">
               <thead>
                 <tr className="bg-ag-off-white border-b border-ag-border">
-                  <th className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.agencyCol')}</th>
-                  <th className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex-ink px-6 py-4 w-1/3">{t('marketComparison.aegrynCol')}</th>
-                  <th className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.processCol')}</th>
+                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.agencyCol')}</th>
+                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink px-6 py-4 w-1/3">{t('marketComparison.aegrynCol')}</th>
+                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.processCol')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-ag-border">

@@ -72,7 +72,7 @@ export default async function BidModelsPage({ params }: Props) {
                     <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">{model.label}</span>
                   </div>
                   {model.subBadge && (
-                    <span className="font-sans text-[9px] uppercase tracking-[0.12em] text-ag-apex border border-ag-apex/40 px-2 py-1 shrink-0">{model.subBadge}</span>
+                    <span className="font-sans text-[10px] uppercase tracking-[0.12em] text-ag-apex border border-ag-apex/40 px-2 py-1 shrink-0">{model.subBadge}</span>
                   )}
                 </div>
 

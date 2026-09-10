@@ -40,20 +40,20 @@ export default function ReviewBadge({
           {label}
         </span>
         {score != null && (
-          <span className={`font-mono text-[8px] mt-0.5 ${isPlus ? 'text-white/70' : 'text-blue-500'}`}>
+          <span className={`font-mono text-[10px] mt-0.5 ${isPlus ? 'text-white/70' : 'text-blue-500'}`}>
             {score}/100
           </span>
         )}
       </div>
 
       {sublabel && (
-        <p className="font-mono text-[9px] text-blue-600 text-center max-w-[120px] leading-tight">
+        <p className="font-mono text-[10px] text-blue-600 text-center max-w-[120px] leading-tight">
           {sublabel}
         </p>
       )}
 
       {showNotPublishable && (
-        <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-gray-400">
+        <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gray-400">
           Non publiable
         </p>
       )}

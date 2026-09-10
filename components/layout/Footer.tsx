@@ -153,14 +153,14 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[11px] text-white/60 tracking-[0.18em] uppercase mt-1">
               {t('tagline')}
             </p>
-            <p className="mt-2 font-sans font-semibold text-[11px] text-white/30">
+            <p className="mt-2 font-sans font-semibold text-[11px] text-white/60">
               {t('swissTagline')}
             </p>
             <div className="mt-5 flex items-center gap-4">
               {socialLinks.map(({ label, href, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                   aria-label={label}
-                  className="text-white/40 hover:text-ag-apex transition-colors duration-200">
+                  className="text-white/60 hover:text-ag-apex transition-colors duration-200">
                   {icon}
                 </a>
               ))}
@@ -289,10 +289,10 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[10px] text-white/45">
               {t('legal')}
             </p>
-            <p className="font-sans text-[10px] text-white/30">
+            <p className="font-sans text-[10px] text-white/60">
               {t('aiNotice')}
             </p>
-            <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/25 mt-1">
+            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/60 mt-1">
               {t('taglines')}
             </p>
           </div>

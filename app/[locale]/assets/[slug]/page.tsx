@@ -302,7 +302,7 @@ export default async function AssetPage({ params }: Props) {
 
               {/* 1 — Logo partenaire — référence w-200 */}
               <div className="shrink-0 flex flex-col gap-3">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
                 <div className="border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
                     src="/images/press-village-justice-logo.png"
@@ -311,26 +311,26 @@ export default async function AssetPage({ params }: Props) {
                     height={75}
                     className="object-contain"
                   />
-                  <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight">
+                  <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight">
                     158 140 membres<br />1 100 000 visites/mois
                   </p>
                   <div className="w-full pt-3 border-t border-ag-border flex flex-col items-center gap-1">
-                    <p className="font-mono text-[8px] tracking-[0.12em] uppercase text-ag-gray-light">Code partenaire</p>
+                    <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light">Code partenaire</p>
                     <p className="font-mono text-[12px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
                   </div>
-                  <p className="font-mono text-[8px] text-ag-gray-light">16 juillet 2026</p>
+                  <p className="font-mono text-[10px] text-ag-gray-light">16 juillet 2026</p>
                 </div>
               </div>
 
               {/* 2 — Carte article — w-260 (+30% vs logo) */}
               <div className="shrink-0 flex flex-col gap-3">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
                 <div className="border border-ag-border bg-ag-white w-[260px]">
                   <div className="bg-ag-navy px-5 py-3 flex items-center">
-                    <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/80">Village de la Justice</span>
+                    <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/80">Village de la Justice</span>
                   </div>
                   <div className="px-5 py-5 flex flex-col gap-3">
-                    <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-ag-gray-light">16 juillet 2026</p>
+                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">16 juillet 2026</p>
                     <p className="font-sans font-bold text-[13px] text-ag-black leading-snug">
                       Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore
                     </p>
@@ -341,7 +341,7 @@ export default async function AssetPage({ params }: Props) {
                       href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex transition-colors"
+                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex transition-colors"
                     >
                       Lire l&apos;article <ArrowUpRight size={10} />
                     </a>
@@ -351,7 +351,7 @@ export default async function AssetPage({ params }: Props) {
 
               {/* 3 — Banner subblink — 50% réduit */}
               <div className="flex flex-col gap-3 shrink-0">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-gray-light">Visuel</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Visuel</p>
                 <Image
                   src="/images/subblink banner.jpeg"
                   alt="subblink — Analyse contractuelle par IA"

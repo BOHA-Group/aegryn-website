@@ -186,7 +186,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                   <button
                     key={cat}
                     onClick={() => setCategory(category === cat ? '' : cat)}
-                    className={`font-mono text-[9px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                    className={`font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
                       category === cat
                         ? 'border-ag-navy bg-ag-navy text-white'
                         : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
@@ -206,7 +206,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                     <button
                       key={i}
                       onClick={() => setArrRange(i)}
-                      className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                      className={`font-mono text-[10px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
                         arrRange === i
                           ? 'border-ag-navy bg-ag-navy text-white'
                           : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
@@ -221,7 +221,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                 {hasFilters && (
                   <button
                     onClick={reset}
-                    className="flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
+                    className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
                   >
                     <X size={10} /> {labels.resetFiltersShort}
                   </button>
@@ -231,7 +231,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
               /* Accès non débloqué — filtres masqués */
               <div className="flex items-center gap-2 text-ag-gray-light">
                 <Lock size={11} className="shrink-0" />
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em]">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em]">
                   {labels.conditionalAccess}
                 </span>
               </div>
@@ -269,12 +269,12 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
 
                     <div className="flex flex-wrap items-center gap-2">
                       {asset.asset_type && (
-                        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
                           {asset.asset_type}
                         </span>
                       )}
                       {fmtArr(asset.arr) && (
-                        <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex">
                           {fmtArr(asset.arr)}
                         </span>
                       )}

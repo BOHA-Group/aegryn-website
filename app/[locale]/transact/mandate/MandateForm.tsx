@@ -141,7 +141,7 @@ export default function MandateForm() {
                 : 'border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black'
             }`}
           >
-            <p className={`font-mono text-[9px] uppercase tracking-[0.22em] mb-1.5 ${mandateType === type ? 'text-ag-apex' : 'text-ag-apex'}`}>
+            <p className={`font-mono text-[10px] uppercase tracking-[0.22em] mb-1.5 ${mandateType === type ? 'text-ag-apex' : 'text-ag-apex'}`}>
               {t(`segment.${type}.kicker`)}
             </p>
             <p className={`font-sans font-semibold text-[13px] leading-snug ${mandateType === type ? 'text-white' : 'text-ag-black'}`}>

@@ -25,7 +25,7 @@ export function MarketStatStrip() {
     <section ref={ref} className="py-20 bg-ag-navy">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-12">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-12">
           {t('label')}
         </p>
 
@@ -42,7 +42,7 @@ export function MarketStatStrip() {
                 {stat.label}
               </p>
               {stat.source && (
-                <p className="font-mono text-[10px] text-white/30 tracking-wide">
+                <p className="font-mono text-[10px] text-white/60 tracking-wide">
                   {stat.source}
                 </p>
               )}

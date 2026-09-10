@@ -165,7 +165,7 @@ export default async function HowItWorksPage({ params }: Props) {
                   <div className="flex items-center gap-3">
                     {icon}
                     <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em]">{title}</h3>
-                    <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${SIDE_COLORS[side]}`}>
+                    <span className={`font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 border ${SIDE_COLORS[side]}`}>
                       {SIDE_LABELS[side]}
                     </span>
                   </div>

@@ -23,7 +23,7 @@ export function TransactionStats() {
   return (
     <section ref={ref} className="bg-ag-navy border-t border-white/10 py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/30 mb-10">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-10">
           {t('statsLabel')}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -33,7 +33,7 @@ export function TransactionStats() {
                 style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}>
                 {value}
               </p>
-              <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
+              <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/60">
                 {label}
               </p>
             </div>

@@ -201,7 +201,7 @@ export function ProprietaryAssetsGrid() {
                 </div>
                 {/* Publisher badge */}
                 {asset.publisherReady && (
-                  <span className="font-mono text-[8px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink shrink-0">
+                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink shrink-0">
                     LICENCIABLE
                   </span>
                 )}

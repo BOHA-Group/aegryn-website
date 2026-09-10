@@ -188,7 +188,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
       {/* Header */}
       <div className="bg-ag-navy px-8 py-6 flex items-start justify-between gap-4">
         <div>
-          <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-ag-apex mb-1.5">
+          <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-1.5">
             {t('header.label')}
           </p>
           <p className="font-sans font-bold text-white text-[16px] leading-snug">
@@ -290,7 +290,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                         key={s}
                         type="button"
                         onClick={() => toggleSector(s)}
-                        className={`font-mono text-[9px] uppercase tracking-[0.14em] px-3 py-1.5 border transition-all ${
+                        className={`font-mono text-[10px] uppercase tracking-[0.14em] px-3 py-1.5 border transition-all ${
                           sectors.includes(s)
                             ? 'border-ag-apex bg-ag-apex/10 text-ag-black'
                             : 'border-ag-border text-ag-gray hover:border-ag-black'

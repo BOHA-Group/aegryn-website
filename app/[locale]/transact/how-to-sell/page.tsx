@@ -85,7 +85,7 @@ export default async function TransactSellPage({ params }: Props) {
             </div>
             {/* Conditions cession */}
             <div className="bg-ag-off-white border border-ag-border p-8 flex flex-col gap-4">
-              <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex mb-2">
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">
                 {tm('segment.sell.kicker')}
               </p>
               <p className="font-sans font-semibold text-ag-black text-[16px] leading-snug">
@@ -120,7 +120,7 @@ export default async function TransactSellPage({ params }: Props) {
                 <TrendingUp size={18} className="text-ag-apex" />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-apex mb-2">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex mb-2">
                   {tm('segment.fundraise.kicker')}
                 </p>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">
@@ -151,7 +151,7 @@ export default async function TransactSellPage({ params }: Props) {
                 <Users size={18} className="text-ag-apex" />
               </div>
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-apex mb-2">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex mb-2">
                   {tm('segment.equity_stake.kicker')}
                 </p>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">

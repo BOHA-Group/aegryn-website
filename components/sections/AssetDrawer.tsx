@@ -108,7 +108,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
             >
               {asset.name}
             </h2>
-            <p className="font-sans font-semibold text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mt-2">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mt-2">
               {t('ownedBy')}
             </p>
           </div>
@@ -144,7 +144,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               <div className="grid grid-cols-2 gap-px bg-ag-border">
                 {getHighlights().map((h) => (
                   <div key={h.label} className="bg-ag-off-white p-4">
-                    <p className="font-sans font-semibold text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
                       {h.label}
                     </p>
                     <p className="font-sans font-semibold text-[13px] text-ag-black">
@@ -255,7 +255,7 @@ export function AssetGridWithDrawer() {
 
                   {/* Bottom — nom + tagline + status */}
                   <div className="mt-12">
-                    <p className="font-sans font-semibold text-[9px] tracking-[0.2em] uppercase text-ag-gray-light group-hover:text-white/40 transition-colors duration-500 mb-2">
+                    <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light group-hover:text-white/40 transition-colors duration-500 mb-2">
                       {t('ownedBy')}
                     </p>
                     <h3

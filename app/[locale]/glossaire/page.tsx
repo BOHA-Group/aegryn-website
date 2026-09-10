@@ -121,7 +121,7 @@ export default async function GlossairePage({ params }: Props) {
               <a
                 key={l}
                 href={`#letter-${l}`}
-                className="font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white/50 hover:border-ag-apex hover:text-ag-apex transition-colors"
+                className="font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white/65 hover:border-ag-apex hover:text-ag-apex transition-colors"
               >
                 {l}
               </a>

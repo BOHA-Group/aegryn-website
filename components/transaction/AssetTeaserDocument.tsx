@@ -207,7 +207,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
           Aegryn TRANSACTION
         </p>
         <p
-          className="text-[9px] mt-0.5"
+          className="text-[10px] mt-0.5"
           style={{ color: T.grey600, letterSpacing: '0.06em', fontFamily: 'Arial, sans-serif' }}
         >
           Genève · Suisse

@@ -125,7 +125,7 @@ export default async function ArticlePage({ params }: Props) {
           <p className="font-sans text-[15px] text-white/55 leading-relaxed mb-8">
             {getLocaleText(article.excerpt, locale)}
           </p>
-          <div className="flex items-center gap-6 text-white/30">
+          <div className="flex items-center gap-6 text-white/60">
             <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em]">
               <Calendar size={11} /> {dateStr}
             </span>

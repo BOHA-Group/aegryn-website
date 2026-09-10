@@ -105,7 +105,7 @@ export default function TransactionAccessRequestForm({ locale, userId, userEmail
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="bg-ag-white border border-ag-border p-6 flex flex-col gap-4">
-          <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-gray-light mb-1">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-1">
             {t('formLabel')}
           </p>
 

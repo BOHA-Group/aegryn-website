@@ -189,7 +189,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div className="border border-ag-border bg-ag-white p-8 flex gap-4">
             <Info size={14} className="text-ag-gray-light shrink-0 mt-1" />
             <div>
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                 {t('fees.note')}{' '}
                 <Link href={t('fees.noteHref') as never} className="underline underline-offset-2 hover:text-ag-black transition-colors">

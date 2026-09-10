@@ -77,7 +77,7 @@ export function GradeProcess() {
               {open === i && (
                 <div className="px-6 pb-8 pt-2 border-t border-ag-border bg-ag-off-white grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
                       Detail
                     </p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
@@ -85,7 +85,7 @@ export function GradeProcess() {
                     </p>
                   </div>
                   <div>
-                    <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
                       Required data
                     </p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
@@ -102,7 +102,7 @@ export function GradeProcess() {
         {/* Contestation note */}
         <div className="mt-10 border border-ag-border rounded-2xl p-6 bg-ag-off-white grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
           <div>
-            <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
               {t('contestLabel')}
             </p>
           </div>

@@ -130,7 +130,7 @@ export function GradeAudienceTable() {
                     >
                       {activeGrade}
                     </span>
-                    <span className="font-mono text-[9px] tracking-[0.14em] uppercase text-ag-gray-light">
+                    <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
                       {headers[active]}
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export function GradeAudienceTable() {
               <thead>
                 <tr className="bg-ag-navy">
                   <th className="px-5 py-4">
-                    <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/40">Profile</span>
+                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">Profile</span>
                   </th>
                   {GRADES.map((g, gi) => {
                     const c = GRADE_CONFIG[g]

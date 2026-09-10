@@ -84,7 +84,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
       <div className="grid grid-cols-4 gap-px bg-ag-border rounded-2xl overflow-hidden">
         {/* Support — ACCOMPAGNER en 1er */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -106,7 +106,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
 
         {/* Build — CONSTRUIRE en 2ème */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -128,7 +128,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
 
         {/* Transaction M&A */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -150,7 +150,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
 
         {/* Recruter */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftRecruit')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -187,7 +187,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
       <div className="grid grid-cols-2 gap-px bg-ag-border rounded-2xl overflow-hidden">
         {/* The Aegryn Magazine */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMagazine')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -209,7 +209,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 
         {/* Notre regard sur le marché */}
         <div className="bg-ag-white p-4">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMarket')}
           </p>
           <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
@@ -270,7 +270,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
       <div className="grid gap-px bg-ag-border rounded-2xl overflow-hidden" style={{ gridTemplateColumns: '1fr 2fr 1fr' }}>
         {/* Le groupe */}
         <div className="bg-ag-white p-3">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoGroup')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
@@ -310,7 +310,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
 
         {/* Nos industries — clusters dépliables */}
         <div className="bg-ag-white p-4 overflow-y-auto" style={{ maxHeight: 420 }}>
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
@@ -344,7 +344,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
 
         {/* Nous rejoindre */}
         <div className="bg-ag-white p-3">
-          <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('whoJoin')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
@@ -602,7 +602,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
               <UserCircle size={16} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
               <div className="leading-tight">
-                <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
                 <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
               </div>
             </NextLink>
@@ -647,28 +647,28 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'craft' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('craftSupport')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('craftSupport')}</p>
                   {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftBuild')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftBuild')}</p>
                   {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftTransact')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftTransact')}</p>
                   {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('craftRecruit')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftRecruit')}</p>
                   {CRAFT_RECRUIT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
@@ -693,14 +693,14 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'thinking' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('thinkingMagazine')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('thinkingMagazine')}</p>
                   {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('thinkingMarket')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('thinkingMarket')}</p>
                   <a
                     href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
                     target="_blank"
@@ -735,7 +735,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <div className="py-2 pl-4 flex flex-col gap-2">
 
                   {/* Le groupe */}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-2">{t('whoGroup')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('whoGroup')}</p>
                   {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
@@ -756,15 +756,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
                   {/* Nos bureaux */}
                   <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mb-1.5">{t('whoOffices')}</p>
-                    <p className="font-sans text-[12px] text-white/40 leading-relaxed">
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-1.5">{t('whoOffices')}</p>
+                    <p className="font-sans text-[12px] text-white/60 leading-relaxed">
                       Switzerland, Rue du Centre 142, 1025 St-Sulpice
                     </p>
                   </div>
 
                   {/* Nos industries — clusters dépliables */}
                   <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mb-2">{t('whoIndustries')}</p>
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-2">{t('whoIndustries')}</p>
                     <div className="divide-y divide-white/10">
                       {clusters.map((cluster, ci) => {
                         const isOpen = mobileOpenCluster === ci
@@ -776,7 +776,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                               className="w-full flex items-center justify-between py-2 font-sans text-[13px] text-white/50 hover:text-white transition-colors text-left"
                             >
                               <span>{cluster.cluster}</span>
-                              <span className="text-white/30 leading-none">{isOpen ? '−' : '+'}</span>
+                              <span className="text-white/60 leading-none">{isOpen ? '−' : '+'}</span>
                             </button>
                             {isOpen && (
                               <div className="pb-2 pl-3 flex flex-col gap-1">
@@ -792,7 +792,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   </div>
 
                   {/* Nous rejoindre */}
-                  <p className="font-mono text-[9px] tracking-[0.24em] uppercase text-white/40 mt-3">{t('whoJoin')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('whoJoin')}</p>
                   {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
@@ -823,7 +823,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <div className="flex items-center gap-2.5 border border-white/15 px-4 py-3">
                   <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
                   <div className="leading-tight">
-                    <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
                     <p className="font-sans text-[14px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
                   </div>
                 </div>

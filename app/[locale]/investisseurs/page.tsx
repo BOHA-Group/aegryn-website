@@ -182,7 +182,7 @@ export default async function InvestisseursPage({ params }: Props) {
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-3">
               PREMIER CONTACT
             </p>
             <p className="font-sans font-bold text-white text-[22px] max-w-md leading-snug">

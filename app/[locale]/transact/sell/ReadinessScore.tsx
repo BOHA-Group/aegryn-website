@@ -93,7 +93,7 @@ export default function ReadinessScore() {
           {QUESTION_IDS.map((q, i) => (
             <div key={q.id} className="flex flex-col gap-2">
               <div className="flex items-start gap-3">
-                <span className="font-mono text-[9px] text-ag-apex font-bold tracking-[0.1em] mt-0.5 shrink-0">0{i + 1}</span>
+                <span className="font-mono text-[10px] text-ag-apex font-bold tracking-[0.1em] mt-0.5 shrink-0">0{i + 1}</span>
                 <div className="flex-1">
                   <p className="font-sans font-semibold text-ag-black text-[13px] mb-0.5">{t(`questions.${q.id}.label`)}</p>
                   <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed mb-2">{t(`questions.${q.id}.hint`)}</p>

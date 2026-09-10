@@ -154,7 +154,7 @@ export function GradeUseCases() {
                       {meta.chips.map(({ label, Icon }) => (
                         <span
                           key={label}
-                          className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
+                          className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
                         >
                           <Icon size={10} className="text-ag-apex shrink-0" />
                           {label}
@@ -181,7 +181,7 @@ export function GradeUseCases() {
                     />
                     {/* Overlay with num */}
                     <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/60 to-transparent flex items-end p-4">
-                      <span className="font-mono text-[22px] font-bold text-white/40">
+                      <span className="font-mono text-[22px] font-bold text-white/60">
                         {uc.num}
                       </span>
                     </div>

@@ -124,7 +124,7 @@ export function AssetCarousel() {
                   <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-apex/60 border border-ag-apex/30 px-2.5 py-1">
                     {t('classifiedLabel')}
                   </span>
-                  <span className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/30">
+                  <span className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/60">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                       <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
@@ -138,10 +138,10 @@ export function AssetCarousel() {
                   >
                     {asset.name}
                   </h3>
-                  <p className="font-sans font-normal text-[13px] text-white/50 leading-relaxed mb-3">
+                  <p className="font-sans font-normal text-[13px] text-white/65 leading-relaxed mb-3">
                     {tItems(`${asset.id}.tagline`)}
                   </p>
-                  <p className="font-sans font-normal text-[12px] text-white/30 leading-relaxed mb-5">
+                  <p className="font-sans font-normal text-[12px] text-white/60 leading-relaxed mb-5">
                     {t('classifiedDesc').split('\n').map((line, i) => (
                       <span key={i}>{line}{i === 0 && <br />}</span>
                     ))}

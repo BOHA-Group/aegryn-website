@@ -155,7 +155,7 @@ export default async function TransactCatalogPage({ params }: Props) {
               {sessionDetails.map(({ icon: Icon, label, value }) => (
                 <div key={label} className="border border-ag-border p-5 flex flex-col gap-3">
                   <Icon size={14} className="text-ag-apex" />
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light">{label}</p>
+                  <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">{label}</p>
                   <p className="font-sans font-semibold text-ag-black text-[13px]">{value}</p>
                 </div>
               ))}
@@ -177,7 +177,7 @@ export default async function TransactCatalogPage({ params }: Props) {
               </div>
               <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
                 <div className="flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
                     {ts('sessionCardKicker')} — {ts('sessionCardCategory')}
                   </p>
                   <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-3">

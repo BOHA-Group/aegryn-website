@@ -73,10 +73,10 @@ export function WhitepaperContent() {
               priority
             />
             <div className="text-right">
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
                 Certification CIFSO 5000 v4.0
               </p>
-              <p className="font-mono text-[9px] tracking-[0.16em] text-ag-gray-light">
+              <p className="font-mono text-[10px] tracking-[0.16em] text-ag-gray-light">
                 Aegryn SA · Saint-Sulpice, Switzerland
               </p>
             </div>
@@ -107,7 +107,7 @@ export function WhitepaperContent() {
               { label: 'Jurisdiction', value: 'Switzerland' },
             ].map(({ label, value }) => (
               <div key={label} className="px-4 py-4 border-r border-ag-border last:border-0">
-                <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">
+                <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">
                   {label}
                 </p>
                 <p className="font-sans font-semibold text-ag-black text-[13px]">{value}</p>
@@ -174,7 +174,7 @@ export function WhitepaperContent() {
               <div key={uc.num} className="grid grid-cols-[40px_1fr] gap-4 border border-ag-border p-5">
                 <span className="font-mono text-[11px] font-bold text-ag-apex">{uc.num}</span>
                 <div>
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
+                  <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
                     {uc.tag}
                   </p>
                   <p className="font-sans font-semibold text-ag-black text-[13px] mb-2">{uc.title}</p>
@@ -207,7 +207,7 @@ export function WhitepaperContent() {
                   >
                     {dim.code}
                   </p>
-                  <p className="font-mono text-[9px] text-ag-gray-light">{dim.weight} pts</p>
+                  <p className="font-mono text-[10px] text-ag-gray-light">{dim.weight} pts</p>
                 </div>
                 <div>
                   <p className="font-sans font-semibold text-ag-black text-[13px] mb-1">{dim.name}</p>
@@ -225,7 +225,7 @@ export function WhitepaperContent() {
             <div className="grid grid-cols-[80px_120px_1fr] bg-ag-navy">
               {['Grade', 'Level', 'Meaning'].map((h) => (
                 <div key={h} className="px-4 py-3 border-r border-white/10 last:border-0">
-                  <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-white/40">{h}</p>
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{h}</p>
                 </div>
               ))}
             </div>
@@ -257,7 +257,7 @@ export function WhitepaperContent() {
             <div className="grid grid-cols-[140px_1fr_1fr] bg-ag-navy">
               {['CIFSO dimension', 'Existing standards', 'CIFSO 5000 scope'].map((h) => (
                 <div key={h} className="px-4 py-3 border-r border-white/10 last:border-0">
-                  <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-white/40">{h}</p>
+                  <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/60">{h}</p>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ export function WhitepaperContent() {
               )
             })}
           </div>
-          <p className="font-mono text-[9px] text-ag-gray-light mt-3 leading-relaxed">
+          <p className="font-mono text-[10px] text-ag-gray-light mt-3 leading-relaxed">
             Certification CIFSO 5000 is not an accreditation under a national or international
             accreditation body. It is an independent proprietary protocol. It does not replace
             existing certification standards and is designed to complement them.
@@ -368,7 +368,7 @@ export function WhitepaperContent() {
               >
                 <div>
                   <p className="font-mono text-[11px] font-bold text-ag-black">{tier.name}</p>
-                  <p className="font-mono text-[9px] text-ag-gray-light mt-0.5">{tier.duration}</p>
+                  <p className="font-mono text-[10px] text-ag-gray-light mt-0.5">{tier.duration}</p>
                 </div>
                 <div>
                   <p className="font-sans text-[11px] text-ag-gray">{tier.target}</p>
@@ -402,10 +402,10 @@ export function WhitepaperContent() {
         <footer className="mt-16 pt-6 border-t-2 border-ag-navy">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div>
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
                 Certification CIFSO 5000 v4.0 — Official Methodology
               </p>
-              <p className="font-mono text-[9px] text-ag-gray-light mt-0.5">
+              <p className="font-mono text-[10px] text-ag-gray-light mt-0.5">
                 Aegryn SA · Rue du Centre 142, 1025 Saint-Sulpice, Switzerland · CHE-402.011.821 TVA
               </p>
             </div>

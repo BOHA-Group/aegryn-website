@@ -125,12 +125,12 @@ export default async function TransactResultsPage() {
                     <div className="flex items-center gap-6 border-t border-ag-border/50 pt-4 mt-auto">
                       {r.process_duration_weeks && (
                         <div>
-                          <p className="font-sans text-[9px] uppercase tracking-[0.14em] text-ag-gray-light">Durée</p>
+                          <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">Durée</p>
                           <p className="font-sans font-semibold text-ag-black text-[12px]">{r.process_duration_weeks} sem.</p>
                         </div>
                       )}
                       <div>
-                        <p className="font-sans text-[9px] uppercase tracking-[0.14em] text-ag-gray-light">Closé</p>
+                        <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">Closé</p>
                         <p className="font-sans font-semibold text-ag-black text-[12px]">
                           {new Date(r.closed_at).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
                         </p>

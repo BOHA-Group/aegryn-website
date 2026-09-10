@@ -51,7 +51,7 @@ export function BuildEngineeringStrip() {
 
           {/* Left — label + title */}
           <div className="flex-1 flex flex-col gap-3">
-            <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light">
               {t('label')}
             </p>
             <p className="beg-title font-sans font-bold text-ag-black text-[18px] md:text-[22px] tracking-[-0.02em] leading-snug">
@@ -64,7 +64,7 @@ export function BuildEngineeringStrip() {
             {chips.map((chip) => (
               <span
                 key={chip}
-                className="beg-chip font-mono text-[9px] tracking-[0.14em] uppercase border border-ag-border bg-ag-white text-ag-gray px-3 py-1.5"
+                className="beg-chip font-mono text-[10px] tracking-[0.14em] uppercase border border-ag-border bg-ag-white text-ag-gray px-3 py-1.5"
               >
                 {chip}
               </span>

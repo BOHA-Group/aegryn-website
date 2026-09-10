@@ -84,7 +84,7 @@ export default async function TransactionSessionPage({ params }: Props) {
             {/* Détails */}
             <div className="flex-1 py-8 pr-8 pl-6 md:pl-0 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
-                <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
+                <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink mb-2">
                   {t('sessionCardKicker')} — {t('sessionCardCategory')}
                 </p>
                 <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] leading-snug mb-3">

@@ -65,7 +65,7 @@ export function GradePricing() {
               {/* Tier name */}
               <div className="mb-6">
                 {tier.highlight && (
-                  <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex mb-2">
+                  <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">
                     Most common
                   </p>
                 )}
@@ -97,7 +97,7 @@ export function GradePricing() {
                 </p>
                 <p
                   className={`font-mono text-[10px] tracking-[0.12em] ${
-                    tier.highlight ? 'text-white/40' : 'text-ag-gray-light'
+                    tier.highlight ? 'text-white/60' : 'text-ag-gray-light'
                   }`}
                 >
                   {tier.duration}

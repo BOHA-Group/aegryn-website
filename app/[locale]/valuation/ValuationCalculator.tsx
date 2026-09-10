@@ -242,7 +242,7 @@ export default function ValuationCalculator() {
                       :                    'border-ag-border'
                     }`}
                   >
-                    <span className={`font-mono text-[9px] font-bold tracking-[0.12em] shrink-0 ${
+                    <span className={`font-mono text-[10px] font-bold tracking-[0.12em] shrink-0 ${
                       i <= stepIdx ? 'text-ag-apex' : 'text-ag-gray-light'
                     }`}>
                       0{i + 1}
@@ -262,7 +262,7 @@ export default function ValuationCalculator() {
 
             {/* Market context */}
             <div className="border border-ag-border p-5 flex flex-col gap-3">
-              <p className="font-sans font-semibold text-[9px] uppercase tracking-[0.22em] text-ag-gray-light">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
                 {t('marketContext.label')}
               </p>
               {marketItems.map(({ value, label }) => (
@@ -558,12 +558,12 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
             <span className="font-sans font-bold text-[18px] leading-none text-ag-gray-light">N/G</span>
           ) : (
             <>
-              <span className="font-sans font-semibold text-[9px] tracking-[0.2em] opacity-60">AEG</span>
+              <span className="font-sans font-semibold text-[10px] tracking-[0.2em] opacity-60">AEG</span>
               <span className="font-sans font-bold text-[28px] leading-none">{grade.grade}</span>
             </>
           )}
           {grade.grade !== 'NG' && (
-            <span className="font-sans text-[8px] tracking-[0.1em] opacity-50 uppercase mt-0.5">{t('result.estimated')}</span>
+            <span className="font-sans text-[10px] tracking-[0.1em] opacity-50 uppercase mt-0.5">{t('result.estimated')}</span>
           )}
         </div>
         <div className="flex flex-col gap-2">

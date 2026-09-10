@@ -387,12 +387,12 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
                                   {(spec.cifs && spec.cifs.length > 0) || spec.regulatory ? (
                                     <div className="flex flex-wrap items-center gap-1 mt-2">
                                       {spec.cifs?.map(dim => (
-                                        <span key={dim} className="font-mono text-[9px] tracking-[0.1em] border border-ag-border px-1.5 py-0.5 text-ag-gray-light">
+                                        <span key={dim} className="font-mono text-[10px] tracking-[0.1em] border border-ag-border px-1.5 py-0.5 text-ag-gray-light">
                                           {dim}
                                         </span>
                                       ))}
                                       {spec.regulatory && (
-                                        <span className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-apex border border-ag-apex px-1.5 py-0.5">
+                                        <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-apex border border-ag-apex px-1.5 py-0.5">
                                           {ui.regulatory}
                                         </span>
                                       )}
@@ -430,7 +430,7 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
           {/* Banner max atteint */}
           {value.specialties.length >= MAX_SPECIALTIES && (
             <div className="mb-4 flex items-start gap-3 border border-amber-200 bg-amber-50 px-4 py-3">
-              <span className="font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-amber-100 text-amber-700 border border-amber-300 shrink-0 mt-0.5">
+              <span className="font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 bg-amber-100 text-amber-700 border border-amber-300 shrink-0 mt-0.5">
                 {value.specialties.length}/{MAX_SPECIALTIES}
               </span>
               <div>

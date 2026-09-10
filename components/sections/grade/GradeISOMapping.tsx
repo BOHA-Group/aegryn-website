@@ -70,17 +70,17 @@ export function GradeISOMapping() {
           {/* Column headers */}
           <div className="grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] bg-ag-navy">
             <div className="px-6 py-4">
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/40">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60">
                 Dimension CIFSO 5000
               </p>
             </div>
             <div className="px-6 py-4 border-l border-white/10">
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/40">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60">
                 Existing standards
               </p>
             </div>
             <div className="px-6 py-4 border-l border-white/10">
-              <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-apex/70">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex/70">
                 Certification CIFSO 5000
               </p>
             </div>
