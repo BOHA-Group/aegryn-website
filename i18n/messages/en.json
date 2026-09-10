@@ -5365,128 +5365,142 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Submit an asset | Aegryn Certification",
-      "desc": "Start the Aegryn certification process. Confidential pre-submission form. No commitment before agreement on methodology."
+      "title": "CIFSO 5000 Certification Request — Aegryn",
+      "desc": "Submit your CIFSO 5000 certification request. Confidential form. Response within 5 business days."
     },
     "hero": {
-      "label": "Aegryn GRADE, CERTIFICATION",
-      "title": "Start the certification\nprocess.",
-      "desc": "Every Aegryn certification process is unique because every asset is. This pre-submission form allows us to qualify your asset and propose a tailored roadmap. No commitment before agreement on methodology."
+      "label": "CIFSO 5000 Certification",
+      "title": "Request your\nCIFSO 5000 Certification.",
+      "desc": "The Aegryn certification process assesses your organisation across five independent dimensions. This pre-submission form allows us to qualify your file and propose the right pack."
     },
+    "sidebar": {
+      "cifsoDimsTitle": "The 5 dimensions assessed",
+      "cifsoDims": [
+        {
+          "code": "C",
+          "name": "Capital & Intellectual Property",
+          "color": "#2D5BE3"
+        },
+        {
+          "code": "I",
+          "name": "Integrity & Governance",
+          "color": "#7B3FC4"
+        },
+        {
+          "code": "F",
+          "name": "Finance & Metrics",
+          "color": "#1F9E6A"
+        },
+        {
+          "code": "S",
+          "name": "Security & Sovereignty",
+          "color": "#C0392B"
+        },
+        {
+          "code": "O",
+          "name": "Organisation & Talent",
+          "color": "#D68910"
+        }
+      ],
+      "mandateTitle": "Disposal mandate",
+      "mandateDesc": "If you are considering a disposal, a CIFSO 5000 certification will be systematically required before any listing or buyer access. This process is separate and independent from the Aegryn off-market catalogue."
+    },
+    "packs": [
+      {
+        "key": "express",
+        "name": "Express",
+        "price": "From €5,000",
+        "duration": "15 business days",
+        "target": "Organisations under 20 employees, single site",
+        "includes": [
+          "Full CIFSO 5000 audit across 5 dimensions",
+          "Independent certification report",
+          "Official grade (★ to B)",
+          "Registration in Aegryn certified register",
+          "Certificate validity: 12 months"
+        ]
+      },
+      {
+        "key": "standard",
+        "name": "Standard",
+        "price": "From €9,000",
+        "duration": "25 business days",
+        "target": "20–100 employees, one or two sites",
+        "includes": [
+          "Full CIFSO 5000 audit across 5 dimensions",
+          "Independent report with sub-codes",
+          "Official grade + improvement recommendations",
+          "Registration in Aegryn certified register",
+          "Certificate validity: 12 months",
+          "One review session included"
+        ]
+      },
+      {
+        "key": "premium",
+        "name": "Premium",
+        "price": "From €15,000",
+        "duration": "35 business days",
+        "target": "100+ employees or multi-site organisations",
+        "includes": [
+          "Extended CIFSO 5000 audit across 5 dimensions",
+          "Full report with sub-code table",
+          "Official grade + structured remediation roadmap",
+          "Registration in Aegryn certified register",
+          "Certificate validity: 18 months",
+          "Two review sessions included",
+          "Dedicated Aegryn contact throughout the process"
+        ]
+      }
+    ],
     "form": {
-      "title": "Your asset",
-      "assetName": "Asset name",
-      "assetType": "Asset type",
-      "assetTypePlaceholder": "Choose a type",
-      "assetTypeOptions": {
-        "saas": "B2B SaaS",
-        "mobile": "Mobile App",
-        "marketplace": "Marketplace",
-        "protocol": "Protocol",
-        "ip": "Pure IP",
-        "other": "Other"
+      "packTitle": "Choose your certification pack",
+      "orgTitle": "Your organisation",
+      "orgName": "Organisation name",
+      "orgSize": "Size (headcount)",
+      "orgSizePlaceholder": "Choose",
+      "orgSizeOptions": {
+        "1_10": "1 – 10 people",
+        "11_20": "11 – 20 people",
+        "21_100": "21 – 100 people",
+        "101_500": "101 – 500 people",
+        "500plus": "More than 500 people"
       },
-      "assetUrl": "URL or demo access (optional)",
-      "techStack": "Main stack (optional)",
-      "techStackPlaceholder": "e.g. Next.js, Supabase",
-      "status": "Asset status",
-      "statusPlaceholder": "Choose a status",
-      "statusOptions": {
-        "prod_revenue": "In production (revenue)",
-        "prod_no_revenue": "In production (no revenue)",
-        "beta": "Beta",
-        "prototype": "Prototype",
-        "ip_only": "IP and code only"
-      },
-      "arr": "Annual ARR (€, optional)",
-      "ipFiled": "IP filed?",
+      "orgSector": "Sector",
+      "orgSectorPlaceholder": "e.g. Finance, Healthcare, Industry…",
+      "orgCountry": "Country of registered office",
+      "orgWeb": "Website (optional)",
+      "ipFiled": "Intellectual property filed?",
       "ipYes": "Yes",
       "ipNo": "No",
       "ipPending": "Pending",
-      "motivation": "Certification objective",
-      "motivationPlaceholder": "Choose an objective",
-      "motivationOptions": {
-        "full_exit": "Full exit",
-        "partial_exit": "Partial exit",
-        "liquidity": "Partial liquidity",
-        "valuation": "Valuation only",
+      "objective": "Primary certification objective",
+      "objectivePlaceholder": "Choose",
+      "objectiveOptions": {
+        "financing": "Bank financing or debt",
+        "investment": "Fundraising or investor entry",
+        "succession": "Family succession or transfer",
+        "ma": "M&A or disposal",
+        "annual_report": "Annual report and investor communication",
         "other": "Other"
-      },
-      "targetValuation": "Target valuation (€, optional)",
-      "timeline": "Desired timeline",
-      "timelinePlaceholder": "Choose a timeline",
-      "timelineOptions": {
-        "urgent": "Urgent (< 3 months)",
-        "standard": "Standard (3–6 months)",
-        "long": "Long-term (6–12 months)",
-        "none": "No timeline"
       },
       "contactTitle": "Your contact details",
       "fullName": "First and last name",
+      "role": "Job title",
+      "rolePlaceholder": "e.g. CEO, CFO, Managing Director…",
       "email": "Professional email",
-      "company": "Company (optional)",
+      "phone": "Phone (optional)",
       "message": "Additional information (optional)",
-      "submit": "Send my file",
-      "submitting": "Sending...",
-      "successTitle": "File submitted.",
+      "cgvTitle": "Terms and confidentiality",
+      "cgvDesc": "Your request is subject to Aegryn's General Terms of Service. A non-disclosure agreement (NDA) will be sent before any sensitive data exchange. Certification fees are due upon receipt of invoice, after acceptance of the quote.",
+      "cgvCheckbox": "I accept Aegryn's General Terms of Service and consent to signing an NDA before any data exchange.",
+      "submit": "Submit my request",
+      "submitting": "Sending…",
+      "successTitle": "Request submitted.",
       "successDesc": "Your file has been submitted. Response within 5 business days. A confidential pre-screening will be proposed by email.",
       "errorMsg": "An error occurred. Please try again or contact us directly.",
-      "legalNote": "The financial terms of the certification are available in our General Terms of Service, shared at the first exchange. No commitment at this stage.",
-      "evalTypeTitle": "What level of evaluation do you need?",
-      "evalTypeFull": {
-        "label": "M&A Certification",
-        "desc": "Success-fee only. Full independent Aegryn protocol (4 C/I/F/S dimensions), included if the transaction completes via Aegryn.",
-        "price": "Free"
-      },
-      "evalTypeReview": {
-        "label": "Aegryn Review",
-        "desc": "Written opinion from an Aegryn analyst within 15 business days. No external partner review. Not publishable in the catalogue, no external validation.",
-        "price": "CHF 2,000 excl. VAT"
-      },
-      "evalTypeReviewPlus": {
-        "label": "Aegryn Review+",
-        "desc": "Written opinion + review by an external partner (of your choice) on request within 20 business days. Cross-referenced with our partners.",
-        "price": "CHF 5,000 excl. VAT"
-      },
-      "evalDeductibleNote": "This amount is fully deductible from the certification fee if you engage a full M&A process within 6 months of receiving your Review.",
-      "partnerSelectLabel": "External partner to involve",
-      "analysisDataTitle": "Data for analysis (Aegryn Grading System)",
-      "analysisDataDesc": "This information speeds up our internal analysis and market benchmarking of your asset. Optional but recommended.",
-      "sector": "Sector",
-      "sectorPlaceholder": "e.g. LegalTech, FinTech, HR & Payroll...",
-      "benchmarkCategory": "Closest market category",
-      "benchmarkCategoryPlaceholder": "Select",
-      "revenueTrackMonths": "Revenue track record (months)",
-      "teamSize": "Team size",
-      "foundedYear": "Year founded",
-      "arrGrowth": "ARR YoY growth (%)",
-      "grossMargin": "Gross margin (%)",
-      "nrr": "Net Revenue Retention, NRR (%)",
-      "cancelledNote": "Request cancelled. You may resubmit your application.",
-      "invoiceNote": "Request received, a quote will be sent to you. Pre-payment by invoice is required before analysis begins."
-    },
-    "gradeScale": [
-      {
-        "g": "AEG ★",
-        "d": "Top 1%, Exceptional"
-      },
-      {
-        "g": "AAA",
-        "d": "Excellent, Transaction-ready"
-      },
-      {
-        "g": "AA",
-        "d": "Very good, Confirmed valuation"
-      },
-      {
-        "g": "A",
-        "d": "Good, Identified potential"
-      },
-      {
-        "g": "B",
-        "d": "Correct, Remediation plan"
-      }
-    ]
+      "legalNote": "No commitment at this stage. Final financial terms are provided after pre-qualification.",
+      "cancelledNote": "Request cancelled. You may resubmit your application."
+    }
   },
   "bidModels": {
     "meta": {

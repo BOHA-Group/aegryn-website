@@ -5,43 +5,29 @@ import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
-import { EXPERTISE_TAXONOMY } from '@/lib/expertiseTaxonomy'
 
-type EvalType = 'review_internal' | 'review_partner' | 'full_certification'
+type PackKey = 'express' | 'standard' | 'premium'
 
 const IP_KEYS = ['yes', 'no', 'pending'] as const
 type IpKey = typeof IP_KEYS[number]
 
 export default function GradeSubmitForm() {
-  const t          = useTranslations('gradeSubmit')
-  const tNav       = useTranslations('nav')
-  const params     = useSearchParams()
+  const t      = useTranslations('gradeSubmit')
+  const tNav   = useTranslations('nav')
+  const params = useSearchParams()
 
-  const [evalType,       setEvalType]       = useState<EvalType>('full_certification')
-  const [partnerCatId,   setPartnerCatId]   = useState('')
-  const [partnerSpecId,  setPartnerSpecId]  = useState('')
-  const [partnerOther,   setPartnerOther]   = useState('')
-  const [sourceLeadId,   setSourceLeadId]   = useState<string | null>(null)
-
-  const partnerCat      = EXPERTISE_TAXONOMY.find(c => c.id === partnerCatId)
-  const partnerSpecList = partnerCat?.specialties ?? []
-
-  const [ipChoice, setIpChoice] = useState<IpKey | ''>('')
+  const [pack,      setPack]      = useState<PackKey>('standard')
+  const [ipChoice,  setIpChoice]  = useState<IpKey | ''>('')
   const [submitted, setSubmitted] = useState(false)
-  const [error, setError]         = useState(false)
-  const [loading, setLoading]     = useState(false)
-
-  /* ── Accord catalogue (full_certification uniquement) ── */
-  const [catalogueAgreed, setCatalogueAgreed] = useState(false)
-  const [feeAgreed, setFeeAgreed]             = useState(false)
+  const [error,     setError]     = useState(false)
+  const [loading,   setLoading]   = useState(false)
+  const [cgvAgreed, setCgvAgreed] = useState(false)
 
   useEffect(() => {
-    const suggested = params.get('suggested') as EvalType | null
-    const lead      = params.get('source_lead')
-    if (suggested && ['review_internal', 'review_partner', 'full_certification'].includes(suggested)) {
-      setEvalType(suggested)
+    const suggested = params.get('pack') as PackKey | null
+    if (suggested && ['express', 'standard', 'premium'].includes(suggested)) {
+      setPack(suggested)
     }
-    if (lead) setSourceLeadId(lead)
   }, [params])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -51,25 +37,21 @@ export default function GradeSubmitForm() {
     const data   = Object.fromEntries(new FormData(e.currentTarget))
     const locale = document.documentElement.lang || 'fr'
     const payload = {
-      fullName:        data.fullName,
-      email:           data.email,
-      company:         data.company        || undefined,
-      assetName:       data.assetName,
-      assetType:       data.assetType,
-      assetUrl:        data.assetUrl        || undefined,
-      techStack:       data.techStack       || undefined,
-      status:          data.status          || undefined,
-      arr:             data.arr              || undefined,
-      ipFiled:         data.ipFiled          || undefined,
-      motivation:      data.motivation       || undefined,
-      targetValuation: data.targetValuation  || undefined,
-      timeline:        data.timeline         || undefined,
-      message:         data.message          || undefined,
-      evaluationType:  evalType,
-      partnerCatId:    evalType === 'review_partner' ? (partnerCatId || undefined) : undefined,
-      partnerSpecId:   evalType === 'review_partner' ? (partnerSpecId || undefined) : undefined,
-      partnerOther:    evalType === 'review_partner' ? (partnerOther || undefined) : undefined,
-      sourceLeadId:    sourceLeadId ?? undefined,
+      fullName:    data.fullName,
+      email:       data.email,
+      company:     data.company     || undefined,
+      phone:       data.phone       || undefined,
+      role:        data.role        || undefined,
+      orgName:     data.orgName,
+      orgSize:     data.orgSize     || undefined,
+      orgSector:   data.orgSector   || undefined,
+      orgCountry:  data.orgCountry  || undefined,
+      orgWeb:      data.orgWeb      || undefined,
+      ipFiled:     data.ipFiled     || undefined,
+      objective:   data.objective   || undefined,
+      message:     data.message     || undefined,
+      pack,
+      cgvAgreed:   true,
       locale,
     }
     try {
@@ -79,24 +61,6 @@ export default function GradeSubmitForm() {
         body: JSON.stringify(payload),
       })
       if (!res.ok) { setError(true); return }
-
-      const json = await res.json().catch(() => ({}))
-      const assetId = json?.assetId ?? undefined
-
-      /* ── Demande catalogue pour full_certification avec accord ── */
-      if (evalType === 'full_certification' && catalogueAgreed && feeAgreed) {
-        await fetch('/api/grade/catalogue-request', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            assetId,
-            assetName:       String(data.assetName),
-            catalogueAgreed: true,
-            feeAgreed:       true,
-          }),
-        })
-      }
-
       setSubmitted(true)
     } catch {
       setError(true)
@@ -114,6 +78,8 @@ export default function GradeSubmitForm() {
     no:      t('form.ipNo'),
     pending: t('form.ipPending'),
   }
+
+  const packs = (t.raw('packs') as { key: PackKey; name: string; price: string; target: string; duration: string; includes: string[] }[])
 
   return (
     <main className="bg-ag-white">
@@ -141,25 +107,35 @@ export default function GradeSubmitForm() {
       <section className="py-20 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16">
 
-          {/* Left — grade scale reminder */}
-          <div className="flex flex-col gap-10">
-            <div className="border border-ag-border p-6 flex flex-col gap-3">
-              {(t.raw('gradeScale') as { g: string; d: string }[]).map(({ g, d }) => {
-                const colorMap: Record<string, string> = {
-                  'AEG ★': 'text-ag-apex',
-                  'AAA':   'text-ag-grade-aaa',
-                  'AA':    'text-ag-grade-aa',
-                  'A':     'text-ag-grade-a',
-                  'B':     'text-ag-gray-light',
-                }
-                return (
-                  <div key={g} className="flex items-center gap-4">
-                    <span className={`font-mono text-[11px] font-bold tracking-[0.08em] w-16 shrink-0 ${colorMap[g] ?? 'text-ag-gray'}`}>{g}</span>
-                    <span className="font-sans text-[12px] text-ag-gray">{d}</span>
+          {/* Left — CIFSO 5000 dimensions reminder */}
+          <div className="flex flex-col gap-8">
+
+            {/* CIFSO 5 dimensions */}
+            <div className="border border-ag-border p-6 flex flex-col gap-4">
+              <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
+                {t('sidebar.cifsoDimsTitle')}
+              </p>
+              <div className="flex flex-col gap-3">
+                {(t.raw('sidebar.cifsoDims') as { code: string; name: string; color: string }[]).map(({ code, name, color }) => (
+                  <div key={code} className="flex items-center gap-3">
+                    <span
+                      className="font-mono text-[12px] font-bold w-6 shrink-0"
+                      style={{ color }}
+                    >
+                      {code}
+                    </span>
+                    <span className="font-sans text-[12px] text-ag-gray leading-snug">{name}</span>
                   </div>
-                )
-              })}
+                ))}
+              </div>
             </div>
+
+            {/* Certification mandate note */}
+            <div className="border border-ag-border p-5 bg-ag-off-white flex flex-col gap-3">
+              <p className="font-sans font-bold text-ag-black text-[12px]">{t('sidebar.mandateTitle')}</p>
+              <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{t('sidebar.mandateDesc')}</p>
+            </div>
+
             <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-6">
               {t('form.legalNote')}
             </p>
@@ -190,164 +166,84 @@ export default function GradeSubmitForm() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
 
-              {/* ── Sélecteur palier d'évaluation ── */}
+              {/* ── Pack selector ── */}
               <div className="border border-ag-border p-6 flex flex-col gap-4">
                 <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-black">
-                  {t('form.evalTypeTitle')}
+                  {t('form.packTitle')}
                 </p>
                 <div className="flex flex-col gap-3">
-                  {([
-                    {
-                      key:   'full_certification' as EvalType,
-                      label: t('form.evalTypeFull.label'),
-                      desc:  t('form.evalTypeFull.desc'),
-                      price: t('form.evalTypeFull.price'),
-                    },
-                    {
-                      key:   'review_internal' as EvalType,
-                      label: t('form.evalTypeReview.label'),
-                      desc:  t('form.evalTypeReview.desc'),
-                      price: t('form.evalTypeReview.price'),
-                    },
-                    {
-                      key:   'review_partner' as EvalType,
-                      label: t('form.evalTypeReviewPlus.label'),
-                      desc:  t('form.evalTypeReviewPlus.desc'),
-                      price: t('form.evalTypeReviewPlus.price'),
-                    },
-                  ]).map(({ key, label, desc, price }) => (
+                  {packs.map(({ key, name, price, target, duration }) => (
                     <label
                       key={key}
                       className={`flex items-start gap-4 cursor-pointer border p-4 transition-colors ${
-                        evalType === key
+                        pack === key
                           ? 'border-ag-navy bg-ag-navy/5'
                           : 'border-ag-border hover:border-ag-black/30'
                       }`}
                     >
                       <input
-                        type="radio" name="evalType" value={key}
-                        checked={evalType === key}
-                        onChange={() => setEvalType(key)}
+                        type="radio" name="pack" value={key}
+                        checked={pack === key}
+                        onChange={() => setPack(key)}
                         className="mt-1 accent-ag-navy shrink-0"
                       />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-baseline gap-3 flex-wrap">
-                          <span className="font-sans font-bold text-ag-black text-[13px]">{label}</span>
-                          <span className="font-mono text-[11px] font-bold px-2 py-0.5" style={{ backgroundColor: '#5ADDA4', color: '#0A0F1E' }}>{price}</span>
+                          <span className="font-sans font-bold text-ag-black text-[13px]">{name}</span>
+                          <span className="font-mono text-[11px] font-bold px-2 py-0.5 bg-ag-navy/10 text-ag-navy">{price}</span>
                         </div>
-                        <p className="font-sans text-[12px] text-ag-gray mt-1 leading-relaxed">{desc}</p>
+                        <p className="font-sans text-[11px] text-ag-gray-light mt-0.5">{duration}</p>
+                        <p className="font-sans text-[12px] text-ag-gray mt-1 leading-relaxed">{target}</p>
                       </div>
                     </label>
                   ))}
                 </div>
+              </div>
 
-                {/* Note déductibilité */}
-                {(evalType === 'review_internal' || evalType === 'review_partner') && (
-                  <div className="flex flex-col gap-2">
-                    <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 text-[12px] text-emerald-800 font-sans leading-relaxed">
-                      {t('form.evalDeductibleNote')}
-                    </div>
-                    <div className="bg-ag-navy/5 border border-ag-navy/20 px-4 py-3 text-[12px] text-ag-navy font-sans leading-relaxed">
-                      {t('form.invoiceNote')}
-                    </div>
+              {/* ── Organisation ── */}
+              <div className="border-t border-ag-border pt-6 space-y-5">
+                <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
+                  {t('form.orgTitle')}
+                </p>
+                <div>
+                  <label className={labelCls}>{t('form.orgName')}</label>
+                  <input name="orgName" type="text" required className={inputCls} />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className={labelCls}>{t('form.orgSize')}</label>
+                    <select name="orgSize" required className={selectCls}>
+                      <option value="">{t('form.orgSizePlaceholder')}</option>
+                      {(['1_10','11_20','21_100','101_500','500plus'] as const).map(k => (
+                        <option key={k} value={k}>{t(`form.orgSizeOptions.${k}`)}</option>
+                      ))}
+                    </select>
                   </div>
-                )}
-
-                {/* Sélecteur partenaire (Review+ seulement) — taxonomie cascadée */}
-                {evalType === 'review_partner' && (
-                  <div className="mt-1 flex flex-col gap-3">
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
-                      {t('form.partnerSelectLabel')}
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <select
-                        className={selectCls}
-                        value={partnerCatId}
-                        onChange={e => { setPartnerCatId(e.target.value); setPartnerSpecId('') }}
-                      >
-                        <option value="">— Catégorie / domaine —</option>
-                        {EXPERTISE_TAXONOMY.map(cat => (
-                          <option key={cat.id} value={cat.id}>{cat.labelFr}</option>
-                        ))}
-                      </select>
-                      <select
-                        className={selectCls}
-                        value={partnerSpecId}
-                        onChange={e => setPartnerSpecId(e.target.value)}
-                        disabled={partnerSpecList.length === 0}
-                      >
-                        <option value="">{partnerCatId ? '— Expertise —' : '— Choisir une catégorie d\'abord —'}</option>
-                        {partnerSpecList.map(s => (
-                          <option key={s.id} value={s.id}>{s.labelFr}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <input
-                      type="text"
-                      className={inputCls}
-                      value={partnerOther}
-                      onChange={e => setPartnerOther(e.target.value)}
-                      placeholder="Autre / précision libre (optionnel)"
-                    />
+                  <div>
+                    <label className={labelCls}>{t('form.orgSector')}</label>
+                    <input name="orgSector" type="text" placeholder={t('form.orgSectorPlaceholder')} className={inputCls} />
                   </div>
-                )}
-              </div>
-
-              {/* Asset name + type */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>{t('form.assetName')}</label>
-                  <input name="assetName" type="text" required className={inputCls} />
                 </div>
-                <div>
-                  <label className={labelCls}>{t('form.assetType')}</label>
-                  <select name="assetType" required className={selectCls}>
-                    <option value="">{t('form.assetTypePlaceholder')}</option>
-                    {(['saas','mobile','marketplace','protocol','ip','other'] as const).map(k => (
-                      <option key={k} value={k}>{t(`form.assetTypeOptions.${k}`)}</option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className={labelCls}>{t('form.orgCountry')}</label>
+                    <input name="orgCountry" type="text" className={inputCls} />
+                  </div>
+                  <div>
+                    <label className={labelCls}>{t('form.orgWeb')}</label>
+                    <input name="orgWeb" type="url" className={inputCls} />
+                  </div>
                 </div>
               </div>
 
-              {/* URL + Stack */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>{t('form.assetUrl')}</label>
-                  <input name="assetUrl" type="url" className={inputCls} />
-                </div>
-                <div>
-                  <label className={labelCls}>{t('form.techStack')}</label>
-                  <input name="techStack" type="text" placeholder={t('form.techStackPlaceholder')} className={inputCls} />
-                </div>
-              </div>
-
-              {/* Status + ARR */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>{t('form.status')}</label>
-                  <select name="status" required className={selectCls}>
-                    <option value="">{t('form.statusPlaceholder')}</option>
-                    {(['prod_revenue','prod_no_revenue','beta','prototype','ip_only'] as const).map(k => (
-                      <option key={k} value={k}>{t(`form.statusOptions.${k}`)}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className={labelCls}>{t('form.arr')}</label>
-                  <input name="arr" type="number" min="0" className={inputCls} />
-                </div>
-              </div>
-
-
-              {/* IP filed */}
+              {/* ── IP ── */}
               <div>
                 <p className={labelCls}>{t('form.ipFiled')}</p>
                 <div className="flex gap-6 mt-1">
                   {IP_KEYS.map(v => (
                     <label key={v} className="flex items-center gap-2 cursor-pointer">
                       <input
-                        type="radio" name="ipFiled" value={v} required
+                        type="radio" name="ipFiled" value={v}
                         checked={ipChoice === v}
                         onChange={() => setIpChoice(v)}
                         className="accent-ag-navy"
@@ -358,35 +254,18 @@ export default function GradeSubmitForm() {
                 </div>
               </div>
 
-              {/* Motivation + valuation */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>{t('form.motivation')}</label>
-                  <select name="motivation" required className={selectCls}>
-                    <option value="">{t('form.motivationPlaceholder')}</option>
-                    {(['full_exit','partial_exit','liquidity','valuation','other'] as const).map(k => (
-                      <option key={k} value={k}>{t(`form.motivationOptions.${k}`)}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className={labelCls}>{t('form.targetValuation')}</label>
-                  <input name="targetValuation" type="number" min="0" className={inputCls} />
-                </div>
-              </div>
-
-              {/* Timeline */}
+              {/* ── Objective ── */}
               <div>
-                <label className={labelCls}>{t('form.timeline')}</label>
-                <select name="timeline" required className={selectCls}>
-                  <option value="">{t('form.timelinePlaceholder')}</option>
-                  {(['urgent','standard','long','none'] as const).map(k => (
-                    <option key={k} value={k}>{t(`form.timelineOptions.${k}`)}</option>
+                <label className={labelCls}>{t('form.objective')}</label>
+                <select name="objective" required className={selectCls}>
+                  <option value="">{t('form.objectivePlaceholder')}</option>
+                  {(['financing','investment','succession','ma','annual_report','other'] as const).map(k => (
+                    <option key={k} value={k}>{t(`form.objectiveOptions.${k}`)}</option>
                   ))}
                 </select>
               </div>
 
-              {/* Contact */}
+              {/* ── Contact ── */}
               <div className="border-t border-ag-border pt-6 space-y-5">
                 <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
                   {t('form.contactTitle')}
@@ -397,13 +276,19 @@ export default function GradeSubmitForm() {
                     <input name="fullName" type="text" required className={inputCls} />
                   </div>
                   <div>
+                    <label className={labelCls}>{t('form.role')}</label>
+                    <input name="role" type="text" placeholder={t('form.rolePlaceholder')} className={inputCls} />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
                     <label className={labelCls}>{t('form.email')}</label>
                     <input name="email" type="email" required className={inputCls} />
                   </div>
-                </div>
-                <div>
-                  <label className={labelCls}>{t('form.company')}</label>
-                  <input name="company" type="text" className={inputCls} />
+                  <div>
+                    <label className={labelCls}>{t('form.phone')}</label>
+                    <input name="phone" type="tel" className={inputCls} />
+                  </div>
                 </div>
                 <div>
                   <label className={labelCls}>{t('form.message')}</label>
@@ -411,47 +296,25 @@ export default function GradeSubmitForm() {
                 </div>
               </div>
 
-              {/* ── Accord mise au catalogue (full_certification uniquement) ── */}
-              {evalType === 'full_certification' && (
-                <div className="border border-ag-navy/30 bg-ag-navy/5 p-6 flex flex-col gap-4">
-                  <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
-                    Accord de mise au catalogue Aegryn
-                  </p>
-                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                    La <strong>Certification Transaction</strong> inclut la mise au catalogue d&apos;Aegryn et l&apos;ouverture aux acquéreurs membres qualifiés. Votre actif sera préparé à <strong>J+15</strong> après admission et visible aux acquéreurs à <strong>J+45 minimum</strong>.
-                  </p>
-                  <div className="bg-amber-50 border border-amber-200 px-4 py-3 text-[12px] text-amber-800 font-sans leading-relaxed">
-                    <strong>Frais de publication : CHF 2 000 HT</strong> — Cet acompte est déduit de la commission Aegryn en cas de vente. Il est conservé par Aegryn si aucune transaction n&apos;est réalisée (cf. CGV § 11 et NDA signé). Une facture sera émise après validation de votre dossier par notre équipe.
-                  </div>
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={catalogueAgreed}
-                      onChange={e => setCatalogueAgreed(e.target.checked)}
-                      className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
-                    />
-                    <span className="font-sans text-[13px] text-ag-black leading-snug">
-                      J&apos;accepte la mise au catalogue Aegryn et les conditions contractuelles associées (NDA, CGV, délais de 45 jours minimum).
-                    </span>
-                  </label>
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={feeAgreed}
-                      onChange={e => setFeeAgreed(e.target.checked)}
-                      className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
-                    />
-                    <span className="font-sans text-[13px] text-ag-black leading-snug">
-                      J&apos;accepte le versement des frais de publication de <strong>CHF 2 000 HT</strong> sur présentation de facture, déductibles de la commission en cas de vente.
-                    </span>
-                  </label>
-                  {evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed) && (
-                    <p className="font-sans text-[11px] text-amber-700">
-                      Les deux cases doivent être cochées pour soumettre une demande de Certification Transaction.
-                    </p>
-                  )}
-                </div>
-              )}
+              {/* ── CGV + NDA acceptance ── */}
+              <div className="border border-ag-border p-5 bg-ag-off-white flex flex-col gap-4">
+                <p className="font-sans font-bold text-ag-black text-[12px]">{t('form.cgvTitle')}</p>
+                <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                  {t('form.cgvDesc')}
+                </p>
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={cgvAgreed}
+                    onChange={e => setCgvAgreed(e.target.checked)}
+                    required
+                    className="mt-0.5 accent-ag-navy shrink-0 w-4 h-4"
+                  />
+                  <span className="font-sans text-[13px] text-ag-black leading-snug">
+                    {t('form.cgvCheckbox')}
+                  </span>
+                </label>
+              </div>
 
               {error && (
                 <p className="font-sans text-[12px] text-red-600">{t('form.errorMsg')}</p>
@@ -459,7 +322,7 @@ export default function GradeSubmitForm() {
 
               <button
                 type="submit"
-                disabled={loading || (evalType === 'full_certification' && (!catalogueAgreed || !feeAgreed))}
+                disabled={loading || !cgvAgreed}
                 className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? t('form.submitting') : t('form.submit')}

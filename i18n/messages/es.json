@@ -3056,7 +3056,7 @@
       "isoStatement": "CIFSO 5000 complementa los estándares existentes. No los reemplaza.",
       "isoRows": [
         {
-          "dimension": "C · Capital & propiedad intelectual",
+          "dimension": "C · Capital & Propiedad intelectual",
           "existing": "Ningún estándar existente cubre la cadena de titularidad de la propiedad intelectual a nivel de transacción. Ni ISO 27001 ni SOC 2 atestiguan los derechos de propiedad IP.",
           "cifso": "Certifica la titularidad del código, la cadena de transferencia de propiedad intelectual, el estado de marcas y patentes, el cumplimiento de código abierto y las cesiones de derechos de los fundadores."
         },
@@ -3100,7 +3100,7 @@
             "Inscripción en el registro certificado Aegryn",
             "Validez del certificado: 12 meses"
           ],
-          "price": "From €5,000"
+          "price": "Desde 5.000 €"
         },
         {
           "name": "Standard",
@@ -3115,7 +3115,7 @@
             "Validez del certificado: 12 meses",
             "Una sesión de revisión incluida"
           ],
-          "price": "From €9,000"
+          "price": "Desde 9.000 €"
         },
         {
           "name": "Premium",
@@ -3131,7 +3131,7 @@
             "Dos sesiones de revisión incluidas",
             "Interlocutor dedicado de Aegryn durante todo el proceso"
           ],
-          "price": "From €15,000"
+          "price": "Desde 15.000 €"
         }
       ],
       "whitepaperLabel": "Documentación oficial",
@@ -5369,131 +5369,142 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Enviar un activo, Certificación Aegryn",
-      "desc": "Inicia el proceso de certificación Aegryn. Formulario de preenvío confidencial. Sin compromiso antes del acuerdo sobre la metodología."
+      "title": "Solicitud de Certificación CIFSO 5000 — Aegryn",
+      "desc": "Envíe su solicitud de certificación CIFSO 5000. Formulario confidencial. Respuesta en 5 días hábiles."
     },
     "hero": {
-      "label": "Aegryn GRADE, CERTIFICACIÓN",
-      "title": "Iniciar el proceso\nde certificación.",
-      "desc": "Cada proceso de certificación Aegryn es único porque cada activo lo es. Este formulario de preenvío nos permite calificar su activo y proponer una hoja de ruta adaptada. Sin compromiso antes del acuerdo sobre la metodología."
+      "label": "Certificación CIFSO 5000",
+      "title": "Solicite su\nCertificación CIFSO 5000.",
+      "desc": "El proceso de certificación Aegryn evalúa su organización en cinco dimensiones independientes. Este formulario de pre-envío nos permite calificar su expediente y proponer el paquete adecuado."
     },
+    "sidebar": {
+      "cifsoDimsTitle": "Las 5 dimensiones evaluadas",
+      "cifsoDims": [
+        {
+          "code": "C",
+          "name": "Capital & Propiedad intelectual",
+          "color": "#2D5BE3"
+        },
+        {
+          "code": "I",
+          "name": "Integridad & Gobernanza",
+          "color": "#7B3FC4"
+        },
+        {
+          "code": "F",
+          "name": "Finanzas & Métricas",
+          "color": "#1F9E6A"
+        },
+        {
+          "code": "S",
+          "name": "Seguridad & Soberanía",
+          "color": "#C0392B"
+        },
+        {
+          "code": "O",
+          "name": "Organización & Talento",
+          "color": "#D68910"
+        }
+      ],
+      "mandateTitle": "Mandato de cesión",
+      "mandateDesc": "Si prevé una cesión, se requerirá sistemáticamente una certificación CIFSO 5000 antes de cualquier incorporación al catálogo o acceso a compradores. Este proceso es independiente del catálogo offmarket Aegryn."
+    },
+    "packs": [
+      {
+        "key": "express",
+        "name": "Express",
+        "price": "Desde 5.000 €",
+        "duration": "15 días hábiles",
+        "target": "Organizaciones de menos de 20 empleados, sede única",
+        "includes": [
+          "Auditoría CIFSO 5000 completa en 5 dimensiones",
+          "Informe de certificación independiente",
+          "Calificación oficial (★ a B)",
+          "Inscripción en el registro certificado Aegryn",
+          "Validez del certificado: 12 meses"
+        ]
+      },
+      {
+        "key": "standard",
+        "name": "Standard",
+        "price": "Desde 9.000 €",
+        "duration": "25 días hábiles",
+        "target": "De 20 a 100 empleados, una o dos sedes",
+        "includes": [
+          "Auditoría CIFSO 5000 completa en 5 dimensiones",
+          "Informe independiente con sub-códigos",
+          "Calificación oficial + recomendaciones de mejora",
+          "Inscripción en el registro certificado Aegryn",
+          "Validez del certificado: 12 meses",
+          "Una sesión de revisión incluida"
+        ]
+      },
+      {
+        "key": "premium",
+        "name": "Premium",
+        "price": "Desde 15.000 €",
+        "duration": "35 días hábiles",
+        "target": "Más de 100 empleados u organización multisede",
+        "includes": [
+          "Auditoría CIFSO 5000 extendida en 5 dimensiones",
+          "Informe completo con tabla de sub-códigos",
+          "Calificación oficial + hoja de ruta de remediación estructurada",
+          "Inscripción en el registro certificado Aegryn",
+          "Validez del certificado: 18 meses",
+          "Dos sesiones de revisión incluidas",
+          "Interlocutor dedicado Aegryn durante todo el proceso"
+        ]
+      }
+    ],
     "form": {
-      "title": "Su activo",
-      "assetName": "Nombre del activo",
-      "assetType": "Tipo de activo",
-      "assetTypePlaceholder": "Elegir un tipo",
-      "assetTypeOptions": {
-        "saas": "SaaS B2B",
-        "mobile": "App móvil",
-        "marketplace": "Marketplace",
-        "protocol": "Protocolo",
-        "ip": "IP pura",
-        "other": "Otro"
+      "packTitle": "Elija su paquete de certificación",
+      "orgTitle": "Su organización",
+      "orgName": "Nombre de la organización",
+      "orgSize": "Tamaño (plantilla)",
+      "orgSizePlaceholder": "Elegir",
+      "orgSizeOptions": {
+        "1_10": "1 – 10 personas",
+        "11_20": "11 – 20 personas",
+        "21_100": "21 – 100 personas",
+        "101_500": "101 – 500 personas",
+        "500plus": "Más de 500 personas"
       },
-      "assetUrl": "URL o acceso demo (opcional)",
-      "techStack": "Stack principal (opcional)",
-      "techStackPlaceholder": "ej. Next.js, Supabase",
-      "status": "Estado del activo",
-      "statusPlaceholder": "Elegir un estado",
-      "statusOptions": {
-        "prod_revenue": "En producción (ingresos)",
-        "prod_no_revenue": "En producción (sin ingresos)",
-        "beta": "Beta",
-        "prototype": "Prototipo",
-        "ip_only": "Solo IP y código"
-      },
-      "arr": "ARR anual (€, opcional)",
-      "ipFiled": "¿IP registrada?",
+      "orgSector": "Sector de actividad",
+      "orgSectorPlaceholder": "ej. Finanzas, Salud, Industria…",
+      "orgCountry": "País de la sede social",
+      "orgWeb": "Sitio web (opcional)",
+      "ipFiled": "¿Propiedad intelectual registrada?",
       "ipYes": "Sí",
       "ipNo": "No",
-      "ipPending": "En trámite",
-      "motivation": "Objetivo de la certificación",
-      "motivationPlaceholder": "Elegir un objetivo",
-      "motivationOptions": {
-        "full_exit": "Exit total",
-        "partial_exit": "Exit parcial",
-        "liquidity": "Liquidez parcial",
-        "valuation": "Solo valoración",
+      "ipPending": "Pendiente",
+      "objective": "Objetivo principal de la certificación",
+      "objectivePlaceholder": "Elegir",
+      "objectiveOptions": {
+        "financing": "Financiación bancaria o deuda",
+        "investment": "Captación de fondos o entrada de inversor",
+        "succession": "Sucesión familiar o transmisión",
+        "ma": "M&A o cesión",
+        "annual_report": "Informe anual y comunicación a inversores",
         "other": "Otro"
-      },
-      "targetValuation": "Valoración objetivo (€, opcional)",
-      "timeline": "Plazo deseado",
-      "timelinePlaceholder": "Elegir un plazo",
-      "timelineOptions": {
-        "urgent": "Urgente (< 3 meses)",
-        "standard": "Estándar (3–6 meses)",
-        "long": "Largo plazo (6–12 meses)",
-        "none": "Sin plazo"
       },
       "contactTitle": "Sus datos de contacto",
       "fullName": "Nombre y apellidos",
-      "email": "Email profesional",
-      "company": "Empresa (opcional)",
+      "role": "Cargo",
+      "rolePlaceholder": "ej. CEO, CFO, Director General…",
+      "email": "Correo profesional",
+      "phone": "Teléfono (opcional)",
       "message": "Información adicional (opcional)",
-      "submit": "Enviar mi expediente",
-      "submitting": "Enviando...",
-      "successTitle": "Expediente enviado.",
-      "successDesc": "Su expediente ha sido enviado. Respuesta en 5 días hábiles. Se le propondrá un preexamen confidencial por email.",
-      "errorMsg": "Se ha producido un error. Inténtelo de nuevo o contáctenos directamente.",
-      "legalNote": "Las condiciones financieras de la certificación están disponibles en nuestras Condiciones Generales de Servicios, transmitidas en el primer intercambio. Sin compromiso en esta etapa.",
-      "evalTypeTitle": "¿Qué nivel de evaluación necesita?",
-      "evalTypeFull": {
-        "label": "Certificación Transaction",
-        "desc": "Solo honorarios de éxito. Proceso completo por protocolo independiente Aegryn (4 dimensiones C/I/F/S), incluido si la transacción se realiza vía Aegryn.",
-        "price": "Gratuito"
-      },
-      "evalTypeReview": {
-        "label": "Aegryn Review",
-        "desc": "Opinión escrita de un analista Aegryn en 15 días hábiles. Sin revisión de socio externo. No publicable en el catálogo, sin validación externa.",
-        "price": "2.000 CHF sin IVA"
-      },
-      "evalTypeReviewPlus": {
-        "label": "Aegryn Review+",
-        "desc": "Opinión escrita + revisión por un socio externo (bufete jurídico o contador) a petición en 20 días hábiles. Referencia cruzada con nuestros socios Alliance.",
-        "price": "5.000 CHF sin IVA"
-      },
-      "evalDeductibleNote": "Este importe es íntegramente deducible del costo de certificación si inicia un proceso completo de Transaction en los 6 meses siguientes a la recepción de su Review.",
-      "partnerSelectLabel": "Socio a involucrar",
-      "partnerLegal": "Bufete jurídico",
-      "partnerAccounting": "Contador público",
-      "analysisDataTitle": "Datos para el análisis (Sistema de Certificación Aegryn)",
-      "analysisDataDesc": "Esta información acelera nuestro análisis interno y la comparación de mercado de su activo. Opcional pero recomendado.",
-      "sector": "Sector",
-      "sectorPlaceholder": "ej: LegalTech, FinTech, RRHH y Nómina...",
-      "benchmarkCategory": "Categoría de mercado más cercana",
-      "benchmarkCategoryPlaceholder": "Seleccionar",
-      "revenueTrackMonths": "Antigüedad de los ingresos (meses)",
-      "teamSize": "Tamaño del equipo",
-      "foundedYear": "Año de fundación",
-      "arrGrowth": "Crecimiento ARR interanual (%)",
-      "grossMargin": "Margen bruto (%)",
-      "nrr": "Net Revenue Retention, NRR (%)",
-      "partnerCyber": "Firma de ciberseguridad",
-      "cancelledNote": "Solicitud cancelada. Puede volver a enviar su solicitud.",
-      "invoiceNote": "Solicitud recibida, se le enviará un presupuesto. El prepago por factura es necesario antes del inicio del análisis."
-    },
-    "gradeScale": [
-      {
-        "g": "AEG ★",
-        "d": "Top 1 %, Excepcional"
-      },
-      {
-        "g": "AAA",
-        "d": "Excelente, Listo para transacción"
-      },
-      {
-        "g": "AA",
-        "d": "Muy bueno, Valoración confirmada"
-      },
-      {
-        "g": "A",
-        "d": "Bueno, Potencial identificado"
-      },
-      {
-        "g": "B",
-        "d": "Correcto, Plan de remediación"
-      }
-    ]
+      "cgvTitle": "Condiciones y confidencialidad",
+      "cgvDesc": "Su solicitud está sujeta a las Condiciones Generales de Servicio de Aegryn. Se transmitirá un acuerdo de confidencialidad (NDA) antes de cualquier intercambio de datos sensibles. Los gastos de certificación son exigibles a la recepción de la factura, tras la aceptación del presupuesto.",
+      "cgvCheckbox": "Acepto las Condiciones Generales de Servicio de Aegryn y consiento la firma de un NDA antes de cualquier intercambio de datos.",
+      "submit": "Enviar mi solicitud",
+      "submitting": "Enviando…",
+      "successTitle": "Solicitud enviada.",
+      "successDesc": "Su expediente ha sido transmitido. Respuesta en 5 días hábiles. Se le propondrá una preselección confidencial por correo electrónico.",
+      "errorMsg": "Se ha producido un error. Por favor, inténtelo de nuevo o contáctenos directamente.",
+      "legalNote": "Sin compromiso en esta fase. Las condiciones financieras definitivas se transmiten tras la precalificación.",
+      "cancelledNote": "Solicitud cancelada. Puede enviar de nuevo su solicitud."
+    }
   },
   "bidModels": {
     "meta": {
