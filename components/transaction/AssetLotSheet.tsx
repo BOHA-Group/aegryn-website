@@ -98,7 +98,7 @@ function Bullet({ label, children }: { label?: string; children: React.ReactNode
 
 function SpecTable({ rows }: { rows: [string, string][] }) {
   return (
-    <div className="mb-5 overflow-hidden rounded-sm border" style={{ borderColor: T.line }}>
+    <div className="mb-5 overflow-hidden rounded-md border" style={{ borderColor: T.line }}>
       {rows.map(([label, value], i) => (
         <div key={label} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[200px_1fr] gap-2 px-4 py-3 border-b last:border-b-0"
           style={{ backgroundColor: i % 2 === 0 ? T.paper : '#FFFFFF', borderColor: T.line }}>
@@ -137,7 +137,7 @@ function StatBlock({ stats }: { stats: HeroStat[] }) {
 function GradeBadge({ grade, label }: { grade: string; label: string }) {
   const color = GRADE_COLORS[grade] ?? T.gold
   return (
-    <div className="flex border rounded-sm overflow-hidden" style={{ borderColor: T.line }}>
+    <div className="flex border rounded-md overflow-hidden" style={{ borderColor: T.line }}>
       <div className="flex items-center justify-center w-28 sm:w-32 shrink-0 py-6"
         style={{ backgroundColor: color }}>
         <span className="text-[44px] font-bold text-white" style={{ fontFamily: 'Georgia, serif' }}>
@@ -160,7 +160,7 @@ function GradeBadge({ grade, label }: { grade: string; label: string }) {
 
 function SummaryBox({ items }: { items: SummaryItem[] }) {
   return (
-    <div className="mb-2 overflow-hidden rounded-sm border" style={{ borderColor: T.line }}>
+    <div className="mb-2 overflow-hidden rounded-md border" style={{ borderColor: T.line }}>
       {items.map((it, i) => (
         <div key={it.label}
           className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-1 sm:gap-3 px-4 py-3 border-b last:border-b-0"
@@ -182,7 +182,7 @@ function TargetGrid({ targets }: { targets: TargetItem[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
       {targets.map((tgt) => (
-        <div key={tgt.title} className="p-4 rounded-sm border"
+        <div key={tgt.title} className="p-4 rounded-md border"
           style={{ backgroundColor: T.paper, borderColor: T.line }}>
           <p className="text-[11px] font-bold uppercase mb-1"
             style={{ color: T.gold, letterSpacing: '0.06em', fontFamily: 'Arial, sans-serif' }}>

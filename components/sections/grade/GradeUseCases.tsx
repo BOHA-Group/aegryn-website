@@ -115,7 +115,7 @@ export function GradeUseCases() {
         </div>
 
         {/* Use cases */}
-        <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+        <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
           {cases.map((uc, idx) => {
             const meta = UC_META[idx]
             return (
@@ -163,7 +163,7 @@ export function GradeUseCases() {
                     </div>
 
                     {/* Signal */}
-                    <div className="inline-block bg-ag-navy px-4 py-2.5 rounded-sm">
+                    <div className="inline-block bg-ag-navy px-4 py-2.5 rounded-md">
                       <p className="font-mono text-[10px] leading-relaxed text-ag-apex/80">
                         {uc.signal}
                       </p>

@@ -41,7 +41,7 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
 
       {/* Top row: grade + lot ref */}
       <div className="flex items-start justify-between gap-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 border rounded-sm"
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 border rounded-md"
           style={{ backgroundColor: bg, color: text, borderColor: border }}>
           <span className="font-sans font-bold text-[18px] leading-none">{lot.grade?.letter || '—'}</span>
           {lot.grade?.label && (

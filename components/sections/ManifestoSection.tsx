@@ -184,7 +184,7 @@ export function ManifestoSection() {
                 <Link
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   href={((tA.raw('ctaHref') as string | undefined) ?? '/about') as any}
-                  className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3.5 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3.5 rounded-lg hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
                 >
                   {tA('cta')}
                   <span className="text-base leading-none">→</span>

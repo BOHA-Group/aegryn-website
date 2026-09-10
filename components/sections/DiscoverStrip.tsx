@@ -173,7 +173,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           </div>
           <Link
             href="/blog"
-            className="shrink-0 hidden md:inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
+            className="shrink-0 hidden md:inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
           >
             {articlesCta} <ArrowUpRight size={12} />
           </Link>
@@ -206,7 +206,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         <div className="mt-8 md:hidden">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
           >
             {articlesCta} <ArrowUpRight size={12} />
           </Link>

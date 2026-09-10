@@ -45,7 +45,7 @@ export function GradeProcess() {
         </div>
 
         {/* Steps — accordion on mobile, expanded list on desktop */}
-        <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+        <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
           {steps.map(({ num, title, desc, detail, data }, i) => (
             <div key={num} className="gprocess-step bg-ag-white">
 
@@ -100,7 +100,7 @@ export function GradeProcess() {
         </div>
 
         {/* Contestation note */}
-        <div className="mt-10 border border-ag-border p-6 bg-ag-off-white grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
+        <div className="mt-10 border border-ag-border rounded-2xl p-6 bg-ag-off-white grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
           <div>
             <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
               {t('contestLabel')}

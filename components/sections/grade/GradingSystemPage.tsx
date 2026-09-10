@@ -197,7 +197,7 @@ export function GradingSystemPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
             {cifs.map((dim) => (
               <div key={dim.code} className="cifs-card bg-ag-white p-10 flex flex-col gap-6">
                 {/* Header */}
@@ -258,7 +258,7 @@ export function GradingSystemPage() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+          <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
             {grades.map((g) => (
               <div
                 key={g.grade}
@@ -331,7 +331,7 @@ export function GradingSystemPage() {
             <p className="font-sans text-[15px] text-ag-gray mb-10 leading-relaxed max-w-lg">
               {t('subcodesDesc')}
             </p>
-            <div className="border border-ag-border">
+            <div className="border border-ag-border rounded-2xl">
               <div className="grid grid-cols-[56px_120px_1fr] border-b border-ag-border bg-ag-light-gray">
                 <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3">N°</p>
                 <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Label</p>
@@ -367,7 +367,7 @@ export function GradingSystemPage() {
               S2
             </div>
 
-            <div className="flex flex-col gap-0 border border-ag-border">
+            <div className="flex flex-col gap-0 border border-ag-border rounded-2xl overflow-hidden">
               {examples.map(({ part, meaning }) => (
                 <div
                   key={part}
@@ -407,7 +407,7 @@ export function GradingSystemPage() {
                 >
                   {/* Numéro cercle */}
                   <div className="relative shrink-0 z-10">
-                    <div className="w-14 h-14 bg-ag-white border border-ag-border flex items-center justify-center">
+                    <div className="w-14 h-14 bg-ag-white border border-ag-border flex items-center justify-center rounded-lg">
                       <span className="font-mono text-[13px] font-bold text-ag-black tracking-[0.06em]">
                         {step.num}
                       </span>
@@ -439,7 +439,7 @@ export function GradingSystemPage() {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-16">
             {t('principlesTitle')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
             {principles.map(({ title, desc }, i) => (
               <div key={title} className="bg-ag-white p-10 flex gap-6">
                 <div className="w-8 shrink-0 mt-0.5">
@@ -519,7 +519,7 @@ export function GradingSystemPage() {
               {t('refusalDesc')}
             </p>
           </div>
-          <div className="flex flex-col gap-0 border border-ag-border">
+          <div className="flex flex-col gap-0 border border-ag-border rounded-2xl overflow-hidden">
             {refusalConditions.map((cond, i) => (
               <div key={i} className="flex items-start gap-4 px-6 py-5 bg-ag-white border-b border-ag-border last:border-0">
                 <span className="font-mono text-[11px] font-bold text-red-600 shrink-0 mt-0.5">✕</span>
@@ -541,7 +541,7 @@ export function GradingSystemPage() {
               {t('maturityDesc')}
             </p>
           </div>
-          <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+          <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
             {maturityRules.map((m, i) => (
               <div key={i} className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-4 md:gap-8 bg-ag-white p-8">
                 <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">{m.tier}</p>
@@ -584,7 +584,7 @@ export function GradingSystemPage() {
             </Link>
             <Link
               href="/grade/partners"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all"
+              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all rounded-lg"
             >
               {t('ctaSecondary')}
             </Link>

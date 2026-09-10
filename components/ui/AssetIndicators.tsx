@@ -91,7 +91,7 @@ export function BadgePill({ badge }: { badge: string }) {
         return (
           <span
             key={part}
-            className={`inline-flex items-center border px-2 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase rounded-sm ${cls}`}
+            className={`inline-flex items-center border px-2 py-0.5 font-sans font-semibold text-[9px] tracking-[0.14em] uppercase rounded-md ${cls}`}
           >
             {part}
           </span>

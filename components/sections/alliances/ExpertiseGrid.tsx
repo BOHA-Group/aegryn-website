@@ -32,7 +32,7 @@ export default function ExpertiseGrid() {
         </div>
 
         {/* Grille */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
           {items.map((item, _idx) => {
             const originalIdx = items.findIndex(i => i.id === item.id)
             const Icon = ICONS[originalIdx] ?? Scale
@@ -64,7 +64,7 @@ export default function ExpertiseGrid() {
                   {item.tags.map(tag => (
                     <span
                       key={tag}
-                      className="font-sans text-[10px] tracking-[0.06em] text-ag-gray border border-ag-border px-2 py-0.5 group-hover:border-ag-apex/40 transition-colors"
+                      className="font-sans text-[10px] tracking-[0.06em] text-ag-gray border border-ag-border px-2 py-0.5 rounded-md group-hover:border-ag-apex/40 transition-colors"
                     >
                       {tag}
                     </span>

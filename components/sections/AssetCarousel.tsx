@@ -171,7 +171,7 @@ export function AssetCarousel() {
                 }}
               />
               <div className="flex justify-between items-start mb-auto relative z-10">
-                <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 group-hover:border-ag-apex group-hover:text-ag-apex transition-all duration-200">
+                <span className="font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-gray-light border border-ag-border px-2.5 py-1 rounded-md group-hover:border-ag-apex group-hover:text-ag-apex transition-all duration-200">
                   {tItems(`${asset.id}.badge`)}
                 </span>
                 <span className="w-8 h-8 border border-ag-border flex items-center justify-center text-ag-gray group-hover:border-ag-black group-hover:bg-ag-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">

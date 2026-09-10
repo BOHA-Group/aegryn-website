@@ -94,7 +94,7 @@ export function MagazineNav({
                   scrollTo(s.id)
                   if (hasArticles) setExpanded(isExpanded ? null : s.id)
                 }}
-                className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors rounded-sm group ${
+                className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors rounded-md group ${
                   isActive
                     ? 'text-magazine-black font-semibold border-l-2 border-magazine-accent -ml-[2px] pl-[14px]'
                     : 'text-magazine-black/55 hover:text-magazine-black'

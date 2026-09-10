@@ -221,7 +221,7 @@ export function WhitepaperContent() {
         {/* ─── 4. GRADE SCALE ─── */}
         <section className="wp-section">
           <h2 className="wp-section-title">4. Grade scale and definitions</h2>
-          <div className="border border-ag-border overflow-hidden">
+          <div className="border border-ag-border overflow-hidden rounded-2xl">
             <div className="grid grid-cols-[80px_120px_1fr] bg-ag-navy">
               {['Grade', 'Level', 'Meaning'].map((h) => (
                 <div key={h} className="px-4 py-3 border-r border-white/10 last:border-0">
@@ -253,7 +253,7 @@ export function WhitepaperContent() {
             standards, not to replace them. The table below positions each CIFSO dimension relative
             to what existing standards cover.
           </p>
-          <div className="border border-ag-border overflow-hidden mt-5">
+          <div className="border border-ag-border overflow-hidden rounded-2xl mt-5">
             <div className="grid grid-cols-[140px_1fr_1fr] bg-ag-navy">
               {['CIFSO dimension', 'Existing standards', 'CIFSO 5000 scope'].map((h) => (
                 <div key={h} className="px-4 py-3 border-r border-white/10 last:border-0">
@@ -364,7 +364,7 @@ export function WhitepaperContent() {
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className="grid grid-cols-[100px_1fr_120px] gap-4 border border-ag-border p-5 items-start"
+                className="grid grid-cols-[100px_1fr_120px] gap-4 border border-ag-border p-5 rounded-xl items-start"
               >
                 <div>
                   <p className="font-mono text-[11px] font-bold text-ag-black">{tier.name}</p>

@@ -143,14 +143,14 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
 
               {/* Badge + status */}
               <div className="flex items-center gap-3 flex-wrap">
-                <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1">
+                <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1 rounded-md">
                   {tItems(`${asset.id}.badge`)}
                 </span>
                 <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
                   {statusLabel(asset.status)}
                 </span>
                 {asset.internalOnly && (
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
                     {t('internalOnly')}
                   </span>
                 )}

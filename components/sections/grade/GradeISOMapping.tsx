@@ -65,7 +65,7 @@ export function GradeISOMapping() {
         </div>
 
         {/* Comparison table */}
-        <div className="border border-ag-border overflow-hidden">
+        <div className="border border-ag-border overflow-hidden rounded-2xl">
 
           {/* Column headers */}
           <div className="grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] bg-ag-navy">

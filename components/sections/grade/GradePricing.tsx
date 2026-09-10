@@ -54,7 +54,7 @@ export function GradePricing() {
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
           {tiers.map((tier) => (
             <div
               key={tier.name}
@@ -147,7 +147,7 @@ export function GradePricing() {
           </p>
           <Link
             href={`/${locale}/grade/grading-system`}
-            className="shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black border border-ag-border hover:border-ag-black px-5 py-3 transition-all"
+            className="shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black border border-ag-border hover:border-ag-black px-5 py-3 rounded-lg transition-all"
           >
             {t('pricingCtaSecondary')}
           </Link>

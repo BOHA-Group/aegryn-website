@@ -36,7 +36,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="inline-block text-[10px] font-bold uppercase px-2.5 py-1 rounded-sm mr-2 mb-2"
+      className="inline-block text-[10px] font-bold uppercase px-2.5 py-1 rounded-md mr-2 mb-2"
       style={{
         color:        T.gold,
         border:       `1px solid ${T.gold}`,
@@ -72,7 +72,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
 
   return (
     <div
-      className="w-full max-w-[640px] mx-auto rounded-sm overflow-hidden border"
+      className="w-full max-w-[640px] mx-auto rounded-md overflow-hidden border"
       style={{ borderColor: T.line, backgroundColor: '#FFFFFF' }}
     >
       {/* Confidentiality banner */}
@@ -136,7 +136,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
 
         {/* Stats grid */}
         <div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-5 py-6 px-1 mb-6 rounded-sm"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-5 py-6 px-1 mb-6 rounded-md"
           style={{ backgroundColor: T.paper }}
         >
           {stats.map((s) => (
@@ -146,7 +146,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
 
         {/* Investment note */}
         <div
-          className="px-5 py-4 mb-7 rounded-sm border-l-4"
+          className="px-5 py-4 mb-7 rounded-md border-l-4"
           style={{ borderColor: T.gold, backgroundColor: T.paper }}
         >
           <p
@@ -175,7 +175,7 @@ export default function AssetTeaserDocument({ teaser, assetId }: Props) {
         <button
           type="button"
           onClick={() => setShowModal(true)}
-          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-sm transition-opacity hover:opacity-90"
+          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-md transition-opacity hover:opacity-90"
           style={{ backgroundColor: T.ink }}
         >
           <span

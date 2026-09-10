@@ -213,7 +213,7 @@ export function ProprietaryAssetsGrid() {
                   {statusLabel(asset.status)}
                 </span>
                 {asset.internalOnly && (
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 flex items-center gap-1">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md flex items-center gap-1">
                     <Lock size={9} />
                     {t('internalOnly')}
                   </span>

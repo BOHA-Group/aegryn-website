@@ -95,7 +95,7 @@ export default function AcquisitionRoadmap({
                   </span>
                   <span className="flex-1 h-px bg-ag-border" />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
                   {groupItems.map(({ title: itemTitle, desc: itemDesc }) => (
                     <div
                       key={itemTitle}

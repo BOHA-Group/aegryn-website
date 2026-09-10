@@ -102,7 +102,7 @@ export function GradeAudienceTable() {
             return (
               <div
                 key={row.profile}
-                className="audience-card bg-white border border-ag-border flex flex-col"
+                className="audience-card bg-white border border-ag-border flex flex-col rounded-2xl overflow-hidden"
               >
                 {/* Card header */}
                 <div
@@ -169,7 +169,7 @@ export function GradeAudienceTable() {
             <span className="hidden group-open:inline">Collapse ↑</span>
           </summary>
 
-          <div className="mt-4 overflow-x-auto border border-ag-border">
+          <div className="mt-4 overflow-x-auto border border-ag-border rounded-2xl overflow-hidden">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-ag-navy">
