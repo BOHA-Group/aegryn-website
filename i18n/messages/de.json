@@ -284,8 +284,8 @@
       },
       "cifso": {
         "badge": "Protokoll · Zertifizierung",
-        "tagline": "Algorithmisches Protokoll zur Asset-Zertifizierung",
-        "description": "CIFSO-Protokoll im Einsatz, zur Zertifizierung eigener und Kunden-Assets genutzt. Umfasst 5 Dimensionen: Kapital, Integrität, Finanzen, Sicherheit, Organisation. Lizenzierbar für Wirtschaftsprüfer und Beratungsunternehmen, die ihre eigenen Kunden zertifizieren möchten.",
+        "tagline": "Algorithmisches Asset-Zertifizierungsprotokoll",
+        "description": "CIFSO-Protokoll im Einsatz zur Zertifizierung eigener und Kunden-Assets. Deckt 5 Dimensionen ab: Kapital, Integrität, Finanzen, Sicherheit, Organisation. Lizenzierbar für Wirtschaftsprüfer und Beratungsunternehmen, die ihre eigenen Kunden zertifizieren möchten.",
         "visitPage": "Zertifizierungsseite ansehen"
       },
       "compliance": {

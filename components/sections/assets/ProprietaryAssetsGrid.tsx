@@ -21,6 +21,7 @@ interface PropAsset {
   publisherReady?: boolean
   slug?:    string
   visitPageHref?: string
+  visitPageLabelKey?: string
 }
 
 const PROP_ASSETS: PropAsset[] = [
@@ -64,17 +65,18 @@ const PROP_ASSETS: PropAsset[] = [
     visitPageHref: '/transact/how-to-sell',
   },
   {
-    id:          'cifso',
-    name:        'CIFSO Protocol',
-    url:         null,
-    badgeKey:    'cifso.badge',
-    taglineKey:  'cifso.tagline',
-    descKey:     'cifso.description',
-    category:    'ai',
-    status:      'live',
-    ownership:   'domain',
-    publisherReady: true,
-    visitPageHref: '/grade',
+    id:               'cifso',
+    name:             'CIFSO Protocol',
+    url:              null,
+    badgeKey:         'cifso.badge',
+    taglineKey:       'cifso.tagline',
+    descKey:          'cifso.description',
+    category:         'ai',
+    status:           'live',
+    ownership:        'domain',
+    publisherReady:   true,
+    visitPageHref:    '/grade',
+    visitPageLabelKey: 'cifso.visitPage',
   },
   {
     id:          'compliance',
@@ -225,6 +227,20 @@ export function ProprietaryAssetsGrid() {
                 {tItems(asset.taglineKey)}
               </p>
 
+              {/* CIFSO — 5 dimensions chips */}
+              {asset.id === 'cifso' && (
+                <div className="flex flex-wrap gap-1.5">
+                  {(['C', 'I', 'F', 'S', 'O'] as const).map((code) => (
+                    <span
+                      key={code}
+                      className="font-mono text-[9px] tracking-[0.18em] uppercase border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink px-2 py-0.5"
+                    >
+                      {code}
+                    </span>
+                  ))}
+                </div>
+              )}
+
               {/* Description */}
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
                 {tItems(asset.descKey)}
@@ -248,7 +264,7 @@ export function ProprietaryAssetsGrid() {
                     href={asset.visitPageHref}
                     className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex transition-colors flex items-center gap-1"
                   >
-                    {t('visitPage')} <ArrowUpRight size={11} />
+                    {asset.visitPageLabelKey ? tItems(asset.visitPageLabelKey) : t('visitPage')} <ArrowUpRight size={11} />
                   </a>
                 ) : (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">

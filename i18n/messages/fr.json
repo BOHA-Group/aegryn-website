@@ -290,8 +290,8 @@
       },
       "cifso": {
         "badge": "Protocole · Certification",
-        "tagline": "Protocole algorithmique de certification d'actifs",
-        "description": "Protocole CIFSO en production, utilisé pour la certification des actifs propres et de ceux des clients. Couvre 5 dimensions : Capital, Intégrité, Finance, Sécurité, Organisation. Licenciable aux cabinets d'audit et de conseil souhaitant certifier leurs propres clients.",
+        "tagline": "Protocole algorithmique de certification d’actifs",
+        "description": "Protocole CIFSO en production, utilisé pour la certification des actifs propres et de ceux des clients. Couvre 5 dimensions : Capital, Intégrité, Finance, Sécurité, Organisation. Licenciable aux cabinets d’audit et de conseil souhaitant certifier leurs propres clients.",
         "visitPage": "Voir la page certification"
       },
       "compliance": {

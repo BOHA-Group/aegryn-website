@@ -284,7 +284,7 @@
       },
       "cifso": {
         "badge": "Protocol · Certification",
-        "tagline": "Algorithmic asset certification protocol",
+        "tagline": "Algorithmic asset-certification protocol",
         "description": "CIFSO protocol in production, used to certify proprietary assets and those of clients. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms wishing to certify their own clients.",
         "visitPage": "View certification page"
       },
