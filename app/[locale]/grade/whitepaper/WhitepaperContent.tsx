@@ -9,7 +9,6 @@ type CifsItem   = { code: string; name: string; weight: string; desc: string; cr
 type Grade      = { grade: string; label: string; profile: string }
 type ProcStep   = { num: string; title: string; desc: string }
 type Principle  = { title: string; desc: string }
-type Maturity   = { tier: string; rule: string }
 type UseCase    = { num: string; tag: string; title: string; desc: string }
 type ISORow     = { dimension: string; existing: string; cifso: string }
 type PricingTier = { name: string; target: string; price: string; duration: string; includes: string[] }

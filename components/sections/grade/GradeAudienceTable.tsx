@@ -97,7 +97,7 @@ export function GradeAudienceTable() {
 
         {/* Cards grid — one card per profile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {rows.map((row, ri) => {
+          {rows.map((row) => {
             const Icon = PROFILE_ICONS[row.icon] ?? Users
             return (
               <div
