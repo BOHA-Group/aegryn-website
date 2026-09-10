@@ -79,7 +79,7 @@
     "craftSupportExperts": "Expert network",
     "craftTransact": "Transact",
     "craftTransactDesc": "Certification, sale, acquisition of tech assets",
-    "craftTransactGrade": "Certification system",
+    "craftTransactGrade": "Certification CIFSO 5000",
     "craftTransactCatalog": "Offmarket catalog",
     "craftTransactSell": "Sell an asset",
     "craftTransactBuy": "Become a buyer",
@@ -151,7 +151,7 @@
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investors & Institutional",
     "craftTransactOverview": "Overview",
-    "craftTransactGradeNew": "Certification system",
+    "craftTransactGradeNew": "Certification CIFSO 5000",
     "craftTransactAuditors": "Independent auditors",
     "whoIndustries": "Our industries",
     "whoIndustriesDesc": "All covered sectors"
@@ -2260,7 +2260,7 @@
     },
     "index": {
       "label": "Aegryn Certification",
-      "title": "Certification CIFSO 5000.\nAn independent quality label\nfor organisations that build to last.",
+      "title": "An independent quality label\nfor organisations that build to last.",
       "desc": "An organisation's value is not invented in a negotiation. It is documented well before. The Certification CIFSO 5000 is that documentation: independent, reproducible, defensible.",
       "ctaSubmit": "Submit for certification",
       "ctaMethod": "Read the methodology",
@@ -2271,14 +2271,14 @@
       "marketCtaSecondary": "View methodology",
       "useCasesLabel": "Who certifies, and why",
       "useCasesTitle": "Certification CIFSO 5000\nserves every stakeholder.",
-      "useCasesDesc": "Certification is not reserved for organisations that want to sell. It is a tool for any leader who wants to document, prove, and communicate the value of their organisation — at any stage.",
+      "useCasesDesc": "Certification is not reserved for organisations that want to sell. It is a tool for any leader who wants to document, prove, and communicate the value of their organisation at any stage.",
       "useCases": [
         {
           "num": "01",
           "tag": "Annual report & investor communication",
           "title": "A quality label that appears in your annual report.",
           "audience": "Growing SMEs, ETIs with active investors, listed companies",
-          "desc": "Like an existing independent standard, the Certification CIFSO 5000 can be referenced in your annual report, investor documentation, or board presentation. It signals to shareholders, lenders, and partners that your value has been independently verified — not just declared.",
+          "desc": "Like an existing independent standard, the Certification CIFSO 5000 can be referenced in your annual report, investor documentation, or board presentation. It signals to shareholders, lenders, and partners that your value has been independently verified not just declared.",
           "signal": "Signal to shareholders and partners: your organisational value is independently documented."
         },
         {
@@ -2294,7 +2294,7 @@
           "tag": "Pre-investment due diligence (PE / VC / FO)",
           "title": "An independent baseline before you commit capital.",
           "audience": "Private equity funds, venture capital, family offices, investment committees",
-          "desc": "An investment committee needs an independent view of what it is acquiring — not only financials, but governance, IP, security, and organisational dependency. The Certification CIFSO 5000 provides exactly this: a structured, reproducible, and documented assessment that complements financial due diligence.",
+          "desc": "An investment committee needs an independent view of what it is acquiring not only financials, but governance, IP, security, and organisational dependency. The Certification CIFSO 5000 provides exactly this: a structured, reproducible, and documented assessment that complements financial due diligence.",
           "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed."
         },
         {
@@ -2303,14 +2303,14 @@
           "title": "Demonstrate investment-readiness across all dimensions.",
           "audience": "Startups and scale-ups preparing a fundraising round",
           "desc": "Investors increasingly expect founders to demonstrate readiness not just on financials but on IP ownership, technical architecture, security, and governance. A Certification CIFSO 5000 becomes a data room document that pre-empts due diligence questions and accelerates the investment decision.",
-          "signal": "Signal to investors: investment-ready across all five dimensions — not just the financial model."
+          "signal": "Signal to investors: investment-ready across all five dimensions not just the financial model."
         },
         {
           "num": "05",
           "tag": "Family succession & business transfer",
           "title": "A neutral document for a complex conversation.",
           "audience": "Founders planning succession, family businesses, management buyouts",
-          "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties — ceding founder, heirs, buyers, and advisors — can rely on. Independent. Reproducible. Defensible.",
+          "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties ceding founder, heirs, buyers, and advisors can rely on. Independent. Reproducible. Defensible.",
           "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer."
         }
       ],
@@ -2394,39 +2394,39 @@
       ],
       "isoLabel": "CIFSO 5000 and existing certification standards",
       "isoTitle": "Where existing standards stop.\nWhere CIFSO 5000 begins.",
-      "isoDesc": "Existing certification standards verify systems and processes. The Certification CIFSO 5000 verifies organisational value and transferability. These are two different objects — complementary, not competing.",
+      "isoDesc": "Existing certification standards verify systems and processes. The Certification CIFSO 5000 verifies organisational value and transferability. These are two different objects complementary, not competing.",
       "isoStatement": "Where existing standards certify systems, CIFSO 5000 certifies value and transferability.",
       "isoRows": [
         {
-          "dimension": "C — Capital & IP",
+          "dimension": "C Capital & IP",
           "existing": "No existing standard covers IP chain of title in an M&A context.",
           "cifso": "Certifies code ownership, IP transfer chain, brand, and proprietary data as transferable value."
         },
         {
-          "dimension": "I — Integrity & Governance",
+          "dimension": "I Integrity & Governance",
           "existing": "Quality management standards partially address process governance.",
           "cifso": "Certifies cap table integrity, regulatory compliance, contractual governance, and M&A-specific legal structure."
         },
         {
-          "dimension": "F — Finance & Metrics",
+          "dimension": "F Finance & Metrics",
           "existing": "No standard certifies ARR/MRR, client concentration, or financial transferability.",
           "cifso": "Certifies recurring revenue verifiability, financial auditability, burn rate, and economic transferability."
         },
         {
-          "dimension": "S — Security & Sovereignty",
+          "dimension": "S Security & Sovereignty",
           "existing": "Information security standards certify management systems within a fixed perimeter.",
           "cifso": "Certifies cybersecurity posture, EU regulatory compliance, and technological independence in an M&A context."
         },
         {
-          "dimension": "O — Organisation & Talent",
+          "dimension": "O Organisation & Talent",
           "existing": "No existing standard covers founder dependency or succession readiness.",
-          "cifso": "Certifies organisational resilience, management depth, succession plan, and retention — the dimension most undervalued in transactions."
+          "cifso": "Certifies organisational resilience, management depth, succession plan, and retention the dimension most undervalued in transactions."
         }
       ],
       "pricingLabel": "Certification CIFSO 5000 — Pricing",
       "pricingTitle": "One certification.\nFive dimensions of value.",
       "pricingDesc": "All tiers include the full five-dimension CIFSO 5000 audit, independent report, official grade, and registration in the Aegryn certified register.",
-      "pricingNote": "Prices exclusive of tax. Swiss jurisdiction. Indicative — final quote issued after pre-qualification.",
+      "pricingNote": "Prices exclusive of tax. Swiss jurisdiction. Indicative final quote issued after pre-qualification.",
       "pricingCta": "Submit for certification",
       "pricingCtaSecondary": "Download the methodology",
       "pricingTiers": [

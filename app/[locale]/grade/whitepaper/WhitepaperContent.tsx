@@ -155,7 +155,7 @@ export function WhitepaperContent() {
           </p>
           <p className="wp-body">
             Unlike existing certification standards, which verify systems, processes, and operational
-            conformance, the Certification CIFSO 5000 certifies <em>organisational value</em> — the
+            conformance, the Certification CIFSO 5000 certifies <em>organisational value</em>: the
             documented, defensible basis for a valuation, a financing decision, an investment, or a business
             transfer. These are two different objects. Complementary, not competing.
           </p>
@@ -250,7 +250,7 @@ export function WhitepaperContent() {
           <h2 className="wp-section-title">5. CIFSO 5000 and existing certification standards</h2>
           <p className="wp-body">
             The Certification CIFSO 5000 is designed to operate alongside existing certification
-            standards — not to replace them. The table below positions each CIFSO dimension relative
+            standards, not to replace them. The table below positions each CIFSO dimension relative
             to what existing standards cover.
           </p>
           <div className="border border-ag-border overflow-hidden mt-5">
@@ -303,7 +303,7 @@ export function WhitepaperContent() {
           <h2 className="wp-section-title">6. Certification process</h2>
           <p className="wp-body">
             The standard duration is 15 to 35 business days depending on the tier. All certifications
-            follow the same protocol regardless of tier — the duration reflects scope and complexity.
+            follow the same protocol regardless of tier. The duration reflects scope and complexity.
           </p>
           <div className="flex flex-col gap-0 border border-ag-border">
             {process.map(({ num, title, desc }) => (

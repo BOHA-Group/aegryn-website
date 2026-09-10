@@ -2,7 +2,18 @@
 
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
+import {
+  FileText,
+  Landmark,
+  BarChart2,
+  TrendingUp,
+  Users,
+  Building2,
+  Briefcase,
+  Globe,
+} from 'lucide-react'
 
 type UseCase = {
   num: string
@@ -12,6 +23,60 @@ type UseCase = {
   desc: string
   signal: string
 }
+
+// Per use-case config: image, audience chips with Lucide icon
+const UC_META = [
+  {
+    image: '/images/grade-usecases/uc-annual-report.jpg',
+    imageAlt: 'Board meeting — investor communication',
+    chips: [
+      { label: 'Growing SMEs', Icon: Building2 },
+      { label: 'ETIs', Icon: Briefcase },
+      { label: 'Investors', Icon: BarChart2 },
+      { label: 'Shareholders', Icon: Users },
+    ],
+  },
+  {
+    image: '/images/grade-usecases/uc-bank-financing.jpg',
+    imageAlt: 'Bank financing — lenders',
+    chips: [
+      { label: 'SMEs & ETIs', Icon: Building2 },
+      { label: 'CFOs', Icon: BarChart2 },
+      { label: 'Banks', Icon: Landmark },
+      { label: 'Lenders', Icon: Globe },
+    ],
+  },
+  {
+    image: '/images/grade-usecases/uc-due-diligence.jpg',
+    imageAlt: 'Investment committee due diligence',
+    chips: [
+      { label: 'PE Funds', Icon: TrendingUp },
+      { label: 'Venture Capital', Icon: TrendingUp },
+      { label: 'Family Offices', Icon: Users },
+      { label: 'Investment Committees', Icon: Briefcase },
+    ],
+  },
+  {
+    image: '/images/grade-usecases/uc-fundraising.jpg',
+    imageAlt: 'Fundraising pitch — startups',
+    chips: [
+      { label: 'Startups', Icon: TrendingUp },
+      { label: 'Scale-ups', Icon: BarChart2 },
+      { label: 'Founders', Icon: Users },
+      { label: 'Investors', Icon: Landmark },
+    ],
+  },
+  {
+    image: '/images/grade-usecases/uc-succession.jpg',
+    imageAlt: 'Family succession — business transfer',
+    chips: [
+      { label: 'Founders', Icon: Users },
+      { label: 'Family Businesses', Icon: Building2 },
+      { label: 'Heirs', Icon: FileText },
+      { label: 'M&A Advisors', Icon: Briefcase },
+    ],
+  },
+]
 
 export function GradeUseCases() {
   const t     = useTranslations('grade.index')
@@ -51,49 +116,81 @@ export function GradeUseCases() {
 
         {/* Use cases */}
         <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
-          {cases.map((uc) => (
-            <div
-              key={uc.num}
-              className="usecase-item bg-ag-white p-8 md:p-10 grid grid-cols-1 md:grid-cols-[80px_1fr_320px] gap-6 md:gap-10 items-start hover:bg-ag-off-white transition-colors"
-            >
-              {/* Number */}
-              <div className="flex items-center md:items-start">
-                <span className="font-mono text-[11px] tracking-[0.2em] text-ag-apex font-bold">
-                  {uc.num}
-                </span>
-              </div>
+          {cases.map((uc, idx) => {
+            const meta = UC_META[idx]
+            return (
+              <div
+                key={uc.num}
+                className="usecase-item bg-ag-white hover:bg-ag-off-white transition-colors"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-[56px_1fr_260px] gap-0">
 
-              {/* Main content */}
-              <div>
-                <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-2">
-                  {uc.tag}
-                </p>
-                <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-4">
-                  {uc.title}
-                </h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed max-w-xl">
-                  {uc.desc}
-                </p>
-              </div>
+                  {/* Number */}
+                  <div className="hidden lg:flex items-start justify-center pt-10 border-r border-ag-border">
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-ag-apex font-bold">
+                      {uc.num}
+                    </span>
+                  </div>
 
-              {/* Audience + signal */}
-              <div className="flex flex-col gap-4">
-                <div className="border border-ag-border p-4">
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                    Audience
-                  </p>
-                  <p className="font-sans text-[12px] text-ag-black leading-snug">
-                    {uc.audience}
-                  </p>
-                </div>
-                <div className="bg-ag-navy px-4 py-3">
-                  <p className="font-mono text-[10px] leading-relaxed text-ag-apex/80">
-                    {uc.signal}
-                  </p>
+                  {/* Main content */}
+                  <div className="p-8 lg:p-10">
+                    {/* Tag — mono small */}
+                    <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light mb-3">
+                      {uc.tag}
+                    </p>
+
+                    {/* Title — BOLD, large */}
+                    <h3 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] leading-snug mb-4">
+                      {uc.title}
+                    </h3>
+
+                    {/* Description — normal weight */}
+                    <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed max-w-xl mb-6">
+                      {uc.desc}
+                    </p>
+
+                    {/* Audience chips */}
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {meta.chips.map(({ label, Icon }) => (
+                        <span
+                          key={label}
+                          className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
+                        >
+                          <Icon size={10} className="text-ag-apex shrink-0" />
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Signal */}
+                    <div className="inline-block bg-ag-navy px-4 py-2.5 rounded-sm">
+                      <p className="font-mono text-[10px] leading-relaxed text-ag-apex/80">
+                        {uc.signal}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Image */}
+                  <div className="hidden lg:block relative border-l border-ag-border overflow-hidden" style={{ minHeight: 240 }}>
+                    <Image
+                      src={meta.image}
+                      alt={meta.imageAlt}
+                      fill
+                      sizes="260px"
+                      className="object-cover grayscale opacity-70 hover:opacity-90 hover:grayscale-0 transition-all duration-500"
+                    />
+                    {/* Overlay with num */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/60 to-transparent flex items-end p-4">
+                      <span className="font-mono text-[22px] font-bold text-white/40">
+                        {uc.num}
+                      </span>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
       </div>
