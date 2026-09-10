@@ -276,7 +276,7 @@ export function WhitepaperContent() {
                       {code}
                     </p>
                     <p className="font-sans text-[10px] text-ag-black">
-                      {row.dimension.replace(`${code} — `, '')}
+                      {row.dimension.slice(code.length).replace(/^\s*[·—–-]?\s*/, '')}
                     </p>
                   </div>
                   <div className="px-4 py-4 border-r border-ag-border">

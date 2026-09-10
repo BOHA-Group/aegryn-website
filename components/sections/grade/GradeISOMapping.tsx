@@ -105,7 +105,7 @@ export function GradeISOMapping() {
                       {code}
                     </span>
                     <p className="font-sans text-[12px] text-ag-black font-semibold leading-snug">
-                      {row.dimension.replace(`${code} — `, '')}
+                      {row.dimension.slice(code.length).replace(/^\s*[·—–-]?\s*/, '')}
                     </p>
                   </div>
                 </div>

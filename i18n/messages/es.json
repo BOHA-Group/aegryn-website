@@ -3026,27 +3026,27 @@
       "isoStatement": "Where existing standards certify systems, CIFSO 5000 certifies value and transferability.",
       "isoRows": [
         {
-          "dimension": "C Capital & IP",
+          "dimension": "C · Capital & IP",
           "existing": "No existing standard covers IP chain of title in an M&A context.",
           "cifso": "Certifies code ownership, IP transfer chain, brand, and proprietary data as transferable value."
         },
         {
-          "dimension": "I Integrity & Governance",
+          "dimension": "I · Integrity & Governance",
           "existing": "Quality management standards partially address process governance.",
           "cifso": "Certifies cap table integrity, regulatory compliance, contractual governance, and M&A-specific legal structure."
         },
         {
-          "dimension": "F Finance & Metrics",
+          "dimension": "F · Finance & Metrics",
           "existing": "No standard certifies ARR/MRR, client concentration, or financial transferability.",
           "cifso": "Certifies recurring revenue verifiability, financial auditability, burn rate, and economic transferability."
         },
         {
-          "dimension": "S Security & Sovereignty",
+          "dimension": "S · Security & Sovereignty",
           "existing": "Information security standards certify management systems within a fixed perimeter.",
           "cifso": "Certifies cybersecurity posture, EU regulatory compliance, and technological independence in an M&A context."
         },
         {
-          "dimension": "O Organisation & Talent",
+          "dimension": "O · Organisation & Talent",
           "existing": "No existing standard covers founder dependency or succession readiness.",
           "cifso": "Certifies organisational resilience, management depth, succession plan, and retention the dimension most undervalued in transactions."
         }
