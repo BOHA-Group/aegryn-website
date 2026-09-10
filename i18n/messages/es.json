@@ -2888,26 +2888,26 @@
     },
     "index": {
       "label": "Aegryn Certificación",
-      "title": "Un sello de calidad independiente\npara organizaciones construidas para perdurar.",
-      "desc": "An organisation's value is not invented in a negotiation. It is documented well before. The Certification CIFSO 5000 is that documentation: independent, reproducible, defensible.",
-      "ctaSubmit": "Submit for certification",
-      "ctaMethod": "Read the methodology",
-      "marketLabel": "Why certify now",
-      "marketTitle": "Certification creates\nmeasurable value.",
-      "marketDesc": "The M&A market has developed a clear premium for organisations whose quality is verifiable. This premium is not a projection, it is observable in completed transactions.",
-      "marketCta": "Submit my organisation",
-      "marketCtaSecondary": "View methodology",
-      "useCasesLabel": "Who certifies, and why",
-      "useCasesTitle": "Certification CIFSO 5000\nserves every stakeholder.",
-      "useCasesDesc": "Certification is not reserved for organisations that want to sell. It is a tool for any leader who wants to document, prove, and communicate the value of their organisation at any stage.",
+      "title": "Un sello de calidad independiente\npara organizaciones diseñadas para perdurar.",
+      "desc": "El valor de una organización no se inventa en una negociación. Se documenta previamente, se evalúa de forma independiente y se hace demostrable para todas las partes. La Certificación CIFSO 5000 es el estándar que aporta esta prueba.",
+      "ctaSubmit": "Solicitar certificación",
+      "ctaMethod": "Leer la metodología",
+      "marketLabel": "Por qué certificarse ahora",
+      "marketTitle": "La certificación crea\nvalor medible.",
+      "marketDesc": "Una organización certificada acelera la financiación, refuerza la credibilidad ante los inversores, simplifica la transmisión y comunica su valor de forma independiente en cualquier mercado.",
+      "marketCta": "Iniciar la certificación",
+      "marketCtaSecondary": "Leer la metodología",
+      "useCasesLabel": "Quién se certifica, y por qué",
+      "useCasesTitle": "La Certificación CIFSO 5000\nse dirige a todos los actores.",
+      "useCasesDesc": "Ya sea preparación para la financiación, transmisión empresarial, decisión de inversión o financiación bancaria, la Certificación CIFSO 5000 documenta el valor de su organización para todos los interlocutores relevantes.",
       "useCases": [
         {
           "num": "01",
           "tag": "Annual report & investor communication",
-          "title": "A quality label that appears in your annual report.",
-          "audience": "Growing SMEs, ETIs with active investors, listed companies",
-          "desc": "Like an existing independent standard, the Certification CIFSO 5000 can be referenced in your annual report, investor documentation, or board presentation. It signals to shareholders, lenders, and partners that your value has been independently verified not just declared.",
-          "signal": "Signal to shareholders and partners: your organisational value is independently documented.",
+          "title": "Un sello de calidad en su informe anual.",
+          "audience": "Pymes en crecimiento, ETIs con inversores activos, empresas cotizadas",
+          "desc": "Como un estándar independiente existente, la Certificación CIFSO 5000 puede referenciarse en su informe anual, documentación para inversores o presentaciones al consejo. Señala a accionistas, prestamistas y socios que su valor ha sido verificado de forma independiente, no simplemente declarado.",
+          "signal": "Señal a accionistas y socios: el valor organizativo está documentado de forma independiente.",
           "chips": [
             "Pymes en crecimiento",
             "ETIs",
@@ -2918,10 +2918,10 @@
         {
           "num": "02",
           "tag": "Bank financing & credit conditions",
-          "title": "A score that strengthens your position with lenders.",
-          "audience": "SMEs and ETIs seeking financing, refinancing, or credit facility renewal",
-          "desc": "Banks assess creditworthiness primarily through balance sheets and EBITDA. The Certification CIFSO 5000 adds what financial statements cannot show: IP chain of title, governance quality, cybersecurity posture, and organisational resilience. A certified organisation presents a more complete and defensible risk profile.",
-          "signal": "Signal to lenders: the intangible value of this organisation is documented, not estimated.",
+          "title": "Una puntuación que refuerza su posición ante los prestamistas.",
+          "audience": "Pymes y ETIs en busca de financiación, refinanciación o renovación de líneas de crédito",
+          "desc": "Los bancos evalúan la solvencia principalmente a través de balances y EBITDA. La Certificación CIFSO 5000 añade lo que los estados financieros no muestran: cadena de titularidad de propiedad intelectual, calidad de la gobernanza, postura de ciberseguridad y resiliencia organizativa. Una organización certificada presenta un perfil de riesgo más completo y defendible.",
+          "signal": "Señal a los prestamistas: el valor intangible de esta organización está documentado, no estimado.",
           "chips": [
             "Pymes & ETIs",
             "CFOs",
@@ -2932,10 +2932,10 @@
         {
           "num": "03",
           "tag": "Pre-investment due diligence (PE / VC / FO)",
-          "title": "An independent baseline before you commit capital.",
-          "audience": "Private equity funds, venture capital, family offices, investment committees",
-          "desc": "An investment committee needs an independent view of what it is acquiring not only financials, but governance, IP, security, and organisational dependency. The Certification CIFSO 5000 provides exactly this: a structured, reproducible, and documented assessment that complements financial due diligence.",
-          "signal": "Signal to investment committees: this asset has been independently assessed before capital was committed.",
+          "title": "Una base independiente antes de comprometer capital.",
+          "audience": "Fondos de capital privado, venture capital, family offices, comités de inversión",
+          "desc": "Un comité de inversión necesita una visión independiente de lo que está adquiriendo: no solo datos financieros, sino también gobernanza, propiedad intelectual, seguridad y dependencias organizativas. La Certificación CIFSO 5000 proporciona exactamente eso: una evaluación estructurada, reproducible y documentada que complementa la diligencia debida financiera.",
+          "signal": "Señal a los comités de inversión: este activo ha sido evaluado de forma independiente antes de comprometer el capital.",
           "chips": [
             "Fondos PE",
             "Capital riesgo",
@@ -2946,10 +2946,10 @@
         {
           "num": "04",
           "tag": "Pre-fundraising certification (Series A–C)",
-          "title": "Demonstrate investment-readiness across all dimensions.",
-          "audience": "Startups and scale-ups preparing a fundraising round",
-          "desc": "Investors increasingly expect founders to demonstrate readiness not just on financials but on IP ownership, technical architecture, security, and governance. A Certification CIFSO 5000 becomes a data room document that pre-empts due diligence questions and accelerates the investment decision.",
-          "signal": "Signal to investors: investment-ready across all five dimensions not just the financial model.",
+          "title": "Demuestre su investment-readiness en todas las dimensiones.",
+          "audience": "Startups y scale-ups que preparan una ronda de financiación",
+          "desc": "Los inversores esperan cada vez más que los fundadores demuestren su preparación no solo en finanzas, sino también en titularidad de propiedad intelectual, arquitectura técnica, seguridad y gobernanza. Una Certificación CIFSO 5000 se convierte en un documento de data room que anticipa las preguntas de diligencia debida y acelera la decisión de inversión.",
+          "signal": "Señal a los inversores: investment-ready en las cinco dimensiones, no solo el modelo financiero.",
           "chips": [
             "Startups",
             "Scale-ups",
@@ -2960,10 +2960,10 @@
         {
           "num": "05",
           "tag": "Family succession & business transfer",
-          "title": "A neutral document for a complex conversation.",
-          "audience": "Founders planning succession, family businesses, management buyouts",
-          "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties ceding founder, heirs, buyers, and advisors can rely on. Independent. Reproducible. Defensible.",
-          "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer.",
+          "title": "Un documento neutro para una conversación compleja.",
+          "audience": "Fundadores que planifican su sucesión, empresas familiares, MBOs",
+          "desc": "Más de 3,5 millones de pymes europeas se enfrentan a retos de sucesión sin un comprador cualificado ni una valoración clara. La Certificación CIFSO 5000 proporciona una evaluación neutral y documentada en la que todas las partes — fundador cedente, herederos, compradores y asesores — pueden confiar. Independiente. Reproducible. Defendible.",
+          "signal": "Señal a todas las partes: el valor de esta organización ha sido documentado de forma independiente antes de la transmisión.",
           "chips": [
             "Fundadores",
             "Empresas familiares",
@@ -2972,9 +2972,9 @@
           ]
         }
       ],
-      "audienceLabel": "What your grade communicates",
-      "audienceTitle": "Every interlocutor reads your grade differently.",
-      "audienceDesc": "A Certification CIFSO 5000 grade is a structured signal. Each profile reads a different meaning into each grade level.",
+      "audienceLabel": "Lo que comunica su certificación",
+      "audienceTitle": "Cada interlocutor lee su certificación de forma diferente.",
+      "audienceDesc": "La Certificación CIFSO 5000 documenta el valor de su organización para inversores, prestamistas, accionistas y sucesores. Cada nota comunica un mensaje claro, verificado de forma independiente.",
       "audienceGradeHeaders": [
         "Grade ★",
         "Grade AAA",
@@ -2984,161 +2984,161 @@
       ],
       "audienceRows": [
         {
-          "profile": "PE acquirer",
-          "icon": "building",
+          "profile": "Comprador de PE",
           "readings": [
-            "Institutional-grade asset. Executable at premium valuation. Accelerated due diligence.",
-            "High-quality target. Standard process, no material risk flag. Reliable valuation basis.",
-            "Solid asset with documented reservations. Deal executable with escrow or price adjustment clause.",
-            "Viable asset, remediation areas identified. Value plan required before full process.",
-            "CIFSO remediation plan required before transaction. Timeline extended accordingly."
-          ]
+            "Activo de nivel institucional. Ejecutable a valoración premium. Due diligence significativamente acelerada.",
+            "Objetivo de alta calidad. Proceso estándar, sin señal de riesgo material. Base de valoración fiable.",
+            "Activo sólido con reservas documentadas. Operación ejecutable con escrow o mecanismo de ajuste de precio.",
+            "Activo viable, áreas de remediación identificadas. Plan de valor requerido antes del proceso completo.",
+            "Plan de remediación CIFSO requerido antes de la transacción. Calendario extendido en consecuencia."
+          ],
+          "icon": "building"
         },
         {
-          "profile": "Investment bank / M&A advisor",
-          "icon": "landmark",
+          "profile": "Banco de inversión / Asesor M&A",
           "readings": [
-            "Certifiable mandate. Supports premium process and top-tier buyer pool.",
-            "Standard mandate, full process executable. Complete documentation for information memorandum.",
-            "Mandate with documented reservations. Improvement plan recommended in data room.",
-            "Mandate with conditions. Buyer pool may be narrower. Value plan strengthens positioning.",
-            "Preliminary remediation phase required. Timeline impact: 60–90 additional days."
-          ]
+            "Mandato certificable. Apoya un proceso premium y un grupo de compradores de primer nivel.",
+            "Mandato estándar, proceso completo ejecutable. Documentación completa para el memorándum de información.",
+            "Mandato con reservas documentadas. Plan de mejora recomendado en la sala de datos.",
+            "Mandato con condiciones. El grupo de compradores puede ser más reducido. El plan de valor refuerza el posicionamiento.",
+            "Fase de remediación preliminar requerida. Impacto en el calendario: 60–90 días adicionales."
+          ],
+          "icon": "landmark"
         },
         {
-          "profile": "Bank / Lender",
-          "icon": "landmark",
+          "profile": "Banco / Prestamista",
           "readings": [
-            "Exceptional intangible documentation. Supports premium credit conditions.",
-            "Complete and auditable risk profile. Reduces lender uncertainty on intangible value.",
-            "Solid profile with documented gaps. Supports standard credit conditions.",
-            "Acceptable profile. Identified gaps may influence rate or conditions.",
-            "Incomplete documentation. Lender may require additional guarantees or CIFSO remediation."
-          ]
+            "Documentación excepcional de activos intangibles. Apoya condiciones de crédito premium.",
+            "Perfil de riesgo completo y auditable. Reduce la incertidumbre del prestamista sobre el valor intangible.",
+            "Perfil sólido con brechas documentadas. Apoya condiciones de crédito estándar.",
+            "Perfil aceptable. Las brechas identificadas pueden influir en el tipo o las condiciones.",
+            "Documentación incompleta. El prestamista puede requerir garantías adicionales o remediación CIFSO."
+          ],
+          "icon": "landmark"
         },
         {
-          "profile": "Venture / Growth investor",
-          "icon": "trending",
+          "profile": "Inversor venture / crecimiento",
           "readings": [
-            "Top-decile asset. Maximum investment committee confidence across all dimensions.",
-            "Investment-ready across all five dimensions. Due diligence significantly accelerated.",
-            "Investment-ready with optimisation points. Structured follow-up plan sufficient.",
-            "Fundable with identified areas. Remediation plan should accompany documentation.",
-            "Pre-investment CIFSO remediation recommended before capital commitment."
-          ]
+            "Activo en el decil superior. Máxima confianza del comité de inversión en todas las dimensiones.",
+            "Investment-ready en las cinco dimensiones. Due diligence significativamente acelerada.",
+            "Investment-ready con puntos de optimización. Plan de seguimiento estructurado suficiente.",
+            "Financiable con áreas identificadas. El plan de remediación debe acompañar la documentación.",
+            "Remediación CIFSO previa a la inversión recomendada antes del compromiso de capital."
+          ],
+          "icon": "trending"
         },
         {
-          "profile": "Shareholder / Board",
-          "icon": "users",
+          "profile": "Accionista / Consejo de administración",
           "readings": [
-            "Benchmark asset. Full disclosure confidence for annual report and AGM.",
-            "Documented and verifiable organisational quality. Supports board and investor relations.",
-            "Solid organisation with improvement areas. Audit committee can track remediation.",
-            "Requires structured improvement plan with board-level visibility.",
-            "Requires priority remediation plan with board oversight and timeline commitment."
-          ]
+            "Activo de referencia. Plena confianza para el informe anual y la junta general.",
+            "Calidad organizativa documentada y verificable. Apoya la gobernanza y las relaciones con inversores.",
+            "Organización sólida con áreas de mejora. El comité de auditoría puede supervisar la remediación.",
+            "Requiere un plan de mejora estructurado con visibilidad a nivel de consejo.",
+            "Requiere un plan de remediación prioritario con supervisión del consejo y compromiso de calendario."
+          ],
+          "icon": "users"
         },
         {
-          "profile": "Strategic buyer",
-          "icon": "target",
+          "profile": "Comprador estratégico",
           "readings": [
-            "Ready-to-close asset. Full documentation available. Exceptional premium justified.",
-            "Standard acquisition timeline. Documentation complete. Reliable basis for SPA.",
-            "Acquisition with identified reservations. Escrow or price adjustment mechanism recommended.",
-            "Acquisition with conditions. Integration plan and value adjustment to be negotiated.",
-            "Transaction not recommended without prior remediation. Buyer risk elevated."
-          ]
+            "Activo listo para el cierre. Documentación completa disponible. Prima excepcional justificada.",
+            "Calendario de adquisición estándar. Documentación completa. Base fiable para el SPA.",
+            "Adquisición con reservas identificadas. Mecanismo de escrow o ajuste de precio recomendado.",
+            "Adquisición con condiciones. Plan de integración y ajuste de valor a negociar.",
+            "Transacción no recomendada sin remediación previa. Riesgo para el comprador elevado."
+          ],
+          "icon": "target"
         }
       ],
-      "isoLabel": "CIFSO 5000 and existing certification standards",
-      "isoTitle": "Where existing standards stop.\nWhere CIFSO 5000 begins.",
-      "isoDesc": "Existing certification standards verify systems and processes. The Certification CIFSO 5000 verifies organisational value and transferability. These are two different objects complementary, not competing.",
-      "isoStatement": "Where existing standards certify systems, CIFSO 5000 certifies value and transferability.",
+      "isoLabel": "CIFSO 5000 y los estándares de certificación existentes",
+      "isoTitle": "Donde los estándares existentes se detienen.\nDonde comienza el CIFSO 5000.",
+      "isoDesc": "Los estándares existentes (ISO 27001, SOC 2, ISO 9001...) certifican procesos y sistemas. La Certificación CIFSO 5000 documenta el valor organizativo y la transmisibilidad — un objeto complementario, no competidor.",
+      "isoStatement": "CIFSO 5000 complementa los estándares existentes. No los reemplaza.",
       "isoRows": [
         {
-          "dimension": "C · Capital & IP",
-          "existing": "No existing standard covers IP chain of title in an M&A context.",
-          "cifso": "Certifies code ownership, IP transfer chain, brand, and proprietary data as transferable value."
+          "dimension": "C · Capital & propiedad intelectual",
+          "existing": "Ningún estándar existente cubre la cadena de titularidad de la propiedad intelectual a nivel de transacción. Ni ISO 27001 ni SOC 2 atestiguan los derechos de propiedad IP.",
+          "cifso": "Certifica la titularidad del código, la cadena de transferencia de propiedad intelectual, el estado de marcas y patentes, el cumplimiento de código abierto y las cesiones de derechos de los fundadores."
         },
         {
-          "dimension": "I · Integrity & Governance",
-          "existing": "Quality management standards partially address process governance.",
-          "cifso": "Certifies cap table integrity, regulatory compliance, contractual governance, and M&A-specific legal structure."
+          "dimension": "I · Integridad & Gobernanza",
+          "existing": "Los sistemas de gestión de calidad cubren los procesos, pero no la integridad de la estructura de capital, el registro de propietarios o la trazabilidad del cumplimiento.",
+          "cifso": "Certifica la integridad del cap table, el cumplimiento normativo, la estructura societaria, los ajustes históricos y la calidad de la documentación."
         },
         {
-          "dimension": "F · Finance & Metrics",
-          "existing": "No standard certifies ARR/MRR, client concentration, or financial transferability.",
-          "cifso": "Certifies recurring revenue verifiability, financial auditability, burn rate, and economic transferability."
+          "dimension": "F · Finanzas & Métricas",
+          "existing": "Ningún estándar certifica ARR/MRR, concentración de clientes o métricas SaaS. Los auditores validan los estados financieros, no las métricas de salud operativa.",
+          "cifso": "Certifica la verificabilidad de los ingresos recurrentes, la documentación financiera, la calidad de los clientes y la madurez de la valoración."
         },
         {
-          "dimension": "S · Security & Sovereignty",
-          "existing": "Information security standards certify management systems within a fixed perimeter.",
-          "cifso": "Certifies cybersecurity posture, EU regulatory compliance, and technological independence in an M&A context."
+          "dimension": "S · Seguridad & Soberanía",
+          "existing": "Los estándares de seguridad de la información certifican los sistemas de gestión, no el nivel operativo de ciberseguridad ni la soberanía de los datos.",
+          "cifso": "Certifica la postura de ciberseguridad, el cumplimiento normativo de la UE, la soberanía de los datos y la resiliencia de la infraestructura crítica."
         },
         {
-          "dimension": "O · Organisation & Talent",
-          "existing": "No existing standard covers founder dependency or succession readiness.",
-          "cifso": "Certifies organisational resilience, management depth, succession plan, and retention the dimension most undervalued in transactions."
+          "dimension": "O · Organización & Talento",
+          "existing": "Ningún estándar existente cubre la dependencia del fundador ni la documentación de la transferencia de conocimiento. Los estándares de RRHH no cubren los riesgos de transferencia en operaciones M&A.",
+          "cifso": "Certifica la resiliencia organizativa, la profundidad directiva, la documentación de la transferencia de conocimiento y la planificación de la sucesión."
         }
       ],
-      "pricingLabel": "Certification CIFSO 5000 — Pricing",
-      "pricingTitle": "One certification.\nFive dimensions of value.",
-      "pricingDesc": "All tiers include the full five-dimension CIFSO 5000 audit, independent report, official grade, and registration in the Aegryn certified register.",
-      "pricingNote": "Prices exclusive of tax. Swiss jurisdiction. Indicative final quote issued after pre-qualification.",
-      "pricingCta": "Submit for certification",
-      "pricingCtaSecondary": "Download the methodology",
+      "pricingLabel": "Certificación CIFSO 5000 — Tarifas",
+      "pricingTitle": "Una certificación.\nCinco dimensiones de valor.",
+      "pricingDesc": "La Certificación CIFSO 5000 se adapta al tamaño de la organización. Tres formatos, un único estándar independiente.",
+      "pricingNote": "Todos los precios son sin IVA. Precio fijo, sin componente variable.",
+      "pricingCta": "Solicitar certificación",
+      "pricingCtaSecondary": "Leer la metodología",
       "pricingTiers": [
         {
           "name": "Express",
-          "target": "Organisations under 20 employees, single site",
-          "price": "From €5,000",
-          "duration": "15 business days",
+          "target": "Organizaciones de menos de 20 empleados, sede única",
+          "duration": "15 días hábiles",
           "highlight": false,
           "includes": [
-            "Full 5-dimension CIFSO 5000 audit",
-            "Independent certification report",
-            "Official grade (★ to B)",
-            "Registration in Aegryn certified register",
-            "12-month certificate validity"
-          ]
+            "Auditoría CIFSO 5000 completa en 5 dimensiones",
+            "Informe de certificación independiente",
+            "Calificación oficial (de ★ a B)",
+            "Inscripción en el registro certificado Aegryn",
+            "Validez del certificado: 12 meses"
+          ],
+          "price": "From €5,000"
         },
         {
           "name": "Standard",
-          "target": "20–100 employees, one or two sites",
-          "price": "From €9,000",
-          "duration": "25 business days",
+          "target": "De 20 a 100 empleados, una o dos sedes",
+          "duration": "25 días hábiles",
           "highlight": true,
           "includes": [
-            "Full 5-dimension CIFSO 5000 audit",
-            "Independent report with sub-codes",
-            "Official grade + improvement recommendations",
-            "Registration in Aegryn certified register",
-            "12-month certificate validity",
-            "One included revision session"
-          ]
+            "Auditoría CIFSO 5000 completa en 5 dimensiones",
+            "Informe independiente con subcódigos",
+            "Calificación oficial + recomendaciones de mejora",
+            "Inscripción en el registro certificado Aegryn",
+            "Validez del certificado: 12 meses",
+            "Una sesión de revisión incluida"
+          ],
+          "price": "From €9,000"
         },
         {
           "name": "Premium",
-          "target": "100+ employees or multi-site organisations",
-          "price": "From €15,000",
-          "duration": "35 business days",
+          "target": "Más de 100 empleados u organización multisede",
+          "duration": "35 días hábiles",
           "highlight": false,
           "includes": [
-            "Extended 5-dimension CIFSO 5000 audit",
-            "Full report with sub-code table",
-            "Official grade + structured remediation roadmap",
-            "Registration in Aegryn certified register",
-            "18-month certificate validity",
-            "Two included revision sessions",
-            "Dedicated Aegryn contact throughout"
-          ]
+            "Auditoría CIFSO 5000 ampliada en 5 dimensiones",
+            "Informe completo con tabla de subcódigos",
+            "Calificación oficial + hoja de ruta de remediación estructurada",
+            "Inscripción en el registro certificado Aegryn",
+            "Validez del certificado: 18 meses",
+            "Dos sesiones de revisión incluidas",
+            "Interlocutor dedicado de Aegryn durante todo el proceso"
+          ],
+          "price": "From €15,000"
         }
       ],
-      "whitepaperLabel": "Official documentation",
-      "whitepaperTitle": "Download the CIFSO 5000 methodology",
-      "whitepaperDesc": "Protocol overview, five dimensions, grade scale, certification process, and independence principles.",
-      "whitepaperCta": "Download methodology (PDF)",
-      "whitepaperVersion": "Certification CIFSO 5000 v4.0 — Aegryn SA"
+      "whitepaperLabel": "Documentación oficial",
+      "whitepaperTitle": "Descargar la metodología CIFSO 5000",
+      "whitepaperDesc": "Resumen del protocolo, cinco dimensiones, escala de notas, proceso de certificación y principios de independencia — el whitepaper oficial de la metodología.",
+      "whitepaperCta": "Leer el whitepaper",
+      "whitepaperVersion": "CIFSO 5000 v4.0 — Whitepaper oficial de la metodología"
     },
     "grades": [
       {

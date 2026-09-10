@@ -181,7 +181,7 @@ export function GradeUseCases() {
                       alt={meta.imageAlt}
                       fill
                       sizes="260px"
-                      className="object-cover grayscale opacity-70 hover:opacity-90 hover:grayscale-0 transition-all duration-500"
+                      className="object-cover transition-all duration-500"
                     />
                     {/* Overlay with num */}
                     <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/60 to-transparent flex items-end p-4">

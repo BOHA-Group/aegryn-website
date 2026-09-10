@@ -2267,7 +2267,7 @@
         {
           "num": "03",
           "tag": "Due diligence pré-investissement (PE / VC / FO)",
-          "title": "Une base indépendante avant de committer des capitaux.",
+          "title": "Une base indépendante avant de engager des capitaux.",
           "audience": "Fonds de private equity, venture capital, family offices, comités d'investissement",
           "desc": "Un comité d'investissement a besoin d'une vision indépendante de ce qu'il acquiert, pas seulement les finances, mais la gouvernance, l'IP, la sécurité et la dépendance organisationnelle. La Certification CIFSO 5000 fournit exactement cela : une évaluation structurée, reproductible et documentée qui complète la due diligence financière.",
           "signal": "Signal aux comités d'investissement : cet actif a été évalué indépendamment avant l'engagement du capital.",
@@ -2283,7 +2283,7 @@
           "tag": "Certification pré-levée de fonds (Séries A–C)",
           "title": "Démontrez votre investment-readiness sur toutes les dimensions.",
           "audience": "Startups et scale-ups préparant un tour de table",
-          "desc": "Les investisseurs attendent de plus en plus des fondateurs qu'ils démontrent leur préparation non seulement sur les finances mais sur la propriété IP, l'architecture technique, la sécurité et la gouvernance. Une Certification CIFSO 5000 devient un document de data room qui anticipe les questions de due diligence et accélère la décision d'investissement.",
+          "desc": "Les investisseurs attendent de plus en plus des fondateurs qu'ils démontrent leur préparation non seulement sur les finances mais sur la propriété intellectuelle, l'architecture technique, la sécurité et la gouvernance. Une Certification CIFSO 5000 devient un document de data room qui anticipe les questions de due diligence et accélère la décision d'investissement.",
           "signal": "Signal aux investisseurs : investment-ready sur les cinq dimensions, pas seulement le modèle financier.",
           "chips": [
             "Startups",
