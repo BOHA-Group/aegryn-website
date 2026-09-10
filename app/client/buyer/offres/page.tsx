@@ -80,9 +80,9 @@ export default async function BuyerOffresPage() {
             Expressions d&apos;Intérêt et offres soumises à l&apos;équipe Aegryn.
           </p>
         </div>
-        <Link href="/client/buyer/catalogue"
+        <Link href="/client/buyer/notifications"
           className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
-          <Gavel size={11} /> Nouvelle offre
+          <Gavel size={11} /> Mes alertes
         </Link>
       </div>
 
@@ -105,9 +105,9 @@ export default async function BuyerOffresPage() {
           <p className="font-sans text-[14px] text-gray-400 mb-4">
             Vous n&apos;avez pas encore soumis d&apos;offre.
           </p>
-          <Link href="/client/buyer/catalogue"
+          <Link href="/client/buyer/notifications"
             className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
-            {t('exploreCatalog')} <ArrowUpRight size={10} />
+            Mes alertes <ArrowUpRight size={10} />
           </Link>
         </div>
       ) : (

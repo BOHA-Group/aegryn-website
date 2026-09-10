@@ -25,7 +25,7 @@ export default async function NewOfferPage({
   if (!user) redirect('/client/login')
 
   const { asset: assetId } = await searchParams
-  if (!assetId) redirect('/client/buyer/catalogue')
+  if (!assetId) redirect('/client/buyer')
 
   const supa = createServiceClient()
 
@@ -51,7 +51,7 @@ export default async function NewOfferPage({
 
   return (
     <div className="p-8 max-w-2xl">
-      <Link href={`/client/buyer/catalogue/${assetId}`}
+      <Link href="/client/buyer"
         className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors mb-8">
         <ArrowLeft size={12} /> Retour à la fiche
       </Link>

@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { BookOpen, Gavel, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight } from 'lucide-react'
+import { Gavel, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Lock, Mail } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dashboard — Buyer Space Aegryn',
@@ -43,7 +43,6 @@ export default async function BuyerDashboardPage() {
 
   const results = await Promise.allSettled([
     supa.from('profiles').select('full_name, roles').eq('id', user.id).single(),
-    supa.from('assets').select('id', { count: 'exact', head: true }).eq('status', 'published'),
     supa.from('auction_bids').select('id, amount_chf, status, created_at, asset_id, assets(company_name)').eq('bidder_id', user.id).order('created_at', { ascending: false }).limit(3),
     supa.from('transactions').select('id, status, created_at, asset_id, assets(company_name), escrow_amount_chf').eq('buyer_id', user.id).order('created_at', { ascending: false }).limit(3),
     supa.from('kyc_documents').select('id', { count: 'exact', head: true }).eq('user_id', user.id).in('status', ['pending', 'in_review', 'rejected']),
@@ -57,11 +56,10 @@ export default async function BuyerDashboardPage() {
   ])
 
   const profile      = results[0].status === 'fulfilled' ? results[0].value.data : null
-  const catalogCount = results[1].status === 'fulfilled' ? results[1].value.count : null
-  const bids         = results[2].status === 'fulfilled' ? results[2].value.data : null
-  const transactions = results[3].status === 'fulfilled' ? results[3].value.data : null
-  const kycPending   = results[4].status === 'fulfilled' ? results[4].value.count : null
-  const notifications= results[5].status === 'fulfilled' ? results[5].value.data : null
+  const bids         = results[1].status === 'fulfilled' ? results[1].value.data : null
+  const transactions = results[2].status === 'fulfilled' ? results[2].value.data : null
+  const kycPending   = results[3].status === 'fulfilled' ? results[3].value.count : null
+  const notifications= results[4].status === 'fulfilled' ? results[4].value.data : null
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const kycAlertCount = kycPending ?? 0
@@ -108,17 +106,8 @@ export default async function BuyerDashboardPage() {
         </div>
       )}
 
-      {/* KPI cards */}
-      <div className="grid grid-cols-2 gap-4 mb-10 sm:grid-cols-4">
-        <Link href="/client/buyer/catalogue" className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
-          <div className="flex items-center justify-between mb-3">
-            <BookOpen size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
-            <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-          </div>
-          <p className="font-mono font-bold text-[22px] text-gray-900">{catalogCount ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiPublished' as Parameters<typeof t>[0]) || 'Assets'}</p>
-        </Link>
-
+      {/* KPI cards — catalogue retiré, remplacé par les notifications */}
+      <div className="grid grid-cols-2 gap-4 mb-10 sm:grid-cols-3">
         <Link href="/client/buyer/offres" className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
           <div className="flex items-center justify-between mb-3">
             <Gavel size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
@@ -151,6 +140,51 @@ export default async function BuyerDashboardPage() {
         </Link>
       </div>
 
+      {/* Bloc opportunités — remplace l'accès direct au catalogue */}
+      <div className="mb-10 border border-gray-200 bg-gray-50 p-7">
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 bg-ag-navy/5 border border-gray-200 flex items-center justify-center shrink-0">
+            <Lock size={16} className="text-ag-navy" />
+          </div>
+          <div className="flex-1">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-ag-navy mb-1">
+              {t('opportunitiesLabel' as Parameters<typeof t>[0]) || 'Opportunités de transaction'}
+            </p>
+            <p className="font-sans font-semibold text-gray-900 text-[15px] mb-2">
+              {t('opportunitiesTitle' as Parameters<typeof t>[0]) || 'Vous serez contacté par Aegryn pour chaque opportunité qualifiée.'}
+            </p>
+            <p className="font-sans text-[12px] text-gray-500 leading-relaxed mb-4">
+              {t('opportunitiesDesc' as Parameters<typeof t>[0]) || 'Les opportunités de transaction sont transmises de façon confidentielle et individuelle, après NDA signé et sélection de votre profil. Aucun accès public aux actifs publiés — chaque qualification est menée directement par nos équipes.'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Link href="/client/buyer/notifications"
+                className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
+                <Bell size={11} /> {t('opportunitiesNotifCta' as Parameters<typeof t>[0]) || 'Mes alertes'}
+              </Link>
+              <Link href="/client/buyer/nda-view"
+                className="inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-ag-navy hover:text-ag-navy transition-colors">
+                <Mail size={11} /> {t('opportunitiesNdaCta' as Parameters<typeof t>[0]) || 'Mon NDA'}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Processus confidentiel — étapes */}
+        <div className="mt-6 pt-6 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-4 gap-4">
+          {[
+            { step: '01', label: t('processStep1' as Parameters<typeof t>[0]) || 'Profil qualifié par Aegryn' },
+            { step: '02', label: t('processStep2' as Parameters<typeof t>[0]) || 'NDA signé' },
+            { step: '03', label: t('processStep3' as Parameters<typeof t>[0]) || 'Opportunité transmise confidentiellement' },
+            { step: '04', label: t('processStep4' as Parameters<typeof t>[0]) || 'Data room accordée après sélection' },
+          ].map(({ step, label }) => (
+            <div key={step} className="flex flex-col gap-1">
+              <span className="font-mono text-[10px] tracking-[0.18em] text-ag-navy">{step}</span>
+              <p className="font-sans text-[12px] text-gray-600 leading-snug">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Dernières offres */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
@@ -162,10 +196,6 @@ export default async function BuyerDashboardPage() {
         {!bids || bids.length === 0 ? (
           <div className="bg-white border border-gray-200 px-6 py-8 text-center">
             <p className="font-sans text-[13px] text-gray-400">{t('noOffres')}</p>
-            <Link href="/client/buyer/catalogue"
-              className="inline-flex items-center gap-1.5 mt-3 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors">
-              {t('exploreCatalog')} <ArrowUpRight size={10} />
-            </Link>
           </div>
         ) : (
           <div className="flex flex-col gap-2">

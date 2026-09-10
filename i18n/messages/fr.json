@@ -155,7 +155,8 @@
     "craftTransactGradeNew": "Certification CIFSO 5000",
     "craftTransactAuditors": "Auditeurs indépendants",
     "whoIndustries": "Nos industries",
-    "whoIndustriesDesc": "Tous secteurs couverts"
+    "whoIndustriesDesc": "Tous secteurs couverts",
+    "whoIndustriesLink": "Voir toutes nos industries"
   },
   "hero": {
     "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
@@ -649,9 +650,9 @@
         "sub": "Tous secteurs, Suisse. Europe"
       },
       {
-        "val": "< 25%",
-        "label": "Taux de certification",
-        "sub": "Rigueur appliquée à chaque engagement"
+        "val": "5",
+        "label": "Dimensions CIFSO",
+        "sub": "Capital · Intégrité · Finance · Sécurité · Organisation"
       },
       {
         "val": "100%",
@@ -1694,8 +1695,8 @@
     "label": "Cessions M&A confidentielles",
     "title": "La certification change la conversation.\nLa transaction suit.",
     "desc": "Certification indépendante. Transmission confidentielle.\nCercle d’acquéreurs pré-qualifiés. Séquestre institutionnel.",
-    "stat1Val": "< 25%",
-    "stat1Label": "Taux d'acceptation des actifs soumis",
+    "stat1Val": "100%",
+    "stat1Label": "Acquéreurs qualifiés individuellement",
     "stat2Val": "60 j max",
     "stat2Label": "Mandat exclusif vendeur",
     "stat3Val": "100%",
@@ -3609,7 +3610,9 @@
       "ctaStripLabel": "AEGRYN TRANSACT",
       "ctaStripTitle": "Prêt à confier votre transaction à la référence européenne ?",
       "ctaStripMandate": "Déposer un mandat",
-      "ctaStripCatalog": "Voir le catalogue"
+      "ctaStripCatalog": "Voir le catalogue",
+      "ctaGrade": "Certification CIFSO 5000",
+      "ctaStripContact": "Nous contacter"
     },
     "mandate": {
       "meta": {
@@ -9149,7 +9152,281 @@
           }
         ]
       }
-    ]
+    ],
+    "page": {
+      "meta": {
+        "title": "Nos industries — Aegryn",
+        "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Conseil stratégique, technologique, M&A, logiciels sur-mesure et Certification CIFSO 5000."
+      },
+      "label": "Nos industries",
+      "title": "Une expertise sectorielle\npour chaque enjeu organisationnel.",
+      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Logiciels sur-mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
+      "servicesTitle": "Nos métiers mobilisés",
+      "services": [
+        {
+          "name": "Conseil en Stratégie",
+          "desc": "Positionnement, modèle économique, gouvernance et planification long terme pour les organisations qui veulent durer."
+        },
+        {
+          "name": "Conseil en Technologie",
+          "desc": "Architecture système, transformation digitale, souveraineté des données et conformité réglementaire tech."
+        },
+        {
+          "name": "Conseil en M&A",
+          "desc": "Préparation à la cession, due diligence acheteur, structuration de transaction et accompagnement au closing."
+        },
+        {
+          "name": "Logiciels sur-mesure",
+          "desc": "Développement de produits digitaux, intégrations métier et plateformes propriétaires adaptées à vos contraintes sectorielles."
+        },
+        {
+          "name": "Certification CIFSO 5000",
+          "desc": "Évaluation indépendante sur 5 dimensions — Capital, Intégrité, Finance, Sécurité, Organisation — pour documenter et défendre la valeur."
+        }
+      ],
+      "cifsoTitle": "La pertinence CIFSO 5000 selon les secteurs",
+      "cifsoDesc": "Chaque dimension du CIFSO 5000 résonne différemment selon le secteur. La certification s'adapte aux réalités opérationnelles et réglementaires de chaque industrie.",
+      "cifso": [
+        {
+          "code": "C",
+          "dim": "Capital & Propriété intellectuelle",
+          "desc": "Droits sur le code, marques, brevets, données propriétaires. Critique pour les organisations dont la valeur repose sur des actifs immatériels."
+        },
+        {
+          "code": "I",
+          "dim": "Intégrité & Gouvernance",
+          "desc": "Solidité des structures de gouvernance, traçabilité des décisions, dépendances fondateurs. Clé pour tout processus de transmission ou d'investissement."
+        },
+        {
+          "code": "F",
+          "dim": "Finance & Métriques",
+          "desc": "Qualité des données financières, prévisibilité des revenus, marges et métriques SaaS. Opposable en due diligence et auprès des prêteurs."
+        },
+        {
+          "code": "S",
+          "dim": "Sécurité & Souveraineté",
+          "desc": "Posture cyber, conformité réglementaire (NIS2, DORA, RGPD, AI Act), souveraineté des données. Déterminante dans les secteurs régulés."
+        },
+        {
+          "code": "O",
+          "dim": "Organisation & Talent",
+          "desc": "Résilience organisationnelle, documentation du savoir-faire, profondeur managériale. Facteur clé de transmissibilité."
+        }
+      ],
+      "industriesTitle": "Nos secteurs d'intervention",
+      "allArticles": "Tous nos articles",
+      "articlesCta": "Lire les analyses",
+      "certifCta": "Demander la Certification CIFSO 5000",
+      "contactCta": "Discuter de votre projet",
+      "clusters": [
+        {
+          "id": "finance",
+          "cluster": "Finance & Capital",
+          "image": "/images/theme_fintech.jpg",
+          "vision": "Les organisations financières évoluent dans un environnement de conformité permanent. Leur valeur repose sur la qualité de leurs données, la robustesse de leur gouvernance et la crédibilité de leurs métriques. Le CIFSO 5000 y est particulièrement pertinent pour documenter ce que les audits réglementaires ne capturent pas.",
+          "services": [
+            "Conseil en Stratégie",
+            "Conseil en Technologie",
+            "Certification CIFSO 5000"
+          ],
+          "cifsoDims": [
+            "C",
+            "F",
+            "S"
+          ],
+          "sectors": [
+            {
+              "name": "Banque & Services Financiers",
+              "desc": "Conformité DORA, Bâle IV, IA de risque crédit, modernisation back-office. Les banques doivent documenter leur résilience opérationnelle et leurs dépendances technologiques — enjeux CIFSO majeurs.",
+              "tag": "Réglementé"
+            },
+            {
+              "name": "FinTech & Paiements",
+              "desc": "PSD2, open banking, AML/KYC, architectures paiement temps réel, tokenisation. Croissance rapide exige une gouvernance IP et des métriques SaaS défendables avant tout investissement.",
+              "tag": "Croissance"
+            },
+            {
+              "name": "PropTech & Immobilier",
+              "desc": "Valorisation d'actifs, IA scoring locataire, plateforme transaction, données ESG. Les PropTech combinent logiciel et actif immobilier — une dualité complexe à certifier.",
+              "tag": "Hybride"
+            }
+          ]
+        },
+        {
+          "id": "sante",
+          "cluster": "Santé & Sciences de la Vie",
+          "image": "/images/grade-usecases/uc-due-diligence.jpg",
+          "vision": "Les organisations de santé opèrent avec des exigences de conformité parmi les plus strictes. Leur valeur tient à leur capital data, leurs protocoles et la solidité de leur gouvernance clinique et réglementaire. La certification CIFSO 5000 s'applique avec une granularité adaptée à ces contraintes.",
+          "services": [
+            "Conseil en Stratégie",
+            "Conseil en Technologie",
+            "Logiciels sur-mesure",
+            "Certification CIFSO 5000"
+          ],
+          "cifsoDims": [
+            "C",
+            "F",
+            "S",
+            "O"
+          ],
+          "sectors": [
+            {
+              "name": "Santé & Pharmaceutique",
+              "desc": "Données RGPD, interopérabilité HL7/FHIR, conformité EMA, chaîne d'approvisionnement. Les actifs pharma ont une valeur documentable — brevets, données cliniques, dossiers réglementaires — que le CIFSO 5000 structure.",
+              "tag": "Très réglementé"
+            },
+            {
+              "name": "HealthTech & MedTech",
+              "desc": "IA diagnostique, conformité MDR/IVDR, données de santé, interopérabilité. Les MedTech en croissance cherchent des partenaires M&A : la certification indépendante est leur meilleur argument.",
+              "tag": "Croissance"
+            }
+          ]
+        },
+        {
+          "id": "industrie",
+          "cluster": "Industrie, Énergie & Infrastructure",
+          "image": "/images/theme_marketplace.jpg",
+          "vision": "Les organisations industrielles ont une valeur souvent sous-documentée : savoir-faire opérationnel, contrats long terme, propriété intellectuelle sur les process. Le CIFSO 5000 donne un langage commun entre le dirigeant qui connaît sa valeur et l'investisseur qui a besoin de la vérifier.",
+          "services": [
+            "Conseil en Stratégie",
+            "Conseil en Technologie",
+            "Conseil en M&A",
+            "Certification CIFSO 5000"
+          ],
+          "cifsoDims": [
+            "C",
+            "I",
+            "F",
+            "O"
+          ],
+          "sectors": [
+            {
+              "name": "Énergie & Utilities",
+              "desc": "Transition énergétique, smart grid, EU ETS, IA de gestion actifs. Les utilities doivent documenter leur résilience et leur conformité avant tout processus de cession ou financement.",
+              "tag": "Stratégique"
+            },
+            {
+              "name": "Industrie & Manufacturing",
+              "desc": "Industrie 4.0, maintenance prédictive, MES/ERP intégration, ISO et qualité. Les industriels en consolidation de marché ont besoin d'une base de valeur opposable.",
+              "tag": "Consolidation"
+            },
+            {
+              "name": "Logistique & Supply Chain",
+              "desc": "Visibilité temps réel, IA optimisation flux, conformité douanière, 3PL/4PL. Les acteurs logistiques avec des contrats long terme ont une valeur récurrente à documenter.",
+              "tag": "Récurrent"
+            },
+            {
+              "name": "Construction & Infrastructure",
+              "desc": "BIM, maintenance prédictive, contrats complexes, sous-traitants multi-niveaux. Les EPM et contracteurs ont des structures de propriété et de gouvernance souvent complexes.",
+              "tag": "Complexe"
+            },
+            {
+              "name": "Aérospatiale & Défense",
+              "desc": "Systèmes embarqués, IA mission, ITAR/EAR, sous-traitants stratégiques. Secteur à haute confidentialité : la certification structure ce qui peut être communiqué.",
+              "tag": "Confidentiel"
+            },
+            {
+              "name": "Automobile & Mobilité",
+              "desc": "Digital, IA embarquée, Tier-1/2, logistique et MaaS. La transformation du secteur crée des opportunités M&A entre constructeurs, équipementiers et startups mobilité.",
+              "tag": "Transformation"
+            },
+            {
+              "name": "Agriculture & Agroalimentaire",
+              "desc": "Traçabilité, IA rendement, conformité sanitaire, ESG. Les acteurs agroalimentaires avec des process propriétaires ont une IP à certifier.",
+              "tag": "ESG"
+            },
+            {
+              "name": "Chimie & Matériaux Avancés",
+              "desc": "R&D data, REACH, contrats fournisseurs, propriété intellectuelle. Les chimistes spécialisés ont une valeur IP forte — mal documentée, difficile à céder.",
+              "tag": "IP forte"
+            },
+            {
+              "name": "Transport & Fret",
+              "desc": "Optimisation de flotte, conformité transport, plateformes digitales. La consolidation du secteur crée des occasions de transaction qui nécessitent une base de valeur documentée.",
+              "tag": "Consolidation"
+            }
+          ]
+        },
+        {
+          "id": "commerce",
+          "cluster": "Commerce, Services & Expérience Client",
+          "image": "/images/theme_saas.jpg",
+          "vision": "Les organisations de commerce et services ont une valeur qui tient à leur base client, leur modèle de revenus et leur capacité à fidéliser. La documentation de ces actifs — données CRM, contrats cadres, métriques de rétention — est précisément ce que le CIFSO 5000 structure.",
+          "services": [
+            "Conseil en Stratégie",
+            "Conseil en M&A",
+            "Logiciels sur-mesure",
+            "Certification CIFSO 5000"
+          ],
+          "cifsoDims": [
+            "C",
+            "F",
+            "I"
+          ],
+          "sectors": [
+            {
+              "name": "Retail & E-commerce",
+              "desc": "Omnicanal, IA personnalisation, logistique last-mile, données clients. Les e-commerçants cherchent à valoriser leur base client et leur stack tech avant une levée ou une cession.",
+              "tag": "Données clients"
+            },
+            {
+              "name": "Médias & Entertainment",
+              "desc": "Monétisation contenu, recommandation IA, droits numériques, DSA. Les médias numériques ont une propriété intellectuelle complexe à documenter : données d'audience, droits, algorithmes.",
+              "tag": "IP complexe"
+            },
+            {
+              "name": "Luxe & Retail Premium",
+              "desc": "Authenticité blockchain, expérience omnicanale, clienteling, ESG. Le luxe a une marque à défendre et une chaîne d'authenticité à certifier pour les transactions.",
+              "tag": "Marque"
+            },
+            {
+              "name": "Hôtellerie & Tourisme",
+              "desc": "Revenue management, CRM, données clients, digitalisation. Les groupes hôteliers cherchent à céder des actifs ou des marques — la certification structure la valeur au-delà de l'actif physique.",
+              "tag": "Cession"
+            },
+            {
+              "name": "Télécommunications",
+              "desc": "Modernisation legacy, 5G edge, BEREC, dépendances tech. Les opérateurs télécoms en transformation ont des dépendances technologiques critiques à documenter avant tout processus de fusion.",
+              "tag": "Fusion"
+            }
+          ]
+        },
+        {
+          "id": "tech",
+          "cluster": "Tech, Innovation & Secteur Public",
+          "image": "/images/theme_AI.jpg",
+          "vision": "Les organisations tech ont souvent une valeur concentrée dans leur code, leurs données et leurs équipes. La certification CIFSO 5000 est conçue pour rendre ces actifs immatériels vérifiables, opposables et transmissibles. Pour les institutions publiques, elle documente la maturité numérique de façon indépendante.",
+          "services": [
+            "Conseil en Stratégie",
+            "Conseil en Technologie",
+            "Logiciels sur-mesure",
+            "Certification CIFSO 5000"
+          ],
+          "cifsoDims": [
+            "C",
+            "S",
+            "O"
+          ],
+          "sectors": [
+            {
+              "name": "Technologie & SaaS",
+              "desc": "Architecture multi-tenant, scalabilité, dette technique, EU AI Act, préparation à l'exit. Les SaaS B2B ont une valeur documentable — ARR, NRR, churn, architecture — que la certification structure avant une levée ou une cession.",
+              "tag": "Exit-ready"
+            },
+            {
+              "name": "GovTech & Secteur Public",
+              "desc": "Transformation numérique, souveraineté données, NIS2, DORA. Les institutions publiques doivent démontrer leur maturité numérique à leurs tutelles et partenaires : la certification est une base indépendante.",
+              "tag": "Souveraineté"
+            },
+            {
+              "name": "Éducation & EdTech",
+              "desc": "Apprentissage adaptatif, RGPD éducatif, IA personnalisation. Les EdTech en croissance cherchent à lever des fonds ou à s'associer : la certification leur donne une base de crédibilité indépendante.",
+              "tag": "Impact"
+            }
+          ]
+        }
+      ]
+    }
   },
   "homeSegments": {
     "label": "NOS CLIENTS",

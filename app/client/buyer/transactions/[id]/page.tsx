@@ -88,7 +88,7 @@ export default async function BuyerTransactionDetailPage({
             </span>
           )}
           {asset?.id && (
-            <Link href={`/client/buyer/catalogue/${asset.id}`}
+            <Link href="/client/buyer"
               className="font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-ag-navy transition-colors">
               Fiche actif →
             </Link>

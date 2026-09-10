@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { AssetGrid }     from '@/components/sections/AssetGrid'
-import { AssetCarousel } from '@/components/sections/AssetCarousel'
-import { StatementStrip } from '@/components/sections/StatementStrip'
+import { AssetGrid }          from '@/components/sections/AssetGrid'
+import { AssetCarousel }      from '@/components/sections/AssetCarousel'
+import { StatementStrip }     from '@/components/sections/StatementStrip'
+import { EcosystemDomains }   from '@/components/sections/EcosystemDomains'
 
 const BASE = 'https://aegryn.com'
 const WHAT_WE_BUILD_SLUG: Record<string, string> = {
@@ -55,6 +56,7 @@ export default async function WhatWeBuildPage({ params }: Props) {
       <h1 className="sr-only">{tAssets('page.meta.title')}</h1>
       <AssetCarousel />
       <AssetGrid />
+      <EcosystemDomains />
       <StatementStrip
         label="Aegryn Advisory"
         title={tAdv('hero.title')}

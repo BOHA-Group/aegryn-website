@@ -61,16 +61,16 @@ export default async function TransactPage({ params }: Props) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/transact/catalog"
+              href="/transact/mandate"
               className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
-              {t('ctaCatalog')} <ArrowUpRight size={13} />
+              {t('ctaMandate')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/transact/mandate"
+              href="/grade"
               className="inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
-              {t('ctaMandate')}
+              {t('ctaGrade')}
             </Link>
           </div>
         </div>
@@ -138,10 +138,10 @@ export default async function TransactPage({ params }: Props) {
               {t('valueDesc')}
             </p>
             <Link
-              href="/transact/catalog"
+              href="/transact/mandate"
               className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-black transition-colors"
             >
-              {t('valueCta')} <ArrowUpRight size={13} />
+              {t('ctaMandate')} <ArrowUpRight size={13} />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
@@ -194,10 +194,10 @@ export default async function TransactPage({ params }: Props) {
               {t('ctaStripMandate')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/transact/catalog"
+              href="/contact"
               className="inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-all"
             >
-              {t('ctaStripCatalog')}
+              {t('ctaStripContact')}
             </Link>
           </div>
         </div>

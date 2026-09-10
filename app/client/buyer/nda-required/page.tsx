@@ -30,7 +30,7 @@ export default async function NdaRequiredPage() {
     .not('signed_at', 'is', null)
     .maybeSingle()
 
-  if (existing) redirect('/client/buyer/catalogue')
+  if (existing) redirect('/client/buyer')
 
   const t = await getTranslations('nda')
 
@@ -144,7 +144,7 @@ export default async function NdaRequiredPage() {
             {t('acceptSectionLabel')}
           </p>
           <NdaAcceptForm
-            redirectTo="/client/buyer/catalogue"
+            redirectTo="/client/buyer"
             ndaVersion={NDA_VERSION}
             check1Label={t('check1')}
             check2Label={t('check2')}

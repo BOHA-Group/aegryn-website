@@ -15,24 +15,23 @@ export default async function BuyerNav({ unreadCount }: { unreadCount: number })
     {
       label: t('navGroupAcquisitions'),
       items: [
-        { href: '/client/buyer/catalogue',    label: t('navCatalog'),      icon: 'BookOpen' },
-        { href: '/client/buyer/offres',       label: t('navOffers'),       icon: 'Gavel' },
-        { href: '/client/buyer/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft' },
+        { href: '/client/buyer/notifications', label: t('navNotifications'), icon: 'Bell', badge: unreadCount },
+        { href: '/client/buyer/offres',         label: t('navOffers'),        icon: 'Gavel' },
+        { href: '/client/buyer/transactions',   label: t('navTransactions'),  icon: 'ArrowRightLeft' },
         // { href: '/client/buyer/commissions', label: t('navCommissions'), icon: 'Receipt' }, // parking-lot
       ],
     },
     {
       label: t('navGroupCompliance'),
       items: [
-        { href: '/client/buyer/kyc',      label: t('navKyc'),       icon: 'ShieldCheck' },
-        { href: '/client/buyer/nda-view', label: t('navBuyerNda'),  icon: 'FileText'    },
+        { href: '/client/buyer/kyc',      label: t('navKyc'),      icon: 'ShieldCheck' },
+        { href: '/client/buyer/nda-view', label: t('navBuyerNda'), icon: 'FileText'    },
       ],
     },
     {
       label: t('navGroupAccount'),
       items: [
-        { href: '/client/buyer/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
-        { href: '/client/buyer/account',        label: t('navMyAccount'),     icon: 'UserCircle' },
+        { href: '/client/buyer/account', label: t('navMyAccount'), icon: 'UserCircle' },
       ],
     },
   ]

@@ -25,7 +25,7 @@ export default async function NdaAssetPage({
     .eq('status', 'published')
     .single()
 
-  if (!asset) redirect('/client/buyer/catalogue')
+  if (!asset) redirect('/client/buyer')
 
   /* Vérifie que le NDA général est signé */
   const { data: generalNda } = await supa

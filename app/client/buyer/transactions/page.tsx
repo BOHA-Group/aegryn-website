@@ -81,9 +81,9 @@ export default async function BuyerTransactionsPage() {
           <p className="font-sans text-[14px] text-gray-400 mb-4">
             {t('noTransactions')} Soumettez une offre pour démarrer un processus d&apos;acquisition.
           </p>
-          <Link href="/client/buyer/catalogue"
+          <Link href="/client/buyer/notifications"
             className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
-            Explorer le catalogue <ArrowUpRight size={10} />
+            Mes alertes <ArrowUpRight size={10} />
           </Link>
         </div>
       ) : (

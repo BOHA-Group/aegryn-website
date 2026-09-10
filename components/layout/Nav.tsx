@@ -5,7 +5,7 @@ import NextLink          from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { useState, useRef, useEffect, useCallback, type ComponentProps } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ChevronDown, User, UserCircle } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
@@ -34,7 +34,6 @@ const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactOverview',     href: '/transact' as LinkHref },
   { labelKey: 'craftTransactGradeNew',     href: '/grade' },
   { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
-  { labelKey: 'craftTransactCatalog',      href: '/transact/catalog' },
   { labelKey: 'craftTransactSell',         href: '/transact/how-to-sell' },
   { labelKey: 'craftTransactBuy',          href: '/transact/how-to-buy' },
 ]
@@ -243,10 +242,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  const tInd = useTranslations('industries')
   const locale = useLocale()
-  const [openCluster, setOpenCluster] = useState<number | null>(null)
-  const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
   const founderHref = `/${locale}/about#fondateur`
 
   function goToFounder() {
@@ -308,38 +304,21 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           </div>
         </div>
 
-        {/* Nos industries — clusters dépliables */}
-        <div className="bg-ag-white p-4 overflow-y-auto" style={{ maxHeight: 420 }}>
+        {/* Nos industries — lien direct */}
+        <div className="bg-ag-white p-4 flex flex-col gap-3">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
             {t('whoIndustries')}
           </p>
           <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
             {t('whoIndustriesDesc')}
           </p>
-          <div className="divide-y divide-ag-border border-t border-ag-border">
-            {clusters.map((cluster, ci) => {
-              const isOpen = openCluster === ci
-              return (
-                <div key={ci}>
-                  <button
-                    onClick={() => setOpenCluster(isOpen ? null : ci)}
-                    style={{ fontWeight: 400 }}
-                    className="w-full flex items-center justify-between py-2 text-left group font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
-                  >
-                    <span>{cluster.cluster}</span>
-                    <span className="text-ag-gray-light leading-none">{isOpen ? '−' : '+'}</span>
-                  </button>
-                  {isOpen && (
-                    <div className="pb-2 pl-1 flex flex-col gap-1">
-                      {cluster.items.map(item => (
-                        <span key={item.name} className="font-sans text-[12px] text-ag-gray leading-snug">{item.name}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          <Link
+            href={'/industries' as LinkHref}
+            onClick={onClose}
+            className="inline-flex items-center gap-2 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
+          >
+            {t('whoIndustriesLink')} <ArrowUpRight size={12} />
+          </Link>
         </div>
 
         {/* Nous rejoindre */}
@@ -375,11 +354,8 @@ export interface NavUser {
 
 export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
-  const tInd = useTranslations('industries')
   const pathname = usePathname()
   const locale = useLocale()
-  const clusters = tInd.raw('clusters') as { cluster: string; items: { name: string }[] }[]
-  const [mobileOpenCluster, setMobileOpenCluster] = useState<number | null>(null)
   
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
@@ -762,33 +738,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </p>
                   </div>
 
-                  {/* Nos industries — clusters dépliables */}
+                  {/* Nos industries — lien direct */}
                   <div className="mt-2 pt-2 border-t border-white/10">
                     <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-2">{t('whoIndustries')}</p>
-                    <div className="divide-y divide-white/10">
-                      {clusters.map((cluster, ci) => {
-                        const isOpen = mobileOpenCluster === ci
-                        return (
-                          <div key={ci}>
-                            <button
-                              onClick={() => setMobileOpenCluster(isOpen ? null : ci)}
-                              style={{ fontWeight: 400 }}
-                              className="w-full flex items-center justify-between py-2 font-sans text-[13px] text-white/50 hover:text-white transition-colors text-left"
-                            >
-                              <span>{cluster.cluster}</span>
-                              <span className="text-white/60 leading-none">{isOpen ? '−' : '+'}</span>
-                            </button>
-                            {isOpen && (
-                              <div className="pb-2 pl-3 flex flex-col gap-1">
-                                {cluster.items.map(item => (
-                                  <span key={item.name} className="font-sans text-[12px] text-white/35 leading-snug">{item.name}</span>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        )
-                      })}
-                    </div>
+                    <Link href={'/industries' as LinkHref} onClick={closeMobile}
+                      className="inline-flex items-center gap-2 py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      {t('whoIndustriesLink')} <ArrowUpRight size={12} />
+                    </Link>
                   </div>
 
                   {/* Nous rejoindre */}
