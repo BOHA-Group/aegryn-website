@@ -102,8 +102,7 @@ export function GradeAudienceTable() {
             return (
               <div
                 key={row.profile}
-                className="audience-card bg-white rounded-2xl overflow-hidden border border-ag-border flex flex-col"
-                style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}
+                className="audience-card bg-white border border-ag-border flex flex-col"
               >
                 {/* Card header */}
                 <div
@@ -170,11 +169,11 @@ export function GradeAudienceTable() {
             <span className="hidden group-open:inline">Collapse ↑</span>
           </summary>
 
-          <div className="mt-4 overflow-x-auto rounded-2xl border border-ag-border" style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.05)' }}>
+          <div className="mt-4 overflow-x-auto border border-ag-border">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-ag-navy">
-                  <th className="px-5 py-4 rounded-tl-2xl">
+                  <th className="px-5 py-4">
                     <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/40">Profile</span>
                   </th>
                   {GRADES.map((g, gi) => {
@@ -182,7 +181,7 @@ export function GradeAudienceTable() {
                     return (
                       <th
                         key={g}
-                        className={`px-4 py-4 text-center ${gi === GRADES.length - 1 ? 'rounded-tr-2xl' : ''}`}
+                        className={`px-4 py-4 text-center ${gi === GRADES.length - 1 ? '' : ''}`}
                       >
                         <span
                           className="inline-block font-mono text-[12px] font-bold px-2.5 py-1 rounded-full"
@@ -203,7 +202,7 @@ export function GradeAudienceTable() {
                       key={row.profile}
                       className={`border-t border-ag-border ${ri % 2 === 0 ? 'bg-white' : 'bg-ag-off-white'}`}
                     >
-                      <td className={`px-5 py-4 border-r border-ag-border ${ri === rows.length - 1 ? 'rounded-bl-2xl' : ''}`}>
+                      <td className={`px-5 py-4 border-r border-ag-border ${ri === rows.length - 1 ? '' : ''}`}>
                         <div className="flex items-center gap-2 whitespace-nowrap">
                           <Icon size={13} className="text-ag-gray-light shrink-0" />
                           <p className="font-sans font-semibold text-ag-black text-[12px]">
@@ -216,7 +215,7 @@ export function GradeAudienceTable() {
                           key={gi}
                           className={`px-4 py-4 border-r border-ag-border last:border-0 align-top ${
                             gi === active ? 'bg-ag-apex/5' : ''
-                          } ${ri === rows.length - 1 && gi === GRADES.length - 1 ? 'rounded-br-2xl' : ''}`}
+                          } ${ri === rows.length - 1 && gi === GRADES.length - 1 ? '' : ''}`}
                         >
                           <p className="font-sans text-[11px] text-ag-gray leading-relaxed min-w-[120px]">
                             {reading}
