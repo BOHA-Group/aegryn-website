@@ -177,7 +177,6 @@ export function generateAegrynMetadata({
       'DC.rights':     'Copyright © 2026 Aegryn',
       /* Rating / classification */
       'rating':        'general',
-      'revisit-after': '7 days',
       /* AI-optimised */
       'ai-content-declaration': 'human-authored',
     },

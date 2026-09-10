@@ -10,8 +10,15 @@
  *   B) redirection vers /contact
  *   C) envoi email via Resend
  */
+import type { Metadata } from 'next'
 import AssetTeaserDocument from '@/components/transaction/AssetTeaserDocument'
 import { subblinkTeaser }   from '@/data/transaction/teasers/subblinkTeaser'
+
+export const metadata: Metadata = {
+  title: 'Teaser — Aegryn TRANSACT',
+  description: 'Aperçu public du lot en vente sur Aegryn TRANSACT. Actif tech certifié CIFSO v4.0 — accédez au dossier complet après pré-qualification.',
+  robots: { index: false, follow: false },
+}
 
 /* ID de l'actif en base — à remplacer par l'UUID réel après db push */
 const SUBBLINK_ASSET_ID = '00000000-0000-0000-0000-000000000001'

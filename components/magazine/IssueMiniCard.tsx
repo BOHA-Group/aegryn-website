@@ -85,7 +85,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
-        alt=""
+        alt={`Aegryn Magazine Issue ${padNum} — ${issue.title}`}
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
       />
       <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />

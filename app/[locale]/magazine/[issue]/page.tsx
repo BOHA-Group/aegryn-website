@@ -100,6 +100,7 @@ export default async function IssuePage({ params }: Props) {
 
       {/* ── Layout 2 colonnes : sidebar fixe + contenu scrollable ── */}
       <div className="relative">
+        <h1 className="sr-only">{`Aegryn Magazine — Issue ${String(issue.number).padStart(2, '0')} — ${issue.title}`}</h1>
         {/* Sidebar Barnes verticale fixe */}
         <MagazineNav
           sections={navSections}

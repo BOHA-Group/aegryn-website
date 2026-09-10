@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const slug = ABOUT_SLUG[locale] ?? '/about'
   const base = generateAegrynMetadata({
-    title: 'About Aegryn | The trust infrastructure for European tech M&A',
+    title: 'About Aegryn | Trust Infrastructure for European Tech M&A',
     description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. Aegryn is the independent certification and transaction infrastructure for European tech M&A.',
     path: slug,
     locale,

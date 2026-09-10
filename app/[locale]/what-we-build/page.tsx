@@ -48,9 +48,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function WhatWeBuildPage({ params }: Props) {
   const { locale } = await params
   const tAdv = await getTranslations({ locale, namespace: 'advisory' })
+  const tAssets = await getTranslations({ locale, namespace: 'assets' })
 
   return (
     <>
+      <h1 className="sr-only">{tAssets('page.meta.title')}</h1>
       <AssetCarousel />
       <AssetGrid />
       <StatementStrip

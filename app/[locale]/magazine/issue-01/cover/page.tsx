@@ -32,6 +32,8 @@ export default async function IssueCoverPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-neutral-200 flex flex-col">
 
+      <h1 className="sr-only">Aegryn Magazine Issue 01 — Cover Preview</h1>
+
       {/* ── Top bar ── */}
       <div className="sticky top-0 z-20 bg-white border-b border-black/10
                       flex items-center justify-between px-6 md:px-12 py-4">
