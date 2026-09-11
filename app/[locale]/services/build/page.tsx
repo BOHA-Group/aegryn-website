@@ -379,21 +379,43 @@ export default async function BuildServicePage({ params }: Props) {
             {t('process.label')}
           </p>
           <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
+            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12 whitespace-pre-line"
             style={{ fontSize: 'clamp(28px,4vw,52px)' }}
           >
             {t('process.title')}
           </h2>
-          <div className="flex flex-col divide-y divide-ag-border border border-ag-border rounded-2xl overflow-hidden">
-            {processSteps.map((step, i) => (
-              <div key={step.num} className={`flex flex-col md:flex-row gap-6 md:gap-12 p-8 ${i % 2 === 1 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
-                <span className="font-mono text-[11px] tracking-[0.22em] text-ag-apex-ink shrink-0 md:w-8">{step.num}</span>
-                <div className="flex-1">
-                  <h3 className="font-sans font-bold text-ag-black text-[16px] mb-2">{step.title}</h3>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{step.desc}</p>
+
+          {/* 5 cards en ligne — scroll horizontal sur mobile */}
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+            <div className="flex gap-0 min-w-[720px] md:min-w-0">
+              {processSteps.map((step, i) => (
+                <div key={step.num} className="flex items-stretch flex-1">
+                  {/* Card */}
+                  <div className="flex-1 flex flex-col gap-3 rounded-2xl border border-ag-border bg-ag-white p-5 hover:bg-ag-off-white transition-colors">
+                    {/* Numéro */}
+                    <span className="font-mono text-[10px] tracking-[0.28em] text-ag-apex">
+                      {step.num}
+                    </span>
+                    {/* Titre */}
+                    <h3 className="font-sans font-bold text-ag-black text-[13px] leading-snug">
+                      {step.title}
+                    </h3>
+                    {/* Description */}
+                    <p className="font-sans text-[12px] text-ag-gray leading-relaxed flex-1">
+                      {step.desc}
+                    </p>
+                  </div>
+                  {/* Connecteur → entre les étapes (sauf la dernière) */}
+                  {i < processSteps.length - 1 && (
+                    <div className="flex items-center justify-center w-6 shrink-0">
+                      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" className="text-ag-border">
+                        <path d="M0 5H13M10 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
