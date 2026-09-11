@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { redirect }     from 'next/navigation'
 import { getUser }      from '@/lib/supabaseServer'
+import LockedSection from '@/app/client/LockedSection'
 
 export const metadata: Metadata = {
   title: 'Subscription — Partner Space Aegryn',
@@ -11,8 +12,11 @@ export const metadata: Metadata = {
    Code complet : git show HEAD~3:app/client/partner/subscription/page.tsx
    Voir docs/parking-lot.md § "Fiche Expert & Abonnement partenaire"
    Pour réactiver : restaurer le code original + décommenter PartnerNav.tsx lignes 21-22 */
+
 export default async function PartnerSubscriptionPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
-  redirect('/client/partner')
+
+  /* ── SECTION VERROUILLÉE — retirer quand prêt ── */
+  return <LockedSection title="Abonnement" />
 }

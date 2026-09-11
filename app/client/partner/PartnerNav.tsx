@@ -9,26 +9,30 @@ export default async function PartnerNav({ unreadCount }: { unreadCount: number 
     {
       label: t('navGroupOverview'),
       items: [
-        { href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard' },
+        { href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard', locked: true },
+      ],
+    },
+    {
+      label: 'Ma fiche',
+      items: [
+        { href: '/client/partner/expert-profile', label: t('navExpertProfile') || 'Fiche expert', icon: 'BadgeCheck' },
       ],
     },
     {
       label: t('navGroupActivity'),
       items: [
-        { href: '/client/partner/certifications', label: t('navCosigning'),          icon: 'Award' },
-        { href: '/client/partner/introductions',  label: t('navIntroductions'),       icon: 'Users' },
-        { href: '/client/partner/mandates',       label: t('navMandates'),            icon: 'Briefcase' },
-        // { href: '/client/partner/subscription',   label: t('navPartnerSubscription'), icon: 'CreditCard' },   // MASQUÉ 2026-09-03 — abonnement fiche expert 89€/mois (parking-lot)
-        // { href: '/client/partner/expert-profile', label: t('navExpertProfile'),        icon: 'BadgeCheck' },  // MASQUÉ 2026-09-03 — publication fiche expert (parking-lot)
+        { href: '/client/partner/certifications', label: t('navCosigning'),    icon: 'Award',     locked: true },
+        { href: '/client/partner/introductions',  label: t('navIntroductions'), icon: 'Users',     locked: true },
+        { href: '/client/partner/mandates',       label: t('navMandates'),      icon: 'Briefcase', locked: true },
       ],
     },
     {
       label: t('navGroupAccount'),
       items: [
-        { href: '/client/partner/kyc',           label: t('navKyc'),          icon: 'ShieldCheck' },
-        { href: '/client/partner/nda',           label: t('navPartnerNda'),   icon: 'FileText'    },
-        { href: '/client/partner/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
-        { href: '/client/partner/account',        label: t('navMyAccount'),     icon: 'UserCircle' },
+        { href: '/client/partner/kyc',           label: t('navKyc'),           icon: 'ShieldCheck', locked: true },
+        { href: '/client/partner/nda',           label: t('navPartnerNda'),    icon: 'FileText',    locked: true },
+        { href: '/client/partner/notifications', label: t('navNotifications'), icon: 'Bell',        locked: true },
+        { href: '/client/partner/account',       label: t('navMyAccount'),     icon: 'UserCircle'  },
       ],
     },
   ]

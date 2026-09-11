@@ -6,6 +6,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { Bell } from 'lucide-react'
 import NotificationsClient from './NotificationsClient'
+import LockedSection from '@/app/client/LockedSection'
 
 export const metadata: Metadata = {
   title: 'Notifications — Buyer Space Aegryn',
@@ -28,44 +29,6 @@ export default async function BuyerNotificationsPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
 
-  const cookieStore = await cookies()
-  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
-  const t = await getTranslations({ locale, namespace: 'client.buyer.notifications' })
-  const tc = await getTranslations({ locale, namespace: 'client.common' })
-
-  const supa = createServiceClient()
-  const { data } = await supa
-    .from('user_notifications')
-    .select('id, type, title, body, link, payload, read_at, dismissed_at, created_at')
-    .eq('user_id', user.id)
-    .or('target_role.eq.buyer,target_role.is.null')
-    .is('dismissed_at', null)
-    .is('deleted_at', null)
-    .order('created_at', { ascending: false })
-    .limit(50)
-
-  const notifications = (data ?? []) as Notification[]
-
-  return (
-    <div className="p-8 max-w-3xl">
-      <div className="mb-8">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">{t('areaLabel')}</p>
-        <h1 className="font-sans font-bold text-gray-900 text-[24px] tracking-tight">{t('title')}</h1>
-        <p className="font-sans text-[13px] text-gray-400 mt-1">
-          {t('subtitle')}
-        </p>
-      </div>
-
-      {notifications.length === 0 ? (
-        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
-          <Bell size={24} className="text-gray-300 mx-auto mb-4" />
-          <p className="font-sans text-[14px] text-gray-400">
-            {tc('noNotifications')}
-          </p>
-        </div>
-      ) : (
-        <NotificationsClient notifications={notifications} />
-      )}
-    </div>
-  )
+  /* ── SECTION VERROUILLÉE — retirer quand prêt ── */
+  return <LockedSection title="Notifications" />
 }

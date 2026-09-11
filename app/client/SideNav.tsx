@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, Gavel, ArrowRightLeft, Receipt,
   ShieldCheck, Bell, UserCircle, Settings, FileText,
   Award, Users, DollarSign, Briefcase, BadgeCheck, CreditCard,
-  FolderLock, FolderOpen,
+  FolderLock, FolderOpen, Lock,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -23,6 +23,8 @@ export type NavItem = {
   icon:     string
   badge?:   number
   disabled?: boolean
+  /** Griser l'item et afficher un cadenas — section verrouillée temporairement */
+  locked?:  boolean
 }
 
 export type NavGroup = {
@@ -53,6 +55,22 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
         <span className="font-sans text-[12px] flex-1 leading-tight">{item.label}</span>
         <span className="font-mono text-[8px] uppercase tracking-widest text-white/20 border border-white/10 px-1 py-px">Requis</span>
       </span>
+    )
+  }
+
+  if (item.locked) {
+    return (
+      <Link
+        href={item.href}
+        prefetch={false}
+        className="flex items-center gap-2.5 px-3 py-2 text-white/20 cursor-default select-none pointer-events-none"
+        aria-disabled="true"
+        tabIndex={-1}
+      >
+        <Icon size={13} className="shrink-0" />
+        <span className="font-sans text-[12px] flex-1 leading-tight">{item.label}</span>
+        <Lock size={10} className="shrink-0 opacity-50" />
+      </Link>
     )
   }
 

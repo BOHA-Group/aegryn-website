@@ -35,28 +35,28 @@ export default async function SellerNav({
     {
       label: t('navGroupOverview'),
       items: [
-        { href: '/client/seller', label: t('navDashboard'), icon: 'LayoutDashboard' },
+        { href: '/client/seller', label: t('navDashboard'), icon: 'LayoutDashboard', locked: true },
       ],
     },
     {
       label: t('navGroupFiles'),
       items: [
-        { href: '/client/seller/actifs',       label: t('navAssets'),       icon: 'FileText' },
-        { href: '/client/seller/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft' },
-        ...dataRoomItems,
+        { href: '/client/seller/actifs',       label: t('navAssets'),       icon: 'FileText',       locked: true },
+        { href: '/client/seller/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft', locked: true },
+        ...dataRoomItems.map(i => ({ ...i, locked: true as const })),
       ],
     },
     {
       label: t('navGroupCompliance'),
       items: [
-        { href: '/client/seller/kyc',      label: t('navKyc'),       icon: 'ShieldCheck' },
-        { href: '/client/seller/nda-view', label: t('navSellerNda'), icon: 'FileText' },
+        { href: '/client/seller/kyc',      label: t('navKyc'),       icon: 'ShieldCheck', locked: true },
+        { href: '/client/seller/nda-view', label: t('navSellerNda'), icon: 'FileText',    locked: true },
       ],
     },
     {
       label: t('navGroupAccount'),
       items: [
-        { href: '/client/seller/notifications', label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
+        { href: '/client/seller/notifications', label: t('navNotifications'), icon: 'Bell',       locked: true },
         { href: '/client/seller/account',       label: t('navMyAccount'),     icon: 'UserCircle' },
       ],
     },

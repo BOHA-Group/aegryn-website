@@ -3091,6 +3091,120 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+  /* ── Discipline : Conseil en Technologie ────────────────────── */
+  {
+    slug:     'conseil-technologie-architecture-cloud-souverainete-donnees-2025',
+    category: 'strategy' as const,
+    date:     '2025-12-03',
+    readMin:  10,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Conseil en Technologie : architecture, cloud souverain et souveraineté des données comme leviers de valeur",
+      en: "Technology Advisory: architecture, sovereign cloud and data sovereignty as value drivers",
+    },
+    excerpt: {
+      fr: "Pour une organisation technologique, la qualité de l'architecture, la souveraineté de l'hébergement et la maîtrise des données ne sont pas seulement des contraintes techniques — ce sont des leviers de valeur défendables face aux investisseurs et acquéreurs.",
+      en: "For a technology organisation, the quality of architecture, sovereignty of hosting and control of data are not merely technical constraints — they are defensible value drivers before investors and acquirers.",
+    },
+    keywords: ['architecture SaaS valeur', 'cloud souverain Europe', 'NIS2 conformité valorisation', 'dette technique M&A', 'souveraineté données investisseur'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Dans la très grande majorité des transactions tech européennes, la due diligence technique révèle des lacunes qui conduisent à des décotes ou des conditions suspensives. Selon les données Gartner 2024, 74% des acquéreurs PE ont réduit leur offre initiale suite à des problèmes d'architecture identifiés en due diligence. Le conseil en technologie n'est pas un poste de coût : c'est une fonction créatrice de valeur quand elle est correctement positionnée.",
+        en: "In the vast majority of European tech transactions, technical due diligence reveals gaps that lead to discounts or suspensive conditions. According to Gartner 2024 data, 74% of PE acquirers reduced their initial offer following architecture issues identified in due diligence. Technology advisory is not a cost centre: it is a value-creating function when correctly positioned.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '74%',        label: { fr: "des acquéreurs PE ont réduit leur offre suite à des lacunes techniques (Gartner 2024)", en: "of PE acquirers reduced their offer due to technical gaps (Gartner 2024)" } },
+        { value: '41 Mrd EUR', label: { fr: "marché cloud souverain Europe 2028 estimé (IDC / Gartner 2024)", en: "estimated European sovereign cloud market 2028 (IDC / Gartner 2024)" } },
+        { value: '2 ans',      label: { fr: "délai moyen de mise en conformité NIS2 pour une organisation tech (ENISA 2024)", en: "average NIS2 compliance timeline for a tech organisation (ENISA 2024)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "Architecture : la lisibilité comme condition de la valorisation", en: "Architecture: readability as a condition of valuation" } },
+      { type: 'p' as const, text: {
+        fr: "Une architecture technique non documentée est une architecture indéfendable. Dans un contexte M&A, l'acquéreur ne peut pas quantifier le risque d'une architecture qu'il ne comprend pas — il l'applique donc dans sa totalité sur le prix. L'enjeu du conseil en technologie est de rendre l'architecture lisible : schémas d'architecture documentés, identification des dépendances critiques, cartographie de la dette technique avec plan de remédiation chiffré.",
+        en: "An undocumented technical architecture is an indefensible architecture. In an M&A context, the acquirer cannot quantify the risk of an architecture they cannot understand — so they apply it in full to the price. The role of technology advisory is to make architecture readable: documented architecture diagrams, identification of critical dependencies, mapping of technical debt with a costed remediation plan.",
+      }},
+      { type: 'h2' as const, text: { fr: "Cloud souverain : d'une contrainte réglementaire à un avantage concurrentiel", en: "Sovereign cloud: from regulatory constraint to competitive advantage" } },
+      { type: 'p' as const, text: {
+        fr: "Le cadre EUCS (European Union Cloud Scheme) de l'ENISA et la directive NIS2 ont transformé le cloud souverain d'une option en une exigence pour les organisations ciblant les marchés B2G, les données de santé ou les infrastructures critiques. Une organisation hébergée sur un cloud certifié SecNumCloud (ANSSI), C5 (BSI) ou ISGISF (NL) dispose d'un actif réglementaire valorisable — notamment sur les marchés publics et dans les secteurs régulés.",
+        en: "The ENISA EUCS framework and the NIS2 directive have transformed sovereign cloud from an option to a requirement for organisations targeting B2G markets, health data or critical infrastructure. An organisation hosted on SecNumCloud (ANSSI), C5 (BSI) or ISGISF (NL) certified cloud has a regulatory asset that can be valorised — particularly in public markets and regulated sectors.",
+      }},
+      { type: 'h2' as const, text: { fr: "Souveraineté des données : le capital invisible que les bilans ne capturent pas", en: "Data sovereignty: the invisible capital that balance sheets do not capture" } },
+      { type: 'p' as const, text: {
+        fr: "La localisation des données, la maîtrise des flux et la conformité RGPD ne sont pas seulement des questions juridiques. Pour un acquéreur institutionnel, la capacité à démontrer la souveraineté des données client est un facteur de dérisque direct : elle réduit le risque de blocage réglementaire post-closing, clarifie les obligations de transfert et protège l'acquéreur des engagements passés non documentés.",
+        en: "Data location, flow control and GDPR compliance are not merely legal questions. For an institutional acquirer, the ability to demonstrate customer data sovereignty is a direct de-risking factor: it reduces the risk of post-closing regulatory blockage, clarifies transfer obligations and protects the acquirer from undocumented past commitments.",
+      }},
+      { type: 'h2' as const, text: { fr: "Dette technique : documenter pour ne pas subir la décote", en: "Technical debt: document to avoid the discount" } },
+      { type: 'list' as const, items: [
+        { fr: "Cartographier la dette : identifier les modules, les versions obsolètes et les dépendances à risque", en: "Map the debt: identify modules, obsolete versions and risky dependencies" },
+        { fr: "Chiffrer le coût de remédiation : un plan de remédiation chiffré par un tiers technique indépendant est plus convaincant qu'une estimation interne", en: "Cost the remediation: a costed remediation plan by an independent technical third party is more convincing than an internal estimate" },
+        { fr: "Prioriser avant la due diligence : résoudre les points bloquants identifiés (vulnérabilités critiques, licences incompatibles, secrets hardcodés)", en: "Prioritise before due diligence: resolve identified blocking points (critical vulnerabilities, incompatible licences, hardcoded secrets)" },
+        { fr: "Présenter la dette comme maîtrisée, non comme découverte : la différence entre une décote évitable et un deal breaker", en: "Present debt as controlled, not discovered: the difference between an avoidable discount and a deal breaker" },
+      ]},
+      { type: 'h2' as const, text: { fr: "Le conseil en technologie Aegryn", en: "Aegryn Technology Advisory" } },
+      { type: 'p' as const, text: {
+        fr: "L'approche Aegryn combine l'audit technique indépendant, la planification de la migration cloud et la préparation à la due diligence tech. En amont d'une cession ou d'une levée de fonds, un engagement de conseil en technologie de 8 à 12 semaines permet de traiter les points bloquants, de produire la documentation attendue par les acquéreurs et de positionner l'organisation dans les meilleures conditions pour la négociation.",
+        en: "The Aegryn approach combines independent technical audit, cloud migration planning and tech due diligence preparation. In advance of a disposal or fundraising, an 8 to 12-week technology advisory engagement addresses blocking points, produces the documentation expected by acquirers and positions the organisation in the best conditions for negotiation.",
+      }},
+    ],
+  },
+
+  /* ── Discipline : Construction de logiciels sur-mesure ──────── */
+  {
+    slug:     'logiciels-sur-mesure-actif-valorisable-levier-valeur-2025',
+    category: 'strategy' as const,
+    date:     '2025-12-10',
+    readMin:  9,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Logiciels sur-mesure : construire un actif propriétaire valorisable dès le départ",
+      en: "Custom software: building a proprietary asset that can be valued from day one",
+    },
+    excerpt: {
+      fr: "Un logiciel sur-mesure bien conçu n'est pas un centre de coût — c'est un actif stratégique. Les décisions d'architecture, de propriété intellectuelle et de documentation prises dès la conception déterminent si ce logiciel sera valorisable dans une transaction ou restera indéfendable.",
+      en: "Well-designed custom software is not a cost centre — it is a strategic asset. Architecture, intellectual property and documentation decisions made at design stage determine whether that software will be valorisable in a transaction or remain indefensible.",
+    },
+    keywords: ['logiciel sur-mesure valorisation', 'propriété intellectuelle code', 'IP logicielle M&A', 'software asset valeur', 'actif propriétaire certifiable'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Chaque année, des centaines d'organisations européennes investissent dans le développement de logiciels sur-mesure sans jamais en faire un actif défendable. La raison n'est pas technique : c'est un problème de positionnement. Un logiciel conçu uniquement pour fonctionner — sans documentation, sans propriété intellectuelle formalisée, sans métriques — est un logiciel qu'un tiers ne peut pas valider. Et un actif qu'un tiers ne peut pas valider ne peut pas être valorisé.",
+        en: "Every year, hundreds of European organisations invest in custom software development without ever making it a defensible asset. The reason is not technical: it is a positioning problem. Software designed only to function — without documentation, without formalised intellectual property, without metrics — is software that a third party cannot validate. And an asset that a third party cannot validate cannot be valued.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '82%',        label: { fr: "des logiciels sur-mesure n'ont pas de documentation de propriété intellectuelle formalisée (EUIPO 2024)", en: "of custom software has no formalised intellectual property documentation (EUIPO 2024)" } },
+        { value: '20-40%',     label: { fr: "de décote appliquée par les acquéreurs PE sur les actifs sans IP formalisée (Gartner 2024)", en: "discount applied by PE acquirers on assets without formalised IP (Gartner 2024)" } },
+        { value: '6-9 mois',   label: { fr: "délai moyen pour formaliser l'IP d'un logiciel existant en vue d'une cession (INPI 2023)", en: "average time to formalise IP of an existing software ahead of disposal (INPI 2023)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "Les décisions de conception qui déterminent la valorisation", en: "Design decisions that determine valuation" } },
+      { type: 'p' as const, text: {
+        fr: "La valorisation d'un logiciel sur-mesure dans un contexte M&A repose sur trois dimensions : la propriété intellectuelle (qui possède légalement le code ?), la documentation (un tiers peut-il comprendre et reprendre le projet ?), et la souveraineté des données (les données traitées peuvent-elles être transférées ?). Ces trois dimensions se décident en grande partie lors de la conception initiale.",
+        en: "The valuation of custom software in an M&A context rests on three dimensions: intellectual property (who legally owns the code?), documentation (can a third party understand and take over the project?), and data sovereignty (can the data processed be transferred?). These three dimensions are largely decided during initial design.",
+      }},
+      { type: 'h2' as const, text: { fr: "Propriété intellectuelle : qui possède le code ?", en: "Intellectual property: who owns the code?" } },
+      { type: 'p' as const, text: {
+        fr: "La première question posée par tout acquéreur est la plus simple : à qui appartient ce logiciel ? Les réponses sont souvent ambiguës. Code développé par des freelances sans clause de cession de droits, composants open source sous licences incompatibles avec une cession commerciale, algorithmes développés par des salariés dont les contrats ne prévoient pas de cession explicite. Chacune de ces situations crée un risque juridique direct qui se traduit en décote ou en blocage.",
+        en: "The first question asked by any acquirer is the simplest: who owns this software? The answers are often ambiguous. Code developed by freelancers without rights assignment clauses, open source components under licences incompatible with commercial disposal, algorithms developed by employees whose contracts do not provide for explicit assignment. Each of these situations creates a direct legal risk that translates into a discount or a blocking point.",
+      }},
+      { type: 'h2' as const, text: { fr: "Documentation : la condition de la transmissibilité", en: "Documentation: the condition of transferability" } },
+      { type: 'list' as const, items: [
+        { fr: "Documentation fonctionnelle : que fait le logiciel, pour qui, dans quels contextes ?", en: "Functional documentation: what does the software do, for whom, in what contexts?" },
+        { fr: "Documentation technique : architecture, flux de données, dépendances, APIs", en: "Technical documentation: architecture, data flows, dependencies, APIs" },
+        { fr: "Documentation opérationnelle : runbooks, procédures de déploiement, gestion des incidents", en: "Operational documentation: runbooks, deployment procedures, incident management" },
+        { fr: "Tests automatisés : couverture minimale de 70% comme signal de robustesse pour un acquéreur", en: "Automated tests: minimum 70% coverage as a robustness signal for an acquirer" },
+      ]},
+      { type: 'h2' as const, text: { fr: "La certification CIFSO 5000 appliquée aux logiciels sur-mesure", en: "CIFSO 5000 Certification applied to custom software" } },
+      { type: 'p' as const, text: {
+        fr: "La Certification CIFSO 5000 évalue les actifs logiciels sur-mesure selon les 5 dimensions Capital (propriété intellectuelle, droits, dépôts), Intégrité (architecture, documentation, dette technique), Finance (métriques de récurrence, TCO, ROI client), Sécurité (tests de pénétration, conformité RGPD, souveraineté) et Organisation (transmissibilité, dépendances personnes-clés, gouvernance). Elle produit un référentiel indépendant et défendable qui transforme un actif technique en actif investissable.",
+        en: "CIFSO 5000 Certification evaluates custom software assets across 5 dimensions: Capital (intellectual property, rights, registrations), Integrity (architecture, documentation, technical debt), Finance (recurrence metrics, TCO, client ROI), Security (penetration testing, GDPR compliance, sovereignty) and Organisation (transferability, key person dependencies, governance). It produces an independent and defensible framework that transforms a technical asset into an investable asset.",
+      }},
+      { type: 'h2' as const, text: { fr: "Construire certifiable dès le départ", en: "Build certifiable from day one" } },
+      { type: 'p' as const, text: {
+        fr: "L'approche Aegryn sur les logiciels sur-mesure intègre dès la phase de conception les exigences de valorisation future. Contrats prestataires avec clauses de cession de droits, audit de licences open source, documentation technique continue et architecture cloud-native documentée : chaque décision de build est prise avec l'horizon d'une certification ou d'une transaction en tête.",
+        en: "The Aegryn approach to custom software integrates future valuation requirements from the design phase. Contractor contracts with rights assignment clauses, open source licence audits, continuous technical documentation and documented cloud-native architecture: every build decision is made with the horizon of a certification or transaction in mind.",
+      }},
+    ],
+  },
+
 ]
 
 export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
