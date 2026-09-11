@@ -2,11 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { z } from 'zod'
 
+const VALID_ROLES = ['client', 'buyer', 'seller', 'partner', 'internal'] as const
+type ValidRole = typeof VALID_ROLES[number]
+
 const schema = z.object({
-  email:    z.string().email(),
-  password: z.string().min(8),
-  fullName: z.string().min(1).max(120),
-  role:     z.enum(['buyer', 'seller', 'partner', 'internal']).optional().default('buyer'),
+  email:       z.string().email(),
+  password:    z.string().min(8),
+  fullName:    z.string().min(1).max(120),
+  primaryRole: z.enum(['client', 'partner', 'internal']).optional().default('client'),
+  roles:       z.array(z.enum(VALID_ROLES)).optional(),
+  /* Rétrocompat : ancienne API envoyait juste `role` */
+  role:        z.enum(VALID_ROLES).optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -19,7 +25,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'VALIDATION', message: msg }, { status: 400 })
   }
 
-  const { email, password, fullName, role } = parsed.data
+  const { email, password, fullName, primaryRole, roles: rolesParam, role: legacyRole } = parsed.data
+
+  /* Rôles effectifs stockés en BDD */
+  const effectiveRoles: ValidRole[] =
+    rolesParam && rolesParam.length > 0
+      ? rolesParam
+      : legacyRole
+        ? [legacyRole]
+        : [primaryRole]
+
+  /* Rôle principal pour les labels email */
+  const displayRole = primaryRole ?? legacyRole ?? 'client'
+
   const normalizedEmail = email.toLowerCase().trim()
   const supa = createServiceClient()
 
@@ -41,7 +59,7 @@ export async function POST(req: NextRequest) {
   const userId = data.user?.id
   if (!userId) return NextResponse.json({ error: 'SIGNUP_FAILED' }, { status: 500 })
 
-  await supa.from('profiles').update({ full_name: fullName, roles: [role] }).eq('id', userId)
+  await supa.from('profiles').update({ full_name: fullName, roles: effectiveRoles }).eq('id', userId)
 
   /* ── Notif in-app pour tous les admins ── */
   const { data: admins } = await supa
@@ -49,13 +67,16 @@ export async function POST(req: NextRequest) {
     .select('id')
     .contains('roles', ['admin'])
   if (admins && admins.length > 0) {
-    const roleLabel2: Record<string, string> = { buyer: 'Acquéreur', seller: 'Cédant', partner: 'Partenaire', internal: 'Accès interne' }
+    const roleLabel2: Record<string, string> = {
+      client: 'Client', buyer: 'Acquéreur', seller: 'Cédant',
+      partner: 'Partenaire', internal: 'Accès interne',
+    }
     await supa.from('user_notifications').insert(
       admins.map((a: { id: string }) => ({
         user_id:     a.id,
         type:        'broadcast_action',
-        title:       `Nouveau compte ${roleLabel2[role] ?? role} — ${fullName}`,
-        body:        `${normalizedEmail} vient de créer un espace client.`,
+        title:       `Nouveau compte ${roleLabel2[displayRole] ?? displayRole} — ${fullName}`,
+        body:        `${normalizedEmail} vient de créer un espace client. Rôles : ${effectiveRoles.join(', ')}.`,
         link:        '/admin/members',
         target_role: 'admin',
       }))
@@ -65,6 +86,7 @@ export async function POST(req: NextRequest) {
   const resendKey = process.env.RESEND_API_KEY
   if (resendKey) {
     const roleLabel: Record<string, string> = {
+      client:   'Client',
       buyer:    'Acquéreur',
       seller:   'Cédant',
       partner:  'Partenaire',
@@ -84,7 +106,7 @@ export async function POST(req: NextRequest) {
   </div>
   <div style="padding:32px;">
     <p style="font-size:22px;font-weight:700;color:#0a0f1e;margin:0 0 12px 0;line-height:1.2;">Bienvenue, ${fullName}</p>
-    <p style="font-size:14px;color:#6b7280;line-height:1.7;margin:0 0 8px 0;">Votre compte <strong style="color:#0a0f1e;">${roleLabel[role] ?? role}</strong> a été créé avec succès.</p>
+    <p style="font-size:14px;color:#6b7280;line-height:1.7;margin:0 0 8px 0;">Votre compte <strong style="color:#0a0f1e;">${roleLabel[displayRole] ?? displayRole}</strong> a été créé avec succès.</p>
     <p style="font-size:14px;color:#6b7280;line-height:1.7;margin:0 0 28px 0;">Vous pouvez dès maintenant accéder à votre espace client et compléter votre profil.</p>
     <p style="margin:0 0 32px 0;">
       <a href="https://aegryn.com/client/login" style="display:inline-block;padding:12px 28px;background:#0a0f1e;color:#ffffff;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;">ACCÉDER À MON ESPACE →</a>
@@ -104,7 +126,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: `Aegryn <${process.env.RESEND_FROM ?? 'no-reply@boha-group.com'}>`,
         to: [adminEmail],
-        subject: `[Aegryn] Nouveau compte ${roleLabel[role] ?? role} — ${fullName}`,
+        subject: `[Aegryn] Nouveau compte ${roleLabel[displayRole] ?? displayRole} — ${fullName}`,
         html: `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:480px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;">
   <div style="padding:20px 24px 16px;border-bottom:1px solid #e5e7eb;">
     <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#5ADDA4;margin:0;font-weight:700;">Aegryn ADMIN</p>
@@ -114,7 +136,7 @@ export async function POST(req: NextRequest) {
     <table style="font-size:13px;color:#374151;border-collapse:collapse;width:100%;">
       <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;width:80px;vertical-align:top;">Nom</td><td style="padding:6px 0;color:#0a0f1e;">${fullName}</td></tr>
       <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;vertical-align:top;">Email</td><td style="padding:6px 0;color:#0a0f1e;">${normalizedEmail}</td></tr>
-      <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;vertical-align:top;">Rôle</td><td style="padding:6px 0;color:#0a0f1e;">${roleLabel[role] ?? role}</td></tr>
+      <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;vertical-align:top;">Rôle</td><td style="padding:6px 0;color:#0a0f1e;">${roleLabel[displayRole] ?? displayRole} (${effectiveRoles.join(', ')})</td></tr>
       <tr><td style="padding:6px 0;font-weight:600;color:#6b7280;vertical-align:top;">ID</td><td style="padding:6px 0;color:#9ca3af;font-size:11px;">${userId}</td></tr>
     </table>
     <p style="margin:20px 0 0 0;">

@@ -4,9 +4,13 @@ import { useState }        from 'react'
 import { useRouter }       from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { supabase }        from '@/lib/supabase'
-import { ArrowUpRight, Eye, EyeOff, CheckCircle } from 'lucide-react'
+import { ArrowUpRight, Eye, EyeOff, CheckCircle, User, Users, Lock } from 'lucide-react'
 
-type Role = 'buyer' | 'seller' | 'partner' | 'internal'
+/** Rôle principal sélectionné lors de l'inscription */
+type PrimaryRole = 'client' | 'partner' | 'internal'
+
+/** Sous-rôles optionnels pour un client */
+type ClientSubRole = 'buyer' | 'seller'
 
 function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
   const rules = [
@@ -23,16 +27,25 @@ export default function RegisterForm() {
   const t      = useTranslations('clientArea.register')
   const router = useRouter()
 
-  const [fullName,  setFullName]  = useState('')
-  const [email,     setEmail]     = useState('')
-  const [password,  setPassword]  = useState('')
-  const [role,      setRole]      = useState<Role | null>(null)
-  const [show,      setShow]      = useState(false)
-  const [loading,   setLoading]   = useState(false)
-  const [error,     setError]     = useState('')
-  const [success,   setSuccess]   = useState(false)
+  const [fullName,    setFullName]    = useState('')
+  const [email,       setEmail]       = useState('')
+  const [password,    setPassword]    = useState('')
+  const [primaryRole, setPrimaryRole] = useState<PrimaryRole>('client')
+  const [subRoles,    setSubRoles]    = useState<Set<ClientSubRole>>(new Set())
+  const [show,        setShow]        = useState(false)
+  const [loading,     setLoading]     = useState(false)
+  const [error,       setError]       = useState('')
+  const [success,     setSuccess]     = useState(false)
 
   const strength = getPasswordStrength(password)
+
+  function toggleSubRole(sr: ClientSubRole) {
+    setSubRoles(prev => {
+      const next = new Set(prev)
+      next.has(sr) ? next.delete(sr) : next.add(sr)
+      return next
+    })
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -51,12 +64,25 @@ export default function RegisterForm() {
     }
 
     try {
-      const effectiveRole: Role = role ?? 'buyer'
-      const apiRole = effectiveRole
+      /* Construire le tableau de rôles à stocker :
+         - client → ['client', ...subRoles]
+         - partner / internal → tel quel
+      */
+      const roles: string[] =
+        primaryRole === 'client'
+          ? ['client', ...Array.from(subRoles)]
+          : [primaryRole]
+
       const res = await fetch('/api/client/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, fullName, role: apiRole }),
+        body: JSON.stringify({
+          email,
+          password,
+          fullName,
+          primaryRole,
+          roles,
+        }),
       })
 
       const json = await res.json() as { error?: string; ok?: boolean }
@@ -70,23 +96,20 @@ export default function RegisterForm() {
         return
       }
 
-      /* Auto-login avec retry sur database error (GoTrue instabilité transitoire) */
-      let loginErr
+      /* Auto-login avec retry */
       for (let attempt = 0; attempt < 3; attempt++) {
         if (attempt > 0) await new Promise(r => setTimeout(r, 1500))
         const result = await supabase.auth.signInWithPassword({ email, password })
-        loginErr = result.error
-        if (!loginErr || !loginErr.message?.toLowerCase().includes('database error')) break
+        if (!result.error?.message?.toLowerCase().includes('database error')) break
       }
 
       setSuccess(true)
 
       setTimeout(() => {
-        if (effectiveRole === 'seller')       router.push('/client/seller')
-        else if (effectiveRole === 'partner') router.push('/client/partner')
-        else if (effectiveRole === 'internal') router.push('/client/internal')
-        else                                  router.push('/client/buyer')
-      }, 3000)
+        if (primaryRole === 'partner')  router.push('/client/partner/expert-profile')
+        else if (primaryRole === 'internal') router.push('/client/internal')
+        else                            router.push('/client/account')
+      }, 2500)
     } catch {
       setError(t('errorNetwork'))
     } finally {
@@ -104,11 +127,30 @@ export default function RegisterForm() {
     )
   }
 
-  const roleOptions: { value: Role; label: string; desc: string }[] = [
-    { value: 'buyer',    label: t('roleBuyer'),    desc: t('roleBuyerDesc')    },
-    { value: 'seller',   label: t('roleSeller'),   desc: t('roleSellerDesc')   },
-    { value: 'partner',  label: t('rolePartner'),  desc: t('rolePartnerDesc')  },
-    { value: 'internal', label: t('roleInternal'), desc: t('roleInternalDesc') },
+  const primaryOptions: {
+    value: PrimaryRole
+    label: string
+    desc: string
+    icon: React.ReactNode
+  }[] = [
+    {
+      value: 'client',
+      label: 'Client',
+      desc:  'Accès à votre espace général, publications, et optionnellement aux espaces Acquéreur et Cédant.',
+      icon:  <User size={15} />,
+    },
+    {
+      value: 'partner',
+      label: 'Partenaire',
+      desc:  "Accès à l'espace partenaire pour créer votre fiche expert.",
+      icon:  <Users size={15} />,
+    },
+    {
+      value: 'internal',
+      label: 'Accès interne',
+      desc:  'Réservé aux équipes Aegryn.',
+      icon:  <Lock size={15} />,
+    },
   ]
 
   return (
@@ -176,7 +218,7 @@ export default function RegisterForm() {
         </div>
       </div>
 
-      {/* Indicateur de force mot de passe */}
+      {/* Indicateur force */}
       {password.length > 0 && (
         <div className="flex gap-1 -mt-2">
           {[1,2,3,4,5].map(i => (
@@ -192,45 +234,81 @@ export default function RegisterForm() {
         </div>
       )}
 
-      {/* Rôle — optionnel, buyer par défaut */}
+      {/* Rôle principal */}
       <div>
-        <div className="flex items-baseline justify-between mb-2">
-          <label className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55">
-            {t('roleLabel')}
-          </label>
-          <span className="font-sans text-[10px] text-white/25">{t('roleOptional')}</span>
-        </div>
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+          Type de compte
+        </label>
         <div className="flex flex-col gap-2">
-          {roleOptions.map(({ value, label, desc }) => (
-            <label
+          {primaryOptions.map(({ value, label, desc, icon }) => (
+            <button
               key={value}
-              className={`flex items-start gap-3 px-4 py-3 border cursor-pointer transition-colors ${
-                role === value
+              type="button"
+              onClick={() => setPrimaryRole(value)}
+              className={`flex items-start gap-3 px-4 py-3 border text-left transition-colors rounded-lg ${
+                primaryRole === value
                   ? 'border-ag-apex bg-ag-apex/10 text-white'
                   : 'border-white/15 bg-white/5 text-white/50 hover:border-white/30 hover:text-white/80'
               }`}
             >
-              <input
-                type="radio"
-                name="role"
-                value={value}
-                checked={role === value}
-                onChange={() => setRole(v => v === value ? null : value)}
-                className="sr-only"
-              />
-              <span
-                className={`w-3.5 h-3.5 rounded-full border-2 flex-shrink-0 mt-0.5 transition-colors ${
-                  role === value ? 'border-ag-apex bg-ag-apex' : 'border-white/30'
-                }`}
-              />
+              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex' : 'text-white/30'}`}>
+                {icon}
+              </span>
               <span className="flex flex-col">
                 <span className="font-sans font-semibold text-[13px]">{label}</span>
                 <span className="font-sans text-[11px] text-white/35 mt-0.5">{desc}</span>
               </span>
-            </label>
+            </button>
           ))}
         </div>
       </div>
+
+      {/* Sous-rôles — uniquement si Client */}
+      {primaryRole === 'client' && (
+        <div className="border border-white/10 rounded-lg px-4 py-4 bg-white/3">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-3">
+            Espaces optionnels (activables plus tard)
+          </p>
+          <div className="flex flex-col gap-2">
+            {([
+              { value: 'buyer' as const,  label: 'Acquéreur',  desc: 'Accès au pipeline d\'acquisition et aux offres.' },
+              { value: 'seller' as const, label: 'Cédant',     desc: 'Accès à la gestion de vos actifs et mandats de cession.' },
+            ] as const).map(({ value, label, desc }) => {
+              const active = subRoles.has(value)
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => toggleSubRole(value)}
+                  className={`flex items-start gap-3 px-3 py-2.5 border text-left transition-colors rounded-lg ${
+                    active
+                      ? 'border-ag-apex/60 bg-ag-apex/8 text-white'
+                      : 'border-white/10 text-white/40 hover:border-white/20 hover:text-white/60'
+                  }`}
+                >
+                  {/* Toggle visuel */}
+                  <span className={`w-4 h-4 rounded border-2 flex items-center justify-center mt-0.5 shrink-0 transition-colors ${
+                    active ? 'border-ag-apex bg-ag-apex' : 'border-white/20'
+                  }`}>
+                    {active && (
+                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+                        <path d="M1 3L3 5L7 1" stroke="#0a0f1e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
+                  </span>
+                  <span className="flex flex-col">
+                    <span className="font-sans font-semibold text-[12px]">{label}</span>
+                    <span className="font-sans text-[10px] text-white/30 mt-0.5">{desc}</span>
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+          <p className="font-sans text-[10px] text-white/20 mt-3 leading-relaxed">
+            Ces espaces seront accessibles mais grisés jusqu'à configuration. Vous pourrez les activer ou les ajouter plus tard depuis votre espace compte.
+          </p>
+        </div>
+      )}
 
       <button
         type="submit"

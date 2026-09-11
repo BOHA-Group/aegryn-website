@@ -29,14 +29,16 @@ export default async function AccountLayout({ children }: { children: React.Reac
   const t = await getTranslations('clientSpace')
 
   /* Espace principal affiché dans le header sidebar */
-  let spaceLabel = t('spaceNameBuyer')
-  let rootHref   = '/client/buyer'
+  let spaceLabel = 'Mon espace'
+  let rootHref   = '/client/account'
   if (roles.includes('admin') || roles.includes('super_admin')) {
     spaceLabel = 'Admin'; rootHref = '/admin'
-  } else if (roles.includes('partner')) {
+  } else if (roles.includes('partner') && !roles.includes('client')) {
     spaceLabel = t('spaceNamePartner'); rootHref = '/client/partner'
-  } else if (roles.includes('seller') && !roles.includes('buyer')) {
+  } else if (roles.includes('seller') && !roles.includes('buyer') && !roles.includes('client')) {
     spaceLabel = t('spaceNameSeller'); rootHref = '/client/seller'
+  } else if (roles.includes('buyer') && !roles.includes('client')) {
+    spaceLabel = t('spaceNameBuyer'); rootHref = '/client/buyer'
   }
 
   return (

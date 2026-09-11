@@ -9,6 +9,7 @@ import MfaSection from './MfaSection'
 import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
 import ActivateProfileSection from './ActivateProfileSection'
+import RoleToggleSection from './RoleToggleSection'
 
 export const metadata: Metadata = {
   title: 'Mon compte — Aegryn',
@@ -91,8 +92,13 @@ export default async function AccountPage() {
           </div>
         )}
 
-        {/* Activer un profil supplémentaire */}
-        <ActivateProfileSection currentRoles={roles} />
+        {/* Espaces de transaction (toggles acquéreur/vendeur) — pour les clients */}
+        {roles.includes('client') ? (
+          <RoleToggleSection currentRoles={roles} />
+        ) : (
+          /* Ancienne logique d'activation pour les comptes pré-existants sans rôle client */
+          <ActivateProfileSection currentRoles={roles} />
+        )}
 
         {/* Formulaire profil */}
         <AccountForm

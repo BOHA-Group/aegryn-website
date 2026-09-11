@@ -46,7 +46,8 @@ export default async function ClientLayout({ children }: { children: React.React
       const t = await getTranslations({ locale, namespace: 'clientSpace' })
       let label: string
       if (roles.includes('admin') || roles.includes('super_admin'))    label = 'Admin'
-      else if (roles.includes('partner')) label = t('spaceNamePartner')
+      else if (roles.includes('client'))                                label = 'Mon espace'
+      else if (roles.includes('partner'))                               label = t('spaceNamePartner')
       else if (roles.includes('seller') && !roles.includes('buyer'))   label = t('spaceNameSeller')
       else                                                               label = t('spaceNameBuyer')
       navUser = { name: profile?.full_name ?? user.email ?? '', label }

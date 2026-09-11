@@ -22,6 +22,8 @@ export default async function SellerLayout({ children }: { children: React.React
     .single()
 
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
+  /* Un client pur (sans seller) → espace général */
+  if (!roles.includes('seller') && roles.includes('client')) redirect('/client/account')
   const canAccessSeller = roles.includes('seller')
   if (!canAccessSeller) redirect('/client/buyer')
 

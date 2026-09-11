@@ -11,28 +11,45 @@ interface Props {
 export default async function AccountNav({ roles, unreadCount, rootHref }: Props) {
   const t = await getTranslations('clientSpace')
 
-  /* Lien notifications selon le rôle principal */
-  let notifHref = '/client/buyer/notifications'
-  if (roles.includes('partner'))                           notifHref = '/client/partner/notifications'
-  else if (roles.includes('seller') && !roles.includes('buyer')) notifHref = '/client/seller/notifications'
+  const isClient  = roles.includes('client')
+  const isBuyer   = roles.includes('buyer')
+  const isSeller  = roles.includes('seller')
+  const isPartner = roles.includes('partner')
 
-  /* Lien retour espace principal */
-  const backItems = []
-  if (roles.includes('buyer') || roles.includes('partner')) {
-    backItems.push({ href: roles.includes('partner') ? '/client/partner' : '/client/buyer', label: t('navDashboard'), icon: 'LayoutDashboard' })
-  } else if (roles.includes('seller')) {
-    backItems.push({ href: '/client/seller', label: t('navDashboard'), icon: 'LayoutDashboard' })
+  /* Espaces secondaires activés (pour les clients avec sous-rôles) */
+  const subSpaceItems = []
+  if (isClient && isBuyer) {
+    subSpaceItems.push({ href: '/client/buyer',   label: 'Espace Acquéreur', icon: 'ShoppingBag', locked: true })
+  }
+  if (isClient && isSeller) {
+    subSpaceItems.push({ href: '/client/seller',  label: 'Espace Cédant',    icon: 'Briefcase',   locked: true })
+  }
+
+  /* Pour les comptes non-client (ancienne logique) */
+  const legacyBackItems = []
+  if (!isClient) {
+    if (isBuyer || isPartner) {
+      legacyBackItems.push({ href: isPartner ? '/client/partner' : '/client/buyer', label: t('navDashboard'), icon: 'LayoutDashboard' })
+    } else if (isSeller) {
+      legacyBackItems.push({ href: '/client/seller', label: t('navDashboard'), icon: 'LayoutDashboard' })
+    }
   }
 
   const groups: NavGroup[] = [
-    ...(backItems.length > 0 ? [{ label: t('navGroupOverview'), items: backItems }] : []),
+    /* Espace général client */
     {
-      label: t('navGroupAccount'),
+      label: isClient ? 'Mon espace' : t('navGroupAccount'),
       items: [
-        { href: notifHref,              label: t('navNotifications'), icon: 'Bell',       badge: unreadCount },
-        { href: '/client/account',      label: t('navMyAccount'),     icon: 'UserCircle' },
+        { href: '/client/account', label: t('navMyAccount'), icon: 'UserCircle' },
       ],
     },
+    /* Espaces de transaction (sous-rôles client, grisés) */
+    ...(subSpaceItems.length > 0 ? [{
+      label: 'Espaces de transaction',
+      items: subSpaceItems,
+    }] : []),
+    /* Ancienne logique non-client */
+    ...(legacyBackItems.length > 0 ? [{ label: t('navGroupOverview'), items: legacyBackItems }] : []),
   ]
 
   return <SideNav groups={groups} rootHref={rootHref} />

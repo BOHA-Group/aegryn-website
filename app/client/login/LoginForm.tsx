@@ -50,8 +50,11 @@ export default function LoginForm() {
 
       if (roles.includes('admin') || roles.includes('super_admin')) {
         window.location.assign('/admin')
-      } else if (roles.includes('internal') && !roles.includes('buyer') && !roles.includes('seller') && !roles.includes('partner')) {
+      } else if (roles.includes('internal') && !roles.includes('buyer') && !roles.includes('seller') && !roles.includes('partner') && !roles.includes('client')) {
         window.location.assign('/client/internal')
+      } else if (roles.includes('client')) {
+        /* Rôle client master → espace général */
+        window.location.assign('/client/account')
       } else if (roles.includes('partner')) {
         window.location.assign('/client/partner')
       } else if (roles.includes('seller') && !roles.includes('buyer')) {
@@ -60,7 +63,7 @@ export default function LoginForm() {
         window.location.assign('/client/buyer')
       }
     } catch {
-      window.location.assign('/client/buyer')
+      window.location.assign('/client/account')
     }
   }
 
