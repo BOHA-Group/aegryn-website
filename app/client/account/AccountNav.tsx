@@ -8,7 +8,7 @@ interface Props {
   rootHref:     string
 }
 
-export default async function AccountNav({ roles, unreadCount, rootHref }: Props) {
+export default async function AccountNav({ roles, unreadCount: _unreadCount, rootHref }: Props) {
   const t = await getTranslations('clientSpace')
 
   const isClient  = roles.includes('client')

@@ -5,7 +5,7 @@ import Image               from 'next/image'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { INDUSTRIES, getIndustry, getOtherIndustries, type IndustryData } from '@/data/industries'
+import { INDUSTRIES, getIndustry, getOtherIndustries } from '@/data/industries'
 import { ARTICLES, getLocaleText }  from '@/data/articles'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -20,7 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const ind = getIndustry(slug)
   if (!ind) return {}
-  const t = await getTranslations({ locale, namespace: 'industries.page' })
   return generateAegrynMetadata({
     title: `${ind.clusterId} — Aegryn`,
     description: ind.vision.slice(0, 160).replace(/\n/g, ' '),
@@ -36,14 +35,6 @@ const CLUSTER_IMAGES: Record<string, string> = {
   industrie: '/images/theme_marketplace.jpg',
   commerce:  '/images/theme_saas.jpg',
   tech:      '/images/theme_AI.jpg',
-}
-
-const CLUSTER_SLUGS: Record<string, string> = {
-  finance:   'finance-capital',
-  sante:     'sante-sciences-de-la-vie',
-  industrie: 'industrie-energie-infrastructure',
-  commerce:  'commerce-services-experience-client',
-  tech:      'tech-innovation-secteur-public',
 }
 
 /* ── Page ───────────────────────────────────────────────────── */
