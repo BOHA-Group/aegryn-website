@@ -157,7 +157,7 @@ export default function IndustriesPage() {
           {/* Ligne 2 — Certification */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
-              Demander la certification
+              Demander la certification CIFSO 5000
             </p>
             <Link
               href="/grade"
