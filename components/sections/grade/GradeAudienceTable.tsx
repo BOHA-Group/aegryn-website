@@ -71,7 +71,7 @@ export function GradeAudienceTable() {
           </p>
         </div>
 
-        {/* Grade pill selector — neutre */}
+        {/* Grade pill selector — couleurs par grade */}
         <div className="flex gap-2 mb-8 flex-wrap">
           {GRADES.map((g, i) => {
             const c = GRADE_CONFIG[g]
@@ -83,7 +83,7 @@ export function GradeAudienceTable() {
                 className="flex items-center gap-2 px-4 py-2 rounded-full font-mono text-[11px] tracking-[0.1em] font-semibold transition-all duration-200"
                 style={
                   isActive
-                    ? { background: '#0D1F3C', color: '#fff', boxShadow: '0 0 0 2px #0D1F3C' }
+                    ? { background: c.bg, color: c.color, boxShadow: `0 0 0 2px ${c.ring}` }
                     : { background: 'white', color: '#888', border: '1px solid #E5E5E0' }
                 }
               >

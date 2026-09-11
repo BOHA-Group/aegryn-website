@@ -61,7 +61,7 @@ export function GradePricing() {
               className={`pricing-card relative flex flex-col rounded-2xl overflow-hidden border transition-all duration-300 ${
                 tier.highlight
                   ? 'border-ag-apex/40 bg-white shadow-xl shadow-ag-apex/10'
-                  : 'border-white/10 bg-white/5 hover:bg-white/10'
+                  : 'border-white/20 bg-white/[0.07] hover:bg-white/[0.12]'
               }`}
             >
               {/* Recommended badge */}

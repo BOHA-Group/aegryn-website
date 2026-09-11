@@ -124,7 +124,7 @@ export function GradeUseCases() {
                 key={uc.num}
                 className="usecase-item group bg-ag-white hover:bg-ag-off-white transition-colors"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-[56px_1fr_260px] gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-[56px_1fr_320px] gap-0">
 
                   {/* Number */}
                   <div className="hidden lg:flex items-start justify-center pt-10 border-r border-ag-border">
@@ -175,16 +175,16 @@ export function GradeUseCases() {
                   </div>
 
                   {/* Image — flottante avec angles arrondis */}
-                  <div className="hidden lg:flex items-center justify-center p-4">
+                  <div className="hidden lg:flex items-center justify-center p-5">
                     <div
-                      className="relative w-full overflow-hidden rounded-2xl shadow-md"
-                      style={{ minHeight: 200, maxHeight: 240 }}
+                      className="relative w-full overflow-hidden rounded-2xl shadow-lg"
+                      style={{ minHeight: 260, maxHeight: 320 }}
                     >
                       <Image
                         src={meta.image}
                         alt={meta.imageAlt}
                         fill
-                        sizes="260px"
+                        sizes="320px"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/50 to-transparent flex items-end p-4 rounded-2xl">

@@ -43,11 +43,11 @@ export function GradeDimensions() {
             <div
               key={code}
               className="dim-item group relative overflow-hidden rounded-xl border border-ag-border bg-ag-white
-                shrink-0 sm:w-50 lg:w-auto
+                shrink-0 sm:w-[220px] lg:w-auto
                 flex flex-col justify-between
                 p-6 hover:border-ag-navy hover:shadow-sm transition-all duration-300"
               style={{
-                minHeight: 'clamp(180px, 18vw, 240px)',
+                minHeight: 'clamp(220px, 20vw, 280px)',
                 scrollSnapAlign: 'start',
               }}
             >
