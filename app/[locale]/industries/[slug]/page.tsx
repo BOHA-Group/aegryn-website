@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ind = getIndustry(slug)
   if (!ind) return {}
   return generateAegrynMetadata({
-    title: `${ind.clusterId} — Aegryn`,
+    title: `${CLUSTER_NAMES[ind.clusterId] ?? ind.clusterId} — Aegryn`,
     description: ind.vision.slice(0, 160).replace(/\n/g, ' '),
     path: `/industries/${slug}`,
     locale,
@@ -68,6 +68,15 @@ const CLUSTER_IMAGES: Record<string, string> = {
   industrie: '/images/theme_marketplace.jpg',
   commerce:  '/images/theme_saas.jpg',
   tech:      '/images/theme_AI.jpg',
+}
+
+/** Noms complets des clusters — toujours avec accents et casse correcte */
+const CLUSTER_NAMES: Record<string, string> = {
+  finance:   'Finance & Capital',
+  sante:     'Santé & Sciences de la Vie',
+  industrie: 'Industrie, Énergie & Infrastructure',
+  commerce:  'Commerce, Services & Expérience Client',
+  tech:      'Tech, Innovation & Secteur Public',
 }
 
 /* ── Page ───────────────────────────────────────────────────── */
@@ -119,7 +128,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
             style={{ fontSize: 'clamp(36px,5vw,68px)' }}
           >
-            {ind.clusterId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+            {CLUSTER_NAMES[ind.clusterId] ?? ind.clusterId}
           </h1>
 
           {/* CTAs */}
@@ -335,7 +344,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                   />
                 </div>
                 <span className="font-sans text-[12px] font-semibold text-ag-black leading-snug max-w-[180px]">
-                  {other.clusterId}
+                  {CLUSTER_NAMES[other.clusterId] ?? other.clusterId}
                 </span>
                 <ArrowUpRight size={11} className="text-ag-gray-light group-hover:text-ag-black transition-colors shrink-0 ml-auto" />
               </Link>
