@@ -1,0 +1,50 @@
+/**
+ * Mapping slug d'article → image locale (Unsplash libre de droit, stockée en /public/images/blog/).
+ * Chaque image est unique — aucune répétition.
+ */
+export const BLOG_IMAGES: Record<string, string> = {
+  'salaires-executive-tech-suisse-europe-2026':                    '/images/blog/business-meeting.jpg',
+  'marche-ma-tech-europe-q3-2026':                                 '/images/blog/stock-charts.jpg',
+  '5-erreurs-valorisation-saas':                                   '/images/blog/data-dashboard.jpg',
+  'actif-tech-certifiable':                                        '/images/blog/certification-award.jpg',
+  'comment-acquereurs-pe-evaluent-saas-2026':                      '/images/blog/due-diligence-docs.jpg',
+  'marche-ma-tech-europeen-besoin-christies':                      '/images/blog/city-buildings.jpg',
+  'ip-checklist-avant-cession-actif-tech':                         '/images/blog/document-review.jpg',
+  'glossaire-ma-tech-europe':                                      '/images/blog/legal-books.jpg',
+  'legaltech-europe-valorisation-ma-2026':                         '/images/blog/contract-signing.jpg',
+  'comment-vendre-son-saas-europe-guide-complet':                  '/images/blog/saas-growth.jpg',
+  'quand-vendre-son-saas-timing-exit':                             '/images/blog/growth-chart.jpg',
+  'succession-transmission-entreprise-numerique-fondateur':        '/images/blog/family-business.jpg',
+  'preparer-due-diligence-vendeur-saas':                           '/images/blog/whiteboard-strategy.jpg',
+  'valoriser-application-mobile-cession':                          '/images/blog/mobile-app.jpg',
+  'acheter-saas-rentable-guide-acquereurs-2026':                   '/images/blog/laptop-code.jpg',
+  'search-fund-acquisition-saas-europe':                           '/images/blog/search-fund.jpg',
+  'family-office-investissement-actifs-tech':                      '/images/blog/wealth-management.jpg',
+  'earnout-structure-cession-tech-guide':                          '/images/blog/handshake-deal.jpg',
+  'marche-ma-tech-europe-q4-2026':                                 '/images/blog/analytics-graphs.jpg',
+  'fintech-europe-ma-valorisation-2026':                           '/images/blog/fintech-app.jpg',
+  'ai-native-saas-valorisation-multiples-2026':                    '/images/blog/ai-saas.jpg',
+  'suisse-hub-cession-actifs-tech-europe':                         '/images/blog/alpine-swiss.jpg',
+  'marche-ma-tech-dach-2026':                                      '/images/blog/europe-skyline.jpg',
+  'nrr-churn-ltv-cac-metriques-valorisation-saas':                 '/images/blog/product-roadmap.jpg',
+  'certification-independante-saas-avant-cession':                 '/images/blog/finance-trading.jpg',
+  'etude-de-cas-certification-saas-b2b-exit-4x':                   '/images/blog/handshake-close.jpg',
+  'share-deal-asset-deal-saas-quelle-structure':                   '/images/blog/investment-coins.jpg',
+  'rgpd-cession-transfert-donnees-utilisateurs':                   '/images/blog/server-room.jpg',
+  'fiscalite-exit-fondateur-france-suisse-luxembourg':             '/images/blog/tax-accounting.jpg',
+  'no-code-low-code-vs-custom-code-conception-actifs':             '/images/blog/coding-screen.jpg',
+  'preparer-organisation-cession-levee-5-points':                  '/images/blog/meeting-room.jpg',
+  'small-mid-cap-enjeux-entreprises-50-300m':                      '/images/blog/office-building.jpg',
+  'execution-apres-financement-banque-fonds':                      '/images/blog/team-discussion.jpg',
+  'fintech-finance-capital-enjeux-certification-cifso-2025':       '/images/blog/ecommerce-shop.jpg',
+  'sante-sciences-vie-valorisation-actifs-certification-2025':     '/images/blog/healthcare-lab.jpg',
+  'industrie-energie-infrastructure-valeur-transmissible-2025':    '/images/blog/factory-industry.jpg',
+  'commerce-services-experience-client-capital-donnees-2025':      '/images/blog/retail-store.jpg',
+  'tech-innovation-secteur-public-certification-saas-ia-2025':     '/images/blog/robot-ai.jpg',
+  'conseil-technologie-architecture-cloud-souverainete-donnees-2025': '/images/blog/tech-circuit.jpg',
+  'logiciels-sur-mesure-actif-valorisable-levier-valeur-2025':     '/images/blog/dev-team-work.jpg',
+  'migration-cloud-architecture-saas-guide-operationnel-2025':     '/images/blog/tech-office.jpg',
+}
+
+/** Image de repli si le slug n'a pas de mapping */
+export const BLOG_IMAGE_FALLBACK = '/images/blog/modern-office.jpg'
