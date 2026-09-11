@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
 import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
+import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -233,6 +234,21 @@ export default async function ArticlePage({ params }: Props) {
           >
             {t('backToDiscover')}
           </Link>
+        </div>
+      </section>
+
+      {/* CTA Newsletter — inscription sans compte */}
+      <section className="py-12 px-6 border-t border-ag-border bg-ag-navy">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-1">
+              Insights Aegryn
+            </p>
+            <p className="font-sans font-semibold text-white text-[16px] leading-snug max-w-sm">
+              Recevez chaque semaine les analyses Aegryn — M&amp;A, valorisation, tech, CIFSO.
+            </p>
+          </div>
+          <NewsletterSubscribeForm locale={locale} />
         </div>
       </section>
 

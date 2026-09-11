@@ -124,10 +124,10 @@ export default async function SellerNdaPage() {
           <section>
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">4bis. Frais en cas de non-réalisation de la transaction</h2>
             <p>
-              Dans le cas où l&apos;actif admis en Certification Transaction serait retiré du catalogue ou
-              qu&apos;aucune transaction ne se réalise à l&apos;issue du processus Aegryn, des frais
+              Dans le cas où l&apos;actif admis au processus Aegryn serait retiré du catalogue ou
+              qu&apos;aucune transaction ne se réalise à l&apos;issue du processus, des frais
               fixes minimaux de <strong>CHF 2 000 HT</strong> sont dus à Aegryn en contrepartie du
-              travail engagé par ses équipes (analyse CIFSO v4.0, grade officiel, catalogue, communication,
+              travail engagé par ses équipes (analyse, grade officiel, catalogue, communication,
               marketing, visibilité produit). Exigibles à la date de retrait ou de clôture sans transaction,
               facturés directement au Cédant. Non applicable en cas de condition suspensive non levée
               dûment documentée.

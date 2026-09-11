@@ -10,6 +10,8 @@ import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
 import ActivateProfileSection from './ActivateProfileSection'
 import RoleToggleSection from './RoleToggleSection'
+import SubscriptionsSection from './SubscriptionsSection'
+import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'Mon compte — Aegryn',
@@ -58,6 +60,17 @@ export default async function AccountPage() {
     .eq('buyer_id', user.id)
     .order('signed_at', { ascending: false })
 
+  /* Statut abonnement newsletter */
+  const { data: newsletterSub } = await supa
+    .from('newsletter_subscribers')
+    .select('status')
+    .eq('email', user.email ?? '')
+    .maybeSingle()
+  const isSubscribed = newsletterSub?.status === 'active'
+
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
+
   return (
     <div className="p-8">
       <div className="max-w-2xl">
@@ -99,6 +112,9 @@ export default async function AccountPage() {
           /* Ancienne logique d'activation pour les comptes pré-existants sans rôle client */
           <ActivateProfileSection currentRoles={roles} />
         )}
+
+        {/* Abonnements publications */}
+        <SubscriptionsSection isSubscribed={isSubscribed} locale={locale} />
 
         {/* Formulaire profil */}
         <AccountForm
