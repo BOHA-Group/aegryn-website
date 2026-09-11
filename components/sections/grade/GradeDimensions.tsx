@@ -43,7 +43,7 @@ export function GradeDimensions() {
             <div
               key={code}
               className="dim-item group relative overflow-hidden rounded-xl border border-ag-border bg-ag-white
-                shrink-0 sm:w-[220px] lg:w-auto
+                shrink-0 sm:w-55 lg:w-auto
                 flex flex-col justify-between
                 p-6 hover:border-ag-navy hover:shadow-sm transition-all duration-300"
               style={{
