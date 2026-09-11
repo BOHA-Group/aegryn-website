@@ -1,12 +1,6 @@
 import type { Metadata } from 'next'
-import { cookies } from 'next/headers'
-import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import { getUser } from '@/lib/supabaseServer'
-import { createServiceClient } from '@/lib/supabase'
-import { Plus } from 'lucide-react'
-import NewIntroductionForm from './NewIntroductionForm'
-import IntroductionsList from './IntroductionsList'
 import LockedSection from '@/app/client/LockedSection'
 
 export const metadata: Metadata = {

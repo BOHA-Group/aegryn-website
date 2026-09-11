@@ -4,7 +4,17 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Bell, CheckCheck, ArrowUpRight, X, Trash2 } from 'lucide-react'
-import type { Notification } from './page'
+export type Notification = {
+  id: string
+  type: string
+  title: string
+  body: string | null
+  link: string | null
+  payload: Record<string, unknown>
+  read_at: string | null
+  dismissed_at: string | null
+  created_at: string
+}
 
 const TYPE_ICON_MAP: Record<string, string> = {
   offer_received:     '📋',

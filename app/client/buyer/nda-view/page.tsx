@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import { Shield, CheckCircle } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
-import { createServiceClient } from '@/lib/supabase'
-import Link from 'next/link'
-import { NDA_VERSIONS } from '@/lib/ndaVersions'
 import LockedSection from '@/app/client/LockedSection'
+
+export const metadata: Metadata = {
+  title: 'NDA — Buyer Space Aegryn',
+  robots: { index: false, follow: false },
+}
 
 export default async function NdaViewPage() {
   const user = await getUser()
