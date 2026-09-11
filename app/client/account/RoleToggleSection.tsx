@@ -72,10 +72,10 @@ export default function RoleToggleSection({ currentRoles }: Props) {
   return (
     <div className="bg-white border border-gray-200 p-5 mt-6">
       <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">
-        Espaces de transaction
+        Espaces Acquéreur &amp; Cédant
       </p>
       <p className="font-sans text-[12px] text-gray-400 mb-4 leading-relaxed">
-        Activez les espaces Acquéreur ou Cédant si vous souhaitez accéder aux fonctionnalités de transaction. Ces espaces sont actuellement en configuration — les sections sont accessibles mais grisées.
+        Activez les espaces que vous souhaitez afficher dans votre tableau de bord. L&apos;accès effectif aux fonctionnalités est soumis à signature d&apos;un accord de confidentialité.
       </p>
 
       {error && (
@@ -143,7 +143,7 @@ export default function RoleToggleSection({ currentRoles }: Props) {
 
       <div className="rounded-lg mt-4 px-4 py-3 bg-gray-50 border border-gray-100">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
-          Les fonctionnalités des espaces Acquéreur et Cédant sont en cours de configuration. Les sections sont accessibles mais marquées comme "Prochainement disponible" jusqu'à ouverture complète.
+          Les espaces sont visibles dans votre tableau de bord dès activation. Les sections opérationnelles sont marquées <span className="font-mono text-[10px]">Prochainement</span> jusqu&apos;à leur ouverture complète.
         </p>
       </div>
     </div>

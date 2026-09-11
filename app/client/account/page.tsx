@@ -26,6 +26,16 @@ const ROLE_LINKS: Record<string, string> = {
   admin:   '/admin',
 }
 
+/* Séparateur de section */
+function SectionLabel({ label }: { label: string }) {
+  return (
+    <div className="flex items-center gap-3 mt-10 mb-4">
+      <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-gray-300 shrink-0">{label}</p>
+      <div className="flex-1 h-px bg-gray-100" />
+    </div>
+  )
+}
+
 export default async function AccountPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
@@ -75,16 +85,21 @@ export default async function AccountPage() {
     <div className="p-8">
       <div className="max-w-2xl">
 
-        {/* Header */}
-        <div className="mb-10">
+        {/* ─── Header ─────────────────────────────────────────── */}
+        <div className="mb-8">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">{t('eyebrow')}</p>
           <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">{t('title')}</h1>
           <p className="font-sans text-[13px] text-gray-500 mt-0.5">{user.email}</p>
         </div>
 
-        {/* Rôles actifs */}
+        {/* ═══════════════════════════════════════════════════════
+            SECTION GÉNÉRALE
+        ═══════════════════════════════════════════════════════ */}
+        <SectionLabel label="Général" />
+
+        {/* Vue d'ensemble — rôles actifs */}
         {roles.length > 0 && (
-          <div className="bg-white border border-gray-200 p-5 mb-6">
+          <div className="bg-white border border-gray-200 p-5 mb-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('activeSpaces')}</p>
             <div className="flex flex-wrap gap-2">
               {roles.map(role => (
@@ -105,23 +120,20 @@ export default async function AccountPage() {
           </div>
         )}
 
-        {/* Espaces de transaction (toggles acquéreur/vendeur) — pour les clients */}
-        {roles.includes('client') ? (
-          <RoleToggleSection currentRoles={roles} />
-        ) : (
-          /* Ancienne logique d'activation pour les comptes pré-existants sans rôle client */
-          <ActivateProfileSection currentRoles={roles} />
-        )}
-
-        {/* Abonnements publications */}
-        <SubscriptionsSection isSubscribed={isSubscribed} locale={locale} />
-
-        {/* Formulaire profil */}
+        {/* Profil */}
         <AccountForm
           userId={user.id}
           currentName={profile?.full_name ?? ''}
           currentEmail={user.email ?? ''}
         />
+
+        {/* Abonnements publications */}
+        <SubscriptionsSection isSubscribed={isSubscribed} locale={locale} />
+
+        {/* ═══════════════════════════════════════════════════════
+            SECTION CONFORMITÉ & COMPTE
+        ═══════════════════════════════════════════════════════ */}
+        <SectionLabel label="Conformité & Compte" />
 
         {/* Double authentification */}
         <MfaSection />
@@ -159,7 +171,7 @@ export default async function AccountPage() {
         </div>
 
         {/* Infos compte */}
-        <div className="bg-white border border-gray-200 p-5 mt-6">
+        <div className="bg-white border border-gray-200 p-5 mt-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('infoTitle')}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
@@ -181,7 +193,7 @@ export default async function AccountPage() {
 
         {/* NDA signés */}
         {((ndaSignatures && ndaSignatures.length > 0) || partnerNdaSignedAt) && (
-          <div className="bg-white border border-gray-200 p-5 mt-6">
+          <div className="bg-white border border-gray-200 p-5 mt-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('ndaTitle')}</p>
             <div className="flex flex-col gap-3">
 
@@ -237,16 +249,6 @@ export default async function AccountPage() {
           </div>
         )}
 
-        {/* Déconnexion */}
-        <div className="mt-6 flex items-center justify-between">
-          <form action="/api/client/logout" method="POST">
-            <button type="submit"
-              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors border border-gray-300 px-4 py-2 hover:border-gray-500">
-              {t('logout')}
-            </button>
-          </form>
-        </div>
-
         {/* RGPD — gestion des données personnelles */}
         <div className="bg-white border border-gray-200 p-5 mt-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-4">{t('gdprTitle')}</p>
@@ -284,6 +286,30 @@ export default async function AccountPage() {
             <DeleteAccountSection />
           </div>
         </div>
+
+        {/* ═══════════════════════════════════════════════════════
+            SECTION TABLEAU DE BORD — ESPACES ACTIFS
+        ═══════════════════════════════════════════════════════ */}
+        <SectionLabel label="Tableau de bord" />
+
+        {/* Toggles acquéreur/cédant — pour les clients */}
+        {roles.includes('client') ? (
+          <RoleToggleSection currentRoles={roles} />
+        ) : (
+          /* Ancienne logique d'activation pour les comptes pré-existants sans rôle client */
+          <ActivateProfileSection currentRoles={roles} />
+        )}
+
+        {/* ─── Déconnexion ──────────────────────────────────── */}
+        <div className="mt-10 pt-6 border-t border-gray-100 flex items-center justify-between">
+          <form action="/api/client/logout" method="POST">
+            <button type="submit"
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors border border-gray-200 px-4 py-2 hover:border-gray-400">
+              {t('logout')}
+            </button>
+          </form>
+        </div>
+
       </div>
     </div>
   )
