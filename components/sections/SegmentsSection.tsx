@@ -1,8 +1,20 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
+
+/* ─── Images dédiées à cette section uniquement ────────────────
+   Téléchargées depuis Unsplash (licence gratuite), stockées dans
+   /public/images/segments-*.jpg — non partagées avec d'autres sections.
+──────────────────────────────────────────────────────────────── */
+const SEGMENT_IMAGES: Record<string, { src: string; alt: string }> = {
+  startup:    { src: '/images/segments-startup.jpg',    alt: 'Startup & Scale-up — équipe tech en open-space' },
+  pme:        { src: '/images/segments-pme.jpg',        alt: 'PME en croissance — réunion de direction' },
+  enterprise: { src: '/images/segments-enterprise.jpg', alt: 'Grands groupes — architecture corporative' },
+  funds:      { src: '/images/segments-funds.jpg',      alt: 'Fonds & Investisseurs — analyse financière' },
+}
 
 export function SegmentsSection() {
   const t = useTranslations('homeSegments')
@@ -38,24 +50,45 @@ export function SegmentsSection() {
         >
           {t('title')}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px border border-ag-border">
-          {cards.map((card) => (
-            <div
-              key={card.key}
-              className="seg-card bg-ag-white p-8 hover:bg-ag-off-white transition-colors duration-300"
-              style={{ opacity: 0 }}
-            >
-              <h3
-                className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
-                style={{ fontSize: 'clamp(14px,1.1vw,16px)' }}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {cards.map((card) => {
+            const img = SEGMENT_IMAGES[card.key]
+            return (
+              <div
+                key={card.key}
+                className="seg-card group relative overflow-hidden rounded-2xl"
+                style={{ opacity: 0, minHeight: '380px' }}
               >
-                {card.title}
-              </h3>
-              <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed">
-                {card.desc}
-              </p>
-            </div>
-          ))}
+                {/* Image background plein-cadre */}
+                {img && (
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                )}
+
+                {/* Gradient overlay — lisibilité du texte */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10 transition-all duration-500 group-hover:from-black/90 group-hover:via-black/45" />
+
+                {/* Contenu ancré en bas */}
+                <div className="absolute inset-0 flex flex-col justify-end p-7">
+                  <h3
+                    className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-3"
+                    style={{ fontSize: 'clamp(15px,1.2vw,18px)' }}
+                  >
+                    {card.title}
+                  </h3>
+                  <p className="font-sans font-normal text-[12px] text-white/70 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
