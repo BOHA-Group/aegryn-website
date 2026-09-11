@@ -190,12 +190,6 @@ export function ProprietaryAssetsGrid() {
                   </div>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {asset.name}
-                    {asset.id === 'subblink' && (
-                      <sup className="text-[10px] font-normal align-super ml-0.5">®</sup>
-                    )}
-                    {asset.id === 'kryv' && (
-                      <sup className="text-[10px] font-normal align-super ml-0.5">™</sup>
-                    )}
                   </h2>
                 </div>
                 {/* Publisher badge */}
@@ -219,15 +213,9 @@ export function ProprietaryAssetsGrid() {
                 )}
               </div>
 
-              {/* Tagline */}
-              <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">
-                {tItems(asset.taglineKey)}
-                {asset.id === 'subblink' && (
-                  <sup className="text-[9px] font-normal align-super ml-0.5">®</sup>
-                )}
-                {asset.id === 'kryv' && (
-                  <sup className="text-[9px] font-normal align-super ml-0.5">™</sup>
-                )}
+              {/* Tagline — nom public avec symbole marque collé */}
+              <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug whitespace-nowrap">
+                {tItems(asset.taglineKey)}{asset.id === 'subblink' ? <sup className="text-[9px] font-normal">®</sup> : asset.id === 'kryv' ? <sup className="text-[9px] font-normal">™</sup> : null}
               </p>
 
               {/* Description */}

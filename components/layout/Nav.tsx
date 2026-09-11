@@ -22,6 +22,7 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Sous-actifs propriétaires (indentés sous craftBuildAssets)
 const CRAFT_BUILD_ASSET_SUBLINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftBuildSubblink',    href: 'https://subblink.com' as LinkHref },
   { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
   { labelKey: 'craftBuildCIFSO',       href: '/grade' },
 ]
