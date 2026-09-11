@@ -4,69 +4,10 @@ import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
-/* badgeAlign: où placer le badge dans la carte (coin extérieur) */
-type BadgeAlign = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-left-default'
-
-function CornerCard({
-  code, name, desc, badgeAlign, className = '',
-}: {
-  code: string; name: string; desc: string; badgeAlign: BadgeAlign; className?: string
-}) {
-  const isRight  = badgeAlign === 'top-right'  || badgeAlign === 'bottom-right'
-  const isBottom = badgeAlign === 'bottom-left' || badgeAlign === 'bottom-right'
-
-  return (
-    <div
-      className={`dim-item flex flex-col bg-white p-6 ${className}`}
-      style={{ border: '1px solid #b0b8c1' }}
-    >
-      {isBottom ? (
-        /* Badge bas + texte au-dessus du badge */
-        <>
-          <div className="min-w-0 mb-4">
-            <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
-            <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
-          </div>
-          <div className={`flex ${isRight ? 'justify-end' : 'justify-start'}`}>
-            <DimBadge code={code} />
-          </div>
-        </>
-      ) : (
-        /* Badge haut + texte en dessous */
-        <>
-          <div className={`flex mb-4 ${isRight ? 'justify-end' : 'justify-start'}`}>
-            <DimBadge code={code} />
-          </div>
-          <div className="min-w-0">
-            <p className="font-sans font-semibold text-ag-black text-[14px] mb-1">{name}</p>
-            <p className="font-sans text-[12px] leading-relaxed text-ag-gray">{desc}</p>
-          </div>
-        </>
-      )}
-    </div>
-  )
-}
-
-function DimBadge({ code, dark = false }: { code: string; dark?: boolean }) {
-  return (
-    <div
-      className="w-9 h-9 flex items-center justify-center shrink-0"
-      style={{ background: dark ? '#5ADDA4' : '#0D1F3C' }}
-    >
-      <span className="font-sans font-bold text-[13px]" style={{ color: dark ? '#0D1F3C' : '#5ADDA4' }}>
-        {code}
-      </span>
-    </div>
-  )
-}
-
 export function GradeDimensions() {
   const t     = useTranslations('grade.dimensions')
   const ref   = useRef<HTMLElement>(null)
   const items = t.raw('items') as { code: string; name: string; desc: string }[]
-
-  const corners = items.slice(0, 4)  // C I F S
-  const center  = items[4]           // O
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -81,82 +22,60 @@ export function GradeDimensions() {
 
   return (
     <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
           {t('label')}
         </p>
         <h2
-          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-16"
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-14"
           style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
         >
           {t('title')}
         </h2>
 
-        {/* Desktop — grille 2×2 + O absolument centré qui chevauche les 4 coins */}
-        <div className="hidden md:block relative">
-          {/* Grille 2×2 CIFSO */}
-          <div className="grid grid-cols-2 gap-3">
-            {/* C — haut gauche, badge top-left */}
-            <CornerCard
-              code={corners[0].code} name={corners[0].name} desc={corners[0].desc}
-              badgeAlign="top-left" className="pb-28"
-            />
-            {/* I — haut droit, badge top-right */}
-            <CornerCard
-              code={corners[1].code} name={corners[1].name} desc={corners[1].desc}
-              badgeAlign="top-right" className="pb-28"
-            />
-            {/* F — bas gauche, badge bottom-left */}
-            <CornerCard
-              code={corners[2].code} name={corners[2].name} desc={corners[2].desc}
-              badgeAlign="bottom-left" className="pt-28"
-            />
-            {/* S — bas droit, badge bottom-right */}
-            <CornerCard
-              code={corners[3].code} name={corners[3].name} desc={corners[3].desc}
-              badgeAlign="bottom-right" className="pt-28"
-            />
-          </div>
-
-          {/* O — absolument centré, passe au-dessus des 4 coins */}
-          {center && (
+        {/* 5 cartes sur une ligne — scroll horizontal mobile, grille desktop */}
+        <div
+          className="flex flex-col sm:flex-row gap-3 sm:overflow-x-auto sm:pb-2 lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0"
+          style={{ scrollSnapType: 'x mandatory' }}
+        >
+          {items.map(({ code, name, desc }) => (
             <div
-              className="dim-item absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              key={code}
+              className="dim-item group relative overflow-hidden rounded-xl border border-ag-border bg-ag-white
+                shrink-0 sm:w-[200px] lg:w-auto
+                flex flex-col justify-between
+                p-6 hover:border-ag-navy hover:shadow-sm transition-all duration-300"
               style={{
-                width: 'calc(50% - 6px)',
-                background: '#0D1F3C',
-                border: '1px solid rgba(90,221,164,0.5)',
-                boxShadow: '0 12px 40px rgba(13,31,60,0.30), 0 2px 8px rgba(0,0,0,0.15)',
-                zIndex: 10,
-                padding: '1.5rem',
+                minHeight: 'clamp(180px, 18vw, 240px)',
+                scrollSnapAlign: 'start',
               }}
             >
-              <div className="flex justify-center mb-3">
-                <DimBadge code={center.code} dark />
-              </div>
-              <div>
-                <p className="font-sans font-semibold text-white text-[14px] mb-1">{center.name}</p>
-                <p className="font-sans text-[12px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{center.desc}</p>
-              </div>
-            </div>
-          )}
-        </div>
+              {/* Lettre discrète en filigrane */}
+              <span
+                className="pointer-events-none select-none absolute right-4 bottom-3
+                  font-sans font-black text-ag-navy/[0.05] leading-none"
+                style={{ fontSize: 'clamp(64px, 8vw, 96px)' }}
+              >
+                {code}
+              </span>
 
-        {/* Mobile — liste verticale */}
-        <div className="md:hidden flex flex-col gap-3">
-          {corners.map(({ code, name, desc }) => (
-            <CornerCard key={code} code={code} name={name} desc={desc} badgeAlign="top-left" />
-          ))}
-          {center && (
-            <div className="dim-item p-6 flex flex-col gap-3" style={{ background: '#0D1F3C', border: '1px solid rgba(90,221,164,0.5)' }}>
-              <DimBadge code={center.code} dark />
-              <div>
-                <p className="font-sans font-semibold text-white text-[14px] mb-1">{center.name}</p>
-                <p className="font-sans text-[12px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{center.desc}</p>
+              {/* Badge lettre — haut gauche */}
+              <div className="w-8 h-8 rounded-lg bg-ag-navy flex items-center justify-center shrink-0 mb-auto">
+                <span className="font-sans font-bold text-[12px] text-ag-apex">{code}</span>
+              </div>
+
+              {/* Texte — bas */}
+              <div className="relative z-10 mt-6">
+                <p className="font-sans font-semibold text-ag-black text-[13px] mb-1.5 leading-snug">
+                  {name}
+                </p>
+                <p className="font-sans text-[11px] leading-relaxed text-ag-gray">
+                  {desc}
+                </p>
               </div>
             </div>
-          )}
+          ))}
         </div>
 
       </div>

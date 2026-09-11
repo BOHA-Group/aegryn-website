@@ -67,21 +67,21 @@ export function GradeISOMapping() {
         {/* Comparison table */}
         <div className="border border-ag-border overflow-hidden rounded-2xl">
 
-          {/* Column headers */}
+          {/* Column headers — contraste renforcé */}
           <div className="grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] bg-ag-navy">
-            <div className="px-6 py-4">
-              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60">
-                Dimension CIFSO 5000
+            <div className="px-6 py-5">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white">
+                {t('isoColDimension')}
               </p>
             </div>
-            <div className="px-6 py-4 border-l border-white/10">
-              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60">
-                Existing standards
+            <div className="px-6 py-5 border-l border-white/15">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white">
+                {t('isoColExisting')}
               </p>
             </div>
-            <div className="px-6 py-4 border-l border-white/10">
-              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex/70">
-                Certification CIFSO 5000
+            <div className="px-6 py-5 border-l border-white/15">
+              <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex">
+                {t('isoColCifso')}
               </p>
             </div>
           </div>
@@ -137,9 +137,9 @@ export function GradeISOMapping() {
 
         </div>
 
-        {/* Disclaimer */}
+        {/* Disclaimer — i18n */}
         <p className="mt-6 font-mono text-[10px] text-ag-gray-light leading-relaxed max-w-2xl">
-          Certification CIFSO 5000 is an independent organisational assessment protocol developed by Aegryn. It is not an accreditation under a national or international accreditation body, and does not replace existing certification standards. It is designed to operate alongside them.
+          {t('isoDisclaimer')}
         </p>
 
       </div>

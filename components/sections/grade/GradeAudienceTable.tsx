@@ -72,7 +72,7 @@ export function GradeAudienceTable() {
           </p>
         </div>
 
-        {/* Grade pill selector */}
+        {/* Grade pill selector — neutre */}
         <div className="flex gap-2 mb-8 flex-wrap">
           {GRADES.map((g, i) => {
             const c = GRADE_CONFIG[g]
@@ -84,7 +84,7 @@ export function GradeAudienceTable() {
                 className="flex items-center gap-2 px-4 py-2 rounded-full font-mono text-[11px] tracking-[0.1em] font-semibold transition-all duration-200"
                 style={
                   isActive
-                    ? { background: c.bg, color: c.color, boxShadow: `0 0 0 2px ${c.ring}` }
+                    ? { background: '#0D1F3C', color: '#fff', boxShadow: '0 0 0 2px #0D1F3C' }
                     : { background: 'white', color: '#888', border: '1px solid #E5E5E0' }
                 }
               >
@@ -105,15 +105,9 @@ export function GradeAudienceTable() {
                 className="audience-card bg-white border border-ag-border flex flex-col rounded-2xl overflow-hidden"
               >
                 {/* Card header */}
-                <div
-                  className="px-5 py-4 flex items-center gap-3"
-                  style={{ background: `${cfg.bg}18` }}
-                >
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
-                    style={{ background: cfg.bg }}
-                  >
-                    <Icon size={14} style={{ color: cfg.color }} />
+                <div className="px-5 py-4 flex items-center gap-3 bg-ag-off-white border-b border-ag-border">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-ag-border">
+                    <Icon size={14} className="text-ag-gray" />
                   </div>
                   <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug">
                     {row.profile}
@@ -122,11 +116,10 @@ export function GradeAudienceTable() {
 
                 {/* Active grade reading */}
                 <div className="px-5 py-5 flex-1 flex flex-col gap-3">
-                  {/* Grade badge */}
+                  {/* Grade badge — neutre, sans couleur de fond */}
                   <div className="flex items-center gap-2">
                     <span
-                      className="font-mono text-[11px] font-bold px-2.5 py-1 rounded-full"
-                      style={{ background: cfg.bg, color: cfg.color }}
+                      className="font-mono text-[11px] font-bold px-2.5 py-1 rounded-full border border-ag-border text-ag-black bg-white"
                     >
                       {activeGrade}
                     </span>
@@ -165,8 +158,8 @@ export function GradeAudienceTable() {
         {/* Desktop — expandable full matrix toggle */}
         <details className="mt-6 group">
           <summary className="cursor-pointer list-none flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors select-none">
-            <span className="group-open:hidden">Show full matrix ↓</span>
-            <span className="hidden group-open:inline">Collapse ↑</span>
+            <span className="group-open:hidden">{t('audienceShowMatrix')} ↓</span>
+            <span className="hidden group-open:inline">{t('audienceHideMatrix')} ↑</span>
           </summary>
 
           <div className="mt-4 overflow-x-auto border border-ag-border rounded-2xl overflow-hidden">

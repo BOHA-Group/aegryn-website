@@ -3194,7 +3194,14 @@
       "wpS9AllTiersDesc": "Volledig CIFSO-5000-audit op 5 dimensies · Onafhankelijk certificeringsrapport · Officiële note · Inschrijving in het gecertificeerde Aegryn-register · Geldigheid certificaat zoals per formaat vermeld",
       "wpS10Title": "10. Disclaimer",
       "wpFooterVersion": "Certificering CIFSO 5000 v4.0 — Officiële Methodologie",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Zwitserland"
+      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Zwitserland",
+      "isoColDimension": "Dimensie",
+      "isoColExisting": "Bestaande standaarden",
+      "isoColCifso": "CIFSO 5000 Certificering",
+      "isoDisclaimer": "De CIFSO 5000 Certificering is een onafhankelijk organisatorisch beoordelingsprotocol ontwikkeld door Aegryn. Het is geen accreditatie bij een nationaal of internationaal accreditatie-orgaan en vervangt bestaande certificeringsstandaarden niet. Het is ontworpen om hiernaast te functioneren.",
+      "audienceShowMatrix": "Volledige matrix tonen",
+      "audienceHideMatrix": "Inklappen",
+      "pricingRecommended": "Aanbevolen"
     },
     "grades": [
       {

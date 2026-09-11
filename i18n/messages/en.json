@@ -2566,7 +2566,14 @@
       "wpS9AllTiersDesc": "Full 5-dimension CIFSO 5000 audit · Independent certification report · Official grade · Registration in Aegryn certified register · Certificate validity as stated per tier",
       "wpS10Title": "10. Disclaimer",
       "wpFooterVersion": "Certification CIFSO 5000 v4.0 — Official Methodology",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Switzerland"
+      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Switzerland",
+      "isoColDimension": "Dimension",
+      "isoColExisting": "Existing standards",
+      "isoColCifso": "CIFSO 5000 Certification",
+      "isoDisclaimer": "CIFSO 5000 Certification is an independent organisational assessment protocol developed by Aegryn. It is not an accreditation under a national or international accreditation body, and does not replace existing certification standards. It is designed to operate alongside them.",
+      "audienceShowMatrix": "Show full matrix",
+      "audienceHideMatrix": "Collapse",
+      "pricingRecommended": "Recommended"
     },
     "grades": [
       {

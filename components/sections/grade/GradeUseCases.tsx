@@ -122,7 +122,7 @@ export function GradeUseCases() {
             return (
               <div
                 key={uc.num}
-                className="usecase-item bg-ag-white hover:bg-ag-off-white transition-colors"
+                className="usecase-item group bg-ag-white hover:bg-ag-off-white transition-colors"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-[56px_1fr_260px] gap-0">
 
@@ -174,20 +174,24 @@ export function GradeUseCases() {
                     </div>
                   </div>
 
-                  {/* Image */}
-                  <div className="hidden lg:block relative border-l border-ag-border overflow-hidden" style={{ minHeight: 240 }}>
-                    <Image
-                      src={meta.image}
-                      alt={meta.imageAlt}
-                      fill
-                      sizes="260px"
-                      className="object-cover transition-all duration-500"
-                    />
-                    {/* Overlay with num */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/60 to-transparent flex items-end p-4">
-                      <span className="font-mono text-[22px] font-bold text-white/60">
-                        {uc.num}
-                      </span>
+                  {/* Image — flottante avec angles arrondis */}
+                  <div className="hidden lg:flex items-center justify-center p-4">
+                    <div
+                      className="relative w-full overflow-hidden rounded-2xl shadow-md"
+                      style={{ minHeight: 200, maxHeight: 240 }}
+                    >
+                      <Image
+                        src={meta.image}
+                        alt={meta.imageAlt}
+                        fill
+                        sizes="260px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/50 to-transparent flex items-end p-4 rounded-2xl">
+                        <span className="font-mono text-[18px] font-bold text-white/50">
+                          {uc.num}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
