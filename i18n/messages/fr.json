@@ -67,7 +67,7 @@
     "craftBuild": "Construire",
     "craftBuildDesc": "Conception d'actifs tech durables",
     "craftBuildAssets": "Actifs propriétaires",
-    "craftBuildEngineering": "Logiciels sur-mesure",
+    "craftBuildEngineering": "Solutions sur-mesure",
     "craftSupport": "Accompagner",
     "craftSupportDesc": "Conseil en Stratégie, Tech & M&A : Toutes industries",
     "craftSupportStrategy": "Conseil en Stratégie",
@@ -174,7 +174,7 @@
     "geo": "Suisse · Europe",
     "scroll": "Défiler",
     "cta1Title": "Construire",
-    "cta1Desc": "vos besoins.",
+    "cta1Desc": "vos solutions.",
     "cta1Link": "Découvrir",
     "cta2Title": "Accompagner",
     "cta2Desc": "vos projets.",
@@ -4978,8 +4978,8 @@
       "title": "Conception d'actifs numériques sur-mesure - Aegryn",
       "desc": "Actifs numériques sur-mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
-    "label": "Conception : Logiciels sur mesure",
-    "title": "Logiciels sur-mesure\npour vos opérations.",
+    "label": "Conception : Solutions sur mesure",
+    "title": "Solutions sur-mesure\npour vos opérations.",
     "builtToLast": {
       "label": "NOTRE CONVICTION",
       "title": "Built to Last.",
@@ -5042,9 +5042,9 @@
       "label": "Indépendance technologique",
       "badge": "INDÉPENDANCE TECHNOLOGIQUE"
     },
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des logiciels métier sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
     "whySection": {
-      "label": "Pourquoi des logiciels sur mesure",
+      "label": "Pourquoi des solutions sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
       "desc": "46,7 % des entreprises européennes utilisent le cloud. 39,9 % l'analyse de données. Près de 20 % l'IA en 2026. Le besoin en logiciel de qualité, indépendant et sans vendor lock-in, est structurel. La Commission européenne reconnaît en 2026 que les dépendances vis-à-vis de fournisseurs tiers restent significatives dans le cloud et la cybersécurité. La Suisse a placé l'indépendance numérique parmi les priorités de sa stratégie numérique 2026.",
       "points": [
@@ -7873,7 +7873,7 @@
     "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
-    "engineeringTitle": "Logiciels sur-mesure\npour vos opérations.",
+    "engineeringTitle": "Solutions sur-mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
     "engineeringCta": "Découvrir l'ingénierie"
   },
@@ -9173,7 +9173,7 @@
       },
       "label": "Nos industries",
       "title": "Une expertise sectorielle\npour chaque enjeu organisationnel.",
-      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Logiciels sur-mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
+      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Solutions sur-mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
       "servicesTitle": "Nos métiers mobilisés",
       "services": [
         {
@@ -9189,7 +9189,7 @@
           "desc": "Préparation à la cession, due diligence acheteur, structuration de transaction et accompagnement au closing."
         },
         {
-          "name": "Logiciels sur-mesure",
+          "name": "Solutions sur-mesure",
           "desc": "Développement de produits digitaux, intégrations métier et plateformes propriétaires adaptées à vos contraintes sectorielles."
         },
         {
@@ -9273,7 +9273,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en Technologie",
-            "Logiciels sur-mesure",
+            "Solutions sur-mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9368,7 +9368,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en M&A",
-            "Logiciels sur-mesure",
+            "Solutions sur-mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9412,7 +9412,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en Technologie",
-            "Logiciels sur-mesure",
+            "Solutions sur-mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9522,7 +9522,7 @@
           "num": "02",
           "title": "CONSTRUIRE",
           "desc": "Actifs numériques durables, propriété totale du client, prêts pour la certification. Nous concevons et opérons des SaaS, apps et protocoles : pour vous, et pour nos propres portefeuilles.",
-          "cta": "Voir les logiciels sur-mesure",
+          "cta": "Voir les solutions sur-mesure",
           "href": "/services/build"
         },
         {
