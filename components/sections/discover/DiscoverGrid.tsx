@@ -225,11 +225,15 @@ export function DiscoverGrid({ locale }: Props) {
               )}
             </div>
 
-            {/* Filter pills */}
+            {/* Filter pills — onChange préserve la position de scroll */}
             <FilterPills
               options={filters}
               active={active}
-              onChange={setActive}
+              onChange={(key) => {
+                const y = window.scrollY
+                setActive(key)
+                requestAnimationFrame(() => window.scrollTo({ top: y, behavior: 'instant' }))
+              }}
             />
 
           </div>
