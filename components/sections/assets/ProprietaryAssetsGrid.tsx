@@ -28,7 +28,7 @@ interface PropAsset {
 const PROP_ASSETS: PropAsset[] = [
   {
     id:          'subblink',
-    name:        'Intelligence contractuelle IA',
+    name:        'Analyse de risques contractuels',
     url:         'https://subblink.com',
     badgeKey:    'subblink.badge',
     taglineKey:  'subblink.tagline',
@@ -54,7 +54,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:          'dataroom',
-    name:        'Data Room',
+    name:        'Data room transactions',
     url:         null,
     badgeKey:    'dataroom.badge',
     taglineKey:  'dataroom.tagline',
@@ -190,6 +190,12 @@ export function ProprietaryAssetsGrid() {
                   </div>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {asset.name}
+                    {asset.id === 'subblink' && (
+                      <sup className="text-[10px] font-normal align-super ml-0.5">®</sup>
+                    )}
+                    {asset.id === 'kryv' && (
+                      <sup className="text-[10px] font-normal align-super ml-0.5">™</sup>
+                    )}
                   </h2>
                 </div>
                 {/* Publisher badge */}
@@ -216,6 +222,12 @@ export function ProprietaryAssetsGrid() {
               {/* Tagline */}
               <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">
                 {tItems(asset.taglineKey)}
+                {asset.id === 'subblink' && (
+                  <sup className="text-[9px] font-normal align-super ml-0.5">®</sup>
+                )}
+                {asset.id === 'kryv' && (
+                  <sup className="text-[9px] font-normal align-super ml-0.5">™</sup>
+                )}
               </p>
 
               {/* Description */}
