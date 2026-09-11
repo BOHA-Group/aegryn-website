@@ -6,7 +6,8 @@ import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { INDUSTRIES, getIndustry, getOtherIndustries } from '@/data/industries'
-import { ARTICLES, getLocaleText }  from '@/data/articles'
+import { ARTICLES }  from '@/data/articles'
+import { IndustryArticles } from '@/components/sections/industries/IndustryArticles'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -201,48 +202,7 @@ export default async function IndustryDetailPage({ params }: Props) {
       {/* ════════════════════════════════════════════════════════
           PUBLICATIONS ASSOCIÉES
       ════════════════════════════════════════════════════════ */}
-      {articles.length > 0 && (
-        <section className="border-b border-ag-border bg-ag-off-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-            <div className="flex items-center justify-between mb-8">
-              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light">
-                Publications associées
-              </p>
-              <Link href="/blog"
-                className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray hover:text-ag-black transition-colors">
-                Toutes nos publications <ArrowUpRight size={10} />
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {articles.map(article => (
-                <Link
-                  key={article.slug}
-                  href={`/blog/${article.slug}` as never}
-                  className="group bg-ag-white border border-ag-border rounded-xl p-6 flex flex-col gap-4 hover:border-ag-black transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[8px] tracking-[0.18em] uppercase text-ag-gray-light">
-                      {article.date}
-                    </span>
-                    <span className="font-mono text-[8px] tracking-[0.12em] uppercase px-1.5 py-0.5 border border-ag-border text-ag-gray-light">
-                      {article.readMin} min
-                    </span>
-                  </div>
-                  <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug group-hover:text-ag-black">
-                    {getLocaleText(article.title, locale)}
-                  </p>
-                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed line-clamp-3">
-                    {getLocaleText(article.excerpt, locale)}
-                  </p>
-                  <span className="mt-auto font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray group-hover:text-ag-black transition-colors flex items-center gap-1.5">
-                    Lire <ArrowUpRight size={9} />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <IndustryArticles articles={articles} locale={locale} />
 
       {/* ════════════════════════════════════════════════════════
           CTA CERTIFICATION
