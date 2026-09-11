@@ -135,7 +135,7 @@ export function DiscoverGrid({ locale }: Props) {
                       sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
                     <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy px-2.5 py-1 rounded-full font-semibold">
                       {ARTICLE_CATEGORIES[article.category][lang]}
                     </span>
@@ -234,7 +234,7 @@ export function DiscoverGrid({ locale }: Props) {
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
                     </div>
 
                     {/* Content */}
