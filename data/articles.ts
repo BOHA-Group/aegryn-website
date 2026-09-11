@@ -1799,7 +1799,7 @@ export const ARTICLES: Article[] = [
     category: 'vertical',
     date:     '2026-06-20',
     readMin:  10,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: 'SaaS IA-native en 2026 : valorisation, multiples et ce qui différencie les actifs premium',
@@ -1919,7 +1919,7 @@ export const ARTICLES: Article[] = [
     category: 'dach',
     date:     '2026-07-25',
     readMin:  9,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: 'Marché M&A tech DACH 2026 : pourquoi l\'Allemagne, l\'Autriche et la Suisse offrent les meilleurs multiples d\'Europe',
@@ -2069,7 +2069,7 @@ export const ARTICLES: Article[] = [
     category: 'certification',
     date:     '2026-07-18',
     readMin:  10,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: 'Certification indépendante avant cession SaaS : pourquoi c\'est devenu indispensable en 2026',
@@ -2130,7 +2130,7 @@ export const ARTICLES: Article[] = [
     category: 'case_study',
     date:     '2026-07-10',
     readMin:  8,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: 'Étude de cas : comment la certification Aegryn a permis un exit à 4,8x ARR pour un SaaS B2B',
@@ -2333,7 +2333,7 @@ export const ARTICLES: Article[] = [
     category: 'legal',
     date:     '2026-06-05',
     readMin:  11,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: 'Fiscalité de l\'exit pour un fondateur tech : France, Suisse et Luxembourg comparés',
@@ -2888,7 +2888,7 @@ export const ARTICLES: Article[] = [
     category: 'vertical' as const,
     date:     '2025-10-15',
     readMin:  9,
-    featured: false,
+    featured: true,
     aiAssisted: true,
     title: {
       fr: "Finance & Capital : pourquoi la documentation de valeur est devenue un enjeu de financement",

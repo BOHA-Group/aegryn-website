@@ -112,70 +112,73 @@ export function DiscoverGrid({ locale }: Props) {
         </div>
       </section>
 
-      {/* ── Featured — 1 grand + liste à droite ────────────────── */}
+      {/* ── Featured — format flowpartners : image portrait + liste ── */}
       {showFeatured && featured.length > 0 && (
         <section className="bg-ag-white border-t border-ag-border py-16 px-6">
           <div className="max-w-7xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-10">
-              {t('featuredLabel')}
-            </p>
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-12 items-start">
 
-              {/* Article principal — grand format */}
+              {/* Article principal — image portrait + texte dessous */}
               <Link
                 href={`/blog/${featured[0].slug}` as never}
-                className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                className="group flex flex-col"
               >
-                <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                {/* Image — ratio 4/3, grands angles arrondis */}
+                <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                   <Image
                     src={getImage(featured[0].slug)}
                     alt={featured[0].title[lang] ?? featured[0].title.en}
                     fill
-                    sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 55vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     priority
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/25 to-transparent" />
                 </div>
-                <div className="p-7 flex flex-col">
-                  <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex mb-3">
-                    {ARTICLE_CATEGORIES[featured[0].category][lang]}
-                  </span>
-                  <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.025em] leading-snug mb-3 group-hover:text-ag-navy transition-colors">
+                {/* Texte sous l'image */}
+                <div className="mt-5">
+                  <h2
+                    className="font-sans font-bold text-ag-black leading-[1.15] tracking-[-0.03em] mb-3 group-hover:text-ag-navy transition-colors"
+                    style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
+                  >
                     {featured[0].title[lang] ?? featured[0].title.en}
                   </h2>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3">
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3 mb-4">
                     {featured[0].excerpt[lang] ?? featured[0].excerpt.en}
                   </p>
-                  <div className="flex items-center gap-3 mt-4 text-ag-gray-light">
-                    <span className="font-mono text-[10px]">{formatDate(featured[0].date)}</span>
-                    <span className="font-mono text-[10px]">·</span>
-                    <span className="font-mono text-[10px]">{featured[0].readMin} {t('readMin')}</span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="font-sans text-[11px] text-ag-gray-light border border-ag-border rounded-full px-2.5 py-0.5">
+                      {ARTICLE_CATEGORIES[featured[0].category][lang]}
+                    </span>
+                    <span className="text-ag-gray-light text-[11px]">·</span>
+                    <span className="font-sans text-[11px] text-ag-gray-light">{formatDate(featured[0].date)}</span>
                   </div>
                 </div>
               </Link>
 
-              {/* Autres featured — liste verticale style flowpartners */}
-              <div className="flex flex-col">
-                <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] mb-6">
+              {/* Colonne droite — titre section + liste articles */}
+              <div className="flex flex-col lg:pt-0">
+                <p
+                  className="font-sans font-bold text-ag-black mb-7 leading-tight tracking-[-0.025em]"
+                  style={{ fontSize: 'clamp(18px,2vw,26px)' }}
+                >
                   {t('featuredLabel')}
                 </p>
                 <div className="flex flex-col divide-y divide-ag-border">
-                  {featured.slice(1).map(article => (
+                  {featured.slice(1, 6).map(article => (
                     <Link
                       key={article.slug}
                       href={`/blog/${article.slug}` as never}
-                      className="group py-5 flex flex-col gap-2 hover:opacity-80 transition-opacity"
+                      className="group py-5 flex flex-col gap-2.5"
                     >
                       <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug group-hover:text-ag-navy transition-colors">
                         {article.title[lang] ?? article.title.en}
                       </h3>
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-apex border border-ag-apex/30 bg-ag-apex/5 px-2 py-0.5 rounded-full">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-sans text-[10px] text-ag-gray-light border border-ag-border rounded-full px-2 py-0.5 whitespace-nowrap">
                           {ARTICLE_CATEGORIES[article.category][lang]}
                         </span>
-                        <span className="font-mono text-[10px] text-ag-gray-light">·</span>
-                        <span className="font-mono text-[10px] text-ag-gray-light">{formatDate(article.date)}</span>
+                        <span className="text-ag-gray-light text-[10px]">·</span>
+                        <span className="font-sans text-[10px] text-ag-gray-light">{formatDate(article.date)}</span>
                       </div>
                     </Link>
                   ))}
