@@ -256,7 +256,7 @@
       "subblink": {
         "badge": "Contract intelligence",
         "tagline": "Public name: subblink",
-        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Proprietary dual-use asset: Aegryn internal operations and client access on subscription."
+        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Licensable as white-label for law firms, family offices and legal departments."
       },
       "kryv": {
         "badge": "AI code integrity",
@@ -292,7 +292,7 @@
       "kyb": {
         "badge": "Identity · KYB/KYC",
         "tagline": "Business onboarding and identity verification",
-        "description": "Active KYB/KYC engine, used for client onboarding and counterparty verification in mandates. Identity verification, KYB, beneficial owners, sanctions and credentials. Licensable to financial actors, lawyers and notaries wishing to automate their due diligence."
+        "description": "Active KYB/KYC engine used for client onboarding and counterparty verification. Identity verification, KYB, beneficial owners, sanctions and credentials."
       },
       "hobconnect": {
         "badge": "B2C · Social",

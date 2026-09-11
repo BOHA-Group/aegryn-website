@@ -256,7 +256,7 @@
       "subblink": {
         "badge": "Vertragsanalyse",
         "tagline": "Öffentlicher Name: subblink",
-        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Proprietäres Dual-Use-Asset: interne Aegryn-Operationen und Kundenzugang per Abonnement."
+        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Als White-Label für Anwaltskanzleien, Family Offices und Rechtsabteilungen lizenzierbar."
       },
       "kryv": {
         "badge": "KI-Code-Integrität",
@@ -292,7 +292,7 @@
       "kyb": {
         "badge": "Identität · KYB/KYC",
         "tagline": "Unternehmens-Onboarding und Identitätsprüfung",
-        "description": "Aktive KYB/KYC-Engine, für das Onboarding von Kunden und die Überprüfung von Gegenparteien in Mandaten genutzt. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Nachweise. Lizenzierbar für Finanzakteure, Rechtsanwälte und Notare, die ihre Due Diligence automatisieren möchten."
+        "description": "Aktive KYB/KYC-Engine für das Kunden-Onboarding und die Überprüfung von Gegenparteien. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Credentials."
       },
       "hobconnect": {
         "badge": "B2C · Sozial",

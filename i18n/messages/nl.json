@@ -256,7 +256,7 @@
       "subblink": {
         "badge": "Contractintelligentie",
         "tagline": "Publieke naam: subblink",
-        "description": "Analyseert al uw contracten in seconden met een AI gekalibreerd op Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles in duidelijke taal geïdentificeerd. Eigen dual-use asset: interne Aegryn-operaties en clienttoegang via abonnement."
+        "description": "Analyseert al uw contracten in seconden met AI gekalibreerd voor Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles geïdentificeerd in begrijpelijke taal. Licentieerbaar als white-label voor advocatenkantoren, family offices en juridische afdelingen."
       },
       "kryv": {
         "badge": "AI-code-integriteit",
@@ -292,7 +292,7 @@
       "kyb": {
         "badge": "Identiteit · KYB/KYC",
         "tagline": "Zakelijke onboarding en identiteitsverificatie",
-        "description": "Actieve KYB/KYC-engine, gebruikt voor client-onboarding en verificatie van tegenpartijen in mandaten. Identiteitsverificatie, KYB, uiteindelijk belanghebbenden, sancties en credentials. Licentieerbaar voor financiële actoren, advocaten en notarissen die hun due diligence willen automatiseren."
+        "description": "Actieve KYB/KYC-engine voor klant-onboarding en verificatie van tegenpartijen. Identiteitsverificatie, KYB, uiteindelijk begunstigden, sancties en credentials."
       },
       "hobconnect": {
         "badge": "B2C · Sociaal",
