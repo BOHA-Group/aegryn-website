@@ -548,7 +548,12 @@
       ],
       "conclusion": "Aegryn Advisory operates at the intersection of these three dimensions. We help tech leaders define a coherent growth strategy, build the technological capabilities to execute it, and identify acquisitions that accelerate the plan without creating technical debt. An integrated approach for a market that no longer forgives silos."
     },
-    "label": "Advisory"
+    "label": "Advisory",
+    "contactCta": "Get in touch",
+    "ctaDesc": "Every engagement starts with an exhaustive diagnostic before any recommendation. We document, we measure, we deliver.",
+    "ctaTitleMa": "Let's discuss your M&A deal",
+    "ctaTitleTech": "Let's discuss your tech transformation",
+    "ctaTitleStrategy": "Let's discuss your strategy"
   },
   "build": {
     "hero": {
@@ -2579,7 +2584,8 @@
       "isoDisclaimer": "CIFSO 5000 Certification is an independent organisational assessment protocol developed by Aegryn. It is not an accreditation under a national or international accreditation body, and does not replace existing certification standards. It is designed to operate alongside them.",
       "audienceShowMatrix": "Show full matrix",
       "audienceHideMatrix": "Collapse",
-      "pricingRecommended": "Recommended"
+      "pricingRecommended": "Recommended",
+      "contactCta": "Get in touch"
     },
     "grades": [
       {
@@ -3507,7 +3513,15 @@
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Typical subcodes",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Label",
+    "tableColScore": "Score",
+    "tableColRarity": "Rarity",
+    "subcodesColCode": "No.",
+    "subcodesColLabel": "Label",
+    "subcodesColDef": "Definition"
   },
   "transact": {
     "meta": {
@@ -4921,7 +4935,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Get in touch"
   },
   "build_service": {
     "meta": {

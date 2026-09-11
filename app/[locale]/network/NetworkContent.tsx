@@ -333,7 +333,7 @@ export default function NetworkContent() {
               href="/contact"
               className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
             >
-              Prendre contact <ArrowUpRight size={14} />
+              {t('contactCta')} <ArrowUpRight size={14} />
             </Link>
           </div>
         </div>

@@ -29,11 +29,14 @@ export function GradeISOMapping() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.iso-row', {
-        opacity: 0, y: 20, stagger: 0.1,
-        ease: 'expo.out', duration: 0.65,
-        scrollTrigger: { trigger: ref.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.iso-row',
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1, y: 0, stagger: 0.1,
+          ease: 'expo.out', duration: 0.65,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true },
+        }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])
@@ -64,22 +67,23 @@ export function GradeISOMapping() {
           </div>
         </div>
 
-        {/* Comparison table */}
-        <div className="border border-ag-border overflow-hidden rounded-2xl">
+        {/* Comparison table — scroll horizontal sur mobile */}
+        <div className="overflow-x-auto rounded-2xl border border-ag-border">
+          <div style={{ minWidth: 560 }}>
 
           {/* Column headers — contraste renforcé */}
-          <div className="grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] bg-ag-navy">
-            <div className="px-6 py-5">
+          <div className="grid grid-cols-[160px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] bg-ag-navy">
+            <div className="px-5 py-5">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white">
                 {t('isoColDimension')}
               </p>
             </div>
-            <div className="px-6 py-5 border-l border-white/15">
+            <div className="px-5 py-5 border-l border-white/15">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white">
                 {t('isoColExisting')}
               </p>
             </div>
-            <div className="px-6 py-5 border-l border-white/15">
+            <div className="px-5 py-5 border-l border-white/15">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex">
                 {t('isoColCifso')}
               </p>
@@ -93,7 +97,7 @@ export function GradeISOMapping() {
             return (
               <div
                 key={row.dimension}
-                className="iso-row grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] border-t border-ag-border"
+                className="iso-row grid grid-cols-[160px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] border-t border-ag-border"
               >
                 {/* Dimension */}
                 <div className="rounded-lg px-6 py-5 bg-ag-off-white border-r border-ag-border flex items-start">
@@ -135,7 +139,8 @@ export function GradeISOMapping() {
             )
           })}
 
-        </div>
+          </div>{/* end minWidth wrapper */}
+        </div>{/* end overflow-x-auto */}
 
         {/* Disclaimer — i18n */}
         <p className="mt-6 font-mono text-[10px] text-ag-gray-light leading-relaxed max-w-2xl">

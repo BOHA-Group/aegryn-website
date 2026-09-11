@@ -548,7 +548,12 @@
       ],
       "conclusion": "Aegryn Advisory interveniëert op het snijpunt van deze drie dimensies. Wij helpen tech-leiders een coherente groeistrategie te definiëren, de technologische capaciteiten te bouwen om die uit te voeren, en de overnames te identificeren die het plan versnellen zonder technische schuld te creëren. Een geïntegreerde aanpak voor een markt die silo's niet meer vergeeft."
     },
-    "label": "Advies"
+    "label": "Advies",
+    "contactCta": "Contact opnemen",
+    "ctaDesc": "Elk mandaat begint met een uitgebreide diagnose vóór enige aanbeveling. Wij documenteren, meten en leveren.",
+    "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
+    "ctaTitleTech": "Laten we het hebben over uw tech-transformatie",
+    "ctaTitleStrategy": "Laten we het hebben over uw strategie"
   },
   "build": {
     "hero": {
@@ -2647,7 +2652,15 @@
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Typische subcodes",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Label",
+    "tableColScore": "Score",
+    "tableColRarity": "Zeldzaamheid",
+    "subcodesColCode": "Nr.",
+    "subcodesColLabel": "Label",
+    "subcodesColDef": "Definitie"
   },
   "roadmapPage": {
     "meta": {
@@ -3207,7 +3220,8 @@
       "isoDisclaimer": "De CIFSO 5000 Certificering is een onafhankelijk organisatorisch beoordelingsprotocol ontwikkeld door Aegryn. Het is geen accreditatie bij een nationaal of internationaal accreditatie-orgaan en vervangt bestaande certificeringsstandaarden niet. Het is ontworpen om hiernaast te functioneren.",
       "audienceShowMatrix": "Volledige matrix tonen",
       "audienceHideMatrix": "Inklappen",
-      "pricingRecommended": "Aanbevolen"
+      "pricingRecommended": "Aanbevolen",
+      "contactCta": "Contact opnemen"
     },
     "grades": [
       {
@@ -4922,7 +4936,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Contact opnemen"
   },
   "transactNarrative": {
     "label": "M&A Transactions",

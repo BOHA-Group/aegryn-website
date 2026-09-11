@@ -19,11 +19,11 @@ export function GradeCards() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.grade-card', {
-        opacity: 0, y: 28, stagger: 0.1,
-        ease: 'expo.out', duration: 0.7,
-        scrollTrigger: { trigger: ref.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.grade-card',
+        { opacity: 0, y: 28 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: 'expo.out', duration: 0.7,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true } }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])

@@ -24,11 +24,14 @@ export function GradePricing() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.pricing-card', {
-        opacity: 0, y: 32, stagger: 0.12,
-        ease: 'expo.out', duration: 0.75,
-        scrollTrigger: { trigger: ref.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.pricing-card',
+        { opacity: 0, y: 32 },
+        {
+          opacity: 1, y: 0, stagger: 0.12,
+          ease: 'expo.out', duration: 0.75,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true },
+        }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])

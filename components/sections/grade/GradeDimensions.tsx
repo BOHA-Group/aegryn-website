@@ -11,11 +11,14 @@ export function GradeDimensions() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.dim-item', {
-        opacity: 0, y: 20,
-        stagger: 0.08, ease: 'expo.out', duration: 0.75,
-        scrollTrigger: { trigger: ref.current, start: 'top 75%' },
-      })
+      gsap.fromTo('.dim-item',
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1, y: 0,
+          stagger: 0.08, ease: 'expo.out', duration: 0.75,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true },
+        }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])

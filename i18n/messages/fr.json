@@ -549,7 +549,12 @@
       ],
       "conclusion": "Aegryn Conseil intervient à l'intersection de ces trois dimensions. Nous aidons les dirigeants tech à définir une stratégie de croissance cohérente, à construire les capacités technologiques pour l'exécuter, et à identifier les acquisitions qui accélèrent le plan sans créer de dette technique. Une approche intégrée pour un marché qui ne pardonne plus les silos."
     },
-    "label": "Conseil"
+    "label": "Conseil",
+    "contactCta": "Prendre contact",
+    "ctaDesc": "Chaque mission démarre par un diagnostic exhaustif avant toute recommandation. Nous documentons, nous mesurons, nous livrons.",
+    "ctaTitleMa": "Discutons de votre opération M&A",
+    "ctaTitleTech": "Discutons de votre transformation tech",
+    "ctaTitleStrategy": "Discutons de votre stratégie"
   },
   "build": {
     "hero": {
@@ -2542,7 +2547,8 @@
       "isoDisclaimer": "La Certification CIFSO 5000 est un protocole d'évaluation organisationnelle indépendant développé par Aegryn. Elle ne constitue pas une accréditation auprès d'un organisme d'accréditation national ou international et ne remplace pas les standards de certification existants. Elle est conçue pour opérer en complément de ceux-ci.",
       "audienceShowMatrix": "Voir la matrice complète",
       "audienceHideMatrix": "Réduire",
-      "pricingRecommended": "Recommandé"
+      "pricingRecommended": "Recommandé",
+      "contactCta": "Prendre contact"
     },
     "grades": [
       {
@@ -3561,7 +3567,15 @@
         "label": "Relation clients portée par l'équipe",
         "desc": "Part des comptes clients gérés entièrement par l'équipe (hors fondateur). Risque de churn post-cession évalué."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Sous-codes typiques",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Label",
+    "tableColScore": "Score",
+    "tableColRarity": "Rareté",
+    "subcodesColCode": "N°",
+    "subcodesColLabel": "Label",
+    "subcodesColDef": "Définition"
   },
   "transact": {
     "meta": {
@@ -4976,7 +4990,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Prendre contact"
   },
   "build_service": {
     "meta": {

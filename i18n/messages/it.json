@@ -548,7 +548,12 @@
       ],
       "conclusion": "Aegryn Advisory interviene all'incrocio di queste tre dimensioni. Aiutiamo i leader tech a definire una strategia di crescita coerente, costruire le capacità tecnologiche per eseguirla e identificare le acquisizioni che accelerano il piano senza creare debito tecnico. Un approccio integrato per un mercato che non perdona più i silos."
     },
-    "label": "Consulenza"
+    "label": "Consulenza",
+    "contactCta": "Contattaci",
+    "ctaDesc": "Ogni incarico inizia con una diagnosi esaustiva prima di qualsiasi raccomandazione. Documentiamo, misuriamo e consegniamo.",
+    "ctaTitleMa": "Parliamo della sua operazione M&A",
+    "ctaTitleTech": "Parliamo della sua trasformazione tech",
+    "ctaTitleStrategy": "Parliamo della sua strategia"
   },
   "build": {
     "hero": {
@@ -2647,7 +2652,15 @@
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Sottocodici tipici",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Etichetta",
+    "tableColScore": "Punteggio",
+    "tableColRarity": "Rarità",
+    "subcodesColCode": "N°",
+    "subcodesColLabel": "Etichetta",
+    "subcodesColDef": "Definizione"
   },
   "roadmapPage": {
     "meta": {
@@ -3207,7 +3220,8 @@
       "isoDisclaimer": "La Certificazione CIFSO 5000 è un protocollo indipendente di valutazione organizzativa sviluppato da Aegryn. Non costituisce un accreditamento presso un organismo di accreditamento nazionale o internazionale e non sostituisce gli standard di certificazione esistenti. È progettata per operare in modo complementare a questi ultimi.",
       "audienceShowMatrix": "Visualizza la matrice completa",
       "audienceHideMatrix": "Comprimi",
-      "pricingRecommended": "Consigliato"
+      "pricingRecommended": "Consigliato",
+      "contactCta": "Contattaci"
     },
     "grades": [
       {
@@ -4922,7 +4936,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Contattaci"
   },
   "build_service": {
     "meta": {

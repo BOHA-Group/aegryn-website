@@ -548,7 +548,12 @@
       ],
       "conclusion": "Aegryn Advisory agiert an der Schnittstelle dieser drei Dimensionen. Wir helfen Tech-Leadern, eine kohärente Wachstumsstrategie zu definieren, die technologischen Fähigkeiten aufzubauen, um sie umzusetzen, und Akquisitionen zu identifizieren, die den Plan beschleunigen, ohne technische Schulden zu schaffen. Ein integrierter Ansatz für einen Markt, der Silos nicht mehr verzeiht."
     },
-    "label": "Beratung"
+    "label": "Beratung",
+    "contactCta": "Kontakt aufnehmen",
+    "ctaDesc": "Jedes Engagement beginnt mit einer umfassenden Diagnose vor jeder Empfehlung. Wir dokumentieren, messen und liefern.",
+    "ctaTitleMa": "Sprechen wir über Ihre M&A-Transaktion",
+    "ctaTitleTech": "Sprechen wir über Ihre Tech-Transformation",
+    "ctaTitleStrategy": "Sprechen wir über Ihre Strategie"
   },
   "build": {
     "hero": {
@@ -2647,7 +2652,15 @@
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Typische Untercodes",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Bezeichnung",
+    "tableColScore": "Punkte",
+    "tableColRarity": "Seltenheit",
+    "subcodesColCode": "Nr.",
+    "subcodesColLabel": "Bezeichnung",
+    "subcodesColDef": "Definition"
   },
   "roadmapPage": {
     "meta": {
@@ -3207,7 +3220,8 @@
       "isoDisclaimer": "Die CIFSO 5000 Zertifizierung ist ein unabhängiges Protokoll zur organisatorischen Bewertung, das von Aegryn entwickelt wurde. Sie stellt keine Akkreditierung durch eine nationale oder internationale Akkreditierungsstelle dar und ersetzt keine bestehenden Zertifizierungsstandards. Sie ist darauf ausgelegt, diese zu ergänzen.",
       "audienceShowMatrix": "Vollständige Matrix anzeigen",
       "audienceHideMatrix": "Reduzieren",
-      "pricingRecommended": "Empfohlen"
+      "pricingRecommended": "Empfohlen",
+      "contactCta": "Kontakt aufnehmen"
     },
     "grades": [
       {
@@ -4922,7 +4936,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Kontakt aufnehmen"
   },
   "build_service": {
     "meta": {

@@ -548,7 +548,12 @@
       ],
       "conclusion": "Aegryn Advisory interviene en la intersección de estas tres dimensiones. Ayudamos a los líderes tech a definir una estrategia de crecimiento coherente, construir las capacidades tecnológicas para ejecutarla e identificar las adquisiciones que aceleran el plan sin crear deuda técnica. Un enfoque integrado para un mercado que ya no perdona los silos."
     },
-    "label": "Consultoría"
+    "label": "Consultoría",
+    "contactCta": "Ponerse en contacto",
+    "ctaDesc": "Cada encargo comienza con un diagnóstico exhaustivo antes de cualquier recomendación. Documentamos, medimos y entregamos.",
+    "ctaTitleMa": "Hablemos de su operación M&A",
+    "ctaTitleTech": "Hablemos de su transformación tecnológica",
+    "ctaTitleStrategy": "Hablemos de su estrategia"
   },
   "build": {
     "hero": {
@@ -2647,7 +2652,15 @@
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
       }
-    ]
+    ],
+    "subcodesTypicalLabel": "Subcódigos típicos",
+    "tableColGrade": "Grade",
+    "tableColLabel": "Etiqueta",
+    "tableColScore": "Puntuación",
+    "tableColRarity": "Rareza",
+    "subcodesColCode": "N°",
+    "subcodesColLabel": "Etiqueta",
+    "subcodesColDef": "Definición"
   },
   "roadmapPage": {
     "meta": {
@@ -3207,7 +3220,8 @@
       "isoDisclaimer": "La Certificación CIFSO 5000 es un protocolo independiente de evaluación organizacional desarrollado por Aegryn. No constituye una acreditación ante un organismo de acreditación nacional o internacional y no reemplaza los estándares de certificación existentes. Está diseñada para operar de forma complementaria a ellos.",
       "audienceShowMatrix": "Ver la matriz completa",
       "audienceHideMatrix": "Reducir",
-      "pricingRecommended": "Recomendado"
+      "pricingRecommended": "Recomendado",
+      "contactCta": "Ponerse en contacto"
     },
     "grades": [
       {
@@ -4922,7 +4936,8 @@
           ]
         }
       ]
-    }
+    },
+    "contactCta": "Ponerse en contacto"
   },
   "build_service": {
     "meta": {

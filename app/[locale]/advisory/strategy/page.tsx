@@ -126,16 +126,16 @@ export default async function StrategyAdvisoryPage({ params }: Props) {
       <section className="border-b border-ag-border bg-ag-cream">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 text-center">
           <h2 className="font-sans font-bold text-[32px] text-ag-navy mb-6">
-            Discutons de votre stratégie
+            {t('ctaTitleStrategy')}
           </h2>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mx-auto mb-10">
-            Chaque mission démarre par un diagnostic exhaustif avant toute recommandation. Nous documentons, nous mesurons, nous livrons.
+            {t('ctaDesc')}
           </p>
           <Link
             href="/contact"
             className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex/90 transition-colors"
           >
-            Prendre contact <ArrowUpRight size={14} />
+            {t('contactCta')} <ArrowUpRight size={14} />
           </Link>
         </div>
       </section>

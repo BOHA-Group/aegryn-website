@@ -88,27 +88,27 @@ export function GradingSystemPage() {
     }, heroRef)
 
     const ctxCifs = gsap.context(() => {
-      gsap.from('.cifs-card', {
-        opacity: 0, y: 24, stagger: 0.1,
-        ease: 'expo.out', duration: 0.65,
-        scrollTrigger: { trigger: cifsRef.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.cifs-card',
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: 'expo.out', duration: 0.65,
+          scrollTrigger: { trigger: cifsRef.current, start: 'top 85%', once: true } }
+      )
     }, cifsRef)
 
     const ctxGrades = gsap.context(() => {
-      gsap.from('.grade-row', {
-        opacity: 0, x: -20, stagger: 0.08,
-        ease: 'expo.out', duration: 0.6,
-        scrollTrigger: { trigger: gradesRef.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.grade-row',
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, stagger: 0.08, ease: 'expo.out', duration: 0.6,
+          scrollTrigger: { trigger: gradesRef.current, start: 'top 85%', once: true } }
+      )
     }, gradesRef)
 
     const ctxProcess = gsap.context(() => {
-      gsap.from('.process-step', {
-        opacity: 0, y: 20, stagger: 0.1,
-        ease: 'expo.out', duration: 0.6,
-        scrollTrigger: { trigger: processRef.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.process-step',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: 'expo.out', duration: 0.6,
+          scrollTrigger: { trigger: processRef.current, start: 'top 85%', once: true } }
+      )
     }, processRef)
 
     return () => {
@@ -299,7 +299,7 @@ export function GradingSystemPage() {
                 {/* Subcodes */}
                 <div className="flex flex-col gap-2">
                   <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">
-                    Sous-codes typiques
+                    {t('subcodesTypicalLabel')}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {g.subcodes.map((sc) => (
@@ -333,9 +333,9 @@ export function GradingSystemPage() {
             </p>
             <div className="border border-ag-border rounded-2xl">
               <div className="grid grid-cols-[56px_120px_1fr] border-b border-ag-border bg-ag-light-gray">
-                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3">N°</p>
-                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Label</p>
-                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">Définition</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-5 py-3">{t('subcodesColCode')}</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">{t('subcodesColLabel')}</p>
+                <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-ag-gray-light px-4 py-3">{t('subcodesColDef')}</p>
               </div>
               {subcodes.map(({ code, label, desc }) => (
                 <div
@@ -469,10 +469,10 @@ export function GradingSystemPage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Grade</th>
-                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Label</th>
-                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Score</th>
-                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">Rareté</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">{t('tableColGrade')}</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">{t('tableColLabel')}</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">{t('tableColScore')}</th>
+                  <th className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/60 text-left px-6 py-3 font-normal">{t('tableColRarity')}</th>
                 </tr>
               </thead>
               <tbody>

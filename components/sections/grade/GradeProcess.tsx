@@ -21,11 +21,11 @@ export function GradeProcess() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.gprocess-step', {
-        opacity: 0, y: 24, stagger: 0.1,
-        ease: 'expo.out', duration: 0.7,
-        scrollTrigger: { trigger: ref.current, start: 'top 75%' },
-      })
+      gsap.fromTo('.gprocess-step',
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, stagger: 0.1, ease: 'expo.out', duration: 0.7,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true } }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])

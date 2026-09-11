@@ -40,11 +40,11 @@ export function GradeAudienceTable() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.audience-card', {
-        opacity: 0, y: 20, stagger: 0.07,
-        ease: 'expo.out', duration: 0.65,
-        scrollTrigger: { trigger: ref.current, start: 'top 78%' },
-      })
+      gsap.fromTo('.audience-card',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, stagger: 0.07, ease: 'expo.out', duration: 0.65,
+          scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true } }
+      )
     }, ref)
     return () => ctx.revert()
   }, [])
