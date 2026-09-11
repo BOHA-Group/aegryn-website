@@ -5,7 +5,7 @@ import type { NavGroup } from '@/app/client/SideNav'
 type AssetSummary = { id: string; company_name: string | null }
 
 export default async function SellerNav({
-  unreadCount,
+  unreadCount: _unreadCount,
   assets = [],
 }: {
   unreadCount: number

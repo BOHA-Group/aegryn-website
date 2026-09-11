@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
-export default async function PartnerNav({ unreadCount }: { unreadCount: number }) {
+export default async function PartnerNav({ unreadCount: _unreadCount }: { unreadCount: number }) {
   const t = await getTranslations('clientSpace')
 
   const groups: NavGroup[] = [
