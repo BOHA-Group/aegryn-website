@@ -1295,12 +1295,13 @@
     },
     "responseTime": {
       "label": "Délai de réponse",
-      "value": "Sous 24 heures"
+      "value": "Sous 48 heures"
     },
     "form": {
       "name": "Nom complet",
       "email": "Adresse email",
       "company": "Entreprise (optionnel)",
+      "phone": "Téléphone",
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {

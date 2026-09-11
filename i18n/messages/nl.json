@@ -1332,12 +1332,13 @@
     },
     "responseTime": {
       "label": "Reactietijd",
-      "value": "Binnen 24 uur"
+      "value": "Binnen 48 uur"
     },
     "form": {
       "name": "Volledige naam",
       "email": "E-mailadres",
       "company": "Bedrijf (optioneel)",
+      "phone": "Telefoon",
       "subject": "Onderwerp",
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {

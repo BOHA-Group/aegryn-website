@@ -1332,12 +1332,13 @@
     },
     "responseTime": {
       "label": "Tiempo de respuesta",
-      "value": "En 24 horas"
+      "value": "En menos de 48 horas"
     },
     "form": {
       "name": "Nombre completo",
       "email": "Correo electrónico",
       "company": "Empresa (opcional)",
+      "phone": "Teléfono",
       "subject": "Asunto",
       "subjectPlaceholder": "Elegir un asunto",
       "subjects": {
