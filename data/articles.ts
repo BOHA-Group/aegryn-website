@@ -2882,6 +2882,215 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+  /* ── Industrie : Finance & Capital ─────────────────────────── */
+  {
+    slug:     'fintech-finance-capital-enjeux-certification-cifso-2025',
+    category: 'vertical' as const,
+    date:     '2025-10-15',
+    readMin:  9,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Finance & Capital : pourquoi la documentation de valeur est devenue un enjeu de financement",
+      en: "Finance & Capital: why value documentation has become a financing issue",
+    },
+    excerpt: {
+      fr: "Les organisations financières font face à une exigence accrue de documentation de leur gouvernance et de leurs données. Analyse des tendances réglementaires et des enjeux de valeur pour les acteurs Finance & Capital en Europe.",
+      en: "Financial organisations face increasing demands to document their governance and data. Analysis of regulatory trends and value issues for Finance & Capital players in Europe.",
+    },
+    keywords: ['Finance Capital certification', 'DORA conformité', 'FinTech valeur documentée', 'data governance financement', 'CIFSO 5000 finance'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Le règlement DORA (Digital Operational Resilience Act), entré en vigueur en janvier 2025, impose aux établissements financiers européens une documentation exhaustive de leur résilience opérationnelle numérique. Pour la première fois, la capacité à défendre la robustesse d'un système d'information est devenue une condition légale d'exercice.",
+        en: "The DORA regulation (Digital Operational Resilience Act), in force since January 2025, requires European financial institutions to comprehensively document their digital operational resilience. For the first time, the ability to defend the robustness of an information system has become a legal condition of operation.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '4,1 Tn EUR', label: { fr: "actifs gérés par les fonds PE en Europe (Preqin 2024)", en: "assets managed by PE funds in Europe (Preqin 2024)" } },
+        { value: '47 Mrd EUR', label: { fr: "investissement FinTech Europe 2023 (KPMG Pulse)", en: "FinTech investment Europe 2023 (KPMG Pulse)" } },
+        { value: '68%',        label: { fr: "des deals M&A financiers bloqués par lacunes de data governance (PwC 2024)", en: "of financial M&A deals blocked by data governance gaps (PwC 2024)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "La convergence réglementaire comme catalyseur de valeur", en: "Regulatory convergence as a value catalyst" } },
+      { type: 'p' as const, text: {
+        fr: "Bâle IV, DORA, PSD2 révisée et l'AI Act convergent vers une même exigence : traçabilité des décisions, des systèmes et des données. Cette convergence crée une opportunité pour les organisations qui anticipent — celles qui documentent leur gouvernance aujourd'hui disposent demain d'un actif défendable.",
+        en: "Basel IV, DORA, revised PSD2 and the AI Act converge on the same requirement: traceability of decisions, systems and data. This convergence creates an opportunity for organisations that anticipate — those who document their governance today will have a defensible asset tomorrow.",
+      }},
+      { type: 'h2' as const, text: { fr: "Ce que la Certification CIFSO 5000 apporte au secteur financier", en: "What CIFSO 5000 Certification brings to the financial sector" } },
+      { type: 'list' as const, items: [
+        { fr: "Capital : documentation des actifs financiers propres, des droits et des engagements hors bilan", en: "Capital: documentation of own financial assets, rights and off-balance-sheet commitments" },
+        { fr: "Intégrité : évaluation de la gouvernance données, conformité DORA/NIS2 et dépendances systèmes", en: "Integrity: assessment of data governance, DORA/NIS2 compliance and system dependencies" },
+        { fr: "Finance : métriques de rentabilité, récurrence et solidité du modèle économique", en: "Finance: profitability metrics, recurrence and soundness of the business model" },
+        { fr: "Sécurité : résistance aux cyberattaques, plan de continuité et tests de résilience", en: "Security: cyber attack resistance, business continuity plan and resilience testing" },
+        { fr: "Organisation : transmissibilité réelle, dépendances aux personnes-clés et gouvernance", en: "Organisation: genuine transferability, key person dependencies and decision governance" },
+      ]},
+    ],
+  },
+
+  /* ── Industrie : Santé & Sciences de la Vie ─────────────────── */
+  {
+    slug:     'sante-sciences-vie-valorisation-actifs-certification-2025',
+    category: 'vertical' as const,
+    date:     '2025-10-20',
+    readMin:  10,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Santé & Sciences de la Vie : la valeur des actifs immatériels sous pression réglementaire",
+      en: "Health & Life Sciences: intangible asset value under regulatory pressure",
+    },
+    excerpt: {
+      fr: "Dans les secteurs de la santé et des sciences de la vie, la valeur réelle d'une organisation tient à ses données cliniques, ses protocoles et sa gouvernance réglementaire.",
+      en: "In health and life sciences sectors, the real value of an organisation lies in its clinical data, protocols and governance. Analysis of certification and transfer issues for European HealthTech and pharma players.",
+    },
+    keywords: ['HealthTech certification valeur', 'MDR IVDR conformité', 'données cliniques M&A', 'pharma due diligence', 'CIFSO 5000 santé'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Le règlement européen sur les dispositifs médicaux (MDR 2017/745) a transformé la valorisation des actifs HealthTech. Une organisation dont la conformité est documentée et vérifiable vaut structurellement plus qu'une organisation qui ne peut la défendre.",
+        en: "The European Medical Device Regulation (MDR 2017/745) has transformed HealthTech asset valuation. An organisation whose compliance is documented and verifiable is structurally worth more than one that cannot defend it.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '278 Mrd EUR', label: { fr: "marché santé numérique mondial 2028 estimé (Grand View Research 2024)", en: "estimated global digital health market 2028 (Grand View Research 2024)" } },
+        { value: '+42%',        label: { fr: "croissance M&A HealthTech Europe 2022-2024 (Dealroom 2024)", en: "HealthTech M&A growth Europe 2022-2024 (Dealroom 2024)" } },
+        { value: '89%',         label: { fr: "des due diligences pharma bloquées par manques de documentation données (EY 2023)", en: "of pharma due diligences blocked by data documentation gaps (EY 2023)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "Données cliniques : un actif à documenter avant toute cession", en: "Clinical data: an asset to document before any transfer" } },
+      { type: 'p' as const, text: {
+        fr: "Les données cliniques représentent le capital le plus précieux et le plus difficile à céder dans une organisation de santé. Soumises au RGPD, à la directive NIS2 et aux réglementations EMA/ANSM, elles nécessitent une documentation de gouvernance rigoureuse pour être valorisées dans un processus M&A.",
+        en: "Clinical data represents the most valuable and most difficult to transfer capital of a healthcare organisation. Subject to GDPR, the NIS2 directive and EMA/ANSM regulations, they require rigorous governance documentation to be valued in an M&A process.",
+      }},
+      { type: 'h2' as const, text: { fr: "La certification indépendante dans les transactions pharma", en: "Independent certification in pharma transactions" } },
+      { type: 'p' as const, text: {
+        fr: "La Certification CIFSO 5000 comble un angle mort dans les transactions HealthTech : qualité des données patients, robustesse des protocoles de validation, dépendances aux équipes scientifiques, conformité MDR/IVDR — dimensions que les auditeurs financiers classiques ne couvrent pas.",
+        en: "CIFSO 5000 Certification fills a blind spot in HealthTech transactions: quality of patient data, robustness of validation protocols, dependencies on scientific teams, MDR/IVDR compliance — dimensions that conventional financial auditors do not cover.",
+      }},
+    ],
+  },
+
+  /* ── Industrie : Industrie, Énergie & Infrastructure ────────── */
+  {
+    slug:     'industrie-energie-infrastructure-valeur-transmissible-2025',
+    category: 'vertical' as const,
+    date:     '2025-11-05',
+    readMin:  9,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Industrie, Énergie & Infrastructure : documenter la valeur que les bilans ne voient pas",
+      en: "Industry, Energy & Infrastructure: documenting value that balance sheets cannot see",
+    },
+    excerpt: {
+      fr: "Les PME et ETI industrielles portent une valeur opérationnelle souvent indéfendable faute de documentation. En période de transition énergétique et de consolidation, cette lacune bloque le financement et la transmission.",
+      en: "Industrial SMEs and mid-caps carry operational value that is often indefensible for lack of documentation. In a period of energy transition and sector consolidation, this gap blocks financing and transfer.",
+    },
+    keywords: ['PME ETI valeur transmissible', 'transition énergétique financement', 'industrie 4.0 M&A', 'certification opérationnelle', 'CIFSO 5000 industrie'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Selon CCI France, 73% des PME et ETI industrielles françaises n'ont pas de documentation de valeur transmissible. Ce n'est pas un problème d'intention, c'est un problème de méthode : il n'existe pas de référentiel standardisé pour documenter ce que le dirigeant sait de son entreprise mais qu'un acquéreur ne peut pas encore vérifier.",
+        en: "According to CCI France, 73% of French industrial SMEs and mid-caps have no documentation of their transferable value. This is not a problem of intent, it is a problem of method: there is no standardised framework for documenting what a business owner knows but what an acquirer cannot yet verify.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '1 Tn EUR',    label: { fr: "investissements infrastructure Europe 2021-2027 (Commission Européenne)", en: "infrastructure investments Europe 2021-2027 (European Commission)" } },
+        { value: '500 Mrd EUR', label: { fr: "financements transition énergétique Europe d'ici 2030 (AIE 2024)", en: "planned energy transition financing in Europe by 2030 (IEA 2024)" } },
+        { value: '73%',         label: { fr: "des PME industrielles sans documentation de valeur transmissible (CCI France 2023)", en: "of industrial SMEs without transferable value documentation (CCI France 2023)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "La transition énergétique crée de nouveaux critères de financement", en: "The energy transition creates new financing criteria" } },
+      { type: 'p' as const, text: {
+        fr: "Les green bonds, les prêts à impact et les financements BEI conditionnent l'accès au capital à la démonstration de la robustesse ESG et opérationnelle. Pour une ETI industrielle engagée dans la transition, il ne suffit plus d'avoir des actifs solides — il faut pouvoir le prouver dans un format que les investisseurs reconnaissent.",
+        en: "Green bonds, impact loans and EIB financing now condition access to capital on demonstrating ESG and operational robustness. For an industrial mid-cap in the transition, it is no longer enough to have solid assets — you must prove it in a format that investors recognise.",
+      }},
+      { type: 'h2' as const, text: { fr: "Savoir-faire opérationnel : le capital que les bilans ne voient pas", en: "Operational know-how: the capital that balance sheets cannot see" } },
+      { type: 'p' as const, text: {
+        fr: "La Certification CIFSO 5000 structure le capital immatériel d'une ETI industrielle en 5 dimensions (Capital, Intégrité, Finance, Sécurité, Organisation), le rendant lisible, vérifiable et défendable dans tout processus de financement ou de cession.",
+        en: "CIFSO 5000 Certification structures an industrial mid-cap's intangible capital across 5 dimensions (Capital, Integrity, Finance, Security, Organisation), making it readable, verifiable and defensible in any financing or disposal process.",
+      }},
+    ],
+  },
+
+  /* ── Industrie : Commerce, Services & Expérience Client ─────── */
+  {
+    slug:     'commerce-services-experience-client-capital-donnees-2025',
+    category: 'vertical' as const,
+    date:     '2025-11-12',
+    readMin:  8,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Commerce & Services : les données clients sont un actif — encore faut-il pouvoir le démontrer",
+      en: "Commerce & Services: customer data is an asset — but you still need to be able to prove it",
+    },
+    excerpt: {
+      fr: "Dans les secteurs du commerce, des services et de l'expérience client, les données propriétaires constituent la vraie valeur. Pourtant, dans la majorité des transactions, ce capital reste invisible faute de documentation structurée.",
+      en: "In commerce, services and customer experience sectors, proprietary data and loyalty are the real value. Yet in most transactions, this capital remains invisible for lack of structured documentation.",
+    },
+    keywords: ['données clients valeur M&A', 'retail data first-party', 'e-commerce certification valeur', 'fidélisation capital immatériel', 'CIFSO 5000 commerce'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "Le marché européen du e-commerce a atteint 887 milliards d'euros en 2024 (Eurostat / E-commerce Europe). Les données propriétaires — comportements d'achat, modèles de fidélisation — sont devenues l'actif stratégique central. Pourtant, dans 66% des transactions retail, ces actifs restent mal valorisés (Gartner 2023).",
+        en: "The European e-commerce market reached 887 billion euros in 2024 (Eurostat / E-commerce Europe). Proprietary data — purchasing behaviour, loyalty models — has become the central strategic asset. Yet in 66% of retail transactions, these assets remain poorly valued (Gartner 2023).",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '887 Mrd EUR',  label: { fr: "e-commerce Europe 2024 (Eurostat / E-commerce Europe)", en: "e-commerce Europe 2024 (Eurostat / E-commerce Europe)" } },
+        { value: '66%',          label: { fr: "des deals retail bloqués par manques de documentation data clients (Gartner 2023)", en: "of retail deals blocked by customer data documentation gaps (Gartner 2023)" } },
+        { value: '11,5 Mrd EUR', label: { fr: "M&A retail & services Europe 2023 (Refinitiv 2024)", en: "retail & services M&A Europe 2023 (Refinitiv 2024)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "Le paradoxe des données first-party dans les transactions", en: "The first-party data paradox in transactions" } },
+      { type: 'p' as const, text: {
+        fr: "Un retailer qui a collecté des millions de profils clients dispose d'un actif considérable. Sans documentation de la gouvernance de ces données (conformité RGPD, qualité des consentements, procédures de transfert), cet actif est incessible — les acquéreurs potentiels ne peuvent pas valider la légalité du transfert.",
+        en: "A retailer that has collected millions of customer profiles has a considerable asset. Without documentation of data governance (GDPR compliance, quality of consents, transfer procedures), this asset is non-transferable — potential acquirers cannot validate the legality of the transfer.",
+      }},
+      { type: 'h2' as const, text: { fr: "Médias, télécoms, luxe : trois secteurs où la documentation change les valorisations", en: "Media, telecoms, luxury: three sectors where documentation changes valuations" } },
+      { type: 'list' as const, items: [
+        { fr: "Médias & entertainment : les IP contenus (droits, licences, formats) doivent être structurés pour être valorisés dans un deal streaming ou gaming", en: "Media & entertainment: content IP (rights, licences, formats) must be structured to be valued in a streaming or gaming deal" },
+        { fr: "Télécommunications : la base abonnés B2B et les contrats cadres sont des actifs à documenter pour tout rapprochement ou cession partielle", en: "Telecommunications: the B2B subscriber base and framework contracts are assets to document for any merger or partial disposal" },
+        { fr: "Luxe & retail premium : les données clientèle haute valeur et la gouvernance de la marque sont les premiers critères examinés par un acquéreur groupe", en: "Luxury & premium retail: high-value customer data and brand governance are the first criteria examined by a group acquirer" },
+      ]},
+    ],
+  },
+
+  /* ── Industrie : Tech, Innovation & Secteur Public ──────────── */
+  {
+    slug:     'tech-innovation-secteur-public-certification-saas-ia-2025',
+    category: 'vertical' as const,
+    date:     '2025-11-20',
+    readMin:  10,
+    featured: false,
+    aiAssisted: true,
+    title: {
+      fr: "Tech, SaaS & IA : défendre la valeur des actifs immatériels face aux investisseurs",
+      en: "Tech, SaaS & AI: defending intangible asset value before investors and acquirers",
+    },
+    excerpt: {
+      fr: "Le paradoxe des organisations technologiques : une valeur intrinsèque élevée mais souvent indéfendable faute de documentation structurée. Analyse des enjeux de certification pour les SaaS, IA et GovTech en Europe.",
+      en: "The paradox of tech organisations: high intrinsic value but often indefensible for lack of structured documentation. Analysis of certification challenges for SaaS, AI and GovTech players in Europe.",
+    },
+    keywords: ['SaaS valeur défendable', 'IA actif immatériel', 'AI Act conformité valorisation', 'GovTech certification', 'CIFSO 5000 tech SaaS'],
+    body: [
+      { type: 'p' as const, text: {
+        fr: "L'Atomico State of European Tech 2023 recense 131 milliards d'euros investis dans la tech européenne. Pourtant, dans la majorité des transactions, les actifs technologiques les plus précieux — algorithmes propriétaires, données d'entraînement, code métier — restent non documentés et donc indéfendables lors d'une due diligence.",
+        en: "The Atomico State of European Tech 2023 records 131 billion euros invested in European tech. Yet in most transactions, the most valuable tech assets — proprietary algorithms, training data, business code — remain undocumented and therefore indefensible in due diligence.",
+      }},
+      { type: 'stats' as const, items: [
+        { value: '131 Mrd EUR', label: { fr: "investissement VC tech Europe 2023 (Atomico State of European Tech 2023)", en: "VC investment tech Europe 2023 (Atomico State of European Tech 2023)" } },
+        { value: '4,5x ARR',    label: { fr: "multiple médian SaaS B2B Europe mid-market 2024 (SaaS Capital 2024)", en: "median ARR multiple SaaS B2B Europe mid-market 2024 (SaaS Capital 2024)" } },
+        { value: '41 Mrd EUR',  label: { fr: "marché cloud souverain Europe 2028 estimé (IDC / Gartner 2024)", en: "estimated European sovereign cloud market 2028 (IDC / Gartner 2024)" } },
+      ]},
+      { type: 'h2' as const, text: { fr: "L'AI Act crée un nouveau critère de valeur", en: "The AI Act creates a new value criterion" } },
+      { type: 'p' as const, text: {
+        fr: "L'AI Act européen impose des exigences de documentation, traçabilité et gouvernance pour les systèmes d'IA à risque élevé. Une organisation qui peut démontrer sa conformité AI Act à un acquéreur dispose d'un avantage défendable dans la négociation.",
+        en: "The European AI Act imposes documentation, traceability and governance requirements for high-risk AI systems. An organisation that can demonstrate AI Act compliance to an acquirer has a defensible advantage in negotiations.",
+      }},
+      { type: 'h2' as const, text: { fr: "Les métriques SaaS ne suffisent plus", en: "SaaS metrics are no longer enough" } },
+      { type: 'p' as const, text: {
+        fr: "NRR, churn, LTV/CAC sont devenus des standards. Mais les acquéreurs sophistiqués examinent aujourd'hui la robustesse de l'architecture technique, la souveraineté des données et la dépendance aux personnes-clés — dimensions couvertes par la Certification CIFSO 5000.",
+        en: "NRR, churn, LTV/CAC have become market standards. But sophisticated acquirers now examine the robustness of the technical architecture, data sovereignty and key person dependencies — dimensions covered by CIFSO 5000 Certification.",
+      }},
+      { type: 'h2' as const, text: { fr: "GovTech : la certification comme condition d'accès au marché public", en: "GovTech: certification as a condition for public market access" } },
+      { type: 'p' as const, text: {
+        fr: "Le marché GovTech européen impose des exigences croissantes : cloud souverain, conformité NIS2, interopérabilité. Pour un éditeur ciblant les marchés publics, la capacité à démontrer ces exigences dans un format indépendant est devenue un facteur différenciant dans les appels d'offres.",
+        en: "The European GovTech market imposes increasing requirements: sovereign cloud, NIS2 compliance, interoperability. For a publisher targeting public markets, the ability to demonstrate these requirements in an independent format has become a differentiating factor in tenders.",
+      }},
+    ],
+  },
+
 ]
 
 export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
