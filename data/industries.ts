@@ -20,6 +20,7 @@ export interface IndustryExpertise {
 
 export interface IndustrySegment {
   label:    string
+  story:    string   // storytelling contextuel 1-2 phrases
   problems: string[]
 }
 
@@ -61,27 +62,39 @@ La Certification CIFSO 5000 est particulièrement pertinente pour documenter et 
       { name: "PropTech & Immobilier",        tag: "Hybride",    desc: "Valorisation des actifs, IA scoring locataire, plateforme transaction, données ESG et dualité logiciel/actif physique." },
     ],
     expertise: [
-      { title: "Certification CIFSO 5000", desc: "Évaluation indépendante des 5 dimensions Capital, Intégrité, Finance, Sécurité, Organisation — opposable en due diligence et auprès des régulateurs." },
-      { title: "Conseil en Stratégie",     desc: "Positionnement, gouvernance et modèle économique face aux nouveaux entrants FinTech et à la pression réglementaire." },
-      { title: "Conseil en Technologie",   desc: "Architecture système, migration cloud, souveraineté des données et conformité technique (DORA, NIS2, AI Act)." },
-      { title: "M&A Advisory",             desc: "Préparation à la cession, structuration transaction et documentation valeur pour fonds PE et acquéreurs stratégiques." },
+      { title: "Certification CIFSO 5000", desc: "Évaluation indépendante des 5 dimensions CIFSO sur les actifs financiers et technologiques — documentation opposable en due diligence réglementaire, auprès des LPs et des régulateurs (EBA, FINMA, DORA)." },
+      { title: "Conseil en Stratégie",     desc: "Positionnement face aux nouveaux entrants FinTech, refonte du modèle économique, gouvernance conseil d'administration et planification de la transformation réglementaire." },
+      { title: "Conseil en Technologie",   desc: "Architecture système résiliente, migration cloud souverain européen, souveraineté des données financières et conformité technique DORA, NIS2, AI Act EBA." },
+      { title: "M&A Advisory",             desc: "Préparation à la cession ou à l'acquisition dans le secteur financier : valorisation des actifs data, structuration transaction, accompagnement closing avec fonds PE et acquéreurs stratégiques." },
     ],
     segments: [
-      { label: "Fonds de Private Equity", problems: [
-        "Vérification de la qualité de données cibles",
-        "Documentation de la gouvernance avant closing",
-        "Défense de la thèse d'investissement face aux LPs",
-      ]},
-      { label: "FinTech en croissance", problems: [
-        "Préparer un audit investisseur défendable",
-        "Documenter la propriété intellectuelle des algorithmes",
-        "Démontrer la conformité PSD2/DORA à un acquéreur",
-      ]},
-      { label: "Banques & Établissements", problems: [
-        "Gouverner les risques IA selon EBA guidelines",
-        "Documenter la résilience opérationnelle",
-        "Gérer les dépendances technologiques critiques",
-      ]},
+      {
+        label: "Fonds de Private Equity",
+        story: "Vous étudiez une cible dans les services financiers. La data room est incomplète, la gouvernance des données peu documentée et les régulateurs posent des questions. Vous avez besoin d'une évaluation indépendante pour sécuriser votre thèse avant le closing.",
+        problems: [
+          "Vérifier la qualité et la traçabilité des données d'une cible financière",
+          "Obtenir une documentation de gouvernance opposable avant closing",
+          "Défendre la thèse d'investissement face aux LPs avec un grade certifié",
+        ],
+      },
+      {
+        label: "FinTech en croissance",
+        story: "Votre FinTech lève ou cherche un acquéreur. Vos métriques sont solides, mais votre algorithme de scoring, vos contrats PSD2 et votre IP ne sont pas documentés de façon défendable. Un investisseur veut une certification indépendante avant de s'engager.",
+        problems: [
+          "Préparer un dossier investisseur avec certification de la propriété algorithmique",
+          "Documenter la conformité PSD2/DORA pour rassurer un acquéreur bancaire",
+          "Structurer la valeur des données AML/KYC en actif certifiable",
+        ],
+      },
+      {
+        label: "Banques & Établissements financiers",
+        story: "Vous gérez une transformation numérique dans un contexte DORA/NIS2 et devez démontrer votre résilience opérationnelle aux régulateurs. Vos dépendances technologiques critiques sont peu cartographiées et les risques IA non gouvernés selon les guidelines EBA.",
+        problems: [
+          "Gouverner les risques IA et les modèles d'alerte selon les EBA guidelines",
+          "Documenter et certifier la résilience opérationnelle pour un audit DORA",
+          "Cartographier et maîtriser les dépendances technologiques critiques",
+        ],
+      },
     ],
     articleSlugs: ["fintech-europe-ma-valorisation-2026", "family-office-investissement-actifs-tech", "fintech-finance-capital-enjeux-certification-cifso-2025"],
   },
@@ -108,27 +121,39 @@ La Certification CIFSO 5000 s'applique avec une granularité adaptée à ces con
       { name: "HealthTech & MedTech",   tag: "Croissance",      desc: "IA diagnostique, conformité MDR/IVDR, données de santé, interopérabilité et valorisation pour M&A." },
     ],
     expertise: [
-      { title: "Certification CIFSO 5000", desc: "Documentation de la valeur des données cliniques, des protocoles et de la gouvernance qualité — opposable face à un acquéreur ou un partenaire industriel." },
-      { title: "Conseil en Technologie",   desc: "Architecture HealthTech, conformité MDR, intégration HL7/FHIR, souveraineté des données patients." },
-      { title: "Logiciels sur-mesure",     desc: "Plateformes de gestion clinique, outils d'IA diagnostique, systèmes d'interopérabilité adaptés aux contraintes réglementaires." },
-      { title: "M&A Advisory",             desc: "Structuration des deals pharma et HealthTech, valorisation des IP cliniques, accompagnement due diligence acquéreur." },
+      { title: "Certification CIFSO 5000", desc: "Documentation certifiée de la valeur des données cliniques, des protocoles propriétaires et de la gouvernance qualité — opposable face à un acquéreur industriel, un régulateur EMA ou un partenaire pharmaceutique." },
+      { title: "Conseil en Technologie",   desc: "Architecture HealthTech souveraine, conformité MDR/IVDR, intégration HL7/FHIR, gouvernance des données patients et sécurité des systèmes critiques de santé." },
+      { title: "Solutions sur-mesure",     desc: "Plateformes de gestion clinique, outils d'IA diagnostique, systèmes d'interopérabilité et data rooms sécurisées — conçus pour les contraintes réglementaires de la santé." },
+      { title: "M&A Advisory",             desc: "Structuration et accompagnement des deals pharma et HealthTech, valorisation des IP cliniques et algorithmes diagnostiques, préparation due diligence acquéreur industriel ou fonds." },
     ],
     segments: [
-      { label: "MedTech en croissance", problems: [
-        "Préparer un dossier M&A défendable face à un industriel",
-        "Documenter la conformité MDR/IVDR pour un investisseur",
-        "Certifier la valeur des algorithmes diagnostiques",
-      ]},
-      { label: "Groupes pharmaceutiques", problems: [
-        "Documenter la valeur des brevets et données cliniques",
-        "Gouverner les transferts de données dans les cessions",
-        "Préparer la due diligence data room",
-      ]},
-      { label: "Investisseurs HealthTech", problems: [
-        "Vérifier la robustesse réglementaire d'une cible",
-        "Évaluer la qualité de la gouvernance données",
-        "Quantifier la valeur des actifs immatériels",
-      ]},
+      {
+        label: "MedTech en croissance",
+        story: "Vous avez développé un dispositif médical avec IA diagnostique. Un industriel pharmaceutique s'intéresse à une acquisition, mais exige une documentation MDR/IVDR complète et une certification de la valeur de vos algorithmes avant d'engager ses équipes de due diligence.",
+        problems: [
+          "Préparer un dossier M&A défendable incluant la certification des algorithmes IA diagnostiques",
+          "Documenter la conformité MDR/IVDR de façon opposable pour un investisseur industriel",
+          "Structurer la valeur IP (brevets, datasets cliniques) en actif certifiable et transmissible",
+        ],
+      },
+      {
+        label: "Groupes pharmaceutiques",
+        story: "Vous cédez une division ou externalisez un actif de R&D. Vos brevets, vos données cliniques et vos contrats fournisseurs sont dispersés. L'acquéreur exige une data room solide et une documentation de gouvernance des données qui tient face à un audit EMA.",
+        problems: [
+          "Documenter et certifier la valeur des brevets et datasets cliniques propriétaires",
+          "Gouverner les transferts de données sensibles dans le cadre d'une cession d'actifs",
+          "Préparer une data room certifiée défendable face à une due diligence pharmaceutique",
+        ],
+      },
+      {
+        label: "Investisseurs HealthTech",
+        story: "Vous étudiez une cible HealthTech prometteuse dont la gouvernance réglementaire et la qualité des données sont difficiles à évaluer. Avant de signer, vous avez besoin d'une évaluation indépendante qui va au-delà des audits financiers classiques.",
+        problems: [
+          "Vérifier la robustesse réglementaire MDR/IVDR et RGPD santé d'une cible avant investissement",
+          "Évaluer la qualité et la souveraineté des données patients comme actif de valeur",
+          "Quantifier les actifs immatériels (IP clinique, algorithmes, protocoles) avec un référentiel certifié",
+        ],
+      },
     ],
     articleSlugs: ["actif-tech-certifiable", "certification-independante-saas-avant-cession", "sante-sciences-vie-valorisation-actifs-certification-2025"],
   },
@@ -162,27 +187,39 @@ Dans les secteurs de la transition énergétique et de l'infrastructure, la robu
       { name: "Transport & Fret",             tag: "Consolidation",  desc: "Optimisation de flotte, conformité transport, plateformes digitales et valeur documentée." },
     ],
     expertise: [
-      { title: "Certification CIFSO 5000", desc: "Documentation du savoir-faire opérationnel, des contrats long terme et de la gouvernance industrielle — base défendable pour tout financement ou cession." },
-      { title: "Conseil en Stratégie",     desc: "Positionnement dans les consolidations sectorielles, gouvernance et planification de la transition." },
-      { title: "Conseil en Technologie",   desc: "Architecture Industrie 4.0, intégration MES/ERP, conformité NIS2, souveraineté des données industrielles." },
-      { title: "M&A Advisory",             desc: "Préparation cession ETI industrielle, structuration et accompagnement des processus acheteur/vendeur." },
+      { title: "Certification CIFSO 5000", desc: "Documentation certifiée du savoir-faire opérationnel, des contrats long terme, des processus propriétaires et de la gouvernance industrielle — base défendable pour tout financement, cession ou succession d'ETI." },
+      { title: "Conseil en Stratégie",     desc: "Positionnement dans les vagues de consolidation sectorielle (énergie, logistique, agroalimentaire), gouvernance dirigeante et planification de la transition industrielle et numérique." },
+      { title: "Conseil en Technologie",   desc: "Architecture Industrie 4.0, intégration MES/ERP, surveillance prédictive, conformité NIS2 et souveraineté des données industrielles opérationnelles." },
+      { title: "M&A Advisory",             desc: "Préparation à la cession d'ETI industrielle, structuration des processus acheteur/vendeur, valorisation des actifs opérationnels incorporels et accompagnement closing." },
     ],
     segments: [
-      { label: "ETI & PME industrielles", problems: [
-        "Documenter la valeur avant une cession ou une transmission",
-        "Obtenir un financement bancaire sur la base des actifs incorporels",
-        "Préparer une due diligence acheteur industriel",
-      ]},
-      { label: "Fonds PE / Infrastructure", problems: [
-        "Vérifier la robustesse opérationnelle d'une cible",
-        "Évaluer la dépendance aux personnes-clés",
-        "Défendre la thèse de valeur face aux co-investisseurs",
-      ]},
-      { label: "Opérateurs énergie & utilities", problems: [
-        "Documenter la résilience pour les régulateurs",
-        "Préparer les actifs à un financement green bond",
-        "Valoriser les plateformes digitales propriétaires",
-      ]},
+      {
+        label: "ETI & PME industrielles",
+        story: "Vous dirigez une ETI industrielle en Suisse ou en Europe. La transmission approche — familiale, à un fonds ou à un repreneur industriel. Votre valeur est réelle mais peu documentée : savoir-faire, contrats long terme, dépendances sous-traitants. Les banques et les acquéreurs demandent des preuves.",
+        problems: [
+          "Documenter et certifier la valeur transmissible avant une cession ou une succession familiale",
+          "Obtenir un financement bancaire basé sur les actifs incorporels opérationnels",
+          "Préparer une due diligence acheteur industriel ou fonds dans les délais d'un process M&A",
+        ],
+      },
+      {
+        label: "Fonds PE & Infrastructure",
+        story: "Vous investissez dans une cible industrielle ou d'infrastructure en Europe. La valorisation repose sur des actifs opérationnels difficiles à auditer : savoir-faire, contrats fournisseurs, personnes-clés, processus propriétaires. Vous avez besoin d'une évaluation indépendante avant de signer.",
+        problems: [
+          "Vérifier la robustesse opérationnelle et la dépendance aux personnes-clés d'une cible industrielle",
+          "Évaluer les actifs incorporels (process, IP opérationnelle, contrats) avec un référentiel certifié",
+          "Défendre la thèse de valeur auprès des co-investisseurs et des LPs avec une certification opposable",
+        ],
+      },
+      {
+        label: "Opérateurs énergie & utilities",
+        story: "Vous gérez des actifs d'infrastructure critique — smart grid, production renouvelable, réseau de distribution. Vos régulateurs demandent des preuves de résilience, vos financeurs green bond exigent une documentation ESG et vous envisagez de valoriser vos plateformes digitales propriétaires.",
+        problems: [
+          "Documenter et certifier la résilience opérationnelle pour un audit réglementaire sectoriel",
+          "Préparer les actifs digitaux propriétaires à un financement green bond ou infrastructure fund",
+          "Valoriser les plateformes de gestion énergétique comme actifs certifiables et transmissibles",
+        ],
+      },
     ],
     articleSlugs: ["small-mid-cap-enjeux-entreprises-50-300m", "preparer-organisation-cession-levee-5-points", "industrie-energie-infrastructure-valeur-transmissible-2025"],
   },
@@ -212,27 +249,39 @@ Leur valeur repose sur la fidélité client, les données propriétaires et la r
       { name: "Télécommunications",             tag: "Réglementé",   desc: "Infrastructures, conformité BEREC, déploiement fibre/5G et valorisation des bases abonnés." },
     ],
     expertise: [
-      { title: "Certification CIFSO 5000", desc: "Documentation des données clients, des marques et des plateformes propriétaires — base opposable pour M&A, financement ou succession." },
-      { title: "Conseil en Stratégie",     desc: "Positionnement omnicanal, transformation du modèle économique et planification de la croissance." },
-      { title: "Logiciels sur-mesure",     desc: "Plateformes e-commerce, outils de personnalisation IA, systèmes de fidélité et intégrations ERP/CRM." },
-      { title: "M&A Advisory",             desc: "Valorisation des actifs digitaux, accompagnement des cessions retail et due diligence acheteur." },
+      { title: "Certification CIFSO 5000", desc: "Documentation certifiée des données clients first-party, des marques, des plateformes propriétaires et des IP contenus — base opposable pour M&A, financement ou succession dans les secteurs du commerce et des services." },
+      { title: "Conseil en Stratégie",     desc: "Positionnement omnicanal, transformation du modèle économique face aux plateformes, consolidation sectorielle retail et planification de la croissance internationale." },
+      { title: "Solutions sur-mesure",     desc: "Plateformes e-commerce propriétaires, outils de personnalisation IA, systèmes de fidélité avancés et intégrations ERP/CRM — conçus pour la performance et la certification." },
+      { title: "M&A Advisory",             desc: "Valorisation des actifs digitaux et des IP contenus, accompagnement des cessions retail et médias, structuration des deals sur droits numériques et due diligence acheteur." },
     ],
     segments: [
-      { label: "Retailers & e-commerçants", problems: [
-        "Valoriser les données first-party avant une cession",
-        "Documenter la plateforme pour un investisseur PE",
-        "Préparer la due diligence sur les métriques clients",
-      ]},
-      { label: "Groupes médias & divertissement", problems: [
-        "Certifier la valeur des IP contenus",
-        "Documenter la base abonnés pour un acquéreur",
-        "Préparer un deal structuré sur les droits",
-      ]},
-      { label: "Opérateurs télécoms", problems: [
-        "Documenter les actifs d'infrastructure pour financement",
-        "Préparer la conformité BEREC pour un rapprochement",
-        "Valoriser une base abonnés B2B",
-      ]},
+      {
+        label: "Retailers & e-commerçants",
+        story: "Vous avez construit une base client propriétaire et une plateforme e-commerce performante. Un fonds PE ou un acquéreur stratégique s'intéresse à votre actif. Mais vos données first-party, votre plateforme et vos métriques de fidélité ne sont pas documentées de façon défendable pour une due diligence.",
+        problems: [
+          "Certifier la valeur des données clients first-party comme actif indépendant transmissible",
+          "Documenter la plateforme propriétaire et ses métriques pour un investisseur PE",
+          "Préparer la due diligence sur les indicateurs de rétention, LTV et performance omnicanale",
+        ],
+      },
+      {
+        label: "Groupes médias & divertissement",
+        story: "Vous gérez un catalogue de contenus ou une base d'abonnés significative. Un acquéreur ou un partenaire de distribution veut comprendre la valeur de vos droits, de votre audience et de vos IP. La documentation est fragmentée entre vos équipes créatives, juridiques et techniques.",
+        problems: [
+          "Certifier la valeur des IP contenus et des droits numériques pour un deal de cession ou de licence",
+          "Documenter et valoriser la base abonnés comme actif défendable face à un acquéreur ou distributeur",
+          "Structurer un deal sur droits avec une documentation de gouvernance IP complète et certifiable",
+        ],
+      },
+      {
+        label: "Opérateurs télécoms & services",
+        story: "Vous opérez une infrastructure ou une base d'abonnés B2B significative et envisagez un rapprochement ou une cession partielle. La conformité BEREC, la documentation de vos actifs d'infrastructure et la valorisation de vos contrats long terme sont des prérequis que votre acquéreur potentiel exige dès la phase d'exclusivité.",
+        problems: [
+          "Documenter et certifier les actifs d'infrastructure pour un financement ou une opération de fusion",
+          "Préparer la conformité réglementaire BEREC dans le cadre d'un rapprochement transfrontalier",
+          "Valoriser une base abonnés B2B avec des métriques de récurrence certifiables et transmissibles",
+        ],
+      },
     ],
     articleSlugs: ["valoriser-application-mobile-cession", "marche-ma-tech-europe-q4-2026", "commerce-services-experience-client-capital-donnees-2025"],
   },
@@ -260,27 +309,39 @@ La Certification CIFSO 5000 résout ce paradoxe en fournissant une évaluation i
       { name: "GovTech & Secteur Public", tag: "Souveraineté",    desc: "Marchés publics, conformité DINUM/ANSSI, cloud souverain et interopérabilité." },
     ],
     expertise: [
-      { title: "Certification CIFSO 5000", desc: "Évaluation indépendante des actifs SaaS et IA — métriques, gouvernance, IP et organisation — base défendable pour tout investisseur ou acquéreur." },
-      { title: "Conseil en Technologie",   desc: "Architecture SaaS, migration cloud souverain, conformité AI Act/NIS2, réduction de la dette technique avant cession." },
-      { title: "Logiciels sur-mesure",     desc: "Développement de produits SaaS, plateformes IA propriétaires et systèmes GovTech adaptés aux contraintes secteur public." },
-      { title: "M&A Advisory",             desc: "Préparation à la cession SaaS, valorisation des métriques, data room et accompagnement closing." },
+      { title: "Certification CIFSO 5000", desc: "Évaluation indépendante des actifs SaaS et IA sur les 5 dimensions CIFSO — métriques ARR/NRR, gouvernance IP, architecture et organisation — base certifiée défendable face à tout investisseur, acquéreur ou régulateur." },
+      { title: "Conseil en Technologie",   desc: "Architecture SaaS multi-tenant, migration cloud souverain européen, réduction de la dette technique avant cession et conformité AI Act / NIS2 pour les organisations technologiques." },
+      { title: "Solutions sur-mesure",     desc: "Développement de produits SaaS B2B, plateformes IA propriétaires certifiables et systèmes GovTech adaptés aux contraintes d'interopérabilité et de souveraineté du secteur public." },
+      { title: "M&A Advisory",             desc: "Préparation à la cession SaaS ou IA, valorisation et documentation des métriques (ARR, NRR, churn, LTV/CAC), constitution data room et accompagnement du closing avec fonds PE ou acquéreur stratégique." },
     ],
     segments: [
-      { label: "Fondateurs SaaS & scale-ups", problems: [
-        "Défendre les métriques NRR/churn face à un acquéreur PE",
-        "Certifier la valeur du code et des IP avant due diligence",
-        "Préparer une data room défendable en 90 jours",
-      ]},
-      { label: "Fonds venture & growth", problems: [
-        "Vérifier la qualité des métriques d'un portefeuille",
-        "Documenter la gouvernance avant une levée de fond",
-        "Préparer un exit secondaire dans les meilleures conditions",
-      ]},
-      { label: "Acteurs GovTech & EdTech", problems: [
-        "Certifier la conformité cloud souverain pour un marché public",
-        "Documenter l'organisation avant une fusion",
-        "Valoriser un actif public dans un contexte de privatisation",
-      ]},
+      {
+        label: "Fondateurs SaaS & scale-ups tech",
+        story: "Vous avez construit un SaaS B2B avec de solides métriques ARR. Un fonds PE ou un acquéreur stratégique entre en process. Ils demandent une certification indépendante de vos métriques, de votre gouvernance IP et de votre architecture avant d'engager leurs équipes juridiques. Vous avez 90 jours.",
+        problems: [
+          "Certifier et défendre les métriques NRR, churn et LTV/CAC face à un acquéreur PE exigeant",
+          "Documenter la propriété du code, des algorithmes et des données en actifs IP certifiés",
+          "Préparer une data room complète et défendable dans les délais d'un process M&A SaaS",
+        ],
+      },
+      {
+        label: "Fonds venture & growth",
+        story: "Vous gérez un portefeuille de SaaS B2B européens. Sur plusieurs participations, les métriques déclarées sont difficiles à auditer indépendamment et la gouvernance IP est insuffisamment documentée. Vous préparez un exit secondaire ou un tour de table et avez besoin d'une base certifiée.",
+        problems: [
+          "Vérifier indépendamment la qualité et la robustesse des métriques SaaS d'une participation",
+          "Documenter et certifier la gouvernance et l'architecture avant une levée de fond série B ou C",
+          "Préparer les conditions d'un exit secondaire ou d'un processus dual-track dans les meilleures conditions",
+        ],
+      },
+      {
+        label: "Acteurs GovTech & EdTech",
+        story: "Vous opérez une plateforme numérique pour le secteur public ou l'éducation. Un marché public exige une certification cloud souverain, un partenaire industriel veut fusionner et une administration régionale envisage une reprise partielle. Chaque scénario exige une documentation différente mais toutes reposent sur les mêmes actifs.",
+        problems: [
+          "Certifier la conformité cloud souverain DINUM/ANSSI pour l'éligibilité aux marchés publics",
+          "Documenter l'organisation et la gouvernance avant une fusion ou un rapprochement inter-acteurs",
+          "Valoriser un actif numérique public ou parapublic dans un contexte de privatisation ou de spin-off",
+        ],
+      },
     ],
     articleSlugs: ["ai-native-saas-valorisation-multiples-2026", "nrr-churn-ltv-cac-metriques-valorisation-saas", "tech-innovation-secteur-public-certification-saas-ia-2025"],
   },

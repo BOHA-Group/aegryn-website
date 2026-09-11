@@ -236,28 +236,42 @@ export default async function IndustryDetailPage({ params }: Props) {
       </section>
 
       {/* ════════════════════════════════════════════════════════
-          SEGMENTS & PROBLÉMATIQUES
+          SEGMENTS & PROBLÉMATIQUES — avec storytelling persona
       ════════════════════════════════════════════════════════ */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-2">
             Comment nous accompagnons nos clients
+          </p>
+          <p className="font-sans text-[13px] text-ag-gray-light mb-8 max-w-xl">
+            Trois profils types, trois situations concrètes.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {ind.segments.map((seg, i) => (
-              <div key={i} className="border border-ag-border rounded-xl p-7 flex flex-col gap-4">
-                <div className="flex items-center gap-3 pb-4 border-b border-ag-border">
-                  <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{seg.label}</h3>
+              <div key={i} className="border border-ag-border rounded-2xl flex flex-col overflow-hidden">
+                {/* Header persona */}
+                <div className="bg-ag-off-white px-6 pt-6 pb-5 border-b border-ag-border">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{seg.label}</h3>
+                  </div>
+                  {/* Storytelling */}
+                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed italic">
+                    &ldquo;{seg.story}&rdquo;
+                  </p>
                 </div>
-                <ul className="flex flex-col gap-2.5">
-                  {seg.problems.map((pb, j) => (
-                    <li key={j} className="flex items-start gap-2.5">
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                      <span className="font-sans text-[12px] text-ag-gray leading-relaxed">{pb}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Problèmes */}
+                <div className="px-6 py-5 flex flex-col gap-2.5 bg-ag-white flex-1">
+                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">Ce que nous résolvons</p>
+                  <ul className="flex flex-col gap-3">
+                    {seg.problems.map((pb, j) => (
+                      <li key={j} className="flex items-start gap-2.5">
+                        <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
+                        <span className="font-sans text-[12px] text-ag-gray leading-relaxed">{pb}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
