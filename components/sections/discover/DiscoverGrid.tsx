@@ -112,56 +112,76 @@ export function DiscoverGrid({ locale }: Props) {
         </div>
       </section>
 
-      {/* ── Featured (3 articles mise en avant) ────────────────── */}
-      {showFeatured && (
+      {/* ── Featured — 1 grand + liste à droite ────────────────── */}
+      {showFeatured && featured.length > 0 && (
         <section className="bg-ag-white border-t border-ag-border py-16 px-6">
           <div className="max-w-7xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-10">
               {t('featuredLabel')}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {featured.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/blog/${article.slug}` as never}
-                  className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  {/* Image */}
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={getImage(article.slug)}
-                      alt={article.title[lang] ?? article.title.en}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
-                    <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy px-2.5 py-1 rounded-full font-semibold">
-                      {ARTICLE_CATEGORIES[article.category][lang]}
-                    </span>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 items-start">
+
+              {/* Article principal — grand format */}
+              <Link
+                href={`/blog/${featured[0].slug}` as never}
+                className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <Image
+                    src={getImage(featured[0].slug)}
+                    alt={featured[0].title[lang] ?? featured[0].title.en}
+                    fill
+                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/25 to-transparent" />
+                </div>
+                <div className="p-7 flex flex-col">
+                  <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex mb-3">
+                    {ARTICLE_CATEGORIES[featured[0].category][lang]}
+                  </span>
+                  <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.025em] leading-snug mb-3 group-hover:text-ag-navy transition-colors">
+                    {featured[0].title[lang] ?? featured[0].title.en}
+                  </h2>
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3">
+                    {featured[0].excerpt[lang] ?? featured[0].excerpt.en}
+                  </p>
+                  <div className="flex items-center gap-3 mt-4 text-ag-gray-light">
+                    <span className="font-mono text-[10px]">{formatDate(featured[0].date)}</span>
+                    <span className="font-mono text-[10px]">·</span>
+                    <span className="font-mono text-[10px]">{featured[0].readMin} {t('readMin')}</span>
                   </div>
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h2 className="font-sans font-bold text-ag-black text-[16px] tracking-[-0.02em] leading-snug mb-3 group-hover:text-ag-navy transition-colors flex-1">
-                      {article.title[lang]}
-                    </h2>
-                    <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-4 line-clamp-2">
-                      {article.excerpt[lang]}
-                    </p>
-                    <div className="flex items-center justify-between pt-3 border-t border-ag-border">
-                      <div className="flex items-center gap-3 text-ag-gray-light">
-                        <span className="flex items-center gap-1 font-mono text-[10px]">
-                          <Calendar size={10} /> {formatDate(article.date)}
+                </div>
+              </Link>
+
+              {/* Autres featured — liste verticale style flowpartners */}
+              <div className="flex flex-col">
+                <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] mb-6">
+                  {t('featuredLabel')}
+                </p>
+                <div className="flex flex-col divide-y divide-ag-border">
+                  {featured.slice(1).map(article => (
+                    <Link
+                      key={article.slug}
+                      href={`/blog/${article.slug}` as never}
+                      className="group py-5 flex flex-col gap-2 hover:opacity-80 transition-opacity"
+                    >
+                      <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug group-hover:text-ag-navy transition-colors">
+                        {article.title[lang] ?? article.title.en}
+                      </h3>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-apex border border-ag-apex/30 bg-ag-apex/5 px-2 py-0.5 rounded-full">
+                          {ARTICLE_CATEGORIES[article.category][lang]}
                         </span>
-                        <span className="flex items-center gap-1 font-mono text-[10px]">
-                          <Clock size={10} /> {article.readMin} {t('readMin')}
-                        </span>
+                        <span className="font-mono text-[10px] text-ag-gray-light">·</span>
+                        <span className="font-mono text-[10px] text-ag-gray-light">{formatDate(article.date)}</span>
                       </div>
-                      <ArrowUpRight size={14} className="text-ag-gray-light group-hover:text-ag-apex transition-colors shrink-0" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -194,16 +214,16 @@ export function DiscoverGrid({ locale }: Props) {
               )}
             </div>
 
-            {/* Filter pills modernes */}
-            <div className="flex items-center gap-2 flex-wrap">
+            {/* Filter pills — style flowpartners : fond gris, pill actif blanc + shadow */}
+            <div className="inline-flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl flex-wrap">
               {filters.map(({ key, label }) => (
                 <button
                   key={key}
                   onClick={() => setActive(key)}
-                  className={`font-mono text-[10px] tracking-[0.12em] uppercase px-4 py-2 rounded-full border transition-all duration-200 ${
+                  className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 ${
                     active === key
-                      ? 'border-ag-navy bg-ag-navy text-white shadow-sm'
-                      : 'border-ag-border bg-white text-ag-gray hover:border-ag-navy/50 hover:text-ag-navy'
+                      ? 'bg-white text-ag-navy font-semibold shadow-sm'
+                      : 'text-ag-gray hover:text-ag-navy'
                   }`}
                 >
                   {label}
