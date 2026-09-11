@@ -397,7 +397,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
     .filter(s => (profile.expertise_specialties ?? []).includes(s.id))
 
   return (
-    <div className={`bg-ag-white border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
+    <div className={`bg-ag-white rounded-2xl border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
       {blurred && (
         <div className="absolute inset-0 backdrop-blur-[6px] bg-ag-white/60 z-10 flex flex-col items-center justify-center gap-3">
           <span className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
@@ -829,9 +829,9 @@ export default function ExpertsContent() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
 
         {loadingGrid && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="bg-ag-white h-64 animate-pulse" />
+              <div key={i} className="bg-ag-white rounded-2xl border border-ag-border h-64 animate-pulse" />
             ))}
           </div>
         )}
@@ -852,7 +852,7 @@ export default function ExpertsContent() {
               <p className="font-sans font-bold text-ag-black text-[20px] leading-tight">{t('placeholder.title')}</p>
               <p className="font-sans text-[13px] text-ag-gray max-w-md">{t('placeholder.desc')}</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {PLACEHOLDERS.map(p => (
                 <ExpertCard key={p.id} profile={p} t={t} locale={locale} blurred />
               ))}
@@ -861,7 +861,7 @@ export default function ExpertsContent() {
         )}
 
         {!loadingGrid && profiles.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {profiles.map(p => (
               <ExpertCard
                 key={p.id}
