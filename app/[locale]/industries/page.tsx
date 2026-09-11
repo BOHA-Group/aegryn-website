@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 import Image         from 'next/image'
 import { Link }      from '@/i18n/navigation'
-import { ArrowUpRight, ChevronDown } from 'lucide-react'
-import { useTranslations, useLocale } from 'next-intl'
-import { gsap, SplitText }   from '@/lib/gsap'
+import { ArrowUpRight, Plus, Minus } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { gsap }      from '@/lib/gsap'
 
-/* ── Images par cluster ─────────────────────────────────────── */
+/* ── Images ─────────────────────────────────────────────────── */
 const CLUSTER_IMAGES: Record<string, string> = {
   finance:   '/images/theme_fintech.jpg',
   sante:     '/images/grade-usecases/uc-due-diligence.jpg',
@@ -16,101 +16,109 @@ const CLUSTER_IMAGES: Record<string, string> = {
   tech:      '/images/theme_AI.jpg',
 }
 
+/* Secteurs → image légère (masque ~15% opacity) */
+const SECTOR_IMAGES: Record<string, string> = {
+  finance:   '/images/grade-usecases/uc-bank-financing.jpg',
+  sante:     '/images/grade-usecases/uc-annual-report.jpg',
+  industrie: '/images/grade-usecases/uc-succession.jpg',
+  commerce:  '/images/grade-usecases/uc-fundraising.jpg',
+  tech:      '/images/theme_IP.jpg',
+}
+
 /* ── Types ──────────────────────────────────────────────────── */
-interface Sector {
-  name: string
-  desc: string
-  tag:  string
-}
+interface Sector  { name: string; desc: string; tag: string }
+interface Cluster { id: string; cluster: string; image: string; vision: string; sectors: Sector[] }
 
-interface Cluster {
-  id:       string
-  cluster:  string
-  image:    string
-  vision:   string
-  sectors:  Sector[]
-}
-
-/* ── Page ───────────────────────────────────────────────────── */
+/* ── Component ──────────────────────────────────────────────── */
 export default function IndustriesPage() {
-  const t       = useTranslations('industries.page')
-  const locale  = useLocale()
+  const t        = useTranslations('industries.page')
+  const clusters = t.raw('clusters') as Cluster[]
 
-  const clusters  = t.raw('clusters') as Cluster[]
+  const [open, setOpen] = useState<string | null>(null)
 
-  const [active, setActive] = useState<string | null>(null)
-  const detailRef = useRef<HTMLDivElement>(null)
-  const gridRef   = useRef<HTMLDivElement>(null)
-  const headerRef = useRef<HTMLDivElement>(null)
-  const h1Ref     = useRef<HTMLHeadingElement>(null)
-  const labelRef  = useRef<HTMLParagraphElement>(null)
+  const heroRef    = useRef<HTMLDivElement>(null)
+  const listRef    = useRef<HTMLDivElement>(null)
+  const detailsRef = useRef<Record<string, HTMLDivElement | null>>({})
 
-  /* ── GSAP header + cards ─────────────────────────────────── */
+  /* ── Hero entrance ──────────────────────────────────────────── */
   useEffect(() => {
-    const h1 = h1Ref.current
-    if (!h1) return
-    const split = new SplitText(h1, { type: 'lines', linesClass: 'ag-line-inner' })
     const ctx = gsap.context(() => {
-      if (labelRef.current) {
-        gsap.fromTo(labelRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.5, scrollTrigger: { trigger: headerRef.current, start: 'top 82%', once: true } },
-        )
-      }
-      gsap.fromTo(split.lines,
-        { yPercent: 110 },
-        { yPercent: 0, stagger: 0.1, duration: 1.0, ease: 'expo.out',
-          scrollTrigger: { trigger: headerRef.current, start: 'top 80%', once: true } },
-      )
-      clusters.forEach((_, i) => {
-        gsap.fromTo(`.ind-card-${i}`,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.7, ease: 'expo.out', delay: (i % 3) * 0.05,
-            scrollTrigger: { trigger: gridRef.current, start: 'top 85%', once: true } },
-        )
-      })
-    }, gridRef)
-    return () => { split.revert(); ctx.revert() }
+      gsap.fromTo('.ind-hero-label', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.1 })
+      gsap.fromTo('.ind-hero-h1',   { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.25, ease: 'expo.out' })
+      gsap.fromTo('.ind-hero-desc', { opacity: 0 },        { opacity: 1, duration: 0.6, delay: 0.5 })
+      gsap.fromTo('.ind-hero-ctas', { opacity: 0 },        { opacity: 1, duration: 0.5, delay: 0.7 })
+    }, heroRef)
+    return () => ctx.revert()
   }, [])
 
-  /* ── Scroll vers le détail à l'ouverture ───────────────────── */
+  /* ── Scroll list entrance ───────────────────────────────────── */
   useEffect(() => {
-    if (!active || !detailRef.current) return
-    setTimeout(() => {
-      detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 60)
-  }, [active])
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.ind-row',
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, stagger: 0.08, duration: 0.6, ease: 'expo.out',
+          scrollTrigger: { trigger: listRef.current, start: 'top 82%', once: true } },
+      )
+    }, listRef)
+    return () => ctx.revert()
+  }, [])
 
-  const activeCluster = clusters.find(c => c.id === active) ?? null
+  /* ── Accordion GSAP ─────────────────────────────────────────── */
+  function toggle(id: string) {
+    const next = open === id ? null : id
+    setOpen(next)
+    if (next) {
+      requestAnimationFrame(() => {
+        const el = detailsRef.current[next]
+        if (!el) return
+        gsap.fromTo(el,
+          { opacity: 0, y: -10 },
+          { opacity: 1, y: 0, duration: 0.4, ease: 'expo.out' },
+        )
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80)
+      })
+    }
+  }
 
   return (
-    <main>
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="bg-ag-navy pt-32 pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
-            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+    <main className="bg-ag-white">
+
+      {/* ════════════════════════════════════════════════════════
+          HERO — plein fond navy, titre large
+      ════════════════════════════════════════════════════════ */}
+      <section ref={heroRef} className="relative bg-ag-navy overflow-hidden pt-36 pb-28 px-6 md:px-12">
+        {/* Grille décorative légère */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
+          }}
+        />
+        <div className="max-w-7xl mx-auto relative z-10">
+          <p className="ind-hero-label font-mono text-[10px] tracking-[0.3em] uppercase text-ag-apex mb-7 flex items-center gap-3">
+            <span className="w-8 h-px bg-ag-apex/50" />
             {t('label')}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(36px,5vw,68px)' }}
+            className="ind-hero-h1 font-sans font-bold text-white leading-[1.02] tracking-[-0.03em] max-w-4xl mb-8"
+            style={{ fontSize: 'clamp(38px,5.5vw,72px)' }}
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-2xl mb-12 leading-relaxed">
+          <p className="ind-hero-desc font-sans text-[15px] text-white/50 max-w-xl mb-12 leading-relaxed">
             {t('desc')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="ind-hero-ctas flex flex-wrap gap-3">
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.16em] uppercase px-7 py-3 font-semibold hover:bg-white transition-colors"
             >
-              {t('certifCta')} <ArrowUpRight size={13} />
+              {t('certifCta')} <ArrowUpRight size={12} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="inline-flex items-center gap-2 border border-white/20 text-white/60 font-mono text-[10px] tracking-[0.16em] uppercase px-7 py-3 hover:border-white/50 hover:text-white transition-all"
             >
               {t('contactCta')}
             </Link>
@@ -118,193 +126,174 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* ── Grille clusters — style EcosystemDomains ─────────────── */}
-      <section className="bg-ag-white border-t border-ag-border">
-        <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-12">
-          <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-5">
-            {t('industriesTitle')}
-          </p>
-          <h2
-            ref={h1Ref}
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden pb-2"
-            style={{ fontSize: 'clamp(32px,4vw,60px)' }}
-          >
-            {t('title')}
-          </h2>
-        </div>
+      {/* ════════════════════════════════════════════════════════
+          LISTE MASTER — une ligne par cluster
+      ════════════════════════════════════════════════════════ */}
+      <div ref={listRef} className="border-b border-ag-border">
+        {clusters.map((cluster, ci) => {
+          const isOpen   = open === cluster.id
+          const imgSrc   = CLUSTER_IMAGES[cluster.id] ?? cluster.image
+          const sectImg  = SECTOR_IMAGES[cluster.id]
 
-        <div ref={gridRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ag-border mb-10">
-            {clusters.map((cluster, i) => {
-              const image        = CLUSTER_IMAGES[cluster.id] ?? cluster.image
-              const borderRight  = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-              const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
-              const isActive     = active === cluster.id
-              return (
-                <button
-                  key={cluster.id}
-                  onClick={() => setActive(isActive ? null : cluster.id)}
-                  className={`ind-card-${i} group relative flex flex-col justify-start overflow-hidden p-8 transition-all duration-500 text-left
-                    bg-ag-navy border-b border-ag-border
-                    ${borderRight} ${borderRightSm}
-                    ${isActive ? 'ring-2 ring-inset ring-ag-apex' : ''}`}
-                  style={{ minHeight: '260px', opacity: 0 }}
-                  aria-expanded={isActive}
-                  aria-controls={`detail-${cluster.id}`}
-                >
-                  {image && (
-                    <>
-                      <Image
-                        src={image}
-                        alt={cluster.cluster}
-                        fill
-                        className={`object-cover transition-opacity duration-500 ${isActive ? 'opacity-20' : 'opacity-60 group-hover:opacity-30'}`}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      />
-                      <div className={`pointer-events-none absolute inset-0 transition-colors duration-500 ${isActive ? 'bg-ag-navy/80' : 'bg-ag-navy/20 group-hover:bg-ag-navy/75'}`} />
-                    </>
-                  )}
+          return (
+            <div key={cluster.id} className="ind-row border-t border-ag-border" id={cluster.id}>
 
-                  {/* Top row — numéro + arrow */}
-                  <div className="relative z-10 w-full flex items-center justify-between mb-auto">
-                    <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex/70">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className={`transition-all duration-300 ${isActive ? 'rotate-180' : 'group-hover:translate-x-0.5 group-hover:-translate-y-0.5'}`}>
-                      {isActive
-                        ? <ChevronDown size={14} className="text-ag-apex" />
-                        : <ArrowUpRight size={14} className="text-white/40 group-hover:text-white/80" />
-                      }
-                    </span>
-                  </div>
+              {/* ── Ligne master cluster ────────────────────── */}
+              <button
+                onClick={() => toggle(cluster.id)}
+                className={`w-full group flex items-stretch text-left transition-colors duration-300
+                  ${isOpen ? 'bg-ag-navy' : 'bg-ag-white hover:bg-ag-off-white'}`}
+                aria-expanded={isOpen}
+              >
+                {/* Photo couleur (master) */}
+                <div className="relative shrink-0 hidden md:block" style={{ width: 200 }}>
+                  <Image
+                    src={imgSrc}
+                    alt={cluster.cluster}
+                    fill
+                    className={`object-cover transition-opacity duration-500 ${isOpen ? 'opacity-40' : 'opacity-100 group-hover:opacity-90'}`}
+                    sizes="200px"
+                  />
+                  {/* Overlay léger quand fermé, fort quand ouvert */}
+                  <div className={`absolute inset-0 transition-colors duration-500 ${isOpen ? 'bg-ag-navy/60' : 'bg-ag-navy/10'}`} />
+                </div>
 
-                  {/* Content */}
-                  <div className="relative z-10 mt-12">
+                {/* Numéro + titre + description + toggle */}
+                <div className="flex-1 flex items-center gap-6 px-7 md:px-10 py-7 md:py-8">
+                  <span className={`font-mono text-[11px] tracking-[0.24em] shrink-0 transition-colors duration-300 ${isOpen ? 'text-ag-apex' : 'text-ag-gray-light'}`}>
+                    {String(ci + 1).padStart(2, '0')}
+                  </span>
+
+                  <div className="flex-1 min-w-0">
                     <h2
-                      className="font-sans font-bold tracking-[-0.02em] leading-[1.1] mb-3 text-white"
-                      style={{ fontSize: 'clamp(18px,1.8vw,22px)' }}
+                      className={`font-sans font-bold tracking-[-0.025em] leading-[1.1] transition-colors duration-300 ${isOpen ? 'text-white' : 'text-ag-black'}`}
+                      style={{ fontSize: 'clamp(20px,2.2vw,30px)' }}
                     >
                       {cluster.cluster}
                     </h2>
-                    <p className="font-sans text-[12.5px] leading-relaxed text-white/70 line-clamp-3">
+                    <p className={`font-sans text-[13px] mt-1.5 leading-relaxed line-clamp-1 transition-colors duration-300 ${isOpen ? 'text-white/50' : 'text-ag-gray'}`}>
                       {cluster.vision}
                     </p>
                   </div>
 
-                  {/* Active indicator */}
-                  {isActive && (
-                    <div className="relative z-10 mt-4 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-ag-apex animate-pulse" />
-                      <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex">
-                        {t('seeDetail') || 'Détail ci-dessous'}
-                      </span>
-                    </div>
-                  )}
-                </button>
-              )
-            })}
-          </div>
+                  {/* Compteur secteurs */}
+                  <span className={`hidden sm:block font-mono text-[10px] tracking-[0.14em] uppercase shrink-0 mr-4 transition-colors duration-300 ${isOpen ? 'text-white/40' : 'text-ag-gray-light'}`}>
+                    {cluster.sectors.length} secteurs
+                  </span>
 
-          {/* ── Détail du cluster actif ─────────────────────────── */}
-          {activeCluster && (
-            <div
-              ref={detailRef}
-              id={`detail-${activeCluster.id}`}
-              className="border border-ag-apex/30 bg-ag-off-white mb-10 animate-in fade-in duration-300"
-            >
-              {/* Header détail */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                <div className="lg:col-span-4 relative overflow-hidden" style={{ minHeight: 280 }}>
-                  <Image
-                    src={CLUSTER_IMAGES[activeCluster.id] ?? activeCluster.image}
-                    alt={activeCluster.cluster}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-ag-navy/55" />
-                  <div className="absolute bottom-0 left-0 p-8">
-                    <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex mb-2">
-                      {String(clusters.findIndex(c => c.id === activeCluster.id) + 1).padStart(2, '0')}
-                    </p>
-                    <h3 className="font-sans font-bold text-white text-[22px] leading-tight tracking-[-0.02em]">
-                      {activeCluster.cluster}
-                    </h3>
+                  {/* +/− */}
+                  <div className={`w-9 h-9 flex items-center justify-center border shrink-0 transition-all duration-300
+                    ${isOpen ? 'border-ag-apex bg-ag-apex/10' : 'border-ag-border group-hover:border-ag-black'}`}>
+                    {isOpen
+                      ? <Minus size={14} className="text-ag-apex" />
+                      : <Plus  size={14} className={`transition-colors duration-300 text-ag-gray group-hover:text-ag-black`} />
+                    }
                   </div>
                 </div>
+              </button>
 
-                <div className="lg:col-span-8 p-8 lg:p-10 bg-ag-white flex flex-col gap-5">
-                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
-                    {activeCluster.vision}
-                  </p>
+              {/* ── Panneau détail (accordéon) ──────────────── */}
+              {isOpen && (
+                <div
+                  ref={el => { detailsRef.current[cluster.id] = el }}
+                  className="overflow-hidden"
+                >
+                  {/* Vision band */}
+                  <div className="bg-ag-navy/95 px-7 md:px-10 py-6 border-t border-white/10">
+                    <p className="font-sans text-[13px] text-white/60 max-w-3xl leading-relaxed">
+                      {cluster.vision}
+                    </p>
+                  </div>
 
-                  {/* Grille secteurs */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-ag-border border border-ag-border mt-2">
-                    {activeCluster.sectors.map(sector => (
-                      <div key={sector.name} className="bg-ag-white p-5 flex flex-col gap-2 hover:bg-ag-off-white transition-colors">
-                        <div className="flex items-start justify-between gap-2">
-                          <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug">
-                            {sector.name}
+                  {/* Grille secteurs compacte */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-ag-border border-t border-ag-border">
+                    {cluster.sectors.map((sector) => (
+                      <div
+                        key={sector.name}
+                        className="relative bg-ag-white overflow-hidden group/sect flex flex-col hover:bg-ag-off-white transition-colors duration-200"
+                        style={{ minHeight: 130 }}
+                      >
+                        {/* Photo très légère en fond */}
+                        {sectImg && (
+                          <Image
+                            src={sectImg}
+                            alt=""
+                            fill
+                            className="object-cover opacity-[0.07] group-hover/sect:opacity-[0.12] transition-opacity duration-300 pointer-events-none"
+                            sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                            aria-hidden
+                          />
+                        )}
+                        <div className="relative z-10 p-5 flex flex-col gap-2 h-full">
+                          <div className="flex items-start justify-between gap-2">
+                            <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug">
+                              {sector.name}
+                            </p>
+                            <span className="font-mono text-[8px] tracking-[0.1em] uppercase px-1.5 py-0.5 border border-ag-border text-ag-gray-light bg-white shrink-0 whitespace-nowrap">
+                              {sector.tag}
+                            </span>
+                          </div>
+                          <p className="font-sans text-[11.5px] text-ag-gray leading-relaxed flex-1">
+                            {sector.desc}
                           </p>
-                          <span className="font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-0.5 bg-ag-off-white border border-ag-border text-ag-gray-light shrink-0">
-                            {sector.tag}
-                          </span>
                         </div>
-                        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                          {sector.desc}
-                        </p>
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
 
-              {/* Footer détail */}
-              <div className="px-8 py-5 border-t border-ag-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
-                  {activeCluster.sectors.length} {activeCluster.sectors.length > 1 ? 'secteurs' : 'secteur'}
-                </p>
-                <div className="flex gap-3">
-                  <Link
-                    href="/grade"
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-black transition-colors"
-                  >
-                    {t('certifCta')} <ArrowUpRight size={11} />
-                  </Link>
-                  <Link
-                    href={`/${locale}/contact`as never}
-                    className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all"
-                  >
-                    {t('contactCta')}
-                  </Link>
+                  {/* Footer détail */}
+                  <div className="bg-ag-off-white border-t border-ag-border px-7 md:px-10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
+                      {cluster.sectors.length} {cluster.sectors.length > 1 ? 'secteurs couverts' : 'secteur couvert'}
+                    </p>
+                    <div className="flex gap-3">
+                      <Link
+                        href="/grade"
+                        className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.16em] uppercase px-5 py-2.5 hover:bg-ag-black transition-colors"
+                      >
+                        {t('certifCta')} <ArrowUpRight size={10} />
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.16em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all"
+                      >
+                        {t('contactCta')}
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
-          )}
-        </div>
-      </section>
+          )
+        })}
+      </div>
 
-      {/* ── Bottom CTA ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-ag-white border-t border-ag-border">
+      {/* ════════════════════════════════════════════════════════
+          BOTTOM CTA
+      ════════════════════════════════════════════════════════ */}
+      <section className="py-20 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">Aegryn</p>
-            <p className="font-sans font-bold text-ag-black text-[22px] max-w-lg leading-snug tracking-[-0.02em]">
+            <p
+              className="font-sans font-bold text-ag-black max-w-lg leading-snug tracking-[-0.025em]"
+              style={{ fontSize: 'clamp(18px,2vw,28px)' }}
+            >
               {t('certifCta')}
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+          <div className="flex flex-wrap gap-3 shrink-0">
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-black transition-colors"
+              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-black transition-colors"
             >
-              {t('certifCta')} <ArrowUpRight size={13} />
+              {t('certifCta')} <ArrowUpRight size={12} />
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
+              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
             >
-              {t('articlesCta')} <ArrowUpRight size={13} />
+              {t('articlesCta')} <ArrowUpRight size={12} />
             </Link>
           </div>
         </div>
