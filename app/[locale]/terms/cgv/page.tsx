@@ -237,7 +237,7 @@ export default async function TermsCgvPage({ params }: Props) {
         <div className="pt-6 border-t border-ag-border flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] bg-ag-apex text-ag-navy px-5 py-3 hover:bg-ag-apex/90 transition-colors"
           >
             {t('ctaContact')} <ArrowUpRight size={12} />
           </Link>

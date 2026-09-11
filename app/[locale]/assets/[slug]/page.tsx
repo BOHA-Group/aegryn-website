@@ -391,7 +391,7 @@ export default async function AssetPage({ params }: Props) {
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
             >
               {t('cta.contact')}
               <ArrowUpRight size={14} />
