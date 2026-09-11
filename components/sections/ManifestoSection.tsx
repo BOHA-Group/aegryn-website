@@ -84,8 +84,8 @@ export function ManifestoSection() {
         },
       )
 
-      /* ── Stats: fade-up + counter ── */
-      gsap.fromTo('.about-stat',
+      /* ── Stats: fade-up chiffres + labels + counter ── */
+      gsap.fromTo('[data-stat-num]',
         { opacity: 0, y: 20 },
         {
           opacity: 1, y: 0,
@@ -100,11 +100,18 @@ export function ManifestoSection() {
                 const suffix = raw.endsWith('+') ? '+' : raw.endsWith('%') ? '%' : ''
                 const target = parseInt(raw.replace(/\D/g, ''), 10)
                 animateCounter(el, target, 1.4)
-                /* restituer le suffixe une fois l'animation terminée */
                 gsap.delayedCall(1.45, () => { el.textContent = target + suffix })
               })
             },
           },
+        },
+      )
+      gsap.fromTo('[data-stat-label]',
+        { opacity: 0, y: 12 },
+        {
+          opacity: 1, y: 0,
+          stagger: 0.1, duration: 0.5, ease: 'expo.out', delay: 0.15,
+          scrollTrigger: { trigger: '.about-stats', start: 'top 85%', once: true },
         },
       )
 
@@ -217,41 +224,67 @@ export function ManifestoSection() {
 
             {/* Right col — 4 stats en grand avec compteur animé */}
             <div className="py-24 md:pl-16 flex flex-col justify-center">
-              <div className="about-stats grid grid-cols-2 gap-8">
-                {stats.map((s) => {
+              {/*
+                Grille 2×2 avec subgrid sur les rangées :
+                chaque paire de cellules (chiffre | label) partage la même hauteur
+                → les légendes s'alignent horizontalement quelle que soit la hauteur du chiffre.
+                grid-rows: [chiffre-ligne1] [label-ligne1] [chiffre-ligne2] [label-ligne2]
+              */}
+              <div
+                className="about-stats grid grid-cols-2 gap-x-8"
+                style={{ gridTemplateRows: 'auto auto auto auto', rowGap: '0' }}
+              >
+                {stats.map((s, i) => {
                   const isNumeric = /^\d/.test(s.val)
                   const hasPlus   = s.val.endsWith('+')
                   const hasPct    = s.val.endsWith('%')
                   const rawNum    = parseInt(s.val.replace(/\D/g, ''), 10)
-                  /* suffixe à restituer après animation */
                   const suffix    = hasPlus ? '+' : hasPct ? '%' : ''
+
+                  /* rangée chiffre : 0→row1, 1→row1, 2→row3, 3→row3 */
+                  const numRow   = i < 2 ? 1 : 3
+                  /* rangée label : 0→row2, 1→row2, 2→row4, 3→row4 */
+                  const labelRow = i < 2 ? 2 : 4
+                  const col      = (i % 2) + 1
 
                   return (
                     <div
                       key={s.label}
-                      className="about-stat flex flex-col justify-between gap-3"
-                      style={{ opacity: 0, minHeight: '160px' }}
+                      className="about-stat contents"
+                      style={{ opacity: 1 }}
                     >
-                      {/* Chiffre — align-self: flex-end pour aligner le bas des chiffres */}
+                      {/* Cellule chiffre */}
                       <p
-                        className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none"
-                        style={{ fontSize: 'clamp(48px,6vw,80px)' }}
+                        className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none pt-10 pb-4"
+                        style={{
+                          fontSize: 'clamp(48px,6vw,80px)',
+                          gridRow: numRow,
+                          gridColumn: col,
+                          opacity: 0,
+                        }}
+                        data-stat-num
                       >
                         {isNumeric ? (
-                          <span data-counter={rawNum + suffix}>
-                            {s.val}
-                          </span>
+                          <span data-counter={rawNum + suffix}>{s.val}</span>
                         ) : (
                           s.val
                         )}
                       </p>
-                      {/* Label + sous-label — fixé en bas */}
-                      <div>
-                        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-black mb-1">
+                      {/* Cellule label — alignée sur la même rangée que l'autre colonne */}
+                      <div
+                        className="pb-10"
+                        style={{
+                          gridRow: labelRow,
+                          gridColumn: col,
+                          opacity: 0,
+                        }}
+                        data-stat-label
+                      >
+                        <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.22em] text-ag-black mb-1.5">
                           {s.label}
                         </p>
                         {s.sub && (
-                          <p className="font-sans font-normal text-[10px] text-ag-gray-light leading-snug">
+                          <p className="font-sans font-normal text-[12px] text-ag-gray-light leading-snug">
                             {s.sub}
                           </p>
                         )}
