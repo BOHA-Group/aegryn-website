@@ -1121,6 +1121,27 @@
           "Senza pubblicità invasiva"
         ]
       }
+    },
+    "press": {
+      "press": "Stampa",
+      "partner": "Partner",
+      "article": "Articolo",
+      "visual": "Visual",
+      "readArticle": "Leggi l'articolo",
+      "partnerCode": "Codice partner",
+      "publishedOn": "16 luglio 2026",
+      "neediu": {
+        "altBadge": "Apparso su Gala — 27 novembre 2025",
+        "altCover": "Copertina Gala — 27 novembre 2025",
+        "altAd": "Pubblicità neediu su Gala"
+      },
+      "subblink": {
+        "partnerStats": "158.140 membri\n1.100.000 visite/mese",
+        "articleTitle": "Village de la Justice vi propone di far verificare online tutti i vostri contratti e ottenere un ContractScore",
+        "articleDesc": "ContractScore da A a E, analisi in 60 secondi, verdetto FIRMARE · NEGOZIARE · RIFIUTARE. Controproposte redatte clausola per clausola.",
+        "altBanner": "subblink — Analisi contrattuale con IA",
+        "partnerName": "Village de la Justice"
+      }
     }
   },
   "assetCarousel": {

@@ -1121,6 +1121,27 @@
           "Keine aufdringliche Werbung"
         ]
       }
+    },
+    "press": {
+      "press": "Presse",
+      "partner": "Partner",
+      "article": "Artikel",
+      "visual": "Visual",
+      "readArticle": "Artikel lesen",
+      "partnerCode": "Partnercode",
+      "publishedOn": "16. Juli 2026",
+      "neediu": {
+        "altBadge": "In Gala erschienen — 27. November 2025",
+        "altCover": "Gala-Cover — 27. November 2025",
+        "altAd": "neediu-Anzeige in Gala"
+      },
+      "subblink": {
+        "partnerStats": "158.140 Mitglieder\n1.100.000 Besuche/Monat",
+        "articleTitle": "Village de la Justice lädt Sie ein, alle Ihre Verträge online prüfen zu lassen und einen ContractScore zu erhalten",
+        "articleDesc": "ContractScore von A bis E, Analyse in 60 Sekunden, Urteil UNTERZEICHNEN · VERHANDELN · ABLEHNEN. Gegenvorschläge Klausel für Klausel.",
+        "altBanner": "subblink — KI-gestützte Vertragsanalyse",
+        "partnerName": "Village de la Justice"
+      }
     }
   },
   "assetCarousel": {

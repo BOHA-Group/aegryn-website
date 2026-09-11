@@ -223,14 +223,14 @@ export default async function AssetPage({ params }: Props) {
         <section className="border-b border-ag-border bg-ag-off-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
             <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
-              PRESSE
+              {t('press.press')}
             </p>
             <div className="flex flex-col md:flex-row gap-10 items-start">
               {/* Badge */}
               <div className="shrink-0">
                 <Image
                   src="/images/press-gala-badge.png"
-                  alt="Paru dans Gala — 27 novembre 2025"
+                  alt={t('press.neediu.altBadge')}
                   width={220}
                   height={160}
                   className="object-contain"
@@ -240,7 +240,7 @@ export default async function AssetPage({ params }: Props) {
               <div className="shrink-0">
                 <Image
                   src="/images/press-gala-cover.png"
-                  alt="Couverture Gala — 27 novembre 2025"
+                  alt={t('press.neediu.altCover')}
                   width={200}
                   height={266}
                   className="object-cover shadow-md"
@@ -250,7 +250,7 @@ export default async function AssetPage({ params }: Props) {
               <div className="flex-1 max-w-sm">
                 <Image
                   src="/images/press-gala-neediu-ad.png"
-                  alt="Publicité neediu dans Gala"
+                  alt={t('press.neediu.altAd')}
                   width={380}
                   height={480}
                   className="object-contain w-full shadow-md"
@@ -294,48 +294,48 @@ export default async function AssetPage({ params }: Props) {
         <section className="border-b border-ag-border bg-ag-off-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
             <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
-              PRESSE
+              {t('press.press')}
             </p>
 
             {/* 3 items sur la même ligne — centrés */}
             <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
 
-              {/* 1 — Logo partenaire — référence w-200 */}
+              {/* 1 — Logo partenaire */}
               <div className="shrink-0 flex flex-col gap-3">
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.partner')}</p>
                 <div className="rounded-lg border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
                     src="/images/press-village-justice-logo.png"
-                    alt="Village de la Justice — By Legi Team"
+                    alt={t('press.subblink.partnerName')}
                     width={150}
                     height={75}
                     className="object-contain"
                   />
-                  <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight">
-                    158 140 membres<br />1 100 000 visites/mois
+                  <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight whitespace-pre-line">
+                    {t('press.subblink.partnerStats')}
                   </p>
                   <div className="w-full pt-3 border-t border-ag-border flex flex-col items-center gap-1">
-                    <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light">Code partenaire</p>
+                    <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light">{t('press.partnerCode')}</p>
                     <p className="font-mono text-[12px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
                   </div>
-                  <p className="font-mono text-[10px] text-ag-gray-light">16 juillet 2026</p>
+                  <p className="font-mono text-[10px] text-ag-gray-light">{t('press.publishedOn')}</p>
                 </div>
               </div>
 
-              {/* 2 — Carte article — w-260 (+30% vs logo) */}
+              {/* 2 — Carte article */}
               <div className="shrink-0 flex flex-col gap-3">
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.article')}</p>
                 <div className="border border-ag-border bg-ag-white w-[260px]">
                   <div className="rounded-lg bg-ag-navy px-5 py-3 flex items-center">
-                    <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/80">Village de la Justice</span>
+                    <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/80">{t('press.subblink.partnerName')}</span>
                   </div>
                   <div className="px-5 py-5 flex flex-col gap-3">
-                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">16 juillet 2026</p>
+                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">{t('press.publishedOn')}</p>
                     <p className="font-sans font-bold text-[13px] text-ag-black leading-snug">
-                      Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d&apos;obtenir un ContractScore
+                      {t('press.subblink.articleTitle')}
                     </p>
                     <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                      ContractScore de A à E, analyse en 60 secondes, verdict <strong>SIGNER ✓ · NÉGOCIER ⚑ · REFUSER ✗</strong>. Contre-propositions rédigées clause par clause.
+                      {t('press.subblink.articleDesc')}
                     </p>
                     <a
                       href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
@@ -343,18 +343,18 @@ export default async function AssetPage({ params }: Props) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex transition-colors"
                     >
-                      Lire l&apos;article <ArrowUpRight size={10} />
+                      {t('press.readArticle')} <ArrowUpRight size={10} />
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* 3 — Banner subblink — 50% réduit */}
+              {/* 3 — Banner subblink */}
               <div className="flex flex-col gap-3 shrink-0">
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Visuel</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.visual')}</p>
                 <Image
                   src="/images/subblink banner.jpeg"
-                  alt="subblink — Analyse contractuelle par IA"
+                  alt={t('press.subblink.altBanner')}
                   width={400}
                   height={267}
                   className="object-contain"

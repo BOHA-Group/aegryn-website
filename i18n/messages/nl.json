@@ -1121,6 +1121,27 @@
           "Geen opdringerige reclame"
         ]
       }
+    },
+    "press": {
+      "press": "Pers",
+      "partner": "Partner",
+      "article": "Artikel",
+      "visual": "Visueel",
+      "readArticle": "Artikel lezen",
+      "partnerCode": "Partnercode",
+      "publishedOn": "16 juli 2026",
+      "neediu": {
+        "altBadge": "Verschenen in Gala — 27 november 2025",
+        "altCover": "Gala-cover — 27 november 2025",
+        "altAd": "neediu-advertentie in Gala"
+      },
+      "subblink": {
+        "partnerStats": "158.140 leden\n1.100.000 bezoekers/maand",
+        "articleTitle": "Village de la Justice nodigt u uit al uw contracten online te laten auditen en een ContractScore te ontvangen",
+        "articleDesc": "ContractScore van A tot E, analyse in 60 seconden, oordeel TEKENEN · ONDERHANDELEN · WEIGEREN. Tegenvoorstellen clausule voor clausule.",
+        "altBanner": "subblink — AI-gebaseerde contractanalyse",
+        "partnerName": "Village de la Justice"
+      }
     }
   },
   "assetCarousel": {

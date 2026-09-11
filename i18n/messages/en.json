@@ -1121,6 +1121,27 @@
           "No intrusive advertising"
         ]
       }
+    },
+    "press": {
+      "press": "Press",
+      "partner": "Partner",
+      "article": "Article",
+      "visual": "Visual",
+      "readArticle": "Read article",
+      "partnerCode": "Partner code",
+      "publishedOn": "16 July 2026",
+      "neediu": {
+        "altBadge": "Featured in Gala — 27 November 2025",
+        "altCover": "Gala cover — 27 November 2025",
+        "altAd": "neediu ad in Gala"
+      },
+      "subblink": {
+        "partnerStats": "158,140 members\n1,100,000 visits/month",
+        "articleTitle": "Village de la Justice invites you to have all your contracts audited online and get a ContractScore",
+        "articleDesc": "ContractScore from A to E, analysis in 60 seconds, verdict SIGN · NEGOTIATE · REFUSE. Counterproposals drafted clause by clause.",
+        "altBanner": "subblink — AI-powered contract analysis",
+        "partnerName": "Village de la Justice"
+      }
     }
   },
   "assetCarousel": {
