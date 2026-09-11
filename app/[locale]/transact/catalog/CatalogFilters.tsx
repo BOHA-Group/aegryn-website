@@ -66,14 +66,6 @@ function gradeColor(g: string) {
     : 'text-ag-gray-light border-ag-border'
 }
 
-function gradeActiveColor(g: string) {
-  return g === '★'  ? 'border-ag-grade-star bg-ag-grade-star/10 text-ag-grade-star'
-    : g === 'AAA'   ? 'border-ag-grade-aaa  bg-ag-grade-aaa/10  text-ag-grade-aaa'
-    : g === 'AA'    ? 'border-ag-grade-aa   bg-ag-grade-aa/10   text-ag-grade-aa'
-    : g === 'A'     ? 'border-ag-grade-a    bg-ag-grade-a/10    text-ag-grade-a'
-    : g === 'B'     ? 'border-ag-grade-b    bg-ag-grade-b/10    text-ag-grade-b'
-    : 'border-ag-black bg-ag-black text-white'
-}
 
 function fmtArr(n: unknown) {
   if (!n) return null
