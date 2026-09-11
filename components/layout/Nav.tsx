@@ -250,8 +250,9 @@ const INDUSTRY_CLUSTERS: { id: string; labelKey: string }[] = [
 ]
 
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  const locale = useLocale()
-  const founderHref = `/${locale}/about#fondateur` as LinkHref
+  // Utilise le path i18n '/about' — le Link next-intl traduit en /a-propos, /about, /chi-siamo… selon la locale
+  // Le cast est nécessaire car LinkHref ne liste pas les variantes avec #hash
+  const founderHref = '/about#fondateur' as LinkHref
 
   return (
     <motion.div
@@ -730,7 +731,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </Link>
                   ))}
                   <Link
-                    href={`/${locale}/about#fondateur` as LinkHref}
+                    href={'/about#fondateur' as LinkHref}
                     onClick={closeMobile}
                     className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors"
                   >
