@@ -42,7 +42,7 @@ export default function RegisterForm() {
   function toggleSubRole(sr: ClientSubRole) {
     setSubRoles(prev => {
       const next = new Set(prev)
-      next.has(sr) ? next.delete(sr) : next.add(sr)
+      if (next.has(sr)) { next.delete(sr) } else { next.add(sr) }
       return next
     })
   }
