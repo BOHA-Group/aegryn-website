@@ -58,7 +58,7 @@ export default async function StrategyAdvisoryPage({ params }: Props) {
           </p>
           <Link
             href="/contact"
-            className="rounded-lg inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
+            className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex/90 transition-colors"
           >
             {t('cta')} <ArrowUpRight size={14} />
           </Link>

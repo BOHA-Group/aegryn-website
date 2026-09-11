@@ -181,7 +181,7 @@ export default function ReadinessScore() {
           {/* CTA */}
           <Link
             href={cfg.ctaHref as '/transact/submit' | '/contact'}
-            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors self-start"
+            className={`rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 transition-colors self-start ${cfg.ctaHref === '/contact' ? 'bg-ag-apex text-ag-navy hover:bg-ag-apex/90' : 'bg-ag-navy text-white hover:bg-ag-navy-mid'}`}
           >
             {t(`levels.${level}.cta`)} <ArrowUpRight size={12} />
           </Link>
