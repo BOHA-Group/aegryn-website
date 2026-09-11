@@ -74,6 +74,12 @@ export default async function GradePage({ params }: Props) {
             >
               {t('marketCtaSecondary')}
             </Link>
+            <Link
+              href="/contact"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            >
+              Prendre contact <ArrowUpRight size={13} />
+            </Link>
           </div>
         </div>
       </section>

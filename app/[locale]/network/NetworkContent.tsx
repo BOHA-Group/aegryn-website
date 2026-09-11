@@ -322,12 +322,20 @@ export default function NetworkContent() {
               {t('cta.title')}
             </h2>
           </div>
-          <Link
-            href="/alliances"
-            className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
-          >
-            {t('cta.button')} <ArrowUpRight size={14} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <Link
+              href="/alliances"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white/60 hover:bg-white/5 transition-all"
+            >
+              {t('cta.button')} <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
+            >
+              Prendre contact <ArrowUpRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -320,7 +320,7 @@ export default async function AdvisoryPage({ params }: Props) {
             </div>
             <Link
               href="/contact"
-              className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('approach.cta')} <ArrowUpRight size={14} />
             </Link>

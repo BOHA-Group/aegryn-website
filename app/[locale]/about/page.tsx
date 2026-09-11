@@ -279,7 +279,7 @@ export default function AboutPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-gray border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+                  className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
                 >
                   {ta('founder.cta')} <ArrowUpRight size={14} />
                 </Link>

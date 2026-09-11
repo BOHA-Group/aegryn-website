@@ -205,7 +205,7 @@ export default async function TransactionSellPage({ params }: Props) {
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:border-ag-black transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('cta.ctaAdvisor')} <ArrowUpRight size={13} />
             </Link>

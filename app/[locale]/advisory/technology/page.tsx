@@ -134,7 +134,7 @@ export default async function TechnologyAdvisoryPage({ params }: Props) {
           </p>
           <Link
             href="/contact"
-            className="rounded-lg inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+            className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex/90 transition-colors"
           >
             Prendre contact <ArrowUpRight size={14} />
           </Link>
