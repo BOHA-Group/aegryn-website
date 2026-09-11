@@ -14,10 +14,14 @@ import { gsap }          from '@/lib/gsap'
 type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
-// Nos métiers - Build section
+// Nos métiers - Build section (liens principaux)
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildAssets',      href: '/assets' },
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
+]
+
+// Sous-actifs propriétaires (indentés sous craftBuildAssets)
+const CRAFT_BUILD_ASSET_SUBLINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
   { labelKey: 'craftBuildCIFSO',       href: '/grade' },
 ]
@@ -113,16 +117,35 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             {t('craftBuildDesc')}
           </div>
           <div className="flex flex-col gap-1">
-            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
+            {/* Actifs propriétaires + ses sous-actifs */}
+            <Link
+              href="/assets"
+              onClick={onClose}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+            >
+              {t('craftBuildAssets')}
+            </Link>
+            {/* Sous-items indentés */}
+            <div className="flex flex-col gap-0.5 pl-3 border-l border-ag-border ml-1">
+              {CRAFT_BUILD_ASSET_SUBLINKS.map(({ labelKey, href }) => (
+                <Link
+                  key={labelKey}
+                  href={href}
+                  onClick={onClose}
+                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
+                >
+                  {t(labelKey)}
+                </Link>
+              ))}
+            </div>
+            {/* Solutions sur-mesure */}
+            <Link
+              href="/services/build"
+              onClick={onClose}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 mt-0.5"
+            >
+              {t('craftBuildEngineering')}
+            </Link>
           </div>
         </div>
 
@@ -646,6 +669,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  {/* Sous-actifs propriétaires (mobile) */}
+                  {CRAFT_BUILD_ASSET_SUBLINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
                       {t(labelKey)}
                     </Link>
                   ))}
