@@ -603,7 +603,8 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "conviction": "La valeur d’une organisation se mesure chaque jour dans la solidité de ce qu’on a construit, ses actifs, son équipe, son indépendance, sa capacité à durer et à croître sans se fragiliser. Certains dirigeants veulent transmettre. D’autres veulent lever, acquérir, ou simplement construire un patrimoine qui résiste au temps. La valeur ne s’improvise pas. Elle se construit.",
+    "convictionTitle": "La valeur ne s'improvise pas. Elle se construit.",
+    "convictionDesc": "Chaque organisation porte en elle des actifs, une équipe, une indépendance, une capacité à durer. Certains dirigeants veulent transmettre. D'autres veulent lever, acquérir, ou simplement bâtir quelque chose qui résiste au temps. Quelle que soit l'intention, la valeur se construit avant de se réaliser. Aegryn intervient en amont.",
     "items": [
       {
         "num": "01",

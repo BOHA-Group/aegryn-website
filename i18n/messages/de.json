@@ -602,7 +602,8 @@
   },
   "whatwedo": {
     "label": "Unsere Überzeugung",
-    "conviction": "Der Wert einer Organisation zeigt sich jeden Tag in der Solidität des Aufgebauten: seinen Assets, seinem Team, seiner Unabhängigkeit, seiner Fähigkeit zu dauern und zu wachsen, ohne sich zu gefährden. Einige Führungskräfte wollen übertragen. Andere wollen Kapital aufnehmen, akquirieren oder ein Vermögen aufbauen, das dem Lauf der Zeit standhält. Wert wird nicht improvisiert. Er wird aufgebaut.",
+    "convictionTitle": "Wert entsteht nicht spontan. Er wird aufgebaut.",
+    "convictionDesc": "Jede Organisation trägt in sich Vermögenswerte, ein Team, Unabhängigkeit und die Fähigkeit, zu bestehen. Manche Führungskräfte wollen übertragen. Andere wollen Kapital aufnehmen, akquirieren oder einfach etwas aufbauen, das der Zeit standhält. Was auch immer die Absicht ist: Wert entsteht, bevor er sich realisiert. Aegryn greift vorgelagert ein.",
     "items": [
       {
         "num": "01",

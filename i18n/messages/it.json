@@ -602,7 +602,8 @@
   },
   "whatwedo": {
     "label": "La Nostra Convinzione",
-    "conviction": "Il valore di un’organizzazione si misura ogni giorno nella solidità di ciò che è stato costruito: i suoi asset, il suo team, la sua indipendenza, la sua capacità di durare e crescere senza fragilizzarsi. Alcuni dirigenti vogliono trasmettere. Altri vogliono raccogliere capitali, acquisire, o semplicemente costruire un patrimonio che resista nel tempo. Il valore non si improvvisa. Si costruisce.",
+    "convictionTitle": "Il valore non si improvvisa. Si costruisce.",
+    "convictionDesc": "Ogni organizzazione porta in sé asset, un team, indipendenza e la capacità di durare. Alcuni dirigenti vogliono trasmettere. Altri vogliono raccogliere capitali, acquisire o semplicemente costruire qualcosa che resista al tempo. Qualunque sia l'intenzione, il valore si costruisce prima di realizzarsi. Aegryn interviene a monte.",
     "items": [
       {
         "num": "01",

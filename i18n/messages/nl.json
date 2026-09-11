@@ -602,7 +602,8 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "conviction": "De waarde van een organisatie wordt elke dag gemeten in de soliditeit van wat is gebouwd: haar assets, haar team, haar onafhankelijkheid, haar vermogen om te duren en te groeien zonder zichzelf te verzwakken. Sommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquisities doen, of eenvoudigweg een erfenis opbouwen die bestand is tegen de tand des tijds. Waarde wordt niet geïmproviseerd. Ze wordt gebouwd.",
+    "convictionTitle": "Waarde wordt niet geïmproviseerd. Ze wordt opgebouwd.",
+    "convictionDesc": "Elke organisatie draagt in zich activa, een team, onafhankelijkheid en het vermogen om te blijven bestaan. Sommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquireren of gewoon iets opbouwen dat de tand des tijds doorstaat. Welke intentie ook, waarde wordt opgebouwd vóór ze gerealiseerd wordt. Aegryn grijpt vroeg in.",
     "items": [
       {
         "num": "01",

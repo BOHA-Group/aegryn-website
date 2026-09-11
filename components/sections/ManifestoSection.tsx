@@ -131,18 +131,18 @@ export function ManifestoSection() {
               01
             </span>
           </div>
-          <div className="py-16 border-b border-ag-border text-center px-4">
-            <p
-              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.3]"
-              style={{ fontSize: 'clamp(18px,2.2vw,28px)' }}
+          <div className="py-16 border-b border-ag-border text-center px-4 max-w-3xl mx-auto">
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] mb-5"
+              style={{ fontSize: 'clamp(22px,2.8vw,38px)' }}
             >
-              {tW('conviction').split('\n').map((line, i, arr) => (
-                <span key={i}>
-                  {line}
-                  {i < arr.length - 1 && <br className="hidden md:block" />}
-                  {i < arr.length - 1 && <span className="md:hidden"> </span>}
-                </span>
-              ))}
+              {tW('convictionTitle')}
+            </h2>
+            <p
+              className="font-sans font-normal text-ag-gray leading-[1.75]"
+              style={{ fontSize: 'clamp(14px,1.2vw,17px)' }}
+            >
+              {tW('convictionDesc')}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y lg:divide-y-0 lg:divide-x divide-ag-border">
