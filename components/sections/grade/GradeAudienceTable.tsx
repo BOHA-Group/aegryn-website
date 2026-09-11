@@ -50,7 +50,6 @@ export function GradeAudienceTable() {
   }, [])
 
   const activeGrade = GRADES[active]
-  const cfg = GRADE_CONFIG[activeGrade]
 
   return (
     <section ref={ref} className="rounded-lg bg-ag-off-white border-t border-ag-border py-24 px-6">
