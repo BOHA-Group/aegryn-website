@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function AdminLeadsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; source?: string; grade?: string; status?: string }>
+  searchParams: Promise<{ token?: string; source?: string; grade?: string; status?: string; cifso_waitlist?: string }>
 }) {
   const params = await searchParams
 
@@ -71,6 +71,15 @@ export default async function AdminLeadsPage({
       rows = (data ?? []) as Record<string, unknown>[]
     }
 
+    if (source === 'cifso_waitlist') {
+      const { data, error } = await supa
+        .from('cifso_index_waitlist')
+        .select('id, email, org_type, sector, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
+
     if (source === 'auction_access') {
       let q = supa
         .from('auction_access_requests')
@@ -98,14 +107,24 @@ export default async function AdminLeadsPage({
       { key: 'alliances',      table: 'alliance_applications'   },
       { key: 'prospects',      table: 'prospects'               },
       { key: 'auction_access', table: 'auction_access_requests' },
+      // cifso_index_waitlist n'a pas de colonne status → count total
     ]
-    await Promise.all(tables.map(async ({ key, table }) => {
-      const { count } = await supa
-        .from(table)
-        .select('id', { count: 'exact', head: true })
-        .in('status', PENDING_STATUSES)
-      counts[key] = count ?? 0
-    }))
+    await Promise.all([
+      ...tables.map(async ({ key, table }) => {
+        const { count } = await supa
+          .from(table)
+          .select('id', { count: 'exact', head: true })
+          .in('status', PENDING_STATUSES)
+        counts[key] = count ?? 0
+      }),
+      // cifso_index_waitlist : pas de status, on affiche le total des inscrits
+      (async () => {
+        const { count } = await supa
+          .from('cifso_index_waitlist')
+          .select('id', { count: 'exact', head: true })
+        counts['cifso_waitlist'] = count ?? 0
+      })(),
+    ])
   } catch { /* silencieux */ }
 
   return (

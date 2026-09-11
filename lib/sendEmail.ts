@@ -366,6 +366,126 @@ export function emailMagazineEarlyAccess(opts: {
   return { subject, html }
 }
 
+/* ── CIFSO Valuation Index — confirmation inscription liste d'attente ───── */
+export function emailCifsoWaitlistConfirmation(opts: {
+  locale?: string
+}): { subject: string; html: string } {
+  const lang = ['fr', 'en', 'de', 'es', 'it', 'nl'].includes(opts.locale ?? '') ? opts.locale! : 'fr'
+  const isFr = lang === 'fr'
+  const isEn = lang === 'en'
+  const isDe = lang === 'de'
+  const isEs = lang === 'es'
+  const isIt = lang === 'it'
+
+  const subject = isFr ? 'CIFSO Valuation Index — Vous êtes inscrit en avant-première'
+    : isEn ? 'CIFSO Valuation Index — You\'re on the early access list'
+    : isDe ? 'CIFSO Valuation Index — Sie stehen auf der Frühzugangsliste'
+    : isEs ? 'CIFSO Valuation Index — Estás en la lista de acceso anticipado'
+    : isIt ? 'CIFSO Valuation Index — Sei nella lista di accesso anticipato'
+    : 'CIFSO Valuation Index — U staat op de lijst voor vroege toegang'
+
+  const greeting = isFr ? 'Votre inscription est confirmée.'
+    : isEn ? 'Your registration is confirmed.'
+    : isDe ? 'Ihre Anmeldung ist bestätigt.'
+    : isEs ? 'Su registro está confirmado.'
+    : isIt ? 'La vostra iscrizione è confermata.'
+    : 'Uw inschrijving is bevestigd.'
+
+  const body1 = isFr
+    ? 'Vous êtes inscrit à la liste d\'accès anticipé du <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, le benchmark de valorisation organisationnel d\'Aegryn. Lancement prévu <strong>Q1 2027</strong>.'
+    : isEn
+    ? 'You are registered for early access to the <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisational valuation benchmark. Expected launch: <strong>Q1 2027</strong>.'
+    : isDe
+    ? 'Sie sind für den Frühzugang zum <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisationalem Bewertungs-Benchmark, registriert. Geplanter Start: <strong>Q1 2027</strong>.'
+    : isEs
+    ? 'Está registrado para el acceso anticipado al <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, el benchmark de valoración organizacional de Aegryn. Lanzamiento previsto: <strong>Q1 2027</strong>.'
+    : isIt
+    ? 'Siete registrati per l\'accesso anticipato al <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, il benchmark di valorizzazione organizzativa di Aegryn. Lancio previsto: <strong>Q1 2027</strong>.'
+    : 'U bent geregistreerd voor vroege toegang tot de <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisatorische waarderingsbenchmark. Verwachte lancering: <strong>Q1 2027</strong>.'
+
+  const featureTitle = isFr ? 'Ce que vous aurez en premier :'
+    : isEn ? 'What you\'ll get first:'
+    : isDe ? 'Was Sie als Erste erhalten:'
+    : isEs ? 'Lo que recibirá primero:'
+    : isIt ? 'Cosa riceverete per primi:'
+    : 'Wat u als eerste krijgt:'
+
+  const features = isFr
+    ? ['Multiples de transaction EU par secteur (5 clusters)', 'Comparaison de votre score CIFSO vs les pairs', 'Valuation Estimator : multiple marché × coefficient CIFSO', 'Alertes trimestrielles quand les multiples bougent']
+    : isEn
+    ? ['EU transaction multiples by sector (5 clusters)', 'Compare your CIFSO score vs market peers', 'Valuation Estimator: market multiple × CIFSO coefficient', 'Quarterly alerts when multiples move']
+    : isDe
+    ? ['EU-Transaktionsmultiplikatoren nach Sektor (5 Cluster)', 'Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern', 'Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient', 'Vierteljährliche Benachrichtigungen bei Multiplikatorbewegungen']
+    : isEs
+    ? ['Múltiplos de transacción EU por sector (5 clusters)', 'Compare su score CIFSO vs pares del mercado', 'Valuation Estimator: múltiplo de mercado × coeficiente CIFSO', 'Alertas trimestrales cuando los múltiplos se mueven']
+    : isIt
+    ? ['Multipli di transazione EU per settore (5 cluster)', 'Confronto del vostro score CIFSO con i peer di mercato', 'Valuation Estimator: multiplo di mercato × coefficiente CIFSO', 'Avvisi trimestrali quando i multipli si muovono']
+    : ['EU-transactiemultiples per sector (5 clusters)', 'Vergelijk uw CIFSO-score met marktgenoten', 'Valuation Estimator: marktmultiple × CIFSO-coëfficiënt', 'Kwartaalmeldingen wanneer multiples bewegen']
+
+  const prescreenLabel = isFr ? 'En attendant, lancer votre CIFSO Pre-screen (15 min)'
+    : isEn ? 'In the meantime, launch your CIFSO Pre-screen (15 min)'
+    : isDe ? 'In der Zwischenzeit: Ihren CIFSO Pre-screen starten (15 Min.)'
+    : isEs ? 'Mientras tanto, lance su CIFSO Pre-screen (15 min)'
+    : isIt ? 'Nel frattempo, avviate il vostro CIFSO Pre-screen (15 min)'
+    : 'Start ondertussen uw CIFSO Pre-screen (15 min)'
+
+  const html = `<!DOCTYPE html>
+<html lang="${lang}">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#0D1F3C;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0D1F3C;padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="background:#0D1F3C;border:1px solid rgba(255,255,255,0.1);max-width:560px;width:100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:28px 32px 20px;border-bottom:1px solid rgba(255,255,255,0.08);">
+              <table cellpadding="0" cellspacing="0"><tr>
+                <td style="padding-right:12px;">${LOGO_SVG}</td>
+                <td>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;">Aegryn</p>
+                  <p style="margin:0;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#4ADDA5;">CIFSO Valuation Index</p>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Corps -->
+          <tr><td style="padding:28px 32px;">
+            <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#4ADDA5;font-weight:600;">Early Access · Q1 2027</p>
+            <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#ffffff;line-height:1.25;">${greeting}</h1>
+            <p style="margin:0 0 20px 0;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;">${body1}</p>
+
+            <div style="border:1px solid rgba(74,221,165,0.25);background:rgba(74,221,165,0.06);padding:20px 24px;margin-bottom:24px;">
+              <p style="margin:0 0 12px 0;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#4ADDA5;">${featureTitle}</p>
+              ${features.map(f => `<p style="margin:0 0 8px 0;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.5;padding-left:12px;border-left:2px solid rgba(74,221,165,0.4);">${f}</p>`).join('')}
+            </div>
+
+            <p style="margin:0 0 20px 0;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">${prescreenLabel}</p>
+
+            <a href="https://aegryn.com/fr/grade/submit" style="display:inline-block;padding:12px 28px;background:#4ADDA5;color:#0D1F3C;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">CIFSO Pre-screen →</a>
+          </td></tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid rgba(255,255,255,0.08);">
+              <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.3);">
+                <strong style="color:rgba(255,255,255,0.5);">Aegryn</strong> — Genève, Suisse &nbsp;·&nbsp;
+                <a href="https://aegryn.com" style="color:#4ADDA5;text-decoration:none;">aegryn.com</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body></html>`
+
+  return { subject, html }
+}
+
 /* ── KYC : notification admin à la soumission d'un document ────────────── */
 export function emailKycDocSubmitted(opts: {
   memberName: string

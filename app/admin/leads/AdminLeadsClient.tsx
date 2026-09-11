@@ -6,6 +6,7 @@ import { Trash2, CheckSquare, Square, Loader2 } from 'lucide-react'
 
 const SOURCES = [
   { key: 'valuation',      label: 'Valuation'       },
+  { key: 'cifso_waitlist', label: 'CIFSO Index'     },
   { key: 'catalog',        label: 'Catalogue'       },
   // assessment: archivé — API retourne 410, aucun nouveau lead possible
   { key: 'alliances',      label: 'Alliances'       },
@@ -299,6 +300,32 @@ function TransactionAccessTable({ rows, onDelete }: { rows: Record<string, unkno
   )
 }
 
+function CifsoWaitlistTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
+  if (!rows.length) return <EmptyState />
+  const ORG_LABELS: Record<string, string> = { founder: 'Fondateur', investor: 'Investisseur', advisor: 'Conseiller', other: 'Autre', unknown: '—' }
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Email','Profil','Secteur','Locale',''].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td><span className="rounded-lg px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-semibold uppercase">{ORG_LABELS[String(r.org_type ?? 'unknown')] ?? String(r.org_type ?? '—')}</span></Td>
+            <Td>{String(r.sector ?? '—')}</Td>
+            <Td mono small>{String(r.locale ?? '—')}</Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
 function AlliancesTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
   if (!rows.length) return <EmptyState />
   return (
@@ -529,11 +556,12 @@ export default function AdminLeadsClient({
 
       {/* Table */}
       <div className="overflow-x-auto">
-        {source === 'valuation'      && <ValuationTable    rows={rows} onDelete={deleteOne} />}
-        {source === 'catalog'        && <CatalogTable      rows={rows} onDelete={deleteOne} />}
-        {source === 'assessment'     && <AssessmentTable   rows={rows} onDelete={deleteOne} />}
-        {source === 'alliances'      && <AlliancesTable    rows={rows} onDelete={deleteOne} />}
-        {source === 'prospects'      && <ProspectsTable    rows={rows} onDelete={deleteOne} />}
+        {source === 'valuation'      && <ValuationTable       rows={rows} onDelete={deleteOne} />}
+        {source === 'cifso_waitlist' && <CifsoWaitlistTable   rows={rows} onDelete={deleteOne} />}
+        {source === 'catalog'        && <CatalogTable         rows={rows} onDelete={deleteOne} />}
+        {source === 'assessment'     && <AssessmentTable      rows={rows} onDelete={deleteOne} />}
+        {source === 'alliances'      && <AlliancesTable       rows={rows} onDelete={deleteOne} />}
+        {source === 'prospects'      && <ProspectsTable       rows={rows} onDelete={deleteOne} />}
         {source === 'auction_access' && <TransactionAccessTable rows={rows} onDelete={deleteOne} />}
       </div>
 

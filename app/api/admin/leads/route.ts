@@ -3,12 +3,13 @@ import { checkAdminAccess }   from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 
 const SOURCE_TABLE: Record<string, string> = {
-  valuation:     'valuation_leads',
-  catalog:       'catalog_waitlist',
-  assessment:    'assessment_day_bookings',
-  alliances:     'alliance_applications',
-  prospects:     'prospects',
-  auction_access:'auction_access_requests',
+  valuation:      'valuation_leads',
+  cifso_waitlist: 'cifso_index_waitlist',
+  catalog:        'catalog_waitlist',
+  assessment:     'assessment_day_bookings',
+  alliances:      'alliance_applications',
+  prospects:      'prospects',
+  auction_access: 'auction_access_requests',
 }
 
 /**
