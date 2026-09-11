@@ -28,7 +28,7 @@ interface PropAsset {
 const PROP_ASSETS: PropAsset[] = [
   {
     id:          'subblink',
-    name:        'Analyse de risques contractuels',
+    name:        'Analyse risques contrats',
     url:         'https://subblink.com',
     badgeKey:    'subblink.badge',
     taglineKey:  'subblink.tagline',
