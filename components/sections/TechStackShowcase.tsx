@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
+import { FilterPills } from '@/components/ui/FilterPills'
 
 /* ── Tech data ─────────────────────────────────────────────────────── */
 
@@ -128,7 +129,7 @@ function TechBadge({ item }: { item: TechItem }) {
 export function TechStackShowcase() {
   const t   = useTranslations('techStack')
   const ref = useRef<HTMLElement>(null)
-  const [activeCategory, setActiveCategory] = useState<number | null>(null)
+  const [activeCategory, setActiveCategory] = useState<string>('all')
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -148,8 +149,8 @@ export function TechStackShowcase() {
     return () => ctx.revert()
   }, [])
 
-  const displayedCategories = activeCategory !== null
-    ? [CATEGORIES[activeCategory]]
+  const displayedCategories = activeCategory !== 'all'
+    ? CATEGORIES.filter((_, i) => String(i) === activeCategory)
     : CATEGORIES
 
   return (
@@ -175,31 +176,15 @@ export function TechStackShowcase() {
         </div>
 
         {/* Category filter tabs */}
-        <div className="flex flex-wrap gap-1.5 mb-8">
-          <button
-            onClick={() => setActiveCategory(null)}
-            className={`tss-tab font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
-              activeCategory === null
-                ? 'bg-ag-navy text-white border-ag-navy'
-                : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
-            }`}
-          >
-            {t('all')}
-          </button>
-          {CATEGORIES.map((cat, i) => (
-            <button
-              key={cat.labelKey}
-              onClick={() => setActiveCategory(activeCategory === i ? null : i)}
-              className={`tss-tab font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors duration-200 ${
-                activeCategory === i
-                  ? 'bg-ag-navy text-white border-ag-navy'
-                  : 'bg-white text-ag-gray border-ag-border hover:border-ag-navy/50 hover:text-ag-navy'
-              }`}
-            >
-              {t(cat.labelKey)}
-            </button>
-          ))}
-        </div>
+        <FilterPills
+          className="tss-tab mb-8"
+          options={[
+            { key: 'all', label: t('all') },
+            ...CATEGORIES.map((cat, i) => ({ key: String(i), label: t(cat.labelKey) })),
+          ]}
+          active={activeCategory}
+          onChange={setActiveCategory}
+        />
 
         {/* Grid by category — compact */}
         <div className="tss-grid flex flex-col gap-6">

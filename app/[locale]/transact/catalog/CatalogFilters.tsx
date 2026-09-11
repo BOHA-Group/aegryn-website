@@ -157,18 +157,21 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
         <div className="max-w-7xl mx-auto">
 
           {/* ── Filtres au-dessus de la grille ── */}
-          <div className="rounded-lg border border-ag-border bg-ag-off-white px-5 py-4 mb-8 flex flex-wrap items-center gap-2">
+          <div className="mb-8 flex flex-wrap items-center gap-3">
 
             {accessStatus === 'ok' ? (
               <>
-                {/* Filtres grade */}
-                <div className="flex items-center gap-1 flex-wrap">
+                {/* Filtres grade — style FlowPartners, couleurs grade conservées */}
+                <div className="inline-flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl flex-wrap">
                   {GRADE_KEYS.map((g) => (
                     <button
+                      type="button"
                       key={g || 'all'}
                       onClick={() => setGrade(g)}
-                      className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
-                        grade === g ? gradeActiveColor(g) : `border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black ${g ? gradeColor(g) : ''}`
+                      className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
+                        grade === g
+                          ? `bg-white font-semibold shadow-sm ${g ? gradeColor(g).replace('border-', 'border-').split(' ')[0] : 'text-ag-navy'}`
+                          : `text-ag-gray hover:text-ag-navy ${g ? gradeColor(g).split(' ')[0] : ''}`
                       }`}
                     >
                       {g ? (g === '★' ? 'AEG ★' : g) : labels.filterAll}
@@ -176,40 +179,38 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                   ))}
                 </div>
 
-                {/* Séparateur */}
+                {/* Filtres catégorie */}
                 {categories.length > 0 && (
-                  <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
+                  <div className="inline-flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl flex-wrap">
+                    {categories.map(cat => (
+                      <button
+                        type="button"
+                        key={cat}
+                        onClick={() => setCategory(category === cat ? '' : cat)}
+                        className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
+                          category === cat
+                            ? 'bg-white text-ag-navy font-semibold shadow-sm'
+                            : 'text-ag-gray hover:text-ag-navy'
+                        }`}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
                 )}
 
-                {/* Filtres catégorie */}
-                {categories.map(cat => (
-                  <button
-                    key={cat}
-                    onClick={() => setCategory(category === cat ? '' : cat)}
-                    className={`font-mono text-[10px] tracking-[0.16em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
-                      category === cat
-                        ? 'border-ag-navy bg-ag-navy text-white'
-                        : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-
-                {/* Séparateur */}
-                <div className="w-px h-5 bg-ag-border mx-1 shrink-0" />
-
                 {/* Filtre ARR */}
-                <div className="flex items-center gap-1">
-                  <SlidersHorizontal size={11} className="text-ag-gray-light shrink-0" />
+                <div className="inline-flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl flex-wrap">
+                  <SlidersHorizontal size={11} className="text-ag-gray-light shrink-0 ml-1" />
                   {labels.arrRanges.map((label, i) => (
                     <button
+                      type="button"
                       key={i}
                       onClick={() => setArrRange(i)}
-                      className={`font-mono text-[10px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors whitespace-nowrap ${
+                      className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 whitespace-nowrap ${
                         arrRange === i
-                          ? 'border-ag-navy bg-ag-navy text-white'
-                          : 'border-ag-border bg-ag-white text-ag-gray-light hover:border-ag-black hover:text-ag-black'
+                          ? 'bg-white text-ag-navy font-semibold shadow-sm'
+                          : 'text-ag-gray hover:text-ag-navy'
                       }`}
                     >
                       {label}
@@ -220,8 +221,9 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                 {/* Reset */}
                 {hasFilters && (
                   <button
+                    type="button"
                     onClick={reset}
-                    className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors ml-2"
+                    className="flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest text-ag-gray-light hover:text-red-500 transition-colors"
                   >
                     <X size={10} /> {labels.resetFiltersShort}
                   </button>
@@ -229,7 +231,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
               </>
             ) : (
               /* Accès non débloqué — filtres masqués */
-              <div className="flex items-center gap-2 text-ag-gray-light">
+              <div className="inline-flex items-center gap-2 p-1.5 bg-gray-100 rounded-2xl px-4 py-3 text-ag-gray-light">
                 <Lock size={11} className="shrink-0" />
                 <span className="font-mono text-[10px] uppercase tracking-[0.18em]">
                   {labels.conditionalAccess}
@@ -249,9 +251,9 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                   </span>
                 )}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {filtered.map((asset) => (
-                  <div key={asset.id} className="bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors">
+                  <div key={asset.id} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors">
                     <div className="flex items-start justify-between gap-4">
                       <div className={`border px-3 py-1 font-mono font-bold text-[14px] ${gradeColor(asset.official_grade ?? '')}`}>
                         {asset.official_grade === '★' ? 'AEG ★' : (asset.official_grade ?? '—')}

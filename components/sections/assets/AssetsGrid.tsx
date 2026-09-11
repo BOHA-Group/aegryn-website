@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { Aegryn_ASSETS } from '@/data/assets'
+import { FilterPills } from '@/components/ui/FilterPills'
 
 type Category = 'all' | 'ai' | 'lifestyle' | 'transactions'
 
@@ -80,20 +81,8 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
     <section className="rounded-lg bg-ag-white border-t border-ag-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Filter bar */}
-        <div className="flex items-center gap-1 flex-wrap mb-12 border-b border-ag-border pb-6">
-          {filters.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setActive(key)}
-              className={`font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border transition-colors ${
-                active === key
-                  ? 'border-ag-black bg-ag-black text-white'
-                  : 'border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+        <div className="flex items-center flex-wrap gap-3 mb-12 border-b border-ag-border pb-6">
+          <FilterPills options={filters} active={active} onChange={setActive} />
           <span className="ml-auto font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
             {filtered.length} actif{filtered.length > 1 ? 's' : ''}
           </span>
