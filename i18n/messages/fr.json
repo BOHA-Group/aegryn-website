@@ -69,7 +69,7 @@
     "craftBuildAssets": "Actifs propriétaires",
     "craftBuildEngineering": "Solutions sur-mesure",
     "craftBuildSubblink": "Analyse risques contrats",
-    "craftBuildValuation": "Benchmark de valorisation",
+    "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certification CIFSO 5000",
     "craftSupport": "Accompagner",
     "craftSupportDesc": "Conseil en Stratégie, Tech & M&A : Toutes industries",
@@ -308,7 +308,7 @@
       },
       "valuation": {
         "badge": "Valorisation · CIFSO",
-        "tagline": "Benchmark de valorisation sur les dimensions CIFSO",
+        "tagline": "CIFSO Valuation Index — Benchmarkez votre valeur d'entreprise",
         "description": "Outil de valorisation des actifs d'entreprise sur les cinq dimensions CIFSO : Capital, Finance, Intégrité, Sécurité, Organisation. Permet de positionner objectivement la valeur d'une organisation avant toute décision de cession, financement ou succession.",
         "visitPage": "Voir la page"
       }
@@ -1625,7 +1625,7 @@
     "col3Newsletter": "Newsletter LinkedIn",
     "col3Blog": "Blog",
     "col3Glossary": "Glossaire",
-    "col3Valuation": "Outil de valorisation",
+    "col3Valuation": "CIFSO Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Qui sommes-nous",
     "col4About": "À propos d'Aegryn",
@@ -5899,13 +5899,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Estimez la valeur de votre actif tech | Aegryn Valuation",
-      "desc": "Valorisation SaaS B2B basée sur le protocole Aegryn. 4 dimensions, score sur 100, ARR multiple. Résultat immédiat, gratuit et confidentiel."
+      "title": "CIFSO Valuation Index — Benchmarkez votre valeur d'entreprise | Aegryn",
+      "desc": "Estimez la valeur de votre organisation selon le protocole CIFSO. Score CIFSO, multiples de transaction EU, benchmark sectoriel et corrélation valorisation."
     },
     "hero": {
-      "label": "Aegryn VALUATION",
-      "title": "Estimez la valeur\nde votre actif.",
-      "desc": "Notre calculatrice simule le protocole de grade Aegryn CIFSO v4.0 sur 5 dimensions, Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent, et vous donne une fourchette de valorisation calibrée sur les multiples du marché 2026. Gratuit. Confidentiel. Sans engagement."
+      "label": "CIFSO Valuation Index",
+      "title": "Benchmarkez\nla valeur de votre\norganisation.",
+      "desc": "Le CIFSO Valuation Index corrèle votre score organisationnel aux multiples de transaction du marché EU. Un outil de référence pour fondateurs, dirigeants et investisseurs."
     },
     "progress": {
       "step": "Étape",
@@ -6205,6 +6205,132 @@
           "label": "Volume M&A SaaS Europe 2025"
         }
       ]
+    },
+    "pageLabel": "CIFSO Valuation Index",
+    "comingSoonBanner": {
+      "label": "Accès anticipé",
+      "title": "CIFSO Valuation Index — Lancement Q1 2027",
+      "desc": "L'accès au benchmark inter-entreprises et aux multiples de marché en temps réel est en cours de développement. Inscrivez-vous pour un accès en avant-première.",
+      "features": [
+        "Multiples de transaction EU par secteur (5 clusters, 50 verticaux)",
+        "Comparaison de votre score CIFSO vs les pairs du marché",
+        "Valuation Estimator : multiple marché × coefficient CIFSO",
+        "Alertes trimestrielles quand les multiples de votre secteur bougent"
+      ],
+      "ctaLabel": "Rejoindre la liste d'attente",
+      "ctaPlaceholder": "Votre email professionnel",
+      "ctaSubmit": "S'inscrire",
+      "ctaSuccess": "Inscrit — vous serez notifié en avant-première.",
+      "ctaError": "Une erreur est survenue. Réessayez."
+    },
+    "chart": {
+      "label": "Corrélation Score CIFSO × Multiple",
+      "title": "Votre score CIFSO\ndétermine votre multiple.",
+      "desc": "Les données issues des certifications CIFSO 5000 et des transactions M&A EU montrent une corrélation directe entre la maturité organisationnelle et le multiple obtenu.",
+      "xAxis": "Score CIFSO (0 → 100)",
+      "yAxis": "Multiple EV/Revenue",
+      "annotationLow": "2.1x médiane",
+      "annotationMid": "3.4x médiane",
+      "annotationHigh": "4.8x médiane",
+      "disclaimer": "Données simulées basées sur les études de marché EU. Les données certifications CIFSO 5000 seront intégrées progressivement à mesure des certifications réalisées."
+    },
+    "example": {
+      "label": "Exemple de résultat",
+      "title": "À quoi ressemble votre résultat CIFSO ?",
+      "desc": "Avant de lancer votre Pre-screen, voici un exemple de résultat réel anonymisé. Le Pre-screen est l'étape d'auto-évaluation gratuite qui positionne votre organisation dans le CIFSO Valuation Index.",
+      "badgeOrg": "PME Services B2B — France",
+      "badgeRevenue": "8M€ CA",
+      "badgeSector": "Services & Conseil",
+      "scoreLabel": "Score global",
+      "scoreValue": "67 / 100",
+      "gradeLabel": "Pré-grade estimé",
+      "gradeValue": "A",
+      "gapLabel": "Écart vs médiane sectorielle",
+      "gapValue": "+7 points",
+      "rangeLabel": "Fourchette de valorisation estimée",
+      "rangeValue": "4.2M€ — 5.8M€",
+      "multipleLabel": "Multiple médian sectoriel EU",
+      "multipleValue": "0.6x CA",
+      "dims": [
+        {
+          "code": "C",
+          "label": "Capital & Actifs immatériels",
+          "score": "14/20"
+        },
+        {
+          "code": "I",
+          "label": "Intégrité & Gouvernance",
+          "score": "16/20"
+        },
+        {
+          "code": "F",
+          "label": "Finance & Métriques",
+          "score": "15/20"
+        },
+        {
+          "code": "S",
+          "label": "Sécurité & Souveraineté",
+          "score": "11/20"
+        },
+        {
+          "code": "O",
+          "label": "Organisation & Talent",
+          "score": "11/20"
+        }
+      ],
+      "leversLabel": "3 leviers prioritaires identifiés",
+      "levers": [
+        "O — Réduire la dépendance fondateur (plan de succession)",
+        "S — Mettre en conformité RGPD et cyber baseline",
+        "C — Formaliser les contrats cadre en récurrence documentée"
+      ],
+      "cta": "Obtenez votre propre résultat — 15 minutes"
+    },
+    "marketData": {
+      "label": "Données de marché",
+      "title": "Multiples de transaction EU\n— Référence lower mid-market",
+      "desc": "Transactions M&A EU dans la fourchette €5M–€300M. Mis à jour chaque trimestre par l'équipe Aegryn.",
+      "colCluster": "Cluster",
+      "colEvRevenue": "EV/Revenue",
+      "colEvEbitda": "EV/EBITDA",
+      "note": "Ces données représentent les multiples médians des transactions M&A EU lower mid-market (€5M–€300M). Elles ne constituent pas une évaluation. Source : Aegryn CIFSO Valuation Index.",
+      "updatedLabel": "Données"
+    },
+    "investors": {
+      "label": "Pour les investisseurs",
+      "title": "Vous investissez dans ou pour des organisations ?",
+      "desc": "Le CIFSO Pre-screen vous permet de screener vos cibles ou participations en 15 minutes. Identifiez les risques que la due diligence financière ne voit pas.",
+      "profiles": [
+        {
+          "icon": "trending",
+          "title": "VC & Fonds PE",
+          "desc": "Évaluation et screening de portefeuille. Risques hors-bilan identifiés avant la DD."
+        },
+        {
+          "icon": "building",
+          "title": "M&A Advisors",
+          "desc": "Modélisation financière et pitch. Valorisation défendable et structurée."
+        },
+        {
+          "icon": "landmark",
+          "title": "Corporate Dev",
+          "desc": "Screening de cibles M&A. Scoring organisationnel avant lettre d'intention."
+        },
+        {
+          "icon": "users",
+          "title": "CFO & Directions",
+          "desc": "FP&A et analyses de valorisation internes. Benchmark sectoriel en temps réel."
+        }
+      ],
+      "cta": "CIFSO Pre-screen Portfolio",
+      "ctaHref": "/grade/submit"
+    },
+    "prescreenCta": {
+      "label": "CIFSO Pre-screen",
+      "title": "Positionnez votre organisation\ndans l'Index.",
+      "desc": "Le Pre-screen est une auto-évaluation guidée de 15 minutes sur les 5 dimensions CIFSO. Il génère un score, un pré-grade estimé et une fourchette de valorisation indicative.",
+      "cta": "Lancer le Pre-screen",
+      "ctaSecondary": "Voir la certification CIFSO 5000"
     }
   },
   "transactionSubmit": {

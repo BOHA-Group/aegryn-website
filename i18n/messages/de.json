@@ -69,7 +69,7 @@
     "craftBuildAssets": "Eigene Assets",
     "craftBuildEngineering": "Maßgeschneiderte Lösungen",
     "craftBuildSubblink": "Vertragsrisikoanalyse",
-    "craftBuildValuation": "Bewertungs-Benchmark",
+    "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Zertifizierung",
     "craftSupport": "Begleiten",
     "craftSupportDesc": "Strategie-, Tech- & M&A-Beratung : Alle Branchen",
@@ -307,7 +307,7 @@
       },
       "valuation": {
         "badge": "Bewertung · CIFSO",
-        "tagline": "Unternehmensbewertungs-Benchmark über CIFSO-Dimensionen",
+        "tagline": "CIFSO Valuation Index — Benchmarken Sie Ihren Unternehmenswert",
         "description": "Bewertungstool für Unternehmensassets über die fünf CIFSO-Dimensionen: Kapital, Finanzen, Integrität, Sicherheit, Organisation. Objektive Positionierung des Unternehmenswerts vor jeder Verkaufs-, Finanzierungs- oder Nachfolgeentscheidung.",
         "visitPage": "Seite anzeigen"
       }
@@ -1662,7 +1662,7 @@
     "col3Newsletter": "LinkedIn-Newsletter",
     "col3Blog": "Blog",
     "col3Glossary": "Glossar",
-    "col3Valuation": "Bewertungstool",
+    "col3Valuation": "CIFSO Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Wer wir sind",
     "col4About": "Über Aegryn",
@@ -5848,13 +5848,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Tech-Asset bewerten | Aegryn Valuation",
-      "desc": "B2B-SaaS-Bewertungsrechner auf Basis des Aegryn-Grade-Protokolls. 4 Dimensionen, Score /100, Bewertungsspanne. Kostenlos. Vertraulich."
+      "title": "CIFSO Valuation Index — Benchmarken Sie Ihren Unternehmenswert | Aegryn",
+      "desc": "Schätzen Sie den Wert Ihres Unternehmens nach dem CIFSO-Protokoll. CIFSO-Score, EU-Transaktionsmultiplikatoren, Sektor-Benchmark."
     },
     "hero": {
-      "label": "Aegryn VALUATION",
-      "title": "Bewerten Sie Ihr\nTech-Asset.",
-      "desc": "Unser Rechner simuliert das Aegryn CIFSO v4.0 Protokoll über 5 Dimensionen, Kapital & IP, Integrität & Governance, Finanzen & Kennzahlen, Sicherheit & Souveränität, Organisation & Talent, und liefert eine Bewertungsspanne auf Basis der Marktmultiples 2026. Kostenlos. Vertraulich. Unverbindlich."
+      "label": "CIFSO Valuation Index",
+      "title": "Benchmarken Sie\nden Wert Ihres\nUnternehmens.",
+      "desc": "Der CIFSO Valuation Index korreliert Ihren Organisationsscore mit EU-Markttransaktionsmultiplikatoren. Ein Referenzinstrument für Gründer, Führungskräfte und Investoren."
     },
     "progress": {
       "step": "Schritt",
@@ -6154,6 +6154,132 @@
           "label": "SaaS M&A Volumen Europa 2025"
         }
       ]
+    },
+    "pageLabel": "CIFSO Valuation Index",
+    "comingSoonBanner": {
+      "label": "Frühzeitiger Zugang",
+      "title": "CIFSO Valuation Index — Start Q1 2027",
+      "desc": "Der Zugang zu unternehmensübergreifendem Benchmarking und Echtzeit-Marktmultiplikatoren ist in Entwicklung. Registrieren Sie sich für einen Vorab-Zugang.",
+      "features": [
+        "EU-Transaktionsmultiplikatoren nach Sektor (5 Cluster, 50 Verticals)",
+        "Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern",
+        "Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient",
+        "Vierteljährliche Benachrichtigungen bei Bewegungen in Ihrem Sektor"
+      ],
+      "ctaLabel": "Warteliste beitreten",
+      "ctaPlaceholder": "Ihre geschäftliche E-Mail",
+      "ctaSubmit": "Anmelden",
+      "ctaSuccess": "Eingetragen — Sie werden als Erste benachrichtigt.",
+      "ctaError": "Ein Fehler ist aufgetreten. Bitte erneut versuchen."
+    },
+    "chart": {
+      "label": "CIFSO-Score × Multiplikator-Korrelation",
+      "title": "Ihr CIFSO-Score\nbestimmt Ihren Multiplikator.",
+      "desc": "Daten aus CIFSO 5000-Zertifizierungen und EU-M&A-Transaktionen zeigen eine direkte Korrelation zwischen organisationaler Reife und erreichtem Multiplikator.",
+      "xAxis": "CIFSO-Score (0 → 100)",
+      "yAxis": "EV/Revenue-Multiplikator",
+      "annotationLow": "2.1x Median",
+      "annotationMid": "3.4x Median",
+      "annotationHigh": "4.8x Median",
+      "disclaimer": "Simulierte Daten basierend auf EU-Marktforschung. CIFSO 5000-Zertifizierungsdaten werden schrittweise integriert."
+    },
+    "example": {
+      "label": "Beispielergebnis",
+      "title": "Wie sieht Ihr CIFSO-Ergebnis aus?",
+      "desc": "Vor dem Start Ihres Pre-screens: ein anonymisiertes Beispielergebnis. Der Pre-screen ist der kostenlose Selbstbewertungsschritt.",
+      "badgeOrg": "B2B-Dienstleistungs-KMU — Frankreich",
+      "badgeRevenue": "8 Mio. € Umsatz",
+      "badgeSector": "Dienstleistungen & Beratung",
+      "scoreLabel": "Gesamtscore",
+      "scoreValue": "67 / 100",
+      "gradeLabel": "Geschätztes Vorab-Grade",
+      "gradeValue": "A",
+      "gapLabel": "Abstand zum Sektormedian",
+      "gapValue": "+7 Punkte",
+      "rangeLabel": "Geschätzte Bewertungsspanne",
+      "rangeValue": "4,2 Mio. € — 5,8 Mio. €",
+      "multipleLabel": "EU-Sektormedian-Multiplikator",
+      "multipleValue": "0,6x Umsatz",
+      "dims": [
+        {
+          "code": "C",
+          "label": "Kapital & Immaterielle Vermögenswerte",
+          "score": "14/20"
+        },
+        {
+          "code": "I",
+          "label": "Integrität & Governance",
+          "score": "16/20"
+        },
+        {
+          "code": "F",
+          "label": "Finanzen & Kennzahlen",
+          "score": "15/20"
+        },
+        {
+          "code": "S",
+          "label": "Sicherheit & Souveränität",
+          "score": "11/20"
+        },
+        {
+          "code": "O",
+          "label": "Organisation & Talent",
+          "score": "11/20"
+        }
+      ],
+      "leversLabel": "3 Prioritätshebel identifiziert",
+      "levers": [
+        "O — Gründerabhängigkeit reduzieren (Nachfolgeplan)",
+        "S — DSGVO-Konformität und Cyber-Baseline sicherstellen",
+        "C — Rahmenverträge in dokumentierter Wiederkehrumsatz formalisieren"
+      ],
+      "cta": "Eigenes Ergebnis erhalten — 15 Minuten"
+    },
+    "marketData": {
+      "label": "Marktdaten",
+      "title": "EU-Transaktionsmultiplikatoren\n— Lower Mid-Market Referenz",
+      "desc": "EU-M&A-Transaktionen im Bereich €5M–€300M. Vierteljährlich vom Aegryn-Team aktualisiert.",
+      "colCluster": "Cluster",
+      "colEvRevenue": "EV/Revenue",
+      "colEvEbitda": "EV/EBITDA",
+      "note": "Diese Zahlen stellen Median-Multiplikatoren für EU-Lower-Mid-Market-M&A-Transaktionen (€5M–€300M) dar. Sie stellen keine Bewertung dar. Quelle: Aegryn CIFSO Valuation Index.",
+      "updatedLabel": "Daten"
+    },
+    "investors": {
+      "label": "Für Investoren",
+      "title": "Investieren Sie in oder für Organisationen?",
+      "desc": "Der CIFSO Pre-screen ermöglicht es Ihnen, Ziele oder Beteiligungen in 15 Minuten zu screenen. Identifizieren Sie Risiken, die die finanzielle Due Diligence übersieht.",
+      "profiles": [
+        {
+          "icon": "trending",
+          "title": "VC & PE-Fonds",
+          "desc": "Portfoliobewertung und Screening. Außerbilanzielle Risiken vor der DD identifiziert."
+        },
+        {
+          "icon": "building",
+          "title": "M&A-Berater",
+          "desc": "Finanzmodellierung und Pitches. Verteidigbare, strukturierte Bewertung."
+        },
+        {
+          "icon": "landmark",
+          "title": "Corporate Dev",
+          "desc": "M&A-Ziel-Screening. Organisatorisches Scoring vor dem Letter of Intent."
+        },
+        {
+          "icon": "users",
+          "title": "CFOs & Management",
+          "desc": "FP&A und interne Bewertungsanalysen. Echtzeit-Sektor-Benchmarking."
+        }
+      ],
+      "cta": "CIFSO Pre-screen Portfolio",
+      "ctaHref": "/grade/submit"
+    },
+    "prescreenCta": {
+      "label": "CIFSO Pre-screen",
+      "title": "Positionieren Sie Ihr Unternehmen\nim Index.",
+      "desc": "Der Pre-screen ist eine 15-minütige geführte Selbstbewertung über 5 CIFSO-Dimensionen.",
+      "cta": "Pre-screen starten",
+      "ctaSecondary": "CIFSO 5000 Zertifizierung ansehen"
     }
   },
   "transactionSubmit": {

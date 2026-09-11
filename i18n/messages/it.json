@@ -69,7 +69,7 @@
     "craftBuildAssets": "Asset proprietari",
     "craftBuildEngineering": "Soluzioni su misura",
     "craftBuildSubblink": "Analisi rischi contrattuali",
-    "craftBuildValuation": "Benchmark di valutazione",
+    "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificazione CIFSO 5000",
     "craftSupport": "Accompagnare",
     "craftSupportDesc": "Consulenza in Strategia, Tech & M&A : Tutti i settori",
@@ -307,7 +307,7 @@
       },
       "valuation": {
         "badge": "Valutazione · CIFSO",
-        "tagline": "Benchmark di valutazione aziendale sulle dimensioni CIFSO",
+        "tagline": "CIFSO Valuation Index — Benchmark del valore della vostra azienda",
         "description": "Strumento di valutazione degli asset aziendali sulle cinque dimensioni CIFSO: Capitale, Finanza, Integrità, Sicurezza, Organizzazione. Posiziona oggettivamente il valore di un'organizzazione prima di qualsiasi decisione di cessione, finanziamento o successione.",
         "visitPage": "Vedi pagina"
       }
@@ -1662,7 +1662,7 @@
     "col3Newsletter": "Newsletter LinkedIn",
     "col3Blog": "Blog",
     "col3Glossary": "Glossario",
-    "col3Valuation": "Strumento di valutazione",
+    "col3Valuation": "CIFSO Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Chi siamo",
     "col4About": "Chi è Aegryn",
@@ -5848,13 +5848,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Stimate il valore del vostro asset tech | Aegryn Valuation",
-      "desc": "Valutazione SaaS B2B basata sul protocollo Aegryn CIFSO v4.0. 5 dimensioni, punteggio su 100, multiplo ARR. Risultato immediato, gratuito e riservato."
+      "title": "CIFSO Valuation Index — Benchmark del valore della vostra azienda | Aegryn",
+      "desc": "Stimate il valore della vostra organizzazione con il protocollo CIFSO. Score CIFSO, multipli di transazione EU, benchmark settoriale."
     },
     "hero": {
-      "label": "Aegryn VALUATION",
-      "title": "Stimate il valore\ndel vostro asset.",
-      "desc": "Il nostro calcolatore simula il protocollo Aegryn CIFSO v4.0 su 5 dimensioni, Capitale & IP, Integrità & Governance, Finanze & Metriche, Sicurezza & Sovranità, Organizzazione & Talento, e fornisce una fascia di valutazione calibrata sui multipli di mercato 2026. Gratuito. Riservato. Senza impegno."
+      "label": "CIFSO Valuation Index",
+      "title": "Benchmark\ndel valore della\nvostra organizzazione.",
+      "desc": "Il CIFSO Valuation Index correla il vostro score organizzativo con i multipli di transazione del mercato EU. Uno strumento di riferimento per fondatori, dirigenti e investitori."
     },
     "progress": {
       "step": "Fase",
@@ -6154,6 +6154,132 @@
           "label": "Volume M&A SaaS Europa 2025"
         }
       ]
+    },
+    "pageLabel": "CIFSO Valuation Index",
+    "comingSoonBanner": {
+      "label": "Accesso anticipato",
+      "title": "CIFSO Valuation Index — Lancio Q1 2027",
+      "desc": "L'accesso al benchmark inter-aziendale e ai multipli di mercato in tempo reale è in fase di sviluppo. Iscrivetevi per un accesso in anteprima.",
+      "features": [
+        "Multipli di transazione EU per settore (5 cluster, 50 verticali)",
+        "Confronto del vostro score CIFSO con i peer di mercato",
+        "Valuation Estimator: multiplo di mercato × coefficiente CIFSO",
+        "Avvisi trimestrali quando i multipli del vostro settore si muovono"
+      ],
+      "ctaLabel": "Iscriversi alla lista d'attesa",
+      "ctaPlaceholder": "La vostra email professionale",
+      "ctaSubmit": "Iscriviti",
+      "ctaSuccess": "Iscritto — sarete avvisati in anteprima.",
+      "ctaError": "Si è verificato un errore. Riprovare."
+    },
+    "chart": {
+      "label": "Correlazione Score CIFSO × Multiplo",
+      "title": "Il vostro score CIFSO\ndetermina il vostro multiplo.",
+      "desc": "I dati delle certificazioni CIFSO 5000 e delle transazioni M&A EU mostrano una correlazione diretta tra la maturità organizzativa e il multiplo ottenuto.",
+      "xAxis": "Score CIFSO (0 → 100)",
+      "yAxis": "Multiplo EV/Revenue",
+      "annotationLow": "2.1x mediana",
+      "annotationMid": "3.4x mediana",
+      "annotationHigh": "4.8x mediana",
+      "disclaimer": "Dati simulati basati su ricerche di mercato EU. I dati delle certificazioni CIFSO 5000 saranno integrati progressivamente."
+    },
+    "example": {
+      "label": "Esempio di risultato",
+      "title": "Come appare il vostro risultato CIFSO?",
+      "desc": "Prima di avviare il Pre-screen, ecco un esempio di risultato reale anonimizzato. Il Pre-screen è la fase di autovalutazione gratuita.",
+      "badgeOrg": "PMI Servizi B2B — Francia",
+      "badgeRevenue": "8M€ fatturato",
+      "badgeSector": "Servizi & Consulenza",
+      "scoreLabel": "Score globale",
+      "scoreValue": "67 / 100",
+      "gradeLabel": "Pre-grade stimato",
+      "gradeValue": "A",
+      "gapLabel": "Divario vs mediana settoriale",
+      "gapValue": "+7 punti",
+      "rangeLabel": "Fascia di valorizzazione stimata",
+      "rangeValue": "4.2M€ — 5.8M€",
+      "multipleLabel": "Multiplo mediano settoriale EU",
+      "multipleValue": "0.6x fatturato",
+      "dims": [
+        {
+          "code": "C",
+          "label": "Capitale & Asset Immateriali",
+          "score": "14/20"
+        },
+        {
+          "code": "I",
+          "label": "Integrità & Governance",
+          "score": "16/20"
+        },
+        {
+          "code": "F",
+          "label": "Finanza & Metriche",
+          "score": "15/20"
+        },
+        {
+          "code": "S",
+          "label": "Sicurezza & Sovranità",
+          "score": "11/20"
+        },
+        {
+          "code": "O",
+          "label": "Organizzazione & Talento",
+          "score": "11/20"
+        }
+      ],
+      "leversLabel": "3 leve prioritarie identificate",
+      "levers": [
+        "O — Ridurre la dipendenza dal fondatore (piano di successione)",
+        "S — Raggiungere la conformità GDPR e il cyber baseline",
+        "C — Formalizzare i contratti quadro in ricavi ricorrenti documentati"
+      ],
+      "cta": "Ottenete il vostro risultato — 15 minuti"
+    },
+    "marketData": {
+      "label": "Dati di mercato",
+      "title": "Multipli di transazione EU\n— Riferimento lower mid-market",
+      "desc": "Transazioni M&A EU nella fascia €5M–€300M. Aggiornati trimestralmente dal team Aegryn.",
+      "colCluster": "Cluster",
+      "colEvRevenue": "EV/Revenue",
+      "colEvEbitda": "EV/EBITDA",
+      "note": "Questi dati rappresentano i multipli mediani delle transazioni M&A EU lower mid-market (€5M–€300M). Non costituiscono una valutazione. Fonte: Aegryn CIFSO Valuation Index.",
+      "updatedLabel": "Dati"
+    },
+    "investors": {
+      "label": "Per gli investitori",
+      "title": "Investite in o per organizzazioni?",
+      "desc": "Il CIFSO Pre-screen vi permette di fare lo screening di target o partecipazioni in 15 minuti. Identificate i rischi che la due diligence finanziaria non vede.",
+      "profiles": [
+        {
+          "icon": "trending",
+          "title": "VC & Fondi PE",
+          "desc": "Valutazione e screening del portafoglio. Rischi fuori bilancio identificati prima della DD."
+        },
+        {
+          "icon": "building",
+          "title": "Consulenti M&A",
+          "desc": "Modellazione finanziaria e pitch. Valutazione difendibile e strutturata."
+        },
+        {
+          "icon": "landmark",
+          "title": "Sviluppo Aziendale",
+          "desc": "Screening di target M&A. Scoring organizzativo prima della lettera di intenti."
+        },
+        {
+          "icon": "users",
+          "title": "CFO & Management",
+          "desc": "FP&A e analisi di valutazione interne. Benchmark settoriale in tempo reale."
+        }
+      ],
+      "cta": "CIFSO Pre-screen Portfolio",
+      "ctaHref": "/grade/submit"
+    },
+    "prescreenCta": {
+      "label": "CIFSO Pre-screen",
+      "title": "Posizionate la vostra organizzazione\nnell'Indice.",
+      "desc": "Il Pre-screen è un'autovalutazione guidata di 15 minuti sulle 5 dimensioni CIFSO.",
+      "cta": "Avviare il Pre-screen",
+      "ctaSecondary": "Vedere la certificazione CIFSO 5000"
     }
   },
   "transactionSubmit": {

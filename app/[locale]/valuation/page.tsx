@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { Suspense }        from 'react'
 import type { Metadata }  from 'next'
 import { generateAegrynMetadata } from '@/lib/seo'
-import ValuationCalculator from './ValuationCalculator'
+import CifsoValuationIndex from './CifsoValuationIndex'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function ValuationPage() {
   return (
     <Suspense>
-      <ValuationCalculator />
+      <CifsoValuationIndex />
     </Suspense>
   )
 }

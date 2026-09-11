@@ -69,7 +69,7 @@
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerkoplossingen",
     "craftBuildSubblink": "Contractuele risicoanalyse",
-    "craftBuildValuation": "Waarderingsbenchmark",
+    "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000-certificering",
     "craftSupport": "Begeleiden",
     "craftSupportDesc": "Strategie-, Tech- & M&A-advies : Alle sectoren",
@@ -307,7 +307,7 @@
       },
       "valuation": {
         "badge": "Waardering · CIFSO",
-        "tagline": "Bedrijfswaarderingsbenchmark over CIFSO-dimensies",
+        "tagline": "CIFSO Valuation Index — Benchmark uw bedrijfswaarde",
         "description": "Waarderingstool voor bedrijfsassets over de vijf CIFSO-dimensies: Kapitaal, Financiën, Integriteit, Veiligheid, Organisatie. Positioneert objectief de waarde van een organisatie vóór elke verkoop-, financierings- of opvolgingsbeslissing.",
         "visitPage": "Pagina bekijken"
       }
@@ -1662,7 +1662,7 @@
     "col3Newsletter": "LinkedIn-nieuwsbrief",
     "col3Blog": "Blog",
     "col3Glossary": "Woordenlijst",
-    "col3Valuation": "Waarderingstool",
+    "col3Valuation": "CIFSO Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Wie we zijn",
     "col4About": "Over Aegryn",
@@ -5862,13 +5862,13 @@
   },
   "valuation": {
     "meta": {
-      "title": "Estimate the value of your tech asset | Aegryn Valuation",
-      "desc": "B2B SaaS waarderingsrekenmachine gebaseerd op het Aegryn CIFSO v4.0 protocol. 5 dimensies, score op 100, geschatte grade en waarderingsbereik. Gratis. Vertrouwelijk."
+      "title": "CIFSO Valuation Index — Benchmark uw bedrijfswaarde | Aegryn",
+      "desc": "Schat de waarde van uw organisatie met het CIFSO-protocol. CIFSO-score, EU-transactiemultiples, sectorale benchmark."
     },
     "hero": {
-      "label": "Aegryn VALUATION",
-      "title": "Estimate the value\nof your asset.",
-      "desc": "Onze rekenmachine simuleert het Aegryn CIFSO v4.0 protocol over 5 dimensies, Kapitaal & IP, Integriteit & Governance, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent, en geeft u een waarderingsbereik gekalibreerd op de marktmultiples van 2026. Gratis. Vertrouwelijk. Vrijblijvend."
+      "label": "CIFSO Valuation Index",
+      "title": "Benchmark\nde waarde van\nuw organisatie.",
+      "desc": "De CIFSO Valuation Index correleert uw organisatiescore met EU-markttransactiemultiples. Een referentietool voor oprichters, managers en investeerders."
     },
     "progress": {
       "step": "Step",
@@ -6168,6 +6168,132 @@
           "label": "SaaS M&A volume Europe 2025"
         }
       ]
+    },
+    "pageLabel": "CIFSO Valuation Index",
+    "comingSoonBanner": {
+      "label": "Vroege toegang",
+      "title": "CIFSO Valuation Index — Lancering Q1 2027",
+      "desc": "Toegang tot cross-company benchmarking en real-time marktmultiples is in ontwikkeling. Schrijf u in voor vroege toegang.",
+      "features": [
+        "EU-transactiemultiples per sector (5 clusters, 50 verticalen)",
+        "Vergelijk uw CIFSO-score met marktgenoten",
+        "Valuation Estimator: marktmultiple × CIFSO-coëfficiënt",
+        "Kwartaalmeldingen wanneer de multiples in uw sector bewegen"
+      ],
+      "ctaLabel": "Inschrijven op wachtlijst",
+      "ctaPlaceholder": "Uw professionele e-mail",
+      "ctaSubmit": "Inschrijven",
+      "ctaSuccess": "Ingeschreven — u wordt als eerste op de hoogte gebracht.",
+      "ctaError": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
+    "chart": {
+      "label": "CIFSO-score × Multiple correlatie",
+      "title": "Uw CIFSO-score\nbepalt uw multiple.",
+      "desc": "Gegevens uit CIFSO 5000-certificeringen en EU M&A-transacties tonen een directe correlatie tussen organisationele volwassenheid en behaalde multiple.",
+      "xAxis": "CIFSO-score (0 → 100)",
+      "yAxis": "EV/Revenue multiple",
+      "annotationLow": "2.1x mediaan",
+      "annotationMid": "3.4x mediaan",
+      "annotationHigh": "4.8x mediaan",
+      "disclaimer": "Gesimuleerde gegevens op basis van EU-marktonderzoek. CIFSO 5000-certificeringsdata worden geleidelijk geïntegreerd."
+    },
+    "example": {
+      "label": "Voorbeeldresultaat",
+      "title": "Hoe ziet uw CIFSO-resultaat eruit?",
+      "desc": "Voordat u uw Pre-screen start: een geanonimiseerd voorbeeldresultaat. De Pre-screen is de gratis zelfevaluatiestap.",
+      "badgeOrg": "B2B-diensten KMO — Frankrijk",
+      "badgeRevenue": "€8M omzet",
+      "badgeSector": "Diensten & Advies",
+      "scoreLabel": "Globale score",
+      "scoreValue": "67 / 100",
+      "gradeLabel": "Geschat pre-grade",
+      "gradeValue": "A",
+      "gapLabel": "Verschil vs. sectorale mediaan",
+      "gapValue": "+7 punten",
+      "rangeLabel": "Geschatte waarderingsrange",
+      "rangeValue": "€4.2M — €5.8M",
+      "multipleLabel": "EU sectorale mediaan multiple",
+      "multipleValue": "0.6x omzet",
+      "dims": [
+        {
+          "code": "C",
+          "label": "Kapitaal & Immateriële Activa",
+          "score": "14/20"
+        },
+        {
+          "code": "I",
+          "label": "Integriteit & Governance",
+          "score": "16/20"
+        },
+        {
+          "code": "F",
+          "label": "Financiën & Metrics",
+          "score": "15/20"
+        },
+        {
+          "code": "S",
+          "label": "Beveiliging & Soevereiniteit",
+          "score": "11/20"
+        },
+        {
+          "code": "O",
+          "label": "Organisatie & Talent",
+          "score": "11/20"
+        }
+      ],
+      "leversLabel": "3 prioritaire hefbomen geïdentificeerd",
+      "levers": [
+        "O — Oprichtingsafhankelijkheid verminderen (opvolgingsplan)",
+        "S — GDPR-conformiteit en cyber baseline bereiken",
+        "C — Raamcontracten formaliseren in gedocumenteerde terugkerende omzet"
+      ],
+      "cta": "Ontvang uw eigen resultaat — 15 minuten"
+    },
+    "marketData": {
+      "label": "Marktgegevens",
+      "title": "EU-transactiemultiples\n— Lower mid-market referentie",
+      "desc": "EU M&A-transacties in het bereik €5M–€300M. Elk kwartaal bijgewerkt door het Aegryn-team.",
+      "colCluster": "Cluster",
+      "colEvRevenue": "EV/Revenue",
+      "colEvEbitda": "EV/EBITDA",
+      "note": "Deze cijfers vertegenwoordigen de mediaan multiples voor EU lower mid-market M&A-transacties (€5M–€300M). Ze vormen geen waardering. Bron: Aegryn CIFSO Valuation Index.",
+      "updatedLabel": "Gegevens"
+    },
+    "investors": {
+      "label": "Voor investeerders",
+      "title": "Investeert u in of voor organisaties?",
+      "desc": "De CIFSO Pre-screen laat u toe targets of participaties in 15 minuten te screenen. Identificeer risico's die financiële due diligence niet ziet.",
+      "profiles": [
+        {
+          "icon": "trending",
+          "title": "VC & PE-fondsen",
+          "desc": "Portefeuillewaardering en screening. Buiten-balansrisico's geïdentificeerd vóór DD."
+        },
+        {
+          "icon": "building",
+          "title": "M&A-adviseurs",
+          "desc": "Financiële modellering en pitches. Verdedigbare, gestructureerde waardering."
+        },
+        {
+          "icon": "landmark",
+          "title": "Corporate Dev",
+          "desc": "M&A-doelscreening. Organisatiescore vóór intentieverklaring."
+        },
+        {
+          "icon": "users",
+          "title": "CFO's & Management",
+          "desc": "FP&A en interne waarderingsanalyses. Real-time sectorale benchmarking."
+        }
+      ],
+      "cta": "CIFSO Pre-screen Portfolio",
+      "ctaHref": "/grade/submit"
+    },
+    "prescreenCta": {
+      "label": "CIFSO Pre-screen",
+      "title": "Positioneer uw organisatie\nin de Index.",
+      "desc": "De Pre-screen is een begeleide zelfevaluatie van 15 minuten over 5 CIFSO-dimensies.",
+      "cta": "Pre-screen starten",
+      "ctaSecondary": "CIFSO 5000-certificering bekijken"
     }
   },
   "transactionSubmit": {
