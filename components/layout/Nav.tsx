@@ -126,7 +126,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
               {t('craftBuildAssets')}
             </Link>
             {/* Sous-items indentés */}
-            <div className="flex flex-col gap-0.5 pl-3 border-l border-ag-border ml-1">
+            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1">
               {CRAFT_BUILD_ASSET_SUBLINKS.map(({ labelKey, href }) => (
                 <Link
                   key={labelKey}

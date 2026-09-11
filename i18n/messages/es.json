@@ -220,7 +220,6 @@
       "filterAI": "IA & Protocolos",
       "filterLifestyle": "Servicios & Lifestyle",
       "filterTransactions": "Transacciones & M&A",
-      "filterCompliance": "Compliance & Regulación",
       "filterIdentity": "Identidad & Confianza",
       "statusLive": "En vivo",
       "statusBeta": "Beta",
@@ -250,7 +249,8 @@
       "filterCore": "Activos CORE",
       "filterPortfolio": "Activos PORTFOLIO",
       "coreDesc": "Diseñados, desarrollados y operados por Aegryn",
-      "portfolioDesc": "Participaciones estratégicas y acompañamiento"
+      "portfolioDesc": "Participaciones estratégicas y acompañamiento",
+      "filterValuation": "Valoración"
     },
     "items": {
       "subblink": {
@@ -286,13 +286,8 @@
       "cifso": {
         "badge": "Protocolo · Certificación",
         "tagline": "Protocolo algorítmico de certificación de activos",
-        "description": "Protocolo CIFSO en producción, utilizado para la certificación de activos propios y los de sus clientes. Cubre 5 dimensiones: Capital, Integridad, Finanzas, Seguridad, Organización. Licenciable a firmas de auditoría y consultoría que deseen certificar a sus propios clientes.",
+        "description": "Protocolo CIFSO en producción, utilizado para certificar activos propios y de clientes. Cubre 5 dimensiones: Capital, Integridad, Finanzas, Seguridad, Organización.",
         "visitPage": "Ver página de certificación"
-      },
-      "compliance": {
-        "badge": "RegTech · Compliance",
-        "tagline": "Motor de compliance regulatorio automatizado",
-        "description": "Motor de compliance, utilizado para el seguimiento de las obligaciones regulatorias. Registro de tratamientos, controles automatizados IA Act, NIS2, DORA, RGPD. Licenciable para integración en servicios de asesoría compliance o despliegue en clientes institucionales."
       },
       "kyb": {
         "badge": "Identidad · KYB/KYC",
@@ -308,6 +303,12 @@
         "ai": "IA & Protocolos",
         "lifestyle": "Servicios & Lifestyle",
         "transactions": "Transacciones & Red"
+      },
+      "valuation": {
+        "badge": "Valoración · CIFSO",
+        "tagline": "Benchmark de valoración empresarial en dimensiones CIFSO",
+        "description": "Herramienta de valoración de activos empresariales en las cinco dimensiones CIFSO: Capital, Finanzas, Integridad, Seguridad, Organización. Posiciona objetivamente el valor de una organización antes de cualquier decisión de venta, financiación o sucesión.",
+        "visitPage": "Ver página"
       }
     }
   },

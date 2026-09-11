@@ -6,7 +6,7 @@ import { ArrowUpRight, ExternalLink, Info, Lock } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { FilterPills } from '@/components/ui/FilterPills'
 
-type PropCategory = 'all' | 'ai' | 'transactions' | 'compliance' | 'identity'
+type PropCategory = 'all' | 'ai' | 'transactions' | 'valuation' | 'identity'
 
 interface PropAsset {
   id:       string
@@ -80,16 +80,18 @@ const PROP_ASSETS: PropAsset[] = [
     visitPageLabelKey: 'cifso.visitPage',
   },
   {
-    id:          'compliance',
-    name:        'Compliance Engine',
-    url:         null,
-    badgeKey:    'compliance.badge',
-    taglineKey:  'compliance.tagline',
-    descKey:     'compliance.description',
-    category:    'compliance',
-    status:      'dev',
-    ownership:   'domain',
-    publisherReady: true,
+    id:               'valuation',
+    name:             'Benchmark de valorisation',
+    url:              null,
+    badgeKey:         'valuation.badge',
+    taglineKey:       'valuation.tagline',
+    descKey:          'valuation.description',
+    category:         'valuation',
+    status:           'dev',
+    ownership:        'domain',
+    publisherReady:   true,
+    visitPageHref:    '/valuation',
+    visitPageLabelKey: 'valuation.visitPage',
   },
   {
     id:          'kyb',
@@ -136,7 +138,7 @@ export function ProprietaryAssetsGrid() {
     { key: 'all',         label: t('filterAll') },
     { key: 'ai',          label: t('filterAI') },
     { key: 'transactions',label: t('filterTransactions') },
-    { key: 'compliance',  label: t('filterCompliance') },
+    { key: 'valuation',   label: t('filterValuation') },
     { key: 'identity',    label: t('filterIdentity') },
   ]
 

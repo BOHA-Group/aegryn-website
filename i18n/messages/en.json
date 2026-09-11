@@ -220,7 +220,6 @@
       "filterAI": "AI & Protocols",
       "filterLifestyle": "Services & Lifestyle",
       "filterTransactions": "Transactions & M&A",
-      "filterCompliance": "Compliance & Regulation",
       "filterIdentity": "Identity & Trust",
       "statusLive": "Live",
       "statusBeta": "Beta",
@@ -250,7 +249,8 @@
       "filterCore": "CORE assets",
       "filterPortfolio": "PORTFOLIO assets",
       "coreDesc": "Designed, developed and operated by Aegryn",
-      "portfolioDesc": "Strategic participations and support"
+      "portfolioDesc": "Strategic participations and support",
+      "filterValuation": "Valuation"
     },
     "items": {
       "subblink": {
@@ -286,13 +286,8 @@
       "cifso": {
         "badge": "Protocol · Certification",
         "tagline": "Algorithmic asset-certification protocol",
-        "description": "CIFSO protocol in production, used to certify proprietary assets and those of clients. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms wishing to certify their own clients.",
+        "description": "CIFSO protocol in production, used to certify proprietary and client assets. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation.",
         "visitPage": "View certification page"
-      },
-      "compliance": {
-        "badge": "RegTech · Compliance",
-        "tagline": "Automated regulatory compliance engine",
-        "description": "Compliance engine, used to monitor regulatory obligations. Treatment register, automated AI Act, NIS2, DORA, GDPR controls. Licensable for integration into compliance advisory offerings or deployment with institutional clients."
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",
@@ -308,6 +303,12 @@
         "ai": "AI & Protocols",
         "lifestyle": "Services & Lifestyle",
         "transactions": "Transactions & Network"
+      },
+      "valuation": {
+        "badge": "Valuation · CIFSO",
+        "tagline": "Company valuation benchmark across CIFSO dimensions",
+        "description": "Company asset valuation tool across the five CIFSO dimensions: Capital, Finance, Integrity, Security, Organisation. Objectively positions the value of an organisation ahead of any sale, financing or succession decision.",
+        "visitPage": "View page"
       }
     }
   },

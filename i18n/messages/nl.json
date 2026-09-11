@@ -220,7 +220,6 @@
       "filterAI": "AI & Protocollen",
       "filterLifestyle": "Services & Lifestyle",
       "filterTransactions": "Transacties & M&A",
-      "filterCompliance": "Compliance & Regelgeving",
       "filterIdentity": "Identiteit & Vertrouwen",
       "statusLive": "Live",
       "statusBeta": "Beta",
@@ -250,7 +249,8 @@
       "filterCore": "CORE-assets",
       "filterPortfolio": "PORTFOLIO-assets",
       "coreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
-      "portfolioDesc": "Strategische participaties en begeleiding"
+      "portfolioDesc": "Strategische participaties en begeleiding",
+      "filterValuation": "Waardering"
     },
     "items": {
       "subblink": {
@@ -286,13 +286,8 @@
       "cifso": {
         "badge": "Protocol · Certificering",
         "tagline": "Algoritmisch protocol voor activacertificering",
-        "description": "CIFSO-protocol in productie, gebruikt voor de certificering van eigen activa en die van klanten. Dekt 5 dimensies: Kapitaal, Integriteit, Financiën, Beveiliging, Organisatie. Licentieerbaar voor accountants- en adviesbureaus die hun eigen klanten willen certificeren.",
+        "description": "CIFSO-protocol in productie voor de certificering van eigen en klantassets. Omvat 5 dimensies: Kapitaal, Integriteit, Financiën, Veiligheid, Organisatie.",
         "visitPage": "Certificeringspagina bekijken"
-      },
-      "compliance": {
-        "badge": "RegTech · Compliance",
-        "tagline": "Geautomatiseerde regulatoire compliance-engine",
-        "description": "Compliance-engine, gebruikt voor het bewaken van regelgevingsverplichtingen. Verwerkingsregister, geautomatiseerde AI Act-, NIS2-, DORA-, AVG-controles. Licentieerbaar voor integratie in compliance-adviesaanbod of implementatie bij institutionele klanten."
       },
       "kyb": {
         "badge": "Identiteit · KYB/KYC",
@@ -308,6 +303,12 @@
         "ai": "AI & Protocollen",
         "lifestyle": "Services & Lifestyle",
         "transactions": "Transacties & Netwerk"
+      },
+      "valuation": {
+        "badge": "Waardering · CIFSO",
+        "tagline": "Bedrijfswaarderingsbenchmark over CIFSO-dimensies",
+        "description": "Waarderingstool voor bedrijfsassets over de vijf CIFSO-dimensies: Kapitaal, Financiën, Integriteit, Veiligheid, Organisatie. Positioneert objectief de waarde van een organisatie vóór elke verkoop-, financierings- of opvolgingsbeslissing.",
+        "visitPage": "Pagina bekijken"
       }
     }
   },
