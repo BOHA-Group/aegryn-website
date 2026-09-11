@@ -5,6 +5,20 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
+/* ── Counter animation helper ─────────────────────────────── */
+function animateCounter(el: HTMLElement, target: number, duration = 1.4) {
+  const obj = { val: 0 }
+  gsap.to(obj, {
+    val: target, duration, ease: 'power2.out',
+    onUpdate() {
+      el.textContent = String(Math.round(obj.val))
+    },
+    onComplete() {
+      el.textContent = String(target)
+    },
+  })
+}
+
 export function ManifestoSection() {
   const tW = useTranslations('whatwedo')
   const tA = useTranslations('aboutSection')
@@ -70,23 +84,29 @@ export function ManifestoSection() {
         },
       )
 
-      /* About quote fade-up */
-      gsap.fromTo('.about-quote',
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1, y: 0,
-          duration: 0.8, ease: 'expo.out',
-          scrollTrigger: { trigger: '.about-quote', start: 'top 82%', once: true },
-        },
-      )
-
-      /* Stats count-up reveal */
+      /* ── Stats: fade-up + counter ── */
       gsap.fromTo('.about-stat',
-        { opacity: 0, y: 16 },
+        { opacity: 0, y: 20 },
         {
           opacity: 1, y: 0,
-          stagger: 0.09, duration: 0.6, ease: 'expo.out',
-          scrollTrigger: { trigger: '.about-stats', start: 'top 85%', once: true },
+          stagger: 0.1, duration: 0.6, ease: 'expo.out',
+          scrollTrigger: {
+            trigger: '.about-stats',
+            start: 'top 85%',
+            once: true,
+            onEnter: () => {
+              document.querySelectorAll<HTMLElement>('[data-counter]').forEach(el => {
+                const raw    = el.getAttribute('data-counter') ?? '0'
+                const isPlus = raw.endsWith('+')
+                const target = parseInt(raw.replace('+', ''), 10)
+                animateCounter(el, target, 1.4)
+                if (isPlus) {
+                  /* append '+' once animation ends */
+                  gsap.delayedCall(1.45, () => { el.textContent = target + '+' })
+                }
+              })
+            },
+          },
         },
       )
 
@@ -192,45 +212,50 @@ export function ManifestoSection() {
               </div>
             </div>
 
-            {/* Right col */}
-            <div className="py-24 md:pl-16 flex flex-col justify-between gap-16">
-              <blockquote className="about-quote relative" style={{ opacity: 0 }}>
-                <p
-                  className="font-sans font-normal italic text-ag-black tracking-[-0.01em] leading-[1.45] mb-8 relative z-10"
-                  style={{ fontSize: 'clamp(18px,2vw,26px)' }}
-                >
-                  &ldquo;{tA('quote')}&rdquo;
-                </p>
-                {tA('ceoTitle') && (
-                  <footer>
-                    <p className="font-sans font-normal text-[11px] text-ag-gray-light">
-                      {tA('ceoTitle')}
-                    </p>
-                  </footer>
-                )}
-              </blockquote>
+            {/* Right col — 4 stats en grand avec compteur animé */}
+            <div className="py-24 md:pl-16 flex flex-col justify-center">
+              <div className="about-stats grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
+                {stats.map((s) => {
+                  const isNumeric = /^\d/.test(s.val)
+                  const rawNum   = parseInt(s.val.replace(/\D/g, ''), 10)
+                  const hasPlus  = s.val.endsWith('+')
 
-              <div className="about-stats grid grid-cols-2 lg:grid-cols-4 border-t border-ag-border pt-8 gap-6">
-                {stats.map((s) => (
-                  <div key={s.label} className="about-stat" style={{ opacity: 0 }}>
-                    <p
-                      className="font-sans font-bold text-ag-black tracking-[-0.03em] mb-1"
-                      style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}
+                  return (
+                    <div
+                      key={s.label}
+                      className="about-stat bg-ag-off-white p-8 flex flex-col justify-between gap-4"
+                      style={{ opacity: 0, minHeight: '200px' }}
                     >
-                      {s.val}
-                    </p>
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
-                      {s.label}
-                    </p>
-                    {s.sub && (
-                      <p className="font-sans font-normal text-[10px] text-ag-gray-light leading-snug">
-                        {s.sub}
+                      {/* Chiffre */}
+                      <p
+                        className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none"
+                        style={{ fontSize: 'clamp(48px,6vw,80px)' }}
+                      >
+                        {isNumeric ? (
+                          <span data-counter={hasPlus ? rawNum + '+' : String(rawNum)}>
+                            {s.val}
+                          </span>
+                        ) : (
+                          s.val
+                        )}
                       </p>
-                    )}
-                  </div>
-                ))}
+                      {/* Label + sous-label */}
+                      <div>
+                        <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.22em] text-ag-black mb-1">
+                          {s.label}
+                        </p>
+                        {s.sub && (
+                          <p className="font-sans font-normal text-[11px] text-ag-gray-light leading-snug">
+                            {s.sub}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             </div>
+
           </div>
         </div>
       </section>
