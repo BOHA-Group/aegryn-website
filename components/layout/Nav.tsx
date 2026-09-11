@@ -18,6 +18,8 @@ type LinkHref = ComponentProps<typeof Link>['href']
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildAssets',      href: '/assets' },
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
+  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
+  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
 ]
 
 // Nos métiers - Support section
@@ -32,7 +34,6 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Nos métiers - Transaction M&A section
 const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactOverview',     href: '/transact' as LinkHref },
-  { labelKey: 'craftTransactGradeNew',     href: '/grade' },
   { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
   { labelKey: 'craftTransactSell',         href: '/transact/how-to-sell' },
   { labelKey: 'craftTransactBuy',          href: '/transact/how-to-buy' },

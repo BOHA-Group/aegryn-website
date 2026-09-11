@@ -255,11 +255,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={"/valuation" as ComponentProps<typeof Link>['href']} className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col3Valuation')}
-                </Link>
-              </li>
-              <li>
                 <Link href="/help/faq" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col3FAQ')}
                 </Link>
