@@ -80,7 +80,7 @@ export default function NewIntroductionForm() {
             value={contactName}
             onChange={e => setContactName(e.target.value)}
             placeholder={type === 'asset' ? 'Nom du dirigeant / cédant' : 'Nom de l\'acquéreur'}
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
         <div>
@@ -92,7 +92,7 @@ export default function NewIntroductionForm() {
             value={contactEmail}
             onChange={e => setContactEmail(e.target.value)}
             placeholder="contact@exemple.com"
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
       </div>
@@ -108,19 +108,19 @@ export default function NewIntroductionForm() {
           placeholder={type === 'asset'
             ? 'Secteur, ARR estimé, raison de la cession, disponibilité du dirigeant…'
             : 'Profil de l\'acquéreur, capacité financière estimée, secteurs recherchés…'}
-          className="w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+          className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
         />
       </div>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
       )}
 
       <div>
         <button
           type="submit"
           disabled={loading}
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
         >
           {loading ? <Loader2 size={11} className="animate-spin" /> : <SendHorizonal size={11} />}
           Soumettre l&apos;introduction

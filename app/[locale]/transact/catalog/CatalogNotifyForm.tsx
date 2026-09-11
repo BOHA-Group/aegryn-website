@@ -83,7 +83,7 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
         <p className="font-sans font-bold text-ag-black text-[16px]">{t('notifySuccessTitle')}</p>
         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('notifySuccessDesc')}</p>
         <NextLink href="/client/register"
-          className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-5 py-3 hover:bg-ag-navy-mid transition-colors">
+          className="rounded-lg self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-5 py-3 hover:bg-ag-navy-mid transition-colors">
           {t('notifySuccessCtaAcquirer')} <ArrowUpRight size={12} />
         </NextLink>
       </div>
@@ -171,7 +171,7 @@ export default function CatalogNotifyForm({ locale }: { locale: string }) {
         )}
 
         <button type="submit" disabled={loading || !email}
-          className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          className="rounded-lg self-start inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? t('notifyLoading') : t('notifyCta')}
         </button>
     </form>

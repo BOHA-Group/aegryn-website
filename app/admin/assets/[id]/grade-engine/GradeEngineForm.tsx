@@ -103,7 +103,7 @@ function Section({ title, open, onToggle, children }: {
   return (
     <div className="border border-gray-200 bg-white">
       <button type="button" onClick={onToggle}
-        className="w-full flex items-center justify-between px-5 py-3 bg-gray-50 hover:bg-gray-100 transition-colors">
+        className="rounded-lg w-full flex items-center justify-between px-5 py-3 bg-gray-50 hover:bg-gray-100 transition-colors">
         <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">{title}</p>
         {open ? <ChevronUp size={14} className="text-gray-400" /> : <ChevronDown size={14} className="text-gray-400" />}
       </button>
@@ -750,7 +750,7 @@ export default function GradeEngineForm({
 
       {/* PROOF QUALITY — plafond de grade par niveau de preuve (CIFSO v4.0) */}
       <div className="border border-gray-200 bg-white">
-        <div className="px-5 py-3 bg-gray-50">
+        <div className="rounded-lg px-5 py-3 bg-gray-50">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Niveau de preuve par dimension (plafond grade)</p>
           <p className="font-sans text-[10px] text-gray-400 mt-0.5">Déclaratif → plafond AA · Vérifiable → plafond AAA · Audité → grade ★ accessible</p>
         </div>
@@ -792,7 +792,7 @@ export default function GradeEngineForm({
 
       {/* SOUS-CODES DÉTAILLÉS CIFSO */}
       <div className="border border-gray-200 bg-white">
-        <div className="px-5 py-3 bg-gray-50 flex items-center justify-between">
+        <div className="rounded-lg px-5 py-3 bg-gray-50 flex items-center justify-between">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">
             Sous-codes détaillés
           </p>
@@ -1046,7 +1046,7 @@ export default function GradeEngineForm({
       {/* CTA */}
       <div className="pt-2">
         <button type="button" onClick={compute} disabled={computing}
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-widest px-6 py-3 hover:bg-ag-navy/80 transition-colors disabled:opacity-50">
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-widest px-6 py-3 hover:bg-ag-navy/80 transition-colors disabled:opacity-50">
           <Calculator size={14} />
           {computing ? 'Calcul en cours…' : 'Calculer le grade'}
         </button>
@@ -1228,11 +1228,11 @@ export default function GradeEngineForm({
         {/* Actions */}
         <div className="flex items-center gap-3 flex-wrap">
           <button type="button" onClick={() => setStep('input')}
-            className="font-mono text-[10px] uppercase tracking-widest text-gray-400 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
             ← Modifier les données
           </button>
           <button type="button" onClick={validate} disabled={validating}
-            className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-navy/80 transition-colors disabled:opacity-50">
+            className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-navy/80 transition-colors disabled:opacity-50">
             <CheckCircle2 size={13} />
             {validating ? 'Validation…' : 'Valider le grade'}
           </button>
@@ -1252,7 +1252,7 @@ export default function GradeEngineForm({
             </label>
           )}
           <button type="button" onClick={publish} disabled={publishing}
-            className="flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-apex/80 transition-colors disabled:opacity-50">
+            className="rounded-lg flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-apex/80 transition-colors disabled:opacity-50">
             <Send size={13} />
             {publishing ? 'Publication…' : 'Publier sur la fiche actif'}
           </button>

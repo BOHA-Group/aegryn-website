@@ -52,7 +52,7 @@ export default async function SellerNdaViewPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
+      <div className="rounded-lg bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
         <div className="max-w-3xl mx-auto flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <Shield size={16} className="text-ag-apex shrink-0" />
@@ -64,7 +64,7 @@ export default async function SellerNdaViewPage() {
             </div>
           </div>
           <Link href="/client/seller"
-            className="font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
             ← Espace Cédant
           </Link>
         </div>
@@ -73,7 +73,7 @@ export default async function SellerNdaViewPage() {
       <div className="max-w-3xl mx-auto px-6 py-10 space-y-8">
 
         {/* Certificat de signature */}
-        <div className="bg-emerald-50 border border-emerald-200 px-6 py-5 flex items-start gap-4">
+        <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-6 py-5 flex items-start gap-4">
           <CheckCircle size={18} className="text-emerald-600 mt-0.5 shrink-0" />
           <div className="flex-1">
             <p className="font-sans text-[14px] font-semibold text-emerald-800 mb-3">
@@ -107,13 +107,13 @@ export default async function SellerNdaViewPage() {
         </div>
 
         {!isCurrentVersion && (
-          <div className="bg-amber-50 border border-amber-200 px-5 py-4 text-[12px] text-amber-800">
+          <div className="rounded-lg bg-amber-50 border border-amber-200 px-5 py-4 text-[12px] text-amber-800">
             Une nouvelle version du NDA Cédant est disponible. Rendez-vous dans votre espace pour la signer.
           </div>
         )}
 
         {/* Texte intégral du NDA Cédant — lecture seule */}
-        <div className="bg-white border border-gray-200 px-8 py-8 space-y-7 text-[13px] text-gray-700 leading-relaxed">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-8 space-y-7 text-[13px] text-gray-700 leading-relaxed">
 
           <div className="border-b border-gray-100 pb-6">
             <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">
@@ -127,7 +127,7 @@ export default async function SellerNdaViewPage() {
             </p>
           </div>
 
-          <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-1">
+          <div className="rounded-lg bg-gray-50 px-5 py-4 text-[12px] space-y-1">
             <p><strong>Entre :</strong> Aegryn (ci-après « Aegryn »)</p>
             <p><strong>Et :</strong> {p.full_name ?? user.email} (ci-après « le Cédant »)</p>
           </div>
@@ -183,9 +183,9 @@ export default async function SellerNdaViewPage() {
             <table className="mt-4 w-full text-[11px] font-mono border-collapse">
               <thead>
                 <tr className="bg-gray-100 text-gray-600">
-                  <th className="text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
-                  <th className="text-right px-3 py-2 border border-gray-200">Taux</th>
-                  <th className="text-right px-3 py-2 border border-gray-200">Minimum</th>
+                  <th className="rounded-lg text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
+                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Taux</th>
+                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Minimum</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
@@ -198,9 +198,9 @@ export default async function SellerNdaViewPage() {
                   ['> 5 000 000 €', 'taux convenu au mandat', '25 000 CHF'],
                 ].map(([t, tx, m]) => (
                   <tr key={t}>
-                    <td className="px-3 py-1.5 border border-gray-200">{t}</td>
-                    <td className="px-3 py-1.5 border border-gray-200 text-right">{tx}</td>
-                    <td className="px-3 py-1.5 border border-gray-200 text-right">{m}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200">{t}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{tx}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{m}</td>
                   </tr>
                 ))}
               </tbody>
@@ -240,7 +240,7 @@ export default async function SellerNdaViewPage() {
         </div>
 
         {/* Pied de page signature */}
-        <div className="bg-white border border-ag-navy/20 px-8 py-5">
+        <div className="rounded-lg bg-white border border-ag-navy/20 px-8 py-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy mb-3">
             Signature électronique enregistrée
           </p>

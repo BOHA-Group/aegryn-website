@@ -99,7 +99,7 @@ export default async function ClientMyAssetsPage() {
     <main className="min-h-screen bg-gray-50 pt-16">
 
       {/* Header */}
-      <header className="bg-ag-navy px-6 py-5 flex items-center justify-between">
+      <header className="rounded-lg bg-ag-navy px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex font-bold">
             Aegryn
@@ -133,7 +133,7 @@ export default async function ClientMyAssetsPage() {
             </p>
             <Link
               href="/grade/submit"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-black transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-black transition-colors"
             >
               Soumettre mon actif <ArrowUpRight size={12} />
             </Link>
@@ -154,7 +154,7 @@ export default async function ClientMyAssetsPage() {
                           {asset.company_name ?? `Actif #${asset.id.slice(0, 8)}`}
                         </h2>
                         {asset.asset_type && (
-                          <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-2 py-0.5">
+                          <span className="rounded-lg font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-2 py-0.5">
                             {asset.asset_type}
                           </span>
                         )}
@@ -259,7 +259,7 @@ export default async function ClientMyAssetsPage() {
             <p className="font-sans text-[13px] text-gray-400">Vous avez un autre actif à certifier ?</p>
             <Link
               href="/grade/submit"
-              className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-gray-500 hover:text-gray-900 transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-gray-500 hover:text-gray-900 transition-all"
             >
               Soumettre un actif <ArrowUpRight size={11} />
             </Link>

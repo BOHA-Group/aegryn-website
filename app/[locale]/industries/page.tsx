@@ -54,11 +54,11 @@ export default function IndustriesPage() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/grade"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-white transition-colors">
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-white transition-colors">
               {t('certifCta')} <ArrowUpRight size={12} />
             </Link>
             <Link href="/contact"
-              className="inline-flex items-center gap-2 border border-white/20 text-white/55 font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 hover:border-white/50 hover:text-white transition-all">
+              className="rounded-lg inline-flex items-center gap-2 border border-white/20 text-white/55 font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 hover:border-white/50 hover:text-white transition-all">
               {t('contactCta')}
             </Link>
           </div>
@@ -66,7 +66,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* ── Grille compacte ──────────────────────────────────── */}
-      <section className="bg-ag-white border-t border-ag-border py-16 px-6 md:px-12">
+      <section className="rounded-lg bg-ag-white border-t border-ag-border py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             {t('industriesTitle')}
@@ -148,20 +148,20 @@ export default function IndustriesPage() {
             </p>
             <Link
               href={"/grade/whitepaper" as never}
-              className="shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
             >
               Accéder aux benchmarks <ArrowUpRight size={10} />
             </Link>
           </div>
 
           {/* Ligne 2 — Certification */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border bg-ag-navy">
+          <div className="rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border bg-ag-navy">
             <p className="font-sans text-[14px] text-white leading-snug max-w-lg">
               Demander la Certification CIFSO 5000
             </p>
             <Link
               href="/grade"
-              className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-white transition-colors whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-white transition-colors whitespace-nowrap"
             >
               Demander la Certification CIFSO 5000 <ArrowUpRight size={10} />
             </Link>
@@ -174,7 +174,7 @@ export default function IndustriesPage() {
             </p>
             <Link
               href="/blog"
-              className="shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
             >
               Lire les analyses <ArrowUpRight size={10} />
             </Link>

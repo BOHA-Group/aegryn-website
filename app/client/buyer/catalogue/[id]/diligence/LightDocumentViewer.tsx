@@ -41,7 +41,7 @@ export default function LightDocumentViewer({ documents, userName, userEmail }: 
     <>
       <div className="space-y-4">
         {/* Disclaimer sécurité */}
-        <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 px-4 py-3">
+        <div className="rounded-lg flex items-start gap-2 bg-amber-50 border border-amber-200 px-4 py-3">
           <ShieldAlert size={13} className="text-amber-600 shrink-0 mt-0.5" />
           <p className="font-sans text-[11px] text-amber-800 leading-relaxed">
             Ces documents sont confidentiels et soumis au NDA Aegryn. Toute consultation est journalisée.
@@ -58,7 +58,7 @@ export default function LightDocumentViewer({ documents, userName, userEmail }: 
               {docs.map(doc => (
                 <div
                   key={doc.id}
-                  className="flex items-center justify-between gap-4 px-4 py-3 bg-white hover:bg-gray-50 transition-colors"
+                  className="rounded-lg flex items-center justify-between gap-4 px-4 py-3 bg-white hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <FileText size={13} className="text-gray-300 shrink-0" />
@@ -76,7 +76,7 @@ export default function LightDocumentViewer({ documents, userName, userEmail }: 
                     <button
                       type="button"
                       onClick={() => setActiveDoc(doc)}
-                      className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest border border-gray-200 px-3 py-1.5 text-gray-600 hover:border-ag-navy hover:text-ag-navy transition-colors"
+                      className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest border border-gray-200 px-3 py-1.5 text-gray-600 hover:border-ag-navy hover:text-ag-navy transition-colors"
                     >
                       <Eye size={10} />
                       Consulter

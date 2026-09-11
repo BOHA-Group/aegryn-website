@@ -224,7 +224,7 @@ export default async function AdminIndexPage({
             </p>
           </div>
           {totalActionRequired > 0 && (
-            <div className="bg-red-50 border border-red-200 px-4 py-2 text-right">
+            <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-2 text-right">
               <p className="font-mono text-[10px] uppercase tracking-widest text-red-400">Action requise</p>
               <p className="font-mono text-[22px] font-bold text-red-600 leading-none mt-0.5">{totalActionRequired}</p>
             </div>
@@ -275,7 +275,7 @@ export default async function AdminIndexPage({
               { label: '/client/login',    href: '/client/login' },
             ].map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noopener"
-                className="font-mono text-[9px] text-gray-400 hover:text-gray-700 border border-gray-200 px-3 py-1.5 hover:border-gray-400 transition-colors">
+                className="rounded-lg font-mono text-[9px] text-gray-400 hover:text-gray-700 border border-gray-200 px-3 py-1.5 hover:border-gray-400 transition-colors">
                 {label} ↗
               </a>
             ))}

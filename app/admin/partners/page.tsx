@@ -43,7 +43,7 @@ export default async function AdminPartnersPage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10">
+    <main className="rounded-lg min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10">
       <div className="max-w-7xl mx-auto w-full">
 
         <div className="mb-8 flex items-start justify-between gap-4">
@@ -52,7 +52,7 @@ export default async function AdminPartnersPage({
             <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Partenaires</h1>
             <p className="text-[12px] text-gray-400 mt-1">Cabinets juridiques, experts-comptables, cybersécurité et apporteurs d'affaires</p>
           </div>
-          <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href={`/admin`} className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </Link>
         </div>

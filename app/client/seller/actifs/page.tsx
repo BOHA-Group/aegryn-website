@@ -104,17 +104,17 @@ export default async function SellerActifsPage() {
           <p className="font-sans text-[13px] text-gray-400 mt-1">Suivi du pipeline de vos actifs soumis à Aegryn.</p>
         </div>
         <Link href="/grade/submit"
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
           <FileText size={11} /> {t('submitNew')}
         </Link>
       </div>
 
       {assets.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-16 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
           <FileText size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400 mb-4">Aucun dossier associé à ce compte.</p>
           <Link href="/grade/submit"
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
             Soumettre mon actif <ArrowUpRight size={10} />
           </Link>
         </div>
@@ -153,7 +153,7 @@ export default async function SellerActifsPage() {
                       </span>
                     )}
                     {Boolean(asset.auction_ready) && (
-                      <span className="border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-emerald-700 bg-emerald-50 border-emerald-300 font-bold">
+                      <span className="rounded-lg border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-emerald-700 bg-emerald-50 border-emerald-300 font-bold">
                         TRANSACT Ready
                       </span>
                     )}
@@ -228,7 +228,7 @@ export default async function SellerActifsPage() {
         <div className="mt-8 pt-8 border-t border-gray-200 flex items-center justify-between">
           <p className="font-sans text-[13px] text-gray-400">Vous avez un autre actif à certifier ?</p>
           <Link href="/grade/submit"
-            className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-gray-500 transition-all">
+            className="rounded-lg inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-gray-500 transition-all">
             Soumettre un actif <ArrowUpRight size={10} />
           </Link>
         </div>

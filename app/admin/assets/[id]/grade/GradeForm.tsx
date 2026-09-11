@@ -420,7 +420,7 @@ export default function GradeForm({
       {/* ── Panneau Moteur ── */}
       {activeTab === 'moteur' && (
         <div className="bg-amber-50/40 border border-amber-200">
-          <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between gap-4">
+          <div className="rounded-lg bg-amber-50 border-b border-amber-200 px-5 py-3 flex items-center justify-between gap-4">
             <div>
               <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne — logique propriétaire Aegryn</p>
               <p className="text-[12px] text-amber-800 mt-0.5">
@@ -430,7 +430,7 @@ export default function GradeForm({
             </div>
             <a
               href={`/admin/assets/${assetId}/documents`}
-              className="shrink-0 inline-flex items-center gap-1.5 text-[10px] font-semibold text-amber-700 border border-amber-300 bg-white px-3 py-1.5 hover:border-amber-500 transition-colors whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-1.5 text-[10px] font-semibold text-amber-700 border border-amber-300 bg-white px-3 py-1.5 hover:border-amber-500 transition-colors whitespace-nowrap"
             >
               Documents / Data Room
               {blockingAlerts.length > 0 && (
@@ -453,7 +453,7 @@ export default function GradeForm({
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
 
       {/* ── Bandeau auto-fill data room ── */}
-      <div className="bg-indigo-50 border border-indigo-200 px-5 py-3.5 flex items-center justify-between gap-4">
+      <div className="rounded-lg bg-indigo-50 border border-indigo-200 px-5 py-3.5 flex items-center justify-between gap-4">
         <div className="flex items-start gap-3">
           <Database size={14} className="shrink-0 mt-0.5 text-indigo-500" />
           <div>
@@ -484,7 +484,7 @@ export default function GradeForm({
           <button
             type="button"
             onClick={loadAutoFill}
-            className="flex items-center gap-1 text-[9px] font-mono uppercase tracking-wider text-indigo-400 hover:text-indigo-700 border border-indigo-200 px-2 py-1 hover:border-indigo-400 transition-colors"
+            className="rounded-lg flex items-center gap-1 text-[9px] font-mono uppercase tracking-wider text-indigo-400 hover:text-indigo-700 border border-indigo-200 px-2 py-1 hover:border-indigo-400 transition-colors"
           >
             <RefreshCw size={9} /> Actualiser
           </button>
@@ -506,7 +506,7 @@ export default function GradeForm({
 
       {/* ── Alerte documents bloquants ── */}
       {blockingAlerts.length > 0 && (
-        <div className="bg-amber-50 border border-amber-300 px-5 py-4">
+        <div className="rounded-lg bg-amber-50 border border-amber-300 px-5 py-4">
           <div className="flex items-start gap-3">
             <AlertTriangle size={15} className="shrink-0 mt-0.5 text-amber-600" />
             <div>
@@ -534,7 +534,7 @@ export default function GradeForm({
 
       {/* ── Bandeau type d'évaluation ── */}
       {!isFull && (
-        <div className="bg-blue-50 border border-blue-200 px-5 py-3 flex items-center justify-between">
+        <div className="rounded-lg bg-blue-50 border border-blue-200 px-5 py-3 flex items-center justify-between">
           <div>
             <p className="text-[10px] font-mono uppercase tracking-widest text-blue-500 mb-0.5">Type d’évaluation</p>
             <p className="text-[13px] font-semibold text-blue-800">
@@ -619,7 +619,7 @@ export default function GradeForm({
             <p className="text-[11px] text-gray-400 mt-0.5">Cochez toutes les remarques applicables — alimente la notation et le refus automatique.</p>
           </div>
           {docSubcodes.size > 0 && (
-            <span className="shrink-0 text-[9px] font-mono uppercase tracking-widest text-indigo-500 bg-indigo-50 border border-indigo-200 px-2 py-1">
+            <span className="rounded-lg shrink-0 text-[9px] font-mono uppercase tracking-widest text-indigo-500 bg-indigo-50 border border-indigo-200 px-2 py-1">
               <Database size={8} className="inline mr-1" />{docSubcodes.size} depuis data room
             </span>
           )}
@@ -649,7 +649,7 @@ export default function GradeForm({
                                 <span className="font-mono font-semibold text-gray-800">{s.code}</span>
                                 {' — '}{s.fr}
                                 {isFromDoc && (
-                                  <span className="inline-flex items-center gap-0.5 text-[8px] font-mono uppercase tracking-wider text-indigo-500 bg-indigo-50 border border-indigo-200 px-1 py-0.5">
+                                  <span className="rounded-lg inline-flex items-center gap-0.5 text-[8px] font-mono uppercase tracking-wider text-indigo-500 bg-indigo-50 border border-indigo-200 px-1 py-0.5">
                                     <Database size={7} />doc
                                   </span>
                                 )}
@@ -691,7 +691,7 @@ export default function GradeForm({
 
       {/* ── Refus automatique ── */}
       {autoRefusal.refused && (
-        <div className="bg-red-50 border border-red-200 px-5 py-4 flex flex-col gap-2">
+        <div className="rounded-lg bg-red-50 border border-red-200 px-5 py-4 flex flex-col gap-2">
           <p className="text-[11px] font-semibold uppercase tracking-widest text-red-700 flex items-center gap-2">
             <AlertTriangle size={13} /> Refus automatique déclenché
           </p>
@@ -935,7 +935,7 @@ export default function GradeForm({
             type="button"
             disabled={partnerSaving || !partnerEmail}
             onClick={savePartnerScore}
-            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start disabled:opacity-40"
+            className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start disabled:opacity-40"
           >
             {partnerSaving ? 'Enregistrement…' : 'Enregistrer score partenaire'}
           </button>
@@ -980,7 +980,7 @@ export default function GradeForm({
           </div>
         )}
         {!isFull && (
-          <div className="bg-blue-50 border border-blue-100 px-4 py-2 text-[11px] text-blue-600">
+          <div className="rounded-lg bg-blue-50 border border-blue-100 px-4 py-2 text-[11px] text-blue-600">
             Code d'ancrage et publication catalogue non disponibles pour ce type d'évaluation.
           </div>
         )}
@@ -1010,7 +1010,7 @@ export default function GradeForm({
             </select>
           </div>
           <button type="submit" disabled={loading}
-            className="mt-auto bg-gray-900 text-white font-semibold text-[11px] uppercase tracking-widest px-8 py-3 hover:bg-gray-700 transition-colors disabled:opacity-50 whitespace-nowrap">
+            className="rounded-lg mt-auto bg-gray-900 text-white font-semibold text-[11px] uppercase tracking-widest px-8 py-3 hover:bg-gray-700 transition-colors disabled:opacity-50 whitespace-nowrap">
             {loading ? 'Enregistrement...' : 'Enregistrer le grade'}
           </button>
         </div>
@@ -1039,7 +1039,7 @@ export default function GradeForm({
               <p className="text-[12px] font-semibold text-amber-800 uppercase tracking-widest">Documents bloquants non validés</p>
             </div>
             <p className="text-[12px] text-gray-600">Les documents suivants ont un statut non validé (<code className="text-[11px] bg-gray-100 px-1">sufficient</code> requis) :</p>
-            <ul className="list-disc list-inside text-[12px] text-amber-800 bg-amber-50 border border-amber-200 px-4 py-3">
+            <ul className="rounded-lg list-disc list-inside text-[12px] text-amber-800 bg-amber-50 border border-amber-200 px-4 py-3">
               {blockingWarning.map(d => <li key={d}>{d}</li>)}
             </ul>
             <p className="text-[12px] text-gray-600">Vous pouvez tout de même enregistrer le grade en fournissant une justification documentée.</p>
@@ -1056,13 +1056,13 @@ export default function GradeForm({
             </div>
             <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
               <button type="button" onClick={() => { setShowBlockingModal(false); setBlockingWarning([]) }}
-                className="text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
+                className="rounded-lg text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
                 Annuler
               </button>
               <button type="button"
                 disabled={blockingJustif.trim().length < 80 || loading}
                 onClick={() => submitGrade(blockingJustif, undefined).then(() => { setShowBlockingModal(false); setBlockingJustif('') })}
-                className="flex-1 bg-amber-600 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-amber-700 transition-colors disabled:opacity-40">
+                className="rounded-lg flex-1 bg-amber-600 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-amber-700 transition-colors disabled:opacity-40">
                 {loading ? 'Enregistrement…' : 'Confirmer et enregistrer malgré tout'}
               </button>
             </div>
@@ -1095,13 +1095,13 @@ export default function GradeForm({
             </div>
             <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
               <button type="button" onClick={() => { setShowDivergenceModal(false); setDivergenceJustif('') }}
-                className="text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
+                className="rounded-lg text-[11px] text-gray-500 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors">
                 Annuler
               </button>
               <button type="button"
                 disabled={divergenceJustif.trim().length < 100 || loading}
                 onClick={() => submitGrade(showBlockingModal ? blockingJustif : undefined, divergenceJustif).then(() => { setShowDivergenceModal(false); setDivergenceJustif('') })}
-                className="flex-1 bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-gray-700 transition-colors disabled:opacity-40">
+                className="rounded-lg flex-1 bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-widest px-4 py-2 hover:bg-gray-700 transition-colors disabled:opacity-40">
                 {loading ? 'Enregistrement…' : 'Confirmer avec justification'}
               </button>
             </div>

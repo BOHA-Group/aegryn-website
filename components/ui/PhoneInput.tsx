@@ -241,7 +241,7 @@ export default function PhoneInput({
                     key={country.code}
                     type="button"
                     onClick={() => handleCountryChange(country.code)}
-                    className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-ag-off-white transition-colors text-left"
+                    className="rounded-lg w-full flex items-center gap-3 px-4 py-2.5 hover:bg-ag-off-white transition-colors text-left"
                   >
                     <span className="text-lg">{country.flag}</span>
                     <span className="flex-1 text-[13px] text-ag-dark">{country.name}</span>

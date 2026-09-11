@@ -285,7 +285,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
               {revealedEmail && (
                 <a
                   href={`mailto:${revealedEmail}`}
-                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 bg-ag-navy text-white hover:bg-ag-black transition-colors mt-2"
+                  className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 bg-ag-navy text-white hover:bg-ag-black transition-colors mt-2"
                 >
                   <Mail size={11} /> {revealedEmail}
                 </a>
@@ -293,7 +293,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
               {revealedPhone && (
                 <a
                   href={`tel:${revealedPhone.replace(/\s/g, '')}`}
-                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
+                  className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
                 >
                   <Phone size={11} /> {revealedPhone}
                 </a>
@@ -353,7 +353,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
                 <button
                   type="submit"
                   disabled={loading || !consent}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50"
+                  className="rounded-lg w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50"
                 >
                   {loading ? t('contactModal.submitting') : t('contactModal.submit')}
                   {!loading && <ArrowUpRight size={12} />}
@@ -400,7 +400,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
     <div className={`bg-ag-white border border-ag-border p-6 flex flex-col gap-4 relative ${blurred ? 'select-none' : ''}`}>
       {blurred && (
         <div className="absolute inset-0 backdrop-blur-[6px] bg-ag-white/60 z-10 flex flex-col items-center justify-center gap-3">
-          <span className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
+          <span className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
             <Star size={9} className="text-ag-apex" /> {t('placeholder.badge')}
           </span>
         </div>
@@ -427,7 +427,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
               {profile.first_name} {profile.last_name}
             </h3>
             {profile.verified_at && !blurred && (
-              <span className="inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+              <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
                 <CheckCircle2 size={9} /> {t('card.verifiedBadge')}
               </span>
             )}
@@ -503,7 +503,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
           {profile.email_public && (
             <button
               onClick={() => onContactClick?.(profile)}
-              className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
             >
               <Mail size={10} /> {t('card.contact')}
             </button>
@@ -514,7 +514,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackClick(profile.user_id, 'website', filters)}
-              className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
+              className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
             >
               <Globe size={10} /> Site
             </a>
@@ -653,7 +653,7 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
       <button
         type="submit"
         disabled={loading}
-        className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
+        className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
       >
         {loading ? t('waitlist.submitting') : t('waitlist.submit')} {!loading && <ArrowUpRight size={13} />}
       </button>
@@ -846,7 +846,7 @@ export default function ExpertsContent() {
         {showPlaceholders && (
           <>
             <div className="flex flex-col items-center gap-2 mb-10 text-center">
-              <span className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.24em] uppercase px-4 py-2 border border-ag-apex/40 bg-ag-apex/8 text-ag-apex-ink mb-1">
+              <span className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.24em] uppercase px-4 py-2 border border-ag-apex/40 bg-ag-apex/8 text-ag-apex-ink mb-1">
                 <Star size={10} className="text-ag-apex" /> {t('placeholder.badge')}
               </span>
               <p className="font-sans font-bold text-ag-black text-[20px] leading-tight">{t('placeholder.title')}</p>
@@ -885,7 +885,7 @@ export default function ExpertsContent() {
       </section>
 
       {/* ── Section candidature ──────────────────────────────────────── */}
-      <section className="bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
+      <section className="rounded-lg bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">

@@ -75,12 +75,12 @@ export default async function BuyerOfferDetailPage({
         </h1>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           {asset?.asset_type && (
-            <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
               {asset.asset_type}
             </span>
           )}
           {asset?.official_grade && (
-            <span className="font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
               Grade {asset.official_grade}
             </span>
           )}
@@ -140,7 +140,7 @@ export default async function BuyerOfferDetailPage({
             Votre offre a été retenue. Un deal manager Aegryn vous contactera par email pour organiser la suite du processus (data room, Accord de Principe).
           </p>
           <Link href="/client/buyer/transactions"
-            className="inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
+            className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
             Mes transactions <ArrowUpRight size={10} />
           </Link>
         </div>

@@ -44,13 +44,13 @@ export function TransactNarrative() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/transact/how-to-sell"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('ctaSell')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/transact/how-to-buy"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/70 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/60 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/60 hover:text-white transition-all"
             >
               {t('ctaBuy')} <ArrowUpRight size={13} />
             </Link>

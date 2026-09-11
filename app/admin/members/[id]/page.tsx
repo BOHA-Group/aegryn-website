@@ -125,7 +125,7 @@ export default async function AdminMemberDetailPage({
             </div>
             <div className="flex flex-wrap gap-1.5 shrink-0">
               {((profile.roles as string[]) ?? []).map((r: string) => (
-                <span key={r} className="font-mono text-[9px] uppercase tracking-widest px-2 py-1 bg-ag-navy text-ag-apex border border-ag-navy/30">
+                <span key={r} className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-2 py-1 bg-ag-navy text-ag-apex border border-ag-navy/30">
                   {r}
                 </span>
               ))}

@@ -197,7 +197,7 @@ export default function AlliancesContent() {
                       </h2>
                       <button
                         onClick={() => setTab('apply')}
-                        className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+                        className="rounded-lg inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
                       >
                         {t('alliancePartners.cta')} <ArrowUpRight size={14} />
                       </button>
@@ -246,13 +246,13 @@ export default function AlliancesContent() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => setTab('apply')}
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors"
+                    className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy-mid transition-colors"
                   >
                     {t(`types.${activeTab}.cta`)} <ArrowUpRight size={12} />
                   </button>
                   <button
                     onClick={() => setTab('overview')}
-                    className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
+                    className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
                   >
                     {t('tabs.overview')}
                   </button>
@@ -331,7 +331,7 @@ export default function AlliancesContent() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
+                      className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
                     >
                       {loading ? t('form.submitting') : t('form.submit')} {!loading && <ArrowUpRight size={13} />}
                     </button>
@@ -345,7 +345,7 @@ export default function AlliancesContent() {
       </div>
 
       {/* CTA navy */}
-      <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
+      <section className="rounded-lg bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">{t('hero.label')}</p>
@@ -358,7 +358,7 @@ export default function AlliancesContent() {
           </div>
           <button
             onClick={() => setTab('apply')}
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+            className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
             {t('tabs.apply')} <ArrowUpRight size={14} />
           </button>

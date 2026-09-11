@@ -126,7 +126,7 @@ export default async function CareerPage({ params }: Props) {
       </section>
 
       {/* No open positions — spontaneous application */}
-      <section className="bg-ag-navy py-28 px-6 md:px-12">
+      <section className="rounded-lg bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
@@ -144,7 +144,7 @@ export default async function CareerPage({ params }: Props) {
           </div>
           <Link
             href="/contact"
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+            className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
             {t('openings.cta')}
             <ArrowUpRight size={14} />

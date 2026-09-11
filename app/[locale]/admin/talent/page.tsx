@@ -180,26 +180,26 @@ export default function AdminTalentPage() {
                         value={editData.role_title || ''}
                         onChange={(e) => setEditData({...editData, role_title: e.target.value})}
                         placeholder="Titre du poste"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="text"
                         value={editData.company || ''}
                         onChange={(e) => setEditData({...editData, company: e.target.value})}
                         placeholder="Entreprise"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="text"
                         value={editData.location || ''}
                         onChange={(e) => setEditData({...editData, location: e.target.value})}
                         placeholder="Localisation"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <select
                         value={editData.status || 'new'}
                         onChange={(e) => setEditData({...editData, status: e.target.value})}
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       >
                         <option value="new">Nouveau</option>
                         <option value="in_progress">En cours</option>
@@ -221,7 +221,7 @@ export default function AdminTalentPage() {
                             value={editData.salary_gross_annual || ''}
                             onChange={(e) => setEditData({...editData, salary_gross_annual: parseFloat(e.target.value) || null})}
                             placeholder="120000"
-                            className="w-full px-3 py-2 border border-ag-border text-[13px]"
+                            className="rounded-lg w-full px-3 py-2 border border-ag-border text-[13px]"
                           />
                         </div>
                         <div>
@@ -229,7 +229,7 @@ export default function AdminTalentPage() {
                           <select
                             value={editData.salary_currency || 'CHF'}
                             onChange={(e) => setEditData({...editData, salary_currency: e.target.value})}
-                            className="w-full px-3 py-2 border border-ag-border text-[13px]"
+                            className="rounded-lg w-full px-3 py-2 border border-ag-border text-[13px]"
                           >
                             <option value="CHF">CHF</option>
                             <option value="EUR">EUR</option>
@@ -243,7 +243,7 @@ export default function AdminTalentPage() {
                             value={editData.commission_percentage || ''}
                             onChange={(e) => setEditData({...editData, commission_percentage: parseFloat(e.target.value) || null})}
                             placeholder="20"
-                            className="w-full px-3 py-2 border border-ag-border text-[13px]"
+                            className="rounded-lg w-full px-3 py-2 border border-ag-border text-[13px]"
                           />
                         </div>
                       </div>
@@ -266,7 +266,7 @@ export default function AdminTalentPage() {
                         onChange={(e) => setEditData({...editData, notes: e.target.value})}
                         placeholder="Notes internes sur ce mandat..."
                         rows={3}
-                        className="w-full px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg w-full px-3 py-2 border border-ag-border text-[13px]"
                       />
                     </div>
                   </div>
@@ -286,7 +286,7 @@ export default function AdminTalentPage() {
                         <select
                           value={req.status}
                           onChange={(e) => updateStatus(req.id, e.target.value, 'hiring')}
-                          className="px-3 py-1.5 border border-ag-border text-[12px] font-semibold uppercase tracking-wider"
+                          className="rounded-lg px-3 py-1.5 border border-ag-border text-[12px] font-semibold uppercase tracking-wider"
                         >
                           <option value="new">Nouveau</option>
                           <option value="in_progress">En cours</option>
@@ -408,40 +408,40 @@ export default function AdminTalentPage() {
                         value={editData.full_name || ''}
                         onChange={(e) => setEditData({...editData, full_name: e.target.value})}
                         placeholder="Nom complet"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="email"
                         value={editData.email || ''}
                         onChange={(e) => setEditData({...editData, email: e.target.value})}
                         placeholder="Email"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="text"
                         value={editData.phone || ''}
                         onChange={(e) => setEditData({...editData, phone: e.target.value})}
                         placeholder="Téléphone"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="text"
                         value={editData.linkedin_url || ''}
                         onChange={(e) => setEditData({...editData, linkedin_url: e.target.value})}
                         placeholder="LinkedIn URL"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <input
                         type="text"
                         value={editData.availability || ''}
                         onChange={(e) => setEditData({...editData, availability: e.target.value})}
                         placeholder="Disponibilité"
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       />
                       <select
                         value={editData.status || 'new'}
                         onChange={(e) => setEditData({...editData, status: e.target.value})}
-                        className="px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg px-3 py-2 border border-ag-border text-[13px]"
                       >
                         <option value="new">Nouveau</option>
                         <option value="reviewed">Examiné</option>
@@ -458,7 +458,7 @@ export default function AdminTalentPage() {
                         onChange={(e) => setEditData({...editData, notes: e.target.value})}
                         placeholder="Notes internes sur ce candidat..."
                         rows={3}
-                        className="w-full px-3 py-2 border border-ag-border text-[13px]"
+                        className="rounded-lg w-full px-3 py-2 border border-ag-border text-[13px]"
                       />
                     </div>
                   </div>
@@ -478,7 +478,7 @@ export default function AdminTalentPage() {
                         <select
                           value={cand.status}
                           onChange={(e) => updateStatus(cand.id, e.target.value, 'candidate')}
-                          className="px-3 py-1.5 border border-ag-border text-[12px] font-semibold uppercase tracking-wider"
+                          className="rounded-lg px-3 py-1.5 border border-ag-border text-[12px] font-semibold uppercase tracking-wider"
                         >
                           <option value="new">Nouveau</option>
                           <option value="reviewed">Examiné</option>

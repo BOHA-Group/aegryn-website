@@ -40,7 +40,7 @@ export function AcquisitionSupportHook() {
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <Link
               href="/services/acquisition-support"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
             >
               {t('cta')} →
             </Link>

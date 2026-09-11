@@ -429,8 +429,8 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
 
           {/* Banner max atteint */}
           {value.specialties.length >= MAX_SPECIALTIES && (
-            <div className="mb-4 flex items-start gap-3 border border-amber-200 bg-amber-50 px-4 py-3">
-              <span className="font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 bg-amber-100 text-amber-700 border border-amber-300 shrink-0 mt-0.5">
+            <div className="rounded-lg mb-4 flex items-start gap-3 border border-amber-200 bg-amber-50 px-4 py-3">
+              <span className="rounded-lg font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 bg-amber-100 text-amber-700 border border-amber-300 shrink-0 mt-0.5">
                 {value.specialties.length}/{MAX_SPECIALTIES}
               </span>
               <div>
@@ -446,7 +446,7 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
               const spec = cat?.specialties.find(s => s.id === specId)
               if (!spec) return null
               return (
-                <span key={specId} className="font-mono text-[11px] border border-ag-border px-3 py-1.5 flex items-center gap-2">
+                <span key={specId} className="rounded-lg font-mono text-[11px] border border-ag-border px-3 py-1.5 flex items-center gap-2">
                   {getSpecialtyLabel(spec, locale)}
                   <button
                     type="button"

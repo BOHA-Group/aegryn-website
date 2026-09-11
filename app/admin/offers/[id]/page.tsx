@@ -108,25 +108,25 @@ export default async function AdminOfferDetailPage({
               <div className="flex gap-3 flex-wrap">
                 {bid.status === 'submitted' && (
                   <Link href={`/admin/offers/${id}?action=under_review`}
-                    className="text-[11px] font-semibold text-blue-600 border border-blue-200 px-4 py-2 hover:border-blue-400 transition-colors">
+                    className="rounded-lg text-[11px] font-semibold text-blue-600 border border-blue-200 px-4 py-2 hover:border-blue-400 transition-colors">
                     Passer en revue
                   </Link>
                 )}
                 {(bid.status === 'submitted' || bid.status === 'under_review') && (
                   <>
                     <Link href={`/admin/offers/${id}?action=retain`}
-                      className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2 hover:border-emerald-400 transition-colors">
+                      className="rounded-lg text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-4 py-2 hover:border-emerald-400 transition-colors">
                       Retenir l'offre → créer la transaction
                     </Link>
                     <Link href={`/admin/offers/${id}?action=reject`}
-                      className="text-[11px] font-semibold text-red-500 border border-red-200 px-4 py-2 hover:border-red-400 transition-colors">
+                      className="rounded-lg text-[11px] font-semibold text-red-500 border border-red-200 px-4 py-2 hover:border-red-400 transition-colors">
                       Rejeter
                     </Link>
                   </>
                 )}
                 {transaction && (
                   <Link href={`/admin/transactions/${transaction.id}`}
-                    className="text-[11px] font-semibold text-gray-700 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors ml-auto">
+                    className="rounded-lg text-[11px] font-semibold text-gray-700 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors ml-auto">
                     Voir la transaction →
                   </Link>
                 )}

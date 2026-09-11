@@ -73,7 +73,7 @@ export default function LightBidsAdminClient({ rows: initialRows }: { rows: Row[
         return (
           <div key={row.id} className="bg-white border border-gray-200">
             <button type="button" onClick={() => toggle(row.id)}
-              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors">
+              className="rounded-lg w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors">
               <span className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase font-bold ${statusBadge(row.status)}`}>
                 {row.status}
               </span>
@@ -100,13 +100,13 @@ export default function LightBidsAdminClient({ rows: initialRows }: { rows: Row[
                 </div>
 
                 {row.buyer_note && (
-                  <div className="bg-gray-50 border border-gray-100 px-4 py-3">
+                  <div className="rounded-lg bg-gray-50 border border-gray-100 px-4 py-3">
                     <p className="font-mono text-[9px] text-gray-400 mb-1">Message acquéreur</p>
                     <p className="text-[12px] text-gray-700">{row.buyer_note}</p>
                   </div>
                 )}
                 {row.seller_note && (
-                  <div className="bg-blue-50 border border-blue-100 px-4 py-3">
+                  <div className="rounded-lg bg-blue-50 border border-blue-100 px-4 py-3">
                     <p className="font-mono text-[9px] text-blue-400 mb-1">Note vendeur</p>
                     <p className="text-[12px] text-blue-800">{row.seller_note}</p>
                   </div>
@@ -121,14 +121,14 @@ export default function LightBidsAdminClient({ rows: initialRows }: { rows: Row[
                         value={adminNotes[row.id] ?? ''}
                         onChange={e => setAdminNotes(p => ({ ...p, [row.id]: e.target.value }))}
                         placeholder="Référence virement, date réception..."
-                        className="w-full border border-gray-200 px-3 py-2 text-[12px] font-mono focus:outline-none focus:border-ag-navy/40"
+                        className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[12px] font-mono focus:outline-none focus:border-ag-navy/40"
                       />
                     </div>
                     <button
                       type="button"
                       disabled={saving[row.id]}
                       onClick={() => confirmSequester(row.id)}
-                      className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
+                      className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
                     >
                       {saving[row.id] ? <Loader2 size={11} className="animate-spin" /> : <CheckCircle2 size={11} />}
                       Confirmer réception séquestre

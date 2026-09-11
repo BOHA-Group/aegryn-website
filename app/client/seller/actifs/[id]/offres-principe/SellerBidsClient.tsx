@@ -88,7 +88,7 @@ export default function SellerBidsClient({ bids: initialBids, assetId: _assetId 
             <button
               type="button"
               onClick={() => toggle(bid.id)}
-              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors"
+              className="rounded-lg w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors"
             >
               <span className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase font-bold ${statusBadge(bid.status)}`}>
                 {statusLabel(bid.status)}
@@ -123,7 +123,7 @@ export default function SellerBidsClient({ bids: initialBids, assetId: _assetId 
                     </div>
                   </div>
                   {bid.buyer_note && (
-                    <div className="bg-gray-50 border border-gray-100 px-4 py-3 mt-2">
+                    <div className="rounded-lg bg-gray-50 border border-gray-100 px-4 py-3 mt-2">
                       <p className="font-mono text-[9px] uppercase text-gray-400 mb-1">Message de l&apos;acquéreur</p>
                       <p className="text-[12px] text-gray-700 leading-relaxed">{bid.buyer_note}</p>
                     </div>
@@ -142,7 +142,7 @@ export default function SellerBidsClient({ bids: initialBids, assetId: _assetId 
                         value={sellerNotes[bid.id] ?? ''}
                         onChange={e => setSellerNotes(p => ({ ...p, [bid.id]: e.target.value }))}
                         placeholder="Raison du refus, demande de précisions..."
-                        className="w-full border border-gray-200 px-3 py-2 text-[12px] resize-none focus:outline-none focus:border-ag-navy/40"
+                        className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[12px] resize-none focus:outline-none focus:border-ag-navy/40"
                       />
                     </div>
                     <div className="flex gap-2">
@@ -150,7 +150,7 @@ export default function SellerBidsClient({ bids: initialBids, assetId: _assetId 
                         type="button"
                         disabled={saving[bid.id]}
                         onClick={() => decide(bid.id, 'approve')}
-                        className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
+                        className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
                       >
                         {saving[bid.id] ? <Loader2 size={11} className="animate-spin" /> : <CheckCircle2 size={11} />}
                         Approuver l&apos;offre
@@ -159,7 +159,7 @@ export default function SellerBidsClient({ bids: initialBids, assetId: _assetId 
                         type="button"
                         disabled={saving[bid.id]}
                         onClick={() => decide(bid.id, 'reject')}
-                        className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-red-200 text-red-600 px-4 py-2 hover:bg-red-50 transition-colors disabled:opacity-40"
+                        className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-red-200 text-red-600 px-4 py-2 hover:bg-red-50 transition-colors disabled:opacity-40"
                       >
                         {saving[bid.id] ? <Loader2 size={11} className="animate-spin" /> : <XCircle size={11} />}
                         Refuser

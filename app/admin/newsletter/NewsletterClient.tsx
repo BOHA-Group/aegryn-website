@@ -121,7 +121,7 @@ export default function NewsletterClient({
           <button
             onClick={deleteSelected}
             disabled={deleting}
-            className="flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-red-700 transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-red-700 transition-colors disabled:opacity-50"
           >
             {deleting ? <Loader2 size={11} className="animate-spin" /> : <Trash2 size={11} />}
             Supprimer ({selected.size})
@@ -130,7 +130,7 @@ export default function NewsletterClient({
       </div>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700 mb-4">{error}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700 mb-4">{error}</div>
       )}
 
       {filtered.length === 0 ? (
@@ -175,17 +175,17 @@ export default function NewsletterClient({
                   <td className="px-4 py-3 font-sans text-gray-800">{sub.email}</td>
                   <td className="px-4 py-3">
                     {sub.user_id ? (
-                      <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-blue-50 text-blue-700 font-bold">Membre</span>
+                      <span className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-blue-50 text-blue-700 font-bold">Membre</span>
                     ) : (
-                      <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-amber-50 text-amber-700 font-bold">Prospect</span>
+                      <span className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-amber-50 text-amber-700 font-bold">Prospect</span>
                     )}
                   </td>
                   <td className="px-4 py-3 font-mono text-[10px] uppercase text-gray-500">{sub.locale ?? '—'}</td>
                   <td className="px-4 py-3">
                     {sub.status === 'active' ? (
-                      <span className="font-mono text-[9px] uppercase px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">Actif</span>
+                      <span className="rounded-lg font-mono text-[9px] uppercase px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">Actif</span>
                     ) : (
-                      <span className="font-mono text-[9px] uppercase px-2 py-0.5 bg-red-50 text-red-500 font-bold">Désabonné</span>
+                      <span className="rounded-lg font-mono text-[9px] uppercase px-2 py-0.5 bg-red-50 text-red-500 font-bold">Désabonné</span>
                     )}
                   </td>
                   <td className="px-4 py-3 font-mono text-[10px] text-gray-500 max-w-[160px] truncate">{sub.last_sent_slug ?? '—'}</td>

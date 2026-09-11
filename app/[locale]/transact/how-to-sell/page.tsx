@@ -59,7 +59,7 @@ export default async function TransactSellPage({ params }: Props) {
           </p>
           <Link
             href={{ pathname: '/transact/mandate', query: { type: 'sell' } }}
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('ctaButton')} <ArrowUpRight size={13} />
           </Link>
@@ -108,7 +108,7 @@ export default async function TransactSellPage({ params }: Props) {
       </section>
 
       {/* ── Mandats complémentaires : levée de fonds + equity ── */}
-      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {tm('segmentsLabel')}
@@ -140,7 +140,7 @@ export default async function TransactSellPage({ params }: Props) {
               </div>
               <Link
                 href={{ pathname: '/transact/mandate', query: { type: 'fundraise' } }}
-                className="self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
+                className="rounded-lg self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
               >
                 {tm('segment.fundraise.cta')} <ArrowUpRight size={11} />
               </Link>
@@ -171,7 +171,7 @@ export default async function TransactSellPage({ params }: Props) {
               </div>
               <Link
                 href={{ pathname: '/transact/mandate', query: { type: 'equity_stake' } }}
-                className="self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
+                className="rounded-lg self-start inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors mt-auto"
               >
                 {tm('segment.equity_stake.cta')} <ArrowUpRight size={11} />
               </Link>
@@ -201,7 +201,7 @@ export default async function TransactSellPage({ params }: Props) {
       </section>
 
       {/* ── NDA ── */}
-      <section className="py-16 px-6 bg-ag-navy border-t border-white/10">
+      <section className="rounded-lg py-16 px-6 bg-ag-navy border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">
@@ -216,7 +216,7 @@ export default async function TransactSellPage({ params }: Props) {
           </div>
           <Link
             href={{ pathname: '/transact/mandate', query: { type: 'sell' } }}
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {tm('ndaCta')} <ArrowUpRight size={13} />
           </Link>

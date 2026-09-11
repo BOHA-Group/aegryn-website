@@ -30,7 +30,7 @@ export default function CancelButton() {
       <button
         onClick={openPortal}
         disabled={loading}
-        className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest border border-gray-300 px-4 py-2 text-gray-500 hover:border-red-300 hover:text-red-600 transition-colors disabled:opacity-50"
+        className="rounded-lg flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest border border-gray-300 px-4 py-2 text-gray-500 hover:border-red-300 hover:text-red-600 transition-colors disabled:opacity-50"
       >
         {loading
           ? <Loader2 size={12} className="animate-spin" />

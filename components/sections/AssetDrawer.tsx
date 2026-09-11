@@ -171,7 +171,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               href="https://subblink.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:bg-ag-apex hover:text-ag-navy transition-all duration-300"
+              className="rounded-lg w-full inline-flex items-center justify-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:bg-ag-apex hover:text-ag-navy transition-all duration-300"
             >
               {t('assets.subblink.cta')} <ArrowUpRight size={13} />
             </a>
@@ -182,7 +182,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
           ) : (
             <Link
               href="/contact"
-              className="w-full inline-flex items-center justify-center gap-3 border border-ag-border text-ag-black font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
+              className="rounded-lg w-full inline-flex items-center justify-center gap-3 border border-ag-border text-ag-black font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-4 hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300"
               onClick={close}
             >
               {t('contactUs')} <ArrowUpRight size={13} />

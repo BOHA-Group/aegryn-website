@@ -62,7 +62,7 @@ export default function SequesterStatusForm({
       <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Modifier le statut</p>
 
       {/* Due dil callout */}
-      <div className="bg-amber-50 border border-amber-100 px-4 py-3">
+      <div className="rounded-lg bg-amber-50 border border-amber-100 px-4 py-3">
         <p className="font-sans text-[11px] text-amber-700 leading-relaxed">
           Passer à <strong>Reçu</strong> débloque la data room pour l&apos;acquéreur et bascule l&apos;offre en <code className="font-mono">due_diligence</code>.
         </p>
@@ -102,7 +102,7 @@ export default function SequesterStatusForm({
           value={bankRef}
           onChange={e => setBankRef(e.target.value)}
           placeholder="SEPA ref / Swift ref…"
-          className="w-full border border-gray-200 px-3 py-2 font-mono text-[11px] text-gray-700 focus:outline-none focus:border-gray-500"
+          className="rounded-lg w-full border border-gray-200 px-3 py-2 font-mono text-[11px] text-gray-700 focus:outline-none focus:border-gray-500"
         />
       </div>
 
@@ -117,7 +117,7 @@ export default function SequesterStatusForm({
           rows={3}
           maxLength={1000}
           placeholder="Commentaire interne…"
-          className="w-full border border-gray-200 px-3 py-2 font-sans text-[11px] text-gray-700 focus:outline-none focus:border-gray-500 resize-none"
+          className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[11px] text-gray-700 focus:outline-none focus:border-gray-500 resize-none"
         />
       </div>
 

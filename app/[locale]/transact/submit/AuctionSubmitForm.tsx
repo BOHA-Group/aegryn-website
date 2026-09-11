@@ -92,7 +92,7 @@ export default function TransactionSubmitForm() {
             {t('hero.desc')}
           </p>
           {/* Swiss law badge */}
-          <div className="inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-lg">
+          <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-lg">
             <Scale size={13} className="text-ag-apex shrink-0 mt-0.5" />
             <p className="font-sans text-[12px] text-white/75 leading-relaxed">
               {t('swissNote')}
@@ -102,7 +102,7 @@ export default function TransactionSubmitForm() {
       </section>
 
       {/* Process steps */}
-      <section className="py-12 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-12 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border">
             {steps.map(({ num, title, desc }) => (
@@ -130,7 +130,7 @@ export default function TransactionSubmitForm() {
               </p>
               <Link
                 href="/transact"
-                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+                className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {tNav('transact')} <ArrowUpRight size={12} />
               </Link>
@@ -275,7 +275,7 @@ export default function TransactionSubmitForm() {
               </div>
 
               {/* ── Swiss law acceptance ── */}
-              <div className="border border-ag-apex/25 bg-ag-apex/5 px-5 py-4 flex items-start gap-3">
+              <div className="rounded-lg border border-ag-apex/25 bg-ag-apex/5 px-5 py-4 flex items-start gap-3">
                 <input
                   id="swissLaw"
                   type="checkbox"
@@ -296,7 +296,7 @@ export default function TransactionSubmitForm() {
               <button
                 type="submit"
                 disabled={loading || !swissAccept}
-                className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="rounded-lg inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? t('form.submitting') : t('form.submit')}
                 {!loading && <ArrowUpRight size={13} />}

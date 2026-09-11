@@ -108,7 +108,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
 
   if (items.length === 0) {
     return (
-      <div className="bg-white border border-gray-200 px-8 py-12 text-center">
+      <div className="rounded-lg bg-white border border-gray-200 px-8 py-12 text-center">
         <p className="font-sans text-[14px] text-gray-400">Aucune introduction soumise pour le moment.</p>
       </div>
     )
@@ -117,7 +117,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
   return (
     <div className="flex flex-col gap-3">
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
       )}
       {items.map(intro => {
         const statusCfg = STATUS_CONFIG[intro.introduction_status] ?? STATUS_CONFIG.new
@@ -160,7 +160,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
                       type="text" required
                       value={editData.contact_name}
                       onChange={e => setEditData(d => d ? { ...d, contact_name: e.target.value } : d)}
-                      className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                      className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                     />
                   </div>
                   <div>
@@ -169,7 +169,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
                       type="email" required
                       value={editData.contact_email}
                       onChange={e => setEditData(d => d ? { ...d, contact_email: e.target.value } : d)}
-                      className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                      className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                     />
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
                     rows={3}
                     value={editData.context_note}
                     onChange={e => setEditData(d => d ? { ...d, context_note: e.target.value } : d)}
-                    className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-ag-navy resize-none"
+                    className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-ag-navy resize-none"
                   />
                 </div>
 
@@ -189,7 +189,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
                     type="button"
                     onClick={() => saveEdit(intro.id)}
                     disabled={saving}
-                    className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
+                    className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
                   >
                     {saving ? <Loader2 size={11} className="animate-spin" /> : <Check size={11} />}
                     Enregistrer
@@ -254,7 +254,7 @@ export default function IntroductionsList({ initial }: { initial: Introduction[]
             )}
 
             {intro.admin_note && (
-              <div className="bg-gray-50 border border-gray-200 px-3 py-2 mb-3">
+              <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2 mb-3">
                 <p className="font-mono text-[8px] uppercase tracking-widest text-gray-400 mb-1">Note Aegryn</p>
                 <p className="font-sans text-[11px] text-gray-600">{intro.admin_note}</p>
               </div>

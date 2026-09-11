@@ -29,7 +29,7 @@ export function GradeCards() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border py-24 px-6">
+    <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
           {grades.map(({ code, name, color, desc }) => (

@@ -89,7 +89,7 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
         </div>
         <Link
           href={`/${locale}/transact/lot/${lot.slug}`}
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-[0.16em] px-5 py-2.5 hover:bg-ag-navy-mid transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-[0.16em] px-5 py-2.5 hover:bg-ag-navy-mid transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
         >
           {labels.accessLabel} <ArrowUpRight size={11} />
         </Link>

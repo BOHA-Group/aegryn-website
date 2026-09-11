@@ -53,7 +53,7 @@ export default async function AdminAssetsPage({
 
 
   return (
-    <main className="min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10 overflow-x-hidden">
+    <main className="rounded-lg min-h-screen bg-gray-50 px-6 py-6 md:px-10 md:py-10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto w-full">
 
         <div className="mb-8 flex items-start justify-between gap-4">
@@ -64,11 +64,11 @@ export default async function AdminAssetsPage({
           </div>
           <div className="flex gap-2">
             <Link href={`/admin/catalog`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               Catalogue
             </Link>
             <Link href={`/admin/leads`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               ← Leads
             </Link>
           </div>
@@ -116,7 +116,7 @@ export default async function AdminAssetsPage({
 
         {/* Bannière contextuelle CIFSO si provenance partenaire */}
         {params.partner_id && (
-          <div className="mb-4 bg-indigo-50 border border-indigo-200 px-4 py-3 flex items-center justify-between gap-4">
+          <div className="rounded-lg mb-4 bg-indigo-50 border border-indigo-200 px-4 py-3 flex items-center justify-between gap-4">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 mb-0.5">Assignation CIFSO en cours</p>
               <p className="font-sans text-[12px] text-indigo-800">
@@ -126,7 +126,7 @@ export default async function AdminAssetsPage({
             </div>
             <Link
               href={`/admin/partners/${params.partner_id}`}
-              className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 border border-indigo-300 px-3 py-1.5 hover:border-indigo-500 transition-colors shrink-0"
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-indigo-600 border border-indigo-300 px-3 py-1.5 hover:border-indigo-500 transition-colors shrink-0"
             >
               ← Retour partenaire
             </Link>

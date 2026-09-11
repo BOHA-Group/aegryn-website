@@ -34,7 +34,7 @@ export function WhitepaperContent() {
   return (
     <>
       {/* ── Screen nav bar (hidden on print) ── */}
-      <div className="print:hidden sticky top-0 z-50 bg-ag-white border-b border-ag-border px-6 py-3 flex items-center justify-between">
+      <div className="rounded-lg print:hidden sticky top-0 z-50 bg-ag-white border-b border-ag-border px-6 py-3 flex items-center justify-between">
         <Link
           href="/grade/methodology"
           className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors"
@@ -43,7 +43,7 @@ export function WhitepaperContent() {
         </Link>
         <button
           onClick={() => window.print()}
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-navy-mid transition-colors"
+          className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-navy-mid transition-colors"
         >
           <Printer size={12} /> {tG('wpNavPrint')}
         </button>
@@ -82,7 +82,7 @@ export function WhitepaperContent() {
           </div>
 
           {/* Title */}
-          <div className="bg-ag-navy px-10 py-12 mb-6">
+          <div className="rounded-lg bg-ag-navy px-10 py-12 mb-6">
             <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
               {tG('wpEyebrow')}
             </p>
@@ -244,7 +244,7 @@ export function WhitepaperContent() {
                   key={row.dimension}
                   className="grid grid-cols-[140px_1fr_1fr] border-t border-ag-border"
                 >
-                  <div className="px-4 py-4 border-r border-ag-border bg-ag-off-white">
+                  <div className="rounded-lg px-4 py-4 border-r border-ag-border bg-ag-off-white">
                     <p
                       className="font-mono text-[12px] font-bold mb-0.5"
                       style={{ color: DIM_COLOR[code] }}
@@ -279,7 +279,7 @@ export function WhitepaperContent() {
           <div className="flex flex-col gap-0 border border-ag-border">
             {process.map(({ num, title, desc }) => (
               <div key={num} className="grid grid-cols-[56px_1fr] border-b border-ag-border last:border-0">
-                <div className="px-4 py-5 border-r border-ag-border bg-ag-off-white flex items-start">
+                <div className="rounded-lg px-4 py-5 border-r border-ag-border bg-ag-off-white flex items-start">
                   <p className="font-mono text-[11px] font-bold text-ag-apex">{num}</p>
                 </div>
                 <div className="px-5 py-5">

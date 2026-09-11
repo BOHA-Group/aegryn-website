@@ -66,7 +66,7 @@ export function PlatformArchitectureDiagram({
         <div className="flex flex-col md:flex-row gap-2 mb-1" style={fadeIn(0)}>
 
           {/* Applications — grille 3 colonnes numérotées par colonne */}
-          <div className="flex-1 border border-white/30 bg-white/10 px-4 py-4">
+          <div className="rounded-lg flex-1 border border-white/30 bg-white/10 px-4 py-4">
             <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-3 font-semibold">
               {appsLabel}
             </p>
@@ -96,7 +96,7 @@ export function PlatformArchitectureDiagram({
           </div>
 
           {/* Verticals */}
-          <div className="border border-white/25 bg-white/5 px-4 py-4 md:min-w-[130px]">
+          <div className="rounded-lg border border-white/25 bg-white/5 px-4 py-4 md:min-w-[130px]">
             <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-3 font-semibold">
               {verticalsLabel}
             </p>

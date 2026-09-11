@@ -77,7 +77,7 @@ export default function CareerPositions({
           >
             <button
               onClick={() => setOpen(!open)}
-              className="flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
+              className="rounded-lg flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase border border-ag-border px-4 py-2 text-ag-gray hover:border-ag-black hover:text-ag-black transition-all"
             >
               {currentLabel}
               <ChevronDown
@@ -136,7 +136,7 @@ export default function CareerPositions({
                 </p>
               </div>
             </div>
-            <span className="shrink-0 font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light ml-6">
+            <span className="rounded-lg shrink-0 font-sans font-semibold text-[10px] tracking-[0.12em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light ml-6">
               {pos.type}
             </span>
           </div>
@@ -146,14 +146,14 @@ export default function CareerPositions({
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
+            className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-6 py-3.5 hover:bg-ag-navy transition-colors"
           >
             {applyLabel}
             <ArrowUpRight size={14} />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3.5 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
+            className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase border border-ag-border px-6 py-3.5 text-ag-dark hover:border-ag-black hover:text-ag-black transition-all"
           >
             {spontaneousLabel}
             <ArrowUpRight size={14} />

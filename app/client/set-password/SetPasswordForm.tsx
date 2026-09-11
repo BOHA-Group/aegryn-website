@@ -71,7 +71,7 @@ export default function SetPasswordForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       {error && (
-        <p className="font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
+        <p className="rounded-lg font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
           {error}
         </p>
       )}
@@ -88,7 +88,7 @@ export default function SetPasswordForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder={t('passwordPlaceholder')}
-            className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+            className="rounded-lg w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
           />
           <button
             type="button"
@@ -111,7 +111,7 @@ export default function SetPasswordForm() {
           value={confirm}
           onChange={e => setConfirm(e.target.value)}
           placeholder={t('confirmPlaceholder')}
-          className="w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="rounded-lg w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
 
@@ -133,7 +133,7 @@ export default function SetPasswordForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
+        className="rounded-lg w-full bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
       >
         {loading ? t('submitting') : t('submit')}
       </button>

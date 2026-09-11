@@ -50,7 +50,7 @@ export default async function InternalLayout({ children }: { children: React.Rea
             <form action="/api/client/logout" method="POST">
               <button
                 type="submit"
-                className="w-full flex items-center gap-2 px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-white hover:bg-red-600 border border-red-500/40 hover:border-red-600 transition-colors"
+                className="rounded-lg w-full flex items-center gap-2 px-3 py-2 font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-white hover:bg-red-600 border border-red-500/40 hover:border-red-600 transition-colors"
               >
                 <LogOut size={12} className="shrink-0" />
                 Déconnexion

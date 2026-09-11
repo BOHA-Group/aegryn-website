@@ -296,7 +296,7 @@ export default function SellerAssetTabs({
 
           {/* Grade ceiling */}
           {assessment?.grade_ceiling && (
-            <div className="bg-amber-50 border border-amber-200 px-5 py-4">
+            <div className="rounded-lg bg-amber-50 border border-amber-200 px-5 py-4">
               <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600 mb-1">Grade plafonné</p>
               <p className="font-sans text-[13px] text-amber-800">
                 Grade plafonné à <strong>{assessment.grade_ceiling.toUpperCase()}</strong> — niveau de preuve insuffisant.
@@ -356,7 +356,7 @@ export default function SellerAssetTabs({
                   </ul>
                 )}
                 <Link href={`/client/seller/actifs/${assetId}/documents`}
-                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors">
+                  className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors">
                   Compléter mon dossier <ChevronRight size={11} />
                 </Link>
               </div>
@@ -409,7 +409,7 @@ export default function SellerAssetTabs({
       {tab === 'recommendations' && (
         <div className="flex flex-col gap-6">
           {recsByPriority.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-6 py-12 text-center">
               <CheckCircle2 size={24} className="text-emerald-400 mx-auto mb-3" />
               <p className="font-sans text-[14px] text-gray-500">Aucune recommandation — votre dossier est complet.</p>
             </div>
@@ -426,14 +426,14 @@ export default function SellerAssetTabs({
                   {group.items.map((rec, i) => (
                     <div key={i} className="bg-white border border-gray-200 p-5">
                       <div className="flex items-center gap-2 mb-3 flex-wrap">
-                        <span className="font-mono text-[9px] bg-gray-100 text-gray-600 px-2 py-0.5">{rec.subcode}</span>
+                        <span className="rounded-lg font-mono text-[9px] bg-gray-100 text-gray-600 px-2 py-0.5">{rec.subcode}</span>
                         {PRIORITY_META[rec.priority] && (
                           <span className={`border font-mono text-[8px] uppercase tracking-widest px-2 py-0.5 ${PRIORITY_META[rec.priority].cls}`}>
                             {PRIORITY_META[rec.priority].label}
                           </span>
                         )}
                         {rec.effort && EFFORT_LABEL[rec.effort] && (
-                          <span className="font-mono text-[8px] text-gray-400 border border-gray-200 px-2 py-0.5">
+                          <span className="rounded-lg font-mono text-[8px] text-gray-400 border border-gray-200 px-2 py-0.5">
                             {EFFORT_LABEL[rec.effort]}
                           </span>
                         )}
@@ -454,7 +454,7 @@ export default function SellerAssetTabs({
             <p className="font-sans text-[13px] text-gray-600 mb-4">Besoin d&apos;aide pour améliorer votre dossier ?</p>
             <div className="flex gap-3 flex-wrap">
               <Link href="/advisory"
-                className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-4 py-2.5 hover:bg-ag-navy/80 transition-colors">
+                className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-4 py-2.5 hover:bg-ag-navy/80 transition-colors">
                 Advisory Tech <ChevronRight size={11} />
               </Link>
             </div>
@@ -466,10 +466,10 @@ export default function SellerAssetTabs({
       {tab === 'documents' && (
         <div className="flex flex-col gap-4">
           {docs.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-6 py-12 text-center">
               <p className="font-sans text-[14px] text-gray-400 mb-4">Aucun document déposé.</p>
               <Link href={`/client/seller/actifs/${assetId}/documents`}
-                className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-navy/80 transition-colors">
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-navy/80 transition-colors">
                 Déposer des documents <ChevronRight size={11} />
               </Link>
             </div>
@@ -477,9 +477,9 @@ export default function SellerAssetTabs({
             <div>
               <div className="flex flex-col gap-2">
                 {docs.map(doc => (
-                  <div key={doc.id} className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between gap-4 flex-wrap">
+                  <div key={doc.id} className="rounded-lg bg-white border border-gray-200 px-5 py-4 flex items-center justify-between gap-4 flex-wrap">
                     <div className="flex items-center gap-3 min-w-0">
-                      <span className="font-mono text-[9px] bg-gray-100 text-gray-500 px-2 py-0.5 shrink-0">{doc.document_code}</span>
+                      <span className="rounded-lg font-mono text-[9px] bg-gray-100 text-gray-500 px-2 py-0.5 shrink-0">{doc.document_code}</span>
                       <p className="font-sans text-[12px] text-gray-700 truncate">{doc.file_name}</p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
@@ -495,11 +495,11 @@ export default function SellerAssetTabs({
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Link href={`/client/seller/actifs/${assetId}/documents`}
-                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 text-gray-600 px-4 py-2 hover:border-gray-500 transition-colors">
+                  className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 text-gray-600 px-4 py-2 hover:border-gray-500 transition-colors">
                   Gérer les documents <ChevronRight size={11} />
                 </Link>
                 <Link href={`/client/seller/actifs/${assetId}/offres-principe`}
-                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-indigo-200 text-indigo-700 bg-indigo-50 px-4 py-2 hover:bg-indigo-100 transition-colors">
+                  className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-indigo-200 text-indigo-700 bg-indigo-50 px-4 py-2 hover:bg-indigo-100 transition-colors">
                   Offres de principe
                 </Link>
               </div>
@@ -513,7 +513,7 @@ export default function SellerAssetTabs({
         <div className="flex flex-col gap-4">
 
           {/* Notice */}
-          <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+          <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
             <div className="flex items-start gap-2.5">
               <FileText size={13} className="text-ag-navy/60 shrink-0 mt-0.5" />
               <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
@@ -525,11 +525,11 @@ export default function SellerAssetTabs({
           </div>
 
           {tsError && (
-            <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{tsError}</p>
+            <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{tsError}</p>
           )}
 
           {tsSheets.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-6 py-12 text-center">
               <FileText size={24} className="text-gray-300 mx-auto mb-3" />
               <p className="font-sans text-[14px] text-gray-400">Aucune term sheet reçue pour cet actif.</p>
             </div>
@@ -547,7 +547,7 @@ export default function SellerAssetTabs({
                     <button
                       type="button"
                       onClick={() => setExpandedTs(isExpanded ? null : ts.id)}
-                      className="w-full px-6 py-4 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                      className="rounded-lg w-full px-6 py-4 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="font-mono text-[11px] font-bold text-gray-700 shrink-0">
@@ -659,7 +659,7 @@ export default function SellerAssetTabs({
                                 value={tsResponseNote[ts.id] ?? ''}
                                 onChange={e => setTsResponseNote(prev => ({ ...prev, [ts.id]: e.target.value }))}
                                 placeholder="Motif de refus, demande de précision, ou note pour la contre-proposition…"
-                                className="w-full bg-white border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+                                className="rounded-lg w-full bg-white border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors resize-none"
                               />
                             </div>
 
@@ -668,7 +668,7 @@ export default function SellerAssetTabs({
                                 type="button"
                                 disabled={tsLoading === ts.id}
                                 onClick={() => handleTsAction(ts.id, 'accepted')}
-                                className="flex items-center gap-1.5 bg-emerald-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-emerald-700 transition-colors disabled:opacity-50"
+                                className="rounded-lg flex items-center gap-1.5 bg-emerald-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-emerald-700 transition-colors disabled:opacity-50"
                               >
                                 <Check size={11} /> Accepter
                               </button>
@@ -676,7 +676,7 @@ export default function SellerAssetTabs({
                                 type="button"
                                 disabled={tsLoading === ts.id}
                                 onClick={() => handleTsAction(ts.id, 'refused')}
-                                className="flex items-center gap-1.5 border border-red-300 text-red-600 font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-50 transition-colors disabled:opacity-50"
+                                className="rounded-lg flex items-center gap-1.5 border border-red-300 text-red-600 font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-50 transition-colors disabled:opacity-50"
                               >
                                 <X size={11} /> Refuser
                               </button>
@@ -685,7 +685,7 @@ export default function SellerAssetTabs({
                                   type="button"
                                   disabled={tsLoading === ts.id}
                                   onClick={() => handleTsAction(ts.id, 'countered')}
-                                  className="flex items-center gap-1.5 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-50"
+                                  className="rounded-lg flex items-center gap-1.5 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-50"
                                 >
                                   <MessageSquare size={11} /> Contre-proposer
                                 </button>
@@ -720,7 +720,7 @@ export default function SellerAssetTabs({
       {tab === 'history' && (
         <div className="flex flex-col gap-4">
           {allVersions.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-6 py-12 text-center">
               <p className="font-sans text-[14px] text-gray-400">Aucune évaluation enregistrée.</p>
             </div>
           ) : allVersions.length === 1 ? (
@@ -742,7 +742,7 @@ export default function SellerAssetTabs({
               {allVersions.map(v => (
                 <div key={v.version_number} className="bg-white border border-gray-200 p-6">
                   <div className="flex items-center gap-3 mb-3 flex-wrap">
-                    <span className="font-mono text-[9px] bg-ag-navy text-white px-2 py-0.5">v{v.version_number}</span>
+                    <span className="rounded-lg font-mono text-[9px] bg-ag-navy text-white px-2 py-0.5">v{v.version_number}</span>
                     {v.computed_grade && GRADE_LABEL[v.computed_grade] && (
                       <span className={`border px-2 py-0.5 font-mono font-bold text-[12px] ${GRADE_CLS[v.computed_grade] ?? ''}`}>
                         {GRADE_LABEL[v.computed_grade]}

@@ -72,19 +72,19 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={t('hero.ctaHref') as never}
-              className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
             >
               {t('hero.cta')} <ArrowUpRight size={14} />
             </Link>
             <Link
               href={t('hero.cta2Href') as never}
-              className="inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
             >
               {t('hero.cta2')} <ArrowUpRight size={14} />
             </Link>
             <Link
               href={t('hero.cta3Href') as never}
-              className="inline-flex items-center gap-3 border border-white/10 text-white/60 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-white/30 hover:text-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 border border-white/10 text-white/60 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-white/30 hover:text-white transition-colors"
             >
               {t('hero.cta3')} <ArrowUpRight size={14} />
             </Link>
@@ -215,7 +215,7 @@ export default async function AdvisoryPage({ params }: Props) {
           </p>
           <Link
             href={t('midCta.href') as never}
-            className="shrink-0 inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
           >
             {t('midCta.cta')} <ArrowUpRight size={14} />
           </Link>
@@ -271,13 +271,13 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={t('network.cta1Href')}
-              className="inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
             >
               {t('network.cta1')} <ArrowUpRight size={14} />
             </Link>
             <Link
               href={t('network.cta2Href')}
-              className="inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
             >
               {t('network.cta2')} <ArrowUpRight size={14} />
             </Link>
@@ -320,7 +320,7 @@ export default async function AdvisoryPage({ params }: Props) {
             </div>
             <Link
               href="/contact"
-              className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
             >
               {t('approach.cta')} <ArrowUpRight size={14} />
             </Link>

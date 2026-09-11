@@ -58,7 +58,7 @@ export default function NewOfferForm({ assetId, assetName }: Props) {
           value={amount}
           onChange={e => setAmount(e.target.value)}
           placeholder="ex. 2500000"
-          className="w-full bg-white border border-gray-300 px-4 py-3 font-mono text-[14px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors"
+          className="rounded-lg w-full bg-white border border-gray-300 px-4 py-3 font-mono text-[14px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors"
         />
         <p className="font-sans text-[11px] text-gray-400 mt-1.5">
           Indiquez le montant indicatif de votre offre en CHF. Ce montant est non-engageant à ce stade.
@@ -74,12 +74,12 @@ export default function NewOfferForm({ assetId, assetName }: Props) {
           value={message}
           onChange={e => setMessage(e.target.value)}
           placeholder={`Présentez brièvement votre intérêt pour ${assetName}, votre profil d'acquéreur ou toute question préliminaire.`}
-          className="w-full bg-white border border-gray-300 px-4 py-3 font-sans text-[13px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+          className="rounded-lg w-full bg-white border border-gray-300 px-4 py-3 font-sans text-[13px] text-gray-900 placeholder-gray-300 focus:outline-none focus:border-ag-navy transition-colors resize-none"
         />
       </div>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">
           {error}
         </p>
       )}
@@ -88,7 +88,7 @@ export default function NewOfferForm({ assetId, assetName }: Props) {
         <button
           type="submit"
           disabled={loading}
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? <Loader2 size={12} className="animate-spin" /> : <SendHorizonal size={12} />}
           Soumettre l&apos;EI

@@ -91,7 +91,7 @@ export default async function AdminTransactionDetailPage({
                       hour: '2-digit', minute: '2-digit',
                     })
                     return (
-                      <div key={log.id} className="bg-white border border-gray-200 px-4 py-3 flex flex-wrap items-start justify-between gap-3">
+                      <div key={log.id} className="rounded-lg bg-white border border-gray-200 px-4 py-3 flex flex-wrap items-start justify-between gap-3">
                         <div className="flex items-start gap-3">
                           <span className={`border px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest shrink-0 ${ev.color}`}>
                             {ev.label}

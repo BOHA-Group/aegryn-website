@@ -57,7 +57,7 @@ export function DataRoomUploadForm({ assetId, category, requiredTypes }: Props) 
           <select
             name="document_type"
             required
-            className="w-full border border-gray-200 text-[12px] text-gray-800 px-3 py-2 bg-white focus:outline-none focus:border-gray-400"
+            className="rounded-lg w-full border border-gray-200 text-[12px] text-gray-800 px-3 py-2 bg-white focus:outline-none focus:border-gray-400"
           >
             <option value="">Sélectionner…</option>
             {requiredTypes.map((req) => (
@@ -80,7 +80,7 @@ export function DataRoomUploadForm({ assetId, category, requiredTypes }: Props) 
             name="file"
             required
             accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip"
-            className="w-full border border-gray-200 text-[11px] text-gray-600 px-3 py-1.5 bg-white file:mr-3 file:py-1 file:px-3 file:border-0 file:text-[10px] file:font-semibold file:bg-gray-100 file:text-gray-700 file:uppercase file:tracking-wide"
+            className="rounded-lg w-full border border-gray-200 text-[11px] text-gray-600 px-3 py-1.5 bg-white file:mr-3 file:py-1 file:px-3 file:border-0 file:text-[10px] file:font-semibold file:bg-gray-100 file:text-gray-700 file:uppercase file:tracking-wide"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ export function DataRoomUploadForm({ assetId, category, requiredTypes }: Props) 
           name="notes"
           placeholder="Ex: Exercice 2024 certifié par cabinet X…"
           maxLength={200}
-          className="w-full border border-gray-200 text-[12px] text-gray-800 px-3 py-2 placeholder-gray-300 focus:outline-none focus:border-gray-400"
+          className="rounded-lg w-full border border-gray-200 text-[12px] text-gray-800 px-3 py-2 placeholder-gray-300 focus:outline-none focus:border-gray-400"
         />
       </div>
 
@@ -122,7 +122,7 @@ export function DataRoomUploadForm({ assetId, category, requiredTypes }: Props) 
       <button
         type="submit"
         disabled={isPending}
-        className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] bg-gray-900 text-white px-5 py-2.5 hover:bg-gray-700 transition-colors disabled:opacity-60"
+        className="rounded-lg flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] bg-gray-900 text-white px-5 py-2.5 hover:bg-gray-700 transition-colors disabled:opacity-60"
       >
         {isPending ? <Loader2 size={12} className="animate-spin" /> : <Upload size={12} />}
         {isPending ? 'Upload en cours…' : 'Uploader'}

@@ -181,7 +181,7 @@ export default function TransactionForm({ transaction }: Props) {
                 escrow_note: escrowNote || undefined,
                 escrow_confirmed: true,
               })}
-              className="bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-gray-700 transition-colors"
+              className="rounded-lg bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-gray-700 transition-colors"
             >
               Confirmer réception du séquestre
             </button>
@@ -194,7 +194,7 @@ export default function TransactionForm({ transaction }: Props) {
               escrow_reference: escrowReference || undefined,
               escrow_note: escrowNote || undefined,
             })}
-            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors"
+            className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors"
           >
             Sauvegarder
           </button>
@@ -225,7 +225,7 @@ export default function TransactionForm({ transaction }: Props) {
             dd_deadline_at: ddDeadline || undefined,
             dataroom_url: dataroomUrl || undefined,
           })}
-          className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
+          className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
         >
           Sauvegarder
         </button>
@@ -252,7 +252,7 @@ export default function TransactionForm({ transaction }: Props) {
           <button
             disabled={saving}
             onClick={() => patch({ signing_date: signingDate || undefined, spa_document_url: spaUrl || undefined, certificate_url: certUrl || undefined })}
-            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors"
+            className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors"
           >
             Sauvegarder
           </button>
@@ -260,7 +260,7 @@ export default function TransactionForm({ transaction }: Props) {
             <button
               disabled={saving || !certUrl}
               onClick={() => patch({ certificate_url: certUrl, issue_certificate: true })}
-              className="bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-gray-700 transition-colors disabled:opacity-40"
+              className="rounded-lg bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-gray-700 transition-colors disabled:opacity-40"
             >
               Émettre le certificat
             </button>
@@ -300,7 +300,7 @@ export default function TransactionForm({ transaction }: Props) {
             commission_referrer_chf: commReferrer ? Number(commReferrer) : undefined,
             net_seller_proceeds_chf: netSeller ? Number(netSeller) : undefined,
           })}
-          className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
+          className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
         >
           Sauvegarder
         </button>
@@ -371,7 +371,7 @@ export default function TransactionForm({ transaction }: Props) {
           <button
             disabled={saving || !partnerEmail}
             onClick={savePartnerComm}
-            className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-40"
+            className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-40"
           >
             Sauvegarder
           </button>
@@ -390,7 +390,7 @@ export default function TransactionForm({ transaction }: Props) {
         <button
           disabled={saving}
           onClick={() => patch({ admin_note: adminNote || undefined })}
-          className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
+          className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors self-start"
         >
           Sauvegarder
         </button>

@@ -178,7 +178,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
           </div>
 
           {filteredReferrals.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-8 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-8 py-12 text-center">
               <Gift size={24} className="text-gray-300 mx-auto mb-3" />
               <p className="font-sans text-[13px] text-gray-400">Aucun parrainage dans cette catégorie.</p>
             </div>
@@ -237,7 +237,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
                     required
                     value={creditUserId}
                     onChange={e => setCreditUserId(e.target.value)}
-                    className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                    className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                   >
                     <option value="">-- Sélectionner --</option>
                     {activePartners.map(p => (
@@ -253,7 +253,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
                     type="number" required min={1} max={24}
                     value={creditMonths}
                     onChange={e => setCreditMonths(Number(e.target.value))}
-                    className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                    className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                   />
                 </div>
               </div>
@@ -264,14 +264,14 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
                   value={creditNote}
                   onChange={e => setCreditNote(e.target.value)}
                   placeholder="Motif du crédit…"
-                  className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                  className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                 />
               </div>
               <div className="flex items-center gap-4">
                 <button
                   type="submit"
                   disabled={creditSaving || !creditUserId}
-                  className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+                  className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
                 >
                   {creditSaving ? <Loader2 size={11} className="animate-spin" /> : <Check size={11} />}
                   Attribuer le crédit
@@ -287,7 +287,7 @@ export default function ReferralsAdminClient({ referrals, credits, activePartner
 
           {/* Historique crédits */}
           {localCredits.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-8 py-12 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-8 py-12 text-center">
               <p className="font-sans text-[13px] text-gray-400">Aucun crédit accordé.</p>
             </div>
           ) : (

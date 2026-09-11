@@ -66,14 +66,14 @@ export default function SellerKycUploadForm({ docType }: Props) {
         onChange={() => { const f = fileRef.current?.files?.[0]; if (f) setFileName(f.name) }}
       />
       <label htmlFor={`seller-kyc-${docType}`}
-        className="flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">
+        className="rounded-lg flex items-center gap-2 cursor-pointer font-mono text-[10px] uppercase tracking-widest text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-500 px-4 py-2 transition-colors">
         <Upload size={11} />
         Choisir un fichier
       </label>
       <button
         type="submit"
         disabled={loading}
-        className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
+        className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
       >
         {loading && <Loader2 size={11} className="animate-spin" />}
         Envoyer

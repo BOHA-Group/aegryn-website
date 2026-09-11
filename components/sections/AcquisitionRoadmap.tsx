@@ -66,7 +66,7 @@ export default function AcquisitionRoadmap({
   })).filter((g) => g.items.length > 0)
 
   return (
-    <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+    <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
       <div className="max-w-7xl mx-auto">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
           {label}

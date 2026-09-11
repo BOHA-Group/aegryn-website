@@ -143,7 +143,7 @@ export default function GradeSubmitForm() {
 
           {/* Right */}
           {params.get('cancelled') === 'true' && (
-            <div className="col-span-full mb-4 border border-amber-200 bg-amber-50 px-5 py-4 text-[13px] text-amber-800">
+            <div className="rounded-lg col-span-full mb-4 border border-amber-200 bg-amber-50 px-5 py-4 text-[13px] text-amber-800">
               {t('form.cancelledNote')}
             </div>
           )}
@@ -158,7 +158,7 @@ export default function GradeSubmitForm() {
               </p>
               <Link
                 href="/grade"
-                className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+                className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {tNav('grade')} <ArrowUpRight size={12} />
               </Link>
@@ -190,7 +190,7 @@ export default function GradeSubmitForm() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-baseline gap-3 flex-wrap">
                           <span className="font-sans font-bold text-ag-black text-[13px]">{name}</span>
-                          <span className="font-mono text-[11px] font-bold px-2 py-0.5 bg-ag-navy/10 text-ag-navy">{price}</span>
+                          <span className="rounded-lg font-mono text-[11px] font-bold px-2 py-0.5 bg-ag-navy/10 text-ag-navy">{price}</span>
                         </div>
                         <p className="font-sans text-[11px] text-ag-gray-light mt-0.5">{duration}</p>
                         <p className="font-sans text-[12px] text-ag-gray mt-1 leading-relaxed">{target}</p>
@@ -323,7 +323,7 @@ export default function GradeSubmitForm() {
               <button
                 type="submit"
                 disabled={loading || !cgvAgreed}
-                className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                className="rounded-lg inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-navy-mid transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? t('form.submitting') : t('form.submit')}
                 {!loading && <ArrowUpRight size={13} />}

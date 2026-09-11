@@ -85,7 +85,7 @@ export default async function GradeEnginePage({
                 Grade actuel : <strong>{asset.aeg_grade ? GRADE_LABELS[asset.aeg_grade] ?? asset.aeg_grade : '—'}</strong>
               </p>
             </div>
-            <div className="bg-amber-50 border border-amber-200 px-3 py-2 text-right">
+            <div className="rounded-lg bg-amber-50 border border-amber-200 px-3 py-2 text-right">
               <p className="font-mono text-[9px] uppercase tracking-widest text-amber-600">Usage interne</p>
               <p className="font-sans text-[11px] text-amber-700 mt-0.5">Logique propriétaire — ne pas partager</p>
             </div>
@@ -136,7 +136,7 @@ export default async function GradeEnginePage({
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Référentiel CIFSO v4.0</p>
               <h2 className="font-sans font-bold text-gray-900 text-[15px] mt-0.5">Grille des 128 codes de certification</h2>
             </div>
-            <span className="font-mono text-[9px] uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-2 py-1">Confidentiel — usage interne</span>
+            <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-2 py-1">Confidentiel — usage interne</span>
           </div>
           <div className="divide-y divide-gray-100">
             {[
@@ -153,7 +153,7 @@ export default async function GradeEnginePage({
               }, {})
               return (
                 <details key={dim} className="group">
-                  <summary className="flex items-center gap-3 px-6 py-4 cursor-pointer hover:bg-gray-50 transition-colors list-none">
+                  <summary className="rounded-lg flex items-center gap-3 px-6 py-4 cursor-pointer hover:bg-gray-50 transition-colors list-none">
                     <span className={`font-mono text-[11px] font-bold px-2 py-0.5 rounded ${
                       color === 'blue'    ? 'bg-blue-100 text-blue-700' :
                       color === 'purple'  ? 'bg-purple-100 text-purple-700' :
@@ -170,7 +170,7 @@ export default async function GradeEnginePage({
                         <p className="font-mono text-[8px] uppercase tracking-widest text-gray-400 mb-2 mt-3">{group}</p>
                         <div className="grid grid-cols-1 gap-px bg-gray-100 border border-gray-100">
                           {items.map(c => (
-                            <div key={c.code} className="bg-white flex items-start gap-3 px-3 py-2 hover:bg-gray-50 transition-colors">
+                            <div key={c.code} className="rounded-lg bg-white flex items-start gap-3 px-3 py-2 hover:bg-gray-50 transition-colors">
                               <span className="font-mono text-[10px] font-bold text-gray-500 shrink-0 w-12">{c.code}</span>
                               <span className="font-sans text-[12px] text-gray-700 leading-snug">{c.fr}</span>
                             </div>

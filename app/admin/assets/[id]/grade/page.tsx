@@ -92,15 +92,15 @@ export default async function AdminAssetGradePage({
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link href={`/admin/assets`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
             <Link href={`/admin/assets/${id}/documents`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Documents {blockingAlerts.length > 0 && <span className="text-amber-500">({blockingAlerts.length})</span>}
             </Link>
             <Link href={`/admin/leads`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Leads
             </Link>
             {!!a.official_grade && !!a.graded_at && (
@@ -108,7 +108,7 @@ export default async function AdminAssetGradePage({
                 href={`/api/admin/assets/${id}/grade-sheet`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-semibold text-white bg-ag-navy border border-ag-navy px-3 py-1.5 hover:bg-ag-navy/90 transition-colors">
+                className="rounded-lg text-[11px] font-semibold text-white bg-ag-navy border border-ag-navy px-3 py-1.5 hover:bg-ag-navy/90 transition-colors">
                 ↓ Fiche de grade
               </a>
             )}

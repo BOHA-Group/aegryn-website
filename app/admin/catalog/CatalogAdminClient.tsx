@@ -128,7 +128,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
   return (
     <div className="overflow-x-auto">
       {error && (
-        <div className="mb-3 bg-red-50 border border-red-200 px-4 py-2 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg mb-3 bg-red-50 border border-red-200 px-4 py-2 text-[12px] text-red-700">{error}</div>
       )}
       <table className="w-full text-[12px] bg-white border border-gray-200">
         <thead className="bg-gray-50 border-b border-gray-200">
@@ -151,7 +151,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                     <input
                       value={editState.company_name}
                       onChange={e => setEditState(s => s ? { ...s, company_name: e.target.value } : s)}
-                      className="w-full border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy"
+                      className="rounded-lg w-full border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy"
                       placeholder="Nom anonymisé…"
                     />
                   ) : (
@@ -167,7 +167,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                     <input
                       value={editState.asset_type}
                       onChange={e => setEditState(s => s ? { ...s, asset_type: e.target.value } : s)}
-                      className="w-24 border border-gray-300 px-2 py-1 text-[11px] focus:outline-none focus:border-ag-navy uppercase"
+                      className="rounded-lg w-24 border border-gray-300 px-2 py-1 text-[11px] focus:outline-none focus:border-ag-navy uppercase"
                       placeholder="saas…"
                     />
                   ) : (
@@ -183,7 +183,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                     <select
                       value={editState.official_grade}
                       onChange={e => setEditState(s => s ? { ...s, official_grade: e.target.value } : s)}
-                      className="border border-gray-300 px-2 py-1 text-[11px] bg-white focus:outline-none focus:border-ag-navy"
+                      className="rounded-lg border border-gray-300 px-2 py-1 text-[11px] bg-white focus:outline-none focus:border-ag-navy"
                     >
                       <option value="">—</option>
                       {GRADE_OPTIONS.map(g => (
@@ -206,7 +206,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                       type="number" min={0} max={100}
                       value={editState.score_total}
                       onChange={e => setEditState(s => s ? { ...s, score_total: e.target.value } : s)}
-                      className="w-16 border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy"
+                      className="rounded-lg w-16 border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy"
                     />
                   ) : (
                     r.score_total != null ? `${r.score_total}/100` : '—'
@@ -220,7 +220,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                       value={editState.public_summary}
                       onChange={e => setEditState(s => s ? { ...s, public_summary: e.target.value } : s)}
                       rows={3}
-                      className="w-full border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy resize-none"
+                      className="rounded-lg w-full border border-gray-300 px-2 py-1 text-[12px] focus:outline-none focus:border-ag-navy resize-none"
                       placeholder="Résumé public affiché aux acheteurs…"
                     />
                   ) : (
@@ -249,14 +249,14 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                         <button
                           onClick={() => saveEdit(r.id)}
                           disabled={saving}
-                          className="flex items-center gap-1 text-[10px] font-semibold text-emerald-600 border border-emerald-200 px-2 py-1 hover:border-emerald-400 disabled:opacity-50 transition-colors"
+                          className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-emerald-600 border border-emerald-200 px-2 py-1 hover:border-emerald-400 disabled:opacity-50 transition-colors"
                         >
                           {saving ? <Loader2 size={10} className="animate-spin" /> : <Check size={10} />}
                           Sauvegarder
                         </button>
                         <button
                           onClick={closeEdit}
-                          className="flex items-center gap-1 text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
+                          className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
                         >
                           <X size={10} /> Annuler
                         </button>
@@ -265,20 +265,20 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                       <>
                         <Link
                           href={`/admin/assets/${r.id}/grade`}
-                          className="flex items-center gap-1 text-[10px] font-semibold text-indigo-600 hover:text-indigo-800 border border-indigo-100 px-2 py-1 hover:border-indigo-300 transition-colors"
+                          className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-indigo-600 hover:text-indigo-800 border border-indigo-100 px-2 py-1 hover:border-indigo-300 transition-colors"
                         >
                           Grader →
                         </Link>
                         <button
                           onClick={() => openEdit(r)}
-                          className="flex items-center gap-1 text-[10px] font-semibold text-blue-500 hover:text-blue-700 border border-blue-100 px-2 py-1 hover:border-blue-300 transition-colors"
+                          className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-blue-500 hover:text-blue-700 border border-blue-100 px-2 py-1 hover:border-blue-300 transition-colors"
                         >
                           <Pencil size={10} /> Éditer
                         </button>
                         {r.status === 'graded' && (
                           <Link
                             href={`/admin/catalog?action=publish&id=${r.id}`}
-                            className="text-[10px] font-semibold text-emerald-600 hover:text-emerald-800 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors"
+                            className="rounded-lg text-[10px] font-semibold text-emerald-600 hover:text-emerald-800 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors"
                           >
                             Publier
                           </Link>
@@ -286,14 +286,14 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                         {r.status === 'published' && (
                           <Link
                             href={`/admin/catalog?action=unpublish&id=${r.id}`}
-                            className="text-[10px] font-semibold text-orange-600 hover:text-orange-800 border border-orange-200 px-2 py-1 hover:border-orange-400 transition-colors"
+                            className="rounded-lg text-[10px] font-semibold text-orange-600 hover:text-orange-800 border border-orange-200 px-2 py-1 hover:border-orange-400 transition-colors"
                           >
                             Dépublier
                           </Link>
                         )}
                         <Link
                           href={`/admin/catalog?action=withdraw&id=${r.id}`}
-                          className="text-[10px] font-semibold text-gray-400 hover:text-gray-600 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
+                          className="rounded-lg text-[10px] font-semibold text-gray-400 hover:text-gray-600 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
                         >
                           Retirer
                         </Link>

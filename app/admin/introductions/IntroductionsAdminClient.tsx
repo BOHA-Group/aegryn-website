@@ -136,12 +136,12 @@ export default function IntroductionsAdminClient({ introductions: initial }: Pro
       </div>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5 mb-4">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5 mb-4">{error}</p>
       )}
 
       {/* Liste */}
       {filtered.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-12 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-12 text-center">
           <Users size={24} className="text-gray-300 mx-auto mb-3" />
           <p className="font-sans text-[13px] text-gray-400">Aucune introduction dans cette catégorie.</p>
         </div>
@@ -212,14 +212,14 @@ export default function IntroductionsAdminClient({ introductions: initial }: Pro
                         value={noteVal}
                         onChange={e => setNoteVal(e.target.value)}
                         placeholder="Note interne Aegryn…"
-                        className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-ag-navy resize-none"
+                        className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-ag-navy resize-none"
                       />
                       <div className="flex gap-2">
                         <button
                           type="button"
                           onClick={() => saveNote(intro.id)}
                           disabled={saving !== null}
-                          className="flex items-center gap-1.5 bg-ag-navy text-white font-mono text-[9px] uppercase tracking-widest px-4 py-1.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+                          className="rounded-lg flex items-center gap-1.5 bg-ag-navy text-white font-mono text-[9px] uppercase tracking-widest px-4 py-1.5 hover:bg-ag-black transition-colors disabled:opacity-50"
                         >
                           {saving === intro.id + 'note' ? <Loader2 size={10} className="animate-spin" /> : <Check size={10} />}
                           Enregistrer
@@ -234,7 +234,7 @@ export default function IntroductionsAdminClient({ introductions: initial }: Pro
                   ) : (
                     <div className="flex items-start gap-3">
                       {intro.admin_note ? (
-                        <div className="flex-1 bg-amber-50 border border-amber-200 px-3 py-2">
+                        <div className="rounded-lg flex-1 bg-amber-50 border border-amber-200 px-3 py-2">
                           <p className="font-mono text-[8px] uppercase tracking-widest text-amber-600 mb-0.5">Note interne</p>
                           <p className="font-sans text-[11px] text-gray-700">{intro.admin_note}</p>
                         </div>
@@ -244,7 +244,7 @@ export default function IntroductionsAdminClient({ introductions: initial }: Pro
                       <button
                         type="button"
                         onClick={() => { setNoteId(intro.id); setNoteVal(intro.admin_note ?? '') }}
-                        className="font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-ag-navy border border-transparent hover:border-gray-200 px-2 py-1 transition-colors shrink-0"
+                        className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 hover:text-ag-navy border border-transparent hover:border-gray-200 px-2 py-1 transition-colors shrink-0"
                       >
                         {intro.admin_note ? 'Modifier' : '+ Note'}
                       </button>

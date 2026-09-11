@@ -121,7 +121,7 @@ export function AnalyticsClient({
             </p>
             <button
               onClick={() => setActiveKpi(null)}
-              className="font-mono text-[9px] text-gray-400 hover:text-gray-700 border border-gray-200 px-2 py-1 transition-colors"
+              className="rounded-lg font-mono text-[9px] text-gray-400 hover:text-gray-700 border border-gray-200 px-2 py-1 transition-colors"
             >
               Fermer ×
             </button>
@@ -148,7 +148,7 @@ export function AnalyticsClient({
             <div className="mt-4 pt-3 border-t border-gray-100">
               <Link
                 href={activeData.href}
-                className="font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-3 py-1.5 hover:bg-[#0F1A2B] hover:text-white transition-colors"
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-3 py-1.5 hover:bg-[#0F1A2B] hover:text-white transition-colors"
               >
                 Voir tout →
               </Link>

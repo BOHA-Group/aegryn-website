@@ -33,7 +33,7 @@ export default async function AuthConfirmPage({
           </h1>
           <Link
             href="/client/login"
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors mt-6"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors mt-6"
           >
             {t('backToSite')}
           </Link>

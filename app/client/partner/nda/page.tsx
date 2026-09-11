@@ -66,7 +66,7 @@ export default async function PartnerNdaPage() {
       </div>
 
       {/* Certificat de signature */}
-      <div className="bg-emerald-50 border border-emerald-200 px-6 py-5 flex items-start gap-4 mb-6">
+      <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-6 py-5 flex items-start gap-4 mb-6">
         <ShieldCheck size={18} className="text-emerald-600 mt-0.5 shrink-0" />
         <div className="flex-1">
           <p className="font-sans text-[14px] font-semibold text-emerald-800 mb-3">
@@ -106,14 +106,14 @@ export default async function PartnerNdaPage() {
       </div>
 
       {!isUpToDate && (
-        <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-6 text-[12px] text-amber-800">
+        <div className="rounded-lg bg-amber-50 border border-amber-200 px-5 py-4 mb-6 text-[12px] text-amber-800">
           Une nouvelle version du NDA Partenaire est disponible (version {currentVer}).
           Votre signature porte sur la version {version}. Contactez Aegryn pour toute question.
         </div>
       )}
 
       {/* Texte intégral — lecture seule */}
-      <div className="bg-white border border-gray-200 px-8 py-8 space-y-7 text-[13px] text-gray-700 leading-relaxed">
+      <div className="rounded-lg bg-white border border-gray-200 px-8 py-8 space-y-7 text-[13px] text-gray-700 leading-relaxed">
 
         <div className="border-b border-gray-100 pb-6">
           <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">
@@ -127,7 +127,7 @@ export default async function PartnerNdaPage() {
           </p>
         </div>
 
-        <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-1">
+        <div className="rounded-lg bg-gray-50 px-5 py-4 text-[12px] space-y-1">
           <p><strong>Entre :</strong> Aegryn (ci-après « Aegryn »)</p>
           <p><strong>Et :</strong> {fullName} (ci-après « le Partenaire »)</p>
         </div>
@@ -229,7 +229,7 @@ export default async function PartnerNdaPage() {
       </div>
 
       {/* Pied de page signature */}
-      <div className="bg-white border border-ag-navy/20 px-8 py-5 mt-0">
+      <div className="rounded-lg bg-white border border-ag-navy/20 px-8 py-5 mt-0">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy mb-3">
           Signature électronique enregistrée
         </p>

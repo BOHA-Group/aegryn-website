@@ -73,7 +73,7 @@ export default async function SecurityPage({ params }: Props) {
             <AlertTriangle size={14} className="text-ag-grade-b" /> {t('s1Title')}
           </h2>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s1')}</p>
-          <div className="bg-ag-apex/8 border border-ag-apex/20 px-5 py-4 mb-6">
+          <div className="rounded-lg bg-ag-apex/8 border border-ag-apex/20 px-5 py-4 mb-6">
             <p className="font-sans font-semibold text-[13px] text-ag-black">{t('s1Official')}</p>
           </div>
           <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.16em] text-ag-black mb-3">
@@ -93,7 +93,7 @@ export default async function SecurityPage({ params }: Props) {
         <section className="border-t border-ag-border pt-8">
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4">{t('s2Title')}</h2>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s2')}</p>
-          <div className="bg-ag-off-white border border-ag-border px-5 py-4">
+          <div className="rounded-lg bg-ag-off-white border border-ag-border px-5 py-4">
             <p className="font-sans text-[13px] text-ag-gray italic">{t('s2Doubt')}</p>
           </div>
         </section>
@@ -156,7 +156,7 @@ export default async function SecurityPage({ params }: Props) {
           <div className="mt-8 pt-6 border-t border-ag-border">
             <a
               href={`mailto:${t('contactEmail')}`}
-              className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
             >
               {t('contactEmail')}
             </a>

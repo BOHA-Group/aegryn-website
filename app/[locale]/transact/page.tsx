@@ -62,13 +62,13 @@ export default async function TransactPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/transact/mandate"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {t('ctaMandate')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('ctaGrade')}
             </Link>
@@ -77,7 +77,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── 4 segments de mandat ── */}
-      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-14">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
@@ -121,7 +121,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Valeur Aegryn TRANSACT ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
@@ -139,7 +139,7 @@ export default async function TransactPage({ params }: Props) {
             </p>
             <Link
               href="/transact/mandate"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-black transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-black transition-colors"
             >
               {t('ctaMandate')} <ArrowUpRight size={13} />
             </Link>
@@ -156,7 +156,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Processus en 4 étapes ── */}
-      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-14">
             {t('howLabel')}
@@ -176,7 +176,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Bottom CTA strip ── */}
-      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">
@@ -189,13 +189,13 @@ export default async function TransactPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
               href="/transact/mandate"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {t('ctaStripMandate')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-all"
             >
               {t('ctaStripContact')}
             </Link>

@@ -31,7 +31,7 @@ export function GradeProcess() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border py-24 px-6">
+    <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header row */}
@@ -52,7 +52,7 @@ export function GradeProcess() {
               {/* Always visible row */}
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full text-left grid grid-cols-[64px_1fr_auto] gap-6 px-6 py-7 hover:bg-ag-off-white transition-colors"
+                className="rounded-lg w-full text-left grid grid-cols-[64px_1fr_auto] gap-6 px-6 py-7 hover:bg-ag-off-white transition-colors"
               >
                 <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex font-bold">
                   {num}

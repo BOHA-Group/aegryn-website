@@ -23,7 +23,7 @@ export default async function EditLotPage({
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
         <Link href="/admin/transaction/lots" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
           ← Lots
         </Link>
@@ -31,7 +31,7 @@ export default async function EditLotPage({
         <h1 className="font-sans font-bold text-gray-900 text-[15px]">
           Modifier le lot — {lot.name}
         </h1>
-        <span className="ml-2 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
+        <span className="rounded-lg ml-2 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
           #{lot.lot_number}
         </span>
       </header>

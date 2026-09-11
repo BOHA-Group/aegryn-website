@@ -90,7 +90,7 @@ export default async function TransactBidsPage({
           ))}
           {lots && (
             <select
-              className="ml-auto text-[11px] font-mono border border-gray-200 px-3 py-1.5 text-gray-600 bg-white"
+              className="rounded-lg ml-auto text-[11px] font-mono border border-gray-200 px-3 py-1.5 text-gray-600 bg-white"
               defaultValue={asset ?? ''}
               onChange={() => {}}
             >

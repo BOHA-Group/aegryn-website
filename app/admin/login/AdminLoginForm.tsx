@@ -93,7 +93,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
     return (
       <form onSubmit={handleMfaSubmit} className="flex flex-col gap-5">
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-700 text-[12px] px-4 py-3">
+          <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-[12px] px-4 py-3">
             {error}
           </div>
         )}
@@ -112,14 +112,14 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
             value={mfaCode}
             onChange={e => setMfaCode(e.target.value.replace(/\D/g, ''))}
             placeholder="123456"
-            className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[16px] text-center tracking-widest font-mono focus:outline-none focus:border-gray-600 transition-colors"
+            className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[16px] text-center tracking-widest font-mono focus:outline-none focus:border-gray-600 transition-colors"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading || mfaCode.length !== 6}
-          className="w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+          className="rounded-lg w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {loading ? 'Vérification...' : 'Vérifier'}
         </button>
@@ -131,7 +131,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
 
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 text-[12px] px-4 py-3">
+        <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-[12px] px-4 py-3">
           {error}
         </div>
       )}
@@ -147,7 +147,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder="admin@boha-group.com"
-          className="w-full border border-gray-200 bg-white text-gray-900 placeholder:text-gray-300 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
+          className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 placeholder:text-gray-300 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
         />
       </div>
 
@@ -163,7 +163,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="••••••••••••"
-            className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 pr-12 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
+            className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 pr-12 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
           />
           <button
             type="button"
@@ -178,7 +178,7 @@ export default function AdminLoginForm({ errorParam }: { errorParam?: string }) 
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+        className="rounded-lg w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
       >
         {loading ? 'Connexion...' : (
           <>

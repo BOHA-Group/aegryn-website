@@ -76,7 +76,7 @@ export default async function TransactionSessionPage({ params }: Props) {
                 className="object-contain"
                 sizes="166px"
               />
-              <span className="absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
+              <span className="rounded-lg absolute top-3 left-3 bg-ag-apex text-ag-navy font-mono font-semibold text-[10px] tracking-[0.14em] uppercase px-3 py-1.5">
                 {t('sessionCardStatus')}
               </span>
             </div>
@@ -105,13 +105,13 @@ export default async function TransactionSessionPage({ params }: Props) {
                 {hasLotAccess ? (
                   <Link
                     href="/transact/teaser-preview"
-                    className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
+                    className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:bg-ag-navy-mid transition-colors"
                   >
                     {t('sessionCardCtaPreview')}
                   </Link>
                 ) : (
                   <div className="flex flex-col gap-1.5">
-                    <span className="inline-flex items-center gap-2 bg-ag-off-white border border-ag-border text-ag-gray-light font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 cursor-not-allowed select-none">
+                    <span className="rounded-lg inline-flex items-center gap-2 bg-ag-off-white border border-ag-border text-ag-gray-light font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 cursor-not-allowed select-none">
                       <Lock size={11} /> {t('sessionCardCtaPreview')}
                     </span>
                     <p className="font-sans text-[11px] text-ag-gray-light leading-tight">
@@ -129,13 +129,13 @@ export default async function TransactionSessionPage({ params }: Props) {
                 )}
                 <Link
                   href="/transact/catalog"
-                  className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors"
+                  className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-black hover:text-ag-black transition-colors"
                 >
                   {t('sessionCardCtaCatalog')}
                 </Link>
                 <Link
                   href={{ pathname: '/transact/catalog', hash: 'notify' }}
-                  className="inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
+                  className="rounded-lg inline-flex items-center gap-2 border border-ag-apex/40 text-ag-apex-ink font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex/10 transition-colors"
                 >
                   <Bell size={11} /> {t('sessionCardCtaNotify')}
                 </Link>
@@ -146,7 +146,7 @@ export default async function TransactionSessionPage({ params }: Props) {
       </section>
 
       {/* Waiting list */}
-      <section id="waitlist" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section id="waitlist" className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-xl">
             <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-3">
@@ -173,7 +173,7 @@ export default async function TransactionSessionPage({ params }: Props) {
               <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('sellerDesc')}</p>
               <Link
                 href="/transact/how-to-sell"
-                className="self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+                className="rounded-lg self-start inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
               >
                 {t('sellerCta')} <ArrowUpRight size={13} />
               </Link>

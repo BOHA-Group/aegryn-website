@@ -49,7 +49,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-ag-navy py-32 px-6 md:px-12 border-t border-ag-navy overflow-hidden"
+      className="rounded-lg relative bg-ag-navy py-32 px-6 md:px-12 border-t border-ag-navy overflow-hidden"
     >
       {/* Radial gradient depth — submarine effect */}
       <div
@@ -77,7 +77,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
         <Link
           ref={ctaRef}
           href={href as never}
-          className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-black transition-all duration-300"
+          className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-black transition-all duration-300"
         >
           {cta}
           <ArrowUpRight size={14} />

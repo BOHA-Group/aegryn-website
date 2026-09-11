@@ -64,7 +64,7 @@ export function BuildEngineeringStrip() {
             {chips.map((chip) => (
               <span
                 key={chip}
-                className="beg-chip font-mono text-[10px] tracking-[0.14em] uppercase border border-ag-border bg-ag-white text-ag-gray px-3 py-1.5"
+                className="rounded-lg beg-chip font-mono text-[10px] tracking-[0.14em] uppercase border border-ag-border bg-ag-white text-ag-gray px-3 py-1.5"
               >
                 {chip}
               </span>
@@ -74,7 +74,7 @@ export function BuildEngineeringStrip() {
           {/* Right — CTA */}
           <Link
             href="/services/build"
-            className="shrink-0 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase bg-ag-navy text-white px-6 py-3 hover:bg-ag-navy-mid transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase bg-ag-navy text-white px-6 py-3 hover:bg-ag-navy-mid transition-colors"
           >
             {t('cta')} <ArrowUpRight size={11} />
           </Link>

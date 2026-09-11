@@ -98,7 +98,7 @@ export default async function TransactResultsPage() {
                       >
                         {GRADE_LABELS[r.grade_aeg] ?? r.grade_aeg.toUpperCase()}
                       </span>
-                      <span className="font-sans text-[10px] uppercase tracking-[0.12em] text-ag-gray-light border border-ag-border px-2 py-1">
+                      <span className="rounded-lg font-sans text-[10px] uppercase tracking-[0.12em] text-ag-gray-light border border-ag-border px-2 py-1">
                         {FORMAT_LABELS[r.format] ?? r.format}
                       </span>
                     </div>

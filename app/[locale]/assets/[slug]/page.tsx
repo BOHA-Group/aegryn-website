@@ -81,10 +81,10 @@ export default async function AssetPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="rounded-lg font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
               {categoryLabel}
             </span>
-            <span className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
+            <span className="rounded-lg font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
               {tItems(`${asset.id}.badge`)}
             </span>
             <span className="flex items-center gap-1.5">
@@ -110,13 +110,13 @@ export default async function AssetPage({ params }: Props) {
               href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
             >
               {t('visit')} {asset.name}
               <ArrowUpRight size={14} />
             </a>
           ) : (
-            <span className="inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
+            <span className="rounded-lg inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
               {t('comingSoon')}
             </span>
           )}
@@ -303,7 +303,7 @@ export default async function AssetPage({ params }: Props) {
               {/* 1 — Logo partenaire — référence w-200 */}
               <div className="shrink-0 flex flex-col gap-3">
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Partenaire</p>
-                <div className="border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
+                <div className="rounded-lg border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
                     src="/images/press-village-justice-logo.png"
                     alt="Village de la Justice — By Legi Team"
@@ -326,7 +326,7 @@ export default async function AssetPage({ params }: Props) {
               <div className="shrink-0 flex flex-col gap-3">
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">Article</p>
                 <div className="border border-ag-border bg-ag-white w-[260px]">
-                  <div className="bg-ag-navy px-5 py-3 flex items-center">
+                  <div className="rounded-lg bg-ag-navy px-5 py-3 flex items-center">
                     <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/80">Village de la Justice</span>
                   </div>
                   <div className="px-5 py-5 flex flex-col gap-3">
@@ -368,7 +368,7 @@ export default async function AssetPage({ params }: Props) {
       )}
 
       {/* CTA strip */}
-      <section className="bg-ag-navy py-28 px-6 md:px-12">
+      <section className="rounded-lg bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
@@ -384,14 +384,14 @@ export default async function AssetPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/what-we-build"
-              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
             >
               {t('cta.allAssets')}
               <ArrowUpRight size={14} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-6 py-3 hover:bg-white transition-colors"
             >
               {t('cta.contact')}
               <ArrowUpRight size={14} />

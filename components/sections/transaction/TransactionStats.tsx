@@ -21,7 +21,7 @@ export function TransactionStats() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-ag-navy border-t border-white/10 py-16 px-6">
+    <section ref={ref} className="rounded-lg bg-ag-navy border-t border-white/10 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-10">
           {t('statsLabel')}

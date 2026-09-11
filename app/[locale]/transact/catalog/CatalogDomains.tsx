@@ -45,7 +45,7 @@ export default function CatalogDomains() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-16 px-6 border-t border-ag-border bg-ag-white">
+    <section className="rounded-lg py-16 px-6 border-t border-ag-border bg-ag-white">
       <div className="max-w-7xl mx-auto">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
           DOMAINES COUVERTS

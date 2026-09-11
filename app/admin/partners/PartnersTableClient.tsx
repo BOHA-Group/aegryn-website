@@ -47,7 +47,7 @@ export default function PartnersTableClient({ rows: initial }: { rows: PartnerRo
   return (
     <div>
       {error && (
-        <div className="mb-3 bg-red-50 border border-red-200 px-4 py-2 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg mb-3 bg-red-50 border border-red-200 px-4 py-2 text-[12px] text-red-700">{error}</div>
       )}
       <div className="overflow-x-auto">
         <table className="w-full text-[12px] bg-white border border-gray-200 min-w-[600px]">
@@ -69,14 +69,14 @@ export default function PartnersTableClient({ rows: initial }: { rows: PartnerRo
                   <div className="flex items-center gap-2">
                     <Link
                       href={`/admin/partners/${r.id}`}
-                      className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors"
+                      className="rounded-lg text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors"
                     >
                       Ouvrir →
                     </Link>
                     <button
                       onClick={() => removePartner(r.id, r.full_name ?? r.email ?? r.id)}
                       disabled={deletingId === r.id}
-                      className="flex items-center gap-1 text-[10px] font-semibold text-red-500 hover:text-red-700 border border-red-200 hover:border-red-400 px-2 py-1 transition-colors disabled:opacity-40"
+                      className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-red-500 hover:text-red-700 border border-red-200 hover:border-red-400 px-2 py-1 transition-colors disabled:opacity-40"
                     >
                       {deletingId === r.id
                         ? <Loader2 size={10} className="animate-spin" />

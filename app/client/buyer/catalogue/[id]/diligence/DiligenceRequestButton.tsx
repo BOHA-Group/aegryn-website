@@ -43,7 +43,7 @@ export default function DiligenceRequestButton({ assetId }: { assetId: string })
         type="button"
         disabled={loading}
         onClick={handleRequest}
-        className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 w-fit"
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 w-fit"
       >
         {loading
           ? <Loader2 size={12} className="animate-spin" />

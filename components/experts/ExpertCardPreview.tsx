@@ -100,7 +100,7 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
                 : <span className="text-ag-gray-light italic">Prénom Nom</span>
               }
             </h3>
-            <span className="inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+            <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
               <CheckCircle2 size={9} /> Vérifié
             </span>
           </div>
@@ -154,7 +154,7 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
 
       {/* Banner max expertises atteint */}
       {specialtyNodes.length >= 5 && (
-        <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200">
+        <div className="rounded-lg flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200">
           <AlertTriangle size={10} className="text-amber-500 shrink-0" />
           <p className="font-mono text-[10px] text-amber-700">
             Max 5 expertises — choisissez les plus représentatives
@@ -194,12 +194,12 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
       {(data.email_public || data.website) && (
         <div className="flex gap-2 flex-wrap">
           {data.email_public && (
-            <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy">
+            <span className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-navy text-ag-navy">
               <Mail size={10} /> Contact
             </span>
           )}
           {data.website && (
-            <span className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray">
+            <span className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 border border-ag-border text-ag-gray">
               <Globe size={10} /> Site
             </span>
           )}

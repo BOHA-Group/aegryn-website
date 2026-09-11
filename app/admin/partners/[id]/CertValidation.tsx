@@ -66,7 +66,7 @@ function CertRow({ cert }: { cert: Cert }) {
       <button
         type="button"
         onClick={() => setOpen(o => !o)}
-        className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors text-left"
+        className="rounded-lg w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors text-left"
       >
         <div className="flex items-center gap-4">
           <div>
@@ -97,7 +97,7 @@ function CertRow({ cert }: { cert: Cert }) {
           {cert.observations && (
             <div>
               <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1">Observations admin enregistrées</p>
-              <p className="text-[12px] text-gray-700 leading-relaxed bg-white border border-gray-100 px-3 py-2">{cert.observations}</p>
+              <p className="rounded-lg text-[12px] text-gray-700 leading-relaxed bg-white border border-gray-100 px-3 py-2">{cert.observations}</p>
             </div>
           )}
           {cert.subcodes && cert.subcodes.length > 0 && (
@@ -105,7 +105,7 @@ function CertRow({ cert }: { cert: Cert }) {
               <p className="text-[9px] font-mono uppercase tracking-widest text-gray-400 mb-1">Sous-codes</p>
               <div className="flex flex-wrap gap-1.5">
                 {cert.subcodes.map(code => (
-                  <span key={code} className="font-mono text-[10px] border border-gray-200 bg-white px-2 py-0.5 text-gray-600">{code}</span>
+                  <span key={code} className="rounded-lg font-mono text-[10px] border border-gray-200 bg-white px-2 py-0.5 text-gray-600">{code}</span>
                 ))}
               </div>
             </div>
@@ -125,21 +125,21 @@ function CertRow({ cert }: { cert: Cert }) {
                   value={amount}
                   onChange={e => setAmount(e.target.value)}
                   placeholder="ex: 800"
-                  className="border border-gray-200 px-3 py-1.5 text-[12px] font-mono w-32 focus:outline-none focus:border-gray-500"
+                  className="rounded-lg border border-gray-200 px-3 py-1.5 text-[12px] font-mono w-32 focus:outline-none focus:border-gray-500"
                 />
               </div>
               <div className="flex gap-2">
                 <button
                   disabled={saving}
                   onClick={() => act('validate')}
-                  className="flex items-center gap-1.5 bg-emerald-600 text-white text-[10px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-50"
+                  className="rounded-lg flex items-center gap-1.5 bg-emerald-600 text-white text-[10px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-50"
                 >
                   <CheckCircle2 size={12} /> Valider
                 </button>
                 <button
                   disabled={saving}
                   onClick={() => act('reject')}
-                  className="flex items-center gap-1.5 border border-red-200 text-red-600 text-[10px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-red-400 transition-colors disabled:opacity-50"
+                  className="rounded-lg flex items-center gap-1.5 border border-red-200 text-red-600 text-[10px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-red-400 transition-colors disabled:opacity-50"
                 >
                   <XCircle size={12} /> Refuser
                 </button>
@@ -155,7 +155,7 @@ function CertRow({ cert }: { cert: Cert }) {
                 value={reason}
                 onChange={e => setReason(e.target.value)}
                 placeholder="Méthodologie insuffisante, délai dépassé…"
-                className="w-full border border-gray-200 px-3 py-1.5 text-[12px] focus:outline-none focus:border-gray-500"
+                className="rounded-lg w-full border border-gray-200 px-3 py-1.5 text-[12px] focus:outline-none focus:border-gray-500"
               />
             </div>
           )}
@@ -184,7 +184,7 @@ export default function CertValidation({
 
   return (
     <div className="bg-white border border-gray-200 mb-6">
-      <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+      <div className="rounded-lg px-6 py-4 bg-gray-50 flex items-center justify-between">
         <div>
           <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">
             Co-signatures assignées ({certs.length})

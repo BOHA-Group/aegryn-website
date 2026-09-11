@@ -54,7 +54,7 @@ export default function AdminForgotPasswordPage() {
         <div className="bg-white border border-[#D9D2C2] p-8">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             {error && (
-              <p className="text-[12px] text-red-600 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
+              <p className="rounded-lg text-[12px] text-red-600 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
             )}
             <div>
               <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Email</label>
@@ -64,13 +64,13 @@ export default function AdminForgotPasswordPage() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="admin@boha-group.com"
-                className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
+                className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600 transition-colors"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 disabled:opacity-50"
+              className="rounded-lg w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 disabled:opacity-50"
             >
               {loading ? 'Envoi...' : 'Envoyer le lien'}
             </button>

@@ -146,11 +146,11 @@ export function ProprietaryAssetsGrid() {
   }
 
   return (
-    <section className="bg-ag-white border-t border-ag-border py-12 px-6">
+    <section className="rounded-lg bg-ag-white border-t border-ag-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Publisher note */}
-        <div className="mb-8 flex items-start gap-3 border border-ag-apex/20 bg-ag-apex/5 px-5 py-4">
+        <div className="rounded-lg mb-8 flex items-start gap-3 border border-ag-apex/20 bg-ag-apex/5 px-5 py-4">
           <Info size={14} className="text-ag-apex-ink mt-0.5 shrink-0" />
           <div className="flex flex-col gap-1">
             <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
@@ -203,7 +203,7 @@ export function ProprietaryAssetsGrid() {
                 </div>
                 {/* Publisher badge */}
                 {asset.publisherReady && (
-                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink shrink-0">
+                  <span className="rounded-lg font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink shrink-0">
                     LICENCIABLE
                   </span>
                 )}

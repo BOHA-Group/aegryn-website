@@ -78,7 +78,7 @@ export default async function DataRoomConsultationsPage({ params }: Props) {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
+      <div className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
           <Link
             href={`/client/seller/actifs/${id}/documents`}
@@ -108,7 +108,7 @@ export default async function DataRoomConsultationsPage({ params }: Props) {
         </div>
 
         {totalSuspicious > 0 && (
-          <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 px-5 py-4">
+          <div className="rounded-lg flex items-start gap-3 bg-amber-50 border border-amber-200 px-5 py-4">
             <AlertTriangle size={16} className="text-amber-600 shrink-0 mt-0.5" />
             <p className="text-[12px] text-amber-800 leading-relaxed">
               <span className="font-semibold">{totalSuspicious} activité(s) suspecte(s)</span> détectée(s)

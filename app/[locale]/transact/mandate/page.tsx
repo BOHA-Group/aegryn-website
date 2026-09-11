@@ -53,7 +53,7 @@ export default async function MandatePage({ params }: Props) {
       </section>
 
       {/* ── NDA ── */}
-      <section className="py-16 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-16 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">
             {t('ndaLabel')}

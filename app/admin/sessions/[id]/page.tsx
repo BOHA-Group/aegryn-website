@@ -23,13 +23,13 @@ export default async function EditSessionPage({
 
   return (
     <div className="min-h-screen bg-[#F5F3EE]">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
         <Link href="/admin/sessions" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
           ← Sessions
         </Link>
         <span className="text-gray-200">|</span>
         <h1 className="font-sans font-bold text-gray-900 text-[15px]">Modifier la session</h1>
-        <span className="ml-2 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
+        <span className="rounded-lg ml-2 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
           {session.status}
         </span>
       </header>

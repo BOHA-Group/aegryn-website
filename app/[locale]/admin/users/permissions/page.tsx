@@ -164,7 +164,7 @@ export default function AdminPermissionsPage() {
                 suppression de comptes, gestion des permissions, suppression d'actifs, paramètres système, modification finances.
               </p>
               <p className="text-[12px] text-amber-700 mt-2">
-                Les utilisateurs avec rôle <code className="px-1 py-0.5 bg-amber-100 font-mono">internal</code> n'ont accès à l'espace admin 
+                Les utilisateurs avec rôle <code className="rounded-lg px-1 py-0.5 bg-amber-100 font-mono">internal</code> n'ont accès à l'espace admin 
                 que si au moins une permission leur est attribuée.
               </p>
             </div>

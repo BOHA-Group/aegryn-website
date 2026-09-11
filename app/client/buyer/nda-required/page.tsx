@@ -37,7 +37,7 @@ export default async function NdaRequiredPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
+      <div className="rounded-lg bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
         <div className="max-w-3xl mx-auto flex items-center gap-3">
           <Shield size={16} className="text-ag-apex shrink-0" />
           <div>
@@ -50,12 +50,12 @@ export default async function NdaRequiredPage() {
       <div className="max-w-3xl mx-auto px-6 py-10 space-y-10">
 
         {/* Intro */}
-        <div className="bg-white border border-gray-200 px-8 py-6">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-6">
           <p className="text-[13px] text-gray-600 leading-relaxed">{t('introText')}</p>
         </div>
 
         {/* Texte NDA complet */}
-        <div className="bg-white border border-gray-200 px-8 py-8 space-y-8 text-[13px] text-gray-700 leading-relaxed">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-8 space-y-8 text-[13px] text-gray-700 leading-relaxed">
 
           {/* Titre */}
           <div className="border-b border-gray-100 pb-6">
@@ -65,7 +65,7 @@ export default async function NdaRequiredPage() {
           </div>
 
           {/* Parties */}
-          <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-2">
+          <div className="rounded-lg bg-gray-50 px-5 py-4 text-[12px] space-y-2">
             <p><strong>{t('partiesLabel')}</strong></p>
             <p><strong>{t('mainSubtitle')}</strong>, {t('partiesAegryn').split(', ').slice(1).join(', ')}</p>
             <p className="text-gray-400">{t('partiesAnd')}</p>
@@ -139,7 +139,7 @@ export default async function NdaRequiredPage() {
         </div>
 
         {/* Formulaire d'acceptation */}
-        <div className="bg-white border border-ag-navy/20 px-8 py-6 space-y-4">
+        <div className="rounded-lg bg-white border border-ag-navy/20 px-8 py-6 space-y-4">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy">
             {t('acceptSectionLabel')}
           </p>

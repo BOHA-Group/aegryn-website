@@ -92,9 +92,9 @@ export default async function SellerNdaPage() {
             <table className="mt-3 w-full text-[12px] font-mono border-collapse">
               <thead>
                 <tr className="bg-gray-100 text-gray-600">
-                  <th className="text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
-                  <th className="text-right px-3 py-2 border border-gray-200">Taux</th>
-                  <th className="text-right px-3 py-2 border border-gray-200">Minimum</th>
+                  <th className="rounded-lg text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
+                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Taux</th>
+                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Minimum</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
@@ -107,9 +107,9 @@ export default async function SellerNdaPage() {
                   ['> 5 000 000 €', 'taux convenu au mandat', '25 000 CHF'],
                 ].map(([tranche, taux, min]) => (
                   <tr key={tranche}>
-                    <td className="px-3 py-1.5 border border-gray-200">{tranche}</td>
-                    <td className="px-3 py-1.5 border border-gray-200 text-right">{taux}</td>
-                    <td className="px-3 py-1.5 border border-gray-200 text-right">{min}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200">{tranche}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{taux}</td>
+                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{min}</td>
                   </tr>
                 ))}
               </tbody>
@@ -161,7 +161,7 @@ export default async function SellerNdaPage() {
             </p>
           </section>
 
-          <div className="bg-gray-50 border border-gray-200 px-5 py-3">
+          <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-3">
             <p className="font-mono text-[10px] text-gray-400">Version {NDA_VERSIONS.seller} — Aegryn Confidentiality Agreement — Seller</p>
           </div>
         </div>

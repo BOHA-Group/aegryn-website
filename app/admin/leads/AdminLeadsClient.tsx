@@ -91,7 +91,7 @@ function InviteButton({
     return (
       <a
         href={`/admin/members/new?email=${encodeURIComponent(email)}`}
-        className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors whitespace-nowrap"
+        className="rounded-lg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors whitespace-nowrap"
       >
         Créer membre
       </a>
@@ -128,7 +128,7 @@ function InviteButton({
     <button
       onClick={onInvite}
       disabled={state === 'loading'}
-      className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
+      className="rounded-lg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
     >
       {state === 'loading' ? '...' : state === 'error' ? 'Réessayer' : 'Inviter'}
     </button>
@@ -208,7 +208,7 @@ function ProspectsTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
             <Td mono>{fmtDate(r.created_at)}</Td>
             <Td>{[r.first_name, r.last_name].filter(Boolean).join(' ') || '—'}</Td>
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
-            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{PROFILE_LABELS[String(r.profile_type ?? '')] ?? String(r.profile_type ?? '—')}</span></Td>
+            <Td><span className="rounded-lg px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{PROFILE_LABELS[String(r.profile_type ?? '')] ?? String(r.profile_type ?? '—')}</span></Td>
             <Td>{String(r.ticket_range ?? '—')}</Td>
             <Td small>{Array.isArray(r.sectors_interest) ? r.sectors_interest.join(', ') : '—'}</Td>
             <Td>{r.marketing_consent ? '✓' : '—'}</Td>
@@ -258,7 +258,7 @@ function ApproveAccessButton({ id, email }: { id: string; email: string }) {
     <button
       onClick={onApprove}
       disabled={state === 'loading'}
-      className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
+      className="rounded-lg px-3 py-1 text-[10px] font-semibold uppercase tracking-wide border border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white transition-colors disabled:opacity-50 whitespace-nowrap"
     >
       {state === 'loading' ? '...' : state === 'error' ? 'Réessayer' : 'Approuver'}
     </button>
@@ -280,7 +280,7 @@ function TransactionAccessTable({ rows, onDelete }: { rows: Record<string, unkno
             <Td>{String(r.full_name ?? '—')}</Td>
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
             <Td>{String(r.company ?? '—')}</Td>
-            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{BUYER_LABELS[String(r.buyer_type ?? '')] ?? String(r.buyer_type ?? '—')}</span></Td>
+            <Td><span className="rounded-lg px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{BUYER_LABELS[String(r.buyer_type ?? '')] ?? String(r.buyer_type ?? '—')}</span></Td>
             <Td>{String(r.capacity ?? '—')}</Td>
             <Td small>{r.message ? String(r.message).slice(0, 60) + (String(r.message).length > 60 ? '…' : '') : '—'}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
@@ -311,7 +311,7 @@ function AlliancesTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
           <tr key={i} className="hover:bg-gray-50">
             <Td mono>{fmtDate(r.created_at)}</Td>
             <Td>{String(r.organization_name ?? '—')}</Td>
-            <Td><span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{String(r.alliance_type ?? '—')}</span></Td>
+            <Td><span className="rounded-lg px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{String(r.alliance_type ?? '—')}</span></Td>
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
             <Td>{String(r.country ?? '—')}</Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
@@ -494,7 +494,7 @@ export default function AdminLeadsClient({
 
       {/* Barre sélection + suppression */}
       {rows.length > 0 && (
-        <div className="flex items-center gap-3 bg-white border border-gray-200 px-4 py-2.5">
+        <div className="rounded-lg flex items-center gap-3 bg-white border border-gray-200 px-4 py-2.5">
           <button onClick={toggleAll} className="flex items-center gap-1.5 font-mono text-[10px] text-gray-500 hover:text-gray-800">
             {allSelected
               ? <CheckSquare size={14} className="text-red-600" />
@@ -509,7 +509,7 @@ export default function AdminLeadsClient({
               <button
                 onClick={deleteSelected}
                 disabled={deleting}
-                className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 transition-colors disabled:opacity-50"
+                className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 transition-colors disabled:opacity-50"
               >
                 {deleting ? <Loader2 size={11} className="animate-spin" /> : <Trash2 size={11} />}
                 Supprimer
@@ -524,7 +524,7 @@ export default function AdminLeadsClient({
       )}
 
       {deleteError && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{deleteError}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{deleteError}</div>
       )}
 
       {/* Table */}

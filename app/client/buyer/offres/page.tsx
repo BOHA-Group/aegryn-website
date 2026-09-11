@@ -81,7 +81,7 @@ export default async function BuyerOffresPage() {
           </p>
         </div>
         <Link href="/client/buyer/notifications"
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
           <Gavel size={11} /> Mes alertes
         </Link>
       </div>
@@ -100,13 +100,13 @@ export default async function BuyerOffresPage() {
 
       {/* Liste */}
       {!bids || bids.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-16 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
           <Gavel size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400 mb-4">
             Vous n&apos;avez pas encore soumis d&apos;offre.
           </p>
           <Link href="/client/buyer/notifications"
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
             Mes alertes <ArrowUpRight size={10} />
           </Link>
         </div>

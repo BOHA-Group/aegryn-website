@@ -218,7 +218,7 @@ export default async function BuyerKycPage() {
       </div>
 
       {/* Info RGPD */}
-      <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
+      <div className="rounded-lg mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
           <strong>{t('gdprNotice')} :</strong> Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA (Loi sur le Blanchiment d&apos;Argent) et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à <a href="mailto:legal@boha-group.com" className="text-ag-navy underline">legal@boha-group.com</a>.
         </p>

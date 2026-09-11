@@ -81,7 +81,7 @@ function DeleteButton({ id, name: _name }: { id: string; name: string }) {
     return (
       <button
         onClick={() => setConfirm(true)}
-        className="font-mono text-[9px] uppercase tracking-widest text-red-400 border border-red-200 px-2 py-1 hover:bg-red-50 transition-colors whitespace-nowrap"
+        className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-red-400 border border-red-200 px-2 py-1 hover:bg-red-50 transition-colors whitespace-nowrap"
       >
         Supprimer
       </button>
@@ -94,13 +94,13 @@ function DeleteButton({ id, name: _name }: { id: string; name: string }) {
       <button
         onClick={handleDelete}
         disabled={isPending}
-        className="font-mono text-[9px] uppercase tracking-widest text-white bg-red-600 border border-red-600 px-2 py-1 hover:bg-red-700 transition-colors disabled:opacity-50 whitespace-nowrap"
+        className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-white bg-red-600 border border-red-600 px-2 py-1 hover:bg-red-700 transition-colors disabled:opacity-50 whitespace-nowrap"
       >
         {isPending ? '…' : 'Oui, supprimer'}
       </button>
       <button
         onClick={() => setConfirm(false)}
-        className="font-mono text-[9px] text-gray-500 border border-gray-200 px-2 py-1 hover:bg-gray-50 transition-colors"
+        className="rounded-lg font-mono text-[9px] text-gray-500 border border-gray-200 px-2 py-1 hover:bg-gray-50 transition-colors"
       >
         Annuler
       </button>
@@ -198,12 +198,12 @@ export function MembersClient({
               placeholder="Rechercher par nom ou email…"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="border border-gray-200 px-3 py-2 text-[12px] font-sans w-72 focus:outline-none focus:border-gray-400"
+              className="rounded-lg border border-gray-200 px-3 py-2 text-[12px] font-sans w-72 focus:outline-none focus:border-gray-400"
             />
             <select
               value={roleFilter}
               onChange={e => setRoleFilter(e.target.value)}
-              className="border border-gray-200 px-3 py-2 text-[11px] font-mono uppercase tracking-wide focus:outline-none focus:border-gray-400 bg-white"
+              className="rounded-lg border border-gray-200 px-3 py-2 text-[11px] font-mono uppercase tracking-wide focus:outline-none focus:border-gray-400 bg-white"
             >
               <option value="all">Tous les rôles</option>
               <option value="buyer">Acheteur</option>
@@ -262,7 +262,7 @@ export function MembersClient({
                         <div className="flex flex-col gap-1.5">
                           <Link
                             href={`/admin/members/${p.id}`}
-                            className="font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-2 py-1 hover:bg-[#0F1A2B] hover:text-white transition-colors whitespace-nowrap text-center"
+                            className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-2 py-1 hover:bg-[#0F1A2B] hover:text-white transition-colors whitespace-nowrap text-center"
                           >
                             Détail →
                           </Link>
@@ -331,7 +331,7 @@ export function MembersClient({
                         {r.buyer_email && profileIdByEmail[r.buyer_email] ? (
                           <Link
                             href={`/admin/members/${profileIdByEmail[r.buyer_email]}`}
-                            className="font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-2 py-1 hover:bg-[#0F1A2B] hover:text-white transition-colors whitespace-nowrap"
+                            className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-[#0F1A2B] border border-[#0F1A2B]/20 px-2 py-1 hover:bg-[#0F1A2B] hover:text-white transition-colors whitespace-nowrap"
                           >
                             Profil →
                           </Link>

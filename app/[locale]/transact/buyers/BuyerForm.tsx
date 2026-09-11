@@ -125,7 +125,7 @@ export default function BuyerForm() {
         </p>
         <Link
           href="/transact/sessions"
-          className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors mt-2"
+          className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors mt-2"
         >
           Voir les sessions TRANSACT <ArrowUpRight size={11} />
         </Link>
@@ -280,7 +280,7 @@ export default function BuyerForm() {
         <button
           type="submit"
           disabled={!canSubmit || loading}
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+          className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
         >
           {loading ? <Loader2 size={13} className="animate-spin" /> : <ArrowUpRight size={13} />}
           Soumettre ma demande

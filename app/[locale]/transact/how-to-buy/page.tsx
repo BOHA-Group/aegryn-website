@@ -52,7 +52,7 @@ export default async function TransactBuyPage({ params }: Props) {
           </p>
           <Link
             href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
           </Link>
@@ -98,7 +98,7 @@ export default async function TransactBuyPage({ params }: Props) {
       </section>
 
       {/* ── Mandat d'acquisition — conditions ── */}
-      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
             <div>
@@ -126,7 +126,7 @@ export default async function TransactBuyPage({ params }: Props) {
               </ul>
               <Link
                 href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
-                className="self-start inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-black transition-colors mt-4"
+                className="rounded-lg self-start inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-2.5 hover:bg-ag-black transition-colors mt-4"
               >
                 {tm('segment.buy.cta')} <ArrowUpRight size={11} />
               </Link>
@@ -136,7 +136,7 @@ export default async function TransactBuyPage({ params }: Props) {
       </section>
 
       {/* ── NDA ── */}
-      <section className="py-16 px-6 bg-ag-navy border-t border-white/10">
+      <section className="rounded-lg py-16 px-6 bg-ag-navy border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">
@@ -151,7 +151,7 @@ export default async function TransactBuyPage({ params }: Props) {
           </div>
           <Link
             href={{ pathname: '/transact/mandate', query: { type: 'buy' } }}
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {tm('ndaCta')} <ArrowUpRight size={13} />
           </Link>

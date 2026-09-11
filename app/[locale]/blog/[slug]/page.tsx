@@ -212,9 +212,9 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* AI Act art. 50 — mention éditoriale (si article assisté par IA) */}
       {article.aiAssisted && (
-        <section className="py-6 px-6 border-t border-ag-border bg-ag-off-white">
+        <section className="rounded-lg py-6 px-6 border-t border-ag-border bg-ag-off-white">
           <div className="max-w-3xl mx-auto flex items-start gap-3">
-            <span className="shrink-0 mt-0.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5">
+            <span className="rounded-lg shrink-0 mt-0.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5">
               IA
             </span>
             <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
@@ -237,16 +237,16 @@ export default async function ArticlePage({ params }: Props) {
       </section>
 
       {/* Related CTA */}
-      <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
+      <section className="rounded-lg py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-sans font-semibold text-ag-black text-[17px] max-w-md">
             {t('ctaTeaser')}
           </p>
           <div className="flex gap-3 shrink-0">
-            <Link href="/grade" className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors">
+            <Link href="/grade" className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors">
               {t('ctaGrade')} <ArrowUpRight size={12} />
             </Link>
-            <Link href="/transact" className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
+            <Link href="/transact" className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
               {t('ctaTransaction')}
             </Link>
           </div>

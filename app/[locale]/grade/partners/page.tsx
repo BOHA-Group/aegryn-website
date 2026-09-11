@@ -69,7 +69,7 @@ export default async function GradePartnersPage() {
       </section>
 
       {/* CTA partenaires potentiels */}
-      <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
+      <section className="rounded-lg py-20 px-6 border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('ctaLabel')}</p>
@@ -81,7 +81,7 @@ export default async function GradePartnersPage() {
             </p>
             <Link
               href={"/alliances?tab=certification" as never}
-              className="inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
             >
               {t('ctaBtn')} <ArrowUpRight size={13} />
             </Link>

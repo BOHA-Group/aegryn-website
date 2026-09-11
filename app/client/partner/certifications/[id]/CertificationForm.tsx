@@ -102,7 +102,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
             value={score}
             onChange={e => setScore(e.target.value)}
             placeholder="ex. 21"
-            className="w-32 bg-gray-50 border border-gray-300 px-3 py-2 font-mono text-[14px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+            className="rounded-lg w-32 bg-gray-50 border border-gray-300 px-3 py-2 font-mono text-[14px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
 
@@ -139,7 +139,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
             value={summary}
             onChange={e => setSummary(e.target.value)}
             placeholder="Décrivez votre analyse et les points clés validés sur cette dimension."
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
           />
         </div>
 
@@ -153,7 +153,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
             value={reserves}
             onChange={e => setReserves(e.target.value)}
             placeholder="Points d'attention ou conditions suspensives à mentionner."
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
           />
         </div>
 
@@ -176,7 +176,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
         </div>
 
         {error && (
-          <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
+          <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
         )}
 
         {/* Actions */}
@@ -184,7 +184,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
           <button
             onClick={() => handleSubmit('submit')}
             disabled={loading}
-            className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
           >
             {loading ? <Loader2 size={11} className="animate-spin" /> : <CheckCircle2 size={11} />}
             Valider la co-signature
@@ -192,7 +192,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
           <button
             onClick={() => handleSubmit('decline')}
             disabled={loading}
-            className="flex items-center gap-2 text-red-500 border border-red-200 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-red-50 transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-2 text-red-500 border border-red-200 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-red-50 transition-colors disabled:opacity-50"
           >
             <XCircle size={11} />
             Décliner la mission

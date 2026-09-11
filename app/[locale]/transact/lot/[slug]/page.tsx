@@ -175,13 +175,13 @@ function AccessDeniedScreen({
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <NextLink
             href="/client/buyer"
-            className="inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors"
+            className="rounded-lg inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors"
           >
             Mon espace acquéreur <ArrowUpRight size={12} />
           </NextLink>
           <Link
             href="/transact/catalog"
-            className="inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
+            className="rounded-lg inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
           >
             {t('backToCatalog')}
           </Link>

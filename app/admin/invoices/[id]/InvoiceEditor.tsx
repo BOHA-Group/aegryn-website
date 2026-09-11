@@ -171,21 +171,21 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
         <div className="flex items-center gap-2">
           <Link
             href="/admin/invoices"
-            className="inline-flex items-center gap-1.5 border border-gray-200 text-gray-500 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-400 hover:text-gray-800 transition-colors"
+            className="rounded-lg inline-flex items-center gap-1.5 border border-gray-200 text-gray-500 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-400 hover:text-gray-800 transition-colors"
           >
             <ArrowLeft size={10} /> Toutes les factures
           </Link>
           <button
             onClick={() => downloadPdf()}
             disabled={pdfing}
-            className="inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-500 hover:text-gray-900 transition-colors disabled:opacity-50"
+            className="rounded-lg inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:border-gray-500 hover:text-gray-900 transition-colors disabled:opacity-50"
           >
             <Download size={11} /> {pdfing ? 'PDF…' : 'Télécharger PDF'}
           </button>
           <button
             onClick={() => save()}
             disabled={saving}
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-3 py-2 hover:bg-ag-black transition-colors disabled:opacity-50"
           >
             <Save size={11} /> {saving ? 'Enreg…' : saved ? '✓ Sauvé' : 'Enregistrer'}
           </button>
@@ -193,7 +193,7 @@ export default function InvoiceEditor({ invoice: initial, isNew }: Props) {
       </div>
 
       {error && (
-        <div className="mb-4 bg-red-50 border border-red-200 px-4 py-3 font-sans text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg mb-4 bg-red-50 border border-red-200 px-4 py-3 font-sans text-[12px] text-red-700">{error}</div>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8">

@@ -77,7 +77,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
   }
 
   return (
-    <section className="bg-ag-white border-t border-ag-border py-12 px-6">
+    <section className="rounded-lg bg-ag-white border-t border-ag-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Filter bar */}
         <div className="flex items-center gap-1 flex-wrap mb-12 border-b border-ag-border pb-6">
@@ -155,7 +155,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                   </span>
                 )}
                 {asset.transactionEligible && (
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-navy bg-ag-apex/15 border border-ag-apex/30 px-2 py-0.5">
+                  <span className="rounded-lg font-mono text-[10px] tracking-[0.1em] uppercase text-ag-navy bg-ag-apex/15 border border-ag-apex/30 px-2 py-0.5">
                     {t('transactionEligible')}
                   </span>
                 )}
@@ -208,13 +208,13 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
           <div className="flex gap-3 shrink-0">
             <Link
               href="/grade/submit"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
             >
               {t('ctaGrade')} <ArrowUpRight size={11} />
             </Link>
             <Link
               href="/transact"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
             >
               {t('ctaTransaction')}
             </Link>

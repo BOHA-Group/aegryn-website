@@ -105,7 +105,7 @@ export default async function AdminKycPage({
             <p className="text-[12px] text-gray-400 mt-1">Validation des documents d&apos;identité, KYC et UBO — Acquéreurs, Cédants et Partenaires</p>
           </div>
           <div className="flex gap-2">
-            <Link href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+            <Link href={`/admin`} className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
               ← Dashboard
             </Link>
           </div>
@@ -178,7 +178,7 @@ export default async function AdminKycPage({
                       </td>
                       <td className="px-4 py-3">
                         <Link href={`/admin/kyc/${r.user_id}`}
-                          className="text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">
+                          className="rounded-lg text-[10px] font-semibold text-gray-700 border border-gray-300 px-2 py-1 hover:border-gray-500 transition-colors">
                           Ouvrir dossier →
                         </Link>
                       </td>

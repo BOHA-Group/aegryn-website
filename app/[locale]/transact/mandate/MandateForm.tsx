@@ -112,7 +112,7 @@ export default function MandateForm() {
         </p>
         <Link
           href="/transact"
-          className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+          className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
         >
           {tNav('transact')} <ArrowUpRight size={12} />
         </Link>
@@ -322,7 +322,7 @@ export default function MandateForm() {
       )}
 
       {/* ══ 4. DROIT SUISSE ═══════════════════════════════ */}
-      <div className="border border-ag-apex/25 bg-ag-apex/5 px-5 py-4 flex items-start gap-3">
+      <div className="rounded-lg border border-ag-apex/25 bg-ag-apex/5 px-5 py-4 flex items-start gap-3">
         <Scale size={13} className="text-ag-apex shrink-0 mt-0.5" />
         <div className="flex items-start gap-3">
           <input
@@ -346,7 +346,7 @@ export default function MandateForm() {
       <button
         type="submit"
         disabled={loading || !swissAccept || !mandateType}
-        className="inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="rounded-lg inline-flex items-center gap-3 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-8 py-4 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {loading ? tf('submitting') : mandateType ? t(`segment.${mandateType}.cta`) : tf('submit')}
         {!loading && <ArrowUpRight size={13} />}

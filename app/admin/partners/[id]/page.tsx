@@ -65,14 +65,14 @@ export default async function AdminPartnerDetailPage({
               <div className="flex gap-2 shrink-0">
                 <Link
                   href={`/admin/assets?partner_id=${id}`}
-                  className="border border-gray-300 text-gray-600 text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:border-gray-500 transition-colors"
+                  className="rounded-lg border border-gray-300 text-gray-600 text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:border-gray-500 transition-colors"
                   title="Sélectionner un actif, puis ouvrir Moteur Grade pour co-certification CAS 1"
                 >
                   + Assignation CIFSO
                 </Link>
                 <Link
                   href={`/admin/partners/${id}/create-mandate`}
-                  className="bg-gray-900 text-white text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:bg-gray-700 transition-colors"
+                  className="rounded-lg bg-gray-900 text-white text-[10px] font-semibold uppercase tracking-wide px-3 py-2 hover:bg-gray-700 transition-colors"
                 >
                   + Mandat client
                 </Link>
@@ -86,7 +86,7 @@ export default async function AdminPartnerDetailPage({
 
             {/* Apports d'affaires */}
             <div className="bg-white border border-gray-200 mb-6">
-              <div className="px-6 py-4 bg-gray-50"><p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Apports d'affaires ({(refs ?? []).length})</p></div>
+              <div className="rounded-lg px-6 py-4 bg-gray-50"><p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Apports d'affaires ({(refs ?? []).length})</p></div>
               {(refs ?? []).length === 0 ? (
                 <div className="p-8 text-center text-[12px] text-gray-400">Aucun apport référencé.</div>
               ) : (
@@ -97,7 +97,7 @@ export default async function AdminPartnerDetailPage({
                         <p className="font-semibold text-gray-800 text-[13px]">{String(r.contact_name)} — {String(r.introduction_type) === 'asset' ? 'Actif' : 'Acquéreur'}</p>
                         <p className="text-[11px] text-gray-400">{String(r.contact_email)}</p>
                       </div>
-                      <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(r.introduction_status)}</span>
+                      <span className="rounded-lg px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(r.introduction_status)}</span>
                     </div>
                   ))}
                 </div>
@@ -106,7 +106,7 @@ export default async function AdminPartnerDetailPage({
 
             {/* Mandats clients CAS 3 */}
             <div className="bg-white border border-gray-200 mb-6">
-              <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+              <div className="rounded-lg px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Mandats clients — CAS 3 ({(mandates ?? []).length})</p>
                 <Link
                   href={`/admin/partners/${id}/create-mandate`}
@@ -138,13 +138,13 @@ export default async function AdminPartnerDetailPage({
 
             {/* Documents KYC */}
             <div className="bg-white border border-gray-200 mb-6">
-              <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+              <div className="rounded-lg px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">
                     Documents KYC ({(kycDocs ?? []).length})
                   </p>
                   {kycPending > 0 && (
-                    <span className="font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-yellow-50 text-yellow-700 border border-yellow-200">
+                    <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-yellow-50 text-yellow-700 border border-yellow-200">
                       {kycPending} en attente
                     </span>
                   )}
@@ -176,7 +176,7 @@ export default async function AdminPartnerDetailPage({
 
             {/* Commissions */}
             <div className="bg-white border border-gray-200">
-              <div className="px-6 py-4 bg-gray-50 flex items-center justify-between">
+              <div className="rounded-lg px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Commissions ({(comms ?? []).length})</p>
                 <Link href={`/admin/commissions`} className="text-[10px] text-gray-400 hover:text-gray-700">Voir toutes →</Link>
               </div>
@@ -188,7 +188,7 @@ export default async function AdminPartnerDetailPage({
                     <div key={String(c.id)} className="px-6 py-4 flex items-center justify-between">
                       <p className="text-[12px] text-gray-700">{String(c.type)}</p>
                       <p className="font-mono text-[12px] text-gray-700">{c.amount_chf ? `${c.amount_chf} CHF` : '—'}</p>
-                      <span className="px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(c.status)}</span>
+                      <span className="rounded-lg px-2 py-0.5 text-[10px] uppercase font-semibold bg-gray-100 text-gray-700">{String(c.status)}</span>
                     </div>
                   ))}
                 </div>

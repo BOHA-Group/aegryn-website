@@ -101,7 +101,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
             </label>
             <input
               name="buyerName" required
-              className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
+              className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
               placeholder={t('placeholderName')}
             />
           </div>
@@ -111,7 +111,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
             </label>
             <input
               name="buyerEmail" type="email" required
-              className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
+              className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
               placeholder={t('placeholderEmail')}
             />
           </div>
@@ -124,7 +124,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
             </label>
             <input
               name="buyerCompany"
-              className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
+              className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white"
               placeholder={t('placeholderCompany')}
             />
           </div>
@@ -134,7 +134,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
             </label>
             <select
               name="buyerType"
-              className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black transition-colors bg-white"
+              className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black transition-colors bg-white"
             >
               <option value="">{t('selectDefault')}</option>
               {BUYER_TYPES.map(bt => (
@@ -150,7 +150,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
           </label>
           <select
             name="capacity"
-            className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black transition-colors bg-white"
+            className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black transition-colors bg-white"
           >
             <option value="">{t('selectDefault')}</option>
             {CAPACITIES.map(c => <option key={c} value={c}>{c}</option>)}
@@ -163,20 +163,20 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
           </label>
           <textarea
             name="message" rows={3}
-            className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white resize-none"
+            className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light/50 focus:outline-none focus:border-ag-black transition-colors bg-white resize-none"
             placeholder={t('placeholderMessage')}
           />
         </div>
 
         {error && (
-          <p className="font-sans text-[12px] text-red-600 bg-red-50 border border-red-200 px-3 py-2">
+          <p className="rounded-lg font-sans text-[12px] text-red-600 bg-red-50 border border-red-200 px-3 py-2">
             {error}
           </p>
         )}
 
         <button
           type="submit" disabled={loading}
-          className="w-full bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-black transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+          className="rounded-lg w-full bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-black transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {loading ? t('sending') : t('submit')} {!loading && <ArrowUpRight size={12} />}
         </button>

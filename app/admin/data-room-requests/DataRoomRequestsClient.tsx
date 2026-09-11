@@ -89,7 +89,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
             <button
               type="button"
               onClick={() => toggle(row.id)}
-              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors"
+              className="rounded-lg w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-gray-50 transition-colors"
             >
               {/* Statut */}
               <span className={`shrink-0 border px-2 py-0.5 font-mono text-[9px] uppercase font-bold ${statusBadge(row.status)}`}>
@@ -156,7 +156,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
                           value={bidAmounts[row.id] ?? (row.bid_amount_chf?.toString() ?? '')}
                           onChange={e => setBidAmounts(p => ({ ...p, [row.id]: e.target.value }))}
                           placeholder="ex: 500000"
-                          className="w-full border border-gray-200 px-3 py-2 text-[12px] font-mono focus:outline-none focus:border-ag-navy/40"
+                          className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[12px] font-mono focus:outline-none focus:border-ag-navy/40"
                         />
                         {bidAmounts[row.id] && (
                           <p className="font-mono text-[10px] text-indigo-600 mt-1">
@@ -170,7 +170,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
                           rows={2}
                           value={adminNotes[row.id] ?? (row.admin_note ?? '')}
                           onChange={e => setAdminNotes(p => ({ ...p, [row.id]: e.target.value }))}
-                          className="w-full border border-gray-200 px-3 py-2 text-[12px] resize-none focus:outline-none focus:border-ag-navy/40"
+                          className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[12px] resize-none focus:outline-none focus:border-ag-navy/40"
                         />
                       </div>
                     </div>
@@ -180,7 +180,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
                         type="button"
                         disabled={saving[row.id] || !bidAmounts[row.id]}
                         onClick={() => review(row.id, 'approve')}
-                        className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
+                        className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-emerald-600 text-white px-4 py-2 hover:bg-emerald-700 transition-colors disabled:opacity-40"
                       >
                         {saving[row.id] ? <Loader2 size={11} className="animate-spin" /> : <CheckCircle2 size={11} />}
                         Approuver + notifier
@@ -189,7 +189,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
                         type="button"
                         disabled={saving[row.id]}
                         onClick={() => review(row.id, 'reject')}
-                        className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-red-200 text-red-600 px-4 py-2 hover:bg-red-50 transition-colors disabled:opacity-40"
+                        className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-red-200 text-red-600 px-4 py-2 hover:bg-red-50 transition-colors disabled:opacity-40"
                       >
                         {saving[row.id] ? <Loader2 size={11} className="animate-spin" /> : <XCircle size={11} />}
                         Refuser
@@ -209,7 +209,7 @@ export default function DataRoomRequestsClient({ rows: initialRows }: { rows: Ro
                       type="button"
                       disabled={saving[row.id]}
                       onClick={() => review(row.id, 'revoke')}
-                      className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 hover:text-gray-600 transition-colors disabled:opacity-40"
+                      className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 hover:text-gray-600 transition-colors disabled:opacity-40"
                     >
                       {saving[row.id] ? <Loader2 size={10} className="animate-spin" /> : 'Révoquer'}
                     </button>

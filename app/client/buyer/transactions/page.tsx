@@ -76,13 +76,13 @@ export default async function BuyerTransactionsPage() {
       </div>
 
       {!transactions || transactions.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-16 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
           <ArrowRightLeft size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400 mb-4">
             {t('noTransactions')} Soumettez une offre pour démarrer un processus d&apos;acquisition.
           </p>
           <Link href="/client/buyer/notifications"
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors">
             Mes alertes <ArrowUpRight size={10} />
           </Link>
         </div>
@@ -150,7 +150,7 @@ export default async function BuyerTransactionsPage() {
 
                 {/* Actions pending */}
                 {tx.status === 'ap_signed' && !tx.ap_accepted_buyer && (
-                  <div className="mx-5 mb-4 px-4 py-2.5 bg-amber-50 border border-amber-200">
+                  <div className="rounded-lg mx-5 mb-4 px-4 py-2.5 bg-amber-50 border border-amber-200">
                     <p className="font-sans text-[11px] text-amber-800">
                       ⚠️ Votre validation de l&apos;Accord de Principe est attendue.
                     </p>

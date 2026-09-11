@@ -222,7 +222,7 @@ export default function MemberDetailClient({
               <button
                 onClick={saveProfile}
                 disabled={saving || isPending}
-                className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy/90 transition-colors disabled:opacity-50"
+                className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy/90 transition-colors disabled:opacity-50"
               >
                 <Save size={12} />
                 {saving ? 'Enregistrement…' : 'Sauvegarder'}
@@ -249,7 +249,7 @@ export default function MemberDetailClient({
           <button
             onClick={deleteAccount}
             disabled={deleting}
-            className="flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-lg flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Trash2 size={12} />
             {deleting ? 'Suppression…' : 'Supprimer le compte'}
@@ -270,7 +270,7 @@ export default function MemberDetailClient({
             <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between">
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA profil — Acceptations en ligne</p>
               {ndaAcceptances.length > 0 && (
-                <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
+                <span className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
                   {ndaAcceptances.length} signature{ndaAcceptances.length > 1 ? 's' : ''}
                 </span>
               )}
@@ -292,7 +292,7 @@ export default function MemberDetailClient({
                   {ndaAcceptances.map((a, i) => (
                     <tr key={i} className="hover:bg-gray-50/50">
                       <td className="px-4 py-3">
-                        <span className="font-mono text-[10px] font-semibold uppercase px-2 py-0.5 bg-ag-navy/10 text-ag-navy">
+                        <span className="rounded-lg font-mono text-[10px] font-semibold uppercase px-2 py-0.5 bg-ag-navy/10 text-ag-navy">
                           {NDA_TYPE_LABELS[String(a.nda_type)] ?? String(a.nda_type)}
                         </span>
                       </td>
@@ -314,7 +314,7 @@ export default function MemberDetailClient({
             <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between">
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-500">NDA Transaction — Signature plateforme</p>
               {ndaSignatures.length > 0 && (
-                <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
+                <span className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold">
                   Signé
                 </span>
               )}
@@ -393,23 +393,23 @@ export default function MemberDetailClient({
                         <div className="flex flex-wrap gap-1">
                           {status === 'pending' && <>
                             <button onClick={() => updateNda(ndaId, 'approved')}
-                              className="font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-emerald-200 text-emerald-600 hover:bg-emerald-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-emerald-200 text-emerald-600 hover:bg-emerald-50 transition-colors">
                               Approuver
                             </button>
                             <button onClick={() => updateNda(ndaId, 'rejected')}
-                              className="font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-red-200 text-red-500 hover:bg-red-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-red-200 text-red-500 hover:bg-red-50 transition-colors">
                               Rejeter
                             </button>
                           </>}
                           {status === 'approved' && (
                             <button onClick={() => updateNda(ndaId, 'nda_sent')}
-                              className="font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors">
                               NDA envoyé ✓
                             </button>
                           )}
                           {status === 'nda_sent' && (
                             <button onClick={() => updateNda(ndaId, 'nda_signed')}
-                              className="font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-purple-200 text-purple-600 hover:bg-purple-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-purple-200 text-purple-600 hover:bg-purple-50 transition-colors">
                               NDA signé ✓
                             </button>
                           )}
@@ -472,13 +472,13 @@ export default function MemberDetailClient({
                         <div className="flex flex-wrap gap-1">
                           {status !== 'validated' && (
                             <button onClick={() => updateKyc(docId, 'validated')}
-                              className="font-mono text-[9px] uppercase px-2 py-1 border border-emerald-200 text-emerald-600 hover:bg-emerald-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase px-2 py-1 border border-emerald-200 text-emerald-600 hover:bg-emerald-50 transition-colors">
                               Valider
                             </button>
                           )}
                           {status !== 'rejected' && (
                             <button onClick={() => updateKyc(docId, 'rejected')}
-                              className="font-mono text-[9px] uppercase px-2 py-1 border border-red-200 text-red-500 hover:bg-red-50 transition-colors">
+                              className="rounded-lg font-mono text-[9px] uppercase px-2 py-1 border border-red-200 text-red-500 hover:bg-red-50 transition-colors">
                               Rejeter
                             </button>
                           )}
@@ -610,7 +610,7 @@ export default function MemberDetailClient({
       )}
 
       {isPending && (
-        <div className="fixed bottom-4 right-4 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2">
+        <div className="rounded-lg fixed bottom-4 right-4 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2">
           Mise à jour…
         </div>
       )}

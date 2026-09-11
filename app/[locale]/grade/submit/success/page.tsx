@@ -26,14 +26,14 @@ export default function GradeSubmitSuccessPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/grade"
-            className="inline-flex items-center gap-2 border border-white/20 text-white/60 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 border border-white/20 text-white/60 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-colors"
           >
             Retour au Grade
           </Link>
           {process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
             <NextLink
               href="/client/login"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               Accéder à mon espace
             </NextLink>

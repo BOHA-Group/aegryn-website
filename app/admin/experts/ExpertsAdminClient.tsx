@@ -94,7 +94,7 @@ function ApplicationRow({
   return (
     <div className="border border-gray-200 bg-white">
       <div
-        className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
+        className="rounded-lg flex items-center justify-between gap-4 px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
         onClick={() => setExpanded(e => !e)}
       >
         <div className="flex items-center gap-4 min-w-0">
@@ -136,30 +136,30 @@ function ApplicationRow({
           <div className="flex flex-wrap gap-2">
             {app.status !== 'contacted' && (
               <button onClick={() => patch('contacted')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-200 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-200 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors">
                 Contacté
               </button>
             )}
             {app.status !== 'approved' && (
               <button onClick={() => patch('approved')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
                 ✓ Approuver
               </button>
             )}
             {app.status !== 'rejected' && (
               <button onClick={() => patch('rejected')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
                 Rejeter
               </button>
             )}
             {app.status !== 'pending' && (
               <button onClick={() => patch('pending')} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-400 hover:border-gray-400 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-400 hover:border-gray-400 disabled:opacity-50 transition-colors">
                 Réinitialiser
               </button>
             )}
             <button onClick={del} disabled={loading}
-              className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
+              className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
               Supprimer
             </button>
           </div>
@@ -222,7 +222,7 @@ function ProfileRow({
   return (
     <div id={`expert-${profile.user_id}`} className="border border-gray-200 bg-white scroll-mt-4">
       <div
-        className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
+        className="rounded-lg flex items-center justify-between gap-4 px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
         onClick={() => setExpanded(e => !e)}
       >
         <div className="flex items-center gap-4 min-w-0">
@@ -299,12 +299,12 @@ function ProfileRow({
 
           {/* Actions fiche */}
           {patchError && (
-            <div className="mb-3 bg-red-50 border border-red-200 px-3 py-2 text-[11px] text-red-700">
+            <div className="rounded-lg mb-3 bg-red-50 border border-red-200 px-3 py-2 text-[11px] text-red-700">
               {patchError}
             </div>
           )}
           {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && (!kycOk || !planOk) && (
-            <p className="mb-3 font-sans text-[11px] text-blue-600 bg-blue-50 border border-blue-100 px-3 py-2">
+            <p className="rounded-lg mb-3 font-sans text-[11px] text-blue-600 bg-blue-50 border border-blue-100 px-3 py-2">
               Fiche approuvée — prérequis manquants : {!kycOk && 'KYC'}{!kycOk && !planOk && ' + '}{!planOk && 'abonnement'}. Publication automatique dès qu&apos;ils seront actifs, ou utilisez &quot;Publier directement&quot;.
             </p>
           )}
@@ -314,7 +314,7 @@ function ProfileRow({
               <button
                 onClick={() => patchProfile({ review_status: 'approved', hidden_reason: null })}
                 disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors">
                 ✓ Approuver la fiche
               </button>
             )}
@@ -322,38 +322,38 @@ function ProfileRow({
               <button
                 onClick={() => { if (confirm('Publier manuellement cette fiche sans vérifier les prérequis ?')) patchProfile({ is_visible: true, verified_at: new Date().toISOString(), hidden_reason: null }) }}
                 disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-300 text-blue-700 bg-blue-50 hover:bg-blue-100 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-300 text-blue-700 bg-blue-50 hover:bg-blue-100 disabled:opacity-50 transition-colors">
                 ⚡ Publier directement
               </button>
             )}
             {profile.is_visible && (
               <button onClick={() => patchProfile({ hidden_reason: 'admin_hidden', skip_email: true })} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
                 Masquer (silencieux)
               </button>
             )}
             {!profile.is_visible && profile.hidden_reason === 'admin_hidden' && (
               <button onClick={() => patchProfile({ hidden_reason: null })} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-200 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-blue-200 text-blue-600 hover:bg-blue-50 disabled:opacity-50 transition-colors">
                 Réafficher
               </button>
             )}
             {profile.review_status !== 'rejected' && (
               <button onClick={() => setShowRefuse(v => !v)} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50 transition-colors">
                 Refuser avec motif
               </button>
             )}
             {profile.review_status === 'rejected' && (
               <button onClick={() => patchProfile({ review_status: 'pending_review', hidden_reason: null })} disabled={loading}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors">
                 Réinitialiser (repasser en révision)
               </button>
             )}
             <button
               onClick={() => { if (confirm('Vider tout le contenu de cette fiche ? Le partenaire devra la reconstruire depuis zéro.')) patchProfile({ reset: true }) }}
               disabled={loading}
-              className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors">
+              className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors">
               Vider la fiche
             </button>
           </div>
@@ -365,12 +365,12 @@ function ProfileRow({
                 placeholder="Motif du refus…"
                 value={refuseReason}
                 onChange={e => setRefuseReason(e.target.value)}
-                className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400"
+                className="rounded-lg flex-1 border border-gray-200 px-3 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400"
               />
               <button
                 onClick={() => { patchProfile({ review_status: 'rejected', hidden_reason: refuseReason }); setShowRefuse(false) }}
                 disabled={loading || !refuseReason}
-                className="font-mono text-[9px] uppercase tracking-widest px-3 py-2 bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 transition-colors"
+                className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-2 bg-red-500 text-white hover:bg-red-600 disabled:opacity-50 transition-colors"
               >
                 Confirmer
               </button>
@@ -383,7 +383,7 @@ function ProfileRow({
               Abonnement — <span className="text-gray-400 normal-case tracking-normal">géré par le partenaire via Stripe. Les crédits manuels sont dans le bloc ci-dessous.</span>
             </p>
             <button onClick={del} disabled={loading}
-              className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
+              className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
               Supprimer fiche
             </button>
           </div>
@@ -433,7 +433,7 @@ function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] })
     <div className="bg-white border border-gray-200">
       <button
         onClick={() => setOpen(v => !v)}
-        className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+        className="rounded-lg w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-2">
           <PlusCircle size={14} className="text-ag-navy" />
@@ -456,7 +456,7 @@ function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] })
               <select
                 value={userId}
                 onChange={e => setUserId(e.target.value)}
-                className="w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                className="rounded-lg w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                 required
               >
                 <option value="">— Sélectionner —</option>
@@ -480,7 +480,7 @@ function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] })
                   max={24}
                   value={months}
                   onChange={e => setMonths(e.target.value)}
-                  className="w-24 border border-gray-300 px-3 py-2 font-mono text-[14px] focus:outline-none focus:border-ag-navy"
+                  className="rounded-lg w-24 border border-gray-300 px-3 py-2 font-mono text-[14px] focus:outline-none focus:border-ag-navy"
                   required
                 />
               </div>
@@ -494,7 +494,7 @@ function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] })
                   value={note}
                   onChange={e => setNote(e.target.value)}
                   placeholder="Raison du crédit…"
-                  className="w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
+                  className="rounded-lg w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
                 />
               </div>
             </div>
@@ -503,7 +503,7 @@ function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] })
               <button
                 type="submit"
                 disabled={loading || !userId}
-                className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {loading && <Loader2 size={12} className="animate-spin" />}
                 Créditer les mois
@@ -608,13 +608,13 @@ function TractionPanel({
     <div className="bg-white border border-gray-200 mb-6">
       <button
         onClick={() => setOpen(v => !v)}
-        className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
+        className="rounded-lg w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-2">
           <TrendingUp size={14} className="text-ag-apex" />
           <h2 className="font-sans font-bold text-gray-900 text-[14px]">Traction réseau — Suivi des clics fiches</h2>
           {totalClicks > 0 && (
-            <span className="font-mono text-[9px] font-bold px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+            <span className="rounded-lg font-mono text-[9px] font-bold px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
               {totalClicks} clics total
             </span>
           )}
@@ -644,7 +644,7 @@ function TractionPanel({
             <button
               onClick={purgeAll}
               disabled={purgingAll || totalAll === 0}
-              className="ml-auto flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-40 transition-colors"
+              className="rounded-lg ml-auto flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-40 transition-colors"
             >
               {purgingAll ? <Loader2 size={9} className="animate-spin" /> : <Trash2 size={9} />}
               Purger tous les clics
@@ -721,7 +721,7 @@ function TractionPanel({
                           onClick={() => purgeClicks(r.expert_id, `${r.first_name} ${r.last_name}`)}
                           disabled={purgingId === r.expert_id || r.total_clicks === 0}
                           title="Supprimer les clics de cet expert"
-                          className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest px-2 py-1 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-30 transition-colors"
+                          className="rounded-lg inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-widest px-2 py-1 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-30 transition-colors"
                         >
                           {purgingId === r.expert_id ? <Loader2 size={9} className="animate-spin" /> : <Trash2 size={9} />}
                         </button>
@@ -805,7 +805,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           <button
             onClick={() => refresh()}
             disabled={isRefreshing}
-            className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 disabled:opacity-50 transition-colors"
+            className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-3 py-1.5 hover:border-gray-400 disabled:opacity-50 transition-colors"
           >
             {isRefreshing ? 'Chargement…' : 'Actualiser'}
           </button>
@@ -816,14 +816,14 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Candidatures formulaire</h2>
             {pendingCount > 0 && (
-              <span className="bg-red-500 text-white font-mono text-[9px] font-bold px-2 py-0.5">
+              <span className="rounded-lg bg-red-500 text-white font-mono text-[9px] font-bold px-2 py-0.5">
                 {pendingCount} en attente
               </span>
             )}
           </div>
 
           {apps.length === 0 ? (
-            <p className="font-sans text-[12px] text-gray-400 border border-gray-200 bg-white px-5 py-4">Aucune candidature.</p>
+            <p className="rounded-lg font-sans text-[12px] text-gray-400 border border-gray-200 bg-white px-5 py-4">Aucune candidature.</p>
           ) : (
             <div className="flex flex-col gap-2">
               {apps.map(app => (
@@ -838,7 +838,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           <div className="flex items-center gap-3 mb-4">
             <h2 className="font-sans font-bold text-gray-900 text-[15px]">Fiches experts</h2>
             {profs.filter(p => isPending(p)).length > 0 && (
-              <span className="bg-orange-500 text-white font-mono text-[9px] font-bold px-2 py-0.5">
+              <span className="rounded-lg bg-orange-500 text-white font-mono text-[9px] font-bold px-2 py-0.5">
                 {profs.filter(p => isPending(p)).length} à réviser
               </span>
             )}
@@ -863,7 +863,7 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
           </div>
 
           {filteredProfs.length === 0 ? (
-            <p className="font-sans text-[12px] text-gray-400 border border-gray-200 bg-white px-5 py-4">Aucune fiche.</p>
+            <p className="rounded-lg font-sans text-[12px] text-gray-400 border border-gray-200 bg-white px-5 py-4">Aucune fiche.</p>
           ) : (
             <div className="flex flex-col gap-2">
               {filteredProfs.map(p => (

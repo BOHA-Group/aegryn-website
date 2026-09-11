@@ -106,7 +106,7 @@ export default function DeletePartialSection() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="font-mono text-[10px] uppercase tracking-widest text-orange-500 border border-orange-200 px-3 py-1.5 hover:bg-orange-50 transition-colors"
+        className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-orange-500 border border-orange-200 px-3 py-1.5 hover:bg-orange-50 transition-colors"
       >
         {t('deletePartialChoose')}
       </button>
@@ -157,14 +157,14 @@ export default function DeletePartialSection() {
             type="button"
             onClick={() => setConfirming(true)}
             disabled={selected.size === 0}
-            className="bg-orange-500 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="rounded-lg bg-orange-500 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
             {t('deletePartialSubmit', { count: selected.size })}
           </button>
           <button
             type="button"
             onClick={() => { setOpen(false); setSelected(new Set()) }}
-            className="border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors"
+            className="rounded-lg border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors"
           >
             {t('deletePartialCancel')}
           </button>
@@ -179,7 +179,7 @@ export default function DeletePartialSection() {
               type="button"
               onClick={handleSubmit}
               disabled={loading}
-              className="bg-orange-600 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-700 transition-colors disabled:opacity-50"
+              className="rounded-lg bg-orange-600 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-orange-700 transition-colors disabled:opacity-50"
             >
               {loading ? t('deletePartialConfirming') : t('deletePartialConfirm')}
             </button>
@@ -187,7 +187,7 @@ export default function DeletePartialSection() {
               type="button"
               onClick={() => setConfirming(false)}
               disabled={loading}
-              className="border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-50"
+              className="rounded-lg border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-50"
             >
               {t('deletePartialBack')}
             </button>

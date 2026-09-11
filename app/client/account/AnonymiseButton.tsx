@@ -36,7 +36,7 @@ export default function AnonymiseButton({ userId: _userId }: { userId: string })
       <button
         type="button"
         onClick={() => setConfirming(true)}
-        className="font-mono text-[10px] uppercase tracking-widest text-orange-500 border border-orange-200 px-3 py-1.5 hover:bg-orange-50 transition-colors shrink-0"
+        className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-orange-500 border border-orange-200 px-3 py-1.5 hover:bg-orange-50 transition-colors shrink-0"
       >
         Anonymiser
       </button>
@@ -54,7 +54,7 @@ export default function AnonymiseButton({ userId: _userId }: { userId: string })
           type="button"
           onClick={handleAnonymise}
           disabled={loading}
-          className="bg-orange-500 text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 hover:bg-orange-600 transition-colors disabled:opacity-50"
+          className="rounded-lg bg-orange-500 text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 hover:bg-orange-600 transition-colors disabled:opacity-50"
         >
           {loading ? '...' : 'Confirmer'}
         </button>
@@ -62,7 +62,7 @@ export default function AnonymiseButton({ userId: _userId }: { userId: string })
           type="button"
           onClick={() => setConfirming(false)}
           disabled={loading}
-          className="border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 hover:border-gray-500 transition-colors disabled:opacity-50"
+          className="rounded-lg border border-gray-300 text-gray-500 font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 hover:border-gray-500 transition-colors disabled:opacity-50"
         >
           Annuler
         </button>

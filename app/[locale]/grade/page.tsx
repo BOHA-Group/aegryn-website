@@ -47,7 +47,7 @@ export default async function GradePage({ params }: Props) {
       <GradeProcess />
 
       {/* Submit CTA */}
-      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">
@@ -64,13 +64,13 @@ export default async function GradePage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
               href="/grade/submit"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {tSubmit('cta')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/grade/methodology"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('marketCtaSecondary')}
             </Link>

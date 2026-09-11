@@ -305,7 +305,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
 
       {/* ── Banner dynamique ── */}
       {isVisible && (
-        <div className="border border-emerald-200 bg-emerald-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-emerald-500 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-emerald-800">Fiche publiée dans l&apos;annuaire</p>
@@ -314,7 +314,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isSelfHidden && (
-        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-gray-700">Fiche masquée</p>
@@ -323,7 +323,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isApprovedMissingPrereqs && (
-        <div className="border border-amber-200 bg-amber-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-amber-500 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-amber-800">Fiche validée — prérequis manquants avant publication</p>
@@ -336,7 +336,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isApprovedReady && (
-        <div className="border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-blue-500 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche validée — prête à publier</p>
@@ -345,7 +345,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isPending && (
-        <div className="border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-blue-500 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-blue-800">Fiche soumise — en attente de validation Aegryn</p>
@@ -354,7 +354,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isRefused && (
-        <div className="border border-red-200 bg-red-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-red-400 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-red-700">Fiche refusée par l&apos;équipe Aegryn</p>
@@ -365,7 +365,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isDraft && (
-        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-gray-700">Brouillon — fiche non soumise</p>
@@ -374,7 +374,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         </div>
       )}
       {isNew && (
-        <div className="border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 flex items-start gap-3">
           <CheckCircle2 size={15} className="text-gray-400 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans font-semibold text-[12px] text-gray-700">Nouvelle fiche</p>
@@ -403,7 +403,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
               type="button"
               onClick={() => fileRef.current?.click()}
               disabled={avatarLoading}
-              className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest border border-gray-200 px-3 py-2 text-gray-600 hover:border-gray-400 disabled:opacity-50 transition-colors"
+              className="rounded-lg flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest border border-gray-200 px-3 py-2 text-gray-600 hover:border-gray-400 disabled:opacity-50 transition-colors"
             >
               <Upload size={12} />
               {avatarUrl ? 'Changer la photo' : 'Ajouter une photo'}
@@ -421,37 +421,37 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Prénom *</label>
             <input required value={form.first_name} onChange={e => setForm(p => ({ ...p, first_name: e.target.value }))}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Nom *</label>
             <input required value={form.last_name} onChange={e => setForm(p => ({ ...p, last_name: e.target.value }))}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
         </div>
         <div className="mb-4">
           <label className="font-sans text-[11px] text-gray-600 block mb-1">Titre / Profession * <span className="text-gray-400">(ex: Avocat M&A, Expert-comptable)</span></label>
           <input required value={form.profession} onChange={e => setForm(p => ({ ...p, profession: e.target.value }))}
             maxLength={100}
-            className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+            className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
         </div>
         <div className="mb-4">
           <label className="font-sans text-[11px] text-gray-600 block mb-1">Cabinet / Organisation</label>
           <input value={form.organization} onChange={e => setForm(p => ({ ...p, organization: e.target.value }))}
             maxLength={150}
-            className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+            className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Ville</label>
             <input value={form.city} onChange={e => setForm(p => ({ ...p, city: e.target.value }))}
               maxLength={100}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
           <div>
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Pays</label>
             <select value={form.country_code} onChange={e => setForm(p => ({ ...p, country_code: e.target.value }))}
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white appearance-none">
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white appearance-none">
               {COUNTRY_OPTIONS.map(c => <option key={c.code} value={c.code}>{c.label}</option>)}
             </select>
           </div>
@@ -467,7 +467,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         <textarea value={form.bio} onChange={e => setForm(p => ({ ...p, bio: e.target.value }))}
           maxLength={1200} rows={5}
           placeholder="Décrivez votre parcours, votre expertise et la valeur ajoutée que vous apportez aux transactions Aegryn…"
-          className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white resize-none" />
+          className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white resize-none" />
       </div>
 
       {/* Domaines d'expertise — sélecteur 3 étapes */}
@@ -505,7 +505,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Email public <span className="text-gray-400">(visible dans l&apos;annuaire)</span></label>
             <input type="email" value={form.email_public} onChange={e => setForm(p => ({ ...p, email_public: e.target.value }))}
               placeholder="contact@cabinet.ch"
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
 
           {/* Téléphone avec indicatif */}
@@ -515,7 +515,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
               <select
                 value={form.phone_country}
                 onChange={e => setForm(p => ({ ...p, phone_country: e.target.value, phone: '' }))}
-                className="border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
+                className="rounded-lg border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
               >
                 {COUNTRY_OPTIONS.map(c => (
                   <option key={c.code} value={c.code}>{c.dial} {c.label}</option>
@@ -532,7 +532,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
                 }}
                 placeholder={`${phoneCountryData.maxLen} chiffres max`}
                 maxLength={phoneCountryData.maxLen + 4}
-                className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white"
+                className="rounded-lg flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white"
               />
             </div>
             <p className="font-sans text-[10px] text-gray-400 mt-1">
@@ -544,7 +544,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             <label className="font-sans text-[11px] text-gray-600 block mb-1">Site web</label>
             <input type="url" value={form.website} onChange={e => setForm(p => ({ ...p, website: e.target.value }))}
               placeholder="https://…"
-              className="w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+              className="rounded-lg w-full border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
           </div>
 
           {/* Honoraires EUR ou CHF */}
@@ -556,7 +556,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
               <select
                 value={form.rate_currency}
                 onChange={e => setForm(p => ({ ...p, rate_currency: e.target.value }))}
-                className="border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
+                className="rounded-lg border border-gray-200 px-2 py-2 font-sans text-[12px] focus:outline-none focus:border-gray-400 bg-white shrink-0"
               >
                 <option value="CHF">CHF</option>
                 <option value="EUR">EUR</option>
@@ -566,7 +566,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
                 value={form.min_rate_eur ?? ''}
                 onChange={e => setForm(p => ({ ...p, min_rate_eur: e.target.value ? Number(e.target.value) : null }))}
                 placeholder="ex: 250"
-                className="flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
+                className="rounded-lg flex-1 border border-gray-200 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-gray-400 bg-white" />
             </div>
           </div>
         </div>
@@ -574,16 +574,16 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
 
       {/* Erreur / Succès */}
       {error && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
       )}
       {saved && (
-        <div className="bg-gray-50 border border-gray-200 px-4 py-3 text-[12px] text-gray-700 flex items-center gap-2">
+        <div className="rounded-lg bg-gray-50 border border-gray-200 px-4 py-3 text-[12px] text-gray-700 flex items-center gap-2">
           <CheckCircle2 size={14} className="text-gray-400" />
           Modifications enregistrées. Cliquez sur <strong className="ml-1">Soumettre pour revue</strong> pour déclencher la validation admin.
         </div>
       )}
       {submitted && (
-        <div className="bg-blue-50 border border-blue-200 px-4 py-3 text-[12px] text-blue-700 flex items-center gap-2">
+        <div className="rounded-lg bg-blue-50 border border-blue-200 px-4 py-3 text-[12px] text-blue-700 flex items-center gap-2">
           <CheckCircle2 size={14} className="text-blue-500" />
           Fiche soumise pour validation — l&apos;équipe Aegryn vous répondra sous 48h.
         </div>
@@ -594,7 +594,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
         <button
           type="submit"
           disabled={saving || submitting}
-          className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 border border-gray-300 bg-white text-gray-700 hover:border-gray-500 disabled:opacity-50 transition-colors"
+          className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 border border-gray-300 bg-white text-gray-700 hover:border-gray-500 disabled:opacity-50 transition-colors"
         >
           {saving && <Loader2 size={13} className="animate-spin" />}
           {isNew ? 'Enregistrer la fiche' : 'Enregistrer les modifications'}
@@ -606,7 +606,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             type="button"
             disabled={saving || submitting}
             onClick={handleSubmitForReview}
-            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
+            className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
             Soumettre pour revue
@@ -618,7 +618,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
           <button
             type="button"
             disabled
-            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-blue-50 text-blue-400 border border-blue-200 cursor-not-allowed opacity-70"
+            className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-blue-50 text-blue-400 border border-blue-200 cursor-not-allowed opacity-70"
           >
             En attente de validation…
           </button>
@@ -629,7 +629,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
           <button
             type="button"
             disabled
-            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed"
+            className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed"
             title={!kycApproved ? 'KYC requis' : 'Abonnement requis'}
           >
             Publier ma fiche {!kycApproved ? '— KYC requis' : '— Abonnement requis'}
@@ -642,7 +642,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             type="button"
             disabled={saving || submitting}
             onClick={handleSubmitForReview}
-            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
+            className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-6 py-3 bg-ag-navy text-white hover:bg-gray-800 disabled:opacity-50 transition-colors"
           >
             {submitting && <Loader2 size={13} className="animate-spin" />}
             Publier ma fiche
@@ -655,7 +655,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             type="button"
             disabled={saving || submitting}
             onClick={handleUnpublish}
-            className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors"
+            className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-gray-200 text-gray-500 hover:border-gray-400 disabled:opacity-50 transition-colors"
           >
             Masquer ma fiche
           </button>
@@ -667,7 +667,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             type="button"
             disabled={saving || submitting}
             onClick={handleRepublish}
-            className="font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors"
+            className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-emerald-200 text-emerald-700 hover:bg-emerald-50 disabled:opacity-50 transition-colors"
           >
             Réafficher ma fiche
           </button>
@@ -679,7 +679,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
             type="button"
             disabled={saving || submitting}
             onClick={handleReset}
-            className="ml-auto font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors"
+            className="rounded-lg ml-auto font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors"
           >
             Repartir de zéro
           </button>
@@ -696,7 +696,7 @@ export default function ExpertProfileForm({ existing, kycApproved, subscriptionA
       <button
         type="button"
         onClick={() => setShowPreview(v => !v)}
-        className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest bg-ag-navy text-white px-3 py-2 shadow-lg hover:bg-gray-800 transition-colors"
+        className="rounded-lg flex items-center gap-2 font-mono text-[9px] uppercase tracking-widest bg-ag-navy text-white px-3 py-2 shadow-lg hover:bg-gray-800 transition-colors"
       >
         {showPreview ? <EyeOff size={11} /> : <Eye size={11} />}
         {showPreview ? 'Masquer l\'aperçu' : 'Voir l\'aperçu'}

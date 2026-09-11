@@ -7,7 +7,7 @@ export default async function NewSessionPage() {
 
   return (
     <div className="min-h-screen bg-[#F5F3EE]">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
         <Link href="/admin/sessions" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
           ← Sessions
         </Link>

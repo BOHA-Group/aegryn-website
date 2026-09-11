@@ -81,13 +81,13 @@ export default async function TermsUsePage({ params }: Props) {
         <div className="mt-16 pt-10 border-t border-ag-border flex flex-wrap gap-4">
           <Link
             href="/terms/cgv"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
           >
             {t('ctaCgv')} <ArrowUpRight size={12} />
           </Link>
           <Link
             href="/privacy"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-5 py-3 hover:border-ag-black hover:text-ag-black transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-5 py-3 hover:border-ag-black hover:text-ag-black transition-colors"
           >
             {t('ctaPrivacy')} <ArrowUpRight size={12} />
           </Link>

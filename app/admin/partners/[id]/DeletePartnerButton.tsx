@@ -45,7 +45,7 @@ export default function DeletePartnerButton({
       <button
         onClick={handleDelete}
         disabled={loading}
-        className="flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="rounded-lg flex items-center gap-2 bg-red-600 text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? <Loader2 size={12} className="animate-spin" /> : <Trash2 size={12} />}
         {loading ? 'Suppression…' : 'Supprimer le compte partenaire'}

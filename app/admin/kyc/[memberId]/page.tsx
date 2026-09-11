@@ -127,7 +127,7 @@ export default async function AdminKycMemberPage({
             {String(kyc?.full_name ?? 'Membre')} {kyc?.company_name ? `— ${String(kyc.company_name)}` : ''}
           </h1>
           <div className="flex items-center gap-3 mt-1">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">{roleLabel}</span>
+            <span className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">{roleLabel}</span>
             <p className="text-[11px] text-gray-300 font-mono">{memberId}</p>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default async function AdminKycMemberPage({
               {['in_review', 'approved', 'rejected'].map(s => (
                 <Link key={s}
                   href={`/admin/kyc/${memberId}?action=global&global=${s}`}
-                  className="text-[10px] font-semibold text-gray-600 border border-gray-300 px-3 py-1.5 hover:border-gray-500 transition-colors">
+                  className="rounded-lg text-[10px] font-semibold text-gray-600 border border-gray-300 px-3 py-1.5 hover:border-gray-500 transition-colors">
                   {s === 'in_review' ? 'Passer en revue' : s === 'approved' ? 'Approuver le dossier' : 'Rejeter le dossier'}
                 </Link>
               ))}
@@ -165,7 +165,7 @@ export default async function AdminKycMemberPage({
 
         {/* Documents */}
         <div className="bg-white border border-gray-200 divide-y divide-gray-100">
-          <div className="px-6 py-4 bg-gray-50">
+          <div className="rounded-lg px-6 py-4 bg-gray-50">
             <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Documents ({documents.length})</p>
           </div>
           {documents.length === 0 ? (

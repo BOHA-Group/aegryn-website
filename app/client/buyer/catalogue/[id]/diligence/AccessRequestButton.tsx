@@ -37,7 +37,7 @@ export default function AccessRequestButton({ assetId }: { assetId: string }) {
         type="button"
         disabled={loading}
         onClick={handleRequest}
-        className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
       >
         {loading ? <Loader2 size={12} className="animate-spin" /> : <Send size={12} />}
         Demander l&apos;accès à la data room light

@@ -76,13 +76,13 @@ export default async function AccountPage() {
               {roles.map(role => (
                 ROLE_LINKS[role] ? (
                   <a key={role} href={ROLE_LINKS[role]}
-                    className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 bg-ag-navy/5 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors">
+                    className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 bg-ag-navy/5 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors">
                     {ROLE_LABELS[role] ?? role}
                     <span className="text-[10px]">→</span>
                   </a>
                 ) : (
                   <span key={role}
-                    className="font-mono text-[10px] uppercase tracking-widest text-gray-500 border border-gray-200 bg-gray-50 px-3 py-1.5">
+                    className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-500 border border-gray-200 bg-gray-50 px-3 py-1.5">
                     {ROLE_LABELS[role] ?? role}
                   </span>
                 )
@@ -116,7 +116,7 @@ export default async function AccountPage() {
               <form action="/api/client/account/email-unsubscribe" method="POST">
                 <input type="hidden" name="uid" value={user.id} />
                 <button type="submit"
-                  className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-red-500 border border-gray-200 hover:border-red-200 px-3 py-1.5 transition-colors shrink-0">
+                  className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-red-500 border border-gray-200 hover:border-red-200 px-3 py-1.5 transition-colors shrink-0">
                   {t('unsubscribe')}
                 </button>
               </form>
@@ -129,7 +129,7 @@ export default async function AccountPage() {
               </div>
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a href="/api/client/account/email-resubscribe"
-                className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 border border-emerald-200 px-3 py-1.5 hover:bg-emerald-50 transition-colors shrink-0">
+                className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-emerald-600 border border-emerald-200 px-3 py-1.5 hover:bg-emerald-50 transition-colors shrink-0">
                 {t('resubscribe')}
               </a>
             </div>
@@ -165,7 +165,7 @@ export default async function AccountPage() {
 
               {/* NDA Partenaire */}
               {partnerNdaSignedAt && (
-                <div className="flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
+                <div className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
                   <div>
                     <p className="font-sans text-[13px] text-gray-700 font-medium">
                       {t('ndaPartnerTitle')}
@@ -179,7 +179,7 @@ export default async function AccountPage() {
                   </div>
                   <Link
                     href="/client/partner/nda"
-                    className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
+                    className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
                   >
                     {t('ndaView')}
                   </Link>
@@ -188,7 +188,7 @@ export default async function AccountPage() {
 
               {/* NDA Catalogue (acquéreur) */}
               {roles.includes('buyer') && ndaSignatures && ndaSignatures.map((sig, i) => (
-                <div key={i} className="flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
+                <div key={i} className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
                   <div>
                     <p className="font-sans text-[13px] text-gray-700 font-medium">
                       {t('ndaCatalogTitle')}
@@ -204,7 +204,7 @@ export default async function AccountPage() {
                   </div>
                   <Link
                     href="/client/buyer/nda-view"
-                    className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
+                    className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
                   >
                     {t('ndaView')}
                   </Link>
@@ -219,7 +219,7 @@ export default async function AccountPage() {
         <div className="mt-6 flex items-center justify-between">
           <form action="/api/client/logout" method="POST">
             <button type="submit"
-              className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors border border-gray-300 px-4 py-2 hover:border-gray-500">
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 transition-colors border border-gray-300 px-4 py-2 hover:border-gray-500">
               {t('logout')}
             </button>
           </form>
@@ -239,7 +239,7 @@ export default async function AccountPage() {
             </div>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href="/api/client/account/export"
-              className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0">
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0">
               {t('exportSubmit')}
             </a>
           </div>

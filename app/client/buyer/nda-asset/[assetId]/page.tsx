@@ -62,7 +62,7 @@ export default async function NdaAssetPage({
     <div className="min-h-screen bg-gray-50">
 
       {/* Header sticky */}
-      <div className="bg-ag-navy text-white px-6 py-4 sticky top-0 z-20">
+      <div className="rounded-lg bg-ag-navy text-white px-6 py-4 sticky top-0 z-20">
         <div className="max-w-3xl mx-auto flex items-center gap-3">
           <Lock size={15} className="text-ag-apex shrink-0" />
           <div>
@@ -75,7 +75,7 @@ export default async function NdaAssetPage({
       <div className="max-w-3xl mx-auto px-6 py-10 space-y-8">
 
         {/* Identité de l'actif */}
-        <div className="bg-white border border-gray-200 px-8 py-6">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-6">
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">Lot #{asset.lot_number}</p>
           <h1 className="font-sans font-bold text-gray-900 text-[20px] tracking-tight">{asset.name}</h1>
           {asset.tagline && <p className="text-[13px] text-gray-500 mt-1">{asset.tagline}</p>}
@@ -85,7 +85,7 @@ export default async function NdaAssetPage({
         </div>
 
         {/* Texte NDA actif */}
-        <div className="bg-white border border-gray-200 px-8 py-8 space-y-6 text-[13px] font-sans text-gray-700 leading-relaxed">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-8 space-y-6 text-[13px] font-sans text-gray-700 leading-relaxed">
 
           <div className="flex items-center gap-3 border-b border-gray-100 pb-6">
             <Shield size={18} className="text-ag-navy shrink-0" />
@@ -164,7 +164,7 @@ export default async function NdaAssetPage({
             </p>
           </section>
 
-          <div className="bg-gray-50 border border-gray-200 px-5 py-3">
+          <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-3">
             <p className="font-mono text-[10px] text-gray-400">
               Version {NDA_ASSET_VERSION} — Aegryn Data Room NDA — Actif : {asset.name} (Lot #{asset.lot_number})
             </p>

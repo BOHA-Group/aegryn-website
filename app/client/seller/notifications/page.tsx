@@ -57,7 +57,7 @@ export default async function SellerNotificationsPage() {
       </div>
 
       {notifications.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-16 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
           <Bell size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400">{tc('noNotifications')}</p>
         </div>

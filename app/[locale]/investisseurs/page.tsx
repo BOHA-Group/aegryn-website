@@ -83,7 +83,7 @@ export default async function InvestisseursPage({ params }: Props) {
           </p>
           <Link
             href={{ pathname: '/contact', query: { subject: 'investisseurs' } }}
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             Discutons de votre portefeuille <ArrowUpRight size={13} />
           </Link>
@@ -110,7 +110,7 @@ export default async function InvestisseursPage({ params }: Props) {
       </section>
 
       {/* Section 2 — Nos 3 rôles */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
             NOS TROIS RÔLES
@@ -179,7 +179,7 @@ export default async function InvestisseursPage({ params }: Props) {
       </section>
 
       {/* CTA final */}
-      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-3">
@@ -194,7 +194,7 @@ export default async function InvestisseursPage({ params }: Props) {
           </div>
           <Link
             href={{ pathname: '/contact', query: { subject: 'investisseurs' } }}
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             Discutons de votre portefeuille <ArrowUpRight size={13} />
           </Link>

@@ -140,7 +140,7 @@ export default function CreateMandateForm({ partnerId, assets, backHref }: Props
       <div>
         <label className={labelCls}>Description de la mission</label>
         <textarea
-          className="w-full border border-gray-200 bg-white px-3 py-2.5 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors"
+          className="rounded-lg w-full border border-gray-200 bg-white px-3 py-2.5 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors"
           rows={3}
           value={description}
           onChange={e => setDescription(e.target.value)}
@@ -177,13 +177,13 @@ export default function CreateMandateForm({ partnerId, assets, backHref }: Props
         <button
           type="submit"
           disabled={saving}
-          className="bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-5 py-2.5 hover:bg-gray-700 transition-colors disabled:opacity-50"
+          className="rounded-lg bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-5 py-2.5 hover:bg-gray-700 transition-colors disabled:opacity-50"
         >
           {saving ? 'Création…' : 'Créer le mandat'}
         </button>
         <a
           href={backHref}
-          className="border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-5 py-2.5 hover:border-gray-500 transition-colors"
+          className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-5 py-2.5 hover:border-gray-500 transition-colors"
         >
           Annuler
         </a>

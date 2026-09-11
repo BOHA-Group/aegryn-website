@@ -107,11 +107,11 @@ export default async function AdminAssetDocumentsPage({
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <Link href={`/admin/assets`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
             <Link href={`/admin/assets/${id}/grade`}
-              className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
+              className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Grade
             </Link>
           </div>
@@ -158,11 +158,11 @@ export default async function AdminAssetDocumentsPage({
                     </td>
                     <td className="px-4 py-3">
                       {row.grading_ok ? (
-                        <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-mono text-[9px] uppercase font-bold">✓ GO</span>
+                        <span className="rounded-lg px-2 py-0.5 bg-emerald-50 text-emerald-700 font-mono text-[9px] uppercase font-bold">✓ GO</span>
                       ) : row.has_blocking ? (
-                        <span className="px-2 py-0.5 bg-red-50 text-red-600 font-mono text-[9px] uppercase font-bold">✗ BLOQUÉ</span>
+                        <span className="rounded-lg px-2 py-0.5 bg-red-50 text-red-600 font-mono text-[9px] uppercase font-bold">✗ BLOQUÉ</span>
                       ) : (
-                        <span className="px-2 py-0.5 bg-amber-50 text-amber-700 font-mono text-[9px] uppercase font-bold">⚠ Incomplet</span>
+                        <span className="rounded-lg px-2 py-0.5 bg-amber-50 text-amber-700 font-mono text-[9px] uppercase font-bold">⚠ Incomplet</span>
                       )}
                     </td>
                   </tr>

@@ -93,7 +93,7 @@ export default async function SellerDashboardPage() {
         <div className="flex flex-col gap-2 mb-8">
           {kycAlertCount > 0 && (
             <Link href="/client/seller/kyc"
-              className="flex items-center gap-3 bg-amber-50 border border-amber-200 px-4 py-3 hover:bg-amber-100 transition-colors">
+              className="rounded-lg flex items-center gap-3 bg-amber-50 border border-amber-200 px-4 py-3 hover:bg-amber-100 transition-colors">
               <ShieldCheck size={14} className="text-amber-600 shrink-0" />
               <p className="font-sans text-[12px] text-amber-800">
                 {kycAlertCount > 1 ? t('kycPendingPlural', { count: kycAlertCount }) : t('kycPending', { count: kycAlertCount })}
@@ -103,7 +103,7 @@ export default async function SellerDashboardPage() {
           )}
           {unreadCount > 0 && (
             <Link href="/client/seller/notifications"
-              className="flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors">
+              className="rounded-lg flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors">
               <Bell size={14} className="text-blue-600 shrink-0" />
               <p className="font-sans text-[12px] text-blue-800">
                 {unreadCount} nouvelle{unreadCount > 1 ? 's' : ''} {unreadCount > 1 ? tc('unreadNotifPlural', { count: unreadCount }) : tc('unreadNotif', { count: unreadCount })}
@@ -201,7 +201,7 @@ export default async function SellerDashboardPage() {
               <div className="flex items-center gap-2">
                 <Tag size={14} className="text-ag-grade-aaa shrink-0" />
                 <span className="font-sans font-bold text-[13px] text-gray-900">Certification seule (Review)</span>
-                <span className="ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 CHF HT</span>
+                <span className="rounded-lg ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 CHF HT</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
                 Obtenez un <strong>Grade Aegryn officiel</strong> sans mise en vente. Idéal pour valoriser votre actif, rassurer des partenaires ou préparer une future cession.
@@ -220,7 +220,7 @@ export default async function SellerDashboardPage() {
                 ))}
               </ul>
               <Link href="/grade/submit?suggested=review_internal"
-                className="mt-auto inline-flex items-center gap-2 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors self-start">
+                className="rounded-lg mt-auto inline-flex items-center gap-2 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors self-start">
                 Demander une Review <ArrowUpRight size={10} />
               </Link>
             </div>
@@ -229,7 +229,7 @@ export default async function SellerDashboardPage() {
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-ag-apex shrink-0" />
                 <span className="font-sans font-bold text-[13px] text-gray-900">Certification TRANSACT (catalogue + cession)</span>
-                <span className="ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
+                <span className="rounded-lg ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
               </div>
               <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
                 Processus complet : audit CIFSO (5 dimensions), grade officiel, mise au catalogue privé Aegryn, ouverture aux acquéreurs membres qualifiés.
@@ -253,7 +253,7 @@ export default async function SellerDashboardPage() {
                 <span className="font-sans text-[11px] text-amber-700">Délai minimum 45 jours entre admission et première exposition acquéreurs.</span>
               </div>
               <Link href="/grade/submit?suggested=full_certification"
-                className="mt-auto inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors self-start">
+                className="rounded-lg mt-auto inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors self-start">
                 Soumettre mon actif <ArrowUpRight size={10} />
               </Link>
             </div>
@@ -270,10 +270,10 @@ export default async function SellerDashboardPage() {
           </Link>
         </div>
         {!assets || assets.length === 0 ? (
-          <div className="bg-white border border-gray-200 px-6 py-8 text-center">
+          <div className="rounded-lg bg-white border border-gray-200 px-6 py-8 text-center">
             <p className="font-sans text-[13px] text-gray-400 mb-3">{t('noActifs')}</p>
             <Link href="/grade/submit"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
               {t('submitAsset')} <ArrowUpRight size={10} />
             </Link>
           </div>
@@ -281,7 +281,7 @@ export default async function SellerDashboardPage() {
           <div className="flex flex-col gap-2">
             {assets.map(asset => (
               <Link key={asset.id} href={`/client/seller/actifs/${asset.id}`}
-                className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
+                className="rounded-lg bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
                     {asset.company_name ?? `Actif #${asset.id.slice(0, 8)}`}
@@ -292,7 +292,7 @@ export default async function SellerDashboardPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   {asset.official_grade && (
-                    <span className="font-mono font-bold text-[12px] text-gray-600 border border-gray-300 px-2 py-0.5">
+                    <span className="rounded-lg font-mono font-bold text-[12px] text-gray-600 border border-gray-300 px-2 py-0.5">
                       {asset.official_grade}
                     </span>
                   )}
@@ -334,14 +334,14 @@ export default async function SellerDashboardPage() {
                       {tx.escrow_amount_chf != null && (
                         <span className="font-mono font-semibold text-[12px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</span>
                       )}
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+                      <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
                         {txStatusLabel(tx.status)}
                       </span>
                       <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
                     </div>
                   </div>
                   {commResult?.type === 'calculated' && tx.status !== 'closed' && tx.status !== 'cancelled' && (
-                    <div className="border-t border-gray-100 px-5 py-2.5 flex items-center gap-2 bg-gray-50/60">
+                    <div className="rounded-lg border-t border-gray-100 px-5 py-2.5 flex items-center gap-2 bg-gray-50/60">
                       <Calculator size={11} className="text-gray-400 shrink-0" />
                       <p className="font-sans text-[11px] text-gray-500">
                         Commission Aegryn :

@@ -51,7 +51,7 @@ export function GradeShowcase() {
             </p>
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-200"
+              className="rounded-lg inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-200"
             >
               {t('cta')}
               <ArrowRight size={13} />

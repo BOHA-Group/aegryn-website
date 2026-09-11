@@ -31,7 +31,7 @@ export default async function ClientLoginPage({
           </p>
         </div>
         {error && (
-          <div className="mb-6 bg-red-900/30 border border-red-700/40 px-4 py-3 text-center">
+          <div className="rounded-lg mb-6 bg-red-900/30 border border-red-700/40 px-4 py-3 text-center">
             <p className="font-sans text-[12px] text-red-400">
               {t('linkExpired')}
             </p>

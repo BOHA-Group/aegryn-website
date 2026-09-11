@@ -129,14 +129,14 @@ export default function AccessGateDrawer({
               <NextLink
                 href={`/client/login?next=/${locale}/transact/catalog`}
                 onClick={onClose}
-                className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
+                className="rounded-lg w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
               >
                 {labels.loginCta} <ArrowUpRight size={12} />
               </NextLink>
               <NextLink
                 href={`/client/register?next=/${locale}/transact/catalog`}
                 onClick={onClose}
-                className="w-full inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
+                className="rounded-lg w-full inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
               >
                 {labels.registerCta}
               </NextLink>
@@ -147,7 +147,7 @@ export default function AccessGateDrawer({
             <NextLink
               href={`/client/buyer?tab=nda`}
               onClick={onClose}
-              className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
+              className="rounded-lg w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
             >
               Signer le NDA <ArrowUpRight size={12} />
             </NextLink>
@@ -157,7 +157,7 @@ export default function AccessGateDrawer({
             <NextLink
               href={`/client/buyer?tab=cgv`}
               onClick={onClose}
-              className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
+              className="rounded-lg w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
             >
               Accepter les CGV <ArrowUpRight size={12} />
             </NextLink>
@@ -167,7 +167,7 @@ export default function AccessGateDrawer({
             <NextLink
               href={`/client/buyer/kyc`}
               onClick={onClose}
-              className="w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
+              className="rounded-lg w-full inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-black transition-colors"
             >
               Compléter mon KYC <ArrowUpRight size={12} />
             </NextLink>

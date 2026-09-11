@@ -175,7 +175,7 @@ export default async function MandateDetailPage({
         </div>
 
         {ivs.length === 0 ? (
-          <div className="bg-white border border-gray-200 px-6 py-10 text-center">
+          <div className="rounded-lg bg-white border border-gray-200 px-6 py-10 text-center">
             <p className="font-sans text-[13px] text-gray-400">
               Aucune facture déclarée. Déclarez vos factures ci-dessous dès émission.
             </p>

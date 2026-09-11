@@ -85,7 +85,7 @@ export default async function BuyerDashboardPage() {
         <div className="flex flex-col gap-2 mb-8">
           {kycAlertCount > 0 && (
             <Link href="/client/buyer/kyc"
-              className="flex items-center gap-3 bg-amber-50 border border-amber-200 px-4 py-3 hover:bg-amber-100 transition-colors">
+              className="rounded-lg flex items-center gap-3 bg-amber-50 border border-amber-200 px-4 py-3 hover:bg-amber-100 transition-colors">
               <ShieldCheck size={14} className="text-amber-600 shrink-0" />
               <p className="font-sans text-[12px] text-amber-800">
                 {kycAlertCount > 1 ? t('kycPendingPlural', { count: kycAlertCount }) : t('kycPending', { count: kycAlertCount })}
@@ -95,7 +95,7 @@ export default async function BuyerDashboardPage() {
           )}
           {unreadNotifCount > 0 && (
             <Link href="/client/buyer/notifications"
-              className="flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors">
+              className="rounded-lg flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors">
               <Bell size={14} className="text-blue-600 shrink-0" />
               <p className="font-sans text-[12px] text-blue-800">
                 {unreadNotifCount > 1 ? tc('unreadNotifPlural', { count: unreadNotifCount }) : tc('unreadNotif', { count: unreadNotifCount })}
@@ -158,11 +158,11 @@ export default async function BuyerDashboardPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
               <Link href="/client/buyer/notifications"
-                className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors">
                 <Bell size={11} /> {t('opportunitiesNotifCta' as Parameters<typeof t>[0]) || 'Mes alertes'}
               </Link>
               <Link href="/client/buyer/nda-view"
-                className="inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-ag-navy hover:text-ag-navy transition-colors">
+                className="rounded-lg inline-flex items-center gap-2 border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-ag-navy hover:text-ag-navy transition-colors">
                 <Mail size={11} /> {t('opportunitiesNdaCta' as Parameters<typeof t>[0]) || 'Mon NDA'}
               </Link>
             </div>
@@ -194,14 +194,14 @@ export default async function BuyerDashboardPage() {
           </Link>
         </div>
         {!bids || bids.length === 0 ? (
-          <div className="bg-white border border-gray-200 px-6 py-8 text-center">
+          <div className="rounded-lg bg-white border border-gray-200 px-6 py-8 text-center">
             <p className="font-sans text-[13px] text-gray-400">{t('noOffres')}</p>
           </div>
         ) : (
           <div className="flex flex-col gap-2">
             {(bids as unknown as { id: string; amount_chf: number | null; status: string; created_at: string; assets: { company_name: string | null } | null }[]).map(bid => (
               <Link key={bid.id} href={`/client/buyer/offres/${bid.id}`}
-                className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
+                className="rounded-lg bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
                     {bid.assets?.company_name ?? `#${bid.id.slice(0, 8)}`}
@@ -230,14 +230,14 @@ export default async function BuyerDashboardPage() {
           </Link>
         </div>
         {!transactions || transactions.length === 0 ? (
-          <div className="bg-white border border-gray-200 px-6 py-8 text-center">
+          <div className="rounded-lg bg-white border border-gray-200 px-6 py-8 text-center">
             <p className="font-sans text-[13px] text-gray-400">{t('noTransactions')}</p>
           </div>
         ) : (
           <div className="flex flex-col gap-2">
             {(transactions as unknown as { id: string; status: string; created_at: string; escrow_amount_chf: number | null; assets: { company_name: string | null } | null }[]).map(tx => (
               <Link key={tx.id} href={`/client/buyer/transactions/${tx.id}`}
-                className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
+                className="rounded-lg bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
                     {tx.assets?.company_name ?? `#${tx.id.slice(0, 8)}`}
@@ -248,7 +248,7 @@ export default async function BuyerDashboardPage() {
                   {tx.escrow_amount_chf != null && (
                     <p className="font-mono font-semibold text-[13px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</p>
                   )}
-                  <span className="border border-gray-200 bg-gray-50 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-gray-500">
+                  <span className="rounded-lg border border-gray-200 bg-gray-50 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-gray-500">
                     {txStatusLabel(tx.status)}
                   </span>
                   <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />

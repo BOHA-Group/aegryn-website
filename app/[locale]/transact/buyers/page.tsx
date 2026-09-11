@@ -91,7 +91,7 @@ export default async function TransactBuyersPage({ params }: Props) {
           </p>
           <a
             href="#form"
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
           >
             Soumettre ma candidature <ArrowUpRight size={13} />
           </a>
@@ -147,14 +147,14 @@ export default async function TransactBuyersPage({ params }: Props) {
       </section>
 
       {/* ── CTA secondaire ── */}
-      <section className="py-16 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-16 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-sans text-[14px] text-ag-gray max-w-md leading-relaxed">
             Vous êtes cédant et cherchez à comprendre le processus de vente ?
           </p>
           <Link
             href="/transact/sell"
-            className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors shrink-0"
+            className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:border-ag-black transition-colors shrink-0"
           >
             Parcours cédant <ArrowUpRight size={11} />
           </Link>

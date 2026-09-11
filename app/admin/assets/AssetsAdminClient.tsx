@@ -129,14 +129,14 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
     <div>
       {/* Barre d'actions masse */}
       {selected.size > 0 && (
-        <div className="flex items-center gap-3 mb-4 bg-red-50 border border-red-200 px-4 py-3">
+        <div className="rounded-lg flex items-center gap-3 mb-4 bg-red-50 border border-red-200 px-4 py-3">
           <span className="font-mono text-[11px] text-red-700 font-semibold">
             {selected.size} actif{selected.size > 1 ? 's' : ''} sélectionné{selected.size > 1 ? 's' : ''}
           </span>
           <button
             onClick={deleteSelected}
             disabled={deleting || isPending}
-            className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 px-3 py-1.5 transition-colors disabled:opacity-50"
           >
             {deleting ? <Loader2 size={11} className="animate-spin" /> : <Trash2 size={11} />}
             Supprimer la sélection
@@ -151,7 +151,7 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
       )}
 
       {error && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 mb-4 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 mb-4 text-[12px] text-red-700">{error}</div>
       )}
 
       {rows.length === 0 ? (

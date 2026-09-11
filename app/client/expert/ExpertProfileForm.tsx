@@ -275,14 +275,14 @@ export default function ExpertProfileForm({ initialData }: { initialData: Expert
       </div>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 border border-red-200 bg-red-50 px-4 py-3">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 border border-red-200 bg-red-50 px-4 py-3">{error}</p>
       )}
 
       <div className="flex items-center gap-4">
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
+          className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-8 py-3.5 hover:bg-ag-navy transition-colors disabled:opacity-60"
         >
           {loading ? 'Enregistrement…' : isNew ? 'Créer ma fiche' : 'Enregistrer les modifications'} {!loading && <ArrowUpRight size={13} />}
         </button>

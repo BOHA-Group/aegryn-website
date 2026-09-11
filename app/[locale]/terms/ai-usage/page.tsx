@@ -52,7 +52,7 @@ export default async function AiUsagePage({ params }: Props) {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto space-y-12">
 
-          <div className="border border-ag-apex/20 bg-ag-apex/5 px-6 py-4">
+          <div className="rounded-lg border border-ag-apex/20 bg-ag-apex/5 px-6 py-4">
             <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-1">EU AI Act — Article 50</p>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('version')}</p>
           </div>

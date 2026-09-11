@@ -163,7 +163,7 @@ export default async function BuildServicePage({ params }: Props) {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {useCaseItems.map((item, i) => (
-              <div key={i} className="bg-ag-white px-6 py-5">
+              <div key={i} className="rounded-lg bg-ag-white px-6 py-5">
                 <p className="font-sans font-semibold text-ag-black text-[14px]">{item}</p>
               </div>
             ))}
@@ -221,7 +221,7 @@ export default async function BuildServicePage({ params }: Props) {
               <div key={item.num} className="bg-ag-white p-8 flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
-                  <span className="inline-flex font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
+                  <span className="rounded-lg inline-flex font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
                     {item.badge}
                   </span>
                 </div>
@@ -475,7 +475,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <Link
             href="/transact"
-            className="inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
           >
             {t('transmissionSection.cta')} →
           </Link>
@@ -508,7 +508,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <Link
             href="/transact/how-it-works"
-            className="shrink-0 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
+            className="rounded-lg shrink-0 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
           >
             {t('exitBanner.cta')} →
           </Link>
@@ -530,13 +530,13 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
             <Link
               href="/contact"
-              className="font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('cta.primary')} →
             </Link>
             <Link
               href="/assets"
-              className="font-mono text-[11px] tracking-[0.18em] uppercase border border-white/30 text-white px-8 py-3.5 hover:border-white hover:bg-white/5 transition-colors"
+              className="rounded-lg font-mono text-[11px] tracking-[0.18em] uppercase border border-white/30 text-white px-8 py-3.5 hover:border-white hover:bg-white/5 transition-colors"
             >
               {t('cta.secondary')}
             </Link>

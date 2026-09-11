@@ -131,7 +131,7 @@ export default function MfaSection() {
       </p>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5 mb-4">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5 mb-4">{error}</p>
       )}
       {success && (
         <div className="flex items-center gap-2 text-emerald-600 mb-4">
@@ -154,7 +154,7 @@ export default function MfaSection() {
           <button
             onClick={disableMfa}
             disabled={busy}
-            className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-red-500 border border-red-200 px-3 py-1.5 hover:bg-red-50 transition-colors disabled:opacity-50 shrink-0"
+            className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-red-500 border border-red-200 px-3 py-1.5 hover:bg-red-50 transition-colors disabled:opacity-50 shrink-0"
           >
             {busy ? <Loader2 size={11} className="animate-spin" /> : <ShieldOff size={12} />}
             {t('mfaDisableButton')}
@@ -173,7 +173,7 @@ export default function MfaSection() {
           <button
             onClick={startEnrollment}
             disabled={busy}
-            className="flex items-center gap-1.5 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors disabled:opacity-50 shrink-0"
+            className="rounded-lg flex items-center gap-1.5 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors disabled:opacity-50 shrink-0"
           >
             {busy && <Loader2 size={11} className="animate-spin" />}
             {t('mfaActivateButton')}
@@ -217,7 +217,7 @@ export default function MfaSection() {
               value={code}
               onChange={e => setCode(e.target.value.replace(/\D/g, ''))}
               placeholder="123456"
-              className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-mono text-[16px] text-center tracking-widest text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+              className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-mono text-[16px] text-center tracking-widest text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
             />
           </div>
 
@@ -225,7 +225,7 @@ export default function MfaSection() {
             <button
               type="submit"
               disabled={busy || code.length !== 6}
-              className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+              className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
             >
               {busy && <Loader2 size={11} className="animate-spin" />}
               {t('mfaConfirm')}

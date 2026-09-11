@@ -25,7 +25,7 @@ function Select({ name, options, value, onChange, placeholder }: {
       name={name}
       value={value}
       onChange={e => onChange(e.target.value)}
-      className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
+      className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
     >
       {placeholder && <option value="">{placeholder}</option>}
       {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
@@ -186,7 +186,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
   return (
     <div className="bg-ag-white border border-ag-border">
       {/* Header */}
-      <div className="bg-ag-navy px-8 py-6 flex items-start justify-between gap-4">
+      <div className="rounded-lg bg-ag-navy px-8 py-6 flex items-start justify-between gap-4">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-1.5">
             {t('header.label')}
@@ -249,7 +249,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               type="button"
               disabled={!profileType}
               onClick={() => setStep('qualify')}
-              className="self-end inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
+              className="rounded-lg self-end inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
             >
               {t('step1.next')} <ChevronRight size={13} />
             </button>
@@ -381,7 +381,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               <button
                 type="button"
                 onClick={() => setStep('contact')}
-                className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors"
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors"
               >
                 {t('step2.next')} <ChevronRight size={13} />
               </button>
@@ -397,7 +397,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 <Label>{t('step3.firstNameLabel')}</Label>
                 <input
                   value={firstName} onChange={e => setFirstName(e.target.value)}
-                  className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
+                  className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
                   placeholder={t('step3.firstNamePlaceholder')}
                 />
               </div>
@@ -405,7 +405,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 <Label>{t('step3.lastNameLabel')}</Label>
                 <input
                   value={lastName} onChange={e => setLastName(e.target.value)}
-                  className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
+                  className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
                   placeholder={t('step3.lastNamePlaceholder')}
                 />
               </div>
@@ -415,7 +415,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
               <input
                 type="email"
                 value={email} onChange={e => setEmail(e.target.value)}
-                className="w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
+                className="rounded-lg w-full border border-ag-border px-3 py-2.5 font-sans text-[13px] text-ag-black focus:outline-none focus:border-ag-black bg-white"
                 placeholder={t('step3.emailPlaceholder')}
               />
             </div>
@@ -446,7 +446,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
             </div>
 
             {error && (
-              <p className="font-sans text-[12px] text-red-600 bg-red-50 border border-red-200 px-3 py-2">
+              <p className="rounded-lg font-sans text-[12px] text-red-600 bg-red-50 border border-red-200 px-3 py-2">
                 {error}
               </p>
             )}
@@ -463,7 +463,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
                 type="button"
                 disabled={!email || !gdprConsent || loading}
                 onClick={handleSubmit}
-                className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] uppercase tracking-[0.16em] px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
               >
                 {loading ? t('step3.submitting') : t('step3.submit')} {!loading && <ArrowUpRight size={12} />}
               </button>

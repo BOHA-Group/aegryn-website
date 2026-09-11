@@ -21,7 +21,7 @@ export function TransactionSteps() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border py-24 px-6">
+    <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
           {t('howLabel')}

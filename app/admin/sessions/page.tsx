@@ -39,7 +39,7 @@ export default async function AdminSessionsPage() {
   return (
     <div className="min-h-screen bg-[#F5F3EE]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link href="/admin" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
             ← Dashboard
@@ -49,7 +49,7 @@ export default async function AdminSessionsPage() {
         </div>
         <Link
           href="/admin/sessions/new"
-          className="inline-flex items-center gap-2 bg-[#0A1D2E] text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-[#142d45] transition-colors"
+          className="rounded-lg inline-flex items-center gap-2 bg-[#0A1D2E] text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-[#142d45] transition-colors"
         >
           <Plus size={12} /> Nouvelle session
         </Link>

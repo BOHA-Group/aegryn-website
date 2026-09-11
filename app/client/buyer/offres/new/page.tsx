@@ -63,12 +63,12 @@ export default async function NewOfferPage({
         </h1>
         <div className="flex items-center gap-3 mt-2">
           {asset.asset_type && (
-            <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
               {asset.asset_type}
             </span>
           )}
           {asset.official_grade && (
-            <span className="font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
               Grade {asset.official_grade}
             </span>
           )}
@@ -79,7 +79,7 @@ export default async function NewOfferPage({
       </div>
 
       {/* Info processus */}
-      <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4 mb-8">
+      <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/20 px-5 py-4 mb-8">
         <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/60 mb-2">Processus Aegryn M&amp;A</p>
         <ol className="flex flex-col gap-1.5">
           {[

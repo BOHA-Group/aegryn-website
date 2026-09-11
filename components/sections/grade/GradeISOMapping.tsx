@@ -39,7 +39,7 @@ export function GradeISOMapping() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border py-24 px-6">
+    <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -96,7 +96,7 @@ export function GradeISOMapping() {
                 className="iso-row grid grid-cols-[180px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] border-t border-ag-border"
               >
                 {/* Dimension */}
-                <div className="px-6 py-5 bg-ag-off-white border-r border-ag-border flex items-start">
+                <div className="rounded-lg px-6 py-5 bg-ag-off-white border-r border-ag-border flex items-start">
                   <div className="flex items-start gap-3">
                     <span
                       className="font-mono text-[13px] font-bold shrink-0 mt-0.5"
@@ -111,7 +111,7 @@ export function GradeISOMapping() {
                 </div>
 
                 {/* Existing standards */}
-                <div className="px-6 py-5 bg-ag-white border-r border-ag-border">
+                <div className="rounded-lg px-6 py-5 bg-ag-white border-r border-ag-border">
                   <div className="flex items-start gap-2">
                     <span className="text-ag-gray-light text-[11px] mt-0.5 shrink-0">–</span>
                     <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
@@ -121,7 +121,7 @@ export function GradeISOMapping() {
                 </div>
 
                 {/* CIFSO 5000 */}
-                <div className="px-6 py-5 bg-ag-white" style={{ borderLeft: `2px solid ${color}20` }}>
+                <div className="rounded-lg px-6 py-5 bg-ag-white" style={{ borderLeft: `2px solid ${color}20` }}>
                   <div className="flex items-start gap-2">
                     <span className="font-bold text-[11px] mt-0.5 shrink-0" style={{ color }}>
                       ✓

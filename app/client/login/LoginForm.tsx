@@ -130,7 +130,7 @@ export default function LoginForm() {
     return (
       <form onSubmit={handleMfaSubmit} className="flex flex-col gap-5">
         {error && (
-          <p className="font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
+          <p className="rounded-lg font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
             {error}
           </p>
         )}
@@ -149,14 +149,14 @@ export default function LoginForm() {
             value={mfaCode}
             onChange={e => setMfaCode(e.target.value.replace(/\D/g, ''))}
             placeholder="123456"
-            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-mono text-[18px] text-center tracking-widest focus:outline-none focus:border-ag-apex transition-colors"
+            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-mono text-[18px] text-center tracking-widest focus:outline-none focus:border-ag-apex transition-colors"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading || mfaCode.length !== 6}
-          className="w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+          className="rounded-lg w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {loading ? '...' : 'Vérifier'}
           {!loading && <ArrowUpRight size={13} />}
@@ -168,7 +168,7 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       {error && (
-        <p className="font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
+        <p className="rounded-lg font-sans text-[12px] text-red-400 bg-red-900/20 border border-red-800/30 px-4 py-3">
           {error}
         </p>
       )}
@@ -184,7 +184,7 @@ export default function LoginForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
@@ -200,7 +200,7 @@ export default function LoginForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="••••••••••••"
-            className="w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
           />
           <button
             type="button"
@@ -215,7 +215,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+        className="rounded-lg w-full bg-white text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
       >
         {loading ? t('submitting') : t('submit')}
         {!loading && <ArrowUpRight size={13} />}

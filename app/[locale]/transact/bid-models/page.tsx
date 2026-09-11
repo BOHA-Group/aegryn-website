@@ -72,7 +72,7 @@ export default async function BidModelsPage({ params }: Props) {
                     <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">{model.label}</span>
                   </div>
                   {model.subBadge && (
-                    <span className="font-sans text-[10px] uppercase tracking-[0.12em] text-ag-apex border border-ag-apex/40 px-2 py-1 shrink-0">{model.subBadge}</span>
+                    <span className="rounded-lg font-sans text-[10px] uppercase tracking-[0.12em] text-ag-apex border border-ag-apex/40 px-2 py-1 shrink-0">{model.subBadge}</span>
                   )}
                 </div>
 
@@ -99,7 +99,7 @@ export default async function BidModelsPage({ params }: Props) {
                   <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light mb-3">{t('structuresLabel')}</p>
                   <div className="flex flex-wrap gap-2">
                     {model.structures.map((s, i) => (
-                      <span key={i} className="font-sans text-[11px] text-ag-gray border border-ag-border px-3 py-1">{s}</span>
+                      <span key={i} className="rounded-lg font-sans text-[11px] text-ag-gray border border-ag-border px-3 py-1">{s}</span>
                     ))}
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default async function BidModelsPage({ params }: Props) {
       </section>
 
       {/* PTT */}
-      <section className="bg-ag-off-white py-20 px-6 border-t border-ag-border">
+      <section className="rounded-lg bg-ag-off-white py-20 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
@@ -159,7 +159,7 @@ export default async function BidModelsPage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 border-t border-ag-border bg-ag-navy">
+      <section className="rounded-lg py-20 px-6 border-t border-ag-border bg-ag-navy">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2 className="font-sans font-bold text-white leading-[1.1] tracking-[-0.025em] mb-4" style={{ fontSize: "clamp(22px,2.5vw,38px)" }}>
@@ -170,10 +170,10 @@ export default async function BidModelsPage({ params }: Props) {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <Link href="/transact/how-to-buy" className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-bold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-white transition-colors">
+            <Link href="/transact/how-to-buy" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-bold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-white transition-colors">
               {t('cta.btnGuide')} <ArrowUpRight size={13} />
             </Link>
-            <Link href="/transact/catalog" className="inline-flex items-center gap-2 border border-white/30 text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-white/60 transition-colors">
+            <Link href="/transact/catalog" className="rounded-lg inline-flex items-center gap-2 border border-white/30 text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-white/60 transition-colors">
               {t('cta.btnCatalog')}
             </Link>
           </div>

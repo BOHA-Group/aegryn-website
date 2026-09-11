@@ -66,7 +66,7 @@ function ExpertiseCardItem({ card }: { card: ExpertiseCard }) {
         {card.tags.map(tag => (
           <span
             key={tag}
-            className="font-sans text-[10px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
+            className="rounded-lg font-sans text-[10px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
             style={{ borderColor: hovered ? `${card.color}55` : undefined }}
           >
             {tag}
@@ -210,7 +210,7 @@ export default function NetworkContent() {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center gap-4 mb-8">
-            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
               {t('partners.label')}
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
@@ -242,7 +242,7 @@ export default function NetworkContent() {
           {/* Header */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+              <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
                 {t('experts.label')}
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
@@ -311,7 +311,7 @@ export default function NetworkContent() {
       </section>
 
       {/* ── CTA Devenir partenaire ── */}
-      <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
+      <section className="rounded-lg bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">Aegryn Network</p>
@@ -324,7 +324,7 @@ export default function NetworkContent() {
           </div>
           <Link
             href="/alliances"
-            className="shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+            className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
           >
             {t('cta.button')} <ArrowUpRight size={14} />
           </Link>

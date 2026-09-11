@@ -120,7 +120,7 @@ export default function AccessLogsTable({ logs, documents }: Props) {
       </div>
 
       {logs.length === 0 ? (
-        <div className="bg-white border border-gray-100 px-5 py-8 text-center">
+        <div className="rounded-lg bg-white border border-gray-100 px-5 py-8 text-center">
           <p className="font-sans text-[12px] text-gray-400">Aucune consultation enregistrée pour le moment.</p>
         </div>
       ) : (

@@ -90,7 +90,7 @@ export default async function ClientBuyerPage({ params }: Props) {
   )
 
   return (
-    <main className="bg-ag-off-white min-h-screen py-16 px-4">
+    <main className="rounded-lg bg-ag-off-white min-h-screen py-16 px-4">
       <div className="max-w-3xl mx-auto">
 
         {/* Header */}
@@ -171,7 +171,7 @@ export default async function ClientBuyerPage({ params }: Props) {
                       </div>
                       <Link
                         href={`/${locale}/transact/lot/${asset.slug}`}
-                        className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-[0.14em] px-5 py-2.5 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+                        className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-[0.14em] px-5 py-2.5 hover:bg-ag-apex hover:text-ag-navy transition-colors"
                       >
                         {t('openDossier')} <ExternalLink size={11} />
                       </Link>

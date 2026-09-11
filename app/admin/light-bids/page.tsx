@@ -85,7 +85,7 @@ export default async function LightBidsAdminPage({
               Confirmez la réception du séquestre pour débloquer la data room complète.
             </p>
           </div>
-          <Link href="/admin" className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <Link href="/admin" className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Admin
           </Link>
         </div>

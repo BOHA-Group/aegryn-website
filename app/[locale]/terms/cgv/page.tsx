@@ -184,10 +184,10 @@ export default async function TermsCgvPage({ params }: Props) {
               })}
             </div>
           </div>
-          <div className="bg-ag-off-white border border-ag-border px-5 py-4 mb-4">
+          <div className="rounded-lg bg-ag-off-white border border-ag-border px-5 py-4 mb-4">
             <p className="font-sans text-[13px] text-ag-black font-semibold">{t('s11Minimum')}</p>
           </div>
-          <div className="bg-amber-50 border border-amber-200 px-5 py-4 mb-4">
+          <div className="rounded-lg bg-amber-50 border border-amber-200 px-5 py-4 mb-4">
             <h3 className="font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-amber-900 mb-2">{t('s11NonSaleTitle')}</h3>
             <p className="font-sans text-[13px] text-amber-800 leading-relaxed">{t('s11NonSale')}</p>
           </div>
@@ -237,13 +237,13 @@ export default async function TermsCgvPage({ params }: Props) {
         <div className="pt-6 border-t border-ag-border flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
           >
             {t('ctaContact')} <ArrowUpRight size={12} />
           </Link>
           <Link
             href="/terms/use"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-5 py-3 hover:border-ag-black hover:text-ag-black transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-gray-light border border-ag-border px-5 py-3 hover:border-ag-black hover:text-ag-black transition-colors"
           >
             {t('ctaTermsUse')} <ArrowUpRight size={12} />
           </Link>

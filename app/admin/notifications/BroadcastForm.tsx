@@ -155,7 +155,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
             onChange={e => setSubject(e.target.value)}
             placeholder="Mise à jour de votre dossier Aegryn"
             maxLength={200}
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
 
@@ -170,7 +170,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
             onChange={e => setTitle(e.target.value)}
             placeholder="Votre dossier a été mis à jour"
             maxLength={200}
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
 
@@ -185,7 +185,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
             onChange={e => setBodyText(e.target.value)}
             placeholder="Bonjour,&#10;&#10;L'équipe Aegryn a le plaisir de vous informer..."
             maxLength={5000}
-            className="w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
+            className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-3 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors resize-none"
           />
           <p className="font-mono text-[9px] text-gray-300 mt-1 text-right">{bodyText.length}/5000</p>
         </div>
@@ -201,7 +201,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
               value={ctaLabel}
               onChange={e => setCtaLabel(e.target.value)}
               placeholder="Voir mon dossier →"
-              className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+              className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
             />
           </div>
           <div>
@@ -213,7 +213,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
               value={ctaUrl}
               onChange={e => setCtaUrl(e.target.value)}
               placeholder="https://aegryn.com/client/…"
-              className="w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+              className="rounded-lg w-full bg-gray-50 border border-gray-300 px-3 py-2 font-sans text-[12px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
             />
           </div>
         </div>
@@ -231,7 +231,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
         </label>
 
         {/* Prévisualisation résumé */}
-        <div className="bg-gray-50 border border-gray-200 px-4 py-3">
+        <div className="rounded-lg bg-gray-50 border border-gray-200 px-4 py-3">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Récapitulatif</p>
           <div className="flex items-center gap-3 flex-wrap">
             <div className="flex items-center gap-1.5">
@@ -248,7 +248,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
         </div>
 
         {error && (
-          <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
+          <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
         )}
 
         {result && (
@@ -271,7 +271,7 @@ export default function BroadcastForm({ roleCounts }: Props) {
         <button
           type="submit"
           disabled={loading || estimatedCount === 0}
-          className="flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
+          className="rounded-lg flex items-center justify-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
         >
           {loading
             ? <><Loader2 size={11} className="animate-spin" /> Envoi en cours…</>

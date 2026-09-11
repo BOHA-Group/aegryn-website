@@ -81,7 +81,7 @@ export default async function RoadmapPage({ params }: Props) {
           <p className="font-sans text-[15px] text-white/55 leading-relaxed max-w-xl mb-10">
             {t('desc')}
           </p>
-          <div className="inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-xl">
+          <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-xl">
             <Scale size={14} className="text-ag-apex shrink-0 mt-0.5" />
             <p className="font-sans text-[12px] text-white/80 leading-relaxed">
               {t('swissNote')}
@@ -91,7 +91,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── Features grid ── */}
-      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('featuresLabel')}
@@ -115,7 +115,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── Timeline top 20 ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-5xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-16">
             {t('roadmapLabel')}
@@ -144,7 +144,7 @@ export default async function RoadmapPage({ params }: Props) {
                         </h3>
                         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
-                      <span className="shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-2 py-1">
+                      <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-2 py-1">
                         ● {t('statusLive')}
                       </span>
                     </div>
@@ -177,7 +177,7 @@ export default async function RoadmapPage({ params }: Props) {
                         </h3>
                         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
-                      <span className="shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-gray-light border border-ag-border px-2 py-1">
+                      <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-gray-light border border-ag-border px-2 py-1">
                         ○ {t('statusUpcoming')}
                       </span>
                     </div>
@@ -190,7 +190,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-20 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-6">
@@ -208,13 +208,13 @@ export default async function RoadmapPage({ params }: Props) {
           <div className="flex flex-col gap-4 md:pt-2">
             <Link
               href="/transact/submit"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 font-semibold hover:bg-ag-navy-mid transition-colors self-start"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 font-semibold hover:bg-ag-navy-mid transition-colors self-start"
             >
               {t('cta')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all self-start"
+              className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all self-start"
             >
               {t('ctaSecondary')}
             </Link>

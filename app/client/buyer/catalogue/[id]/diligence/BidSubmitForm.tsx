@@ -57,7 +57,7 @@ export default function BidSubmitForm({ assetId }: { assetId: string }) {
           value={amount}
           onChange={e => setAmount(e.target.value)}
           placeholder="ex. 500 000"
-          className="w-full border border-gray-200 px-4 py-2.5 text-[14px] font-mono focus:outline-none focus:border-ag-navy/40 placeholder:text-gray-300"
+          className="rounded-lg w-full border border-gray-200 px-4 py-2.5 text-[14px] font-mono focus:outline-none focus:border-ag-navy/40 placeholder:text-gray-300"
           required
         />
         {sequesterAmt != null && (
@@ -80,7 +80,7 @@ export default function BidSubmitForm({ assetId }: { assetId: string }) {
           value={note}
           onChange={e => setNote(e.target.value)}
           placeholder="Présentation de votre profil, intentions, questions..."
-          className="w-full border border-gray-200 px-4 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy/40 resize-none placeholder:text-gray-300"
+          className="rounded-lg w-full border border-gray-200 px-4 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy/40 resize-none placeholder:text-gray-300"
         />
       </div>
 
@@ -91,7 +91,7 @@ export default function BidSubmitForm({ assetId }: { assetId: string }) {
       <button
         type="submit"
         disabled={loading || !validAmount}
-        className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-40"
       >
         {loading ? <Loader2 size={12} className="animate-spin" /> : <Send size={12} />}
         Soumettre l&apos;offre de principe

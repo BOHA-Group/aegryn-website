@@ -122,7 +122,7 @@ export default function ReadinessScore() {
               type="button"
               disabled={!complete}
               onClick={() => setDone(true)}
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {t('calculateBtn')} <ChevronRight size={12} />
             </button>
@@ -181,7 +181,7 @@ export default function ReadinessScore() {
           {/* CTA */}
           <Link
             href={cfg.ctaHref as '/transact/submit' | '/contact'}
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors self-start"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors self-start"
           >
             {t(`levels.${level}.cta`)} <ArrowUpRight size={12} />
           </Link>

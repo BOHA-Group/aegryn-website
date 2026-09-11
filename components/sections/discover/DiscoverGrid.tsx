@@ -110,7 +110,7 @@ export function DiscoverGrid({ locale }: Props) {
 
       {/* Featured articles */}
       {showFeatured && (
-        <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <section className="rounded-lg bg-ag-white border-t border-ag-border py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
               {t('featuredLabel')}
@@ -150,7 +150,7 @@ export function DiscoverGrid({ locale }: Props) {
       )}
 
       {/* All articles with filter */}
-      <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
+      <section className="rounded-lg bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Search bar */}
           <div className="mb-6">
@@ -232,7 +232,7 @@ export function DiscoverGrid({ locale }: Props) {
               <button
                 onClick={() => setPage(p => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                className="rounded-lg font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
               >
                 ←
               </button>
@@ -252,7 +252,7 @@ export function DiscoverGrid({ locale }: Props) {
               <button
                 onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                 disabled={page === totalPages}
-                className="font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                className="rounded-lg font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black disabled:opacity-30 disabled:pointer-events-none transition-colors"
               >
                 →
               </button>

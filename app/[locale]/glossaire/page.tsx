@@ -121,7 +121,7 @@ export default async function GlossairePage({ params }: Props) {
               <a
                 key={l}
                 href={`#letter-${l}`}
-                className="font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white/65 hover:border-ag-apex hover:text-ag-apex transition-colors"
+                className="rounded-lg font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white/65 hover:border-ag-apex hover:text-ag-apex transition-colors"
               >
                 {l}
               </a>
@@ -159,7 +159,7 @@ export default async function GlossairePage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
+      <section className="rounded-lg py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">Aegryn Blog</p>
@@ -169,7 +169,7 @@ export default async function GlossairePage({ params }: Props) {
           </div>
           <Link
             href="/blog"
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-black transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-black transition-colors"
           >
             {lang === 'fr' ? 'Voir tous les articles' : 'View all articles'}
           </Link>

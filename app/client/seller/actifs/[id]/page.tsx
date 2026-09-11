@@ -129,7 +129,7 @@ export default async function SellerAssetDetailPage({
               {asset.company_name ?? `Actif #${id.slice(0, 8)}`}
             </h1>
             {asset.asset_type && (
-              <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-2 py-0.5">
+              <span className="rounded-lg font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-2 py-0.5">
                 {asset.asset_type}
               </span>
             )}
@@ -182,7 +182,7 @@ export default async function SellerAssetDetailPage({
           </div>
         </div>
       ) : (
-        <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-4 mb-6">
           <p className="font-sans text-[13px] text-gray-400 italic">Dossier retiré du processus.</p>
         </div>
       )}
@@ -252,7 +252,7 @@ export default async function SellerAssetDetailPage({
 
       {/* Fiche de grade téléchargeable */}
       {['graded', 'published', 'sold'].includes(asset.status ?? '') && (
-        <div className="bg-white border border-ag-border px-5 py-4 mb-6 flex items-center justify-between gap-4">
+        <div className="rounded-lg bg-white border border-ag-border px-5 py-4 mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Fiche de grade officielle</p>
             <p className="font-sans text-[12px] text-gray-600">Document de synthèse CIFSO horodaté — grade, scores C/I/F/S/O, référence certifiée.</p>
@@ -261,7 +261,7 @@ export default async function SellerAssetDetailPage({
             href={`/api/seller/assets/${id}/grade-sheet`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy/90 transition-colors shrink-0"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-navy/90 transition-colors shrink-0"
           >
             <FileDown size={13} /> Télécharger
           </a>
@@ -320,7 +320,7 @@ export default async function SellerAssetDetailPage({
       </div>
 
       {/* Contact */}
-      <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+      <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-sans text-[12px] text-gray-600">
           Pour toute question sur ce dossier, contactez votre chargé de compte à{' '}
           <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>{' '}

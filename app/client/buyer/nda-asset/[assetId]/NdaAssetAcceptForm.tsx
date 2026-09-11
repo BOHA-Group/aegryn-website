@@ -39,7 +39,7 @@ export default function NdaAssetAcceptForm({ assetId, assetName, version, fullNa
   }
 
   return (
-    <div className="bg-white border border-ag-navy/20 px-8 py-6 space-y-5">
+    <div className="rounded-lg bg-white border border-ag-navy/20 px-8 py-6 space-y-5">
       <p className="font-mono text-[10px] uppercase tracking-widest text-ag-navy font-semibold">
         Signature électronique — Data Room
       </p>
@@ -67,7 +67,7 @@ export default function NdaAssetAcceptForm({ assetId, assetName, version, fullNa
       </label>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
       )}
 
       <button

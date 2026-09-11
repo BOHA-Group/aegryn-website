@@ -261,7 +261,7 @@ export default async function AdminAnalyticsPage({
           </div>
           <Link
             href="/admin"
-            className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors"
+            className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors"
           >
             ← Dashboard
           </Link>

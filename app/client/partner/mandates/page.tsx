@@ -84,12 +84,12 @@ export default async function PartnerMandatesPage() {
       {/* Compteurs */}
       {ms.length > 0 && (
         <div className="flex gap-3 mb-8">
-          <div className="border border-emerald-200 bg-emerald-50 px-3 py-1.5 flex items-center gap-2">
+          <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5 flex items-center gap-2">
             <span className="font-mono font-bold text-[13px] text-emerald-700">{activeCount}</span>
             <span className="font-sans text-[11px] text-emerald-600">actif{activeCount > 1 ? 's' : ''}</span>
           </div>
           {completedCount > 0 && (
-            <div className="border border-gray-200 bg-gray-50 px-3 py-1.5 flex items-center gap-2">
+            <div className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 flex items-center gap-2">
               <span className="font-mono font-bold text-[13px] text-gray-500">{completedCount}</span>
               <span className="font-sans text-[11px] text-gray-400">terminé{completedCount > 1 ? 's' : ''}</span>
             </div>
@@ -98,7 +98,7 @@ export default async function PartnerMandatesPage() {
       )}
 
       {ms.length === 0 ? (
-        <div className="bg-white border border-gray-200 px-8 py-16 text-center">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-16 text-center">
           <Briefcase size={24} className="text-gray-300 mx-auto mb-4" />
           <p className="font-sans text-[14px] text-gray-400 mb-2">
             Aucun mandat enregistré pour le moment.
@@ -168,7 +168,7 @@ export default async function PartnerMandatesPage() {
         </div>
       )}
 
-      <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
+      <div className="rounded-lg mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
           Pour ouvrir un nouveau mandat client, contactez <a href="mailto:partnerships@boha-group.com" className="text-ag-navy underline">partnerships@boha-group.com</a>.
           L&apos;équipe Aegryn créera le mandat et vous l&apos;associera dans votre espace.

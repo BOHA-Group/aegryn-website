@@ -78,7 +78,7 @@ export default async function SequesterDetailPage({
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
         <Link href="/admin/transaction/sequesters" className="font-sans text-[12px] text-gray-400 hover:text-gray-700 transition-colors">
           ← Séquestres
         </Link>
@@ -87,7 +87,7 @@ export default async function SequesterDetailPage({
           Séquestre — {lot?.name ?? seq.id.slice(0, 8)}
         </h1>
         {lot?.lot_number && (
-          <span className="ml-1 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
+          <span className="rounded-lg ml-1 font-mono text-[10px] text-gray-400 uppercase tracking-widest border border-gray-200 px-2 py-0.5">
             Lot #{lot.lot_number}
           </span>
         )}

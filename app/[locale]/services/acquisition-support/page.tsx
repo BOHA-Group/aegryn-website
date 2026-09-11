@@ -43,13 +43,13 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {t('ctaPrimary')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('ctaDiscover')}
             </Link>
@@ -98,7 +98,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── For whom ── */}
-      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('forWhom.label')}
@@ -142,7 +142,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Differentiators ── */}
-      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
@@ -202,7 +202,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2
@@ -221,7 +221,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           </div>
           <Link
             href="/contact"
-            className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('cta.btn')} <ArrowUpRight size={13} />
           </Link>

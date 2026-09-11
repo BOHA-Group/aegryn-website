@@ -95,7 +95,7 @@ export default function AdminResetPasswordPage() {
           {linkError ? (
             <div className="text-center py-6">
               <p className="text-[13px] text-red-600 mb-4">Lien expiré ou invalide. Demandez-en un nouveau.</p>
-              <Link href="/admin/forgot-password" className="inline-block bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-3.5 hover:opacity-90">
+              <Link href="/admin/forgot-password" className="rounded-lg inline-block bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-3.5 hover:opacity-90">
                 Demander un nouveau lien
               </Link>
             </div>
@@ -104,7 +104,7 @@ export default function AdminResetPasswordPage() {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {error && (
-                <p className="text-[12px] text-red-600 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
+                <p className="rounded-lg text-[12px] text-red-600 bg-red-50 border border-red-200 px-4 py-3">{error}</p>
               )}
               <div>
                 <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Nouveau mot de passe</label>
@@ -115,7 +115,7 @@ export default function AdminResetPasswordPage() {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     placeholder="8 caractères minimum"
-                    className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 pr-12 text-[14px] focus:outline-none focus:border-gray-600"
+                    className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 pr-12 text-[14px] focus:outline-none focus:border-gray-600"
                   />
                   <button type="button" onClick={() => setShow(v => !v)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400">
                     {show ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -130,13 +130,13 @@ export default function AdminResetPasswordPage() {
                   value={confirm}
                   onChange={e => setConfirm(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600"
+                  className="rounded-lg w-full border border-gray-200 bg-white text-gray-900 px-4 py-3 text-[14px] focus:outline-none focus:border-gray-600"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 disabled:opacity-50"
+                className="rounded-lg w-full bg-[#0C0C0C] text-white text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-4 hover:opacity-90 disabled:opacity-50"
               >
                 {loading ? 'Mise à jour...' : 'Enregistrer'}
               </button>

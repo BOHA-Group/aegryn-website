@@ -110,7 +110,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           <div className="pt-2">
             <Link
               href="/magazine"
-              className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
+              className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-black px-5 py-2.5 hover:bg-ag-black hover:text-white transition-all duration-300"
             >
               {magCta} <ArrowUpRight size={11} />
             </Link>

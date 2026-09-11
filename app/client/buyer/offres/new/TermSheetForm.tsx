@@ -26,7 +26,7 @@ const STRUCTURE_LABELS: Record<Structure, string> = {
 function SectionToggle({ label, open, onToggle }: { label: string; open: boolean; onToggle: () => void }) {
   return (
     <button type="button" onClick={onToggle}
-      className="flex items-center justify-between w-full bg-gray-50 border border-gray-200 px-5 py-3 hover:bg-gray-100 transition-colors group">
+      className="rounded-lg flex items-center justify-between w-full bg-gray-50 border border-gray-200 px-5 py-3 hover:bg-gray-100 transition-colors group">
       <span className="font-mono text-[10px] uppercase tracking-widest text-gray-600 group-hover:text-gray-900">{label}</span>
       {open ? <ChevronUp size={13} className="text-gray-400" /> : <ChevronDown size={13} className="text-gray-400" />}
     </button>
@@ -389,7 +389,7 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
       </div>
 
       {/* ── Notice légale ── */}
-      <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+      <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
           Cette term sheet est une <strong>proposition structurée non-engageante</strong>. Elle sera examinée par l&apos;équipe Aegryn et transmise au cédant de façon anonymisée.
           Le cédant dispose de <strong>72h pour répondre</strong>. En cas d&apos;acceptation, Aegryn coordonne la formalisation du protocole de cession.
@@ -398,13 +398,13 @@ export default function TermSheetForm({ assetId, assetName }: Props) {
 
       {/* ── Erreur ── */}
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{error}</p>
       )}
 
       {/* ── Submit ── */}
       <div className="flex items-center gap-4">
         <button type="submit" disabled={loading}
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? <Loader2 size={12} className="animate-spin" /> : <SendHorizonal size={12} />}
           Soumettre la Term Sheet
         </button>

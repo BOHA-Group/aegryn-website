@@ -158,7 +158,7 @@ export default function MandateDetailClient({
               </p>
 
               {invSuccess && (
-                <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 mb-4">
+                <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3 mb-4">
                   <p className="font-sans text-[12px] text-emerald-700">
                     ✓ Facture déclarée. La rétrocession a été calculée et est en attente de confirmation.
                   </p>
@@ -180,7 +180,7 @@ export default function MandateDetailClient({
                       value={invRef}
                       onChange={e => setInvRef(e.target.value)}
                       placeholder="FAC-2026-001"
-                      className="w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
+                      className="rounded-lg w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
                     />
                   </div>
                   <div>
@@ -192,7 +192,7 @@ export default function MandateDetailClient({
                       required
                       value={invDate}
                       onChange={e => setInvDate(e.target.value)}
-                      className="w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
+                      className="rounded-lg w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
                     />
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function MandateDetailClient({
                     value={invAmount}
                     onChange={e => setInvAmount(e.target.value)}
                     placeholder="5000"
-                    className="w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
+                    className="rounded-lg w-full border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
                   />
                   {invAmount && !isNaN(parseFloat(invAmount)) && parseFloat(invAmount) > 0 && (
                     <p className="font-mono text-[10px] text-gray-400 mt-1">
@@ -221,7 +221,7 @@ export default function MandateDetailClient({
                 <button
                   type="submit"
                   disabled={invLoading}
-                  className="self-start bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-navy/90 transition-colors disabled:opacity-50"
+                  className="rounded-lg self-start bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-ag-navy/90 transition-colors disabled:opacity-50"
                 >
                   {invLoading ? 'Enregistrement…' : 'Déclarer cette facture'}
                 </button>
@@ -274,12 +274,12 @@ export default function MandateDetailClient({
                 value={msgBody}
                 onChange={e => setMsgBody(e.target.value)}
                 placeholder="Votre message à l'équipe Aegryn…"
-                className="flex-1 border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
+                className="rounded-lg flex-1 border border-gray-200 px-3 py-2.5 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
               />
               <button
                 type="submit"
                 disabled={msgLoading || !msgBody.trim()}
-                className="bg-ag-navy text-white px-4 py-2.5 hover:bg-ag-navy/90 transition-colors disabled:opacity-40 flex items-center gap-2"
+                className="rounded-lg bg-ag-navy text-white px-4 py-2.5 hover:bg-ag-navy/90 transition-colors disabled:opacity-40 flex items-center gap-2"
               >
                 <Send size={13} />
               </button>

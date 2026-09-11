@@ -806,7 +806,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             {/* Bottom CTAs */}
             <div className="mt-8 flex flex-col gap-3">
               {user ? (
-                <div className="flex items-center gap-2.5 border border-white/15 px-4 py-3">
+                <div className="rounded-lg flex items-center gap-2.5 border border-white/15 px-4 py-3">
                   <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
                   <div className="leading-tight">
                     <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
@@ -817,7 +817,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <NextLink
                   href="/client/login"
                   onClick={closeMobile}
-                  className="flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                  className="rounded-lg flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
                 >
                   <User size={13} />
                   {t('clientSpace')}

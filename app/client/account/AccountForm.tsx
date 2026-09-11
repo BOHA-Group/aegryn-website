@@ -87,7 +87,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
               type="text"
               value={name}
               onChange={e => setName(e.target.value)}
-              className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+              className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
             />
           </div>
           <div>
@@ -96,7 +96,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
               type="email"
               value={currentEmail}
               disabled
-              className="w-full bg-gray-100 border border-gray-200 px-4 py-2.5 font-sans text-[13px] text-gray-400 cursor-not-allowed"
+              className="rounded-lg w-full bg-gray-100 border border-gray-200 px-4 py-2.5 font-sans text-[13px] text-gray-400 cursor-not-allowed"
             />
             <p className="font-sans text-[10px] text-gray-400 mt-1">
               {t('emailChangeNotePrefix')} <a href="mailto:support@boha-group.com" className="text-ag-navy underline">support@boha-group.com</a>.
@@ -104,7 +104,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
           </div>
 
           {errorProfile && (
-            <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{errorProfile}</p>
+            <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{errorProfile}</p>
           )}
           {successProfile && (
             <div className="flex items-center gap-2 text-emerald-600">
@@ -117,7 +117,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
             <button
               type="submit"
               disabled={loadingProfile}
-              className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
+              className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-black transition-colors disabled:opacity-50"
             >
               {loadingProfile && <Loader2 size={11} className="animate-spin" />}
               {t('save')}
@@ -138,7 +138,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder={t('newPasswordPlaceholder')}
-                className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 pr-10 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+                className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 pr-10 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
               />
               <button type="button" onClick={() => setShowPwd(v => !v)}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
@@ -153,12 +153,12 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
               value={confirm}
               onChange={e => setConfirm(e.target.value)}
               placeholder={t('confirmPasswordPlaceholder')}
-              className="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
+              className="rounded-lg w-full bg-gray-50 border border-gray-300 px-4 py-2.5 font-sans text-[13px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
             />
           </div>
 
           {errorPassword && (
-            <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{errorPassword}</p>
+            <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2.5">{errorPassword}</p>
           )}
           {successPassword && (
             <div className="flex items-center gap-2 text-emerald-600">
@@ -171,7 +171,7 @@ export default function AccountForm({ currentName, currentEmail }: Props) {
             <button
               type="submit"
               disabled={loadingPassword}
-              className="flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-gray-500 transition-colors disabled:opacity-50"
+              className="rounded-lg flex items-center gap-2 border border-gray-300 text-gray-700 font-mono text-[10px] uppercase tracking-widest px-5 py-2.5 hover:border-gray-500 transition-colors disabled:opacity-50"
             >
               {loadingPassword && <Loader2 size={11} className="animate-spin" />}
               {t('changePassword')}

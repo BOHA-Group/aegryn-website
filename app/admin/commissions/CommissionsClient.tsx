@@ -69,7 +69,7 @@ export default function CommissionsClient({ transactions, tiers }: Props) {
               Suivi des honoraires de transaction dus à Aegryn — grille dégressive juillet 2026
             </p>
           </div>
-          <a href={`/admin`} className="text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
+          <a href={`/admin`} className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-4 py-2 hover:border-gray-400 bg-white transition-colors">
             ← Dashboard
           </a>
         </div>
@@ -170,7 +170,7 @@ export default function CommissionsClient({ transactions, tiers }: Props) {
           <div className="sticky top-[calc(4rem+1.5rem)] space-y-6">
 
             {/* Note partenaires */}
-            <div className="bg-blue-50 border border-blue-200 px-4 py-3">
+            <div className="rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
               <p className="font-mono text-[9px] uppercase tracking-widest text-blue-500 mb-1">Nota bene</p>
               <p className="font-sans text-[11px] text-blue-700 leading-snug">
                 Les partenaires paient un abonnement fixe (89 CHF/mois) pour afficher leur fiche expert.
@@ -189,27 +189,27 @@ export default function CommissionsClient({ transactions, tiers }: Props) {
                 value={calcInput}
                 onChange={e => setCalcInput(e.target.value)}
                 placeholder="ex: 750 000"
-                className="w-full border border-gray-200 px-4 py-3 font-mono text-[14px] focus:outline-none focus:border-gray-900 transition-colors"
+                className="rounded-lg w-full border border-gray-200 px-4 py-3 font-mono text-[14px] focus:outline-none focus:border-gray-900 transition-colors"
               />
 
               {calcResult && (
                 <div className="mt-4 space-y-3">
                   {calcResult.type === 'calculated' ? (
                     <>
-                      <div className="bg-emerald-50 border border-emerald-200 px-4 py-3">
+                      <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3">
                         <p className="font-mono text-[10px] uppercase tracking-widest text-emerald-600 mb-1">Commission Aegryn HT</p>
                         <p className="font-mono text-[22px] font-bold text-gray-900">{fmtEur(calcResult.commission)}</p>
                         <p className="font-mono text-[10px] text-emerald-600 mt-0.5">
                           Taux appliqué : {(calcResult.rate * 100).toFixed(0)}% — Tranche : {calcResult.tier.label}
                         </p>
                       </div>
-                      <div className="bg-gray-50 border border-gray-200 px-4 py-3">
+                      <div className="rounded-lg bg-gray-50 border border-gray-200 px-4 py-3">
                         <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">Net cédant estimé</p>
                         <p className="font-mono text-[18px] font-bold text-gray-800">{fmtEur(calcResult.netSeller)}</p>
                       </div>
                     </>
                   ) : (
-                    <div className="bg-amber-50 border border-amber-200 px-4 py-3">
+                    <div className="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3">
                       <p className="font-mono text-[10px] uppercase tracking-widest text-amber-600 mb-1">
                         {calcResult.reason === 'below_minimum' ? 'En dessous du seuil' : 'Au-dessus du barème'}
                       </p>

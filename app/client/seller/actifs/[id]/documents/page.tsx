@@ -75,7 +75,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
+      <div className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <Link
@@ -92,7 +92,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
           </div>
           <Link
             href={`/client/seller/actifs/${id}/documents/consultations`}
-            className="text-[11px] font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 px-3 py-1.5 hover:border-gray-400 transition-colors"
+            className="rounded-lg text-[11px] font-semibold text-gray-500 hover:text-gray-900 border border-gray-200 px-3 py-1.5 hover:border-gray-400 transition-colors"
           >
             Consultations →
           </Link>
@@ -161,18 +161,18 @@ export default async function SellerDataRoomPage({ params }: Props) {
                     </span>
                     {/* Recommandés */}
                     {recommendedDim.length > 0 && (
-                      <span className="text-[10px] font-mono px-2 py-0.5 border border-gray-200 bg-gray-50 text-gray-500">
+                      <span className="rounded-lg text-[10px] font-mono px-2 py-0.5 border border-gray-200 bg-gray-50 text-gray-500">
                         {recommendedDimDone}/{recommendedDim.length} recommandé{recommendedDim.length !== 1 ? 's' : ''}
                       </span>
                     )}
                     {/* Validation admin */}
                     {validatedCount > 0 && (
-                      <span className="text-[10px] font-mono px-2 py-0.5 border border-emerald-200 bg-emerald-50 text-emerald-600">
+                      <span className="rounded-lg text-[10px] font-mono px-2 py-0.5 border border-emerald-200 bg-emerald-50 text-emerald-600">
                         ✓ {validatedCount} validé{validatedCount !== 1 ? 's' : ''}
                       </span>
                     )}
                     {insufficientCount > 0 && (
-                      <span className="text-[10px] font-mono px-2 py-0.5 border border-amber-200 bg-amber-50 text-amber-600">
+                      <span className="rounded-lg text-[10px] font-mono px-2 py-0.5 border border-amber-200 bg-amber-50 text-amber-600">
                         ⚠ {insufficientCount} insuffisant{insufficientCount !== 1 ? 's' : ''}
                       </span>
                     )}

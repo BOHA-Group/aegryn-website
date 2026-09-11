@@ -95,7 +95,7 @@ export function AdvisoryTechStrip() {
         <div className="mt-10 flex justify-end">
           <Link
             href="/advisory"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-6 py-3 hover:bg-ag-black transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase bg-ag-navy text-white px-6 py-3 hover:bg-ag-black transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
           </Link>

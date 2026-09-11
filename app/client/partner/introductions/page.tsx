@@ -53,7 +53,7 @@ export default async function PartnerIntroductionsPage() {
       {/* Liste avec édition/suppression inline */}
       <IntroductionsList initial={(introductions ?? []) as import('./IntroductionsList').Introduction[]} />
 
-      <div className="mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
+      <div className="rounded-lg mt-8 px-5 py-4 border border-gray-200 bg-gray-50">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
           Les introductions qualifiées peuvent générer une commission lors de la finalisation d&apos;une transaction. Les conditions sont définies dans votre contrat de partenariat Aegryn.
         </p>

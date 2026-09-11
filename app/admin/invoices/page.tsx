@@ -26,7 +26,7 @@ export default async function AdminInvoicesPage() {
         </div>
         <Link
           href="/admin/invoices/new"
-          className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-black transition-colors"
+          className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2.5 hover:bg-ag-black transition-colors"
         >
           <FilePlus size={12} /> Nouvelle facture
         </Link>

@@ -58,7 +58,7 @@ export default function DocActions({ memberId, docId, token }: Props) {
           <button
             onClick={handleValidate}
             disabled={isPending}
-            className="flex items-center gap-1 text-[10px] font-semibold text-emerald-600 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-emerald-600 border border-emerald-200 px-2 py-1 hover:border-emerald-400 transition-colors disabled:opacity-50"
           >
             {isPending && <Loader2 size={9} className="animate-spin" />}
             Valider
@@ -66,7 +66,7 @@ export default function DocActions({ memberId, docId, token }: Props) {
           <button
             onClick={() => { setShowReject(true); setError('') }}
             disabled={isPending}
-            className="text-[10px] font-semibold text-red-500 border border-red-200 px-2 py-1 hover:border-red-400 transition-colors disabled:opacity-50"
+            className="rounded-lg text-[10px] font-semibold text-red-500 border border-red-200 px-2 py-1 hover:border-red-400 transition-colors disabled:opacity-50"
           >
             Rejeter
           </button>
@@ -78,19 +78,19 @@ export default function DocActions({ memberId, docId, token }: Props) {
             onChange={e => setReason(e.target.value)}
             placeholder="Motif de rejet…"
             rows={2}
-            className="w-full text-[11px] border border-gray-300 px-2 py-1 focus:outline-none focus:border-red-400 resize-none font-sans"
+            className="rounded-lg w-full text-[11px] border border-gray-300 px-2 py-1 focus:outline-none focus:border-red-400 resize-none font-sans"
           />
           <div className="flex gap-1.5">
             <button
               onClick={() => { setShowReject(false); setReason(''); setError('') }}
-              className="text-[10px] text-gray-400 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
+              className="rounded-lg text-[10px] text-gray-400 border border-gray-200 px-2 py-1 hover:border-gray-400 transition-colors"
             >
               Annuler
             </button>
             <button
               onClick={handleRejectSubmit}
               disabled={isPending}
-              className="flex items-center gap-1 text-[10px] font-semibold text-red-600 border border-red-300 px-2 py-1 hover:border-red-500 bg-red-50 transition-colors disabled:opacity-50"
+              className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-red-600 border border-red-300 px-2 py-1 hover:border-red-500 bg-red-50 transition-colors disabled:opacity-50"
             >
               {isPending && <Loader2 size={9} className="animate-spin" />}
               Confirmer rejet

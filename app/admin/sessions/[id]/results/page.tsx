@@ -68,7 +68,7 @@ export default function SessionResultsPage() {
 
   return (
     <div className="min-h-screen bg-[#F5F3EE]">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+      <header className="rounded-lg bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
         <Link href="/admin/sessions" className="font-sans text-[12px] text-gray-400 hover:text-gray-700">
           ← Sessions
         </Link>
@@ -81,17 +81,17 @@ export default function SessionResultsPage() {
       <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
 
         {saved && (
-          <div className="flex items-center gap-3 bg-emerald-50 border border-emerald-200 px-5 py-4 text-emerald-700">
+          <div className="rounded-lg flex items-center gap-3 bg-emerald-50 border border-emerald-200 px-5 py-4 text-emerald-700">
             <CheckCircle size={16} />
             <span className="font-sans text-[13px] font-semibold">Session publiée avec succès.</span>
           </div>
         )}
 
         {error && (
-          <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
+          <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
         )}
 
-        <div className="bg-blue-50 border border-blue-100 px-5 py-4 text-[12px] text-blue-700">
+        <div className="rounded-lg bg-blue-50 border border-blue-100 px-5 py-4 text-[12px] text-blue-700">
           Renseignez les résultats de chaque lot puis cliquez sur <strong>Publier les résultats</strong>.
           Le statut de la session passera à <em>published</em>.
         </div>
@@ -127,7 +127,7 @@ export default function SessionResultsPage() {
                   value={lot.final_price ?? ''}
                   onChange={e => updateLot(idx, 'final_price', e.target.value)}
                   placeholder="ex: 1500000"
-                  className="w-full border border-gray-200 px-3 py-2 text-[13px] font-mono focus:outline-none focus:border-ag-navy"
+                  className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[13px] font-mono focus:outline-none focus:border-ag-navy"
                 />
               </div>
               <div>
@@ -137,7 +137,7 @@ export default function SessionResultsPage() {
                   value={lot.buyer_note ?? ''}
                   onChange={e => updateLot(idx, 'buyer_note', e.target.value)}
                   placeholder="ex: Acquis par fonds PE suisse"
-                  className="w-full border border-gray-200 px-3 py-2 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
+                  className="rounded-lg w-full border border-gray-200 px-3 py-2 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
                 />
               </div>
             </div>
@@ -148,13 +148,13 @@ export default function SessionResultsPage() {
           <button
             onClick={publish}
             disabled={saving || saved}
-            className="flex items-center gap-2 bg-emerald-700 text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-emerald-800 transition-colors disabled:opacity-50"
+            className="rounded-lg flex items-center gap-2 bg-emerald-700 text-white font-mono text-[10px] uppercase tracking-widest px-6 py-3 hover:bg-emerald-800 transition-colors disabled:opacity-50"
           >
             {saving ? <Loader2 size={12} className="animate-spin" /> : <ArrowUpRight size={12} />}
             Publier les résultats
           </button>
           <Link href="/admin/sessions"
-            className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 px-4 py-3 border border-gray-200 hover:border-gray-400 transition-colors">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 px-4 py-3 border border-gray-200 hover:border-gray-400 transition-colors">
             Annuler
           </Link>
         </div>

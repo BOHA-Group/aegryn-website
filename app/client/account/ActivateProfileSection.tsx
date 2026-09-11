@@ -87,14 +87,14 @@ export default function ActivateProfileSection({ currentRoles }: Props) {
       </p>
 
       {error && (
-        <p className="font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2 mb-4">
+        <p className="rounded-lg font-sans text-[12px] text-red-500 bg-red-50 border border-red-200 px-4 py-2 mb-4">
           {error}
         </p>
       )}
 
       <div className="flex flex-col gap-3">
         {inactive.map(({ role, label, desc, kycNote, icon, href }) => (
-          <div key={role} className="border border-gray-200 px-4 py-4 flex items-start justify-between gap-4">
+          <div key={role} className="rounded-lg border border-gray-200 px-4 py-4 flex items-start justify-between gap-4">
             <div className="flex items-start gap-3">
               <span className="text-gray-400 mt-0.5 shrink-0">{icon}</span>
               <div>
@@ -106,7 +106,7 @@ export default function ActivateProfileSection({ currentRoles }: Props) {
             <button
               onClick={() => activate(role, href)}
               disabled={activating === role}
-              className="font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0 flex items-center gap-1.5 disabled:opacity-50"
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0 flex items-center gap-1.5 disabled:opacity-50"
             >
               {activating === role
                 ? <><Loader2 size={11} className="animate-spin" /> {t('activating')}</>
@@ -117,7 +117,7 @@ export default function ActivateProfileSection({ currentRoles }: Props) {
         ))}
       </div>
 
-      <div className="mt-4 px-4 py-3 bg-gray-50 border border-gray-100">
+      <div className="rounded-lg mt-4 px-4 py-3 bg-gray-50 border border-gray-100">
         <p className="font-sans text-[11px] text-gray-400 leading-relaxed">
           {t('activateFooterNote')}
         </p>

@@ -50,7 +50,7 @@ export default async function NdaViewPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
+      <div className="rounded-lg bg-ag-navy text-white px-6 py-5 sticky top-0 z-20">
         <div className="max-w-3xl mx-auto flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <Shield size={16} className="text-ag-apex shrink-0" />
@@ -60,7 +60,7 @@ export default async function NdaViewPage() {
             </div>
           </div>
           <Link href="/client/buyer"
-            className="font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
             ← Tableau de bord
           </Link>
         </div>
@@ -69,7 +69,7 @@ export default async function NdaViewPage() {
       <div className="max-w-3xl mx-auto px-6 py-10 space-y-10">
 
         {/* Bandeau confirmation */}
-        <div className="bg-emerald-50 border border-emerald-200 px-6 py-4 flex items-start gap-3">
+        <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-6 py-4 flex items-start gap-3">
           <CheckCircle size={16} className="text-emerald-600 mt-0.5 shrink-0" />
           <div>
             <p className="font-sans text-[13px] font-semibold text-emerald-800">
@@ -82,7 +82,7 @@ export default async function NdaViewPage() {
         </div>
 
         {/* Texte NDA complet — lecture seule */}
-        <div className="bg-white border border-gray-200 px-8 py-8 space-y-8 text-[13px] text-gray-700 leading-relaxed">
+        <div className="rounded-lg bg-white border border-gray-200 px-8 py-8 space-y-8 text-[13px] text-gray-700 leading-relaxed">
 
           <div className="border-b border-gray-100 pb-6">
             <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-gray-400 mb-2">{t('versionLabel')} {String(sig.nda_version ?? NDA_VERSIONS.buyer)}</p>
@@ -90,7 +90,7 @@ export default async function NdaViewPage() {
             <p className="text-[12px] text-gray-500 mt-1">{t('mainSubtitle')}</p>
           </div>
 
-          <div className="bg-gray-50 px-5 py-4 text-[12px] space-y-2">
+          <div className="rounded-lg bg-gray-50 px-5 py-4 text-[12px] space-y-2">
             <p><strong>{t('partiesLabel')}</strong></p>
             <p><strong>{t('mainSubtitle')}</strong>, {t('partiesAegryn').split(', ').slice(1).join(', ')}</p>
             <p className="text-gray-400">{t('partiesAnd')}</p>
@@ -157,7 +157,7 @@ export default async function NdaViewPage() {
         </div>
 
         {/* Pied de page signature */}
-        <div className="bg-white border border-ag-navy/20 px-8 py-5">
+        <div className="rounded-lg bg-white border border-ag-navy/20 px-8 py-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ag-navy mb-3">
             Signature électronique enregistrée
           </p>

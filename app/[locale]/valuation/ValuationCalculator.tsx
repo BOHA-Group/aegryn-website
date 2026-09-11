@@ -498,7 +498,7 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
     <div className="flex gap-3 pt-2">
       {showBack && (
         <button type="button" onClick={onBack}
-          className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-5 py-3.5 hover:border-ag-black transition-colors">
+          className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-5 py-3.5 hover:border-ag-black transition-colors">
           <ChevronLeft size={12} /> {backLabel}
         </button>
       )}
@@ -662,11 +662,11 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
         return (
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={submitHref}
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
               {t('result.ctaGrade')} <ArrowUpRight size={12} />
             </Link>
             <Link href="/contact"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
+              className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors">
               {t('result.ctaContact')} <ArrowUpRight size={12} />
             </Link>
           </div>
@@ -691,7 +691,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
               placeholder={t('result.emailPlaceholder')}
               className={`${inputCls} flex-1`} />
             <button type="submit" disabled={emailLoading}
-              className="shrink-0 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:bg-ag-navy transition-colors disabled:opacity-60">
+              className="rounded-lg shrink-0 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3 hover:bg-ag-navy transition-colors disabled:opacity-60">
               {emailLoading ? t('result.emailSending') : t('result.emailSubmit')}
             </button>
           </form>

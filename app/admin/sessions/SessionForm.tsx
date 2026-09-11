@@ -91,7 +91,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
     <div className="space-y-6 max-w-2xl">
 
       {error && (
-        <div className="bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
+        <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-[12px] text-red-700">{error}</div>
       )}
 
       {/* Nom */}
@@ -100,7 +100,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <input
           type="text" value={values.name} onChange={e => set('name', e.target.value)}
           placeholder="ex: Session Aegryn Q3 2026"
-          className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
+          className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
         />
       </div>
 
@@ -109,7 +109,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <div>
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Type</label>
           <select value={values.type} onChange={e => set('type', e.target.value)}
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
             {TYPES.map(t => <option key={t} value={t}>{t === 'main' ? 'Principale' : 'Thématique'}</option>)}
           </select>
         </div>
@@ -117,7 +117,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Thème (si thématique)</label>
           <input type="text" value={values.theme} onChange={e => set('theme', e.target.value)}
             placeholder="ex: SaaS B2B vertical"
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
           />
         </div>
       </div>
@@ -127,13 +127,13 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <div>
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Date de session</label>
           <input type="datetime-local" value={values.session_date} onChange={e => set('session_date', e.target.value)}
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
           />
         </div>
         <div>
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Format</label>
           <select value={values.format} onChange={e => set('format', e.target.value)}
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
             {FORMATS.map(f => <option key={f} value={f}>{FORMAT_LABELS[f]}</option>)}
           </select>
         </div>
@@ -145,13 +145,13 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Lieu</label>
           <input type="text" value={values.location} onChange={e => set('location', e.target.value)}
             placeholder="ex: Genève, Suisse"
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy"
           />
         </div>
         <div>
           <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Statut</label>
           <select value={values.status} onChange={e => set('status', e.target.value)}
-            className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
+            className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy bg-white">
             {STATUSES.map(s => <option key={s} value={s}>{STATUS_LABELS[s]}</option>)}
           </select>
         </div>
@@ -162,7 +162,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <label className="block font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Notes internes</label>
         <textarea rows={3} value={values.notes} onChange={e => set('notes', e.target.value)}
           placeholder="Notes visibles uniquement par l'admin Aegryn"
-          className="w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy resize-none"
+          className="rounded-lg w-full border border-gray-200 px-3 py-2.5 text-[13px] font-sans focus:outline-none focus:border-ag-navy resize-none"
         />
       </div>
 
@@ -171,14 +171,14 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
         <button
           onClick={handleSave}
           disabled={saving || deleting}
-          className="flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-50"
+          className="rounded-lg flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-50"
         >
           {saving ? <Loader2 size={12} className="animate-spin" /> : <Save size={12} />}
           {mode === 'create' ? 'Créer la session' : 'Enregistrer'}
         </button>
 
         <button onClick={() => router.back()}
-          className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 px-4 py-3 border border-gray-200 hover:border-gray-400 transition-colors">
+          className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 px-4 py-3 border border-gray-200 hover:border-gray-400 transition-colors">
           Annuler
         </button>
 
@@ -186,7 +186,7 @@ export default function SessionForm({ mode, sessionId, initial }: Props) {
           <button
             onClick={handleDelete}
             disabled={saving || deleting}
-            className="ml-auto flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-red-600 hover:text-red-800 px-4 py-3 border border-red-200 hover:border-red-400 transition-colors disabled:opacity-50"
+            className="rounded-lg ml-auto flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-red-600 hover:text-red-800 px-4 py-3 border border-red-200 hover:border-red-400 transition-colors disabled:opacity-50"
           >
             {deleting ? <Loader2 size={12} className="animate-spin" /> : <Trash2 size={12} />}
             Supprimer la session

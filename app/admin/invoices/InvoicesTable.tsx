@@ -52,7 +52,7 @@ export default function InvoicesTable({ initialInvoices }: { initialInvoices: In
 
   if (invoices.length === 0) {
     return (
-      <div className="bg-white border border-gray-200 px-6 py-12 text-center">
+      <div className="rounded-lg bg-white border border-gray-200 px-6 py-12 text-center">
         <p className="font-sans text-[13px] text-gray-400">Aucune facture pour le moment.</p>
       </div>
     )

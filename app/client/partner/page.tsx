@@ -97,7 +97,7 @@ export default async function PartnerDashboardPage() {
       {/* Alerte notifications */}
       {unreadCount > 0 && (
         <Link href="/client/partner/notifications"
-          className="flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors mb-8">
+          className="rounded-lg flex items-center gap-3 bg-blue-50 border border-blue-200 px-4 py-3 hover:bg-blue-100 transition-colors mb-8">
           <Bell size={14} className="text-blue-600 shrink-0" />
           <p className="font-sans text-[12px] text-blue-800">
             {unreadCount} nouvelle{unreadCount > 1 ? 's' : ''} notification{unreadCount > 1 ? 's' : ''}
@@ -156,7 +156,7 @@ export default async function PartnerDashboardPage() {
           <div className="flex flex-col gap-2">
             {(certifications as unknown[] as Certification[]).map(cert => (
               <Link key={cert.id} href={`/client/partner/certifications/${cert.id}`}
-                className="bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
+                className="rounded-lg bg-white border border-gray-200 px-5 py-4 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans font-medium text-gray-900 text-[13px]">
                     {cert.assets?.company_name ?? `Actif #${cert.id.slice(0, 8)}`}
@@ -195,7 +195,7 @@ export default async function PartnerDashboardPage() {
           <div className="flex flex-col gap-2">
             {(introductions as Introduction[]).map(intro => (
               <Link key={intro.id} href="/client/partner/introductions"
-                className="bg-white border border-gray-200 px-5 py-3 flex items-center justify-between hover:border-gray-300 transition-colors group">
+                className="rounded-lg bg-white border border-gray-200 px-5 py-3 flex items-center justify-between hover:border-gray-300 transition-colors group">
                 <div>
                   <p className="font-sans text-[13px] text-gray-800 font-medium">{intro.contact_name}</p>
                   <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest mt-0.5">

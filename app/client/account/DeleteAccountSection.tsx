@@ -32,7 +32,7 @@ export default function DeleteAccountSection() {
       <button
         type="button"
         onClick={() => setConfirming(true)}
-        className="font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 px-3 py-1.5 transition-colors"
+        className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 px-3 py-1.5 transition-colors"
       >
         {t('deleteAccountButton')}
       </button>
@@ -50,7 +50,7 @@ export default function DeleteAccountSection() {
           type="button"
           onClick={handleDelete}
           disabled={loading}
-          className="bg-red-600 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-red-700 transition-colors disabled:opacity-50"
+          className="rounded-lg bg-red-600 text-white font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:bg-red-700 transition-colors disabled:opacity-50"
         >
           {loading ? t('deleteAccountConfirming') : t('deleteAccountConfirm')}
         </button>
@@ -58,7 +58,7 @@ export default function DeleteAccountSection() {
           type="button"
           onClick={() => setConfirming(false)}
           disabled={loading}
-          className="border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-50"
+          className="rounded-lg border border-gray-300 text-gray-600 font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 hover:border-gray-500 transition-colors disabled:opacity-50"
         >
           {t('deleteAccountCancel')}
         </button>

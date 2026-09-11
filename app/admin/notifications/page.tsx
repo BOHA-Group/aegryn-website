@@ -114,7 +114,7 @@ export default async function AdminNotificationsPage({
         <div>
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-5">Historique ({bs.length})</p>
           {bs.length === 0 ? (
-            <div className="bg-white border border-gray-200 px-6 py-10 text-center">
+            <div className="rounded-lg bg-white border border-gray-200 px-6 py-10 text-center">
               <Mail size={20} className="text-gray-300 mx-auto mb-3" />
               <p className="font-sans text-[13px] text-gray-400">Aucun broadcast envoyé.</p>
             </div>

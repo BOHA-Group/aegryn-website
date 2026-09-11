@@ -54,13 +54,13 @@ export function NewsletterSubscribeForm({ locale }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t('newsletterEmailPlaceholder')}
-          className="border border-ag-border bg-ag-white text-ag-black placeholder:text-ag-gray-light px-4 py-3 font-sans text-[13px] focus:outline-none focus:border-ag-black transition-colors w-56"
+          className="rounded-lg border border-ag-border bg-ag-white text-ag-black placeholder:text-ag-gray-light px-4 py-3 font-sans text-[13px] focus:outline-none focus:border-ag-black transition-colors w-56"
         />
       )}
       <button
         type="submit"
         disabled={status === 'loading' || isLoggedIn === null}
-        className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors disabled:opacity-50"
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? t('newsletterSubscribing') : t('newsletterCta')}
         {status !== 'loading' && <ArrowUpRight size={12} />}

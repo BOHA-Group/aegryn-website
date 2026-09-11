@@ -84,12 +84,12 @@ export default async function PartnerCertificationDetailPage({
         </h1>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           {asset?.asset_type && (
-            <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
               {asset.asset_type}
             </span>
           )}
           {asset?.official_grade && (
-            <span className="font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
               Grade {asset.official_grade}
             </span>
           )}
@@ -113,7 +113,7 @@ export default async function PartnerCertificationDetailPage({
 
       {/* Statut : validated */}
       {isValidated && (
-        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
           <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Contribution validée par Aegryn</p>
           {!!cert.validated_at && (
             <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Validée le {fmtDate(cert.validated_at)}</p>
@@ -155,7 +155,7 @@ export default async function PartnerCertificationDetailPage({
 
       {/* Statut : rejected */}
       {isRejected && (
-        <div className="bg-red-50 border border-red-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-red-50 border border-red-200 px-5 py-4 mb-6">
           <p className="font-sans font-semibold text-red-700 text-[13px]">✗ Contribution refusée par Aegryn</p>
           {!!cert.rejection_reason && (
             <div className="mt-2">
@@ -174,7 +174,7 @@ export default async function PartnerCertificationDetailPage({
 
       {/* Statut legacy signed (ancien schéma) */}
       {cert.status === 'signed' && (
-        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-5 py-4 mb-6">
           <p className="font-sans font-semibold text-emerald-700 text-[13px]">✓ Co-signature signée</p>
           {!!cert.signed_at && (
             <p className="font-sans text-[11px] text-emerald-600 mt-0.5">Signée le {fmtDate(cert.signed_at)}</p>
@@ -183,7 +183,7 @@ export default async function PartnerCertificationDetailPage({
       )}
 
       {cert.status === 'declined' && (
-        <div className="bg-red-50 border border-red-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-red-50 border border-red-200 px-5 py-4 mb-6">
           <p className="font-sans text-[13px] text-red-600">Vous avez décliné cette mission.</p>
         </div>
       )}
@@ -194,7 +194,7 @@ export default async function PartnerCertificationDetailPage({
       )}
 
       {/* Info processus */}
-      <div className="mt-6 bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+      <div className="rounded-lg mt-6 bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/50 mb-2">Processus CIFSO v4.0</p>
         <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
           Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel Aegryn. Le score global CIFSO est la somme des cinq dimensions.

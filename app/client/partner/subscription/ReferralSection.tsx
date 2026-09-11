@@ -143,7 +143,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
 
       {/* ── Bannière quota crédits atteint ── */}
       {quotaFull && (
-        <div className="bg-red-50 border border-red-200 px-5 py-4 flex items-start gap-3">
+        <div className="rounded-lg bg-red-50 border border-red-200 px-5 py-4 flex items-start gap-3">
           <span className="font-mono text-[10px] uppercase tracking-widest text-red-700 shrink-0 mt-0.5">Plafond atteint</span>
           <p className="font-sans text-[12px] text-red-800">
             Vous avez utilisé vos <strong>6 mois de crédits</strong> maximum. Aucun crédit supplémentaire ne peut être accordé (parrainage ou admin).
@@ -153,7 +153,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
 
       {/* ── Bannière filleul (si l'utilisateur a lui-même été parrainé) ── */}
       {data.filleul_status && data.filleul_status.status !== 'rewarded' && (
-        <div className="bg-blue-50 border border-blue-200 px-5 py-4">
+        <div className="rounded-lg bg-blue-50 border border-blue-200 px-5 py-4">
           <p className="font-sans text-[12px] text-blue-800">
             <strong>Vous avez été parrainé.</strong>{' '}
             {data.filleul_status.status === 'pending'
@@ -169,7 +169,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
 
       {/* ── Bannière crédit admin en attente ── */}
       {data.credits.some(c => !c.applied && c.source === 'admin') && (
-        <div className="bg-emerald-50 border border-emerald-200 px-5 py-4">
+        <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-5 py-4">
           <p className="font-sans text-[12px] text-emerald-800">
             <strong>Crédit offert par Aegryn.</strong>{' '}
             {isActive
@@ -194,19 +194,19 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
 
         {/* Compteur */}
         <div className="flex gap-4 flex-wrap">
-          <div className="border border-gray-200 px-4 py-3 flex flex-col gap-0.5">
+          <div className="rounded-lg border border-gray-200 px-4 py-3 flex flex-col gap-0.5">
             <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Mois gagnés</span>
             <span className="font-sans font-bold text-gray-900 text-[20px]">
               {data.referral_months_credit}
               <span className="text-[13px] font-normal text-gray-400"> / {data.months_cap}</span>
             </span>
           </div>
-          <div className="border border-gray-200 px-4 py-3 flex flex-col gap-0.5">
+          <div className="rounded-lg border border-gray-200 px-4 py-3 flex flex-col gap-0.5">
             <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Filleuls actifs</span>
             <span className="font-sans font-bold text-gray-900 text-[20px]">{rewarded}</span>
           </div>
           {pending > 0 && (
-            <div className="border border-amber-200 bg-amber-50 px-4 py-3 flex flex-col gap-0.5">
+            <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 flex flex-col gap-0.5">
               <span className="font-mono text-[10px] uppercase tracking-widest text-amber-600">En attente</span>
               <span className="font-sans font-bold text-amber-800 text-[20px]">{pending}</span>
             </div>
@@ -218,12 +218,12 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
           <div className="space-y-2">
             <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Votre code parrain</p>
             <div className="flex items-center gap-3">
-              <span className="font-mono text-[18px] font-bold text-ag-navy tracking-[0.2em] bg-gray-50 border border-gray-200 px-4 py-2">
+              <span className="rounded-lg font-mono text-[18px] font-bold text-ag-navy tracking-[0.2em] bg-gray-50 border border-gray-200 px-4 py-2">
                 {data.referral_code}
               </span>
               <button
                 onClick={copyLink}
-                className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 px-3 py-2 text-gray-500 hover:border-ag-navy hover:text-ag-navy transition-colors"
+                className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest border border-gray-300 px-3 py-2 text-gray-500 hover:border-ag-navy hover:text-ag-navy transition-colors"
               >
                 {copied ? <Check size={12} /> : <Copy size={12} />}
                 {copied ? 'Copié' : 'Copier le code'}
@@ -233,7 +233,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
         )}
 
         {!isActive && (
-          <p className="font-sans text-[12px] text-amber-700 bg-amber-50 border border-amber-200 px-4 py-3">
+          <p className="rounded-lg font-sans text-[12px] text-amber-700 bg-amber-50 border border-amber-200 px-4 py-3">
             Activez votre abonnement pour générer votre code parrain et participer au programme.
           </p>
         )}
@@ -248,7 +248,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
               const s = STATUS_LABELS[r.status] ?? STATUS_LABELS.pending
               const expired = r.status === 'pending' && new Date(r.code_expires_at) < new Date()
               return (
-                <div key={r.id} className="flex items-center justify-between gap-3 border border-gray-100 px-4 py-3 text-[12px]">
+                <div key={r.id} className="rounded-lg flex items-center justify-between gap-3 border border-gray-100 px-4 py-3 text-[12px]">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-mono text-gray-500 text-[10px]">Inscrit le {fmtDate(r.code_used_at)}</span>
                     {r.rewarded_at && (
@@ -301,7 +301,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
           </div>
 
           {quotaFull ? (
-            <p className="font-sans text-[12px] text-red-700 bg-red-50 border border-red-200 px-4 py-3">
+            <p className="rounded-lg font-sans text-[12px] text-red-700 bg-red-50 border border-red-200 px-4 py-3">
               Plafond de 6 mois de crédits atteint. Vous ne pouvez plus bénéficier de parrainage.
             </p>
           ) : (
@@ -312,12 +312,12 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
               value={codeInput}
               onChange={e => setCodeInput(e.target.value.toUpperCase())}
               placeholder="CODE8CHR"
-              className="font-mono text-[14px] uppercase tracking-[0.18em] border border-gray-300 px-4 py-2 w-36 focus:outline-none focus:border-ag-navy"
+              className="rounded-lg font-mono text-[14px] uppercase tracking-[0.18em] border border-gray-300 px-4 py-2 w-36 focus:outline-none focus:border-ag-navy"
             />
             <button
               type="submit"
               disabled={submitting || codeInput.length < 8}
-              className="font-mono text-[10px] uppercase tracking-widest border border-ag-navy text-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
+              className="rounded-lg font-mono text-[10px] uppercase tracking-widest border border-ag-navy text-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {submitting && <Loader2 size={11} className="animate-spin" />}
               Valider

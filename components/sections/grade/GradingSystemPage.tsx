@@ -142,7 +142,7 @@ export function GradingSystemPage() {
               </p>
             </div>
             <div className="gs-hero-version shrink-0 flex flex-col gap-3">
-              <div className="border border-white/10 px-5 py-4 text-right">
+              <div className="rounded-lg border border-white/10 px-5 py-4 text-right">
                 <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/60 mb-1">
                   {t('downloadLabel')}
                 </p>
@@ -152,7 +152,7 @@ export function GradingSystemPage() {
               </div>
               <Link
                 href={`/${locale}/grade/whitepaper`}
-                className="inline-flex items-center gap-2 bg-ag-apex/10 border border-ag-apex/30 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-apex/20 transition-colors"
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-apex/10 border border-ag-apex/30 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-apex/20 transition-colors"
               >
                 <FileText size={11} />
                 {tG('whitepaperCta')}
@@ -247,7 +247,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── GRADES ── */}
-      <section ref={gradesRef} className="py-28 px-6 bg-ag-off-white border-t border-ag-border">
+      <section ref={gradesRef} className="rounded-lg py-28 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
@@ -360,7 +360,7 @@ export function GradingSystemPage() {
             </p>
 
             {/* Code badge */}
-            <div className="bg-ag-navy px-8 py-6 mb-8 font-mono text-[14px] tracking-[0.08em] text-ag-apex">
+            <div className="rounded-lg bg-ag-navy px-8 py-6 mb-8 font-mono text-[14px] tracking-[0.08em] text-ag-apex">
               C1-D01 <span className="text-white/60 mx-2">|</span>
               I2-M02 <span className="text-white/60 mx-2">|</span>
               F1-A01 <span className="text-white/60 mx-2">|</span>
@@ -373,7 +373,7 @@ export function GradingSystemPage() {
                   key={part}
                   className="flex items-start gap-0 border-b border-ag-border last:border-0"
                 >
-                  <div className="w-28 shrink-0 px-5 py-4 border-r border-ag-border bg-ag-off-white">
+                  <div className="rounded-lg w-28 shrink-0 px-5 py-4 border-r border-ag-border bg-ag-off-white">
                     <span className="font-mono text-[12px] tracking-[0.1em] text-ag-apex font-semibold">
                       {part}
                     </span>
@@ -389,7 +389,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── PROCESSUS ── */}
-      <section ref={processRef} className="py-28 px-6 bg-ag-off-white border-t border-ag-border">
+      <section ref={processRef} className="rounded-lg py-28 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-16">
             {t('processTitle')}
@@ -460,7 +460,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── SCORING TABLE RÉCAP ── */}
-      <section className="py-20 px-6 bg-ag-navy border-t border-ag-border">
+      <section className="rounded-lg py-20 px-6 bg-ag-navy border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex/60 mb-10">
             {t('version')}
@@ -509,7 +509,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── REFUS AUTOMATIQUE ── */}
-      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
+      <section className="rounded-lg py-28 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
@@ -521,7 +521,7 @@ export function GradingSystemPage() {
           </div>
           <div className="flex flex-col gap-0 border border-ag-border rounded-2xl overflow-hidden">
             {refusalConditions.map((cond, i) => (
-              <div key={i} className="flex items-start gap-4 px-6 py-5 bg-ag-white border-b border-ag-border last:border-0">
+              <div key={i} className="rounded-lg flex items-start gap-4 px-6 py-5 bg-ag-white border-b border-ag-border last:border-0">
                 <span className="font-mono text-[11px] font-bold text-red-600 shrink-0 mt-0.5">✕</span>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{cond}</p>
               </div>
@@ -553,7 +553,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── DISCLAIMER ── */}
-      <section className="py-16 px-6 border-t border-ag-border bg-ag-navy">
+      <section className="rounded-lg py-16 px-6 border-t border-ag-border bg-ag-navy">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex/60 mb-3">
             {t('disclaimerTitle')}
@@ -578,7 +578,7 @@ export function GradingSystemPage() {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
               href="/grade/submit"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy-mid transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy-mid transition-colors"
             >
               {t('ctaPrimary')} <ArrowUpRight size={12} />
             </Link>

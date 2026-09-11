@@ -157,7 +157,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
         <div className="max-w-7xl mx-auto">
 
           {/* ── Filtres au-dessus de la grille ── */}
-          <div className="border border-ag-border bg-ag-off-white px-5 py-4 mb-8 flex flex-wrap items-center gap-2">
+          <div className="rounded-lg border border-ag-border bg-ag-off-white px-5 py-4 mb-8 flex flex-wrap items-center gap-2">
 
             {accessStatus === 'ok' ? (
               <>
@@ -269,7 +269,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
 
                     <div className="flex flex-wrap items-center gap-2">
                       {asset.asset_type && (
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
+                        <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light border border-ag-border px-2 py-0.5">
                           {asset.asset_type}
                         </span>
                       )}
@@ -306,7 +306,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
               </p>
               <button
                 onClick={reset}
-                className="font-mono text-[10px] uppercase tracking-widest border border-ag-border px-5 py-2.5 text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
+                className="rounded-lg font-mono text-[10px] uppercase tracking-widest border border-ag-border px-5 py-2.5 text-ag-gray hover:border-ag-black hover:text-ag-black transition-colors"
               >
                 {labels.resetFilters}
               </button>

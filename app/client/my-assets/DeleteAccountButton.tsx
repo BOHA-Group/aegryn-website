@@ -55,7 +55,7 @@ export default function DeleteAccountButton() {
           type="button"
           onClick={handleDelete}
           disabled={loading}
-          className="bg-red-600 text-white font-mono text-[11px] uppercase tracking-[0.14em] px-5 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50"
+          className="rounded-lg bg-red-600 text-white font-mono text-[11px] uppercase tracking-[0.14em] px-5 py-2.5 hover:bg-red-700 transition-colors disabled:opacity-50"
         >
           {loading ? 'Suppression...' : 'Confirmer la suppression'}
         </button>
@@ -63,7 +63,7 @@ export default function DeleteAccountButton() {
           type="button"
           onClick={() => setConfirming(false)}
           disabled={loading}
-          className="border border-gray-300 text-gray-600 font-mono text-[11px] uppercase tracking-[0.14em] px-5 py-2.5 hover:border-gray-500 transition-colors disabled:opacity-50"
+          className="rounded-lg border border-gray-300 text-gray-600 font-mono text-[11px] uppercase tracking-[0.14em] px-5 py-2.5 hover:border-gray-500 transition-colors disabled:opacity-50"
         >
           Annuler
         </button>

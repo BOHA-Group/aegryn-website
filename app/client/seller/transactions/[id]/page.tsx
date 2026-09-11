@@ -78,12 +78,12 @@ export default async function SellerTransactionDetailPage({
         </h1>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           {asset?.asset_type && (
-            <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
               {asset.asset_type}
             </span>
           )}
           {asset?.official_grade && (
-            <span className="font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
+            <span className="rounded-lg font-mono text-[9px] font-bold text-gray-600 border border-gray-300 px-2 py-0.5">
               Grade {asset.official_grade}
             </span>
           )}
@@ -129,7 +129,7 @@ export default async function SellerTransactionDetailPage({
           </div>
         </div>
       ) : (
-        <div className="bg-red-50 border border-red-200 px-5 py-4 mb-6">
+        <div className="rounded-lg bg-red-50 border border-red-200 px-5 py-4 mb-6">
           <p className="font-sans text-[13px] text-red-600">Cette transaction a été annulée.</p>
         </div>
       )}
@@ -177,7 +177,7 @@ export default async function SellerTransactionDetailPage({
             )}
           </div>
           {tx.net_seller_proceeds_chf != null && (
-            <div className="bg-emerald-50 border border-emerald-200 px-4 py-3 mb-3">
+            <div className="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3 mb-3">
               <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-600 mb-1">Produit net cédant</p>
               <p className="font-sans font-bold text-[18px] text-emerald-700">{fmtChf(tx.net_seller_proceeds_chf)}</p>
               {tx.commission_seller_pct != null && (
@@ -231,13 +231,13 @@ export default async function SellerTransactionDetailPage({
             )}
             {tx.spa_document_url && (
               <a href={tx.spa_document_url} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-gray-600 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors w-fit">
+                className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-gray-600 border border-gray-300 px-4 py-2 hover:border-gray-500 transition-colors w-fit">
                 SPA / Acte de cession →
               </a>
             )}
             {tx.certificate_url && (
               <a href={tx.certificate_url} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors w-fit">
+                className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors w-fit">
                 Certificat de Transaction Aegryn →
               </a>
             )}
@@ -247,13 +247,13 @@ export default async function SellerTransactionDetailPage({
 
       {/* Note admin */}
       {tx.admin_note && (
-        <div className="bg-gray-50 border border-gray-200 px-5 py-4 mb-4">
+        <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-4 mb-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Message de l&apos;équipe Aegryn</p>
           <p className="font-sans text-[13px] text-gray-700 leading-relaxed">{tx.admin_note}</p>
         </div>
       )}
 
-      <div className="bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
+      <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-sans text-[12px] text-gray-600">
           Pour toute question, contactez votre chargé de compte à{' '}
           <a href="mailto:contact@boha-group.com" className="text-ag-navy underline">contact@boha-group.com</a>{' '}
