@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, useCallback, type ComponentProps } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight } from 'lucide-react'
@@ -367,7 +367,6 @@ export interface NavUser {
 export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const t = useTranslations('nav')
   const pathname = usePathname()
-  const locale = useLocale()
   
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
