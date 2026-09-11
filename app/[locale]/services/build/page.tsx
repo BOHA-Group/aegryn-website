@@ -114,10 +114,10 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
             {t('formatsSection.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {formatCards.map((card, _i) => (
-              <div key={card.key} className={`p-8 flex flex-col gap-4 ${
-                card.key === 'btl' ? 'bg-ag-navy' : 'bg-ag-white'
+              <div key={card.key} className={`rounded-2xl p-8 flex flex-col gap-4 ${
+                card.key === 'btl' ? 'bg-ag-navy' : 'bg-ag-white border border-ag-border'
               }`}>
                 <div className="flex items-center gap-3">
                   <span className={`font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
@@ -161,9 +161,9 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('useCasesSection.title')}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {useCaseItems.map((item, i) => (
-              <div key={i} className="rounded-lg bg-ag-white px-6 py-5">
+              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border px-6 py-5">
                 <p className="font-sans font-semibold text-ag-black text-[14px]">{item}</p>
               </div>
             ))}
@@ -186,9 +186,9 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('whySection.desc')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {whyPoints.map((pt, i) => (
-              <div key={i} className="border border-ag-border p-6 bg-ag-off-white">
+              <div key={i} className="rounded-2xl border border-ag-border p-6 bg-ag-off-white">
                 <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex mb-2">
                   {pt.title}
                 </p>
@@ -216,9 +216,9 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-14">
             {t('domainsSection.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {domainItems.map((item) => (
-              <div key={item.num} className="bg-ag-white p-8 flex flex-col gap-3">
+              <div key={item.num} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
                   <span className="rounded-lg inline-flex font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-navy/20 bg-ag-navy/5 text-ag-navy">
@@ -276,9 +276,9 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
             {t('sovereigntySection.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {sovereigntyPillars.map((pillar) => (
-              <div key={pillar.key} className="bg-ag-white p-8 flex flex-col gap-3">
+              <div key={pillar.key} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] leading-snug">{pillar.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{pillar.desc}</p>
               </div>
@@ -299,9 +299,9 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('difference.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {differenceItems.map((item) => (
-              <div key={item.num} className="bg-ag-white p-8 flex flex-col gap-4">
+              <div key={item.num} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
                 <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
@@ -323,7 +323,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('marketComparison.title')}
           </h2>
-          <div className="border border-ag-border overflow-x-auto">
+          <div className="rounded-2xl border border-ag-border overflow-x-auto overflow-hidden">
             <table className="w-full min-w-[640px] text-left">
               <thead>
                 <tr className="bg-ag-off-white border-b border-ag-border">
@@ -358,9 +358,9 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('certificationBenefits.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {certBenefits.map((item, i) => (
-              <div key={i} className="bg-ag-white p-8 flex flex-col gap-4">
+              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
               </div>
@@ -384,7 +384,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('process.title')}
           </h2>
-          <div className="flex flex-col divide-y divide-ag-border border border-ag-border">
+          <div className="flex flex-col divide-y divide-ag-border border border-ag-border rounded-2xl overflow-hidden">
             {processSteps.map((step, i) => (
               <div key={step.num} className={`flex flex-col md:flex-row gap-6 md:gap-12 p-8 ${i % 2 === 1 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
                 <span className="font-mono text-[11px] tracking-[0.22em] text-ag-apex-ink shrink-0 md:w-8">{step.num}</span>
@@ -413,13 +413,13 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-12">
             {t('maintenance.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border mb-8">
-            <div className="bg-ag-white p-8 flex flex-col gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
               <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.corrective.title')}</h3>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{t('maintenance.corrective.desc')}</p>
               <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.corrective.format')}</p>
             </div>
-            <div className="bg-ag-white p-8 flex flex-col gap-3">
+            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
               <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.evolutive.title')}</h3>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{t('maintenance.evolutive.desc')}</p>
               <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.evolutive.format')}</p>
@@ -443,9 +443,9 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('fees.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
             {feeItems.map((item) => (
-              <div key={item.title} className="bg-ag-white p-8 flex flex-col gap-3">
+              <div key={item.title} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[16px]">{item.title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
                 <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{item.format}</p>
