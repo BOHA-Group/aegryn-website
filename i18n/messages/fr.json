@@ -2220,7 +2220,8 @@
     "newsletterError": "Une erreur est survenue. Réessayez.",
     "bodyComingSoon": "Contenu complet disponible prochainement.",
     "ctaTeaser": "Prêt à soumettre votre actif ou accéder au catalogue ?",
-    "aiEditorialNotice": "Cet article a été rédigé avec l'assistance de l'intelligence artificielle et révisé sous la responsabilité éditoriale d'Aegryn. Conformément à l'article 50 du Règlement européen sur l'IA (EU AI Act), nous assumons la responsabilité éditoriale de ce contenu."
+    "aiEditorialNotice": "Cet article a été rédigé avec l'assistance de l'intelligence artificielle et révisé sous la responsabilité éditoriale d'Aegryn. Conformément à l'article 50 du Règlement européen sur l'IA (EU AI Act), nous assumons la responsabilité éditoriale de ce contenu.",
+    "loadMore": "Voir plus"
   },
   "grade": {
     "meta": {

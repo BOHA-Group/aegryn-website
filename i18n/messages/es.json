@@ -2885,7 +2885,8 @@
     "newsletterError": "Ha ocurrido un error. Inténtelo de nuevo.",
     "bodyComingSoon": "Contenido completo disponible próximamente.",
     "ctaTeaser": "¿Listo para enviar su activo o acceder al catálogo?",
-    "aiEditorialNotice": "Este artículo fue redactado con la asistencia de la inteligencia artificial y revisado bajo la responsabilidad editorial de Aegryn. De conformidad con el artículo 50 del Reglamento europeo de IA, asumimos la responsabilidad editorial de este contenido."
+    "aiEditorialNotice": "Este artículo fue redactado con la asistencia de la inteligencia artificial y revisado bajo la responsabilidad editorial de Aegryn. De conformidad con el artículo 50 del Reglamento europeo de IA, asumimos la responsabilidad editorial de este contenido.",
+    "loadMore": "Ver más"
   },
   "grade": {
     "meta": {

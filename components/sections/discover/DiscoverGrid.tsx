@@ -14,17 +14,21 @@ type Filter = 'all' | ArticleCategory
 
 interface Props { locale: string }
 
+const PAGE_SIZE = 12
+
 export function DiscoverGrid({ locale }: Props) {
-  const t    = useTranslations('discover')
+  const t = useTranslations('discover')
   const VALID_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
   type ValidLocale = typeof VALID_LOCALES[number]
-  const lang: ValidLocale = (VALID_LOCALES as readonly string[]).includes(locale) ? locale as ValidLocale : 'en'
-  const [active, setActive] = useState<Filter>('all')
-  const [query, setQuery]   = useState('')
-  const [page, setPage]     = useState(1)
-  const PAGE_SIZE = 12
-  const gridRef = useRef<HTMLDivElement>(null)
-  const heroRef = useRef<HTMLElement>(null)
+  const lang: ValidLocale = (VALID_LOCALES as readonly string[]).includes(locale)
+    ? locale as ValidLocale
+    : 'en'
+
+  const [active, setActive]     = useState<Filter>('all')
+  const [query, setQuery]       = useState('')
+  const [visible, setVisible]   = useState(PAGE_SIZE)
+  const gridRef  = useRef<HTMLDivElement>(null)
+  const heroRef  = useRef<HTMLElement>(null)
 
   const filtered = ARTICLES
     .filter(a => active === 'all' || a.category === active)
@@ -37,13 +41,15 @@ export function DiscoverGrid({ locale }: Props) {
       return title.includes(q) || excerpt.includes(q) || cat.includes(q)
     })
 
-  const totalPages  = Math.ceil(filtered.length / PAGE_SIZE)
-  const paginated   = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+  const shown      = filtered.slice(0, visible)
+  const hasMore    = visible < filtered.length
 
-  const featured     = ARTICLES.filter(a => a.featured).slice(0, 3)
+  /* Tous les featured (jusqu'à 8 pour la liste droite) */
+  const featured     = ARTICLES.filter(a => a.featured)
   const showFeatured = active === 'all' && !query.trim()
 
-  useEffect(() => { setPage(1) }, [active, query])
+  /* Reset visible count quand le filtre / search change */
+  useEffect(() => { setVisible(PAGE_SIZE) }, [active, query])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -55,7 +61,7 @@ export function DiscoverGrid({ locale }: Props) {
       })
     }, gridRef)
     return () => ctx.revert()
-  }, [active, page])
+  }, [active, visible])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -70,16 +76,16 @@ export function DiscoverGrid({ locale }: Props) {
   }, [])
 
   const allFilters: { key: Filter; label: string }[] = [
-    { key: 'all',           label: t('filterAll')          },
-    { key: 'market',        label: t('filterMarket')       },
-    { key: 'seller',        label: t('filterSeller')       },
-    { key: 'buyer',         label: t('filterBuyer')        },
+    { key: 'all',           label: t('filterAll')           },
+    { key: 'market',        label: t('filterMarket')        },
+    { key: 'seller',        label: t('filterSeller')        },
+    { key: 'buyer',         label: t('filterBuyer')         },
     { key: 'certification', label: t('filterCertification') },
-    { key: 'strategy',      label: t('filterStrategy')     },
-    { key: 'case_study',    label: t('filterCaseStudy')    },
-    { key: 'legal',         label: t('filterLegal')        },
-    { key: 'vertical',      label: t('filterVertical')     },
-    { key: 'dach',          label: t('filterDACH')         },
+    { key: 'strategy',      label: t('filterStrategy')      },
+    { key: 'case_study',    label: t('filterCaseStudy')     },
+    { key: 'legal',         label: t('filterLegal')         },
+    { key: 'vertical',      label: t('filterVertical')      },
+    { key: 'dach',          label: t('filterDACH')          },
   ]
 
   const filters = allFilters.filter(f =>
@@ -91,9 +97,15 @@ export function DiscoverGrid({ locale }: Props) {
 
   const getImage = (slug: string) => BLOG_IMAGES[slug] ?? BLOG_IMAGE_FALLBACK
 
+  /* Handler filtre : type=button + preventDefault pour éviter tout scroll */
+  const handleFilter = (e: React.MouseEvent<HTMLButtonElement>, key: Filter) => {
+    e.preventDefault()
+    setActive(key)
+  }
+
   return (
     <>
-      {/* ── Hero ──────────────────────────────────────────────── */}
+      {/* ── Hero ─────────────────────────────────────────────── */}
       <section ref={heroRef} className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="discover-hero-label font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
@@ -118,12 +130,11 @@ export function DiscoverGrid({ locale }: Props) {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-12 items-start">
 
-              {/* Article principal — image portrait + texte dessous */}
+              {/* Article principal — image portrait 4/3 + texte dessous */}
               <Link
                 href={`/blog/${featured[0].slug}` as never}
                 className="group flex flex-col"
               >
-                {/* Image — ratio 4/3, grands angles arrondis */}
                 <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                   <Image
                     src={getImage(featured[0].slug)}
@@ -134,7 +145,6 @@ export function DiscoverGrid({ locale }: Props) {
                     priority
                   />
                 </div>
-                {/* Texte sous l'image */}
                 <div className="mt-5">
                   <h2
                     className="font-sans font-bold text-ag-black leading-[1.15] tracking-[-0.03em] mb-3 group-hover:text-ag-navy transition-colors"
@@ -155,8 +165,8 @@ export function DiscoverGrid({ locale }: Props) {
                 </div>
               </Link>
 
-              {/* Colonne droite — titre section + liste articles */}
-              <div className="flex flex-col lg:pt-0">
+              {/* Colonne droite — titre section + liste jusqu'à 7 articles */}
+              <div className="flex flex-col">
                 <p
                   className="font-sans font-bold text-ag-black mb-7 leading-tight tracking-[-0.025em]"
                   style={{ fontSize: 'clamp(18px,2vw,26px)' }}
@@ -164,7 +174,7 @@ export function DiscoverGrid({ locale }: Props) {
                   {t('featuredLabel')}
                 </p>
                 <div className="flex flex-col divide-y divide-ag-border">
-                  {featured.slice(1, 6).map(article => (
+                  {featured.slice(1, 8).map(article => (
                     <Link
                       key={article.slug}
                       href={`/blog/${article.slug}` as never}
@@ -190,11 +200,11 @@ export function DiscoverGrid({ locale }: Props) {
         </section>
       )}
 
-      {/* ── All articles ──────────────────────────────────────── */}
+      {/* ── All articles ─────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
 
-          {/* Barre search + filtres pills */}
+          {/* Search + filtres */}
           <div className="mb-10 flex flex-col gap-5">
 
             {/* Search */}
@@ -209,6 +219,7 @@ export function DiscoverGrid({ locale }: Props) {
               />
               {query && (
                 <button
+                  type="button"
                   onClick={() => setQuery('')}
                   className="absolute right-3.5 top-1/2 -translate-y-1/2 text-ag-gray-light hover:text-ag-black transition-colors"
                 >
@@ -217,12 +228,13 @@ export function DiscoverGrid({ locale }: Props) {
               )}
             </div>
 
-            {/* Filter pills — style flowpartners : fond gris, pill actif blanc + shadow */}
-            <div className="inline-flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl flex-wrap">
+            {/* Filter pills — fond gris, pill actif blanc + shadow (flowpartners) */}
+            <div className="flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl w-fit flex-wrap">
               {filters.map(({ key, label }) => (
                 <button
                   key={key}
-                  onClick={() => setActive(key)}
+                  type="button"
+                  onClick={e => handleFilter(e, key)}
                   className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 ${
                     active === key
                       ? 'bg-white text-ag-navy font-semibold shadow-sm'
@@ -242,7 +254,7 @@ export function DiscoverGrid({ locale }: Props) {
               <p className="font-sans text-[14px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {paginated.map((article) => (
+                {shown.map((article) => (
                   <Link
                     key={article.slug}
                     href={`/blog/${article.slug}` as never}
@@ -289,35 +301,18 @@ export function DiscoverGrid({ locale }: Props) {
             )}
           </div>
 
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-12">
+          {/* Load more */}
+          {hasMore && (
+            <div className="flex justify-center mt-12">
               <button
-                onClick={() => setPage(p => Math.max(1, p - 1))}
-                disabled={page === 1}
-                className="rounded-full font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-white text-ag-gray hover:border-ag-navy hover:text-ag-navy disabled:opacity-30 disabled:pointer-events-none transition-all"
+                type="button"
+                onClick={() => setVisible(v => v + PAGE_SIZE)}
+                className="inline-flex items-center gap-2 font-sans text-[13px] font-medium text-ag-navy border border-ag-navy rounded-full px-7 py-3 hover:bg-ag-navy hover:text-white transition-all duration-200"
               >
-                ←
-              </button>
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
-                <button
-                  key={n}
-                  onClick={() => setPage(n)}
-                  className={`font-mono text-[10px] tracking-[0.14em] uppercase w-9 h-9 rounded-full border transition-all ${
-                    n === page
-                      ? 'border-ag-navy bg-ag-navy text-white'
-                      : 'border-ag-border bg-white text-ag-gray hover:border-ag-navy hover:text-ag-navy'
-                  }`}
-                >
-                  {n}
-                </button>
-              ))}
-              <button
-                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-                disabled={page === totalPages}
-                className="rounded-full font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border border-ag-border bg-white text-ag-gray hover:border-ag-navy hover:text-ag-navy disabled:opacity-30 disabled:pointer-events-none transition-all"
-              >
-                →
+                {t('loadMore')}
+                <span className="font-mono text-[11px] text-ag-gray-light">
+                  ({filtered.length - visible})
+                </span>
               </button>
             </div>
           )}

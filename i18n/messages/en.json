@@ -2257,7 +2257,8 @@
     "newsletterError": "Something went wrong. Please try again.",
     "bodyComingSoon": "Full content available soon.",
     "ctaTeaser": "Ready to submit your asset or access the catalogue?",
-    "aiEditorialNotice": "This article was written with the assistance of artificial intelligence and reviewed under Aegryn editorial responsibility. In accordance with Article 50 of the EU AI Act, we assume editorial responsibility for this content."
+    "aiEditorialNotice": "This article was written with the assistance of artificial intelligence and reviewed under Aegryn editorial responsibility. In accordance with Article 50 of the EU AI Act, we assume editorial responsibility for this content.",
+    "loadMore": "Load more"
   },
   "grade": {
     "meta": {

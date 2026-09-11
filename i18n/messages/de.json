@@ -2885,7 +2885,8 @@
     "newsletterError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "bodyComingSoon": "Vollständiger Inhalt demnächst verfügbar.",
     "ctaTeaser": "Bereit, Ihr Asset einzureichen oder den Katalog aufzurufen?",
-    "aiEditorialNotice": "Dieser Artikel wurde mit Unterstützung künstlicher Intelligenz verfasst und unter der redaktionellen Verantwortung von Aegryn überprüft. Gemäß Artikel 50 des EU-KI-Gesetzes übernehmen wir die redaktionelle Verantwortung für diesen Inhalt."
+    "aiEditorialNotice": "Dieser Artikel wurde mit Unterstützung künstlicher Intelligenz verfasst und unter der redaktionellen Verantwortung von Aegryn überprüft. Gemäß Artikel 50 des EU-KI-Gesetzes übernehmen wir die redaktionelle Verantwortung für diesen Inhalt.",
+    "loadMore": "Mehr laden"
   },
   "grade": {
     "meta": {

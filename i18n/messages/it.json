@@ -2885,7 +2885,8 @@
     "newsletterError": "Si è verificato un errore. Riprova.",
     "bodyComingSoon": "Contenuto completo disponibile a breve.",
     "ctaTeaser": "Pronto a inviare il tuo asset o accedere al catalogo?",
-    "aiEditorialNotice": "Questo articolo è stato redatto con l'assistenza dell'intelligenza artificiale e revisionato sotto la responsabilità editoriale di Aegryn. Ai sensi dell'articolo 50 del Regolamento europeo sull'IA, ci assumiamo la piena responsabilità editoriale di questo contenuto."
+    "aiEditorialNotice": "Questo articolo è stato redatto con l'assistenza dell'intelligenza artificiale e revisionato sotto la responsabilità editoriale di Aegryn. Ai sensi dell'articolo 50 del Regolamento europeo sull'IA, ci assumiamo la piena responsabilità editoriale di questo contenuto.",
+    "loadMore": "Carica altri"
   },
   "grade": {
     "meta": {
