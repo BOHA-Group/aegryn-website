@@ -137,26 +137,49 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* ── Bottom CTA ───────────────────────────────────────── */}
-      <section className="py-16 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">Aegryn</p>
-            <p className="font-sans font-bold text-ag-black max-w-lg leading-snug tracking-[-0.025em]"
-              style={{ fontSize: 'clamp(18px,2.2vw,30px)' }}>
-              {t('certifCta')}
+      {/* ── Bottom CTA — 3 lignes distinctes ────────────────── */}
+      <section className="py-0 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Ligne 1 — Benchmarks */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
+            <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
+              Accéder à nos benchmarks de valorisation d'une organisation
             </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/grade"
-              className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] tracking-[0.16em] uppercase px-6 py-3 font-semibold hover:bg-ag-black transition-colors">
-              {t('certifCta')} <ArrowUpRight size={12} />
-            </Link>
-            <Link href="/blog"
-              className="inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[10px] tracking-[0.16em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all">
-              {t('articlesCta')} <ArrowUpRight size={12} />
+            <Link
+              href={"/grade/whitepaper" as never}
+              className="shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+            >
+              Accéder aux benchmarks <ArrowUpRight size={10} />
             </Link>
           </div>
+
+          {/* Ligne 2 — Certification */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border bg-ag-navy">
+            <p className="font-sans text-[14px] text-white leading-snug max-w-lg">
+              Demander la Certification CIFSO 5000
+            </p>
+            <Link
+              href="/grade"
+              className="shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-white transition-colors whitespace-nowrap"
+            >
+              Demander la Certification CIFSO 5000 <ArrowUpRight size={10} />
+            </Link>
+          </div>
+
+          {/* Ligne 3 — Publications */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6">
+            <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
+              Consulter nos points de vue et publications
+            </p>
+            <Link
+              href="/blog"
+              className="shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+            >
+              Lire les analyses <ArrowUpRight size={10} />
+            </Link>
+          </div>
+
         </div>
       </section>
     </main>

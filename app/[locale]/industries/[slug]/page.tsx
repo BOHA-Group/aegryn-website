@@ -140,9 +140,9 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             Secteurs couverts
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {ind.sectors.map(sector => (
-              <div key={sector.name} className="bg-ag-white p-6 flex flex-col gap-2 hover:bg-ag-off-white transition-colors">
+              <div key={sector.name} className="bg-ag-white border border-ag-border rounded-xl p-6 flex flex-col gap-2 hover:bg-ag-off-white transition-colors">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{sector.name}</p>
                   <span className="font-mono text-[8px] tracking-[0.1em] uppercase px-1.5 py-0.5 border border-ag-border text-ag-gray-light bg-ag-off-white shrink-0 whitespace-nowrap mt-0.5">
@@ -164,9 +164,9 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             Nos expertises appliquées
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {ind.expertise.map((ex, i) => (
-              <div key={i} className="bg-ag-white p-7 flex flex-col gap-3 hover:bg-ag-off-white transition-colors">
+              <div key={i} className="bg-ag-white border border-ag-border rounded-xl p-7 flex flex-col gap-3 hover:bg-ag-off-white transition-colors">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[9px] tracking-[0.22em] text-ag-apex">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{ex.title}</h3>
@@ -188,7 +188,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {ind.segments.map((seg, i) => (
-              <div key={i} className="border border-ag-border p-7 flex flex-col gap-4">
+              <div key={i} className="border border-ag-border rounded-xl p-7 flex flex-col gap-4">
                 <div className="flex items-center gap-3 pb-4 border-b border-ag-border">
                   <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex shrink-0">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{seg.label}</h3>
@@ -227,7 +227,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <Link
                   key={article.slug}
                   href={`/blog/${article.slug}` as never}
-                  className="group bg-ag-white border border-ag-border p-6 flex flex-col gap-4 hover:border-ag-black transition-colors"
+                  className="group bg-ag-white border border-ag-border rounded-xl p-6 flex flex-col gap-4 hover:border-ag-black transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-[8px] tracking-[0.18em] uppercase text-ag-gray-light">
@@ -293,9 +293,9 @@ export default async function IndustryDetailPage({ params }: Props) {
               <Link
                 key={other.slug}
                 href={`/industries/${other.slug}` as never}
-                className="group flex items-center gap-3 border border-ag-border px-4 py-3 hover:border-ag-black transition-all bg-ag-white hover:bg-ag-off-white"
+                className="group flex items-center gap-3 border border-ag-border rounded-xl px-4 py-3 hover:border-ag-black transition-all bg-ag-white hover:bg-ag-off-white"
               >
-                <div className="relative w-10 h-10 rounded overflow-hidden shrink-0">
+                <div className="relative w-10 h-10 rounded-lg overflow-hidden shrink-0">
                   <Image
                     src={CLUSTER_IMAGES[other.clusterId] ?? other.img}
                     alt={other.clusterId}
