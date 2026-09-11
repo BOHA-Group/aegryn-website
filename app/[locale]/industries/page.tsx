@@ -148,7 +148,7 @@ export default function IndustriesPage() {
             </p>
             <Link
               href={"/grade/whitepaper" as never}
-              className="rounded-lg shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
               Accéder aux benchmarks <ArrowUpRight size={10} />
             </Link>
@@ -157,13 +157,13 @@ export default function IndustriesPage() {
           {/* Ligne 2 — Certification */}
           <div className="rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border bg-ag-navy">
             <p className="font-sans text-[14px] text-white leading-snug max-w-lg">
-              Demander la Certification CIFSO 5000
+              Demander la certification
             </p>
             <Link
               href="/grade"
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-white transition-colors whitespace-nowrap"
             >
-              Demander la Certification CIFSO 5000 <ArrowUpRight size={10} />
+              Demander la certification <ArrowUpRight size={10} />
             </Link>
           </div>
 
@@ -174,9 +174,9 @@ export default function IndustriesPage() {
             </p>
             <Link
               href="/blog"
-              className="rounded-lg shrink-0 inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 hover:border-ag-black hover:text-ag-black transition-all whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
-              Lire les analyses <ArrowUpRight size={10} />
+              Lire nos analyses <ArrowUpRight size={10} />
             </Link>
           </div>
 
