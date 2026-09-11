@@ -251,17 +251,7 @@ const INDUSTRY_CLUSTERS: { id: string; labelKey: string }[] = [
 
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   const locale = useLocale()
-  const founderHref = `/${locale}/about#fondateur`
-
-  function goToFounder() {
-    onClose()
-    const el = document.getElementById('fondateur')
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      window.location.assign(founderHref)
-    }
-  }
+  const founderHref = `/${locale}/about#fondateur` as LinkHref
 
   return (
     <motion.div
@@ -291,13 +281,13 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
                 {t(labelKey)}
               </Link>
             ))}
-            <button
-              onClick={goToFounder}
-              style={{ fontWeight: 400 }}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 text-left w-full"
+            <Link
+              href={founderHref}
+              onClick={onClose}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
             >
               {t('whoFounder')}
-            </button>
+            </Link>
           </div>
           {/* Nos bureaux */}
           <div className="mt-4 pt-4 border-t border-ag-border">
@@ -739,17 +729,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <button
-                    onClick={() => {
-                      closeMobile()
-                      const el = document.getElementById('fondateur')
-                      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
-                      else { window.location.assign(`/${locale}/about#fondateur`) }
-                    }}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors text-left w-full"
+                  <Link
+                    href={`/${locale}/about#fondateur` as LinkHref}
+                    onClick={closeMobile}
+                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors"
                   >
                     {t('whoFounder')}
-                  </button>
+                  </Link>
 
                   {/* Nos bureaux */}
                   <div className="mt-2 pt-2 border-t border-white/10">
