@@ -155,13 +155,13 @@ export default function IndustriesPage() {
           </div>
 
           {/* Ligne 2 — Certification */}
-          <div className="rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border bg-ag-navy">
-            <p className="font-sans text-[14px] text-white leading-snug max-w-lg">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
+            <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
               Demander la certification
             </p>
             <Link
               href="/grade"
-              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-white transition-colors whitespace-nowrap"
+              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black hover:text-white transition-colors whitespace-nowrap"
             >
               Demander la certification <ArrowUpRight size={10} />
             </Link>
