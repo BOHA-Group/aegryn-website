@@ -44,7 +44,7 @@ export default async function AccountLayout({ children }: { children: React.Reac
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="flex pt-16 min-h-screen">
-        <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
+        <aside className="w-56 bg-ag-navy shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
           <div className="px-5 py-4 border-b border-white/10">
             <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">{spaceLabel}</p>
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>

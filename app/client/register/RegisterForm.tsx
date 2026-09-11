@@ -173,7 +173,7 @@ export default function RegisterForm() {
           value={fullName}
           onChange={e => setFullName(e.target.value)}
           placeholder={t('fullNamePlaceholder')}
-          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[color:white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
@@ -189,7 +189,7 @@ export default function RegisterForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[color:white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
