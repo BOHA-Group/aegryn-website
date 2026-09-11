@@ -695,14 +695,14 @@
         "sub": "All sectors, Switzerland. Europe"
       },
       {
-        "val": "5",
-        "label": "CIFSO Dimensions",
-        "sub": "Capital · Integrity · Finance · Security · Organisation"
-      },
-      {
         "val": "100%",
         "label": "Client alignment",
         "sub": "What we advise, we apply to ourselves"
+      },
+      {
+        "val": "5",
+        "label": "CIFSO Dimensions",
+        "sub": "Capital · Integrity · Finance · Security · Organisation"
       }
     ],
     "text": "We have spent more than twenty years building, advising and restructuring organisations. What we have gained is priceless. Companies that last do not choose between strategy and technology. They think them together. Aegryn exists for those who have understood that."

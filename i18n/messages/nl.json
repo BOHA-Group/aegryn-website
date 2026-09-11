@@ -695,14 +695,14 @@
         "sub": "Alle sectoren, Zwitserland. Europa"
       },
       {
-        "val": "5",
-        "label": "CIFSO-dimensies",
-        "sub": "Kapitaal · Integriteit · Financiën · Beveiliging · Organisatie"
-      },
-      {
         "val": "100%",
         "label": "Klantalignement",
         "sub": "Wat we adviseren, passen we toe"
+      },
+      {
+        "val": "5",
+        "label": "CIFSO-dimensies",
+        "sub": "Kapitaal · Integriteit · Financiën · Beveiliging · Organisatie"
       }
     ],
     "text": "We hebben meer dan twintig jaar besteed aan het opbouwen, adviseren en herstructureren van organisaties. Wat we hebben verworven, is van onschatbare waarde. Bedrijven die standhouden, kiezen niet tussen strategie en technologie. Ze denken ze samen. Aegryn bestaat voor degenen die dat hebben begrepen."

@@ -659,14 +659,14 @@
         "sub": "Tous secteurs, Suisse. Europe"
       },
       {
-        "val": "5",
-        "label": "Dimensions CIFSO",
-        "sub": "Capital · Intégrité · Finance · Sécurité · Organisation"
-      },
-      {
         "val": "100%",
         "label": "Alignement client",
         "sub": "Ce que nous conseillons, nous nous l’appliquons"
+      },
+      {
+        "val": "5",
+        "label": "Dimensions CIFSO",
+        "sub": "Capital · Intégrité · Finance · Sécurité · Organisation"
       }
     ],
     "text": "Nous avons passé plus de vingt ans à construire, conseiller et restructurer des organisations. Ce que nous avons acquis n’a pas de prix. Les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble. Aegryn existe pour ceux qui ont compris ça."

@@ -695,14 +695,14 @@
         "sub": "Alle Sektoren, Schweiz. Europa"
       },
       {
-        "val": "5",
-        "label": "CIFSO-Dimensionen",
-        "sub": "Kapital · Integrität · Finanzen · Sicherheit · Organisation"
-      },
-      {
         "val": "100%",
         "label": "Kundenbindung",
         "sub": "Was wir empfehlen, wenden wir an"
+      },
+      {
+        "val": "5",
+        "label": "CIFSO-Dimensionen",
+        "sub": "Kapital · Integrität · Finanzen · Sicherheit · Organisation"
       }
     ],
     "text": "Wir haben mehr als zwanzig Jahre damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gewonnen haben, ist unbezahlbar. Unternehmen, die Bestand haben, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen. Aegryn existiert für diejenigen, die das verstanden haben."

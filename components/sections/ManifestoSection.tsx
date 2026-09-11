@@ -97,13 +97,11 @@ export function ManifestoSection() {
             onEnter: () => {
               document.querySelectorAll<HTMLElement>('[data-counter]').forEach(el => {
                 const raw    = el.getAttribute('data-counter') ?? '0'
-                const isPlus = raw.endsWith('+')
-                const target = parseInt(raw.replace('+', ''), 10)
+                const suffix = raw.endsWith('+') ? '+' : raw.endsWith('%') ? '%' : ''
+                const target = parseInt(raw.replace(/\D/g, ''), 10)
                 animateCounter(el, target, 1.4)
-                if (isPlus) {
-                  /* append '+' once animation ends */
-                  gsap.delayedCall(1.45, () => { el.textContent = target + '+' })
-                }
+                /* restituer le suffixe une fois l'animation terminée */
+                gsap.delayedCall(1.45, () => { el.textContent = target + suffix })
               })
             },
           },
@@ -136,7 +134,12 @@ export function ManifestoSection() {
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] mb-5"
               style={{ fontSize: 'clamp(22px,2.8vw,38px)' }}
             >
-              {tW('convictionTitle')}
+              {tW('convictionTitle').split('. ').map((part, i, arr) => (
+                <span key={i}>
+                  {part}{i < arr.length - 1 ? '.' : ''}
+                  {i < arr.length - 1 && <br />}
+                </span>
+              ))}
             </h2>
             <p
               className="font-sans font-normal text-ag-gray leading-[1.75]"
@@ -214,38 +217,41 @@ export function ManifestoSection() {
 
             {/* Right col — 4 stats en grand avec compteur animé */}
             <div className="py-24 md:pl-16 flex flex-col justify-center">
-              <div className="about-stats grid grid-cols-2 gap-px bg-ag-border border border-ag-border">
+              <div className="about-stats grid grid-cols-2 gap-8">
                 {stats.map((s) => {
                   const isNumeric = /^\d/.test(s.val)
-                  const rawNum   = parseInt(s.val.replace(/\D/g, ''), 10)
-                  const hasPlus  = s.val.endsWith('+')
+                  const hasPlus   = s.val.endsWith('+')
+                  const hasPct    = s.val.endsWith('%')
+                  const rawNum    = parseInt(s.val.replace(/\D/g, ''), 10)
+                  /* suffixe à restituer après animation */
+                  const suffix    = hasPlus ? '+' : hasPct ? '%' : ''
 
                   return (
                     <div
                       key={s.label}
-                      className="about-stat bg-ag-off-white p-8 flex flex-col justify-between gap-4"
-                      style={{ opacity: 0, minHeight: '200px' }}
+                      className="about-stat flex flex-col justify-between gap-3"
+                      style={{ opacity: 0, minHeight: '160px' }}
                     >
-                      {/* Chiffre */}
+                      {/* Chiffre — align-self: flex-end pour aligner le bas des chiffres */}
                       <p
                         className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none"
                         style={{ fontSize: 'clamp(48px,6vw,80px)' }}
                       >
                         {isNumeric ? (
-                          <span data-counter={hasPlus ? rawNum + '+' : String(rawNum)}>
+                          <span data-counter={rawNum + suffix}>
                             {s.val}
                           </span>
                         ) : (
                           s.val
                         )}
                       </p>
-                      {/* Label + sous-label */}
+                      {/* Label + sous-label — fixé en bas */}
                       <div>
-                        <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.22em] text-ag-black mb-1">
+                        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-black mb-1">
                           {s.label}
                         </p>
                         {s.sub && (
-                          <p className="font-sans font-normal text-[11px] text-ag-gray-light leading-snug">
+                          <p className="font-sans font-normal text-[10px] text-ag-gray-light leading-snug">
                             {s.sub}
                           </p>
                         )}
