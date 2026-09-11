@@ -9,6 +9,7 @@ import { gsap } from '@/lib/gsap'
 import { ARTICLES, ARTICLE_CATEGORIES, type ArticleCategory } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK } from '@/data/blogImages'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
+import { FilterPills } from '@/components/ui/FilterPills'
 
 type Filter = 'all' | ArticleCategory
 
@@ -97,11 +98,7 @@ export function DiscoverGrid({ locale }: Props) {
 
   const getImage = (slug: string) => BLOG_IMAGES[slug] ?? BLOG_IMAGE_FALLBACK
 
-  /* Handler filtre : type=button + preventDefault pour éviter tout scroll */
-  const handleFilter = (e: React.MouseEvent<HTMLButtonElement>, key: Filter) => {
-    e.preventDefault()
-    setActive(key)
-  }
+
 
   return (
     <>
@@ -228,23 +225,12 @@ export function DiscoverGrid({ locale }: Props) {
               )}
             </div>
 
-            {/* Filter pills — fond gris, pill actif blanc + shadow (flowpartners) */}
-            <div className="flex items-center gap-1 p-1.5 bg-gray-100 rounded-2xl w-fit flex-wrap">
-              {filters.map(({ key, label }) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={e => handleFilter(e, key)}
-                  className={`font-sans text-[12px] px-4 py-1.5 rounded-xl transition-all duration-200 ${
-                    active === key
-                      ? 'bg-white text-ag-navy font-semibold shadow-sm'
-                      : 'text-ag-gray hover:text-ag-navy'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            {/* Filter pills */}
+            <FilterPills
+              options={filters}
+              active={active}
+              onChange={setActive}
+            />
 
           </div>
 

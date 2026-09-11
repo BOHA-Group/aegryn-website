@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
 import { ARTICLE_CATEGORIES, type Article, type ArticleCategory } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK } from '@/data/blogImages'
+import { FilterPills } from '@/components/ui/FilterPills'
 
 interface Props {
   articles: Article[]
@@ -59,33 +60,20 @@ export function IndustryArticles({ articles, locale }: Props) {
           </Link>
         </div>
 
-        {/* Filter pills — style flowpartners : fond léger, pill actif sombre */}
+        {/* Filter pills */}
         {categories.length > 1 && (
-          <div className="flex items-center gap-1.5 flex-wrap mb-8 p-1.5 bg-white border border-ag-border rounded-xl w-fit">
-            <button
-              onClick={() => setActive('all')}
-              className={`font-mono text-[9px] tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-lg transition-all duration-150 ${
-                active === 'all'
-                  ? 'bg-ag-navy text-white shadow-sm'
-                  : 'text-ag-gray hover:text-ag-navy'
-              }`}
-            >
-              Tout
-            </button>
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={`font-mono text-[9px] tracking-[0.14em] uppercase px-3.5 py-1.5 rounded-lg transition-all duration-150 ${
-                  active === cat
-                    ? 'bg-ag-navy text-white shadow-sm'
-                    : 'text-ag-gray hover:text-ag-navy'
-                }`}
-              >
-                {getText(ARTICLE_CATEGORIES[cat] as unknown as Record<string, string | undefined>, lang)}
-              </button>
-            ))}
-          </div>
+          <FilterPills
+            options={[
+              { key: 'all' as ArticleCategory | 'all', label: 'Tout' },
+              ...categories.map(cat => ({
+                key: cat as ArticleCategory | 'all',
+                label: getText(ARTICLE_CATEGORIES[cat] as unknown as Record<string, string | undefined>, lang),
+              })),
+            ]}
+            active={active}
+            onChange={setActive}
+            className="mb-8"
+          />
         )}
 
         {/* Cards grille */}

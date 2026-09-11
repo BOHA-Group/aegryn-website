@@ -4,6 +4,7 @@ import { useState }           from 'react'
 import Link                   from 'next/link'
 import { ChevronDown }        from 'lucide-react'
 import { useTranslations }    from 'next-intl'
+import { FilterPills }        from '@/components/ui/FilterPills'
 
 type FaqItem = {
   id: string
@@ -67,20 +68,12 @@ export default function FaqContent() {
 
       {/* Filter pills */}
       <div className="border-b border-ag-border bg-ag-white">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap gap-2">
-          {FILTERS.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setActive(key)}
-              className={`font-mono text-[10px] tracking-[0.14em] uppercase px-4 py-2 border transition-colors ${
-                active === key
-                  ? 'border-ag-black bg-ag-black text-white'
-                  : 'border-ag-border text-ag-gray-light hover:border-ag-black hover:text-ag-black'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+        <div className="max-w-4xl mx-auto px-6 py-4">
+          <FilterPills
+            options={FILTERS as unknown as { key: string; label: string }[]}
+            active={active}
+            onChange={setActive}
+          />
         </div>
       </div>
 
