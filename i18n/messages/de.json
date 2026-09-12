@@ -3304,9 +3304,7 @@
       "contactCta": "Kontakt aufnehmen",
       "processLabel": "Zertifizierungsprozess",
       "processTitle": "Zertifizierungsprozess",
-      "processDuration": "Von der Einreichung bis zur Zertifizierung in 4 strukturierten Schritten.",
-      "contestLabel": "Überprüfung & Anfechtung",
-      "contestDesc": "Eine Note kann innerhalb von 15 Werktagen nach der Ausstellung angefochten werden. Der Überprüfungsantrag wird von einem anderen leitenden Analysten bearbeitet. Bei einer wesentlichen Abweichung wird ein unabhängiges Schiedsverfahren eingeleitet."
+      "processDuration": "Von der Einreichung bis zur Notenvergabe: 15 bis 35 Arbeitstage je nach Grösse und Komplexität der Organisation."
     },
     "grades": [
       {
@@ -3375,30 +3373,22 @@
       {
         "num": "01",
         "title": "Einreichung",
-        "desc": "Sie reichen Ihre Unterlagen über unsere sichere Plattform ein.",
-        "detail": "Füllen Sie das Einreichungsformular mit den Schlüsselinformationen Ihrer Organisation aus. Laden Sie die erforderlichen Dokumente hoch (Datenraum, Finanzberichte, Codebase-Zugang falls zutreffend). Vorqualifizierung innerhalb von 5 Werktagen.",
-        "data": "Einreichungsformular, Datenraum, Finanzberichte, Codebase-Zugang, IP-Dokumentation"
+        "desc": "Upload der Unterlagen auf der sicheren Plattform, Vollständigkeitsprüfung und Vorqualifikation innerhalb von 5 Arbeitstagen."
       },
       {
         "num": "02",
-        "title": "CIFSO 5000 Audit",
-        "desc": "Unsere zertifizierten Analysten prüfen Ihre Organisation über die 5 CIFSO-Dimensionen.",
-        "detail": "Eingehende Analyse Ihres Kapitals & IP, Integrität & Governance, Finanzen & Metriken, Sicherheit & Souveränität, Organisation & Talent. Zwei unabhängige Senior-Analysten folgen einem reproduzierbaren Protokoll. Dauer: 15 bis 35 Tage je nach gewähltem Format.",
-        "data": "Technische Prüfung, Finanzaudit, IP-Verifizierung, Sicherheitsbewertung, strukturierte Interviews"
+        "title": "CIFSO 5000-Audit",
+        "desc": "Zwei zertifizierte Analysten bewerten die fünf C-I-F-S-O-Dimensionen: Dokumentenprüfung, Interviews, Gegenprüfungen."
       },
       {
         "num": "03",
         "title": "Bewertung & Bericht",
-        "desc": "Ihre offizielle Note wird nach einem objektiven und reproduzierbaren Raster bestimmt.",
-        "detail": "Die Analysten beraten und erstellen den unabhängigen Zertifizierungsbericht. Die Note (★ bis B) wird auf Basis der Gesamtpunktzahl /100 berechnet. Der Bericht enthält detaillierte Untercodes pro Dimension und Verbesserungsempfehlungen.",
-        "data": "Vollständiger Zertifizierungsbericht, offizielle Note, Untercode-Tabelle, Empfehlungen"
+        "desc": "Beratung nach reproduzierbarem Protokoll, unabhängige Prüfung durch den zweiten Analysten, Zertifizierungsbericht."
       },
       {
         "num": "04",
         "title": "Zertifizierung",
-        "desc": "Sie erhalten Ihr offizielles Zertifikat und Ihre Note wird im Register veröffentlicht.",
-        "detail": "Das CIFSO 5000-Zertifikat wird ausgestellt und an Ihre Organisation übergeben. Ihre Note wird versioniert und im zertifizierten Aegryn-Register veröffentlicht, einsehbar für qualifizierte Investoren, Erwerber und Partner. Gültigkeit: 12 oder 18 Monate je nach Format.",
-        "data": "Offizielles Zertifikat, Registereintrag, CIFSO 5000-Badge, Zugang zum zertifizierten Portal"
+        "desc": "Ausstellung des offiziellen versionierten Zertifikats, 24 Monate gültig, und Veröffentlichung im zertifizierten Aegryn-Register."
       }
     ],
     "submit": {

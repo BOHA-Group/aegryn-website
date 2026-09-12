@@ -147,7 +147,7 @@ export default function IndustriesPage() {
               {t('cta1Text')}
             </p>
             <Link
-              href={"/grade/whitepaper" as never}
+              href="/grade/brochure"
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
               {t('cta1Button')} <ArrowUpRight size={10} />

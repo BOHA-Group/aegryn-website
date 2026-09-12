@@ -383,10 +383,6 @@ export function CifsoBrochure() {
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-xl bg-ag-off-white border border-ag-border p-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray mb-2">{gi('contestLabel')}</p>
-            <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{gi('contestDesc')}</p>
-          </div>
         </Page>
 
         {/* ── 10 AUDITEURS + 11 POSITIONNEMENT ── */}

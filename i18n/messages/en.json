@@ -2613,9 +2613,7 @@
       "contactCta": "Get in touch",
       "processLabel": "Certification process",
       "processTitle": "Certification process",
-      "processDuration": "From submission to certification in 4 structured steps.",
-      "contestLabel": "Revision & contestation",
-      "contestDesc": "A grade may be contested within 15 business days of issue. The revision request is examined by a different Aegryn senior analyst. In the event of a material discrepancy, an independent arbitration procedure is triggered."
+      "processDuration": "From submission to grade issuance: 15 to 35 business days depending on the size and complexity of the organisation."
     },
     "grades": [
       {
@@ -2684,30 +2682,22 @@
       {
         "num": "01",
         "title": "Submission",
-        "desc": "You submit your file via our secure platform.",
-        "detail": "Complete the submission form with your organization's key information. Upload required documents (data room, financial statements, codebase access if applicable). Pre-qualification within 5 business days.",
-        "data": "Submission form, data room, financial statements, codebase access, IP documentation"
+        "desc": "File upload on the secure platform, completeness check and pre-qualification within 5 business days."
       },
       {
         "num": "02",
-        "title": "CIFSO 5000 Audit",
-        "desc": "Our certified analysts audit your organization across the 5 CIFSO dimensions.",
-        "detail": "In-depth analysis of your Capital & IP, Integrity & Governance, Finance & Metrics, Security & Sovereignty, Organization & Talent. Two independent senior analysts follow a reproducible protocol. Duration: 15 to 35 days depending on chosen format.",
-        "data": "Technical review, financial audit, IP verification, security assessment, structured interviews"
+        "title": "CIFSO 5000 audit",
+        "desc": "Two certified analysts assess the five C-I-F-S-O dimensions: document review, interviews, cross-checks."
       },
       {
         "num": "03",
-        "title": "Grading & report",
-        "desc": "Your official grade is determined according to an objective and reproducible grid.",
-        "detail": "Analysts deliberate and produce the independent certification report. The grade (★ to B) is calculated based on the total score /100. The report includes detailed sub-codes per dimension and improvement recommendations.",
-        "data": "Complete certification report, official grade, sub-code table, recommendations"
+        "title": "Scoring & report",
+        "desc": "Deliberation under a reproducible protocol, independent review by the second analyst, certification report."
       },
       {
         "num": "04",
         "title": "Certification",
-        "desc": "You receive your official certificate and your grade is published in the registry.",
-        "detail": "The CIFSO 5000 certificate is issued and delivered to your organization. Your grade is versioned and published in the Aegryn certified registry, viewable by qualified investors, acquirers and partners. Validity: 12 or 18 months depending on format.",
-        "data": "Official certificate, registry entry, CIFSO 5000 badge, certified portal access"
+        "desc": "Issuance of the official versioned certificate, valid 24 months, and publication in the Aegryn certified register."
       }
     ],
     "submit": {

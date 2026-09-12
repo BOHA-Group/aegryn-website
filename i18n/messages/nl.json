@@ -3304,9 +3304,7 @@
       "contactCta": "Contact opnemen",
       "processLabel": "Certificeringsproces",
       "processTitle": "Certificeringsproces",
-      "processDuration": "Van indiening tot certificering in 4 gestructureerde stappen.",
-      "contestLabel": "Herziening & contestatie",
-      "contestDesc": "Een grade kan worden betwist binnen 15 werkdagen na afgifte. Het herzieningsverzoek wordt onderzocht door een andere senior analist. Bij een significante afwijking wordt een onafhankelijke arbitrageprocedure gestart."
+      "processDuration": "Van indiening tot afgifte van de beoordeling: 15 tot 35 werkdagen, afhankelijk van de omvang en complexiteit van de organisatie."
     },
     "grades": [
       {
@@ -3375,30 +3373,22 @@
       {
         "num": "01",
         "title": "Indiening",
-        "desc": "U dient uw dossier in via ons beveiligde platform.",
-        "detail": "Vul het indieningsformulier in met de belangrijkste informatie van uw organisatie. Upload de vereiste documenten (dataroom, financiële overzichten, codebase-toegang indien van toepassing). Voorkwalificatie binnen 5 werkdagen.",
-        "data": "Indieningsformulier, dataroom, financiële overzichten, codebase-toegang, IP-documentatie"
+        "desc": "Upload van het dossier op het beveiligde platform, volledigheidscontrole en prekwalificatie binnen 5 werkdagen."
       },
       {
         "num": "02",
-        "title": "CIFSO 5000 Audit",
-        "desc": "Onze gecertificeerde analisten auditeren uw organisatie op de 5 CIFSO-dimensies.",
-        "detail": "Diepgaande analyse van uw Kapitaal & IP, Integriteit & Governance, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent. Twee onafhankelijke senior-analisten volgen een reproduceerbaar protocol. Duur: 15 tot 35 dagen afhankelijk van het gekozen formaat.",
-        "data": "Technische review, financiële audit, IP-verificatie, veiligheidsbeoordeling, gestructureerde interviews"
+        "title": "CIFSO 5000-audit",
+        "desc": "Twee gecertificeerde analisten beoordelen de vijf C-I-F-S-O-dimensies: documentbeoordeling, interviews, kruiscontroles."
       },
       {
         "num": "03",
         "title": "Beoordeling & rapport",
-        "desc": "Uw officiële beoordeling wordt bepaald volgens een objectief en reproduceerbaar raster.",
-        "detail": "Analisten beraadslagen en produceren het onafhankelijke certificeringsrapport. De beoordeling (★ tot B) wordt berekend op basis van de totale score /100. Het rapport bevat gedetailleerde subcodes per dimensie en verbeteringsaanbevelingen.",
-        "data": "Volledig certificeringsrapport, officiële beoordeling, subcode-tabel, aanbevelingen"
+        "desc": "Beraadslaging volgens een reproduceerbaar protocol, onafhankelijke review door de tweede analist, certificeringsrapport."
       },
       {
         "num": "04",
         "title": "Certificering",
-        "desc": "U ontvangt uw officiële certificaat en uw beoordeling wordt gepubliceerd in het register.",
-        "detail": "Het CIFSO 5000-certificaat wordt uitgegeven en aan uw organisatie overhandigd. Uw beoordeling wordt geversioneerd en gepubliceerd in het gecertificeerde Aegryn-register, raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 of 18 maanden afhankelijk van het formaat.",
-        "data": "Officieel certificaat, registerinschrijving, CIFSO 5000-badge, toegang tot gecertificeerd portaal"
+        "desc": "Afgifte van het officiële geversioneerde certificaat, 24 maanden geldig, en publicatie in het gecertificeerde Aegryn-register."
       }
     ],
     "submit": {

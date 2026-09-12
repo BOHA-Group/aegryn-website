@@ -3304,9 +3304,7 @@
       "contactCta": "Ponerse en contacto",
       "processLabel": "Proceso de certificación",
       "processTitle": "Proceso de certificación",
-      "processDuration": "De la presentación a la certificación en 4 pasos estructurados.",
-      "contestLabel": "Revisión & contestación",
-      "contestDesc": "Un grade puede impugnarse en los 15 días hábiles siguientes a su emisión. La solicitud de revisión es examinada por un analista senior diferente al original. En caso de discrepancia significativa, se activa un procedimiento de arbitraje independiente."
+      "processDuration": "De la presentación a la emisión del grado: de 15 a 35 días laborables según el tamaño y la complejidad de la organización."
     },
     "grades": [
       {
@@ -3375,30 +3373,22 @@
       {
         "num": "01",
         "title": "Presentación",
-        "desc": "Presenta su expediente a través de nuestra plataforma segura.",
-        "detail": "Complete el formulario de presentación con la información clave de su organización. Cargue los documentos requeridos (sala de datos, estados financieros, acceso al código base si corresponde). Precalificación en 5 días hábiles.",
-        "data": "Formulario de presentación, sala de datos, estados financieros, acceso al código base, documentación IP"
+        "desc": "Depósito del expediente en la plataforma segura, verificación de completitud y precalificación en 5 días laborables."
       },
       {
         "num": "02",
         "title": "Auditoría CIFSO 5000",
-        "desc": "Nuestros analistas certificados auditan su organización en las 5 dimensiones CIFSO.",
-        "detail": "Análisis en profundidad de su Capital e IP, Integridad y Gobernanza, Finanzas y Métricas, Seguridad y Soberanía, Organización y Talento. Dos analistas senior independientes siguen un protocolo reproducible. Duración: 15 a 35 días según el formato elegido.",
-        "data": "Revisión técnica, auditoría financiera, verificación IP, evaluación de seguridad, entrevistas estructuradas"
+        "desc": "Dos analistas certificados evalúan las cinco dimensiones C-I-F-S-O: revisión documental, entrevistas, verificaciones cruzadas."
       },
       {
         "num": "03",
         "title": "Calificación e informe",
-        "desc": "Su calificación oficial se determina según una cuadrícula objetiva y reproducible.",
-        "detail": "Los analistas deliberan y producen el informe de certificación independiente. La calificación (★ a B) se calcula en base a la puntuación total /100. El informe incluye los subcódigos detallados por dimensión y las recomendaciones de mejora.",
-        "data": "Informe de certificación completo, calificación oficial, tabla de subcódigos, recomendaciones"
+        "desc": "Deliberación según un protocolo reproducible, revisión independiente por el segundo analista, informe de certificación."
       },
       {
         "num": "04",
         "title": "Certificación",
-        "desc": "Recibe su certificado oficial y su calificación se publica en el registro.",
-        "detail": "El certificado CIFSO 5000 se emite y se entrega a su organización. Su calificación se versiona y se publica en el registro certificado de Aegryn, consultable por inversores, adquirentes y socios calificados. Validez: 12 o 18 meses según el formato.",
-        "data": "Certificado oficial, inscripción en el registro, insignia CIFSO 5000, acceso al portal certificado"
+        "desc": "Emisión del certificado oficial versionado, válido 24 meses, y publicación en el registro certificado Aegryn."
       }
     ],
     "submit": {
