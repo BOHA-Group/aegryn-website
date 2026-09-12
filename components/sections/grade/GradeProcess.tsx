@@ -78,7 +78,7 @@ export function GradeProcess() {
                 <div className="px-6 pb-8 pt-2 border-t border-ag-border bg-ag-off-white grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                      Detail
+                      {t('detailLabel')}
                     </p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                       {detail}
@@ -86,7 +86,7 @@ export function GradeProcess() {
                   </div>
                   <div>
                     <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                      Required data
+                      {t('dataLabel')}
                     </p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                       {data}

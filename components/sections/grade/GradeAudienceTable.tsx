@@ -15,12 +15,12 @@ type AudienceRow = {
 const GRADES = ['★', 'AAA', 'AA', 'A', 'B'] as const
 type Grade = (typeof GRADES)[number]
 
-const GRADE_CONFIG: Record<Grade, { color: string; bg: string; ring: string; label: string }> = {
-  '★': { color: '#0D1F3C', bg: '#5ADDA4',  ring: '#5ADDA4',  label: 'Exceptional' },
-  'AAA': { color: '#0D1F3C', bg: '#C9A84C',  ring: '#C9A84C',  label: 'Excellent'  },
-  'AA':  { color: '#0D1F3C', bg: '#9BA8B0',  ring: '#9BA8B0',  label: 'Solid'      },
-  'A':   { color: '#fff',    bg: '#4A90D9',  ring: '#4A90D9',  label: 'Developing' },
-  'B':   { color: '#fff',    bg: '#D4820A',  ring: '#D4820A',  label: 'Emerging'   },
+const GRADE_CONFIG: Record<Grade, { color: string; bg: string; ring: string }> = {
+  '★': { color: '#0D1F3C', bg: '#5ADDA4',  ring: '#5ADDA4' },
+  'AAA': { color: '#0D1F3C', bg: '#C9A84C',  ring: '#C9A84C' },
+  'AA':  { color: '#0D1F3C', bg: '#9BA8B0',  ring: '#9BA8B0' },
+  'A':   { color: '#fff',    bg: '#4A90D9',  ring: '#4A90D9' },
+  'B':   { color: '#fff',    bg: '#D4820A',  ring: '#D4820A' },
 }
 
 const PROFILE_ICONS: Record<string, FC<LucideProps>> = {
@@ -33,9 +33,11 @@ const PROFILE_ICONS: Record<string, FC<LucideProps>> = {
 
 export function GradeAudienceTable() {
   const t       = useTranslations('grade.index')
+  const tGrade  = useTranslations('grade')
   const ref     = useRef<HTMLElement>(null)
   const rows    = t.raw('audienceRows') as AudienceRow[]
   const headers = t.raw('audienceGradeHeaders') as string[]
+  const gradeNames = (tGrade.raw('grades') as { name: string }[]).map(g => g.name)
   const [active, setActive] = useState<number>(1) // default AAA
 
   useEffect(() => {
@@ -88,7 +90,7 @@ export function GradeAudienceTable() {
                 }
               >
                 <span className="text-[13px]">{g}</span>
-                <span className="font-sans font-normal text-[10px] opacity-80">{c.label}</span>
+                <span className="font-sans font-normal text-[10px] opacity-80">{gradeNames[i]}</span>
               </button>
             )
           })}
@@ -139,7 +141,7 @@ export function GradeAudienceTable() {
                       <button
                         key={g}
                         onClick={() => setActive(gi)}
-                        title={GRADE_CONFIG[g].label}
+                        title={gradeNames[gi]}
                         className="flex-1 h-1 rounded-full transition-all duration-200"
                         style={{
                           background: GRADE_CONFIG[g].bg,
@@ -166,7 +168,7 @@ export function GradeAudienceTable() {
               <thead>
                 <tr className="bg-ag-navy">
                   <th className="px-5 py-4">
-                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">Profile</span>
+                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{t('audienceColProfile')}</span>
                   </th>
                   {GRADES.map((g, gi) => {
                     const c = GRADE_CONFIG[g]

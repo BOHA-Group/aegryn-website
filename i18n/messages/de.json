@@ -3244,6 +3244,7 @@
       "isoDisclaimer": "Die CIFSO 5000 Zertifizierung ist ein unabhängiges Protokoll zur organisatorischen Bewertung, das von Aegryn entwickelt wurde. Sie stellt keine Akkreditierung durch eine nationale oder internationale Akkreditierungsstelle dar und ersetzt keine bestehenden Zertifizierungsstandards. Sie ist darauf ausgelegt, diese zu ergänzen.",
       "audienceShowMatrix": "Vollständige Matrix anzeigen",
       "audienceHideMatrix": "Reduzieren",
+      "audienceColProfile": "Profil",
       "pricingRecommended": "Empfohlen",
       "contactCta": "Kontakt aufnehmen"
     },
@@ -3314,6 +3315,8 @@
       "label": "Zertifizierungsprozess",
       "duration": "15 bis 35 Werktage je nach Paket",
       "contestLabel": "Überprüfung & Anfechtung",
+      "detailLabel": "Detail",
+      "dataLabel": "Erforderliche Daten",
       "contestDesc": "Eine Note kann innerhalb von 15 Werktagen nach der Ausstellung angefochten werden. Der Überprüfungsantrag wird von einem anderen leitenden Analysten bearbeitet. Bei einer wesentlichen Abweichung wird ein unabhängiges Schiedsverfahren eingeleitet.",
       "steps": [
         {

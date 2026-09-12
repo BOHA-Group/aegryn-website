@@ -23,59 +23,30 @@ type UseCase = {
   desc: string
   signal: string
   chips?: string[]
+  imageAlt?: string
 }
 
-// Per use-case config: image, audience chips with Lucide icon
+// Per use-case config: image + Lucide icons (labels come from i18n chips)
 const UC_META = [
   {
     image: '/images/grade-usecases/uc-annual-report.jpg',
-    imageAlt: 'Board meeting — investor communication',
-    chips: [
-      { label: 'Growing SMEs', Icon: Building2 },
-      { label: 'ETIs', Icon: Briefcase },
-      { label: 'Investors', Icon: BarChart2 },
-      { label: 'Shareholders', Icon: Users },
-    ],
+    chips: [Building2, Briefcase, BarChart2, Users],
   },
   {
     image: '/images/grade-usecases/uc-bank-financing.jpg',
-    imageAlt: 'Bank financing — lenders',
-    chips: [
-      { label: 'SMEs & ETIs', Icon: Building2 },
-      { label: 'CFOs', Icon: BarChart2 },
-      { label: 'Banks', Icon: Landmark },
-      { label: 'Lenders', Icon: Globe },
-    ],
+    chips: [Building2, BarChart2, Landmark, Globe],
   },
   {
     image: '/images/grade-usecases/uc-due-diligence.jpg',
-    imageAlt: 'Investment committee due diligence',
-    chips: [
-      { label: 'PE Funds', Icon: TrendingUp },
-      { label: 'Venture Capital', Icon: TrendingUp },
-      { label: 'Family Offices', Icon: Users },
-      { label: 'Investment Committees', Icon: Briefcase },
-    ],
+    chips: [TrendingUp, TrendingUp, Users, Briefcase],
   },
   {
     image: '/images/grade-usecases/uc-fundraising.jpg',
-    imageAlt: 'Fundraising pitch — startups',
-    chips: [
-      { label: 'Startups', Icon: TrendingUp },
-      { label: 'Scale-ups', Icon: BarChart2 },
-      { label: 'Founders', Icon: Users },
-      { label: 'Investors', Icon: Landmark },
-    ],
+    chips: [TrendingUp, BarChart2, Users, Landmark],
   },
   {
     image: '/images/grade-usecases/uc-succession.jpg',
-    imageAlt: 'Family succession — business transfer',
-    chips: [
-      { label: 'Founders', Icon: Users },
-      { label: 'Family Businesses', Icon: Building2 },
-      { label: 'Heirs', Icon: FileText },
-      { label: 'M&A Advisors', Icon: Briefcase },
-    ],
+    chips: [Users, Building2, FileText, Briefcase],
   },
 ]
 
@@ -152,8 +123,8 @@ export function GradeUseCases() {
 
                     {/* Audience chips */}
                     <div className="flex flex-wrap gap-2 mb-5">
-                      {(uc.chips ?? meta.chips.map(c => c.label)).map((label, ci) => {
-                        const Icon = meta.chips[ci]?.Icon ?? Users
+                      {(uc.chips ?? []).map((label, ci) => {
+                        const Icon = meta.chips[ci] ?? Users
                         return (
                           <span
                             key={label}
@@ -182,7 +153,7 @@ export function GradeUseCases() {
                     >
                       <Image
                         src={meta.image}
-                        alt={meta.imageAlt}
+                        alt={uc.imageAlt ?? uc.tag}
                         fill
                         sizes="320px"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

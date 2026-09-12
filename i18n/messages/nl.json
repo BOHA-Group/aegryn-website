@@ -3244,6 +3244,7 @@
       "isoDisclaimer": "De CIFSO 5000 Certificering is een onafhankelijk organisatorisch beoordelingsprotocol ontwikkeld door Aegryn. Het is geen accreditatie bij een nationaal of internationaal accreditatie-orgaan en vervangt bestaande certificeringsstandaarden niet. Het is ontworpen om hiernaast te functioneren.",
       "audienceShowMatrix": "Volledige matrix tonen",
       "audienceHideMatrix": "Inklappen",
+      "audienceColProfile": "Profiel",
       "pricingRecommended": "Aanbevolen",
       "contactCta": "Contact opnemen"
     },
@@ -3314,6 +3315,8 @@
       "label": "Certificeringsproces",
       "duration": "15 tot 35 werkdagen afhankelijk van het pakket",
       "contestLabel": "Herziening & contestatie",
+      "detailLabel": "Detail",
+      "dataLabel": "Vereiste gegevens",
       "contestDesc": "Een grade kan worden betwist binnen 15 werkdagen na afgifte. Het herzieningsverzoek wordt onderzocht door een andere senior analist. Bij een significante afwijking wordt een onafhankelijke arbitrageprocedure gestart.",
       "steps": [
         {

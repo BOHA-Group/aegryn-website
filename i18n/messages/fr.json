@@ -2568,6 +2568,7 @@
       "isoDisclaimer": "La Certification CIFSO 5000 est un protocole d'évaluation organisationnelle indépendant développé par Aegryn. Elle ne constitue pas une accréditation auprès d'un organisme d'accréditation national ou international et ne remplace pas les standards de certification existants. Elle est conçue pour opérer en complément de ceux-ci.",
       "audienceShowMatrix": "Voir la matrice complète",
       "audienceHideMatrix": "Réduire",
+      "audienceColProfile": "Profil",
       "pricingRecommended": "Recommandé",
       "contactCta": "Prendre contact"
     },
@@ -2638,6 +2639,8 @@
       "label": "Processus de certification",
       "duration": "15 à 35 jours ouvrés selon le forfait",
       "contestLabel": "Révision & contestation",
+      "detailLabel": "Détail",
+      "dataLabel": "Données requises",
       "contestDesc": "Un grade peut être contesté dans les 15 jours ouvrés suivant son émission. La demande de révision est examinée par un analyste senior Aegryn différent de l'analyste original. En cas d'écart significatif, une procédure d'arbitrage indépendante est déclenchée. Toutes les révisions sont versionnées et le grade original reste visible dans le registre public.",
       "steps": [
         {
