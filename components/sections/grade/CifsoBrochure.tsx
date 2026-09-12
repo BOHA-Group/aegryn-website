@@ -7,6 +7,7 @@ import Link from 'next/link'
 
 export function CifsoBrochure() {
   const t = useTranslations('gradingSystem')
+  const tG = useTranslations('grade.index')
   const contentRef = useRef<HTMLDivElement>(null)
 
   const handleDownload = () => {
@@ -17,8 +18,8 @@ export function CifsoBrochure() {
 
   const grades = t.raw('grades') as Array<{
     grade: string
-    name: string
-    desc: string
+    label: string
+    profile: string
     color: string
   }>
 
@@ -46,14 +47,14 @@ export function CifsoBrochure() {
             className="inline-flex items-center gap-2 text-ag-gray hover:text-ag-black transition-colors text-sm"
           >
             <ArrowLeft size={16} />
-            {t('wpNavBack')}
+            {tG('wpNavBack')}
           </Link>
           <button
             onClick={handleDownload}
             className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3 rounded-lg hover:bg-ag-apex/90 transition-colors"
           >
             <Download size={14} />
-            {t('wpNavPrint')}
+            {tG('wpNavPrint')}
           </button>
         </div>
       </div>
@@ -106,12 +107,12 @@ export function CifsoBrochure() {
             </div>
 
             {/* Footer cover */}
-            <div className="absolute bottom-12 left-0 right-0 flex items-center justify-center gap-8 text-white/40 text-sm">
-              <span>Aegryn SA</span>
-              <span>•</span>
-              <span>Genève, Suisse</span>
-              <span>•</span>
-              <span>aegryn.com</span>
+            <div className="absolute bottom-12 left-0 right-0 flex items-center justify-center gap-3 text-white/40 text-sm px-6">
+              <span className="whitespace-nowrap">Aegryn SA</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="whitespace-nowrap">Genève, Suisse</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="whitespace-nowrap">aegryn.com</span>
             </div>
           </div>
         </section>
@@ -189,10 +190,10 @@ export function CifsoBrochure() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-sans font-semibold text-ag-black text-[17px] mb-2">
-                      {grade.name}
+                      {grade.label}
                     </h3>
                     <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
-                      {grade.desc}
+                      {grade.profile}
                     </p>
                   </div>
                 </div>
