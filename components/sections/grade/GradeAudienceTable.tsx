@@ -48,7 +48,7 @@ export function GradeAudienceTable() {
   }, [])
 
   return (
-    <section ref={ref} className="rounded-lg bg-ag-off-white border-t border-ag-border py-24 px-6">
+    <section ref={ref} className="rounded-lg border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
