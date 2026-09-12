@@ -185,12 +185,27 @@ export function GradingSystemPage() {
             {/* Preview image */}
             <div className="relative aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden border border-ag-border shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop"
                 alt="CIFSO 5000 Brochure Cover"
                 fill
-                className="object-cover opacity-15"
+                className="object-cover opacity-20"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-ag-navy via-ag-navy to-[#1a2332]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/95 via-[#1a2845]/90 to-ag-navy/95" />
+              
+              {/* Motif géométrique */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(90, 221, 164, 0.4) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(90, 221, 164, 0.4) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '80px 80px'
+                }} />
+              </div>
+
+              {/* Cercles décoratifs */}
+              <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-ag-apex/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-ag-apex/5 rounded-full blur-3xl" />
               
               {/* Cover content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
