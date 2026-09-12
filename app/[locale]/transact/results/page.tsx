@@ -1,10 +1,20 @@
-import type { Metadata } from 'next'
-import { BarChart2 } from 'lucide-react'
+import type { Metadata }    from 'next'
+import { getTranslations }  from 'next-intl/server'
+import { BarChart2 }        from 'lucide-react'
 import { createServiceClient } from '@/lib/supabase'
+import { generateAegrynMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Résultats de transactions — Aegryn TRANSACT',
-  description: 'Historique anonymisé des transactions certifiées Aegryn : grades, fourchettes de valorisation et durées de process.',
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'transactResults.meta' })
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/transact/results',
+    locale,
+  })
 }
 
 const GRADE_LABELS: Record<string, string> = {
@@ -23,20 +33,18 @@ const GRADE_COLORS: Record<string, string> = {
   b:    '#D4820A',
 }
 
-const FORMAT_LABELS: Record<string, string> = {
-  private_transaction: 'Transaction privée',
-  competitive_bid:     'Appel d\'offres',
-  equity_stake:        'Prise de participation',
-  club_deal:           'Club Deal',
-}
+const FORMAT_KEYS = ['private_transaction', 'competitive_bid', 'equity_stake', 'club_deal'] as const
 
 function fmtEur(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace('.', ',')} M€`
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)} M€`
   if (n >= 1_000)     return `${(n / 1_000).toFixed(0)} K€`
   return `${Math.round(n)} €`
 }
 
-export default async function TransactResultsPage() {
+export default async function TransactResultsPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'transactResults' })
+
   const supa = createServiceClient()
   const { data: results } = await supa
     .from('transaction_results')
@@ -45,6 +53,8 @@ export default async function TransactResultsPage() {
     .order('closed_at', { ascending: false })
 
   const hasResults = results && results.length > 0
+  const formatLabel = (f: string) =>
+    (FORMAT_KEYS as readonly string[]).includes(f) ? t(`formats.${f}`) : f
 
   return (
     <main className="bg-ag-white">
@@ -57,14 +67,14 @@ export default async function TransactResultsPage() {
             Aegryn TRANSACT
           </p>
           <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
-            Catalogue historique
+            {t('heroTitle')}
           </h1>
           <p className="font-sans text-[16px] text-white/55 max-w-xl">
-            Résultats anonymisés des transactions certifiées Aegryn. Chaque entrée atteste qu'un actif a traversé le processus complet de certification et de cession.
+            {t('heroDesc')}
           </p>
           {hasResults && (
             <p className="mt-6 font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-ag-apex">
-              {results.length} transaction{results.length > 1 ? 's' : ''} publiée{results.length > 1 ? 's' : ''}
+              {t('publishedCount', { count: results.length })}
             </p>
           )}
         </div>
@@ -76,7 +86,7 @@ export default async function TransactResultsPage() {
           <div className="max-w-7xl mx-auto">
             {/* Legend */}
             <div className="flex items-center gap-6 mb-10 border-b border-ag-border pb-6">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">Grades :</p>
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">{t('gradesLabel')}</p>
               {Object.entries(GRADE_LABELS).map(([key, label]) => (
                 <span key={key} className="font-sans font-bold text-[11px]" style={{ color: GRADE_COLORS[key] }}>
                   {label}
@@ -99,7 +109,7 @@ export default async function TransactResultsPage() {
                         {GRADE_LABELS[r.grade_aeg] ?? r.grade_aeg.toUpperCase()}
                       </span>
                       <span className="rounded-lg font-sans text-[10px] uppercase tracking-[0.12em] text-ag-gray-light border border-ag-border px-2 py-1">
-                        {FORMAT_LABELS[r.format] ?? r.format}
+                        {formatLabel(r.format)}
                       </span>
                     </div>
 
@@ -112,7 +122,7 @@ export default async function TransactResultsPage() {
                     {/* Valuation range */}
                     {vr && (vr.min != null || vr.max != null) && (
                       <div className="border-t border-ag-border/50 pt-4">
-                        <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-ag-gray-light mb-1">Fourchette indicative</p>
+                        <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-ag-gray-light mb-1">{t('rangeLabel')}</p>
                         <p className="font-sans font-bold text-ag-black text-[15px]">
                           {vr.min != null ? fmtEur(vr.min) : '—'}
                           {vr.min != null && vr.max != null ? ' – ' : ''}
@@ -125,14 +135,14 @@ export default async function TransactResultsPage() {
                     <div className="flex items-center gap-6 border-t border-ag-border/50 pt-4 mt-auto">
                       {r.process_duration_weeks && (
                         <div>
-                          <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">Durée</p>
-                          <p className="font-sans font-semibold text-ag-black text-[12px]">{r.process_duration_weeks} sem.</p>
+                          <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">{t('durationLabel')}</p>
+                          <p className="font-sans font-semibold text-ag-black text-[12px]">{r.process_duration_weeks} {t('durationUnit')}</p>
                         </div>
                       )}
                       <div>
-                        <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">Closé</p>
+                        <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-ag-gray-light">{t('closedLabel')}</p>
                         <p className="font-sans font-semibold text-ag-black text-[12px]">
-                          {new Date(r.closed_at).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+                          {new Date(r.closed_at).toLocaleDateString(locale, { month: 'short', year: 'numeric' })}
                         </p>
                       </div>
                     </div>
@@ -142,7 +152,7 @@ export default async function TransactResultsPage() {
             </div>
 
             <p className="mt-10 font-sans text-[11px] text-ag-gray-light text-center">
-              Les données sont anonymisées. Aucune information permettant d'identifier le vendeur, l'acquéreur ou l'actif n'est divulguée.
+              {t('disclaimer')}
             </p>
           </div>
         </section>
@@ -153,7 +163,7 @@ export default async function TransactResultsPage() {
               <BarChart2 size={20} className="text-ag-gray-light" />
             </div>
             <p className="font-sans text-[15px] text-ag-gray max-w-md">
-              Les premiers résultats seront publiés ici à l'issue de chaque transaction Aegryn. Les données sont anonymisées.
+              {t('emptyState')}
             </p>
           </div>
         </section>

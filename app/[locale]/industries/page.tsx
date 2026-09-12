@@ -118,7 +118,7 @@ export default function IndustriesPage() {
                   {/* Titre + compteur secteurs */}
                   <div className="relative z-10 p-5">
                     <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-white/40 mb-1.5 group-hover:text-ag-apex/60 transition-colors">
-                      {cl.sectors.length} secteurs
+                      {t('sectorCount', { count: cl.sectors.length })}
                     </p>
                     <h2 className="font-sans font-bold text-white leading-[1.1] tracking-[-0.02em]"
                       style={{ fontSize: 'clamp(14px,1.3vw,17px)' }}>
@@ -132,7 +132,7 @@ export default function IndustriesPage() {
 
           {/* Hint scroll mobile */}
           <p className="sm:hidden lg:hidden font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mt-4">
-            ← Faire défiler →
+            {t('scrollHint')}
           </p>
         </div>
       </section>
@@ -144,39 +144,39 @@ export default function IndustriesPage() {
           {/* Ligne 1 — Benchmarks */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
-              Accéder à nos benchmarks de valorisation d'une organisation
+              {t('cta1Text')}
             </p>
             <Link
               href={"/grade/whitepaper" as never}
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
-              Accéder aux benchmarks <ArrowUpRight size={10} />
+              {t('cta1Button')} <ArrowUpRight size={10} />
             </Link>
           </div>
 
           {/* Ligne 2 — Certification */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
-              Demander la certification CIFSO 5000
+              {t('cta2Text')}
             </p>
             <Link
               href="/grade"
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black hover:text-white transition-colors whitespace-nowrap"
             >
-              Demander la certification <ArrowUpRight size={10} />
+              {t('cta2Button')} <ArrowUpRight size={10} />
             </Link>
           </div>
 
           {/* Ligne 3 — Publications */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
-              Consulter nos points de vue et publications
+              {t('cta3Text')}
             </p>
             <Link
               href="/blog"
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
-              Lire nos analyses <ArrowUpRight size={10} />
+              {t('cta3Button')} <ArrowUpRight size={10} />
             </Link>
           </div>
 

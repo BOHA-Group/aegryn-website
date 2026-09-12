@@ -5,40 +5,10 @@ import Image               from 'next/image'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { INDUSTRIES, getIndustry, getOtherIndustries } from '@/data/industries'
+import { INDUSTRIES, getIndustry, getOtherIndustries, getLocaleText } from '@/data/industries'
 import { ARTICLES }  from '@/data/articles'
 import { IndustryArticles } from '@/components/sections/industries/IndustryArticles'
 
-/* ── Image par secteur ───────────────────────────────────────── */
-const SECTOR_IMAGES: Record<string, string> = {
-  // Finance & Capital
-  'Banque & Services Financiers': '/images/blog/finance-trading.jpg',
-  'FinTech & Paiements':          '/images/blog/fintech-app.jpg',
-  'PropTech & Immobilier':        '/images/blog/investment-coins.jpg',
-  // Santé
-  'Santé & Pharmaceutique':       '/images/blog/healthcare-lab.jpg',
-  'HealthTech & MedTech':         '/images/blog/robot-ai.jpg',
-  // Industrie
-  'Énergie & Utilities':          '/images/blog/tech-circuit.jpg',
-  'Industrie & Manufacturing':    '/images/blog/factory-industry.jpg',
-  'Logistique & Supply Chain':    '/images/blog/europe-skyline.jpg',
-  'Construction & Infrastructure':'/images/blog/city-buildings.jpg',
-  'Aérospatiale & Défense':       '/images/blog/server-room.jpg',
-  'Automobile & Mobilité':        '/images/blog/mobile-analytics.jpg',
-  'Agriculture & Agroalimentaire':'/images/blog/alpine-swiss.jpg',
-  'Chimie & Matériaux Avancés':   '/images/blog/analytics-graphs.jpg',
-  'Transport & Fret':             '/images/blog/office-building.jpg',
-  // Commerce & Services
-  'Retail & E-commerce':          '/images/blog/ecommerce-shop.jpg',
-  'Médias & Entertainment':       '/images/blog/startup-team.jpg',
-  'Luxe & Retail Premium':        '/images/blog/executive-suit.jpg',
-  'Hôtellerie & Tourisme':        '/images/blog/business-meeting.jpg',
-  'Télécommunications':           '/images/blog/mobile-app.jpg',
-  // Tech & Secteur Public
-  'Technologie & SaaS':           '/images/blog/coding-screen.jpg',
-  'GovTech & Secteur Public':     '/images/blog/whiteboard-strategy.jpg',
-  'Éducation & EdTech':           '/images/blog/team-laptops.jpg',
-}
 const SECTOR_IMG_FALLBACK = '/images/blog/modern-office.jpg'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -54,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ind = getIndustry(slug)
   if (!ind) return {}
   return generateAegrynMetadata({
-    title: `${CLUSTER_NAMES[ind.clusterId] ?? ind.clusterId} — Aegryn`,
-    description: ind.vision.slice(0, 160).replace(/\n/g, ' '),
+    title: `${getLocaleText(ind.name, locale)} — Aegryn`,
+    description: getLocaleText(ind.vision, locale).slice(0, 160).replace(/\n/g, ' '),
     path: `/industries/${slug}`,
     locale,
   })
@@ -68,15 +38,6 @@ const CLUSTER_IMAGES: Record<string, string> = {
   industrie: '/images/theme_marketplace.jpg',
   commerce:  '/images/theme_saas.jpg',
   tech:      '/images/theme_AI.jpg',
-}
-
-/** Noms complets des clusters — toujours avec accents et casse correcte */
-const CLUSTER_NAMES: Record<string, string> = {
-  finance:   'Finance & Capital',
-  sante:     'Santé & Sciences de la Vie',
-  industrie: 'Industrie, Énergie & Infrastructure',
-  commerce:  'Commerce, Services & Expérience Client',
-  tech:      'Tech, Innovation & Secteur Public',
 }
 
 /* ── Page ───────────────────────────────────────────────────── */
@@ -98,7 +59,7 @@ export default async function IndustryDetailPage({ params }: Props) {
       <section className="relative bg-ag-navy overflow-hidden" style={{ minHeight: 'clamp(380px, 45vw, 560px)' }}>
         <Image
           src={ind.img}
-          alt={ind.imgAlt}
+          alt={getLocaleText(ind.imgAlt, locale)}
           fill
           className="object-cover opacity-45"
           sizes="100vw"
@@ -118,7 +79,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             {ind.keyMetrics.map((m, i) => (
               <div key={i} className="flex flex-col gap-0.5">
                 <span className="font-mono font-bold text-ag-apex" style={{ fontSize: 'clamp(18px,2vw,26px)' }}>{m.value}</span>
-                <span className="font-sans text-[11px] text-white/40 max-w-[180px] leading-snug">{m.label}</span>
+                <span className="font-sans text-[11px] text-white/40 max-w-[180px] leading-snug">{getLocaleText(m.label, locale)}</span>
               </div>
             ))}
           </div>
@@ -128,7 +89,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
             style={{ fontSize: 'clamp(36px,5vw,68px)' }}
           >
-            {CLUSTER_NAMES[ind.clusterId] ?? ind.clusterId}
+            {getLocaleText(ind.name, locale)}
           </h1>
 
           {/* CTAs */}
@@ -152,11 +113,11 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">
-              Notre lecture
+              {t('readingLabel')}
             </p>
           </div>
           <div className="lg:col-span-8">
-            {ind.vision.split('\n').filter(Boolean).map((para, i) => (
+            {getLocaleText(ind.vision, locale).split('\n').filter(Boolean).map((para, i) => (
               <p key={i} className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4 last:mb-0">
                 {para.trim()}
               </p>
@@ -171,21 +132,22 @@ export default async function IndustryDetailPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
-            Secteurs couverts
+            {t('sectorsLabel')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {ind.sectors.map((sector, i) => {
-              const img = SECTOR_IMAGES[sector.name] ?? SECTOR_IMG_FALLBACK
+              const sectorName = getLocaleText(sector.name, locale)
+              const img = sector.img ?? SECTOR_IMG_FALLBACK
               return (
                 <div
-                  key={sector.name}
+                  key={sectorName}
                   className="group relative overflow-hidden rounded-xl flex flex-col justify-end"
                   style={{ height: 'clamp(180px, 18vw, 240px)' }}
                 >
                   {/* Image pleine */}
                   <Image
                     src={img}
-                    alt={sector.name}
+                    alt={sectorName}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -200,7 +162,7 @@ export default async function IndustryDetailPage({ params }: Props) {
 
                   {/* Tag haut droite */}
                   <span className="absolute top-4 right-4 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
-                    {sector.tag}
+                    {getLocaleText(sector.tag, locale)}
                   </span>
 
                   {/* Titre + desc en bas */}
@@ -209,10 +171,10 @@ export default async function IndustryDetailPage({ params }: Props) {
                       className="font-sans font-bold text-white leading-[1.1] tracking-[-0.02em] mb-1.5"
                       style={{ fontSize: 'clamp(13px,1.2vw,16px)' }}
                     >
-                      {sector.name}
+                      {sectorName}
                     </h3>
                     <p className="font-sans text-[11px] text-white/60 leading-relaxed line-clamp-2">
-                      {sector.desc}
+                      {getLocaleText(sector.desc, locale)}
                     </p>
                   </div>
                 </div>
@@ -228,16 +190,16 @@ export default async function IndustryDetailPage({ params }: Props) {
       <section className="border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
-            Nos expertises appliquées
+            {t('expertiseLabel')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {ind.expertise.map((ex, i) => (
               <div key={i} className="bg-ag-white border border-ag-border rounded-xl p-7 flex flex-col gap-3 hover:bg-ag-off-white transition-colors">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[9px] tracking-[0.22em] text-ag-apex">{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{ex.title}</h3>
+                  <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(ex.title, locale)}</h3>
                 </div>
-                <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{ex.desc}</p>
+                <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{getLocaleText(ex.desc, locale)}</p>
               </div>
             ))}
           </div>
@@ -250,10 +212,10 @@ export default async function IndustryDetailPage({ params }: Props) {
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-2">
-            Comment nous accompagnons nos clients
+            {t('segmentsLabel')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light mb-8 max-w-xl">
-            Trois profils types, trois situations concrètes.
+            {t('segmentsSub')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {ind.segments.map((seg, i) => (
@@ -262,21 +224,21 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <div className="bg-ag-off-white px-6 pt-6 pb-5 border-b border-ag-border">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                    <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{seg.label}</h3>
+                    <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(seg.label, locale)}</h3>
                   </div>
                   {/* Storytelling */}
                   <p className="font-sans text-[12px] text-ag-gray leading-relaxed italic">
-                    &ldquo;{seg.story}&rdquo;
+                    &ldquo;{getLocaleText(seg.story, locale)}&rdquo;
                   </p>
                 </div>
                 {/* Problèmes */}
                 <div className="px-6 py-5 flex flex-col gap-2.5 bg-ag-white flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">Ce que nous résolvons</p>
+                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">{t('problemsLabel')}</p>
                   <ul className="flex flex-col gap-3">
                     {seg.problems.map((pb, j) => (
                       <li key={j} className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                        <span className="font-sans text-[12px] text-ag-gray leading-relaxed">{pb}</span>
+                        <span className="font-sans text-[12px] text-ag-gray leading-relaxed">{getLocaleText(pb, locale)}</span>
                       </li>
                     ))}
                   </ul>
@@ -299,11 +261,11 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex/70 mb-3">
-              Certification CIFSO 5000
+              {t('ctaKicker')}
             </p>
             <p className="font-sans font-bold text-white max-w-lg leading-snug tracking-[-0.025em]"
               style={{ fontSize: 'clamp(18px,2.2vw,28px)' }}>
-              Faites évaluer votre organisation et obtenez une certification indépendante défendable.
+              {t('ctaTitle')}
             </p>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
@@ -325,7 +287,7 @@ export default async function IndustryDetailPage({ params }: Props) {
       <section className="py-10 px-6 md:px-12 border-b border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
-            Explorer d'autres industries
+            {t('exploreLabel')}
           </p>
           <div className="flex flex-wrap gap-3">
             {others.map(other => (
@@ -337,14 +299,14 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <div className="relative w-10 h-10 rounded-lg overflow-hidden shrink-0">
                   <Image
                     src={CLUSTER_IMAGES[other.clusterId] ?? other.img}
-                    alt={other.clusterId}
+                    alt={getLocaleText(other.name, locale)}
                     fill
                     className="object-cover"
                     sizes="40px"
                   />
                 </div>
                 <span className="font-sans text-[12px] font-semibold text-ag-black leading-snug max-w-[180px]">
-                  {CLUSTER_NAMES[other.clusterId] ?? other.clusterId}
+                  {getLocaleText(other.name, locale)}
                 </span>
                 <ArrowUpRight size={11} className="text-ag-gray-light group-hover:text-ag-black transition-colors shrink-0 ml-auto" />
               </Link>
