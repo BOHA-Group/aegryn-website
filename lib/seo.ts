@@ -354,7 +354,7 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 6,  name: 'Catalogue',                     url: `${BASE_URL}/fr/transact/catalog` },
     { '@type': 'ListItem', position: 7,  name: 'Valorisation illustrative',     url: `${BASE_URL}/fr/valuation` },
     { '@type': 'ListItem', position: 8,  name: 'Aegryn Grade (CIFSO v4.0)',     url: `${BASE_URL}/fr/grade` },
-    { '@type': 'ListItem', position: 9,  name: 'Protocole CIFSO v4.0',          url: `${BASE_URL}/fr/grade/cifso` },
+    { '@type': 'ListItem', position: 9,  name: 'Brochure CIFSO 5000',           url: `${BASE_URL}/fr/grade/brochure` },
     { '@type': 'ListItem', position: 10, name: 'Soumettre un actif',            url: `${BASE_URL}/fr/grade/submit` },
     { '@type': 'ListItem', position: 11, name: 'Experts',                       url: `${BASE_URL}/fr/experts` },
     { '@type': 'ListItem', position: 12, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },

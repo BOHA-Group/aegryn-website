@@ -36,7 +36,7 @@ export function WhitepaperContent() {
       {/* ── Screen nav bar (hidden on print) ── */}
       <div className="rounded-lg print:hidden sticky top-0 z-50 bg-ag-white border-b border-ag-border px-6 py-3 flex items-center justify-between">
         <Link
-          href="/grade/methodology"
+          href="/grade"
           className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors"
         >
           <ArrowLeft size={12} /> {tG('wpNavBack')}

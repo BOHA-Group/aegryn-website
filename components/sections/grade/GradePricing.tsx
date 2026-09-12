@@ -165,7 +165,7 @@ export function GradePricing() {
             {t('pricingNote')}
           </p>
           <Link
-            href={`/${locale}/grade/grading-system`}
+            href={`/${locale}/grade/brochure`}
             className="shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase text-white/50 hover:text-white border border-white/15 hover:border-white/40 px-5 py-3 rounded-lg transition-all"
           >
             {t('pricingCtaSecondary')}

@@ -34,7 +34,7 @@ const STEP_ICONS = [
   <Landmark     key="6" size={22} className="text-ag-apex" />,
 ]
 const STEP_SIDES = ['seller', 'seller', 'aegryn', 'aegryn', 'both', 'aegryn'] as const
-const STEP_CTAS = ['/valuation', '/transact/submit', '/grade/grading-system', '/transact/buyers', null, null] as const
+const STEP_CTAS = ['/valuation', '/transact/submit', '/grade/brochure', '/transact/buyers', null, null] as const
 
 const SIDE_COLORS: Record<string, string> = {
   seller: 'bg-blue-50 text-blue-700 border-blue-200',

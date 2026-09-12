@@ -32,9 +32,7 @@ const STATIC_ROUTES = [
   { path: '/transact/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
   // ── Grade & Certification CIFSO v4.0 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
-  { path: '/grade/methodology',                  priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/grade/grading-system',               priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/grade/cifso',                        priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/grade/partners',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/grade/submit',                       priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Valuation ────────────────────────────────────────────────────────────────

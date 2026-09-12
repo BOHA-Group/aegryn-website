@@ -37,7 +37,7 @@ const GROUPS: SitemapGroup[] = [
     labelKey: 'groupGrade',
     links: [
       { labelKey: 'grade',         href: '/grade' },
-      { labelKey: 'gradeMethod',   href: '/grade/methodology' },
+      { labelKey: 'gradeMethod',   href: '/grade/brochure' },
       { labelKey: 'gradeSubmit',   href: '/grade/submit' },
       { labelKey: 'gradePartners', href: '/grade/partners' },
     ],

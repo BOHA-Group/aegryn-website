@@ -63,6 +63,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       /* Anciennes URLs internes aegryn.com */
+      { source: '/:locale/grade/methodology',        destination: '/:locale/grade',                  permanent: true },
+      { source: '/:locale/grade/grading-system',     destination: '/:locale/grade',                  permanent: true },
+      { source: '/grade/methodology',                 destination: '/grade',                          permanent: true },
+      { source: '/grade/grading-system',              destination: '/grade',                          permanent: true },
       { source: '/:locale/grow-with-us',             destination: '/:locale/alliances',              permanent: true },
       { source: '/:locale/auction/session',          destination: '/:locale/auction/sessions',        permanent: true },
       { source: '/:locale/what-we-build',             destination: '/:locale/assets',                 permanent: true },

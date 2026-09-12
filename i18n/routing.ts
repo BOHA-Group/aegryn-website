@@ -39,8 +39,7 @@ export const routing = defineRouting({
     },
     /* ── Routes non traduites — mapping identité (requis pour le typage du Link i18n) ── */
     '/grade':                             '/grade',
-    '/grade/grading-system':              '/grade/grading-system',
-    '/grade/methodology':                 '/grade/methodology',
+    '/grade/brochure':                    '/grade/brochure',
     '/grade/partners':                    '/grade/partners',
     '/grade/submit':                      '/grade/submit',
     '/grade/submit/success':              '/grade/submit/success',
