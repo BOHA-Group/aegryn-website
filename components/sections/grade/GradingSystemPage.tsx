@@ -128,64 +128,20 @@ export function GradingSystemPage() {
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="bg-ag-navy pt-28 pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
-            <div className="max-w-3xl">
-              <p className="gs-hero-label font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-ag-apex mb-6 flex items-center gap-3">
-                <span className="w-8 h-px bg-ag-apex/40 inline-block" />
-                {t('label')}
-              </p>
-              <h1
-                className="gs-hero-title font-sans font-bold text-white leading-[1.02] tracking-[-0.035em] whitespace-pre-line mb-8"
-                style={{ fontSize: 'clamp(48px,6.5vw,96px)' }}
-              >
-                {t('title')}
-              </h1>
-              <p className="gs-hero-intro font-sans text-[16px] text-white/60 leading-relaxed max-w-2xl">
-                {t('intro')}
-              </p>
-            </div>
-            <div className="gs-hero-version shrink-0 flex flex-col gap-3">
-              <div className="rounded-lg border border-white/10 px-5 py-4 text-right">
-                <p className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/60 mb-1">
-                  {t('downloadLabel')}
-                </p>
-                <p className="font-mono text-[11px] tracking-[0.1em] text-ag-apex">
-                  {t('version')}
-                </p>
-              </div>
-              <Link
-                href={`/${locale}/grade/brochure`}
-                className="rounded-lg inline-flex items-center gap-2 bg-ag-apex/10 border border-ag-apex/30 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-apex/20 transition-colors"
-              >
-                <FileText size={11} />
-                {tG('whitepaperCta')}
-              </Link>
-            </div>
-          </div>
-
-          {/* Score bar visuelle */}
-          <div className="mt-20 flex items-center gap-0 border border-white/8">
-            {grades.map((g) => (
-              <div
-                key={g.grade}
-                className="flex-1 h-1.5"
-                style={{ backgroundColor: g.color, opacity: 0.85 }}
-              />
-            ))}
-          </div>
-          <div className="flex items-center gap-0 mt-1">
-            {grades.map((g) => (
-              <div key={g.grade} className="flex-1 text-center">
-                <span
-                  className="font-mono text-[11px] tracking-[0.08em]"
-                  style={{ color: g.color }}
-                >
-                  {g.grade}
-                </span>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <p className="gs-hero-label font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+            <span className="w-8 h-px bg-ag-apex/40 inline-block" />
+            {t('label')}
+          </p>
+          <h1
+            className="gs-hero-title font-sans font-bold text-white leading-[1.02] tracking-[-0.035em] whitespace-pre-line mb-8"
+            style={{ fontSize: 'clamp(48px,6.5vw,96px)' }}
+          >
+            {t('title')}
+          </h1>
+          <p className="gs-hero-intro font-sans text-[16px] text-white/60 leading-relaxed max-w-2xl">
+            {t('intro')}
+          </p>
         </div>
       </section>
 
@@ -263,7 +219,7 @@ export function GradingSystemPage() {
                 Brochure CIFSO 5000
               </h2>
               <p className="font-sans text-[16px] text-ag-gray leading-relaxed mb-8">
-                {t('whitepaperDesc')}
+                {tG('whitepaperDesc')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
