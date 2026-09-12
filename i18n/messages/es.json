@@ -10139,5 +10139,257 @@
     "emailSent": "Se le ha enviado un email de confirmación.",
     "backToGrade": "Volver al Grado",
     "accessSpace": "Acceder a mi espacio"
+  },
+  "brochure": {
+    "docType": "Folleto de presentación",
+    "coverTitle": "Certificación\nCIFSO 5000",
+    "coverSubtitle": "El estándar independiente de certificación del valor y la transmisibilidad de las organizaciones",
+    "coverIssuer": "Aegryn SA — Organismo de certificación independiente, Ginebra",
+    "pageLabel": "Página",
+    "tocTitle": "Índice",
+    "toc": [
+      "Para qué sirve la certificación CIFSO 5000",
+      "A quién se dirige",
+      "El valor añadido para su organización",
+      "El marco metodológico: cinco dimensiones",
+      "La escala de grados",
+      "El proceso de certificación",
+      "Calendario y duración",
+      "Los resultados entregados",
+      "Validez, renovación e impugnación",
+      "Auditores independientes y principios de gobernanza",
+      "Posicionamiento frente a los estándares existentes",
+      "Iniciar su certificación"
+    ],
+    "s1Title": "Para qué sirve la certificación CIFSO 5000",
+    "s1Lead": "Los estándares existentes certifican sistemas y procesos. CIFSO 5000 certifica el valor y la transmisibilidad de una organización.",
+    "s1P1": "Una empresa puede ser plenamente conforme en el plano operativo y, sin embargo, difícil de valorar, financiar o transmitir. CIFSO 5000 cubre esta brecha: documenta de forma independiente y verificable lo que constituye el valor real de una organización — su capital intelectual, su integridad, su salud financiera, su seguridad y su resiliencia organizativa.",
+    "s1P2": "El resultado es un grado oficial, versionado y defendible, que puede presentarse a inversores, adquirentes, bancos, socios o sucesores como prueba de terceros de la calidad y transmisibilidad de la organización.",
+    "s1Stats": [
+      {
+        "value": "5",
+        "label": "dimensiones evaluadas"
+      },
+      {
+        "value": "100",
+        "label": "puntos de calificación"
+      },
+      {
+        "value": "5",
+        "label": "niveles de grado"
+      },
+      {
+        "value": "24",
+        "label": "meses de validez"
+      }
+    ],
+    "s2Title": "A quién se dirige",
+    "s2Lead": "CIFSO 5000 se dirige a directivos y accionistas que deben demostrar, defender o transmitir el valor de su organización.",
+    "s2Profiles": [
+      {
+        "title": "Directivos y fundadores",
+        "desc": "Objetivar el valor construido, preparar una venta o una ronda de financiación y estructurar la sucesión."
+      },
+      {
+        "title": "Accionistas y familias",
+        "desc": "Asegurar una sucesión y arbitrar entre herederos o socios sobre una base independiente y documentada."
+      },
+      {
+        "title": "Inversores y fondos",
+        "desc": "Disponer de una evaluación de terceros de la calidad organizativa antes, durante y después de la inversión."
+      },
+      {
+        "title": "Adquirentes y asesores M&A",
+        "desc": "Reducir la asimetría de información, acelerar la due diligence y fiabilizar la negociación del precio."
+      },
+      {
+        "title": "Bancos y financiadores",
+        "desc": "Completar el análisis financiero con una lectura estructurada de los riesgos organizativos y la resiliencia."
+      },
+      {
+        "title": "Direcciones generales de grupos",
+        "desc": "Comparar filiales u objetivos en una escala homogénea y auditable."
+      }
+    ],
+    "s3Title": "El valor añadido para su organización",
+    "s3Lead": "Un grado CIFSO 5000 transforma convicciones internas en pruebas externas.",
+    "s3Benefits": [
+      {
+        "title": "Credibilidad inmediata",
+        "desc": "Un grado emitido por un organismo independiente vale más que cualquier presentación interna."
+      },
+      {
+        "title": "Prima de valoración",
+        "desc": "Una organización documentada y transmisible se negocia mejor: menos descuento por incertidumbre, menos garantías exigidas."
+      },
+      {
+        "title": "Due diligence acelerada",
+        "desc": "El informe de certificación preestructura la información esperada por adquirentes e inversores."
+      },
+      {
+        "title": "Hoja de ruta de mejora",
+        "desc": "Cada dimensión calificada identifica palancas concretas para progresar al grado superior."
+      },
+      {
+        "title": "Diferenciación comercial",
+        "desc": "El grado se comunica en licitaciones, asociaciones y relaciones bancarias."
+      },
+      {
+        "title": "Continuidad y transmisibilidad",
+        "desc": "La certificación demuestra que la organización no depende de una sola persona y puede ser retomada."
+      }
+    ],
+    "s4Title": "El marco metodológico: cinco dimensiones",
+    "s4Lead": "CIFSO es el acrónimo de las cinco dimensiones evaluadas. Cada una está ponderada y calificada según criterios documentados.",
+    "s4Weight": "Ponderación",
+    "s4Criteria": "Criterios evaluados",
+    "s5Title": "La escala de grados",
+    "s5Lead": "Cinco niveles, del grado excepcional AEG ★ al grado B. Cada grado corresponde a un perfil organizativo y a un rango de puntuación preciso.",
+    "s5ColGrade": "Grado",
+    "s5ColRange": "Puntuación",
+    "s5ColRarity": "Rareza",
+    "s5ColProfile": "Perfil",
+    "s6Title": "El proceso de certificación",
+    "s6Lead": "Seis etapas estructuradas, cada una con entradas, entregables y resultados definidos. El proceso es idéntico para todas las organizaciones certificadas.",
+    "s7Title": "Calendario y duración",
+    "s7Lead": "Desde la presentación hasta la emisión del grado, la certificación dura de 15 a 35 días laborables según el tamaño y la complejidad de la organización.",
+    "s7Phases": [
+      {
+        "phase": "Semana 1",
+        "title": "Encuadre y recopilación",
+        "desc": "Firma de la carta de encargo, transmisión del expediente documental, entrevista de encuadre con la dirección."
+      },
+      {
+        "phase": "Semanas 2–3",
+        "title": "Análisis y entrevistas",
+        "desc": "Revisión documental, entrevistas con funciones clave, verificaciones cruzadas y solicitudes complementarias."
+      },
+      {
+        "phase": "Semanas 3–4",
+        "title": "Calificación y revisión",
+        "desc": "Calificación de las cinco dimensiones por el analista principal, revisión independiente por un segundo analista, arbitraje en caso de discrepancia."
+      },
+      {
+        "phase": "Semanas 4–5",
+        "title": "Restitución y emisión",
+        "desc": "Presentación del informe a la dirección, periodo de observaciones fácticas, emisión del certificado versionado."
+      }
+    ],
+    "s7Note": "Los plazos corren desde la recepción de un expediente completo. Las organizaciones con documentación estructurada se sitúan generalmente en el rango inferior.",
+    "s8Title": "Los resultados entregados",
+    "s8Lead": "La certificación produce un conjunto de entregables diseñados para compartirse con sus partes interesadas.",
+    "s8Deliverables": [
+      {
+        "title": "Certificado oficial CIFSO 5000",
+        "desc": "Documento versionado que indica el grado, la puntuación, la fecha de emisión, la fecha de validez y el identificador único de verificación."
+      },
+      {
+        "title": "Informe de certificación",
+        "desc": "Análisis detallado de las cinco dimensiones, calificación por criterio, constataciones, puntos fuertes y zonas de vigilancia."
+      },
+      {
+        "title": "Hoja de ruta de mejora",
+        "desc": "Recomendaciones priorizadas para progresar al grado superior, con estimación de impacto en la puntuación."
+      },
+      {
+        "title": "Kit de comunicación",
+        "desc": "Insignia de grado, menciones autorizadas y directrices de uso para sus soportes, licitaciones y data rooms."
+      },
+      {
+        "title": "Verificación en línea",
+        "desc": "Página pública de verificación que permite a cualquier tercero confirmar la autenticidad y validez del grado."
+      }
+    ],
+    "s9Title": "Validez, renovación e impugnación",
+    "s9Validity": {
+      "title": "Duración de validez",
+      "desc": "Un grado CIFSO 5000 es válido durante 24 meses desde su fecha de emisión. Después, se muestra como expirado en la página de verificación."
+    },
+    "s9Renewal": {
+      "title": "Renovación",
+      "desc": "La renovación sigue un proceso simplificado si la documentación se mantiene actualizada. Cualquier cambio significativo (cambio de control, reestructuración, incidente mayor) puede justificar una reevaluación anticipada."
+    },
+    "s9Versioning": {
+      "title": "Versionado",
+      "desc": "Cada grado está versionado. Toda revisión genera una nueva versión con trazabilidad completa; el grado original sigue siendo consultable."
+    },
+    "s9Contest": {
+      "title": "Impugnación",
+      "desc": "La organización certificada dispone de 30 días para formular observaciones fácticas. Una impugnación motivada desencadena una revisión por un analista que no participó en la evaluación inicial."
+    },
+    "s10Title": "Auditores independientes y principios de gobernanza",
+    "s10Lead": "El valor de un grado descansa enteramente en la independencia y el rigor de quienes lo emiten.",
+    "s10Auditors": [
+      {
+        "title": "Analistas certificados Aegryn",
+        "desc": "Cada evaluación la dirige un analista principal formado en el protocolo CIFSO 5000 y sujeto a una carta deontológica."
+      },
+      {
+        "title": "Revisión a cuatro ojos",
+        "desc": "Un segundo analista independiente revisa sistemáticamente la calificación antes de emitir cualquier grado."
+      },
+      {
+        "title": "Recusación automática",
+        "desc": "Cualquier vínculo financiero, comercial o personal con la organización evaluada conlleva la recusación del analista."
+      },
+      {
+        "title": "Separación consultoría / certificación",
+        "desc": "Aegryn no certifica una organización a la que asesora en el perímetro evaluado."
+      }
+    ],
+    "s11Title": "Posicionamiento frente a los estándares existentes",
+    "s11Lead": "CIFSO 5000 no sustituye a ningún estándar existente. Evalúa un objeto diferente.",
+    "s11ColStandard": "Estándar",
+    "s11ColObject": "Objeto certificado",
+    "s11ColQuestion": "Pregunta a la que responde",
+    "s11Rows": [
+      {
+        "standard": "ISO 9001",
+        "object": "Sistema de gestión de la calidad",
+        "question": "¿Están controlados los procesos?"
+      },
+      {
+        "standard": "ISO 27001",
+        "object": "Seguridad de la información",
+        "question": "¿Está protegida la información?"
+      },
+      {
+        "standard": "Auditoría financiera",
+        "object": "Cuentas anuales",
+        "question": "¿Son fieles las cuentas?"
+      },
+      {
+        "standard": "CIFSO 5000",
+        "object": "Valor y transmisibilidad de la organización",
+        "question": "¿Vale la organización lo que afirma y puede transmitirse?"
+      }
+    ],
+    "s11Note": "Las certificaciones existentes constituyen entradas valiosas para la evaluación CIFSO 5000 y generalmente refuerzan la puntuación de las dimensiones afectadas.",
+    "s12Title": "Iniciar su certificación",
+    "s12Lead": "Presente su organización y reciba su grado oficial en 15 a 35 días laborables.",
+    "s12Steps": [
+      "Presente su solicitud en línea",
+      "Reciba la carta de encargo y la lista documental",
+      "Envíe su expediente y planifique el encuadre",
+      "Obtenga su grado, su informe y su certificado"
+    ],
+    "s12Primary": "Presentar para certificación",
+    "s12Secondary": "Contactarnos",
+    "footerIssuer": "Aegryn SA — Certificación independiente del valor organizativo",
+    "footerLocation": "Ginebra, Suiza",
+    "previewLabel": "Documentación completa",
+    "previewTitle": "Folleto CIFSO 5000",
+    "previewDesc": "El documento de referencia para comprender la certificación: utilidad, públicos, valor añadido, metodología, proceso, calendario, entregables, validez y gobernanza independiente.",
+    "previewRead": "Consultar el folleto",
+    "previewDownload": "Descargar PDF",
+    "previewPages": "páginas",
+    "previewFeatures": [
+      "Índice estructurado",
+      "Cinco dimensiones detalladas",
+      "Proceso en seis etapas",
+      "Calendario y entregables",
+      "Validez y renovación",
+      "Gobernanza independiente"
+    ]
   }
 }

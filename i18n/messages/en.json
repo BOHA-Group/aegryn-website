@@ -10139,5 +10139,257 @@
     "emailSent": "A confirmation email has been sent to you.",
     "backToGrade": "Back to Grade",
     "accessSpace": "Access my space"
+  },
+  "brochure": {
+    "docType": "Presentation brochure",
+    "coverTitle": "CIFSO 5000\nCertification",
+    "coverSubtitle": "The independent standard for certifying the value and transferability of organisations",
+    "coverIssuer": "Aegryn SA — Independent certification body, Geneva",
+    "pageLabel": "Page",
+    "tocTitle": "Contents",
+    "toc": [
+      "What CIFSO 5000 certification is for",
+      "Who it is for",
+      "The added value for your organisation",
+      "The methodological framework: five dimensions",
+      "The grade scale",
+      "The certification process",
+      "Timeline and duration",
+      "Deliverables",
+      "Validity, renewal and appeal",
+      "Independent auditors and governance principles",
+      "Positioning against existing standards",
+      "Start your certification"
+    ],
+    "s1Title": "What CIFSO 5000 certification is for",
+    "s1Lead": "Existing standards certify systems and processes. CIFSO 5000 certifies the value and transferability of an organisation.",
+    "s1P1": "A company can be fully compliant operationally and still be difficult to value, finance or transfer. CIFSO 5000 closes this gap: it independently and verifiably documents what constitutes an organisation's real value — its intellectual capital, integrity, financial health, security and organisational resilience.",
+    "s1P2": "The result is an official, versioned and defensible grade that can be presented to investors, acquirers, banks, partners or successors as third-party proof of the organisation's quality and transferability.",
+    "s1Stats": [
+      {
+        "value": "5",
+        "label": "dimensions assessed"
+      },
+      {
+        "value": "100",
+        "label": "scoring points"
+      },
+      {
+        "value": "5",
+        "label": "grade levels"
+      },
+      {
+        "value": "24",
+        "label": "months of validity"
+      }
+    ],
+    "s2Title": "Who it is for",
+    "s2Lead": "CIFSO 5000 is designed for executives and shareholders who need to demonstrate, defend or transfer the value of their organisation.",
+    "s2Profiles": [
+      {
+        "title": "Executives and founders",
+        "desc": "Objectify the value built, prepare a sale or fundraising, and structure succession."
+      },
+      {
+        "title": "Shareholders and families",
+        "desc": "Secure a succession and arbitrate between heirs or partners on an independent, documented basis."
+      },
+      {
+        "title": "Investors and funds",
+        "desc": "Obtain a third-party assessment of organisational quality before, during and after the investment."
+      },
+      {
+        "title": "Acquirers and M&A advisors",
+        "desc": "Reduce information asymmetry, accelerate due diligence and make price negotiation more reliable."
+      },
+      {
+        "title": "Banks and lenders",
+        "desc": "Complement financial analysis with a structured reading of organisational risk and resilience."
+      },
+      {
+        "title": "Group executive management",
+        "desc": "Compare subsidiaries or targets on a homogeneous, auditable scale."
+      }
+    ],
+    "s3Title": "The added value for your organisation",
+    "s3Lead": "A CIFSO 5000 grade turns internal convictions into external evidence.",
+    "s3Benefits": [
+      {
+        "title": "Immediate credibility",
+        "desc": "A grade issued by an independent body carries more weight than any internal presentation."
+      },
+      {
+        "title": "Valuation premium",
+        "desc": "A documented, transferable organisation negotiates better: less uncertainty discount, fewer warranties required."
+      },
+      {
+        "title": "Faster due diligence",
+        "desc": "The certification report pre-structures the information expected by acquirers and investors."
+      },
+      {
+        "title": "Improvement roadmap",
+        "desc": "Each scored dimension identifies concrete levers to progress to the next grade."
+      },
+      {
+        "title": "Commercial differentiation",
+        "desc": "The grade can be communicated in tenders, partnerships and banking relationships."
+      },
+      {
+        "title": "Continuity and transferability",
+        "desc": "Certification proves the organisation does not depend on a single person and can be taken over."
+      }
+    ],
+    "s4Title": "The methodological framework: five dimensions",
+    "s4Lead": "CIFSO is the acronym of the five dimensions assessed. Each is weighted and scored against documented criteria.",
+    "s4Weight": "Weight",
+    "s4Criteria": "Criteria assessed",
+    "s5Title": "The grade scale",
+    "s5Lead": "Five levels, from the exceptional AEG ★ grade to grade B. Each grade corresponds to an organisational profile and a precise score range.",
+    "s5ColGrade": "Grade",
+    "s5ColRange": "Score",
+    "s5ColRarity": "Rarity",
+    "s5ColProfile": "Profile",
+    "s6Title": "The certification process",
+    "s6Lead": "Six structured steps, each with defined inputs, deliverables and outcomes. The process is identical for every certified organisation.",
+    "s7Title": "Timeline and duration",
+    "s7Lead": "From submission to grade issuance, certification takes 15 to 35 business days depending on the size and complexity of the organisation.",
+    "s7Phases": [
+      {
+        "phase": "Week 1",
+        "title": "Scoping and collection",
+        "desc": "Engagement letter signature, document file transmission, scoping interview with management."
+      },
+      {
+        "phase": "Weeks 2–3",
+        "title": "Analysis and interviews",
+        "desc": "Document review, interviews with key functions, cross-checks and additional requests."
+      },
+      {
+        "phase": "Weeks 3–4",
+        "title": "Scoring and review",
+        "desc": "Scoring of the five dimensions by the lead analyst, independent review by a second analyst, arbitration if divergent."
+      },
+      {
+        "phase": "Weeks 4–5",
+        "title": "Feedback and issuance",
+        "desc": "Report presentation to management, factual comments period, issuance of the versioned certificate."
+      }
+    ],
+    "s7Note": "Timelines run from receipt of a complete file. Organisations with structured documentation typically fall in the lower range.",
+    "s8Title": "Deliverables",
+    "s8Lead": "Certification produces a set of deliverables designed to be shared with your stakeholders.",
+    "s8Deliverables": [
+      {
+        "title": "Official CIFSO 5000 certificate",
+        "desc": "Versioned document stating the grade, score, issue date, validity date and unique verification identifier."
+      },
+      {
+        "title": "Certification report",
+        "desc": "Detailed analysis of the five dimensions, scoring by criterion, findings, strengths and areas of vigilance."
+      },
+      {
+        "title": "Improvement roadmap",
+        "desc": "Prioritised recommendations to progress to the next grade, with estimated score impact."
+      },
+      {
+        "title": "Communication kit",
+        "desc": "Grade badge, authorised wording and usage guidelines for your materials, tenders and data rooms."
+      },
+      {
+        "title": "Online verification",
+        "desc": "Public verification page allowing any third party to confirm the authenticity and validity of the grade."
+      }
+    ],
+    "s9Title": "Validity, renewal and appeal",
+    "s9Validity": {
+      "title": "Validity period",
+      "desc": "A CIFSO 5000 grade is valid for 24 months from its issue date. Beyond that, it is displayed as expired on the verification page."
+    },
+    "s9Renewal": {
+      "title": "Renewal",
+      "desc": "Renewal follows a streamlined process if documentation is kept up to date. Any significant change (change of control, restructuring, major incident) may warrant early reassessment."
+    },
+    "s9Versioning": {
+      "title": "Versioning",
+      "desc": "Every grade is versioned. Any revision generates a new version with full traceability; the original grade remains accessible."
+    },
+    "s9Contest": {
+      "title": "Appeal",
+      "desc": "The certified organisation has 30 days to submit factual comments. A reasoned appeal triggers a review by an analyst who did not take part in the initial assessment."
+    },
+    "s10Title": "Independent auditors and governance principles",
+    "s10Lead": "The value of a grade rests entirely on the independence and rigour of those who issue it.",
+    "s10Auditors": [
+      {
+        "title": "Aegryn certified analysts",
+        "desc": "Each assessment is led by a lead analyst trained in the CIFSO 5000 protocol and bound by a code of ethics."
+      },
+      {
+        "title": "Four-eyes review",
+        "desc": "A second independent analyst systematically reviews the scoring before any grade is issued."
+      },
+      {
+        "title": "Automatic recusal",
+        "desc": "Any financial, commercial or personal link with the assessed organisation leads to the analyst's recusal."
+      },
+      {
+        "title": "Advisory / certification separation",
+        "desc": "Aegryn does not certify an organisation it advises on the assessed scope."
+      }
+    ],
+    "s11Title": "Positioning against existing standards",
+    "s11Lead": "CIFSO 5000 replaces no existing standard. It assesses a different object.",
+    "s11ColStandard": "Standard",
+    "s11ColObject": "Certified object",
+    "s11ColQuestion": "Question answered",
+    "s11Rows": [
+      {
+        "standard": "ISO 9001",
+        "object": "Quality management system",
+        "question": "Are processes under control?"
+      },
+      {
+        "standard": "ISO 27001",
+        "object": "Information security",
+        "question": "Is information protected?"
+      },
+      {
+        "standard": "Financial audit",
+        "object": "Annual accounts",
+        "question": "Are the accounts true and fair?"
+      },
+      {
+        "standard": "CIFSO 5000",
+        "object": "Organisational value and transferability",
+        "question": "Is the organisation worth what it claims and can it be transferred?"
+      }
+    ],
+    "s11Note": "Existing certifications are valuable inputs to the CIFSO 5000 assessment and generally strengthen the score of the relevant dimensions.",
+    "s12Title": "Start your certification",
+    "s12Lead": "Submit your organisation and receive your official grade within 15 to 35 business days.",
+    "s12Steps": [
+      "Submit your request online",
+      "Receive the engagement letter and document list",
+      "Send your file and schedule the scoping interview",
+      "Receive your grade, report and certificate"
+    ],
+    "s12Primary": "Submit for certification",
+    "s12Secondary": "Contact us",
+    "footerIssuer": "Aegryn SA — Independent certification of organisational value",
+    "footerLocation": "Geneva, Switzerland",
+    "previewLabel": "Complete documentation",
+    "previewTitle": "CIFSO 5000 Brochure",
+    "previewDesc": "The reference document for understanding the certification: purpose, audiences, added value, methodology, process, timeline, deliverables, validity and independent governance.",
+    "previewRead": "Read the brochure",
+    "previewDownload": "Download PDF",
+    "previewPages": "pages",
+    "previewFeatures": [
+      "Structured contents",
+      "Five dimensions in detail",
+      "Six-step process",
+      "Timeline and deliverables",
+      "Validity and renewal",
+      "Independent governance"
+    ]
   }
 }

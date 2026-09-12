@@ -10139,5 +10139,257 @@
     "emailSent": "Eine Bestätigungs-E-Mail wurde an Sie gesendet.",
     "backToGrade": "Zurück zum Grade",
     "accessSpace": "Meinen Bereich öffnen"
+  },
+  "brochure": {
+    "docType": "Präsentationsbroschüre",
+    "coverTitle": "Zertifizierung\nCIFSO 5000",
+    "coverSubtitle": "Der unabhängige Standard zur Zertifizierung des Werts und der Übertragbarkeit von Organisationen",
+    "coverIssuer": "Aegryn SA — Unabhängige Zertifizierungsstelle, Genf",
+    "pageLabel": "Seite",
+    "tocTitle": "Inhalt",
+    "toc": [
+      "Wozu die CIFSO 5000-Zertifizierung dient",
+      "An wen sie sich richtet",
+      "Der Mehrwert für Ihre Organisation",
+      "Der methodische Rahmen: fünf Dimensionen",
+      "Die Notenskala",
+      "Der Zertifizierungsprozess",
+      "Zeitplan und Dauer",
+      "Die Ergebnisse",
+      "Gültigkeit, Erneuerung und Einspruch",
+      "Unabhängige Auditoren und Governance-Grundsätze",
+      "Positionierung gegenüber bestehenden Standards",
+      "Ihre Zertifizierung starten"
+    ],
+    "s1Title": "Wozu die CIFSO 5000-Zertifizierung dient",
+    "s1Lead": "Bestehende Standards zertifizieren Systeme und Prozesse. CIFSO 5000 zertifiziert den Wert und die Übertragbarkeit einer Organisation.",
+    "s1P1": "Ein Unternehmen kann operativ vollständig konform und dennoch schwer zu bewerten, zu finanzieren oder zu übertragen sein. CIFSO 5000 schliesst diese Lücke: Es dokumentiert unabhängig und überprüfbar, was den realen Wert einer Organisation ausmacht — ihr intellektuelles Kapital, ihre Integrität, ihre finanzielle Gesundheit, ihre Sicherheit und ihre organisatorische Resilienz.",
+    "s1P2": "Das Ergebnis ist eine offizielle, versionierte und belastbare Note, die Investoren, Käufern, Banken, Partnern oder Nachfolgern als Nachweis Dritter für Qualität und Übertragbarkeit der Organisation vorgelegt werden kann.",
+    "s1Stats": [
+      {
+        "value": "5",
+        "label": "bewertete Dimensionen"
+      },
+      {
+        "value": "100",
+        "label": "Bewertungspunkte"
+      },
+      {
+        "value": "5",
+        "label": "Notenstufen"
+      },
+      {
+        "value": "24",
+        "label": "Monate Gültigkeit"
+      }
+    ],
+    "s2Title": "An wen sie sich richtet",
+    "s2Lead": "CIFSO 5000 richtet sich an Führungskräfte und Aktionäre, die den Wert ihrer Organisation nachweisen, verteidigen oder übertragen müssen.",
+    "s2Profiles": [
+      {
+        "title": "Geschäftsführer und Gründer",
+        "desc": "Den aufgebauten Wert objektivieren, einen Verkauf oder eine Finanzierungsrunde vorbereiten und die Nachfolge strukturieren."
+      },
+      {
+        "title": "Aktionäre und Familien",
+        "desc": "Eine Nachfolge absichern und zwischen Erben oder Partnern auf unabhängiger, dokumentierter Basis entscheiden."
+      },
+      {
+        "title": "Investoren und Fonds",
+        "desc": "Eine Drittbewertung der organisatorischen Qualität vor, während und nach der Investition erhalten."
+      },
+      {
+        "title": "Käufer und M&A-Berater",
+        "desc": "Informationsasymmetrie verringern, Due Diligence beschleunigen und Preisverhandlungen absichern."
+      },
+      {
+        "title": "Banken und Finanzierer",
+        "desc": "Die Finanzanalyse durch eine strukturierte Betrachtung organisatorischer Risiken und Resilienz ergänzen."
+      },
+      {
+        "title": "Konzernleitungen",
+        "desc": "Tochtergesellschaften oder Zielunternehmen auf einer einheitlichen, prüfbaren Skala vergleichen."
+      }
+    ],
+    "s3Title": "Der Mehrwert für Ihre Organisation",
+    "s3Lead": "Eine CIFSO 5000-Note verwandelt interne Überzeugungen in externe Belege.",
+    "s3Benefits": [
+      {
+        "title": "Sofortige Glaubwürdigkeit",
+        "desc": "Eine von einer unabhängigen Stelle vergebene Note wiegt mehr als jede interne Präsentation."
+      },
+      {
+        "title": "Bewertungsprämie",
+        "desc": "Eine dokumentierte, übertragbare Organisation verhandelt besser: weniger Unsicherheitsabschlag, weniger geforderte Garantien."
+      },
+      {
+        "title": "Schnellere Due Diligence",
+        "desc": "Der Zertifizierungsbericht strukturiert die von Käufern und Investoren erwarteten Informationen vor."
+      },
+      {
+        "title": "Verbesserungsfahrplan",
+        "desc": "Jede bewertete Dimension zeigt konkrete Hebel für den Aufstieg in die nächste Notenstufe."
+      },
+      {
+        "title": "Kommerzielle Differenzierung",
+        "desc": "Die Note lässt sich in Ausschreibungen, Partnerschaften und Bankbeziehungen kommunizieren."
+      },
+      {
+        "title": "Kontinuität und Übertragbarkeit",
+        "desc": "Die Zertifizierung belegt, dass die Organisation nicht von einer einzelnen Person abhängt und übernommen werden kann."
+      }
+    ],
+    "s4Title": "Der methodische Rahmen: fünf Dimensionen",
+    "s4Lead": "CIFSO ist das Akronym der fünf bewerteten Dimensionen. Jede wird gewichtet und anhand dokumentierter Kriterien bewertet.",
+    "s4Weight": "Gewichtung",
+    "s4Criteria": "Bewertete Kriterien",
+    "s5Title": "Die Notenskala",
+    "s5Lead": "Fünf Stufen, von der Ausnahmenote AEG ★ bis zur Note B. Jede Note entspricht einem Organisationsprofil und einem präzisen Punktebereich.",
+    "s5ColGrade": "Note",
+    "s5ColRange": "Punkte",
+    "s5ColRarity": "Seltenheit",
+    "s5ColProfile": "Profil",
+    "s6Title": "Der Zertifizierungsprozess",
+    "s6Lead": "Sechs strukturierte Schritte, jeweils mit definierten Eingaben, Ergebnissen und Wirkungen. Der Prozess ist für alle zertifizierten Organisationen identisch.",
+    "s7Title": "Zeitplan und Dauer",
+    "s7Lead": "Von der Einreichung bis zur Notenvergabe dauert die Zertifizierung je nach Grösse und Komplexität der Organisation 15 bis 35 Arbeitstage.",
+    "s7Phases": [
+      {
+        "phase": "Woche 1",
+        "title": "Scoping und Erhebung",
+        "desc": "Unterzeichnung des Mandatsschreibens, Übermittlung der Unterlagen, Scoping-Gespräch mit der Geschäftsleitung."
+      },
+      {
+        "phase": "Wochen 2–3",
+        "title": "Analyse und Interviews",
+        "desc": "Dokumentenprüfung, Interviews mit Schlüsselfunktionen, Gegenprüfungen und Nachforderungen."
+      },
+      {
+        "phase": "Wochen 3–4",
+        "title": "Bewertung und Review",
+        "desc": "Bewertung der fünf Dimensionen durch den leitenden Analysten, unabhängige Prüfung durch einen zweiten Analysten, Schlichtung bei Abweichung."
+      },
+      {
+        "phase": "Wochen 4–5",
+        "title": "Rückmeldung und Ausstellung",
+        "desc": "Präsentation des Berichts an die Geschäftsleitung, Frist für sachliche Anmerkungen, Ausstellung des versionierten Zertifikats."
+      }
+    ],
+    "s7Note": "Die Fristen laufen ab Eingang vollständiger Unterlagen. Organisationen mit strukturierter Dokumentation liegen in der Regel im unteren Bereich.",
+    "s8Title": "Die Ergebnisse",
+    "s8Lead": "Die Zertifizierung liefert Ergebnisse, die für die Weitergabe an Ihre Stakeholder konzipiert sind.",
+    "s8Deliverables": [
+      {
+        "title": "Offizielles CIFSO 5000-Zertifikat",
+        "desc": "Versioniertes Dokument mit Note, Punktzahl, Ausstellungsdatum, Gültigkeitsdatum und eindeutiger Prüfkennung."
+      },
+      {
+        "title": "Zertifizierungsbericht",
+        "desc": "Detaillierte Analyse der fünf Dimensionen, Bewertung je Kriterium, Feststellungen, Stärken und Aufmerksamkeitsbereiche."
+      },
+      {
+        "title": "Verbesserungsfahrplan",
+        "desc": "Priorisierte Empfehlungen für den Aufstieg in die nächste Notenstufe mit geschätzter Punktwirkung."
+      },
+      {
+        "title": "Kommunikationskit",
+        "desc": "Notenabzeichen, zugelassene Formulierungen und Nutzungsrichtlinien für Ihre Unterlagen, Ausschreibungen und Datenräume."
+      },
+      {
+        "title": "Online-Verifizierung",
+        "desc": "Öffentliche Prüfseite, auf der jeder Dritte Echtheit und Gültigkeit der Note bestätigen kann."
+      }
+    ],
+    "s9Title": "Gültigkeit, Erneuerung und Einspruch",
+    "s9Validity": {
+      "title": "Gültigkeitsdauer",
+      "desc": "Eine CIFSO 5000-Note ist 24 Monate ab Ausstellungsdatum gültig. Danach wird sie auf der Prüfseite als abgelaufen angezeigt."
+    },
+    "s9Renewal": {
+      "title": "Erneuerung",
+      "desc": "Die Erneuerung folgt einem vereinfachten Verfahren, wenn die Dokumentation aktuell gehalten wird. Wesentliche Veränderungen (Kontrollwechsel, Restrukturierung, Grossereignis) können eine vorzeitige Neubewertung rechtfertigen."
+    },
+    "s9Versioning": {
+      "title": "Versionierung",
+      "desc": "Jede Note ist versioniert. Jede Revision erzeugt eine neue Version mit vollständiger Nachverfolgbarkeit; die ursprüngliche Note bleibt einsehbar."
+    },
+    "s9Contest": {
+      "title": "Einspruch",
+      "desc": "Die zertifizierte Organisation hat 30 Tage für sachliche Anmerkungen. Ein begründeter Einspruch löst eine Prüfung durch einen an der Erstbewertung unbeteiligten Analysten aus."
+    },
+    "s10Title": "Unabhängige Auditoren und Governance-Grundsätze",
+    "s10Lead": "Der Wert einer Note beruht vollständig auf der Unabhängigkeit und Sorgfalt derjenigen, die sie vergeben.",
+    "s10Auditors": [
+      {
+        "title": "Zertifizierte Aegryn-Analysten",
+        "desc": "Jede Bewertung wird von einem im CIFSO 5000-Protokoll geschulten leitenden Analysten geführt, der einem Ethikkodex unterliegt."
+      },
+      {
+        "title": "Vier-Augen-Prinzip",
+        "desc": "Ein zweiter unabhängiger Analyst prüft die Bewertung systematisch vor jeder Notenvergabe."
+      },
+      {
+        "title": "Automatischer Ausstand",
+        "desc": "Jede finanzielle, geschäftliche oder persönliche Verbindung zur bewerteten Organisation führt zum Ausstand des Analysten."
+      },
+      {
+        "title": "Trennung Beratung / Zertifizierung",
+        "desc": "Aegryn zertifiziert keine Organisation, die es im bewerteten Bereich beratend begleitet."
+      }
+    ],
+    "s11Title": "Positionierung gegenüber bestehenden Standards",
+    "s11Lead": "CIFSO 5000 ersetzt keinen bestehenden Standard. Es bewertet einen anderen Gegenstand.",
+    "s11ColStandard": "Standard",
+    "s11ColObject": "Zertifizierter Gegenstand",
+    "s11ColQuestion": "Beantwortete Frage",
+    "s11Rows": [
+      {
+        "standard": "ISO 9001",
+        "object": "Qualitätsmanagementsystem",
+        "question": "Sind die Prozesse beherrscht?"
+      },
+      {
+        "standard": "ISO 27001",
+        "object": "Informationssicherheit",
+        "question": "Ist die Information geschützt?"
+      },
+      {
+        "standard": "Finanzprüfung",
+        "object": "Jahresabschluss",
+        "question": "Sind die Abschlüsse wahrheitsgemäss?"
+      },
+      {
+        "standard": "CIFSO 5000",
+        "object": "Wert und Übertragbarkeit der Organisation",
+        "question": "Ist die Organisation so viel wert, wie sie behauptet, und kann sie übertragen werden?"
+      }
+    ],
+    "s11Note": "Bestehende Zertifizierungen sind wertvolle Eingaben für die CIFSO 5000-Bewertung und stärken in der Regel die Punktzahl der betroffenen Dimensionen.",
+    "s12Title": "Ihre Zertifizierung starten",
+    "s12Lead": "Reichen Sie Ihre Organisation ein und erhalten Sie Ihre offizielle Note innerhalb von 15 bis 35 Arbeitstagen.",
+    "s12Steps": [
+      "Antrag online einreichen",
+      "Mandatsschreiben und Dokumentenliste erhalten",
+      "Unterlagen übermitteln und Scoping planen",
+      "Note, Bericht und Zertifikat erhalten"
+    ],
+    "s12Primary": "Zur Zertifizierung einreichen",
+    "s12Secondary": "Kontakt aufnehmen",
+    "footerIssuer": "Aegryn SA — Unabhängige Zertifizierung des Organisationswerts",
+    "footerLocation": "Genf, Schweiz",
+    "previewLabel": "Vollständige Dokumentation",
+    "previewTitle": "CIFSO 5000-Broschüre",
+    "previewDesc": "Das Referenzdokument zum Verständnis der Zertifizierung: Zweck, Zielgruppen, Mehrwert, Methodik, Prozess, Zeitplan, Ergebnisse, Gültigkeit und unabhängige Governance.",
+    "previewRead": "Broschüre lesen",
+    "previewDownload": "PDF herunterladen",
+    "previewPages": "Seiten",
+    "previewFeatures": [
+      "Strukturiertes Inhaltsverzeichnis",
+      "Fünf Dimensionen im Detail",
+      "Sechsstufiger Prozess",
+      "Zeitplan und Ergebnisse",
+      "Gültigkeit und Erneuerung",
+      "Unabhängige Governance"
+    ]
   }
 }

@@ -10139,5 +10139,257 @@
     "emailSent": "Er is een bevestigingsmail naar u verzonden.",
     "backToGrade": "Terug naar Grade",
     "accessSpace": "Mijn ruimte openen"
+  },
+  "brochure": {
+    "docType": "Presentatiebrochure",
+    "coverTitle": "Certificering\nCIFSO 5000",
+    "coverSubtitle": "De onafhankelijke standaard voor certificering van de waarde en overdraagbaarheid van organisaties",
+    "coverIssuer": "Aegryn SA — Onafhankelijke certificeringsinstelling, Genève",
+    "pageLabel": "Pagina",
+    "tocTitle": "Inhoud",
+    "toc": [
+      "Waarvoor de CIFSO 5000-certificering dient",
+      "Voor wie ze bedoeld is",
+      "De meerwaarde voor uw organisatie",
+      "Het methodologische kader: vijf dimensies",
+      "De beoordelingsschaal",
+      "Het certificeringsproces",
+      "Planning en duur",
+      "De opgeleverde resultaten",
+      "Geldigheid, verlenging en bezwaar",
+      "Onafhankelijke auditors en governancebeginselen",
+      "Positionering ten opzichte van bestaande standaarden",
+      "Uw certificering starten"
+    ],
+    "s1Title": "Waarvoor de CIFSO 5000-certificering dient",
+    "s1Lead": "Bestaande standaarden certificeren systemen en processen. CIFSO 5000 certificeert de waarde en overdraagbaarheid van een organisatie.",
+    "s1P1": "Een onderneming kan operationeel volledig conform zijn en toch moeilijk te waarderen, te financieren of over te dragen. CIFSO 5000 dicht die kloof: het documenteert onafhankelijk en verifieerbaar wat de werkelijke waarde van een organisatie vormt — haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
+    "s1P2": "Het resultaat is een officiële, geversioneerde en verdedigbare beoordeling die aan investeerders, kopers, banken, partners of opvolgers kan worden voorgelegd als bewijs van derden voor de kwaliteit en overdraagbaarheid van de organisatie.",
+    "s1Stats": [
+      {
+        "value": "5",
+        "label": "beoordeelde dimensies"
+      },
+      {
+        "value": "100",
+        "label": "beoordelingspunten"
+      },
+      {
+        "value": "5",
+        "label": "beoordelingsniveaus"
+      },
+      {
+        "value": "24",
+        "label": "maanden geldigheid"
+      }
+    ],
+    "s2Title": "Voor wie ze bedoeld is",
+    "s2Lead": "CIFSO 5000 is bedoeld voor bestuurders en aandeelhouders die de waarde van hun organisatie moeten aantonen, verdedigen of overdragen.",
+    "s2Profiles": [
+      {
+        "title": "Bestuurders en oprichters",
+        "desc": "De opgebouwde waarde objectiveren, een verkoop of kapitaalronde voorbereiden en de opvolging structureren."
+      },
+      {
+        "title": "Aandeelhouders en families",
+        "desc": "Een opvolging veiligstellen en tussen erfgenamen of partners beslissen op een onafhankelijke, gedocumenteerde basis."
+      },
+      {
+        "title": "Investeerders en fondsen",
+        "desc": "Beschikken over een onafhankelijke beoordeling van de organisatorische kwaliteit vóór, tijdens en na de investering."
+      },
+      {
+        "title": "Kopers en M&A-adviseurs",
+        "desc": "Informatieasymmetrie verminderen, due diligence versnellen en de prijsonderhandeling betrouwbaarder maken."
+      },
+      {
+        "title": "Banken en financiers",
+        "desc": "De financiële analyse aanvullen met een gestructureerde lezing van organisatorische risico's en veerkracht."
+      },
+      {
+        "title": "Directies van groepen",
+        "desc": "Dochterondernemingen of doelwitten vergelijken op een homogene, controleerbare schaal."
+      }
+    ],
+    "s3Title": "De meerwaarde voor uw organisatie",
+    "s3Lead": "Een CIFSO 5000-beoordeling zet interne overtuigingen om in extern bewijs.",
+    "s3Benefits": [
+      {
+        "title": "Onmiddellijke geloofwaardigheid",
+        "desc": "Een beoordeling van een onafhankelijke instelling weegt zwaarder dan elke interne presentatie."
+      },
+      {
+        "title": "Waarderingspremie",
+        "desc": "Een gedocumenteerde, overdraagbare organisatie onderhandelt beter: minder onzekerheidskorting, minder geëiste garanties."
+      },
+      {
+        "title": "Snellere due diligence",
+        "desc": "Het certificeringsrapport structureert vooraf de informatie die kopers en investeerders verwachten."
+      },
+      {
+        "title": "Verbeterroutekaart",
+        "desc": "Elke beoordeelde dimensie identificeert concrete hefbomen om naar het hogere niveau te groeien."
+      },
+      {
+        "title": "Commerciële differentiatie",
+        "desc": "De beoordeling kan worden gecommuniceerd in aanbestedingen, partnerschappen en de bankrelatie."
+      },
+      {
+        "title": "Continuïteit en overdraagbaarheid",
+        "desc": "De certificering bewijst dat de organisatie niet van één persoon afhangt en kan worden overgenomen."
+      }
+    ],
+    "s4Title": "Het methodologische kader: vijf dimensies",
+    "s4Lead": "CIFSO is het acroniem van de vijf beoordeelde dimensies. Elke dimensie wordt gewogen en beoordeeld op gedocumenteerde criteria.",
+    "s4Weight": "Weging",
+    "s4Criteria": "Beoordeelde criteria",
+    "s5Title": "De beoordelingsschaal",
+    "s5Lead": "Vijf niveaus, van het uitzonderlijke niveau AEG ★ tot niveau B. Elk niveau komt overeen met een organisatieprofiel en een nauwkeurig scorebereik.",
+    "s5ColGrade": "Niveau",
+    "s5ColRange": "Score",
+    "s5ColRarity": "Zeldzaamheid",
+    "s5ColProfile": "Profiel",
+    "s6Title": "Het certificeringsproces",
+    "s6Lead": "Zes gestructureerde stappen, elk met gedefinieerde invoer, resultaten en effecten. Het proces is identiek voor alle gecertificeerde organisaties.",
+    "s7Title": "Planning en duur",
+    "s7Lead": "Van indiening tot afgifte van de beoordeling duurt de certificering 15 tot 35 werkdagen, afhankelijk van de omvang en complexiteit van de organisatie.",
+    "s7Phases": [
+      {
+        "phase": "Week 1",
+        "title": "Afbakening en verzameling",
+        "desc": "Ondertekening van de opdrachtbrief, overdracht van het documentendossier, afbakeningsgesprek met de directie."
+      },
+      {
+        "phase": "Weken 2–3",
+        "title": "Analyse en interviews",
+        "desc": "Documentbeoordeling, interviews met sleutelfuncties, kruiscontroles en aanvullende verzoeken."
+      },
+      {
+        "phase": "Weken 3–4",
+        "title": "Beoordeling en review",
+        "desc": "Beoordeling van de vijf dimensies door de hoofdanalist, onafhankelijke review door een tweede analist, arbitrage bij afwijking."
+      },
+      {
+        "phase": "Weken 4–5",
+        "title": "Terugkoppeling en afgifte",
+        "desc": "Presentatie van het rapport aan de directie, periode voor feitelijke opmerkingen, afgifte van het geversioneerde certificaat."
+      }
+    ],
+    "s7Note": "De termijnen lopen vanaf ontvangst van een volledig dossier. Organisaties met gestructureerde documentatie bevinden zich doorgaans in het lagere bereik.",
+    "s8Title": "De opgeleverde resultaten",
+    "s8Lead": "De certificering levert een set resultaten op die bedoeld zijn om te delen met uw belanghebbenden.",
+    "s8Deliverables": [
+      {
+        "title": "Officieel CIFSO 5000-certificaat",
+        "desc": "Geversioneerd document met niveau, score, afgiftedatum, geldigheidsdatum en unieke verificatie-identificatie."
+      },
+      {
+        "title": "Certificeringsrapport",
+        "desc": "Gedetailleerde analyse van de vijf dimensies, beoordeling per criterium, bevindingen, sterke punten en aandachtsgebieden."
+      },
+      {
+        "title": "Verbeterroutekaart",
+        "desc": "Geprioriteerde aanbevelingen om naar het hogere niveau te groeien, met geschatte impact op de score."
+      },
+      {
+        "title": "Communicatiekit",
+        "desc": "Niveaubadge, toegestane vermeldingen en gebruiksrichtlijnen voor uw materialen, aanbestedingen en datarooms."
+      },
+      {
+        "title": "Online verificatie",
+        "desc": "Openbare verificatiepagina waarmee elke derde de echtheid en geldigheid van de beoordeling kan bevestigen."
+      }
+    ],
+    "s9Title": "Geldigheid, verlenging en bezwaar",
+    "s9Validity": {
+      "title": "Geldigheidsduur",
+      "desc": "Een CIFSO 5000-beoordeling is 24 maanden geldig vanaf de afgiftedatum. Daarna wordt ze op de verificatiepagina als verlopen weergegeven."
+    },
+    "s9Renewal": {
+      "title": "Verlenging",
+      "desc": "De verlenging volgt een vereenvoudigd proces als de documentatie actueel wordt gehouden. Elke belangrijke wijziging (wijziging van controle, herstructurering, groot incident) kan een vervroegde herbeoordeling rechtvaardigen."
+    },
+    "s9Versioning": {
+      "title": "Versiebeheer",
+      "desc": "Elke beoordeling is geversioneerd. Elke herziening genereert een nieuwe versie met volledige traceerbaarheid; de oorspronkelijke beoordeling blijft raadpleegbaar."
+    },
+    "s9Contest": {
+      "title": "Bezwaar",
+      "desc": "De gecertificeerde organisatie heeft 30 dagen om feitelijke opmerkingen te formuleren. Een gemotiveerd bezwaar leidt tot een review door een analist die niet aan de eerste beoordeling heeft deelgenomen."
+    },
+    "s10Title": "Onafhankelijke auditors en governancebeginselen",
+    "s10Lead": "De waarde van een beoordeling berust volledig op de onafhankelijkheid en zorgvuldigheid van wie ze afgeeft.",
+    "s10Auditors": [
+      {
+        "title": "Gecertificeerde Aegryn-analisten",
+        "desc": "Elke beoordeling wordt geleid door een hoofdanalist die is opgeleid in het CIFSO 5000-protocol en gebonden is aan een deontologische code."
+      },
+      {
+        "title": "Vier-ogen-review",
+        "desc": "Een tweede onafhankelijke analist beoordeelt systematisch de score vóór elke afgifte van een niveau."
+      },
+      {
+        "title": "Automatische wraking",
+        "desc": "Elke financiële, commerciële of persoonlijke band met de beoordeelde organisatie leidt tot wraking van de analist."
+      },
+      {
+        "title": "Scheiding advies / certificering",
+        "desc": "Aegryn certificeert geen organisatie die het adviseert binnen de beoordeelde scope."
+      }
+    ],
+    "s11Title": "Positionering ten opzichte van bestaande standaarden",
+    "s11Lead": "CIFSO 5000 vervangt geen bestaande standaard. Het beoordeelt een ander object.",
+    "s11ColStandard": "Standaard",
+    "s11ColObject": "Gecertificeerd object",
+    "s11ColQuestion": "Beantwoorde vraag",
+    "s11Rows": [
+      {
+        "standard": "ISO 9001",
+        "object": "Kwaliteitsmanagementsysteem",
+        "question": "Zijn de processen beheerst?"
+      },
+      {
+        "standard": "ISO 27001",
+        "object": "Informatiebeveiliging",
+        "question": "Is de informatie beschermd?"
+      },
+      {
+        "standard": "Financiële audit",
+        "object": "Jaarrekening",
+        "question": "Geeft de jaarrekening een getrouw beeld?"
+      },
+      {
+        "standard": "CIFSO 5000",
+        "object": "Waarde en overdraagbaarheid van de organisatie",
+        "question": "Is de organisatie waard wat ze beweert en kan ze worden overgedragen?"
+      }
+    ],
+    "s11Note": "Bestaande certificeringen zijn waardevolle invoer voor de CIFSO 5000-beoordeling en versterken doorgaans de score van de betrokken dimensies.",
+    "s12Title": "Uw certificering starten",
+    "s12Lead": "Dien uw organisatie in en ontvang uw officiële beoordeling binnen 15 tot 35 werkdagen.",
+    "s12Steps": [
+      "Dien uw aanvraag online in",
+      "Ontvang de opdrachtbrief en de documentenlijst",
+      "Stuur uw dossier en plan de afbakening",
+      "Ontvang uw beoordeling, rapport en certificaat"
+    ],
+    "s12Primary": "Indienen voor certificering",
+    "s12Secondary": "Contact opnemen",
+    "footerIssuer": "Aegryn SA — Onafhankelijke certificering van organisatiewaarde",
+    "footerLocation": "Genève, Zwitserland",
+    "previewLabel": "Volledige documentatie",
+    "previewTitle": "CIFSO 5000-brochure",
+    "previewDesc": "Het referentiedocument om de certificering te begrijpen: doel, doelgroepen, meerwaarde, methodologie, proces, planning, resultaten, geldigheid en onafhankelijke governance.",
+    "previewRead": "Brochure bekijken",
+    "previewDownload": "PDF downloaden",
+    "previewPages": "pagina's",
+    "previewFeatures": [
+      "Gestructureerde inhoud",
+      "Vijf dimensies in detail",
+      "Proces in zes stappen",
+      "Planning en resultaten",
+      "Geldigheid en verlenging",
+      "Onafhankelijke governance"
+    ]
   }
 }

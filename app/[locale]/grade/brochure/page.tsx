@@ -1,16 +1,21 @@
-import { Metadata } from 'next'
+import { Suspense } from 'react'
+import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { CifsoBrochure } from '@/components/sections/grade/CifsoBrochure'
+import { generateAegrynMetadata } from '@/lib/seo'
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'gradingSystem' })
-  
-  return {
-    title: `${t('whitepaperTitle')} — Aegryn`,
-    description: t('whitepaperDesc'),
-  }
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'brochure' })
+  return generateAegrynMetadata({ title: t('previewTitle'), description: t('previewDesc'), path: '/grade/brochure', locale })
 }
 
 export default function BrochurePage() {
-  return <CifsoBrochure />
+  return (
+    <Suspense fallback={null}>
+      <CifsoBrochure />
+    </Suspense>
+  )
 }

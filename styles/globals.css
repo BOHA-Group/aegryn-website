@@ -226,3 +226,19 @@ img { image-rendering: auto; }
   background-color: #0F1A2B;
   color: #ffffff;
 }
+
+/* ── Brochure CIFSO 5000 — impression A4 ─────────────────────────── */
+@media print {
+  @page { size: A4; margin: 0; }
+  header, nav, footer.site-footer, [data-site-chrome] { display: none !important; }
+  .brochure-page {
+    min-height: 297mm !important;
+    height: 297mm;
+    break-after: page;
+    page-break-after: always;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .brochure-page:last-child { break-after: auto; page-break-after: auto; }
+}
