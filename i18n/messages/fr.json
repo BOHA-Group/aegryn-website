@@ -2459,7 +2459,7 @@
       "pricingDesc": "Tous les forfaits incluent l'audit complet CIFSO 5000 sur cinq dimensions, le rapport de certification indépendant, le grade officiel et l'inscription au registre certifié Aegryn.",
       "pricingNote": "Prix hors taxes. Juridiction suisse. Indicatif, devis définitif émis après pré-qualification.",
       "pricingCta": "Soumettre pour certification",
-      "pricingCtaSecondary": "Télécharger la méthodologie",
+      "pricingCtaSecondary": "Télécharger la brochure",
       "pricingTiers": [
         {
           "name": "Express",
@@ -2510,7 +2510,7 @@
       "whitepaperLabel": "Documentation officielle",
       "whitepaperTitle": "Aegryn — Méthodologie Certification CIFSO 5000",
       "whitepaperDesc": "Vue d'ensemble du protocole, cinq dimensions, échelle de grades, processus de certification et principes d'indépendance.",
-      "whitepaperCta": "Télécharger la méthodologie (PDF)",
+      "whitepaperCta": "Télécharger la brochure (PDF)",
       "whitepaperVersion": "Certification CIFSO 5000 v4.0 — Aegryn SA",
       "wpNavBack": "← Retour à la méthodologie",
       "wpNavPrint": "Imprimer / Enregistrer PDF",
