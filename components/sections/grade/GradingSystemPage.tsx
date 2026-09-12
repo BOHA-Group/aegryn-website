@@ -154,7 +154,7 @@ export function GradingSystemPage() {
                 </p>
               </div>
               <Link
-                href={`/${locale}/grade/whitepaper`}
+                href={`/${locale}/grade/brochure`}
                 className="rounded-lg inline-flex items-center gap-2 bg-ag-apex/10 border border-ag-apex/30 text-ag-apex font-mono text-[10px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-apex/20 transition-colors"
               >
                 <FileText size={11} />
