@@ -1933,7 +1933,7 @@
     "label": "Zertifizierung CIFSO 5000 — Methodik",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nZertifizierung CIFSO 5000.",
-    "intro": "Aegryn führt sein eigenes Zertifizierungssystem für Tech-Assets ein, mit voller Transparenz über die 4 grundlegenden Wertdimensionen.",
+    "intro": "CIFSO 5000 ist der erste unabhängige Zertifizierungsstandard, der den organisatorischen Wert und die Übertragbarkeit bewertet. Über die operative Compliance hinaus dokumentiert er, was den realen Wert einer Organisation ausmacht: ihr geistiges Kapital, ihre Integrität, ihre finanzielle Gesundheit, ihre Sicherheit und ihre organisatorische Resilienz.",
     "downloadLabel": "Vollständige Dokumentation",
     "downloadCta": "Protokoll-PDF herunterladen",
     "cifsTitle": "Der CIFS-Rahmen",
@@ -2707,7 +2707,36 @@
     "tableColRarity": "Seltenheit",
     "subcodesColCode": "Nr.",
     "subcodesColLabel": "Bezeichnung",
-    "subcodesColDef": "Definition"
+    "subcodesColDef": "Definition",
+    "whyTitle": "Warum CIFSO 5000-Zertifizierung?",
+    "whyDesc": "Bestehende Standards zertifizieren Systeme und Prozesse. CIFSO 5000 zertifiziert Wert und Übertragbarkeit. Das sind zwei unterschiedliche, komplementäre Objekte, keine Konkurrenten.",
+    "useCasesTitle": "Für wen ist die CIFSO 5000-Zertifizierung?",
+    "useCases": [
+      {
+        "title": "Unternehmensbewertung",
+        "desc": "Dokumentieren Sie den Wert Ihrer Organisation mit einer unabhängigen und reproduzierbaren Note. Reduzieren Sie Informationsasymmetrie gegenüber Investoren und Erwerbern."
+      },
+      {
+        "title": "M&A-Vorbereitung",
+        "desc": "Identifizieren und beheben Sie Reibungspunkte vor der Transaktion. Beschleunigen Sie die Due Diligence und maximieren Sie die Bewertung beim Verkauf."
+      },
+      {
+        "title": "Kapitalbeschaffung",
+        "desc": "Beruhigen Sie Investoren über die Stärke Ihrer Fundamentaldaten. Demonstrieren Sie Ihre organisatorische Reife und Skalierungsfähigkeit."
+      },
+      {
+        "title": "Nachfolge & Übertragung",
+        "desc": "Bereiten Sie die Übertragung vor, indem Sie den Wert unabhängig vom Gründer dokumentieren. Reduzieren Sie das Schlüsselpersonen-Risiko und erleichtern Sie die Kontinuität."
+      },
+      {
+        "title": "Investoren-Reporting",
+        "desc": "Bieten Sie einen objektiven Rahmen für das Performance-Reporting. Demonstrieren Sie die Entwicklung des organisatorischen Werts im Laufe der Zeit."
+      },
+      {
+        "title": "Kommerzielle Differenzierung",
+        "desc": "Zeigen Sie Ihre CIFSO 5000-Note als Beweis für organisatorische Qualität. Heben Sie sich in Ausschreibungen und strategischen Partnerschaften ab."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {

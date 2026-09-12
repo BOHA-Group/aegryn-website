@@ -1933,7 +1933,7 @@
     "label": "Certificazione CIFSO 5000 — Metodologia",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertificazione CIFSO 5000.",
-    "intro": "Aegryn introduce il proprio sistema di certificazione per gli asset tech, con piena trasparenza sulle 4 dimensioni fondamentali del valore.",
+    "intro": "CIFSO 5000 è il primo standard di certificazione indipendente che valuta il valore organizzativo e la trasferibilità. Oltre alla conformità operativa, documenta ciò che costituisce il valore reale di un'organizzazione: il suo capitale intellettuale, integrità, salute finanziaria, sicurezza e resilienza organizzativa.",
     "downloadLabel": "Documentazione completa",
     "downloadCta": "Scarica il protocollo PDF",
     "cifsTitle": "Il framework CIFS",
@@ -2707,7 +2707,36 @@
     "tableColRarity": "Rarità",
     "subcodesColCode": "N°",
     "subcodesColLabel": "Etichetta",
-    "subcodesColDef": "Definizione"
+    "subcodesColDef": "Definizione",
+    "whyTitle": "Perché la Certificazione CIFSO 5000?",
+    "whyDesc": "Gli standard esistenti certificano sistemi e processi. CIFSO 5000 certifica valore e trasferibilità. Sono due oggetti diversi, complementari, non concorrenti.",
+    "useCasesTitle": "A chi si rivolge la Certificazione CIFSO 5000?",
+    "useCases": [
+      {
+        "title": "Valutazione aziendale",
+        "desc": "Documenti il valore della sua organizzazione con un grado indipendente e riproducibile. Riduca l'asimmetria informativa con investitori e acquirenti."
+      },
+      {
+        "title": "Preparazione M&A",
+        "desc": "Identifichi e corregga i punti di attrito prima della transazione. Acceleri la due diligence e massimizzi la valutazione durante la vendita."
+      },
+      {
+        "title": "Raccolta fondi",
+        "desc": "Rassicuri gli investitori sulla solidità dei suoi fondamentali. Dimostri la sua maturità organizzativa e capacità di scalare."
+      },
+      {
+        "title": "Successione e trasferimento",
+        "desc": "Prepari il trasferimento documentando il valore indipendentemente dal fondatore. Riduca il rischio persona chiave e faciliti la continuità."
+      },
+      {
+        "title": "Reporting investitori",
+        "desc": "Fornisca un quadro oggettivo per il reporting delle performance. Dimostri l'evoluzione del valore organizzativo nel tempo."
+      },
+      {
+        "title": "Differenziazione commerciale",
+        "desc": "Mostri il suo grado CIFSO 5000 come prova di qualità organizzativa. Si distingua in gare d'appalto e partnership strategiche."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {

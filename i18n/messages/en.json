@@ -2775,7 +2775,7 @@
     "label": "Certification CIFSO 5000 — Methodology",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertification CIFSO 5000.",
-    "intro": "Aegryn introduces its own certification system for tech assets, with full transparency across the 4 fundamental dimensions of value.",
+    "intro": "CIFSO 5000 is the first independent certification standard that assesses organizational value and transferability. Beyond operational compliance, it documents what makes an organization's real value: its intellectual capital, integrity, financial health, security, and organizational resilience.",
     "downloadLabel": "Full documentation",
     "downloadCta": "Download protocol PDF",
     "cifsTitle": "The CIFS framework",
@@ -3549,7 +3549,36 @@
     "tableColRarity": "Rarity",
     "subcodesColCode": "No.",
     "subcodesColLabel": "Label",
-    "subcodesColDef": "Definition"
+    "subcodesColDef": "Definition",
+    "whyTitle": "Why CIFSO 5000 Certification?",
+    "whyDesc": "Existing standards certify systems and processes. CIFSO 5000 certifies value and transferability. These are two different, complementary objects, not competitors.",
+    "useCasesTitle": "Who is CIFSO 5000 Certification for?",
+    "useCases": [
+      {
+        "title": "Business valuation",
+        "desc": "Document your organization's value with an independent and reproducible grade. Reduce information asymmetry with investors and acquirers."
+      },
+      {
+        "title": "M&A preparation",
+        "desc": "Identify and fix friction points before the transaction. Accelerate due diligence and maximize valuation during the sale."
+      },
+      {
+        "title": "Fundraising",
+        "desc": "Reassure investors about the strength of your fundamentals. Demonstrate your organizational maturity and ability to scale."
+      },
+      {
+        "title": "Succession & transfer",
+        "desc": "Prepare the transfer by documenting value independently of the founder. Reduce key-person risk and facilitate continuity."
+      },
+      {
+        "title": "Investor reporting",
+        "desc": "Provide an objective framework for performance reporting. Demonstrate the evolution of organizational value over time."
+      },
+      {
+        "title": "Commercial differentiation",
+        "desc": "Display your CIFSO 5000 grade as proof of organizational quality. Stand out in tenders and strategic partnerships."
+      }
+    ]
   },
   "transact": {
     "meta": {

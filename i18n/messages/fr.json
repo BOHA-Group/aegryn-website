@@ -2735,7 +2735,7 @@
     "label": "Certification CIFSO 5000 — Méthodologie",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertification CIFSO 5000.",
-    "intro": "Aegryn certifie les actifs tech selon le protocole CIFSO v4.0 : cinq dimensions indépendantes (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), un score sur 100, un grade opposable. Transparence totale sur la méthode, traçabilité complète du rapport.",
+    "intro": "Le CIFSO 5000 est le premier standard de certification indépendant qui évalue la valeur organisationnelle et la transmissibilité d'une entreprise. Au-delà de la conformité opérationnelle, il documente ce qui fait la valeur réelle d'une organisation : son capital intellectuel, son intégrité, sa santé financière, sa sécurité et sa résilience organisationnelle.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
     "cifsTitle": "Le cadre CIFSO v4.0 : cinq dimensions (C, I, F, S, O)",
@@ -3600,7 +3600,36 @@
     "tableColRarity": "Rareté",
     "subcodesColCode": "N°",
     "subcodesColLabel": "Label",
-    "subcodesColDef": "Définition"
+    "subcodesColDef": "Définition",
+    "whyTitle": "Pourquoi la Certification CIFSO 5000 ?",
+    "whyDesc": "Les standards existants certifient les systèmes et les processus. Le CIFSO 5000 certifie la valeur et la transmissibilité. Ce sont deux objets différents, complémentaires, pas concurrents.",
+    "useCasesTitle": "À qui s'adresse la Certification CIFSO 5000 ?",
+    "useCases": [
+      {
+        "title": "Valorisation d'entreprise",
+        "desc": "Documenter la valeur de votre organisation avec un grade indépendant et reproductible. Réduire l'asymétrie d'information face aux investisseurs et acquéreurs."
+      },
+      {
+        "title": "Préparation M&A",
+        "desc": "Identifier et corriger les points de friction avant la transaction. Accélérer la due diligence et maximiser la valorisation lors de la cession."
+      },
+      {
+        "title": "Levée de fonds",
+        "desc": "Rassurer les investisseurs sur la solidité de vos fondamentaux. Démontrer votre maturité organisationnelle et votre capacité à scaler."
+      },
+      {
+        "title": "Succession & transmission",
+        "desc": "Préparer la transmission en documentant la valeur indépendamment du fondateur. Réduire le risque personne-clé et faciliter la continuité."
+      },
+      {
+        "title": "Reporting investisseurs",
+        "desc": "Fournir un cadre objectif pour le reporting de performance. Démontrer l'évolution de la valeur organisationnelle dans le temps."
+      },
+      {
+        "title": "Différenciation commerciale",
+        "desc": "Afficher votre grade CIFSO 5000 comme preuve de qualité organisationnelle. Se démarquer dans les appels d'offres et les partenariats stratégiques."
+      }
+    ]
   },
   "transact": {
     "meta": {

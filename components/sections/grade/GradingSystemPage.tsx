@@ -188,6 +188,39 @@ export function GradingSystemPage() {
         </div>
       </section>
 
+      {/* ── POURQUOI CIFSO ── */}
+      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-6">
+            {t('whyTitle')}
+          </h2>
+          <p className="font-sans text-[16px] text-ag-gray leading-relaxed">
+            {t('whyDesc')}
+          </p>
+        </div>
+      </section>
+
+      {/* ── CAS D'USAGE ── */}
+      <section className="py-28 px-6 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-16">
+            {t('useCasesTitle')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(t.raw('useCases') as Array<{title: string; desc: string}>).map((useCase, i) => (
+              <div key={i} className="border border-ag-border rounded-lg p-6 hover:border-ag-apex transition-colors">
+                <h3 className="font-sans font-semibold text-ag-black text-[15px] mb-3">
+                  {useCase.title}
+                </h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                  {useCase.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CADRE CIFSO ── */}
       <section ref={cifsRef} className="py-28 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">

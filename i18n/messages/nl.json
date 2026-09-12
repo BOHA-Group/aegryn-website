@@ -1933,7 +1933,7 @@
     "label": "Certificering CIFSO 5000 — Methodologie",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertificering CIFSO 5000.",
-    "intro": "Aegryn introduceert zijn eigen certificeringssysteem voor tech-assets, met volledige transparantie over de 4 fundamentele waardedimensies.",
+    "intro": "CIFSO 5000 is de eerste onafhankelijke certificeringsstandaard die organisatorische waarde en overdraagbaarheid beoordeelt. Naast operationele compliance documenteert het wat de echte waarde van een organisatie vormt: haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
     "downloadLabel": "Volledige documentatie",
     "downloadCta": "Protocol PDF downloaden",
     "cifsTitle": "Het CIFS-kader",
@@ -2707,7 +2707,36 @@
     "tableColRarity": "Zeldzaamheid",
     "subcodesColCode": "Nr.",
     "subcodesColLabel": "Label",
-    "subcodesColDef": "Definitie"
+    "subcodesColDef": "Definitie",
+    "whyTitle": "Waarom CIFSO 5000-certificering?",
+    "whyDesc": "Bestaande standaarden certificeren systemen en processen. CIFSO 5000 certificeert waarde en overdraagbaarheid. Dit zijn twee verschillende, complementaire objecten, geen concurrenten.",
+    "useCasesTitle": "Voor wie is CIFSO 5000-certificering?",
+    "useCases": [
+      {
+        "title": "Bedrijfswaardering",
+        "desc": "Documenteer de waarde van uw organisatie met een onafhankelijke en reproduceerbare beoordeling. Verminder informatieasymmetrie met investeerders en kopers."
+      },
+      {
+        "title": "M&A-voorbereiding",
+        "desc": "Identificeer en corrigeer wrijvingspunten vóór de transactie. Versnel de due diligence en maximaliseer de waardering tijdens de verkoop."
+      },
+      {
+        "title": "Kapitaalwerving",
+        "desc": "Stel investeerders gerust over de sterkte van uw fundamenten. Toon uw organisatorische volwassenheid en vermogen om te schalen."
+      },
+      {
+        "title": "Opvolging & overdracht",
+        "desc": "Bereid de overdracht voor door waarde onafhankelijk van de oprichter te documenteren. Verminder sleutelpersoon-risico en faciliteer continuïteit."
+      },
+      {
+        "title": "Investeerders-reporting",
+        "desc": "Bied een objectief kader voor prestatierapportage. Toon de evolutie van organisatorische waarde in de tijd."
+      },
+      {
+        "title": "Commerciële differentiatie",
+        "desc": "Toon uw CIFSO 5000-beoordeling als bewijs van organisatorische kwaliteit. Onderscheid u in aanbestedingen en strategische partnerschappen."
+      }
+    ]
   },
   "roadmapPage": {
     "meta": {
