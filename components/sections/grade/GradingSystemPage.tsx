@@ -2,8 +2,9 @@
 
 import { useEffect, useRef }         from 'react'
 import Link                          from 'next/link'
+import Image                         from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
-import { ArrowUpRight, Check, FileText } from 'lucide-react'
+import { ArrowUpRight, Check, FileText, Download } from 'lucide-react'
 import { gsap }                      from '@/lib/gsap'
 
 const _GRADE_COLORS: Record<string, string> = {
@@ -189,7 +190,7 @@ export function GradingSystemPage() {
       </section>
 
       {/* ── POURQUOI CIFSO ── */}
-      <section className="py-28 px-6 border-t border-ag-border bg-ag-off-white">
+      <section className="py-28 px-6 border-t border-ag-border">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-6">
             {t('whyTitle')}
@@ -217,6 +218,86 @@ export function GradingSystemPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BROCHURE CIFSO 5000 ── */}
+      <section className="py-28 px-6 border-t border-ag-border bg-gradient-to-br from-ag-navy/5 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Preview image */}
+            <div className="relative aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden border border-ag-border shadow-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                alt="CIFSO 5000 Brochure Cover"
+                fill
+                className="object-cover opacity-15"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-ag-navy via-ag-navy to-[#1a2332]" />
+              
+              {/* Cover content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-ag-apex/30 bg-ag-apex/5">
+                  <div className="w-1.5 h-1.5 bg-ag-apex rounded-full animate-pulse" />
+                  <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-ag-apex">
+                    {t('version')}
+                  </span>
+                </div>
+                <h3 className="font-sans font-bold text-white text-[clamp(32px,5vw,48px)] leading-[0.95] tracking-[-0.04em] mb-4">
+                  Certification<br />
+                  <span className="text-ag-apex">CIFSO 5000</span>
+                </h3>
+                <p className="font-sans text-white/70 text-sm max-w-xs">
+                  Valorisation d'actifs entreprises
+                </p>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
+                Documentation complète
+              </p>
+              <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.03em] leading-[1.1] mb-6">
+                Brochure CIFSO 5000
+              </h2>
+              <p className="font-sans text-[16px] text-ag-gray leading-relaxed mb-8">
+                {t('whitepaperDesc')}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={`/${locale}/grade/brochure`}
+                  className="inline-flex items-center justify-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-4 rounded-lg hover:bg-ag-apex/90 transition-colors"
+                >
+                  <FileText size={14} />
+                  Consulter la brochure
+                </Link>
+                <button
+                  onClick={() => window.open(`/${locale}/grade/brochure`, '_blank')}
+                  className="inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray hover:text-ag-black hover:border-ag-black font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-4 rounded-lg transition-all"
+                >
+                  <Download size={14} />
+                  Télécharger PDF
+                </button>
+              </div>
+
+              {/* Features list */}
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  'Processus détaillé',
+                  'Échelle de grades',
+                  'Cas d\'usage',
+                  'Méthodologie complète'
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <Check size={16} className="text-ag-apex shrink-0" />
+                    <span className="font-sans text-[13px] text-ag-gray">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -466,7 +547,7 @@ export function GradingSystemPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-ag-border">
                       <div>
                         <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
-                          Inputs
+                          {t('processInputs')}
                         </p>
                         <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
                           {step.inputs}
@@ -474,7 +555,7 @@ export function GradingSystemPage() {
                       </div>
                       <div>
                         <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
-                          Outputs
+                          {t('processOutputs')}
                         </p>
                         <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
                           {step.outputs}
@@ -482,7 +563,7 @@ export function GradingSystemPage() {
                       </div>
                       <div>
                         <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
-                          Outcomes
+                          {t('processOutcomes')}
                         </p>
                         <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
                           {step.outcomes}
