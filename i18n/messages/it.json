@@ -3301,7 +3301,9 @@
       "contactCta": "Contattaci",
       "processLabel": "Processo di certificazione",
       "processTitle": "Processo di certificazione",
-      "processDuration": "Dalla presentazione alla certificazione in 4 passaggi strutturati."
+      "processDuration": "Dalla presentazione alla certificazione in 4 passaggi strutturati.",
+      "contestLabel": "Revisione & contestazione",
+      "contestDesc": "Un grade può essere contestato entro 15 giorni lavorativi dall'emissione. La richiesta di revisione è esaminata da un analista senior diverso da quello originale. In caso di discrepanza significativa, viene attivata una procedura di arbitrato indipendente."
     },
     "grades": [
       {

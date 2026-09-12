@@ -2573,7 +2573,9 @@
       "contactCta": "Prendre contact",
       "processLabel": "Processus de certification",
       "processTitle": "Processus de certification",
-      "processDuration": "De la soumission à la certification en 4 étapes structurées."
+      "processDuration": "De la soumission à la certification en 4 étapes structurées.",
+      "contestLabel": "Révision & contestation",
+      "contestDesc": "Un grade peut être contesté dans les 15 jours ouvrés suivant son émission. La demande de révision est examinée par un analyste senior Aegryn différent de l'analyste original. En cas d'écart significatif, une procédure d'arbitrage indépendante est déclenchée."
     },
     "grades": [
       {

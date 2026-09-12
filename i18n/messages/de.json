@@ -3301,7 +3301,9 @@
       "contactCta": "Kontakt aufnehmen",
       "processLabel": "Zertifizierungsprozess",
       "processTitle": "Zertifizierungsprozess",
-      "processDuration": "Von der Einreichung bis zur Zertifizierung in 4 strukturierten Schritten."
+      "processDuration": "Von der Einreichung bis zur Zertifizierung in 4 strukturierten Schritten.",
+      "contestLabel": "Überprüfung & Anfechtung",
+      "contestDesc": "Eine Note kann innerhalb von 15 Werktagen nach der Ausstellung angefochten werden. Der Überprüfungsantrag wird von einem anderen leitenden Analysten bearbeitet. Bei einer wesentlichen Abweichung wird ein unabhängiges Schiedsverfahren eingeleitet."
     },
     "grades": [
       {

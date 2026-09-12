@@ -3301,7 +3301,9 @@
       "contactCta": "Ponerse en contacto",
       "processLabel": "Proceso de certificación",
       "processTitle": "Proceso de certificación",
-      "processDuration": "De la presentación a la certificación en 4 pasos estructurados."
+      "processDuration": "De la presentación a la certificación en 4 pasos estructurados.",
+      "contestLabel": "Revisión & contestación",
+      "contestDesc": "Un grade puede impugnarse en los 15 días hábiles siguientes a su emisión. La solicitud de revisión es examinada por un analista senior diferente al original. En caso de discrepancia significativa, se activa un procedimiento de arbitraje independiente."
     },
     "grades": [
       {

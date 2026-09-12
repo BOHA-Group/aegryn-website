@@ -104,10 +104,10 @@ export function GradeProcess() {
         {/* Contestation note */}
         <div className="mt-12 border border-ag-border rounded-2xl p-6 bg-ag-off-white">
           <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">
-            {t('contestLabel')}
+            {t('index.contestLabel')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-            {t('contestDesc')}
+            {t('index.contestDesc')}
           </p>
         </div>
 

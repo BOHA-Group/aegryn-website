@@ -2613,7 +2613,9 @@
       "contactCta": "Get in touch",
       "processLabel": "Certification process",
       "processTitle": "Certification process",
-      "processDuration": "From submission to certification in 4 structured steps."
+      "processDuration": "From submission to certification in 4 structured steps.",
+      "contestLabel": "Revision & contestation",
+      "contestDesc": "A grade may be contested within 15 business days of issue. The revision request is examined by a different Aegryn senior analyst. In the event of a material discrepancy, an independent arbitration procedure is triggered."
     },
     "grades": [
       {

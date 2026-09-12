@@ -3301,7 +3301,9 @@
       "contactCta": "Contact opnemen",
       "processLabel": "Certificeringsproces",
       "processTitle": "Certificeringsproces",
-      "processDuration": "Van indiening tot certificering in 4 gestructureerde stappen."
+      "processDuration": "Van indiening tot certificering in 4 gestructureerde stappen.",
+      "contestLabel": "Herziening & contestatie",
+      "contestDesc": "Een grade kan worden betwist binnen 15 werkdagen na afgifte. Het herzieningsverzoek wordt onderzocht door een andere senior analist. Bij een significante afwijking wordt een onafhankelijke arbitrageprocedure gestart."
     },
     "grades": [
       {
