@@ -64,57 +64,41 @@ export function CifsoBrochure() {
       <div ref={contentRef} className="pt-20 print:pt-0">
         
         {/* COVER PAGE - Premium */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-ag-navy via-[#1a2845] to-ag-navy overflow-hidden">
-          {/* Image de fond premium */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Image de fond - totalement visible */}
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop"
               alt="Business team collaboration and certification"
               fill
-              className="object-cover opacity-40"
+              className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/85 via-[#1a2845]/80 to-ag-navy/85" />
           </div>
-
-          {/* Motif géométrique */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(90, 221, 164, 0.4) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(90, 221, 164, 0.4) 1px, transparent 1px)
-              `,
-              backgroundSize: '80px 80px'
-            }} />
-          </div>
-
-          {/* Cercles décoratifs */}
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-ag-apex/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-ag-apex/5 rounded-full blur-3xl" />
 
           <div className="relative z-10 text-center px-6 max-w-5xl">
             {/* Badge premium */}
-            <div className="inline-flex items-center gap-3 mb-8 px-8 py-4 rounded-full border border-ag-apex/40 bg-ag-apex/10 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-3 mb-8 px-8 py-4 rounded-full border-2 border-white bg-white/95 shadow-2xl">
               <div className="w-2 h-2 bg-ag-apex rounded-full animate-pulse" />
-              <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-ag-apex font-semibold">
+              <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-ag-navy font-bold">
                 {t('version')}
               </span>
             </div>
 
             {/* Titre principal */}
-            <h1 className="font-sans font-bold text-white text-[clamp(56px,10vw,120px)] leading-[0.9] tracking-[-0.05em] mb-8">
+            <h1 className="font-sans font-bold text-white text-[clamp(56px,10vw,120px)] leading-[0.9] tracking-[-0.05em] mb-8" style={{ textShadow: '0 6px 24px rgba(0,0,0,0.8), 0 3px 10px rgba(0,0,0,0.6)' }}>
               Certification<br />
-              <span className="text-ag-apex">CIFSO 5000</span>
+              <span className="text-ag-apex" style={{ textShadow: '0 6px 24px rgba(0,0,0,0.9), 0 3px 10px rgba(0,0,0,0.7)' }}>CIFSO 5000</span>
             </h1>
 
             {/* Sous-titre premium */}
-            <p className="font-sans text-white/80 text-[clamp(18px,2.5vw,28px)] leading-relaxed mb-6 font-light">
+            <p className="font-sans text-white text-[clamp(18px,2.5vw,28px)] leading-relaxed mb-6 font-medium" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)' }}>
               Le standard de certification<br className="hidden sm:block" /> de la valeur organisationnelle
             </p>
 
             {/* Tagline */}
-            <div className="max-w-3xl mx-auto px-10 py-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md mb-24">
-              <p className="font-sans text-white text-[15px] sm:text-[16px] leading-relaxed">
+            <div className="max-w-3xl mx-auto px-10 py-6 rounded-2xl bg-white/95 border-2 border-white shadow-2xl mb-24">
+              <p className="font-sans text-ag-navy text-[15px] sm:text-[16px] leading-relaxed font-medium">
                 {t('whyDesc')}
               </p>
             </div>

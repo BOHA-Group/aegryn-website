@@ -16,51 +16,33 @@ export function GradeBrochure() {
           
           {/* Image cover brochure */}
           <div className="relative aspect-[3/4] max-w-md rounded-2xl overflow-hidden shadow-2xl border border-ag-border">
-            {/* Image de fond */}
+            {/* Image de fond - totalement visible */}
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop"
               alt="CIFSO 5000 Certification Brochure"
               fill
-              className="object-cover opacity-40"
+              className="object-cover"
               priority
             />
-            
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/85 via-[#1a2845]/80 to-ag-navy/85" />
-            
-            {/* Motif géométrique */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `
-                  linear-gradient(to right, rgba(90, 221, 164, 0.4) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgba(90, 221, 164, 0.4) 1px, transparent 1px)
-                `,
-                backgroundSize: '80px 80px'
-              }} />
-            </div>
-
-            {/* Cercles décoratifs */}
-            <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-ag-apex/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-ag-apex/5 rounded-full blur-3xl" />
             
             {/* Contenu cover */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-10">
               {/* Badge version */}
-              <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full border border-ag-apex/40 bg-ag-apex/10 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full border-2 border-white bg-white/95 shadow-xl">
                 <div className="w-2 h-2 bg-ag-apex rounded-full animate-pulse" />
-                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ag-apex font-semibold">
+                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ag-navy font-bold">
                   Certification CIFSO 5000 v4.0
                 </span>
               </div>
 
               {/* Titre */}
-              <h3 className="font-sans font-bold text-white text-[clamp(36px,6vw,56px)] leading-[0.95] tracking-[-0.04em] mb-6">
+              <h3 className="font-sans font-bold text-white text-[clamp(36px,6vw,56px)] leading-[0.95] tracking-[-0.04em] mb-6" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)' }}>
                 Certification<br />
-                <span className="text-ag-apex">CIFSO 5000</span>
+                <span className="text-ag-apex" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.7)' }}>CIFSO 5000</span>
               </h3>
 
               {/* Sous-titre */}
-              <p className="font-sans text-white/80 text-[16px] sm:text-[18px] leading-relaxed font-light max-w-sm">
+              <p className="font-sans text-white text-[16px] sm:text-[18px] leading-relaxed font-medium max-w-sm" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6)' }}>
                 Le standard de certification de la valeur organisationnelle
               </p>
             </div>
