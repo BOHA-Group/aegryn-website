@@ -21,6 +21,13 @@ export function GradePricing() {
   const locale = useLocale()
   const ref    = useRef<HTMLElement>(null)
   const tiers  = t.raw('pricingTiers') as PricingTier[]
+  
+  // Mapper les noms de tiers vers les clés de pack du formulaire
+  const tierToPackKey: Record<string, string> = {
+    'Express': 'express',
+    'Standard': 'standard',
+    'Premium': 'premium'
+  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -138,7 +145,7 @@ export function GradePricing() {
 
                 {/* CTA */}
                 <Link
-                  href={`/${locale}/grade/submit`}
+                  href={`/${locale}/grade/submit?pack=${tierToPackKey[tier.name] || 'standard'}`}
                   className={`inline-flex items-center justify-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 rounded-xl transition-all ${
                     tier.highlight
                       ? 'bg-ag-navy text-white hover:bg-ag-navy-mid'
