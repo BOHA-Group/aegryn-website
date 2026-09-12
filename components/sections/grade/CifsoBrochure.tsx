@@ -133,7 +133,7 @@ export function CifsoBrochure() {
         {/* PAGE 1 : Introduction */}
         <section className="min-h-screen bg-white px-6 py-20 flex items-center">
           <div className="max-w-4xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-8">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
               Introduction
             </p>
             <h2 className="font-sans font-bold text-ag-black text-[42px] tracking-[-0.03em] leading-[1.1] mb-8">
@@ -153,10 +153,13 @@ export function CifsoBrochure() {
         {/* PAGE 2 : Cas d'usage */}
         <section className="min-h-screen bg-ag-off-white px-6 py-20">
           <div className="max-w-6xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-8">
-              {t('useCasesTitle')}
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
+              Cas d'usage
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.03em] mb-12">
+              {t('useCasesTitle')}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, i) => (
                 <div key={i} className="bg-white border border-ag-border rounded-xl p-8 hover:border-ag-apex transition-colors">
                   <div className="flex items-start gap-4">
@@ -183,7 +186,7 @@ export function CifsoBrochure() {
         {/* PAGE 3 : Échelle de grades */}
         <section className="min-h-screen bg-white px-6 py-20">
           <div className="max-w-6xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-8">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
               Échelle de notation
             </p>
             <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.03em] mb-12">
@@ -218,7 +221,7 @@ export function CifsoBrochure() {
         {/* PAGE 4 : Processus */}
         <section className="min-h-screen bg-ag-off-white px-6 py-20">
           <div className="max-w-6xl mx-auto">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-8">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
               Processus de certification
             </p>
             <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.03em] mb-12">
