@@ -3583,7 +3583,10 @@
         "title": "Commercial differentiation",
         "desc": "Display your CIFSO 5000 grade as proof of organizational quality. Stand out in tenders and strategic partnerships."
       }
-    ]
+    ],
+    "processInputs": "Inputs",
+    "processOutputs": "Outputs",
+    "processOutcomes": "Outcomes"
   },
   "transact": {
     "meta": {

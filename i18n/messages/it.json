@@ -2736,7 +2736,10 @@
         "title": "Differenziazione commerciale",
         "desc": "Mostri il suo grado CIFSO 5000 come prova di qualità organizzativa. Si distingua in gare d'appalto e partnership strategiche."
       }
-    ]
+    ],
+    "processInputs": "Input",
+    "processOutputs": "Output",
+    "processOutcomes": "Risultati"
   },
   "roadmapPage": {
     "meta": {

@@ -2736,7 +2736,10 @@
         "title": "Commerciële differentiatie",
         "desc": "Toon uw CIFSO 5000-beoordeling als bewijs van organisatorische kwaliteit. Onderscheid u in aanbestedingen en strategische partnerschappen."
       }
-    ]
+    ],
+    "processInputs": "Invoer",
+    "processOutputs": "Uitvoer",
+    "processOutcomes": "Resultaten"
   },
   "roadmapPage": {
     "meta": {

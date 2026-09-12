@@ -3634,7 +3634,10 @@
         "title": "Différenciation commerciale",
         "desc": "Afficher votre grade CIFSO 5000 comme preuve de qualité organisationnelle. Se démarquer dans les appels d'offres et les partenariats stratégiques."
       }
-    ]
+    ],
+    "processInputs": "Entrées",
+    "processOutputs": "Sorties",
+    "processOutcomes": "Résultats"
   },
   "transact": {
     "meta": {

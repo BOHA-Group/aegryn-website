@@ -2736,7 +2736,10 @@
         "title": "Diferenciación comercial",
         "desc": "Muestre su calificación CIFSO 5000 como prueba de calidad organizacional. Destáquese en licitaciones y asociaciones estratégicas."
       }
-    ]
+    ],
+    "processInputs": "Entradas",
+    "processOutputs": "Salidas",
+    "processOutcomes": "Resultados"
   },
   "roadmapPage": {
     "meta": {

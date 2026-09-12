@@ -2736,7 +2736,10 @@
         "title": "Kommerzielle Differenzierung",
         "desc": "Zeigen Sie Ihre CIFSO 5000-Note als Beweis für organisatorische Qualität. Heben Sie sich in Ausschreibungen und strategischen Partnerschaften ab."
       }
-    ]
+    ],
+    "processInputs": "Eingaben",
+    "processOutputs": "Ausgaben",
+    "processOutcomes": "Ergebnisse"
   },
   "roadmapPage": {
     "meta": {
