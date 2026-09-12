@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { Download, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function CifsoBrochure() {
   const t = useTranslations('gradingSystem')
@@ -64,6 +65,18 @@ export function CifsoBrochure() {
         
         {/* COVER PAGE */}
         <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-ag-navy via-ag-navy to-[#1a2332] overflow-hidden">
+          {/* Image de fond */}
+          <div className="absolute inset-0">
+            <Image
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+              alt="Business valuation and analytics"
+              fill
+              className="object-cover opacity-15"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/90 via-ag-navy/85 to-[#1a2332]/90" />
+          </div>
+
           {/* Grille de fond */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
