@@ -2996,27 +2996,50 @@
       {
         "num": "01",
         "title": "Submission & pre-qualification",
-        "desc": "Receipt of file, verification of document completeness (data room, financials, codebase access). Pre-qualification within 5 business days. An incomplete file is returned without rating."
+        "desc": "File reception, completeness verification, and pre-qualification within 5 business days.",
+        "inputs": "Submission form, data room, financial statements (last 2 years), IP register, key contracts, org chart, codebase access if applicable",
+        "outputs": "Pre-qualification letter confirming scope, timeline, and any missing items",
+        "outcomes": "Qualified file and established audit schedule. Incomplete files are returned without grading."
       },
       {
         "num": "02",
-        "title": "Technical analysis (Code + Security)",
-        "desc": "Code review by two Aegryn-certified senior engineers. Automated security scan followed by manual review of critical components. Duration: 5–10 days."
+        "title": "CIFSO technical audit (C + S)",
+        "desc": "In-depth analysis of Capital & IP and Security & Sovereignty by two certified senior analysts.",
+        "inputs": "Source code, IP documentation (patents, trademarks, licenses), security policies, vulnerability scan reports, GDPR register, cloud architecture",
+        "outputs": "Technical audit report with C and S scores, critical vulnerability identification, IP chain-of-title verification",
+        "outcomes": "Objective assessment of code quality, IP ownership, and cybersecurity posture according to EU standards (NIS2, DORA, GDPR)."
       },
       {
         "num": "03",
-        "title": "Commercial analysis (IP + Finance)",
-        "desc": "Financial metrics audit against source documents, IP verification with competent registries (INPI, IGE/IPI, EUIPO). Interview with the founder. Duration: 5–10 days."
+        "title": "Financial & governance audit (F + I)",
+        "desc": "Financial metrics verification and governance integrity audit.",
+        "inputs": "Accounting records, ARR/MRR documentation, cap table, shareholder agreements, client contracts, regulatory filings, dispute history",
+        "outputs": "Financial audit report with F and I scores, client concentration analysis, regulatory and contractual compliance verification",
+        "outcomes": "Validation of financial transferability, cap table integrity, and regulatory compliance. Reliable basis for valuation."
       },
       {
         "num": "04",
-        "title": "Deliberation & validation",
-        "desc": "Both analysts deliberate and produce the conclusive report, following a reproducible and independent protocol."
+        "title": "Organizational audit (O)",
+        "desc": "Assessment of organizational resilience, management depth, and succession readiness.",
+        "inputs": "Detailed org chart, key-person contracts, succession plan, management team CVs, retention data, structured interviews with founder and key managers",
+        "outputs": "Organizational audit report with O score, founder dependency assessment, key-person risk analysis",
+        "outcomes": "Identification of operational continuity risks and organizational strengthening levers. Most undervalued dimension in transactions."
       },
       {
         "num": "05",
-        "title": "Issuance & publication",
-        "desc": "The grade is issued, documented and versioned. The certificate is sent to the holder and published in the Aegryn register. A blockchain certification layer will reinforce the anchoring of this register over time."
+        "title": "Deliberation & final grading",
+        "desc": "Both analysts deliberate following a reproducible protocol and produce the independent certification report.",
+        "inputs": "All previous audit reports (C, I, F, S, O), CIFSO 5000 scoring grid, deliberation protocol",
+        "outputs": "Complete certification report with official grade (★ to B), detailed sub-code table per dimension, quantified improvement recommendations",
+        "outcomes": "Objective and reproducible grade. Protocol requires agreement within ±1 sub-code. Discrepancy triggers independent arbitration."
+      },
+      {
+        "num": "06",
+        "title": "Certification & publication",
+        "desc": "Official CIFSO 5000 certificate issuance and publication in the Aegryn certified registry.",
+        "inputs": "Validated certification report, certified organization identity, chosen certification format (Express/Standard/Premium)",
+        "outputs": "Official CIFSO 5000 certificate, digital badge, public registry entry, certified portal access",
+        "outcomes": "Certified organization with versioned grade viewable by qualified investors, acquirers, and partners. Validity: 12 or 18 months depending on format."
       }
     ],
     "principlesTitle": "Independence principles",

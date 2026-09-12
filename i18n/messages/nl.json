@@ -2153,28 +2153,51 @@
     "process": [
       {
         "num": "01",
-        "title": "Indiening & voorkwalificatie",
-        "desc": "Ontvangst van het dossier, verificatie van de volledigheid van documenten. Voorkwalificatie binnen 5 werkdagen."
+        "title": "Indiening & pre-kwalificatie",
+        "desc": "Ontvangst van het dossier, volledigheidscontrole en pre-kwalificatie binnen 5 werkdagen.",
+        "inputs": "Indieningsformulier, dataroom, financiële overzichten (laatste 2 jaar), IP-register, sleutelcontracten, organigram, codebase-toegang indien van toepassing",
+        "outputs": "Pre-kwalificatiebrief met bevestiging van scope, tijdlijn en eventuele ontbrekende items",
+        "outcomes": "Gekwalificeerd dossier en vastgesteld auditschema. Onvolledige dossiers worden zonder beoordeling geretourneerd."
       },
       {
         "num": "02",
-        "title": "Technische analyse (Code + Security)",
-        "desc": "Coderevue door twee Aegryn-gecertificeerde senior ingenieurs. Geautomatiseerde beveiligingsscan gevolgd door handmatige beoordeling. Duur: 5–10 dagen."
+        "title": "CIFSO technische audit (C + S)",
+        "desc": "Diepgaande analyse van Kapitaal & IP en Veiligheid & Soevereiniteit door twee gecertificeerde senior-analisten.",
+        "inputs": "Broncode, IP-documentatie (octrooien, handelsmerken, licenties), beveiligingsbeleid, kwetsbaarheidsscanrapporten, AVG-register, cloudarchitectuur",
+        "outputs": "Technisch auditrapport met C- en S-scores, identificatie kritieke kwetsbaarheden, verificatie IP-eigendomsketen",
+        "outcomes": "Objectieve beoordeling van codekwaliteit, IP-eigendom en cyberbeveiligingspositie volgens EU-normen (NIS2, DORA, AVG)."
       },
       {
         "num": "03",
-        "title": "Commerciële analyse (IP + Finance)",
-        "desc": "Audit van financiële statistieken, IP-verificatie bij bevoegde registers. Interview met de oprichter. Duur: 5–10 dagen."
+        "title": "Financiële & governance-audit (F + I)",
+        "desc": "Verificatie van financiële statistieken en audit van governance-integriteit.",
+        "inputs": "Boekhoudkundige gegevens, ARR/MRR-documentatie, cap table, aandeelhoudersovereenkomsten, klantcontracten, regelgevingsaangiften, geschillenhistoriek",
+        "outputs": "Financieel auditrapport met F- en I-scores, klantconcentratieanalyse, verificatie van regelgevings- en contractuele naleving",
+        "outcomes": "Validatie van financiële overdraagbaarheid, cap table-integriteit en regelgevingsnaleving. Betrouwbare basis voor waardering."
       },
       {
         "num": "04",
-        "title": "Beraadslaging & validatie",
-        "desc": "Beide analisten beraadslagen en produceren het conclusieve rapport, volgens een reproduceerbaar en onafhankelijk protocol."
+        "title": "Organisatorische audit (O)",
+        "desc": "Beoordeling van organisatorische veerkracht, managementdiepte en opvolgingsgereedheid.",
+        "inputs": "Gedetailleerd organigram, sleutelpersooncontracten, opvolgingsplan, CV's managementteam, retentiegegevens, gestructureerde interviews met oprichter en sleutelmanagers",
+        "outputs": "Organisatorisch auditrapport met O-score, beoordeling oprichterafhankelijkheid, sleutelpersoon-risicoanalyse",
+        "outcomes": "Identificatie van operationele continuïteitsrisico's en organisatorische versterkingshefbomen. Meest ondergewaardeerde dimensie bij transacties."
       },
       {
         "num": "05",
-        "title": "Uitgifte & publicatie",
-        "desc": "Het grade wordt uitgegeven, gedocumenteerd en geversioneerd. Het certificaat wordt overgemaakt aan de houder en gepubliceerd in het Aegryn-register. Een blockchain-certificeringslaag zal de verankering van dit register op termijn versterken."
+        "title": "Beraadslaging & eindbeoordeling",
+        "desc": "Beide analisten beraadslagen volgens een reproduceerbaar protocol en produceren het onafhankelijke certificeringsrapport.",
+        "inputs": "Alle voorgaande auditrapporten (C, I, F, S, O), CIFSO 5000-scoringsrooster, beraadslagingsprotocol",
+        "outputs": "Volledig certificeringsrapport met officiële beoordeling (★ tot B), gedetailleerde subcodetabel per dimensie, gekwantificeerde verbeteringsaanbevelingen",
+        "outcomes": "Objectieve en reproduceerbare beoordeling. Protocol vereist overeenstemming binnen ±1 subcode. Discrepantie activeert onafhankelijke arbitrage."
+      },
+      {
+        "num": "06",
+        "title": "Certificering & publicatie",
+        "desc": "Uitgifte van het officiële CIFSO 5000-certificaat en publicatie in het gecertificeerde Aegryn-register.",
+        "inputs": "Gevalideerd certificeringsrapport, identiteit van de gecertificeerde organisatie, gekozen certificeringsformaat (Express/Standard/Premium)",
+        "outputs": "Officieel CIFSO 5000-certificaat, digitale badge, openbare registerinschrijving, toegang tot gecertificeerd portaal",
+        "outcomes": "Gecertificeerde organisatie met geversioneerde beoordeling raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 of 18 maanden afhankelijk van formaat."
       }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",

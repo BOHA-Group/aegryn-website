@@ -2153,28 +2153,51 @@
     "process": [
       {
         "num": "01",
-        "title": "Envío y prequalificación",
-        "desc": "Recepción del expediente, verificación de la completitud de los documentos. Prequalificación en 5 días hábiles."
+        "title": "Presentación y precalificación",
+        "desc": "Recepción del expediente, verificación de completitud y precalificación en 5 días hábiles.",
+        "inputs": "Formulario de presentación, sala de datos, estados financieros (últimos 2 años), registro IP, contratos clave, organigrama, acceso al código base si corresponde",
+        "outputs": "Carta de precalificación confirmando alcance, cronograma y elementos faltantes",
+        "outcomes": "Expediente calificado y calendario de auditoría establecido. Los expedientes incompletos se devuelven sin calificación."
       },
       {
         "num": "02",
-        "title": "Análisis técnico (Code + Security)",
-        "desc": "Revisión del código por dos ingenieros senior certificados Aegryn. Escaneo de seguridad automatizado y revisión manual. Duración: 5–10 días."
+        "title": "Auditoría técnica CIFSO (C + S)",
+        "desc": "Análisis en profundidad de Capital e IP y Seguridad y Soberanía por dos analistas senior certificados.",
+        "inputs": "Código fuente, documentación IP (patentes, marcas, licencias), políticas de seguridad, informes de escaneo de vulnerabilidades, registro RGPD, arquitectura cloud",
+        "outputs": "Informe de auditoría técnica con puntuaciones C y S, identificación de vulnerabilidades críticas, verificación de la cadena de títulos IP",
+        "outcomes": "Evaluación objetiva de la calidad del código, propiedad IP y postura de ciberseguridad según estándares UE (NIS2, DORA, RGPD)."
       },
       {
         "num": "03",
-        "title": "Análisis comercial (IP + Finance)",
-        "desc": "Auditoría de métricas financieras, verificación IP en registros competentes. Entrevista con el fundador. Duración: 5–10 días."
+        "title": "Auditoría financiera y de gobernanza (F + I)",
+        "desc": "Verificación de métricas financieras y auditoría de integridad de gobernanza.",
+        "inputs": "Registros contables, documentación ARR/MRR, cap table, acuerdos de accionistas, contratos de clientes, presentaciones regulatorias, historial de disputas",
+        "outputs": "Informe de auditoría financiera con puntuaciones F e I, análisis de concentración de clientes, verificación de cumplimiento regulatorio y contractual",
+        "outcomes": "Validación de la transferibilidad financiera, integridad del cap table y cumplimiento regulatorio. Base confiable para la valoración."
       },
       {
         "num": "04",
-        "title": "Deliberación y validación",
-        "desc": "Ambos analistas deliberan y producen el informe concluyente, siguiendo un protocolo reproducible e independiente."
+        "title": "Auditoría organizacional (O)",
+        "desc": "Evaluación de la resiliencia organizacional, profundidad gerencial y preparación para la sucesión.",
+        "inputs": "Organigrama detallado, contratos de personas clave, plan de sucesión, CVs del equipo directivo, datos de retención, entrevistas estructuradas con fundador y gerentes clave",
+        "outputs": "Informe de auditoría organizacional con puntuación O, evaluación de dependencia del fundador, análisis de riesgo de persona clave",
+        "outcomes": "Identificación de riesgos de continuidad operativa y palancas de fortalecimiento organizacional. Dimensión más infravalorada en transacciones."
       },
       {
         "num": "05",
-        "title": "Emisión y publicación",
-        "desc": "El grado se emite, se documenta y se versiona. El certificado se transmite al titular y se publica en el registro Aegryn. Una capa de certificación blockchain vendrá a reforzar el anclaje de este registro a su debido tiempo."
+        "title": "Deliberación y calificación final",
+        "desc": "Ambos analistas deliberan siguiendo un protocolo reproducible y producen el informe de certificación independiente.",
+        "inputs": "Todos los informes de auditoría previos (C, I, F, S, O), cuadrícula de puntuación CIFSO 5000, protocolo de deliberación",
+        "outputs": "Informe de certificación completo con calificación oficial (★ a B), tabla detallada de subcódigos por dimensión, recomendaciones de mejora cuantificadas",
+        "outcomes": "Calificación objetiva y reproducible. El protocolo requiere acuerdo dentro de ±1 subcódigo. La discrepancia activa arbitraje independiente."
+      },
+      {
+        "num": "06",
+        "title": "Certificación y publicación",
+        "desc": "Emisión del certificado oficial CIFSO 5000 y publicación en el registro certificado de Aegryn.",
+        "inputs": "Informe de certificación validado, identidad de la organización certificada, formato de certificación elegido (Express/Standard/Premium)",
+        "outputs": "Certificado oficial CIFSO 5000, insignia digital, entrada en registro público, acceso al portal certificado",
+        "outcomes": "Organización certificada con calificación versionada visible para inversores, adquirentes y socios calificados. Validez: 12 o 18 meses según formato."
       }
     ],
     "principlesTitle": "Principios de independencia",

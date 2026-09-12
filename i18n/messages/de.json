@@ -2153,28 +2153,51 @@
     "process": [
       {
         "num": "01",
-        "title": "Einreichung & Vorqualifikation",
-        "desc": "Empfang der Unterlagen, Prüfung der Vollständigkeit (Data Room, Finanzdaten, Codebase-Zugang). Vorqualifikation innerhalb von 5 Werktagen."
+        "title": "Einreichung & Vorqualifizierung",
+        "desc": "Empfang der Unterlagen, Vollständigkeitsprüfung und Vorqualifizierung innerhalb von 5 Werktagen.",
+        "inputs": "Einreichungsformular, Datenraum, Finanzberichte (letzte 2 Jahre), IP-Register, Schlüsselverträge, Organigramm, Codebase-Zugang falls zutreffend",
+        "outputs": "Vorqualifizierungsschreiben mit Bestätigung von Umfang, Zeitplan und fehlenden Elementen",
+        "outcomes": "Qualifizierte Unterlagen und festgelegter Prüfungsplan. Unvollständige Unterlagen werden ohne Bewertung zurückgesandt."
       },
       {
         "num": "02",
-        "title": "Technische Analyse (Code + Security)",
-        "desc": "Code-Review durch zwei Aegryn-zertifizierte Senior-Ingenieure. Automatisierter Sicherheitsscan gefolgt von manueller Überprüfung. Dauer: 5–10 Tage."
+        "title": "CIFSO-Technische Prüfung (C + S)",
+        "desc": "Eingehende Analyse von Kapital & IP sowie Sicherheit & Souveränität durch zwei zertifizierte Senior-Analysten.",
+        "inputs": "Quellcode, IP-Dokumentation (Patente, Marken, Lizenzen), Sicherheitsrichtlinien, Schwachstellen-Scan-Berichte, DSGVO-Register, Cloud-Architektur",
+        "outputs": "Technischer Prüfbericht mit C- und S-Bewertung, Identifizierung kritischer Schwachstellen, Überprüfung der IP-Eigentumskette",
+        "outcomes": "Objektive Bewertung der Codequalität, IP-Eigentum und Cybersicherheitslage nach EU-Standards (NIS2, DORA, DSGVO)."
       },
       {
         "num": "03",
-        "title": "Kommerzielle Analyse (IP + Finance)",
-        "desc": "Prüfung der Finanzkennzahlen gegen Quelldokumente, IP-Überprüfung bei zuständigen Registern. Gespräch mit dem Gründer. Dauer: 5–10 Tage."
+        "title": "Finanz- & Governance-Prüfung (F + I)",
+        "desc": "Überprüfung der Finanzkennzahlen und Prüfung der Governance-Integrität.",
+        "inputs": "Buchhaltungsunterlagen, ARR/MRR-Nachweise, Cap Table, Aktionärsvereinbarungen, Kundenverträge, behördliche Einreichungen, Streithistorie",
+        "outputs": "Finanzprüfbericht mit F- und I-Bewertung, Kundenkonzentrationsanalyse, Überprüfung der regulatorischen und vertraglichen Compliance",
+        "outcomes": "Validierung der finanziellen Übertragbarkeit, Cap-Table-Integrität und regulatorischen Compliance. Zuverlässige Bewertungsgrundlage."
       },
       {
         "num": "04",
-        "title": "Beratung & Validierung",
-        "desc": "Beide Analysten beraten und erstellen den Abschlussbericht nach einem reproduzierbaren und unabhängigen Protokoll."
+        "title": "Organisationsprüfung (O)",
+        "desc": "Bewertung der organisatorischen Resilienz, Managementtiefe und Nachfolgebereitschaft.",
+        "inputs": "Detailliertes Organigramm, Schlüsselpersonen-Verträge, Nachfolgeplan, CVs des Managementteams, Retentionsdaten, strukturierte Interviews mit Gründer und Schlüsselmanagern",
+        "outputs": "Organisationsprüfbericht mit O-Bewertung, Bewertung der Gründerabhängigkeit, Schlüsselpersonen-Risikoanalyse",
+        "outcomes": "Identifizierung von Betriebskontinuitätsrisiken und organisatorischen Stärkungshebeln. Am meisten unterbewertete Dimension bei Transaktionen."
       },
       {
         "num": "05",
-        "title": "Ausgabe & Veröffentlichung",
-        "desc": "Das Grade wird ausgestellt, dokumentiert und versioniert. Das Zertifikat wird an den Inhaber übermittelt und im Aegryn-Register veröffentlicht. Eine Blockchain-Zertifizierungsschicht wird die Verankerung dieses Registers langfristig verstärken."
+        "title": "Beratung & Endbewertung",
+        "desc": "Beide Analysten beraten nach einem reproduzierbaren Protokoll und erstellen den unabhängigen Zertifizierungsbericht.",
+        "inputs": "Alle vorherigen Prüfberichte (C, I, F, S, O), CIFSO 5000-Bewertungsraster, Beratungsprotokoll",
+        "outputs": "Vollständiger Zertifizierungsbericht mit offizieller Note (★ bis B), detaillierte Untercode-Tabelle pro Dimension, quantifizierte Verbesserungsempfehlungen",
+        "outcomes": "Objektive und reproduzierbare Note. Protokoll erfordert Übereinstimmung innerhalb ±1 Untercode. Abweichung löst unabhängige Schlichtung aus."
+      },
+      {
+        "num": "06",
+        "title": "Zertifizierung & Veröffentlichung",
+        "desc": "Ausstellung des offiziellen CIFSO 5000-Zertifikats und Veröffentlichung im zertifizierten Aegryn-Register.",
+        "inputs": "Validierter Zertifizierungsbericht, Identität der zertifizierten Organisation, gewähltes Zertifizierungsformat (Express/Standard/Premium)",
+        "outputs": "Offizielles CIFSO 5000-Zertifikat, digitales Badge, öffentlicher Registereintrag, Zugang zum zertifizierten Portal",
+        "outcomes": "Zertifizierte Organisation mit versionierter Note, einsehbar für qualifizierte Investoren, Erwerber und Partner. Gültigkeit: 12 oder 18 Monate je nach Format."
       }
     ],
     "principlesTitle": "Unabhängigkeitsprinzipien",

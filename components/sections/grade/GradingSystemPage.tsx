@@ -49,6 +49,9 @@ type ProcessStep = {
   num: string
   title: string
   desc: string
+  inputs: string
+  outputs: string
+  outcomes: string
 }
 
 type Principle = {
@@ -422,9 +425,37 @@ export function GradingSystemPage() {
                     <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.02em] mb-3">
                       {step.title}
                     </h3>
-                    <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
+                    <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-6">
                       {step.desc}
                     </p>
+
+                    {/* Inputs / Outputs / Outcomes (approche Bureau Veritas) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-ag-border">
+                      <div>
+                        <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
+                          Inputs
+                        </p>
+                        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                          {step.inputs}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
+                          Outputs
+                        </p>
+                        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                          {step.outputs}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-2 font-semibold">
+                          Outcomes
+                        </p>
+                        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                          {step.outcomes}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
