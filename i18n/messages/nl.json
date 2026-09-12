@@ -4276,23 +4276,23 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Groei van PE-exits in Europa, H1 2026",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "van EU-kmo’s noemt regelgevingscomplexiteit als voornaamste groeibelemmering",
-        "source": ""
+        "label": "Groei van PE-exits in Europa in H1 2026.\nEen markt in beweging — voor wie klaar is.",
+        "source": "Moonfare / PitchBook, H1 2026"
       },
       {
         "value": "30 tot 50%",
-        "label": "waarderingskorting voor EU-bedrijven vs Amerikaanse equivalenten bij identieke metrics",
-        "source": ""
+        "label": "Waarderingskorting voor Europese bedrijven\nvs hun Amerikaanse equivalenten bij identieke metrics.\nDit is het probleem dat Aegryn oplost.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
       },
       {
-        "value": "Nr.1",
-        "label": "Small en mid-cap: snelst groeiend segment verwacht in 2026, volgens 64% van de EU PE-respondenten",
-        "source": ""
+        "value": "64%",
+        "label": "Van de EU-kmo's noemt regelgevingscomplexiteit\nals grootste groeibelemmering.\nEen beperking. Een differentiatiemogelijkheid.",
+        "source": "Eurobarometer SME Survey 2025"
+      },
+      {
+        "value": "Nr. 1",
+        "label": "Small en mid-cap: hoogste groeisegment verwacht\nvoor 2026 volgens 64% van de Europese PE-respondenten.\nDe markt die Aegryn vanaf het begin begeleidt.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
@@ -4968,16 +4968,16 @@
     "contactCta": "Contact opnemen"
   },
   "transactNarrative": {
-    "label": "M&A-transacties",
-    "title": "Certificering verandert het gesprek.\nDe transactie volgt.",
-    "desc": "Onafhankelijke certificering. Vertrouwelijke overdracht.\nKring van vooraf gekwalificeerde kopers. Institutioneel escrow.",
+    "label": "Waardering & Overdracht van activa",
+    "title": "Waarde wordt bewezen\nvoordat het wordt onderhandeld.",
+    "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke overdracht. Voorgekwalificeerde koperskring.",
     "stat1Val": "100%",
     "stat1Label": "Individueel gekwalificeerde kopers",
     "stat2Val": "60d max",
     "stat2Label": "Exclusief verkoopmandaat",
     "stat3Val": "100%",
     "stat3Label": "Vooraf gekwalificeerde kopers",
-    "ctaSell": "Een asset overdragen",
+    "ctaSell": "Mijn organisatie evalueren",
     "ctaBuy": "Koper worden",
     "stat4Val": "Zwitserland",
     "stat4Label": "Institutionele verankering"

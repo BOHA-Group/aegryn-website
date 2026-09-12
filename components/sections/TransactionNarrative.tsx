@@ -43,7 +43,7 @@ export function TransactNarrative() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/transact/how-to-sell"
+              href="/grade/submit"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('ctaSell')} <ArrowUpRight size={13} />

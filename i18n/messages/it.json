@@ -4276,23 +4276,23 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Crescita degli exit PE in Europa, H1 2026",
-        "source": ""
+        "label": "Crescita delle exit PE in Europa nel H1 2026.\nUn mercato in movimento — per chi è pronto.",
+        "source": "Moonfare / PitchBook, H1 2026"
+      },
+      {
+        "value": "30 a 50%",
+        "label": "Di sconto di valutazione delle aziende europee\nvs i loro equivalenti USA a metriche identiche.\nQuesto è il problema che Aegryn risolve.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
       },
       {
         "value": "64%",
-        "label": "delle PMI EU citano la complessità normativa come principale freno alla crescita",
-        "source": ""
+        "label": "Delle PMI UE citano la complessità normativa\ncome principale ostacolo alla crescita.\nUn vincolo. Un'opportunità di differenziazione.",
+        "source": "Eurobarometer SME Survey 2025"
       },
       {
-        "value": "da 30 a 50%",
-        "label": "di sconto di valutazione delle aziende EU rispetto agli equivalenti US a metriche identiche",
-        "source": ""
-      },
-      {
-        "value": "N.1",
-        "label": "Small e mid-cap: segmento a più forte crescita attesa nel 2026, secondo il 64% degli intervistati PE EU",
-        "source": ""
+        "value": "N. 1",
+        "label": "Small e mid-cap: segmento a maggiore crescita attesa\nper il 2026 secondo il 64% degli intervistati PE europei.\nIl mercato che Aegryn accompagna dall'inizio.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
@@ -8638,16 +8638,16 @@
     }
   },
   "transactNarrative": {
-    "label": "Transazioni M&A riservate",
-    "title": "La certificazione cambia la conversazione.\nLa transazione segue.",
-    "desc": "Certificazione indipendente. Trasmissione confidenziale.\nCerchia di acquirenti prequalificati. Deposito istituzionale.",
+    "label": "Valutazione & Trasferimento di asset",
+    "title": "Il valore si dimostra\nprima di essere negoziato.",
+    "desc": "Certificazione indipendente. Valutazione documentata.\nTrasferimento riservato. Cerchia di acquirenti pre-qualificati.",
     "stat1Val": "100%",
     "stat1Label": "Acquirenti qualificati individualmente",
     "stat2Val": "60 gg max",
     "stat2Label": "Mandato esclusivo del venditore",
     "stat3Val": "100%",
     "stat3Label": "Acquirenti prequalificati",
-    "ctaSell": "Trasmettere un asset",
+    "ctaSell": "Valutare la mia organizzazione",
     "ctaBuy": "Diventare acquirente",
     "stat4Val": "Svizzera",
     "stat4Label": "Ancoraggio istituzionale"

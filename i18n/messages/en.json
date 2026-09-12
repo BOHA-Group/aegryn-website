@@ -1747,37 +1747,37 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Growth in PE exits in Europe, H1 2026",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "of EU SMEs cite regulatory complexity as their primary growth barrier",
-        "source": ""
+        "label": "Growth in PE exits in Europe in H1 2026.\nA market in motion — for those who are ready.",
+        "source": "Moonfare / PitchBook, H1 2026"
       },
       {
         "value": "30 to 50%",
-        "label": "valuation discount for EU companies vs US equivalents at identical metrics",
-        "source": ""
+        "label": "Valuation discount for European companies\nvs their US equivalents at identical metrics.\nThis is the problem Aegryn solves.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
       },
       {
-        "value": "No.1",
-        "label": "Small and mid-cap: fastest-growing segment expected in 2026, per 64% of EU PE respondents",
-        "source": ""
+        "value": "64%",
+        "label": "Of EU SMEs cite regulatory complexity\nas their top growth barrier.\nA constraint. A differentiation opportunity.",
+        "source": "Eurobarometer SME Survey 2025"
+      },
+      {
+        "value": "No. 1",
+        "label": "Small and mid-cap: highest growth segment expected\nfor 2026 according to 64% of European PE respondents.\nThe market Aegryn has served from day one.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
   "transactNarrative": {
-    "label": "M&A Transactions",
-    "title": "Certification changes the conversation.\nThe transaction follows.",
-    "desc": "Independent certification. Confidential transmission.\nPre-qualified buyer network. Institutional escrow.",
+    "label": "Valuation & Asset Transfer",
+    "title": "Value is proven\nbefore it's negotiated.",
+    "desc": "Independent certification. Documented valuation.\nConfidential transfer. Pre-qualified buyer circle.",
     "stat1Val": "100%",
     "stat1Label": "Individually qualified buyers",
     "stat2Val": "60d max",
     "stat2Label": "Exclusive seller mandate",
     "stat3Val": "100%",
     "stat3Label": "Pre-qualified buyers",
-    "ctaSell": "Transmit an asset",
+    "ctaSell": "Assess my organization",
     "ctaBuy": "Become a buyer",
     "stat4Val": "Switzerland",
     "stat4Label": "Institutional anchor"

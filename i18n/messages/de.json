@@ -4276,23 +4276,23 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Wachstum der PE-Exits in Europa, H1 2026",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "der EU-KMU nennen regulatorische Komplexität als größtes Wachstumshemmnis",
-        "source": ""
+        "label": "Wachstum der PE-Exits in Europa im H1 2026.\nEin Markt in Bewegung — für diejenigen, die bereit sind.",
+        "source": "Moonfare / PitchBook, H1 2026"
       },
       {
         "value": "30 bis 50%",
-        "label": "Bewertungsabschlag europäischer Unternehmen vs. US-Äquivalente bei identischen Kennzahlen",
-        "source": ""
+        "label": "Bewertungsabschlag für europäische Unternehmen\nvs ihre US-Äquivalente bei identischen Kennzahlen.\nDas ist das Problem, das Aegryn löst.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
       },
       {
-        "value": "Nr.1",
-        "label": "Small und Mid-Cap: am stärksten wachsendes Segment 2026, laut 64% der europäischen PE-Befragten",
-        "source": ""
+        "value": "64%",
+        "label": "Der EU-KMU nennen regulatorische Komplexität\nals größtes Wachstumshindernis.\nEine Einschränkung. Eine Differenzierungschance.",
+        "source": "Eurobarometer SME Survey 2025"
+      },
+      {
+        "value": "Nr. 1",
+        "label": "Small und Mid-Cap: höchstes Wachstumssegment erwartet\nfür 2026 laut 64% der europäischen PE-Befragten.\nDer Markt, den Aegryn von Anfang an begleitet.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
@@ -8768,16 +8768,16 @@
     }
   },
   "transactNarrative": {
-    "label": "Vertrauliche M&A-Transaktionen",
-    "title": "Die Zertifizierung verändert das Gespräch.\nDie Transaktion folgt.",
-    "desc": "Unabhängige Zertifizierung. Vertrauliche Übertragung.\nKreis vorqualifizierter Erwerber. Institutionelle Treuhand.",
+    "label": "Bewertung & Vermögensübertragung",
+    "title": "Wert wird bewiesen,\nbevor er verhandelt wird.",
+    "desc": "Unabhängige Zertifizierung. Dokumentierte Bewertung.\nVertrauliche Übertragung. Vorqualifizierter Käuferkreis.",
     "stat1Val": "100%",
     "stat1Label": "Individuell qualifizierte Käufer",
     "stat2Val": "60 T max",
     "stat2Label": "Exklusives Verkäufermandat",
     "stat3Val": "100%",
     "stat3Label": "Vorqualifizierte Käufer",
-    "ctaSell": "Ein Asset übertragen",
+    "ctaSell": "Meine Organisation bewerten",
     "ctaBuy": "Käufer werden",
     "stat4Val": "Schweiz",
     "stat4Label": "Institutionelle Verankerung"

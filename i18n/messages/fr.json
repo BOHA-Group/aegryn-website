@@ -1707,37 +1707,37 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Croissance des exits PE en Europe, H1 2026",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "des PME EU citent la complexité réglementaire comme premier frein à leur croissance",
-        "source": ""
+        "label": "Croissance des exits PE en Europe au premier semestre 2026.\nUn marché en mouvement — pour ceux qui sont prêts.",
+        "source": "Moonfare / PitchBook, H1 2026"
       },
       {
         "value": "30 à 50%",
-        "label": "de discount de valorisation des entreprises EU vs équivalents US à métriques identiques",
-        "source": ""
+        "label": "De discount de valorisation des entreprises européennes\nvs leurs équivalents US à métriques identiques.\nC'est le problème qu'Aegryn résout.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
+      },
+      {
+        "value": "64%",
+        "label": "Des PME EU citent la complexité réglementaire\ncomme premier frein à leur croissance.\nUne contrainte. Une opportunité de différenciation.",
+        "source": "Eurobarometer SME Survey 2025"
       },
       {
         "value": "N°1",
-        "label": "Small et mid-cap : segment à plus forte croissance attendue 2026, selon 64% des répondants PE EU",
-        "source": ""
+        "label": "Small et mid-cap : segment à plus forte croissance attendue\npour 2026 selon 64% des répondants PE européens.\nLe marché qu'Aegryn accompagne depuis le début.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
   "transactNarrative": {
-    "label": "Cessions M&A confidentielles",
-    "title": "La certification change la conversation.\nLa transaction suit.",
-    "desc": "Certification indépendante. Transmission confidentielle.\nCercle d’acquéreurs pré-qualifiés. Séquestre institutionnel.",
+    "label": "Valorisation & Transmission d'actifs",
+    "title": "La valeur se prouve\navant de se négocier.",
+    "desc": "Certification indépendante. Valorisation documentée.\nTransmission confidentielle. Cercle d'acquéreurs pré-qualifiés.",
     "stat1Val": "100%",
     "stat1Label": "Acquéreurs qualifiés individuellement",
     "stat2Val": "60 j max",
     "stat2Label": "Mandat exclusif vendeur",
     "stat3Val": "100%",
     "stat3Label": "Acquéreurs pré-qualifiés",
-    "ctaSell": "Transmettre un actif",
+    "ctaSell": "Évaluer mon organisation",
     "ctaBuy": "Devenir acquéreur",
     "stat4Val": "Suisse",
     "stat4Label": "Ancrage institutionnel"

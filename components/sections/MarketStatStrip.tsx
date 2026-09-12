@@ -38,7 +38,7 @@ export function MarketStatStrip() {
               >
                 {stat.value}
               </p>
-              <p className="text-[12px] text-white/60 leading-snug mb-1.5">
+              <p className="text-[12px] text-white/60 leading-snug mb-1.5 whitespace-pre-line">
                 {stat.label}
               </p>
               {stat.source && (

@@ -4276,23 +4276,23 @@
     "stats": [
       {
         "value": "+59%",
-        "label": "Crecimiento de exits PE en Europa, H1 2026",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "de las PYME EU citan la complejidad regulatoria como principal freno al crecimiento",
-        "source": ""
+        "label": "Crecimiento de las salidas PE en Europa en el H1 2026.\nUn mercado en movimiento — para quienes están preparados.",
+        "source": "Moonfare / PitchBook, H1 2026"
       },
       {
         "value": "30 a 50%",
-        "label": "de descuento de valoración de empresas EU vs equivalentes US a métricas idénticas",
-        "source": ""
+        "label": "De descuento de valoración de las empresas europeas\nvs sus equivalentes estadounidenses con métricas idénticas.\nEste es el problema que Aegryn resuelve.",
+        "source": "PitchBook / Atomico State of European Tech 2026"
       },
       {
-        "value": "Nº1",
-        "label": "Small y mid-cap: segmento de mayor crecimiento esperado en 2026, según el 64% de los encuestados PE EU",
-        "source": ""
+        "value": "64%",
+        "label": "De las PYME de la UE citan la complejidad regulatoria\ncomo su principal barrera de crecimiento.\nUna restricción. Una oportunidad de diferenciación.",
+        "source": "Eurobarometer SME Survey 2025"
+      },
+      {
+        "value": "N.º 1",
+        "label": "Small y mid-cap: segmento de mayor crecimiento esperado\npara 2026 según el 64% de los encuestados PE europeos.\nEl mercado que Aegryn acompaña desde el principio.",
+        "source": "Roland Berger European PE Outlook 2026"
       }
     ]
   },
@@ -8638,16 +8638,16 @@
     }
   },
   "transactNarrative": {
-    "label": "Transacciones M&A confidenciales",
-    "title": "La certificación cambia la conversación.\nLa transacción sigue.",
-    "desc": "Certificación independiente. Transmisión confidencial.\nCírculo de adquirentes precalificados. Depósito institucional.",
+    "label": "Valoración & Transmisión de activos",
+    "title": "El valor se demuestra\nantes de negociarse.",
+    "desc": "Certificación independiente. Valoración documentada.\nTransmisión confidencial. Círculo de compradores precalificados.",
     "stat1Val": "100%",
     "stat1Label": "Compradores calificados individualmente",
     "stat2Val": "60 d máx",
     "stat2Label": "Mandato exclusivo del vendedor",
     "stat3Val": "100%",
     "stat3Label": "Compradores precalificados",
-    "ctaSell": "Transmitir un activo",
+    "ctaSell": "Evaluar mi organización",
     "ctaBuy": "Convertirse en comprador",
     "stat4Val": "Suiza",
     "stat4Label": "Anclaje institucional"
