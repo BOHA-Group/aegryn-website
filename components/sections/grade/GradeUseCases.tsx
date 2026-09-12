@@ -167,8 +167,8 @@ export function GradeUseCases() {
                     </div>
 
                     {/* Signal */}
-                    <div className="inline-block bg-ag-navy px-4 py-2.5 rounded-md">
-                      <p className="font-mono text-[10px] leading-relaxed text-ag-apex/80">
+                    <div className="inline-block bg-ag-navy px-5 py-3.5 rounded-md">
+                      <p className="font-mono font-semibold text-[13px] leading-relaxed text-ag-apex">
                         {uc.signal}
                       </p>
                     </div>
