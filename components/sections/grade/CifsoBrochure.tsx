@@ -306,24 +306,6 @@ export function CifsoBrochure() {
         </section>
 
       </div>
-
-      {/* Styles d'impression */}
-      <style jsx global>{`
-        @media print {
-          @page {
-            size: A4;
-            margin: 0;
-          }
-          body {
-            print-color-adjust: exact;
-            -webkit-print-color-adjust: exact;
-          }
-          section {
-            page-break-after: always;
-            page-break-inside: avoid;
-          }
-        }
-      `}</style>
     </main>
   )
 }

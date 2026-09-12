@@ -3298,7 +3298,10 @@
       "audienceHideMatrix": "Inklappen",
       "audienceColProfile": "Profiel",
       "pricingRecommended": "Aanbevolen",
-      "contactCta": "Contact opnemen"
+      "contactCta": "Contact opnemen",
+      "processLabel": "Certificeringsproces",
+      "processTitle": "Certificeringsproces",
+      "processDuration": "Van indiening tot certificering in 4 gestructureerde stappen."
     },
     "grades": [
       {

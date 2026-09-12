@@ -3298,7 +3298,10 @@
       "audienceHideMatrix": "Comprimi",
       "audienceColProfile": "Profilo",
       "pricingRecommended": "Consigliato",
-      "contactCta": "Contattaci"
+      "contactCta": "Contattaci",
+      "processLabel": "Processo di certificazione",
+      "processTitle": "Processo di certificazione",
+      "processDuration": "Dalla presentazione alla certificazione in 4 passaggi strutturati."
     },
     "grades": [
       {

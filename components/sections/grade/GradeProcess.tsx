@@ -9,16 +9,14 @@ type ProcessStep = {
   num: string
   title: string
   desc: string
-  detail: string
-  data: string
 }
 
 const STEP_ICONS = [Upload, Search, FileCheck, Award]
 
 export function GradeProcess() {
-  const t     = useTranslations('grade.process')
+  const t     = useTranslations('grade')
   const ref   = useRef<HTMLElement>(null)
-  const steps = t.raw('steps') as ProcessStep[]
+  const steps = t.raw('process') as ProcessStep[]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -38,16 +36,16 @@ export function GradeProcess() {
         {/* Header */}
         <div className="mb-14 max-w-3xl">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('label')}
+            {t('index.processLabel')}
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-3"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
-            Processus de certification
+            {t('index.processTitle')}
           </h2>
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
-            {t('duration')}
+            {t('index.processDuration')}
           </p>
         </div>
 
@@ -58,7 +56,7 @@ export function GradeProcess() {
 
           {/* Steps */}
           <div className="flex flex-col gap-6">
-            {steps.map(({ num, title, desc, detail, data }, i) => {
+            {steps.map(({ num, title, desc }, i) => {
               const Icon = STEP_ICONS[i] || Upload
               const isLast = i === steps.length - 1
               
@@ -83,29 +81,9 @@ export function GradeProcess() {
                       <h3 className="font-sans font-bold text-ag-black text-[17px] leading-snug mb-3">
                         {title}
                       </h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-6">
+                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                         {desc}
                       </p>
-
-                      {/* Détails en 2 colonnes */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-ag-border">
-                        <div>
-                          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                            {t('detailLabel')}
-                          </p>
-                          <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                            {detail}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                            {t('dataLabel')}
-                          </p>
-                          <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                            {data}
-                          </p>
-                        </div>
-                      </div>
                     </div>
 
                   </div>

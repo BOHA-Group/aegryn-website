@@ -2610,7 +2610,10 @@
       "audienceHideMatrix": "Collapse",
       "audienceColProfile": "Profile",
       "pricingRecommended": "Recommended",
-      "contactCta": "Get in touch"
+      "contactCta": "Get in touch",
+      "processLabel": "Certification process",
+      "processTitle": "Certification process",
+      "processDuration": "From submission to certification in 4 structured steps."
     },
     "grades": [
       {
