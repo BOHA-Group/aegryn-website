@@ -68,8 +68,8 @@ export function CifsoBrochure() {
           {/* Image de fond premium */}
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop"
-              alt="Business analytics and valuation"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop"
+              alt="Business team collaboration and certification"
               fill
               className="object-cover opacity-20"
               priority

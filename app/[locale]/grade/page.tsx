@@ -10,6 +10,7 @@ import { GradeAudienceTable } from '@/components/sections/grade/GradeAudienceTab
 import { GradeISOMapping } from '@/components/sections/grade/GradeISOMapping'
 import { GradePricing } from '@/components/sections/grade/GradePricing'
 import { GradeProcess } from '@/components/sections/grade/GradeProcess'
+import { GradeBrochure } from '@/components/sections/grade/GradeBrochure'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -46,6 +47,9 @@ export default async function GradePage({ params }: Props) {
       {/* Certification process */}
       <GradeProcess />
 
+      {/* Brochure CIFSO 5000 */}
+      <GradeBrochure />
+
       {/* Submit CTA */}
       <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
@@ -69,14 +73,8 @@ export default async function GradePage({ params }: Props) {
               {tSubmit('cta')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/grade/methodology"
-              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
-            >
-              {t('marketCtaSecondary')}
-            </Link>
-            <Link
               href="/contact"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('contactCta')} <ArrowUpRight size={13} />
             </Link>
