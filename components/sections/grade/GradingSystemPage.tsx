@@ -314,9 +314,9 @@ export function GradingSystemPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cifs.map((dim) => (
-              <div key={dim.code} className="cifs-card bg-ag-white p-10 flex flex-col gap-6">
+              <div key={dim.code} className="cifs-card bg-white border border-ag-border rounded-2xl p-10 flex flex-col gap-6">
                 {/* Header */}
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-4">
