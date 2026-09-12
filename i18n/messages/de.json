@@ -4134,18 +4134,18 @@
       },
       {
         "grade": "AA",
-        "label": "Sehr gut",
-        "desc": "Solides Asset mit dokumentierten und bezifferten Vorbehalten."
+        "label": "Solide",
+        "desc": "Gute CIFSO-Grundlagen, einige Optimierungen empfohlen. Bestätigte Bewertung mit Verbesserungsplan."
       },
       {
         "grade": "A",
-        "label": "Gut",
-        "desc": "Lebensfähiges Asset mit einem oder mehreren wesentlichen Vorbehalten."
+        "label": "In Entwicklung",
+        "desc": "Potenzial in mehreren Dimensionen identifiziert. Dokumentierte Verbesserungsbereiche, Wertplan vorgeschlagen."
       },
       {
         "grade": "B",
-        "label": "Ausreichend",
-        "desc": "Beratung vor Transaktion empfohlen."
+        "label": "Aufstrebend",
+        "desc": "Organisation in Strukturierungsphase. CIFSO-Sanierungsplan vor jeder Transaktion erforderlich."
       }
     ]
   },

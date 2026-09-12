@@ -4134,18 +4134,18 @@
       },
       {
         "grade": "AA",
-        "label": "Zeer goed",
-        "desc": "Solide asset met gedocumenteerde en gekwantificeerde reserves."
+        "label": "Solide",
+        "desc": "Goede CIFSO-fundamenten, enkele optimalisaties aanbevolen. Bevestigde waardering met verbeterplan."
       },
       {
         "grade": "A",
-        "label": "Goed",
-        "desc": "Levensvatbaar asset met een of meer significante voorbehouden."
+        "label": "In ontwikkeling",
+        "desc": "Potentieel geïdentificeerd over meerdere dimensies. Gedocumenteerde verbetergebieden, waardeplan voorgesteld."
       },
       {
         "grade": "B",
-        "label": "Voldoende",
-        "desc": "Advies aanbevolen voor transactie."
+        "label": "Opkomend",
+        "desc": "Organisatie in structureringsfase. CIFSO-herstelplan vereist vóór elke transactie."
       }
     ]
   },

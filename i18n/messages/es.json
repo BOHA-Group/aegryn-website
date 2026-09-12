@@ -4134,18 +4134,18 @@
       },
       {
         "grade": "AA",
-        "label": "Muy bueno",
-        "desc": "Activo sólido con reservas documentadas y cuantificadas."
+        "label": "Sólido",
+        "desc": "Buenos fundamentos CIFSO, algunas optimizaciones recomendadas. Valoración confirmada con plan de mejora."
       },
       {
         "grade": "A",
-        "label": "Bueno",
-        "desc": "Activo viable con una o más reservas significativas."
+        "label": "En desarrollo",
+        "desc": "Potencial identificado en múltiples dimensiones. Áreas de mejora documentadas, plan de valor propuesto."
       },
       {
         "grade": "B",
-        "label": "Correcto",
-        "desc": "Se recomienda asesoramiento antes de la transacción."
+        "label": "Emergente",
+        "desc": "Organización en fase de estructuración. Plan de remediación CIFSO requerido antes de cualquier transacción."
       }
     ]
   },

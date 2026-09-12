@@ -4259,18 +4259,18 @@
       },
       {
         "grade": "AA",
-        "label": "Very good",
-        "desc": "Solid asset with documented and quantified reserves."
+        "label": "Solid",
+        "desc": "Strong CIFSO fundamentals, some optimizations recommended. Confirmed valuation with improvement plan."
       },
       {
         "grade": "A",
-        "label": "Good",
-        "desc": "Viable asset with one or more significant reservations."
+        "label": "Developing",
+        "desc": "Potential identified across multiple dimensions. Documented improvement areas, value plan proposed."
       },
       {
         "grade": "B",
-        "label": "Correct",
-        "desc": "Advisory recommended before transaction."
+        "label": "Emerging",
+        "desc": "Organization in structuring phase. CIFSO remediation plan required before any transaction."
       }
     ]
   },

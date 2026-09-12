@@ -4134,18 +4134,18 @@
       },
       {
         "grade": "AA",
-        "label": "Molto buono",
-        "desc": "Asset solido con riserve documentate e quantificate."
+        "label": "Solido",
+        "desc": "Buoni fondamentali CIFSO, alcune ottimizzazioni raccomandate. Valutazione confermata con piano di miglioramento."
       },
       {
         "grade": "A",
-        "label": "Buono",
-        "desc": "Asset praticabile con una o più riserve significative."
+        "label": "In sviluppo",
+        "desc": "Potenziale identificato su più dimensioni. Aree di miglioramento documentate, piano di valore proposto."
       },
       {
         "grade": "B",
-        "label": "Corretto",
-        "desc": "Consulenza raccomandata prima della transazione."
+        "label": "Emergente",
+        "desc": "Organizzazione in fase di strutturazione. Piano di rimedio CIFSO richiesto prima di qualsiasi transazione."
       }
     ]
   },
