@@ -71,10 +71,10 @@ export function CifsoBrochure() {
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop"
               alt="Business team collaboration and certification"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/95 via-[#1a2845]/90 to-ag-navy/95" />
+            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/85 via-[#1a2845]/80 to-ag-navy/85" />
           </div>
 
           {/* Motif géométrique */}

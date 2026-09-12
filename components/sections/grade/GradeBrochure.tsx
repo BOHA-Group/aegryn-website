@@ -15,18 +15,18 @@ export function GradeBrochure() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Image cover brochure */}
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-ag-border">
+          <div className="relative aspect-[3/4] max-w-md rounded-2xl overflow-hidden shadow-2xl border border-ag-border">
             {/* Image de fond */}
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop"
               alt="CIFSO 5000 Certification Brochure"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
               priority
             />
             
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/95 via-[#1a2845]/92 to-ag-navy/95" />
+            <div className="absolute inset-0 bg-gradient-to-br from-ag-navy/85 via-[#1a2845]/80 to-ag-navy/85" />
             
             {/* Motif géométrique */}
             <div className="absolute inset-0 opacity-10">
