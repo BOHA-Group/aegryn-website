@@ -239,7 +239,7 @@ export default function TalentHiringForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-lg w-full md:w-auto inline-flex items-center justify-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white bg-ag-navy px-8 py-4 hover:bg-ag-apex hover:text-ag-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="rounded-lg w-full md:w-auto inline-flex items-center justify-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-8 py-4 hover:bg-ag-apex/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

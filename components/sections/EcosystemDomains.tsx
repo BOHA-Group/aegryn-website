@@ -126,7 +126,7 @@ export function EcosystemDomains() {
         <div className="border-t border-ag-border pt-8 flex items-center justify-end">
           <Link
             href="/transact/how-to-sell"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-6 py-3 rounded-lg hover:bg-ag-black hover:text-white hover:border-ag-black transition-all duration-300"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-navy bg-ag-apex px-6 py-3 rounded-lg hover:bg-ag-apex/90 transition-all duration-300"
           >
             {t('cta')} <ArrowUpRight size={12} />
           </Link>

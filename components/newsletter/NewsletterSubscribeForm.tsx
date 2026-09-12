@@ -60,7 +60,7 @@ export function NewsletterSubscribeForm({ locale }: Props) {
       <button
         type="submit"
         disabled={status === 'loading' || isLoggedIn === null}
-        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors disabled:opacity-50"
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-apex/90 transition-colors disabled:opacity-50"
       >
         {status === 'loading' ? t('newsletterSubscribing') : t('newsletterCta')}
         {status !== 'loading' && <ArrowUpRight size={12} />}

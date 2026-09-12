@@ -148,7 +148,7 @@ export function GradePricing() {
                   href={`/${locale}/grade/submit?pack=${tierToPackKey[tier.name] || 'standard'}`}
                   className={`inline-flex items-center justify-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-4 rounded-xl transition-all ${
                     tier.highlight
-                      ? 'bg-ag-navy text-white hover:bg-ag-navy-mid'
+                      ? 'bg-ag-apex text-ag-navy hover:bg-ag-apex/90'
                       : 'bg-white/10 text-white hover:bg-white/20 border border-white/15'
                   }`}
                 >
