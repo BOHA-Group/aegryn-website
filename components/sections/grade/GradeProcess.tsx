@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
-import { ChevronDown } from 'lucide-react'
+import { FileText, Search, Award, CheckCircle2 } from 'lucide-react'
 
 type ProcessStep = {
   num: string
@@ -13,17 +13,18 @@ type ProcessStep = {
   data: string
 }
 
+const STEP_ICONS = [FileText, Search, Award, CheckCircle2]
+
 export function GradeProcess() {
   const t     = useTranslations('grade.process')
   const ref   = useRef<HTMLElement>(null)
   const steps = t.raw('steps') as ProcessStep[]
-  const [open, setOpen] = useState<number | null>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo('.gprocess-step',
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, stagger: 0.1, ease: 'expo.out', duration: 0.7,
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, stagger: 0.15, ease: 'expo.out', duration: 0.8,
           scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true } }
       )
     }, ref)
@@ -34,79 +35,100 @@ export function GradeProcess() {
     <section ref={ref} className="rounded-lg bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header row */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">
+        {/* Header */}
+        <div className="mb-14 max-w-3xl">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('label')}
           </p>
-          <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-3"
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+          >
+            Processus de certification
+          </h2>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
             {t('duration')}
           </p>
         </div>
 
-        {/* Steps — accordion on mobile, expanded list on desktop */}
-        <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
-          {steps.map(({ num, title, desc, detail, data }, i) => (
-            <div key={num} className="gprocess-step bg-ag-white">
+        {/* Timeline visuelle step-by-step */}
+        <div className="relative">
+          {/* Ligne verticale (cachée sur mobile) */}
+          <div className="hidden md:block absolute left-[31px] top-8 bottom-8 w-px bg-ag-border" />
 
-              {/* Always visible row */}
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="rounded-lg w-full text-left grid grid-cols-[64px_1fr_auto] gap-6 px-6 py-7 hover:bg-ag-off-white transition-colors"
-              >
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex font-bold">
-                  {num}
-                </span>
-                <div>
-                  <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug mb-1">
-                    {title}
-                  </h3>
-                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
-                    {desc}
-                  </p>
-                </div>
-                <ChevronDown
-                  size={14}
-                  className={`shrink-0 mt-1 text-ag-gray-light transition-transform duration-200 ${
-                    open === i ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
+          {/* Steps */}
+          <div className="flex flex-col gap-6">
+            {steps.map(({ num, title, desc, detail, data }, i) => {
+              const Icon = STEP_ICONS[i] || FileText
+              const isLast = i === steps.length - 1
+              
+              return (
+                <div key={num} className="gprocess-step relative">
+                  
+                  {/* Card */}
+                  <div className="flex gap-6 items-start">
+                    
+                    {/* Numéro + icône */}
+                    <div className="shrink-0 flex flex-col items-center gap-2">
+                      <div className="w-16 h-16 rounded-2xl bg-ag-apex flex items-center justify-center relative z-10">
+                        <Icon size={24} className="text-ag-navy" />
+                      </div>
+                      <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light font-bold">
+                        {num}
+                      </span>
+                    </div>
 
-              {/* Expandable detail */}
-              {open === i && (
-                <div className="px-6 pb-8 pt-2 border-t border-ag-border bg-ag-off-white grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                      {t('detailLabel')}
-                    </p>
-                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-                      {detail}
-                    </p>
+                    {/* Contenu */}
+                    <div className="flex-1 bg-ag-off-white border border-ag-border rounded-2xl p-6 md:p-8">
+                      <h3 className="font-sans font-bold text-ag-black text-[17px] leading-snug mb-3">
+                        {title}
+                      </h3>
+                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-6">
+                        {desc}
+                      </p>
+
+                      {/* Détails en 2 colonnes */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-ag-border">
+                        <div>
+                          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                            {t('detailLabel')}
+                          </p>
+                          <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                            {detail}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                            {t('dataLabel')}
+                          </p>
+                          <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+                            {data}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
-                  <div>
-                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                      {t('dataLabel')}
-                    </p>
-                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-                      {data}
-                    </p>
-                  </div>
-                </div>
-              )}
 
-            </div>
-          ))}
+                  {/* Connecteur mobile (flèche) */}
+                  {!isLast && (
+                    <div className="md:hidden flex justify-center py-2">
+                      <div className="w-px h-6 bg-ag-border" />
+                    </div>
+                  )}
+
+                </div>
+              )
+            })}
+          </div>
         </div>
 
         {/* Contestation note */}
-        <div className="mt-10 border border-ag-border rounded-2xl p-6 bg-ag-off-white grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-              {t('contestLabel')}
-            </p>
-          </div>
-          <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
+        <div className="mt-12 border border-ag-border rounded-2xl p-6 bg-ag-off-white">
+          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">
+            {t('contestLabel')}
+          </p>
+          <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
             {t('contestDesc')}
           </p>
         </div>
