@@ -3311,58 +3311,36 @@
         }
       ]
     },
-    "process": {
-      "label": "Proceso de certificación",
-      "duration": "De 15 a 35 días hábiles según el plan",
-      "contestLabel": "Revisión & contestación",
-      "detailLabel": "Detalle",
-      "dataLabel": "Datos requeridos",
-      "contestDesc": "Un grade puede impugnarse en los 15 días hábiles siguientes a su emisión. La solicitud de revisión es examinada por un analista senior diferente al original. En caso de discrepancia significativa, se activa un procedimiento de arbitraje independiente.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Submission & pre-qualification",
-          "desc": "Online form + initial documentation. Pre-qualification within 5 business days.",
-          "detail": "Data room access is established. Completeness of submitted documentation is verified. Pre-qualification letter issued within 5 business days confirming scope, timeline, and any missing items.",
-          "data": "Organisation documents, financial statements (last 2 years), IP register, key contracts, organisational chart"
-        },
-        {
-          "num": "02",
-          "title": "Technical & security analysis (C + S)",
-          "desc": "Code and security review by certified Aegryn analysts.",
-          "detail": "Source code review, IP chain-of-title verification, automated and manual security audit, CVE scan, EU regulatory compliance review (NIS2, DORA, GDPR). Two senior analysts work independently.",
-          "data": "Source code repository, security policies, vulnerability scan reports, GDPR processing register, cloud architecture documentation"
-        },
-        {
-          "num": "03",
-          "title": "Financial & governance analysis (F + I)",
-          "desc": "Financial metrics audit and governance integrity review.",
-          "detail": "ARR/MRR verification against source documents, client concentration analysis, cap table review, regulatory and contractual compliance check, IP rights formalisation verification, dispute history.",
-          "data": "Accounting records, revenue documentation, cap table, shareholder agreements, client contracts, regulatory filings"
-        },
-        {
-          "num": "04",
-          "title": "Organisational analysis (O)",
-          "desc": "Organisational resilience and succession readiness assessment.",
-          "detail": "Founder dependency assessment, management team depth interview, succession plan review, retention analysis and key-person risk evaluation. Organisations with critical key-person dependency are flagged systematically.",
-          "data": "Org chart, key-person contracts, succession documentation, management team CVs, retention data"
-        },
-        {
-          "num": "05",
-          "title": "Deliberation & grade determination",
-          "desc": "Both analysts deliberate and produce the conclusive report following the CIFSO 5000 protocol.",
-          "detail": "Both analysts deliberate on their independent findings. The protocol requires agreement within ±1 sub-code. A discrepancy triggers an arbitration procedure. The final grade is documented with full scoring rationale.",
-          "data": "All preceding analysis outputs, scoring grid, sub-code rationale, disagreement log if applicable"
-        },
-        {
-          "num": "06",
-          "title": "Issuance & publication",
-          "desc": "Grade issued, registered, and certificate delivered to the organisation.",
-          "detail": "The official grade is issued and the certificate is sent to the certified organisation. The grade is versioned and published in the Aegryn certified register. Validity: 12 months (Express/Standard) or 18 months (Premium).",
-          "data": "Final certification report, certificate document, register entry, sub-code table"
-        }
-      ]
-    },
+    "process": [
+      {
+        "num": "01",
+        "title": "Presentación",
+        "desc": "Presenta su expediente a través de nuestra plataforma segura.",
+        "detail": "Complete el formulario de presentación con la información clave de su organización. Cargue los documentos requeridos (sala de datos, estados financieros, acceso al código base si corresponde). Precalificación en 5 días hábiles.",
+        "data": "Formulario de presentación, sala de datos, estados financieros, acceso al código base, documentación IP"
+      },
+      {
+        "num": "02",
+        "title": "Auditoría CIFSO 5000",
+        "desc": "Nuestros analistas certificados auditan su organización en las 5 dimensiones CIFSO.",
+        "detail": "Análisis en profundidad de su Capital e IP, Integridad y Gobernanza, Finanzas y Métricas, Seguridad y Soberanía, Organización y Talento. Dos analistas senior independientes siguen un protocolo reproducible. Duración: 15 a 35 días según el formato elegido.",
+        "data": "Revisión técnica, auditoría financiera, verificación IP, evaluación de seguridad, entrevistas estructuradas"
+      },
+      {
+        "num": "03",
+        "title": "Calificación e informe",
+        "desc": "Su calificación oficial se determina según una cuadrícula objetiva y reproducible.",
+        "detail": "Los analistas deliberan y producen el informe de certificación independiente. La calificación (★ a B) se calcula en base a la puntuación total /100. El informe incluye los subcódigos detallados por dimensión y las recomendaciones de mejora.",
+        "data": "Informe de certificación completo, calificación oficial, tabla de subcódigos, recomendaciones"
+      },
+      {
+        "num": "04",
+        "title": "Certificación",
+        "desc": "Recibe su certificado oficial y su calificación se publica en el registro.",
+        "detail": "El certificado CIFSO 5000 se emite y se entrega a su organización. Su calificación se versiona y se publica en el registro certificado de Aegryn, consultable por inversores, adquirentes y socios calificados. Validez: 12 o 18 meses según el formato.",
+        "data": "Certificado oficial, inscripción en el registro, insignia CIFSO 5000, acceso al portal certificado"
+      }
+    ],
     "submit": {
       "label": "Enviar un activo",
       "title": "Obtén el grade que\nle da valor a tu activo.",

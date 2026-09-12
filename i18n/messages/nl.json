@@ -3311,58 +3311,36 @@
         }
       ]
     },
-    "process": {
-      "label": "Certificeringsproces",
-      "duration": "15 tot 35 werkdagen afhankelijk van het pakket",
-      "contestLabel": "Herziening & contestatie",
-      "detailLabel": "Detail",
-      "dataLabel": "Vereiste gegevens",
-      "contestDesc": "Een grade kan worden betwist binnen 15 werkdagen na afgifte. Het herzieningsverzoek wordt onderzocht door een andere senior analist. Bij een significante afwijking wordt een onafhankelijke arbitrageprocedure gestart.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Indiening & pre-kwalificatie",
-          "desc": "Online formulier + initiële documentatie. Pre-kwalificatie binnen 5 werkdagen.",
-          "detail": "Toegang tot de dataroom wordt opgezet. De volledigheid van de ingediende documentatie wordt geverifieerd. Pre-kwalificatiebrief binnen 5 werkdagen met bevestiging van scope, tijdlijn en eventuele ontbrekende items.",
-          "data": "Organisatiedocumenten, jaarrekeningen (laatste 2 jaar), IP-register, sleutelcontracten, organigram"
-        },
-        {
-          "num": "02",
-          "title": "Technische & beveiligingsanalyse (C + S)",
-          "desc": "Code- en beveiligingsreview door gecertificeerde Aegryn-analisten.",
-          "detail": "Review van de broncode, verificatie van de IP-eigendomsketen, geautomatiseerde en handmatige beveiligingsaudit, CVE-scan, EU-regelgevingsnalevingsreview (NIS2, DORA, AVG). Twee senior analisten werken onafhankelijk.",
-          "data": "Broncode-repository, beveiligingsbeleid, kwetsbaarheidsscanrapporten, AVG-verwerkingsregister, cloudarchitectuurdocumentatie"
-        },
-        {
-          "num": "03",
-          "title": "Financiële & governanceanalyse (F + I)",
-          "desc": "Audit van financiële statistieken en review van governance-integriteit.",
-          "detail": "Verificatie van ARR/MRR aan de hand van brondocumenten, klantconcentratieanalyse, cap-table-review, controle van regelgevings- en contractuele naleving, verificatie van de formalisering van IP-rechten, geschillenhistoriek.",
-          "data": "Boekhoudkundige gegevens, omzetdocumentatie, cap table, aandeelhoudersovereenkomsten, klantcontracten, regelgevingsaangiften"
-        },
-        {
-          "num": "04",
-          "title": "Organisatorische analyse (O)",
-          "desc": "Beoordeling van organisatorische veerkracht en opvolgingsgereedheid.",
-          "detail": "Beoordeling van oprichterafhankelijkheid, diepte-interview met het managementteam, review van het opvolgingsplan, retentieanalyse en evaluatie van key-person-risico. Organisaties met kritieke key-person-afhankelijkheid worden systematisch gemarkeerd.",
-          "data": "Organigram, contracten van sleutelpersonen, opvolgingsdocumentatie, cv's van het managementteam, retentiedata"
-        },
-        {
-          "num": "05",
-          "title": "Beraadslaging & vaststelling van de grade",
-          "desc": "Beide analisten beraadslagen en produceren het sluitende rapport volgens het CIFSO-5000-protocol.",
-          "detail": "Beide analisten beraadslagen over hun onafhankelijke bevindingen. Het protocol vereist overeenstemming binnen ±1 subcode. Een discrepantie activeert een arbitrageprocedure. De eindbeoordeling wordt gedocumenteerd met volledige scorerationale.",
-          "data": "Alle voorgaande analyse-output, scoringsrooster, subcoderationale, eventueel onenigheidslogboek"
-        },
-        {
-          "num": "06",
-          "title": "Afgifte & publicatie",
-          "desc": "Grade afgegeven, geregistreerd en certificaat overhandigd aan de organisatie.",
-          "detail": "De officiële grade wordt afgegeven en het certificaat wordt naar de gecertificeerde organisatie gestuurd. De grade wordt geversioneerd en gepubliceerd in het Aegryn-register van gecertificeerde organisaties. Geldigheid: 12 maanden (Express/Standard) of 18 maanden (Premium).",
-          "data": "Definitief certificeringsrapport, certificaatdocument, registerinschrijving, subcodetabel"
-        }
-      ]
-    },
+    "process": [
+      {
+        "num": "01",
+        "title": "Indiening",
+        "desc": "U dient uw dossier in via ons beveiligde platform.",
+        "detail": "Vul het indieningsformulier in met de belangrijkste informatie van uw organisatie. Upload de vereiste documenten (dataroom, financiële overzichten, codebase-toegang indien van toepassing). Voorkwalificatie binnen 5 werkdagen.",
+        "data": "Indieningsformulier, dataroom, financiële overzichten, codebase-toegang, IP-documentatie"
+      },
+      {
+        "num": "02",
+        "title": "CIFSO 5000 Audit",
+        "desc": "Onze gecertificeerde analisten auditeren uw organisatie op de 5 CIFSO-dimensies.",
+        "detail": "Diepgaande analyse van uw Kapitaal & IP, Integriteit & Governance, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent. Twee onafhankelijke senior-analisten volgen een reproduceerbaar protocol. Duur: 15 tot 35 dagen afhankelijk van het gekozen formaat.",
+        "data": "Technische review, financiële audit, IP-verificatie, veiligheidsbeoordeling, gestructureerde interviews"
+      },
+      {
+        "num": "03",
+        "title": "Beoordeling & rapport",
+        "desc": "Uw officiële beoordeling wordt bepaald volgens een objectief en reproduceerbaar raster.",
+        "detail": "Analisten beraadslagen en produceren het onafhankelijke certificeringsrapport. De beoordeling (★ tot B) wordt berekend op basis van de totale score /100. Het rapport bevat gedetailleerde subcodes per dimensie en verbeteringsaanbevelingen.",
+        "data": "Volledig certificeringsrapport, officiële beoordeling, subcode-tabel, aanbevelingen"
+      },
+      {
+        "num": "04",
+        "title": "Certificering",
+        "desc": "U ontvangt uw officiële certificaat en uw beoordeling wordt gepubliceerd in het register.",
+        "detail": "Het CIFSO 5000-certificaat wordt uitgegeven en aan uw organisatie overhandigd. Uw beoordeling wordt geversioneerd en gepubliceerd in het gecertificeerde Aegryn-register, raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 of 18 maanden afhankelijk van het formaat.",
+        "data": "Officieel certificaat, registerinschrijving, CIFSO 5000-badge, toegang tot gecertificeerd portaal"
+      }
+    ],
     "submit": {
       "label": "Asset indienen",
       "title": "Ontvang de grade die\nwaarde geeft aan uw asset.",

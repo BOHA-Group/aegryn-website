@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
-import { FileText, Search, Award, CheckCircle2 } from 'lucide-react'
+import { Upload, Search, FileCheck, Award } from 'lucide-react'
 
 type ProcessStep = {
   num: string
@@ -13,7 +13,7 @@ type ProcessStep = {
   data: string
 }
 
-const STEP_ICONS = [FileText, Search, Award, CheckCircle2]
+const STEP_ICONS = [Upload, Search, FileCheck, Award]
 
 export function GradeProcess() {
   const t     = useTranslations('grade.process')
@@ -59,7 +59,7 @@ export function GradeProcess() {
           {/* Steps */}
           <div className="flex flex-col gap-6">
             {steps.map(({ num, title, desc, detail, data }, i) => {
-              const Icon = STEP_ICONS[i] || FileText
+              const Icon = STEP_ICONS[i] || Upload
               const isLast = i === steps.length - 1
               
               return (

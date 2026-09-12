@@ -2635,58 +2635,36 @@
         }
       ]
     },
-    "process": {
-      "label": "Processus de certification",
-      "duration": "15 à 35 jours ouvrés selon le forfait",
-      "contestLabel": "Révision & contestation",
-      "detailLabel": "Détail",
-      "dataLabel": "Données requises",
-      "contestDesc": "Un grade peut être contesté dans les 15 jours ouvrés suivant son émission. La demande de révision est examinée par un analyste senior Aegryn différent de l'analyste original. En cas d'écart significatif, une procédure d'arbitrage indépendante est déclenchée. Toutes les révisions sont versionnées et le grade original reste visible dans le registre public.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Soumission & pré-qualification",
-          "desc": "Formulaire en ligne + documentation initiale. Pré-qualification sous 5 jours ouvrés.",
-          "detail": "L'accès à la data room est établi. La complétude de la documentation soumise est vérifiée. Une lettre de pré-qualification est émise sous 5 jours ouvrés confirmant le périmètre, le calendrier et les éventuels éléments manquants.",
-          "data": "Documents de l'organisation, états financiers (2 derniers exercices), registre IP, contrats clés, organigramme"
-        },
-        {
-          "num": "02",
-          "title": "Analyse technique & sécurité (C + S)",
-          "desc": "Revue du code et audit de sécurité par des analystes certifiés Aegryn.",
-          "detail": "Revue du code source, vérification de la chaîne de titres IP, audit de sécurité automatisé et manuel, scan CVE, revue de conformité réglementaire UE (NIS2, DORA, RGPD). Deux analystes seniors travaillent de façon indépendante.",
-          "data": "Dépôt de code source, politiques de sécurité, rapports de scan de vulnérabilités, registre de traitement RGPD, documentation de l'architecture cloud"
-        },
-        {
-          "num": "03",
-          "title": "Analyse financière & gouvernance (F + I)",
-          "desc": "Audit des métriques financières et revue de l'intégrité de la gouvernance.",
-          "detail": "Vérification ARR/MRR sur documents sources, analyse de la concentration client, revue du cap table, vérification de la conformité réglementaire et contractuelle, formalisation des droits IP, historique des litiges.",
-          "data": "Documents comptables, justificatifs de revenus, cap table, pactes d'actionnaires, contrats clients, dépôts réglementaires"
-        },
-        {
-          "num": "04",
-          "title": "Analyse organisationnelle (O)",
-          "desc": "Évaluation de la résilience organisationnelle et de la préparation à la succession.",
-          "detail": "Évaluation de la dépendance fondateur, entretien sur la profondeur de l'équipe de direction, revue du plan de succession, analyse de la rétention et évaluation du risque personne-clé. Les organisations avec une dépendance critique à une personne-clé sont systématiquement signalées.",
-          "data": "Organigramme, contrats des personnes-clés, documentation de succession, CV de l'équipe de direction, données de rétention"
-        },
-        {
-          "num": "05",
-          "title": "Délibération & détermination du grade",
-          "desc": "Les deux analystes délibèrent et produisent le rapport conclusif selon le protocole CIFSO 5000.",
-          "detail": "Les deux analystes délibèrent sur leurs constats indépendants. Le protocole exige un accord à ±1 sous-code. Un écart déclenche une procédure d'arbitrage. Le grade final est documenté avec la justification complète du scoring.",
-          "data": "Tous les outputs d'analyse précédents, grille de scoring, justification des sous-codes, journal de désaccord le cas échéant"
-        },
-        {
-          "num": "06",
-          "title": "Émission & publication",
-          "desc": "Grade émis, enregistré et certificat remis à l'organisation.",
-          "detail": "Le grade officiel est émis et le certificat est remis à l'organisation certifiée. Le grade est versionné et publié dans le registre certifié Aegryn. Validité : 12 mois (Express/Standard) ou 18 mois (Premium).",
-          "data": "Rapport de certification final, document de certificat, entrée au registre, tableau de sous-codes"
-        }
-      ]
-    },
+    "process": [
+      {
+        "num": "01",
+        "title": "Soumission",
+        "desc": "Vous soumettez votre dossier via notre plateforme sécurisée.",
+        "detail": "Remplissez le formulaire de soumission avec les informations clés de votre organisation. Téléchargez les documents requis (data room, états financiers, accès codebase si applicable). Pré-qualification sous 5 jours ouvrés.",
+        "data": "Formulaire de soumission, data room, états financiers, accès codebase, documentation IP"
+      },
+      {
+        "num": "02",
+        "title": "Audit CIFSO 5000",
+        "desc": "Nos analystes certifiés auditent votre organisation sur les 5 dimensions CIFSO.",
+        "detail": "Analyse approfondie de votre Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Deux analystes seniors indépendants suivent un protocole reproductible. Durée : 15 à 35 jours selon le format choisi.",
+        "data": "Revue technique, audit financier, vérification IP, évaluation sécurité, entretiens structurés"
+      },
+      {
+        "num": "03",
+        "title": "Notation & rapport",
+        "desc": "Votre grade officiel est déterminé selon une grille objective et reproductible.",
+        "detail": "Les analystes délibèrent et produisent le rapport de certification indépendant. Le grade (★ à B) est calculé sur la base du score total /100. Le rapport inclut les sous-codes détaillés par dimension et les recommandations d'amélioration.",
+        "data": "Rapport de certification complet, grade officiel, tableau de sous-codes, recommandations"
+      },
+      {
+        "num": "04",
+        "title": "Certification",
+        "desc": "Vous recevez votre certificat officiel et votre grade est publié au registre.",
+        "detail": "Le certificat CIFSO 5000 est émis et remis à votre organisation. Votre grade est versionné et publié dans le registre certifié Aegryn, consultable par les investisseurs, acquéreurs et partenaires qualifiés. Validité : 12 ou 18 mois selon le format.",
+        "data": "Certificat officiel, inscription au registre, badge CIFSO 5000, accès portail certifié"
+      }
+    ],
     "submit": {
       "label": "Soumettre un actif",
       "title": "Obtenez le grade\nqui donne du prix à votre actif.",
