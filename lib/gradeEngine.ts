@@ -103,7 +103,19 @@ export interface SecurityInput {
   rgpdTransferReadiness?: 'clean' | 'warning' | 'blocking'  // CIFSO v4.0 I-27
   /** S-15 — Politique de gestion des accès documentée (RBAC/IAM) */
   accessManagement?: YesNo            // CIFSO v4.0 V3 — règle MFA/S-15
+  /* ── Exposition IA (S-41 à S-46) : maîtrise des actifs, des données et de la protection des clients ── */
+  /** Niveau d'usage de solutions IA tierces non souveraines (hébergées hors UE/CH, sans engagement contractuel de non-entraînement) */
+  aiExposure?: AiExposure
+  /** Inventaire des services IA et des flux de données associés (S-41) */
+  aiInventory?: YesNo
+  /** Politique d'usage IA formalisée : données autorisées, interdiction des données clients/sensibles sans cadre (S-42) */
+  aiPolicy?: YesNo
+  /** Données clients transmises à des modèles tiers sans contrat de traitement / clause de non-entraînement (S-45) */
+  aiClientDataExposed?: YesNo
 }
+
+/** Exposition IA : none = pas d'IA tierce ; sovereign = fournisseurs UE/CH ou auto-hébergés ; mixed = usage encadré de fournisseurs non souverains ; massive_non_sovereign = dépendance forte à des fournisseurs non souverains */
+export type AiExposure = 'none' | 'sovereign' | 'mixed' | 'massive_non_sovereign'
 
 /** CIFSO v4.0 — Dimension O : Organisation & Talent (20 pts) */
 export interface OrganisationInput {
@@ -596,6 +608,26 @@ function scoreSecurity(input: SecurityInput): DimensionResult {
     score -= 1; rationale.push('Transferts RGPD en attente de conformité — points d\'attention identifiés')
   } else if (input.rgpdTransferReadiness === 'clean') {
     rationale.push('Transferts RGPD conformes (SCCs / décision d\'adéquation)')
+  }
+
+  // ── Exposition IA (S-41 à S-46) : maîtrise des actifs, des données et protection des clients ──
+  if (input.aiClientDataExposed === 'yes') {
+    score -= 3; rationale.push('Données clients transmises à des modèles IA tiers sans contrat de traitement ni clause de non-entraînement (S-45) : risque public, pénalité forte')
+  }
+  if (input.aiExposure === 'massive_non_sovereign') {
+    score -= 2; rationale.push('Dépendance forte à des solutions IA non souveraines (S-44) : maîtrise des actifs et des données affaiblie')
+  } else if (input.aiExposure === 'mixed') {
+    if (input.aiPolicy === 'yes' && input.aiInventory === 'yes') rationale.push('Usage encadré de fournisseurs IA non souverains : inventaire et politique en place (S-43)')
+    else { score -= 1; rationale.push('Usage de fournisseurs IA non souverains sans cadre complet (S-43) : pénalité') }
+  } else if (input.aiExposure === 'sovereign') {
+    if (input.aiInventory === 'yes') { score = Math.min(score + 1, 20); rationale.push('IA souveraine ou auto-hébergée, inventoriée (S-46) : bonus') }
+    else rationale.push('IA souveraine ou auto-hébergée (S-46)')
+  } else if (input.aiExposure === 'none') {
+    rationale.push('Aucune IA tierce dans la chaîne de valeur')
+  }
+  if (input.aiExposure && input.aiExposure !== 'none') {
+    if (input.aiInventory !== 'yes') rationale.push('Inventaire des services IA absent (S-41)')
+    if (input.aiPolicy !== 'yes')    rationale.push('Politique d\'usage IA non formalisée (S-42)')
   }
 
   // Certification externe — max 1 pt

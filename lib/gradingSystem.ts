@@ -240,6 +240,13 @@ export const SECURITY_SUBCODES: SubcodeDef[] = [
   // Certification partenaire
   { code: 'S-39', group: 'Certification partenaire', fr: 'Audit co-signé partenaire cybersécurité Aegryn', en: 'Audit co-signed by Aegryn cybersecurity partner' },
   { code: 'S-40', group: 'Certification partenaire', fr: 'Audit partenaire en cours', en: 'Partner audit in progress' },
+  // Exposition IA : maîtrise des actifs, des données et protection des clients
+  { code: 'S-41', group: 'Exposition IA', fr: 'Inventaire des services IA et des flux de données associés tenu à jour', en: 'Up-to-date inventory of AI services and associated data flows' },
+  { code: 'S-42', group: 'Exposition IA', fr: 'Politique d\'usage IA formalisée (données autorisées, données clients et sensibles exclues sans cadre)', en: 'Formal AI usage policy (allowed data, client and sensitive data excluded without framework)' },
+  { code: 'S-43', group: 'Exposition IA', fr: 'Fournisseurs IA non souverains utilisés sous cadre contractuel (DPA, non-entraînement, localisation)', en: 'Non-sovereign AI providers used under contractual framework (DPA, no-training, data residency)' },
+  { code: 'S-44', group: 'Exposition IA', fr: 'Dépendance forte à des solutions IA non souveraines pour des processus cœur (risque public)', en: 'Heavy dependency on non-sovereign AI solutions for core processes (public risk)' },
+  { code: 'S-45', group: 'Exposition IA', fr: 'Données clients transmises à des modèles IA tiers sans contrat ni clause de non-entraînement (pénalité forte)', en: 'Client data sent to third-party AI models without contract or no-training clause (heavy penalty)' },
+  { code: 'S-46', group: 'Exposition IA', fr: 'IA souveraine (UE/CH) ou auto-hébergée, inventoriée et gouvernée', en: 'Sovereign (EU/CH) or self-hosted AI, inventoried and governed' },
   // Spécial
   { code: 'S-*',  group: 'Spécial', fr: "Audit de sécurité approfondi recommandé, à la charge de l'acquéreur", en: "Detailed security audit recommended, at buyer's expense" },
   { code: 'S-**', group: 'Spécial', fr: 'Remédiation sécurité requise avant transfert', en: 'Security remediation required before transfer' },

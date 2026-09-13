@@ -3,10 +3,22 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options",    "value": "nosniff" },
-        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy",        "value": "camera=(), microphone=(), geolocation=()" },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
@@ -59,37 +71,87 @@
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "aegryn-website.vercel.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "aegryn-website.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/(.*)",
-      "missing": [{ "type": "host", "value": "aegryn.com" }],
-      "has": [{ "type": "host", "value": "(?i).*\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "missing": [
+        {
+          "type": "host",
+          "value": "aegryn.com"
+        }
+      ],
+      "has": [
+        {
+          "type": "host",
+          "value": "(?i).*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "aegryn-website.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aegryn-website.vercel.app"
+        }
+      ],
       "destination": "https://aegryn.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "aegryn-website-git-main-boha-groups-projects.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aegryn-website-git-main-boha-groups-projects.vercel.app"
+        }
+      ],
       "destination": "https://aegryn.com/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "aegryn-website-3q4zr8lf1-boha-groups-projects.vercel.app"
+        }
+      ],
       "destination": "https://aegryn.com/:path*",
       "permanent": true
     },
@@ -135,19 +197,34 @@
     },
     {
       "source": "/fr/:path*",
-      "has": [{ "type": "host", "value": "boha-group.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "boha-group.com"
+        }
+      ],
       "destination": "https://aegryn.com/fr/:path*",
       "permanent": true
     },
     {
       "source": "/en/:path*",
-      "has": [{ "type": "host", "value": "boha-group.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "boha-group.com"
+        }
+      ],
       "destination": "https://aegryn.com/en/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "boha-group.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "boha-group.com"
+        }
+      ],
       "destination": "https://aegryn.com/:path*",
       "permanent": true
     }
@@ -170,6 +247,14 @@
     {
       "path": "/api/cron/magazine-publish",
       "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/index-refresh",
+      "schedule": "0 4 * * 1"
+    },
+    {
+      "path": "/api/cron/index-refresh",
+      "schedule": "0 5 * * 1"
     }
   ]
 }

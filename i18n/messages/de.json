@@ -1942,58 +1942,72 @@
     "cifs": [
       {
         "code": "C",
-        "name": "Code",
-        "full": "Code Quality & Architecture",
-        "weight": "25 Pkt.",
-        "desc": "Quellcodequalität, Testabdeckung, technische Schulden, Dokumentation, Implementierungssicherheit und skalierbare Architektur.",
+        "name": "Code & Architektur",
+        "full": "Code, Architektur & Wartbarkeit",
+        "weight": "20 Pkt.",
+        "desc": "Qualität des Quellcodes, Architektur, Testabdeckung, technische Schulden, Abhängigkeiten, Dokumentation. Was das Asset ohne seinen Urheber übernehmbar macht. Prüfung durch Senior-Ingenieure.",
         "criteria": [
-          "Testabdeckung ≥ 70%",
-          "Dokumentierte technische Schulden",
+          "Testabdeckung ≥ 70 %",
+          "Technische Schulden dokumentiert und bewertet",
           "Keine kritischen Schwachstellen (OWASP Top 10)",
-          "Entkoppelte und skalierbare Architektur",
-          "Vollständige API-Dokumentation"
+          "Entkoppelte, skalierbare Architektur, aktuelle Abhängigkeiten",
+          "Vollständige API- und Architekturdokumentation"
         ]
       },
       {
         "code": "I",
-        "name": "IP",
-        "full": "Geistiges Eigentum & Burggraben",
-        "weight": "25 Pkt.",
-        "desc": "Geistiges Eigentum, Markteintrittsbarrieren, eingetragene Marken, Patente und nachhaltige Differenzierung.",
+        "name": "IP & Rechte",
+        "full": "Geistiges Eigentum, Rechte & Verträge",
+        "weight": "20 Pkt.",
+        "desc": "Marke, Übertragung der Softwarerechte, Open-Source-Lizenzen, Kunden- und Lieferantenverträge, Streitigkeiten. Die Rechtekette: was ein Erwerber zuerst prüft.",
         "criteria": [
-          "Marken in Zielgerichtsbarkeiten eingetragen",
-          "Keine aktiven IP-Streitigkeiten",
-          "Drittanbieter-Abhängigkeiten unter kompatiblen Lizenzen",
-          "Identifizierbarer Burggraben",
-          "Kundenverträge mit Wettbewerbsverboten"
+          "Marken in den Zieljurisdiktionen eingetragen",
+          "Übertragung der Softwarerechte unterzeichnet (Mitarbeitende, Dienstleister)",
+          "Drittabhängigkeiten unter kompatiblen Lizenzen",
+          "Kunden- und Lieferantenverträge unterzeichnet und archiviert",
+          "Keine aktiven IP- oder Vertragsstreitigkeiten"
         ]
       },
       {
         "code": "F",
-        "name": "Finance",
+        "name": "Finanzen & Kennzahlen",
         "full": "Finanzielle Gesundheit & Traktion",
-        "weight": "25 Pkt.",
-        "desc": "Wichtige Finanzkennzahlen: ARR, MRR, Churn, LTV/CAC, Burn Rate, Runway und Wachstumshistorie. Alle Daten werden gegen Quelldokumente geprüft.",
+        "weight": "20 Pkt.",
+        "desc": "ARR, MRR, Wiederkehr, Churn, Margen, Cashflow, Kundenkonzentration, Wachstumshistorie. Alle Daten werden anhand von Unterlagen geprüft.",
         "criteria": [
           "ARR über mindestens 24 Monate dokumentiert",
-          "Monatlicher Churn < 3%",
-          "Bruttomargen > 60% (SaaS)",
+          "Monatlicher Churn < 3 %",
+          "Bruttomargen > 60 % (SaaS)",
           "Runway ≥ 12 Monate",
-          "Dokumentiertes YoY ARR-Wachstum"
+          "Jährliches ARR-Wachstum dokumentiert"
         ]
       },
       {
         "code": "S",
-        "name": "Security",
-        "full": "Sicherheit & Governance",
-        "weight": "25 Pkt.",
-        "desc": "DSGVO- und Schweizer DSG-Konformität, Infrastruktursicherheit, Zugriffsmanagement und Datenschutz-Governance.",
+        "name": "Sicherheit & Souveränität",
+        "full": "Sicherheit, Souveränität & KI-Exposition",
+        "weight": "20 Pkt.",
+        "desc": "DSGVO- und DSG-Konformität, Infrastruktursicherheit, Zugriffsverwaltung, Drittaudits und KI-Exposition: Anbieterinventar, Souveränität der übermittelten Daten, Kundenschutz. Die tatsächliche Beherrschung von Vermögenswerten und Daten.",
         "criteria": [
           "DSGVO / DSG-Konformität dokumentiert",
-          "MFA-Authentifizierung für alle Admin-Zugänge",
-          "Verschlüsselung von Daten im Ruhezustand und bei der Übertragung",
+          "MFA für alle Admin-Zugänge, Verschlüsselung im Ruhezustand und bei Übertragung",
           "Drittanbieter-Sicherheitsaudit in den letzten 18 Monaten",
-          "Dokumentierte Vorfallsmanagement-Richtlinie"
+          "Inventar der KI-Dienste und formalisierte Nutzungsrichtlinie",
+          "Keine Kundendaten an Drittanbieter-KI ohne vertraglichen Rahmen"
+        ]
+      },
+      {
+        "code": "O",
+        "name": "Organisation & Talent",
+        "full": "Organisation, Talent & Nachfolge",
+        "weight": "20 Pkt.",
+        "desc": "Gründerabhängigkeit, Qualität des Führungsteams, Nachfolgeplan, Prozessdokumentation, Übertragungsfähigkeit. Ein zu gründerabhängiges Unternehmen wird 20 bis 30 % unter seinem inneren Wert gehandelt.",
+        "criteria": [
+          "Gründerabhängigkeit ≤ 50 % des Umsatzes",
+          "Mindestens ein N-1, der ohne den Gründer entscheiden kann",
+          "Dokumentierte operative Prozesse (Runbooks, SOPs)",
+          "Formalisierter Nachfolgeplan für Schlüsselpositionen",
+          "Fluktuation ≤ 15 % pro Jahr über 2 Jahre"
         ]
       }
     ],
@@ -2163,7 +2177,7 @@
       {
         "num": "02",
         "title": "CIFSO-Technische Prüfung (C + S)",
-        "desc": "Eingehende Analyse von Kapital & IP sowie Sicherheit & Souveränität durch zwei zertifizierte Senior-Analysten.",
+        "desc": "Eingehende Analyse von Code & Architektur sowie Sicherheit & Souveränität durch zwei zertifizierte Senior-Analysten.",
         "inputs": "Quellcode, IP-Dokumentation (Patente, Marken, Lizenzen), Sicherheitsrichtlinien, Schwachstellen-Scan-Berichte, DSGVO-Register, Cloud-Architektur",
         "outputs": "Technischer Prüfbericht mit C- und S-Bewertung, Identifizierung kritischer Schwachstellen, Überprüfung der IP-Eigentumskette",
         "outcomes": "Objektive Bewertung der Codequalität, IP-Eigentum und Cybersicherheitslage nach EU-Standards (NIS2, DORA, DSGVO)."
@@ -3166,7 +3180,7 @@
           "cifso": "Zertifiziert Code-Eigentum, IP-Übertragungskette, Marken- und Patentstatus, Open-Source-Compliance und Gründerrechtsabtretungen."
         },
         {
-          "dimension": "I · Integrität & Governance",
+          "dimension": "I · IP & Rechte",
           "existing": "Qualitätsmanagementsysteme decken Prozesse ab, aber nicht die Integrität der Kapitalstruktur, das Eigentümerregister oder die Compliance-Rückverfolgbarkeit.",
           "cifso": "Zertifiziert Cap-Table-Integrität, regulatorische Compliance, Gesellschaftsstruktur, historische Anpassungen und Dokumentationsgüte."
         },
@@ -3266,7 +3280,7 @@
         "10. Haftungsausschluss"
       ],
       "wpS1Title": "1. Was ist die Zertifizierung CIFSO 5000?",
-      "wpS1Body1": "Die <strong>Zertifizierung CIFSO 5000</strong> ist ein unabhängiges Organisationsbewertungsprotokoll, das von Aegryn entwickelt wurde. Es bewertet und zertifiziert den Wert und die Übertragbarkeit einer Organisation in fünf strukturierten Dimensionen: Kapital & geistiges Eigentum, Integrität & Governance, Finanzen & Kennzahlen, Sicherheit & Souveränität sowie Organisation & Talente.",
+      "wpS1Body1": "Die <strong>Zertifizierung CIFSO 5000</strong> ist ein unabhängiges Organisationsbewertungsprotokoll, das von Aegryn entwickelt wurde. Es bewertet und zertifiziert den Wert und die Übertragbarkeit einer Organisation in fünf strukturierten Dimensionen: Kapital & geistiges Eigentum, IP & Rechte, Finanzen & Kennzahlen, Sicherheit & Souveränität sowie Organisation & Talente.",
       "wpS1Body2": "Im Gegensatz zu bestehenden Zertifizierungsstandards, die Systeme, Prozesse und die operative Konformität prüfen, zertifiziert die Zertifizierung CIFSO 5000 den <em>Organisationswert</em>: die dokumentierte, verteidigbare Grundlage für eine Bewertung, eine Finanzierungsentscheidung, eine Investition oder eine Unternehmensübertragung. Das sind zwei verschiedene Objekte. Ergänzend, nicht konkurrierend.",
       "wpS1Callout": "„Während bestehende Standards Systeme zertifizieren, zertifiziert CIFSO 5000 Wert und Übertragbarkeit.“",
       "wpS2Title": "2. Für wen ist sie — Anwendungsfälle",
@@ -3305,7 +3319,18 @@
       "contactCta": "Kontakt aufnehmen",
       "processLabel": "Zertifizierungsprozess",
       "processTitle": "Zertifizierungsprozess",
-      "processDuration": "Von der Einreichung bis zur Notenvergabe: 15 bis 35 Arbeitstage je nach Grösse und Komplexität der Organisation."
+      "processDuration": "Von der Einreichung bis zur Notenvergabe: 15 bis 35 Arbeitstage je nach Grösse und Komplexität der Organisation.",
+      "deed": {
+        "label": "EIGENTUMSURKUNDE DES WERTS",
+        "title": "Eine Uhr ohne Papiere\nverliert einen Teil ihres Werts.",
+        "desc": "Ein Unternehmen ebenso. CIFSO 5000 ist das Äquivalent einer Eigentumsurkunde für das Unternehmen und die Bewertung seiner Vermögenswerte: es stellt fest, was die Organisation tatsächlich besitzt (Code, Rechte, Finanzen, Sicherheit, Organisation), bescheinigt, dass diese Vermögenswerte beherrscht und übertragbar sind, und legt ihren Referenzwert mit dem CIFSO Valuation Index als Quelle fest. Ohne dieses Dokument wird über den Wert gestritten; mit ihm wird er nachgewiesen.",
+        "points": [
+          "Was das Unternehmen besitzt: geprüftes Inventar seiner Vermögenswerte in fünf Dimensionen",
+          "Was es beherrscht: Rechtekette, Daten, Abhängigkeiten, KI-Exposition",
+          "Was es wert ist: Referenz-Multiplikator aus dem CIFSO Valuation Index",
+          "Was es übertragen kann: prüfbares Zertifikat, zwölf Monate gültig"
+        ]
+      }
     },
     "grades": [
       {
@@ -3345,28 +3370,28 @@
       "items": [
         {
           "code": "C",
-          "name": "Kapital & IP",
-          "desc": "Code, geistiges Eigentum, Marke, proprietäre Daten, Eigentumsnachweis. Alle immateriellen Vermögenswerte, die den übertragbaren Wert bilden."
+          "name": "Code & Architektur",
+          "desc": "Codequalität, Architektur, Tests, Dokumentation, technische Schulden, Abhängigkeiten. Was das Asset ohne seinen Urheber übernehmbar macht."
         },
         {
           "code": "I",
-          "name": "Integrität & Governance",
-          "desc": "Rechtsstruktur, Cap Table, regulatorische Compliance, Kundenverträge, Streitigkeiten, IP-Kette. Die rechtliche und organisatorische Solidität der Einheit."
+          "name": "IP & Rechte",
+          "desc": "Marke, Übertragung der Softwarerechte, Open-Source-Lizenzen, Kunden- und Lieferantenverträge, Streitigkeiten. Die Rechtekette: was ein Erwerber zuerst prüft."
         },
         {
           "code": "F",
           "name": "Finanzen & Kennzahlen",
-          "desc": "ARR/MRR, Wiederkehrende Einnahmen, Prüfbarkeit, Cashflow, Burn, Kundenkonzentration, Finanzgeschichte. Die wirtschaftliche Realität der Organisation."
+          "desc": "ARR/MRR, Wiederkehr, Prüfbarkeit, Margen, Cashflow, Kundenkonzentration, Finanzhistorie. Die wirtschaftliche Wahrheit der Organisation."
         },
         {
           "code": "S",
           "name": "Sicherheit & Souveränität",
-          "desc": "Cybersicherheit, NIS2/DORA/EU-KI-Gesetz-Compliance, technologische Unabhängigkeit, DSGVO. Widerstandsfähigkeit gegen digitale und regulatorische Risiken."
+          "desc": "Cybersicherheit, DSGVO, NIS2/DORA/AI Act, technologische Unabhängigkeit und KI-Exposition: nicht souveräne Anbieter, übermittelte Daten, Kundenschutz. Die tatsächliche Beherrschung von Vermögenswerten und Daten."
         },
         {
           "code": "O",
           "name": "Organisation & Talent",
-          "desc": "Gründerabhängigkeit, Qualität der Führungsmannschaft, Nachfolgeplan, Kultur und Mitarbeiterbindung. Organisationen mit zu starker Gründerabhängigkeit sind bei der Übertragung systematisch 20-30% weniger wert."
+          "desc": "Gründerabhängigkeit, Führungsteam, Nachfolgeplan, Kultur und Bindung. Ein zu gründerabhängiges Unternehmen ist bei der Übertragung systematisch 20 bis 30 % weniger wert."
         }
       ]
     },
@@ -5497,7 +5522,7 @@
         },
         {
           "code": "I",
-          "name": "Integrität & Governance",
+          "name": "IP & Rechte",
           "color": "#7B3FC4"
         },
         {
@@ -6071,6 +6096,13 @@
         "tested": "Getestete Backups, dokumentierte Wiederherstellung",
         "exists": "Backups vorhanden, nicht getestet",
         "none": "Kein Verfahren"
+      },
+      "aiExposure": "KI-Exposition: Anbieter und Daten",
+      "aiExposureOptions": {
+        "none": "Keine Drittanbieter-KI",
+        "sovereign": "Souveräne (EU/CH) oder selbst gehostete KI",
+        "mixed": "Nicht souveräne Anbieter, geregelte Nutzung (Verträge, keine Kundendaten)",
+        "massive": "Starke Abhängigkeit von nicht souveränen Anbietern (inkl. Kundendaten)"
       }
     },
     "org": {
@@ -6225,7 +6257,7 @@
         },
         {
           "code": "I",
-          "label": "Integrität & Governance",
+          "label": "IP & Rechte",
           "score": "16/20"
         },
         {
@@ -9747,7 +9779,7 @@
         },
         {
           "code": "I",
-          "dim": "Integrity & Governance",
+          "dim": "IP & Rechte",
           "desc": "Governance structure solidity, decision traceability, founder dependencies. Key for any transfer or investment process."
         },
         {
@@ -10362,7 +10394,7 @@
     ],
     "s1Title": "Wozu die CIFSO 5000-Zertifizierung dient",
     "s1Lead": "Bestehende Standards zertifizieren Systeme und Prozesse. CIFSO 5000 ist ein Qualitätsaudit der Bewertung der Vermögenswerte eines Unternehmens: es zertifiziert Wert und Übertragbarkeit einer Organisation.",
-    "s1P1": "Ein Unternehmen kann operativ vollständig konform und dennoch schwer zu bewerten, zu finanzieren oder zu übertragen sein. CIFSO 5000 schliesst diese Lücke: Es dokumentiert unabhängig und überprüfbar, was den realen Wert einer Organisation ausmacht — ihr intellektuelles Kapital, ihre Integrität, ihre finanzielle Gesundheit, ihre Sicherheit und ihre organisatorische Resilienz.",
+    "s1P1": "Ein Unternehmen kann operativ vollständig konform und dennoch schwer zu bewerten, zu finanzieren oder zu übertragen sein. Wie eine Sammleruhr ohne Papiere verliert es einen Teil seines Werts, weil der Nachweis fehlt. CIFSO 5000 schliesst diese Lücke: es ist die Eigentumsurkunde des Werts der Organisation. Es dokumentiert unabhängig und überprüfbar, was ihren realen Wert ausmacht: Code und Architektur, Rechte, finanzielle Gesundheit, Sicherheit und Souveränität (einschliesslich der Exposition gegenüber Drittanbieter-KI), organisatorische Resilienz. Und es legt den Referenzwert mit dem CIFSO Valuation Index als Quelle fest.",
     "s1P2": "Das Ergebnis ist eine offizielle, versionierte und belastbare Note, die Investoren, Käufern, Banken, Partnern oder Nachfolgern als Nachweis Dritter für Qualität und Übertragbarkeit der Organisation vorgelegt werden kann.",
     "s1Stats": [
       {
@@ -10614,6 +10646,7 @@
     "whatTitle": "Was dieses Dokument bescheinigt",
     "whatDesc": "CIFSO 5000 ist ein Qualitätsaudit der Bewertung der Vermögenswerte eines Unternehmens. Der Grade bewertet Wert und Übertragbarkeit einer Organisation in fünf Dimensionen: Code, IP, Finanzen, Sicherheit, Organisation. Er wird nach Dokumentenprüfung, unabhängiger Analyse und Review ausgestellt. Gültigkeit 12 Monate.",
     "badgeAlt": "Badge CIFSO 5000 zertifiziert",
-    "learnMore": "Zertifizierung entdecken"
+    "learnMore": "Zertifizierung entdecken",
+    "whatDeed": "Dieses Zertifikat gilt als Eigentumsurkunde des Werts der Organisation: es bescheinigt, was sie besitzt, was sie beherrscht und was sie wert ist, mit dem CIFSO Valuation Index als Referenzquelle."
   }
 }

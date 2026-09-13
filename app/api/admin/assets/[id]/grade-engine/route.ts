@@ -97,6 +97,10 @@ const securityInputSchema = z.object({
   pentestMethodology:       z.enum(['owasp_ptes', 'custom', 'unknown']).optional(),
   pentestAuditorCert:       z.enum(['oscp_crest', 'other_cert', 'none']).optional(),
   rgpdTransferReadiness:    z.enum(['clean', 'warning', 'blocking']).optional(),
+  aiExposure:               z.enum(['none', 'sovereign', 'mixed', 'massive_non_sovereign']).optional(),
+  aiInventory:              z.enum(['yes', 'no']).optional(),
+  aiPolicy:                 z.enum(['yes', 'no']).optional(),
+  aiClientDataExposed:      z.enum(['yes', 'no']).optional(),
 })
 
 const organisationInputSchema = z.object({

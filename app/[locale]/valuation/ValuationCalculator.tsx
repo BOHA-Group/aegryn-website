@@ -114,7 +114,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
     if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.deps)
     if (step === 'integrity') return !!(integrity.trademark && integrity.copyright && integrity.opensource && integrity.apiContracts && integrity.contracts && integrity.litiges)
     if (step === 'finance')   return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
-    if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra && security.backups)
+    if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra && security.backups && security.aiExposure)
     if (step === 'org')       return !!(org.founderDep && org.nMinus1 && org.succession && org.turnover)
     return false
   }
@@ -437,6 +437,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                   { key: 'secrets', label: t('security.secrets'), opts: (['vault','partial','none'] as const).map(k => ({ key: k, label: t(`security.secretsOptions.${k}`) })) },
                   { key: 'infra',   label: t('security.infra'),   opts: (['isolated','partial','mixed'] as const).map(k => ({ key: k, label: t(`security.infraOptions.${k}`) })) },
                   { key: 'backups', label: t('security.backups'), opts: (['tested','exists','none'] as const).map(k => ({ key: k, label: t(`security.backupsOptions.${k}`) })) },
+                  { key: 'aiExposure', label: t('security.aiExposure'), opts: (['none','sovereign','mixed','massive'] as const).map(k => ({ key: k, label: t(`security.aiExposureOptions.${k}`) })) },
                 ] as { key: keyof SecurityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>

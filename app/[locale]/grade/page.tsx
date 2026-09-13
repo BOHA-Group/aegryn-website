@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { GradeHero } from '@/components/sections/grade/GradeHero'
+import GradeDeed from '@/components/sections/grade/GradeDeed'
 import { GradeCards } from '@/components/sections/grade/GradeCards'
 import { GradeDimensions } from '@/components/sections/grade/GradeDimensions'
 import { GradeUseCases } from '@/components/sections/grade/GradeUseCases'
@@ -29,6 +30,7 @@ export default async function GradePage({ params }: Props) {
   return (
     <main>
       <GradeHero />
+      <GradeDeed />
       <GradeCards />
       <GradeDimensions />
 

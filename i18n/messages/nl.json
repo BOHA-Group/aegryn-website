@@ -1942,58 +1942,72 @@
     "cifs": [
       {
         "code": "C",
-        "name": "Code",
-        "full": "Code Quality & Architecture",
-        "weight": "25 pt",
-        "desc": "Broncodequaliteit, testdekking, technische schuld, documentatie, implementatiebeveiliging en schaalbare architectuur.",
+        "name": "Code & Architectuur",
+        "full": "Code, Architectuur & Onderhoudbaarheid",
+        "weight": "20 pt",
+        "desc": "Kwaliteit van de broncode, architectuur, testdekking, technische schuld, afhankelijkheden, documentatie. Wat het asset overdraagbaar maakt zonder zijn auteur. Beoordeeld door senior ingenieurs.",
         "criteria": [
-          "Testdekking ≥ 70%",
-          "Gedocumenteerde technische schuld",
+          "Testdekking ≥ 70 %",
+          "Technische schuld gedocumenteerd en gekwantificeerd",
           "Geen kritieke kwetsbaarheden (OWASP Top 10)",
-          "Ontkoppelde en schaalbare architectuur",
-          "Volledige API-documentatie"
+          "Ontkoppelde, schaalbare architectuur, actuele afhankelijkheden",
+          "Volledige API- en architectuurdocumentatie"
         ]
       },
       {
         "code": "I",
-        "name": "IP",
-        "full": "Intellectueel eigendom & concurrentievoordeel",
-        "weight": "25 pt",
-        "desc": "Intellectueel eigendom, toetredingsbarrières, geregistreerde merken, octrooien en duurzame differentiatie.",
+        "name": "IP & Rechten",
+        "full": "Intellectueel eigendom, Rechten & Contracten",
+        "weight": "20 pt",
+        "desc": "Merk, overdracht van softwarerechten, open-sourcelicenties, klant- en leverancierscontracten, geschillen. De eigendomsketen: wat een koper eerst controleert.",
         "criteria": [
-          "Merken geregistreerd in doeljurisdicties",
-          "Geen actieve IP-geschillen",
+          "Merken geregistreerd in de doeljurisdicties",
+          "Overdracht van softwarerechten ondertekend (werknemers, dienstverleners)",
           "Afhankelijkheden van derden onder compatibele licenties",
-          "Identificeerbare slotgracht",
-          "Klantcontracten met concurrentiebedingen"
+          "Klant- en leverancierscontracten ondertekend en gearchiveerd",
+          "Geen actieve IP- of contractuele geschillen"
         ]
       },
       {
         "code": "F",
-        "name": "Finance",
-        "full": "Financiële gezondheid & tractie",
-        "weight": "25 pt",
-        "desc": "Belangrijke financiële statistieken: ARR, MRR, churn, LTV/CAC, burn rate, runway en groei. Alle gegevens worden geauditeerd.",
+        "name": "Financiën & Metrics",
+        "full": "Financiële gezondheid & Tractie",
+        "weight": "20 pt",
+        "desc": "ARR, MRR, terugkerendheid, churn, marges, cashflow, klantconcentratie, groeihistoriek. Alle data worden aan de hand van stukken geverifieerd.",
         "criteria": [
-          "ARR gedocumenteerd over minimaal 24 maanden",
-          "Maandelijkse churn < 3%",
-          "Brutomarge > 60% (SaaS)",
+          "ARR gedocumenteerd over minstens 24 maanden",
+          "Maandelijkse churn < 3 %",
+          "Brutomarges > 60 % (SaaS)",
           "Runway ≥ 12 maanden",
-          "YoY ARR-groei gedocumenteerd"
+          "Jaarlijkse ARR-groei gedocumenteerd"
         ]
       },
       {
         "code": "S",
-        "name": "Security",
-        "full": "Beveiliging & governance",
-        "weight": "25 pt",
-        "desc": "AVG- en Zwitserse DSG-naleving, infrastructuurbeveiliging, toegangsbeheer en gegevensgovernance.",
+        "name": "Veiligheid & Soevereiniteit",
+        "full": "Veiligheid, Soevereiniteit & AI-blootstelling",
+        "weight": "20 pt",
+        "desc": "GDPR- en DSG-naleving, infrastructuurbeveiliging, toegangsbeheer, audits van derden en AI-blootstelling: leveranciersinventaris, soevereiniteit van gedeelde data, klantbescherming. De werkelijke beheersing van activa en data.",
         "criteria": [
-          "AVG / DSG-naleving gedocumenteerd",
-          "MFA-authenticatie op alle beheerderstoegang",
-          "Gegevens versleuteld in rust en in transit",
+          "GDPR / DSG-naleving gedocumenteerd",
+          "MFA op alle beheerderstoegang, versleuteling in rust en in transit",
           "Beveiligingsaudit van derden in de laatste 18 maanden",
-          "Gedocumenteerd incidentbeheerbeleid"
+          "Inventaris van AI-diensten en geformaliseerd gebruiksbeleid",
+          "Geen klantdata naar AI-modellen van derden zonder contractueel kader"
+        ]
+      },
+      {
+        "code": "O",
+        "name": "Organisatie & Talent",
+        "full": "Organisatie, Talent & Opvolging",
+        "weight": "20 pt",
+        "desc": "Oprichtersafhankelijkheid, kwaliteit van het directieteam, opvolgingsplan, procesdocumentatie, overdrachtscapaciteit. Een onderneming die te afhankelijk is van haar oprichter wordt 20 tot 30 % onder haar intrinsieke waarde verhandeld.",
+        "criteria": [
+          "Oprichtersafhankelijkheid ≤ 50 % van de omzet",
+          "Minstens één N-1 die zonder de oprichter kan beslissen",
+          "Gedocumenteerde operationele processen (runbooks, SOP's)",
+          "Geformaliseerd opvolgingsplan voor sleutelfuncties",
+          "Verloop ≤ 15 % per jaar over 2 jaar"
         ]
       }
     ],
@@ -2163,7 +2177,7 @@
       {
         "num": "02",
         "title": "CIFSO technische audit (C + S)",
-        "desc": "Diepgaande analyse van Kapitaal & IP en Veiligheid & Soevereiniteit door twee gecertificeerde senior-analisten.",
+        "desc": "Diepgaande analyse van Code & Architectuur en Veiligheid & Soevereiniteit door twee gecertificeerde senior-analisten.",
         "inputs": "Broncode, IP-documentatie (octrooien, handelsmerken, licenties), beveiligingsbeleid, kwetsbaarheidsscanrapporten, AVG-register, cloudarchitectuur",
         "outputs": "Technisch auditrapport met C- en S-scores, identificatie kritieke kwetsbaarheden, verificatie IP-eigendomsketen",
         "outcomes": "Objectieve beoordeling van codekwaliteit, IP-eigendom en cyberbeveiligingspositie volgens EU-normen (NIS2, DORA, AVG)."
@@ -3166,7 +3180,7 @@
           "cifso": "Certificeert code-eigendom, IP-overdrachtketen, merk- en octrooistatus, open-source-naleving en cessies van rechten van oprichters."
         },
         {
-          "dimension": "I · Integriteit & Governance",
+          "dimension": "I · IP & Rechten",
           "existing": "Kwaliteitsmanagementsystemen dekken processen maar niet de integriteit van de kapitaalstructuur, het eigenaarsregister of de nalevingstraceerbaarheid.",
           "cifso": "Certificeert cap table-integriteit, regelgevingsconformiteit, vennootschapsstructuur, historische aanpassingen en documentatiekwaliteit."
         },
@@ -3266,7 +3280,7 @@
         "10. Disclaimer"
       ],
       "wpS1Title": "1. Wat is de Certificering CIFSO 5000?",
-      "wpS1Body1": "De <strong>Certificering CIFSO 5000</strong> is een onafhankelijk organisatiebeoordelingsprotocol ontwikkeld door Aegryn. Het evalueert en certificeert de waarde en overdraagbaarheid van een organisatie in vijf gestructureerde dimensies: Kapitaal & Intellectueel eigendom, Integriteit & Governance, Financiën & Statistieken, Beveiliging & Soevereiniteit en Organisatie & Talent.",
+      "wpS1Body1": "De <strong>Certificering CIFSO 5000</strong> is een onafhankelijk organisatiebeoordelingsprotocol ontwikkeld door Aegryn. Het evalueert en certificeert de waarde en overdraagbaarheid van een organisatie in vijf gestructureerde dimensies: Kapitaal & Intellectueel eigendom, IP & Rechten, Financiën & Statistieken, Beveiliging & Soevereiniteit en Organisatie & Talent.",
       "wpS1Body2": "In tegenstelling tot bestaande certificeringsstandaarden, die systemen, processen en operationele conformiteit verifiëren, certificeert de Certificering CIFSO 5000 de <em>organisatiewaarde</em>: de gedocumenteerde, verdedigbare basis voor een waardering, een financieringsbeslissing, een investering of een bedrijfsoverdracht. Dit zijn twee verschillende objecten. Aanvullend, niet concurrerend.",
       "wpS1Callout": "„Waar bestaande standaarden systemen certificeren, certificeert CIFSO 5000 waarde en overdraagbaarheid.“",
       "wpS2Title": "2. Voor wie is het bedoeld — gebruikscases",
@@ -3305,7 +3319,18 @@
       "contactCta": "Contact opnemen",
       "processLabel": "Certificeringsproces",
       "processTitle": "Certificeringsproces",
-      "processDuration": "Van indiening tot afgifte van de beoordeling: 15 tot 35 werkdagen, afhankelijk van de omvang en complexiteit van de organisatie."
+      "processDuration": "Van indiening tot afgifte van de beoordeling: 15 tot 35 werkdagen, afhankelijk van de omvang en complexiteit van de organisatie.",
+      "deed": {
+        "label": "EIGENDOMSAKTE VAN DE WAARDE",
+        "title": "Een horloge zonder papieren\nverliest een deel van zijn waarde.",
+        "desc": "Een onderneming ook. CIFSO 5000 is het equivalent van een eigendomsakte van de onderneming en de waardering van haar activa: het stelt vast wat de organisatie werkelijk bezit (code, rechten, financiën, beveiliging, organisatie), certificeert dat die activa beheerst en overdraagbaar zijn, en legt hun referentiewaarde vast met de CIFSO Valuation Index als bron. Zonder dit document wordt over waarde gediscussieerd; met dit document wordt zij aangetoond.",
+        "points": [
+          "Wat de onderneming bezit: geverifieerde inventaris van haar activa op vijf dimensies",
+          "Wat zij beheerst: eigendomsketen, data, afhankelijkheden, AI-blootstelling",
+          "Wat zij waard is: referentiemultiple uit de CIFSO Valuation Index",
+          "Wat zij kan overdragen: verifieerbaar certificaat, twaalf maanden geldig"
+        ]
+      }
     },
     "grades": [
       {
@@ -3345,28 +3370,28 @@
       "items": [
         {
           "code": "C",
-          "name": "Kapitaal & IP",
-          "desc": "Code, intellectueel eigendom, merk, eigen data, eigendomsketen. Alle immateriële activa die de overdraagbare waarde vormen."
+          "name": "Code & Architectuur",
+          "desc": "Codekwaliteit, architectuur, tests, documentatie, technische schuld, afhankelijkheden. Wat het asset overdraagbaar maakt zonder zijn auteur."
         },
         {
           "code": "I",
-          "name": "Integriteit & Governance",
-          "desc": "Juridische structuur, cap table, regelgevingsnaleving, klant/leverancierscontracten, geschillen, IP-keten. De juridische en organisatorische soliditeit van de entiteit."
+          "name": "IP & Rechten",
+          "desc": "Merk, overdracht van softwarerechten, open-sourcelicenties, klant- en leverancierscontracten, geschillen. De eigendomsketen: wat een koper eerst controleert."
         },
         {
           "code": "F",
           "name": "Financiën & Metrics",
-          "desc": "ARR/MRR, terugkerende omzet, controleerbaarheid, cashflow, burn, klantconcentratie, financiële geschiedenis. De economische werkelijkheid van de organisatie."
+          "desc": "ARR/MRR, terugkerendheid, controleerbaarheid, marges, cashflow, klantconcentratie, financiële historiek. De economische waarheid van de organisatie."
         },
         {
           "code": "S",
           "name": "Veiligheid & Soevereiniteit",
-          "desc": "Cyberbeveiliging, NIS2/DORA/EU AI Act-naleving, technologische onafhankelijkheid, AVG. Veerkracht tegen digitale en regelgevingsrisico's."
+          "desc": "Cyberbeveiliging, GDPR, NIS2/DORA/AI Act, technologische onafhankelijkheid en AI-blootstelling: niet-soevereine leveranciers, gedeelde data, klantbescherming. De werkelijke beheersing van activa en data."
         },
         {
           "code": "O",
           "name": "Organisatie & Talent",
-          "desc": "Oprichterafhankelijkheid, kwaliteit van het managementteam, opvolgingsplan, cultuur en retentie. Organisaties die te afhankelijk zijn van hun oprichter zijn bij overdracht systematisch 20-30% minder waard."
+          "desc": "Oprichtersafhankelijkheid, directieteam, opvolgingsplan, cultuur en retentie. Een onderneming die te afhankelijk is van haar oprichter is bij overdracht systematisch 20 tot 30 % minder waard."
         }
       ]
     },
@@ -5512,7 +5537,7 @@
         },
         {
           "code": "I",
-          "name": "Integriteit & Governance",
+          "name": "IP & Rechten",
           "color": "#7B3FC4"
         },
         {
@@ -6086,6 +6111,13 @@
         "tested": "Geteste back-ups, gedocumenteerd herstel",
         "exists": "Back-ups aanwezig, niet getest",
         "none": "Geen procedure"
+      },
+      "aiExposure": "AI-blootstelling: leveranciers en data",
+      "aiExposureOptions": {
+        "none": "Geen AI van derden",
+        "sovereign": "Soevereine (EU/CH) of zelf gehoste AI",
+        "mixed": "Niet-soevereine leveranciers, omkaderd gebruik (contracten, geen klantdata)",
+        "massive": "Sterke afhankelijkheid van niet-soevereine leveranciers (incl. klantdata)"
       }
     },
     "org": {
@@ -6240,7 +6272,7 @@
         },
         {
           "code": "I",
-          "label": "Integriteit & Governance",
+          "label": "IP & Rechten",
           "score": "16/20"
         },
         {
@@ -9617,7 +9649,7 @@
         },
         {
           "code": "I",
-          "dim": "Integriteit & Governance",
+          "dim": "IP & Rechten",
           "desc": "Soliditeit van de governancestructuur, beslissingstraceerbaarheid, oprichtersafhankelijkheden. Essentieel voor elk overdrachts- of investeringsproces."
         },
         {
@@ -10362,7 +10394,7 @@
     ],
     "s1Title": "Waarvoor de CIFSO 5000-certificering dient",
     "s1Lead": "Bestaande normen certificeren systemen en processen. CIFSO 5000 is een kwaliteitsaudit van de waardering van de activa van een onderneming: het certificeert de waarde en overdraagbaarheid van een organisatie.",
-    "s1P1": "Een onderneming kan operationeel volledig conform zijn en toch moeilijk te waarderen, te financieren of over te dragen. CIFSO 5000 dicht die kloof: het documenteert onafhankelijk en verifieerbaar wat de werkelijke waarde van een organisatie vormt — haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
+    "s1P1": "Een onderneming kan operationeel volledig conform zijn en toch moeilijk te waarderen, te financieren of over te dragen. Zoals een verzamelhorloge zonder papieren verliest zij een deel van haar waarde door gebrek aan bewijs. CIFSO 5000 dicht die kloof: het is de eigendomsakte van de waarde van de organisatie. Het documenteert onafhankelijk en verifieerbaar wat haar werkelijke waarde vormt: code en architectuur, rechten, financiële gezondheid, beveiliging en soevereiniteit (inclusief de blootstelling aan AI-oplossingen van derden), organisatorische veerkracht. En het legt de referentiewaarde vast met de CIFSO Valuation Index als bron.",
     "s1P2": "Het resultaat is een officiële, geversioneerde en verdedigbare beoordeling die aan investeerders, kopers, banken, partners of opvolgers kan worden voorgelegd als bewijs van derden voor de kwaliteit en overdraagbaarheid van de organisatie.",
     "s1Stats": [
       {
@@ -10614,6 +10646,7 @@
     "whatTitle": "Wat dit document certificeert",
     "whatDesc": "CIFSO 5000 is een kwaliteitsaudit van de waardering van de activa van een onderneming. De grade beoordeelt de waarde en overdraagbaarheid van een organisatie op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Hij wordt uitgegeven na documentcontrole, onafhankelijke analyse en review. Geldigheid 12 maanden.",
     "badgeAlt": "Badge CIFSO 5000 gecertificeerd",
-    "learnMore": "De certificering ontdekken"
+    "learnMore": "De certificering ontdekken",
+    "whatDeed": "Dit certificaat geldt als eigendomsakte van de waarde van de organisatie: het bevestigt wat zij bezit, wat zij beheerst en wat zij waard is, met de CIFSO Valuation Index als referentiebron."
   }
 }

@@ -2470,12 +2470,12 @@
       "isoStatement": "Where existing standards certify systems, CIFSO 5000 certifies value and transferability.",
       "isoRows": [
         {
-          "dimension": "C · Capital & IP",
+          "dimension": "C · Code & Architecture",
           "existing": "No existing standard covers IP chain of title in an M&A context.",
           "cifso": "Certifies code ownership, IP transfer chain, brand, and proprietary data as transferable value."
         },
         {
-          "dimension": "I · Integrity & Governance",
+          "dimension": "I · IP & Rights",
           "existing": "Quality management standards partially address process governance.",
           "cifso": "Certifies cap table integrity, regulatory compliance, contractual governance, and M&A-specific legal structure."
         },
@@ -2575,7 +2575,7 @@
         "10. Disclaimer"
       ],
       "wpS1Title": "1. What is the Certification CIFSO 5000?",
-      "wpS1Body1": "The <strong>Certification CIFSO 5000</strong> is an independent organisational assessment protocol developed by Aegryn. It evaluates and certifies the value and transferability of an organisation across five structured dimensions: Capital & IP, Integrity & Governance, Finance & Metrics, Security & Sovereignty, and Organisation & Talent.",
+      "wpS1Body1": "The <strong>Certification CIFSO 5000</strong> is an independent organisational assessment protocol developed by Aegryn. It evaluates and certifies the value and transferability of an organisation across five structured dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security & Sovereignty, and Organisation & Talent.",
       "wpS1Body2": "Unlike existing certification standards, which verify systems, processes, and operational conformance, the Certification CIFSO 5000 certifies <em>organisational value</em>: the documented, defensible basis for a valuation, a financing decision, an investment, or a business transfer. These are two different objects. Complementary, not competing.",
       "wpS1Callout": "“Where existing standards certify systems, CIFSO 5000 certifies value and transferability.”",
       "wpS2Title": "2. Who is it for — use cases",
@@ -2614,7 +2614,18 @@
       "contactCta": "Get in touch",
       "processLabel": "Certification process",
       "processTitle": "Certification process",
-      "processDuration": "From submission to grade issuance: 15 to 35 business days depending on the size and complexity of the organisation."
+      "processDuration": "From submission to grade issuance: 15 to 35 business days depending on the size and complexity of the organisation.",
+      "deed": {
+        "label": "TITLE DEED OF VALUE",
+        "title": "A watch without its papers\nloses part of its value.",
+        "desc": "So does a company. CIFSO 5000 is the equivalent of a title deed for the company and the valuation of its assets: it establishes what the organisation really owns (code, rights, finances, security, organisation), certifies that these assets are controlled and transferable, and sets their reference value with the CIFSO Valuation Index as the source. Without this document, value is argued; with it, value is demonstrated.",
+        "points": [
+          "What the company owns: verified inventory of its assets across five dimensions",
+          "What it controls: chain of title, data, dependencies, AI exposure",
+          "What it is worth: reference multiple from the CIFSO Valuation Index",
+          "What it can transfer: verifiable certificate, valid twelve months"
+        ]
+      }
     },
     "grades": [
       {
@@ -2654,28 +2665,28 @@
       "items": [
         {
           "code": "C",
-          "name": "Capital & IP",
-          "desc": "Code, intellectual property, brand, proprietary data, chain of title. All intangible assets that form the transferable value."
+          "name": "Code & Architecture",
+          "desc": "Code quality, architecture, tests, documentation, technical debt, dependencies. What makes the asset transferable without its author."
         },
         {
           "code": "I",
-          "name": "Integrity & Governance",
-          "desc": "Legal structure, cap table, regulatory compliance, client/supplier contracts, disputes, IP chain. The legal and organisational soundness of the entity."
+          "name": "IP & Rights",
+          "desc": "Trademark, software rights assignment, open-source licences, client and supplier contracts, disputes. The chain of title: what an acquirer checks first."
         },
         {
           "code": "F",
-          "name": "Finance & Metrics",
-          "desc": "ARR/MRR, recurring revenue, auditability, cashflow, burn, client concentration, financial history. The economic reality of the organisation."
+          "name": "Finances & Metrics",
+          "desc": "ARR/MRR, recurrence, auditability, margins, cash flow, client concentration, financial history. The economic truth of the organisation."
         },
         {
           "code": "S",
           "name": "Security & Sovereignty",
-          "desc": "Cybersecurity, NIS2/DORA/EU AI Act compliance, technological independence, GDPR. Resilience against digital and regulatory risks."
+          "desc": "Cybersecurity, GDPR, NIS2/DORA/AI Act, technological independence and AI exposure: non-sovereign providers, data shared, client protection. Real control of assets and data."
         },
         {
           "code": "O",
           "name": "Organisation & Talent",
-          "desc": "Founder dependency, management team quality, succession plan, culture and retention. Organisations too dependent on their founder are systematically worth 20-30% less at transfer."
+          "desc": "Founder dependency, leadership team, succession plan, culture and retention. A company too dependent on its founder is systematically worth 20 to 30% less at transfer."
         }
       ]
     },
@@ -2779,58 +2790,72 @@
     "cifs": [
       {
         "code": "C",
-        "name": "Code",
-        "full": "Code Quality & Architecture",
-        "weight": "25 pts",
-        "desc": "Source code quality, test coverage, technical debt, documentation, implementation security and scalable architecture. Review by certified senior engineers.",
+        "name": "Code & Architecture",
+        "full": "Code, Architecture & Maintainability",
+        "weight": "20 pts",
+        "desc": "Source code quality, architecture, test coverage, technical debt, dependencies, documentation. What makes the asset transferable without its author. Reviewed by senior engineers.",
         "criteria": [
           "Test coverage ≥ 70%",
-          "Documented technical debt",
+          "Technical debt documented and quantified",
           "No critical vulnerabilities (OWASP Top 10)",
-          "Decoupled and scalable architecture",
-          "Complete API documentation"
+          "Decoupled, scalable architecture, up-to-date dependencies",
+          "Complete API and architecture documentation"
         ]
       },
       {
         "code": "I",
-        "name": "IP",
-        "full": "Intellectual Property & Moat",
-        "weight": "25 pts",
-        "desc": "Intellectual property, barriers to entry, registered trademarks, patents, contractual exclusivities and sustainable differentiation in the target market.",
+        "name": "IP & Rights",
+        "full": "Intellectual Property, Rights & Contracts",
+        "weight": "20 pts",
+        "desc": "Trademark, software rights assignment, open-source licences, client and supplier contracts, disputes. The chain of title: what an acquirer checks first.",
         "criteria": [
           "Trademarks registered in target jurisdictions",
-          "No active IP disputes",
+          "Software rights assignment signed (employees, contractors)",
           "Third-party dependencies under compatible licences",
-          "Identifiable moat (network, data, regulation)",
-          "Client contracts with non-compete clauses"
+          "Client and supplier contracts signed and archived",
+          "No active IP or contractual disputes"
         ]
       },
       {
         "code": "F",
-        "name": "Finance",
+        "name": "Finances & Metrics",
         "full": "Financial Health & Traction",
-        "weight": "25 pts",
-        "desc": "Key financial metrics: ARR, MRR, churn, LTV/CAC, burn rate, runway, margins and growth history. All data is audited against source documents.",
+        "weight": "20 pts",
+        "desc": "ARR, MRR, recurrence, churn, margins, cash flow, client concentration, growth history. All data verified against documents.",
         "criteria": [
-          "ARR documented over minimum 24 months",
+          "ARR documented over at least 24 months",
           "Monthly churn < 3%",
           "Gross margins > 60% (SaaS)",
           "Runway ≥ 12 months",
-          "YoY ARR growth documented"
+          "Annual ARR growth documented"
         ]
       },
       {
         "code": "S",
-        "name": "Security",
-        "full": "Security & Governance",
-        "weight": "25 pts",
-        "desc": "GDPR and Swiss LPD compliance, infrastructure security, access management, third-party security audits, vulnerability disclosure policy and data governance.",
+        "name": "Security & Sovereignty",
+        "full": "Security, Sovereignty & AI Exposure",
+        "weight": "20 pts",
+        "desc": "GDPR and LPD compliance, infrastructure security, access management, third-party audits, and AI exposure: provider inventory, sovereignty of data shared, client protection. Real control of assets and data.",
         "criteria": [
           "GDPR / LPD compliance documented",
-          "MFA authentication on all admin access",
-          "Data encrypted at rest and in transit",
-          "Third-party security audit within last 18 months",
-          "Documented incident management policy"
+          "MFA on all admin access, encryption at rest and in transit",
+          "Third-party security audit within the last 18 months",
+          "AI services inventory and formal usage policy",
+          "No client data sent to third-party AI models without contractual framework"
+        ]
+      },
+      {
+        "code": "O",
+        "name": "Organisation & Talent",
+        "full": "Organisation, Talent & Succession",
+        "weight": "20 pts",
+        "desc": "Founder dependency, leadership team quality, succession plan, process documentation, transfer capacity. A company too dependent on its founder trades 20 to 30% below its intrinsic value.",
+        "criteria": [
+          "Founder dependency ≤ 50% of revenue",
+          "At least one N-1 able to decide without the founder",
+          "Documented operational processes (runbooks, SOPs)",
+          "Formal succession plan for key roles",
+          "Turnover ≤ 15% per year over 2 years"
         ]
       }
     ],
@@ -3000,7 +3025,7 @@
       {
         "num": "02",
         "title": "CIFSO technical audit (C + S)",
-        "desc": "In-depth analysis of Capital & IP and Security & Sovereignty by two certified senior analysts.",
+        "desc": "In-depth analysis of Code & Architecture and Security & Sovereignty by two certified senior analysts.",
         "inputs": "Source code, IP documentation (patents, trademarks, licenses), security policies, vulnerability scan reports, GDPR register, cloud architecture",
         "outputs": "Technical audit report with C and S scores, critical vulnerability identification, IP chain-of-title verification",
         "outcomes": "Objective assessment of code quality, IP ownership, and cybersecurity posture according to EU standards (NIS2, DORA, GDPR)."
@@ -5497,7 +5522,7 @@
         },
         {
           "code": "I",
-          "name": "Integrity & Governance",
+          "name": "IP & Rights",
           "color": "#7B3FC4"
         },
         {
@@ -6071,6 +6096,13 @@
         "tested": "Tested backups, documented recovery",
         "exists": "Backups in place, untested",
         "none": "No procedure"
+      },
+      "aiExposure": "AI exposure: providers and data",
+      "aiExposureOptions": {
+        "none": "No third-party AI",
+        "sovereign": "Sovereign (EU/CH) or self-hosted AI",
+        "mixed": "Non-sovereign providers, framed use (contracts, no client data)",
+        "massive": "Heavy dependency on non-sovereign providers (client data included)"
       }
     },
     "org": {
@@ -6225,7 +6257,7 @@
         },
         {
           "code": "I",
-          "label": "Integrity & Governance",
+          "label": "IP & Rights",
           "score": "16/20"
         },
         {
@@ -9602,7 +9634,7 @@
         },
         {
           "code": "I",
-          "dim": "Integrity & Governance",
+          "dim": "IP & Rights",
           "desc": "Governance structure solidity, decision traceability, founder dependencies. Key for any transfer or investment process."
         },
         {
@@ -10362,7 +10394,7 @@
     ],
     "s1Title": "What CIFSO 5000 certification is for",
     "s1Lead": "Existing standards certify systems and processes. CIFSO 5000 is a quality audit of the valuation of a company's assets: it certifies the value and transferability of an organisation.",
-    "s1P1": "A company can be fully compliant operationally and still be difficult to value, finance or transfer. CIFSO 5000 closes this gap: it independently and verifiably documents what constitutes an organisation's real value — its intellectual capital, integrity, financial health, security and organisational resilience.",
+    "s1P1": "A company can be fully compliant operationally and still be difficult to value, finance or transfer. Like a collector's watch without its papers, it loses part of its value for lack of proof. CIFSO 5000 closes this gap: it is the title deed of the organisation's value. It independently and verifiably documents what constitutes its real value: its code and architecture, its rights, its financial health, its security and sovereignty (including its exposure to third-party AI solutions), its organisational resilience. And it sets the reference value with the CIFSO Valuation Index as the source.",
     "s1P2": "The result is an official, versioned and defensible grade that can be presented to investors, acquirers, banks, partners or successors as third-party proof of the organisation's quality and transferability.",
     "s1Stats": [
       {
@@ -10614,6 +10646,7 @@
     "whatTitle": "What this document certifies",
     "whatDesc": "CIFSO 5000 is a quality audit of the valuation of a company's assets. The grade assesses the value and transferability of an organisation across five dimensions: Code, IP, Finance, Security, Organisation. It is issued after documentary verification, independent analysis and review. Valid for 12 months.",
     "badgeAlt": "CIFSO 5000 Certified badge",
-    "learnMore": "Discover the certification"
+    "learnMore": "Discover the certification",
+    "whatDeed": "This certificate serves as a title deed of the organisation's value: it attests what it owns, what it controls and what it is worth, with the CIFSO Valuation Index as the reference source."
   }
 }

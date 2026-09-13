@@ -2435,7 +2435,7 @@
           "cifso": "Certifie la propriété du code, la chaîne de transmission IP, la marque et les données propriétaires comme valeur transmissible."
         },
         {
-          "dimension": "I · Intégrité & Gouvernance",
+          "dimension": "I · IP & Droits",
           "existing": "Les standards de management de la qualité couvrent partiellement la gouvernance des processus.",
           "cifso": "Certifie l'intégrité du cap table, la conformité réglementaire, la gouvernance contractuelle et la structure juridique en contexte M&A."
         },
@@ -2535,7 +2535,7 @@
         "10. Avertissement"
       ],
       "wpS1Title": "1. Qu’est-ce que la Certification CIFSO 5000 ?",
-      "wpS1Body1": "La <strong>Certification CIFSO 5000</strong> est un protocole d’évaluation organisationnelle indépendant développé par Aegryn. Elle évalue et certifie la valeur et la transmissibilité d’une organisation selon cinq dimensions structurées : Capital & IP, Intégrité & Gouvernance, Finance & Métriques, Sécurité & Souveraineté, et Organisation & Talent.",
+      "wpS1Body1": "La <strong>Certification CIFSO 5000</strong> est un protocole d’évaluation organisationnelle indépendant développé par Aegryn. Elle évalue et certifie la valeur et la transmissibilité d’une organisation selon cinq dimensions structurées : Code & Architecture, IP & Droits, Finance & Métriques, Sécurité & Souveraineté, et Organisation & Talent.",
       "wpS1Body2": "Contrairement aux standards de certification existants, qui vérifient des systèmes, des processus et une conformité opérationnelle, la Certification CIFSO 5000 certifie la <em>valeur organisationnelle</em> : la base documentée et opposable d’une valorisation, d’une décision de financement, d’un investissement ou d’une transmission. Ce sont deux objets différents. Complémentaires, pas concurrents.",
       "wpS1Callout": "« Là où les standards existants certifient des systèmes, CIFSO 5000 certifie la valeur et la transmissibilité. »",
       "wpS2Title": "2. À qui s’adresse-t-elle — cas d’usage",
@@ -2574,7 +2574,18 @@
       "contactCta": "Prendre contact",
       "processLabel": "Processus de certification",
       "processTitle": "Processus de certification",
-      "processDuration": "De la soumission à la délivrance du grade : 15 à 35 jours ouvrés selon la taille et la complexité de l'organisation."
+      "processDuration": "De la soumission à la délivrance du grade : 15 à 35 jours ouvrés selon la taille et la complexité de l'organisation.",
+      "deed": {
+        "label": "ACTE DE PROPRIÉTÉ DE LA VALEUR",
+        "title": "Une montre sans ses papiers\nperd une part de sa valeur.",
+        "desc": "Une entreprise aussi. Le CIFSO 5000 est l'équivalent d'un acte de propriété de l'entreprise et de la valorisation de ses actifs : il établit ce que l'organisation possède réellement (code, droits, finances, sécurité, organisation), atteste que ces actifs sont maîtrisés et transmissibles, et en fixe la valeur de référence avec le CIFSO Valuation Index comme source. Sans ce document, la valeur se discute ; avec lui, elle se démontre.",
+        "points": [
+          "Ce que l'entreprise possède : inventaire vérifié de ses actifs sur cinq dimensions",
+          "Ce qu'elle maîtrise : chaîne de titre, données, dépendances, exposition IA",
+          "Ce qu'elle vaut : multiple de référence issu du CIFSO Valuation Index",
+          "Ce qu'elle peut transmettre : certificat vérifiable, valable douze mois"
+        ]
+      }
     },
     "grades": [
       {
@@ -2614,28 +2625,28 @@
       "items": [
         {
           "code": "C",
-          "name": "Capital & IP",
-          "desc": "Code, propriété intellectuelle, marque, data propriétaire, chaîne de titres. Tous les actifs immatériels qui fondent la valeur transmissible."
+          "name": "Code & Architecture",
+          "desc": "Qualité du code, architecture, tests, documentation, dette technique, dépendances. Ce qui rend l'actif reprenable sans son auteur."
         },
         {
           "code": "I",
-          "name": "Intégrité & Gouvernance",
-          "desc": "Structure juridique, cap table, conformité réglementaire, contrats clients/fournisseurs, litiges, IP chain. La solidité légale et organisationnelle de l'entité."
+          "name": "IP & Droits",
+          "desc": "Marque, cession des droits logiciels, licences open source, contrats clients et fournisseurs, litiges. La chaîne de titre : ce qu'un acquéreur vérifie en premier."
         },
         {
           "code": "F",
           "name": "Finances & Métriques",
-          "desc": "ARR/MRR, récurrence, auditabilité, cashflow, burn, concentration client, historique financier. La vérité économique de l'organisation."
+          "desc": "ARR/MRR, récurrence, auditabilité, marges, cashflow, concentration client, historique financier. La vérité économique de l'organisation."
         },
         {
           "code": "S",
           "name": "Sécurité & Souveraineté",
-          "desc": "Cybersécurité, conformité NIS2/DORA/EU AI Act, indépendance technologique, RGPD. La résilience face aux risques numériques et réglementaires."
+          "desc": "Cybersécurité, RGPD, NIS2/DORA/AI Act, indépendance technologique et exposition IA : fournisseurs non souverains, données transmises, protection des clients. La maîtrise réelle des actifs et des données."
         },
         {
           "code": "O",
           "name": "Organisation & Talent",
-          "desc": "Dépendance fondateur, qualité de l'équipe de direction, plan de succession, culture et rétention. Une entreprise trop dépendante de son fondateur vaut systématiquement 20-30% de moins à la transmission."
+          "desc": "Dépendance fondateur, équipe de direction, plan de succession, culture et rétention. Une entreprise trop dépendante de son fondateur vaut systématiquement 20 à 30 % de moins à la transmission."
         }
       ]
     },
@@ -2726,7 +2737,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
-      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Capital & IP, Intégrité & Gouvernance, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
+      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
     "label": "Certification CIFSO 5000 — Méthodologie",
     "version": "Certification CIFSO 5000 v4.0",
@@ -2739,58 +2750,58 @@
     "cifs": [
       {
         "code": "C",
-        "name": "Capital & IP",
-        "full": "Capital, IP & Architecture",
+        "name": "Code & Architecture",
+        "full": "Code, Architecture & Maintenabilité",
         "weight": "20 pts",
-        "desc": "Qualité du code source, couverture de tests, dette technique, propriété intellectuelle, marque, data propriétaire. L'ensemble des actifs immatériels qui fondent la valeur transmissible. Revue par des ingénieurs seniors certifiés.",
+        "desc": "Qualité du code source, architecture, couverture de tests, dette technique, dépendances, documentation. Ce qui rend l'actif reprenable sans son auteur. Revue par des ingénieurs seniors.",
         "criteria": [
-          "Couverture tests ≥ 70%",
-          "Dette technique documentée",
+          "Couverture de tests ≥ 70 %",
+          "Dette technique documentée et chiffrée",
           "Absence de vulnérabilités critiques (OWASP Top 10)",
-          "Architecture découplée et scalable",
-          "Documentation API complète"
+          "Architecture découplée et scalable, dépendances à jour",
+          "Documentation API et architecture complète"
         ]
       },
       {
         "code": "I",
-        "name": "Intégrité & Gouvernance",
-        "full": "Integrity, Legal & Compliance",
+        "name": "IP & Droits",
+        "full": "Propriété intellectuelle, Droits & Contrats",
         "weight": "20 pts",
-        "desc": "Structure juridique, cap table, conformité réglementaire, contrats clients et fournisseurs, litiges, IP chain, barrières à l'entrée et différenciation durable. La solidité légale et organisationnelle de l'entité.",
+        "desc": "Marque, cession des droits logiciels, licences open source, contrats clients et fournisseurs, litiges. La chaîne de titre : ce qu'un acquéreur vérifie en premier.",
         "criteria": [
           "Marques déposées dans les juridictions cibles",
-          "Absence de litiges IP actifs",
+          "Cession des droits logiciels signée (salariés, prestataires)",
           "Dépendances tierces sous licences compatibles",
-          "Moat identifiable (réseau, data, réglementation)",
-          "Contrats clients avec clauses de non-concurrence"
+          "Contrats clients et fournisseurs signés et archivés",
+          "Absence de litiges IP ou contractuels actifs"
         ]
       },
       {
         "code": "F",
         "name": "Finances & Métriques",
-        "full": "Financial Health & Traction",
+        "full": "Santé financière & Traction",
         "weight": "20 pts",
-        "desc": "Métriques financières clés : ARR, MRR, churn, LTV/CAC, burn rate, runway, marges et historique de croissance. Toutes les données sont auditées sur pièces.",
+        "desc": "ARR, MRR, récurrence, churn, marges, cashflow, concentration client, historique de croissance. Toutes les données sont vérifiées sur pièces.",
         "criteria": [
           "ARR documenté sur 24 mois minimum",
-          "Churn mensuel < 3%",
-          "Marges brutes > 60% (SaaS)",
+          "Churn mensuel < 3 %",
+          "Marges brutes > 60 % (SaaS)",
           "Runway ≥ 12 mois",
-          "Croissance ARR YoY documentée"
+          "Croissance ARR annuelle documentée"
         ]
       },
       {
         "code": "S",
         "name": "Sécurité & Souveraineté",
-        "full": "Security, Sovereignty & Resilience",
+        "full": "Sécurité, Souveraineté & Exposition IA",
         "weight": "20 pts",
-        "desc": "Conformité RGPD et LPD suisse, sécurité infrastructure, gestion des accès, audits de sécurité tiers, politique de divulgation des vulnérabilités et gouvernance des données.",
+        "desc": "Conformité RGPD et LPD, sécurité de l'infrastructure, gestion des accès, audits tiers, et exposition IA : inventaire des fournisseurs, souveraineté des données transmises, protection des clients. La maîtrise réelle des actifs et des données.",
         "criteria": [
           "Conformité RGPD / LPD documentée",
-          "Authentification MFA sur tous les accès admin",
-          "Chiffrement des données au repos et en transit",
+          "MFA sur tous les accès admin, chiffrement au repos et en transit",
           "Audit de sécurité tiers dans les 18 derniers mois",
-          "Politique de gestion des incidents documentée"
+          "Inventaire des services IA et politique d'usage formalisée",
+          "Aucune donnée client transmise à des modèles IA tiers sans cadre contractuel"
         ]
       },
       {
@@ -2798,13 +2809,13 @@
         "name": "Organisation & Talent",
         "full": "Organisation, Talent & Succession",
         "weight": "20 pts",
-        "desc": "Structure humaine et gouvernance opérationnelle de l'actif. Dépendance fondateur, qualité de l'équipe dirigeante, plan de succession, documentation des processus et capacité de transfert. Une entreprise trop dépendante de son fondateur se négocie systématiquement 20 à 30% en dessous de sa valeur intrinsèque.",
+        "desc": "Dépendance fondateur, qualité de l'équipe dirigeante, plan de succession, documentation des processus, capacité de transfert. Une entreprise trop dépendante de son fondateur se négocie 20 à 30 % en dessous de sa valeur intrinsèque.",
         "criteria": [
-          "Dépendance fondateur ≤ 50% du CA (F-42)",
-          "Au moins un N-1 capable de signer sans le fondateur",
+          "Dépendance fondateur ≤ 50 % du CA",
+          "Au moins un N-1 capable de décider sans le fondateur",
           "Processus opérationnels documentés (runbooks, SOPs)",
           "Plan de succession formalisé pour les postes clés",
-          "Culture et rétention : turnover ≤ 15% / an sur 2 ans"
+          "Turnover ≤ 15 % par an sur 2 ans"
         ]
       }
     ],
@@ -2984,7 +2995,7 @@
       {
         "num": "02",
         "title": "Audit technique CIFSO (C + S)",
-        "desc": "Analyse approfondie du Capital & IP et de la Sécurité & Souveraineté par deux analystes seniors certifiés.",
+        "desc": "Analyse approfondie du Code & Architecture et de la Sécurité & Souveraineté par deux analystes seniors certifiés.",
         "inputs": "Code source, documentation IP (brevets, marques, licences), politiques de sécurité, rapports de scan de vulnérabilités, registre RGPD, architecture cloud",
         "outputs": "Rapport d'audit technique avec notation C et S, identification des vulnérabilités critiques, vérification de la chaîne de titres IP",
         "outcomes": "Évaluation objective de la qualité du code, de la propriété IP et de la posture cybersécurité selon les standards EU (NIS2, DORA, RGPD)."
@@ -5548,7 +5559,7 @@
         },
         {
           "code": "I",
-          "name": "Intégrité & Gouvernance",
+          "name": "IP & Droits",
           "color": "#7B3FC4"
         },
         {
@@ -6122,6 +6133,13 @@
         "tested": "Sauvegardes testées, reprise documentée",
         "exists": "Sauvegardes en place, non testées",
         "none": "Aucune procédure"
+      },
+      "aiExposure": "Exposition IA : fournisseurs et données",
+      "aiExposureOptions": {
+        "none": "Aucune IA tierce",
+        "sovereign": "IA souveraine (UE/CH) ou auto-hébergée",
+        "mixed": "Fournisseurs non souverains, usage encadré (contrats, pas de données clients)",
+        "massive": "Dépendance forte à des fournisseurs non souverains (données clients incluses)"
       }
     },
     "org": {
@@ -6276,7 +6294,7 @@
         },
         {
           "code": "I",
-          "label": "Intégrité & Gouvernance",
+          "label": "IP & Droits",
           "score": "16/20"
         },
         {
@@ -9653,7 +9671,7 @@
         },
         {
           "code": "I",
-          "dim": "Intégrité & Gouvernance",
+          "dim": "IP & Droits",
           "desc": "Solidité des structures de gouvernance, traçabilité des décisions, dépendances fondateurs. Clé pour tout processus de transmission ou d'investissement."
         },
         {
@@ -10453,7 +10471,7 @@
     ],
     "s1Title": "À quoi sert la certification CIFSO 5000",
     "s1Lead": "Les standards existants certifient les systèmes et les processus. Le CIFSO 5000 est un audit qualité de la valorisation des actifs d'une entreprise : il certifie la valeur et la transmissibilité d'une organisation.",
-    "s1P1": "Une entreprise peut être parfaitement conforme sur le plan opérationnel et pourtant difficile à valoriser, à financer ou à transmettre. Le CIFSO 5000 comble cet écart : il documente de manière indépendante et vérifiable ce qui constitue la valeur réelle d'une organisation — son capital intellectuel, son intégrité, sa santé financière, sa sécurité et sa résilience organisationnelle.",
+    "s1P1": "Une entreprise peut être parfaitement conforme sur le plan opérationnel et pourtant difficile à valoriser, à financer ou à transmettre. Comme une montre de collection sans ses papiers, elle perd une part de sa valeur faute de pouvoir la démontrer. Le CIFSO 5000 comble cet écart : il est l'acte de propriété de la valeur de l'organisation. Il documente de manière indépendante et vérifiable ce qui constitue sa valeur réelle : son code et son architecture, ses droits, sa santé financière, sa sécurité et sa souveraineté (y compris son exposition aux solutions d'IA tierces), sa résilience organisationnelle. Et il en fixe la valeur de référence avec le CIFSO Valuation Index comme source.",
     "s1P2": "Le résultat est un grade officiel, versionné et opposable, qui peut être présenté à des investisseurs, des acquéreurs, des banques, des partenaires ou des successeurs comme preuve tierce de la qualité et de la transmissibilité de l'organisation.",
     "s1Stats": [
       {
@@ -10705,6 +10723,7 @@
     "whatTitle": "Ce que certifie ce document",
     "whatDesc": "Le CIFSO 5000 est un audit qualité de la valorisation des actifs d'une entreprise. Le grade évalue la valeur et la transmissibilité d'une organisation sur cinq dimensions : Code, IP, Finance, Sécurité, Organisation. Il est délivré après vérification documentaire, analyse indépendante et revue. Validité 12 mois.",
     "badgeAlt": "Badge Certifié CIFSO 5000",
-    "learnMore": "Découvrir la certification"
+    "learnMore": "Découvrir la certification",
+    "whatDeed": "Ce certificat vaut acte de propriété de la valeur de l'organisation : il atteste ce qu'elle possède, ce qu'elle maîtrise et ce qu'elle vaut, avec le CIFSO Valuation Index comme source de référence."
   }
 }

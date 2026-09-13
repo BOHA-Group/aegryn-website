@@ -56,6 +56,7 @@ export interface SecurityData {
   secrets:    'vault' | 'partial' | 'none'
   infra:      'isolated' | 'partial' | 'mixed'   // Prod/staging isolation
   backups?:   'tested' | 'exists' | 'none'       // Sauvegardes et plan de reprise
+  aiExposure?: 'none' | 'sovereign' | 'mixed' | 'massive'  // Exposition IA : souveraineté des fournisseurs et des données
 }
 
 export interface OrgData {
@@ -163,6 +164,10 @@ export function scoreSecurity(d: SecurityData): number {
 
   // Sauvegardes / reprise (bonus max 1 ; le plafond reste 20)
   s += d.backups === 'tested' ? 1 : 0
+
+  // Exposition IA : dépendance massive à des fournisseurs non souverains = risque public (pénalité)
+  s -= d.aiExposure === 'massive' ? 3 : d.aiExposure === 'mixed' ? 1 : 0
+  s = Math.max(0, s)
 
   return Math.min(s, 20)
 }

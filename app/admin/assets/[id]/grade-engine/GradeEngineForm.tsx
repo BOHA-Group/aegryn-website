@@ -3,7 +3,7 @@
 import { CLUSTER_LABELS_FR, type CifsoValuation, type ClusterKey } from '@/lib/cifsoValuation'
 import ValuationPanel from '@/components/valuation/ValuationPanel'
 import { useState, useMemo, useEffect } from 'react'
-import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel } from '@/lib/gradeEngine'
+import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel, AiExposure } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
 import type { ProofQuality } from '@/lib/gradingSystem'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
@@ -79,6 +79,10 @@ function defaultInput(): GradeInput {
       pentestAuditorCert: 'none' as PentestAuditorCert,
       rgpdTransferReadiness: undefined,
       accessManagement: 'no' as 'yes' | 'no',
+      aiExposure: undefined,
+      aiInventory: 'no' as 'yes' | 'no',
+      aiPolicy: 'no' as 'yes' | 'no',
+      aiClientDataExposed: 'no' as 'yes' | 'no',
     },
     organisation: {
       keyPersonCount: 0, successionPlanDocumented: 'no', operationalDocsComplete: 'no',
@@ -721,6 +725,38 @@ export default function GradeEngineForm({
             <option value="clean">Conforme (SCCs / décision d&apos;adéquation)</option>
             <option value="warning">En attente de conformité</option>
             <option value="blocking">Bloquant — remédiation requise</option>
+          </select>
+        </Field>
+
+        {/* Exposition IA (S-41 à S-46) : maîtrise des actifs, des données, protection des clients */}
+        <Field label="Exposition IA (S-43 / S-44 / S-46)" hint="Pièce S-10 (inventaire). Souverain = UE/CH ou auto-hébergé. Massif non souverain = risque public" source="declarative">
+          <select
+            value={input.security.aiExposure ?? ''}
+            onChange={e => setSec('aiExposure', (e.target.value || undefined) as AiExposure | undefined)}
+            className={selectCls}>
+            <option value="">Non évalué</option>
+            <option value="none">Aucune IA tierce</option>
+            <option value="sovereign">IA souveraine (UE/CH) ou auto-hébergée</option>
+            <option value="mixed">Fournisseurs non souverains, usage encadré</option>
+            <option value="massive_non_sovereign">Dépendance forte à des fournisseurs non souverains</option>
+          </select>
+        </Field>
+        <Field label="Inventaire des services IA (S-41)" hint="Pièce S-10 : services, fournisseurs, hébergement, données transmises">
+          <select value={input.security.aiInventory ?? 'no'} onChange={e => setSec('aiInventory', e.target.value as 'yes' | 'no')} className={selectCls}>
+            <option value="no">Absent ou incomplet</option>
+            <option value="yes">Tenu à jour et vérifié</option>
+          </select>
+        </Field>
+        <Field label="Politique d'usage IA (S-42)" hint="Pièce S-11 : données autorisées / interdites, fournisseurs approuvés, revue humaine">
+          <select value={input.security.aiPolicy ?? 'no'} onChange={e => setSec('aiPolicy', e.target.value as 'yes' | 'no')} className={selectCls}>
+            <option value="no">Non formalisée</option>
+            <option value="yes">Formalisée et diffusée</option>
+          </select>
+        </Field>
+        <Field label="Données clients vers modèles tiers sans cadre (S-45)" hint="Pièce S-12 : DPA, non-entraînement, localisation. Oui = pénalité forte">
+          <select value={input.security.aiClientDataExposed ?? 'no'} onChange={e => setSec('aiClientDataExposed', e.target.value as 'yes' | 'no')} className={selectCls}>
+            <option value="no">Non (aucune donnée client ou cadre contractuel en place)</option>
+            <option value="yes">Oui, sans contrat ni clause de non-entraînement</option>
           </select>
         </Field>
       </Section>
