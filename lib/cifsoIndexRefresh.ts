@@ -72,7 +72,7 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
       }
     }
     for (const o of macro) {
-      rows.push({ scope_type: o.scope_type, scope_key: o.scope_key, metric: o.metric, period: o.period, p25: null, p50: o.value, p75: null, sample_size: null, unit: o.unit, is_public: o.is_public, source_internal: 'official_api' })
+      rows.push({ scope_type: o.scope_type, scope_key: o.scope_key, metric: o.metric, period: o.period, p25: o.p25 ?? null, p50: o.value, p75: o.p75 ?? null, sample_size: o.sample_size ?? null, unit: o.unit, is_public: o.is_public, source_internal: 'official_api' })
     }
     /* Indicateur de conditions de marché (0 à 100) : taux 10 ans, croissance, inflation, actions 12 mois.
        Lecture pour l'analyste : > 60 conditions porteuses, 40 à 60 neutres, < 40 défavorables. Ne modifie pas les multiples automatiquement. */

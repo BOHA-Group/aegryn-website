@@ -16,18 +16,29 @@
  *   - BCE : change EUR/CHF, taux des crédits aux entreprises ; BNS : rendements Confédération,
  *     change, indice SPI
  *
- * Les multiples de transaction restent issus des séries curées par Aegryn et des dossiers
- * certifiés : aucun flux officiel ouvert ne publie de multiples M&A privés.
+ *   - SEC EDGAR (registre officiel américain, API XBRL ouverte) : comparables cotés par cluster,
+ *     multiple prix / revenu (flottant public / chiffre d'affaires) et croissance du revenu,
+ *     panier de sociétés cotées représentatives (nombre d'entre elles sont européennes cotées
+ *     aux États-Unis). Compense les comparables cotés vendus sous licence.
+ *   - Eurostat SBS (statistiques structurelles) : taux de marge brute d'exploitation et valeur
+ *     ajoutée par salarié par secteur NACE, rapprochés des cinq clusters.
+ *
+ * Les multiples de transactions privées restent issus des séries curées par Aegryn et des
+ * dossiers certifiés : aucun flux officiel ouvert ne publie de multiples M&A privés.
  */
 
 export interface Observation {
-  scope_type: 'market'
-  scope_key: string        // ex. 'euro_area', 'switzerland', 'united_states'
+  scope_type: 'market' | 'cluster'
+  scope_key: string        // ex. 'euro_area', 'switzerland', 'united_states' ou une clé de cluster
   metric: 'rate_10y' | 'policy_rate' | 'equity_index' | 'gdp_growth' | 'inflation' | 'fx_eurchf' | 'lending_rate'
         | 'ai_adoption' | 'security_risk_assessment' | 'security_tests' | 'security_policy' | 'bankruptcies_yoy' | 'registrations_yoy'
+        | 'public_comps_p_revenue' | 'public_comps_revenue_growth' | 'sector_operating_margin' | 'sector_value_added_per_employee'
   period: string           // date ou période de l'observation
-  value: number
-  unit: '%' | 'index'
+  value: number            // médiane (p50) quand p25 / p75 sont fournis
+  p25?: number
+  p75?: number
+  sample_size?: number
+  unit: '%' | 'index' | 'x' | 'keur'
   is_public: boolean
 }
 export interface ConnectorResult { rows: Observation[]; latest: string | null }
@@ -219,8 +230,86 @@ const ALL_CONNECTORS: Connector[] = [
   },
 ]
 
+/* ── SEC EDGAR : comparables cotés par cluster ────────────────────────────── */
+/* Panier de sociétés cotées représentatives par cluster (tickers SEC). Le multiple est un
+   proxy prix / revenu : flottant public (dei:EntityPublicFloat, dernier exercice) rapporté au
+   revenu annuel (us-gaap). Percentiles p25 / p50 / p75 par cluster. */
+const SEC_BASKET: Record<string, string[]> = {
+  tech_innovation:   ['CRM', 'ADBE', 'NOW', 'WDAY', 'INTU', 'ORCL', 'SNOW', 'DDOG', 'MDB', 'HUBS', 'TEAM', 'ZS', 'CRWD', 'PANW', 'FTNT', 'OKTA', 'NET', 'TWLO', 'DT', 'GTLB', 'PATH', 'S', 'ESTC', 'CFLT', 'BRZE', 'MNDY', 'WIX', 'SPOT', 'DBX', 'BOX'],
+  finance_capital:   ['PYPL', 'XYZ', 'AFRM', 'SOFI', 'COIN', 'LC', 'UPST', 'GPN', 'FIS', 'FI', 'TOST', 'BILL', 'FLYW', 'PAYO', 'NU', 'HOOD', 'INTU', 'LMND', 'ROOT', 'OPEN'],
+  sante_sciences:    ['VEEV', 'DOCS', 'TDOC', 'HIMS', 'RMD', 'ISRG', 'DXCM', 'ALGN', 'IQV', 'EXAS', 'PODD', 'MASI', 'GEHC', 'EW', 'IDXX', 'ILMN', 'TXG', 'PHR', 'ONEM', 'CERT'],
+  industrie_infra:   ['ROK', 'EMR', 'ETN', 'TT', 'PH', 'CARR', 'JCI', 'GNRC', 'ENPH', 'SEDG', 'PTC', 'ANSS', 'ADSK', 'TRMB', 'CGNX', 'ZBRA', 'FLNC', 'ARRY', 'SHLS', 'NVT'],
+  commerce_services: ['SHOP', 'ETSY', 'EBAY', 'BKNG', 'ABNB', 'UBER', 'DASH', 'CHWY', 'W', 'EXPE', 'TRIP', 'LYFT', 'CART', 'RVLV', 'GLBE', 'CPNG', 'MELI', 'SE', 'JMIA', 'FVRR'],
+}
+const SEC_UA = { 'User-Agent': 'Aegryn CIFSO Valuation Index contact@aegryn.com' }
+function percentiles(values: number[]) {
+  const s = [...values].sort((a, b) => a - b)
+  const q = (p: number) => { const i = (s.length - 1) * p; const lo = Math.floor(i), hi = Math.ceil(i); return s[lo] + (s[hi] - s[lo]) * (i - lo) }
+  return { p25: q(0.25), p50: q(0.5), p75: q(0.75), n: s.length }
+}
+async function secPublicComps(): Promise<Observation[]> {
+  const year = new Date().getFullYear() - 1                       // dernier exercice complet publié
+  type Frame = { data: { cik: number; val: number; end: string }[] }
+  const [tickers, rev1, rev2, revPrev1, revPrev2, floatQ2, floatQ4] = await Promise.all([
+    getJson('https://www.sec.gov/files/company_tickers.json', SEC_UA) as Promise<Record<string, { cik_str: number; ticker: string }>>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/USD/CY${year}.json`, SEC_UA) as Promise<Frame>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/us-gaap/Revenues/USD/CY${year}.json`, SEC_UA) as Promise<Frame>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/USD/CY${year - 1}.json`, SEC_UA) as Promise<Frame>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/us-gaap/Revenues/USD/CY${year - 1}.json`, SEC_UA) as Promise<Frame>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/dei/EntityPublicFloat/USD/CY${year}Q2I.json`, SEC_UA).catch(() => ({ data: [] })) as Promise<Frame>,
+    getJson(`https://data.sec.gov/api/xbrl/frames/dei/EntityPublicFloat/USD/CY${year}Q4I.json`, SEC_UA).catch(() => ({ data: [] })) as Promise<Frame>,
+  ])
+  const cikOf = new Map(Object.values(tickers).map(t => [t.ticker.toUpperCase(), t.cik_str]))
+  const byCik = (f: Frame) => new Map(f.data.map(d => [d.cik, d.val]))
+  const R1 = byCik(rev1), R2 = byCik(rev2), P1 = byCik(revPrev1), P2 = byCik(revPrev2), F2 = byCik(floatQ2), F4 = byCik(floatQ4)
+  const rows: Observation[] = []
+  for (const [cluster, list] of Object.entries(SEC_BASKET)) {
+    const mult: number[] = [], growth: number[] = []
+    for (const tk of list) {
+      const cik = cikOf.get(tk); if (!cik) continue
+      const rev = R1.get(cik) ?? R2.get(cik); const prev = P1.get(cik) ?? P2.get(cik); const flt = F2.get(cik) ?? F4.get(cik)
+      if (rev && rev > 0 && flt && flt > 0) mult.push(flt / rev)
+      if (rev && prev && prev > 0) growth.push(((rev / prev) - 1) * 100)
+    }
+    if (mult.length >= 5) {
+      const m = percentiles(mult)
+      rows.push({ scope_type: 'cluster', scope_key: cluster, metric: 'public_comps_p_revenue', period: `CY${year}`, value: r2(m.p50), p25: r2(m.p25), p75: r2(m.p75), sample_size: m.n, unit: 'x', is_public: cluster === 'tech_innovation' })
+    }
+    if (growth.length >= 5) {
+      const g = percentiles(growth)
+      rows.push({ scope_type: 'cluster', scope_key: cluster, metric: 'public_comps_revenue_growth', period: `CY${year}`, value: r2(g.p50), p25: r2(g.p25), p75: r2(g.p75), sample_size: g.n, unit: '%', is_public: cluster === 'tech_innovation' })
+    }
+  }
+  return rows
+}
+
+/* ── Eurostat SBS : marges et productivité par secteur, rapprochées des clusters ── */
+const SBS_NACE: Record<string, string> = { tech_innovation: 'J', finance_capital: 'K64-K66', sante_sciences: 'Q', industrie_infra: 'C', commerce_services: 'G' }
+
+const ALL_CONNECTORS_EXT: Connector[] = [
+  {
+    key: 'sec_public_comps', name: 'SEC EDGAR : comparables cotés par cluster (prix / revenu, croissance du revenu), panier de 110 sociétés', kind: 'official_api', region: 'INTL',
+    async run() { const rows = await secPublicComps(); return { rows, latest: latestOf(rows) } },
+  },
+  {
+    key: 'eurostat_sbs', name: 'Eurostat, statistiques structurelles : taux de marge d\'exploitation et valeur ajoutée par salarié par secteur', kind: 'official_api', region: 'EU',
+    async run() {
+      const rows: Observation[] = []
+      for (const [cluster, nace] of Object.entries(SBS_NACE)) {
+        const [gor, va] = await Promise.all([
+          eurostatLast('sbs_ovw_act', 'EU27_2020', { nace_r2: nace, indic_sbs: 'GOR_PC' }).catch(() => null),
+          eurostatLast('sbs_ovw_act', 'EU27_2020', { nace_r2: nace, indic_sbs: 'AV_SAL_TEUR' }).catch(() => null),
+        ])
+        if (gor) rows.push({ scope_type: 'cluster', scope_key: cluster, metric: 'sector_operating_margin', period: gor.period, value: r2(gor.value), unit: '%', is_public: cluster === 'tech_innovation' })
+        if (va)  rows.push({ scope_type: 'cluster', scope_key: cluster, metric: 'sector_value_added_per_employee', period: va.period, value: r2(va.value), unit: 'keur', is_public: false })
+      }
+      return { rows, latest: latestOf(rows) }
+    },
+  },
+]
+
 /* Priorité Suisse puis Europe, puis international */
 const ORDER: Record<Connector['region'], number> = { CH: 0, EU: 1, INTL: 2 }
-export const CONNECTORS: Connector[] = [...ALL_CONNECTORS].sort((a, b) => ORDER[a.region] - ORDER[b.region])
+export const CONNECTORS: Connector[] = [...ALL_CONNECTORS, ...ALL_CONNECTORS_EXT].sort((a, b) => ORDER[a.region] - ORDER[b.region])
 
 const r2 = (v: number) => Math.round(v * 100) / 100
