@@ -264,7 +264,7 @@ export default function CatalogAdminClient({ rows: initial }: Props) {
                     ) : (
                       <>
                         <Link
-                          href={`/admin/assets/${r.id}/grade`}
+                          href={`/admin/assets/${r.id}/grade-engine`}
                           className="rounded-lg flex items-center gap-1 text-[10px] font-semibold text-indigo-600 hover:text-indigo-800 border border-indigo-100 px-2 py-1 hover:border-indigo-300 transition-colors"
                         >
                           Grader →

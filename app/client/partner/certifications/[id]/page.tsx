@@ -5,6 +5,9 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft } from 'lucide-react'
 import CertificationForm from './CertificationForm'
+import ExpertDocuments, { type ExpertDoc } from './ExpertDocuments'
+import WorkflowStepper from '@/components/workflow/WorkflowStepper'
+import { getCertificationProgress } from '@/lib/certificationWorkflow'
 
 export const metadata: Metadata = {
   title: 'Co-signature — Espace Partenaire Aegryn',
@@ -12,10 +15,11 @@ export const metadata: Metadata = {
 }
 
 const DIMENSION_LABELS: Record<string, string> = {
-  code:     'Code & Architecture',
-  ip:       'Propriété Intellectuelle',
-  finance:  'Finance & Comptabilité',
-  security: 'Sécurité & Conformité',
+  code:         'C : Code & Architecture',
+  ip:           'I : Propriété Intellectuelle',
+  finance:      'F : Finance & Comptabilité',
+  security:     'S : Sécurité & Conformité',
+  organisation: 'O : Organisation & Talent',
 }
 
 const RECOMMENDATION_LABELS: Record<string, string> = {
@@ -43,7 +47,7 @@ export default async function PartnerCertificationDetailPage({
   const { data: cert } = await supa
     .from('partner_certifications')
     .select(`
-      id, dimension, status, score, subcodes, summary, reserves, recommendation,
+      id, asset_id, dimension, status, score, subcodes, summary, reserves, recommendation,
       deadline_at, signed_by_checkbox, signed_at,
       validated_at, rejection_reason, observations, cosignature_amount_chf,
       created_at,
@@ -67,6 +71,19 @@ export default async function PartnerCertificationDetailPage({
   const isValidated = cert.status === 'validated'
   const isRejected  = cert.status === 'rejected'
 
+  const progress = cert.asset_id ? await getCertificationProgress(String(cert.asset_id), 'expert', { expertCertId: id }) : null
+
+  /* Pièces ouvertes à l'expert : sa dimension + transversales, visibilité assigned_partner / nda_buyers */
+  const [{ data: expertDocs }, { data: me }] = await Promise.all([
+    supa.from('data_room_documents')
+      .select('id, document_code, file_name, uploaded_at, admin_quality, is_sensitive, dimension')
+      .eq('asset_id', String(cert.asset_id))
+      .in('visible_to', ['assigned_partner', 'nda_buyers'])
+      .or(`dimension.eq.${cert.dimension},dimension.is.null`)
+      .order('document_code'),
+    supa.from('profiles').select('full_name, email').eq('id', user.id).maybeSingle(),
+  ])
+
   return (
     <div className="p-8 max-w-3xl">
       <Link href="/client/partner/certifications"
@@ -74,10 +91,12 @@ export default async function PartnerCertificationDetailPage({
         <ArrowLeft size={12} /> Co-signatures
       </Link>
 
+      {progress && <WorkflowStepper progress={progress} title="Parcours du mandat expert" />}
+
       {/* Header */}
       <div className="mb-8">
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-400 mb-1">
-          Co-signature — {DIMENSION_LABELS[cert.dimension] ?? cert.dimension}
+          Co-signature : {DIMENSION_LABELS[cert.dimension] ?? cert.dimension}
         </p>
         <h1 className="font-sans font-bold text-gray-900 text-[22px] tracking-tight">
           {asset?.company_name ?? `Actif #${id.slice(0, 8)}`}
@@ -122,7 +141,7 @@ export default async function PartnerCertificationDetailPage({
             {cert.score != null && (
               <div>
                 <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-500 mb-0.5">Score retenu</p>
-                <p className="font-sans font-bold text-[20px] text-emerald-700">{cert.score}<span className="text-[12px] opacity-60">/25</span></p>
+                <p className="font-sans font-bold text-[20px] text-emerald-700">{cert.score}<span className="text-[12px] opacity-60">/20</span></p>
               </div>
             )}
             {cert.cosignature_amount_chf != null && (
@@ -188,6 +207,16 @@ export default async function PartnerCertificationDetailPage({
         </div>
       )}
 
+      {/* Pièces de la dimension (tant que le mandat est actif) */}
+      {cert.status !== 'rejected' && cert.status !== 'expired' && (
+        <ExpertDocuments
+          docs={(expertDocs ?? []) as ExpertDoc[]}
+          userName={me?.full_name ?? user.email ?? ''}
+          userEmail={me?.email ?? user.email ?? ''}
+          dimensionLabel={DIMENSION_LABELS[cert.dimension] ?? cert.dimension}
+        />
+      )}
+
       {/* Formulaire de soumission */}
       {canSubmit && (
         <CertificationForm certId={id} currentStatus={cert.status} dimension={cert.dimension} />
@@ -197,7 +226,7 @@ export default async function PartnerCertificationDetailPage({
       <div className="rounded-lg mt-6 bg-ag-navy/5 border border-ag-navy/20 px-5 py-4">
         <p className="font-mono text-[9px] uppercase tracking-widest text-ag-navy/50 mb-2">Processus CIFSO v4.0</p>
         <p className="font-sans text-[11px] text-gray-600 leading-relaxed">
-          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0–25) et votre avis seront intégrés dans le rapport de certification officiel Aegryn. Le score global CIFSO est la somme des cinq dimensions.
+          Votre co-signature porte sur la dimension <strong>{DIMENSION_LABELS[cert.dimension] ?? cert.dimension}</strong>. Votre score (0 à 20) et votre avis alimentent la revue manuelle du moteur de grade Aegryn. Le score global CIFSO 5000 sur 100 est la somme des cinq dimensions. Vous accédez uniquement aux pièces de votre dimension, via la Data Room.
         </p>
       </div>
     </div>

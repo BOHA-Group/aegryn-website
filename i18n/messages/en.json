@@ -2303,7 +2303,7 @@
     "index": {
       "label": "Aegryn Certification",
       "title": "An independent quality label\nfor organisations that build to last.",
-      "desc": "An organisation's value is not invented in a negotiation. It is documented well before. The Certification CIFSO 5000 is that documentation: independent, reproducible, defensible.",
+      "desc": "CIFSO 5000 Certification is a quality audit of the valuation of a company's assets. An organisation's value is not invented during a negotiation: it is documented well before, independently, reproducibly and defensibly.",
       "ctaSubmit": "Submit for certification",
       "ctaMethod": "Read the methodology",
       "marketLabel": "Why certify now",
@@ -10209,7 +10209,7 @@
       "Start your certification"
     ],
     "s1Title": "What CIFSO 5000 certification is for",
-    "s1Lead": "Existing standards certify systems and processes. CIFSO 5000 certifies the value and transferability of an organisation.",
+    "s1Lead": "Existing standards certify systems and processes. CIFSO 5000 is a quality audit of the valuation of a company's assets: it certifies the value and transferability of an organisation.",
     "s1P1": "A company can be fully compliant operationally and still be difficult to value, finance or transfer. CIFSO 5000 closes this gap: it independently and verifiably documents what constitutes an organisation's real value — its intellectual capital, integrity, financial health, security and organisational resilience.",
     "s1P2": "The result is an official, versioned and defensible grade that can be presented to investors, acquirers, banks, partners or successors as third-party proof of the organisation's quality and transferability.",
     "s1Stats": [
@@ -10460,7 +10460,7 @@
     "summary": "Certified summary",
     "issuer": "Issued by Aegryn. Independent certification body. Switzerland.",
     "whatTitle": "What this document certifies",
-    "whatDesc": "The CIFSO 5000 grade assesses the value and transferability of an organisation across five dimensions: Code, IP, Finance, Security, Organisation. It is issued after documentary verification, independent analysis and review. Valid for 12 months.",
+    "whatDesc": "CIFSO 5000 is a quality audit of the valuation of a company's assets. The grade assesses the value and transferability of an organisation across five dimensions: Code, IP, Finance, Security, Organisation. It is issued after documentary verification, independent analysis and review. Valid for 12 months.",
     "badgeAlt": "CIFSO 5000 Certified badge",
     "learnMore": "Discover the certification"
   }

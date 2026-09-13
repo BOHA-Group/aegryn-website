@@ -1,5 +1,7 @@
 'use client'
 
+import { CLUSTER_LABELS_FR, type CifsoValuation, type ClusterKey } from '@/lib/cifsoValuation'
+import ValuationPanel from '@/components/valuation/ValuationPanel'
 import { useState, useMemo, useEffect } from 'react'
 import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel } from '@/lib/gradeEngine'
 import { runGradeEngine } from '@/lib/gradeEngine'
@@ -369,6 +371,8 @@ export default function GradeEngineForm({
   const [publishing, setPublishing] = useState(false)
   const [statusMsg, setStatusMsg] = useState('')
   const [emitPreGrade, setEmitPreGrade] = useState(false)  // C2 — Pre-Grade explicite admin
+  const [valuationCluster, setValuationCluster] = useState('')
+  const [valuation, setValuation] = useState<CifsoValuation | null>(null)
 
   /* ── Score live recalculé à chaque changement d'input ── */
   const liveScore = useMemo(() => runGradeEngine(input), [input])
@@ -467,11 +471,12 @@ export default function GradeEngineForm({
       const res = await fetch(`/api/admin/assets/${assetId}/grade-engine`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'publish', assessmentId, emitPreGrade }),
+        body: JSON.stringify({ action: 'publish', assessmentId, emitPreGrade, valuationCluster: valuationCluster || undefined }),
       })
       const json = await res.json()
       if (!res.ok) { setStatusMsg(json.error ?? 'Erreur'); return }
-      setStatusMsg(`✅ Grade ${json.grade?.toUpperCase()} publié sur la fiche actif.`)
+      setValuation(json.valuation ?? null)
+      setStatusMsg(`✅ Grade ${json.grade?.toUpperCase()} publié sur la fiche actif.${json.valuation ? '' : ' Valorisation non calculée : renseigner l\'ARR (dimension F) et le cluster.'}`)
     } finally {
       setPublishing(false)
     }
@@ -1251,12 +1256,18 @@ export default function GradeEngineForm({
               </span>
             </label>
           )}
+          <select value={valuationCluster} onChange={e => setValuationCluster(e.target.value)}
+            className="rounded-lg border border-gray-200 bg-white px-3 py-2 font-sans text-[11px] text-gray-700" title="Cluster de multiples pour la valorisation indicative">
+            <option value="">Cluster : déduit du secteur</option>
+            {(Object.keys(CLUSTER_LABELS_FR) as ClusterKey[]).map(k => <option key={k} value={k}>{CLUSTER_LABELS_FR[k]}</option>)}
+          </select>
           <button type="button" onClick={publish} disabled={publishing}
             className="rounded-lg flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-ag-apex/80 transition-colors disabled:opacity-50">
             <Send size={13} />
             {publishing ? 'Publication…' : 'Publier sur la fiche actif'}
           </button>
         </div>
+        {valuation && <ValuationPanel v={valuation} admin />}
       </div>
     )
   }

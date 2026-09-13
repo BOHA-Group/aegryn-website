@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { SUBCODES_BY_DIMENSION } from '@/lib/gradingSystem'
 import { Loader2, CheckCircle2, XCircle } from 'lucide-react'
 
 type Props = {
@@ -10,29 +11,10 @@ type Props = {
   dimension: string
 }
 
-const SUBCODES: Record<string, { label: string; code: string }[]> = {
-  ip: [
-    { code: 'IP-REG', label: 'Droits enregistrés (brevets, marques, droits d\'auteur)' },
-    { code: 'IP-ORIG', label: 'Originalité et non-contrefaçon vérifiées' },
-    { code: 'IP-SCOPE', label: 'Périmètre géographique des droits' },
-    { code: 'IP-RISK', label: 'Risques de litiges identifiés' },
-    { code: 'IP-CHAIN', label: 'Chaîne de titre propre et documentée' },
-  ],
-  finance: [
-    { code: 'FIN-REV', label: 'Récurrence des revenus vérifiée' },
-    { code: 'FIN-MGMT', label: 'Cohérence des comptes de gestion' },
-    { code: 'FIN-PROJ', label: 'Projections financières réalistes' },
-    { code: 'FIN-DEBT', label: 'Passifs et dettes identifiés' },
-    { code: 'FIN-CTRL', label: 'Contrôle interne adéquat' },
-  ],
-  security: [
-    { code: 'SEC-INFRA', label: 'Sécurité de l\'infrastructure hébergée' },
-    { code: 'SEC-DATA', label: 'Protection des données (RGPD / LPD)' },
-    { code: 'SEC-PENTEST', label: 'Pentests récents et patch management' },
-    { code: 'SEC-BCR', label: 'Plan de continuité (BCR/PRA)' },
-    { code: 'SEC-CERT', label: 'Certifications de sécurité (ISO 27001, SOC 2…)' },
-  ],
-}
+/* Sous-codes officiels du référentiel CIFSO 5000 (lib/gradingSystem), par dimension, regroupés par thème */
+const SUBCODES: Record<string, { label: string; code: string; group?: string }[]> = Object.fromEntries(
+  Object.entries(SUBCODES_BY_DIMENSION).map(([dim, defs]) => [dim, defs.map(d => ({ code: d.code, label: d.fr, group: d.group }))]),
+)
 
 export default function CertificationForm({ certId, currentStatus, dimension }: Props) {
   const router = useRouter()
@@ -95,13 +77,13 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
         {/* Score */}
         <div>
           <label className="font-mono text-[9px] uppercase tracking-widest text-gray-500 block mb-2">
-            Score (0–25) *
+            Score de la dimension (0 à 20) *
           </label>
           <input
-            type="number" min={0} max={25} step={1}
+            type="number" min={0} max={20} step={1}
             value={score}
             onChange={e => setScore(e.target.value)}
-            placeholder="ex. 21"
+            placeholder="ex. 16"
             className="rounded-lg w-32 bg-gray-50 border border-gray-300 px-3 py-2 font-mono text-[14px] text-gray-900 focus:outline-none focus:border-ag-navy transition-colors"
           />
         </div>
@@ -112,7 +94,7 @@ export default function CertificationForm({ certId, currentStatus, dimension }: 
             Critères validés (sous-codes CIFSO)
           </p>
           <div className="flex flex-col gap-2">
-            {(SUBCODES[dimension as keyof typeof SUBCODES] ?? SUBCODES.ip).map(({ code, label }) => (
+            {(SUBCODES[dimension] ?? []).map(({ code, label }) => (
               <label key={code} className="flex items-start gap-3 cursor-pointer group">
                 <input
                   type="checkbox"

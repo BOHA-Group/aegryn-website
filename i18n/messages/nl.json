@@ -2994,7 +2994,7 @@
     "index": {
       "label": "Aegryn Certificering",
       "title": "Een onafhankelijk kwaliteitslabel\nvoor organisaties die zijn gebouwd om te blijven.",
-      "desc": "De waarde van een organisatie ontstaat niet in een onderhandeling. Ze wordt vooraf gedocumenteerd, onafhankelijk beoordeeld en voor alle partijen aantoonbaar gemaakt. De Certificering CIFSO 5000 is de standaard die dit bewijs levert.",
+      "desc": "De CIFSO 5000-certificering is een kwaliteitsaudit van de waardering van de activa van een onderneming. De waarde van een organisatie ontstaat niet tijdens een onderhandeling: zij wordt lang daarvoor gedocumenteerd, onafhankelijk, reproduceerbaar en verdedigbaar.",
       "ctaSubmit": "Indienen voor certificering",
       "ctaMethod": "Methodologie lezen",
       "marketLabel": "Waarom nu certificeren",
@@ -10209,7 +10209,7 @@
       "Uw certificering starten"
     ],
     "s1Title": "Waarvoor de CIFSO 5000-certificering dient",
-    "s1Lead": "Bestaande standaarden certificeren systemen en processen. CIFSO 5000 certificeert de waarde en overdraagbaarheid van een organisatie.",
+    "s1Lead": "Bestaande normen certificeren systemen en processen. CIFSO 5000 is een kwaliteitsaudit van de waardering van de activa van een onderneming: het certificeert de waarde en overdraagbaarheid van een organisatie.",
     "s1P1": "Een onderneming kan operationeel volledig conform zijn en toch moeilijk te waarderen, te financieren of over te dragen. CIFSO 5000 dicht die kloof: het documenteert onafhankelijk en verifieerbaar wat de werkelijke waarde van een organisatie vormt — haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
     "s1P2": "Het resultaat is een officiële, geversioneerde en verdedigbare beoordeling die aan investeerders, kopers, banken, partners of opvolgers kan worden voorgelegd als bewijs van derden voor de kwaliteit en overdraagbaarheid van de organisatie.",
     "s1Stats": [
@@ -10460,7 +10460,7 @@
     "summary": "Gecertificeerde samenvatting",
     "issuer": "Uitgegeven door Aegryn. Onafhankelijke certificeringsinstelling. Zwitserland.",
     "whatTitle": "Wat dit document certificeert",
-    "whatDesc": "De CIFSO 5000-grade beoordeelt de waarde en overdraagbaarheid van een organisatie op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Hij wordt uitgegeven na documentcontrole, onafhankelijke analyse en review. Geldigheid 12 maanden.",
+    "whatDesc": "CIFSO 5000 is een kwaliteitsaudit van de waardering van de activa van een onderneming. De grade beoordeelt de waarde en overdraagbaarheid van een organisatie op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Hij wordt uitgegeven na documentcontrole, onafhankelijke analyse en review. Geldigheid 12 maanden.",
     "badgeAlt": "Badge CIFSO 5000 gecertificeerd",
     "learnMore": "De certificering ontdekken"
   }

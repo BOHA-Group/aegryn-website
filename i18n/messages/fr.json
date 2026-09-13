@@ -2263,7 +2263,7 @@
     "index": {
       "label": "Certification Aegryn",
       "title": "Un label qualité indépendant\npour les organisations conçues pour durer.",
-      "desc": "La valeur d'une organisation ne s'invente pas dans une négociation. Elle se documente bien avant. La Certification CIFSO 5000, c'est cette documentation : indépendante, reproductible, opposable.",
+      "desc": "La Certification CIFSO 5000 est un audit qualité de la valorisation des actifs d'une entreprise. La valeur d'une organisation ne s'invente pas dans une négociation : elle se documente bien avant, de façon indépendante, reproductible et opposable.",
       "ctaSubmit": "Soumettre pour certification",
       "ctaMethod": "Lire la méthodologie",
       "marketLabel": "Pourquoi certifier maintenant",
@@ -10300,7 +10300,7 @@
       "Engager votre certification"
     ],
     "s1Title": "À quoi sert la certification CIFSO 5000",
-    "s1Lead": "Les standards existants certifient les systèmes et les processus. Le CIFSO 5000 certifie la valeur et la transmissibilité d'une organisation.",
+    "s1Lead": "Les standards existants certifient les systèmes et les processus. Le CIFSO 5000 est un audit qualité de la valorisation des actifs d'une entreprise : il certifie la valeur et la transmissibilité d'une organisation.",
     "s1P1": "Une entreprise peut être parfaitement conforme sur le plan opérationnel et pourtant difficile à valoriser, à financer ou à transmettre. Le CIFSO 5000 comble cet écart : il documente de manière indépendante et vérifiable ce qui constitue la valeur réelle d'une organisation — son capital intellectuel, son intégrité, sa santé financière, sa sécurité et sa résilience organisationnelle.",
     "s1P2": "Le résultat est un grade officiel, versionné et opposable, qui peut être présenté à des investisseurs, des acquéreurs, des banques, des partenaires ou des successeurs comme preuve tierce de la qualité et de la transmissibilité de l'organisation.",
     "s1Stats": [
@@ -10551,7 +10551,7 @@
     "summary": "Résumé certifié",
     "issuer": "Délivré par Aegryn. Organisme de certification indépendant. Suisse.",
     "whatTitle": "Ce que certifie ce document",
-    "whatDesc": "Le grade CIFSO 5000 évalue la valeur et la transmissibilité d'une organisation sur cinq dimensions : Code, IP, Finance, Sécurité, Organisation. Il est délivré après vérification documentaire, analyse indépendante et revue. Validité 12 mois.",
+    "whatDesc": "Le CIFSO 5000 est un audit qualité de la valorisation des actifs d'une entreprise. Le grade évalue la valeur et la transmissibilité d'une organisation sur cinq dimensions : Code, IP, Finance, Sécurité, Organisation. Il est délivré après vérification documentaire, analyse indépendante et revue. Validité 12 mois.",
     "badgeAlt": "Badge Certifié CIFSO 5000",
     "learnMore": "Découvrir la certification"
   }

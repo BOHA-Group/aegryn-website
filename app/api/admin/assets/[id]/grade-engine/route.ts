@@ -21,6 +21,12 @@ import { runGradeEngine, type GradeInput, type GradeLetter } from '@/lib/gradeEn
 import { getAdminUser }              from '@/lib/adminAuth'
 import { sendEmail }                 from '@/lib/sendEmail'
 import { refreshPrescore }           from '@/lib/prescoreServer'
+import { computeCifsoValuation, clusterFromSector, type CifsoValuation, type ClusterKey, type MarketMultiples } from '@/lib/cifsoValuation'
+
+function fmtEurRange(lo: number, hi: number) {
+  const f = (n: number) => new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n)
+  return `${f(lo)} à ${f(hi)}`
+}
 
 /** CIFSO-XXXX-XXXX : alphabet sans caractères ambigus */
 function generateVerificationCode(): string {
@@ -128,6 +134,8 @@ const bodySchema = z.object({
   overrideNote:    z.string().max(2000).optional(),
   publicRationale: z.string().max(3000).optional(),
   emitPreGrade:    z.boolean().optional(),  // C2 — Pre-Grade explicite admin, uniquement si grade=refused
+  /* Valorisation indicative : cluster de multiples (déduit du secteur si absent) */
+  valuationCluster: z.enum(['tech_innovation', 'finance_capital', 'sante_sciences', 'industrie_infra', 'commerce_services']).optional(),
 })
 
 // ── Handler ───────────────────────────────────────────────────────────────────
@@ -302,7 +310,7 @@ export async function POST(
 
     const { data: assessment } = await supa
       .from('grade_assessments')
-      .select('final_grade, final_score, public_rationale, status, trs, recommendations')
+      .select('final_grade, final_score, public_rationale, status, trs, recommendations, engine_result_json, input_json')
       .eq('id', body.assessmentId)
       .eq('asset_id', assetId)
       .single()
@@ -315,7 +323,7 @@ export async function POST(
     // Dossier + KYC/KYB du demandeur + mandat signé
     const { data: assetFull } = await supa
       .from('assets')
-      .select('asking_price, status, company_name, seller_name, seller_email, seller_uid, dossier_type, verification_code')
+      .select('asking_price, status, company_name, seller_name, seller_email, seller_uid, dossier_type, verification_code, sector, benchmark_category, valuation_cluster, arr')
       .eq('id', assetId)
       .maybeSingle()
 
@@ -438,6 +446,35 @@ export async function POST(
 
     if (assetErr) return NextResponse.json({ error: assetErr.message }, { status: 500 })
 
+    /* ── Valorisation indicative CIFSO : conclusion chiffrée du grade (client uniquement) ── */
+    let valuation: CifsoValuation | null = null
+    if (!isRefusedGrade) {
+      const engine = (assessment.engine_result_json ?? {}) as { dimensions?: Record<string, { score?: number }>; totalScore?: number; effectiveProofQualities?: Record<string, 'declarative' | 'verifiable' | 'audited'> }
+      const inputJ = (assessment.input_json ?? {}) as { finance?: { arr?: number } }
+      const arr = inputJ.finance?.arr ?? (assetFull?.arr as number | null) ?? null
+      const cluster = body.valuationCluster
+        ?? (assetFull?.valuation_cluster as ClusterKey | null)
+        ?? (['tech_innovation','finance_capital','sante_sciences','industrie_infra','commerce_services'].includes(assetFull?.benchmark_category ?? '') ? assetFull?.benchmark_category as ClusterKey : null)
+        ?? clusterFromSector(assetFull?.sector)
+      if (arr && arr > 0 && cluster && engine.dimensions) {
+        const { data: mult } = await supa.from('cifso_market_multiples').select('*').eq('cluster_key', cluster).eq('is_active', true).maybeSingle()
+        if (mult) {
+          const ds = engine.dimensions
+          valuation = computeCifsoValuation({
+            arr,
+            totalScore: assessment.final_score ?? engine.totalScore ?? 0,
+            dimensionScores: { code: ds.code?.score ?? 0, ip: ds.ip?.score ?? 0, finance: ds.finance?.score ?? 0, security: ds.security?.score ?? 0, organisation: ds.organisation?.score ?? 0 },
+            multiples: mult as unknown as MarketMultiples,
+            proofQualities: engine.effectiveProofQualities,
+          })
+          await Promise.all([
+            supa.from('assets').update({ valuation_cluster: cluster, valuation_json: valuation, valuation_at: now }).eq('id', assetId),
+            supa.from('grade_assessments').update({ valuation_json: valuation }).eq('id', body.assessmentId),
+          ])
+        }
+      }
+    }
+
     /* ── Retour au client demandeur : notification in-app + email avec les livrables ── */
     const symbol   = GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade
     const orgName  = assetFull?.company_name ?? `Dossier ${assetId.slice(0, 8)}`
@@ -476,6 +513,7 @@ export async function POST(
 <ul>
   <li>Grade : <strong>${symbol}</strong>${assessment.final_score != null ? ` (${assessment.final_score}/100)` : ''}</li>
   ${assessment.public_rationale ? `<li>Résumé certifié : ${assessment.public_rationale}</li>` : ''}
+  ${valuation ? `<li>Valorisation indicative : ${fmtEurRange(valuation.value.low, valuation.value.high)} (multiple ${valuation.multiple.low}x à ${valuation.multiple.high}x du revenu récurrent)</li>` : ''}
 </ul>
 <p><a href="${siteUrl}${dossier}">Consulter le dossier, télécharger la fiche de grade et le kit de communication</a></p>
 ${!isRefusedGrade ? `<p>Vérification publique du certificat : <a href="${siteUrl}/fr/verify/${verificationCode}">${siteUrl}/fr/verify/${verificationCode}</a></p>` : ''}
@@ -488,7 +526,7 @@ ${!isRefusedGrade ? `<p>Vérification publique du certificat : <a href="${siteUr
       console.error('[grade-engine/publish] notification', notifRes.value.error)
     }
 
-    return NextResponse.json({ ok: true, grade: assessment.final_grade, transactionReady, transactionReadyBlockers })
+    return NextResponse.json({ ok: true, grade: assessment.final_grade, transactionReady, transactionReadyBlockers, valuation })
   }
 
   return NextResponse.json({ error: 'unknown_action' }, { status: 400 })

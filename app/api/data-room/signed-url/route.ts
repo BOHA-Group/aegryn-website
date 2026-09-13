@@ -106,13 +106,16 @@ async function checkAccess(
 
   /* Partenaire assigné */
   if (doc.visible_to === 'assigned_partner' || doc.visible_to === 'nda_buyers') {
-    const { data: cert } = await supa
+    /* Périmètre : uniquement la dimension du mandat (les pièces transversales, sans dimension, restent accessibles) */
+    const docDim = (doc as unknown as { dimension?: string | null }).dimension ?? null
+    let q = supa
       .from('partner_certifications')
       .select('id')
       .eq('asset_id', doc.asset_id)
       .eq('partner_id', userId)
       .in('status', ['assigned', 'in_review', 'submitted', 'validated'])
-      .maybeSingle()
+    if (docDim) q = q.eq('dimension', docDim)
+    const { data: cert } = await q.limit(1).maybeSingle()
     if (cert) return true
   }
 

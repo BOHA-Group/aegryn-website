@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
 import { checkAdminAccess }    from '@/lib/adminAuth'
+import WorkflowStepper from '@/components/workflow/WorkflowStepper'
+import { getCertificationProgress } from '@/lib/certificationWorkflow'
 import type {
   DataRoomDocument, DocumentCatalogEntry, DocumentDimension,
 } from '@/lib/dataRoom'
@@ -99,9 +101,12 @@ export default async function AdminAssetDocumentsPage({
     ?? 'Actif'
   )
 
+  const progress = await getCertificationProgress(id, 'admin')
+
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
       <div className="max-w-6xl mx-auto">
+        {progress && <WorkflowStepper progress={progress} />}
 
         {/* Header */}
         <div className="mb-8">
@@ -110,7 +115,7 @@ export default async function AdminAssetDocumentsPage({
               className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               ← Assets
             </Link>
-            <Link href={`/admin/assets/${id}/grade`}
+            <Link href={`/admin/assets/${id}/grade-engine`}
               className="rounded-lg text-[11px] font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 hover:border-gray-400 bg-white transition-colors">
               Grade
             </Link>

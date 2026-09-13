@@ -6,26 +6,15 @@ import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, FileDown } from 'lucide-react'
 import SellerAssetTabs, { type Delta } from './SellerAssetTabs'
 import CommunicationKit from './CommunicationKit'
+import ValuationPanel from '@/components/valuation/ValuationPanel'
+import type { CifsoValuation } from '@/lib/cifsoValuation'
+import WorkflowStepper from '@/components/workflow/WorkflowStepper'
+import { getCertificationProgress } from '@/lib/certificationWorkflow'
 
 export const metadata: Metadata = {
   title: 'Dossier actif — Espace Cédant Aegryn',
   robots: { index: false, follow: false },
 }
-
-const STATUS_STEPS = [
-  { key: 'submitted',    label: 'Dossier reçu',        desc: 'Votre dossier a bien été soumis.' },
-  { key: 'under_review', label: 'Analyse en cours',    desc: 'Nos analystes étudient votre dossier.' },
-  { key: 'graded',       label: 'Grade attribué',      desc: 'Votre actif a reçu un grade officiel Aegryn.' },
-  { key: 'published',    label: 'Publié au catalogue', desc: 'Votre actif est visible par les acquéreurs qualifiés.' },
-  { key: 'sold',         label: 'Vendu',               desc: 'La transaction a été clôturée avec succès.' },
-]
-
-/* Dossier de certification CIFSO 5000 (hors transaction) : parcours brochure */
-const CERTIFICATION_STEPS = [
-  { key: 'submitted',    label: 'Demande reçue',        desc: 'Pré-qualification sous 5 jours ouvrés, devis et NDA.' },
-  { key: 'under_review', label: 'Audit CIFSO en cours', desc: 'Pièces vérifiées, analyse sur les cinq dimensions, revue indépendante.' },
-  { key: 'graded',       label: 'Certifié',             desc: 'Certificat, rapport et feuille de route disponibles. Validité 12 mois.' },
-]
 
 function gradeColor(g: string) {
   return g === '★'   ? 'text-emerald-600 border-emerald-200 bg-emerald-50'
@@ -59,7 +48,7 @@ export default async function SellerAssetDetailPage({
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, asset_type, arr, asking_price, official_grade, aeg_grade, score_total, status, sector, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months, trs, auction_ready, auction_ready_blockers, verification_code, certificate_valid_until')
+    .select('id, company_name, asset_type, arr, asking_price, official_grade, aeg_grade, score_total, status, sector, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months, trs, auction_ready, auction_ready_blockers, verification_code, certificate_valid_until, valuation_json')
     .eq('id', id)
     .single()
 
@@ -71,9 +60,8 @@ export default async function SellerAssetDetailPage({
 
   if (!isOwner) notFound()
 
+  const progress = await getCertificationProgress(id, 'client')
   const isCertification = asset.asset_type === 'certification_cifso'
-  const steps       = isCertification ? CERTIFICATION_STEPS : STATUS_STEPS
-  const stepIdx     = steps.findIndex(s => s.key === asset.status)
   const isWithdrawn = asset.status === 'withdrawn'
 
   const [
@@ -162,39 +150,9 @@ export default async function SellerAssetDetailPage({
         )}
       </div>
 
-      {/* Timeline */}
-      {!isWithdrawn ? (
-        <div className="bg-white border border-gray-200 p-6 mb-6">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Avancement du dossier</p>
-          <div className="flex items-start">
-            {steps.map((step, i) => {
-              const done    = i < stepIdx
-              const current = i === stepIdx
-              return (
-                <div key={step.key} className="flex-1 flex flex-col items-center relative">
-                  {i < steps.length - 1 && (
-                    <div className={`absolute top-3 left-1/2 w-full h-px ${done ? 'bg-ag-apex' : 'bg-gray-200'}`} />
-                  )}
-                  <div className={`relative z-10 w-6 h-6 rounded-full border-2 flex items-center justify-center mb-2 ${
-                    done    ? 'bg-ag-apex border-ag-apex'
-                    : current ? 'bg-white border-ag-apex'
-                    : 'bg-white border-gray-200'
-                  }`}>
-                    {done    && <div className="w-2 h-2 bg-ag-navy rounded-full" />}
-                    {current && <div className="w-2 h-2 bg-ag-apex rounded-full" />}
-                  </div>
-                  <p className={`font-sans text-[9px] text-center leading-tight px-1 ${
-                    current ? 'text-ag-black font-semibold' : done ? 'text-gray-400' : 'text-gray-300'
-                  }`}>{step.label}</p>
-                  {current && (
-                    <p className="font-sans text-[8px] text-ag-apex text-center mt-0.5 px-1 leading-tight">{step.desc}</p>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      ) : (
+      {progress && !isWithdrawn && <WorkflowStepper progress={progress} />}
+
+      {isWithdrawn && (
         <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-4 mb-6">
           <p className="font-sans text-[13px] text-gray-400 italic">Dossier retiré du processus.</p>
         </div>
@@ -285,6 +243,11 @@ export default async function SellerAssetDetailPage({
             <FileDown size={13} /> Télécharger
           </a>
         </div>
+      )}
+
+      {/* Valorisation indicative CIFSO : conclusion chiffrée du grade publié */}
+      {asset.valuation_json && ['graded', 'published', 'sold'].includes(asset.status ?? '') && (
+        <ValuationPanel v={asset.valuation_json as CifsoValuation} valuationIndexHref="/fr/valuation" />
       )}
 
       {/* Kit de communication + vérification publique (certificat délivré) */}

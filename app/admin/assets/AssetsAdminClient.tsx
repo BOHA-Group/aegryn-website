@@ -236,7 +236,7 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
                     <td className="px-4 py-3">
                       <div className="flex flex-col gap-1.5">
                         <Link
-                          href={`/admin/assets/${id}/grade`}
+                          href={`/admin/assets/${id}/grade-engine`}
                           className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-800">
                           Grader <ArrowUpRight size={10} />
                         </Link>

@@ -8,6 +8,8 @@ import GradeEngineForm         from './GradeEngineForm'
 import AssignExpertForm        from './AssignExpertForm'
 import PrescorePanel           from './PrescorePanel'
 import type { Prescore }       from '@/lib/prescore'
+import WorkflowStepper from '@/components/workflow/WorkflowStepper'
+import { getCertificationProgress } from '@/lib/certificationWorkflow'
 import { CODE_SUBCODES, IP_SUBCODES, FINANCE_SUBCODES, SECURITY_SUBCODES } from '@/lib/gradingSystem'
 
 export const metadata: Metadata = {
@@ -54,6 +56,16 @@ export default async function GradeEnginePage({
       .select('id, dimension, status, scope, deadline_at, profiles:partner_id(email, full_name)')
       .eq('asset_id', id).order('created_at', { ascending: false }),
   ])
+  const progress = await getCertificationProgress(id, 'admin')
+
+  /* CIFSO Valuation Index : auto-déclaration du demandeur (input additionnel, à confronter aux pièces) */
+  const { data: viLead } = await supa
+    .from('valuation_leads')
+    .select('arr, growth_yoy, churn_monthly, nrr, gross_margin, arr_audited, estimated_grade, score_total, valuation_low, valuation_high, valuation_median, created_at')
+    .eq('email', asset.seller_email ?? '')
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
   const expertRows = (experts ?? []).map(e => {
     const prof = (Array.isArray(e.profiles) ? e.profiles[0] : e.profiles) as { email?: string; full_name?: string } | null
     return { id: e.id as string, dimension: e.dimension as string, status: e.status as string, scope: (e.scope as string) ?? 'certification', deadline_at: e.deadline_at as string | null, partner_email: prof?.email ?? null, partner_name: prof?.full_name ?? null }
@@ -109,8 +121,37 @@ export default async function GradeEnginePage({
           </div>
         </div>
 
+        {progress && <WorkflowStepper progress={progress} />}
+
         {/* Pré-scoring documentaire + garde KYC/KYB */}
         <PrescorePanel assetId={id} initial={(asset.prescore_json as Prescore | null) ?? null} kycStatus={(sellerProfile?.kyc_status as string | null) ?? null} dossierType={String(asset.dossier_type ?? 'transaction')} />
+
+        {/* CIFSO Valuation Index : auto-déclaration à confronter aux pièces */}
+        {viLead && (
+          <section className="bg-white border border-gray-200 p-6 mb-6">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 mb-1">CIFSO Valuation Index (auto-déclaré par le demandeur)</p>
+            <p className="font-sans text-[11px] text-gray-500 mb-4">
+              Saisie du {new Date(viLead.created_at as string).toLocaleDateString('fr-CH')} sur /valuation. Point de départ pour la dimension F du moteur, à confronter aux pièces de la Data Room. La valorisation certifiée est recalculée à la publication sur les cinq dimensions.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-[12px]">
+              {[
+                ['ARR', viLead.arr != null ? `${Number(viLead.arr).toLocaleString('fr-CH')} €` : '·'],
+                ['Croissance', viLead.growth_yoy != null ? `${viLead.growth_yoy} %` : '·'],
+                ['Churn mensuel', viLead.churn_monthly != null ? `${viLead.churn_monthly} %` : '·'],
+                ['NRR', viLead.nrr != null ? `${viLead.nrr} %` : '·'],
+                ['Marge brute', viLead.gross_margin != null ? `${viLead.gross_margin} %` : '·'],
+                ['ARR audité', String(viLead.arr_audited ?? '·')],
+                ['Grade estimé', `${viLead.estimated_grade ?? '·'} (${viLead.score_total ?? '·'}/100)`],
+                ['Fourchette auto', viLead.valuation_low != null ? `${Math.round(Number(viLead.valuation_low) / 1000)}k à ${Math.round(Number(viLead.valuation_high) / 1000)}k €` : '·'],
+              ].map(([k, v]) => (
+                <div key={k} className="rounded-lg bg-ag-off-white border border-gray-200 px-3 py-2">
+                  <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">{k}</p>
+                  <p className="font-sans font-semibold text-gray-900 mt-0.5">{v}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Mandats experts (revue manuelle par dimension, accès data room uniquement) */}
         <AssignExpertForm assetId={id} dossierType={(asset.dossier_type as 'certification' | 'transaction') ?? 'transaction'} existing={expertRows} />

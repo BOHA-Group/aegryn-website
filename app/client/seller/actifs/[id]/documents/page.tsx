@@ -5,6 +5,8 @@ import { ArrowLeft, Info } from 'lucide-react'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { VISIBILITY_LABELS, DIMENSION_TO_CATEGORY, DIMENSION_LABELS } from '@/lib/dataRoom'
+import WorkflowStepper from '@/components/workflow/WorkflowStepper'
+import { getCertificationProgress } from '@/lib/certificationWorkflow'
 import type { DataRoomDocument, DocumentCatalogEntry, DocumentDimension, DocumentAdminQuality } from '@/lib/dataRoom'
 import { DataRoomUploadForm } from '@/components/seller/DataRoomUploadForm'
 import { DataRoomVisibilityToggle } from '@/components/seller/DataRoomVisibilityToggle'
@@ -67,6 +69,8 @@ export default async function SellerDataRoomPage({ params }: Props) {
   ).length
   const pct = blockingTotal > 0 ? Math.round((blockingUploaded / blockingTotal) * 100) : 100
 
+  const progress = await getCertificationProgress(id, 'client')
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -116,6 +120,8 @@ export default async function SellerDataRoomPage({ params }: Props) {
             Par défaut, tout document uploadé est <span className="font-semibold">masqué</span>. Vous contrôlez la visibilité.
           </p>
         </div>
+
+        {progress && <WorkflowStepper progress={progress} />}
 
         {/* Section par dimension CIFSO */}
         {DIMENSIONS.map((dim) => {
