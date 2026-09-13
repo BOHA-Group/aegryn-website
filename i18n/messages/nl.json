@@ -121,7 +121,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Bedrijfsleven, kapitaal, technologie en samenleving. Aegryn's driemaandelijkse kijk op wat de markten verandert.",
-    "thinkingMagazineIssues": "Issue-01 - Built to Last - Januari 2027",
+    "thinkingMagazineIssues": "01 - Built to Last - Januari 2027",
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
@@ -5916,7 +5916,7 @@
   },
   "valuation": {
     "meta": {
-      "title": "CIFSO Valuation Index — Benchmark uw bedrijfswaarde | Aegryn",
+      "title": "CIFSO Valuation Index : Benchmark uw bedrijfswaarde | Aegryn",
       "desc": "Schat de waarde van uw organisatie met het CIFSO-protocol. CIFSO-score, EU-transactiemultiples, sectorale benchmark."
     },
     "hero": {
@@ -6226,7 +6226,7 @@
     "pageLabel": "CIFSO Valuation Index",
     "comingSoonBanner": {
       "label": "Vroege toegang",
-      "title": "CIFSO Valuation Index — Lancering Q1 2027",
+      "title": "CIFSO Valuation Index : Lancering Q1 2027",
       "desc": "Toegang tot cross-company benchmarking en real-time marktmultiples is in ontwikkeling. Schrijf u in voor vroege toegang.",
       "features": [
         "EU-transactiemultiples per sector (5 clusters, 50 verticalen)",
@@ -6237,7 +6237,7 @@
       "ctaLabel": "Inschrijven op wachtlijst",
       "ctaPlaceholder": "Uw professionele e-mail",
       "ctaSubmit": "Inschrijven",
-      "ctaSuccess": "Ingeschreven — u wordt als eerste op de hoogte gebracht.",
+      "ctaSuccess": "Ingeschreven : u wordt als eerste op de hoogte gebracht.",
       "ctaError": "Er is een fout opgetreden. Probeer het opnieuw."
     },
     "chart": {
@@ -6255,7 +6255,7 @@
       "label": "Voorbeeldresultaat",
       "title": "Hoe ziet uw CIFSO-resultaat eruit?",
       "desc": "Voordat u uw Pre-screen start: een geanonimiseerd voorbeeldresultaat. De Pre-screen is de gratis zelfevaluatiestap.",
-      "badgeOrg": "B2B-diensten KMO — Frankrijk",
+      "badgeOrg": "B2B-diensten KMO : Frankrijk",
       "badgeRevenue": "€8M omzet",
       "badgeSector": "Diensten & Advies",
       "scoreLabel": "Globale score",
@@ -6265,7 +6265,7 @@
       "gapLabel": "Verschil vs. sectorale mediaan",
       "gapValue": "+7 punten",
       "rangeLabel": "Geschatte waarderingsrange",
-      "rangeValue": "€4.2M — €5.8M",
+      "rangeValue": "€4.2M : €5.8M",
       "multipleLabel": "EU sectorale mediaan multiple",
       "multipleValue": "0.6x omzet",
       "dims": [
@@ -6297,15 +6297,15 @@
       ],
       "leversLabel": "3 prioritaire hefbomen geïdentificeerd",
       "levers": [
-        "O — Oprichtingsafhankelijkheid verminderen (opvolgingsplan)",
-        "S — GDPR-conformiteit en cyber baseline bereiken",
-        "C — Raamcontracten formaliseren in gedocumenteerde terugkerende omzet"
+        "O : Oprichtingsafhankelijkheid verminderen (opvolgingsplan)",
+        "S : GDPR-conformiteit en cyber baseline bereiken",
+        "C : Raamcontracten formaliseren in gedocumenteerde terugkerende omzet"
       ],
-      "cta": "Ontvang uw eigen resultaat — 15 minuten"
+      "cta": "Ontvang uw eigen resultaat : 15 minuten"
     },
     "marketData": {
       "label": "Marktgegevens",
-      "title": "EU-transactiemultiples\n— Lower mid-market referentie",
+      "title": "EU-transactiemultiples\nLower mid-market referentie",
       "desc": "EU M&A-transacties in het bereik €5M–€300M. Elk kwartaal bijgewerkt door het Aegryn-team.",
       "colCluster": "Cluster",
       "colEvRevenue": "EV/Revenue",
@@ -6348,6 +6348,131 @@
       "desc": "De Pre-screen is een begeleide zelfevaluatie van 15 minuten over 5 CIFSO-dimensies.",
       "cta": "Pre-screen starten",
       "ctaSecondary": "CIFSO 5000-certificering bekijken"
+    },
+    "freemium": {
+      "estimateLabel": "VRIJE SCHATTING",
+      "estimateTitle": "Positioneer uw organisatie\nin vijftien minuten in de Index.",
+      "estimateDesc": "Begeleide zelfevaluatie op de vijf CIFSO-dimensies. Het resultaat is een bewust brede bandbreedte, gebaseerd op slechts een deel van de Index-benchmarks (mediane multiples per cluster). Zonder analyse van de stukken is geen precieze schatting mogelijk.",
+      "estimateNote": "Brede bandbreedte: slechts een deel van de Index-benchmarks. Detail per dimensie, volledige multiples en de smalle bandbreedte zijn voorbehouden aan abonnees. De verdedigbare waardering wordt geleverd met de CIFSO 5000-certificering.",
+      "lockedTitle": "Voorbehouden aan Index-abonnees",
+      "lockedDesc": "Volledige multiples per cluster en per dimensie, benchmarks per grade, kwartaalupdates, smalle bandbreedte.",
+      "lockedCta": "Bericht bij lancering",
+      "plansLabel": "TOEGANG TOT DE INDEX",
+      "plansTitle": "Drie leesniveaus\nvan waarde.",
+      "plans": [
+        {
+          "key": "free",
+          "name": "Vrije toegang",
+          "price": "Gratis",
+          "badge": "",
+          "desc": "Een eerste lezing om uw organisatie te positioneren.",
+          "features": [
+            "Vrije schatting in vijftien minuten",
+            "Geschatte grade en score op 100",
+            "Brede waarderingsbandbreedte",
+            "Eén mediane multiple per cluster, als voorproef"
+          ],
+          "cta": "Schatting starten",
+          "href": "#estimation"
+        },
+        {
+          "key": "index",
+          "name": "Index-abonnement",
+          "price": "Maandelijks",
+          "badge": "3 dagen proef, gratis opzegging vóór activering",
+          "desc": "De volledige data om te beslissen, te onderhandelen en de markt te volgen.",
+          "features": [
+            "Volledige multiples per cluster: EV/Revenue en EV/EBITDA",
+            "Benchmarks per dimensie C, I, F, S, O",
+            "Smalle bandbreedte en detail van uw score",
+            "Vergelijking met gecertificeerde organisaties per grade",
+            "Kwartaalupdates en marktwaarschuwingen"
+          ],
+          "cta": "Op de wachtlijst",
+          "href": "#waitlist"
+        },
+        {
+          "key": "certified",
+          "name": "Gecertificeerde waardering",
+          "price": "Met de CIFSO 5000-certificering",
+          "badge": "",
+          "desc": "De becijferde conclusie van een onafhankelijke audit, verdedigbaar tegenover investeerder, bank of koper.",
+          "features": [
+            "Multiple aangepast op de vijf geauditeerde dimensies",
+            "Impact van elke dimensie in euro",
+            "Becijferd potentieel van de roadmap",
+            "Verifieerbaar certificaat, twaalf maanden geldig"
+          ],
+          "cta": "De certificering ontdekken",
+          "href": "/grade"
+        }
+      ],
+      "dimLabel": "BENCHMARKS PER DIMENSIE",
+      "dimTitle": "Wat elke dimensie\nin de multiple weegt.",
+      "dimDesc": "Naast een sectormultiple meet de Index de bijdrage van elke CIFSO-dimensie aan de waarde. Een voorproef is open; het detail is voorbehouden aan abonnees.",
+      "dims": [
+        {
+          "letter": "C",
+          "label": "Code & Architectuur",
+          "teaser": "Gewicht 20 % van de multiple"
+        },
+        {
+          "letter": "I",
+          "label": "IP & Rechten",
+          "teaser": "Gewicht 20 % van de multiple"
+        },
+        {
+          "letter": "F",
+          "label": "Financiën",
+          "teaser": "Gewicht 30 % van de multiple"
+        },
+        {
+          "letter": "S",
+          "label": "Beveiliging",
+          "teaser": "Gewicht 15 % van de multiple"
+        },
+        {
+          "letter": "O",
+          "label": "Organisatie & Talent",
+          "teaser": "Gewicht 15 % van de multiple"
+        }
+      ],
+      "dimLockedCells": [
+        "Mediane score van gecertificeerden",
+        "Multipleverschil tussen B en AAA",
+        "Gemiddelde impact in euro",
+        "Trend over vier kwartalen"
+      ],
+      "segLabel": "VOOR WIE",
+      "segTitle": "Eén gemeenschappelijke referentie\nvoor alle partijen.",
+      "segDesc": "Bestuurders, aandeelhouders, investeerders, financiers, adviseurs en kopers lezen dezelfde data. Dat maakt een waarde bespreekbaar.",
+      "segments": [
+        {
+          "title": "Bestuurders & aandeelhouders",
+          "desc": "De waarde positioneren vóór een beslissing, een kapitaalronde, verkoop of opvolging voorbereiden."
+        },
+        {
+          "title": "Fondsen & family offices",
+          "desc": "Doelwitten en deelnemingen screenen, risico's buiten de balans zien vóór de due diligence."
+        },
+        {
+          "title": "Banken & financiers",
+          "desc": "Waarde en overdraagbaarheid van een kredietnemer objectiveren, verder dan de jaarrekening."
+        },
+        {
+          "title": "M&A-adviseurs & accountants",
+          "desc": "Een mandaat, memorandum of attest onderbouwen met een onafhankelijke referentie."
+        },
+        {
+          "title": "Kopers & corporate development",
+          "desc": "Doelwitten vergelijken op vijf dimensies en een verdedigbaar bod kalibreren."
+        },
+        {
+          "title": "Opvolgers & families",
+          "desc": "Een neutrale lezing van de waarde delen tussen verkoper, erfgenamen en overnemer."
+        }
+      ],
+      "marketTeaser": "Voorproef: één cluster open, de andere voorbehouden aan abonnees."
     }
   },
   "transactionSubmit": {
@@ -7346,7 +7471,7 @@
     "transactionSession": "Privésessies",
     "transactionResults": "Afgesloten transacties",
     "magazine": "Aegryn Magazine",
-    "magazineIssue01": "Issue 01: Built to Last",
+    "magazineIssue01": "01 : Built to Last",
     "blog": "Artikelen & Inzichten",
     "roadmap": "Roadmap",
     "glossaire": "M&A-woordenlijst",

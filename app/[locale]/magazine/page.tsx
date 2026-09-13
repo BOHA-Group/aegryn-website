@@ -159,10 +159,10 @@ export default async function MagazineHubPage({ params }: Props) {
 
       {/* ── Carousel issues ── */}
       <IssueTickerCarousel items={[
-        { issue: 'Issue 01', date: tHub('issue01Date'), theme: tHub('issue01Theme'), desc: tHub('issue01Desc') },
-        { issue: 'Issue 02', date: tHub('issue02Date'), theme: tHub('issue02Theme'), desc: tHub('issue02Desc') },
-        { issue: 'Issue 03', date: tHub('issue03Date'), theme: tHub('issue03Theme'), desc: tHub('issue03Desc') },
-        { issue: 'Issue 04', date: tHub('issue04Date'), theme: tHub('issue04Theme'), desc: tHub('issue04Desc') },
+        { issue: '01', date: tHub('issue01Date'), theme: tHub('issue01Theme'), desc: tHub('issue01Desc') },
+        { issue: '02', date: tHub('issue02Date'), theme: tHub('issue02Theme'), desc: tHub('issue02Desc') },
+        { issue: '03', date: tHub('issue03Date'), theme: tHub('issue03Theme'), desc: tHub('issue03Desc') },
+        { issue: '04', date: tHub('issue04Date'), theme: tHub('issue04Theme'), desc: tHub('issue04Desc') },
       ]} />
 
       {/* ── Contact / Abonnement — style Barnes ivoire ── */}

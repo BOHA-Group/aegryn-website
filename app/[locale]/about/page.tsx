@@ -133,7 +133,7 @@ export default function AboutPage() {
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
                 / {t('dna.label')}
               </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
                 {values.map((v) => (
                   <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
                     <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">

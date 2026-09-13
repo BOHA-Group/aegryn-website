@@ -387,7 +387,7 @@ export default async function BuildServicePage({ params }: Props) {
 
           {/* 5 cards en ligne — scroll horizontal sur mobile */}
           <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-            <div className="flex gap-0 min-w-[720px] md:min-w-0">
+            <div className="flex gap-0 min-w-[1100px] xl:min-w-0">
               {processSteps.map((step, i) => (
                 <div key={step.num} className="flex items-stretch flex-1">
                   {/* Card */}

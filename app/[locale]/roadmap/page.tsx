@@ -133,11 +133,11 @@ export default async function RoadmapPage({ params }: Props) {
                 return (
                   <div key={i} className="relative pb-8 last:pb-0">
                     <span className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full border-2 border-ag-apex bg-ag-off-white" />
-                    <div className="bg-ag-white border border-ag-border p-6 flex gap-5 group hover:border-ag-apex/40 transition-colors">
+                    <div className="bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 group hover:border-ag-apex/40 transition-colors">
                       <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0 group-hover:border-ag-apex/40 transition-colors">
                         <Icon size={15} className="text-ag-apex" strokeWidth={1.5} />
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-[200px]">
                         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}
@@ -170,7 +170,7 @@ export default async function RoadmapPage({ params }: Props) {
                       <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0">
                         <Icon size={15} className="text-ag-gray-light" strokeWidth={1.5} />
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-[200px]">
                         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}

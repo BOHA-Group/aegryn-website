@@ -333,7 +333,7 @@ export function CifsoBrochure() {
               </div>
             ))}
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-4">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-4">
             <div className="rounded-xl bg-ag-navy p-6">
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">{gi('processLabel')}</p>
               <p className="font-sans font-bold text-white text-[28px] leading-tight">{gi('processDuration')}</p>
@@ -520,7 +520,7 @@ function StepCard({ s, labels }: { s: Step; labels: [string, string, string] | s
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.desc}</p>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 pt-4 border-t border-ag-border">
+      <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-4 pt-4 border-t border-ag-border">
         {[s.inputs, s.outputs, s.outcomes].map((v, i) => (
           <div key={i}>
             <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-navy font-semibold mb-1">{labels[i]}</p>

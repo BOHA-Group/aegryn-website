@@ -255,7 +255,7 @@ export default function BuyerForm() {
         <p className="font-sans text-[12px] text-red-500">{error}</p>
       )}
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <p className="font-sans text-[11px] text-ag-gray-light max-w-xs leading-relaxed">
           {t('privacyNote')}
         </p>

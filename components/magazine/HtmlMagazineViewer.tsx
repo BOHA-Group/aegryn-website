@@ -9,7 +9,7 @@ interface Props {
   label?:  string
 }
 
-export function HtmlMagazineViewer({ htmlSrc, title = 'Aegryn Magazine', label = 'Issue 01 — Built to Last — January 2027' }: Props) {
+export function HtmlMagazineViewer({ htmlSrc, title = 'Aegryn Magazine', label = '01 - Built to Last — January 2027' }: Props) {
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
   function handleFullscreen() {

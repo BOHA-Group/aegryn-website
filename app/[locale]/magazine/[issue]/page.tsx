@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const issue = getIssue(issueSlug)
   if (!issue) return {}
 
-  const title       = `${issue.title} | Aegryn Magazine Issue ${String(issue.number).padStart(2, '0')}`
+  const title       = `${issue.title} | Aegryn Magazine ${String(issue.number).padStart(2, '0')}`
   const description = issue.theme
 
   return {
@@ -87,7 +87,7 @@ export default async function IssuePage({ params }: Props) {
           __html: JSON.stringify({
             '@context':    'https://schema.org',
             '@type':       'Report',
-            name:          `Aegryn Magazine — Issue ${String(issue.number).padStart(2, '0')} — ${issue.title}`,
+            name:          `Aegryn Magazine ${String(issue.number).padStart(2, '0')} - ${issue.title}`,
             description:   issue.theme,
             author:        { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
             publisher:     { '@type': 'Organization', name: 'AEGRYN', url: 'https://aegryn.com' },
@@ -100,7 +100,7 @@ export default async function IssuePage({ params }: Props) {
 
       {/* ── Layout 2 colonnes : sidebar fixe + contenu scrollable ── */}
       <div className="relative">
-        <h1 className="sr-only">{`Aegryn Magazine — Issue ${String(issue.number).padStart(2, '0')} — ${issue.title}`}</h1>
+        <h1 className="sr-only">{`Aegryn Magazine ${String(issue.number).padStart(2, '0')} - ${issue.title}`}</h1>
         {/* Sidebar Barnes verticale fixe */}
         <MagazineNav
           sections={navSections}
@@ -122,14 +122,14 @@ export default async function IssuePage({ params }: Props) {
             <IssueViewerTabs
               flipbookSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
               webSrc="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
-              issueLabel="Issue 01 | Built to Last | January 2027"
+              issueLabel="01 | Built to Last | January 2027"
             />
           </section>
         )}
 
         {/* ── Editorial ── */}
         <section id="s-editorial" className="bg-magazine-white px-6 md:px-[120px] py-32">
-          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">Editorial — Issue 01</p>
+          <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-12">Editorial - 01</p>
 
           {/* Our conviction */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-20">
@@ -675,7 +675,7 @@ export default async function IssuePage({ params }: Props) {
               ))}
             </div>
             <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-4">
-              Source — CIFSO Protocol v4.0, Issue 01 Base Reference (multi-select — assets can trigger more than one reason)
+              Source — CIFSO Protocol v4.0, 01 Base Reference (multi-select — assets can trigger more than one reason)
             </p>
           </div>
         </section>
@@ -1360,12 +1360,12 @@ export default async function IssuePage({ params }: Props) {
                 <p>The companies that sell well share one quality that has nothing to do with their product, their market, or their technology. It is a quality of attention. The founders who built them paid attention to the details that did not matter yet — the contracts, the documentation, the financial records — long before anyone asked for them.</p>
                 <p>This is not glamorous advice. It does not make for a good podcast episode or a viral LinkedIn post. But it is the closest thing to a reliable pattern that we have seen across the transactions we have observed and participated in.</p>
                 <p>Build something real. Build it cleanly. Document it before anyone asks you to. Let the work speak before you do. The buyers who matter already know the difference.</p>
-                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/30">Aegryn Magazine — Issue 01 — Saint-Sulpice, Switzerland — January 2027</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/30">Aegryn Magazine — 01 - Saint-Sulpice, Switzerland - January 2027</p>
               </div>
             </div>
 
             <div className="mt-16 bg-magazine-ivory p-8">
-              <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — Issue 02 — April 2027</p>
+              <p className="font-mono text-[8px] tracking-[0.18em] uppercase text-magazine-accent mb-3">Coming Next — 02 - April 2027</p>
               <p className="font-sans font-bold text-magazine-black text-[22px] mb-3">The Exit Equation.</p>
               <p className="text-body-mag text-magazine-black/55 leading-[1.65] mb-6 max-w-prose">The decision, the preparation, the negotiation, and the twelve months that follow. The number that changes your life, and whether it was the right number.</p>
               <a href={`/${locale}/magazine`} className="font-mono text-[9px] tracking-[0.16em] uppercase text-magazine-accent hover:underline">Subscribe →</a>

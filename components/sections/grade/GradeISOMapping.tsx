@@ -68,7 +68,7 @@ export function GradeISOMapping() {
         </div>
 
         {/* Comparison table — scroll horizontal sur mobile */}
-        <div className="overflow-x-auto rounded-2xl border border-ag-border">
+        <div className="overflow-x-auto rounded-2xl border border-ag-border"><div className="min-w-[640px]">
           <div style={{ minWidth: 560 }}>
 
           {/* Column headers — contraste renforcé */}
@@ -140,7 +140,7 @@ export function GradeISOMapping() {
           })}
 
           </div>{/* end minWidth wrapper */}
-        </div>{/* end overflow-x-auto */}
+        </div></div>{/* end overflow-x-auto */}
 
         {/* Disclaimer — i18n */}
         <p className="mt-6 font-mono text-[10px] text-ag-gray-light leading-relaxed max-w-2xl">

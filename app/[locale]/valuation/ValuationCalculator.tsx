@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import Link                from 'next/link'
 import {
   ArrowUpRight, ChevronRight, ChevronLeft,
-  RotateCcw, CheckCircle2, Mail,
+  RotateCcw, CheckCircle2, Mail, Lock,
 } from 'lucide-react'
 import {
   type CapitalData, type IntegrityData, type FinanceData, type SecurityData, type OrgData,
@@ -79,7 +79,9 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 }
 
 /* ─── Main component ─────────────────────────────────────── */
-export default function ValuationCalculator() {
+type LockedInfo = { title: string; desc: string; cta: string }
+
+export default function ValuationCalculator({ freemiumNote, locked }: { freemiumNote?: string; locked?: LockedInfo } = {}) {
   const t    = useTranslations('valuation')
   const _tNav = useTranslations('nav')
 
@@ -461,6 +463,7 @@ export default function ValuationCalculator() {
                 emailSent={emailSent} emailErr={emailErr} emailLoading={emailLoading}
                 onEmailSubmit={sendEmail} onRestart={restart}
                 savedLeadId={savedLeadId}
+                freemiumNote={freemiumNote} locked={locked}
               />
             )}
 
@@ -514,7 +517,7 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
   )
 }
 
-function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId }: {
+function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, locked }: {
   result: ValuationResult
   finance: Partial<FinanceData>
   t: ReturnType<typeof useTranslations>
@@ -523,9 +526,16 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
   onEmailSubmit: (e: React.FormEvent) => void
   onRestart: () => void
   savedLeadId?: string | null
+  freemiumNote?: string
+  locked?: LockedInfo
 }) {
-  const { grade, scores, range, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
+  const { grade, scores, range: rawRange, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
   const prRange = preRevenue ? preRevenueRange(preRevenueScore) : null
+  /* Accès libre : fourchette volontairement élargie (une partie des benchmarks seulement).
+     La fourchette resserrée et le détail par dimension sont réservés aux abonnés de l'Index. */
+  const range = rawRange && locked
+    ? { ...rawRange, low: Math.round(rawRange.low * 0.75), high: Math.round(rawRange.high * 1.25) }
+    : rawRange
 
   const dimKeys = ['capital', 'integrity', 'finance', 'security', 'org'] as const
   const dimLabels: Record<string, string> = {
@@ -577,11 +587,16 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
                 {t('result.rangeTitle')}
               </p>
               <p className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] leading-tight">
-                {fmtEur(range.low)} — {fmtEur(range.high)}
+                {fmtEur(range.low)} à {fmtEur(range.high)}
               </p>
-              <p className="font-sans text-[11px] text-ag-gray-light">
-                {t('result.medianLabel')} : {fmtEur(range.median)} · {t('result.multipleLabel')} : {grade.multLow}x – {grade.multHigh}x
-              </p>
+              {!locked && (
+                <p className="font-sans text-[11px] text-ag-gray-light">
+                  {t('result.medianLabel')} : {fmtEur(range.median)} · {t('result.multipleLabel')} : {grade.multLow}x à {grade.multHigh}x
+                </p>
+              )}
+              {freemiumNote && (
+                <p className="font-sans text-[11px] text-ag-gray leading-relaxed border-l-2 border-ag-apex pl-3 mt-1 max-w-md">{freemiumNote}</p>
+              )}
               {finance.arr !== undefined && (
                 <p className="font-sans text-[11px] text-ag-gray-light">
                   {t('result.basisLabel')} {fmtEur(finance.arr)}
@@ -593,7 +608,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
             <>
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">{t('result.preRevenueTitle')}</p>
               <p className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em]">
-                {fmtEur(prRange.low)} — {fmtEur(prRange.high)}
+                {fmtEur(prRange.low)} à {fmtEur(prRange.high)}
               </p>
               <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed">{t('result.preRevenueDesc')}</p>
             </>
@@ -601,13 +616,25 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
         </div>
       </div>
 
-      {/* Dimension breakdown */}
-      <div className="border border-ag-border p-6 flex flex-col gap-5">
+      {/* Dimension breakdown (réservé aux abonnés en accès libre) */}
+      <div className="relative border border-ag-border p-6 flex flex-col gap-5">
+        {locked && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center p-6 bg-white/40">
+            <div className="rounded-xl bg-ag-navy/95 text-white border border-white/10 px-6 py-5 max-w-sm text-center shadow-xl">
+              <Lock size={16} className="mx-auto text-ag-apex mb-2" />
+              <p className="font-sans font-bold text-[14px] mb-1">{locked.title}</p>
+              <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{locked.desc}</p>
+              <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
+                {locked.cta} <ArrowUpRight size={11} />
+              </a>
+            </div>
+          </div>
+        )}
         <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">
           {t('result.dimBreakdown')}
         </p>
         {dimKeys.map(dim => (
-          <div key={dim} className="flex flex-col gap-2">
+          <div key={dim} className={`flex flex-col gap-2 ${locked ? 'blur-sm select-none' : ''}`}>
             <div className="flex items-center justify-between">
               <span className="font-sans font-semibold text-[12px] text-ag-black">{dimLabels[dim]}</span>
               <span className="font-sans text-[11px] text-ag-gray-light">{scores[dim as keyof typeof scores] as number} {t('result.dimMax')}</span>

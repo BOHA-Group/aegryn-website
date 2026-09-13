@@ -21,7 +21,7 @@ interface Props {
 export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', labelDesc: _labelDesc, isPublic = false, isPreview = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
-  const issueNum  = `Issue ${String(issue.number).padStart(2, '0')}`
+  const issueNum  = String(issue.number).padStart(2, '0')
   const padNum    = String(issue.number).padStart(2, '0')
 
   return (

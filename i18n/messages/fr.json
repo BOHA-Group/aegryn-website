@@ -130,7 +130,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Affaires, capital, technologie et société. Le regard trimestriel d'Aegryn sur ce qui transforme les marchés.",
-    "thinkingMagazineIssues": "Issue-01 - Built to Last - Janvier 2027",
+    "thinkingMagazineIssues": "01 - Built to Last - Janvier 2027",
     "thinkingMarket": "Notre regard sur le marché",
     "thinkingMarketDesc": "Données, analyses et points de vue par ceux qui font le marché.",
     "thinkingMarketNewsletter": "Newsletter LinkedIn",
@@ -5952,7 +5952,7 @@
   },
   "valuation": {
     "meta": {
-      "title": "CIFSO Valuation Index — Benchmarkez votre valeur d'entreprise | Aegryn",
+      "title": "CIFSO Valuation Index : Benchmarkez votre valeur d'entreprise | Aegryn",
       "desc": "Estimez la valeur de votre organisation selon le protocole CIFSO. Score CIFSO, multiples de transaction EU, benchmark sectoriel et corrélation valorisation."
     },
     "hero": {
@@ -6262,7 +6262,7 @@
     "pageLabel": "CIFSO Valuation Index",
     "comingSoonBanner": {
       "label": "Accès anticipé",
-      "title": "CIFSO Valuation Index — Lancement Q1 2027",
+      "title": "CIFSO Valuation Index : Lancement Q1 2027",
       "desc": "L'accès au benchmark inter-entreprises et aux multiples de marché en temps réel est en cours de développement. Inscrivez-vous pour un accès en avant-première.",
       "features": [
         "Multiples de transaction EU par secteur (5 clusters, 50 verticaux)",
@@ -6273,7 +6273,7 @@
       "ctaLabel": "Rejoindre la liste d'attente",
       "ctaPlaceholder": "Votre email professionnel",
       "ctaSubmit": "S'inscrire",
-      "ctaSuccess": "Inscrit — vous serez notifié en avant-première.",
+      "ctaSuccess": "Inscrit : vous serez notifié en avant-première.",
       "ctaError": "Une erreur est survenue. Réessayez."
     },
     "chart": {
@@ -6291,7 +6291,7 @@
       "label": "Exemple de résultat",
       "title": "À quoi ressemble votre résultat CIFSO ?",
       "desc": "Avant de lancer votre Pre-screen, voici un exemple de résultat réel anonymisé. Le Pre-screen est l'étape d'auto-évaluation gratuite qui positionne votre organisation dans le CIFSO Valuation Index.",
-      "badgeOrg": "PME Services B2B — France",
+      "badgeOrg": "PME Services B2B : France",
       "badgeRevenue": "8M€ CA",
       "badgeSector": "Services & Conseil",
       "scoreLabel": "Score global",
@@ -6301,7 +6301,7 @@
       "gapLabel": "Écart vs médiane sectorielle",
       "gapValue": "+7 points",
       "rangeLabel": "Fourchette de valorisation estimée",
-      "rangeValue": "4.2M€ — 5.8M€",
+      "rangeValue": "4.2M€ : 5.8M€",
       "multipleLabel": "Multiple médian sectoriel EU",
       "multipleValue": "0.6x CA",
       "dims": [
@@ -6333,15 +6333,15 @@
       ],
       "leversLabel": "3 leviers prioritaires identifiés",
       "levers": [
-        "O — Réduire la dépendance fondateur (plan de succession)",
-        "S — Mettre en conformité RGPD et cyber baseline",
-        "C — Formaliser les contrats cadre en récurrence documentée"
+        "O : Réduire la dépendance fondateur (plan de succession)",
+        "S : Mettre en conformité RGPD et cyber baseline",
+        "C : Formaliser les contrats cadre en récurrence documentée"
       ],
-      "cta": "Obtenez votre propre résultat — 15 minutes"
+      "cta": "Obtenez votre propre résultat : 15 minutes"
     },
     "marketData": {
       "label": "Données de marché",
-      "title": "Multiples de transaction EU\n— Référence lower mid-market",
+      "title": "Multiples de transaction EU\nRéférence lower mid-market",
       "desc": "Transactions M&A EU dans la fourchette €5M–€300M. Mis à jour chaque trimestre par l'équipe Aegryn.",
       "colCluster": "Cluster",
       "colEvRevenue": "EV/Revenue",
@@ -6384,6 +6384,131 @@
       "desc": "Le Pre-screen est une auto-évaluation guidée de 15 minutes sur les 5 dimensions CIFSO. Il génère un score, un pré-grade estimé et une fourchette de valorisation indicative.",
       "cta": "Lancer le Pre-screen",
       "ctaSecondary": "Voir la certification CIFSO 5000"
+    },
+    "freemium": {
+      "estimateLabel": "ESTIMATION LIBRE",
+      "estimateTitle": "Positionnez votre organisation\ndans l'Index en quinze minutes.",
+      "estimateDesc": "Auto-évaluation guidée sur les cinq dimensions CIFSO. Le résultat est une fourchette volontairement large, fondée sur une partie seulement des benchmarks de l'Index (multiples médians par cluster). Sans analyse des pièces, aucune estimation précise n'est possible.",
+      "estimateNote": "Fourchette large : une partie des benchmarks de l'Index seulement. Le détail par dimension, les multiples complets et la fourchette resserrée sont réservés aux abonnés. La valorisation défendable est délivrée avec la Certification CIFSO 5000.",
+      "lockedTitle": "Réservé aux abonnés de l'Index",
+      "lockedDesc": "Multiples complets par cluster et par dimension, benchmarks par grade, mises à jour trimestrielles, fourchette resserrée.",
+      "lockedCta": "Être prévenu de l'ouverture",
+      "plansLabel": "ACCÈS À L'INDEX",
+      "plansTitle": "Trois niveaux de lecture\nde la valeur.",
+      "plans": [
+        {
+          "key": "free",
+          "name": "Accès libre",
+          "price": "Gratuit",
+          "badge": "",
+          "desc": "Une première lecture pour situer votre organisation.",
+          "features": [
+            "Estimation libre en quinze minutes",
+            "Grade estimé et score sur 100",
+            "Fourchette de valorisation large",
+            "Un multiple médian par cluster, en teasing"
+          ],
+          "cta": "Lancer l'estimation",
+          "href": "#estimation"
+        },
+        {
+          "key": "index",
+          "name": "Abonnement Index",
+          "price": "Mensuel",
+          "badge": "Essai 3 jours, annulation gratuite avant activation",
+          "desc": "La donnée complète pour décider, négocier et suivre le marché.",
+          "features": [
+            "Multiples complets par cluster : EV/Revenue et EV/EBITDA",
+            "Benchmarks par dimension C, I, F, S, O",
+            "Fourchette resserrée et détail de votre score",
+            "Comparaison aux organisations certifiées par grade",
+            "Mises à jour trimestrielles et alertes de marché"
+          ],
+          "cta": "Rejoindre la liste d'attente",
+          "href": "#waitlist"
+        },
+        {
+          "key": "certified",
+          "name": "Valorisation certifiée",
+          "price": "Avec la Certification CIFSO 5000",
+          "badge": "",
+          "desc": "La conclusion chiffrée d'un audit indépendant, opposable face à un investisseur, une banque ou un acquéreur.",
+          "features": [
+            "Multiple ajusté sur les cinq dimensions auditées",
+            "Impact de chaque dimension en euros",
+            "Potentiel de la feuille de route chiffré",
+            "Certificat vérifiable, valable douze mois"
+          ],
+          "cta": "Découvrir la certification",
+          "href": "/grade"
+        }
+      ],
+      "dimLabel": "BENCHMARKS PAR DIMENSION",
+      "dimTitle": "Ce que chaque dimension\npèse dans le multiple.",
+      "dimDesc": "Au-delà d'un multiple sectoriel, l'Index mesure la contribution de chaque dimension CIFSO à la valeur. Un aperçu est ouvert ; le détail est réservé aux abonnés.",
+      "dims": [
+        {
+          "letter": "C",
+          "label": "Code & Architecture",
+          "teaser": "Poids 20 % du multiple"
+        },
+        {
+          "letter": "I",
+          "label": "IP & Droits",
+          "teaser": "Poids 20 % du multiple"
+        },
+        {
+          "letter": "F",
+          "label": "Finance",
+          "teaser": "Poids 30 % du multiple"
+        },
+        {
+          "letter": "S",
+          "label": "Sécurité",
+          "teaser": "Poids 15 % du multiple"
+        },
+        {
+          "letter": "O",
+          "label": "Organisation & Talent",
+          "teaser": "Poids 15 % du multiple"
+        }
+      ],
+      "dimLockedCells": [
+        "Score médian des certifiés",
+        "Écart de multiple entre B et AAA",
+        "Impact moyen en euros",
+        "Tendance sur quatre trimestres"
+      ],
+      "segLabel": "POUR QUI",
+      "segTitle": "Une référence commune\nà toutes les parties.",
+      "segDesc": "Dirigeants, actionnaires, investisseurs, financeurs, conseils et acquéreurs lisent la même donnée. C'est ce qui rend une valeur discutable.",
+      "segments": [
+        {
+          "title": "Dirigeants & actionnaires",
+          "desc": "Situer la valeur avant une décision, préparer une levée, une cession ou une succession."
+        },
+        {
+          "title": "Fonds & family offices",
+          "desc": "Screener cibles et participations, identifier les risques hors bilan avant la due diligence."
+        },
+        {
+          "title": "Banques & financeurs",
+          "desc": "Objectiver la valeur et la transmissibilité d'un emprunteur au-delà des états financiers."
+        },
+        {
+          "title": "Conseils M&A & experts-comptables",
+          "desc": "Étayer un mandat, un mémorandum ou une attestation avec une référence indépendante."
+        },
+        {
+          "title": "Acquéreurs & corporate development",
+          "desc": "Comparer des cibles sur cinq dimensions et calibrer une offre défendable."
+        },
+        {
+          "title": "Successeurs & familles",
+          "desc": "Partager une lecture neutre de la valeur entre cédant, héritiers et repreneur."
+        }
+      ],
+      "marketTeaser": "Aperçu : un cluster ouvert, les autres réservés aux abonnés."
     }
   },
   "transactionSubmit": {
@@ -7382,7 +7507,7 @@
     "transactionSession": "Sessions privées",
     "transactionResults": "Transactions clôturées",
     "magazine": "Aegryn Magazine",
-    "magazineIssue01": "Issue 01 : Built to Last",
+    "magazineIssue01": "01 : Built to Last",
     "blog": "Articles & Analyses",
     "roadmap": "Feuille de route",
     "glossaire": "Glossaire M&A",

@@ -4,10 +4,37 @@ import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import {
-  ArrowUpRight, Clock, CheckCircle2, TrendingUp, Building2,
-  Landmark, Users, AlertCircle, ChevronRight,
+  ArrowUpRight, CheckCircle2, TrendingUp, Building2,
+  Landmark, Users, AlertCircle, Lock, Check,
 } from 'lucide-react'
 import { CifsoChart } from './CifsoChart'
+import ValuationCalculator from './ValuationCalculator'
+
+type Plan = { key: string; name: string; price: string; badge: string; desc: string; features: string[]; cta: string; href: string }
+type Freemium = {
+  estimateLabel: string; estimateTitle: string; estimateDesc: string; estimateNote: string
+  lockedTitle: string; lockedDesc: string; lockedCta: string
+  plansLabel: string; plansTitle: string; plans: Plan[]
+  dimLabel: string; dimTitle: string; dimDesc: string; dims: { letter: string; label: string; teaser: string }[]; dimLockedCells: string[]
+  segLabel: string; segTitle: string; segDesc: string; segments: { title: string; desc: string }[]
+  marketTeaser: string
+}
+
+/* Aperçu verrouillé : contenu flouté + cadenas, CTA liste d'attente */
+function LockedOverlay({ title, desc, cta }: { title: string; desc: string; cta: string }) {
+  return (
+    <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
+      <div className="rounded-xl bg-ag-navy/95 text-white border border-white/10 px-6 py-5 max-w-sm text-center shadow-xl">
+        <Lock size={16} className="mx-auto text-ag-apex mb-2" />
+        <p className="font-sans font-bold text-[14px] mb-1">{title}</p>
+        <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{desc}</p>
+        <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
+          {cta} <ArrowUpRight size={11} />
+        </a>
+      </div>
+    </div>
+  )
+}
 
 /* ─── Types ───────────────────────────────────────────────── */
 type MarketRow = {
@@ -33,12 +60,6 @@ type ExampleDim = {
 }
 
 /* ─── Icon map ────────────────────────────────────────────── */
-const PROFILE_ICON: Record<string, React.ReactNode> = {
-  trending: <TrendingUp size={20} className="text-ag-apex" />,
-  building: <Building2 size={20} className="text-ag-apex" />,
-  landmark: <Landmark size={20} className="text-ag-apex" />,
-  users:    <Users size={20} className="text-ag-apex" />,
-}
 
 const DIM_COLORS: Record<string, string> = {
   C: '#4A90D9', I: '#9B59B6', F: '#2ECC71', S: '#E74C3C', O: '#F39C12',
@@ -108,7 +129,7 @@ function WaitlistForm() {
 }
 
 /* ─── Market table ────────────────────────────────────────── */
-function MarketTable({ rows, locale }: { rows: MarketRow[]; locale: string }) {
+function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: string; locked?: { title: string; desc: string; cta: string } }) {
   const t = useTranslations('valuation.marketData')
 
   if (!rows.length) {
@@ -126,7 +147,8 @@ function MarketTable({ rows, locale }: { rows: MarketRow[]; locale: string }) {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto relative">
+      {locked && <LockedOverlay {...locked} />}
       <div style={{ minWidth: 480 }}>
         {/* Header */}
         <div className="grid grid-cols-3 bg-ag-navy rounded-t-xl">
@@ -146,7 +168,7 @@ function MarketTable({ rows, locale }: { rows: MarketRow[]; locale: string }) {
             key={row.cluster_key}
             className={`grid grid-cols-3 border-x border-b border-ag-border last:rounded-b-xl ${
               i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'
-            } hover:bg-ag-apex/5 transition-colors`}
+            } hover:bg-ag-apex/5 transition-colors ${locked && i > 0 ? '[&>div:not(:first-child)]:blur-sm [&>div:not(:first-child)]:select-none' : ''}`}
           >
             <div className="px-5 py-4 border-r border-ag-border">
               <p className="font-sans font-semibold text-ag-black text-[13px]">
@@ -155,12 +177,12 @@ function MarketTable({ rows, locale }: { rows: MarketRow[]; locale: string }) {
             </div>
             <div className="px-5 py-4 border-r border-ag-border">
               <p className="font-mono font-bold text-ag-apex text-[13px]">
-                {row.ev_revenue_low}x – {row.ev_revenue_high}x
+                {row.ev_revenue_low}x à {row.ev_revenue_high}x
               </p>
             </div>
             <div className="px-5 py-4">
               <p className="font-mono text-ag-black text-[13px]">
-                {row.ev_ebitda_low}x – {row.ev_ebitda_high}x
+                {row.ev_ebitda_low}x à {row.ev_ebitda_high}x
               </p>
             </div>
           </div>
@@ -178,6 +200,7 @@ export default function CifsoValuationIndex() {
   const [marketRows, setMarketRows] = useState<MarketRow[]>([])
   const [marketLoaded, setMarketLoaded] = useState(false)
 
+  const fm           = t.raw('freemium') as Freemium
   const comingSoon   = t.raw('comingSoonBanner') as {
     label: string; title: string; desc: string; features: string[]
     ctaLabel: string; ctaPlaceholder: string; ctaSubmit: string
@@ -230,50 +253,56 @@ export default function CifsoValuationIndex() {
         </div>
       </section>
 
-      {/* ── COMING SOON BANNER ────────────────────────── */}
-      <section className="bg-ag-navy border-t border-white/10 py-16 px-6">
+      {/* ── ACCÈS À L'INDEX : trois niveaux (freemium) ── */}
+      <section id="plans" className="bg-ag-navy border-t border-white/10 py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="border border-ag-apex/30 rounded-2xl bg-ag-apex/5 p-8 md:p-10 flex flex-col gap-8">
-
-            {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div>
-                <div className="inline-flex items-center gap-2 border border-ag-apex/40 bg-ag-apex/10 rounded-full px-4 py-1.5 mb-4">
-                  <Clock size={11} className="text-ag-apex" />
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex">
-                    {comingSoon.label}
-                  </span>
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{fm.plansLabel}</p>
+          <h2 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-12 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{fm.plansTitle}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {fm.plans.map(pl => {
+              const featured = pl.key === 'index'
+              return (
+                <div key={pl.key} className={`rounded-2xl border p-8 flex flex-col gap-5 ${featured ? 'bg-white text-ag-black border-ag-apex ring-4 ring-ag-apex/20' : 'bg-white/5 text-white border-white/10'}`}>
+                  <div>
+                    <p className={`font-mono text-[10px] tracking-[0.22em] uppercase mb-2 ${featured ? 'text-ag-gray-light' : 'text-white/50'}`}>{pl.name}</p>
+                    <p className="font-sans font-bold text-[24px] tracking-[-0.02em] leading-tight">{pl.price}</p>
+                    {pl.badge && <p className="mt-2 inline-flex rounded-full bg-ag-apex/15 text-ag-navy border border-ag-apex/40 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{pl.badge}</p>}
+                    <p className={`font-sans text-[13px] leading-relaxed mt-3 ${featured ? 'text-ag-gray' : 'text-white/60'}`}>{pl.desc}</p>
+                  </div>
+                  <ul className="flex flex-col gap-2 flex-1">
+                    {pl.features.map(f => (
+                      <li key={f} className="flex items-start gap-2 font-sans text-[13px] leading-snug">
+                        <Check size={13} className="text-ag-apex shrink-0 mt-0.5" /> <span className={featured ? 'text-ag-black' : 'text-white/80'}>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {pl.key === 'index' ? (
+                    <div id="waitlist" className="pt-2">
+                      <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">{comingSoon.ctaLabel}</p>
+                      <WaitlistForm />
+                    </div>
+                  ) : (
+                    <Link href={pl.href.startsWith('#') ? pl.href : `/${locale}${pl.href}`}
+                      className={`rounded-lg inline-flex items-center justify-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold transition-colors ${featured ? 'bg-ag-navy text-white hover:bg-ag-navy/90' : 'bg-ag-apex text-ag-navy hover:bg-ag-apex/90'}`}>
+                      {pl.cta} <ArrowUpRight size={12} />
+                    </Link>
+                  )}
                 </div>
-                <h2
-                  className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] whitespace-pre-line"
-                  style={{ fontSize: 'clamp(20px,2.5vw,32px)' }}
-                >
-                  {comingSoon.title}
-                </h2>
-                <p className="font-sans text-[14px] text-white/55 leading-relaxed max-w-xl mt-3">
-                  {comingSoon.desc}
-                </p>
-              </div>
-            </div>
-
-            {/* Features list */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {comingSoon.features.map((f, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <ChevronRight size={13} className="text-ag-apex shrink-0 mt-0.5" />
-                  <span className="font-sans text-[13px] text-white/70 leading-snug">{f}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Waitlist form */}
-            <div className="border-t border-white/10 pt-6">
-              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex/70 mb-4">
-                {comingSoon.ctaLabel}
-              </p>
-              <WaitlistForm />
-            </div>
+              )
+            })}
           </div>
+        </div>
+      </section>
+
+      {/* ── ESTIMATION LIBRE : fourchette large, benchmarks partiels ── */}
+      <section id="estimation" className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 max-w-2xl">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.estimateLabel}</p>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.estimateTitle}</h2>
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.estimateDesc}</p>
+          </div>
+          <ValuationCalculator freemiumNote={fm.estimateNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta }} />
         </div>
       </section>
 
@@ -409,7 +438,7 @@ export default function CifsoValuationIndex() {
                 {/* CTA */}
                 <div className="border-t border-ag-border pt-5 mt-auto">
                   <Link
-                    href="/grade/submit"
+                    href="#estimation"
                     className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
                   >
                     {example.cta} <ArrowUpRight size={12} />
@@ -440,7 +469,8 @@ export default function CifsoValuationIndex() {
             </p>
           </div>
 
-          <MarketTable rows={marketRows} locale={locale} />
+          <MarketTable rows={marketRows} locale={locale} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta }} />
+          <p className="font-mono text-[10px] tracking-[0.12em] text-ag-gray-light mt-3">{fm.marketTeaser}</p>
 
           {marketLoaded && marketRows[0]?.reference_period && (
             <p className="font-mono text-[10px] tracking-[0.12em] text-ag-gray-light mt-3">
@@ -454,46 +484,61 @@ export default function CifsoValuationIndex() {
         </div>
       </section>
 
-      {/* ── POUR LES INVESTISSEURS ───────────────────── */}
+      {/* ── BENCHMARKS PAR DIMENSION (aperçu verrouillé) ── */}
       <section className="py-24 px-6 border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto">
-
           <div className="mb-12 max-w-2xl">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-              {investors.label}
-            </p>
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4"
-              style={{ fontSize: 'clamp(24px,3vw,40px)' }}
-            >
-              {investors.title}
-            </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
-              {investors.desc}
-            </p>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.dimLabel}</p>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.dimTitle}</h2>
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.dimDesc}</p>
           </div>
+          <div className="relative overflow-x-auto rounded-xl border border-ag-border">
+            <LockedOverlay title={fm.lockedTitle} desc={fm.lockedDesc} cta={fm.lockedCta} />
+            <div className="min-w-[720px]">
+              <div className="grid grid-cols-[220px_repeat(4,1fr)] bg-ag-navy">
+                <div className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">Dimension</p></div>
+                {fm.dimLockedCells.map(c => <div key={c} className="px-5 py-4 border-l border-white/10"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{c}</p></div>)}
+              </div>
+              {fm.dims.map((d, i) => (
+                <div key={d.letter} className={`grid grid-cols-[220px_repeat(4,1fr)] border-t border-ag-border ${i % 2 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
+                  <div className="px-5 py-4 flex items-center gap-3">
+                    <span className="font-sans font-bold text-ag-navy text-[16px] w-5">{d.letter}</span>
+                    <div><p className="font-sans font-semibold text-ag-black text-[13px]">{d.label}</p><p className="font-mono text-[10px] text-ag-gray-light">{d.teaser}</p></div>
+                  </div>
+                  {[0, 1, 2, 3].map(k => (
+                    <div key={k} className="px-5 py-4 border-l border-ag-border blur-sm select-none">
+                      <p className="font-mono text-[13px] text-ag-black">{['14,2 / 20', '+1,8x', '+420 k€', '▲ 3 %'][k]}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-            {investors.profiles.map((p) => (
-              <div
-                key={p.title}
-                className="border border-ag-border p-6 flex flex-col gap-4 hover:border-ag-navy hover:shadow-sm transition-all"
-              >
+      {/* ── POUR QUI : tous les segments ── */}
+      <section className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.segLabel}</p>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.segTitle}</h2>
+            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.segDesc}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+            {fm.segments.map((sg, i) => (
+              <div key={sg.title} className="rounded-xl bg-ag-white border border-ag-border p-6 flex flex-col gap-4 hover:border-ag-navy transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-ag-navy flex items-center justify-center shrink-0">
-                  {PROFILE_ICON[p.icon] ?? <Users size={20} className="text-ag-apex" />}
+                  {[<Users key="u" size={20} className="text-ag-apex" />, <TrendingUp key="t" size={20} className="text-ag-apex" />, <Landmark key="l" size={20} className="text-ag-apex" />, <Building2 key="b" size={20} className="text-ag-apex" />, <CheckCircle2 key="c" size={20} className="text-ag-apex" />, <Users key="f" size={20} className="text-ag-apex" />][i % 6]}
                 </div>
                 <div>
-                  <p className="font-sans font-bold text-ag-black text-[14px] tracking-[-0.01em] mb-2">{p.title}</p>
-                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{p.desc}</p>
+                  <p className="font-sans font-bold text-ag-black text-[14px] tracking-[-0.01em] mb-2">{sg.title}</p>
+                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{sg.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-
-          <Link
-            href={investors.ctaHref}
-            className="inline-flex items-center gap-2 bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy-mid transition-colors"
-          >
+          <Link href={investors.ctaHref} className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy/90 transition-colors">
             {investors.cta} <ArrowUpRight size={12} />
           </Link>
         </div>
