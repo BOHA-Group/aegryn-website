@@ -90,13 +90,16 @@ export default async function SellerAssetDetailPage({
     supa.from('grade_assessments')
       .select('computed_grade, computed_score, trs, trs_reasons, recommendations, engine_result_json, grade_ceiling')
       .eq('asset_id', id)
-      .in('status', ['published', 'validated'])
+      /* Confidentialité : seul le grade PUBLIÉ par l'admin est visible du client.
+         Brouillons et évaluations validées mais non publiées restent internes. */
+      .eq('status', 'published')
       .order('version_number', { ascending: false })
       .limit(1)
       .maybeSingle(),
     supa.from('grade_assessments')
       .select('version_number, computed_grade, computed_score, trs, delta, created_at')
       .eq('asset_id', id)
+      .in('status', ['published', 'superseded'])
       .order('version_number', { ascending: false }),
     supa.from('data_room_documents')
       .select('id, document_code, file_name, uploaded_at, buyer_visibility, admin_quality')

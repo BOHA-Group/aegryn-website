@@ -330,7 +330,7 @@ export default function GradeForm({
         setSaved(true)
         router.refresh()
       } else {
-        setError(json.error ?? 'Erreur inconnue')
+        setError(json.message ?? json.error ?? 'Erreur inconnue')
       }
     } catch (err) {
       setError(String(err))

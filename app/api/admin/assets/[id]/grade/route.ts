@@ -3,6 +3,7 @@ import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getAdminUser }             from '@/lib/adminAuth'
 import { estimateGrade }            from '@/lib/valuationEngine'
+import { refreshPrescore }          from '@/lib/prescoreServer'
 import {
   checkAutoRefusal,
   suggestAegFromScore,
@@ -77,6 +78,22 @@ export async function PATCH(
     if (refused) aegGrade = 'refused'
 
     const supa = createServiceClient()
+
+    /* ── Mêmes gardes que le moteur : aucun grade officiel (visible client) sans KYC/KYB
+          approuvé du demandeur ni pièces bloquantes vérifiées. Refus automatique exempté. ── */
+    if (!refused) {
+      const { data: a } = await supa.from('assets').select('seller_uid, seller_email').eq('id', id).maybeSingle()
+      const { data: prof } = a?.seller_uid
+        ? await supa.from('profiles').select('kyc_status').eq('id', a.seller_uid).maybeSingle()
+        : await supa.from('profiles').select('kyc_status').eq('email', a?.seller_email ?? '').maybeSingle()
+      if (prof?.kyc_status !== 'approved') {
+        return NextResponse.json({ error: 'kyc_required', message: 'KYC/KYB du demandeur non approuvé : attribution du grade bloquée.' }, { status: 422 })
+      }
+      const prescore = await refreshPrescore(id)
+      if (!prescore.canGrade) {
+        return NextResponse.json({ error: 'documents_blocking', message: 'Pièces bloquantes manquantes ou insuffisantes dans la Data Room.' }, { status: 422 })
+      }
+    }
 
     const updatePayload: Record<string, unknown> = {
       score_code:     body.score_code,
