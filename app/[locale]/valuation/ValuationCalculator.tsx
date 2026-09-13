@@ -79,7 +79,7 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 }
 
 /* ─── Main component ─────────────────────────────────────── */
-type LockedInfo = { title: string; desc: string; cta: string }
+type LockedInfo = { title: string; desc: string; cta: string; soon?: string }
 
 export default function ValuationCalculator({ freemiumNote, locked }: { freemiumNote?: string; locked?: LockedInfo } = {}) {
   const t    = useTranslations('valuation')
@@ -622,6 +622,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
           <div className="absolute inset-0 z-10 flex items-center justify-center p-6 bg-white/40">
             <div className="rounded-xl bg-ag-navy/95 text-white border border-white/10 px-6 py-5 max-w-sm text-center shadow-xl">
               <Lock size={16} className="mx-auto text-ag-apex mb-2" />
+              {locked.soon && <p className="inline-flex rounded-full bg-ag-apex/15 border border-ag-apex/40 text-ag-apex font-mono text-[9px] uppercase tracking-widest px-3 py-1 mb-2">{locked.soon}</p>}
               <p className="font-sans font-bold text-[14px] mb-1">{locked.title}</p>
               <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{locked.desc}</p>
               <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">

@@ -121,7 +121,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Bedrijfsleven, kapitaal, technologie en samenleving. Aegryn's driemaandelijkse kijk op wat de markten verandert.",
-    "thinkingMagazineIssues": "01 - Built to Last - Januari 2027",
+    "thinkingMagazineIssues": "January 2027 - Built to Last",
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
@@ -6472,7 +6472,9 @@
           "desc": "Een neutrale lezing van de waarde delen tussen verkoper, erfgenamen en overnemer."
         }
       ],
-      "marketTeaser": "Voorproef: één cluster open, de andere voorbehouden aan abonnees."
+      "marketTeaser": "Voorproef: één cluster open, de andere voorbehouden aan abonnees.",
+      "comingSoonLabel": "Binnenkort beschikbaar",
+      "comingSoonDesc": "Het Index-abonnement opent binnenkort. Schrijf u in om bericht te krijgen en de proefperiode van 3 dagen bij de lancering te ontvangen."
     }
   },
   "transactionSubmit": {
@@ -7471,7 +7473,7 @@
     "transactionSession": "Privésessies",
     "transactionResults": "Afgesloten transacties",
     "magazine": "Aegryn Magazine",
-    "magazineIssue01": "01 : Built to Last",
+    "magazineIssue01": "January 2027 - Built to Last",
     "blog": "Artikelen & Inzichten",
     "roadmap": "Roadmap",
     "glossaire": "M&A-woordenlijst",

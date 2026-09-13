@@ -85,7 +85,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
-        alt={`Aegryn Magazine ${padNum} - ${issue.title}`}
+        alt={`Aegryn Magazine - ${issue.title}`}
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
       />
       <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />
@@ -95,7 +95,6 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
           <div style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)' }}>{formatted}</div>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Special Edition</div>
-            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Issue {padNum}</div>
           </div>
         </div>
         {/* Masthead */}

@@ -130,7 +130,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Affaires, capital, technologie et société. Le regard trimestriel d'Aegryn sur ce qui transforme les marchés.",
-    "thinkingMagazineIssues": "01 - Built to Last - Janvier 2027",
+    "thinkingMagazineIssues": "January 2027 - Built to Last",
     "thinkingMarket": "Notre regard sur le marché",
     "thinkingMarketDesc": "Données, analyses et points de vue par ceux qui font le marché.",
     "thinkingMarketNewsletter": "Newsletter LinkedIn",
@@ -6508,7 +6508,9 @@
           "desc": "Partager une lecture neutre de la valeur entre cédant, héritiers et repreneur."
         }
       ],
-      "marketTeaser": "Aperçu : un cluster ouvert, les autres réservés aux abonnés."
+      "marketTeaser": "Aperçu : un cluster ouvert, les autres réservés aux abonnés.",
+      "comingSoonLabel": "Bientôt disponible",
+      "comingSoonDesc": "L'abonnement Index ouvre prochainement. Inscrivez-vous pour être prévenu et bénéficier de l'essai de 3 jours à l'ouverture."
     }
   },
   "transactionSubmit": {
@@ -7507,7 +7509,7 @@
     "transactionSession": "Sessions privées",
     "transactionResults": "Transactions clôturées",
     "magazine": "Aegryn Magazine",
-    "magazineIssue01": "01 : Built to Last",
+    "magazineIssue01": "January 2027 - Built to Last",
     "blog": "Articles & Analyses",
     "roadmap": "Feuille de route",
     "glossaire": "Glossaire M&A",

@@ -99,7 +99,7 @@ export function IssueTickerCarousel({ items }: Props) {
               className="border-l-2 border-magazine-black/10 pl-6 py-2"
             >
               <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-magazine-black/30 mb-1 whitespace-nowrap">
-                {item.issue} — {item.date}
+                {item.date}
               </p>
               <p className="font-sans font-semibold text-magazine-black text-[15px] mb-2 leading-snug">
                 {item.theme}

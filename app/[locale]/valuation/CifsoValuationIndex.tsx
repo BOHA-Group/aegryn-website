@@ -18,14 +18,16 @@ type Freemium = {
   dimLabel: string; dimTitle: string; dimDesc: string; dims: { letter: string; label: string; teaser: string }[]; dimLockedCells: string[]
   segLabel: string; segTitle: string; segDesc: string; segments: { title: string; desc: string }[]
   marketTeaser: string
+  comingSoonLabel: string; comingSoonDesc: string
 }
 
 /* Aperçu verrouillé : contenu flouté + cadenas, CTA liste d'attente */
-function LockedOverlay({ title, desc, cta }: { title: string; desc: string; cta: string }) {
+function LockedOverlay({ title, desc, cta, soon }: { title: string; desc: string; cta: string; soon?: string }) {
   return (
     <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
       <div className="rounded-xl bg-ag-navy/95 text-white border border-white/10 px-6 py-5 max-w-sm text-center shadow-xl">
         <Lock size={16} className="mx-auto text-ag-apex mb-2" />
+        {soon && <p className="inline-flex rounded-full bg-ag-apex/15 border border-ag-apex/40 text-ag-apex font-mono text-[9px] uppercase tracking-widest px-3 py-1 mb-2">{soon}</p>}
         <p className="font-sans font-bold text-[14px] mb-1">{title}</p>
         <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{desc}</p>
         <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
@@ -96,7 +98,7 @@ function WaitlistForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mt-2">
       {status === 'ok' ? (
-        <div className="flex items-center gap-2 text-ag-apex font-mono text-[12px]">
+        <div className="flex items-center gap-2 text-emerald-700 font-mono text-[12px]">
           <CheckCircle2 size={14} />
           {t('ctaSuccess')}
         </div>
@@ -108,19 +110,19 @@ function WaitlistForm() {
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder={t('ctaPlaceholder')}
-            className="flex-1 min-w-0 border border-white/20 bg-white/[0.06] text-white placeholder:text-white/35 px-4 py-3 font-sans text-[13px] focus:outline-none focus:border-ag-apex transition-colors"
+            className="flex-1 min-w-0 rounded-lg border border-ag-border bg-ag-off-white text-ag-black placeholder:text-ag-gray-light px-4 py-3 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
           />
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="shrink-0 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3 hover:bg-ag-apex/90 transition-colors disabled:opacity-60"
+            className="shrink-0 rounded-lg bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3 hover:bg-ag-navy/90 transition-colors disabled:opacity-60"
           >
             {status === 'loading' ? '...' : t('ctaSubmit')}
           </button>
         </>
       )}
       {status === 'err' && (
-        <p className="text-red-400 font-sans text-[11px] flex items-center gap-1.5">
+        <p className="text-red-600 font-sans text-[11px] flex items-center gap-1.5">
           <AlertCircle size={12} /> {t('ctaError')}
         </p>
       )}
@@ -129,7 +131,7 @@ function WaitlistForm() {
 }
 
 /* ─── Market table ────────────────────────────────────────── */
-function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: string; locked?: { title: string; desc: string; cta: string } }) {
+function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: string; locked?: { title: string; desc: string; cta: string; soon?: string } }) {
   const t = useTranslations('valuation.marketData')
 
   if (!rows.length) {
@@ -262,7 +264,12 @@ export default function CifsoValuationIndex() {
             {fm.plans.map(pl => {
               const featured = pl.key === 'index'
               return (
-                <div key={pl.key} className={`rounded-2xl border p-8 flex flex-col gap-5 ${featured ? 'bg-white text-ag-black border-ag-apex ring-4 ring-ag-apex/20' : 'bg-white/5 text-white border-white/10'}`}>
+                <div key={pl.key} className={`relative rounded-2xl border p-8 flex flex-col gap-5 ${featured ? 'bg-white text-ag-black border-ag-apex ring-4 ring-ag-apex/20' : 'bg-white/5 text-white border-white/10'}`}>
+                  {featured && (
+                    <div className="absolute -top-3 left-6 rounded-full bg-ag-apex text-ag-navy font-mono text-[9px] uppercase tracking-widest px-3 py-1 shadow">
+                      {fm.comingSoonLabel}
+                    </div>
+                  )}
                   <div>
                     <p className={`font-mono text-[10px] tracking-[0.22em] uppercase mb-2 ${featured ? 'text-ag-gray-light' : 'text-white/50'}`}>{pl.name}</p>
                     <p className="font-sans font-bold text-[24px] tracking-[-0.02em] leading-tight">{pl.price}</p>
@@ -278,6 +285,10 @@ export default function CifsoValuationIndex() {
                   </ul>
                   {pl.key === 'index' ? (
                     <div id="waitlist" className="pt-2">
+                      <div className="rounded-lg bg-ag-navy/5 border border-ag-navy/15 px-4 py-3 mb-4">
+                        <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-navy mb-1">{fm.comingSoonLabel}</p>
+                        <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{fm.comingSoonDesc}</p>
+                      </div>
                       <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">{comingSoon.ctaLabel}</p>
                       <WaitlistForm />
                     </div>
@@ -302,7 +313,7 @@ export default function CifsoValuationIndex() {
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.estimateTitle}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.estimateDesc}</p>
           </div>
-          <ValuationCalculator freemiumNote={fm.estimateNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta }} />
+          <ValuationCalculator freemiumNote={fm.estimateNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta, soon: fm.comingSoonLabel }} />
         </div>
       </section>
 
@@ -469,7 +480,7 @@ export default function CifsoValuationIndex() {
             </p>
           </div>
 
-          <MarketTable rows={marketRows} locale={locale} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta }} />
+          <MarketTable rows={marketRows} locale={locale} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta, soon: fm.comingSoonLabel }} />
           <p className="font-mono text-[10px] tracking-[0.12em] text-ag-gray-light mt-3">{fm.marketTeaser}</p>
 
           {marketLoaded && marketRows[0]?.reference_period && (
@@ -493,7 +504,7 @@ export default function CifsoValuationIndex() {
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.dimDesc}</p>
           </div>
           <div className="relative overflow-x-auto rounded-xl border border-ag-border">
-            <LockedOverlay title={fm.lockedTitle} desc={fm.lockedDesc} cta={fm.lockedCta} />
+            <LockedOverlay title={fm.lockedTitle} desc={fm.lockedDesc} cta={fm.lockedCta} soon={fm.comingSoonLabel} />
             <div className="min-w-[720px]">
               <div className="grid grid-cols-[220px_repeat(4,1fr)] bg-ag-navy">
                 <div className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">Dimension</p></div>

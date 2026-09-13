@@ -21,7 +21,6 @@ interface Props {
 export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en ligne', labelDownloadPdf = 'Feuilleter le PDF', labelSubscribe = 'Recevoir', labelComingSoon = 'Publication prochainement', labelDesc: _labelDesc, isPublic = false, isPreview = false }: Props) {
   const date      = new Date(issue.publishedAt)
   const formatted = date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
-  const issueNum  = String(issue.number).padStart(2, '0')
   const padNum    = String(issue.number).padStart(2, '0')
 
   return (
@@ -40,7 +39,6 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
                 <div style={{ fontFamily: 'inherit', fontSize: 9, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff' }}>{formatted.toUpperCase()}</div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>Special Edition</div>
-                  <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#fff' }}>{issueNum}</div>
                 </div>
               </div>
               {/* AEGRYN + BUSINESS MAGAZINE */}

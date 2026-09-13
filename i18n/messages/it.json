@@ -121,7 +121,7 @@
     "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Affari, capitale, tecnologia e società. La prospettiva trimestrale di Aegryn su ciò che trasforma i mercati.",
-    "thinkingMagazineIssues": "01 - Built to Last - Gennaio 2027",
+    "thinkingMagazineIssues": "January 2027 - Built to Last",
     "whoGroup": "Il gruppo",
     "whoGroupDesc": "Storia, missione, valori",
     "whoAbout": "Chi è Aegryn",
@@ -6457,7 +6457,9 @@
           "desc": "Condividere una lettura neutrale del valore tra cedente, eredi e acquirente."
         }
       ],
-      "marketTeaser": "Anteprima: un cluster aperto, gli altri riservati agli abbonati."
+      "marketTeaser": "Anteprima: un cluster aperto, gli altri riservati agli abbonati.",
+      "comingSoonLabel": "Prossimamente",
+      "comingSoonDesc": "L'abbonamento all'Indice apre a breve. Iscriviti per essere avvisato e ottenere la prova di 3 giorni al lancio."
     }
   },
   "transactionSubmit": {
