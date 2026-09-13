@@ -2501,7 +2501,7 @@
             "Rapport complet avec tableau de sous-codes",
             "Grade officiel + feuille de route de remédiation structurée",
             "Inscription au registre certifié Aegryn",
-            "Validité du certificat : 18 mois",
+            "Validité du certificat : 12 mois",
             "Deux sessions de révision incluses",
             "Interlocuteur dédié Aegryn tout au long du processus"
           ]
@@ -2657,7 +2657,7 @@
       {
         "num": "04",
         "title": "Certification",
-        "desc": "Émission du certificat officiel versionné, valable 24 mois, et publication au registre certifié Aegryn."
+        "desc": "Émission du certificat officiel versionné, valable 12 mois, et publication au registre certifié Aegryn."
       }
     ],
     "submit": {
@@ -3018,7 +3018,7 @@
         "desc": "Émission du certificat officiel CIFSO 5000 et publication au registre certifié Aegryn.",
         "inputs": "Rapport de certification validé, identité de l'organisation certifiée, format de certification choisi (Express/Standard/Premium)",
         "outputs": "Certificat officiel CIFSO 5000, badge numérique, inscription au registre public, accès portail certifié",
-        "outcomes": "Organisation certifiée avec grade versionné et consultable par investisseurs, acquéreurs et partenaires qualifiés. Validité : 12 ou 18 mois selon le format."
+        "outcomes": "Organisation certifiée avec grade versionné et consultable par investisseurs, acquéreurs et partenaires qualifiés. Validité : 12 mois."
       }
     ],
     "principlesTitle": "Principes d'indépendance",
@@ -5593,7 +5593,7 @@
           "Rapport complet avec tableau de sous-codes",
           "Grade officiel + feuille de route de remédiation structurée",
           "Inscription au registre certifié Aegryn",
-          "Validité du certificat : 18 mois",
+          "Validité du certificat : 12 mois",
           "Deux sessions de révision incluses",
           "Interlocuteur dédié Aegryn tout au long du processus"
         ]
@@ -6597,7 +6597,7 @@
     "s5Title": "Responsabilité",
     "s5": "Aegryn agit exclusivement comme intermédiaire et opérateur de processus. Aegryn ne garantit ni l'issue d'une transaction, ni la valeur future d'un actif, ni la performance post-cession. En cas de divergence entre les données déclarées et la réalité constatée lors de la DD, la responsabilité d'Aegryn est limitée au remboursement des honoraires de certification perçus pour l'actif concerné. En aucun cas Aegryn ne sera responsable des dommages indirects, manque à gagner ou dommages consécutifs.",
     "s6Title": "Contestation du Grade",
-    "s6": "Toute contestation du Grade officiel doit être notifiée à Aegryn par écrit via le formulaire de contact sur aegryn.com/contact dans les 30 jours calendaires suivant la remise du rapport. Aegryn s'engage à répondre sous 15 jours ouvrés.",
+    "s6": "Toute contestation du Grade officiel doit être notifiée à Aegryn par écrit via le formulaire de contact sur aegryn.com/contact dans les 15 jours calendaires suivant la remise du rapport. Aegryn s'engage à répondre sous 15 jours ouvrés.",
     "s7Title": "Confidentialité des transactions",
     "s7": "Aegryn ne révèle jamais l'identité du vendeur à l'acquéreur, ni l'identité de l'acquéreur au vendeur, sans accord explicite des deux parties. Les données de transactions publiées dans le catalogue de résultats sont systématiquement anonymisées.",
     "s8Title": "Lutte contre le blanchiment (LCB-FT)",
@@ -10260,7 +10260,7 @@
         "label": "niveaux de grade"
       },
       {
-        "value": "24",
+        "value": "12",
         "label": "mois de validité"
       }
     ],
@@ -10384,7 +10384,7 @@
     "s9Title": "Validité, renouvellement et contestation",
     "s9Validity": {
       "title": "Durée de validité",
-      "desc": "Un grade CIFSO 5000 est valable 24 mois à compter de sa date d'émission. Au-delà, il est affiché comme expiré sur la page de vérification."
+      "desc": "Un grade CIFSO 5000 est valable 12 mois à compter de sa date d'émission. Au-delà, il est affiché comme expiré sur la page de vérification."
     },
     "s9Renewal": {
       "title": "Renouvellement",
@@ -10396,7 +10396,7 @@
     },
     "s9Contest": {
       "title": "Contestation",
-      "desc": "L'organisation certifiée dispose de 30 jours pour formuler des remarques factuelles. Une contestation motivée déclenche une revue par un analyste n'ayant pas participé à l'évaluation initiale."
+      "desc": "L'organisation certifiée dispose de 15 jours pour formuler des remarques factuelles. Une contestation motivée déclenche une revue par un analyste n'ayant pas participé à l'évaluation initiale."
     },
     "s10Title": "Auditeurs indépendants et principes de gouvernance",
     "s10Lead": "La valeur d'un grade repose entièrement sur l'indépendance et la rigueur de ceux qui le délivrent.",

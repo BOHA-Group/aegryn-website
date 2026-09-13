@@ -2541,7 +2541,7 @@
             "Full report with sub-code table",
             "Official grade + structured remediation roadmap",
             "Registration in Aegryn certified register",
-            "18-month certificate validity",
+            "12-month certificate validity",
             "Two included revision sessions",
             "Dedicated Aegryn contact throughout"
           ]
@@ -2697,7 +2697,7 @@
       {
         "num": "04",
         "title": "Certification",
-        "desc": "Issuance of the official versioned certificate, valid 24 months, and publication in the Aegryn certified register."
+        "desc": "Issuance of the official versioned certificate, valid 12 months, and publication in the Aegryn certified register."
       }
     ],
     "submit": {
@@ -3034,7 +3034,7 @@
         "desc": "Official CIFSO 5000 certificate issuance and publication in the Aegryn certified registry.",
         "inputs": "Validated certification report, certified organization identity, chosen certification format (Express/Standard/Premium)",
         "outputs": "Official CIFSO 5000 certificate, digital badge, public registry entry, certified portal access",
-        "outcomes": "Certified organization with versioned grade viewable by qualified investors, acquirers, and partners. Validity: 12 or 18 months depending on format."
+        "outcomes": "Certified organization with versioned grade viewable by qualified investors, acquirers, and partners. Validity: 12 months."
       }
     ],
     "principlesTitle": "Independence principles",
@@ -5542,7 +5542,7 @@
           "Full report with sub-code table",
           "Official grade + structured remediation roadmap",
           "Registration in Aegryn certified register",
-          "Certificate validity: 18 months",
+          "Certificate validity: 12 months",
           "Two review sessions included",
           "Dedicated Aegryn contact throughout the process"
         ]
@@ -6545,7 +6545,7 @@
     "s5Title": "Liability",
     "s5": "Aegryn acts exclusively as intermediary and process operator. Aegryn does not guarantee the outcome of a transaction, the future value of an asset, or post-transfer performance. In case of discrepancy between declared data and reality discovered during DD, Aegryn's liability is limited to refunding certification fees received for the asset. Under no circumstances shall Aegryn be liable for indirect damages, lost profits, or consequential damages.",
     "s6Title": "Grade Dispute",
-    "s6": "Any dispute of the official Grade must be notified to Aegryn in writing via the contact form at aegryn.com/contact within 30 calendar days of report delivery. Aegryn undertakes to respond within 15 working days.",
+    "s6": "Any dispute of the official Grade must be notified to Aegryn in writing via the contact form at aegryn.com/contact within 15 calendar days of report delivery. Aegryn undertakes to respond within 15 working days.",
     "s7Title": "Transaction Confidentiality",
     "s7": "Aegryn never discloses the seller's identity to the buyer, nor the buyer's identity to the seller, without explicit agreement of both parties. Transaction data published in the results catalogue is systematically anonymised.",
     "s8Title": "Anti-Money Laundering (AML/CFT)",
@@ -10169,7 +10169,7 @@
         "label": "grade levels"
       },
       {
-        "value": "24",
+        "value": "12",
         "label": "months of validity"
       }
     ],
@@ -10293,7 +10293,7 @@
     "s9Title": "Validity, renewal and appeal",
     "s9Validity": {
       "title": "Validity period",
-      "desc": "A CIFSO 5000 grade is valid for 24 months from its issue date. Beyond that, it is displayed as expired on the verification page."
+      "desc": "A CIFSO 5000 grade is valid for 12 months from its issue date. Beyond that, it is displayed as expired on the verification page."
     },
     "s9Renewal": {
       "title": "Renewal",
@@ -10305,7 +10305,7 @@
     },
     "s9Contest": {
       "title": "Appeal",
-      "desc": "The certified organisation has 30 days to submit factual comments. A reasoned appeal triggers a review by an analyst who did not take part in the initial assessment."
+      "desc": "The certified organisation has 15 days to submit factual comments. A reasoned appeal triggers a review by an analyst who did not take part in the initial assessment."
     },
     "s10Title": "Independent auditors and governance principles",
     "s10Lead": "The value of a grade rests entirely on the independence and rigour of those who issue it.",

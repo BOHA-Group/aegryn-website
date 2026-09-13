@@ -44,11 +44,11 @@ function Page({ n, total, label, children, dark = false, className = '' }: {
 }) {
   return (
     <article
-      className={`brochure-page relative mx-auto w-full max-w-[900px] bg-white shadow-[0_2px_24px_rgba(0,0,0,0.08)] border border-ag-border print:shadow-none print:border-0 print:max-w-none ${dark ? 'bg-ag-navy text-white' : ''} ${className}`}
-      style={{ minHeight: '1272px' }}
+      className={`brochure-page relative mx-auto w-full max-w-[900px] bg-white shadow-[0_2px_24px_rgba(0,0,0,0.08)] border border-ag-border print:shadow-none print:border-0 ${dark ? 'bg-ag-navy text-white' : ''} ${className}`}
+     
     >
-      <div className="px-12 md:px-20 pt-16 pb-24 h-full">{children}</div>
-      <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
+      <div className="px-12 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
+      <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
         <span>CIFSO 5000 — Aegryn SA</span>
         <span>{label} {n} / {total}</span>
       </footer>
@@ -60,7 +60,7 @@ function SectionHead({ num, title, lead }: { num: string; title: string; lead: s
   return (
     <header className="mb-10">
       <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">{num}</p>
-      <h2 className="font-sans font-bold text-ag-black text-[32px] md:text-[38px] tracking-[-0.03em] leading-[1.08] mb-5">{title}</h2>
+      <h2 className="font-sans font-bold text-ag-black text-[32px] md:text-[38px] print:text-[38px] tracking-[-0.03em] leading-[1.08] mb-5">{title}</h2>
       <p className="font-sans text-[17px] text-ag-black/80 leading-relaxed border-l-4 border-ag-apex pl-5">{lead}</p>
     </header>
   )
@@ -128,14 +128,14 @@ export function CifsoBrochure() {
         </div>
       </div>
 
-      <div className="pt-28 pb-24 px-4 md:px-8 flex flex-col gap-8 print:pt-0 print:pb-0 print:gap-0 print:px-0">
+      <div className="pt-28 pb-24 px-4 md:px-8 print:px-8 flex flex-col gap-8 print:pt-0 print:pb-0 print:gap-0 print:px-0">
 
         {/* ── COUVERTURE ── */}
-        <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none" style={{ minHeight: '1272px' }}>
+        <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none">
           <Image src={IMG.cover} alt="" fill priority className="object-cover" sizes="900px" />
           {/* Bandeau bas opaque pour un contraste garanti */}
           <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-ag-navy via-ag-navy/95 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-between px-12 md:px-20 py-16">
+          <div className="absolute inset-0 flex flex-col justify-between px-12 md:px-20 print:px-20 py-16">
             <div className="flex items-center justify-between">
               <span className="font-sans font-bold text-white text-[18px] tracking-[0.12em] drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">AEGRYN</span>
               <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-white bg-ag-navy/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
@@ -147,7 +147,7 @@ export function CifsoBrochure() {
               <h1 className="font-sans font-bold text-white text-[clamp(52px,8vw,88px)] leading-[0.95] tracking-[-0.04em] whitespace-pre-line mb-8">
                 {b('coverTitle')}
               </h1>
-              <p className="font-sans text-white/90 text-[18px] md:text-[20px] leading-relaxed max-w-xl mb-14">
+              <p className="font-sans text-white/90 text-[18px] md:text-[20px] print:text-[20px] leading-relaxed max-w-xl mb-14">
                 {b('coverSubtitle')}
               </p>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60">{b('coverIssuer')}</p>
@@ -186,7 +186,7 @@ export function CifsoBrochure() {
         <Page n={3} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(1)} title={b('s1Title')} lead={b('s1Lead')} />
           <Figure src={IMG.purpose} alt="" className="aspect-[21/9] mb-10" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-8">
             <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{b('s1P1')}</p>
             <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{b('s1P2')}</p>
           </div>
@@ -199,7 +199,7 @@ export function CifsoBrochure() {
         {/* ── 02 À QUI ── */}
         <Page n={4} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(2)} title={b('s2Title')} lead={b('s2Lead')} />
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] print:grid-cols-[1fr_1.4fr] gap-8 items-start">
             <Figure src={IMG.audience} alt="" className="aspect-[3/4]" />
             <div className="grid grid-cols-1 gap-4">
               {profiles.map((p, i) => {
@@ -224,7 +224,7 @@ export function CifsoBrochure() {
         <Page n={5} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(3)} title={b('s3Title')} lead={b('s3Lead')} />
           <Figure src={IMG.value} alt="" className="aspect-[21/8] mb-10" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-10 gap-y-8">
             {benefits.map((it, i) => {
               const Icon = BENEFIT_ICONS[i] ?? Check
               return (
@@ -343,7 +343,7 @@ export function CifsoBrochure() {
         {/* ── 08 RÉSULTATS ── */}
         <Page n={12} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(8)} title={b('s8Title')} lead={b('s8Lead')} />
-          <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] print:grid-cols-[1.4fr_1fr] gap-8 items-start">
             <div className="flex flex-col gap-4">
               {delivers.map((d, i) => {
                 const Icon = DELIVER_ICONS[i] ?? FileText
@@ -367,7 +367,7 @@ export function CifsoBrochure() {
         {/* ── 09 VALIDITÉ ── */}
         <Page n={13} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(9)} title={b('s9Title')} lead={validity.desc} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-5">
             {[
               { ...validity,   Icon: Calendar },
               { ...renewal,    Icon: RefreshCw },
@@ -388,7 +388,7 @@ export function CifsoBrochure() {
         {/* ── 10 AUDITEURS + 11 POSITIONNEMENT ── */}
         <Page n={14} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(10)} title={b('s10Title')} lead={b('s10Lead')} />
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-8 items-start mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] print:grid-cols-[1fr_1.5fr] gap-8 items-start mb-14">
             <Figure src={IMG.auditors} alt="" className="aspect-[3/4]" />
             <div className="flex flex-col gap-4">
               {auditors.map((a, i) => {
@@ -436,16 +436,16 @@ export function CifsoBrochure() {
         </Page>
 
         {/* ── 12 ENGAGER ── */}
-        <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden bg-ag-navy shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none" style={{ minHeight: '1272px' }}>
+        <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden bg-ag-navy shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none">
           <div className="relative h-[42%] min-h-[520px]">
             <Image src={IMG.closing} alt="" fill className="object-cover" sizes="900px" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ag-navy/30 to-ag-navy" />
           </div>
-          <div className="px-12 md:px-20 pb-28 -mt-24 relative">
+          <div className="px-12 md:px-20 print:px-20 pb-28 -mt-24 relative">
             <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-apex mb-3">{num(12)}</p>
             <h2 className="font-sans font-bold text-white text-[42px] tracking-[-0.03em] leading-[1.05] mb-4">{b('s12Title')}</h2>
             <p className="font-sans text-white/80 text-[17px] leading-relaxed max-w-xl mb-12">{b('s12Lead')}</p>
-            <ol className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            <ol className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 mb-12">
               {finalSteps.map((s, i) => (
                 <li key={s} className="flex items-center gap-4 rounded-xl border border-white/15 bg-white/5 p-5">
                   <span className="shrink-0 w-9 h-9 rounded-full bg-ag-apex text-ag-navy font-mono font-bold text-[13px] flex items-center justify-center">{i + 1}</span>
@@ -462,7 +462,7 @@ export function CifsoBrochure() {
               </Link>
             </div>
           </div>
-          <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
+          <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
             <span>{b('footerIssuer')}</span>
             <span>{b('footerLocation')} · aegryn.com</span>
           </footer>
@@ -492,7 +492,7 @@ function DimensionCard({ d, weightLabel, criteriaLabel }: { d: Cifs; weightLabel
       </div>
       <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-4">{d.desc}</p>
       <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-2">{criteriaLabel}</p>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5">
+      <ul className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-6 gap-y-1.5">
         {d.criteria.map((c) => (
           <li key={c} className="flex items-start gap-2 font-sans text-[12px] text-ag-black/80">
             <Check size={12} className="text-ag-apex mt-1 shrink-0" />{c}

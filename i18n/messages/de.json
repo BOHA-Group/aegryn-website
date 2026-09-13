@@ -2197,7 +2197,7 @@
         "desc": "Ausstellung des offiziellen CIFSO 5000-Zertifikats und Veröffentlichung im zertifizierten Aegryn-Register.",
         "inputs": "Validierter Zertifizierungsbericht, Identität der zertifizierten Organisation, gewähltes Zertifizierungsformat (Express/Standard/Premium)",
         "outputs": "Offizielles CIFSO 5000-Zertifikat, digitales Badge, öffentlicher Registereintrag, Zugang zum zertifizierten Portal",
-        "outcomes": "Zertifizierte Organisation mit versionierter Note, einsehbar für qualifizierte Investoren, Erwerber und Partner. Gültigkeit: 12 oder 18 Monate je nach Format."
+        "outcomes": "Zertifizierte Organisation mit versionierter Note, einsehbar für qualifizierte Investoren, Erwerber und Partner. Gültigkeit: 12 Monate."
       }
     ],
     "principlesTitle": "Unabhängigkeitsprinzipien",
@@ -3231,7 +3231,7 @@
             "Vollständiger Bericht mit Untercode-Tabelle",
             "Offizielle Note + strukturierte Sanierungsroadmap",
             "Eintrag ins zertifizierte Aegryn-Register",
-            "Zertifikatsgültigkeit: 18 Monate",
+            "Zertifikatsgültigkeit: 12 Monate",
             "Zwei Überprüfungssitzungen inklusive",
             "Dedizierter Aegryn-Ansprechpartner während des gesamten Prozesses"
           ],
@@ -3388,7 +3388,7 @@
       {
         "num": "04",
         "title": "Zertifizierung",
-        "desc": "Ausstellung des offiziellen versionierten Zertifikats, 24 Monate gültig, und Veröffentlichung im zertifizierten Aegryn-Register."
+        "desc": "Ausstellung des offiziellen versionierten Zertifikats, 12 Monate gültig, und Veröffentlichung im zertifizierten Aegryn-Register."
       }
     ],
     "submit": {
@@ -5542,7 +5542,7 @@
           "Vollständiger Bericht mit Untercode-Tabelle",
           "Offizielle Note + strukturierte Sanierungsroadmap",
           "Eintrag ins zertifizierte Aegryn-Register",
-          "Zertifikatsgültigkeit: 18 Monate",
+          "Zertifikatsgültigkeit: 12 Monate",
           "Zwei Überarbeitungssitzungen inklusive",
           "Dedizierter Aegryn-Ansprechpartner während des gesamten Prozesses"
         ]
@@ -6545,7 +6545,7 @@
     "s5Title": "Haftung",
     "s5": "Aegryn handelt ausschliesslich als Vermittler und Prozessbetreiber. Aegryn garantiert weder den Ausgang einer Transaktion noch den zukünftigen Wert eines Assets noch die Leistung nach der Übertragung. Die Haftung von Aegryn ist auf die Rückerstattung der Zertifizierungsgebühren für das betreffende Asset beschränkt. Aegryn haftet in keinem Fall für indirekte Schäden oder entgangenen Gewinn.",
     "s6Title": "Grade-Anfechtung",
-    "s6": "Jede Anfechtung des offiziellen Grades muss Aegryn schriftlich (contact@boha-group.com) innerhalb von 30 Kalendertagen nach Zustellung des Berichts gemeldet werden. Aegryn verpflichtet sich, innerhalb von 15 Werktagen zu antworten.",
+    "s6": "Jede Anfechtung des offiziellen Grades muss Aegryn schriftlich (contact@boha-group.com) innerhalb von 15 Kalendertagen nach Zustellung des Berichts gemeldet werden. Aegryn verpflichtet sich, innerhalb von 15 Werktagen zu antworten.",
     "s7Title": "Transaktionsvertraulichkeit",
     "s7": "Aegryn gibt die Identität des Verkäufers gegenüber dem Käufer und umgekehrt niemals ohne ausdrückliche Zustimmung beider Parteien preis. Im Ergebniskatalog veröffentlichte Transaktionsdaten werden systematisch anonymisiert.",
     "s8Title": "Geldwäschebekämpfung (GwG/AMLD6)",
@@ -10169,7 +10169,7 @@
         "label": "Notenstufen"
       },
       {
-        "value": "24",
+        "value": "12",
         "label": "Monate Gültigkeit"
       }
     ],
@@ -10293,7 +10293,7 @@
     "s9Title": "Gültigkeit, Erneuerung und Einspruch",
     "s9Validity": {
       "title": "Gültigkeitsdauer",
-      "desc": "Eine CIFSO 5000-Note ist 24 Monate ab Ausstellungsdatum gültig. Danach wird sie auf der Prüfseite als abgelaufen angezeigt."
+      "desc": "Eine CIFSO 5000-Note ist 12 Monate ab Ausstellungsdatum gültig. Danach wird sie auf der Prüfseite als abgelaufen angezeigt."
     },
     "s9Renewal": {
       "title": "Erneuerung",
@@ -10305,7 +10305,7 @@
     },
     "s9Contest": {
       "title": "Einspruch",
-      "desc": "Die zertifizierte Organisation hat 30 Tage für sachliche Anmerkungen. Ein begründeter Einspruch löst eine Prüfung durch einen an der Erstbewertung unbeteiligten Analysten aus."
+      "desc": "Die zertifizierte Organisation hat 15 Tage für sachliche Anmerkungen. Ein begründeter Einspruch löst eine Prüfung durch einen an der Erstbewertung unbeteiligten Analysten aus."
     },
     "s10Title": "Unabhängige Auditoren und Governance-Grundsätze",
     "s10Lead": "Der Wert einer Note beruht vollständig auf der Unabhängigkeit und Sorgfalt derjenigen, die sie vergeben.",

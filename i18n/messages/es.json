@@ -2197,7 +2197,7 @@
         "desc": "Emisión del certificado oficial CIFSO 5000 y publicación en el registro certificado de Aegryn.",
         "inputs": "Informe de certificación validado, identidad de la organización certificada, formato de certificación elegido (Express/Standard/Premium)",
         "outputs": "Certificado oficial CIFSO 5000, insignia digital, entrada en registro público, acceso al portal certificado",
-        "outcomes": "Organización certificada con calificación versionada visible para inversores, adquirentes y socios calificados. Validez: 12 o 18 meses según formato."
+        "outcomes": "Organización certificada con calificación versionada visible para inversores, adquirentes y socios calificados. Validez: 12 meses."
       }
     ],
     "principlesTitle": "Principios de independencia",
@@ -3231,7 +3231,7 @@
             "Informe completo con tabla de subcódigos",
             "Calificación oficial + hoja de ruta de remediación estructurada",
             "Inscripción en el registro certificado Aegryn",
-            "Validez del certificado: 18 meses",
+            "Validez del certificado: 12 meses",
             "Dos sesiones de revisión incluidas",
             "Interlocutor dedicado de Aegryn durante todo el proceso"
           ],
@@ -3388,7 +3388,7 @@
       {
         "num": "04",
         "title": "Certificación",
-        "desc": "Emisión del certificado oficial versionado, válido 24 meses, y publicación en el registro certificado Aegryn."
+        "desc": "Emisión del certificado oficial versionado, válido 12 meses, y publicación en el registro certificado Aegryn."
       }
     ],
     "submit": {
@@ -5542,7 +5542,7 @@
           "Informe completo con tabla de sub-códigos",
           "Calificación oficial + hoja de ruta de remediación estructurada",
           "Inscripción en el registro certificado Aegryn",
-          "Validez del certificado: 18 meses",
+          "Validez del certificado: 12 meses",
           "Dos sesiones de revisión incluidas",
           "Interlocutor dedicado Aegryn durante todo el proceso"
         ]
@@ -6545,7 +6545,7 @@
     "s5Title": "Responsabilidad",
     "s5": "Aegryn actúa exclusivamente como intermediario y operador de proceso. Aegryn no garantiza el resultado de una transacción, el valor futuro de un activo ni el rendimiento tras la cesión. La responsabilidad de Aegryn se limita al reembolso de los honorarios de certificación percibidos por el activo en cuestión. En ningún caso Aegryn será responsable de daños indirectos, lucro cesante o daños consecuentes.",
     "s6Title": "Impugnación del Grade",
-    "s6": "Cualquier impugnación del Grade oficial debe notificarse a Aegryn por escrito (contact@boha-group.com) en los 30 días naturales siguientes a la entrega del informe. Aegryn se compromete a responder en 15 días hábiles.",
+    "s6": "Cualquier impugnación del Grade oficial debe notificarse a Aegryn por escrito (contact@boha-group.com) en los 15 días naturales siguientes a la entrega del informe. Aegryn se compromete a responder en 15 días hábiles.",
     "s7Title": "Confidencialidad de las transacciones",
     "s7": "Aegryn nunca revela la identidad del vendedor al comprador ni viceversa sin el acuerdo explícito de ambas partes. Los datos de transacciones publicados en el catálogo de resultados se anonimizan sistemáticamente.",
     "s8Title": "Lucha contra el blanqueo de capitales (AML/CFT)",
@@ -10169,7 +10169,7 @@
         "label": "niveles de grado"
       },
       {
-        "value": "24",
+        "value": "12",
         "label": "meses de validez"
       }
     ],
@@ -10293,7 +10293,7 @@
     "s9Title": "Validez, renovación e impugnación",
     "s9Validity": {
       "title": "Duración de validez",
-      "desc": "Un grado CIFSO 5000 es válido durante 24 meses desde su fecha de emisión. Después, se muestra como expirado en la página de verificación."
+      "desc": "Un grado CIFSO 5000 es válido durante 12 meses desde su fecha de emisión. Después, se muestra como expirado en la página de verificación."
     },
     "s9Renewal": {
       "title": "Renovación",
@@ -10305,7 +10305,7 @@
     },
     "s9Contest": {
       "title": "Impugnación",
-      "desc": "La organización certificada dispone de 30 días para formular observaciones fácticas. Una impugnación motivada desencadena una revisión por un analista que no participó en la evaluación inicial."
+      "desc": "La organización certificada dispone de 15 días para formular observaciones fácticas. Una impugnación motivada desencadena una revisión por un analista que no participó en la evaluación inicial."
     },
     "s10Title": "Auditores independientes y principios de gobernanza",
     "s10Lead": "El valor de un grado descansa enteramente en la independencia y el rigor de quienes lo emiten.",

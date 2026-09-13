@@ -227,16 +227,32 @@ img { image-rendering: auto; }
   color: #ffffff;
 }
 
-/* ── Brochure CIFSO 5000 — impression A4 ─────────────────────────── */
+/* ── Brochure CIFSO 5000 — écran + impression A4 ─────────────────── */
+.brochure-page { min-height: 1272px; }
+
 @media print {
-  @page { size: A4; margin: 0; }
-  header, nav, footer.site-footer, [data-site-chrome] { display: none !important; }
+  @page { size: A4 portrait; margin: 0; }
+  html, body { background: #fff !important; }
+  #main { padding-top: 0 !important; }
+  /* Chrome du site : navbar fixe, footer, bouton scroll-top */
+  header.fixed, #main ~ footer, #main ~ button, #main ~ a,
+  #cookiescript_injected, #cookiescript_badge, #cookiescript_injected_wrapper { display: none !important; }
+  /* Une page simulée (900 × 1272 px) ramenée à l'échelle d'une feuille A4 (794 × 1123 px) */
   .brochure-page {
-    min-height: 297mm !important;
-    height: 297mm;
+    zoom: 0.87;
+    width: 900px !important;
+    max-width: none !important;
+    height: 1272px !important;
+    min-height: 1272px !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
     break-after: page;
     page-break-after: always;
-    overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

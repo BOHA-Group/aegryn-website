@@ -2197,7 +2197,7 @@
         "desc": "Uitgifte van het officiële CIFSO 5000-certificaat en publicatie in het gecertificeerde Aegryn-register.",
         "inputs": "Gevalideerd certificeringsrapport, identiteit van de gecertificeerde organisatie, gekozen certificeringsformaat (Express/Standard/Premium)",
         "outputs": "Officieel CIFSO 5000-certificaat, digitale badge, openbare registerinschrijving, toegang tot gecertificeerd portaal",
-        "outcomes": "Gecertificeerde organisatie met geversioneerde beoordeling raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 of 18 maanden afhankelijk van formaat."
+        "outcomes": "Gecertificeerde organisatie met geversioneerde beoordeling raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 maanden."
       }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",
@@ -3231,7 +3231,7 @@
             "Volledig rapport met subcodeoverzicht",
             "Officiële note + gestructureerde saneringsroadmap",
             "Inschrijving in het gecertificeerde Aegryn-register",
-            "Geldigheid van het certificaat: 18 maanden",
+            "Geldigheid van het certificaat: 12 maanden",
             "Twee revisiesessies inbegrepen",
             "Toegewijde Aegryn-contactpersoon gedurende het hele proces"
           ],
@@ -3388,7 +3388,7 @@
       {
         "num": "04",
         "title": "Certificering",
-        "desc": "Afgifte van het officiële geversioneerde certificaat, 24 maanden geldig, en publicatie in het gecertificeerde Aegryn-register."
+        "desc": "Afgifte van het officiële geversioneerde certificaat, 12 maanden geldig, en publicatie in het gecertificeerde Aegryn-register."
       }
     ],
     "submit": {
@@ -5557,7 +5557,7 @@
           "Volledig rapport met subcodeoverzicht",
           "Officiële note + gestructureerde saneringsroadmap",
           "Inschrijving in het gecertificeerde Aegryn-register",
-          "Geldigheid certificaat: 18 maanden",
+          "Geldigheid certificaat: 12 maanden",
           "Twee revisiesessies inbegrepen",
           "Dedicated Aegryn-contactpersoon gedurende het hele proces"
         ]
@@ -6560,7 +6560,7 @@
     "s5Title": "Aansprakelijkheid",
     "s5": "Aegryn treedt uitsluitend op als intermediair en procesoperator. Aegryn garandeert niet het resultaat van een transactie, de toekomstige waarde van een actief of de prestaties na overdracht. In geval van discrepantie tussen verklaarde gegevens en de werkelijkheid ontdekt tijdens de DD, is de aansprakelijkheid van Aegryn beperkt tot terugbetaling van de voor het actief ontvangen certificeringskosten. Aegryn is in geen geval aansprakelijk voor indirecte schade, gederfde winst of gevolgschade.",
     "s6Title": "Geschil over het Grade",
-    "s6": "Elk geschil over het officiële Grade moet schriftelijk aan Aegryn worden gemeld via het contactformulier op aegryn.com/contact binnen 30 kalenderdagen na levering van het rapport. Aegryn verbindt zich ertoe binnen 15 werkdagen te antwoorden.",
+    "s6": "Elk geschil over het officiële Grade moet schriftelijk aan Aegryn worden gemeld via het contactformulier op aegryn.com/contact binnen 15 kalenderdagen na levering van het rapport. Aegryn verbindt zich ertoe binnen 15 werkdagen te antwoorden.",
     "s7Title": "Transactievertrouwelijkheid",
     "s7": "Aegryn maakt de identiteit van de verkoper nooit bekend aan de koper, noch de identiteit van de koper aan de verkoper, zonder uitdrukkelijke instemming van beide partijen. Transactiegegevens gepubliceerd in de resultatencatalogus worden systematisch geanonimiseerd.",
     "s8Title": "Anti-witwaspraktijken (AML/CFT)",
@@ -10169,7 +10169,7 @@
         "label": "beoordelingsniveaus"
       },
       {
-        "value": "24",
+        "value": "12",
         "label": "maanden geldigheid"
       }
     ],
@@ -10293,7 +10293,7 @@
     "s9Title": "Geldigheid, verlenging en bezwaar",
     "s9Validity": {
       "title": "Geldigheidsduur",
-      "desc": "Een CIFSO 5000-beoordeling is 24 maanden geldig vanaf de afgiftedatum. Daarna wordt ze op de verificatiepagina als verlopen weergegeven."
+      "desc": "Een CIFSO 5000-beoordeling is 12 maanden geldig vanaf de afgiftedatum. Daarna wordt ze op de verificatiepagina als verlopen weergegeven."
     },
     "s9Renewal": {
       "title": "Verlenging",
@@ -10305,7 +10305,7 @@
     },
     "s9Contest": {
       "title": "Bezwaar",
-      "desc": "De gecertificeerde organisatie heeft 30 dagen om feitelijke opmerkingen te formuleren. Een gemotiveerd bezwaar leidt tot een review door een analist die niet aan de eerste beoordeling heeft deelgenomen."
+      "desc": "De gecertificeerde organisatie heeft 15 dagen om feitelijke opmerkingen te formuleren. Een gemotiveerd bezwaar leidt tot een review door een analist die niet aan de eerste beoordeling heeft deelgenomen."
     },
     "s10Title": "Onafhankelijke auditors en governancebeginselen",
     "s10Lead": "De waarde van een beoordeling berust volledig op de onafhankelijkheid en zorgvuldigheid van wie ze afgeeft.",
