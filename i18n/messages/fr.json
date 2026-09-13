@@ -6493,7 +6493,7 @@
           "desc": "Partager une lecture neutre de la valeur entre cédant, héritiers et repreneur."
         }
       ],
-      "marketTeaser": "Aperçu : un industrie ouvert, les autres réservés aux abonnés.",
+      "marketTeaser": "Aperçu : une industrie ouverte, les autres réservés aux abonnés.",
       "comingSoonLabel": "Bientôt disponible",
       "comingSoonDesc": "L'abonnement Index ouvre prochainement. Inscrivez-vous pour être prévenu et bénéficier de l'essai de 3 jours à l'ouverture.",
       "illustrativeLabel": "Illustratif",
@@ -6511,7 +6511,7 @@
         "certified": "organisations certifiées"
       },
       "barsTitle": "Multiples EV/Revenue par industrie",
-      "barsDesc": "Fourchette p25 à p75, médiane en évidence. Un industrie est ouvert en aperçu ; les autres sont réservés aux abonnés.",
+      "barsDesc": "Fourchette p25 à p75, médiane en évidence. Une industrie est ouverte en aperçu ; les autres sont réservés aux abonnés.",
       "p25": "p25",
       "p50": "médiane",
       "p75": "p75",

@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
 import { ARTICLE_CATEGORIES, type Article, type ArticleCategory } from '@/data/articles'
-import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK } from '@/data/blogImages'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { FilterPills } from '@/components/ui/FilterPills'
 
 interface Props {
@@ -88,6 +88,7 @@ export function IndustryArticles({ articles, locale }: Props) {
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
                   src={BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK}
+                  style={{ objectPosition: getBlogImagePosition(BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK) }}
                   alt={getText(article.title as unknown as Record<string, string | undefined>, lang)}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

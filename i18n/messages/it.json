@@ -6290,7 +6290,7 @@
       "title": "CIFSO Valuation Index : Lancio Q1 2027",
       "desc": "L'accesso al benchmark inter-aziendale e ai multipli di mercato in tempo reale è in fase di sviluppo. Iscrivetevi per un accesso in anteprima.",
       "features": [
-        "Multipli di transazione EU per settore (5 industria, 50 verticali)",
+        "Multipli di transazione EU per settore (5 industrie, 50 verticali)",
         "Confronto del vostro score CIFSO con i peer di mercato",
         "Valuation Estimator: multiplo di mercato × coefficiente CIFSO",
         "Avvisi trimestrali quando i multipli del vostro settore si muovono"
@@ -6533,7 +6533,7 @@
           "desc": "Condividere una lettura neutrale del valore tra cedente, eredi e acquirente."
         }
       ],
-      "marketTeaser": "Anteprima: un industria aperto, gli altri riservati agli abbonati.",
+      "marketTeaser": "Anteprima: un'industria aperta, gli altri riservati agli abbonati.",
       "comingSoonLabel": "Prossimamente",
       "comingSoonDesc": "L'abbonamento all'Indice apre a breve. Iscriviti per essere avvisato e ottenere la prova di 3 giorni al lancio.",
       "illustrativeLabel": "Illustrativo",
@@ -6541,22 +6541,22 @@
     },
     "index": {
       "label": "IL MOTORE DI BENCHMARK",
-      "title": "Cinque industria, quaranta verticali,\nnove metriche. Una sola fonte.",
+      "title": "Cinque industrie, quaranta verticali,\nnove metriche. Una sola fonte.",
       "desc": "L'Indice aggrega dati ufficiali di transazioni e di mercato, consolidati e aggiornati ogni trimestre dagli analisti Aegryn, e li collega al punteggio CIFSO su cinque dimensioni. Nessun dato personale, nessuna transazione identificabile.",
       "kpis": {
-        "clusters": "industria",
+        "clusters": "industrie",
         "verticals": "verticali",
         "metrics": "metriche",
         "period": "periodo di riferimento",
         "certified": "organizzazioni certificate"
       },
       "barsTitle": "Multipli EV/Revenue per industria",
-      "barsDesc": "Intervallo p25 a p75, mediana evidenziata. Un industria è aperto in anteprima; gli altri sono riservati agli abbonati.",
+      "barsDesc": "Intervallo p25 a p75, mediana evidenziata. Un'industria è aperta in anteprima; gli altri sono riservati agli abbonati.",
       "p25": "p25",
       "p50": "mediana",
       "p75": "p75",
       "coverageTitle": "Copertura per industria e verticale",
-      "coverageDesc": "Ogni verticale eredita i multipli del suo industria, affinati da una serie dedicata quando esiste. I verticali in verde dispongono di una serie ARR propria.",
+      "coverageDesc": "Ogni verticale eredita i multipli della sua industria, affinati da una serie dedicata quando esiste. I verticali in verde dispongono di una serie ARR propria.",
       "arrLabel": "Multiplo ARR mediano",
       "metricsTitle": "Metriche coperte",
       "metricsDesc": "Multipli di valore, metriche di qualità e lettura CIFSO. Le metriche bloccate sono riservate agli abbonati.",

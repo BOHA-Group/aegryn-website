@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { ArrowUpRight, Calendar, Clock, Search, X } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { ARTICLES, ARTICLE_CATEGORIES, type ArticleCategory } from '@/data/articles'
-import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK } from '@/data/blogImages'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { FilterPills } from '@/components/ui/FilterPills'
 
@@ -138,6 +138,7 @@ export function DiscoverGrid({ locale }: Props) {
                 <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                   <Image
                     src={getImage(featured[0].slug)}
+                    style={{ objectPosition: getBlogImagePosition(getImage(featured[0].slug)) }}
                     alt={featured[0].title[lang] ?? featured[0].title.en}
                     fill
                     sizes="(min-width: 1024px) 55vw, 100vw"
@@ -257,6 +258,7 @@ export function DiscoverGrid({ locale }: Props) {
                     <div className="relative h-40 w-full overflow-hidden">
                       <Image
                         src={getImage(article.slug)}
+                        style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
                         alt={article.title[lang] ?? article.title.en}
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"

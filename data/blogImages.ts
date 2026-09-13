@@ -50,4 +50,10 @@ export const BLOG_IMAGES: Record<string, string> = {
 }
 
 /** Image de repli si le slug n'a pas de mapping */
+/* Cadrage par image (object-position) : portraits à recadrer sur le visage */
+export const BLOG_IMAGE_POSITION: Record<string, string> = {
+  '/images/blog/founder-desk.jpg': 'center 19%',
+}
+export const getBlogImagePosition = (src: string) => BLOG_IMAGE_POSITION[src] ?? 'center'
+
 export const BLOG_IMAGE_FALLBACK = '/images/blog/modern-office.jpg'

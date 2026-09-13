@@ -6290,7 +6290,7 @@
       "title": "CIFSO Valuation Index : Start Q1 2027",
       "desc": "Der Zugang zu unternehmensübergreifendem Benchmarking und Echtzeit-Marktmultiplikatoren ist in Entwicklung. Registrieren Sie sich für einen Vorab-Zugang.",
       "features": [
-        "EU-Transaktionsmultiplikatoren nach Sektor (5 Branche, 50 Verticals)",
+        "EU-Transaktionsmultiplikatoren nach Sektor (5 Branchen, 50 Verticals)",
         "Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern",
         "Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient",
         "Vierteljährliche Benachrichtigungen bei Bewegungen in Ihrem Sektor"
@@ -6533,7 +6533,7 @@
           "desc": "Eine neutrale Lesart des Werts zwischen Verkäufer, Erben und Übernehmer teilen."
         }
       ],
-      "marketTeaser": "Vorschau: ein Branche offen, die anderen Abonnenten vorbehalten.",
+      "marketTeaser": "Vorschau: eine Branche offen, die anderen Abonnenten vorbehalten.",
       "comingSoonLabel": "Bald verfügbar",
       "comingSoonDesc": "Das Index-Abonnement startet in Kürze. Tragen Sie sich ein, um benachrichtigt zu werden und den 3-Tage-Test zum Start zu erhalten.",
       "illustrativeLabel": "Illustrativ",
@@ -6541,22 +6541,22 @@
     },
     "index": {
       "label": "DIE BENCHMARK-ENGINE",
-      "title": "Fünf Branche, vierzig Verticals,\nneun Kennzahlen. Eine Quelle.",
+      "title": "Fünf Branchen, vierzig Verticals,\nneun Kennzahlen. Eine Quelle.",
       "desc": "Der Index aggregiert offizielle Transaktions- und Marktdaten, die von Aegryn-Analysten vierteljährlich konsolidiert und aktualisiert werden, und verknüpft sie mit dem CIFSO-Score in fünf Dimensionen. Keine personenbezogenen Daten, keine identifizierbare Transaktion.",
       "kpis": {
-        "clusters": "Branche",
+        "clusters": "Branchen",
         "verticals": "Verticals",
         "metrics": "Kennzahlen",
         "period": "Referenzperiode",
         "certified": "zertifizierte Organisationen"
       },
       "barsTitle": "EV/Revenue-Multiplikatoren je Branche",
-      "barsDesc": "Spanne p25 bis p75, Median hervorgehoben. Ein Branche ist als Vorschau offen; die anderen sind Abonnenten vorbehalten.",
+      "barsDesc": "Spanne p25 bis p75, Median hervorgehoben. Eine Branche ist als Vorschau offen; die anderen sind Abonnenten vorbehalten.",
       "p25": "p25",
       "p50": "Median",
       "p75": "p75",
       "coverageTitle": "Abdeckung nach Branche und Vertical",
-      "coverageDesc": "Jedes Vertical erbt die Multiplikatoren seines Branchen, verfeinert durch eine eigene Serie, wo vorhanden. Grün markierte Verticals haben eine eigene ARR-Serie.",
+      "coverageDesc": "Jedes Vertical erbt die Multiplikatoren seiner Branche, verfeinert durch eine eigene Serie, wo vorhanden. Grün markierte Verticals haben eine eigene ARR-Serie.",
       "arrLabel": "Median ARR-Multiplikator",
       "metricsTitle": "Abgedeckte Kennzahlen",
       "metricsDesc": "Wertmultiplikatoren, Qualitätskennzahlen und CIFSO-Lesart. Gesperrte Kennzahlen sind Abonnenten vorbehalten.",
