@@ -5914,74 +5914,11 @@
       "of": "di"
     },
     "steps": {
-      "capital": "Capitale & IP",
-      "integrity": "Integrità & Governance",
+      "capital": "Codice & Architettura",
+      "integrity": "IP & Diritti",
       "finance": "Finanze & Metriche",
       "security": "Sicurezza & Sovranità",
       "org": "Organizzazione & Talento"
-    },
-    "capital": {
-      "title": "Capitale & IP",
-      "subtitle": "Dimensione C: Capitale & IP (0–20 pt)",
-      "tests": "Test automatizzati presenti?",
-      "testsOptions": {
-        "full": "Sì, copertura completa (≥ 70%)",
-        "partial": "Parziale",
-        "none": "No"
-      },
-      "docs": "Documentazione tecnica?",
-      "docsOptions": {
-        "full": "Completa (API + architettura)",
-        "partial": "Parziale",
-        "none": "Assente"
-      },
-      "cicd": "Pipeline CI/CD configurato?",
-      "cicdOptions": {
-        "yes": "Sì",
-        "no": "No"
-      },
-      "techDebt": "Debito tecnico?",
-      "techDebtOptions": {
-        "documented": "Documentato e quantificato",
-        "known": "Identificato, non quantificato",
-        "unknown": "Non valutato"
-      },
-      "trademark": "Marchio depositato?",
-      "trademarkOptions": {
-        "yes": "Sì (territorio o zona specificata)",
-        "pending": "In corso",
-        "no": "No"
-      },
-      "stack": "Stack principale",
-      "stackPlaceholder": "Es. Next.js, Supabase, Python"
-    },
-    "integrity": {
-      "title": "Integrità & Governance",
-      "subtitle": "Dimensione I: Integrità & Governance (0–20 pt)",
-      "structure": "Struttura giuridica e cap table?",
-      "structureOptions": {
-        "clean": "Pulita e documentata",
-        "partial": "Parzialmente organizzata",
-        "none": "Non formalizzata"
-      },
-      "contracts": "Contratti clienti e fornitori?",
-      "contractsOptions": {
-        "full": "Tutti firmati e archiviati",
-        "partial": "Parzialmente in vigore",
-        "none": "Assenti o non archiviati"
-      },
-      "litiges": "Controversie o contenziosi attivi?",
-      "litigesOptions": {
-        "none": "Nessuno",
-        "minor": "Minori, in fase di risoluzione",
-        "active": "Attivi e significativi"
-      },
-      "moat": "Barriere all'ingresso (moat)?",
-      "moatOptions": {
-        "strong": "Forti (rete, dati proprietari, regolamentazione)",
-        "moderate": "Identificate ma replicabili",
-        "none": "Inesistenti"
-      }
     },
     "finance": {
       "title": "Dati finanziari",
@@ -6009,11 +5946,20 @@
         "yes": "Sì",
         "no": "No",
         "not_yet": "Non ancora"
-      }
+      },
+      "recurring": "Quota di ricavi ricorrenti",
+      "recurringOptions": {
+        "above80": "Oltre l'80 %",
+        "fifty_to_80": "50 a 80 %",
+        "under50": "Meno del 50 %"
+      },
+      "ebitdaMargin": "Margine EBITDA (%)",
+      "ebitdaMarginPlaceholder": "Es. 18",
+      "ebitdaMarginHint": "Opzionale. Consente un controllo EV/EBITDA accanto al multiplo dei ricavi."
     },
     "code": {
       "title": "Qualità del codice",
-      "subtitle": "Dimensione C: Codice (0–20 pt)",
+      "subtitle": "Dimensione C: Codice & Architettura (0 a 20 pt). Ciò che rende l'asset trasferibile senza il suo autore.",
       "tests": "Test automatizzati presenti?",
       "testsOptions": {
         "full": "Sì, copertura completa",
@@ -6049,7 +5995,7 @@
     },
     "ip": {
       "title": "Proprietà intellettuale",
-      "subtitle": "Dimensione I: IP & Diritti (0–20 pt)",
+      "subtitle": "Dimensione I: IP & Diritti (0 a 20 pt). Ciò che un acquirente verifica per primo: la catena di titolarità.",
       "trademark": "Marchio depositato?",
       "trademarkOptions": {
         "yes": "Sì (paese o zona specificati)",
@@ -6073,6 +6019,18 @@
         "yes": "Sì",
         "partial": "Parzialmente",
         "no": "No"
+      },
+      "contracts": "Contratti clienti firmati e archiviati?",
+      "contractsOptions": {
+        "full": "Tutti firmati e archiviati",
+        "partial": "Parzialmente",
+        "none": "Assenti o non archiviati"
+      },
+      "litiges": "Controversie IP o contrattuali attive?",
+      "litigesOptions": {
+        "none": "Nessuna",
+        "minor": "Minori, in risoluzione",
+        "active": "Attive e significative"
       }
     },
     "security": {
@@ -6107,6 +6065,12 @@
         "isolated": "Ambienti separati",
         "partial": "Parzialmente isolati",
         "mixed": "Ambienti misti"
+      },
+      "backups": "Backup e piano di ripristino?",
+      "backupsOptions": {
+        "tested": "Backup testati, ripristino documentato",
+        "exists": "Backup presenti, non testati",
+        "none": "Nessuna procedura"
       }
     },
     "org": {
@@ -6153,15 +6117,15 @@
       "weakTitle": "Cosa penalizza il vostro punteggio",
       "strongTitle": "Cosa eleva il vostro punteggio",
       "weakMessages": {
-        "capital": "Il vostro Capitale & IP è il punto debole. Test automatizzati, CI/CD e marchio depositato sono le leve prioritarie.",
-        "integrity": "La vostra struttura giuridica o i contratti sono insufficienti. È il primo segnale di rischio per un acquirente.",
+        "capital": "Codice & Architettura è il punto debole: test, CI/CD e dipendenze aggiornate sono le leve prioritarie per rendere l'asset trasferibile.",
+        "integrity": "IP & Diritti è il punto debole: cessione dei diritti software, licenze open source e contratti archiviati sono i primi controlli di un acquirente.",
         "finance": "Le vostre metriche finanziarie limitano il grade. ARR certificato e NRR > 100% sono le leve più impattanti.",
         "security": "Nessun pentest recente. Gli acquirenti istituzionali richiedono un rapporto < 12 mesi.",
         "org": "Alta dipendenza dal fondatore rilevata. È il fattore che svaluta maggiormente una valutazione (20–30% sotto il potenziale)."
       },
       "strongMessages": {
-        "capital": "La vostra base di codice e IP sono ben protette. Forte segnale di valore trasferibile.",
-        "integrity": "La vostra governance legale e i contratti sono in ordine. Eccellente segnale di solidità per un acquirente.",
+        "capital": "Base di codice testata, documentata e mantenuta: l'asset è trasferibile senza il suo autore.",
+        "integrity": "Catena di titolarità pulita, licenze conformi, contratti archiviati: forte segnale di trasferibilità.",
         "finance": "Le vostre metriche finanziarie sono solide. Segnale eccellente per acquirenti istituzionali.",
         "security": "Pentest recente e conformità GDPR in ordine. Eccellente segnale per acquirenti istituzionali.",
         "org": "Organizzazione strutturata e bassa dipendenza dal fondatore. Questo consente di accedere ai multipli più elevati."
@@ -6459,7 +6423,68 @@
       ],
       "marketTeaser": "Anteprima: un cluster aperto, gli altri riservati agli abbonati.",
       "comingSoonLabel": "Prossimamente",
-      "comingSoonDesc": "L'abbonamento all'Indice apre a breve. Iscriviti per essere avvisato e ottenere la prova di 3 giorni al lancio."
+      "comingSoonDesc": "L'abbonamento all'Indice apre a breve. Iscriviti per essere avvisato e ottenere la prova di 3 giorni al lancio.",
+      "illustrativeLabel": "Illustrativo",
+      "illustrativeNote": "Stima illustrativa, non contrattuale"
+    },
+    "index": {
+      "label": "IL MOTORE DI BENCHMARK",
+      "title": "Cinque cluster, quaranta verticali,\nnove metriche. Una sola fonte.",
+      "desc": "L'Indice aggrega dati ufficiali di transazioni e di mercato, consolidati e aggiornati ogni trimestre dagli analisti Aegryn, e li collega al punteggio CIFSO su cinque dimensioni. Nessun dato personale, nessuna transazione identificabile.",
+      "kpis": {
+        "clusters": "cluster",
+        "verticals": "verticali",
+        "metrics": "metriche",
+        "period": "periodo di riferimento",
+        "certified": "organizzazioni certificate"
+      },
+      "barsTitle": "Multipli EV/Revenue per cluster",
+      "barsDesc": "Intervallo p25 a p75, mediana evidenziata. Un cluster è aperto in anteprima; gli altri sono riservati agli abbonati.",
+      "p25": "p25",
+      "p50": "mediana",
+      "p75": "p75",
+      "coverageTitle": "Copertura per cluster e verticale",
+      "coverageDesc": "Ogni verticale eredita i multipli del suo cluster, affinati da una serie dedicata quando esiste. I verticali in verde dispongono di una serie ARR propria.",
+      "arrLabel": "Multiplo ARR mediano",
+      "metricsTitle": "Metriche coperte",
+      "metricsDesc": "Multipli di valore, metriche di qualità e lettura CIFSO. Le metriche bloccate sono riservate agli abbonati.",
+      "metrics": {
+        "ev_revenue": "EV / Revenue",
+        "ev_ebitda": "EV / EBITDA",
+        "arr_multiple": "Multiplo ARR per verticale",
+        "growth_yoy": "Crescita annua",
+        "nrr": "Net revenue retention (NRR)",
+        "gross_margin": "Margine lordo",
+        "rule_of_40": "Rule of 40",
+        "cifso_score": "Punteggio CIFSO per grado",
+        "dimension_uplift": "Scarto di multiplo per dimensione"
+      },
+      "lockedShort": "Abbonati",
+      "openShort": "Aperto",
+      "sourceNote": "Fonte: Aegryn CIFSO Valuation Index. Dati aggregati, aggiornamenti trimestrali, nessuna transazione identificabile.",
+      "faqTitle": "Domande frequenti",
+      "faq": [
+        {
+          "q": "Da dove provengono i dati?",
+          "a": "Da dati ufficiali europei di transazioni e di mercato, aggregati e consolidati da Aegryn. Non pubblichiamo transazioni identificabili né dati di singole imprese: solo serie statistiche (p25, mediana, p75) per cluster, verticale, grado e dimensione."
+        },
+        {
+          "q": "Come garantite l'affidabilità?",
+          "a": "Ogni serie è incrociata tra più fonti, riportata a un perimetro omogeneo (Europa, lower mid-market) e pubblicata con il suo periodo di riferimento. Le serie non sufficientemente supportate non vengono pubblicate."
+        },
+        {
+          "q": "In cosa l'Indice differisce da una base di multipli classica?",
+          "a": "Un multiplo settoriale dice quanto vale un settore. L'Indice dice quanto vale un'organizzazione in quel settore: il punteggio CIFSO su cinque dimensioni aggiusta il multiplo e ogni dimensione ha un impatto misurabile."
+        },
+        {
+          "q": "La stima libera è una valutazione?",
+          "a": "No. È una lettura illustrativa, volutamente ampia, basata su una parte dei benchmark e sulle vostre dichiarazioni. Una valutazione difendibile richiede l'analisi dei documenti: è l'oggetto della Certificazione CIFSO 5000."
+        },
+        {
+          "q": "Chi utilizza l'Indice?",
+          "a": "Dirigenti e azionisti prima di una decisione, fondi e family office per lo screening, banche per oggettivare un dossier, consulenti M&A e revisori per sostenere un mandato, acquirenti per calibrare un'offerta."
+        }
+      ]
     }
   },
   "transactionSubmit": {

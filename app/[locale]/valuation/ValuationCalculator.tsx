@@ -81,7 +81,7 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 /* ─── Main component ─────────────────────────────────────── */
 type LockedInfo = { title: string; desc: string; cta: string; soon?: string }
 
-export default function ValuationCalculator({ freemiumNote, locked }: { freemiumNote?: string; locked?: LockedInfo } = {}) {
+export default function ValuationCalculator({ freemiumNote, illustrative, locked }: { freemiumNote?: string; illustrative?: string; locked?: LockedInfo } = {}) {
   const t    = useTranslations('valuation')
   const _tNav = useTranslations('nav')
 
@@ -111,10 +111,10 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
 
   /* ── Validation ── */
   function canAdvance(): boolean {
-    if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.trademark)
-    if (step === 'integrity') return !!(integrity.structure && integrity.contracts && integrity.litiges && integrity.moat)
+    if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.deps)
+    if (step === 'integrity') return !!(integrity.trademark && integrity.copyright && integrity.opensource && integrity.apiContracts && integrity.contracts && integrity.litiges)
     if (step === 'finance')   return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
-    if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra)
+    if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra && security.backups)
     if (step === 'org')       return !!(org.founderDep && org.nMinus1 && org.succession && org.turnover)
     return false
   }
@@ -282,14 +282,14 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
             {/* STEP — CAPITAL & IP */}
             {step === 'capital' && (
               <div className="flex flex-col gap-6">
-                <StepHeader title={t('capital.title')} subtitle={t('capital.subtitle')} step={1} total={5} t={t} />
+                <StepHeader title={t('code.title')} subtitle={t('code.subtitle')} step={1} total={5} t={t} />
 
                 {([
-                  { key: 'tests',    label: t('capital.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`capital.testsOptions.${k}`) })) },
-                  { key: 'docs',     label: t('capital.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`capital.docsOptions.${k}`) })) },
-                  { key: 'cicd',     label: t('capital.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`capital.cicdOptions.${k}`) })) },
-                  { key: 'techDebt', label: t('capital.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`capital.techDebtOptions.${k}`) })) },
-                  { key: 'trademark', label: t('capital.trademark'), opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`capital.trademarkOptions.${k}`) })) },
+                  { key: 'tests',    label: t('code.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.testsOptions.${k}`) })) },
+                  { key: 'docs',     label: t('code.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.docsOptions.${k}`) })) },
+                  { key: 'cicd',     label: t('code.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`code.cicdOptions.${k}`) })) },
+                  { key: 'techDebt', label: t('code.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`code.techDebtOptions.${k}`) })) },
+                  { key: 'deps',     label: t('code.deps'),     opts: (['under1y','one_to_two','above2y','unknown'] as const).map(k => ({ key: k, label: t(`code.depsOptions.${k}`) })) },
                 ] as { key: keyof CapitalData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
@@ -302,27 +302,29 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
                 ))}
 
                 <div>
-                  <label className={labelCls}>{t('capital.stack')}</label>
+                  <label className={labelCls}>{t('code.stack')}</label>
                   <input type="text"
                     value={capital.stack ?? ''}
                     onChange={e => f(setCapital, 'stack', e.target.value)}
-                    placeholder={t('capital.stackPlaceholder')} className={inputCls} />
+                    placeholder={t('code.stackPlaceholder')} className={inputCls} />
                 </div>
 
                 <NavButtons canAdvance={canAdvance()} onNext={advance} showBack={false} onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
             )}
 
-            {/* STEP — INTÉGRITÉ & GOUVERNANCE */}
+            {/* STEP — I : IP & DROITS */}
             {step === 'integrity' && (
               <div className="flex flex-col gap-6">
-                <StepHeader title={t('integrity.title')} subtitle={t('integrity.subtitle')} step={2} total={5} t={t} />
+                <StepHeader title={t('ip.title')} subtitle={t('ip.subtitle')} step={2} total={5} t={t} />
 
                 {([
-                  { key: 'structure', label: t('integrity.structure'), opts: (['clean','partial','none'] as const).map(k => ({ key: k, label: t(`integrity.structureOptions.${k}`) })) },
-                  { key: 'contracts', label: t('integrity.contracts'), opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`integrity.contractsOptions.${k}`) })) },
-                  { key: 'litiges',   label: t('integrity.litiges'),   opts: (['none','minor','active'] as const).map(k => ({ key: k, label: t(`integrity.litigesOptions.${k}`) })) },
-                  { key: 'moat',      label: t('integrity.moat'),      opts: (['strong','moderate','none'] as const).map(k => ({ key: k, label: t(`integrity.moatOptions.${k}`) })) },
+                  { key: 'trademark',    label: t('ip.trademark'),    opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`ip.trademarkOptions.${k}`) })) },
+                  { key: 'copyright',    label: t('ip.copyright'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.copyrightOptions.${k}`) })) },
+                  { key: 'opensource',   label: t('ip.opensource'),   opts: (['clean','gpl','unaudited'] as const).map(k => ({ key: k, label: t(`ip.opensourceOptions.${k}`) })) },
+                  { key: 'apiContracts', label: t('ip.apiContracts'), opts: (['yes','partial','no'] as const).map(k => ({ key: k, label: t(`ip.apiContractsOptions.${k}`) })) },
+                  { key: 'contracts',    label: t('ip.contracts'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.contractsOptions.${k}`) })) },
+                  { key: 'litiges',      label: t('ip.litiges'),      opts: (['none','minor','active'] as const).map(k => ({ key: k, label: t(`ip.litigesOptions.${k}`) })) },
                 ] as { key: keyof IntegrityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
@@ -401,6 +403,24 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
                   />
                 </div>
 
+                <div>
+                  <label className={labelCls}>{t('finance.recurring')}</label>
+                  <RadioGroup
+                    options={(['above80','fifty_to_80','under50'] as const).map(k => ({ key: k, label: t(`finance.recurringOptions.${k}`) }))}
+                    value={finance.recurring ?? ''}
+                    onChange={v => f(setFinance, 'recurring', v)}
+                  />
+                </div>
+
+                <div>
+                  <label className={labelCls}>{t('finance.ebitdaMargin')}</label>
+                  <input type="number" step="0.1"
+                    value={finance.ebitdaMargin ?? ''}
+                    onChange={e => f(setFinance, 'ebitdaMargin', e.target.value === '' ? undefined : parseFloat(e.target.value))}
+                    placeholder={t('finance.ebitdaMarginPlaceholder')} className={inputCls} />
+                  <p className={hintCls}>{t('finance.ebitdaMarginHint')}</p>
+                </div>
+
                 <NavButtons canAdvance={canAdvance()} onNext={advance} showBack onBack={back} nextLabel={t('next')} backLabel={t('back')} />
               </div>
             )}
@@ -416,6 +436,7 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
                   { key: 'mfa',     label: t('security.mfa'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`security.mfaOptions.${k}`) })) },
                   { key: 'secrets', label: t('security.secrets'), opts: (['vault','partial','none'] as const).map(k => ({ key: k, label: t(`security.secretsOptions.${k}`) })) },
                   { key: 'infra',   label: t('security.infra'),   opts: (['isolated','partial','mixed'] as const).map(k => ({ key: k, label: t(`security.infraOptions.${k}`) })) },
+                  { key: 'backups', label: t('security.backups'), opts: (['tested','exists','none'] as const).map(k => ({ key: k, label: t(`security.backupsOptions.${k}`) })) },
                 ] as { key: keyof SecurityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
@@ -463,7 +484,7 @@ export default function ValuationCalculator({ freemiumNote, locked }: { freemium
                 emailSent={emailSent} emailErr={emailErr} emailLoading={emailLoading}
                 onEmailSubmit={sendEmail} onRestart={restart}
                 savedLeadId={savedLeadId}
-                freemiumNote={freemiumNote} locked={locked}
+                freemiumNote={freemiumNote} illustrative={illustrative} locked={locked}
               />
             )}
 
@@ -517,7 +538,7 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
   )
 }
 
-function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, locked }: {
+function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, illustrative, locked }: {
   result: ValuationResult
   finance: Partial<FinanceData>
   t: ReturnType<typeof useTranslations>
@@ -527,6 +548,7 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
   onRestart: () => void
   savedLeadId?: string | null
   freemiumNote?: string
+  illustrative?: string
   locked?: LockedInfo
 }) {
   const { grade, scores, range: rawRange, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
@@ -551,8 +573,9 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
 
       {/* Header */}
       <div className="flex items-center justify-between border-b border-ag-border pb-4">
-        <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
+        <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] flex items-center gap-3 flex-wrap">
           {t('result.gradeTitle')}
+          {illustrative && <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{illustrative}</span>}
         </h2>
         <button onClick={onRestart} className="inline-flex items-center gap-1.5 font-sans text-[11px] text-ag-gray-light hover:text-ag-black transition-colors">
           <RotateCcw size={12} /> {t('result.restart')}

@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { CifsoChart } from './CifsoChart'
 import ValuationCalculator from './ValuationCalculator'
+import IndexBenchmarks, { IndexFaq } from './IndexBenchmarks'
 
 type Plan = { key: string; name: string; price: string; badge: string; desc: string; features: string[]; cta: string; href: string }
 type Freemium = {
@@ -19,6 +20,7 @@ type Freemium = {
   segLabel: string; segTitle: string; segDesc: string; segments: { title: string; desc: string }[]
   marketTeaser: string
   comingSoonLabel: string; comingSoonDesc: string
+  illustrativeLabel: string; illustrativeNote: string
 }
 
 /* Aperçu verrouillé : contenu flouté + cadenas, CTA liste d'attente */
@@ -305,15 +307,21 @@ export default function CifsoValuationIndex() {
         </div>
       </section>
 
+      {/* ── MOTEUR DE BENCHMARKS : chiffres clés, barres par cluster, couverture, métriques, FAQ ── */}
+      <IndexBenchmarks />
+
       {/* ── ESTIMATION LIBRE : fourchette large, benchmarks partiels ── */}
       <section id="estimation" className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-2xl">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.estimateLabel}</p>
+            <div className="flex items-center gap-3 mb-4">
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{fm.estimateLabel}</p>
+              <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{fm.illustrativeLabel}</span>
+            </div>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.estimateTitle}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.estimateDesc}</p>
           </div>
-          <ValuationCalculator freemiumNote={fm.estimateNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta, soon: fm.comingSoonLabel }} />
+          <ValuationCalculator freemiumNote={fm.estimateNote} illustrative={fm.illustrativeNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta, soon: fm.comingSoonLabel }} />
         </div>
       </section>
 
@@ -554,6 +562,8 @@ export default function CifsoValuationIndex() {
           </Link>
         </div>
       </section>
+
+      <IndexFaq />
 
       {/* ── CTA PRE-SCREEN ───────────────────────────── */}
       <section className="py-24 px-6 border-t border-ag-border bg-ag-navy">

@@ -47,8 +47,8 @@ Grade estimé   : ${d.estimated_grade}
 Score total    : ${d.score_total} / 100
 
 Détail par dimension (CIFSO v4.0, /20 chacune) :
-  Capital & IP           : ${d.score_breakdown.capital} / 20
-  Intégrité & Gouvernance : ${d.score_breakdown.integrity} / 20
+  C Code & Architecture  : ${d.score_breakdown.capital} / 20
+  I IP & Droits          : ${d.score_breakdown.integrity} / 20
   Finances & Métriques   : ${d.score_breakdown.finance} / 20
   Sécurité & Souveraineté : ${d.score_breakdown.security} / 20
   Organisation & Talent  : ${d.score_breakdown.org} / 20
@@ -83,7 +83,7 @@ Pre-revenue    : ${d.pre_revenue ? 'Oui' : 'Non'}
 Fourchette     : ${fmtEur(d.valuation_low)} — ${fmtEur(d.valuation_high)}
 Locale         : ${d.locale ?? '—'}
 
-Breakdown (CIFSO v4.0) : C${d.score_breakdown.capital}/I${d.score_breakdown.integrity}/F${d.score_breakdown.finance}/S${d.score_breakdown.security}/O${d.score_breakdown.org}
+Breakdown (CIFSO 5000) : C${d.score_breakdown.capital}/I${d.score_breakdown.integrity}/F${d.score_breakdown.finance}/S${d.score_breakdown.security}/O${d.score_breakdown.org}
 
 → Voir leads : https://aegryn.com/admin/leads
   `.trim()

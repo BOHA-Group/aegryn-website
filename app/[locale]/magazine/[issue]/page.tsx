@@ -261,7 +261,7 @@ export default async function IssuePage({ params }: Props) {
               </p>
               <DealVolumeChart data={dealVolumeData} highlightQ="Q3 25" />
               <p className="text-label-mag text-magazine-black/30 uppercase tracking-[0.1em] mt-3">
-                Source — Software Equity Group · Aventis Advisors · Synergy AI
+                Source: Aegryn CIFSO Valuation Index
               </p>
             </div>
 

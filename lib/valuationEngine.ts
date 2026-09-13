@@ -1,9 +1,9 @@
 /**
- * Aegryn Valuation Engine v2.0 — CIFSO v4.0
+ * Aegryn Valuation Engine v2.1 : CIFSO 5000 (estimation libre, illustrative)
  *
- * Five independent dimensions, each scored 0–20 pts. Total /100.
- *   C — Capital & IP (code, architecture, IP, marque)
- *   I — Intégrité & Gouvernance (juridique, cap table, contrats, moat)
+ * Five independent dimensions, each scored 0-20 pts. Total /100.
+ *   C — Code & Architecture (tests, documentation, CI/CD, dette, dépendances)
+ *   I — IP & Droits (marque, cession des droits, open source, contrats, litiges)
  *   F — Finances & Métriques (ARR, churn, NRR, marges, croissance)
  *   S — Sécurité & Souveraineté (pentest, RGPD, MFA, secrets, infra)
  *   O — Organisation & Talent (dépendance fondateur, N-1, succession)
@@ -17,20 +17,24 @@
 
 /* ─── Input types ────────────────────────────────────────── */
 
+/* Dimension C : Code & Architecture (clé interne « capital » conservée pour compatibilité) */
 export interface CapitalData {
-  tests:      'full' | 'partial' | 'none'        // Code coverage
-  docs:       'full' | 'partial' | 'none'        // Technical docs
-  cicd:       'yes' | 'no'                       // CI/CD pipeline
-  techDebt:   'documented' | 'known' | 'unknown' // Tech debt
-  trademark:  'yes' | 'pending' | 'no'           // Brand registered
-  stack:      string                              // label only
+  tests:      'full' | 'partial' | 'none'        // Tests automatisés / couverture
+  docs:       'full' | 'partial' | 'none'        // Documentation technique et architecture
+  cicd:       'yes' | 'no'                       // Pipeline CI/CD
+  techDebt:   'documented' | 'known' | 'unknown' // Dette technique
+  deps:       'under1y' | 'one_to_two' | 'above2y' | 'unknown' // Fraîcheur des dépendances
+  stack:      string                              // libellé seulement
 }
 
+/* Dimension I : IP & Droits (clé interne « integrity » conservée pour compatibilité) */
 export interface IntegrityData {
-  structure:     'clean' | 'partial' | 'none'    // Legal structure / cap table
-  contracts:     'full' | 'partial' | 'none'     // Client/supplier contracts
-  litiges:       'none' | 'minor' | 'active'     // Active disputes
-  moat:          'strong' | 'moderate' | 'none'  // Competitive moat
+  trademark:     'yes' | 'pending' | 'no'        // Marque déposée
+  copyright:     'full' | 'partial' | 'none'     // Cession des droits logiciels (salariés, freelances)
+  opensource:    'clean' | 'gpl' | 'unaudited'   // Licences open source
+  apiContracts:  'yes' | 'partial' | 'no'        // Contrats APIs et fournisseurs tiers
+  contracts:     'full' | 'partial' | 'none'     // Contrats clients signés et archivés
+  litiges:       'none' | 'minor' | 'active'     // Litiges IP ou contractuels
 }
 
 export interface FinanceData {
@@ -41,6 +45,8 @@ export interface FinanceData {
   margin:     number   // Gross margin %
   seniority:  'under1' | 'one_to_three' | 'above3'
   arrAudited: 'yes' | 'no' | 'not_yet'
+  recurring?: 'above80' | 'fifty_to_80' | 'under50'  // part de revenu récurrent
+  ebitdaMargin?: number                              // marge EBITDA %, optionnelle (contrôle EV/EBITDA)
 }
 
 export interface SecurityData {
@@ -49,6 +55,7 @@ export interface SecurityData {
   mfa:        'yes' | 'no'
   secrets:    'vault' | 'partial' | 'none'
   infra:      'isolated' | 'partial' | 'mixed'   // Prod/staging isolation
+  backups?:   'tested' | 'exists' | 'none'       // Sauvegardes et plan de reprise
 }
 
 export interface OrgData {
@@ -70,40 +77,33 @@ export interface ValuationInput {
 
 export function scoreCapital(d: CapitalData): number {
   let s = 0
-
-  // Tests / code coverage (max 6)
+  // Tests (max 6)
   s += d.tests === 'full' ? 6 : d.tests === 'partial' ? 3 : 0
-
-  // Docs (max 4)
+  // Documentation & architecture (max 4)
   s += d.docs  === 'full' ? 4 : d.docs  === 'partial' ? 2 : 0
-
   // CI/CD (max 4)
   s += d.cicd  === 'yes' ? 4 : 0
-
-  // Tech debt (max 3)
+  // Dette technique (max 3)
   s += d.techDebt === 'documented' ? 3 : d.techDebt === 'known' ? 1 : 0
-
-  // Trademark (max 3)
-  s += d.trademark === 'yes' ? 3 : d.trademark === 'pending' ? 1 : 0
-
+  // Dépendances (max 3)
+  s += d.deps === 'under1y' ? 3 : d.deps === 'one_to_two' ? 2 : d.deps === 'above2y' ? 1 : 0
   return Math.min(s, 20)
 }
 
 export function scoreIntegrity(d: IntegrityData): number {
   let s = 0
-
-  // Legal structure / cap table (max 7)
-  s += d.structure === 'clean' ? 7 : d.structure === 'partial' ? 3 : 0
-
-  // Contracts (max 6)
-  s += d.contracts === 'full' ? 6 : d.contracts === 'partial' ? 3 : 0
-
-  // Litiges (max 4)
-  s += d.litiges === 'none' ? 4 : d.litiges === 'minor' ? 2 : 0
-
-  // Moat (max 3)
-  s += d.moat === 'strong' ? 3 : d.moat === 'moderate' ? 1 : 0
-
+  // Marque (max 3)
+  s += d.trademark === 'yes' ? 3 : d.trademark === 'pending' ? 1 : 0
+  // Cession des droits logiciels (max 5) : la chaîne de titre est le premier point de blocage d'une cession
+  s += d.copyright === 'full' ? 5 : d.copyright === 'partial' ? 2 : 0
+  // Licences open source (max 3)
+  s += d.opensource === 'clean' ? 3 : d.opensource === 'gpl' ? 1 : 0
+  // Contrats APIs / fournisseurs (max 2)
+  s += d.apiContracts === 'yes' ? 2 : d.apiContracts === 'partial' ? 1 : 0
+  // Contrats clients (max 4)
+  s += d.contracts === 'full' ? 4 : d.contracts === 'partial' ? 2 : 0
+  // Litiges (max 3)
+  s += d.litiges === 'none' ? 3 : d.litiges === 'minor' ? 1 : 0
   return Math.min(s, 20)
 }
 
@@ -134,6 +134,9 @@ export function scoreFinance(d: FinanceData): number {
   // Seniority (max 2)
   s += d.seniority === 'above3' ? 2 : d.seniority === 'one_to_three' ? 1 : 0
 
+  // Part de revenu récurrent (bonus max 1 ; le plafond reste 20)
+  s += d.recurring === 'above80' ? 1 : 0
+
   return Math.min(s, 20)
 }
 
@@ -157,6 +160,9 @@ export function scoreSecurity(d: SecurityData): number {
 
   // Infra isolation (max 2)
   s += d.infra   === 'isolated' ? 2 : d.infra === 'partial' ? 1 : 0
+
+  // Sauvegardes / reprise (bonus max 1 ; le plafond reste 20)
+  s += d.backups === 'tested' ? 1 : 0
 
   return Math.min(s, 20)
 }

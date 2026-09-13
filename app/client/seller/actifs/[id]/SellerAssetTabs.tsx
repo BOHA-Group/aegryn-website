@@ -368,7 +368,7 @@ export default function SellerAssetTabs({
             <div className="bg-white border border-gray-200 p-6">
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Benchmark sectoriel</p>
               <p className="font-sans text-[12px] text-gray-500 mb-3">
-                Secteur <strong>{assetSector ?? benchmark.sector}</strong> — données {benchmark.source ?? 'Aventis Advisors Q2 2026'}
+                Secteur <strong>{assetSector ?? benchmark.sector}</strong>. Source : Aegryn CIFSO Valuation Index
               </p>
               <div className="grid grid-cols-3 gap-4">
                 <div>

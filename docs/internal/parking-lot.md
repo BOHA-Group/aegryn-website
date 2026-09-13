@@ -67,3 +67,10 @@ sender = `contact@boha-group.com` (puis `aegryn.com` une fois le domaine vérifi
 `RESEND_FROM` = `contact@boha-group.com`. Basculer sur `aegryn.com` après vérification DNS
 (SPF, DKIM) dans Resend. Emails concernés : confirmation de demande, publication du grade,
 mandats experts, notifications pièces.
+
+## Abonnement CIFSO Valuation Index (paiement à brancher)
+
+- Modèle retenu : freemium. Accès libre = estimation illustrative (fourchette large, benchmarks partiels) ; abonnement mensuel = séries complètes (essai 3 jours, annulation gratuite avant activation). Bannière « Bientôt disponible » et liste d'attente (`cifso_index_waitlist`) en place sur `/valuation`.
+- Moteur de benchmarks : table `cifso_index_benchmarks` (migration 108, appliquée), taxonomie `lib/indexTaxonomy.ts` (5 clusters, 40 verticaux, 9 métriques), instantané `lib/cifsoIndex.ts` (`getIndexSnapshot({ full })`), API `/api/valuation/index` en mode aperçu. Les colonnes `source_internal` / `internal_notes` ne sortent jamais ; source affichée : « Aegryn CIFSO Valuation Index ».
+- À faire au lancement : Stripe Checkout mode subscription (`trial_period_days: 3`), statut d'abonnement sur `profiles` (ou table dédiée), passer `full: true` dans `/api/valuation/index` et lever les `LockedOverlay` de `CifsoValuationIndex.tsx` / `ValuationCalculator.tsx` selon ce statut. Webhook Stripe existant : `/api/webhooks/stripe`.
+- Alimentation des séries : import trimestriel par l'admin (à outiller : `/admin/settings/benchmark` couvre aujourd'hui `benchmark_data` uniquement) ; médianes par dimension calculées en direct depuis les évaluations publiées dès 10 dossiers certifiés.
