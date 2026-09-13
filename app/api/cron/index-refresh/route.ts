@@ -14,6 +14,6 @@ export async function GET(req: NextRequest) {
   if (cronSecret && req.headers.get('authorization') !== `Bearer ${cronSecret}`) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
-  const result = await refreshCifsoIndex()
+  const result = await refreshCifsoIndex('cron')
   return NextResponse.json(result, { status: result.ok ? 200 : 500 })
 }

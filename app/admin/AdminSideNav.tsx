@@ -51,6 +51,7 @@ const SECTIONS = [
     label: 'Pilotage',
     items: [
       { href: '/admin/analytics',     label: 'Analytics' },
+      { href: '/admin/index',         label: 'Valuation Index' },
       { href: '/admin/notifications', label: 'Notifications' },
       { href: '/admin/settings',      label: 'Paramètres' },
     ],

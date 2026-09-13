@@ -16,6 +16,7 @@
  */
 import { createServiceClient } from '@/lib/supabase'
 import { DIMENSION_META, type ValuationDimension } from '@/lib/cifsoValuation'
+import { CONNECTORS, type Observation } from '@/lib/indexConnectors'
 
 const MIN_SAMPLE = 10
 
@@ -32,15 +33,55 @@ function pct(sorted: number[], q: number): number | null {
   return Math.round((sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo)) * 100) / 100
 }
 
-export async function refreshCifsoIndex(): Promise<{ ok: boolean; period: string; upserted: number; dimensions: Record<string, unknown>; error?: string }> {
+export type SourceRun = { key: string; name: string; kind: string; status: 'ok' | 'error'; rows: number; latest: string | null; error?: string; ms: number }
+
+export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Promise<{ ok: boolean; period: string; upserted: number; dimensions: Record<string, unknown>; sources: SourceRun[]; error?: string }> {
   const supa = createServiceClient()
-  const { data: log } = await supa.from('cifso_index_refresh_log').insert({}).select('id').single()
+  const { data: log } = await supa.from('cifso_index_refresh_log').insert({ trigger }).select('id').single()
   const logId = log?.id as string | undefined
+  const sources: SourceRun[] = []
+
+  /* Registre et statut d'une source */
+  async function recordSource(run: SourceRun) {
+    sources.push(run)
+    const { data: prev } = await supa.from('cifso_index_sources').select('consecutive_failures').eq('key', run.key).maybeSingle()
+    await supa.from('cifso_index_sources').upsert({
+      key: run.key, name: run.name, kind: run.kind, cadence: 'weekly', enabled: true,
+      last_run_at: new Date().toISOString(), last_status: run.status, last_error: run.error ?? null,
+      last_rows: run.rows, last_latest_obs: run.latest,
+      consecutive_failures: run.status === 'ok' ? 0 : ((prev?.consecutive_failures as number | undefined) ?? 0) + 1,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'key' })
+  }
 
   try {
     const now = new Date()
     const period = `${now.getFullYear()}-Q${Math.floor(now.getMonth() / 3) + 1}`
     const rows: Upsert[] = []
+
+    /* 0. Collecte externe automatique : flux officiels ouverts (BCE, Eurostat, BNS) */
+    const macro: Observation[] = []
+    for (const c of CONNECTORS) {
+      const t0 = Date.now()
+      try {
+        const r = await c.run()
+        macro.push(...r.rows)
+        await recordSource({ key: c.key, name: c.name, kind: c.kind, status: 'ok', rows: r.rows.length, latest: r.latest, ms: Date.now() - t0 })
+      } catch (e) {
+        await recordSource({ key: c.key, name: c.name, kind: c.kind, status: 'error', rows: 0, latest: null, error: e instanceof Error ? e.message : String(e), ms: Date.now() - t0 })
+      }
+    }
+    for (const o of macro) {
+      rows.push({ scope_type: o.scope_type, scope_key: o.scope_key, metric: o.metric, period: o.period, p25: null, p50: o.value, p75: null, sample_size: null, unit: o.unit, is_public: o.is_public, source_internal: 'official_api' })
+    }
+    /* Indicateur de conditions de marché (0 à 100) : taux 10 ans, croissance, inflation, actions 12 mois.
+       Lecture pour l'analyste : > 60 conditions porteuses, 40 à 60 neutres, < 40 défavorables. Ne modifie pas les multiples automatiquement. */
+    const g = (key: string, metric: string) => macro.find(o => o.scope_key === key && o.metric === metric)?.value
+    const r10 = g('euro_area', 'rate_10y'), gdp = g('euro_area', 'gdp_growth'), inf = g('euro_area', 'inflation'), eq = g('euro_area_12m', 'equity_index')
+    if (r10 != null && gdp != null && inf != null) {
+      const score = clamp(50 - (r10 - 2.5) * 8 + (gdp - 1) * 8 - Math.abs(inf - 2) * 5 + (eq ?? 0) * 0.4, 0, 100)
+      rows.push({ scope_type: 'market', scope_key: 'euro_area', metric: 'market_conditions', period, p25: null, p50: Math.round(score), p75: null, sample_size: null, unit: 'pts', is_public: true, source_internal: 'derived:official_api' })
+    }
 
     /* 1. Clusters depuis cifso_market_multiples */
     const { data: mult } = await supa.from('cifso_market_multiples').select('*').eq('is_active', true)
@@ -104,13 +145,19 @@ export async function refreshCifsoIndex(): Promise<{ ok: boolean; period: string
       upserted += chunk.length
     }
 
-    if (logId) await supa.from('cifso_index_refresh_log').update({ finished_at: new Date().toISOString(), status: 'ok', period, series_upserted: upserted, dimensions_json: { ...dimSummary, byGrade } }).eq('id', logId)
-    return { ok: true, period, upserted, dimensions: { ...dimSummary, byGrade } }
+    /* Sources internes : statut */
+    await recordSource({ key: 'internal_curated', name: 'Séries curées Aegryn (multiples par cluster et vertical)', kind: 'internal_curated', status: 'ok', rows: (mult?.length ?? 0) + byCat.size, latest: period, ms: 0 })
+    await recordSource({ key: 'internal_certified', name: 'Dossiers certifiés publiés (cinq dimensions, grades)', kind: 'internal_certified', status: 'ok', rows: P.length, latest: period, ms: 0 })
+
+    const failed = sources.filter(x => x.status === 'error').length
+    if (logId) await supa.from('cifso_index_refresh_log').update({ finished_at: new Date().toISOString(), status: failed === sources.length ? 'error' : 'ok', period, series_upserted: upserted, dimensions_json: { ...dimSummary, byGrade }, sources_json: sources, error: failed ? `${failed} source(s) en erreur` : null }).eq('id', logId)
+    return { ok: true, period, upserted, dimensions: { ...dimSummary, byGrade }, sources }
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e)
     if (logId) await supa.from('cifso_index_refresh_log').update({ finished_at: new Date().toISOString(), status: 'error', error: msg }).eq('id', logId)
-    return { ok: false, period: '', upserted: 0, dimensions: {}, error: msg }
+    return { ok: false, period: '', upserted: 0, dimensions: {}, sources, error: msg }
   }
 }
 
 const r2 = (v: number) => Math.round(v * 100) / 100
+const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v))
