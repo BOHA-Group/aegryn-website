@@ -1682,7 +1682,8 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact"
+    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "col2Verify": "Zertifikat prüfen"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
@@ -8320,7 +8321,9 @@
         "subtitle": "Laufende und abgeschlossene Transaktionen.",
         "noTransactions": "Noch keine Transaktionen.",
         "areaLabel": "Verkäuferbereich"
-      }
+      },
+      "kpiKycInReview": "KYC in Prüfung",
+      "kpiKycRejected": "KYC abgelehnt: erneut einreichen"
     },
     "partner": {
       "meta": "Dashboard, Partnerbereich Aegryn",
@@ -10417,5 +10420,31 @@
       "Gültigkeit und Erneuerung",
       "Unabhängige Governance"
     ]
+  },
+  "verify": {
+    "metaTitle": "CIFSO 5000 Zertifikat prüfen",
+    "metaDesc": "Prüfen Sie online die Echtheit und Gültigkeit eines von Aegryn ausgestellten CIFSO 5000 Zertifikats.",
+    "eyebrow": "Öffentliche Prüfung",
+    "title": "CIFSO 5000 Zertifikat prüfen",
+    "lead": "Geben Sie den Code vom Zertifikat oder Badge ein, um Echtheit, Grade und Gültigkeitszeitraum zu bestätigen.",
+    "placeholder": "CIFSO-XXXX-XXXX",
+    "cta": "Prüfen",
+    "statusValid": "Gültiges Zertifikat",
+    "statusExpired": "Abgelaufenes Zertifikat",
+    "statusSuperseded": "Zurückgezogenes Zertifikat",
+    "statusNotFound": "Kein Zertifikat entspricht diesem Code",
+    "notFoundHint": "Prüfen Sie die Eingabe. Stammt der Code aus einem Ihnen übergebenen Dokument, kontaktieren Sie uns: es könnte sich um eine unbefugte Nutzung handeln.",
+    "organisation": "Zertifizierte Organisation",
+    "grade": "Grade",
+    "score": "Gesamtscore",
+    "issued": "Ausgestellt am",
+    "validUntil": "Gültig bis",
+    "dimensions": "Scores je Dimension",
+    "summary": "Zertifizierte Zusammenfassung",
+    "issuer": "Ausgestellt von Aegryn. Unabhängige Zertifizierungsstelle. Schweiz.",
+    "whatTitle": "Was dieses Dokument bescheinigt",
+    "whatDesc": "Der CIFSO 5000 Grade bewertet Wert und Übertragbarkeit einer Organisation in fünf Dimensionen: Code, IP, Finanzen, Sicherheit, Organisation. Er wird nach Dokumentenprüfung, unabhängiger Analyse und Review ausgestellt. Gültigkeit 12 Monate.",
+    "badgeAlt": "Badge CIFSO 5000 zertifiziert",
+    "learnMore": "Zertifizierung entdecken"
   }
 }

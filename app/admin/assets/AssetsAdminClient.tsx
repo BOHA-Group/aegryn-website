@@ -197,7 +197,11 @@ export default function AssetsAdminClient({ rows: initialRows }: Props) {
                       <div className="text-[11px] text-gray-400">{String(r.seller_email ?? '')}</div>
                     </td>
                     <td className="px-4 py-3 text-gray-600">{String(r.company_name ?? '—')}</td>
-                    <td className="px-4 py-3 text-gray-600 uppercase text-[10px]">{String(r.asset_type ?? '—')}</td>
+                    <td className="px-4 py-3 text-[10px]">
+                      {r.dossier_type === 'certification'
+                        ? <span className="rounded-lg font-semibold text-ag-navy bg-ag-navy/5 border border-ag-navy/20 px-2 py-0.5">Certification CIFSO 5000</span>
+                        : <span className="text-gray-600 uppercase">{String(r.asset_type ?? 'transaction')}</span>}
+                    </td>
                     <td className="px-4 py-3 font-mono">
                       {r.arr ? `${Math.round(Number(r.arr) / 1000)}K€` : <em className="text-gray-300">—</em>}
                     </td>

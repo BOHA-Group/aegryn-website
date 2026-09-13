@@ -1,5 +1,6 @@
 import { createServiceClient } from '@/lib/supabase'
-import { redirect, notFound }   from 'next/navigation'
+import { checkAdminAccess }    from '@/lib/adminAuth'
+import { notFound }             from 'next/navigation'
 import type { Metadata }        from 'next'
 import Link                     from 'next/link'
 import GradeForm                from './GradeForm'
@@ -27,8 +28,7 @@ export default async function AdminAssetGradePage({
   const { id }    = await params
   const { token } = await searchParams
 
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await checkAdminAccess(token)
 
   const supa = createServiceClient()
   const { data: asset, error } = await supa

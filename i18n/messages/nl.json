@@ -1682,7 +1682,8 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact"
+    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "col2Verify": "Certificaat verifiëren"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
@@ -8335,7 +8336,9 @@
         "subtitle": "Volg lopende en afgesloten transacties.",
         "noTransactions": "Nog geen transacties.",
         "areaLabel": "Verkopersruimte"
-      }
+      },
+      "kpiKycInReview": "KYC in beoordeling",
+      "kpiKycRejected": "KYC afgewezen: opnieuw indienen"
     },
     "partner": {
       "meta": "Dashboard, Aegryn-partnerruimte",
@@ -10417,5 +10420,31 @@
       "Geldigheid en verlenging",
       "Onafhankelijke governance"
     ]
+  },
+  "verify": {
+    "metaTitle": "Een CIFSO 5000-certificaat verifiëren",
+    "metaDesc": "Verifieer online de echtheid en geldigheid van een door Aegryn uitgegeven CIFSO 5000-certificaat.",
+    "eyebrow": "Publieke verificatie",
+    "title": "Een CIFSO 5000-certificaat verifiëren",
+    "lead": "Voer de code van het certificaat of de badge in om echtheid, grade en geldigheidsperiode te bevestigen.",
+    "placeholder": "CIFSO-XXXX-XXXX",
+    "cta": "Verifiëren",
+    "statusValid": "Geldig certificaat",
+    "statusExpired": "Verlopen certificaat",
+    "statusSuperseded": "Ingetrokken certificaat",
+    "statusNotFound": "Geen certificaat komt overeen met deze code",
+    "notFoundHint": "Controleer de code. Komt hij uit een document dat u is overhandigd, neem dan contact op: mogelijk onbevoegd gebruik.",
+    "organisation": "Gecertificeerde organisatie",
+    "grade": "Grade",
+    "score": "Totaalscore",
+    "issued": "Uitgegeven op",
+    "validUntil": "Geldig tot",
+    "dimensions": "Scores per dimensie",
+    "summary": "Gecertificeerde samenvatting",
+    "issuer": "Uitgegeven door Aegryn. Onafhankelijke certificeringsinstelling. Zwitserland.",
+    "whatTitle": "Wat dit document certificeert",
+    "whatDesc": "De CIFSO 5000-grade beoordeelt de waarde en overdraagbaarheid van een organisatie op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Hij wordt uitgegeven na documentcontrole, onafhankelijke analyse en review. Geldigheid 12 maanden.",
+    "badgeAlt": "Badge CIFSO 5000 gecertificeerd",
+    "learnMore": "De certificering ontdekken"
   }
 }

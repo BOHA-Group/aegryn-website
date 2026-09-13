@@ -5,6 +5,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { ArrowLeft, FileDown } from 'lucide-react'
 import SellerAssetTabs, { type Delta } from './SellerAssetTabs'
+import CommunicationKit from './CommunicationKit'
 
 export const metadata: Metadata = {
   title: 'Dossier actif — Espace Cédant Aegryn',
@@ -58,7 +59,7 @@ export default async function SellerAssetDetailPage({
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, asset_type, arr, asking_price, official_grade, aeg_grade, score_total, status, sector, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months, trs, auction_ready, auction_ready_blockers')
+    .select('id, company_name, asset_type, arr, asking_price, official_grade, aeg_grade, score_total, status, sector, public_summary, submitted_at, graded_at, published_at, seller_email, seller_uid, gross_margin, nrr, benchmark_category, revenue_track_months, trs, auction_ready, auction_ready_blockers, verification_code, certificate_valid_until')
     .eq('id', id)
     .single()
 
@@ -249,7 +250,13 @@ export default async function SellerAssetDetailPage({
               <p className="font-sans text-[12px] text-gray-700">{fmtDate(asset.graded_at)}</p>
             </div>
           )}
-          {asset.published_at && (
+          {asset.certificate_valid_until && (
+            <div>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Validité du certificat</p>
+              <p className="font-sans text-[12px] text-gray-700">{fmtDate(asset.certificate_valid_until)}</p>
+            </div>
+          )}
+          {asset.published_at && !isCertification && (
             <div>
               <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Publication</p>
               <p className="font-sans text-[12px] text-gray-700">{fmtDate(asset.published_at)}</p>
@@ -275,6 +282,16 @@ export default async function SellerAssetDetailPage({
             <FileDown size={13} /> Télécharger
           </a>
         </div>
+      )}
+
+      {/* Kit de communication + vérification publique (certificat délivré) */}
+      {asset.verification_code && asset.official_grade && asset.official_grade !== 'NG' && ['graded', 'published', 'sold'].includes(asset.status ?? '') && (
+        <CommunicationKit
+          code={asset.verification_code as string}
+          organisation={asset.company_name ?? `Dossier ${id.slice(0, 8)}`}
+          grade={asset.official_grade as string}
+          validUntil={(asset.certificate_valid_until as string | null) ?? null}
+        />
       )}
 
       {/* ── Onglets Sprint 5.0 : Grade / TRS / Recs / Docs / Delta ── */}

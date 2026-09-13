@@ -1682,7 +1682,8 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact"
+    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "col2Verify": "Verificare un certificato"
   },
   "cookie": {
     "title": "Aegryn | Cookie & Analytics",
@@ -8320,7 +8321,9 @@
         "subtitle": "Transazioni in corso e passate.",
         "noTransactions": "Nessuna transazione per il momento.",
         "areaLabel": "Area Cedente"
-      }
+      },
+      "kpiKycInReview": "KYC in verifica",
+      "kpiKycRejected": "KYC rifiutato: da rifare"
     },
     "partner": {
       "meta": "Dashboard, Area Partner Aegryn",
@@ -10418,5 +10421,31 @@
       "Validità e rinnovo",
       "Governance indipendente"
     ]
+  },
+  "verify": {
+    "metaTitle": "Verificare un certificato CIFSO 5000",
+    "metaDesc": "Verifichi online l'autenticità e la validità di un certificato CIFSO 5000 rilasciato da Aegryn.",
+    "eyebrow": "Verifica pubblica",
+    "title": "Verificare un certificato CIFSO 5000",
+    "lead": "Inserisca il codice riportato sul certificato o sul badge per confermarne autenticità, grado e periodo di validità.",
+    "placeholder": "CIFSO-XXXX-XXXX",
+    "cta": "Verificare",
+    "statusValid": "Certificato valido",
+    "statusExpired": "Certificato scaduto",
+    "statusSuperseded": "Certificato ritirato",
+    "statusNotFound": "Nessun certificato corrisponde a questo codice",
+    "notFoundHint": "Controlli il codice. Se proviene da un documento che le è stato consegnato, ci contatti: potrebbe trattarsi di un uso non autorizzato.",
+    "organisation": "Organizzazione certificata",
+    "grade": "Grado",
+    "score": "Punteggio globale",
+    "issued": "Rilasciato il",
+    "validUntil": "Valido fino al",
+    "dimensions": "Punteggi per dimensione",
+    "summary": "Sintesi certificata",
+    "issuer": "Rilasciato da Aegryn. Organismo di certificazione indipendente. Svizzera.",
+    "whatTitle": "Cosa certifica questo documento",
+    "whatDesc": "Il grado CIFSO 5000 valuta il valore e la trasferibilità di un'organizzazione su cinque dimensioni: Codice, IP, Finanza, Sicurezza, Organizzazione. È rilasciato dopo verifica documentale, analisi indipendente e revisione. Validità 12 mesi.",
+    "badgeAlt": "Badge Certificato CIFSO 5000",
+    "learnMore": "Scoprire la certificazione"
   }
 }

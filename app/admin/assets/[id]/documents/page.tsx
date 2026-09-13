@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { createServiceClient } from '@/lib/supabase'
+import { checkAdminAccess }    from '@/lib/adminAuth'
 import type {
   DataRoomDocument, DocumentCatalogEntry, DocumentDimension,
 } from '@/lib/dataRoom'
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const DIMENSIONS: DocumentDimension[] = ['C', 'I', 'F', 'S', 'T']
+const DIMENSIONS: DocumentDimension[] = ['C', 'I', 'F', 'S', 'O', 'T']
 
 export default async function AdminAssetDocumentsPage({
   params,
@@ -26,8 +27,7 @@ export default async function AdminAssetDocumentsPage({
   const { id }    = await params
   const { token } = await searchParams
 
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) redirect('/')
+  await checkAdminAccess(token)
 
   const supa = createServiceClient()
 

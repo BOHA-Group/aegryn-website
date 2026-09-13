@@ -5,6 +5,9 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import Link                    from 'next/link'
 import { ArrowLeft, Clock }    from 'lucide-react'
 import GradeEngineForm         from './GradeEngineForm'
+import AssignExpertForm        from './AssignExpertForm'
+import PrescorePanel           from './PrescorePanel'
+import type { Prescore }       from '@/lib/prescore'
 import { CODE_SUBCODES, IP_SUBCODES, FINANCE_SUBCODES, SECURITY_SUBCODES } from '@/lib/gradingSystem'
 
 export const metadata: Metadata = {
@@ -36,11 +39,25 @@ export default async function GradeEnginePage({
   // Charger la fiche actif
   const { data: asset } = await supa
     .from('assets')
-    .select('id, company_name, seller_name, aeg_grade, status')
+    .select('id, company_name, seller_name, aeg_grade, status, dossier_type, seller_uid, seller_email, prescore_json')
     .eq('id', id)
     .single()
 
   if (!asset) redirect('/admin/assets')
+
+  // KYC/KYB du demandeur + experts mandatés (revue manuelle par dimension)
+  const [{ data: sellerProfile }, { data: experts }] = await Promise.all([
+    asset.seller_uid
+      ? supa.from('profiles').select('kyc_status').eq('id', asset.seller_uid).maybeSingle()
+      : supa.from('profiles').select('kyc_status').eq('email', asset.seller_email ?? '').maybeSingle(),
+    supa.from('partner_certifications')
+      .select('id, dimension, status, scope, deadline_at, profiles:partner_id(email, full_name)')
+      .eq('asset_id', id).order('created_at', { ascending: false }),
+  ])
+  const expertRows = (experts ?? []).map(e => {
+    const prof = (Array.isArray(e.profiles) ? e.profiles[0] : e.profiles) as { email?: string; full_name?: string } | null
+    return { id: e.id as string, dimension: e.dimension as string, status: e.status as string, scope: (e.scope as string) ?? 'certification', deadline_at: e.deadline_at as string | null, partner_email: prof?.email ?? null, partner_name: prof?.full_name ?? null }
+  })
 
   // Historique des évaluations
   const { data: assessments } = await supa
@@ -91,6 +108,12 @@ export default async function GradeEnginePage({
             </div>
           </div>
         </div>
+
+        {/* Pré-scoring documentaire + garde KYC/KYB */}
+        <PrescorePanel assetId={id} initial={(asset.prescore_json as Prescore | null) ?? null} kycStatus={(sellerProfile?.kyc_status as string | null) ?? null} dossierType={String(asset.dossier_type ?? 'transaction')} />
+
+        {/* Mandats experts (revue manuelle par dimension, accès data room uniquement) */}
+        <AssignExpertForm assetId={id} dossierType={(asset.dossier_type as 'certification' | 'transaction') ?? 'transaction'} existing={expertRows} />
 
         {/* Formulaire principal */}
         <GradeEngineForm assetId={id} docsByCategory={docsByCategory} />

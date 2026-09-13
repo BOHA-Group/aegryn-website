@@ -419,7 +419,7 @@ export default function GradeEngineForm({
         body: JSON.stringify({ action: 'compute', input }),
       })
       const json = await res.json()
-      if (!res.ok) { setStatusMsg(json.error ?? 'Erreur serveur'); return }
+      if (!res.ok) { setStatusMsg(json.message ?? json.error ?? 'Erreur serveur'); return }
       setResult(json.result as GradeResult)
       setAssessmentId(json.assessmentId)
       setPublicRationale(json.result.publicRationale ?? '')

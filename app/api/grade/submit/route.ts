@@ -96,6 +96,7 @@ export async function POST(req: NextRequest) {
         company_name: body.assetName,
         website:      body.assetUrl || null,
         asset_type:   body.assetType,
+        dossier_type: isCertification ? 'certification' : 'transaction',
         arr:          body.arr ?? null,
         sector:               body.sector             ?? null,
         arr_growth:           body.arrGrowth           ?? null,

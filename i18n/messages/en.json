@@ -1682,7 +1682,8 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact"
+    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "col2Verify": "Verify a certificate"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
@@ -8320,7 +8321,9 @@
         "subtitle": "Track ongoing and past transactions.",
         "noTransactions": "No transactions yet.",
         "areaLabel": "Seller Space"
-      }
+      },
+      "kpiKycInReview": "KYC under review",
+      "kpiKycRejected": "KYC rejected: resubmit"
     },
     "partner": {
       "meta": "Dashboard, Partner Space Aegryn",
@@ -10417,5 +10420,31 @@
       "Validity and renewal",
       "Independent governance"
     ]
+  },
+  "verify": {
+    "metaTitle": "Verify a CIFSO 5000 certificate",
+    "metaDesc": "Verify online the authenticity and validity of a CIFSO 5000 certificate issued by Aegryn.",
+    "eyebrow": "Public verification",
+    "title": "Verify a CIFSO 5000 certificate",
+    "lead": "Enter the code shown on the certificate or badge to confirm its authenticity, grade and validity period.",
+    "placeholder": "CIFSO-XXXX-XXXX",
+    "cta": "Verify",
+    "statusValid": "Valid certificate",
+    "statusExpired": "Expired certificate",
+    "statusSuperseded": "Withdrawn certificate",
+    "statusNotFound": "No certificate matches this code",
+    "notFoundHint": "Check the code. If it comes from a document handed to you, contact us: it may be an unauthorised use.",
+    "organisation": "Certified organisation",
+    "grade": "Grade",
+    "score": "Overall score",
+    "issued": "Issued on",
+    "validUntil": "Valid until",
+    "dimensions": "Scores by dimension",
+    "summary": "Certified summary",
+    "issuer": "Issued by Aegryn. Independent certification body. Switzerland.",
+    "whatTitle": "What this document certifies",
+    "whatDesc": "The CIFSO 5000 grade assesses the value and transferability of an organisation across five dimensions: Code, IP, Finance, Security, Organisation. It is issued after documentary verification, independent analysis and review. Valid for 12 months.",
+    "badgeAlt": "CIFSO 5000 Certified badge",
+    "learnMore": "Discover the certification"
   }
 }

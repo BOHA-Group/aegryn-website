@@ -22,7 +22,7 @@ function evalLabel(e: string) {
 export default async function AdminAssetsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ token?: string; status?: string; eval?: string; delete?: string; partner_id?: string }>
+  searchParams: Promise<{ token?: string; status?: string; eval?: string; type?: string; delete?: string; partner_id?: string }>
 }) {
   const params = await searchParams
 
@@ -31,25 +31,40 @@ export default async function AdminAssetsPage({
   const supa   = createServiceClient()
   const status = params.status ?? 'all'
   const evalFilter = params.eval ?? 'all'
+  const typeFilter = params.type ?? 'all'
+  const qs = (over: Record<string, string>) => {
+    const p = { status, eval: evalFilter, type: typeFilter, ...over }
+    return '/admin/assets?' + Object.entries(p).filter(([, v]) => v && v !== 'all').map(([k, v]) => `${k}=${v}`).join('&')
+  }
 
   let q = supa
     .from('assets')
-    .select('id, seller_name, seller_email, company_name, asset_type, arr, official_grade, score_total, status, submitted_at, graded_at, evaluation_type')
+    .select('id, seller_name, seller_email, company_name, asset_type, dossier_type, arr, official_grade, score_total, status, submitted_at, graded_at, evaluation_type')
     .order('submitted_at', { ascending: false })
     .limit(200)
 
   if (status !== 'all') q = q.eq('status', status)
   if (evalFilter !== 'all') q = q.eq('evaluation_type', evalFilter)
+  if (typeFilter !== 'all') q = q.eq('dossier_type', typeFilter)
 
   const { data, error } = await q
   const rows = (data ?? []) as Record<string, unknown>[]
 
   /* counts par statut */
   const counts: Record<string, number> = {}
-  await Promise.all(STATUS_ORDER.map(async s => {
-    const { count } = await supa.from('assets').select('id', { count: 'exact', head: true }).eq('status', s)
-    counts[s] = count ?? 0
-  }))
+  const typeCounts: Record<string, number> = {}
+  await Promise.all([
+    ...STATUS_ORDER.map(async s => {
+      let c = supa.from('assets').select('id', { count: 'exact', head: true }).eq('status', s)
+      if (typeFilter !== 'all') c = c.eq('dossier_type', typeFilter)
+      const { count } = await c
+      counts[s] = count ?? 0
+    }),
+    ...['certification', 'transaction'].map(async t => {
+      const { count } = await supa.from('assets').select('id', { count: 'exact', head: true }).eq('dossier_type', t)
+      typeCounts[t] = count ?? 0
+    }),
+  ])
 
 
   return (
@@ -59,8 +74,8 @@ export default async function AdminAssetsPage({
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
             <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1">Aegryn ADMIN</p>
-            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Actifs soumis pour certification CIFSO v4.0O v4.0</h1>
-            <p className="text-[12px] text-gray-400 mt-1">Gestion du pipeline de certification</p>
+            <h1 className="text-[26px] font-bold text-gray-900 tracking-tight">Dossiers reçus : Certification CIFSO 5000 et Transactions</h1>
+            <p className="text-[12px] text-gray-400 mt-1">Demandes de certification et actifs à céder, statut et avancement</p>
           </div>
           <div className="flex gap-2">
             <Link href={`/admin/catalog`}
@@ -87,11 +102,28 @@ export default async function AdminAssetsPage({
           </div>
         )}
 
+        {/* Filtres type de dossier : double entrée data room */}
+        <div className="flex flex-wrap gap-2 mb-3">
+          {[
+            { key: 'all',           label: 'Tous les dossiers',   count: typeCounts.certification + typeCounts.transaction },
+            { key: 'certification', label: 'Certification CIFSO 5000', count: typeCounts.certification },
+            { key: 'transaction',   label: 'Transaction (actif à céder)', count: typeCounts.transaction },
+          ].map(({ key, label, count }) => (
+            <Link key={key} href={qs({ type: key })}
+              className={`px-4 py-2 text-[11px] font-semibold border transition-colors flex items-center gap-2 ${
+                typeFilter === key ? 'bg-ag-navy text-white border-ag-navy' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
+              }`}>
+              {label}
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${typeFilter === key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>{count ?? 0}</span>
+            </Link>
+          ))}
+        </div>
+
         {/* Filtres statut */}
         <div className="flex flex-wrap gap-2 mb-3">
           {[{ key: 'all', label: 'Tous', count: Object.values(counts).reduce((a, b) => a + b, 0) }, ...STATUS_ORDER.map(s => ({ key: s, label: s, count: counts[s] ?? 0 }))].map(({ key, label, count }) => (
             <Link key={key}
-              href={`/admin/assets?status=${key}${evalFilter !== 'all' ? `&eval=${evalFilter}` : ''}`}
+              href={qs({ status: key })}
               className={`px-4 py-2 text-[11px] font-semibold border transition-colors flex items-center gap-2 ${
                 status === key ? 'bg-gray-900 text-white border-gray-900' : 'border-gray-200 text-gray-600 hover:border-gray-400 bg-white'
               }`}>
@@ -105,7 +137,7 @@ export default async function AdminAssetsPage({
         <div className="flex flex-wrap gap-2 mb-6">
           {(['all', ...EVAL_TYPES] as const).map(k => (
             <Link key={k}
-              href={`/admin/assets?status=${status}&eval=${k}`}
+              href={qs({ eval: k })}
               className={`px-3 py-1.5 text-[10px] font-semibold border transition-colors ${
                 evalFilter === k ? 'bg-indigo-700 text-white border-indigo-700' : 'border-gray-200 text-gray-500 hover:border-gray-400 bg-white'
               }`}>
@@ -121,7 +153,7 @@ export default async function AdminAssetsPage({
               <p className="font-mono text-[10px] uppercase tracking-widest text-indigo-600 mb-0.5">Assignation CIFSO en cours</p>
               <p className="font-sans text-[12px] text-indigo-800">
                 Ouvrez le <strong>Moteur Grade</strong> d&apos;un actif pour co-certifier avec le partenaire sélectionné.
-                La co-certification CIFSOO v4.0 s&apos;enregistre dans la fiche partenaire via l&apos;onglet Certifications.
+                La co-certification CIFSO 5000 s&apos;enregistre dans la fiche partenaire via l&apos;onglet Certifications.
               </p>
             </div>
             <Link

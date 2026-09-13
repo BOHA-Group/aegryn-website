@@ -216,6 +216,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/verify" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Verify')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/grade" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2Grade')}
                 </Link>

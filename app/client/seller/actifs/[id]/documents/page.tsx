@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const DIMENSIONS: DocumentDimension[] = ['C', 'I', 'F', 'S', 'T']
+const DIMENSIONS: DocumentDimension[] = ['C', 'I', 'F', 'S', 'O', 'T']
 
 const QUALITY_SELLER_LABELS: Record<DocumentAdminQuality, { label: string; cls: string }> = {
   pending_review: { label: 'En attente',    cls: 'text-gray-400' },

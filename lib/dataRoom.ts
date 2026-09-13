@@ -6,7 +6,7 @@
  * — jamais générer d'URL signée côté client.
  */
 
-export type DataRoomCategory = 'code' | 'ip' | 'finance' | 'security' | 'transversal' | 'legal'
+export type DataRoomCategory = 'code' | 'ip' | 'finance' | 'security' | 'organisation' | 'transversal' | 'legal'
 
 export type DataRoomVisibility = 'admin_only' | 'assigned_partner' | 'nda_buyers' | 'light_buyers'
 
@@ -14,7 +14,7 @@ export type DocumentRequiredLevel = 'blocking' | 'recommended' | 'optional'
 
 export type DocumentAdminQuality = 'pending_review' | 'sufficient' | 'insufficient' | 'missing'
 
-export type DocumentDimension = 'C' | 'I' | 'F' | 'S' | 'T'
+export type DocumentDimension = 'C' | 'I' | 'F' | 'S' | 'O' | 'T'
 
 /** Niveau de data room : 'light' = préliminaire (12 docs), 'full' = complète CIFSO */
 export type DataRoomLevel = 'light' | 'full'
@@ -60,6 +60,7 @@ export const DIMENSION_TO_CATEGORY: Record<DocumentDimension, DataRoomCategory> 
   I: 'ip',
   F: 'finance',
   S: 'security',
+  O: 'organisation',
   T: 'transversal',
 }
 
@@ -68,6 +69,7 @@ export const DIMENSION_LABELS: Record<DocumentDimension, string> = {
   I: 'I — IP & Droits',
   F: 'F — Finance',
   S: 'S — Sécurité',
+  O: 'O — Organisation & Talent',
   T: 'T — Transversal',
 }
 
@@ -141,6 +143,13 @@ export const REQUIRED_DOCUMENTS: Record<DataRoomCategory, { type: string; label:
     { type: 'security_incidents',label: 'Historique incidents de sécurité déclarés',         sensitive: false },
     { type: 'dpa_contracts',     label: 'Contrats sous-traitants données (DPA signés)',      sensitive: true  },
   ],
+  organisation: [
+    { type: 'org_chart',         label: 'Organigramme nominatif et effectifs',               sensitive: false },
+    { type: 'succession_plan',   label: 'Plan de succession des personnes clés',             sensitive: true  },
+    { type: 'ops_docs',          label: 'Documentation opérationnelle (procédures, runbooks)', sensitive: false },
+    { type: 'delegations',       label: 'Délégations de signature et de pouvoirs',           sensitive: false },
+    { type: 'governance',        label: 'Gouvernance formalisée (comités, reporting)',       sensitive: false },
+  ],
   transversal: [
     { type: 'org_chart',         label: 'Organigramme et effectifs',                         sensitive: false },
     { type: 'supplier_contracts',label: 'Baux, contrats fournisseurs significatifs',         sensitive: true  },
@@ -160,6 +169,7 @@ export const CATEGORY_LABELS: Record<DataRoomCategory, string> = {
   ip:          'IP & Droits (I)',
   finance:     'Finance (F)',
   security:    'Sécurité (S)',
+  organisation:'Organisation & Talent (O)',
   transversal: 'Transversal',
   legal:       'Légal (L)',
 }

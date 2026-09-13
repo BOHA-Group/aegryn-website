@@ -44,7 +44,7 @@ export default async function SellerDashboardPage() {
     { count: kycPending },
     { data: notifications },
   ] = await Promise.all([
-    supa.from('profiles').select('full_name').eq('id', user.id).single(),
+    supa.from('profiles').select('full_name, kyc_status').eq('id', user.id).single(),
     supa.from('assets')
       .select('id, company_name, status, official_grade, aeg_grade, trs, auction_ready, submitted_at, published_at, arr')
       .or(`seller_email.eq.${user.email},seller_uid.eq.${user.id}`)
@@ -179,12 +179,18 @@ export default async function SellerDashboardPage() {
             <ShieldCheck size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
             <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
           </div>
-          <p className={`font-mono font-bold text-[22px] ${kycAlertCount > 0 ? 'text-amber-600' : 'text-gray-900'}`}>
-            {kycAlertCount > 0 ? kycAlertCount : '✓'}
-          </p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">
-            {kycAlertCount > 0 ? t('kpiKycIncomplete') : t('kpiKycOk')}
-          </p>
+          {(() => {
+            /* KPI fondé sur le statut réel du profil (approved / in_review / rejected / non démarré),
+               et non sur le nombre de documents en attente */
+            const ks = (profile as { kyc_status?: string | null } | null)?.kyc_status ?? null
+            const cls   = ks === 'approved' ? 'text-emerald-600' : ks === 'rejected' ? 'text-red-600' : ks === 'in_review' ? 'text-blue-600' : 'text-amber-600'
+            const value = ks === 'approved' ? '✓' : ks === 'in_review' ? '…' : ks === 'rejected' ? '✕' : kycAlertCount > 0 ? String(kycAlertCount) : '—'
+            const label = ks === 'approved' ? t('kpiKycOk') : ks === 'in_review' ? t('kpiKycInReview') : ks === 'rejected' ? t('kpiKycRejected') : t('kpiKycIncomplete')
+            return (<>
+              <p className={`font-mono font-bold text-[22px] ${cls}`}>{value}</p>
+              <p className="font-sans text-[11px] text-gray-400 mt-0.5">{label}</p>
+            </>)
+          })()}
         </Link>
       </div>
 

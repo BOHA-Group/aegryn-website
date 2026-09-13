@@ -18,6 +18,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }        from '@/lib/supabase'
 import { getUser }                    from '@/lib/supabaseServer'
 import type { DataRoomCategory }      from '@/lib/dataRoom'
+import { refreshPrescore }            from '@/lib/prescoreServer'
 
 const MAX_SIZE_BYTES = 20 * 1024 * 1024 // 20 Mo
 const ALLOWED_MIME = [
@@ -31,7 +32,7 @@ const ALLOWED_MIME = [
   'application/zip',
 ]
 
-const VALID_CATEGORIES: DataRoomCategory[] = ['code', 'ip', 'finance', 'security', 'transversal']
+const VALID_CATEGORIES: DataRoomCategory[] = ['code', 'ip', 'finance', 'security', 'organisation', 'transversal', 'legal']
 
 export async function POST(req: NextRequest) {
   const user = await getUser()
@@ -107,6 +108,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Erreur de stockage.' }, { status: 500 })
   }
 
+  /* Rattacher au catalogue CIFSO (document_type = code catalogue, ex. F-01, O-02) :
+     document_code + required_level + dimension alimentent la complétude, le blocage
+     du grading et la visibilité par dimension pour les experts mandatés. */
+  const { data: catalogEntry } = await supa
+    .from('documents_catalog')
+    .select('code, dimension, required_level')
+    .eq('code', documentType)
+    .maybeSingle()
+  const DIM_TO_COL: Record<string, string> = { C: 'code', I: 'ip', F: 'finance', S: 'security', O: 'organisation' }
+
   /* Insérer la métadonnée en base */
   const { error: dbError } = await supa
     .from('data_room_documents')
@@ -114,6 +125,10 @@ export async function POST(req: NextRequest) {
       asset_id:        assetId,
       category,
       document_type:   documentType,
+      document_code:   catalogEntry?.code ?? null,
+      required_level:  catalogEntry?.required_level ?? 'optional',
+      dimension:       catalogEntry ? (DIM_TO_COL[catalogEntry.dimension] ?? null) : null,
+      admin_quality:   'pending_review',
       file_path:       filePath,
       file_name:       file.name,
       file_size_bytes: file.size,
@@ -129,6 +144,8 @@ export async function POST(req: NextRequest) {
     await supa.storage.from('data-room').remove([filePath])
     return NextResponse.json({ error: 'Erreur lors de l\'enregistrement.' }, { status: 500 })
   }
+
+  await refreshPrescore(assetId).catch(err => console.error('[data-room/upload] prescore', err))
 
   return NextResponse.json({ ok: true })
 }

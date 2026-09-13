@@ -20,6 +20,14 @@ import { createServiceClient }       from '@/lib/supabase'
 import { runGradeEngine, type GradeInput, type GradeLetter } from '@/lib/gradeEngine'
 import { getAdminUser }              from '@/lib/adminAuth'
 import { sendEmail }                 from '@/lib/sendEmail'
+import { refreshPrescore }           from '@/lib/prescoreServer'
+
+/** CIFSO-XXXX-XXXX : alphabet sans caractères ambigus */
+function generateVerificationCode(): string {
+  const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+  const part = () => Array.from({ length: 4 }, () => A[Math.floor(Math.random() * A.length)]).join('')
+  return `CIFSO-${part()}-${part()}`
+}
 
 // ── Schéma de validation Zod ──────────────────────────────────────────────────
 
@@ -304,6 +312,38 @@ export async function POST(
       return NextResponse.json({ error: 'must_validate_before_publish' }, { status: 422 })
     }
 
+    // Dossier + KYC/KYB du demandeur + mandat signé
+    const { data: assetFull } = await supa
+      .from('assets')
+      .select('asking_price, status, company_name, seller_name, seller_email, seller_uid, dossier_type, verification_code')
+      .eq('id', assetId)
+      .maybeSingle()
+
+    const [{ data: sellerProfile }, { count: signedMandates }] = await Promise.all([
+      assetFull?.seller_uid
+        ? supa.from('profiles').select('kyc_status').eq('id', assetFull.seller_uid).maybeSingle()
+        : assetFull?.seller_email
+          ? supa.from('profiles').select('kyc_status').eq('email', assetFull.seller_email).maybeSingle()
+          : Promise.resolve({ data: null }),
+      supa.from('mandates').select('id', { count: 'exact', head: true }).eq('asset_id', assetId).not('mandate_signed_at', 'is', null),
+    ])
+
+    /* ── Garde KYC/KYB : aucun grade publié (certification ou transaction) sans identification
+          approuvée du demandeur. Le calcul et la validation restent possibles en amont. ── */
+    if (sellerProfile?.kyc_status !== 'approved' && !body.emitPreGrade) {
+      return NextResponse.json({ error: 'kyc_required', message: 'KYC/KYB du demandeur non approuvé : publication bloquée.' }, { status: 422 })
+    }
+
+    /* ── Garde documentaire : pièces bloquantes vérifiées (pré-scoring), sauf Pre-Grade explicite ── */
+    const prescore = await refreshPrescore(assetId)
+    if (!prescore.canGrade && !body.emitPreGrade) {
+      return NextResponse.json({
+        error: 'documents_blocking',
+        message: 'Pièces bloquantes manquantes ou insuffisantes dans la Data Room.',
+        blocked: prescore.dimensions.filter(d => d.state === 'blocked').map(d => ({ dimension: d.letter, missing: d.missingCodes })),
+      }, { status: 422 })
+    }
+
     // Supersede les évaluations précédentes publiées
     await supa
       .from('grade_assessments')
@@ -328,23 +368,6 @@ export async function POST(
     // 5B — Transaction Ready : 4 conditions métier + 2 corrections (C1)
     const transactionReadyGrades = ['star', 'aaa', 'aa', 'a']
     const transactionReadyTrs    = ['ready', 'conditional']
-
-    // C1-a : récupérer kyc_validated + mandate_signed + asking_price
-    const { data: assetFull } = await supa
-      .from('assets')
-      .select('asking_price, status, company_name, seller_name, seller_email, seller_uid')
-      .eq('id', assetId)
-      .maybeSingle()
-
-    // KYC vendeur (profiles.kyc_status) + mandat signé (mandates.mandate_signed_at)
-    const [{ data: sellerProfile }, { count: signedMandates }] = await Promise.all([
-      assetFull?.seller_uid
-        ? supa.from('profiles').select('kyc_status').eq('id', assetFull.seller_uid).maybeSingle()
-        : assetFull?.seller_email
-          ? supa.from('profiles').select('kyc_status').eq('email', assetFull.seller_email).maybeSingle()
-          : Promise.resolve({ data: null }),
-      supa.from('mandates').select('id', { count: 'exact', head: true }).eq('asset_id', assetId).not('mandate_signed_at', 'is', null),
-    ])
 
     // C1-b : documents bloquants manquants dans la data room
     const { count: blockingCount } = await supa
@@ -384,6 +407,10 @@ export async function POST(
        rapport, feuille de route). Les statuts aval (published/sold) sont conservés. */
     const keepStatus = ['published', 'sold', 'withdrawn'].includes(assetFull?.status ?? '')
     const now = new Date().toISOString()
+    const isRefusedGrade = assessment.final_grade === 'refused'
+    /* Certificat : code public de vérification (stable pour le dossier) + validité 12 mois */
+    const verificationCode = assetFull?.verification_code ?? generateVerificationCode()
+    const validUntil = new Date(Date.now() + 365 * 86_400_000).toISOString()
 
     const { error: assetErr } = await supa
       .from('assets')
@@ -393,6 +420,7 @@ export async function POST(
         public_summary:         assessment.public_rationale ?? undefined,
         graded_at:              now,
         published_at:           now,
+        ...(!isRefusedGrade ? { verification_code: verificationCode, certificate_valid_until: validUntil } : {}),
         ...(!keepStatus && !preGradeActions ? { status: 'graded' } : {}),
         // 5B
         trs:                    assessment.trs ?? null,
@@ -449,7 +477,8 @@ export async function POST(
   <li>Grade : <strong>${symbol}</strong>${assessment.final_score != null ? ` (${assessment.final_score}/100)` : ''}</li>
   ${assessment.public_rationale ? `<li>Résumé certifié : ${assessment.public_rationale}</li>` : ''}
 </ul>
-<p><a href="${siteUrl}${dossier}">Consulter le dossier et télécharger la fiche de grade</a></p>
+<p><a href="${siteUrl}${dossier}">Consulter le dossier, télécharger la fiche de grade et le kit de communication</a></p>
+${!isRefusedGrade ? `<p>Vérification publique du certificat : <a href="${siteUrl}/fr/verify/${verificationCode}">${siteUrl}/fr/verify/${verificationCode}</a></p>` : ''}
 <p>Aegryn. Organisme de certification indépendant. Suisse.</p>`,
             'grade-publish',
           )

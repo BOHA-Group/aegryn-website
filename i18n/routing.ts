@@ -43,6 +43,8 @@ export const routing = defineRouting({
     '/grade/partners':                    '/grade/partners',
     '/grade/submit':                      '/grade/submit',
     '/grade/submit/success':              '/grade/submit/success',
+    '/verify':                            '/verify',
+    '/verify/[code]':                     '/verify/[code]',
 
     '/transact':                          '/transact',
     '/transact/catalog':                  '/transact/catalog',

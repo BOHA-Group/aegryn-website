@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { getAdminUser }       from '@/lib/adminAuth'
+import { refreshPrescore }    from '@/lib/prescoreServer'
 
 export async function PATCH(
   req: NextRequest,
@@ -53,6 +54,9 @@ export async function PATCH(
     .maybeSingle()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+  /* Pré-scoring documentaire automatique recalculé à chaque décision */
+  if (doc) await refreshPrescore(doc.asset_id).catch(err => console.error('[documents] prescore', err))
 
   /* Retour au client : pièce validée ou à reprendre (uniquement sur décision finale) */
   if (doc && (body.admin_quality === 'sufficient' || body.admin_quality === 'insufficient')) {
