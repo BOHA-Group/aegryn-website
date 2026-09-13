@@ -8,16 +8,12 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
 type PackKey = 'express' | 'standard' | 'premium'
 
-const IP_KEYS = ['yes', 'no', 'pending'] as const
-type IpKey = typeof IP_KEYS[number]
-
 export default function GradeSubmitForm() {
   const t      = useTranslations('gradeSubmit')
   const tNav   = useTranslations('nav')
   const params = useSearchParams()
 
   const [pack,      setPack]      = useState<PackKey>('standard')
-  const [ipChoice,  setIpChoice]  = useState<IpKey | ''>('')
   const [submitted, setSubmitted] = useState(false)
   const [error,     setError]     = useState(false)
   const [loading,   setLoading]   = useState(false)
@@ -36,22 +32,18 @@ export default function GradeSubmitForm() {
     setError(false)
     const data   = Object.fromEntries(new FormData(e.currentTarget))
     const locale = document.documentElement.lang || 'fr'
+    // Mapping formulaire grade → schéma asset API
     const payload = {
-      fullName:    data.fullName,
-      email:       data.email,
-      company:     data.company     || undefined,
-      phone:       data.phone       || undefined,
-      role:        data.role        || undefined,
-      orgName:     data.orgName,
-      orgSize:     data.orgSize     || undefined,
-      orgSector:   data.orgSector   || undefined,
-      orgCountry:  data.orgCountry  || undefined,
-      orgWeb:      data.orgWeb      || undefined,
-      ipFiled:     data.ipFiled     || undefined,
-      objective:   data.objective   || undefined,
-      message:     data.message     || undefined,
-      pack,
-      cgvAgreed:   true,
+      fullName:    data.fullName as string,
+      email:       data.email as string,
+      assetName:   data.orgName as string,        // orgName → assetName
+      assetType:   'certification_cifso',         // type fixe pour grade
+      assetUrl:    data.orgWeb as string || '',   // orgWeb → assetUrl
+      techStack:   data.orgSector as string || '', // orgSector → techStack (temporaire)
+      status:      data.orgSize as string || '',   // orgSize → status (temporaire)
+      motivation:  data.objective as string || '', // objective → motivation
+      message:     data.message as string || '',
+      evaluationType: 'full_certification' as const,
       locale,
     }
     try {
@@ -72,12 +64,6 @@ export default function GradeSubmitForm() {
   const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
   const selectCls = inputCls + ' appearance-none'
   const labelCls  = 'block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2'
-
-  const ipLabelMap: Record<IpKey, string> = {
-    yes:     t('form.ipYes'),
-    no:      t('form.ipNo'),
-    pending: t('form.ipPending'),
-  }
 
   const packs = (t.raw('packs') as { key: PackKey; name: string; price: string; target: string; duration: string; includes: string[] }[])
 
@@ -233,24 +219,6 @@ export default function GradeSubmitForm() {
                     <label className={labelCls}>{t('form.orgWeb')}</label>
                     <input name="orgWeb" type="url" className={inputCls} />
                   </div>
-                </div>
-              </div>
-
-              {/* ── IP ── */}
-              <div>
-                <p className={labelCls}>{t('form.ipFiled')}</p>
-                <div className="flex gap-6 mt-1">
-                  {IP_KEYS.map(v => (
-                    <label key={v} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio" name="ipFiled" value={v}
-                        checked={ipChoice === v}
-                        onChange={() => setIpChoice(v)}
-                        className="accent-ag-navy"
-                      />
-                      <span className="font-sans text-[13px] text-ag-black">{ipLabelMap[v]}</span>
-                    </label>
-                  ))}
                 </div>
               </div>
 
