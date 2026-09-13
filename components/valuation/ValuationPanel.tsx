@@ -23,7 +23,7 @@ export default function ValuationPanel({ v, admin = false, valuationIndexHref }:
             <p className="font-sans font-bold text-gray-900 text-[14px]">Valorisation indicative CIFSO</p>
           </div>
           <p className="font-sans text-[11px] text-gray-500">
-            Conclusion chiffrée du grade : multiples de marché européens du cluster <strong>{cluster}</strong>, ajustés par le score CIFSO et par chacune des cinq dimensions. Indicative, non contractuelle.
+            Conclusion chiffrée du grade : multiples de marché européens de l'industrie <strong>{cluster}</strong>, ajustés par le score CIFSO et par chacune des cinq dimensions. Indicative, non contractuelle.
           </p>
         </div>
         <span className={`rounded-lg shrink-0 border px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest ${confCls}`}>
@@ -54,7 +54,7 @@ export default function ValuationPanel({ v, admin = false, valuationIndexHref }:
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Construction du multiple</p>
           <dl className="text-[12px] text-gray-700 flex flex-col gap-1">
             <div className="flex justify-between"><dt>Base de revenu récurrent</dt><dd className="font-mono">{eur(v.basis.arr)}</dd></div>
-            <div className="flex justify-between"><dt>Multiple de marché {cluster}</dt><dd className="font-mono">{v.market.evRevenueLow}x à {v.market.evRevenueHigh}x</dd></div>
+            <div className="flex justify-between"><dt>Multiple de marché, industrie {cluster}</dt><dd className="font-mono">{v.market.evRevenueLow}x à {v.market.evRevenueHigh}x</dd></div>
             <div className="flex justify-between"><dt>Coefficient CIFSO global</dt><dd className="font-mono">× {v.globalCoeff.toFixed(2)}</dd></div>
             <div className="flex justify-between"><dt>Ajustement des cinq dimensions</dt><dd className="font-mono">{pct(v.dimensionAdjustmentPct)}</dd></div>
             {v.valueEbitda && <div className="flex justify-between"><dt>Contrôle EV/EBITDA</dt><dd className="font-mono">{eur(v.valueEbitda.low)} à {eur(v.valueEbitda.high)}</dd></div>}

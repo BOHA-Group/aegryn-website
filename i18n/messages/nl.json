@@ -6305,7 +6305,7 @@
       "title": "CIFSO Valuation Index : Lancering Q1 2027",
       "desc": "Toegang tot cross-company benchmarking en real-time marktmultiples is in ontwikkeling. Schrijf u in voor vroege toegang.",
       "features": [
-        "EU-transactiemultiples per sector (5 clusters, 50 verticalen)",
+        "EU-transactiemultiples per sector (5 industrieën, 50 verticalen)",
         "Vergelijk uw CIFSO-score met marktgenoten",
         "Valuation Estimator: marktmultiple × CIFSO-coëfficiënt",
         "Kwartaalmeldingen wanneer de multiples in uw sector bewegen"
@@ -6383,7 +6383,7 @@
       "label": "Marktgegevens",
       "title": "EU-transactiemultiples\nLower mid-market referentie",
       "desc": "EU M&A-transacties in het bereik €5M–€300M. Elk kwartaal bijgewerkt door het Aegryn-team.",
-      "colCluster": "Cluster",
+      "colCluster": "Industrie",
       "colEvRevenue": "EV/Revenue",
       "colEvEbitda": "EV/EBITDA",
       "note": "Deze cijfers vertegenwoordigen de mediaan multiples voor EU lower mid-market M&A-transacties (€5M–€300M). Ze vormen geen waardering. Bron: Aegryn CIFSO Valuation Index.",
@@ -6428,10 +6428,10 @@
     "freemium": {
       "estimateLabel": "VRIJE SCHATTING",
       "estimateTitle": "Positioneer uw organisatie\nin vijftien minuten in de Index.",
-      "estimateDesc": "Begeleide zelfevaluatie op de vijf CIFSO-dimensies. Het resultaat is een bewust brede bandbreedte, gebaseerd op slechts een deel van de Index-benchmarks (mediane multiples per cluster). Zonder analyse van de stukken is geen precieze schatting mogelijk.",
+      "estimateDesc": "Begeleide zelfevaluatie op de vijf CIFSO-dimensies. Het resultaat is een bewust brede bandbreedte, gebaseerd op slechts een deel van de Index-benchmarks (mediane multiples per industrie). Zonder analyse van de stukken is geen precieze schatting mogelijk.",
       "estimateNote": "Brede bandbreedte: slechts een deel van de Index-benchmarks. Detail per dimensie, volledige multiples en de smalle bandbreedte zijn voorbehouden aan abonnees. De verdedigbare waardering wordt geleverd met de CIFSO 5000-certificering.",
       "lockedTitle": "Voorbehouden aan Index-abonnees",
-      "lockedDesc": "Volledige multiples per cluster en per dimensie, benchmarks per grade, kwartaalupdates, smalle bandbreedte.",
+      "lockedDesc": "Volledige multiples per industrie en per dimensie, benchmarks per grade, kwartaalupdates, smalle bandbreedte.",
       "lockedCta": "Bericht bij lancering",
       "plansLabel": "TOEGANG TOT DE INDEX",
       "plansTitle": "Drie leesniveaus\nvan waarde.",
@@ -6446,7 +6446,7 @@
             "Vrije schatting in vijftien minuten",
             "Geschatte grade en score op 100",
             "Brede waarderingsbandbreedte",
-            "Eén mediane multiple per cluster, als voorproef"
+            "Eén mediane multiple per industrie, als voorproef"
           ],
           "cta": "Schatting starten",
           "href": "#estimation"
@@ -6458,7 +6458,7 @@
           "badge": "3 dagen proef, gratis opzegging vóór activering",
           "desc": "De volledige data om te beslissen, te onderhandelen en de markt te volgen.",
           "features": [
-            "Volledige multiples per cluster: EV/Revenue en EV/EBITDA",
+            "Volledige multiples per industrie: EV/Revenue en EV/EBITDA",
             "Benchmarks per dimensie C, I, F, S, O",
             "Smalle bandbreedte en detail van uw score",
             "Vergelijking met gecertificeerde organisaties per grade",
@@ -6548,7 +6548,7 @@
           "desc": "Een neutrale lezing van de waarde delen tussen verkoper, erfgenamen en overnemer."
         }
       ],
-      "marketTeaser": "Voorproef: één cluster open, de andere voorbehouden aan abonnees.",
+      "marketTeaser": "Voorproef: één industrie open, de andere voorbehouden aan abonnees.",
       "comingSoonLabel": "Binnenkort beschikbaar",
       "comingSoonDesc": "Het Index-abonnement opent binnenkort. Schrijf u in om bericht te krijgen en de proefperiode van 3 dagen bij de lancering te ontvangen.",
       "illustrativeLabel": "Illustratief",
@@ -6556,22 +6556,22 @@
     },
     "index": {
       "label": "DE BENCHMARK-ENGINE",
-      "title": "Vijf clusters, veertig verticalen,\nnegen metrics. Eén bron.",
+      "title": "Vijf industrieën, veertig verticalen,\nnegen metrics. Eén bron.",
       "desc": "De Index aggregeert officiële transactie- en marktdata, elk kwartaal geconsolideerd en bijgewerkt door Aegryn-analisten, en koppelt die aan de CIFSO-score op vijf dimensies. Geen persoonsgegevens, geen identificeerbare transactie.",
       "kpis": {
-        "clusters": "clusters",
+        "clusters": "industrieën",
         "verticals": "verticalen",
         "metrics": "metrics",
         "period": "referentieperiode",
         "certified": "gecertificeerde organisaties"
       },
-      "barsTitle": "EV/Revenue-multiples per cluster",
-      "barsDesc": "Bandbreedte p25 tot p75, mediaan uitgelicht. Eén cluster is open als voorproef; de andere zijn voorbehouden aan abonnees.",
+      "barsTitle": "EV/Revenue-multiples per industrie",
+      "barsDesc": "Bandbreedte p25 tot p75, mediaan uitgelicht. Eén industrie is open als voorproef; de andere zijn voorbehouden aan abonnees.",
       "p25": "p25",
       "p50": "mediaan",
       "p75": "p75",
-      "coverageTitle": "Dekking per cluster en verticaal",
-      "coverageDesc": "Elk verticaal erft de multiples van zijn cluster, verfijnd door een eigen reeks waar die bestaat. Verticalen in groen hebben een eigen ARR-reeks.",
+      "coverageTitle": "Dekking per industrie en verticaal",
+      "coverageDesc": "Elk verticaal erft de multiples van zijn industrie, verfijnd door een eigen reeks waar die bestaat. Verticalen in groen hebben een eigen ARR-reeks.",
       "arrLabel": "Mediane ARR-multiple",
       "metricsTitle": "Gedekte metrics",
       "metricsDesc": "Waardemultiples, kwaliteitsmetrics en CIFSO-lezing. Vergrendelde metrics zijn voorbehouden aan abonnees.",
@@ -6593,7 +6593,7 @@
       "faq": [
         {
           "q": "Waar komen de data vandaan?",
-          "a": "Uit officiële Europese transactie- en marktdata, geaggregeerd en geconsolideerd door Aegryn. Wij publiceren geen identificeerbare transactie en geen individuele bedrijfsdata: alleen statistische reeksen (p25, mediaan, p75) per cluster, verticaal, grade en dimensie."
+          "a": "Uit officiële Europese transactie- en marktdata, geaggregeerd en geconsolideerd door Aegryn. Wij publiceren geen identificeerbare transactie en geen individuele bedrijfsdata: alleen statistische reeksen (p25, mediaan, p75) per industrie, verticaal, grade en dimensie."
         },
         {
           "q": "Hoe waarborgt u de betrouwbaarheid?",

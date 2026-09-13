@@ -6290,7 +6290,7 @@
       "title": "CIFSO Valuation Index : Lanzamiento Q1 2027",
       "desc": "El acceso al benchmark entre empresas y a los múltiplos de mercado en tiempo real está en desarrollo. Regístrese para acceso anticipado.",
       "features": [
-        "Múltiplos de transacción EU por sector (5 clusters, 50 verticales)",
+        "Múltiplos de transacción EU por sector (5 industrias, 50 verticales)",
         "Comparación de su score CIFSO vs pares del mercado",
         "Valuation Estimator: múltiplo de mercado × coeficiente CIFSO",
         "Alertas trimestrales cuando los múltiplos de su sector cambian"
@@ -6368,7 +6368,7 @@
       "label": "Datos de mercado",
       "title": "Múltiplos de transacción EU\nReferencia lower mid-market",
       "desc": "Transacciones M&A EU en la horquilla €5M–€300M. Actualizados trimestralmente por el equipo Aegryn.",
-      "colCluster": "Cluster",
+      "colCluster": "Industria",
       "colEvRevenue": "EV/Revenue",
       "colEvEbitda": "EV/EBITDA",
       "note": "Estas cifras representan los múltiplos medianos de las transacciones M&A EU lower mid-market (€5M–€300M). No constituyen una valoración. Fuente: Aegryn CIFSO Valuation Index.",
@@ -6413,10 +6413,10 @@
     "freemium": {
       "estimateLabel": "ESTIMACIÓN LIBRE",
       "estimateTitle": "Posicione su organización\nen el Índice en quince minutos.",
-      "estimateDesc": "Autoevaluación guiada en las cinco dimensiones CIFSO. El resultado es un rango deliberadamente amplio, basado solo en una parte de los benchmarks del Índice (múltiplos medianos por clúster). Sin análisis de documentos no es posible una estimación precisa.",
+      "estimateDesc": "Autoevaluación guiada en las cinco dimensiones CIFSO. El resultado es un rango deliberadamente amplio, basado solo en una parte de los benchmarks del Índice (múltiplos medianos por industria). Sin análisis de documentos no es posible una estimación precisa.",
       "estimateNote": "Rango amplio: solo una parte de los benchmarks del Índice. El detalle por dimensión, los múltiplos completos y el rango ajustado están reservados a los suscriptores. La valoración defendible se entrega con la Certificación CIFSO 5000.",
       "lockedTitle": "Reservado a los suscriptores del Índice",
-      "lockedDesc": "Múltiplos completos por clúster y por dimensión, benchmarks por grado, actualizaciones trimestrales, rango ajustado.",
+      "lockedDesc": "Múltiplos completos por industria y por dimensión, benchmarks por grado, actualizaciones trimestrales, rango ajustado.",
       "lockedCta": "Avisarme en el lanzamiento",
       "plansLabel": "ACCESO AL ÍNDICE",
       "plansTitle": "Tres niveles de lectura\ndel valor.",
@@ -6431,7 +6431,7 @@
             "Estimación libre en quince minutos",
             "Grado estimado y puntuación sobre 100",
             "Rango de valoración amplio",
-            "Un múltiplo mediano por clúster, como avance"
+            "Un múltiplo mediano por industria, como avance"
           ],
           "cta": "Iniciar la estimación",
           "href": "#estimation"
@@ -6443,7 +6443,7 @@
           "badge": "Prueba de 3 días, cancelación gratuita antes de la activación",
           "desc": "Los datos completos para decidir, negociar y seguir el mercado.",
           "features": [
-            "Múltiplos completos por clúster: EV/Revenue y EV/EBITDA",
+            "Múltiplos completos por industria: EV/Revenue y EV/EBITDA",
             "Benchmarks por dimensión C, I, F, S, O",
             "Rango ajustado y detalle de su puntuación",
             "Comparación con organizaciones certificadas por grado",
@@ -6533,7 +6533,7 @@
           "desc": "Compartir una lectura neutral del valor entre cedente, herederos y comprador."
         }
       ],
-      "marketTeaser": "Avance: un clúster abierto, los demás reservados a los suscriptores.",
+      "marketTeaser": "Avance: un industria abierto, los demás reservados a los suscriptores.",
       "comingSoonLabel": "Próximamente",
       "comingSoonDesc": "La suscripción al Índice abrirá pronto. Regístrese para recibir el aviso y la prueba de 3 días en el lanzamiento.",
       "illustrativeLabel": "Ilustrativo",
@@ -6541,22 +6541,22 @@
     },
     "index": {
       "label": "EL MOTOR DE BENCHMARKS",
-      "title": "Cinco clústeres, cuarenta verticales,\nnueve métricas. Una sola fuente.",
+      "title": "Cinco industrias, cuarenta verticales,\nnueve métricas. Una sola fuente.",
       "desc": "El Índice agrega datos oficiales de transacciones y de mercado, consolidados y actualizados cada trimestre por los analistas de Aegryn, y los vincula a la puntuación CIFSO en cinco dimensiones. Sin datos personales, sin transacciones identificables.",
       "kpis": {
-        "clusters": "clústeres",
+        "clusters": "industrias",
         "verticals": "verticales",
         "metrics": "métricas",
         "period": "periodo de referencia",
         "certified": "organizaciones certificadas"
       },
-      "barsTitle": "Múltiplos EV/Revenue por clúster",
-      "barsDesc": "Rango p25 a p75, mediana destacada. Un clúster está abierto como avance; los demás están reservados a los suscriptores.",
+      "barsTitle": "Múltiplos EV/Revenue por industria",
+      "barsDesc": "Rango p25 a p75, mediana destacada. Un industria está abierto como avance; los demás están reservados a los suscriptores.",
       "p25": "p25",
       "p50": "mediana",
       "p75": "p75",
-      "coverageTitle": "Cobertura por clúster y vertical",
-      "coverageDesc": "Cada vertical hereda los múltiplos de su clúster, afinados por una serie dedicada cuando existe. Los verticales en verde disponen de una serie ARR propia.",
+      "coverageTitle": "Cobertura por industria y vertical",
+      "coverageDesc": "Cada vertical hereda los múltiplos de su industria, afinados por una serie dedicada cuando existe. Los verticales en verde disponen de una serie ARR propia.",
       "arrLabel": "Múltiplo ARR mediano",
       "metricsTitle": "Métricas cubiertas",
       "metricsDesc": "Múltiplos de valor, métricas de calidad y lectura CIFSO. Las métricas bloqueadas están reservadas a los suscriptores.",
@@ -6578,7 +6578,7 @@
       "faq": [
         {
           "q": "¿De dónde proceden los datos?",
-          "a": "De datos oficiales europeos de transacciones y de mercado, agregados y consolidados por Aegryn. No publicamos transacciones identificables ni datos de empresas individuales: solo series estadísticas (p25, mediana, p75) por clúster, vertical, grado y dimensión."
+          "a": "De datos oficiales europeos de transacciones y de mercado, agregados y consolidados por Aegryn. No publicamos transacciones identificables ni datos de empresas individuales: solo series estadísticas (p25, mediana, p75) por industria, vertical, grado y dimensión."
         },
         {
           "q": "¿Cómo garantizan la fiabilidad?",

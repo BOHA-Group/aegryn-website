@@ -6250,7 +6250,7 @@
       "title": "CIFSO Valuation Index : Lancement Q1 2027",
       "desc": "L'accès au benchmark inter-entreprises et aux multiples de marché en temps réel est en cours de développement. Inscrivez-vous pour un accès en avant-première.",
       "features": [
-        "Multiples de transaction EU par secteur (5 clusters, 50 verticaux)",
+        "Multiples de transaction EU par secteur (5 industries, 50 verticaux)",
         "Comparaison de votre score CIFSO vs les pairs du marché",
         "Valuation Estimator : multiple marché × coefficient CIFSO",
         "Alertes trimestrielles quand les multiples de votre secteur bougent"
@@ -6328,7 +6328,7 @@
       "label": "Données de marché",
       "title": "Multiples de transaction EU\nRéférence lower mid-market",
       "desc": "Transactions M&A EU dans la fourchette €5M–€300M. Mis à jour chaque trimestre par l'équipe Aegryn.",
-      "colCluster": "Cluster",
+      "colCluster": "Industrie",
       "colEvRevenue": "EV/Revenue",
       "colEvEbitda": "EV/EBITDA",
       "note": "Ces données représentent les multiples médians des transactions M&A EU lower mid-market (€5M–€300M). Elles ne constituent pas une évaluation. Source : Aegryn CIFSO Valuation Index.",
@@ -6373,10 +6373,10 @@
     "freemium": {
       "estimateLabel": "ESTIMATION LIBRE",
       "estimateTitle": "Positionnez votre organisation\ndans l'Index en quinze minutes.",
-      "estimateDesc": "Auto-évaluation guidée sur les cinq dimensions CIFSO. Le résultat est une fourchette volontairement large, fondée sur une partie seulement des benchmarks de l'Index (multiples médians par cluster). Sans analyse des pièces, aucune estimation précise n'est possible.",
+      "estimateDesc": "Auto-évaluation guidée sur les cinq dimensions CIFSO. Le résultat est une fourchette volontairement large, fondée sur une partie seulement des benchmarks de l'Index (multiples médians par industrie). Sans analyse des pièces, aucune estimation précise n'est possible.",
       "estimateNote": "Fourchette large : une partie des benchmarks de l'Index seulement. Le détail par dimension, les multiples complets et la fourchette resserrée sont réservés aux abonnés. La valorisation défendable est délivrée avec la Certification CIFSO 5000.",
       "lockedTitle": "Réservé aux abonnés de l'Index",
-      "lockedDesc": "Multiples complets par cluster et par dimension, benchmarks par grade, mises à jour trimestrielles, fourchette resserrée.",
+      "lockedDesc": "Multiples complets par industrie et par dimension, benchmarks par grade, mises à jour trimestrielles, fourchette resserrée.",
       "lockedCta": "Être prévenu de l'ouverture",
       "plansLabel": "ACCÈS À L'INDEX",
       "plansTitle": "Trois niveaux de lecture\nde la valeur.",
@@ -6391,7 +6391,7 @@
             "Estimation libre en quinze minutes",
             "Grade estimé et score sur 100",
             "Fourchette de valorisation large",
-            "Un multiple médian par cluster, en teasing"
+            "Un multiple médian par industrie, en teasing"
           ],
           "cta": "Lancer l'estimation",
           "href": "#estimation"
@@ -6403,7 +6403,7 @@
           "badge": "Essai 3 jours, annulation gratuite avant activation",
           "desc": "La donnée complète pour décider, négocier et suivre le marché.",
           "features": [
-            "Multiples complets par cluster : EV/Revenue et EV/EBITDA",
+            "Multiples complets par industrie : EV/Revenue et EV/EBITDA",
             "Benchmarks par dimension C, I, F, S, O",
             "Fourchette resserrée et détail de votre score",
             "Comparaison aux organisations certifiées par grade",
@@ -6493,7 +6493,7 @@
           "desc": "Partager une lecture neutre de la valeur entre cédant, héritiers et repreneur."
         }
       ],
-      "marketTeaser": "Aperçu : un cluster ouvert, les autres réservés aux abonnés.",
+      "marketTeaser": "Aperçu : un industrie ouvert, les autres réservés aux abonnés.",
       "comingSoonLabel": "Bientôt disponible",
       "comingSoonDesc": "L'abonnement Index ouvre prochainement. Inscrivez-vous pour être prévenu et bénéficier de l'essai de 3 jours à l'ouverture.",
       "illustrativeLabel": "Illustratif",
@@ -6501,22 +6501,22 @@
     },
     "index": {
       "label": "LE MOTEUR DE BENCHMARKS",
-      "title": "Cinq clusters, quarante verticaux,\nneuf métriques. Une seule source.",
+      "title": "Cinq industries, quarante verticaux,\nneuf métriques. Une seule source.",
       "desc": "L'Index agrège des données de transactions et de marché officielles, consolidées et mises à jour chaque trimestre par les analystes Aegryn, puis les relie au score CIFSO sur cinq dimensions. Aucune donnée personnelle, aucune transaction identifiable.",
       "kpis": {
-        "clusters": "clusters",
+        "clusters": "industries",
         "verticals": "verticaux",
         "metrics": "métriques",
         "period": "période de référence",
         "certified": "organisations certifiées"
       },
-      "barsTitle": "Multiples EV/Revenue par cluster",
-      "barsDesc": "Fourchette p25 à p75, médiane en évidence. Un cluster est ouvert en aperçu ; les autres sont réservés aux abonnés.",
+      "barsTitle": "Multiples EV/Revenue par industrie",
+      "barsDesc": "Fourchette p25 à p75, médiane en évidence. Un industrie est ouvert en aperçu ; les autres sont réservés aux abonnés.",
       "p25": "p25",
       "p50": "médiane",
       "p75": "p75",
-      "coverageTitle": "Couverture par cluster et vertical",
-      "coverageDesc": "Chaque vertical hérite des multiples de son cluster, affinés par une série dédiée lorsqu'elle existe. Les verticaux en vert disposent d'une série ARR propre.",
+      "coverageTitle": "Couverture par industrie et vertical",
+      "coverageDesc": "Chaque vertical hérite des multiples de son industrie, affinés par une série dédiée lorsqu'elle existe. Les verticaux en vert disposent d'une série ARR propre.",
       "arrLabel": "Multiple ARR médian",
       "metricsTitle": "Métriques couvertes",
       "metricsDesc": "Multiples de valeur, métriques de qualité et lecture CIFSO. Les métriques verrouillées sont réservées aux abonnés.",
@@ -6538,7 +6538,7 @@
       "faq": [
         {
           "q": "D'où viennent les données ?",
-          "a": "De transactions et de marchés officiels européens, agrégés et consolidés par Aegryn. Nous ne publions ni transaction identifiable ni donnée d'entreprise individuelle : seules des séries statistiques (p25, médiane, p75) par cluster, vertical, grade et dimension."
+          "a": "De transactions et de marchés officiels européens, agrégés et consolidés par Aegryn. Nous ne publions ni transaction identifiable ni donnée d'entreprise individuelle : seules des séries statistiques (p25, médiane, p75) par industrie, vertical, grade et dimension."
         },
         {
           "q": "Comment garantissez-vous la fiabilité ?",

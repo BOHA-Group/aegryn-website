@@ -1293,8 +1293,8 @@ export default function GradeEngineForm({
             </label>
           )}
           <select value={valuationCluster} onChange={e => setValuationCluster(e.target.value)}
-            className="rounded-lg border border-gray-200 bg-white px-3 py-2 font-sans text-[11px] text-gray-700" title="Cluster de multiples pour la valorisation indicative">
-            <option value="">Cluster : déduit du secteur</option>
+            className="rounded-lg border border-gray-200 bg-white px-3 py-2 font-sans text-[11px] text-gray-700" title="Industrie de référence pour la valorisation indicative">
+            <option value="">Industrie : déduite du secteur</option>
             {(Object.keys(CLUSTER_LABELS_FR) as ClusterKey[]).map(k => <option key={k} value={k}>{CLUSTER_LABELS_FR[k]}</option>)}
           </select>
           <button type="button" onClick={publish} disabled={publishing}

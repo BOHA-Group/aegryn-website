@@ -6290,7 +6290,7 @@
       "title": "CIFSO Valuation Index : Launching Q1 2027",
       "desc": "Access to cross-company benchmarking and real-time market multiples is under development. Sign up for early access.",
       "features": [
-        "EU transaction multiples by sector (5 clusters, 50 verticals)",
+        "EU transaction multiples by sector (5 industries, 50 verticals)",
         "Compare your CIFSO score vs market peers",
         "Valuation Estimator: market multiple × CIFSO coefficient",
         "Quarterly alerts when multiples in your sector move"
@@ -6368,7 +6368,7 @@
       "label": "Market data",
       "title": "EU Transaction Multiples\nLower mid-market reference",
       "desc": "EU M&A transactions in the €5M–€300M range. Updated quarterly by the Aegryn team.",
-      "colCluster": "Cluster",
+      "colCluster": "Industry",
       "colEvRevenue": "EV/Revenue",
       "colEvEbitda": "EV/EBITDA",
       "note": "These figures represent median multiples for EU lower mid-market M&A transactions (€5M–€300M). They do not constitute a valuation. Source: Aegryn CIFSO Valuation Index.",
@@ -6413,10 +6413,10 @@
     "freemium": {
       "estimateLabel": "FREE ESTIMATE",
       "estimateTitle": "Position your organisation\nin the Index in fifteen minutes.",
-      "estimateDesc": "Guided self-assessment across the five CIFSO dimensions. The result is a deliberately wide range, based on only part of the Index benchmarks (median multiples per cluster). Without document analysis, no precise estimate is possible.",
+      "estimateDesc": "Guided self-assessment across the five CIFSO dimensions. The result is a deliberately wide range, based on only part of the Index benchmarks (median multiples per industry). Without document analysis, no precise estimate is possible.",
       "estimateNote": "Wide range: only part of the Index benchmarks. Per-dimension detail, full multiples and the narrowed range are reserved for subscribers. The defensible valuation is delivered with CIFSO 5000 Certification.",
       "lockedTitle": "Reserved for Index subscribers",
-      "lockedDesc": "Full multiples per cluster and per dimension, benchmarks by grade, quarterly updates, narrowed range.",
+      "lockedDesc": "Full multiples per industry and per dimension, benchmarks by grade, quarterly updates, narrowed range.",
       "lockedCta": "Get notified at launch",
       "plansLabel": "INDEX ACCESS",
       "plansTitle": "Three levels\nof reading value.",
@@ -6431,7 +6431,7 @@
             "Free estimate in fifteen minutes",
             "Estimated grade and score out of 100",
             "Wide valuation range",
-            "One median multiple per cluster, as a teaser"
+            "One median multiple per industry, as a teaser"
           ],
           "cta": "Start the estimate",
           "href": "#estimation"
@@ -6443,7 +6443,7 @@
           "badge": "3-day trial, free cancellation before activation",
           "desc": "Complete data to decide, negotiate and follow the market.",
           "features": [
-            "Full multiples per cluster: EV/Revenue and EV/EBITDA",
+            "Full multiples per industry: EV/Revenue and EV/EBITDA",
             "Benchmarks per dimension C, I, F, S, O",
             "Narrowed range and detail of your score",
             "Comparison with certified organisations by grade",
@@ -6533,7 +6533,7 @@
           "desc": "Share a neutral reading of value between seller, heirs and buyer."
         }
       ],
-      "marketTeaser": "Preview: one cluster open, the others reserved for subscribers.",
+      "marketTeaser": "Preview: one industry open, the others reserved for subscribers.",
       "comingSoonLabel": "Coming soon",
       "comingSoonDesc": "The Index subscription opens shortly. Sign up to be notified and get the 3-day trial at launch.",
       "illustrativeLabel": "Illustrative",
@@ -6541,22 +6541,22 @@
     },
     "index": {
       "label": "THE BENCHMARK ENGINE",
-      "title": "Five clusters, forty verticals,\nnine metrics. One source.",
+      "title": "Five industries, forty verticals,\nnine metrics. One source.",
       "desc": "The Index aggregates official transaction and market data, consolidated and updated quarterly by Aegryn analysts, then links it to the CIFSO score across five dimensions. No personal data, no identifiable transaction.",
       "kpis": {
-        "clusters": "clusters",
+        "clusters": "industries",
         "verticals": "verticals",
         "metrics": "metrics",
         "period": "reference period",
         "certified": "certified organisations"
       },
-      "barsTitle": "EV/Revenue multiples by cluster",
-      "barsDesc": "p25 to p75 range, median highlighted. One cluster is open as a preview; the others are reserved for subscribers.",
+      "barsTitle": "EV/Revenue multiples by industry",
+      "barsDesc": "p25 to p75 range, median highlighted. One industry is open as a preview; the others are reserved for subscribers.",
       "p25": "p25",
       "p50": "median",
       "p75": "p75",
-      "coverageTitle": "Coverage by cluster and vertical",
-      "coverageDesc": "Each vertical inherits its cluster multiples, refined by a dedicated series where one exists. Verticals in green have their own ARR series.",
+      "coverageTitle": "Coverage by industry and vertical",
+      "coverageDesc": "Each vertical inherits its industry multiples, refined by a dedicated series where one exists. Verticals in green have their own ARR series.",
       "arrLabel": "Median ARR multiple",
       "metricsTitle": "Metrics covered",
       "metricsDesc": "Value multiples, quality metrics and the CIFSO reading. Locked metrics are reserved for subscribers.",
@@ -6578,7 +6578,7 @@
       "faq": [
         {
           "q": "Where does the data come from?",
-          "a": "From official European transaction and market data, aggregated and consolidated by Aegryn. We publish no identifiable transaction and no individual company data: only statistical series (p25, median, p75) by cluster, vertical, grade and dimension."
+          "a": "From official European transaction and market data, aggregated and consolidated by Aegryn. We publish no identifiable transaction and no individual company data: only statistical series (p25, median, p75) by industry, vertical, grade and dimension."
         },
         {
           "q": "How do you ensure reliability?",

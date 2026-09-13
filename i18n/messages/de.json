@@ -6290,7 +6290,7 @@
       "title": "CIFSO Valuation Index : Start Q1 2027",
       "desc": "Der Zugang zu unternehmensübergreifendem Benchmarking und Echtzeit-Marktmultiplikatoren ist in Entwicklung. Registrieren Sie sich für einen Vorab-Zugang.",
       "features": [
-        "EU-Transaktionsmultiplikatoren nach Sektor (5 Cluster, 50 Verticals)",
+        "EU-Transaktionsmultiplikatoren nach Sektor (5 Branche, 50 Verticals)",
         "Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern",
         "Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient",
         "Vierteljährliche Benachrichtigungen bei Bewegungen in Ihrem Sektor"
@@ -6368,7 +6368,7 @@
       "label": "Marktdaten",
       "title": "EU-Transaktionsmultiplikatoren\nLower Mid-Market Referenz",
       "desc": "EU-M&A-Transaktionen im Bereich €5M–€300M. Vierteljährlich vom Aegryn-Team aktualisiert.",
-      "colCluster": "Cluster",
+      "colCluster": "Branche",
       "colEvRevenue": "EV/Revenue",
       "colEvEbitda": "EV/EBITDA",
       "note": "Diese Zahlen stellen Median-Multiplikatoren für EU-Lower-Mid-Market-M&A-Transaktionen (€5M–€300M) dar. Sie stellen keine Bewertung dar. Quelle: Aegryn CIFSO Valuation Index.",
@@ -6413,10 +6413,10 @@
     "freemium": {
       "estimateLabel": "FREIE SCHÄTZUNG",
       "estimateTitle": "Positionieren Sie Ihre Organisation\nin fünfzehn Minuten im Index.",
-      "estimateDesc": "Geführte Selbsteinschätzung in den fünf CIFSO-Dimensionen. Das Ergebnis ist eine bewusst breite Spanne, die nur auf einem Teil der Index-Benchmarks beruht (Median-Multiplikatoren je Cluster). Ohne Analyse der Unterlagen ist keine präzise Schätzung möglich.",
+      "estimateDesc": "Geführte Selbsteinschätzung in den fünf CIFSO-Dimensionen. Das Ergebnis ist eine bewusst breite Spanne, die nur auf einem Teil der Index-Benchmarks beruht (Median-Multiplikatoren je Branche). Ohne Analyse der Unterlagen ist keine präzise Schätzung möglich.",
       "estimateNote": "Breite Spanne: nur ein Teil der Index-Benchmarks. Detail je Dimension, vollständige Multiplikatoren und enge Spanne sind Abonnenten vorbehalten. Die belastbare Bewertung wird mit der CIFSO 5000 Zertifizierung geliefert.",
       "lockedTitle": "Index-Abonnenten vorbehalten",
-      "lockedDesc": "Vollständige Multiplikatoren je Cluster und Dimension, Benchmarks je Grade, Quartalsupdates, enge Spanne.",
+      "lockedDesc": "Vollständige Multiplikatoren je Branche und Dimension, Benchmarks je Grade, Quartalsupdates, enge Spanne.",
       "lockedCta": "Zum Start benachrichtigen",
       "plansLabel": "ZUGANG ZUM INDEX",
       "plansTitle": "Drei Lesestufen\ndes Werts.",
@@ -6431,7 +6431,7 @@
             "Freie Schätzung in fünfzehn Minuten",
             "Geschätzter Grade und Score von 100",
             "Breite Bewertungsspanne",
-            "Ein Median-Multiplikator je Cluster als Vorschau"
+            "Ein Median-Multiplikator je Branche als Vorschau"
           ],
           "cta": "Schätzung starten",
           "href": "#estimation"
@@ -6443,7 +6443,7 @@
           "badge": "3 Tage Test, kostenlose Kündigung vor Aktivierung",
           "desc": "Die vollständigen Daten, um zu entscheiden, zu verhandeln und den Markt zu verfolgen.",
           "features": [
-            "Vollständige Multiplikatoren je Cluster: EV/Revenue und EV/EBITDA",
+            "Vollständige Multiplikatoren je Branche: EV/Revenue und EV/EBITDA",
             "Benchmarks je Dimension C, I, F, S, O",
             "Enge Spanne und Detail Ihres Scores",
             "Vergleich mit zertifizierten Organisationen je Grade",
@@ -6533,7 +6533,7 @@
           "desc": "Eine neutrale Lesart des Werts zwischen Verkäufer, Erben und Übernehmer teilen."
         }
       ],
-      "marketTeaser": "Vorschau: ein Cluster offen, die anderen Abonnenten vorbehalten.",
+      "marketTeaser": "Vorschau: ein Branche offen, die anderen Abonnenten vorbehalten.",
       "comingSoonLabel": "Bald verfügbar",
       "comingSoonDesc": "Das Index-Abonnement startet in Kürze. Tragen Sie sich ein, um benachrichtigt zu werden und den 3-Tage-Test zum Start zu erhalten.",
       "illustrativeLabel": "Illustrativ",
@@ -6541,22 +6541,22 @@
     },
     "index": {
       "label": "DIE BENCHMARK-ENGINE",
-      "title": "Fünf Cluster, vierzig Verticals,\nneun Kennzahlen. Eine Quelle.",
+      "title": "Fünf Branche, vierzig Verticals,\nneun Kennzahlen. Eine Quelle.",
       "desc": "Der Index aggregiert offizielle Transaktions- und Marktdaten, die von Aegryn-Analysten vierteljährlich konsolidiert und aktualisiert werden, und verknüpft sie mit dem CIFSO-Score in fünf Dimensionen. Keine personenbezogenen Daten, keine identifizierbare Transaktion.",
       "kpis": {
-        "clusters": "Cluster",
+        "clusters": "Branche",
         "verticals": "Verticals",
         "metrics": "Kennzahlen",
         "period": "Referenzperiode",
         "certified": "zertifizierte Organisationen"
       },
-      "barsTitle": "EV/Revenue-Multiplikatoren je Cluster",
-      "barsDesc": "Spanne p25 bis p75, Median hervorgehoben. Ein Cluster ist als Vorschau offen; die anderen sind Abonnenten vorbehalten.",
+      "barsTitle": "EV/Revenue-Multiplikatoren je Branche",
+      "barsDesc": "Spanne p25 bis p75, Median hervorgehoben. Ein Branche ist als Vorschau offen; die anderen sind Abonnenten vorbehalten.",
       "p25": "p25",
       "p50": "Median",
       "p75": "p75",
-      "coverageTitle": "Abdeckung nach Cluster und Vertical",
-      "coverageDesc": "Jedes Vertical erbt die Multiplikatoren seines Clusters, verfeinert durch eine eigene Serie, wo vorhanden. Grün markierte Verticals haben eine eigene ARR-Serie.",
+      "coverageTitle": "Abdeckung nach Branche und Vertical",
+      "coverageDesc": "Jedes Vertical erbt die Multiplikatoren seines Branchen, verfeinert durch eine eigene Serie, wo vorhanden. Grün markierte Verticals haben eine eigene ARR-Serie.",
       "arrLabel": "Median ARR-Multiplikator",
       "metricsTitle": "Abgedeckte Kennzahlen",
       "metricsDesc": "Wertmultiplikatoren, Qualitätskennzahlen und CIFSO-Lesart. Gesperrte Kennzahlen sind Abonnenten vorbehalten.",
@@ -6578,7 +6578,7 @@
       "faq": [
         {
           "q": "Woher stammen die Daten?",
-          "a": "Aus offiziellen europäischen Transaktions- und Marktdaten, von Aegryn aggregiert und konsolidiert. Wir veröffentlichen keine identifizierbare Transaktion und keine Einzelunternehmensdaten: nur statistische Serien (p25, Median, p75) je Cluster, Vertical, Grade und Dimension."
+          "a": "Aus offiziellen europäischen Transaktions- und Marktdaten, von Aegryn aggregiert und konsolidiert. Wir veröffentlichen keine identifizierbare Transaktion und keine Einzelunternehmensdaten: nur statistische Serien (p25, Median, p75) je Branche, Vertical, Grade und Dimension."
         },
         {
           "q": "Wie sichern Sie die Zuverlässigkeit?",

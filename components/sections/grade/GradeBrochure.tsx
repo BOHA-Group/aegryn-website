@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FileText, Download, Check } from 'lucide-react'
+import { FileText, Check } from 'lucide-react'
 
 const COVER = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop'
 
@@ -57,13 +57,7 @@ export function GradeBrochure() {
               <FileText size={15} />
               {b('previewRead')}
             </Link>
-            <Link
-              href={`/${locale}/grade/brochure?print=1`}
-              className="inline-flex items-center justify-center gap-2 border border-ag-border text-ag-black hover:border-ag-black font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 rounded-lg transition-colors"
-            >
-              <Download size={15} />
-              {b('previewDownload')}
-            </Link>
+            {/* Téléchargement PDF masqué le temps de fiabiliser le format imprimé sur tous les navigateurs */}
           </div>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">

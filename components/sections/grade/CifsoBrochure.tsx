@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  Download, ArrowLeft, Check, TrendingUp, Shield, Award, Users, FileCheck,
+  ArrowLeft, Check, TrendingUp, Shield, Award, Users, FileCheck,
   Briefcase, Landmark, Building2, Handshake, PiggyBank, Network,
   BadgeCheck, FileText, Map, Megaphone, Globe, Calendar, RefreshCw, GitBranch, Scale,
   UserCheck, Eye, Ban, SplitSquareHorizontal,
@@ -120,13 +120,7 @@ export function CifsoBrochure() {
             <ArrowLeft size={16} />
             {gi('wpNavBack')}
           </Link>
-          <button
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3 rounded-lg hover:bg-ag-apex/90 transition-colors"
-          >
-            <Download size={14} />
-            {gi('wpNavPrint')}
-          </button>
+          {/* Bouton imprimer / télécharger masqué le temps de fiabiliser le PDF sur tous les navigateurs */}
         </div>
       </div>
 
