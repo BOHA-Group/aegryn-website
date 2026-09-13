@@ -22,14 +22,17 @@ export default async function SellerLayout({ children }: { children: React.React
     .single()
 
   const roles = Array.isArray(profile?.roles) ? profile.roles as string[] : []
-  /* Un client pur (sans seller) → espace général */
-  if (!roles.includes('seller') && roles.includes('client')) redirect('/client/account')
-  const canAccessSeller = roles.includes('seller')
-  if (!canAccessSeller) redirect('/client/buyer')
+  const isSeller = roles.includes('seller')
+  /* Client demandeur de certification CIFSO (sans rôle cédant) : accès dossiers + data room,
+     sans transactions ni NDA cédant (CGV + NDA acceptés lors de la demande de certification) */
+  const certificationOnly = !isSeller && roles.includes('client')
+  if (!isSeller && !certificationOnly) redirect('/client/buyer')
 
-  const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
-    && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSIONS.seller
-  if (!ndaOk) redirect('/client/nda/seller')
+  if (isSeller) {
+    const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
+      && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSIONS.seller
+    if (!ndaOk) redirect('/client/nda/seller')
+  }
 
   const hasBuyer   = roles.includes('buyer')
   const hasPartner = roles.includes('partner')
@@ -47,6 +50,13 @@ export default async function SellerLayout({ children }: { children: React.React
     return true
   })
 
+  /* Rattacher au compte les dossiers soumis avant inscription (liés par email seulement),
+     afin que notifications et retours admin atteignent l'utilisateur */
+  if (user.email) {
+    await supa.from('assets').update({ seller_uid: user.id })
+      .eq('seller_email', user.email).is('seller_uid', null)
+  }
+
   const displayName = profile?.full_name ?? user.email ?? ''
   const t = await getTranslations('clientSpace')
 
@@ -55,12 +65,12 @@ export default async function SellerLayout({ children }: { children: React.React
       <div className="flex pt-16 min-h-screen">
         <aside className="w-56 bg-ag-navy shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
           <div className="px-5 py-4 border-b border-white/10">
-            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">{t('spaceNameSeller')}</p>
+            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">{certificationOnly ? 'Certification CIFSO 5000' : t('spaceNameSeller')}</p>
             <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
           </div>
 
-          <ViewSwitcher hasBuyer={hasBuyer} hasSeller={true} hasPartner={hasPartner} />
-          <SellerNav unreadCount={unreadCount ?? 0} assets={assets} />
+          <ViewSwitcher hasBuyer={hasBuyer} hasSeller={isSeller} hasPartner={hasPartner} />
+          <SellerNav unreadCount={unreadCount ?? 0} assets={assets} certificationOnly={certificationOnly} />
 
           <div className="mt-auto px-4 py-4 border-t border-white/10">
             <form action="/api/client/logout" method="POST">
@@ -76,7 +86,7 @@ export default async function SellerLayout({ children }: { children: React.React
         </aside>
 
         <main className="flex-1 ml-56 min-h-[calc(100vh-4rem)]">
-          <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role="seller" kycPath="/client/seller/kyc" />
+          <KycBanner kycStatus={(profile as { kyc_status?: string } | null)?.kyc_status} role={certificationOnly ? 'client' : 'seller'} kycPath="/client/seller/kyc" />
           {children}
         </main>
       </div>

@@ -8072,7 +8072,9 @@
     "pendingSeller": "You cannot yet submit an asset.",
     "pendingPartner": "You cannot yet publish your expert profile or receive client mandates.",
     "pendingCta": "Complete →",
-    "pendingSuffix": "Complete your KYC file to unlock access."
+    "pendingSuffix": "Complete your KYC file to unlock access.",
+    "pendingClient": "Identification of the legal representative is required before the Data Room opens and the CIFSO audit starts.",
+    "approvedClient": "Your Data Room is open: upload your supporting documents."
   },
   "notifications": {
     "label": "Notifications",
@@ -8178,7 +8180,8 @@
       "notifications": {
         "meta": "Notifications, Buyer Space Aegryn",
         "title": "Notifications",
-        "subtitle": "Alerts and updates related to your activity."
+        "subtitle": "Alerts and updates related to your activity.",
+        "areaLabel": "Buyer Space"
       },
       "kyc": {
         "meta": "KYC, Identity Verification, Buyer Space Aegryn",
@@ -8189,36 +8192,51 @@
         "completeHint": "Complete your KYC file to unlock access to data rooms and the PTT process.",
         "pendingUpload": "Document under review. You may submit a corrected version if needed.",
         "validatedWarn": "This document is validated. A new upload will replace the current version and restart validation.",
-        "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@boha-group.com."
+        "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@boha-group.com.",
+        "areaLabel": "Buyer Space"
       },
       "offres": {
         "meta": "My bids, Buyer Space Aegryn",
         "title": "My bids",
         "subtitle": "History and tracking of your acquisition bids.",
         "noOffres": "You have not submitted any bids yet.",
-        "exploreCatalog": "Browse the catalogue"
+        "exploreCatalog": "Browse the catalogue",
+        "areaLabel": "Buyer Space"
       },
       "offreDetail": {
         "meta": "Bid detail, Buyer Space Aegryn",
         "title": "Bid detail",
-        "back": "← Back to bids"
+        "back": "← Back to bids",
+        "areaLabel": "Buyer Space"
       },
       "newOffre": {
         "meta": "New bid, Buyer Space Aegryn",
-        "title": "Submit a bid"
+        "title": "Submit a bid",
+        "areaLabel": "Buyer Space"
       },
       "transactionDetail": {
         "meta": "Transaction, Buyer Space Aegryn",
-        "back": "← Back to transactions"
+        "back": "← Back to transactions",
+        "areaLabel": "Buyer Space"
       },
       "catalogue": {
         "meta": "Catalogue, Buyer Space Aegryn",
         "title": "Buyer catalogue",
         "subtitle": "Assets available for acquisition.",
         "noItems": "No assets available at the moment.",
-        "viewDossier": "View dossier"
+        "viewDossier": "View dossier",
+        "areaLabel": "Buyer Space"
       },
-      "kpiPublished": "Available assets"
+      "kpiPublished": "Available assets",
+      "opportunitiesLabel": "Transaction opportunities",
+      "opportunitiesTitle": "Aegryn will contact you for each qualified opportunity.",
+      "opportunitiesDesc": "Transaction opportunities are shared confidentially and individually, after a signed NDA and selection of your profile. No public access to published assets. Each qualification is handled directly by our teams.",
+      "opportunitiesNotifCta": "My alerts",
+      "opportunitiesNdaCta": "My NDA",
+      "processStep1": "Profile qualified by Aegryn",
+      "processStep2": "NDA signed",
+      "processStep3": "Opportunity shared confidentially",
+      "processStep4": "Data room granted after selection"
     },
     "seller": {
       "meta": "Dashboard, Seller Space Aegryn",
@@ -8261,7 +8279,8 @@
       "notifications": {
         "meta": "Notifications, Seller Space Aegryn",
         "title": "Notifications",
-        "subtitle": "Alerts and updates related to your activity."
+        "subtitle": "Alerts and updates related to your activity.",
+        "areaLabel": "Seller Space"
       },
       "kyc": {
         "meta": "KYC, Identity Verification, Seller Space Aegryn",
@@ -8271,29 +8290,36 @@
         "inProgress": "KYC file in progress",
         "completeHint": "Complete your KYC file to finalise your sale.",
         "pendingUpload": "Document under review. You may submit a corrected version if needed.",
-        "validatedWarn": "This document is validated. A new upload will replace the current version and restart validation."
+        "validatedWarn": "This document is validated. A new upload will replace the current version and restart validation.",
+        "areaLabel": "Seller Space",
+        "gdprNotice": "Data protection: Your documents are stored securely and processed solely within the framework of AML regulations and Swiss KYC/AML obligations. Under GDPR, you may request deletion at legal@boha-group.com."
       },
       "actifs": {
         "meta": "My assets, Seller Space Aegryn",
         "title": "My assets",
         "subtitle": "Track your assets submitted to Aegryn.",
         "noActifs": "No assets submitted yet.",
-        "submitNew": "Submit an asset"
+        "submitNew": "Submit an asset",
+        "areaLabel": "Client area",
+        "certType": "CIFSO 5000 Certification"
       },
       "actifDetail": {
         "meta": "Asset detail, Seller Space Aegryn",
-        "back": "← Back to assets"
+        "back": "← Back to assets",
+        "areaLabel": "Seller Space"
       },
       "ndaView": {
         "meta": "NDA | Seller Space Aegryn",
         "title": "Non-Disclosure Agreement",
-        "subtitle": "NDA signed as part of your sale."
+        "subtitle": "NDA signed as part of your sale.",
+        "areaLabel": "Seller Space"
       },
       "transactions": {
         "meta": "Transactions, Seller Space Aegryn",
         "title": "My transactions",
         "subtitle": "Track ongoing and past transactions.",
-        "noTransactions": "No transactions yet."
+        "noTransactions": "No transactions yet.",
+        "areaLabel": "Seller Space"
       }
     },
     "partner": {
@@ -8319,49 +8345,58 @@
       "notifications": {
         "meta": "Notifications, Partner Space Aegryn",
         "title": "Notifications",
-        "subtitle": "Alerts and updates related to your activity."
+        "subtitle": "Alerts and updates related to your activity.",
+        "areaLabel": "Partner Space"
       },
       "kyc": {
         "meta": "KYC, Identity Verification, Partner Space Aegryn",
         "title": "KYC : Identity Verification",
-        "subtitle": "Documents required for your partner profile."
+        "subtitle": "Documents required for your partner profile.",
+        "areaLabel": "Partner Space"
       },
       "mandates": {
         "meta": "Mandates, Partner Space Aegryn",
         "title": "My mandates",
         "subtitle": "Ongoing partnership mandates.",
-        "noMandates": "No mandates yet."
+        "noMandates": "No mandates yet.",
+        "areaLabel": "Partner Space"
       },
       "mandateDetail": {
         "meta": "Mandate detail, Partner Space Aegryn",
-        "back": "← Back to mandates"
+        "back": "← Back to mandates",
+        "areaLabel": "Partner Space"
       },
       "certifications": {
         "meta": "Co-signatures, Partner Space Aegryn",
         "title": "My co-signatures",
         "subtitle": "Ongoing CIFS certification missions.",
-        "noCertifications": "No co-signatures assigned yet."
+        "noCertifications": "No co-signatures assigned yet.",
+        "areaLabel": "Partner Space"
       },
       "certDetail": {
         "meta": "Co-signature detail, Partner Space Aegryn",
-        "back": "← Back to co-signatures"
+        "back": "← Back to co-signatures",
+        "areaLabel": "Partner Space"
       },
       "commissions": {
         "meta": "Commissions, Partner Space Aegryn",
         "title": "My commissions",
         "subtitle": "Commission history.",
-        "noCommissions": "No commissions recorded."
+        "noCommissions": "No commissions recorded.",
+        "areaLabel": "Partner Space"
       },
       "introductions": {
         "meta": "Introductions, Partner Space Aegryn",
         "title": "My introductions",
         "subtitle": "Assets and buyers introduced.",
-        "noIntroductions": "No introductions yet."
+        "noIntroductions": "No introductions yet.",
+        "areaLabel": "Partner Space"
       },
       "expertProfile": {
         "meta": "Expert profile, Partner Space Aegryn",
         "title": "My expert profile",
-        "subtitle": "Profile visible on the Aegryn Experts marketplace."
+        "subtitle": "Profile visible on the Aegryn Experts marketplace.",
+        "areaLabel": "Partner Space"
       },
       "subscription": {
         "meta": "Subscription : Partner Space Aegryn",
@@ -8374,12 +8409,14 @@
         "subscribe": "Subscribe",
         "manage": "Manage subscription",
         "successMsg": "Subscription activated successfully.",
-        "canceledMsg": "Payment cancelled."
+        "canceledMsg": "Payment cancelled.",
+        "areaLabel": "Partner Space"
       },
       "nda": {
         "meta": "NDA | Partner Space Aegryn",
         "title": "Non-Disclosure Agreement",
-        "subtitle": "NDA signed as part of your partnership."
+        "subtitle": "NDA signed as part of your partnership.",
+        "areaLabel": "Partner Space"
       }
     },
     "expert": {

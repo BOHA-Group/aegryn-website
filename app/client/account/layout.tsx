@@ -18,12 +18,13 @@ export default async function AccountLayout({ children }: { children: React.Reac
 
   const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
 
-  const { count: unreadCount } = await supa
-    .from('user_notifications')
-    .select('id', { count: 'exact', head: true })
-    .eq('user_id', user.id)
-    .is('read_at', null)
-    .then(r => r.error ? { count: 0 } : r)
+  const [{ count: unreadCount }, { data: byEmail }, { data: byUid }] = await Promise.all([
+    supa.from('user_notifications').select('id', { count: 'exact', head: true }).eq('user_id', user.id).is('read_at', null).then(r => r.error ? { count: 0 } : r),
+    supa.from('assets').select('id, company_name').eq('seller_email', user.email ?? '').not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
+    supa.from('assets').select('id, company_name').eq('seller_uid', user.id).not('status', 'eq', 'pending_payment').order('submitted_at', { ascending: false }),
+  ])
+  const seen = new Set<string>()
+  const assets = [...(byEmail ?? []), ...(byUid ?? [])].filter(a => !seen.has(a.id) && seen.add(a.id))
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const t = await getTranslations('clientSpace')
@@ -54,6 +55,7 @@ export default async function AccountLayout({ children }: { children: React.Reac
             roles={roles}
             unreadCount={unreadCount ?? 0}
             rootHref={rootHref}
+            assets={assets}
           />
 
           <div className="mt-auto px-4 py-4 border-t border-white/10">

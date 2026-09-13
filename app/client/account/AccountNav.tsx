@@ -2,13 +2,16 @@ import { getTranslations } from 'next-intl/server'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
+type AssetSummary = { id: string; company_name: string | null }
+
 interface Props {
   roles:        string[]
   unreadCount:  number
   rootHref:     string
+  assets?:      AssetSummary[]
 }
 
-export default async function AccountNav({ roles, unreadCount: _unreadCount, rootHref }: Props) {
+export default async function AccountNav({ roles, unreadCount: _unreadCount, rootHref, assets = [] }: Props) {
   const t = await getTranslations('clientSpace')
 
   const isClient  = roles.includes('client')
@@ -16,13 +19,24 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
   const isSeller  = roles.includes('seller')
   const isPartner = roles.includes('partner')
 
+  /* Certification CIFSO 5000 : dossiers + data room (tout client, jamais grisé) */
+  const dataRoomItems: NavGroup['items'] = assets.length === 0
+    ? [{ href: '/client/seller/actifs#data-room', label: 'Data Room', icon: 'FolderLock', disabled: true }]
+    : assets.length === 1
+      ? [{ href: `/client/seller/actifs/${assets[0].id}/documents`, label: 'Data Room', icon: 'FolderOpen' }]
+      : assets.map(a => ({ href: `/client/seller/actifs/${a.id}/documents`, label: a.company_name ?? `Dossier #${a.id.slice(0, 6)}`, icon: 'FolderOpen' as const }))
+  const certificationItems: NavGroup['items'] = isClient || isSeller ? [
+    { href: '/client/seller/actifs', label: 'Mes dossiers', icon: 'Award' },
+    ...dataRoomItems,
+  ] : []
+
   /* Espaces secondaires activés (pour les clients avec sous-rôles) */
   const subSpaceItems = []
   if (isClient && isBuyer) {
-    subSpaceItems.push({ href: '/client/buyer',   label: 'Espace Acquéreur', icon: 'ShoppingBag', locked: true })
+    subSpaceItems.push({ href: '/client/buyer',   label: 'Espace Acquéreur', icon: 'ShoppingBag' })
   }
   if (isClient && isSeller) {
-    subSpaceItems.push({ href: '/client/seller',  label: 'Espace Cédant',    icon: 'Briefcase',   locked: true })
+    subSpaceItems.push({ href: '/client/seller',  label: 'Espace Cédant',    icon: 'Briefcase' })
   }
 
   /* Pour les comptes non-client (ancienne logique) */
@@ -43,7 +57,12 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
         { href: '/client/account', label: t('navMyAccount'), icon: 'UserCircle' },
       ],
     },
-    /* Espaces de transaction (sous-rôles client, grisés) */
+    /* Certification CIFSO 5000 */
+    ...(certificationItems.length > 0 ? [{
+      label: 'Certification CIFSO 5000',
+      items: certificationItems,
+    }] : []),
+    /* Espaces de transaction (sous-rôles client) */
     ...(subSpaceItems.length > 0 ? [{
       label: 'Espaces de transaction',
       items: subSpaceItems,

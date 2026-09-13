@@ -32,17 +32,22 @@ export default function GradeSubmitForm() {
     setError(false)
     const data   = Object.fromEntries(new FormData(e.currentTarget))
     const locale = document.documentElement.lang || 'fr'
-    // Mapping formulaire grade → schéma asset API
+    const str = (k: string) => (data[k] as string | undefined)?.trim() || undefined
     const payload = {
-      fullName:    data.fullName as string,
-      email:       data.email as string,
-      assetName:   data.orgName as string,        // orgName → assetName
-      assetType:   'certification_cifso',         // type fixe pour grade
-      assetUrl:    data.orgWeb as string || '',   // orgWeb → assetUrl
-      techStack:   data.orgSector as string || '', // orgSector → techStack (temporaire)
-      status:      data.orgSize as string || '',   // orgSize → status (temporaire)
-      motivation:  data.objective as string || '', // objective → motivation
-      message:     data.message as string || '',
+      fullName:    str('fullName'),
+      email:       str('email'),
+      assetName:   str('orgName'),
+      assetType:   'certification_cifso',
+      assetUrl:    str('orgWeb') ?? '',
+      sector:      str('orgSector'),
+      orgSize:     str('orgSize'),
+      orgCountry:  str('orgCountry'),
+      role:        str('role'),
+      phone:       str('phone'),
+      objective:   str('objective'),
+      message:     str('message'),
+      pack,
+      cgvAgreed:   true,
       evaluationType: 'full_certification' as const,
       locale,
     }

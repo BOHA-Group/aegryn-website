@@ -19,6 +19,7 @@ import { createHash }                from 'crypto'
 import { createServiceClient }       from '@/lib/supabase'
 import { runGradeEngine, type GradeInput, type GradeLetter } from '@/lib/gradeEngine'
 import { getAdminUser }              from '@/lib/adminAuth'
+import { sendEmail }                 from '@/lib/sendEmail'
 
 // ── Schéma de validation Zod ──────────────────────────────────────────────────
 
@@ -84,11 +85,23 @@ const securityInputSchema = z.object({
   rgpdTransferReadiness:    z.enum(['clean', 'warning', 'blocking']).optional(),
 })
 
+const organisationInputSchema = z.object({
+  keyPersonCount:           z.number().int().min(0),
+  successionPlanDocumented: z.enum(['yes', 'no']),
+  operationalDocsComplete:  z.enum(['yes', 'no']),
+  lowKeyTalentTurnover:     z.enum(['yes', 'no']),
+  formalizedManagement:     z.enum(['yes', 'no']),
+  founderLeadsSales:        z.enum(['yes', 'no']),
+  cultureDocumented:        z.enum(['yes', 'no']),
+  independentAdvisor:       z.enum(['yes', 'no']),
+})
+
 const proofQualityDimensionSchema = z.object({
-  code:     z.enum(['declarative', 'verifiable', 'audited']),
-  ip:       z.enum(['declarative', 'verifiable', 'audited']),
-  finance:  z.enum(['declarative', 'verifiable', 'audited']),
-  security: z.enum(['declarative', 'verifiable', 'audited']),
+  code:         z.enum(['declarative', 'verifiable', 'audited']),
+  ip:           z.enum(['declarative', 'verifiable', 'audited']),
+  finance:      z.enum(['declarative', 'verifiable', 'audited']),
+  security:     z.enum(['declarative', 'verifiable', 'audited']),
+  organisation: z.enum(['declarative', 'verifiable', 'audited']).optional(),
 })
 
 const bodySchema = z.object({
@@ -99,6 +112,7 @@ const bodySchema = z.object({
     ip:             ipInputSchema,
     finance:        financeInputSchema,
     security:       securityInputSchema,
+    organisation:   organisationInputSchema,
     proofQualities: proofQualityDimensionSchema.optional(),
   }),
   assessmentId:    z.string().uuid().optional(),
@@ -129,10 +143,8 @@ export async function POST(
   }
 
   const tokenOk = adminToken && body.token === adminToken
-  if (!tokenOk) {
-    const adminUser = await getAdminUser()
-    if (!adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
-  }
+  const adminUser = await getAdminUser()
+  if (!tokenOk && !adminUser) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
 
   const supa = createServiceClient()
 
@@ -141,14 +153,22 @@ export async function POST(
     .from('assets').select('id').eq('id', assetId).single()
   if (!asset) return NextResponse.json({ error: 'asset_not_found' }, { status: 404 })
 
-  // ── Récupérer l'admin_id via le token Supabase auth ─────────────────────
-  const authHeader = req.headers.get('authorization') ?? ''
-  const jwt = authHeader.replace(/^Bearer\s+/i, '').trim()
-  let adminId: string = '00000000-0000-0000-0000-000000000000'
-  if (jwt) {
-    const { data: { user } } = await supa.auth.getUser(jwt)
-    if (user) adminId = user.id
+  // ── admin_id (FK auth.users, NOT NULL) : session admin (cookie), sinon Bearer JWT,
+  //    sinon premier compte admin (mode token machine) ────────────────────────
+  let adminId: string | null = adminUser?.id ?? null
+  if (!adminId) {
+    const jwt = (req.headers.get('authorization') ?? '').replace(/^Bearer\s+/i, '').trim()
+    if (jwt) {
+      const { data: { user } } = await supa.auth.getUser(jwt)
+      if (user) adminId = user.id
+    }
   }
+  if (!adminId) {
+    const { data: fallbackAdmin } = await supa
+      .from('profiles').select('id').contains('roles', ['admin']).limit(1).maybeSingle()
+    adminId = fallbackAdmin?.id ?? null
+  }
+  if (!adminId) return NextResponse.json({ error: 'no_admin_identity' }, { status: 401 })
 
   // ── ACTION: compute ──────────────────────────────────────────────────────
   if (body.action === 'compute') {
@@ -206,7 +226,7 @@ export async function POST(
         public_rationale:    result.publicRationale,
         status:              'draft',
         input_hash:          inputHash,
-        engine_analyst_id:   adminId !== '00000000-0000-0000-0000-000000000000' ? adminId : null,
+        engine_analyst_id:   adminId,
         // TRS + recommendations — persistance Sprint 4 (V1)
         trs:                 result.trs,
         trs_reasons:         result.trsReasons,
@@ -258,7 +278,7 @@ export async function POST(
         public_rationale:    body.publicRationale ?? undefined,
         status:              'validated',
         validated_at:        new Date().toISOString(),
-        grade_validator_id:  adminId !== '00000000-0000-0000-0000-000000000000' ? adminId : null,
+        grade_validator_id:  adminId,
       })
       .eq('id', body.assessmentId)
 
@@ -312,9 +332,19 @@ export async function POST(
     // C1-a : récupérer kyc_validated + mandate_signed + asking_price
     const { data: assetFull } = await supa
       .from('assets')
-      .select('kyc_validated, mandate_signed, asking_price')
+      .select('asking_price, status, company_name, seller_name, seller_email, seller_uid')
       .eq('id', assetId)
       .maybeSingle()
+
+    // KYC vendeur (profiles.kyc_status) + mandat signé (mandates.mandate_signed_at)
+    const [{ data: sellerProfile }, { count: signedMandates }] = await Promise.all([
+      assetFull?.seller_uid
+        ? supa.from('profiles').select('kyc_status').eq('id', assetFull.seller_uid).maybeSingle()
+        : assetFull?.seller_email
+          ? supa.from('profiles').select('kyc_status').eq('email', assetFull.seller_email).maybeSingle()
+          : Promise.resolve({ data: null }),
+      supa.from('mandates').select('id', { count: 'exact', head: true }).eq('asset_id', assetId).not('mandate_signed_at', 'is', null),
+    ])
 
     // C1-b : documents bloquants manquants dans la data room
     const { count: blockingCount } = await supa
@@ -326,8 +356,8 @@ export async function POST(
 
     const gradeOk    = transactionReadyGrades.includes(assessment.final_grade)
     const trsOk      = transactionReadyTrs.includes(assessment.trs ?? '')
-    const kycOk      = assetFull?.kyc_validated === true
-    const mandateOk  = assetFull?.mandate_signed === true
+    const kycOk      = sellerProfile?.kyc_status === 'approved'
+    const mandateOk  = (signedMandates ?? 0) > 0
     const docsOk     = (blockingCount ?? 1) === 0
     const priceOk    = assetFull?.asking_price != null
 
@@ -350,13 +380,20 @@ export async function POST(
       ? { estimatedGrade: 'b', actions: assessment.recommendations }
       : null
 
+    /* Statut dossier : le grade certifié rend le dossier "graded" (visible client : fiche de grade,
+       rapport, feuille de route). Les statuts aval (published/sold) sont conservés. */
+    const keepStatus = ['published', 'sold', 'withdrawn'].includes(assetFull?.status ?? '')
+    const now = new Date().toISOString()
+
     const { error: assetErr } = await supa
       .from('assets')
       .update({
         aeg_grade:              assessment.final_grade,
         official_grade:         GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade,
         public_summary:         assessment.public_rationale ?? undefined,
-        published_at:           new Date().toISOString(),
+        graded_at:              now,
+        published_at:           now,
+        ...(!keepStatus && !preGradeActions ? { status: 'graded' } : {}),
         // 5B
         trs:                    assessment.trs ?? null,
         auction_ready:          transactionReady,
@@ -372,6 +409,55 @@ export async function POST(
       .eq('id', assetId)
 
     if (assetErr) return NextResponse.json({ error: assetErr.message }, { status: 500 })
+
+    /* ── Retour au client demandeur : notification in-app + email avec les livrables ── */
+    const symbol   = GRADE_TO_SYMBOL[assessment.final_grade] ?? assessment.final_grade
+    const orgName  = assetFull?.company_name ?? `Dossier ${assetId.slice(0, 8)}`
+    const dossier  = `/client/seller/actifs/${assetId}`
+    const siteUrl  = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
+    const title    = preGradeActions
+      ? `Pre-Grade émis pour ${orgName}`
+      : `Certification CIFSO 5000 : grade ${symbol} attribué à ${orgName}`
+    const bodyTxt  = preGradeActions
+      ? 'Votre dossier ne remplit pas encore les conditions de certification. Un plan d\'actions prioritaires est disponible dans votre espace.'
+      : `Votre certificat, le rapport détaillé par dimension (C, I, F, S, O), la feuille de route et le résumé certifié sont disponibles dans votre espace client. Validité : 12 mois. Contestation possible sous 15 jours.`
+
+    let clientUid: string | null = assetFull?.seller_uid ?? null
+    if (!clientUid && assetFull?.seller_email) {
+      const { data: prof } = await supa.from('profiles').select('id').eq('email', assetFull.seller_email).maybeSingle()
+      clientUid = prof?.id ?? null
+    }
+
+    const [notifRes] = await Promise.allSettled([
+      clientUid
+        ? supa.from('user_notifications').insert({
+            user_id: clientUid,
+            type:    'certification_update',
+            title,
+            body:    bodyTxt,
+            link:    dossier,
+            payload: { asset_id: assetId, grade: assessment.final_grade, trs: assessment.trs ?? null, pre_grade: !!preGradeActions },
+          })
+        : Promise.resolve(),
+      assetFull?.seller_email
+        ? sendEmail(
+            assetFull.seller_email,
+            `Aegryn. ${title}`,
+            `<p>Bonjour ${assetFull.seller_name ?? ''},</p>
+<p>${bodyTxt}</p>
+<ul>
+  <li>Grade : <strong>${symbol}</strong>${assessment.final_score != null ? ` (${assessment.final_score}/100)` : ''}</li>
+  ${assessment.public_rationale ? `<li>Résumé certifié : ${assessment.public_rationale}</li>` : ''}
+</ul>
+<p><a href="${siteUrl}${dossier}">Consulter le dossier et télécharger la fiche de grade</a></p>
+<p>Aegryn. Organisme de certification indépendant. Suisse.</p>`,
+            'grade-publish',
+          )
+        : Promise.resolve(),
+    ])
+    if (notifRes.status === 'fulfilled' && notifRes.value && 'error' in notifRes.value && notifRes.value.error) {
+      console.error('[grade-engine/publish] notification', notifRes.value.error)
+    }
 
     return NextResponse.json({ ok: true, grade: assessment.final_grade, transactionReady, transactionReadyBlockers })
   }

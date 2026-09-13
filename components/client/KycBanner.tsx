@@ -8,7 +8,7 @@ type KycStatus = 'pending' | 'in_review' | 'approved' | 'rejected' | string | nu
 
 type Props = {
   kycStatus: KycStatus
-  role: 'buyer' | 'seller' | 'partner'
+  role: 'buyer' | 'seller' | 'partner' | 'client'
   kycPath: string
 }
 
@@ -18,6 +18,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
   const approvedMsg =
     role === 'buyer'   ? t('approvedBuyer')
     : role === 'seller'  ? t('approvedSeller')
+    : role === 'client'  ? t('approvedClient')
     : t('approvedPartner')
 
   if (kycStatus === 'approved') {
@@ -62,6 +63,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
   const reason =
     role === 'buyer'   ? t('pendingBuyer')
     : role === 'seller'  ? t('pendingSeller')
+    : role === 'client'  ? t('pendingClient')
     : t('pendingPartner')
 
   return (

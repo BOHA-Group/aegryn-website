@@ -8087,7 +8087,9 @@
     "pendingSeller": "U kunt nog geen actief indienen.",
     "pendingPartner": "U kunt uw expertprofiel nog niet publiceren of klantmandaten ontvangen.",
     "pendingCta": "Voltooien →",
-    "pendingSuffix": "Voltooi uw KYC-dossier om toegang te ontgrendelen."
+    "pendingSuffix": "Voltooi uw KYC-dossier om toegang te ontgrendelen.",
+    "pendingClient": "Identificatie van de wettelijke vertegenwoordiger is vereist voordat de Data Room wordt geopend en de CIFSO-audit start.",
+    "approvedClient": "Uw Data Room is geopend: upload uw bewijsstukken."
   },
   "notifications": {
     "label": "Notificaties",
@@ -8193,7 +8195,8 @@
       "notifications": {
         "meta": "Notificaties, Aegryn-kopersruimte",
         "title": "Notificaties",
-        "subtitle": "Alerts en updates over uw activiteit."
+        "subtitle": "Alerts en updates over uw activiteit.",
+        "areaLabel": "Kopersruimte"
       },
       "kyc": {
         "meta": "KYC, identiteitsverificatie, Aegryn-kopersruimte",
@@ -8204,36 +8207,51 @@
         "completeHint": "Voltooi uw KYC-dossier om toegang tot de datarooms en het PTT-proces te ontgrendelen.",
         "pendingUpload": "Document in beoordeling. U kunt indien nodig een gecorrigeerde versie indienen.",
         "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie en start de validatie opnieuw.",
-        "gdprNotice": "Gegevensbescherming: uw documenten worden veilig opgeslagen en uitsluitend verwerkt in het kader van AML-regelgeving en Zwitserse KYC/AML-verplichtingen. Onder de AVG kunt u verwijdering aanvragen via legal@boha-group.com."
+        "gdprNotice": "Gegevensbescherming: uw documenten worden veilig opgeslagen en uitsluitend verwerkt in het kader van AML-regelgeving en Zwitserse KYC/AML-verplichtingen. Onder de AVG kunt u verwijdering aanvragen via legal@boha-group.com.",
+        "areaLabel": "Kopersruimte"
       },
       "offres": {
         "meta": "Mijn biedingen, Aegryn-kopersruimte",
         "title": "Mijn biedingen",
         "subtitle": "Historiek en opvolging van uw acquisitiebiedingen.",
         "noOffres": "U heeft nog geen biedingen ingediend.",
-        "exploreCatalog": "Catalogus bekijken"
+        "exploreCatalog": "Catalogus bekijken",
+        "areaLabel": "Kopersruimte"
       },
       "offreDetail": {
         "meta": "Biedingsdetail, Aegryn-kopersruimte",
         "title": "Biedingsdetail",
-        "back": "← Terug naar biedingen"
+        "back": "← Terug naar biedingen",
+        "areaLabel": "Kopersruimte"
       },
       "newOffre": {
         "meta": "Nieuwe bieding, Aegryn-kopersruimte",
-        "title": "Een bod indienen"
+        "title": "Een bod indienen",
+        "areaLabel": "Kopersruimte"
       },
       "transactionDetail": {
         "meta": "Transactie, Aegryn-kopersruimte",
-        "back": "← Terug naar transacties"
+        "back": "← Terug naar transacties",
+        "areaLabel": "Kopersruimte"
       },
       "catalogue": {
         "meta": "Catalogus, Aegryn-kopersruimte",
         "title": "Koperscatalogus",
         "subtitle": "Activa beschikbaar voor acquisitie.",
         "noItems": "Momenteel geen activa beschikbaar.",
-        "viewDossier": "Dossier bekijken"
+        "viewDossier": "Dossier bekijken",
+        "areaLabel": "Kopersruimte"
       },
-      "kpiPublished": "Beschikbare activa"
+      "kpiPublished": "Beschikbare activa",
+      "opportunitiesLabel": "Transactiemogelijkheden",
+      "opportunitiesTitle": "Aegryn neemt contact met u op voor elke gekwalificeerde kans.",
+      "opportunitiesDesc": "Transactiemogelijkheden worden vertrouwelijk en individueel gedeeld, na een ondertekende NDA en selectie van uw profiel. Geen publieke toegang tot gepubliceerde activa. Elke kwalificatie wordt rechtstreeks door onze teams uitgevoerd.",
+      "opportunitiesNotifCta": "Mijn meldingen",
+      "opportunitiesNdaCta": "Mijn NDA",
+      "processStep1": "Profiel gekwalificeerd door Aegryn",
+      "processStep2": "NDA ondertekend",
+      "processStep3": "Kans vertrouwelijk gedeeld",
+      "processStep4": "Data room toegekend na selectie"
     },
     "seller": {
       "meta": "Dashboard, Aegryn-verkopersruimte",
@@ -8276,7 +8294,8 @@
       "notifications": {
         "meta": "Notificaties, Aegryn-verkopersruimte",
         "title": "Notificaties",
-        "subtitle": "Alerts en updates over uw activiteit."
+        "subtitle": "Alerts en updates over uw activiteit.",
+        "areaLabel": "Verkopersruimte"
       },
       "kyc": {
         "meta": "KYC, identiteitsverificatie, Aegryn-verkopersruimte",
@@ -8286,29 +8305,36 @@
         "inProgress": "KYC-dossier in behandeling",
         "completeHint": "Voltooi uw KYC-dossier om uw verkoop af te ronden.",
         "pendingUpload": "Document in beoordeling. U kunt indien nodig een gecorrigeerde versie indienen.",
-        "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie en start de validatie opnieuw."
+        "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie en start de validatie opnieuw.",
+        "areaLabel": "Verkopersruimte",
+        "gdprNotice": "Gegevensbescherming: uw documenten worden veilig opgeslagen en uitsluitend verwerkt in het kader van AML-regelgeving en Zwitserse KYC/AML-verplichtingen. Onder de AVG kunt u verwijdering aanvragen via legal@boha-group.com."
       },
       "actifs": {
         "meta": "Mijn activa, Aegryn-verkopersruimte",
         "title": "Mijn activa",
         "subtitle": "Volg uw bij Aegryn ingediende activa.",
         "noActifs": "Nog geen activa ingediend.",
-        "submitNew": "Een actief indienen"
+        "submitNew": "Een actief indienen",
+        "areaLabel": "Klantenruimte",
+        "certType": "CIFSO 5000-certificering"
       },
       "actifDetail": {
         "meta": "Assetdetail, Aegryn-verkopersruimte",
-        "back": "← Terug naar activa"
+        "back": "← Terug naar activa",
+        "areaLabel": "Verkopersruimte"
       },
       "ndaView": {
         "meta": "NDA | Aegryn-verkopersruimte",
         "title": "Geheimhoudingsovereenkomst",
-        "subtitle": "NDA ondertekend in het kader van uw verkoop."
+        "subtitle": "NDA ondertekend in het kader van uw verkoop.",
+        "areaLabel": "Verkopersruimte"
       },
       "transactions": {
         "meta": "Transacties, Aegryn-verkopersruimte",
         "title": "Mijn transacties",
         "subtitle": "Volg lopende en afgesloten transacties.",
-        "noTransactions": "Nog geen transacties."
+        "noTransactions": "Nog geen transacties.",
+        "areaLabel": "Verkopersruimte"
       }
     },
     "partner": {
@@ -8334,49 +8360,58 @@
       "notifications": {
         "meta": "Notificaties, Aegryn-partnerruimte",
         "title": "Notificaties",
-        "subtitle": "Alerts en updates over uw activiteit."
+        "subtitle": "Alerts en updates over uw activiteit.",
+        "areaLabel": "Partnerruimte"
       },
       "kyc": {
         "meta": "KYC, identiteitsverificatie, Aegryn-partnerruimte",
         "title": "KYC : identiteitsverificatie",
-        "subtitle": "Documenten vereist voor uw partnerprofiel."
+        "subtitle": "Documenten vereist voor uw partnerprofiel.",
+        "areaLabel": "Partnerruimte"
       },
       "mandates": {
         "meta": "Mandaten, Aegryn-partnerruimte",
         "title": "Mijn mandaten",
         "subtitle": "Lopende partnerschapsmandaten.",
-        "noMandates": "Nog geen mandaten."
+        "noMandates": "Nog geen mandaten.",
+        "areaLabel": "Partnerruimte"
       },
       "mandateDetail": {
         "meta": "Mandaatdetail, Aegryn-partnerruimte",
-        "back": "← Terug naar mandaten"
+        "back": "← Terug naar mandaten",
+        "areaLabel": "Partnerruimte"
       },
       "certifications": {
         "meta": "Mede-ondertekeningen, Aegryn-partnerruimte",
         "title": "Mijn mede-ondertekeningen",
         "subtitle": "Lopende CIFS-certificeringsopdrachten.",
-        "noCertifications": "Nog geen mede-ondertekeningen toegewezen."
+        "noCertifications": "Nog geen mede-ondertekeningen toegewezen.",
+        "areaLabel": "Partnerruimte"
       },
       "certDetail": {
         "meta": "Detail mede-ondertekening, Aegryn-partnerruimte",
-        "back": "← Terug naar mede-ondertekeningen"
+        "back": "← Terug naar mede-ondertekeningen",
+        "areaLabel": "Partnerruimte"
       },
       "commissions": {
         "meta": "Commissies, Aegryn-partnerruimte",
         "title": "Mijn commissies",
         "subtitle": "Commissiehistoriek.",
-        "noCommissions": "Geen commissies geregistreerd."
+        "noCommissions": "Geen commissies geregistreerd.",
+        "areaLabel": "Partnerruimte"
       },
       "introductions": {
         "meta": "Introducties, Aegryn-partnerruimte",
         "title": "Mijn introducties",
         "subtitle": "Geïntroduceerde activa en kopers.",
-        "noIntroductions": "Nog geen introducties."
+        "noIntroductions": "Nog geen introducties.",
+        "areaLabel": "Partnerruimte"
       },
       "expertProfile": {
         "meta": "Expertprofiel, Aegryn-partnerruimte",
         "title": "Mijn expertprofiel",
-        "subtitle": "Profiel zichtbaar op de Aegryn Experts-marktplaats."
+        "subtitle": "Profiel zichtbaar op de Aegryn Experts-marktplaats.",
+        "areaLabel": "Partnerruimte"
       },
       "subscription": {
         "meta": "Abonnement : Aegryn-partnerruimte",
@@ -8389,12 +8424,14 @@
         "subscribe": "Abonneren",
         "manage": "Abonnement beheren",
         "successMsg": "Abonnement succesvol geactiveerd.",
-        "canceledMsg": "Betaling geannuleerd."
+        "canceledMsg": "Betaling geannuleerd.",
+        "areaLabel": "Partnerruimte"
       },
       "nda": {
         "meta": "NDA | Aegryn-partnerruimte",
         "title": "Geheimhoudingsovereenkomst",
-        "subtitle": "NDA ondertekend in het kader van uw partnerschap."
+        "subtitle": "NDA ondertekend in het kader van uw partnerschap.",
+        "areaLabel": "Partnerruimte"
       }
     },
     "expert": {

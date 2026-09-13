@@ -8123,7 +8123,9 @@
     "pendingSeller": "Vous ne pouvez pas encore soumettre d'actif.",
     "pendingPartner": "Vous ne pouvez pas encore publier votre fiche profil expert ni recevoir de mandats clients.",
     "pendingCta": "Compléter →",
-    "pendingSuffix": "Complétez votre dossier KYC pour débloquer l'accès."
+    "pendingSuffix": "Complétez votre dossier KYC pour débloquer l'accès.",
+    "pendingClient": "L'identification du représentant légal est requise avant l'ouverture de la Data Room et le démarrage de l'audit CIFSO.",
+    "approvedClient": "Votre Data Room est ouverte : déposez vos pièces justificatives."
   },
   "notifications": {
     "label": "Notifications",
@@ -8229,7 +8231,8 @@
       "notifications": {
         "meta": "Notifications | Espace Acquéreur Aegryn",
         "title": "Notifications",
-        "subtitle": "Alertes et mises à jour liées à votre activité."
+        "subtitle": "Alertes et mises à jour liées à votre activité.",
+        "areaLabel": "Espace Acquéreur"
       },
       "kyc": {
         "meta": "KYC, Vérification d'identité, Espace Acquéreur Aegryn",
@@ -8240,36 +8243,51 @@
         "completeHint": "Complétez votre dossier KYC pour débloquer l'accès aux data rooms et au processus PTT.",
         "pendingUpload": "Document en cours d'examen. Vous pouvez soumettre une version corrigée si nécessaire.",
         "validatedWarn": "Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation.",
-        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@boha-group.com."
+        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@boha-group.com.",
+        "areaLabel": "Espace Acquéreur"
       },
       "offres": {
         "meta": "Mes offres | Espace Acquéreur Aegryn",
         "title": "Mes offres",
         "subtitle": "Historique et suivi de vos offres d'acquisition.",
         "noOffres": "Vous n'avez pas encore soumis d'offre.",
-        "exploreCatalog": "Explorer le catalogue"
+        "exploreCatalog": "Explorer le catalogue",
+        "areaLabel": "Espace Acquéreur"
       },
       "offreDetail": {
         "meta": "Détail offre | Espace Acquéreur Aegryn",
         "title": "Détail de l'offre",
-        "back": "← Retour aux offres"
+        "back": "← Retour aux offres",
+        "areaLabel": "Espace Acquéreur"
       },
       "newOffre": {
         "meta": "Nouvelle offre | Espace Acquéreur Aegryn",
-        "title": "Soumettre une offre"
+        "title": "Soumettre une offre",
+        "areaLabel": "Espace Acquéreur"
       },
       "transactionDetail": {
         "meta": "Transaction | Espace Acquéreur Aegryn",
-        "back": "← Retour aux transactions"
+        "back": "← Retour aux transactions",
+        "areaLabel": "Espace Acquéreur"
       },
       "catalogue": {
         "meta": "Catalogue | Espace Acquéreur Aegryn",
         "title": "Catalogue acquéreur",
         "subtitle": "Actifs disponibles pour acquisition.",
         "noItems": "Aucun actif disponible pour le moment.",
-        "viewDossier": "Voir le dossier"
+        "viewDossier": "Voir le dossier",
+        "areaLabel": "Espace Acquéreur"
       },
-      "kpiPublished": "Actifs disponibles"
+      "kpiPublished": "Actifs disponibles",
+      "opportunitiesLabel": "Opportunités de transaction",
+      "opportunitiesTitle": "Vous serez contacté par Aegryn pour chaque opportunité qualifiée.",
+      "opportunitiesDesc": "Les opportunités de transaction sont transmises de façon confidentielle et individuelle, après NDA signé et sélection de votre profil. Aucun accès public aux actifs publiés. Chaque qualification est menée directement par nos équipes.",
+      "opportunitiesNotifCta": "Mes alertes",
+      "opportunitiesNdaCta": "Mon NDA",
+      "processStep1": "Profil qualifié par Aegryn",
+      "processStep2": "NDA signé",
+      "processStep3": "Opportunité transmise confidentiellement",
+      "processStep4": "Data room accordée après sélection"
     },
     "seller": {
       "meta": "Tableau de bord | Espace Cédant Aegryn",
@@ -8312,7 +8330,8 @@
       "notifications": {
         "meta": "Notifications | Espace Cédant Aegryn",
         "title": "Notifications",
-        "subtitle": "Alertes et mises à jour liées à votre activité."
+        "subtitle": "Alertes et mises à jour liées à votre activité.",
+        "areaLabel": "Espace Cédant"
       },
       "kyc": {
         "meta": "KYC, Vérification d'identité, Espace Cédant Aegryn",
@@ -8322,29 +8341,36 @@
         "inProgress": "Dossier KYC en cours",
         "completeHint": "Complétez votre dossier KYC pour finaliser votre cession.",
         "pendingUpload": "Document en cours d'examen. Vous pouvez soumettre une version corrigée si nécessaire.",
-        "validatedWarn": "Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation."
+        "validatedWarn": "Ce document est validé. Un nouveau dépôt remplacera la version actuelle et relancera la validation.",
+        "areaLabel": "Espace Cédant",
+        "gdprNotice": "Protection des données : Vos documents sont stockés de manière sécurisée et traités uniquement dans le cadre de la réglementation LBA et des obligations KYC/AML suisses. Conformément au RGPD, vous pouvez demander leur suppression à legal@boha-group.com."
       },
       "actifs": {
         "meta": "Mes actifs | Espace Cédant Aegryn",
         "title": "Mes actifs",
         "subtitle": "Suivi de vos actifs soumis à Aegryn.",
         "noActifs": "Aucun actif soumis pour le moment.",
-        "submitNew": "Soumettre un actif"
+        "submitNew": "Soumettre un actif",
+        "areaLabel": "Espace client",
+        "certType": "Certification CIFSO 5000"
       },
       "actifDetail": {
         "meta": "Détail actif | Espace Cédant Aegryn",
-        "back": "← Retour aux actifs"
+        "back": "← Retour aux actifs",
+        "areaLabel": "Espace Cédant"
       },
       "ndaView": {
         "meta": "NDA | Espace Cédant Aegryn",
         "title": "Accord de confidentialité",
-        "subtitle": "NDA signé dans le cadre de votre cession."
+        "subtitle": "NDA signé dans le cadre de votre cession.",
+        "areaLabel": "Espace Cédant"
       },
       "transactions": {
         "meta": "Transactions | Espace Cédant Aegryn",
         "title": "Mes transactions",
         "subtitle": "Suivi des transactions en cours et passées.",
-        "noTransactions": "Aucune transaction pour le moment."
+        "noTransactions": "Aucune transaction pour le moment.",
+        "areaLabel": "Espace Cédant"
       }
     },
     "partner": {
@@ -8370,49 +8396,58 @@
       "notifications": {
         "meta": "Notifications | Espace Partenaire Aegryn",
         "title": "Notifications",
-        "subtitle": "Alertes et mises à jour liées à votre activité."
+        "subtitle": "Alertes et mises à jour liées à votre activité.",
+        "areaLabel": "Espace Partenaire"
       },
       "kyc": {
         "meta": "KYC, Vérification d'identité, Espace Partenaire Aegryn",
         "title": "KYC : Vérification d'identité",
-        "subtitle": "Documents requis pour votre profil partenaire."
+        "subtitle": "Documents requis pour votre profil partenaire.",
+        "areaLabel": "Espace Partenaire"
       },
       "mandates": {
         "meta": "Mandats | Espace Partenaire Aegryn",
         "title": "Mes mandats",
         "subtitle": "Mandats de partenariat en cours.",
-        "noMandates": "Aucun mandat pour le moment."
+        "noMandates": "Aucun mandat pour le moment.",
+        "areaLabel": "Espace Partenaire"
       },
       "mandateDetail": {
         "meta": "Détail mandat | Espace Partenaire Aegryn",
-        "back": "← Retour aux mandats"
+        "back": "← Retour aux mandats",
+        "areaLabel": "Espace Partenaire"
       },
       "certifications": {
         "meta": "Co-signatures | Espace Partenaire Aegryn",
         "title": "Mes co-signatures",
         "subtitle": "Missions de certification CIFS en cours.",
-        "noCertifications": "Aucune co-signature assignée pour le moment."
+        "noCertifications": "Aucune co-signature assignée pour le moment.",
+        "areaLabel": "Espace Partenaire"
       },
       "certDetail": {
         "meta": "Détail co-signature | Espace Partenaire Aegryn",
-        "back": "← Retour aux co-signatures"
+        "back": "← Retour aux co-signatures",
+        "areaLabel": "Espace Partenaire"
       },
       "commissions": {
         "meta": "Commissions | Espace Partenaire Aegryn",
         "title": "Mes commissions",
         "subtitle": "Historique des commissions perçues.",
-        "noCommissions": "Aucune commission enregistrée."
+        "noCommissions": "Aucune commission enregistrée.",
+        "areaLabel": "Espace Partenaire"
       },
       "introductions": {
         "meta": "Introductions | Espace Partenaire Aegryn",
         "title": "Mes introductions",
         "subtitle": "Actifs et acquéreurs introduits.",
-        "noIntroductions": "Aucune introduction pour le moment."
+        "noIntroductions": "Aucune introduction pour le moment.",
+        "areaLabel": "Espace Partenaire"
       },
       "expertProfile": {
         "meta": "Fiche expert | Espace Partenaire Aegryn",
         "title": "Ma fiche expert",
-        "subtitle": "Profil visible sur la marketplace Aegryn Experts."
+        "subtitle": "Profil visible sur la marketplace Aegryn Experts.",
+        "areaLabel": "Espace Partenaire"
       },
       "subscription": {
         "meta": "Abonnement | Espace Partenaire Aegryn",
@@ -8425,12 +8460,14 @@
         "subscribe": "Souscrire",
         "manage": "Gérer l'abonnement",
         "successMsg": "Abonnement activé avec succès.",
-        "canceledMsg": "Paiement annulé."
+        "canceledMsg": "Paiement annulé.",
+        "areaLabel": "Espace Partenaire"
       },
       "nda": {
         "meta": "NDA | Espace Partenaire Aegryn",
         "title": "Accord de confidentialité",
-        "subtitle": "NDA signé dans le cadre de votre partenariat."
+        "subtitle": "NDA signé dans le cadre de votre partenariat.",
+        "areaLabel": "Espace Partenaire"
       }
     },
     "expert": {

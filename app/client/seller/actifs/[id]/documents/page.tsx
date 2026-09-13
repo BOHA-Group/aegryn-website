@@ -34,19 +34,14 @@ export default async function SellerDataRoomPage({ params }: Props) {
 
   const { data: asset } = await supa
     .from('assets')
-    .select('id, name, status, seller_email')
+    .select('id, company_name, status, seller_email, seller_uid')
     .eq('id', id)
-    .single() as { data: { id: string; name: string; status: string; seller_email: string } | null }
+    .single() as { data: { id: string; company_name: string | null; status: string; seller_email: string; seller_uid: string | null } | null }
 
   if (!asset) notFound()
 
-  const { data: profile } = await supa
-    .from('profiles')
-    .select('email')
-    .eq('id', user.id)
-    .single() as { data: { email: string } | null }
-
-  if (!profile || profile.email !== asset.seller_email) redirect('/client/seller/actifs')
+  const isOwner = asset.seller_uid === user.id || (!!asset.seller_email && asset.seller_email === user.email)
+  if (!isOwner) redirect('/client/seller/actifs')
 
   /* Catalogue maître */
   const { data: catalogRows } = await supa
@@ -87,7 +82,7 @@ export default async function SellerDataRoomPage({ params }: Props) {
             <span className="text-gray-200">|</span>
             <div>
               <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Data Room</p>
-              <p className="text-[13px] font-semibold text-gray-900">{asset.name}</p>
+              <p className="text-[13px] font-semibold text-gray-900">{asset.company_name ?? `Dossier #${asset.id.slice(0, 8)}`}</p>
             </div>
           </div>
           <Link

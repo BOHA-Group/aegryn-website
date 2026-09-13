@@ -9,7 +9,7 @@ export default async function PartnerNav({ unreadCount: _unreadCount }: { unread
     {
       label: t('navGroupOverview'),
       items: [
-        { href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard', locked: true },
+        { href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard' },
       ],
     },
     {
@@ -21,17 +21,17 @@ export default async function PartnerNav({ unreadCount: _unreadCount }: { unread
     {
       label: t('navGroupActivity'),
       items: [
-        { href: '/client/partner/certifications', label: t('navCosigning'),    icon: 'Award',     locked: true },
-        { href: '/client/partner/introductions',  label: t('navIntroductions'), icon: 'Users',     locked: true },
-        { href: '/client/partner/mandates',       label: t('navMandates'),      icon: 'Briefcase', locked: true },
+        { href: '/client/partner/certifications', label: t('navCosigning'),    icon: 'Award' },
+        { href: '/client/partner/introductions',  label: t('navIntroductions'), icon: 'Users' },
+        { href: '/client/partner/mandates',       label: t('navMandates'),      icon: 'Briefcase' },
       ],
     },
     {
       label: t('navGroupAccount'),
       items: [
-        { href: '/client/partner/kyc',           label: t('navKyc'),           icon: 'ShieldCheck', locked: true },
-        { href: '/client/partner/nda',           label: t('navPartnerNda'),    icon: 'FileText',    locked: true },
-        { href: '/client/partner/notifications', label: t('navNotifications'), icon: 'Bell',        locked: true },
+        { href: '/client/partner/kyc',           label: t('navKyc'),           icon: 'ShieldCheck' },
+        { href: '/client/partner/nda',           label: t('navPartnerNda'),    icon: 'FileText' },
+        { href: '/client/partner/notifications', label: t('navNotifications'), icon: 'Bell' },
         { href: '/client/partner/account',       label: t('navMyAccount'),     icon: 'UserCircle'  },
       ],
     },

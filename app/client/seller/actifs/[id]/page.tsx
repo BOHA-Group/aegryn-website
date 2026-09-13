@@ -19,6 +19,13 @@ const STATUS_STEPS = [
   { key: 'sold',         label: 'Vendu',               desc: 'La transaction a été clôturée avec succès.' },
 ]
 
+/* Dossier de certification CIFSO 5000 (hors transaction) : parcours brochure */
+const CERTIFICATION_STEPS = [
+  { key: 'submitted',    label: 'Demande reçue',        desc: 'Pré-qualification sous 5 jours ouvrés, devis et NDA.' },
+  { key: 'under_review', label: 'Audit CIFSO en cours', desc: 'Pièces vérifiées, analyse sur les cinq dimensions, revue indépendante.' },
+  { key: 'graded',       label: 'Certifié',             desc: 'Certificat, rapport et feuille de route disponibles. Validité 12 mois.' },
+]
+
 function gradeColor(g: string) {
   return g === '★'   ? 'text-emerald-600 border-emerald-200 bg-emerald-50'
     : g === 'AAA'    ? 'text-blue-700 border-blue-200 bg-blue-50'
@@ -63,7 +70,9 @@ export default async function SellerAssetDetailPage({
 
   if (!isOwner) notFound()
 
-  const stepIdx     = STATUS_STEPS.findIndex(s => s.key === asset.status)
+  const isCertification = asset.asset_type === 'certification_cifso'
+  const steps       = isCertification ? CERTIFICATION_STEPS : STATUS_STEPS
+  const stepIdx     = steps.findIndex(s => s.key === asset.status)
   const isWithdrawn = asset.status === 'withdrawn'
 
   const [
@@ -130,7 +139,7 @@ export default async function SellerAssetDetailPage({
             </h1>
             {asset.asset_type && (
               <span className="rounded-lg font-mono text-[9px] uppercase tracking-[0.18em] text-gray-400 border border-gray-200 px-2 py-0.5">
-                {asset.asset_type}
+                {isCertification ? 'Certification CIFSO 5000' : asset.asset_type}
               </span>
             )}
           </div>
@@ -154,12 +163,12 @@ export default async function SellerAssetDetailPage({
         <div className="bg-white border border-gray-200 p-6 mb-6">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-4">Avancement du dossier</p>
           <div className="flex items-start">
-            {STATUS_STEPS.map((step, i) => {
+            {steps.map((step, i) => {
               const done    = i < stepIdx
               const current = i === stepIdx
               return (
                 <div key={step.key} className="flex-1 flex flex-col items-center relative">
-                  {i < STATUS_STEPS.length - 1 && (
+                  {i < steps.length - 1 && (
                     <div className={`absolute top-3 left-1/2 w-full h-px ${done ? 'bg-ag-apex' : 'bg-gray-200'}`} />
                   )}
                   <div className={`relative z-10 w-6 h-6 rounded-full border-2 flex items-center justify-center mb-2 ${

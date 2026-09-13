@@ -8072,7 +8072,9 @@
     "pendingSeller": "Non puoi ancora inviare un asset.",
     "pendingPartner": "Non puoi ancora pubblicare il tuo profilo esperto né ricevere mandati.",
     "pendingCta": "Completare →",
-    "pendingSuffix": "Completa il tuo fascicolo KYC per sbloccare l'accesso."
+    "pendingSuffix": "Completa il tuo fascicolo KYC per sbloccare l'accesso.",
+    "pendingClient": "L'identificazione del rappresentante legale è richiesta prima dell'apertura della Data Room e dell'avvio dell'audit CIFSO.",
+    "approvedClient": "La sua Data Room è aperta: carichi i documenti giustificativi."
   },
   "notifications": {
     "label": "Notifiche",
@@ -8178,7 +8180,8 @@
       "notifications": {
         "meta": "Notifiche, Area Acquirente Aegryn",
         "title": "Notifiche",
-        "subtitle": "Avvisi e aggiornamenti sulla sua attività."
+        "subtitle": "Avvisi e aggiornamenti sulla sua attività.",
+        "areaLabel": "Area Acquirente"
       },
       "kyc": {
         "meta": "KYC : Area Acquirente Aegryn",
@@ -8189,36 +8192,51 @@
         "completeHint": "Completi il suo fascicolo KYC per accedere alle data room.",
         "pendingUpload": "Documento in revisione. Può inviare una versione corretta.",
         "validatedWarn": "Questo documento è validato. Un nuovo caricamento sostituirà la versione attuale.",
-        "gdprNotice": "Protezione dei dati: I suoi documenti sono conservati in modo sicuro conformemente alla normativa AML. Può richiederne la cancellazione a legal@boha-group.com."
+        "gdprNotice": "Protezione dei dati: I suoi documenti sono conservati in modo sicuro conformemente alla normativa AML. Può richiederne la cancellazione a legal@boha-group.com.",
+        "areaLabel": "Area Acquirente"
       },
       "offres": {
         "meta": "Le mie offerte, Area Acquirente Aegryn",
         "title": "Le mie offerte",
         "subtitle": "Storico e monitoraggio delle sue offerte.",
         "noOffres": "Nessuna offerta inviata per il momento.",
-        "exploreCatalog": "Esplora il catalogo"
+        "exploreCatalog": "Esplora il catalogo",
+        "areaLabel": "Area Acquirente"
       },
       "offreDetail": {
         "meta": "Dettaglio offerta, Area Acquirente Aegryn",
         "title": "Dettaglio offerta",
-        "back": "← Torna alle offerte"
+        "back": "← Torna alle offerte",
+        "areaLabel": "Area Acquirente"
       },
       "newOffre": {
         "meta": "Nuova offerta, Area Acquirente Aegryn",
-        "title": "Invia un'offerta"
+        "title": "Invia un'offerta",
+        "areaLabel": "Area Acquirente"
       },
       "transactionDetail": {
         "meta": "Transazione, Area Acquirente Aegryn",
-        "back": "← Torna alle transazioni"
+        "back": "← Torna alle transazioni",
+        "areaLabel": "Area Acquirente"
       },
       "catalogue": {
         "meta": "Catalogo, Area Acquirente Aegryn",
         "title": "Catalogo acquirente",
         "subtitle": "Asset disponibili per l'acquisizione.",
         "noItems": "Nessun asset disponibile al momento.",
-        "viewDossier": "Vedi fascicolo"
+        "viewDossier": "Vedi fascicolo",
+        "areaLabel": "Area Acquirente"
       },
-      "kpiPublished": "Asset disponibili"
+      "kpiPublished": "Asset disponibili",
+      "opportunitiesLabel": "Opportunità di transazione",
+      "opportunitiesTitle": "Aegryn la contatterà per ogni opportunità qualificata.",
+      "opportunitiesDesc": "Le opportunità di transazione sono trasmesse in modo confidenziale e individuale, dopo la firma del NDA e la selezione del suo profilo. Nessun accesso pubblico agli asset pubblicati. Ogni qualificazione è condotta direttamente dai nostri team.",
+      "opportunitiesNotifCta": "Le mie notifiche",
+      "opportunitiesNdaCta": "Il mio NDA",
+      "processStep1": "Profilo qualificato da Aegryn",
+      "processStep2": "NDA firmato",
+      "processStep3": "Opportunità trasmessa in via confidenziale",
+      "processStep4": "Data room concessa dopo la selezione"
     },
     "seller": {
       "meta": "Dashboard, Area Cedente Aegryn",
@@ -8261,7 +8279,8 @@
       "notifications": {
         "meta": "Notifiche, Area Cedente Aegryn",
         "title": "Notifiche",
-        "subtitle": "Avvisi e aggiornamenti sulla sua attività."
+        "subtitle": "Avvisi e aggiornamenti sulla sua attività.",
+        "areaLabel": "Area Cedente"
       },
       "kyc": {
         "meta": "KYC : Area Cedente Aegryn",
@@ -8271,29 +8290,36 @@
         "inProgress": "Fascicolo KYC in corso",
         "completeHint": "Completi il suo KYC per finalizzare la cessione.",
         "pendingUpload": "Documento in revisione.",
-        "validatedWarn": "Questo documento è validato. Un nuovo caricamento sostituirà la versione attuale."
+        "validatedWarn": "Questo documento è validato. Un nuovo caricamento sostituirà la versione attuale.",
+        "areaLabel": "Area Cedente",
+        "gdprNotice": "Protezione dei dati: I suoi documenti sono conservati in modo sicuro conformemente alla normativa AML. Può richiederne la cancellazione a legal@boha-group.com."
       },
       "actifs": {
         "meta": "I miei asset, Area Cedente Aegryn",
         "title": "I miei asset",
         "subtitle": "Monitoraggio degli asset inviati ad Aegryn.",
         "noActifs": "Nessun asset inviato per il momento.",
-        "submitNew": "Invia un asset"
+        "submitNew": "Invia un asset",
+        "areaLabel": "Area cliente",
+        "certType": "Certificazione CIFSO 5000"
       },
       "actifDetail": {
         "meta": "Dettaglio asset, Area Cedente Aegryn",
-        "back": "← Torna agli asset"
+        "back": "← Torna agli asset",
+        "areaLabel": "Area Cedente"
       },
       "ndaView": {
         "meta": "NDA | Area Cedente Aegryn",
         "title": "Accordo di riservatezza",
-        "subtitle": "NDA firmato nell'ambito della sua cessione."
+        "subtitle": "NDA firmato nell'ambito della sua cessione.",
+        "areaLabel": "Area Cedente"
       },
       "transactions": {
         "meta": "Transazioni, Area Cedente Aegryn",
         "title": "Le mie transazioni",
         "subtitle": "Transazioni in corso e passate.",
-        "noTransactions": "Nessuna transazione per il momento."
+        "noTransactions": "Nessuna transazione per il momento.",
+        "areaLabel": "Area Cedente"
       }
     },
     "partner": {
@@ -8319,49 +8345,58 @@
       "notifications": {
         "meta": "Notifiche, Area Partner Aegryn",
         "title": "Notifiche",
-        "subtitle": "Avvisi e aggiornamenti sulla sua attività."
+        "subtitle": "Avvisi e aggiornamenti sulla sua attività.",
+        "areaLabel": "Area Partner"
       },
       "kyc": {
         "meta": "KYC : Area Partner Aegryn",
         "title": "KYC : Verifica identità",
-        "subtitle": "Documenti richiesti per il suo profilo partner."
+        "subtitle": "Documenti richiesti per il suo profilo partner.",
+        "areaLabel": "Area Partner"
       },
       "mandates": {
         "meta": "Mandati, Area Partner Aegryn",
         "title": "I miei mandati",
         "subtitle": "Mandati di partnership in corso.",
-        "noMandates": "Nessun mandato per il momento."
+        "noMandates": "Nessun mandato per il momento.",
+        "areaLabel": "Area Partner"
       },
       "mandateDetail": {
         "meta": "Dettaglio mandato, Area Partner Aegryn",
-        "back": "← Torna ai mandati"
+        "back": "← Torna ai mandati",
+        "areaLabel": "Area Partner"
       },
       "certifications": {
         "meta": "Co-firme, Area Partner Aegryn",
         "title": "Le mie co-firme",
         "subtitle": "Missioni di certificazione CIFS in corso.",
-        "noCertifications": "Nessuna co-firma assegnata per il momento."
+        "noCertifications": "Nessuna co-firma assegnata per il momento.",
+        "areaLabel": "Area Partner"
       },
       "certDetail": {
         "meta": "Dettaglio co-firma, Area Partner Aegryn",
-        "back": "← Torna alle co-firme"
+        "back": "← Torna alle co-firme",
+        "areaLabel": "Area Partner"
       },
       "commissions": {
         "meta": "Commissioni, Area Partner Aegryn",
         "title": "Le mie commissioni",
         "subtitle": "Storico commissioni.",
-        "noCommissions": "Nessuna commissione registrata."
+        "noCommissions": "Nessuna commissione registrata.",
+        "areaLabel": "Area Partner"
       },
       "introductions": {
         "meta": "Presentazioni, Area Partner Aegryn",
         "title": "Le mie presentazioni",
         "subtitle": "Asset e acquirenti presentati.",
-        "noIntroductions": "Nessuna presentazione per il momento."
+        "noIntroductions": "Nessuna presentazione per il momento.",
+        "areaLabel": "Area Partner"
       },
       "expertProfile": {
         "meta": "Profilo esperto, Area Partner Aegryn",
         "title": "Il mio profilo esperto",
-        "subtitle": "Profilo visibile sul marketplace Aegryn Experts."
+        "subtitle": "Profilo visibile sul marketplace Aegryn Experts.",
+        "areaLabel": "Area Partner"
       },
       "subscription": {
         "meta": "Abbonamento, Area Partner Aegryn",
@@ -8374,12 +8409,14 @@
         "subscribe": "Abbonati",
         "manage": "Gestisci abbonamento",
         "successMsg": "Abbonamento attivato con successo.",
-        "canceledMsg": "Pagamento annullato."
+        "canceledMsg": "Pagamento annullato.",
+        "areaLabel": "Area Partner"
       },
       "nda": {
         "meta": "NDA | Area Partner Aegryn",
         "title": "Accordo di riservatezza",
-        "subtitle": "NDA firmato nell'ambito della sua partnership."
+        "subtitle": "NDA firmato nell'ambito della sua partnership.",
+        "areaLabel": "Area Partner"
       }
     },
     "expert": {
