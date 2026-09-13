@@ -49,7 +49,7 @@ function Page({ n, total, label, children, dark = false, className = '' }: {
     >
       <div className="px-12 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
       <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
-        <span>CIFSO 5000 — Aegryn SA</span>
+        <span>CERTIFICATION CIFSO 5000. AEGRYN.</span>
         <span>{label} {n} / {total}</span>
       </footer>
     </article>
@@ -251,7 +251,7 @@ export function CifsoBrochure() {
           </div>
         </Page>
         <Page n={7} total={TOTAL} label={pageLabel}>
-          <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">{num(4)} — {b('s4Title')}</p>
+          <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">{num(4)}. {b('s4Title')}</p>
           <div className="flex flex-col gap-5">
             {cifs.slice(3).map((d) => <DimensionCard key={d.code} d={d} weightLabel={b('s4Weight')} criteriaLabel={b('s4Criteria')} />)}
           </div>
@@ -306,7 +306,7 @@ export function CifsoBrochure() {
           </div>
         </Page>
         <Page n={10} total={TOTAL} label={pageLabel}>
-          <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">{num(6)} — {b('s6Title')}</p>
+          <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">{num(6)}. {b('s6Title')}</p>
           <div className="flex flex-col gap-4">
             {steps.slice(3).map((s) => <StepCard key={s.num} s={s} labels={[gs('processInputs'), gs('processOutputs'), gs('processOutcomes')]} />)}
           </div>
@@ -462,9 +462,8 @@ export function CifsoBrochure() {
               </Link>
             </div>
           </div>
-          <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
+          <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
             <span>{b('footerIssuer')}</span>
-            <span>{b('footerLocation')} · aegryn.com</span>
           </footer>
         </article>
       </div>
