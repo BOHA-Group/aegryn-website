@@ -33,7 +33,7 @@ function pct(sorted: number[], q: number): number | null {
   return Math.round((sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo)) * 100) / 100
 }
 
-export type SourceRun = { key: string; name: string; kind: string; status: 'ok' | 'error'; rows: number; latest: string | null; error?: string; ms: number }
+export type SourceRun = { key: string; name: string; kind: string; region?: string; status: 'ok' | 'error'; rows: number; latest: string | null; error?: string; ms: number }
 
 export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Promise<{ ok: boolean; period: string; upserted: number; dimensions: Record<string, unknown>; sources: SourceRun[]; error?: string }> {
   const supa = createServiceClient()
@@ -46,7 +46,7 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
     sources.push(run)
     const { data: prev } = await supa.from('cifso_index_sources').select('consecutive_failures').eq('key', run.key).maybeSingle()
     await supa.from('cifso_index_sources').upsert({
-      key: run.key, name: run.name, kind: run.kind, cadence: 'weekly', enabled: true,
+      key: run.key, name: run.name, kind: run.kind, region: run.region ?? 'internal', cadence: 'weekly', enabled: true,
       last_run_at: new Date().toISOString(), last_status: run.status, last_error: run.error ?? null,
       last_rows: run.rows, last_latest_obs: run.latest,
       consecutive_failures: run.status === 'ok' ? 0 : ((prev?.consecutive_failures as number | undefined) ?? 0) + 1,
@@ -66,9 +66,9 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
       try {
         const r = await c.run()
         macro.push(...r.rows)
-        await recordSource({ key: c.key, name: c.name, kind: c.kind, status: 'ok', rows: r.rows.length, latest: r.latest, ms: Date.now() - t0 })
+        await recordSource({ key: c.key, name: c.name, kind: c.kind, region: c.region, status: 'ok', rows: r.rows.length, latest: r.latest, ms: Date.now() - t0 })
       } catch (e) {
-        await recordSource({ key: c.key, name: c.name, kind: c.kind, status: 'error', rows: 0, latest: null, error: e instanceof Error ? e.message : String(e), ms: Date.now() - t0 })
+        await recordSource({ key: c.key, name: c.name, kind: c.kind, region: c.region, status: 'error', rows: 0, latest: null, error: e instanceof Error ? e.message : String(e), ms: Date.now() - t0 })
       }
     }
     for (const o of macro) {

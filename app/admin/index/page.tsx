@@ -19,7 +19,7 @@ export default async function AdminIndexPage({ searchParams }: { searchParams: P
   const supa = createServiceClient()
 
   const [{ data: sources }, { data: logs }, { data: series }, { data: macro }] = await Promise.all([
-    supa.from('cifso_index_sources').select('*').order('kind').order('key'),
+    supa.from('cifso_index_sources').select('*').order('region').order('key'),
     supa.from('cifso_index_refresh_log').select('*').order('started_at', { ascending: false }).limit(12),
     supa.from('cifso_index_benchmarks').select('scope_type, metric, is_public, period').eq('is_active', true),
     supa.from('cifso_index_benchmarks').select('scope_key, metric, period, p50, unit').eq('scope_type', 'market').eq('is_active', true).order('metric'),
@@ -70,13 +70,14 @@ export default async function AdminIndexPage({ searchParams }: { searchParams: P
           <div className="overflow-x-auto">
             <table className="w-full text-[12px]">
               <thead className="bg-gray-50 border-b border-gray-200 text-left font-mono text-[9px] uppercase tracking-widest text-gray-400">
-                <tr><th className="px-5 py-3">Source</th><th className="px-5 py-3">Type</th><th className="px-5 py-3">Statut</th><th className="px-5 py-3">Dernière collecte</th><th className="px-5 py-3">Séries</th><th className="px-5 py-3">Dernière observation</th><th className="px-5 py-3">Échecs consécutifs</th></tr>
+                <tr><th className="px-5 py-3">Source</th><th className="px-5 py-3">Zone</th><th className="px-5 py-3">Type</th><th className="px-5 py-3">Statut</th><th className="px-5 py-3">Dernière collecte</th><th className="px-5 py-3">Séries</th><th className="px-5 py-3">Dernière observation</th><th className="px-5 py-3">Échecs consécutifs</th></tr>
               </thead>
               <tbody>
-                {S.length === 0 && <tr><td colSpan={7} className="px-5 py-10 text-center text-gray-400">Aucune source enregistrée. Lancez une collecte.</td></tr>}
+                {S.length === 0 && <tr><td colSpan={8} className="px-5 py-10 text-center text-gray-400">Aucune source enregistrée. Lancez une collecte.</td></tr>}
                 {S.map(s => (
                   <tr key={String(s.key)} className="border-b border-gray-100 last:border-0">
                     <td className="px-5 py-3"><p className="font-semibold text-gray-900">{String(s.name)}</p><p className="font-mono text-[10px] text-gray-400">{String(s.key)}</p>{s.last_error && <p className="text-[11px] text-red-600 mt-1">{String(s.last_error)}</p>}</td>
+                    <td className="px-5 py-3 font-mono text-[10px] text-gray-500">{String(s.region ?? '·')}</td>
                     <td className="px-5 py-3 text-gray-600">{KIND[String(s.kind)] ?? String(s.kind)}</td>
                     <td className="px-5 py-3"><span className={`rounded-full px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-widest ${s.last_status === 'ok' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : s.last_status === 'error' ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-gray-100 text-gray-500'}`}>{String(s.last_status ?? 'jamais')}</span></td>
                     <td className="px-5 py-3 text-gray-600 font-mono text-[11px]">{fmt(s.last_run_at as string)}</td>
