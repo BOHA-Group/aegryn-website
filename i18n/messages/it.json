@@ -153,7 +153,7 @@
     "solutionsCategoryTransactions": "Transazioni & Rete",
     "craftSupportNetworkNew": "Partner & competenze",
     "craftSupportInvestors": "Investitori & Istituzionali",
-    "craftTransactOverview": "Presentazione",
+    "craftTransactOverview": "Introduzione",
     "craftTransactAuditors": "Revisori indipendenti",
     "whoIndustries": "I nostri settori",
     "whoIndustriesDesc": "Tutti i settori coperti",
@@ -3456,17 +3456,17 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT | Agenzia di transazioni tech offmarket",
-      "desc": "Aegryn TRANSACT: agenzia di riferimento per transazioni tech selettive in Europa. Mandato esclusivo 60 giorni, escrow istituzionale, acquirenti pre-qualificati."
+      "title": "Valorizzare | Misurare, certificare e realizzare il valore della sua organizzazione",
+      "desc": "Aegryn Valorizzare: CIFSO Valuation Index per misurare, Certificazione CIFSO 5000 per certificare, poi cessione, acquisizione, raccolta fondi o apertura del capitale con mandato esclusivo."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT | AGENZIA DI TRANSAZIONI TECH",
-      "heroTitle": "Il riferimento europeo\nper transazioni tech selettive.",
-      "heroDesc": "Catalogo offmarket chiuso sotto mandato esclusivo. Ogni acquirente è qualificato. Ogni asset è certificato CIFS. Nessuna transazione senza massima protezione NDA.",
+      "eyebrow": "AEGRYN. VALORIZZARE",
+      "heroTitle": "Misurare, certificare,\nrealizzare il valore della sua organizzazione.",
+      "heroDesc": "Valorizzare un'impresa non si limita a trasmetterla. Inizia con la misurazione del suo valore, la sua documentazione e la sua certificazione indipendente. Cessione, acquisizione, raccolta fondi o apertura del capitale sono poi altrettante vie per realizzarlo.",
       "ctaCatalog": "Vedere il catalogo",
       "ctaMandate": "Inviare un mandato",
-      "segmentsLabel": "QUATTRO SEGMENTI DI TRANSAZIONE",
-      "segmentsTitle": "Qualunque sia la sua situazione,\nesiste un mandato Aegryn per lei.",
+      "segmentsLabel": "QUATTRO VIE PER REALIZZARE IL VALORE",
+      "segmentsTitle": "Qualunque sia la sua situazione,\nesiste un mandato Aegryn.",
       "segment": {
         "sell": {
           "kicker": "Cessione di asset",
@@ -3521,7 +3521,24 @@
       "ctaStripMandate": "Inviare un mandato",
       "ctaStripCatalog": "Vedere il catalogo",
       "ctaGrade": "Certificazione CIFSO 5000",
-      "ctaStripContact": "Contattaci"
+      "ctaStripContact": "Contattaci",
+      "ctaValuation": "Stimare il valore",
+      "introLabel": "UNA SEQUENZA IN DUE TEMPI",
+      "introTitle": "Prima misurare e certificare.\nPoi realizzare.",
+      "tools": {
+        "valuation": {
+          "kicker": "Fase 1",
+          "title": "CIFSO Valuation Index",
+          "desc": "Stima indipendente del valore della sua organizzazione, basata sui multipli di mercato europei e sul punteggio CIFSO. Un primo riferimento in quindici minuti.",
+          "cta": "Stimare il valore"
+        },
+        "certification": {
+          "kicker": "Fase 2",
+          "title": "Certificazione CIFSO 5000",
+          "desc": "Audit indipendente su cinque dimensioni: Codice, IP, Finanza, Sicurezza, Organizzazione. Un grado verificabile, valido dodici mesi, che documenta valore e trasferibilità.",
+          "cta": "Scoprire la certificazione"
+        }
+      }
     },
     "mandate": {
       "meta": {

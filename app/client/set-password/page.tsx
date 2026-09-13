@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import SetPasswordForm   from './SetPasswordForm'
 
 export const metadata: Metadata = {
-  title: 'Activer votre compte — Aegryn',
+  title: 'Activer votre compte | Aegryn',
   robots: { index: false, follow: false },
 }
 

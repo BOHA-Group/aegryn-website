@@ -33,10 +33,10 @@ type Props = { params: Promise<{ locale: string; slug: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   return {
-    title: `Lot — Aegryn TRANSACT`,
+    title: `Lot | Aegryn TRANSACT`,
     description: 'Dossier confidentiel — Accès réservé aux acquéreurs qualifiés Aegryn TRANSACT.',
     robots: { index: false, follow: false },
-    openGraph: { title: `Lot ${slug} — Aegryn TRANSACT` },
+    openGraph: { title: `Lot ${slug} | Aegryn TRANSACT` },
   }
 }
 

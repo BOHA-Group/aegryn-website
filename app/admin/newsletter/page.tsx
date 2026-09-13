@@ -4,7 +4,7 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import NewsletterClient        from './NewsletterClient'
 
 export const metadata: Metadata = {
-  title: 'Newsletter — Aegryn Admin',
+  title: 'Newsletter | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

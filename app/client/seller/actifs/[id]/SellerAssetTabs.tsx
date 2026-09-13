@@ -692,7 +692,7 @@ export default function SellerAssetTabs({
                               )}
                               {ts.version >= 2 && (
                                 <p className="font-sans text-[11px] text-gray-400 italic">
-                                  Limite de rounds atteinte — Aegryn facilitera la prochaine étape.
+                                  Limite de rounds atteinte | Aegryn facilitera la prochaine étape.
                                 </p>
                               )}
                             </div>

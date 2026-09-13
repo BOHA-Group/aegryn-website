@@ -17,7 +17,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return {
-    title:       'Cover Preview — Aegryn Magazine Issue 01',
+    title:       'Cover Preview | Aegryn Magazine Issue 01',
     description: 'Preview and download the cover of Aegryn Magazine Issue 01 — The State of European Tech M&A',
     robots:      { index: false, follow: false },
     alternates:  { canonical: `/${locale}/magazine/issue-01/cover` },

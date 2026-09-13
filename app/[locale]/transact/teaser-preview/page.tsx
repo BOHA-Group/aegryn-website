@@ -15,7 +15,7 @@ import AssetTeaserDocument from '@/components/transaction/AssetTeaserDocument'
 import { subblinkTeaser }   from '@/data/transaction/teasers/subblinkTeaser'
 
 export const metadata: Metadata = {
-  title: 'Teaser — Aegryn TRANSACT',
+  title: 'Teaser | Aegryn TRANSACT',
   description: 'Aperçu public du lot en vente sur Aegryn TRANSACT. Actif tech certifié CIFSO v4.0 — accédez au dossier complet après pré-qualification.',
   robots: { index: false, follow: false },
 }

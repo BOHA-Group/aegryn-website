@@ -11,7 +11,7 @@ import AdminDocumentsClient from './AdminDocumentsClient'
 import AccessLogsTable, { type AccessLog } from './AccessLogsTable'
 
 export const metadata: Metadata = {
-  title: 'Documents Data Room — Aegryn Admin',
+  title: 'Documents Data Room | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

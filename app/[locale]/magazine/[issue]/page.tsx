@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const issue = getIssue(issueSlug)
   if (!issue) return {}
 
-  const title       = `${issue.title} — Aegryn Magazine Issue ${String(issue.number).padStart(2, '0')}`
+  const title       = `${issue.title} | Aegryn Magazine Issue ${String(issue.number).padStart(2, '0')}`
   const description = issue.theme
 
   return {
@@ -494,7 +494,7 @@ export default async function IssuePage({ params }: Props) {
                 <p className="text-body-mag text-magazine-black/70 leading-[1.75] italic text-[17px]">
                   &ldquo;I used to think I needed a team of ten to build something real. I was wrong. I needed a laptop, four hours of quiet every morning, and the courage to stop asking for permission.&rdquo;
                 </p>
-                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote — Aegryn Advisory conversations 2024 to 2026</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote | Aegryn Advisory conversations 2024 to 2026</p>
               </blockquote>
               <div className="bg-magazine-ivory p-6">
                 <p className="text-label-mag text-magazine-black/40 uppercase tracking-[0.15em] mb-4">Building from a café in Lisbon</p>
@@ -596,7 +596,7 @@ export default async function IssuePage({ params }: Props) {
             <p className="text-body-mag text-magazine-black/65 italic leading-[1.8] text-[17px]">
               &ldquo;Nobody warns you how quiet it gets when you leave a company of two thousand people to build something with just yourself. And then, one day, you realise the quiet is the whole point.&rdquo;
             </p>
-            <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote — Aegryn Advisory founder conversations 2024 to 2026</p>
+            <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-4">Composite quote | Aegryn Advisory founder conversations 2024 to 2026</p>
           </blockquote>
         </section>
 
@@ -847,7 +847,7 @@ export default async function IssuePage({ params }: Props) {
                 <p><strong className="text-magazine-black">Who should see it?</strong> Access should be logged and controlled from the moment the room is created. Every person who opens a document should be tracked.</p>
                 <blockquote className="border-l-2 border-magazine-accent pl-6 mt-6">
                   <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;The best data rooms I have seen were built by founders who started them two years before they needed them. The worst were built in three weeks while the buyer was waiting.&rdquo;</p>
-                  <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation — Aegryn Transaction Desk, H1 2026</p>
+                  <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation | Aegryn Transaction Desk, H1 2026</p>
                 </blockquote>
                 <p className="text-body-mag text-magazine-black/65 leading-[1.75] mt-2">The gap between those two experiences is preparation. Not intelligence, not capital, not the quality of the product. Preparation — which is the one variable that is entirely within a founder&rsquo;s control from day one.</p>
               </div>
@@ -926,7 +926,7 @@ export default async function IssuePage({ params }: Props) {
             <p className="text-body-mag text-white/80 leading-[1.75] italic mb-4">
               &ldquo;He reads approximately two hundred deal summaries per year. He takes forty first meetings. He acquires three companies. The 160 he never meets are not worse businesses. They failed to make the right impression on the two-page summary his analyst read in four minutes.&rdquo;
             </p>
-            <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/35">Composite portrait of a PE mid-market fund partner — Aegryn Advisory observations 2024 to 2026</p>
+            <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/35">Composite portrait of a PE mid-market fund partner | Aegryn Advisory observations 2024 to 2026</p>
           </blockquote>
 
           {/* Process + Earn-out */}
@@ -956,7 +956,7 @@ export default async function IssuePage({ params }: Props) {
               </div>
               <blockquote className="border-l-2 border-magazine-accent pl-6 mt-8">
                 <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Negotiate the earn-out as carefully as you negotiate the headline number. You are writing a second contract, with a different set of risks.&rdquo;</p>
-                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation — Aegryn Transaction Desk, 2026</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite observation | Aegryn Transaction Desk, 2026</p>
               </blockquote>
             </div>
           </div>
@@ -1151,7 +1151,7 @@ export default async function IssuePage({ params }: Props) {
               </div>
               <blockquote className="border-l-2 border-magazine-accent pl-6 mt-8">
                 <p className="text-body-mag text-magazine-black/65 italic leading-[1.75]">&ldquo;Everyone told me to wait for the right moment. There is no right moment. There is only the moment you stop waiting.&rdquo;</p>
-                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite quote — Aegryn Advisory 2024</p>
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-magazine-black/35 mt-3">Composite quote | Aegryn Advisory 2024</p>
               </blockquote>
             </div>
             <div className="space-y-5 text-body-mag text-magazine-black/65 leading-[1.8]">

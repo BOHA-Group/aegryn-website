@@ -182,7 +182,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!issue || !article) return {}
 
   return {
-    title:       `${article.title} — Aegryn Magazine`,
+    title:       `${article.title} | Aegryn Magazine`,
     description: article.excerpt,
     keywords:    article.seoKeywords,
     alternates:  { canonical: `/magazine/${issue.slug}/${article.slug}` },

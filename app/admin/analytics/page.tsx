@@ -6,7 +6,7 @@ import { AnalyticsClient }      from './AnalyticsClient'
 import type { Kpi, KpiDetail, Period } from './AnalyticsClient'
 
 export const metadata: Metadata = {
-  title: 'Analytics — Aegryn Admin',
+  title: 'Analytics | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

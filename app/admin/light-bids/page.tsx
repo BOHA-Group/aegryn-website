@@ -10,7 +10,7 @@ import { createServiceClient } from '@/lib/supabase'
 import LightBidsAdminClient    from './LightBidsAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Offres de principe — Aegryn Admin',
+  title: 'Offres de principe | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

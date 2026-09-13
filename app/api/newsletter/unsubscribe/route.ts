@@ -4,7 +4,7 @@ import { createServiceClient } from '@/lib/supabase'
 function htmlPage(title: string, message: string): NextResponse {
   return new NextResponse(
     `<!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"/><title>${title} — Aegryn</title>
+<html lang="fr"><head><meta charset="UTF-8"/><title>${title} | Aegryn</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body style="margin:0;padding:0;background:#0F1C3F;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="min-height:100vh;">

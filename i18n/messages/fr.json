@@ -154,7 +154,7 @@
     "whoFounder": "Le fondateur",
     "craftSupportNetworkNew": "Partenaires & expertises",
     "craftSupportInvestors": "Investisseurs & Institutionnels",
-    "craftTransactOverview": "Présentation",
+    "craftTransactOverview": "Introduction",
     "craftTransactAuditors": "Auditeurs indépendants",
     "whoIndustries": "Nos industries",
     "whoIndustriesDesc": "Tous secteurs couverts",
@@ -3632,22 +3632,22 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT | Agence de transactions tech offmarket",
-      "desc": "Aegryn TRANSACT : agence de référence pour transactions tech sélectives en Europe. Mandat exclusif 60 jours, séquestre institutionnel, acquéreurs pré-qualifiés."
+      "title": "Valoriser | Mesurer, certifier et réaliser la valeur de votre organisation",
+      "desc": "Aegryn Valoriser : CIFSO Valuation Index pour mesurer, Certification CIFSO 5000 pour certifier, puis cession, acquisition, levée ou ouverture du capital sous mandat exclusif."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT | AGENCE DE TRANSACTIONS TECH",
-      "heroTitle": "La référence des transactions\ntech sélectives en Europe.",
-      "heroDesc": "Transaction offmarket sous mandat exclusif. Chaque acheteur est qualifié. Chaque actif est certifié CIFSO v4.0. Aucune transaction sans protection NDA maximale.",
+      "eyebrow": "AEGRYN. VALORISER",
+      "heroTitle": "Mesurer, certifier,\nréaliser la valeur de votre organisation.",
+      "heroDesc": "Valoriser une entreprise ne se limite pas à la transmettre. Cela commence par mesurer sa valeur, la documenter et la certifier de façon indépendante. La cession, l'acquisition, la levée de fonds ou l'ouverture du capital sont ensuite autant de voies pour la réaliser.",
       "ctaCatalog": "Accéder au catalogue",
       "ctaMandate": "Déposer un mandat",
-      "segmentsLabel": "QUATRE SEGMENTS DE TRANSACTION",
+      "segmentsLabel": "QUATRE VOIES POUR RÉALISER LA VALEUR",
       "segmentsTitle": "Quelle que soit votre situation,\nil existe un mandat Aegryn.",
       "segment": {
         "sell": {
           "kicker": "Cession d'actif",
           "title": "Vous souhaitez vendre",
-          "desc": "Cédez votre organisation à un acquéreur qualifié. Certification CIFSO v4.0, mandat exclusif, NDA systématique.",
+          "desc": "Cédez votre organisation à un acquéreur qualifié. Certification CIFSO 5000, mandat exclusif, NDA systématique.",
           "cta": "Mandat de cession"
         },
         "buy": {
@@ -3671,7 +3671,7 @@
       },
       "valueLabel": "LA VALEUR AEGRYN TRANSACT",
       "valueTitle": "Une base de profils qualifiés.\nDes actifs certifiés.",
-      "valueDesc": "Aegryn ne travaille qu'avec des acheteurs ayant passé la procédure KYC et signé le NDA. Chaque organisation est évaluée CIFSO v4.0 avant d'être présentée. C'est la différence entre une transaction qui aboutit et une qui échoue.",
+      "valueDesc": "Aegryn ne travaille qu'avec des acheteurs ayant passé la procédure KYC et signé le NDA. Chaque organisation est évaluée CIFSO 5000 avant d'être présentée. C'est la différence entre une transaction qui aboutit et une qui échoue.",
       "valueCta": "Voir le catalogue certifié",
       "howLabel": "PROCESSUS TRANSACT EN 4 ÉTAPES",
       "how": {
@@ -3697,7 +3697,24 @@
       "ctaStripMandate": "Déposer un mandat",
       "ctaStripCatalog": "Voir le catalogue",
       "ctaGrade": "Certification CIFSO 5000",
-      "ctaStripContact": "Nous contacter"
+      "ctaStripContact": "Nous contacter",
+      "ctaValuation": "Estimer la valeur",
+      "introLabel": "UNE SÉQUENCE EN DEUX TEMPS",
+      "introTitle": "D'abord mesurer et certifier.\nEnsuite réaliser.",
+      "tools": {
+        "valuation": {
+          "kicker": "Étape 1",
+          "title": "CIFSO Valuation Index",
+          "desc": "Estimation indépendante de la valeur de votre organisation, fondée sur les multiples de marché européens et le score CIFSO. Un premier repère en quinze minutes.",
+          "cta": "Estimer la valeur"
+        },
+        "certification": {
+          "kicker": "Étape 2",
+          "title": "Certification CIFSO 5000",
+          "desc": "Audit indépendant sur cinq dimensions : Code, IP, Finance, Sécurité, Organisation. Un grade vérifiable, valable douze mois, qui documente la valeur et la transmissibilité.",
+          "cta": "Découvrir la certification"
+        }
+      }
     },
     "mandate": {
       "meta": {

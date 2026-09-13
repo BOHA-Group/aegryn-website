@@ -166,7 +166,7 @@ export default async function NdaAssetPage({
 
           <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-3">
             <p className="font-mono text-[10px] text-gray-400">
-              Version {NDA_ASSET_VERSION} — Aegryn Data Room NDA — Actif : {asset.name} (Lot #{asset.lot_number})
+              Version {NDA_ASSET_VERSION} | Aegryn Data Room NDA — Actif : {asset.name} (Lot #{asset.lot_number})
             </p>
           </div>
         </div>

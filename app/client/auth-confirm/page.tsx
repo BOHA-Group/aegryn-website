@@ -9,7 +9,7 @@ import { getTranslations } from 'next-intl/server'
 import Link              from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Connexion en cours — Aegryn',
+  title: 'Connexion en cours | Aegryn',
   robots: { index: false, follow: false },
 }
 

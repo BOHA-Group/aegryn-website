@@ -153,7 +153,7 @@
     "solutionsCategoryTransactions": "Transacties & Netwerk",
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investeerders & Institutioneel",
-    "craftTransactOverview": "Overzicht",
+    "craftTransactOverview": "Introductie",
     "craftTransactAuditors": "Onafhankelijke auditoren",
     "whoIndustries": "Onze sectoren",
     "whoIndustriesDesc": "Alle gedekte sectoren",
@@ -3456,17 +3456,17 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT | Offmarket tech-transactiebureau",
-      "desc": "Aegryn TRANSACT: referentiebureau voor selectieve tech-transacties in Europa. Exclusief mandaat 60 dagen, institutioneel escrow, vooraf gekwalificeerde kopers."
+      "title": "Waarderen | De waarde van uw organisatie meten, certificeren en realiseren",
+      "desc": "Aegryn Waarderen: CIFSO Valuation Index om te meten, CIFSO 5000-certificering om te certificeren, daarna verkoop, acquisitie, kapitaalronde of openstelling van het kapitaal onder exclusief mandaat."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT | TECH-TRANSACTIEBUREAU",
-      "heroTitle": "De Europese referentie\nvoor selectieve tech-transacties.",
-      "heroDesc": "Gesloten offmarket-catalogus onder exclusief mandaat. Elke koper is gekwalificeerd. Elk asset is CIFS-gecertificeerd. Geen transactie zonder maximale NDA-bescherming.",
+      "eyebrow": "AEGRYN. WAARDEREN",
+      "heroTitle": "De waarde van uw organisatie\nmeten, certificeren, realiseren.",
+      "heroDesc": "Een onderneming waarderen is meer dan haar overdragen. Het begint met het meten van haar waarde, het documenteren en het onafhankelijk certificeren ervan. Verkoop, acquisitie, kapitaalronde of openstelling van het kapitaal zijn daarna evenzoveel wegen om die waarde te realiseren.",
       "ctaCatalog": "Catalogus bekijken",
       "ctaMandate": "Mandaat indienen",
-      "segmentsLabel": "VIER TRANSACTIESEGMENTEN",
-      "segmentsTitle": "Wat uw situatie ook is,\ner is een Aegryn-mandaat voor u.",
+      "segmentsLabel": "VIER WEGEN OM WAARDE TE REALISEREN",
+      "segmentsTitle": "Wat uw situatie ook is,\ner bestaat een Aegryn-mandaat.",
       "segment": {
         "sell": {
           "kicker": "Asset-overdracht",
@@ -3521,7 +3521,24 @@
       "ctaStripMandate": "Mandaat indienen",
       "ctaStripCatalog": "Catalogus bekijken",
       "ctaGrade": "CIFSO 5000-certificering",
-      "ctaStripContact": "Contact opnemen"
+      "ctaStripContact": "Contact opnemen",
+      "ctaValuation": "Waarde schatten",
+      "introLabel": "EEN SEQUENTIE IN TWEE STAPPEN",
+      "introTitle": "Eerst meten en certificeren.\nDaarna realiseren.",
+      "tools": {
+        "valuation": {
+          "kicker": "Stap 1",
+          "title": "CIFSO Valuation Index",
+          "desc": "Onafhankelijke schatting van de waarde van uw organisatie, op basis van Europese marktmultiples en de CIFSO-score. Een eerste referentie in vijftien minuten.",
+          "cta": "Waarde schatten"
+        },
+        "certification": {
+          "kicker": "Stap 2",
+          "title": "CIFSO 5000-certificering",
+          "desc": "Onafhankelijke audit op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Een verifieerbare grade, twaalf maanden geldig, die waarde en overdraagbaarheid documenteert.",
+          "cta": "De certificering ontdekken"
+        }
+      }
     },
     "mandate": {
       "meta": {

@@ -5,7 +5,7 @@ import { createServiceClient } from '@/lib/supabase'
 import ExpertProfileForm from './ExpertProfileForm'
 
 export const metadata: Metadata = {
-  title: 'Ma fiche expert — Aegryn',
+  title: 'Ma fiche expert | Aegryn',
   robots: { index: false, follow: false },
 }
 

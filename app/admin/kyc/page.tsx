@@ -4,7 +4,7 @@ import type { Metadata }       from 'next'
 import Link                    from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'KYC — Aegryn Admin',
+  title: 'KYC | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

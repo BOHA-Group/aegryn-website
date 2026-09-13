@@ -8,7 +8,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
-  title: 'Mon NDA Partenaire — Aegryn',
+  title: 'Mon NDA Partenaire | Aegryn',
   robots: { index: false, follow: false },
 }
 

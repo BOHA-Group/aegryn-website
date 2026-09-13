@@ -5,7 +5,7 @@ import AdminLeadsClient        from './AdminLeadsClient'
 import { checkAdminAccess }   from '@/lib/adminAuth'
 
 export const metadata: Metadata = {
-  title: 'Leads — Aegryn Admin',
+  title: 'Leads | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

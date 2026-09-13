@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ind = getIndustry(slug)
   if (!ind) return {}
   return generateAegrynMetadata({
-    title: `${getLocaleText(ind.name, locale)} — Aegryn`,
+    title: `${getLocaleText(ind.name, locale)} | Aegryn`,
     description: getLocaleText(ind.vision, locale).slice(0, 160).replace(/\n/g, ' '),
     path: `/industries/${slug}`,
     locale,

@@ -5,7 +5,7 @@ import Link                    from 'next/link'
 import PartnersTableClient     from './PartnersTableClient'
 
 export const metadata: Metadata = {
-  title: 'Partenaires — Aegryn Admin',
+  title: 'Partenaires | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

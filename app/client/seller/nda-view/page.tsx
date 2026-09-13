@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Mon NDA Cédant — Aegryn',
+    title: 'Mon NDA Cédant | Aegryn',
     robots: { index: false, follow: false },
   }
 }

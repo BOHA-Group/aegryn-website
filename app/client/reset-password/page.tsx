@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import ResetPasswordForm   from './ResetPasswordForm'
 
 export const metadata: Metadata = {
-  title: 'Nouveau mot de passe — Aegryn',
+  title: 'Nouveau mot de passe | Aegryn',
   robots: { index: false, follow: false },
 }
 

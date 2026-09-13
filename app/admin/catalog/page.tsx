@@ -6,7 +6,7 @@ import Link                    from 'next/link'
 import CatalogAdminClient      from './CatalogAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Catalogue — Aegryn Admin',
+  title: 'Catalogue | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

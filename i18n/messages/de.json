@@ -153,7 +153,7 @@
     "solutionsCategoryTransactions": "Transaktionen & Netzwerk",
     "craftSupportNetworkNew": "Partner & Expertise",
     "craftSupportInvestors": "Investoren & Institutionelle",
-    "craftTransactOverview": "Übersicht",
+    "craftTransactOverview": "Einführung",
     "craftTransactAuditors": "Unabhängige Prüfer",
     "whoIndustries": "Unsere Branchen",
     "whoIndustriesDesc": "Alle abgedeckten Sektoren",
@@ -3456,17 +3456,17 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT | Offmarket-Tech-Transaktionsagentur",
-      "desc": "Aegryn TRANSACT: Referenzagentur für selektive Tech-Transaktionen in Europa. Exklusives Mandat 60 Tage, institutionelles Escrow, vorqualifizierte Käufer."
+      "title": "Bewerten | Den Wert Ihrer Organisation messen, zertifizieren und realisieren",
+      "desc": "Aegryn Bewerten: CIFSO Valuation Index zum Messen, CIFSO 5000 Zertifizierung zum Zertifizieren, dann Verkauf, Erwerb, Finanzierungsrunde oder Kapitalöffnung unter Exklusivmandat."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT | TECH-TRANSAKTIONSAGENTUR",
-      "heroTitle": "Europas Referenz\nfür selektive Tech-Transaktionen.",
-      "heroDesc": "Geschlossener Offmarket-Katalog unter exklusivem Mandat. Jeder Käufer ist qualifiziert. Jedes Asset ist CIFS-zertifiziert. Keine Transaktion ohne maximalen NDA-Schutz.",
+      "eyebrow": "AEGRYN. BEWERTEN",
+      "heroTitle": "Den Wert Ihrer Organisation\nmessen, zertifizieren, realisieren.",
+      "heroDesc": "Ein Unternehmen zu bewerten heisst nicht nur, es zu übertragen. Es beginnt damit, seinen Wert zu messen, zu dokumentieren und unabhängig zu zertifizieren. Verkauf, Erwerb, Finanzierungsrunde oder Kapitalöffnung sind anschliessend ebenso viele Wege, ihn zu realisieren.",
       "ctaCatalog": "Katalog aufrufen",
       "ctaMandate": "Mandat einreichen",
-      "segmentsLabel": "VIER TRANSAKTIONSSEGMENTE",
-      "segmentsTitle": "Egal in welcher Situation,\nes gibt ein Aegryn-Mandat für Sie.",
+      "segmentsLabel": "VIER WEGE, DEN WERT ZU REALISIEREN",
+      "segmentsTitle": "Für jede Situation\ngibt es ein Aegryn-Mandat.",
       "segment": {
         "sell": {
           "kicker": "Asset-Veräußerung",
@@ -3521,7 +3521,24 @@
       "ctaStripMandate": "Mandat einreichen",
       "ctaStripCatalog": "Katalog ansehen",
       "ctaGrade": "CIFSO-5000-Zertifizierung",
-      "ctaStripContact": "Kontakt aufnehmen"
+      "ctaStripContact": "Kontakt aufnehmen",
+      "ctaValuation": "Wert schätzen",
+      "introLabel": "EINE SEQUENZ IN ZWEI SCHRITTEN",
+      "introTitle": "Zuerst messen und zertifizieren.\nDann realisieren.",
+      "tools": {
+        "valuation": {
+          "kicker": "Schritt 1",
+          "title": "CIFSO Valuation Index",
+          "desc": "Unabhängige Schätzung des Werts Ihrer Organisation auf Basis europäischer Marktmultiplikatoren und des CIFSO-Scores. Ein erster Anhaltspunkt in fünfzehn Minuten.",
+          "cta": "Wert schätzen"
+        },
+        "certification": {
+          "kicker": "Schritt 2",
+          "title": "CIFSO 5000 Zertifizierung",
+          "desc": "Unabhängiges Audit in fünf Dimensionen: Code, IP, Finanzen, Sicherheit, Organisation. Ein prüfbarer Grade, zwölf Monate gültig, der Wert und Übertragbarkeit dokumentiert.",
+          "cta": "Zertifizierung entdecken"
+        }
+      }
     },
     "mandate": {
       "meta": {

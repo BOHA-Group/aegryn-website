@@ -6,7 +6,7 @@ import Link                    from 'next/link'
 import TransactionForm         from './TransactionForm'
 
 export const metadata: Metadata = {
-  title: 'Transaction — Aegryn Admin',
+  title: 'Transaction | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

@@ -68,7 +68,7 @@ export async function GET(req: NextRequest) {
         </p>
         <p style="font-size:14px;color:#374151;line-height:1.6;margin-bottom:24px">
           Sans renouvellement, votre fiche sera automatiquement retirée de l'annuaire à cette date.
-          Vos clients peuvent toujours vous contacter directement — Aegryn ne prélève aucune commission.
+          Vos clients peuvent toujours vous contacter directement | Aegryn ne prélève aucune commission.
         </p>
         <a href="https://aegryn.com/client/partner/subscription"
            style="display:inline-block;background:#0b1120;color:#fff;font-size:12px;font-weight:600;

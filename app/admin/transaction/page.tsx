@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Transact Admin — Aegryn',
+  title: 'Transact Admin | Aegryn',
   robots: { index: false, follow: false },
 }
 

@@ -156,7 +156,7 @@ export default async function PartnerNdaPage() {
           </section>
 
           <div className="rounded-lg bg-gray-50 border border-gray-200 px-5 py-3">
-            <p className="font-mono text-[10px] text-gray-400">Version {NDA_VERSIONS.partner} — Aegryn Confidentiality Agreement — Partner</p>
+            <p className="font-mono text-[10px] text-gray-400">Version {NDA_VERSIONS.partner} | Aegryn Confidentiality Agreement — Partner</p>
           </div>
         </div>
 

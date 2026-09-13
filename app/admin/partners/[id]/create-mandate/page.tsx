@@ -6,7 +6,7 @@ import Link from 'next/link'
 import CreateMandateForm from './CreateMandateForm'
 
 export const metadata: Metadata = {
-  title: 'Créer un mandat — Aegryn Admin',
+  title: 'Créer un mandat | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

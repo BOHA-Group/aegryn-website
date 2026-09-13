@@ -103,10 +103,10 @@ export function generateAegrynMetadata({
   breadcrumb?: Array<{ name: string; url: string }>
 }): Metadata {
   const url  = `${BASE_URL}/${locale}${path}`
-  const fullTitle = title.includes('Aegryn') ? title : `${title} — Aegryn`
+  const fullTitle = title.includes('Aegryn') ? title : `${title} | Aegryn`
 
   return {
-    title: { default: fullTitle, template: '%s — Aegryn' },
+    title: { absolute: fullTitle },
     description,
     keywords: [...BASE_KEYWORDS, ...keywords],
     authors: [{ name: 'Aegryn', url: 'https://aegryn.com' }],

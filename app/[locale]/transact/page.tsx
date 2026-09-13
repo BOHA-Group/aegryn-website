@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
-import { ArrowUpRight, TrendingUp, Building2, Search, Handshake, Users } from 'lucide-react'
+import { ArrowUpRight, TrendingUp, Building2, Search, Handshake, Users, Gauge, BadgeCheck } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -61,10 +61,10 @@ export default async function TransactPage({ params }: Props) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/transact/mandate"
+              href="/valuation"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
-              {t('ctaMandate')} <ArrowUpRight size={13} />
+              {t('ctaValuation')} <ArrowUpRight size={13} />
             </Link>
             <Link
               href="/grade"
@@ -72,6 +72,51 @@ export default async function TransactPage({ params }: Props) {
             >
               {t('ctaGrade')}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Séquence : mesurer et certifier, puis réaliser ── */}
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-14">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
+              {t('introLabel')}
+            </p>
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-tight max-w-2xl whitespace-pre-line"
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+            >
+              {t('introTitle')}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {([
+              { key: 'valuation',     href: '/valuation', icon: <Gauge size={18} className="text-ag-apex" /> },
+              { key: 'certification', href: '/grade',     icon: <BadgeCheck size={18} className="text-ag-apex" /> },
+            ] as const).map(({ key, href, icon }) => (
+              <Link
+                key={key}
+                href={href}
+                className="group rounded-2xl bg-ag-white border border-ag-border p-10 flex flex-col gap-5 hover:border-ag-navy/40 transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-lg border border-ag-apex/30 flex items-center justify-center">{icon}</div>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">{t(`tools.${key}.kicker`)}</span>
+                </div>
+                <div>
+                  <p className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em] mb-3">
+                    {t(`tools.${key}.title`)}
+                  </p>
+                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
+                    {t(`tools.${key}.desc`)}
+                  </p>
+                </div>
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ag-navy flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                  {t(`tools.${key}.cta`)} <ArrowUpRight size={11} />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

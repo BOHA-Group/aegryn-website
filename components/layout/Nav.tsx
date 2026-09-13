@@ -23,8 +23,6 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Sous-actifs propriétaires (indentés sous craftBuildAssets)
 const CRAFT_BUILD_ASSET_SUBLINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildSubblink',    href: 'https://subblink.com' as LinkHref },
-  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
-  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
 ]
 
 // Nos métiers - Support section
@@ -36,12 +34,16 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportInvestors',     href: '/investisseurs' as LinkHref },
 ]
 
-// Nos métiers - Transaction M&A section
+// Nos métiers - Valoriser : Introduction (+ outils de valorisation en sous-éléments), puis voies de réalisation
+const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/transact' as LinkHref }
+const CRAFT_TRANSACT_TOOLS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
+  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
+]
 const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactOverview',     href: '/transact' as LinkHref },
-  { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
   { labelKey: 'craftTransactSell',         href: '/transact/how-to-sell' },
   { labelKey: 'craftTransactBuy',          href: '/transact/how-to-buy' },
+  { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
 ]
 
 // Nos métiers - Recruter section
@@ -150,7 +152,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </div>
         </div>
 
-        {/* Transaction M&A */}
+        {/* Valoriser */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
@@ -159,6 +161,25 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             {t('craftTransactDesc')}
           </div>
           <div className="flex flex-col gap-1">
+            <Link
+              href={CRAFT_TRANSACT_INTRO.href}
+              onClick={onClose}
+              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+            >
+              {t(CRAFT_TRANSACT_INTRO.labelKey)}
+            </Link>
+            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1 mb-1">
+              {CRAFT_TRANSACT_TOOLS.map(({ labelKey, href }) => (
+                <Link
+                  key={labelKey}
+                  href={href}
+                  onClick={onClose}
+                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
+                >
+                  {t(labelKey)}
+                </Link>
+              ))}
+            </div>
             {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
@@ -681,6 +702,16 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </Link>
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftTransact')}</p>
+                  <Link href={CRAFT_TRANSACT_INTRO.href} onClick={closeMobile}
+                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                    {t(CRAFT_TRANSACT_INTRO.labelKey)}
+                  </Link>
+                  {CRAFT_TRANSACT_TOOLS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
                   {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">

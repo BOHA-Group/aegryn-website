@@ -5,7 +5,7 @@ import Link                     from 'next/link'
 import { DeleteButton }         from './DeleteButton'
 
 export const metadata: Metadata = {
-  title: 'Wishlist Magazine — Aegryn Admin',
+  title: 'Wishlist Magazine | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

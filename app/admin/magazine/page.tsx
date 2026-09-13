@@ -10,7 +10,7 @@ import Link                    from 'next/link'
 import MagazinePublishToggle   from './MagazinePublishToggle'
 
 export const metadata: Metadata = {
-  title: 'Magazine — Aegryn Admin',
+  title: 'Magazine | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

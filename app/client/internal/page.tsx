@@ -5,7 +5,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { Lock, BookOpen, ShieldCheck, Star, FolderOpen, Newspaper, type LucideIcon } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Espace interne — Aegryn',
+  title: 'Espace interne | Aegryn',
   robots: { index: false, follow: false },
 }
 

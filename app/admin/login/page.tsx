@@ -3,7 +3,7 @@ import Link               from 'next/link'
 import AdminLoginForm      from './AdminLoginForm'
 
 export const metadata: Metadata = {
-  title: 'Admin — Aegryn',
+  title: 'Admin | Aegryn',
   robots: { index: false, follow: false },
 }
 

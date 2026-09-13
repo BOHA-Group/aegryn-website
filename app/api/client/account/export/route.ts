@@ -140,7 +140,7 @@ export async function GET(_req: NextRequest) {
   txt += tableSection(p.notifications as Record<string, unknown>[], ['type', 'title', 'read_at', 'created_at'])
 
   txt += `\r\n${'─'.repeat(60)}\r\n`
-  txt += `Fin de l'export — Aegryn / BOHA Group SA\r\n`
+  txt += `Fin de l'export | Aegryn / BOHA Group SA\r\n`
 
   return new NextResponse(txt, {
     status: 200,

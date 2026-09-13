@@ -14,7 +14,7 @@ import SubscriptionsSection from './SubscriptionsSection'
 import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
-  title: 'Mon compte — Aegryn',
+  title: 'Mon compte | Aegryn',
   robots: { index: false, follow: false },
 }
 

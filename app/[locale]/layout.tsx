@@ -60,7 +60,7 @@ return {
   metadataBase: new URL('https://aegryn.com'),
   title: {
     default: 'Aegryn — Engineered to Last',
-    template: '%s — Aegryn',
+    template: '%s | Aegryn',
   },
   description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — subblink, neediu, primiom, movtoo, hobconnect — engineered to last. Headquartered in Switzerland.',
   keywords: [

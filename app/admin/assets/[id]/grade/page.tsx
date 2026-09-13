@@ -6,7 +6,7 @@ import Link                     from 'next/link'
 import GradeForm                from './GradeForm'
 
 export const metadata: Metadata = {
-  title: 'Attribution de grade — Aegryn Admin',
+  title: 'Attribution de grade | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

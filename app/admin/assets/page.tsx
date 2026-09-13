@@ -5,7 +5,7 @@ import Link                    from 'next/link'
 import AssetsAdminClient       from './AssetsAdminClient'
 
 export const metadata: Metadata = {
-  title: 'Assets — Aegryn Admin',
+  title: 'Assets | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

@@ -802,9 +802,9 @@ export default function GradeForm({
         )}
       </div>
 
-      {/* ── AEG — Aegryn Expert Grade ── */}
+      {/* ── AEG | Aegryn Expert Grade ── */}
       <div className={`border p-6 flex flex-col gap-4 ${finalAeg === 'refused' ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">AEG — Aegryn Expert Grade</h2>
+        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">AEG | Aegryn Expert Grade</h2>
         <p className="text-[11px] text-gray-500 leading-relaxed">
           L'algorithme suggère <strong>{AEG_LABEL[suggestedAeg].symbol}</strong> ({AEG_LABEL[suggestedAeg].fr}) sur la base du score total et de la maturité.
           L'expert peut surclasser ou déclasser selon la rareté, l'unicité ou le potentiel stratégique de l'actif.

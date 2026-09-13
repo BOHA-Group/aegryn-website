@@ -7,7 +7,7 @@ import CertValidation          from './CertValidation'
 import DeletePartnerButton     from './DeletePartnerButton'
 
 export const metadata: Metadata = {
-  title: 'Partenaire — Aegryn Admin',
+  title: 'Partenaire | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 

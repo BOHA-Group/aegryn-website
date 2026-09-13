@@ -153,7 +153,7 @@
     "solutionsCategoryTransactions": "Transactions & Network",
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investors & Institutional",
-    "craftTransactOverview": "Overview",
+    "craftTransactOverview": "Introduction",
     "craftTransactAuditors": "Independent auditors",
     "whoIndustries": "Our industries",
     "whoIndustriesDesc": "All covered sectors",
@@ -3581,17 +3581,17 @@
   },
   "transact": {
     "meta": {
-      "title": "TRANSACT | Offmarket tech transaction agency",
-      "desc": "Aegryn TRANSACT: the reference agency for selective tech transactions in Europe. Exclusive mandate, closed catalog, certified CIFS qualified buyers and sellers."
+      "title": "Value | Measure, certify and realise the value of your organisation",
+      "desc": "Aegryn Value: CIFSO Valuation Index to measure, CIFSO 5000 Certification to certify, then sale, acquisition, fundraising or equity opening under exclusive mandate."
     },
     "index": {
-      "eyebrow": "AEGRYN TRANSACT | TECH TRANSACTION AGENCY",
-      "heroTitle": "Europe's reference\nfor selective tech transactions.",
-      "heroDesc": "Closed offmarket catalog under exclusive mandate. Every buyer is qualified. Every asset is CIFS-certified. No transaction without maximum NDA protection.",
+      "eyebrow": "AEGRYN. VALUE",
+      "heroTitle": "Measure, certify,\nrealise the value of your organisation.",
+      "heroDesc": "Valuing a company is not limited to transferring it. It starts with measuring its value, documenting it and certifying it independently. Sale, acquisition, fundraising or opening the capital are then so many ways to realise it.",
       "ctaCatalog": "Access catalog",
       "ctaMandate": "Submit a mandate",
-      "segmentsLabel": "FOUR TRANSACTION SEGMENTS",
-      "segmentsTitle": "Whatever your situation,\nthere is an Aegryn mandate for you.",
+      "segmentsLabel": "FOUR WAYS TO REALISE VALUE",
+      "segmentsTitle": "Whatever your situation,\nthere is an Aegryn mandate.",
       "segment": {
         "sell": {
           "kicker": "Asset sale",
@@ -3646,7 +3646,24 @@
       "ctaStripMandate": "Submit a mandate",
       "ctaStripCatalog": "View catalog",
       "ctaGrade": "CIFSO 5000 Certification",
-      "ctaStripContact": "Contact us"
+      "ctaStripContact": "Contact us",
+      "ctaValuation": "Estimate the value",
+      "introLabel": "A TWO-STEP SEQUENCE",
+      "introTitle": "First measure and certify.\nThen realise.",
+      "tools": {
+        "valuation": {
+          "kicker": "Step 1",
+          "title": "CIFSO Valuation Index",
+          "desc": "Independent estimate of your organisation's value, based on European market multiples and the CIFSO score. A first benchmark in fifteen minutes.",
+          "cta": "Estimate the value"
+        },
+        "certification": {
+          "kicker": "Step 2",
+          "title": "CIFSO 5000 Certification",
+          "desc": "Independent audit across five dimensions: Code, IP, Finance, Security, Organisation. A verifiable grade, valid for twelve months, documenting value and transferability.",
+          "cta": "Discover the certification"
+        }
+      }
     },
     "mandate": {
       "meta": {

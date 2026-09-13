@@ -11,7 +11,7 @@ import { createServiceClient } from '@/lib/supabase'
 import DataRoomRequestsClient  from './DataRoomRequestsClient'
 
 export const metadata: Metadata = {
-  title: 'Demandes Data Room Light — Aegryn Admin',
+  title: 'Demandes Data Room Light | Aegryn Admin',
   robots: { index: false, follow: false },
 }
 
