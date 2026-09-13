@@ -1,0 +1,69 @@
+# Parking lot — chantiers en attente
+
+Décisions produit / technique reportées, avec le contexte nécessaire pour reprendre sans réexploration.
+
+---
+
+## 1. Analyse automatique du contenu des pièces (OCR + IA) pour le scoring CIFSO
+
+**Statut : en attente de décision (fournisseur IA, cadre contractuel).**
+
+### Ce qui existe déjà
+- Pré-scoring documentaire (`lib/prescore.ts`) : complétude, qualité de preuve suggérée et état
+  par dimension à partir de la **présence et de la vérification** des pièces (`admin_quality`),
+  recalculé à chaque dépôt et décision admin. Ne lit pas le contenu des fichiers.
+- Moteur de grade (`lib/gradeEngine.ts`) : `GradeInput` typé par dimension (C, I, F, S, O),
+  alimenté manuellement dans `app/admin/assets/[id]/grade-engine/GradeEngineForm.tsx`.
+- Catalogue `documents_catalog` : chaque code (F-01, O-02…) porte une `note_admin` indiquant
+  le critère du moteur qu'il documente.
+
+### Cible
+1. **Extraction** côté serveur, depuis le bucket privé `data-room` (URL signée interne) :
+   PDF texte (`pdf-parse`), tableurs (`xlsx`), OCR pour les scans (Tesseract ou service managé).
+   Jamais d'exposition du fichier au client ni à un tiers non contractualisé.
+2. **Structuration par IA** : un prompt par code catalogue produisant un JSON strict mappé sur
+   `GradeInput` (ex. F-01 → `arr`, `nrr`, `monthlyChurn` ; O-01 → `keyPersonCount` ;
+   S-03 → `lastPentestMonthsAgo`, `pentestMethodology`), avec pour chaque valeur :
+   `confidence` (0–1), `evidence` (extrait textuel + page), `source_document_id`.
+3. **Contrôles croisés** : cohérence inter-pièces (ARR déclaré vs export Stripe vs comptes),
+   dates de validité (pentest < 18 mois, Kbis < 3 mois), écarts signalés à l'analyste.
+4. **Pré-remplissage du moteur** : valeurs extraites injectées dans le formulaire admin et dans
+   l'espace de l'expert mandaté (sa dimension uniquement), marquées « extraites automatiquement »,
+   à confirmer ou corriger. Le calcul reste celui du moteur ; la publication reste humaine.
+5. **Traçabilité** : table `document_extractions` (asset_id, document_id, code, json, model,
+   prompt_version, created_at) pour l'audit et la contestation (15 jours).
+
+### Prérequis / décisions
+- Fournisseur IA et clé API (aucune clé présente dans `.env.local` au 2026-09-13).
+  Critères : hébergement UE/CH, zéro rétention des données, DPA signé.
+- Mention dans CGV / NDA du traitement automatisé par un sous-traitant.
+- Coût par dossier estimé (≈ 30–60 pages × 5 dimensions) et quota par pack.
+- Politique de fallback si extraction impossible (scan illisible) : saisie manuelle.
+
+### Points d'entrée code
+- `lib/prescore.ts`, `lib/prescoreServer.ts` (à étendre avec `contentScore`).
+- `app/api/admin/assets/[id]/prescore/route.ts` (déclenchement).
+- `app/admin/assets/[id]/grade-engine/PrescorePanel.tsx` (affichage).
+- `app/api/data-room/signed-url/route.ts` (accès fichier côté serveur).
+
+---
+
+## 2. Supabase Auth — SMTP personnalisé
+
+**Statut : action manuelle dashboard requise.**
+
+Les invitations d'experts (`/api/admin/assets/[id]/assign-expert`) passent par
+`auth.admin.inviteUserByEmail`, donc par le SMTP de Supabase Auth (limite ≈ 3–4 emails/heure
+par défaut → `email rate limit exceeded`). Resend est déjà opérationnel pour les emails applicatifs.
+
+À faire : Dashboard Supabase → Authentication → SMTP Settings →
+host `smtp.resend.com`, port 465, user `resend`, password = clé API Resend,
+sender = `contact@boha-group.com` (puis `aegryn.com` une fois le domaine vérifié).
+
+---
+
+## 3. Domaine d'envoi `aegryn.com`
+
+`RESEND_FROM` = `contact@boha-group.com`. Basculer sur `aegryn.com` après vérification DNS
+(SPF, DKIM) dans Resend. Emails concernés : confirmation de demande, publication du grade,
+mandats experts, notifications pièces.
