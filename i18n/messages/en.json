@@ -80,7 +80,7 @@
     "craftSupportNetwork": "Partner & Expert Network",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
-    "craftTransact": "Transact",
+    "craftTransact": "Value",
     "craftTransactDesc": "Independent certification, valuation, sale, acquisition of assets",
     "craftTransactGrade": "Certification CIFSO 5000",
     "craftTransactCatalog": "Offmarket catalog",
@@ -172,7 +172,7 @@
     "title": "Rare by selection.",
     "sub": "We help business leaders create, document and realise the value of their organisation. From strategy to closing.",
     "cta": "SELL A CERTIFIED ASSET",
-    "strip": "BUILD · ADVISE · TRANSACT · RECRUIT · INFORM",
+    "strip": "BUILD · ADVISE · VALUE · RECRUIT · INFORM",
     "geo": "Switzerland · Europe · Global",
     "scroll": "Scroll",
     "chip2": "BUILT TO LAST",
@@ -182,7 +182,7 @@
     "cta2Title": "Advise",
     "cta2Desc": "your projects.",
     "cta2Link": "Contact",
-    "cta3Title": "Transact",
+    "cta3Title": "Value",
     "cta3Desc": "your assets.",
     "cta3Link": "Estimate",
     "cta4Title": "Recruit",
@@ -727,7 +727,7 @@
         "desc": "Durable digital assets, flat-fee, full client ownership. Each asset is designed to enhance company value and withstand certification. Technological independence."
       },
       {
-        "title": "TRANSACT",
+        "title": "VALUE",
         "desc": "Independent CIFSO certification and asset transactions. A rigorous protocol on five dimensions: Capital, Integrity, Finance, Security & Sovereignty, Organisation. A closed circle of qualified buyers."
       },
       {
@@ -1673,7 +1673,7 @@
     "col4Careers": "Careers",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Advisory",
-    "footerCraftTransact": "Transact",
+    "footerCraftTransact": "Value",
     "footerCraftBuild": "Build",
     "footerGradeSubmit": "Certify an asset",
     "footerWhoTalent": "Recruit",
@@ -9731,7 +9731,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "TRANSFER",
+          "title": "VALUE",
           "desc": "Certification and sale of tech assets within a confidential circle of qualified acquirers. A structured, graded process with no public exposure.",
           "cta": "Explore the platform",
           "href": "/transact"

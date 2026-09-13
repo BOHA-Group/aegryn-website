@@ -66,7 +66,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* ── Grille compacte ──────────────────────────────────── */}
-      <section className="rounded-lg bg-ag-white border-t border-ag-border py-16 px-6 md:px-12">
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             {t('industriesTitle')}

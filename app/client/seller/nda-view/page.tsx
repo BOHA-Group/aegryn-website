@@ -183,9 +183,9 @@ export default async function SellerNdaViewPage() {
             <table className="mt-4 w-full text-[11px] font-mono border-collapse">
               <thead>
                 <tr className="bg-gray-100 text-gray-600">
-                  <th className="rounded-lg text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
-                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Taux</th>
-                  <th className="rounded-lg text-right px-3 py-2 border border-gray-200">Minimum</th>
+                  <th className="text-left px-3 py-2 border border-gray-200">Tranche de prix</th>
+                  <th className="text-right px-3 py-2 border border-gray-200">Taux</th>
+                  <th className="text-right px-3 py-2 border border-gray-200">Minimum</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
@@ -198,9 +198,9 @@ export default async function SellerNdaViewPage() {
                   ['> 5 000 000 €', 'taux convenu au mandat', '25 000 CHF'],
                 ].map(([t, tx, m]) => (
                   <tr key={t}>
-                    <td className="rounded-lg px-3 py-1.5 border border-gray-200">{t}</td>
-                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{tx}</td>
-                    <td className="rounded-lg px-3 py-1.5 border border-gray-200 text-right">{m}</td>
+                    <td className="px-3 py-1.5 border border-gray-200">{t}</td>
+                    <td className="px-3 py-1.5 border border-gray-200 text-right">{tx}</td>
+                    <td className="px-3 py-1.5 border border-gray-200 text-right">{m}</td>
                   </tr>
                 ))}
               </tbody>

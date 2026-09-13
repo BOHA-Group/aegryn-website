@@ -102,7 +102,7 @@ export default function TransactionSubmitForm() {
       </section>
 
       {/* Process steps */}
-      <section className="rounded-lg py-12 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-12 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border">
             {steps.map(({ num, title, desc }) => (

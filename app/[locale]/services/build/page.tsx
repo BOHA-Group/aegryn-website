@@ -530,7 +530,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <Link
             href="/transact/how-it-works"
-            className="rounded-lg shrink-0 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors whitespace-nowrap"
+            className="rounded-lg shrink-0 w-full md:w-auto text-center font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors"
           >
             {t('exitBanner.cta')} →
           </Link>

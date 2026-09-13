@@ -23,7 +23,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
 
   if (kycStatus === 'approved') {
     return (
-      <div className="rounded-lg flex items-center gap-3 bg-emerald-50 border-b border-emerald-200 px-6 py-3">
+      <div className="flex items-center gap-3 bg-emerald-50 border-b border-emerald-200 px-6 py-3">
         <ShieldCheck size={15} className="text-emerald-600 shrink-0" />
         <p className="font-sans text-[12px] text-emerald-800 flex-1">
           <strong>{t('approvedTitle')}</strong>{' '}{approvedMsg}
@@ -34,7 +34,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
 
   if (kycStatus === 'in_review') {
     return (
-      <div className="rounded-lg flex items-center gap-3 bg-blue-50 border-b border-blue-200 px-6 py-3">
+      <div className="flex items-center gap-3 bg-blue-50 border-b border-blue-200 px-6 py-3">
         <Clock size={15} className="text-blue-500 shrink-0" />
         <p className="font-sans text-[12px] text-blue-800 flex-1">
           <strong>{t('inReviewTitle')}</strong>{' '}{t('inReviewDesc')}
@@ -45,7 +45,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
 
   if (kycStatus === 'rejected') {
     return (
-      <div className="rounded-lg flex items-center justify-between gap-3 bg-red-50 border-b border-red-200 px-6 py-3">
+      <div className="flex items-center justify-between gap-3 bg-red-50 border-b border-red-200 px-6 py-3">
         <div className="flex items-center gap-3">
           <ShieldX size={15} className="text-red-500 shrink-0" />
           <p className="font-sans text-[12px] text-red-800">
@@ -67,7 +67,7 @@ export default function KycBanner({ kycStatus, role, kycPath }: Props) {
     : t('pendingPartner')
 
   return (
-    <div className="rounded-lg flex items-center justify-between gap-3 bg-amber-50 border-b border-amber-300 px-6 py-3">
+    <div className="flex items-center justify-between gap-3 bg-amber-50 border-b border-amber-300 px-6 py-3">
       <div className="flex items-center gap-3">
         <ShieldAlert size={15} className="text-amber-600 shrink-0" />
         <p className="font-sans text-[12px] text-amber-900">

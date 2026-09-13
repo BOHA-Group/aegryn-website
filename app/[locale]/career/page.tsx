@@ -126,7 +126,7 @@ export default async function CareerPage({ params }: Props) {
       </section>
 
       {/* No open positions — spontaneous application */}
-      <section className="rounded-lg bg-ag-navy py-28 px-6 md:px-12">
+      <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">

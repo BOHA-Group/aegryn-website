@@ -148,7 +148,7 @@ export function ProprietaryAssetsGrid() {
   }
 
   return (
-    <section className="rounded-lg bg-ag-white border-t border-ag-border py-12 px-6">
+    <section className="bg-ag-white border-t border-ag-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Publisher note */}

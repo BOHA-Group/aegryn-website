@@ -80,7 +80,7 @@
     "craftSupportMA": "Conseil en M&A",
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
-    "craftTransact": "Transmettre",
+    "craftTransact": "Valoriser",
     "craftTransactDesc": "Certification indépendante, valorisation, cession, acquisition",
     "craftTransactGrade": "Certification CIFSO 5000",
     "craftTransactCatalog": "Transaction offmarket",
@@ -172,7 +172,7 @@
     "title": "Rare par\nsélection.",
     "sub": "Nous accompagnons les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation. De la stratégie à la transmission.",
     "cta": "CÉDER UN ACTIF CERTIFIÉ",
-    "strip": "CONSTRUIRE · ACCOMPAGNER · TRANSMETTRE · RECRUTER · S'INFORMER",
+    "strip": "CONSTRUIRE · ACCOMPAGNER · VALORISER · RECRUTER · S'INFORMER",
     "geo": "Suisse · Europe",
     "scroll": "Défiler",
     "cta1Title": "Construire",
@@ -181,7 +181,7 @@
     "cta2Title": "Accompagner",
     "cta2Desc": "vos projets.",
     "cta2Link": "Contacter",
-    "cta3Title": "Transmettre",
+    "cta3Title": "Valoriser",
     "cta3Desc": "vos actifs.",
     "cta3Link": "Estimer",
     "cta4Title": "Recruter",
@@ -690,7 +690,7 @@
         "desc": "Actifs numériques durables, à prix forfaitaire, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. Indépendance technologique."
       },
       {
-        "title": "TRANSMETTRE",
+        "title": "VALORISER",
         "desc": "Certification indépendante CIFSO et transaction d’actifs. Un protocole rigoureux sur cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un cercle fermé d’acquéreurs qualifiés."
       },
       {
@@ -1633,7 +1633,7 @@
     "col4Careers": "Carrières",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Conseiller",
-    "footerCraftTransact": "Transmettre",
+    "footerCraftTransact": "Valoriser",
     "footerCraftBuild": "Construire",
     "footerGradeSubmit": "Certifier un actif",
     "footerWhoTalent": "Recruter",
@@ -9822,7 +9822,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "TRANSMETTRE",
+          "title": "VALORISER",
           "desc": "Certification et cession d'actifs tech dans un cercle confidentiel d'acquéreurs qualifiés. Un processus structuré, gradé, sans exposition publique.",
           "cta": "Explorer la plateforme",
           "href": "/transact"

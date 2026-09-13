@@ -331,7 +331,7 @@ export default function AboutPage() {
       </section>
 
       {/* Swiss */}
-      <section className="rounded-lg bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
+      <section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>

@@ -98,7 +98,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── For whom ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('forWhom.label')}
@@ -142,7 +142,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── Differentiators ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
@@ -202,7 +202,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2

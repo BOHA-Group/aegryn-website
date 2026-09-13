@@ -117,7 +117,7 @@ export default async function TransactBuyersPage({ params }: Props) {
       </section>
 
       {/* ── CTA secondaire ── */}
-      <section className="rounded-lg py-16 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-16 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="font-sans text-[14px] text-ag-gray max-w-md leading-relaxed">
             {t('sellerNote')}

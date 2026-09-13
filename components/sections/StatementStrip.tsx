@@ -49,7 +49,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="rounded-lg relative bg-ag-navy py-32 px-6 md:px-12 border-t border-ag-navy overflow-hidden"
+      className="relative bg-ag-navy py-32 px-6 md:px-12 border-t border-ag-navy overflow-hidden"
     >
       {/* Radial gradient depth — submarine effect */}
       <div

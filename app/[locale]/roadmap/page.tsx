@@ -91,7 +91,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── Features grid ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('featuresLabel')}
@@ -115,7 +115,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── Timeline top 20 ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-5xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-16">
             {t('roadmapLabel')}
@@ -190,7 +190,7 @@ export default async function RoadmapPage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="rounded-lg py-20 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-20 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-6">

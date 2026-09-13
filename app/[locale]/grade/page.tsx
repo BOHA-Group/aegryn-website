@@ -51,7 +51,7 @@ export default async function GradePage({ params }: Props) {
       <GradeBrochure />
 
       {/* Submit CTA */}
-      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">

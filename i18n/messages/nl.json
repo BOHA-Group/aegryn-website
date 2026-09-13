@@ -80,7 +80,7 @@
     "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
-    "craftTransact": "Overdragen",
+    "craftTransact": "Waarderen",
     "craftTransactDesc": "Onafhankelijke certificering, waardering, overdracht, acquisitie van assets",
     "craftTransactGrade": "Certificering CIFSO 5000",
     "craftTransactCatalog": "Offmarket-catalogus",
@@ -172,7 +172,7 @@
     "title": "Zeldzaam door selectie.",
     "sub": "Wij begeleiden bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.",
     "cta": "VERKOOP EEN GECERTIFICEERD ASSET",
-    "strip": "BOUWEN · ADVISEREN · OVERDRAGEN · REKRUTEREN · INFORMEREN",
+    "strip": "BOUWEN · ADVISEREN · WAARDEREN · REKRUTEREN · INFORMEREN",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
     "chip2": "BUILT TO LAST",
@@ -182,7 +182,7 @@
     "cta2Title": "Adviseren",
     "cta2Desc": "uw projecten.",
     "cta2Link": "Contact",
-    "cta3Title": "Overdragen",
+    "cta3Title": "Waarderen",
     "cta3Desc": "uw assets.",
     "cta3Link": "Schatten",
     "cta4Title": "Rekruteren",
@@ -727,7 +727,7 @@
         "desc": "Duurzame digitale assets, vaste prijs, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten. Technologische onafhankelijkheid."
       },
       {
-        "title": "OVERDRAGEN",
+        "title": "WAARDEREN",
         "desc": "Onafhankelijke CIFSO-certificering en asset-transacties. Een rigoureus protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie."
       },
       {
@@ -1673,7 +1673,7 @@
     "col4Careers": "Carrières",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Advisering",
-    "footerCraftTransact": "Overdragen",
+    "footerCraftTransact": "Waarderen",
     "footerCraftBuild": "Bouwen",
     "footerGradeSubmit": "Asset certificeren",
     "footerWhoTalent": "Werven",
@@ -9746,7 +9746,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "OVERDRAGEN",
+          "title": "WAARDEREN",
           "desc": "Certificering en verkoop van tech assets in een vertrouwelijke kring van gekwalificeerde kopers. Gestructureerd proces, zonder publieke blootstelling.",
           "cta": "Platform verkennen",
           "href": "/transact"

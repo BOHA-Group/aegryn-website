@@ -80,7 +80,7 @@
     "craftSupportNetwork": "Partner- & Expertennetzwerk",
     "craftSupportAlliances": "Partnernetzwerk",
     "craftSupportExperts": "Expertennetzwerk",
-    "craftTransact": "Übertragen",
+    "craftTransact": "Bewerten",
     "craftTransactDesc": "Unabhängige Zertifizierung, Bewertung, Abtretung, Erwerb von Assets",
     "craftTransactGrade": "Zertifizierung CIFSO 5000",
     "craftTransactCatalog": "Offmarket-Katalog",
@@ -172,7 +172,7 @@
     "title": "Selten durch Auswahl.",
     "sub": "Wir begleiten Unternehmensentscheider dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.",
     "cta": "ZERTIFIZIERTEN ASSET VERKAUFEN",
-    "strip": "BAUEN · BERATEN · ÜBERTRAGEN · REKRUTIEREN · INFORMIEREN",
+    "strip": "BAUEN · BERATEN · BEWERTEN · REKRUTIEREN · INFORMIEREN",
     "geo": "Schweiz · Europa · Global",
     "scroll": "Scrollen",
     "chip2": "BUILT TO LAST",
@@ -182,7 +182,7 @@
     "cta2Title": "Beraten",
     "cta2Desc": "Ihre Projekte.",
     "cta2Link": "Kontakt",
-    "cta3Title": "Übertragen",
+    "cta3Title": "Bewerten",
     "cta3Desc": "Ihre Vermögenswerte.",
     "cta3Link": "Schätzen",
     "cta4Title": "Rekrutieren",
@@ -727,7 +727,7 @@
         "desc": "Nachhaltige digitale Assets, Pauschalpreis, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. Technologische Unabhängigkeit."
       },
       {
-        "title": "ÜBERTRAGEN",
+        "title": "BEWERTEN",
         "desc": "Unabhängige CIFSO-Zertifizierung und Asset-Transaktionen. Ein strenges Protokoll auf fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Ein geschlossener Kreis qualifizierter Käufer."
       },
       {
@@ -1673,7 +1673,7 @@
     "col4Careers": "Karriere",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Beratung",
-    "footerCraftTransact": "Übertragen",
+    "footerCraftTransact": "Bewerten",
     "footerCraftBuild": "Aufbauen",
     "footerGradeSubmit": "Asset zertifizieren",
     "footerWhoTalent": "Rekrutieren",
@@ -9876,7 +9876,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "ÜBERTRAGEN",
+          "title": "BEWERTEN",
           "desc": "Zertifizierung und Verkauf von Tech-Assets in einem vertraulichen Kreis qualifizierter Erwerber. Ein strukturierter, bewerteter Prozess ohne öffentliche Exposition.",
           "cta": "Plattform erkunden",
           "href": "/transact"

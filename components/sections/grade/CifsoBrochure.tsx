@@ -47,11 +47,13 @@ function Page({ n, total, label, children, dark = false, className = '' }: {
       className={`brochure-page relative mx-auto w-full max-w-[900px] bg-white shadow-[0_2px_24px_rgba(0,0,0,0.08)] border border-ag-border print:shadow-none print:border-0 ${dark ? 'bg-ag-navy text-white' : ''} ${className}`}
      
     >
-      <div className="px-12 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
-      <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
-        <span>CERTIFICATION CIFSO 5000. AEGRYN.</span>
-        <span>{label} {n} / {total}</span>
-      </footer>
+      <div className="brochure-sheet relative min-h-[1272px]">
+        <div className="px-12 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
+        <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
+          <span>CERTIFICATION CIFSO 5000. AEGRYN.</span>
+          <span>{label} {n} / {total}</span>
+        </footer>
+      </div>
     </article>
   )
 }
@@ -132,6 +134,7 @@ export function CifsoBrochure() {
 
         {/* ── COUVERTURE ── */}
         <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none">
+         <div className="brochure-sheet relative min-h-[1272px] overflow-hidden">
           <Image src={IMG.cover} alt="" fill priority className="object-cover" sizes="900px" />
           {/* Bandeau bas opaque pour un contraste garanti */}
           <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-ag-navy via-ag-navy/95 to-transparent" />
@@ -153,6 +156,7 @@ export function CifsoBrochure() {
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60">{b('coverIssuer')}</p>
             </div>
           </div>
+         </div>
         </article>
 
         {/* ── SOMMAIRE ── */}
@@ -437,6 +441,7 @@ export function CifsoBrochure() {
 
         {/* ── 12 ENGAGER ── */}
         <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden bg-ag-navy shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none">
+         <div className="brochure-sheet relative min-h-[1272px] overflow-hidden">
           <div className="relative h-[42%] min-h-[520px]">
             <Image src={IMG.closing} alt="" fill className="object-cover" sizes="900px" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ag-navy/30 to-ag-navy" />
@@ -465,6 +470,7 @@ export function CifsoBrochure() {
           <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
             <span>{b('footerIssuer')}</span>
           </footer>
+         </div>
         </article>
       </div>
     </main>

@@ -156,7 +156,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       )}
 
       {/* Header viewer */}
-      <div className="rounded-lg shrink-0 flex items-center justify-between px-6 py-3 bg-black/80 border-b border-white/10">
+      <div className="shrink-0 flex items-center justify-between px-6 py-3 bg-black/80 border-b border-white/10">
         <div className="flex items-center gap-3">
           <Lock size={13} className="text-white/40" />
           <span className="text-[11px] font-semibold text-white/60 max-w-[300px] truncate">{fileName}</span>
@@ -249,7 +249,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       </div>
 
       {/* Footer : rappel légal */}
-      <div className="rounded-lg shrink-0 border-t border-white/10 px-6 py-2 bg-black/80">
+      <div className="shrink-0 border-t border-white/10 px-6 py-2 bg-black/80">
         <p className="text-[10px] text-white/60 text-center">
           Document confidentiel Aegryn — consultation journalisée (IP, horodatage, durée) — reproduction interdite par NDA
         </p>

@@ -44,7 +44,7 @@ export function GradePricing() {
   }, [])
 
   return (
-    <section ref={ref} className="rounded-lg bg-ag-navy border-t border-white/10 py-24 px-6">
+    <section ref={ref} className="bg-ag-navy border-t border-white/10 py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

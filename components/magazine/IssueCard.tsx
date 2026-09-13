@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ScaledCanvas } from './ScaledCanvas'
 import type { MagazineIssue } from '@/lib/magazine/types'
 
 interface Props {
@@ -69,9 +70,15 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
             </div>
           </div>
         )
-        return (isPublic || isPreview)
-          ? <Link href={`/${locale}/magazine/${issue.slug}`} className="block group" style={{ width: 420, height: 595, flexShrink: 0 }}>{coverInner}</Link>
-          : <div style={{ width: 420, flexShrink: 0 }}>{coverInner}</div>
+        return (
+          <div className="w-full flex justify-center px-6 sm:px-0">
+            <ScaledCanvas width={420} height={595}>
+              {(isPublic || isPreview)
+                ? <Link href={`/${locale}/magazine/${issue.slug}`} className="block group" style={{ width: 420, height: 595 }}>{coverInner}</Link>
+                : <div style={{ width: 420 }}>{coverInner}</div>}
+            </ScaledCanvas>
+          </div>
+        )
       })()}
 
       {/* ── Titre sous le cover — style Barnes ── */}

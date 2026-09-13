@@ -77,7 +77,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── 4 segments de mandat ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-14">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
@@ -121,7 +121,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Valeur Aegryn TRANSACT ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
@@ -156,7 +156,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Processus en 4 étapes ── */}
-      <section className="rounded-lg py-24 px-6 bg-ag-white border-t border-ag-border">
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-14">
             {t('howLabel')}
@@ -176,7 +176,7 @@ export default async function TransactPage({ params }: Props) {
       </section>
 
       {/* ── Bottom CTA strip ── */}
-      <section className="rounded-lg bg-ag-navy py-20 px-6 border-t border-white/10">
+      <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">

@@ -203,6 +203,30 @@ body {
 /* ── Mobile-safe overflow ─────────────────────────────── */
 html, body { max-width: 100vw; overflow-x: hidden; }
 
+/* ── Système d'angles arrondis (design system) ────────────────────────
+   Règles de base, surchargées par les utilitaires Tailwind (rounded-*).
+   - Champs de saisie et boutons : 8 px.
+   - Tableaux : seuls les angles extérieurs du tableau sont arrondis (12 px) ;
+     jamais les cellules. Le conteneur qui scrolle horizontalement (mobile)
+     porte l'arrondi et la bordure ; la bordure du <table> lui-même est retirée
+     pour éviter le double trait. */
+@layer base {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="hidden"]),
+  select,
+  textarea,
+  button { border-radius: 0.5rem; }
+
+  div:has(> table) {
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid var(--ag-border, #e5e7eb);
+  }
+  div:has(> table) > table { border: 0; border-radius: 0; }
+  div:has(> table) > table th,
+  div:has(> table) > table td { border-radius: 0 !important; }
+}
+
 /* ── Smooth image rendering ───────────────────────────── */
 img { image-rendering: auto; }
 
@@ -237,24 +261,31 @@ img { image-rendering: auto; }
   /* Chrome du site : navbar fixe, footer, bouton scroll-top */
   header.fixed, #main ~ footer, #main ~ button, #main ~ a,
   #cookiescript_injected, #cookiescript_badge, #cookiescript_injected_wrapper { display: none !important; }
-  /* Une page simulée (900 × 1272 px) ramenée à l'échelle d'une feuille A4 (794 × 1123 px) */
+  /* Une feuille = une page A4 exacte (mm). Le contenu, composé à 900 × 1272 px comme à l'écran,
+     est ramené à l'échelle par transform (fiable sur Chrome, Safari et Firefox, contrairement à zoom). */
   .brochure-page {
-    zoom: 0.87;
-    width: 900px !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 0 !important;
     max-width: none !important;
-    height: 1272px !important;
-    min-height: 1272px !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     box-shadow: none !important;
     border: 0 !important;
     border-radius: 0 !important;
-    overflow: hidden;
+    overflow: hidden !important;
     break-after: page;
     page-break-after: always;
     break-inside: avoid;
     page-break-inside: avoid;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+  .brochure-sheet {
+    width: 900px !important;
+    height: 1272px !important;
+    min-height: 1272px !important;
+    transform: scale(0.8822);
+    transform-origin: top left;
   }
   .brochure-page:last-child { break-after: auto; page-break-after: auto; }
 }

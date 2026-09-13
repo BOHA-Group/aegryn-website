@@ -108,7 +108,7 @@ export default async function TransactSellPage({ params }: Props) {
       </section>
 
       {/* ── Mandats complémentaires : levée de fonds + equity ── */}
-      <section className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {tm('segmentsLabel')}
@@ -201,7 +201,7 @@ export default async function TransactSellPage({ params }: Props) {
       </section>
 
       {/* ── NDA ── */}
-      <section className="rounded-lg py-16 px-6 bg-ag-navy border-t border-white/10">
+      <section className="py-16 px-6 bg-ag-navy border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">

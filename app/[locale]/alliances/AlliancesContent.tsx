@@ -83,7 +83,7 @@ export default function AlliancesContent() {
 
       {/* Layout : sidebar gauche + contenu droite */}
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex gap-0 min-h-[70vh]">
+        <div className="flex flex-col lg:flex-row gap-0 min-h-[70vh]">
 
           {/* ── Sidebar navigation verticale ── */}
           <aside className="hidden lg:flex flex-col shrink-0 w-56 border-r border-ag-border sticky top-0 self-start pt-10 pb-10 min-h-[calc(100vh-80px)]">
@@ -345,7 +345,7 @@ export default function AlliancesContent() {
       </div>
 
       {/* CTA navy */}
-      <section className="rounded-lg bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
+      <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">{t('hero.label')}</p>

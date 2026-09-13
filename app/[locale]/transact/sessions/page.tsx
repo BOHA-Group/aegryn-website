@@ -146,7 +146,7 @@ export default async function TransactionSessionPage({ params }: Props) {
       </section>
 
       {/* Waiting list */}
-      <section id="waitlist" className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section id="waitlist" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-xl">
             <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-3">

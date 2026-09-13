@@ -311,7 +311,7 @@ export default function NetworkContent() {
       </section>
 
       {/* ── CTA Devenir partenaire ── */}
-      <section className="rounded-lg bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
+      <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">Aegryn Network</p>

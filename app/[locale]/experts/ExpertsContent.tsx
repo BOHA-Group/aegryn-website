@@ -885,7 +885,7 @@ export default function ExpertsContent() {
       </section>
 
       {/* ── Section candidature ──────────────────────────────────────── */}
-      <section className="rounded-lg bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
+      <section className="bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">

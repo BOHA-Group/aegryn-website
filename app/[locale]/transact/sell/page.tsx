@@ -162,7 +162,7 @@ export default async function TransactionSellPage({ params }: Props) {
       </section>
 
       {/* ── Garanties ── */}
-      <section className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />

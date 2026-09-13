@@ -98,7 +98,7 @@ export default async function TransactBuyPage({ params }: Props) {
       </section>
 
       {/* ── Mandat d'acquisition — conditions ── */}
-      <section className="rounded-lg py-20 px-6 bg-ag-off-white border-t border-ag-border">
+      <section className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
             <div>
@@ -136,7 +136,7 @@ export default async function TransactBuyPage({ params }: Props) {
       </section>
 
       {/* ── NDA ── */}
-      <section className="rounded-lg py-16 px-6 bg-ag-navy border-t border-white/10">
+      <section className="py-16 px-6 bg-ag-navy border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/40 mb-3">

@@ -80,7 +80,7 @@
     "craftSupportNetwork": "Red de socios y expertos",
     "craftSupportAlliances": "Red de socios",
     "craftSupportExperts": "Red de expertos",
-    "craftTransact": "Transmitir",
+    "craftTransact": "Valorizar",
     "craftTransactDesc": "Certificación independiente, valoración, cesión, adquisición de activos",
     "craftTransactGrade": "Certificación CIFSO 5000",
     "craftTransactCatalog": "Catálogo offmarket",
@@ -172,7 +172,7 @@
     "title": "Selecto por definición.",
     "sub": "Acompañamos a los directivos a crear, documentar y realizar el valor de su organización. De la estrategia a la transmisión.",
     "cta": "VENDER UN ACTIVO CERTIFICADO",
-    "strip": "CONSTRUIR · ASESORAR · TRANSMITIR · RECLUTAR · INFORMAR",
+    "strip": "CONSTRUIR · ASESORAR · VALORIZAR · RECLUTAR · INFORMAR",
     "geo": "Suiza · Europa · Global",
     "scroll": "Desplazar",
     "chip2": "BUILT TO LAST",
@@ -182,7 +182,7 @@
     "cta2Title": "Asesorar",
     "cta2Desc": "tus proyectos.",
     "cta2Link": "Contactar",
-    "cta3Title": "Transmitir",
+    "cta3Title": "Valorizar",
     "cta3Desc": "sus activos.",
     "cta3Link": "Estimar",
     "cta4Title": "Reclutar",
@@ -727,7 +727,7 @@
         "desc": "Activos digitales duraderos, precio fijo, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. Independencia tecnológica."
       },
       {
-        "title": "TRANSMITIR",
+        "title": "VALORIZAR",
         "desc": "Certificación independiente CIFSO y transacción de activos. Un protocolo riguroso en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización."
       },
       {
@@ -1673,7 +1673,7 @@
     "col4Careers": "Carreras",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Asesoría",
-    "footerCraftTransact": "Transmitir",
+    "footerCraftTransact": "Valorizar",
     "footerCraftBuild": "Construir",
     "footerGradeSubmit": "Certificar un activo",
     "footerWhoTalent": "Reclutar",
@@ -9746,7 +9746,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "TRANSMITIR",
+          "title": "VALORIZAR",
           "desc": "Certificación y venta de activos tech en un círculo confidencial de adquirentes cualificados. Proceso estructurado, sin exposición pública.",
           "cta": "Explorar la plataforma",
           "href": "/transact"

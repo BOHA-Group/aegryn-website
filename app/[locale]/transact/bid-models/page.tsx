@@ -110,7 +110,7 @@ export default async function BidModelsPage({ params }: Props) {
       </section>
 
       {/* PTT */}
-      <section className="rounded-lg bg-ag-off-white py-20 px-6 border-t border-ag-border">
+      <section className="bg-ag-off-white py-20 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-gray-light/50 inline-block" />
@@ -159,7 +159,7 @@ export default async function BidModelsPage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="rounded-lg py-20 px-6 border-t border-ag-border bg-ag-navy">
+      <section className="py-20 px-6 border-t border-ag-border bg-ag-navy">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2 className="font-sans font-bold text-white leading-[1.1] tracking-[-0.025em] mb-4" style={{ fontSize: "clamp(22px,2.5vw,38px)" }}>

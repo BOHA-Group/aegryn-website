@@ -356,7 +356,7 @@ export default async function GlossairePage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="rounded-lg py-16 px-6 border-t border-ag-border bg-ag-off-white">
+      <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">Aegryn Blog</p>
