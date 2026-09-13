@@ -255,20 +255,25 @@ img { image-rendering: auto; }
 .brochure-page { min-height: 1272px; }
 
 @media print {
-  @page { size: A4 portrait; margin: 0; }
-  html, body { background: #fff !important; }
+  /* Marges explicites (12 mm) : Safari ignore margin:0 et applique ses marges par défaut,
+     ce qui fragmentait chaque feuille sur deux pages. Zone imprimable A4 : 186 × 273 mm. */
+  @page { size: A4 portrait; margin: 12mm; }
+  html, body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
   #main { padding-top: 0 !important; }
   /* Chrome du site : navbar fixe, footer, bouton scroll-top */
   header.fixed, #main ~ footer, #main ~ button, #main ~ a,
   #cookiescript_injected, #cookiescript_badge, #cookiescript_injected_wrapper { display: none !important; }
-  /* Une feuille = une page A4 exacte (mm). Le contenu, composé à 900 × 1272 px comme à l'écran,
-     est ramené à l'échelle par transform (fiable sur Chrome, Safari et Firefox, contrairement à zoom). */
+  /* Une feuille = une page : 186 mm de large, 263 mm de haut (< 273 mm imprimables).
+     Le contenu, composé à 900 × 1272 px comme à l'écran, est ramené à l'échelle par transform
+     (186 mm = 703 px → 0.781), fiable sur Chrome, Safari et Firefox. */
   .brochure-page {
-    width: 210mm !important;
-    height: 297mm !important;
+    display: block;
+    width: 186mm !important;
+    height: 263mm !important;
     min-height: 0 !important;
     max-width: none !important;
     margin: 0 !important;
+    padding: 0 !important;
     box-shadow: none !important;
     border: 0 !important;
     border-radius: 0 !important;
@@ -284,7 +289,7 @@ img { image-rendering: auto; }
     width: 900px !important;
     height: 1272px !important;
     min-height: 1272px !important;
-    transform: scale(0.8822);
+    transform: scale(0.781);
     transform-origin: top left;
   }
   .brochure-page:last-child { break-after: auto; page-break-after: auto; }
