@@ -4,6 +4,8 @@
  */
 export const BLOG_IMAGES: Record<string, string> = {
   'agents-ia-autonomes-securite-souverainete-actifs-entreprise-2026': '/images/blog/robot-ai.jpg',
+  'dependance-fondateur-decote-20-30-pourcent-organisation-transmissible': '/images/blog/founder-desk.jpg',
+  'financer-pme-valeur-certifiee-ce-que-regarde-une-banque-2026': '/images/blog/finance-trading.jpg',
   'salaires-executive-tech-suisse-europe-2026':                    '/images/blog/business-meeting.jpg',
   'marche-ma-tech-europe-q3-2026':                                 '/images/blog/stock-charts.jpg',
   '5-erreurs-valorisation-saas':                                   '/images/blog/data-dashboard.jpg',
