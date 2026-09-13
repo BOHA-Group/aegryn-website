@@ -2026,13 +2026,15 @@
           "C-01",
           "I-01",
           "F-01",
-          "S-01"
+          "S-01",
+          "O-01"
         ],
         "dimensionRationale": {
           "C": "Codice livello 1 : copertura test >90%, CI/CD maturo, debito tecnico quasi nullo, architettura scalabile documentata.",
           "I": "IP livello 1 : marchi registrati in 3+ giurisdizioni, diritti software interamente ceduti, nessun contenzioso, moat chiaro.",
           "F": "Finanze livello 1 : ARR certificato >2M€, NRR >120%, churn <1%, margini >75%, crescita YoY >40%.",
-          "S": "Sicurezza livello 1 : pentest <6 mesi senza vulnerabilità critiche, MFA completo, crittografia end-to-end, conformità GDPR/LPD documentata."
+          "S": "Sicurezza livello 1 : pentest <6 mesi senza vulnerabilità critiche, MFA completo, crittografia end-to-end, conformità GDPR/LPD documentata.",
+          "O": "Organizzazione livello 1: dipendenza dal fondatore ≤20 % del fatturato, N-1 autonomo su 2 funzioni chiave, piano di successione documentato, turnover <10 %."
         }
       },
       {
@@ -2047,13 +2049,15 @@
           "C-01, C-02",
           "I-01, I-02",
           "F-01, F-02",
-          "S-01, S-02"
+          "S-01, S-02",
+          "O-01, O-02"
         ],
         "dimensionRationale": {
           "C": "Codice livello 1–2 : test solidi (>70%), debito tecnico minore documentato, CI/CD funzionale.",
           "I": "IP livello 1–2 : marchio registrato, diritti formalizzati, possibili riserve minori su licenze di terzi.",
           "F": "Finanze livello 1–2 : ARR certificato >500K€, NRR >100%, crescita >25% YoY, margini >60%.",
-          "S": "Sicurezza livello 1–2 : pentest <12 mesi, MFA attivo, conformità GDPR sostanziale."
+          "S": "Sicurezza livello 1–2 : pentest <12 mesi, MFA attivo, conformità GDPR sostanziale.",
+          "O": "Organizzazione livello 1 a 2: dipendenza dal fondatore <35 %, almeno un N-1 in carica, documentazione operativa parziale."
         }
       },
       {
@@ -2068,13 +2072,15 @@
           "C-02, C-03",
           "I-02, I-03",
           "F-02, F-03",
-          "S-02, S-03"
+          "S-02, S-03",
+          "O-02, O-03"
         ],
         "dimensionRationale": {
           "C": "Codice livello 2–3 : test parziali, debito tecnico identificato e quantificato, alcune aree di miglioramento documentate.",
           "I": "IP livello 2–3 : marchio in corso o registrato localmente, diritti parzialmente formalizzati.",
           "F": "Finanze livello 2–3 : ARR documentato >12 mesi, NRR vicino al 100%, crescita stabile.",
-          "S": "Sicurezza livello 2–3 : audit di sicurezza esistente ma >12 mesi, conformità GDPR parziale."
+          "S": "Sicurezza livello 2–3 : audit di sicurezza esistente ma >12 mesi, conformità GDPR parziale.",
+          "O": "Organizzazione livello 2 a 3: dipendenza dal fondatore identificata e quantificata, processi parzialmente documentati."
         }
       },
       {
@@ -2089,13 +2095,15 @@
           "C-03, C-04",
           "I-03, I-04",
           "F-03, F-04",
-          "S-03, S-04"
+          "S-03, S-04",
+          "O-03, O-04"
         ],
         "dimensionRationale": {
           "C": "Codice livello 3–4 : debito tecnico significativo, test insufficienti, documentazione da costruire.",
           "I": "IP livello 3–4 : marchio non registrato o recente, diritti da formalizzare.",
           "F": "Finanze livello 3–4 : trazione iniziale (<12 mesi), metriche parzialmente documentate.",
-          "S": "Sicurezza livello 3–4 : nessun audit recente, conformità da costruire."
+          "S": "Sicurezza livello 3–4 : nessun audit recente, conformità da costruire.",
+          "O": "Organizzazione livello 3 a 4: forte dipendenza dal fondatore, team poco strutturato, piano di successione inesistente."
         }
       },
       {
@@ -2110,13 +2118,15 @@
           "C-04",
           "I-04",
           "F-04",
-          "S-04"
+          "S-04",
+          "O-04"
         ],
         "dimensionRationale": {
           "C": "Codice livello 4 : architettura non documentata, debito tecnico non controllato.",
           "I": "IP livello 4 : nessuna protezione formalizzata.",
           "F": "Finanze livello 4 : pre-revenue o trazione minima.",
-          "S": "Sicurezza livello 4 : nessuna conformità, nessun audit."
+          "S": "Sicurezza livello 4 : nessuna conformità, nessun audit.",
+          "O": "Organizzazione livello 4: fondatore solo su tutte le funzioni, nessuna documentazione, nessun piano di successione."
         }
       }
     ],
@@ -2247,7 +2257,8 @@
       "Contenzioso di marchio attivo (I-18) o diritti non formalizzati su codebase prodotta da terzi (I-21) → Rifiuto dimensione IP",
       "Vulnerabilità critiche non risolte (S-17) o incidente di sicurezza in corso non risolto (S-37) → Rifiuto dimensione Sicurezza",
       "Dati finanziari non verificabili nonostante la richiesta → Rifiuto dimensione Finanza",
-      "Rifiuto di cooperare durante l'audit → Rifiuto globale della certificazione"
+      "Rifiuto di cooperare durante l'audit → Rifiuto globale della certificazione",
+      "Rifiuto di collaborare durante l'audit → Rifiuto globale della certificazione"
     ],
     "maturityTitle": "Idoneità al catalogo per maturità",
     "maturityDesc": "Aegryn adatta i propri criteri di valutazione in base alla maturità dell'asset.",
@@ -2713,6 +2724,72 @@
         "code": "S-40",
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
+      },
+      {
+        "dim": "O",
+        "code": "O-11",
+        "label": "Dipendenza dal fondatore",
+        "desc": "Quota di fatturato portata direttamente dai fondatori. Soglia livello 1: ≤20 %. Bloccante se >80 % senza piano di mitigazione."
+      },
+      {
+        "dim": "O",
+        "code": "O-12",
+        "label": "Profondità del team",
+        "desc": "Almeno un N-1 in grado di firmare, assumere e decidere senza il fondatore su almeno 2 funzioni chiave."
+      },
+      {
+        "dim": "O",
+        "code": "O-13",
+        "label": "Piano di successione",
+        "desc": "Documento formalizzato che identifica i ruoli chiave, i successori interni o esterni e i tempi di transizione."
+      },
+      {
+        "dim": "O",
+        "code": "O-14",
+        "label": "Documentazione operativa",
+        "desc": "Runbook, SOP, wiki interni che coprono i processi critici. Tempo stimato documentato di onboarding di un nuovo manager."
+      },
+      {
+        "dim": "O",
+        "code": "O-15",
+        "label": "Retention dei talenti chiave",
+        "desc": "Turnover annuo sui ruoli critici (tech, commerciale, prodotto). Soglia livello 1: ≤10 % annuo su 2 anni."
+      },
+      {
+        "dim": "O",
+        "code": "O-16",
+        "label": "Governance e cap table",
+        "desc": "Struttura azionaria chiara, patto parasociale o statuto allineati, diritti di voto documentati, nessuna controversia tra soci."
+      },
+      {
+        "dim": "O",
+        "code": "O-17",
+        "label": "Cultura e valori",
+        "desc": "Valori aziendali formalizzati, NPS interno o indagine annuale di engagement documentata."
+      },
+      {
+        "dim": "O",
+        "code": "O-21",
+        "label": "Processo di recruiting",
+        "desc": "Procedura di assunzione documentata, descrizioni dei ruoli aggiornate, percorso di inserimento formalizzato."
+      },
+      {
+        "dim": "O",
+        "code": "O-22",
+        "label": "Contratti dipendenti e fornitori",
+        "desc": "Contratti di lavoro conformi, clausole di riservatezza e non concorrenza per i ruoli chiave, invenzioni assegnate all'entità."
+      },
+      {
+        "dim": "O",
+        "code": "O-31",
+        "label": "Capacità di trasferimento",
+        "desc": "Stima documentata del tempo necessario a un acquirente per assumere il controllo operativo (obiettivo: ≤90 giorni)."
+      },
+      {
+        "dim": "O",
+        "code": "O-32",
+        "label": "Relazione clienti gestita dal team",
+        "desc": "Quota di clienti gestiti interamente dal team (escluso il fondatore). Rischio di churn post-cessione valutato."
       }
     ],
     "subcodesTypicalLabel": "Sottocodici tipici",
@@ -2998,7 +3075,10 @@
     "bodyComingSoon": "Contenuto completo disponibile a breve.",
     "ctaTeaser": "Pronto a inviare il tuo asset o accedere al catalogo?",
     "aiEditorialNotice": "Questo articolo è stato redatto con l'assistenza dell'intelligenza artificiale e revisionato sotto la responsabilità editoriale di Aegryn. Ai sensi dell'articolo 50 del Regolamento europeo sull'IA, ci assumiamo la piena responsabilità editoriale di questo contenuto.",
-    "loadMore": "Carica altri"
+    "loadMore": "Carica altri",
+    "filterSecurity": "Sicurezza & IA",
+    "filterTalent": "Organizzazione & Talento",
+    "filterFinancing": "Finanziamento & Investitori"
   },
   "grade": {
     "meta": {
@@ -4532,7 +4612,7 @@
           "num": "01",
           "id": "advisory_tech",
           "title": "Advisory Tech",
-          "desc": "CTO as a service, audit de sécurité, architecture, DevSecOps, IA.",
+          "desc": "CTO as a service, audit di sicurezza, architettura, DevSecOps, IA.",
           "tags": [
             "CTO as a Service",
             "Architecture SI",
@@ -4550,7 +4630,7 @@
           "num": "02",
           "id": "advisory_transaction",
           "title": "Advisory Transazionale",
-          "desc": "Due diligence stratégique, valorisation, structuration de transaction.",
+          "desc": "Due diligence strategica, valutazione, strutturazione della transazione.",
           "tags": [
             "Due diligence stratégique",
             "Valorisation d'actifs",
@@ -4568,7 +4648,7 @@
           "num": "03",
           "id": "juridique",
           "title": "Legale & Certificazione",
-          "desc": "Avocats M&A, IP, droit numérique, notaires, audit légal.",
+          "desc": "Avvocati M&A, IP, diritto digitale, notai, audit legale.",
           "tags": [
             "Droit des sociétés",
             "Propriété intellectuelle",
@@ -4586,7 +4666,7 @@
           "num": "04",
           "id": "dealflow",
           "title": "Deal Flow & Distribuzione",
-          "desc": "Accès à un cercle d'acquéreurs qualifiés sous NDA.",
+          "desc": "Accesso a una cerchia di acquirenti qualificati sotto NDA.",
           "tags": [
             "Family offices",
             "Fonds de Private Equity",
@@ -4604,7 +4684,7 @@
           "num": "05",
           "id": "sequestre",
           "title": "Deposito & Strutturazione Finanziaria",
-          "desc": "Financement relais, earn-out, séquestre, structuration.",
+          "desc": "Finanziamento ponte, earn-out, escrow, strutturazione.",
           "tags": [
             "Finanziamento ponte",
             "Earn-out strutturato",
@@ -4622,7 +4702,7 @@
           "num": "06",
           "id": "assurance",
           "title": "Assicurazione W&I & Rischio",
-          "desc": "Spécialistes W&I insurance, risk managers, assureurs professionnels.",
+          "desc": "Specialisti assicurazione W&I, risk manager, assicuratori professionali.",
           "tags": [
             "W&I Insurance",
             "Tax liability insurance",
@@ -9079,8 +9159,7 @@
           "Slovenia",
           "Spagna",
           "Svezia",
-          "Svizzera",
-          "Ungheria"
+          "Svizzera"
         ],
         "industriesTitle": "Settori coperti",
         "industries": [

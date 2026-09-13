@@ -2026,13 +2026,15 @@
           "C-01",
           "I-01",
           "F-01",
-          "S-01"
+          "S-01",
+          "O-01"
         ],
         "dimensionRationale": {
           "C": "Code niveau 1 : testdekking >90%, volwassen CI/CD, vrijwel geen technische schuld, gedocumenteerde schaalbare architectuur.",
           "I": "IP niveau 1 : merken geregistreerd in 3+ rechtsgebieden, softwarerechten volledig overgedragen, geen geschillen, duidelijke moat.",
           "F": "Financiën niveau 1 : gecontroleerde ARR >2M€, NRR >120%, churn <1%, marges >75%, YoY-groei >40%.",
-          "S": "Beveiliging niveau 1 : pentest <6 maanden zonder kritieke kwetsbaarheden, volledige MFA, end-to-end encryptie, gedocumenteerde AVG/DSG-naleving."
+          "S": "Beveiliging niveau 1 : pentest <6 maanden zonder kritieke kwetsbaarheden, volledige MFA, end-to-end encryptie, gedocumenteerde AVG/DSG-naleving.",
+          "O": "Organisatie niveau 1: oprichtersafhankelijkheid ≤20 % van de omzet, autonome N-1 op 2 sleutelfuncties, gedocumenteerd opvolgingsplan, verloop <10 %."
         }
       },
       {
@@ -2047,13 +2049,15 @@
           "C-01, C-02",
           "I-01, I-02",
           "F-01, F-02",
-          "S-01, S-02"
+          "S-01, S-02",
+          "O-01, O-02"
         ],
         "dimensionRationale": {
           "C": "Code niveau 1–2 : solide tests (>70%), gedocumenteerde kleine technische schuld, functionele CI/CD.",
           "I": "IP niveau 1–2 : merk geregistreerd, rechten geformaliseerd, mogelijke kleine voorbehouden bij licenties van derden.",
           "F": "Financiën niveau 1–2 : gecontroleerde ARR >500K€, NRR >100%, groei >25% YoY, marges >60%.",
-          "S": "Beveiliging niveau 1–2 : pentest <12 maanden, MFA actief, substantiële AVG-naleving."
+          "S": "Beveiliging niveau 1–2 : pentest <12 maanden, MFA actief, substantiële AVG-naleving.",
+          "O": "Organisatie niveau 1 tot 2: oprichtersafhankelijkheid <35 %, minstens één N-1 aanwezig, gedeeltelijke operationele documentatie."
         }
       },
       {
@@ -2068,13 +2072,15 @@
           "C-02, C-03",
           "I-02, I-03",
           "F-02, F-03",
-          "S-02, S-03"
+          "S-02, S-03",
+          "O-02, O-03"
         ],
         "dimensionRationale": {
           "C": "Code niveau 2–3 : gedeeltelijke tests, geïdentificeerde en gekwantificeerde technische schuld, enkele gedocumenteerde verbeterpunten.",
           "I": "IP niveau 2–3 : merk in behandeling of lokaal geregistreerd, rechten gedeeltelijk geformaliseerd.",
           "F": "Financiën niveau 2–3 : ARR >12 maanden gedocumenteerd, NRR dicht bij 100%, stabiele groei.",
-          "S": "Beveiliging niveau 2–3 : bestaande beveiligingsaudit maar >12 maanden oud, gedeeltelijke AVG-naleving."
+          "S": "Beveiliging niveau 2–3 : bestaande beveiligingsaudit maar >12 maanden oud, gedeeltelijke AVG-naleving.",
+          "O": "Organisatie niveau 2 tot 3: oprichtersafhankelijkheid geïdentificeerd en gekwantificeerd, processen gedeeltelijk gedocumenteerd."
         }
       },
       {
@@ -2089,13 +2095,15 @@
           "C-03, C-04",
           "I-03, I-04",
           "F-03, F-04",
-          "S-03, S-04"
+          "S-03, S-04",
+          "O-03, O-04"
         ],
         "dimensionRationale": {
           "C": "Code niveau 3–4 : aanzienlijke technische schuld, onvoldoende tests, documentatie op te bouwen.",
           "I": "IP niveau 3–4 : merk niet geregistreerd of recent, rechten te formaliseren.",
           "F": "Financiën niveau 3–4 : vroege tractie (<12 maanden), statistieken gedeeltelijk gedocumenteerd.",
-          "S": "Beveiliging niveau 3–4 : geen recent audit, naleving op te bouwen."
+          "S": "Beveiliging niveau 3–4 : geen recent audit, naleving op te bouwen.",
+          "O": "Organisatie niveau 3 tot 4: sterke oprichtersafhankelijkheid, weinig gestructureerd team, geen opvolgingsplan."
         }
       },
       {
@@ -2110,13 +2118,15 @@
           "C-04",
           "I-04",
           "F-04",
-          "S-04"
+          "S-04",
+          "O-04"
         ],
         "dimensionRationale": {
           "C": "Code niveau 4 : niet-gedocumenteerde architectuur, ongecontroleerde technische schuld.",
           "I": "IP niveau 4 : geen geformaliseerde bescherming.",
           "F": "Financiën niveau 4 : pre-revenue of minimale tractie.",
-          "S": "Beveiliging niveau 4 : geen naleving, geen audit."
+          "S": "Beveiliging niveau 4 : geen naleving, geen audit.",
+          "O": "Organisatie niveau 4: oprichter alleen op alle functies, geen documentatie, geen opvolgingsplan."
         }
       }
     ],
@@ -2247,7 +2257,8 @@
       "Actief merkgeschil (I-18) of niet-geformaliseerde rechten op door derden geproduceerde codebase (I-21) → Dimensie IE afgewezen",
       "Onopgeloste kritieke kwetsbaarheden (S-17) of lopend onopgelost beveiligingsincident (S-37) → Dimensie Beveiliging afgewezen",
       "Financiële gegevens niet verifieerbaar ondanks verzoek → Dimensie Financiën afgewezen",
-      "Weigering om mee te werken tijdens de audit → Globale afwijzing van de certificering"
+      "Weigering om mee te werken tijdens de audit → Globale afwijzing van de certificering",
+      "Weigering tot medewerking tijdens de audit → Algemene weigering van de certificering"
     ],
     "maturityTitle": "Catalogusgeschiktheid naar volwassenheid",
     "maturityDesc": "Aegryn past zijn beoordelingscriteria aan op basis van de volwassenheid van het asset.",
@@ -2713,6 +2724,72 @@
         "code": "S-40",
         "label": "Gegevensgovernance",
         "desc": "Aangestelde data-eigenaar, gedocumenteerd classificatie- en bewaarbeleid."
+      },
+      {
+        "dim": "O",
+        "code": "O-11",
+        "label": "Oprichtersafhankelijkheid",
+        "desc": "Aandeel van de omzet dat rechtstreeks door de oprichter(s) wordt gedragen. Drempel niveau 1: ≤20 %. Blokkerend bij >80 % zonder mitigatieplan."
+      },
+      {
+        "dim": "O",
+        "code": "O-12",
+        "label": "Teamdiepte",
+        "desc": "Minstens één N-1 die zonder de oprichter kan tekenen, aanwerven en beslissen op minstens 2 sleutelfuncties."
+      },
+      {
+        "dim": "O",
+        "code": "O-13",
+        "label": "Opvolgingsplan",
+        "desc": "Geformaliseerd document met sleutelfuncties, interne of externe opvolgers en overgangstermijn."
+      },
+      {
+        "dim": "O",
+        "code": "O-14",
+        "label": "Operationele documentatie",
+        "desc": "Runbooks, SOP's, interne wiki's voor kritieke processen. Gedocumenteerde geschatte inwerktijd van een nieuwe manager."
+      },
+      {
+        "dim": "O",
+        "code": "O-15",
+        "label": "Retentie van sleuteltalent",
+        "desc": "Jaarlijks verloop op kritieke functies (tech, sales, product). Drempel niveau 1: ≤10 % per jaar over 2 jaar."
+      },
+      {
+        "dim": "O",
+        "code": "O-16",
+        "label": "Governance en cap table",
+        "desc": "Heldere aandeelhoudersstructuur, afgestemde aandeelhoudersovereenkomst of statuten, gedocumenteerde stemrechten, geen geschil tussen vennoten."
+      },
+      {
+        "dim": "O",
+        "code": "O-17",
+        "label": "Cultuur en waarden",
+        "desc": "Geformaliseerde bedrijfswaarden, gedocumenteerde interne NPS of jaarlijkse betrokkenheidsenquête."
+      },
+      {
+        "dim": "O",
+        "code": "O-21",
+        "label": "Wervingsproces",
+        "desc": "Gedocumenteerde aanwervingsprocedure, actuele functiebeschrijvingen, geformaliseerd onboardingtraject."
+      },
+      {
+        "dim": "O",
+        "code": "O-22",
+        "label": "Contracten werknemers en dienstverleners",
+        "desc": "Conforme arbeidsovereenkomsten, vertrouwelijkheids- en niet-concurrentiebedingen voor sleutelfuncties, uitvindingen toegewezen aan de entiteit."
+      },
+      {
+        "dim": "O",
+        "code": "O-31",
+        "label": "Overdrachtscapaciteit",
+        "desc": "Gedocumenteerde schatting van de tijd die een koper nodig heeft om operationeel het roer over te nemen (doel: ≤90 dagen)."
+      },
+      {
+        "dim": "O",
+        "code": "O-32",
+        "label": "Klantrelatie gedragen door het team",
+        "desc": "Aandeel van klantaccounts volledig beheerd door het team (zonder oprichter). Churnrisico na overdracht beoordeeld."
       }
     ],
     "subcodesTypicalLabel": "Typische subcodes",
@@ -2998,7 +3075,10 @@
     "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
     "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?",
     "aiEditorialNotice": "Dit artikel is geschreven met behulp van kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn. Overeenkomstig artikel 50 van de EU AI Act nemen wij de redactionele verantwoordelijkheid voor deze inhoud op ons.",
-    "loadMore": "Meer laden"
+    "loadMore": "Meer laden",
+    "filterSecurity": "Veiligheid & AI",
+    "filterTalent": "Organisatie & Talent",
+    "filterFinancing": "Financiering & Investeerders"
   },
   "grade": {
     "meta": {

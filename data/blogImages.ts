@@ -3,6 +3,7 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
+  'agents-ia-autonomes-securite-souverainete-actifs-entreprise-2026': '/images/blog/robot-ai.jpg',
   'salaires-executive-tech-suisse-europe-2026':                    '/images/blog/business-meeting.jpg',
   'marche-ma-tech-europe-q3-2026':                                 '/images/blog/stock-charts.jpg',
   '5-erreurs-valorisation-saas':                                   '/images/blog/data-dashboard.jpg',

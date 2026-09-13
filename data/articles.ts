@@ -8,6 +8,9 @@ export type ArticleCategory =
   | 'legal'
   | 'vertical'
   | 'dach'
+  | 'security'
+  | 'talent'
+  | 'financing'
 
 export type LocaleText = {
   fr: string; en: string;
@@ -39,7 +42,10 @@ export interface Article {
   aiAssisted?: boolean
 }
 
+import { AI_SOVEREIGNTY_ARTICLE } from './articles-ai-sovereignty'
+
 export const ARTICLES: Article[] = [
+  AI_SOVEREIGNTY_ARTICLE,
   {
     slug:     'salaires-executive-tech-suisse-europe-2026',
     category: 'market',
@@ -3271,6 +3277,9 @@ export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
   legal:         { fr: 'Legal & Fiscal',   en: 'Legal & Tax',     de: 'Recht & Steuer',       es: 'Legal y fiscal',       it: 'Legale e fiscale',   nl: 'Juridisch & fiscaal'},
   vertical:      { fr: 'Verticaux',        en: 'Verticals',       de: 'Vertikals',            es: 'Verticales',           it: 'Verticali',          nl: 'Verticalen'         },
   dach:          { fr: 'Marché DACH',      en: 'DACH Market',     de: 'DACH-Markt',           es: 'Mercado DACH',         it: 'Mercato DACH',       nl: 'DACH-markt'         },
+  security:      { fr: 'Sécurité & IA',    en: 'Security & AI',   de: 'Sicherheit & KI',      es: 'Seguridad e IA',       it: 'Sicurezza & IA',     nl: 'Veiligheid & AI'    },
+  talent:        { fr: 'Organisation & Talent', en: 'Organisation & Talent', de: 'Organisation & Talent', es: 'Organización & Talento', it: 'Organizzazione & Talento', nl: 'Organisatie & Talent' },
+  financing:     { fr: 'Financement & Investisseurs', en: 'Financing & Investors', de: 'Finanzierung & Investoren', es: 'Financiación & Inversores', it: 'Finanziamento & Investitori', nl: 'Financiering & Investeerders' },
 }
 
 export function getLocaleText(text: LocaleText, locale: string): string {

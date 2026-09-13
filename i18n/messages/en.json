@@ -2293,7 +2293,10 @@
     "bodyComingSoon": "Full content available soon.",
     "ctaTeaser": "Ready to submit your asset or access the catalogue?",
     "aiEditorialNotice": "This article was written with the assistance of artificial intelligence and reviewed under Aegryn editorial responsibility. In accordance with Article 50 of the EU AI Act, we assume editorial responsibility for this content.",
-    "loadMore": "Load more"
+    "loadMore": "Load more",
+    "filterSecurity": "Security & AI",
+    "filterTalent": "Organisation & Talent",
+    "filterFinancing": "Financing & Investors"
   },
   "grade": {
     "meta": {
@@ -2874,13 +2877,15 @@
           "C-01",
           "I-01",
           "F-01",
-          "S-01"
+          "S-01",
+          "O-01"
         ],
         "dimensionRationale": {
           "C": "Code level 1, test coverage >90%, mature CI/CD, near-zero tech debt, documented scalable architecture.",
           "I": "IP level 1, trademarks registered in 3+ jurisdictions, software rights fully assigned, no litigation, clear moat.",
           "F": "Finance level 1, audited ARR >€2M, NRR >120%, churn <1%, margins >75%, YoY growth >40%.",
-          "S": "Security level 1, pentest <6 months with no critical vulnerability, full MFA, end-to-end encryption, documented GDPR/LPD compliance."
+          "S": "Security level 1, pentest <6 months with no critical vulnerability, full MFA, end-to-end encryption, documented GDPR/LPD compliance.",
+          "O": "Organisation level 1: founder dependency ≤20% of revenue, autonomous N-1 on 2 key functions, documented succession plan, turnover <10%."
         }
       },
       {
@@ -2895,13 +2900,15 @@
           "C-01, C-02",
           "I-01, I-02",
           "F-01, F-02",
-          "S-01, S-02"
+          "S-01, S-02",
+          "O-01, O-02"
         ],
         "dimensionRationale": {
           "C": "Code level 1–2, solid tests (>70%), minor documented tech debt, functional CI/CD.",
           "I": "IP level 1–2, trademark registered, rights formalised, minor reservations possible on third-party licences.",
           "F": "Finance level 1–2, audited ARR >€500K, NRR >100%, growth >25% YoY, margins >60%.",
-          "S": "Security level 1–2, pentest <12 months, MFA active, substantial GDPR compliance."
+          "S": "Security level 1–2, pentest <12 months, MFA active, substantial GDPR compliance.",
+          "O": "Organisation level 1 to 2: founder dependency <35%, at least one N-1 in place, partial operational documentation."
         }
       },
       {
@@ -2916,13 +2923,15 @@
           "C-02, C-03",
           "I-02, I-03",
           "F-02, F-03",
-          "S-02, S-03"
+          "S-02, S-03",
+          "O-02, O-03"
         ],
         "dimensionRationale": {
           "C": "Code level 2–3, partial tests, tech debt identified and quantified, some documented improvement areas.",
           "I": "IP level 2–3, trademark in progress or locally registered, rights partially formalised.",
           "F": "Finance level 2–3, ARR documented >12 months, NRR close to 100%, stable growth.",
-          "S": "Security level 2–3, existing security audit but >12 months old, partial GDPR compliance."
+          "S": "Security level 2–3, existing security audit but >12 months old, partial GDPR compliance.",
+          "O": "Organisation level 2 to 3: founder dependency identified and quantified, processes partially documented."
         }
       },
       {
@@ -2937,13 +2946,15 @@
           "C-03, C-04",
           "I-03, I-04",
           "F-03, F-04",
-          "S-03, S-04"
+          "S-03, S-04",
+          "O-03, O-04"
         ],
         "dimensionRationale": {
           "C": "Code level 3–4, significant tech debt, insufficient tests, documentation to build.",
           "I": "IP level 3–4, trademark not filed or recent, rights to formalise.",
           "F": "Finance level 3–4, early traction (<12 months), metrics partially documented.",
-          "S": "Security level 3–4, no recent audit, compliance to build."
+          "S": "Security level 3–4, no recent audit, compliance to build.",
+          "O": "Organisation level 3 to 4: high founder dependency, weakly structured team, no succession plan."
         }
       },
       {
@@ -2958,13 +2969,15 @@
           "C-04",
           "I-04",
           "F-04",
-          "S-04"
+          "S-04",
+          "O-04"
         ],
         "dimensionRationale": {
           "C": "Code level 4, undocumented architecture, uncontrolled tech debt.",
           "I": "IP level 4, no formalised protection.",
           "F": "Finance level 4, pre-revenue or minimal traction.",
-          "S": "Security level 4, no compliance, no audit."
+          "S": "Security level 4, no compliance, no audit.",
+          "O": "Organisation level 4: founder alone on all functions, no documentation, no succession plan."
         }
       }
     ],
@@ -3095,7 +3108,8 @@
       "Active trademark dispute (I-18) or unformalised rights on third-party-produced codebase (I-21) → IP dimension refused",
       "Unresolved critical vulnerabilities (S-17) or ongoing unresolved security incident (S-37) → Security dimension refused",
       "Financial data not verifiable despite request → Finance dimension refused",
-      "Refusal to cooperate during the audit → Global certification refusal"
+      "Refusal to cooperate during the audit → Global certification refusal",
+      "Refusal to cooperate during the audit → Overall refusal of certification"
     ],
     "maturityTitle": "Catalogue eligibility by maturity",
     "maturityDesc": "Aegryn adapts its evaluation criteria based on asset maturity.",
@@ -3561,6 +3575,72 @@
         "code": "S-40",
         "label": "Data governance",
         "desc": "Designated data owner, documented classification and retention policy."
+      },
+      {
+        "dim": "O",
+        "code": "O-11",
+        "label": "Founder dependency",
+        "desc": "Share of revenue carried directly by the founder(s). Level 1 threshold: ≤20%. Blocking if >80% without a mitigation plan."
+      },
+      {
+        "dim": "O",
+        "code": "O-12",
+        "label": "Team depth",
+        "desc": "At least one N-1 able to sign, hire and decide without the founder on at least 2 key functions."
+      },
+      {
+        "dim": "O",
+        "code": "O-13",
+        "label": "Succession plan",
+        "desc": "Formal document identifying key roles, internal or external successors and the transition timeline."
+      },
+      {
+        "dim": "O",
+        "code": "O-14",
+        "label": "Operational documentation",
+        "desc": "Runbooks, SOPs, internal wikis covering critical processes. Documented estimated onboarding time for a new manager."
+      },
+      {
+        "dim": "O",
+        "code": "O-15",
+        "label": "Key talent retention",
+        "desc": "Annual turnover on critical roles (tech, sales, product). Level 1 threshold: ≤10% per year over 2 years."
+      },
+      {
+        "dim": "O",
+        "code": "O-16",
+        "label": "Governance and cap table",
+        "desc": "Clear shareholding structure, aligned shareholders' agreement or articles, documented voting rights, no dispute between partners."
+      },
+      {
+        "dim": "O",
+        "code": "O-17",
+        "label": "Culture and values",
+        "desc": "Formalised company values, documented internal NPS or annual engagement survey."
+      },
+      {
+        "dim": "O",
+        "code": "O-21",
+        "label": "Recruitment process",
+        "desc": "Documented hiring procedure, up-to-date job descriptions, formal onboarding path."
+      },
+      {
+        "dim": "O",
+        "code": "O-22",
+        "label": "Employee and contractor agreements",
+        "desc": "Compliant employment contracts, confidentiality and non-compete clauses for key roles, inventions assigned to the entity."
+      },
+      {
+        "dim": "O",
+        "code": "O-31",
+        "label": "Transfer capacity",
+        "desc": "Documented estimate of the time an acquirer needs to take operational control (target: ≤90 days)."
+      },
+      {
+        "dim": "O",
+        "code": "O-32",
+        "label": "Client relationship held by the team",
+        "desc": "Share of client accounts fully managed by the team (excluding the founder). Post-sale churn risk assessed."
       }
     ],
     "subcodesTypicalLabel": "Typical subcodes",
@@ -4568,7 +4648,7 @@
           "num": "03",
           "id": "juridique",
           "title": "Legal & Certification",
-          "desc": "M&A lawyers, IP, digital law, notaries, legal audit.",
+          "desc": "M&A, IP and digital law lawyers, notaries, legal audit.",
           "tags": [
             "Corporate Law",
             "Intellectual Property",
