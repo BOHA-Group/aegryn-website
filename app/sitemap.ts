@@ -70,6 +70,7 @@ const STATIC_ROUTES = [
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/cover',            priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/flipbook',         priority: 0.6,  changeFrequency: 'monthly' as const },
   // ── Help / FAQ ───────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
@@ -85,11 +86,12 @@ const STATIC_ROUTES = [
 /* Exclus volontairement : /client/* (privé), /grade/submit/success (confirmation),
    /transact/teaser-preview (aperçu), /transact/lot/[slug] (noindex, accès NDA),
    /transact/catalog (redirige désormais systématiquement vers /transact — catalogue
-   confidentiel, sélection après NDA), /magazine/issue-01/web (redirige vers un fichier
-   HTML statique unique, non localisé — /magazine/issue-01/cover et /flipbook rendent
-   du contenu réel et restent inclus), /verify/[code] (une URL par certificat),
+   confidentiel, sélection après NDA), /verify/[code] (une URL par certificat),
    /magazine/report* (301 → /magazine/issue-01), /platform, /advisory/ai,
-   /valuation/guide (routes inexistantes → 404). */
+   /valuation/guide (routes inexistantes → 404).
+   /magazine/issue-01/web est conservé : c'est l'édition web du magazine (lecture
+   article par article), qui redirige vers son fichier HTML statique une fois
+   l'accès public actif (canAccessIssue) — même logique que /cover et /flipbook. */
 
 function pushLocalized(
   entries: MetadataRoute.Sitemap,

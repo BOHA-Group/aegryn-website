@@ -11,7 +11,7 @@
 **Type:** Swiss organisation-value platform + technology holding company + M&A platform for digital assets
 **Tagline:** "Engineered to Last" / "Building What Endures" / "Built to Last"
 **Slogan:** "Aegryn protects what endures."
-**Incorporated:** Switzerland (BOHA-Group Sàrl)
+**Incorporated:** Switzerland
 **HQ:** St-Sulpice, Switzerland (VD, CH) — 46.5147, 6.5600
 **Contact:** contact@boha-group.com
 **Website:** https://aegryn.com
@@ -98,11 +98,13 @@ Valuing a company is not limited to transferring it. It starts with measuring it
 Once matched, realisation runs through AEGRYN Transact: Europe's structured, session-based M&A platform for buying and selling digital tech assets.
 Range: €100K-€50M. NDA-gated. Graded assets only. Not a broker — a platform with standardized process.
 
+Not an auction: no real-time public bidding. A structured, on-demand confidential process reserved for CIFSO-certified organisations and pre-qualified acquirers.
+
 **Process:**
 1. Seller submits asset → AEGRYN grades (AEG★ to B)
 2. Asset listed with confidential dossier (CIM)
 3. Buyer KYC → signs NDA → accesses full dossier
-4. Session opens → competitive bids submitted
+4. Qualified offer submitted under exclusive mandate
 5. Closing → structured legal process with advisors
 
 **Offer Models (Bid Models):**
@@ -254,7 +256,7 @@ Pages:
 Headquarters: Saint-Sulpice, Switzerland (VD) — Coordinates: 46.5147, 6.5600
 Markets: CH, FR, DE, BE, LU, IT, ES, NL, EU
 Regulatory: GDPR, Swiss FADP (LPD), EU AI Act aligned
-Incorporated: BOHA-Group Sàrl
+Incorporated: Aegryn, Switzerland
 
 ---
 

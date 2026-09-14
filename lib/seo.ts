@@ -217,7 +217,7 @@ export const aegrynOrganizationSchema = {
   '@type':       'Organization',
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
-  legalName:     'Aegryn (BOHA-Group Sàrl)',
+  legalName:     'Aegryn',
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',

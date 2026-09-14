@@ -13,7 +13,7 @@ Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform
 Positioning: operational-compliance standards certify conformity of systems and processes; Aegryn certifies the value and transferability of an organisation — complementary objects.
 
 Tagline: "Engineered to Last" / "Building What Endures" / "Built to Last"
-Incorporated: Switzerland (BOHA-Group Sàrl)
+Incorporated: Switzerland
 Contact: contact@boha-group.com
 Website: https://aegryn.com
 HQ: Saint-Sulpice (Canton de Vaud), Switzerland — 46.5147, 6.5600
@@ -28,7 +28,7 @@ Synthesis: "Aegryn protects what endures."
 ## Key Topics & Search Terms
 
 ### M&A & Transactions
-enchère tech, auction platform, tech auction, digital asset auction, vente aux enchères technologie,
+transaction tech confidentielle, confidential tech transaction, processus de cession sur mesure, on-demand qualified buyer-seller process,
 buy tech company, sell tech company, acheter entreprise tech, vendre entreprise tech,
 SaaS acquisition, acquisition SaaS, SaaS marketplace, SaaS for sale, acheter SaaS, vendre SaaS,
 M&A tech, mergers acquisitions technology, cession entreprise numérique, acquisition entreprise digitale,
@@ -205,7 +205,7 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 
 ## Legal & Compliance
 
-Incorporated: Switzerland (BOHA-Group Sàrl)
+Incorporated: Aegryn, Switzerland
 GDPR/FADP compliant — Data requests: contact@boha-group.com
 Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms/ai-usage
 

@@ -10,7 +10,7 @@ Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform
 - **Recruit** (Talent) — executive tech recruitment
 - **Inform** — Aegryn Magazine, blog, glossary
 
-Incorporated in Switzerland (BOHA-Group Sàrl). HQ: St-Sulpice, Canton de Vaud.
+Incorporated in Switzerland. HQ: St-Sulpice, Canton de Vaud.
 
 Positioning: operational-compliance standards certify that systems and processes conform to a norm; Aegryn certifies a different object — the value and the transferability of an organisation and its assets. The two are complementary, not competing.
 
@@ -20,7 +20,7 @@ Website: https://aegryn.com
 
 ## Key Topics & Search Terms
 
-enchère tech, auction platform, tech auction, digital asset auction, vente aux enchères technologie,
+transaction tech confidentielle, confidential tech transaction, processus de cession sur mesure, on-demand qualified buyer-seller process,
 buy tech company, sell tech company, acheter entreprise tech, vendre entreprise tech,
 SaaS acquisition, acquisition SaaS, SaaS marketplace, SaaS for sale, acheter SaaS, vendre SaaS,
 M&A tech, mergers acquisitions technology, cession entreprise numérique, acquisition entreprise digitale,
@@ -203,7 +203,7 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 ### Transact Platform
 - [Transact](https://aegryn.com/fr/transact) — Platform presentation
 - [Catalog](https://aegryn.com/fr/transact/catalog) — Live assets for sale (NDA required)
-- [Sessions](https://aegryn.com/fr/transact/sessions) — Auction session calendar
+- [Sessions](https://aegryn.com/fr/transact/sessions) — Confidential transaction process calendar
 - [Mandate (Sell)](https://aegryn.com/fr/transact/mandate) — Submit a sell mandate
 - [Sell](https://aegryn.com/fr/transact/sell) — Seller funnel: valuation + readiness
 - [How to Sell](https://aegryn.com/fr/transact/how-to-sell) — Complete seller guide
