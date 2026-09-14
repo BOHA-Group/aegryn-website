@@ -10,6 +10,7 @@ import {
 import { CifsoChart } from './CifsoChart'
 import ValuationCalculator from './ValuationCalculator'
 import IndexBenchmarks, { IndexFaq } from './IndexBenchmarks'
+import IndexSubscriberPreview from './IndexSubscriberPreview'
 
 type Plan = { key: string; name: string; price: string; badge: string; desc: string; features: string[]; cta: string; href: string }
 type Freemium = {
@@ -275,7 +276,9 @@ export default function CifsoValuationIndex() {
                   <div>
                     <p className={`font-mono text-[10px] tracking-[0.22em] uppercase mb-2 ${featured ? 'text-ag-gray-light' : 'text-white/50'}`}>{pl.name}</p>
                     <p className="font-sans font-bold text-[24px] tracking-[-0.02em] leading-tight">{pl.price}</p>
-                    {pl.badge && <p className="mt-2 inline-flex rounded-full bg-ag-apex/15 text-ag-navy border border-ag-apex/40 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{pl.badge}</p>}
+                    {pl.badge && (
+                      <p className={`mt-2 inline-flex rounded-full font-mono text-[9px] uppercase tracking-widest px-3 py-1 border ${pl.key === 'free' ? 'bg-amber-50 text-amber-800 border-amber-300' : 'bg-ag-apex/15 text-ag-navy border-ag-apex/40'}`}>{pl.badge}</p>
+                    )}
                     <p className={`font-sans text-[13px] leading-relaxed mt-3 ${featured ? 'text-ag-gray' : 'text-white/60'}`}>{pl.desc}</p>
                   </div>
                   <ul className="flex flex-col gap-2 flex-1">
@@ -304,6 +307,8 @@ export default function CifsoValuationIndex() {
               )
             })}
           </div>
+
+          <IndexSubscriberPreview />
         </div>
       </section>
 

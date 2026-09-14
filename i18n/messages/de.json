@@ -6336,10 +6336,10 @@
       "title": "CIFSO Valuation Index : Start Q1 2027",
       "desc": "Der Zugang zu unternehmensübergreifendem Benchmarking und Echtzeit-Marktmultiplikatoren ist in Entwicklung. Registrieren Sie sich für einen Vorab-Zugang.",
       "features": [
-        "EU-Transaktionsmultiplikatoren nach Sektor (5 Branchen, 50 Verticals)",
+        "EU-Transaktionsmultiplikatoren nach Sektor (5 Branchen, 40 Verticals)",
         "Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern",
         "Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient",
-        "Vierteljährliche Benachrichtigungen bei Bewegungen in Ihrem Sektor"
+        "Echtzeit-Benachrichtigungen bei Bewegungen in Ihrem Sektor"
       ],
       "ctaLabel": "Warteliste beitreten",
       "ctaPlaceholder": "Ihre geschäftliche E-Mail",
@@ -6471,7 +6471,7 @@
           "key": "free",
           "name": "Freier Zugang",
           "price": "Kostenlos",
-          "badge": "",
+          "badge": "Illustrativ",
           "desc": "Eine erste Einordnung Ihrer Organisation.",
           "features": [
             "Freie Schätzung in fünfzehn Minuten",
@@ -6501,7 +6501,7 @@
         {
           "key": "certified",
           "name": "Zertifizierte Bewertung",
-          "price": "Mit der CIFSO 5000 Zertifizierung",
+          "price": "CIFSO 5000 Zertifizierung",
           "badge": "",
           "desc": "Das bezifferte Ergebnis eines unabhängigen Audits, belastbar gegenüber Investor, Bank oder Erwerber.",
           "features": [
@@ -6583,7 +6583,35 @@
       "comingSoonLabel": "Bald verfügbar",
       "comingSoonDesc": "Das Index-Abonnement startet in Kürze. Tragen Sie sich ein, um benachrichtigt zu werden und den 3-Tage-Test zum Start zu erhalten.",
       "illustrativeLabel": "Illustrativ",
-      "illustrativeNote": "Illustrative Schätzung, nicht vertraglich"
+      "illustrativeNote": "Illustrative Schätzung, nicht vertraglich",
+      "subscriberPreview": {
+        "label": "VORSCHAU — ABONNENTENBEREICH",
+        "title": "So wird Ihr Index-Arbeitsbereich aussehen.",
+        "desc": "Nach Öffnung des Abonnements: Filtern Sie nach Branche, Vertical, Kennzahl oder CIFSO-Grade und lesen Sie vollständige Multiplikatoren je Branche — ohne dass je eine Transaktion oder Organisation identifizierbar ist.",
+        "tabs": [
+          "EU-Multiplikatoren",
+          "CIFSO-Benchmarks",
+          "Börsenkotierte Vergleichswerte",
+          "Zertifizierte Dossiers"
+        ],
+        "filtersLabel": "Filter",
+        "filters": [
+          "Branche",
+          "Vertical",
+          "Kennzahl",
+          "CIFSO-Grade",
+          "Zeitraum"
+        ],
+        "columns": [
+          "Branche / Vertical",
+          "EV/Revenue (P25 · Median · P75)",
+          "EV/EBITDA",
+          "ARR-Multiplikator",
+          "Median CIFSO-Score",
+          "Stichprobe"
+        ],
+        "footnote": "Illustration der kommenden Oberfläche — reale Spalten und Filter, Werte nur als Beispiel. Abonnenten angezeigte Quelle: Aegryn CIFSO Valuation Index."
+      }
     },
     "index": {
       "label": "DIE BENCHMARK-ENGINE",

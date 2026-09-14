@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { Lock, ChevronDown, Check } from 'lucide-react'
 import type { IndexSnapshot, IndexCluster } from '@/lib/cifsoIndex'
-import { INDEX_METRICS } from '@/lib/indexTaxonomy'
+import { INDEX_METRICS, INDEX_CLUSTER_SLUGS } from '@/lib/indexTaxonomy'
 
 /**
  * Visuels du moteur de benchmarks du CIFSO Valuation Index (mode aperçu) :
@@ -74,8 +75,29 @@ export default function IndexBenchmarks() {
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('coverageDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {/* Métriques couvertes — en premier */}
+            <div className="rounded-xl border border-ag-navy bg-ag-navy text-white p-6">
+              <p className="font-sans font-bold text-[15px] mb-1">{t('metricsTitle')}</p>
+              <p className="font-sans text-[12px] text-white/60 mb-4">{t('metricsDesc')}</p>
+              <ul className="flex flex-col gap-2">
+                {INDEX_METRICS.map(m => (
+                  <li key={m.key} className="flex items-center justify-between gap-3 font-sans text-[12px]">
+                    <span className="inline-flex items-center gap-2">
+                      {m.locked ? <Lock size={11} className="text-white/40" /> : <Check size={12} className="text-ag-apex" />}
+                      {t(`metrics.${m.key}`)}
+                    </span>
+                    <span className={`font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex'}`}>{m.locked ? t('lockedShort') : t('openShort')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {clusters.map(c => (
-              <div key={c.key} className="rounded-xl border border-ag-border bg-ag-off-white p-6">
+              <Link
+                key={c.key}
+                href={`/${locale}/industries/${INDEX_CLUSTER_SLUGS[c.key] ?? ''}`}
+                className="rounded-xl border border-ag-border bg-ag-off-white p-6 hover:border-ag-apex/50 hover:bg-white transition-colors"
+              >
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <p className="font-sans font-bold text-ag-black text-[15px]">{c.label}</p>
                   <span className="shrink-0 font-mono text-[10px] text-ag-gray-light">{c.verticals.length} {t('kpis.verticals')}</span>
@@ -94,25 +116,8 @@ export default function IndexBenchmarks() {
                     )
                   })}
                 </div>
-              </div>
+              </Link>
             ))}
-
-            {/* Métriques couvertes */}
-            <div className="rounded-xl border border-ag-navy bg-ag-navy text-white p-6">
-              <p className="font-sans font-bold text-[15px] mb-1">{t('metricsTitle')}</p>
-              <p className="font-sans text-[12px] text-white/60 mb-4">{t('metricsDesc')}</p>
-              <ul className="flex flex-col gap-2">
-                {INDEX_METRICS.map(m => (
-                  <li key={m.key} className="flex items-center justify-between gap-3 font-sans text-[12px]">
-                    <span className="inline-flex items-center gap-2">
-                      {m.locked ? <Lock size={11} className="text-white/40" /> : <Check size={12} className="text-ag-apex" />}
-                      {t(`metrics.${m.key}`)}
-                    </span>
-                    <span className={`font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex'}`}>{m.locked ? t('lockedShort') : t('openShort')}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>

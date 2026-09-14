@@ -6351,10 +6351,10 @@
       "title": "CIFSO Valuation Index : Lancering Q1 2027",
       "desc": "Toegang tot cross-company benchmarking en real-time marktmultiples is in ontwikkeling. Schrijf u in voor vroege toegang.",
       "features": [
-        "EU-transactiemultiples per sector (5 industrieën, 50 verticalen)",
+        "EU-transactiemultiples per sector (5 industrieën, 40 verticalen)",
         "Vergelijk uw CIFSO-score met marktgenoten",
         "Valuation Estimator: marktmultiple × CIFSO-coëfficiënt",
-        "Kwartaalmeldingen wanneer de multiples in uw sector bewegen"
+        "Realtime meldingen wanneer de multiples in uw sector bewegen"
       ],
       "ctaLabel": "Inschrijven op wachtlijst",
       "ctaPlaceholder": "Uw professionele e-mail",
@@ -6486,7 +6486,7 @@
           "key": "free",
           "name": "Vrije toegang",
           "price": "Gratis",
-          "badge": "",
+          "badge": "Illustratief",
           "desc": "Een eerste lezing om uw organisatie te positioneren.",
           "features": [
             "Vrije schatting in vijftien minuten",
@@ -6516,7 +6516,7 @@
         {
           "key": "certified",
           "name": "Gecertificeerde waardering",
-          "price": "Met de CIFSO 5000-certificering",
+          "price": "CIFSO 5000-certificering",
           "badge": "",
           "desc": "De becijferde conclusie van een onafhankelijke audit, verdedigbaar tegenover investeerder, bank of koper.",
           "features": [
@@ -6598,7 +6598,35 @@
       "comingSoonLabel": "Binnenkort beschikbaar",
       "comingSoonDesc": "Het Index-abonnement opent binnenkort. Schrijf u in om bericht te krijgen en de proefperiode van 3 dagen bij de lancering te ontvangen.",
       "illustrativeLabel": "Illustratief",
-      "illustrativeNote": "Illustratieve schatting, niet contractueel"
+      "illustrativeNote": "Illustratieve schatting, niet contractueel",
+      "subscriberPreview": {
+        "label": "PREVIEW — ABONNEEGEDEELTE",
+        "title": "Zo ziet uw Index-werkruimte eruit.",
+        "desc": "Zodra het abonnement opent: filter op industrie, vertical, metric of CIFSO-grade en bekijk de volledige multiples per industrie — zonder dat een transactie of organisatie ooit identificeerbaar is.",
+        "tabs": [
+          "EU-multiples",
+          "CIFSO-benchmarks",
+          "Beursgenoteerde vergelijkbare bedrijven",
+          "Gecertificeerde dossiers"
+        ],
+        "filtersLabel": "Filters",
+        "filters": [
+          "Industrie",
+          "Vertical",
+          "Metric",
+          "CIFSO-grade",
+          "Periode"
+        ],
+        "columns": [
+          "Industrie / Vertical",
+          "EV/Revenue (P25 · Mediaan · P75)",
+          "EV/EBITDA",
+          "ARR-multiple",
+          "Mediane CIFSO-score",
+          "Steekproef"
+        ],
+        "footnote": "Illustratie van de toekomstige interface — reële kolommen en filters, waarden slechts als voorbeeld. Bron getoond aan abonnees: Aegryn CIFSO Valuation Index."
+      }
     },
     "index": {
       "label": "DE BENCHMARK-ENGINE",

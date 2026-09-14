@@ -66,13 +66,25 @@ export const INDEX_VERTICALS: IndexVertical[] = [
   { key: 'facility_services', cluster: 'commerce_services', label: L('Services aux entreprises & facility', 'Business & facility services', 'Unternehmens- & Facility-Services', 'Servicios a empresas & facility', 'Servizi alle imprese & facility', 'Bedrijfs- & facilitydiensten') },
 ]
 
-export const INDEX_CLUSTERS: { key: ClusterKey; label: Record<IndexLocale, string> }[] = [
-  { key: 'tech_innovation',   label: L('Tech & Innovation', 'Tech & Innovation', 'Tech & Innovation', 'Tech & Innovación', 'Tech & Innovazione', 'Tech & Innovatie') },
-  { key: 'finance_capital',   label: L('Finance & Capital', 'Finance & Capital', 'Finanzen & Kapital', 'Finanzas & Capital', 'Finanza & Capitale', 'Finance & Kapitaal') },
-  { key: 'sante_sciences',    label: L('Santé & Sciences', 'Health & Sciences', 'Gesundheit & Wissenschaften', 'Salud & Ciencias', 'Salute & Scienze', 'Gezondheid & Wetenschappen') },
-  { key: 'industrie_infra',   label: L('Industrie & Infrastructure', 'Industry & Infrastructure', 'Industrie & Infrastruktur', 'Industria & Infraestructura', 'Industria & Infrastrutture', 'Industrie & Infrastructuur') },
-  { key: 'commerce_services', label: L('Commerce & Services', 'Commerce & Services', 'Handel & Dienstleistungen', 'Comercio & Servicios', 'Commercio & Servizi', 'Handel & Diensten') },
+/* Libellés et slugs alignés sur les 5 pages /industries (data/industries.ts) pour que
+   l'Index et le hub Industries partagent exactement la même segmentation et vocabulaire. */
+export const INDEX_CLUSTERS: { key: ClusterKey; slug: string; label: Record<IndexLocale, string> }[] = [
+  { key: 'tech_innovation',   slug: 'tech-innovation-secteur-public',
+    label: L('Tech, Innovation & Secteur Public', 'Tech, Innovation & Public Sector', 'Tech, Innovation & öffentlicher Sektor', 'Tech, Innovación y Sector Público', 'Tech, Innovazione & Settore Pubblico', 'Tech, Innovatie & Publieke Sector') },
+  { key: 'finance_capital',   slug: 'finance-capital',
+    label: L('Finance & Capital', 'Finance & Capital', 'Finanzen & Kapital', 'Finanzas y Capital', 'Finanza & Capitale', 'Financiën & Kapitaal') },
+  { key: 'sante_sciences',    slug: 'sante-sciences-de-la-vie',
+    label: L('Santé & Sciences de la Vie', 'Health & Life Sciences', 'Gesundheit & Life Sciences', 'Salud y Ciencias de la Vida', 'Salute & Scienze della Vita', 'Gezondheid & Life Sciences') },
+  { key: 'industrie_infra',   slug: 'industrie-energie-infrastructure',
+    label: L('Industrie, Énergie & Infrastructure', 'Industry, Energy & Infrastructure', 'Industrie, Energie & Infrastruktur', 'Industria, Energía e Infraestructura', 'Industria, Energia & Infrastrutture', 'Industrie, Energie & Infrastructuur') },
+  { key: 'commerce_services', slug: 'commerce-services-experience-client',
+    label: L('Commerce, Services & Expérience Client', 'Commerce, Services & Customer Experience', 'Handel, Dienstleistungen & Kundenerlebnis', 'Comercio, Servicios y Experiencia de Cliente', 'Commercio, Servizi & Customer Experience', 'Handel, Diensten & Klantervaring') },
 ]
+
+/** Cluster key -> slug /industries/[slug], pour le cross-link Index <-> Industries. */
+export const INDEX_CLUSTER_SLUGS: Record<ClusterKey, string> = Object.fromEntries(
+  INDEX_CLUSTERS.map(c => [c.key, c.slug])
+) as Record<ClusterKey, string>
 
 /** Métriques couvertes par l'Index (clé, unité, réservé abonnés) */
 export const INDEX_METRICS: { key: string; unit: 'x' | '%' | 'pts' | 'eur'; locked: boolean }[] = [

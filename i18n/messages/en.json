@@ -6336,10 +6336,10 @@
       "title": "CIFSO Valuation Index : Launching Q1 2027",
       "desc": "Access to cross-company benchmarking and real-time market multiples is under development. Sign up for early access.",
       "features": [
-        "EU transaction multiples by sector (5 industries, 50 verticals)",
+        "EU transaction multiples by sector (5 industries, 40 verticals)",
         "Compare your CIFSO score vs market peers",
         "Valuation Estimator: market multiple × CIFSO coefficient",
-        "Quarterly alerts when multiples in your sector move"
+        "Real-time alerts when multiples in your sector move"
       ],
       "ctaLabel": "Join the waitlist",
       "ctaPlaceholder": "Your professional email",
@@ -6471,7 +6471,7 @@
           "key": "free",
           "name": "Free access",
           "price": "Free",
-          "badge": "",
+          "badge": "Illustrative",
           "desc": "A first reading to position your organisation.",
           "features": [
             "Free estimate in fifteen minutes",
@@ -6501,7 +6501,7 @@
         {
           "key": "certified",
           "name": "Certified valuation",
-          "price": "With CIFSO 5000 Certification",
+          "price": "CIFSO 5000 Certification",
           "badge": "",
           "desc": "The quantified conclusion of an independent audit, defensible before an investor, a bank or an acquirer.",
           "features": [
@@ -6583,7 +6583,35 @@
       "comingSoonLabel": "Coming soon",
       "comingSoonDesc": "The Index subscription opens shortly. Sign up to be notified and get the 3-day trial at launch.",
       "illustrativeLabel": "Illustrative",
-      "illustrativeNote": "Illustrative estimate, not contractual"
+      "illustrativeNote": "Illustrative estimate, not contractual",
+      "subscriberPreview": {
+        "label": "PREVIEW — SUBSCRIBER AREA",
+        "title": "What your Index workspace will look like.",
+        "desc": "Once the subscription opens: filter by industry, vertical, metric or CIFSO grade, and read full multiples industry by industry — never with an identifiable transaction or organisation.",
+        "tabs": [
+          "EU Multiples",
+          "CIFSO Benchmarks",
+          "Listed Comparables",
+          "Certified Dossiers"
+        ],
+        "filtersLabel": "Filters",
+        "filters": [
+          "Industry",
+          "Vertical",
+          "Metric",
+          "CIFSO Grade",
+          "Period"
+        ],
+        "columns": [
+          "Industry / Vertical",
+          "EV/Revenue (P25 · Median · P75)",
+          "EV/EBITDA",
+          "ARR Multiple",
+          "Median CIFSO Score",
+          "Sample"
+        ],
+        "footnote": "Illustration of the upcoming interface — real columns and filters, sample values only. Source shown to subscribers: Aegryn CIFSO Valuation Index."
+      }
     },
     "index": {
       "label": "THE BENCHMARK ENGINE",

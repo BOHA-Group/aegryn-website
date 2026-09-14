@@ -6336,10 +6336,10 @@
       "title": "CIFSO Valuation Index : Lanzamiento Q1 2027",
       "desc": "El acceso al benchmark entre empresas y a los múltiplos de mercado en tiempo real está en desarrollo. Regístrese para acceso anticipado.",
       "features": [
-        "Múltiplos de transacción EU por sector (5 industrias, 50 verticales)",
+        "Múltiplos de transacción EU por sector (5 industrias, 40 verticales)",
         "Comparación de su score CIFSO vs pares del mercado",
         "Valuation Estimator: múltiplo de mercado × coeficiente CIFSO",
-        "Alertas trimestrales cuando los múltiplos de su sector cambian"
+        "Alertas en tiempo real cuando los múltiplos de su sector cambian"
       ],
       "ctaLabel": "Unirse a la lista de espera",
       "ctaPlaceholder": "Su correo profesional",
@@ -6471,7 +6471,7 @@
           "key": "free",
           "name": "Acceso libre",
           "price": "Gratis",
-          "badge": "",
+          "badge": "Ilustrativo",
           "desc": "Una primera lectura para situar su organización.",
           "features": [
             "Estimación libre en quince minutos",
@@ -6501,7 +6501,7 @@
         {
           "key": "certified",
           "name": "Valoración certificada",
-          "price": "Con la Certificación CIFSO 5000",
+          "price": "Certificación CIFSO 5000",
           "badge": "",
           "desc": "La conclusión cifrada de una auditoría independiente, defendible ante un inversor, un banco o un adquirente.",
           "features": [
@@ -6583,7 +6583,35 @@
       "comingSoonLabel": "Próximamente",
       "comingSoonDesc": "La suscripción al Índice abrirá pronto. Regístrese para recibir el aviso y la prueba de 3 días en el lanzamiento.",
       "illustrativeLabel": "Ilustrativo",
-      "illustrativeNote": "Estimación ilustrativa, no contractual"
+      "illustrativeNote": "Estimación ilustrativa, no contractual",
+      "subscriberPreview": {
+        "label": "VISTA PREVIA — ÁREA DE SUSCRIPTORES",
+        "title": "Así será su espacio del Index.",
+        "desc": "Una vez abierta la suscripción: filtre por industria, vertical, métrica o grade CIFSO, y consulte los múltiplos completos industria por industria, sin que ninguna transacción u organización sea identificable.",
+        "tabs": [
+          "Múltiplos EU",
+          "Benchmarks CIFSO",
+          "Comparables cotizados",
+          "Expedientes certificados"
+        ],
+        "filtersLabel": "Filtros",
+        "filters": [
+          "Industria",
+          "Vertical",
+          "Métrica",
+          "Grade CIFSO",
+          "Periodo"
+        ],
+        "columns": [
+          "Industria / Vertical",
+          "EV/Revenue (P25 · Mediana · P75)",
+          "EV/EBITDA",
+          "Múltiplo ARR",
+          "Score CIFSO mediano",
+          "Muestra"
+        ],
+        "footnote": "Ilustración de la interfaz próxima — columnas y filtros reales, valores a modo de ejemplo. Fuente mostrada a los suscriptores: Aegryn CIFSO Valuation Index."
+      }
     },
     "index": {
       "label": "EL MOTOR DE BENCHMARKS",

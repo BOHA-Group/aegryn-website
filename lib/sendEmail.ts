@@ -395,16 +395,16 @@ export function emailCifsoWaitlistConfirmation(opts: {
     : 'Uw inschrijving is bevestigd.'
 
   const body1 = isFr
-    ? 'Vous êtes inscrit à la liste d\'accès anticipé du <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, le benchmark de valorisation organisationnel d\'Aegryn. Lancement prévu <strong>Q1 2027</strong>.'
+    ? 'Vous êtes inscrit à la liste d\'accès anticipé du <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, le benchmark de valorisation organisationnel d\'Aegryn. Lancement prévu <strong>Q1 2027</strong>.'
     : isEn
-    ? 'You are registered for early access to the <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisational valuation benchmark. Expected launch: <strong>Q1 2027</strong>.'
+    ? 'You are registered for early access to the <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, Aegryn\'s organisational valuation benchmark. Expected launch: <strong>Q1 2027</strong>.'
     : isDe
-    ? 'Sie sind für den Frühzugang zum <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisationalem Bewertungs-Benchmark, registriert. Geplanter Start: <strong>Q1 2027</strong>.'
+    ? 'Sie sind für den Frühzugang zum <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, Aegryn\'s organisationalem Bewertungs-Benchmark, registriert. Geplanter Start: <strong>Q1 2027</strong>.'
     : isEs
-    ? 'Está registrado para el acceso anticipado al <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, el benchmark de valoración organizacional de Aegryn. Lanzamiento previsto: <strong>Q1 2027</strong>.'
+    ? 'Está registrado para el acceso anticipado al <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, el benchmark de valoración organizacional de Aegryn. Lanzamiento previsto: <strong>Q1 2027</strong>.'
     : isIt
-    ? 'Siete registrati per l\'accesso anticipato al <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, il benchmark di valorizzazione organizzativa di Aegryn. Lancio previsto: <strong>Q1 2027</strong>.'
-    : 'U bent geregistreerd voor vroege toegang tot de <strong style="color:#0F1C3F;">CIFSO Valuation Index</strong>, Aegryn\'s organisatorische waarderingsbenchmark. Verwachte lancering: <strong>Q1 2027</strong>.'
+    ? 'Siete registrati per l\'accesso anticipato al <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, il benchmark di valorizzazione organizzativa di Aegryn. Lancio previsto: <strong>Q1 2027</strong>.'
+    : 'U bent geregistreerd voor vroege toegang tot de <strong style="color:#ffffff;">CIFSO Valuation Index</strong>, Aegryn\'s organisatorische waarderingsbenchmark. Verwachte lancering: <strong>Q1 2027</strong>.'
 
   const featureTitle = isFr ? 'Ce que vous aurez en premier :'
     : isEn ? 'What you\'ll get first:'
@@ -414,16 +414,16 @@ export function emailCifsoWaitlistConfirmation(opts: {
     : 'Wat u als eerste krijgt:'
 
   const features = isFr
-    ? ['Multiples de transaction EU par secteur (5 clusters)', 'Comparaison de votre score CIFSO vs les pairs', 'Valuation Estimator : multiple marché × coefficient CIFSO', 'Alertes trimestrielles quand les multiples bougent']
+    ? ['Multiples de transaction EU par secteur (5 clusters)', 'Comparaison de votre score CIFSO vs les pairs', 'Valuation Estimator : multiple marché × coefficient CIFSO', 'Alertes en temps réel quand les multiples bougent']
     : isEn
-    ? ['EU transaction multiples by sector (5 clusters)', 'Compare your CIFSO score vs market peers', 'Valuation Estimator: market multiple × CIFSO coefficient', 'Quarterly alerts when multiples move']
+    ? ['EU transaction multiples by sector (5 clusters)', 'Compare your CIFSO score vs market peers', 'Valuation Estimator: market multiple × CIFSO coefficient', 'Real-time alerts when multiples move']
     : isDe
-    ? ['EU-Transaktionsmultiplikatoren nach Sektor (5 Cluster)', 'Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern', 'Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient', 'Vierteljährliche Benachrichtigungen bei Multiplikatorbewegungen']
+    ? ['EU-Transaktionsmultiplikatoren nach Sektor (5 Cluster)', 'Vergleich Ihres CIFSO-Scores mit Marktmitbewerbern', 'Valuation Estimator: Marktmultiplikator × CIFSO-Koeffizient', 'Echtzeit-Benachrichtigungen bei Multiplikatorbewegungen']
     : isEs
-    ? ['Múltiplos de transacción EU por sector (5 clusters)', 'Compare su score CIFSO vs pares del mercado', 'Valuation Estimator: múltiplo de mercado × coeficiente CIFSO', 'Alertas trimestrales cuando los múltiplos se mueven']
+    ? ['Múltiplos de transacción EU por sector (5 clusters)', 'Compare su score CIFSO vs pares del mercado', 'Valuation Estimator: múltiplo de mercado × coeficiente CIFSO', 'Alertas en tiempo real cuando los múltiplos se mueven']
     : isIt
-    ? ['Multipli di transazione EU per settore (5 cluster)', 'Confronto del vostro score CIFSO con i peer di mercato', 'Valuation Estimator: multiplo di mercato × coefficiente CIFSO', 'Avvisi trimestrali quando i multipli si muovono']
-    : ['EU-transactiemultiples per sector (5 clusters)', 'Vergelijk uw CIFSO-score met marktgenoten', 'Valuation Estimator: marktmultiple × CIFSO-coëfficiënt', 'Kwartaalmeldingen wanneer multiples bewegen']
+    ? ['Multipli di transazione EU per settore (5 cluster)', 'Confronto del vostro score CIFSO con i peer di mercato', 'Valuation Estimator: multiplo di mercato × coefficiente CIFSO', 'Avvisi in tempo reale quando i multipli si muovono']
+    : ['EU-transactiemultiples per sector (5 clusters)', 'Vergelijk uw CIFSO-score met marktgenoten', 'Valuation Estimator: marktmultiple × CIFSO-coëfficiënt', 'Realtime meldingen wanneer multiples bewegen']
 
   const prescreenLabel = isFr ? 'En attendant, lancer votre CIFSO Pre-screen (15 min)'
     : isEn ? 'In the meantime, launch your CIFSO Pre-screen (15 min)'
