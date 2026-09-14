@@ -7,6 +7,7 @@ import type { IndexSnapshot } from '@/lib/cifsoIndex'
 import { INDEX_CLUSTERS, INDEX_VERTICALS, type IndexLocale } from '@/lib/indexTaxonomy'
 import type { ClusterKey } from '@/lib/cifsoValuation'
 import WaitlistForm from './WaitlistForm'
+import { flushContributionQueue } from '@/lib/contributeQueue'
 
 /**
  * Étape 2 du parcours /valuation/index : vue Index réelle mais partiellement floutée
@@ -51,6 +52,9 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
   useEffect(() => {
     fetch(`/api/valuation/index?locale=${locale}`).then(r => r.ok ? r.json() : null).then(setSnap).catch(() => setSnap(null))
   }, [locale])
+
+  /* Retente les contributions anonymes qui auraient échoué à l'étape 1 (échec réseau) */
+  useEffect(() => { flushContributionQueue() }, [])
 
   const tabs = t.raw('tabs') as string[]
   const tabsSubtitle = t.raw('tabsSubtitle') as string[]

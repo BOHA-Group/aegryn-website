@@ -15,6 +15,7 @@ import {
 import { INDEX_CLUSTERS, INDEX_VERTICALS, type IndexLocale } from '@/lib/indexTaxonomy'
 import type { ClusterKey } from '@/lib/cifsoValuation'
 import type { IndexSnapshot } from '@/lib/cifsoIndex'
+import { sendContribution, flushContributionQueue } from '@/lib/contributeQueue'
 
 /* ─── Style constants ────────────────────────────────────── */
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
@@ -98,6 +99,9 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
       .catch(() => {})
   }, [locale])
 
+  /* Retente les contributions anonymes qui auraient échoué lors d'une visite précédente. */
+  useEffect(() => { flushContributionQueue() }, [])
+
   const STEPS = ['capital', 'integrity', 'finance', 'security', 'org'] as const
   type Step = typeof STEPS[number] | 'result'
 
@@ -149,23 +153,21 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
       setResult(r)
       setStep('result')
 
-      /* Contribution anonyme à l'Index — jamais de nom d'entreprise ni d'email. Fire-and-forget :
-         n'affecte jamais l'affichage du résultat, même en cas d'échec réseau. */
-      fetch('/api/valuation/contribute', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          industry: finance.industry,
-          vertical: finance.vertical,
-          score_capital: r.scores.capital, score_integrity: r.scores.integrity, score_finance: r.scores.finance,
-          score_security: r.scores.security, score_org: r.scores.org, score_total: r.scores.total,
-          grade: r.grade.grade,
-          arr: finance.arr, growth_yoy: finance.growth, churn_monthly: finance.churn,
-          nrr: finance.nrr, gross_margin: finance.margin, ebitda_margin: finance.ebitdaMargin,
-          locale: document.documentElement.lang || 'fr',
-          source_url: window.location.href,
-        }),
-      }).catch(() => {})
+      /* Contribution anonyme à l'Index — jamais de nom d'entreprise ni d'email. N'affecte
+         jamais l'affichage du résultat (fire-and-forget côté UI), mais garantie de non-perte
+         "best effort" : keepalive + vérification du statut HTTP + file de retry locale en cas
+         d'échec (lib/contributeQueue.ts), retentée à la prochaine visite du parcours Index. */
+      sendContribution({
+        industry: finance.industry,
+        vertical: finance.vertical,
+        score_capital: r.scores.capital, score_integrity: r.scores.integrity, score_finance: r.scores.finance,
+        score_security: r.scores.security, score_org: r.scores.org, score_total: r.scores.total,
+        grade: r.grade.grade,
+        arr: finance.arr, growth_yoy: finance.growth, churn_monthly: finance.churn,
+        nrr: finance.nrr, gross_margin: finance.margin, ebitda_margin: finance.ebitdaMargin,
+        locale: document.documentElement.lang || 'fr',
+        source_url: window.location.href,
+      })
 
       onComplete?.(r, finance)
     }
