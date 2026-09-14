@@ -319,7 +319,7 @@
     "cta": "Ponerse en contacto",
     "hero": {
       "title": "Acompañar lo que construyes.",
-      "desc": "Intervenimos en los momentos en que las decisiones definen la trayectoria de una organización. Estrategia, tecnología, M&A, board advisory: un solo interlocutor, del diagnóstico a la ejecución."
+      "desc": "Intervenimos en los momentos en que las decisiones definen la trayectoria de una organización. Un solo interlocutor, del diagnóstico a la ejecución."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Consultoría en estrategia",
-        "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su ejecución.",
+        "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su éxito.",
         "why": {
           "title": "¿Por qué consultoría estratégica?",
           "desc": "En un mercado europeo fragmentado donde el 70% de las estrategias no logran generar crecimiento sostenible, los líderes tech enfrentan decisiones críticas: expansión internacional, transformación del modelo operativo, asignación de capital entre crecimiento orgánico y adquisiciones. Nuestro enfoque combina visión estratégica y ejecución operativa para transformar la ambición en resultados medibles."
@@ -720,15 +720,15 @@
     "items": [
       {
         "title": "ASESORAR",
-        "desc": "Asesoría estratégica, organizacional y de M&A. Intervenimos cuando las decisiones definen la trayectoria de una organización. No recomendaciones. Resultados."
+        "desc": "Asesoría estratégica, tecnológica y de M&A. Intervenimos cuando las decisiones definen la trayectoria de una organización. No recomendaciones. Resultados."
       },
       {
         "title": "CONSTRUIR",
-        "desc": "Activos digitales duraderos, precio fijo, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. Independencia tecnológica."
+        "desc": "Activos digitales duraderos, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. Independencia tecnológica."
       },
       {
         "title": "VALORIZAR",
-        "desc": "Certificación independiente CIFSO y transacción de activos. Un protocolo riguroso en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización."
+        "desc": "Certificación independiente CIFSO y valorización de los activos de la empresa. Un protocolo riguroso en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización."
       },
       {
         "title": "RECLUTAR",
@@ -777,7 +777,7 @@
   },
   "homeHybrid": {
     "label": "MODELO HÍBRIDO",
-    "title": "Construimos.\nAsesoramos.\nTransmitimos.",
+    "title": "Construimos.\nAsesoramos.\nValorizamos.",
     "desc": "Aegryn no es una consultora. No es un banco de inversión. No es una incubadora.\n\nEs una firma de asesoramiento integrada que acompaña a directivos, fundadores y ejecutivos a crear, documentar y realizar el valor de su organización.\n\nIntervenimos donde termina la teoría y comienza la ejecución. De la estrategia a la transmisión."
   },
   "whyapps": {
@@ -4268,7 +4268,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "Un sello de calidad independiente para las organizaciones\nque quieren adquirir o transmitir al precio justo.",
+    "title": "Un sello de calidad independiente para las organizaciones\nque quieren estimar, adquirir o transmitir sus activos.",
     "desc": "El protocolo CIFSO v4.0 certifica cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización. Reproducible, trazable, definitivo.",
     "quote": "Un activo sin certificación independiente es un valor sin prueba. Un activo Aegryn Grade AAA es una certeza documentada y verificable.",
     "cta": "Descubrir la metodología",
@@ -4357,7 +4357,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "La revista de los fundadores tech europeos y los adquirentes que los observan. Transacciones reales descifradas, datos de mercado, retratos de emprendedores, múltiplos por vertical y la vida de quienes construyen algo que importa.",
+    "magDesc": "Para fundadores, directivos, inversores y familias accionistas que construyen, financian, adquieren o transmiten una organización: Aegryn Magazine documenta cada trimestre lo que realmente significa crear y realizar valor, en todas las industrias y tamaños, en Suiza y en Europa.\n\nEstrategias descifradas, retratos de decisores, datos de mercado y la vida de quienes construyen algo que importa.",
     "magFooter": "Cuatro ediciones al año.",
     "magCta": "Descubrir la revista",
     "label": "Nuestros análisis del mercado suizo y europeo, desde scale-ups hasta grandes grupos en fuerte crecimiento.",
@@ -8315,7 +8315,7 @@
     "title": "Propiedad total de IP. Listo para certificación.",
     "chip1": "PLENA PROPIEDAD IP DEL CLIENTE",
     "chip2": "LISTO PARA CERTIFICACIÓN",
-    "chip3": "INDEPENDENCIA TECNOLÓGICA",
+    "chip3": "INDEPENDENCIA DE ELECCIÓN TECNOLÓGICA",
     "chip4": "CÓDIGO PERSONALIZADO CERTIFICABLE",
     "cta": "Ver concepción de activos",
     "builtToLastQuote": "En un mundo donde la tecnología se vuelve obsoleta en meses, diseñar para durar es un acto de resistencia. Cada activo que construimos aumenta el valor de su organización, no su factura mensual en la nube."
@@ -8988,7 +8988,7 @@
   },
   "transactNarrative": {
     "label": "Valoración & Transmisión de activos",
-    "title": "El valor se demuestra\nantes de negociarse.",
+    "title": "El valor debe poder demostrarse\nsin concesiones.",
     "desc": "Certificación independiente. Valoración documentada.\nTransmisión confidencial. Círculo de compradores precalificados.",
     "stat1Val": "100%",
     "stat1Label": "Compradores calificados individualmente",

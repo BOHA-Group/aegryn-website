@@ -101,9 +101,11 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           >
             {magTitle}
           </p>
-          <p className="font-sans text-[12.5px] text-ag-gray leading-[1.75]">
-            {magDesc}
-          </p>
+          <div className="font-sans text-[12.5px] text-ag-gray leading-[1.75] space-y-2">
+            {magDesc.split('\n\n').map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
           <p className="font-sans font-semibold text-[12px] text-ag-black">
             {magFooter}
           </p>

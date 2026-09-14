@@ -319,7 +319,7 @@
     "cta": "Contattaci",
     "hero": {
       "title": "Accompagnare ciò che costruisci.",
-      "desc": "Interveniamo nei momenti in cui le decisioni definiscono la traiettoria di un’organizzazione. Strategia, tecnologia, M&A, board advisory: un unico interlocutore, dalla diagnosi all’esecuzione."
+      "desc": "Interveniamo nei momenti in cui le decisioni definiscono la traiettoria di un’organizzazione. Un unico interlocutore, dalla diagnosi all’esecuzione."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Consulenza in strategia",
-        "desc": "Definiamo con i dirigenti la traiettoria della loro organizzazione e le condizioni per la sua esecuzione.",
+        "desc": "Definiamo con i dirigenti la traiettoria della loro organizzazione e le condizioni per il suo successo.",
         "why": {
           "title": "Perché la consulenza strategica?",
           "desc": "In un mercato europeo frammentato dove il 70% delle strategie non genera crescita sostenibile, i leader tech affrontano decisioni critiche: espansione internazionale, trasformazione del modello operativo, allocazione del capitale tra crescita organica e acquisizioni. Il nostro approccio combina visione strategica ed esecuzione operativa per trasformare l'ambizione in risultati misurabili."
@@ -720,15 +720,15 @@
     "items": [
       {
         "title": "ACCOMPAGNARE",
-        "desc": "Consulenza strategica, organizzativa e di M&A. Interveniamo quando le decisioni definiscono la traiettoria di un'organizzazione. Non raccomandazioni. Risultati."
+        "desc": "Consulenza strategica, tecnologica e di M&A. Interveniamo quando le decisioni definiscono la traiettoria di un'organizzazione. Non raccomandazioni. Risultati."
       },
       {
         "title": "COSTRUIRE",
-        "desc": "Asset digitali duraturi, prezzo fisso, piena proprietà del cliente. Ogni asset è progettato per valorizzare l'azienda. Indipendenza tecnologica."
+        "desc": "Asset digitali duraturi, piena proprietà del cliente. Ogni asset è progettato per valorizzare l'azienda. Indipendenza tecnologica."
       },
       {
         "title": "VALORIZZARE",
-        "desc": "Certificazione indipendente CIFSO e transazione di asset. Un protocollo rigoroso su cinque dimensioni: Capitale, Integrità, Finanze, Sicurezza & Sovranità, Organizzazione."
+        "desc": "Certificazione indipendente CIFSO e valorizzazione degli asset aziendali. Un protocollo rigoroso su cinque dimensioni: Capitale, Integrità, Finanze, Sicurezza & Sovranità, Organizzazione."
       },
       {
         "title": "RECLUTARE",
@@ -777,7 +777,7 @@
   },
   "homeHybrid": {
     "label": "MODELLO IBRIDO",
-    "title": "Costruiamo.\nConsigliamo.\nTrasferiamo.",
+    "title": "Costruiamo.\nConsigliamo.\nValorizziamo.",
     "desc": "Aegryn non è una società di consulenza. Non è una banca d'investimento. Non è un incubatore.\n\nÈ una firma di consulenza integrata che accompagna decisori, fondatori e dirigenti a creare, documentare e realizzare il valore della loro organizzazione.\n\nInterveniamo dove la teoria finisce e inizia l'esecuzione. Dalla strategia alla trasmissione."
   },
   "whyapps": {
@@ -4268,7 +4268,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "Un label di qualità indipendente per le organizzazioni\nche vogliono acquisire o trasmettere al giusto prezzo.",
+    "title": "Un label di qualità indipendente per le organizzazioni\nche vogliono stimare, acquisire o trasmettere i loro asset.",
     "desc": "Il protocollo CIFSO v4.0 certifica cinque dimensioni: Capitale, Integrità, Finanze, Sicurezza & Sovranità, Organizzazione. Riproducibile, tracciabile, definitivo.",
     "quote": "Un asset senza certificazione indipendente è un valore senza prova. Un asset Aegryn Grade AAA è una certezza documentata e tracciabile.",
     "cta": "Scoprire la metodologia",
@@ -4357,7 +4357,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "La rivista dei fondatori tech europei e degli acquirenti che li osservano. Transazioni reali decifrate, dati di mercato, ritratti di imprenditori, multipli per verticale e la vita di chi costruisce qualcosa che conta.",
+    "magDesc": "Per fondatori, dirigenti, investitori e famiglie azioniste che costruiscono, finanziano, acquisiscono o trasmettono un'organizzazione: Aegryn Magazine documenta ogni trimestre cosa significa davvero creare e realizzare valore, in tutti i settori e dimensioni, in Svizzera e in Europa.\n\nStrategie decifrate, ritratti di decisori, dati di mercato e la vita di chi costruisce qualcosa che conta.",
     "magFooter": "Quattro edizioni all'anno.",
     "magCta": "Scopri la rivista",
     "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up ai grandi gruppi in forte crescita.",
@@ -8315,7 +8315,7 @@
     "title": "Piena proprietà IP. Pronto per la certificazione.",
     "chip1": "PIENA PROPRIETÀ IP DEL CLIENTE",
     "chip2": "PRONTO PER CERTIFICAZIONE",
-    "chip3": "INDIPENDENZA TECNOLOGICA",
+    "chip3": "INDIPENDENZA DI SCELTA TECNOLOGICA",
     "chip4": "CODICE PERSONALIZZATO CERTIFICABILE",
     "cta": "Vedere la progettazione di asset",
     "builtToLastQuote": "In un mondo in cui la tecnologia diventa obsoleta in pochi mesi, progettare per durare è un atto di resistenza. Ogni asset che costruiamo aumenta il valore della vostra organizzazione, non la vostra bolletta mensile cloud."
@@ -8988,7 +8988,7 @@
   },
   "transactNarrative": {
     "label": "Valutazione & Trasferimento di asset",
-    "title": "Il valore si dimostra\nprima di essere negoziato.",
+    "title": "Il valore deve potersi dimostrare\nsenza compromessi.",
     "desc": "Certificazione indipendente. Valutazione documentata.\nTrasferimento riservato. Cerchia di acquirenti pre-qualificati.",
     "stat1Val": "100%",
     "stat1Label": "Acquirenti qualificati individualmente",

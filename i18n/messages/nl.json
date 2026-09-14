@@ -319,7 +319,7 @@
     "cta": "Contact opnemen",
     "hero": {
       "title": "Begeleiden wat jij bouwt.",
-      "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Strategie, technologie, M&A, board advisory: één gesprekspartner, van diagnose tot uitvoering."
+      "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Één gesprekspartner, van diagnose tot uitvoering."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Strategieadvies",
-        "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor uitvoering.",
+        "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor succes.",
         "why": {
           "title": "Waarom strategieadvies?",
           "desc": "In een gefragmenteerde Europese markt waar 70% van de strategieën geen duurzame groei genereert, staan tech-leiders voor kritieke beslissingen: internationale expansie, transformatie van het operationeel model, kapitaalallocatie tussen organische groei en overnames. Onze aanpak combineert strategische visie en operationele uitvoering om ambitie om te zetten in meetbare resultaten."
@@ -720,15 +720,15 @@
     "items": [
       {
         "title": "ADVISEREN",
-        "desc": "Strategisch, organisatorisch en M&A-advies. We interveniëren wanneer beslissingen de koers van een organisatie bepalen. Geen aanbevelingen. Resultaten."
+        "desc": "Strategisch, technologisch en M&A-advies. We interveniëren wanneer beslissingen de koers van een organisatie bepalen. Geen aanbevelingen. Resultaten."
       },
       {
         "title": "BOUWEN",
-        "desc": "Duurzame digitale assets, vaste prijs, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten. Technologische onafhankelijkheid."
+        "desc": "Duurzame digitale assets, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten. Technologische onafhankelijkheid."
       },
       {
         "title": "WAARDEREN",
-        "desc": "Onafhankelijke CIFSO-certificering en asset-transacties. Een rigoureus protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie."
+        "desc": "Onafhankelijke CIFSO-certificering en waardering van de bedrijfsactiva. Een rigoureus protocol op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie."
       },
       {
         "title": "REKRUTEREN",
@@ -777,7 +777,7 @@
   },
   "homeHybrid": {
     "label": "HYBRIDE MODEL",
-    "title": "Wij bouwen.\nWij adviseren.\nWij overdragen.",
+    "title": "Wij bouwen.\nWij adviseren.\nWij waarderen.",
     "desc": "Aegryn is geen adviesbureau. Geen investeringsbank. Geen incubator.\n\nHet is een geïntegreerde adviesfirma die besluitvormers, oprichters en leidinggevenden helpt de waarde van hun organisatie te creëren, documenteren en realiseren.\n\nWe interveniëren waar theorie eindigt en uitvoering begint. Van strategie tot overdracht."
   },
   "whyapps": {
@@ -4268,7 +4268,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "Een onafhankelijk kwaliteitslabel voor organisaties\ndie willen verwerven of overdragen tegen de juiste prijs.",
+    "title": "Een onafhankelijk kwaliteitslabel voor organisaties\ndie hun activa willen inschatten, verwerven of overdragen.",
     "desc": "Het CIFSO v4.0-protocol certificeert vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie. Reproduceerbaar, traceerbaar, definitief.",
     "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
     "cta": "Methodologie ontdekken",
@@ -4357,7 +4357,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Het magazine voor Europese tech-oprichters en de kopers die hen in de gaten houden. Echte transacties ontcijferd, marktdata, ondernemersportretten, multiples per verticaal en het leven van wie iets bouwt dat ertoe doet.",
+    "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
     "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot grote groepen met sterke groei.",
@@ -5120,7 +5120,7 @@
   },
   "transactNarrative": {
     "label": "Waardering & Overdracht van activa",
-    "title": "Waarde wordt bewezen\nvoordat het wordt onderhandeld.",
+    "title": "Waarde moet bewezen kunnen worden,\nzonder concessies.",
     "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke overdracht. Voorgekwalificeerde koperskring.",
     "stat1Val": "100%",
     "stat1Label": "Individueel gekwalificeerde kopers",
@@ -8330,7 +8330,7 @@
     "title": "Volledige IP-eigendom. Certificeringsklaar.",
     "chip1": "VOLLEDIGE IP-EIGENDOM KLANT",
     "chip2": "CERTIFICERINGSKLAAR",
-    "chip3": "TECHNOLOGISCHE ONAFHANKELIJKHEID",
+    "chip3": "ONAFHANKELIJKE TECHNOLOGIEKEUZE",
     "chip4": "CERTIFICEERBARE MAATCODE",
     "cta": "Asset engineering bekijken",
     "builtToLastQuote": "In een wereld waar technologie in maanden veroudert, is ontwerpen om te duren een daad van weerstand. Elk asset dat wij bouwen vergroot de waarde van uw organisatie, niet uw maandelijkse cloudrekening."

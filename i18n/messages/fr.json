@@ -319,7 +319,7 @@
     "cta": "Prendre contact",
     "hero": {
       "title": "Accompagner ce que vous construisez.",
-      "desc": "Nous intervenons aux moments où les décisions définissent la trajectoire d’une organisation. Stratégie, technologie, M&A, board advisory : un seul interlocuteur, du diagnostic à l’exécution."
+      "desc": "Nous intervenons aux moments où les décisions définissent la trajectoire d’une organisation. Un seul interlocuteur, du diagnostic à l’exécution."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Conseil en stratégie",
-        "desc": "Nous définissons avec les dirigeants la trajectoire de leur organisation et les conditions de son exécution.",
+        "desc": "Nous définissons avec les dirigeants la trajectoire de leur organisation et les conditions de son succès.",
         "why": {
           "title": "Pourquoi le conseil en stratégie ?",
           "desc": "Dans un marché européen fragmenté où 70% des stratégies échouent à générer une croissance durable, les dirigeants tech font face à des choix critiques : expansion internationale, transformation du modèle opérationnel, allocation de capital entre croissance organique et acquisitions. Notre approche combine vision stratégique et exécution opérationnelle pour transformer l'ambition en résultats mesurables."
@@ -683,15 +683,15 @@
     "items": [
       {
         "title": "ACCOMPAGNER",
-        "desc": "Conseil en stratégie, organisation et M&A. Nous intervenons quand les décisions définissent la trajectoire d’une organisation : transformation, pivot, acquisition, transmission. Pas des recommandations. Des résultats."
+        "desc": "Conseil en stratégie, technologie et fusion-acquisition. Nous intervenons quand les décisions définissent la trajectoire d’une organisation : transformation, pivot, acquisition, transmission. Pas des recommandations. Des résultats."
       },
       {
         "title": "CONSTRUIRE",
-        "desc": "Actifs numériques durables, à prix forfaitaire, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. Indépendance technologique."
+        "desc": "Actifs numériques durables, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. Indépendance technologique."
       },
       {
         "title": "VALORISER",
-        "desc": "Certification indépendante CIFSO et transaction d’actifs. Un protocole rigoureux sur cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un cercle fermé d’acquéreurs qualifiés."
+        "desc": "Certification indépendante CIFSO et valorisation des actifs entreprise. Un protocole rigoureux sur cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation."
       },
       {
         "title": "RECRUTER",
@@ -1730,7 +1730,7 @@
   },
   "transactNarrative": {
     "label": "Valorisation & Transmission d'actifs",
-    "title": "La valeur se prouve\navant de se négocier.",
+    "title": "La valeur doit pouvoir se prouver\nsans concession.",
     "desc": "Certification indépendante. Valorisation documentée.\nTransmission confidentielle. Cercle d'acquéreurs pré-qualifiés.",
     "stat1Val": "100%",
     "stat1Label": "Acquéreurs qualifiés individuellement",
@@ -4353,7 +4353,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "Un label qualité indépendant pour les organisations\nqui veulent acquérir ou transmettre au juste prix.",
+    "title": "Un label qualité indépendant pour les organisations\nqui veulent estimer, acquérir ou transmettre leurs actifs.",
     "desc": "Le protocole CIFSO v4.0 certifie cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Reproductible, traçable, définitif.",
     "quote": "Un actif sans certification indépendante, c'est une valeur sans preuve. Un actif Aegryn Grade AAA, c'est une certitude documentée et traçable.",
     "cta": "Découvrir la méthodologie",
@@ -4427,7 +4427,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Le magazine des fondateurs tech européens et des acquéreurs qui les regardent. Transactions réelles décryptées, données de marché, portraits d'entrepreneurs, multiples par vertical, et la vie de ceux qui construisent quelque chose qui compte.",
+    "magDesc": "Pour les fondateurs, dirigeants, investisseurs et familles actionnaires qui bâtissent, financent, acquièrent ou transmettent une organisation : Aegryn Magazine documente chaque trimestre ce que cela signifie vraiment de créer et de réaliser de la valeur, toutes industries, toutes tailles, en Suisse et en Europe.\n\nStratégies décryptées, portraits de décideurs, données de marché et vie de ceux qui construisent quelque chose qui compte.",
     "magFooter": "Quatre éditions par an.",
     "magCta": "Découvrir le magazine",
     "label": "Nos analyses du marché suisse et européen, des scale-ups au grand groupe en forte croissance.",
@@ -8275,7 +8275,7 @@
     "title": "Propriété IP totale. Prêt pour la certification.",
     "chip1": "PROPRIÉTÉ IP TOTALE CLIENT",
     "chip2": "PRÊT POUR LA CERTIFICATION",
-    "chip3": "INDÉPENDANCE TECHNOLOGIQUE",
+    "chip3": "INDÉPENDANCE CHOIX TECHNOLOGIQUE",
     "chip4": "CODE SUR-MESURE CERTIFIABLE",
     "cta": "Voir la conception d'actifs",
     "builtToLastQuote": "Dans un monde où la technologie s’obsolète en quelques mois, concevoir pour durer est un acte de résistance. Chaque actif que nous construisons augmente la valeur de votre organisation, pas votre facture mensuelle cloud."
@@ -9953,7 +9953,7 @@
   },
   "homeHybrid": {
     "label": "MODÈLE HYBRIDE",
-    "title": "Nous construisons.\nNous conseillons.\nNous transmettons.",
+    "title": "Nous construisons.\nNous conseillons.\nNous valorisons.",
     "desc": "Aegryn n’est pas un cabinet. Pas une banque d’affaires. Pas un incubateur.\n\nC’est un cabinet de conseil intégré qui accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation.\n\nNous intervenons là où la théorie s’arrête et où l’exécution commence. De la stratégie à la transmission."
   },
   "homeTalent": {

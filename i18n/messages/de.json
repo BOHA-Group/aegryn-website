@@ -319,7 +319,7 @@
     "cta": "Kontakt aufnehmen",
     "hero": {
       "title": "Begleiten, was Sie aufbauen.",
-      "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Strategie, Technologie, M&A, Board Advisory: ein Ansprechpartner, von der Diagnose bis zur Ausführung."
+      "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Ein Ansprechpartner, von der Diagnose bis zur Ausführung."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Strategieberatung",
-        "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Umsetzung.",
+        "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Erfolg.",
         "why": {
           "title": "Warum Strategieberatung?",
           "desc": "In einem fragmentierten europäischen Markt, in dem 70% der Strategien kein nachhaltiges Wachstum generieren, stehen Tech-Führungskräfte vor kritischen Entscheidungen: internationale Expansion, Transformation des Betriebsmodells, Kapitalallokation zwischen organischem Wachstum und Akquisitionen. Unser Ansatz kombiniert strategische Vision und operative Umsetzung, um Ambitionen in messbare Ergebnisse zu verwandeln."
@@ -720,15 +720,15 @@
     "items": [
       {
         "title": "BERATEN",
-        "desc": "Strategie-, Organisations- und M&A-Beratung. Wir intervenieren, wenn Entscheidungen die Bahn einer Organisation definieren: Transformation, Pivot, Akquisition, Übertragung. Keine Empfehlungen. Ergebnisse."
+        "desc": "Strategie-, Technologie- und M&A-Beratung. Wir intervenieren, wenn Entscheidungen die Bahn einer Organisation definieren: Transformation, Pivot, Akquisition, Übertragung. Keine Empfehlungen. Ergebnisse."
       },
       {
         "title": "AUFBAUEN",
-        "desc": "Nachhaltige digitale Assets, Pauschalpreis, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. Technologische Unabhängigkeit."
+        "desc": "Nachhaltige digitale Assets, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. Technologische Unabhängigkeit."
       },
       {
         "title": "BEWERTEN",
-        "desc": "Unabhängige CIFSO-Zertifizierung und Asset-Transaktionen. Ein strenges Protokoll auf fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Ein geschlossener Kreis qualifizierter Käufer."
+        "desc": "Unabhängige CIFSO-Zertifizierung und Bewertung der Unternehmenswerte. Ein strenges Protokoll auf fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation."
       },
       {
         "title": "REKRUTIEREN",
@@ -777,7 +777,7 @@
   },
   "homeHybrid": {
     "label": "HYBRIDES MODELL",
-    "title": "Wir bauen.\nWir beraten.\nWir übertragen.",
+    "title": "Wir bauen.\nWir beraten.\nWir bewerten.",
     "desc": "Aegryn ist keine Beratungsfirma. Keine Investmentbank. Kein Inkubator.\n\nEs ist eine integrierte Beratungsfirma, die Entscheider, Gründer und Führungskräfte dabei unterstützt, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren.\n\nWir intervenieren dort, wo die Theorie aufhört und die Ausführung beginnt. Von der Strategie bis zum Abschluss."
   },
   "whyapps": {
@@ -4268,7 +4268,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "Ein unabhängiges Qualitätslabel für Organisationen,\ndie zu einem fairen Preis erwerben oder übertragen möchten.",
+    "title": "Ein unabhängiges Qualitätslabel für Organisationen,\ndie ihre Vermögenswerte einschätzen, erwerben oder übertragen möchten.",
     "desc": "Das CIFSO v4.0-Protokoll zertifiziert fünf Dimensionen: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Reproduzierbar, nachvollziehbar, definitiv.",
     "quote": "Ein Asset ohne unabhängige Zertifizierung ist ein Wert ohne Beweis. Ein Aegryn Grade AAA Asset ist eine dokumentierte und nachvollziehbare Gewissheit.",
     "cta": "Methodik entdecken",
@@ -4357,7 +4357,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Das Magazin für europäische Tech-Gründer und die Erwerber, die sie beobachten. Echte Transaktionen entschlüsselt, Marktdaten, Unternehmerporträts, Multiples nach Branche und das Leben derer, die etwas Bedeutendes aufbauen.",
+    "magDesc": "Für Gründer, Führungskräfte, Investoren und Aktionärsfamilien, die eine Organisation aufbauen, finanzieren, erwerben oder übertragen: Aegryn Magazine dokumentiert jedes Quartal, was es wirklich bedeutet, Wert zu schaffen und zu realisieren – über alle Branchen und Größen hinweg, in der Schweiz und in Europa.\n\nEntschlüsselte Strategien, Porträts von Entscheidungsträgern, Marktdaten und das Leben derer, die etwas Bedeutendes aufbauen.",
     "magFooter": "Vier Ausgaben pro Jahr.",
     "magCta": "Das Magazin entdecken",
     "label": "Unsere Analysen des Schweizer und europäischen Marktes, von Scale-ups bis hin zu grossen Unternehmen mit starkem Wachstum.",
@@ -8315,7 +8315,7 @@
     "title": "Vollständiges IP-Eigentum. Zertifizierungsbereit.",
     "chip1": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
     "chip2": "ZERTIFIZIERUNGSBEREIT",
-    "chip3": "TECHNOLOGISCHE UNABHÄNGIGKEIT",
+    "chip3": "UNABHÄNGIGE TECHNOLOGIEWAHL",
     "chip4": "ZERTIFIZIERBARER CUSTOM CODE",
     "cta": "Asset-Ingenieurwesen ansehen",
     "builtToLastQuote": "In einer Welt, in der Technologie in Monaten veraltet, ist das Entwerfen für die Dauer ein Akt des Widerstands. Jedes Asset, das wir bauen, steigert den Wert Ihrer Organisation, nicht Ihre monatliche Cloud-Rechnung."
@@ -9118,7 +9118,7 @@
   },
   "transactNarrative": {
     "label": "Bewertung & Vermögensübertragung",
-    "title": "Wert wird bewiesen,\nbevor er verhandelt wird.",
+    "title": "Wert muss sich beweisen lassen,\nohne Kompromisse.",
     "desc": "Unabhängige Zertifizierung. Dokumentierte Bewertung.\nVertrauliche Übertragung. Vorqualifizierter Käuferkreis.",
     "stat1Val": "100%",
     "stat1Label": "Individuell qualifizierte Käufer",

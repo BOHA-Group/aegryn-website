@@ -319,7 +319,7 @@
     "cta": "Get in touch",
     "hero": {
       "title": "Supporting what you build.",
-      "desc": "We intervene at the moments when decisions define the trajectory of an organisation. Strategy, technology, M&A, board advisory: one firm, from diagnosis to execution."
+      "desc": "We intervene at the moments when decisions define the trajectory of an organisation. One firm, from diagnosis to execution."
     },
     "pillars": {
       "board": {
@@ -343,7 +343,7 @@
       },
       "strategy": {
         "title": "Strategy advisory",
-        "desc": "We define with leaders the trajectory of their organisation and the conditions for its execution.",
+        "desc": "We define with leaders the trajectory of their organisation and the conditions for its success.",
         "why": {
           "title": "Why strategy consulting?",
           "desc": "In a fragmented European market where 70% of strategies fail to generate sustainable growth, tech leaders face critical choices: international expansion, operating model transformation, capital allocation between organic growth and acquisitions. Our approach combines strategic vision and operational execution to transform ambition into measurable results."
@@ -720,15 +720,15 @@
     "items": [
       {
         "title": "ADVISE",
-        "desc": "Strategic, organisational and M&A advisory. We intervene when decisions define the trajectory of an organisation: transformation, pivot, acquisition, transmission. Not recommendations. Results."
+        "desc": "Strategic, technology and M&A advisory. We intervene when decisions define the trajectory of an organisation: transformation, pivot, acquisition, transmission. Not recommendations. Results."
       },
       {
         "title": "BUILD",
-        "desc": "Durable digital assets, flat-fee, full client ownership. Each asset is designed to enhance company value and withstand certification. Technological independence."
+        "desc": "Durable digital assets, full client ownership. Each asset is designed to enhance company value and withstand certification. Technological independence."
       },
       {
         "title": "VALUE",
-        "desc": "Independent CIFSO certification and asset transactions. A rigorous protocol on five dimensions: Capital, Integrity, Finance, Security & Sovereignty, Organisation. A closed circle of qualified buyers."
+        "desc": "Independent CIFSO certification and company asset valuation. A rigorous protocol on five dimensions: Capital, Integrity, Finance, Security & Sovereignty, Organisation."
       },
       {
         "title": "RECRUIT",
@@ -777,7 +777,7 @@
   },
   "homeHybrid": {
     "label": "HYBRID MODEL",
-    "title": "We build.\nWe advise.\nWe transfer.",
+    "title": "We build.\nWe advise.\nWe value.",
     "desc": "Aegryn is not a consulting firm. Not an investment bank. Not an incubator.\n\nIt is an integrated advisory firm that helps decision-makers, founders and executives create, document and realise the value of their organisation.\n\nWe intervene where theory ends and execution begins. From strategy to closing."
   },
   "whyapps": {
@@ -1770,7 +1770,7 @@
   },
   "transactNarrative": {
     "label": "Valuation & Asset Transfer",
-    "title": "Value is proven\nbefore it's negotiated.",
+    "title": "Value must be demonstrable,\nwithout compromise.",
     "desc": "Independent certification. Documented valuation.\nConfidential transfer. Pre-qualified buyer circle.",
     "stat1Val": "100%",
     "stat1Label": "Individually qualified buyers",
@@ -4393,7 +4393,7 @@
   },
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
-    "title": "An independent quality label for organisations\nthat want to acquire or transmit at the right price.",
+    "title": "An independent quality label for organisations\nthat want to estimate, acquire or transmit their assets.",
     "desc": "The CIFSO v4.0 protocol certifies five dimensions: Capital, Integrity, Finance, Security & Sovereignty, Organisation. Reproducible, traceable, definitive.",
     "quote": "An asset without an independent certification is a value without proof. An Aegryn Grade AAA asset is a documented and traceable certainty.",
     "cta": "Discover the methodology",
@@ -4467,7 +4467,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "The magazine for European tech founders and the acquirers watching them. Real transactions decoded, market data, entrepreneur portraits, multiples by vertical, and the lives of those building something that matters.",
+    "magDesc": "For founders, executives, investors and shareholder families who build, finance, acquire or transfer an organisation: Aegryn Magazine documents every quarter what it really means to create and realise value, across all industries and sizes, in Switzerland and Europe.\n\nStrategies decoded, decision-maker portraits, market data and the lives of those building something that matters.",
     "magFooter": "Four editions per year.",
     "magCta": "Discover the magazine",
     "label": "Our analysis of the Swiss and European market, from scale-ups to large high-growth groups.",
@@ -8315,7 +8315,7 @@
     "title": "Full IP ownership. Certification-ready.",
     "chip1": "FULL CLIENT IP OWNERSHIP",
     "chip2": "CERTIFICATION-READY",
-    "chip3": "TECHNOLOGICAL INDEPENDENCE",
+    "chip3": "TECHNOLOGY CHOICE INDEPENDENCE",
     "chip4": "CERTIFIABLE CUSTOM CODE",
     "cta": "See asset engineering",
     "builtToLastQuote": "In a world where technology becomes obsolete in months, designing to last is an act of resistance. Every asset we build increases the value of your organisation, not your monthly cloud bill."
