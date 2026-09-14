@@ -1304,7 +1304,6 @@
     "title": "A network of independent auditors, not an obligation.",
     "intro1": "The Aegryn Grade is an independent certification: Aegryn evaluates and rates the quality of tech assets for sale without relying on imposed auditors. Independent professionals may be mandated to deepen specific areas.",
     "intro2": "We remain open to applications from independent experts wishing to align with the certification or join our network, mobilisable on demand before, during and after a transaction.",
-    "openApps": "Applications open",
     "types": {
       "code": {
         "label": "CODE & TECH AUDIT",
@@ -4502,8 +4501,49 @@
         "label": "Certification",
         "title": "Aegryn expert network",
         "desc": "Tech law firms, chartered accountants, cybersecurity partners. Join the first circle of partners called to enrich the Aegryn Grade protocol with a cross-review, as this process is deployed.",
-        "profiles": "IP & tech law firms · Chartered accountants · Cybersecurity partners",
-        "cta": "Become a certification partner"
+        "cta": "Become a certification partner",
+        "dimensions": {
+          "C": {
+            "label": "C — Code & Architecture",
+            "profiles": [
+              "Code & architecture audit firms",
+              "Senior independent freelance CTOs",
+              "DevSecOps & application security consultancies"
+            ]
+          },
+          "I": {
+            "label": "I — IP & Rights",
+            "profiles": [
+              "IP & tech law firms (chain of title, licences)",
+              "M&A transactional lawyers (SPA, SHA, APA)",
+              "Intellectual property & trademark firms"
+            ]
+          },
+          "F": {
+            "label": "F — Finances & Metrics",
+            "profiles": [
+              "Chartered accountants specialised in SaaS/tech",
+              "Independent statutory auditors",
+              "Corporate tax advisors (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Security & Sovereignty",
+            "profiles": [
+              "Accredited cybersecurity specialists (PASSI, CREST)",
+              "GDPR/FADP/NIS2 compliance audit firms",
+              "AI sovereignty & infrastructure auditors"
+            ]
+          },
+          "O": {
+            "label": "O — Organisation & Talent",
+            "profiles": [
+              "HR & employment law firms",
+              "Executive search specialists in tech",
+              "Organisation & leadership succession consultants"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distribution",

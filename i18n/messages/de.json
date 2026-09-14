@@ -1304,7 +1304,6 @@
     "title": "Ein Netzwerk unabhängiger Prüfer, keine Pflicht.",
     "intro1": "Das Aegryn Grade ist eine unabhängige Zertifizierung: Aegryn bewertet Tech-Assets ohne vorgeschriebene Prüfer. Unabhängige Fachleute können für bestimmte Bereiche mandatiert werden.",
     "intro2": "Wir sind offen für Bewerbungen unabhängiger Experten, die sich der Zertifizierung anschließen oder unserem Netzwerk beitreten möchten, das vor, während und nach einer Transaktion auf Abruf mobilisierbar ist.",
-    "openApps": "Bewerbungen offen",
     "types": {
       "code": {
         "label": "CODE & TECH AUDIT",
@@ -4502,8 +4501,49 @@
         "label": "Zertifizierung",
         "title": "Partner des Expertennetzwerks",
         "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Treten Sie dem ersten Kreis von Partnern bei, die das Aegryn Grade-Protokoll mit einer Querprüfung anreichern sollen, sobald sich dieses System entfaltet.",
-        "profiles": "IP & Tech-Kanzleien · Wirtschaftsprüfer · Cybersicherheitspartner",
-        "cta": "Zertifizierungspartner werden"
+        "cta": "Zertifizierungspartner werden",
+        "dimensions": {
+          "C": {
+            "label": "C — Code & Architektur",
+            "profiles": [
+              "Kanzleien für Code- & Architekturprüfung",
+              "Erfahrene unabhängige Freelance-CTOs",
+              "DevSecOps- & Anwendungssicherheitsberatungen"
+            ]
+          },
+          "I": {
+            "label": "I — IP & Rechte",
+            "profiles": [
+              "IP- & Tech-Kanzleien (Rechtekette, Lizenzen)",
+              "M&A-Transaktionsanwälte (SPA, SHA, APA)",
+              "Kanzleien für geistiges Eigentum & Marken"
+            ]
+          },
+          "F": {
+            "label": "F — Finanzen & Kennzahlen",
+            "profiles": [
+              "Auf SaaS/Tech spezialisierte Wirtschaftsprüfer",
+              "Unabhängige Abschlussprüfer",
+              "Unternehmenssteuerberater (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Sicherheit & Souveränität",
+            "profiles": [
+              "Akkreditierte Cybersicherheitsspezialisten (PASSI, CREST)",
+              "DSGVO/DSG/NIS2-Compliance-Prüfer",
+              "Prüfer für KI-Souveränität & Infrastruktur"
+            ]
+          },
+          "O": {
+            "label": "O — Organisation & Talent",
+            "profiles": [
+              "HR- & Arbeitsrechtskanzleien",
+              "Executive-Search-Spezialisten für Tech",
+              "Berater für Organisation & Führungsnachfolge"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distribution",

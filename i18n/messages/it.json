@@ -1304,7 +1304,6 @@
     "title": "Una rete di revisori indipendenti, non un obbligo.",
     "intro1": "L'Aegryn Grade è una certificazione indipendente: Aegryn valuta asset tech senza revisori imposti. Professionisti indipendenti possono essere incaricati per approfondire aree specifiche.",
     "intro2": "Restiamo aperti alle candidature di esperti indipendenti che desiderano aderire alla certificazione o unirsi alla nostra rete, mobilizzabile su richiesta prima, durante e dopo una transazione.",
-    "openApps": "Candidature aperte",
     "types": {
       "code": {
         "label": "AUDIT CODICE & TECH",
@@ -4502,8 +4501,49 @@
         "label": "Certificazione",
         "title": "Rete di esperti Aegryn",
         "desc": "Studi legali tech, revisori contabili, partner cybersecurity. Unitevi al primo cerchio di partner chiamati ad arricchire il protocollo Aegryn Grade con una revisione incrociata, man mano che questo dispositivo si dispiega.",
-        "profiles": "Studi IP & tech · Revisori contabili · Partner cybersecurity",
-        "cta": "Diventare partner di certificazione"
+        "cta": "Diventare partner di certificazione",
+        "dimensions": {
+          "C": {
+            "label": "C — Codice & Architettura",
+            "profiles": [
+              "Studi di audit codice & architettura",
+              "CTO freelance senior indipendenti",
+              "Consulenze DevSecOps e sicurezza applicativa"
+            ]
+          },
+          "I": {
+            "label": "I — IP & Diritti",
+            "profiles": [
+              "Studi IP & tech (catena dei titoli, licenze)",
+              "Avvocati M&A transazionali (SPA, SHA, APA)",
+              "Studi di proprietà intellettuale e marchi"
+            ]
+          },
+          "F": {
+            "label": "F — Finanze & Metriche",
+            "profiles": [
+              "Revisori contabili specializzati SaaS/tech",
+              "Revisori legali indipendenti",
+              "Consulenti fiscali corporate (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Sicurezza & Sovranità",
+            "profiles": [
+              "Specialisti cybersecurity accreditati (PASSI, CREST)",
+              "Studi di audit conformità RGPD/LPD/NIS2",
+              "Auditor sovranità IA e infrastruttura"
+            ]
+          },
+          "O": {
+            "label": "O — Organizzazione & Talento",
+            "profiles": [
+              "Studi HR & diritto del lavoro",
+              "Specialisti executive search tech",
+              "Consulenti organizzazione e successione dirigenziale"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distribuzione",

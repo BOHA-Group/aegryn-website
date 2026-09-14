@@ -230,16 +230,36 @@ export default function AlliancesContent() {
                 <p className="text-[15px] text-ag-gray leading-relaxed mb-10 max-w-lg">
                   {t(`types.${activeTab}.desc`)}
                 </p>
-                <ul className="flex flex-col gap-3 mb-10">
-                  {(t(`types.${activeTab}.profiles`) as string)
-                    .split(' · ')
-                    .map((p: string, i: number) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
-                        <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
-                      </li>
+                {activeTab === 'certification' ? (
+                  <div className="flex flex-col gap-6 mb-10">
+                    {(['C', 'I', 'F', 'S', 'O'] as const).map((dim) => (
+                      <div key={dim}>
+                        <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-ag-black mb-3">
+                          {t(`types.certification.dimensions.${dim}.label`)}
+                        </p>
+                        <ul className="flex flex-col gap-2.5">
+                          {(t.raw(`types.certification.dimensions.${dim}.profiles`) as string[]).map((p: string, i: number) => (
+                            <li key={i} className="flex items-start gap-3">
+                              <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                              <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                </ul>
+                  </div>
+                ) : (
+                  <ul className="flex flex-col gap-3 mb-10">
+                    {(t(`types.${activeTab}.profiles`) as string)
+                      .split(' · ')
+                      .map((p: string, i: number) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                          <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{p}</span>
+                        </li>
+                      ))}
+                  </ul>
+                )}
                 <p className="font-sans text-[12px] text-ag-gray-light italic mb-8">
                   {t('partnerNote')}
                 </p>

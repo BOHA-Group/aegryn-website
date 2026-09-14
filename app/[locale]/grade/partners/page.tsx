@@ -17,7 +17,6 @@ export default async function GradePartnersPage() {
   const PARTNER_TYPES = PARTNER_KEYS.map((key, i) => ({
     icon: PARTNER_ICONS[i],
     label: t(`types.${key}.label`),
-    title: t('openApps'),
     desc: t(`types.${key}.desc`),
     dimension: t(`types.${key}.dimension`),
   }))
@@ -58,8 +57,7 @@ export default async function GradePartnersPage() {
                 </div>
                 <div>
                   <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2">{p.label}</p>
-                  <p className="font-sans font-bold text-ag-black text-[16px] mb-1">{p.title}</p>
-                  <p className="font-sans text-[11px] uppercase tracking-[0.12em] text-ag-apex">{p.dimension}</p>
+                  <p className="font-sans font-bold text-ag-black text-[16px] mb-1">{p.dimension}</p>
                 </div>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{p.desc}</p>
               </div>

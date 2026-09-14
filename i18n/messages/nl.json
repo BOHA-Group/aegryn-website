@@ -1304,7 +1304,6 @@
     "title": "Een netwerk van onafhankelijke auditoren, geen verplichting.",
     "intro1": "Het Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt tech-activa zonder opgelegde auditoren. Onafhankelijke professionals kunnen worden gemandateerd voor specifieke gebieden.",
     "intro2": "Wij staan open voor kandidaturen van onafhankelijke experts die zich willen aansluiten bij de certificering of ons netwerk willen vervoegen, op aanvraag inzetbaar voor, tijdens en na een transactie.",
-    "openApps": "Kandidaturen open",
     "types": {
       "code": {
         "label": "CODE & TECH AUDIT",
@@ -4502,8 +4501,49 @@
         "label": "Certificering",
         "title": "Expertnetwerk Aegryn",
         "desc": "Tech-advocatenkantoren, accountants, cybersecuritypartners. Sluit u aan bij de eerste kring van partners die het Aegryn Grade-protocol zullen verrijken met een kruisreview, naarmate dit systeem wordt ingevoerd.",
-        "profiles": "IP & tech-kantoren · Accountants · Cybersecuritypartners",
-        "cta": "Certificeringspartner worden"
+        "cta": "Certificeringspartner worden",
+        "dimensions": {
+          "C": {
+            "label": "C — Code & Architectuur",
+            "profiles": [
+              "Bureaus voor code- en architectuuraudits",
+              "Senior onafhankelijke freelance CTO's",
+              "DevSecOps- en applicatiebeveiligingsadviesbureaus"
+            ]
+          },
+          "I": {
+            "label": "I — IP & Rechten",
+            "profiles": [
+              "IP- & tech-kantoren (titelketen, licenties)",
+              "M&A-transactieadvocaten (SPA, SHA, APA)",
+              "Kantoren voor intellectueel eigendom en merken"
+            ]
+          },
+          "F": {
+            "label": "F — Financiën & Metrics",
+            "profiles": [
+              "Op SaaS/tech gespecialiseerde accountants",
+              "Onafhankelijke wettelijke controleurs",
+              "Corporate belastingadviseurs (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Veiligheid & Soevereiniteit",
+            "profiles": [
+              "Erkende cybersecurityspecialisten (PASSI, CREST)",
+              "AVG/LPD/NIS2-compliance-auditors",
+              "Auditors voor AI-soevereiniteit en infrastructuur"
+            ]
+          },
+          "O": {
+            "label": "O — Organisatie & Talent",
+            "profiles": [
+              "HR- & arbeidsrechtkantoren",
+              "Executive search-specialisten in tech",
+              "Consultants voor organisatie en leiderschapsopvolging"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distributie",

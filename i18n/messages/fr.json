@@ -1264,7 +1264,6 @@
     "title": "Un réseau d'auditeurs indépendants, pas une obligation.",
     "intro1": "L'Aegryn Grade est une certification indépendante : Aegryn évalue et note la qualité des actifs tech mis en vente sans dépendre d'auditeurs imposés. Des professionnels indépendants peuvent être mandatés pour approfondir certains axes.",
     "intro2": "Nous restons ouverts aux candidatures d'experts indépendants souhaitant s'adosser à la certification ou rejoindre notre réseau, mobilisable à la demande avant, pendant et après une transaction.",
-    "openApps": "Candidatures ouvertes",
     "types": {
       "code": {
         "label": "AUDIT CODE & TECH",
@@ -4462,8 +4461,49 @@
         "label": "Certification",
         "title": "Réseau d'experts Aegryn",
         "desc": "Cabinets juridiques tech, experts-comptables, partenaires cybersécurité. Rejoignez le premier cercle de partenaires appelés à enrichir le protocole Aegryn Grade d'une revue croisée, à mesure que ce dispositif se déploie.",
-        "profiles": "Cabinets IP & tech · Experts-comptables · Partenaires cybersécurité",
-        "cta": "Devenir partenaire certification"
+        "cta": "Devenir partenaire certification",
+        "dimensions": {
+          "C": {
+            "label": "C — Code & Architecture",
+            "profiles": [
+              "Cabinets d'audit code & architecture",
+              "CTO freelances seniors indépendants",
+              "Cabinets conseil DevSecOps & sécurité applicative"
+            ]
+          },
+          "I": {
+            "label": "I — IP & Droits",
+            "profiles": [
+              "Cabinets juridiques IP & tech (chaîne de titres, licences)",
+              "Avocats M&A transactionnels (SPA, SHA, APA)",
+              "Cabinets propriété intellectuelle & marques"
+            ]
+          },
+          "F": {
+            "label": "F — Finances & Métriques",
+            "profiles": [
+              "Experts-comptables spécialisés SaaS/tech",
+              "Commissaires aux comptes indépendants",
+              "Fiscalistes corporate (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Sécurité & Souveraineté",
+            "profiles": [
+              "Spécialistes cybersécurité accrédités (PASSI, CREST)",
+              "Cabinets d'audit conformité RGPD/LPD/NIS2",
+              "Auditeurs souveraineté IA & infrastructure"
+            ]
+          },
+          "O": {
+            "label": "O — Organisation & Talent",
+            "profiles": [
+              "Cabinets RH & droit social",
+              "Chasseurs de têtes executive spécialisés tech",
+              "Consultants organisation & succession dirigeante"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distribution",

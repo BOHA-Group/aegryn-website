@@ -1304,7 +1304,6 @@
     "title": "Una red de auditores independientes, no una obligación.",
     "intro1": "El Aegryn Grade es una certificación independiente: Aegryn evalúa activos tech sin auditores impuestos. Se pueden mandar profesionales independientes para profundizar áreas específicas.",
     "intro2": "Permanecemos abiertos a candidaturas de expertos independientes que deseen unirse a la certificación o a nuestra red, movilizable a demanda antes, durante y después de una transacción.",
-    "openApps": "Candidaturas abiertas",
     "types": {
       "code": {
         "label": "AUDITORÍA CÓDIGO & TECH",
@@ -4502,8 +4501,49 @@
         "label": "Certificación",
         "title": "Red de expertos Aegryn",
         "desc": "Despachos jurídicos tech, auditores, socios de ciberseguridad. Únase al primer círculo de socios llamados a enriquecer el protocolo Aegryn Grade con una revisión cruzada, a medida que este dispositivo se despliega.",
-        "profiles": "Despachos IP & tech · Auditores · Socios de ciberseguridad",
-        "cta": "Convertirse en socio de certificación"
+        "cta": "Convertirse en socio de certificación",
+        "dimensions": {
+          "C": {
+            "label": "C — Código & Arquitectura",
+            "profiles": [
+              "Firmas de auditoría de código y arquitectura",
+              "CTOs freelance senior independientes",
+              "Consultoras DevSecOps y seguridad de aplicaciones"
+            ]
+          },
+          "I": {
+            "label": "I — PI & Derechos",
+            "profiles": [
+              "Despachos IP & tech (cadena de titularidad, licencias)",
+              "Abogados M&A transaccionales (SPA, SHA, APA)",
+              "Despachos de propiedad intelectual y marcas"
+            ]
+          },
+          "F": {
+            "label": "F — Finanzas & Métricas",
+            "profiles": [
+              "Auditores especializados en SaaS/tech",
+              "Auditores estatutarios independientes",
+              "Asesores fiscales corporativos (CH/FR/LU)"
+            ]
+          },
+          "S": {
+            "label": "S — Seguridad & Soberanía",
+            "profiles": [
+              "Especialistas en ciberseguridad acreditados (PASSI, CREST)",
+              "Auditores de cumplimiento RGPD/LPD/NIS2",
+              "Auditores de soberanía de IA e infraestructura"
+            ]
+          },
+          "O": {
+            "label": "O — Organización & Talento",
+            "profiles": [
+              "Despachos de RRHH y derecho laboral",
+              "Especialistas en búsqueda de ejecutivos tech",
+              "Consultores de organización y sucesión directiva"
+            ]
+          }
+        }
       },
       "distribution": {
         "label": "Distribución",
