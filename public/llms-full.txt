@@ -1,5 +1,5 @@
 # Aegryn — Full LLM Context File
-> https://aegryn.com | Updated: 2026-09-08
+> https://aegryn.com | Updated: 2026-09-14
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -8,14 +8,16 @@
 
 **Name:** Aegryn (AEGRYN)
 **Pronunciation:** FR: É-grin /e.gʁɛ̃/ | EN: AY-grin /ˈeɪ.grɪn/ | DE: Ä-grin /ˈɛː.gʁɪn/
-**Type:** Swiss technology holding company + M&A platform for digital assets
-**Tagline:** "Engineered to Last" / "Building What Endures"
+**Type:** Swiss organisation-value platform + technology holding company + M&A platform for digital assets
+**Tagline:** "Engineered to Last" / "Building What Endures" / "Built to Last"
 **Slogan:** "Aegryn protects what endures."
 **Incorporated:** Switzerland (BOHA-Group Sàrl)
 **HQ:** St-Sulpice, Switzerland (VD, CH) — 46.5147, 6.5600
 **Contact:** contact@boha-group.com
 **Website:** https://aegryn.com
 **Languages:** French, English, German, Italian, Spanish, Dutch
+
+**Positioning:** operational-compliance standards certify that systems and processes conform to a norm; Aegryn certifies a different object — the value and the transferability of an organisation and its assets. Complementary, not competing. "Built to Last" means keeping founders in control of the growth of their company and their assets, including in the age of autonomous AI.
 
 ---
 
@@ -29,26 +31,26 @@ Synthesis: "Aegryn protects what endures."
 
 ---
 
-## Four Core Activities
+## Five Disciplines + Inform
 
 ### 1. Asset Engineering — Build
 Aegryn designs, funds and operates its own portfolio of digital assets AND builds custom digital assets for third parties.
 
 **Proprietary portfolio** (full IP, sovereign infrastructure, "An Aegryn company"):
-- Subblink (https://subblink.app) — B2B SaaS, AI-powered contract analysis, risk detection, obligation mapping
-- Neediu (https://neediu.com) — B2C marketplace, home services (cleaning, plumbing, childcare)
-- Primiom (https://primiom.com) — B2C PropTech, AI-assisted real estate across Europe
-- Movtoo (https://movtoo.com) — B2C on-demand urban delivery for individuals and businesses
-- Hobconnect (https://hobconnect.com) — B2C social network around shared passions
-- CIFSO Protocol — Algorithmic asset certification protocol. 5 dimensions: Capital, Integrity, Finance, Security, Organisation. Licensable to audit and advisory firms.
+- Subblink (https://subblink.com) — B2B SaaS, AI-powered contract analysis, risk detection, obligation mapping
+- Neediu — B2C marketplace, home services (cleaning, plumbing, childcare)
+- Primiom — B2C PropTech, AI-assisted real estate across Europe
+- Movtoo — B2C on-demand urban delivery for individuals and businesses
+- Hobconnect — B2C social network around shared passions
+- CIFSO Protocol — Organisation-value certification protocol. 5 dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security/Sovereignty & AI Exposure, Organisation/Talent & Succession. Licensable to audit and advisory firms.
 - Compliance Engine — Automated regulatory compliance engine. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
 - KYB/KYC Engine — Business onboarding and identity verification. KYB, beneficial owners, sanctions, credentials. Licensable.
-- Data Room — Secure M&A data room. RLS, watermarking, audit trail. Licensable to M&A boutiques.
+- Data Room — Secure M&A data room. RLS, watermarking, audit trail, AI-exposure evidence tracking. Licensable to M&A boutiques.
 
-Pages: /assets (core proprietary ecosystem), /portfolio (group participations)
+Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
 **Custom build for third parties** (Asset Engineering service):
-- Fixed price contract at discovery — no scope creep
+- Price agreed at discovery — no scope creep
 - Custom code only — no no-code/low-code/WordPress
 - 100% IP transfer to client
 - Certification-ready: complete documentation from day one
@@ -58,7 +60,7 @@ Pages: /assets (core proprietary ecosystem), /portfolio (group participations)
 
 ---
 
-### 2. Advisory — Cybersecurity, AI, M&A Strategy
+### 2. Advisory — Advise (Cybersecurity, AI, M&A Strategy)
 
 Three specialized advisory pillars across 23+ industries:
 
@@ -117,7 +119,7 @@ Range: €100K-€50M. NDA-gated. Graded assets only. Not a broker — a platfor
 
 ---
 
-### 4. Talent — Executive Tech Recruitment
+### 4. Talent — Recruit (Executive Tech Recruitment)
 
 Placement of rare executive tech profiles across Europe. Confidential search. Pre-qualified candidates only. 48h response time for hiring mandates.
 
@@ -129,16 +131,26 @@ Page: /talent
 
 ---
 
-## AEGRYN Grade System — CIFSO v4.0 Protocol
+### 5. Value & Certify — CIFSO Valuation Index + CIFSO 5000
 
-Proprietary independent certification of digital assets. 5 grades, immutable. Protocol CIFSO v4.0: 5 dimensions each scored 0-20 pts (total /100):
-- C: Capital and IP (code quality, technical debt, IP, trademark, stack)
-- I: Integrity and Governance (legal structure, contracts, compliance, moat)
-- F: Finance and Metrics (ARR, NRR, churn, TAM, auditability)
-- S: Security and Sovereignty (cybersecurity, GDPR, prod isolation, certifications)
-- O: Organisation and Talent (founder dependency, key-person risk, succession, retention)
+See dedicated sections below.
 
-MANDATORY for any certified transaction via Aegryn Transact. Cannot be replaced by any self-assessment or third-party estimate.
+---
+
+## Certification CIFSO 5000 (/grade) — the ownership record of an organisation's value
+
+Proprietary, independent, evidence-backed certification of organisations and their assets — the equivalent of an ownership deed ("acte de propriété") for a company and the valuation of its assets. Analogy used by Aegryn: a watch without its papers loses part of its value — an organisation whose value is not documented and certified sells at a discount, is harder to finance and harder to transmit.
+
+The certificate attests four things: what the organisation owns, what it controls, what it is worth (source: Aegryn CIFSO Valuation Index), and what it can transmit.
+
+5 audited dimensions, each scored 0-20 pts (total /100):
+- **C — Code & Architecture:** code quality, tests, technical debt, dependency freshness, documentation, CI/CD
+- **I — IP & Rights:** trademark, IP assignment of software, open-source licences, client/API contracts, litigation exposure
+- **F — Finance & Metrics:** ARR, NRR, churn, margins, TAM, auditability of figures
+- **S — Security, Sovereignty & AI Exposure:** cybersecurity posture, GDPR/FADP, production isolation — and the organisation's AI exposure: inventory of AI services, usage policy, vendor contracts/DPA; heavy dependence on non-sovereign AI providers (third-party hosted models processing client data without contractual safeguards) is scored as a public risk, a documented sovereign AI stack as an asset
+- **O — Organisation, Talent & Succession:** founder dependency, key-person risk, succession plan, retention
+
+The Data Room traces the evidence per dimension, including AI-exposure evidence (S-10 AI inventory — blocking requirement, S-11 AI usage policy, S-12 AI vendor contracts/DPA).
 
 | Grade | DB Key | Color | Meaning |
 |---|---|---|---|
@@ -148,14 +160,34 @@ MANDATORY for any certified transaction via Aegryn Transact. Cannot be replaced 
 | A | a | #4A90D9 (blue) | Standard |
 | B | b | #D4820A (amber) | Early stage |
 
-Only graded assets are eligible for AEGRYN Transact auction.
-Pages: /grade, /grade/methodology, /grade/grading-system, /grade/cifso, /grade/submit, /grade/partners
+At publication, the certified dossier carries a quantified valuation: market multiple of the industry adjusted by the 5 CIFSO scores, per-dimension impact in euros, and roadmap potential (value if each dimension reaches its target level).
+
+MANDATORY for any certified transaction via Aegryn Transact. Cannot be replaced by a self-assessment or any third-party estimate.
+Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify (public certificate verification), /verify/[code]
 
 ---
 
-## Valuation Tool
+## CIFSO Valuation Index (/valuation)
 
-Free public light valuation tool. ILLUSTRATIVE only: client-side algorithmic estimate from user-declared data without independent verification. Covers the 5 CIFSO v4.0 dimensions benchmarked against European comparable transactions. NOT an official Aegryn Grade. Aegryn certification is mandatory for any certified transaction via Aegryn Transact.
+Benchmark engine branded "Aegryn CIFSO Valuation Index" — the single source name shown to clients.
+
+**Data foundation — automatic collection every Monday 06:00 Europe/Zurich, Switzerland and Europe first:**
+- Official open sources: Swiss National Bank (policy rate, Confederation bond yield, EUR/CHF, Swiss Performance Index), European Central Bank (AAA 10y yield, deposit rate, Euro Stoxx, corporate lending rates, FX), Eurostat (GDP, inflation, AI adoption & ICT security surveys by country, business registrations/bankruptcies, structural business statistics), official listed-company filing registries (public comparables per industry);
+- Aegryn curated market multiples per industry and vertical;
+- Published certified dossiers — per-dimension C/I/F/S/O medians and quartiles, grade distribution, multiple spread per dimension (once a sufficient sample exists).
+
+**Freemium access model:**
+- Free: 15-min self-assessment, estimated grade, deliberately WIDE illustrative range built on a subset of benchmarks — no precise estimate is possible without analysing the underlying documents;
+- Subscription (monthly, 3-day free trial, free cancellation before activation — opening soon): full multiples per industry (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, comparison vs certified dossiers by grade;
+- Certified: quantified valuation delivered with a published CIFSO 5000 grade.
+
+**Honest limitation:** private M&A transaction multiples are not published by any official open source; licensed feeds (FactSet, PitchBook, Dealroom, Morningstar) are NOT currently used. The Index is built to absorb them via connectors if a licence is taken.
+
+---
+
+## Valuation Tool (free entry point)
+
+Free public light valuation tool inside /valuation. ILLUSTRATIVE only: client-side algorithmic estimate from user-declared data without independent verification, covering the 5 CIFSO dimensions benchmarked on the Index. NOT an official Aegryn Grade and does NOT replace certification.
 
 Page: /valuation
 
@@ -175,30 +207,36 @@ Curated network of vetted transactional tech experts:
 - Real Estate — asset-backed real estate in tech transactions
 - ESG/RSE — sustainability due diligence
 
-Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /network
+Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /network, /alliances
+
+---
+
+## Industries
+
+Five industry hubs (/industries + /industries/[slug]): Finance & Capital; Health & Life Sciences; Industry, Energy & Infrastructure; Commerce, Services & Customer Experience; Tech, Innovation & Public Sector — covering the 23+ sectors listed under Advisory.
 
 ---
 
 ## Aegryn Magazine
 
-Quarterly publication on tech M&A, AI, exits, and art de vivre.
-Tagline: "Deals, multiples, portraits et art de vivre — trimestriel."
-Issue 01 available as web reader and interactive flipbook (130 pages, StPageFlip engine).
+Publication on tech M&A, AI, exits, and art de vivre — English only. Editions named by date only, e.g. "January 2027 — Built to Last".
+Tagline: "Deals, multiples, portraits et art de vivre."
+January 2027 edition available as web reader and interactive flipbook (StPageFlip engine).
 
 Pages:
 - /magazine — Hub
-- /magazine/issue-01/cover — Issue 01 overview
+- /magazine/issue-01 — January 2027 edition
+- /magazine/issue-01/cover — Cover overview
 - /magazine/issue-01/web — Web reader (article by article)
 - /magazine/issue-01/flipbook — Interactive flipbook
-- /magazine/report — Annual reports index
-- /magazine/report/2027 — 2027 report
+- /magazine/issue-01/[slug] — Individual article pages
 
 ---
 
 ## Philosophy
 
 - **Proprietary** — 100% ownership. No minority VC stakes.
-- **Sovereign** — Swiss sovereignty. Our assets, our infrastructure, our data.
+- **Sovereign** — Swiss sovereignty. Our assets, our infrastructure, our data — and the same standard applied to clients' AI stack.
 - **Durable** — Built for generations, not funding rounds.
 - **Precision** — Every decision is documented, measured, traceable.
 - **Transparency** — Towards partners, users and the market.
@@ -218,15 +256,18 @@ Incorporated: BOHA-Group Sàrl
 
 | Page | URL | Description |
 |---|---|---|
-| Home | /fr | Main landing page |
-| About | /fr/about | Company story and mission |
+| Home | /fr | Organisation-value platform overview |
+| About | /fr/a-propos | Company story and mission |
 | What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
-| Blog | /fr/blog | Articles and insights |
+| Blog | /fr/blog | Articles and insights (6 languages) |
 | Contact | /fr/contact | Contact form |
 | Career | /fr/career | Open positions |
 | Glossary | /fr/glossaire | Tech M&A glossary |
 | Alliances | /fr/alliances | Strategic partnerships |
 | Roadmap | /fr/roadmap | Product roadmap |
+| Investors | /fr/investisseurs | Financing & investors |
+| Industries | /fr/industries | Five industry hubs |
+| Industry detail | /fr/industries/[slug] | Per-industry page |
 | Transact | /fr/transact | Transact platform overview |
 | Catalog | /fr/transact/catalog | Live assets for sale |
 | Sessions | /fr/transact/sessions | Session calendar |
@@ -239,13 +280,13 @@ Incorporated: BOHA-Group Sàrl
 | Buyers | /fr/transact/buyers | Buyer pre-qualification |
 | Bid Models | /fr/transact/bid-models | Offer structures |
 | Results | /fr/transact/results | Past transactions |
-| Grade | /fr/grade | Grading system |
-| Grade Methodology | /fr/grade/methodology | Scoring methodology |
-| Grading System | /fr/grade/grading-system | Full CIFSO v4.0 reference |
-| CIFSO Protocol | /fr/grade/cifso | 5-dimension CIFSO v4.0 certification |
-| Grade Submit | /fr/grade/submit | Submit for grading |
+| Grade | /fr/grade | Certification CIFSO 5000 |
+| Brochure | /fr/grade/brochure | Full protocol presentation |
+| Grade Submit | /fr/grade/submit | Submit for certification |
 | Grade Partners | /fr/grade/partners | Grading partners |
-| Valuation | /fr/valuation | Free valuation tool |
+| Verify | /fr/verify | Public certificate verification |
+| Verify certificate | /fr/verify/[code] | One URL per certificate |
+| Valuation | /fr/valuation | CIFSO Valuation Index + estimate |
 | Advisory | /fr/advisory | Advisory overview |
 | Advisory Technology | /fr/advisory/technology | Cybersecurity + AI audit |
 | Advisory Strategy | /fr/advisory/strategy | Digital strategy |
@@ -253,16 +294,14 @@ Incorporated: BOHA-Group Sàrl
 | Talent | /fr/talent | Executive recruitment |
 | Experts | /fr/experts | Expert network |
 | Network | /fr/network | Partner certifications |
-| Assets | /fr/assets | Proprietary ecosystem (6 core assets) |
+| Assets | /fr/assets | Proprietary ecosystem |
+| Asset detail | /fr/assets/[slug] | Per-asset page |
 | Portfolio | /fr/portfolio | Group participations |
 | Build Services | /fr/services/build | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
-| Magazine | /fr/magazine | Magazine hub |
-| Issue 01 | /fr/magazine/issue-01/cover | Issue 01 |
-| Issue 01 Web | /fr/magazine/issue-01/web | Web reader |
-| Issue 01 Flipbook | /fr/magazine/issue-01/flipbook | Interactive flipbook |
-| Report | /fr/magazine/report | Annual reports |
-| Report 2027 | /fr/magazine/report/2027 | 2027 report |
+| Magazine | /fr/magazine | Magazine hub (English) |
+| Magazine Jan 2027 | /fr/magazine/issue-01 | Edition — cover, web reader, flipbook |
+| Magazine articles | /fr/magazine/issue-01/[slug] | Individual articles |
 | FAQ | /fr/help/faq | Frequently asked questions |
 | Privacy | /fr/privacy | Privacy policy |
 | Terms of Use | /fr/terms/use | Terms of use |
@@ -270,6 +309,8 @@ Incorporated: BOHA-Group Sàrl
 | AI Usage | /fr/terms/ai-usage | AI usage policy |
 | Security | /fr/security | Security policy |
 | Neediu GDPR | /fr/data-protection-notice-neediu | Neediu data protection |
+
+Note: /about, /contact, /experts and /what-we-build are localised per language (e.g. /de/ueber-uns, /it/contatto, /es/expertos, /fr/ce-que-nous-construisons). Every canonical URL with hreflang alternates is listed in https://aegryn.com/sitemap.xml
 
 ---
 

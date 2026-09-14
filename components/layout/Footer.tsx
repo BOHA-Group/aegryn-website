@@ -123,12 +123,13 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoContact',   href: '/contact' },
 ]
 
+/* Les cinq disciplines, dans l'ordre du bandeau d'accueil */
 const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
-  { footerKey: 'footerCraftSupport',  href: '/advisory' },
   { footerKey: 'footerCraftBuild',    href: '/services/build' },
+  { footerKey: 'footerCraftSupport',  href: '/advisory' },
   { footerKey: 'footerCraftTransact', href: '/transact' },
-  { footerKey: 'footerGradeSubmit',   href: '/grade/submit' },
   { footerKey: 'footerWhoTalent',     href: '/talent' as never },
+  { footerKey: 'footerInform',        href: '/blog' },
 ]
 
 export default function Footer() {
@@ -206,13 +207,18 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5">
               <li>
-                <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col2Subblink')}
-                </a>
+                <Link href="/valuation" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col3Valuation')}
+                </Link>
               </li>
               <li>
-                <Link href="/grade/brochure" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href="/grade" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2Code')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/grade/submit" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Grade')}
                 </Link>
               </li>
               <li>
@@ -221,14 +227,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/grade" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col2Grade')}
+                <Link href="/transact/catalog" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2DataRoom')}
                 </Link>
               </li>
               <li>
-                <Link href="/transact" className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col2DataRoom')}
-                </Link>
+                <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
+                  {t('col2Subblink')}
+                </a>
               </li>
             </ul>
           </div>

@@ -62,7 +62,7 @@ return {
     default: 'Aegryn — Engineered to Last',
     template: '%s | Aegryn',
   },
-  description: 'Aegryn is a Swiss technology holding company. We design, fund and operate proprietary digital ecosystems — subblink, neediu, primiom, movtoo, hobconnect — engineered to last. Headquartered in Switzerland.',
+  description: 'Aegryn is the Swiss organisation-value platform. CIFSO 5000 certification — the evidence-backed ownership and value record of an organisation and its assets — CIFSO Valuation Index benchmarks, certified digital-asset transactions, advisory, asset engineering and executive talent. St-Sulpice (VD), Switzerland — serving Europe. Built to Last.',
   keywords: [
     'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
     'digital asset transaction', 'cession tech structurée', 'transact platform', 'M&A tech platform',
@@ -70,7 +70,9 @@ return {
     'céder SaaS', 'cession SaaS Europe', 'vendre SaaS', 'SaaS exit Europe',
     'M&A tech', 'mergers acquisitions technology', 'cession entreprise numérique',
     'SaaS valuation', 'valorisation SaaS', 'ARR multiple',
-    'certification CIFSO', 'séquestre suisse M&A', 'Swiss escrow M&A',
+    'certification CIFSO', 'CIFSO 5000', 'CIFSO Valuation Index',
+    'souveraineté IA', 'AI sovereignty', 'transmissibilité entreprise',
+    'séquestre suisse M&A', 'Swiss escrow M&A',
     'M&A experts', 'expert network', 'due diligence tech', 'W&I insurance',
     'cybersecurity', 'AI', 'EU AI Act', 'advisory', 'RGPD compliance',
     'Switzerland startup', 'Swiss holding', 'holding suisse tech',
@@ -94,7 +96,7 @@ return {
   manifest: '/manifest.webmanifest',
   openGraph: {
     title:       'Aegryn — Engineered to Last',
-    description: 'Swiss Tech Asset Builder. Proprietary digital ecosystems engineered to last.',
+    description: 'Swiss organisation-value platform. CIFSO 5000 certification, CIFSO Valuation Index, certified digital-asset transactions — Built to Last.',
     url:         'https://aegryn.com',
     siteName:    'Aegryn',
     images:      [{ url: '/og/default.jpg', width: 1200, height: 630, alt: 'Aegryn — Engineered to Last' }],
@@ -106,7 +108,7 @@ return {
     site:    '@aegryn',
     creator: '@aegryn',
     title:   'Aegryn — Engineered to Last',
-    description: 'Swiss Tech Asset Builder.',
+    description: 'Swiss organisation-value platform. CIFSO 5000 certification & Valuation Index.',
     images:  ['/og/default.jpg'],
   },
   verification: {

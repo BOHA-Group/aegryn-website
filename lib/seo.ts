@@ -1,6 +1,22 @@
 import type { Metadata } from 'next'
+import { routing } from '@/i18n/routing'
 
 const BASE_URL = 'https://aegryn.com'
+
+/* Chemin interne → chemin public localisé (pathnames next-intl).
+   Accepte aussi un chemin déjà localisé (résolu via la table inverse). */
+const PATHNAMES = routing.pathnames as Record<string, string | Record<string, string>>
+const LOCALIZED_TO_INTERNAL: Record<string, string> = {}
+for (const [internal, entry] of Object.entries(PATHNAMES)) {
+  if (typeof entry === 'object') {
+    for (const localized of Object.values(entry)) LOCALIZED_TO_INTERNAL[localized] = internal
+  }
+}
+function localizedPath(path: string, locale: string): string {
+  const internal = LOCALIZED_TO_INTERNAL[path] ?? path
+  const entry = PATHNAMES[internal]
+  return entry && typeof entry === 'object' ? (entry[locale] ?? path) : path
+}
 
 /* OG locale codes per language */
 const OG_LOCALE: Record<string, string> = {
@@ -70,9 +86,18 @@ const BASE_KEYWORDS = [
   // Grade & CIFSO
   'Aegryn Grade', 'asset grading', 'notation actif numérique',
   'grade SaaS', 'certification actif numérique', 'tech credit rating',
-  'CIFSO v4.0', 'protocole CIFSO', 'CIFSO protocol', 'certification CIFSO obligatoire',
+  'protocole CIFSO', 'CIFSO protocol', 'certification CIFSO obligatoire',
   'certification independante SaaS', 'audit certifié actif numérique', 'grade officiel SaaS',
   'valorisation illustrative SaaS', 'outil valorisation public', 'SaaS valuation light tool',
+  // CIFSO 5000 & Valuation Index
+  'CIFSO 5000', 'certification CIFSO 5000', 'CIFSO Valuation Index',
+  'acte de propriété entreprise', 'ownership record organisation value',
+  'valeur organisation certifiée', 'organisation value certification',
+  'transmissibilité entreprise', 'business transferability audit',
+  'benchmark valorisation Europe', 'European valuation benchmark',
+  // AI sovereignty
+  'souveraineté IA', 'AI sovereignty', 'exposition IA entreprise',
+  'AI exposure assessment', 'dépendance fournisseurs IA', 'AI vendor risk',
   // Magazine
   'Aegryn Magazine', 'magazine tech fondateurs', 'magazine tech Europe', 'magazine startup',
   'magazine entrepreneurs tech', 'publication tech M&A', 'revue tech business',
@@ -102,7 +127,7 @@ export function generateAegrynMetadata({
   keywords?: string[]
   breadcrumb?: Array<{ name: string; url: string }>
 }): Metadata {
-  const url  = `${BASE_URL}/${locale}${path}`
+  const url  = `${BASE_URL}/${locale}${localizedPath(path, locale)}`
   const fullTitle = title.includes('Aegryn') ? title : `${title} | Aegryn`
 
   return {
@@ -117,13 +142,13 @@ export function generateAegrynMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr:          `${BASE_URL}/fr${path}`,
-        en:          `${BASE_URL}/en${path}`,
-        de:          `${BASE_URL}/de${path}`,
-        it:          `${BASE_URL}/it${path}`,
-        es:          `${BASE_URL}/es${path}`,
-        nl:          `${BASE_URL}/nl${path}`,
-        'x-default': `${BASE_URL}/en${path}`,
+        fr:          `${BASE_URL}/fr${localizedPath(path, 'fr')}`,
+        en:          `${BASE_URL}/en${localizedPath(path, 'en')}`,
+        de:          `${BASE_URL}/de${localizedPath(path, 'de')}`,
+        it:          `${BASE_URL}/it${localizedPath(path, 'it')}`,
+        es:          `${BASE_URL}/es${localizedPath(path, 'es')}`,
+        nl:          `${BASE_URL}/nl${localizedPath(path, 'nl')}`,
+        'x-default': `${BASE_URL}/en${localizedPath(path, 'en')}`,
       },
     },
     openGraph: {
@@ -201,7 +226,7 @@ export const aegrynOrganizationSchema = {
     height:      50,
   },
   image:         `${BASE_URL}/og/default.jpg`,
-  description:   'Aegryn is an independent Swiss advisory firm. We help founders, boards and decision-makers create, document and realise the value of their organisation — from strategy to transmission. Certified digital asset transactions via Aegryn Transact (CIFSO v4.0 protocol, 5 dimensions: Capital, Integrity, Finance, Security, Organisation). Expert network, advisory, asset engineering and Aegryn Magazine. Switzerland & Europe.',
+  description:   'Aegryn is the Swiss organisation-value platform. We certify the value and transferability of organisations through CIFSO 5000 — an evidence-backed ownership record audited on 5 dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security-Sovereignty & AI Exposure, Organisation-Talent & Succession — benchmarked by the Aegryn CIFSO Valuation Index. Aegryn also operates certified digital-asset transactions (Aegryn Transact), advisory, asset engineering, executive talent and Aegryn Magazine. St-Sulpice (VD), Switzerland — serving Switzerland & Europe.',
   slogan:        'Engineered to Last',
   foundingDate:  '2023',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
@@ -212,6 +237,15 @@ export const aegrynOrganizationSchema = {
     addressCountry:    'CH',
     postalCode:        '1025',
   },
+  geo: {
+    '@type':    'GeoCoordinates',
+    latitude:   46.5147,
+    longitude:  6.5600,
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'Switzerland' },
+    { '@type': 'Place',   name: 'Europe' },
+  ],
   contactPoint: {
     '@type':            'ContactPoint',
     contactType:        'customer support',
@@ -231,7 +265,10 @@ export const aegrynOrganizationSchema = {
     'SaaS',
     'Swiss Technology',
     'M&A Advisory',
-    'CIFSO v4.0 Certification Protocol',
+    'CIFSO 5000 Certification Protocol',
+    'Aegryn CIFSO Valuation Index',
+    'AI Exposure & Sovereignty Assessment',
+    'Organisation Value & Transferability',
     'Digital Asset Valuation',
     'Illustrative SaaS Valuation Tool',
     'Mandatory Asset Certification for Transaction',
@@ -287,8 +324,8 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Valuation',
-          description: 'Free public light valuation tool for digital assets. Illustrative estimate using the CIFSO v4.0 scoring model (5 dimensions: Capital, Integrity, Finance, Security, Organisation), benchmarked against European comparable transactions. Not a substitute for official Aegryn certification, which is mandatory for any certified transaction via Aegryn Transact.',
+          name: 'Aegryn Valuation — CIFSO Valuation Index',
+          description: 'Public valuation entry point for digital assets, powered by the Aegryn CIFSO Valuation Index: market multiples per industry adjusted on the 5 audited CIFSO 5000 dimensions. Free access returns an illustrative wide range; full benchmarks (multiples, per-dimension data) via subscription. Not a substitute for official Aegryn certification.',
           url: `${BASE_URL}/en/valuation`,
         },
       },
@@ -296,8 +333,8 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Grade',
-          description: 'Independent certification of digital assets under the CIFSO v4.0 protocol (5 dimensions: Capital, Integrity, Finance, Security, Organisation). 5 immutable grades: AEG★, AAA, AA, A, B. Mandatory for any certified transaction via Aegryn Transact.',
+          name: 'Aegryn Grade — Certification CIFSO 5000',
+          description: 'Independent certification of organisations and digital assets under the CIFSO 5000 protocol (5 audited dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security-Sovereignty & AI Exposure, Organisation-Talent & Succession). The certificate acts as an evidence-backed ownership and value record — like the papers of a watch. 5 immutable grades: AEG★, AAA, AA, A, B.',
           url: `${BASE_URL}/en/grade`,
         },
       },
@@ -352,25 +389,27 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',               url: `${BASE_URL}/fr/transact/buyers` },
     { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',             url: `${BASE_URL}/fr/transact/how-it-works` },
     { '@type': 'ListItem', position: 6,  name: 'Catalogue',                     url: `${BASE_URL}/fr/transact/catalog` },
-    { '@type': 'ListItem', position: 7,  name: 'Valorisation illustrative',     url: `${BASE_URL}/fr/valuation` },
-    { '@type': 'ListItem', position: 8,  name: 'Aegryn Grade (CIFSO v4.0)',     url: `${BASE_URL}/fr/grade` },
+    { '@type': 'ListItem', position: 7,  name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },
+    { '@type': 'ListItem', position: 8,  name: 'Certification CIFSO 5000',      url: `${BASE_URL}/fr/grade` },
     { '@type': 'ListItem', position: 9,  name: 'Brochure CIFSO 5000',           url: `${BASE_URL}/fr/grade/brochure` },
     { '@type': 'ListItem', position: 10, name: 'Soumettre un actif',            url: `${BASE_URL}/fr/grade/submit` },
-    { '@type': 'ListItem', position: 11, name: 'Experts',                       url: `${BASE_URL}/fr/experts` },
-    { '@type': 'ListItem', position: 12, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },
-    { '@type': 'ListItem', position: 13, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
-    { '@type': 'ListItem', position: 14, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
-    { '@type': 'ListItem', position: 15, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
-    { '@type': 'ListItem', position: 16, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
-    { '@type': 'ListItem', position: 17, name: 'Conception d\'actifs (Build)',  url: `${BASE_URL}/fr/services/build` },
-    { '@type': 'ListItem', position: 18, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
-    { '@type': 'ListItem', position: 19, name: 'Magazine Issue 01',             url: `${BASE_URL}/fr/magazine/issue-01/cover` },
-    { '@type': 'ListItem', position: 20, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
-    { '@type': 'ListItem', position: 21, name: 'Investisseurs',                 url: `${BASE_URL}/fr/investisseurs` },
-    { '@type': 'ListItem', position: 22, name: 'Carrière',                      url: `${BASE_URL}/fr/career` },
-    { '@type': 'ListItem', position: 23, name: 'À propos',                      url: `${BASE_URL}/fr/about` },
-    { '@type': 'ListItem', position: 24, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
-    { '@type': 'ListItem', position: 25, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
+    { '@type': 'ListItem', position: 11, name: 'Vérifier un certificat',        url: `${BASE_URL}/fr/verify` },
+    { '@type': 'ListItem', position: 12, name: 'Industries',                    url: `${BASE_URL}/fr/industries` },
+    { '@type': 'ListItem', position: 13, name: 'Experts',                       url: `${BASE_URL}/fr/experts` },
+    { '@type': 'ListItem', position: 14, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },
+    { '@type': 'ListItem', position: 15, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
+    { '@type': 'ListItem', position: 16, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
+    { '@type': 'ListItem', position: 17, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
+    { '@type': 'ListItem', position: 18, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
+    { '@type': 'ListItem', position: 19, name: 'Conception d\'actifs (Build)',  url: `${BASE_URL}/fr/services/build` },
+    { '@type': 'ListItem', position: 20, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
+    { '@type': 'ListItem', position: 21, name: 'Magazine — January 2027',       url: `${BASE_URL}/fr/magazine/issue-01` },
+    { '@type': 'ListItem', position: 22, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
+    { '@type': 'ListItem', position: 23, name: 'Investisseurs',                 url: `${BASE_URL}/fr/investisseurs` },
+    { '@type': 'ListItem', position: 24, name: 'Carrière',                      url: `${BASE_URL}/fr/career` },
+    { '@type': 'ListItem', position: 25, name: 'À propos',                      url: `${BASE_URL}/fr/a-propos` },
+    { '@type': 'ListItem', position: 26, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
+    { '@type': 'ListItem', position: 27, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
   ],
 }
 
@@ -380,8 +419,8 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn TRANSACT', 'Aegryn Magazine', 'Aegryn Grade', 'Aegryn Valuation', 'Aegryn Talent', 'Aegryn Alliances'],
-  description:  'Aegryn — Swiss advisory firm. Strategy, certified digital asset transactions, CIFSO v4.0 grading, expert network, asset engineering and Aegryn Magazine. Helping founders, boards and investors create, document and realise the value of their organisation. From strategy to transmission. Switzerland & Europe.',
+  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn TRANSACT', 'Aegryn Magazine', 'Aegryn Grade', 'Aegryn Valuation', 'Aegryn Talent', 'Aegryn Alliances', 'CIFSO 5000', 'CIFSO Valuation Index'],
+  description:  'Aegryn — Swiss organisation-value platform. CIFSO 5000 certification (evidence-backed ownership and value record of organisations and their assets), CIFSO Valuation Index benchmarks, certified digital-asset transactions, advisory, expert network, asset engineering and Aegryn Magazine. Built to Last — keeping founders in control of their growth and their assets. Switzerland & Europe.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
   potentialAction: {

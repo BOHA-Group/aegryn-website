@@ -1,8 +1,19 @@
 import type { MetadataRoute } from 'next'
-import { ARTICLES } from '@/data/articles'
+import { ARTICLES }    from '@/data/articles'
+import { INDUSTRIES }  from '@/data/industries'
+import { Aegryn_ASSETS } from '@/data/assets'
+import { ARTICLES_01 } from '@/content/magazine/issue-01/articles'
+import { routing }     from '@/i18n/routing'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
-const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+const LOCALES = routing.locales
+
+/* Chemin interne → chemin public localisé (pathnames next-intl) */
+const PATHNAMES = routing.pathnames as Record<string, string | Record<string, string>>
+function lp(path: string, locale: string): string {
+  const entry = PATHNAMES[path]
+  return entry && typeof entry === 'object' ? (entry[locale] ?? path) : path
+}
 
 const STATIC_ROUTES = [
   // ── Core ─────────────────────────────────────────────────────────────────────
@@ -15,8 +26,11 @@ const STATIC_ROUTES = [
   { path: '/alliances',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/investisseurs',                      priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/glossaire',                          priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/platform',                           priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
+  { path: '/what-we-build',                      priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
+  // ── Industries ───────────────────────────────────────────────────────────────
+  { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Transact ─────────────────────────────────────────────────────────────────
   { path: '/transact',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
   { path: '/transact/catalog',                   priority: 1.0,  changeFrequency: 'daily'   as const },
@@ -30,21 +44,19 @@ const STATIC_ROUTES = [
   { path: '/transact/buyers',                    priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/transact/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/transact/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
-  // ── Grade & Certification CIFSO v4.0 ─────────────────────────────────────────
+  // ── Grade & Certification CIFSO 5000 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/verify',                             priority: 0.6,  changeFrequency: 'yearly' as const },
+  { path: '/verify',                             priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/grade/partners',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/grade/submit',                       priority: 0.9,  changeFrequency: 'monthly' as const },
-  // ── Valuation ────────────────────────────────────────────────────────────────
+  // ── Valuation / CIFSO Valuation Index ────────────────────────────────────────
   { path: '/valuation',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
-  { path: '/valuation/guide',                    priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Advisory ─────────────────────────────────────────────────────────────────
   { path: '/advisory',                           priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/advisory/technology',                priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/strategy',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/ma',                        priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/ai',                        priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Talent ───────────────────────────────────────────────────────────────────
   { path: '/talent',                             priority: 0.9,  changeFrequency: 'weekly'  as const },
   // ── Network ──────────────────────────────────────────────────────────────────
@@ -57,12 +69,10 @@ const STATIC_ROUTES = [
   { path: '/services/build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Magazine ─────────────────────────────────────────────────────────────────
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/magazine/issue-01/cover',            priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/magazine/issue-01/cover',            priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/flipbook',         priority: 0.6,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/report',                    priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/report/2027',               priority: 0.6,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/report/2027/pdf',           priority: 0.5,  changeFrequency: 'yearly'  as const },
   // ── Help / FAQ ───────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Legal ────────────────────────────────────────────────────────────────────
@@ -74,98 +84,80 @@ const STATIC_ROUTES = [
   { path: '/data-protection-notice-neediu',      priority: 0.2,  changeFrequency: 'yearly'  as const },
 ]
 
-// Slugs localisés — what-we-build
-const WHAT_WE_BUILD_SLUG: Record<string, string> = {
-  fr: '/ce-que-nous-construisons',
-  en: '/what-we-build',
-  de: '/was-wir-bauen',
-  es: '/lo-que-construimos',
-  it: '/cosa-costruiamo',
-  nl: '/wat-we-bouwen',
-}
+/* Exclus volontairement : /client/* (privé), /grade/submit/success (confirmation),
+   /transact/teaser-preview (aperçu), /transact/lot/[slug] (noindex, accès NDA),
+   /verify/[code] (une URL par certificat), /magazine/report* (301 → /magazine/issue-01),
+   /platform, /advisory/ai, /valuation/guide (routes inexistantes → 404). */
 
-// Slugs localisés — experts/network
-const EXPERTS_SLUG: Record<string, string> = {
-  fr: '/experts',
-  en: '/experts',
-  de: '/experten',
-  es: '/expertos',
-  it: '/esperti',
-  nl: '/experts',
+function pushLocalized(
+  entries: MetadataRoute.Sitemap,
+  internalPath: string,
+  opts: { lastModified: Date; changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly'; priority: number },
+) {
+  const alternates: Record<string, string> = {}
+  for (const locale of LOCALES) {
+    alternates[locale] = `${BASE}/${locale}${lp(internalPath, locale)}`
+  }
+  alternates['x-default'] = `${BASE}/fr${lp(internalPath, 'fr')}`
+
+  for (const locale of LOCALES) {
+    entries.push({
+      url:             `${BASE}/${locale}${lp(internalPath, locale)}`,
+      lastModified:    opts.lastModified,
+      changeFrequency: opts.changeFrequency,
+      priority:        opts.priority,
+      alternates:      { languages: alternates },
+    })
+  }
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
   const now = new Date()
 
-  // Routes statiques × 6 locales
+  // Routes statiques × 6 locales (slugs localisés via routing.pathnames)
   for (const route of STATIC_ROUTES) {
-    const alternates: Record<string, string> = {}
-    for (const locale of LOCALES) {
-      alternates[locale] = `${BASE}/${locale}${route.path}`
-    }
-    alternates['x-default'] = `${BASE}/fr${route.path}`
-
-    for (const locale of LOCALES) {
-      entries.push({
-        url:              `${BASE}/${locale}${route.path}`,
-        lastModified:     now,
-        changeFrequency:  route.changeFrequency,
-        priority:         route.priority,
-        alternates:       { languages: alternates },
-      })
-    }
-  }
-
-  // /what-we-build — slugs localisés
-  const wwbAlternates: Record<string, string> = {}
-  for (const locale of LOCALES) {
-    wwbAlternates[locale] = `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`
-  }
-  wwbAlternates['x-default'] = `${BASE}/fr${WHAT_WE_BUILD_SLUG['fr']}`
-  for (const locale of LOCALES) {
-    entries.push({
-      url:             `${BASE}/${locale}${WHAT_WE_BUILD_SLUG[locale]}`,
+    pushLocalized(entries, route.path, {
       lastModified:    now,
-      changeFrequency: 'monthly' as const,
-      priority:        0.8,
-      alternates:      { languages: wwbAlternates },
+      changeFrequency: route.changeFrequency,
+      priority:        route.priority,
     })
   }
 
-  // /experts — slugs localisés
-  const expertsAlternates: Record<string, string> = {}
-  for (const locale of LOCALES) {
-    expertsAlternates[locale] = `${BASE}/${locale}${EXPERTS_SLUG[locale]}`
-  }
-  expertsAlternates['x-default'] = `${BASE}/fr/experts`
-  for (const locale of LOCALES) {
-    entries.push({
-      url:             `${BASE}/${locale}${EXPERTS_SLUG[locale]}`,
+  // Industries × 6 locales
+  for (const industry of INDUSTRIES) {
+    pushLocalized(entries, `/industries/${industry.slug}`, {
       lastModified:    now,
-      changeFrequency: 'weekly' as const,
-      priority:        0.8,
-      alternates:      { languages: expertsAlternates },
+      changeFrequency: 'monthly',
+      priority:        0.7,
     })
   }
 
-  // Blog articles — all 6 locales with hreflang alternates
+  // Actifs propriétaires × 6 locales
+  for (const asset of Aegryn_ASSETS.filter(a => a.id !== 'kryv')) {
+    pushLocalized(entries, `/assets/${asset.slug}`, {
+      lastModified:    now,
+      changeFrequency: 'monthly',
+      priority:        0.7,
+    })
+  }
+
+  // Articles du magazine (issue-01) × 6 locales
+  for (const article of ARTICLES_01) {
+    pushLocalized(entries, `/magazine/issue-01/${article.slug}`, {
+      lastModified:    now,
+      changeFrequency: 'yearly',
+      priority:        0.6,
+    })
+  }
+
+  // Articles de blog × 6 locales
   for (const article of ARTICLES) {
-    const articleAlternates: Record<string, string> = {}
-    for (const locale of LOCALES) {
-      articleAlternates[locale] = `${BASE}/${locale}/blog/${article.slug}`
-    }
-    articleAlternates['x-default'] = `${BASE}/fr/blog/${article.slug}`
-
-    for (const locale of LOCALES) {
-      entries.push({
-        url:             `${BASE}/${locale}/blog/${article.slug}`,
-        lastModified:    new Date(article.date),
-        changeFrequency: 'monthly' as const,
-        priority:        article.featured ? 0.8 : 0.7,
-        alternates:      { languages: articleAlternates },
-      })
-    }
+    pushLocalized(entries, `/blog/${article.slug}`, {
+      lastModified:    new Date(article.date),
+      changeFrequency: 'monthly',
+      priority:        article.featured ? 0.8 : 0.7,
+    })
   }
 
   return entries

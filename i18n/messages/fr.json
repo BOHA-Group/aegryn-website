@@ -1632,7 +1632,7 @@
     "col4Contact": "Nous contacter",
     "col4Careers": "Carrières",
     "col4Talent": "Headhunting & Transition",
-    "footerCraftSupport": "Conseiller",
+    "footerCraftSupport": "Accompagner",
     "footerCraftTransact": "Valoriser",
     "footerCraftBuild": "Construire",
     "footerGradeSubmit": "Certifier un actif",
@@ -1643,7 +1643,8 @@
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
     "taglines": "Engineered to Last · Rare by selection · Certified to transact",
-    "col2Verify": "Vérifier un certificat"
+    "col2Verify": "Vérifier un certificat",
+    "footerInform": "S'informer"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
