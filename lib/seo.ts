@@ -281,7 +281,6 @@ export const aegrynOrganizationSchema = {
     'Asset Grading',
     'Asset Engineering',
     'Custom Digital Asset Development',
-    'Fixed Price Software Development',
     'Certification-Ready Digital Assets',
     'Proprietary Asset Portfolio',
     'Tech Magazine Publishing',

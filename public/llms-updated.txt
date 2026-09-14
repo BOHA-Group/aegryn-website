@@ -1,16 +1,14 @@
-# Aegryn — Swiss Organisation-Value Platform: Build, Advise, Value, Certify, Recruit
+# Aegryn — Swiss Organisation-Value Platform: Build · Advise · Value · Recruit · Inform
 > https://aegryn.com | Updated: 2026-09-14
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company operating across five disciplines plus publishing:
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company. Homepage positioning, 5 words:
 1. **Build — Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
 2. **Advise — Advisory** — Cybersecurity, AI audit, M&A strategy, digital transformation across 23+ industries
-3. **Value — CIFSO Valuation Index** — Valuation benchmarks: industry multiples adjusted on the 5 CIFSO dimensions, refreshed automatically every Monday 06:00 Europe/Zurich
-4. **Certify — CIFSO 5000** — Evidence-backed ownership and value record of an organisation and its assets ("acte de propriété")
-5. **Recruit — Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
-6. **Inform** — Aegryn Magazine (English), blog in 6 languages, tech M&A glossary
-+ **Transact** — Structured M&A auction platform for buying/selling tech companies (€100K-€50M)
+3. **Value** — Measure with the CIFSO Valuation Index (industry multiples adjusted on the 5 CIFSO dimensions, refreshed automatically every Monday 06:00 Europe/Zurich), certify with CIFSO 5000 (evidence-backed ownership and value record — "acte de propriété"), then realise via Aegryn Transact: sale, acquisition, fundraising or equity opening, structured M&A platform (€100K-€50M)
+4. **Recruit — Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
+5. **Inform** — Aegryn Magazine (English), blog in 6 languages, tech M&A glossary
 
 Positioning: operational-compliance standards certify conformity of systems and processes; Aegryn certifies the value and transferability of an organisation — complementary objects.
 
@@ -131,9 +129,11 @@ Digital transformation, data governance, GDPR/FADP compliance, innovation roadma
 Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
 valuation, post-merger integration
 
-## Transact — M&A Platform (https://aegryn.com/transact)
+## Value — Realise (Aegryn Transact, https://aegryn.com/transact)
 
-Structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
+Third step of the Value discipline, after Measure (CIFSO Valuation Index) and Certify (CIFSO 5000). Four mandate types: Sale, Acquisition, Fundraising, Equity opening — always under exclusive mandate.
+
+Once matched, realisation runs through a structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
 
 Offer Models: Club Deal (min €100K), Corporate (min €250K), Fund (min €500K), Equity Stake (SHA-based)
 

@@ -3,7 +3,14 @@
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company operating across five disciplines plus publishing: Build (Asset Engineering — proprietary and custom digital assets), Advise (Advisory — cybersecurity, AI audit, M&A strategy), Value (CIFSO Valuation Index — valuation benchmarks), Certify (CIFSO 5000 certification), Recruit (Talent — executive tech recruitment), and Inform (Aegryn Magazine, blog, glossary). Incorporated in Switzerland (BOHA-Group Sàrl). HQ: St-Sulpice, Canton de Vaud.
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company. Homepage positioning, 5 words: Build · Advise · Value · Recruit · Inform.
+- **Build** (Asset Engineering) — proprietary and custom digital assets
+- **Advise** (Advisory) — cybersecurity, AI audit, M&A strategy
+- **Value** — measure (CIFSO Valuation Index), certify (CIFSO 5000), then realise (sale, acquisition, fundraising, equity opening via Aegryn Transact)
+- **Recruit** (Talent) — executive tech recruitment
+- **Inform** — Aegryn Magazine, blog, glossary
+
+Incorporated in Switzerland (BOHA-Group Sàrl). HQ: St-Sulpice, Canton de Vaud.
 
 Positioning: operational-compliance standards certify that systems and processes conform to a norm; Aegryn certifies a different object — the value and the transferability of an organisation and its assets. The two are complementary, not competing.
 
@@ -86,8 +93,9 @@ Three pillars: Technology advisory (cybersecurity, AI audit, EU AI Act, tech arc
 Operates across 23+ industries: aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom, transport.
 Pages: /advisory, /advisory/technology, /advisory/strategy, /advisory/ma
 
-### 3. Transact — M&A Auction Platform
-Europe's structured session-based platform for buying and selling digital tech assets (SaaS, B2C, infrastructure). Range: €100K-€50M. Graded assets only. NDA-gated full dossiers.
+### 3. Value — Measure, Certify, Realise (Aegryn Value, at /transact)
+Valuing a company is not limited to transferring it. Aegryn Value: the CIFSO Valuation Index measures, CIFSO 5000 certifies independently, then sale, acquisition, fundraising or equity opening realise the value — under exclusive mandate. Four ways to realise value: Sale mandate (divest a tech asset or company to a qualified acquirer, CIFS certification, exclusive mandate, systematic NDA), Acquisition mandate (identify targets matching acquirer criteria, closed catalog, proprietary network), Fundraising mandate (qualified family offices, funds and corporates, structured confidential process under Swiss law), Equity mandate (divest minority shares to a strategic, operational or financial partner).
+Once matched, realisation runs through Europe's structured session-based process for digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
 Offer models: Club Deal (lead + up to 4 co-investors, min €100K), Corporate (direct acquisition, min €250K), Fund (PE/VC/FO/Search Fund, min €500K), Equity Stake (partial, SHA-based).
 Pages: /transact, /transact/catalog, /transact/sessions, /transact/mandate, /transact/sell, /transact/how-to-sell, /transact/how-to-buy, /transact/how-it-works, /transact/submit, /transact/buyers, /transact/bid-models, /transact/results
 
@@ -95,8 +103,7 @@ Pages: /transact, /transact/catalog, /transact/sessions, /transact/mandate, /tra
 Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
 Pages: /talent
 
-### 5. Valuation & Certification — CIFSO Valuation Index + CIFSO 5000
-See dedicated sections below. Pages: /valuation, /grade, /verify
+The "Measure" (CIFSO Valuation Index) and "Certify" (CIFSO 5000) steps of the Value discipline are each detailed in their own sections below. Pages: /valuation, /grade, /verify
 
 ## Grade System — Certification CIFSO 5000
 

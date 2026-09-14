@@ -71,8 +71,6 @@ const nextConfig: NextConfig = {
       { source: '/grade/whitepaper',                  destination: '/grade/brochure',                 permanent: true },
       { source: '/:locale/grow-with-us',             destination: '/:locale/alliances',              permanent: true },
       { source: '/:locale/auction/session',          destination: '/:locale/auction/sessions',        permanent: true },
-      { source: '/:locale/what-we-build',             destination: '/:locale/assets',                 permanent: true },
-      { source: '/what-we-build',                     destination: '/assets',                         permanent: true },
       { source: '/grow-with-us',                      destination: '/alliances',                      permanent: true },
       { source: '/:locale/auction/assessment-days',   destination: '/:locale/auction/sessions',        permanent: true },
       { source: '/:locale/auction/how-to-sell',         destination: '/:locale/auction/sell',            permanent: true },

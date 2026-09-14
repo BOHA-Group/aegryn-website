@@ -33,7 +33,6 @@ const STATIC_ROUTES = [
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Transact ─────────────────────────────────────────────────────────────────
   { path: '/transact',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
-  { path: '/transact/catalog',                   priority: 1.0,  changeFrequency: 'daily'   as const },
   { path: '/transact/sessions',                  priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/transact/mandate',                   priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/transact/sell',                      priority: 0.9,  changeFrequency: 'monthly' as const },
@@ -71,7 +70,6 @@ const STATIC_ROUTES = [
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/cover',            priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/flipbook',         priority: 0.6,  changeFrequency: 'monthly' as const },
   // ── Help / FAQ ───────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
@@ -86,8 +84,12 @@ const STATIC_ROUTES = [
 
 /* Exclus volontairement : /client/* (privé), /grade/submit/success (confirmation),
    /transact/teaser-preview (aperçu), /transact/lot/[slug] (noindex, accès NDA),
-   /verify/[code] (une URL par certificat), /magazine/report* (301 → /magazine/issue-01),
-   /platform, /advisory/ai, /valuation/guide (routes inexistantes → 404). */
+   /transact/catalog (redirige désormais systématiquement vers /transact — catalogue
+   confidentiel, sélection après NDA), /magazine/issue-01/web (redirige vers un fichier
+   HTML statique unique, non localisé — /magazine/issue-01/cover et /flipbook rendent
+   du contenu réel et restent inclus), /verify/[code] (une URL par certificat),
+   /magazine/report* (301 → /magazine/issue-01), /platform, /advisory/ai,
+   /valuation/guide (routes inexistantes → 404). */
 
 function pushLocalized(
   entries: MetadataRoute.Sitemap,
