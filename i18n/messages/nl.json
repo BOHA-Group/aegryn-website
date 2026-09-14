@@ -693,7 +693,7 @@
       {
         "val": "5",
         "label": "Geïntegreerde disciplines",
-        "sub": "Advies · Opbouw · Transactie · Talent · Intelligence"
+        "sub": "Advies · Opbouw · Waardering · Talent · Informatie"
       },
       {
         "val": "22+",
@@ -1626,7 +1626,6 @@
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
     "neediuLegal": "neediu is een geregistreerd handelsmerk van Aegryn. Alle rechten voorbehouden.",
-    "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Adviesbureau en operationele groep. Geworteld in Zwitserland. Operationeel in Europa.",
     "navLabel": "Aegryn",
     "companyLabel": "Bedrijf",
@@ -1658,7 +1657,7 @@
     "col2Subblink": "Contractuele risicoanalyse",
     "col2Code": "CIFSO 5000-certificering",
     "col2Grade": "Certificering verkrijgen",
-    "col2DataRoom": "Data room transacties",
+    "col2DataRoom": "Data room",
     "col2ViewAll": "Onze portfolio",
     "col3Title": "Onze overtuigingen",
     "col3Magazine": "Magazine",
@@ -1682,7 +1681,7 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "taglines": "Built to Last · Rare by selection · Certified to transact",
     "col2Verify": "Certificaat verifiëren",
     "footerInform": "Informeren"
   },
@@ -8861,7 +8860,7 @@
       "ctaEstimate": "Waardeer uw actief",
       "ctaGrade": "Ontdek de Grade",
       "ctaTitle": "U heeft iets echts gebouwd.",
-      "ctaSub": "Wij certificeren het. Wij transacteren het.",
+      "ctaSub": "Wij certificeren het. Wij waarderen het.",
       "ctaLine": "AEGRYN | Gecertificeerd voor de transactie. Zwitserland.",
       "scrollDown": "Scrollen",
       "source": "Bron",

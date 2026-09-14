@@ -693,7 +693,7 @@
       {
         "val": "5",
         "label": "Integrierte Disziplinen",
-        "sub": "Beratung · Aufbau · Transaktion · Talent · Intelligence"
+        "sub": "Beratung · Aufbau · Bewertung · Talent · Information"
       },
       {
         "val": "22+",
@@ -1626,7 +1626,6 @@
     "terms": "AGB",
     "dataProtection": "Datenschutzhinweis",
     "neediuLegal": "neediu ist eine eingetragene Marke der Aegryn. Alle Rechte vorbehalten.",
-    "tagline": "CERTIFIED TO TRANSACT.",
     "swissTagline": "Beratungsfirma und operative Gruppe. Verwurzelt in der Schweiz. Operativ in Europa.",
     "navLabel": "Aegryn",
     "companyLabel": "Unternehmen",
@@ -1658,7 +1657,7 @@
     "col2Subblink": "Vertragsrisikoanalyse",
     "col2Code": "CIFSO 5000 Zertifizierung",
     "col2Grade": "Zertifizierung erhalten",
-    "col2DataRoom": "Data room Transaktionen",
+    "col2DataRoom": "Data room",
     "col2ViewAll": "Unser Portfolio",
     "col3Title": "Unsere Überzeugungen",
     "col3Magazine": "Magazin",
@@ -1682,7 +1681,7 @@
     "col5LinkedIn": "LinkedIn",
     "col5Twitter": "Twitter",
     "col5GitHub": "GitHub",
-    "taglines": "Engineered to Last · Rare by selection · Certified to transact",
+    "taglines": "Built to Last · Rare by selection · Certified to transact",
     "col2Verify": "Zertifikat prüfen",
     "footerInform": "Informieren"
   },
@@ -8833,7 +8832,7 @@
       "ctaEstimate": "Ihren Vermögenswert bewerten",
       "ctaGrade": "Den Grade entdecken",
       "ctaTitle": "Sie haben etwas Echtes aufgebaut.",
-      "ctaSub": "Wir zertifizieren es. Wir transagieren es.",
+      "ctaSub": "Wir zertifizieren es. Wir bewerten es.",
       "ctaLine": "AEGRYN | Zertifiziert für die Transaktion. Schweiz.",
       "scrollDown": "Scrollen",
       "source": "Quelle",

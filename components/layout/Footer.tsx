@@ -151,10 +151,7 @@ export default function Footer() {
               height={44}
               className="h-8 w-auto object-contain mb-4 brightness-0 invert"
             />
-            <p className="font-sans font-semibold text-[11px] text-white/60 tracking-[0.18em] uppercase mt-1">
-              {t('tagline')}
-            </p>
-            <p className="mt-2 font-sans font-semibold text-[11px] text-white/60">
+            <p className="mt-1 font-sans font-semibold text-[11px] text-white/60">
               {t('swissTagline')}
             </p>
             <div className="mt-5 flex items-center gap-4">
@@ -227,7 +224,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/transact/catalog" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href="/transact" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2DataRoom')}
                 </Link>
               </li>
