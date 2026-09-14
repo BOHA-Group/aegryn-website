@@ -6630,7 +6630,13 @@
           "q": "Qui utilise l'Index ?",
           "a": "Dirigeants et actionnaires avant une décision, fonds et family offices pour screener, banques pour objectiver un dossier, conseils M&A et experts-comptables pour étayer un mandat, acquéreurs pour calibrer une offre."
         }
-      ]
+      ],
+      "percentilesNote": "P25 et P75 : bornes basse et haute de la fourchette de marché (25 % des dossiers sont en dessous de P25, 25 % au-dessus de P75). La médiane (P50) est la valeur du milieu.",
+      "englishOnlyNote": "Les 200+ verticaux tech ci-dessous sont pour le moment documentés en anglais uniquement ; les industries et clusters restent dans votre langue.",
+      "clustersLabel": "clusters",
+      "techVerticalsLabel": "verticaux tech",
+      "extMapTitle": "Cartographie étendue : 22 clusters, 200+ verticaux tech.",
+      "extMapDesc": "Au-delà des industries et de leurs multiples de référence ci-dessus, l'Index cartographie la composante technologique de chaque secteur — 22 clusters identiques à ceux de nos pages Industries, déclinés en plus de 200 verticaux tech-driven. Une cartographie de couverture, pas encore une série de multiples dédiée pour chacun."
     }
   },
   "transactionSubmit": {

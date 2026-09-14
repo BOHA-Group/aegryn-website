@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { Lock, ChevronDown, Check } from 'lucide-react'
 import type { IndexSnapshot, IndexCluster } from '@/lib/cifsoIndex'
 import { INDEX_METRICS, INDEX_CLUSTER_SLUGS } from '@/lib/indexTaxonomy'
+import IndustryClusterMap from './IndustryClusterMap'
 
 /**
  * Visuels du moteur de benchmarks du CIFSO Valuation Index (mode aperçu) :
@@ -61,6 +62,7 @@ export default function IndexBenchmarks() {
                 <span className="inline-flex items-center gap-1.5"><span className="w-6 h-1.5 rounded-full bg-ag-navy/20 inline-block" /> {t('p25')} · {t('p75')}</span>
                 <span className="inline-flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-ag-apex inline-block" /> {t('p50')}</span>
               </div>
+              <p className="font-sans text-[11px] text-ag-gray leading-relaxed mt-3">{t('percentilesNote')}</p>
               <p className="font-mono text-[9px] text-ag-gray-light mt-4">{t('sourceNote')}</p>
             </div>
           </div>
@@ -119,6 +121,8 @@ export default function IndexBenchmarks() {
               </Link>
             ))}
           </div>
+
+          <IndustryClusterMap />
         </div>
       </section>
 

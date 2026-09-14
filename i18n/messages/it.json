@@ -6670,7 +6670,13 @@
           "q": "Chi utilizza l'Indice?",
           "a": "Dirigenti e azionisti prima di una decisione, fondi e family office per lo screening, banche per oggettivare un dossier, consulenti M&A e revisori per sostenere un mandato, acquirenti per calibrare un'offerta."
         }
-      ]
+      ],
+      "percentilesNote": "P25 e P75: limiti inferiore e superiore della fascia di mercato (il 25% dei fascicoli è sotto P25, il 25% sopra P75). La mediana (P50) è il valore intermedio.",
+      "englishOnlyNote": "I 200+ verticali tech qui sotto sono per ora documentati solo in inglese; industrie e cluster restano nella vostra lingua.",
+      "clustersLabel": "cluster",
+      "techVerticalsLabel": "verticali tech",
+      "extMapTitle": "Mappa estesa: 22 cluster, oltre 200 verticali tech.",
+      "extMapDesc": "Oltre alle industrie e ai loro multipli di riferimento sopra, l'Index mappa la componente tecnologica di ciascun settore — 22 cluster identici a quelli delle nostre pagine Industries, suddivisi in oltre 200 verticali tech-driven. Una mappa di copertura, non ancora una serie di multipli dedicata per ciascuno."
     }
   },
   "transactionSubmit": {

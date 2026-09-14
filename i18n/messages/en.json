@@ -6670,7 +6670,13 @@
           "q": "Who uses the Index?",
           "a": "Executives and shareholders before a decision, funds and family offices for screening, banks to objectify a file, M&A advisers and accountants to support a mandate, acquirers to calibrate an offer."
         }
-      ]
+      ],
+      "percentilesNote": "P25 and P75: lower and upper bounds of the market range (25% of dossiers fall below P25, 25% above P75). The median (P50) is the midpoint value.",
+      "englishOnlyNote": "The 200+ tech verticals below are currently documented in English only; industries and clusters remain in your language.",
+      "clustersLabel": "clusters",
+      "techVerticalsLabel": "tech verticals",
+      "extMapTitle": "Extended map: 22 clusters, 200+ tech verticals.",
+      "extMapDesc": "Beyond the industries and their reference multiples above, the Index maps the technology component of each sector — 22 clusters identical to those on our Industries pages, broken down into 200+ tech-driven verticals. A coverage map, not yet a dedicated multiple series for each."
     }
   },
   "transactionSubmit": {

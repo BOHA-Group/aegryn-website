@@ -6670,7 +6670,13 @@
           "q": "Wer nutzt den Index?",
           "a": "Geschäftsführer und Aktionäre vor einer Entscheidung, Fonds und Family Offices zum Screening, Banken zur Objektivierung eines Dossiers, M&A-Berater und Wirtschaftsprüfer zur Untermauerung eines Mandats, Erwerber zur Kalibrierung eines Angebots."
         }
-      ]
+      ],
+      "percentilesNote": "P25 und P75: untere und obere Grenze der Marktspanne (25 % der Dossiers liegen unter P25, 25 % über P75). Der Median (P50) ist der Mittelwert.",
+      "englishOnlyNote": "Die über 200 Tech-Verticals unten sind derzeit nur auf Englisch dokumentiert; Branchen und Cluster bleiben in Ihrer Sprache.",
+      "clustersLabel": "Cluster",
+      "techVerticalsLabel": "Tech-Verticals",
+      "extMapTitle": "Erweiterte Karte: 22 Cluster, über 200 Tech-Verticals.",
+      "extMapDesc": "Über die Branchen und ihre Referenzmultiplikatoren oben hinaus bildet der Index die Technologiekomponente jedes Sektors ab — 22 Cluster, identisch mit denen unserer Industries-Seiten, aufgeteilt in über 200 tech-getriebene Verticals. Eine Abdeckungskarte, noch keine eigene Multiplikatorenreihe für jedes einzelne."
     }
   },
   "transactionSubmit": {

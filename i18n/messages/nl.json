@@ -6685,7 +6685,13 @@
           "q": "Wie gebruikt de Index?",
           "a": "Bestuurders en aandeelhouders vóór een beslissing, fondsen en family offices om te screenen, banken om een dossier te objectiveren, M&A-adviseurs en accountants om een mandaat te onderbouwen, kopers om een bod te kalibreren."
         }
-      ]
+      ],
+      "percentilesNote": "P25 en P75: onder- en ondergrens van de marktrange (25% van de dossiers ligt onder P25, 25% boven P75). De mediaan (P50) is de middelste waarde.",
+      "englishOnlyNote": "De 200+ techverticals hieronder zijn momenteel alleen in het Engels gedocumenteerd; industrieën en clusters blijven in uw taal.",
+      "clustersLabel": "clusters",
+      "techVerticalsLabel": "techverticals",
+      "extMapTitle": "Uitgebreide kaart: 22 clusters, 200+ techverticals.",
+      "extMapDesc": "Naast de industrieën en hun referentiemultiples hierboven brengt de Index de technologiecomponent van elke sector in kaart — 22 clusters identiek aan die op onze Industries-pagina's, opgesplitst in 200+ tech-driven verticals. Een dekkingskaart, nog geen eigen multiple-reeks voor elk afzonderlijk."
     }
   },
   "transactionSubmit": {

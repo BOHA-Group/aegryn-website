@@ -18,8 +18,14 @@
  *
  *   - SEC EDGAR (registre officiel américain, API XBRL ouverte) : comparables cotés par cluster,
  *     multiple prix / revenu (flottant public / chiffre d'affaires) et croissance du revenu,
- *     panier de sociétés cotées représentatives (nombre d'entre elles sont européennes cotées
- *     aux États-Unis). Compense les comparables cotés vendus sous licence.
+ *     panier de sociétés cotées représentatives. ATTENTION : ce panier (SEC_BASKET) est
+ *     très majoritairement composé de sociétés cotées et domiciliées aux États-Unis (Salesforce,
+ *     Adobe, PayPal, ServiceNow...) — ce n'est PAS une source Suisse/Europe. region: 'INTL'
+ *     ci-dessous reflète cela intentionnellement. Ces données ne sont aujourd'hui affichées
+ *     nulle part sur le site public (aucune requête vers ce metric dans lib/cifsoIndex.ts) :
+ *     collectées et stockées, pas encore exposées. À ne surfacer, le cas échéant, que dans un
+ *     onglet clairement distinct « Comparables internationaux », jamais mélangé aux séries
+ *     Suisse/Europe. Piste d'alternative européenne identifiée : voir parking-lot.md.
  *   - Eurostat SBS (statistiques structurelles) : taux de marge brute d'exploitation et valeur
  *     ajoutée par salarié par secteur NACE, rapprochés des cinq clusters.
  *

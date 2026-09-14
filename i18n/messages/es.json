@@ -6670,7 +6670,13 @@
           "q": "¿Quién utiliza el Índice?",
           "a": "Directivos y accionistas antes de una decisión, fondos y family offices para analizar, bancos para objetivar un expediente, asesores M&A y auditores para respaldar un mandato, adquirentes para calibrar una oferta."
         }
-      ]
+      ],
+      "percentilesNote": "P25 y P75: límites inferior y superior del rango de mercado (el 25 % de los expedientes está por debajo de P25, el 25 % por encima de P75). La mediana (P50) es el valor intermedio.",
+      "englishOnlyNote": "Los más de 200 verticales tech de abajo están documentados por ahora solo en inglés; las industrias y clústeres permanecen en su idioma.",
+      "clustersLabel": "clústeres",
+      "techVerticalsLabel": "verticales tech",
+      "extMapTitle": "Mapa ampliado: 22 clústeres, más de 200 verticales tech.",
+      "extMapDesc": "Más allá de las industrias y sus múltiplos de referencia anteriores, el Index cartografía el componente tecnológico de cada sector — 22 clústeres idénticos a los de nuestras páginas de Industrias, desglosados en más de 200 verticales tech-driven. Un mapa de cobertura, aún no una serie de múltiplos dedicada para cada uno."
     }
   },
   "transactionSubmit": {
