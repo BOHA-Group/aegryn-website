@@ -156,25 +156,25 @@ export function CifsoBrochure() {
         {/* ── SOMMAIRE ── */}
         <Page n={2} total={TOTAL} label={pageLabel}>
           <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">CIFSO 5000</p>
-          <h2 className="font-sans font-bold text-ag-black text-[38px] tracking-[-0.03em] mb-14">{b('tocTitle')}</h2>
+          <h2 className="font-sans font-bold text-ag-black text-[28px] sm:text-[38px] tracking-[-0.03em] mb-8 sm:mb-14">{b('tocTitle')}</h2>
           <ol className="flex flex-col">
             {toc.map((title, i) => {
               const page = [3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 14, 15][i]
               return (
-                <li key={i} className="flex items-baseline gap-5 py-4 border-b border-ag-border last:border-0">
-                  <span className="font-mono text-[12px] text-ag-apex font-bold w-8 shrink-0">{num(i + 1)}</span>
-                  <span className="font-sans text-[16px] text-ag-black flex-1">{title}</span>
-                  <span className="flex-1 border-b border-dotted border-ag-border translate-y-[-4px]" />
-                  <span className="font-mono text-[12px] text-ag-gray">{page}</span>
+                <li key={i} className="flex items-baseline gap-3 sm:gap-5 py-3 sm:py-4 border-b border-ag-border last:border-0">
+                  <span className="font-mono text-[11px] sm:text-[12px] text-ag-apex font-bold w-6 sm:w-8 shrink-0">{num(i + 1)}</span>
+                  <span className="font-sans text-[13px] sm:text-[16px] text-ag-black flex-1">{title}</span>
+                  <span className="hidden sm:block flex-1 border-b border-dotted border-ag-border translate-y-[-4px]" />
+                  <span className="font-mono text-[11px] sm:text-[12px] text-ag-gray shrink-0">{page}</span>
                 </li>
               )
             })}
           </ol>
-          <div className="mt-14 grid grid-cols-4 gap-4">
+          <div className="mt-8 sm:mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             {stats.map((s) => (
-              <div key={s.label} className="border border-ag-border rounded-xl p-5 text-center">
-                <p className="font-sans font-bold text-ag-navy text-[34px] leading-none mb-2">{s.value}</p>
-                <p className="font-sans text-[12px] text-ag-gray leading-snug">{s.label}</p>
+              <div key={s.label} className="border border-ag-border rounded-xl p-3 sm:p-5 text-center">
+                <p className="font-sans font-bold text-ag-navy text-[24px] sm:text-[34px] leading-none mb-2">{s.value}</p>
+                <p className="font-sans text-[11px] sm:text-[12px] text-ag-gray leading-snug">{s.label}</p>
               </div>
             ))}
           </div>
