@@ -48,8 +48,8 @@ function Page({ n, total, label, children, dark = false, className = '' }: {
      
     >
       <div className="brochure-sheet relative min-h-[1272px]">
-        <div className="px-12 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
-        <footer className={`absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
+        <div className="px-5 sm:px-10 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
+        <footer className={`absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/40 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
           <span>CERTIFICATION CIFSO 5000. AEGRYN.</span>
           <span>{label} {n} / {total}</span>
         </footer>
@@ -132,7 +132,7 @@ export function CifsoBrochure() {
           <Image src={IMG.cover} alt="" fill priority className="object-cover" sizes="900px" />
           {/* Bandeau bas opaque pour un contraste garanti */}
           <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-ag-navy via-ag-navy/95 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-between px-12 md:px-20 print:px-20 py-16">
+          <div className="absolute inset-0 flex flex-col justify-between px-5 sm:px-10 md:px-20 print:px-20 py-16">
             <div className="flex items-center justify-between">
               <span className="font-sans font-bold text-white text-[18px] tracking-[0.12em] drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">AEGRYN</span>
               <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-white bg-ag-navy/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
@@ -269,7 +269,8 @@ export function CifsoBrochure() {
           <div className="flex h-2 rounded-full overflow-hidden mb-8">
             {grades.map((g) => <div key={g.grade} className="flex-1" style={{ backgroundColor: g.color }} />)}
           </div>
-          <table className="w-full border-collapse">
+          <div className="overflow-x-auto -mx-5 sm:-mx-10 md:mx-0 px-5 sm:px-10 md:px-0">
+          <table className="w-full min-w-[560px] border-collapse">
             <thead>
               <tr className="border-b-2 border-ag-navy">
                 {[b('s5ColGrade'), b('s5ColRange'), b('s5ColRarity'), b('s5ColProfile')].map((h) => (
@@ -293,6 +294,7 @@ export function CifsoBrochure() {
               ))}
             </tbody>
           </table>
+          </div>
         </Page>
 
         {/* ── 06 PROCESSUS (2 pages) ── */}
@@ -409,7 +411,8 @@ export function CifsoBrochure() {
           <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">{num(11)}</p>
           <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.03em] mb-3">{b('s11Title')}</h2>
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">{b('s11Lead')}</p>
-          <table className="w-full border-collapse">
+          <div className="overflow-x-auto -mx-5 sm:-mx-10 md:mx-0 px-5 sm:px-10 md:px-0">
+          <table className="w-full min-w-[520px] border-collapse">
             <thead>
               <tr className="border-b-2 border-ag-navy">
                 {[b('s11ColStandard'), b('s11ColObject'), b('s11ColQuestion')].map((h) => (
@@ -430,6 +433,7 @@ export function CifsoBrochure() {
               })}
             </tbody>
           </table>
+          </div>
           <p className="font-sans text-[12px] text-ag-gray leading-relaxed mt-4 italic">{b('s11Note')}</p>
         </Page>
 
@@ -440,7 +444,7 @@ export function CifsoBrochure() {
             <Image src={IMG.closing} alt="" fill className="object-cover" sizes="900px" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ag-navy/30 to-ag-navy" />
           </div>
-          <div className="px-12 md:px-20 print:px-20 pb-28 -mt-24 relative">
+          <div className="px-5 sm:px-10 md:px-20 print:px-20 pb-28 -mt-24 relative">
             <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-apex mb-3">{num(12)}</p>
             <h2 className="font-sans font-bold text-white text-[42px] tracking-[-0.03em] leading-[1.05] mb-4">{b('s12Title')}</h2>
             <p className="font-sans text-white/80 text-[17px] leading-relaxed max-w-xl mb-12">{b('s12Lead')}</p>
@@ -461,7 +465,7 @@ export function CifsoBrochure() {
               </Link>
             </div>
           </div>
-          <footer className="absolute bottom-0 left-0 right-0 px-12 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
+          <footer className="absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
             <span>{b('footerIssuer')}</span>
           </footer>
          </div>

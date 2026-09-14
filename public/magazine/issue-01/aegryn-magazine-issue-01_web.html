@@ -10,6 +10,7 @@
 :root{--K:#0F1A2B;--C:#F7F5F1;--G:#5ADDA4;--GR:#8A8A8A;--LG:#E8E5DF;--W:#FFFFFF;--INK:#1C1C1C;--SW:220px;--CW:700px;--NAVY:#0F1A2B;--CREAM:#FFFFFF;--GOLD:#B8965A}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+html,body{overflow-x:hidden;max-width:100%}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:#FFFFFF;color:var(--INK);display:flex;min-height:100vh}
 /* SIDEBAR */
 #sb{position:fixed;top:0;left:0;width:var(--SW);height:100vh;background:#FFFFFF;border-right:1px solid rgba(0,0,0,.09);display:flex;flex-direction:column;overflow-y:auto;z-index:100;padding:24px 0 40px}
@@ -26,7 +27,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#FFFFFF;color:var(--I
 .sb-flip{margin:14px 18px 0;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;background:var(--NAVY);color:var(--CREAM);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px}
 .sb-flip:hover{background:#162035}
 /* MAIN */
-#main{margin-left:var(--SW);flex:1}
+#main{margin-left:var(--SW);flex:1;min-width:0}
 /* SECTION DIVIDER */
 .sdiv{padding:56px 60px 40px;position:relative;overflow:hidden}
 .sdiv.dk{background:var(--NAVY)}.sdiv.cr{background:#FFFFFF}.sdiv.gr{background:#F5F3EF}
