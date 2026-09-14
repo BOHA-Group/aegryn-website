@@ -51,7 +51,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
                 <div style={{ maxWidth: 170 }}>
                   <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#fff', marginBottom: 6 }}>Exclusive</div>
                   <div style={{ width: 28, height: 2, background: '#fff', marginBottom: 8 }} />
-                  <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>Build. Certify. Transact.</div>
+                  <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', lineHeight: 1.5 }}>{issue.coverLine}</div>
                 </div>
               </div>
               {/* BAS : BUILT TO LAST */}

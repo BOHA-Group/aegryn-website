@@ -86,7 +86,7 @@ export function CoverSection({ issue, ctaScroll, labelDesc, locale = 'fr' }: Pro
           </p>
           <div className="w-10 h-[2px] bg-white mb-3" />
           <p className="font-sans font-bold text-white uppercase leading-snug" style={{ fontSize: '10px', letterSpacing: '0.05em' }}>
-            Build. Certify. Transact.
+            {issue.coverLine}
           </p>
         </div>
       </div>

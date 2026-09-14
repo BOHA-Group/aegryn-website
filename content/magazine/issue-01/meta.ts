@@ -8,7 +8,7 @@ export const ISSUE_01: MagazineIssue = {
   publishedAt: '2027-01-01',
   coverStat: '€262B',
   coverStatLabel: 'EU M&A volume — Q2 2026 · 3,315 transactions',
-  coverLine: 'Build. Certify. Transact.',
+  coverLine: 'Build. Certify. Value.',
   status: 'published',
   sections: [
     { id: 's-flipbook',    label: 'Flipbook',           pillar: 'build', pageRange: '130 p.'   },
