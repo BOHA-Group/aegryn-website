@@ -18,7 +18,7 @@ export interface Range { p25: number | null; p50: number | null; p75: number | n
 export interface IndexCluster {
   key: ClusterKey; label: string
   evRevenue: Range; evEbitda: Range
-  coeff: { score40: number | null; score60: number | null; score80: number | null; locked: boolean }
+  coeff: { score40: number | null; score60: number | null; score80: number | null; locked: boolean; sampleSize?: number | null }
   verticals: { key: string; label: string; arrMultiple: Range | null; nrr: Range | null; growth: Range | null; grossMargin: Range | null }[]
 }
 export interface IndexDimension {
@@ -50,7 +50,10 @@ type Row = { scope_type: string; scope_key: string; metric: string; period: stri
 const MIN_SAMPLE = 10
 
 function toRange(r: Row | undefined, full: boolean): Range {
-  if (!r) return { p25: null, p50: null, p75: null, locked: true }
+  /* sampleSize toujours propagé (même verrouillé) : révèle la taille de l'échantillon,
+     jamais la valeur elle-même — permet de distinguer « donnée réelle réservée aux abonnés »
+     (sample > 0) de « aucune donnée encore disponible » (sample nul ou 0). */
+  if (!r) return { p25: null, p50: null, p75: null, locked: true, sampleSize: null }
   const open = full || r.is_public
   return open
     ? { p25: num(r.p25), p50: num(r.p50), p75: num(r.p75), locked: false, sampleSize: r.sample_size }
@@ -94,8 +97,8 @@ export async function getIndexSnapshot(opts: { locale?: IndexLocale; full?: bool
       evRevenue: toRange(find('cluster', c.key, 'ev_revenue'), full),
       evEbitda:  toRange(find('cluster', c.key, 'ev_ebitda'), full),
       coeff: coeffOpen && coeffRow
-        ? { score40: num(coeffRow.p25), score60: num(coeffRow.p50), score80: num(coeffRow.p75), locked: false }
-        : { score40: null, score60: null, score80: null, locked: true },
+        ? { score40: num(coeffRow.p25), score60: num(coeffRow.p50), score80: num(coeffRow.p75), locked: false, sampleSize: coeffRow.sample_size }
+        : { score40: null, score60: null, score80: null, locked: true, sampleSize: coeffRow?.sample_size ?? null },
       verticals: INDEX_VERTICALS.filter(v => v.cluster === c.key).map(v => {
         const cat = v.benchmarkCategory
         const open = full || v.key === TEASER_VERTICAL

@@ -91,13 +91,16 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
       rows.push({ scope_type: 'market', scope_key: 'euro_area', metric: 'market_conditions', period, p25: null, p50: Math.round(score), p75: null, sample_size: null, unit: 'pts', is_public: true, source_internal: 'derived:official_api' })
     }
 
-    /* 1. Clusters depuis cifso_market_multiples */
+    /* 1. Clusters depuis cifso_market_multiples. cifso_coeff n'est PAS un multiple en soi :
+       c'est un facteur à appliquer à ev_revenue (ex. score60=0.82 => 0.82 x ev_revenue médian).
+       sample_size réel propagé (jamais null) : safe à révéler même verrouillé, ne dévoile pas
+       la valeur elle-même. */
     const { data: mult } = await supa.from('cifso_market_multiples').select('*').eq('is_active', true)
     for (const m of mult ?? []) {
       const per = (m.reference_period as string) ?? period
-      rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'ev_revenue', period: per, p25: m.ev_revenue_low, p50: r2((m.ev_revenue_low + m.ev_revenue_high) / 2), p75: m.ev_revenue_high, sample_size: null, unit: 'x', is_public: m.cluster_key === 'tech_innovation', source_internal: 'cifso_market_multiples' })
-      if (m.ev_ebitda_low != null) rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'ev_ebitda', period: per, p25: m.ev_ebitda_low, p50: r2((m.ev_ebitda_low + m.ev_ebitda_high) / 2), p75: m.ev_ebitda_high, sample_size: null, unit: 'x', is_public: false, source_internal: 'cifso_market_multiples' })
-      rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'cifso_coeff', period: per, p25: m.cifso_coeff_score_40, p50: m.cifso_coeff_score_60, p75: m.cifso_coeff_score_80, sample_size: null, unit: 'x', is_public: true, source_internal: 'cifso_market_multiples' })
+      rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'ev_revenue', period: per, p25: m.ev_revenue_low, p50: r2((m.ev_revenue_low + m.ev_revenue_high) / 2), p75: m.ev_revenue_high, sample_size: m.sample_size ?? null, unit: 'x', is_public: m.cluster_key === 'tech_innovation', source_internal: 'cifso_market_multiples' })
+      if (m.ev_ebitda_low != null) rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'ev_ebitda', period: per, p25: m.ev_ebitda_low, p50: r2((m.ev_ebitda_low + m.ev_ebitda_high) / 2), p75: m.ev_ebitda_high, sample_size: m.sample_size ?? null, unit: 'x', is_public: false, source_internal: 'cifso_market_multiples' })
+      rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'cifso_coeff', period: per, p25: m.cifso_coeff_score_40, p50: m.cifso_coeff_score_60, p75: m.cifso_coeff_score_80, sample_size: m.sample_size ?? null, unit: 'x', is_public: true, source_internal: 'cifso_market_multiples' })
     }
 
     /* 2. Verticaux depuis benchmark_data, complétés par les contributions anonymes du test

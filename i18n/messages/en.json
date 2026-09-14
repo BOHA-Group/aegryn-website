@@ -6110,7 +6110,7 @@
       "industry": "Organisation's industry",
       "industryHint": "Determines the reference market multiple applied to your range (5 CIFSO industries).",
       "vertical": "Vertical",
-      "verticalHint": "Refines the industry chosen above. Anonymously feeds the Index benchmark database (never your name or email)."
+      "verticalHint": "Choose the sub-sector closest to the bulk of your activity or revenue. If unsure, pick the closest match: this refines the industry chosen above and anonymously feeds the Index benchmark database (never your name or email)."
     },
     "code": {
       "title": "Code quality",
@@ -6146,7 +6146,9 @@
         "unknown": "Unknown"
       },
       "stack": "Main stack",
-      "stackPlaceholder": "E.g. Next.js, Supabase, Python"
+      "stackPlaceholder": "E.g. Next.js, Supabase, Python",
+      "cicdHint": "CI/CD (Continuous Integration / Continuous Deployment): a system that automatically tests and ships code without manual steps at every change.",
+      "techDebtHint": "Technical debt: shortcuts or trade-offs taken to move faster, which will need to be fixed later."
     },
     "ip": {
       "title": "Intellectual property",
@@ -6186,7 +6188,8 @@
         "none": "None",
         "minor": "Minor, being resolved",
         "active": "Active and significant"
-      }
+      },
+      "opensourceHint": "MIT/Apache/BSD are open source licences with no reuse constraint. GPL requires republishing code that uses it — worth checking before a sale."
     },
     "security": {
       "title": "Security & compliance",
@@ -6233,7 +6236,8 @@
         "sovereign": "Sovereign (EU/CH) or self-hosted AI",
         "mixed": "Non-sovereign providers, framed use (contracts, no client data)",
         "massive": "Heavy dependency on non-sovereign providers (client data included)"
-      }
+      },
+      "pentestHint": "A pentest (penetration test) is a security audit run by a third party to identify exploitable weaknesses in your systems."
     },
     "org": {
       "title": "Organisation & Talent",
@@ -6762,7 +6766,9 @@
       ],
       "unlockTitle": "This is a partial preview.",
       "unlockDesc": "Blurred values, per-vertical detail and full export are reserved for Index subscribers.",
-      "waitlistCta": "Join the full subscription waitlist"
+      "waitlistCta": "Join the full subscription waitlist",
+      "yourProfileLabel": "Your profile",
+      "sampleBuilding": "Sample building up"
     }
   },
   "transactionSubmit": {

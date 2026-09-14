@@ -13,12 +13,30 @@ import WaitlistForm from './WaitlistForm'
  * (mêmes données que /valuation, jamais plus), avec filtres fonctionnels (industrie,
  * vertical) et mise en évidence de la position de l'utilisateur (industrie/grade calculés
  * à l'étape 1). CTA vert pour rejoindre la liste d'attente de l'abonnement complet.
+ *
+ * Chaque tableau affiche systématiquement toutes les lignes disponibles (5 industries, ou
+ * tous les verticaux d'une industrie) — les filtres servent à mettre en évidence une ligne,
+ * pas à réduire le tableau à une seule ligne, pour donner un vrai aperçu de la richesse de
+ * l'Index sans tout dévoiler.
  */
 type UserPosition = { industry: ClusterKey; vertical?: string; grade: string; score: number }
 
 function Blurred({ children, locked }: { children: React.ReactNode; locked: boolean }) {
   if (!locked) return <>{children}</>
   return <span className="blur-[5px] select-none pointer-events-none">{children}</span>
+}
+
+/** n= toujours informatif : distingue "verrouillé mais échantillon réel" de "pas encore de donnée". */
+function SampleTag({ n, buildingLabel }: { n: number | null | undefined; buildingLabel: string }) {
+  if (n == null) return <span className="font-mono text-[10px] text-white/30">—</span>
+  if (n === 0) return <span className="font-mono text-[9px] uppercase tracking-wide text-white/30">{buildingLabel}</span>
+  return <span className="font-mono text-[11px] text-white/40">n={n}</span>
+}
+
+/** Multiple ajusté = ev_revenue médian × coefficient CIFSO (le coefficient n'est PAS un multiple en soi). */
+function adjustedMultiple(evP50: number | null, coeff: number | null): number | null {
+  if (evP50 == null || coeff == null) return null
+  return Math.round(evP50 * coeff * 100) / 100
 }
 
 export default function IndexTestView({ user }: { user: UserPosition }) {
@@ -28,7 +46,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
   const [snap, setSnap] = useState<IndexSnapshot | null>(null)
   const [tab, setTab] = useState(0)
   const [filterIndustry, setFilterIndustry] = useState<ClusterKey>(user.industry)
-  const [filterVertical, setFilterVertical] = useState<string>(user.vertical ?? 'all')
+  const [filterVertical, setFilterVertical] = useState<string>('all')
 
   useEffect(() => {
     fetch(`/api/valuation/index?locale=${locale}`).then(r => r.ok ? r.json() : null).then(setSnap).catch(() => setSnap(null))
@@ -36,16 +54,24 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
 
   const tabs = t.raw('tabs') as string[]
   const tabsSubtitle = t.raw('tabsSubtitle') as string[]
+  const userIndustryLabel = INDEX_CLUSTERS.find(c => c.key === user.industry)?.label[locale] ?? user.industry
+  const userVerticalLabel = user.vertical ? INDEX_VERTICALS.find(v => v.key === user.vertical)?.label[locale] : undefined
 
   const verticalsForFilter = useMemo(() => INDEX_VERTICALS.filter(v => v.cluster === filterIndustry), [filterIndustry])
-
-  const clusters = snap?.clusters ?? []
-  const displayedClusters = clusters.filter(c => c.key === filterIndustry)
-  const displayedCluster = displayedClusters[0]
-  const displayedVertical = displayedCluster?.verticals.find(v => v.key === filterVertical)
+  const clusterByKey = useMemo(() => new Map((snap?.clusters ?? []).map(c => [c.key, c])), [snap])
+  const displayedCluster = clusterByKey.get(filterIndustry)
+  const verticalsToShow = filterVertical === 'all' ? displayedCluster?.verticals ?? [] : (displayedCluster?.verticals ?? []).filter(v => v.key === filterVertical)
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+      {/* Carte profil — persistante, ne se perd jamais en changeant d'onglet ou de filtre */}
+      <div className="flex flex-wrap items-center gap-3 px-5 pt-5 pb-4 border-b border-white/10">
+        <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{t('yourProfileLabel')}</span>
+        <span className="font-sans text-[12px] font-semibold text-white">{userIndustryLabel}{userVerticalLabel ? ` · ${userVerticalLabel}` : ''}</span>
+        <span className="font-mono text-[11px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2.5 py-0.5">{user.grade}</span>
+        <span className="font-mono text-[11px] text-white/50">{user.score}/100</span>
+      </div>
+
       {/* Tabs */}
       <div className="flex items-center gap-2 px-5 pt-5 flex-wrap">
         {tabs.map((tab_, i) => (
@@ -62,7 +88,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
       {tabsSubtitle[tab] && <p className="font-sans text-[11px] text-white/40 leading-relaxed px-5 pt-3 max-w-3xl">{tabsSubtitle[tab]}</p>}
 
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-0 mt-4">
-        {/* Filtres réels */}
+        {/* Filtres réels — mettent en évidence une ligne, ne réduisent jamais le tableau à une seule */}
         <div className="border-t lg:border-t-0 lg:border-r border-white/10 px-5 py-4 flex flex-col gap-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 flex items-center gap-1.5">
             <SlidersHorizontal size={10} /> {t('filtersLabel')}
@@ -90,7 +116,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
           </div>
         </div>
 
-        {/* Tableau selon l'onglet */}
+        {/* Tableau selon l'onglet — toutes les lignes disponibles, jamais une seule */}
         <div className="overflow-x-auto px-1 py-4">
           {!snap && (
             <div className="flex flex-col gap-2 px-4">
@@ -98,7 +124,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             </div>
           )}
 
-          {snap && tab === 0 && displayedCluster && (
+          {snap && tab === 0 && (
             <table className="w-full min-w-[560px] text-left">
               <thead>
                 <tr className="border-b border-white/10">
@@ -106,27 +132,15 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                 </tr>
               </thead>
               <tbody>
-                <tr className={`border-b border-white/5 ${filterIndustry === user.industry && filterVertical === 'all' ? 'bg-ag-apex/10' : ''}`}>
-                  <td className="px-4 py-3">
-                    <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
-                      {filterIndustry === user.industry && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{t('youAreHere')}</span>}
-                      {displayedVertical ? displayedVertical.label : displayedCluster.label}
-                    </p>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-white/70 whitespace-nowrap">
-                    <Blurred locked={displayedVertical ? (displayedVertical.arrMultiple?.locked ?? true) : displayedCluster.evRevenue.locked}>
-                      {displayedVertical
-                        ? (displayedVertical.arrMultiple ? `${displayedVertical.arrMultiple.p25}x · ${displayedVertical.arrMultiple.p50}x · ${displayedVertical.arrMultiple.p75}x` : '—')
-                        : `${displayedCluster.evRevenue.p25 ?? '••'}x · ${displayedCluster.evRevenue.p50 ?? '••'}x · ${displayedCluster.evRevenue.p75 ?? '••'}x`}
-                    </Blurred>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-white/70">
-                    <Blurred locked={displayedCluster.evEbitda.locked}>{displayedCluster.evEbitda.p50 ?? '••'}x</Blurred>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-white/40">
-                    n={displayedVertical ? (displayedVertical.arrMultiple?.sampleSize ?? '—') : (displayedCluster.evRevenue.sampleSize ?? '—')}
-                  </td>
-                </tr>
+                {filterVertical === 'all' ? (
+                  snap.clusters.map(c => (
+                    <MarketRow key={c.key} label={c.label} highlighted={c.key === user.industry} range={c.evRevenue} evEbitda={c.evEbitda} t={t} />
+                  ))
+                ) : (
+                  verticalsToShow.map(v => (
+                    <MarketRow key={v.key} label={v.label} highlighted={v.key === user.vertical} range={v.arrMultiple} evEbitda={null} t={t} />
+                  ))
+                )}
               </tbody>
             </table>
           )}
@@ -144,40 +158,40 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                     <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{d.letter} — {d.label}</p></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold"><Blurred locked={d.locked}>{d.medianScore ?? '••'}/100</Blurred></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={d.locked}>{d.upliftPct != null ? `+${d.upliftPct}%` : '••%'}</Blurred></td>
-                    <td className="px-4 py-3 font-mono text-[11px] text-white/40">n={d.sampleSize}</td>
+                    <td className="px-4 py-3"><SampleTag n={d.sampleSize} buildingLabel={t('sampleBuilding')} /></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           )}
 
-          {snap && tab === 2 && displayedCluster && (
-            <table className="w-full min-w-[560px] text-left">
+          {snap && tab === 2 && (
+            <table className="w-full min-w-[600px] text-left">
               <thead>
                 <tr className="border-b border-white/10">
                   {(t.raw('columnsValuation') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/40 px-4 py-3 whitespace-nowrap">{col}</th>)}
                 </tr>
               </thead>
               <tbody>
-                <tr className={`border-b border-white/5 ${filterIndustry === user.industry ? 'bg-ag-apex/10' : ''}`}>
-                  <td className="px-4 py-3">
-                    <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
-                      {filterIndustry === user.industry && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{user.grade}</span>}
-                      {displayedCluster.label}
-                    </p>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={displayedCluster.evRevenue.locked}>{displayedCluster.evRevenue.p50 ?? '••'}x</Blurred></td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold">
-                    <Blurred locked={displayedCluster.coeff.locked}>
-                      {displayedCluster.coeff.score60 ?? '••'}x
-                    </Blurred>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-[11px] text-white/40">
-                    <Blurred locked={displayedCluster.coeff.locked}>
-                      {displayedCluster.coeff.score40 ?? '••'}x — {displayedCluster.coeff.score80 ?? '••'}x
-                    </Blurred>
-                  </td>
-                </tr>
+                {snap.clusters.map(c => {
+                  const locked = c.evRevenue.locked || c.coeff.locked
+                  const adj60 = adjustedMultiple(c.evRevenue.p50, c.coeff.score60)
+                  const adj40 = adjustedMultiple(c.evRevenue.p50, c.coeff.score40)
+                  const adj80 = adjustedMultiple(c.evRevenue.p50, c.coeff.score80)
+                  return (
+                    <tr key={c.key} className={`border-b border-white/5 ${c.key === user.industry ? 'bg-ag-apex/10' : ''}`}>
+                      <td className="px-4 py-3">
+                        <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
+                          {c.key === user.industry && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{user.grade}</span>}
+                          {c.label}
+                        </p>
+                      </td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={c.evRevenue.locked}>{c.evRevenue.p50 ?? '••'}x</Blurred></td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold"><Blurred locked={locked}>{adj60 ?? '••'}x</Blurred></td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/40"><Blurred locked={locked}>{adj40 ?? '••'}x — {adj80 ?? '••'}x</Blurred></td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           )}
@@ -199,5 +213,32 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
         <WaitlistForm variant="green" />
       </div>
     </div>
+  )
+}
+
+/* Ligne du tableau "Multiples de marché" : industrie (evRevenue+evEbitda) ou vertical (arrMultiple seul). */
+function MarketRow({ label, highlighted, range, evEbitda, t }: {
+  label: string; highlighted: boolean
+  range: { p25: number | null; p50: number | null; p75: number | null; locked: boolean; sampleSize?: number | null } | null
+  evEbitda: { p50: number | null; locked: boolean; sampleSize?: number | null } | null
+  t: ReturnType<typeof useTranslations>
+}) {
+  if (!range) return null
+  return (
+    <tr className={`border-b border-white/5 ${highlighted ? 'bg-ag-apex/10' : ''}`}>
+      <td className="px-4 py-3">
+        <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
+          {highlighted && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{t('youAreHere')}</span>}
+          {label}
+        </p>
+      </td>
+      <td className="px-4 py-3 font-mono text-[11px] text-white/70 whitespace-nowrap">
+        <Blurred locked={range.locked}>{range.p25 ?? '••'}x · {range.p50 ?? '••'}x · {range.p75 ?? '••'}x</Blurred>
+      </td>
+      <td className="px-4 py-3 font-mono text-[11px] text-white/70">
+        {evEbitda ? <Blurred locked={evEbitda.locked}>{evEbitda.p50 ?? '••'}x</Blurred> : <span className="text-white/30">—</span>}
+      </td>
+      <td className="px-4 py-3"><SampleTag n={range.sampleSize} buildingLabel={t('sampleBuilding')} /></td>
+    </tr>
   )
 }

@@ -6110,7 +6110,7 @@
       "industry": "Industria dell'organizzazione",
       "industryHint": "Determina il multiplo di mercato di riferimento applicato alla vostra fascia (5 industrie CIFSO).",
       "vertical": "Verticale",
-      "verticalHint": "Precisa l'industria scelta sopra. Alimenta in modo anonimo la base di benchmark dell'Index (mai il vostro nome né la vostra email)."
+      "verticalHint": "Scegliete il sotto-settore più vicino alla parte principale della vostra attività o del vostro fatturato. In caso di dubbio, scegliete quello più vicino: questo precisa l'industria scelta sopra e alimenta in modo anonimo la base di benchmark dell'Index (mai il vostro nome né la vostra email)."
     },
     "code": {
       "title": "Qualità del codice",
@@ -6146,7 +6146,9 @@
         "unknown": "Sconosciuto"
       },
       "stack": "Stack principale",
-      "stackPlaceholder": "Es. Next.js, Supabase, Python"
+      "stackPlaceholder": "Es. Next.js, Supabase, Python",
+      "cicdHint": "CI/CD (Integrazione Continua / Distribuzione Continua): un sistema che testa e pubblica il codice automaticamente, senza passaggi manuali a ogni modifica.",
+      "techDebtHint": "Debito tecnico: scorciatoie o compromessi tecnici presi per andare più velocemente, che andranno corretti più avanti."
     },
     "ip": {
       "title": "Proprietà intellettuale",
@@ -6186,7 +6188,8 @@
         "none": "Nessuna",
         "minor": "Minori, in risoluzione",
         "active": "Attive e significative"
-      }
+      },
+      "opensourceHint": "MIT/Apache/BSD sono licenze open source senza vincoli di riutilizzo. GPL impone di ripubblicare il codice che la utilizza — da verificare prima di una cessione."
     },
     "security": {
       "title": "Sicurezza e conformità",
@@ -6233,7 +6236,8 @@
         "sovereign": "IA sovrana (UE/CH) o self-hosted",
         "mixed": "Fornitori non sovrani, uso inquadrato (contratti, nessun dato cliente)",
         "massive": "Forte dipendenza da fornitori non sovrani (dati clienti inclusi)"
-      }
+      },
+      "pentestHint": "Un pentest (test di intrusione) è un audit di sicurezza condotto da terzi per individuare le vulnerabilità sfruttabili dei vostri sistemi."
     },
     "org": {
       "title": "Organizzazione & Talento",
@@ -6762,7 +6766,9 @@
       ],
       "unlockTitle": "Questa è un'anteprima parziale.",
       "unlockDesc": "I valori sfocati, il dettaglio per verticale e l'esportazione completa sono riservati agli abbonati dell'Index.",
-      "waitlistCta": "Iscriversi alla lista d'attesa dell'abbonamento completo"
+      "waitlistCta": "Iscriversi alla lista d'attesa dell'abbonamento completo",
+      "yourProfileLabel": "Il vostro profilo",
+      "sampleBuilding": "Campione in costruzione"
     }
   },
   "transactionSubmit": {

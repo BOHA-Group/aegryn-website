@@ -6125,7 +6125,7 @@
       "industry": "Industrie van de organisatie",
       "industryHint": "Bepaalt de referentie-marktmultiple die op uw range wordt toegepast (5 CIFSO-industrieën).",
       "vertical": "Vertical",
-      "verticalHint": "Verfijnt de hierboven gekozen industrie. Voedt anoniem de benchmarkdatabase van de Index (nooit uw naam of e-mail)."
+      "verticalHint": "Kies het subsegment dat het dichtst aansluit bij het grootste deel van uw activiteit of omzet. Twijfelt u, kies dan de dichtstbijzijnde optie: dit verfijnt de hierboven gekozen industrie en voedt anoniem de benchmarkdatabase van de Index (nooit uw naam of e-mail)."
     },
     "code": {
       "title": "Codekwaliteit",
@@ -6161,7 +6161,9 @@
         "unknown": "Onbekend"
       },
       "stack": "Belangrijkste stack",
-      "stackPlaceholder": "Bijv. Next.js, Supabase, Python"
+      "stackPlaceholder": "Bijv. Next.js, Supabase, Python",
+      "cicdHint": "CI/CD (Continuous Integration / Continuous Deployment): een systeem dat code automatisch test en publiceert, zonder handmatige stappen bij elke wijziging.",
+      "techDebtHint": "Technische schuld: kortere wegen of technische compromissen om sneller vooruit te gaan, die later gecorrigeerd moeten worden."
     },
     "ip": {
       "title": "Intellectueel eigendom",
@@ -6201,7 +6203,8 @@
         "none": "Geen",
         "minor": "Klein, in oplossing",
         "active": "Actief en significant"
-      }
+      },
+      "opensourceHint": "MIT/Apache/BSD zijn opensource-licenties zonder hergebruiksbeperking. GPL vereist het opnieuw publiceren van code die het gebruikt — te controleren vóór een verkoop."
     },
     "security": {
       "title": "Beveiliging & compliance",
@@ -6248,7 +6251,8 @@
         "sovereign": "Soevereine (EU/CH) of zelf gehoste AI",
         "mixed": "Niet-soevereine leveranciers, omkaderd gebruik (contracten, geen klantdata)",
         "massive": "Sterke afhankelijkheid van niet-soevereine leveranciers (incl. klantdata)"
-      }
+      },
+      "pentestHint": "Een pentest (penetratietest) is een beveiligingsaudit die door een derde partij wordt uitgevoerd om uitbuitbare zwakke punten in uw systemen te identificeren."
     },
     "org": {
       "title": "Organisatie & Talent",
@@ -6777,7 +6781,9 @@
       ],
       "unlockTitle": "Dit is een gedeeltelijke preview.",
       "unlockDesc": "Vervaagde waarden, detail per vertical en volledige export zijn voorbehouden aan Index-abonnees.",
-      "waitlistCta": "Aansluiten bij de wachtlijst voor het volledige abonnement"
+      "waitlistCta": "Aansluiten bij de wachtlijst voor het volledige abonnement",
+      "yourProfileLabel": "Uw profiel",
+      "sampleBuilding": "Steekproef in opbouw"
     }
   },
   "transactionSubmit": {

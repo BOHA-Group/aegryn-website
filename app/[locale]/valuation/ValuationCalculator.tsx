@@ -324,10 +324,10 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                 {([
                   { key: 'tests',    label: t('code.tests'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.testsOptions.${k}`) })) },
                   { key: 'docs',     label: t('code.docs'),     opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`code.docsOptions.${k}`) })) },
-                  { key: 'cicd',     label: t('code.cicd'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`code.cicdOptions.${k}`) })) },
-                  { key: 'techDebt', label: t('code.techDebt'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`code.techDebtOptions.${k}`) })) },
+                  { key: 'cicd',     label: t('code.cicd'),     hint: t('code.cicdHint'), opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`code.cicdOptions.${k}`) })) },
+                  { key: 'techDebt', label: t('code.techDebt'), hint: t('code.techDebtHint'), opts: (['documented','known','unknown'] as const).map(k => ({ key: k, label: t(`code.techDebtOptions.${k}`) })) },
                   { key: 'deps',     label: t('code.deps'),     opts: (['under1y','one_to_two','above2y','unknown'] as const).map(k => ({ key: k, label: t(`code.depsOptions.${k}`) })) },
-                ] as { key: keyof CapitalData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                ] as { key: keyof CapitalData; label: string; hint?: string; opts: {key: string; label: string}[] }[]).map(({ key, label, hint, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
                     <RadioGroup
@@ -335,6 +335,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                       value={(capital[key] ?? '') as never}
                       onChange={(v) => f(setCapital, key, v)}
                     />
+                    {hint && <p className={hintCls}>{hint}</p>}
                   </div>
                 ))}
 
@@ -358,11 +359,11 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                 {([
                   { key: 'trademark',    label: t('ip.trademark'),    opts: (['yes','pending','no'] as const).map(k => ({ key: k, label: t(`ip.trademarkOptions.${k}`) })) },
                   { key: 'copyright',    label: t('ip.copyright'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.copyrightOptions.${k}`) })) },
-                  { key: 'opensource',   label: t('ip.opensource'),   opts: (['clean','gpl','unaudited'] as const).map(k => ({ key: k, label: t(`ip.opensourceOptions.${k}`) })) },
+                  { key: 'opensource',   label: t('ip.opensource'),   hint: t('ip.opensourceHint'), opts: (['clean','gpl','unaudited'] as const).map(k => ({ key: k, label: t(`ip.opensourceOptions.${k}`) })) },
                   { key: 'apiContracts', label: t('ip.apiContracts'), opts: (['yes','partial','no'] as const).map(k => ({ key: k, label: t(`ip.apiContractsOptions.${k}`) })) },
                   { key: 'contracts',    label: t('ip.contracts'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`ip.contractsOptions.${k}`) })) },
                   { key: 'litiges',      label: t('ip.litiges'),      opts: (['none','minor','active'] as const).map(k => ({ key: k, label: t(`ip.litigesOptions.${k}`) })) },
-                ] as { key: keyof IntegrityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                ] as { key: keyof IntegrityData; label: string; hint?: string; opts: {key: string; label: string}[] }[]).map(({ key, label, hint, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
                     <RadioGroup
@@ -370,6 +371,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                       value={(integrity[key] ?? '') as never}
                       onChange={(v) => f(setIntegrity, key, v)}
                     />
+                    {hint && <p className={hintCls}>{hint}</p>}
                   </div>
                 ))}
 
@@ -490,14 +492,14 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                 <StepHeader title={t('security.title')} subtitle={t('security.subtitle')} step={4} total={5} t={t} />
 
                 {([
-                  { key: 'pentest', label: t('security.pentest'), opts: (['under6m','six_to_12m','above12m','never'] as const).map(k => ({ key: k, label: t(`security.pentestOptions.${k}`) })) },
+                  { key: 'pentest', label: t('security.pentest'), hint: t('security.pentestHint'), opts: (['under6m','six_to_12m','above12m','never'] as const).map(k => ({ key: k, label: t(`security.pentestOptions.${k}`) })) },
                   { key: 'gdpr',    label: t('security.gdpr'),    opts: (['full','partial','none'] as const).map(k => ({ key: k, label: t(`security.gdprOptions.${k}`) })) },
                   { key: 'mfa',     label: t('security.mfa'),     opts: (['yes','no'] as const).map(k => ({ key: k, label: t(`security.mfaOptions.${k}`) })) },
                   { key: 'secrets', label: t('security.secrets'), opts: (['vault','partial','none'] as const).map(k => ({ key: k, label: t(`security.secretsOptions.${k}`) })) },
                   { key: 'infra',   label: t('security.infra'),   opts: (['isolated','partial','mixed'] as const).map(k => ({ key: k, label: t(`security.infraOptions.${k}`) })) },
                   { key: 'backups', label: t('security.backups'), opts: (['tested','exists','none'] as const).map(k => ({ key: k, label: t(`security.backupsOptions.${k}`) })) },
                   { key: 'aiExposure', label: t('security.aiExposure'), opts: (['none','sovereign','mixed','massive'] as const).map(k => ({ key: k, label: t(`security.aiExposureOptions.${k}`) })) },
-                ] as { key: keyof SecurityData; label: string; opts: {key: string; label: string}[] }[]).map(({ key, label, opts }) => (
+                ] as { key: keyof SecurityData; label: string; hint?: string; opts: {key: string; label: string}[] }[]).map(({ key, label, hint, opts }) => (
                   <div key={key as string}>
                     <label className={labelCls}>{label} *</label>
                     <RadioGroup
@@ -505,6 +507,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                       value={(security[key] ?? '') as never}
                       onChange={(v) => f(setSecurity, key, v)}
                     />
+                    {hint && <p className={hintCls}>{hint}</p>}
                   </div>
                 ))}
 

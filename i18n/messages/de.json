@@ -6110,7 +6110,7 @@
       "industry": "Branche der Organisation",
       "industryHint": "Bestimmt den Referenz-Marktmultiplikator, der auf Ihre Spanne angewendet wird (5 CIFSO-Branchen).",
       "vertical": "Vertical",
-      "verticalHint": "Verfeinert die oben gewählte Branche. Speist anonym die Benchmark-Datenbank des Index (nie Ihr Name oder Ihre E-Mail)."
+      "verticalHint": "Wählen Sie das Teilsegment, das dem Großteil Ihrer Tätigkeit oder Ihres Umsatzes am nächsten kommt. Im Zweifel wählen Sie die nächstliegende Option: Dies verfeinert die oben gewählte Branche und speist anonym die Benchmark-Datenbank des Index (nie Ihr Name oder Ihre E-Mail)."
     },
     "code": {
       "title": "Codequalität",
@@ -6146,7 +6146,9 @@
         "unknown": "Unbekannt"
       },
       "stack": "Hauptstack",
-      "stackPlaceholder": "z.B. Next.js, Supabase, Python"
+      "stackPlaceholder": "z.B. Next.js, Supabase, Python",
+      "cicdHint": "CI/CD (Continuous Integration / Continuous Deployment): ein System, das Code bei jeder Änderung automatisch testet und veröffentlicht, ohne manuelle Schritte.",
+      "techDebtHint": "Technische Schulden: Abkürzungen oder Kompromisse, die man eingeht, um schneller voranzukommen, und die später behoben werden müssen."
     },
     "ip": {
       "title": "Geistiges Eigentum",
@@ -6186,7 +6188,8 @@
         "none": "Keine",
         "minor": "Geringfügig, in Klärung",
         "active": "Aktiv und erheblich"
-      }
+      },
+      "opensourceHint": "MIT/Apache/BSD sind Open-Source-Lizenzen ohne Wiederverwendungsauflage. GPL verlangt die Veröffentlichung des Codes, der sie nutzt — vor einem Verkauf zu prüfen."
     },
     "security": {
       "title": "Sicherheit & Compliance",
@@ -6233,7 +6236,8 @@
         "sovereign": "Souveräne (EU/CH) oder selbst gehostete KI",
         "mixed": "Nicht souveräne Anbieter, geregelte Nutzung (Verträge, keine Kundendaten)",
         "massive": "Starke Abhängigkeit von nicht souveränen Anbietern (inkl. Kundendaten)"
-      }
+      },
+      "pentestHint": "Ein Pentest (Penetrationstest) ist ein von einem Dritten durchgeführtes Sicherheitsaudit, um ausnutzbare Schwachstellen in Ihren Systemen zu identifizieren."
     },
     "org": {
       "title": "Organisation & Talent",
@@ -6762,7 +6766,9 @@
       ],
       "unlockTitle": "Dies ist eine Teilvorschau.",
       "unlockDesc": "Unscharfe Werte, Detail je Vertical und vollständiger Export sind Index-Abonnenten vorbehalten.",
-      "waitlistCta": "Der Warteliste für das vollständige Abonnement beitreten"
+      "waitlistCta": "Der Warteliste für das vollständige Abonnement beitreten",
+      "yourProfileLabel": "Ihr Profil",
+      "sampleBuilding": "Stichprobe im Aufbau"
     }
   },
   "transactionSubmit": {

@@ -6110,7 +6110,7 @@
       "industry": "Industria de la organización",
       "industryHint": "Determina el múltiplo de mercado de referencia aplicado a su rango (5 industrias CIFSO).",
       "vertical": "Vertical",
-      "verticalHint": "Precisa la industria elegida arriba. Alimenta de forma anónima la base de benchmark del Index (nunca su nombre ni su email)."
+      "verticalHint": "Elija el subsector más cercano a la mayor parte de su actividad o ingresos. En caso de duda, elija el más próximo: esto precisa la industria elegida arriba y alimenta de forma anónima la base de benchmark del Index (nunca su nombre ni su email)."
     },
     "code": {
       "title": "Calidad del código",
@@ -6146,7 +6146,9 @@
         "unknown": "Desconocido"
       },
       "stack": "Stack principal",
-      "stackPlaceholder": "Ej. Next.js, Supabase, Python"
+      "stackPlaceholder": "Ej. Next.js, Supabase, Python",
+      "cicdHint": "CI/CD (Integración Continua / Despliegue Continuo): un sistema que prueba y publica el código automáticamente, sin pasos manuales en cada cambio.",
+      "techDebtHint": "Deuda técnica: atajos o compromisos técnicos asumidos para avanzar más rápido, que habrá que corregir más adelante."
     },
     "ip": {
       "title": "Propiedad intelectual",
@@ -6186,7 +6188,8 @@
         "none": "Ninguno",
         "minor": "Menores, en resolución",
         "active": "Activos y significativos"
-      }
+      },
+      "opensourceHint": "MIT/Apache/BSD son licencias de código abierto sin restricción de reutilización. GPL exige republicar el código que la usa — a verificar antes de una venta."
     },
     "security": {
       "title": "Seguridad y conformidad",
@@ -6233,7 +6236,8 @@
         "sovereign": "IA soberana (UE/CH) o autoalojada",
         "mixed": "Proveedores no soberanos, uso encuadrado (contratos, sin datos de clientes)",
         "massive": "Fuerte dependencia de proveedores no soberanos (datos de clientes incluidos)"
-      }
+      },
+      "pentestHint": "Un pentest (test de penetración) es una auditoría de seguridad realizada por un tercero para identificar vulnerabilidades explotables en sus sistemas."
     },
     "org": {
       "title": "Organización & Talento",
@@ -6762,7 +6766,9 @@
       ],
       "unlockTitle": "Esta es una vista previa parcial.",
       "unlockDesc": "Los valores difuminados, el detalle por vertical y la exportación completa están reservados a los suscriptores del Index.",
-      "waitlistCta": "Unirse a la lista de espera de la suscripción completa"
+      "waitlistCta": "Unirse a la lista de espera de la suscripción completa",
+      "yourProfileLabel": "Su perfil",
+      "sampleBuilding": "Muestra en construcción"
     }
   },
   "transactionSubmit": {
