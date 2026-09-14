@@ -6108,7 +6108,9 @@
       "ebitdaMarginPlaceholder": "Es. 18",
       "ebitdaMarginHint": "Opzionale. Consente un controllo EV/EBITDA accanto al multiplo dei ricavi.",
       "industry": "Industria dell'organizzazione",
-      "industryHint": "Determina il multiplo di mercato di riferimento applicato alla vostra fascia (5 industrie CIFSO)."
+      "industryHint": "Determina il multiplo di mercato di riferimento applicato alla vostra fascia (5 industrie CIFSO).",
+      "vertical": "Verticale",
+      "verticalHint": "Precisa l'industria scelta sopra. Alimenta in modo anonimo la base di benchmark dell'Index (mai il vostro nome né la vostra email)."
     },
     "code": {
       "title": "Qualità del codice",
@@ -6311,7 +6313,8 @@
       "disclaimerCta": "Avviare una certificazione ufficiale",
       "ctaContact": "Contattare un advisor",
       "industryLabel": "Industria",
-      "industryAdjustedNote": "multiplo adeguato per industria"
+      "industryAdjustedNote": "multiplo adeguato per industria",
+      "ctaSeeIndex": "Vedere il mio posizionamento nell'Index"
     },
     "marketContext": {
       "label": "Contesto di mercato 2026",
@@ -6475,16 +6478,16 @@
           "key": "free",
           "name": "Accesso libero",
           "price": "Gratuito",
-          "badge": "Illustrativo",
-          "desc": "Una prima lettura per collocare la sua organizzazione.",
+          "badge": "",
+          "desc": "Una prima lettura per comprendere il modello.",
           "features": [
-            "Stima libera in quindici minuti",
+            "Base test illustrativa in quindici minuti",
             "Grado stimato e punteggio su 100",
             "Forchetta di valutazione ampia",
-            "Un multiplo mediano per industria, in anteprima"
+            "Un multiplo mediano per industria"
           ],
-          "cta": "Avviare la stima",
-          "href": "#estimation"
+          "cta": "Avviare il test",
+          "href": "/valuation/index"
         },
         {
           "key": "index",
@@ -6711,6 +6714,55 @@
         "dimension_uplift": "Differenza di multiplo di valorizzazione tra un'organizzazione con grade B e una con grade AAA, per dimensione CIFSO."
       },
       "unitLabel": "Unità"
+    },
+    "indexTest": {
+      "meta": {
+        "title": "Testate il vostro posizionamento nel CIFSO Valuation Index | Aegryn",
+        "desc": "Rispondete al questionario CIFSO in cinque dimensioni, poi testate il vostro posizionamento nel CIFSO Valuation Index — filtri reali, dati parzialmente sfocati, anteprima prima dell'abbonamento."
+      },
+      "hero": {
+        "label": "CIFSO VALUATION INDEX · TEST",
+        "titleStep2": "Il vostro posizionamento\nnell'Index.",
+        "descStep2": "Filtrate per industria e verticale, confrontate il vostro grade con le fasce di mercato. I dati completi restano riservati agli abbonati."
+      },
+      "stepLabel1": "Passo 1 · Questionario",
+      "stepLabel2": "Passo 2 · Il vostro Index",
+      "tabs": [
+        "Multipli di mercato",
+        "Punteggio organizzativo CIFSO",
+        "Valorizzazione adeguata"
+      ],
+      "tabsSubtitle": [
+        "Multipli EV/Fatturato ed EV/EBITDA aggregati per industria e verticale.",
+        "Punteggio mediano per dimensione C, I, F, S, O tra le organizzazioni certificate CIFSO 5000.",
+        "Multiplo di mercato adeguato al grade CIFSO dell'industria selezionata."
+      ],
+      "filtersLabel": "Filtri",
+      "filterIndustry": "Industria",
+      "filterVertical": "Verticale",
+      "filterAll": "Tutti i verticali",
+      "youAreHere": "Siete qui",
+      "columnsMarket": [
+        "Industria / Verticale",
+        "EV/Fatturato (P25 · Mediana · P75)",
+        "EV/EBITDA",
+        "Campione"
+      ],
+      "columnsCifso": [
+        "Dimensione CIFSO",
+        "Punteggio mediano /100",
+        "Scarto di multiplo B → AAA",
+        "Campione"
+      ],
+      "columnsValuation": [
+        "Industria",
+        "EV/Fatturato mediano",
+        "Multiplo a punteggio 60",
+        "Multiplo a punteggio 40 — 80"
+      ],
+      "unlockTitle": "Questa è un'anteprima parziale.",
+      "unlockDesc": "I valori sfocati, il dettaglio per verticale e l'esportazione completa sono riservati agli abbonati dell'Index.",
+      "waitlistCta": "Iscriversi alla lista d'attesa dell'abbonamento completo"
     }
   },
   "transactionSubmit": {

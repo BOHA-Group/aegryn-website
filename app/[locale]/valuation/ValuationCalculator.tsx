@@ -12,7 +12,7 @@ import {
   type ValuationResult,
   runValuation, fmtEur, preRevenueRange,
 } from '@/lib/valuationEngine'
-import { INDEX_CLUSTERS, type IndexLocale } from '@/lib/indexTaxonomy'
+import { INDEX_CLUSTERS, INDEX_VERTICALS, type IndexLocale } from '@/lib/indexTaxonomy'
 import type { ClusterKey } from '@/lib/cifsoValuation'
 import type { IndexSnapshot } from '@/lib/cifsoIndex'
 
@@ -84,7 +84,7 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 /* ─── Main component ─────────────────────────────────────── */
 type LockedInfo = { title: string; desc: string; cta: string; soon?: string }
 
-export default function ValuationCalculator({ freemiumNote, illustrative, locked }: { freemiumNote?: string; illustrative?: string; locked?: LockedInfo } = {}) {
+export default function ValuationCalculator({ freemiumNote, illustrative, locked, onComplete, onContinue, stepIndicator }: { freemiumNote?: string; illustrative?: string; locked?: LockedInfo; onComplete?: (result: ValuationResult, finance: Partial<FinanceData>) => void; onContinue?: () => void; stepIndicator?: React.ReactNode } = {}) {
   const t      = useTranslations('valuation')
   const _tNav  = useTranslations('nav')
   const locale = (useLocale() as IndexLocale) ?? 'fr'
@@ -126,7 +126,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
   function canAdvance(): boolean {
     if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.deps)
     if (step === 'integrity') return !!(integrity.trademark && integrity.copyright && integrity.opensource && integrity.apiContracts && integrity.contracts && integrity.litiges)
-    if (step === 'finance')   return !!(finance.industry && finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
+    if (step === 'finance')   return !!(finance.industry && finance.vertical && finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
     if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra && security.backups && security.aiExposure)
     if (step === 'org')       return !!(org.founderDep && org.nMinus1 && org.succession && org.turnover)
     return false
@@ -145,8 +145,29 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
         org:       org       as OrgData,
       }
       const factor = finance.industry ? industryFactor?.[finance.industry] ?? null : null
-      setResult(runValuation(input, factor))
+      const r = runValuation(input, factor)
+      setResult(r)
       setStep('result')
+
+      /* Contribution anonyme à l'Index — jamais de nom d'entreprise ni d'email. Fire-and-forget :
+         n'affecte jamais l'affichage du résultat, même en cas d'échec réseau. */
+      fetch('/api/valuation/contribute', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          industry: finance.industry,
+          vertical: finance.vertical,
+          score_capital: r.scores.capital, score_integrity: r.scores.integrity, score_finance: r.scores.finance,
+          score_security: r.scores.security, score_org: r.scores.org, score_total: r.scores.total,
+          grade: r.grade.grade,
+          arr: finance.arr, growth_yoy: finance.growth, churn_monthly: finance.churn,
+          nrr: finance.nrr, gross_margin: finance.margin, ebitda_margin: finance.ebitdaMargin,
+          locale: document.documentElement.lang || 'fr',
+          source_url: window.location.href,
+        }),
+      }).catch(() => {})
+
+      onComplete?.(r, finance)
     }
   }
 
@@ -237,6 +258,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
           <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
+          {stepIndicator}
         </div>
       </section>
 
@@ -365,10 +387,22 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                   <RadioGroup
                     options={INDEX_CLUSTERS.map(c => ({ key: c.key, label: c.label[locale] }))}
                     value={finance.industry ?? ''}
-                    onChange={v => f(setFinance, 'industry', v)}
+                    onChange={v => setFinance(p => ({ ...p, industry: v as ClusterKey, vertical: undefined }))}
                   />
                   <p className={hintCls}>{t('finance.industryHint')}</p>
                 </div>
+
+                {finance.industry && (
+                  <div>
+                    <label className={labelCls}>{t('finance.vertical')} *</label>
+                    <RadioGroup
+                      options={INDEX_VERTICALS.filter(v => v.cluster === finance.industry).map(v => ({ key: v.key, label: v.label[locale] }))}
+                      value={finance.vertical ?? ''}
+                      onChange={v => f(setFinance, 'vertical', v)}
+                    />
+                    <p className={hintCls}>{t('finance.verticalHint')}</p>
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
@@ -512,6 +546,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                 onEmailSubmit={sendEmail} onRestart={restart}
                 savedLeadId={savedLeadId}
                 freemiumNote={freemiumNote} illustrative={illustrative} locked={locked}
+                onContinue={onContinue}
               />
             )}
 
@@ -565,7 +600,7 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
   )
 }
 
-function ResultPanel({ result, finance, t, industryLabel, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, illustrative, locked }: {
+function ResultPanel({ result, finance, t, industryLabel, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, illustrative, locked, onContinue }: {
   result: ValuationResult
   finance: Partial<FinanceData>
   t: ReturnType<typeof useTranslations>
@@ -578,6 +613,8 @@ function ResultPanel({ result, finance, t, industryLabel, email, setEmail, email
   freemiumNote?: string
   illustrative?: string
   locked?: LockedInfo
+  /** Si fourni, affiche un CTA prioritaire vers l'étape 2 (vue Index testable). */
+  onContinue?: () => void
 }) {
   const { grade, scores, range: rawRange, preRevenue, preRevenueScore, weakestDim, strongestDim } = result
   const prRange = preRevenue ? preRevenueRange(preRevenueScore) : null
@@ -732,6 +769,14 @@ function ResultPanel({ result, finance, t, industryLabel, email, setEmail, email
         <div className="border border-ag-border p-5">
           <p className="font-sans text-[12px] text-ag-black leading-relaxed">{t('result.ngNote')}</p>
         </div>
+      )}
+
+      {/* CTA prioritaire — étape 2 : vue Index testable */}
+      {onContinue && (
+        <button type="button" onClick={onContinue}
+          className="rounded-lg inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[12px] uppercase tracking-[0.14em] px-7 py-4 hover:bg-ag-navy-mid transition-colors">
+          {t('result.ctaSeeIndex')} <ArrowUpRight size={13} />
+        </button>
       )}
 
       {/* CTAs */}

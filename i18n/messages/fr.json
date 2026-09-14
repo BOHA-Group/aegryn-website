@@ -6068,7 +6068,9 @@
       "ebitdaMarginPlaceholder": "Ex. 18",
       "ebitdaMarginHint": "Optionnel. Permet un contrôle EV/EBITDA en complément du multiple de revenu.",
       "industry": "Industrie de l'organisation",
-      "industryHint": "Détermine le multiple de marché de référence appliqué à votre fourchette (5 industries CIFSO)."
+      "industryHint": "Détermine le multiple de marché de référence appliqué à votre fourchette (5 industries CIFSO).",
+      "vertical": "Vertical",
+      "verticalHint": "Précise l'industrie choisie. Alimente anonymement la base de benchmark de l'Index (jamais votre nom ni votre email)."
     },
     "code": {
       "title": "Qualité du code",
@@ -6271,7 +6273,8 @@
       "disclaimerCta": "Démarrer une certification officielle",
       "ctaAssessment": "Réserver un Assessment Day gratuit",
       "industryLabel": "Industrie",
-      "industryAdjustedNote": "multiple ajusté par industrie"
+      "industryAdjustedNote": "multiple ajusté par industrie",
+      "ctaSeeIndex": "Voir mon positionnement dans l'Index"
     },
     "marketContext": {
       "label": "Contexte marché 2026",
@@ -6435,16 +6438,16 @@
           "key": "free",
           "name": "Accès libre",
           "price": "Gratuit",
-          "badge": "Illustratif",
-          "desc": "Une première lecture pour situer votre organisation.",
+          "badge": "",
+          "desc": "Une première lecture pour comprendre le modèle.",
           "features": [
-            "Estimation libre en quinze minutes",
+            "Base test illustrative en quinze minutes",
             "Grade estimé et score sur 100",
             "Fourchette de valorisation large",
-            "Un multiple médian par industrie, en teasing"
+            "Un multiple médian par industrie"
           ],
-          "cta": "Lancer l'estimation",
-          "href": "#estimation"
+          "cta": "Lancer le test",
+          "href": "/valuation/index"
         },
         {
           "key": "index",
@@ -6671,6 +6674,55 @@
         "dimension_uplift": "Écart de multiple de valorisation entre une organisation notée B et une organisation notée AAA, par dimension CIFSO."
       },
       "unitLabel": "Unité"
+    },
+    "indexTest": {
+      "meta": {
+        "title": "Testez votre positionnement dans le CIFSO Valuation Index | Aegryn",
+        "desc": "Répondez au questionnaire CIFSO en cinq dimensions, puis testez votre positionnement dans le CIFSO Valuation Index — filtres réels, données partiellement floutées, aperçu avant abonnement."
+      },
+      "hero": {
+        "label": "CIFSO VALUATION INDEX · TEST",
+        "titleStep2": "Votre positionnement\ndans l'Index.",
+        "descStep2": "Filtrez par industrie et vertical, comparez votre grade aux fourchettes du marché. Les données complètes restent réservées aux abonnés."
+      },
+      "stepLabel1": "Étape 1 · Questionnaire",
+      "stepLabel2": "Étape 2 · Votre Index",
+      "tabs": [
+        "Multiples de marché",
+        "Score CIFSO organisationnel",
+        "Valorisation ajustée"
+      ],
+      "tabsSubtitle": [
+        "Multiples EV/Revenue et EV/EBITDA agrégés par industrie et vertical.",
+        "Score médian par dimension C, I, F, S, O parmi les organisations certifiées CIFSO 5000.",
+        "Multiple de marché ajusté au grade CIFSO de l'industrie sélectionnée."
+      ],
+      "filtersLabel": "Filtres",
+      "filterIndustry": "Industrie",
+      "filterVertical": "Vertical",
+      "filterAll": "Tous les verticaux",
+      "youAreHere": "Vous êtes ici",
+      "columnsMarket": [
+        "Industrie / Vertical",
+        "EV/Revenue (P25 · Médiane · P75)",
+        "EV/EBITDA",
+        "Échantillon"
+      ],
+      "columnsCifso": [
+        "Dimension CIFSO",
+        "Score médian /100",
+        "Écart de multiple B → AAA",
+        "Échantillon"
+      ],
+      "columnsValuation": [
+        "Industrie",
+        "EV/Revenue médian",
+        "Multiple à score 60",
+        "Multiple à score 40 — 80"
+      ],
+      "unlockTitle": "Ceci est un aperçu partiel.",
+      "unlockDesc": "Les valeurs floutées, le détail par vertical et l'export complet sont réservés aux abonnés de l'Index.",
+      "waitlistCta": "Rejoindre la liste d'attente de l'abonnement complet"
     }
   },
   "transactionSubmit": {

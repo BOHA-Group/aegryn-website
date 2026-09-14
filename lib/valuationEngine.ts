@@ -44,6 +44,7 @@ export interface IntegrityData {
 
 export interface FinanceData {
   industry:   ClusterKey // industrie CIFSO (5 clusters, lib/indexTaxonomy.ts) — détermine le multiple de marché appliqué
+  vertical?:  string     // vertical benchmarké (INDEX_VERTICALS), dans l'industrie choisie — alimente l'Index par contribution anonyme
   arr:        number
   growth:     number   // YoY %
   churn:      number   // Monthly churn %

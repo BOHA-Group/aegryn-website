@@ -8,7 +8,9 @@
  *      données curées par Aegryn (cifso_market_multiples) ;
  *   2. Séries par vertical (multiple ARR, NRR, croissance, marge brute) depuis benchmark_data ;
  *   3. Séries vivantes sur les cinq dimensions CIFSO (score médian C, I, F, S, O, p25/p75,
- *      échantillon) et par grade, depuis les évaluations publiées ;
+ *      échantillon) et par grade, depuis les évaluations publiées, FUSIONNÉES avec les
+ *      contributions anonymes du test gratuit (cifso_index_contributed_data, jamais de nom
+ *      ni d'email) ;
  *   4. Distribution des grades et écart de multiple B → AAA par dimension.
  *
  * Les sources internes restent dans source_internal (jamais exposées). Journal dans
@@ -17,6 +19,12 @@
 import { createServiceClient } from '@/lib/supabase'
 import { DIMENSION_META, type ValuationDimension } from '@/lib/cifsoValuation'
 import { CONNECTORS, type Observation } from '@/lib/indexConnectors'
+import { INDEX_VERTICALS } from '@/lib/indexTaxonomy'
+
+/* Clé vertical (INDEX_VERTICALS[].key, saisie par le calculateur) -> catégorie benchmark_data */
+const VERTICAL_TO_CATEGORY: Record<string, string> = Object.fromEntries(
+  INDEX_VERTICALS.filter(v => v.benchmarkCategory).map(v => [v.key, v.benchmarkCategory as string])
+)
 
 const MIN_SAMPLE = 10
 
@@ -92,7 +100,23 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
       rows.push({ scope_type: 'cluster', scope_key: m.cluster_key, metric: 'cifso_coeff', period: per, p25: m.cifso_coeff_score_40, p50: m.cifso_coeff_score_60, p75: m.cifso_coeff_score_80, sample_size: null, unit: 'x', is_public: true, source_internal: 'cifso_market_multiples' })
     }
 
-    /* 2. Verticaux depuis benchmark_data */
+    /* 2. Verticaux depuis benchmark_data, complétés par les contributions anonymes du test
+       gratuit (cifso_index_contributed_data) quand l'échantillon par vertical est suffisant :
+       la donnée vivante prend alors le pas sur les tranches curées (même clé scope/metric/
+       period => un seul push par clé pour éviter les doublons dans le même batch d'upsert). */
+    const { data: contribVerticals } = await supa.from('cifso_index_contributed_data').select('vertical, growth_yoy, nrr, gross_margin').not('vertical', 'is', null)
+    const CTV = (contribVerticals ?? []) as { vertical: string; growth_yoy: number | null; nrr: number | null; gross_margin: number | null }[]
+    const contribByCategory = new Map<string, { growth_yoy: number[]; nrr: number[]; gross_margin: number[] }>()
+    for (const c of CTV) {
+      const cat = VERTICAL_TO_CATEGORY[c.vertical]
+      if (!cat) continue
+      if (!contribByCategory.has(cat)) contribByCategory.set(cat, { growth_yoy: [], nrr: [], gross_margin: [] })
+      const g = contribByCategory.get(cat)!
+      if (c.growth_yoy != null)   g.growth_yoy.push(c.growth_yoy)
+      if (c.nrr != null)          g.nrr.push(c.nrr)
+      if (c.gross_margin != null) g.gross_margin.push(c.gross_margin)
+    }
+
     const { data: bd } = await supa.from('benchmark_data').select('*')
     const byCat = new Map<string, Record<string, Record<string, number | string>>>()
     for (const b of bd ?? []) {
@@ -104,18 +128,33 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
       if (!med) continue
       const per = (med.source_date as string) ?? period
       rows.push({ scope_type: 'vertical', scope_key: cat, metric: 'arr_multiple', period: per, p25: Number(med.multiple_low), p50: r2((Number(med.multiple_low) + Number(med.multiple_high)) / 2), p75: Number(top?.multiple_low ?? med.multiple_high), sample_size: null, unit: 'x', is_public: cat === 'saas_horizontal', source_internal: 'benchmark_data' })
+      const live = contribByCategory.get(cat)
       for (const [metric, col] of [['nrr', 'nrr_min'], ['growth_yoy', 'growth_min'], ['gross_margin', 'gross_margin_min']] as const) {
-        if (weak && top) rows.push({ scope_type: 'vertical', scope_key: cat, metric, period: per, p25: Number(weak[col]), p50: Number(med[col]), p75: Number(top[col]), sample_size: null, unit: '%', is_public: false, source_internal: 'benchmark_data' })
+        const liveValues = live?.[metric].sort((a, b) => a - b) ?? []
+        if (liveValues.length >= MIN_SAMPLE) {
+          rows.push({ scope_type: 'vertical', scope_key: cat, metric, period, p25: pct(liveValues, 0.25), p50: pct(liveValues, 0.5), p75: pct(liveValues, 0.75), sample_size: liveValues.length, unit: '%', is_public: false, source_internal: 'cifso_index_contributed_data' })
+        } else if (weak && top) {
+          rows.push({ scope_type: 'vertical', scope_key: cat, metric, period: per, p25: Number(weak[col]), p50: Number(med[col]), p75: Number(top[col]), sample_size: null, unit: '%', is_public: false, source_internal: 'benchmark_data' })
+        }
       }
     }
 
-    /* 3. Dimensions CIFSO et grades depuis les évaluations publiées */
+    /* 3. Dimensions CIFSO et grades depuis les évaluations publiées, fusionnées avec les
+       contributions anonymes du test gratuit (jamais de nom ni d'email — cf. migration 115) */
     const { data: pub } = await supa.from('grade_assessments').select('final_grade, final_score, engine_result_json').eq('status', 'published')
     const P = (pub ?? []) as { final_grade: string; final_score: number | null; engine_result_json: { dimensions?: Record<string, { score?: number }> } | null }[]
+    const { data: contrib } = await supa.from('cifso_index_contributed_data').select('score_capital, score_integrity, score_finance, score_security, score_org, score_total')
+    const CTB = (contrib ?? []) as { score_capital: number | null; score_integrity: number | null; score_finance: number | null; score_security: number | null; score_org: number | null; score_total: number | null }[]
+    /* Clé interne (calculateur) -> clé ValuationDimension (moteur CIFSO 5000) */
+    const CONTRIB_COL: Record<ValuationDimension, keyof typeof CTB[number]> = {
+      code: 'score_capital', ip: 'score_integrity', finance: 'score_finance', security: 'score_security', organisation: 'score_org',
+    }
     const dimSummary: Record<string, unknown> = {}
     for (const d of Object.keys(DIMENSION_META) as ValuationDimension[]) {
-      const scores = P.map(p => p.engine_result_json?.dimensions?.[d]?.score).filter((x): x is number => typeof x === 'number').sort((a, b) => a - b)
-      dimSummary[d] = { n: scores.length, p50: pct(scores, 0.5) }
+      const fromPublished = P.map(p => p.engine_result_json?.dimensions?.[d]?.score).filter((x): x is number => typeof x === 'number')
+      const fromContrib   = CTB.map(c => c[CONTRIB_COL[d]]).filter((x): x is number => typeof x === 'number')
+      const scores = [...fromPublished, ...fromContrib].sort((a, b) => a - b)
+      dimSummary[d] = { n: scores.length, p50: pct(scores, 0.5), nPublished: fromPublished.length, nContributed: fromContrib.length }
       if (scores.length >= MIN_SAMPLE) {
         rows.push({ scope_type: 'dimension', scope_key: d, metric: 'cifso_score', period, p25: pct(scores, 0.25), p50: pct(scores, 0.5), p75: pct(scores, 0.75), sample_size: scores.length, unit: 'pts', is_public: false, source_internal: 'grade_assessments:published' })
       }
@@ -126,7 +165,7 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
         rows.push({ scope_type: 'dimension', scope_key: d, metric: 'dimension_uplift', period, p25: null, p50: uplift, p75: null, sample_size: null, unit: '%', is_public: false, source_internal: 'derived:cifso_market_multiples×weights' })
       }
     }
-    const total = P.map(p => p.final_score).filter((x): x is number => typeof x === 'number').sort((a, b) => a - b)
+    const total = [...P.map(p => p.final_score), ...CTB.map(c => c.score_total)].filter((x): x is number => typeof x === 'number').sort((a, b) => a - b)
     if (total.length >= MIN_SAMPLE) {
       rows.push({ scope_type: 'market', scope_key: 'certified', metric: 'cifso_score', period, p25: pct(total, 0.25), p50: pct(total, 0.5), p75: pct(total, 0.75), sample_size: total.length, unit: 'pts', is_public: true, source_internal: 'grade_assessments:published' })
     }
@@ -148,6 +187,7 @@ export async function refreshCifsoIndex(trigger: 'cron' | 'manual' = 'cron'): Pr
     /* Sources internes : statut */
     await recordSource({ key: 'internal_curated', name: 'Séries curées Aegryn (multiples par cluster et vertical)', kind: 'internal_curated', status: 'ok', rows: (mult?.length ?? 0) + byCat.size, latest: period, ms: 0 })
     await recordSource({ key: 'internal_certified', name: 'Dossiers certifiés publiés (cinq dimensions, grades)', kind: 'internal_certified', status: 'ok', rows: P.length, latest: period, ms: 0 })
+    await recordSource({ key: 'internal_contributed', name: 'Contributions anonymes du test gratuit /valuation/index (jamais de nom ni d\'email)', kind: 'internal_contributed', status: 'ok', rows: CTB.length, latest: period, ms: 0 })
 
     const failed = sources.filter(x => x.status === 'error').length
     if (logId) await supa.from('cifso_index_refresh_log').update({ finished_at: new Date().toISOString(), status: failed === sources.length ? 'error' : 'ok', period, series_upserted: upserted, dimensions_json: { ...dimSummary, byGrade }, sources_json: sources, error: failed ? `${failed} source(s) en erreur` : null }).eq('id', logId)

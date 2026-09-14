@@ -6123,7 +6123,9 @@
       "ebitdaMarginPlaceholder": "Bv. 18",
       "ebitdaMarginHint": "Optioneel. Maakt een EV/EBITDA-controle mogelijk naast de omzetmultiple.",
       "industry": "Industrie van de organisatie",
-      "industryHint": "Bepaalt de referentie-marktmultiple die op uw range wordt toegepast (5 CIFSO-industrieën)."
+      "industryHint": "Bepaalt de referentie-marktmultiple die op uw range wordt toegepast (5 CIFSO-industrieën).",
+      "vertical": "Vertical",
+      "verticalHint": "Verfijnt de hierboven gekozen industrie. Voedt anoniem de benchmarkdatabase van de Index (nooit uw naam of e-mail)."
     },
     "code": {
       "title": "Codekwaliteit",
@@ -6326,7 +6328,8 @@
       "disclaimerCta": "Start een officiële certificering",
       "ctaContact": "Contacteer een adviseur",
       "industryLabel": "Industrie",
-      "industryAdjustedNote": "multiple aangepast per industrie"
+      "industryAdjustedNote": "multiple aangepast per industrie",
+      "ctaSeeIndex": "Mijn positie in de Index bekijken"
     },
     "marketContext": {
       "label": "Marktcontext 2026",
@@ -6490,16 +6493,16 @@
           "key": "free",
           "name": "Vrije toegang",
           "price": "Gratis",
-          "badge": "Illustratief",
-          "desc": "Een eerste lezing om uw organisatie te positioneren.",
+          "badge": "",
+          "desc": "Een eerste lezing om het model te begrijpen.",
           "features": [
-            "Vrije schatting in vijftien minuten",
+            "Illustratieve testbasis in vijftien minuten",
             "Geschatte grade en score op 100",
             "Brede waarderingsbandbreedte",
-            "Eén mediane multiple per industrie, als voorproef"
+            "Eén mediane multiple per industrie"
           ],
-          "cta": "Schatting starten",
-          "href": "#estimation"
+          "cta": "Test starten",
+          "href": "/valuation/index"
         },
         {
           "key": "index",
@@ -6726,6 +6729,55 @@
         "dimension_uplift": "Verschil in waarderingsmultiple tussen een organisatie met grade B en een met grade AAA, per CIFSO-dimensie."
       },
       "unitLabel": "Eenheid"
+    },
+    "indexTest": {
+      "meta": {
+        "title": "Test uw positie in de CIFSO Valuation Index | Aegryn",
+        "desc": "Beantwoord de vijfdimensionale CIFSO-vragenlijst en test vervolgens uw positie in de CIFSO Valuation Index — echte filters, deels vervaagde data, preview vóór abonnement."
+      },
+      "hero": {
+        "label": "CIFSO VALUATION INDEX · TEST",
+        "titleStep2": "Uw positie\nin de Index.",
+        "descStep2": "Filter op industrie en vertical, vergelijk uw grade met de marktranges. Volledige data blijft voorbehouden aan abonnees."
+      },
+      "stepLabel1": "Stap 1 · Vragenlijst",
+      "stepLabel2": "Stap 2 · Uw Index",
+      "tabs": [
+        "Marktmultiples",
+        "CIFSO-organisatiescore",
+        "Aangepaste waardering"
+      ],
+      "tabsSubtitle": [
+        "EV/Omzet- en EV/EBITDA-multiples geaggregeerd per industrie en vertical.",
+        "Mediane score per dimensie C, I, F, S, O onder gecertificeerde CIFSO 5000-organisaties.",
+        "Marktmultiple aangepast aan de CIFSO-grade van de geselecteerde industrie."
+      ],
+      "filtersLabel": "Filters",
+      "filterIndustry": "Industrie",
+      "filterVertical": "Vertical",
+      "filterAll": "Alle verticals",
+      "youAreHere": "U bent hier",
+      "columnsMarket": [
+        "Industrie / Vertical",
+        "EV/Omzet (P25 · Mediaan · P75)",
+        "EV/EBITDA",
+        "Steekproef"
+      ],
+      "columnsCifso": [
+        "CIFSO-dimensie",
+        "Mediane score /100",
+        "Multiple-verschil B → AAA",
+        "Steekproef"
+      ],
+      "columnsValuation": [
+        "Industrie",
+        "Mediane EV/Omzet",
+        "Multiple bij score 60",
+        "Multiple bij score 40 — 80"
+      ],
+      "unlockTitle": "Dit is een gedeeltelijke preview.",
+      "unlockDesc": "Vervaagde waarden, detail per vertical en volledige export zijn voorbehouden aan Index-abonnees.",
+      "waitlistCta": "Aansluiten bij de wachtlijst voor het volledige abonnement"
     }
   },
   "transactionSubmit": {

@@ -6108,7 +6108,9 @@
       "ebitdaMarginPlaceholder": "z. B. 18",
       "ebitdaMarginHint": "Optional. Ermöglicht eine EV/EBITDA-Kontrolle neben dem Umsatzmultiplikator.",
       "industry": "Branche der Organisation",
-      "industryHint": "Bestimmt den Referenz-Marktmultiplikator, der auf Ihre Spanne angewendet wird (5 CIFSO-Branchen)."
+      "industryHint": "Bestimmt den Referenz-Marktmultiplikator, der auf Ihre Spanne angewendet wird (5 CIFSO-Branchen).",
+      "vertical": "Vertical",
+      "verticalHint": "Verfeinert die oben gewählte Branche. Speist anonym die Benchmark-Datenbank des Index (nie Ihr Name oder Ihre E-Mail)."
     },
     "code": {
       "title": "Codequalität",
@@ -6311,7 +6313,8 @@
       "disclaimerCta": "Offizielle Zertifizierung starten",
       "ctaContact": "Einen Berater kontaktieren",
       "industryLabel": "Branche",
-      "industryAdjustedNote": "Multiplikator branchenbereinigt"
+      "industryAdjustedNote": "Multiplikator branchenbereinigt",
+      "ctaSeeIndex": "Meine Position im Index ansehen"
     },
     "marketContext": {
       "label": "Marktkontext 2026",
@@ -6475,16 +6478,16 @@
           "key": "free",
           "name": "Freier Zugang",
           "price": "Kostenlos",
-          "badge": "Illustrativ",
-          "desc": "Eine erste Einordnung Ihrer Organisation.",
+          "badge": "",
+          "desc": "Eine erste Einordnung, um das Modell zu verstehen.",
           "features": [
-            "Freie Schätzung in fünfzehn Minuten",
+            "Illustrative Testbasis in fünfzehn Minuten",
             "Geschätzter Grade und Score von 100",
             "Breite Bewertungsspanne",
-            "Ein Median-Multiplikator je Branche als Vorschau"
+            "Ein Median-Multiplikator je Branche"
           ],
-          "cta": "Schätzung starten",
-          "href": "#estimation"
+          "cta": "Test starten",
+          "href": "/valuation/index"
         },
         {
           "key": "index",
@@ -6711,6 +6714,55 @@
         "dimension_uplift": "Bewertungsmultiplikator-Unterschied zwischen einer B- und einer AAA-bewerteten Organisation, je CIFSO-Dimension."
       },
       "unitLabel": "Einheit"
+    },
+    "indexTest": {
+      "meta": {
+        "title": "Testen Sie Ihre Position im CIFSO Valuation Index | Aegryn",
+        "desc": "Beantworten Sie den fünfdimensionalen CIFSO-Fragebogen und testen Sie anschließend Ihre Position im CIFSO Valuation Index — echte Filter, teilweise unscharfe Daten, Vorschau vor dem Abonnement."
+      },
+      "hero": {
+        "label": "CIFSO VALUATION INDEX · TEST",
+        "titleStep2": "Ihre Position\nim Index.",
+        "descStep2": "Filtern Sie nach Branche und Vertical, vergleichen Sie Ihren Grade mit den Marktspannen. Vollständige Daten bleiben Abonnenten vorbehalten."
+      },
+      "stepLabel1": "Schritt 1 · Fragebogen",
+      "stepLabel2": "Schritt 2 · Ihr Index",
+      "tabs": [
+        "Marktmultiplikatoren",
+        "CIFSO-Organisationsscore",
+        "Angepasste Bewertung"
+      ],
+      "tabsSubtitle": [
+        "EV/Umsatz- und EV/EBITDA-Multiplikatoren, aggregiert nach Branche und Vertical.",
+        "Median-Score je Dimension C, I, F, S, O unter zertifizierten CIFSO-5000-Organisationen.",
+        "Marktmultiplikator angepasst an den CIFSO-Grade der ausgewählten Branche."
+      ],
+      "filtersLabel": "Filter",
+      "filterIndustry": "Branche",
+      "filterVertical": "Vertical",
+      "filterAll": "Alle Verticals",
+      "youAreHere": "Sie sind hier",
+      "columnsMarket": [
+        "Branche / Vertical",
+        "EV/Umsatz (P25 · Median · P75)",
+        "EV/EBITDA",
+        "Stichprobe"
+      ],
+      "columnsCifso": [
+        "CIFSO-Dimension",
+        "Median-Score /100",
+        "Multiplikator-Abstand B → AAA",
+        "Stichprobe"
+      ],
+      "columnsValuation": [
+        "Branche",
+        "Median EV/Umsatz",
+        "Multiplikator bei Score 60",
+        "Multiplikator bei Score 40 — 80"
+      ],
+      "unlockTitle": "Dies ist eine Teilvorschau.",
+      "unlockDesc": "Unscharfe Werte, Detail je Vertical und vollständiger Export sind Index-Abonnenten vorbehalten.",
+      "waitlistCta": "Der Warteliste für das vollständige Abonnement beitreten"
     }
   },
   "transactionSubmit": {

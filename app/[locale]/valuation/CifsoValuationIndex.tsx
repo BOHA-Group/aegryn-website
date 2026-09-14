@@ -5,12 +5,12 @@ import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import {
   ArrowUpRight, CheckCircle2, TrendingUp, Building2,
-  Landmark, Users, AlertCircle, Lock, Check,
+  Landmark, Users, Lock, Check,
 } from 'lucide-react'
 import { CifsoChart } from './CifsoChart'
-import ValuationCalculator from './ValuationCalculator'
 import IndexBenchmarks, { IndexFaq } from './IndexBenchmarks'
 import IndexSubscriberPreview from './IndexSubscriberPreview'
+import WaitlistForm from './WaitlistForm'
 
 type Plan = { key: string; name: string; price: string; badge: string; desc: string; features: string[]; cta: string; href: string }
 type Freemium = {
@@ -68,69 +68,6 @@ type ExampleDim = {
 
 const DIM_COLORS: Record<string, string> = {
   C: '#4A90D9', I: '#9B59B6', F: '#2ECC71', S: '#E74C3C', O: '#F39C12',
-}
-
-/* ─── Waitlist form ───────────────────────────────────────── */
-function WaitlistForm() {
-  const t      = useTranslations('valuation.comingSoonBanner')
-  const locale = useLocale()
-  const [email, setEmail]     = useState('')
-  const [status, setStatus]   = useState<'idle'|'loading'|'ok'|'err'>('idle')
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!email.includes('@')) return
-    setStatus('loading')
-    try {
-      const res = await fetch('/api/valuation/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          org_type: 'unknown',
-          locale,
-          source_url: window.location.href,
-        }),
-      })
-      setStatus(res.ok ? 'ok' : 'err')
-    } catch {
-      setStatus('err')
-    }
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mt-2">
-      {status === 'ok' ? (
-        <div className="flex items-center gap-2 text-emerald-700 font-mono text-[12px]">
-          <CheckCircle2 size={14} />
-          {t('ctaSuccess')}
-        </div>
-      ) : (
-        <>
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder={t('ctaPlaceholder')}
-            className="flex-1 min-w-0 rounded-lg border border-ag-border bg-ag-off-white text-ag-black placeholder:text-ag-gray-light px-4 py-3 font-sans text-[13px] focus:outline-none focus:border-ag-navy transition-colors"
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="shrink-0 rounded-lg bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3 hover:bg-ag-navy/90 transition-colors disabled:opacity-60"
-          >
-            {status === 'loading' ? '...' : t('ctaSubmit')}
-          </button>
-        </>
-      )}
-      {status === 'err' && (
-        <p className="text-red-600 font-sans text-[11px] flex items-center gap-1.5">
-          <AlertCircle size={12} /> {t('ctaError')}
-        </p>
-      )}
-    </form>
-  )
 }
 
 /* ─── Market table ────────────────────────────────────────── */
@@ -317,20 +254,9 @@ export default function CifsoValuationIndex() {
       {/* ── MOTEUR DE BENCHMARKS : chiffres clés, barres par cluster, couverture, métriques, FAQ ── */}
       <IndexBenchmarks />
 
-      {/* ── ESTIMATION LIBRE : fourchette large, benchmarks partiels ── */}
-      <section id="estimation" className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-10 max-w-2xl">
-            <div className="flex items-center gap-3 mb-4">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{fm.estimateLabel}</p>
-              <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{fm.illustrativeLabel}</span>
-            </div>
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.estimateTitle}</h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.estimateDesc}</p>
-          </div>
-          <ValuationCalculator freemiumNote={fm.estimateNote} illustrative={fm.illustrativeNote} locked={{ title: fm.lockedTitle, desc: fm.lockedDesc, cta: fm.lockedCta, soon: fm.comingSoonLabel }} />
-        </div>
-      </section>
+      {/* Le test gratuit (5 dimensions CIFSO + positionnement Index) vit désormais sur sa
+          propre page dédiée /valuation/index (étape 1 : formulaire, étape 2 : vue Index
+          testable floutée). Le plan « Accès libre » ci-dessus y renvoie directement. */}
 
       {/* ── GRAPHIQUE CIFSO SCORE × MULTIPLE ─────────── */}
       <section className="py-24 px-6 border-t border-ag-border bg-ag-navy">

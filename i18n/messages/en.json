@@ -6108,7 +6108,9 @@
       "ebitdaMarginPlaceholder": "e.g. 18",
       "ebitdaMarginHint": "Optional. Enables an EV/EBITDA check alongside the revenue multiple.",
       "industry": "Organisation's industry",
-      "industryHint": "Determines the reference market multiple applied to your range (5 CIFSO industries)."
+      "industryHint": "Determines the reference market multiple applied to your range (5 CIFSO industries).",
+      "vertical": "Vertical",
+      "verticalHint": "Refines the industry chosen above. Anonymously feeds the Index benchmark database (never your name or email)."
     },
     "code": {
       "title": "Code quality",
@@ -6311,7 +6313,8 @@
       "disclaimerCta": "Start an official certification",
       "ctaContact": "Contact an advisor",
       "industryLabel": "Industry",
-      "industryAdjustedNote": "multiple adjusted by industry"
+      "industryAdjustedNote": "multiple adjusted by industry",
+      "ctaSeeIndex": "See my position in the Index"
     },
     "marketContext": {
       "label": "Market context 2026",
@@ -6475,16 +6478,16 @@
           "key": "free",
           "name": "Free access",
           "price": "Free",
-          "badge": "Illustrative",
-          "desc": "A first reading to position your organisation.",
+          "badge": "",
+          "desc": "A first reading to understand the model.",
           "features": [
-            "Free estimate in fifteen minutes",
+            "Illustrative test base in fifteen minutes",
             "Estimated grade and score out of 100",
             "Wide valuation range",
-            "One median multiple per industry, as a teaser"
+            "One median multiple per industry"
           ],
-          "cta": "Start the estimate",
-          "href": "#estimation"
+          "cta": "Start the test",
+          "href": "/valuation/index"
         },
         {
           "key": "index",
@@ -6711,6 +6714,55 @@
         "dimension_uplift": "Valuation multiple gap between a B-rated and an AAA-rated organisation, by CIFSO dimension."
       },
       "unitLabel": "Unit"
+    },
+    "indexTest": {
+      "meta": {
+        "title": "Test your position in the CIFSO Valuation Index | Aegryn",
+        "desc": "Answer the five-dimension CIFSO questionnaire, then test your position in the CIFSO Valuation Index — real filters, partially blurred data, preview before subscribing."
+      },
+      "hero": {
+        "label": "CIFSO VALUATION INDEX · TEST",
+        "titleStep2": "Your position\nin the Index.",
+        "descStep2": "Filter by industry and vertical, compare your grade to market ranges. Full data remains reserved for subscribers."
+      },
+      "stepLabel1": "Step 1 · Questionnaire",
+      "stepLabel2": "Step 2 · Your Index",
+      "tabs": [
+        "Market multiples",
+        "CIFSO organisational score",
+        "Adjusted valuation"
+      ],
+      "tabsSubtitle": [
+        "EV/Revenue and EV/EBITDA multiples aggregated by industry and vertical.",
+        "Median score per dimension C, I, F, S, O among CIFSO 5000 certified organisations.",
+        "Market multiple adjusted to the CIFSO grade of the selected industry."
+      ],
+      "filtersLabel": "Filters",
+      "filterIndustry": "Industry",
+      "filterVertical": "Vertical",
+      "filterAll": "All verticals",
+      "youAreHere": "You are here",
+      "columnsMarket": [
+        "Industry / Vertical",
+        "EV/Revenue (P25 · Median · P75)",
+        "EV/EBITDA",
+        "Sample"
+      ],
+      "columnsCifso": [
+        "CIFSO dimension",
+        "Median score /100",
+        "Multiple gap B → AAA",
+        "Sample"
+      ],
+      "columnsValuation": [
+        "Industry",
+        "Median EV/Revenue",
+        "Multiple at score 60",
+        "Multiple at score 40 — 80"
+      ],
+      "unlockTitle": "This is a partial preview.",
+      "unlockDesc": "Blurred values, per-vertical detail and full export are reserved for Index subscribers.",
+      "waitlistCta": "Join the full subscription waitlist"
     }
   },
   "transactionSubmit": {
