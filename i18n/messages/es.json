@@ -258,12 +258,14 @@
       "subblink": {
         "badge": "Inteligencia contractual",
         "tagline": "Nombre público: subblink",
-        "description": "Analiza todos sus contratos en segundos con IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas: todo identificado en lenguaje claro. Licenciable en marca blanca para despachos de abogados, family offices y departamentos jurídicos."
+        "description": "Analiza todos sus contratos en segundos con IA calibrada para el derecho suizo y europeo. Riesgos, cláusulas críticas, obligaciones ocultas: todo identificado en lenguaje claro. Licenciable en marca blanca para despachos de abogados, family offices y departamentos jurídicos.",
+        "name": "Análisis riesgos contratos"
       },
       "kryv": {
         "badge": "Integridad del código IA",
         "tagline": "Nombre público: kryv",
-        "description": "Protocolo blockchain de certificación de la integridad del código IA. El SSL del código artificial: cada despliegue, sellado de forma inmutable."
+        "description": "Protocolo blockchain de certificación de la integridad del código IA. El SSL del código artificial: cada despliegue, sellado de forma inmutable.",
+        "name": "Integridad del código IA"
       },
       "neediu": {
         "badge": "B2C · Marketplace",
@@ -283,18 +285,21 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Data room segura para transacciones de activos",
-        "description": "Infraestructura de data room activa, utilizada para las transacciones de activos. RLS automático, watermarking dinámico, audit trail completo. Licenciable a boutiques M&A e intermediarios en transacciones que deseen un entorno seguro sin construirlo."
+        "description": "Infraestructura de data room activa, utilizada para las transacciones de activos. RLS automático, watermarking dinámico, audit trail completo. Licenciable a boutiques M&A e intermediarios en transacciones que deseen un entorno seguro sin construirlo.",
+        "name": "Data room transactions"
       },
       "cifso": {
         "badge": "Protocolo · Certificación",
-        "tagline": "Protocolo algorítmico de certificación de activos",
-        "description": "Protocolo CIFSO en producción, utilizado para certificar activos propios y de clientes. Cubre 5 dimensiones: Capital, Integridad, Finanzas, Seguridad, Organización.",
-        "visitPage": "Ver página de certificación"
+        "tagline": "Nombre: Certification CIFSO 5000",
+        "description": "Protocolo de certificación independiente que evalúa y documenta el valor de una organización en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad y Soberanía, Organización. Produce un grade oficial (★ a B), una puntuación sobre 100 y un certificado verificable, válido durante doce meses.\n\nUtilizado para los activos propios de Aegryn y los mandatos de sus clientes. Diseñado para ser oponible frente a un inversor, un banco o un adquirente institucional.",
+        "visitPage": "Ver página de certificación",
+        "name": "Certificación de valorización de activos"
       },
       "kyb": {
         "badge": "Identidad · KYB/KYC",
         "tagline": "Onboarding empresarial y verificación de identidad",
-        "description": "Motor KYB/KYC activo para el onboarding de clientes y la verificación de contrapartes. Verificación de identidad, KYB, beneficiarios efectivos, sanciones y credenciales."
+        "description": "Motor KYB/KYC activo para el onboarding de clientes y la verificación de contrapartes. Verificación de identidad, KYB, beneficiarios efectivos, sanciones y credenciales.",
+        "name": "Verificación de identidad"
       },
       "hobconnect": {
         "badge": "B2C · Social",
@@ -308,9 +313,10 @@
       },
       "valuation": {
         "badge": "Valoración · CIFSO",
-        "tagline": "CIFSO Valuation Index. Benchmark valor de activos",
-        "description": "Herramienta de valoración de activos empresariales en las cinco dimensiones CIFSO: Capital, Finanzas, Integridad, Seguridad, Organización. Posiciona objetivamente el valor de una organización antes de cualquier decisión de venta, financiación o sucesión.",
-        "visitPage": "Ver página"
+        "tagline": "Nombre: CIFSO Valuation Index",
+        "description": "Motor de benchmark que cruza los múltiplos de valorización de empresas en Europa (por industria y vertical) con el score CIFSO en cinco dimensiones. Produce un rango de valorización ajustado a la madurez real del activo, no solo a sus métricas financieras.\n\nDos niveles de acceso: estimación ilustrativa, suscripción a la base de datos. Objetivo: directivos, fondos, bancos, asesores de M&A y adquirentes institucionales.",
+        "visitPage": "Ver página",
+        "name": "Benchmark de valorización de activos"
       }
     }
   },

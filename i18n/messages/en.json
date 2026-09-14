@@ -258,12 +258,14 @@
       "subblink": {
         "badge": "Contract intelligence",
         "tagline": "Public name: subblink",
-        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Licensable as white-label for law firms, family offices and legal departments."
+        "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Licensable as white-label for law firms, family offices and legal departments.",
+        "name": "Contract Risk Analysis"
       },
       "kryv": {
         "badge": "AI code integrity",
         "tagline": "Public name: kryv",
-        "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code: every deployment, immutably sealed."
+        "description": "Blockchain protocol for certifying the integrity of AI code. The SSL of artificial code: every deployment, immutably sealed.",
+        "name": "AI Code Integrity"
       },
       "neediu": {
         "badge": "B2C · Marketplace",
@@ -283,18 +285,21 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Secure data room for asset transactions",
-        "description": "Active data room infrastructure, used for asset transactions. Automatic RLS, dynamic watermarking, full audit trail. Licensable to M&A boutiques and transaction intermediaries who want a secure environment without building their own."
+        "description": "Active data room infrastructure, used for asset transactions. Automatic RLS, dynamic watermarking, full audit trail. Licensable to M&A boutiques and transaction intermediaries who want a secure environment without building their own.",
+        "name": "Data room transactions"
       },
       "cifso": {
         "badge": "Protocol · Certification",
-        "tagline": "Algorithmic asset-certification protocol",
-        "description": "CIFSO protocol in production, used to certify proprietary and client assets. Covers 5 dimensions: Capital, Integrity, Finance, Security, Organisation.",
-        "visitPage": "View certification page"
+        "tagline": "Name: Certification CIFSO 5000",
+        "description": "Independent certification protocol that assesses and documents an organisation's value across five dimensions: Capital, Integrity, Finance, Security & Sovereignty, Organisation. Produces an official grade (★ to B), a score out of 100 and a verifiable certificate, valid for twelve months.\n\nUsed for Aegryn's own assets and its clients' mandates. Designed to hold up against an investor, a bank or an institutional acquirer.",
+        "visitPage": "View certification page",
+        "name": "Asset Valuation Certification"
       },
       "kyb": {
         "badge": "Identity · KYB/KYC",
         "tagline": "Business onboarding and identity verification",
-        "description": "Active KYB/KYC engine used for client onboarding and counterparty verification. Identity verification, KYB, beneficial owners, sanctions and credentials."
+        "description": "Active KYB/KYC engine used for client onboarding and counterparty verification. Identity verification, KYB, beneficial owners, sanctions and credentials.",
+        "name": "Identity Verification"
       },
       "hobconnect": {
         "badge": "B2C · Social",
@@ -308,9 +313,10 @@
       },
       "valuation": {
         "badge": "Valuation · CIFSO",
-        "tagline": "CIFSO Valuation Index. Asset value benchmark",
-        "description": "Company asset valuation tool across the five CIFSO dimensions: Capital, Finance, Integrity, Security, Organisation. Objectively positions the value of an organisation ahead of any sale, financing or succession decision.",
-        "visitPage": "View page"
+        "tagline": "Name: CIFSO Valuation Index",
+        "description": "Benchmark engine that cross-references company valuation multiples across Europe (by industry and vertical) with the CIFSO score on five dimensions. Produces a valuation range adjusted to the asset's real maturity, not just its financial metrics.\n\nTwo access levels: illustrative estimate, database subscription. Target: executives, funds, banks, M&A advisors and institutional acquirers.",
+        "visitPage": "View page",
+        "name": "Asset Valuation Benchmark"
       }
     }
   },

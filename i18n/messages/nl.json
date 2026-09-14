@@ -258,12 +258,14 @@
       "subblink": {
         "badge": "Contractintelligentie",
         "tagline": "Publieke naam: subblink",
-        "description": "Analyseert al uw contracten in seconden met AI gekalibreerd voor Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles geïdentificeerd in begrijpelijke taal. Licentieerbaar als white-label voor advocatenkantoren, family offices en juridische afdelingen."
+        "description": "Analyseert al uw contracten in seconden met AI gekalibreerd voor Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles geïdentificeerd in begrijpelijke taal. Licentieerbaar als white-label voor advocatenkantoren, family offices en juridische afdelingen.",
+        "name": "Contractuele risicoanalyse"
       },
       "kryv": {
         "badge": "AI-code-integriteit",
         "tagline": "Publieke naam: kryv",
-        "description": "Blockchain-protocol voor certificering van de integriteit van AI-code. De SSL van kunstmatige code: elke implementatie, onveranderlijk verzegeld."
+        "description": "Blockchain-protocol voor certificering van de integriteit van AI-code. De SSL van kunstmatige code: elke implementatie, onveranderlijk verzegeld.",
+        "name": "AI-code-integriteit"
       },
       "neediu": {
         "badge": "B2C · Marktplaats",
@@ -283,18 +285,21 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Beveiligde data room voor assettransacties",
-        "description": "Actieve data room-infrastructuur, gebruikt voor assettransacties. Automatische RLS, dynamisch watermerk, volledig auditspoor. Licentieerbaar voor M&A-boutiques en transactietussenpersonen die een veilige omgeving willen zonder zelf te bouwen."
+        "description": "Actieve data room-infrastructuur, gebruikt voor assettransacties. Automatische RLS, dynamisch watermerk, volledig auditspoor. Licentieerbaar voor M&A-boutiques en transactietussenpersonen die een veilige omgeving willen zonder zelf te bouwen.",
+        "name": "Data room transactions"
       },
       "cifso": {
         "badge": "Protocol · Certificering",
-        "tagline": "Algoritmisch protocol voor activacertificering",
-        "description": "CIFSO-protocol in productie voor de certificering van eigen en klantassets. Omvat 5 dimensies: Kapitaal, Integriteit, Financiën, Veiligheid, Organisatie.",
-        "visitPage": "Certificeringspagina bekijken"
+        "tagline": "Naam: Certification CIFSO 5000",
+        "description": "Onafhankelijk certificeringsprotocol dat de waarde van een organisatie beoordeelt en documenteert op vijf dimensies: Kapitaal, Integriteit, Financiën, Veiligheid & Soevereiniteit, Organisatie. Levert een officiële grade (★ tot B), een score op 100 en een verifieerbaar certificaat, twaalf maanden geldig.\n\nGebruikt voor de eigen activa van Aegryn en de mandaten van zijn klanten. Ontworpen om stand te houden tegenover een investeerder, een bank of een institutionele overnemer.",
+        "visitPage": "Certificeringspagina bekijken",
+        "name": "Certificering van activawaardering"
       },
       "kyb": {
         "badge": "Identiteit · KYB/KYC",
         "tagline": "Zakelijke onboarding en identiteitsverificatie",
-        "description": "Actieve KYB/KYC-engine voor klant-onboarding en verificatie van tegenpartijen. Identiteitsverificatie, KYB, uiteindelijk begunstigden, sancties en credentials."
+        "description": "Actieve KYB/KYC-engine voor klant-onboarding en verificatie van tegenpartijen. Identiteitsverificatie, KYB, uiteindelijk begunstigden, sancties en credentials.",
+        "name": "Identiteitsverificatie"
       },
       "hobconnect": {
         "badge": "B2C · Sociaal",
@@ -308,9 +313,10 @@
       },
       "valuation": {
         "badge": "Waardering · CIFSO",
-        "tagline": "CIFSO Valuation Index. Activa-waarde benchmark",
-        "description": "Waarderingstool voor bedrijfsassets over de vijf CIFSO-dimensies: Kapitaal, Financiën, Integriteit, Veiligheid, Organisatie. Positioneert objectief de waarde van een organisatie vóór elke verkoop-, financierings- of opvolgingsbeslissing.",
-        "visitPage": "Pagina bekijken"
+        "tagline": "Naam: CIFSO Valuation Index",
+        "description": "Benchmarkmotor die de waarderingsmultiples van Europese bedrijven (per sector en verticaal) combineert met de CIFSO-score op vijf dimensies. Levert een waarderingsrange die is aangepast aan de werkelijke volwassenheid van het actief, niet alleen aan de financiële cijfers.\n\nTwee toegangsniveaus: illustratieve schatting, database-abonnement. Doelgroep: bestuurders, fondsen, banken, M&A-adviseurs en institutionele overnemers.",
+        "visitPage": "Pagina bekijken",
+        "name": "Benchmark voor activawaardering"
       }
     }
   },

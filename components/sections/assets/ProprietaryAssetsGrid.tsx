@@ -10,7 +10,7 @@ type PropCategory = 'all' | 'ai' | 'transactions' | 'valuation' | 'identity'
 
 interface PropAsset {
   id:       string
-  name:     string
+  nameKey:  string
   url:      string | null
   badgeKey: string
   taglineKey: string
@@ -28,7 +28,7 @@ interface PropAsset {
 const PROP_ASSETS: PropAsset[] = [
   {
     id:          'subblink',
-    name:        'Analyse risques contrats',
+    nameKey:     'subblink.name',
     url:         'https://subblink.com',
     badgeKey:    'subblink.badge',
     taglineKey:  'subblink.tagline',
@@ -41,7 +41,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:          'kryv',
-    name:        'Intégrité du code IA',
+    nameKey:     'kryv.name',
     url:         null,
     badgeKey:    'kryv.badge',
     taglineKey:  'kryv.tagline',
@@ -54,7 +54,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:          'dataroom',
-    name:        'Data room transactions',
+    nameKey:     'dataroom.name',
     url:         null,
     badgeKey:    'dataroom.badge',
     taglineKey:  'dataroom.tagline',
@@ -67,7 +67,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:               'valuation',
-    name:             'Benchmark de valorisation',
+    nameKey:          'valuation.name',
     url:              null,
     badgeKey:         'valuation.badge',
     taglineKey:       'valuation.tagline',
@@ -81,7 +81,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:               'cifso',
-    name:             'Certification CIFSO 5000',
+    nameKey:          'cifso.name',
     url:              null,
     badgeKey:         'cifso.badge',
     taglineKey:       'cifso.tagline',
@@ -94,7 +94,7 @@ const PROP_ASSETS: PropAsset[] = [
   },
   {
     id:          'kyb',
-    name:        "Vérification d'identité",
+    nameKey:     'kyb.name',
     url:         null,
     badgeKey:    'kyb.badge',
     taglineKey:  'kyb.tagline',
@@ -188,7 +188,7 @@ export function ProprietaryAssetsGrid() {
                     </p>
                   </div>
                   <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
-                    {asset.name}
+                    {tItems(asset.nameKey)}
                   </h2>
                 </div>
                 {/* Publisher badge */}
@@ -218,9 +218,11 @@ export function ProprietaryAssetsGrid() {
               </p>
 
               {/* Description */}
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
-                {tItems(asset.descKey)}
-              </p>
+              <div className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1 space-y-2">
+                {tItems(asset.descKey).split('\n\n').map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
 
               {/* Actions */}
               <div className="flex items-center gap-4 pt-2 border-t border-ag-border">

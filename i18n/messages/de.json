@@ -258,12 +258,14 @@
       "subblink": {
         "badge": "Vertragsanalyse",
         "tagline": "Öffentlicher Name: subblink",
-        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Als White-Label für Anwaltskanzleien, Family Offices und Rechtsabteilungen lizenzierbar."
+        "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Als White-Label für Anwaltskanzleien, Family Offices und Rechtsabteilungen lizenzierbar.",
+        "name": "Vertragsrisikoanalyse"
       },
       "kryv": {
         "badge": "KI-Code-Integrität",
         "tagline": "Öffentlicher Name: kryv",
-        "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes: jede Bereitstellung, unveränderlich versiegelt."
+        "description": "Blockchain-Protokoll zur Zertifizierung der Integrität von KI-Code. Das SSL des künstlichen Codes: jede Bereitstellung, unveränderlich versiegelt.",
+        "name": "KI-Code-Integrität"
       },
       "neediu": {
         "badge": "B2C · Marktplatz",
@@ -283,18 +285,21 @@
       "dataroom": {
         "badge": "Data Room · M&A",
         "tagline": "Sicherer Data Room für Asset-Transaktionen",
-        "description": "Aktive Data-Room-Infrastruktur, für Asset-Transaktionen genutzt. Automatisches RLS, dynamisches Wasserzeichen, vollständiger Audit-Trail. Lizenzierbar für M&A-Boutiquen und Transaktionsvermittler, die eine sichere Umgebung ohne eigene Entwicklung wünschen."
+        "description": "Aktive Data-Room-Infrastruktur, für Asset-Transaktionen genutzt. Automatisches RLS, dynamisches Wasserzeichen, vollständiger Audit-Trail. Lizenzierbar für M&A-Boutiquen und Transaktionsvermittler, die eine sichere Umgebung ohne eigene Entwicklung wünschen.",
+        "name": "Data room transactions"
       },
       "cifso": {
         "badge": "Protokoll · Zertifizierung",
-        "tagline": "Algorithmisches Asset-Zertifizierungsprotokoll",
-        "description": "CIFSO-Protokoll in Produktion zur Zertifizierung eigener und Kundenvermögenswerte. Umfasst 5 Dimensionen: Kapital, Integrität, Finanzen, Sicherheit, Organisation.",
-        "visitPage": "Zertifizierungsseite ansehen"
+        "tagline": "Name: Certification CIFSO 5000",
+        "description": "Unabhängiges Zertifizierungsprotokoll, das den Wert einer Organisation auf fünf Dimensionen bewertet und dokumentiert: Kapital, Integrität, Finanzen, Sicherheit & Souveränität, Organisation. Liefert einen offiziellen Grade (★ bis B), eine Punktzahl von 100 und ein überprüfbares Zertifikat, gültig für zwölf Monate.\n\nEingesetzt für die eigenen Vermögenswerte von Aegryn und die Mandate seiner Kunden. Konzipiert, um gegenüber einem Investor, einer Bank oder einem institutionellen Erwerber Bestand zu haben.",
+        "visitPage": "Zertifizierungsseite ansehen",
+        "name": "Zertifizierung der Vermögensbewertung"
       },
       "kyb": {
         "badge": "Identität · KYB/KYC",
         "tagline": "Unternehmens-Onboarding und Identitätsprüfung",
-        "description": "Aktive KYB/KYC-Engine für das Kunden-Onboarding und die Überprüfung von Gegenparteien. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Credentials."
+        "description": "Aktive KYB/KYC-Engine für das Kunden-Onboarding und die Überprüfung von Gegenparteien. Identitätsprüfung, KYB, wirtschaftlich Berechtigte, Sanktionen und Credentials.",
+        "name": "Identitätsprüfung"
       },
       "hobconnect": {
         "badge": "B2C · Sozial",
@@ -308,9 +313,10 @@
       },
       "valuation": {
         "badge": "Bewertung · CIFSO",
-        "tagline": "CIFSO Valuation Index. Vermögenswert-Benchmark",
-        "description": "Bewertungstool für Unternehmensassets über die fünf CIFSO-Dimensionen: Kapital, Finanzen, Integrität, Sicherheit, Organisation. Objektive Positionierung des Unternehmenswerts vor jeder Verkaufs-, Finanzierungs- oder Nachfolgeentscheidung.",
-        "visitPage": "Seite anzeigen"
+        "tagline": "Name: CIFSO Valuation Index",
+        "description": "Benchmark-Engine, die die Bewertungsmultiplikatoren europäischer Unternehmen (nach Branche und Vertikal) mit dem CIFSO-Score auf fünf Dimensionen abgleicht. Liefert eine Bewertungsspanne, die an die tatsächliche Reife des Vermögenswerts angepasst ist, nicht nur an seine Finanzkennzahlen.\n\nZwei Zugangsstufen: illustrative Schätzung, Datenbank-Abonnement. Zielgruppe: Führungskräfte, Fonds, Banken, M&A-Berater und institutionelle Erwerber.",
+        "visitPage": "Seite anzeigen",
+        "name": "Benchmark für Vermögensbewertung"
       }
     }
   },
