@@ -51,13 +51,14 @@ function ValuationTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Email','Grade','Score /100','ARR','Valorisation','Statut','Locale',''].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Email','Industrie','Grade','Score /100','ARR','Valorisation','Statut','Locale',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
           <tr key={i} className="hover:bg-gray-50">
             <Td mono>{fmtDate(r.created_at)}</Td>
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td small>{String(r.industry ?? '—')}</Td>
             <Td><span className={`px-2 py-0.5 text-[11px] font-bold ${gradeColor(String(r.estimated_grade ?? ''))}`}>{String(r.estimated_grade ?? '—')}</span></Td>
             <Td mono>{String(r.score_total ?? '—')}</Td>
             <Td>{r.pre_revenue ? <em className="text-gray-400">pre-rev</em> : fmtEur(r.arr)}</Td>

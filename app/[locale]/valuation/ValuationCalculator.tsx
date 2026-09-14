@@ -1,7 +1,7 @@
 'use client'
 
-import { useState }        from 'react'
-import { useTranslations } from 'next-intl'
+import { useState, useEffect } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
 import Link                from 'next/link'
 import {
   ArrowUpRight, ChevronRight, ChevronLeft,
@@ -12,6 +12,9 @@ import {
   type ValuationResult,
   runValuation, fmtEur, preRevenueRange,
 } from '@/lib/valuationEngine'
+import { INDEX_CLUSTERS, type IndexLocale } from '@/lib/indexTaxonomy'
+import type { ClusterKey } from '@/lib/cifsoValuation'
+import type { IndexSnapshot } from '@/lib/cifsoIndex'
 
 /* ─── Style constants ────────────────────────────────────── */
 const inputCls  = 'w-full border border-ag-border bg-ag-white px-4 py-3 font-sans text-[13px] text-ag-black placeholder:text-ag-gray-light focus:outline-none focus:border-ag-black transition-colors'
@@ -82,8 +85,18 @@ function GradeBadge({ grade, colorClass }: { grade: string; colorClass: string }
 type LockedInfo = { title: string; desc: string; cta: string; soon?: string }
 
 export default function ValuationCalculator({ freemiumNote, illustrative, locked }: { freemiumNote?: string; illustrative?: string; locked?: LockedInfo } = {}) {
-  const t    = useTranslations('valuation')
-  const _tNav = useTranslations('nav')
+  const t      = useTranslations('valuation')
+  const _tNav  = useTranslations('nav')
+  const locale = (useLocale() as IndexLocale) ?? 'fr'
+
+  /* Facteur relatif par industrie (Index public, jamais les multiples verrouillés eux-mêmes) */
+  const [industryFactor, setIndustryFactor] = useState<Record<ClusterKey, number | null> | null>(null)
+  useEffect(() => {
+    fetch(`/api/valuation/index?locale=${locale}`)
+      .then(r => r.ok ? r.json() as Promise<IndexSnapshot> : null)
+      .then(snap => { if (snap?.industryFactor) setIndustryFactor(snap.industryFactor) })
+      .catch(() => {})
+  }, [locale])
 
   const STEPS = ['capital', 'integrity', 'finance', 'security', 'org'] as const
   type Step = typeof STEPS[number] | 'result'
@@ -113,7 +126,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
   function canAdvance(): boolean {
     if (step === 'capital')   return !!(capital.tests && capital.docs && capital.cicd && capital.techDebt && capital.deps)
     if (step === 'integrity') return !!(integrity.trademark && integrity.copyright && integrity.opensource && integrity.apiContracts && integrity.contracts && integrity.litiges)
-    if (step === 'finance')   return !!(finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
+    if (step === 'finance')   return !!(finance.industry && finance.arr !== undefined && finance.growth !== undefined && finance.churn !== undefined && finance.nrr !== undefined && finance.margin !== undefined && finance.seniority && finance.arrAudited)
     if (step === 'security')  return !!(security.pentest && security.gdpr && security.mfa && security.secrets && security.infra && security.backups && security.aiExposure)
     if (step === 'org')       return !!(org.founderDep && org.nMinus1 && org.succession && org.turnover)
     return false
@@ -131,7 +144,8 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
         security:  security  as SecurityData,
         org:       org       as OrgData,
       }
-      setResult(runValuation(input))
+      const factor = finance.industry ? industryFactor?.[finance.industry] ?? null : null
+      setResult(runValuation(input, factor))
       setStep('result')
     }
   }
@@ -174,6 +188,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
             security:  result.scores.security,
             org:       result.scores.org,
           },
+          industry:     finance.industry,
           arr:          finance.arr,
           growth_yoy:   finance.growth,
           churn_monthly: finance.churn,
@@ -345,6 +360,16 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
               <div className="flex flex-col gap-6">
                 <StepHeader title={t('finance.title')} subtitle={t('finance.subtitle')} step={3} total={5} t={t} />
 
+                <div>
+                  <label className={labelCls}>{t('finance.industry')} *</label>
+                  <RadioGroup
+                    options={INDEX_CLUSTERS.map(c => ({ key: c.key, label: c.label[locale] }))}
+                    value={finance.industry ?? ''}
+                    onChange={v => f(setFinance, 'industry', v)}
+                  />
+                  <p className={hintCls}>{t('finance.industryHint')}</p>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>{t('finance.arr')} *</label>
@@ -481,6 +506,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
             {/* STEP — RESULT */}
             {step === 'result' && result && (
               <ResultPanel result={result} finance={finance} t={t}
+                industryLabel={finance.industry ? INDEX_CLUSTERS.find(c => c.key === finance.industry)?.label[locale] ?? null : null}
                 email={email} setEmail={setEmail}
                 emailSent={emailSent} emailErr={emailErr} emailLoading={emailLoading}
                 onEmailSubmit={sendEmail} onRestart={restart}
@@ -539,10 +565,11 @@ function NavButtons({ canAdvance, onNext, showBack, onBack, nextLabel, backLabel
   )
 }
 
-function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, illustrative, locked }: {
+function ResultPanel({ result, finance, t, industryLabel, email, setEmail, emailSent, emailErr, emailLoading, onEmailSubmit, onRestart, savedLeadId, freemiumNote, illustrative, locked }: {
   result: ValuationResult
   finance: Partial<FinanceData>
   t: ReturnType<typeof useTranslations>
+  industryLabel?: string | null
   email: string; setEmail: (v: string) => void
   emailSent: boolean; emailErr: boolean; emailLoading: boolean
   onEmailSubmit: (e: React.FormEvent) => void
@@ -613,9 +640,15 @@ function ResultPanel({ result, finance, t, email, setEmail, emailSent, emailErr,
               <p className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em] leading-tight">
                 {fmtEur(range.low)} à {fmtEur(range.high)}
               </p>
-              {!locked && (
+              {!locked && finance.arr !== undefined && finance.arr > 0 && (
                 <p className="font-sans text-[11px] text-ag-gray-light">
-                  {t('result.medianLabel')} : {fmtEur(range.median)} · {t('result.multipleLabel')} : {grade.multLow}x à {grade.multHigh}x
+                  {t('result.medianLabel')} : {fmtEur(range.median)} · {t('result.multipleLabel')} : {(range.low / finance.arr).toFixed(1)}x à {(range.high / finance.arr).toFixed(1)}x
+                </p>
+              )}
+              {industryLabel && (
+                <p className="font-sans text-[11px] text-ag-gray-light">
+                  {t('result.industryLabel')} : <span className="font-semibold text-ag-black">{industryLabel}</span>
+                  {result.industryAdjusted && <span className="ml-1">({t('result.industryAdjustedNote')})</span>}
                 </p>
               )}
               {freemiumNote && (

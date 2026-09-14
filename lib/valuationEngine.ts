@@ -12,8 +12,13 @@
  *   90-100 → ★   | 75-89 → AAA | 60-74 → AA
  *   45-59  → A   | 30-44 → B   | < 30  → Non gradable
  *
- * 100% client-side — zero API calls.
+ * Scoring 100% client-side. Le multiple final peut être pondéré par un facteur
+ * industrie (industryFactor, optionnel) — mediane relative EV/Revenue du cluster
+ * choisi vs moyenne des 5 clusters, issue de l'Index public (/api/valuation/index) ;
+ * jamais les p25/p50/p75 réels, qui restent réservés aux abonnés.
  */
+
+import type { ClusterKey } from '@/lib/cifsoValuation'
 
 /* ─── Input types ────────────────────────────────────────── */
 
@@ -38,6 +43,7 @@ export interface IntegrityData {
 }
 
 export interface FinanceData {
+  industry:   ClusterKey // industrie CIFSO (5 clusters, lib/indexTaxonomy.ts) — détermine le multiple de marché appliqué
   arr:        number
   growth:     number   // YoY %
   churn:      number   // Monthly churn %
@@ -234,9 +240,11 @@ export interface ValuationResult {
   preRevenueScore: number
   weakestDim:   DimKey
   strongestDim: DimKey
+  /** true si la fourchette a été pondérée par le facteur industrie (cf. runValuation) */
+  industryAdjusted?: boolean
 }
 
-export function runValuation(input: ValuationInput): ValuationResult {
+export function runValuation(input: ValuationInput, industryFactor?: number | null): ValuationResult {
   const sc = scoreCapital(input.capital)
   const si = scoreIntegrity(input.integrity)
   const sf = scoreFinance(input.finance)
@@ -263,15 +271,21 @@ export function runValuation(input: ValuationInput): ValuationResult {
     }
   }
 
-  const low    = arr * grade.multLow
-  const high   = arr * grade.multHigh
-  const median = arr * ((grade.multLow + grade.multHigh) / 2)
+  /* Facteur industrie : borné pour ne jamais neutraliser l'effet du grade CIFSO
+     (qui reste le moteur principal), simple correction de contexte de marché.
+     Bornes larges (0.5 à 2) car l'écart réel entre industries (ex. tech vs commerce)
+     peut être significatif ; à resserrer si l'échantillon de clusters s'élargit. */
+  const factor = industryFactor != null ? Math.min(2, Math.max(0.5, industryFactor)) : 1
+  const low    = arr * grade.multLow  * factor
+  const high   = arr * grade.multHigh * factor
+  const median = arr * ((grade.multLow + grade.multHigh) / 2) * factor
 
   return {
     scores, grade,
     range: { low, high, median },
     preRevenue: false, preRevenueScore: 0,
     weakestDim, strongestDim,
+    industryAdjusted: industryFactor != null,
   }
 }
 

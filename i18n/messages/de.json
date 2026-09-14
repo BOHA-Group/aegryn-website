@@ -6106,7 +6106,9 @@
       },
       "ebitdaMargin": "EBITDA-Marge (%)",
       "ebitdaMarginPlaceholder": "z. B. 18",
-      "ebitdaMarginHint": "Optional. Ermöglicht eine EV/EBITDA-Kontrolle neben dem Umsatzmultiplikator."
+      "ebitdaMarginHint": "Optional. Ermöglicht eine EV/EBITDA-Kontrolle neben dem Umsatzmultiplikator.",
+      "industry": "Branche der Organisation",
+      "industryHint": "Bestimmt den Referenz-Marktmultiplikator, der auf Ihre Spanne angewendet wird (5 CIFSO-Branchen)."
     },
     "code": {
       "title": "Codequalität",
@@ -6307,7 +6309,9 @@
       "estimated": "geschätzt",
       "disclaimerLabel": "Nicht offizielle Schätzung",
       "disclaimerCta": "Offizielle Zertifizierung starten",
-      "ctaContact": "Einen Berater kontaktieren"
+      "ctaContact": "Einen Berater kontaktieren",
+      "industryLabel": "Branche",
+      "industryAdjustedNote": "Multiplikator branchenbereinigt"
     },
     "marketContext": {
       "label": "Marktkontext 2026",
@@ -6585,14 +6589,13 @@
       "illustrativeLabel": "Illustrativ",
       "illustrativeNote": "Illustrative Schätzung, nicht vertraglich",
       "subscriberPreview": {
-        "label": "VORSCHAU — ABONNENTENBEREICH",
+        "label": "VORSCHAU · ABONNENTENBEREICH",
         "title": "So wird Ihr Index-Arbeitsbereich aussehen.",
-        "desc": "Nach Öffnung des Abonnements: Filtern Sie nach Branche, Vertical, Kennzahl oder CIFSO-Grade und lesen Sie vollständige Multiplikatoren je Branche — ohne dass je eine Transaktion oder Organisation identifizierbar ist.",
+        "desc": "Nach Öffnung des Abonnements: drei kombinierte Lesenebenen in einem Arbeitsbereich, gefiltert nach Branche, Vertical, Kennzahl oder CIFSO-Grade, ohne dass je eine Transaktion oder Organisation identifizierbar ist.",
         "tabs": [
-          "EU-Multiplikatoren",
-          "CIFSO-Benchmarks",
-          "Börsenkotierte Vergleichswerte",
-          "Zertifizierte Dossiers"
+          "Marktmultiplikatoren",
+          "CIFSO-Organisationsscore",
+          "Angepasste Bewertung"
         ],
         "filtersLabel": "Filter",
         "filters": [
@@ -6602,20 +6605,38 @@
           "CIFSO-Grade",
           "Zeitraum"
         ],
-        "columns": [
+        "footnote": "Illustration der kommenden Oberfläche: reale Spalten und Filter, Werte nur als Beispiel. Abonnenten angezeigte Quelle: Aegryn CIFSO Valuation Index.",
+        "tabsSubtitle": [
+          "EV/Umsatz- und EV/EBITDA-Multiplikatoren, aggregiert nach Branche und Vertical, aus offiziellen Makroquellen (SNB, EZB, Eurostat) und kuratierten Aegryn-Reihen.",
+          "Median-Score je Dimension C, I, F, S, O unter zertifizierten CIFSO-5000-Organisationen: die Datengrundlage, die den Abstand zum Marktmedian erklärt.",
+          "Bewertungsspanne, die den Marktmultiplikator der Branche mit dem CIFSO-Grade der Organisation kreuzt, nie eine identifizierbare Transaktion oder Organisation."
+        ],
+        "columnsMarket": [
           "Branche / Vertical",
-          "EV/Revenue (P25 · Median · P75)",
+          "EV/Umsatz (P25 · Median · P75)",
           "EV/EBITDA",
-          "ARR-Multiplikator",
-          "Median CIFSO-Score",
+          "ARR-Multiple",
+          "Median-CIFSO-Score",
           "Stichprobe"
         ],
-        "footnote": "Illustration der kommenden Oberfläche — reale Spalten und Filter, Werte nur als Beispiel. Abonnenten angezeigte Quelle: Aegryn CIFSO Valuation Index."
+        "columnsCifso": [
+          "CIFSO-Dimension",
+          "Median-Score /100",
+          "Multiplikator-Abstand B → AAA",
+          "Zertifizierte Organisationen"
+        ],
+        "columnsValuation": [
+          "Branche",
+          "CIFSO-Grade",
+          "Marktmultiplikator (Median)",
+          "Grade-bereinigter Multiplikator",
+          "Abstand"
+        ]
       }
     },
     "index": {
       "label": "DIE BENCHMARK-ENGINE",
-      "title": "Fünf Branchen, vierzig Verticals,\nneun Kennzahlen. Eine Quelle.",
+      "title": "Fünf Branchen, über 200 Verticals,\nneun Kennzahlen. Eine Quelle.",
       "desc": "Der Index aggregiert offizielle Transaktions- und Marktdaten, die von Aegryn-Analysten vierteljährlich konsolidiert und aktualisiert werden, und verknüpft sie mit dem CIFSO-Score in fünf Dimensionen. Keine personenbezogenen Daten, keine identifizierbare Transaktion.",
       "kpis": {
         "clusters": "Branchen",
@@ -6647,7 +6668,7 @@
       },
       "lockedShort": "Abonnenten",
       "openShort": "Offen",
-      "sourceNote": "Quelle: Aegryn CIFSO Valuation Index. Aggregierte Daten, Quartalsupdates, keine identifizierbare Transaktion.",
+      "sourceNote": "Quelle: Aegryn CIFSO Valuation Index. Aggregierte Daten, monatliche Updates, keine identifizierbare Transaktion.",
       "faqTitle": "Häufige Fragen",
       "faq": [
         {
@@ -6676,7 +6697,20 @@
       "clustersLabel": "Cluster",
       "techVerticalsLabel": "Tech-Verticals",
       "extMapTitle": "Erweiterte Karte: 22 Cluster, über 200 Tech-Verticals.",
-      "extMapDesc": "Über die Branchen und ihre Referenzmultiplikatoren oben hinaus bildet der Index die Technologiekomponente jedes Sektors ab — 22 Cluster, identisch mit denen unserer Industries-Seiten, aufgeteilt in über 200 tech-getriebene Verticals. Eine Abdeckungskarte, noch keine eigene Multiplikatorenreihe für jedes einzelne."
+      "extMapDesc": "Über die Branchen und ihre Referenzmultiplikatoren oben hinaus bildet der Index die Technologiekomponente jedes Sektors ab: 22 Cluster, identisch mit denen unserer Industries-Seiten, aufgeteilt in über 200 tech-getriebene Verticals. Eine Abdeckungskarte, noch keine eigene Multiplikatorenreihe für jedes einzelne.",
+      "metricsLabel": "DIE KENNZAHLEN",
+      "metricsDetail": {
+        "ev_revenue": "Unternehmenswert im Verhältnis zum Jahresumsatz. Referenzmultiplikator zum Vergleich unterschiedlich großer Organisationen.",
+        "ev_ebitda": "Unternehmenswert im Verhältnis zum EBITDA. Relevant, sobald die operative Rentabilität etabliert ist.",
+        "arr_multiple": "Multiplikator auf den jährlichen wiederkehrenden Umsatz (ARR), aufgeschlüsselt nach Vertical für Abonnementmodelle.",
+        "growth_yoy": "Umsatzwachstum über zwölf Monate, einer der wichtigsten Werttreiber.",
+        "nrr": "Anteil des wiederkehrenden Umsatzes, der bei Bestandskunden gehalten und ausgebaut wird, ohne Neukundengewinnung.",
+        "gross_margin": "Bruttomarge nach direkten Produktions- oder Dienstleistungskosten, ein Indikator für die Qualität des Geschäftsmodells.",
+        "rule_of_40": "Summe aus Jahreswachstum und Marge: eine kombinierte Betrachtung von Wachstum und Rentabilität.",
+        "cifso_score": "Median-CIFSO-Score je Grade unter den zertifizierten Organisationen, über fünf Dimensionen.",
+        "dimension_uplift": "Bewertungsmultiplikator-Unterschied zwischen einer B- und einer AAA-bewerteten Organisation, je CIFSO-Dimension."
+      },
+      "unitLabel": "Einheit"
     }
   },
   "transactionSubmit": {

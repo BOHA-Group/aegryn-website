@@ -6066,7 +6066,9 @@
       },
       "ebitdaMargin": "Marge EBITDA (%)",
       "ebitdaMarginPlaceholder": "Ex. 18",
-      "ebitdaMarginHint": "Optionnel. Permet un contrôle EV/EBITDA en complément du multiple de revenu."
+      "ebitdaMarginHint": "Optionnel. Permet un contrôle EV/EBITDA en complément du multiple de revenu.",
+      "industry": "Industrie de l'organisation",
+      "industryHint": "Détermine le multiple de marché de référence appliqué à votre fourchette (5 industries CIFSO)."
     },
     "code": {
       "title": "Qualité du code",
@@ -6267,7 +6269,9 @@
       "estimated": "estimé",
       "disclaimerLabel": "Estimation non officielle",
       "disclaimerCta": "Démarrer une certification officielle",
-      "ctaAssessment": "Réserver un Assessment Day gratuit"
+      "ctaAssessment": "Réserver un Assessment Day gratuit",
+      "industryLabel": "Industrie",
+      "industryAdjustedNote": "multiple ajusté par industrie"
     },
     "marketContext": {
       "label": "Contexte marché 2026",
@@ -6545,14 +6549,13 @@
       "illustrativeLabel": "Illustratif",
       "illustrativeNote": "Estimation illustrative, non contractuelle",
       "subscriberPreview": {
-        "label": "APERÇU — ESPACE ABONNÉ",
+        "label": "APERÇU · ESPACE ABONNÉ",
         "title": "À quoi ressemblera votre espace Index.",
-        "desc": "Une fois l'abonnement ouvert : filtrez par industrie, vertical, métrique ou grade CIFSO, et lisez les multiples complets industrie par industrie — sans jamais qu'une transaction ou une organisation soit identifiable.",
+        "desc": "Une fois l'abonnement ouvert : trois niveaux de lecture combinés dans un même espace, filtrés par industrie, vertical, métrique ou grade CIFSO, sans jamais qu'une transaction ou une organisation soit identifiable.",
         "tabs": [
-          "Multiples EU",
-          "Benchmarks CIFSO",
-          "Comparables cotés",
-          "Dossiers certifiés"
+          "Multiples de marché",
+          "Score CIFSO organisationnel",
+          "Valorisation ajustée"
         ],
         "filtersLabel": "Filtres",
         "filters": [
@@ -6562,7 +6565,13 @@
           "Grade CIFSO",
           "Période"
         ],
-        "columns": [
+        "footnote": "Illustration de l'interface à venir : colonnes et filtres réels, valeurs à titre d'exemple. Source affichée aux abonnés : Aegryn CIFSO Valuation Index.",
+        "tabsSubtitle": [
+          "Multiples EV/Revenue et EV/EBITDA agrégés par industrie et vertical, à partir des sources macro officielles (BNS, BCE, Eurostat) et des séries curées Aegryn.",
+          "Score médian par dimension C, I, F, S, O parmi les organisations certifiées CIFSO 5000 : la donnée qui explique l'écart au multiple médian du marché.",
+          "Fourchette de valorisation qui croise le multiple de marché de l'industrie avec le grade CIFSO de l'organisation, jamais une transaction ou une organisation identifiable."
+        ],
+        "columnsMarket": [
           "Industrie / Vertical",
           "EV/Revenue (P25 · Médiane · P75)",
           "EV/EBITDA",
@@ -6570,12 +6579,24 @@
           "Score CIFSO médian",
           "Échantillon"
         ],
-        "footnote": "Illustration de l'interface à venir — colonnes et filtres réels, valeurs à titre d'exemple. Source affichée aux abonnés : Aegryn CIFSO Valuation Index."
+        "columnsCifso": [
+          "Dimension CIFSO",
+          "Score médian /100",
+          "Écart de multiple B → AAA",
+          "Organisations certifiées"
+        ],
+        "columnsValuation": [
+          "Industrie",
+          "Grade CIFSO",
+          "Multiple de marché (médiane)",
+          "Multiple ajusté au grade",
+          "Écart"
+        ]
       }
     },
     "index": {
       "label": "LE MOTEUR DE BENCHMARKS",
-      "title": "Cinq industries, quarante verticaux,\nneuf métriques. Une seule source.",
+      "title": "Cinq industries, 200+ verticaux,\nneuf métriques. Une seule source.",
       "desc": "L'Index agrège des données de transactions et de marché officielles, consolidées et mises à jour chaque trimestre par les analystes Aegryn, puis les relie au score CIFSO sur cinq dimensions. Aucune donnée personnelle, aucune transaction identifiable.",
       "kpis": {
         "clusters": "industries",
@@ -6607,7 +6628,7 @@
       },
       "lockedShort": "Abonnés",
       "openShort": "Ouvert",
-      "sourceNote": "Source : Aegryn CIFSO Valuation Index. Données agrégées, mises à jour trimestrielles, sans transaction identifiable.",
+      "sourceNote": "Source : Aegryn CIFSO Valuation Index. Données agrégées, mises à jour mensuelles, sans transaction identifiable.",
       "faqTitle": "Questions fréquentes",
       "faq": [
         {
@@ -6636,7 +6657,20 @@
       "clustersLabel": "clusters",
       "techVerticalsLabel": "verticaux tech",
       "extMapTitle": "Cartographie étendue : 22 clusters, 200+ verticaux tech.",
-      "extMapDesc": "Au-delà des industries et de leurs multiples de référence ci-dessus, l'Index cartographie la composante technologique de chaque secteur — 22 clusters identiques à ceux de nos pages Industries, déclinés en plus de 200 verticaux tech-driven. Une cartographie de couverture, pas encore une série de multiples dédiée pour chacun."
+      "extMapDesc": "Au-delà des industries et de leurs multiples de référence ci-dessus, l'Index cartographie la composante technologique de chaque secteur : 22 clusters identiques à ceux de nos pages Industries, déclinés en plus de 200 verticaux tech-driven. Une cartographie de couverture, pas encore une série de multiples dédiée pour chacun.",
+      "metricsLabel": "LES MÉTRIQUES",
+      "metricsDetail": {
+        "ev_revenue": "Valeur d'entreprise rapportée au chiffre d'affaires annuel. Multiple de référence pour comparer des organisations de tailles différentes.",
+        "ev_ebitda": "Valeur d'entreprise rapportée à l'EBITDA. Pertinent dès que la rentabilité opérationnelle est établie.",
+        "arr_multiple": "Multiple appliqué au revenu récurrent annuel (ARR), décliné par vertical pour les modèles à abonnement.",
+        "growth_yoy": "Croissance du chiffre d'affaires sur douze mois, un des principaux leviers de valorisation.",
+        "nrr": "Part du revenu récurrent conservée et développée auprès des clients existants, hors nouvelles acquisitions.",
+        "gross_margin": "Marge brute après coût direct de production ou de service, indicateur de qualité du modèle économique.",
+        "rule_of_40": "Somme de la croissance annuelle et de la marge : une lecture combinée de la croissance et de la rentabilité.",
+        "cifso_score": "Score CIFSO médian observé par grade parmi les organisations certifiées, sur cinq dimensions.",
+        "dimension_uplift": "Écart de multiple de valorisation entre une organisation notée B et une organisation notée AAA, par dimension CIFSO."
+      },
+      "unitLabel": "Unité"
     }
   },
   "transactionSubmit": {

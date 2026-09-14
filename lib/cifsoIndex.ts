@@ -10,6 +10,7 @@
 import { createServiceClient } from '@/lib/supabase'
 import { INDEX_CLUSTERS, INDEX_VERTICALS, TEASER_CLUSTER, TEASER_VERTICAL, type IndexLocale } from '@/lib/indexTaxonomy'
 import { DIMENSION_META, type ClusterKey, type ValuationDimension } from '@/lib/cifsoValuation'
+import { TECH_VERTICALS } from '@/lib/industryClusters'
 
 export const INDEX_SOURCE_LABEL = 'Aegryn CIFSO Valuation Index'
 
@@ -35,6 +36,13 @@ export interface IndexSnapshot {
   dimensions: IndexDimension[]
   certified: { count: number; byGrade: Record<string, number> }
   coverage: { clusters: number; verticals: number; metrics: number }
+  /**
+   * Facteur relatif par industrie (mediane EV/Revenue du cluster / mediane des 5 clusters),
+   * arrondi. Sert a ajuster la fourchette de l'estimation gratuite ("Estimation libre") par
+   * industrie sans exposer les mediane/p25/p75 verrouilles eux-memes (reserves aux abonnes).
+   * null si aucune donnee EV/Revenue n'est disponible pour un cluster.
+   */
+  industryFactor: Record<ClusterKey, number | null>
 }
 
 type Row = { scope_type: string; scope_key: string; metric: string; period: string; p25: number | null; p50: number | null; p75: number | null; sample_size: number | null; is_public: boolean }
@@ -66,6 +74,17 @@ export async function getIndexSnapshot(opts: { locale?: IndexLocale; full?: bool
   const R = (rows ?? []) as Row[]
   const find = (scope: string, key: string, metric: string) => R.find(r => r.scope_type === scope && r.scope_key === key && r.metric === metric)
   const period = R.map(r => r.period).sort().at(-1) ?? null
+
+  /* Facteur relatif par industrie, calcule sur les medianes brutes (jamais exposees en tant
+     que telles ici) : neutre a l'echelle globale (moyenne des facteurs ~= 1), pour biaiser la
+     fourchette de l'estimation gratuite par industrie sans devoiler les multiples reels. */
+  const rawMedians = INDEX_CLUSTERS.map(c => num(find('cluster', c.key, 'ev_revenue')?.p50)).filter((v): v is number => v != null)
+  const globalAvg = rawMedians.length ? rawMedians.reduce((a, b) => a + b, 0) / rawMedians.length : null
+  const industryFactor: Record<ClusterKey, number | null> = {} as Record<ClusterKey, number | null>
+  for (const c of INDEX_CLUSTERS) {
+    const m = num(find('cluster', c.key, 'ev_revenue')?.p50)
+    industryFactor[c.key] = m != null && globalAvg ? Math.round((m / globalAvg) * 100) / 100 : null
+  }
 
   const clusters: IndexCluster[] = INDEX_CLUSTERS.map(c => {
     const coeffRow = find('cluster', c.key, 'cifso_coeff')
@@ -105,8 +124,11 @@ export async function getIndexSnapshot(opts: { locale?: IndexLocale; full?: bool
 
   return {
     source: INDEX_SOURCE_LABEL, period, mode: full ? 'full' : 'teaser',
-    clusters, dimensions,
+    clusters, dimensions, industryFactor,
     certified: { count: pub.length, byGrade },
-    coverage: { clusters: INDEX_CLUSTERS.length, verticals: INDEX_VERTICALS.length, metrics: 9 },
+    /* verticals : total de la cartographie etendue (22 clusters / lib/industryClusters.ts),
+       affiche comme le chiffre officiel de couverture. INDEX_VERTICALS.length (40) reste la
+       taille de la taxonomie benchmarkee utilisee pour le calcul reel des multiples ci-dessus. */
+    coverage: { clusters: INDEX_CLUSTERS.length, verticals: TECH_VERTICALS.length, metrics: 9 },
   }
 }

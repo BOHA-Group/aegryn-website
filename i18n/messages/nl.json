@@ -6121,7 +6121,9 @@
       },
       "ebitdaMargin": "EBITDA-marge (%)",
       "ebitdaMarginPlaceholder": "Bv. 18",
-      "ebitdaMarginHint": "Optioneel. Maakt een EV/EBITDA-controle mogelijk naast de omzetmultiple."
+      "ebitdaMarginHint": "Optioneel. Maakt een EV/EBITDA-controle mogelijk naast de omzetmultiple.",
+      "industry": "Industrie van de organisatie",
+      "industryHint": "Bepaalt de referentie-marktmultiple die op uw range wordt toegepast (5 CIFSO-industrieën)."
     },
     "code": {
       "title": "Codekwaliteit",
@@ -6322,7 +6324,9 @@
       "estimated": "geschat",
       "disclaimerLabel": "Niet-officiële schatting",
       "disclaimerCta": "Start een officiële certificering",
-      "ctaContact": "Contacteer een adviseur"
+      "ctaContact": "Contacteer een adviseur",
+      "industryLabel": "Industrie",
+      "industryAdjustedNote": "multiple aangepast per industrie"
     },
     "marketContext": {
       "label": "Marktcontext 2026",
@@ -6600,14 +6604,13 @@
       "illustrativeLabel": "Illustratief",
       "illustrativeNote": "Illustratieve schatting, niet contractueel",
       "subscriberPreview": {
-        "label": "PREVIEW — ABONNEEGEDEELTE",
+        "label": "PREVIEW · ABONNEEGEDEELTE",
         "title": "Zo ziet uw Index-werkruimte eruit.",
-        "desc": "Zodra het abonnement opent: filter op industrie, vertical, metric of CIFSO-grade en bekijk de volledige multiples per industrie — zonder dat een transactie of organisatie ooit identificeerbaar is.",
+        "desc": "Zodra het abonnement opent: drie leesniveaus gecombineerd in één werkruimte, gefilterd op industrie, vertical, metric of CIFSO-grade, zonder dat een transactie of organisatie ooit identificeerbaar is.",
         "tabs": [
-          "EU-multiples",
-          "CIFSO-benchmarks",
-          "Beursgenoteerde vergelijkbare bedrijven",
-          "Gecertificeerde dossiers"
+          "Marktmultiples",
+          "CIFSO-organisatiescore",
+          "Aangepaste waardering"
         ],
         "filtersLabel": "Filters",
         "filters": [
@@ -6617,20 +6620,38 @@
           "CIFSO-grade",
           "Periode"
         ],
-        "columns": [
+        "footnote": "Illustratie van de toekomstige interface: reële kolommen en filters, waarden slechts als voorbeeld. Bron getoond aan abonnees: Aegryn CIFSO Valuation Index.",
+        "tabsSubtitle": [
+          "EV/Omzet- en EV/EBITDA-multiples geaggregeerd per industrie en vertical, uit officiële macrobronnen (SNB, ECB, Eurostat) en door Aegryn samengestelde reeksen.",
+          "Mediane score per dimensie C, I, F, S, O onder gecertificeerde CIFSO 5000-organisaties: de data die het verschil met de mediane marktmultiple verklaart.",
+          "Waarderingsrange die de marktmultiple van de industrie combineert met de CIFSO-grade van de organisatie, nooit een identificeerbare transactie of organisatie."
+        ],
+        "columnsMarket": [
           "Industrie / Vertical",
-          "EV/Revenue (P25 · Mediaan · P75)",
+          "EV/Omzet (P25 · Mediaan · P75)",
           "EV/EBITDA",
           "ARR-multiple",
           "Mediane CIFSO-score",
           "Steekproef"
         ],
-        "footnote": "Illustratie van de toekomstige interface — reële kolommen en filters, waarden slechts als voorbeeld. Bron getoond aan abonnees: Aegryn CIFSO Valuation Index."
+        "columnsCifso": [
+          "CIFSO-dimensie",
+          "Mediane score /100",
+          "Multiple-verschil B → AAA",
+          "Gecertificeerde organisaties"
+        ],
+        "columnsValuation": [
+          "Industrie",
+          "CIFSO-grade",
+          "Marktmultiple (mediaan)",
+          "Grade-aangepaste multiple",
+          "Verschil"
+        ]
       }
     },
     "index": {
       "label": "DE BENCHMARK-ENGINE",
-      "title": "Vijf industrieën, veertig verticalen,\nnegen metrics. Eén bron.",
+      "title": "Vijf industrieën, 200+ verticalen,\nnegen metrics. Eén bron.",
       "desc": "De Index aggregeert officiële transactie- en marktdata, elk kwartaal geconsolideerd en bijgewerkt door Aegryn-analisten, en koppelt die aan de CIFSO-score op vijf dimensies. Geen persoonsgegevens, geen identificeerbare transactie.",
       "kpis": {
         "clusters": "industrieën",
@@ -6662,7 +6683,7 @@
       },
       "lockedShort": "Abonnees",
       "openShort": "Open",
-      "sourceNote": "Bron: Aegryn CIFSO Valuation Index. Geaggregeerde data, kwartaalupdates, geen identificeerbare transactie.",
+      "sourceNote": "Bron: Aegryn CIFSO Valuation Index. Geaggregeerde data, maandelijkse updates, geen identificeerbare transactie.",
       "faqTitle": "Veelgestelde vragen",
       "faq": [
         {
@@ -6691,7 +6712,20 @@
       "clustersLabel": "clusters",
       "techVerticalsLabel": "techverticals",
       "extMapTitle": "Uitgebreide kaart: 22 clusters, 200+ techverticals.",
-      "extMapDesc": "Naast de industrieën en hun referentiemultiples hierboven brengt de Index de technologiecomponent van elke sector in kaart — 22 clusters identiek aan die op onze Industries-pagina's, opgesplitst in 200+ tech-driven verticals. Een dekkingskaart, nog geen eigen multiple-reeks voor elk afzonderlijk."
+      "extMapDesc": "Naast de industrieën en hun referentiemultiples hierboven brengt de Index de technologiecomponent van elke sector in kaart: 22 clusters identiek aan die op onze Industries-pagina's, opgesplitst in 200+ tech-driven verticals. Een dekkingskaart, nog geen eigen multiple-reeks voor elk afzonderlijk.",
+      "metricsLabel": "DE METRICS",
+      "metricsDetail": {
+        "ev_revenue": "Ondernemingswaarde ten opzichte van de jaaromzet. Referentiemultiple om organisaties van verschillende groottes te vergelijken.",
+        "ev_ebitda": "Ondernemingswaarde ten opzichte van de EBITDA. Relevant zodra de operationele winstgevendheid vaststaat.",
+        "arr_multiple": "Multiple toegepast op de jaarlijkse recurrente omzet (ARR), uitgesplitst per vertical voor abonnementsmodellen.",
+        "growth_yoy": "Omzetgroei over twaalf maanden, een van de belangrijkste waardedrijvers.",
+        "nrr": "Aandeel van de recurrente omzet dat behouden en uitgebreid wordt bij bestaande klanten, exclusief nieuwe acquisities.",
+        "gross_margin": "Brutomarge na directe productie- of servicekosten, een indicator van de kwaliteit van het bedrijfsmodel.",
+        "rule_of_40": "Som van jaarlijkse groei en marge: een gecombineerde lezing van groei en winstgevendheid.",
+        "cifso_score": "Mediane CIFSO-score per grade onder gecertificeerde organisaties, over vijf dimensies.",
+        "dimension_uplift": "Verschil in waarderingsmultiple tussen een organisatie met grade B en een met grade AAA, per CIFSO-dimensie."
+      },
+      "unitLabel": "Eenheid"
     }
   },
   "transactionSubmit": {

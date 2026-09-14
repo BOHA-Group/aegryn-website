@@ -6,6 +6,9 @@ import { captureLead, fmtEur }      from '@/lib/leadCapture'
 const schema = z.object({
   email: z.string().email(),
 
+  // Industrie CIFSO (5 clusters, lib/indexTaxonomy.ts) — détermine le multiple de marché appliqué
+  industry: z.enum(['tech_innovation', 'finance_capital', 'sante_sciences', 'industrie_infra', 'commerce_services']).optional(),
+
   // Métriques financières
   arr:          z.number().min(0).optional(),
   growth_yoy:   z.number().optional(),
@@ -76,6 +79,7 @@ function internalNotifText(d: Payload): string {
 [Aegryn] Nouveau lead Valuation
 ================================
 Email          : ${d.email}
+Industrie      : ${d.industry ?? 'non renseignée'}
 Grade estimé   : ${d.estimated_grade}
 Score          : ${d.score_total}/100
 ARR déclaré    : ${fmtEur(d.arr)}
@@ -99,6 +103,7 @@ export async function POST(req: NextRequest) {
       'valuation_leads',
       {
         email:            data.email,
+        industry:         data.industry,
         arr:              data.arr,
         growth_yoy:       data.growth_yoy,
         churn_monthly:    data.churn_monthly,

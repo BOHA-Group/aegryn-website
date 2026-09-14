@@ -38,7 +38,7 @@ export default function IndexBenchmarks() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   [snap?.coverage.clusters ?? 5, t('kpis.clusters')],
-                  [snap?.coverage.verticals ?? 40, t('kpis.verticals')],
+                  [snap?.coverage.verticals ?? 204, t('kpis.verticals')],
                   [snap?.coverage.metrics ?? 9, t('kpis.metrics')],
                   [snap?.period ?? '·', t('kpis.period')],
                 ].map(([v, l]) => (
@@ -69,6 +69,32 @@ export default function IndexBenchmarks() {
         </div>
       </section>
 
+      {/* ── Métriques couvertes : section dédiée ── */}
+      <section className="py-24 px-6 border-t border-ag-border bg-ag-navy text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('metricsLabel')}</p>
+            <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{t('metricsTitle')}</h2>
+            <p className="font-sans text-[14px] text-white/60 leading-relaxed">{t('metricsDesc')}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {INDEX_METRICS.map(m => (
+              <div key={m.key} className="rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-3">
+                <div className="flex items-start justify-between gap-3">
+                  <p className="font-sans font-bold text-[14px]">{t(`metrics.${m.key}`)}</p>
+                  <span className={`shrink-0 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex'}`}>
+                    {m.locked ? <Lock size={10} /> : <Check size={11} />}
+                    {m.locked ? t('lockedShort') : t('openShort')}
+                  </span>
+                </div>
+                <p className="font-sans text-[12px] text-white/60 leading-relaxed">{t(`metricsDetail.${m.key}`)}</p>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{t('unitLabel')} : {m.unit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Couverture par cluster et vertical ── */}
       <section className="py-24 px-6 border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto">
@@ -77,23 +103,6 @@ export default function IndexBenchmarks() {
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('coverageDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {/* Métriques couvertes — en premier */}
-            <div className="rounded-xl border border-ag-navy bg-ag-navy text-white p-6">
-              <p className="font-sans font-bold text-[15px] mb-1">{t('metricsTitle')}</p>
-              <p className="font-sans text-[12px] text-white/60 mb-4">{t('metricsDesc')}</p>
-              <ul className="flex flex-col gap-2">
-                {INDEX_METRICS.map(m => (
-                  <li key={m.key} className="flex items-center justify-between gap-3 font-sans text-[12px]">
-                    <span className="inline-flex items-center gap-2">
-                      {m.locked ? <Lock size={11} className="text-white/40" /> : <Check size={12} className="text-ag-apex" />}
-                      {t(`metrics.${m.key}`)}
-                    </span>
-                    <span className={`font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex'}`}>{m.locked ? t('lockedShort') : t('openShort')}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {clusters.map(c => (
               <Link
                 key={c.key}

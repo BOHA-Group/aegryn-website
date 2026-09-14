@@ -6106,7 +6106,9 @@
       },
       "ebitdaMargin": "EBITDA margin (%)",
       "ebitdaMarginPlaceholder": "e.g. 18",
-      "ebitdaMarginHint": "Optional. Enables an EV/EBITDA check alongside the revenue multiple."
+      "ebitdaMarginHint": "Optional. Enables an EV/EBITDA check alongside the revenue multiple.",
+      "industry": "Organisation's industry",
+      "industryHint": "Determines the reference market multiple applied to your range (5 CIFSO industries)."
     },
     "code": {
       "title": "Code quality",
@@ -6307,7 +6309,9 @@
       "estimated": "estimated",
       "disclaimerLabel": "Non-official estimate",
       "disclaimerCta": "Start an official certification",
-      "ctaContact": "Contact an advisor"
+      "ctaContact": "Contact an advisor",
+      "industryLabel": "Industry",
+      "industryAdjustedNote": "multiple adjusted by industry"
     },
     "marketContext": {
       "label": "Market context 2026",
@@ -6585,14 +6589,13 @@
       "illustrativeLabel": "Illustrative",
       "illustrativeNote": "Illustrative estimate, not contractual",
       "subscriberPreview": {
-        "label": "PREVIEW — SUBSCRIBER AREA",
+        "label": "PREVIEW · SUBSCRIBER AREA",
         "title": "What your Index workspace will look like.",
-        "desc": "Once the subscription opens: filter by industry, vertical, metric or CIFSO grade, and read full multiples industry by industry — never with an identifiable transaction or organisation.",
+        "desc": "Once the subscription opens: three levels of reading combined in a single workspace, filtered by industry, vertical, metric or CIFSO grade, never with an identifiable transaction or organisation.",
         "tabs": [
-          "EU Multiples",
-          "CIFSO Benchmarks",
-          "Listed Comparables",
-          "Certified Dossiers"
+          "Market multiples",
+          "CIFSO organisational score",
+          "Adjusted valuation"
         ],
         "filtersLabel": "Filters",
         "filters": [
@@ -6602,20 +6605,38 @@
           "CIFSO Grade",
           "Period"
         ],
-        "columns": [
+        "footnote": "Illustration of the upcoming interface: real columns and filters, sample values only. Source shown to subscribers: Aegryn CIFSO Valuation Index.",
+        "tabsSubtitle": [
+          "EV/Revenue and EV/EBITDA multiples aggregated by industry and vertical, from official macro sources (SNB, ECB, Eurostat) and Aegryn curated series.",
+          "Median score per dimension C, I, F, S, O among CIFSO 5000 certified organisations: the data that explains the gap to the market's median multiple.",
+          "Valuation range crossing the industry's market multiple with the organisation's CIFSO grade, never an identifiable transaction or organisation."
+        ],
+        "columnsMarket": [
           "Industry / Vertical",
           "EV/Revenue (P25 · Median · P75)",
           "EV/EBITDA",
-          "ARR Multiple",
-          "Median CIFSO Score",
+          "ARR multiple",
+          "Median CIFSO score",
           "Sample"
         ],
-        "footnote": "Illustration of the upcoming interface — real columns and filters, sample values only. Source shown to subscribers: Aegryn CIFSO Valuation Index."
+        "columnsCifso": [
+          "CIFSO dimension",
+          "Median score /100",
+          "Multiple gap B → AAA",
+          "Certified organisations"
+        ],
+        "columnsValuation": [
+          "Industry",
+          "CIFSO grade",
+          "Market multiple (median)",
+          "Grade-adjusted multiple",
+          "Gap"
+        ]
       }
     },
     "index": {
       "label": "THE BENCHMARK ENGINE",
-      "title": "Five industries, forty verticals,\nnine metrics. One source.",
+      "title": "Five industries, 200+ verticals,\nnine metrics. One source.",
       "desc": "The Index aggregates official transaction and market data, consolidated and updated quarterly by Aegryn analysts, then links it to the CIFSO score across five dimensions. No personal data, no identifiable transaction.",
       "kpis": {
         "clusters": "industries",
@@ -6647,7 +6668,7 @@
       },
       "lockedShort": "Subscribers",
       "openShort": "Open",
-      "sourceNote": "Source: Aegryn CIFSO Valuation Index. Aggregated data, quarterly updates, no identifiable transaction.",
+      "sourceNote": "Source: Aegryn CIFSO Valuation Index. Aggregated data, monthly updates, no identifiable transaction.",
       "faqTitle": "Frequently asked questions",
       "faq": [
         {
@@ -6676,7 +6697,20 @@
       "clustersLabel": "clusters",
       "techVerticalsLabel": "tech verticals",
       "extMapTitle": "Extended map: 22 clusters, 200+ tech verticals.",
-      "extMapDesc": "Beyond the industries and their reference multiples above, the Index maps the technology component of each sector — 22 clusters identical to those on our Industries pages, broken down into 200+ tech-driven verticals. A coverage map, not yet a dedicated multiple series for each."
+      "extMapDesc": "Beyond the industries and their reference multiples above, the Index maps the technology component of each sector: 22 clusters identical to those on our Industries pages, broken down into 200+ tech-driven verticals. A coverage map, not yet a dedicated multiple series for each.",
+      "metricsLabel": "THE METRICS",
+      "metricsDetail": {
+        "ev_revenue": "Enterprise value over annual revenue. Reference multiple for comparing organisations of different sizes.",
+        "ev_ebitda": "Enterprise value over EBITDA. Relevant once operating profitability is established.",
+        "arr_multiple": "Multiple applied to annual recurring revenue (ARR), broken down by vertical for subscription models.",
+        "growth_yoy": "Revenue growth over twelve months, one of the main valuation drivers.",
+        "nrr": "Share of recurring revenue retained and expanded among existing customers, excluding new acquisitions.",
+        "gross_margin": "Gross margin after direct cost of production or service, an indicator of the quality of the business model.",
+        "rule_of_40": "Sum of annual growth and margin: a combined read of growth and profitability.",
+        "cifso_score": "Median CIFSO score observed by grade among certified organisations, across five dimensions.",
+        "dimension_uplift": "Valuation multiple gap between a B-rated and an AAA-rated organisation, by CIFSO dimension."
+      },
+      "unitLabel": "Unit"
     }
   },
   "transactionSubmit": {
