@@ -127,6 +127,7 @@
     "thinkingMarketDesc": "Data, analysis and insights from those who make the market.",
     "thinkingMarketNewsletter": "LinkedIn Newsletter",
     "thinkingMarketArticles": "All articles",
+    "thinkingMarketWorkforce": "Employment & Skills",
     "thinkingMarketGlossary": "M&A Tech Glossary",
     "thinkingMarketFAQ": "FAQ",
     "whoGroup": "The group",
@@ -10986,5 +10987,198 @@
     "badgeAlt": "CIFSO 5000 Certified badge",
     "learnMore": "Discover the certification",
     "whatDeed": "This certificate serves as a title deed of the organisation's value: it attests what it owns, what it controls and what it is worth, with the CIFSO Valuation Index as the reference source."
+  },
+  "workforce": {
+    "meta": {
+      "title": "Employment & Skills | Aegryn",
+      "desc": "Market data on employment, skills and salaries in the AI era: a factual reading of reports from the World Economic Forum, PwC and European statistical institutes."
+    },
+    "nav": {
+      "label": "Employment & Skills"
+    },
+    "hero": {
+      "label": "Employment & Skills",
+      "title": "What the data actually says\nabout employment in the AI era.",
+      "desc": "Roles, skills, salaries, sector trends: a factual reading of figures published by the World Economic Forum, PwC and European statistical institutes. No predictions, just data.",
+      "cta1": "Assess my organisation's maturity",
+      "cta1Href": "/valuation",
+      "cta2": "Discuss an HR or organisational issue",
+      "cta2Href": "/contact?subject=advisory"
+    },
+    "marketData": {
+      "label": "The 2025-2026 figures",
+      "title": "Employment in transition, in verified figures.",
+      "desc": "This data comes from the World Economic Forum's Future of Jobs Report and PwC's Global AI Jobs Barometer. It covers employment, skills and compensation specifically, without overlapping the M&A market statistics presented elsewhere on this site.",
+      "stats": [
+        {
+          "value": "92M / 170M",
+          "label": "jobs displaced vs created by 2030, a net positive balance of 78 million, but between different populations of workers.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "39%",
+          "label": "of the skills a worker holds today will be transformed or obsolete by 2030, on average across all occupations.",
+          "source": "World Economic Forum, Future of Jobs Report 2025"
+        },
+        {
+          "value": "62%",
+          "label": "salary premium for roles requiring verified AI skills, up from 25% two years earlier, a doubling in 24 months.",
+          "source": "PwC, Global AI Jobs Barometer, June 2026"
+        },
+        {
+          "value": "63%",
+          "label": "of employers identify the skills gap as the top barrier to their transformation, the most cited risk category ahead of any other operational constraint.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "12%",
+          "label": "of employed workers only have completed AI-related training in the past twelve months, despite the doubling of the associated salary premium.",
+          "source": "PwC, Global AI Jobs Barometer, 2026"
+        },
+        {
+          "value": "85%",
+          "label": "of employers say they prioritise training their existing teams over external recruitment alone to close the skills gap.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        }
+      ]
+    },
+    "hundredWorkers": {
+      "label": "A reading at organisational scale",
+      "title": "Out of 100 employees, 59 need a skills update.",
+      "desc": "The World Economic Forum brings the skills gap down to a simple scale: out of 100 workers, 59 will need training or reskilling by 2030. Among them, the trajectory differs sharply depending on the support put in place.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "items": [
+        {
+          "value": "29",
+          "label": "can be trained in their current role, without changing function."
+        },
+        {
+          "value": "19",
+          "label": "can be trained then redeployed to another role within the same organisation."
+        },
+        {
+          "value": "11",
+          "label": "risk receiving neither training nor reskilling, with employability deteriorating as a result."
+        }
+      ]
+    },
+    "skillsRanking": {
+      "label": "The skills rising, the skills declining",
+      "title": "The podium is no longer purely technical.",
+      "desc": "Analytical thinking remains the most sought-after skill among employers, cited by 7 companies out of 10. Technological skills are growing fastest in proportion, but they do not dominate the ranking alone.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "rising": {
+        "title": "Rising",
+        "items": [
+          "Analytical thinking",
+          "AI and data literacy",
+          "Networks and cybersecurity",
+          "Technological literacy",
+          "Resilience, flexibility and agility",
+          "Curiosity and lifelong learning"
+        ]
+      },
+      "declining": {
+        "title": "Declining",
+        "items": [
+          "Manual dexterity and precision",
+          "Repetitive administrative tasks and data entry"
+        ]
+      }
+    },
+    "byRole": {
+      "label": "By type of role",
+      "title": "What is changing is not what you would expect.",
+      "desc": "Exposure to automation does not follow the expected divide between “manual” and “intellectual” occupations. Three factual readings from recent data.",
+      "items": [
+        {
+          "title": "Technical and service roles lead growth",
+          "desc": "Big data specialists, AI and machine learning engineers, and software developers are among the fastest-growing occupations in proportion, alongside high-volume service and support roles.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "The sharpest decline hits codified administrative tasks",
+          "desc": "Data entry, teller and administrative secretarial roles record the steepest decline in absolute numbers, functions whose tasks are the most easily documented and therefore automated.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "Experience commands a higher price, not a lower one",
+          "desc": "The salary premium linked to experience reaches 40% on average across all occupations. AI primarily replaces documented, codified tasks; it complements judgement and tacit knowledge built over several years.",
+          "source": "PwC, Global AI Jobs Barometer 2026"
+        }
+      ]
+    },
+    "industries": {
+      "label": "By sector",
+      "title": "A very uneven exposure across industries.",
+      "desc": "The sectors most exposed to AI show per-employee productivity growth well above others, a factor close to 4x over 2018-2024 compared to the previous cycle.",
+      "sourceLine": "Data cross-referenced from PwC Global AI Jobs Barometer and Federal Reserve Bank of Dallas, 2026",
+      "items": [
+        {
+          "cluster": "Finance & Capital",
+          "desc": "Credit scoring, AML/KYC compliance and fraud detection automated first. First-level analyst roles are the most directly affected by task recomposition."
+        },
+        {
+          "cluster": "Health & Life Sciences",
+          "desc": "Slower adoption than elsewhere due to regulation (MDR/IVDR, health data), but a sharp rise in demand for cross health-data skills."
+        },
+        {
+          "cluster": "Industry, Energy & Infrastructure",
+          "desc": "Predictive maintenance and embedded AI shift value from manual technical skill toward the interpretation of sensor data and predictive models."
+        },
+        {
+          "cluster": "Commerce, Services & Customer Experience",
+          "desc": "More than half of AI-related job postings in Europe concern roles outside technology (customer service, sales, marketing), not only technical positions."
+        },
+        {
+          "cluster": "Tech, Innovation & Public Sector",
+          "desc": "The most exposed and best-paid sector for AI skills. For every AI developer role, there are roughly seven AI user roles, most of the demand is for the ability to use AI, not to build it."
+        }
+      ]
+    },
+    "cifso": {
+      "label": "What CIFSO 5000 Certification documents",
+      "title": "The Organisation dimension against this data.",
+      "body": "The CIFSO 5000 protocol assesses the Organisation & Talent dimension on precise, verifiable criteria: founder dependency (O-11), management team depth (O-12), succession plan (O-13), operational documentation (O-14), key talent retention (O-15, reference threshold: annual turnover at or below 10% on critical roles).\n\nThese criteria measure the stability of an organisation, not its capacity to keep pace with the skills recomposition shown by the data above. A team stable under criterion O-15 can still carry a skills gap if no update is undertaken: retention and skills refresh are not measured the same way.",
+      "cta": "See the full CIFSO 5000 methodology",
+      "ctaHref": "/grade"
+    },
+    "forWho": {
+      "label": "Who this data matters to",
+      "title": "The same figures, different readings.",
+      "items": [
+        {
+          "title": "Employees & professionals",
+          "desc": "The salary premium linked to AI skills has doubled in two years, yet only 12% of employed workers completed AI training in the past year. The gap between the market value of the skill and its actual acquisition rate is today's most actionable data point."
+        },
+        {
+          "title": "HR leaders & executives",
+          "desc": "63% of employers cite the skills gap as the top barrier to their transformation, and 85% already prioritise internal training. Out of 100 employees, 11 still have no support planned today, that is the figure to fix first."
+        },
+        {
+          "title": "CFOs & investors",
+          "desc": "The productivity gap per employee between AI-exposed and non-exposed sectors (a factor close to 4x over 2018-2024) is a valuation signal directly usable in screening or due diligence, independent of classic financial indicators alone."
+        }
+      ]
+    },
+    "sources": {
+      "label": "Sources",
+      "title": "Every figure cited on this page is sourced and dated.",
+      "desc": "World Economic Forum (Future of Jobs Report), PwC (Global AI Jobs Barometer, 2026 editions), Federal Reserve Bank of Dallas (February 2026). This page is updated as new editions of these reports are published."
+    },
+    "cta": {
+      "employer": {
+        "title": "You run an organisation facing these skills gaps.",
+        "desc": "Let's discuss an Organisation & Talent diagnostic before your next strategic decision.",
+        "cta": "Talk to an advisor",
+        "href": "/contact?subject=advisory"
+      },
+      "talent": {
+        "title": "You recruit the profiles driving this transformation.",
+        "desc": "Head of AI, Chief Data Officer, Transformation Director: we identify and place them.",
+        "cta": "Discover Aegryn Talent",
+        "href": "/talent"
+      }
+    }
   }
 }

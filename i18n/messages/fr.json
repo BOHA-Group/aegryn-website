@@ -136,6 +136,7 @@
     "thinkingMarketDesc": "Données, analyses et points de vue par ceux qui font le marché.",
     "thinkingMarketNewsletter": "Newsletter LinkedIn",
     "thinkingMarketArticles": "Tous les articles",
+    "thinkingMarketWorkforce": "Emploi & Compétences",
     "thinkingMarketGlossary": "Glossaire M&A tech",
     "thinkingMarketFAQ": "FAQ",
     "whoGroup": "Le groupe",
@@ -10986,5 +10987,198 @@
     "badgeAlt": "Badge Certifié CIFSO 5000",
     "learnMore": "Découvrir la certification",
     "whatDeed": "Ce certificat vaut acte de propriété de la valeur de l'organisation : il atteste ce qu'elle possède, ce qu'elle maîtrise et ce qu'elle vaut, avec le CIFSO Valuation Index comme source de référence."
+  },
+  "workforce": {
+    "meta": {
+      "title": "Emploi & Compétences | Aegryn",
+      "desc": "Données de marché sur l'emploi, les compétences et les salaires à l'ère de l'IA : lecture factuelle des rapports du World Economic Forum, de PwC et des instituts statistiques européens."
+    },
+    "nav": {
+      "label": "Emploi & Compétences"
+    },
+    "hero": {
+      "label": "Emploi & Compétences",
+      "title": "Ce que les données disent réellement\nsur l'emploi à l'ère de l'IA.",
+      "desc": "Métiers, compétences, salaires, tendances par secteur : une lecture factuelle des chiffres publiés par le World Economic Forum, PwC et les instituts statistiques européens. Pas de prédiction, des données.",
+      "cta1": "Évaluer la maturité de mon organisation",
+      "cta1Href": "/valuation",
+      "cta2": "Discuter d'un enjeu RH ou organisationnel",
+      "cta2Href": "/contact?subject=advisory"
+    },
+    "marketData": {
+      "label": "Les chiffres 2025-2026",
+      "title": "L'emploi en mutation, en chiffres vérifiés.",
+      "desc": "Ces données sont issues du Future of Jobs Report du World Economic Forum et du Global AI Jobs Barometer de PwC. Elles portent spécifiquement sur l'emploi, les compétences et les rémunérations, sans recouper les statistiques de marché M&A déjà présentées ailleurs sur ce site.",
+      "stats": [
+        {
+          "value": "92M / 170M",
+          "label": "emplois supprimés vs créés d'ici 2030, un solde net positif de 78 millions, mais entre des populations de travailleurs différentes.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "39%",
+          "label": "des compétences détenues aujourd'hui par un travailleur seront transformées ou obsolètes d'ici 2030, en moyenne tous métiers confondus.",
+          "source": "World Economic Forum, Future of Jobs Report 2025"
+        },
+        {
+          "value": "62%",
+          "label": "de prime salariale pour les postes exigeant des compétences IA vérifiées, contre 25% deux ans plus tôt, un doublement en 24 mois.",
+          "source": "PwC, Global AI Jobs Barometer, juin 2026"
+        },
+        {
+          "value": "63%",
+          "label": "des employeurs identifient l'écart de compétences comme premier frein à leur transformation, catégorie de risque la plus citée devant toute autre contrainte opérationnelle.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "12%",
+          "label": "seulement des actifs en emploi ont suivi une formation liée à l'IA au cours des douze derniers mois, malgré le doublement de la prime salariale associée.",
+          "source": "PwC, Global AI Jobs Barometer, 2026"
+        },
+        {
+          "value": "85%",
+          "label": "des employeurs déclarent prioriser la formation de leurs équipes en place plutôt que le seul recrutement externe pour combler l'écart de compétences.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        }
+      ]
+    },
+    "hundredWorkers": {
+      "label": "Une lecture à l'échelle d'une organisation",
+      "title": "Sur 100 collaborateurs, 59 ont besoin d'une mise à jour de compétences.",
+      "desc": "Le World Economic Forum ramène l'écart de compétences à une échelle simple : sur 100 travailleurs, 59 nécessiteront une formation ou une reconversion d'ici 2030. Parmi eux, la trajectoire diffère fortement selon l'accompagnement mis en place.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "items": [
+        {
+          "value": "29",
+          "label": "peuvent être formés dans leur poste actuel, sans changer de fonction."
+        },
+        {
+          "value": "19",
+          "label": "peuvent être formés puis redéployés vers un autre poste au sein de la même organisation."
+        },
+        {
+          "value": "11",
+          "label": "risquent de ne recevoir ni formation ni reconversion, avec une employabilité qui se dégrade en conséquence."
+        }
+      ]
+    },
+    "skillsRanking": {
+      "label": "Les compétences qui montent, celles qui reculent",
+      "title": "Le podium n'est plus uniquement technique.",
+      "desc": "La pensée analytique reste la compétence la plus recherchée par les employeurs, citée par 7 entreprises sur 10. Les compétences technologiques progressent le plus vite en proportion, mais elles ne dominent pas seules le classement.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "rising": {
+        "title": "En hausse",
+        "items": [
+          "Pensée analytique",
+          "IA et exploitation de données",
+          "Réseaux et cybersécurité",
+          "Littératie technologique",
+          "Résilience, flexibilité et agilité",
+          "Curiosité et apprentissage continu"
+        ]
+      },
+      "declining": {
+        "title": "En recul",
+        "items": [
+          "Dextérité manuelle et précision d'exécution",
+          "Tâches administratives répétitives et saisie de données"
+        ]
+      }
+    },
+    "byRole": {
+      "label": "Par nature de poste",
+      "title": "Ce qui se transforme n'est pas ce qu'on imagine.",
+      "desc": "L'exposition à l'automatisation ne suit pas la ligne de partage attendue entre métiers « manuels » et « intellectuels ». Trois lectures factuelles issues des données récentes.",
+      "items": [
+        {
+          "title": "Les métiers techniques et de service en tête de la croissance",
+          "desc": "Les spécialistes big data, les ingénieurs IA et machine learning ainsi que les développeurs logiciels figurent parmi les métiers à la croissance la plus rapide en proportion, aux côtés de métiers de services et d'accompagnement à fort volume.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "Le déclin le plus net touche les tâches administratives codifiées",
+          "desc": "Les postes de saisie de données, de guichet et de secrétariat administratif enregistrent le recul le plus marqué en nombre absolu, des fonctions dont les tâches sont les plus facilement documentables et donc automatisables.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "L'expérience se paie plus cher, pas moins",
+          "desc": "La prime salariale liée à l'expérience atteint 40% en moyenne tous métiers confondus. L'IA remplace en priorité les tâches documentables et codifiées ; elle complète le jugement et la connaissance tacite construits sur plusieurs années.",
+          "source": "PwC, Global AI Jobs Barometer 2026"
+        }
+      ]
+    },
+    "industries": {
+      "label": "Par secteur",
+      "title": "Une exposition très inégale selon l'industrie.",
+      "desc": "Les secteurs les plus exposés à l'IA affichent une croissance de productivité par employé nettement supérieure aux autres, un facteur proche de 4x sur la période 2018-2024 comparé au cycle précédent.",
+      "sourceLine": "Données croisées PwC Global AI Jobs Barometer et Federal Reserve Bank of Dallas, 2026",
+      "items": [
+        {
+          "cluster": "Finance & Capital",
+          "desc": "Scoring crédit, conformité AML/KYC et détection de fraude automatisés en priorité. Les postes d'analyse de premier niveau sont les plus directement concernés par la recomposition des tâches."
+        },
+        {
+          "cluster": "Santé & Sciences de la Vie",
+          "desc": "Adoption plus lente qu'ailleurs du fait de la réglementation (MDR/IVDR, données de santé), mais forte hausse de la demande pour les compétences croisées santé-data."
+        },
+        {
+          "cluster": "Industrie, Énergie & Infrastructure",
+          "desc": "La maintenance prédictive et l'IA embarquée déplacent la valeur du geste technique vers l'interprétation de données de capteurs et de modèles prédictifs."
+        },
+        {
+          "cluster": "Commerce, Services & Expérience Client",
+          "desc": "Plus de la moitié des offres d'emploi mentionnant l'IA en Europe concernent des métiers hors technologie (service client, vente, marketing), pas uniquement des postes techniques."
+        },
+        {
+          "cluster": "Tech, Innovation & Secteur Public",
+          "desc": "Secteur le plus exposé et le mieux rémunéré sur les compétences IA. Pour un poste de développeur IA, on compte environ sept postes d'utilisateur d'IA, l'essentiel de la demande porte sur la capacité à utiliser l'IA, pas à la construire."
+        }
+      ]
+    },
+    "cifso": {
+      "label": "Ce que documente la Certification CIFSO 5000",
+      "title": "La dimension Organisation face à ces données.",
+      "body": "Le protocole CIFSO 5000 évalue la dimension Organisation & Talent sur des critères précis et vérifiables : la dépendance fondateur (O-11), la profondeur de l'équipe de direction (O-12), le plan de succession (O-13), la documentation opérationnelle (O-14), la rétention des talents clés (O-15, seuil de référence : turnover annuel inférieur ou égal à 10% sur les postes critiques).\n\nCes critères mesurent la stabilité d'une organisation, pas sa capacité à suivre le rythme de recomposition des compétences que montrent les données ci-dessus. Une équipe stable au sens du critère O-15 peut malgré tout accuser un retard de compétences si aucune mise à jour n'est engagée : la rétention et l'actualisation des compétences ne se mesurent pas de la même façon.",
+      "cta": "Voir la méthodologie complète CIFSO 5000",
+      "ctaHref": "/grade"
+    },
+    "forWho": {
+      "label": "Pour qui ces données comptent",
+      "title": "Les mêmes chiffres, des lectures différentes.",
+      "items": [
+        {
+          "title": "Salariés & professionnels",
+          "desc": "La prime salariale liée aux compétences IA a doublé en deux ans, mais seuls 12% des actifs en emploi ont suivi une formation IA dans l'année écoulée. L'écart entre la valeur de marché de la compétence et son taux d'acquisition réel est la donnée la plus actionnable aujourd'hui."
+        },
+        {
+          "title": "Directions RH & dirigeants",
+          "desc": "63% des employeurs citent l'écart de compétences comme premier frein à leur transformation, et 85% priorisent déjà la formation interne. Sur 100 collaborateurs, 11 restent aujourd'hui sans accompagnement prévu, c'est le chiffre à corriger en premier."
+        },
+        {
+          "title": "Directions financières & investisseurs",
+          "desc": "L'écart de productivité par employé entre secteurs exposés et non exposés à l'IA (facteur proche de 4x sur 2018-2024) est un signal de valorisation directement exploitable dans un screening ou une due diligence, indépendamment des seuls indicateurs financiers classiques."
+        }
+      ]
+    },
+    "sources": {
+      "label": "Sources",
+      "title": "Toutes les données citées sur cette page sont sourcées et datées.",
+      "desc": "World Economic Forum (Future of Jobs Report), PwC (Global AI Jobs Barometer, éditions 2026), Federal Reserve Bank of Dallas (février 2026). Cette page est mise à jour à mesure que de nouvelles éditions de ces rapports paraissent."
+    },
+    "cta": {
+      "employer": {
+        "title": "Vous pilotez une organisation confrontée à ces écarts de compétences.",
+        "desc": "Discutons d'un diagnostic Organisation & Talent avant votre prochaine décision stratégique.",
+        "cta": "Parler à un conseiller",
+        "href": "/contact?subject=advisory"
+      },
+      "talent": {
+        "title": "Vous recrutez les profils qui pilotent cette transformation.",
+        "desc": "Head of AI, Chief Data Officer, Directeur de Transformation : nous les identifions et les plaçons.",
+        "cta": "Découvrir Aegryn Talent",
+        "href": "/talent"
+      }
+    }
   }
 }

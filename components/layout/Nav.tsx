@@ -62,6 +62,7 @@ const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Nos convictions - Notre regard sur le marché
 const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMarketArticles',   href: '/blog' },
+  { labelKey: 'thinkingMarketWorkforce',  href: '/workforce' as LinkHref },
   { labelKey: 'thinkingMarketGlossary',   href: '/glossaire' as LinkHref },
   { labelKey: 'thinkingMarketFAQ',        href: '/help/faq' as LinkHref },
 ]

@@ -72,6 +72,7 @@ export const routing = defineRouting({
     },
     '/alliances':                         '/alliances',
     '/blog':                              '/blog',
+    '/workforce':                         '/workforce',
     '/career':                            '/career',
     '/blog/[slug]':                       '/blog/[slug]',
     '/services/acquisition-support':      '/services/acquisition-support',

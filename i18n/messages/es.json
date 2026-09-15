@@ -139,6 +139,7 @@
     "thinkingMarketDesc": "Datos, análisis y puntos de vista de quienes hacen el mercado.",
     "thinkingMarketNewsletter": "Newsletter de LinkedIn",
     "thinkingMarketArticles": "Todos los artículos",
+    "thinkingMarketWorkforce": "Empleo & Competencias",
     "thinkingMarketGlossary": "Glosario M&A tech",
     "thinkingMarketFAQ": "FAQ",
     "industries": "Industries",
@@ -10986,5 +10987,198 @@
     "badgeAlt": "Insignia Certificado CIFSO 5000",
     "learnMore": "Descubrir la certificación",
     "whatDeed": "Este certificado vale como título de propiedad del valor de la organización: acredita lo que posee, lo que controla y lo que vale, con el CIFSO Valuation Index como fuente de referencia."
+  },
+  "workforce": {
+    "meta": {
+      "title": "Empleo & Competencias | Aegryn",
+      "desc": "Datos de mercado sobre empleo, competencias y salarios en la era de la IA: una lectura factual de los informes del World Economic Forum, PwC y los institutos estadísticos europeos."
+    },
+    "nav": {
+      "label": "Empleo & Competencias"
+    },
+    "hero": {
+      "label": "Empleo & Competencias",
+      "title": "Lo que los datos realmente dicen\nsobre el empleo en la era de la IA.",
+      "desc": "Profesiones, competencias, salarios, tendencias por sector: una lectura factual de las cifras publicadas por el World Economic Forum, PwC y los institutos estadísticos europeos. Sin predicciones, con datos.",
+      "cta1": "Evaluar la madurez de mi organización",
+      "cta1Href": "/valuation",
+      "cta2": "Hablar de un tema de RR. HH. u organizativo",
+      "cta2Href": "/contact?subject=advisory"
+    },
+    "marketData": {
+      "label": "Las cifras 2025-2026",
+      "title": "El empleo en mutación, en cifras verificadas.",
+      "desc": "Estos datos provienen del Future of Jobs Report del World Economic Forum y del Global AI Jobs Barometer de PwC. Se refieren específicamente al empleo, las competencias y las remuneraciones, sin solaparse con las estadísticas de mercado M&A ya presentadas en otras partes de este sitio.",
+      "stats": [
+        {
+          "value": "92M / 170M",
+          "label": "empleos suprimidos frente a creados de aquí a 2030, un saldo neto positivo de 78 millones, pero entre poblaciones de trabajadores diferentes.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "39%",
+          "label": "de las competencias que posee hoy un trabajador se transformarán o quedarán obsoletas de aquí a 2030, en promedio para todas las profesiones.",
+          "source": "World Economic Forum, Future of Jobs Report 2025"
+        },
+        {
+          "value": "62%",
+          "label": "de prima salarial para los puestos que exigen competencias de IA verificadas, frente al 25% dos años antes, una duplicación en 24 meses.",
+          "source": "PwC, Global AI Jobs Barometer, junio de 2026"
+        },
+        {
+          "value": "63%",
+          "label": "de los empleadores identifican la brecha de competencias como el principal freno a su transformación, la categoría de riesgo más citada por delante de cualquier otra restricción operativa.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "12%",
+          "label": "solo de los activos empleados ha seguido una formación relacionada con la IA en los últimos doce meses, a pesar de la duplicación de la prima salarial asociada.",
+          "source": "PwC, Global AI Jobs Barometer, 2026"
+        },
+        {
+          "value": "85%",
+          "label": "de los empleadores declara priorizar la formación de sus equipos actuales antes que el simple reclutamiento externo para cerrar la brecha de competencias.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        }
+      ]
+    },
+    "hundredWorkers": {
+      "label": "Una lectura a escala de una organización",
+      "title": "De cada 100 empleados, 59 necesitan una actualización de competencias.",
+      "desc": "El World Economic Forum reduce la brecha de competencias a una escala simple: de cada 100 trabajadores, 59 necesitarán formación o reconversión de aquí a 2030. Entre ellos, la trayectoria difiere fuertemente según el acompañamiento implementado.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "items": [
+        {
+          "value": "29",
+          "label": "pueden formarse en su puesto actual, sin cambiar de función."
+        },
+        {
+          "value": "19",
+          "label": "pueden formarse y luego ser redistribuidos a otro puesto dentro de la misma organización."
+        },
+        {
+          "value": "11",
+          "label": "corren el riesgo de no recibir ni formación ni reconversión, con una empleabilidad que se deteriora en consecuencia."
+        }
+      ]
+    },
+    "skillsRanking": {
+      "label": "Las competencias que suben, las que retroceden",
+      "title": "El podio ya no es únicamente técnico.",
+      "desc": "El pensamiento analítico sigue siendo la competencia más buscada por los empleadores, citada por 7 de cada 10 empresas. Las competencias tecnológicas son las que más rápido progresan en proporción, pero no dominan por sí solas la clasificación.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "rising": {
+        "title": "En alza",
+        "items": [
+          "Pensamiento analítico",
+          "IA y explotación de datos",
+          "Redes y ciberseguridad",
+          "Alfabetización tecnológica",
+          "Resiliencia, flexibilidad y agilidad",
+          "Curiosidad y aprendizaje continuo"
+        ]
+      },
+      "declining": {
+        "title": "En retroceso",
+        "items": [
+          "Destreza manual y precisión de ejecución",
+          "Tareas administrativas repetitivas e introducción de datos"
+        ]
+      }
+    },
+    "byRole": {
+      "label": "Por naturaleza del puesto",
+      "title": "Lo que se transforma no es lo que uno imagina.",
+      "desc": "La exposición a la automatización no sigue la línea de división esperada entre profesiones «manuales» e «intelectuales». Tres lecturas factuales a partir de datos recientes.",
+      "items": [
+        {
+          "title": "Los oficios técnicos y de servicio a la cabeza del crecimiento",
+          "desc": "Los especialistas en big data, los ingenieros de IA y machine learning, así como los desarrolladores de software, figuran entre las profesiones de crecimiento más rápido en proporción, junto a oficios de servicios y acompañamiento de alto volumen.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "El declive más marcado afecta a las tareas administrativas codificadas",
+          "desc": "Los puestos de introducción de datos, de ventanilla y de secretaría administrativa registran el retroceso más marcado en número absoluto, funciones cuyas tareas son las más fácilmente documentables y por tanto automatizables.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "La experiencia se paga más cara, no menos",
+          "desc": "La prima salarial ligada a la experiencia alcanza el 40% de media para todas las profesiones. La IA sustituye prioritariamente las tareas documentables y codificadas; complementa el juicio y el conocimiento tácito construidos a lo largo de varios años.",
+          "source": "PwC, Global AI Jobs Barometer 2026"
+        }
+      ]
+    },
+    "industries": {
+      "label": "Por sector",
+      "title": "Una exposición muy desigual según la industria.",
+      "desc": "Los sectores más expuestos a la IA muestran un crecimiento de la productividad por empleado claramente superior a los demás, un factor cercano a 4x en el periodo 2018-2024 en comparación con el ciclo anterior.",
+      "sourceLine": "Datos cruzados de PwC Global AI Jobs Barometer y Federal Reserve Bank of Dallas, 2026",
+      "items": [
+        {
+          "cluster": "Finanzas & Capital",
+          "desc": "Scoring crediticio, cumplimiento AML/KYC y detección de fraude automatizados de manera prioritaria. Los puestos de análisis de primer nivel son los más directamente afectados por la recomposición de las tareas."
+        },
+        {
+          "cluster": "Salud & Ciencias de la Vida",
+          "desc": "Adopción más lenta que en otros sectores debido a la regulación (MDR/IVDR, datos de salud), pero fuerte aumento de la demanda de competencias cruzadas salud-datos."
+        },
+        {
+          "cluster": "Industria, Energía & Infraestructura",
+          "desc": "El mantenimiento predictivo y la IA embebida desplazan el valor del gesto técnico hacia la interpretación de datos de sensores y modelos predictivos."
+        },
+        {
+          "cluster": "Comercio, Servicios & Experiencia del Cliente",
+          "desc": "Más de la mitad de las ofertas de empleo relacionadas con la IA en Europa se refieren a puestos fuera de la tecnología (servicio al cliente, ventas, marketing), no únicamente puestos técnicos."
+        },
+        {
+          "cluster": "Tech, Innovación & Sector Público",
+          "desc": "El sector más expuesto y mejor remunerado en competencias de IA. Por cada puesto de desarrollador de IA, se cuentan aproximadamente siete puestos de usuario de IA, la mayor parte de la demanda se refiere a la capacidad de utilizar la IA, no de construirla."
+        }
+      ]
+    },
+    "cifso": {
+      "label": "Lo que documenta la Certificación CIFSO 5000",
+      "title": "La dimensión Organización frente a estos datos.",
+      "body": "El protocolo CIFSO 5000 evalúa la dimensión Organización & Talento en función de criterios precisos y verificables: la dependencia del fundador (O-11), la profundidad del equipo directivo (O-12), el plan de sucesión (O-13), la documentación operativa (O-14), la retención de talentos clave (O-15, umbral de referencia: rotación anual igual o inferior al 10% en los puestos críticos).\n\nEstos criterios miden la estabilidad de una organización, no su capacidad de seguir el ritmo de recomposición de competencias que muestran los datos anteriores. Un equipo estable en el sentido del criterio O-15 puede, no obstante, acusar un retraso de competencias si no se emprende ninguna actualización: la retención y la actualización de las competencias no se miden de la misma manera.",
+      "cta": "Ver la metodología completa CIFSO 5000",
+      "ctaHref": "/grade"
+    },
+    "forWho": {
+      "label": "Para quién importan estos datos",
+      "title": "Las mismas cifras, lecturas diferentes.",
+      "items": [
+        {
+          "title": "Asalariados & profesionales",
+          "desc": "La prima salarial ligada a las competencias de IA se ha duplicado en dos años, pero solo el 12% de los activos empleados ha seguido una formación en IA en el último año. La brecha entre el valor de mercado de la competencia y su tasa de adquisición real es el dato más accionable hoy."
+        },
+        {
+          "title": "Direcciones de RR. HH. y directivos",
+          "desc": "El 63% de los empleadores cita la brecha de competencias como el principal freno a su transformación, y el 85% ya prioriza la formación interna. De cada 100 empleados, 11 siguen hoy sin acompañamiento previsto, esa es la cifra que corregir en primer lugar."
+        },
+        {
+          "title": "Direcciones financieras & inversores",
+          "desc": "La brecha de productividad por empleado entre sectores expuestos y no expuestos a la IA (un factor cercano a 4x entre 2018 y 2024) es una señal de valoración directamente utilizable en un screening o una due diligence, independientemente de los indicadores financieros clásicos por sí solos."
+        }
+      ]
+    },
+    "sources": {
+      "label": "Fuentes",
+      "title": "Todos los datos citados en esta página están referenciados y fechados.",
+      "desc": "World Economic Forum (Future of Jobs Report), PwC (Global AI Jobs Barometer, ediciones 2026), Federal Reserve Bank of Dallas (febrero de 2026). Esta página se actualiza a medida que se publican nuevas ediciones de estos informes."
+    },
+    "cta": {
+      "employer": {
+        "title": "Usted dirige una organización que se enfrenta a estas brechas de competencias.",
+        "desc": "Hablemos de un diagnóstico de Organización & Talento antes de su próxima decisión estratégica.",
+        "cta": "Hablar con un asesor",
+        "href": "/contact?subject=advisory"
+      },
+      "talent": {
+        "title": "Usted recluta a los perfiles que impulsan esta transformación.",
+        "desc": "Head of AI, Chief Data Officer, Director de Transformación: los identificamos y los colocamos.",
+        "cta": "Descubrir Aegryn Talent",
+        "href": "/talent"
+      }
+    }
   }
 }

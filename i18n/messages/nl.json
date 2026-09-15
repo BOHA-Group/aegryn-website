@@ -139,6 +139,7 @@
     "thinkingMarketDesc": "Data, analyses en inzichten van degenen die de markt maken.",
     "thinkingMarketNewsletter": "LinkedIn Nieuwsbrief",
     "thinkingMarketArticles": "Alle artikelen",
+    "thinkingMarketWorkforce": "Werkgelegenheid & Vaardigheden",
     "thinkingMarketGlossary": "M&A-tech Woordenlijst",
     "thinkingMarketFAQ": "FAQ",
     "industries": "Industries",
@@ -10986,5 +10987,198 @@
     "badgeAlt": "Badge CIFSO 5000 gecertificeerd",
     "learnMore": "De certificering ontdekken",
     "whatDeed": "Dit certificaat geldt als eigendomsakte van de waarde van de organisatie: het bevestigt wat zij bezit, wat zij beheerst en wat zij waard is, met de CIFSO Valuation Index als referentiebron."
+  },
+  "workforce": {
+    "meta": {
+      "title": "Werkgelegenheid & Vaardigheden | Aegryn",
+      "desc": "Marktgegevens over werkgelegenheid, vaardigheden en salarissen in het AI-tijdperk: een feitelijke lezing van de rapporten van het World Economic Forum, PwC en Europese statistische instituten."
+    },
+    "nav": {
+      "label": "Werkgelegenheid & Vaardigheden"
+    },
+    "hero": {
+      "label": "Werkgelegenheid & Vaardigheden",
+      "title": "Wat de gegevens echt zeggen\nover werkgelegenheid in het AI-tijdperk.",
+      "desc": "Beroepen, vaardigheden, salarissen, sectortrends: een feitelijke lezing van de cijfers gepubliceerd door het World Economic Forum, PwC en Europese statistische instituten. Geen voorspellingen, alleen gegevens.",
+      "cta1": "De maturiteit van mijn organisatie beoordelen",
+      "cta1Href": "/valuation",
+      "cta2": "Een HR- of organisatievraagstuk bespreken",
+      "cta2Href": "/contact?subject=advisory"
+    },
+    "marketData": {
+      "label": "De cijfers 2025-2026",
+      "title": "Werkgelegenheid in verandering, in geverifieerde cijfers.",
+      "desc": "Deze gegevens zijn afkomstig uit het Future of Jobs Report van het World Economic Forum en de Global AI Jobs Barometer van PwC. Ze hebben specifiek betrekking op werkgelegenheid, vaardigheden en beloning, zonder overlap met de M&A-marktstatistieken die elders op deze site worden gepresenteerd.",
+      "stats": [
+        {
+          "value": "92M / 170M",
+          "label": "banen die tegen 2030 verdwijnen versus gecreëerd worden, een positief nettosaldo van 78 miljoen, maar tussen verschillende groepen werknemers.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "39%",
+          "label": "van de vaardigheden die een werknemer vandaag bezit, zal tegen 2030 zijn getransformeerd of achterhaald, gemiddeld over alle beroepen.",
+          "source": "World Economic Forum, Future of Jobs Report 2025"
+        },
+        {
+          "value": "62%",
+          "label": "loonpremie voor functies die geverifieerde AI-vaardigheden vereisen, tegenover 25% twee jaar eerder, een verdubbeling in 24 maanden.",
+          "source": "PwC, Global AI Jobs Barometer, juni 2026"
+        },
+        {
+          "value": "63%",
+          "label": "van de werkgevers identificeert de vaardighedenkloof als het grootste obstakel voor hun transformatie, de meest genoemde risicocategorie vóór elke andere operationele beperking.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "12%",
+          "label": "van de werkenden heeft de afgelopen twaalf maanden slechts een AI-gerelateerde opleiding gevolgd, ondanks de verdubbeling van de bijbehorende loonpremie.",
+          "source": "PwC, Global AI Jobs Barometer, 2026"
+        },
+        {
+          "value": "85%",
+          "label": "van de werkgevers geeft aan de opleiding van hun bestaande teams te prioriteren boven alleen externe werving om de vaardighedenkloof te dichten.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        }
+      ]
+    },
+    "hundredWorkers": {
+      "label": "Een lezing op organisatieschaal",
+      "title": "Van elke 100 medewerkers hebben er 59 een update van vaardigheden nodig.",
+      "desc": "Het World Economic Forum brengt de vaardighedenkloof terug tot een eenvoudige schaal: van elke 100 werknemers zullen er 59 tegen 2030 opleiding of omscholing nodig hebben. Onder hen verschilt het traject sterk naargelang de geboden begeleiding.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "items": [
+        {
+          "value": "29",
+          "label": "kunnen worden opgeleid in hun huidige functie, zonder van functie te veranderen."
+        },
+        {
+          "value": "19",
+          "label": "kunnen worden opgeleid en vervolgens worden herplaatst naar een andere functie binnen dezelfde organisatie."
+        },
+        {
+          "value": "11",
+          "label": "lopen het risico noch opleiding noch omscholing te krijgen, waardoor hun inzetbaarheid dienovereenkomstig verslechtert."
+        }
+      ]
+    },
+    "skillsRanking": {
+      "label": "De stijgende vaardigheden, de dalende vaardigheden",
+      "title": "Het podium is niet langer zuiver technisch.",
+      "desc": "Analytisch denken blijft de meest gevraagde vaardigheid bij werkgevers, genoemd door 7 op de 10 bedrijven. Technologische vaardigheden groeien proportioneel het snelst, maar domineren de ranglijst niet alleen.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "rising": {
+        "title": "Stijgend",
+        "items": [
+          "Analytisch denken",
+          "AI en datagebruik",
+          "Netwerken en cyberveiligheid",
+          "Technologische geletterdheid",
+          "Veerkracht, flexibiliteit en behendigheid",
+          "Nieuwsgierigheid en levenslang leren"
+        ]
+      },
+      "declining": {
+        "title": "Dalend",
+        "items": [
+          "Handmatige vaardigheid en uitvoeringsprecisie",
+          "Repetitieve administratieve taken en gegevensinvoer"
+        ]
+      }
+    },
+    "byRole": {
+      "label": "Naar aard van de functie",
+      "title": "Wat verandert, is niet wat men zou verwachten.",
+      "desc": "De blootstelling aan automatisering volgt niet de verwachte scheidslijn tussen “manuele” en “intellectuele” beroepen. Drie feitelijke lezingen op basis van recente gegevens.",
+      "items": [
+        {
+          "title": "Technische en dienstverlenende beroepen aan de top van de groei",
+          "desc": "Big-data-specialisten, AI- en machine-learning-ingenieurs en softwareontwikkelaars behoren proportioneel tot de snelst groeiende beroepen, naast dienstverlenende en ondersteunende beroepen met een hoog volume.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "De scherpste daling treft gecodificeerde administratieve taken",
+          "desc": "Functies in gegevensinvoer, aan het loket en administratief secretariaat noteren de sterkste daling in absolute aantallen, functies waarvan de taken het gemakkelijkst te documenteren en dus te automatiseren zijn.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "Ervaring wordt duurder betaald, niet goedkoper",
+          "desc": "De loonpremie gekoppeld aan ervaring bedraagt gemiddeld 40% over alle beroepen. AI vervangt in de eerste plaats documenteerbare, gecodificeerde taken; ze vult het over meerdere jaren opgebouwde oordeel en de stilzwijgende kennis aan.",
+          "source": "PwC, Global AI Jobs Barometer 2026"
+        }
+      ]
+    },
+    "industries": {
+      "label": "Per sector",
+      "title": "Een zeer ongelijke blootstelling naargelang de sector.",
+      "desc": "De sectoren die het meest zijn blootgesteld aan AI vertonen een productiviteitsgroei per werknemer die duidelijk hoger ligt dan bij andere, een factor van bijna 4x over de periode 2018-2024 vergeleken met de vorige cyclus.",
+      "sourceLine": "Gegevens gekruist uit PwC Global AI Jobs Barometer en Federal Reserve Bank of Dallas, 2026",
+      "items": [
+        {
+          "cluster": "Finance & Kapitaal",
+          "desc": "Kredietscoring, AML/KYC-naleving en fraudedetectie worden bij voorrang geautomatiseerd. Analistenfuncties op eerste niveau worden het meest rechtstreeks getroffen door de herschikking van taken."
+        },
+        {
+          "cluster": "Gezondheid & Life Sciences",
+          "desc": "Tragere adoptie dan elders door regelgeving (MDR/IVDR, gezondheidsgegevens), maar sterke toename van de vraag naar gecombineerde gezondheids-datavaardigheden."
+        },
+        {
+          "cluster": "Industrie, Energie & Infrastructuur",
+          "desc": "Voorspellend onderhoud en ingebedde AI verschuiven de waarde van manuele technische vaardigheid naar de interpretatie van sensorgegevens en voorspellende modellen."
+        },
+        {
+          "cluster": "Handel, Diensten & Klantervaring",
+          "desc": "Meer dan de helft van de AI-gerelateerde vacatures in Europa betreft functies buiten technologie (klantenservice, verkoop, marketing), niet alleen technische functies."
+        },
+        {
+          "cluster": "Tech, Innovatie & Publieke Sector",
+          "desc": "De meest blootgestelde en best betaalde sector voor AI-vaardigheden. Voor elke functie als AI-ontwikkelaar zijn er ongeveer zeven functies als AI-gebruiker, het grootste deel van de vraag betreft het vermogen om AI te gebruiken, niet om het te bouwen."
+        }
+      ]
+    },
+    "cifso": {
+      "label": "Wat de CIFSO 5000-certificering documenteert",
+      "title": "De dimensie Organisatie tegenover deze gegevens.",
+      "body": "Het CIFSO 5000-protocol beoordeelt de dimensie Organisatie & Talent aan de hand van precieze, verifieerbare criteria: oprichtersafhankelijkheid (O-11), diepgang van het managementteam (O-12), opvolgingsplan (O-13), operationele documentatie (O-14), retentie van sleuteltalent (O-15, referentiedrempel: jaarlijks verloop van maximaal 10% op kritieke functies).\n\nDeze criteria meten de stabiliteit van een organisatie, niet haar vermogen om het tempo van de vaardighedenherschikking dat de bovenstaande gegevens tonen bij te houden. Een team dat stabiel is in de zin van criterium O-15 kan toch een vaardighedenachterstand vertonen als er geen update wordt ondernomen: retentie en vaardighedenvernieuwing worden niet op dezelfde manier gemeten.",
+      "cta": "De volledige CIFSO 5000-methodologie bekijken",
+      "ctaHref": "/grade"
+    },
+    "forWho": {
+      "label": "Voor wie deze gegevens ertoe doen",
+      "title": "Dezelfde cijfers, verschillende lezingen.",
+      "items": [
+        {
+          "title": "Werknemers & professionals",
+          "desc": "De loonpremie gekoppeld aan AI-vaardigheden is in twee jaar tijd verdubbeld, maar slechts 12% van de werkenden heeft het afgelopen jaar een AI-opleiding gevolgd. De kloof tussen de marktwaarde van de vaardigheid en het werkelijke verwervingspercentage is vandaag het meest bruikbare gegeven."
+        },
+        {
+          "title": "HR-directies & bestuurders",
+          "desc": "63% van de werkgevers noemt de vaardighedenkloof als het grootste obstakel voor hun transformatie, en 85% geeft nu al voorrang aan interne opleiding. Van elke 100 medewerkers hebben er vandaag nog 11 geen geplande begeleiding, dat is het cijfer dat als eerste moet worden gecorrigeerd."
+        },
+        {
+          "title": "Financiële directies & investeerders",
+          "desc": "De productiviteitskloof per werknemer tussen sectoren die wel en niet zijn blootgesteld aan AI (een factor van bijna 4x over 2018-2024) is een waarderingssignaal dat rechtstreeks bruikbaar is bij een screening of due diligence, onafhankelijk van de klassieke financiële indicatoren alleen."
+        }
+      ]
+    },
+    "sources": {
+      "label": "Bronnen",
+      "title": "Alle op deze pagina geciteerde gegevens zijn gebronnen en gedateerd.",
+      "desc": "World Economic Forum (Future of Jobs Report), PwC (Global AI Jobs Barometer, edities 2026), Federal Reserve Bank of Dallas (februari 2026). Deze pagina wordt bijgewerkt naarmate nieuwe edities van deze rapporten verschijnen."
+    },
+    "cta": {
+      "employer": {
+        "title": "U leidt een organisatie die met deze vaardighedenkloven wordt geconfronteerd.",
+        "desc": "Laten we een Organisatie & Talent-diagnose bespreken vóór uw volgende strategische beslissing.",
+        "cta": "Met een adviseur spreken",
+        "href": "/contact?subject=advisory"
+      },
+      "talent": {
+        "title": "U werft de profielen die deze transformatie aansturen.",
+        "desc": "Head of AI, Chief Data Officer, Transformatiedirecteur: wij identificeren en plaatsen hen.",
+        "cta": "Aegryn Talent ontdekken",
+        "href": "/talent"
+      }
+    }
   }
 }

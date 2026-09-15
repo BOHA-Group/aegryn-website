@@ -139,6 +139,7 @@
     "thinkingMarketDesc": "Daten, Analysen und Einblicke von denen, die den Markt machen.",
     "thinkingMarketNewsletter": "LinkedIn Newsletter",
     "thinkingMarketArticles": "Alle Artikel",
+    "thinkingMarketWorkforce": "Beschäftigung & Kompetenzen",
     "thinkingMarketGlossary": "M&A-Tech-Glossar",
     "thinkingMarketFAQ": "FAQ",
     "industries": "Industries",
@@ -10986,5 +10987,198 @@
     "badgeAlt": "Badge CIFSO 5000 zertifiziert",
     "learnMore": "Zertifizierung entdecken",
     "whatDeed": "Dieses Zertifikat gilt als Eigentumsurkunde des Werts der Organisation: es bescheinigt, was sie besitzt, was sie beherrscht und was sie wert ist, mit dem CIFSO Valuation Index als Referenzquelle."
+  },
+  "workforce": {
+    "meta": {
+      "title": "Beschäftigung & Kompetenzen | Aegryn",
+      "desc": "Marktdaten zu Beschäftigung, Kompetenzen und Gehältern im KI-Zeitalter: eine faktenbasierte Auswertung der Berichte des World Economic Forum, von PwC und europäischer Statistikinstitute."
+    },
+    "nav": {
+      "label": "Beschäftigung & Kompetenzen"
+    },
+    "hero": {
+      "label": "Beschäftigung & Kompetenzen",
+      "title": "Was die Daten wirklich über Beschäftigung\nim KI-Zeitalter sagen.",
+      "desc": "Berufe, Kompetenzen, Gehälter, Branchentrends: eine faktenbasierte Auswertung der vom World Economic Forum, PwC und europäischen Statistikinstituten veröffentlichten Zahlen. Keine Prognosen, sondern Daten.",
+      "cta1": "Reifegrad meiner Organisation bewerten",
+      "cta1Href": "/valuation",
+      "cta2": "Ein HR- oder Organisationsthema besprechen",
+      "cta2Href": "/contact?subject=advisory"
+    },
+    "marketData": {
+      "label": "Die Zahlen 2025-2026",
+      "title": "Beschäftigung im Wandel, in geprüften Zahlen.",
+      "desc": "Diese Daten stammen aus dem Future of Jobs Report des World Economic Forum und dem Global AI Jobs Barometer von PwC. Sie betreffen speziell Beschäftigung, Kompetenzen und Vergütung, ohne sich mit den an anderer Stelle auf dieser Website dargestellten M&A-Marktstatistiken zu überschneiden.",
+      "stats": [
+        {
+          "value": "92M / 170M",
+          "label": "Arbeitsplätze, die bis 2030 wegfallen bzw. entstehen, ein positiver Nettosaldo von 78 Millionen, jedoch zwischen unterschiedlichen Gruppen von Arbeitskräften.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "39%",
+          "label": "der heute von einem Arbeitnehmer beherrschten Kompetenzen werden bis 2030 im Durchschnitt aller Berufe verändert oder überflüssig sein.",
+          "source": "World Economic Forum, Future of Jobs Report 2025"
+        },
+        {
+          "value": "62%",
+          "label": "Gehaltsprämie für Positionen, die nachgewiesene KI-Kompetenzen erfordern, gegenüber 25 % zwei Jahre zuvor, eine Verdopplung in 24 Monaten.",
+          "source": "PwC, Global AI Jobs Barometer, Juni 2026"
+        },
+        {
+          "value": "63%",
+          "label": "der Arbeitgeber nennen die Kompetenzlücke als grösstes Hindernis für ihre Transformation, die am häufigsten genannte Risikokategorie vor jeder anderen operativen Einschränkung.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "value": "12%",
+          "label": "der Erwerbstätigen haben in den letzten zwölf Monaten lediglich eine KI-bezogene Schulung absolviert, trotz der Verdopplung der damit verbundenen Gehaltsprämie.",
+          "source": "PwC, Global AI Jobs Barometer, 2026"
+        },
+        {
+          "value": "85%",
+          "label": "der Arbeitgeber geben an, die Weiterbildung ihrer bestehenden Teams gegenüber der reinen externen Rekrutierung zu priorisieren, um die Kompetenzlücke zu schliessen.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        }
+      ]
+    },
+    "hundredWorkers": {
+      "label": "Eine Lesart auf Organisationsebene",
+      "title": "Von 100 Mitarbeitenden benötigen 59 eine Kompetenzaktualisierung.",
+      "desc": "Das World Economic Forum bringt die Kompetenzlücke auf eine einfache Skala: von 100 Arbeitskräften werden 59 bis 2030 eine Schulung oder Umschulung benötigen. Unter ihnen unterscheidet sich der Weg stark je nach eingerichteter Begleitung.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "items": [
+        {
+          "value": "29",
+          "label": "können in ihrer aktuellen Position geschult werden, ohne die Funktion zu wechseln."
+        },
+        {
+          "value": "19",
+          "label": "können geschult und dann auf eine andere Position innerhalb derselben Organisation umverteilt werden."
+        },
+        {
+          "value": "11",
+          "label": "riskieren, weder eine Schulung noch eine Umschulung zu erhalten, wodurch sich ihre Beschäftigungsfähigkeit entsprechend verschlechtert."
+        }
+      ]
+    },
+    "skillsRanking": {
+      "label": "Die aufsteigenden, die rückläufigen Kompetenzen",
+      "title": "Das Podium ist nicht mehr rein technisch.",
+      "desc": "Analytisches Denken bleibt die von Arbeitgebern am meisten gesuchte Kompetenz, genannt von 7 von 10 Unternehmen. Technologische Kompetenzen wachsen anteilig am schnellsten, dominieren die Rangliste aber nicht allein.",
+      "source": "World Economic Forum, Future of Jobs Report",
+      "rising": {
+        "title": "Im Aufwind",
+        "items": [
+          "Analytisches Denken",
+          "KI und Datenkompetenz",
+          "Netzwerke und Cybersicherheit",
+          "Technologische Kompetenz",
+          "Resilienz, Flexibilität und Agilität",
+          "Neugier und lebenslanges Lernen"
+        ]
+      },
+      "declining": {
+        "title": "Im Rückgang",
+        "items": [
+          "Manuelle Geschicklichkeit und Präzision",
+          "Repetitive Verwaltungsaufgaben und Dateneingabe"
+        ]
+      }
+    },
+    "byRole": {
+      "label": "Nach Art der Position",
+      "title": "Was sich verändert, ist nicht das, was man erwartet.",
+      "desc": "Die Exponierung gegenüber Automatisierung folgt nicht der erwarteten Trennlinie zwischen „manuellen“ und „geistigen“ Berufen. Drei faktenbasierte Lesarten aus aktuellen Daten.",
+      "items": [
+        {
+          "title": "Technische und Dienstleistungsberufe führen das Wachstum an",
+          "desc": "Big-Data-Spezialisten, KI- und Machine-Learning-Ingenieure sowie Softwareentwickler gehören anteilig zu den am schnellsten wachsenden Berufen, neben volumenstarken Dienstleistungs- und Unterstützungsberufen.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "Der stärkste Rückgang betrifft kodifizierte Verwaltungsaufgaben",
+          "desc": "Positionen in der Dateneingabe, am Schalter und im Verwaltungssekretariat verzeichnen den stärksten Rückgang in absoluten Zahlen, Funktionen, deren Aufgaben am leichtesten dokumentierbar und damit automatisierbar sind.",
+          "source": "World Economic Forum, Future of Jobs Report"
+        },
+        {
+          "title": "Erfahrung wird teurer bezahlt, nicht günstiger",
+          "desc": "Die mit Erfahrung verbundene Gehaltsprämie erreicht im Durchschnitt aller Berufe 40 %. KI ersetzt vorrangig dokumentierbare, kodifizierte Aufgaben; sie ergänzt das über mehrere Jahre aufgebaute Urteilsvermögen und implizite Wissen.",
+          "source": "PwC, Global AI Jobs Barometer 2026"
+        }
+      ]
+    },
+    "industries": {
+      "label": "Nach Branche",
+      "title": "Eine sehr ungleiche Exponierung je nach Branche.",
+      "desc": "Die am stärksten von KI betroffenen Branchen verzeichnen ein deutlich höheres Produktivitätswachstum pro Mitarbeitendem als andere, ein Faktor von nahezu 4x im Zeitraum 2018-2024 im Vergleich zum vorherigen Zyklus.",
+      "sourceLine": "Daten aus PwC Global AI Jobs Barometer und Federal Reserve Bank of Dallas, 2026, zusammengeführt",
+      "items": [
+        {
+          "cluster": "Finanzen & Kapital",
+          "desc": "Kreditscoring, AML/KYC-Konformität und Betrugserkennung werden vorrangig automatisiert. Analystenpositionen der ersten Ebene sind am stärksten von der Neuordnung der Aufgaben betroffen."
+        },
+        {
+          "cluster": "Gesundheit & Life Sciences",
+          "desc": "Langsamere Einführung als anderswo aufgrund der Regulierung (MDR/IVDR, Gesundheitsdaten), jedoch ein starker Anstieg der Nachfrage nach kombinierten Gesundheits-Daten-Kompetenzen."
+        },
+        {
+          "cluster": "Industrie, Energie & Infrastruktur",
+          "desc": "Vorausschauende Wartung und eingebettete KI verlagern den Wert von der manuellen technischen Fertigkeit hin zur Interpretation von Sensordaten und Vorhersagemodellen."
+        },
+        {
+          "cluster": "Handel, Dienstleistungen & Kundenerlebnis",
+          "desc": "Mehr als die Hälfte der KI-bezogenen Stellenausschreibungen in Europa betrifft Positionen ausserhalb der Technologie (Kundenservice, Vertrieb, Marketing), nicht nur technische Stellen."
+        },
+        {
+          "cluster": "Tech, Innovation & Öffentlicher Sektor",
+          "desc": "Die am stärksten exponierte und am besten bezahlte Branche für KI-Kompetenzen. Auf eine Stelle als KI-Entwickler kommen etwa sieben Stellen als KI-Anwender, der Grossteil der Nachfrage betrifft die Fähigkeit, KI zu nutzen, nicht sie zu entwickeln."
+        }
+      ]
+    },
+    "cifso": {
+      "label": "Was die CIFSO-5000-Zertifizierung dokumentiert",
+      "title": "Die Dimension Organisation im Licht dieser Daten.",
+      "body": "Das CIFSO-5000-Protokoll bewertet die Dimension Organisation & Talent anhand präziser, überprüfbarer Kriterien: Gründerabhängigkeit (O-11), Tiefe des Führungsteams (O-12), Nachfolgeplan (O-13), operative Dokumentation (O-14), Bindung von Schlüsseltalenten (O-15, Referenzschwelle: jährliche Fluktuation von höchstens 10 % bei kritischen Positionen).\n\nDiese Kriterien messen die Stabilität einer Organisation, nicht ihre Fähigkeit, mit dem oben gezeigten Tempo der Kompetenzneuordnung Schritt zu halten. Ein im Sinne des Kriteriums O-15 stabiles Team kann dennoch eine Kompetenzlücke aufweisen, wenn keine Aktualisierung erfolgt: Bindung und Kompetenzaktualisierung werden nicht auf die gleiche Weise gemessen.",
+      "cta": "Die vollständige CIFSO-5000-Methodik ansehen",
+      "ctaHref": "/grade"
+    },
+    "forWho": {
+      "label": "Für wen diese Daten wichtig sind",
+      "title": "Dieselben Zahlen, unterschiedliche Lesarten.",
+      "items": [
+        {
+          "title": "Arbeitnehmer & Fachkräfte",
+          "desc": "Die mit KI-Kompetenzen verbundene Gehaltsprämie hat sich in zwei Jahren verdoppelt, doch nur 12 % der Erwerbstätigen haben im vergangenen Jahr eine KI-Schulung absolviert. Die Lücke zwischen dem Marktwert der Kompetenz und ihrer tatsächlichen Erwerbsquote ist heute die handlungsrelevanteste Kennzahl."
+        },
+        {
+          "title": "HR-Leitungen & Führungskräfte",
+          "desc": "63 % der Arbeitgeber nennen die Kompetenzlücke als grösstes Hindernis für ihre Transformation, und 85 % priorisieren bereits die interne Weiterbildung. Von 100 Mitarbeitenden haben heute 11 noch keine geplante Begleitung, das ist die zuerst zu korrigierende Zahl."
+        },
+        {
+          "title": "Finanzleitungen & Investoren",
+          "desc": "Die Produktivitätslücke pro Mitarbeitendem zwischen KI-exponierten und nicht exponierten Branchen (ein Faktor von nahezu 4x über 2018-2024) ist ein Bewertungssignal, das direkt in einem Screening oder einer Due Diligence nutzbar ist, unabhängig von den klassischen Finanzindikatoren allein."
+        }
+      ]
+    },
+    "sources": {
+      "label": "Quellen",
+      "title": "Alle auf dieser Seite zitierten Daten sind belegt und datiert.",
+      "desc": "World Economic Forum (Future of Jobs Report), PwC (Global AI Jobs Barometer, Ausgaben 2026), Federal Reserve Bank of Dallas (Februar 2026). Diese Seite wird aktualisiert, sobald neue Ausgaben dieser Berichte erscheinen."
+    },
+    "cta": {
+      "employer": {
+        "title": "Sie leiten eine Organisation, die mit diesen Kompetenzlücken konfrontiert ist.",
+        "desc": "Sprechen wir über eine Diagnose zu Organisation & Talent vor Ihrer nächsten strategischen Entscheidung.",
+        "cta": "Mit einem Berater sprechen",
+        "href": "/contact?subject=advisory"
+      },
+      "talent": {
+        "title": "Sie rekrutieren die Profile, die diese Transformation vorantreiben.",
+        "desc": "Head of AI, Chief Data Officer, Transformationsdirektor: Wir identifizieren und platzieren sie.",
+        "cta": "Aegryn Talent entdecken",
+        "href": "/talent"
+      }
+    }
   }
 }
