@@ -11179,6 +11179,11 @@
         "cta": "Aegryn Talent ontdekken",
         "href": "/talent"
       }
+    },
+    "articles": {
+      "label": "Meer weten",
+      "title": "Onze analyses over werkgelegenheid, vaardigheden en talent.",
+      "readMore": "Artikel lezen"
     }
   }
 }

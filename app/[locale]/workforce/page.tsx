@@ -1,8 +1,19 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import type { Metadata } from 'next'
+
+/* Articles du blog pertinents pour cette page, curés manuellement */
+const RELATED_ARTICLE_SLUGS = [
+  'recruter-ia-2026-salaires-competences-verifiees',
+  'penurie-competences-ia-2026-former-ou-recruter',
+  'salaires-executive-tech-suisse-europe-2026',
+  'dependance-fondateur-decote-20-30-pourcent-organisation-transmissible',
+]
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -44,6 +55,18 @@ export default async function WorkforcePage({ params }: Props) {
   const roleItems    = t.raw('byRole.items')              as RoleItem[]
   const clusterItems = t.raw('industries.items')          as ClusterItem[]
   const forWhoItems  = t.raw('forWho.items')              as ReaderItem[]
+
+  const VALID_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+  type ValidLocale = typeof VALID_LOCALES[number]
+  const lang: ValidLocale = (VALID_LOCALES as readonly string[]).includes(locale)
+    ? locale as ValidLocale
+    : 'en'
+  const getImage = (slug: string) => BLOG_IMAGES[slug] ?? BLOG_IMAGE_FALLBACK
+  const formatDate = (dateStr: string) =>
+    new Date(dateStr).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })
+  const relatedArticles = RELATED_ARTICLE_SLUGS
+    .map(slug => ARTICLES.find(a => a.slug === slug))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a))
 
   return (
     <main className="bg-ag-white">
@@ -342,6 +365,60 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
             {t('sources.desc')}
           </p>
+        </div>
+      </section>
+
+      {/* ── Articles liés ────────────────────────────────────────────── */}
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+            {t('articles.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('articles.title')}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {relatedArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/blog/${article.slug}`}
+                className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={getImage(article.slug)}
+                    style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
+                    alt={article.title[lang] ?? article.title.en}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex mb-2">
+                    {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
+                  </p>
+                  <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
+                    {article.title[lang] ?? article.title.en}
+                  </h3>
+                  <div className="flex items-center justify-between pt-3 border-t border-ag-border">
+                    <div className="flex items-center gap-3 text-ag-gray-light">
+                      <span className="flex items-center gap-1 font-mono text-[10px]">
+                        <Calendar size={10} /> {formatDate(article.date)}
+                      </span>
+                      <span className="flex items-center gap-1 font-mono text-[10px]">
+                        <Clock size={10} /> {article.readMin}
+                      </span>
+                    </div>
+                    <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex transition-colors shrink-0" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

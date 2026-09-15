@@ -3,6 +3,8 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
+  'recruter-ia-2026-salaires-competences-verifiees': '/images/blog/hiring-interview-handshake.jpg',
+  'penurie-competences-ia-2026-former-ou-recruter': '/images/blog/training-workshop-office.jpg',
   'cyber-resilience-act-2026-obligations-signalement-produits-numeriques': '/images/blog/chip-hardware-security.jpg',
   'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/notebook-desk.jpg',
   'dora-2026-resilience-operationnelle-numerique-secteur-financier-europe': '/images/blog/agile-standup.jpg',

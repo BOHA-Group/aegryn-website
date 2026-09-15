@@ -48,8 +48,11 @@ import { FOUNDER_DEPENDENCY_ARTICLE, CERTIFIED_VALUE_FINANCING_ARTICLE } from '.
 import { NIS2_FRANCE_ARTICLE } from './articles-nis2'
 import { DORA_ARTICLE, AI_ACT_2026_ARTICLE, SWISS_ISG_ARTICLE } from './articles-compliance-2026'
 import { CRA_ARTICLE } from './articles-cra'
+import { SKILLS_GAP_ARTICLE, AI_HIRING_ARTICLE } from './articles-workforce'
 
 export const ARTICLES: Article[] = [
+  AI_HIRING_ARTICLE,
+  SKILLS_GAP_ARTICLE,
   CRA_ARTICLE,
   SWISS_ISG_ARTICLE,
   AI_ACT_2026_ARTICLE,

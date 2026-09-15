@@ -11179,6 +11179,11 @@
         "cta": "Découvrir Aegryn Talent",
         "href": "/talent"
       }
+    },
+    "articles": {
+      "label": "Pour aller plus loin",
+      "title": "Nos analyses sur l'emploi, les compétences et le talent.",
+      "readMore": "Lire l'article"
     }
   }
 }
