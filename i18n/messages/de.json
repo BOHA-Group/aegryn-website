@@ -72,8 +72,9 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Zertifizierung",
     "craftSupport": "Begleiten",
-    "craftSupportDesc": "Strategie-, Tech- & M&A-Beratung : Alle Branchen",
+    "craftSupportDesc": "Strategie-, Risiko & Compliance-, Tech- & M&A-Beratung : Alle Branchen",
     "craftSupportStrategy": "Strategieberatung",
+    "craftSupportRiskCompliance": "Risiko- & Compliance-Beratung",
     "craftSupportTechnology": "Technologieberatung",
     "craftSupportMA": "M&A-Beratung",
     "craftSupportAdvisory": "Tech & KI-Beratung",
@@ -403,6 +404,62 @@
           }
         ]
       },
+      "riskCompliance": {
+        "title": "Risiko- & Compliance-Beratung",
+        "desc": "Wir kartieren, dokumentieren und steuern die regulatorische und operative Risikoexposition Ihrer Organisation, von Cyber-Compliance bis zur Risikogovernance.",
+        "why": {
+          "title": "Warum Risiko- und Compliance-Beratung?",
+          "desc": "NIS2, DORA, die EU-KI-Verordnung, der Cyber Resilience Act, das Schweizer Informationssicherheitsgesetz: Die regulatorischen Pflichten haben sich in zwei Jahren vervielfacht, mit kürzeren Compliance-Fristen und persönlicher Haftung für Führungskräfte. Viele Organisationen entdecken ihre Risikoexposition im ungünstigsten Moment, bei einem Audit, einer Due Diligence oder einem Vorfall. Wir helfen Führungskräften, ihre Compliance zu dokumentieren, bevor sie verlangt wird, und einen regulatorischen Zwang in einen nachweisbaren Vorteil gegenüber Kunden, Versicherern und Investoren zu verwandeln."
+        },
+        "approach": {
+          "title": "Unser Ansatz",
+          "desc": "Wir liefern keinen theoretischen Compliance-Bericht. Wir kartieren Ihre tatsächliche Risikoexposition, dokumentieren, was bereits vorhanden ist, und priorisieren Massnahmen nach ihrer regulatorischen und kommerziellen Wirkung. Jede Empfehlung ist umsetzbar, beziffert und einem klaren Verantwortlichen zugeordnet.",
+          "steps": [
+            {
+              "label": "Regulatorische Kartierung",
+              "desc": "Identifizierung der für Ihre Organisation geltenden Regelwerke (NIS2, DORA, KI-Verordnung, DSGVO/DSG, Schweizer ISG, Cyber Resilience Act) je nach Branche, Grösse und Standort. Priorisierung nach Frist und Risikograd."
+            },
+            {
+              "label": "Compliance-Diagnose",
+              "desc": "Bewertung der Lücke zwischen Ihrer aktuellen Praxis und den regulatorischen Anforderungen: Risikogovernance, Vorfallsmanagement, Sicherheit der Lieferkette, technische Dokumentation."
+            },
+            {
+              "label": "Massnahmenplan",
+              "desc": "Priorisierte Roadmap mit Meilensteinen, Verantwortlichen und Budget. Klare Unterscheidung zwischen dem, was verpflichtend ist, was der Markt erwartet, und was optional bleibt."
+            },
+            {
+              "label": "Dokumentation & Auditbereitschaft",
+              "desc": "Aufbau von Compliance-Nachweisen, die in der Due Diligence, gegenüber einer Aufsichtsbehörde, einem Versicherer oder einem Prüfer verwendbar sind. Kompetenztransfer an interne Teams."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Cyber-Compliance (NIS2, DORA, Cyber Resilience Act)",
+            "desc": ""
+          },
+          {
+            "label": "KI-Governance & Konformität mit der EU-KI-Verordnung",
+            "desc": ""
+          },
+          {
+            "label": "Datenschutz (DSGVO, Schweizer DSG)",
+            "desc": ""
+          },
+          {
+            "label": "Management von Drittanbieterrisiken & Lieferkette",
+            "desc": ""
+          },
+          {
+            "label": "Geschäftskontinuität & Vorfallsreaktion",
+            "desc": ""
+          },
+          {
+            "label": "Vorbereitung auf regulatorische Audits & Due Diligence",
+            "desc": ""
+          }
+        ]
+      },
       "technology": {
         "title": "Technologieberatung",
         "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
@@ -560,7 +617,8 @@
     "ctaDesc": "Jedes Engagement beginnt mit einer umfassenden Diagnose vor jeder Empfehlung. Wir dokumentieren, messen und liefern.",
     "ctaTitleMa": "Sprechen wir über Ihre M&A-Transaktion",
     "ctaTitleTech": "Sprechen wir über Ihre Tech-Transformation",
-    "ctaTitleStrategy": "Sprechen wir über Ihre Strategie"
+    "ctaTitleStrategy": "Sprechen wir über Ihre Strategie",
+    "ctaTitleRiskCompliance": "Sprechen wir über Ihre regulatorische Risikoexposition"
   },
   "build": {
     "hero": {
@@ -1567,6 +1625,32 @@
           "num": "06",
           "title": "Strategische Intelligenz & Marktbeobachtung",
           "desc": "Wettbewerbskartierung, Schwachsignalanalyse, Sektorpositionierung für M&A oder organisches Wachstum."
+        }
+      ]
+    },
+    "riskCompliance": {
+      "label": "RISIKO & COMPLIANCE: DEN KURS ABSICHERN",
+      "intro": "Regulatorische Pflichten sind keine Nebensache mehr: Sie bestimmen den Zugang zu Finanzierung, Grosskunden und Erwerbern. Wir helfen Führungskräften, ihre Compliance zu dokumentieren, bevor sie verlangt wird.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Risikokartierung & Governance",
+          "desc": "Identifizierung der für Ihre Organisation spezifischen regulatorischen, operativen und Cyberrisiken. Strukturierung der Risikogovernance auf Geschäftsleitungsebene."
+        },
+        {
+          "num": "02",
+          "title": "Regulatorische Konformität (NIS2, DORA, KI-Verordnung)",
+          "desc": "Lückendiagnose, Compliance-Fahrplan und belastbare Dokumentation gegenüber Regulatoren, Kunden und Finanzpartnern."
+        },
+        {
+          "num": "03",
+          "title": "Geschäftskontinuität & Vorfallsreaktion",
+          "desc": "Business-Continuity- und Wiederherstellungspläne, Verfahren zur Erkennung und Meldung von Vorfällen innerhalb der regulatorischen Fristen (24h/72h)."
+        },
+        {
+          "num": "04",
+          "title": "Vorbereitung auf Audits & Due Diligence",
+          "desc": "Aufbau eines Compliance-Nachweisdossiers, das bei einem regulatorischen Audit, einer M&A-Due-Diligence oder einer Anfrage eines Versicherers verwendet werden kann."
         }
       ]
     },

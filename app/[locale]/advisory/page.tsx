@@ -42,6 +42,7 @@ export default async function AdvisoryPage({ params }: Props) {
   const experts     = t.raw('experts.items')            as { title: string; desc: string }[]
   const useCases    = t.raw('experts.useCases.items')   as { profile: string; desc: string }[]
   const stratItems  = t.raw('strategy.items')           as { num: string; title: string; desc: string }[]
+  const riskItems   = t.raw('riskCompliance.items')     as { num: string; title: string; desc: string }[]
   const maPhases    = t.raw('ma.phases')                as { num: string; title: string; desc: string }[]
 
   return (
@@ -133,6 +134,31 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
             {stratItems.map((item) => (
               <div key={item.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BLOC A2 — Risque & Conformité ── */}
+      <section className="border-b border-ag-border bg-ag-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+          <div className="flex items-center border-b border-ag-border pb-4 mb-14">
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+              / {t('riskCompliance.label')}
+            </p>
+          </div>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
+            {t('riskCompliance.intro')}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+            {riskItems.map((item) => (
+              <div key={item.num} className="bg-ag-white p-8 hover:bg-ag-off-white transition-colors">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {item.title}

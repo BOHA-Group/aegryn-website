@@ -72,8 +72,9 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Certification",
     "craftSupport": "Advise",
-    "craftSupportDesc": "Strategy, Tech & M&A Advisory : All industries",
+    "craftSupportDesc": "Strategy, Risk & Compliance, Tech & M&A Advisory : All industries",
     "craftSupportStrategy": "Strategy Consulting",
+    "craftSupportRiskCompliance": "Risk & Compliance Consulting",
     "craftSupportTechnology": "Technology Consulting",
     "craftSupportMA": "M&A Consulting",
     "craftSupportAdvisory": "Tech & AI Advisory",
@@ -403,6 +404,62 @@
           }
         ]
       },
+      "riskCompliance": {
+        "title": "Risk & Compliance Advisory",
+        "desc": "We map, document and steer your organisation's regulatory and operational exposure, from cyber compliance to risk governance.",
+        "why": {
+          "title": "Why risk and compliance advisory?",
+          "desc": "NIS2, DORA, the EU AI Act, the Cyber Resilience Act, the Swiss information security law: regulatory obligations have multiplied in two years, with shorter compliance deadlines and personal liability for executives. Many organisations discover their exposure at the worst possible moment, during an audit, a due diligence process or an incident. We help leaders document their compliance before it is required, and turn a regulatory constraint into a demonstrable advantage with clients, insurers and investors."
+        },
+        "approach": {
+          "title": "Our approach",
+          "desc": "We do not deliver a theoretical compliance report. We map your actual exposure, document what already exists, and prioritise actions by their regulatory and commercial impact. Every recommendation is actionable, costed and assigned a clear owner.",
+          "steps": [
+            {
+              "label": "Regulatory mapping",
+              "desc": "Identification of the texts applicable to your organisation (NIS2, DORA, AI Act, GDPR/FADP, Swiss ISG, Cyber Resilience Act) based on your sector, size and location. Prioritisation by deadline and risk level."
+            },
+            {
+              "label": "Compliance diagnostic",
+              "desc": "Assessment of the gap between your current practices and regulatory requirements: risk governance, incident management, supply chain security, technical documentation."
+            },
+            {
+              "label": "Remediation plan",
+              "desc": "Prioritised roadmap with milestones, owners and budget. Clear distinction between what is mandatory, what the market expects, and what remains optional."
+            },
+            {
+              "label": "Documentation & audit readiness",
+              "desc": "Building compliance evidence usable in due diligence, before a regulator, an insurer or an auditor. Skills transfer to internal teams."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Cyber compliance (NIS2, DORA, Cyber Resilience Act)",
+            "desc": ""
+          },
+          {
+            "label": "AI governance & EU AI Act compliance",
+            "desc": ""
+          },
+          {
+            "label": "Data protection (GDPR, Swiss FADP)",
+            "desc": ""
+          },
+          {
+            "label": "Third-party risk & supply chain management",
+            "desc": ""
+          },
+          {
+            "label": "Business continuity & incident response",
+            "desc": ""
+          },
+          {
+            "label": "Regulatory audit & due diligence readiness",
+            "desc": ""
+          }
+        ]
+      },
       "technology": {
         "title": "Technology advisory",
         "desc": "We intervene on the technology layer of the organisation, from architecture to compliance.",
@@ -560,7 +617,8 @@
     "ctaDesc": "Every engagement starts with an exhaustive diagnostic before any recommendation. We document, we measure, we deliver.",
     "ctaTitleMa": "Let's discuss your M&A deal",
     "ctaTitleTech": "Let's discuss your tech transformation",
-    "ctaTitleStrategy": "Let's discuss your strategy"
+    "ctaTitleStrategy": "Let's discuss your strategy",
+    "ctaTitleRiskCompliance": "Let's discuss your regulatory exposure"
   },
   "build": {
     "hero": {
@@ -1567,6 +1625,32 @@
           "num": "06",
           "title": "Strategic intelligence & market watch",
           "desc": "Competitive mapping, weak signal analysis, sector positioning for M&A or organic growth."
+        }
+      ]
+    },
+    "riskCompliance": {
+      "label": "RISK & COMPLIANCE: SECURING THE TRAJECTORY",
+      "intro": "Regulatory obligations are no longer a side layer: they condition access to financing, enterprise clients and acquirers. We help leaders document their compliance before it is required.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Risk mapping & governance",
+          "desc": "Identification of the regulatory, operational and cyber risks specific to your organisation. Structuring of risk governance at executive committee level."
+        },
+        {
+          "num": "02",
+          "title": "Regulatory compliance (NIS2, DORA, AI Act)",
+          "desc": "Gap diagnostic, compliance roadmap and documentation enforceable before regulators, clients and financial partners."
+        },
+        {
+          "num": "03",
+          "title": "Business continuity & incident response",
+          "desc": "Business continuity and disaster recovery plans, incident detection and reporting procedures within regulatory deadlines (24h/72h)."
+        },
+        {
+          "num": "04",
+          "title": "Audit & due diligence readiness",
+          "desc": "Building a compliance evidence file usable during a regulatory audit, an M&A due diligence process or an insurer's request."
         }
       ]
     },

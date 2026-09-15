@@ -72,8 +72,9 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificación CIFSO 5000",
     "craftSupport": "Acompañar",
-    "craftSupportDesc": "Consultoría en Estrategia, Tech & M&A : Todas las industrias",
+    "craftSupportDesc": "Consultoría en Estrategia, Riesgo & Cumplimiento, Tech & M&A : Todas las industrias",
     "craftSupportStrategy": "Consultoría Estratégica",
+    "craftSupportRiskCompliance": "Consultoría de Riesgo y Cumplimiento",
     "craftSupportTechnology": "Consultoría Tecnológica",
     "craftSupportMA": "Consultoría M&A",
     "craftSupportAdvisory": "Asesoramiento Tech & IA",
@@ -403,6 +404,62 @@
           }
         ]
       },
+      "riskCompliance": {
+        "title": "Consultoría de Riesgo y Cumplimiento",
+        "desc": "Cartografiamos, documentamos y gestionamos la exposición regulatoria y operativa de su organización, desde el cumplimiento cibernético hasta la gobernanza de riesgos.",
+        "why": {
+          "title": "¿Por qué consultoría de riesgo y cumplimiento?",
+          "desc": "NIS2, DORA, el Reglamento de IA de la UE, el Cyber Resilience Act, la ley suiza de seguridad de la información: las obligaciones regulatorias se han multiplicado en dos años, con plazos de cumplimiento cada vez más cortos y responsabilidad personal para los directivos. Muchas organizaciones descubren su exposición en el peor momento posible, durante una auditoría, una due diligence o un incidente. Ayudamos a los directivos a documentar su cumplimiento antes de que se exija, y a convertir una obligación regulatoria en una ventaja demostrable ante clientes, aseguradoras e inversores."
+        },
+        "approach": {
+          "title": "Nuestro enfoque",
+          "desc": "No entregamos un informe de cumplimiento teórico. Cartografiamos su exposición real, documentamos lo que ya existe y priorizamos las acciones según su impacto regulatorio y comercial. Cada recomendación es accionable, cuantificada y asignada a un responsable claro.",
+          "steps": [
+            {
+              "label": "Cartografía regulatoria",
+              "desc": "Identificación de las normativas aplicables a su organización (NIS2, DORA, AI Act, RGPD/LPD, LSI suiza, Cyber Resilience Act) según su sector, tamaño y ubicación. Priorización por plazo y nivel de riesgo."
+            },
+            {
+              "label": "Diagnóstico de cumplimiento",
+              "desc": "Evaluación de la brecha entre sus prácticas actuales y los requisitos regulatorios: gobernanza de riesgos, gestión de incidentes, seguridad de la cadena de suministro, documentación técnica."
+            },
+            {
+              "label": "Plan de remediación",
+              "desc": "Hoja de ruta priorizada con hitos, responsables y presupuesto. Distinción clara entre lo que es obligatorio, lo que espera el mercado y lo que sigue siendo opcional."
+            },
+            {
+              "label": "Documentación y preparación para auditorías",
+              "desc": "Elaboración de pruebas de cumplimiento utilizables en due diligence, ante un regulador, una aseguradora o un auditor. Transferencia de competencias a los equipos internos."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Cumplimiento cibernético (NIS2, DORA, Cyber Resilience Act)",
+            "desc": ""
+          },
+          {
+            "label": "Gobernanza de IA y cumplimiento del Reglamento europeo",
+            "desc": ""
+          },
+          {
+            "label": "Protección de datos (RGPD, LPD suiza)",
+            "desc": ""
+          },
+          {
+            "label": "Gestión de riesgos de terceros y cadena de suministro",
+            "desc": ""
+          },
+          {
+            "label": "Continuidad de negocio y respuesta a incidentes",
+            "desc": ""
+          },
+          {
+            "label": "Preparación para auditorías regulatorias y due diligence",
+            "desc": ""
+          }
+        ]
+      },
       "technology": {
         "title": "Consultoría en tecnología",
         "desc": "Intervenimos en la capa tecnológica de la organización, desde la arquitectura hasta la conformidad.",
@@ -560,7 +617,8 @@
     "ctaDesc": "Cada encargo comienza con un diagnóstico exhaustivo antes de cualquier recomendación. Documentamos, medimos y entregamos.",
     "ctaTitleMa": "Hablemos de su operación M&A",
     "ctaTitleTech": "Hablemos de su transformación tecnológica",
-    "ctaTitleStrategy": "Hablemos de su estrategia"
+    "ctaTitleStrategy": "Hablemos de su estrategia",
+    "ctaTitleRiskCompliance": "Hablemos de su exposición regulatoria"
   },
   "build": {
     "hero": {
@@ -1567,6 +1625,32 @@
           "num": "06",
           "title": "Inteligencia estratégica & vigilancia de mercado",
           "desc": "Mapeo competitivo, análisis de señales débiles, posicionamiento sectorial para M&A o crecimiento orgánico."
+        }
+      ]
+    },
+    "riskCompliance": {
+      "label": "RIESGO Y CUMPLIMIENTO: ASEGURAR LA TRAYECTORIA",
+      "intro": "Las obligaciones regulatorias ya no son una capa secundaria: condicionan el acceso a la financiación, a los grandes clientes y a los adquirentes. Ayudamos a los directivos a documentar su cumplimiento antes de que se exija.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Cartografía de riesgos y gobernanza",
+          "desc": "Identificación de los riesgos regulatorios, operativos y cibernéticos propios de su organización. Estructuración de la gobernanza de riesgos a nivel del comité de dirección."
+        },
+        {
+          "num": "02",
+          "title": "Cumplimiento regulatorio (NIS2, DORA, AI Act)",
+          "desc": "Diagnóstico de brecha, hoja de ruta de cumplimiento y documentación oponible ante reguladores, clientes y socios financieros."
+        },
+        {
+          "num": "03",
+          "title": "Continuidad de negocio y respuesta a incidentes",
+          "desc": "Planes de continuidad y recuperación ante desastres, procedimientos de detección y notificación de incidentes dentro de los plazos regulatorios (24h/72h)."
+        },
+        {
+          "num": "04",
+          "title": "Preparación para auditorías y due diligence",
+          "desc": "Elaboración de un expediente de pruebas de cumplimiento utilizable en una auditoría regulatoria, un proceso de due diligence M&A o una solicitud de una aseguradora."
         }
       ]
     },

@@ -72,8 +72,9 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificazione CIFSO 5000",
     "craftSupport": "Accompagnare",
-    "craftSupportDesc": "Consulenza in Strategia, Tech & M&A : Tutti i settori",
+    "craftSupportDesc": "Consulenza in Strategia, Rischio & Conformità, Tech & M&A : Tutti i settori",
     "craftSupportStrategy": "Consulenza Strategica",
+    "craftSupportRiskCompliance": "Consulenza Rischio & Conformità",
     "craftSupportTechnology": "Consulenza Tecnologica",
     "craftSupportMA": "Consulenza M&A",
     "craftSupportAdvisory": "Consulenza Tech & IA",
@@ -403,6 +404,62 @@
           }
         ]
       },
+      "riskCompliance": {
+        "title": "Consulenza Rischio & Conformità",
+        "desc": "Mappiamo, documentiamo e guidiamo l'esposizione regolamentare e operativa della vostra organizzazione, dalla conformità cyber alla governance del rischio.",
+        "why": {
+          "title": "Perché la consulenza su rischio e conformità?",
+          "desc": "NIS2, DORA, il regolamento IA dell'UE, il Cyber Resilience Act, la legge svizzera sulla sicurezza delle informazioni: gli obblighi normativi si sono moltiplicati in due anni, con scadenze di conformità sempre più brevi e responsabilità personale per i dirigenti. Molte organizzazioni scoprono la propria esposizione nel momento peggiore, durante un audit, una due diligence o un incidente. Aiutiamo i dirigenti a documentare la propria conformità prima che venga richiesta, e a trasformare un vincolo normativo in un vantaggio dimostrabile verso clienti, assicuratori e investitori."
+        },
+        "approach": {
+          "title": "Il nostro approccio",
+          "desc": "Non consegniamo un rapporto di conformità teorico. Mappiamo la vostra esposizione reale, documentiamo ciò che già esiste e diamo priorità alle azioni in base al loro impatto normativo e commerciale. Ogni raccomandazione è attuabile, quantificata e assegnata a un responsabile chiaro.",
+          "steps": [
+            {
+              "label": "Mappatura normativa",
+              "desc": "Identificazione dei testi applicabili alla vostra organizzazione (NIS2, DORA, AI Act, GDPR/LPD, LSI svizzera, Cyber Resilience Act) in base al vostro settore, dimensione e localizzazione. Prioritizzazione per scadenza e livello di rischio."
+            },
+            {
+              "label": "Diagnosi di conformità",
+              "desc": "Valutazione del divario tra le vostre pratiche attuali e i requisiti normativi: governance del rischio, gestione degli incidenti, sicurezza della catena di fornitura, documentazione tecnica."
+            },
+            {
+              "label": "Piano di remediation",
+              "desc": "Roadmap prioritizzata con tappe, responsabili e budget. Distinzione chiara tra ciò che è obbligatorio, ciò che il mercato si aspetta e ciò che resta opzionale."
+            },
+            {
+              "label": "Documentazione e preparazione agli audit",
+              "desc": "Costruzione di prove di conformità utilizzabili in due diligence, davanti a un regolatore, un assicuratore o un revisore. Trasferimento di competenze ai team interni."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Conformità cyber (NIS2, DORA, Cyber Resilience Act)",
+            "desc": ""
+          },
+          {
+            "label": "Governance IA & conformità al regolamento europeo",
+            "desc": ""
+          },
+          {
+            "label": "Protezione dei dati (GDPR, LPD svizzera)",
+            "desc": ""
+          },
+          {
+            "label": "Gestione dei rischi di terze parti e della catena di fornitura",
+            "desc": ""
+          },
+          {
+            "label": "Continuità operativa e risposta agli incidenti",
+            "desc": ""
+          },
+          {
+            "label": "Preparazione agli audit normativi e alla due diligence",
+            "desc": ""
+          }
+        ]
+      },
       "technology": {
         "title": "Consulenza in tecnologia",
         "desc": "Interveniamo sullo strato tecnologico dell’organizzazione, dall’architettura alla conformità.",
@@ -560,7 +617,8 @@
     "ctaDesc": "Ogni incarico inizia con una diagnosi esaustiva prima di qualsiasi raccomandazione. Documentiamo, misuriamo e consegniamo.",
     "ctaTitleMa": "Parliamo della sua operazione M&A",
     "ctaTitleTech": "Parliamo della sua trasformazione tech",
-    "ctaTitleStrategy": "Parliamo della sua strategia"
+    "ctaTitleStrategy": "Parliamo della sua strategia",
+    "ctaTitleRiskCompliance": "Parliamo della vostra esposizione normativa"
   },
   "build": {
     "hero": {
@@ -1567,6 +1625,32 @@
           "num": "06",
           "title": "Intelligence strategica & osservazione del mercato",
           "desc": "Mappatura competitiva, analisi dei segnali deboli, posizionamento settoriale per M&A o crescita organica."
+        }
+      ]
+    },
+    "riskCompliance": {
+      "label": "RISCHIO & CONFORMITÀ: METTERE IN SICUREZZA IL PERCORSO",
+      "intro": "Gli obblighi normativi non sono più un livello accessorio: condizionano l'accesso al finanziamento, ai grandi clienti e agli acquirenti. Aiutiamo i dirigenti a documentare la propria conformità prima che venga richiesta.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Mappatura dei rischi e governance",
+          "desc": "Identificazione dei rischi normativi, operativi e cyber specifici della vostra organizzazione. Strutturazione della governance del rischio a livello di comitato direttivo."
+        },
+        {
+          "num": "02",
+          "title": "Conformità normativa (NIS2, DORA, AI Act)",
+          "desc": "Diagnosi del divario, roadmap di conformità e documentazione opponibile davanti a regolatori, clienti e partner finanziari."
+        },
+        {
+          "num": "03",
+          "title": "Continuità operativa e risposta agli incidenti",
+          "desc": "Piani di continuità operativa e di ripristino, procedure di rilevamento e segnalazione degli incidenti entro i termini normativi (24h/72h)."
+        },
+        {
+          "num": "04",
+          "title": "Preparazione ad audit e due diligence",
+          "desc": "Costruzione di un dossier di prove di conformità utilizzabile in un audit normativo, in una due diligence M&A o in una richiesta di un assicuratore."
         }
       ]
     },

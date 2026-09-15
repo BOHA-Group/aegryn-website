@@ -72,8 +72,9 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000-certificering",
     "craftSupport": "Begeleiden",
-    "craftSupportDesc": "Strategie-, Tech- & M&A-advies : Alle sectoren",
+    "craftSupportDesc": "Strategie-, Risico & Compliance-, Tech- & M&A-advies : Alle sectoren",
     "craftSupportStrategy": "Strategieadvies",
+    "craftSupportRiskCompliance": "Risico- & Compliance-advies",
     "craftSupportTechnology": "Technologieadvies",
     "craftSupportMA": "M&A-advies",
     "craftSupportAdvisory": "Tech & AI-advies",
@@ -403,6 +404,62 @@
           }
         ]
       },
+      "riskCompliance": {
+        "title": "Risico- & Compliance-advies",
+        "desc": "Wij brengen de regelgevende en operationele blootstelling van uw organisatie in kaart, documenteren deze en sturen erop, van cybercompliance tot risicogovernance.",
+        "why": {
+          "title": "Waarom risico- en compliance-advies?",
+          "desc": "NIS2, DORA, de EU AI-verordening, de Cyber Resilience Act, de Zwitserse wet op informatiebeveiliging: de regelgevende verplichtingen zijn in twee jaar tijd vermenigvuldigd, met kortere compliancetermijnen en persoonlijke aansprakelijkheid voor bestuurders. Veel organisaties ontdekken hun blootstelling op het slechtst mogelijke moment, tijdens een audit, een due diligence of een incident. Wij helpen leidinggevenden hun compliance te documenteren voordat deze vereist is, en een regelgevende verplichting om te zetten in een aantoonbaar voordeel bij klanten, verzekeraars en investeerders."
+        },
+        "approach": {
+          "title": "Onze aanpak",
+          "desc": "Wij leveren geen theoretisch compliancerapport. Wij brengen uw werkelijke blootstelling in kaart, documenteren wat al bestaat, en prioriteren acties op basis van hun regelgevende en commerciële impact. Elke aanbeveling is uitvoerbaar, becijferd en toegewezen aan een duidelijke eigenaar.",
+          "steps": [
+            {
+              "label": "Regelgevende inventarisatie",
+              "desc": "Identificatie van de op uw organisatie toepasselijke regelgeving (NIS2, DORA, AI Act, AVG/DSG, Zwitserse ISG, Cyber Resilience Act) op basis van uw sector, omvang en vestiging. Prioritering op termijn en risiconiveau."
+            },
+            {
+              "label": "Compliancediagnose",
+              "desc": "Beoordeling van de kloof tussen uw huidige praktijken en de regelgevende vereisten: risicogovernance, incidentbeheer, beveiliging van de toeleveringsketen, technische documentatie."
+            },
+            {
+              "label": "Remediëringsplan",
+              "desc": "Geprioriteerde routekaart met mijlpalen, eigenaren en budget. Duidelijk onderscheid tussen wat verplicht is, wat de markt verwacht, en wat optioneel blijft."
+            },
+            {
+              "label": "Documentatie & auditgereedheid",
+              "desc": "Opbouw van compliancebewijs bruikbaar in due diligence, voor een toezichthouder, verzekeraar of auditor. Kennisoverdracht aan interne teams."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Cybercompliance (NIS2, DORA, Cyber Resilience Act)",
+            "desc": ""
+          },
+          {
+            "label": "AI-governance & naleving van de EU AI-verordening",
+            "desc": ""
+          },
+          {
+            "label": "Gegevensbescherming (AVG, Zwitserse DSG)",
+            "desc": ""
+          },
+          {
+            "label": "Beheer van risico's van derden & toeleveringsketen",
+            "desc": ""
+          },
+          {
+            "label": "Bedrijfscontinuïteit & incidentrespons",
+            "desc": ""
+          },
+          {
+            "label": "Voorbereiding op regelgevende audits & due diligence",
+            "desc": ""
+          }
+        ]
+      },
       "technology": {
         "title": "Technologieadvies",
         "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
@@ -560,7 +617,8 @@
     "ctaDesc": "Elk mandaat begint met een uitgebreide diagnose vóór enige aanbeveling. Wij documenteren, meten en leveren.",
     "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
     "ctaTitleTech": "Laten we het hebben over uw tech-transformatie",
-    "ctaTitleStrategy": "Laten we het hebben over uw strategie"
+    "ctaTitleStrategy": "Laten we het hebben over uw strategie",
+    "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken"
   },
   "build": {
     "hero": {
@@ -1567,6 +1625,32 @@
           "num": "06",
           "title": "Strategische intelligentie & marktobservatie",
           "desc": "Concurrentiekartering, analyse van zwakke signalen, sectorpositionering voor M&A of organische groei."
+        }
+      ]
+    },
+    "riskCompliance": {
+      "label": "RISICO & COMPLIANCE: DE KOERS BEVEILIGEN",
+      "intro": "Regelgevende verplichtingen zijn geen bijzaak meer: ze bepalen de toegang tot financiering, grootzakelijke klanten en overnemende partijen. Wij helpen leidinggevenden hun compliance te documenteren voordat deze vereist is.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Risicomapping & governance",
+          "desc": "Identificatie van de regelgevende, operationele en cyberrisico's die specifiek zijn voor uw organisatie. Structurering van risicogovernance op directieniveau."
+        },
+        {
+          "num": "02",
+          "title": "Regelgevende compliance (NIS2, DORA, AI Act)",
+          "desc": "Kloofdiagnose, complianceroutekaart en documentatie die standhoudt bij toezichthouders, klanten en financiële partners."
+        },
+        {
+          "num": "03",
+          "title": "Bedrijfscontinuïteit & incidentrespons",
+          "desc": "Bedrijfscontinuïteits- en herstelplannen, procedures voor detectie en melding van incidenten binnen de regelgevende termijnen (24u/72u)."
+        },
+        {
+          "num": "04",
+          "title": "Voorbereiding op audits & due diligence",
+          "desc": "Opbouw van een compliancebewijsdossier bruikbaar tijdens een regelgevende audit, een M&A-due-diligenceproces of een verzoek van een verzekeraar."
         }
       ]
     },
