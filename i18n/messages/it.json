@@ -6419,7 +6419,8 @@
         "S : Raggiungere la conformità GDPR e il cyber baseline",
         "C : Formalizzare i contratti quadro in ricavi ricorrenti documentati"
       ],
-      "cta": "Ottenete il vostro risultato : 15 minuti"
+      "cta": "Ottenete il vostro risultato : 15 minuti",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Dati di mercato",

@@ -158,7 +158,7 @@ export default function CifsoValuationIndex() {
     multipleLabel: string; multipleValue: string
     dims: ExampleDim[]
     leversLabel: string; levers: string[]
-    cta: string
+    cta: string; ctaHref: string
   }
   const investors    = t.raw('investors') as {
     label: string; title: string; desc: string
@@ -390,7 +390,7 @@ export default function CifsoValuationIndex() {
                 {/* CTA */}
                 <div className="border-t border-ag-border pt-5 mt-auto">
                   <Link
-                    href="#estimation"
+                    href={`/${locale}${example.ctaHref}`}
                     className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
                   >
                     {example.cta} <ArrowUpRight size={12} />

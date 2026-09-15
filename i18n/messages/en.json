@@ -6419,7 +6419,8 @@
         "S : Achieve GDPR compliance and cyber baseline",
         "C : Formalise key contracts into documented recurring revenue"
       ],
-      "cta": "Get your own result : 15 minutes"
+      "cta": "Get your own result : 15 minutes",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Market data",

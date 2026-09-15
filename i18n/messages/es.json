@@ -6419,7 +6419,8 @@
         "S : Lograr conformidad RGPD y cyber baseline",
         "C : Formalizar contratos marco en ingresos recurrentes documentados"
       ],
-      "cta": "Obtenga su propio resultado : 15 minutos"
+      "cta": "Obtenga su propio resultado : 15 minutos",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Datos de mercado",

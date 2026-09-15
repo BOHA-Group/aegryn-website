@@ -6379,7 +6379,8 @@
         "S : Mettre en conformité RGPD et cyber baseline",
         "C : Formaliser les contrats cadre en récurrence documentée"
       ],
-      "cta": "Obtenez votre propre résultat : 15 minutes"
+      "cta": "Obtenez votre propre résultat : 15 minutes",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Données de marché",

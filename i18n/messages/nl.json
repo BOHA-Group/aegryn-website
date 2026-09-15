@@ -6434,7 +6434,8 @@
         "S : GDPR-conformiteit en cyber baseline bereiken",
         "C : Raamcontracten formaliseren in gedocumenteerde terugkerende omzet"
       ],
-      "cta": "Ontvang uw eigen resultaat : 15 minuten"
+      "cta": "Ontvang uw eigen resultaat : 15 minuten",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Marktgegevens",

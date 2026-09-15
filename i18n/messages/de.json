@@ -6419,7 +6419,8 @@
         "S : DSGVO-Konformität und Cyber-Baseline sicherstellen",
         "C : Rahmenverträge in dokumentierter Wiederkehrumsatz formalisieren"
       ],
-      "cta": "Eigenes Ergebnis erhalten : 15 Minuten"
+      "cta": "Eigenes Ergebnis erhalten : 15 Minuten",
+      "ctaHref": "/valuation/index"
     },
     "marketData": {
       "label": "Marktdaten",
