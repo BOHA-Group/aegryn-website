@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { generateAegrynMetadata } from '@/lib/seo'
+import { getTranslations } from 'next-intl/server'
+import { generateAegrynMetadata, generateFAQSchema } from '@/lib/seo'
 import FaqContent from './FaqContent'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -15,6 +16,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default function FaqPage() {
-  return <FaqContent />
+export default async function FaqPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'faq' })
+  const items = t.raw('items') as { q: string; a: string }[]
+  const faqSchema = generateFAQSchema(items.map(({ q, a }) => ({ question: q, answer: a })))
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <FaqContent />
+    </>
+  )
 }

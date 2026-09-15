@@ -1,5 +1,5 @@
 # Aegryn — Swiss Organisation-Value Platform: Build · Advise · Value · Recruit · Inform
-> https://aegryn.com | Updated: 2026-09-14
+> https://aegryn.com | Updated: 2026-09-21
 
 ## What is Aegryn?
 
@@ -66,12 +66,20 @@ strategic tech advisory, digital transformation consulting, tech due diligence,
 AI strategy, cybersecurity audit, data privacy consulting, GDPR compliance,
 tech M&A advisory, acquisition advisory, sell-side advisory, buy-side advisory,
 technology assessment, tech stack audit, architecture review,
+Business Strategy and Innovation, Risk Management and Compliance, Technology and Sovereignty,
+Talent and Organization, M&A Transactions and PMI,
+NIS2, DORA, Cyber Resilience Act, Swiss LSI, conformité réglementaire 2026,
 
 ### Talent & Recruitment
 executive recruitment tech, recrutement executive tech, placement CTO, placement CISO,
 tech headhunting, executive search technology, VP Engineering recruitment,
 Head of AI recruitment, tech leadership placement, C-level tech recruitment,
 executive tech jobs Switzerland, CTO jobs Europe, CISO jobs Switzerland,
+founder dependency discount, succession planning, management team depth,
+
+### Employment & AI Skills Data
+emploi IA, compétences IA, écart de compétences, World Economic Forum Future of Jobs Report,
+PwC Global AI Jobs Barometer, prime salariale IA, formation compétences IA, recrutement IA 2026,
 
 ### Asset Engineering
 asset engineering, conception actif numérique, custom code digital asset,
@@ -115,17 +123,26 @@ Software assets designed, built and operated by Aegryn, available under direct a
 Each asset: "An Aegryn company."
 Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
-## Advisory — Three Pillars (https://aegryn.com/advisory)
+## Advisory — Five Pillars (https://aegryn.com/advisory)
 
-### Technology Advisory (/advisory/technology)
+### Business Strategy, and Innovation (/advisory/strategy)
+Growth strategy, business model design, internationalisation, exit preparation and pre-sale valuation audit,
+organisational transformation, board governance, strategic intelligence
+
+### Risk Management, and Compliance (/advisory/risk-compliance)
+Regulatory mapping (NIS2, DORA, EU AI Act, GDPR/FADP, Swiss ISG, Cyber Resilience Act), compliance gap diagnostic,
+remediation roadmap, business continuity and incident response, supplier/third-party risk, audit and due diligence readiness
+
+### Technology, and Sovereignty (/advisory/technology)
 Cybersecurity (attack surface audit, penetration testing, ISO 27001, incident response),
 AI Audit (EU AI Act compliance, LLM red-teaming, bias audit, decision traceability),
-Tech Architecture (code audit, stack review, migration, security-by-design)
+Tech Architecture (code audit, stack review, migration, security-by-design), cloud independence
 
-### Strategy Advisory (/advisory/strategy)
-Digital transformation, data governance, GDPR/FADP compliance, innovation roadmaps, secure architecture
+### Talent, and Organization (/advisory/talent-organization)
+Founder dependency diagnostic (can reduce valuation 20-30% at sale/fundraising), critical skills mapping,
+succession plan and board governance, executive recruitment and key talent retention via Aegryn Talent
 
-### M&A Advisory (/advisory/ma)
+### M&A, Transactions, and PMI (/advisory/ma)
 Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
 valuation, post-merger integration
 
@@ -183,6 +200,16 @@ Not used today: licensed private-transaction feeds (FactSet, PitchBook, Dealroom
 Executive tech recruitment: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product.
 Confidential search. Pre-qualified candidates. 48h mandate response. All 23+ industries.
 
+## Workforce & AI Skills Data (/workforce)
+
+Factual market-data page on employment and skills in the AI era, sourced from the World Economic
+Forum (Future of Jobs Report 2025) and PwC (Global AI Jobs Barometer, June 2026 edition). Covers:
+2025-2030 job creation/displacement (170M created, 92M displaced, net +78M), skills instability (39%
+of core skills to change by 2030), skills-gap-as-top-barrier (63% of employers), AI-skills wage
+premium (62%, up from 57% a year earlier), by-role and by-sector exposure readings, and the link to
+the CIFSO 5000 Organisation & Talent dimension. Includes related-articles section linking to blog
+content on the same data (skills gap, AI hiring, executive tech salaries, founder dependency).
+
 ## Expert Network (/experts, /network)
 
 M&A Advisors, Lawyers, Accountants/Auditors, CTO/Tech Architects, Cybersecurity (PASSI/CREST),
@@ -211,20 +238,37 @@ Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms
 
 ## Recent Updates (September 2026)
 
+- Advisory repositioned from 3 to 5 pillars, each renamed with an "X, and Y" naming convention:
+  Business Strategy, and Innovation (/advisory/strategy); Risk Management, and Compliance
+  (/advisory/risk-compliance, new page); Technology, and Sovereignty (/advisory/technology);
+  Talent, and Organization (/advisory/talent-organization, new page); M&A, Transactions, and PMI
+  (/advisory/ma)
+- New page /workforce: employment/AI-skills market data (World Economic Forum, PwC), with
+  related-articles section
+- Blog: new Compliance filter and 5 regulatory articles (NIS2, DORA, EU AI Act 2026 omnibus,
+  Swiss LSI critical-infrastructure reporting, Cyber Resilience Act); 2 new Talent articles
+  (AI skills gap train-vs-hire plan, AI hiring wage premium) cross-linked from /workforce
+  and from the executive-tech-salaries article
+  All new articles verified against official primary sources (EUR-Lex, ENISA, European
+  Commission, Swiss NCSC/OFCS, WEF, PwC) and translated in full across the 6 site languages
+- CIFSO Valuation Index (/valuation): corrected adjusted-valuation calculation (CIFSO coefficient
+  applied as a multiplier to the median market multiple, not displayed as a multiple itself);
+  enriched benchmark tables (all rows shown, not filtered to a single line); persistent user-profile
+  card in the self-test flow; contributed-data capture hardened (HTTP-status check, keepalive,
+  local retry queue) so no anonymous contribution to the Index is lost on transient failures
 - Certification CIFSO 5000 repositioned as the ownership record ("acte de propriété") of an organisation's value — watch-and-papers analogy on /grade, brochure and /verify
 - CIFSO Valuation Index launched in freemium on /valuation: free illustrative wide-range estimate + subscription tier (opening soon)
 - Automatic benchmark engine: SNB, ECB, Eurostat and listed-company filings collected every Monday 06:00 Europe/Zurich; client-facing source name "Aegryn CIFSO Valuation Index"
 - AI exposure assessment integrated into dimension S and the Data Room (AI inventory S-10 blocking, usage policy S-11, vendor contracts S-12)
 - Quantified certified valuation at grade publication: industry multiple × CIFSO adjustment, per-dimension impact, roadmap potential
-- Blog: 40+ articles complete in 6 languages; new filters Security & AI, Talent, Financing; featured article on autonomous AI agents and sovereignty
+- Blog: 45+ articles complete in 6 languages; filters include Security & AI, Talent, Financing, Compliance; homepage featured-article carousel now rotates automatically every 5 seconds across all featured articles
 - Five industry hubs at /industries; terminology "industries" replaces "clusters" across the site
 - Magazine editions named by date only (e.g. "January 2027 — Built to Last"), English only
-- Sitemap/SEO: canonical localized URLs with hreflang for all routes; dead and redirected routes removed
-- Advisory sub-pages: /advisory/technology, /advisory/strategy, /advisory/ma
+- Sitemap/SEO: canonical localized URLs with hreflang for all routes; dead and redirected routes removed; BlogPosting + BreadcrumbList structured data added to every blog article; FAQPage structured data added to /help/faq
 - Talent platform: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
 - AI Usage Terms page: /terms/ai-usage
 
 ---
 
-Last updated: September 14, 2026
-Version: 3.0
+Last updated: September 21, 2026
+Version: 3.1

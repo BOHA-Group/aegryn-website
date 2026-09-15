@@ -108,6 +108,14 @@ const BASE_KEYWORDS = [
   'neediu app services domicile', 'neediu service à domicile', 'application services maison',
   'marketplace services domicile France', 'booking prestataire domicile',
   'aide ménagère app', 'jardinage domicile app', 'bricolage app', 'service à la personne digital',
+  // Advisory pillars (renamed 2026)
+  'Business Strategy and Innovation', 'Risk Management and Compliance', 'Technology and Sovereignty',
+  'Talent and Organization', 'M&A Transactions and PMI',
+  'conseil risque conformité', 'conseil talent organisation', 'NIS2 DORA AI Act conseil',
+  'dépendance fondateur décote', 'plan de succession entreprise',
+  // Workforce & AI jobs data
+  'emploi IA', 'compétences IA 2026', 'écart de compétences', 'World Economic Forum Future of Jobs',
+  'PwC Global AI Jobs Barometer', 'prime salariale IA', 'recrutement IA', 'formation compétences IA',
 ]
 
 export function generateAegrynMetadata({
@@ -351,7 +359,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Advisory',
-          description: 'Corporate strategy, tech and M&A advisory for tech founders, boards and investors. Board advisory, CTO-as-a-service, M&A structuring, expert network, executive recruitment. Switzerland & Europe.',
+          description: 'Corporate advisory for tech founders, boards and investors across 5 pillars: Business Strategy & Innovation, Risk Management & Compliance (NIS2, DORA, EU AI Act), Technology & Sovereignty, Talent & Organization (succession, founder dependency), and M&A, Transactions & PMI. Switzerland & Europe.',
           url: `${BASE_URL}/en/advisory`,
         },
       },
@@ -396,19 +404,25 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 12, name: 'Industries',                    url: `${BASE_URL}/fr/industries` },
     { '@type': 'ListItem', position: 13, name: 'Experts',                       url: `${BASE_URL}/fr/experts` },
     { '@type': 'ListItem', position: 14, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },
-    { '@type': 'ListItem', position: 15, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
-    { '@type': 'ListItem', position: 16, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
-    { '@type': 'ListItem', position: 17, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
-    { '@type': 'ListItem', position: 18, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
-    { '@type': 'ListItem', position: 19, name: 'Conception d\'actifs (Build)',  url: `${BASE_URL}/fr/services/build` },
-    { '@type': 'ListItem', position: 20, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
-    { '@type': 'ListItem', position: 21, name: 'Magazine — January 2027',       url: `${BASE_URL}/fr/magazine/issue-01` },
-    { '@type': 'ListItem', position: 22, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
-    { '@type': 'ListItem', position: 23, name: 'Investisseurs',                 url: `${BASE_URL}/fr/investisseurs` },
-    { '@type': 'ListItem', position: 24, name: 'Carrière',                      url: `${BASE_URL}/fr/career` },
-    { '@type': 'ListItem', position: 25, name: 'À propos',                      url: `${BASE_URL}/fr/a-propos` },
-    { '@type': 'ListItem', position: 26, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
-    { '@type': 'ListItem', position: 27, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
+    { '@type': 'ListItem', position: 15, name: 'Advisory — Stratégie & Innovation', url: `${BASE_URL}/fr/advisory/strategy` },
+    { '@type': 'ListItem', position: 16, name: 'Advisory — Risque & Conformité', url: `${BASE_URL}/fr/advisory/risk-compliance` },
+    { '@type': 'ListItem', position: 17, name: 'Advisory — Technologie & Souveraineté', url: `${BASE_URL}/fr/advisory/technology` },
+    { '@type': 'ListItem', position: 18, name: 'Advisory — Talent & Organisation', url: `${BASE_URL}/fr/advisory/talent-organization` },
+    { '@type': 'ListItem', position: 19, name: 'Advisory — M&A, Transactions & PMI', url: `${BASE_URL}/fr/advisory/ma` },
+    { '@type': 'ListItem', position: 20, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
+    { '@type': 'ListItem', position: 21, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
+    { '@type': 'ListItem', position: 22, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
+    { '@type': 'ListItem', position: 23, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
+    { '@type': 'ListItem', position: 24, name: 'Conception d\'actifs (Build)',  url: `${BASE_URL}/fr/services/build` },
+    { '@type': 'ListItem', position: 25, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
+    { '@type': 'ListItem', position: 26, name: 'Magazine — January 2027',       url: `${BASE_URL}/fr/magazine/issue-01` },
+    { '@type': 'ListItem', position: 27, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
+    { '@type': 'ListItem', position: 28, name: 'Emploi & Compétences',          url: `${BASE_URL}/fr/workforce` },
+    { '@type': 'ListItem', position: 29, name: 'Investisseurs',                 url: `${BASE_URL}/fr/investisseurs` },
+    { '@type': 'ListItem', position: 30, name: 'Carrière',                      url: `${BASE_URL}/fr/career` },
+    { '@type': 'ListItem', position: 31, name: 'À propos',                      url: `${BASE_URL}/fr/a-propos` },
+    { '@type': 'ListItem', position: 32, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
+    { '@type': 'ListItem', position: 33, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
   ],
 }
 
@@ -502,6 +516,54 @@ export function generateServiceSchema({
     serviceType,
     areaServed,
     provider: { '@id': `${BASE_URL}/#organization` },
+  }
+}
+
+/* ── BlogPosting JSON-LD (articles /blog/[slug]) ─────────────────── */
+
+export function generateArticleSchema({
+  headline,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  image,
+  locale,
+  articleSection,
+  keywords = [],
+}: {
+  headline: string
+  description: string
+  url: string
+  datePublished: string
+  dateModified?: string
+  image?: string
+  locale: string
+  articleSection?: string
+  keywords?: string[]
+}) {
+  return {
+    '@context':      'https://schema.org',
+    '@type':         'BlogPosting',
+    '@id':           `${url}#article`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    headline,
+    description,
+    url,
+    image:           [image ? (image.startsWith('http') ? image : `${BASE_URL}${image}`) : `${BASE_URL}/og/blog-default.png`],
+    datePublished:   new Date(datePublished).toISOString(),
+    dateModified:    new Date(dateModified ?? datePublished).toISOString(),
+    inLanguage:      locale,
+    ...(articleSection ? { articleSection } : {}),
+    ...(keywords.length ? { keywords: keywords.join(', ') } : {}),
+    author: {
+      '@type': 'Organization',
+      name:    'Aegryn',
+      url:     BASE_URL,
+      '@id':   `${BASE_URL}/#organization`,
+    },
+    publisher: { '@id': `${BASE_URL}/#organization` },
+    isPartOf:  { '@id': `${BASE_URL}/#website` },
   }
 }
 

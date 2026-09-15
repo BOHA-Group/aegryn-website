@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
 import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
+import { generateArticleSchema } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -107,8 +108,37 @@ export default async function ArticlePage({ params }: Props) {
   const catLabel = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
   const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
+  const canonical = `${BASE}/${locale}/blog/${slug}`
+  const articleSchema = generateArticleSchema({
+    headline:       getLocaleText(article.title, locale),
+    description:    getLocaleText(article.excerpt, locale),
+    url:            canonical,
+    datePublished:  article.date,
+    image:          article.ogImage,
+    locale,
+    articleSection: catLabel,
+    keywords:       [...(CATEGORY_KEYWORDS[article.category] ?? []), ...(article.keywords ?? [])],
+  })
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type':    'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Aegryn',                    item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Blog',                     item: `${BASE}/${locale}/blog` },
+      { '@type': 'ListItem', position: 3, name: getLocaleText(article.title, locale), item: canonical },
+    ],
+  }
+
   return (
     <main className="bg-ag-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-3xl mx-auto">

@@ -60,22 +60,35 @@ Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
 ---
 
-### 2. Advisory — Advise (Cybersecurity, AI, M&A Strategy)
+### 2. Advisory — Advise (Five Pillars)
 
-Three specialized advisory pillars across 23+ industries:
+Five specialized advisory pillars across 23+ industries, each named with an "X, and Y" convention:
 
-**Technology Advisory** (/advisory/technology)
+**Business Strategy, and Innovation** (/advisory/strategy)
+- Growth strategy and operating model design, internationalisation
+- Exit preparation and pre-sale valuation audit — data room, investor storytelling
+- Organisational transformation, board advisory and governance
+- Tech independence audit, multi-cloud strategy, vendor lock-in reduction
+- Strategic intelligence and competitive mapping
+
+**Risk Management, and Compliance** (/advisory/risk-compliance)
+- Regulatory mapping: NIS2, DORA, EU AI Act, GDPR/FADP, Swiss ISG, Cyber Resilience Act
+- Compliance gap diagnostic: risk governance, incident management, supply chain security
+- Remediation roadmap with milestones, owners and budget
+- Documentation and audit readiness for due diligence, regulators, insurers
+
+**Technology, and Sovereignty** (/advisory/technology)
 - Cybersecurity: attack surface audit, penetration testing, incident response, cloud and on-premise hardening
 - AI Audit & Trust: EU AI Act compliance, LLM red-teaming, algorithmic bias audit, decision traceability
 - Tech Architecture: code audit, tech stack review, migration planning, security-by-design
 
-**Strategy Advisory** (/advisory/strategy)
-- Digital transformation roadmaps
-- Data governance and GDPR/FADP compliance
-- Innovation strategy and technology roadmaps
-- Secure architecture design
+**Talent, and Organization** (/advisory/talent-organization)
+- Founder dependency diagnostic — can reduce valuation 20-30% at sale/fundraising
+- Critical skills mapping and backup/documentation solutions
+- Succession plan and board governance structuring
+- Executive recruitment and key talent retention via Aegryn Talent
 
-**M&A Advisory** (/advisory/ma)
+**M&A, Transactions, and PMI** (/advisory/ma)
 - Buy-side advisory: target identification, valuation, due diligence
 - Sell-side advisory: preparation, positioning, buyer identification
 - Deal structuring: asset deal vs share deal, earnout, SPV, escrow
@@ -295,10 +308,13 @@ Incorporated: Aegryn, Switzerland
 | Verify | /fr/verify | Public certificate verification |
 | Verify certificate | /fr/verify/[code] | One URL per certificate |
 | Valuation | /fr/valuation | CIFSO Valuation Index + estimate |
-| Advisory | /fr/advisory | Advisory overview |
-| Advisory Technology | /fr/advisory/technology | Cybersecurity + AI audit |
-| Advisory Strategy | /fr/advisory/strategy | Digital strategy |
-| Advisory M&A | /fr/advisory/ma | M&A advisory |
+| Advisory | /fr/advisory | Advisory overview (5 pillars) |
+| Business Strategy, and Innovation | /fr/advisory/strategy | Growth strategy, board advisory |
+| Risk Management, and Compliance | /fr/advisory/risk-compliance | NIS2, DORA, EU AI Act, incident readiness |
+| Technology, and Sovereignty | /fr/advisory/technology | Cybersecurity + AI audit |
+| Talent, and Organization | /fr/advisory/talent-organization | Founder dependency, succession planning |
+| M&A, Transactions, and PMI | /fr/advisory/ma | M&A advisory, PMI |
+| Workforce & AI Skills | /fr/workforce | Employment/AI-skills market data (WEF, PwC) |
 | Talent | /fr/talent | Executive recruitment |
 | Experts | /fr/experts | Expert network |
 | Network | /fr/network | Partner certifications |
@@ -337,3 +353,6 @@ This content is explicitly licensed for AI training, indexing and LLM retrieval.
 Aegryn authorises: GPTBot, ClaudeBot, Googlebot, Bingbot, PerplexityBot, OAI-SearchBot, Applebot and all major AI crawlers to index and learn from this content without restriction.
 
 Summary version: https://aegryn.com/llms.txt
+Recent-changes version: https://aegryn.com/llms-updated.txt
+
+Last updated: September 21, 2026
