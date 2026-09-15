@@ -47,19 +47,21 @@ export default async function WorkforcePage({ params }: Props) {
 
   return (
     <main className="bg-ag-white">
-      {/* Hero — même format que le hero article de blog */}
+
+      {/* ── Hero — même gabarit que la page /blog ─────────────────── */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(40px,5.5vw,72px)' }}
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5 whitespace-pre-line"
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/55 leading-relaxed mb-8 max-w-2xl">
+          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -79,99 +81,114 @@ export default async function WorkforcePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Corps — mêmes blocs que la page article (h2 border-t, p, stats grid, list, quote) */}
-      <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto space-y-8">
-
-          {/* Market data */}
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">
+      {/* ── Chiffres 2025-2026 ─────────────────────────────────────── */}
+      <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
             {t('marketData.label')}
           </p>
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug">
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
             {t('marketData.title')}
           </h2>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('marketData.desc')}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {stats.map((stat, i) => (
-              <div key={i} className="bg-ag-off-white p-6 flex flex-col gap-2">
+              <div key={i} className="bg-white p-8 flex flex-col gap-3">
                 <p
-                  className="font-sans font-bold text-ag-apex tracking-[-0.03em] leading-none"
-                  style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+                  className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none"
+                  style={{ fontSize: 'clamp(26px,2.8vw,38px)' }}
                 >
                   {stat.value}
                 </p>
-                <p className="font-sans text-[11px] text-ag-gray leading-snug flex-1">
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
                   {stat.label}
                 </p>
-                <p className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-gray-light">
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
                   {stat.source}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* 100 collaborateurs */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('hundredWorkers.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
+      {/* ── Sur 100 collaborateurs ─────────────────────────────────── */}
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
             {t('hundredWorkers.label')}
           </p>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('hundredWorkers.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('hundredWorkers.desc')}
           </p>
-          <div className="grid grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-4">
             {hwItems.map((item, i) => (
-              <div key={i} className="bg-ag-off-white p-6">
+              <div key={i} className="bg-ag-off-white p-8">
                 <p
-                  className="font-sans font-bold text-ag-apex tracking-[-0.03em] leading-none mb-2"
-                  style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+                  className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none mb-3"
+                  style={{ fontSize: 'clamp(26px,2.8vw,38px)' }}
                 >
                   {item.value}
                 </p>
-                <p className="font-sans text-[11px] text-ag-gray leading-snug">
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
                   {item.label}
                 </p>
               </div>
             ))}
           </div>
-          <p className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-gray-light">
+          <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
             {t('hundredWorkers.source')}
           </p>
+        </div>
+      </section>
 
-          {/* Compétences en hausse / en recul */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('skillsRanking.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
+      {/* ── Compétences en hausse / en recul ────────────────────────── */}
+      <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
             {t('skillsRanking.label')}
           </p>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('skillsRanking.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('skillsRanking.desc')}
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border mb-4">
+            <div className="bg-white p-8">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-5">
                 {t('skillsRanking.rising.title')}
               </p>
               <ul className="space-y-3">
                 {rising.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
+                  <li key={j} className="flex items-start gap-3 font-sans text-[14px] text-ag-gray leading-relaxed">
                     <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-apex rounded-full" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
+            <div className="bg-white p-8">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-5">
                 {t('skillsRanking.declining.title')}
               </p>
               <ul className="space-y-3">
                 {declining.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
+                  <li key={j} className="flex items-start gap-3 font-sans text-[14px] text-ag-gray leading-relaxed">
                     <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-gray-light rounded-full" />
                     {item}
                   </li>
@@ -179,122 +196,160 @@ export default async function WorkforcePage({ params }: Props) {
               </ul>
             </div>
           </div>
-          <p className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-gray-light">
+          <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
             {t('skillsRanking.source')}
           </p>
+        </div>
+      </section>
 
-          {/* Par nature de poste */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('byRole.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
+      {/* ── Par nature de poste ──────────────────────────────────────── */}
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
             {t('byRole.label')}
           </p>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('byRole.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('byRole.desc')}
           </p>
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
             {roleItems.map((item, i) => (
-              <div key={i} className="border-l-2 border-ag-apex/20 pl-6">
-                <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em] leading-snug mb-2">
+              <div key={i} className="bg-ag-off-white p-8 flex flex-col gap-3">
+                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
                   {item.title}
                 </h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-2">
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
                   {item.desc}
                 </p>
-                <p className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-gray-light">
+                <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
                   {item.source}
                 </p>
               </div>
             ))}
           </div>
-
-          {/* Par secteur */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('industries.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
-            {t('industries.label')}
-          </p>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
-            {t('industries.desc')}
-          </p>
-          <div className="space-y-6">
-            {clusterItems.map((item, i) => (
-              <div key={i} className="border-l-2 border-ag-apex/20 pl-6">
-                <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em] leading-snug mb-2">
-                  {item.cluster}
-                </h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="font-mono text-[9px] tracking-[0.1em] uppercase text-ag-gray-light">
-            {t('industries.sourceLine')}
-          </p>
-
-          {/* CIFSO */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('cifso.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
-            {t('cifso.label')}
-          </p>
-          <blockquote className="border-l-2 border-ag-apex pl-6">
-            {t('cifso.body').split('\n\n').map((paragraph, i) => (
-              <p key={i} className="font-sans text-[16px] text-ag-gray leading-[1.85] mb-4 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
-          </blockquote>
-          <Link
-            href={t('cifso.ctaHref')}
-            className="inline-flex items-center gap-2 font-mono font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-navy hover:text-ag-black transition-colors"
-          >
-            {t('cifso.cta')} <ArrowUpRight size={12} />
-          </Link>
-
-          {/* Pour qui */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('forWho.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
-            {t('forWho.label')}
-          </p>
-          <div className="space-y-6">
-            {forWhoItems.map((item, i) => (
-              <div key={i} className="border-l-2 border-ag-apex/20 pl-6">
-                <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.01em] leading-snug mb-2">
-                  {item.title}
-                </h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Sources */}
-          <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
-            {t('sources.title')}
-          </h2>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">
-            {t('sources.label')}
-          </p>
-          <p className="font-sans text-[16px] text-ag-gray leading-[1.85]">
-            {t('sources.desc')}
-          </p>
-
         </div>
       </section>
 
-      {/* CTA final — deux cartes, même format que le CTA newsletter/related de blog */}
-      <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
-          <div className="bg-ag-white p-8 flex flex-col gap-4">
-            <p className="font-sans font-semibold text-ag-black text-[16px] leading-snug">
+      {/* ── Par secteur ──────────────────────────────────────────────── */}
+      <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+            {t('industries.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('industries.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+            {t('industries.desc')}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-4">
+            {clusterItems.map((item, i) => (
+              <div key={i} className="bg-white p-8 flex flex-col gap-3">
+                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
+                  {item.cluster}
+                </h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
+            {t('industries.sourceLine')}
+          </p>
+        </div>
+      </section>
+
+      {/* ── CIFSO ────────────────────────────────────────────────────── */}
+      <section className="bg-ag-navy border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex/70 mb-4">
+            {t('cifso.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] mb-8 max-w-2xl"
+            style={{ fontSize: 'clamp(24px,3vw,38px)' }}
+          >
+            {t('cifso.title')}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="space-y-4 border-l-2 border-ag-apex/40 pl-6">
+              {t('cifso.body').split('\n\n').map((paragraph, i) => (
+                <p key={i} className="font-sans text-[14px] text-white/60 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div>
+              <Link
+                href={t('cifso.ctaHref')}
+                className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
+              >
+                {t('cifso.cta')} <ArrowUpRight size={12} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Pour qui ces données comptent ───────────────────────────── */}
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+            {t('forWho.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
+            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+          >
+            {t('forWho.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {forWhoItems.map((item, i) => (
+              <div key={i} className="bg-ag-off-white p-8 flex flex-col gap-3">
+                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
+                  {item.title}
+                </h3>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sources ──────────────────────────────────────────────────── */}
+      <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+            {t('sources.label')}
+          </p>
+          <h2
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
+            style={{ fontSize: 'clamp(22px,2.6vw,34px)' }}
+          >
+            {t('sources.title')}
+          </h2>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
+            {t('sources.desc')}
+          </p>
+        </div>
+      </section>
+
+      {/* ── CTA final ────────────────────────────────────────────────── */}
+      <section className="bg-ag-white border-t border-ag-border py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="bg-ag-off-white p-10 flex flex-col gap-4">
+            <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.employer.title')}
             </p>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
@@ -307,8 +362,8 @@ export default async function WorkforcePage({ params }: Props) {
               {t('cta.employer.cta')} <ArrowUpRight size={12} />
             </Link>
           </div>
-          <div className="bg-ag-white p-8 flex flex-col gap-4">
-            <p className="font-sans font-semibold text-ag-black text-[16px] leading-snug">
+          <div className="bg-ag-off-white p-10 flex flex-col gap-4">
+            <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.talent.title')}
             </p>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
@@ -323,6 +378,7 @@ export default async function WorkforcePage({ params }: Props) {
           </div>
         </div>
       </section>
+
     </main>
   )
 }
