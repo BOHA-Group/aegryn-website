@@ -72,11 +72,12 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificación CIFSO 5000",
     "craftSupport": "Acompañar",
-    "craftSupportDesc": "Consultoría en Estrategia, Riesgo & Cumplimiento, Tech & M&A : Todas las industrias",
-    "craftSupportStrategy": "Consultoría Estratégica",
-    "craftSupportRiskCompliance": "Consultoría de Riesgo y Cumplimiento",
-    "craftSupportTechnology": "Consultoría Tecnológica",
-    "craftSupportMA": "Consultoría M&A",
+    "craftSupportDesc": "Consultoría en Estrategia, Riesgo & Cumplimiento, Tecnología, Talento & M&A : Todas las industrias",
+    "craftSupportStrategy": "Estrategia Empresarial, e Innovación",
+    "craftSupportRiskCompliance": "Gestión de Riesgos, y Cumplimiento",
+    "craftSupportTechnology": "Tecnología, y Soberanía",
+    "craftSupportTalentOrg": "Talento, y Organización",
+    "craftSupportMA": "M&A, Transacciones, y PMI",
     "craftSupportAdvisory": "Asesoramiento Tech & IA",
     "craftSupportNetwork": "Red de socios y expertos",
     "craftSupportAlliances": "Red de socios",
@@ -350,7 +351,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Consultoría en estrategia",
+        "title": "Estrategia Empresarial, e Innovación",
         "desc": "Definimos con los dirigentes la trayectoria de su organización y las condiciones para su éxito.",
         "why": {
           "title": "¿Por qué consultoría estratégica?",
@@ -406,7 +407,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Consultoría de Riesgo y Cumplimiento",
+        "title": "Gestión de Riesgos, y Cumplimiento",
         "desc": "Cartografiamos, documentamos y gestionamos la exposición regulatoria y operativa de su organización, desde el cumplimiento cibernético hasta la gobernanza de riesgos.",
         "why": {
           "title": "¿Por qué consultoría de riesgo y cumplimiento?",
@@ -462,7 +463,7 @@
         ]
       },
       "technology": {
-        "title": "Consultoría en tecnología",
+        "title": "Tecnología, y Soberanía",
         "desc": "Intervenimos en la capa tecnológica de la organización, desde la arquitectura hasta la conformidad.",
         "why": {
           "title": "¿Por qué consultoría tecnológica?",
@@ -513,8 +514,64 @@
           }
         ]
       },
+      "talentOrganization": {
+        "title": "Talento, y Organización",
+        "desc": "Estructuramos la organización, los equipos directivos y los planes de sucesión que hacen que una empresa sea transmisible, financiable y resiliente más allá de su fundador.",
+        "why": {
+          "title": "¿Por qué consultoría de talento y organización?",
+          "desc": "Una dependencia excesiva del fundador puede reducir la valoración de una empresa entre un 20 y un 30 % durante una venta o una ronda de financiación. Los adquirentes, inversores y prestamistas evalúan sistemáticamente la profundidad del equipo directivo, el plan de sucesión y la capacidad de la organización para funcionar sin una persona clave. Ayudamos a los directivos a documentar y reforzar esta dimensión antes de que sea puesta a prueba por una transacción, una contratación crítica o una salida imprevista."
+        },
+        "approach": {
+          "title": "Nuestro enfoque",
+          "desc": "No entregamos un organigrama teórico. Diagnosticamos la dependencia real, cartografiamos las competencias críticas y estructuramos un plan de sucesión y contratación ejecutable, alineado con sus plazos de financiación, venta o crecimiento.",
+          "steps": [
+            {
+              "label": "Diagnóstico de dependencia",
+              "desc": "Evaluación de la dependencia del fundador y de la profundidad del equipo directivo: qué decisiones, relaciones con clientes o competencias descansan en una sola persona."
+            },
+            {
+              "label": "Cartografía de competencias críticas",
+              "desc": "Identificación de los roles y competencias cuya ausencia pondría en riesgo a la organización, y de las soluciones de respaldo, documentación o delegación disponibles."
+            },
+            {
+              "label": "Plan de sucesión y gobernanza",
+              "desc": "Estructuración del plan de sucesión, clarificación de los roles del consejo y de los directivos, e implementación de una gobernanza que documente las decisiones más allá del fundador."
+            },
+            {
+              "label": "Contratación y retención de talento clave",
+              "desc": "Identificación y contratación de los perfiles directivos que faltan a través de Aegryn Talent, y estructuración de los mecanismos de retención (incentivos de capital, plan de carrera, cultura)."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Dependencia del fundador y descuento de transmisibilidad",
+            "desc": ""
+          },
+          {
+            "label": "Profundidad del equipo directivo",
+            "desc": ""
+          },
+          {
+            "label": "Plan de sucesión y gobernanza del consejo",
+            "desc": ""
+          },
+          {
+            "label": "Documentación operativa y transferencia de conocimiento",
+            "desc": ""
+          },
+          {
+            "label": "Retención de talento clave y planes de carrera",
+            "desc": ""
+          },
+          {
+            "label": "Contratación ejecutiva y diseño organizativo",
+            "desc": ""
+          }
+        ]
+      },
       "ma": {
-        "title": "Consultoría en M&A",
+        "title": "M&A, Transacciones, y PMI",
         "desc": "Estructuramos las operaciones de crecimiento externo y acompañamos su integración.",
         "why": {
           "title": "¿Por qué consultoría M&A?",
@@ -619,7 +676,8 @@
     "ctaTitleMa": "Hablemos de su operación M&A",
     "ctaTitleTech": "Hablemos de su transformación tecnológica",
     "ctaTitleStrategy": "Hablemos de su estrategia",
-    "ctaTitleRiskCompliance": "Hablemos de su exposición regulatoria"
+    "ctaTitleRiskCompliance": "Hablemos de su exposición regulatoria",
+    "ctaTitleTalentOrganization": "Hablemos de la profundidad de su organización"
   },
   "build": {
     "hero": {

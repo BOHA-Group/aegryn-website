@@ -72,11 +72,12 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Certification",
     "craftSupport": "Advise",
-    "craftSupportDesc": "Strategy, Risk & Compliance, Tech & M&A Advisory : All industries",
-    "craftSupportStrategy": "Strategy Consulting",
-    "craftSupportRiskCompliance": "Risk & Compliance Consulting",
-    "craftSupportTechnology": "Technology Consulting",
-    "craftSupportMA": "M&A Consulting",
+    "craftSupportDesc": "Strategy, Risk & Compliance, Technology, Talent & M&A Advisory : All industries",
+    "craftSupportStrategy": "Business Strategy, and Innovation",
+    "craftSupportRiskCompliance": "Risk Management, and Compliance",
+    "craftSupportTechnology": "Technology, and Sovereignty",
+    "craftSupportTalentOrg": "Talent, and Organization",
+    "craftSupportMA": "M&A, Transactions, and PMI",
     "craftSupportAdvisory": "Tech & AI Advisory",
     "craftSupportNetwork": "Partner & Expert Network",
     "craftSupportAlliances": "Partner network",
@@ -350,7 +351,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Strategy advisory",
+        "title": "Business Strategy, and Innovation",
         "desc": "We define with leaders the trajectory of their organisation and the conditions for its success.",
         "why": {
           "title": "Why strategy consulting?",
@@ -406,7 +407,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Risk & Compliance Advisory",
+        "title": "Risk Management, and Compliance",
         "desc": "We map, document and steer your organisation's regulatory and operational exposure, from cyber compliance to risk governance.",
         "why": {
           "title": "Why risk and compliance advisory?",
@@ -462,7 +463,7 @@
         ]
       },
       "technology": {
-        "title": "Technology advisory",
+        "title": "Technology, and Sovereignty",
         "desc": "We intervene on the technology layer of the organisation, from architecture to compliance.",
         "why": {
           "title": "Why technology consulting?",
@@ -513,8 +514,64 @@
           }
         ]
       },
+      "talentOrganization": {
+        "title": "Talent, and Organization",
+        "desc": "We structure the organisation, leadership teams and succession plans that make a company transferable, financeable and resilient beyond its founder.",
+        "why": {
+          "title": "Why talent and organization advisory?",
+          "desc": "Excessive founder dependency can reduce a company's valuation by 20 to 30% during a sale or fundraising. Acquirers, investors and lenders systematically assess management team depth, the succession plan and the organisation's ability to function without one key person. We help leaders document and strengthen this dimension before it is tested by a transaction, a critical hire or an unplanned departure."
+        },
+        "approach": {
+          "title": "Our approach",
+          "desc": "We do not deliver a theoretical org chart. We diagnose actual dependency, map critical skills, and structure an executable succession and hiring plan, aligned with your financing, sale or growth timeline.",
+          "steps": [
+            {
+              "label": "Dependency diagnostic",
+              "desc": "Assessment of founder dependency and management team depth: which decisions, client relationships or skills rest on a single person."
+            },
+            {
+              "label": "Critical skills mapping",
+              "desc": "Identification of the roles and skills whose absence would put the organisation at risk, and of the available backup, documentation or delegation solutions."
+            },
+            {
+              "label": "Succession plan & governance",
+              "desc": "Structuring of the succession plan, clarification of board and executive roles, and implementation of governance that documents decisions beyond the founder."
+            },
+            {
+              "label": "Recruitment & retention of key talent",
+              "desc": "Identification and recruitment of missing leadership profiles via Aegryn Talent, and structuring of retention mechanisms (equity incentives, career path, culture)."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Founder dependency & transferability discount",
+            "desc": ""
+          },
+          {
+            "label": "Management team depth",
+            "desc": ""
+          },
+          {
+            "label": "Succession plan & board governance",
+            "desc": ""
+          },
+          {
+            "label": "Operational documentation & knowledge transfer",
+            "desc": ""
+          },
+          {
+            "label": "Key talent retention & career pathing",
+            "desc": ""
+          },
+          {
+            "label": "Executive recruitment & organisational design",
+            "desc": ""
+          }
+        ]
+      },
       "ma": {
-        "title": "M&A advisory",
+        "title": "M&A, Transactions, and PMI",
         "desc": "We structure external growth operations and support their integration.",
         "why": {
           "title": "Why M&A consulting?",
@@ -619,7 +676,8 @@
     "ctaTitleMa": "Let's discuss your M&A deal",
     "ctaTitleTech": "Let's discuss your tech transformation",
     "ctaTitleStrategy": "Let's discuss your strategy",
-    "ctaTitleRiskCompliance": "Let's discuss your regulatory exposure"
+    "ctaTitleRiskCompliance": "Let's discuss your regulatory exposure",
+    "ctaTitleTalentOrganization": "Let's discuss your organisation's depth"
   },
   "build": {
     "hero": {

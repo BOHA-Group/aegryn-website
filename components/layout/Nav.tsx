@@ -30,6 +30,7 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',        href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportRiskCompliance',  href: '/advisory/risk-compliance' as LinkHref },
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
+  { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
   { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
   { labelKey: 'craftSupportNetworkNew',    href: '/network' as LinkHref },
   { labelKey: 'craftSupportInvestors',     href: '/investisseurs' as LinkHref },

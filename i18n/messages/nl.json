@@ -72,11 +72,12 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000-certificering",
     "craftSupport": "Begeleiden",
-    "craftSupportDesc": "Strategie-, Risico & Compliance-, Tech- & M&A-advies : Alle sectoren",
-    "craftSupportStrategy": "Strategieadvies",
-    "craftSupportRiskCompliance": "Risico- & Compliance-advies",
-    "craftSupportTechnology": "Technologieadvies",
-    "craftSupportMA": "M&A-advies",
+    "craftSupportDesc": "Strategie-, Risico & Compliance-, Technologie-, Talent- & M&A-advies : Alle sectoren",
+    "craftSupportStrategy": "Bedrijfsstrategie, en Innovatie",
+    "craftSupportRiskCompliance": "Risicobeheer, en Compliance",
+    "craftSupportTechnology": "Technologie, en Soevereiniteit",
+    "craftSupportTalentOrg": "Talent, en Organisatie",
+    "craftSupportMA": "M&A, Transacties, en PMI",
     "craftSupportAdvisory": "Tech & AI-advies",
     "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
@@ -350,7 +351,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Strategieadvies",
+        "title": "Bedrijfsstrategie, en Innovatie",
         "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor succes.",
         "why": {
           "title": "Waarom strategieadvies?",
@@ -406,7 +407,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Risico- & Compliance-advies",
+        "title": "Risicobeheer, en Compliance",
         "desc": "Wij brengen de regelgevende en operationele blootstelling van uw organisatie in kaart, documenteren deze en sturen erop, van cybercompliance tot risicogovernance.",
         "why": {
           "title": "Waarom risico- en compliance-advies?",
@@ -462,7 +463,7 @@
         ]
       },
       "technology": {
-        "title": "Technologieadvies",
+        "title": "Technologie, en Soevereiniteit",
         "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
         "why": {
           "title": "Waarom technologieadvies?",
@@ -513,8 +514,64 @@
           }
         ]
       },
+      "talentOrganization": {
+        "title": "Talent, en Organisatie",
+        "desc": "Wij structureren de organisatie, de leidinggevende teams en de opvolgingsplannen die een onderneming overdraagbaar, financierbaar en veerkrachtig maken, voorbij de oprichter.",
+        "why": {
+          "title": "Waarom advies over talent en organisatie?",
+          "desc": "Een buitensporige afhankelijkheid van de oprichter kan de waardering van een onderneming bij een verkoop of kapitaalronde met 20 tot 30 % verlagen. Overnemende partijen, investeerders en kredietverstrekkers beoordelen systematisch de diepgang van het managementteam, het opvolgingsplan en het vermogen van de organisatie om zonder één sleutelpersoon te functioneren. Wij helpen leidinggevenden deze dimensie te documenteren en te versterken voordat ze op de proef wordt gesteld door een transactie, een kritieke aanwerving of een onvoorzien vertrek."
+        },
+        "approach": {
+          "title": "Onze aanpak",
+          "desc": "Wij leveren geen theoretisch organigram. Wij diagnosticeren de werkelijke afhankelijkheid, brengen kritieke vaardigheden in kaart en structureren een uitvoerbaar opvolgings- en wervingsplan, afgestemd op uw financierings-, verkoop- of groeitermijnen.",
+          "steps": [
+            {
+              "label": "Afhankelijkheidsdiagnose",
+              "desc": "Beoordeling van de oprichtersafhankelijkheid en de diepgang van het managementteam: welke beslissingen, klantrelaties of vaardigheden op één persoon rusten."
+            },
+            {
+              "label": "Mapping van kritieke vaardigheden",
+              "desc": "Identificatie van de rollen en vaardigheden waarvan het ontbreken de organisatie in gevaar zou brengen, en van de beschikbare back-up-, documentatie- of delegatieoplossingen."
+            },
+            {
+              "label": "Opvolgingsplan & governance",
+              "desc": "Structurering van het opvolgingsplan, verduidelijking van de rollen van de raad van bestuur en de directie, en invoering van een governance die besluiten buiten de oprichter om documenteert."
+            },
+            {
+              "label": "Werving & retentie van sleuteltalent",
+              "desc": "Identificatie en werving van ontbrekende leidinggevende profielen via Aegryn Talent, en structurering van retentiemechanismen (aandelenincentives, loopbaanplan, cultuur)."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Oprichtersafhankelijkheid & overdraagbaarheidskorting",
+            "desc": ""
+          },
+          {
+            "label": "Diepgang van het managementteam",
+            "desc": ""
+          },
+          {
+            "label": "Opvolgingsplan & bestuursgovernance",
+            "desc": ""
+          },
+          {
+            "label": "Operationele documentatie & kennisoverdracht",
+            "desc": ""
+          },
+          {
+            "label": "Retentie van sleuteltalent & loopbaanplanning",
+            "desc": ""
+          },
+          {
+            "label": "Executive werving & organisatieontwerp",
+            "desc": ""
+          }
+        ]
+      },
       "ma": {
-        "title": "M&A-advies",
+        "title": "M&A, Transacties, en PMI",
         "desc": "Wij structureren externe groeioperaties en begeleiden hun integratie.",
         "why": {
           "title": "Waarom M&A-advies?",
@@ -619,7 +676,8 @@
     "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
     "ctaTitleTech": "Laten we het hebben over uw tech-transformatie",
     "ctaTitleStrategy": "Laten we het hebben over uw strategie",
-    "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken"
+    "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken",
+    "ctaTitleTalentOrganization": "Laten we de diepgang van uw organisatie bespreken"
   },
   "build": {
     "hero": {

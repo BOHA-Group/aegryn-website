@@ -72,11 +72,12 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Zertifizierung",
     "craftSupport": "Begleiten",
-    "craftSupportDesc": "Strategie-, Risiko & Compliance-, Tech- & M&A-Beratung : Alle Branchen",
-    "craftSupportStrategy": "Strategieberatung",
-    "craftSupportRiskCompliance": "Risiko- & Compliance-Beratung",
-    "craftSupportTechnology": "Technologieberatung",
-    "craftSupportMA": "M&A-Beratung",
+    "craftSupportDesc": "Strategie-, Risiko & Compliance-, Technologie-, Talent- & M&A-Beratung : Alle Branchen",
+    "craftSupportStrategy": "Unternehmensstrategie, und Innovation",
+    "craftSupportRiskCompliance": "Risikomanagement, und Compliance",
+    "craftSupportTechnology": "Technologie, und Souveränität",
+    "craftSupportTalentOrg": "Talent, und Organisation",
+    "craftSupportMA": "M&A, Transaktionen, und PMI",
     "craftSupportAdvisory": "Tech & KI-Beratung",
     "craftSupportNetwork": "Partner- & Expertennetzwerk",
     "craftSupportAlliances": "Partnernetzwerk",
@@ -350,7 +351,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Strategieberatung",
+        "title": "Unternehmensstrategie, und Innovation",
         "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Erfolg.",
         "why": {
           "title": "Warum Strategieberatung?",
@@ -406,7 +407,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Risiko- & Compliance-Beratung",
+        "title": "Risikomanagement, und Compliance",
         "desc": "Wir kartieren, dokumentieren und steuern die regulatorische und operative Risikoexposition Ihrer Organisation, von Cyber-Compliance bis zur Risikogovernance.",
         "why": {
           "title": "Warum Risiko- und Compliance-Beratung?",
@@ -462,7 +463,7 @@
         ]
       },
       "technology": {
-        "title": "Technologieberatung",
+        "title": "Technologie, und Souveränität",
         "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
         "why": {
           "title": "Warum Technologieberatung?",
@@ -513,8 +514,64 @@
           }
         ]
       },
+      "talentOrganization": {
+        "title": "Talent, und Organisation",
+        "desc": "Wir strukturieren die Organisation, die Führungsteams und die Nachfolgepläne, die ein Unternehmen übertragbar, finanzierbar und über seinen Gründer hinaus widerstandsfähig machen.",
+        "why": {
+          "title": "Warum Beratung zu Talent und Organisation?",
+          "desc": "Eine übermässige Gründerabhängigkeit kann die Bewertung eines Unternehmens bei einem Verkauf oder einer Kapitalbeschaffung um 20 bis 30 % senken. Erwerber, Investoren und Kreditgeber bewerten systematisch die Tiefe des Führungsteams, den Nachfolgeplan und die Fähigkeit der Organisation, ohne eine Schlüsselperson zu funktionieren. Wir helfen Führungskräften, diese Dimension zu dokumentieren und zu stärken, bevor sie durch eine Transaktion, eine kritische Einstellung oder einen ungeplanten Abgang auf die Probe gestellt wird."
+        },
+        "approach": {
+          "title": "Unser Ansatz",
+          "desc": "Wir liefern kein theoretisches Organigramm. Wir diagnostizieren die tatsächliche Abhängigkeit, kartieren kritische Kompetenzen und strukturieren einen umsetzbaren Nachfolge- und Einstellungsplan, abgestimmt auf Ihren Finanzierungs-, Verkaufs- oder Wachstumszeitplan.",
+          "steps": [
+            {
+              "label": "Abhängigkeitsdiagnose",
+              "desc": "Bewertung der Gründerabhängigkeit und der Tiefe des Führungsteams: welche Entscheidungen, Kundenbeziehungen oder Kompetenzen auf einer einzigen Person beruhen."
+            },
+            {
+              "label": "Kartierung kritischer Kompetenzen",
+              "desc": "Identifizierung der Rollen und Kompetenzen, deren Fehlen die Organisation gefährden würde, sowie der verfügbaren Vertretungs-, Dokumentations- oder Delegationslösungen."
+            },
+            {
+              "label": "Nachfolgeplan & Governance",
+              "desc": "Strukturierung des Nachfolgeplans, Klärung der Rollen von Verwaltungsrat und Geschäftsleitung sowie Einführung einer Governance, die Entscheidungen über den Gründer hinaus dokumentiert."
+            },
+            {
+              "label": "Rekrutierung & Bindung von Schlüsseltalenten",
+              "desc": "Identifizierung und Rekrutierung fehlender Führungsprofile über Aegryn Talent sowie Strukturierung von Bindungsmechanismen (Beteiligungsprogramme, Karriereplan, Kultur)."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Gründerabhängigkeit & Übertragbarkeitsabschlag",
+            "desc": ""
+          },
+          {
+            "label": "Tiefe des Führungsteams",
+            "desc": ""
+          },
+          {
+            "label": "Nachfolgeplan & Board-Governance",
+            "desc": ""
+          },
+          {
+            "label": "Operative Dokumentation & Wissenstransfer",
+            "desc": ""
+          },
+          {
+            "label": "Bindung von Schlüsseltalenten & Karriereplanung",
+            "desc": ""
+          },
+          {
+            "label": "Führungskräfterekrutierung & Organisationsdesign",
+            "desc": ""
+          }
+        ]
+      },
       "ma": {
-        "title": "M&A-Beratung",
+        "title": "M&A, Transaktionen, und PMI",
         "desc": "Wir strukturieren externe Wachstumsoperationen und begleiten deren Integration.",
         "why": {
           "title": "Warum M&A-Beratung?",
@@ -619,7 +676,8 @@
     "ctaTitleMa": "Sprechen wir über Ihre M&A-Transaktion",
     "ctaTitleTech": "Sprechen wir über Ihre Tech-Transformation",
     "ctaTitleStrategy": "Sprechen wir über Ihre Strategie",
-    "ctaTitleRiskCompliance": "Sprechen wir über Ihre regulatorische Risikoexposition"
+    "ctaTitleRiskCompliance": "Sprechen wir über Ihre regulatorische Risikoexposition",
+    "ctaTitleTalentOrganization": "Sprechen wir über die Tiefe Ihrer Organisation"
   },
   "build": {
     "hero": {

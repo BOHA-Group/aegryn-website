@@ -72,11 +72,12 @@
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificazione CIFSO 5000",
     "craftSupport": "Accompagnare",
-    "craftSupportDesc": "Consulenza in Strategia, Rischio & Conformità, Tech & M&A : Tutti i settori",
-    "craftSupportStrategy": "Consulenza Strategica",
-    "craftSupportRiskCompliance": "Consulenza Rischio & Conformità",
-    "craftSupportTechnology": "Consulenza Tecnologica",
-    "craftSupportMA": "Consulenza M&A",
+    "craftSupportDesc": "Consulenza in Strategia, Rischio & Conformità, Tecnologia, Talento & M&A : Tutti i settori",
+    "craftSupportStrategy": "Strategia Aziendale, e Innovazione",
+    "craftSupportRiskCompliance": "Gestione del Rischio, e Conformità",
+    "craftSupportTechnology": "Tecnologia, e Sovranità",
+    "craftSupportTalentOrg": "Talento, e Organizzazione",
+    "craftSupportMA": "M&A, Transazioni, e PMI",
     "craftSupportAdvisory": "Consulenza Tech & IA",
     "craftSupportNetwork": "Rete di partner ed esperti",
     "craftSupportAlliances": "Rete di partner",
@@ -350,7 +351,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Consulenza in strategia",
+        "title": "Strategia Aziendale, e Innovazione",
         "desc": "Definiamo con i dirigenti la traiettoria della loro organizzazione e le condizioni per il suo successo.",
         "why": {
           "title": "Perché la consulenza strategica?",
@@ -406,7 +407,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Consulenza Rischio & Conformità",
+        "title": "Gestione del Rischio, e Conformità",
         "desc": "Mappiamo, documentiamo e guidiamo l'esposizione regolamentare e operativa della vostra organizzazione, dalla conformità cyber alla governance del rischio.",
         "why": {
           "title": "Perché la consulenza su rischio e conformità?",
@@ -462,7 +463,7 @@
         ]
       },
       "technology": {
-        "title": "Consulenza in tecnologia",
+        "title": "Tecnologia, e Sovranità",
         "desc": "Interveniamo sullo strato tecnologico dell’organizzazione, dall’architettura alla conformità.",
         "why": {
           "title": "Perché la consulenza tecnologica?",
@@ -513,8 +514,64 @@
           }
         ]
       },
+      "talentOrganization": {
+        "title": "Talento, e Organizzazione",
+        "desc": "Strutturiamo l'organizzazione, i team dirigenziali e i piani di successione che rendono un'azienda trasferibile, finanziabile e resiliente al di là del proprio fondatore.",
+        "why": {
+          "title": "Perché la consulenza su talento e organizzazione?",
+          "desc": "Una dipendenza eccessiva dal fondatore può ridurre la valutazione di un'azienda del 20-30 % durante una cessione o una raccolta di capitali. Acquirenti, investitori e finanziatori valutano sistematicamente la profondità del team dirigenziale, il piano di successione e la capacità dell'organizzazione di funzionare senza una persona chiave. Aiutiamo i dirigenti a documentare e rafforzare questa dimensione prima che venga messa alla prova da una transazione, un'assunzione critica o una partenza imprevista."
+        },
+        "approach": {
+          "title": "Il nostro approccio",
+          "desc": "Non consegniamo un organigramma teorico. Diagnostichiamo la dipendenza reale, mappiamo le competenze critiche e strutturiamo un piano di successione e assunzione eseguibile, allineato con le vostre scadenze di finanziamento, cessione o crescita.",
+          "steps": [
+            {
+              "label": "Diagnosi di dipendenza",
+              "desc": "Valutazione della dipendenza dal fondatore e della profondità del team dirigenziale: quali decisioni, relazioni con i clienti o competenze poggiano su una sola persona."
+            },
+            {
+              "label": "Mappatura delle competenze critiche",
+              "desc": "Identificazione dei ruoli e delle competenze la cui assenza metterebbe a rischio l'organizzazione, e delle soluzioni di backup, documentazione o delega disponibili."
+            },
+            {
+              "label": "Piano di successione e governance",
+              "desc": "Strutturazione del piano di successione, chiarimento dei ruoli del board e dei dirigenti, e implementazione di una governance che documenti le decisioni al di là del fondatore."
+            },
+            {
+              "label": "Reclutamento e retention dei talenti chiave",
+              "desc": "Identificazione e reclutamento dei profili dirigenziali mancanti tramite Aegryn Talent, e strutturazione dei meccanismi di retention (incentivi azionari, piano di carriera, cultura)."
+            }
+          ]
+        },
+        "dimensions": [
+          {
+            "label": "Dipendenza dal fondatore e sconto di trasferibilità",
+            "desc": ""
+          },
+          {
+            "label": "Profondità del team dirigenziale",
+            "desc": ""
+          },
+          {
+            "label": "Piano di successione e governance del board",
+            "desc": ""
+          },
+          {
+            "label": "Documentazione operativa e trasferimento di conoscenza",
+            "desc": ""
+          },
+          {
+            "label": "Retention dei talenti chiave e piani di carriera",
+            "desc": ""
+          },
+          {
+            "label": "Reclutamento executive e design organizzativo",
+            "desc": ""
+          }
+        ]
+      },
       "ma": {
-        "title": "Consulenza in M&A",
+        "title": "M&A, Transazioni, e PMI",
         "desc": "Strutturiamo le operazioni di crescita esterna e accompagniamo la loro integrazione.",
         "why": {
           "title": "Perché la consulenza M&A?",
@@ -619,7 +676,8 @@
     "ctaTitleMa": "Parliamo della sua operazione M&A",
     "ctaTitleTech": "Parliamo della sua trasformazione tech",
     "ctaTitleStrategy": "Parliamo della sua strategia",
-    "ctaTitleRiskCompliance": "Parliamo della vostra esposizione normativa"
+    "ctaTitleRiskCompliance": "Parliamo della vostra esposizione normativa",
+    "ctaTitleTalentOrganization": "Parliamo della profondità della vostra organizzazione"
   },
   "build": {
     "hero": {
