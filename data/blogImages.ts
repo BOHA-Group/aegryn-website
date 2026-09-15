@@ -3,6 +3,7 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
+  'cyber-resilience-act-2026-obligations-signalement-produits-numeriques': '/images/blog/chip-hardware-security.jpg',
   'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/notebook-desk.jpg',
   'dora-2026-resilience-operationnelle-numerique-secteur-financier-europe': '/images/blog/agile-standup.jpg',
   'ai-act-2026-omnibus-report-obligations-haut-risque-2027': '/images/blog/saas-product.jpg',
