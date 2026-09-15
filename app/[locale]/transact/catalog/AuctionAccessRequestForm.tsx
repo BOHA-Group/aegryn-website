@@ -60,7 +60,7 @@ export default function TransactionAccessRequestForm({ locale, userId, userEmail
   if (done) {
     return (
       <div className="bg-ag-off-white border border-ag-border p-8 flex flex-col items-center gap-4 text-center max-w-lg mx-auto">
-        <CheckCircle2 size={32} className="text-ag-apex" />
+        <CheckCircle2 size={32} className="text-ag-apex-ink" />
         <div>
           <p className="font-sans font-bold text-ag-black text-[16px] mb-2">{t('doneTitle')}</p>
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('doneDesc')}</p>

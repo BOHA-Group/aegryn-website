@@ -51,7 +51,7 @@ export default async function InternalDashboardPage() {
     <div className="p-8 max-w-4xl">
       {/* Header */}
       <div className="mb-10">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">Espace interne</p>
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">Espace interne</p>
         <h1 className="font-sans font-bold text-ag-black text-[28px] tracking-tight mb-1">
           Bonjour, {displayName}
         </h1>
@@ -77,7 +77,7 @@ export default async function InternalDashboardPage() {
               }`}
             >
               <div className="flex items-start justify-between">
-                <Icon size={20} className={unlocked ? 'text-ag-apex' : 'text-gray-300'} />
+                <Icon size={20} className={unlocked ? 'text-ag-apex-ink' : 'text-gray-300'} />
                 {!unlocked && <Lock size={13} className="text-gray-300" />}
               </div>
               <div>
@@ -87,7 +87,7 @@ export default async function InternalDashboardPage() {
               {unlocked ? (
                 <a
                   href={href}
-                  className="self-start font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex hover:underline"
+                  className="self-start font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink hover:underline"
                 >
                   Accéder →
                 </a>

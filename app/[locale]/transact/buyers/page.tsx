@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const STEP_NUMS    = ['01', '02', '03', '04']
 const COMMIT_ICONS = [
-  <Lock         key="1" size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-  <ShieldCheck  key="2" size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-  <Users        key="3" size={16} className="text-ag-apex shrink-0 mt-0.5" />,
-  <Eye          key="4" size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+  <Lock         key="1" size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
+  <ShieldCheck  key="2" size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
+  <Users        key="3" size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
+  <Eye          key="4" size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
 ]
 
 type Step       = { title: string; desc: string }
@@ -46,7 +46,7 @@ export default async function TransactBuyersPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('heroLabel')}
           </p>
@@ -82,7 +82,7 @@ export default async function TransactBuyersPage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-ag-border divide-y sm:divide-y-0 sm:divide-x divide-ag-border mb-20">
             {steps.map(({ title, desc }, i) => (
               <div key={STEP_NUMS[i]} className="p-8 flex flex-col gap-4">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{STEP_NUMS[i]}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{STEP_NUMS[i]}</span>
                 <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.01em]">{title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
               </div>

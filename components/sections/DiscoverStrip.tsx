@@ -215,7 +215,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
               </div>
               <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink">
                     {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
                   </span>
                   <span className="text-ag-gray-light text-[10px]">·</span>

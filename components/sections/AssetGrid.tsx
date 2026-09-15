@@ -156,7 +156,7 @@ export function AssetGrid() {
 
       <div ref={wrapRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
         {/* Tier 1 */}
-        <p className="font-sans font-semibold text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+        <p className="font-sans font-semibold text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
           {t('tier1Label')}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ag-border mb-10">

@@ -129,7 +129,7 @@ export function GradePricing() {
                       <Check
                         size={13}
                         className={`shrink-0 mt-0.5 ${
-                          tier.highlight ? 'text-ag-navy' : 'text-ag-apex'
+                          tier.highlight ? 'text-ag-navy' : 'text-ag-apex-ink'
                         }`}
                       />
                       <p

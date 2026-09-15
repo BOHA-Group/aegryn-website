@@ -116,11 +116,11 @@ export default function IndexSubscriberPreview() {
                         <p className="font-mono text-[9px] uppercase tracking-wide text-white/40">{r.clusterLabel}</p>
                       </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70 whitespace-nowrap">
-                        {r.evRevenue[0]}x · <strong className="text-ag-apex">{r.evRevenue[1]}x</strong> · {r.evRevenue[2]}x
+                        {r.evRevenue[0]}x · <strong className="text-ag-apex-ink">{r.evRevenue[1]}x</strong> · {r.evRevenue[2]}x
                       </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.evEbitda ? `${r.evEbitda}x` : '—'}</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.arr ? `${r.arr}x` : '—'}</td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold">{r.score}/100</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.score}/100</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/40">n={r.sample}</td>
                     </tr>
                   ))}
@@ -141,7 +141,7 @@ export default function IndexSubscriberPreview() {
                       <td className="px-4 py-3">
                         <p className="font-sans text-[12px] font-semibold text-white">{r.letter} — {r.label}</p>
                       </td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold">{r.medianScore}/100</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.medianScore}/100</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70">+{r.uplift}%</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/40">n={r.n}</td>
                     </tr>
@@ -165,8 +165,8 @@ export default function IndexSubscriberPreview() {
                         <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{r.clusterLabel}</p></td>
                         <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.grade}</td>
                         <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.marketMultiple}x</td>
-                        <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold">{r.adjustedMultiple}x</td>
-                        <td className={`px-4 py-3 font-mono text-[11px] ${delta >= 0 ? 'text-ag-apex' : 'text-white/50'}`}>{delta >= 0 ? '+' : ''}{delta}%</td>
+                        <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.adjustedMultiple}x</td>
+                        <td className={`px-4 py-3 font-mono text-[11px] ${delta >= 0 ? 'text-ag-apex-ink' : 'text-white/50'}`}>{delta >= 0 ? '+' : ''}{delta}%</td>
                       </tr>
                     )
                   })}

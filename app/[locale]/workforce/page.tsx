@@ -96,7 +96,7 @@ export default async function WorkforcePage({ params }: Props) {
             </Link>
             <Link
               href={t('hero.cta2Href')}
-              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:border-ag-apex hover:text-ag-apex transition-colors"
+              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:border-ag-apex hover:text-ag-apex-ink transition-colors"
             >
               {t('hero.cta2')}
             </Link>
@@ -107,7 +107,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Chiffres 2025-2026 ─────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('marketData.label')}
           </p>
           <h2
@@ -143,7 +143,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Sur 100 collaborateurs ─────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('hundredWorkers.label')}
           </p>
           <h2
@@ -179,7 +179,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Compétences en hausse / en recul ────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('skillsRanking.label')}
           </p>
           <h2
@@ -193,7 +193,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border mb-4">
             <div className="bg-white p-8">
-              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex mb-5">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink mb-5">
                 {t('skillsRanking.rising.title')}
               </p>
               <ul className="space-y-3">
@@ -228,7 +228,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Par nature de poste ──────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('byRole.label')}
           </p>
           <h2
@@ -261,7 +261,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Par secteur ──────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('industries.label')}
           </p>
           <h2
@@ -273,9 +273,9 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('industries.desc')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             {clusterItems.map((item, i) => (
-              <div key={i} className="bg-white p-8 flex flex-col gap-3">
+              <div key={i} className="bg-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
                   {item.cluster}
                 </h3>
@@ -326,7 +326,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Pour qui ces données comptent ───────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('forWho.label')}
           </p>
           <h2
@@ -353,7 +353,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Sources ──────────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('sources.label')}
           </p>
           <h2
@@ -371,7 +371,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Articles liés ────────────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('articles.label')}
           </p>
           <h2
@@ -398,7 +398,7 @@ export default async function WorkforcePage({ params }: Props) {
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex mb-2">
+                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink mb-2">
                     {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
                   </p>
                   <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
@@ -413,7 +413,7 @@ export default async function WorkforcePage({ params }: Props) {
                         <Clock size={10} /> {article.readMin}
                       </span>
                     </div>
-                    <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex transition-colors shrink-0" />
+                    <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
                   </div>
                 </div>
               </Link>

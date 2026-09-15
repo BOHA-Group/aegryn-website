@@ -95,7 +95,7 @@ export default async function ClientBuyerPage({ params }: Props) {
 
         {/* Header */}
         <div className="mb-10">
-          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex mb-4 flex items-center gap-2">
+          <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4 flex items-center gap-2">
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
@@ -116,7 +116,7 @@ export default async function ClientBuyerPage({ params }: Props) {
             </p>
             <Link
               href={`/${locale}/transact/catalog`}
-              className="inline-flex items-center gap-2 mt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-ag-apex hover:underline"
+              className="inline-flex items-center gap-2 mt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-ag-apex-ink hover:underline"
             >
               {t('viewCatalog')} →
             </Link>
@@ -161,7 +161,7 @@ export default async function ClientBuyerPage({ params }: Props) {
                   {req.status === 'approved' && valid && access ? (
                     <div className="border border-ag-apex/30 bg-ag-apex/5 rounded-sm p-4 flex items-center justify-between gap-4">
                       <div>
-                        <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-apex mb-1 flex items-center gap-1.5">
+                        <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-apex-ink mb-1 flex items-center gap-1.5">
                           <CheckCircle size={10} />
                           {days > 1 ? t('accessActivePlural', { days }) : t('accessActive', { days })}
                         </p>

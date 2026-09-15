@@ -25,7 +25,7 @@ export default function IndustriesSection() {
               <span className="font-sans font-bold text-[14px] tracking-[-0.01em] text-ag-navy group-hover:text-ag-black transition-colors">
                 {cluster.cluster}
               </span>
-              <span className="shrink-0 text-ag-apex">
+              <span className="shrink-0 text-ag-apex-ink">
                 {isOpen ? <Minus size={14} strokeWidth={2} /> : <Plus size={14} strokeWidth={2} />}
               </span>
             </button>

@@ -83,7 +83,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                   <p className="text-ag-gray">
                     <span className="font-semibold text-ag-black">{t('marketRoles.salaryLabel')}:</span> {role.salary}
                   </p>
-                  <p className="text-ag-apex font-semibold">
+                  <p className="text-ag-apex-ink font-semibold">
                     {role.demand}
                   </p>
                 </div>
@@ -255,7 +255,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
               </div>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
                     {t('employer.services.search.label')}
                   </div>
                   <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
@@ -266,7 +266,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                   </p>
                 </div>
                 <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
                     {t('employer.services.assessment.label')}
                   </div>
                   <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
@@ -277,7 +277,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                   </p>
                 </div>
                 <div className="border border-ag-border bg-white p-8 hover:border-ag-apex/40 transition-colors">
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
                     {t('employer.services.advisory.label')}
                   </div>
                   <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
@@ -347,7 +347,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
               </h2>
               <div className="grid sm:grid-cols-3 gap-12">
                 <div>
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">01</div>
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">01</div>
                   <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                     {t('employer.process.brief.title')}
                   </h3>
@@ -356,7 +356,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                   </p>
                 </div>
                 <div>
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">02</div>
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">02</div>
                   <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                     {t('employer.process.search.title')}
                   </h3>
@@ -365,7 +365,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                   </p>
                 </div>
                 <div>
-                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex mb-4">03</div>
+                  <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">03</div>
                   <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                     {t('employer.process.placement.title')}
                   </h3>

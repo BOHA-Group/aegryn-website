@@ -107,7 +107,7 @@ export default function TransactionSubmitForm() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="bg-ag-white p-6 flex flex-col gap-2">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                 <p className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{title}</p>
                 <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
@@ -121,7 +121,7 @@ export default function TransactionSubmitForm() {
         <div className="max-w-4xl mx-auto">
           {submitted ? (
             <div className="border border-ag-apex/30 bg-ag-off-white p-16 flex flex-col items-start gap-6">
-              <CheckCircle2 size={32} className="text-ag-apex" />
+              <CheckCircle2 size={32} className="text-ag-apex-ink" />
               <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em]">
                 {t('form.successTitle')}
               </h2>

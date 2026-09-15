@@ -173,11 +173,11 @@ export default function TalentCandidateForm() {
           {...register('gdprConsent')}
           type="checkbox"
           id="gdprConsent"
-          className="mt-1 w-4 h-4 rounded border-ag-border text-ag-apex focus:ring-ag-apex focus:ring-2"
+          className="mt-1 w-4 h-4 rounded border-ag-border text-ag-apex-ink focus:ring-ag-apex focus:ring-2"
         />
         <label htmlFor="gdprConsent" className="text-[13px] text-ag-gray leading-relaxed">
           {t('gdprConsent')}{' '}
-          <a href="mailto:contact@boha-group.com" className="text-ag-apex hover:underline">
+          <a href="mailto:contact@boha-group.com" className="text-ag-apex-ink hover:underline">
             contact@boha-group.com
           </a>
           .

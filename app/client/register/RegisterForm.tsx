@@ -120,7 +120,7 @@ export default function RegisterForm() {
   if (success) {
     return (
       <div className="flex flex-col items-center gap-4 py-8 text-center">
-        <CheckCircle size={40} className="text-ag-apex" />
+        <CheckCircle size={40} className="text-ag-apex-ink" />
         <p className="font-sans font-bold text-white text-[18px]">{t('successTitle')}</p>
         <p className="font-sans text-[13px] text-white/50">{t('successDesc')}</p>
       </div>
@@ -251,7 +251,7 @@ export default function RegisterForm() {
                   : 'border-white/15 bg-white/5 text-white/50 hover:border-white/30 hover:text-white/80'
               }`}
             >
-              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex' : 'text-white/30'}`}>
+              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex-ink' : 'text-white/30'}`}>
                 {icon}
               </span>
               <span className="flex flex-col">

@@ -162,7 +162,7 @@ function AccessDeniedScreen({
             : <Lock size={28} className="text-ag-gray-light" />}
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-3">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink mb-3">
             Aegryn TRANSACT — {t('confidentialLabel')}
           </p>
           <h1 className="font-sans font-bold text-ag-black text-[28px] tracking-[-0.02em] mb-4">

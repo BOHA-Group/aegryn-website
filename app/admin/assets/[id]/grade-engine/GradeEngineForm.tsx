@@ -39,7 +39,7 @@ const CIFS_TO_CATEGORY: Record<string, string> = {
 type FormStep = 'input' | 'result'
 
 const GRADE_COLORS: Record<string, string> = {
-  star:    'text-ag-apex   bg-ag-apex/10   border-ag-apex/30',
+  star:    'text-ag-apex-ink   bg-ag-apex/10   border-ag-apex/30',
   aaa:     'text-ag-grade-aaa  bg-ag-grade-aaa/10  border-ag-grade-aaa/30',
   aa:      'text-ag-grade-aa   bg-ag-grade-aa/10   border-ag-grade-aa/30',
   a:       'text-ag-grade-a    bg-ag-grade-a/10    border-ag-grade-a/30',
@@ -229,7 +229,7 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
   return (
     <div className="sticky top-4 bg-white border border-gray-200 p-4 space-y-3">
       <div className="flex items-center gap-1.5 mb-2">
-        <Zap size={11} className="text-ag-apex" />
+        <Zap size={11} className="text-ag-apex-ink" />
         <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400">Score live</p>
       </div>
 

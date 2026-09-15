@@ -58,7 +58,7 @@ export default function CatalogDomains() {
                 className="w-full flex items-center justify-between px-8 py-5 text-left group"
                 aria-expanded={open === i}
               >
-                <span className="font-sans font-semibold text-[14px] text-ag-black tracking-[-0.01em] group-hover:text-ag-apex transition-colors">
+                <span className="font-sans font-semibold text-[14px] text-ag-black tracking-[-0.01em] group-hover:text-ag-apex-ink transition-colors">
                   {label}
                 </span>
                 <ChevronDown

@@ -100,7 +100,7 @@ export default async function RoadmapPage({ params }: Props) {
             {FEATURE_ICONS.map(({ key, Icon }) => (
               <div key={key} className="bg-ag-white p-8 flex flex-col gap-4 group hover:bg-ag-off-white transition-colors">
                 <div className="w-10 h-10 border border-ag-border flex items-center justify-center group-hover:border-ag-apex/40 transition-colors">
-                  <Icon size={18} className="text-ag-apex" strokeWidth={1.5} />
+                  <Icon size={18} className="text-ag-apex-ink" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.01em]">
                   {t(`features.${key}.title`)}
@@ -124,8 +124,8 @@ export default async function RoadmapPage({ params }: Props) {
           {/* Disponible */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
-              <CheckCircle2 size={14} className="text-ag-apex" />
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">{t('statusLive')}</p>
+              <CheckCircle2 size={14} className="text-ag-apex-ink" />
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">{t('statusLive')}</p>
             </div>
             <div className="relative border-l border-ag-apex/30 pl-8 space-y-0">
               {liveItems.map((item, i) => {
@@ -135,7 +135,7 @@ export default async function RoadmapPage({ params }: Props) {
                     <span className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full border-2 border-ag-apex bg-ag-off-white" />
                     <div className="bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 group hover:border-ag-apex/40 transition-colors">
                       <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0 group-hover:border-ag-apex/40 transition-colors">
-                        <Icon size={15} className="text-ag-apex" strokeWidth={1.5} />
+                        <Icon size={15} className="text-ag-apex-ink" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1 min-w-[200px]">
                         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{item.theme}</p>
@@ -144,7 +144,7 @@ export default async function RoadmapPage({ params }: Props) {
                         </h3>
                         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
-                      <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex border border-ag-apex/30 px-2 py-1">
+                      <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex-ink border border-ag-apex/30 px-2 py-1">
                         ● {t('statusLive')}
                       </span>
                     </div>
@@ -199,7 +199,7 @@ export default async function RoadmapPage({ params }: Props) {
             <ul className="space-y-3">
               {current.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 size={15} className="text-ag-apex shrink-0 mt-0.5" />
+                  <CheckCircle2 size={15} className="text-ag-apex-ink shrink-0 mt-0.5" />
                   <span className="font-sans text-[14px] text-ag-black">{item}</span>
                 </li>
               ))}

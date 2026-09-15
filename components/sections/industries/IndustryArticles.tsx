@@ -99,7 +99,7 @@ export function IndustryArticles({ articles, locale }: Props) {
 
               {/* Contenu */}
               <div className="p-5 flex flex-col flex-1">
-                <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-ag-apex mb-2">
+                <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-ag-apex-ink mb-2">
                   {getText(ARTICLE_CATEGORIES[article.category] as unknown as Record<string, string | undefined>, lang)}
                 </p>
                 <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
@@ -117,7 +117,7 @@ export function IndustryArticles({ articles, locale }: Props) {
                       <Clock size={10} /> {article.readMin} min
                     </span>
                   </div>
-                  <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex transition-colors shrink-0" />
+                  <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
                 </div>
               </div>
             </Link>

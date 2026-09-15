@@ -96,7 +96,7 @@ export default function ResetPasswordForm() {
   if (done) {
     return (
       <div className="bg-white/5 border border-white/10 p-8 text-center">
-        <CheckCircle2 size={32} className="text-ag-apex mx-auto mb-4" />
+        <CheckCircle2 size={32} className="text-ag-apex-ink mx-auto mb-4" />
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
           {t('doneTitle')}
         </h2>

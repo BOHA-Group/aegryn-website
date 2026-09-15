@@ -313,7 +313,7 @@ export function DiscoverGrid({ locale }: Props) {
 
                     {/* Content */}
                     <div className="p-5 flex flex-col flex-1">
-                      <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex mb-2">
+                      <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink mb-2">
                         {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
                       </p>
                       <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
@@ -331,7 +331,7 @@ export function DiscoverGrid({ locale }: Props) {
                             <Clock size={10} /> {article.readMin} {t('readMin')}
                           </span>
                         </div>
-                        <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex transition-colors shrink-0" />
+                        <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
                       </div>
                     </div>
                   </Link>
@@ -359,7 +359,7 @@ export function DiscoverGrid({ locale }: Props) {
           {/* Newsletter */}
           <div className="mt-16 rounded-2xl border border-ag-border bg-white p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">{t('newsletterLabel')}</p>
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">{t('newsletterLabel')}</p>
               <p className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] mb-1">{t('newsletterTitle')}</p>
               <p className="font-sans text-[13px] text-ag-gray">{t('newsletterDesc')}</p>
             </div>

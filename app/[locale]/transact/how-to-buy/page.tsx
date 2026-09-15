@@ -85,7 +85,7 @@ export default async function TransactBuyPage({ params }: Props) {
             <div className="flex flex-col gap-6">
               {processSteps.map(({ num, title, desc }) => (
                 <div key={num} className="flex gap-5">
-                  <span className="font-mono text-[11px] tracking-[0.14em] text-ag-apex shrink-0 pt-0.5">{num}</span>
+                  <span className="font-mono text-[11px] tracking-[0.14em] text-ag-apex-ink shrink-0 pt-0.5">{num}</span>
                   <div>
                     <p className="font-sans font-semibold text-ag-black text-[15px] mb-1">{title}</p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
@@ -102,7 +102,7 @@ export default async function TransactBuyPage({ params }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex mb-2">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink mb-2">
                 {tm('segment.buy.kicker')}
               </p>
               <h2 className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em] mb-3">
@@ -119,7 +119,7 @@ export default async function TransactBuyPage({ params }: Props) {
               <ul className="flex flex-col gap-2">
                 {buyPoints.map((pt) => (
                   <li key={pt} className="flex items-start gap-3">
-                    <span className="font-mono text-ag-apex text-[10px] mt-1 shrink-0">—</span>
+                    <span className="font-mono text-ag-apex-ink text-[10px] mt-1 shrink-0">—</span>
                     <span className="font-sans text-[13px] text-ag-dark leading-snug">{pt}</span>
                   </li>
                 ))}

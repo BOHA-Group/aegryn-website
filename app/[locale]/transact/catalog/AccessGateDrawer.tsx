@@ -68,7 +68,7 @@ export default function AccessGateDrawer({
             <div className="w-8 h-8 border border-ag-border flex items-center justify-center">
               <Lock size={14} className="text-ag-gray-light" />
             </div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
               {labels.conditionalAccess}
             </p>
           </div>
@@ -103,13 +103,13 @@ export default function AccessGateDrawer({
                     : 'border-ag-border bg-ag-white'
                 }`}
               >
-                <span className={`font-mono text-[11px] font-bold shrink-0 ${done ? 'text-ag-apex' : 'text-ag-gray-light'}`}>
+                <span className={`font-mono text-[11px] font-bold shrink-0 ${done ? 'text-ag-apex-ink' : 'text-ag-gray-light'}`}>
                   {n}
                 </span>
                 <p className={`font-sans text-[13px] leading-snug flex-1 ${done ? 'text-ag-black' : 'text-ag-gray'}`}>
                   {label}
                 </p>
-                {done && <span className="text-ag-apex text-[11px] font-mono">✓</span>}
+                {done && <span className="text-ag-apex-ink text-[11px] font-mono">✓</span>}
               </div>
             ))}
           </div>

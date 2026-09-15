@@ -31,21 +31,21 @@ export default async function TransactionSellPage({ params }: Props) {
   const STEPS = [
     {
       num:   '01',
-      icon:  <BarChart3 size={20} className="text-ag-apex" />,
+      icon:  <BarChart3 size={20} className="text-ag-apex-ink" />,
       title: t('steps.s1.title'),
       desc:  t('steps.s1.desc'),
       cta:   { label: t('steps.s1.cta'), href: '/valuation' },
     },
     {
       num:   '02',
-      icon:  <FileText size={20} className="text-ag-apex" />,
+      icon:  <FileText size={20} className="text-ag-apex-ink" />,
       title: t('steps.s2.title'),
       desc:  t('steps.s2.desc'),
       cta:   null,
     },
     {
       num:   '03',
-      icon:  <ShieldCheck size={20} className="text-ag-apex" />,
+      icon:  <ShieldCheck size={20} className="text-ag-apex-ink" />,
       title: t('steps.s3.title'),
       desc:  t('steps.s3.desc'),
       cta:   { label: t('steps.s3.cta'), href: '/transact/submit' },
@@ -54,22 +54,22 @@ export default async function TransactionSellPage({ params }: Props) {
 
   const GUARANTEES = [
     {
-      icon:  <Lock size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      icon:  <Lock size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
       title: t('guarantees.g1.title'),
       desc:  t('guarantees.g1.desc'),
     },
     {
-      icon:  <Users size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      icon:  <Users size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
       title: t('guarantees.g2.title'),
       desc:  t('guarantees.g2.desc'),
     },
     {
-      icon:  <Landmark size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      icon:  <Landmark size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
       title: t('guarantees.g3.title'),
       desc:  t('guarantees.g3.desc'),
     },
     {
-      icon:  <ShieldCheck size={16} className="text-ag-apex shrink-0 mt-0.5" />,
+      icon:  <ShieldCheck size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />,
       title: t('guarantees.g4.title'),
       desc:  t('guarantees.g4.desc'),
     },
@@ -81,7 +81,7 @@ export default async function TransactionSellPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
@@ -126,7 +126,7 @@ export default async function TransactionSellPage({ params }: Props) {
             {STEPS.map(({ num, icon, title, desc, cta }) => (
               <div key={num} className="p-10 flex flex-col gap-5">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                   {icon}
                 </div>
                 <div>

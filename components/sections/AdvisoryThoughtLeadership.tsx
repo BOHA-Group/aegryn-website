@@ -23,7 +23,7 @@ export function AdvisoryThoughtLeadership() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {pillars.map((pillar, idx) => (
             <div key={idx} className="bg-white border border-ag-border p-8">
-              <div className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
+              <div className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6">
                 {String(idx + 1).padStart(2, '0')}
               </div>
               <h3 className="font-sans font-bold text-[20px] text-ag-navy mb-4 leading-tight">

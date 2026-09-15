@@ -29,11 +29,11 @@ export default async function NeediuLegalPage({ params }: Props) {
         <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.24em] text-ag-gray-light mb-10">
           <Link href="/" className="hover:text-ag-black transition-colors">Aegryn</Link>
           {' / '}
-          <span className="text-ag-apex">neediu</span>
+          <span className="text-ag-apex-ink">neediu</span>
           {' / '}{t('breadcrumb')}
         </p>
 
-        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">{t('sectionDpn')}</p>
+        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">{t('sectionDpn')}</p>
 
         <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
           style={{ fontSize: 'clamp(28px,3.5vw,46px)' }}>
@@ -154,7 +154,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           {/* ── CGU ── */}
           <hr className="my-14 border-ag-border" />
 
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex">{t('cgu.sectionLabel')}</p>
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{t('cgu.sectionLabel')}</p>
           <h2 className="!mt-4">{t('cgu.h2')}</h2>
           <p className="border-l-2 border-ag-border pl-4 text-[14px]">{t('cgu.disclaimer')}</p>
 

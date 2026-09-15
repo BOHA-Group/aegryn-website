@@ -88,7 +88,7 @@ export default async function TalentOrganizationAdvisoryPage({ params }: Props) 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pillar.approach.steps.map((step, idx) => (
               <div key={idx} className="bg-white border border-ag-border p-6">
-                <div className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-4">
+                <div className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-4">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
                 <h3 className="font-sans font-semibold text-[16px] text-ag-navy mb-3">

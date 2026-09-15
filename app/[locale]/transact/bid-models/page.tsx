@@ -129,7 +129,7 @@ export default async function BidModelsPage({ params }: Props) {
               {pttSteps.map((step) => (
                 <div key={step.num} className="flex gap-8 items-start py-6 border-b border-ag-border last:border-b-0">
                   <div className="w-10 h-10 border border-ag-border bg-ag-white flex items-center justify-center shrink-0 relative z-10">
-                    <span className="font-sans text-[10px] font-bold tracking-[0.08em] text-ag-apex">{step.num}</span>
+                    <span className="font-sans text-[10px] font-bold tracking-[0.08em] text-ag-apex-ink">{step.num}</span>
                   </div>
                   <div>
                     <p className="font-sans font-bold text-ag-black text-[14px] mb-1">{step.title}</p>
@@ -143,7 +143,7 @@ export default async function BidModelsPage({ params }: Props) {
           {/* Protection bilatérale */}
           <div className="mt-12 border border-ag-border p-8">
             <div className="flex items-center gap-3 mb-6">
-              <ShieldCheck size={18} className="text-ag-apex" />
+              <ShieldCheck size={18} className="text-ag-apex-ink" />
               <p className="font-sans font-bold text-ag-black text-[14px] tracking-[-0.01em]">{t('ptt.protection.title')}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

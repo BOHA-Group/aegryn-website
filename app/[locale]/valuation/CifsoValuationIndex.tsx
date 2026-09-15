@@ -118,7 +118,7 @@ function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: stri
               </p>
             </div>
             <div className="px-5 py-4 border-r border-ag-border">
-              <p className="font-mono font-bold text-ag-apex text-[13px]">
+              <p className="font-mono font-bold text-ag-apex-ink text-[13px]">
                 {row.ev_revenue_low}x à {row.ev_revenue_high}x
               </p>
             </div>
@@ -223,7 +223,7 @@ export default function CifsoValuationIndex() {
                   <ul className="flex flex-col gap-2 flex-1">
                     {pl.features.map(f => (
                       <li key={f} className="flex items-start gap-2 font-sans text-[13px] leading-snug">
-                        <Check size={13} className="text-ag-apex shrink-0 mt-0.5" /> <span className={featured ? 'text-ag-black' : 'text-white/80'}>{f}</span>
+                        <Check size={13} className="text-ag-apex-ink shrink-0 mt-0.5" /> <span className={featured ? 'text-ag-black' : 'text-white/80'}>{f}</span>
                       </li>
                     ))}
                   </ul>
@@ -344,7 +344,7 @@ export default function CifsoValuationIndex() {
                   </div>
                   <div>
                     <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-1">{example.gapLabel}</p>
-                    <p className="font-sans font-bold text-ag-apex text-[22px]">{example.gapValue}</p>
+                    <p className="font-sans font-bold text-ag-apex-ink text-[22px]">{example.gapValue}</p>
                   </div>
                 </div>
 

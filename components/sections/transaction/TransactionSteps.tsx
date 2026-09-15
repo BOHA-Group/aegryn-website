@@ -35,7 +35,7 @@ export function TransactionSteps() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-ag-border border border-ag-border">
           {steps.map(({ num, title, desc }) => (
             <div key={num} className="transaction-step p-8 flex flex-col gap-4">
-              <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+              <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
               <h3 className="font-sans font-semibold text-ag-black text-[17px] leading-snug">{title}</h3>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
             </div>

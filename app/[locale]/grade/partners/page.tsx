@@ -29,7 +29,7 @@ export default async function GradePartnersPage() {
       {/* Hero */}
       <section className="border-b border-ag-border pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>

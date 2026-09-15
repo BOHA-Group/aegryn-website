@@ -43,7 +43,7 @@ export default function ExpertiseGrid() {
               >
                 {/* Top row */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-8 h-8 border border-ag-border flex items-center justify-center group-hover:border-ag-apex group-hover:text-ag-apex transition-colors">
+                  <div className="w-8 h-8 border border-ag-border flex items-center justify-center group-hover:border-ag-apex group-hover:text-ag-apex-ink transition-colors">
                     <Icon size={15} strokeWidth={1.5} />
                   </div>
                   <span className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light">

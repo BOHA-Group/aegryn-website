@@ -122,7 +122,7 @@ export default async function BuildServicePage({ params }: Props) {
                 <div className="flex items-center gap-3">
                   <span className={`font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
                     card.key === 'btl'
-                      ? 'border-ag-apex/40 bg-ag-apex/10 text-ag-apex'
+                      ? 'border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink'
                       : 'border-ag-border bg-ag-off-white text-ag-gray'
                   }`}>
                     {card.badge}
@@ -189,7 +189,7 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {whyPoints.map((pt, i) => (
               <div key={i} className="rounded-2xl border border-ag-border p-6 bg-ag-off-white">
-                <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex mb-2">
+                <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex-ink mb-2">
                   {pt.title}
                 </p>
                 <p className="text-[14px] text-ag-gray leading-relaxed">
@@ -393,7 +393,7 @@ export default async function BuildServicePage({ params }: Props) {
                   {/* Card */}
                   <div className="flex-1 flex flex-col gap-3 rounded-2xl border border-ag-border bg-ag-white p-5 hover:bg-ag-off-white transition-colors">
                     {/* Numéro */}
-                    <span className="font-mono text-[10px] tracking-[0.28em] text-ag-apex">
+                    <span className="font-mono text-[10px] tracking-[0.28em] text-ag-apex-ink">
                       {step.num}
                     </span>
                     {/* Titre */}

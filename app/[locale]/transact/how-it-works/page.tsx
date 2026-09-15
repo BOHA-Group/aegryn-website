@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const STEP_ICONS = [
-  <BarChart3    key="1" size={22} className="text-ag-apex" />,
-  <FileText     key="2" size={22} className="text-ag-apex" />,
-  <ShieldCheck  key="3" size={22} className="text-ag-apex" />,
-  <Users        key="4" size={22} className="text-ag-apex" />,
-  <FileText     key="5" size={22} className="text-ag-apex" />,
-  <Landmark     key="6" size={22} className="text-ag-apex" />,
+  <BarChart3    key="1" size={22} className="text-ag-apex-ink" />,
+  <FileText     key="2" size={22} className="text-ag-apex-ink" />,
+  <ShieldCheck  key="3" size={22} className="text-ag-apex-ink" />,
+  <Users        key="4" size={22} className="text-ag-apex-ink" />,
+  <FileText     key="5" size={22} className="text-ag-apex-ink" />,
+  <Landmark     key="6" size={22} className="text-ag-apex-ink" />,
 ]
 const STEP_SIDES = ['seller', 'seller', 'aegryn', 'aegryn', 'both', 'aegryn'] as const
 const STEP_CTAS = ['/valuation', '/transact/submit', '/grade/brochure', '/transact/buyers', null, null] as const
@@ -57,7 +57,7 @@ export default async function HowItWorksPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5 flex items-center gap-3">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('heroLabel')}
           </p>
@@ -99,7 +99,7 @@ export default async function HowItWorksPage({ params }: Props) {
               <div key={step.num} className="grid grid-cols-1 lg:grid-cols-[80px_1fr_280px] gap-0">
                 {/* Num */}
                 <div className="flex items-start justify-center pt-8 pb-4 lg:py-8 lg:border-r border-ag-border">
-                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{step.num}</span>
+                  <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{step.num}</span>
                 </div>
                 {/* Content */}
                 <div className="px-6 lg:px-8 py-8 lg:border-r border-ag-border flex flex-col gap-3">
@@ -129,7 +129,7 @@ export default async function HowItWorksPage({ params }: Props) {
                       <div className="w-px h-8 bg-ag-border mt-1" />
                     )}
                     {step.num === '06' && (
-                      <CheckCircle2 size={16} className="text-ag-apex mt-1" />
+                      <CheckCircle2 size={16} className="text-ag-apex-ink mt-1" />
                     )}
                   </div>
                 </div>
@@ -154,14 +154,14 @@ export default async function HowItWorksPage({ params }: Props) {
             <div className="min-w-[480px]">
               <div className="grid grid-cols-3 bg-ag-navy">
                 <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
-                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink border-l border-white/10">Aegryn</div>
                 <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">{t('compareOther')}</div>
               </div>
               {compareRows.map(({ label, aegryn, other }, i) => (
                 <div key={label} className={`grid grid-cols-3 border-t border-ag-border ${i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}`}>
                   <div className="px-5 py-4 font-sans font-semibold text-[12px] text-ag-black border-r border-ag-border">{label}</div>
                   <div className="px-5 py-4 font-sans text-[12px] text-ag-black border-r border-ag-border flex items-center gap-2">
-                    <CheckCircle2 size={12} className="text-ag-apex shrink-0" />
+                    <CheckCircle2 size={12} className="text-ag-apex-ink shrink-0" />
                     {aegryn}
                   </div>
                   <div className="px-5 py-4 font-sans text-[12px] text-ag-gray-light">{other}</div>
@@ -185,7 +185,7 @@ export default async function HowItWorksPage({ params }: Props) {
             </Link>
           </div>
           <div className="p-10 flex flex-col gap-4">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex">{t('ctaBuyerLabel')}</p>
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">{t('ctaBuyerLabel')}</p>
             <h3 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">{t('ctaBuyerTitle')}</h3>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('ctaBuyerDesc')}</p>
             <Link href="/transact/buyers"

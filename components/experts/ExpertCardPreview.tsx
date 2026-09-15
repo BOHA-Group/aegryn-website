@@ -32,7 +32,7 @@ export type ExpertCardPreviewData = {
 const DIMENSION_COLORS: Record<string, { bg: string; border: string; text: string }> = {
   tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
   transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
-  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex'   },
+  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex-ink'   },
 }
 
 // Couleur d'une catégorie taxonomy selon sa dimension
@@ -100,11 +100,11 @@ export function ExpertCardPreview({ data, locale = 'fr' }: { data: ExpertCardPre
                 : <span className="text-ag-gray-light italic">Prénom Nom</span>
               }
             </h3>
-            <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+            <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex-ink border border-ag-apex/30">
               <CheckCircle2 size={9} /> Vérifié
             </span>
           </div>
-          <p className="font-sans text-[12px] text-ag-apex font-semibold">
+          <p className="font-sans text-[12px] text-ag-apex-ink font-semibold">
             {data.profession || <span className="text-ag-gray-light italic">Titre / Profession</span>}
           </p>
           {data.organization && (

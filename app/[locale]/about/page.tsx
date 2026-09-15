@@ -136,7 +136,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
                 {values.map((v) => (
                   <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-4">
+                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">
                       {t(`values.${v}.label`)}
                     </p>
                     <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
@@ -203,7 +203,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
             {([0, 1, 2] as const).map((i) => (
               <div key={i} className="bg-ag-white p-10">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-6">
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6">
                   {t(`contribution.items.${i}.num`)}
                 </p>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-4">

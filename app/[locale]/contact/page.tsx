@@ -50,7 +50,7 @@ export default async function ContactPage({ params }: Props) {
       {/* Hero */}
       <section className="border-b border-ag-border">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-          <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex mb-6">
+          <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex-ink mb-6">
             Contact
           </p>
           <h1 className="font-sans text-6xl font-bold tracking-tighter text-ag-black sm:text-7xl max-w-xl">

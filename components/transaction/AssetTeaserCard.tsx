@@ -72,8 +72,8 @@ export default function AssetTeaserCard({ lot, locale, labels }: Props) {
       {/* Session badge */}
       {session && (
         <div className="flex items-center gap-2">
-          <CalendarClock size={12} className="text-ag-apex" />
-          <span className="font-mono text-[10px] tracking-[0.14em] text-ag-apex uppercase">
+          <CalendarClock size={12} className="text-ag-apex-ink" />
+          <span className="font-mono text-[10px] tracking-[0.14em] text-ag-apex-ink uppercase">
             {session}
           </span>
         </div>

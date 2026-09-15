@@ -131,7 +131,7 @@ export default function CareerPositions({
                 >
                   {pos.title}
                 </p>
-                <p className="font-sans font-semibold text-[10px] text-ag-apex mt-1 tracking-[0.1em] uppercase">
+                <p className="font-sans font-semibold text-[10px] text-ag-apex-ink mt-1 tracking-[0.1em] uppercase">
                   {domainLabels[pos.domainKey]}
                 </p>
               </div>

@@ -23,15 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const PROBLEMS = [
   {
-    icon: <AlertTriangle size={20} className="text-ag-apex" />,
+    icon: <AlertTriangle size={20} className="text-ag-apex-ink" />,
     text: 'Votre participation n\'a pas d\'équipe opérationnelle pour piloter la valeur.',
   },
   {
-    icon: <BarChart2 size={20} className="text-ag-apex" />,
+    icon: <BarChart2 size={20} className="text-ag-apex-ink" />,
     text: 'Votre deal flow est difficile à lire techniquement et organisationnellement.',
   },
   {
-    icon: <TrendingUp size={20} className="text-ag-apex" />,
+    icon: <TrendingUp size={20} className="text-ag-apex-ink" />,
     text: 'Votre exit est dans 24 à 36 mois et l\'organisation n\'est pas prête.',
   },
 ]
@@ -65,7 +65,7 @@ export default async function InvestisseursPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-32 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             INVESTISSEURS & INSTITUTIONNELS
           </p>
@@ -125,7 +125,7 @@ export default async function InvestisseursPage({ params }: Props) {
             {ROLES.map(({ letter, title, desc }) => (
               <div key={letter} className="bg-ag-white p-10 grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-8 items-start">
                 <div className="w-12 h-12 bg-ag-navy flex items-center justify-center shrink-0">
-                  <span className="font-sans font-bold text-ag-apex text-[18px]">{letter}</span>
+                  <span className="font-sans font-bold text-ag-apex-ink text-[18px]">{letter}</span>
                 </div>
                 <div>
                   <h3 className="font-sans font-semibold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">
@@ -160,7 +160,7 @@ export default async function InvestisseursPage({ params }: Props) {
             </p>
           </div>
           <div className="bg-ag-navy p-12 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">
               NOTRE ENGAGEMENT
             </p>
             {[

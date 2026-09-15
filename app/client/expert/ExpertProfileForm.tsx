@@ -264,7 +264,7 @@ export default function ExpertProfileForm({ initialData }: { initialData: Expert
               onClick={() => toggleArr('specialties', s)}
               className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-1.5 border transition-colors ${
                 form.specialties.includes(s)
-                  ? 'border-ag-apex bg-ag-apex/10 text-ag-apex'
+                  ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink'
                   : 'border-gray-200 text-gray-400 hover:border-gray-400'
               }`}
             >

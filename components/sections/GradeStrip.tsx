@@ -46,7 +46,7 @@ export function GradeStrip() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
 
         <div className="grade-strip-text text-center mb-16 space-y-5">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex flex items-center justify-center gap-3">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink flex items-center justify-center gap-3">
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
             {t('label')}
           </p>

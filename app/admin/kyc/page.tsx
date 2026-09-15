@@ -161,7 +161,7 @@ export default async function AdminKycPage({
                             : 'Utilisateur'
                           const cls = roles.includes('seller') && !roles.includes('partner')
                             ? 'text-amber-700 border-amber-300'
-                            : 'text-ag-apex border-ag-apex/30'
+                            : 'text-ag-apex-ink border-ag-apex/30'
                           return <span className={`ml-2 font-mono text-[9px] uppercase tracking-widest border px-1 py-0.5 ${cls}`}>{label}</span>
                         })()}
                       </td>

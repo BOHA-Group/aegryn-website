@@ -238,7 +238,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
                 {filtered.length} / {assets.length}
                 {hasFilters && assets.length - filtered.length > 0 && (
-                  <span className="ml-2 text-ag-apex">
+                  <span className="ml-2 text-ag-apex-ink">
                     (−{assets.length - filtered.length})
                   </span>
                 )}
@@ -268,7 +268,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                         </span>
                       )}
                       {fmtArr(asset.arr) && (
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">
                           {fmtArr(asset.arr)}
                         </span>
                       )}
@@ -283,7 +283,7 @@ export default function CatalogFilters({ assets, locale, accessStatus, isAuthent
                     <div className="mt-auto pt-4 border-t border-ag-border">
                       <button
                         onClick={() => handleDossierClick(asset.id, asset.slug)}
-                        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
+                        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex-ink transition-colors"
                       >
                         {accessStatus !== 'ok' && <Lock size={9} className="text-ag-gray-light" />}
                         {labels.viewFullDossier} <ArrowUpRight size={10} />

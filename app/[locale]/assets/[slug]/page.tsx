@@ -316,7 +316,7 @@ export default async function AssetPage({ params }: Props) {
                   </p>
                   <div className="w-full pt-3 border-t border-ag-border flex flex-col items-center gap-1">
                     <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light">{t('press.partnerCode')}</p>
-                    <p className="font-mono text-[12px] font-bold text-ag-apex tracking-widest">LEGI-4141-01</p>
+                    <p className="font-mono text-[12px] font-bold text-ag-apex-ink tracking-widest">LEGI-4141-01</p>
                   </div>
                   <p className="font-mono text-[10px] text-ag-gray-light">{t('press.publishedOn')}</p>
                 </div>

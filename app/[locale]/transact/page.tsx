@@ -20,22 +20,22 @@ export default async function TransactPage({ params }: Props) {
 
   const SEGMENTS = [
     {
-      icon: <Building2 size={20} className="text-ag-apex" />,
+      icon: <Building2 size={20} className="text-ag-apex-ink" />,
       key: 'sell',
       href: '/transact/how-to-sell',
     },
     {
-      icon: <Search size={20} className="text-ag-apex" />,
+      icon: <Search size={20} className="text-ag-apex-ink" />,
       key: 'buy',
       href: '/transact/how-to-buy',
     },
     {
-      icon: <TrendingUp size={20} className="text-ag-apex" />,
+      icon: <TrendingUp size={20} className="text-ag-apex-ink" />,
       key: 'raise',
       href: '/transact/mandate',
     },
     {
-      icon: <Users size={20} className="text-ag-apex" />,
+      icon: <Users size={20} className="text-ag-apex-ink" />,
       key: 'equity',
       href: '/transact/mandate',
     },
@@ -46,7 +46,7 @@ export default async function TransactPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="bg-ag-navy pt-32 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
@@ -92,8 +92,8 @@ export default async function TransactPage({ params }: Props) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {([
-              { key: 'valuation',     href: '/valuation', icon: <Gauge size={18} className="text-ag-apex" /> },
-              { key: 'certification', href: '/grade',     icon: <BadgeCheck size={18} className="text-ag-apex" /> },
+              { key: 'valuation',     href: '/valuation', icon: <Gauge size={18} className="text-ag-apex-ink" /> },
+              { key: 'certification', href: '/grade',     icon: <BadgeCheck size={18} className="text-ag-apex-ink" /> },
             ] as const).map(({ key, href, icon }) => (
               <Link
                 key={key}
@@ -146,7 +146,7 @@ export default async function TransactPage({ params }: Props) {
                   {icon}
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex mb-2">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex-ink mb-2">
                     {t(`segment.${key}.kicker`)}
                   </p>
                   <p className="font-sans font-semibold text-ag-black text-[17px] leading-snug tracking-[-0.02em] mb-3">
@@ -156,7 +156,7 @@ export default async function TransactPage({ params }: Props) {
                     {t(`segment.${key}.desc`)}
                   </p>
                 </div>
-                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
                   {t(`segment.${key}.cta`)} <ArrowUpRight size={11} />
                 </span>
               </Link>
@@ -170,7 +170,7 @@ export default async function TransactPage({ params }: Props) {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5 flex items-center gap-3">
-              <Handshake size={11} className="text-ag-apex" />
+              <Handshake size={11} className="text-ag-apex-ink" />
               {t('valueLabel')}
             </p>
             <h2
@@ -209,7 +209,7 @@ export default async function TransactPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border border border-ag-border">
             {([1, 2, 3, 4] as const).map((n) => (
               <div key={n} className="bg-ag-white p-10 flex flex-col gap-4">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">0{n}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">0{n}</span>
                 <p className="font-sans font-semibold text-ag-black text-[17px] leading-snug tracking-[-0.02em]">
                   {t(`how.step${n}.title`)}
                 </p>

@@ -392,7 +392,7 @@ export function ExpertiseSelector({ value, onChange }: ExpertiseSelectorProps) {
                                         </span>
                                       ))}
                                       {spec.regulatory && (
-                                        <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-apex border border-ag-apex px-1.5 py-0.5">
+                                        <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-apex-ink border border-ag-apex px-1.5 py-0.5">
                                           {ui.regulatory}
                                         </span>
                                       )}

@@ -43,7 +43,7 @@ export default function IndexBenchmarks() {
                   [snap?.period ?? '·', t('kpis.period')],
                 ].map(([v, l]) => (
                   <div key={String(l)} className="rounded-xl border border-white/10 bg-white/5 px-4 py-4">
-                    <p className="font-sans font-bold text-ag-apex text-[26px] leading-none">{v}</p>
+                    <p className="font-sans font-bold text-ag-apex-ink text-[26px] leading-none">{v}</p>
                     <p className="font-mono text-[9px] uppercase tracking-widest text-white/50 mt-2">{l}</p>
                   </div>
                 ))}
@@ -82,7 +82,7 @@ export default function IndexBenchmarks() {
               <div key={m.key} className="rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-3">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-sans font-bold text-[14px]">{t(`metrics.${m.key}`)}</p>
-                  <span className={`shrink-0 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex'}`}>
+                  <span className={`shrink-0 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/40' : 'text-ag-apex-ink'}`}>
                     {m.locked ? <Lock size={10} /> : <Check size={11} />}
                     {m.locked ? t('lockedShort') : t('openShort')}
                   </span>

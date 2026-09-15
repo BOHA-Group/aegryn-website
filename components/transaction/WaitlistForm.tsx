@@ -169,7 +169,7 @@ export default function WaitlistForm({ locale: _locale }: WaitlistFormProps) {
   if (step === 'done') {
     return (
       <div className="bg-ag-off-white border border-ag-border p-10 flex flex-col items-center gap-5 text-center">
-        <CheckCircle2 size={36} className="text-ag-apex" />
+        <CheckCircle2 size={36} className="text-ag-apex-ink" />
         <div>
           <p className="font-sans font-bold text-ag-black text-[18px] mb-2">{t('done.title')}</p>
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed max-w-md">

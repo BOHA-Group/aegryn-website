@@ -61,7 +61,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex transition-colors"
+        className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex-ink transition-colors"
       >
         {t('requestBtn')} <ArrowUpRight size={10} />
       </button>
@@ -71,7 +71,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
   if (done) {
     return (
       <div className="bg-ag-off-white border border-ag-border p-5 flex items-start gap-3">
-        <CheckCircle2 size={16} className="text-ag-apex mt-0.5 shrink-0" />
+        <CheckCircle2 size={16} className="text-ag-apex-ink mt-0.5 shrink-0" />
         <div>
           <p className="font-sans font-semibold text-ag-black text-[13px]">{t('doneTitle')}</p>
           <p className="font-sans text-[12px] text-ag-gray mt-1">{t('doneDesc')}</p>
@@ -85,7 +85,7 @@ export default function NdaRequestForm({ assetId, grade, locale }: Props) {
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-ag-border">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex mb-0.5">Grade {grade}</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-0.5">Grade {grade}</p>
           <p className="font-sans font-semibold text-ag-black text-[13px]">{t('formTitle')}</p>
         </div>
         <button onClick={() => setOpen(false)} className="text-ag-gray-light hover:text-ag-black transition-colors">

@@ -198,7 +198,7 @@ export default async function SellerDashboardPage() {
       {(!assets || assets.length === 0) && (
         <div className="mb-10 border border-ag-border bg-white">
           <div className="px-6 py-4 border-b border-ag-border">
-            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex font-bold">Comment ça fonctionne</p>
+            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink font-bold">Comment ça fonctionne</p>
             <h2 className="font-sans font-bold text-gray-900 text-[16px] mt-1">Choisissez votre parcours de certification</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
@@ -220,7 +220,7 @@ export default async function SellerDashboardPage() {
                   ['Déductible si Certification TRANSACT engagée dans les 6 mois', true],
                 ].map(([txt, ok]) => (
                   <li key={String(txt)} className="flex items-start gap-2">
-                    <CheckCircle2 size={11} className={`mt-0.5 shrink-0 ${ok ? 'text-ag-apex' : 'text-gray-300'}`} />
+                    <CheckCircle2 size={11} className={`mt-0.5 shrink-0 ${ok ? 'text-ag-apex-ink' : 'text-gray-300'}`} />
                     <span className="font-sans text-[11px] text-gray-500">{String(txt)}</span>
                   </li>
                 ))}

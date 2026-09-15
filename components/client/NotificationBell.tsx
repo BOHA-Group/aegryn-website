@@ -144,7 +144,7 @@ export default function NotificationBell() {
       >
         <Bell
           size={16}
-          className={unread > 0 ? 'text-ag-apex animate-bell-ring' : 'text-ag-gray'}
+          className={unread > 0 ? 'text-ag-apex-ink animate-bell-ring' : 'text-ag-gray'}
         />
         {unread > 0 && (
           <span className="absolute -top-1 -right-1 min-w-[16px] h-4 bg-ag-apex text-ag-navy font-mono font-bold text-[9px] flex items-center justify-center px-1 leading-none pointer-events-none">
@@ -240,7 +240,7 @@ export default function NotificationBell() {
                           <a
                             href={n.link}
                             onClick={() => { if (isUnread) markRead(n.id); setOpen(false) }}
-                            className="font-mono text-[9px] uppercase tracking-widest text-ag-navy hover:text-ag-apex transition-colors"
+                            className="font-mono text-[9px] uppercase tracking-widest text-ag-navy hover:text-ag-apex-ink transition-colors"
                           >
                             {t('view', { defaultValue: 'Voir →' })}
                           </a>

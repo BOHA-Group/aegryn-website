@@ -376,7 +376,7 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
           <Link
             href={'/industries' as LinkHref}
             onClick={onClose}
-            className="inline-flex items-center gap-1 mt-3 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex hover:text-ag-black transition-colors"
+            className="inline-flex items-center gap-1 mt-3 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
           >
             {t('whoIndustriesLink')} <ArrowUpRight size={10} />
           </Link>

@@ -196,7 +196,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             {ind.expertise.map((ex, i) => (
               <div key={i} className="bg-ag-white border border-ag-border rounded-xl p-7 flex flex-col gap-3 hover:bg-ag-off-white transition-colors">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-[9px] tracking-[0.22em] text-ag-apex">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-mono text-[9px] tracking-[0.22em] text-ag-apex-ink">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(ex.title, locale)}</h3>
                 </div>
                 <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{getLocaleText(ex.desc, locale)}</p>
@@ -223,7 +223,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 {/* Header persona */}
                 <div className="bg-ag-off-white px-6 pt-6 pb-5 border-b border-ag-border">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex-ink shrink-0">{String(i + 1).padStart(2, '0')}</span>
                     <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(seg.label, locale)}</h3>
                   </div>
                   {/* Storytelling */}

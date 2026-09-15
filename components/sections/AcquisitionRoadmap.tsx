@@ -13,7 +13,7 @@ type RoadmapItem = {
 const BADGE: Record<Status, { label: string; classes: string }> = {
   available_on_request: {
     label: 'available_on_request',
-    classes: 'bg-ag-apex/10 text-ag-apex border border-ag-apex/30',
+    classes: 'bg-ag-apex/10 text-ag-apex-ink border border-ag-apex/30',
   },
   in_deployment: {
     label: 'in_deployment',
@@ -110,7 +110,7 @@ export default function AcquisitionRoadmap({
                       {hasCta && (
                         <Link
                           href={`${ctaHref}?subject=${encodeURIComponent(itemTitle)}` as never}
-                          className="mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.16em] uppercase text-ag-apex hover:text-ag-black transition-colors"
+                          className="mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.16em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
                         >
                           {ctaLabel} <ArrowUpRight size={11} />
                         </Link>

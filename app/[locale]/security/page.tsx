@@ -104,7 +104,7 @@ export default async function SecurityPage({ params }: Props) {
           <ul className="space-y-2">
             {accountItems.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 size={14} className="text-ag-apex shrink-0 mt-0.5" />
+                <CheckCircle2 size={14} className="text-ag-apex-ink shrink-0 mt-0.5" />
                 <span className="font-sans text-[14px] text-ag-gray">{item}</span>
               </li>
             ))}
@@ -116,11 +116,11 @@ export default async function SecurityPage({ params }: Props) {
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">{t('s4Title')}</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="border border-ag-apex/30 bg-ag-apex/5 p-5">
-              <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex mb-4">{t('s4NormalTitle')}</p>
+              <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink mb-4">{t('s4NormalTitle')}</p>
               <ul className="space-y-3">
                 {[t('s4Normal1'), t('s4Normal2')].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={14} className="text-ag-apex shrink-0 mt-0.5" />
+                    <CheckCircle2 size={14} className="text-ag-apex-ink shrink-0 mt-0.5" />
                     <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
                   </li>
                 ))}

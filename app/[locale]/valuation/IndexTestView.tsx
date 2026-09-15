@@ -72,7 +72,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
       <div className="flex flex-wrap items-center gap-3 px-5 pt-5 pb-4 border-b border-white/10">
         <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{t('yourProfileLabel')}</span>
         <span className="font-sans text-[12px] font-semibold text-white">{userIndustryLabel}{userVerticalLabel ? ` · ${userVerticalLabel}` : ''}</span>
-        <span className="font-mono text-[11px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2.5 py-0.5">{user.grade}</span>
+        <span className="font-mono text-[11px] uppercase tracking-wide text-ag-apex-ink border border-ag-apex/40 rounded-full px-2.5 py-0.5">{user.grade}</span>
         <span className="font-mono text-[11px] text-white/50">{user.score}/100</span>
       </div>
 
@@ -103,7 +103,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
               {INDEX_CLUSTERS.map(c => (
                 <button key={c.key} type="button"
                   onClick={() => { setFilterIndustry(c.key); setFilterVertical('all') }}
-                  className={`text-left rounded-lg px-3 py-2 font-sans text-[11px] transition-colors flex items-center gap-1.5 ${filterIndustry === c.key ? 'bg-ag-apex/15 border border-ag-apex/40 text-ag-apex font-semibold' : 'border border-white/10 text-white/70 hover:border-white/30'}`}>
+                  className={`text-left rounded-lg px-3 py-2 font-sans text-[11px] transition-colors flex items-center gap-1.5 ${filterIndustry === c.key ? 'bg-ag-apex/15 border border-ag-apex/40 text-ag-apex-ink font-semibold' : 'border border-white/10 text-white/70 hover:border-white/30'}`}>
                   {c.key === user.industry && <MapPin size={10} className="shrink-0" />}
                   {c.label[locale]}
                 </button>
@@ -160,7 +160,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                 {snap.dimensions.map(d => (
                   <tr key={d.key} className="border-b border-white/5">
                     <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{d.letter} — {d.label}</p></td>
-                    <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold"><Blurred locked={d.locked}>{d.medianScore ?? '••'}/100</Blurred></td>
+                    <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold"><Blurred locked={d.locked}>{d.medianScore ?? '••'}/100</Blurred></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={d.locked}>{d.upliftPct != null ? `+${d.upliftPct}%` : '••%'}</Blurred></td>
                     <td className="px-4 py-3"><SampleTag n={d.sampleSize} buildingLabel={t('sampleBuilding')} /></td>
                   </tr>
@@ -186,12 +186,12 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                     <tr key={c.key} className={`border-b border-white/5 ${c.key === user.industry ? 'bg-ag-apex/10' : ''}`}>
                       <td className="px-4 py-3">
                         <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
-                          {c.key === user.industry && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{user.grade}</span>}
+                          {c.key === user.industry && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex-ink border border-ag-apex/40 rounded-full px-2 py-0.5">{user.grade}</span>}
                           {c.label}
                         </p>
                       </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={c.evRevenue.locked}>{c.evRevenue.p50 ?? '••'}x</Blurred></td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex font-semibold"><Blurred locked={locked}>{adj60 ?? '••'}x</Blurred></td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold"><Blurred locked={locked}>{adj60 ?? '••'}x</Blurred></td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/40"><Blurred locked={locked}>{adj40 ?? '••'}x — {adj80 ?? '••'}x</Blurred></td>
                     </tr>
                   )
@@ -232,7 +232,7 @@ function MarketRow({ label, highlighted, range, evEbitda, t }: {
     <tr className={`border-b border-white/5 ${highlighted ? 'bg-ag-apex/10' : ''}`}>
       <td className="px-4 py-3">
         <p className="font-sans text-[12px] font-semibold text-white flex items-center gap-1.5">
-          {highlighted && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex border border-ag-apex/40 rounded-full px-2 py-0.5">{t('youAreHere')}</span>}
+          {highlighted && <span className="font-mono text-[8px] uppercase tracking-wide text-ag-apex-ink border border-ag-apex/40 rounded-full px-2 py-0.5">{t('youAreHere')}</span>}
           {label}
         </p>
       </td>

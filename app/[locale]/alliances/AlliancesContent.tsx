@@ -171,7 +171,7 @@ export default function AlliancesContent() {
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-ag-border border border-ag-border">
                     {(t.raw('disciplines.items') as { num: string; title: string; desc: string }[]).map(item => (
                       <div key={item.num} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                        <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                        <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{item.num}</p>
                         <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                           {item.title}
                         </h3>
@@ -300,7 +300,7 @@ export default function AlliancesContent() {
 
                 {submitted ? (
                   <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
-                    <CheckCircle2 size={28} className="text-ag-apex" />
+                    <CheckCircle2 size={28} className="text-ag-apex-ink" />
                     <p className="font-sans font-bold text-ag-black text-[18px]">{t('form.successTitle')}</p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('form.successDesc')}</p>
                   </div>

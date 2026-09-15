@@ -120,7 +120,7 @@ export default async function TransactionSessionPage({ params }: Props) {
                     {process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' && (
                       <NextLink
                         href="/client/register"
-                        className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex transition-colors"
+                        className="font-sans text-[11px] font-semibold text-ag-apex-ink underline underline-offset-2 hover:text-ag-apex-ink transition-colors"
                       >
                         {t('sessionCardLockedCta')} →
                       </NextLink>
@@ -149,7 +149,7 @@ export default async function TransactionSessionPage({ params }: Props) {
       <section id="waitlist" className="py-20 px-6 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 max-w-xl">
-            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex mb-3">
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ag-apex-ink mb-3">
               Accès prioritaire
             </p>
             <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.02em] leading-tight mb-3">

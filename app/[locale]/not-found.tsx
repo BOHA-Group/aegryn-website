@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation'
 export default function NotFound() {
   return (
     <section className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
-      <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex mb-4">404</p>
+      <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex-ink mb-4">404</p>
       <h1 className="font-sans text-5xl font-bold tracking-tighter text-ag-black mb-4">
         Page introuvable
       </h1>

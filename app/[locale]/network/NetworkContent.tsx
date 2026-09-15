@@ -191,15 +191,15 @@ export default function NetworkContent() {
           </p>
           <div className="flex flex-wrap gap-6">
             <div className="flex items-center gap-2">
-              <Building2 size={16} className="text-ag-apex" />
+              <Building2 size={16} className="text-ag-apex-ink" />
               <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat1')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users size={16} className="text-ag-apex" />
+              <Users size={16} className="text-ag-apex-ink" />
               <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat2')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Globe size={16} className="text-ag-apex" />
+              <Globe size={16} className="text-ag-apex-ink" />
               <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat3')}</span>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function NetworkContent() {
             <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
               {t('partners.label')}
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
               {t('partners.badge')}
             </span>
           </div>
@@ -245,7 +245,7 @@ export default function NetworkContent() {
               <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
                 {t('experts.label')}
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex">
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
                 {t('experts.badge')}
               </span>
             </div>

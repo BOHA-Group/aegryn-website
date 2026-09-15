@@ -54,7 +54,7 @@ export function DiscoverPreview() {
               key={i}
               className="discover-card bg-ag-white p-8 flex flex-col gap-4 hover:bg-ag-off-white transition-colors group cursor-pointer"
             >
-              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex">
+              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink">
                 {article.category}
               </span>
               <h3 className="font-sans font-bold text-ag-black leading-[1.25] group-hover:text-ag-navy transition-colors"
@@ -64,7 +64,7 @@ export function DiscoverPreview() {
               <p className="text-[13px] text-ag-gray leading-relaxed flex-1">
                 {article.desc}
               </p>
-              <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light group-hover:text-ag-apex transition-colors flex items-center gap-1.5">
+              <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light group-hover:text-ag-apex-ink transition-colors flex items-center gap-1.5">
                 Lire <ArrowRight size={10} />
               </span>
             </article>

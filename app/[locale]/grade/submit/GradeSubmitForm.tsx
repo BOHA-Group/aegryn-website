@@ -140,7 +140,7 @@ export default function GradeSubmitForm() {
           )}
           {submitted ? (
             <div className="border border-ag-apex/30 bg-ag-off-white p-12 flex flex-col items-start gap-6">
-              <CheckCircle2 size={32} className="text-ag-apex" />
+              <CheckCircle2 size={32} className="text-ag-apex-ink" />
               <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em]">
                 {t('form.successTitle')}
               </h2>

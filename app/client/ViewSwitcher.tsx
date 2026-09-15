@@ -48,7 +48,7 @@ export default function ViewSwitcher({ hasBuyer, hasSeller, hasPartner }: Props)
             <ArrowLeftRight size={12} className="shrink-0 opacity-60" />
             <span className="font-sans text-[12px]">{label}</span>
             {active && (
-              <span className="ml-auto font-mono text-[8px] text-ag-apex uppercase tracking-widest">actif</span>
+              <span className="ml-auto font-mono text-[8px] text-ag-apex-ink uppercase tracking-widest">actif</span>
             )}
           </Link>
         ))}

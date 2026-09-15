@@ -62,7 +62,7 @@ export default async function CareerPage({ params }: Props) {
               <p className="text-[15px] text-ag-gray leading-relaxed">
                 {t('about.desc')}
               </p>
-              <p className="mt-6 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-apex">
+              <p className="mt-6 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-apex-ink">
                 {t('about.tagline')}
               </p>
             </div>

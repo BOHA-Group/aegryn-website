@@ -98,7 +98,7 @@ export default function ContactForm({ locale }: Props) {
   if (status === 'sent') {
     return (
       <div className="flex flex-col items-start justify-center gap-4 rounded-2xl border border-ag-apex/30 bg-ag-apex/5 p-10">
-        <span className="font-sans font-semibold text-2xl text-ag-apex">✓</span>
+        <span className="font-sans font-semibold text-2xl text-ag-apex-ink">✓</span>
         <p className="font-sans text-xl font-bold text-ag-dark">{t('success.title')}</p>
         <p className="text-sm text-ag-gray">{t('success.desc')}</p>
       </div>

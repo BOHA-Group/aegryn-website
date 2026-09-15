@@ -85,7 +85,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
                   {phase.items.map(({ num, title, desc }) => (
                     <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
-                      <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                      <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                       <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
                       <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
                     </div>
@@ -113,7 +113,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             {forWhom.map(({ title, desc }) => (
               <div key={title} className="bg-ag-white p-10 flex flex-col gap-4">
                 <div className="w-8 h-8 border border-ag-apex/30 flex items-center justify-center">
-                  <Check size={14} className="text-ag-apex" />
+                  <Check size={14} className="text-ag-apex-ink" />
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.02em]">{title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
@@ -132,7 +132,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ag-border border border-ag-border">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="bg-ag-white p-8 flex flex-col gap-4">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex">{num}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                 <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
@@ -150,7 +150,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
             {diffItems.map(({ title, desc }) => (
               <div key={title} className="bg-ag-white p-10 flex gap-6">
-                <Shield size={16} className="text-ag-apex shrink-0 mt-0.5" />
+                <Shield size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-sans font-semibold text-ag-black text-[16px] mb-2">{title}</h3>
                   <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>

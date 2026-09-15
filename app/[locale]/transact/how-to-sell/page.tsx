@@ -85,7 +85,7 @@ export default async function TransactSellPage({ params }: Props) {
             </div>
             {/* Conditions cession */}
             <div className="bg-ag-off-white border border-ag-border p-8 flex flex-col gap-4">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-2">
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">
                 {tm('segment.sell.kicker')}
               </p>
               <p className="font-sans font-semibold text-ag-black text-[16px] leading-snug">
@@ -97,7 +97,7 @@ export default async function TransactSellPage({ params }: Props) {
               <ul className="flex flex-col gap-2 pt-2">
                 {sellPoints.map((pt) => (
                   <li key={pt} className="flex items-start gap-3">
-                    <span className="font-mono text-ag-apex text-[10px] mt-1 shrink-0">—</span>
+                    <span className="font-mono text-ag-apex-ink text-[10px] mt-1 shrink-0">—</span>
                     <span className="font-sans text-[13px] text-ag-dark leading-snug">{pt}</span>
                   </li>
                 ))}
@@ -117,10 +117,10 @@ export default async function TransactSellPage({ params }: Props) {
             {/* Levée de fonds */}
             <div className="bg-ag-white p-10 flex flex-col gap-5">
               <div className="w-10 h-10 border border-ag-apex/30 flex items-center justify-center">
-                <TrendingUp size={18} className="text-ag-apex" />
+                <TrendingUp size={18} className="text-ag-apex-ink" />
               </div>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex mb-2">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex-ink mb-2">
                   {tm('segment.fundraise.kicker')}
                 </p>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">
@@ -132,7 +132,7 @@ export default async function TransactSellPage({ params }: Props) {
                 <ul className="flex flex-col gap-2">
                   {fundraisePoints.map((pt) => (
                     <li key={pt} className="flex items-start gap-3">
-                      <span className="font-mono text-ag-apex text-[10px] mt-1 shrink-0">—</span>
+                      <span className="font-mono text-ag-apex-ink text-[10px] mt-1 shrink-0">—</span>
                       <span className="font-sans text-[13px] text-ag-dark leading-snug">{pt}</span>
                     </li>
                   ))}
@@ -148,10 +148,10 @@ export default async function TransactSellPage({ params }: Props) {
             {/* Ouverture du capital */}
             <div className="bg-ag-white p-10 flex flex-col gap-5">
               <div className="w-10 h-10 border border-ag-apex/30 flex items-center justify-center">
-                <Users size={18} className="text-ag-apex" />
+                <Users size={18} className="text-ag-apex-ink" />
               </div>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex mb-2">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-apex-ink mb-2">
                   {tm('segment.equity_stake.kicker')}
                 </p>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">
@@ -163,7 +163,7 @@ export default async function TransactSellPage({ params }: Props) {
                 <ul className="flex flex-col gap-2">
                   {equityPoints.map((pt) => (
                     <li key={pt} className="flex items-start gap-3">
-                      <span className="font-mono text-ag-apex text-[10px] mt-1 shrink-0">—</span>
+                      <span className="font-mono text-ag-apex-ink text-[10px] mt-1 shrink-0">—</span>
                       <span className="font-sans text-[13px] text-ag-dark leading-snug">{pt}</span>
                     </li>
                   ))}
@@ -193,7 +193,7 @@ export default async function TransactSellPage({ params }: Props) {
               <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('feesCertValue')}</p>
             </div>
             <div className="border border-ag-apex/30 bg-ag-white p-8 flex-1">
-              <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-3">{t('feesSuccess')}</p>
+              <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex-ink mb-3">{t('feesSuccess')}</p>
               <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('feesSuccessValue')}</p>
             </div>
           </div>

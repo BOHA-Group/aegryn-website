@@ -194,7 +194,7 @@ const DIMENSION_LABELS_PUBLIC: Record<string, string> = {
 const DIMENSION_COLORS_PUBLIC: Record<string, { bg: string; border: string; text: string }> = {
   tech:        { bg: 'bg-[#5ADDA4]/10', border: 'border-[#5ADDA4]/40', text: 'text-[#0e7a52]' },
   transaction: { bg: 'bg-[#818cf8]/10', border: 'border-[#818cf8]/40', text: 'text-[#4338ca]' },
-  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex'   },
+  both:        { bg: 'bg-ag-apex/8',    border: 'border-ag-apex/30',    text: 'text-ag-apex-ink'   },
 }
 
 function getCatColorPublic(catId: string) {
@@ -279,7 +279,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
         <div className="p-8">
           {done ? (
             <div className="flex flex-col gap-4">
-              <CheckCircle2 size={28} className="text-ag-apex" />
+              <CheckCircle2 size={28} className="text-ag-apex-ink" />
               <p className="font-sans font-bold text-ag-black text-[18px]">{t('contactModal.successTitle')}</p>
               <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('contactModal.successDesc')}</p>
               {revealedEmail && (
@@ -401,7 +401,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
       {blurred && (
         <div className="absolute inset-0 backdrop-blur-[6px] bg-ag-white/60 z-10 flex flex-col items-center justify-center gap-3">
           <span className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
-            <Star size={9} className="text-ag-apex" /> {t('placeholder.badge')}
+            <Star size={9} className="text-ag-apex-ink" /> {t('placeholder.badge')}
           </span>
         </div>
       )}
@@ -427,12 +427,12 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
               {profile.first_name} {profile.last_name}
             </h3>
             {profile.verified_at && !blurred && (
-              <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+              <span className="rounded-lg inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.14em] uppercase px-2 py-0.5 bg-ag-apex/10 text-ag-apex-ink border border-ag-apex/30">
                 <CheckCircle2 size={9} /> {t('card.verifiedBadge')}
               </span>
             )}
           </div>
-          <p className="font-sans text-[12px] text-ag-apex font-semibold">{profile.profession}</p>
+          <p className="font-sans text-[12px] text-ag-apex-ink font-semibold">{profile.profession}</p>
           {profile.organization && (
             <p className="font-sans text-[12px] text-ag-gray mt-0.5">{profile.organization}</p>
           )}
@@ -567,7 +567,7 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
   if (submitted) {
     return (
       <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
-        <CheckCircle2 size={28} className="text-ag-apex" />
+        <CheckCircle2 size={28} className="text-ag-apex-ink" />
         <p className="font-sans font-bold text-ag-black text-[18px]">{t('waitlist.successTitle')}</p>
         <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('waitlist.successDesc')}</p>
       </div>
@@ -847,7 +847,7 @@ export default function ExpertsContent() {
           <>
             <div className="flex flex-col items-center gap-2 mb-10 text-center">
               <span className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.24em] uppercase px-4 py-2 border border-ag-apex/40 bg-ag-apex/8 text-ag-apex-ink mb-1">
-                <Star size={10} className="text-ag-apex" /> {t('placeholder.badge')}
+                <Star size={10} className="text-ag-apex-ink" /> {t('placeholder.badge')}
               </span>
               <p className="font-sans font-bold text-ag-black text-[20px] leading-tight">{t('placeholder.title')}</p>
               <p className="font-sans text-[13px] text-ag-gray max-w-md">{t('placeholder.desc')}</p>

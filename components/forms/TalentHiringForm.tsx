@@ -224,7 +224,7 @@ export default function TalentHiringForm() {
         />
         <label htmlFor="gdprConsent" className="text-[13px] text-ag-gray leading-relaxed">
           {t('gdprConsent')}{' '}
-          <a href="mailto:contact@boha-group.com" className="text-ag-apex hover:underline">
+          <a href="mailto:contact@boha-group.com" className="text-ag-apex-ink hover:underline">
             contact@boha-group.com
           </a>
           .

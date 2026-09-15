@@ -188,7 +188,7 @@ export default async function ArticlePage({ params }: Props) {
                   <div key={i} className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border my-8">
                     {(block.items || []).map((stat, j) => (
                       <div key={j} className="bg-ag-off-white p-6">
-                        <p className="font-sans font-bold text-ag-apex tracking-[-0.03em] leading-none mb-2"
+                        <p className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none mb-2"
                            style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}>
                           {stat.value}
                         </p>

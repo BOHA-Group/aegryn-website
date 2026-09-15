@@ -182,7 +182,7 @@ export default function ReferralSection({ isActive, initialPlanEnd }: { isActive
       {/* ── Section parrainage ── */}
       <div className="bg-white border border-gray-200 p-6 space-y-5">
         <div className="flex items-center gap-2 mb-1">
-          <Gift size={16} className="text-ag-apex shrink-0" />
+          <Gift size={16} className="text-ag-apex-ink shrink-0" />
           <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Programme de parrainage</p>
         </div>
 

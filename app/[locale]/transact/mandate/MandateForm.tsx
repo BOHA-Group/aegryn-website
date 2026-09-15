@@ -103,7 +103,7 @@ export default function MandateForm() {
   if (submitted) {
     return (
       <div className="border border-ag-apex/30 bg-ag-off-white p-16 flex flex-col items-start gap-6">
-        <CheckCircle2 size={32} className="text-ag-apex" />
+        <CheckCircle2 size={32} className="text-ag-apex-ink" />
         <h2 className="font-sans font-bold text-ag-black text-[24px] tracking-[-0.02em]">
           {tf('successTitle')}
         </h2>
@@ -141,7 +141,7 @@ export default function MandateForm() {
                 : 'border-ag-border bg-ag-white text-ag-gray hover:border-ag-black hover:text-ag-black'
             }`}
           >
-            <p className={`font-mono text-[10px] uppercase tracking-[0.22em] mb-1.5 ${mandateType === type ? 'text-ag-apex' : 'text-ag-apex'}`}>
+            <p className={`font-mono text-[10px] uppercase tracking-[0.22em] mb-1.5 ${mandateType === type ? 'text-ag-apex-ink' : 'text-ag-apex-ink'}`}>
               {t(`segment.${type}.kicker`)}
             </p>
             <p className={`font-sans font-semibold text-[13px] leading-snug ${mandateType === type ? 'text-white' : 'text-ag-black'}`}>
@@ -323,7 +323,7 @@ export default function MandateForm() {
 
       {/* ══ 4. DROIT SUISSE ═══════════════════════════════ */}
       <div className="rounded-lg border border-ag-apex/25 bg-ag-apex/5 px-5 py-4 flex items-start gap-3">
-        <Scale size={13} className="text-ag-apex shrink-0 mt-0.5" />
+        <Scale size={13} className="text-ag-apex-ink shrink-0 mt-0.5" />
         <div className="flex items-start gap-3">
           <input
             id="swissLaw"

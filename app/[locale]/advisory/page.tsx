@@ -134,7 +134,7 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
             {stratItems.map((item) => (
               <div key={item.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{item.num}</p>
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {item.title}
                 </h3>
@@ -159,7 +159,7 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
             {riskItems.map((item) => (
               <div key={item.num} className="bg-ag-white p-8 hover:bg-ag-off-white transition-colors">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{item.num}</p>
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{item.num}</p>
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {item.title}
                 </h3>
@@ -262,7 +262,7 @@ export default async function AdvisoryPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
             {maPhases.map((phase) => (
               <div key={phase.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex mb-5">{phase.num}</p>
+                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{phase.num}</p>
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {phase.title}
                 </h3>

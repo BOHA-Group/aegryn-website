@@ -99,7 +99,7 @@ export function GradeUseCases() {
 
                   {/* Number */}
                   <div className="hidden lg:flex items-start justify-center pt-10 border-r border-ag-border">
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-ag-apex font-bold">
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-ag-apex-ink font-bold">
                       {uc.num}
                     </span>
                   </div>
@@ -130,7 +130,7 @@ export function GradeUseCases() {
                             key={label}
                             className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-3 py-1.5 rounded-full bg-ag-white hover:border-ag-black transition-colors"
                           >
-                            <Icon size={10} className="text-ag-apex shrink-0" />
+                            <Icon size={10} className="text-ag-apex-ink shrink-0" />
                             {label}
                           </span>
                         )

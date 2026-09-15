@@ -105,7 +105,7 @@ function ApplicationRow({
             {app.prenom} {app.nom}
           </span>
           <span className="font-sans text-[12px] text-gray-400 truncate hidden sm:block">{app.email}</span>
-          <span className="font-mono text-[10px] text-ag-apex shrink-0">{app.profession}</span>
+          <span className="font-mono text-[10px] text-ag-apex-ink shrink-0">{app.profession}</span>
         </div>
         <div className="flex items-center gap-3 shrink-0">
           <span className="font-mono text-[10px] text-gray-300">{fmtDate(app.created_at)}</span>
@@ -118,7 +118,7 @@ function ApplicationRow({
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-[12px] mb-4">
             <div><span className="text-gray-400">Organisation</span><br /><span className="text-gray-700">{app.organization ?? '—'}</span></div>
             <div><span className="text-gray-400">Ville / Pays</span><br /><span className="text-gray-700">{[app.city, app.country].filter(Boolean).join(', ') || '—'}</span></div>
-            <div><span className="text-gray-400">Site</span><br />{app.website ? <a href={app.website} target="_blank" rel="noopener" className="text-ag-apex underline truncate block">{app.website}</a> : '—'}</div>
+            <div><span className="text-gray-400">Site</span><br />{app.website ? <a href={app.website} target="_blank" rel="noopener" className="text-ag-apex-ink underline truncate block">{app.website}</a> : '—'}</div>
             {app.specialties.length > 0 && (
               <div className="col-span-2 md:col-span-3">
                 <span className="text-gray-400">Spécialités</span><br />
@@ -252,7 +252,7 @@ function ProfileRow({
               : 'Brouillon'}
           </span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
-            plan === 'active'  ? 'bg-ag-apex/10 text-ag-apex border-ag-apex/30'
+            plan === 'active'  ? 'bg-ag-apex/10 text-ag-apex-ink border-ag-apex/30'
             : hasCredit        ? 'bg-blue-50 text-blue-600 border-blue-200'
             : 'bg-amber-50 text-amber-600 border-amber-200'
           }`}>
@@ -261,7 +261,7 @@ function ProfileRow({
           <span className="font-sans font-semibold text-[13px] text-gray-900 truncate">
             {profile.first_name} {profile.last_name}
           </span>
-          <span className="font-mono text-[10px] text-ag-apex shrink-0 hidden sm:block">{profile.profession}</span>
+          <span className="font-mono text-[10px] text-ag-apex-ink shrink-0 hidden sm:block">{profile.profession}</span>
           <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
             kycOk
               ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -611,10 +611,10 @@ function TractionPanel({
         className="rounded-lg w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-2">
-          <TrendingUp size={14} className="text-ag-apex" />
+          <TrendingUp size={14} className="text-ag-apex-ink" />
           <h2 className="font-sans font-bold text-gray-900 text-[14px]">Traction réseau — Suivi des clics fiches</h2>
           {totalClicks > 0 && (
-            <span className="rounded-lg font-mono text-[9px] font-bold px-2 py-0.5 bg-ag-apex/10 text-ag-apex border border-ag-apex/30">
+            <span className="rounded-lg font-mono text-[9px] font-bold px-2 py-0.5 bg-ag-apex/10 text-ag-apex-ink border border-ag-apex/30">
               {totalClicks} clics total
             </span>
           )}
@@ -685,7 +685,7 @@ function TractionPanel({
                       <td className="px-4 py-3 font-semibold text-gray-800 whitespace-nowrap">
                         {r.first_name} {r.last_name}
                       </td>
-                      <td className="px-4 py-3 font-mono text-[10px] text-ag-apex">{r.profession}</td>
+                      <td className="px-4 py-3 font-mono text-[10px] text-ag-apex-ink">{r.profession}</td>
                       <td className="px-4 py-3">
                         <span className={`font-mono text-[9px] uppercase px-2 py-0.5 border ${
                           r.is_visible
