@@ -25,7 +25,7 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
   vertical:      ['LegalTech valorisation', 'FinTech M&A', 'AI SaaS multiples', 'vertical software Europe', 'actif tech certifié'],
   dach:          ['Tech M&A DACH', 'SaaS cession Allemagne', 'Suisse hub tech', 'Österreich startup exit', 'actif numérique DACH'],
-  security:      ['sécurité IA', 'souveraineté numérique', 'AI Act', 'exposition IA', 'cybersécurité entreprise', 'IA contrôlée'],
+  security:      ['sécurité IA', 'souveraineté numérique', 'AI Act', 'exposition IA', 'cybersécurité entreprise', 'IA contrôlée', 'NIS2', 'directive NIS2', 'conformité cyber', 'DORA'],
   talent:        ['dépendance fondateur', 'plan de succession', 'organisation transmissible', 'executive tech', 'rétention talents'],
   financing:     ['financement entreprise', 'levée de fonds', 'banque PME', 'investisseurs', 'valorisation certifiée'],
 }

@@ -3,6 +3,7 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
+  'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/executive-suit.jpg',
   'agents-ia-autonomes-securite-souverainete-actifs-entreprise-2026': '/images/blog/robot-ai.jpg',
   'dependance-fondateur-decote-20-30-pourcent-organisation-transmissible': '/images/blog/founder-desk.jpg',
   'financer-pme-valeur-certifiee-ce-que-regarde-une-banque-2026': '/images/blog/finance-trading.jpg',

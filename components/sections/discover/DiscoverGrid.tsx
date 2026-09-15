@@ -30,6 +30,7 @@ export function DiscoverGrid({ locale }: Props) {
   const [visible, setVisible]   = useState(PAGE_SIZE)
   const gridRef  = useRef<HTMLDivElement>(null)
   const heroRef  = useRef<HTMLElement>(null)
+  const mainFeaturedRef = useRef<HTMLAnchorElement>(null)
 
   const filtered = ARTICLES
     .filter(a => active === 'all' || a.category === active)
@@ -48,6 +49,28 @@ export function DiscoverGrid({ locale }: Props) {
   /* Tous les featured (jusqu'à 8 pour la liste droite) */
   const featured     = ARTICLES.filter(a => a.featured)
   const showFeatured = active === 'all' && !query.trim()
+
+  /* Rotation automatique de l'article principal à la une, toutes les 5 secondes */
+  const [mainIndex, setMainIndex] = useState(0)
+  const mainArticle = featured[mainIndex] ?? featured[0]
+  const sideList = featured.filter((_, i) => i !== mainIndex).slice(0, 7)
+
+  useEffect(() => {
+    if (!showFeatured || featured.length <= 1) return
+    const id = setInterval(() => {
+      setMainIndex(i => (i + 1) % featured.length)
+    }, 5000)
+    return () => clearInterval(id)
+  }, [showFeatured, featured.length])
+
+  /* Fondu à chaque changement d'article principal à la une */
+  useEffect(() => {
+    if (!mainFeaturedRef.current) return
+    gsap.fromTo(mainFeaturedRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: 'expo.out' }
+    )
+  }, [mainArticle.slug])
 
   /* Reset visible count quand le filtre / search change */
   useEffect(() => { setVisible(PAGE_SIZE) }, [active, query])
@@ -130,16 +153,17 @@ export function DiscoverGrid({ locale }: Props) {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-12 items-start">
 
-              {/* Article principal — image portrait 4/3 + texte dessous */}
+              {/* Article principal — image portrait 4/3 + texte dessous, rotation auto toutes les 5s */}
               <Link
-                href={`/blog/${featured[0].slug}` as never}
+                ref={mainFeaturedRef}
+                href={`/blog/${mainArticle.slug}` as never}
                 className="group flex flex-col"
               >
                 <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                   <Image
-                    src={getImage(featured[0].slug)}
-                    style={{ objectPosition: getBlogImagePosition(getImage(featured[0].slug)) }}
-                    alt={featured[0].title[lang] ?? featured[0].title.en}
+                    src={getImage(mainArticle.slug)}
+                    style={{ objectPosition: getBlogImagePosition(getImage(mainArticle.slug)) }}
+                    alt={mainArticle.title[lang] ?? mainArticle.title.en}
                     fill
                     sizes="(min-width: 1024px) 55vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -151,18 +175,31 @@ export function DiscoverGrid({ locale }: Props) {
                     className="font-sans font-bold text-ag-black leading-[1.15] tracking-[-0.03em] mb-3 group-hover:text-ag-navy transition-colors"
                     style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
                   >
-                    {featured[0].title[lang] ?? featured[0].title.en}
+                    {mainArticle.title[lang] ?? mainArticle.title.en}
                   </h2>
                   <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3 mb-4">
-                    {featured[0].excerpt[lang] ?? featured[0].excerpt.en}
+                    {mainArticle.excerpt[lang] ?? mainArticle.excerpt.en}
                   </p>
-                  <div className="flex items-center gap-2 flex-wrap">
+                  <div className="flex items-center gap-2 flex-wrap mb-4">
                     <span className="font-sans text-[11px] text-ag-gray-light border border-ag-border rounded-full px-2.5 py-0.5">
-                      {ARTICLE_CATEGORIES[featured[0].category][lang]}
+                      {ARTICLE_CATEGORIES[mainArticle.category][lang]}
                     </span>
                     <span className="text-ag-gray-light text-[11px]">·</span>
-                    <span className="font-sans text-[11px] text-ag-gray-light">{formatDate(featured[0].date)}</span>
+                    <span className="font-sans text-[11px] text-ag-gray-light">{formatDate(mainArticle.date)}</span>
                   </div>
+                  {featured.length > 1 && (
+                    <div className="flex items-center gap-1.5">
+                      {featured.map((a, i) => (
+                        <button
+                          key={a.slug}
+                          type="button"
+                          aria-label={a.title[lang] ?? a.title.en}
+                          onClick={(e) => { e.preventDefault(); setMainIndex(i) }}
+                          className={`h-1.5 rounded-full transition-all duration-300 ${i === mainIndex ? 'w-6 bg-ag-navy' : 'w-1.5 bg-ag-border hover:bg-ag-gray-light'}`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Link>
 
@@ -175,7 +212,7 @@ export function DiscoverGrid({ locale }: Props) {
                   {t('featuredLabel')}
                 </p>
                 <div className="flex flex-col divide-y divide-ag-border">
-                  {featured.slice(1, 8).map(article => (
+                  {sideList.map(article => (
                     <Link
                       key={article.slug}
                       href={`/blog/${article.slug}` as never}

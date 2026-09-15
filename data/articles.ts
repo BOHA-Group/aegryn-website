@@ -44,8 +44,10 @@ export interface Article {
 
 import { AI_SOVEREIGNTY_ARTICLE } from './articles-ai-sovereignty'
 import { FOUNDER_DEPENDENCY_ARTICLE, CERTIFIED_VALUE_FINANCING_ARTICLE } from './articles-talent-financing'
+import { NIS2_FRANCE_ARTICLE } from './articles-nis2'
 
 export const ARTICLES: Article[] = [
+  NIS2_FRANCE_ARTICLE,
   AI_SOVEREIGNTY_ARTICLE,
   FOUNDER_DEPENDENCY_ARTICLE,
   CERTIFIED_VALUE_FINANCING_ARTICLE,
