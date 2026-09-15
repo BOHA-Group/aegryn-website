@@ -267,14 +267,20 @@ export function DiscoverGrid({ locale }: Props) {
               )}
             </div>
 
-            {/* Filter pills — onChange préserve la position de scroll */}
+            {/* Filter pills — trie uniquement, sans redirection : on ancre la position
+                de la grille dans le viewport (delta), car le bloc "à la une" au-dessus
+                disparaît en filtrant et une restauration de scroll absolu serait
+                clampée en bas de page une fois le document raccourci. */}
             <FilterPills
               options={filters}
               active={active}
               onChange={(key) => {
-                const y = window.scrollY
+                const prevTop = gridRef.current?.getBoundingClientRect().top ?? 0
                 setActive(key)
-                requestAnimationFrame(() => window.scrollTo({ top: y, behavior: 'instant' }))
+                requestAnimationFrame(() => {
+                  const newTop = gridRef.current?.getBoundingClientRect().top ?? 0
+                  window.scrollBy({ top: newTop - prevTop, left: 0, behavior: 'instant' })
+                })
               }}
             />
 
