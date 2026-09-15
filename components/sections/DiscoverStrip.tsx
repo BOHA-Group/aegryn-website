@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
@@ -10,6 +11,8 @@ import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
 import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
 import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
+import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 
 /*
  * Disposition fidèle Barnes :
@@ -40,8 +43,19 @@ interface Props {
 
 export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, articlesLabel, articlesCta }: Props) {
   const t      = useTranslations('discoverStrip')
+  const locale = useLocale()
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
+
+  const VALID_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
+  type ValidLocale = typeof VALID_LOCALES[number]
+  const lang: ValidLocale = (VALID_LOCALES as readonly string[]).includes(locale)
+    ? locale as ValidLocale
+    : 'en'
+
+  const getImage = (slug: string) => BLOG_IMAGES[slug] ?? BLOG_IMAGE_FALLBACK
+  const formatDate = (dateStr: string) =>
+    new Date(dateStr).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -67,11 +81,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
     return () => ctx.revert()
   }, [])
 
-  const articles = [
-    { title: t('article1Title'), cat: t('article1Cat'), href: '/blog/preparer-organisation-cession-levee-5-points' },
-    { title: t('article2Title'), cat: t('article2Cat'), href: '/blog/small-mid-cap-enjeux-entreprises-50-300m'     },
-    { title: t('article3Title'), cat: t('article3Cat'), href: '/blog/execution-apres-financement-banque-fonds'     },
-  ]
+  /* Articles à la une — carrousel horizontal, image + texte, pas de spotlight */
+  const featuredArticles = ARTICLES.filter(a => a.featured)
 
   return (
     <section ref={ref} className="bg-ag-white border-t border-ag-border mt-20">
@@ -181,26 +192,45 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
-          {articles.map((a, i) => (
+        <div
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0"
+          style={{ scrollbarWidth: 'thin' }}
+        >
+          {featuredArticles.map((article) => (
             <Link
-              key={i}
-              href={a.href as never}
-              className="discover-strip-card group bg-ag-white p-8 flex flex-col gap-5 hover:bg-ag-off-white transition-colors"
+              key={article.slug}
+              href={`/blog/${article.slug}` as never}
+              className="discover-strip-card group snap-start shrink-0 w-[280px] sm:w-[320px] flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-ag-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
               style={{ opacity: 0 }}
             >
-              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex">
-                {a.cat}
-              </span>
-              <p
-                className="font-sans font-semibold text-ag-black leading-[1.4] group-hover:text-ag-navy transition-colors"
-                style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}
-              >
-                {a.title}
-              </p>
-              <span className="mt-auto inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray group-hover:text-ag-black transition-colors">
-                {t('readMore')} <ArrowUpRight size={11} />
-              </span>
+              <div className="relative h-44 w-full overflow-hidden shrink-0">
+                <Image
+                  src={getImage(article.slug)}
+                  style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
+                  alt={article.title[lang] ?? article.title.en}
+                  fill
+                  sizes="320px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex flex-col gap-3 flex-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex">
+                    {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
+                  </span>
+                  <span className="text-ag-gray-light text-[10px]">·</span>
+                  <span className="font-sans text-[10px] text-ag-gray-light">{formatDate(article.date)}</span>
+                </div>
+                <p
+                  className="font-sans font-semibold text-ag-black leading-[1.4] group-hover:text-ag-navy transition-colors flex-1"
+                  style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}
+                >
+                  {article.title[lang] ?? article.title.en}
+                </p>
+                <span className="mt-auto inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray group-hover:text-ag-black transition-colors">
+                  {t('readMore')} <ArrowUpRight size={11} />
+                </span>
+              </div>
             </Link>
           ))}
         </div>
