@@ -3083,7 +3083,8 @@
     "loadMore": "Meer laden",
     "filterSecurity": "Veiligheid & AI",
     "filterTalent": "Organisatie & Talent",
-    "filterFinancing": "Financiering & Investeerders"
+    "filterFinancing": "Financiering & Investeerders",
+    "filterCompliance": "Compliance"
   },
   "grade": {
     "meta": {

@@ -3083,7 +3083,8 @@
     "loadMore": "Mehr laden",
     "filterSecurity": "Sicherheit & KI",
     "filterTalent": "Organisation & Talent",
-    "filterFinancing": "Finanzierung & Investoren"
+    "filterFinancing": "Finanzierung & Investoren",
+    "filterCompliance": "Compliance"
   },
   "grade": {
     "meta": {

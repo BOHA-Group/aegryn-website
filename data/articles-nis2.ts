@@ -6,12 +6,12 @@ import type { Article } from './articles'
  */
 export const NIS2_FRANCE_ARTICLE: Article = {
   slug:     'nis2-2026-france-retard-transposition-exposition-cybersecurite',
-  category: 'security',
+  category: 'compliance',
   date:     '2026-09-15',
   readMin:  9,
   featured: true,
   aiAssisted: true,
-  ogImage:  '/images/blog/executive-suit.jpg',
+  ogImage:  '/images/blog/notebook-desk.jpg',
   title: {
     fr: 'NIS2 en 2026 : le retard de transposition de la France ne change rien à votre exposition',
     en: "NIS2 in 2026: France's Transposition Delay Changes Nothing About Your Exposure",

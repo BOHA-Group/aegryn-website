@@ -301,6 +301,7 @@ const NEWSLETTER_CATEGORY_LABEL: Record<Article['category'], LocaleText> = {
   security:      { fr: 'Sécurité & IA', en: 'Security & AI' },
   talent:        { fr: 'Organisation',  en: 'Organisation' },
   financing:     { fr: 'Financement',   en: 'Financing' },
+  compliance:    { fr: 'Conformité',    en: 'Compliance' },
 }
 
 function pickLocale(text: LocaleText, locale: string): string {

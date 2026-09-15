@@ -113,6 +113,7 @@ export function DiscoverGrid({ locale }: Props) {
     { key: 'security',      label: t('filterSecurity')      },
     { key: 'talent',        label: t('filterTalent')        },
     { key: 'financing',     label: t('filterFinancing')     },
+    { key: 'compliance',    label: t('filterCompliance')    },
   ]
 
   const filters = allFilters.filter(f =>

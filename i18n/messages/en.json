@@ -2301,7 +2301,8 @@
     "loadMore": "Load more",
     "filterSecurity": "Security & AI",
     "filterTalent": "Organisation & Talent",
-    "filterFinancing": "Financing & Investors"
+    "filterFinancing": "Financing & Investors",
+    "filterCompliance": "Compliance"
   },
   "grade": {
     "meta": {

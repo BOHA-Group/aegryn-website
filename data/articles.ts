@@ -11,6 +11,7 @@ export type ArticleCategory =
   | 'security'
   | 'talent'
   | 'financing'
+  | 'compliance'
 
 export type LocaleText = {
   fr: string; en: string;
@@ -45,8 +46,12 @@ export interface Article {
 import { AI_SOVEREIGNTY_ARTICLE } from './articles-ai-sovereignty'
 import { FOUNDER_DEPENDENCY_ARTICLE, CERTIFIED_VALUE_FINANCING_ARTICLE } from './articles-talent-financing'
 import { NIS2_FRANCE_ARTICLE } from './articles-nis2'
+import { DORA_ARTICLE, AI_ACT_2026_ARTICLE, SWISS_ISG_ARTICLE } from './articles-compliance-2026'
 
 export const ARTICLES: Article[] = [
+  SWISS_ISG_ARTICLE,
+  AI_ACT_2026_ARTICLE,
+  DORA_ARTICLE,
   NIS2_FRANCE_ARTICLE,
   AI_SOVEREIGNTY_ARTICLE,
   FOUNDER_DEPENDENCY_ARTICLE,
@@ -3473,6 +3478,7 @@ export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
   security:      { fr: 'Sécurité & IA',    en: 'Security & AI',   de: 'Sicherheit & KI',      es: 'Seguridad e IA',       it: 'Sicurezza & IA',     nl: 'Veiligheid & AI'    },
   talent:        { fr: 'Organisation & Talent', en: 'Organisation & Talent', de: 'Organisation & Talent', es: 'Organización & Talento', it: 'Organizzazione & Talento', nl: 'Organisatie & Talent' },
   financing:     { fr: 'Financement & Investisseurs', en: 'Financing & Investors', de: 'Finanzierung & Investoren', es: 'Financiación & Inversores', it: 'Finanziamento & Investitori', nl: 'Financiering & Investeerders' },
+  compliance:    { fr: 'Conformité', en: 'Compliance', de: 'Compliance', es: 'Cumplimiento', it: 'Conformità', nl: 'Compliance' },
 }
 
 export function getLocaleText(text: LocaleText, locale: string): string {

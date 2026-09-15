@@ -2261,7 +2261,8 @@
     "loadMore": "Voir plus",
     "filterSecurity": "Sécurité & IA",
     "filterTalent": "Organisation & Talent",
-    "filterFinancing": "Financement & Investisseurs"
+    "filterFinancing": "Financement & Investisseurs",
+    "filterCompliance": "Conformité"
   },
   "grade": {
     "meta": {

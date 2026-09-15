@@ -3,7 +3,10 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
-  'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/executive-suit.jpg',
+  'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/notebook-desk.jpg',
+  'dora-2026-resilience-operationnelle-numerique-secteur-financier-europe': '/images/blog/agile-standup.jpg',
+  'ai-act-2026-omnibus-report-obligations-haut-risque-2027': '/images/blog/saas-product.jpg',
+  'suisse-lsi-obligation-signaler-cyberattaques-infrastructures-critiques-2025': '/images/blog/woman-laptop.jpg',
   'agents-ia-autonomes-securite-souverainete-actifs-entreprise-2026': '/images/blog/robot-ai.jpg',
   'dependance-fondateur-decote-20-30-pourcent-organisation-transmissible': '/images/blog/founder-desk.jpg',
   'financer-pme-valeur-certifiee-ce-que-regarde-une-banque-2026': '/images/blog/finance-trading.jpg',
