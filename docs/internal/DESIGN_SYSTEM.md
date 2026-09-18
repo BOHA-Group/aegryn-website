@@ -755,6 +755,404 @@ className="fixed inset-0 top-16 bg-ag-navy/30 backdrop-blur-[2px]"
 
 ---
 
+### 🔵 Page Navy Blue — Pattern complet
+
+**Référence** : `/advisory/technology`, `/advisory/strategy`, `/advisory/risk-compliance`, etc.
+
+**Caractéristiques** :
+- Hero **navy** (`bg-ag-navy`) avec titre blanc géant
+- Sections alternées **blanc** / **cream** (`bg-ag-white` / `bg-ag-cream`)
+- CTA final **cream** centré
+- Typographie : titres très grands (`clamp(48px,6vw,86px)`)
+- Espacement : `py-32` hero, `py-20` sections standard, `py-24` dimensions
+
+**Structure complète**
+```tsx
+{/* Hero Navy — py-32 */}
+<section className="border-b border-ag-border bg-ag-navy overflow-hidden">
+  <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
+    <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em]
+      text-ag-apex/70 mb-8">
+      {eyebrow}
+    </p>
+    <h1
+      className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
+      style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+    >
+      {title}
+    </h1>
+    <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+      {description}
+    </p>
+    <Link
+      href="/contact"
+      className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy
+        font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4
+        hover:bg-ag-apex/90 transition-colors"
+    >
+      {cta} <ArrowUpRight size={14} />
+    </Link>
+  </div>
+</section>
+
+{/* Section Blanc — py-20 */}
+<section className="border-b border-ag-border bg-ag-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+    <h2 className="font-sans font-bold text-[28px] text-ag-navy mb-6">
+      {sectionTitle}
+    </h2>
+    <p className="text-[15px] text-ag-gray leading-relaxed max-w-3xl">
+      {sectionDesc}
+    </p>
+  </div>
+</section>
+
+{/* Section Cream (bg-ag-cream ou bg-ag-off-white) — py-20 */}
+<section className="border-b border-ag-border bg-ag-cream">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+    <h2 className="font-sans font-bold text-[28px] text-ag-navy mb-4">
+      {approachTitle}
+    </h2>
+    <p className="text-[15px] text-ag-gray leading-relaxed max-w-3xl mb-12">
+      {approachDesc}
+    </p>
+    {/* Grille 4 colonnes — cartes numérotées */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, idx) => (
+        <div key={idx} className="bg-white border border-ag-border p-6">
+          <div className="font-sans font-semibold text-[10px] tracking-[0.2em]
+            text-ag-apex-ink mb-4">
+            {String(idx + 1).padStart(2, '0')}
+          </div>
+          <h3 className="font-sans font-semibold text-[16px] text-ag-navy mb-3">
+            {step.label}
+          </h3>
+          <p className="text-[13px] text-ag-gray leading-relaxed">
+            {step.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Section Blanc — Dimensions — py-24 */}
+<section className="border-b border-ag-border bg-ag-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 py-24">
+    <div className="grid md:grid-cols-2 gap-12">
+      {dimensions.map((dim, idx) => (
+        <div key={idx} className="border-l-2 border-ag-apex/20 pl-6">
+          <h3 className="font-sans font-semibold text-[18px] text-ag-navy mb-3">
+            {dim.label}
+          </h3>
+          <p className="text-[14px] text-ag-gray leading-relaxed">
+            {dim.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* CTA Final Cream — py-20, centré */}
+<section className="border-b border-ag-border bg-ag-cream">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 text-center">
+    <h2 className="font-sans font-bold text-[32px] text-ag-navy mb-6">
+      {ctaTitle}
+    </h2>
+    <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mx-auto mb-10">
+      {ctaDesc}
+    </p>
+    <Link
+      href="/contact"
+      className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy
+        font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4
+        hover:bg-ag-apex/90 transition-colors"
+    >
+      {ctaButton} <ArrowUpRight size={14} />
+    </Link>
+  </div>
+</section>
+```
+
+**Règles Navy Blue** :
+- Hero : **toujours** `bg-ag-navy`, `py-32`, titre `clamp(48px,6vw,86px)`
+- Sections : alternance `bg-ag-white` / `bg-ag-cream`, `py-20` ou `py-24`
+- Titres sections : `text-[28px]` (h2), `text-ag-navy`
+- CTA final : **toujours** centré, `bg-ag-cream`, `py-20`
+- Grilles : 4 colonnes (`lg:grid-cols-4`) pour steps, 2 colonnes pour dimensions
+- Cartes steps : fond blanc, bordure, numéro vert `text-ag-apex-ink`
+- Dimensions : bordure gauche `border-l-2 border-ag-apex/20`, `pl-6`
+
+---
+
+### ⚪ Page Blanc — Pattern complet
+
+**Référence** : `/about` (À propos), `/portfolio`, `/contact`, etc.
+
+**Caractéristiques** :
+- Hero **blanc** (`bg-ag-white`) avec titre noir géant
+- Sections **toutes blanches** ou alternées `bg-ag-white` / `bg-ag-off-white`
+- Section navy **unique** au milieu (Swiss, groupe)
+- Typographie : titres très grands (`clamp(48px,6vw,86px)`)
+- Espacement : `py-32` hero, `py-24` sections standard
+- Grilles avec filets `gap-px bg-ag-border`
+
+**Structure complète**
+```tsx
+{/* Hero Blanc — py-32 */}
+<section className="border-b border-ag-border">
+  <div className="mx-auto max-w-7xl px-6 md:px-12 py-32">
+    <div className="flex items-start justify-between gap-8">
+      <div className="flex-1 min-w-0">
+        <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em]
+          text-ag-gray-light mb-8">
+          {eyebrow}
+        </p>
+        <h1
+          className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18]
+            max-w-3xl mb-8 whitespace-pre-line"
+          style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+        >
+          {title}
+        </h1>
+        <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
+          {description}
+        </p>
+      </div>
+      {/* Optionnel : logo, image, illustration à droite */}
+    </div>
+  </div>
+</section>
+
+{/* Section Blanc — Eyebrow slash — py-24 */}
+<section className="border-b border-ag-border">
+  <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em]
+      text-ag-gray-light mb-10">
+      / {eyebrow}
+    </p>
+    <h2
+      className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]
+        max-w-2xl mb-16 whitespace-pre-line"
+      style={{ fontSize: 'clamp(32px,4vw,56px)' }}
+    >
+      {sectionTitle}
+    </h2>
+    
+    {/* Grille 3 colonnes avec filets */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border mb-16">
+      {items.map((item, i) => (
+        <div key={i} className="bg-ag-white p-10">
+          <p className="font-sans font-bold text-ag-black tracking-[0.08em] text-[22px] mb-4">
+            {item.word}
+          </p>
+          <p className="text-[14px] text-ag-gray leading-relaxed">
+            {item.meaning}
+          </p>
+        </div>
+      ))}
+    </div>
+    
+    {/* Texte de synthèse */}
+    <div className="max-w-3xl space-y-5">
+      <p className="text-[16px] text-ag-black leading-relaxed font-semibold">
+        {synthesis}
+      </p>
+      <p className="text-[14px] text-ag-gray leading-relaxed">
+        {note}
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Section Blanc — 2 colonnes titre + texte — py-24 */}
+<section className="border-b border-ag-border bg-ag-white">
+  <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em]
+      text-ag-gray-light mb-10">
+      / {eyebrow}
+    </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+      <h2
+        className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]
+          whitespace-pre-line"
+        style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+      >
+        {title}
+      </h2>
+      <p className="text-[15px] text-ag-gray leading-relaxed self-end">
+        {description}
+      </p>
+    </div>
+    
+    {/* Grille 3 colonnes avec filets */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+      {items.map((item, i) => (
+        <div key={i} className="bg-ag-white p-10">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.2em]
+            text-ag-apex-ink mb-6">
+            {item.num}
+          </p>
+          <h3 className="font-sans font-bold text-ag-black text-[18px]
+            tracking-[-0.02em] leading-snug mb-4">
+            {item.title}
+          </h3>
+          <p className="text-[13px] text-ag-gray leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Section Navy — Unique au milieu — py-28 */}
+<section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase
+          text-white/60 mb-4">
+          {label}
+        </p>
+        <h2
+          className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1]
+            whitespace-pre-line mb-8"
+          style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+        >
+          {title}
+        </h2>
+        <Link
+          href="/advisory"
+          className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold
+            text-[11px] tracking-[0.16em] uppercase text-white border border-white/30
+            px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
+        >
+          {cta} <ArrowUpRight size={14} />
+        </Link>
+      </div>
+      <p className="text-[15px] text-white/70 leading-relaxed self-center">
+        {description}
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Section Blanc — Grille 5 colonnes — py-24 */}
+<section className="border-b border-ag-border">
+  <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em]
+      text-ag-gray-light mb-10">
+      / {eyebrow}
+    </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+      <h2
+        className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]
+          whitespace-pre-line"
+        style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+      >
+        {title}
+      </h2>
+      <p className="text-[15px] text-ag-gray leading-relaxed self-end">
+        {subtitle}
+      </p>
+    </div>
+    
+    {/* Grille 5 colonnes avec filets */}
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-ag-border">
+      {items.map((item, i) => (
+        <div key={i} className="bg-ag-white p-8 flex flex-col gap-5">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.2em]
+            text-ag-gray-light">
+            {item.num}
+          </p>
+          <p className="font-sans font-bold text-ag-black text-[13px] tracking-[0.12em]
+            leading-none">
+            {item.title}
+          </p>
+          <p className="text-[13px] text-ag-gray leading-relaxed flex-1">
+            {item.desc}
+          </p>
+          <Link
+            href={item.href}
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold
+              text-[10px] tracking-[0.14em] uppercase text-ag-black border border-ag-border
+              px-4 py-2.5 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy
+              transition-all self-start"
+          >
+            {item.cta} <ArrowUpRight size={12} />
+          </Link>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* CTA Final Blanc — Grille 3 colonnes — py-24 */}
+<section className="border-b border-ag-border">
+  <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em]
+      text-ag-gray-light mb-16">
+      / {eyebrow}
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+      {profiles.map((profile) => (
+        <div key={profile} className="bg-ag-white p-10 flex flex-col gap-6">
+          <div className="flex-1">
+            <h3 className="font-sans font-bold text-ag-black text-[18px]
+              tracking-[-0.02em] leading-snug mb-3">
+              {profile.title}
+            </h3>
+            <p className="text-[13px] text-ag-gray leading-relaxed">
+              {profile.desc}
+            </p>
+          </div>
+          <Link
+            href={profile.href}
+            className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold
+              text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border
+              px-5 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy
+              transition-all self-start"
+          >
+            {profile.btn} <ArrowUpRight size={13} />
+          </Link>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+```
+
+**Règles Blanc** :
+- Hero : **toujours** `bg-ag-white`, `py-32`, titre `clamp(48px,6vw,86px)`, texte noir
+- Eyebrow : **toujours** préfixé `/` (slash), `text-[10px] tracking-[0.28em]`
+- Sections : **toutes blanches** ou alternées `bg-ag-white` / `bg-ag-off-white`, `py-24`
+- Section navy : **une seule** au milieu, `py-28`, 2 colonnes, bouton ghost blanc
+- Titres sections : `clamp(28px,3.5vw,48px)` ou `clamp(32px,4vw,56px)`
+- Grilles : **toujours** avec filets `gap-px bg-ag-border`, cartes `bg-ag-white p-10` ou `p-8`
+- Grilles 3 colonnes : standard (name, contribution, CTA final)
+- Grilles 5 colonnes : disciplines/services avec CTA par carte
+- Numéros : `text-[10px] tracking-[0.2em] text-ag-gray-light` ou `text-ag-apex-ink`
+- CTAs : ghost `border-ag-border` → hover `border-ag-apex bg-ag-apex text-ag-navy`
+
+**Différences clés Navy Blue vs Blanc** :
+
+| Aspect | Navy Blue | Blanc |
+|---|---|---|
+| Hero fond | `bg-ag-navy` | `bg-ag-white` |
+| Hero titre | Blanc `text-white` | Noir `text-ag-black` |
+| Hero padding | `py-32` | `py-32` |
+| Eyebrow hero | `text-ag-apex/70` | `text-ag-gray-light` |
+| Eyebrow sections | Aucun slash | **Toujours** `/` slash |
+| Sections fond | Alternance blanc/cream | Toutes blanches (+ 1 navy) |
+| Grilles | Sans filets (gap-8) | **Avec filets** `gap-px bg-ag-border` |
+| Cartes steps | `p-6`, numéro vert | `p-10` ou `p-8`, numéro vert ou gris |
+| CTA final | Centré, `bg-ag-cream` | Grille 3 col, `bg-ag-white` |
+| Section navy | Aucune | **Une seule** au milieu |
+
+---
+
 ## 9. Accessibilité & UX transverses
 
 ### Accessibilité clavier & screen readers
