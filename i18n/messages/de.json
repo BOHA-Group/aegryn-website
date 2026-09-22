@@ -3622,6 +3622,15 @@
           "name": "Organisation & Talent",
           "desc": "Gründerabhängigkeit, Führungsteam, Nachfolgeplan, Kultur und Bindung. Ein zu gründerabhängiges Unternehmen ist bei der Übertragung systematisch 20 bis 30 % weniger wert."
         }
+      ],
+      "regulatoryLabel": "Regulatorische Compliance",
+      "regulatoryText": "Der regulatorische Geltungsbereich jedes Objekts wird zunächst profiliert und dann im Audit validiert. Jede anwendbare Regulierung wird in der Dimension bewertet, die sie tatsächlich kontrolliert — niemals zu einem intransparenten Aggregat zusammengefasst.",
+      "regulatoryMap": [
+        "Data Act → C + I (technischer Zugang, B2B-Bedingungen)",
+        "Cyber Resilience Act → C (SBOM, Schwachstellen)",
+        "ePrivacy · DSA/P2B · Sanktionen · AML → I",
+        "NIS2 · DORA · AI Act → S",
+        "Compliance-Governance → O"
       ]
     },
     "process": [
@@ -10871,6 +10880,7 @@
     "s4Lead": "CIFSO ist das Akronym der fünf bewerteten Dimensionen. Jede wird gewichtet und anhand dokumentierter Kriterien bewertet.",
     "s4Weight": "Gewichtung",
     "s4Criteria": "Bewertete Kriterien",
+    "s4Regulatory": "Die regulatorische Compliance ist auf die Dimensionen verteilt, die sie tatsächlich kontrollieren: Data Act (C+I), Cyber Resilience Act (C), ePrivacy, DSA/P2B, Sanktionen und AML (I), NIS2, DORA und AI Act (S), Compliance-Governance (O). Der anwendbare Geltungsbereich wird profiliert und dann im Audit validiert.",
     "s5Title": "Die Notenskala",
     "s5Lead": "Fünf Stufen, von der Ausnahmenote AEG ★ bis zur Note B. Jede Note entspricht einem Organisationsprofil und einem präzisen Punktebereich.",
     "s5ColGrade": "Note",

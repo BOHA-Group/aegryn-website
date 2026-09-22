@@ -152,5 +152,14 @@ export const CRA_ARTICLE: Article = {
       it: 'Aegryn Advisory affianca le organizzazioni che progettano, sviluppano o fabbricano prodotti con elementi digitali nella strutturazione della gestione delle vulnerabilità, nella preparazione alla segnalazione degli incidenti e nella documentazione tecnica ai sensi del Cyber Resilience Act, e certifica il risultato nell\'ambito della dimensione Sicurezza & Sovranità del CIFSO, prima del momento in cui un acquirente, un assicuratore o un regolatore ne chiede la prova.',
       nl: 'Aegryn Advisory ondersteunt organisaties die producten met digitale elementen ontwerpen, ontwikkelen of vervaardigen bij het structureren van kwetsbaarheidsbeheer, paraatheid voor incidentmelding en technische documentatie onder de Cyber Resilience Act, en certificeert het resultaat onder de CIFSO-dimensie Veiligheid & Soevereiniteit, vóór het moment waarop een koper, verzekeraar of toezichthouder om bewijs vraagt.',
     }},
+    { type: 'p', text: {
+      "fr": "Dans CIFSO 5000, la conformité CRA est évaluée sous la dimension Code & Architecture (contrôle C-50) : SBOM à jour, processus documenté de gestion des vulnérabilités, sécurité by design. Pour tout produit avec éléments numériques vendu sur le marché UE, l'absence de ces pièces pèse sur le score et plafonne le grade.",
+      "en": "In CIFSO 5000, CRA compliance is assessed under the Code & Architecture dimension (control C-50): up-to-date SBOM, documented vulnerability management process, security by design. For any product with digital elements sold on the EU market, missing evidence weighs on the score and caps the grade.",
+      "de": "Im CIFSO 5000 wird die CRA-Compliance unter der Dimension Code & Architecture (Kontrolle C-50) bewertet: aktuelle SBOM, dokumentierter Schwachstellen-Management-Prozess, Security by Design. Bei jedem Produkt mit digitalen Elementen auf dem EU-Markt belasten fehlende Nachweise den Score und deckeln die Note.",
+      "es": "En CIFSO 5000, el cumplimiento del CRA se evalúa en la dimensión Código y Arquitectura (control C-50): SBOM actualizada, proceso documentado de gestión de vulnerabilidades, seguridad desde el diseño. Para cualquier producto con elementos digitales vendido en el mercado UE, la ausencia de pruebas penaliza la puntuación y limita el grado.",
+      "it": "In CIFSO 5000, la conformità CRA è valutata nella dimensione Codice & Architettura (controllo C-50): SBOM aggiornata, processo documentato di gestione delle vulnerabilità, security by design. Per qualsiasi prodotto con elementi digitali venduto sul mercato UE, l'assenza di prove pesa sul punteggio e limita il grado.",
+      "nl": "In CIFSO 5000 wordt CRA-naleving beoordeeld onder de dimensie Code & Architectuur (controle C-50): actuele SBOM, gedocumenteerd kwetsbaarhedenbeheer, security by design. Voor elk product met digitale elementen op de EU-markt drukt ontbrekend bewijs op de score en plafonneert het niveau."
+    }},
+
   ],
 }

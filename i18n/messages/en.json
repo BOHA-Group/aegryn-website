@@ -2840,6 +2840,15 @@
           "name": "Organisation & Talent",
           "desc": "Founder dependency, leadership team, succession plan, culture and retention. A company too dependent on its founder is systematically worth 20 to 30% less at transfer."
         }
+      ],
+      "regulatoryLabel": "Regulatory compliance",
+      "regulatoryText": "Each asset's regulatory perimeter is profiled, then validated during the audit. Every applicable regulation is assessed within the dimension that actually controls it — never merged into an opaque aggregate score.",
+      "regulatoryMap": [
+        "Data Act → C + I (technical access, B2B terms)",
+        "Cyber Resilience Act → C (SBOM, vulnerabilities)",
+        "ePrivacy · DSA/P2B · sanctions · AML → I",
+        "NIS2 · DORA · AI Act → S",
+        "Compliance governance → O"
       ]
     },
     "process": [
@@ -10871,6 +10880,7 @@
     "s4Lead": "CIFSO is the acronym of the five dimensions assessed. Each is weighted and scored against documented criteria.",
     "s4Weight": "Weight",
     "s4Criteria": "Criteria assessed",
+    "s4Regulatory": "Regulatory compliance is distributed across the dimensions that actually control it: Data Act (C+I), Cyber Resilience Act (C), ePrivacy, DSA/P2B, sanctions and AML (I), NIS2, DORA and AI Act (S), compliance governance (O). The applicable perimeter is profiled, then validated during the audit.",
     "s5Title": "The grade scale",
     "s5Lead": "Five levels, from the exceptional AEG ★ grade to grade B. Each grade corresponds to an organisational profile and a precise score range.",
     "s5ColGrade": "Grade",

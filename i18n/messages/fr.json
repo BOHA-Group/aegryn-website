@@ -2800,6 +2800,15 @@
           "name": "Organisation & Talent",
           "desc": "Dépendance fondateur, équipe de direction, plan de succession, culture et rétention. Une entreprise trop dépendante de son fondateur vaut systématiquement 20 à 30 % de moins à la transmission."
         }
+      ],
+      "regulatoryLabel": "Conformité réglementaire",
+      "regulatoryText": "Le périmètre réglementaire de chaque actif est profilé, puis validé en audit. Chaque régulation applicable est évaluée dans la dimension qui la contrôle réellement — jamais agrégée en un score opaque.",
+      "regulatoryMap": [
+        "Data Act → C + I (accès technique, termes B2B)",
+        "Cyber Resilience Act → C (SBOM, vulnérabilités)",
+        "ePrivacy · DSA/P2B · sanctions · AML → I",
+        "NIS2 · DORA · AI Act → S",
+        "Gouvernance conformité → O"
       ]
     },
     "process": [
@@ -10871,6 +10880,7 @@
     "s4Lead": "CIFSO est l'acronyme des cinq dimensions évaluées. Chacune est pondérée et notée sur des critères documentés.",
     "s4Weight": "Pondération",
     "s4Criteria": "Critères évalués",
+    "s4Regulatory": "La conformité réglementaire est ventilée dans les dimensions qui la contrôlent : Data Act (C+I), Cyber Resilience Act (C), ePrivacy, DSA/P2B, sanctions et AML (I), NIS2, DORA et AI Act (S), gouvernance conformité (O). Le périmètre applicable est profilé puis validé en audit.",
     "s5Title": "L'échelle de grades",
     "s5Lead": "Cinq niveaux, du grade d'exception AEG ★ au grade B. Chaque grade correspond à un profil organisationnel et à une plage de score précise.",
     "s5ColGrade": "Grade",

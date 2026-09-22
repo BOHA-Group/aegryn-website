@@ -3622,6 +3622,15 @@
           "name": "Organizzazione & Talento",
           "desc": "Dipendenza dal fondatore, team dirigente, piano di successione, cultura e retention. Un'impresa troppo dipendente dal suo fondatore vale sistematicamente dal 20 al 30 % in meno alla trasmissione."
         }
+      ],
+      "regulatoryLabel": "Conformità normativa",
+      "regulatoryText": "Il perimetro normativo di ogni asset viene profilato e poi validato in audit. Ogni normativa applicabile è valutata nella dimensione che la controlla realmente — mai aggregata in un punteggio opaco.",
+      "regulatoryMap": [
+        "Data Act → C + I (accesso tecnico, condizioni B2B)",
+        "Cyber Resilience Act → C (SBOM, vulnerabilità)",
+        "ePrivacy · DSA/P2B · sanzioni · AML → I",
+        "NIS2 · DORA · AI Act → S",
+        "Governance di conformità → O"
       ]
     },
     "process": [
@@ -10871,6 +10880,7 @@
     "s4Lead": "CIFSO è l'acronimo delle cinque dimensioni valutate. Ciascuna è ponderata e valutata su criteri documentati.",
     "s4Weight": "Ponderazione",
     "s4Criteria": "Criteri valutati",
+    "s4Regulatory": "La conformità normativa è distribuita tra le dimensioni che la controllano realmente: Data Act (C+I), Cyber Resilience Act (C), ePrivacy, DSA/P2B, sanzioni e AML (I), NIS2, DORA e AI Act (S), governance di conformità (O). Il perimetro applicabile viene profilato e poi validato in audit.",
     "s5Title": "La scala dei gradi",
     "s5Lead": "Cinque livelli, dal grado d'eccezione AEG ★ al grado B. Ogni grado corrisponde a un profilo organizzativo e a un intervallo di punteggio preciso.",
     "s5ColGrade": "Grado",

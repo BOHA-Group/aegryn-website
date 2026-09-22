@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { ArrowLeft, Info } from 'lucide-react'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { VISIBILITY_LABELS, DIMENSION_TO_CATEGORY, DIMENSION_LABELS } from '@/lib/dataRoom'
+import { VISIBILITY_LABELS, DIMENSION_TO_CATEGORY, DIMENSION_LABELS, isCatalogEntryApplicable } from '@/lib/dataRoom'
 import WorkflowStepper from '@/components/workflow/WorkflowStepper'
 import { getCertificationProgress } from '@/lib/certificationWorkflow'
-import type { DataRoomDocument, DocumentCatalogEntry, DocumentDimension, DocumentAdminQuality } from '@/lib/dataRoom'
+import type { DataRoomDocument, DocumentCatalogEntry, DocumentDimension, DocumentAdminQuality, RegulatoryProfileMap } from '@/lib/dataRoom'
 import { DataRoomUploadForm } from '@/components/seller/DataRoomUploadForm'
 import { DataRoomVisibilityToggle } from '@/components/seller/DataRoomVisibilityToggle'
 
@@ -53,6 +53,21 @@ export default async function SellerDataRoomPage({ params }: Props) {
 
   const catalog = (catalogRows ?? []) as DocumentCatalogEntry[]
 
+  /* Profil réglementaire de l'actif (dernier input moteur) — filtre les pièces conditionnelles (CIFSO v4.1) */
+  const { data: lastAssessment } = await supa
+    .from('grade_assessments')
+    .select('input_json')
+    .eq('asset_id', id)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  const regulatoryProfile =
+    ((lastAssessment as { input_json?: { regulatoryProfile?: RegulatoryProfileMap } } | null)
+      ?.input_json?.regulatoryProfile) ?? null
+  const profileActive = !!regulatoryProfile && Object.values(regulatoryProfile).some((v) => v === 'yes')
+  const catalogFiltered = catalog.filter((c) => isCatalogEntryApplicable(c, regulatoryProfile))
+
   /* Documents existants */
   const { data: documents } = await supa
     .from('data_room_documents')
@@ -63,8 +78,8 @@ export default async function SellerDataRoomPage({ params }: Props) {
   const docs = documents ?? []
 
   /* Progression globale — bloquants déposés vs total bloquants */
-  const blockingTotal   = catalog.filter((c) => c.required_level === 'blocking').length
-  const blockingUploaded = catalog.filter((c) =>
+  const blockingTotal   = catalogFiltered.filter((c) => c.required_level === 'blocking').length
+  const blockingUploaded = catalogFiltered.filter((c) =>
     c.required_level === 'blocking' && docs.some((d) => d.document_code === c.code)
   ).length
   const pct = blockingTotal > 0 ? Math.round((blockingUploaded / blockingTotal) * 100) : 100
@@ -119,13 +134,19 @@ export default async function SellerDataRoomPage({ params }: Props) {
             Les documents <span className="font-semibold text-amber-600">recommandés</span> impactent positivement votre score.
             Par défaut, tout document uploadé est <span className="font-semibold">masqué</span>. Vous contrôlez la visibilité.
           </p>
+          {profileActive && (
+            <p className="mt-2 text-[11px] text-ag-navy/70 leading-relaxed flex items-start gap-1.5">
+              <Info size={10} className="shrink-0 mt-0.5" />
+              Checklist adaptée au profil réglementaire de votre actif : seules les pièces applicables (Data Act, CRA, NIS2, DORA, AI Act, DSA/P2B…) sont listées.
+            </p>
+          )}
         </div>
 
         {progress && <WorkflowStepper progress={progress} />}
 
         {/* Section par dimension CIFSO */}
         {DIMENSIONS.map((dim) => {
-          const dimCatalog   = catalog.filter((c) => c.dimension === dim)
+          const dimCatalog   = catalogFiltered.filter((c) => c.dimension === dim)
           if (dimCatalog.length === 0) return null
           const category     = DIMENSION_TO_CATEGORY[dim]
           const existing = docs.filter((d) => d.category === category)

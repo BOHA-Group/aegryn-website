@@ -56,6 +56,30 @@ export interface DocumentCatalogEntry {
   applicability?: string | null
 }
 
+/**
+ * CIFSO v4.1 — filtrage conditionnel du catalogue par profil réglementaire.
+ * Le profil est lu depuis grade_assessments.input_json.regulatoryProfile
+ * (valeurs 'yes' | 'no' par clé RegulatoryProfile de lib/gradeEngine.ts).
+ *
+ *  - applicability NULL/absent → document universel, toujours affiché
+ *  - aucun profil déclaré       → checklist complète (rien n'est masqué)
+ *  - 'regulatory_scope'         → affiché si au moins une régulation s'applique
+ *  - autre clé                  → affiché si profile[clé] === 'yes'
+ */
+export type RegulatoryProfileMap = Record<string, string | undefined>
+
+export function isCatalogEntryApplicable(
+  entry: Pick<DocumentCatalogEntry, 'applicability'>,
+  profile: RegulatoryProfileMap | null | undefined,
+): boolean {
+  if (!entry.applicability) return true
+  if (!profile) return true
+  if (entry.applicability === 'regulatory_scope') {
+    return Object.values(profile).some((v) => v === 'yes')
+  }
+  return profile[entry.applicability] === 'yes'
+}
+
 /* ── Mapping dimension → catégorie data_room ─────────────────────── */
 export const DIMENSION_TO_CATEGORY: Record<DocumentDimension, DataRoomCategory> = {
   C: 'code',

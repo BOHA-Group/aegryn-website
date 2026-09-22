@@ -5,9 +5,10 @@ import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 
 export function GradeDimensions() {
-  const t     = useTranslations('grade.dimensions')
-  const ref   = useRef<HTMLElement>(null)
-  const items = t.raw('items') as { code: string; name: string; desc: string }[]
+  const t       = useTranslations('grade.dimensions')
+  const ref     = useRef<HTMLElement>(null)
+  const items   = t.raw('items') as { code: string; name: string; desc: string }[]
+  const regMap  = t.raw('regulatoryMap') as string[]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -79,6 +80,23 @@ export function GradeDimensions() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CIFSO v4.1 — conformité réglementaire ventilée par dimension */}
+        <div className="mt-10 rounded-xl border border-ag-border bg-ag-off-white p-6 md:p-8">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">
+            {t('regulatoryLabel')}
+          </p>
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-3xl">
+            {t('regulatoryText')}
+          </p>
+          <div className="flex flex-wrap gap-2 mt-5">
+            {regMap.map(m => (
+              <span key={m} className="font-mono text-[10px] px-2.5 py-1 rounded-md border border-ag-border bg-ag-white text-ag-navy">
+                {m}
+              </span>
+            ))}
+          </div>
         </div>
 
       </div>

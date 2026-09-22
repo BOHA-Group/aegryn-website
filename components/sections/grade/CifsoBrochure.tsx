@@ -261,6 +261,9 @@ export function CifsoBrochure() {
               </div>
             ))}
           </div>
+          <p className="font-sans text-[12px] text-ag-gray leading-relaxed mt-6 border-l-2 border-ag-apex pl-4">
+            {b('s4Regulatory')}
+          </p>
         </Page>
 
         {/* ── 05 GRADES ── */}

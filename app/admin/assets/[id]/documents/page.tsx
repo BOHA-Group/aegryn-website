@@ -6,9 +6,9 @@ import { checkAdminAccess }    from '@/lib/adminAuth'
 import WorkflowStepper from '@/components/workflow/WorkflowStepper'
 import { getCertificationProgress } from '@/lib/certificationWorkflow'
 import type {
-  DataRoomDocument, DocumentCatalogEntry, DocumentDimension,
+  DataRoomDocument, DocumentCatalogEntry, DocumentDimension, RegulatoryProfileMap,
 } from '@/lib/dataRoom'
-import { DIMENSION_LABELS } from '@/lib/dataRoom'
+import { DIMENSION_LABELS, isCatalogEntryApplicable } from '@/lib/dataRoom'
 import AdminDocumentsClient from './AdminDocumentsClient'
 import AccessLogsTable, { type AccessLog } from './AccessLogsTable'
 
@@ -49,6 +49,21 @@ export default async function AdminAssetDocumentsPage({
 
   const catalog = (catalogRows ?? []) as DocumentCatalogEntry[]
 
+  /* Profil réglementaire (dernier input moteur) — filtre les pièces conditionnelles (CIFSO v4.1) */
+  const { data: lastAssessment } = await supa
+    .from('grade_assessments')
+    .select('input_json')
+    .eq('asset_id', id)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  const regulatoryProfile =
+    ((lastAssessment as { input_json?: { regulatoryProfile?: RegulatoryProfileMap } } | null)
+      ?.input_json?.regulatoryProfile) ?? null
+  const profileActive = !!regulatoryProfile && Object.values(regulatoryProfile).some((v) => v === 'yes')
+  const catalogFiltered = catalog.filter((c) => isCatalogEntryApplicable(c, regulatoryProfile))
+
   /* Documents uploadés pour cet actif */
   const { data: docs } = await supa
     .from('data_room_documents')
@@ -75,9 +90,9 @@ export default async function AdminAssetDocumentsPage({
         .then(r => r.data ?? [])
     : []
 
-  /* Complétude par dimension — calculée côté server */
+  /* Complétude par dimension — calculée côté server (catalogue filtré par profil réglementaire) */
   const completeness = DIMENSIONS.map((dim) => {
-    const dimCatalog  = catalog.filter((c) => c.dimension === dim)
+    const dimCatalog  = catalogFiltered.filter((c) => c.dimension === dim)
     const blocking    = dimCatalog.filter((c) => c.required_level === 'blocking')
     const blockingOk  = blocking.filter((c) =>
       documents.some((d) => d.document_code === c.code && d.admin_quality === 'sufficient')
@@ -127,6 +142,11 @@ export default async function AdminAssetDocumentsPage({
           <p className="text-[12px] text-gray-400 mt-1">
             {String((asset as Record<string, unknown>).seller_email ?? '')}
           </p>
+          {profileActive && (
+            <p className="text-[11px] text-ag-navy/70 mt-2">
+              Profil réglementaire actif — checklist filtrée sur les régulations applicables.
+            </p>
+          )}
         </div>
 
         {/* Tableau de complétude */}
@@ -180,7 +200,7 @@ export default async function AdminAssetDocumentsPage({
         {/* Liste interactive par dimension */}
         <AdminDocumentsClient
           assetId={id}
-          catalog={catalog}
+          catalog={catalogFiltered}
           documents={documents}
           dataRoomLightEnabled={Boolean((asset as Record<string, unknown>).data_room_light_enabled)}
         />

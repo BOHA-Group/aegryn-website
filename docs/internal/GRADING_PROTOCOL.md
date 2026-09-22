@@ -1,4 +1,4 @@
-# GRADING_PROTOCOL, CIFSO v4.0
+# GRADING_PROTOCOL, CIFSO v4.1
 
 > **Audience:** Internal, Aegryn team + certified CIFSO partners  
 > **Confidentiality:** Scoring weights are proprietary, never publish them.  
@@ -15,6 +15,8 @@ Each of the 5 dimensions is scored 0 to 20. Maximum total: 100 points.
 The final grade is derived from the total score, subject to automatic refusal triggers.
 
 Version 4.0 adds the O (Organisation) dimension and reformulates C and I to reflect the expanded scope beyond pure code/IP.
+
+Version 4.1 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O — penalties, AA ceiling and TRS impact, never a block on report generation.
 
 ---
 
@@ -145,7 +147,53 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 8. Subcode System
+## 8. Regulatory Compliance Matrix (CIFSO v4.1)
+
+### Principle
+
+Not every regulation applies to every asset. Each evaluation starts with a **regulatory applicability profile** (`input.regulatoryProfile`), declared by the seller and validated by the analyst. Each `yes` activates the corresponding controls; `na` never penalises the score.
+
+| Profile key | Activates |
+|---|---|
+| `sellsConnectedProducts` | EU Data Act (C-51, I-50) |
+| `processesEUData` | ePrivacy / cookies (I-51) |
+| `isFinancialEntityOrICT` | DORA (S-53), AML (I-54) |
+| `providesAISystems` | EU AI Act (S-54) |
+| `operatesCriticalSector` | NIS2 (S-52) |
+| `sellsDigitalProducts` | Cyber Resilience Act (C-50) |
+| `operatesPlatform` | DSA / P2B (I-52) |
+| — (universal) | Sanctions & embargoes declaration (I-53) |
+| any `yes` | Compliance governance (O-50) |
+
+### Control statuses
+
+`na` (not applicable / not assessed) · `compliant` · `partial` · `non_compliant`.  
+Sanctions uses `declared_clean` / `exposed` / `not_declared`.
+
+### Score treatment
+
+- Compliance is **ventilated across the dimensions that actually control it** — never aggregated into a single opaque compliance score, and the public dimension names are unchanged.
+- Compliant & documented → small bonus. Partial → small penalty. Non-compliant → penalty.
+- **Grade ceiling**: any applicable regulation assessed `non_compliant` caps the grade at **AA** (below ★/AAA), on top of existing proof-quality ceilings.
+- **Never a refusal**: the CIFSO report is always produced. Regulatory deficiencies translate into score penalties, the AA ceiling and TRS impact — not into a block on report generation.
+
+### TRS impact (Transaction Readiness Score)
+
+| Finding | TRS |
+|---|---|
+| Data Act non-compliant (C-51 or I-50) | **blocked** |
+| AI Act high-risk system non-compliant (S-54 + `aiActHighRisk`) | **blocked** |
+| Sanctions/embargo exposure identified (I-53) | **blocked** |
+| NIS2, DORA, CRA, AML, AI Act (non-high-risk) non-compliant | conditional |
+| `partial` statuses, ePrivacy, P2B, undeclared sanctions | remediation |
+
+### Data room (migration 116)
+
+Catalogue entries carry an `applicability` column keyed to the profile. All regulatory documents are `recommended` (never `blocking`) so existing dossiers are not retroactively blocked. Missing or insufficient evidence never counts as compliant — the analyst sets the control status from the documented evidence.
+
+---
+
+## 9. Subcode System
 
 Each certified asset receives a set of subcodes per dimension (e.g. `C-11`, `C-17`, `S-23`).
 These are internal granularity tags, displayed in Antiquorum-style notation on lot sheets.
@@ -156,7 +204,7 @@ DB columns: `subcodes_code`, `subcodes_ip`, `subcodes_finance`, `subcodes_securi
 
 ---
 
-## 9. Certification Output
+## 10. Certification Output
 
 Upon completion, the grade engine produces:
 - `totalScore` (0–100)
@@ -167,7 +215,7 @@ Upon completion, the grade engine produces:
 
 ---
 
-## 10. Eligibility Rules
+## 11. Eligibility Rules
 
 - Minimum grade to enter the catalogue: **B** (score >= 30, no auto-refusal)
 - `refused` assets receive a formal rejection with listed reasons

@@ -3622,6 +3622,15 @@
           "name": "Organisatie & Talent",
           "desc": "Oprichtersafhankelijkheid, directieteam, opvolgingsplan, cultuur en retentie. Een onderneming die te afhankelijk is van haar oprichter is bij overdracht systematisch 20 tot 30 % minder waard."
         }
+      ],
+      "regulatoryLabel": "Naleving van regelgeving",
+      "regulatoryText": "De regelgevingsperimeter van elk actief wordt geprofileerd en vervolgens gevalideerd tijdens de audit. Elke toepasselijke regelgeving wordt beoordeeld binnen de dimensie die er daadwerkelijk controle over heeft — nooit samengevoegd tot een ondoorzichtige score.",
+      "regulatoryMap": [
+        "Data Act → C + I (technische toegang, B2B-voorwaarden)",
+        "Cyber Resilience Act → C (SBOM, kwetsbaarheden)",
+        "ePrivacy · DSA/P2B · sancties · AML → I",
+        "NIS2 · DORA · AI Act → S",
+        "Compliance-governance → O"
       ]
     },
     "process": [
@@ -10871,6 +10880,7 @@
     "s4Lead": "CIFSO is het acroniem van de vijf beoordeelde dimensies. Elke dimensie wordt gewogen en beoordeeld op gedocumenteerde criteria.",
     "s4Weight": "Weging",
     "s4Criteria": "Beoordeelde criteria",
+    "s4Regulatory": "De naleving van regelgeving is verdeeld over de dimensies die er daadwerkelijk controle over hebben: Data Act (C+I), Cyber Resilience Act (C), ePrivacy, DSA/P2B, sancties en AML (I), NIS2, DORA en AI Act (S), compliance-governance (O). De toepasselijke perimeter wordt geprofileerd en vervolgens gevalideerd tijdens de audit.",
     "s5Title": "De beoordelingsschaal",
     "s5Lead": "Vijf niveaus, van het uitzonderlijke niveau AEG ★ tot niveau B. Elk niveau komt overeen met een organisatieprofiel en een nauwkeurig scorebereik.",
     "s5ColGrade": "Niveau",
