@@ -5386,7 +5386,7 @@
       "label": "Technologische Unabhängigkeit",
       "badge": "TECHNOLOGISCHE UNABHÄNGIGKEIT"
     },
-    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet massgeschneiderte Unternehmenssoftware. Ihr Code, Ihre Daten, Ihre Infrastruktur: volle Kontrolle, ohne erzwungene Abhängigkeit und ohne US-Cloud als Standard.",
+    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet massgeschneiderte Unternehmenssoftware. Ihr Code, Ihre Daten, Ihre Infrastruktur: Hosting in der Schweiz oder in der EU, ohne erzwungene Abhängigkeit.",
     "whySection": {
       "label": "Warum maßgeschneiderte Software",
       "title": "Was der Standardmarkt Ihnen nicht bieten kann.",
@@ -5548,7 +5548,7 @@
         {
           "key": "model",
           "title": "KI-Modell-Lokalisierung",
-          "desc": "Modelle werden in Ihrer Infrastruktur eingesetzt: on-premise oder CH/EU-Cloud. Keine Verarbeitung in US-Clouds ohne Ihre ausdrückliche Zustimmung."
+          "desc": "Modelle werden in Ihrer Infrastruktur eingesetzt: on-premise oder CH/EU-Cloud. Keine Verarbeitung ausserhalb der CH/EU-Jurisdiktion ohne Ihre ausdrückliche Zustimmung."
         },
         {
           "key": "ip",

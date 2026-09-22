@@ -5386,7 +5386,7 @@
       "label": "Indipendenza tecnologica",
       "badge": "INDIPENDENZA TECNOLOGICA"
     },
-    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Il vostro codice, i vostri dati, la vostra infrastruttura: controllo totale, senza dipendenza imposta né cloud americano di default.",
+    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Il vostro codice, i vostri dati, la vostra infrastruttura: hosting in Svizzera o nell'UE, senza dipendenza imposta.",
     "whySection": {
       "label": "Perché software su misura",
       "title": "Ciò che il mercato standard non può offrirvi.",
@@ -5548,7 +5548,7 @@
         {
           "key": "model",
           "title": "Localizzazione dei modelli IA",
-          "desc": "I modelli vengono distribuiti nella vostra infrastruttura: on-premise o cloud CH/EU. Nessun trattamento in cloud americani senza il vostro accordo esplicito."
+          "desc": "I modelli vengono distribuiti nella vostra infrastruttura: on-premise o cloud CH/EU. Nessun trattamento al di fuori della giurisdizione CH/UE senza il vostro accordo esplicito."
         },
         {
           "key": "ip",

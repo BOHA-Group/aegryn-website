@@ -5386,7 +5386,7 @@
       "label": "Independencia tecnológica",
       "badge": "INDEPENDENCIA TECNOLÓGICA"
     },
-    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Su código, sus datos, su infraestructura: control total, sin dependencia impuesta ni cloud americano por defecto.",
+    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Su código, sus datos, su infraestructura: alojamiento en Suiza o en la UE, sin dependencia impuesta.",
     "whySection": {
       "label": "Por qué software a medida",
       "title": "Lo que el mercado estándar no puede ofrecerle.",
@@ -5548,7 +5548,7 @@
         {
           "key": "model",
           "title": "Localización de modelos IA",
-          "desc": "Los modelos se despliegan en su infraestructura: on-premise o cloud CH/EU. Sin procesamiento en clouds americanos sin su acuerdo explícito."
+          "desc": "Los modelos se despliegan en su infraestructura: on-premise o cloud CH/EU. Sin procesamiento fuera de la jurisdicción CH/UE sin su acuerdo explícito."
         },
         {
           "key": "ip",

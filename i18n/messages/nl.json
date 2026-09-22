@@ -5401,7 +5401,7 @@
       "label": "Technologische onafhankelijkheid",
       "badge": "TECHNOLOGISCHE ONAFHANKELIJKHEID"
     },
-    "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Uw code, uw data, uw infrastructuur: volledige controle, zonder opgelegde afhankelijkheid en zonder Amerikaanse cloud als standaard.",
+    "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
     "whySection": {
       "label": "Waarom maatwerksoftware",
       "title": "Wat de standaardmarkt u niet kan bieden.",
@@ -5563,7 +5563,7 @@
         {
           "key": "model",
           "title": "AI-modellokalisatie",
-          "desc": "Modellen worden ingezet in uw infrastructuur: on-premise of cloud CH/EU. Geen verwerking in Amerikaanse clouds zonder uw expliciete toestemming."
+          "desc": "Modellen worden ingezet in uw infrastructuur: on-premise of cloud CH/EU. Geen verwerking buiten de CH/EU-jurisdictie zonder uw expliciete toestemming."
         },
         {
           "key": "ip",

@@ -5386,7 +5386,7 @@
       "label": "Technological independence",
       "badge": "TECHNOLOGICAL INDEPENDENCE"
     },
-    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. Your code, your data, your infrastructure: full control, with no imposed dependency and no US cloud by default.",
+    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. Your code, your data, your infrastructure: hosted in Switzerland or the EU, with no imposed dependency.",
     "whySection": {
       "label": "Why bespoke software",
       "title": "What the standard market cannot offer you.",
@@ -5548,7 +5548,7 @@
         {
           "key": "model",
           "title": "AI Model Localisation",
-          "desc": "Models are deployed in your infrastructure: on-premise or CH/EU cloud. No processing in US clouds without your explicit agreement."
+          "desc": "Models are deployed in your infrastructure: on-premise or CH/EU cloud. No processing outside CH/EU jurisdiction without your explicit agreement."
         },
         {
           "key": "ip",

@@ -5346,7 +5346,7 @@
       "label": "Indépendance technologique",
       "badge": "INDÉPENDANCE TECHNOLOGIQUE"
     },
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : maîtrise totale, sans dépendance imposée ni cloud américain par défaut.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : hébergement en Suisse ou dans l'UE, sans dépendance imposée.",
     "whySection": {
       "label": "Pourquoi des solutions sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
@@ -5508,7 +5508,7 @@
         {
           "key": "model",
           "title": "Localisation des modèles IA",
-          "desc": "Les modèles sont déployés dans votre infrastructure : on-premise ou cloud CH/EU. Aucun traitement dans des clouds américains sans votre accord explicite."
+          "desc": "Les modèles sont déployés dans votre infrastructure : on-premise ou cloud CH/EU. Aucun traitement hors juridiction CH/UE sans votre accord explicite."
         },
         {
           "key": "ip",
