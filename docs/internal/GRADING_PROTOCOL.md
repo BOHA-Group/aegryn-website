@@ -151,7 +151,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ### Principle
 
-Not every regulation applies to every asset. Each evaluation starts with a **regulatory applicability profile** (`input.regulatoryProfile`), declared by the seller and validated by the analyst. Each `yes` activates the corresponding controls; `na` never penalises the score.
+Not every regulation applies to every asset. Each evaluation starts with a **regulatory applicability profile** (`input.regulatoryProfile`), declared by the seller and validated by the analyst. Each `yes` activates the corresponding controls; a profile key set to `no`/absent never penalises the score. The profile is the single source of truth on applicability — if a regulation turns out not to apply, the analyst sets the profile key to `no`.
 
 | Profile key | Activates |
 |---|---|
@@ -167,14 +167,16 @@ Not every regulation applies to every asset. Each evaluation starts with a **reg
 
 ### Control statuses
 
-`na` (not applicable / not assessed) · `compliant` · `partial` · `non_compliant`.  
+`na` (not assessed / no evidence) · `compliant` · `partial` · `non_compliant`.  
 Sanctions uses `declared_clean` / `exposed` / `not_declared`.
+
+**Missing evidence = deficiency.** On an *applicable* regulation, `na` or an unset field means the conformity was not demonstrated — it is scored exactly like `non_compliant` (full penalty, finding, AA ceiling, TRS impact). There is no neutral "not evaluated" state: an applicable control that produces no data-room evidence is penalised by default.
 
 ### Score treatment
 
 - Compliance is **ventilated across the dimensions that actually control it** — never aggregated into a single opaque compliance score, and the public dimension names are unchanged.
-- Compliant & documented → small bonus. Partial → small penalty. Non-compliant → penalty.
-- **Grade ceiling**: any applicable regulation assessed `non_compliant` caps the grade at **AA** (below ★/AAA), on top of existing proof-quality ceilings.
+- Compliant & documented → small bonus. Partial → small penalty. Non-compliant or not assessed (`na`/missing evidence) → full penalty.
+- **Grade ceiling**: any applicable regulation not demonstrated as compliant (`non_compliant`, `na` or unset) caps the grade at **AA** (below ★/AAA), on top of existing proof-quality ceilings.
 - **Never a refusal**: the CIFSO report is always produced. Regulatory deficiencies translate into score penalties, the AA ceiling and TRS impact — not into a block on report generation.
 
 ### TRS impact (Transaction Readiness Score)
@@ -189,7 +191,7 @@ Sanctions uses `declared_clean` / `exposed` / `not_declared`.
 
 ### Data room (migration 116)
 
-Catalogue entries carry an `applicability` column keyed to the profile. All regulatory documents are `recommended` (never `blocking`) so existing dossiers are not retroactively blocked. Missing or insufficient evidence never counts as compliant — the analyst sets the control status from the documented evidence.
+Catalogue entries carry an `applicability` column keyed to the profile; the seller and admin checklists are filtered accordingly (no profile yet → full checklist). All regulatory documents are `recommended` (never `blocking`) so existing dossiers are not retroactively blocked and the report is never blocked. Missing or insufficient evidence feeds the scoring through the control status: `na`/unset on an applicable regulation is penalised like `non_compliant`.
 
 ---
 

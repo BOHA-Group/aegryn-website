@@ -189,7 +189,7 @@ function YesNoNASelect({ value, onChange }: { value: string; onChange: (v: strin
 function RegComplianceSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   return (
     <select value={value} onChange={e => onChange(e.target.value)} className={selectCls}>
-      <option value="na">N/A — non évalué</option>
+      <option value="na">Non évalué / aucune preuve (pénalité)</option>
       <option value="compliant">Conforme documenté</option>
       <option value="partial">Partiellement conforme</option>
       <option value="non_compliant">Non conforme</option>
