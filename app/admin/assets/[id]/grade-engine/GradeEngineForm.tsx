@@ -3,7 +3,7 @@
 import { CLUSTER_LABELS_FR, type CifsoValuation, type ClusterKey } from '@/lib/cifsoValuation'
 import ValuationPanel from '@/components/valuation/ValuationPanel'
 import { useState, useMemo, useEffect } from 'react'
-import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel, AiExposure, RegulatoryProfile, RegComplianceStatus } from '@/lib/gradeEngine'
+import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel, AiExposure, RegulatoryProfile, RegComplianceStatus, TechnologyMode } from '@/lib/gradeEngine'
 import { runGradeEngine, hasRegulatoryScope } from '@/lib/gradeEngine'
 import type { ProofQuality } from '@/lib/gradingSystem'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
@@ -54,9 +54,13 @@ const GRADE_COLORS: Record<string, string> = {
 function defaultInput(): GradeInput {
   return {
     code: {
+      technologyMode: 'proprietary' as TechnologyMode,
       testCoverage: 0, techDebtDocumented: 'no', criticalVulnOpen: 0,
       majorVulnOpen: 0, architecture: 'monolithic', ciCdFunctional: 'no',
       apiDocumentation: 'absent', obsoleteDependencies: 0, lastCodeAuditMonthsAgo: 9999,
+      softwareInventory: 'absent' as const, licenseCompliance: 'na' as const,
+      siMapping: 'absent' as const, vendorReversibility: 'absent' as const,
+      vendorConcentration: 'high' as const,
       craCompliance: 'na', dataActTechnical: 'na',
     },
     ip: {
@@ -171,6 +175,16 @@ function YesNoSelect({ value, onChange }: { value: string; onChange: (v: string)
     <select value={value} onChange={e => onChange(e.target.value)} className={selectCls}>
       <option value="yes">Oui</option>
       <option value="no">Non</option>
+    </select>
+  )
+}
+
+function DocLevelSelect({ value, onChange }: { value: string; onChange: (v: 'complete' | 'partial' | 'absent') => void }) {
+  return (
+    <select value={value} onChange={e => onChange(e.target.value as 'complete' | 'partial' | 'absent')} className={selectCls}>
+      <option value="complete">Complet / documenté</option>
+      <option value="partial">Partiel</option>
+      <option value="absent">Absent</option>
     </select>
   )
 }
@@ -568,6 +582,41 @@ export default function GradeEngineForm({
 
       {/* DIMENSION CODE */}
       <Section title="Dimension C : Code (20 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
+        {/* CIFSO v4.2 — nature de la base technologique */}
+        <Field label="Mode technologique" hint="Détermine la piste de scoring : code propriétaire, stack licenciée (SaaS/licences), ou hybride (moyenne des deux pistes)">
+          <select value={input.code.technologyMode ?? 'proprietary'} onChange={e => setCode('technologyMode', e.target.value as TechnologyMode)} className={selectCls}>
+            <option value="proprietary">Code propriétaire — l'organisation développe son logiciel</option>
+            <option value="licensed_stack">Stack licenciée — base = logiciels/SaaS tiers</option>
+            <option value="hybrid">Hybride — code propriétaire + stack licenciée</option>
+          </select>
+        </Field>
+        {/* Piste stack licencié (licensed_stack | hybrid) — C-60→C-64 */}
+        {(input.code.technologyMode === 'licensed_stack' || input.code.technologyMode === 'hybrid') && (
+          <>
+            <Field label="Inventaire logiciels/SaaS critiques (C-60)" hint="Fournisseur, usage, criticité — équivalent couverture">
+              <DocLevelSelect value={input.code.softwareInventory ?? 'absent'} onChange={v => setCode('softwareInventory', v)} />
+            </Field>
+            <Field label="Conformité licences & versions supportées (C-61)">
+              <YesNoNASelect value={input.code.licenseCompliance ?? 'na'} onChange={v => setCode('licenseCompliance', v as 'yes' | 'no' | 'na')} />
+            </Field>
+            <Field label="Cartographie SI / interdépendances (C-62)">
+              <DocLevelSelect value={input.code.siMapping ?? 'absent'} onChange={v => setCode('siMapping', v)} />
+            </Field>
+            <Field label="Réversibilité & export données (C-63)" hint="Clauses de sortie, portabilité des données et configurations">
+              <DocLevelSelect value={input.code.vendorReversibility ?? 'absent'} onChange={v => setCode('vendorReversibility', v)} />
+            </Field>
+            <Field label="Concentration fournisseurs (C-64)" hint="Dépendance à un ou quelques fournisseurs critiques">
+              <select value={input.code.vendorConcentration ?? 'high'} onChange={e => setCode('vendorConcentration', e.target.value as 'low' | 'medium' | 'high')} className={selectCls}>
+                <option value="low">Faible — fournisseurs substituables</option>
+                <option value="medium">Modérée — alternatives identifiées</option>
+                <option value="high">Forte — dépendance critique</option>
+              </select>
+            </Field>
+          </>
+        )}
+        {/* Piste code propriétaire (proprietary | hybrid) */}
+        {(input.code.technologyMode ?? 'proprietary') !== 'licensed_stack' && (
+        <>
         <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale" source={inputSources['testCoverage'] as SourceType}>
           <NumInput value={input.code.testCoverage} onChange={v => setCode('testCoverage', v)} max={100} />
         </Field>
@@ -603,6 +652,8 @@ export default function GradeEngineForm({
         <Field label="Dernier audit de code externe (mois)" hint="9999 = jamais réalisé" source={inputSources['lastCodeAuditMonthsAgo'] as SourceType}>
           <NumInput value={input.code.lastCodeAuditMonthsAgo} onChange={v => setCode('lastCodeAuditMonthsAgo', v)} />
         </Field>
+        </>
+        )}
         {/* CIFSO v4.1 — Conformité réglementaire produit (conditionnée au profil) */}
         {input.regulatoryProfile?.sellsDigitalProducts === 'yes' && (
           <Field label="CRA — Cyber Resilience Act (C-50)" hint="SBOM à jour, processus de gestion des vulnérabilités, sécurité by design">

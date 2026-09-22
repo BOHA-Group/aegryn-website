@@ -58,11 +58,20 @@ export default async function AdminAssetDocumentsPage({
     .limit(1)
     .maybeSingle()
 
-  const regulatoryProfile =
-    ((lastAssessment as { input_json?: { regulatoryProfile?: RegulatoryProfileMap } } | null)
-      ?.input_json?.regulatoryProfile) ?? null
+  const lastInput = (lastAssessment as {
+    input_json?: { regulatoryProfile?: RegulatoryProfileMap; code?: { technologyMode?: string } }
+  } | null)?.input_json ?? null
+  const regulatoryProfile = lastInput?.regulatoryProfile ?? null
+  /* v4.2 — dérivation des clés technologiques : 'proprietary' par défaut (rétrocompatible) */
+  const techMode = lastInput?.code?.technologyMode ?? 'proprietary'
+  /* Pas d'assessment encore → null = checklist complète ; sinon filtrage profil + mode techno */
+  const applicabilityProfile: RegulatoryProfileMap | null = !lastInput ? null : {
+    ...(regulatoryProfile ?? {}),
+    proprietary_code: techMode !== 'licensed_stack' ? 'yes' : 'no',
+    licensed_stack:   techMode !== 'proprietary'    ? 'yes' : 'no',
+  }
   const profileActive = !!regulatoryProfile && Object.values(regulatoryProfile).some((v) => v === 'yes')
-  const catalogFiltered = catalog.filter((c) => isCatalogEntryApplicable(c, regulatoryProfile))
+  const catalogFiltered = catalog.filter((c) => isCatalogEntryApplicable(c, applicabilityProfile))
 
   /* Documents uploadés pour cet actif */
   const { data: docs } = await supa

@@ -25,6 +25,8 @@ export type YesNo         = 'yes' | 'no'
 /** Niveau de preuve pour l'ARR — remplace le booléen arrAudited (CIFSO v4.0) */
 export type ArrAuditLevel = 'declarative' | 'verifiable' | 'audited'
 export type YesNoNA       = 'yes' | 'no' | 'na'
+/** CIFSO v4.2 — nature de la base technologique : code propriétaire, stack licenciée, ou mixte */
+export type TechnologyMode = 'proprietary' | 'licensed_stack' | 'hybrid'
 export type Coverage      = 'complete' | 'partial' | 'absent'
 export type Architecture  = 'decoupled' | 'partial' | 'monolithic'
 export type DocLevel      = 'complete' | 'partial' | 'absent'
@@ -33,6 +35,8 @@ export type Encryption    = 'full' | 'partial' | 'none'
 export type Certification = 'yes' | 'in_progress' | 'no'
 
 export interface CodeInput {
+  /** Mode technologique : 'proprietary' (défaut, codebase propriétaire) | 'licensed_stack' (base = logiciels/SaaS licenciés) | 'hybrid' (les deux pistes, moyenne) */
+  technologyMode?: TechnologyMode
   testCoverage: number               // 0-100 %
   techDebtDocumented: YesNo
   criticalVulnOpen: number           // count, 0 = idéal
@@ -42,6 +46,17 @@ export interface CodeInput {
   apiDocumentation: DocLevel
   obsoleteDependencies: number       // count ou %
   lastCodeAuditMonthsAgo: number     // 9999 = jamais
+  /* ── CIFSO v4.2 — piste licensed_stack / hybrid : gouvernance du SI licencié ── */
+  /** C-60 — Inventaire documenté des logiciels/SaaS critiques (fournisseur, usage, criticité) */
+  softwareInventory?: DocLevel
+  /** C-61 — Conformité des licences et versions supportées */
+  licenseCompliance?: YesNoNA
+  /** C-62 — Cartographie du SI / interdépendances applicatives */
+  siMapping?: DocLevel
+  /** C-63 — Réversibilité contractuelle : clauses de sortie, export des données */
+  vendorReversibility?: DocLevel
+  /** C-64 — Concentration fournisseurs critiques */
+  vendorConcentration?: 'low' | 'medium' | 'high'
   /* ── CIFSO v4.1 — Conformité réglementaire produit ── */
   /** C-50 — CRA : SBOM, processus de gestion des vulnérabilités, sécurité by design (si sellsDigitalProducts) */
   craCompliance?: RegComplianceStatus
@@ -375,6 +390,11 @@ export interface GradeResult {
 
 function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResult {
   const rationale: string[] = []
+  const mode = input.technologyMode ?? 'proprietary'
+  let score = 0
+
+  /* ── Piste code propriétaire (proprietary | hybrid) ─────────────────────── */
+  if (mode !== 'licensed_stack') {
 
   // ── Refus automatique ─────────────────────────────────────────────────────
   if (input.criticalVulnOpen > 0 && input.lastCodeAuditMonthsAgo >= 9999) {
@@ -391,8 +411,6 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
       rationale: [],
     }
   }
-
-  let score = 0
 
   // Couverture tests — max 6 pts
   if      (input.testCoverage >= 80) { score += 6; rationale.push('Couverture de tests élevée (≥80%)') }
@@ -433,6 +451,41 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
   if      (input.lastCodeAuditMonthsAgo <= 12)  { score = Math.min(20, score + 1); rationale.push('Audit de code externe récent (≤12 mois)') }
   else if (input.lastCodeAuditMonthsAgo >= 9999) {                                  rationale.push('Aucun audit de code externe réalisé') }
 
+  } /* fin piste proprietary */
+
+  /* ── Piste stack licencié (licensed_stack | hybrid) — gouvernance du SI ── */
+  if (mode !== 'proprietary') {
+    let lic = 0
+
+    // Inventaire logiciels critiques — max 6 pts (équivalent couverture : savoir ce qu'on fait tourner)
+    if      (input.softwareInventory === 'complete') { lic += 6; rationale.push('Inventaire des logiciels/SaaS critiques documenté (C-60)') }
+    else if (input.softwareInventory === 'partial')  { lic += 3; rationale.push('Inventaire logiciels partiel (C-60)') }
+    else                                             {             rationale.push('Aucun inventaire des logiciels critiques (C-60)') }
+
+    // Conformité licences — max 4 pts
+    if      (input.licenseCompliance === 'yes') { lic += 4; rationale.push('Licences conformes et versions supportées (C-61)') }
+    else if (input.licenseCompliance === 'na')  { lic += 2; rationale.push('Conformité licences non vérifiée (C-61)') }
+    else                                        {             rationale.push('Licences non conformes ou versions non supportées (C-61)') }
+
+    // Réversibilité contractuelle — max 4 pts (équivalent CI/CD : capacité de sortie)
+    if      (input.vendorReversibility === 'complete') { lic += 4; rationale.push('Réversibilité contractuelle et export des données garantis (C-63)') }
+    else if (input.vendorReversibility === 'partial')  { lic += 2; rationale.push('Réversibilité partielle — certaines données ou configurations exportables (C-63)') }
+    else                                               {             rationale.push('Aucune clause de sortie ni export documenté — lock-in fournisseur (C-63)') }
+
+    // Cartographie SI — max 3 pts (équivalent architecture)
+    if      (input.siMapping === 'complete') { lic += 3; rationale.push('Cartographie SI et interdépendances documentées (C-62)') }
+    else if (input.siMapping === 'partial')  { lic += 1; rationale.push('Cartographie SI partielle (C-62)') }
+    else                                     {             rationale.push('Aucune cartographie du SI (C-62)') }
+
+    // Concentration fournisseurs — max 3 pts
+    if      (input.vendorConcentration === 'low')    { lic += 3; rationale.push('Concentration fournisseurs maîtrisée (C-64)') }
+    else if (input.vendorConcentration === 'medium') { lic += 1; rationale.push('Concentration fournisseurs modérée (C-64)') }
+    else                                             {             rationale.push('Forte concentration fournisseurs — risque de dépendance (C-64)') }
+
+    score = mode === 'hybrid' ? Math.round((score + lic) / 2) : lic
+    if (mode === 'hybrid') rationale.push('Piste hybride : moyenne code propriétaire / stack licenciée')
+  }
+
   /* ── CIFSO v4.1 — C-50 : Cyber Resilience Act (si produit avec éléments numériques) ── */
   if (profile?.sellsDigitalProducts === 'yes') {
     if      (input.craCompliance === 'compliant')     { score += 1; rationale.push('CRA : SBOM à jour et processus de gestion des vulnérabilités conformes (C-50)') }
@@ -449,7 +502,7 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
     else                                                 { score -= 2; rationale.push('Data Act : non évalué — aucune preuve d\'accès aux données produit en data room (C-51)') }
   }
 
-  return { score: Math.min(score, 20), autoRefusal: false, rationale }
+  return { score: Math.max(0, Math.min(score, 20)), autoRefusal: false, rationale }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

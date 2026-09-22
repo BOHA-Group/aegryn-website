@@ -1,4 +1,4 @@
-# GRADING_PROTOCOL, CIFSO v4.1
+# GRADING_PROTOCOL, CIFSO v4.2
 
 > **Audience:** Internal, Aegryn team + certified CIFSO partners  
 > **Confidentiality:** Scoring weights are proprietary, never publish them.  
@@ -17,6 +17,8 @@ The final grade is derived from the total score, subject to automatic refusal tr
 Version 4.0 adds the O (Organisation) dimension and reformulates C and I to reflect the expanded scope beyond pure code/IP.
 
 Version 4.1 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O — penalties, AA ceiling and TRS impact, never a block on report generation.
+
+Version 4.2 adds the **technology mode** (section 8b): dimension C always counts 20 pts, but its internal controls adapt to the nature of the technology base (`input.code.technologyMode`): `proprietary` (owned codebase — existing controls), `licensed_stack` (licensed SaaS/software governance — C-60→C-64), `hybrid` (average of both tracks). Dimensions are never optional: every organisation runs software; what changes is how its technology base is evidenced.
 
 ---
 
@@ -192,6 +194,18 @@ Sanctions uses `declared_clean` / `exposed` / `not_declared`.
 ### Data room (migration 116)
 
 Catalogue entries carry an `applicability` column keyed to the profile; the seller and admin checklists are filtered accordingly (no profile yet → full checklist). All regulatory documents are `recommended` (never `blocking`) so existing dossiers are not retroactively blocked and the report is never blocked. Missing or insufficient evidence feeds the scoring through the control status: `na`/unset on an applicable regulation is penalised like `non_compliant`.
+
+### 8b. Technology Mode (CIFSO v4.2)
+
+Dimension C keeps its 20 points and its public name in every certification — dimensions are never optional. What adapts is the *internal track*, selected by `input.code.technologyMode` (default `proprietary`, backward compatible):
+
+| Mode | Track | Controls |
+|---|---|---|
+| `proprietary` | Owned codebase | Test coverage, vulnerabilities, architecture, CI/CD, API doc, tech debt, external audit (existing) |
+| `licensed_stack` | Licensed SaaS/software base | C-60 software inventory (6) · C-61 license compliance (4) · C-63 vendor reversibility/data export (4) · C-62 SI mapping (3) · C-64 vendor concentration (3) |
+| `hybrid` | Both | Proprietary track + licensed track averaged (each capped at 20) |
+
+Code-level auto-refusals (critical vulns without audit, near-zero coverage with many critical vulns) only apply on tracks containing proprietary code. Data-room catalogue: proprietary-code evidence is conditioned on `applicability = 'proprietary_code'` (C-01→C-04, C-06, C-07, C-09); licensed-stack evidence on `'licensed_stack'` (C-60→C-64, with C-60/C-61/C-63 blocking — parity with the proprietary track); C-05 and C-08 remain universal.
 
 ---
 

@@ -38,6 +38,8 @@ function generateVerificationCode(): string {
 // ── Schéma de validation Zod ──────────────────────────────────────────────────
 
 const codeInputSchema = z.object({
+  /* CIFSO v4.2 — nature de la base technologique */
+  technologyMode:         z.enum(['proprietary', 'licensed_stack', 'hybrid']).optional(),
   testCoverage:           z.number().min(0).max(100),
   techDebtDocumented:     z.enum(['yes', 'no']),
   criticalVulnOpen:       z.number().int().min(0),
@@ -47,6 +49,12 @@ const codeInputSchema = z.object({
   apiDocumentation:       z.enum(['complete', 'partial', 'absent']),
   obsoleteDependencies:   z.number().min(0),
   lastCodeAuditMonthsAgo: z.number().min(0),
+  /* CIFSO v4.2 — piste stack licencié */
+  softwareInventory:      z.enum(['complete', 'partial', 'absent']).optional(),
+  licenseCompliance:      z.enum(['yes', 'no', 'na']).optional(),
+  siMapping:              z.enum(['complete', 'partial', 'absent']).optional(),
+  vendorReversibility:    z.enum(['complete', 'partial', 'absent']).optional(),
+  vendorConcentration:    z.enum(['low', 'medium', 'high']).optional(),
   /* CIFSO v4.1 — conformité réglementaire produit */
   craCompliance:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   dataActTechnical:       z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
