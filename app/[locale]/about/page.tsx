@@ -256,12 +256,25 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="mt-12 pt-10 border-t border-ag-border">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-              / {ta('whyAegryn.p3Label')}
-            </p>
-            <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl">
-              {ta('whyAegryn.p3')}
-            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
+                  / {ta('whyAegryn.p3Label')}
+                </p>
+                <p className="text-[14px] text-ag-gray leading-relaxed">
+                  {ta('whyAegryn.p3')}
+                </p>
+              </div>
+              <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
+                <Image
+                  src="/images/about/about_lausanne.jpg"
+                  alt={ta('whyAegryn.p3ImageAlt')}
+                  fill
+                  sizes="(min-width:1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
