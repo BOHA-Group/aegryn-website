@@ -5386,7 +5386,7 @@
       "label": "Independencia tecnológica",
       "badge": "INDEPENDENCIA TECNOLÓGICA"
     },
-    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Sin dependencia de grandes editores. Sin suscripción SaaS generalista. Código controlado, integrable en su infraestructura.",
+    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Su código, sus datos, su infraestructura: control total, sin dependencia impuesta ni cloud americano por defecto.",
     "whySection": {
       "label": "Por qué software a medida",
       "title": "Lo que el mercado estándar no puede ofrecerle.",
@@ -5413,7 +5413,7 @@
     "domainsSection": {
       "label": "10 Dominios de software",
       "title": "Los dominios donde construimos\npara nuestros clientes.",
-      "desc": "Construimos en dominios donde la necesidad es transversal, recurrente y regulatoria, con una capa de IA, independencia e integración sin dependencia de grandes editores.",
+      "desc": "Construimos en dominios donde la necesidad es transversal, recurrente y regulatoria, con una capa de IA, independencia e integración en su sistema de información existente, sin dependencia impuesta.",
       "domains": [
         {
           "num": "01",
@@ -5538,7 +5538,7 @@
     "sovereigntySection": {
       "label": "Independencia por arquitectura",
       "title": "Independencia por Arquitectura.",
-      "desc": "La independencia no es una etiqueta de marketing. Es una propiedad arquitectural verificable.",
+      "desc": "La independencia no es una etiqueta de marketing. Es una propiedad arquitectural verificable. La soberanía no es la ausencia de editores: es el control. Datos bajo jurisdicción suiza o europea, IP detenida al 100 %, modelos de IA desplegables sin flujos hacia infraestructuras sometidas al Cloud Act sin su acuerdo explícito. Integramos las soluciones que respetan este marco: on-premise, clouds soberanos certificados CH/UE, ofertas europeas de los grandes editores.",
       "pillars": [
         {
           "key": "data",
@@ -5558,7 +5558,7 @@
         {
           "key": "proveedor",
           "title": "Cero vendor lock-in",
-          "desc": "Arquitectura open source o estándares abiertos. Puede cambiar de integrador en cualquier momento sin depender de Aegryn."
+          "desc": "Open source, estándares abiertos o soluciones de editores desplegadas bajo jurisdicción europea. Puede cambiar de integrador en cualquier momento, sin depender de Aegryn ni de un único proveedor."
         },
         {
           "key": "audit",
@@ -8657,7 +8657,8 @@
     "mobile": "Mobile",
     "infra": "Infraestructura",
     "integrations": "Integraciones",
-    "note": "Stack seleccionado proyecto por proyecto según los requisitos funcionales, la escalabilidad esperada y la elegibilidad para la certificación Aegryn Grade."
+    "note": "Stack seleccionado proyecto por proyecto según los requisitos funcionales, la escalabilidad esperada y la elegibilidad para la certificación Aegryn Grade. Integración con los sistemas empresariales existentes (CRM, ERP) y despliegue posible en infraestructura soberana CH/UE.",
+    "enterprise": "Sistemas empresariales"
   },
   "languageSwitcher": {
     "select": "Seleccionar idioma"

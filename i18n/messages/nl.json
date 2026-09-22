@@ -5401,7 +5401,7 @@
       "label": "Technologische onafhankelijkheid",
       "badge": "TECHNOLOGISCHE ONAFHANKELIJKHEID"
     },
-    "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Geen afhankelijkheid van grote leveranciers. Geen generalistisch SaaS-abonnement. Beheerste code, integreerbaar in uw infrastructuur.",
+    "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Uw code, uw data, uw infrastructuur: volledige controle, zonder opgelegde afhankelijkheid en zonder Amerikaanse cloud als standaard.",
     "whySection": {
       "label": "Waarom maatwerksoftware",
       "title": "Wat de standaardmarkt u niet kan bieden.",
@@ -5553,7 +5553,7 @@
     "sovereigntySection": {
       "label": "Onafhankelijkheid door architectuur",
       "title": "Onafhankelijkheid door Architectuur.",
-      "desc": "Onafhankelijkheid is geen marketinglabel. Het is een verifieerbare architecturale eigenschap.",
+      "desc": "Onafhankelijkheid is geen marketinglabel. Het is een verifieerbare architecturale eigenschap. Soevereiniteit is niet de afwezigheid van leveranciers: het is controle. Data onder Zwitserse of Europese jurisdictie, IP voor 100 % in uw bezit, AI-modellen inzetbaar zonder flows naar aan de Cloud Act onderworpen infrastructuren zonder uw expliciete toestemming. Wij integreren de oplossingen die dit kader respecteren: on-premise, gecertificeerde soevereine CH/EU-clouds, Europese aanbiedingen van grote leveranciers.",
       "pillars": [
         {
           "key": "data",
@@ -5573,7 +5573,7 @@
         {
           "key": "vendor",
           "title": "Nul vendor lock-in",
-          "desc": "Open source architectuur of open standaarden. U kunt op elk moment van integrator wisselen zonder afhankelijk te zijn van Aegryn."
+          "desc": "Open source, open standaarden of leveranciersoplossingen onder Europese jurisdictie. U kunt op elk moment van integrator wisselen, zonder afhankelijk te zijn van Aegryn of van één enkele leverancier."
         },
         {
           "key": "audit",
@@ -8672,7 +8672,8 @@
     "mobile": "Mobiel",
     "infra": "Infrastructuur",
     "integrations": "Integraties",
-    "note": "Stack project per project geselecteerd op basis van functionele vereisten, verwachte schaalbaarheid en eligibiliteit voor Aegryn Grade-certificering."
+    "note": "Stack project per project geselecteerd op basis van functionele vereisten, verwachte schaalbaarheid en eligibiliteit voor Aegryn Grade-certificering. Integratie met bestaande enterprisesystemen (CRM, ERP) en inzet mogelijk op soevereine CH/EU-infrastructuur.",
+    "enterprise": "Enterprisesystemen"
   },
   "languageSwitcher": {
     "select": "Taal selecteren"

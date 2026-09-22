@@ -5386,7 +5386,7 @@
       "label": "Indipendenza tecnologica",
       "badge": "INDIPENDENZA TECNOLOGICA"
     },
-    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Senza dipendenza dai grandi editori. Senza abbonamento SaaS generalista. Codice controllato, integrabile nella vostra infrastruttura.",
+    "desc": "Dalle PMI ai grandi gruppi, in Svizzera e in Europa: Aegryn progetta, distribuisce e mantiene software aziendale su misura. Il vostro codice, i vostri dati, la vostra infrastruttura: controllo totale, senza dipendenza imposta né cloud americano di default.",
     "whySection": {
       "label": "Perché software su misura",
       "title": "Ciò che il mercato standard non può offrirvi.",
@@ -5413,7 +5413,7 @@
     "domainsSection": {
       "label": "10 domini software",
       "title": "I domini in cui costruiamo\nper i nostri clienti.",
-      "desc": "Costruiamo in domini dove il bisogno è trasversale, ricorrente e normativo, con uno strato IA, indipendenza e integrazione senza dipendenza dai grandi editori.",
+      "desc": "Costruiamo in domini dove il bisogno è trasversale, ricorrente e normativo, con uno strato IA, indipendenza e integrazione nel vostro sistema informativo esistente, senza dipendenza imposta.",
       "domains": [
         {
           "num": "01",
@@ -5538,7 +5538,7 @@
     "sovereigntySection": {
       "label": "Indipendenza per architettura",
       "title": "Indipendenza per Architettura.",
-      "desc": "L'indipendenza non è un'etichetta di marketing. È una proprietà architettonica verificabile.",
+      "desc": "L'indipendenza non è un'etichetta di marketing. È una proprietà architettonica verificabile. La sovranità non è l'assenza di vendor: è il controllo. Dati sotto giurisdizione svizzera o europea, IP detenuta al 100 %, modelli IA distribuibili senza flussi verso infrastrutture soggette al Cloud Act senza il vostro accordo esplicito. Integriamo le soluzioni che rispettano questo quadro: on-premise, cloud sovrani certificati CH/UE, offerte europee dei grandi vendor.",
       "pillars": [
         {
           "key": "data",
@@ -5558,7 +5558,7 @@
         {
           "key": "fornitore",
           "title": "Zero vendor lock-in",
-          "desc": "Architettura open source o standard aperti. Potete cambiare integratore in qualsiasi momento senza dipendere da Aegryn."
+          "desc": "Open source, standard aperti o soluzioni di vendor distribuite sotto giurisdizione europea. Potete cambiare integratore in qualsiasi momento, senza dipendere da Aegryn né da un unico fornitore."
         },
         {
           "key": "audit",
@@ -8657,7 +8657,8 @@
     "mobile": "Mobile",
     "infra": "Infrastruttura",
     "integrations": "Integrazioni",
-    "note": "Stack selezionato progetto per progetto in base ai requisiti funzionali, alla scalabilità attesa e all'idoneità alla certificazione Aegryn Grade."
+    "note": "Stack selezionato progetto per progetto in base ai requisiti funzionali, alla scalabilità attesa e all'idoneità alla certificazione Aegryn Grade. Integrazione con i sistemi enterprise esistenti (CRM, ERP) e deployment possibile su infrastruttura sovrana CH/UE.",
+    "enterprise": "Sistemi enterprise"
   },
   "languageSwitcher": {
     "select": "Seleziona la lingua"

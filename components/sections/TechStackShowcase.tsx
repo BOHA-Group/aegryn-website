@@ -84,6 +84,15 @@ const CATEGORIES: TechCategory[] = [
       { name: 'Puppeteer',    abbr: 'Pp', color: '#40B5A4' },
     ],
   },
+  {
+    labelKey: 'enterprise',
+    items: [
+      { name: 'CRM',          abbr: 'CR', color: '#0D1B2A' },
+      { name: 'ERP',          abbr: 'ER', color: '#1B3A5C' },
+      { name: 'ITSM',         abbr: 'IT', color: '#334155' },
+      { name: 'BI',           abbr: 'BI', color: '#475569' },
+    ],
+  },
 ]
 
 /* ── Badge component ───────────────────────────────────────────────── */

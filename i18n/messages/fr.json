@@ -5346,7 +5346,7 @@
       "label": "Indépendance technologique",
       "badge": "INDÉPENDANCE TECHNOLOGIQUE"
     },
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Sans dépendance aux grands éditeurs. Sans abonnement SaaS génériste. Un code maîtrisé, intégrable dans votre infrastructure.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : maîtrise totale, sans dépendance imposée ni cloud américain par défaut.",
     "whySection": {
       "label": "Pourquoi des solutions sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
@@ -5373,7 +5373,7 @@
     "domainsSection": {
       "label": "10 domaines logiciels",
       "title": "Les domaines où nous construisons\npour nos clients.",
-      "desc": "Nous construisons dans les domaines où le besoin est transversal, récurrent et réglementaire, avec une couche IA, indépendance et intégration sans dépendance de grands éditeurs.",
+      "desc": "Nous construisons dans les domaines où le besoin est transversal, récurrent et réglementaire, avec une couche IA, indépendance et intégration dans votre système d'information existant, sans dépendance imposée.",
       "domains": [
         {
           "num": "01",
@@ -5498,7 +5498,7 @@
     "sovereigntySection": {
       "label": "Indépendance par l'architecture",
       "title": "Indépendance par l'Architecture.",
-      "desc": "L'indépendance n'est pas un label marketing. C'est une propriété architecturale vérifiable.",
+      "desc": "L'indépendance n'est pas un label marketing. C'est une propriété architecturale vérifiable. La souveraineté n'est pas l'absence d'éditeurs : c'est la maîtrise. Données sous juridiction suisse ou européenne, IP détenue à 100 %, modèles IA déployables sans flux vers des infrastructures soumises au Cloud Act sans votre accord explicite. Nous intégrons les solutions qui respectent ce cadre : on-premise, clouds souverains certifiés CH/EU, offres européennes des grands éditeurs.",
       "pillars": [
         {
           "key": "data",
@@ -5518,7 +5518,7 @@
         {
           "key": "vendor",
           "title": "Indépendance technologique",
-          "desc": "Architecture open source ou standards ouverts. Vous pouvez changer d'intégrateur à tout moment sans dépendre d'Aegryn."
+          "desc": "Open source, standards ouverts ou solutions éditeurs déployées sous juridiction européenne. Vous pouvez changer d'intégrateur à tout moment, sans dépendre d'Aegryn ni d'un fournisseur unique."
         },
         {
           "key": "audit",
@@ -8617,7 +8617,8 @@
     "mobile": "Mobile",
     "infra": "Infrastructure",
     "integrations": "Intégrations",
-    "note": "Stack sélectionnée projet par projet selon les besoins fonctionnels, la scalabilité attendue et l'éligibilité à la certification Aegryn Grade."
+    "note": "Stack sélectionnée projet par projet selon les besoins fonctionnels, la scalabilité attendue et l'éligibilité à la certification Aegryn Grade. Intégration aux systèmes enterprise existants (CRM, ERP) et déploiement possible sur infrastructure souveraine CH/EU.",
+    "enterprise": "Systèmes enterprise"
   },
   "languageSwitcher": {
     "select": "Sélectionner la langue"

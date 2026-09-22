@@ -5386,7 +5386,7 @@
       "label": "Technologische Unabhängigkeit",
       "badge": "TECHNOLOGISCHE UNABHÄNGIGKEIT"
     },
-    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet maßgeschneiderte Unternehmenssoftware. Keine Abhängigkeit von großen Anbietern. Kein generalistisches SaaS-Abonnement.  kontrollierbarer Code, integrierbar in Ihre Infrastruktur.",
+    "desc": "Von KMU bis Konzern, in der Schweiz und in Europa: Aegryn konzipiert, deployt und wartet massgeschneiderte Unternehmenssoftware. Ihr Code, Ihre Daten, Ihre Infrastruktur: volle Kontrolle, ohne erzwungene Abhängigkeit und ohne US-Cloud als Standard.",
     "whySection": {
       "label": "Warum maßgeschneiderte Software",
       "title": "Was der Standardmarkt Ihnen nicht bieten kann.",
@@ -5413,7 +5413,7 @@
     "domainsSection": {
       "label": "10 Software-Domänen",
       "title": "Die Domänen, in denen wir\nfür unsere Kunden bauen.",
-      "desc": "Wir bauen in Domänen, in denen der Bedarf abteilungsübergreifend, wiederkehrend und regulatorisch ist, mit einer KI-, Unabhängigkeits- und Integrationsschicht ohne Abhängigkeit von großen Anbietern.",
+      "desc": "Wir bauen in Domänen, in denen der Bedarf abteilungsübergreifend, wiederkehrend und regulatorisch ist, mit einer KI-, Unabhängigkeits- und Integrationsschicht, die sich in Ihr bestehendes Informationssystem einfügt, ohne erzwungene Abhängigkeit.",
       "domains": [
         {
           "num": "01",
@@ -5538,7 +5538,7 @@
     "sovereigntySection": {
       "label": "Unabhängigkeit durch Architektur",
       "title": "Unabhängigkeit durch Architektur.",
-      "desc": "Unabhängigkeit ist kein Marketinglabel. Es ist eine nachprüfbare architektonische Eigenschaft.",
+      "desc": "Unabhängigkeit ist kein Marketinglabel. Es ist eine nachprüfbare architektonische Eigenschaft. Souveränität bedeutet nicht die Abwesenheit von Anbietern: sie bedeutet Kontrolle. Daten unter Schweizer oder europäischer Jurisdiktion, IP zu 100 % in Ihrem Besitz, KI-Modelle ohne Datenflüsse zu dem Cloud Act unterliegenden Infrastrukturen ohne Ihre ausdrückliche Zustimmung. Wir integrieren die Lösungen, die diesen Rahmen respektieren: On-Premise, zertifizierte souveräne CH/EU-Clouds, europäische Angebote grosser Anbieter.",
       "pillars": [
         {
           "key": "data",
@@ -5558,7 +5558,7 @@
         {
           "key": "anbieter",
           "title": "Kein Vendor-Lock-in",
-          "desc": "Open-Source-Architektur oder offene Standards. Sie können jederzeit den Integrator wechseln, ohne von Aegryn abhängig zu sein."
+          "desc": "Open Source, offene Standards oder Anbieterlösungen unter europäischer Jurisdiktion. Sie können jederzeit den Integrator wechseln, ohne von Aegryn oder einem einzelnen Anbieter abhängig zu sein."
         },
         {
           "key": "audit",
@@ -8657,7 +8657,8 @@
     "mobile": "Mobile",
     "infra": "Infrastruktur",
     "integrations": "Integrationen",
-    "note": "Stack wird projektspezifisch nach funktionalen Anforderungen, erwarteter Skalierbarkeit und Eignung für die Aegryn Grade-Zertifizierung ausgewählt."
+    "note": "Stack wird projektspezifisch nach funktionalen Anforderungen, erwarteter Skalierbarkeit und Eignung für die Aegryn Grade-Zertifizierung ausgewählt. Integration in bestehende Enterprise-Systeme (CRM, ERP) und Deployment auf souveräner CH/EU-Infrastruktur möglich.",
+    "enterprise": "Enterprise-Systeme"
   },
   "languageSwitcher": {
     "select": "Sprache auswählen"

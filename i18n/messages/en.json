@@ -5386,7 +5386,7 @@
       "label": "Technological independence",
       "badge": "TECHNOLOGICAL INDEPENDENCE"
     },
-    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. No dependency on major vendors. No generalist SaaS subscriptions. Mastered code, integrable into your infrastructure.",
+    "desc": "From SMEs to large groups, in Switzerland and Europe: Aegryn designs, deploys and maintains custom business software. Your code, your data, your infrastructure: full control, with no imposed dependency and no US cloud by default.",
     "whySection": {
       "label": "Why bespoke software",
       "title": "What the standard market cannot offer you.",
@@ -5413,7 +5413,7 @@
     "domainsSection": {
       "label": "10 Software Domains",
       "title": "The domains where we build\nfor our clients.",
-      "desc": "We build in domains where the need is cross-functional, recurring and regulatory, with an AI, independence and integration layer without dependency on major vendors.",
+      "desc": "We build in domains where the need is cross-functional, recurring and regulatory, with an AI, independence and integration layer that fits your existing information system, with no imposed dependency.",
       "domains": [
         {
           "num": "01",
@@ -5538,7 +5538,7 @@
     "sovereigntySection": {
       "label": "Independence by Architecture",
       "title": "Independence by Architecture.",
-      "desc": "Independence is not a marketing label. It is a verifiable architectural property.",
+      "desc": "Independence is not a marketing label. It is a verifiable architectural property. Sovereignty is not the absence of vendors: it is control. Data under Swiss or European jurisdiction, IP owned 100%, AI models deployable without flows to Cloud Act-subject infrastructure without your explicit consent. We integrate the solutions that respect this framework: on-premise, certified sovereign CH/EU clouds, European offerings from major vendors.",
       "pillars": [
         {
           "key": "data",
@@ -5558,7 +5558,7 @@
         {
           "key": "vendor",
           "title": "Zero Vendor Lock-in",
-          "desc": "Open source architecture or open standards. You can change integrator at any time without depending on Aegryn."
+          "desc": "Open source, open standards or vendor solutions deployed under European jurisdiction. You can change integrator at any time, without depending on Aegryn or any single vendor."
         },
         {
           "key": "audit",
@@ -8657,7 +8657,8 @@
     "mobile": "Mobile",
     "infra": "Infrastructure",
     "integrations": "Integrations",
-    "note": "Stack selected project by project based on functional requirements, expected scalability and eligibility for Aegryn Grade certification."
+    "note": "Stack selected project by project based on functional requirements, expected scalability and eligibility for Aegryn Grade certification. Integration with existing enterprise systems (CRM, ERP) and deployment possible on sovereign CH/EU infrastructure.",
+    "enterprise": "Enterprise systems"
   },
   "languageSwitcher": {
     "select": "Select language"
