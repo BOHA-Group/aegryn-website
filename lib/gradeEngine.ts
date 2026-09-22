@@ -25,7 +25,7 @@ export type YesNo         = 'yes' | 'no'
 /** Niveau de preuve pour l'ARR — remplace le booléen arrAudited (CIFSO v4.0) */
 export type ArrAuditLevel = 'declarative' | 'verifiable' | 'audited'
 export type YesNoNA       = 'yes' | 'no' | 'na'
-/** CIFSO v4.2 — nature de la base technologique : code propriétaire, stack licenciée, ou mixte */
+/** CIFSO v4.12 — nature de la base technologique : code propriétaire, stack licenciée, ou mixte */
 export type TechnologyMode = 'proprietary' | 'licensed_stack' | 'hybrid'
 export type Coverage      = 'complete' | 'partial' | 'absent'
 export type Architecture  = 'decoupled' | 'partial' | 'monolithic'
@@ -46,7 +46,7 @@ export interface CodeInput {
   apiDocumentation: DocLevel
   obsoleteDependencies: number       // count ou %
   lastCodeAuditMonthsAgo: number     // 9999 = jamais
-  /* ── CIFSO v4.2 — piste licensed_stack / hybrid : gouvernance du SI licencié ── */
+  /* ── CIFSO v4.12 — piste licensed_stack / hybrid : gouvernance du SI licencié ── */
   /** C-60 — Inventaire documenté des logiciels/SaaS critiques (fournisseur, usage, criticité) */
   softwareInventory?: DocLevel
   /** C-61 — Conformité des licences et versions supportées */
@@ -57,7 +57,7 @@ export interface CodeInput {
   vendorReversibility?: DocLevel
   /** C-64 — Concentration fournisseurs critiques */
   vendorConcentration?: 'low' | 'medium' | 'high'
-  /* ── CIFSO v4.1 — Conformité réglementaire produit ── */
+  /* ── CIFSO v4.11 — Conformité réglementaire produit ── */
   /** C-50 — CRA : SBOM, processus de gestion des vulnérabilités, sécurité by design (si sellsDigitalProducts) */
   craCompliance?: RegComplianceStatus
   /** C-51 — Data Act technique : interfaces d'accès direct/gratuit/défaut aux données produit, formats d'export documentés (si sellsConnectedProducts) */
@@ -72,7 +72,7 @@ export interface IPInput {
   thirdPartyAPIContracted: YesNo     // API tierce critique contractualisée
   moat: MoatType
   rgpdCompliance: Coverage
-  /* ── CIFSO v4.1 — Conformité réglementaire contractuelle & juridique ── */
+  /* ── CIFSO v4.11 — Conformité réglementaire contractuelle & juridique ── */
   /** I-50 — Data Act contractuel : conditions de partage B2B FRAND, protection secrets d'affaires, clauses non déloyales (si sellsConnectedProducts) */
   dataActB2BTerms?: RegComplianceStatus
   /** I-51 — ePrivacy/cookies : consentement conforme, registre des trackers (si processesEUData) */
@@ -122,7 +122,7 @@ export type PentestMethodology = 'owasp_ptes' | 'custom' | 'unknown'
 export type PentestAuditorCert = 'oscp_crest' | 'other_cert' | 'none'
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * CIFSO v4.1 — CONFORMITÉ RÉGLEMENTAIRE (matrice d'applicabilité)
+ * CIFSO v4.11 — CONFORMITÉ RÉGLEMENTAIRE (matrice d'applicabilité)
  *
  * Principe : une régulation n'est évaluée que si elle est applicable à l'actif
  * (RegulatoryProfile = source de vérité sur l'applicabilité).
@@ -190,7 +190,7 @@ export interface SecurityInput {
   aiPolicy?: YesNo
   /** Données clients transmises à des modèles tiers sans contrat de traitement / clause de non-entraînement (S-45) */
   aiClientDataExposed?: YesNo
-  /* ── CIFSO v4.1 — Conformité réglementaire sectorielle ── */
+  /* ── CIFSO v4.11 — Conformité réglementaire sectorielle ── */
   /** S-52 — NIS2 : enregistrement, mesures de gestion des risques, notification incidents 24h/72h (si operatesCriticalSector) */
   nis2Compliance?: RegComplianceStatus
   /** S-53 — DORA : registre TIC, tests de résilience, clauses prestataires TIC (si isFinancialEntityOrICT) */
@@ -214,7 +214,7 @@ export interface OrganisationInput {
   founderLeadsSales:        YesNo
   cultureDocumented:        YesNo
   independentAdvisor:       YesNo
-  /* ── CIFSO v4.1 — O-50 : gouvernance conformité (si au moins une régulation applicable) ── */
+  /* ── CIFSO v4.11 — O-50 : gouvernance conformité (si au moins une régulation applicable) ── */
   /** Responsable conformité désigné (DPO, référent NIS2/DORA, ou équivalent) et accountability documentée au niveau direction */
   complianceGovernance?:    RegComplianceStatus
 }
@@ -225,7 +225,7 @@ export interface GradeInput {
   finance:      FinanceInput
   security:     SecurityInput
   organisation: OrganisationInput
-  /** CIFSO v4.1 — Matrice d'applicabilité réglementaire (déclarée vendeur, validée analyste) */
+  /** CIFSO v4.11 — Matrice d'applicabilité réglementaire (déclarée vendeur, validée analyste) */
   regulatoryProfile?: RegulatoryProfile
   proofQualities?: {
     code:         ProofQuality
@@ -378,9 +378,9 @@ export interface GradeResult {
     organisation?: ProofQuality
     security: ProofQuality
   }
-  /** CIFSO v4.1 — Constats réglementaires applicables (vides si aucun périmètre applicable) */
+  /** CIFSO v4.11 — Constats réglementaires applicables (vides si aucun périmètre applicable) */
   regulatoryFindings:  string[]
-  /** CIFSO v4.1 — Vrai si une régulation applicable est non conforme → plafond AA appliqué */
+  /** CIFSO v4.11 — Vrai si une régulation applicable est non conforme → plafond AA appliqué */
   regulatoryCapped:    boolean
 }
 
@@ -486,7 +486,7 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
     if (mode === 'hybrid') rationale.push('Piste hybride : moyenne code propriétaire / stack licenciée')
   }
 
-  /* ── CIFSO v4.1 — C-50 : Cyber Resilience Act (si produit avec éléments numériques) ── */
+  /* ── CIFSO v4.11 — C-50 : Cyber Resilience Act (si produit avec éléments numériques) ── */
   if (profile?.sellsDigitalProducts === 'yes') {
     if      (input.craCompliance === 'compliant')     { score += 1; rationale.push('CRA : SBOM à jour et processus de gestion des vulnérabilités conformes (C-50)') }
     else if (input.craCompliance === 'partial')       { score -= 1; rationale.push('CRA : conformité partielle — SBOM ou processus de vulnérabilités incomplet (C-50)') }
@@ -494,7 +494,7 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
     else                                              { score -= 2; rationale.push('CRA : non évalué — aucune preuve SBOM/processus en data room (C-50)') }
   }
 
-  /* ── CIFSO v4.1 — C-51 : Data Act technique (si produit connecté) ── */
+  /* ── CIFSO v4.11 — C-51 : Data Act technique (si produit connecté) ── */
   if (profile?.sellsConnectedProducts === 'yes') {
     if      (input.dataActTechnical === 'compliant')     { score += 1; rationale.push('Data Act : accès direct, gratuit et par défaut aux données produit implémenté (C-51)') }
     else if (input.dataActTechnical === 'partial')       { score -= 1; rationale.push('Data Act : accès aux données produit partiel — pas direct, gratuit et par défaut (C-51)') }
@@ -556,7 +556,7 @@ function scoreIP(input: IPInput, profile?: RegulatoryProfile): DimensionResult {
   else if (input.rgpdCompliance === 'partial')  {             rationale.push('Conformité RGPD/LPD partielle') }
   else                                          {             rationale.push('Non-conformité RGPD/LPD documentée') }
 
-  /* ── CIFSO v4.1 — I-50 : Data Act contractuel (si produit connecté) ── */
+  /* ── CIFSO v4.11 — I-50 : Data Act contractuel (si produit connecté) ── */
   if (profile?.sellsConnectedProducts === 'yes') {
     if      (input.dataActB2BTerms === 'compliant')     { score += 1; rationale.push('Data Act : conditions de partage B2B FRAND documentées (I-50)') }
     else if (input.dataActB2BTerms === 'partial')       { score -= 1; rationale.push('Data Act : conditions B2B partiellement conformes — FRAND ou protection secrets d\'affaires incomplets (I-50)') }
@@ -564,7 +564,7 @@ function scoreIP(input: IPInput, profile?: RegulatoryProfile): DimensionResult {
     else                                                { score -= 2; rationale.push('Data Act : non évalué — aucune condition B2B en data room (I-50)') }
   }
 
-  /* ── CIFSO v4.1 — I-51 : ePrivacy / cookies (si données UE) ── */
+  /* ── CIFSO v4.11 — I-51 : ePrivacy / cookies (si données UE) ── */
   if (profile?.processesEUData === 'yes') {
     if      (input.eprivacyCompliance === 'compliant')     { score += 1; rationale.push('ePrivacy : consentement et registre des trackers conformes (I-51)') }
     else if (input.eprivacyCompliance === 'partial')       {             rationale.push('ePrivacy : conformité partielle (I-51)') }
@@ -572,7 +572,7 @@ function scoreIP(input: IPInput, profile?: RegulatoryProfile): DimensionResult {
     else                                                   { score -= 1; rationale.push('ePrivacy : non évalué — aucune preuve de consentement en data room (I-51)') }
   }
 
-  /* ── CIFSO v4.1 — I-52 : DSA/P2B (si plateforme) ── */
+  /* ── CIFSO v4.11 — I-52 : DSA/P2B (si plateforme) ── */
   if (profile?.operatesPlatform === 'yes') {
     if      (input.platformFairTerms === 'compliant')     { score += 1; rationale.push('DSA/P2B : conditions équitables et transparence documentées (I-52)') }
     else if (input.platformFairTerms === 'partial')       {             rationale.push('DSA/P2B : conformité partielle (I-52)') }
@@ -580,7 +580,7 @@ function scoreIP(input: IPInput, profile?: RegulatoryProfile): DimensionResult {
     else                                                  { score -= 1; rationale.push('DSA/P2B : non évalué — conditions plateforme absentes de la data room (I-52)') }
   }
 
-  /* ── CIFSO v4.1 — I-53 : Sanctions & embargos (universel) ── */
+  /* ── CIFSO v4.11 — I-53 : Sanctions & embargos (universel) ── */
   if (input.sanctionsDeclaration === 'declared_clean') {
     rationale.push('Absence d\'exposition sanctions/embargos déclarée (I-53)')
   } else if (input.sanctionsDeclaration === 'exposed') {
@@ -589,7 +589,7 @@ function scoreIP(input: IPInput, profile?: RegulatoryProfile): DimensionResult {
     score -= 1; rationale.push('Aucune déclaration sanctions/embargos fournie (I-53)')
   }
 
-  /* ── CIFSO v4.1 — I-54 : AML (si entité financière/TIC) ── */
+  /* ── CIFSO v4.11 — I-54 : AML (si entité financière/TIC) ── */
   if (profile?.isFinancialEntityOrICT === 'yes') {
     if      (input.amlPolicy === 'compliant')     { score += 1; rationale.push('AML : politique anti-blanchiment documentée (I-54)') }
     else if (input.amlPolicy === 'partial')       {             rationale.push('AML : politique partielle (I-54)') }
@@ -826,7 +826,7 @@ function scoreSecurity(input: SecurityInput, profile?: RegulatoryProfile): Dimen
   else if (input.externalCertification === 'in_progress') { score += 1; rationale.push('Certification externe en cours') }
   else                                                     {             rationale.push('Aucune certification externe') }
 
-  /* ── CIFSO v4.1 — S-52 : NIS2 (si secteur essentiel/important) ── */
+  /* ── CIFSO v4.11 — S-52 : NIS2 (si secteur essentiel/important) ── */
   if (profile?.operatesCriticalSector === 'yes') {
     if      (input.nis2Compliance === 'compliant')     { score += 1; rationale.push('NIS2 : enregistrement, gestion des risques et notification d\'incidents conformes (S-52)') }
     else if (input.nis2Compliance === 'partial')       { score -= 1; rationale.push('NIS2 : conformité partielle — mesures incomplètes (S-52)') }
@@ -834,7 +834,7 @@ function scoreSecurity(input: SecurityInput, profile?: RegulatoryProfile): Dimen
     else                                               { score -= 2; rationale.push('NIS2 : non évalué — aucune preuve d\'enregistrement ni de gestion des risques (S-52)') }
   }
 
-  /* ── CIFSO v4.1 — S-53 : DORA (si entité financière / prestataire TIC) ── */
+  /* ── CIFSO v4.11 — S-53 : DORA (si entité financière / prestataire TIC) ── */
   if (profile?.isFinancialEntityOrICT === 'yes') {
     if      (input.doraCompliance === 'compliant')     { score += 1; rationale.push('DORA : registre TIC, tests de résilience et clauses prestataires conformes (S-53)') }
     else if (input.doraCompliance === 'partial')       { score -= 1; rationale.push('DORA : conformité partielle (S-53)') }
@@ -842,7 +842,7 @@ function scoreSecurity(input: SecurityInput, profile?: RegulatoryProfile): Dimen
     else                                               { score -= 2; rationale.push('DORA : non évalué — aucun registre TIC ni test de résilience en data room (S-53)') }
   }
 
-  /* ── CIFSO v4.1 — S-54 : EU AI Act (si fournisseur de systèmes IA) ── */
+  /* ── CIFSO v4.11 — S-54 : EU AI Act (si fournisseur de systèmes IA) ── */
   if (profile?.providesAISystems === 'yes') {
     const hr = input.aiActHighRisk === 'yes'
     if      (input.aiActCompliance === 'compliant')     { score += 1; rationale.push(`AI Act : classification de risque documentée${hr ? ' (haut risque)' : ''}, obligations remplies (S-54)`) }
@@ -954,7 +954,7 @@ function scoreOrganisation(input: OrganisationInput, profile?: RegulatoryProfile
   if (input.independentAdvisor === 'yes') { score += 2; rationale.push('Administrateur indépendant ou conseil consultatif actif') }
   else                                    {             rationale.push('Aucun administrateur ou conseil consultatif externe') }
 
-  /* ── CIFSO v4.1 — O-50 : gouvernance conformité (si périmètre réglementaire applicable) ── */
+  /* ── CIFSO v4.11 — O-50 : gouvernance conformité (si périmètre réglementaire applicable) ── */
   if (hasRegulatoryScope(profile)) {
     if      (input.complianceGovernance === 'compliant')     { score += 1; rationale.push('Gouvernance conformité formalisée : responsable désigné et accountability au niveau direction (O-50)') }
     else if (input.complianceGovernance === 'partial')       {             rationale.push('Gouvernance conformité partielle (O-50)') }
@@ -1024,7 +1024,7 @@ export function runGradeEngine(input: GradeInput): GradeResult {
     }
   }
 
-  // ── CIFSO v4.1 — Plafond réglementaire : régulation applicable non conforme → grade ≤ AA ──
+  // ── CIFSO v4.11 — Plafond réglementaire : régulation applicable non conforme → grade ≤ AA ──
   // Le rapport est TOUJOURS produit (jamais de refus) : les manquements se traduisent
   // en pénalités de score, un plafond de grade et un impact TRS.
   const regulatoryFindings = collectRegulatoryFindings(input)
@@ -1075,7 +1075,7 @@ export function runGradeEngine(input: GradeInput): GradeResult {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// CIFSO v4.1 — CONSTATS RÉGLEMENTAIRES (matrice d'applicabilité)
+// CIFSO v4.11 — CONSTATS RÉGLEMENTAIRES (matrice d'applicabilité)
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface RegulatoryFinding {
@@ -1174,7 +1174,7 @@ function computeTRS(
   regulatoryFindings: RegulatoryFinding[] = [],
 ): { trs: TRSLevel; trsReasons: string[] } {
   const reasons: string[] = []
-  // CIFSO v4.1 — constats réglementaires par sévérité
+  // CIFSO v4.11 — constats réglementaires par sévérité
   const regBlocking    = regulatoryFindings.filter(f => f.severity === 'blocking').map(f => f.label)
   const regConditional = regulatoryFindings.filter(f => f.severity === 'conditional').map(f => f.label)
   const regRemediation = regulatoryFindings.filter(f => f.severity === 'remediation').map(f => f.label)
@@ -1202,7 +1202,7 @@ function computeTRS(
       reasons.push('Runway effectif < 3 mois — ferme la fenêtre AAA/★')
     }
   }
-  // CIFSO v4.1 — manquements réglementaires bloquants (Data Act, AI Act haut risque, sanctions)
+  // CIFSO v4.11 — manquements réglementaires bloquants (Data Act, AI Act haut risque, sanctions)
   reasons.push(...regBlocking)
 
   if (reasons.length > 0) return { trs: 'blocked', trsReasons: reasons }
@@ -1310,7 +1310,7 @@ function buildRecommendations(
     }
   }
 
-  /* ── CIFSO v4.1 — Recommandations réglementaires ── */
+  /* ── CIFSO v4.11 — Recommandations réglementaires ── */
   const p = input.regulatoryProfile
   if (p) {
     // Data Act — produit connecté

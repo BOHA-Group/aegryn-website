@@ -199,7 +199,7 @@ function YesNoNASelect({ value, onChange }: { value: string; onChange: (v: strin
   )
 }
 
-/* CIFSO v4.1 — Statut de conformité réglementaire (jamais bloquant pour le rapport) */
+/* CIFSO v4.11 — Statut de conformité réglementaire (jamais bloquant pour le rapport) */
 function RegComplianceSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   return (
     <select value={value} onChange={e => onChange(e.target.value)} className={selectCls}>
@@ -546,8 +546,8 @@ export default function GradeEngineForm({
       {/* Colonne gauche — formulaire */}
       <div className="space-y-3">
 
-      {/* PROFIL RÉGLEMENTAIRE — CIFSO v4.1 : matrice d'applicabilité */}
-      <Section title="Profil réglementaire — applicabilité (CIFSO v4.1)" open={open.regulatory} onToggle={() => setOpen(p => ({ ...p, regulatory: !p.regulatory }))}>
+      {/* PROFIL RÉGLEMENTAIRE — CIFSO v4.11 : matrice d'applicabilité */}
+      <Section title="Profil réglementaire — applicabilité (CIFSO v4.11)" open={open.regulatory} onToggle={() => setOpen(p => ({ ...p, regulatory: !p.regulatory }))}>
         <p className="col-span-2 font-sans text-[10px] text-gray-400 -mt-1">
           Déclaré vendeur, validé analyste. Chaque « Oui » active les contrôles correspondants dans les dimensions C / I / S / O.
           « Non » ou N/A ne pénalise jamais le score.
@@ -582,7 +582,7 @@ export default function GradeEngineForm({
 
       {/* DIMENSION CODE */}
       <Section title="Dimension C : Code (20 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
-        {/* CIFSO v4.2 — nature de la base technologique */}
+        {/* CIFSO v4.12 — nature de la base technologique */}
         <Field label="Mode technologique" hint="Détermine la piste de scoring : code propriétaire, stack licenciée (SaaS/licences), ou hybride (moyenne des deux pistes)">
           <select value={input.code.technologyMode ?? 'proprietary'} onChange={e => setCode('technologyMode', e.target.value as TechnologyMode)} className={selectCls}>
             <option value="proprietary">Code propriétaire — l'organisation développe son logiciel</option>
@@ -654,7 +654,7 @@ export default function GradeEngineForm({
         </Field>
         </>
         )}
-        {/* CIFSO v4.1 — Conformité réglementaire produit (conditionnée au profil) */}
+        {/* CIFSO v4.11 — Conformité réglementaire produit (conditionnée au profil) */}
         {input.regulatoryProfile?.sellsDigitalProducts === 'yes' && (
           <Field label="CRA — Cyber Resilience Act (C-50)" hint="SBOM à jour, processus de gestion des vulnérabilités, sécurité by design">
             <RegComplianceSelect value={input.code.craCompliance ?? 'na'} onChange={v => setCode('craCompliance', v as RegComplianceStatus)} />
@@ -703,7 +703,7 @@ export default function GradeEngineForm({
             <option value="absent">Absente</option>
           </select>
         </Field>
-        {/* CIFSO v4.1 — Conformité réglementaire contractuelle & juridique */}
+        {/* CIFSO v4.11 — Conformité réglementaire contractuelle & juridique */}
         {input.regulatoryProfile?.sellsConnectedProducts === 'yes' && (
           <Field label="Data Act — conditions B2B (I-50)" hint="Termes FRAND, protection secrets d'affaires, clauses non déloyales">
             <RegComplianceSelect value={input.ip.dataActB2BTerms ?? 'na'} onChange={v => setIP('dataActB2BTerms', v as RegComplianceStatus)} />
@@ -922,7 +922,7 @@ export default function GradeEngineForm({
             <option value="yes">Oui, sans contrat ni clause de non-entraînement</option>
           </select>
         </Field>
-        {/* CIFSO v4.1 — Conformité réglementaire sectorielle (conditionnée au profil) */}
+        {/* CIFSO v4.11 — Conformité réglementaire sectorielle (conditionnée au profil) */}
         {input.regulatoryProfile?.operatesCriticalSector === 'yes' && (
           <Field label="NIS2 (S-52)" hint="Enregistrement, mesures de gestion des risques, notification d'incidents 24h/72h">
             <RegComplianceSelect value={input.security.nis2Compliance ?? 'na'} onChange={v => setSec('nis2Compliance', v as RegComplianceStatus)} />
@@ -971,7 +971,7 @@ export default function GradeEngineForm({
         <Field label="Administrateur indépendant ou advisory board actif">
           <YesNoSelect value={input.organisation.independentAdvisor} onChange={v => setOrg('independentAdvisor', v as 'yes' | 'no')} />
         </Field>
-        {/* CIFSO v4.1 — O-50 : gouvernance conformité (si périmètre réglementaire applicable) */}
+        {/* CIFSO v4.11 — O-50 : gouvernance conformité (si périmètre réglementaire applicable) */}
         {hasRegulatoryScope(input.regulatoryProfile) && (
           <Field label="Gouvernance conformité (O-50)" hint="Responsable conformité désigné (DPO, référent réglementaire), accountability au niveau direction">
             <RegComplianceSelect value={input.organisation.complianceGovernance ?? 'na'} onChange={v => setOrg('complianceGovernance', v as RegComplianceStatus)} />
@@ -1341,7 +1341,7 @@ export default function GradeEngineForm({
           )}
         </div>
 
-        {/* CIFSO v4.1 — Constats réglementaires */}
+        {/* CIFSO v4.11 — Constats réglementaires */}
         {result.regulatoryFindings.length > 0 && (
           <div className="bg-amber-50 border border-amber-200 p-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-amber-700 mb-2">

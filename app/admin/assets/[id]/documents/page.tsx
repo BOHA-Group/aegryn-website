@@ -49,7 +49,7 @@ export default async function AdminAssetDocumentsPage({
 
   const catalog = (catalogRows ?? []) as DocumentCatalogEntry[]
 
-  /* Profil réglementaire (dernier input moteur) — filtre les pièces conditionnelles (CIFSO v4.1) */
+  /* Profil réglementaire (dernier input moteur) — filtre les pièces conditionnelles (CIFSO v4.11) */
   const { data: lastAssessment } = await supa
     .from('grade_assessments')
     .select('input_json')
@@ -62,7 +62,7 @@ export default async function AdminAssetDocumentsPage({
     input_json?: { regulatoryProfile?: RegulatoryProfileMap; code?: { technologyMode?: string } }
   } | null)?.input_json ?? null
   const regulatoryProfile = lastInput?.regulatoryProfile ?? null
-  /* v4.2 — dérivation des clés technologiques : 'proprietary' par défaut (rétrocompatible) */
+  /* v4.12 — dérivation des clés technologiques : 'proprietary' par défaut (rétrocompatible) */
   const techMode = lastInput?.code?.technologyMode ?? 'proprietary'
   /* Pas d'assessment encore → null = checklist complète ; sinon filtrage profil + mode techno */
   const applicabilityProfile: RegulatoryProfileMap | null = !lastInput ? null : {

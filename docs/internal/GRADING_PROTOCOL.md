@@ -1,4 +1,4 @@
-# GRADING_PROTOCOL, CIFSO v4.2
+# GRADING_PROTOCOL, CIFSO v4.12
 
 > **Audience:** Internal, Aegryn team + certified CIFSO partners  
 > **Confidentiality:** Scoring weights are proprietary, never publish them.  
@@ -16,9 +16,9 @@ The final grade is derived from the total score, subject to automatic refusal tr
 
 Version 4.0 adds the O (Organisation) dimension and reformulates C and I to reflect the expanded scope beyond pure code/IP.
 
-Version 4.1 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O — penalties, AA ceiling and TRS impact, never a block on report generation.
+Version 4.11 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O — penalties, AA ceiling and TRS impact, never a block on report generation.
 
-Version 4.2 adds the **technology mode** (section 8b): dimension C always counts 20 pts, but its internal controls adapt to the nature of the technology base (`input.code.technologyMode`): `proprietary` (owned codebase — existing controls), `licensed_stack` (licensed SaaS/software governance — C-60→C-64), `hybrid` (average of both tracks). Dimensions are never optional: every organisation runs software; what changes is how its technology base is evidenced.
+Version 4.12 adds the **technology mode** (section 8b): dimension C always counts 20 pts, but its internal controls adapt to the nature of the technology base (`input.code.technologyMode`): `proprietary` (owned codebase — existing controls), `licensed_stack` (licensed SaaS/software governance — C-60→C-64), `hybrid` (average of both tracks). Dimensions are never optional: every organisation runs software; what changes is how its technology base is evidenced.
 
 ---
 
@@ -149,7 +149,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ---
 
-## 8. Regulatory Compliance Matrix (CIFSO v4.1)
+## 8. Regulatory Compliance Matrix (CIFSO v4.11)
 
 ### Principle
 
@@ -195,7 +195,7 @@ Sanctions uses `declared_clean` / `exposed` / `not_declared`.
 
 Catalogue entries carry an `applicability` column keyed to the profile; the seller and admin checklists are filtered accordingly (no profile yet → full checklist). All regulatory documents are `recommended` (never `blocking`) so existing dossiers are not retroactively blocked and the report is never blocked. Missing or insufficient evidence feeds the scoring through the control status: `na`/unset on an applicable regulation is penalised like `non_compliant`.
 
-### 8b. Technology Mode (CIFSO v4.2)
+### 8b. Technology Mode (CIFSO v4.12)
 
 Dimension C keeps its 20 points and its public name in every certification — dimensions are never optional. What adapts is the *internal track*, selected by `input.code.technologyMode` (default `proprietary`, backward compatible):
 

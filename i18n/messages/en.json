@@ -2818,7 +2818,7 @@
         {
           "code": "C",
           "name": "Code & Architecture",
-          "desc": "Code quality, architecture, tests, documentation, technical debt, dependencies. What makes the asset transferable without its author."
+          "desc": "Quality of the technology base — proprietary code or licensed systems: architecture, tests, documentation, technical debt, dependencies, reversibility. What makes the organisation transferable without its author."
         },
         {
           "code": "I",
@@ -2952,15 +2952,15 @@
       {
         "code": "C",
         "name": "Code & Architecture",
-        "full": "Code, Architecture & Maintainability",
+        "full": "Code, Architecture & Technology Base",
         "weight": "20 pts",
-        "desc": "Source code quality, architecture, test coverage, technical debt, dependencies, documentation. What makes the asset transferable without its author. Reviewed by senior engineers.",
+        "desc": "Quality and governance of the technology base — proprietary code or licensed systems: architecture, maintainability, dependencies, reversibility. What makes the organisation transferable without dependence on its author. Reviewed by senior engineers.",
         "criteria": [
-          "Test coverage ≥ 70%",
-          "Technical debt documented and quantified",
-          "No critical vulnerabilities (OWASP Top 10)",
-          "Decoupled, scalable architecture, up-to-date dependencies",
-          "Complete API and architecture documentation"
+          "Proprietary code quality and maintainability (tests, technical debt, vulnerabilities)",
+          "Licensed software governance: inventory, licences, supported versions",
+          "Reversibility and data export for critical solutions",
+          "Decoupled architecture or documented information-system mapping",
+          "Up-to-date technical documentation and dependencies"
         ]
       },
       {
@@ -5796,7 +5796,7 @@
       "cifsoDims": [
         {
           "code": "C",
-          "name": "Capital & Intellectual Property",
+          "name": "Code & Architecture",
           "color": "#2D5BE3"
         },
         {
@@ -5806,7 +5806,7 @@
         },
         {
           "code": "F",
-          "name": "Finance & Metrics",
+          "name": "Finances & Metrics",
           "color": "#1F9E6A"
         },
         {

@@ -2091,15 +2091,15 @@
       {
         "code": "C",
         "name": "Code & Architectuur",
-        "full": "Code, Architectuur & Onderhoudbaarheid",
+        "full": "Code, Architectuur & Technologiebasis",
         "weight": "20 pt",
-        "desc": "Kwaliteit van de broncode, architectuur, testdekking, technische schuld, afhankelijkheden, documentatie. Wat het asset overdraagbaar maakt zonder zijn auteur. Beoordeeld door senior ingenieurs.",
+        "desc": "Kwaliteit en governance van de technologiebasis — eigen code of gelicenseerde systemen: architectuur, onderhoudbaarheid, afhankelijkheden, omkeerbaarheid. Wat de organisatie overdraagbaar maakt zonder afhankelijkheid van haar auteur. Beoordeling door senior engineers.",
         "criteria": [
-          "Testdekking ≥ 70 %",
-          "Technische schuld gedocumenteerd en gekwantificeerd",
-          "Geen kritieke kwetsbaarheden (OWASP Top 10)",
-          "Ontkoppelde, schaalbare architectuur, actuele afhankelijkheden",
-          "Volledige API- en architectuurdocumentatie"
+          "Kwaliteit en onderhoudbaarheid van eigen code (tests, technische schuld, kwetsbaarheden)",
+          "Governance van gelicenseerde software: inventaris, licenties, ondersteunde versies",
+          "Omkeerbaarheid en data-export van kritieke oplossingen",
+          "Ontkoppelde architectuur of gedocumenteerde informatiesysteemkartering",
+          "Actuele technische documentatie en afhankelijkheden"
         ]
       },
       {
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Code & Architectuur",
-          "desc": "Codekwaliteit, architectuur, tests, documentatie, technische schuld, afhankelijkheden. Wat het asset overdraagbaar maakt zonder zijn auteur."
+          "desc": "Kwaliteit van de technologiebasis — eigen code of gelicenseerde systemen: architectuur, tests, documentatie, technische schuld, afhankelijkheden, omkeerbaarheid. Wat de organisatie overdraagbaar maakt zonder haar auteur."
         },
         {
           "code": "I",
@@ -5811,7 +5811,7 @@
       "cifsoDims": [
         {
           "code": "C",
-          "name": "Kapitaal & Intellectueel eigendom",
+          "name": "Code & Architectuur",
           "color": "#2D5BE3"
         },
         {
@@ -5821,12 +5821,12 @@
         },
         {
           "code": "F",
-          "name": "Financiën & Statistieken",
+          "name": "Financiën & Metrics",
           "color": "#1F9E6A"
         },
         {
           "code": "S",
-          "name": "Beveiliging & Soevereiniteit",
+          "name": "Veiligheid & Soevereiniteit",
           "color": "#C0392B"
         },
         {

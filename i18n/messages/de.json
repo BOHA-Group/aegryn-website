@@ -2091,15 +2091,15 @@
       {
         "code": "C",
         "name": "Code & Architektur",
-        "full": "Code, Architektur & Wartbarkeit",
+        "full": "Code, Architektur & Technologiebasis",
         "weight": "20 Pkt.",
-        "desc": "Qualität des Quellcodes, Architektur, Testabdeckung, technische Schulden, Abhängigkeiten, Dokumentation. Was das Asset ohne seinen Urheber übernehmbar macht. Prüfung durch Senior-Ingenieure.",
+        "desc": "Qualität und Governance der Technologiebasis — proprietärer Code oder lizenzierte Systeme: Architektur, Wartbarkeit, Abhängigkeiten, Reversibilität. Was die Organisation ohne Abhängigkeit von ihrem Urheber übertragbar macht. Prüfung durch Senior-Ingenieure.",
         "criteria": [
-          "Testabdeckung ≥ 70 %",
-          "Technische Schulden dokumentiert und bewertet",
-          "Keine kritischen Schwachstellen (OWASP Top 10)",
-          "Entkoppelte, skalierbare Architektur, aktuelle Abhängigkeiten",
-          "Vollständige API- und Architekturdokumentation"
+          "Qualität und Wartbarkeit proprietären Codes (Tests, technische Schuld, Schwachstellen)",
+          "Governance lizenzierter Software: Inventar, Lizenzen, unterstützte Versionen",
+          "Reversibilität und Datenexport kritischer Lösungen",
+          "Entkoppelte Architektur oder dokumentierte IS-Kartierung",
+          "Aktuelle technische Dokumentation und Abhängigkeiten"
         ]
       },
       {
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Code & Architektur",
-          "desc": "Codequalität, Architektur, Tests, Dokumentation, technische Schulden, Abhängigkeiten. Was das Asset ohne seinen Urheber übernehmbar macht."
+          "desc": "Qualität der Technologiebasis — proprietärer Code oder lizenzierte Systeme: Architektur, Tests, Dokumentation, technische Schuld, Abhängigkeiten, Reversibilität. Was die Organisation ohne ihren Urheber übertragbar macht."
         },
         {
           "code": "I",
@@ -5796,7 +5796,7 @@
       "cifsoDims": [
         {
           "code": "C",
-          "name": "Kapital & geistiges Eigentum",
+          "name": "Code & Architektur",
           "color": "#2D5BE3"
         },
         {

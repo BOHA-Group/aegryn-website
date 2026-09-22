@@ -118,7 +118,7 @@ Proprietary independent certification of organisations and their assets — the 
 The certificate attests four things: what the organisation owns, what it controls, what it is worth (source: Aegryn CIFSO Valuation Index), and what it can transmit.
 
 5 audited dimensions, each scored 0-20 pts (total /100):
-- C: Code & Architecture (code quality, tests, technical debt, dependency freshness, documentation, CI/CD)
+- C: Code & Architecture — the technology base whether built or licensed (proprietary code: quality, tests, technical debt, dependency freshness, documentation, CI/CD; licensed stack: software inventory, licence compliance, vendor concentration, reversibility/data export, IS mapping)
 - I: IP & Rights (trademark, IP assignment of software, open-source licences, client/API contracts, litigation)
 - F: Finance & Metrics (ARR, NRR, churn, margins, TAM, auditability)
 - S: Security, Sovereignty & AI Exposure (cybersecurity, GDPR/FADP, production isolation — and AI exposure: inventory of AI services, usage policy, vendor contracts/DPA; heavy dependence on non-sovereign AI providers processing client data without safeguards is scored as a public risk)
@@ -126,7 +126,7 @@ The certificate attests four things: what the organisation owns, what it control
 
 The Data Room traces the evidence per dimension, including AI-exposure evidence (S-10 AI inventory — blocking requirement, S-11 AI usage policy, S-12 AI vendor contracts/DPA).
 
-Regulatory compliance (CIFSO v4.1): each asset's regulatory perimeter is profiled, then validated during the audit — a regulation is only assessed when applicable, never penalised when out of scope. Controls are distributed across the dimensions that actually control them: EU Data Act access-by-design and portability (C) plus B2B FRAND data-sharing terms (I); Cyber Resilience Act SBOM and vulnerability management (C); ePrivacy/cookies, DSA/P2B platform terms, sanctions & embargo declaration, AML policy (I); NIS2, DORA and EU AI Act (S); compliance governance accountability (O). A non-compliant applicable regulation never blocks the CIFSO report — it lowers the dimension score, caps the grade at AA, and affects the Transaction Readiness Score.
+Regulatory compliance (CIFSO v4.11): each asset's regulatory perimeter is profiled, then validated during the audit — a regulation is only assessed when applicable, never penalised when out of scope. Controls are distributed across the dimensions that actually control them: EU Data Act access-by-design and portability (C) plus B2B FRAND data-sharing terms (I); Cyber Resilience Act SBOM and vulnerability management (C); ePrivacy/cookies, DSA/P2B platform terms, sanctions & embargo declaration, AML policy (I); NIS2, DORA and EU AI Act (S); compliance governance accountability (O). A non-compliant applicable regulation never blocks the CIFSO report — it lowers the dimension score, caps the grade at AA, and affects the Transaction Readiness Score.
 
 5 grades immutable:
 - AEG ★ — Apex (absolute excellence) #5ADDA4

@@ -2091,15 +2091,15 @@
       {
         "code": "C",
         "name": "Codice & Architettura",
-        "full": "Codice, Architettura & Manutenibilità",
+        "full": "Codice, Architettura & Base tecnologica",
         "weight": "20 pt",
-        "desc": "Qualità del codice sorgente, architettura, copertura dei test, debito tecnico, dipendenze, documentazione. Ciò che rende l'asset trasferibile senza il suo autore. Revisione da ingegneri senior.",
+        "desc": "Qualità e governance della base tecnologica — codice proprietario o sistemi in licenza: architettura, manutenibilità, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza dipendenza dal suo autore. Revisione da parte di ingegneri senior.",
         "criteria": [
-          "Copertura dei test ≥ 70 %",
-          "Debito tecnico documentato e quantificato",
-          "Nessuna vulnerabilità critica (OWASP Top 10)",
-          "Architettura disaccoppiata e scalabile, dipendenze aggiornate",
-          "Documentazione API e architettura completa"
+          "Qualità e manutenibilità del codice proprietario (test, debito tecnico, vulnerabilità)",
+          "Governance del software in licenza: inventario, licenze, versioni supportate",
+          "Reversibilità ed esportazione dei dati delle soluzioni critiche",
+          "Architettura disaccoppiata o mappatura documentata del sistema informativo",
+          "Documentazione tecnica e dipendenze aggiornate"
         ]
       },
       {
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Codice & Architettura",
-          "desc": "Qualità del codice, architettura, test, documentazione, debito tecnico, dipendenze. Ciò che rende l'asset trasferibile senza il suo autore."
+          "desc": "Qualità della base tecnologica — codice proprietario o sistemi in licenza: architettura, test, documentazione, debito tecnico, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza il suo autore."
         },
         {
           "code": "I",
@@ -5796,7 +5796,7 @@
       "cifsoDims": [
         {
           "code": "C",
-          "name": "Capitale & Proprietà intellettuale",
+          "name": "Codice & Architettura",
           "color": "#2D5BE3"
         },
         {
@@ -5806,7 +5806,7 @@
         },
         {
           "code": "F",
-          "name": "Finanza & Metriche",
+          "name": "Finanze & Metriche",
           "color": "#1F9E6A"
         },
         {
@@ -5816,7 +5816,7 @@
         },
         {
           "code": "O",
-          "name": "Organizzazione & Talenti",
+          "name": "Organizzazione & Talento",
           "color": "#D68910"
         }
       ],

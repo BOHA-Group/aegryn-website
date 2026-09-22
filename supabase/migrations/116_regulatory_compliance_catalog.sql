@@ -1,5 +1,5 @@
 -- ============================================================
--- AEGRYN — CIFSO 5000 v4.1 : conformité réglementaire ventilée par dimension
+-- AEGRYN — CIFSO 5000 v4.11 : conformité réglementaire ventilée par dimension
 --
 -- 1. documents_catalog.applicability : conditionne le document au profil
 --    réglementaire de l'actif (matrice d'applicabilité, lib/gradeEngine.ts).
@@ -12,7 +12,7 @@
 -- Toutes les entrées sont 'recommended' — JAMAIS 'blocking' : le rapport CIFSO
 -- reste toujours produisible et la publication n'est pas rétroactivement
 -- bloquée pour les dossiers existants. Les manquements se traduisent en
--- pénalités de score, plafond AA et impact TRS côté moteur (v4.1).
+-- pénalités de score, plafond AA et impact TRS côté moteur (v4.11).
 -- ============================================================
 
 -- ── 1. Colonne d'applicabilité ──────────────────────────────────────────

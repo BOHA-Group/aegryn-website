@@ -2778,7 +2778,7 @@
         {
           "code": "C",
           "name": "Code & Architecture",
-          "desc": "Qualité du code, architecture, tests, documentation, dette technique, dépendances. Ce qui rend l'actif reprenable sans son auteur."
+          "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, tests, documentation, dette technique, dépendances, réversibilité. Ce qui rend l'organisation reprenable sans son auteur."
         },
         {
           "code": "I",
@@ -2912,15 +2912,15 @@
       {
         "code": "C",
         "name": "Code & Architecture",
-        "full": "Code, Architecture & Maintenabilité",
+        "full": "Code, Architecture & Base technologique",
         "weight": "20 pts",
-        "desc": "Qualité du code source, architecture, couverture de tests, dette technique, dépendances, documentation. Ce qui rend l'actif reprenable sans son auteur. Revue par des ingénieurs seniors.",
+        "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, maintenabilité, dépendances, réversibilité. Ce qui rend l'organisation transmissible sans dépendance à son auteur. Revue par des ingénieurs seniors.",
         "criteria": [
-          "Couverture de tests ≥ 70 %",
-          "Dette technique documentée et chiffrée",
-          "Absence de vulnérabilités critiques (OWASP Top 10)",
-          "Architecture découplée et scalable, dépendances à jour",
-          "Documentation API et architecture complète"
+          "Qualité et maintenabilité du code propriétaire (tests, dette technique, vulnérabilités)",
+          "Gouvernance des logiciels licenciés : inventaire, licences, versions supportées",
+          "Réversibilité et export des données des solutions critiques",
+          "Architecture découplée ou cartographie documentée du système d'information",
+          "Documentation technique et dépendances à jour"
         ]
       },
       {
@@ -5756,7 +5756,7 @@
       "cifsoDims": [
         {
           "code": "C",
-          "name": "Capital & Propriété intellectuelle",
+          "name": "Code & Architecture",
           "color": "#2D5BE3"
         },
         {
@@ -5766,7 +5766,7 @@
         },
         {
           "code": "F",
-          "name": "Finance & Métriques",
+          "name": "Finances & Métriques",
           "color": "#1F9E6A"
         },
         {

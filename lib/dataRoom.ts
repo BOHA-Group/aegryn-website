@@ -52,12 +52,12 @@ export interface DocumentCatalogEntry {
   note_seller: string | null
   note_admin: string | null
   sort_order: number
-  /** CIFSO v4.1 — clé du RegulatoryProfile conditionnant le document (NULL/absent = universel) */
+  /** CIFSO v4.11 — clé du RegulatoryProfile conditionnant le document (NULL/absent = universel) */
   applicability?: string | null
 }
 
 /**
- * CIFSO v4.1 — filtrage conditionnel du catalogue par profil réglementaire.
+ * CIFSO v4.11 — filtrage conditionnel du catalogue par profil réglementaire.
  * Le profil est lu depuis grade_assessments.input_json.regulatoryProfile
  * (valeurs 'yes' | 'no' par clé RegulatoryProfile de lib/gradeEngine.ts).
  *

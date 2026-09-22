@@ -1,5 +1,5 @@
 -- ============================================================
--- AEGRYN — CIFSO 5000 v4.2 : piste « stack licenciée » (dimension C)
+-- AEGRYN — CIFSO 5000 v4.12 : piste « stack licenciée » (dimension C)
 --
 -- Contexte : toute organisation utilise des logiciels, même sans code
 -- propriétaire. La dimension C garde ses 20 pts et son nom public, mais

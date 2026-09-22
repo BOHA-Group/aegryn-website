@@ -91,7 +91,7 @@
 
 ---
 
-## Regulatory Applicability (CIFSO v4.1)
+## Regulatory Applicability (CIFSO v4.11)
 
 Not every regulation applies to every asset. During onboarding you declare a regulatory profile; your Aegryn analyst validates it. A regulation marked "not applicable" never penalises your score.
 

@@ -38,7 +38,7 @@ function generateVerificationCode(): string {
 // ── Schéma de validation Zod ──────────────────────────────────────────────────
 
 const codeInputSchema = z.object({
-  /* CIFSO v4.2 — nature de la base technologique */
+  /* CIFSO v4.12 — nature de la base technologique */
   technologyMode:         z.enum(['proprietary', 'licensed_stack', 'hybrid']).optional(),
   testCoverage:           z.number().min(0).max(100),
   techDebtDocumented:     z.enum(['yes', 'no']),
@@ -49,13 +49,13 @@ const codeInputSchema = z.object({
   apiDocumentation:       z.enum(['complete', 'partial', 'absent']),
   obsoleteDependencies:   z.number().min(0),
   lastCodeAuditMonthsAgo: z.number().min(0),
-  /* CIFSO v4.2 — piste stack licencié */
+  /* CIFSO v4.12 — piste stack licencié */
   softwareInventory:      z.enum(['complete', 'partial', 'absent']).optional(),
   licenseCompliance:      z.enum(['yes', 'no', 'na']).optional(),
   siMapping:              z.enum(['complete', 'partial', 'absent']).optional(),
   vendorReversibility:    z.enum(['complete', 'partial', 'absent']).optional(),
   vendorConcentration:    z.enum(['low', 'medium', 'high']).optional(),
-  /* CIFSO v4.1 — conformité réglementaire produit */
+  /* CIFSO v4.11 — conformité réglementaire produit */
   craCompliance:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   dataActTechnical:       z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
 })
@@ -68,7 +68,7 @@ const ipInputSchema = z.object({
   thirdPartyAPIContracted:    z.enum(['yes', 'no']),
   moat:                       z.enum(['network', 'data', 'regulatory', 'none']),
   rgpdCompliance:             z.enum(['complete', 'partial', 'absent']),
-  /* CIFSO v4.1 — conformité réglementaire contractuelle & juridique */
+  /* CIFSO v4.11 — conformité réglementaire contractuelle & juridique */
   dataActB2BTerms:            z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   eprivacyCompliance:         z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   platformFairTerms:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
@@ -118,7 +118,7 @@ const securityInputSchema = z.object({
   aiInventory:              z.enum(['yes', 'no']).optional(),
   aiPolicy:                 z.enum(['yes', 'no']).optional(),
   aiClientDataExposed:      z.enum(['yes', 'no']).optional(),
-  /* CIFSO v4.1 — conformité réglementaire sectorielle */
+  /* CIFSO v4.11 — conformité réglementaire sectorielle */
   nis2Compliance:           z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   doraCompliance:           z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
   aiActCompliance:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
@@ -134,11 +134,11 @@ const organisationInputSchema = z.object({
   founderLeadsSales:        z.enum(['yes', 'no']),
   cultureDocumented:        z.enum(['yes', 'no']),
   independentAdvisor:       z.enum(['yes', 'no']),
-  /* CIFSO v4.1 — gouvernance conformité */
+  /* CIFSO v4.11 — gouvernance conformité */
   complianceGovernance:     z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
 })
 
-/* CIFSO v4.1 — Matrice d'applicabilité réglementaire */
+/* CIFSO v4.11 — Matrice d'applicabilité réglementaire */
 const regulatoryProfileSchema = z.object({
   sellsConnectedProducts:   z.enum(['yes', 'no']),
   processesEUData:          z.enum(['yes', 'no']),

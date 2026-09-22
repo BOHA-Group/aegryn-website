@@ -173,14 +173,14 @@ Key Pages:
 Proprietary independent certification — the ownership record ("acte de propriété") of an organisation's value. A watch without its papers loses part of its value; an organisation without certified value sells at a discount.
 
 Protocol CIFSO 5000: 5 audited dimensions, each 0-20 pts, total /100:
-- C: Code & Architecture
+- C: Code & Architecture (proprietary codebase or licensed software stack)
 - I: IP & Rights
 - F: Finance & Metrics
 - S: Security, Sovereignty & AI Exposure (incl. AI vendor dependence, AI inventory, DPA)
 - O: Organisation, Talent & Succession
 
 5 immutable grades: AEG ★ (Apex, #5ADDA4), AAA (Gold, #C9A84C), AA (Silver, #9BA8B0), A (Blue, #4A90D9), B (Amber, #D4820A)
-Regulatory compliance (v4.1): applicable perimeter profiled then validated; controls distributed per dimension — Data Act (C+I), CRA (C), ePrivacy/DSA/P2B/sanctions/AML (I), NIS2/DORA/AI Act (S), compliance governance (O). Non-compliance lowers the score, caps the grade at AA and affects the TRS — the report is never blocked.
+Regulatory compliance (v4.11): applicable perimeter profiled then validated; controls distributed per dimension — Data Act (C+I), CRA (C), ePrivacy/DSA/P2B/sanctions/AML (I), NIS2/DORA/AI Act (S), compliance governance (O). Non-compliance lowers the score, caps the grade at AA and affects the TRS — the report is never blocked.
 At publication: quantified valuation (industry multiple adjusted on the 5 CIFSO scores) + roadmap potential.
 MANDATORY for any certified transaction via Aegryn Transact.
 Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify
