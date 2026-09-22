@@ -1,16 +1,8 @@
 'use client'
 
-import { useLayoutEffect, useRef } from 'react'
-import { gsap }              from '@/lib/gsap'
-
 /**
  * Bloc Vision + ADN + Mission.
- * Séquence logo pinné 3 phases :
- *   1. Logo net + clair (opacity 0.45)
- *   2. Zoom in + flou progressif (scale → 8, blur → 24px)
- *   3. Fondu sortie (opacity → 0)
- * Vision + ADN s'affichent par-dessus (bg semi-transparent).
- * Mission arrive en clip-reveal depuis le bas.
+ * Sections empilées en flux normal, sans pinning ni scroll-jacking.
  */
 export function VisionMissionBlock({
   visionLabel,
@@ -23,44 +15,11 @@ export function VisionMissionBlock({
   dnaContent:     React.ReactNode
   missionContent: React.ReactNode
 }) {
-  const wrapRef    = useRef<HTMLDivElement>(null)
-  const missionRef = useRef<HTMLDivElement>(null)
-
-  useLayoutEffect(() => {
-    const wrap    = wrapRef.current
-    const mission = missionRef.current
-    if (!wrap || !mission) return
-
-    const ctx = gsap.context(() => {
-
-      /* Pin + Mission slide depuis le bas */
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger:       wrap,
-          start:         'top top',
-          end:           '+=90%',
-          pin:           true,
-          scrub:         0.8,
-          anticipatePin: 1,
-        },
-      })
-
-      /* (75–100%) : Mission slide depuis le bas */
-      tl.fromTo(mission,
-        { yPercent: 100 },
-        { yPercent: 0, ease: 'expo.inOut', duration: 0.25 },
-        0.75,
-      )
-    })
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <div ref={wrapRef} className="relative overflow-hidden" style={{ minHeight: '100vh' }}>
+    <div>
 
       {/* ── Contenu Vision + ADN ── */}
-      <div className="relative z-10">
+      <div>
 
         {/* Vision */}
         <section className="border-b border-ag-border bg-ag-off-white/80 backdrop-blur-sm">
@@ -82,12 +41,8 @@ export function VisionMissionBlock({
         </div>
       </div>
 
-      {/* ── Mission — slide depuis le bas ── */}
-      <div
-        ref={missionRef}
-        className="absolute inset-0 z-20 bg-ag-white overflow-auto"
-        style={{ transform: 'translateY(100%)' }}
-      >
+      {/* ── Mission — flux normal ── */}
+      <div className="bg-ag-white">
         {missionContent}
       </div>
     </div>
