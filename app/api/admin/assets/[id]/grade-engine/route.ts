@@ -47,6 +47,9 @@ const codeInputSchema = z.object({
   apiDocumentation:       z.enum(['complete', 'partial', 'absent']),
   obsoleteDependencies:   z.number().min(0),
   lastCodeAuditMonthsAgo: z.number().min(0),
+  /* CIFSO v4.1 — conformité réglementaire produit */
+  craCompliance:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  dataActTechnical:       z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
 })
 
 const ipInputSchema = z.object({
@@ -57,6 +60,12 @@ const ipInputSchema = z.object({
   thirdPartyAPIContracted:    z.enum(['yes', 'no']),
   moat:                       z.enum(['network', 'data', 'regulatory', 'none']),
   rgpdCompliance:             z.enum(['complete', 'partial', 'absent']),
+  /* CIFSO v4.1 — conformité réglementaire contractuelle & juridique */
+  dataActB2BTerms:            z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  eprivacyCompliance:         z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  platformFairTerms:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  sanctionsDeclaration:       z.enum(['declared_clean', 'exposed', 'not_declared']).optional(),
+  amlPolicy:                  z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
 })
 
 const founderDependencySchema = z.object({
@@ -101,6 +110,11 @@ const securityInputSchema = z.object({
   aiInventory:              z.enum(['yes', 'no']).optional(),
   aiPolicy:                 z.enum(['yes', 'no']).optional(),
   aiClientDataExposed:      z.enum(['yes', 'no']).optional(),
+  /* CIFSO v4.1 — conformité réglementaire sectorielle */
+  nis2Compliance:           z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  doraCompliance:           z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  aiActCompliance:          z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+  aiActHighRisk:            z.enum(['yes', 'no']).optional(),
 })
 
 const organisationInputSchema = z.object({
@@ -112,6 +126,19 @@ const organisationInputSchema = z.object({
   founderLeadsSales:        z.enum(['yes', 'no']),
   cultureDocumented:        z.enum(['yes', 'no']),
   independentAdvisor:       z.enum(['yes', 'no']),
+  /* CIFSO v4.1 — gouvernance conformité */
+  complianceGovernance:     z.enum(['na', 'compliant', 'partial', 'non_compliant']).optional(),
+})
+
+/* CIFSO v4.1 — Matrice d'applicabilité réglementaire */
+const regulatoryProfileSchema = z.object({
+  sellsConnectedProducts:   z.enum(['yes', 'no']),
+  processesEUData:          z.enum(['yes', 'no']),
+  isFinancialEntityOrICT:   z.enum(['yes', 'no']),
+  providesAISystems:        z.enum(['yes', 'no']),
+  operatesCriticalSector:   z.enum(['yes', 'no']),
+  sellsDigitalProducts:     z.enum(['yes', 'no']),
+  operatesPlatform:         z.enum(['yes', 'no']),
 })
 
 const proofQualityDimensionSchema = z.object({
@@ -131,6 +158,7 @@ const bodySchema = z.object({
     finance:        financeInputSchema,
     security:       securityInputSchema,
     organisation:   organisationInputSchema,
+    regulatoryProfile: regulatoryProfileSchema.optional(),
     proofQualities: proofQualityDimensionSchema.optional(),
   }),
   assessmentId:    z.string().uuid().optional(),

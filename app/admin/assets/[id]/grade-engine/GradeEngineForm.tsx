@@ -3,8 +3,8 @@
 import { CLUSTER_LABELS_FR, type CifsoValuation, type ClusterKey } from '@/lib/cifsoValuation'
 import ValuationPanel from '@/components/valuation/ValuationPanel'
 import { useState, useMemo, useEffect } from 'react'
-import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel, AiExposure } from '@/lib/gradeEngine'
-import { runGradeEngine } from '@/lib/gradeEngine'
+import type { GradeInput, GradeResult, GradeLetter, ArrAuditLevel, FounderDependencyInput, PentestMethodology, PentestAuditorCert, TRSLevel, AiExposure, RegulatoryProfile, RegComplianceStatus } from '@/lib/gradeEngine'
+import { runGradeEngine, hasRegulatoryScope } from '@/lib/gradeEngine'
 import type { ProofQuality } from '@/lib/gradingSystem'
 import { ChevronDown, ChevronUp, AlertTriangle, CheckCircle2, Calculator, Send, Zap, FileText, XCircle } from 'lucide-react'
 import type { AutoFillResult } from '@/lib/gradeAutoFill'
@@ -57,10 +57,13 @@ function defaultInput(): GradeInput {
       testCoverage: 0, techDebtDocumented: 'no', criticalVulnOpen: 0,
       majorVulnOpen: 0, architecture: 'monolithic', ciCdFunctional: 'no',
       apiDocumentation: 'absent', obsoleteDependencies: 0, lastCodeAuditMonthsAgo: 9999,
+      craCompliance: 'na', dataActTechnical: 'na',
     },
     ip: {
       trademarksJurisdictions: 0, activeIPLitigation: 'no', employeeIPRights: 'absent',
       openSourceRisk: 'no', thirdPartyAPIContracted: 'no', moat: 'none', rgpdCompliance: 'absent',
+      dataActB2BTerms: 'na', eprivacyCompliance: 'na', platformFairTerms: 'na',
+      sanctionsDeclaration: 'not_declared', amlPolicy: 'na',
     },
     finance: {
       arr: 0, revenueAgeMonths: 0, arrAudited: 'declarative' as ArrAuditLevel, nrr: null,
@@ -83,11 +86,18 @@ function defaultInput(): GradeInput {
       aiInventory: 'no' as 'yes' | 'no',
       aiPolicy: 'no' as 'yes' | 'no',
       aiClientDataExposed: 'no' as 'yes' | 'no',
+      nis2Compliance: 'na', doraCompliance: 'na', aiActCompliance: 'na', aiActHighRisk: 'no',
     },
     organisation: {
       keyPersonCount: 0, successionPlanDocumented: 'no', operationalDocsComplete: 'no',
       lowKeyTalentTurnover: 'no', formalizedManagement: 'no', founderLeadsSales: 'yes',
       cultureDocumented: 'no', independentAdvisor: 'no',
+      complianceGovernance: 'na',
+    },
+    regulatoryProfile: {
+      sellsConnectedProducts: 'no', processesEUData: 'no', isFinancialEntityOrICT: 'no',
+      providesAISystems: 'no', operatesCriticalSector: 'no', sellsDigitalProducts: 'no',
+      operatesPlatform: 'no',
     },
     proofQualities: {
       code:         'declarative' as ProofQuality,
@@ -171,6 +181,18 @@ function YesNoNASelect({ value, onChange }: { value: string; onChange: (v: strin
       <option value="yes">Oui</option>
       <option value="no">Non</option>
       <option value="na">N/A</option>
+    </select>
+  )
+}
+
+/* CIFSO v4.1 — Statut de conformité réglementaire (jamais bloquant pour le rapport) */
+function RegComplianceSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return (
+    <select value={value} onChange={e => onChange(e.target.value)} className={selectCls}>
+      <option value="na">N/A — non évalué</option>
+      <option value="compliant">Conforme documenté</option>
+      <option value="partial">Partiellement conforme</option>
+      <option value="non_compliant">Non conforme</option>
     </select>
   )
 }
@@ -267,6 +289,17 @@ function LiveScorePanel({ live }: { live: ReturnType<typeof runGradeEngine> }) {
         </div>
       )}
 
+      {live.regulatoryFindings.length > 0 && (
+        <div className="bg-amber-50 border border-amber-200 p-2">
+          <p className="font-mono text-[9px] text-amber-600 uppercase tracking-widest mb-1">
+            Conformité réglementaire{live.regulatoryCapped ? ' — plafond AA' : ''}
+          </p>
+          {live.regulatoryFindings.map((r, i) => (
+            <p key={i} className="font-sans text-[10px] text-amber-700">· {r}</p>
+          ))}
+        </div>
+      )}
+
       {!live.autoRefusal && live.totalScore > 0 && (
         <div className="space-y-1">
           {(['code', 'ip', 'finance', 'security', 'organisation'] as const).map(dim => {
@@ -322,7 +355,7 @@ export default function GradeEngineForm({
   autoFillOverrides?: AutoFillResult['gradeInputOverrides']
 }) {
   const [step, setStep] = useState<FormStep>('input')
-  const [open, setOpen] = useState({ code: true, ip: false, finance: false, security: false, organisation: false })
+  const [open, setOpen] = useState({ regulatory: true, code: true, ip: false, finance: false, security: false, organisation: false })
   const [input, setInput] = useState<GradeInput>(defaultInput())
   const [inputSources, setInputSources] = useState<Record<string, SourceType>>(() => {
     const defaults: Record<string, SourceType> = {}
@@ -400,6 +433,12 @@ export default function GradeEngineForm({
   function setOrg<K extends keyof GradeInput['organisation']>(k: K, v: GradeInput['organisation'][K], src: SourceType = 'declarative') {
     setInput(p => ({ ...p, organisation: { ...p.organisation, [k]: v } }))
     markSource(k, src)
+  }
+  function setProfile<K extends keyof RegulatoryProfile>(k: K, v: 'yes' | 'no') {
+    setInput(p => ({
+      ...p,
+      regulatoryProfile: { ...p.regulatoryProfile!, [k]: v },
+    }))
   }
   function setFounderDep<K extends keyof FounderDependencyInput>(k: K, v: 'yes' | 'no') {
     setInput(p => ({
@@ -493,6 +532,40 @@ export default function GradeEngineForm({
       {/* Colonne gauche — formulaire */}
       <div className="space-y-3">
 
+      {/* PROFIL RÉGLEMENTAIRE — CIFSO v4.1 : matrice d'applicabilité */}
+      <Section title="Profil réglementaire — applicabilité (CIFSO v4.1)" open={open.regulatory} onToggle={() => setOpen(p => ({ ...p, regulatory: !p.regulatory }))}>
+        <p className="col-span-2 font-sans text-[10px] text-gray-400 -mt-1">
+          Déclaré vendeur, validé analyste. Chaque « Oui » active les contrôles correspondants dans les dimensions C / I / S / O.
+          « Non » ou N/A ne pénalise jamais le score.
+        </p>
+        <Field label="Produits connectés / données clients B2B" hint="IoT, devices, capteurs — active EU Data Act (C-51, I-50)">
+          <YesNoSelect value={input.regulatoryProfile?.sellsConnectedProducts ?? 'no'} onChange={v => setProfile('sellsConnectedProducts', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Données personnelles UE/CH" hint="RGPD/nLPD + ePrivacy (I-51)">
+          <YesNoSelect value={input.regulatoryProfile?.processesEUData ?? 'no'} onChange={v => setProfile('processesEUData', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Entité financière / prestataire TIC" hint="DORA + AML (S-53, I-54)">
+          <YesNoSelect value={input.regulatoryProfile?.isFinancialEntityOrICT ?? 'no'} onChange={v => setProfile('isFinancialEntityOrICT', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Fournit des systèmes d'IA" hint="EU AI Act (S-54)">
+          <YesNoSelect value={input.regulatoryProfile?.providesAISystems ?? 'no'} onChange={v => setProfile('providesAISystems', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Secteur essentiel ou important" hint="Santé, énergie, transport, admin — NIS2 (S-52)">
+          <YesNoSelect value={input.regulatoryProfile?.operatesCriticalSector ?? 'no'} onChange={v => setProfile('operatesCriticalSector', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Produits avec éléments numériques" hint="Mis sur le marché UE — Cyber Resilience Act (C-50)">
+          <YesNoSelect value={input.regulatoryProfile?.sellsDigitalProducts ?? 'no'} onChange={v => setProfile('sellsDigitalProducts', v as 'yes' | 'no')} />
+        </Field>
+        <Field label="Plateforme en ligne" hint="DSA / P2B (I-52)">
+          <YesNoSelect value={input.regulatoryProfile?.operatesPlatform ?? 'no'} onChange={v => setProfile('operatesPlatform', v as 'yes' | 'no')} />
+        </Field>
+        {hasRegulatoryScope(input.regulatoryProfile) && (
+          <p className="col-span-2 font-sans text-[11px] text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2">
+            Périmètre réglementaire applicable — complétez les contrôles dans les dimensions concernées + gouvernance conformité (O-50).
+          </p>
+        )}
+      </Section>
+
       {/* DIMENSION CODE */}
       <Section title="Dimension C : Code (20 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
         <Field label="Couverture de tests (%)" hint="0 = aucun test · 100 = couverture totale" source={inputSources['testCoverage'] as SourceType}>
@@ -530,6 +603,17 @@ export default function GradeEngineForm({
         <Field label="Dernier audit de code externe (mois)" hint="9999 = jamais réalisé" source={inputSources['lastCodeAuditMonthsAgo'] as SourceType}>
           <NumInput value={input.code.lastCodeAuditMonthsAgo} onChange={v => setCode('lastCodeAuditMonthsAgo', v)} />
         </Field>
+        {/* CIFSO v4.1 — Conformité réglementaire produit (conditionnée au profil) */}
+        {input.regulatoryProfile?.sellsDigitalProducts === 'yes' && (
+          <Field label="CRA — Cyber Resilience Act (C-50)" hint="SBOM à jour, processus de gestion des vulnérabilités, sécurité by design">
+            <RegComplianceSelect value={input.code.craCompliance ?? 'na'} onChange={v => setCode('craCompliance', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        {input.regulatoryProfile?.sellsConnectedProducts === 'yes' && (
+          <Field label="Data Act — accès aux données produit (C-51)" hint="Accès direct, gratuit et par défaut + formats d'export documentés">
+            <RegComplianceSelect value={input.code.dataActTechnical ?? 'na'} onChange={v => setCode('dataActTechnical', v as RegComplianceStatus)} />
+          </Field>
+        )}
       </Section>
 
       {/* DIMENSION IP */}
@@ -568,6 +652,34 @@ export default function GradeEngineForm({
             <option value="absent">Absente</option>
           </select>
         </Field>
+        {/* CIFSO v4.1 — Conformité réglementaire contractuelle & juridique */}
+        {input.regulatoryProfile?.sellsConnectedProducts === 'yes' && (
+          <Field label="Data Act — conditions B2B (I-50)" hint="Termes FRAND, protection secrets d'affaires, clauses non déloyales">
+            <RegComplianceSelect value={input.ip.dataActB2BTerms ?? 'na'} onChange={v => setIP('dataActB2BTerms', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        {input.regulatoryProfile?.processesEUData === 'yes' && (
+          <Field label="ePrivacy / cookies (I-51)" hint="Bandeau consentement conforme, registre des trackers">
+            <RegComplianceSelect value={input.ip.eprivacyCompliance ?? 'na'} onChange={v => setIP('eprivacyCompliance', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        {input.regulatoryProfile?.operatesPlatform === 'yes' && (
+          <Field label="DSA / P2B — conditions plateforme (I-52)" hint="Transparence ranking, conditions équitables business users">
+            <RegComplianceSelect value={input.ip.platformFairTerms ?? 'na'} onChange={v => setIP('platformFairTerms', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        <Field label="Sanctions & embargos (I-53)" hint="Universel — déclaration d'absence d'exposition (dirigeants, UBO, contreparties)">
+          <select value={input.ip.sanctionsDeclaration ?? 'not_declared'} onChange={e => setIP('sanctionsDeclaration', e.target.value as 'declared_clean' | 'exposed' | 'not_declared')} className={selectCls}>
+            <option value="declared_clean">Déclaré — aucune exposition</option>
+            <option value="not_declared">Non déclaré</option>
+            <option value="exposed">Exposition identifiée</option>
+          </select>
+        </Field>
+        {input.regulatoryProfile?.isFinancialEntityOrICT === 'yes' && (
+          <Field label="AML — politique anti-blanchiment (I-54)" hint="KYC, filtrage UBO, reporting documentés">
+            <RegComplianceSelect value={input.ip.amlPolicy ?? 'na'} onChange={v => setIP('amlPolicy', v as RegComplianceStatus)} />
+          </Field>
+        )}
       </Section>
 
       {/* DIMENSION FINANCE */}
@@ -759,6 +871,27 @@ export default function GradeEngineForm({
             <option value="yes">Oui, sans contrat ni clause de non-entraînement</option>
           </select>
         </Field>
+        {/* CIFSO v4.1 — Conformité réglementaire sectorielle (conditionnée au profil) */}
+        {input.regulatoryProfile?.operatesCriticalSector === 'yes' && (
+          <Field label="NIS2 (S-52)" hint="Enregistrement, mesures de gestion des risques, notification d'incidents 24h/72h">
+            <RegComplianceSelect value={input.security.nis2Compliance ?? 'na'} onChange={v => setSec('nis2Compliance', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        {input.regulatoryProfile?.isFinancialEntityOrICT === 'yes' && (
+          <Field label="DORA (S-53)" hint="Registre TIC, tests de résilience, clauses contractuelles prestataires TIC">
+            <RegComplianceSelect value={input.security.doraCompliance ?? 'na'} onChange={v => setSec('doraCompliance', v as RegComplianceStatus)} />
+          </Field>
+        )}
+        {input.regulatoryProfile?.providesAISystems === 'yes' && (
+          <>
+            <Field label="EU AI Act (S-54)" hint="Classification de risque documentée, obligations GPAI, transparence">
+              <RegComplianceSelect value={input.security.aiActCompliance ?? 'na'} onChange={v => setSec('aiActCompliance', v as RegComplianceStatus)} />
+            </Field>
+            <Field label="Système IA haut risque (S-54b)" hint="Annexe III AI Act — non conforme = TRS bloqué">
+              <YesNoSelect value={input.security.aiActHighRisk ?? 'no'} onChange={v => setSec('aiActHighRisk', v as 'yes' | 'no')} />
+            </Field>
+          </>
+        )}
       </Section>
 
       {/* DIMENSION O — ORGANISATION & TALENT */}
@@ -787,6 +920,12 @@ export default function GradeEngineForm({
         <Field label="Administrateur indépendant ou advisory board actif">
           <YesNoSelect value={input.organisation.independentAdvisor} onChange={v => setOrg('independentAdvisor', v as 'yes' | 'no')} />
         </Field>
+        {/* CIFSO v4.1 — O-50 : gouvernance conformité (si périmètre réglementaire applicable) */}
+        {hasRegulatoryScope(input.regulatoryProfile) && (
+          <Field label="Gouvernance conformité (O-50)" hint="Responsable conformité désigné (DPO, référent réglementaire), accountability au niveau direction">
+            <RegComplianceSelect value={input.organisation.complianceGovernance ?? 'na'} onChange={v => setOrg('complianceGovernance', v as RegComplianceStatus)} />
+          </Field>
+        )}
       </Section>
 
       {/* PROOF QUALITY — plafond de grade par niveau de preuve (CIFSO v4.0) */}
@@ -1126,7 +1265,9 @@ export default function GradeEngineForm({
               <p className="font-mono text-[9px] uppercase tracking-widest mb-0.5 opacity-70">Grade calculé</p>
               <p className="font-sans font-bold text-[22px] tracking-tight">{result.gradeLabel}</p>
               {result.gradeCeiling && result.gradeCeiling !== result.grade && (
-                <p className="font-mono text-[8px] text-amber-600 mt-0.5">Plafonné par proof_quality</p>
+                <p className="font-mono text-[8px] text-amber-600 mt-0.5">
+                  {result.regulatoryCapped ? 'Plafonné AA — conformité réglementaire' : 'Plafonné par proof_quality'}
+                </p>
               )}
             </div>
           </div>
@@ -1148,6 +1289,20 @@ export default function GradeEngineForm({
             </ul>
           )}
         </div>
+
+        {/* CIFSO v4.1 — Constats réglementaires */}
+        {result.regulatoryFindings.length > 0 && (
+          <div className="bg-amber-50 border border-amber-200 p-4">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-amber-700 mb-2">
+              Constats réglementaires applicables{result.regulatoryCapped ? ' — grade plafonné à AA' : ''}
+            </p>
+            <ul className="space-y-0.5">
+              {result.regulatoryFindings.map((r, i) => (
+                <li key={i} className="font-sans text-[12px] text-amber-800">· {r}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Recommandations actionnables */}
         {result.recommendations.length > 0 && (

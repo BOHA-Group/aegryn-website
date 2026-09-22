@@ -52,6 +52,8 @@ export interface DocumentCatalogEntry {
   note_seller: string | null
   note_admin: string | null
   sort_order: number
+  /** CIFSO v4.1 — clé du RegulatoryProfile conditionnant le document (NULL/absent = universel) */
+  applicability?: string | null
 }
 
 /* ── Mapping dimension → catégorie data_room ─────────────────────── */
