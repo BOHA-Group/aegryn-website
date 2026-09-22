@@ -299,7 +299,7 @@
       "cifso": {
         "badge": "Protocole · Certification",
         "tagline": "Nom : Certification CIFSO 5000",
-        "description": "Protocole de certification indépendant qui évalue et documente la valeur d'une organisation sur cinq dimensions : Capital, Intégrité, Finance, Sécurité et Souveraineté, Organisation. Produit un grade officiel (★ à B), un score sur 100 et un certificat vérifiable, valable douze mois.\n\nUtilisé pour les actifs propres Aegryn et les mandats de ses clients. Conçu pour être opposable face à un investisseur, une banque ou un acquéreur institutionnel.",
+        "description": "Protocole de certification indépendant qui évalue et documente la valeur d'une organisation sur cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Produit un grade officiel (★ à B), un score sur 100 et un certificat vérifiable, valable douze mois.\n\nUtilisé pour les actifs propres Aegryn et les mandats de ses clients. Conçu pour être opposable face à un investisseur, une banque ou un acquéreur institutionnel.",
         "visitPage": "Voir la page certification",
         "name": "Certification de valorisation d'actifs"
       },
@@ -794,7 +794,7 @@
       {
         "val": "5",
         "label": "Dimensions CIFSO",
-        "sub": "Capital · Intégrité · Finance · Sécurité · Organisation"
+        "sub": "Code · IP · Finance · Sécurité · Organisation"
       }
     ],
     "text": "Nous avons passé plus de vingt ans à construire, conseiller et restructurer des organisations. Ce que nous avons acquis n’a pas de prix. Les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble. Aegryn existe pour ceux qui ont compris ça."
@@ -814,7 +814,7 @@
       },
       {
         "title": "VALORISER",
-        "desc": "Certification indépendante CIFSO et valorisation des actifs entreprise. Un protocole rigoureux sur cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation."
+        "desc": "Certification indépendante CIFSO et valorisation des actifs entreprise. Un protocole rigoureux sur cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent."
       },
       {
         "title": "RECRUTER",
@@ -1006,7 +1006,7 @@
     "whatsnext": {
       "label": "Ce qui vient ensuite",
       "title": "Le protocole évolue.\nLe standard tient.",
-      "desc": "Aegryn certifie et transmet aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFSO v4.0.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
+      "desc": "Aegryn certifie et transmet aujourd'hui des SaaS, applications, marketplaces, actifs IP et actifs Web3 sous le protocole CIFSO 5000.\n\nLe principal chantier de la feuille de route est la certification blockchain : une couche d'ancrage qui scellera chaque codebase certifié à la date exacte du transfert, rendant chaque grade définitivement vérifiable et permanent. Cette couche s'ajoutera au protocole indépendant déjà pleinement opérationnel.\n\nEn parallèle, nous constituons un réseau de partenaires experts, cabinets juridiques, experts-comptables, spécialistes cybersécurité, architectes techniques pour accompagner acheteurs et vendeurs à chaque étape : conseil tech avant la certification, structuration juridique et financière pendant la transaction, intégration après le closing.",
       "cta": "Voir les sessions en cours"
     },
     "cta": {
@@ -1921,7 +1921,7 @@
       {
         "category": "Étude de cas",
         "title": "Grader un SaaS B2B : exercice méthodologique sur une cession publique",
-        "desc": "Application illustrative du protocole CIFSO v4.0 sur une transaction publiée, pour comprendre comment chaque dimension (C, I, F, S, O) influence le grade final. Exercice pédagogique, non contractuel."
+        "desc": "Application illustrative du protocole CIFSO 5000 sur une transaction publiée, pour comprendre comment chaque dimension (C, I, F, S, O) influence le grade final. Exercice pédagogique, non contractuel."
       }
     ]
   },
@@ -2162,7 +2162,7 @@
   "roadmapPage": {
     "meta": {
       "title": "Plateforme | Aegryn Cessions M&A Switzerland",
-      "desc": "La plateforme Aegryn : certification CIFSO v4.0, processus de cession privés, droit suisse, ouverture internationale."
+      "desc": "La plateforme Aegryn : certification CIFSO 5000, processus de cession privés, droit suisse, ouverture internationale."
     },
     "label": "Aegryn Cessions M&A Switzerland",
     "title": "La plateforme.\nSes fonctionnalités.",
@@ -2172,7 +2172,7 @@
     "features": {
       "certification": {
         "title": "Certification Aegryn Grade",
-        "desc": "Chaque organisation mise en vente est certifiée selon le protocole CIFSO v4.0 avant tout processus. Aucune organisation non certifiée n'est admise."
+        "desc": "Chaque organisation mise en vente est certifiée selon le protocole CIFSO 5000 avant tout processus. Aucune organisation non certifiée n'est admise."
       },
       "swissLaw": {
         "title": "Droit suisse : 100 %",
@@ -2210,7 +2210,7 @@
       {
         "iconKey": "certification",
         "theme": "Certification",
-        "title": "Certification CIFSO v4.0 : Protocole Aegryn Grade",
+        "title": "Certification CIFSO 5000 : Protocole Aegryn Grade",
         "desc": "Chaque actif est évalué sur 5 dimensions CIFSO (Code, IP, Finance, Sécurité, Organisation) avant toute mise en vente. Aucun actif non certifié n'est admis.",
         "live": true
       },
@@ -2351,7 +2351,7 @@
     "currentLabel": "Déjà disponible",
     "current": [
       "Sessions de cession privées",
-      "Certification Aegryn Grade : protocole CIFSO v4.0",
+      "Certification Aegryn Grade : protocole CIFSO 5000",
       "Escrow institutionnel",
       "NDA digital automatisé",
       "Qualification et espace acquéreurs",
@@ -2410,7 +2410,7 @@
   "grade": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
-      "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions — Capital, Intégrité, Finance, Sécurité, Organisation."
+      "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions — Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent."
     },
     "index": {
       "label": "Certification Aegryn",
@@ -2582,9 +2582,9 @@
       "isoStatement": "Là où les standards existants certifient les systèmes, le CIFSO 5000 certifie la valeur et la transmissibilité.",
       "isoRows": [
         {
-          "dimension": "C · Capital & Propriété intellectuelle",
-          "existing": "Aucun standard existant ne couvre la chaîne de titres IP dans un contexte M&A.",
-          "cifso": "Certifie la propriété du code, la chaîne de transmission IP, la marque et les données propriétaires comme valeur transmissible."
+          "dimension": "C · Code & Architecture",
+          "existing": "Aucun standard existant ne certifie la qualité et la transmissibilité d'une base technologique — détenue ou licenciée — dans un contexte M&A.",
+          "cifso": "Certifie la base technologique — qualité et maintenabilité du code propriétaire, ou gouvernance et réversibilité de la stack licenciée — comme valeur transmissible."
         },
         {
           "dimension": "I · IP & Droits",
@@ -2687,7 +2687,7 @@
         "10. Avertissement"
       ],
       "wpS1Title": "1. Qu’est-ce que la Certification CIFSO 5000 ?",
-      "wpS1Body1": "La <strong>Certification CIFSO 5000</strong> est un protocole d’évaluation organisationnelle indépendant développé par Aegryn. Elle évalue et certifie la valeur et la transmissibilité d’une organisation selon cinq dimensions structurées : Code & Architecture, IP & Droits, Finance & Métriques, Sécurité & Souveraineté, et Organisation & Talent.",
+      "wpS1Body1": "La <strong>Certification CIFSO 5000</strong> est un protocole d’évaluation organisationnelle indépendant développé par Aegryn. Elle évalue et certifie la valeur et la transmissibilité d’une organisation selon cinq dimensions structurées : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, et Organisation & Talent.",
       "wpS1Body2": "Contrairement aux standards de certification existants, qui vérifient des systèmes, des processus et une conformité opérationnelle, la Certification CIFSO 5000 certifie la <em>valeur organisationnelle</em> : la base documentée et opposable d’une valorisation, d’une décision de financement, d’un investissement ou d’une transmission. Ce sont deux objets différents. Complémentaires, pas concurrents.",
       "wpS1Callout": "« Là où les standards existants certifient des systèmes, CIFSO 5000 certifie la valeur et la transmissibilité. »",
       "wpS2Title": "2. À qui s’adresse-t-elle — cas d’usage",
@@ -2898,7 +2898,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
-      "desc": "Le protocole Aegryn Grade CIFSO v4.0 : cinq dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
+      "desc": "Le protocole Aegryn Grade CIFSO 5000 : cinq dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
     "label": "Certification CIFSO 5000 — Méthodologie",
     "version": "Certification CIFSO 5000 v4.0",
@@ -2906,7 +2906,7 @@
     "intro": "Le CIFSO 5000 est le premier standard de certification indépendant qui évalue la valeur organisationnelle et la transmissibilité d'une entreprise. Au-delà de la conformité opérationnelle, il documente ce qui fait la valeur réelle d'une organisation : son capital intellectuel, son intégrité, sa santé financière, sa sécurité et sa résilience organisationnelle.",
     "downloadLabel": "Documentation complète",
     "downloadCta": "Télécharger le protocole PDF",
-    "cifsTitle": "Le cadre CIFSO v4.0 : cinq dimensions (C, I, F, S, O)",
+    "cifsTitle": "Le cadre CIFSO 5000 : cinq dimensions (C, I, F, S, O)",
     "cifsDesc": "Chaque actif est évalué selon cinq dimensions indépendantes : C, I, F, S, O. Chaque dimension est notée de 0 à 20 points. Le score total sur 100 détermine le grade. Aucune compensation inter-dimensionnelle n'est possible : une note insuffisante sur une dimension ne peut pas être rachetée par une excellente sur une autre.",
     "cifs": [
       {
@@ -3253,7 +3253,7 @@
         "rule": "Valorisation sur actifs tangibles uniquement. Dimension F note spéciale \"Pre-revenue\" sans note numérique. AEG maximum : A."
       }
     ],
-    "fullCodesTitle": "Table complète des sous-codes CIFSO v4.0",
+    "fullCodesTitle": "Table complète des sous-codes CIFSO 5000",
     "fullCodesDesc": "Chaque sous-code identifie un critère précis évalué lors de la certification. Les codes marqués ⛔ sont des conditions de refus automatique. Cinq dimensions : C (Code), I (IP), F (Finance), S (Sécurité), O (Organisation & Talent).",
     "fullCodesTable": [
       {
@@ -3903,7 +3903,7 @@
           "title": "Vendre un actif ou une société",
           "desc": "Vous êtes fondateur, holding ou studio. Vous souhaitez céder votre actif tech ou votre société dans les meilleures conditions.",
           "points": [
-            "Certification CIFSO v4.0 obligatoire avant présentation",
+            "Certification CIFSO 5000 obligatoire avant présentation",
             "Présentation sous NDA aux acheteurs qualifiés uniquement",
             "Prix de cession cible fixé par le vendeur",
             "Escrow institutionnel et closing sécurisé",
@@ -3916,7 +3916,7 @@
           "title": "Rechercher une cible d'acquisition",
           "desc": "Vous êtes entrepreneur, corporate ou family office. Vous souhaitez acquérir un actif tech selon des critères précis.",
           "points": [
-            "Accès à la transaction offmarket certifiée CIFSO v4.0",
+            "Accès à la transaction offmarket certifiée CIFSO 5000",
             "Matching selon vos critères (secteur, ARR, grade, taille)",
             "NDA mutuel avant toute divulgation",
             "Accompagnement due diligence et structuration",
@@ -4049,18 +4049,18 @@
     "sell": {
       "meta": {
         "title": "Céder votre organisation | Aegryn TRANSACT",
-        "desc": "Mandat de cession exclusif. Certification CIFSO v4.0, grade officiel, acquéreurs pré-qualifiés sous NDA. Commission au succès uniquement."
+        "desc": "Mandat de cession exclusif. Certification CIFSO 5000, grade officiel, acquéreurs pré-qualifiés sous NDA. Commission au succès uniquement."
       },
       "hero": {
         "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
         "title": "Céder votre organisation\nau prix qu'elle mérite.",
-        "desc": "Aegryn certifie votre organisation selon le protocole CIFSO v4.0 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+        "desc": "Aegryn certifie votre organisation selon le protocole CIFSO 5000 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
         "ctaValuation": "Valorisation indicative",
         "ctaMandat": "Déposer un mandat"
       },
       "label": "AEGRYN TRANSACT | MANDAT DE CESSION",
       "title": "Céder votre organisation\nau prix qu'elle mérite.",
-      "desc": "Aegryn certifie votre organisation selon le protocole CIFSO v4.0 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
+      "desc": "Aegryn certifie votre organisation selon le protocole CIFSO 5000 (5 dimensions), fixe le grade officiel et la présente sous NDA exclusif à des acquéreurs institutionnels pré-qualifiés. Commission au succès uniquement.",
       "ctaButton": "Déposer un mandat de cession",
       "steps": {
         "label": "PARCOURS CÉDANT EN 3 ÉTAPES",
@@ -4068,8 +4068,8 @@
         "step2Label": "SCORE DE PRÉPARATION",
         "step2Title": "Évaluez la maturité de votre organisation avant la certification.",
         "s1": {
-          "title": "Certification CIFSO v4.0",
-          "desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel AEG est attribué avant toute présentation.",
+          "title": "Certification CIFSO 5000",
+          "desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Un grade officiel AEG est attribué avant toute présentation.",
           "cta": "Obtenir la certification"
         },
         "s2": {
@@ -4108,8 +4108,8 @@
         "ctaMandat": "Déposer un mandat",
         "ctaAdvisor": "Parler à un conseiller"
       },
-      "step1Title": "Certification CIFSO v4.0",
-      "step1Desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel AEG est attribué avant toute présentation.",
+      "step1Title": "Certification CIFSO 5000",
+      "step1Desc": "Votre organisation passe le protocole d'évaluation Aegryn sur 5 dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Un grade officiel AEG est attribué avant toute présentation.",
       "step2Title": "Présentation sous NDA",
       "step2Desc": "L'organisation certifiée entre dans le processus de transaction offmarket. Chaque acquéreur signe un NDA avant d'accéder au moindre document confidentiel.",
       "step3Title": "Term sheet & négociation",
@@ -4117,8 +4117,8 @@
       "step4Title": "Closing sécurisé",
       "step4Desc": "Escrow institutionnel, transfert sécurisé, closing sous droit suisse. Protection maximale pour le vendeur et l'acquéreur.",
       "feesTitle": "STRUCTURE DE RÉMUNÉRATION",
-      "feesDesc": "Aucun frais d'entrée. Aegryn est rémunéré exclusivement au succès de la transaction. La certification CIFSO v4.0 est facturée séparément selon le grade attribué.",
-      "feesCert": "CERTIFICATION CIFSO v4.0",
+      "feesDesc": "Aucun frais d'entrée. Aegryn est rémunéré exclusivement au succès de la transaction. La certification CIFSO 5000 est facturée séparément selon le grade attribué.",
+      "feesCert": "CERTIFICATION CIFSO 5000",
       "feesCertValue": "Facturée à la remise du grade officiel. Montant selon la complexité de l'organisation, communiqué lors de la prise de mandat.",
       "feesSuccess": "COMMISSION DE SUCCÈS",
       "feesSuccessValue": "Prélevée à la clôture uniquement. Calculée sur le prix de cession net. Taux communiqué lors de la signature du mandat exclusif."
@@ -4126,7 +4126,7 @@
     "buy": {
       "label": "AEGRYN TRANSACT | MANDAT D'ACQUISITION",
       "title": "Acquérir un actif tech certifié.\nSans bruit. Sous NDA.",
-      "desc": "Accédez à la transaction offmarket Aegryn : organisations certifiées CIFSO v4.0, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
+      "desc": "Accédez à la transaction offmarket Aegryn : organisations certifiées CIFSO 5000, vendeurs qualifiés, processus structuré. Chaque transaction est encadrée par mandat exclusif sous droit suisse.",
       "cta": "Déposer un mandat d'acquisition",
       "qualifTitle": "PROFIL ACQUÉREUR QUALIFIÉ",
       "qualifDesc": "Le catalogue Aegryn est réservé aux acquéreurs ayant complété la procédure de qualification. Cette exigence protège la confidentialité des vendeurs et garantit la qualité des échanges.",
@@ -4164,13 +4164,13 @@
   },
   "transaction": {
     "meta": {
-      "title": "Cessions M&A : Organisations certifiées CIFSO v4.0",
-      "desc": "Processus Aegryn : achetez ou vendez des organisations certifiées CIFSO v4.0. Transaction offmarket, mandat exclusif, organisations encadrées."
+      "title": "Cessions M&A : Organisations certifiées CIFSO 5000",
+      "desc": "Processus Aegryn : achetez ou vendez des organisations certifiées CIFSO 5000. Transaction offmarket, mandat exclusif, organisations encadrées."
     },
     "index": {
       "label": "Processus de cession Aegryn",
       "title": "La plateforme de cession certifiée\npour les actifs tech européens.",
-      "desc": "Pas d'enchères en temps réel. Un processus offmarket structuré, réservé aux organisations certifiées CIFSO v4.0 et aux acquéreurs pré-qualifiés. Chaque actif est gradé. Chaque transaction est encadrée par mandat exclusif.",
+      "desc": "Pas d'enchères en temps réel. Un processus offmarket structuré, réservé aux organisations certifiées CIFSO 5000 et aux acquéreurs pré-qualifiés. Chaque actif est gradé. Chaque transaction est encadrée par mandat exclusif.",
       "ctaCatalog": "Voir le catalogue",
       "ctaSession": "Le processus",
       "ctaSubmit": "Soumettre un actif",
@@ -4235,7 +4235,7 @@
       "title": "Actifs certifiés\ndisponibles.",
       "desc": "Actifs soumis par des vendeurs tiers ayant passé le protocole de certification CIFSO Aegryn. Ces actifs ne font pas partie du portefeuille propriétaire Aegryn.",
       "thirdPartyNote": "Ces actifs sont proposés sous mandat exclusif par des vendeurs indépendants certifiés. Aegryn agit comme intermédiaire certifié et organisateur de la transaction, équivalent d'un conseil en cession spécialisé tech.",
-      "thirdPartyNote2": "Chaque actif présenté a obtenu le grade CIFSO Aegryn : protocole d'évaluation en 5 dimensions (Capital, Intégrité, Finances, Sécurité, Organisation). Seuls les actifs atteignant le seuil Grade A ou supérieur sont admis au processus de transaction.",
+      "thirdPartyNote2": "Chaque actif présenté a obtenu le grade CIFSO Aegryn : protocole d'évaluation en 5 dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent). Seuls les actifs atteignant le seuil Grade A ou supérieur sont admis au processus de transaction.",
       "filterAll": "Tous les grades",
       "filterStar": "AEG ★",
       "filterAAA": "AAA",
@@ -4358,7 +4358,7 @@
     "sell": {
       "meta": {
         "title": "Céder votre actif | Aegryn",
-        "desc": "Parcours cédant Aegryn : valorisation indicative, score de préparation, mandat exclusif. Certification CIFSO v4.0, grade officiel, acquéreurs pré-qualifiés."
+        "desc": "Parcours cédant Aegryn : valorisation indicative, score de préparation, mandat exclusif. Certification CIFSO 5000, grade officiel, acquéreurs pré-qualifiés."
       },
       "hero": {
         "label": "Céder votre actif",
@@ -4383,7 +4383,7 @@
         },
         "s3": {
           "title": "Dépôt de mandat",
-          "desc": "Soumettez votre organisation à l'équipe Aegryn. Certification CIFSO v4.0 indépendante, attribution de grade officiel, entrée dans le processus de cession sous mandat exclusif 60 jours.",
+          "desc": "Soumettez votre organisation à l'équipe Aegryn. Certification CIFSO 5000 indépendante, attribution de grade officiel, entrée dans le processus de cession sous mandat exclusif 60 jours.",
           "cta": "Déposer votre mandat →"
         }
       },
@@ -4403,7 +4403,7 @@
           "desc": "10% du prix au HoT via séquestre institutionnel. Aucun transfert d'actifs avant libération des fonds. Juridiction suisse."
         },
         "g4": {
-          "title": "Certification CIFSO v4.0 indépendante",
+          "title": "Certification CIFSO 5000 indépendante",
           "desc": "Grade ★/AAA/AA/A/B attribué par un auditeur indépendant, finance, code, IP, sécurité. Opposable et documenté."
         }
       },
@@ -4512,7 +4512,7 @@
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
     "title": "Un label qualité indépendant pour les organisations\nqui veulent estimer, acquérir ou transmettre leurs actifs.",
-    "desc": "Le protocole CIFSO v4.0 certifie cinq dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Reproductible, traçable, définitif.",
+    "desc": "Le protocole CIFSO 5000 certifie cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Reproductible, traçable, définitif.",
     "quote": "Un actif sans certification indépendante, c'est une valeur sans preuve. Un actif Aegryn Grade AAA, c'est une certitude documentée et traçable.",
     "cta": "Découvrir la méthodologie",
     "grades": [
@@ -5663,7 +5663,7 @@
         {
           "num": "02",
           "title": "Architecture et Design",
-          "desc": "L'organisation est architecturée selon les critères CIFSO v4.0 : capital documenté, intégrité gouvernance, finances auditables, sécurité by design, structure organisationnelle. Le grade est le plan de construction."
+          "desc": "L'organisation est architecturée selon les critères CIFSO 5000 : base technologique documentée, droits IP cédés, finances auditables, sécurité by design, gouvernance structurée. Le grade est le plan de construction."
         },
         {
           "num": "03",
@@ -5678,7 +5678,7 @@
         {
           "num": "05",
           "title": "Certification (et sortie optionnelle)",
-          "desc": "Soumission au protocole CIFSO v4.0 si souhaité. Grade officiel émis si les critères sont remplis. La transaction via Aegryn TRANSACT ou confidentielle n'est engagée que sur votre décision. L'organisation peut aussi être conservée avec maintenance."
+          "desc": "Soumission au protocole CIFSO 5000 si souhaité. Grade officiel émis si les critères sont remplis. La transaction via Aegryn TRANSACT ou confidentielle n'est engagée que sur votre décision. L'organisation peut aussi être conservée avec maintenance."
         }
       ]
     },
@@ -6414,7 +6414,7 @@
       "preRevenueRange": "Fourchette indicative",
       "preRevenueNote": "Pour un actif pre-revenue, le grade Aegryn C est l'étape naturelle. Il permet de valoriser l'IP et le code avant toute transaction.",
       "ngNote": "Votre score actuel est en dessous du seuil de gradabilité. Un Assessment Day gratuit vous permettra d'identifier les 3 actions prioritaires.",
-      "disclaimer": "Cet outil est une version light publique et illustrative. L'estimation est générée par un algorithme à partir de données que vous déclarez sans vérification indépendante. Elle ne constitue pas un Grade Aegryn officiel et ne saurait remplacer une certification Aegryn indépendante. La certification Aegryn (protocole CIFSO v4.0, audit par des analystes certifiés Aegryn) est obligatoire pour toute transaction certifiée via la plateforme Aegryn Transact.",
+      "disclaimer": "Cet outil est une version light publique et illustrative. L'estimation est générée par un algorithme à partir de données que vous déclarez sans vérification indépendante. Elle ne constitue pas un Grade Aegryn officiel et ne saurait remplacer une certification Aegryn indépendante. La certification Aegryn (protocole CIFSO 5000, audit par des analystes certifiés Aegryn) est obligatoire pour toute transaction certifiée via la plateforme Aegryn Transact.",
       "ctaGrade": "Démarrer ma certification officielle",
       "ctaContact": "Prendre contact avec un advisor",
       "emailTitle": "Recevoir mon rapport détaillé par email.",
@@ -6502,7 +6502,7 @@
       "dims": [
         {
           "code": "C",
-          "label": "Capital & Actifs immatériels",
+          "label": "Code & Architecture",
           "score": "14/20"
         },
         {
@@ -9087,7 +9087,7 @@
       "contactEditTitle": "Partenariat, contribution, droits de reproduction",
       "contactEditBody": "Pour toute demande relative au contenu éditorial, aux droits de reproduction, ou aux partenariats de contenu, contactez l'équipe éditoriale d'Aegryn directement.",
       "contactEditCta": "media@boha-group.com →",
-      "cifsLabel": "Certification CIFSO v4.0",
+      "cifsLabel": "Certification CIFSO 5000",
       "cifsBody": "Moins de 25 % des actifs soumis atteignent le statut Full Grade. Découvrez où se situe votre actif avant qu'un acheteur ne le fasse.",
       "cifsCta": "Démarrer la certification →",
       "footerLegal": "Aegryn, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",
@@ -9987,7 +9987,7 @@
         },
         {
           "name": "Certification CIFSO 5000",
-          "desc": "Évaluation indépendante sur 5 dimensions — Capital, Intégrité, Finance, Sécurité, Organisation — pour documenter et défendre la valeur."
+          "desc": "Évaluation indépendante sur 5 dimensions — Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent — pour documenter et défendre la valeur."
         }
       ],
       "cifsoTitle": "La pertinence CIFSO 5000 selon les secteurs",
@@ -9995,13 +9995,13 @@
       "cifso": [
         {
           "code": "C",
-          "dim": "Capital & Propriété intellectuelle",
-          "desc": "Droits sur le code, marques, brevets, données propriétaires. Critique pour les organisations dont la valeur repose sur des actifs immatériels."
+          "dim": "Code & Architecture",
+          "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, dépendances, réversibilité. Critique pour toute organisation dont la valeur repose sur son SI."
         },
         {
           "code": "I",
           "dim": "IP & Droits",
-          "desc": "Solidité des structures de gouvernance, traçabilité des décisions, dépendances fondateurs. Clé pour tout processus de transmission ou d'investissement."
+          "desc": "Droits sur le code, marques, brevets, données propriétaires, contrats. La chaîne de titres qu'un acquéreur vérifie en premier."
         },
         {
           "code": "F",
@@ -10541,8 +10541,8 @@
       },
       {
         "num": "03",
-        "title": "Certification CIFSO v4.0 & attribution de grade",
-        "desc": "Un auditeur CIFSO indépendant examine les 5 dimensions : Capital, Intégrité, Finances, Sécurité & Souveraineté, Organisation. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec toute autre plateforme de cession.",
+        "title": "Certification CIFSO 5000 & attribution de grade",
+        "desc": "Un auditeur CIFSO indépendant examine les 5 dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent. Un grade officiel ★/AAA/AA/A/B est attribué, documenté et opposable. C'est la différence fondamentale avec toute autre plateforme de cession.",
         "detail": "Audit indépendant · 5 dimensions CIFSO · Grade officiel et opposable · Rapport complet remis",
         "cta": "Comprendre les grades"
       },
@@ -10653,7 +10653,7 @@
       },
       {
         "title": "Actifs certifiés et gradés",
-        "desc": "Chaque actif en transaction a reçu une certification CIFSO v4.0 indépendante (Capital, Intégrité, Finances, Sécurité, Organisation) et un grade ★/AAA/AA/A/B opposable."
+        "desc": "Chaque actif en transaction a reçu une certification CIFSO 5000 indépendante (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent) et un grade ★/AAA/AA/A/B opposable."
       },
       {
         "title": "Cercle fermé d'acheteurs",

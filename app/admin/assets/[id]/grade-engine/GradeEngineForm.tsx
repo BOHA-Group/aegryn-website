@@ -583,7 +583,7 @@ export default function GradeEngineForm({
       {/* DIMENSION CODE */}
       <Section title="Dimension C : Code (20 pts)" open={open.code} onToggle={() => setOpen(p => ({ ...p, code: !p.code }))}>
         {/* CIFSO v4.12 — nature de la base technologique */}
-        <Field label="Mode technologique" hint="Détermine la piste de scoring : code propriétaire, stack licenciée (SaaS/licences), ou hybride (moyenne des deux pistes)">
+        <Field label="Mode technologique" hint="Détermine la piste de scoring : code propriétaire, stack licenciée (SaaS/licences, plafond 16/20 — pas d'actif tech détenu), ou hybride (moyenne des deux pistes, plafond naturel 18)">
           <select value={input.code.technologyMode ?? 'proprietary'} onChange={e => setCode('technologyMode', e.target.value as TechnologyMode)} className={selectCls}>
             <option value="proprietary">Code propriétaire — l'organisation développe son logiciel</option>
             <option value="licensed_stack">Stack licenciée — base = logiciels/SaaS tiers</option>

@@ -202,8 +202,10 @@ Dimension C keeps its 20 points and its public name in every certification — d
 | Mode | Track | Controls |
 |---|---|---|
 | `proprietary` | Owned codebase | Test coverage, vulnerabilities, architecture, CI/CD, API doc, tech debt, external audit (existing) |
-| `licensed_stack` | Licensed SaaS/software base | C-60 software inventory (6) · C-61 license compliance (4) · C-63 vendor reversibility/data export (4) · C-62 SI mapping (3) · C-64 vendor concentration (3) |
-| `hybrid` | Both | Proprietary track + licensed track averaged (each capped at 20) |
+| `licensed_stack` | Licensed SaaS/software base | C-60 software inventory (6) · C-61 license compliance (4) · C-63 vendor reversibility/data export (4) · C-62 SI mapping (3) · C-64 vendor concentration (3) — **track capped at 16/20** |
+| `hybrid` | Both | Proprietary track + licensed track averaged — natural ceiling (20 + 16) / 2 = 18 max |
+
+**Ownership premium:** a fully licensed technology base caps at 16/20. Governance of a rented IS is fully measurable — no control-level penalty — but the organisation does not hold a proprietary software asset, so its intrinsic value is lower than an owned base. The premium (4 pts) materialises as a ceiling, not a deduction.
 
 Code-level auto-refusals (critical vulns without audit, near-zero coverage with many critical vulns) only apply on tracks containing proprietary code. Data-room catalogue: proprietary-code evidence is conditioned on `applicability = 'proprietary_code'` (C-01→C-04, C-06, C-07, C-09); licensed-stack evidence on `'licensed_stack'` (C-60→C-64, with C-60/C-61/C-63 blocking — parity with the proprietary track); C-05 and C-08 remain universal.
 

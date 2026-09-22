@@ -294,7 +294,7 @@
       "cifso": {
         "badge": "Protocolo · Certificación",
         "tagline": "Nombre: Certification CIFSO 5000",
-        "description": "Protocolo de certificación independiente que evalúa y documenta el valor de una organización en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad y Soberanía, Organización. Produce un grade oficial (★ a B), una puntuación sobre 100 y un certificado verificable, válido durante doce meses.\n\nUtilizado para los activos propios de Aegryn y los mandatos de sus clientes. Diseñado para ser oponible frente a un inversor, un banco o un adquirente institucional.",
+        "description": "Protocolo de certificación independiente que evalúa y documenta el valor de una organización en cinco dimensiones: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento. Produce un grade oficial (★ a B), una puntuación sobre 100 y un certificado verificable, válido durante doce meses.\n\nUtilizado para los activos propios de Aegryn y los mandatos de sus clientes. Diseñado para ser oponible frente a un inversor, un banco o un adquirente institucional.",
         "visitPage": "Ver página de certificación",
         "name": "Certificación de valorización de activos"
       },
@@ -831,7 +831,7 @@
       {
         "val": "5",
         "label": "Dimensiones CIFSO",
-        "sub": "Capital · Integridad · Finanzas · Seguridad · Organización"
+        "sub": "Código · PI · Finanzas · Seguridad · Organización"
       }
     ],
     "text": "Hemos pasado más de veinte años construyendo, asesorando y reestructurando organizaciones. Lo que hemos adquirido no tiene precio. Las empresas que perduran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han comprendido eso."
@@ -851,7 +851,7 @@
       },
       {
         "title": "VALORIZAR",
-        "desc": "Certificación independiente CIFSO y valorización de los activos de la empresa. Un protocolo riguroso en cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización."
+        "desc": "Certificación independiente CIFSO y valorización de los activos de la empresa. Un protocolo riguroso en cinco dimensiones: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento."
       },
       {
         "title": "RECLUTAR",
@@ -2335,7 +2335,7 @@
       {
         "num": "02",
         "title": "Auditoría técnica CIFSO (C + S)",
-        "desc": "Análisis en profundidad de Capital e IP y Seguridad y Soberanía por dos analistas senior certificados.",
+        "desc": "Análisis en profundidad de Código & Arquitectura y Seguridad y Soberanía por dos analistas senior certificados.",
         "inputs": "Código fuente, documentación IP (patentes, marcas, licencias), políticas de seguridad, informes de escaneo de vulnerabilidades, registro RGPD, arquitectura cloud",
         "outputs": "Informe de auditoría técnica con puntuaciones C y S, identificación de vulnerabilidades críticas, verificación de la cadena de títulos IP",
         "outcomes": "Evaluación objetiva de la calidad del código, propiedad IP y postura de ciberseguridad según estándares UE (NIS2, DORA, RGPD)."
@@ -3404,9 +3404,9 @@
       "isoStatement": "CIFSO 5000 complementa los estándares existentes. No los reemplaza.",
       "isoRows": [
         {
-          "dimension": "C · Capital & Propiedad intelectual",
-          "existing": "Ningún estándar existente cubre la cadena de titularidad de la propiedad intelectual a nivel de transacción. Ni ISO 27001 ni SOC 2 atestiguan los derechos de propiedad IP.",
-          "cifso": "Certifica la titularidad del código, la cadena de transferencia de propiedad intelectual, el estado de marcas y patentes, el cumplimiento de código abierto y las cesiones de derechos de los fundadores."
+          "dimension": "C · Código & Arquitectura",
+          "existing": "Ningún estándar existente certifica la calidad y la transferibilidad de una base tecnológica — propia o licenciada — en un contexto de M&A.",
+          "cifso": "Certifica la base tecnológica — calidad y mantenibilidad del código propietario, o gobernanza y reversibilidad del stack licenciado — como valor transferible."
         },
         {
           "dimension": "I · PI & Derechos",
@@ -3509,7 +3509,7 @@
         "10. Aviso legal"
       ],
       "wpS1Title": "1. ¿Qué es la Certificación CIFSO 5000?",
-      "wpS1Body1": "La <strong>Certificación CIFSO 5000</strong> es un protocolo de evaluación organizativa independiente desarrollado por Aegryn. Evalúa y certifica el valor y la transmisibilidad de una organización en cinco dimensiones estructuradas: Capital & Propiedad intelectual, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía y Organización & Talento.",
+      "wpS1Body1": "La <strong>Certificación CIFSO 5000</strong> es un protocolo de evaluación organizativa independiente desarrollado por Aegryn. Evalúa y certifica el valor y la transmisibilidad de una organización en cinco dimensiones estructuradas: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, y Organización & Talento.",
       "wpS1Body2": "A diferencia de los estándares de certificación existentes, que verifican sistemas, procesos y conformidad operativa, la Certificación CIFSO 5000 certifica el <em>valor organizativo</em>: la base documentada y defendible para una valoración, una decisión de financiación, una inversión o una transmisión de empresa. Son dos objetos diferentes. Complementarios, no competidores.",
       "wpS1Callout": "«Donde los estándares existentes certifican sistemas, CIFSO 5000 certifica valor y transmisibilidad.»",
       "wpS2Title": "2. ¿A quién va dirigida? — casos de uso",
@@ -4225,7 +4225,7 @@
       "upcomingLocked": "Acceso reservado a miembros cualificados",
       "upcomingLockedDesc": "Esta sección es accesible tras la validación de su cuenta por el equipo Aegryn.",
       "upcomingClientLink": "Acceder al catálogo privado →",
-      "thirdPartyNote2": "Cada activo presentado ha obtenido el grado CIFSO Aegryn: un protocolo de evaluación en 5 dimensiones (Capital, Integridad, Finanzas, Seguridad, Organización). Solo los activos que alcanzan el Grado A o superior son admitidos al proceso de transacción."
+      "thirdPartyNote2": "Cada activo presentado ha obtenido el grado CIFSO Aegryn: un protocolo de evaluación en 5 dimensiones (Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento). Solo los activos que alcanzan el Grado A o superior son admitidos al proceso de transacción."
     },
     "sell": {
       "meta": {
@@ -4427,7 +4427,7 @@
   "gradeStrip": {
     "label": "Certification CIFSO 5000",
     "title": "Un sello de calidad independiente para las organizaciones\nque quieren estimar, adquirir o transmitir sus activos.",
-    "desc": "El protocolo CIFSO v4.0 certifica cinco dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización. Reproducible, trazable, definitivo.",
+    "desc": "El protocolo CIFSO 5000 certifica cinco dimensiones: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento. Reproducible, trazable, definitivo.",
     "quote": "Un activo sin certificación independiente es un valor sin prueba. Un activo Aegryn Grade AAA es una certeza documentada y verificable.",
     "cta": "Descubrir la metodología",
     "grades": [
@@ -6454,7 +6454,7 @@
       "preRevenueRange": "Horquilla indicativa",
       "preRevenueNote": "Para un activo pre-revenue, el Grade C de Aegryn es el paso natural siguiente.",
       "ngNote": "Su puntuación está por debajo del umbral de gradabilidad. Un Assessment Day gratuito identificará las 3 acciones prioritarias.",
-      "disclaimer": "Esta herramienta es una versión light pública con fines meramente ilustrativos. La estimación es generada por un algoritmo a partir de datos que usted declara sin verificación independiente. No constituye un Grade Aegryn oficial y no puede sustituir a una certificación Aegryn independiente. La certificación Aegryn (protocolo CIFSO v4.0, auditoría por analistas certificados Aegryn) es obligatoria para cualquier transacción certificada a través de la plataforma Aegryn Transact.",
+      "disclaimer": "Esta herramienta es una versión light pública con fines meramente ilustrativos. La estimación es generada por un algoritmo a partir de datos que usted declara sin verificación independiente. No constituye un Grade Aegryn oficial y no puede sustituir a una certificación Aegryn independiente. La certificación Aegryn (protocolo CIFSO 5000, auditoría por analistas certificados Aegryn) es obligatoria para cualquier transacción certificada a través de la plataforma Aegryn Transact.",
       "ctaGrade": "Iniciar mi certificación oficial",
       "ctaAssessment": "Reservar un Assessment Day gratuito",
       "emailTitle": "Recibir mi informe detallado por email.",
@@ -6542,7 +6542,7 @@
       "dims": [
         {
           "code": "C",
-          "label": "Capital & Activos Intangibles",
+          "label": "Código & Arquitectura",
           "score": "14/20"
         },
         {
@@ -10042,7 +10042,7 @@
         },
         {
           "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions — Capital, Integrity, Finance, Security, Organisation — to document and defend value."
+          "desc": "Independent assessment across 5 dimensions — Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento — to document and defend value."
         }
       ],
       "cifsoTitle": "Relevancia del CIFSO 5000 por sector",
@@ -10050,13 +10050,13 @@
       "cifso": [
         {
           "code": "C",
-          "dim": "Capital & Intellectual Property",
-          "desc": "Rights over code, trademarks, patents, proprietary data. Critical for organisations whose value rests on intangible assets."
+          "dim": "Código & Arquitectura",
+          "desc": "Calidad de la base tecnológica — código propietario o sistemas licenciados: arquitectura, dependencias, reversibilidad. Crítica para toda organización cuyo valor reposa en su SI."
         },
         {
           "code": "I",
           "dim": "PI & Derechos",
-          "desc": "Governance structure solidity, decision traceability, founder dependencies. Key for any transfer or investment process."
+          "desc": "Derechos sobre el código, marcas, patentes, datos propietarios, contratos. La cadena de titularidad que un adquirente verifica primero."
         },
         {
           "code": "F",
@@ -10541,8 +10541,8 @@
       },
       {
         "num": "03",
-        "title": "Certificación CIFSO v4.0 & asignación de grado",
-        "desc": "Un auditor CIFSO independiente examina las 5 dimensiones: Capital, Integridad, Finanzas, Seguridad & Soberanía, Organización. Se asigna un grado oficial ★/AAA/AA/A/B, documentado y oponible. Esta es la diferencia fundamental con cualquier otra plataforma de venta.",
+        "title": "Certificación CIFSO 5000 & asignación de grado",
+        "desc": "Un auditor CIFSO independiente examina las 5 dimensiones: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento. Se asigna un grado oficial ★/AAA/AA/A/B, documentado y oponible. Esta es la diferencia fundamental con cualquier otra plataforma de venta.",
         "detail": "Auditoría independiente · 5 dimensiones CIFSO · Grado oficial oponible · Informe completo entregado",
         "cta": "Comprender los grados"
       },
@@ -10653,7 +10653,7 @@
       },
       {
         "title": "Activos certificados y graduados",
-        "desc": "Cada activo en transacción ha recibido una certificación CIFSO v4.0 independiente (Capital, Integridad, Finanzas, Seguridad, Organización) y un grado ★/AAA/AA/A/B oponible."
+        "desc": "Cada activo en transacción ha recibido una certificación CIFSO 5000 independiente (Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento) y un grado ★/AAA/AA/A/B oponible."
       },
       {
         "title": "Círculo cerrado de compradores",

@@ -482,6 +482,16 @@ function scoreCode(input: CodeInput, profile?: RegulatoryProfile): DimensionResu
     else if (input.vendorConcentration === 'medium') { lic += 1; rationale.push('Concentration fournisseurs modérée (C-64)') }
     else                                             {             rationale.push('Forte concentration fournisseurs — risque de dépendance (C-64)') }
 
+    /* ── CIFSO v4.12 — prime de détention : plafond 16/20 sur la piste licenciée ──
+       La gouvernance du SI se mesure pleinement (pas de pénalité sur les contrôles),
+       mais une organisation qui loue toute sa technologie ne détient pas d'actif
+       logiciel propriétaire — sa valeur intrinsèque est inférieure à une base détenue.
+       En hybride, le plafond se propage naturellement : (20 + 16) / 2 = 18 max. */
+    if (lic > 16) {
+      lic = 16
+      rationale.push('Plafond 16/20 sur la piste licenciée : base technologique louée, aucun actif logiciel propriétaire détenu')
+    }
+
     score = mode === 'hybrid' ? Math.round((score + lic) / 2) : lic
     if (mode === 'hybrid') rationale.push('Piste hybride : moyenne code propriétaire / stack licenciée')
   }
