@@ -2438,446 +2438,446 @@
       {
         "dim": "C",
         "code": "C-11",
-        "label": "Architecture",
-        "desc": "Component decoupling, separation of concerns, documented patterns."
+        "label": "Arquitectura",
+        "desc": "Desacoplamiento de componentes, separación de responsabilidades, patrones documentados."
       },
       {
         "dim": "C",
         "code": "C-12",
-        "label": "Scalability",
-        "desc": "Capacity to handle ×10 load without major refactoring."
+        "label": "Escalabilidad",
+        "desc": "Capacidad de absorber ×10 la carga sin refactorización mayor."
       },
       {
         "dim": "C",
         "code": "C-13",
-        "label": "Technical documentation",
-        "desc": "Up-to-date README, ADR, architecture diagrams."
+        "label": "Documentación técnica",
+        "desc": "README, ADR y diagramas de arquitectura actualizados."
       },
       {
         "dim": "C",
         "code": "C-14",
-        "label": "Test coverage",
-        "desc": "Unit + integration + E2E tests. Threshold: ≥70% for level 2."
+        "label": "Cobertura de tests",
+        "desc": "Tests unitarios + integración + E2E. Umbral: ≥70% para nivel 2."
       },
       {
         "dim": "C",
         "code": "C-15",
         "label": "CI/CD",
-        "desc": "Automated build, test and deployment pipeline operational."
+        "desc": "Pipeline automatizado de build, test y despliegue operativo."
       },
       {
         "dim": "C",
         "code": "C-16",
-        "label": "Code quality",
-        "desc": "Linting, formatting, documented code reviews."
+        "label": "Calidad del código",
+        "desc": "Linting, formateo, revisiones de código documentadas."
       },
       {
         "dim": "C",
         "code": "C-17",
-        "label": "Technical debt",
-        "desc": "Identification, quantification and remediation plan for existing debt."
+        "label": "Deuda técnica",
+        "desc": "Identificación, cuantificación y plan de remediación de la deuda existente."
       },
       {
         "dim": "C",
         "code": "C-18",
-        "label": "Third-party dependencies",
-        "desc": "Package inventory, compatible licences, no abandoned dependencies."
+        "label": "Dependencias de terceros",
+        "desc": "Inventario de paquetes, licencias compatibles, sin dependencias abandonadas."
       },
       {
         "dim": "C",
         "code": "C-19",
-        "label": "Secrets management",
-        "desc": "Environment variables, vault, documented key rotation."
+        "label": "Gestión de secretos",
+        "desc": "Variables de entorno, vault, rotación de claves documentada."
       },
       {
         "dim": "C",
         "code": "C-21",
-        "label": "Monitoring & observability",
-        "desc": "Structured logs, alerts, operational dashboards."
+        "label": "Monitorización y observabilidad",
+        "desc": "Logs estructurados, alertas, dashboards operativos."
       },
       {
         "dim": "C",
         "code": "C-22",
-        "label": "Resilience & recovery",
-        "desc": "Backup strategy, documented RTO/RPO, restore tests performed."
+        "label": "Resiliencia y recuperación",
+        "desc": "Estrategia de backup, RTO/RPO documentados, tests de restauración realizados."
       },
       {
         "dim": "C",
         "code": "C-23",
-        "label": "Environment separation",
-        "desc": "Dev / staging / prod isolated, no real data in dev."
+        "label": "Separación de entornos",
+        "desc": "Dev / staging / prod aislados, sin datos reales en dev."
       },
       {
         "dim": "C",
         "code": "C-31",
-        "label": "Maintainability",
-        "desc": "Ease of onboarding a new developer, estimated time documented."
+        "label": "Mantenibilidad",
+        "desc": "Facilidad de onboarding de un nuevo desarrollador, tiempo estimado documentado."
       },
       {
         "dim": "C",
         "code": "C-32",
-        "label": "Versioning & history",
-        "desc": "Clean Git, commit conventions, changelogs maintained."
+        "label": "Versionado e historial",
+        "desc": "Git limpio, convenciones de commit, changelogs mantenidos."
       },
       {
         "dim": "C",
         "code": "C-33",
-        "label": "Performance",
-        "desc": "Response time benchmarks documented, no unaddressed regression."
+        "label": "Rendimiento",
+        "desc": "Benchmarks de tiempo de respuesta documentados, sin regresión sin tratar."
       },
       {
         "dim": "C",
         "code": "C-34",
-        "label": "Critical CVEs",
-        "desc": "No unresolved critical CVE in direct dependencies. Blocking if present."
+        "label": "CVE críticas",
+        "desc": "Sin CVE crítica sin resolver en dependencias directas. Bloqueante si presente."
       },
       {
         "dim": "C",
         "code": "C-35",
-        "label": "Codebase access",
-        "desc": "Access granted to analysts with defined scope and signed NDA."
+        "label": "Acceso al codebase",
+        "desc": "Acceso otorgado a analistas con alcance definido y NDA firmado."
       },
       {
         "dim": "C",
         "code": "C-40",
-        "label": "Exposed secrets",
-        "desc": "No secrets (API keys, tokens) exposed in Git history or code. Blocking if present."
+        "label": "Secretos expuestos",
+        "desc": "Sin secretos (API keys, tokens) expuestos en el historial Git o el código. Bloqueante si presente."
       },
       {
         "dim": "C",
         "code": "C-41",
-        "label": "Code ownership",
-        "desc": "All code owned by the selling entity, no external contribution not assigned."
+        "label": "Propiedad del código",
+        "desc": "Todo el código pertenece a la entidad vendedora, sin contribución externa no cedida."
       },
       {
         "dim": "I",
         "code": "I-11",
-        "label": "Registered trademarks",
-        "desc": "National or international filing (WIPO, EUIPO) validated, no opposition pending."
+        "label": "Marcas registradas",
+        "desc": "Registro nacional o internacional (OMPI, EUIPO) validado, sin oposición pendiente."
       },
       {
         "dim": "I",
         "code": "I-12",
-        "label": "Software rights",
-        "desc": "Formal assignment of patrimonial rights to the selling entity, all contributors included."
+        "label": "Derechos de software",
+        "desc": "Cesión formal de derechos patrimoniales a la entidad vendedora, todos los contribuyentes incluidos."
       },
       {
         "dim": "I",
         "code": "I-13",
-        "label": "Patents",
-        "desc": "Patents filed or pending, value and scope documented."
+        "label": "Patentes",
+        "desc": "Patentes presentadas o pendientes, valor y alcance documentados."
       },
       {
         "dim": "I",
         "code": "I-14",
-        "label": "Technological moat",
-        "desc": "Identifiable and documented technical barrier to entry (proprietary algorithm, exclusive data, network)."
+        "label": "Foso tecnológico",
+        "desc": "Barrera de entrada técnica identificable y documentada (algoritmo propietario, datos exclusivos, red)."
       },
       {
         "dim": "I",
         "code": "I-15",
-        "label": "Contractual exclusivities",
-        "desc": "Active exclusivity clauses with customers or suppliers."
+        "label": "Exclusividades contractuales",
+        "desc": "Cláusulas de exclusividad con clientes o proveedores en vigor."
       },
       {
         "dim": "I",
         "code": "I-16",
-        "label": "Proprietary data",
-        "desc": "Dataset or database created by the asset, not easily replicable by a competitor."
+        "label": "Datos propietarios",
+        "desc": "Dataset o base de datos creada por el activo, no replicable fácilmente por un competidor."
       },
       {
         "dim": "I",
         "code": "I-17",
-        "label": "Third-party licences",
-        "desc": "Complete licence inventory, compatibility with transfer verified."
+        "label": "Licencias de terceros",
+        "desc": "Inventario completo de licencias, compatibilidad con la cesión verificada."
       },
       {
         "dim": "I",
         "code": "I-18",
-        "label": "Trademark litigation",
-        "desc": "No active or pending IP dispute. Blocking if active litigation."
+        "label": "Litigios de marca",
+        "desc": "Sin litigio IP activo o pendiente. Bloqueante si litigio activo."
       },
       {
         "dim": "I",
         "code": "I-19",
-        "label": "Non-compete",
-        "desc": "Non-compete clauses with key employees and contractors documented."
+        "label": "No competencia",
+        "desc": "Cláusulas de no competencia con empleados clave y contratistas documentadas."
       },
       {
         "dim": "I",
         "code": "I-21",
-        "label": "Third-party rights on codebase",
-        "desc": "No unassigned rights of external contributors on the produced code. Blocking if not formalised."
+        "label": "Derechos de terceros sobre el codebase",
+        "desc": "Sin derechos no cedidos de contribuyentes externos sobre el código producido. Bloqueante si no formalizado."
       },
       {
         "dim": "I",
         "code": "I-22",
-        "label": "Domain names",
-        "desc": "Strategic domains owned by the selling entity, renewals up to date."
+        "label": "Nombres de dominio",
+        "desc": "Dominios estratégicos en propiedad de la entidad vendedora, renovaciones al día."
       },
       {
         "dim": "I",
         "code": "I-23",
-        "label": "Social media & handles",
-        "desc": "Official accounts owned by the entity, no third-party squatting."
+        "label": "Redes sociales y handles",
+        "desc": "Cuentas oficiales en propiedad de la entidad, sin squatting de terceros."
       },
       {
         "dim": "I",
         "code": "I-31",
-        "label": "Market positioning",
-        "desc": "Clear and defensible differentiation against 3 identified direct competitors."
+        "label": "Posicionamiento de mercado",
+        "desc": "Diferenciación clara y defendible frente a 3 competidores directos identificados."
       },
       {
         "dim": "I",
         "code": "I-32",
-        "label": "Reputation & reviews",
-        "desc": "Public reviews, NPS or documented customer feedback, no structural bad buzz."
+        "label": "Reputación y reseñas",
+        "desc": "Reseñas públicas, NPS o feedback de clientes documentado, sin bad buzz estructural."
       },
       {
         "dim": "I",
         "code": "I-39",
-        "label": "Chain of title",
-        "desc": "Clear ownership history since incorporation, no gap in chain of title."
+        "label": "Cadena de titularidad",
+        "desc": "Historial de propiedad claro desde la constitución, sin lagunas en la cadena."
       },
       {
         "dim": "F",
         "code": "F-11",
-        "label": "Documented ARR",
-        "desc": "ARR audited on supporting documents (contracts, invoices, statements) over 12 months minimum."
+        "label": "ARR documentado",
+        "desc": "ARR auditado sobre documentos justificativos (contratos, facturas, extractos) durante 12 meses mínimo."
       },
       {
         "dim": "F",
         "code": "F-12",
-        "label": "MRR & seasonality",
-        "desc": "Monthly MRR over 24 months, seasonal peaks identified."
+        "label": "MRR y estacionalidad",
+        "desc": "MRR mensual durante 24 meses, picos estacionales identificados."
       },
       {
         "dim": "F",
         "code": "F-13",
         "label": "Churn",
-        "desc": "Monthly churn calculated on evidence. Level 2 threshold: <3% monthly."
+        "desc": "Churn mensual calculado sobre evidencias. Umbral nivel 2: <3% mensual."
       },
       {
         "dim": "F",
         "code": "F-14",
         "label": "NRR (Net Revenue Retention)",
-        "desc": "Expansion revenue included. Level 1 threshold: >120%. Level 2: >100%."
+        "desc": "Ingresos de expansión incluidos. Umbral nivel 1: >120%. Nivel 2: >100%."
       },
       {
         "dim": "F",
         "code": "F-15",
         "label": "LTV / CAC",
-        "desc": "LTV:CAC ratio documented and calculated on a representative cohort."
+        "desc": "Ratio LTV:CAC documentado y calculado sobre una cohorte representativa."
       },
       {
         "dim": "F",
         "code": "F-16",
-        "label": "Gross margins",
-        "desc": "Gross margin over 12 months. Level 1 threshold: >75% (SaaS)."
+        "label": "Márgenes brutos",
+        "desc": "Margen bruto durante 12 meses. Umbral nivel 1: >75% (SaaS)."
       },
       {
         "dim": "F",
         "code": "F-17",
         "label": "Runway",
-        "desc": "Available cash and estimated cash-out date if applicable."
+        "desc": "Tesorería disponible y fecha estimada de agotamiento de caja si aplica."
       },
       {
         "dim": "F",
         "code": "F-18",
         "label": "Burn rate",
-        "desc": "Average monthly burn over 6 months, OPEX / CAPEX breakdown."
+        "desc": "Burn mensual medio durante 6 meses, desglose OPEX / CAPEX."
       },
       {
         "dim": "F",
         "code": "F-21",
-        "label": "ARR growth YoY",
-        "desc": "Annual growth rate documented. Level 1 threshold: >40%."
+        "label": "Crecimiento ARR YoY",
+        "desc": "Tasa de crecimiento anual documentada. Umbral nivel 1: >40%."
       },
       {
         "dim": "F",
         "code": "F-22",
-        "label": "Customer concentration",
-        "desc": "Top customer share of total revenue, concentration risk assessed."
+        "label": "Concentración de clientes",
+        "desc": "Cuota del principal cliente en los ingresos totales, riesgo de concentración evaluado."
       },
       {
         "dim": "F",
         "code": "F-23",
-        "label": "Recurring contracts",
-        "desc": "Average contract duration, renewal rates documented."
+        "label": "Contratos recurrentes",
+        "desc": "Duración media de los contratos, tasas de renovación documentadas."
       },
       {
         "dim": "F",
         "code": "F-24",
-        "label": "Revenue cohorts",
-        "desc": "Cohort analysis over 4+ quarters to validate retention."
+        "label": "Cohortes de ingresos",
+        "desc": "Análisis de cohortes durante 4+ trimestres para validar la retención."
       },
       {
         "dim": "F",
         "code": "F-31",
-        "label": "Legal structure",
-        "desc": "Dedicated legal entity, separate accounts, no mix with other activities."
+        "label": "Estructura jurídica",
+        "desc": "Entidad legal propia, cuentas separadas, sin mezcla con otras actividades."
       },
       {
         "dim": "F",
         "code": "F-32",
-        "label": "Hidden liabilities",
-        "desc": "No undisclosed supplier debt, employment or tax disputes."
+        "label": "Pasivos ocultos",
+        "desc": "Sin deudas a proveedores, litigios laborales o fiscales no declarados."
       },
       {
         "dim": "F",
         "code": "F-33",
-        "label": "Auditability",
-        "desc": "Annual accounts available, general ledger accessible on request."
+        "label": "Auditabilidad",
+        "desc": "Cuentas anuales disponibles, libro mayor accesible a petición."
       },
       {
         "dim": "F",
         "code": "F-41",
-        "label": "Sales pipeline",
-        "desc": "Documented pipeline of ongoing deals with probabilities and amounts."
+        "label": "Pipeline comercial",
+        "desc": "Pipeline documentado de operaciones en curso con probabilidades e importes."
       },
       {
         "dim": "F",
         "code": "F-42",
-        "label": "Founder dependency",
-        "desc": "Share of revenue personally carried by founder(s), key-person risk assessed."
+        "label": "Dependencia del fundador",
+        "desc": "Cuota de ingresos aportada personalmente por el/los fundador(es), riesgo de persona clave evaluado."
       },
       {
         "dim": "F",
         "code": "F-43",
-        "label": "Verifiable data",
-        "desc": "All financial metrics verifiable on evidence, no blocking refusal. Blocking if refused."
+        "label": "Datos verificables",
+        "desc": "Todas las métricas financieras verificables sobre evidencias, sin bloqueo. Bloqueante si se rechaza."
       },
       {
         "dim": "F",
         "code": "F-46",
-        "label": "Unit economics",
-        "desc": "ARPU, CAC by channel, LTV by segment documented."
+        "label": "Economía unitaria",
+        "desc": "ARPU, CAC por canal, LTV por segmento documentados."
       },
       {
         "dim": "S",
         "code": "S-11",
-        "label": "GDPR/LPD compliance",
-        "desc": "Privacy policy, processing register, DPO or GDPR contact designated."
+        "label": "Cumplimiento RGPD/LPD",
+        "desc": "Política de privacidad, registro de tratamientos, DPO o referente RGPD designado."
       },
       {
         "dim": "S",
         "code": "S-12",
         "label": "MFA",
-        "desc": "Multi-factor authentication active on all admin and production access."
+        "desc": "Autenticación multifactor activa en todos los accesos de administración y producción."
       },
       {
         "dim": "S",
         "code": "S-13",
-        "label": "Encryption at rest",
-        "desc": "Sensitive data encrypted in database and in backups."
+        "label": "Cifrado en reposo",
+        "desc": "Datos sensibles cifrados en base de datos y copias de seguridad."
       },
       {
         "dim": "S",
         "code": "S-14",
-        "label": "Encryption in transit",
-        "desc": "TLS 1.2+ on all communications, HSTS enabled."
+        "label": "Cifrado en tránsito",
+        "desc": "TLS 1.2+ en todas las comunicaciones, HSTS activado."
       },
       {
         "dim": "S",
         "code": "S-15",
-        "label": "Access management",
-        "desc": "Least privilege principle applied, offboarding documented."
+        "label": "Gestión de accesos",
+        "desc": "Principio de mínimo privilegio aplicado, offboarding documentado."
       },
       {
         "dim": "S",
         "code": "S-16",
-        "label": "Third-party security audit",
-        "desc": "Pentest or audit report by independent third party within the last 18 months."
+        "label": "Auditoría de seguridad externa",
+        "desc": "Informe de pentest o auditoría por un tercero independiente en los últimos 18 meses."
       },
       {
         "dim": "S",
         "code": "S-17",
-        "label": "Critical vulnerabilities",
-        "desc": "No unresolved critical CVE on infrastructure. Blocking if present."
+        "label": "Vulnerabilidades críticas",
+        "desc": "Sin CVE crítica sin resolver en la infraestructura. Bloqueante si presente."
       },
       {
         "dim": "S",
         "code": "S-18",
-        "label": "Disclosure policy",
-        "desc": "Documented and accessible responsible disclosure process."
+        "label": "Política de divulgación",
+        "desc": "Proceso de divulgación responsable documentado y accesible."
       },
       {
         "dim": "S",
         "code": "S-19",
-        "label": "WAF & perimeter protection",
-        "desc": "Application firewall, DDoS protection, isolation of exposed services."
+        "label": "WAF y protección perimetral",
+        "desc": "Firewall de aplicación, protección DDoS, aislamiento de servicios expuestos."
       },
       {
         "dim": "S",
         "code": "S-21",
-        "label": "Logs & audit trail",
-        "desc": "Logging of critical accesses, retention ≥90 days, verifiable integrity."
+        "label": "Logs y audit trail",
+        "desc": "Registro de accesos críticos, conservación ≥90 días, integridad verificable."
       },
       {
         "dim": "S",
         "code": "S-22",
-        "label": "Incident management",
-        "desc": "Documented incident response procedure, simulation exercise performed."
+        "label": "Gestión de incidentes",
+        "desc": "Procedimiento de respuesta a incidentes documentado, ejercicio de simulación realizado."
       },
       {
         "dim": "S",
         "code": "S-23",
-        "label": "Backups",
-        "desc": "3-2-1 strategy, documented restore tests, RTO/RPO defined."
+        "label": "Copias de seguridad",
+        "desc": "Estrategia 3-2-1, tests de restauración documentados, RTO/RPO definidos."
       },
       {
         "dim": "S",
         "code": "S-31",
-        "label": "Sub-processors & third parties",
-        "desc": "List of data sub-processors, signed DPAs, compliance level assessed."
+        "label": "Subencargados y terceros",
+        "desc": "Lista de subencargados de datos, DPA firmados, nivel de cumplimiento evaluado."
       },
       {
         "dim": "S",
         "code": "S-32",
-        "label": "Security training",
-        "desc": "Team awareness of phishing and best practices, at least annual."
+        "label": "Formación en seguridad",
+        "desc": "Sensibilización del equipo sobre phishing y buenas prácticas, al menos anual."
       },
       {
         "dim": "S",
         "code": "S-33",
-        "label": "Password policy",
-        "desc": "Password manager enforced, rotation of critical credentials documented."
+        "label": "Política de contraseñas",
+        "desc": "Gestor de contraseñas impuesto, rotación de credenciales críticas documentada."
       },
       {
         "dim": "S",
         "code": "S-34",
-        "label": "Environment isolation",
-        "desc": "Production isolated from staging and dev, restricted access."
+        "label": "Aislamiento de entornos",
+        "desc": "Producción aislada de staging y dev, acceso restringido."
       },
       {
         "dim": "S",
         "code": "S-37",
-        "label": "Ongoing incident",
-        "desc": "No active unresolved security incident. Blocking if present."
+        "label": "Incidente en curso",
+        "desc": "Sin incidente de seguridad activo sin resolver. Bloqueante si presente."
       },
       {
         "dim": "S",
         "code": "S-38",
-        "label": "Right to erasure",
-        "desc": "Operational personal data deletion process on request."
+        "label": "Derecho de supresión",
+        "desc": "Proceso operativo de supresión de datos personales a petición."
       },
       {
         "dim": "S",
         "code": "S-39",
-        "label": "Cross-border transfers",
-        "desc": "Non-EU/CH data transfer framework (standard contractual clauses or equivalent)."
+        "label": "Transferencias transfronterizas",
+        "desc": "Marco de transferencias de datos fuera de UE/CH (cláusulas contractuales tipo o equivalente)."
       },
       {
         "dim": "S",
         "code": "S-40",
-        "label": "Data governance",
-        "desc": "Designated data owner, documented classification and retention policy."
+        "label": "Gobernanza de datos",
+        "desc": "Responsable de datos designado, política de clasificación y retención documentada."
       },
       {
         "dim": "O",
         "code": "O-11",
         "label": "Dependencia del fundador",
-        "desc": "Parte de la facturación soportada directamente por el o los fundadores. Umbral nivel 1: ≤20 %. Bloqueante si >80 % sin plan de mitigación."
+        "desc": "Cuota de ingresos aportada directamente por el/los fundador(es). Umbral nivel 1: ≤20%. Bloqueante si >80% sin plan de mitigación."
       },
       {
         "dim": "O",
@@ -2889,25 +2889,25 @@
         "dim": "O",
         "code": "O-13",
         "label": "Plan de sucesión",
-        "desc": "Documento formalizado que identifica los puestos clave, los sucesores internos o externos y el plazo de transición."
+        "desc": "Documento formal que identifica puestos clave, sucesores internos o externos y el calendario de transición."
       },
       {
         "dim": "O",
         "code": "O-14",
         "label": "Documentación operativa",
-        "desc": "Runbooks, SOP, wikis internas que cubren los procesos críticos. Tiempo estimado documentado de incorporación de un nuevo manager."
+        "desc": "Runbooks, SOPs, wikis internos que cubren procesos críticos. Tiempo estimado de onboarding de un nuevo directivo documentado."
       },
       {
         "dim": "O",
         "code": "O-15",
-        "label": "Retención de talentos clave",
-        "desc": "Rotación anual en los puestos críticos (tech, comercial, producto). Umbral nivel 1: ≤10 % anual durante 2 años."
+        "label": "Retención de talento clave",
+        "desc": "Rotación anual en puestos críticos (tech, ventas, producto). Umbral nivel 1: ≤10% anual durante 2 años."
       },
       {
         "dim": "O",
         "code": "O-16",
         "label": "Gobernanza y cap table",
-        "desc": "Estructura accionarial clara, pacto de socios o estatutos alineados, derechos de voto documentados, sin litigio entre socios."
+        "desc": "Estructura accionarial clara, pacto de socios o estatutos alineados, derechos de voto documentados, sin disputa entre socios."
       },
       {
         "dim": "O",
@@ -2918,26 +2918,26 @@
       {
         "dim": "O",
         "code": "O-21",
-        "label": "Proceso de contratación",
-        "desc": "Procedimiento de contratación documentado, descripciones de puesto actualizadas, itinerario de integración formalizado."
+        "label": "Proceso de reclutamiento",
+        "desc": "Procedimiento de contratación documentado, descripciones de puesto actualizadas, itinerario de incorporación formalizado."
       },
       {
         "dim": "O",
         "code": "O-22",
-        "label": "Contratos de empleados y proveedores",
-        "desc": "Contratos de trabajo conformes, cláusulas de confidencialidad y no competencia para los puestos clave, invenciones asignadas a la entidad."
+        "label": "Contratos de empleados y contratistas",
+        "desc": "Contratos laborales conformes, cláusulas de confidencialidad y no competencia para puestos clave, invenciones cedidas a la entidad."
       },
       {
         "dim": "O",
         "code": "O-31",
         "label": "Capacidad de transferencia",
-        "desc": "Estimación documentada del tiempo necesario para que un adquirente tome el control operativo (objetivo: ≤90 días)."
+        "desc": "Estimación documentada del tiempo que un comprador necesita para tomar el control operativo (objetivo: ≤90 días)."
       },
       {
         "dim": "O",
         "code": "O-32",
-        "label": "Relación con clientes llevada por el equipo",
-        "desc": "Parte de las cuentas de clientes gestionadas íntegramente por el equipo (sin el fundador). Riesgo de churn tras la cesión evaluado."
+        "label": "Relación con clientes gestionada por el equipo",
+        "desc": "Cuota de cuentas de clientes gestionadas íntegramente por el equipo (sin el fundador). Riesgo de churn post-venta evaluado."
       }
     ],
     "subcodesTypicalLabel": "Subcódigos típicos",
