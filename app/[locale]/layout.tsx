@@ -200,22 +200,19 @@ export default async function LocaleLayout({ children, params }: Props) {
             `,
           }}
         />
-        <Script
+        <script
           id="ld-org"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynOrganizationSchema) }}
         />
-        <Script
+        <script
           id="ld-website"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynWebSiteSchema) }}
         />
-        <Script
+        <script
           id="ld-sitenav"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynSiteNavigationSchema) }}
         />
       </head>
