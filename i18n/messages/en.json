@@ -2450,7 +2450,7 @@
   "grade": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Independent quality label",
-      "desc": "Certification CIFSO 5000 by Aegryn: independent quality label for organisations seeking to document, prove, and realise their value. Five dimensions — Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent."
+      "desc": "Certification CIFSO 5000 by Aegryn: independent quality label for organisations seeking to document, prove, and realise their value. Five dimensions : Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent."
     },
     "index": {
       "label": "Aegryn Certification",
@@ -2623,13 +2623,13 @@
       "isoRows": [
         {
           "dimension": "C · Code & Architecture",
-          "existing": "No existing standard certifies the quality and transferability of a technology base — owned or licensed — in an M&A context.",
-          "cifso": "Certifies the technology base — proprietary code quality and maintainability, or licensed-stack governance and reversibility — as transferable value."
+          "existing": "No existing standard certifies the quality and transferability of a technology base (owned or licensed) in an M&A context.",
+          "cifso": "Certifies the technology base (proprietary code quality and maintainability, or licensed-stack governance and reversibility) as transferable value."
         },
         {
           "dimension": "I · IP & Rights",
           "existing": "Quality management standards partially address process governance.",
-          "cifso": "Certifies the IP chain of title — trademarks, patents, rights assignments, contracts — and the legal structure in an M&A context."
+          "cifso": "Certifies the IP chain of title (trademarks, patents, rights assignments, contracts) and the legal structure in an M&A context."
         },
         {
           "dimension": "F · Finance & Metrics",
@@ -2818,7 +2818,7 @@
         {
           "code": "C",
           "name": "Code & Architecture",
-          "desc": "Quality of the technology base — proprietary code or licensed systems: architecture, tests, documentation, technical debt, dependencies, reversibility. What makes the organisation transferable without its author."
+          "desc": "Quality of the technology base, proprietary code or licensed systems: architecture, tests, documentation, technical debt, dependencies, reversibility. What makes the organisation transferable without its author."
         },
         {
           "code": "I",
@@ -2842,7 +2842,7 @@
         }
       ],
       "regulatoryLabel": "Regulatory compliance",
-      "regulatoryText": "Each asset's regulatory perimeter is profiled, then validated during the audit. Every applicable regulation is assessed within the dimension that actually controls it — never merged into an opaque aggregate score.",
+      "regulatoryText": "Each asset's regulatory perimeter is profiled, then validated during the audit. Every applicable regulation is assessed within the dimension that actually controls it, never merged into an opaque aggregate score.",
       "regulatoryMap": [
         "Data Act → C + I (technical access, B2B terms)",
         "Cyber Resilience Act → C (SBOM, vulnerabilities)",
@@ -2954,7 +2954,7 @@
         "name": "Code & Architecture",
         "full": "Code, Architecture & Technology Base",
         "weight": "20 pts",
-        "desc": "Quality and governance of the technology base — proprietary code or licensed systems: architecture, maintainability, dependencies, reversibility. What makes the organisation transferable without dependence on its author. Reviewed by senior engineers.",
+        "desc": "Quality and governance of the technology base, proprietary code or licensed systems: architecture, maintainability, dependencies, reversibility. What makes the organisation transferable without dependence on its author. Reviewed by senior engineers.",
         "criteria": [
           "Proprietary code quality and maintainability (tests, technical debt, vulnerabilities)",
           "Licensed software governance: inventory, licences, supported versions",
@@ -10027,7 +10027,7 @@
         },
         {
           "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions — Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent — to document and defend value."
+          "desc": "Independent assessment across 5 dimensions (Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent) to document and defend value."
         }
       ],
       "cifsoTitle": "CIFSO 5000 relevance by sector",
@@ -10036,7 +10036,7 @@
         {
           "code": "C",
           "dim": "Code & Architecture",
-          "desc": "Quality of the technology base — proprietary code or licensed systems: architecture, dependencies, reversibility. Critical for any organisation whose value rests on its IS."
+          "desc": "Quality of the technology base, proprietary code or licensed systems: architecture, dependencies, reversibility. Critical for any organisation whose value rests on its IS."
         },
         {
           "code": "I",

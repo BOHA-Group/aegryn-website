@@ -82,7 +82,7 @@ export function GradeDimensions() {
           ))}
         </div>
 
-        {/* CIFSO v4.11 — conformité réglementaire ventilée par dimension */}
+        {/* CIFSO v4.11 : conformité réglementaire ventilée par dimension */}
         <div className="mt-10 rounded-xl border border-ag-border bg-ag-off-white p-6 md:p-8">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">
             {t('regulatoryLabel')}

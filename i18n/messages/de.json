@@ -2093,7 +2093,7 @@
         "name": "Code & Architektur",
         "full": "Code, Architektur & Technologiebasis",
         "weight": "20 Pkt.",
-        "desc": "Qualität und Governance der Technologiebasis — proprietärer Code oder lizenzierte Systeme: Architektur, Wartbarkeit, Abhängigkeiten, Reversibilität. Was die Organisation ohne Abhängigkeit von ihrem Urheber übertragbar macht. Prüfung durch Senior-Ingenieure.",
+        "desc": "Qualität und Governance der Technologiebasis, proprietärer Code oder lizenzierte Systeme: Architektur, Wartbarkeit, Abhängigkeiten, Reversibilität. Was die Organisation ohne Abhängigkeit von ihrem Urheber übertragbar macht. Prüfung durch Senior-Ingenieure.",
         "criteria": [
           "Qualität und Wartbarkeit proprietären Codes (Tests, technische Schuld, Schwachstellen)",
           "Governance lizenzierter Software: Inventar, Lizenzen, unterstützte Versionen",
@@ -3405,13 +3405,13 @@
       "isoRows": [
         {
           "dimension": "C · Code & Architektur",
-          "existing": "Kein bestehender Standard zertifiziert die Qualität und Übertragbarkeit einer Technologiebasis — eigenentwickelt oder lizenziert — im M&A-Kontext.",
-          "cifso": "Zertifiziert die Technologiebasis — Qualität und Wartbarkeit proprietären Codes oder Governance und Reversibilität des lizenzierten Stacks — als übertragbaren Wert."
+          "existing": "Kein bestehender Standard zertifiziert die Qualität und Übertragbarkeit einer Technologiebasis (eigenentwickelt oder lizenziert) im M&A-Kontext.",
+          "cifso": "Zertifiziert die Technologiebasis (Qualität und Wartbarkeit proprietären Codes oder Governance und Reversibilität des lizenzierten Stacks) als übertragbaren Wert."
         },
         {
           "dimension": "I · IP & Rechte",
           "existing": "Qualitätsmanagementsysteme decken Prozesse ab, aber nicht die Integrität der Kapitalstruktur, das Eigentümerregister oder die Compliance-Rückverfolgbarkeit.",
-          "cifso": "Zertifiziert die IP-Eigentumskette — Marken, Patente, Rechtsabtretungen, Verträge — und die Gesellschaftsstruktur im M&A-Kontext."
+          "cifso": "Zertifiziert die IP-Eigentumskette (Marken, Patente, Rechtsabtretungen, Verträge) und die Gesellschaftsstruktur im M&A-Kontext."
         },
         {
           "dimension": "F · Finanzen & Kennzahlen",
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Code & Architektur",
-          "desc": "Qualität der Technologiebasis — proprietärer Code oder lizenzierte Systeme: Architektur, Tests, Dokumentation, technische Schuld, Abhängigkeiten, Reversibilität. Was die Organisation ohne ihren Urheber übertragbar macht."
+          "desc": "Qualität der Technologiebasis, proprietärer Code oder lizenzierte Systeme: Architektur, Tests, Dokumentation, technische Schuld, Abhängigkeiten, Reversibilität. Was die Organisation ohne ihren Urheber übertragbar macht."
         },
         {
           "code": "I",
@@ -3624,7 +3624,7 @@
         }
       ],
       "regulatoryLabel": "Regulatorische Compliance",
-      "regulatoryText": "Der regulatorische Geltungsbereich jedes Objekts wird zunächst profiliert und dann im Audit validiert. Jede anwendbare Regulierung wird in der Dimension bewertet, die sie tatsächlich kontrolliert — niemals zu einem intransparenten Aggregat zusammengefasst.",
+      "regulatoryText": "Der regulatorische Geltungsbereich jedes Objekts wird zunächst profiliert und dann im Audit validiert. Jede anwendbare Regulierung wird in der Dimension bewertet, die sie tatsächlich kontrolliert, niemals zu einem intransparenten Aggregat zusammengefasst.",
       "regulatoryMap": [
         "Data Act → C + I (technischer Zugang, B2B-Bedingungen)",
         "Cyber Resilience Act → C (SBOM, Schwachstellen)",
@@ -10172,7 +10172,7 @@
         },
         {
           "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions — Code & Architektur, IP & Rechte, Finanzen & Kennzahlen, Sicherheit & Souveränität, Organisation & Talent — to document and defend value."
+          "desc": "Independent assessment across 5 dimensions (Code & Architektur, IP & Rechte, Finanzen & Kennzahlen, Sicherheit & Souveränität, Organisation & Talent) to document and defend value."
         }
       ],
       "cifsoTitle": "Relevanz des CIFSO 5000 nach Branche",
@@ -10181,7 +10181,7 @@
         {
           "code": "C",
           "dim": "Code & Architektur",
-          "desc": "Qualität der Technologiebasis — proprietärer Code oder lizenzierte Systeme: Architektur, Abhängigkeiten, Reversibilität. Kritisch für jede Organisation, deren Wert auf ihrem IS beruht."
+          "desc": "Qualität der Technologiebasis, proprietärer Code oder lizenzierte Systeme: Architektur, Abhängigkeiten, Reversibilität. Kritisch für jede Organisation, deren Wert auf ihrem IS beruht."
         },
         {
           "code": "I",

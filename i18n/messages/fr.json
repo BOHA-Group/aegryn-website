@@ -2410,7 +2410,7 @@
   "grade": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
-      "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions — Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent."
+      "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent."
     },
     "index": {
       "label": "Certification Aegryn",
@@ -2583,13 +2583,13 @@
       "isoRows": [
         {
           "dimension": "C · Code & Architecture",
-          "existing": "Aucun standard existant ne certifie la qualité et la transmissibilité d'une base technologique — détenue ou licenciée — dans un contexte M&A.",
-          "cifso": "Certifie la base technologique — qualité et maintenabilité du code propriétaire, ou gouvernance et réversibilité de la stack licenciée — comme valeur transmissible."
+          "existing": "Aucun standard existant ne certifie la qualité et la transmissibilité d'une base technologique (détenue ou licenciée) dans un contexte M&A.",
+          "cifso": "Certifie la base technologique (qualité et maintenabilité du code propriétaire, ou gouvernance et réversibilité de la stack licenciée) comme valeur transmissible."
         },
         {
           "dimension": "I · IP & Droits",
           "existing": "Les standards de management de la qualité couvrent partiellement la gouvernance des processus.",
-          "cifso": "Certifie la chaîne de titres de la propriété intellectuelle — marques, brevets, cessions de droits, contrats — et la structure juridique en contexte M&A."
+          "cifso": "Certifie la chaîne de titres de la propriété intellectuelle (marques, brevets, cessions de droits, contrats) et la structure juridique en contexte M&A."
         },
         {
           "dimension": "F · Finance & Métriques",
@@ -2778,7 +2778,7 @@
         {
           "code": "C",
           "name": "Code & Architecture",
-          "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, tests, documentation, dette technique, dépendances, réversibilité. Ce qui rend l'organisation reprenable sans son auteur."
+          "desc": "Qualité de la base technologique, code propriétaire ou systèmes licenciés : architecture, tests, documentation, dette technique, dépendances, réversibilité. Ce qui rend l'organisation reprenable sans son auteur."
         },
         {
           "code": "I",
@@ -2802,7 +2802,7 @@
         }
       ],
       "regulatoryLabel": "Conformité réglementaire",
-      "regulatoryText": "Le périmètre réglementaire de chaque actif est profilé, puis validé en audit. Chaque régulation applicable est évaluée dans la dimension qui la contrôle réellement — jamais agrégée en un score opaque.",
+      "regulatoryText": "Le périmètre réglementaire de chaque actif est profilé, puis validé en audit. Chaque régulation applicable est évaluée dans la dimension qui la contrôle réellement, jamais agrégée en un score opaque.",
       "regulatoryMap": [
         "Data Act → C + I (accès technique, termes B2B)",
         "Cyber Resilience Act → C (SBOM, vulnérabilités)",
@@ -2914,7 +2914,7 @@
         "name": "Code & Architecture",
         "full": "Code, Architecture & Base technologique",
         "weight": "20 pts",
-        "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, maintenabilité, dépendances, réversibilité. Ce qui rend l'organisation transmissible sans dépendance à son auteur. Revue par des ingénieurs seniors.",
+        "desc": "Qualité de la base technologique, code propriétaire ou systèmes licenciés : architecture, maintenabilité, dépendances, réversibilité. Ce qui rend l'organisation transmissible sans dépendance à son auteur. Revue par des ingénieurs seniors.",
         "criteria": [
           "Qualité et maintenabilité du code propriétaire (tests, dette technique, vulnérabilités)",
           "Gouvernance des logiciels licenciés : inventaire, licences, versions supportées",
@@ -9987,7 +9987,7 @@
         },
         {
           "name": "Certification CIFSO 5000",
-          "desc": "Évaluation indépendante sur 5 dimensions — Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent — pour documenter et défendre la valeur."
+          "desc": "Évaluation indépendante sur 5 dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent) pour documenter et défendre la valeur."
         }
       ],
       "cifsoTitle": "La pertinence CIFSO 5000 selon les secteurs",
@@ -9996,7 +9996,7 @@
         {
           "code": "C",
           "dim": "Code & Architecture",
-          "desc": "Qualité de la base technologique — code propriétaire ou systèmes licenciés : architecture, dépendances, réversibilité. Critique pour toute organisation dont la valeur repose sur son SI."
+          "desc": "Qualité de la base technologique, code propriétaire ou systèmes licenciés : architecture, dépendances, réversibilité. Critique pour toute organisation dont la valeur repose sur son SI."
         },
         {
           "code": "I",

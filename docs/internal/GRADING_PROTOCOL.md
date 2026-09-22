@@ -9,16 +9,16 @@
 
 ## 1. Protocol Overview
 
-**CIFSO** stands for **Capital & IP · Integrity & Governance · Finance & Metrics · Security & Sovereignty · Organisation & Talent**.
+**CIFSO** stands for **Code & Architecture · IP & Rights · Finance & Metrics · Security & Sovereignty · Organisation & Talent**.
 
 Each of the 5 dimensions is scored 0 to 20. Maximum total: 100 points.
 The final grade is derived from the total score, subject to automatic refusal triggers.
 
 Version 4.0 adds the O (Organisation) dimension and reformulates C and I to reflect the expanded scope beyond pure code/IP.
 
-Version 4.11 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O — penalties, AA ceiling and TRS impact, never a block on report generation.
+Version 4.11 adds the **regulatory compliance matrix** (section 8): an applicability profile activates per-regulation controls ventilated across dimensions C, I, S and O (penalties, AA ceiling and TRS impact, never a block on report generation).
 
-Version 4.12 adds the **technology mode** (section 8b): dimension C always counts 20 pts, but its internal controls adapt to the nature of the technology base (`input.code.technologyMode`): `proprietary` (owned codebase — existing controls), `licensed_stack` (licensed SaaS/software governance — C-60→C-64), `hybrid` (average of both tracks). Dimensions are never optional: every organisation runs software; what changes is how its technology base is evidenced.
+Version 4.12 adds the **technology mode** (section 8b): dimension C always counts 20 pts, but its internal controls adapt to the nature of the technology base (`input.code.technologyMode`): `proprietary` (owned codebase, existing controls), `licensed_stack` (licensed SaaS/software governance, C-60→C-64), `hybrid` (average of both tracks). Dimensions are never optional: every organisation runs software; what changes is how its technology base is evidenced.
 
 ---
 
@@ -153,7 +153,7 @@ Grades B and above may enter the catalogue. `refused` triggers a formal rejectio
 
 ### Principle
 
-Not every regulation applies to every asset. Each evaluation starts with a **regulatory applicability profile** (`input.regulatoryProfile`), declared by the seller and validated by the analyst. Each `yes` activates the corresponding controls; a profile key set to `no`/absent never penalises the score. The profile is the single source of truth on applicability — if a regulation turns out not to apply, the analyst sets the profile key to `no`.
+Not every regulation applies to every asset. Each evaluation starts with a **regulatory applicability profile** (`input.regulatoryProfile`), declared by the seller and validated by the analyst. Each `yes` activates the corresponding controls; a profile key set to `no`/absent never penalises the score. The profile is the single source of truth on applicability: if a regulation turns out not to apply, the analyst sets the profile key to `no`.
 
 | Profile key | Activates |
 |---|---|
@@ -164,7 +164,7 @@ Not every regulation applies to every asset. Each evaluation starts with a **reg
 | `operatesCriticalSector` | NIS2 (S-52) |
 | `sellsDigitalProducts` | Cyber Resilience Act (C-50) |
 | `operatesPlatform` | DSA / P2B (I-52) |
-| — (universal) | Sanctions & embargoes declaration (I-53) |
+| all assets (universal) | Sanctions & embargoes declaration (I-53) |
 | any `yes` | Compliance governance (O-50) |
 
 ### Control statuses
@@ -172,14 +172,14 @@ Not every regulation applies to every asset. Each evaluation starts with a **reg
 `na` (not assessed / no evidence) · `compliant` · `partial` · `non_compliant`.  
 Sanctions uses `declared_clean` / `exposed` / `not_declared`.
 
-**Missing evidence = deficiency.** On an *applicable* regulation, `na` or an unset field means the conformity was not demonstrated — it is scored exactly like `non_compliant` (full penalty, finding, AA ceiling, TRS impact). There is no neutral "not evaluated" state: an applicable control that produces no data-room evidence is penalised by default.
+**Missing evidence = deficiency.** On an *applicable* regulation, `na` or an unset field means the conformity was not demonstrated: it is scored exactly like `non_compliant` (full penalty, finding, AA ceiling, TRS impact). There is no neutral "not evaluated" state: an applicable control that produces no data-room evidence is penalised by default.
 
 ### Score treatment
 
-- Compliance is **ventilated across the dimensions that actually control it** — never aggregated into a single opaque compliance score, and the public dimension names are unchanged.
+- Compliance is **ventilated across the dimensions that actually control it**: never aggregated into a single opaque compliance score, and the public dimension names are unchanged.
 - Compliant & documented → small bonus. Partial → small penalty. Non-compliant or not assessed (`na`/missing evidence) → full penalty.
 - **Grade ceiling**: any applicable regulation not demonstrated as compliant (`non_compliant`, `na` or unset) caps the grade at **AA** (below ★/AAA), on top of existing proof-quality ceilings.
-- **Never a refusal**: the CIFSO report is always produced. Regulatory deficiencies translate into score penalties, the AA ceiling and TRS impact — not into a block on report generation.
+- **Never a refusal**: the CIFSO report is always produced. Regulatory deficiencies translate into score penalties, the AA ceiling and TRS impact, not into a block on report generation.
 
 ### TRS impact (Transaction Readiness Score)
 
@@ -197,17 +197,17 @@ Catalogue entries carry an `applicability` column keyed to the profile; the sell
 
 ### 8b. Technology Mode (CIFSO v4.12)
 
-Dimension C keeps its 20 points and its public name in every certification — dimensions are never optional. What adapts is the *internal track*, selected by `input.code.technologyMode` (default `proprietary`, backward compatible):
+Dimension C keeps its 20 points and its public name in every certification: dimensions are never optional. What adapts is the *internal track*, selected by `input.code.technologyMode` (default `proprietary`, backward compatible):
 
 | Mode | Track | Controls |
 |---|---|---|
 | `proprietary` | Owned codebase | Test coverage, vulnerabilities, architecture, CI/CD, API doc, tech debt, external audit (existing) |
-| `licensed_stack` | Licensed SaaS/software base | C-60 software inventory (6) · C-61 license compliance (4) · C-63 vendor reversibility/data export (4) · C-62 SI mapping (3) · C-64 vendor concentration (3) — **track capped at 16/20** |
-| `hybrid` | Both | Proprietary track + licensed track averaged — natural ceiling (20 + 16) / 2 = 18 max |
+| `licensed_stack` | Licensed SaaS/software base | C-60 software inventory (6) · C-61 license compliance (4) · C-63 vendor reversibility/data export (4) · C-62 SI mapping (3) · C-64 vendor concentration (3) · **track capped at 16/20** |
+| `hybrid` | Both | Proprietary track + licensed track averaged, natural ceiling (20 + 16) / 2 = 18 max |
 
-**Ownership premium:** a fully licensed technology base caps at 16/20. Governance of a rented IS is fully measurable — no control-level penalty — but the organisation does not hold a proprietary software asset, so its intrinsic value is lower than an owned base. The premium (4 pts) materialises as a ceiling, not a deduction.
+**Ownership premium:** a fully licensed technology base caps at 16/20. Governance of a rented IS is fully measurable, with no control-level penalty, but the organisation does not hold a proprietary software asset, so its intrinsic value is lower than an owned base. The premium (4 pts) materialises as a ceiling, not a deduction.
 
-Code-level auto-refusals (critical vulns without audit, near-zero coverage with many critical vulns) only apply on tracks containing proprietary code. Data-room catalogue: proprietary-code evidence is conditioned on `applicability = 'proprietary_code'` (C-01→C-04, C-06, C-07, C-09); licensed-stack evidence on `'licensed_stack'` (C-60→C-64, with C-60/C-61/C-63 blocking — parity with the proprietary track); C-05 and C-08 remain universal.
+Code-level auto-refusals (critical vulns without audit, near-zero coverage with many critical vulns) only apply on tracks containing proprietary code. Data-room catalogue: proprietary-code evidence is conditioned on `applicability = 'proprietary_code'` (C-01→C-04, C-06, C-07, C-09); licensed-stack evidence on `'licensed_stack'` (C-60→C-64, with C-60/C-61/C-63 blocking, parity with the proprietary track); C-05 and C-08 remain universal.
 
 ---
 

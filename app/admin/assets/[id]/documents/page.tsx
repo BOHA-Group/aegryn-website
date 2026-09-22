@@ -49,7 +49,7 @@ export default async function AdminAssetDocumentsPage({
 
   const catalog = (catalogRows ?? []) as DocumentCatalogEntry[]
 
-  /* Profil réglementaire (dernier input moteur) — filtre les pièces conditionnelles (CIFSO v4.11) */
+  /* Profil réglementaire (dernier input moteur) : filtre les pièces conditionnelles (CIFSO v4.11) */
   const { data: lastAssessment } = await supa
     .from('grade_assessments')
     .select('input_json')
@@ -62,7 +62,7 @@ export default async function AdminAssetDocumentsPage({
     input_json?: { regulatoryProfile?: RegulatoryProfileMap; code?: { technologyMode?: string } }
   } | null)?.input_json ?? null
   const regulatoryProfile = lastInput?.regulatoryProfile ?? null
-  /* v4.12 — dérivation des clés technologiques : 'proprietary' par défaut (rétrocompatible) */
+  /* v4.12 - dérivation des clés technologiques : 'proprietary' par défaut (rétrocompatible) */
   const techMode = lastInput?.code?.technologyMode ?? 'proprietary'
   /* Pas d'assessment encore → null = checklist complète ; sinon filtrage profil + mode techno */
   const applicabilityProfile: RegulatoryProfileMap | null = !lastInput ? null : {
@@ -99,7 +99,7 @@ export default async function AdminAssetDocumentsPage({
         .then(r => r.data ?? [])
     : []
 
-  /* Complétude par dimension — calculée côté server (catalogue filtré par profil réglementaire) */
+  /* Complétude par dimension : calculée côté server (catalogue filtré par profil réglementaire) */
   const completeness = DIMENSIONS.map((dim) => {
     const dimCatalog  = catalogFiltered.filter((c) => c.dimension === dim)
     const blocking    = dimCatalog.filter((c) => c.required_level === 'blocking')
@@ -153,7 +153,7 @@ export default async function AdminAssetDocumentsPage({
           </p>
           {profileActive && (
             <p className="text-[11px] text-ag-navy/70 mt-2">
-              Profil réglementaire actif — checklist filtrée sur les régulations applicables.
+              Profil réglementaire actif, checklist filtrée sur les régulations applicables.
             </p>
           )}
         </div>

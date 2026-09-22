@@ -1,15 +1,15 @@
 -- ============================================================
--- AEGRYN — CIFSO 5000 v4.11 : conformité réglementaire ventilée par dimension
+-- AEGRYN - CIFSO 5000 v4.11 : conformité réglementaire ventilée par dimension
 --
 -- 1. documents_catalog.applicability : conditionne le document au profil
 --    réglementaire de l'actif (matrice d'applicabilité, lib/gradeEngine.ts).
 --    NULL = universel.
--- 2. Nouvelles entrées catalogue — codes alignés sur les sous-codes du moteur :
+-- 2. Nouvelles entrées catalogue : codes alignés sur les sous-codes du moteur :
 --      C-50 CRA · C-51/C-52 Data Act technique · I-50 Data Act B2B ·
 --      I-51 ePrivacy · I-52 DSA/P2B · I-53 sanctions · I-54 AML ·
 --      S-52 NIS2 · S-53 DORA · S-54 AI Act · O-50 gouvernance conformité
 --
--- Toutes les entrées sont 'recommended' — JAMAIS 'blocking' : le rapport CIFSO
+-- Toutes les entrées sont 'recommended' - JAMAIS 'blocking' : le rapport CIFSO
 -- reste toujours produisible et la publication n'est pas rétroactivement
 -- bloquée pour les dossiers existants. Les manquements se traduisent en
 -- pénalités de score, plafond AA et impact TRS côté moteur (v4.11).
@@ -25,7 +25,7 @@ COMMENT ON COLUMN public.documents_catalog.applicability IS
 -- ── 2. Entrées catalogue ────────────────────────────────────────────────
 INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, required_level, format_hint, note_seller, note_admin, sort_order, applicability) VALUES
 
--- ── C — Code & Architecture : conformité produit ────────────────────────
+-- ── C - Code & Architecture : conformité produit ────────────────────────
 ('C-50', 'C', 'SBOM et processus de gestion des vulnérabilités (Cyber Resilience Act)',
   'SBOM and vulnerability management process (Cyber Resilience Act)',
   'recommended',
@@ -34,11 +34,11 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Alimente le contrôle C-50 du moteur. Suffisant : SBOM à jour + processus formalisé. Insuffisant : SBOM absente ou processus informel.',
   10, 'sellsDigitalProducts'),
 
-('C-51', 'C', 'Mécanisme d''accès aux données produit (EU Data Act — accès by design)',
-  'Product data access mechanism (EU Data Act — access by design)',
+('C-51', 'C', 'Mécanisme d''accès aux données produit (EU Data Act : accès by design)',
+  'Product data access mechanism (EU Data Act : access by design)',
   'recommended',
   'Documentation technique : interface utilisateur ou API donnant un accès direct, gratuit et par défaut aux données générées par le produit',
-  'Si vous fabriquez ou vendez des produits connectés : le Data Act exige un accès direct, gratuit et par défaut aux données générées — pas via un tier payant ni un ticket support.',
+  'Si vous fabriquez ou vendez des produits connectés : le Data Act exige un accès direct, gratuit et par défaut aux données générées, pas via un tier payant ni un ticket support.',
   'Alimente le contrôle C-51 du moteur. Vérifier que l''accès est réellement direct/gratuit/défaut. Non conforme = plafond AA + TRS bloqué.',
   11, 'sellsConnectedProducts'),
 
@@ -50,7 +50,7 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Alimente C-51/I-50. Suffisant : export documenté et fonctionnel. Insuffisant : formats propriétaires non exportables.',
   12, 'sellsConnectedProducts'),
 
--- ── I — IP & Droits : conformité contractuelle et juridique ─────────────
+-- ── I - IP & Droits : conformité contractuelle et juridique ─────────────
 ('I-50', 'I', 'Conditions de partage de données B2B conformes FRAND (Data Act ch. III)',
   'B2B data-sharing terms compliant with FRAND (Data Act ch. III)',
   'recommended',
@@ -63,7 +63,7 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Tracker register and consent compliance (ePrivacy / cookies)',
   'recommended',
   'Export du CMP (axeptio, Cookiebot…) ou document : liste des trackers, finalités, preuve du refus aussi simple que l''acceptation',
-  'Tout site ou application traitant des données UE : le consentement cookies doit être conforme — refus aussi simple que l''acceptation.',
+  'Tout site ou application traitant des données UE : le consentement cookies doit être conforme, refus aussi simple que l''acceptation.',
   'Alimente le contrôle I-51 du moteur. Vérifier l''absence de cookies déposés avant consentement.',
   21, 'processesEUData'),
 
@@ -91,7 +91,7 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Alimente le contrôle I-54 du moteur. Suffisant : procédures écrites et appliquées. Insuffisant : pratique informelle non documentée.',
   24, 'isFinancialEntityOrICT'),
 
--- ── S — Sécurité : conformité cyber/résilience ──────────────────────────
+-- ── S - Sécurité : conformité cyber/résilience ──────────────────────────
 ('S-52', 'S', 'Enregistrement NIS2 et mesures de gestion des risques',
   'NIS2 registration and risk management measures',
   'recommended',
@@ -116,7 +116,7 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Alimente le contrôle S-54 du moteur. Système haut risque (annexe III) sans évaluation de conformité = TRS bloqué.',
   43, 'providesAISystems'),
 
--- ── O — Organisation & Talent : gouvernance conformité ──────────────────
+-- ── O - Organisation & Talent : gouvernance conformité ──────────────────
 ('O-50', 'O', 'Gouvernance de la conformité réglementaire',
   'Regulatory compliance governance',
   'recommended',

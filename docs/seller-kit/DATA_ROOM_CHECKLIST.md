@@ -21,7 +21,7 @@
 | C-08 | Incident history log | Recommended | PDF or spreadsheet |
 | C-09 | Tech debt register | Recommended | MD, PDF, or issue tracker export |
 | C-50 | SBOM + vulnerability management process (Cyber Resilience Act) | If applicable | CycloneDX/SPDX + PDF |
-| C-51 | Product data access mechanism (EU Data Act — access by design) | If applicable | Technical doc: direct, free, default access |
+| C-51 | Product data access mechanism (EU Data Act, access by design) | If applicable | Technical doc: direct, free, default access |
 | C-52 | Data portability and export formats (Data Act ch. VI) | If applicable | Export docs, API spec |
 
 ---
@@ -40,10 +40,10 @@
 | I-08 | Patent filings (if applicable) | Recommended | PDF |
 | I-09 | Inbound licence contracts | Recommended | PDF |
 | I-10 | IP litigation declaration (signed) | Required | PDF |
-| I-50 | B2B data-sharing terms compliant with FRAND (Data Act ch. III) | If applicable | PDF — T&Cs or addendum |
+| I-50 | B2B data-sharing terms compliant with FRAND (Data Act ch. III) | If applicable | PDF, T&Cs or addendum |
 | I-51 | Tracker register and cookie consent compliance (ePrivacy) | If applicable | CMP export or PDF |
-| I-52 | Platform terms compliant with DSA/P2B (ranking transparency, business users) | If applicable | PDF — T&Cs |
-| I-53 | Sanctions and embargo non-exposure declaration (signed) | Required | PDF — signed by legal representative |
+| I-52 | Platform terms compliant with DSA/P2B (ranking transparency, business users) | If applicable | PDF, T&Cs |
+| I-53 | Sanctions and embargo non-exposure declaration (signed) | Required | PDF, signed by legal representative |
 | I-54 | AML/KYC policy | If applicable | PDF |
 
 ---
@@ -77,7 +77,7 @@
 | S-07 | ISO 27001 / SOC 2 certificate (if applicable) | Recommended | PDF |
 | S-08 | Past security incident report(s) with resolution | Recommended | PDF |
 | S-09 | BCP / DRP, Business Continuity / Disaster Recovery Plan | Recommended | PDF or MD |
-| S-52 | NIS2 registration and risk management measures | If applicable | PDF — registration proof + policy |
+| S-52 | NIS2 registration and risk management measures | If applicable | PDF, registration proof + policy |
 | S-53 | ICT register, resilience testing, provider clauses (DORA) | If applicable | PDF or spreadsheet |
 | S-54 | EU AI Act risk classification and technical documentation | If applicable | PDF |
 
@@ -106,7 +106,7 @@ Not every regulation applies to every asset. During onboarding you declare a reg
 | operates an online platform | DSA / P2B | I-52 |
 | any asset | Sanctions & embargoes | I-53 |
 
-**Important:** a missing or insufficient regulatory document never blocks your CIFSO report — it lowers the dimension score, can cap the grade at AA, and conditions the Transaction Readiness Score. Complete documentation is always in your interest.
+**Important:** a missing or insufficient regulatory document never blocks your CIFSO report: it lowers the dimension score, can cap the grade at AA, and conditions the Transaction Readiness Score. Complete documentation is always in your interest.
 
 ---
 

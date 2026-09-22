@@ -2093,7 +2093,7 @@
         "name": "Código & Arquitectura",
         "full": "Código, Arquitectura & Base tecnológica",
         "weight": "20 pts",
-        "desc": "Calidad y gobernanza de la base tecnológica — código propietario o sistemas licenciados: arquitectura, mantenibilidad, dependencias, reversibilidad. Lo que hace a la organización transferible sin dependencia de su autor. Revisión por ingenieros senior.",
+        "desc": "Calidad y gobernanza de la base tecnológica, código propietario o sistemas licenciados: arquitectura, mantenibilidad, dependencias, reversibilidad. Lo que hace a la organización transferible sin dependencia de su autor. Revisión por ingenieros senior.",
         "criteria": [
           "Calidad y mantenibilidad del código propietario (pruebas, deuda técnica, vulnerabilidades)",
           "Gobernanza del software licenciado: inventario, licencias, versiones soportadas",
@@ -3405,13 +3405,13 @@
       "isoRows": [
         {
           "dimension": "C · Código & Arquitectura",
-          "existing": "Ningún estándar existente certifica la calidad y la transferibilidad de una base tecnológica — propia o licenciada — en un contexto de M&A.",
-          "cifso": "Certifica la base tecnológica — calidad y mantenibilidad del código propietario, o gobernanza y reversibilidad del stack licenciado — como valor transferible."
+          "existing": "Ningún estándar existente certifica la calidad y la transferibilidad de una base tecnológica (propia o licenciada) en un contexto de M&A.",
+          "cifso": "Certifica la base tecnológica (calidad y mantenibilidad del código propietario, o gobernanza y reversibilidad del stack licenciado) como valor transferible."
         },
         {
           "dimension": "I · PI & Derechos",
           "existing": "Los sistemas de gestión de calidad cubren los procesos, pero no la integridad de la estructura de capital, el registro de propietarios o la trazabilidad del cumplimiento.",
-          "cifso": "Certifica la cadena de titularidad de la propiedad intelectual — marcas, patentes, cesiones de derechos, contratos — y la estructura jurídica en contexto de M&A."
+          "cifso": "Certifica la cadena de titularidad de la propiedad intelectual (marcas, patentes, cesiones de derechos, contratos) y la estructura jurídica en contexto de M&A."
         },
         {
           "dimension": "F · Finanzas & Métricas",
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Código & Arquitectura",
-          "desc": "Calidad de la base tecnológica — código propietario o sistemas licenciados: arquitectura, pruebas, documentación, deuda técnica, dependencias, reversibilidad. Lo que hace a la organización transferible sin su autor."
+          "desc": "Calidad de la base tecnológica, código propietario o sistemas licenciados: arquitectura, pruebas, documentación, deuda técnica, dependencias, reversibilidad. Lo que hace a la organización transferible sin su autor."
         },
         {
           "code": "I",
@@ -3624,7 +3624,7 @@
         }
       ],
       "regulatoryLabel": "Cumplimiento normativo",
-      "regulatoryText": "El perímetro normativo de cada activo se perfila y luego se valida en auditoría. Cada norma aplicable se evalúa en la dimensión que realmente la controla — nunca agregada en una puntuación opaca.",
+      "regulatoryText": "El perímetro normativo de cada activo se perfila y luego se valida en auditoría. Cada norma aplicable se evalúa en la dimensión que realmente la controla, nunca agregada en una puntuación opaca.",
       "regulatoryMap": [
         "Data Act → C + I (acceso técnico, condiciones B2B)",
         "Cyber Resilience Act → C (SBOM, vulnerabilidades)",
@@ -10042,7 +10042,7 @@
         },
         {
           "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions — Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento — to document and defend value."
+          "desc": "Independent assessment across 5 dimensions (Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento) to document and defend value."
         }
       ],
       "cifsoTitle": "Relevancia del CIFSO 5000 por sector",
@@ -10051,7 +10051,7 @@
         {
           "code": "C",
           "dim": "Código & Arquitectura",
-          "desc": "Calidad de la base tecnológica — código propietario o sistemas licenciados: arquitectura, dependencias, reversibilidad. Crítica para toda organización cuyo valor reposa en su SI."
+          "desc": "Calidad de la base tecnológica, código propietario o sistemas licenciados: arquitectura, dependencias, reversibilidad. Crítica para toda organización cuyo valor reposa en su SI."
         },
         {
           "code": "I",

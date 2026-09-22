@@ -1,5 +1,5 @@
 -- ============================================================
--- AEGRYN — CIFSO 5000 v4.12 : piste « stack licenciée » (dimension C)
+-- AEGRYN - CIFSO 5000 v4.12 : piste « stack licenciée » (dimension C)
 --
 -- Contexte : toute organisation utilise des logiciels, même sans code
 -- propriétaire. La dimension C garde ses 20 pts et son nom public, mais
@@ -64,7 +64,7 @@ INSERT INTO public.documents_catalog (code, dimension, label_fr, label_en, requi
   'Vendor concentration and exit-cost analysis',
   'recommended',
   'Tableau : part de chaque fournisseur dans les processus critiques, alternatives identifiées, estimation des coûts de migration',
-  'Une forte dépendance à un fournisseur unique est un risque de valorisation — documentez les alternatives.',
+  'Une forte dépendance à un fournisseur unique est un risque de valorisation : documentez les alternatives.',
   'Alimente vendorConcentration. Suffisant : fournisseurs critiques identifiés avec alternative ou coût de sortie estimé.',
   34, 'licensed_stack')
 

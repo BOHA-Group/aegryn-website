@@ -2093,7 +2093,7 @@
         "name": "Codice & Architettura",
         "full": "Codice, Architettura & Base tecnologica",
         "weight": "20 pt",
-        "desc": "Qualità e governance della base tecnologica — codice proprietario o sistemi in licenza: architettura, manutenibilità, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza dipendenza dal suo autore. Revisione da parte di ingegneri senior.",
+        "desc": "Qualità e governance della base tecnologica, codice proprietario o sistemi in licenza: architettura, manutenibilità, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza dipendenza dal suo autore. Revisione da parte di ingegneri senior.",
         "criteria": [
           "Qualità e manutenibilità del codice proprietario (test, debito tecnico, vulnerabilità)",
           "Governance del software in licenza: inventario, licenze, versioni supportate",
@@ -3405,13 +3405,13 @@
       "isoRows": [
         {
           "dimension": "C · Codice & Architettura",
-          "existing": "Nessuno standard esistente certifica la qualità e la trasmissibilità di una base tecnologica — proprietaria o in licenza — in un contesto di M&A.",
-          "cifso": "Certifica la base tecnologica — qualità e manutenibilità del codice proprietario, o governance e reversibilità dello stack in licenza — come valore trasmissibile."
+          "existing": "Nessuno standard esistente certifica la qualità e la trasmissibilità di una base tecnologica (proprietaria o in licenza) in un contesto di M&A.",
+          "cifso": "Certifica la base tecnologica (qualità e manutenibilità del codice proprietario, o governance e reversibilità dello stack in licenza) come valore trasmissibile."
         },
         {
           "dimension": "I · IP & Diritti",
           "existing": "I sistemi di gestione della qualità coprono i processi ma non l'integrità della struttura del capitale, il registro dei proprietari o la tracciabilità della conformità.",
-          "cifso": "Certifica la catena di titolarità IP — marchi, brevetti, cessioni di diritti, contratti — e la struttura giuridica in contesto M&A."
+          "cifso": "Certifica la catena di titolarità IP (marchi, brevetti, cessioni di diritti, contratti) e la struttura giuridica in contesto M&A."
         },
         {
           "dimension": "F · Finanza & Metriche",
@@ -3600,7 +3600,7 @@
         {
           "code": "C",
           "name": "Codice & Architettura",
-          "desc": "Qualità della base tecnologica — codice proprietario o sistemi in licenza: architettura, test, documentazione, debito tecnico, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza il suo autore."
+          "desc": "Qualità della base tecnologica, codice proprietario o sistemi in licenza: architettura, test, documentazione, debito tecnico, dipendenze, reversibilità. Ciò che rende l'organizzazione trasmissibile senza il suo autore."
         },
         {
           "code": "I",
@@ -3624,7 +3624,7 @@
         }
       ],
       "regulatoryLabel": "Conformità normativa",
-      "regulatoryText": "Il perimetro normativo di ogni asset viene profilato e poi validato in audit. Ogni normativa applicabile è valutata nella dimensione che la controlla realmente — mai aggregata in un punteggio opaco.",
+      "regulatoryText": "Il perimetro normativo di ogni asset viene profilato e poi validato in audit. Ogni normativa applicabile è valutata nella dimensione che la controlla realmente, mai aggregata in un punteggio opaco.",
       "regulatoryMap": [
         "Data Act → C + I (accesso tecnico, condizioni B2B)",
         "Cyber Resilience Act → C (SBOM, vulnerabilità)",
@@ -10042,7 +10042,7 @@
         },
         {
           "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions — Codice & Architettura, IP & Diritti, Finanze & Metriche, Sicurezza & Sovranità, Organizzazione & Talento — to document and defend value."
+          "desc": "Independent assessment across 5 dimensions (Codice & Architettura, IP & Diritti, Finanze & Metriche, Sicurezza & Sovranità, Organizzazione & Talento) to document and defend value."
         }
       ],
       "cifsoTitle": "Rilevanza CIFSO 5000 per settore",
@@ -10051,7 +10051,7 @@
         {
           "code": "C",
           "dim": "Codice & Architettura",
-          "desc": "Qualità della base tecnologica — codice proprietario o sistemi in licenza: architettura, dipendenze, reversibilità. Critica per qualsiasi organizzazione il cui valore poggia sul proprio SI."
+          "desc": "Qualità della base tecnologica, codice proprietario o sistemi in licenza: architettura, dipendenze, reversibilità. Critica per qualsiasi organizzazione il cui valore poggia sul proprio SI."
         },
         {
           "code": "I",
