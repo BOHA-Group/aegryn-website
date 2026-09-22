@@ -229,7 +229,7 @@ export const aegrynOrganizationSchema = {
   url:           BASE_URL,
   logo: {
     '@type':     'ImageObject',
-    url:         `${BASE_URL}/images/aegryn-logo.svg`,
+    url:         `${BASE_URL}/images/brand/logo.svg`,
     width:       200,
     height:      50,
   },

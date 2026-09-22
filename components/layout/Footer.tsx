@@ -145,7 +145,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Image
-              src="/images/logo-aegryn.png"
+              src="/images/brand/logo-aegryn.png"
               alt="Aegryn"
               width={100}
               height={44}

@@ -197,7 +197,7 @@ export default async function AssetPage({ params }: Props) {
             description:   'neediu, l\'application de mise en relation avec des prestataires à domicile de confiance, présentée dans le magazine Gala le 27 novembre 2025.',
             datePublished: '2025-11-27',
             url:           'https://aegryn.com/fr/assets/neediu',
-            image:         'https://aegryn.com/images/press-gala-neediu-ad.png',
+            image:         'https://aegryn.com/images/press/press-gala-neediu-ad.png',
             author:        { '@type': 'Organization', name: 'Gala', url: 'https://gala.fr' },
             publisher:     { '@type': 'Organization', name: 'Gala', url: 'https://gala.fr' },
             about: {
@@ -229,7 +229,7 @@ export default async function AssetPage({ params }: Props) {
               {/* Badge */}
               <div className="shrink-0">
                 <Image
-                  src="/images/press-gala-badge.png"
+                  src="/images/press/press-gala-badge.png"
                   alt={t('press.neediu.altBadge')}
                   width={220}
                   height={160}
@@ -239,7 +239,7 @@ export default async function AssetPage({ params }: Props) {
               {/* Couverture */}
               <div className="shrink-0">
                 <Image
-                  src="/images/press-gala-cover.png"
+                  src="/images/press/press-gala-cover.png"
                   alt={t('press.neediu.altCover')}
                   width={200}
                   height={266}
@@ -249,7 +249,7 @@ export default async function AssetPage({ params }: Props) {
               {/* Pub neediu */}
               <div className="flex-1 max-w-sm">
                 <Image
-                  src="/images/press-gala-neediu-ad.png"
+                  src="/images/press/press-gala-neediu-ad.png"
                   alt={t('press.neediu.altAd')}
                   width={380}
                   height={480}
@@ -305,7 +305,7 @@ export default async function AssetPage({ params }: Props) {
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.partner')}</p>
                 <div className="rounded-lg border border-ag-border bg-ag-white px-5 py-5 w-[200px] flex flex-col items-center text-center gap-3">
                   <Image
-                    src="/images/press-village-justice-logo.png"
+                    src="/images/press/press-village-justice-logo.png"
                     alt={t('press.subblink.partnerName')}
                     width={150}
                     height={75}
@@ -353,7 +353,7 @@ export default async function AssetPage({ params }: Props) {
               <div className="flex flex-col gap-3 shrink-0">
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.visual')}</p>
                 <Image
-                  src="/images/subblink banner.jpeg"
+                  src="/images/assets/subblink-banner.jpeg"
                   alt={t('press.subblink.altBanner')}
                   width={400}
                   height={267}

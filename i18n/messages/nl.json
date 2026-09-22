@@ -10085,7 +10085,7 @@
         {
           "id": "finance",
           "cluster": "Financiën & Kapitaal",
-          "image": "/images/theme_fintech.jpg",
+          "image": "/images/industries/theme_fintech.jpg",
           "vision": "Financiële organisaties opereren in een omgeving van permanente compliance. Hun waarde berust op datakwaliteit, robuuste governance en de geloofwaardigheid van metrics. CIFSO 5000 is hier bijzonder relevant om te documenteren wat regelgevende audits niet vastleggen.",
           "services": [
             "Strategieadvies",
@@ -10148,7 +10148,7 @@
         {
           "id": "industrie",
           "cluster": "Industrie, Energie & Infrastructuur",
-          "image": "/images/theme_marketplace.jpg",
+          "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Industriële organisaties hebben vaak een ondergedocumenteerde waarde: operationele knowhow, langetermijncontracten, intellectueel eigendom op processen. CIFSO 5000 biedt een gemeenschappelijke taal tussen de directeur die zijn waarde kent en de investeerder die die moet verifiëren.",
           "services": [
             "Strategieadvies",
@@ -10213,7 +10213,7 @@
         {
           "id": "commerce",
           "cluster": "Handel, Diensten & Klantervaring",
-          "image": "/images/theme_saas.jpg",
+          "image": "/images/industries/theme_saas.jpg",
           "vision": "Handels- en dienstverlenende organisaties hebben waarde gekoppeld aan hun klantenbasis, omzetmodel en retentievermogen. Het documenteren van deze activa — CRM-data, raamcontracten, retentiemetrics — is precies wat CIFSO 5000 structureert.",
           "services": [
             "Strategieadvies",
@@ -10257,7 +10257,7 @@
         {
           "id": "tech",
           "cluster": "Tech, Innovatie & Publieke Sector",
-          "image": "/images/theme_AI.jpg",
+          "image": "/images/industries/theme_AI.jpg",
           "vision": "Tech-organisaties hebben vaak waarde geconcentreerd in hun code, data en teams. De CIFSO 5000-certificering is ontworpen om deze immateriële activa verifieerbaar, verdedigbaar en overdraagbaar te maken. Voor publieke instellingen documenteert zij de digitale maturiteit onafhankelijk.",
           "services": [
             "Strategieadvies",

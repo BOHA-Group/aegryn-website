@@ -10085,7 +10085,7 @@
         {
           "id": "finance",
           "cluster": "Finanza & Capitale",
-          "image": "/images/theme_fintech.jpg",
+          "image": "/images/industries/theme_fintech.jpg",
           "vision": "Le organizzazioni finanziarie evolvono in un ambiente di conformità permanente. Il loro valore si fonda sulla qualità dei dati, sulla solidità della governance e sulla credibilità delle metriche. CIFSO 5000 è particolarmente pertinente per documentare ciò che gli audit regolamentari non catturano.",
           "services": [
             "Consulenza Strategica",
@@ -10148,7 +10148,7 @@
         {
           "id": "industrie",
           "cluster": "Industria, Energia & Infrastrutture",
-          "image": "/images/theme_marketplace.jpg",
+          "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Le organizzazioni industriali hanno spesso un valore sotto-documentato: know-how operativo, contratti di lungo periodo, proprietà intellettuale sui processi. CIFSO 5000 offre un linguaggio comune tra il dirigente che conosce il proprio valore e l'investitore che deve verificarlo.",
           "services": [
             "Consulenza Strategica",
@@ -10213,7 +10213,7 @@
         {
           "id": "commerce",
           "cluster": "Commercio, Servizi & Customer Experience",
-          "image": "/images/theme_saas.jpg",
+          "image": "/images/industries/theme_saas.jpg",
           "vision": "Le organizzazioni del commercio e dei servizi hanno un valore legato alla loro base clienti, al loro modello di ricavi e alla loro capacità di fidelizzazione. La documentazione di questi asset — dati CRM, contratti quadro, metriche di retention — è esattamente ciò che CIFSO 5000 struttura.",
           "services": [
             "Consulenza Strategica",
@@ -10257,7 +10257,7 @@
         {
           "id": "tech",
           "cluster": "Tech, Innovazione & Settore Pubblico",
-          "image": "/images/theme_AI.jpg",
+          "image": "/images/industries/theme_AI.jpg",
           "vision": "Le organizzazioni tech hanno spesso un valore concentrato nel loro codice, nei loro dati e nei loro team. La certificazione CIFSO 5000 è concepita per rendere questi asset immateriali verificabili, opponibili e trasmissibili. Per le istituzioni pubbliche, documenta la maturità digitale in modo indipendente.",
           "services": [
             "Consulenza Strategica",

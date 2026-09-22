@@ -7,13 +7,13 @@ import { gsap } from '@/lib/gsap'
 
 /* ─── Images dédiées à cette section uniquement ────────────────
    Téléchargées depuis Unsplash (licence gratuite), stockées dans
-   /public/images/segments-*.jpg — non partagées avec d'autres sections.
+   /public/images/segments/segments-*.jpg — non partagées avec d'autres sections.
 ──────────────────────────────────────────────────────────────── */
 const SEGMENT_IMAGES: Record<string, { src: string; alt: string }> = {
-  startup:    { src: '/images/segments-startup.jpg',    alt: 'Startup & Scale-up — équipe tech en open-space' },
-  pme:        { src: '/images/segments-pme.jpg',        alt: 'PME en croissance — réunion de direction' },
-  enterprise: { src: '/images/segments-enterprise.jpg', alt: 'Grands groupes — architecture corporative' },
-  funds:      { src: '/images/segments-funds.jpg',      alt: 'Fonds & Investisseurs — analyse financière' },
+  startup:    { src: '/images/segments/segments-startup.jpg',    alt: 'Startup & Scale-up — équipe tech en open-space' },
+  pme:        { src: '/images/segments/segments-pme.jpg',        alt: 'PME en croissance — réunion de direction' },
+  enterprise: { src: '/images/segments/segments-enterprise.jpg', alt: 'Grands groupes — architecture corporative' },
+  funds:      { src: '/images/segments/segments-funds.jpg',      alt: 'Fonds & Investisseurs — analyse financière' },
 }
 
 export function SegmentsSection() {

@@ -127,7 +127,7 @@ export function AssetGrid() {
           {asset.id === 'neediu' && (
             <div className="absolute bottom-3 right-3 z-10">
               <Image
-                src="/images/press-gala-badge.png"
+                src="/images/press/press-gala-badge.png"
                 alt="Paru dans Gala"
                 width={90}
                 height={64}

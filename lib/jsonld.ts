@@ -8,7 +8,7 @@ export function organizationJsonLd() {
     name:          'Aegryn',
     legalName:     'Aegryn',
     url:           BASE,
-    logo:          `${BASE}/images/aegryn-logo.png`,
+    logo:          `${BASE}/images/brand/logo-aegryn.png`,
     foundingDate:  '2024',
     foundingLocation: {
       '@type':          'Place',

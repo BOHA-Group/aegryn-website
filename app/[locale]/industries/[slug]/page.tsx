@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 /* ── Helpers ────────────────────────────────────────────────── */
 const CLUSTER_IMAGES: Record<string, string> = {
-  finance:   '/images/theme_fintech.jpg',
+  finance:   '/images/industries/theme_fintech.jpg',
   sante:     '/images/grade-usecases/uc-due-diligence.jpg',
-  industrie: '/images/theme_marketplace.jpg',
-  commerce:  '/images/theme_saas.jpg',
-  tech:      '/images/theme_AI.jpg',
+  industrie: '/images/industries/theme_marketplace.jpg',
+  commerce:  '/images/industries/theme_saas.jpg',
+  tech:      '/images/industries/theme_AI.jpg',
 }
 
 /* ── Page ───────────────────────────────────────────────────── */

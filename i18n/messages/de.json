@@ -10215,7 +10215,7 @@
         {
           "id": "finance",
           "cluster": "Finanzen & Kapital",
-          "image": "/images/theme_fintech.jpg",
+          "image": "/images/industries/theme_fintech.jpg",
           "vision": "Finanzorganisationen agieren in einem Umfeld permanenter Compliance. Ihr Wert beruht auf der Qualität ihrer Daten, der Robustheit ihrer Governance und der Glaubwürdigkeit ihrer Kennzahlen. CIFSO 5000 ist hier besonders geeignet, um zu dokumentieren, was regulatorische Audits nicht erfassen.",
           "services": [
             "Strategieberatung",
@@ -10278,7 +10278,7 @@
         {
           "id": "industrie",
           "cluster": "Industrie, Energie & Infrastruktur",
-          "image": "/images/theme_marketplace.jpg",
+          "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Industrielle Organisationen haben oft einen unterdokumentierten Wert: operatives Know-how, langfristige Verträge, geistiges Eigentum an Prozessen. CIFSO 5000 schafft eine gemeinsame Sprache zwischen dem Geschäftsführer, der seinen Wert kennt, und dem Investor, der ihn verifizieren muss.",
           "services": [
             "Strategieberatung",
@@ -10343,7 +10343,7 @@
         {
           "id": "commerce",
           "cluster": "Handel, Dienstleistungen & Kundenerlebnis",
-          "image": "/images/theme_saas.jpg",
+          "image": "/images/industries/theme_saas.jpg",
           "vision": "Handels- und Dienstleistungsorganisationen haben einen Wert, der auf ihrer Kundenbasis, ihrem Umsatzmodell und ihrer Bindungsfähigkeit beruht. Die Dokumentation dieser Assets — CRM-Daten, Rahmenverträge, Retention-Kennzahlen — ist genau das, was CIFSO 5000 strukturiert.",
           "services": [
             "Strategieberatung",
@@ -10387,7 +10387,7 @@
         {
           "id": "tech",
           "cluster": "Tech, Innovation & öffentlicher Sektor",
-          "image": "/images/theme_AI.jpg",
+          "image": "/images/industries/theme_AI.jpg",
           "vision": "Tech-Organisationen haben oft einen in ihrem Code, ihren Daten und ihren Teams konzentrierten Wert. Die CIFSO-5000-Zertifizierung macht diese immateriellen Vermögenswerte verifizierbar, belastbar und übertragbar. Für öffentliche Institutionen dokumentiert sie die digitale Reife unabhängig.",
           "services": [
             "Strategieberatung",

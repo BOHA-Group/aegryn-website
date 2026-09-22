@@ -521,7 +521,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         {/* Logo */}
         <Link ref={logoRef} href="/" aria-label="AEGRYN | Accueil" className="block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
           <Image
-            src="/images/logo-aegryn-navbar.jpg"
+            src="/images/brand/logo-aegryn-navbar.jpg"
             alt="AEGRYN"
             width={64}
             height={64}

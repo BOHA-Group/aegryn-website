@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
 const HERO_SLIDES = [
-  { src: '/images/home_geneva.jpg',  alt: 'Genève — Aegryn Group' },
-  { src: '/images/mountains.avif',   alt: 'Alpes suisses — Aegryn Group' },
+  { src: '/images/home/home_geneva.jpg',  alt: 'Genève — Aegryn Group' },
+  { src: '/images/home/mountains.avif',   alt: 'Alpes suisses — Aegryn Group' },
 ]
 
 const SLIDE_INTERVAL_MS = 3500

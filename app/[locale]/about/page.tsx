@@ -59,7 +59,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[88vh] min-h-[620px] overflow-hidden border-b border-ag-border">
         <Image
-          src="/images/about_regatta.jpg"
+          src="/images/about/about_regatta.jpg"
           alt={t('hero.imageAlt')}
           fill
           priority

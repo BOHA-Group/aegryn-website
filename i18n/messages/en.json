@@ -10070,7 +10070,7 @@
         {
           "id": "finance",
           "cluster": "Finance & Capital",
-          "image": "/images/theme_fintech.jpg",
+          "image": "/images/industries/theme_fintech.jpg",
           "vision": "Financial organisations operate in a permanent compliance environment. Their value rests on data quality, governance robustness and metrics credibility. CIFSO 5000 is particularly relevant here to document what regulatory audits do not capture.",
           "services": [
             "Strategy Advisory",
@@ -10133,7 +10133,7 @@
         {
           "id": "industrie",
           "cluster": "Industry, Energy & Infrastructure",
-          "image": "/images/theme_marketplace.jpg",
+          "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Industrial organisations often have under-documented value: operational know-how, long-term contracts, process intellectual property. CIFSO 5000 provides a common language between the executive who knows their value and the investor who needs to verify it.",
           "services": [
             "Strategy Advisory",
@@ -10198,7 +10198,7 @@
         {
           "id": "commerce",
           "cluster": "Commerce, Services & Customer Experience",
-          "image": "/images/theme_saas.jpg",
+          "image": "/images/industries/theme_saas.jpg",
           "vision": "Commerce and services organisations have value tied to their customer base, revenue model and retention capacity. Documenting these assets — CRM data, framework contracts, retention metrics — is precisely what CIFSO 5000 structures.",
           "services": [
             "Strategy Advisory",
@@ -10242,7 +10242,7 @@
         {
           "id": "tech",
           "cluster": "Tech, Innovation & Public Sector",
-          "image": "/images/theme_AI.jpg",
+          "image": "/images/industries/theme_AI.jpg",
           "vision": "Tech organisations often have value concentrated in their code, data and teams. CIFSO 5000 certification is designed to make these intangible assets verifiable, defensible and transferable. For public institutions, it independently documents digital maturity.",
           "services": [
             "Strategy Advisory",

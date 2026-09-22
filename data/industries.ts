@@ -70,7 +70,7 @@ const finance: Industry = {
     it: 'Finanza & Capitale',
     nl: 'Financiën & Kapitaal',
   },
-  img: '/images/theme_fintech.jpg',
+  img: '/images/industries/theme_fintech.jpg',
   imgAlt: {
     fr: 'Finance & Capital — Aegryn',
     en: 'Finance & Capital — Aegryn',
@@ -773,7 +773,7 @@ const industrie: Industry = {
     it: 'Industria, Energia & Infrastrutture',
     nl: 'Industrie, Energie & Infrastructuur',
   },
-  img: '/images/theme_marketplace.jpg',
+  img: '/images/industries/theme_marketplace.jpg',
   imgAlt: {
     fr: 'Industrie, Énergie & Infrastructure — Aegryn',
     en: 'Industry, Energy & Infrastructure — Aegryn',
@@ -1274,7 +1274,7 @@ const commerce: Industry = {
     it: 'Commercio, Servizi & Customer Experience',
     nl: 'Handel, Diensten & Klantervaring',
   },
-  img: '/images/theme_saas.jpg',
+  img: '/images/industries/theme_saas.jpg',
   imgAlt: {
     fr: 'Commerce, Services & Expérience Client — Aegryn',
     en: 'Commerce, Services & Customer Experience — Aegryn',
@@ -1683,7 +1683,7 @@ const tech: Industry = {
     it: 'Tech, Innovazione & Settore Pubblico',
     nl: 'Tech, Innovatie & Publieke Sector',
   },
-  img: '/images/theme_AI.jpg',
+  img: '/images/industries/theme_AI.jpg',
   imgAlt: {
     fr: 'Tech, Innovation & Secteur Public — Aegryn',
     en: 'Tech, Innovation & Public Sector — Aegryn',

@@ -109,7 +109,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
       {/* ── Couche 1 : image poster statique (pas de Ken Burns — Rolex standard) ── */}
       <div ref={photoRef} className="absolute inset-0">
         <Image
-          src="/images/assets-intro.jpg"
+          src="/images/assets/assets-intro.jpg"
           alt="Aegryn | Nos actifs numériques"
           fill
           priority
@@ -128,7 +128,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
         muted
         loop
         playsInline
-        poster="/images/assets-intro.jpg"
+        poster="/images/assets/assets-intro.jpg"
         preload="auto"
       >
         <source src="/videos/assets-animation2-web.mp4" type="video/mp4" />

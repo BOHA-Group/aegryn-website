@@ -82,7 +82,7 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         muted
         loop
         playsInline
-        poster="/images/home-mountains.png"
+        poster="/images/home/home-mountains.png"
         preload="auto"
       >
         <source src="/videos/assets-animation1-web.mp4" type="video/mp4" />
