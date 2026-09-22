@@ -897,6 +897,7 @@
   "about": {
     "hero": {
       "label": "À propos d'Aegryn",
+      "imageAlt": "Régate de voiliers en compétition sur la mer",
       "title": "Nous ne vendons pas des deals.\nNous protégeons ce qui dure.",
       "desc": "Nous croyons que la valeur d'une organisation ne se négocie pas dans l'urgence. Elle se construit dans la rigueur stratégique, se renforce par ses actifs, se valide dans la transparence, et se réalise dans la confiance. Aegryn existe pour les dirigeants qui refusent de subir leur trajectoire."
     },

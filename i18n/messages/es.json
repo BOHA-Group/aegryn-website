@@ -937,6 +937,7 @@
   "about": {
     "hero": {
       "label": "Sobre Aegryn",
+      "imageAlt": "Regata de veleros de competición en el mar",
       "title": "No vendemos deals.\nProtegemos lo que dura.",
       "desc": "Creemos que el valor real de un activo tech no se negocia bajo presión. Se construye con rigor, se certifica en transparencia y se transfiere en confianza."
     },

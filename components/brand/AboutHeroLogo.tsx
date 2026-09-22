@@ -9,7 +9,7 @@ import { AegrynLogo } from '@/components/brand/AegrynLogo'
  * Enters with a scroll-triggered zoom-in (scale 0.6→1, opacity 0→1).
  * No blur at any point.
  */
-export function AboutHeroLogo() {
+export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function AboutHeroLogo() {
       style={{ opacity: 0 }}
       aria-hidden="true"
     >
-      <AegrynLogo size={200} variant="mark" />
+      <AegrynLogo size={200} variant="mark" onDark={onDark} />
     </div>
   )
 }

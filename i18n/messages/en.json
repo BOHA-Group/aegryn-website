@@ -937,6 +937,7 @@
   "about": {
     "hero": {
       "label": "About Aegryn",
+      "imageAlt": "Racing sailboats competing on the sea",
       "title": "We do not sell deals.\nWe protect what lasts.",
       "desc": "We believe the real value of a tech asset is not negotiated under pressure. It is built with rigour, certified in transparency, and transferred in trust."
     },

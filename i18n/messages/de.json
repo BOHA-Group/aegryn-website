@@ -937,6 +937,7 @@
   "about": {
     "hero": {
       "label": "Über Aegryn",
+      "imageAlt": "Regattaboote im Wettkampf auf offener See",
       "title": "Wir verkaufen keine Deals.\nWir schützen, was dauert.",
       "desc": "Wir glauben, dass der wahre Wert eines Tech-Assets nicht unter Druck verhandelt wird. Er wird mit Präzision aufgebaut, in Transparenz zertifiziert und in Vertrauen übertragen."
     },

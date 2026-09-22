@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
@@ -56,24 +57,36 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-32">
-          <div className="flex items-start justify-between gap-8">
-            <div className="flex-1 min-w-0">
-              <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
-                {t('hero.label')}
-              </p>
-              <h1
-                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
-                style={{ fontSize: 'clamp(48px,6vw,86px)' }}
-              >
-                {t('hero.title')}
-              </h1>
-              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
-                {t('hero.desc')}
-              </p>
+      <section className="relative h-[88vh] min-h-[620px] overflow-hidden border-b border-ag-border">
+        <Image
+          src="/images/about_regatta.jpg"
+          alt={t('hero.imageAlt')}
+          fill
+          priority
+          quality={95}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
+        <div className="relative flex h-full flex-col justify-end">
+          <div className="mx-auto w-full max-w-7xl px-6 md:px-12 pb-24">
+            <div className="flex items-end justify-between gap-8">
+              <div className="flex-1 min-w-0">
+                <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-white/70 mb-8">
+                  {t('hero.label')}
+                </p>
+                <h1
+                  className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
+                  style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+                >
+                  {t('hero.title')}
+                </h1>
+                <p className="text-[15px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
+                  {t('hero.desc')}
+                </p>
+              </div>
+              <AboutHeroLogo onDark />
             </div>
-            <AboutHeroLogo />
           </div>
         </div>
       </section>
