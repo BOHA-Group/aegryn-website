@@ -3486,7 +3486,7 @@
       "whitepaperTitle": "Aegryn — Methodologie Certificering CIFSO 5000",
       "whitepaperDesc": "Overzicht van het protocol, vijf dimensies, notenschaal, certificeringsproces en onafhankelijkheidsbeginselen — het officiële methodologiewhitepaper.",
       "whitepaperCta": "Whitepaper lezen",
-      "whitepaperVersion": "CIFSO 5000 v4.0 — Officieel methodologiewhitepaper",
+      "whitepaperVersion": "CIFSO 5000 — Officieel methodologiewhitepaper",
       "wpNavBack": "Terug naar certificering",
       "wpNavPrint": "Afdrukken / PDF opslaan",
       "wpProtocol": "Protocol",
@@ -3888,8 +3888,8 @@
       "form": {
         "arrChf": "Huidige ARR (CHF)",
         "arrPlaceholder": "Bijv. 400000",
-        "budgetMaxChf": "Budget maximum (CHF)",
-        "budgetMinChf": "Budget minimum (CHF)",
+        "budgetMaxChf": "Maximumbudget (CHF)",
+        "budgetMinChf": "Minimumbudget (CHF)",
         "budgetNote": "Indicatieve waardering voor de verkoop / ticket voor de ronde",
         "budgetPlaceholder": "Bijv. 500000",
         "companyName": "Bedrijf / Structuur (optioneel)",
@@ -3940,7 +3940,7 @@
         "typePlaceholder": "Selecteer een mandaattype",
         "useOfFunds": "Gebruik van de middelen",
         "useOfFundsPlaceholder": "Uitbreiding, R&D, werving…",
-        "vertical": "Secteur vertical",
+        "vertical": "Verticale sector",
         "verticalOptions": {
           "deeptech": "Deeptech / AI",
           "ecommerce": "E-commerce",

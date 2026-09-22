@@ -107,8 +107,8 @@
     "solutionsDomain1": "AI Agents & Business Automation",
     "solutionsDomain2": "Compliance, Risk & AI Governance",
     "solutionsDomain3": "Cybersecurity & Digital Trust",
-    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
-    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
+    "solutionsDomain4": "Dokumenten-, Vertrags- & Wissensintelligenz",
+    "solutionsDomain5": "Finanzen, Abrechnung & E-Invoicing-Automatisierung",
     "solutionsDomain6": "Data, BI & Decision Intelligence",
     "solutionsDomain7": "Customer Experience & Service Automation",
     "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
@@ -3486,7 +3486,7 @@
       "whitepaperTitle": "Aegryn — Zertifizierungsmethodik CIFSO 5000",
       "whitepaperDesc": "Protokollübersicht, fünf Dimensionen, Notenskala, Zertifizierungsprozess und Unabhängigkeitsgrundsätze — das offizielle Methodik-Whitepaper.",
       "whitepaperCta": "Whitepaper lesen",
-      "whitepaperVersion": "CIFSO 5000 v4.0 — Offizielles Methodik-Whitepaper",
+      "whitepaperVersion": "CIFSO 5000 — Offizielles Methodik-Whitepaper",
       "wpNavBack": "Zurück zur Zertifizierung",
       "wpNavPrint": "Drucken / PDF speichern",
       "wpProtocol": "Protokoll",
@@ -3886,61 +3886,61 @@
       "ndaDesc": "Alle unsere Mandate beinhalten eine verstärkte Vertraulichkeitsvereinbarung. Identitäten und Finanzdaten werden ohne vorherige schriftliche Zustimmung beider Parteien niemals offengelegt.",
       "ndaCta": "Kontakt aufnehmen",
       "form": {
-        "arrChf": "ARR actuel (CHF)",
-        "arrPlaceholder": "Ex : 400000",
-        "budgetMaxChf": "Budget maximum (CHF)",
-        "budgetMinChf": "Budget minimum (CHF)",
+        "arrChf": "Aktueller ARR (CHF)",
+        "arrPlaceholder": "Z. B.: 400000",
+        "budgetMaxChf": "Maximalbudget (CHF)",
+        "budgetMinChf": "Mindestbudget (CHF)",
         "budgetNote": "Indikative Bewertung für die Veräußerung / Ticket für die Kapitalaufnahme",
-        "budgetPlaceholder": "Ex : 500000",
+        "budgetPlaceholder": "Z. B.: 500000",
         "companyName": "Gesellschaft / Struktur (optional)",
         "companyPlaceholder": "Holding, Startup, Kanzlei…",
-        "contactEmail": "Adresse email",
+        "contactEmail": "E-Mail-Adresse",
         "contactName": "Vollständiger Name",
-        "currentMrr": "MRR actuel (CHF)",
+        "currentMrr": "Aktueller MRR (CHF)",
         "description": "Beschreibung & Kontext",
         "descriptionPlaceholder": "Beschreiben Sie Ihre Situation, Ziele, Einschränkungen und alle relevanten Informationen für unser Team.",
         "equityOfferedPct": "Angebotenes Kapital (%)",
-        "equityPctPlaceholder": "Ex : 15",
+        "equityPctPlaceholder": "Z. B.: 15",
         "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
         "hasIp": "IP oder Patent angemeldet?",
-        "hasIpNo": "Non",
-        "hasIpPending": "En cours",
-        "hasIpYes": "Oui",
-        "mrrPlaceholder": "Ex : 80000",
+        "hasIpNo": "Nein",
+        "hasIpPending": "Laufend",
+        "hasIpYes": "Ja",
+        "mrrPlaceholder": "Z. B.: 80000",
         "partnerType": "Art des gesuchten Partners",
         "partnerTypePlaceholder": "Operativ, finanziell, industriell…",
         "profitability": "Angestrebte Rentabilität",
         "profitabilityPlaceholder": "Z.B. positives EBITDA, Breakeven, Early Stage",
-        "revenueChf": "CA annuel (CHF)",
-        "revenuePlaceholder": "Ex : 600000",
+        "revenueChf": "Jahresumsatz (CHF)",
+        "revenuePlaceholder": "Z. B.: 600000",
         "sectionAsset": "VERMÖGENSWERT / GESELLSCHAFT",
         "sectionBudget": "BUDGET / BEWERTUNG",
         "sectionContact": "IHRE KONTAKTDATEN",
         "sectionContext": "KONTEXT & ZIELE",
         "sectionType": "MANDATSTYP",
         "stakePctMax": "Max. übertragener Kapitalanteil (%)",
-        "stakePlaceholder": "Ex : 30",
+        "stakePlaceholder": "Z. B.: 30",
         "submit": "Mein Mandat einreichen",
         "submitting": "Wird gesendet…",
         "successDesc": "Unser Team prüft Ihre Anfrage innerhalb von 48–72 Werktagen und nimmt Kontakt auf.",
         "successTitle": "Mandat erhalten.",
         "swissLawLabel": "Mit dem Absenden dieses Formulars bestätige ich, dass Aegryn-Mandate unter Schweizer Recht stehen und jede Transaktion systematisch einem NDA unterliegt.",
-        "targetArrMin": "ARR cible minimum (CHF)",
+        "targetArrMin": "Mindest-Ziel-ARR (CHF)",
         "targetCountries": "Zielländer (durch Komma getrennt)",
         "targetCountriesPlaceholder": "Z.B. fr, ch, de",
-        "teamPlaceholder": "Ex : 4",
+        "teamPlaceholder": "Z. B.: 4",
         "teamSize": "Teamgröße",
         "typeLabel": "Welche Art von Mandat möchten Sie einreichen?",
         "typeOptions": {
           "buy": "Akquisitionsmandat: Eine Zielgesellschaft finden",
           "equity_stake": "Kapitaleröffnung: Einen strategischen Partner aufnehmen",
-          "fundraise": "Levée de fonds : Trouver des investisseurs qualifiés",
+          "fundraise": "Kapitalbeschaffung: Qualifizierte Investoren finden",
           "sell": "Veräußerungsmandat: Einen Vermögenswert oder eine Gesellschaft verkaufen"
         },
         "typePlaceholder": "Mandatstyp auswählen",
         "useOfFunds": "Mittelverwendung",
         "useOfFundsPlaceholder": "Expansion, F&E, Rekrutierung…",
-        "vertical": "Secteur vertical",
+        "vertical": "Vertikaler Sektor",
         "verticalOptions": {
           "deeptech": "Deeptech / KI",
           "ecommerce": "E-commerce",
@@ -3950,15 +3950,15 @@
           "infra_devtools": "Infra / DevTools",
           "marketplace": "Marketplace",
           "media_content": "Medien / Inhalt",
-          "other": "Autre",
+          "other": "Andere",
           "saas_b2b": "SaaS B2B",
           "saas_b2c": "SaaS B2C"
         },
-        "verticalOther": "Précisez le secteur",
-        "verticalOtherPlaceholder": "Ex : LegalTech, PropTech...",
-        "verticalPlaceholder": "Sélectionnez un secteur",
+        "verticalOther": "Sektor präzisieren",
+        "verticalOtherPlaceholder": "Z. B.: LegalTech, PropTech...",
+        "verticalPlaceholder": "Sektor auswählen",
         "yoyGrowth": "YoY-Wachstum (%)",
-        "yoyPlaceholder": "Ex : 35"
+        "yoyPlaceholder": "Z. B.: 35"
       }
     },
     "sell": {
@@ -4820,7 +4820,7 @@
             "IA & Machine Learning",
             "Cloud & Infra",
             "API & Intégrations",
-            "Cybersécurité opérationnelle",
+            "Operative Cybersicherheit",
             "Data Engineering",
             "Product Management tech"
           ]
@@ -4831,10 +4831,10 @@
           "title": "Transaktionsberatung",
           "desc": "Strategische Due Diligence, Bewertung, Transaktionsstrukturierung.",
           "tags": [
-            "Due diligence stratégique",
+            "Strategische Due Diligence",
             "Valorisation d'actifs",
             "Structuration M&A",
-            "NDA & Confidentialité",
+            "NDA & Vertraulichkeit",
             "Data room",
             "Quality of Earnings",
             "Earn-out design",
@@ -4850,7 +4850,7 @@
           "desc": "Anwälte für M&A, IP und Digitalrecht, Notare, Legal Audit.",
           "tags": [
             "Droit des sociétés",
-            "Propriété intellectuelle",
+            "Geistiges Eigentum",
             "Droit numérique",
             "RGPD & Conformité",
             "Droit fiscal M&A",
@@ -10157,19 +10157,19 @@
       "services": [
         {
           "name": "Strategy Advisory",
-          "desc": "Positioning, business model, governance and long-term planning for organisations built to last."
+          "desc": "Positionierung, Geschäftsmodell, Governance und Langfristplanung für Organisationen, die für die Dauer gebaut sind."
         },
         {
           "name": "Technology Advisory",
-          "desc": "System architecture, digital transformation, data sovereignty and tech regulatory compliance."
+          "desc": "Systemarchitektur, digitale Transformation, Datensouveränität und regulatorische Tech-Compliance."
         },
         {
           "name": "M&A Advisory",
-          "desc": "Disposal preparation, buyer due diligence, transaction structuring and closing support."
+          "desc": "Verkaufsvorbereitung, Käufer-Due-Diligence, Transaktionsstrukturierung und Closing-Begleitung."
         },
         {
           "name": "Bespoke Software",
-          "desc": "Digital product development, business integrations and proprietary platforms adapted to your sector constraints."
+          "desc": "Digitale Produktentwicklung, Business-Integrationen und proprietäre Plattformen, angepasst an Ihre sektoralen Anforderungen."
         },
         {
           "name": "CIFSO 5000 Certification",
@@ -10192,17 +10192,17 @@
         {
           "code": "F",
           "dim": "Finance & Metrics",
-          "desc": "Financial data quality, revenue predictability, margins and SaaS metrics. Defensible in due diligence and with lenders."
+          "desc": "Qualität der Finanzdaten, Umsatzvorhersehbarkeit, Margen und SaaS-Metriken. Belastbar in der Due Diligence und gegenüber Kreditgebern."
         },
         {
           "code": "S",
           "dim": "Security & Sovereignty",
-          "desc": "Cyber posture, regulatory compliance (NIS2, DORA, GDPR, AI Act), data sovereignty. Decisive in regulated sectors."
+          "desc": "Cyber-Posture, regulatorische Compliance (NIS2, DORA, DSGVO, AI Act), Datensouveränität. Entscheidend in regulierten Sektoren."
         },
         {
           "code": "O",
           "dim": "Organisation & Talent",
-          "desc": "Organisational resilience, know-how documentation, management depth. A key factor of transferability."
+          "desc": "Organisatorische Resilienz, Dokumentation des Know-hows, Managementtiefe. Schlüsselfaktor der Übertragbarkeit."
         }
       ],
       "industriesTitle": "Unsere Einsatzbranchen",
