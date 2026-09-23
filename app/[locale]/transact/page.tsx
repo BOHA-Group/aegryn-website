@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, TrendingUp, Building2, Search, Handshake, Users, Gauge, BadgeCheck } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
@@ -44,8 +45,18 @@ export default async function TransactPage({ params }: Props) {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="bg-ag-navy pt-32 pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden bg-ag-navy pt-32 pb-24 px-6">
+        <Image
+          src="/images/home/mountains.avif"
+          alt="Alpes suisses — Aegryn Group"
+          fill
+          priority
+          quality={95}
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85" />
+        <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
