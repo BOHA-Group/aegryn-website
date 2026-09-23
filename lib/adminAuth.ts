@@ -25,7 +25,7 @@ async function persistTokenAsCookie(token: string): Promise<void> {
     httpOnly: true,
     secure:   process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    path:     '/admin',
+    path:     '/',
     maxAge:   60 * 60 * 8, // 8h
   })
 }
@@ -92,6 +92,14 @@ export async function checkAdminAccess(token?: string): Promise<void> {
 
   /* 3. Session Supabase admin → autoriser */
   await requireAdmin()
+}
+
+/** true si le cookie httpOnly aegryn-admin-token est présent et valide (sans redirection) */
+export async function hasAdminTokenCookie(): Promise<boolean> {
+  const adminToken = process.env.ADMIN_LEADS_TOKEN
+  if (!adminToken) return false
+  const cookieStore = await cookies()
+  return cookieStore.get(ADMIN_TOKEN_COOKIE)?.value === adminToken
 }
 
 /** Retourne l'user admin connecté ou null (sans redirection — utilisable dans API routes) */

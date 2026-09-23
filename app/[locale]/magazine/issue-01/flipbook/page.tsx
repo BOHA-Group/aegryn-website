@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { redirect }      from 'next/navigation'
+import { canAccessIssue } from '@/lib/magazineAccess'
 import FlipbookContent from './FlipbookContent'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -13,6 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function MagazineFlipbookPage() {
+export default async function MagazineFlipbookPage({ params }: Props) {
+  const { locale } = await params
+  if (!(await canAccessIssue('01'))) redirect(`/${locale}/magazine`)
   return <FlipbookContent />
 }

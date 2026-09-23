@@ -15,7 +15,7 @@
 import { randomUUID } from 'crypto'
 import { cookies }    from 'next/headers'
 import { createServiceClient } from '@/lib/supabase'
-import { getAdminUser }        from '@/lib/adminAuth'
+import { getAdminUser, hasAdminTokenCookie } from '@/lib/adminAuth'
 import { sendEmail, emailMagazineEarlyAccess } from '@/lib/sendEmail'
 
 /**
@@ -33,15 +33,16 @@ export async function canAccessIssue(issuePad: string): Promise<boolean> {
   if (isPreviewEnv) return true
 
   const supa = createServiceClient()
-  const [adminUser, { data }] = await Promise.all([
+  const [adminUser, adminTokenOk, { data }] = await Promise.all([
     getAdminUser(),
+    hasAdminTokenCookie(),
     supa
       .from('site_settings')
       .select('key, value')
       .in('key', [`magazine_issue_${issuePad}_public`, `magazine_issue_${issuePad}_early_access`]),
   ])
 
-  if (adminUser) return true
+  if (adminUser || adminTokenOk) return true
 
   const isPublic = data?.some(r => r.key === `magazine_issue_${issuePad}_public` && (r.value === true || r.value === 'true')) ?? false
   if (isPublic) return true
