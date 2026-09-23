@@ -18,7 +18,7 @@ export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
     const ctx = gsap.context(() => {
       gsap.fromTo(el,
         { scale: 0.6, opacity: 0, y: 20 },
-        { scale: 1, opacity: 1, y: 0, duration: 1.2, ease: 'expo.out', delay: 0.35 },
+        { scale: 1, opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', delay: 0.1 },
       )
     })
 
@@ -28,7 +28,7 @@ export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
   return (
     <div
       ref={ref}
-      className="hidden lg:flex shrink-0 items-center justify-center self-center will-change-transform"
+      className="hidden lg:flex shrink-0 items-center justify-center will-change-transform"
       style={{ opacity: 0 }}
       aria-hidden="true"
     >

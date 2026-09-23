@@ -62,7 +62,7 @@ export default function AboutPage() {
           alt={t('hero.imageAlt')}
           fill
           priority
-          quality={95}
+          quality={80}
           sizes="100vw"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAAAoAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIAAoAEAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAkJCQkJCRAJCRAWEBAQFh4WFhYWHiYeHh4eHiYuJiYmJiYmLi4uLi4uLi43Nzc3NzdAQEBAQEhISEhISEhISEj/2wBDAQsMDBIREh8RER9LMyozS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0v/3QAEAAH/2gAMAwEAAhEDEQA/APUhrVmxZY8/KcEt8o/WqNx4o0qCbybgkZAO5RuH5ivNJp5mRyzsTvQdT6VWl4hyPShRuS5WP//Z"
@@ -74,14 +74,16 @@ export default function AboutPage() {
             <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-white/70 mb-8">
               {t('hero.label')}
             </p>
-            <div className="flex items-center justify-between gap-8 mb-8">
+            <div className="flex items-start justify-between gap-8 mb-8">
               <h1
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl whitespace-pre-line"
                 style={{ fontSize: 'clamp(48px,6vw,86px)' }}
               >
                 {t('hero.title')}
               </h1>
-              <AboutHeroLogo onDark />
+              <div className="shrink-0 -mt-6">
+                <AboutHeroLogo onDark />
+              </div>
             </div>
             <p className="text-[15px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
               {t('hero.desc')}
