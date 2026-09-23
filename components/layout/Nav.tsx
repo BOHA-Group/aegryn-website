@@ -57,7 +57,10 @@ const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
 
 // Nos convictions - Magazine
 const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'thinkingMagazineIssues', href: '/magazine' },
+  { labelKey: 'thinkingMagazineIssues',   href: '/magazine' },
+  { labelKey: 'thinkingMagazineIssue02',  href: '/magazine' },
+  { labelKey: 'thinkingMagazineIssue03',  href: '/magazine' },
+  { labelKey: 'thinkingMagazineIssue04',  href: '/magazine' },
 ]
 
 // Nos convictions - Notre regard sur le marché
