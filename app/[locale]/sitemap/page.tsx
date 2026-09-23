@@ -98,6 +98,7 @@ function SitemapSection({ group }: { group: SitemapGroup }) {
             <ChevronRight size={10} className="text-ag-gray-light shrink-0" />
             <Link
               href={href as Parameters<typeof Link>[0]['href']}
+              prefetch={href === '/magazine/issue-01' ? false : undefined}
               className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors"
             >
               {t(labelKey)}

@@ -1,6 +1,6 @@
 # Aegryn Magazine — Issue 01 · Image Reference
 
-> **Canonical file.** All images served locally from `public/magazine/issue-01/images/`.
+> **Canonical file.** All images served locally from `private/magazine/issue-01/images/ (servi via /api/magazine/issue-01/, gaté canAccessIssue)`.
 > Last updated: 31 août 2026 — commit `32bd4df`.
 
 ## Summary

@@ -15,5 +15,5 @@ export default async function MagazineWebPage({ params }: Props) {
     redirect(`/${locale}/magazine`)
   }
 
-  redirect('/magazine/issue-01/aegryn-magazine-issue-01_web.html')
+  redirect('/api/magazine/issue-01/aegryn-magazine-issue-01_web.html')
 }

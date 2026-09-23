@@ -120,8 +120,8 @@ export default async function IssuePage({ params }: Props) {
         {issue.slug === 'issue-01' && (
           <section id="s-flipbook">
             <IssueViewerTabs
-              flipbookSrc="/magazine/issue-01/aegryn-magazine-issue-01_1.html"
-              webSrc="/magazine/issue-01/aegryn-magazine-issue-01_web.html"
+              flipbookSrc="/api/magazine/issue-01/aegryn-magazine-issue-01_1.html"
+              webSrc="/api/magazine/issue-01/aegryn-magazine-issue-01_web.html"
               issueLabel="January 2027 | Built to Last"
             />
           </section>

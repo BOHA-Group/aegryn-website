@@ -10,6 +10,7 @@
  */
 import { redirect }            from 'next/navigation'
 import { cookies }             from 'next/headers'
+import { createHmac, timingSafeEqual } from 'crypto'
 import { createAuthClient }    from './supabaseServer'
 import { createServiceClient } from './supabase'
 
@@ -100,6 +101,42 @@ export async function hasAdminTokenCookie(): Promise<boolean> {
   if (!adminToken) return false
   const cookieStore = await cookies()
   return cookieStore.get(ADMIN_TOKEN_COOKIE)?.value === adminToken
+}
+
+/* ── Preuve admin signée ──────────────────────────────────────────
+   Le JWT Supabase expire ~1h et le refresh n'atteint pas toujours le
+   Server Component (prefetch, timing). Une fois l'admin vérifié (session
+   ou token), /api/admin/proof pose ce cookie httpOnly signé HMAC — preuve
+   stable ~8h, infalsifiable sans la service key, acceptée par les gates
+   de contenu (magazine). */
+
+export const ADMIN_PROOF_COOKIE = 'ag-admin-proof'
+export const ADMIN_PROOF_TTL_S  = 60 * 60 * 8 // 8h
+
+export function createAdminProof(userId: string): string {
+  const exp = Math.floor(Date.now() / 1000) + ADMIN_PROOF_TTL_S
+  const sig = createHmac('sha256', process.env.SUPABASE_SERVICE_ROLE_KEY ?? '')
+    .update(`${userId}.${exp}`)
+    .digest('hex')
+  return `${userId}.${exp}.${sig}`
+}
+
+export function verifyAdminProof(value: string | undefined): boolean {
+  if (!value) return false
+  const [uid, expStr, sig] = value.split('.')
+  const exp = parseInt(expStr ?? '', 10)
+  if (!uid || !sig || isNaN(exp) || exp * 1000 < Date.now()) return false
+  const secret = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!secret) return false
+  const expected = createHmac('sha256', secret).update(`${uid}.${exp}`).digest()
+  const got      = Buffer.from(sig, 'hex')
+  return expected.length === got.length && timingSafeEqual(expected, got)
+}
+
+/** true si le cookie httpOnly ag-admin-proof est présent et valide (sans redirection) */
+export async function hasAdminProofCookie(): Promise<boolean> {
+  const cookieStore = await cookies()
+  return verifyAdminProof(cookieStore.get(ADMIN_PROOF_COOKIE)?.value)
 }
 
 /** Retourne l'user admin connecté ou null (sans redirection — utilisable dans API routes) */

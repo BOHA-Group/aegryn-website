@@ -8,7 +8,7 @@ interface Props {
 
 /**
  * FlipbookViewer — iframe vers le HTML autonome StPageFlip.
- * Le HTML /magazine/issue-01/aegryn-magazine-issue-01_1.html
+ * Le HTML /api/magazine/issue-01/aegryn-magazine-issue-01_1.html
  * contient StPageFlip.js CDN + UI Barnes (dark bg, thumbs, toolbar, fullscreen).
  */
 export function FlipbookViewer({ htmlSrc }: Props) {

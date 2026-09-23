@@ -5,6 +5,7 @@ import { getAdminUser }   from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
 import Nav from '@/components/layout/Nav'
 import AdminSideNav from './AdminSideNav'
+import { AdminProofMarker } from '@/components/admin/AdminProofMarker'
 
 const SUPPORTED_LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
 type SupportedLocale = typeof SUPPORTED_LOCALES[number]
@@ -38,6 +39,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   /* html/body rendus par le root layout — ne pas les re-rendre ici */
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <AdminProofMarker />
       <Nav user={adminUser ? { name: adminEmail, label: 'Admin' } : null} />
 
       <div className="flex pt-16 min-h-screen">

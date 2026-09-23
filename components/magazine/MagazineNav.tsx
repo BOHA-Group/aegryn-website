@@ -139,7 +139,7 @@ export function MagazineNav({
       {/* ── Actions bas de sidebar ── */}
       <div className="px-6 py-5 border-t border-magazine-black/8">
         <a
-          href={`/magazine/${issueSlug}/aegryn-magazine-${issueSlug}_1.html`}
+          href={`/api/magazine/${issueSlug}/aegryn-magazine-${issueSlug}_1.html`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 font-mono text-[9px] tracking-[0.18em] uppercase text-magazine-black/40 hover:text-magazine-black transition-colors"

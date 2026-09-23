@@ -127,6 +127,7 @@ export function CoverSection({ issue, ctaScroll, labelDesc, locale = 'fr' }: Pro
           {/* Explorer en ligne → page dédiée */}
           <Link
             href={`/${locale}/magazine/issue-01/web`}
+            prefetch={false}
             className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.16em] uppercase
                        border border-white/30 text-white/70 px-4 py-2.5
                        hover:border-white/70 hover:text-white transition-colors"
