@@ -32,7 +32,7 @@ export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
       style={{ opacity: 0 }}
       aria-hidden="true"
     >
-      <AegrynLogo size={200} variant="mark" onDark={onDark} />
+      <AegrynLogo size={160} variant="mark" onDark={onDark} />
     </div>
   )
 }
