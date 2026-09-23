@@ -72,7 +72,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
           <div className="w-full flex justify-center px-6 sm:px-0">
             <ScaledCanvas width={420} height={595}>
               {(isPublic || isPreview)
-                ? <Link href={`/${locale}/magazine/${issue.slug}`} className="block group" style={{ width: 420, height: 595 }}>{coverInner}</Link>
+                ? <Link href={`/${locale}/magazine/${issue.slug}`} prefetch={false} className="block group" style={{ width: 420, height: 595 }}>{coverInner}</Link>
                 : <div style={{ width: 420 }}>{coverInner}</div>}
             </ScaledCanvas>
           </div>
@@ -95,6 +95,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
             <Link
               key={label}
               href={href}
+              prefetch={false}
               target={target}
               className={[
                 'inline-block font-mono text-[10px] tracking-[0.18em] uppercase px-8 py-3 font-bold transition-colors',

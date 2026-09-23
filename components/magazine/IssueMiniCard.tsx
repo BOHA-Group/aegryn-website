@@ -187,6 +187,7 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
         (isPublic || isPreview) ? (
           <Link
             href={isDraft ? '#' : `/${locale}/magazine/${issue.slug}`}
+            prefetch={false}
             aria-disabled={isDraft}
             tabIndex={isDraft ? -1 : undefined}
             className={`block transition-transform ${isDraft ? 'cursor-default pointer-events-none' : `hover:scale-[1.03] ${active ? 'scale-[1.06]' : ''}`}`}
