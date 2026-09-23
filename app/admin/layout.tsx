@@ -1,4 +1,3 @@
-import localFont  from 'next/font/local'
 import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
 import '@/styles/globals.css'
@@ -15,20 +14,6 @@ export const dynamic = 'force-dynamic'
 function isSupportedLocale(value: string | undefined): value is SupportedLocale {
   return !!value && (SUPPORTED_LOCALES as readonly string[]).includes(value)
 }
-
-const plusJakartaSans = localFont({
-  src: [
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Light-300.woff2',    weight: '300', style: 'normal' },
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Regular-400.woff2',  weight: '400', style: 'normal' },
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Medium-500.woff2',   weight: '500', style: 'normal' },
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold-600.woff2', weight: '600', style: 'normal' },
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-Bold-700.woff2',     weight: '700', style: 'normal' },
-    { path: '../../public/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold-800.woff2',weight: '800', style: 'normal' },
-  ],
-  variable: '--font-body',
-  display: 'swap',
-  fallback: ['system-ui', '-apple-system', 'sans-serif'],
-})
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies()
@@ -50,29 +35,26 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     } catch { /* silencieux */ }
   }
 
+  /* html/body rendus par le root layout — ne pas les re-rendre ici */
   return (
-    <html lang={locale} className={`${plusJakartaSans.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased bg-white" suppressHydrationWarning>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Nav user={adminUser ? { name: adminEmail, label: 'Admin' } : null} />
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Nav user={adminUser ? { name: adminEmail, label: 'Admin' } : null} />
 
-          <div className="flex pt-16 min-h-screen">
-            {/* Sidebar admin fixe */}
-            <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
-              <div className="px-5 py-4 border-b border-white/10">
-                <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Admin</p>
-                <p className="font-sans text-[10px] text-white/50 mt-0.5">Aegryn</p>
-              </div>
-              <AdminSideNav adminEmail={adminEmail} />
-            </aside>
-
-            {/* Contenu principal */}
-            <main className="flex-1 ml-56 min-h-[calc(100vh-4rem)] bg-gray-50 overflow-x-auto">
-              {children}
-            </main>
+      <div className="flex pt-16 min-h-screen">
+        {/* Sidebar admin fixe */}
+        <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
+          <div className="px-5 py-4 border-b border-white/10">
+            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Admin</p>
+            <p className="font-sans text-[10px] text-white/50 mt-0.5">Aegryn</p>
           </div>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+          <AdminSideNav adminEmail={adminEmail} />
+        </aside>
+
+        {/* Contenu principal */}
+        <main className="flex-1 ml-56 min-h-[calc(100vh-4rem)] bg-gray-50 overflow-x-auto">
+          {children}
+        </main>
+      </div>
+    </NextIntlClientProvider>
   )
 }

@@ -91,15 +91,22 @@ const nextConfig: NextConfig = {
     ]
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development'
     return [
       {
         source: '/(.*)',
         headers: securityHeaders,
       },
-      {
-        source: '/_next/static/(.*)',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
-      },
+      // En dev, Next sert des chunks avec des hashes qui changent à chaque
+      // recompilation — un cache immutable casse le rendu (page sans CSS).
+      ...(!isDev
+        ? [
+            {
+              source: '/_next/static/(.*)',
+              headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+            },
+          ]
+        : []),
       {
         source: '/fonts/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
@@ -129,6 +136,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    qualities: [75, 80, 95],
     minimumCacheTTL: 86400,
     remotePatterns: [
       {
