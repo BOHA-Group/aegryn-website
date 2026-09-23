@@ -6,8 +6,7 @@ import { AegrynLogo } from '@/components/brand/AegrynLogo'
 
 /**
  * Aegryn logo floated right of the About hero title.
- * Enters with a scroll-triggered zoom-in (scale 0.6→1, opacity 0→1).
- * No blur at any point.
+ * Zoom-in on mount (above the fold, no scroll dependency).
  */
 export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -19,16 +18,7 @@ export function AboutHeroLogo({ onDark = false }: { onDark?: boolean }) {
     const ctx = gsap.context(() => {
       gsap.fromTo(el,
         { scale: 0.6, opacity: 0, y: 20 },
-        {
-          scale: 1, opacity: 1, y: 0,
-          duration: 1.2,
-          ease: 'expo.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
-            once: true,
-          },
-        },
+        { scale: 1, opacity: 1, y: 0, duration: 1.2, ease: 'expo.out', delay: 0.35 },
       )
     })
 
