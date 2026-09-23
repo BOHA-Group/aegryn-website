@@ -81,7 +81,7 @@ export default function AboutPage() {
               >
                 {t('hero.title')}
               </h1>
-              <div className="shrink-0 -mt-6">
+              <div className="shrink-0 mt-24">
                 <AboutHeroLogo onDark />
               </div>
             </div>
