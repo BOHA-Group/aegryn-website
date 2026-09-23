@@ -939,7 +939,7 @@
       "label": "Über Aegryn",
       "imageAlt": "Regattaboote im Wettkampf auf offener See",
       "title": "Wir verkaufen keine Deals.\nWir schützen, was dauert.",
-      "desc": "Wir glauben, dass der wahre Wert eines Tech-Assets nicht unter Druck verhandelt wird. Er wird mit Präzision aufgebaut, in Transparenz zertifiziert und in Vertrauen übertragen."
+      "desc": "Wir glauben, dass der Wert einer Organisation nicht unter Druck verhandelt wird. Er wird in strategischer Strenge aufgebaut, durch ihre Assets gestärkt, in Transparenz validiert und in Vertrauen realisiert. Aegryn existiert für Führungskräfte, die sich ihre Trajektorie nicht diktieren lassen."
     },
     "name": {
       "label": "Der Name",
@@ -974,7 +974,7 @@
         {
           "num": "01",
           "title": "Ein Grade vor einem Preis",
-          "desc": "Der Aegryn C/I/F/S Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
+          "desc": "Der Aegryn C/I/F/S/O Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
         },
         {
           "num": "02",
@@ -1033,7 +1033,7 @@
       "groupLabel": "Aegryn",
       "title": "Verwurzelt in der Schweiz.\nDie europäische Referenz.",
       "desc": "Die Schweiz wurde bewusst gewählt, nicht wegen ihrer Gründungsvorteile, sondern wegen ihrer institutionellen Standards: die Strenge des Schweizer Rechts, die Diskretion ihres Finanzökosystems und die Neutralität, die sie zu einem glaubwürdigen Anker für grenzüberschreitende Transaktionen zwischen einem französischen Verkäufer, einem deutschen Käufer und einem luxemburgischen Fonds macht. Jede Aegryn-Transaktion unterliegt Schweizer Recht, unabhängig von der Nationalität der Parteien oder der Herkunft des Assets.",
-      "cta": "Katalog ansehen"
+      "cta": "Unsere Disziplinen"
     },
     "founder": {
       "label": "Die Gründungsüberzeugung",
@@ -1047,7 +1047,7 @@
     "whatsnext": {
       "label": "Was als Nächstes kommt",
       "title": "Das Protokoll entwickelt sich.\nDer Standard hält.",
-      "desc": "Aegryn zertifiziert und transagiert heute SaaS, Anwendungen, Marktplätze, IP-Assets und Web3-Assets unter dem CIFS-Protokoll.\n\nDas wichtigste Element der Roadmap ist die Blockchain-Zertifizierung: eine Verankerungsschicht, die jede zertifizierte Codebasis zum genauen Zeitpunkt des Transfers versiegelt, wodurch jedes Grade dauerhaft und unveränderlich verifizierbar wird. Diese Schicht wird dem bereits vollständig operativen unabhängigen Protokoll hinzugefügt.\n\nParallel dazu bauen wir ein Netzwerk von Expertenpartnern auf, Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten und technische Architekten, um Käufer und Verkäufer in jeder Phase zu begleiten: technische Beratung vor der Zertifizierung, rechtliche und finanzielle Strukturierung während der Transaktion und Integration nach dem Closing.",
+      "desc": "Aegryn zertifiziert und transagiert heute SaaS, Anwendungen, Marktplätze, IP-Assets und Web3-Assets unter dem CIFSO-5000-Protokoll.\n\nDas wichtigste Element der Roadmap ist die Blockchain-Zertifizierung: eine Verankerungsschicht, die jede zertifizierte Codebasis zum genauen Zeitpunkt des Transfers versiegelt, wodurch jedes Grade dauerhaft und unveränderlich verifizierbar wird. Diese Schicht wird dem bereits vollständig operativen unabhängigen Protokoll hinzugefügt.\n\nParallel dazu bauen wir ein Netzwerk von Expertenpartnern auf, Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitsspezialisten und technische Architekten, um Käufer und Verkäufer in jeder Phase zu begleiten: technische Beratung vor der Zertifizierung, rechtliche und finanzielle Strukturierung während der Transaktion und Integration nach dem Closing.",
       "cta": "Aktuelle Sitzungen ansehen"
     },
     "cta": {
@@ -10448,7 +10448,7 @@
     "founder": {
       "label": "DER GRÜNDER",
       "title": "Ein Gründer aus der Praxis.",
-      "desc": "Der Gründer von Aegryn ist ein Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A.\n\nAls ehemaliger Executive Director in einer globalen Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet.\n\nEr entschied sich, Aegryn zu gründen, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktintelligenz.\n\nSeine Überzeugung: Unternehmen, die dauern, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen.",
+      "desc": "Der Gründer von Aegryn ist eine Führungskraft und Operator mit über zwanzig Jahren internationaler Erfahrung in Strategie, Technologie und M&A.\n\nAls ehemaliger Executive Director einer weltweit führenden Unternehmensberatung hat er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen begleitet, branchen- und kontinenteübergreifend, von der Strategie bis zum operativen Geschäft, von den Finanzen bis zu den Personalressourcen, von der M&A-Beratung bis zur Post-Akquisitions-Integration.\n\nDanach wurde er Unternehmer. Tech-Assets, künstliche Intelligenz, digitale Plattformen. Er steuerte allein, was er anderen empfahl: Produktstrategie, Rekrutierung, Rechtliches, Finanzen, geistiges Eigentum, Vertrieb, Partnerschaften. Bei manchen Projekten hatte er Erfolg. Bei anderen hat er gelernt. Und er hat aus dem Kapital geschlagen, was keine Beratungsmission lehren kann.\n\nDieser doppelte Werdegang ist der Ursprung von Aegryn.\n\nHeute bestätigt der Markt, was dieser Werdegang antizipiert hat. Die großen Beratungsfirmen schwenken auf mittelständische Unternehmen um, weil ihr traditionelles Geschäftsmodell unter Druck steht, weil künstliche Intelligenz die Gleichung der Dienstleistungen neu aufstellt und weil Führungskräfte heute mehr verlangen: Umsetzungsgeschwindigkeit, echte Verantwortung, messbare Ergebnisse, ohne die Komplexität und Kosten großer Transformationsmandate.\n\nDiese Marktbewegung schafft einen Raum.\n\nAegryn besetzt ihn von Anfang an, nicht als defensive Antwort auf eine Disruption, sondern als eine über die Zeit gereifte Überzeugung: Scale-ups, KMU und ambitionierte Organisationen verdienen einen Partner, der die Strenge globaler Strategieberatung mit der konkreten Erfahrung eines Gründers verbindet, der gebaut, gescheitert und gelernt hat.\n\nEr hat sich entschieden, Aegryn zu gründen, um in einer einzigen Struktur zu vereinen, was der Markt in Silos anbietet: Beratung, Aufbau, Transaktion, Talent und Marktkenntnis.\n\nSeine Überzeugung: Unternehmen, die bestehen, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen.\n\nUnd sie bauen niemals allein.",
       "cta": "Kontakt aufnehmen",
       "disciplinesCta": "Unsere Disziplinen",
       "storytelling": "Beraten ohne zu bauen heißt, eine Karte ohne Territorium zu liefern.\nBauen ohne zu zertifizieren heißt, ohne Nachweis zu liefern.\nZertifizieren ohne zu übertragen heißt, vorzubereiten ohne abzuschließen.\nÜbertragen ohne zu rekrutieren heißt, zu übergeben ohne die Nachfolge zu sichern.\nInformieren ohne zu handeln heißt, zu kommentieren ohne Verantwortung."

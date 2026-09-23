@@ -939,7 +939,7 @@
       "label": "About Aegryn",
       "imageAlt": "Racing sailboats competing on the sea",
       "title": "We do not sell deals.\nWe protect what lasts.",
-      "desc": "We believe the real value of a tech asset is not negotiated under pressure. It is built with rigour, certified in transparency, and transferred in trust."
+      "desc": "We believe the value of an organisation is not negotiated under pressure. It is built through strategic rigour, strengthened by its assets, validated in transparency, and realised in trust. Aegryn exists for leaders who refuse to let their trajectory be dictated to them."
     },
     "vision": {
       "label": "Our vision",
@@ -953,7 +953,7 @@
         {
           "num": "01",
           "title": "A grade before a price",
-          "desc": "The Aegryn C/I/F/S grade is established before any listing, before any negotiation. Not a valuation opinion, a certification of what the asset actually is, documented, versioned and reproducible. The price follows the grade. The grade does not depend on it."
+          "desc": "The Aegryn C/I/F/S/O grade is established before any listing, before any negotiation. Not a valuation opinion, a certification of what the asset actually is, documented, versioned and reproducible. The price follows the grade. The grade does not depend on it."
         },
         {
           "num": "02",
@@ -1012,7 +1012,7 @@
       "groupLabel": "Aegryn",
       "title": "Rooted in Switzerland.\nThe European reference.",
       "desc": "Switzerland was chosen deliberately, not for its incorporation advantages, but for its institutional standards: the rigour of Swiss law, the discretion of its financial ecosystem, and the neutrality that makes it a credible anchor for cross-border transactions between a French seller, a German acquirer and a Luxembourgish fund. Every Aegryn transaction is governed by Swiss law, regardless of the parties' nationality or the asset's origin.",
-      "cta": "View the catalogue"
+      "cta": "Our disciplines"
     },
     "founder": {
       "label": "The founding conviction",
@@ -1026,7 +1026,7 @@
     "whatsnext": {
       "label": "What comes next",
       "title": "The protocol evolves.\nThe standard holds.",
-      "desc": "Aegryn certifies and transacts SaaS, applications, marketplaces, IP assets and Web3 assets under the CIFS protocol today.\n\nThe primary roadmap item is blockchain certification: an anchoring layer that will seal each certified codebase at the exact date of transfer, making every grade permanently verifiable and immutable. This layer will be added to the independent protocol already fully operational.\n\nIn parallel, we are building a network of expert partners, law firms, chartered accountants, cybersecurity specialists, and technical architects to support buyers and sellers at every stage: tech advisory before certification, legal and financial structuring during the transaction, and integration after closing.",
+      "desc": "Aegryn certifies and transacts SaaS, applications, marketplaces, IP assets and Web3 assets under the CIFSO 5000 protocol today.\n\nThe primary roadmap item is blockchain certification: an anchoring layer that will seal each certified codebase at the exact date of transfer, making every grade permanently verifiable and immutable. This layer will be added to the independent protocol already fully operational.\n\nIn parallel, we are building a network of expert partners, law firms, chartered accountants, cybersecurity specialists, and technical architects to support buyers and sellers at every stage: tech advisory before certification, legal and financial structuring during the transaction, and integration after closing.",
       "cta": "View current sessions"
     },
     "cta": {
@@ -1041,7 +1041,7 @@
         "title": "You are looking to acquire.",
         "desc": "Our catalogue is reserved for qualified buyers.",
         "btn": "Submit a buyer application",
-        "href": "/transact/buyers"
+        "href": "/transact/how-to-buy"
       },
       "partner": {
         "title": "You are a potential partner.",
@@ -10303,7 +10303,7 @@
     "founder": {
       "label": "THE FOUNDER",
       "title": "A founder from the field.",
-      "desc": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A.\n\nA former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.\n\nHe chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence.\n\nHis conviction: companies that last do not choose between strategy and technology. They think them together.",
+      "desc": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A.\n\nA former executive director at a top-tier global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations, cross-industry, cross-continent, from strategy to operations, from finance to human resources, from M&A advisory to post-acquisition integration.\n\nHe then became an entrepreneur. Tech assets, artificial intelligence, digital platforms. He single-handedly managed what he advised others on: product strategy, recruitment, legal, finance, intellectual property, sales, partnerships. He succeeded on some projects. He learned on others. And capitalised on what no consulting engagement can teach.\n\nThis dual path is the origin of Aegryn.\n\nToday, the market confirms what this path had anticipated. The major consulting firms are pivoting toward mid-market companies because their traditional economic model is under pressure, because artificial intelligence is reshaping the services equation, and because leaders now demand more: execution speed, real accountability, measurable results, without the complexity and costs of large-scale transformation engagements.\n\nThis market movement creates a space.\n\nAegryn has occupied it from the start, not as a defensive response to disruption, but as a conviction built over time: scale-ups, SMEs and ambitious organisations deserve a partner that combines the rigour of world-class strategy consulting with the concrete experience of a founder who has built, failed and learned.\n\nHe chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market knowledge.\n\nHis conviction: companies that last do not choose between strategy and technology. They think them together.\n\nAnd they never build alone.",
       "cta": "Get in touch",
       "disciplinesCta": "Our disciplines",
       "storytelling": "Advising without building is delivering a map without the territory.\nBuilding without certifying is delivering without proof.\nCertifying without transferring is preparing without concluding.\nTransferring without recruiting is handing over without securing what comes next.\nInforming without acting is commenting without responsibility."

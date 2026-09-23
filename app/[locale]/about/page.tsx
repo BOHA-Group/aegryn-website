@@ -47,7 +47,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const values = ['precision', 'durability', 'sovereignty', 'independence'] as const
-const missionPillars = ['create', 'simplify', 'embrace'] as const
 const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
@@ -72,23 +71,21 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
         <div className="relative flex h-full flex-col justify-end">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-12 pb-24">
-            <div className="flex items-end justify-between gap-8">
-              <div className="flex-1 min-w-0">
-                <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-white/70 mb-8">
-                  {t('hero.label')}
-                </p>
-                <h1
-                  className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8 whitespace-pre-line"
-                  style={{ fontSize: 'clamp(48px,6vw,86px)' }}
-                >
-                  {t('hero.title')}
-                </h1>
-                <p className="text-[15px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
-                  {t('hero.desc')}
-                </p>
-              </div>
+            <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-white/70 mb-8">
+              {t('hero.label')}
+            </p>
+            <div className="flex items-center justify-between gap-8 mb-8">
+              <h1
+                className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl whitespace-pre-line"
+                style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+              >
+                {t('hero.title')}
+              </h1>
               <AboutHeroLogo onDark />
             </div>
+            <p className="text-[15px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
+              {t('hero.desc')}
+            </p>
           </div>
         </div>
       </section>
@@ -165,36 +162,6 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-        }
-        missionContent={
-          <div className="mx-auto max-w-7xl px-6 md:px-12 py-4">
-            <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-              <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {t('mission.label')}
-              </span>
-              <span className="font-sans font-bold text-ag-black tracking-[-0.02em] text-[13px]">
-                {t('mission.title')}
-              </span>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-              {missionPillars.map((key, i) => (
-                <div key={key} className="py-14 md:px-10 first:pl-0 last:pr-0">
-                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-6">
-                    {String(i + 1).padStart(2, '0')}
-                  </p>
-                  <h2
-                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2] mb-5"
-                    style={{ fontSize: 'clamp(20px,1.8vw,26px)' }}
-                  >
-                    {t(`mission.${key}.title`)}
-                  </h2>
-                  <p className="text-[14px] text-ag-gray leading-relaxed">
-                    {t(`mission.${key}.desc`)}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         }
       />
 
