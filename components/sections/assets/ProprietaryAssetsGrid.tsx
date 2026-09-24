@@ -135,7 +135,6 @@ export function ProprietaryAssetsGrid() {
 
   const filters: { key: PropCategory; label: string }[] = [
     { key: 'all',         label: t('filterAll') },
-    { key: 'ai',          label: t('filterAI') },
     { key: 'transactions',label: t('filterTransactions') },
     { key: 'valuation',   label: t('filterValuation') },
     { key: 'identity',    label: t('filterIdentity') },

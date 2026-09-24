@@ -57,7 +57,6 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
 
   const filters: { key: Category; label: string }[] = [
     { key: 'all',          label: t('filterAll') },
-    { key: 'ai',           label: t('filterAI') },
     { key: 'lifestyle',    label: t('filterLifestyle') },
     { key: 'transactions', label: t('filterTransactions') },
   ]
