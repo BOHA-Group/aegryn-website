@@ -50,7 +50,7 @@ export function TransactionHero() {
             {t('ctaCatalog')} →
           </Link>
           <Link
-            href="/transact"
+            href="/valoriser"
             className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
           >
             {t('ctaSession')}

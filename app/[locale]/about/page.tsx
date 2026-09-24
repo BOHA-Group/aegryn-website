@@ -377,7 +377,7 @@ export default function AboutPage() {
                 {t('whatsnext.desc')}
               </p>
               <Link
-                href="/transact"
+                href="/valoriser"
                 className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
               >
                 {t('whatsnext.cta')} <ArrowUpRight size={14} />

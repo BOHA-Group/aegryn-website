@@ -111,7 +111,7 @@ export default function MandateForm() {
           {tf('successDesc')}
         </p>
         <Link
-          href="/transact"
+          href="/valoriser"
           className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
         >
           {tNav('transact')} <ArrowUpRight size={12} />

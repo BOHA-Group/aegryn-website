@@ -88,6 +88,13 @@ const nextConfig: NextConfig = {
       { source: '/:locale/magazine/report/2027',        destination: '/:locale/magazine/issue-01',       permanent: true },
       { source: '/:locale/magazine/report/2027/:path*', destination: '/:locale/magazine/issue-01',       permanent: true },
       { source: '/:locale/magazine/report',             destination: '/:locale/magazine',                permanent: true },
+      /* /transact (vue d'ensemble) + how-to-sell/how-to-buy → /valoriser (301 permanent, refonte cycle de vie) */
+      { source: '/transact',                            destination: '/valoriser',                       permanent: true },
+      { source: '/:locale/transact',                    destination: '/:locale/valoriser',                permanent: true },
+      { source: '/transact/how-to-sell',                destination: '/valoriser/transmission',          permanent: true },
+      { source: '/:locale/transact/how-to-sell',        destination: '/:locale/valoriser/transmission',   permanent: true },
+      { source: '/transact/how-to-buy',                 destination: '/valoriser/acquisition',           permanent: true },
+      { source: '/:locale/transact/how-to-buy',         destination: '/:locale/valoriser/acquisition',    permanent: true },
     ]
   },
   async headers() {

@@ -99,11 +99,11 @@ Business Strategy & Innovation (growth strategy, board advisory, digital transfo
 Operates across 23+ industries: aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom, transport.
 Pages: /advisory, /advisory/strategy, /advisory/risk-compliance, /advisory/technology, /advisory/talent-organization, /advisory/ma
 
-### 3. Value — Measure, Certify, Realise (Aegryn Value, at /transact)
-Valuing a company is not limited to transferring it. Aegryn Value: the CIFSO Valuation Index measures, CIFSO 5000 certifies independently, then sale, acquisition, fundraising or equity opening realise the value — under exclusive mandate. Four ways to realise value: Sale mandate (divest a tech asset or company to a qualified acquirer, CIFS certification, exclusive mandate, systematic NDA), Acquisition mandate (identify targets matching acquirer criteria, closed catalog, proprietary network), Fundraising mandate (qualified family offices, funds and corporates, structured confidential process under Swiss law), Equity mandate (divest minority shares to a strategic, operational or financial partner).
-Once matched, realisation runs through Europe's structured session-based process for digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
+### 3. Valoriser — Measure, Certify, Realise across the organisation lifecycle (at /valoriser)
+Valuing an organisation is not limited to transferring it. Aegryn measures value with the CIFSO Valuation Index, certifies it independently with CIFSO 5000, and accompanies its creation and realisation at every stage of the organisation's lifecycle. Five cycles: Launch & Structuring (build a transmissible, certifiable asset from day one), Growth & Scaling (secure hyper-growth without fragilising governance or technology), Restructuring & Pivot (regain control fast in crisis, cyber incident or regulatory injunction situations), Acquisition & External Growth (independent technical, regulatory and organisational due diligence for buy-side), Transmission & Cession (twelve to thirty-six month vendor readiness before going to market).
+Complementary marketplace tools remain available for structured off-market transactions of digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
 Offer models: Club Deal (lead + up to 4 co-investors, min €100K), Corporate (direct acquisition, min €250K), Fund (PE/VC/FO/Search Fund, min €500K), Equity Stake (partial, SHA-based).
-Pages: /transact, /transact/catalog, /transact/sessions, /transact/mandate, /transact/sell, /transact/how-to-sell, /transact/how-to-buy, /transact/how-it-works, /transact/submit, /transact/buyers, /transact/bid-models, /transact/results
+Pages: /valoriser, /valoriser/lancement, /valoriser/croissance, /valoriser/restructuration, /valoriser/acquisition, /valoriser/transmission, /transact/catalog, /transact/sessions, /transact/mandate, /transact/sell, /transact/how-it-works, /transact/submit, /transact/buyers, /transact/bid-models, /transact/results
 
 ### 4. Talent — Executive Tech Recruitment
 Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
@@ -209,13 +209,16 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 - [Industries](https://aegryn.com/fr/industries) — Five industry hubs
 
 ### Transact Platform
-- [Transact](https://aegryn.com/fr/transact) — Platform presentation
+- [Valoriser](https://aegryn.com/fr/valoriser) — Value lifecycle overview
+- [Lancement & Structuration](https://aegryn.com/fr/valoriser/lancement) — Launch & structuring cycle
+- [Croissance & Mise à l'échelle](https://aegryn.com/fr/valoriser/croissance) — Growth & scaling cycle
+- [Restructuration & Pivot](https://aegryn.com/fr/valoriser/restructuration) — Restructuring & pivot cycle
+- [Acquisition & Croissance externe](https://aegryn.com/fr/valoriser/acquisition) — Acquisition due diligence cycle
+- [Transmission & Cession](https://aegryn.com/fr/valoriser/transmission) — Transfer & cession cycle
 - [Catalog](https://aegryn.com/fr/transact/catalog) — Live assets for sale (NDA required)
 - [Sessions](https://aegryn.com/fr/transact/sessions) — Confidential transaction process calendar
 - [Mandate (Sell)](https://aegryn.com/fr/transact/mandate) — Submit a sell mandate
 - [Sell](https://aegryn.com/fr/transact/sell) — Seller funnel: valuation + readiness
-- [How to Sell](https://aegryn.com/fr/transact/how-to-sell) — Complete seller guide
-- [How to Buy](https://aegryn.com/fr/transact/how-to-buy) — Buyer onboarding guide
 - [How It Works](https://aegryn.com/fr/transact/how-it-works) — 6-step process
 - [Submit](https://aegryn.com/fr/transact/submit) — Asset submission form
 - [Buyers](https://aegryn.com/fr/transact/buyers) — Buyer pre-qualification (KYC)

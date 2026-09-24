@@ -202,7 +202,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               {t('ctaGrade')} <ArrowUpRight size={11} />
             </Link>
             <Link
-              href="/transact"
+              href="/valoriser"
               className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
             >
               {t('ctaTransaction')}

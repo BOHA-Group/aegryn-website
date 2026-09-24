@@ -32,13 +32,17 @@ const STATIC_ROUTES = [
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Transact ─────────────────────────────────────────────────────────────────
-  { path: '/transact',                           priority: 1.0,  changeFrequency: 'weekly'  as const },
+  // ── Valoriser — cycles de vie ────────────────────────────────────────────────
+  { path: '/valoriser',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
+  { path: '/valoriser/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/valoriser/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/valoriser/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/valoriser/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/valoriser/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
+  // ── Transact — outils & marketplace (inchangé) ──────────────────────────────
   { path: '/transact/sessions',                  priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/transact/mandate',                   priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/transact/sell',                      priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/transact/how-to-sell',               priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/transact/how-to-buy',                priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/transact/how-it-works',              priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/transact/submit',                    priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/transact/buyers',                    priority: 0.9,  changeFrequency: 'monthly' as const },

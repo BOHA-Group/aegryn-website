@@ -322,9 +322,9 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Transaction',
-          description: 'Structured transaction platform for buying and selling digital tech assets (SaaS, B2C, infrastructure) in Europe. €100K–€50M range.',
-          url: `${BASE_URL}/en/transact`,
+          name: 'Aegryn Valoriser',
+          description: 'Value measurement, certification and realization across the organisation lifecycle: launch, growth, restructuring, acquisition, transfer. Europe & Switzerland.',
+          url: `${BASE_URL}/en/valoriser`,
         },
       },
       {
@@ -391,9 +391,9 @@ export const aegrynSiteNavigationSchema = {
   name: 'Aegryn Site Navigation',
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',                       url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'Aegryn Transaction',             url: `${BASE_URL}/fr/transact` },
-    { '@type': 'ListItem', position: 3,  name: 'Céder un actif',                url: `${BASE_URL}/fr/transact/sell` },
-    { '@type': 'ListItem', position: 4,  name: 'Accès acheteurs',               url: `${BASE_URL}/fr/transact/buyers` },
+    { '@type': 'ListItem', position: 2,  name: 'Valoriser',                     url: `${BASE_URL}/fr/valoriser` },
+    { '@type': 'ListItem', position: 3,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/valoriser/transmission` },
+    { '@type': 'ListItem', position: 4,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/valoriser/acquisition` },
     { '@type': 'ListItem', position: 5,  name: 'Comment ça marche',             url: `${BASE_URL}/fr/transact/how-it-works` },
     { '@type': 'ListItem', position: 6,  name: 'Catalogue',                     url: `${BASE_URL}/fr/transact/catalog` },
     { '@type': 'ListItem', position: 7,  name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },
@@ -470,7 +470,7 @@ export function generateTransactionSchema({
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
       '@type': 'VirtualLocation',
-      url: `${BASE_URL}/en/transact`,
+      url: `${BASE_URL}/en/valoriser`,
     },
     ...(startDate ? { startDate } : {}),
     ...(endDate   ? { endDate }   : {}),

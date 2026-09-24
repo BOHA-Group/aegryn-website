@@ -146,22 +146,25 @@ succession plan and board governance, executive recruitment and key talent reten
 Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
 valuation, post-merger integration
 
-## Value — Realise (Aegryn Transact, https://aegryn.com/transact)
+## Valoriser — Realise across the organisation lifecycle (https://aegryn.com/valoriser)
 
-Third step of the Value discipline, after Measure (CIFSO Valuation Index) and Certify (CIFSO 5000). Four mandate types: Sale, Acquisition, Fundraising, Equity opening — always under exclusive mandate.
+Third step of the Value discipline, after Measure (CIFSO Valuation Index) and Certify (CIFSO 5000). Five lifecycle cycles: Launch & Structuring, Growth & Scaling, Restructuring & Pivot, Acquisition & External Growth, Transmission & Cession.
 
-Once matched, realisation runs through a structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
+Complementary marketplace tools remain available through a structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
 
 Offer Models: Club Deal (min €100K), Corporate (min €250K), Fund (min €500K), Equity Stake (SHA-based)
 
 Key Pages:
-- /transact — Overview
+- /valoriser — Value lifecycle overview
+- /valoriser/lancement — Launch & Structuring
+- /valoriser/croissance — Growth & Scaling
+- /valoriser/restructuration — Restructuring & Pivot
+- /valoriser/acquisition — Acquisition & External Growth (due diligence)
+- /valoriser/transmission — Transmission & Cession (vendor readiness)
 - /transact/catalog — Live assets (NDA required)
 - /transact/sessions — Session calendar
 - /transact/mandate — Submit sell mandate
 - /transact/sell — Seller funnel
-- /transact/how-to-sell — Seller guide
-- /transact/how-to-buy — Buyer guide
 - /transact/how-it-works — 6-step process
 - /transact/submit — Asset submission form
 - /transact/buyers — Buyer pre-qualification (KYC)

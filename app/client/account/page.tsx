@@ -8,8 +8,6 @@ import AccountForm from './AccountForm'
 import MfaSection from './MfaSection'
 import DeletePartialSection from './DeletePartialSection'
 import DeleteAccountSection from './DeleteAccountSection'
-import ActivateProfileSection from './ActivateProfileSection'
-import RoleToggleSection from './RoleToggleSection'
 import SubscriptionsSection from './SubscriptionsSection'
 import { cookies } from 'next/headers'
 
@@ -102,7 +100,7 @@ export default async function AccountPage() {
           <div className="bg-white border border-gray-200 p-5 mb-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('activeSpaces')}</p>
             <div className="flex flex-wrap gap-2">
-              {roles.map(role => (
+              {roles.filter(role => role !== 'buyer' && role !== 'seller').map(role => (
                 ROLE_LINKS[role] ? (
                   <a key={role} href={ROLE_LINKS[role]}
                     className="rounded-lg inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 bg-ag-navy/5 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors">
@@ -287,18 +285,8 @@ export default async function AccountPage() {
           </div>
         </div>
 
-        {/* ═══════════════════════════════════════════════════════
-            SECTION TABLEAU DE BORD — ESPACES ACTIFS
-        ═══════════════════════════════════════════════════════ */}
-        <SectionLabel label="Tableau de bord" />
-
-        {/* Toggles acquéreur/cédant — pour les clients */}
-        {roles.includes('client') ? (
-          <RoleToggleSection currentRoles={roles} />
-        ) : (
-          /* Ancienne logique d'activation pour les comptes pré-existants sans rôle client */
-          <ActivateProfileSection currentRoles={roles} />
-        )}
+        {/* Rôles Acquéreur/Cédant retirés du tableau de bord — refonte Valoriser par cycle de vie (les
+            espaces /client/buyer et /client/seller restent fonctionnels pour les comptes déjà actifs). */}
 
         {/* ─── Déconnexion ──────────────────────────────────── */}
         <div className="mt-10 pt-6 border-t border-gray-100 flex items-center justify-between">

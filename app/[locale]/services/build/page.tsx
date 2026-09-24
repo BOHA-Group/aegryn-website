@@ -496,7 +496,7 @@ export default async function BuildServicePage({ params }: Props) {
             {t('transmissionSection.desc')}
           </p>
           <Link
-            href="/transact"
+            href="/valoriser"
             className="rounded-lg inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
           >
             {t('transmissionSection.cta')} →

@@ -36,15 +36,21 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportInvestors',     href: '/investisseurs' as LinkHref },
 ]
 
-// Nos métiers - Valoriser : Introduction (+ outils de valorisation en sous-éléments), puis voies de réalisation
-const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/transact' as LinkHref }
+// Nos métiers - Valoriser : Introduction, outils Mesurer & Certifier, cycles de vie, réseau
+const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/valoriser' as LinkHref }
 const CRAFT_TRANSACT_TOOLS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
   { labelKey: 'craftBuildCIFSO',       href: '/grade' },
+  { labelKey: 'craftTransactVerify',   href: '/verify' as LinkHref },
+]
+const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'craftTransactLancement',       href: '/valoriser/lancement' as LinkHref },
+  { labelKey: 'craftTransactCroissance',      href: '/valoriser/croissance' as LinkHref },
+  { labelKey: 'craftTransactRestructuration', href: '/valoriser/restructuration' as LinkHref },
+  { labelKey: 'craftTransactBuy',             href: '/valoriser/acquisition' as LinkHref },
+  { labelKey: 'craftTransactSell',            href: '/valoriser/transmission' as LinkHref },
 ]
 const CRAFT_TRANSACT_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactSell',         href: '/transact/how-to-sell' },
-  { labelKey: 'craftTransactBuy',          href: '/transact/how-to-buy' },
   { labelKey: 'craftTransactAuditors',     href: '/grade/partners' as LinkHref },
 ]
 
@@ -186,6 +192,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 </Link>
               ))}
             </div>
+            {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
             {CRAFT_TRANSACT_LINKS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
@@ -426,7 +442,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     isActive('/assets') || isActive('/services/build') || 
     isActive('/advisory') || isActive('/services/acquisition-support') || 
     isActive('/alliances') || isActive('/experts') ||
-    isActive('/grade') || isActive('/transact')
+    isActive('/grade') || isActive('/valoriser')
   
   
   const isThinkingActive = 
@@ -715,6 +731,12 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   {CRAFT_TRANSACT_TOOLS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile}
+                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}

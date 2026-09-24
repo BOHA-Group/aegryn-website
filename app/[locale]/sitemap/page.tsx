@@ -46,8 +46,8 @@ const GROUPS: SitemapGroup[] = [
     labelKey: 'groupTransaction',
     links: [
       { labelKey: 'transaction',        href: '/transact/catalog' },
-      { labelKey: 'transactionSell',    href: '/transact/how-to-sell' },
-      { labelKey: 'transactionBuy',     href: '/transact/how-to-buy' },
+      { labelKey: 'transactionSell',    href: '/valoriser/transmission' },
+      { labelKey: 'transactionBuy',     href: '/valoriser/acquisition' },
       { labelKey: 'transactionSubmit',  href: '/transact/submit' },
       { labelKey: 'transactionHowWorks',href: '/transact/how-it-works' },
       { labelKey: 'transactionSession', href: '/transact/sessions' },

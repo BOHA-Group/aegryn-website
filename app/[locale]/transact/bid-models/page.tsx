@@ -170,7 +170,7 @@ export default async function BidModelsPage({ params }: Props) {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <Link href="/transact/how-to-buy" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-bold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-white transition-colors">
+            <Link href="/valoriser/acquisition" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-bold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-white transition-colors">
               {t('cta.btnGuide')} <ArrowUpRight size={13} />
             </Link>
             <Link href="/transact/catalog" className="rounded-lg inline-flex items-center gap-2 border border-white/30 text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-white/60 transition-colors">

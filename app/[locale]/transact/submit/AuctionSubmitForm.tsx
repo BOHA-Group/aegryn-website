@@ -73,7 +73,7 @@ export default function TransactionSubmitForm() {
       <section className="bg-ag-navy pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <Link
-            href="/transact"
+            href="/valoriser"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 hover:text-ag-apex transition-colors mb-10"
           >
             <ChevronLeft size={11} /> {tNav('transact')}
@@ -129,7 +129,7 @@ export default function TransactionSubmitForm() {
                 {t('form.successDesc')}
               </p>
               <Link
-                href="/transact"
+                href="/valoriser"
                 className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-6 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {tNav('transact')} <ArrowUpRight size={12} />
