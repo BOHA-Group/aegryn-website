@@ -5295,7 +5295,7 @@
       "maDesc": "Structuring, due diligence, valuation, closing and post-deal integration.",
       "security": "Cybersecurity",
       "securityDesc": "Audit, NIS2/DORA/ISO 27001 compliance, risk management and cyber governance.",
-      "compliance": "Compliance & Governance",
+      "compliance": "Compliance",
       "complianceDesc": "AI Act, GDPR, Swiss FADP, internal audit and data processing registers.",
       "board": "Board Advisory",
       "boardDesc": "Governance, board composition, founder support and strategic vision at the highest level.",
@@ -5432,6 +5432,56 @@
           ]
         }
       ],
+      "compliance": [
+        {
+          "title": "GDPR & FADP Compliance",
+          "tags": [
+            "Processing registers",
+            "Outsourced DPO",
+            "DPIA impact assessments"
+          ]
+        },
+        {
+          "title": "EU AI Act",
+          "tags": [
+            "AI system mapping",
+            "Risk classification",
+            "Technical documentation"
+          ]
+        },
+        {
+          "title": "NIS2 & DORA",
+          "tags": [
+            "Compliance audit",
+            "Resilience plan",
+            "Incident reporting"
+          ]
+        },
+        {
+          "title": "Internal Audit & Control",
+          "tags": [
+            "Risk mapping",
+            "Internal controls",
+            "Remediation plans"
+          ]
+        },
+        {
+          "title": "Data Governance",
+          "tags": [
+            "Data policies",
+            "Quality & traceability",
+            "Inter-entity sharing"
+          ]
+        },
+        {
+          "title": "Regulatory Due Diligence",
+          "tags": [
+            "Sanctions & KYC",
+            "Regulatory integrity",
+            "Data transfers"
+          ]
+        }
+      ],
       "technology": [
         {
           "title": "System Architecture",
@@ -5505,6 +5555,57 @@
             "B2B SaaS",
             "Mobile app",
             "AI protocols"
+          ]
+        }
+      ],
+      "talent": [
+        {
+          "title": "C-Level Executive Search",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "VP & Director Recruitment",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "Interim CTO",
+            "Interim CISO",
+            "Interim DPO"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Integration",
+          "tags": [
+            "First 90 days",
+            "Culture fit",
+            "Role KPIs"
+          ]
+        },
+        {
+          "title": "Retention & Incentives",
+          "tags": [
+            "BSPCE",
+            "Stock options",
+            "Comp benchmarking"
           ]
         }
       ],
@@ -5584,57 +5685,6 @@
             "Synergies",
             "Governance",
             "Culture"
-          ]
-        }
-      ],
-      "talent": [
-        {
-          "title": "C-Level Executive Search",
-          "tags": [
-            "CEO",
-            "CTO",
-            "CISO",
-            "Chief AI Officer"
-          ]
-        },
-        {
-          "title": "VP & Director Recruitment",
-          "tags": [
-            "VP Engineering",
-            "VP Product",
-            "VP Sales"
-          ]
-        },
-        {
-          "title": "Interim Management",
-          "tags": [
-            "Interim CTO",
-            "Interim CISO",
-            "Interim DPO"
-          ]
-        },
-        {
-          "title": "Talent Mapping & Pipeline",
-          "tags": [
-            "Market mapping",
-            "Longlist",
-            "Assessment"
-          ]
-        },
-        {
-          "title": "Onboarding & Integration",
-          "tags": [
-            "First 90 days",
-            "Culture fit",
-            "Role KPIs"
-          ]
-        },
-        {
-          "title": "Retention & Incentives",
-          "tags": [
-            "BSPCE",
-            "Stock options",
-            "Comp benchmarking"
           ]
         }
       ]

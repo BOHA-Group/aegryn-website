@@ -5,12 +5,12 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import {
   ArrowUpRight, BrainCircuit, Scale, Cpu,
-  Building2, Users, Globe, UserSearch, Landmark,
+  Building2, Users, Globe, UserSearch, Landmark, ShieldCheck,
 } from 'lucide-react'
 import PartnersCarousel from '@/components/sections/PartnersCarousel'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
-type DimensionKey = 'board' | 'strategy' | 'technology' | 'ma' | 'talent'
+type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma'
 type ExpertDomain = {
   Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
   domainKey: string
@@ -29,18 +29,20 @@ type ExpertiseCard = {
 const DIM_COLOR: Record<DimensionKey, string> = {
   board:      '#C9A84C',
   strategy:   '#5ADDA4',
+  compliance: '#14b8a6',
   technology: '#60a5fa',
-  ma:         '#818cf8',
   talent:     '#f472b6',
+  ma:         '#818cf8',
 }
 
 /* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
 const EXPERT_DOMAINS: ExpertDomain[] = [
   { Icon: Landmark,     domainKey: 'board',      color: '#C9A84C', dimension: 'board' },
   { Icon: BrainCircuit, domainKey: 'strategy',   color: '#5ADDA4', dimension: 'strategy' },
+  { Icon: ShieldCheck,  domainKey: 'compliance', color: '#14b8a6', dimension: 'compliance' },
   { Icon: Cpu,          domainKey: 'technology', color: '#60a5fa', dimension: 'technology' },
-  { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
   { Icon: UserSearch,   domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
+  { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
 ]
 
 

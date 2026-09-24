@@ -5255,7 +5255,7 @@
       "maDesc": "Structuration, due diligence, valorisation, closing et intégration post-deal.",
       "security": "Cybersécurité",
       "securityDesc": "Audit, conformité NIS2/DORA/ISO 27001, risk management et gouvernance cyber.",
-      "compliance": "Conformité & Gouvernance",
+      "compliance": "Conformité",
       "complianceDesc": "AI Act, RGPD, LPD suisse, audit interne et registre des traitements.",
       "board": "Board Advisory",
       "boardDesc": "Gouvernance, composition du conseil, accompagnement fondateurs et vision stratégique au plus haut niveau.",
@@ -5392,6 +5392,56 @@
           ]
         }
       ],
+      "compliance": [
+        {
+          "title": "Conformité RGPD & LPD",
+          "tags": [
+            "Registre des traitements",
+            "DPO externalisé",
+            "Analyses d'impact AIPD"
+          ]
+        },
+        {
+          "title": "EU AI Act",
+          "tags": [
+            "Cartographie des systèmes d'IA",
+            "Classification des risques",
+            "Documentation technique"
+          ]
+        },
+        {
+          "title": "NIS2 & DORA",
+          "tags": [
+            "Audit de conformité",
+            "Plan de résilience",
+            "Reporting d'incidents"
+          ]
+        },
+        {
+          "title": "Audit interne & Contrôle",
+          "tags": [
+            "Cartographie des risques",
+            "Contrôles internes",
+            "Plans de remédiation"
+          ]
+        },
+        {
+          "title": "Gouvernance des données",
+          "tags": [
+            "Politiques data",
+            "Qualité & traçabilité",
+            "Partage inter-entités"
+          ]
+        },
+        {
+          "title": "Due diligence réglementaire",
+          "tags": [
+            "Sanctions & KYC",
+            "Intégrité réglementaire",
+            "Transferts de données"
+          ]
+        }
+      ],
       "technology": [
         {
           "title": "Architecture Système",
@@ -5465,6 +5515,57 @@
             "SaaS B2B",
             "App mobile",
             "Protocoles IA"
+          ]
+        }
+      ],
+      "talent": [
+        {
+          "title": "Executive Search C-Level",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "Recrutement VP & Director",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "CTO interim",
+            "CISO interim",
+            "DPO interim"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Intégration",
+          "tags": [
+            "Premier 90 jours",
+            "Culture fit",
+            "KPIs poste"
+          ]
+        },
+        {
+          "title": "Rétention & Incentives",
+          "tags": [
+            "BSPCE",
+            "Stock options",
+            "Comp benchmarking"
           ]
         }
       ],
@@ -5544,57 +5645,6 @@
             "Synergies",
             "Gouvernance",
             "Culture"
-          ]
-        }
-      ],
-      "talent": [
-        {
-          "title": "Executive Search C-Level",
-          "tags": [
-            "CEO",
-            "CTO",
-            "CISO",
-            "Chief AI Officer"
-          ]
-        },
-        {
-          "title": "Recrutement VP & Director",
-          "tags": [
-            "VP Engineering",
-            "VP Product",
-            "VP Sales"
-          ]
-        },
-        {
-          "title": "Interim Management",
-          "tags": [
-            "CTO interim",
-            "CISO interim",
-            "DPO interim"
-          ]
-        },
-        {
-          "title": "Talent Mapping & Pipeline",
-          "tags": [
-            "Market mapping",
-            "Longlist",
-            "Assessment"
-          ]
-        },
-        {
-          "title": "Onboarding & Intégration",
-          "tags": [
-            "Premier 90 jours",
-            "Culture fit",
-            "KPIs poste"
-          ]
-        },
-        {
-          "title": "Rétention & Incentives",
-          "tags": [
-            "BSPCE",
-            "Stock options",
-            "Comp benchmarking"
           ]
         }
       ]
