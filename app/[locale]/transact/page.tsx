@@ -47,8 +47,8 @@ export default async function TransactPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-32 pb-24 px-6">
         <Image
-          src="/images/home/mountains.avif"
-          alt="Alpes suisses — Aegryn Group"
+          src="/images/transact/hero-valorisation.jpg"
+          alt="Valorisation d'entreprise — Aegryn Group"
           fill
           priority
           quality={95}
