@@ -10,7 +10,7 @@ import {
 import PartnersCarousel from '@/components/sections/PartnersCarousel'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
-type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma'
+type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma' | 'execsearch'
 type ExpertDomain = {
   Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
   domainKey: string
@@ -33,6 +33,7 @@ const DIM_COLOR: Record<DimensionKey, string> = {
   technology: '#60a5fa',
   talent:     '#f472b6',
   ma:         '#818cf8',
+  execsearch: '#fb923c',
 }
 
 /* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
@@ -41,8 +42,9 @@ const EXPERT_DOMAINS: ExpertDomain[] = [
   { Icon: BrainCircuit, domainKey: 'strategy',   color: '#5ADDA4', dimension: 'strategy' },
   { Icon: ShieldCheck,  domainKey: 'compliance', color: '#14b8a6', dimension: 'compliance' },
   { Icon: Cpu,          domainKey: 'technology', color: '#60a5fa', dimension: 'technology' },
-  { Icon: UserSearch,   domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
+  { Icon: Users,        domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
   { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
+  { Icon: UserSearch,   domainKey: 'execsearch', color: '#fb923c', dimension: 'execsearch' },
 ]
 
 

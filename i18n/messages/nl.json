@@ -5296,11 +5296,13 @@
       "security": "Cyberbeveiliging",
       "securityDesc": "Audit, NIS2/DORA/ISO 27001-compliance, risicobeheer en cyber-governance.",
       "compliance": "Compliance",
-      "complianceDesc": "AI Act, AVG, Zwitserse DSG, interne audit en register van verwerkingen.",
+      "complianceDesc": "Cyber-compliance, AI-governance, gegevensbescherming en risicobeheer.",
       "board": "Board Advisory",
       "boardDesc": "Governance, samenstelling raad van bestuur, begeleiding oprichters en strategische visie op het hoogste niveau.",
-      "talent": "Executive Search",
-      "talentDesc": "C-Level en VP werving, interim management, talent mapping en retentie voor tech-leiders."
+      "talent": "Talent & Organisatie",
+      "talentDesc": "Organisatie, leiderschapsteams, opvolgingsplannen en behoud van sleuteltalent.",
+      "execsearch": "Executive Search",
+      "execsearchDesc": "C-Level en VP werving, interim management, talent mapping en retentie voor tech-leiders."
     },
     "cta": {
       "title": "Word lid van het Aegryn-netwerk.",
@@ -5434,51 +5436,51 @@
       ],
       "compliance": [
         {
-          "title": "AVG- & DSG-compliance",
+          "title": "Cyber-compliance",
           "tags": [
-            "Verwerkingsregisters",
-            "Uitbestede FG",
-            "Gevolgbeoordelingen"
+            "NIS2",
+            "DORA",
+            "Cyber Resilience Act"
           ]
         },
         {
-          "title": "EU AI Act",
+          "title": "AI-governance",
           "tags": [
-            "Mapping van AI-systemen",
+            "EU AI Act",
             "Risicoclassificatie",
             "Technische documentatie"
           ]
         },
         {
-          "title": "NIS2 & DORA",
+          "title": "Gegevensbescherming",
           "tags": [
-            "Compliance-audit",
-            "Weerbaarheidsplan",
-            "Incidentrapportage"
+            "AVG",
+            "Zwitserse DSG",
+            "Verwerkingsregisters"
           ]
         },
         {
-          "title": "Interne audit & Controle",
+          "title": "Derden- & leveranciersrisico",
           "tags": [
-            "Risicomapping",
-            "Interne controles",
+            "Toeleveringsketen",
+            "Leveranciersbeoordeling",
+            "Contractuele clausules"
+          ]
+        },
+        {
+          "title": "Bedrijfscontinuïteit",
+          "tags": [
+            "Continuïteitsplan",
+            "Incidentresponse",
+            "Weerbaarheidstests"
+          ]
+        },
+        {
+          "title": "Regelgevende audits",
+          "tags": [
+            "Auditvoorbereiding",
+            "Compliance-due-diligence",
             "Herstelplannen"
-          ]
-        },
-        {
-          "title": "Data-governance",
-          "tags": [
-            "Databeleid",
-            "Kwaliteit & traceerbaarheid",
-            "Delen tussen entiteiten"
-          ]
-        },
-        {
-          "title": "Regelgevende due diligence",
-          "tags": [
-            "Sancties & KYC",
-            "Regelgevende integriteit",
-            "Gegevensoverdracht"
           ]
         }
       ],
@@ -5560,52 +5562,51 @@
       ],
       "talent": [
         {
-          "title": "C-Level Executive Search",
+          "title": "Oprichtersafhankelijkheid",
           "tags": [
-            "CEO",
-            "CTO",
-            "CISO",
-            "Chief AI Officer"
+            "Overdraagbaarheidskorting",
+            "Opvolgingsplanning",
+            "Progressieve delegatie"
           ]
         },
         {
-          "title": "VP & Director werving",
+          "title": "Leiderschapsteam",
           "tags": [
-            "VP Engineering",
-            "VP Product",
-            "VP Sales"
+            "Bench-sterkte",
+            "C-Level-versterking",
+            "Competentieopbouw"
           ]
         },
         {
-          "title": "Interim Management",
+          "title": "Opvolging & Governance",
           "tags": [
-            "Interim CTO",
-            "Interim CISO",
-            "Interim DPO"
+            "Opvolgingsplan",
+            "Board-governance",
+            "Leiderschapscontinuïteit"
           ]
         },
         {
-          "title": "Talent Mapping & Pipeline",
+          "title": "Kennisoverdracht",
           "tags": [
-            "Market mapping",
-            "Longlist",
-            "Assessment"
+            "Operationele documentatie",
+            "Playbooks",
+            "Kennisbehoud"
           ]
         },
         {
-          "title": "Onboarding & Integratie",
+          "title": "Behoud van sleuteltalent",
           "tags": [
-            "Eerste 90 dagen",
-            "Culture fit",
-            "Functie-KPIs"
+            "Carrièreplannen",
+            "Incentives",
+            "Retentieclausules"
           ]
         },
         {
-          "title": "Retentie & Incentives",
+          "title": "Organisatorische structurering",
           "tags": [
-            "BSPCE",
-            "Aandelenopties",
-            "Comp benchmarking"
+            "Doelorganigram",
+            "Rollen & verantwoordelijkheden",
+            "Executive recruitment"
           ]
         }
       ],
@@ -5685,6 +5686,57 @@
             "Synergieën",
             "Governance",
             "Cultuur"
+          ]
+        }
+      ],
+      "execsearch": [
+        {
+          "title": "C-Level Executive Search",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "VP & Director werving",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "Interim CTO",
+            "Interim CISO",
+            "Interim DPO"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Integratie",
+          "tags": [
+            "Eerste 90 dagen",
+            "Culture fit",
+            "Functie-KPIs"
+          ]
+        },
+        {
+          "title": "Retentie & Incentives",
+          "tags": [
+            "BSPCE",
+            "Aandelenopties",
+            "Comp benchmarking"
           ]
         }
       ]

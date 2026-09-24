@@ -5296,11 +5296,13 @@
       "security": "Cybersecurity",
       "securityDesc": "Audit, conformità NIS2/DORA/ISO 27001, gestione del rischio e governance cyber.",
       "compliance": "Conformità",
-      "complianceDesc": "AI Act, GDPR, LPD svizzera, audit interno e registro dei trattamenti.",
+      "complianceDesc": "Conformità cyber, governance IA, protezione dei dati e gestione dei rischi.",
       "board": "Board Advisory",
       "boardDesc": "Governance, composizione del consiglio, supporto ai fondatori e visione strategica al massimo livello.",
-      "talent": "Executive Search",
-      "talentDesc": "Reclutamento C-Level e VP, interim management, talent mapping e retention per i leader tech."
+      "talent": "Talento & Organizzazione",
+      "talentDesc": "Organizzazione, team dirigenziali, piani di successione e retention dei talenti chiave.",
+      "execsearch": "Executive Search",
+      "execsearchDesc": "Reclutamento C-Level e VP, interim management, talent mapping e retention per i leader tech."
     },
     "cta": {
       "title": "Unisciti alla rete Aegryn.",
@@ -5434,51 +5436,51 @@
       ],
       "compliance": [
         {
-          "title": "Conformità GDPR & LPD",
+          "title": "Conformità cyber",
           "tags": [
-            "Registro dei trattamenti",
-            "DPO esternalizzato",
-            "Valutazioni d'impatto"
+            "NIS2",
+            "DORA",
+            "Cyber Resilience Act"
           ]
         },
         {
-          "title": "EU AI Act",
+          "title": "Governance IA",
           "tags": [
-            "Mappatura dei sistemi di IA",
+            "EU AI Act",
             "Classificazione dei rischi",
             "Documentazione tecnica"
           ]
         },
         {
-          "title": "NIS2 & DORA",
+          "title": "Protezione dei dati",
           "tags": [
-            "Audit di conformità",
-            "Piano di resilienza",
-            "Notifica degli incidenti"
+            "GDPR",
+            "LPD svizzera",
+            "Registro dei trattamenti"
           ]
         },
         {
-          "title": "Audit interno & Controllo",
+          "title": "Rischio terze parti & fornitori",
           "tags": [
-            "Mappatura dei rischi",
-            "Controlli interni",
+            "Catena di fornitura",
+            "Valutazione fornitori",
+            "Clausole contrattuali"
+          ]
+        },
+        {
+          "title": "Continuità operativa",
+          "tags": [
+            "Piano di continuità",
+            "Risposta agli incidenti",
+            "Test di resilienza"
+          ]
+        },
+        {
+          "title": "Audit regolamentari",
+          "tags": [
+            "Preparazione agli audit",
+            "Due diligence di conformità",
             "Piani di remediation"
-          ]
-        },
-        {
-          "title": "Governance dei dati",
-          "tags": [
-            "Policy sui dati",
-            "Qualità & tracciabilità",
-            "Condivisione tra entità"
-          ]
-        },
-        {
-          "title": "Due diligence regolamentare",
-          "tags": [
-            "Sanzioni & KYC",
-            "Integrità regolamentare",
-            "Trasferimenti di dati"
           ]
         }
       ],
@@ -5560,52 +5562,51 @@
       ],
       "talent": [
         {
-          "title": "Executive Search C-Level",
+          "title": "Dipendenza dal fondatore",
           "tags": [
-            "CEO",
-            "CTO",
-            "CISO",
-            "Chief AI Officer"
+            "Sconto di trasmissibilità",
+            "Piano di successione",
+            "Delega progressiva"
           ]
         },
         {
-          "title": "Reclutamento VP & Director",
+          "title": "Team dirigenziale",
           "tags": [
-            "VP Engineering",
-            "VP Product",
-            "VP Sales"
+            "Forza del bench",
+            "Rinforzi C-Level",
+            "Sviluppo competenze"
           ]
         },
         {
-          "title": "Interim Management",
+          "title": "Successione & Governance",
           "tags": [
-            "CTO interim",
-            "CISO interim",
-            "DPO interim"
+            "Piano di successione",
+            "Governance del board",
+            "Continuità dirigenziale"
           ]
         },
         {
-          "title": "Talent Mapping & Pipeline",
+          "title": "Trasferimento di conoscenza",
           "tags": [
-            "Market mapping",
-            "Longlist",
-            "Assessment"
+            "Documentazione operativa",
+            "Playbook",
+            "Capitalizzazione"
           ]
         },
         {
-          "title": "Onboarding & Integrazione",
+          "title": "Retention dei talenti chiave",
           "tags": [
-            "Primi 90 giorni",
-            "Culture fit",
-            "KPIs ruolo"
+            "Piani di carriera",
+            "Incentivi",
+            "Clausole di retention"
           ]
         },
         {
-          "title": "Fidelizzazione & Incentivi",
+          "title": "Strutturazione organizzativa",
           "tags": [
-            "BSPCE",
-            "Stock options",
-            "Comp benchmarking"
+            "Organigramma obiettivo",
+            "Ruoli & responsabilità",
+            "Reclutamento executive"
           ]
         }
       ],
@@ -5685,6 +5686,57 @@
             "Sinergie",
             "Governance",
             "Cultura"
+          ]
+        }
+      ],
+      "execsearch": [
+        {
+          "title": "Executive Search C-Level",
+          "tags": [
+            "CEO",
+            "CTO",
+            "CISO",
+            "Chief AI Officer"
+          ]
+        },
+        {
+          "title": "Reclutamento VP & Director",
+          "tags": [
+            "VP Engineering",
+            "VP Product",
+            "VP Sales"
+          ]
+        },
+        {
+          "title": "Interim Management",
+          "tags": [
+            "CTO interim",
+            "CISO interim",
+            "DPO interim"
+          ]
+        },
+        {
+          "title": "Talent Mapping & Pipeline",
+          "tags": [
+            "Market mapping",
+            "Longlist",
+            "Assessment"
+          ]
+        },
+        {
+          "title": "Onboarding & Integrazione",
+          "tags": [
+            "Primi 90 giorni",
+            "Culture fit",
+            "KPIs ruolo"
+          ]
+        },
+        {
+          "title": "Fidelizzazione & Incentivi",
+          "tags": [
+            "BSPCE",
+            "Stock options",
+            "Comp benchmarking"
           ]
         }
       ]
