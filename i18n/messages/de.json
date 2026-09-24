@@ -5032,8 +5032,8 @@
       "dealflow": {
         "label": "Geschäftsanbahnung",
         "title": "Deal-Sourcing",
-        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Melden Sie Unternehmen, die Begleitung benötigen: Zertifizierung, Bewertung, Vorbereitung auf Übergabe oder externes Wachstum. Die Partnerschaftskonditionen werden im Qualifikationsgespräch festgelegt.",
-        "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · FONGIT",
+        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Melden Sie Unternehmen, die in jeder Phase ihres Lebenszyklus Begleitung benötigen: Zertifizierung, Bewertung, Wachstum, Strukturierung. Die Partnerschaftskonditionen werden im Qualifikationsgespräch festgelegt.",
+        "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · Gründungs- und Unternehmensentwicklungs-Inkubatoren",
         "cta": "Ein Unternehmen melden"
       },
       "advisory_tech": {
@@ -5044,24 +5044,24 @@
         "cta": "Advisory Tech-Partner werden"
       },
       "advisory_transaction": {
-        "label": "Advisory Transaction",
+        "label": "M&A-Beratung",
         "title": "M&A Tech-Experten",
-        "desc": "Partner, die in jeder Phase des externen Wachstums und der Übergabe eingesetzt werden — von der Vorbereitung über das Closing bis zur Integration nach der Akquisition.",
+        "desc": "Partner, die in jeder Phase von M&A-Vorhaben eingesetzt werden — von der Vorbereitung über das Closing bis zur Integration nach der Akquisition.",
         "profiles": "IP & Tech-Kanzleien (Eigentumskette, Lizenzen) · Transaktionsrechtliche M&A-Anwälte (SPA, SHA, APA) · Wirtschaftsprüfer & Abschlussprufer · Unternehmenssteuerberater (CH/FR/LU) · HR & Arbeitsrechtskanzleien · W&I-Versicherer (AIG, Tokio Marine) · Sektorale Due-Diligence-Experten (FinTech, HealthTech, KI)",
-        "cta": "Advisory Transaction-Partner werden"
+        "cta": "M&A-Beratungspartner werden"
       },
       "finance": {
         "label": "BANKEN & FINANZPARTNER",
-        "title": "Finanzpartner in der Übertragungskette",
-        "desc": "Bankinstitute, Regionalbanken und Finanzinstitutionen, die Unternehmer in jeder Wachstumsphase begleiten. Eine natürliche Synergie mit unserem Beratungs- und Übertragungsangebot.",
+        "title": "Finanzpartner",
+        "desc": "Bankinstitute, Regionalbanken und Finanzinstitutionen, die Unternehmer in jeder Phase ihrer Entwicklung begleiten. Eine natürliche Synergie mit unserem Beratungs- und Begleitungsangebot.",
         "profiles": "Bankinstitute & Regionalbanken · Fremdkapital- und Wachstumsfonds · Family Offices & Multi-Family Offices · Bürgschafts- und Garantiegesellschaften · Öffentliche Finanzinstitutionen (BPI usw.)",
         "cta": "Finanzpartner werden"
       },
       "sequestre": {
         "label": "TREUHAND & RECHT",
-        "profiles": "Depotbanken · Transaktionsrechtliche Kanzleien",
+        "profiles": "Depotbanken · Wirtschaftskanzleien",
         "title": "Treuhand- & Rechtspartner",
-        "desc": "Depotbanken und transaktionserfahrene Anwaltskanzleien, die Escrow- und Closing-Mechanismen im Rahmen begleiteter Übergaben und Akquisitionen strukturieren und absichern.",
+        "desc": "Depotbanken und Wirtschaftskanzleien, die Escrow- und Closing-Mechanismen begleiteter Vorhaben strukturieren und absichern.",
         "cta": "Als Rechtspartner beitreten"
       },
       "technique": {
@@ -5073,9 +5073,9 @@
       },
       "assurance": {
         "label": "VERSICHERUNG & COMPLIANCE",
-        "profiles": "W&I-Versicherer · Auf Transaktionen spezialisierte Steuerberater",
+        "profiles": "W&I-Versicherer · Corporate-Steuerexperten",
         "title": "Versicherungs- & Steuerexperten",
-        "desc": "W&I-Versicherer und transaktionsspezialisierte Steuerberater, die Veräußerungs- und Übertragungsoperationen absichern.",
+        "desc": "W&I-Versicherer und Fachfiscalisten, die Vorhaben und Risiken in jeder Phase des Unternehmenslebenszyklus absichern.",
         "cta": "Als Versicherungspartner beitreten"
       }
     },
@@ -5117,7 +5117,7 @@
     "tabs": {
       "overview": "Übersicht",
       "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "Advisory Transaction",
+      "advisory_transaction": "M&A-Beratung",
       "certification": "Zertifizierung",
       "distribution": "Distribution",
       "dealflow": "Anbahnung",
@@ -5152,8 +5152,8 @@
         {
           "num": "02",
           "id": "advisory_transaction",
-          "title": "Transaktionsberatung",
-          "desc": "Strategische Due Diligence, Bewertung, Transaktionsstrukturierung.",
+          "title": "M&A-Beratung",
+          "desc": "Strategische Due Diligence, Bewertung, M&A-Strukturierung.",
           "tags": [
             "Strategische Due Diligence",
             "Valorisation d'actifs",

@@ -5032,8 +5032,8 @@
       "dealflow": {
         "label": "Business referrals",
         "title": "Deal sourcing",
-        "desc": "VC/PE funds, M&A boutiques, tech accelerators. Refer organisations that need support: certification, valuation, preparation for succession or external growth. Partnership terms are defined during the qualification interview.",
-        "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · FONGIT",
+        "desc": "VC/PE funds, M&A boutiques, tech accelerators. Refer organisations that need support at any stage of their lifecycle: certification, valuation, growth, structuring. Partnership terms are defined during the qualification interview.",
+        "profiles": "Micro-PE funds · Boutique M&A firms · Tech accelerators · Business creation and development incubators",
         "cta": "Refer an organisation"
       },
       "advisory_tech": {
@@ -5044,24 +5044,24 @@
         "cta": "Become an Advisory Tech partner"
       },
       "advisory_transaction": {
-        "label": "Advisory Transaction",
+        "label": "M&A Advisory",
         "title": "M&A tech experts",
-        "desc": "Partners mobilised at every stage of external growth and succession, from preparation to closing and post-acquisition integration.",
+        "desc": "Partners mobilised at every stage of M&A operations, from preparation to closing and post-acquisition integration.",
         "profiles": "IP & tech law firms (chain of title, licences) · M&A transactional lawyers (SPA, SHA, APA) · Chartered accountants & statutory auditors · Corporate tax advisors (CH/FR/LU) · HR & employment law firms · W&I insurers (AIG, Tokio Marine) · Sectoral due diligence experts (FinTech, HealthTech, AI)",
-        "cta": "Become an Advisory Transaction partner"
+        "cta": "Become an M&A Advisory partner"
       },
       "finance": {
         "label": "BANKS & FINANCIAL PARTNERS",
-        "title": "Financial partners in the transfer chain",
-        "desc": "Banking institutions, regional banks and financial entities that support entrepreneurs at every stage of growth. A natural synergy with our advisory and transfer services.",
+        "title": "Financial partners",
+        "desc": "Banking institutions, regional banks and financial institutions that support entrepreneurs at every stage of their development. A natural synergy with our advisory and support offering.",
         "profiles": "Banking institutions & regional banks · Debt and growth capital funds · Family offices & multi-family offices · Guarantee & surety companies · Public financial institutions (BPI, etc.)",
         "cta": "Become a financial partner"
       },
       "sequestre": {
         "label": "ESCROW & LEGAL",
-        "profiles": "Depositary banks · Transactional law firms",
+        "profiles": "Custodian banks · Business law firms",
         "title": "Escrow & Legal Partners",
-        "desc": "Custodian banks and transactional law firms that structure and secure escrow and closing mechanisms within supported successions and acquisitions.",
+        "desc": "Custodian banks and business law firms that structure and secure escrow and closing mechanisms for supported operations.",
         "cta": "Join as a legal partner"
       },
       "technique": {
@@ -5073,9 +5073,9 @@
       },
       "assurance": {
         "label": "INSURANCE & COMPLIANCE",
-        "profiles": "W&I insurers · Transaction-specialized tax advisors",
+        "profiles": "W&I insurers · Corporate tax specialists",
         "title": "Insurance & Tax Specialists",
-        "desc": "W&I insurers and transaction-specialist tax advisors who secure disposal and transfer operations.",
+        "desc": "W&I insurers and expert tax advisors who secure operations and risks at every stage of the company lifecycle.",
         "cta": "Join as an insurance partner"
       }
     },
@@ -5117,7 +5117,7 @@
     "tabs": {
       "overview": "Overview",
       "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "Advisory Transaction",
+      "advisory_transaction": "M&A Advisory",
       "certification": "Certification",
       "distribution": "Distribution",
       "dealflow": "Referrals",
@@ -5152,8 +5152,8 @@
         {
           "num": "02",
           "id": "advisory_transaction",
-          "title": "Transaction Advisory",
-          "desc": "Strategic due diligence, valuation, transaction structuring.",
+          "title": "M&A Advisory",
+          "desc": "Strategic due diligence, valuation, M&A structuring.",
           "tags": [
             "Strategic Due Diligence",
             "Asset Valuation",

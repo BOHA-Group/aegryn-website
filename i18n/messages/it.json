@@ -5032,8 +5032,8 @@
       "dealflow": {
         "label": "Apporto di affari",
         "title": "Sourcing di deal",
-        "desc": "Fondi VC/PE, boutique M&A, acceleratori tech. Segnalate organizzazioni da accompagnare: certificazione, valorizzazione, preparazione alla trasmissione o alla crescita esterna. Le condizioni di partnership sono definite durante il colloquio di qualificazione.",
-        "profiles": "Fondi micro-PE · Boutique M&A · Acceleratori tech · FONGIT",
+        "desc": "Fondi VC/PE, boutique M&A, acceleratori tech. Segnalate organizzazioni da accompagnare in ogni fase del loro ciclo di vita: certificazione, valorizzazione, crescita, strutturazione. Le condizioni di partnership sono definite durante il colloquio di qualificazione.",
+        "profiles": "Fondi micro-PE · Boutique M&A · Acceleratori tech · Incubatori di creazione e sviluppo d'impresa",
         "cta": "Segnalare un'organizzazione"
       },
       "advisory_tech": {
@@ -5044,24 +5044,24 @@
         "cta": "Diventare partner Advisory Tech"
       },
       "advisory_transaction": {
-        "label": "Advisory Transaction",
+        "label": "Consulenza M&A",
         "title": "Esperti M&A tech",
-        "desc": "Partner mobilitati in ogni fase della crescita esterna e della trasmissione, dalla preparazione al closing fino all'integrazione post-acquisizione.",
+        "desc": "Partner mobilitati in ogni fase delle operazioni di M&A, dalla preparazione al closing fino all'integrazione post-acquisizione.",
         "profiles": "Studi IP & tech (catena di titoli, licenze) · Avvocati M&A transazionali (SPA, SHA, APA) · Revisori contabili e sindaci · Consulenti fiscali corporate (CH/FR/LU) · Studi HR & diritto del lavoro · Assicuratori W&I (AIG, Tokio Marine) · Esperti due diligence settoriale (FinTech, HealthTech, IA)",
-        "cta": "Diventare partner Advisory Transaction"
+        "cta": "Diventare partner Consulenza M&A"
       },
       "finance": {
         "label": "BANCHE & PARTNER FINANZIARI",
-        "title": "Partner finanziari nella catena di trasmissione",
-        "desc": "Istituti bancari, banche regionali e istituzioni finanziarie che accompagnano gli imprenditori in ogni fase di crescita. Una sinergia naturale con il nostro dispositivo di consulenza e trasmissione.",
+        "title": "Partner finanziari",
+        "desc": "Istituti bancari, banche regionali e istituzioni finanziarie che accompagnano gli imprenditori in ogni fase del loro sviluppo. Una sinergia naturale con il nostro dispositivo di consulenza e accompagnamento.",
         "profiles": "Istituti bancari e banche regionali · Fondi di debito e sviluppo del capitale · Family office e multi-family office · Società di garanzia e cauzioni · Istituzioni finanziarie pubbliche (BPI, ecc.)",
         "cta": "Diventare partner finanziario"
       },
       "sequestre": {
         "label": "DEPOSITO E LEGALE",
-        "profiles": "Banche depositarie · Studi legali transazionali",
+        "profiles": "Banche depositarie · Studi legali d'affari",
         "title": "Deposito a garanzia e partner legali",
-        "desc": "Banche depositarie e studi legali transazionali che strutturano e garantiscono i meccanismi di escrow e closing nell'ambito di trasmissioni e acquisizioni accompagnate.",
+        "desc": "Banche depositarie e studi legali d'affari che strutturano e garantiscono i meccanismi di escrow e closing delle operazioni accompagnate.",
         "cta": "Aderire come partner legale"
       },
       "technique": {
@@ -5073,9 +5073,9 @@
       },
       "assurance": {
         "label": "ASSICURAZIONE E COMPLIANCE",
-        "profiles": "Assicuratori W&I · Consulenti fiscali specializzati in transazioni",
+        "profiles": "Assicuratori W&I · Fiscalisti corporate",
         "title": "Assicuratori e fiscalisti specializzati",
-        "desc": "Assicuratori W&I e consulenti fiscali specializzati nelle transazioni che tutelano le operazioni di cessione e trasferimento.",
+        "desc": "Assicuratori W&I e fiscalisti esperti che garantiscono le operazioni e i rischi in ogni fase del ciclo di vita dell'impresa.",
         "cta": "Aderire come partner assicurativo"
       }
     },
@@ -5117,7 +5117,7 @@
     "tabs": {
       "overview": "Panoramica",
       "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "Advisory Transaction",
+      "advisory_transaction": "Consulenza M&A",
       "certification": "Certificazione",
       "distribution": "Distribuzione",
       "dealflow": "Apporto di affari",
@@ -5152,8 +5152,8 @@
         {
           "num": "02",
           "id": "advisory_transaction",
-          "title": "Advisory Transazionale",
-          "desc": "Due diligence strategica, valutazione, strutturazione della transazione.",
+          "title": "Consulenza M&A",
+          "desc": "Due diligence strategica, valorizzazione, strutturazione M&A.",
           "tags": [
             "Due diligence strategica",
             "Valorisation d'actifs",
