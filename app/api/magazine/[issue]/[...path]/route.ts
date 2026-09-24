@@ -20,6 +20,7 @@ const MIME: Record<string, string> = {
   '.jpeg':  'image/jpeg',
   '.png':   'image/png',
   '.webp':  'image/webp',
+  '.avif':  'image/avif',
   '.gif':   'image/gif',
   '.svg':   'image/svg+xml',
   '.mp3':   'audio/mpeg',

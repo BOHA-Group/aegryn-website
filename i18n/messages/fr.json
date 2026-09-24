@@ -2088,46 +2088,46 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Plateforme | Aegryn Cessions M&A Switzerland",
-      "desc": "La plateforme Aegryn : certification CIFSO 5000, processus de cession privés, droit suisse, ouverture internationale."
+      "title": "Feuille de route | Aegryn",
+      "desc": "La feuille de route Aegryn : certification CIFSO 5000, accompagnement du cycle de vie des organisations, indice de valorisation et réseau d'experts."
     },
-    "label": "Aegryn Cessions M&A Switzerland",
+    "label": "Aegryn — Groupe suisse",
     "title": "La plateforme.\nSes fonctionnalités.",
-    "desc": "Chaque cession se réalise exclusivement via Aegryn. Le droit suisse s'applique. Vendeurs et acquéreurs du monde entier sont les bienvenus.",
-    "swissNote": "Droit suisse applicable à chaque transaction, quelle que soit la provenance de l'actif ou la nationalité des parties.",
-    "featuresLabel": "Ce que la plateforme offre",
+    "desc": "Aegryn accompagne les organisations technologiques à chaque étape de leur cycle de vie : certification, valorisation, conseil, talent, transmission. Chaque mandat est régi par le droit suisse.",
+    "swissNote": "Droit suisse applicable à chaque mandat, quelle que soit la provenance de l'organisation ou la nationalité des parties.",
+    "featuresLabel": "Ce que le dispositif offre",
     "features": {
       "certification": {
         "title": "Certification Aegryn Grade",
-        "desc": "Chaque organisation mise en vente est certifiée selon le protocole CIFSO 5000 avant tout processus. Aucune organisation non certifiée n'est admise."
+        "desc": "Chaque organisation est évaluée selon le protocole CIFSO 5000 sur 5 dimensions avant tout accompagnement."
       },
       "swissLaw": {
         "title": "Droit suisse : 100 %",
-        "desc": "Toutes les transactions sont régies par le droit suisse, quelle que soit la nationalité du vendeur ou de l'acquéreur."
+        "desc": "Tous les mandats sont régis par le droit suisse, quelle que soit la nationalité des parties."
       },
       "international": {
         "title": "Ouverture internationale",
-        "desc": "Vendeurs et acquéreurs qualifiés du monde entier. Aucune restriction géographique sur l'origine des actifs ou des parties."
+        "desc": "Organisations et partenaires qualifiés du monde entier. Aucune restriction géographique sur l'origine."
       },
       "nda": {
         "title": "NDA systématique",
-        "desc": "L'accès au dossier d'actif est conditionné à la signature d'un NDA. Confidentialité garantie par défaut."
+        "desc": "L'accès aux dossiers confidentiels est conditionné à la signature d'un NDA. Confidentialité garantie à chaque étape."
       },
       "escrow": {
-        "title": "Escrow institutionnel",
-        "desc": "Les fonds transitent via un compte de séquestre institutionnel contrôlé par Aegryn jusqu'au closing."
+        "title": "Séquestre institutionnel",
+        "desc": "Dans le cadre des mandats de transmission, les fonds transitent via un compte de séquestre institutionnel contrôlé jusqu'au closing."
       },
       "buyers": {
-        "title": "Acquéreurs qualifiés",
-        "desc": "Chaque acquéreur est qualifié avant d'accéder aux sessions. Capacité d'acquisition et intentions vérifiées."
+        "title": "Parties qualifiées",
+        "desc": "Chaque partie prenante est qualifiée avant d'accéder aux dossiers protégés. Capacité et intention vérifiées."
       },
       "dueDiligence": {
         "title": "Due diligence pré-validée",
-        "desc": "Le rapport Aegryn Grade remplace partiellement la due diligence et compresse le calendrier de 30 à 45 jours."
+        "desc": "Le rapport Aegryn Grade remplace partiellement la due diligence et compresse le calendrier des opérations."
       },
       "transaction": {
-        "title": "Mise en relation closing on-demand",
-        "desc": "Accès au réseau d'experts Aegryn (avocats, notaires, fiscalistes) mobilisable selon les besoins spécifiques de la transaction."
+        "title": "Experts mobilisables on-demand",
+        "desc": "Accès au réseau d'experts Aegryn (avocats, notaires, fiscalistes) mobilisable selon les besoins du mandat."
       }
     },
     "roadmapLabel": "20 fonctionnalités clés",
@@ -2138,156 +2138,156 @@
         "iconKey": "certification",
         "theme": "Certification",
         "title": "Certification CIFSO 5000 : Protocole Aegryn Grade",
-        "desc": "Chaque actif est évalué sur 5 dimensions CIFSO (Code, IP, Finance, Sécurité, Organisation) avant toute mise en vente. Aucun actif non certifié n'est admis.",
+        "desc": "Chaque organisation est évaluée sur 5 dimensions CIFSO (Code, IP, Finance, Sécurité, Organisation) selon une méthodologie documentée.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certification",
         "title": "Barème 5 grades : B à AEG ★",
-        "desc": "Système de notation objectif et immuable : B, A, AA, AAA, AEG ★. Chaque grade reflète un niveau de maturité certifiable.",
+        "desc": "Système de notation objectif et immuable : B, A, AA, AAA, AEG ★. Chaque grade repose sur des critères vérifiables.",
         "live": true
       },
       {
         "iconKey": "escrow",
-        "theme": "Transaction",
-        "title": "Escrow institutionnel",
-        "desc": "Les fonds transitent via un compte de séquestre contrôlé par Aegryn jusqu'au closing. Sécurité maximale pour toutes les parties.",
+        "theme": "Mandats",
+        "title": "Séquestre institutionnel",
+        "desc": "Dans les mandats de transmission, les fonds transitent via un compte de séquestre contrôlé jusqu'au closing.",
         "live": true
       },
       {
         "iconKey": "nda",
         "theme": "Conformité",
         "title": "NDA digital automatisé",
-        "desc": "L'accès au dossier d'actif est conditionné à la signature d'un NDA. Confidentialité garantie par défaut, sans intervention manuelle.",
+        "desc": "L'accès aux dossiers confidentiels est conditionné à la signature d'un NDA. Confidentialité garantie.",
         "live": true
       },
       {
         "iconKey": "closing",
-        "theme": "Transaction",
-        "title": "Mise en relation closing on-demand",
-        "desc": "Réseau d'experts mobilisables selon les besoins de la transaction : avocats, notaires, fiscalistes spécialisés M&A tech.",
+        "theme": "Mandats",
+        "title": "Experts mobilisables on-demand",
+        "desc": "Réseau d'experts mobilisable selon les besoins du mandat : avocats, notaires, fiscalistes.",
         "live": true
       },
       {
         "iconKey": "swissLaw",
         "theme": "Juridique",
         "title": "Droit suisse applicable à 100 %",
-        "desc": "Toutes les transactions sont régies par le droit suisse, quelle que soit la nationalité du vendeur ou de l'acquéreur.",
+        "desc": "Tous les mandats sont régis par le droit suisse, quelle que soit la nationalité des parties.",
         "live": true
       },
       {
         "iconKey": "sessions",
-        "theme": "Catalogue",
-        "title": "Sessions de cession privées",
-        "desc": "Sessions structurées présentant des actifs tech certifiés à des acquéreurs qualifiés dans un cadre confidentiel.",
+        "theme": "Dossiers",
+        "title": "Sessions confidentielles",
+        "desc": "Présentations structurées de dossiers certifiés à des parties qualifiées, dans le cadre de mandats.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogue",
-        "title": "Filtrage multi-actifs par grade, catégorie et ARR",
-        "desc": "Navigation avancée dans le catalogue : filtres par grade Aegryn, type d'actif et fourchette de valorisation ARR.",
+        "theme": "Dossiers",
+        "title": "Filtrage par grade, catégorie et métriques",
+        "desc": "Navigation avancée dans les dossiers : filtres par grade Aegryn, type d'organisation et métriques.",
         "live": true
       },
       {
         "iconKey": "buyers",
-        "theme": "Acquéreurs",
-        "title": "Qualification des acquéreurs",
-        "desc": "Chaque acquéreur est qualifié avant d'accéder aux sessions. Capacité d'acquisition et intentions vérifiées en amont.",
+        "theme": "Parties",
+        "title": "Qualification des parties",
+        "desc": "Chaque partie est qualifiée avant d'accéder aux dossiers protégés. Capacité et intention vérifiées.",
         "live": true
       },
       {
         "iconKey": "dataRoom",
-        "theme": "Acquéreurs",
-        "title": "Data room sécurisée par NDA",
-        "desc": "Accès aux dossiers complets, documents financiers et juridiques dans un environnement sécurisé après signature du NDA.",
+        "theme": "Parties",
+        "title": "Data room sécurisée sous NDA",
+        "desc": "Accès aux dossiers complets, documents financiers et juridiques dans un environnement sécurisé.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Vendeurs",
-        "title": "Soumission d'actif en ligne",
-        "desc": "Processus de soumission guidé : informations, documents, paiement de l'évaluation. Entièrement en ligne.",
+        "theme": "Organisations",
+        "title": "Soumission d'organisation en ligne",
+        "desc": "Processus de soumission guidé : informations, documents, évaluation initiale.",
         "live": true
       },
       {
         "iconKey": "dueDiligence",
-        "theme": "Vendeurs",
+        "theme": "Organisations",
         "title": "Due diligence pré-validée",
-        "desc": "Le rapport Aegryn Grade remplace partiellement la due diligence acquéreur et compresse le calendrier de 30 à 45 jours.",
+        "desc": "Le rapport Aegryn Grade remplace partiellement la due diligence et compresse le calendrier.",
         "live": true
       },
       {
         "iconKey": "certifiers",
         "theme": "Partenaires",
-        "title": "Réseau de certifieurs CIFSO",
-        "desc": "Programme partenaire expert : mandats de certification, tableau de bord missions, commissions trackées.",
+        "title": "Réseau de certificateurs CIFSO",
+        "desc": "Programme partenaire expert : mandats de certification, tableau de bord missions.",
         "live": true
       },
       {
         "iconKey": "referral",
         "theme": "Partenaires",
         "title": "Programme de parrainage",
-        "desc": "Les experts partenaires peuvent parrainer d'autres certifieurs. Crédits d'abonnement offerts, plafond 6 mois.",
+        "desc": "Les experts partenaires peuvent parrainer d'autres certificateurs. Crédits d'abonnement.",
         "live": true
       },
       {
         "iconKey": "kyc",
         "theme": "Conformité",
         "title": "KYC multi-rôles",
-        "desc": "Vérification d'identité intégrée pour acheteurs, vendeurs et partenaires. Conformité AML/LBA dès l'onboarding.",
+        "desc": "Vérification d'identité intégrée pour clients, partenaires et parties aux mandats. Conformité suisse.",
         "live": true
       },
       {
         "iconKey": "intelligence",
         "theme": "Intelligence",
         "title": "Blog & rapports de marché",
-        "desc": "Articles de fond, études de cas et rapports sur le marché M&A tech européen, produits par les équipes Aegryn.",
+        "desc": "Articles de fond, études de cas et rapports sur le marché tech européen.",
         "live": true
       },
       {
         "iconKey": "international",
         "theme": "Marché",
         "title": "Ouverture internationale",
-        "desc": "Actifs et parties du monde entier admis. Aucune restriction géographique sur la nationalité des vendeurs ou acquéreurs.",
+        "desc": "Organisations et parties du monde entier admises. Aucune restriction géographique.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogue",
+        "theme": "Dossiers",
         "title": "Notifications d'alertes personnalisées",
-        "desc": "Alertes sur nouvelles sessions, mises à jour de grade et statuts transactionnels selon les critères définis par l'acquéreur.",
+        "desc": "Alertes sur nouvelles certifications, mises à jour de grade et statuts de dossiers.",
         "live": false
       },
       {
         "iconKey": "api",
         "theme": "Tech & API",
         "title": "API partenaires institutionnels",
-        "desc": "Accès programmatique aux grades publiés et aux données de marché pour plateformes partenaires et fonds institutionnels.",
+        "desc": "Accès programmatique aux grades publiés et aux données de marché pour plateformes partenaires.",
         "live": false
       },
       {
         "iconKey": "onChain",
         "theme": "Protocole",
         "title": "Extension CIFSO aux actifs numériques",
-        "desc": "Extension du protocole CIFSO aux tokens utilitaires et protocoles DeFi. Cadre juridique suisse appliqué aux actifs on-chain.",
+        "desc": "Extension du protocole CIFSO aux tokens utilitaires et protocoles DeFi. Cadre juridique en structuration.",
         "live": false
       }
     ],
     "currentLabel": "Déjà disponible",
     "current": [
-      "Sessions de cession privées",
       "Certification Aegryn Grade : protocole CIFSO 5000",
-      "Escrow institutionnel",
+      "Accompagnement des cinq cycles de vie (Valoriser)",
+      "Séquestre institutionnel sur mandats de transmission",
       "NDA digital automatisé",
-      "Qualification et espace acquéreurs",
-      "Espace vendeur : soumission et suivi d'actifs",
-      "Réseau partenaires certifieurs CIFSO",
+      "Qualification des parties et espaces dédiés",
+      "Espace certification : soumission et suivi de dossiers",
+      "Réseau partenaires certificateurs CIFSO",
       "KYC intégré multi-rôles",
-      "Filtrage catalogue par grade, catégorie et ARR"
+      "Filtrage des dossiers par grade, catégorie et métriques"
     ],
-    "cta": "Soumettre un actif à la vente",
+    "cta": "Soumettre mon organisation",
     "ctaSecondary": "En savoir plus sur le Grade"
   },
   "discover": {
@@ -8059,7 +8059,8 @@
     "valoriserCroissance": "Croissance & Mise à l'échelle",
     "valoriserRestructuration": "Restructuration & Pivot",
     "valoriserAcquisition": "Acquisition & Croissance externe",
-    "valoriserTransmission": "Transmission & Cession"
+    "valoriserTransmission": "Transmission & Cession",
+    "roadmap": "Feuille de route"
   },
   "clientTransaction": {
     "eyebrow": "Espace acquéreur",

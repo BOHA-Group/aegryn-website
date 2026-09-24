@@ -2970,206 +2970,206 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Platform | Aegryn M&A Switzerland",
-      "desc": "Het Aegryn M&A Switzerland platform: certificering, private sessies, Zwitsers recht, internationale openheid."
+      "title": "Roadmap | Aegryn",
+      "desc": "De Aegryn-roadmap: CIFSO 5000-certificering, begeleiding van de levenscyclus van organisaties, waarderingsindex en expertsnetwerk."
     },
-    "label": "Aegryn M&A Switzerland",
-    "title": "Het platform.\nZijn functies.",
-    "desc": "Elke verkoop vindt uitsluitend plaats via Aegryn M&A Switzerland. Zwitsers recht is van toepassing. Verkopers en kopers van over de hele wereld zijn welkom.",
-    "swissNote": "Zwitsers recht is van toepassing op elke transactie, ongeacht de herkomst van het asset of de nationaliteit van de partijen.",
-    "featuresLabel": "Wat het platform biedt",
+    "label": "Aegryn — Zwitserse groep",
+    "title": "Het platform.\nZijn functionaliteiten.",
+    "desc": "Aegryn begeleidt technologieorganisaties in elke fase van hun levenscyclus: certificering, waardering, advies, talent, overdracht. Elke opdracht valt onder Zwitsers recht.",
+    "swissNote": "Zwitsers recht is op elke opdracht van toepassing, ongeacht de herkomst van de organisatie of de nationaliteit van de partijen.",
+    "featuresLabel": "Wat het dispositief biedt",
     "features": {
       "certification": {
-        "title": "Aegryn Grade Certificering",
-        "desc": "Elk asset dat te koop wordt aangeboden, is gecertificeerd volgens het CIFS-protocol vóór elke sessie. Geen niet-gecertificeerd asset wordt toegelaten."
+        "title": "Aegryn Grade-certificering",
+        "desc": "Elke organisatie wordt vóór elke begeleiding beoordeeld volgens het CIFSO 5000-protocol op 5 dimensies."
       },
       "swissLaw": {
-        "title": "Zwitsers recht : 100 %",
-        "desc": "Alle transacties worden beheerst door het Zwitserse recht, ongeacht de nationaliteit van de verkoper of koper."
+        "title": "Zwitsers recht: 100 %",
+        "desc": "Alle opdrachten vallen onder Zwitsers recht, ongeacht de nationaliteit van de partijen."
       },
       "international": {
-        "title": "Internationale openheid",
-        "desc": "Gekwalificeerde verkopers en kopers van over de hele wereld. Geen geografische beperkingen op de herkomst van assets of partijen."
+        "title": "Internationale reikwijdte",
+        "desc": "Gekwalificeerde organisaties en partners wereldwijd. Geen geografische beperking op herkomst."
       },
       "nda": {
         "title": "Systematische NDA",
-        "desc": "Toegang tot het asset-dossier is afhankelijk van ondertekening van een NDA. Vertrouwelijkheid standaard gegarandeerd."
+        "desc": "Toegang tot vertrouwelijke dossiers is afhankelijk van het ondertekenen van een NDA. Vertrouwelijkheid bij elke stap gegarandeerd."
       },
       "escrow": {
         "title": "Institutionele escrow",
-        "desc": "Gelden worden op een door Aegryn beheerde institutionele derdenrekening bewaard tot closing."
+        "desc": "In het kader van overdrachtsopdrachten vloeien de middelen via een gecontroleerde institutionele escrowrekening tot de closing."
       },
       "buyers": {
-        "title": "Gekwalificeerde kopers",
-        "desc": "Elke koper wordt gekwalificeerd vóór toegang tot sessies. Verwervingscapaciteit en intenties geverifieerd."
+        "title": "Gekwalificeerde partijen",
+        "desc": "Elke stakeholder wordt gekwalificeerd vóór toegang tot beschermde dossiers. Capaciteit en intentie geverifieerd."
       },
       "dueDiligence": {
-        "title": "Voorgevalideerde due diligence",
-        "desc": "Het Aegryn Grade-rapport vervangt gedeeltelijk de due diligence en verkort de tijdlijn met 30 tot 45 dagen."
+        "title": "Vooraf gevalideerde due diligence",
+        "desc": "Het Aegryn Grade-rapport vervangt de due diligence gedeeltelijk en comprimeert de operatiesplanning."
       },
       "transaction": {
-        "title": "On-demand closing-verbindingen",
-        "desc": "Toegang tot het Aegryn-expertnetwerk (advocaten, notarissen, belastingadviseurs) inzetbaar naar de specifieke behoeften van de transactie."
+        "title": "Experts on-demand",
+        "desc": "Toegang tot het Aegryn-expertsnetwerk (advocaten, notarissen, fiscalisten), inzetbaar naar behoefte van de opdracht."
       }
     },
-    "roadmapLabel": "20 sleutelfuncties",
+    "roadmapLabel": "20 kernfunctionaliteiten",
     "statusLive": "Beschikbaar",
     "statusUpcoming": "Binnenkort",
     "items": [
       {
         "iconKey": "certification",
         "theme": "Certificering",
-        "title": "CIFS-certificering | Aegryn Grade Protocol",
-        "desc": "Elk asset wordt beoordeeld op 4 dimensies (Code, IP, Financën, Beveiliging) vóór enige vermelding. Geen niet-gecertificeerd asset wordt toegelaten.",
+        "title": "CIFSO 5000-certificering: Aegryn Grade-protocol",
+        "desc": "Elke organisatie wordt beoordeeld op 5 CIFSO-dimensies (Code, IP, Financiën, Beveiliging, Organisatie) volgens een gedocumenteerde methodologie.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certificering",
-        "title": "5-graden schaal, B tot AEG ★",
-        "desc": "Objectief en onveranderlijk beoordelingssysteem: B, A, AA, AAA, AEG ★. Elke grade weerspiegelt een certificeerbaar volwassenheidsniveau.",
+        "title": "5-gradenschaal: B tot AEG ★",
+        "desc": "Objectief en onveranderlijk beoordelingssysteem: B, A, AA, AAA, AEG ★. Elke grade berust op verifieerbare criteria.",
         "live": true
       },
       {
         "iconKey": "escrow",
-        "theme": "Transactie",
+        "theme": "Opdrachten",
         "title": "Institutionele escrow",
-        "desc": "Gelden worden aangehouden op een door Aegryn gecontroleerde derdenrekening tot de closing. Maximale veiligheid voor alle partijen.",
+        "desc": "Bij overdrachtsopdrachten vloeien de middelen via een gecontroleerde escrowrekening tot de closing.",
         "live": true
       },
       {
         "iconKey": "nda",
         "theme": "Compliance",
         "title": "Geautomatiseerde digitale NDA",
-        "desc": "Toegang tot het asset-dossier is afhankelijk van ondertekening van een NDA. Vertrouwelijkheid standaard gegarandeerd, zonder handmatige tussenkomst.",
+        "desc": "Toegang tot vertrouwelijke dossiers is afhankelijk van het ondertekenen van een NDA. Gegarandeerde vertrouwelijkheid.",
         "live": true
       },
       {
         "iconKey": "closing",
-        "theme": "Transactie",
-        "title": "On-demand closing-verbindingen",
-        "desc": "Netwerk van inzetbare experts naar transactiebehoeften: advocaten, notarissen, in M&A tech gespecialiseerde belastingadviseurs.",
+        "theme": "Opdrachten",
+        "title": "Experts on-demand",
+        "desc": "Expertsnetwerk inzetbaar naar behoefte van de opdracht: advocaten, notarissen, fiscalisten.",
         "live": true
       },
       {
         "iconKey": "swissLaw",
         "theme": "Juridisch",
-        "title": "100% Zwitsers recht",
-        "desc": "Alle transacties worden beheerst door Zwitsers recht, ongeacht de nationaliteit van de verkoper of koper.",
+        "title": "Zwitsers recht voor 100 %",
+        "desc": "Alle opdrachten vallen onder Zwitsers recht, ongeacht de nationaliteit van de partijen.",
         "live": true
       },
       {
         "iconKey": "sessions",
-        "theme": "Catalogus",
-        "title": "Privé M&A-processen",
-        "desc": "Gestructureerde sessies die gecertificeerde tech-assets presenteren aan gekwalificeerde kopers in een vertrouwelijke omgeving.",
+        "theme": "Dossiers",
+        "title": "Vertrouwelijke sessies",
+        "desc": "Gestructureerde presentaties van gecertificeerde dossiers aan gekwalificeerde partijen, in het kader van opdrachten.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogus",
-        "title": "Multi-asset filtering op grade, categorie en ARR",
-        "desc": "Geavanceerde catalogusnavigatie: filters op Aegryn-grade, type asset en ARR-waarderingsrange.",
+        "theme": "Dossiers",
+        "title": "Filteren op grade, categorie en metrics",
+        "desc": "Geavanceerde navigatie in de dossiers: filters op Aegryn-grade, type organisatie en metrics.",
         "live": true
       },
       {
         "iconKey": "buyers",
-        "theme": "Kopers",
-        "title": "Koperskwalificatie",
-        "desc": "Elke koper wordt gekwalificeerd voordat hij toegang krijgt tot sessies. Verwervingscapaciteit en intenties vooraf geverifieerd.",
+        "theme": "Partijen",
+        "title": "Kwalificatie van partijen",
+        "desc": "Elke partij wordt gekwalificeerd vóór toegang tot beschermde dossiers. Capaciteit en intentie geverifieerd.",
         "live": true
       },
       {
         "iconKey": "dataRoom",
-        "theme": "Kopers",
-        "title": "NDA-beveiligde dataroom",
-        "desc": "Toegang tot volledige dossiers, financiële en juridische documenten in een beveiligde omgeving na ondertekening van de NDA.",
+        "theme": "Partijen",
+        "title": "Beveiligde dataroom onder NDA",
+        "desc": "Toegang tot volledige dossiers, financiële en juridische documenten in een beveiligde omgeving.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Verkopers",
-        "title": "Online asset-indiening",
-        "desc": "Begeleid indieningsproces: informatie, documenten, betalingsevaluatie. Volledig online.",
+        "theme": "Organisaties",
+        "title": "Online indiening van organisatie",
+        "desc": "Begeleid indieningsproces: informatie, documenten, initiële beoordeling.",
         "live": true
       },
       {
         "iconKey": "dueDiligence",
-        "theme": "Verkopers",
+        "theme": "Organisaties",
         "title": "Vooraf gevalideerde due diligence",
-        "desc": "Het Aegryn Grade-rapport vervangt gedeeltelijk de due diligence van de koper en verkort de tijdlijn met 30 tot 45 dagen.",
+        "desc": "Het Aegryn Grade-rapport vervangt de due diligence gedeeltelijk en comprimeert de planning.",
         "live": true
       },
       {
         "iconKey": "certifiers",
         "theme": "Partners",
-        "title": "CIFS-certificeerdernetwerk",
-        "desc": "Expert-partnerprogramma: certificeringsmandaten, missiedashboard, bijgehouden commissies.",
+        "title": "CIFSO-certificeerdersnetwerk",
+        "desc": "Expert-partnerprogramma: certificeringsopdrachten, missiedashboard.",
         "live": true
       },
       {
         "iconKey": "referral",
         "theme": "Partners",
-        "title": "Doorverwijsprogramma",
-        "desc": "Expertpartners kunnen andere certificeerders doorverwijzen. Abonnementkredieten aangeboden, maximum 6 maanden.",
+        "title": "Verwijzingsprogramma",
+        "desc": "Partnerexperts kunnen andere certificeerders verwijzen. Abonnementcredits.",
         "live": true
       },
       {
         "iconKey": "kyc",
         "theme": "Compliance",
         "title": "Multi-rol KYC",
-        "desc": "Geïntegreerde identiteitsverificatie voor kopers, verkopers en partners. AML-naleving vanaf onboarding.",
+        "desc": "Geïntegreerde identiteitsverificatie voor klanten, partners en partijen bij opdrachten. Zwitserse compliance.",
         "live": true
       },
       {
         "iconKey": "intelligence",
-        "theme": "Intelligentie",
-        "title": "Blog & marktrapportages",
-        "desc": "Diepgaande artikelen, casestudy's en rapporten over de Europese tech-M&A-markt, geproduceerd door Aegryn-teams.",
+        "theme": "Intelligence",
+        "title": "Blog & marktrapporten",
+        "desc": "Verdiepende artikelen, casestudy's en rapporten over de Europese tech-markt.",
         "live": true
       },
       {
         "iconKey": "international",
         "theme": "Markt",
-        "title": "Internationale openheid",
-        "desc": "Assets en partijen van over de hele wereld toegelaten. Geen geografische beperkingen op de nationaliteit van verkopers of kopers.",
+        "title": "Internationale reikwijdte",
+        "desc": "Organisaties en partijen van over de hele wereld toegelaten. Geen geografische beperking.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogus",
-        "title": "Gepersonaliseerde waarschuwingsmeldingen",
-        "desc": "Meldingen over nieuwe sessies, grade-updates en transactiestatus op basis van door de koper gedefinieerde criteria.",
+        "theme": "Dossiers",
+        "title": "Gepersonaliseerde alarmmeldingen",
+        "desc": "Meldingen over nieuwe certificeringen, grade-updates en dossierstatussen.",
         "live": false
       },
       {
         "iconKey": "api",
         "theme": "Tech & API",
-        "title": "Institutionele partner-API",
-        "desc": "Programmatische toegang tot gepubliceerde grades en marktgegevens voor partnerplatforms en institutionele fondsen.",
+        "title": "API voor institutionele partners",
+        "desc": "Programmatische toegang tot gepubliceerde grades en marktdata voor partnerplatforms.",
         "live": false
       },
       {
         "iconKey": "onChain",
         "theme": "Protocol",
-        "title": "CIFS-uitbreiding naar digitale assets",
-        "desc": "Uitbreiding van het CIFS-protocol naar utility-tokens en DeFi-protocollen. Zwitsers juridisch kader toegepast op on-chain assets.",
+        "title": "CIFSO-uitbreiding naar digitale activa",
+        "desc": "Uitbreiding van het CIFSO-protocol naar utility-tokens en DeFi-protocollen. Juridisch kader in structurering.",
         "live": false
       }
     ],
     "currentLabel": "Al beschikbaar",
     "current": [
-      "Privé M&A-processen",
-      "Aegryn Grade-certificering, CIFS-protocol",
-      "Institutionele escrow",
+      "Aegryn Grade-certificering: CIFSO 5000-protocol",
+      "Begeleiding van de vijf levenscyclusfasen (Valoriser)",
+      "Institutionele escrow bij overdrachtsopdrachten",
       "Geautomatiseerde digitale NDA",
-      "Koperskwalificatie en kopersportaal",
-      "Verkopersportaal, asset-indiening en -tracking",
-      "CIFS-certificeerder partnernetwerk",
+      "Kwalificatie van partijen en speciale ruimtes",
+      "Certificeringsruimte: indiening en dossieropvolging",
+      "CIFSO-certificeerderspartnernetwerk",
       "Geïntegreerde multi-rol KYC",
-      "Catalogusfiltering op grade, categorie en ARR"
+      "Dossierfiltering op grade, categorie en metrics"
     ],
-    "cta": "Asset indienen voor verkoop",
+    "cta": "Mijn organisatie indienen",
     "ctaSecondary": "Meer informatie over de Grade"
   },
   "discover": {
@@ -8099,7 +8099,8 @@
     "valoriserCroissance": "Groei & Opschaling",
     "valoriserRestructuration": "Herstructurering & Pivot",
     "valoriserAcquisition": "Acquisitie & Externe groei",
-    "valoriserTransmission": "Overdracht & Cessie"
+    "valoriserTransmission": "Overdracht & Cessie",
+    "roadmap": "Roadmap"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",

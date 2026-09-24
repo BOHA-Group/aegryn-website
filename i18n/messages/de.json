@@ -2970,46 +2970,46 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Plattform | Aegryn M&A Switzerland",
-      "desc": "Die Aegryn M&A Switzerland Plattform: Zertifizierung, private Sessions, Schweizer Recht, internationale Offenheit."
+      "title": "Roadmap | Aegryn",
+      "desc": "Die Aegryn-Roadmap: CIFSO-5000-Zertifizierung, Begleitung des Organisationslebenszyklus, Bewertungsindex und Expertennetzwerk."
     },
-    "label": "Aegryn M&A Switzerland",
+    "label": "Aegryn — Schweizer Gruppe",
     "title": "Die Plattform.\nIhre Funktionen.",
-    "desc": "Jeder Verkauf wird ausschliesslich über Aegryn M&A Switzerland abgewickelt. Schweizer Recht findet Anwendung. Verkäufer und Käufer aus aller Welt sind willkommen.",
-    "swissNote": "Schweizer Recht gilt für jede Transaktion, unabhängig von der Herkunft des Assets oder der Nationalität der Parteien.",
+    "desc": "Aegryn begleitet Technologieorganisationen in jeder Phase ihres Lebenszyklus: Zertifizierung, Bewertung, Beratung, Talent, Übertragung. Jedes Mandat unterliegt Schweizer Recht.",
+    "swissNote": "Schweizer Recht gilt für jedes Mandat, unabhängig von der Herkunft der Organisation oder der Nationalität der Parteien.",
     "featuresLabel": "Was die Plattform bietet",
     "features": {
       "certification": {
-        "title": "Aegryn Grade Zertifizierung",
-        "desc": "Jedes zum Verkauf gestellte Asset wird vor jeder Session nach dem CIFS-Protokoll zertifiziert. Nicht zertifizierte Assets werden nicht zugelassen."
+        "title": "Aegryn-Grade-Zertifizierung",
+        "desc": "Jede Organisation wird vor jeder Begleitung nach dem CIFSO-5000-Protokoll in 5 Dimensionen bewertet."
       },
       "swissLaw": {
-        "title": "Schweizer Recht : 100 %",
-        "desc": "Alle Transaktionen unterliegen dem Schweizer Recht, unabhängig von der Nationalität des Verkäufers oder Käufers."
+        "title": "Schweizer Recht: 100 %",
+        "desc": "Alle Mandate unterliegen Schweizer Recht, unabhängig von der Nationalität der Parteien."
       },
       "international": {
-        "title": "Internationale Offenheit",
-        "desc": "Qualifizierte Verkäufer und Käufer aus aller Welt. Keine geografischen Beschränkungen für die Herkunft von Assets oder Parteien."
+        "title": "Internationale Reichweite",
+        "desc": "Qualifizierte Organisationen und Partner weltweit. Keine geografische Einschränkung der Herkunft."
       },
       "nda": {
-        "title": "Systematisches NDA",
-        "desc": "Der Zugang zum Asset-Dossier setzt die Unterzeichnung eines NDA voraus. Vertraulichkeit standardmässig garantiert."
+        "title": "Systematische NDA",
+        "desc": "Der Zugang zu vertraulichen Dossiers setzt die Unterzeichnung eines NDA voraus. Vertraulichkeit bei jedem Schritt garantiert."
       },
       "escrow": {
-        "title": "Institutionelles Escrow",
-        "desc": "Gelder werden auf einem von Aegryn kontrollierten institutionellen Treuhandkonto bis zum Closing verwahrt."
+        "title": "Institutionelles Treuhandkonto",
+        "desc": "Im Rahmen von Übertragungsmandaten fliessen die Mittel über ein kontrolliertes institutionelles Treuhandkonto bis zum Closing."
       },
       "buyers": {
-        "title": "Qualifizierte Käufer",
-        "desc": "Jeder Käufer wird vor dem Zugang zu Sessions qualifiziert. Akquisitionskapazität und Absichten geprüft."
+        "title": "Qualifizierte Parteien",
+        "desc": "Jede Partei wird vor dem Zugang zu geschützten Dossiers qualifiziert. Kapazität und Absicht geprüft."
       },
       "dueDiligence": {
         "title": "Vorvalidierte Due Diligence",
-        "desc": "Der Aegryn Grade-Bericht ersetzt teilweise die Due Diligence und verkürzt den Zeitplan um 30 bis 45 Tage."
+        "desc": "Der Aegryn-Grade-Bericht ersetzt die Due Diligence teilweise und verkürzt den Operationskalender."
       },
       "transaction": {
-        "title": "On-demand Closing-Vermittlung",
-        "desc": "Zugang zum Aegryn-Expertennetzwerk (Anwälte, Notare, Steuerberater), mobilisierbar nach den spezifischen Anforderungen der Transaktion."
+        "title": "Experten on-demand",
+        "desc": "Zugang zum Aegryn-Expertennetzwerk (Anwälte, Notare, Steuerberater), mobilisierbar nach Bedarf des Mandats."
       }
     },
     "roadmapLabel": "20 Schlüsselfunktionen",
@@ -3019,157 +3019,157 @@
       {
         "iconKey": "certification",
         "theme": "Zertifizierung",
-        "title": "CIFS-Zertifizierung | Aegryn Grade Protokoll",
-        "desc": "Jedes Asset wird vor der Listung über 4 Dimensionen bewertet (Code, IP, Finanzen, Sicherheit). Kein nicht zertifiziertes Asset wird zugelassen.",
+        "title": "CIFSO-5000-Zertifizierung: Aegryn-Grade-Protokoll",
+        "desc": "Jede Organisation wird in 5 CIFSO-Dimensionen (Code, IP, Finanzen, Sicherheit, Organisation) nach dokumentierter Methodik bewertet.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Zertifizierung",
-        "title": "5-Stufen-Bewertungsskala, B bis AEG ★",
-        "desc": "Objektives und unveränderliches Bewertungssystem: B, A, AA, AAA, AEG ★. Jeder Grade spiegelt einen zertifizierbaren Reifegrad wider.",
+        "title": "5-Grade-Skala: B bis AEG ★",
+        "desc": "Objektives und unveränderliches Bewertungssystem: B, A, AA, AAA, AEG ★. Jeder Grade beruht auf überprüfbaren Kriterien.",
         "live": true
       },
       {
         "iconKey": "escrow",
-        "theme": "Transaktion",
-        "title": "Institutionelles Escrow",
-        "desc": "Gelder werden auf einem von Aegryn kontrollierten Treuhandkonto bis zum Closing gehalten. Maximale Sicherheit für alle Parteien.",
+        "theme": "Mandate",
+        "title": "Institutionelles Treuhandkonto",
+        "desc": "Bei Übertragungsmandaten fliessen die Mittel über ein kontrolliertes Treuhandkonto bis zum Closing.",
         "live": true
       },
       {
         "iconKey": "nda",
         "theme": "Compliance",
         "title": "Automatisiertes digitales NDA",
-        "desc": "Der Zugang zum Asset-Dossier ist an die Unterzeichnung eines NDA gebunden. Vertraulichkeit standardmäßig garantiert, ohne manuellen Eingriff.",
+        "desc": "Der Zugang zu vertraulichen Dossiers setzt die Unterzeichnung eines NDA voraus. Garantierte Vertraulichkeit.",
         "live": true
       },
       {
         "iconKey": "closing",
-        "theme": "Transaktion",
-        "title": "On-demand Closing-Vermittlung",
-        "desc": "Netzwerk von Experten auf Abruf: Anwälte, Notare, auf M&A-Tech spezialisierte Steuerberater.",
+        "theme": "Mandate",
+        "title": "Experten on-demand",
+        "desc": "Expertennetzwerk, mobilisierbar nach Bedarf des Mandats: Anwälte, Notare, Steuerberater.",
         "live": true
       },
       {
         "iconKey": "swissLaw",
-        "theme": "Rechtlich",
-        "title": "100% Schweizer Recht",
-        "desc": "Alle Transaktionen unterliegen Schweizer Recht, unabhängig von der Nationalität des Verkäufers oder Käufers.",
+        "theme": "Recht",
+        "title": "Schweizer Recht zu 100 %",
+        "desc": "Alle Mandate unterliegen Schweizer Recht, unabhängig von der Nationalität der Parteien.",
         "live": true
       },
       {
         "iconKey": "sessions",
-        "theme": "Katalog",
-        "title": "Private Verkaufssessionen",
-        "desc": "Strukturierte Sessions, die zertifizierte Tech-Assets qualifizierten Käufern in einem vertraulichen Rahmen präsentieren.",
+        "theme": "Dossiers",
+        "title": "Vertrauliche Sessions",
+        "desc": "Strukturierte Präsentationen zertifizierter Dossiers an qualifizierte Parteien, im Rahmen von Mandaten.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Katalog",
-        "title": "Multi-Asset-Filterung nach Grade, Kategorie und ARR",
-        "desc": "Erweiterte Katalognavigation: Filter nach Aegryn-Grade, Asset-Typ und ARR-Bewertungsrahmen.",
+        "theme": "Dossiers",
+        "title": "Filterung nach Grade, Kategorie und Kennzahlen",
+        "desc": "Erweiterte Navigation in den Dossiers: Filter nach Aegryn-Grade, Organisationstyp und Kennzahlen.",
         "live": true
       },
       {
         "iconKey": "buyers",
-        "theme": "Käufer",
-        "title": "Käuferqualifizierung",
-        "desc": "Jeder Käufer wird vor dem Zugang zu Sessions qualifiziert. Erwerbskapazität und Absichten vorab überprüft.",
+        "theme": "Parteien",
+        "title": "Qualifizierung der Parteien",
+        "desc": "Jede Partei wird vor dem Zugang zu geschützten Dossiers qualifiziert. Kapazität und Absicht geprüft.",
         "live": true
       },
       {
         "iconKey": "dataRoom",
-        "theme": "Käufer",
-        "title": "NDA-gesicherter Datenraum",
-        "desc": "Zugang zu vollständigen Dossiers, Finanz- und Rechtsdokumenten in einer gesicherten Umgebung nach NDA-Unterzeichnung.",
+        "theme": "Parteien",
+        "title": "Gesicherter Datenraum unter NDA",
+        "desc": "Zugang zu vollständigen Dossiers, Finanz- und Rechtsdokumenten in einer gesicherten Umgebung.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Verkäufer",
-        "title": "Online-Asset-Einreichung",
-        "desc": "Geführter Einreichungsprozess: Informationen, Dokumente, Bewertungszahlung. Vollständig online.",
+        "theme": "Organisationen",
+        "title": "Online-Einreichung der Organisation",
+        "desc": "Geführter Einreichungsprozess: Angaben, Dokumente, Erstbewertung.",
         "live": true
       },
       {
         "iconKey": "dueDiligence",
-        "theme": "Verkäufer",
-        "title": "Vorab-validierte Due-Diligence",
-        "desc": "Der Aegryn-Grade-Bericht ersetzt teilweise die Käufer-Due-Diligence und verkürzt den Zeitplan um 30 bis 45 Tage.",
+        "theme": "Organisationen",
+        "title": "Vorvalidierte Due Diligence",
+        "desc": "Der Aegryn-Grade-Bericht ersetzt die Due Diligence teilweise und verkürzt den Kalender.",
         "live": true
       },
       {
         "iconKey": "certifiers",
         "theme": "Partner",
-        "title": "CIFS-Zertifizierer-Netzwerk",
-        "desc": "Expertenpartnerprogramm: Zertifizierungsmandate, Missions-Dashboard, getrackte Provisionen.",
+        "title": "CIFSO-Zertifizierer-Netzwerk",
+        "desc": "Experten-Partnerprogramm: Zertifizierungsmandate, Missions-Dashboard.",
         "live": true
       },
       {
         "iconKey": "referral",
         "theme": "Partner",
         "title": "Empfehlungsprogramm",
-        "desc": "Expertenpartner können andere Zertifizierer empfehlen. Abonnement-Credits angeboten, 6-Monats-Deckel.",
+        "desc": "Partnerexperten können weitere Zertifizierer empfehlen. Abonnementguthaben.",
         "live": true
       },
       {
         "iconKey": "kyc",
         "theme": "Compliance",
         "title": "Multi-Rollen-KYC",
-        "desc": "Integrierte Identitätsprüfung für Käufer, Verkäufer und Partner. AML-Konformität ab dem Onboarding.",
+        "desc": "Integrierte Identitätsprüfung für Kunden, Partner und Mandatsparteien. Schweizer Compliance.",
         "live": true
       },
       {
         "iconKey": "intelligence",
-        "theme": "Intelligenz",
+        "theme": "Intelligence",
         "title": "Blog & Marktberichte",
-        "desc": "Fundierte Artikel, Fallstudien und Berichte über den europäischen Tech-M&A-Markt, erstellt von Aegryn-Teams.",
+        "desc": "Fundierte Artikel, Fallstudien und Berichte zum europäischen Tech-Markt.",
         "live": true
       },
       {
         "iconKey": "international",
         "theme": "Markt",
-        "title": "Internationale Offenheit",
-        "desc": "Assets und Parteien aus aller Welt zugelassen. Keine geografischen Einschränkungen hinsichtlich Nationalität.",
+        "title": "Internationale Reichweite",
+        "desc": "Organisationen und Parteien aus aller Welt zugelassen. Keine geografische Einschränkung.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Katalog",
+        "theme": "Dossiers",
         "title": "Personalisierte Benachrichtigungen",
-        "desc": "Benachrichtigungen über neue Sessions, Grade-Updates und Transaktionsstatus anhand käuferdefinierter Kriterien.",
+        "desc": "Alerts zu neuen Zertifizierungen, Grade-Aktualisierungen und Dossier-Status.",
         "live": false
       },
       {
         "iconKey": "api",
         "theme": "Tech & API",
-        "title": "Institutionelle Partner-API",
-        "desc": "Programmatischer Zugang zu veröffentlichten Grades und Marktdaten für Partnerplattformen und institutionelle Fonds.",
+        "title": "API für institutionelle Partner",
+        "desc": "Programmatischer Zugang zu veröffentlichten Grades und Marktdaten für Partnerplattformen.",
         "live": false
       },
       {
         "iconKey": "onChain",
         "theme": "Protokoll",
-        "title": "CIFS-Erweiterung auf digitale Assets",
-        "desc": "Erweiterung des CIFS-Protokolls auf Utility-Token und DeFi-Protokolle. Schweizer Rechtsrahmen auf On-Chain-Assets angewendet.",
+        "title": "CIFSO-Erweiterung auf digitale Assets",
+        "desc": "Erweiterung des CIFSO-Protokolls auf Utility-Token und DeFi-Protokolle. Rechtsrahmen in Strukturierung.",
         "live": false
       }
     ],
     "currentLabel": "Bereits verfügbar",
     "current": [
-      "Private Verkaufssessionen",
-      "Aegryn Grade-Zertifizierung : CIFS-Protokoll",
-      "Institutionelles Escrow",
+      "Aegryn-Grade-Zertifizierung: CIFSO-5000-Protokoll",
+      "Begleitung der fünf Lebenszyklusphasen (Valoriser)",
+      "Institutionelles Treuhandkonto bei Übertragungsmandaten",
       "Automatisiertes digitales NDA",
-      "Käuferqualifizierung und Käuferportal",
-      "Verkäuferportal, Asset-Einreichung und -Tracking",
-      "CIFS-Zertifizierer-Partnernetzwerk",
+      "Qualifizierung der Parteien und dedizierte Bereiche",
+      "Zertifizierungsbereich: Einreichung und Dossierverfolgung",
+      "CIFSO-Zertifizierer-Partnernetzwerk",
       "Integriertes Multi-Rollen-KYC",
-      "Katalogfilterung nach Grade, Kategorie und ARR"
+      "Dossierfilterung nach Grade, Kategorie und Kennzahlen"
     ],
-    "cta": "Asset zum Verkauf einreichen",
+    "cta": "Meine Organisation einreichen",
     "ctaSecondary": "Mehr über den Grade erfahren"
   },
   "discover": {
@@ -8084,7 +8084,8 @@
     "valoriserCroissance": "Wachstum & Skalierung",
     "valoriserRestructuration": "Restrukturierung & Pivot",
     "valoriserAcquisition": "Akquisition & externes Wachstum",
-    "valoriserTransmission": "Übertragung & Zession"
+    "valoriserTransmission": "Übertragung & Zession",
+    "roadmap": "Roadmap"
   },
   "clientTransaction": {
     "eyebrow": "Käuferbereich",

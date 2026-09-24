@@ -2128,46 +2128,46 @@
   },
   "roadmapPage": {
     "meta": {
-      "title": "Platform | Aegryn M&A Switzerland",
-      "desc": "The Aegryn M&A Switzerland platform: certification, private sessions, Swiss law, international openness."
+      "title": "Roadmap | Aegryn",
+      "desc": "The Aegryn roadmap: CIFSO 5000 certification, organisational lifecycle support, valuation index and expert network."
     },
-    "label": "Aegryn M&A Switzerland",
+    "label": "Aegryn — Swiss group",
     "title": "The platform.\nIts features.",
-    "desc": "Every sale is conducted exclusively through Aegryn M&A Switzerland. Swiss law applies. Sellers and buyers from anywhere in the world are welcome.",
-    "swissNote": "Swiss law governs every transaction, regardless of the asset's origin or the parties' nationality.",
+    "desc": "Aegryn supports technology organisations at every stage of their lifecycle: certification, valuation, advisory, talent, transfer. Every mandate is governed by Swiss law.",
+    "swissNote": "Swiss law applies to every mandate, whatever the origin of the organisation or the nationality of the parties.",
     "featuresLabel": "What the platform offers",
     "features": {
       "certification": {
-        "title": "Aegryn Grade Certification",
-        "desc": "Every asset listed for sale is certified under the CIFS protocol before any session. No uncertified asset is admitted."
+        "title": "Aegryn Grade certification",
+        "desc": "Every organisation is assessed under the CIFSO 5000 protocol across 5 dimensions before any engagement."
       },
       "swissLaw": {
-        "title": "Swiss Law : 100%",
-        "desc": "All transactions are governed by Swiss law, regardless of the nationality of the seller or buyer."
+        "title": "Swiss law: 100%",
+        "desc": "All mandates are governed by Swiss law, whatever the nationality of the parties."
       },
       "international": {
-        "title": "International Openness",
-        "desc": "Qualified sellers and buyers from around the world. No geographic restrictions on the origin of assets or parties."
+        "title": "International reach",
+        "desc": "Qualified organisations and partners worldwide. No geographic restriction on origin."
       },
       "nda": {
         "title": "Systematic NDA",
-        "desc": "Access to the asset dossier is conditional on signing an NDA. Confidentiality guaranteed by default."
+        "desc": "Access to confidential files is conditional on signing an NDA. Confidentiality guaranteed at every step."
       },
       "escrow": {
-        "title": "Institutional Escrow",
-        "desc": "Funds are held in an institutional escrow account controlled by Aegryn until closing."
+        "title": "Institutional escrow",
+        "desc": "Within transfer mandates, funds flow through a controlled institutional escrow account until closing."
       },
       "buyers": {
-        "title": "Qualified Buyers",
-        "desc": "Every buyer is qualified before accessing sessions. Acquisition capacity and intentions verified."
+        "title": "Qualified parties",
+        "desc": "Every stakeholder is qualified before accessing protected files. Capacity and intent verified."
       },
       "dueDiligence": {
-        "title": "Pre-validated Due Diligence",
-        "desc": "The Aegryn Grade report partially replaces due diligence, compressing the timeline by 30 to 45 days."
+        "title": "Pre-validated due diligence",
+        "desc": "The Aegryn Grade report partially replaces due diligence and compresses the operations timeline."
       },
       "transaction": {
-        "title": "On-demand closing connections",
-        "desc": "Access to Aegryn's expert network (lawyers, notaries, tax advisors) mobilisable according to the specific needs of the transaction."
+        "title": "On-demand experts",
+        "desc": "Access to the Aegryn expert network (lawyers, notaries, tax advisers) mobilised as the mandate requires."
       }
     },
     "roadmapLabel": "20 key features",
@@ -2177,157 +2177,157 @@
       {
         "iconKey": "certification",
         "theme": "Certification",
-        "title": "CIFS Certification | Aegryn Grade Protocol",
-        "desc": "Every asset is assessed across 4 dimensions (Code, IP, Finance, Security) before any listing. No uncertified asset is admitted.",
+        "title": "CIFSO 5000 certification: Aegryn Grade protocol",
+        "desc": "Every organisation is assessed across 5 CIFSO dimensions (Code, IP, Finance, Security, Organisation) under a documented methodology.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certification",
-        "title": "5-grade scale, B to AEG ★",
-        "desc": "Objective and immutable rating system: B, A, AA, AAA, AEG ★. Each grade reflects a certifiable level of maturity.",
+        "title": "5-grade scale: B to AEG ★",
+        "desc": "Objective and immutable rating system: B, A, AA, AAA, AEG ★. Each grade rests on verifiable criteria.",
         "live": true
       },
       {
         "iconKey": "escrow",
-        "theme": "Transaction",
+        "theme": "Mandates",
         "title": "Institutional escrow",
-        "desc": "Funds are held in an escrow account controlled by Aegryn until closing. Maximum security for all parties.",
+        "desc": "In transfer mandates, funds flow through a controlled escrow account until closing.",
         "live": true
       },
       {
         "iconKey": "nda",
         "theme": "Compliance",
         "title": "Automated digital NDA",
-        "desc": "Access to the asset dossier is conditional on signing an NDA. Confidentiality guaranteed by default, without manual intervention.",
+        "desc": "Access to confidential files is conditional on signing an NDA. Guaranteed confidentiality.",
         "live": true
       },
       {
         "iconKey": "closing",
-        "theme": "Transaction",
-        "title": "On-demand closing connections",
-        "desc": "Network of experts mobilisable according to transaction needs: lawyers, notaries, M&A tech tax specialists.",
+        "theme": "Mandates",
+        "title": "On-demand experts",
+        "desc": "Expert network mobilised as the mandate requires: lawyers, notaries, tax advisers.",
         "live": true
       },
       {
         "iconKey": "swissLaw",
         "theme": "Legal",
-        "title": "100% Swiss law",
-        "desc": "All transactions are governed by Swiss law, regardless of the nationality of the seller or buyer.",
+        "title": "Swiss law at 100%",
+        "desc": "All mandates are governed by Swiss law, whatever the nationality of the parties.",
         "live": true
       },
       {
         "iconKey": "sessions",
-        "theme": "Catalogue",
-        "title": "Private sale sessions",
-        "desc": "Structured sessions presenting certified tech assets to qualified buyers in a confidential setting.",
+        "theme": "Dossiers",
+        "title": "Confidential sessions",
+        "desc": "Structured presentations of certified dossiers to qualified parties, within mandates.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogue",
-        "title": "Multi-asset filtering by grade, category and ARR",
-        "desc": "Advanced catalogue navigation: filters by Aegryn grade, asset type and ARR valuation range.",
+        "theme": "Dossiers",
+        "title": "Filtering by grade, category and metrics",
+        "desc": "Advanced navigation across dossiers: filters by Aegryn grade, organisation type and metrics.",
         "live": true
       },
       {
         "iconKey": "buyers",
-        "theme": "Buyers",
-        "title": "Buyer qualification",
-        "desc": "Every buyer is qualified before accessing sessions. Acquisition capacity and intentions verified upfront.",
+        "theme": "Parties",
+        "title": "Party qualification",
+        "desc": "Every party is qualified before accessing protected files. Capacity and intent verified.",
         "live": true
       },
       {
         "iconKey": "dataRoom",
-        "theme": "Buyers",
-        "title": "NDA-secured data room",
-        "desc": "Access to full dossiers, financial and legal documents in a secure environment after NDA signature.",
+        "theme": "Parties",
+        "title": "Secure data room under NDA",
+        "desc": "Access to complete files, financial and legal documents in a secure environment.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Sellers",
-        "title": "Online asset submission",
-        "desc": "Guided submission process: information, documents, evaluation payment. Fully online.",
+        "theme": "Organisations",
+        "title": "Online organisation submission",
+        "desc": "Guided submission process: information, documents, initial evaluation.",
         "live": true
       },
       {
         "iconKey": "dueDiligence",
-        "theme": "Sellers",
+        "theme": "Organisations",
         "title": "Pre-validated due diligence",
-        "desc": "The Aegryn Grade report partially replaces buyer due diligence, compressing the timeline by 30 to 45 days.",
+        "desc": "The Aegryn Grade report partially replaces due diligence and compresses the timeline.",
         "live": true
       },
       {
         "iconKey": "certifiers",
         "theme": "Partners",
-        "title": "CIFS certifier network",
-        "desc": "Expert partner programme: certification mandates, mission dashboard, tracked commissions.",
+        "title": "CIFSO certifier network",
+        "desc": "Expert partner programme: certification mandates, mission dashboard.",
         "live": true
       },
       {
         "iconKey": "referral",
         "theme": "Partners",
         "title": "Referral programme",
-        "desc": "Expert partners can refer other certifiers. Subscription credits offered, 6-month cap.",
+        "desc": "Partner experts can refer other certifiers. Subscription credits.",
         "live": true
       },
       {
         "iconKey": "kyc",
         "theme": "Compliance",
         "title": "Multi-role KYC",
-        "desc": "Integrated identity verification for buyers, sellers and partners. AML compliance from onboarding.",
+        "desc": "Integrated identity verification for clients, partners and parties to mandates. Swiss compliance.",
         "live": true
       },
       {
         "iconKey": "intelligence",
         "theme": "Intelligence",
         "title": "Blog & market reports",
-        "desc": "In-depth articles, case studies and reports on the European tech M&A market, produced by Aegryn teams.",
+        "desc": "In-depth articles, case studies and reports on the European tech market.",
         "live": true
       },
       {
         "iconKey": "international",
         "theme": "Market",
-        "title": "International openness",
-        "desc": "Assets and parties from anywhere in the world admitted. No geographic restrictions on seller or buyer nationality.",
+        "title": "International reach",
+        "desc": "Organisations and parties worldwide admitted. No geographic restriction.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Catalogue",
+        "theme": "Dossiers",
         "title": "Personalised alert notifications",
-        "desc": "Alerts on new sessions, grade updates and transactional statuses based on buyer-defined criteria.",
+        "desc": "Alerts on new certifications, grade updates and dossier statuses.",
         "live": false
       },
       {
         "iconKey": "api",
         "theme": "Tech & API",
         "title": "Institutional partner API",
-        "desc": "Programmatic access to published grades and market data for partner platforms and institutional funds.",
+        "desc": "Programmatic access to published grades and market data for partner platforms.",
         "live": false
       },
       {
         "iconKey": "onChain",
         "theme": "Protocol",
-        "title": "CIFS extension to digital assets",
-        "desc": "Extension of the CIFS protocol to utility tokens and DeFi protocols. Swiss legal framework applied to on-chain assets.",
+        "title": "CIFSO extension to digital assets",
+        "desc": "Extension of the CIFSO protocol to utility tokens and DeFi protocols. Legal framework under structuring.",
         "live": false
       }
     ],
     "currentLabel": "Already available",
     "current": [
-      "Private sale sessions",
-      "Aegryn Grade certification, CIFS protocol",
-      "Institutional escrow",
+      "Aegryn Grade certification: CIFSO 5000 protocol",
+      "Support across the five lifecycle stages (Valoriser)",
+      "Institutional escrow on transfer mandates",
       "Automated digital NDA",
-      "Buyer qualification and buyer portal",
-      "Seller portal, asset submission and tracking",
-      "CIFS certifier partner network",
+      "Party qualification and dedicated spaces",
+      "Certification space: submission and dossier tracking",
+      "CIFSO certifier partner network",
       "Integrated multi-role KYC",
-      "Catalogue filtering by grade, category and ARR"
+      "Dossier filtering by grade, category and metrics"
     ],
-    "cta": "Submit an asset for sale",
+    "cta": "Submit my organisation",
     "ctaSecondary": "Learn more about the Grade"
   },
   "discover": {
@@ -8099,7 +8099,8 @@
     "valoriserCroissance": "Growth & Scaling",
     "valoriserRestructuration": "Restructuring & Pivot",
     "valoriserAcquisition": "Acquisition & External Growth",
-    "valoriserTransmission": "Transfer & Cession"
+    "valoriserTransmission": "Transfer & Cession",
+    "roadmap": "Roadmap"
   },
   "clientTransaction": {
     "eyebrow": "Buyer space",
