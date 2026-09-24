@@ -4926,18 +4926,18 @@
   "alliances": {
     "meta": {
       "title": "Partenaires | Aegryn",
-      "desc": "Partenaires de certification, de distribution et de flux de transactions. Aegryn sélectionne ses partenaires avec la même rigueur que ses actifs."
+      "desc": "Partenaires de certification, de conseil et d'expertise. Aegryn sélectionne ses partenaires avec la même rigueur que ses standards."
     },
     "hero": {
       "label": "Partenariats Aegryn",
       "title": "Notre réseau.\nNotre force.",
-      "desc": "Aegryn opère avec un réseau de partenaires experts, soigneusement sélectionnés par discipline. Juridique, technique, financier, conseil, assurance : chaque partenaire renforce notre capacité à accompagner des transactions complexes avec les meilleurs experts du marché."
+      "desc": "Aegryn opère avec un réseau de partenaires experts, soigneusement sélectionnés par discipline. Juridique, technique, financier, conseil, assurance : chaque partenaire renforce notre capacité à accompagner la création de valeur à chaque étape du cycle de vie d'une organisation."
     },
     "types": {
       "certification": {
         "label": "Certification",
         "title": "Réseau d'experts Aegryn",
-        "desc": "Cabinets juridiques tech, experts-comptables, partenaires cybersécurité. Rejoignez le premier cercle de partenaires appelés à enrichir le protocole Aegryn Grade d'une revue croisée, à mesure que ce dispositif se déploie.",
+        "desc": "Cabinets juridiques tech, experts-comptables, partenaires cybersécurité. Rejoignez le premier cercle de partenaires appelés à enrichir le protocole de certification CIFSO 5000 d'une revue croisée, à mesure que ce dispositif se déploie.",
         "cta": "Devenir partenaire certification",
         "dimensions": {
           "C": {
@@ -4984,17 +4984,17 @@
       },
       "distribution": {
         "label": "Distribution",
-        "title": "Accès au deal flow",
-        "desc": "Family offices, banques privées, fonds. Vos clients accèdent en priorité aux actifs Grade A/B avant tout listing. Accès privilégié à notre deal flow certifié.",
+        "title": "Accès aux missions",
+        "desc": "Family offices, banques privées, fonds. Vos clients accèdent en priorité aux organisations certifiées et aux missions de valorisation en cours.",
         "profiles": "Banques privées suisses · Family offices · Gérants de fortune",
         "cta": "Explorer le partenariat distribution"
       },
       "dealflow": {
-        "label": "Deal Flow",
+        "label": "Apport d'affaires",
         "title": "Apporteurs d'affaires",
-        "desc": "Fonds VC/PE, cabinets M&A, accélérateurs tech. Référencez des actifs à céder ou des acquéreurs actifs. Conditions de partenariat définies lors de l'entretien de qualification.",
+        "desc": "Fonds VC/PE, cabinets M&A, accélérateurs tech. Signalez des organisations à accompagner : certification, valorisation, préparation à la transmission ou à l'acquisition externe. Conditions de partenariat définies lors de l'entretien de qualification.",
         "profiles": "Fonds micro-PE · Cabinets M&A boutique · Accélérateurs tech · FONGIT",
-        "cta": "Référencer un actif ou un acquéreur"
+        "cta": "Référencer une organisation"
       },
       "advisory_tech": {
         "label": "Conseil Tech",
@@ -5006,7 +5006,7 @@
       "advisory_transaction": {
         "label": "Conseil Transaction",
         "title": "Experts M&A tech",
-        "desc": "Partenaires mobilisés à chaque étape du cycle de transaction, de la préparation cession au closing et à l'intégration post-acquisition.",
+        "desc": "Partenaires mobilisés à chaque étape de la croissance externe et de la transmission, de la préparation au closing et à l'intégration post-acquisition.",
         "profiles": "Cabinets IP & tech (chaîne de titres, licences) · Avocats M&A transactionnels (SPA, SHA, APA) · Experts-comptables & commissaires aux comptes · Fiscalistes corporate (CH/FR/LU) · Cabinets RH & droit social · Assureurs W&I (AIG, Tokio Marine) · Experts due diligence sectorielle (FinTech, HealthTech, IA)",
         "cta": "Devenir partenaire Conseil Transaction"
       },
@@ -5021,7 +5021,7 @@
         "label": "SÉQUESTRE & JURIDIQUE",
         "profiles": "Banques dépositaires · Cabinets juridiques transactionnels",
         "title": "Séquestre & Partenaires juridiques",
-        "desc": "Banques dépositaires et cabinets juridiques transactionnels qui structurent et sécurisent les mécanismes d'escrow et de closing.",
+        "desc": "Banques dépositaires et cabinets juridiques transactionnels qui structurent et sécurisent les mécanismes d'escrow et de closing dans le cadre des transmissions et acquisitions accompagnées.",
         "cta": "Rejoindre en tant que partenaire juridique"
       },
       "technique": {
@@ -5046,8 +5046,8 @@
       "typePlaceholder": "Choisir un type",
       "typeOptions": {
         "certification": "Certification (réseau d'experts)",
-        "distribution": "Distribution (membership acquéreurs)",
-        "dealflow": "Deal flow (apport d'affaires)",
+        "distribution": "Distribution (accès privilégié)",
+        "dealflow": "Apport d'affaires",
         "other": "Autre"
       },
       "country": "Pays",
@@ -5080,7 +5080,7 @@
       "advisory_transaction": "Conseil Transaction",
       "certification": "Certification",
       "distribution": "Distribution",
-      "dealflow": "Deal Flow",
+      "dealflow": "Apport d'affaires",
       "apply": "Candidature",
       "sequestre": "Séquestre",
       "technique": "Technique",
@@ -5089,7 +5089,7 @@
     },
     "disciplines": {
       "label": "LES 6 DISCIPLINES DU RÉSEAU",
-      "intro": "Notre réseau couvre l'intégralité de la chaîne de valeur d'une transaction tech.",
+      "intro": "Notre réseau couvre l'intégralité des expertises nécessaires à la valorisation d'une organisation, à chaque étape de son cycle de vie.",
       "items": [
         {
           "num": "01",
@@ -5148,8 +5148,8 @@
         {
           "num": "04",
           "id": "dealflow",
-          "title": "Deal Flow & Distribution",
-          "desc": "Accès à un cercle d'acquéreurs qualifiés sous NDA.",
+          "title": "Apport d'affaires & Distribution",
+          "desc": "Accès à un cercle de partenaires financiers et industriels qualifiés.",
           "tags": [
             "Family offices",
             "Fonds de Private Equity",
@@ -5206,7 +5206,7 @@
     "alliancePartners": {
       "label": "PARTENAIRES ALLIANCE",
       "title": "Des partenaires qui partagent notre standard.",
-      "desc": "Les Partenaires Alliance sont des organisations ayant signé un accord de partenariat formel avec Aegryn. Ils bénéficient d'un accès prioritaire aux opportunités de deal flow, d'une visibilité sur les transactions offmarket et d'une collaboration directe sur les transactions en cours.",
+      "desc": "Les Partenaires Alliance sont des organisations ayant signé un accord de partenariat formel avec Aegryn. Ils bénéficient d'un accès prioritaire aux missions de certification et de valorisation, d'une visibilité sur les dossiers confidentiels et d'une collaboration directe sur les mandats en cours.",
       "cta": "Devenir Partenaire Alliance →",
       "ctaHref": "/alliances?tab=apply"
     }
