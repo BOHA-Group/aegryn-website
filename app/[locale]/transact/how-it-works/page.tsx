@@ -34,7 +34,7 @@ const STEP_ICONS = [
   <Landmark     key="6" size={22} className="text-ag-apex-ink" />,
 ]
 const STEP_SIDES = ['seller', 'seller', 'aegryn', 'aegryn', 'both', 'aegryn'] as const
-const STEP_CTAS = ['/valuation', '/transact/submit', '/grade/brochure', '/transact/buyers', null, null] as const
+const STEP_CTAS = ['/valuation', '/transact/submit', '/grade/brochure', '/valoriser/acquisition', null, null] as const
 
 const SIDE_COLORS: Record<string, string> = {
   seller: 'bg-blue-50 text-blue-700 border-blue-200',
@@ -71,11 +71,11 @@ export default async function HowItWorksPage({ params }: Props) {
             {t('heroDesc')}
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/transact/sell"
+            <Link href="/valoriser/transmission"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:bg-ag-apex/90 transition-colors">
               {t('ctaSeller')} <ArrowUpRight size={13} />
             </Link>
-            <Link href="/transact/buyers"
+            <Link href="/valoriser/acquisition"
               className="rounded-lg inline-flex items-center gap-2 border border-white/30 text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-7 py-3.5 hover:border-white/70 transition-colors">
               {t('ctaBuyer')} <ArrowUpRight size={13} />
             </Link>
@@ -179,7 +179,7 @@ export default async function HowItWorksPage({ params }: Props) {
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light">{t('ctaSellerLabel')}</p>
             <h3 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">{t('ctaSellerTitle')}</h3>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('ctaSellerDesc')}</p>
-            <Link href="/transact/sell"
+            <Link href="/valoriser/transmission"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors self-start mt-auto">
               {t('ctaSellerBtn')} <ArrowUpRight size={12} />
             </Link>
@@ -188,7 +188,7 @@ export default async function HowItWorksPage({ params }: Props) {
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">{t('ctaBuyerLabel')}</p>
             <h3 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">{t('ctaBuyerTitle')}</h3>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('ctaBuyerDesc')}</p>
-            <Link href="/transact/buyers"
+            <Link href="/valoriser/acquisition"
               className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:border-ag-black transition-colors self-start mt-auto">
               {t('ctaBuyerBtn')} <ArrowUpRight size={12} />
             </Link>

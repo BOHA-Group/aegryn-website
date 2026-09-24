@@ -137,10 +137,8 @@ Not an auction: no real-time public bidding. A structured, on-demand confidentia
 - /transact/catalog — Live catalog (NDA required for full dossier)
 - /transact/sessions — Session calendar
 - /transact/mandate — Submit sell mandate
-- /transact/sell — Seller funnel: valuation + readiness score
 - /transact/how-it-works — Full 6-step process
 - /transact/submit — Asset submission form
-- /transact/buyers — Buyer pre-qualification (KYC + proof of funds)
 - /transact/bid-models — Detailed offer structures
 - /transact/results — Past transaction results
 
@@ -304,10 +302,8 @@ Incorporated: Aegryn, Switzerland
 | Catalog | /fr/transact/catalog | Live assets for sale |
 | Sessions | /fr/transact/sessions | Session calendar |
 | Mandate | /fr/transact/mandate | Sell mandate submission |
-| Sell | /fr/transact/sell | Seller funnel |
 | How It Works | /fr/transact/how-it-works | 6-step process |
 | Submit | /fr/transact/submit | Asset submission |
-| Buyers | /fr/transact/buyers | Buyer pre-qualification |
 | Bid Models | /fr/transact/bid-models | Offer structures |
 | Results | /fr/transact/results | Past transactions |
 | Grade | /fr/grade | Certification CIFSO 5000 |

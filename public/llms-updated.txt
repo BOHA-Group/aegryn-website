@@ -164,10 +164,8 @@ Key Pages:
 - /transact/catalog — Live assets (NDA required)
 - /transact/sessions — Session calendar
 - /transact/mandate — Submit sell mandate
-- /transact/sell — Seller funnel
 - /transact/how-it-works — 6-step process
 - /transact/submit — Asset submission form
-- /transact/buyers — Buyer pre-qualification (KYC)
 - /transact/bid-models — Offer structures
 - /transact/results — Past transactions
 
@@ -229,7 +227,7 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 - General: contact@boha-group.com
 - Certify: https://aegryn.com/grade/submit
 - Sell: https://aegryn.com/transact/submit
-- Buy: https://aegryn.com/transact/buyers
+- Buy: https://aegryn.com/valoriser/acquisition
 - Advisory: https://aegryn.com/advisory
 - Talent: https://aegryn.com/talent
 - Custom Build: https://aegryn.com/services/build

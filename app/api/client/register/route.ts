@@ -27,13 +27,18 @@ export async function POST(req: NextRequest) {
 
   const { email, password, fullName, primaryRole, roles: rolesParam, role: legacyRole } = parsed.data
 
-  /* Rôles effectifs stockés en BDD */
-  const effectiveRoles: ValidRole[] =
+  /* Rôles effectifs stockés en BDD.
+     Les rôles buyer/seller ne sont plus auto-attribuables à l'inscription
+     (plus d'achat/vente d'actifs tech) — ils sont filtrés même si demandés,
+     l'attribution reste possible uniquement côté admin. */
+  const requested: ValidRole[] =
     rolesParam && rolesParam.length > 0
       ? rolesParam
       : legacyRole
         ? [legacyRole]
         : [primaryRole]
+  const effectiveRoles: ValidRole[] = requested.filter(r => r !== 'buyer' && r !== 'seller')
+  if (effectiveRoles.length === 0) effectiveRoles.push('client')
 
   /* Rôle principal pour les labels email */
   const displayRole = primaryRole ?? legacyRole ?? 'client'

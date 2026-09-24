@@ -30,14 +30,8 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
     ...dataRoomItems,
   ] : []
 
-  /* Espaces secondaires activés (pour les clients avec sous-rôles) */
-  const subSpaceItems = []
-  if (isClient && isBuyer) {
-    subSpaceItems.push({ href: '/client/buyer',   label: 'Espace Acquéreur', icon: 'ShoppingBag' })
-  }
-  if (isClient && isSeller) {
-    subSpaceItems.push({ href: '/client/seller',  label: 'Espace Cédant',    icon: 'Briefcase' })
-  }
+  /* Espaces Acquéreur/Cédant retirés de l'espace compte : les sous-rôles
+     buyer/seller ne sont plus attribués (plus d'achat/vente d'actifs tech). */
 
   /* Pour les comptes non-client (ancienne logique) */
   const legacyBackItems = []
@@ -61,11 +55,6 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
     ...(certificationItems.length > 0 ? [{
       label: 'Certification CIFSO 5000',
       items: certificationItems,
-    }] : []),
-    /* Espaces de transaction (sous-rôles client) */
-    ...(subSpaceItems.length > 0 ? [{
-      label: 'Espaces de transaction',
-      items: subSpaceItems,
     }] : []),
     /* Ancienne logique non-client */
     ...(legacyBackItems.length > 0 ? [{ label: t('navGroupOverview'), items: legacyBackItems }] : []),

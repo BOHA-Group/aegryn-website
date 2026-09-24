@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getUser }                   from '@/lib/supabaseServer'
 import { createServiceClient }       from '@/lib/supabase'
 
-const ACTIVATABLE_ROLES = ['buyer', 'seller', 'partner'] as const
+/* Les rôles buyer/seller ne sont plus auto-activables (plus d'achat/vente
+   d'actifs tech) — seul le profil partenaire reste activable en self-service. */
+const ACTIVATABLE_ROLES = ['partner'] as const
 type ActivatableRole = typeof ACTIVATABLE_ROLES[number]
 
 export async function GET() {
@@ -20,7 +22,7 @@ export async function GET() {
   return NextResponse.json({ roles })
 }
 
-/** Activer un profil supplémentaire (buyer, seller, partner) */
+/** Activer un profil supplémentaire (partner uniquement) */
 export async function POST(req: NextRequest) {
   const user = await getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

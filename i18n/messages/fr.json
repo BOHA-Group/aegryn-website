@@ -83,7 +83,7 @@
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
     "craftTransact": "Valoriser",
-    "craftTransactDesc": "Certification indépendante, valorisation, cession, acquisition",
+    "craftTransactDesc": "Mesurer, certifier et accompagner la valeur à chaque étape du cycle de vie",
     "craftTransactGrade": "Certification CIFSO 5000",
     "craftTransactCatalog": "Transaction offmarket",
     "craftTransactSell": "Transmission & Cession",
@@ -7807,7 +7807,7 @@
           "buyers"
         ],
         "q": "Comment devenir acquéreur membre ?",
-        "a": "Via le formulaire de candidature sur /transact/buyers. Votre candidature est examinée sous 10 jours ouvrés."
+        "a": "L'adhésion acquéreur n'est plus proposée en libre-service. Les projets d'acquisition sont étudiés dans le cadre de notre accompagnement — consultez /valoriser/acquisition ou contactez nos équipes."
       },
       {
         "id": "kyc-docs",

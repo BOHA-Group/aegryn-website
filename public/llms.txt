@@ -103,7 +103,7 @@ Pages: /advisory, /advisory/strategy, /advisory/risk-compliance, /advisory/techn
 Valuing an organisation is not limited to transferring it. Aegryn measures value with the CIFSO Valuation Index, certifies it independently with CIFSO 5000, and accompanies its creation and realisation at every stage of the organisation's lifecycle. Five cycles: Launch & Structuring (build a transmissible, certifiable asset from day one), Growth & Scaling (secure hyper-growth without fragilising governance or technology), Restructuring & Pivot (regain control fast in crisis, cyber incident or regulatory injunction situations), Acquisition & External Growth (independent technical, regulatory and organisational due diligence for buy-side), Transmission & Cession (twelve to thirty-six month vendor readiness before going to market).
 Complementary marketplace tools remain available for structured off-market transactions of digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
 Offer models: Club Deal (lead + up to 4 co-investors, min €100K), Corporate (direct acquisition, min €250K), Fund (PE/VC/FO/Search Fund, min €500K), Equity Stake (partial, SHA-based).
-Pages: /valoriser, /valoriser/lancement, /valoriser/croissance, /valoriser/restructuration, /valoriser/acquisition, /valoriser/transmission, /transact/catalog, /transact/sessions, /transact/mandate, /transact/sell, /transact/how-it-works, /transact/submit, /transact/buyers, /transact/bid-models, /transact/results
+Pages: /valoriser, /valoriser/lancement, /valoriser/croissance, /valoriser/restructuration, /valoriser/acquisition, /valoriser/transmission, /transact/catalog, /transact/sessions, /transact/mandate, /transact/how-it-works, /transact/submit, /transact/bid-models, /transact/results
 
 ### 4. Talent — Executive Tech Recruitment
 Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
@@ -218,10 +218,8 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 - [Catalog](https://aegryn.com/fr/transact/catalog) — Live assets for sale (NDA required)
 - [Sessions](https://aegryn.com/fr/transact/sessions) — Confidential transaction process calendar
 - [Mandate (Sell)](https://aegryn.com/fr/transact/mandate) — Submit a sell mandate
-- [Sell](https://aegryn.com/fr/transact/sell) — Seller funnel: valuation + readiness
 - [How It Works](https://aegryn.com/fr/transact/how-it-works) — 6-step process
 - [Submit](https://aegryn.com/fr/transact/submit) — Asset submission form
-- [Buyers](https://aegryn.com/fr/transact/buyers) — Buyer pre-qualification (KYC)
 - [Bid Models](https://aegryn.com/fr/transact/bid-models) — Offer structures
 - [Results](https://aegryn.com/fr/transact/results) — Past transactions
 

@@ -83,7 +83,7 @@
     "craftSupportAlliances": "Red de socios",
     "craftSupportExperts": "Red de expertos",
     "craftTransact": "Valorizar",
-    "craftTransactDesc": "Certificación independiente, valoración, cesión, adquisición de activos",
+    "craftTransactDesc": "Certificación independiente, valoración, cesión, adquisición",
     "craftTransactGrade": "Certificación CIFSO 5000",
     "craftTransactCatalog": "Catálogo offmarket",
     "craftTransactSell": "Transmisión & Cesión",
@@ -4534,8 +4534,8 @@
         "label": "CEDER UN ACTIVO",
         "title": "¿Desea ceder su activo tech?",
         "desc": "Aegryn acompaña a fundadores y directivos en la estructuración y transmisión de sus activos digitales. Auditoría, valoración, data room, identificación de adquirentes, signing.",
-        "cta": "Depositar un mandato de cesión",
-        "ctaHref": "/transact/sell"
+        "cta": "Enviar a certificación",
+        "ctaHref": "/grade/submit"
       },
       "notifySectorOther": "Otro",
       "notifySectorOtherPlaceholder": "Especifique su sector…",
@@ -7847,7 +7847,7 @@
           "buyers"
         ],
         "q": "¿Cómo me convierto en comprador miembro?",
-        "a": "A través del formulario de candidatura en /transact#membership. Su candidatura es examinada en 10 días hábiles."
+        "a": "La membresía de comprador ya no se ofrece en autoservicio. Los proyectos de adquisición se estudian en el marco de nuestro acompañamiento — consulte /valoriser/acquisition o contacte con nuestro equipo."
       },
       {
         "id": "kyc-docs",

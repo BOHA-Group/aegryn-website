@@ -83,7 +83,7 @@
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
     "craftTransact": "Waarderen",
-    "craftTransactDesc": "Onafhankelijke certificering, waardering, overdracht, acquisitie van assets",
+    "craftTransactDesc": "Onafhankelijke certificering, waardering, overdracht, acquisitie",
     "craftTransactGrade": "Certificering CIFSO 5000",
     "craftTransactCatalog": "Offmarket-catalogus",
     "craftTransactSell": "Overdracht & Verkoop",
@@ -4534,8 +4534,8 @@
         "label": "EEN ASSET VERKOPEN",
         "title": "Wilt u uw tech asset verkopen?",
         "desc": "Aegryn begeleidt oprichters en leidinggevenden bij de structurering en overdracht van hun digitale assets. Audit, waardering, dataroom, identificatie van kopers, signing.",
-        "cta": "Een verkoopsmandaat indienen",
-        "ctaHref": "/transact/sell"
+        "cta": "Indienen voor certificering",
+        "ctaHref": "/grade/submit"
       },
       "notifySectorOther": "Overige",
       "notifySectorOtherPlaceholder": "Geef uw sector op…",
@@ -7862,7 +7862,7 @@
           "buyers"
         ],
         "q": "Hoe word ik lid-koper?",
-        "a": "Via het aanvraagformulier op /transactions#membership. Uw aanvraag wordt binnen 10 werkdagen beoordeeld."
+        "a": "Koperslidmaatschap wordt niet meer in self-service aangeboden. Acquisitieprojecten worden beoordeeld in het kader van onze begeleiding — zie /valoriser/acquisition of neem contact op met ons team."
       },
       {
         "id": "kyc-docs",

@@ -83,7 +83,7 @@
     "craftSupportAlliances": "Partnernetzwerk",
     "craftSupportExperts": "Expertennetzwerk",
     "craftTransact": "Bewerten",
-    "craftTransactDesc": "Unabhängige Zertifizierung, Bewertung, Abtretung, Erwerb von Assets",
+    "craftTransactDesc": "Unabhängige Zertifizierung, Bewertung, Veräußerung, Erwerb",
     "craftTransactGrade": "Zertifizierung CIFSO 5000",
     "craftTransactCatalog": "Offmarket-Katalog",
     "craftTransactSell": "Übergabe & Verkauf",
@@ -4534,8 +4534,8 @@
         "label": "EIN ASSET VERKAUFEN",
         "title": "Möchten Sie Ihr Tech-Asset veräußern?",
         "desc": "Aegryn begleitet Gründer und Führungskräfte bei der Strukturierung und Übertragung ihrer digitalen Assets. Audit, Bewertung, Datenraum, Käuferidentifikation, Signing.",
-        "cta": "Verkaufsmandat einreichen",
-        "ctaHref": "/transact/sell"
+        "cta": "Zur Zertifizierung einreichen",
+        "ctaHref": "/grade/submit"
       },
       "notifySectorOther": "Sonstige",
       "notifySectorOtherPlaceholder": "Ihren Sektor angeben…",
@@ -7847,7 +7847,7 @@
           "buyers"
         ],
         "q": "Wie werde ich Mitglied-Käufer?",
-        "a": "Über das Bewerbungsformular auf /transact#membership. Ihre Bewerbung wird innerhalb von 10 Werktagen geprüft."
+        "a": "Die Käufer-Mitgliedschaft wird nicht mehr im Self-Service angeboten. Akquisitionsprojekte werden im Rahmen unserer Beratung geprüft — siehe /valoriser/acquisition oder kontaktieren Sie unser Team."
       },
       {
         "id": "kyc-docs",

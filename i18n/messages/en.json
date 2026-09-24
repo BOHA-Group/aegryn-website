@@ -83,7 +83,7 @@
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
     "craftTransact": "Value",
-    "craftTransactDesc": "Independent certification, valuation, sale, acquisition of assets",
+    "craftTransactDesc": "Independent certification, valuation, sale, acquisition",
     "craftTransactGrade": "Certification CIFSO 5000",
     "craftTransactCatalog": "Offmarket catalog",
     "craftTransactSell": "Transfer & Sale",
@@ -4659,8 +4659,8 @@
         "label": "SELL AN ASSET",
         "title": "Looking to sell your tech asset?",
         "desc": "Aegryn supports founders and executives in structuring and transferring their digital assets. Audit, valuation, data room, acquirer identification, signing. A discreet and rigorous process.",
-        "cta": "Submit a sale mandate",
-        "ctaHref": "/transact/sell"
+        "cta": "Submit for certification",
+        "ctaHref": "/grade/submit"
       },
       "notifySectorOther": "Other",
       "notifySectorOtherPlaceholder": "Specify your sector…",
@@ -7847,7 +7847,7 @@
           "buyers"
         ],
         "q": "How do I become a member buyer?",
-        "a": "Via the application form at /transactions#membership. Your application is reviewed within 10 working days."
+        "a": "Buyer membership is no longer offered on a self-service basis. Acquisition projects are reviewed as part of our advisory work — see /valoriser/acquisition or contact our team."
       },
       {
         "id": "kyc-docs",

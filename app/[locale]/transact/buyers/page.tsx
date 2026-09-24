@@ -10,7 +10,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'transactBuyers.meta' })
-  return generateAegrynMetadata({
+  const meta = generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
     path: '/transact/buyers',
@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'reprise organisation', 'investisseur institutionnel',
     ],
   })
+  /* Page archivée : fonctionnelle pour les liens existants mais masquée
+     (hors navigation, sitemap et indexation) — repositionnement Valoriser. */
+  return { ...meta, robots: { index: false, follow: false } }
 }
 
 const STEP_NUMS    = ['01', '02', '03', '04']

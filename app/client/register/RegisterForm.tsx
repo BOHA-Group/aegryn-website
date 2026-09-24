@@ -9,9 +9,6 @@ import { ArrowUpRight, Eye, EyeOff, CheckCircle, User, Users, Lock } from 'lucid
 /** Rôle principal sélectionné lors de l'inscription */
 type PrimaryRole = 'client' | 'partner' | 'internal'
 
-/** Sous-rôles optionnels pour un client */
-type ClientSubRole = 'buyer' | 'seller'
-
 function getPasswordStrength(pwd: string): { score: number; rules: boolean[] } {
   const rules = [
     pwd.length >= 8,
@@ -31,21 +28,12 @@ export default function RegisterForm() {
   const [email,       setEmail]       = useState('')
   const [password,    setPassword]    = useState('')
   const [primaryRole, setPrimaryRole] = useState<PrimaryRole>('client')
-  const [subRoles,    setSubRoles]    = useState<Set<ClientSubRole>>(new Set())
   const [show,        setShow]        = useState(false)
   const [loading,     setLoading]     = useState(false)
   const [error,       setError]       = useState('')
   const [success,     setSuccess]     = useState(false)
 
   const strength = getPasswordStrength(password)
-
-  function toggleSubRole(sr: ClientSubRole) {
-    setSubRoles(prev => {
-      const next = new Set(prev)
-      if (next.has(sr)) { next.delete(sr) } else { next.add(sr) }
-      return next
-    })
-  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -64,14 +52,9 @@ export default function RegisterForm() {
     }
 
     try {
-      /* Construire le tableau de rôles à stocker :
-         - client → ['client', ...subRoles]
-         - partner / internal → tel quel
-      */
-      const roles: string[] =
-        primaryRole === 'client'
-          ? ['client', ...Array.from(subRoles)]
-          : [primaryRole]
+      /* Rôles stockés : un seul rôle principal. Les sous-rôles Acquéreur/Cédant
+         ne sont plus proposés à l'inscription (plus d'achat/vente d'actifs). */
+      const roles: string[] = [primaryRole]
 
       const res = await fetch('/api/client/register', {
         method: 'POST',
@@ -136,7 +119,7 @@ export default function RegisterForm() {
     {
       value: 'client',
       label: 'Client',
-      desc:  'Accès à votre espace général, publications, et optionnellement aux espaces Acquéreur et Cédant.',
+      desc:  'Accès à votre espace général, publications et certification CIFSO.',
       icon:  <User size={15} />,
     },
     {
@@ -262,53 +245,6 @@ export default function RegisterForm() {
           ))}
         </div>
       </div>
-
-      {/* Sous-rôles — uniquement si Client */}
-      {primaryRole === 'client' && (
-        <div className="border border-white/10 rounded-lg px-4 py-4 bg-white/3">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-3">
-            Espaces optionnels (activables plus tard)
-          </p>
-          <div className="flex flex-col gap-2">
-            {([
-              { value: 'buyer' as const,  label: 'Acquéreur',  desc: 'Accès au pipeline d\'acquisition et aux offres.' },
-              { value: 'seller' as const, label: 'Cédant',     desc: 'Accès à la gestion de vos actifs et mandats de cession.' },
-            ] as const).map(({ value, label, desc }) => {
-              const active = subRoles.has(value)
-              return (
-                <button
-                  key={value}
-                  type="button"
-                  onClick={() => toggleSubRole(value)}
-                  className={`flex items-start gap-3 px-3 py-2.5 border text-left transition-colors rounded-lg ${
-                    active
-                      ? 'border-ag-apex/60 bg-ag-apex/8 text-white'
-                      : 'border-white/10 text-white/40 hover:border-white/20 hover:text-white/60'
-                  }`}
-                >
-                  {/* Toggle visuel */}
-                  <span className={`w-4 h-4 rounded border-2 flex items-center justify-center mt-0.5 shrink-0 transition-colors ${
-                    active ? 'border-ag-apex bg-ag-apex' : 'border-white/20'
-                  }`}>
-                    {active && (
-                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
-                        <path d="M1 3L3 5L7 1" stroke="#0a0f1e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    )}
-                  </span>
-                  <span className="flex flex-col">
-                    <span className="font-sans font-semibold text-[12px]">{label}</span>
-                    <span className="font-sans text-[10px] text-white/30 mt-0.5">{desc}</span>
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-          <p className="font-sans text-[10px] text-white/20 mt-3 leading-relaxed">
-            Ces espaces seront accessibles mais grisés jusqu'à configuration. Vous pourrez les activer ou les ajouter plus tard depuis votre espace compte.
-          </p>
-        </div>
-      )}
 
       <button
         type="submit"

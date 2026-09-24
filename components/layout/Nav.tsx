@@ -23,6 +23,9 @@ const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Sous-actifs propriétaires (indentés sous craftBuildAssets)
 const CRAFT_BUILD_ASSET_SUBLINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildSubblink',    href: 'https://subblink.com' as LinkHref },
+  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
+  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
+  { labelKey: 'craftTransactVerify',   href: '/verify' as LinkHref },
 ]
 
 // Nos métiers - Support section
@@ -32,17 +35,10 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
   { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
-  { labelKey: 'craftSupportNetworkNew',    href: '/network' as LinkHref },
-  { labelKey: 'craftSupportInvestors',     href: '/investisseurs' as LinkHref },
 ]
 
-// Nos métiers - Valoriser : Introduction, outils Mesurer & Certifier, cycles de vie, réseau
+// Nos métiers - Valoriser : Introduction, cycles de vie, réseau
 const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/valoriser' as LinkHref }
-const CRAFT_TRANSACT_TOOLS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
-  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
-  { labelKey: 'craftTransactVerify',   href: '/verify' as LinkHref },
-]
 const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactLancement',       href: '/valoriser/lancement' as LinkHref },
   { labelKey: 'craftTransactCroissance',      href: '/valoriser/croissance' as LinkHref },
@@ -61,12 +57,12 @@ const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftRecruitExecutiveMA',   href: '/talent' as LinkHref },
 ]
 
-// Nos convictions - Magazine
-const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref }[] = [
+// Nos convictions - Magazine (les éditions à venir sont grisées mais restent cliquables)
+const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref; muted?: boolean }[] = [
   { labelKey: 'thinkingMagazineIssues',   href: '/magazine' },
-  { labelKey: 'thinkingMagazineIssue02',  href: '/magazine' },
-  { labelKey: 'thinkingMagazineIssue03',  href: '/magazine' },
-  { labelKey: 'thinkingMagazineIssue04',  href: '/magazine' },
+  { labelKey: 'thinkingMagazineIssue02',  href: '/magazine', muted: true },
+  { labelKey: 'thinkingMagazineIssue03',  href: '/magazine', muted: true },
+  { labelKey: 'thinkingMagazineIssue04',  href: '/magazine', muted: true },
 ]
 
 // Nos convictions - Notre regard sur le marché
@@ -88,6 +84,8 @@ const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
 const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoCareers',   href: '/career' },
   { labelKey: 'whoAlliances', href: '/alliances' },
+  { labelKey: 'craftSupportNetworkNew', href: '/network' as LinkHref },
+  { labelKey: 'craftSupportInvestors',  href: '/investisseurs' as LinkHref },
 ]
 
 // Mega-menu Nos métiers (4 sections)
@@ -180,18 +178,6 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             >
               {t(CRAFT_TRANSACT_INTRO.labelKey)}
             </Link>
-            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1 mb-1">
-              {CRAFT_TRANSACT_TOOLS.map(({ labelKey, href }) => (
-                <Link
-                  key={labelKey}
-                  href={href}
-                  onClick={onClose}
-                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
-                >
-                  {t(labelKey)}
-                </Link>
-              ))}
-            </div>
             {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
@@ -261,12 +247,14 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
             {t('thinkingMagazineDesc')}
           </div>
           <div className="flex flex-col gap-1">
-            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
+            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href, muted }) => (
               <Link
                 key={labelKey}
                 href={href}
                 onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 whitespace-nowrap"
+                className={`font-sans text-[13px] transition-colors py-1 whitespace-nowrap ${
+                  muted ? 'text-ag-gray-light/70 hover:text-ag-gray' : 'text-ag-gray hover:text-ag-black'
+                }`}
               >
                 {t(labelKey)}
               </Link>
@@ -438,21 +426,23 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
-  const isCraftActive = 
-    isActive('/assets') || isActive('/services/build') || 
-    isActive('/advisory') || isActive('/services/acquisition-support') || 
-    isActive('/alliances') || isActive('/experts') ||
-    isActive('/grade') || isActive('/valoriser')
-  
-  
-  const isThinkingActive = 
+  const isCraftActive =
+    isActive('/assets') || isActive('/services/build') ||
+    isActive('/advisory') || isActive('/services/acquisition-support') ||
+    isActive('/grade') || isActive('/valoriser') ||
+    isActive('/valuation') || isActive('/verify')
+
+
+  const isThinkingActive =
     isActive('/magazine') || isActive('/blog')
-  
+
   const isContactActive = isActive('/contact')
 
-  const isWhoActive = 
-    isActive('/about') || 
-    isActive('/career')
+  const isWhoActive =
+    isActive('/about') ||
+    isActive('/career') || isActive('/alliances') ||
+    isActive('/network') || isActive('/investisseurs') ||
+    isActive('/portfolio') || isActive('/industries')
 
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
@@ -711,29 +701,25 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftBuild')}</p>
                   {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  {/* Sous-actifs propriétaires (mobile) */}
-                  {CRAFT_BUILD_ASSET_SUBLINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
-                      {t(labelKey)}
-                    </Link>
+                    <div key={labelKey} className="flex flex-col">
+                      <Link href={href} onClick={closeMobile}
+                        className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                        {t(labelKey)}
+                      </Link>
+                      {/* Sous-actifs propriétaires (mobile) — imbriqués sous /assets comme sur desktop */}
+                      {labelKey === 'craftBuildAssets' && CRAFT_BUILD_ASSET_SUBLINKS.map((sub) => (
+                        <Link key={sub.labelKey} href={sub.href} onClick={closeMobile}
+                          className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                          {t(sub.labelKey)}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftTransact')}</p>
                   <Link href={CRAFT_TRANSACT_INTRO.href} onClick={closeMobile}
                     className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
                     {t(CRAFT_TRANSACT_INTRO.labelKey)}
                   </Link>
-                  {CRAFT_TRANSACT_TOOLS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
@@ -772,9 +758,9 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               {mobileAccordion === 'thinking' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('thinkingMagazine')}</p>
-                  {THINKING_MAGAZINE_LINKS.map(({ labelKey, href }) => (
+                  {THINKING_MAGAZINE_LINKS.map(({ labelKey, href, muted }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className={`py-1.5 font-sans text-[14px] transition-colors ${muted ? 'text-white/25 hover:text-white/50' : 'text-white/50 hover:text-white'}`}>
                       {t(labelKey)}
                     </Link>
                   ))}
