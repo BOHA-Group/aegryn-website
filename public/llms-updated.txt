@@ -27,17 +27,14 @@ Synthesis: "Aegryn protects what endures."
 
 ## Key Topics & Search Terms
 
-### M&A & Transactions
-transaction tech confidentielle, confidential tech transaction, processus de cession sur mesure, on-demand qualified buyer-seller process,
-buy tech company, sell tech company, acheter entreprise tech, vendre entreprise tech,
-SaaS acquisition, acquisition SaaS, SaaS marketplace, SaaS for sale, acheter SaaS, vendre SaaS,
-M&A tech, mergers acquisitions technology, cession entreprise numérique, acquisition entreprise digitale,
+### Valorisation & Cycle de vie
+valorisation entreprise, company valuation, valeur organisation, organisation value,
+transmission entreprise, business succession, vendor readiness, exit readiness, préparation transmission,
+acquisition advisory, croissance externe, external growth advisory, due diligence tech,
+restructuration entreprise, business restructuring, pivot stratégique, turnaround advisory,
 digital asset valuation, valorisation SaaS, SaaS multiples, ARR multiple, valorisation actif numérique,
-M&A expert network, due diligence tech, W&I insurance, expert M&A tech, réseau experts transactions,
-club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
+M&A expert network, W&I insurance, expert M&A tech, réseau experts transactions,
 AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
-SaaS exit Europe, SaaS exit strategy, sell SaaS Europe, cession SaaS Europe,
-data room cession, NDA cession tech, séquestre suisse M&A, Swiss escrow M&A,
 
 ### Certification & Valuation — CIFSO
 CIFSO 5000, certification CIFSO 5000, protocole CIFSO, CIFSO protocol,
@@ -150,7 +147,7 @@ valuation, post-merger integration
 
 Third step of the Value discipline, after Measure (CIFSO Valuation Index) and Certify (CIFSO 5000). Five lifecycle cycles: Launch & Structuring, Growth & Scaling, Restructuring & Pivot, Acquisition & External Growth, Transmission & Cession.
 
-Complementary marketplace tools remain available through a structured session-based platform for digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
+Structured session-based tools remain available for qualified confidential dossiers of digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
 
 Offer Models: Club Deal (min €100K), Corporate (min €250K), Fund (min €500K), Equity Stake (SHA-based)
 

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { CheckSquare, ShieldCheck, Loader2 } from 'lucide-react'
 
 type Props = {
-  ndaType:  'seller' | 'buyer' | 'partner'
+  ndaType:  'seller' | 'buyer' | 'partner' | 'client'
   version:  string
   redirect: string
   fullName: string

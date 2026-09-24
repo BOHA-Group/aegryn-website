@@ -52,7 +52,7 @@ export default async function AccountPage() {
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, created_at, email_notifications_enabled, partner_nda_accepted_at, partner_nda_version')
+    .select('full_name, roles, created_at, email_notifications_enabled, partner_nda_accepted_at, partner_nda_version, client_nda_accepted_at, client_nda_version')
     .eq('id', user.id)
     .single()
 
@@ -61,6 +61,8 @@ export default async function AccountPage() {
   const p = profile as Record<string, unknown> | null
   const partnerNdaSignedAt = p?.partner_nda_accepted_at as string | null
   const partnerNdaVersion  = p?.partner_nda_version  as string | null
+  const clientNdaSignedAt  = p?.client_nda_accepted_at  as string | null
+  const clientNdaVersion   = p?.client_nda_version   as string | null
 
   const { data: ndaSignatures } = await supa
     .from('nda_signatures')
@@ -190,7 +192,7 @@ export default async function AccountPage() {
         </div>
 
         {/* NDA signés */}
-        {((ndaSignatures && ndaSignatures.length > 0) || partnerNdaSignedAt) && (
+        {((ndaSignatures && ndaSignatures.length > 0) || partnerNdaSignedAt || clientNdaSignedAt) && (
           <div className="bg-white border border-gray-200 p-5 mt-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('ndaTitle')}</p>
             <div className="flex flex-col gap-3">
@@ -215,6 +217,23 @@ export default async function AccountPage() {
                   >
                     {t('ndaView')}
                   </Link>
+                </div>
+              )}
+
+              {/* NDA Client (certification CIFSO — accès données confidentielles) */}
+              {clientNdaSignedAt && (
+                <div className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
+                  <div>
+                    <p className="font-sans text-[13px] text-gray-700 font-medium">
+                      {t('ndaClientTitle')}
+                      <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
+                        {t('ndaSigned')}
+                      </span>
+                    </p>
+                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">
+                      {t('ndaVersion')} {clientNdaVersion ?? '—'} · {new Date(clientNdaSignedAt).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })}
+                    </p>
+                  </div>
                 </div>
               )}
 

@@ -158,9 +158,6 @@ export function ProprietaryAssetsGrid() {
             <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
               {t('publisherNote')}
             </p>
-            <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed">
-              {t('ownedNote')}
-            </p>
           </div>
         </div>
 

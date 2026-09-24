@@ -62,13 +62,12 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
     { key: 'transactions', label: t('filterTransactions') },
   ]
 
+  /* Badges d'avancement masqués pour les statuts internes (dev / non démarré) */
   const statusLabel = (status: string) => {
     if (status === 'live')        return tStatus('live')
     if (status === 'beta')        return tStatus('beta')
-    if (status === 'dev')         return tStatus('dev')
-    if (status === 'not_started') return tStatus('notStarted')
     if (status === 'refused')     return tStatus('refused')
-    return tStatus('dev')
+    return null
   }
 
   const statusColor = (status: string) => {
@@ -135,19 +134,17 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                 <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1 rounded-md">
                   {tItems(`${asset.id}.badge`)}
                 </span>
-                <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
-                  {statusLabel(asset.status)}
-                </span>
+                {statusLabel(asset.status) && (
+                  <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
+                    {statusLabel(asset.status)}
+                  </span>
+                )}
                 {asset.internalOnly && (
                   <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
                     {t('internalOnly')}
                   </span>
                 )}
-                {asset.transactionEligible && (
-                  <span className="rounded-lg font-mono text-[10px] tracking-[0.1em] uppercase text-ag-navy bg-ag-apex/15 border border-ag-apex/30 px-2 py-0.5">
-                    {t('transactionEligible')}
-                  </span>
-                )}
+
               </div>
 
               {/* Tagline */}

@@ -20,16 +20,16 @@ Website: https://aegryn.com
 
 ## Key Topics & Search Terms
 
-transaction tech confidentielle, confidential tech transaction, processus de cession sur mesure, on-demand qualified buyer-seller process,
-buy tech company, sell tech company, acheter entreprise tech, vendre entreprise tech,
-SaaS acquisition, acquisition SaaS, SaaS marketplace, SaaS for sale, acheter SaaS, vendre SaaS,
-M&A tech, mergers acquisitions technology, cession entreprise numérique, acquisition entreprise digitale,
+valorisation entreprise, company valuation, valeur organisation, organisation value, valorisation cycle de vie,
+independent certification, certification indépendante, certified company value, valeur certifiée entreprise,
+CIFSO 5000, CIFSO protocol, protocole CIFSO, CIFSO Valuation Index, AEGRYN Grade,
 digital asset valuation, valorisation SaaS, SaaS multiples, ARR multiple, valorisation actif numérique,
-M&A expert network, due diligence tech, W&I insurance, expert M&A tech, réseau experts transactions,
+entreprise lifecycle, business lifecycle value, transmissibilité entreprise, business transferability,
+transmission entreprise, business succession, vendor readiness, exit readiness, préparation cession,
+due diligence tech, technical due diligence, M&A advisory, acquisition advisory Europe,
+M&A expert network, W&I insurance, expert M&A tech, réseau experts transactions,
 cybersecurity Switzerland, AI audit, EU AI Act compliance, RGPD, Swiss FADP,
 Swiss holding, holding suisse tech, Swiss technology company, Switzerland startup,
-AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
-club deal acquisition, share deal, asset deal, earnout, SPV co-investment,
 digital ecosystem, ecosystem engineering, Engineered to Last,
 asset engineering, conception actif numérique, custom code digital asset,
 certification-ready SaaS, IP propriétaire, zéro dette technique,
@@ -101,7 +101,7 @@ Pages: /advisory, /advisory/strategy, /advisory/risk-compliance, /advisory/techn
 
 ### 3. Valoriser — Measure, Certify, Realise across the organisation lifecycle (at /valoriser)
 Valuing an organisation is not limited to transferring it. Aegryn measures value with the CIFSO Valuation Index, certifies it independently with CIFSO 5000, and accompanies its creation and realisation at every stage of the organisation's lifecycle. Five cycles: Launch & Structuring (build a transmissible, certifiable asset from day one), Growth & Scaling (secure hyper-growth without fragilising governance or technology), Restructuring & Pivot (regain control fast in crisis, cyber incident or regulatory injunction situations), Acquisition & External Growth (independent technical, regulatory and organisational due diligence for buy-side), Transmission & Cession (twelve to thirty-six month vendor readiness before going to market).
-Complementary marketplace tools remain available for structured off-market transactions of digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
+Structured session-based tools remain available for qualified confidential dossiers of digital tech assets (SaaS, B2C, infrastructure), range €100K-€50M, graded assets only, NDA-gated full dossiers.
 Offer models: Club Deal (lead + up to 4 co-investors, min €100K), Corporate (direct acquisition, min €250K), Fund (PE/VC/FO/Search Fund, min €500K), Equity Stake (partial, SHA-based).
 Pages: /valoriser, /valoriser/lancement, /valoriser/croissance, /valoriser/restructuration, /valoriser/acquisition, /valoriser/transmission, /transact/catalog, /transact/sessions, /transact/mandate, /transact/how-it-works, /transact/submit, /transact/bid-models, /transact/results
 

@@ -44,7 +44,7 @@ export default async function PartnerNdaPage() {
         <div className="bg-white border border-gray-200 p-8 mb-6 space-y-6 text-[14px] font-sans text-ag-gray leading-relaxed">
 
           <p className="font-sans font-semibold text-ag-black text-[15px]">
-            Entre Aegryn (, société enregistrée en Suisse) et{' '}
+            Entre Aegryn (société enregistrée en Suisse) et{' '}
             <span className="text-ag-navy">{fullName}</span> (ci-après « le Partenaire »).
           </p>
 
@@ -52,9 +52,11 @@ export default async function PartnerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">1. Objet</h2>
             <p>
               Dans le cadre de la relation de partenariat avec Aegryn — incluant sans limitation l'accès
-              à l'annuaire expert Aegryn, la mise en relation avec des cédants et acquéreurs qualifiés,
-              et la participation au réseau d'introductions — le Partenaire s'engage à la stricte
-              confidentialité des informations auxquelles il a accès.
+              à l'annuaire expert Aegryn, la gestion des mandats qui lui sont confiés, la mise en relation
+              avec des entreprises et parties prenantes qualifiées, et la participation au réseau
+              d'introductions — le Partenaire s'engage à la stricte confidentialité des informations
+              auxquelles il a accès. Le présent accord couvre exclusivement l'accès à des données
+              confidentielles à ne pas divulguer.
             </p>
           </section>
 
@@ -62,12 +64,12 @@ export default async function PartnerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">2. Informations confidentielles</h2>
             <p>Sont considérées comme confidentielles :</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>L'identité et les coordonnées des cédants et acquéreurs introduits ou mis en relation via Aegryn</li>
-              <li>Les informations sur les actifs en cours de certification ou de cession</li>
-              <li>Les conditions financières des transactions et le détail des mandats Aegryn</li>
+              <li>L'identité et les coordonnées des entreprises et parties prenantes introduites ou mises en relation via Aegryn</li>
+              <li>Les données et documents contenus dans les dossiers en cours de certification ou couverts par un mandat</li>
+              <li>Les conditions des mandats Aegryn et le détail des dossiers associés</li>
               <li>Les informations relatives aux autres partenaires du réseau Aegryn</li>
-              <li>Les méthodes, processus et outils propriétaires Aegryn (protocole CIFSO v4.0, grade engine)</li>
-              <li>Toute information transmise dans le cadre d'une introduction ou d'un apport d'affaires</li>
+              <li>Les méthodes, processus et outils propriétaires Aegryn (protocole CIFSO, moteur de grade)</li>
+              <li>Toute information transmise dans le cadre d'une introduction ou d'une mission confiée</li>
             </ul>
           </section>
 
@@ -75,10 +77,10 @@ export default async function PartnerNdaPage() {
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-widest text-ag-black mb-3">3. Obligations du Partenaire</h2>
             <p>Le Partenaire s'engage à :</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>Ne pas contacter directement les cédants ou acquéreurs introduits par Aegryn en dehors du cadre formel de la relation partenariale</li>
+              <li>Ne pas contacter directement les entreprises ou parties prenantes introduites par Aegryn en dehors du cadre formel de la relation partenariale</li>
               <li>Ne pas reproduire, transmettre ou exploiter à titre personnel les informations confidentielles auxquelles il a accès dans l'annuaire expert ou via les mandats</li>
               <li>Ne pas utiliser les mises en relation Aegryn pour contourner le processus et percevoir directement une rétrocession ou contrepartie de toute nature</li>
-              <li>Informer immédiatement Aegryn de tout contact direct initié par un cédant ou acquéreur introduit dans le cadre d'un mandat Aegryn</li>
+              <li>Informer immédiatement Aegryn de tout contact direct initié par une entreprise ou partie prenante introduite dans le cadre d'un mandat Aegryn</li>
               <li>Respecter l'exclusivité territoriale ou sectorielle éventuellement accordée par Aegryn dans le cadre d'un mandat signé</li>
             </ul>
           </section>

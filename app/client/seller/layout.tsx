@@ -17,7 +17,7 @@ export default async function SellerLayout({ children }: { children: React.React
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status, seller_nda_accepted_at, seller_nda_version')
+    .select('full_name, roles, kyc_status, seller_nda_accepted_at, seller_nda_version, client_nda_accepted_at, client_nda_version')
     .eq('id', user.id)
     .single()
 
@@ -32,6 +32,12 @@ export default async function SellerLayout({ children }: { children: React.React
     const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
       && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSIONS.seller
     if (!ndaOk) redirect('/client/nda/seller')
+  } else if (certificationOnly) {
+    /* Client demandeur CIFSO : NDA générique (accès données confidentielles)
+       exigé avant l'ouverture des dossiers et de la data room. */
+    const ndaOk = (profile as Record<string,unknown> | null)?.client_nda_accepted_at
+      && (profile as Record<string,unknown> | null)?.client_nda_version === NDA_VERSIONS.client
+    if (!ndaOk) redirect('/client/nda/client')
   }
 
   const hasBuyer   = roles.includes('buyer')

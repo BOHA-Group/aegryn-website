@@ -218,7 +218,7 @@
     "categories": {
       "ai": "AI & Protocoles",
       "lifestyle": "Services & Lifestyle",
-      "transactions": "Transactions & Réseau"
+      "transactions": "Marchés & Communautés"
     },
     "page": {
       "label": "Écosystème Aegryn",
@@ -231,7 +231,7 @@
       "filterAll": "Tous",
       "filterAI": "AI & Protocoles",
       "filterLifestyle": "Services & Lifestyle",
-      "filterTransactions": "Transactions & M&A",
+      "filterTransactions": "Marchés & Communautés",
       "filterIdentity": "Identité & Confiance",
       "statusLive": "En ligne",
       "statusBeta": "Bêta",
@@ -319,7 +319,7 @@
       "categories": {
         "ai": "AI & Protocoles",
         "lifestyle": "Services & Lifestyle",
-        "transactions": "Transactions & Réseau"
+        "transactions": "Marchés & Communautés"
       },
       "valuation": {
         "badge": "Valorisation · CIFSO",
@@ -699,7 +699,7 @@
     "categories": {
       "ai": "IA & Protocoles",
       "lifestyle": "Services & Lifestyle",
-      "transactions": "Transactions & Réseau",
+      "transactions": "Marchés & Communautés",
       "fintech": "FinTech & Paiements",
       "healthtech": "HealthTech & MedTech",
       "proptech": "PropTech & Immobilier"
@@ -1026,10 +1026,10 @@
         "href": "/grade/submit"
       },
       "buyer": {
-        "title": "Vous cherchez à acquérir.",
-        "desc": "Notre catalogue est réservé aux acquéreurs qualifiés.",
-        "btn": "Déposer une candidature acquéreur",
-        "href": "/transact/how-to-buy"
+        "title": "Vous préparez une acquisition.",
+        "desc": "Due diligence indépendante et certification CIFSO sur votre cible.",
+        "btn": "Découvrir l'accompagnement",
+        "href": "/valoriser/acquisition"
       },
       "partner": {
         "title": "Vous êtes partenaire potentiel.",
@@ -2395,7 +2395,7 @@
     "featuredLabel": "À la une",
     "allArticles": "Tous les articles",
     "ctaGrade": "Certifier mon actif",
-    "ctaTransaction": "Voir les actifs en cession",
+    "ctaTransaction": "Valoriser votre organisation",
     "searchPlaceholder": "Rechercher un article...",
     "noArticles": "Aucun article dans cette catégorie pour l'instant.",
     "newsletterLabel": "Lettre d'information",
@@ -2844,7 +2844,7 @@
     "submit": {
       "label": "Soumettre un actif",
       "title": "Obtenez le grade\nqui donne du prix à votre actif.",
-      "desc": "La certification Aegryn est le passeport de votre actif pour accéder aux acquéreurs institutionnels et au processus de cession offmarket.",
+      "desc": "La certification Aegryn atteste indépendamment la valeur de votre organisation à chaque étape de son cycle de vie.",
       "cta": "Soumettre mon actif"
     },
     "methodology": {
@@ -8111,7 +8111,8 @@
       "deleteAccountConfirming": "Suppression...",
       "deleteAccountCancel": "Annuler",
       "deleteAccountErrorGeneric": "Une erreur est survenue.",
-      "deleteAccountErrorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez."
+      "deleteAccountErrorNetwork": "Impossible de contacter le serveur. Vérifiez votre connexion et réessayez.",
+      "ndaClientTitle": "NDA Client Aegryn"
     }
   },
   "clientSpace": {
@@ -8198,8 +8199,8 @@
     "gradeSubmit": "Soumettre pour certification",
     "gradePartners": "Experts certifiants",
     "transaction": "Catalogue d'actifs",
-    "transactionSell": "Vendre un actif",
-    "transactionBuy": "Devenir acquéreur",
+    "transactionSell": "Transmission & Cession",
+    "transactionBuy": "Acquisition & Croissance externe",
     "transactionSubmit": "Soumettre un actif",
     "transactionHowWorks": "Comment ça fonctionne",
     "transactionSession": "Sessions privées",

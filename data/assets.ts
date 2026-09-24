@@ -121,5 +121,5 @@ export type AssetStatus   = AegrynAsset['status']
 export const ASSET_CATEGORIES = {
   ai:           { label: 'AI & Protocoles',       en: 'AI & Protocols' },
   lifestyle:    { label: 'Services & Lifestyle',  en: 'Services & Lifestyle' },
-  transactions: { label: 'Transactions & Réseau', en: 'Transactions & Network' },
+  transactions: { label: 'Marchés & Communautés', en: 'Markets & Communities' },
 } as const

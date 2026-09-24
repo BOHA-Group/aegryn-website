@@ -16,7 +16,8 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'roadmapPage.meta' })
-  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/roadmap', locale })
+  const meta = generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/roadmap', locale })
+  return { ...meta, robots: { index: false, follow: false } }
 }
 
 const FEATURE_ICONS = [

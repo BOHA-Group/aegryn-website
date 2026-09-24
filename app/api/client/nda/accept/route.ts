@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}))
   const ndaType = body?.nda_type as string | undefined
 
-  if (!ndaType || !(['seller', 'buyer', 'partner'] as string[]).includes(ndaType)) {
+  if (!ndaType || !(['seller', 'buyer', 'partner', 'client'] as string[]).includes(ndaType)) {
     return NextResponse.json({ error: 'nda_type invalide' }, { status: 400 })
   }
 
