@@ -195,11 +195,14 @@ export default async function LocaleLayout({ children, params }: Props) {
           <GoogleAnalytics />
           <MetaPixel />
           {/* Cookie-Script — afterInteractive pour détecter dans le HTML et éviter crash hydration */}
-          <Script
-            id="cookie-script"
-            src="https://cdn.cookie-script.com/s/95c60815b4306b9e3350caa17fee93a8.js"
-            strategy="afterInteractive"
-          />
+          {/* Désactivé en dev local pour ne pas gêner la preview — reste actif en preview Vercel et production */}
+          {process.env.NODE_ENV !== 'development' && (
+            <Script
+              id="cookie-script"
+              src="https://cdn.cookie-script.com/s/95c60815b4306b9e3350caa17fee93a8.js"
+              strategy="afterInteractive"
+            />
+          )}
         </LenisProvider>
       </NextIntlClientProvider>
     </>

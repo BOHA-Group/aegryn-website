@@ -47,15 +47,17 @@ export default async function TransactPage({ params }: Props) {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-32 pb-24 px-6">
         <Image
-          src="/images/transact/hero-valorisation.jpg"
+          src="/images/transact/hero-valorisation.webp"
           alt="Valorisation d'entreprise — Aegryn Group"
           fill
           priority
-          quality={95}
-          className="object-cover object-center"
+          unoptimized
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/7QAkUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAgcAVoAAxslR//hAIBFeGlmAABJSSoACAAAAAUAEgEDAAEAAAABAAAAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAaYcEAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAAAACAAKgBAABAAAAMBQAAAOgBAABAAAAYAsAAAAAAAD/4QD6aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49IiIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJHbyBYTVAgU0RLIDEuMCI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48L3JkZjpSREY+PC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz7/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAAOABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYDBAX/xAAjEAACAQQABgMAAAAAAAAAAAABAgMABAURIjJBYXGRQlGh/8QAFgEBAQEAAAAAAAAAAAAAAAAABAAC/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAIBEQMhMf/aAAwDAQACEQMRAD8Ap4K4EwC3dvMjKpJ0vC3cHp4rQt4Ipog0rFX2QRrf7SljL9rE7jUHfMD8vNSR5OeFAiMVUdAaUrtfQrItcGeYWMYIV2dh9AAD3RSzJlZpFKycQ7gE+6KzLZr0xRGGtqf/2Q=="
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />

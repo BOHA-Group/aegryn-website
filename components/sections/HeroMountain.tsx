@@ -7,7 +7,8 @@ import { ArrowUpRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
-const HERO_IMAGE = { src: '/images/home/home_geneva.jpg', alt: 'Genève — Aegryn Group' }
+const HERO_IMAGE = { src: '/images/home/home_geneva.webp', alt: 'Genève — Aegryn Group' }
+const HERO_BLUR_DATA_URL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/7QAkUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAgcAVoAAxslR//hAIBFeGlmAABJSSoACAAAAAUAEgEDAAEAAAABAAAAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAaYcEAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAAAACAAKgBAABAAAAMBgAAAOgBAABAAAAIBAAAAAAAAD/4QD6aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49IiIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJHbyBYTVAgU0RLIDEuMCI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48L3JkZjpSREY+PC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz7/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAAQABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEEQUUITFRQaLB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/EAB0RAAEEAgMAAAAAAAAAAAAAAAABAgMUESEEUVL/2gAMAwEAAhEDEQA/AFacN2ZVC62QJu2C6OVI8fPuRa+UvNikXOO/oRyzmXaoVkkMu9MG/JbYkzpDLTiR424afDYDxCS25PKI11H0EI7D+gqx+j//2Q=='
 
 export function HeroMountain() {
   const t = useTranslations('hero')
@@ -87,12 +88,14 @@ export function HeroMountain() {
           alt={HERO_IMAGE.alt}
           fill
           priority
-          quality={95}
-          className="object-cover object-center"
+          unoptimized
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={HERO_BLUR_DATA_URL}
+          className="object-cover object-center"
         />
         {/* Gradient foncé au départ — s'éclaircit au scroll via GSAP */}
-        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/95" />
+        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
       </div>
 
       {/* Content — bottom anchored, left-aligned */}
