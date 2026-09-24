@@ -154,7 +154,7 @@ export default async function HowItWorksPage({ params }: Props) {
             <div className="min-w-[480px]">
               <div className="grid grid-cols-3 bg-ag-navy">
                 <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
-                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink border-l border-white/10">Aegryn</div>
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
                 <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">{t('compareOther')}</div>
               </div>
               {compareRows.map(({ label, aegryn, other }, i) => (

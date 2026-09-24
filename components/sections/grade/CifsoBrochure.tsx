@@ -162,7 +162,7 @@ export function CifsoBrochure() {
               const page = [3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 14, 15][i]
               return (
                 <li key={i} className="flex items-baseline gap-3 sm:gap-5 py-3 sm:py-4 border-b border-ag-border last:border-0">
-                  <span className="font-mono text-[11px] sm:text-[12px] text-ag-apex font-bold w-6 sm:w-8 shrink-0">{num(i + 1)}</span>
+                  <span className="font-mono text-[11px] sm:text-[12px] text-ag-apex-ink font-bold w-6 sm:w-8 shrink-0">{num(i + 1)}</span>
                   <span className="font-sans text-[13px] sm:text-[16px] text-ag-black flex-1">{title}</span>
                   <span className="hidden sm:block flex-1 border-b border-dotted border-ag-border translate-y-[-4px]" />
                   <span className="font-mono text-[11px] sm:text-[12px] text-ag-gray shrink-0">{page}</span>

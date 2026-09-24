@@ -341,7 +341,7 @@ export default async function AssetPage({ params }: Props) {
                       href="https://www.village-justice.com/articles/village-justice-vous-propose-faire-auditer-tous-vos-contrats-obtenir-score-des,57640.html"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex transition-colors"
+                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black border-t border-ag-border pt-3 mt-1 hover:text-ag-apex-ink transition-colors"
                     >
                       {t('press.readArticle')} <ArrowUpRight size={10} />
                     </a>

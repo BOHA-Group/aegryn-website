@@ -96,7 +96,7 @@ export default async function WorkforcePage({ params }: Props) {
             </Link>
             <Link
               href={t('hero.cta2Href')}
-              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:border-ag-apex hover:text-ag-apex-ink transition-colors"
+              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:border-ag-apex hover:text-ag-apex transition-colors"
             >
               {t('hero.cta2')}
             </Link>

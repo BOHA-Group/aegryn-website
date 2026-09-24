@@ -160,7 +160,7 @@ export default async function InvestisseursPage({ params }: Props) {
             </p>
           </div>
           <div className="bg-ag-navy p-12 flex flex-col gap-6">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex">
               NOTRE ENGAGEMENT
             </p>
             {[

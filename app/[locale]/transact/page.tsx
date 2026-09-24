@@ -59,7 +59,7 @@ export default async function TransactPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
         <div className="relative max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
