@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Gauge, BadgeCheck, Rocket, TrendingUp, RefreshCw, Search, Handshake } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { GridFillers } from '@/components/ui/GridFillers'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -153,6 +154,7 @@ export default async function ValoriserPage({ params }: Props) {
                 </span>
               </Link>
             ))}
+            <GridFillers count={CYCLES.length} cols={{ sm: 2, lg: 5 }} />
           </div>
         </div>
       </section>

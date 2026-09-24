@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
+import { GridFillers } from '@/components/ui/GridFillers'
 
 type Status = 'available_on_request' | 'in_deployment' | 'roadmap' | 'roadmap_long'
 
@@ -117,6 +118,7 @@ export default function AcquisitionRoadmap({
                       )}
                     </div>
                   ))}
+                  <GridFillers count={groupItems.length} cols={{ sm: 2, lg: 3 }} />
                 </div>
               </div>
             )

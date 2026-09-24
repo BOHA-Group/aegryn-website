@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import AcquisitionRoadmap from '@/components/sections/AcquisitionRoadmap'
+import { GridFillers } from '@/components/ui/GridFillers'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -90,6 +91,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                       <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
                     </div>
                   ))}
+                  <GridFillers count={phase.items.length} cols={{ sm: 2, lg: 3 }} />
                 </div>
               </div>
             ))}
@@ -137,6 +139,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
             ))}
+            <GridFillers count={steps.length} cols={{ sm: 2, lg: 5 }} />
           </div>
         </div>
       </section>

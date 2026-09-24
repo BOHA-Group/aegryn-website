@@ -8,6 +8,7 @@ import {
   Building2, Users, Globe, UserSearch, Landmark, ShieldCheck,
 } from 'lucide-react'
 import PartnersCarousel from '@/components/sections/PartnersCarousel'
+import { GridFillers } from '@/components/ui/GridFillers'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
 type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma' | 'execsearch'
@@ -309,6 +310,7 @@ export default function NetworkContent() {
             {filteredExpertise.map((card) => (
               <ExpertiseCardItem key={card.title} card={card} />
             ))}
+            <GridFillers count={filteredExpertise.length} cols={{ sm: 2, lg: 3 }} />
           </div>
 
         </div>
