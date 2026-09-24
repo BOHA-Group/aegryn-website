@@ -43,15 +43,14 @@ const GROUPS: SitemapGroup[] = [
     ],
   },
   {
-    labelKey: 'groupTransaction',
+    labelKey: 'groupValoriser',
     links: [
-      { labelKey: 'transaction',        href: '/transact/catalog' },
-      { labelKey: 'transactionSell',    href: '/valoriser/transmission' },
-      { labelKey: 'transactionBuy',     href: '/valoriser/acquisition' },
-      { labelKey: 'transactionSubmit',  href: '/transact/submit' },
-      { labelKey: 'transactionHowWorks',href: '/transact/how-it-works' },
-      { labelKey: 'transactionSession', href: '/transact/sessions' },
-      { labelKey: 'transactionResults', href: '/transact/results' },
+      { labelKey: 'valoriser',                href: '/valoriser' },
+      { labelKey: 'valoriserLancement',       href: '/valoriser/lancement' },
+      { labelKey: 'valoriserCroissance',      href: '/valoriser/croissance' },
+      { labelKey: 'valoriserRestructuration', href: '/valoriser/restructuration' },
+      { labelKey: 'valoriserAcquisition',     href: '/valoriser/acquisition' },
+      { labelKey: 'valoriserTransmission',    href: '/valoriser/transmission' },
     ],
   },
   {

@@ -9,11 +9,6 @@
     "career": "Carrières",
     "contact": "Contact",
     "transact": "TRANSACT",
-    "transactCatalog": "Offmarket-catalogus",
-    "transactSell": "Verkoopsmandaat",
-    "transactBuy": "Acquisitiemandat",
-    "transactMandate": "Mandaat indienen",
-    "_disabled_transactResults": "Afgesloten transacties",
     "grade": "Certificering",
     "assets": "Assets",
     "services": "Diensten",
@@ -21,12 +16,6 @@
     "clientSpace": "Klantenzone",
     "logout": "Afmelden",
     "submitAsset": "Asset indienen",
-    "transactionCatalog": "Catalogus",
-    "transactionSell": "Asset verkopen",
-    "transactionBuy": "Koper worden",
-    "transactionBidModels": "Voorstelmodellen",
-    "transactionSession": "Proces",
-    "_disabled_transactionResults": "Afgesloten transacties",
     "gradeSystem": "Certificeringssysteem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Een asset certificeren",
@@ -41,8 +30,6 @@
     "servicesMenuLabel": "Aegryn Services",
     "servicesSectionTech": "Advisory Tech",
     "servicesSectionTechDesc": "Technische audit, beveiliging, AI, compliance",
-    "servicesSectionTransaction": "Advisory Transaction",
-    "servicesSectionTransactionDesc": "Verkoop, acquisitie, structurering, closing",
     "servicesSectionNetwork": "Partnernetwerk",
     "servicesSectionNetworkDesc": "Advisory Tech & Transaction partners",
     "gradeDimC": "Code",
@@ -84,15 +71,12 @@
     "craftSupportExperts": "Expertennetwerk",
     "craftTransact": "Waarderen",
     "craftTransactDesc": "Onafhankelijke certificering, waardering, overdracht, acquisitie",
-    "craftTransactGrade": "Certificering CIFSO 5000",
-    "craftTransactCatalog": "Offmarket-catalogus",
     "craftTransactSell": "Overdracht & Verkoop",
     "craftTransactBuy": "Overname & Externe groei",
     "craftTransactLancement": "Lancering & Structurering",
     "craftTransactCroissance": "Groei & Opschaling",
     "craftTransactRestructuration": "Herstructurering & Pivot",
     "craftTransactVerify": "Certificaat verifiëren",
-    "_disabled_craftTransactResults": "Afgesloten transacties",
     "craftRecruit": "Rekruteren",
     "craftRecruitDesc": "Leiderplaatsing: bestuur, tech, M&A",
     "craftRecruitBoard": "Bestuursleden & C-Level",
@@ -160,7 +144,6 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Vastgoed",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "solutionsCategoryTransactions": "Transacties & Netwerk",
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investeerders & Institutioneel",
     "craftTransactOverview": "Introductie",
@@ -181,7 +164,6 @@
     "eyebrow": "VIJF DISCIPLINES. ÉÉN KWALITEITSLABEL.",
     "title": "Zeldzaam door selectie.",
     "sub": "Wij begeleiden bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.",
-    "cta": "VERKOOP EEN GECERTIFICEERD ASSET",
     "strip": "BOUWEN · ADVISEREN · WAARDEREN · REKRUTEREN · INFORMEREN",
     "geo": "Zwitserland · Europa · Global",
     "scroll": "Scrollen",
@@ -242,18 +224,15 @@
       "visitPage": "Pagina bekijken",
       "comingSoon": "Binnenkort",
       "viewDetails": "Details bekijken",
-      "transactionEligible": "Geschikt voor transactie",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
       "heroLabel": "Aegryn | Eigen activa",
       "heroTitle": "Onze operationele\nactiva.",
       "heroSub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
       "publisherNote": "Deze activa zijn beschikbaar als directe toegang of licentie voor organisaties die ze willen integreren zonder ze zelf te bouwen.",
-      "ownedNote": "Deze activa staan standaard niet te koop. Sommige kunnen uitzonderlijk worden geveild op strategische beslissing van de groep.",
-      "transactionEligibleNote": "Activum geschikt voor transactie, investeerderscontact op verzoek.",
       "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
       "ctaGrade": "Een extern asset indienen",
-      "ctaTransaction": "M&A-process bekijken",
+      "ctaTransaction": "Ontdek Valoriser",
       "notStarted": "Niet gestart",
       "certificationInProgress": "Certificering bezig",
       "badgeCore": "CORE",
@@ -769,8 +748,8 @@
     ]
   },
   "ecosystemDomains": {
-    "label": "Markten",
-    "title": "Welke thema's\nlopen via Aegryn.",
+    "label": "De sectoren",
+    "title": "De sectoren die de\nAegryn-expertise bestrijken.",
     "domains": [
       {
         "id": "ai",
@@ -886,12 +865,12 @@
       {
         "key": "startup",
         "title": "Startup & Scale-up",
-        "desc": "De juiste tech- en strategische fundamenten leggen. Waarde creëren vanaf dag één. Voorbereiden op de volgende ronde of exit."
+        "desc": "De juiste technische en strategische fundamenten leggen. Waarde creëren vanaf dag één. De volgende ronde of de volgende stap voorbereiden."
       },
       {
         "key": "pme",
         "title": "Groeiende KMO's",
-        "desc": "Transformeren, certificeren en rekruteren vóór de verkoop of kapitaalronde. Duurzame assets bouwen."
+        "desc": "Transformeren, certificeren en werven vóór overdracht of kapitaalwerving. Assets bouwen die standhouden."
       },
       {
         "key": "enterprise",
@@ -901,7 +880,7 @@
       {
         "key": "funds",
         "title": "Fondsen & Investeerders",
-        "desc": "Technische screening van de deal flow, begeleiding na acquisitie, plaatsing van leidinggevende teams, exitvoorbereiding.\n\nBanken, fondsen, family offices, accountants: wij zijn de partner van degenen die financieren en adviseren, en treden op waar hun diensten stoppen."
+        "desc": "Technische screening van kansen, post-acquisitiebegeleiding, plaatsing van leidinggevende teams, voorbereiding van de sleutelstappen.\n\nBanken, fondsen, family offices, accountants: wij zijn de partner van wie financiert en adviseert — daar waar hun diensten stoppen."
       }
     ]
   },
@@ -966,8 +945,8 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
-      "history": "Aegryn droeg vroeger een andere naam. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet.",
-      "formerly": "Aegryn droeg vroeger een andere naam. Naarmate de positionering van het bedrijf scherper werd, van bouwer van digitale assets naar certificerings- en transactie-infrastructuur, deed ook zijn identiteit dat. De naam veranderde. De overtuiging niet."
+      "history": "Aegryn heette vroeger anders. Naarmate het positioneren van het bedrijf zich aanscherpte — van bouwer van digitale activa naar een certificerings- en begeleidingsgroep voor organisaties — is ook zijn identiteit aangescherpt. De naam is veranderd. De overtuiging niet.",
+      "formerly": "Aegryn heette vroeger anders. Naarmate het positioneren van het bedrijf zich aanscherpte — van bouwer van digitale activa naar een certificerings- en begeleidingsgroep voor organisaties — is ook zijn identiteit aangescherpt. De naam is veranderd. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
@@ -976,7 +955,7 @@
     "contribution": {
       "label": "Onze bijdrage",
       "title": "Geen vervanging.\nEen infrastructuurlaag.",
-      "desc": "Rigoureuze tech-M&A-transacties bestaan al. Aegryn vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het voegt toe wat structureel ontbrak: een onafhankelijke grade, uitgegeven vóór elke notering, die beide partijen een gecertificeerd, gedocumenteerd startpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te sluiten.",
+      "desc": "Rigoureuze M&A-operaties bestaan al. Aegryn vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het brengt wat structureel ontbrak: een onafhankelijke rating, uitgegeven vóór elke beslissing, die alle partijen een gecertificeerd en gedocumenteerd vertrekpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te beslissen.",
       "items": [
         {
           "num": "01",
@@ -985,13 +964,13 @@
         },
         {
           "num": "02",
-          "title": "Een gesloten kring, geen marktplaats",
-          "desc": "Elke verkoper in de Aegryn-catalogus heeft de certificering doorstaan. Elke koper heeft financiële capaciteit aangetoond. Discretie is structureel, geen bovenop toegevoegde functie, maar de bedrijfscondities waaruit alles voortkomt."
+          "title": "Een gekwalificeerde kring, geen marktplaats",
+          "desc": "Elke door Aegryn begeleide organisatie heeft de certificering doorlopen. Elke stakeholder wordt vooraf gekwalificeerd. Discretie is structureel: geen feature die er later bovenop is gezet, maar de operationele voorwaarde waaruit al het andere volgt."
         },
         {
           "num": "03",
           "title": "Zwitserse institutionele standaarden",
-          "desc": "Zwitsers recht regelt elke transactie. Escrow wordt aangehouden door een derde bank, Aegryn raakt de fondsen nooit aan. Documentatie is bij elke overdracht volledig. Dit zijn bedrijfscondities, geen beloften."
+          "desc": "Zwitsers recht beheerst elke opdracht. Vertrouwelijkheid is contractueel en de documentatie is bij elke stap volledig. Dit zijn operationele voorwaarden, geen beloften."
         }
       ]
     },
@@ -1008,7 +987,7 @@
       },
       "embrace": {
         "title": "M&A-OVERDRACHT",
-        "desc": "Discreet transageren, met zekerheid voor beide partijen. Institutionele escrow. Volledige documentatie bij elke overdracht."
+        "desc": "Overdragen in discretie, met zekerheid voor alle partijen. Volledige documentatie bij elke stap."
       }
     },
     "dna": {
@@ -1033,13 +1012,13 @@
       "independence": {
         "label": "04",
         "title": "Onafhankelijkheid",
-        "desc": "De analist die een asset certificeert heeft geen financieel belang bij de transactie die volgt. Deze scheiding is geen beleid, het is de structurele voorwaarde die de grade überhaupt waardevol maakt."
+        "desc": "De analist die een organisatie certificeert heeft geen financieel belang bij de beslissingen die volgen. Die scheiding is geen beleid — het is de structurele voorwaarde die de grade zijn waarde geeft."
       }
     },
     "swiss": {
       "groupLabel": "Aegryn",
       "title": "Geworteld in Zwitserland.\nDe Europese referentie.",
-      "desc": "Zwitserland werd bewust gekozen, niet voor zijn incorporatievoordelen, maar voor zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financieel ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor grensoverschrijdende transacties tussen een Franse verkoper, een Duitse koper en een Luxemburgs fonds. Elke Aegryn-transactie valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
+      "desc": "Zwitserland is bewust gekozen, niet om zijn incorporatievoordelen, maar om zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financiële ecosysteem en de neutraliteit die er een geloofwaardig anker van maakt voor grensoverschrijdende operaties tussen partijen uit verschillende jurisdicties. Elke Aegryn-opdracht valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
       "cta": "Onze disciplines"
     },
     "founder": {
@@ -1049,20 +1028,20 @@
       "bio2": "Hij koos ervoor Aegryn op te richten om in één structuur samen te brengen wat de markt in silo's aanbiedt: advies, constructie, transactie, talent en marktintelligentie. Zijn overtuiging: bedrijven die standhouden kiezen niet tussen strategie en technologie. Ze denken ze samen.",
       "cta": "Contact opnemen",
       "disciplinesCta": "Onze disciplines",
-      "storytelling": "Adviseren zonder te bouwen is een kaart leveren zonder territorium.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is overhandigen zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaar geven zonder verantwoordelijkheid."
+      "storytelling": "Adviseren zonder te bouwen is een kaart zonder territorium leveren.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is de fakkel doorgeven zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaren zonder verantwoordelijkheid."
     },
     "whatsnext": {
       "label": "Wat er hierna komt",
       "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "Aegryn certificeert en transageert vandaag SaaS, applicaties, marktplaatsen, IP-assets en Web3-assets onder het CIFSO 5000-protocol.\n\nHet belangrijkste element van de roadmap is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase op de exacte datum van overdracht verzegelt, waardoor elk grade permanent en onveranderlijk verifieerbaar is. Deze laag wordt toegevoegd aan het reeds volledig operationele onafhankelijke protocol.\n\nTegelijkertijd bouwen we een netwerk van expertpartners op, advocatenkantoren, gecertificeerde accountants, cyberbeveiligingsspecialisten en technische architecten om kopers en verkopers in elke fase te begeleiden: technisch advies vóór de certificering, juridische en financiële structurering tijdens de transactie, en integratie na het closing.",
+      "desc": "Aegryn certificeert en begeleidt vandaag tech-organisaties — SaaS-uitgevers, applicaties, platforms, IP-activa en Web3-activa — volgens het CIFSO 5000-protocol.\n\nHet belangrijkste roadmap-project is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase verzegelt op de exacte datum van uitgifte, waardoor elke grade definitief verifieerbaar en permanent wordt. Deze laag wordt toegevoegd aan het onafhankelijke protocol dat al volledig operationeel is.\n\nParallel bouwen we een netwerk van expertpartners op — advocatenkantoren, accountants, cybersecurity-specialisten, technische architecten — om onze klanten bij elke stap te begeleiden: tech-advies vóór de certificering, juridische en financiële structurering tijdens de opdrachten, integratie na de operaties.",
       "cta": "Huidige sessies bekijken"
     },
     "cta": {
       "label": "Werken met Aegryn",
       "seller": {
-        "title": "U verkoopt een tech-asset.",
+        "title": "U bereidt een overdracht voor.",
         "desc": "Een Aegryn-adviseur reageert binnen 24u.",
-        "btn": "Uw asset indienen voor certificering",
+        "btn": "Een certificering aanvragen",
         "href": "/grade/submit"
       },
       "buyer": {
@@ -1083,7 +1062,7 @@
     "hero": {
       "label": "Aegryn Advisory & Carrières",
       "title": "Advisory & Experts in Digitale Ecosystemen",
-      "desc": "Aegryn zoekt Senior Advisors, operationele experts in Data, AI en Cyberbeveiliging voor duurzame digitale ecosystemen."
+      "desc": "Aegryn is een Zwitsere certificerings- en begeleidingsgroep voor Europese technologieorganisaties. Wij bezetten geen niche: wij definiëren haar regels."
     },
     "positions": {
       "label": "Aankomende functies",
@@ -1095,7 +1074,7 @@
     "spontaneous": "Open sollicitatie",
     "statement": {
       "label": "Aegryn Advisory",
-      "title": "Certified to transact, gebouwd door experts die erin geloven.",
+      "title": "Gecertificeerd om te duren, gebouwd door experts die erin geloven.",
       "cta": "Ontdek Advisory"
     },
     "domains": {
@@ -1110,7 +1089,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Wij bouwen assets, geen tools. Wij zoeken mensen die in decennia denken.",
+      "desc": "Gefundeerd op drie principes — precisie, duurzaamheid, onafhankelijkheid — begeleidt Aegryn tech-organisaties over hun hele levenscyclus met een strengheid die de markt nog niet bood. Onze eigen activa, ons certificeringsprotocol en ons advisorynetwerk vormen een geïntegreerd ecosysteem, ontworpen voor de komende 10 jaar.",
       "label": "Carrières",
       "tagline": "Aegryn | Saint-Sulpice, Zwitserland",
       "title": "Bouwen wat blijft."
@@ -1128,8 +1107,8 @@
           "desc": "Wij ontwerpen en exploiteren onze eigen digitale assets : SaaS, AI-platformen, protocollen. Wij werven ingenieurs, tech leads en product managers die bouwen om te blijven."
         },
         "transmettre": {
-          "title": "Transacties & M&A",
-          "desc": "Wij structureren verkopen en acquisities van tech assets. Wij werken met transactie-, juridische en financiële professionals die de waardering van digitale assets begrijpen."
+          "title": "Waardering & Overdracht",
+          "desc": "Wij certificeren, waarderen en begeleiden overdrachten en acquisities van tech-organisaties. Wij werken met M&A-, juridische en financiële professionals die de waarderingsvraagstukken van digitale activa begrijpen."
         },
         "recruter": {
           "title": "Talent & Research",
@@ -1158,7 +1137,7 @@
           "title": "Precisie"
         },
         "sovereignty": {
-          "desc": "Wij bouwen onafhankelijke assets. Geen vendor lock-in, geen afhankelijkheid.",
+          "desc": "Totale structurele onafhankelijkheid ten opzichte van stakeholders en platforms. Onze enige uitlijning: kwaliteit.",
           "title": "Onafhankelijkheid"
         },
         "trust": {
@@ -1427,39 +1406,39 @@
     "back": "← Certificering CIFSO 5000",
     "eyebrow": "Aegryn GRADE",
     "title": "Een netwerk van onafhankelijke auditoren, geen verplichting.",
-    "intro1": "Het Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt tech-activa zonder opgelegde auditoren. Onafhankelijke professionals kunnen worden gemandateerd voor specifieke gebieden.",
-    "intro2": "Wij staan open voor kandidaturen van onafhankelijke experts die zich willen aansluiten bij de certificering of ons netwerk willen vervoegen, op aanvraag inzetbaar voor, tijdens en na een transactie.",
+    "intro1": "De Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt en beoordeelt de kwaliteit van tech-organisaties zonder afhankelijk te zijn van opgelegde auditors. Onafhankelijke professionals kunnen worden gemandateerd om bepaalde assen te verdiepen.",
+    "intro2": "Wij blijven open voor kandidaturen van onafhankelijke experts die de certificering willen ondersteunen of zich bij ons netwerk willen aansluiten, op aanvraag inzetbaar voor, tijdens en na een certificering of begeleiding.",
     "types": {
       "code": {
         "label": "CODE & TECH AUDIT",
-        "desc": "Senior freelance CTO of onafhankelijk kantoor gespecialiseerd in code review en technische schuld, ter ondersteuning van dimensie C (Code) voor verkopers en kopers die dat wensen.",
+        "desc": "Senior freelance CTO of onafhankelijk bureau gespecialiseerd in code-review en technische schuld, ter ondersteuning van dimensie C (Code) voor organisaties die dit wensen.",
         "dimension": "Dimensie C: Code"
       },
       "legal": {
         "label": "IP JURIDISCH",
-        "desc": "Advocatenkantoor gespecialiseerd in tech & IP, ter ondersteuning van dimensie I (IP & Rechten) voor verkopers en kopers die dat wensen.",
+        "desc": "Op tech & IP gespecialiseerd advocatenkantoor, ter ondersteuning van dimensie I (IP & Rechten) voor organisaties die dit wensen.",
         "dimension": "Dimensie I, IP & Rechten"
       },
       "finance": {
         "label": "ACCOUNTANT",
-        "desc": "Auditkantoor of accountant gespecialiseerd in SaaS/tech, ter ondersteuning van dimensie F (Financieel) voor verkopers en kopers die dat wensen.",
+        "desc": "Auditkantoor of accountant gespecialiseerd in SaaS/tech, ter ondersteuning van dimensie F (Financiën) voor organisaties die dit wensen.",
         "dimension": "Dimensie F, Financieel"
       },
       "security": {
         "label": "CYBERBEVEILIGING",
-        "desc": "Geaccrediteerde cyberbeveiligingsspecialist (PASSI of CREST), ter ondersteuning van dimensie S (Beveiliging) voor verkopers en kopers die dat wensen.",
+        "desc": "Geaccrediteerde cybersecurity-specialist (PASSI of CREST), ter ondersteuning van dimensie S (Beveiliging) voor organisaties die dit wensen.",
         "dimension": "Dimensie S, Beveiliging"
       }
     },
     "ctaLabel": "VOOR ONAFHANKELIJKE AUDITOREN",
     "ctaTitle": "Bent u een advocatenkantoor, accountant of cybersecurity-specialist?",
-    "ctaDesc": "Solliciteer voor het Aegryn Grade netwerk van onafhankelijke auditoren.",
+    "ctaDesc": "Solliciteer om lid te worden van het Aegryn Grade-netwerk van onafhankelijke auditors: toegang tot een regelmatige stroom van certificeringsdossiers die uw expertise vereisen.",
     "ctaBtn": "Solliciteren voor het auditorennetwerk",
     "benefitsLabel": "WAT U KRIJGT",
     "benefits": [
       "Toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen",
       "Zichtbaarheid als Aegryn-netwerkpartner (vanaf de eerste mandaten)",
-      "Gekwalificeerde institutionele cliëntele, PE-, VC-, Family Office-kopers",
+      "Gekwalificeerde institutionele klantenkring: leidinggevenden, PE-fondsen, VC, Family Offices",
       "Vergoeding bepaald binnen het partnerschapskader"
     ]
   },
@@ -1488,7 +1467,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advies, certificering, cessie, partnerschap of algemene vraag, we reageren binnen 24u."
+      "desc": "Advies, certificering, M&A-begeleiding, partnerschap of algemene vraag — wij antwoorden binnen 24u."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -1506,7 +1485,7 @@
         "advisory": "Strategisch advies",
         "tech": "Technologisch advies",
         "grade": "Activumcertificering",
-        "transaction": "M&A-transactie",
+        "transaction": "M&A-advies",
         "partnership": "Partnerschap",
         "investor": "Investeerder",
         "press": "Pers & Media",
@@ -1525,7 +1504,7 @@
     },
     "meta": {
       "title": "Contact | Aegryn",
-      "desc": "Neem contact op met Aegryn, Advisory, certificering, cessie, partnerschap of algemene vraag."
+      "desc": "Neem contact op met Aegryn: advisory, certificering, waardering, partnerschap of algemene vraag."
     },
     "info": {
       "baseLabel": "Hoofdkantoor",
@@ -2115,7 +2094,7 @@
         "name": "IP & Rechten",
         "full": "Intellectueel eigendom, Rechten & Contracten",
         "weight": "20 pt",
-        "desc": "Merk, overdracht van softwarerechten, open-sourcelicenties, klant- en leverancierscontracten, geschillen. De eigendomsketen: wat een koper eerst controleert.",
+        "desc": "Merk, overdracht van softwarerechten, open-sourcelicenties, klant- en leverancierscontracten, geschillen. De eigendomsketen: wat elke partner als eerste controleert.",
         "criteria": [
           "Merken geregistreerd in de doeljurisdicties",
           "Overdracht van softwarerechten ondertekend (werknemers, dienstverleners)",
@@ -2176,7 +2155,7 @@
         "range": "90–100 / 100",
         "color": "#5ADDA4",
         "rarity": "< 5% van gecertificeerde activa",
-        "profile": "Uitzonderlijk asset. Referentiearchitectuur, sterk IP, top-deciel financiële statistieken. Geschikt voor institutionele transacties.",
+        "profile": "Uitzonderlijke asset. Referentiearchitectuur, sterke IP, financiële metrics in het topdeciel, perfecte compliance. Referentie voor institutionele investeerders en partners.",
         "typical": "B2B SaaS ARR > €2M, churn < 1%, testdekking > 90%.",
         "subcodes": [
           "C-01",
@@ -2222,7 +2201,7 @@
         "range": "60–74 / 100",
         "color": "#9BA8B0",
         "rarity": "25–30% van gecertificeerde activa",
-        "profile": "Goed asset met geïdentificeerde sterke punten en gedocumenteerde verbeterpunten.",
+        "profile": "Asset van correcte kwaliteit met geïdentificeerde sterktes en duidelijk gedocumenteerde verbeterpunten. In aanmerking voor overdrachtsbegeleiding.",
         "typical": "Groeiende SaaS, enkele hiaten in tests of naleving.",
         "subcodes": [
           "C-02, C-03",
@@ -2268,7 +2247,7 @@
         "range": "30–44 / 100",
         "color": "#D4820A",
         "rarity": "15–20% van gecertificeerde activa",
-        "profile": "Early stage asset met gedeeltelijke fundamenten. Certificering met gedetailleerd remediatierapport.",
+        "profile": "Early-stage asset met partiële fundamenten. Certificering vergezeld van een gedetailleerd remediatierapport. Niet in aanmerking voor overdracht zonder verbetering.",
         "typical": "MVP of pre-revenue product, ongedocumenteerde architectuur.",
         "subcodes": [
           "C-04",
@@ -2362,7 +2341,7 @@
         "desc": "Beoordeling van organisatorische veerkracht, managementdiepte en opvolgingsgereedheid.",
         "inputs": "Gedetailleerd organigram, sleutelpersooncontracten, opvolgingsplan, CV's managementteam, retentiegegevens, gestructureerde interviews met oprichter en sleutelmanagers",
         "outputs": "Organisatorisch auditrapport met O-score, beoordeling oprichterafhankelijkheid, sleutelpersoon-risicoanalyse",
-        "outcomes": "Identificatie van operationele continuïteitsrisico's en organisatorische versterkingshefbomen. Meest ondergewaardeerde dimensie bij transacties."
+        "outcomes": "Identificatie van risico's voor operationele continuïteit en hefbomen voor organisatorische versterking. De meest ondergewaardeerde dimensie in operaties."
       },
       {
         "num": "05",
@@ -2378,14 +2357,14 @@
         "desc": "Uitgifte van het officiële CIFSO 5000-certificaat en publicatie in het gecertificeerde Aegryn-register.",
         "inputs": "Gevalideerd certificeringsrapport, identiteit van de gecertificeerde organisatie, gekozen certificeringsformaat (Express/Standard/Premium)",
         "outputs": "Officieel CIFSO 5000-certificaat, digitale badge, openbare registerinschrijving, toegang tot gecertificeerd portaal",
-        "outcomes": "Gecertificeerde organisatie met geversioneerde beoordeling raadpleegbaar door gekwalificeerde investeerders, kopers en partners. Geldigheid: 12 maanden."
+        "outcomes": "Gecertificeerde organisatie met een geversioneerde grade, inzagebaar voor gekwalificeerde investeerders en partners. Geldigheid: 12 maanden."
       }
     ],
     "principlesTitle": "Onafhankelijkheidsprincipes",
     "principles": [
       {
         "title": "Strikte scheiding",
-        "desc": "Aegryn-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder activeert automatische wraking."
+        "desc": "Aegryn-analisten hebben geen financieel belang bij de activa die zij certificeren. Elke relatie met de houder of een belanghebbende partij leidt tot automatische wraking."
       },
       {
         "title": "Reproduceerbaarheid",
@@ -2962,11 +2941,11 @@
     "useCases": [
       {
         "title": "Bedrijfswaardering",
-        "desc": "Documenteer de waarde van uw organisatie met een onafhankelijke en reproduceerbare beoordeling. Verminder informatieasymmetrie met investeerders en kopers."
+        "desc": "Documenteer de waarde van uw organisatie met een onafhankelijke en reproduceerbare grade. Verminder de informatieasymmetrie ten opzichte van investeerders en partners."
       },
       {
         "title": "M&A-voorbereiding",
-        "desc": "Identificeer en corrigeer wrijvingspunten vóór de transactie. Versnel de due diligence en maximaliseer de waardering tijdens de verkoop."
+        "desc": "Identificeer en corrigeer frictiepunten vóór een operatie. Versnel de due diligence en maximaliseer de waardering tijdens een overdracht."
       },
       {
         "title": "Kapitaalwerving",
@@ -3196,15 +3175,15 @@
   "discover": {
     "meta": {
       "title": "Discover | Aegryn Marktintelligentie",
-      "desc": "Marktrapportages, verkoper- en kopershandleidingen, certificeringsanalyses van Aegryn."
+      "desc": "Marktrapporten, overdrachts- en acquisitiegidsen, certificeringsanalyses: de intelligentie van de Europese tech-markt door Aegryn."
     },
     "label": "Aegryn Blog",
     "title": "Marktintelligentie.\nVoor iedereen toegankelijk.",
     "desc": "Rapporten, gidsen en analyses om de Europese tech-assetmarkt te begrijpen.",
     "filterAll": "Alle",
     "filterMarket": "Marktrapport",
-    "filterSeller": "Verkopersgids",
-    "filterBuyer": "Kopersgids",
+    "filterSeller": "Overdrachtsgids",
+    "filterBuyer": "Acquisitiegids",
     "filterCertification": "Certificering",
     "filterStrategy": "Strategie",
     "filterCaseStudy": "Casestudy",
@@ -4782,60 +4761,6 @@
       }
     ]
   },
-  "transactionNarrative": {
-    "label": "Veiling",
-    "title": "Sommige assets verdienen meer\ndan een publieke vermelding.",
-    "desc": "Aegryn is geen open platform. Het is een vertrouwelijk overdrachtsproces tussen verkopers die onze certificering hebben doorstaan en kopers die hun capaciteit hebben bewezen.\n\nMinder dan 25% van de ingediende assets wordt geaccepteerd. 100% van de kopers is vooraf gekwalificeerd. Elke transactie is volledig gedocumenteerd en beveiligd.",
-    "stat1Val": "< 25%",
-    "stat1Label": "Acceptatiegraad ingediende assets",
-    "stat2Val": "60 d max",
-    "stat2Label": "Exclusief mandaat verkoper",
-    "stat3Val": "100%",
-    "stat3Label": "Vooraf gekwalificeerde kopers",
-    "ctaSell": "Een gecertificeerd asset verkopen",
-    "ctaBuy": "Word lid van de koperskring",
-    "stat4Val": "Zwitserland",
-    "stat4Label": "Institutioneel anker"
-  },
-  "acqStrip": {
-    "label": "Acquisitieondersteuning",
-    "title": "Elke transactie,\nomringd door de juiste experts.",
-    "desc": "Aegryn coördineert rond elke transactie een netwerk van geselecteerde specialisten: financiering, due diligence, structurering en netwerken van gekwalificeerde investeerders.",
-    "chip1": "VC co-investering",
-    "chip2": "Overbruggingsfinanciering",
-    "chip3": "Earn-out-structuur",
-    "cta": "Contact opnemen",
-    "sublabel": "BEGELEIDEN · Advisory Transaction",
-    "domains": [
-      {
-        "title": "Pre-transactie",
-        "items": [
-          "Waardering & marktbenchmark",
-          "Verkoopvoorbereiding & dataruimte",
-          "IP & intellectueel eigendom",
-          "Digitaal recht"
-        ]
-      },
-      {
-        "title": "Zorgvuldigheidsonderzoek",
-        "items": [
-          "M&A-recht (SPA, SHA, LOI)",
-          "HR & sociale due diligence",
-          "Sectorale regelgeving (FinTech, AI…)",
-          "Garantie- en aansprakelijkheidsverzekering"
-        ]
-      },
-      {
-        "title": "Structurering & financiering",
-        "items": [
-          "Fiscaliteit & corporate structurering",
-          "Overbruggingsfinanciering & co-investering",
-          "Earn-out-ontwerp & KPI-framework",
-          "Post-acquisitie-integratie"
-        ]
-      }
-    ]
-  },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
@@ -4871,39 +4796,6 @@
       "label": "Transactie"
     }
   },
-  "gradeShowcase": {
-    "label": "Het Aegryn Grade systeem",
-    "title": "Een asset zonder grade\nis een asset zonder prijs.",
-    "desc": "Ons certificeringsprotocol evalueert elk asset op 4 dimensies: Code, IP & Rechten, Financiën, Beveiliging. Een objectieve, reproduceerbare, betwistbare grade.",
-    "cta": "Het grade-systeem begrijpen",
-    "exceptional": "Uitzonderlijk",
-    "premium": "Premium",
-    "standard": "Standaard",
-    "developing": "In ontwikkeling",
-    "earlyStage": "Vroege ontwikkelingsfase",
-    "grades": {
-      "star": {
-        "label": "AEG ★",
-        "desc": "Uitzonderlijk, top 1%"
-      },
-      "aaa": {
-        "label": "AAA",
-        "desc": "Premium, transactieklaar"
-      },
-      "aa": {
-        "label": "AA",
-        "desc": "Solide, waardering bevestigd"
-      },
-      "a": {
-        "label": "A",
-        "desc": "Standaard, potentieel geïdentificeerd"
-      },
-      "b": {
-        "label": "B",
-        "desc": "Correct, advisory aanbevolen"
-      }
-    }
-  },
   "marketStats": {
     "label": "De markt in cijfers, 2026",
     "stats": [
@@ -4935,33 +4827,6 @@
     "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
     "cta": "Opties verkennen",
     "legal": "Aegryn is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
-  },
-  "discoverSection": {
-    "label": "Aegryn Insights",
-    "title": "De tech-M&A-markt in Europa.\nDoor degenen die het doen.",
-    "cta": "Alle insights bekijken",
-    "articles": [
-      {
-        "title": "Stand van de tech-M&A-markt Europa, Q2 2026",
-        "category": "Marktrapport",
-        "desc": "Analyse van transactievolumes, waarderingsmultiples en sectortrends op de Europese markt voor tech-assets."
-      },
-      {
-        "title": "Wat is een echt certificeerbaar tech-asset?",
-        "category": "Gids verkoper",
-        "desc": "De meest voorkomende fouten bij Aegryn-certificeringen en hoe u ze kunt corrigeren vóór indiening."
-      },
-      {
-        "title": "Hoe PE-acquirers een SaaS beoordelen in 2026",
-        "category": "Gids koper",
-        "desc": "De objectieve criteria die een certificeerbaar asset onderscheiden van een asset dat een voorafgaand herstelplan vereist."
-      },
-      {
-        "category": "Casestudy",
-        "title": "Een B2B SaaS beoordelen: een methodologische oefening op een publieke transactie",
-        "desc": "Illustratieve toepassing van het CIFS-protocol op een gepubliceerde tech-transactie, om te begrijpen hoe elke C/I/F/S-dimensie de eindscore beïnvloedt. Pedagogische oefening, niet-contractueel."
-      }
-    ]
   },
   "alliances": {
     "meta": {
@@ -5752,17 +5617,17 @@
     "contactCta": "Contact opnemen"
   },
   "transactNarrative": {
-    "label": "Waardering & Overdracht van activa",
+    "label": "Waardering & Overdracht",
     "title": "Waarde moet bewezen kunnen worden,\nzonder concessies.",
-    "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke overdracht. Voorgekwalificeerde koperskring.",
+    "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke begeleiding in elke fase van de levenscyclus.",
     "stat1Val": "100%",
-    "stat1Label": "Individueel gekwalificeerde kopers",
-    "stat2Val": "60d max",
-    "stat2Label": "Exclusief verkoopmandaat",
-    "stat3Val": "100%",
-    "stat3Label": "Vooraf gekwalificeerde kopers",
-    "ctaSell": "Mijn organisatie evalueren",
-    "ctaBuy": "Koper worden",
+    "stat1Label": "Onafhankelijke, gedocumenteerde beoordelingen",
+    "stat2Val": "5",
+    "stat2Label": "Beoordeelde CIFSO-dimensies",
+    "stat3Val": "12 maanden",
+    "stat3Label": "Geldigheid van het gecertificeerde grade",
+    "ctaSell": "Mijn organisatie beoordelen",
+    "ctaBuy": "Een acquisitie voorbereiden",
     "stat4Val": "Zwitserland",
     "stat4Label": "Institutionele verankering"
   },
@@ -5821,15 +5686,15 @@
     },
     "transmissionSection": {
       "label": "Bouwen om over te dragen",
-      "title": "Een activum zonder overdrachtsplan\nverliest 20 tot 30% bij exit.",
+      "title": "Een asset ontworpen zonder overdrachtsplan\nverliest 20 tot 30% van zijn waarde.",
       "desc": "Bij Aegryn is elk activum ontworpen om certificeerbaar te zijn vanaf de eerste sprint.",
       "cta": "Mijn exit voorbereiden",
-      "href": "/transact"
+      "href": "/valoriser/transmission"
     },
     "buyerNoteSection": {
-      "label": "Noot voor institutionele kopers",
-      "title": "Wat institutionele kopers eisen.",
-      "desc": "Een CIFSO-gecertificeerd activum trekt institutionele kopers aan die verdedigbare documentatie eisen. 58% van de EU-tech-acquisities komt van private equity. Hun vereiste: traceerbaarheid."
+      "label": "Noot voor institutionele investeerders",
+      "title": "Wat institutionele investeerders vereisen.",
+      "desc": "Een CIFSO-gecertificeerde asset voldoet aan de eisen van institutionele investeerders die een verdedigbare documentatie verlangen. 58% van de tech-acquisities in de EU komt van private equity. Hun voorwaarde: traceerbaarheid."
     },
     "independenceSection": {
       "label": "Technologische onafhankelijkheid",
@@ -6077,7 +5942,7 @@
       "items": [
         {
           "title": "Gedocumenteerde en verdedigbare waarde",
-          "desc": "Een asset met volledige documentatie heeft een verdedigbare waarderingsveelvoud bij een kapitaalronde of overdracht. Geen schatting, maar een verifieerbare basis."
+          "desc": "Een asset geleverd met volledige documentatie heeft een verdedigbare waarderingsmultiple bij een financieringsronde of overdracht. Geen schatting — een verifieerbare basis."
         },
         {
           "title": "Contractuele bescherming bij oplevering",
@@ -6117,15 +5982,15 @@
         {
           "phase": "Early stage - 6 tot 18 maanden",
           "title": "Early stage overdracht",
-          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de overdracht via een TRANSACT-mandaat of directe vertrouwelijke transactie.",
+          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de overdracht in het kader van zijn begeleiding, vertrouwelijk.",
           "grade": "Doelgrade: A - ticket 100K tot 500K euro",
-          "cta": "Acquisitiemodellen bekijken",
-          "href": "/transact/bid-models"
+          "cta": "De overdracht voorbereiden",
+          "href": "/valoriser/transmission"
         },
         {
           "phase": "Marktrijpheid - 18 tot 36 maanden",
           "title": "Overdracht bij rijpheid",
-          "desc": "Het asset heeft gedocumenteerde terugkerende inkomsten en een gevestigd klantenbestand. In aanmerking voor grades AAA tot AEG. Transactie in de gesloten kring van institutionele kopers.",
+          "desc": "De asset heeft gedocumenteerde terugkerende inkomsten en een gevestigde klantenbasis. In aanmerking voor de grades AAA tot AEG. Begeleide overdracht in een vertrouwelijk, gekwalificeerd kader.",
           "grade": "Doelgrade: AA tot AEG - ticket 500K tot 5M euro",
           "cta": "Indienen voor certificering",
           "href": "/grade/submit"
@@ -6133,7 +5998,7 @@
         {
           "phase": "Behoud",
           "title": "Evolutief en correctief onderhoud",
-          "desc": "U wilt niet overdragen. Aegryn onderhoudt het asset technisch: updates, nieuwe functies, beveiliging. De exit blijft open volgens uw tijdlijn.",
+          "desc": "U wilt niet overdragen. Aegryn onderhoudt de asset technisch: updates, nieuwe functionaliteiten, beveiliging. De overdracht blijft open volgens uw kalender.",
           "grade": "Maandelijks abonnement of per deliverable",
           "cta": "Onderhoud bespreken",
           "href": "/contact"
@@ -6167,7 +6032,7 @@
         {
           "num": "05",
           "title": "Certificering (en optionele exit)",
-          "desc": "Indiening bij het CIFS-protocol indien gewenst. Officiële grade uitgebracht als criteria zijn voldaan. De transactie via Aegryn TRANSACT of vertrouwelijk wordt alleen gestart op uw beslissing."
+          "desc": "Indiening bij het CIFSO 5000-protocol indien gewenst. Officiële grade wordt uitgegeven als de criteria zijn vervuld. De begeleide overdracht wordt alleen op uw beslissing ingezet. De organisatie kan ook met onderhoud behouden blijven."
         }
       ]
     },
@@ -6185,7 +6050,7 @@
         "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regulatoire aanpassing (AVG, EU AI Act, NIS2). Het asset blijft op elk moment certificeerbaar.",
         "format": "Maandelijks abonnement of deliverable per sprint"
       },
-      "note": "Aegryn-onderhoud garandeert dat het asset zijn grade behoudt of verbetert bij elke cyclus: voorwaarde opdat een exit altijd mogelijk blijft."
+      "note": "Aegryn-onderhoud garandeert dat de asset zijn grade behoudt of zijn score in elke cyclus verbetert: de voorwaarde opdat een overdracht altijd mogelijk blijft."
     },
     "fees": {
       "label": "Honoraria",
@@ -6209,9 +6074,9 @@
       ],
       "coInvestNote": "Aegryn kan optreden als minderheids-co-investeerder op bepaalde projecten: aandelenbelang in ruil voor verlaging van de buildhonoraria. Per geval beoordeeld.",
       "exitBanner": {
-        "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of bij rijpheid, is het asset daarvoor ontworpen.",
-        "cta": "Meer informatie over het overdrachtsproces",
-        "href": "/transact/how-it-works"
+        "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de asset daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar als de certificering het toelaat.",
+        "cta": "Meer over de overdrachtsbegeleiding",
+        "href": "/valoriser/transmission"
       },
       "cta": "Het proces starten",
       "href": "/contact",
@@ -6219,9 +6084,9 @@
       "secondaryHref": "/assets"
     },
     "exitBanner": {
-      "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of bij rijpheid, is het asset daarvoor ontworpen. De exit via Aegryn TRANSACT of vertrouwelijk is beschikbaar als de certificering het toelaat.",
-      "cta": "Meer informatie over het overdrachtsproces",
-      "href": "/transact/how-it-works"
+      "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de asset daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar als de certificering het toelaat.",
+      "cta": "Meer over de overdrachtsbegeleiding",
+      "href": "/valoriser/transmission"
     },
     "cta": {
       "title": "Een project in gedachten?",
@@ -6269,8 +6134,8 @@
           "color": "#D68910"
         }
       ],
-      "mandateTitle": "Verkoopsmandaat",
-      "mandateDesc": "Bij een geplande verkoop is een CIFSO 5000-certificering systematisch vereist vóór enige catalogusopname of toegang voor kopers. Dit proces staat los van de Aegryn offmarket-catalogus."
+      "mandateTitle": "En na de certificering?",
+      "mandateDesc": "Een CIFSO 5000-grade documenteert de waarde van uw organisatie en vergemakkelijkt elke latere beslissing: financieringsronde, overdracht, partnerschap of externe groei. De certificering staat los van elk transactieproject."
     },
     "packs": [
       {
@@ -6346,7 +6211,7 @@
         "financing": "Bankfinanciering of schuld",
         "investment": "Fondswerving of investeerderstoegang",
         "succession": "Familiale opvolging of overdracht",
-        "ma": "M&A of verkoop",
+        "ma": "Externe groei of overdracht",
         "annual_report": "Jaarverslag en communicatie naar investeerders",
         "other": "Anders"
       },
@@ -6516,142 +6381,6 @@
       "btnCatalog": "Catalogus bekijken"
     }
   },
-  "assessmentDays": {
-    "meta": {
-      "title": "Aegryn Assessment Days, gratis expertise voor uw tech-actief",
-      "desc": "Gratis expertsessies op afspraak. Presenteer uw tech-actief in 45 minuten aan een Aegryn-adviseur. Grade-inschatting en waarderingsrange. Vrijblijvend."
-    },
-    "hero": {
-      "label": "Aegryn ASSESSMENT DAYS",
-      "title": "45 minuten om te weten\nwat uw actief waard is.",
-      "desc": "Op afspraak, in 4 Europese steden, voeren onze adviseurs een vertrouwelijke pre-screening van uw actief uit. Indicatieve grade-inschatting, waarderingsrange, aanbevelingen. Gratis. Vrijblijvend."
-    },
-    "what": {
-      "label": "WAT U KRIJGT",
-      "title": "Een pre-screening, geen pitch.",
-      "items": [
-        {
-          "title": "Indicatieve grade-inschatting",
-          "desc": "Positionering op de AEG ★/AAA/AA/A/B-schaal op basis van een voorlopige analyse van uw metrics, stack en IP."
-        },
-        {
-          "title": "Waarderingsrange",
-          "desc": "Inschatting op basis van ARR-multiples waargenomen in Aegryn-transacties en marktdata 2026."
-        },
-        {
-          "title": "Concrete aanbevelingen",
-          "desc": "De 3 tot 5 prioritaire acties om uw grade te verbeteren vóór een formele indiening."
-        },
-        {
-          "title": "Vervolgstappen",
-          "desc": "Als uw actief veelbelovend is, stellen wij een volledig certificeringsproces voor. Zonder verplichting."
-        }
-      ]
-    },
-    "notIncluded": {
-      "title": "Wat u niet krijgt",
-      "items": [
-        "Een officieel rapport (alleen gegenereerd tijdens de betaalde audit)",
-        "Een prijs- of verkooptoezegging",
-        "Toegang tot de koperscatalogus"
-      ]
-    },
-    "bring": {
-      "title": "Wat mee te nemen",
-      "items": [
-        "Kernmetrics: ARR/MRR, aantal klanten, churn, NRR",
-        "Samenvatting van de technische stack (2–3 regels)",
-        "IP-status: al dan niet geregistreerde merken, softwarerechten",
-        "Uw gewenste waarderingsrange"
-      ]
-    },
-    "cities": {
-      "label": "STEDEN 2026",
-      "title": "4 steden. Op afspraak.",
-      "list": [
-        {
-          "city": "Zürich",
-          "country": "Zwitserland",
-          "dates": "Q3 2026, data worden bevestigd",
-          "format": "Fysiek + video"
-        },
-        {
-          "city": "Parijs",
-          "country": "Frankrijk",
-          "dates": "Q3 2026, data worden bevestigd",
-          "format": "Fysiek + video"
-        },
-        {
-          "city": "Amsterdam",
-          "country": "Nederland",
-          "dates": "Q4 2026, data worden bevestigd",
-          "format": "Alleen video"
-        },
-        {
-          "city": "München",
-          "country": "Duitsland",
-          "dates": "Q4 2026, data worden bevestigd",
-          "format": "Alleen video"
-        }
-      ]
-    },
-    "form": {
-      "title": "Boek een tijdslot.",
-      "name": "Voor- en achternaam",
-      "email": "Zakelijk e-mailadres",
-      "company": "Bedrijf (optioneel)",
-      "city": "Voorkeursstad",
-      "cityPlaceholder": "Kies een stad",
-      "cityOptions": {
-        "zurich": "Zürich",
-        "paris": "Parijs",
-        "amsterdam": "Amsterdam",
-        "munich": "München"
-      },
-      "format": "Voorkeursformaat",
-      "formatPhysical": "Fysiek",
-      "formatVideo": "Video (Zoom / Meet)",
-      "assetType": "Type actief",
-      "assetTypePlaceholder": "B2B SaaS, Marketplace, mobiele app...",
-      "arrRange": "Geschatte ARR",
-      "arrPlaceholder": "Kies een range",
-      "arrOptions": {
-        "pre": "Pre-revenue",
-        "under100": "< €100K",
-        "100to500": "€100K – €500K",
-        "500to2m": "€500K – €2M",
-        "above2m": "> €2M"
-      },
-      "message": "Aanvullende informatie (optioneel)",
-      "submit": "Mijn tijdslot boeken",
-      "submitting": "Verzenden...",
-      "successTitle": "Tijdslot aangevraagd.",
-      "successDesc": "Bevestiging binnen 48 uur. Tijdslot van 45 minuten. Kosteloos. Vrijblijvend.",
-      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "note": "Bevestiging binnen 48 uur. Tijdslot van 45 minuten. Kosteloos. Vrijblijvend."
-    },
-    "faq": {
-      "title": "Veelgestelde vragen",
-      "items": [
-        {
-          "q": "Is het echt gratis?",
-          "a": "Ja, zonder uitzondering. Assessment Days zijn een Aegryn-dienst voor oprichters die een verkoop overwegen. Geen facturatie, geen verborgen kosten."
-        },
-        {
-          "q": "Moet mijn actief operationeel zijn?",
-          "a": "Nee. Wij beoordelen activa in alle stadia: in productie met omzet, in bèta, of zelfs in een stadium van alleen IP en code."
-        },
-        {
-          "q": "Is de pre-screening vertrouwelijk?",
-          "a": "Volledig. Elke sessie valt onder een Aegryn-raamwerk-NDA die vóór het gesprek wordt ondertekend. Uw metrics en identiteit worden nooit gedeeld zonder uw toestemming."
-        },
-        {
-          "q": "Wat gebeurt er na de Assessment Day?",
-          "a": "Als uw actief in aanmerking komt voor certificering, stellen wij voor het proces te starten. Geen vervolgverplichting. U vertrekt in elk geval met uw aanbevelingen."
-        }
-      ]
-    }
-  },
   "valuation": {
     "meta": {
       "title": "CIFSO Valuation Index : Benchmark uw bedrijfswaarde | Aegryn",
@@ -6754,7 +6483,7 @@
     },
     "ip": {
       "title": "Intellectueel eigendom",
-      "subtitle": "Dimensie I: IP & Rechten (0 tot 20 pt). Wat een koper eerst controleert: de eigendomsketen.",
+      "subtitle": "Dimensie I: IP & Rechten (0 tot 20 pt). Wat elke partner als eerste controleert: de eigendomsketen.",
       "trademark": "Merk gedeponeerd?",
       "trademarkOptions": {
         "yes": "Ja (land of zone opgegeven)",
@@ -6886,22 +6615,22 @@
       "strongTitle": "Wat uw score verhoogt",
       "weakMessages": {
         "capital": "Code & Architectuur is het zwakke punt: tests, CI/CD en actuele afhankelijkheden zijn de prioritaire hefbomen om het asset overdraagbaar te maken.",
-        "integrity": "IP & Rechten is het zwakke punt: overdracht van softwarerechten, open-sourcelicenties en gearchiveerde contracten zijn de eerste controles van een koper.",
+        "integrity": "IP & Rechten is het zwakke punt: overdracht van softwarerechten, open-sourcelicenties en gearchiveerde contracten zijn de eerste due-diligencecontroles.",
         "finance": "Uw financiële metrics beperken de grade. Een geauditeerde ARR en NRR > 100% zijn de meest impactvolle hefbomen.",
-        "security": "Geen recente pentest. Institutionele kopers vereisen een rapport < 12 maanden oud.",
+        "security": "Geen recente pentest. Institutionele investeerders vereisen een rapport < 12 maanden. Een veelvoorkomende due-diligenceblokkade.",
         "org": "Hoge oprichtersafhankelijkheid gedetecteerd. Dit is de factor die een waardering het meest verlaagt (20–30% onder het potentieel)."
       },
       "strongMessages": {
         "capital": "Geteste, gedocumenteerde en onderhouden codebasis: het asset is overdraagbaar zonder zijn auteur.",
         "integrity": "Zuivere eigendomsketen, conforme licenties, gearchiveerde contracten: sterk signaal van overdraagbaarheid.",
-        "finance": "Uw financiële metrics zijn solide. Uitstekend signaal voor institutionele kopers.",
-        "security": "Recente pentest en GDPR-conformiteit in orde. Uitstekend signaal voor institutionele kopers.",
+        "finance": "Uw financiële metrics zijn solide. Een uitstekend signaal voor institutionele investeerders.",
+        "security": "Recente pentest en GDPR-compliance in orde. Een uitstekend signaal voor institutionele investeerders.",
         "org": "Gestructureerde organisatie en lage oprichtersafhankelijkheid. Dit maakt toegang tot de hoogste multiples mogelijk."
       },
       "preRevenueTitle": "Pre-revenue actief",
       "preRevenueDesc": "Zonder ARR is de waardering gebaseerd op uw gecombineerde IP- en Code-score. De indicatieve range weerspiegelt de ruwe assetwaarde.",
       "preRevenueRange": "Indicatieve range",
-      "preRevenueNote": "Voor een pre-revenue actief is Aegryn Grade C de logische volgende stap. Het waardeert IP en code vóór elke transactie.",
+      "preRevenueNote": "Voor een pre-revenue asset is de Aegryn C-grade de natuurlijke stap. Het waardeert de IP en code vóór elke ronde of overdracht.",
       "ngNote": "Uw huidige score ligt onder de beoordeeldrempel. Een gratis Assessment Day helpt de 3 prioritaire acties te identificeren.",
       "disclaimer": "Dit hulpmiddel is een publieke light-versie uitsluitend voor illustratieve doeleinden. De schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder onafhankelijke verificatie. Het vormt geen officieel Aegryn Grade en kan een onafhankelijke Aegryn-certificering niet vervangen. De Aegryn-certificering (CIFSO 5000 protocol, audit door gecertificeerde Aegryn-analisten) is verplicht voor elke gecertificeerde transactie via het Aegryn Transact platform.",
       "ctaGrade": "Start mijn officiële certificering",
@@ -7117,7 +6846,7 @@
           "name": "Gecertificeerde waardering",
           "price": "CIFSO 5000-certificering",
           "badge": "",
-          "desc": "De becijferde conclusie van een onafhankelijke audit, verdedigbaar tegenover investeerder, bank of koper.",
+          "desc": "De gekwantificeerde conclusie van een onafhankelijke audit, verdedigbaar tegenover een investeerder, een bank of een partner.",
           "features": [
             "Multiple aangepast op de vijf geauditeerde dimensies",
             "Impact van elke dimensie in euro",
@@ -7166,11 +6895,11 @@
       ],
       "segLabel": "VOOR WIE",
       "segTitle": "Eén gemeenschappelijke referentie\nvoor alle partijen.",
-      "segDesc": "Bestuurders, aandeelhouders, investeerders, financiers, adviseurs en kopers lezen dezelfde data. Dat maakt een waarde bespreekbaar.",
+      "segDesc": "Leidinggevenden, aandeelhouders, investeerders, financiers, adviseurs en partners lezen dezelfde data. Dat is wat een waarde verdedigbaar maakt.",
       "segments": [
         {
           "title": "Bestuurders & aandeelhouders",
-          "desc": "De waarde positioneren vóór een beslissing, een kapitaalronde, verkoop of opvolging voorbereiden."
+          "desc": "De waarde positioneren vóór een beslissing, een ronde, een overdracht of een opvolging voorbereiden."
         },
         {
           "title": "Fondsen & family offices",
@@ -7540,7 +7269,7 @@
     "s2Title": "Toegestaan gebruik",
     "s2": "U mag de Site raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden, in strijd met de openbare orde of goede zeden is verboden. Aegryn behoudt zich het recht voor de toegang op te schorten of te verwijderen voor elke gebruiker die deze Voorwaarden schendt.",
     "s3Title": "Registratie en gebruikersaccounts",
-    "s3": "Toegang tot de Aegryn-klantenzone (koperscatalogus, certificeringsopvolging) is voorbehouden aan gekwalificeerde leden die vooraf door Aegryn zijn geautoriseerd. U verbindt zich ertoe accurate informatie te verstrekken en deze actueel te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens en elke activiteit die onder uw account wordt uitgevoerd.",
+    "s3": "Toegang tot de Aegryn-klantenruimte (certificeringsopvolging, documenten, opdrachten) is voorbehouden aan klanten die vooraf door Aegryn zijn geautoriseerd. U verbindt zich ertoe accurate informatie te verstrekken en deze up-to-date te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens en voor alle activiteit onder uw account.",
     "s4Title": "Nauwkeurigheid van de informatie",
     "s4": "De op de Site gepubliceerde informatie wordt ter indicatie verstrekt. In geval van discrepantie tussen de inhoud van de Site en ondertekende contractuele documenten (certificeringsmandaat, transactievoorwaarden) prevaleren de laatstgenoemden.",
     "s5Title": "Beperking van aansprakelijkheid",
@@ -7557,33 +7286,33 @@
   "termsCgv": {
     "meta": {
       "title": "Algemene Voorwaarden | Aegryn",
-      "desc": "Contractuele voorwaarden die Aegryn-certificeringen, transacties en diensten regelen."
+      "desc": "Contractuele voorwaarden die de certificering, begeleiding en diensten van Aegryn regelen."
     },
     "label": "Algemene Voorwaarden",
     "version": "Versie: juli 2026",
-    "note": "Dit document vormt de bindende contractuele referentie. De precieze prijsvoorwaarden zijn gespecificeerd in het ondertekende mandaat of de offerte tussen de partijen.",
+    "note": "Dit document vormt de bindende contractuele referentie. De precieze tariefvoorwaarden worden gespecificeerd in de opdracht of offerte die tussen de partijen is ondertekend. De bepalingen met betrekking tot de Tech Transaction Promise (PTT), escrow en transactiehonoraria zijn uitsluitend van toepassing in het kader van gestructureerde en vertrouwelijke overdrachts- of acquisitieopdrachten die aan Aegryn zijn toevertrouwd.",
     "s1Title": "Definities",
     "defAegryn": "Aegryn.",
-    "defAsset": "Elk digitaal actief dat via Aegryn kan worden gecertificeerd en/of overgedragen, met inbegrip van maar niet beperkt tot: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken geassocieerd met een digitaal actief, protocollen.",
-    "defGrade": "Officiële certificering van een tech-actief onder het C/I/F/S-protocol, uitgegeven door gecertificeerde Aegryn-analisten. Toegekend grade: ★, AAA, AA, A, B.",
+    "defAsset": "Elk digitaal goed dat in het kader van een Aegryn-opdracht kan worden gecertificeerd en/of overgedragen, inclusief maar niet beperkt tot: software (SaaS, applicaties), codebases, digitaal intellectueel eigendom, merken verbonden aan een digitale asset, gedocumenteerde klantcontracten.",
+    "defGrade": "Officiële certificering van een tech-asset volgens het CIFSO 5000-protocol (5 dimensies C/I/F/S/O), uitgegeven door gecertificeerde Aegryn-analisten. Toegekende grade: ★, AAA, AA, A, B.",
     "defGradeEst": "Niet-gecertificeerde indicatieve opinie geproduceerd door een Aegryn-analist zonder externe validatie. Nooit afdwingbaar tegenover derden. Altijd gevolgd door \"(geschat)\" in alle communicatie.",
     "defPtt": "Contractueel mechanisme dat de overdracht van een gecertificeerd actief regelt, inclusief een bank-escrow van 10% van de overeengekomen prijs.",
     "defEscrow": "Bedrag gestort door de koper bij een door Aegryn aangewezen derde bank. Aegryn is nooit de bewaarder van deze fondsen.",
-    "defSeller": "Elke natuurlijke of rechtspersoon die een tech-actief indient bij het Aegryn-proces.",
-    "defBuyer": "Elk gekwalificeerd Aegryn-lid dat bevoegd is de catalogus te raadplegen en biedingen in te dienen.",
+    "defSeller": "Elke natuurlijke of rechtspersoon die zijn organisatie of een tech-asset aan het Aegryn-proces onderwerpt.",
+    "defBuyer": "Elke door Aegryn gekwalificeerde partij in het kader van een acquisitieopdracht of een gestructureerde operatie.",
     "s2Title": "Gedekte diensten",
     "s2ReviewTitle": "Aegryn Review",
-    "s2Review": "Schriftelijke opinie van een Aegryn-analist over een ingediend tech-actief. Doorlooptijd: 15 werkdagen. Geen externe validatie, niet publiceerbaar in de catalogus. Alleen indicatieve waarde. Volledig aftrekbaar van de certificeringskosten indien het volledige proces binnen 6 maanden wordt gestart.",
+    "s2Review": "Schriftelijk advies van een Aegryn-analist over een ingediende organisatie. Termijn: 15 werkdagen. Zonder externe validatie, niet ingeschreven in het officiële register. Alleen indicatieve waarde. Volledig aftrekbaar van de honoraria van de volledige certificering indien binnen 6 maanden opgedragen.",
     "s2ReviewPlusTitle": "Aegryn Review+",
-    "s2ReviewPlus": "Schriftelijke opinie van een Aegryn-analist aangevuld met een review door een externe partner. Doorlooptijd: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet publiceerbaar. Volledig aftrekbaar onder dezelfde voorwaarden.",
+    "s2ReviewPlus": "Schriftelijk advies van een Aegryn-analist aangevuld met de beoordeling van een externe partner. Termijn: 20 werkdagen. Niet officieel in de zin van de volledige certificering, niet ingeschreven in het register. Volledig aftrekbaar bij opdracht van de volledige certificering binnen 6 maanden.",
     "s2CertTitle": "M&A-certificering",
-    "s2Cert": "Volledig multidimensionaal auditproces over alle 4 C/I/F/S-dimensies. Uitgevoerd door gecertificeerde Aegryn-analisten volgens het officiële protocol. Officieel AEG Grade toegekend en publiceerbaar in de catalogus. Vergoedingen: op basis van succes (commissie bij verkoop).",
+    "s2Cert": "Volledig multidimensionaal auditproces over de 5 dimensies C/I/F/S/O. Uitgevoerd door gecertificeerde Aegryn-analisten volgens het officiële protocol. Officiële AEG-grade toegekend en ingeschreven in het gecertificeerde Aegryn-register. Honoraria: vaste vergoeding volgens het gekozen pakket.",
     "s2AdvisoryTitle": "Aegryn Advisory",
     "s2Advisory": "Strategische en operationele ondersteuning voor activa in herstel en herindiening. Vergoedingen op offerte.",
     "s3Title": "Indieningsvoorwaarden",
-    "s3": "Alle activa worden ingediend via /grade/submit. Indiening vormt geen contractuele verbintenis. Aegryn heeft 5 werkdagen om te antwoorden met een pre-screening. Minder dan 25% van de ingediende activa wordt aanvaard voor volledige certificering.",
+    "s3": "Elke organisatie wordt ingediend via /grade/submit. De indiening vormt geen contractuele verbintenis. Aegryn heeft 5 werkdagen om te antwoorden met een pre-screening. Minder dan 25% van de ingediende dossiers wordt aanvaard in het volledige certificeringsproces.",
     "s3ObligTitle": "Verplichtingen van de indiener",
-    "s3Oblig": "De verkoper verbindt zich ertoe accurate en volledige informatie te verstrekken, te garanderen dat hij de rechten heeft om het actief over te dragen, de vertrouwelijkheid van het evaluatieproces te bewaren en het actief niet aan een derde over te dragen tijdens de exclusieve-mandaatperiode.",
+    "s3Oblig": "De klant verbindt zich ertoe accurate en volledige informatie te verstrekken, te garanderen dat hij over de nodige rechten op de asset beschikt, de vertrouwelijkheid van het beoordelingsproces te bewaren en de asset gedurende de beoordeling niet aan een derde over te dragen.",
     "s4Title": "De Tech Transaction Promise (PTT)",
     "s4EiTitle": "Expression of Interest (EoI)",
     "s4Ei": "Niet-bindend. Door Aegryn aan de verkoper overgebracht binnen 48 uur. Geen aanbetaling vereist.",
@@ -7639,7 +7368,7 @@
     "s12NoComm": "Partners betalen geen commissie aan Aegryn op hun honoraria, ongeacht de aard van de uitgevoerde opdracht (advies, due diligence, juridische bijstand, technische expertise, enz.). De enige aan Aegryn verschuldigde financiële tegenprestatie is het maandelijkse Expertprofiel-abonnement. Deze bepaling is dwingend en kan niet door individuele overeenkomst worden gewijzigd.",
     "s12ReferralTitle": "Verwijzingsprogramma",
     "s12Referral": "Elke Partner met een actief Expertprofiel-abonnement kan andere professionals doorverwijzen. Voor elke doorverwezen professional die zich abonneert op een Expertprofiel ontvangt de verwijzer een krediet van één maand op zijn eigen abonnement, bijgeschreven op de volgende facturatie. De doorverwezen professional ontvangt eveneens één gratis maand, verrekend met zijn eerste factuur. Aegryn behoudt zich het recht voor dit programma te wijzigen met een opzegtermijn van 30 dagen.",
-    "defPartner": "Professional geregistreerd in de Aegryn-directory via een actief Expertprofiel-abonnement. Ondersteunt verkopers en/of kopers in hun transacties (tech-advies, M&A, juridisch, HR, cyber, financiën, W&I-verzekering, enz.). Is geen partij bij de transactie en ontvangt geen commissie van Aegryn.",
+    "defPartner": "Professional gerefereerd in de Aegryn-gids via een actief Expertprofiel-abonnement. Begeleidt Aegryn-klanten in hun operaties (tech-advies, M&A, juridisch, HR, cyber, finance, W&I-verzekering, enz.).",
     "s11BisTitle": "Recruterings- en plaatsingskosten (Aegryn Talent)",
     "s11BisIntro": "Aegryn Talent biedt executive-search-diensten (vaste recruitment) en tijdelijke plaatsing (interim management) voor C-Level-, VP- en Director-tech-profielen.",
     "s11BisRecruitTitle": "Vaste recruitment (Executive Search)",
@@ -7905,25 +7634,21 @@
   "faq": {
     "meta": {
       "title": "FAQ, Veelgestelde vragen | Aegryn",
-      "desc": "Antwoorden op veelgestelde vragen over Aegryn Grade-certificering, transacties, sessies en accounts."
+      "desc": "Antwoorden op veelgestelde vragen over CIFSO 5000-certificering, waardering en begeleiding van de levenscyclus."
     },
     "label": "Veelgestelde vragen",
     "filterAll": "Alle",
-    "filterSellers": "Verkopers",
-    "filterBuyers": "Kopers",
     "filterCertification": "Certificering",
-    "filterTransactions": "Transacties",
     "filterAccount": "Account",
     "items": [
       {
         "id": "who-we-are",
         "cat": [
           "certification",
-          "sellers",
-          "buyers"
+          "lifecycle"
         ],
         "q": "Wie is Aegryn en wat doen jullie?",
-        "a": "Aegryn is een Zwitserse bouwer van tech-activa die propriëtaire digitale ecosystemen ontwerpt en exploiteert. Wij certificeren, verhandelen en ondersteunen technologie-activa via een onafhankelijk en reproduceerbaar protocol."
+        "a": "Aegryn is een Zwitsere advies- en certificeringsgroep die organisaties begeleidt in elke fase van hun levenscyclus: strategie, technologie, compliance, talent, waardering en overdracht. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
       },
       {
         "id": "what-differentiates",
@@ -7931,16 +7656,15 @@
           "certification"
         ],
         "q": "Wat onderscheidt jullie?",
-        "a": "In tegenstelling tot adviesbureaus of agencies bouwen en exploiteren wij onze eigen digitale ecosystemen. Elke aanbeveling, elk protocol, elke aanpak die wij voorstellen komt uit echte uitvoering. Wij verkopen geen generieke modellen door. Wij delen wat werkt omdat wij het zelf gebruiken."
+        "a": "In tegenstelling tot adviesbureaus of agencies bouwen en exploiteren wij onze eigen digitale ecosystemen. Elk advies, elk protocol, elke aanpak die wij aanbieden komt uit echte uitvoering. Wij verkopen geen generieke modellen door. Wij delen wat werkt omdat wij het zelf gebruiken."
       },
       {
         "id": "cert-options",
         "cat": [
-          "certification",
-          "sellers"
+          "certification"
         ],
-        "q": "Wat zijn de certificeringsopties en hun prijzen?",
-        "a": "Er zijn twee trajecten beschikbaar. Alleen certificering (Aegryn Review): verkrijg een officieel Grade zonder catalogusvermelding, voor €2.000 excl. btw (interne Review) of €5.000 excl. btw (mede-ondertekende Review+), aftrekbaar indien binnen 6 maanden een M&A-certificering wordt gestart. M&A-certificering: volledig proces met catalogusvermelding en Aegryn-commissie alleen bij transactie. Er geldt een publicatievergoeding van CHF 2.000 excl. btw, aftrekbaar van de commissie bij verkoop en verschuldigd zonder transactie."
+        "q": "Wat zijn de certificeringsopties en tarieven?",
+        "a": "Er zijn twee trajecten beschikbaar. Alleen certificering (Aegryn Review): een officiële Grade verkrijgen voor CHF 2.000 excl. btw (interne Review) of CHF 5.000 excl. btw (medeondertekende Review+), aftrekbaar bij opdracht van een Volledige Certificering binnen 6 maanden. Volledige CIFSO 5000-certificering: volledige audit over de 5 dimensies, officiële grade en gedetailleerd rapport, bruikbaar bij een financieringsronde, een overdracht of een partnerschap."
       },
       {
         "id": "what-grade",
@@ -7948,82 +7672,81 @@
           "certification"
         ],
         "q": "Wat is de Aegryn Grade?",
-        "a": "De Aegryn Grade is een officiële multidimensionale certificering die 4 dimensies evalueert: Code (C), IP en Rechten (I), Financiën (F), Beveiliging (S). Elke dimensie wordt beoordeeld op 25. De totaalscore bepaalt het officiële Grade: AEG Star Uitzonderlijk (90 en hoger), AAA Excellent (75 en hoger), AA Zeer goed (60 en hoger), A Goed (45 en hoger), B Correct (30 en hoger)."
+        "a": "De Aegryn Grade is een officiële multidimensionale certificering die 5 dimensies beoordeelt: Code (C), IP & Rechten (I), Financiën (F), Beveiliging (S), Organisatie (O). Elke dimensie wordt beoordeeld op 20 punten. De totaalscore bepaalt de officiële Grade: AEG ★ Uitzonderlijk (90+), AAA Excellent (75+), AA Zeer goed (60+), A Goed (45+), B Redelijk (30+)."
       },
       {
         "id": "what-assets",
         "cat": [
-          "sellers"
+          "certification",
+          "lifecycle"
         ],
-        "q": "Welke soorten activa kan ik indienen?",
-        "a": "Aegryn certificeert en verhandelt digitale tech-activa: B2B SaaS, mobiele apps, marktplaatsen, AI-protocollen, digitaal intellectueel eigendom. Aanbevolen minimumticket: 100.000 euro geschatte waardering."
+        "q": "Welke soorten organisaties kunnen jullie begeleiden?",
+        "a": "Aegryn certificeert en begeleidt tech-organisaties: B2B SaaS-uitgevers, mobiele applicaties, platforms en marketplaces, AI-protocollen, digitale intellectuele-eigendomsactiva."
       },
       {
-        "id": "seller-identity",
+        "id": "data-confidentiality",
         "cat": [
-          "sellers"
+          "certification",
+          "lifecycle"
         ],
-        "q": "Wordt mijn identiteit bekendgemaakt aan kopers?",
-        "a": "Aegryn waarborgt de vertrouwelijkheid van alle partijen gedurende het hele proces. De identiteit van de verkoper is voor geen enkele koper toegankelijk voordat Aegryn besluit de partijen te introduceren. Evenzo blijft de identiteit van de koper vertrouwelijk totdat zijn bod is aanvaard. Alleen het Aegryn-team heeft toegang tot persoonlijke informatie voor KYC-controles en dossierbeheer."
+        "q": "Wie heeft toegang tot de gegevens van mijn certificeringsdossier?",
+        "a": "Uw gegevens blijven strikt vertrouwelijk. Alleen het Aegryn-team en de gemandateerde auditors, allen gebonden aan geheimhoudingsovereenkomsten, krijgen toegang tot uw dossierinformatie in het kader van de beoordeling en de KYC-controles."
       },
       {
         "id": "become-buyer",
         "cat": [
-          "buyers"
+          "lifecycle"
         ],
-        "q": "Hoe word ik lid-koper?",
-        "a": "Koperslidmaatschap wordt niet meer in self-service aangeboden. Acquisitieprojecten worden beoordeeld in het kader van onze begeleiding — zie /valoriser/acquisition of neem contact op met ons team."
+        "q": "Begeleiden jullie acquisitieprojecten?",
+        "a": "Ja. Acquisitieprojecten worden beoordeeld in het kader van onze begeleiding van de cyclus Acquisitie: onafhankelijke due diligence, soevereiniteitsaudit, CIFSO 5000-certificering van de target en een integratieplan. Zie /valoriser/acquisition of neem contact op met onze teams."
       },
       {
         "id": "kyc-docs",
         "cat": [
-          "buyers",
-          "sellers"
+          "certification"
         ],
         "q": "Welke KYC-documenten zijn vereist?",
-        "a": "Natuurlijke personen: geldig identiteitsdocument, adresbewijs jonger dan 3 maanden, bewijs van financiële capaciteit. Entiteiten (bedrijven, fondsen): equivalent van een handelsregisteruittreksel jonger dan 3 maanden, statuten, identiteitsdocument van de vertegenwoordiger, UBO-verklaring (25% en meer), regelgevende licentie indien van toepassing."
+        "a": "Particulieren: geldig identiteitsdocument, adresbewijs van minder dan 3 maanden oud. Entiteiten (ondernemingen, fondsen): uittreksel handelsregister of equivalent van minder dan 3 maanden oud, statuten, identiteitsdocument van de wettelijke vertegenwoordiger, verklaring van uiteindelijk belanghebbenden (UBO vanaf 25%), regelgevende licentie indien van toepassing."
       },
       {
-        "id": "escrow",
+        "id": "transmission-support",
         "cat": [
-          "buyers",
-          "transactions"
+          "lifecycle"
         ],
-        "q": "Hoe werkt de escrow?",
-        "a": "Na een ondertekende NDA en aanvaarding van het ingediende bod stort de koper 10% van de overeengekomen prijs bij een externe partnerinstelling. Aegryn houdt deze fondsen nooit zelf. De opnameregels zijn vastgelegd in de Verkoopvoorwaarden."
+        "q": "Hoe verloopt een overdrachtsbegeleiding?",
+        "a": "De begeleiding volgt de Valoriser-cyclus Overdracht: compromisloze diagnose, CIFSO 5000-certificering, voorbereiding van de dataroom en coördinatie van het uitvoeringsnetwerk. Details op /valoriser/transmission."
       },
       {
         "id": "kryv",
         "cat": [
-          "certification",
-          "transactions"
+          "certification"
         ],
         "q": "Hoe garandeert Aegryn de traceerbaarheid van een grade?",
-        "a": "Elke grade wordt gedocumenteerd, geversioneerd en opgeslagen in het Aegryn-register. Elke wijziging aan een gecertificeerde codebase na uitgifte genereert een nieuwe versie. Zo kan op elk moment worden bewezen dat de ontvangen code exact overeenkomt met de gecertificeerde code."
+        "a": "Elke grade wordt gedocumenteerd, geversioneerd en bewaard in het Aegryn-register. Elke wijziging van de gecertificeerde codebase na uitgifte genereert een nieuwe versie. Zo kan op elk moment worden bewezen dat de ontvangen code exact overeenkomt met de gecertificeerde code."
       },
       {
         "id": "talent-service",
         "cat": [
           "account"
         ],
-        "q": "Bieden jullie recruteringsdiensten aan?",
-        "a": "Ja, Aegryn Talent biedt executive search (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en tijdelijke plaatsing (interim management). Vergoeding: 20% van het bruto jaarsalaris, alleen bij succesvolle plaatsing (success fee). 3 maanden vervangingsgarantie voor vaste recruitment. Formulieren beschikbaar op /talent."
+        "q": "Bieden jullie recruitmentdiensten aan?",
+        "a": "Ja, Aegryn Talent biedt executive recruitment (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en tijdelijke plaatsing (interim management). Honoraria: 20% van het bruto jaarsalaris, alleen bij succesvolle plaatsing (success fee). Vervangingsgarantie van 3 maanden voor vaste plaatsing. Formulieren beschikbaar op /talent."
       },
       {
         "id": "advisory-service",
         "cat": [
           "account"
         ],
-        "q": "Welke adviesdiensten bieden jullie aan?",
-        "a": "Aegryn Advisory opereert op 4 assen: Tech & AI (digitale transformatie, AI-strategie, architectuur), Cybersecurity (audits, AVG/FADP/SOC2/ISO27001-compliance), M&A Advisory (buy-side, sell-side, due diligence, waardering), Data Privacy (EU AI Act, datagovernance). Wij opereren in 23+ sectoren in Europa. Zie /advisory voor details."
+        "q": "Welke advisorydiensten bieden jullie aan?",
+        "a": "Aegryn Advisory is actief op 4 assen: Tech & AI (digitale transformatie, AI-strategie, architectuur), Cybersecurity (audits, GDPR/FADP/SOC2/ISO27001-compliance), M&A Advisory (buy-side, sell-side, due diligence, waardering), Data Privacy (EU AI Act, data governance). Wij zijn actief in meer dan 23 industrieën in Europa. Zie /advisory voor details."
       },
       {
         "id": "build-service",
         "cat": [
           "account"
         ],
-        "q": "Bouwen jullie activa op maat?",
-        "a": "Ja, Aegryn ontwerpt tech-activa op maat (SaaS, platforms, tools) voor ondernemers en instellingen. Vaste prijs ondertekend in de discovery-fase, alleen maatwerkcode (geen no-code), IP volledig overgedragen aan de klant, certificeringsklaar vanaf dag 1. Doorlooptijd: 10-16 weken. Indicatieve range: CHF 15.000-150.000+. Details op /services/build."
+        "q": "Bouwen jullie maatwerk-assets?",
+        "a": "Ja, Aegryn ontwerpt maatwerk tech-assets (SaaS, platforms, tools) voor ondernemers en instellingen. Honoraria gedefinieerd en ondertekend in de discovery-fase, alleen custom code (geen no-code), IP volledig overgedragen aan de klant, certification-ready vanaf dag 1. Doorlooptijd: 10-16 weken. Indicatief bereik: CHF 15.000-150.000+. Details op /services/build."
       },
       {
         "id": "magazine",
@@ -8031,25 +7754,26 @@
           "account"
         ],
         "q": "Wat is het Aegryn-magazine?",
-        "a": "Driemaandelijkse publicatie over tech-transacties, AI, exits en M&A-trends in Europa. Online beschikbaar op /magazine. Gratis abonnement om komende edities vooraf te ontvangen."
+        "a": "Driemaandelijkse publicatie over tech-transacties, AI, exits en M&A-trends in Europa. Online beschikbaar op /magazine. Schrijf u in om de volgende edities 48u voor publicatie te ontvangen."
       },
       {
         "id": "partner-network",
         "cat": [
           "account"
         ],
-        "q": "Hoe word ik lid van het Aegryn-expertnetwerk?",
-        "a": "Professionals (advocaten, tech-experts, M&A, cyber, financiën, W&I-verzekering) kunnen zich abonneren op een Expert Card (89 CHF excl. btw/maand). Dit geeft toegang tot doorverwijzingsverzoeken van Aegryn-verkopers en -kopers. Geen commissie aan Aegryn op uw honoraria. Details op /grade/partners."
+        "q": "Hoe word je lid van het Aegryn-expertnetwerk?",
+        "a": "Professionals (advocaten, tech-experts, M&A, cyber, finance, W&I-verzekering) kunnen een Expertprofiel-abonnement nemen (CHF 89 excl. btw/maand). Dit geeft toegang tot certificerings- en begeleidingsopdrachten van Aegryn-klanten. Geen commissie aan Aegryn over uw honoraria. Details op /grade/partners."
       },
       {
         "id": "valuation",
         "cat": [
-          "sellers"
+          "certification"
         ],
-        "q": "Bieden jullie waarderingen van tech-activa aan?",
-        "a": "Ja, via /valuation. Dien uw actief in voor een gratis indicatieve schatting binnen 48 uur. Voor een gecertificeerde waardering met gedetailleerd rapport kiest u Aegryn Review (2.000 CHF excl. btw) of Review+ (5.000 CHF excl. btw), aftrekbaar indien binnen 6 maanden een volledige certificering wordt gestart."
+        "q": "Bieden jullie organisatiewaarderingen aan?",
+        "a": "Ja, via /valuation. Dien uw organisatie in voor een gratis indicatieve schatting binnen 48u. Voor een gecertificeerde waardering met gedetailleerd rapport kiest u Aegryn Review (CHF 2.000 excl. btw) of Review+ (CHF 5.000 excl. btw), aftrekbaar bij opdracht van een volledige certificering binnen 6 maanden."
       }
-    ]
+    ],
+    "filterLifecycle": "Levenscyclus"
   },
   "blogPage": {
     "label": "Blog",
@@ -8059,7 +7783,7 @@
   "clientArea": {
     "login": {
       "title": "Klantenzone",
-      "subtitle": "Toegang voorbehouden aan door Aegryn gecertificeerde verkopers en kopers.",
+      "subtitle": "Toegang tot uw Aegryn-kliumtruimte: certificering, documenten en vertrouwelijke uitwisseling.",
       "linkExpired": "Verlopen of ongeldige link. Vraag een nieuwe aan.",
       "emailLabel": "E-mailadres",
       "emailPlaceholder": "u@voorbeeld.com",
@@ -8129,19 +7853,13 @@
     },
     "register": {
       "title": "Account aanmaken",
-      "subtitle": "Word lid van de Aegryn-klantenzone: gecertificeerde kopers, verkopers en partners.",
+      "subtitle": "Word lid van de Aegryn-kliumtruimte: certificeringsopvolging, documenten en uitwisseling met onze teams.",
       "fullNameLabel": "Volledige naam",
       "fullNamePlaceholder": "Voornaam Achternaam",
       "emailLabel": "E-mailadres",
       "emailPlaceholder": "u@voorbeeld.com",
       "passwordLabel": "Wachtwoord",
       "passwordPlaceholder": "Minimaal 8 tekens",
-      "roleLabel": "Ik wil voornamelijk",
-      "roleOptional": "optioneel, standaard koper",
-      "roleBuyer": "Een tech-actief overnemen",
-      "roleBuyerDesc": "Toegang tot de gecertificeerde catalogus, NDA's ondertekenen en uw biedingen volgen.",
-      "roleSeller": "Een tech-actief verkopen",
-      "roleSellerDesc": "Dien uw actief in, volg het certificeringsproces en ontvang biedingen.",
       "submit": "Mijn account aanmaken",
       "submitting": "Account aanmaken…",
       "alreadyAccount": "Heeft u al een account?",
@@ -8348,7 +8066,6 @@
     "groupBuild": "Build",
     "groupAdvisory": "Advisory",
     "groupGrade": "Certificering",
-    "groupTransaction": "Transact",
     "groupDiscover": "Ontdekken",
     "groupCompany": "Bedrijf",
     "groupLegal": "Juridisch",
@@ -8363,17 +8080,9 @@
     "gradeMethod": "CIFSO 5000-brochure",
     "gradeSubmit": "Indienen voor certificering",
     "gradePartners": "Certificerende experts",
-    "transaction": "Assetcatalogus",
-    "transactionSell": "Overdracht & Verkoop",
-    "transactionBuy": "Overname & Externe groei",
-    "transactionSubmit": "Een actief indienen",
-    "transactionHowWorks": "Hoe het werkt",
-    "transactionSession": "Privésessies",
-    "transactionResults": "Afgesloten transacties",
     "magazine": "Aegryn Magazine",
     "magazineIssue01": "Editie 01: Built to Last",
     "blog": "Artikelen & Inzichten",
-    "roadmap": "Roadmap",
     "glossaire": "M&A-woordenlijst",
     "about": "Over Aegryn",
     "whatWeBuild": "Wat wij bouwen",
@@ -8383,7 +8092,14 @@
     "termsCgv": "Verkoopvoorwaarden",
     "privacy": "Privacy",
     "security": "Beveiliging",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "groupValoriser": "Valoriser",
+    "valoriser": "Valoriser — Overzicht",
+    "valoriserLancement": "Lancering & Structurering",
+    "valoriserCroissance": "Groei & Opschaling",
+    "valoriserRestructuration": "Herstructurering & Pivot",
+    "valoriserAcquisition": "Acquisitie & Externe groei",
+    "valoriserTransmission": "Overdracht & Cessie"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",
@@ -8892,22 +8608,22 @@
   "experts": {
     "meta": {
       "title": "Expert Network | Aegryn",
-      "desc": "Geverifieerd netwerk van M&A-, juridische, technische en cybersecurity-experts geselecteerd door Aegryn. De juiste mensen op het juiste moment voor elke transactie."
+      "desc": "Netwerk van M&A-, juridische, technische en cyber-experts geselecteerd door Aegryn. Elke opdracht profiteert van de juiste mensen op het juiste moment."
     },
     "hero": {
       "label": "Aegryn Expert Network",
-      "title": "Grote transacties doe je nooit alleen.",
-      "desc": "Achter elke succesvolle deal staat een M&A-jurist die het risico zag, een accountant die de cijfers bewaakte, een CTO die de stack valideerde. Wij hebben hen gevonden en voor u geverifieerd."
+      "title": "De juiste opdrachten doe je niet alleen.",
+      "desc": "Achter elke succesvolle opdracht staat een advocaat die het risico zag, een accountant die de cijfers beheerde, een CTO die de stack valideerde. Wij hebben ze voor u gevonden en geverifieerd."
     },
     "showcase": {
       "label": "Expertisegebieden",
-      "title": "Elk type transactionele expert",
-      "desc": "Van ad-hoc advies tot diepgaande dealondersteuning, de community dekt elke M&A-tech-specialiteit."
+      "title": "Alle soorten\ndomeinexperts",
+      "desc": "Van eenmalig advies tot diepgaande begeleiding: de community dekt het volledige scala aan tech-, compliance-, talent- en M&A-specialismen."
     },
     "categories": {
       "tech": "Advisory Tech",
       "techDesc": "Cybersecurity, AI-audit, digitale strategie",
-      "transaction": "Advisory Transaction",
+      "transaction": "M&A-advies",
       "transactionDesc": "M&A, waardering, financiële structurering",
       "network": "Partnernetwerk",
       "networkDesc": "Door Aegryn gecertificeerde partners"
@@ -8917,8 +8633,8 @@
       "securityDesc": "Pentest, cloudbeveiliging, NIS2-compliance, applicatiebeveiligingsaudit.",
       "data-ai": "Data & Kunstmatige Intelligentie",
       "data-aiDesc": "AI-strategie, MLOps, datagovernance, EU AI Act-compliance.",
-      "transaction": "M&A-transactieadvies",
-      "transactionDesc": "Waardering, vendor readiness, due diligence, transactierecht.",
+      "transaction": "M&A-advies",
+      "transactionDesc": "Waardering, voorbereiding van de overdracht, due diligence, ondernemingsrecht.",
       "product-ux": "Product & Gebruikerservaring",
       "product-uxDesc": "Productmanagement, UX/UI-design, digitale toegankelijkheid, AVG & Privacy.",
       "cybersecurity": "Cybersecurity",
@@ -8961,14 +8677,14 @@
       "ip_lawDesc": "IP-eigendomsketen, open-source-licenties, overdracht van oprichtersrechten, merkbescherming.",
       "esg": "ESG / MVO",
       "esgDesc": "MVO-strategie, niet-financiële rapportage, ESG due diligence, impact.",
-      "vendor_readiness": "Vendor Readiness, verkoopvoorbereiding",
-      "vendor_readinessDesc": "Audit van het verkopersdossier, dataroom, contracten, AVG, technische schuld. Verkort de certificeringstijdlijn.",
+      "vendor_readiness": "Voorbereiding van de overdracht",
+      "vendor_readinessDesc": "Audit van het verkopersdossier, dataroom, contracten, GDPR, technische schuld. Verkort de certificeringstermijn.",
       "dd_hr": "HR & Arbeidsrecht Due Diligence",
       "dd_hrDesc": "Sleutelcontracten, aandelenplannen, arbeidsrechtelijke verplichtingen, classificatie van freelancers, non-concurrentiebedingen.",
       "dd_regulatory": "Sectorale Regelgevings-Due Diligence",
       "dd_regulatoryDesc": "FinTech (DORA/FINMA), HealthTech (HDS), AI-native (EU AI Act), LegalTech, EdTech.",
       "wi_insurance": "Warranty & Indemnity-verzekering",
-      "wi_insuranceDesc": "Introductie bij W&I-verzekeraars voor transacties boven €500k. Vergemakkelijkt volledige prijsvrijgave bij closing.",
+      "wi_insuranceDesc": "Koppeling aan W&I-verzekeraars voor operaties > €500.000. Vergemakkelijkt de closing.",
       "tax_corporate": "Fiscale & Corporate Structurering",
       "tax_corporateDesc": "Exit-optimalisatie, holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-ruil.",
       "financing": "Financiering & Financiële Partners",
@@ -9005,7 +8721,7 @@
     "placeholder": {
       "badge": "Binnenkort",
       "title": "Eerste experts komen binnenkort.",
-      "desc": "Het Aegryn-netwerk opent zijn deuren. Hier is een voorbeeld van de profielen die uw transacties zullen ondersteunen."
+      "desc": "Het Aegryn-netwerk opent zijn deuren. Hier een voorproefje van de profielen die u in uw opdrachten zullen begeleiden."
     },
     "card": {
       "contact": "Contact",
@@ -10769,7 +10485,7 @@
     "workWith": {
       "label": "WERKEN MET AEGRYN",
       "title": "Vijf disciplines.\nÉén relatie.",
-      "sub": "Advisory, engineering, transactie, talent, kennis : geïntegreerd in één groep, met dezelfde standaarden.",
+      "sub": "Advies, bouw, waardering, talent, kennis: geïntegreerd in één groep, gedragen door dezelfde standaarden.",
       "items": [
         {
           "key": "accompagner",
@@ -10791,9 +10507,9 @@
           "key": "transmettre",
           "num": "03",
           "title": "WAARDEREN",
-          "desc": "Certificering en verkoop van tech assets in een vertrouwelijke kring van gekwalificeerde kopers. Gestructureerd proces, zonder publieke blootstelling.",
-          "cta": "Platform verkennen",
-          "href": "/transact"
+          "desc": "CIFSO 5000-certificering, gedocumenteerde waardering en begeleiding van de overdracht in een vertrouwelijk kader. Een gestructureerd, gegradeerd proces zonder publieke blootstelling.",
+          "cta": "Ontdek Valoriser",
+          "href": "/valoriser"
         },
         {
           "key": "recruter",

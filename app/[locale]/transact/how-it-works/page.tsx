@@ -12,7 +12,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'transactHow.meta' })
-  return generateAegrynMetadata({
+  const meta = generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
     path: '/transact/how-it-works',
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'how to sell a company Europe', 'M&A process Switzerland',
     ],
   })
+  return { ...meta, robots: { index: false, follow: false } }
 }
 
 const STEP_ICONS = [

@@ -9,12 +9,13 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'transactResults.meta' })
-  return generateAegrynMetadata({
+  const meta = generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
     path: '/transact/results',
     locale,
   })
+  return { ...meta, robots: { index: false, follow: false } }
 }
 
 const GRADE_LABELS: Record<string, string> = {

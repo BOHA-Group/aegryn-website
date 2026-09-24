@@ -38,15 +38,9 @@ const STATIC_ROUTES = [
   { path: '/valoriser/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/valoriser/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/valoriser/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
-  // ── Transact — outils & marketplace (inchangé) ──────────────────────────────
-  // /transact/sell et /transact/buyers sont archivés : routes fonctionnelles
-  // mais masquées (hors sitemap, noindex) — repositionnement Valoriser.
-  { path: '/transact/sessions',                  priority: 0.9,  changeFrequency: 'weekly'  as const },
-  { path: '/transact/mandate',                   priority: 1.0,  changeFrequency: 'monthly' as const },
-  { path: '/transact/how-it-works',              priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/transact/submit',                    priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/transact/bid-models',                priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/transact/results',                   priority: 0.7,  changeFrequency: 'weekly'  as const },
+  // ── Transact — infrastructure legacy ────────────────────────────────────────
+  // Toutes les routes /transact/* restent fonctionnelles pour les workflows
+  // structurés (NDA, KYC, escrow) mais sont masquées : hors sitemap, noindex.
   // ── Grade & Certification CIFSO 5000 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },

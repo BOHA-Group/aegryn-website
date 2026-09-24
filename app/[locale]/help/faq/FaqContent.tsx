@@ -20,10 +20,8 @@ export default function FaqContent() {
 
   const FILTERS = [
     { key: 'all',            label: t('filterAll') },
-    { key: 'sellers',        label: t('filterSellers') },
-    { key: 'buyers',         label: t('filterBuyers') },
     { key: 'certification',  label: t('filterCertification') },
-    { key: 'transactions',   label: t('filterTransactions') },
+    { key: 'lifecycle',      label: t('filterLifecycle') },
     { key: 'account',        label: t('filterAccount') },
   ] as const
 

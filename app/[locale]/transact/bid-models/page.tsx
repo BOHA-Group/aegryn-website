@@ -11,7 +11,7 @@ const MODEL_ICONS = [Users, Building2, BarChart3, TrendingUp]
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'bidModels.meta' })
-  return generateAegrynMetadata({
+  const meta = generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
     path: '/transact/bid-models',
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'minimum ticket acquisition', 'ticket minimum recommandé', 'fund acquisition',
     ],
   })
+  return { ...meta, robots: { index: false, follow: false } }
 }
 
 export default async function BidModelsPage({ params }: Props) {

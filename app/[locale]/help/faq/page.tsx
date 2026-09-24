@@ -9,10 +9,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
     title: 'FAQ | Aegryn',
-    description: 'Questions fréquentes sur Aegryn TRANSACT : cession d\'actifs tech, certification CIFSO, grades, acheteurs pré-qualifiés, séquestre et comptes utilisateurs.',
+    description: 'Questions fréquentes sur Aegryn : certification CIFSO 5000, valorisation, accompagnement du cycle de vie des organisations et comptes utilisateurs.',
     path: '/help/faq',
     locale,
-    keywords: ['FAQ Aegryn', 'questions fréquentes TRANSACT', 'aide Aegryn', 'certification CIFSO FAQ', 'cession SaaS questions'],
+    keywords: ['FAQ Aegryn', 'questions fréquentes Aegryn', 'aide Aegryn', 'certification CIFSO FAQ', 'valorisation organisation'],
   })
 }
 

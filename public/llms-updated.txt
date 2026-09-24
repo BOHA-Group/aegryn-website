@@ -33,7 +33,7 @@ transmission entreprise, business succession, vendor readiness, exit readiness, 
 acquisition advisory, croissance externe, external growth advisory, due diligence tech,
 restructuration entreprise, business restructuring, pivot stratégique, turnaround advisory,
 digital asset valuation, valorisation SaaS, SaaS multiples, ARR multiple, valorisation actif numérique,
-M&A expert network, W&I insurance, expert M&A tech, réseau experts transactions,
+M&A expert network, W&I insurance, expert M&A tech, réseau experts M&A,
 AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
 
 ### Certification & Valuation — CIFSO
@@ -158,13 +158,6 @@ Key Pages:
 - /valoriser/restructuration — Restructuring & Pivot
 - /valoriser/acquisition — Acquisition & External Growth (due diligence)
 - /valoriser/transmission — Transmission & Cession (vendor readiness)
-- /transact/catalog — Live assets (NDA required)
-- /transact/sessions — Session calendar
-- /transact/mandate — Submit sell mandate
-- /transact/how-it-works — 6-step process
-- /transact/submit — Asset submission form
-- /transact/bid-models — Offer structures
-- /transact/results — Past transactions
 
 ## Certification CIFSO 5000 (/grade)
 
@@ -180,7 +173,7 @@ Protocol CIFSO 5000: 5 audited dimensions, each 0-20 pts, total /100:
 5 immutable grades: AEG ★ (Apex, #5ADDA4), AAA (Gold, #C9A84C), AA (Silver, #9BA8B0), A (Blue, #4A90D9), B (Amber, #D4820A)
 Regulatory compliance (v4.11): applicable perimeter profiled then validated; controls distributed per dimension: Data Act (C+I), CRA (C), ePrivacy/DSA/P2B/sanctions/AML (I), NIS2/DORA/AI Act (S), compliance governance (O). Non-compliance lowers the score, caps the grade at AA and affects the TRS; the report is never blocked.
 At publication: quantified valuation (industry multiple adjusted on the 5 CIFSO scores) + roadmap potential.
-MANDATORY for any certified transaction via Aegryn Transact.
+MANDATORY for any certified valuation or transmission mandate handled by Aegryn.
 Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify
 
 ## CIFSO Valuation Index (/valuation)
@@ -223,8 +216,8 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 
 - General: contact@boha-group.com
 - Certify: https://aegryn.com/grade/submit
-- Sell: https://aegryn.com/transact/submit
-- Buy: https://aegryn.com/valoriser/acquisition
+- Transmission: https://aegryn.com/valoriser/transmission
+- Acquisition: https://aegryn.com/valoriser/acquisition
 - Advisory: https://aegryn.com/advisory
 - Talent: https://aegryn.com/talent
 - Custom Build: https://aegryn.com/services/build

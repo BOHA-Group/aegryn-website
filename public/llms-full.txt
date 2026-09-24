@@ -134,13 +134,6 @@ Not an auction: no real-time public bidding. A structured, on-demand confidentia
 - /valoriser/restructuration — Restructuring & Pivot cycle
 - /valoriser/acquisition — Acquisition & External Growth cycle (due diligence, target certification, PMI)
 - /valoriser/transmission — Transmission & Cession cycle (vendor readiness, data room, certification)
-- /transact/catalog — Live catalog (NDA required for full dossier)
-- /transact/sessions — Session calendar
-- /transact/mandate — Submit sell mandate
-- /transact/how-it-works — Full 6-step process
-- /transact/submit — Asset submission form
-- /transact/bid-models — Detailed offer structures
-- /transact/results — Past transaction results
 
 ---
 
@@ -187,7 +180,7 @@ Regulatory compliance (CIFSO v4.11): each asset's regulatory perimeter is profil
 
 At publication, the certified dossier carries a quantified valuation: market multiple of the industry adjusted by the 5 CIFSO scores, per-dimension impact in euros, and roadmap potential (value if each dimension reaches its target level).
 
-MANDATORY for any certified transaction via Aegryn Transact. Cannot be replaced by a self-assessment or any third-party estimate.
+MANDATORY for any certified valuation or transmission mandate handled by Aegryn. Cannot be replaced by a self-assessment or any third-party estimate.
 Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify (public certificate verification), /verify/[code]
 
 ---
@@ -220,7 +213,7 @@ Page: /valuation
 
 ## Expert Network
 
-Curated network of vetted transactional tech experts:
+Curated network of vetted tech and M&A experts:
 - M&A Advisors — deal structuring, valuation, SPA
 - Tech Lawyers — IP, share deal, asset deal, NDA
 - Accountants/Auditors — financial due diligence, SaaS metrics
@@ -289,7 +282,6 @@ Incorporated: Aegryn, Switzerland
 | Career | /fr/career | Open positions |
 | Glossary | /fr/glossaire | Tech M&A glossary |
 | Alliances | /fr/alliances | Strategic partnerships |
-| Roadmap | /fr/roadmap | Product roadmap |
 | Investors | /fr/investisseurs | Financing & investors |
 | Industries | /fr/industries | Five industry hubs |
 | Industry detail | /fr/industries/[slug] | Per-industry page |
@@ -299,13 +291,6 @@ Incorporated: Aegryn, Switzerland
 | Restructuration & Pivot | /fr/valoriser/restructuration | Restructuring & Pivot cycle |
 | Acquisition & Croissance externe | /fr/valoriser/acquisition | Acquisition due diligence cycle |
 | Transmission & Cession | /fr/valoriser/transmission | Transfer & cession cycle |
-| Catalog | /fr/transact/catalog | Live assets for sale |
-| Sessions | /fr/transact/sessions | Session calendar |
-| Mandate | /fr/transact/mandate | Sell mandate submission |
-| How It Works | /fr/transact/how-it-works | 6-step process |
-| Submit | /fr/transact/submit | Asset submission |
-| Bid Models | /fr/transact/bid-models | Offer structures |
-| Results | /fr/transact/results | Past transactions |
 | Grade | /fr/grade | Certification CIFSO 5000 |
 | Brochure | /fr/grade/brochure | Full protocol presentation |
 | Grade Submit | /fr/grade/submit | Submit for certification |
