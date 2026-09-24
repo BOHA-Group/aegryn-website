@@ -27,6 +27,7 @@ const STATIC_ROUTES = [
   { path: '/investisseurs',                      priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/glossaire',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
+  { path: '/roadmap',                            priority: 0.5,  changeFrequency: 'monthly' as const },
   { path: '/what-we-build',                      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────

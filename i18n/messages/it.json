@@ -1767,7 +1767,7 @@
     "servicesLabel": "Servizi",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "Servizi",
-    "footerCol3Title": "Piattaforma",
+    "footerCol3Title": "Strumenti",
     "footerCol4Title": "Pubblicazioni",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosistema",
@@ -1777,7 +1777,7 @@
     "medallionText": "Parliamo . Contattaci . Parliamo . Contattaci .",
     "contactLabel": "Contattaci",
     "roadmap": {
-      "title": "Piattaforma",
+      "title": "Aegryn",
       "link": "Tabella di marcia"
     },
     "assetsLink": "Catalogo Attivi",
@@ -1792,7 +1792,7 @@
     "col2Subblink": "Analisi rischi contrattuali",
     "col2Code": "Certificazione CIFSO 5000",
     "col2Grade": "Ottenere la certificazione",
-    "col2DataRoom": "Data room",
+    "col2DataRoom": "Valoriser",
     "col2ViewAll": "Il nostro portafoglio",
     "col3Title": "Le nostre convinzioni",
     "col3Magazine": "Rivista",
@@ -2974,7 +2974,7 @@
       "desc": "La roadmap Aegryn: certificazione CIFSO 5000, accompagnamento del ciclo di vita delle organizzazioni, indice di valutazione e rete di esperti."
     },
     "label": "Aegryn — Gruppo svizzero",
-    "title": "La piattaforma.\nLe sue funzionalità.",
+    "title": "Il gruppo.\nLe sue funzionalità.",
     "desc": "Aegryn accompagna le organizzazioni tecnologiche in ogni fase del loro ciclo di vita: certificazione, valutazione, consulenza, talento, trasferimento. Ogni mandato è regolato dal diritto svizzero.",
     "swissNote": "Diritto svizzero applicabile a ogni mandato, qualunque sia la provenienza dell'organizzazione o la nazionalità delle parti.",
     "featuresLabel": "Cosa offre il dispositivo",
@@ -3624,7 +3624,7 @@
       {
         "num": "01",
         "title": "Presentazione",
-        "desc": "Deposito del fascicolo sulla piattaforma sicura, verifica di completezza e pre-qualificazione entro 5 giorni lavorativi."
+        "desc": "Deposito del fascicolo sulla area riservata sicura, verifica di completezza e pre-qualificazione entro 5 giorni lavorativi."
       },
       {
         "num": "02",
@@ -9158,7 +9158,7 @@
       "expertProfile": {
         "meta": "Profilo esperto, Area Partner Aegryn",
         "title": "Il mio profilo esperto",
-        "subtitle": "Profilo visibile sul marketplace Aegryn Experts.",
+        "subtitle": "Profilo visibile sulla rete di esperti Aegryn.",
         "areaLabel": "Area Partner"
       },
       "subscription": {
@@ -10596,7 +10596,7 @@
     "expertProfile": {
       "meta": "Profilo esperto — Spazio partner Aegryn",
       "title": "Il mio profilo esperto",
-      "subtitle": "Profilo visibile sul marketplace Aegryn Experts."
+      "subtitle": "Profilo visibile sulla rete di esperti Aegryn."
     },
     "subscription": {
       "meta": "Abbonamento — Spazio partner Aegryn",

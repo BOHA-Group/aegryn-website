@@ -8,7 +8,7 @@
 
 **Name:** Aegryn (AEGRYN)
 **Pronunciation:** FR: É-grin /e.gʁɛ̃/ | EN: AY-grin /ˈeɪ.grɪn/ | DE: Ä-grin /ˈɛː.gʁɪn/
-**Type:** Swiss organisation-value platform + technology holding company + M&A platform for digital assets
+**Type:** Swiss integrated advisory group (cabinet de conseil intégré) + technology holding company covering the full organisation lifecycle
 **Tagline:** "Engineered to Last" / "Building What Endures" / "Built to Last"
 **Slogan:** "Aegryn protects what endures."
 **Incorporated:** Switzerland
@@ -274,7 +274,7 @@ Incorporated: Aegryn, Switzerland
 
 | Page | URL | Description |
 |---|---|---|
-| Home | /fr | Organisation-value platform overview |
+| Home | /fr | Integrated advisory group overview |
 | About | /fr/a-propos | Company story and mission |
 | What We Build | /fr/ce-que-nous-construisons | Proprietary digital ecosystems |
 | Blog | /fr/blog | Articles and insights (6 languages) |
@@ -316,6 +316,7 @@ Incorporated: Aegryn, Switzerland
 | Magazine | /fr/magazine | Magazine hub (English) |
 | Magazine Jan 2027 | /fr/magazine/issue-01 | Edition — cover, web reader, flipbook |
 | Magazine articles | /fr/magazine/issue-01/[slug] | Individual articles |
+| Roadmap | /fr/roadmap | Group roadmap & capabilities |
 | FAQ | /fr/help/faq | Frequently asked questions |
 | Privacy | /fr/privacy | Privacy policy |
 | Terms of Use | /fr/terms/use | Terms of use |

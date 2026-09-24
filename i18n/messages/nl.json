@@ -1767,7 +1767,7 @@
     "servicesLabel": "Diensten",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "Dienstverlening",
-    "footerCol3Title": "Platform",
+    "footerCol3Title": "Tools",
     "footerCol4Title": "Publicaties",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
@@ -1777,7 +1777,7 @@
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",
     "roadmap": {
-      "title": "Platform",
+      "title": "Aegryn",
       "link": "Routekaart"
     },
     "assetsLink": "Activacatalogus",
@@ -1792,7 +1792,7 @@
     "col2Subblink": "Contractuele risicoanalyse",
     "col2Code": "CIFSO 5000-certificering",
     "col2Grade": "Certificering verkrijgen",
-    "col2DataRoom": "Data room",
+    "col2DataRoom": "Valoriser",
     "col2ViewAll": "Onze portfolio",
     "col3Title": "Onze overtuigingen",
     "col3Magazine": "Magazine",
@@ -2974,7 +2974,7 @@
       "desc": "De Aegryn-roadmap: CIFSO 5000-certificering, begeleiding van de levenscyclus van organisaties, waarderingsindex en expertsnetwerk."
     },
     "label": "Aegryn — Zwitserse groep",
-    "title": "Het platform.\nZijn functionaliteiten.",
+    "title": "De groep.\nZijn functionaliteiten.",
     "desc": "Aegryn begeleidt technologieorganisaties in elke fase van hun levenscyclus: certificering, waardering, advies, talent, overdracht. Elke opdracht valt onder Zwitsers recht.",
     "swissNote": "Zwitsers recht is op elke opdracht van toepassing, ongeacht de herkomst van de organisatie of de nationaliteit van de partijen.",
     "featuresLabel": "Wat het dispositief biedt",
@@ -3624,7 +3624,7 @@
       {
         "num": "01",
         "title": "Indiening",
-        "desc": "Upload van het dossier op het beveiligde platform, volledigheidscontrole en prekwalificatie binnen 5 werkdagen."
+        "desc": "Upload van het dossier op het beveiligde omgeving, volledigheidscontrole en prekwalificatie binnen 5 werkdagen."
       },
       {
         "num": "02",
@@ -9173,7 +9173,7 @@
       "expertProfile": {
         "meta": "Expertprofiel, Aegryn-partnerruimte",
         "title": "Mijn expertprofiel",
-        "subtitle": "Profiel zichtbaar op de Aegryn Experts-marktplaats.",
+        "subtitle": "Profiel zichtbaar op het Aegryn-expertnetwerk.",
         "areaLabel": "Partnerruimte"
       },
       "subscription": {
@@ -10596,7 +10596,7 @@
     "expertProfile": {
       "meta": "Expertprofiel — Aegryn partnergedeelte",
       "title": "Mijn expertprofiel",
-      "subtitle": "Profiel zichtbaar op de Aegryn Experts marketplace."
+      "subtitle": "Profiel zichtbaar op het Aegryn-expertnetwerk."
     },
     "subscription": {
       "meta": "Abonnement — Aegryn partnergedeelte",

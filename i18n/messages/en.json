@@ -1767,7 +1767,7 @@
     "servicesLabel": "Services",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "Services",
-    "footerCol3Title": "Platform",
+    "footerCol3Title": "Tools",
     "footerCol4Title": "Publications",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
@@ -1777,7 +1777,7 @@
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
     "contactLabel": "Contact us",
     "roadmap": {
-      "title": "Platform",
+      "title": "Aegryn",
       "link": "Product roadmap"
     },
     "assetsLink": "Asset Catalogue",
@@ -1792,7 +1792,7 @@
     "col2Subblink": "Contract Risk Analysis",
     "col2Code": "CIFSO 5000 Certification",
     "col2Grade": "Get certified",
-    "col2DataRoom": "Data room",
+    "col2DataRoom": "Valoriser",
     "col2ViewAll": "Our portfolio",
     "col3Title": "Our convictions",
     "col3Magazine": "Magazine",
@@ -2132,7 +2132,7 @@
       "desc": "The Aegryn roadmap: CIFSO 5000 certification, organisational lifecycle support, valuation index and expert network."
     },
     "label": "Aegryn — Swiss group",
-    "title": "The platform.\nIts features.",
+    "title": "The group.\nIts features.",
     "desc": "Aegryn supports technology organisations at every stage of their lifecycle: certification, valuation, advisory, talent, transfer. Every mandate is governed by Swiss law.",
     "swissNote": "Swiss law applies to every mandate, whatever the origin of the organisation or the nationality of the parties.",
     "featuresLabel": "What the platform offers",
@@ -2782,7 +2782,7 @@
       {
         "num": "01",
         "title": "Submission",
-        "desc": "File upload on the secure platform, completeness check and pre-qualification within 5 business days."
+        "desc": "File upload via the secure workspace, completeness check and pre-qualification within 5 business days."
       },
       {
         "num": "02",
@@ -9173,7 +9173,7 @@
       "expertProfile": {
         "meta": "Expert profile, Partner Space Aegryn",
         "title": "My expert profile",
-        "subtitle": "Profile visible on the Aegryn Experts marketplace.",
+        "subtitle": "Profile visible on the Aegryn expert network.",
         "areaLabel": "Partner Space"
       },
       "subscription": {
@@ -10596,7 +10596,7 @@
     "expertProfile": {
       "meta": "Expert profile — Aegryn Partner Space",
       "title": "My expert profile",
-      "subtitle": "Profile visible on the Aegryn Experts marketplace."
+      "subtitle": "Profile visible on the Aegryn expert network."
     },
     "subscription": {
       "meta": "Subscription — Aegryn Partner Space",

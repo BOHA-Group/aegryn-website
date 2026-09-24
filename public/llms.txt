@@ -1,12 +1,12 @@
-# Aegryn — Swiss Organisation-Value Platform · CIFSO 5000 · Tech M&A
+# Aegryn — Swiss Integrated Advisory Group · CIFSO 5000 · Tech M&A
 > https://aegryn.com
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company. Homepage positioning, 5 words: Build · Advise · Value · Recruit · Inform.
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Homepage positioning, 5 words: Build · Advise · Value · Recruit · Inform.
 - **Build** (Asset Engineering) — proprietary and custom digital assets
 - **Advise** (Advisory) — cybersecurity, AI audit, M&A strategy
-- **Value** — measure (CIFSO Valuation Index), certify (CIFSO 5000), then realise (sale, acquisition, fundraising, equity opening via Aegryn Transact)
+- **Value** — measure (CIFSO Valuation Index), certify (CIFSO 5000), then realise (transfer, acquisition, fundraising, equity opening via confidential structured mandates)
 - **Recruit** (Talent) — executive tech recruitment
 - **Inform** — Aegryn Magazine, blog, glossary
 
@@ -196,12 +196,13 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 ## Site Map — All Public Pages (canonical FR)
 
 ### Core
-- [Home](https://aegryn.com/fr) — Swiss organisation-value platform overview
+- [Home](https://aegryn.com/fr) — Swiss integrated advisory group overview
 - [About](https://aegryn.com/fr/a-propos) — Company, mission, values, philosophy
 - [What We Build](https://aegryn.com/fr/ce-que-nous-construisons) — Proprietary digital ecosystems
 - [Blog](https://aegryn.com/fr/blog) — Articles, insights, market analysis (6 languages)
 - [Contact](https://aegryn.com/fr/contact) — Reach AEGRYN team
 - [Career](https://aegryn.com/fr/career) — Open positions
+- [Roadmap](https://aegryn.com/fr/roadmap) — Group roadmap and capabilities
 - [Glossary](https://aegryn.com/fr/glossaire) — Tech M&A glossary
 - [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
 - [Investors](https://aegryn.com/fr/investisseurs) — Financing & investors

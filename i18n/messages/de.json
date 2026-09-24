@@ -1767,7 +1767,7 @@
     "servicesLabel": "Dienstleistungen",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "Leistungen",
-    "footerCol3Title": "Plattform",
+    "footerCol3Title": "Tools",
     "footerCol4Title": "Publikationen",
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
@@ -1777,7 +1777,7 @@
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
     "contactLabel": "Kontaktieren Sie uns",
     "roadmap": {
-      "title": "Plattform",
+      "title": "Aegryn",
       "link": "Fahrplan"
     },
     "assetsLink": "Anlagenkatalog",
@@ -1792,7 +1792,7 @@
     "col2Subblink": "Vertragsrisikoanalyse",
     "col2Code": "CIFSO 5000 Zertifizierung",
     "col2Grade": "Zertifizierung erhalten",
-    "col2DataRoom": "Data room",
+    "col2DataRoom": "Valoriser",
     "col2ViewAll": "Unser Portfolio",
     "col3Title": "Unsere Überzeugungen",
     "col3Magazine": "Magazin",
@@ -2974,7 +2974,7 @@
       "desc": "Die Aegryn-Roadmap: CIFSO-5000-Zertifizierung, Begleitung des Organisationslebenszyklus, Bewertungsindex und Expertennetzwerk."
     },
     "label": "Aegryn — Schweizer Gruppe",
-    "title": "Die Plattform.\nIhre Funktionen.",
+    "title": "Die Gruppe.\nIhre Funktionen.",
     "desc": "Aegryn begleitet Technologieorganisationen in jeder Phase ihres Lebenszyklus: Zertifizierung, Bewertung, Beratung, Talent, Übertragung. Jedes Mandat unterliegt Schweizer Recht.",
     "swissNote": "Schweizer Recht gilt für jedes Mandat, unabhängig von der Herkunft der Organisation oder der Nationalität der Parteien.",
     "featuresLabel": "Was die Plattform bietet",
@@ -3624,7 +3624,7 @@
       {
         "num": "01",
         "title": "Einreichung",
-        "desc": "Upload der Unterlagen auf der sicheren Plattform, Vollständigkeitsprüfung und Vorqualifikation innerhalb von 5 Arbeitstagen."
+        "desc": "Upload der Unterlagen auf der sicheren Bereich, Vollständigkeitsprüfung und Vorqualifikation innerhalb von 5 Arbeitstagen."
       },
       {
         "num": "02",
@@ -9158,7 +9158,7 @@
       "expertProfile": {
         "meta": "Expertenprofil, Partnerbereich Aegryn",
         "title": "Mein Expertenprofil",
-        "subtitle": "Profil auf dem Aegryn Experts-Marktplatz sichtbar.",
+        "subtitle": "Profil sichtbar im Aegryn-Expertennetzwerk.",
         "areaLabel": "Partnerbereich"
       },
       "subscription": {
@@ -9530,7 +9530,7 @@
     "expertProfile": {
       "meta": "Expertenprofil, Partnerbereich Aegryn",
       "title": "Mein Expertenprofil",
-      "subtitle": "Profil auf dem Aegryn Experts-Marktplatz sichtbar."
+      "subtitle": "Profil sichtbar im Aegryn-Expertennetzwerk."
     },
     "subscription": {
       "meta": "Abonnement : Partnerbereich Aegryn",

@@ -1,12 +1,12 @@
-# Aegryn — Swiss Organisation-Value Platform: Build · Advise · Value · Recruit · Inform
+# Aegryn — Swiss Integrated Advisory Group: Build · Advise · Value · Recruit · Inform
 > https://aegryn.com | Updated: 2026-09-21
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss organisation-value platform and technology holding company. Homepage positioning, 5 words:
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Homepage positioning, 5 words:
 1. **Build — Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
 2. **Advise — Advisory** — Cybersecurity, AI audit, M&A strategy, digital transformation across 23+ industries
-3. **Value** — Measure with the CIFSO Valuation Index (industry multiples adjusted on the 5 CIFSO dimensions, refreshed automatically every Monday 06:00 Europe/Zurich), certify with CIFSO 5000 (evidence-backed ownership and value record — "acte de propriété"), then realise via Aegryn Transact: sale, acquisition, fundraising or equity opening, structured M&A platform (€100K-€50M)
+3. **Value** — Measure with the CIFSO Valuation Index (industry multiples adjusted on the 5 CIFSO dimensions, refreshed automatically every Monday 06:00 Europe/Zurich), certify with CIFSO 5000 (evidence-backed ownership and value record — "acte de propriété"), then realise through confidential structured mandates: transfer, acquisition, fundraising or equity opening (€100K-€50M)
 4. **Recruit — Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
 5. **Inform** — Aegryn Magazine (English), blog in 6 languages, tech M&A glossary
 
@@ -257,7 +257,7 @@ Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms
 - Five industry hubs at /industries; terminology "industries" replaces "clusters" across the site
 - Magazine editions named by date only (e.g. "January 2027 — Built to Last"), English only
 - Sitemap/SEO: canonical localized URLs with hreflang for all routes; dead and redirected routes removed; BlogPosting + BreadcrumbList structured data added to every blog article; FAQPage structured data added to /help/faq
-- Talent platform: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
+- Talent service: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
 - AI Usage Terms page: /terms/ai-usage
 
 ---
