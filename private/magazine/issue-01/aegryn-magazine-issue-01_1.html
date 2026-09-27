@@ -17,7 +17,7 @@
 .gr{background:var(--G);color:var(--K)}
 .sp{padding:40px 36px 58px}
 .sp-sm{padding:32px 32px 48px}
-/* ── En-tête rubrique — masqué (Barnes : pas de header) ── */
+/* ── En-tête rubrique, masqué (Barnes : pas de header) ── */
 .pg-hdr{
   display:none !important;
 }
@@ -32,7 +32,7 @@
   color:rgba(0,0,0,.15);
 }
 .pg-hdr-pg-dk{color:rgba(15,26,43,.15);}
-/* ── Folio interne page — masqué, remplacé par folio overlay JS ── */
+/* ── Folio interne page, masqué, remplacé par folio overlay JS ── */
 .rf,.rf-l,.rf-r,.rf-k,.rf-gn,.rf-dk{display:none!important;}
 .rf-k{color:rgba(15,26,43,.28);}
 .rf-gn{color:rgba(15,26,43,.3);}
@@ -77,7 +77,7 @@
 .cap{font-size:8px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--GR)}
 .cap-w{color:rgba(10,10,10,.25)}
 .cap-g{color:#0F1A2B}
-/* rf défini dans le bloc lbl ci-dessus — garder pour rétrocompatibilité */
+/* rf défini dans le bloc lbl ci-dessus, garder pour rétrocompatibilité */
 .dv-k{height:2px;background:var(--K);margin:16px 0}
 .dv-g{height:2px;background:#0F1A2B;margin:12px 0}
 .dv-c{height:1px;background:var(--LG);margin:14px 0}
@@ -126,7 +126,7 @@
 .cta-url{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5ADDA4;margin-top:8px}
 .ghost{position:absolute;font-size:110px;font-weight:800;letter-spacing:-.06em;line-height:.85;opacity:.04;bottom:60px;right:-10px;pointer-events:none}
 .ghost-k{color:var(--K)}
-/* ══ BARNES-style viewer — fond gris sombre exact ═════════════════════ */
+/* ══ BARNES-style viewer, fond gris sombre exact ═════════════════════ */
 html,body{height:100%;margin:0;padding:0;overflow:hidden}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;flex-direction:column;align-items:stretch}
 .mag-title{display:none}
@@ -140,7 +140,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   overflow:hidden;
   background:#3A3A3A;
 }
-/* ── Tranches magazine (épaisseur) — style Barnes ── */
+/* ── Tranches magazine (épaisseur), style Barnes ── */
 #fb-edge-l,#fb-edge-r{
   position:absolute;top:50%;z-index:14;
   pointer-events:none;
@@ -167,7 +167,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   overflow:hidden;
   border-radius:0;
 }
-/* Traits verticaux — tranche gauche (pages lues) — style Barnes exact */
+/* Traits verticaux, tranche gauche (pages lues), style Barnes exact */
 #fb-edge-l .fb-edge-inner{
   background:repeating-linear-gradient(
     to right,
@@ -177,7 +177,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   );
   box-shadow:inset -3px 0 5px rgba(0,0,0,.22), 5px 0 20px rgba(0,0,0,.40);
 }
-/* Traits verticaux — tranche droite (pages restantes) — style Barnes exact */
+/* Traits verticaux, tranche droite (pages restantes), style Barnes exact */
 #fb-edge-r .fb-edge-inner{
   background:repeating-linear-gradient(
     to right,
@@ -187,7 +187,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   );
   box-shadow:inset 3px 0 5px rgba(0,0,0,.22), -5px 0 20px rgba(0,0,0,.40);
 }
-/* Spine — reliure centrale simulée — style Barnes exact */
+/* Spine, reliure centrale simulée, style Barnes exact */
 #fb-spine{
   position:absolute;top:50%;left:50%;
   width:40px;
@@ -217,7 +217,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   width:20px;height:100%;
   background:linear-gradient(to left,transparent,rgba(0,0,0,.18));
 }
-/* Wrapper de scaling — centré, taille fixe, transformé par JS */
+/* Wrapper de scaling, centré, taille fixe, transformé par JS */
 #fb-scaler{
   position:absolute;
   top:50%;left:50%;
@@ -226,7 +226,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 }
 /* Le livre prend exactement BOOK_W × BOOK_H */
 #fb-book{display:block;}
-/* Flèches — style Barnes : cercle discret navy sur fond ivoire */
+/* Flèches, style Barnes : cercle discret navy sur fond ivoire */
 .fb-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
   z-index:20;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
@@ -271,7 +271,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   font-size:5.5px;font-weight:600;letter-spacing:.06em;
   color:rgba(0,0,0,.4);background:rgba(255,255,255,.6);padding:1px 0;
 }
-/* Toolbar bas — Barnes : fond sombre discret */
+/* Toolbar bas, Barnes : fond sombre discret */
 #fb-toolbar{
   height:44px;background:rgba(30,30,30,.97);
   border-top:1px solid rgba(0,0,0,.07);
@@ -322,7 +322,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .stk-nm{font-size:10px;font-weight:700;color:var(--K);margin-bottom:2px}
 .stk-desc{font-size:8.5px;color:var(--GR);line-height:1.35;margin-bottom:7px;padding-bottom:7px;border-bottom:1px solid var(--LG)}
 .stk-desc:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-/* Cover — bouton fullscreen au hover via CSS */
+/* Cover, bouton fullscreen au hover via CSS */
 #p1:hover #cover-fs-btn{opacity:1!important}
 /* ── Cover mask : inutilisé, conservé pour compatibilité DOM ── */
 #cover-mask{ display:none; }
@@ -334,7 +334,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   @page{size:A4 landscape;margin:0}
 }
 
-/* ══════════ CSS PAGES — HTML Premium (source de vérité contenu) ══════════ */
+/* ══════════ CSS PAGES, HTML Premium (source de vérité contenu) ══════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -348,7 +348,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .pg{width:420px;height:595px;position:relative;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;}
 .pg-cream{background:var(--cream)}.pg-navy{background:var(--navy)}.pg-ivory{background:#fff}
 
-/* ── RUNNING HEAD — Barnes style ──────────── */
+/* ── RUNNING HEAD, Barnes style ──────────── */
 .rh{
   position:absolute;top:0;left:0;right:0;height:28px;
   display:flex;align-items:center;justify-content:center;
@@ -358,7 +358,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 }
 .rh-dk{border-bottom:.5px solid rgba(255,255,255,.08);color:rgba(248,250,252,.25)}
 
-/* ── PAGE NUMBER — corners like Barnes ────── */
+/* ── PAGE NUMBER, corners like Barnes ────── */
 .pn{
   position:absolute;bottom:0;left:0;right:0;height:24px;
   display:flex;align-items:center;
@@ -372,10 +372,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .pn-r{justify-content:flex-end;padding-right:26px}
 .pn-dk{border-top:.5px solid rgba(255,255,255,.08);color:rgba(248,250,252,.22)}
 
-/* ── Folio overlay JS désactivé — numéros .pn baked-in premium actifs ── */
+/* ── Folio overlay JS désactivé, numéros .pn baked-in premium actifs ── */
 #fb-viewer-area>div:not(#fb-scaler):not(#fb-spine):not(#fb-edge-l):not(#fb-edge-r){display:none!important}
 
-/* ── PRINT — affiche pages source, masque viewer chrome ───────────────── */
+/* ── PRINT, affiche pages source, masque viewer chrome ───────────────── */
 @media print{
   #fb-bar,#fb-toolbar,#fb-prev,#fb-next,#fb-thumbs,#fb-scaler,#fb-spine,#fb-edge-l,#fb-edge-r{display:none!important}
   #fb-root{position:static;background:#fff}
@@ -386,7 +386,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   @page{size:420px 595px;margin:0}
 }
 
-/* ── CONTENT BODY — strict bleed guard ───── */
+/* ── CONTENT BODY, strict bleed guard ───── */
 .body{
   position:absolute;
   top:28px;       /* running head = 28px */
@@ -398,7 +398,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .body-wide{padding:12px 22px 12px}
 .body-flush{padding:10px 20px 10px}
 
-/* ── DISPLAY TYPOGRAPHY — Plus Jakarta Sans ─
+/* ── DISPLAY TYPOGRAPHY, Plus Jakarta Sans ─
    Weight contrast technique (Barnes signature):
    300 light for context words + 800 bold for key term */
 .d-serif{font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;color:var(--ink);line-height:.90;letter-spacing:-.02em;}
@@ -412,7 +412,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .d18{font-size:15px;line-height:1.1;letter-spacing:-.005em}
 .d-italic{font-style:italic}.d-med{font-weight:600}.d-bold{font-weight:800;letter-spacing:-.03em}
 
-/* .mix — Barnes mixed-weight display */
+/* .mix, Barnes mixed-weight display */
 .mix{font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;letter-spacing:-.02em;line-height:.90;color:var(--ink);}
 .mix strong,.mix b{font-weight:800;letter-spacing:-.03em}
 .mix em,.mix i{font-style:italic;font-weight:300}
@@ -544,11 +544,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 #fb-progress-fill{height:100%;background:var(--green);transition:width .3s}
 
 /* ═══════════════════════════════════════════════════════════════
-   GABARIT SYSTEM — 8 asymmetric layouts, never two pages alike
+   GABARIT SYSTEM, 8 asymmetric layouts, never two pages alike
    All use position:absolute within .pg (position:relative,420×595)
    ═══════════════════════════════════════════════════════════════ */
 
-/* A — Photo flush-left full height, text right */
+/* A, Photo flush-left full height, text right */
 .ga-photo-l{
   position:absolute;top:28px;left:0;bottom:24px;width:48%;
   background-size:cover;background-position:center;
@@ -559,7 +559,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   padding:22px 22px 18px 16px;overflow:hidden;
 }
 
-/* B — Photo flush-right, text left */
+/* B, Photo flush-right, text left */
 .ga-photo-r{
   position:absolute;top:28px;right:0;bottom:24px;width:52%;
   background-size:cover;background-position:center;
@@ -570,7 +570,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   padding:22px 16px 18px 24px;overflow:hidden;
 }
 
-/* C — Photo top 62%, text strip below */
+/* C, Photo top 62%, text strip below */
 .ga-photo-top{
   position:absolute;top:28px;left:0;right:0;height:calc(62% - 14px);
   background-size:cover;background-position:center;
@@ -581,12 +581,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   top:calc(62% + 14px);padding:14px 28px 10px;overflow:hidden;
 }
 
-/* D — Single centred reading column, maximum air */
+/* D, Single centred reading column, maximum air */
 .ga-solo{
   max-width:288px;margin:0 auto;
 }
 
-/* E — Bleed 55% left, narrow text right */
+/* E, Bleed 55% left, narrow text right */
 .ga-bleed-l{
   position:absolute;top:28px;left:0;width:55%;bottom:24px;
   background-size:cover;background-position:center;
@@ -597,7 +597,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   padding:20px 22px 16px 12px;overflow:hidden;
 }
 
-/* F — Editorial quote page with ruled vertical accent */
+/* F, Editorial quote page with ruled vertical accent */
 .ga-quote-page{
   display:flex;flex-direction:column;justify-content:center;
   align-items:flex-start;padding:50px 36px;
@@ -619,7 +619,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   max-width:300px;line-height:1.5;
 }
 
-/* G — Big heading + asymmetric duo columns (2fr/3fr) */
+/* G, Big heading + asymmetric duo columns (2fr/3fr) */
 .ga-duo{
   display:grid;grid-template-columns:2fr 3fr;gap:16px;overflow:hidden;
 }
@@ -627,7 +627,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   display:grid;grid-template-columns:3fr 2fr 2fr;gap:12px;overflow:hidden;
 }
 
-/* H — Floating inline image (float:right), text wraps */
+/* H, Floating inline image (float:right), text wraps */
 .ga-wrap-img{
   float:right;margin:4px 0 12px 16px;flex-shrink:0;
 }
@@ -652,7 +652,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 /* ── 4-COLUMN MAGAZINE TEXT (news-brief density) ──── */
 .bx-col4{column-count:4;column-gap:9px;column-rule:.5px solid #e0dcd5;font-family:'Plus Jakarta Sans',sans-serif;font-size:8px;line-height:1.58;color:#2e2c28;}
 
-/* ── ISOLATED STATS PAGE — "By The Numbers" ───────── */
+/* ── ISOLATED STATS PAGE, "By The Numbers" ───────── */
 .stats-page-title{
   font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.02em;
   font-size:22px;line-height:.9;color:var(--ink);margin-bottom:3px;
@@ -677,7 +677,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .oped-flag::before{content:'●';color:var(--green-dk);font-size:8px}
 
 /* ── PLAIN-LANGUAGE EXPLAINER BOX ─────────────────
-   Sits above jargon-heavy content — one sentence, no acronyms */
+   Sits above jargon-heavy content, one sentence, no acronyms */
 .explain{
   background:rgba(90,221,164,.07);
   border-left:2px solid var(--green-dk);
@@ -784,7 +784,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div id="cover-mask" class="side-left"></div>
     <!-- Spine reliure centré dans l'area, recalculé par JS -->
     <div id="fb-spine"><div id="fb-spine-shadow-l"></div><div id="fb-spine-line"></div><div id="fb-spine-shadow-r"></div></div>
-    <!-- Tranches gauche/droite — épaisseur magazine style Barnes -->
+    <!-- Tranches gauche/droite, épaisseur magazine style Barnes -->
     <div id="fb-edge-l"><div class="fb-edge-inner"></div></div>
     <div id="fb-edge-r"><div class="fb-edge-inner"></div></div>
     <button class="fb-arrow" id="fb-prev" title="Page précédente">&#8249;</button>
@@ -827,7 +827,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
             <div style="font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff">Issue 01</div>
           </div>
         </div>
-        <!-- AEGRYN + BUSINESS MAGAZINE — massif pleine largeur cover 420px -->
+        <!-- AEGRYN + BUSINESS MAGAZINE, massif pleine largeur cover 420px -->
         <div style="margin-top:-8px">
           <div style="font-size:90px;font-weight:700;color:#fff;line-height:.86;letter-spacing:-.01em">Aegryn</div>
           <div style="text-align:right;font-size:8px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-top:5px">Business Magazine</div>
@@ -881,7 +881,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="margin-top:13px;display:flex;flex-direction:column;gap:0">
     <div style="padding:11px 0;border-bottom:.5px solid #e8e8e8;display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:start">
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);padding-top:2px">Advise</div>
-      <p class="bx-sm" style="margin:0">Strategy, organisation, and M&amp;A advisory. We engage when decisions define a company's trajectory — transformation, pivot, acquisition, exit. Outcomes, not recommendations.</p>
+      <p class="bx-sm" style="margin:0">Strategy, organisation, and M&amp;A advisory. We engage when decisions define a company's trajectory, transformation, pivot, acquisition, exit. Outcomes, not recommendations.</p>
     </div>
     <div style="padding:11px 0;border-bottom:.5px solid #e8e8e8;display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:start">
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);padding-top:2px">Build</div>
@@ -893,11 +893,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     </div>
     <div style="padding:11px 0;border-bottom:.5px solid #e8e8e8;display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:start">
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--slate);padding-top:2px">Recruit</div>
-      <p class="bx-sm" style="margin:0">Executive, tech, and innovation talent. From CTO to CEO — we place the leaders who execute transformation and strengthen the value of the organisation.</p>
+      <p class="bx-sm" style="margin:0">Executive, tech, and innovation talent. From CTO to CEO, we place the leaders who execute transformation and strengthen the value of the organisation.</p>
     </div>
     <div style="padding:11px 0;display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:start">
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--slate);padding-top:2px">Inform</div>
-      <p class="bx-sm" style="margin:0">Quarterly reference magazine, articles, and market intelligence. We document what we observe and what we live every day — at the intersection of technology, capital, and transactions.</p>
+      <p class="bx-sm" style="margin:0">Quarterly reference magazine, articles, and market intelligence. We document what we observe and what we live every day, at the intersection of technology, capital, and transactions.</p>
     </div>
   </div>
   <div style="margin-top:14px;padding-top:10px;border-top:1px solid #e8e8e8;font-family:Plus Jakarta Sans,sans-serif;font-size:7.5px;color:rgba(10,10,10,.35);letter-spacing:.06em">Five disciplines that reinforce each other. What few advisory firms can genuinely offer.</div>
@@ -912,32 +912,32 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <span class="lbl">What is inside</span>
   <div style="display:flex;flex-direction:column;gap:0;margin-top:6px">
     <div style="padding:9px 0;border-bottom:.5px solid #e8e8e8">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">01 — Tech and AI</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">01 · Tech and AI</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">She Quit on a Tuesday</div>
-      <div class="bx-sm" style="color:#9a9690;font-size:8px">Building from anywhere. What actually changed. The tools founders use. Five honest lessons.</div>
+      <div class="bx-sm" style="color:#9a9690;font-size:8px">Building from anywhere. What actually changed. The tools founders use. Five honest lessons, and two roles now hiring.</div>
     </div>
     <div style="padding:9px 0;border-bottom:.5px solid #e8e8e8">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">02 — Build</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">02 · Build</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">The Habit That Changes Everything</div>
-      <div class="bx-sm" style="color:#9a9690;font-size:8px">The workshop that became a platform. Why we refuse to rush. The bookkeeper who saved six weeks.</div>
+      <div class="bx-sm" style="color:#9a9690;font-size:8px">The workshop that became a platform, in three phases. Why we refuse to rush. The bookkeeper who saved six weeks.</div>
     </div>
     <div style="padding:9px 0;border-bottom:.5px solid #e8e8e8">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">03 — Money</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">03 · Money</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">Fewer Deals. More Capital.</div>
-      <div class="bx-sm" style="color:#9a9690;font-size:8px">What buyers actually pay. Stop raising. The metrics that move the number. Portrait: Julien Guex, FIT.</div>
+      <div class="bx-sm" style="color:#9a9690;font-size:8px">What buyers actually pay. Stop raising. The metrics that move the number. Portrait: Julien Guex, FIT, 30 years, four dates.</div>
     </div>
     <div style="padding:9px 0;border-bottom:.5px solid #e8e8e8">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">04 — Transaction</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">04 · Transaction</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">Five Deals, Five Stories</div>
-      <div class="bx-sm" style="color:#9a9690;font-size:8px">Who is buying European tech. From first meeting to signature. Getting paid later.</div>
+      <div class="bx-sm" style="color:#9a9690;font-size:8px">Who is buying European tech, in their own words. From first meeting to signature. Getting paid later.</div>
     </div>
     <div style="padding:9px 0;border-bottom:.5px solid #e8e8e8">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">05 — People</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">05 · People</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">The Founders</div>
-      <div class="bx-sm" style="color:#9a9690;font-size:8px">The first leap. The second try. The family business. The acquirer's portrait.</div>
+      <div class="bx-sm" style="color:#9a9690;font-size:8px">The first leap. The second try. The family business. The acquirer's portrait. Nine issue numbers, one page.</div>
     </div>
     <div style="padding:9px 0">
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">06 — Life</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin-bottom:2px">06 · Life</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:3px">The Good Life, Earned</div>
       <div class="bx-sm" style="color:#9a9690;font-size:8px">European tech cities. The reading list. On building for the long view.</div>
     </div>
@@ -948,7 +948,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div style="position:absolute;bottom:10px;right:16px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-style:italic;color:rgba(255,255,255,.5)">The profile of a founder who built it right.</div>
   </div>
   <div style="flex:0 0 auto;padding:14px 28px 10px;border-top:.5px solid #e8e8e8">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:0 14px">
       <div style="padding:6px 0">
         <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#b0aba3;margin-bottom:2px">Media</div>
         <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:2px">Advertising and Partnerships</div>
@@ -956,8 +956,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       </div>
       <div style="padding:6px 0">
         <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#b0aba3;margin-bottom:2px">Next issue</div>
-        <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:2px">Issue 02 — April 2027</div>
+        <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:600;color:var(--ink);margin-bottom:2px">Issue 02, April 2027</div>
         <div class="bx-sm" style="color:#9a9690;font-size:8px">The Exit Equation</div>
+      </div>
+      <div style="padding:6px 0">
+        <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#b0aba3;margin-bottom:2px">In this issue</div>
+        <div class="bx-sm" style="color:#9a9690;font-size:7.5px;line-height:1.5">Julien Guex, FIT (p. 85). Composite portraits and quotes are anonymised; see Masthead, p. 7.</div>
       </div>
     </div>
   </div>
@@ -972,7 +976,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Editorial Direction</div><div class="bx-sm">Aegryn Founding Team</div></div>
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Editorial Contacts</div><div class="bx-sm">media@boha-group.com<br>aegryn.com/magazine</div></div>
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Advertising and Partnerships</div><div class="bx-sm">media@boha-group.com</div></div>
-      <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Frequency</div><div class="bx-sm">Quarterly — January, April, July, October</div></div>
+      <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Frequency</div><div class="bx-sm">Quarterly: January, April, July, October</div></div>
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3;margin-bottom:4px">Legal</div><div class="bx-sm" style="font-size:8px;color:#c0bbb3">Composite portraits in this publication are constructed from observed patterns across multiple real situations. They do not represent any specific individual. All statistics are sourced from publicly available research and attributed to their origin. No content in this magazine constitutes financial, legal, or investment advice.</div></div>
     </div>
   </div>
@@ -993,7 +997,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="ga-text-bottom">
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <div class="bx-col" style="font-size:9px;line-height:1.65;margin-top:8px">The people you will meet in these pages built companies without asking anyone's permission. Some sold them well. Some learned the hard way what they should have done differently. A few are still in the middle of it.
-  We do not pretend to be neutral. We think the European technology market is undervalued, under-documented, and over-dependent on advisors with a stake in the outcome. We are building a different kind of infrastructure — one where trust is the product, not the pitch.
+  We do not pretend to be neutral. We think the European technology market is undervalued, under-documented, and over-dependent on advisors with a stake in the outcome. We are building a different kind of infrastructure, one where trust is the product, not the pitch.
   Built to last. In that spirit, we hope these pages hold up better than most of what gets published about this market.<br><br>The Aegryn Founding Team<br><span style="font-style:italic;color:#9a9690">Saint-Sulpice, Switzerland · January 2027</span></div>
 </div><div class="pn pn-r">9</div></div></div><div id="p10" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="letter-spacing:.34em">This magazine is written for</span></div>
 <div class="body">
@@ -1002,7 +1006,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="display:flex;flex-direction:column;gap:0;margin-top:8px">
     <div style="display:grid;grid-template-columns:64px 1fr;gap:10px;padding:9px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start">
       <div class="portrait-circle portrait-circle-sm" style="background-image:url('images/pexels-1181675.jpg')"></div>
-      <div style="min-width:0"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">The founder who is building.</div><p class="bx-sm" style="color:#6a6660">She has been at it for three years. Not thinking seriously about an exit yet — but building something worth selling. She reads this for the stories of people ten steps ahead, and the ideas that make her better at what she already does.</p></div>
+      <div style="min-width:0"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">The founder who is building.</div><p class="bx-sm" style="color:#6a6660">She has been at it for three years. Not thinking seriously about an exit yet, but building something worth selling. She reads this for the stories of people ten steps ahead, and the ideas that make her better at what she already does.</p></div>
     </div>
     <div style="display:grid;grid-template-columns:64px 1fr;gap:10px;padding:9px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start">
       <div class="portrait-circle portrait-circle-sm" style="background-image:url('images/pexels-3184360.jpg')"></div>
@@ -1024,7 +1028,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="mix" style="font-size:24px;line-height:.90;margin-bottom:12px">Five words<br>worth <strong>knowing.</strong></div>
     <div style="display:flex;flex-direction:column;gap:0">
       <div style="padding:10px 0;border-bottom:.5px solid #e0dcd5"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">ARR</div><p class="bx-sm">Annual Recurring Revenue. The yearly income a software company can reliably count on, from customers who pay every month or year. The number most buyers start from.</p></div>
-      <div style="padding:10px 0;border-bottom:.5px solid #e0dcd5"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">Multiple</div><p class="bx-sm">How many years of revenue a buyer pays upfront. At 4× ARR, a buyer pays four times the annual revenue — all at once, today — for the right to own everything.</p></div>
+      <div style="padding:10px 0;border-bottom:.5px solid #e0dcd5"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">Multiple</div><p class="bx-sm">How many years of revenue a buyer pays upfront. At 4× ARR, a buyer pays four times the annual revenue, all at once, today, for the right to own everything.</p></div>
       <div style="padding:10px 0;border-bottom:.5px solid #e0dcd5"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">Due Diligence</div><p class="bx-sm">The buyer's investigation of everything the seller has claimed. Financial records, code, legal ownership, customer contracts. The process that separates a fast close from a slow one.</p></div>
       <div style="padding:10px 0;border-bottom:.5px solid #e0dcd5"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">Earn-Out</div><p class="bx-sm">A portion of the sale price paid later, based on whether the business hits agreed targets after the sale closes. A bridge between what the buyer will pay today and what the seller believes the company is worth.</p></div>
       <div style="padding:10px 0"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:700;color:var(--ink);margin-bottom:3px">NRR</div><p class="bx-sm">Net Revenue Retention. Whether existing customers spend more or less than last year. Above 100% means growth from the existing base alone. One of the strongest signals of a healthy business.</p></div>
@@ -1039,7 +1043,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="ga-wrap-img"><div class="img-ph" style="height:130px;background-image:url('images/pexels-3243090.jpg')"></div><span class="cap">Sourcing matters. These pages reflect that.</span></div>
     <p class="bx" style="margin-bottom:9px">Every statistic in this magazine comes from a publicly available source, attributed by name. We do not invent figures or extrapolate beyond what the data supports. When we are uncertain, we say so.</p>
     <p class="bx" style="margin-bottom:9px">Composite portraits are constructed from patterns observed across multiple real situations. They are clearly labelled as composite and do not represent any specific individual.</p>
-    <p class="bx">Our main sources for market data include tech.eu, FE International, Aventis Advisors, Windsor Drake, Livmo, Synergy AI, Invest Europe, the EIF Working Paper series, SaaSMag, and Nomads.com. All are cited where their data appears.</p>
+    <p class="bx">Our main sources for market data include tech.eu, FE International, Aventis Advisors, Windsor Drake, Livmo, Synergy AI, Invest Europe, the EIF Working Paper series, SaaSMag, and Nomads.com. Macro-economic context draws on Eurostat, the European Central Bank, and the Swiss National Bank. All are cited where their data appears.</p>
   </div>
 </div><div class="pn pn-l">12</div></div></div><div id="p13" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"></div>
 <div class="img-ph" style="position:absolute;inset:0;background-image:url('images/pexels-1366919.jpg');background-size:cover;background-position:center"></div>
@@ -1052,7 +1056,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="ga-quote-line" style="background:var(--green)"></div>
   <div class="ga-quote-body" style="color:rgba(248,250,252,.9);font-size:20px">"We refuse to let a solid asset disappear into a poorly prepared transaction."</div>
   <div class="ga-quote-src" style="margin-top:20px">Aegryn founding conviction · Saint-Sulpice, Switzerland</div>
-  <div style="margin-top:28px;font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.4);max-width:270px;line-height:1.7">Tech and AI begins on the next page. Fourteen pages on what it means to build something real in 2026 — and how to make sure it stays real when someone looks closely at it.</div>
+  <div style="margin-top:28px;font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.4);max-width:270px;line-height:1.7">Tech and AI begins on the next page. Fourteen pages on what it means to build something real in 2026, and how to make sure it stays real when someone looks closely at it.</div>
 </div><div class="pn pn-dk pn-l">14</div></div></div><div id="p15" class="pg pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
 <div class="body" style="display:flex;align-items:center;justify-content:center;padding:0">
   <div class="ad-slot-frame" style="border-color:#e8e8e8">
@@ -1135,6 +1139,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <span class="lbl">A Correction Worth Making</span>
   <div class="mix" style="font-size:20px;line-height:.92;margin-bottom:8px">Switzerland has no<br>nomad visa. <strong>The real advantages are elsewhere.</strong></div>
   <p class="bx-sm" style="color:#6a6660">Despite what circulates online, Switzerland launched no digital-nomad visa in 2026. Founders building from Lausanne or Geneva use standard residence or business permits. The country's actual advantage is its tax environment and proximity to EPFL and ETH Zurich, two of the world's highest-ranked engineering institutions.</p>
+  <div class="dv" style="margin:8px 0 6px"></div>
+  <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9a9690;margin-bottom:4px">Two Roles Worth Knowing</div>
+  <p class="bx-sm" style="font-size:8px;line-height:1.5;color:#6a6660"><strong>AI Governance Lead.</strong> Owns EU AI Act risk classification and documentation before a regulator asks. <strong>Fractional CTO.</strong> Technical leadership rented by the month, common among Series A companies too lean to hire full-time.</p>
 </div><div class="pn pn-l">24</div></div></div><div id="p25" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Tech and AI</span><span style="margin:0 5px;opacity:.3">·</span>The Tools</div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
   <div class="ga-solo">
@@ -1202,7 +1209,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,221,164,.5);margin-bottom:14px">Next</div>
   <div class="mix" style="font-size:34px;line-height:.88;color:rgba(248,250,252,.9);margin-bottom:12px">Build<br><strong>follows.</strong></div>
   <hr class="dv-w" style="width:26px">
-  <div class="opener-deck" style="margin-top:10px">The idea is the easy part. What happens over the next three years — the habits, the choices, the small decisions nobody sees — is the part that actually decides how the story ends.</div>
+  <div class="opener-deck" style="margin-top:10px">The idea is the easy part. What happens over the next three years, the habits, the choices, the small decisions nobody sees, is the part that actually decides how the story ends.</div>
 </div><div class="pn pn-dk pn-r">31</div></div></div><div id="p32" class="pg pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
 <div class="body" style="display:flex;align-items:center;justify-content:center;padding:0">
   <div class="ad-slot-frame" style="border-color:#e8e8e8">
@@ -1368,7 +1375,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(90,221,164,.7);margin-bottom:12px">Build · Extended</div>
   <div class="opener-rule"></div>
   <div class="opener-title">The Year<br>Before.</div>
-  <div class="opener-deck">The 12 months before a sale is signed are the ones that determine the price. Not the product. Not the market. The decisions made during those specific 12 months — and what was done in the years before to make those decisions easy to execute.</div>
+  <div class="opener-deck">The 12 months before a sale is signed are the ones that determine the price. Not the product. Not the market. The decisions made during those specific 12 months, and what was done in the years before to make those decisions easy to execute.</div>
   <div class="opener-toc">
     <div class="opener-toc-item">A Month-by-Month Account</div>
     <div class="opener-toc-item">He Had Twelve Months' Notice and Used Them</div>
@@ -1396,7 +1403,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     </div>
     <div>
       <p class="bx" style="margin-bottom:1px"><strong style="font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dk)">Months 7–9</strong></p>
-      <p class="bx" style="margin-bottom:10px">Document the technical architecture. Not for a buyer — for yourself first. Write down why each major component was built the way it was, what it depends on, and what would need to change if the core AI or infrastructure provider changed their pricing or API. This documentation takes less than a week for a small team to produce properly. It saves weeks in due diligence later.</p>
+      <p class="bx" style="margin-bottom:10px">Document the technical architecture. Not for a buyer, for yourself first. Write down why each major component was built the way it was, what it depends on, and what would need to change if the core AI or infrastructure provider changed their pricing or API. This documentation takes less than a week for a small team to produce properly. It saves weeks in due diligence later.</p>
       <p class="bx" style="margin-bottom:1px"><strong style="font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dk)">Months 10–12</strong></p>
       <p class="bx">Organise the data room itself. Create a clear folder structure. Add a one-page executive summary that answers the buyer's first three questions before they ask. Rehearse the answers to the questions your own review revealed as potential concerns. By month twelve, the process should be the easiest part.</p>
     </div>
@@ -1407,7 +1414,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <span class="lbl">A Composite Portrait</span>
   <div class="mix" style="font-size:24px;line-height:.88;margin-bottom:10px">He had twelve<br>months' notice<br>and <strong>used them.</strong></div>
   <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">A composite, drawn from Aegryn Advisory client patterns 2023–2026.</p>
-  <p class="bx-sm" style="margin-bottom:8px">The call came from a strategic acquirer he had known casually for two years. Not a formal approach — more a conversation about where the sector was heading and whether he had ever thought about what came next. He had. He told them honestly that he was not ready, but that he thought he could be in about twelve months.</p>
+  <p class="bx-sm" style="margin-bottom:8px">The call came from a strategic acquirer he had known casually for two years. Not a formal approach, more a conversation about where the sector was heading and whether he had ever thought about what came next. He had. He told them honestly that he was not ready, but that he thought he could be in about twelve months.</p>
   <p class="bx-sm">They agreed to speak again in a year. He put down the phone and opened a project management tool. He treated the next twelve months as the most important project he had ever run. He was not wrong.</p>
   <div class="cont-bar" style="margin-top:12px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
 </div><div class="pn pn-r">53</div></div></div><div id="p54" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>He Had Twelve Months</div>
@@ -1417,7 +1424,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <p class="bx" style="margin-bottom:10px;margin-top:6px">He started with the IP. He found three former contractors whose work was in the product's core module, went back to each of them, explained what he needed, and obtained the assignment agreements in the first six weeks. One former contractor asked for a small payment in exchange. He paid it without argument. The alternative was a gap in ownership that would have derailed the sale entirely.</p>
     <p class="bx" style="margin-bottom:10px">He commissioned a financial review in month four. The accountant found two revenue recognition issues that, while not material to the business's health, would have required explanation in due diligence. Fixed before anyone was looking, they cost a few days. Discovered by a buyer's auditor, they would have cost weeks and a price adjustment.</p>
     <p class="bx" style="margin-bottom:10px">He documented the technical architecture in month seven. Three pages, written by him over two weekends. What each major component does, why it was built that way, and what the fallback would be if the primary AI provider raised its prices or shut down. A buyer's technical reviewer later told him it was the clearest technical summary he had seen in two years of doing deals.</p>
-    <p class="bx">When the acquirer called back in month thirteen — slightly late — his data room was complete. The due diligence took six weeks. The deal closed in four months from first formal conversation. Both sides described it as the smoothest process they had been part of.</p>
+    <p class="bx">When the acquirer called back in month thirteen, slightly late, his data room was complete. The due diligence took six weeks. The deal closed in four months from first formal conversation. Both sides described it as the smoothest process they had been part of.</p>
   </div>
 </div><div class="pn pn-l">54</div></div></div><div id="p55" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Three Documents</div>
 <div class="body">
@@ -1444,8 +1451,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div style="position:absolute;left:0;right:0;bottom:24px;top:45%;padding:14px 28px 0;overflow:hidden">
   <span class="lbl">How to build one that works</span>
   <div class="mix" style="font-size:20px;line-height:.90;margin-bottom:8px">The data room is<br>a <strong>first impression.</strong></div>
-  <div class="bx-col" style="font-size:9px;line-height:1.62;margin-top:6px">A data room tells a buyer something about a company before a single document is opened. A well-organised data room — clear folder structure, documents named consistently, no broken links, nothing missing — signals a management team that runs things properly. A data room with 200 randomly named files in a flat folder structure signals the opposite.
-  The standard structure that works: four top-level folders — Financials, Customers, Technology, and Legal. Each subdivided simply. Financials contains monthly P&L for three years, plus any signed contracts with lenders. Customers contains the full customer list with ARR by client, plus copies of signed contracts with renewal terms. Technology contains the architecture summary, code ownership agreements, and any certifications or security reviews. Legal contains the shareholders agreement, option pool documentation, and corporate registration.</div>
+  <div class="bx-col" style="font-size:9px;line-height:1.62;margin-top:6px">A data room tells a buyer something about a company before a single document is opened. A well-organised data room, clear folder structure, documents named consistently, no broken links, nothing missing, signals a management team that runs things properly. A data room with 200 randomly named files in a flat folder structure signals the opposite.
+  The standard structure that works: four top-level folders, Financials, Customers, Technology, and Legal. Each subdivided simply. Financials contains monthly P&L for three years, plus any signed contracts with lenders. Customers contains the full customer list with ARR by client, plus copies of signed contracts with renewal terms. Technology contains the architecture summary, code ownership agreements, and any certifications or security reviews. Legal contains the shareholders agreement, option pool documentation, and corporate registration.</div>
   <div class="cont-bar" style="margin-top:8px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
 </div><div class="pn pn-r">57</div></div></div><div id="p58" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Art of the Data Room</div>
 <div class="ga-photo-l" style="background-image:url('images/1524178232363-1fb2b075b655.jpg')"></div>
@@ -1459,15 +1466,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
   <div class="ga-solo">
     <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
-    <div class="cta" style="margin-top:10px"><div class="cta-title">Aegryn can review yours</div><div class="cta-body">Aegryn GRADE includes a data room review against the CIFSO v4.0 framework — a structured assessment of what is there, what is missing, and what to fix.</div><div class="cta-url">aegryn.com/grade · media@boha-group.com</div></div>
+    <div class="cta" style="margin-top:10px"><div class="cta-title">Aegryn can review yours</div><div class="cta-body">Aegryn GRADE includes a data room review against the CIFSO v4.0 framework, a structured assessment of what is there, what is missing, and what to fix.</div><div class="cta-url">aegryn.com/grade · media@boha-group.com</div></div>
   </div>
 </div><div class="pn pn-r">59</div></div></div><div id="p60" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center;padding:44px 36px">
   <div class="ga-quote-line" style="background:var(--green)"></div>
   <div class="ga-quote-body" style="color:rgba(248,250,252,.88)">"The best data rooms I have seen were built by founders who started them two years before they needed them. The worst were built in three weeks while the buyer was waiting."</div>
-  <div class="ga-quote-src">Composite observation — Aegryn Transaction Desk, based on H1 2026 processes</div>
+  <div class="ga-quote-src">Composite observation, Aegryn Transaction Desk, based on H1 2026 processes</div>
   <div style="margin-top:26px;font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.4);max-width:270px;line-height:1.7">The gap between those two experiences is preparation. Not intelligence, not capital, not the quality of the product. Preparation. Which is the one variable that is entirely within a founder's control from day one.</div>
-</div><div class="pn pn-dk pn-l">60</div></div></div><div id="p61" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div><div class="opener"><div class="opener-num" style="font-size:130px;right:8px;bottom:34px">03</div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,221,164,.5);margin-bottom:14px">Next</div><div class="mix" style="font-size:34px;line-height:.88;color:rgba(248,250,252,.9);margin-bottom:12px">Money<br><strong>follows.</strong></div><hr class="dv-w" style="width:26px"><div class="opener-deck" style="margin-top:10px">What is a European tech company actually worth in 2026? The honest numbers — and the stories behind why the same metric means completely different things depending on how a company was built.</div></div><div class="pn pn-dk pn-r">61</div></div></div><div id="p62" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
+</div><div class="pn pn-dk pn-l">60</div></div></div><div id="p61" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div><div class="opener"><div class="opener-num" style="font-size:130px;right:8px;bottom:34px">03</div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,221,164,.5);margin-bottom:14px">Next</div><div class="mix" style="font-size:34px;line-height:.88;color:rgba(248,250,252,.9);margin-bottom:12px">Money<br><strong>follows.</strong></div><hr class="dv-w" style="width:26px"><div class="opener-deck" style="margin-top:10px">What is a European tech company actually worth in 2026? The honest numbers, and the stories behind why the same metric means completely different things depending on how a company was built.</div></div><div class="pn pn-dk pn-r">61</div></div></div><div id="p62" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
 <div class="img-ph" style="position:absolute;inset:0;opacity:.18;background-image:url('images/1506905925346-21bda4d32df4.jpg');background-size:cover"></div>
 <div class="opener">
   <div class="opener-num">03</div>
@@ -1488,8 +1495,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="ga-duo" style="margin-top:10px">
     <p class="bx-sm dc">European tech funding recovered to 44.1 billion euros in the first half of 2026, across roughly 1,740 deals, well below the pace of 2024 when funding peaked at just over 50 billion. The market is not shrinking. It is concentrating. The UK raised 18.7 billion across 423 deals alone. Germany and France combined reached roughly the same. Capital is not evenly distributed across stages either. On the M&A side, strategic deal value in EMEA rose 77 percent through May as acquirers chose fewer, higher-conviction targets. The mid-market where most European founders operate is living inside that concentration, not above it.</p>
     <div>
-      <div class="img-ph" style="height:160px;background-image:url('images/1611974789855-9c2a0a7236a3.jpg')"></div><span class="cap">The shape of European tech capital, first half 2026.</span>
-      <div style="margin-top:10px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em">Sources: tech.eu H1 2026 Ecosystem Report · FE International Mid-Year 2026 · LSEG</div>
+      <div class="g3" style="gap:6px">
+        <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:22px">&euro;44.1B</div><div class="stat-lbl" style="font-size:6.5px">Funding, H1 2026</div></div>
+        <div class="stat-card"><div class="stat-n-sm" style="font-size:22px">1,740</div><div class="stat-lbl" style="font-size:6.5px">Deals closed</div></div>
+        <div class="stat-card"><div class="stat-n-sm" style="font-size:22px">+77%</div><div class="stat-lbl" style="font-size:6.5px">EMEA M&amp;A value</div></div>
+      </div>
+      <span class="cap" style="display:block;margin-top:8px">The shape of European tech capital, first half 2026.</span>
+      <div style="margin-top:6px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em">Sources: tech.eu H1 2026 Ecosystem Report, FE International Mid-Year 2026, LSEG</div>
     </div>
   </div>
 </div><div class="pn pn-r">63</div></div></div><div id="p64" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>What a Sale Actually Looks Like</div>
@@ -1578,8 +1590,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       <p class="bx-sm">The top ten percent of EU funds account for approximately 70 percent of total industry returns. European Series A rounds price near 28 million euros pre-money on average, against roughly 48 million dollars in the United States. The gap is narrowing fastest at seed stage, where top AI rounds now price within 15 to 20 percent of US equivalents.</p>
     </div>
     <div>
-      <div class="img-ph" style="height:140px;background-image:url('images/1480714378408-67cf0d13bc1b.jpg')"></div><span class="cap">Where the capital concentrates.</span>
-      <div style="margin-top:9px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em;line-height:1.6">EIF Working Paper Series · Value Add VC, June 2026 · Invest Europe Annual Statistics</div>
+      <div class="g3" style="gap:6px">
+        <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">70%</div><div class="stat-lbl" style="font-size:6.3px">Returns, top-decile funds</div></div>
+        <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">&euro;28M</div><div class="stat-lbl" style="font-size:6.3px">Avg. EU Series A</div></div>
+        <div class="stat-card"><div class="stat-n-sm" style="font-size:16px;white-space:nowrap">15-20%</div><div class="stat-lbl" style="font-size:6.3px">AI seed gap vs US</div></div>
+      </div>
+      <span class="cap" style="display:block;margin-top:8px">Where the capital concentrates.</span>
+      <div style="margin-top:6px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em;line-height:1.6">EIF Working Paper Series, Value Add VC June 2026, Invest Europe Annual Statistics</div>
     </div>
   </div>
 </div><div class="pn pn-r">73</div></div></div><div id="p74" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Metrics That Move the Number</div>
@@ -1602,13 +1619,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="mix" style="font-size:24px;line-height:.88;margin-bottom:10px">The buyers<br>she wasn't<br><strong>looking for.</strong></div>
   <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">A composite portrait, based on patterns observed in EU RegTech transactions 2023–2026.</p>
   <p class="bx-sm" style="margin-bottom:8px">She had not planned to sell in 2026. She had a list of things to fix first: a second product line to launch, a Paris office to open, a Series A she had been postponing for eighteen months because the terms were never quite right.</p>
-  <p class="bx-sm" style="margin-bottom:8px">What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body's approved vendor list — the same list she had spent eight months and roughly forty thousand euros getting onto.</p>
+  <p class="bx-sm" style="margin-bottom:8px">What changed her timeline was a cold email from a compliance officer at a mid-sized Dutch bank. He had found her software through a regulatory body's approved vendor list, the same list she had spent eight months and roughly forty thousand euros getting onto.</p>
   <div class="cont-bar" style="margin-top:12px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
 </div><div class="pn pn-r">75</div></div></div><div id="p76" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Compliance Premium</div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
   <div class="ga-solo">
     <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
-    <p class="bx" style="margin-bottom:10px;margin-top:6px">The bank needed to demonstrate DORA compliance to its national regulator by the end of the year. Her software — already certified, already documented, already running on two comparable institutions — was one of fewer than a dozen products in Europe that could be deployed fast enough. The compliance officer put her in front of the bank's technology committee within three weeks.</p>
+    <p class="bx" style="margin-bottom:10px;margin-top:6px">The bank needed to demonstrate DORA compliance to its national regulator by the end of the year. Her software, already certified, already documented, already running on two comparable institutions, was one of fewer than a dozen products in Europe that could be deployed fast enough. The compliance officer put her in front of the bank's technology committee within three weeks.</p>
     <p class="bx" style="margin-bottom:10px">What followed was not what she expected a sale process to look like. There was no competitive auction, no investment banker running the process, no letter of intent negotiated over four months. There was a conversation about operational fit, a due diligence that took two weeks because her documentation was already in order, and an offer that arrived before she had decided whether she actually wanted to sell.</p>
     <p class="bx" style="margin-bottom:10px">The price was above the range she had privately modelled. The reason, which the buyer's CFO explained plainly, was that her certification eliminated roughly eight months of their own implementation and remediation work. That saving had a number attached to it. The number went into her price.</p>
     <div class="cont-bar" style="margin-top:10px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
@@ -1619,7 +1636,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
     <div class="explain" style="margin-top:10px">
       <span class="explain-lbl">What this illustrates</span>
-      <span class="explain-txt">The compliance premium is not abstract. A buyer calculates the cost of achieving compliance themselves, subtracts that from what they would normally pay, and adds the difference to the seller's price. A verified certification makes that arithmetic visible — and favourable.</span>
+      <span class="explain-txt">The compliance premium is not abstract. A buyer calculates the cost of achieving compliance themselves, subtracts that from what they would normally pay, and adds the difference to the seller's price. A verified certification makes that arithmetic visible, and favourable.</span>
     </div>
   </div>
 </div><div class="pn pn-r">77</div></div></div><div id="p78" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>A Composite Portrait</div>
@@ -1629,7 +1646,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <hr class="dv">
   <div style="overflow:hidden;margin-top:10px">
     <div class="ga-wrap-img"><div class="img-ph" style="height:148px;background-image:url('images/1543269664-76bc3997d9ea.jpg')"></div><span class="cap">The decision that changed the outcome. Year three, month four.</span></div>
-    <p class="bx" style="margin-bottom:7px">He had been in conversations with investors for almost two years. Not continuously — but cyclically. Every six months or so, he would update his deck, reach out to a new set of funds, go through several rounds of meetings, and end up at the same place: a term sheet with terms he did not like, from an investor he was not sure he trusted, for a company that was growing steadily and generating more cash each quarter than the one before.</p>
+    <p class="bx" style="margin-bottom:7px">He had been in conversations with investors for almost two years. Not continuously, but cyclically. Every six months or so, he would update his deck, reach out to a new set of funds, go through several rounds of meetings, and end up at the same place: a term sheet with terms he did not like, from an investor he was not sure he trusted, for a company that was growing steadily and generating more cash each quarter than the one before.</p>
     <p class="bx" style="margin-bottom:7px">In month four of year three, a larger fund passed with a note that said, essentially, that the company was too profitable to be interesting as a venture investment. The partner explained it more diplomatically, but the logic was plain: his growth rate was not fast enough to justify VC returns, precisely because he had been running the company efficiently.</p>
   </div>
   <div class="cont-bar" style="margin-top:10px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
@@ -1643,7 +1660,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="ga-photo-l" style="background-image:url('images/1506905925346-21bda4d32df4.jpg')"></div>
 <div class="ga-text-r">
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
-  <p class="bx-sm" style="margin-bottom:9px">The spreadsheet showed that if he kept his current growth rate and margins — neither heroic — he would arrive at roughly 4.5 million euros in annual recurring revenue in year seven, with no debt and no dilution. At a median transaction multiple for a bootstrapped software company in his vertical, that would produce a total outcome roughly equivalent to raising a Series A, growing faster, diluting 25 percent, and selling at the same time.</p>
+  <p class="bx-sm" style="margin-bottom:9px">The spreadsheet showed that if he kept his current growth rate and margins, neither heroic, he would arrive at roughly 4.5 million euros in annual recurring revenue in year seven, with no debt and no dilution. At a median transaction multiple for a bootstrapped software company in his vertical, that would produce a total outcome roughly equivalent to raising a Series A, growing faster, diluting 25 percent, and selling at the same time.</p>
   <p class="bx-sm" style="margin-bottom:9px">He stopped raising. He hired a bookkeeper. He opened a data room folder and started filling it with the documents that a buyer would eventually ask for. He did not think of it as exit preparation. He thought of it as good practice.</p>
   <p class="bx-sm" style="margin-bottom:9px">Three years later, a strategic acquirer in his sector approached him. He had not put the company on the market. The buyer found him through a certification registry.</p>
   <div class="cont-bar" style="margin-top:8px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
@@ -1659,14 +1676,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="mix" style="font-size:24px;line-height:.88;margin-bottom:10px">What the consolidation<br>wave means for<br>a <strong>company like yours.</strong></div>
   <hr class="dv">
   <div style="overflow:hidden;margin-top:10px">
-    <p class="bx dc" style="margin-bottom:10px">The 77 percent rise in EMEA strategic deal value is a real number, but it is a number about a market. It does not automatically translate to a better outcome for any specific founder. What it does create — and what was less true two years ago — is a wider set of credible buyers for mid-sized European technology assets.</p>
+    <p class="bx dc" style="margin-bottom:10px">The 77 percent rise in EMEA strategic deal value is a real number, but it is a number about a market. It does not automatically translate to a better outcome for any specific founder. What it does create, and what was less true two years ago, is a wider set of credible buyers for mid-sized European technology assets.</p>
     <div class="cont-bar" style="margin-top:8px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
   </div>
 </div><div class="pn pn-l">82</div></div></div><div id="p83" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>What the EMEA Wave Means</div>
 <div class="ga-photo-r" style="background-image:url('images/1460925895917-afdab827c52f.jpg')"></div>
 <div class="ga-text-l">
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
-  <p class="bx-sm" style="margin-bottom:9px">Strategic acquirers are now more willing to look at assets below ten million euros in annual recurring revenue than they were during the tighter capital environment of 2022 and 2023. This is partly regulatory — the Draghi report's influence on how European companies think about scale — and partly competitive: American companies are deploying more capital in Europe, which is forcing European incumbents to respond with acquisitions rather than organic investment.</p>
+  <p class="bx-sm" style="margin-bottom:9px">Strategic acquirers are now more willing to look at assets below ten million euros in annual recurring revenue than they were during the tighter capital environment of 2022 and 2023. This is partly regulatory, the Draghi report's influence on how European companies think about scale, and partly competitive: American companies are deploying more capital in Europe, which is forcing European incumbents to respond with acquisitions rather than organic investment.</p>
   <p class="bx-sm" style="margin-bottom:9px;color:#6a6660">The practical implication is simple: a well-prepared asset at two million euros in annual recurring revenue now has access to a buyer pool that, five years ago, would have required at least five million. The preparation requirement has not changed. The universe of potential buyers for a prepared asset has expanded.</p>
   <div style="margin-top:6px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3">FE International Mid-Year 2026 · LSEG · Chambers and Partners EU M&A 2026</div>
 </div><div class="pn pn-r">83</div></div></div><div id="p84" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div style="position:absolute;inset:0;background-image:url('images/FIT-Fondation-PageMagazine-A4-300dpi.jpeg');background-size:cover;background-position:center"></div><span class="cap" style="position:absolute;bottom:10px;left:14px;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.55)">FIT · Fondation pour l'Innovation et la Technologie, Lausanne.</span></div></div><div id="p85" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Portrait</span><span style="margin:0 5px;opacity:.3">·</span>The First Capital</div>
@@ -1676,8 +1693,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <p class="bx-sm" style="font-size:8.5px;line-height:1.55;font-style:italic;color:#5a5650;margin-bottom:8px">Since 1994, the Fondation pour l'Innovation et la Technologie has financed the first risk-taking of Vaud's deep tech startups, sometimes before anyone else dared to. Julien Guex has been its director for eighteen years. He has backed hundreds of projects: the ones that went the distance, the ones that pivoted, the ones that were handed on. And the ones that stopped, sometimes on his recommendation. This is the portrait of a man who thinks in long cycles, in a world that prizes speed.</p>
   <p class="bx dc" style="font-size:8.8px;line-height:1.58;margin-bottom:8px">He does not finance ideas. He finances trajectories. Julien Guex, director of the Fondation pour l'Innovation et la Technologie (FIT) since 2008, has his own way of defining the role: backing those who have the courage to say yes, and sometimes having the courage to tell them no. In eighteen years he has financed hundreds of projects from their very first loan. He has seen forty of them reach a valued exit. And through patient observation he has developed a precise reading of what makes the difference, long before the numbers confirm it.</p>
   <div class="cta" style="margin-top:2px">
-    <div class="cta-title">FIT in numbers</div>
-    <p class="cta-body">CHF 82 million in support granted · 442 loans · 331 active startups · 40 exits since 1994 · x52 leverage on follow-on funding since 2014 · 25% of the 2026 TOP100 Swiss Startups are FIT alumni, including PAVE Space (3rd), Voltiris (4th), and four of the ranking's cleantech startups.</p>
+    <div class="cta-title">FIT: three decades in four dates</div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-top:5px">
+      <div style="display:flex;gap:8px;align-items:baseline"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:800;color:var(--green-dk);min-width:30px;flex-shrink:0">1994</span><span class="cta-body" style="margin:0">FIT is founded to finance the first, riskiest capital in Vaud deep tech.</span></div>
+      <div style="display:flex;gap:8px;align-items:baseline"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:800;color:var(--green-dk);min-width:30px;flex-shrink:0">2008</span><span class="cta-body" style="margin:0">Julien Guex is appointed director.</span></div>
+      <div style="display:flex;gap:8px;align-items:baseline"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:800;color:var(--green-dk);min-width:30px;flex-shrink:0">2014</span><span class="cta-body" style="margin:0">Follow-on funding leverage begins compounding: x52 by 2026.</span></div>
+      <div style="display:flex;gap:8px;align-items:baseline"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:800;color:var(--green-dk);min-width:30px;flex-shrink:0">2026</span><span class="cta-body" style="margin:0">CHF 82M granted, 442 loans, 331 active startups, 40 exits. 25% of the TOP100 Swiss Startups 2026 are FIT alumni, including PAVE Space (3rd) and Voltiris (4th).</span></div>
+    </div>
     <span class="cta-url">fondation-fit.ch</span>
   </div>
   <div style="display:flex;align-items:center;gap:10px;margin-top:12px">
@@ -1739,9 +1761,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="body" style="display:flex;flex-direction:column;justify-content:center;padding:44px 36px">
   <div class="ga-quote-line" style="background:var(--green)"></div>
   <div class="ga-quote-body" style="color:rgba(248,250,252,.88)">"The VC told me the company was too profitable to be interesting. Three years later, a strategic buyer called it the most interesting asset in the sector. Same company. Different audience."</div>
-  <div class="ga-quote-src">Composite quote — European bootstrapped founder, acquired 2026</div>
-  <div style="margin-top:26px;font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.4);max-width:270px;line-height:1.7">The definition of a good asset depends entirely on who is looking at it. A company that does not fit a venture fund's return model may be exactly what a strategic acquirer needs — at a price that works better for the founder in the end.</div>
-</div><div class="pn pn-dk pn-l">90</div></div></div><div id="p91" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div><div class="opener"><div class="opener-num" style="font-size:130px;right:8px;bottom:34px">04</div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,221,164,.5);margin-bottom:14px">Next</div><div class="mix" style="font-size:34px;line-height:.88;color:rgba(248,250,252,.9);margin-bottom:12px">Transaction<br><strong>follows.</strong></div><hr class="dv-w" style="width:26px"><div class="opener-deck" style="margin-top:10px">Five real sales. One that fell through completely. What actually happens, week by week, when a founder sells their company — without the legal fog and without the mythology.</div></div><div class="pn pn-dk pn-r">91</div></div></div><div id="p92" class="pg pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
+  <div class="ga-quote-src">Composite quote, European bootstrapped founder, acquired 2026</div>
+  <div style="margin-top:26px;font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.4);max-width:270px;line-height:1.7">The definition of a good asset depends entirely on who is looking at it. A company that does not fit a venture fund's return model may be exactly what a strategic acquirer needs, at a price that works better for the founder in the end.</div>
+</div><div class="pn pn-dk pn-l">90</div></div></div><div id="p91" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div><div class="opener"><div class="opener-num" style="font-size:130px;right:8px;bottom:34px">04</div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,221,164,.5);margin-bottom:14px">Next</div><div class="mix" style="font-size:34px;line-height:.88;color:rgba(248,250,252,.9);margin-bottom:12px">Transaction<br><strong>follows.</strong></div><hr class="dv-w" style="width:26px"><div class="opener-deck" style="margin-top:10px">Five real sales. One that fell through completely. What actually happens, week by week, when a founder sells their company, without the legal fog and without the mythology.</div></div><div class="pn pn-dk pn-r">91</div></div></div><div id="p92" class="pg pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
 <div class="body" style="display:flex;align-items:center;justify-content:center;padding:0">
   <div class="ad-slot-frame" style="border-color:#e8e8e8">
     <div class="ad-slot-corner tl"></div><div class="ad-slot-corner br"></div>
@@ -1757,7 +1779,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="opener-num">04</div>
   <div class="opener-rule"></div>
   <div class="opener-title">Trans&shy;action</div>
-  <div class="opener-deck">Five real sales from the first half of 2026. One that fell through. What actually happens, week by week, when a founder sells their company — told plainly, without the legal fog.</div>
+  <div class="opener-deck">Five real sales from the first half of 2026. One that fell through. What actually happens, week by week, when a founder sells their company, told plainly, without the legal fog.</div>
   <div class="opener-toc">
     <div class="opener-toc-item">Five Deals, Five Different Stories</div>
     <div class="opener-toc-item">Who Is Actually Buying European Tech</div>
@@ -1802,10 +1824,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     </div>
     <div>
       <div class="img-ph" style="height:160px;background-image:url('images/1553877522-43269d4ea984.jpg')"></div><span class="cap">Deal 05. The technical review that changed everything.</span>
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c0392b;margin-top:10px;margin-bottom:4px">Deal 05 — No Close</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c0392b;margin-top:10px;margin-bottom:4px">Deal 05 · No Close</div>
       <div class="mix" style="font-size:17px;line-height:.92;margin-bottom:7px">The deal<br><strong>that taught the most.</strong></div>
       <p class="bx-sm">AI software, Iberia. Letter of intent signed. Technical review found large sections of core product written by AI and never reviewed by a human. The buyer walked. The founder spent twelve weeks fixing it. A second process opened six months later.</p>
-      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em;margin-top:5px">Outcome: no close — technical risk unresolved in the buyer's timeline</div>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em;margin-top:5px">Outcome: no close, technical risk unresolved in the buyer's timeline</div>
     </div>
   </div>
 </div><div class="pn pn-l">96</div></div></div><div id="p97" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
@@ -1819,11 +1841,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <span class="lbl">Four Buyer Types</span>
   <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:10px">Who is buying<br>European tech<br><strong>in 2027.</strong></div>
   <hr class="dv">
-  <div style="display:flex;flex-direction:column;gap:8px;margin-top:9px">
-    <div style="padding:6px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.5px"><strong>Strategic acquirers</strong> represented roughly 62 percent of lower mid-market software transactions in 2025. They pay more because they have revenue synergies a financial buyer cannot access.</p></div>
-    <div style="padding:6px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.5px"><strong>Private equity funds</strong> buy on the basis of financial engineering and operational improvement. Their investment committee meets every two weeks. Eleven minutes to present. Decisions made before the full report is read.</p></div>
-    <div style="padding:6px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.5px"><strong>Family offices</strong> move more slowly and more quietly. They are often the best buyer for a founder who values continuity over speed. They track companies for years before making contact.</p></div>
-    <div style="padding:6px 0"><p class="bx-sm" style="font-size:8.5px"><strong>Search funds</strong> represent a small but growing category: entrepreneurially-minded buyers who acquire a single company to operate themselves. Often more flexible on price in exchange for continuity and knowledge transfer.</p></div>
+  <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
+    <div style="padding:4px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.3px"><strong>Strategic acquirers</strong> represented roughly 62 percent of lower mid-market software transactions in 2025. They pay more because they have revenue synergies a financial buyer cannot access.</p><p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:7.3px;font-style:italic;color:#9a9690;line-height:1.4;margin-top:3px">"We compete on speed of proof, not price." Corporate development lead, listed software group.</p></div>
+    <div style="padding:4px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.3px"><strong>Private equity funds</strong> buy on the basis of financial engineering and operational improvement. Their investment committee meets every two weeks. Eleven minutes to present. Decisions made before the full report is read.</p></div>
+    <div style="padding:4px 0;border-bottom:.5px solid #e0dcd5"><p class="bx-sm" style="font-size:8.3px"><strong>Family offices</strong> move more slowly and more quietly. They are often the best buyer for a founder who values continuity over speed. They track companies for years before making contact.</p><p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:7.3px;font-style:italic;color:#9a9690;line-height:1.4;margin-top:3px">"We would rather pay fair and keep the founder in the room." Family office director, DACH region.</p></div>
+    <div style="padding:4px 0"><p class="bx-sm" style="font-size:8.3px"><strong>Search funds</strong> represent a small but growing category: entrepreneurially-minded buyers who acquire a single company to operate themselves. Often more flexible on price in exchange for continuity and knowledge transfer.</p></div>
   </div>
 </div><div class="pn pn-l">98</div></div></div><div id="p99" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>The Process</div>
 <div class="body">
@@ -1851,6 +1873,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <p class="bx" style="margin-bottom:10px">An earn-out is a payment structure where part of the price is paid after the transaction closes, contingent on the business hitting agreed targets. It lets a buyer pay more for future performance they cannot yet verify, and it lets a seller prove the business is worth what they claimed.</p>
     <p class="bx" style="margin-bottom:10px">The risks are real. Targets can be set in ways that are difficult to achieve after the sale, especially if the founder is no longer in full operational control. The metrics used to calculate the earn-out should be simple, objective, and within the founder's ability to influence.</p>
     <p class="bx">The founders who navigate earn-outs well have one advantage: they negotiated the terms before they signed, not after. Once the letter of intent is signed and exclusivity begins, the founder's leverage drops sharply.</p>
+    <div class="pq-inline" style="margin-top:10px;font-size:10px">"I structured mine around a single metric: net revenue retention above 95 percent for six consecutive quarters. Anything more complex than that becomes a negotiation about definitions, not performance."<span class="pq-attr" style="display:block;margin-top:4px">Composite quote, SaaS founder, earn-out closed 2025</span></div>
   </div>
 </div><div class="pn pn-r">101</div></div></div><div id="p102" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>The Data Room</div>
 <div class="ga-photo-r" style="background-image:url('images/1507003211169-0a1dd7228f2d.jpg')"></div>
@@ -1873,14 +1896,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <div class="bx-col" style="font-size:9px;line-height:1.65;margin-top:8px">The financial folder should contain monthly recurring revenue by customer for the last three years, a profit and loss statement for the same period, a cash flow summary, and any outstanding debt or commitments. This is not exotic. These are the documents any founder should be able to produce in an afternoon if their books are kept properly.
   The customer section is where many founders are caught off guard. A buyer wants to see signed contracts, not verbal agreements or email threads. They want to see the length of each contract, the renewal terms, and whether any single customer represents more than 20 percent of total revenue. Concentration is a risk, and buyers price it into their offers.
-  The technical section often takes the longest to prepare if it was not maintained as the product was built. Code ownership agreements for every contractor, documentation of what each major component does and why it was built that way, and a clear picture of what dependencies the product relies on — these are the documents that technical reviewers look for first. Their absence does not kill a deal, but their presence saves weeks.
-  The legal folder is the most varied. Shareholders agreement, option pool documentation, any existing litigation or regulatory notices, and the corporate structure across jurisdictions. Most European mid-market deals fail to close because of something in this folder that was not disclosed early — and that cost the founder the time and trust they spent building the relationship.</div>
+  The technical section often takes the longest to prepare if it was not maintained as the product was built. Code ownership agreements for every contractor, documentation of what each major component does and why it was built that way, and a clear picture of what dependencies the product relies on, these are the documents that technical reviewers look for first. Their absence does not kill a deal, but their presence saves weeks.
+  The legal folder is the most varied. Shareholders agreement, option pool documentation, any existing litigation or regulatory notices, and the corporate structure across jurisdictions. Most European mid-market deals fail to close because of something in this folder that was not disclosed early, and that cost the founder the time and trust they spent building the relationship.</div>
 </div><div class="pn pn-l">104</div></div></div><div id="p105" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>A Composite Portrait</div>
 <div class="ga-photo-l" style="background-image:url('images/1573497019236-17f8177b81e8.jpg')"></div>
 <div class="ga-text-r">
   <span class="lbl">A Composite Portrait</span>
   <div class="mix" style="font-size:22px;line-height:.88;margin-bottom:10px">The buyer's<br>first 48 hours<br>with your <strong>data room.</strong></div>
-  <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">A composite portrait — PE fund partner and deal team, based on Aegryn Advisory buy-side observations.</p>
+  <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">A composite portrait, PE fund partner and deal team, based on Aegryn Advisory buy-side observations.</p>
   <p class="bx-sm" style="margin-bottom:8px">The data room opens on a Tuesday morning. The fund partner has seen the two-page summary, spoken with the founder twice, and approved the investment thesis at a preliminary committee meeting. The exclusivity period began on Monday. The clock is running: 60 days to close, or the deal comes back to committee with a different recommendation.</p>
   <p class="bx-sm">The analyst is assigned that same Tuesday. He downloads everything in the financial folder first. He is looking for three things: the trend in gross margin over 24 months, the customer churn rate in the last four quarters, and whether the revenue is genuinely recurring or lumpy.</p>
   <div class="cont-bar" style="margin-top:10px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
@@ -1889,7 +1912,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <div class="ga-duo" style="margin-top:8px">
     <div>
-      <p class="bx" style="margin-bottom:10px">By Wednesday afternoon, the analyst has a preliminary view. If the financials hold up to the summary, he moves to customer contracts. He is counting the number of contracts that are signed versus the number that are verbal. He is looking at contract lengths. He is asking whether any single customer accounts for more than 20 percent of annual revenue — because if they do, that customer is a risk, and risk is priced into the offer.</p>
+      <p class="bx" style="margin-bottom:10px">By Wednesday afternoon, the analyst has a preliminary view. If the financials hold up to the summary, he moves to customer contracts. He is counting the number of contracts that are signed versus the number that are verbal. He is looking at contract lengths. He is asking whether any single customer accounts for more than 20 percent of annual revenue, because if they do, that customer is a risk, and risk is priced into the offer.</p>
       <p class="bx-sm">By Thursday, the technical reviewer has a first look at the code and architecture documentation. In a well-documented data room, the reviewer can build a mental model of the product's defensibility in two hours. In an unprepared one, they are still asking basic questions about ownership at the end of the week.</p>
     </div>
     <div>
@@ -1906,13 +1929,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <span class="lbl">A Real Case, Explained Plainly</span>
     <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:9px">What an earn-out<br>actually <strong>feels like.</strong></div>
     <p class="bx" style="margin-bottom:8px">He sold his company for what looked like a good headline number. A third was paid on closing. A third would be paid twelve months later if the company hit its annual recurring revenue target. A final third came at month 24, contingent on maintaining the customer retention rate above a specified threshold.</p>
-    <p class="bx" style="margin-bottom:8px">The earn-out was designed around metrics he could influence. That mattered enormously. In the 18 months after closing, the new parent company changed the product roadmap twice, replaced his head of sales, and moved the customer success team to a shared services model. The earn-out targets survived two of those three changes. The third — losing his sales lead — put the month-24 threshold at risk.</p>
-    <p class="bx" style="margin-bottom:6px">He hit it, narrowly. What he learned was that earn-outs work when the targets are simple, measurable by instruments the seller still controls, and agreed with enough specificity that a lawyer can determine whether they were met without ambiguity. The most dangerous earn-out is one that depends on revenue growth — because revenue growth after a sale depends on decisions the seller no longer makes.</p>
-    <div class="pq-inline" style="margin-top:4px;font-size:10px">"Negotiate the earn-out as carefully as you negotiate the headline number. You are writing a second contract, with a different set of risks."<span class="pq-attr" style="display:block;margin-top:4px">Composite observation — Aegryn Transaction Desk, 2026</span></div>
+    <p class="bx" style="margin-bottom:8px">The earn-out was designed around metrics he could influence. That mattered enormously. In the 18 months after closing, the new parent company changed the product roadmap twice, replaced his head of sales, and moved the customer success team to a shared services model. The earn-out targets survived two of those three changes. The third, losing his sales lead, put the month-24 threshold at risk.</p>
+    <p class="bx" style="margin-bottom:6px">He hit it, narrowly. What he learned was that earn-outs work when the targets are simple, measurable by instruments the seller still controls, and agreed with enough specificity that a lawyer can determine whether they were met without ambiguity. The most dangerous earn-out is one that depends on revenue growth, because revenue growth after a sale depends on decisions the seller no longer makes.</p>
+    <div class="pq-inline" style="margin-top:4px;font-size:10px">"Negotiate the earn-out as carefully as you negotiate the headline number. You are writing a second contract, with a different set of risks."<span class="pq-attr" style="display:block;margin-top:4px">Composite observation, Aegryn Transaction Desk, 2026</span></div>
   </div>
 </div><div class="pn pn-r">107</div></div></div><div id="p108" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>The Aegryn Index</div>
 <div class="body">
-  <span class="oped-flag">Aegryn Index — Edition I</span>
+  <span class="oped-flag">Aegryn Index, Edition I</span>
   <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:10px">What we tracked<br>and what it <strong>showed.</strong></div>
   <div class="art-byline">Aegryn Transaction and Grade Desks · H1 2026</div>
   <hr class="dv" style="margin-top:10px">
@@ -1922,12 +1945,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <p class="bx" style="margin-bottom:9px">Two patterns held consistently enough that we are prepared to state them as working hypotheses. The first: time-to-close correlates more strongly with data room preparation quality than with any other observable variable we tracked. The second: the largest discounts from initial offer to final signed price occurred in companies where the financial statements had not been independently reviewed in the 24 months preceding the sale.</p>
     <div class="cont-bar" style="margin-top:10px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
   </div>
-</div><div class="pn pn-l">108</div></div></div><div id="p109" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>Aegryn Index — Grade Distribution</div>
+</div><div class="pn pn-l">108</div></div></div><div id="p109" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>Aegryn Index, Grade Distribution</div>
 <div class="ga-photo-l" style="height:48%;background-image:url('images/1486406146926-c627a92ad1ab.jpg')"></div>
 <div class="ga-text-r">
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <p class="bx-sm" style="margin-bottom:9px">The CIFSO v4.0 methodology assesses five dimensions: Capital (assets, IP, brand, data), Integrity (governance, legal, compliance), Finance (metrics, recurring revenue, auditability), Security & Sovereignty (cyber, data independence), and Organisation (governance, talent, founder dependency). Each is scored through independent review, not self-assessment. The final grade reflects what a reviewer found, not what the founder believes to be true.</p>
-  <p class="bx-sm" style="margin-bottom:9px">In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation — contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. It is almost always fixable. It takes, on average, eleven weeks to resolve properly once identified. The cost of not fixing it is a discount in the final offer, a slower process, or both.</p>
+  <p class="bx-sm" style="margin-bottom:9px">In the first half of 2026, the most common finding across initial reviews was incomplete IP assignment documentation, contractor agreements that did not explicitly transfer code ownership to the company. This issue appeared in 64 percent of first submissions. It is almost always fixable. It takes, on average, eleven weeks to resolve properly once identified. The cost of not fixing it is a discount in the final offer, a slower process, or both.</p>
   <p class="bx-sm" style="margin-bottom:6px">The second most common finding was financial statements not independently reviewed for more than 24 months. Buyers apply a discount for this uncertainty, often as a longer due diligence period.</p>
   <div style="margin-top:8px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em">Aegryn CIFSO v4.0 Protocol v3.0 · Aegryn Transaction Desk H1 2026 observations</div>
 </div><div class="pn pn-r">109</div></div></div><div id="p110" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Transaction</span><span style="margin:0 5px;opacity:.3">·</span>Point of View</div>
@@ -1938,7 +1961,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9a9690;margin-bottom:12px">Aegryn Founding Team</div>
     <p class="bx" style="margin-bottom:10px">The most common question we hear from founders who have just completed their CIFSO v4.0 grade is: does this change what I can ask for? The honest answer is: sometimes directly, and almost always indirectly.</p>
     <p class="bx" style="margin-bottom:10px">Directly, a certified asset eliminates a category of buyer uncertainty. The conversation shifts from "can we trust these numbers and this documentation" to "do we want to own this specific company." That is a different and more productive conversation, and it tends to happen faster.</p>
-    <p class="bx" style="margin-bottom:10px">Indirectly, certification changes who approaches you. The compliance officer who found the RegTech company through an approved vendor registry was not the only buyer of that type active in 2026. There is a growing category of buyer — particularly in regulated industries — who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
+    <p class="bx" style="margin-bottom:10px">Indirectly, certification changes who approaches you. The compliance officer who found the RegTech company through an approved vendor registry was not the only buyer of that type active in 2026. There is a growing category of buyer, particularly in regulated industries, who searches for certified assets specifically, because the certification reduces their own post-acquisition remediation cost and timeline.</p>
     <p class="bx">We grade assets because we believe verification is the foundation of a fair transaction. We are also pragmatic: a grade makes the process faster, the conversations better, and the outcomes more predictable. Those are good things for sellers and for buyers alike.</p>
   </div>
 </div><div class="pn pn-l">110</div></div></div><div id="p111" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div style="position:absolute;inset:0;background-image:url('images/magazine-flipbook-rolex-certified.avif');background-size:cover;background-position:center"></div></div></div><div id="p112" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
@@ -1956,10 +1979,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="opener-title">People</div>
   <div class="opener-deck">The founders who built something, the ones who tried and rebuilt, and the acquirers who watched them all. Their stories, told as closely as we were allowed to tell them.</div>
   <div class="opener-toc">
-    <div class="opener-toc-item">The First Leap — She Had No Plan B</div>
-    <div class="opener-toc-item">The Second Try — What Failure Teaches</div>
-    <div class="opener-toc-item">The Family Business — Workshop to Platform</div>
-    <div class="opener-toc-item">The Acquirer — A Portrait</div>
+    <div class="opener-toc-item">The First Leap, She Had No Plan B</div>
+    <div class="opener-toc-item">The Second Try, What Failure Teaches</div>
+    <div class="opener-toc-item">The Family Business, Workshop to Platform</div>
+    <div class="opener-toc-item">The Acquirer, A Portrait</div>
   </div>
 </div><div class="pn pn-dk pn-r">113</div></div></div><div id="p114" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">People</span><span style="margin:0 5px;opacity:.3">·</span>The First Leap</div>
 <div class="ga-photo-l" style="background-image:url('images/1524678606370-a47ad25cb82a.jpg')">
@@ -1980,21 +2003,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:11px">
     <div class="portrait-circle" style="background-image:url('images/1531746020798-e6953c6e8e04.jpg')"></div>
     <div>
-      <div class="profile-name">A composite portrait — first-time founder, no safety net</div>
+      <div class="profile-name">A composite portrait, first-time founder, no safety net</div>
       <div class="profile-headline" style="font-size:24px">She quit on a<br><strong>Tuesday.</strong></div>
     </div>
   </div>
   <div class="profile-rule"></div>
-  <p class="bx" style="margin-bottom:10px">No investor. No co-founder. No plan B. Just a spreadsheet, a laptop, and eleven months of savings. This is how most European tech companies actually start — not in a pitch competition, but in a kitchen, after a decision that felt reckless at the time and obvious in hindsight.</p>
+  <p class="bx" style="margin-bottom:10px">No investor. No co-founder. No plan B. Just a spreadsheet, a laptop, and eleven months of savings. This is how most European tech companies actually start, not in a pitch competition, but in a kitchen, after a decision that felt reckless at the time and obvious in hindsight.</p>
   <div class="pq">"Everyone told me to wait for the right moment. There is no right moment. There is only the moment you stop waiting."
-    <span class="pq-attr">Composite portrait — European first-time founder, 2019–2025</span>
+    <span class="pq-attr">Composite portrait, European first-time founder, 2019–2025</span>
   </div>
 </div><div class="pn pn-r">115</div></div></div><div id="p116" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Portraits</span><span style="margin:0 5px;opacity:.3">·</span>The first eighteen months.</div>
 <div class="body">
   <div class="mix" style="font-size:20px;line-height:.94;margin-bottom:10px">The first eighteen months.</div>
   <hr class="dv">
   <div class="img-ph" style="height:150px;background-image:url('images/1556761175-4b46a572b786.jpg')"></div>
-  <div style="margin-top:10px"><p class="bx" style="margin-bottom:9px">The first client paid late. The second one didn't pay at all. She kept going because the alternative — going back to a salaried job she'd already left — felt worse than the fear of running out of money.</p><p class="bx" style="margin-bottom:9px">What changed everything wasn't a big break. It was a small one: a single enterprise client who referred three more. Word of mouth built what no marketing budget could have. Eighteen months in, she hired her first employee — not because she could easily afford it, but because she couldn't do the work alone anymore.</p><p class="bx" style="margin-bottom:9px">Five years later, the company she built without a safety net has a team of twelve and a buyer's attention. She still remembers the exact balance in her bank account the week she almost quit.</p></div>
+  <div style="margin-top:10px"><p class="bx" style="margin-bottom:9px">The first client paid late. The second one didn't pay at all. She kept going because the alternative, going back to a salaried job she'd already left, felt worse than the fear of running out of money.</p><p class="bx" style="margin-bottom:9px">What changed everything wasn't a big break. It was a small one: a single enterprise client who referred three more. Word of mouth built what no marketing budget could have. Eighteen months in, she hired her first employee, not because she could easily afford it, but because she couldn't do the work alone anymore.</p><p class="bx" style="margin-bottom:9px">Five years later, the company she built without a safety net has a team of twelve and a buyer's attention. She still remembers the exact balance in her bank account the week she almost quit.</p></div>
   <div class="explain">
     <span class="explain-lbl">The honest number</span>
     <span class="explain-txt">Most founders don't start with funding. They start with savings, a partner's income, or a part-time job on the side. The romantic story about garages and grit is true more often than the story about seed rounds.</span>
@@ -2005,14 +2028,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div style="position:absolute;left:0;right:0;bottom:24px;top:40%;padding:14px 28px 0;overflow:hidden">
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <div class="bx-col" style="font-size:9px;line-height:1.65;margin-top:8px">The first client paid late. The second one did not pay at all. She kept going because the alternative felt worse than the fear of running out of money. What changed everything was not a big break. It was a small one: a single enterprise client who referred three more.
-  Word of mouth built what no marketing budget would have. Eighteen months in, she hired her first employee — not because she could comfortably afford it, but because she physically could not do the work alone anymore.
+  Word of mouth built what no marketing budget would have. Eighteen months in, she hired her first employee, not because she could comfortably afford it, but because she physically could not do the work alone anymore.
   Five years later, the company she built without a safety net has a team of twelve, a buyer's interest, and a bank balance that no longer requires her to check it every morning. She still remembers the exact number it showed the week she almost quit. She uses that number now as a compass, not a warning.</div>
 </div><div class="pn pn-r">117</div></div></div><div id="p118" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">People</span><span style="margin:0 5px;opacity:.3">·</span>The Second Try</div>
 <div class="ga-photo-r" style="background-image:url('images/1519389950473-47ba0277781c.jpg')"></div>
 <div class="ga-text-l">
   <span class="lbl">A Composite Portrait</span>
   <div class="mix" style="font-size:26px;line-height:.86;margin-bottom:10px">His first company<br>died <strong>quietly.</strong></div>
-  <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">Composite portrait — European founder, two companies, 2016 to 2026.</p>
+  <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">Composite portrait, European founder, two companies, 2016 to 2026.</p>
   <p class="bx-sm" style="margin-bottom:8px">No press release. No dramatic collapse. It just ran out of customers, then out of runway, then out of reasons to continue. He shut it down himself, told his five employees in person, and spent the following year and a half working for someone else while he paid off what the company owed him personally.</p>
   <p class="bx-sm">"The first time, I built what I thought was smart. The second time, I built what people asked me for. That is the whole difference."</p>
   <div class="cont-bar" style="margin-top:12px"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued overleaf</div><div class="cont-bar-line"></div></div>
@@ -2022,7 +2045,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="ga-duo" style="margin-top:8px">
     <div>
       <p class="bx" style="margin-bottom:10px">The second company started from a single observation: the exact problem his old customers kept complaining about, that he had never fixed because he was too busy building features nobody had asked for.</p>
-      <p class="bx" style="margin-bottom:10px">He kept the team deliberately small for the first two years — three people — and refused every investor meeting until the product was already profitable. When he finally raised capital, it was on his terms, at a valuation that reflected leverage rather than desperation.</p>
+      <p class="bx" style="margin-bottom:10px">He kept the team deliberately small for the first two years, three people, and refused every investor meeting until the product was already profitable. When he finally raised capital, it was on his terms, at a valuation that reflected leverage rather than desperation.</p>
       <p class="bx">The company sold four years later. Not for a headline-making sum, but for enough that he never has to explain the first failure in a job interview again.</p>
     </div>
     <div>
@@ -2045,8 +2068,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
   <div style="overflow:hidden;margin-top:8px">
     <div class="ga-wrap-img"><div class="img-ph" style="height:160px;background-image:url('images/1581092580497-e0d23cbdf1dc.jpg')"></div><span class="cap">Forty years of craft, made legible and transferable.</span></div>
-    <p class="bx" style="margin-bottom:9px">The business had run the same way for forty years. Reliable, profitable, entirely on paper. She joined with an engineering degree and one uncomfortable question: what happens to this company in fifteen years if nothing changes?</p>
-    <p class="bx" style="margin-bottom:9px">She started with the smallest, least glamorous project possible — digitising the order book. It worked. That single win bought her the trust to go further. Predictive maintenance. A client portal. A data layer the old business had never had.</p>
+    <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin:2px 0 3px">01 &middot; The Workshop</div>
+    <p class="bx" style="margin-bottom:7px">The business had run the same way for forty years. Reliable, profitable, entirely on paper. She joined with an engineering degree and one uncomfortable question: what happens to this company in fifteen years if nothing changes?</p>
+    <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin:6px 0 3px">02 &middot; The First Win</div>
+    <p class="bx" style="margin-bottom:7px">She started with the smallest, least glamorous project possible, digitising the order book. It worked. That single win bought her the trust to go further. Predictive maintenance. A client portal. A data layer the old business had never had.</p>
+    <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:6.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green-dk);margin:6px 0 3px">03 &middot; The Platform</div>
     <p class="bx">The company is worth more today than at any point in its history. Not because it makes something different, but because a buyer can now see, verify, and trust everything it does. The workshop still exists. It runs on better information.</p>
     <div class="pq-inline" style="margin-top:12px">"I did not want to save the company from my father. I wanted to build the version of it that exists for another forty years."<span class="pq-attr" style="display:block;margin-top:5px">Composite quote, third-generation European founder</span></div>
   </div>
@@ -2057,7 +2083,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:8px">PE mid-market fund partner, active in EU tech transactions. Aegryn Advisory observations 2024 to 2026.</div>
   <div class="profile-rule"></div>
   <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:10px">Two hundred<br>summaries.<br><strong>Three acquisitions.</strong></div>
-  <p class="bx-sm" style="margin-bottom:8px">He reads approximately 200 deal summaries per year. He takes 40 first meetings. He acquires three companies. The 160 he never meets are not worse businesses — they failed to make the right impression on the two-page summary his analyst read in four minutes.</p>
+  <p class="bx-sm" style="margin-bottom:8px">He reads approximately 200 deal summaries per year. He takes 40 first meetings. He acquires three companies. The 160 he never meets are not worse businesses, they failed to make the right impression on the two-page summary his analyst read in four minutes.</p>
   <p class="bx-sm" style="margin-bottom:8px">His investment committee meets every two weeks. A partner has eleven minutes to present a dossier. Seven for the thesis. Three for the financials. One for questions. The 200-page due diligence report is never read in full before the committee vote.</p>
   <p class="bx-sm">What matters is what the presenting partner chose to highlight. Which means what matters, long before the committee, is the data room the seller built before the process started.</p>
 </div><div class="pn pn-l">122</div></div></div><div id="p123" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
@@ -2066,10 +2092,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="opener-num">06</div>
   <div class="opener-rule"></div>
   <div class="opener-title">Life</div>
-  <div class="opener-deck">The good life — for people who built something. Not the Instagram version. The version where you actually have time to read, travel without an agenda, and choose what to do next because you want to, not because you have to.</div>
+  <div class="opener-deck">The good life, for people who built something. Not the Instagram version. The version where you actually have time to read, travel without an agenda, and choose what to do next because you want to, not because you have to.</div>
   <div class="opener-toc">
     <div class="opener-toc-item">The European Tech Cities Worth Knowing</div>
-    <div class="opener-toc-item">The Reading List — Twelve Books, One Theme</div>
+    <div class="opener-toc-item">The Reading List, Twelve Books, One Theme</div>
     <div class="opener-toc-item">On Building for the Long View</div>
     <div class="opener-toc-item">The Workspace of the Deliberate Founder</div>
   </div>
@@ -2105,12 +2131,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <span class="lbl">Twelve Books, One Theme</span>
     <div class="mix" style="font-size:24px;line-height:.90;margin-bottom:12px">The books<br><strong>founders actually read.</strong></div>
     <div style="display:flex;flex-direction:column;gap:0">
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>The Hard Thing About Hard Things</strong> — Ben Horowitz. For moments when the situation is genuinely difficult and the management books have no answer.</div></div>
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Zero to One</strong> — Peter Thiel. Useful not for its conclusions but for the questions it insists you answer about defensibility.</div></div>
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Good to Great</strong> — Jim Collins. The discipline of doing less, extremely well, for a very long time.</div></div>
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>The Innovator's Dilemma</strong> — Clayton Christensen. Why good companies fail when the market moves. Relevant to every founder who has incumbents as both competitors and potential buyers.</div></div>
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Thinking, Fast and Slow</strong> — Daniel Kahneman. The book about how decisions actually get made, which matters more during a sale process than any valuation model.</div></div>
-      <div style="padding:8px 0"><div class="bx-sm"><strong>Built to Last</strong> — Collins and Porras. A book about companies that survived long enough to matter. Which is, in the end, the point.</div></div>
+      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>The Hard Thing About Hard Things</strong>, Ben Horowitz. For moments when the situation is genuinely difficult and the management books have no answer.</div></div>
+      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Zero to One</strong>, Peter Thiel. Useful not for its conclusions but for the questions it insists you answer about defensibility.</div></div>
+      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Good to Great</strong>, Jim Collins. The discipline of doing less, extremely well, for a very long time.</div></div>
+      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>The Innovator's Dilemma</strong>, Clayton Christensen. Why good companies fail when the market moves. Relevant to every founder who has incumbents as both competitors and potential buyers.</div></div>
+      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><div class="bx-sm"><strong>Thinking, Fast and Slow</strong>, Daniel Kahneman. The book about how decisions actually get made, which matters more during a sale process than any valuation model.</div></div>
+      <div style="padding:8px 0"><div class="bx-sm"><strong>Built to Last</strong>, Collins and Porras. A book about companies that survived long enough to matter. Which is, in the end, the point.</div></div>
     </div>
   </div>
 </div><div class="pn pn-r">127</div></div></div><div id="p128" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"></div>
@@ -2125,7 +2151,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="art-byline">Aegryn Founding Team</div>
   <hr class="dv" style="margin-top:10px">
   <div class="ga-duo" style="margin-top:10px">
-    <p class="bx dc">There is a particular kind of ambition that the startup narrative does not celebrate, because it does not look good in a pitch deck. It is the ambition of building something that outlasts you — not just something that grows fast or exits well, but something that is genuinely better for having existed.</p>
+    <p class="bx dc">There is a particular kind of ambition that the startup narrative does not celebrate, because it does not look good in a pitch deck. It is the ambition of building something that outlasts you, not just something that grows fast or exits well, but something that is genuinely better for having existed.</p>
     <div>
       <div class="img-ph" style="height:130px;background-image:url('images/1468779036391-52341f60b55d.jpg')"></div><span class="cap">Lake Geneva. The long view, literally.</span>
       <p class="bx-sm" style="margin-top:8px;color:#9a9690;font-style:italic">The founders who build for the long view often look, in the short term, like they are moving too slowly. They are not.</p>
@@ -2138,7 +2164,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="cont-bar"><div class="cont-bar-line"></div><div class="cont-bar-txt">Continued</div><div class="cont-bar-line"></div></div>
     <p class="bx" style="margin-bottom:10px;margin-top:4px">The European technology market rewards a different profile of founder than the one most venture narratives celebrate. It rewards the person who keeps clean books because they believe in accuracy, not because a buyer might eventually check. The person who documents their code because they respect the next engineer who will read it, not because they are preparing for due diligence.</p>
     <p class="bx" style="margin-bottom:10px">This is not naive. It is, in the end, the most practical approach. Companies built with this kind of care are the ones that survive a serious buyer's review, that close faster, that sell for more. The long view and the good outcome are not opposites. They are the same intention, expressed over different timeframes.</p>
-    <p class="bx" style="margin-bottom:12px">We write this magazine for people who already believe this — or who are beginning to. The work of building something real is not glamorous. Neither is the way this publication is made. But both, we think, hold up better than the alternative.</p>
+    <p class="bx" style="margin-bottom:12px">We write this magazine for people who already believe this, or who are beginning to. The work of building something real is not glamorous. Neither is the way this publication is made. But both, we think, hold up better than the alternative.</p>
     <div style="padding-top:12px;border-top:.5px solid #e8e4dc;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#b0aba3">Aegryn Founding Team · Saint-Sulpice, Switzerland</div>
   </div>
 </div><div class="pn pn-l">130</div></div></div><div id="p131" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>The Founder Stack</div>
@@ -2152,14 +2178,51 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <p class="bx" style="margin-bottom:9px">The tools are secondary. What they are really protecting is the ability to think without interruption for four hours in the morning. That is the resource most founders underestimate, and the one most difficult to buy back once it has been given away.</p>
     <p class="bx">The workspace changes. The discipline behind it does not.</p>
   </div>
-</div><div class="pn pn-r">131</div></div></div><div id="p132" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"><span style="opacity:.5">Closing</span><span style="margin:0 5px;opacity:.3">·</span>Issue 02</div>
+</div><div class="pn pn-r">131</div></div></div><div id="p132" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>Quickfire</div>
+<div class="body">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <div class="portrait-circle" style="width:40px;height:40px;background-image:url('images/1507003211169-0a1dd7228f2d.jpg')"></div>
+    <div>
+      <span class="lbl" style="margin-bottom:0">Post-Exit, Unfiltered</span>
+      <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;color:#9a9690">Composite founder, sold his company eight months ago</div>
+    </div>
+  </div>
+  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:8px">Ten questions.<br><strong>No time to think.</strong></div>
+  <hr class="dv">
+  <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+    <div class="iq" style="font-size:9px;margin-top:0">First thing you did after signing?</div><div class="ia" style="font-size:8.8px">Slept for eleven hours. Then panicked about what to do on a Tuesday.</div>
+    <div class="iq" style="font-size:9px">Biggest myth about selling a company?</div><div class="ia" style="font-size:8.8px">That the wire transfer feels like winning. It feels like relief.</div>
+    <div class="iq" style="font-size:9px">One document you wish you had prepared earlier?</div><div class="ia" style="font-size:8.8px">The cap table. Every version of it, not just the latest.</div>
+    <div class="iq" style="font-size:9px">Would you do an earn-out again?</div><div class="ia" style="font-size:8.8px">Only with a metric I control alone.</div>
+    <div class="iq" style="font-size:9px">What do you miss?</div><div class="ia" style="font-size:8.8px">Nothing about the admin. Everything about the Monday standup.</div>
+    <div class="iq" style="font-size:9px">What surprised the buyer's team most?</div><div class="ia" style="font-size:8.8px">That our data room had no surprises left in it.</div>
+    <div class="iq" style="font-size:9px">Advice for someone starting the process now?</div><div class="ia" style="font-size:8.8px">Get certified before you need to. Not during.</div>
+    <div class="iq" style="font-size:9px">Next thing you are building?</div><div class="ia" style="font-size:8.8px">Something smaller. On purpose, this time.</div>
+  </div>
+</div><div class="pn pn-l">132</div></div></div><div id="p133" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>By the Numbers</div>
+<div class="body">
+  <span class="lbl">This Issue, Sourced</span>
+  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:6px">Nine numbers<br>from these <strong>138 pages.</strong></div>
+  <p class="bx-sm" style="color:#9a9690;font-size:8px;margin-bottom:10px">Every figure below is cited where it first appears in this issue.</p>
+  <div class="g3" style="gap:6px;margin-bottom:6px">
+    <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">&euro;44.1B</div><div class="stat-lbl" style="font-size:6.3px">European tech funding, H1 2026</div><div class="stat-src">tech.eu</div></div>
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">4.5&times;</div><div class="stat-lbl" style="font-size:6.3px">Median software revenue multiple</div><div class="stat-src">FE International</div></div>
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">64%</div><div class="stat-lbl" style="font-size:6.3px">First reviews flagging IP gaps</div><div class="stat-src">Aegryn Transaction Desk</div></div>
+  </div>
+  <div class="g3" style="gap:6px">
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">CHF82M</div><div class="stat-lbl" style="font-size:6.3px">FIT capital deployed since 1994</div><div class="stat-src">fondation-fit.ch</div></div>
+    <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">x52</div><div class="stat-lbl" style="font-size:6.3px">FIT follow-on leverage since 2014</div><div class="stat-src">fondation-fit.ch</div></div>
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">20</div><div class="stat-lbl" style="font-size:6.3px">Avg. jobs per FIT-backed startup</div><div class="stat-src">fondation-fit.ch</div></div>
+  </div>
+  <div class="cta" style="margin-top:12px"><div class="cta-body">Sourcing standards for this issue are detailed in Sources, p. 12.</div></div>
+</div><div class="pn pn-r">133</div></div></div><div id="p134" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"><span style="opacity:.5">Closing</span><span style="margin:0 5px;opacity:.3">·</span>Issue 02</div>
 <div class="ga-photo-l" style="background-image:url('images/1516321497487-e288fb19713f.jpg');opacity:.6"></div>
 <div class="ga-text-r" style="justify-content:center;display:flex;flex-direction:column">
   <span class="lbl" style="color:rgba(90,221,164,.8)">Coming April 2027</span>
   <div class="mix" style="font-size:26px;line-height:.88;color:#f8fafc;margin-bottom:12px">Issue 02<br><strong>The Exit Equation.</strong></div>
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;color:rgba(248,250,252,.55);line-height:1.7;margin-bottom:14px">What makes a sale work. The real mathematics of valuation, told through the deals that defined the first half of 2027. Five founders who sold. Three who chose not to. The buyers behind the biggest transactions of the quarter.</div>
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green)">aegryn.com/magazine</div>
-</div><div class="pn pn-dk pn-l">132</div></div></div><div id="p133" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Closing</span><span style="margin:0 5px;opacity:.3">·</span>How to Work With Aegryn</div>
+</div><div class="pn pn-dk pn-l">134</div></div></div><div id="p135" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Closing</span><span style="margin:0 5px;opacity:.3">·</span>How to Work With Aegryn</div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
   <div class="ga-solo">
     <div class="ga-quote-line"></div>
@@ -2167,12 +2230,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <hr class="dv" style="margin-bottom:16px">
     <div style="display:flex;flex-direction:column;gap:11px">
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;color:var(--ink);margin-bottom:3px">Aegryn Build</div><p class="bx-sm" style="color:#6a6660">For founders who want to engineer their asset toward a future transaction from the beginning.</p></div>
-      <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;color:var(--ink);margin-bottom:3px">Aegryn Grade — CIFSO v4.0</div><p class="bx-sm" style="color:#6a6660">Independent certification across five dimensions: Capital, Integrity, Finance, Security &amp; Sovereignty, and Organisation. A score a buyer can trust.</p></div>
+      <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;color:var(--ink);margin-bottom:3px">Aegryn Grade, CIFSO v4.0</div><p class="bx-sm" style="color:#6a6660">Independent certification across five dimensions: Capital, Integrity, Finance, Security &amp; Sovereignty, and Organisation. A score a buyer can trust.</p></div>
       <div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;color:var(--ink);margin-bottom:3px">Aegryn Transaction</div><p class="bx-sm" style="color:#6a6660">Confidential transactions between certified sellers and qualified buyers, across Europe.</p></div>
     </div>
     <div style="margin-top:18px;padding-top:14px;border-top:.5px solid #e0dcd5;font-family:Plus Jakarta Sans,sans-serif;font-size:8px;color:#9a9690">media@boha-group.com · aegryn.com</div>
   </div>
-</div><div class="pn pn-r">133</div></div></div><div id="p134" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
+</div><div class="pn pn-r">135</div></div></div><div id="p136" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
 <div class="body">
   <span class="lbl" style="color:rgba(90,221,164,.8)">Advertising and Partnerships</span>
   <div class="mix" style="font-size:24px;line-height:.88;color:#f8fafc;margin-bottom:6px">Why Aegryn matters<br>to <strong>advertisers.</strong></div>
@@ -2186,7 +2249,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div style="padding:8px 0"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:11px;font-weight:800;color:#f8fafc;margin-bottom:2px">Advisors</div><div class="bx-sm" style="color:rgba(248,250,252,.45)">M&A, legal, financial, cybersecurity, and technology specialists.</div></div>
   </div>
   <div style="margin-top:12px;padding-top:10px;border-top:.5px solid rgba(248,250,252,.1);font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)">media@boha-group.com · aegryn.com/magazine</div>
-</div><div class="pn pn-dk pn-l">134</div></div></div><div id="p135" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
+</div><div class="pn pn-dk pn-l">136</div></div></div><div id="p137" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Publicité</span><span style="margin:0 5px;opacity:.3">·</span>Advertising</div>
 <div class="body" style="display:flex;align-items:center;justify-content:center;padding:0">
   <div class="ad-slot-frame" style="border-color:#e8e8e8">
     <div class="ad-slot-corner tl"></div><div class="ad-slot-corner br"></div>
@@ -2196,13 +2259,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="ad-slot-title" style="color:#9a9690">Pleine page · Inside Back Cover</div>
     <div class="ad-slot-meta" style="color:#c0bbb3">210 × 297 mm + 3mm bleed · CMYK / 300dpi<br>media@boha-group.com · aegryn.com/magazine</div>
   </div>
-</div><div class="pn pn-r">135</div></div></div>
-<div id="p136" class="pg"><div style="height:595px;background:#0F1A2B;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden">
+</div><div class="pn pn-r">137</div></div></div>
+<div id="p138" class="pg"><div style="height:595px;background:#0F1A2B;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden">
   <!-- Texture subtile fond -->
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(90,221,164,.05) 0%,transparent 65%);pointer-events:none"></div>
   <!-- Contenu centré -->
   <div style="position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center">
-    <!-- Logo AEGRYN — fichier original logo-back-cover.png, non modifié (canal alpha natif, fond déjà transparent) -->
+    <!-- Logo AEGRYN, fichier original logo-back-cover.png, non modifié (canal alpha natif, fond déjà transparent) -->
     <img src="/magazine/logo-back-cover.png" alt="AEGRYN" style="width:240px;height:auto;display:block;margin:0 auto 24px">
     <!-- Trait séparateur -->
     <div style="width:32px;height:1px;background:rgba(247,245,241,.2);margin-bottom:18px"></div>
@@ -2211,7 +2274,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   </div>
   <!-- Pied de page -->
   <div style="position:absolute;bottom:28px;left:0;right:0;text-align:center;z-index:1">
-    <div style="font-size:7px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,241,.15)">aegryn.com &nbsp;·&nbsp; Issue 01 — January 2027 &nbsp;·&nbsp; Saint-Sulpice, Vaud, Switzerland</div>
+    <div style="font-size:7px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,241,.15)">aegryn.com &nbsp;·&nbsp; Issue 01 &nbsp;·&nbsp; January 2027 &nbsp;·&nbsp; Saint-Sulpice, Vaud, Switzerland</div>
   </div>
 </div></div>
 </div>
@@ -2228,7 +2291,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
   /* ── 1. Pages : AUCUN slot vide — StPageFlip isole nativement la
      première ET la dernière page en mode showCover:true, à condition
-     que le nombre total de slots soit PAIR (ici 136).
+     que le nombre total de slots soit PAIR (ici 138).
      Preuve (page-flip.browser.js, createSpread()) :
        - showCover met this.pages[0] en density "hard" et le pousse
          SEUL dans le spread 0 (jamais pairé).
@@ -2236,9 +2299,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
          e < pages.length-1 ; sur le DERNIER indice restant,
          la condition est fausse → il est poussé SEUL et passé en
          density "hard" lui aussi (back cover isolé automatiquement).
-     Layout résultant : [p1 seul] | [p2,p3] | … | [p128,p129] | … | [p136 seul] */
+     Layout résultant : [p1 seul] | [p2,p3] | … | [p128,p129] | … | [p138 seul] */
   var srcPages = [];
-  var TOT_REAL = 136;
+  var TOT_REAL = 138;
   for(var i = 1; i <= TOT_REAL; i++){
     var el = src.querySelector('#p' + i);
     srcPages.push(el ? el.innerHTML : '');
@@ -2321,15 +2384,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     document.getElementById('fb-zoom-lbl').textContent = Math.round(sc * 100) + '%';
   }
 
-  /* ── 6. Thumbnails ── Unités logiques : cover seule + 67 spreads réels
-     (p2-p3 … p134-p135) + back cover seule = 69 entrées.
+  /* ── 6. Thumbnails ── Unités logiques : cover seule + 68 spreads réels
+     (p2-p3 … p136-p137) + back cover seule = 70 entrées.
      spreadDefs[k].idx = index StPageFlip exact (0-based) du slot de gauche. */
   var spreadDefs = [{ idx: 0, pages: [1] }];
   for(var rp = 2; rp < TOT_REAL; rp += 2){
     spreadDefs.push({ idx: rp - 1, pages: [rp, rp + 1] });
   }
   spreadDefs.push({ idx: TOT_REAL - 1, pages: [TOT_REAL] });
-  var TOT_SPREADS = spreadDefs.length; /* 68 */
+  var TOT_SPREADS = spreadDefs.length; /* 69 */
 
   var thumbsEl = document.getElementById('fb-thumbs');
   var thumbEls = [];
