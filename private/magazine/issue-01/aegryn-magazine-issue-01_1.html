@@ -464,7 +464,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .cap{font-family:'Plus Jakarta Sans',sans-serif;font-size:7px;font-weight:400;font-style:italic;color:#9a9690;margin-top:4px;line-height:1.4;display:block;}
 
 /* ── SECTION HEAD INSIDE ARTICLE ─────────── */
-.sh{font-family:'Plus Jakarta Sans',sans-serif;font-size:7px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);padding:5px 0 4px;border-bottom:1.5px solid var(--ink);margin-bottom:8px;}
+.sh{font-family:'Plus Jakarta Sans',sans-serif;font-size:7px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);padding:5px 0 4px;border-bottom:1.5px solid var(--ink);margin-bottom:8px;break-after:avoid;break-inside:avoid;-webkit-column-break-after:avoid;}
+.iq{break-after:avoid;break-inside:avoid;-webkit-column-break-after:avoid;}
 .sh-g{border-bottom-color:#6a6660;color:#6a6660}
 .sh-gray{border-bottom-color:#c0bbb3;color:#9a9690}
 
@@ -668,28 +669,25 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
 /* ── THOUGHT LEADERSHIP OP-ED MARKER ──────────────── */
 .oped-flag{
-  display:inline-flex;align-items:center;gap:5px;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:6.5px;font-weight:700;
-  letter-spacing:.24em;text-transform:uppercase;color:var(--navy);
-  background:rgba(10,22,40,.05);border:.5px solid rgba(10,22,40,.15);
-  padding:3px 8px;margin-bottom:10px;
+  display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:7px;font-weight:700;
+  letter-spacing:.3em;text-transform:uppercase;color:#8a867f;
+  padding-bottom:5px;border-bottom:1.5px solid var(--ink);margin-bottom:10px;
 }
-.oped-flag::before{content:'●';color:#6a6660;font-size:8px}
+.oped-flag::before{content:none}
 
 /* ── PLAIN-LANGUAGE EXPLAINER BOX ─────────────────
    Sits above jargon-heavy content, one sentence, no acronyms */
 .explain{
-  background:rgba(90,221,164,.07);
-  border-left:2px solid var(--green-dk);
-  padding:9px 11px;margin-bottom:12px;
+  background:none;border-left:1.5px solid var(--ink);
+  padding:2px 0 2px 10px;margin-bottom:12px;
 }
 .explain-lbl{
   font-family:'Plus Jakarta Sans',sans-serif;font-size:6.5px;font-weight:700;
   letter-spacing:.2em;text-transform:uppercase;color:#6a6660;margin-bottom:3px;display:block;
 }
 .explain-txt{
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:9.5px;font-weight:400;
-  line-height:1.55;color:#3a3834;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:8.6px;font-weight:400;
+  line-height:1.55;color:#5a5650;
 }
 
 /* ── AD SLOT (sellable placeholder) ──────────────── */
@@ -1003,11 +1001,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <p class="bx-sm" style="font-style:italic;color:#5a5650;margin-bottom:6px">An industrial manufacturer, a SaaS scale-up, an automotive Tier-2 supplier, a healthcare group and a construction firm do not share a business model. They share a lifecycle. This issue is organised around it.</p>
   <hr class="dv">
   <div style="display:flex;flex-direction:column;gap:0;margin-top:3px">
-    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">01</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Launch and structuring</div><p class="bx-sm" style="color:#6a6660;font-size:7.8px;line-height:1.4">Two thirds of EU enterprises born in 2021 were still trading two years later, and the survivors employed 52 percent more people than at birth (Eurostat, 2026). For an industrial SME as much as a software company, the first eighteen months decide who owns what, who signs what, and whether the books can be read by a stranger. Most of what goes wrong later is decided here.</p></div></div>
-    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">02</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Growth and scale</div><p class="bx-sm" style="color:#6a6660;font-size:7.8px;line-height:1.4">Capital is not scarce: European private equity and venture funds raised 147 billion euros in 2025 (Invest Europe). What is scarce, from a SaaS scale-up to a logistics group, is an organisation that survives its founder's calendar: a management team, a compliance function, a technology stack the company actually controls.</p></div></div>
-    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">03</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Restructuring and pivot</div><p class="bx-sm" style="color:#6a6660;font-size:7.8px;line-height:1.4">Business registrations fell and bankruptcies rose across the EU in the second quarter of 2026 (Eurostat). The automotive supply chain is living this now, as Tier-2 suppliers built for combustion engines re-tool for electrification. A pivot done early is a strategic choice. Done late, it is a restructuring, with the same decisions taken under a bank's timetable rather than the owner's.</p></div></div>
-    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">04</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Acquisition and external growth</div><p class="bx-sm" style="color:#6a6660;font-size:7.8px;line-height:1.4">EMEA deal value rose 87 percent in the first half of 2026, its best first half since 2007 (Mergermarket). Healthcare and pharmaceutical consolidation led 2025 private-equity activity in value terms (Invest Europe). Buying is easier than integrating. The deals that create value are the ones where the buyer already knew, before signing, which people, systems and contracts they were actually acquiring.</p></div></div>
-    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:8px 0;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">05</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Transfer and succession</div><p class="bx-sm" style="color:#6a6660;font-size:7.8px;line-height:1.4">Around 545,000 German Mittelstand firms seek a successor by 2029, and 569,000 plan simply to close (KfW, January 2026). In Switzerland, 32 percent of SMEs plan an ownership transfer within five years; at current success rates roughly 12,000 handovers a year will fail (UBS and University of St. Gallen, 2026). Construction, industrial and retail trades carry a disproportionate share of that backlog. Succession is a national economic question that is settled one company at a time.</p></div></div>
+    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">01</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Launch and structuring</div><p class="bx-sm" style="color:#6a6660;font-size:7.7px;line-height:1.38">Two thirds of EU enterprises born in 2021 were still trading two years later, and the survivors employed 52 percent more people than at birth (Eurostat, 2026). For an industrial SME as much as a software company, the first eighteen months decide who owns what, who signs what, and whether the books can be read by a stranger. Most of what goes wrong later is decided here.</p></div></div>
+    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">02</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Growth and scale</div><p class="bx-sm" style="color:#6a6660;font-size:7.7px;line-height:1.38">Capital is not scarce: European private equity and venture funds raised 147 billion euros in 2025 (Invest Europe). What is scarce, from a SaaS scale-up to a logistics group, is an organisation that survives its founder's calendar: a management team, a compliance function, a technology stack the company actually controls.</p></div></div>
+    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">03</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Restructuring and pivot</div><p class="bx-sm" style="color:#6a6660;font-size:7.7px;line-height:1.38">Business registrations fell and bankruptcies rose across the EU in the second quarter of 2026 (Eurostat). The automotive supply chain is living this now, as Tier-2 suppliers built for combustion engines re-tool for electrification. A pivot done early is a strategic choice. Done late, it is a restructuring, with the same decisions taken under a bank's timetable rather than the owner's.</p></div></div>
+    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:6px 0;border-bottom:.5px solid #e8e4dc;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">04</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Acquisition and external growth</div><p class="bx-sm" style="color:#6a6660;font-size:7.7px;line-height:1.38">EMEA deal value rose 87 percent in the first half of 2026, its best first half since 2007 (Mergermarket). Healthcare and pharmaceutical consolidation led 2025 private-equity activity in value terms (Invest Europe). Buying is easier than integrating. The deals that create value are the ones where the buyer already knew, before signing, which people, systems and contracts they were actually acquiring.</p></div></div>
+    <div style="display:grid;grid-template-columns:22px 1fr;gap:10px;padding:8px 0;align-items:flex-start"><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:13px;font-weight:200;color:#b0aba3;line-height:1;padding-top:1px">05</div><div><div style="font-family:Plus Jakarta Sans,sans-serif;font-size:10px;font-weight:700;color:var(--ink);margin-bottom:2px">Transfer and succession</div><p class="bx-sm" style="color:#6a6660;font-size:7.7px;line-height:1.38">Around 545,000 German Mittelstand firms seek a successor by 2029, and 569,000 plan simply to close (KfW, January 2026). In Switzerland, 32 percent of SMEs plan an ownership transfer within five years; at current success rates roughly 12,000 handovers a year will fail (UBS and University of St. Gallen, 2026). Construction, industrial and retail trades carry a disproportionate share of that backlog. Succession is a national economic question that is settled one company at a time.</p></div></div>
   </div>
 </div><div class="pn pn-l">10</div></div></div><div id="p11" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Primer</span><span style="margin:0 5px;opacity:.3">·</span>Five Words Worth Knowing</div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
@@ -1072,10 +1070,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="ga-photo-l" style="background-image:url('images/1560472354-b33ff0c44a43.jpg')"></div>
 <div class="ga-text-r">
   <span class="lbl">One Builder, No Safety Net</span>
-  <div class="mix" style="font-size:29px;line-height:.86;margin-bottom:10px">She quit on<br>a <strong>Tuesday.</strong></div>
+  <div class="mix" style="font-size:26px;line-height:.88;margin-bottom:8px">She quit on<br>a <strong>Tuesday.</strong></div>
   <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:8.5px;font-weight:300;font-style:italic;color:#9a9690;margin-bottom:12px;line-height:1.5">Drawn from patterns across dozens of solo-founder journeys observed in Aegryn Advisory work, 2022 to 2026.</p>
-  <p class="bx-sm" style="margin-bottom:9px">No investors. No co-founder. No plan B. Just a laptop, an idea she had been circling for two years, and a generation of tools that let one determined person do what used to require a department.</p>
-  <p class="bx-sm">She built the first version in six weeks, nights and weekends, then full-time once the fear of staying became larger than the fear of leaving. The product worked. Customers paid. She was, understandably, proud of the pace.</p>
+  <p class="bx-sm" style="margin-bottom:8px;font-size:8.4px;line-height:1.5">No investors. No co-founder. No plan B. Just a laptop, an idea she had been circling for two years, and a generation of tools that let one determined person do what used to require a department.</p>
+  <p class="bx-sm" style="margin-bottom:8px;font-size:8.4px;line-height:1.5">She built the first version in six weeks, nights and weekends, then full-time once the fear of staying became larger than the fear of leaving. The product worked. Customers paid. She was, understandably, proud of the pace.</p>
+  <p class="bx-sm" style="font-size:8.4px;line-height:1.5">She is early, not exceptional. Eurostat's 2025 survey found that one EU enterprise in five with ten or more employees now uses at least one AI technology, up from 13.5 percent a year earlier and 7.7 percent in 2021. Among small enterprises the share is 17 percent; among large ones, 55. The tools she took for granted are still a minority practice among the companies she will one day sell to.</p>
 </div><div class="pn pn-r">17</div></div></div><div id="p18" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Tech and AI</span><span style="margin:0 5px;opacity:.3">·</span>She Quit on a Tuesday</div>
 <div class="ga-photo-top" style="background-image:url('images/1551434678-e076c223a692.jpg')"></div>
 <div class="ga-text-bottom">
@@ -1105,11 +1104,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="bx-col3" style="font-size:8.8px;line-height:1.58">
     <p style="margin-bottom:7px">His entire product runs on tools that did not exist five years ago: coding assistants, design generators, a customer support system that handles most questions before a human ever sees them. What used to need a team of eight now needs him, a good pair of headphones, and a city that costs a fraction of what Amsterdam did.</p>
     <p style="margin-bottom:7px">The arithmetic still favours Lisbon against Zurich, Amsterdam or Paris on rent, on salaries for the first hires, and on the cost of a desk in a shared space. But it favours it less than it did. Lisbon posted some of the fastest rent increases of any European capital between 2021 and 2023, and the strain on housing pushed the government to act.</p>
-    <div class="sh">What changed in the rules</div>
-    <p style="margin-bottom:7px">Two of the incentives that drew the first wave have since been withdrawn or narrowed. The real-estate route into the golden visa was closed in 2023. The Non-Habitual Resident regime, a ten-year flat tax that had made Portugal unusually attractive to foreign professionals, was shut to new applicants from 2024 and replaced by a narrower scheme aimed at scientific research and innovation roles.</p>
+    <div style="break-inside:avoid"><div class="sh">What changed in the rules</div>
+    <p style="margin-bottom:7px">Two of the incentives that drew the first wave have since been withdrawn or narrowed. The real-estate route into the golden visa was closed in 2023. The Non-Habitual Resident regime, a ten-year flat tax that had made Portugal unusually attractive to foreign professionals, was shut to new applicants from 2024 and replaced by a narrower scheme aimed at scientific research and innovation roles.</p></div>
     <p style="margin-bottom:7px">For a founder arriving today, the offer is therefore different from the one advertised in 2019. The community, the conference calendar and the English-speaking service layer remain. The tax arbitrage largely does not.</p>
-    <div class="sh">Why it still holds</div>
-    <p style="margin-bottom:7px">What remains is the part that matters for a company meant to last. A time zone that overlaps both New York's morning and Central Europe's afternoon. A stable EU legal framework for contracts, employment and data. Direct flights to every major European buyer. And a founder population dense enough that a technical co-founder, a first client or a lawyer who has seen a cross-border SaaS sale can be found within a week.</p>
+    <div style="break-inside:avoid"><div class="sh">Why it still holds</div>
+    <p style="margin-bottom:7px">What remains is the part that matters for a company meant to last. A time zone that overlaps both New York's morning and Central Europe's afternoon. A stable EU legal framework for contracts, employment and data. Direct flights to every major European buyer. And a founder population dense enough that a technical co-founder, a first client or a lawyer who has seen a cross-border SaaS sale can be found within a week.</p></div>
     <p>This is not a remote-work trend piece. It is the new default for a generation of founders: build somewhere that works, because for the first time nothing structural is stopping you, and the structural things are what an acquirer will eventually check.</p>
   </div>
   <div style="margin-top:8px;font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em">Sources: Web Summit, Câmara Municipal de Lisboa (Unicorn Factory), SEF/AIMA D8 visa framework, Portuguese State Budget 2024 (NHR transition), Idealista rent data</div>
@@ -1240,6 +1239,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       <p class="bx">The habit he started out of simple discomfort with mess became, without him planning it, the entire reason the sale closed in weeks instead of months. This is the part almost nobody tells new founders: the boring administrative choices you make in year one are not separate from the exciting part of building a company. They are the same decision, made early, before anyone is watching.</p>
     </div>
   </div>
+  <div class="sh" style="margin-top:12px">Why the paperwork is priced</div>
+  <div class="bx-col" style="font-size:8.4px;line-height:1.5;column-gap:16px">The CMS European M&amp;A Study 2026, built on 601 private deals advised in 2025, shows how a buyer converts uncertainty into price. Purchase price adjustments appeared in 48 percent of transactions, unchanged for a decade; where they were absent, a locked-box price fixed on a past balance sheet featured in 54 percent. Earn-outs grew again, warranty periods lengthened and lower liability caps became rarer. Every one of those mechanisms exists to protect a buyer against what the seller cannot document. A clean file does not remove them. It removes the reasons to use them aggressively.</div>
 </div><div class="pn pn-r">35</div></div></div><div id="p36" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="letter-spacing:.34em">Build</span></div>
 <div class="ga-photo-l" style="background-image:url('images/1521737711867-e3b97375f902.jpg')"></div>
 <div class="ga-text-r" style="display:flex;flex-direction:column;justify-content:center">
@@ -1291,7 +1292,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="ga-wrap-img"><div class="img-ph" style="height:170px;background-image:url('images/pexels-3861958.jpg')"></div><span class="cap">Forty years of craft, made legible for the first time.</span></div>
     <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:10px">Her grandfather built<br>the workshop.<br>She built the <strong>platform.</strong></div>
     <p class="bx" style="margin-bottom:9px">The business had run the same way for forty years, reliable, profitable, entirely on paper. She joined with an engineering degree and one uncomfortable question: what happens to this company in fifteen years if nothing changes?</p>
-    <p class="bx">She started with the smallest, least exciting project possible: digitising the order book. It worked. That single win bought her the trust to go further.</p>
+    <p class="bx" style="margin-bottom:9px">She started with the smallest, least exciting project possible: digitising the order book. It worked. That single win bought her the trust to go further.</p>
+    <p class="bx">Her company is not a niche. Family businesses account for between 65 and 80 percent of all European companies and for 40 to 50 percent of private-sector jobs, more than 14 million firms and some 60 million employees according to European Family Businesses, the Brussels federation. Most were built by the generation now approaching retirement. Very few have written down how they work.</p>
   </div>
 </div><div class="pn pn-r">43</div></div></div><div id="p44" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Workshop That Became a Platform</div>
 <div class="body">
@@ -1305,6 +1307,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       <p class="bx-sm">The company is worth more today than at any point in its history. Not because it makes something different, but because a buyer can now see, verify, and trust everything it does. The workshop still exists. It runs on better information.</p>
     </div>
   </div>
+  <div class="sh" style="margin-top:12px">How long a handover really takes</div>
+  <div class="bx-col" style="font-size:8.6px;line-height:1.55;column-gap:16px">The UBS and University of St. Gallen succession study of 2026 puts numbers on what she did by instinct. A family handover takes about twelve years of planning on average, a management buy-out seven, a sale to a third party four. Forty-two percent of successors had to make major investments after taking over, rising to 54 percent when the buyer came from outside, because outsiders cannot shape the company before they own it. And 94 percent of owners want their successor to bring external professional experience, ahead of any diploma. She had eleven years, an engineering degree and a decade outside the firm. The order book was where she chose to start.</div>
 </div><div class="pn pn-l">44</div></div></div><div id="p45" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>Point of View</div>
 <div class="body">
   <span class="oped-flag">Aegryn Point of View</span>
@@ -1413,15 +1417,23 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="ga-wrap-img"><div class="img-ph" style="height:140px;background-image:url('images/1521737711867-e3b97375f902.jpg')"></div><span class="cap">The moment these documents make possible.</span></div>
     <p class="bx" style="margin-bottom:9px">Across the transactions Aegryn has been involved in or observed closely, the same three documents appear again and again as the ones that either accelerate a deal or stall it. They are not exciting. They are the kind of paperwork that feels like overhead until the moment someone needs them.</p>
     <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-      <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><p class="bx-sm"><strong>A signed IP assignment agreement for every contractor who ever touched the product.</strong> Not an NDA. Not a service agreement. A document that explicitly transfers ownership of whatever they built to the company. This is the single most common gap in European mid-market software transactions.</p></div>
-      <div style="padding:8px 0"><p class="bx-sm"><strong>Three years of independently reviewed monthly financial statements.</strong> Not annual accounts, not management accounts prepared by the founder. Monthly statements reviewed by someone who is not the founder, with margins and customer metrics visible by period. This document answers the buyer's first and most important question in the first afternoon of due diligence.</p></div>
+      <div style="padding:8px 0"><p class="bx-sm"><strong>A signed IP assignment agreement for every contractor who ever touched the product.</strong> Not an NDA. Not a service agreement. A document that explicitly transfers ownership of whatever they built to the company. This is the single most common gap in European mid-market software transactions.</p></div>
     </div>
   </div>
 </div><div class="pn pn-r">55</div></div></div><div id="p56" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Three Documents</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <p class="bx" style="margin-bottom:10px;margin-top:8px"><strong>A one-page technical architecture summary.</strong> Written by the founder or lead engineer, explaining what the product is built on, what it depends on, and what would change if any of those dependencies changed. The best versions are written for a non-technical reader. They are three pages or fewer. They save weeks in technical due diligence.</p>
+<div class="body">
+  <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
+    <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><p class="bx-sm"><strong>Three years of independently reviewed monthly financial statements.</strong> Not annual accounts, not management accounts prepared by the founder. Monthly statements reviewed by someone who is not the founder, with margins and customer metrics visible by period. This document answers the buyer's first and most important question in the first afternoon of due diligence.</p></div>
+    <div style="padding:8px 0;border-bottom:.5px solid #e8e8e8"><p class="bx-sm"><strong>A one-page technical architecture summary.</strong> Written by the founder or lead engineer, explaining what the product is built on, what it depends on, and what would change if any of those dependencies changed. The best versions are written for a non-technical reader. They are three pages or fewer. They save weeks in technical due diligence.</p></div>
   </div>
+  <div class="sh" style="margin-top:12px">What each document is worth to the other side</div>
+  <table class="tbl">
+    <tr><th>Document</th><th>Buyer's question it answers</th><th class="r">Typical cost of its absence</th></tr>
+    <tr><td>IP assignments</td><td>Do you actually own what you are selling?</td><td class="r">Weeks of chasing signatures; price adjustment</td></tr>
+    <tr><td>Reviewed financials</td><td>Can I trust the revenue?</td><td class="r">Longer diligence; escrow or earn-out</td></tr>
+    <tr><td>Architecture summary</td><td>Can I run this without you?</td><td class="r">Extended technical review; retention clause</td></tr>
+  </table>
+  <p class="bx-sm" style="margin-top:10px;color:#6a6660">None of the three is expensive to produce while the company is calm. All three are expensive to reconstruct once a buyer is waiting. The CMS European M&amp;A Study 2026 records earn-outs and longer warranty periods rising across Europe: the mechanisms buyers reach for when a file leaves questions open.</p>
 </div><div class="pn pn-l">56</div></div></div><div id="p57" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Art of the Data Room</div>
 <div class="ga-photo-top" style="background-image:url('images/1552664730-d307ca884978.jpg');height:45%"></div>
 <div style="position:absolute;left:0;right:0;bottom:24px;top:45%;padding:14px 28px 0;overflow:hidden">
@@ -1436,10 +1448,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <p class="bx-sm" style="margin-bottom:9px">The second most common question is: how detailed should it be? The answer is: complete and well-labelled, but not exhaustive in a way that creates confusion. A buyer needs to be able to find what they are looking for in under ten minutes. If the data room requires a guide to navigate, it is too complex.</p>
   <p class="bx-sm">The third question: who should see it? Access should be logged and controlled from the moment the room is created. Every person who opens a document should be tracked.</p>
 </div><div class="pn pn-l">58</div></div></div><div id="p59" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Build</span><span style="margin:0 5px;opacity:.3">·</span>The Art of the Data Room</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <div class="cta" style="margin-top:10px"><div class="cta-title">Aegryn can review yours</div><div class="cta-body">Aegryn GRADE includes a data room review against the CIFSO 5000 protocol, a structured assessment of what is there, what is missing, and what to fix.</div><div class="cta-url">aegryn.com/grade · media@boha-group.com</div></div>
-  </div>
+<div class="body">
+  <span class="lbl">In the order a reviewer opens them</span>
+  <div class="mix" style="font-size:20px;line-height:.92;margin-bottom:8px">Four folders.<br>One <strong>afternoon.</strong></div>
+  <hr class="dv">
+  <div class="nl-item"><div class="nl-n">01</div><div><div class="nl-title">Financials</div><div class="nl-sub">Monthly recurring revenue by customer, three years. P&amp;L and cash flow for the same period. Debt and commitments. Opened first, read for consistency before anything else.</div></div></div>
+  <div class="nl-item"><div class="nl-n">02</div><div><div class="nl-title">Customers</div><div class="nl-sub">Signed contracts, not verbal arrangements. Term lengths. Any single customer above 20 percent of revenue is flagged and priced.</div></div></div>
+  <div class="nl-item"><div class="nl-n">03</div><div><div class="nl-title">Technology</div><div class="nl-sub">Architecture summary, dependency list, code-ownership agreements for every contributor. This is where most European mid-market deals slow down.</div></div></div>
+  <div class="nl-item"><div class="nl-n">04</div><div><div class="nl-title">Legal and corporate</div><div class="nl-sub">Shareholders' agreement, option pool, litigation, corporate structure by jurisdiction. Checked last, remembered longest.</div></div></div>
+  <div class="cta" style="margin-top:12px"><div class="cta-title">A structured review exists</div><div class="cta-body">The CIFSO 5000 protocol includes a data-room review against the same four folders: what is there, what is missing, what to fix and in what order.</div><div class="cta-url">aegryn.com/grade</div></div>
 </div><div class="pn pn-r">59</div></div></div><div id="p60" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"></div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center;padding:44px 36px">
   <div class="ga-quote-line" style="background:var(--green)"></div>
@@ -1492,6 +1509,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="bx-col" style="font-size:9px;line-height:1.6;column-gap:16px;margin-top:6px">
     <p style="margin-bottom:8px">European software companies still trade at a discount of 15 to 25 percent versus comparable US businesses. That gap has narrowed from the 30 to 40 percent range of five years ago, but it has not closed.</p>
     <p>Aventis Advisors' sample of 543 disclosed SaaS acquisitions since 2015 shows where the gap sits. US targets commanded a median 5.3 times revenue on a median deal size of 434 million dollars. UK targets priced at 4.0 times on a median 26 million, Norwegian targets at 5.2, French targets at 2.7. Deal size is the strongest single driver: the median multiple almost doubles between the 20 to 50 million and the 50 to 100 million brackets, because larger deals attract strategic acquirers and competing bidders.</p>
+    <p style="margin-top:8px">Public markets tell the same story from the other side. The Translink index of 114 small and mid-cap European SaaS companies ended the second quarter of 2026 at a median 2.5 times trailing revenue, unchanged on the quarter after the first-quarter sell-off that repriced software for AI exposure. Operations and enterprise-management software held the highest multiples, on switching costs and depth of integration. For a private seller, the lesson is not the level of the discount. It is that the discount narrows with size, with integration depth and with a competitive process, three variables a founder can influence years before a sale.</p>
   </div>
   <div class="g3" style="margin-top:12px;gap:7px">
     <div class="stat-card"><div class="stat-n-sm" style="font-size:19px">5.3&times;</div><div class="stat-lbl" style="font-size:6.3px">Median EV/Revenue, US targets</div></div>
@@ -1548,11 +1566,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 <div class="ga-text-r">
   <p class="bx" style="margin-bottom:9px">For bootstrapped software companies in the three to ten million euro annual revenue range, realistic exit multiples run from three to five times yearly revenue, with equity-backed companies typically commanding a modest premium.</p>
   <p class="bx" style="margin-bottom:9px">What separates a three-times outcome from a seven-times outcome comes down to three variables: growth rate, customer retention, and the efficiency score that combines both. Getting these right is the single highest-leverage activity a founder can focus on before going to market.</p>
+  <p class="bx-sm" style="margin-bottom:9px">The 2026 data confirms the range. In the founder-led lower mid-market, most disclosed SaaS transactions cleared between 3 and 6.5 times ARR in the second quarter, with the top quartile above 8 times. The premium cases shared a profile: Rule of 40 cleared, net revenue retention above 115 percent, and more than one bidder at the table.</p>
+  <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em">Source: Windsor Drake, SaaS valuation multiples by ARR band, Q2 2026</div>
 </div><div class="pn pn-r">71</div></div></div><div id="p72" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Bootstrap Path</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <div class="pq-inline" style="margin-top:10px">"Below fifteen percent growth, most buyers shift from revenue multiples to profit multiples. The company gets priced as a cash-flow asset, not a growth asset. That is not necessarily bad. But you need to know which conversation you are walking into."<span class="pq-attr" style="display:block;margin-top:6px">Livmo SaaS Multiples 2026</span></div>
+<div class="body">
+  <span class="lbl">When growth slows, the metric changes</span>
+  <div class="mix" style="font-size:20px;line-height:.92;margin-bottom:8px">Priced as cash flow,<br>not as <strong>growth.</strong></div>
+  <hr class="dv">
+  <div class="bx-col" style="font-size:8.8px;line-height:1.58;column-gap:16px;margin-top:8px">
+    <p style="margin-bottom:7px">A bootstrapped company that grows at 12 percent a year with a 30 percent margin is a good business. It is not, in a buyer's spreadsheet, a growth asset. Below roughly 15 percent growth, most acquirers stop reasoning in revenue multiples and start reasoning in profit multiples. The company is valued as a stream of cash, discounted for risk, rather than as a bet on scale.</p>
+    <p style="margin-bottom:7px">That switch is not a penalty. Aventis Advisors' sample of 232 SaaS acquisitions with a disclosed EBITDA multiple shows a median of 23 times since 2015, with the first quartile at 12.8 and the third at 47.1. Profitable software has traded above 20 times EBITDA in every year since 2019. A founder who knows which conversation is coming can prepare the right evidence: clean margins, low churn and a cost base that does not depend on him.</p>
+    <p>The founders who get surprised are the ones who spent two years reading revenue-multiple headlines about companies growing three times faster than theirs.</p>
   </div>
+  <div class="pq-inline" style="margin-top:10px">"Below fifteen percent growth, most buyers shift from revenue multiples to profit multiples. The company gets priced as a cash-flow asset, not a growth asset. That is not necessarily bad. But you need to know which conversation you are walking into."<span class="pq-attr" style="display:block;margin-top:6px">Livmo SaaS Multiples 2026</span></div>
+  <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em;margin-top:8px">Sources: Aventis Advisors, SaaS Valuation Multiples 2015 to 2026; Livmo 2026</div>
 </div><div class="pn pn-l">72</div></div></div><div id="p73" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Investment Data</div>
 <div class="body">
   <span class="lbl">The European VC Landscape</span>
@@ -1625,10 +1652,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <p class="bx" style="margin-bottom:7px">In month four of year three, a larger fund passed with a note that said, essentially, that the company was too profitable to be interesting as a venture investment. The partner explained it more diplomatically, but the logic was plain: his growth rate was not fast enough to justify VC returns, precisely because he had been running the company efficiently.</p>
   </div>
 </div><div class="pn pn-l">78</div></div></div><div id="p79" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Pivot Point</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <p class="bx" style="margin-top:10px">He closed the browser and opened a spreadsheet instead. He modelled the next four years without raising. What he found surprised him.</p>
-  </div>
+<div class="body">
+  <p class="bx" style="margin-top:4px;margin-bottom:10px">He closed the browser and opened a spreadsheet instead. He modelled the next four years without raising. What he found surprised him.</p>
+  <div class="sh">The two paths, side by side</div>
+  <table class="tbl">
+    <tr><th>Assumption</th><th class="r">Raise a Series A</th><th class="r">Stay independent</th></tr>
+    <tr><td>Capital in</td><td class="r">&euro;6m, 25% dilution</td><td class="r">Own cash flow</td></tr>
+    <tr><td>Growth target</td><td class="r">60% a year</td><td class="r">25% a year</td></tr>
+    <tr><td>Year-four ARR</td><td class="r">c. &euro;7.5m</td><td class="r">c. &euro;4.5m</td></tr>
+    <tr><td>Exit multiple, year seven</td><td class="r">4.0&times; revenue</td><td class="r">4.0&times; revenue</td></tr>
+    <tr><td>Founder's share at exit</td><td class="r">75%, after preferences</td><td class="r">100%</td></tr>
+    <tr><td>Who sets the exit date</td><td class="r">Fund lifecycle</td><td class="r">He does</td></tr>
+  </table>
+  <p class="bx-sm" style="margin-top:10px;color:#6a6660">Illustrative model built by the founder in 2023, reconstructed from his notes. The 4.0 times multiple is the median disclosed SaaS acquisition in the second quarter of 2026 (SEG). The venture path produced a larger headline number and, after liquidation preferences and a timetable he did not control, a smaller and less certain personal outcome. The independent path produced a smaller company he would own outright, on a calendar he chose.</p>
+  <p class="bx-sm" style="margin-top:8px;color:#6a6660">The spreadsheet did not tell him which path was right. It told him that the question was not "can I raise" but "what do I want to own in year seven".</p>
 </div><div class="pn pn-r">79</div></div></div><div id="p80" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Year He Stopped Raising</div>
 <div class="ga-photo-l" style="background-image:url('images/1506905925346-21bda4d32df4.jpg')"></div>
 <div class="ga-text-r">
@@ -1636,10 +1673,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <p class="bx-sm" style="margin-bottom:9px">He stopped raising. He hired a bookkeeper. He opened a data room folder and started filling it with the documents that a buyer would eventually ask for. He did not think of it as exit preparation. He thought of it as good practice.</p>
   <p class="bx-sm" style="margin-bottom:9px">Three years later, a strategic acquirer in his sector approached him. He had not put the company on the market. The buyer found him through a certification registry.</p>
 </div><div class="pn pn-l">80</div></div></div><div id="p81" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>The Year He Stopped Raising</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <div class="pq-inline" style="margin-top:10px;font-size:11px;line-height:1.55">"The VC told me the company was too profitable to be interesting to them. I thought that was a problem. It turned out to be the best thing they ever said to me."<span class="pq-attr" style="display:block;margin-top:6px">European bootstrapped founder, acquired 2026</span></div>
+<div class="body">
+  <div class="pq-inline" style="margin-top:4px;font-size:11px;line-height:1.55">"The VC told me the company was too profitable to be interesting to them. I thought that was a problem. It turned out to be the best thing they ever said to me."<span class="pq-attr" style="display:block;margin-top:6px">European bootstrapped founder, acquired 2026</span></div>
+  <div class="sh" style="margin-top:14px">The market he opted out of</div>
+  <div class="bx-col" style="font-size:8.8px;line-height:1.58;column-gap:16px">
+    <p style="margin-bottom:7px">His decision was not a rejection of European venture capital, which had one of its strongest years on record while he was building. Invest Europe counts 20 billion euros of VC investment in 2025, a fifth above the five-year average, and 147 billion euros raised by private equity and venture funds combined. Venture transaction value reached 35.3 billion euros. The money was there.</p>
+    <p style="margin-bottom:7px">It was going to fewer companies. Deals above 15 million euros grew 15 percent and took 67 percent of all venture value; smaller tickets declined in both number and size. A profitable company growing at 25 percent a year was exactly the kind of business that fell between the two: too steady for a growth fund, too small for the megarounds that dominated the year.</p>
+    <p>Three years later, the certification registry that brought him a buyer did what a fundraising round would not have: it put his company in front of the one category of acquirer that valued predictability over speed.</p>
   </div>
+  <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em;margin-top:8px">Sources: Invest Europe, Private Equity Activity 2025 (May 2026) and Transaction Value Analysis (July 2026)</div>
 </div><div class="pn pn-r">81</div></div></div><div id="p82" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>What the EMEA Wave Means</div>
 <div class="body">
   <span class="lbl">For a founder with €2M in annual revenue</span>
@@ -1647,7 +1689,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <hr class="dv">
   <div style="overflow:hidden;margin-top:10px">
     <p class="bx dc" style="margin-bottom:10px">The 87 percent rise in EMEA deal value in the first half of 2026 is a real number, but it is a number about a market, and a concentrated one: LSEG counts deal volumes at a six-year low even as value hit records, with sixteen megadeals doing much of the work. It does not automatically translate to a better outcome for any specific founder. What it does create, and what was less true two years ago, is a wider set of credible, well-capitalised buyers actively looking for European technology assets.</p>
+    <p class="bx" style="margin-bottom:10px">The pattern is visible one level down. Crunchbase counted 154 venture-backed European companies acquired in the second quarter of 2026 alone, for a combined 11.5 billion dollars or more, three of them above a billion each. Sponsors are back too: in EMEA, private-equity investments rose 90 percent in value year on year and exits doubled, according to Mergermarket. Both buyer types are active, both are disciplined on price, and both are reading the same two-page summary.</p>
+    <p class="bx">For a company at two million euros of recurring revenue, the practical consequence is not a higher multiple. It is a shorter list of reasons to be excluded. When the buyer universe expands, the deals that fail no longer fail for lack of interest. They fail on what the first week of diligence finds.</p>
   </div>
+  <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;color:#c0bbb3;letter-spacing:.1em;margin-top:8px">Sources: Crunchbase, Europe Q2 2026; Mergermarket M&amp;A Highlights 1H26; LSEG State of Global M&amp;A H1 2026</div>
 </div><div class="pn pn-l">82</div></div></div><div id="p83" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Money</span><span style="margin:0 5px;opacity:.3">·</span>What the EMEA Wave Means</div>
 <div class="ga-photo-r" style="background-image:url('images/1460925895917-afdab827c52f.jpg')"></div>
 <div class="ga-text-l">
@@ -1679,37 +1724,32 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="bx-col3" style="font-size:9px;line-height:1.6">
     <p style="margin-bottom:8px">FIT is not a venture capital fund. Its first objective is not financial return: it is job creation and impact in the canton of Vaud. EPFL and UNIL spin-offs, deep tech hardware projects, life sciences, clean energy: that is where most of its pipeline sits. Sixty percent of the applications it receives today come from life sciences and deep tech: fields where the barrier to entry is real, where development cycles are long, and where replicability, the tech investor's nightmare, is structurally more difficult.</p>
     <p style="margin-bottom:10px">We met Julien Guex at the CVCI in Lausanne. Five questions. Direct answers, no hedging, about what he sees every day that others do not yet see.</p>
-    <div class="sh" style="break-inside:avoid">AI and deep tech: why FIT does not finance the same risks</div>
-    <p class="iq" style="font-size:9.4px">AI is transforming market access conditions. How does it change the way you read an application?</p>
-    <p class="ia" style="font-size:9px;margin-bottom:7px">The question comes up in almost every application, Julien Guex concedes. His answer is direct. "On purely AI projects, we remain cautious. The barriers to entry are low, competition is immediate, and data governance questions remain largely open. That is not where we invest first. In deep tech environments, in research mode, in physical infrastructure, the barriers remain real. Energy, servers, chips. Capital remains the barrier to entry that nobody bypasses."</p>
+    <div style="break-inside:avoid"><div class="sh" style="break-inside:avoid">AI and deep tech: why FIT does not finance the same risks</div>
+    <p class="iq" style="font-size:8.8px;line-height:1.35">AI is transforming market access conditions. How does it change the way you read an application?</p></div><p class="ia" style="font-size:9px;margin-bottom:7px">The question comes up in almost every application, Julien Guex concedes. His answer is direct. "On purely AI projects, we remain cautious. The barriers to entry are low, competition is immediate, and data governance questions remain largely open. That is not where we invest first. In deep tech environments, in research mode, in physical infrastructure, the barriers remain real. Energy, servers, chips. Capital remains the barrier to entry that nobody bypasses."</p>
     <p class="ia" style="font-size:9px;margin-bottom:7px">That is precisely why the FIT pipeline remains anchored in deep tech, scientific hardware and, for the most part, life sciences: structurally less replicable fields, where technical depth and development time are themselves a barrier.</p>
     <p class="ia" style="font-size:9px;margin-bottom:9px">For founders arriving with a software or AI project, he asks a question few have truly prepared: differentiation will no longer lie in the ability to build, but in the ability to convince and to sell. Few applications factor in that shift when they knock on the door.</p>
     <div class="pq-inline" style="font-size:10.5px">"A founder who is not seeking an exit by default often creates more lasting value. Intent is not quantifiable, but it is real."</div>
   </div>
 </div><div class="pn pn-l">86</div></div></div><div id="p87" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Portrait</span><span style="margin:0 5px;opacity:.3">·</span>Julien Guex, FIT</div>
-<div class="body">
-  <div class="bx-col3" style="font-size:9px;line-height:1.6">
-    <div class="sh" style="break-inside:avoid;margin-top:0">The early sign of an asset that will last</div>
-    <p class="iq" style="font-size:9.4px">In hindsight, what is the earliest sign, in how a founder builds and manages, that predicts an asset will be solid and transferable?</p>
-    <p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex does not hesitate. It is not only the product. It is not only the market. It is the founding team, and the quality of what it is made of. "What we look at is academic grounding and the solidity of the profiles. A team from a top-tier school, with skills that match the project: that is the first signal. Not a guarantee. But a serious starting point. What speaks to us next is listening. Conviction without rigidity. The ability to take a no, to pivot, to start again."</p>
+<div class="body body-wide">
+  <div class="bx-col3" style="font-size:8.5px;line-height:1.5;column-gap:11px">
+    <div style="break-inside:avoid"><div class="sh" style="break-inside:avoid;margin-top:0">The early sign of an asset that will last</div>
+    <p class="iq" style="font-size:8.8px;line-height:1.35">In hindsight, what is the earliest sign, in how a founder builds and manages, that predicts an asset will be solid and transferable?</p></div><p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex does not hesitate. It is not only the product. It is not only the market. It is the founding team, and the quality of what it is made of. "What we look at is academic grounding and the solidity of the profiles. A team from a top-tier school, with skills that match the project: that is the first signal. Not a guarantee. But a serious starting point. What speaks to us next is listening. Conviction without rigidity. The ability to take a no, to pivot, to start again."</p>
     <p class="ia" style="font-size:9px;margin-bottom:7px">There is something subtler, too. Real intent. "A founder who is not seeking an exit by default, who builds because he believes in what he does, who thinks first about impact and jobs: that one often creates more lasting value. You can feel the intent. It is not quantifiable, but it is real."</p>
     <p style="margin-bottom:9px">FIT's first indicator is not the number of exits. Its primary KPI remains the jobs generated: twenty positions on average per funded startup. The exit is a possible consequence, not a starting objective. It is a distinction many investors do not make.</p>
-    <div class="sh" style="break-inside:avoid;margin-top:0">Valuation gaps: what really explains them</div>
-    <p class="iq" style="font-size:9.4px">FIT has generated x52 leverage on follow-on funding since 2014. In the exits you have accompanied, what explains the valuation gaps between comparable organisations?</p>
-    <p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex starts with the classic answer: vision, addressable market, sector. A valuation is a rule of three. A pharmaceutical project is structurally worth more than generalist software at the early stage. Known variables, on which everyone agrees. But when challenged on what creates the real gaps between comparable organisations, his answer sharpens.</p>
+    <div style="break-inside:avoid"><div class="sh" style="break-inside:avoid;margin-top:0">Valuation gaps: what really explains them</div>
+    <p class="iq" style="font-size:8.8px;line-height:1.35">FIT has generated x52 leverage on follow-on funding since 2014. In the exits you have accompanied, what explains the valuation gaps between comparable organisations?</p></div><p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex starts with the classic answer: vision, addressable market, sector. A valuation is a rule of three. A pharmaceutical project is structurally worth more than generalist software at the early stage. Known variables, on which everyone agrees. But when challenged on what creates the real gaps between comparable organisations, his answer sharpens.</p>
     <p class="ia" style="font-size:9px;margin-bottom:9px">"What can make the difference at exit," Julien Guex concedes, "is what an acquirer finds when they open the hood: readable governance, clear intellectual property, an organisation that does not live only in the founder's head. A company that has structured what it builds over time can be worth significantly more than another with a comparable profile. It is not the paperwork that creates the value. It is the readability of what was built."</p>
-    <div class="pq-inline" style="font-size:10.5px">"It is not the paperwork that creates the value. It is the readability of what was built."</div>
   </div>
+  <div class="pq" style="margin-top:2px;padding:6px 4px;font-size:10.5px;margin-bottom:0">"It is not the paperwork that creates the value. It is the readability of what was built."<span class="pq-attr">Julien Guex, FIT</span></div>
 </div><div class="pn pn-r">87</div></div></div><div id="p88" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Portrait</span><span style="margin:0 5px;opacity:.3">·</span>Julien Guex, FIT</div>
 <div class="body">
   <div class="bx-col3" style="font-size:9px;line-height:1.6">
-    <div class="sh" style="break-inside:avoid;margin-top:0">Forty exits: the reality of the 2026 market</div>
-    <p class="iq" style="font-size:9.4px">Acquirers now demand increasingly rigorous documentation. Do Vaud founders arrive prepared for that level of scrutiny?</p>
-    <p class="ia" style="font-size:9px;margin-bottom:7px">His answer draws two distinct trajectories. "There are exits from a position of strength: the founder who waits for the right moment, makes buyers compete, optimises his exit. And there are forced exits, when there is no choice left, when saving the jobs matters more than closing down. These are two very different realities, and they coexist in our portfolio."</p>
+    <div style="break-inside:avoid"><div class="sh" style="break-inside:avoid;margin-top:0">Forty exits: the reality of the 2026 market</div>
+    <p class="iq" style="font-size:8.8px;line-height:1.35">Acquirers now demand increasingly rigorous documentation. Do Vaud founders arrive prepared for that level of scrutiny?</p></div><p class="ia" style="font-size:9px;margin-bottom:7px">His answer draws two distinct trajectories. "There are exits from a position of strength: the founder who waits for the right moment, makes buyers compete, optimises his exit. And there are forced exits, when there is no choice left, when saving the jobs matters more than closing down. These are two very different realities, and they coexist in our portfolio."</p>
     <p class="ia" style="font-size:9px;margin-bottom:9px">FIT's mandate is not to accompany transactions as such. It selects at entry, finances, and can provide negotiation support where needed. But the exit is not its first criterion. What remains, after thirty years of observation, is a simpler conviction still: those who built something readable always have more options than the others when the time comes to hand over.</p>
-    <div class="sh" style="break-inside:avoid">The human profile of the founder who lasts ten years</div>
-    <p class="iq" style="font-size:9.4px">Not the companies, the people. Which human profile is most likely to build something that endures?</p>
-    <p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex pauses before answering. Then: "Entrepreneurship is not for everyone. Some prefer the comfort of a salary at the end of the month, and that is legitimate. One of the hardest things in my job is having the courage to tell someone: this is not for you. Knowing when to stop is a skill few people recognise as one."</p>
+    <div style="break-inside:avoid"><div class="sh" style="break-inside:avoid">The human profile of the founder who lasts ten years</div>
+    <p class="iq" style="font-size:8.8px;line-height:1.35">Not the companies, the people. Which human profile is most likely to build something that endures?</p></div><p class="ia" style="font-size:9px;margin-bottom:7px">Julien Guex pauses before answering. Then: "Entrepreneurship is not for everyone. Some prefer the comfort of a salary at the end of the month, and that is legitimate. One of the hardest things in my job is having the courage to tell someone: this is not for you. Knowing when to stop is a skill few people recognise as one."</p>
     <p class="ia" style="font-size:9px;margin-bottom:7px">The founder who lasts, in his view, is the one who can question himself without losing conviction. Who listens to clients without dissolving into their demands. Who finds the balance between resilience and flexibility. "It is not a formula. It is a posture. And you can see it very early, often from the first interview."</p>
     <p class="ia" style="font-size:9px;margin-bottom:9px">There is something else, too, which he says with disarming frankness. "What interests me in my role is the human material. Every application is different. Every founder arrives with a conviction nobody else shares yet. Watching that conviction turn into jobs, products, real impact: that is a rare privilege. And I have great respect for these entrepreneurs."</p>
     <div class="pq-inline" style="font-size:10.5px">"Knowing when to stop is a skill few people recognise as one."</div>
@@ -1780,22 +1820,22 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6a6660;margin-bottom:4px">Deal 03 &middot; 31 July 2026</div>
       <div class="mix" style="font-size:16px;line-height:.92;margin-bottom:6px">Forterro<br><strong>enters Poland.</strong></div>
-      <p class="bx-sm" style="margin-bottom:5px">The European ERP group bought BPSC, whose Impuls EVO platform runs production, logistics and finance for more than 400 industrial customers in Poland. BPSC becomes Forterro's fourth business unit and its first in Central and Eastern Europe, with local management kept in place.</p>
+      <p class="bx-sm" style="margin-bottom:4px;font-size:8.4px;line-height:1.5">The European ERP group bought BPSC, whose Impuls EVO platform runs production, logistics and finance for more than 400 industrial customers in Poland. BPSC becomes Forterro's fourth business unit and its first in Central and Eastern Europe, with local management kept in place.</p>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em;margin-bottom:12px">Terms not disclosed. Fifth software acquisition for the group.</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6a6660;margin-bottom:4px">Deal 04 &middot; 7 September 2026</div>
       <div class="mix" style="font-size:16px;line-height:.92;margin-bottom:6px">Everfield<br><strong>buys Retain.</strong></div>
-      <p class="bx-sm" style="margin-bottom:5px">The buy-and-grow investor acquired Retain Technologies, a Madrid maintenance and asset-management SaaS founded in 2019 on software first written in the early 2000s. CEO Ignacio de la Pe&ntilde;a stays, the team stays, the brand stays. It is Everfield's eighth Iberian acquisition and joins a permanent-ownership portfolio of more than 40 European SaaS businesses in eleven countries.</p>
+      <p class="bx-sm" style="margin-bottom:4px;font-size:8.4px;line-height:1.5">The buy-and-grow investor acquired Retain Technologies, a Madrid maintenance and asset-management SaaS founded in 2019 on software first written in the early 2000s. CEO Ignacio de la Pe&ntilde;a stays, the team stays, the brand stays. It is Everfield's eighth Iberian acquisition and joins a permanent-ownership portfolio of more than 40 European SaaS businesses in eleven countries.</p>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em">Terms not disclosed. Permanent capital, no exit clock.</div>
     </div>
     <div>
-      <div class="img-ph" style="height:118px;background-image:url('images/1553877522-43269d4ea984.jpg')"></div><span class="cap">Six deals, four buyer models: strategic, private equity, permanent capital, founder-led scaleup.</span>
+      <div class="img-ph" style="height:84px;background-image:url('images/1553877522-43269d4ea984.jpg')"></div><span class="cap">Six deals, four buyer models: strategic, private equity, permanent capital, founder-led scaleup.</span>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6a6660;margin-bottom:4px;margin-top:10px">Deal 05 &middot; 22 September 2026</div>
       <div class="mix" style="font-size:16px;line-height:.92;margin-bottom:6px">Mistral<br><strong>buys Pimento.</strong></div>
-      <p class="bx-sm" style="margin-bottom:5px">France's AI champion acquired the Paris adtech startup in a cash-and-shares deal worth 12.7 million euros, according to filings seen by Sifted. It was Mistral's third acquisition of the year, and a reminder that well-funded scaleups are now buyers too.</p>
+      <p class="bx-sm" style="margin-bottom:4px;font-size:8.4px;line-height:1.5">France's AI champion acquired the Paris adtech startup in a cash-and-shares deal worth 12.7 million euros, according to filings seen by Sifted. It was Mistral's third acquisition of the year, and a reminder that well-funded scaleups are now buyers too.</p>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em;margin-bottom:12px">&euro;12.7m, cash and shares.</div>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6a6660;margin-bottom:4px">Deal 06 &middot; 17 September 2026</div>
       <div class="mix" style="font-size:16px;line-height:.92;margin-bottom:6px">Endra<br><strong>buys Planlabs.</strong></div>
-      <p class="bx-sm" style="margin-bottom:5px">Stockholm-based Endra, fresh from a 50 million dollar Series A led by Andreessen Horowitz, acquired the Swiss early-stage startup to add mechanical engineering to its AI tools for MEP design. Planlabs' team of five joins Endra. Small, fast, and typical of how Swiss deep tech now exits.</p>
+      <p class="bx-sm" style="margin-bottom:4px;font-size:8.4px;line-height:1.5">Stockholm-based Endra, fresh from a 50 million dollar Series A led by Andreessen Horowitz, acquired the Swiss early-stage startup to add mechanical engineering to its AI tools for MEP design. Planlabs' team of five joins Endra. Small, fast, and typical of how Swiss deep tech now exits.</p>
       <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:7px;font-weight:600;color:#9a9690;letter-spacing:.12em">Terms not disclosed. Team acquisition.</div>
     </div>
   </div>
@@ -1856,9 +1896,18 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <p class="bx-sm" style="margin-bottom:8px">The term "data room" sounds more intimidating than it is. At its core, it is a organised folder with documents that answer the questions a serious buyer will eventually ask. The founders who do well in a sale process are the ones who build this folder long before anyone asks for it.</p>
   <p class="bx-sm" style="margin-bottom:8px">There are four categories every buyer looks at, in roughly this order of importance: the financials, the customer contracts and revenue documentation, the technical architecture and code ownership, and the legal structure including shares, options, and any outstanding claims.</p>
 </div><div class="pn pn-l">102</div></div></div><div id="p103" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Value</span><span style="margin:0 5px;opacity:.3">·</span>The Data Room</div>
-<div class="body" style="display:flex;flex-direction:column;justify-content:center">
-  <div class="ga-solo">
-    <p class="bx" style="margin-top:10px">The financials are usually the first thing opened. A buyer's first question is: can I trust this revenue? The second is: what is the cost of producing it? If those two questions can be answered quickly and clearly, the rest of the process tends to go faster.</p>
+<div class="body">
+  <span class="lbl">What the buyer reads first</span>
+  <div class="mix" style="font-size:20px;line-height:.92;margin-bottom:8px">Two questions,<br>in a fixed <strong>order.</strong></div>
+  <hr class="dv">
+  <div class="bx-col" style="font-size:8.8px;line-height:1.58;column-gap:16px;margin-top:8px">
+    <p style="margin-bottom:7px">The financials are usually the first thing opened. A buyer's first question is: can I trust this revenue? The second is: what is the cost of producing it? If those two questions can be answered quickly and clearly, the rest of the process tends to go faster.</p>
+    <p style="margin-bottom:7px">"Trust the revenue" has a precise meaning. It means recurring rather than one-off, signed rather than verbal, and spread rather than concentrated: any customer above 20 percent of the total is priced as a risk. It means net revenue retention that can be reconstructed from invoices, not asserted in a deck. And it means monthly statements that reconcile to the bank, three years back, without a footnote explaining a change of method.</p>
+    <p>"Cost of producing it" is where founder dependency shows. A sales pipeline that only the founder has ever closed, a codebase only one engineer understands, a supplier contract that lapses on change of control: each is a cost the buyer will incur after closing, and each will appear, priced, in the offer.</p>
+  </div>
+  <div class="explain" style="margin-top:12px">
+    <span class="explain-lbl">Why the order matters</span>
+    <span class="explain-txt">The CMS European M&amp;A Study 2026 records purchase price adjustments in 48 percent of European private deals and rising use of earn-outs tied to EBIT or EBITDA. Both mechanisms are calibrated in the first week of diligence, on the financial folder. What a buyer cannot verify there, he prices everywhere else.</span>
   </div>
 </div><div class="pn pn-r">103</div></div></div><div id="p104" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Value</span><span style="margin:0 5px;opacity:.3">·</span>What a Data Room Contains</div>
 <div class="ga-photo-top" style="background-image:url('images/pexels-325185.jpg');height:40%"></div>
@@ -1980,18 +2029,25 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   <div class="pq">"Everyone told me to wait for the right moment. There is no right moment. There is only the moment you stop waiting."
     <span class="pq-attr">European first-time founder, 2019 to 2025</span>
   </div>
+  <div class="sh" style="margin-top:10px">The first ninety days, as she kept them</div>
+  <div class="bx-col" style="font-size:8.6px;line-height:1.55;column-gap:16px">
+    <p style="margin-bottom:6px"><strong>Week one.</strong> A company, a bank account, an accountant. She had read that most founders fix the structure later. She had also read what "later" costs.</p>
+    <p style="margin-bottom:6px"><strong>Month one.</strong> Ten conversations with people who had the problem she wanted to solve. Three of them became design partners. One became her first paying customer, at a price she later realised was too low and never regretted.</p>
+    <p style="margin-bottom:6px"><strong>Month two.</strong> A working version, built alone with tools that did not exist when she started her previous job. A contractor for the parts she could not do, on a contract that assigned the work to the company. She did not know yet why that mattered.</p>
+    <p><strong>Month three.</strong> Two more customers, a spreadsheet that showed eleven months of runway becoming fourteen, and the first night she slept properly since the Tuesday she quit.</p>
+  </div>
 </div><div class="pn pn-r">115</div></div></div><div id="p116" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Portraits</span><span style="margin:0 5px;opacity:.3">·</span>The first eighteen months.</div>
 <div class="body">
   <div class="mix" style="font-size:20px;line-height:.94;margin-bottom:10px">The first eighteen months.</div>
   <hr class="dv">
-  <div class="img-ph" style="height:118px;background-image:url('images/1556761175-4b46a572b786.jpg')"></div>
+  <div class="img-ph" style="height:110px;background-image:url('images/1556761175-4b46a572b786.jpg');background-position:center 30%"></div>
   <div style="margin-top:8px"><p class="bx-sm" style="margin-bottom:7px">The first client paid late. The second one didn't pay at all. She kept going because the alternative, going back to a salaried job she'd already left, felt worse than the fear of running out of money.</p><p class="bx-sm" style="margin-bottom:7px">What changed everything wasn't a big break. It was a small one: a single enterprise client who referred three more. Word of mouth built what no marketing budget could have. Eighteen months in, she hired her first employee, not because she could easily afford it, but because she couldn't do the work alone anymore.</p><p class="bx-sm" style="margin-bottom:7px">Five years later, the company she built without a safety net has a team of twelve and a buyer's attention. She still remembers the exact balance in her bank account the week she almost quit.</p></div>
   <div class="explain">
     <span class="explain-lbl">The honest number</span>
     <span class="explain-txt">Most founders don't start with funding. They start with savings, a partner's income, or a part-time job on the side. Eurostat's 2026 Key Figures put the two-year survival rate of EU enterprises born in 2021 at 67 percent, and the survivors employed 52 percent more people than at birth. The romantic story about garages and grit is true more often than the story about seed rounds.</span>
   </div>
 </div><div class="pn pn-l">116</div></div></div><div id="p117" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">People</span><span style="margin:0 5px;opacity:.3">·</span>The First Eighteen Months</div>
-<div class="ga-photo-top" style="background-image:url('images/1472099645785-5658abf4ff4e.jpg');height:40%">
+<div class="ga-photo-top" style="background-image:url('images/1472099645785-5658abf4ff4e.jpg');height:40%;background-position:center 20%">
 </div>
 <div style="position:absolute;left:0;right:0;bottom:24px;top:40%;padding:14px 28px 0;overflow:hidden">
   <div class="bx-col" style="font-size:9px;line-height:1.65;margin-top:8px">The first client paid late. The second one did not pay at all. She kept going because the alternative felt worse than the fear of running out of money. What changed everything was not a big break. It was a small one: a single enterprise client who referred three more.
@@ -2101,22 +2157,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
   </div>
 </div><div class="pn pn-r">127</div></div></div><div id="p128" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"></div>
 <div class="img-ph" style="position:absolute;inset:0;background-image:url('images/1498050108023-c5249f4df085.jpg');background-size:cover;background-position:center"></div>
-<div style="position:absolute;left:28px;bottom:40px;z-index:2">
+<div class="spread-fade"></div>
+<div style="position:absolute;left:28px;right:28px;bottom:70px;z-index:2">
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:32px;font-weight:800;color:#fff;line-height:.88;letter-spacing:-.02em;margin-bottom:8px">The good life,<br>earned.</div>
   <div style="font-family:Plus Jakarta Sans,sans-serif;font-size:9px;font-weight:300;font-style:italic;color:rgba(255,255,255,.65)">Not a reward for finishing. A condition for thinking clearly.</div>
 </div><div class="pn pn-l">128</div></div></div><div id="p129" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>Essay</div>
 <div class="body">
-  <span class="oped-flag">Aegryn Point of View</span>
-  <div class="mix" style="font-size:26px;line-height:.88;margin-bottom:10px">On building<br>for the <strong>long view.</strong></div>
-  <div class="art-byline">Aegryn Founding Team</div>
-  <hr class="dv" style="margin-top:10px">
-  <div class="ga-duo" style="margin-top:10px">
-    <p class="bx dc">There is a particular kind of ambition that the startup narrative does not celebrate, because it does not look good in a pitch deck. It is the ambition of building something that outlasts you, not just something that grows fast or exits well, but something that is genuinely better for having existed.</p>
-    <div>
-      <div class="img-ph" style="height:130px;background-image:url('images/1468779036391-52341f60b55d.jpg')"></div><span class="cap">Lake Geneva. The long view, literally.</span>
-      <p class="bx-sm" style="margin-top:8px;color:#9a9690;font-style:italic">The founders who build for the long view often look, in the short term, like they are moving too slowly. They are not.</p>
-    </div>
-  </div>
+  <span class="oped-flag">Essay</span>
+  <div class="mix" style="font-size:24px;line-height:.9;margin-bottom:6px">On building<br>for the <strong>long view.</strong></div>
+  <div class="art-byline" style="margin-bottom:8px">Aegryn Founding Team</div>
+  <div class="bx-col" style="font-size:8.8px;line-height:1.58;column-gap:16px"><p class="dc" style="margin-bottom:7px">There is a particular kind of ambition that the startup narrative does not celebrate, because it does not look good in a pitch deck. It is the ambition of building something that outlasts you, not just something that grows fast or exits well, but something that is genuinely better for having existed.</p>
+  <p style="margin-bottom:7px">Europe is unusually good at it, and unusually quiet about it. Family-owned companies make up between 65 and 80 percent of all European businesses and employ 40 to 50 percent of the private workforce, according to European Family Businesses. Two thirds of Swiss SMEs describe themselves as family firms. Most of the companies that will still be trading in 2050 are already trading today, run by people who have never given an interview.</p>
+  <p style="margin-bottom:7px">The founders who build for the long view often look, in the short term, like they are moving too slowly. They hire a finance director before they need one. They write down how the company works while it is small enough to describe. They refuse a customer who would be 40 percent of revenue. None of this compounds visibly in year two. All of it is visible in year ten, when a buyer, a bank or a successor opens the file and finds a company rather than a founder.</p>
+  <p>We called this issue Built to Last because the phrase is usually reserved for products. We think it belongs to organisations. The data in these pages, on survival, on succession, on what acquirers pay for and what they discount, points in one direction: the value of a company is, to a surprising degree, the legibility of what it has built. That is a choice, made early, and made again every year.</p></div>
+  <div class="ga-wrap-img" style="float:none;width:100%;margin:10px 0 0"><div class="img-ph" style="height:84px;background-image:url('images/1464822759023-fed622ff2c3b.jpg');background-position:center 45%"></div><span class="cap">The long view, literally. Companies that last are built like valleys are carved: slowly, and by forces that do not need an audience.</span></div>
 </div><div class="pn pn-r">129</div></div></div><div id="p130" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>On Building for the Long View</div>
 <div class="body" style="display:flex;flex-direction:column;justify-content:center">
   <div class="ga-solo">
@@ -2128,14 +2182,18 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 </div><div class="pn pn-l">130</div></div></div><div id="p131" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>The Founder Stack</div>
 <div class="body">
   <span class="lbl">The Workspace of the Deliberate Founder</span>
-  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:10px">What they keep<br>on their <strong>desk.</strong></div>
+  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:8px">What they keep<br>on their <strong>desk.</strong></div>
   <hr class="dv">
-  <div style="overflow:hidden;margin-top:10px">
-    <div class="ga-wrap-img"><div class="img-ph" style="height:130px;background-image:url('images/1488229297570-58520851e868.jpg')"></div><span class="cap">Not a library. A working collection.</span></div>
-    <p class="bx" style="margin-bottom:9px">The founders who build deliberately tend to have the same things on their desks. Not the flashiest hardware or the most subscriptions. One good notebook. A few well-chosen books with notes in the margins. A system for processing information that they have refined over years rather than adopted from a productivity blog last month.</p>
-    <p class="bx" style="margin-bottom:9px">The tools are secondary. What they are really protecting is the ability to think without interruption for four hours in the morning. That is the resource most founders underestimate, and the one most difficult to buy back once it has been given away.</p>
-    <p class="bx">The workspace changes. The discipline behind it does not.</p>
+  <div class="bx-col" style="font-size:8.8px;line-height:1.58;column-gap:16px;margin-top:8px">
+    <p style="margin-bottom:7px">The founders who build deliberately tend to have the same things on their desks. Not the flashiest hardware or the most subscriptions. One good notebook. A few well-chosen books with notes in the margins. A system for processing information that they have refined over years rather than adopted from a productivity blog last month.</p>
+    <p style="margin-bottom:7px">The tools are secondary. What they are really protecting is the ability to think without interruption for four hours in the morning. That is the resource most founders underestimate, and the one most difficult to buy back once it has been given away. The workspace changes. The discipline behind it does not.</p>
+    <p style="margin-bottom:5px"><strong>One notebook, paper.</strong> Decisions and the reasons for them, dated. Read again before every board meeting.</p>
+    <p style="margin-bottom:5px"><strong>A protected morning.</strong> No meetings before eleven. The single most defended rule in every calendar we have seen.</p>
+    <p style="margin-bottom:5px"><strong>A one-page company description.</strong> What it does, for whom, why it wins. Rewritten once a year. Handed to every new hire and, eventually, every buyer.</p>
+    <p style="margin-bottom:5px"><strong>The number.</strong> Cash in the bank, months of runway, or net retention. One figure, checked weekly, never monthly.</p>
+    <p><strong>Something unrelated to work.</strong> A rowing schedule, a woodworking bench, a language. Not a hobby. A place where the company cannot follow.</p>
   </div>
+  <div class="ga-wrap-img" style="float:none;width:100%;margin:10px 0 0"><div class="img-ph" style="height:90px;background-image:url('images/1488229297570-58520851e868.jpg')"></div><span class="cap">Not a library. A working collection.</span></div>
 </div><div class="pn pn-r">131</div></div></div><div id="p132" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>Quickfire</div>
 <div class="body">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
@@ -2160,7 +2218,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 </div><div class="pn pn-l">132</div></div></div><div id="p133" class="pg"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh"><span style="opacity:.5">Life</span><span style="margin:0 5px;opacity:.3">·</span>By the Numbers</div>
 <div class="body">
   <span class="lbl">This Issue, Sourced</span>
-  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:6px">Six numbers<br>from these <strong>138 pages.</strong></div>
+  <div class="mix" style="font-size:22px;line-height:.90;margin-bottom:6px">Nine numbers<br>from these <strong>138 pages.</strong></div>
   <p class="bx-sm" style="color:#9a9690;font-size:8px;margin-bottom:10px">Every figure below is cited where it first appears in this issue.</p>
   <div class="g3" style="gap:6px;margin-bottom:6px">
     <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">&euro;44.1B</div><div class="stat-lbl" style="font-size:6.3px">European tech funding, H1 2026</div><div class="stat-src">tech.eu</div></div>
@@ -2172,7 +2230,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
     <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">x52</div><div class="stat-lbl" style="font-size:6.3px">FIT follow-on leverage since 2014</div><div class="stat-src">fondation-fit.ch</div></div>
     <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">67%</div><div class="stat-lbl" style="font-size:6.3px">EU enterprises surviving two years</div><div class="stat-src">Eurostat, 2026</div></div>
   </div>
-  <div class="cta" style="margin-top:12px"><div class="cta-body">Sourcing standards for this issue are detailed in Sources, p. 12.</div></div>
+  <div class="g3" style="gap:6px;margin-top:6px">
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">20%</div><div class="stat-lbl" style="font-size:6.3px">EU enterprises using AI, 2025</div><div class="stat-src">Eurostat</div></div>
+    <div class="stat-card stat-card-accent"><div class="stat-n-sm" style="font-size:20px">14M</div><div class="stat-lbl" style="font-size:6.3px">Family businesses in Europe</div><div class="stat-src">European Family Businesses</div></div>
+    <div class="stat-card"><div class="stat-n-sm" style="font-size:20px">12,000</div><div class="stat-lbl" style="font-size:6.3px">Swiss SME successions failing each year</div><div class="stat-src">UBS / HSG, 2026</div></div>
+  </div>
+  <div class="cta" style="margin-top:10px"><div class="cta-body">Sourcing standards for this issue are detailed in Sources, p. 12.</div></div>
 </div><div class="pn pn-r">133</div></div></div><div id="p134" class="pg pg-navy"><div class="pg-frame" style="position:relative;width:420px;height:595px;overflow:hidden;background:#0A1628;font-family:'Plus Jakarta Sans',sans-serif;box-sizing:border-box;"><div class="rh rh-dk"><span style="opacity:.5">Closing</span><span style="margin:0 5px;opacity:.3">·</span>Issue 02</div>
 <div class="ga-photo-l" style="background-image:url('images/1516321497487-e288fb19713f.jpg');opacity:.6"></div>
 <div class="ga-text-r" style="justify-content:center;display:flex;flex-direction:column">
