@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FlipbookViewer } from './FlipbookViewer'
 import { WebViewer }      from './WebViewer'
 
@@ -12,11 +12,24 @@ interface Props {
 
 /**
  * IssueViewerTabs — onglets Flipbook / Web Edition
- * Flipbook : version imprimée condensée 60 pages (StPageFlip)
- * Web Edition : version web longue complète (_web.html)
+ * Flipbook : version magazine 138 pages a feuilleter (StPageFlip)
+ * Web Edition : le meme contenu, article par article (_web.html),
+ * pilote par la barre laterale MagazineNav via l'evenement aegryn:magazine-navigate
  */
 export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
   const [tab, setTab] = useState<'flipbook' | 'web'>('flipbook')
+  const [anchor, setAnchor] = useState<string | null>(null)
+
+  /* La barre laterale (MagazineNav) demande une section de la web edition */
+  useEffect(() => {
+    const onNav = (e: Event) => {
+      const a = (e as CustomEvent<{ anchor: string }>).detail?.anchor
+      if (!a) return
+      setTab('web'); setAnchor(a)
+    }
+    window.addEventListener('aegryn:magazine-navigate', onNav)
+    return () => window.removeEventListener('aegryn:magazine-navigate', onNav)
+  }, [])
 
   return (
     <div className="bg-[#EDEAE4]">
@@ -46,14 +59,14 @@ export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
           ≡ Web Edition
         </button>
         <span className="ml-auto font-mono text-[7px] tracking-[0.14em] uppercase text-black/20 py-3 hidden md:block">
-          {tab === 'flipbook' ? '60 p. · Print format' : 'Full edition · 80+ sections'}
+          {tab === 'flipbook' ? '138 p. · Print format' : 'Full edition · 81 articles'}
         </span>
       </div>
 
       {/* Viewer */}
       {tab === 'flipbook'
         ? <FlipbookViewer htmlSrc={flipbookSrc} title="Aegryn Magazine 01 | Flipbook" />
-        : <WebViewer      htmlSrc={webSrc}      title="Aegryn Magazine 01 | Web Edition" />
+        : <WebViewer      htmlSrc={webSrc}      anchor={anchor} title="Aegryn Magazine 01 | Web Edition" />
       }
     </div>
   )

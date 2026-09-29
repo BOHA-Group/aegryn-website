@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import { AegrynLogo } from '@/components/brand/AegrynLogo'
 import type { IssueSection, MagazineArticle } from '@/lib/magazine/types'
 
+interface NavArticle extends Pick<MagazineArticle, 'slug' | 'title' | 'anchor'> { page?: number }
 interface SectionWithArticles extends IssueSection {
-  articles?: MagazineArticle[]
+  articles?: NavArticle[]
 }
 
 interface Props {
@@ -52,8 +53,14 @@ export function MagazineNav({
     return () => observers.forEach(o => o.disconnect())
   }, [sections])
 
-  function scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  /* Navigation : si l'ancre existe dans la page on scrolle, sinon on delegue a la
+     web edition (iframe) via un evenement ecoute par IssueViewerTabs. */
+  function scrollTo(id: string, anchor?: string) {
+    const el = document.getElementById(id)
+    if (el && !anchor) { el.scrollIntoView({ behavior: 'smooth' }); return }
+    setActive(id)
+    window.dispatchEvent(new CustomEvent('aegryn:magazine-navigate', { detail: { anchor: anchor ?? id } }))
+    document.getElementById('s-flipbook')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const issueNum = `N°${String(issueNumber).padStart(2, '0')}`
@@ -68,7 +75,7 @@ export function MagazineNav({
           Magazine
         </p>
         <p className="font-mono text-[9px] tracking-[0.12em] text-magazine-black/40 mt-3">
-          {issueNum} — {issueSubtitle ?? issueTitle}
+          {issueNum} · {issueSubtitle ?? issueTitle}
         </p>
       </div>
 
@@ -91,7 +98,7 @@ export function MagazineNav({
             <div key={s.id}>
               <button
                 onClick={() => {
-                  scrollTo(s.id)
+                  scrollTo(s.id, s.articles?.[0]?.anchor)
                   if (hasArticles) setExpanded(isExpanded ? null : s.id)
                 }}
                 className={`w-full flex items-center justify-between px-3 py-2.5 text-left transition-colors rounded-md group ${
@@ -123,10 +130,10 @@ export function MagazineNav({
                   {s.articles!.map(a => (
                     <button
                       key={a.slug}
-                      onClick={() => scrollTo(s.id)}
+                      onClick={() => scrollTo(s.id, a.anchor)}
                       className="w-full text-left py-1.5 text-[11px] text-magazine-black/45 hover:text-magazine-black transition-colors leading-snug"
                     >
-                      {a.title}
+                      <span className="flex justify-between gap-2"><span>{a.title}</span>{a.page != null && <span className="font-mono text-[9px] text-magazine-black/30 shrink-0">p.{a.page}</span>}</span>
                     </button>
                   ))}
                 </div>

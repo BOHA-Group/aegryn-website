@@ -25,12 +25,14 @@ export interface IssueSection {
   id: string
   label: string
   pillar: Pillar
-  /** Référence page(s) dans le flipbook/PDF 60 pages, ex: "p.05–08" */
+  /** Référence page(s) dans le flipbook 138 pages, ex: "p.05–08" */
   pageRange?: string
 }
 
 export interface MagazineArticle {
   slug: string
+  /** Ancre dans la web edition (_web.html), utilisee par la navigation */
+  anchor?: string
   issue: number
   pillar: Pillar
   title: string

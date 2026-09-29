@@ -1,21 +1,9 @@
 'use client'
 
 import type { ReactNode }  from 'react'
-import { useParams }       from 'next/navigation'
-import { MagazineNav }     from '@/components/magazine/MagazineNav'
 import { useReadingProgress } from '@/components/magazine/hooks/useReadingProgress'
-import { ISSUE_01 }        from '@/content/magazine/issue-01/meta'
-import type { IssueSection } from '@/lib/magazine/types'
 
-function getSections(slug: string): IssueSection[] {
-  switch (slug) {
-    case 'issue-01': return ISSUE_01.sections
-    default: return []
-  }
-}
-
-function IssueLayoutInner({ children, issueSlug }: { children: ReactNode; issueSlug: string }) {
-  const sections = getSections(issueSlug)
+function IssueLayoutInner({ children }: { children: ReactNode }) {
   const progress = useReadingProgress()
 
   return (
@@ -31,17 +19,13 @@ function IssueLayoutInner({ children, issueSlug }: { children: ReactNode; issueS
         aria-label="Reading progress"
       />
 
-      {/* Scrollspy nav — only shown on issue pages (not article sub-pages) */}
-      {sections.length > 0 && <MagazineNav sections={sections} />}
-
+      {/* La barre laterale est rendue par la page issue elle-meme (MagazineNav
+          alimente par le sommaire du flipbook). Pas de doublon ici. */}
       {children}
     </>
   )
 }
 
 export default function IssueLayout({ children }: { children: ReactNode }) {
-  const params = useParams()
-  const issueSlug = typeof params.issue === 'string' ? params.issue : ''
-
-  return <IssueLayoutInner issueSlug={issueSlug}>{children}</IssueLayoutInner>
+  return <IssueLayoutInner>{children}</IssueLayoutInner>
 }
