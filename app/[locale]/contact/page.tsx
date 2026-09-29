@@ -75,6 +75,17 @@ export default async function ContactPage({ params }: Props) {
             </div>
             <div>
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
+                {t('info.phoneLabel')}
+              </p>
+              <a
+                href="tel:+41245391881"
+                className="text-sm text-ag-gray hover:text-ag-black transition-colors"
+              >
+                +41 24 539 18 81
+              </a>
+            </div>
+            <div>
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
                 Email
               </p>
               <a

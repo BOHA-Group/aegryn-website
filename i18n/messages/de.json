@@ -1508,7 +1508,8 @@
     },
     "info": {
       "baseLabel": "Hauptsitz",
-      "baseValue": "Schweiz"
+      "baseValue": "Schweiz",
+      "phoneLabel": "Telefon"
     }
   },
   "advisoryPage": {

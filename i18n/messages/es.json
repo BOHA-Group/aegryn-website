@@ -1508,7 +1508,8 @@
     },
     "info": {
       "baseLabel": "Sede",
-      "baseValue": "Suiza"
+      "baseValue": "Suiza",
+      "phoneLabel": "Teléfono"
     }
   },
   "advisoryPage": {

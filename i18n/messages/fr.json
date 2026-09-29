@@ -1468,7 +1468,8 @@
     },
     "info": {
       "baseLabel": "Siège",
-      "baseValue": "Suisse"
+      "baseValue": "Suisse",
+      "phoneLabel": "Téléphone"
     }
   },
   "advisoryPage": {

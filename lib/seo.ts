@@ -268,6 +268,7 @@ export const aegrynOrganizationSchema = {
   contactPoint: {
     '@type':            'ContactPoint',
     contactType:        'customer support',
+    telephone:          '+41 24 539 18 81',
     email:              'contact@boha-group.com',
     availableLanguage:  ['French', 'English', 'German', 'Italian', 'Spanish', 'Dutch'],
   },

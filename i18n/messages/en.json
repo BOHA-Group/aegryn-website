@@ -1508,7 +1508,8 @@
     },
     "info": {
       "baseLabel": "Headquarters",
-      "baseValue": "Switzerland"
+      "baseValue": "Switzerland",
+      "phoneLabel": "Phone"
     }
   },
   "advisoryPage": {

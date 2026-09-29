@@ -424,13 +424,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 .stat-src{font-family:'Plus Jakarta Sans',sans-serif;font-size:7px;color:#c0bbb3;margin-top:2px;}
 
 /* ── BODY TEXT ────────────────────────────── */
-.bx{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:400;line-height:1.65;color:#2e2c28;text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
-.bx-sm{font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;line-height:1.6;color:#2e2c28;text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
-.bx-lg{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;line-height:1.65;color:#2e2c28;text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
+.bx{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:400;line-height:1.65;color:#2e2c28;text-align:justify;}
+.bx-sm{font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;line-height:1.6;color:#2e2c28;text-align:justify;}
+.bx-lg{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;line-height:1.65;color:#2e2c28;text-align:justify;}
 
 /* Editorial columns */
-.bx-col{column-count:2;column-gap:16px;column-rule:.5px solid #e0dcd5;font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:400;line-height:1.65;color:#2e2c28;text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
-.bx-col3{column-count:3;column-gap:12px;column-rule:.5px solid #e0dcd5;font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;line-height:1.6;color:#2e2c28;text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
+.bx-col{column-count:2;column-gap:16px;column-rule:.5px solid #e0dcd5;font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:400;line-height:1.65;color:#2e2c28;text-align:justify;}
+.bx-col3{column-count:3;column-gap:12px;column-rule:.5px solid #e0dcd5;font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;line-height:1.6;color:#2e2c28;text-align:justify;}
 
 /* ── DROP CAP ─────────────────────────────── */
 .dc::first-letter{font-family:'Plus Jakarta Sans',sans-serif;font-size:4.2em;font-weight:700;float:left;line-height:.78;margin-right:.06em;margin-top:.04em;color:var(--ink);letter-spacing:-.03em;}
@@ -769,11 +769,22 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 }
 .profile-headline strong{font-weight:700;letter-spacing:-.03em}
 
-/* ── Colonnes etroites : fer a gauche pour eviter les rivieres ── */
-.bx-col3,.bx-col3 p,.ga-text-l .bx,.ga-text-l .bx-sm,.ga-text-r .bx,.ga-text-r .bx-sm,.ga-narrow-r .bx,.ga-narrow-r .bx-sm,.ga-duo .bx-sm,.ga-duo .bx{text-align:left}
-.bx-col,.bx-col p{text-align:justify;text-align-last:left}
-.bx-col .ia,.bx-col .iq{text-align:left}
-div:has(> .ga-wrap-img) .bx,div:has(> .ga-wrap-img) .bx-sm,.ga-text-bottom .bx,.ga-text-bottom .bx-sm{text-align:left}
+/* ── Justification systematique, cesure limitee ──
+   Tout le corps de texte est justifie (colonnes etroites comprises).
+   La cesure automatique reste activee pour eviter les rivieres, mais avec
+   des seuils stricts : mots de 8 lettres minimum, au moins 4 lettres de
+   chaque cote du trait d'union, jamais deux lignes cesurees consecutives.
+   Les coupures suivent le dictionnaire de la langue declaree (lang="en"). */
+.bx,.bx-sm,.bx-lg,.bx-col,.bx-col p,.bx-col3,.bx-col3 p,.ia,.explain-txt,.cta-body,.nl-sub,.deal-desc,.prof-b,.opener-deck,.ga-quote-body{
+  text-align:justify;text-align-last:left;
+  hyphens:auto;-webkit-hyphens:auto;
+  hyphenate-limit-chars:8 4 4;hyphenate-limit-lines:1;
+  -webkit-hyphenate-limit-before:4;-webkit-hyphenate-limit-after:4;-webkit-hyphenate-limit-lines:1;
+}
+.iq,.sh,.lbl,.cap,.stat-lbl,.pq,.pq-inline,.mix,.rh,.tbl td,.tbl th,.cl-item,.nl-title{hyphens:manual;-webkit-hyphens:manual}
+.sh,.lbl,.cap,.stat-lbl,.stat-src,.rh,.art-byline,.oped-flag,.explain-lbl,.cta-title,.cta-url,.nl-title{text-align:left}
+.pq,.pq-attr{text-align:center}
+.pq-inline{text-align:left}
 </style>
 <script src="/libs/page-flip.browser.js"></script>
 </head>

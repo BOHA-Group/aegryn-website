@@ -1508,7 +1508,8 @@
     },
     "info": {
       "baseLabel": "Hoofdkantoor",
-      "baseValue": "Zwitserland"
+      "baseValue": "Zwitserland",
+      "phoneLabel": "Telefoon"
     }
   },
   "advisoryPage": {
