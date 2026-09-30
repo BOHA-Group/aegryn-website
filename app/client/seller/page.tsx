@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, Clock, CheckCircle2, Tag, AlertTriangle, Zap } from 'lucide-react'
+import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, CheckCircle2, AlertTriangle, Zap } from 'lucide-react'
 import { calcCommission, fmtEur } from '@/lib/calcCommission'
 
 export const metadata: Metadata = {
@@ -31,6 +31,9 @@ export default async function SellerDashboardPage() {
   const locale = cookieStore.get('ag-locale-pref')?.value ?? 'fr'
   const t = await getTranslations({ locale, namespace: 'client.seller' })
   const tc = await getTranslations({ locale, namespace: 'client.common' })
+  const tg  = await getTranslations({ locale, namespace: 'grade.index' })
+  const tgs = await getTranslations({ locale, namespace: 'gradeSubmit' })
+  const certPacks = tgs.raw('packs') as { key: string; name: string; price: string; duration: string; target: string; includes: string[] }[]
 
   const assetStatusLabel = (s: string) => t(`assetStatus.${s}` as Parameters<typeof t>[0]) || s
   const txStatusLabel    = (s: string) => t(`txStatus.${s}` as Parameters<typeof t>[0]) || s
@@ -198,72 +201,41 @@ export default async function SellerDashboardPage() {
       {(!assets || assets.length === 0) && (
         <div className="mb-10 border border-ag-border bg-white">
           <div className="px-6 py-4 border-b border-ag-border">
-            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink font-bold">Comment ça fonctionne</p>
-            <h2 className="font-sans font-bold text-gray-900 text-[16px] mt-1">Choisissez votre parcours de certification</h2>
+            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink font-bold">{tg('pricingLabel')}</p>
+            <h2 className="font-sans font-bold text-gray-900 text-[16px] mt-1 whitespace-pre-line">{tg('pricingTitle')}</h2>
+            <p className="font-sans text-[12px] text-gray-500 leading-relaxed mt-2 max-w-2xl">{tg('pricingDesc')}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
-            {/* Option A — Certification seule */}
-            <div className="p-6 flex flex-col gap-3">
-              <div className="flex items-center gap-2">
-                <Tag size={14} className="text-ag-grade-aaa shrink-0" />
-                <span className="font-sans font-bold text-[13px] text-gray-900">Certification seule (Review)</span>
-                <span className="rounded-lg ml-auto font-mono text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5">À partir de 2 000 CHF HT</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+            {certPacks.map(pack => (
+              <div key={pack.key} className={`p-6 flex flex-col gap-3 ${pack.key === 'standard' ? 'bg-ag-navy/[0.03]' : ''}`}>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-sans font-bold text-[13px] text-gray-900">{pack.name}</span>
+                  {pack.key === 'standard' && (
+                    <span className="rounded-lg font-mono text-[9px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 uppercase tracking-wider">{tg('pricingRecommended')}</span>
+                  )}
+                  <span className="rounded-lg ml-auto font-mono text-[10px] font-bold bg-ag-navy/10 text-ag-navy px-2 py-0.5">{pack.price}</span>
+                </div>
+                <p className="font-sans text-[11px] text-gray-400">{pack.target} · {pack.duration}</p>
+                <ul className="flex flex-col gap-1.5">
+                  {pack.includes.map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle2 size={11} className="mt-0.5 shrink-0 text-ag-apex" />
+                      <span className="font-sans text-[11px] text-gray-500">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`/${locale}/grade/submit?pack=${pack.key}`}
+                  className={`rounded-lg mt-auto inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest px-4 py-2 transition-colors self-start ${
+                    pack.key === 'standard'
+                      ? 'bg-ag-navy text-white hover:bg-ag-black'
+                      : 'border border-ag-navy text-ag-navy hover:bg-ag-navy hover:text-white'
+                  }`}>
+                  {tg('pricingCta')} <ArrowUpRight size={10} />
+                </Link>
               </div>
-              <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-                Obtenez un <strong>Grade Aegryn officiel</strong> sans mise en vente. Idéal pour valoriser votre actif, rassurer des partenaires ou préparer une future cession.
-              </p>
-              <ul className="flex flex-col gap-1.5">
-                {[
-                  ['Aegryn Review — Analyse interne : 2 000 CHF HT (15 j. ouvrés)', true],
-                  ['Aegryn Review+ — Co-signé partenaire : 5 000 CHF HT (20 j. ouvrés)', true],
-                  ['Paiement à la commande (Stripe — disponible prochainement)', false],
-                  ['Déductible si Certification TRANSACT engagée dans les 6 mois', true],
-                ].map(([txt, ok]) => (
-                  <li key={String(txt)} className="flex items-start gap-2">
-                    <CheckCircle2 size={11} className={`mt-0.5 shrink-0 ${ok ? 'text-ag-apex-ink' : 'text-gray-300'}`} />
-                    <span className="font-sans text-[11px] text-gray-500">{String(txt)}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/grade/submit?suggested=review_internal"
-                className="rounded-lg mt-auto inline-flex items-center gap-2 border border-ag-navy text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-navy hover:text-white transition-colors self-start">
-                Demander une Review <ArrowUpRight size={10} />
-              </Link>
-            </div>
-            {/* Option B — Certification + Catalogue */}
-            <div className="p-6 flex flex-col gap-3 bg-ag-navy/[0.03]">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={14} className="text-ag-apex shrink-0" />
-                <span className="font-sans font-bold text-[13px] text-gray-900">Certification TRANSACT (catalogue + cession)</span>
-                <span className="rounded-lg ml-auto font-mono text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5">Commission à la vente</span>
-              </div>
-              <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
-                Processus complet : audit CIFSO (5 dimensions), grade officiel, mise au catalogue privé Aegryn, ouverture aux acquéreurs membres qualifiés.
-              </p>
-              <ul className="flex flex-col gap-1.5">
-                {[
-                  'Frais de publication : CHF 2 000 HT (acompte — déduit de la commission en cas de vente)',
-                  'Paiement par virement sur facture (émise par Aegryn après validation du dossier)',
-                  'Préparation catalogue : J+15 après admission',
-                  'Visible acquéreurs : J+45 minimum (session bi-annuelle Aegryn)',
-                  'Commission Aegryn uniquement si transaction closée (grille dégressive 6–10%)',
-                ].map(txt => (
-                  <li key={txt} className="flex items-start gap-2">
-                    <CheckCircle2 size={11} className="mt-0.5 shrink-0 text-ag-apex" />
-                    <span className="font-sans text-[11px] text-gray-500">{txt}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex items-center gap-1.5 mt-1">
-                <Clock size={11} className="text-amber-500 shrink-0" />
-                <span className="font-sans text-[11px] text-amber-700">Délai minimum 45 jours entre admission et première exposition acquéreurs.</span>
-              </div>
-              <Link href="/grade/submit?suggested=full_certification"
-                className="rounded-lg mt-auto inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-black transition-colors self-start">
-                Soumettre mon actif <ArrowUpRight size={10} />
-              </Link>
-            </div>
+            ))}
           </div>
+          <p className="px-6 py-3 border-t border-ag-border font-sans text-[11px] text-gray-400">{tg('pricingNote')}</p>
         </div>
       )}
 
