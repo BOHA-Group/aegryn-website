@@ -1,7 +1,8 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import { useState }        from 'react'
+import { useTranslations }  from 'next-intl'
+import { useState }         from 'react'
+import { useSearchParams }  from 'next/navigation'
 
 type Props = { locale: string }
 
@@ -50,7 +51,12 @@ export default function ContactForm({ locale }: Props) {
   const [name,    setName]    = useState('')
   const [email,   setEmail]   = useState('')
   const [company, setCompany] = useState('')
-  const [subject, setSubject] = useState('')
+  /* Pré-sélection du sujet via ?subject= (liens depuis les pages métiers) */
+  const params = useSearchParams()
+  const [subject, setSubject] = useState(() => {
+    const q = params.get('subject')
+    return q && (subjects as readonly string[]).includes(q) ? q : ''
+  })
   const [message, setMessage] = useState('')
 
   const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === phoneCountry) ?? COUNTRY_OPTIONS[0]

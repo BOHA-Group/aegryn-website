@@ -184,12 +184,12 @@ export const ARTICLES: Article[] = [
     featured: true,
     aiAssisted: true,
     title: {
-      fr: 'État du marché M&A tech Europe, Q3 2026',
-      en: 'European Tech M&A Market, Q3 2026 Report',
-      de: 'Europäischer Tech-M&A-Markt, Q3 2026 Bericht',
-      es: 'Mercado de M&A tech europeo, Informe Q3 2026',
-      it: 'Mercato M&A tech europeo, Report Q3 2026',
-      nl: 'Europese Tech M&A-markt, Q3 2026 Rapport',
+      fr: 'État du marché M&A tech Europe, mi-2026',
+      en: 'European Tech M&A Market, Mid-2026 Report',
+      de: 'Europäischer Tech-M&A-Markt, Bericht Mitte 2026',
+      es: 'Mercado de M&A tech europeo, Informe de mitad de 2026',
+      it: 'Mercato M&A tech europeo, Report di metà 2026',
+      nl: 'Europese Tech M&A-markt, Rapport medio 2026',
     },
     excerpt: {
       fr: 'Analyse des volumes de transactions, multiples de valorisation et tendances sectorielles sur le marché européen des actifs tech. SaaS B2B en tête avec un multiple médian de 3,1x ARR.',
@@ -265,7 +265,7 @@ export const ARTICLES: Article[] = [
         es: 'Al mercado no le faltan compradores. Le faltan activos documentados, certificados y presentables con confianza.',
         it: 'Al mercato non mancano acquirenti. Mancano asset documentati, certificati e presentabili con fiducia.',
         nl: 'De markt heeft geen gebrek aan kopers. Het ontbreekt aan gedocumenteerde, gecertificeerde assets die met vertrouwen gepresenteerd kunnen worden.',
-      }, author: 'Aegryn Research, Q3 2026' },
+      }, author: 'Aegryn Research, juin 2026' },
     ],
   },
   {
