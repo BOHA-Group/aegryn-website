@@ -16,8 +16,8 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   strategy: {
     key:      'strategy',
     path:     '/advisory/strategy',
-    image:    '/images/advisory/strategy.jpg',
-    imageAlt: "Comité de direction en séance d'arbitrage stratégique",
+    image:    '/images/advisory/strategy-towers.jpg',
+    imageAlt: "Tours de bureaux vues en contre-plongée, le cap et la hauteur de vue",
     meta: {
       title:       'Conseil en stratégie pour PME et ETI | Aegryn',
       description: "Cap, modèle économique, croissance externe, nouveaux marchés : Aegryn aide les dirigeants d'organisations de 10 à 300 M€ à arbitrer, chiffrer et tenir leurs décisions stratégiques. Suisse et Europe.",
@@ -55,12 +55,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: "Notre modèle s'érode.", decision: 'Pivoter, défendre ou changer de segment.', deliverable: 'Revue de position : économie unitaire par segment, concurrence, trois options chiffrées.', format: 'Mission courte', cycles: ['croissance', 'restructuration'] },
-        { quote: "L'IA change notre métier.", decision: "Où l'intégrer, ce qu'il ne faut pas automatiser.", deliverable: 'Carte des usages IA par étape de la chaîne de valeur, classés par valeur créée et risque porté.', format: 'Quelques semaines', cycles: ['croissance'] },
-        { quote: 'Un concurrent est à vendre, ou un partenaire pourrait nous racheter.', decision: 'Croissance organique, alliance ou acquisition.', deliverable: 'Thèse de croissance externe, critères de cible, cadre go / no-go.', format: 'Quelques semaines', cycles: ['acquisition'] },
-        { quote: 'Nous ouvrons un nouveau marché (DACH, Benelux, Europe du Sud).', decision: 'Filiale, distributeur, partenaire, ou attendre.', deliverable: "Plan d'entrée par pays, avec exigences réglementaires locales et besoins en talents.", format: 'Quelques semaines', cycles: ['croissance'] },
-        { quote: 'Mon conseil, ma banque ou mon actionnaire demande un plan à trois ans.', decision: 'Quelles hypothèses assumer, lesquelles tester.', deliverable: 'Plan défendable, sensibilités explicites, mémo de dix pages pour le comité.', format: 'Un à deux mois', cycles: ['lancement', 'croissance'] },
-        { quote: 'La stratégie est dans ma tête.', decision: 'Ce qui doit exister sans vous.', deliverable: 'Stratégie documentée en cinq priorités, avec responsables et jalons.', format: 'Quelques semaines', cycles: ['croissance', 'transmission'] },
+        { quote: "Notre modèle s'érode.", decision: 'Pivoter, défendre ou changer de segment.', deliverable: 'Revue de position : économie unitaire par segment, concurrence, trois options chiffrées.', format: 'Mission courte', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
+        { quote: "L'IA change notre métier.", decision: "Où l'intégrer, ce qu'il ne faut pas automatiser.", deliverable: 'Carte des usages IA par étape de la chaîne de valeur, classés par valeur créée et risque porté.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/developer-desk.jpg' },
+        { quote: 'Un concurrent est à vendre, ou un partenaire pourrait nous racheter.', decision: 'Croissance organique, alliance ou acquisition.', deliverable: 'Thèse de croissance externe, critères de cible, cadre go / no-go.', format: 'Quelques semaines', cycles: ['acquisition'], image: '/images/advisory/situations/handshake.jpg' },
+        { quote: 'Nous ouvrons un nouveau marché (DACH, Benelux, Europe du Sud).', decision: 'Filiale, distributeur, partenaire, ou attendre.', deliverable: "Plan d'entrée par pays, avec exigences réglementaires locales et besoins en talents.", format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/meeting-room.jpg' },
+        { quote: 'Mon conseil, ma banque ou mon actionnaire demande un plan à trois ans.', decision: 'Quelles hypothèses assumer, lesquelles tester.', deliverable: 'Plan défendable, sensibilités explicites, mémo de dix pages pour le comité.', format: 'Un à deux mois', cycles: ['lancement', 'croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
+        { quote: 'La stratégie est dans ma tête.', decision: 'Ce qui doit exister sans vous.', deliverable: 'Stratégie documentée en cinq priorités, avec responsables et jalons.', format: 'Quelques semaines', cycles: ['croissance', 'transmission'], image: '/images/advisory/situations/plan-writing.jpg' },
       ],
     },
     services: {
@@ -181,12 +181,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Un grand client nous envoie un questionnaire sécurité de quarante pages.', decision: 'Quel niveau de preuve fournir, sur quel référentiel.', deliverable: 'Dossier de preuves et plan de comblement des écarts, réutilisable pour les clients suivants.', format: 'Quelques semaines', cycles: ['croissance'] },
-        { quote: 'Nous ne savons pas si nous sommes dans le périmètre.', decision: "Ce qui s'applique à nous, ce qui nous sera imposé, ce qui peut attendre.", deliverable: "Carte d'exposition à trois voies.", format: 'Mission courte', cycles: ['lancement', 'croissance'] },
-        { quote: "Nos équipes utilisent l'IA sans règle.", decision: 'Quels outils, avec quelles données, sous quelle responsabilité.', deliverable: "Politique d'usage, inventaire des systèmes, classification au regard de l'AI Act.", format: 'Mission courte', cycles: ['croissance'] },
-        { quote: 'Nous avons subi un incident.', decision: 'Qui informer (autorité, clients, assureur), dans quels délais.', deliverable: "Dossier d'incident documenté et plan d'amélioration, avec les experts de réponse à incident du réseau.", format: 'À la demande', cycles: ['restructuration'] },
-        { quote: 'Un investisseur ou un acquéreur va nous auditer.', decision: "Ce qu'il faut régulariser avant, ce qu'il faut assumer.", deliverable: 'Dossier de conformité prêt pour la data room.', format: 'Quelques semaines', cycles: ['acquisition', 'transmission'] },
-        { quote: "Nous vendons dans l'UE depuis la Suisse (ou l'inverse).", decision: 'Représentant, DPO, transferts de données.', deliverable: 'Matrice des juridictions (LPD / RGPD) et obligations associées.', format: 'Mission courte', cycles: ['croissance'] },
+        { quote: 'Un grand client nous envoie un questionnaire sécurité de quarante pages.', decision: 'Quel niveau de preuve fournir, sur quel référentiel.', deliverable: 'Dossier de preuves et plan de comblement des écarts, réutilisable pour les clients suivants.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
+        { quote: 'Nous ne savons pas si nous sommes dans le périmètre.', decision: "Ce qui s'applique à nous, ce qui nous sera imposé, ce qui peut attendre.", deliverable: "Carte d'exposition à trois voies.", format: 'Mission courte', cycles: ['lancement', 'croissance'], image: '/images/advisory/situations/discussion-hands.jpg' },
+        { quote: "Nos équipes utilisent l'IA sans règle.", decision: 'Quels outils, avec quelles données, sous quelle responsabilité.', deliverable: "Politique d'usage, inventaire des systèmes, classification au regard de l'AI Act.", format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'Nous avons subi un incident.', decision: 'Qui informer (autorité, clients, assureur), dans quels délais.', deliverable: "Dossier d'incident documenté et plan d'amélioration, avec les experts de réponse à incident du réseau.", format: 'À la demande', cycles: ['restructuration'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Un investisseur ou un acquéreur va nous auditer.', decision: "Ce qu'il faut régulariser avant, ce qu'il faut assumer.", deliverable: 'Dossier de conformité prêt pour la data room.', format: 'Quelques semaines', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/planning-laptops.jpg' },
+        { quote: "Nous vendons dans l'UE depuis la Suisse (ou l'inverse).", decision: 'Représentant, DPO, transferts de données.', deliverable: 'Matrice des juridictions (LPD / RGPD) et obligations associées.', format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/office-corridor.jpg' },
       ],
     },
     services: {
@@ -300,12 +300,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Notre plateforme ralentit nos livraisons.', decision: 'Refactorer, refondre ou remplacer.', deliverable: "Audit d'architecture, dette technique chiffrée par domaine, trajectoire à douze mois.", format: 'Quelques semaines', cycles: ['croissance'] },
-        { quote: 'Une seule personne comprend le système.', decision: 'Documenter, doubler ou internaliser.', deliverable: 'Registre des dépendances (personnes, prestataires, licences) et plan de réduction.', format: 'Mission courte', cycles: ['croissance', 'transmission'] },
-        { quote: "Construire, acheter ou s'allier ?", decision: 'Le bon arbitrage, avec le coût de sortie.', deliverable: 'Analyse à critères pondérés, réversibilité comprise.', format: 'Mission courte', cycles: ['lancement', 'croissance'] },
-        { quote: "Nos équipes utilisent l'IA sans cadre.", decision: 'Outils autorisés, données admises, hébergement.', deliverable: "Politique d'usage, inventaire, arbitrage des outils.", format: 'Mission courte', cycles: ['croissance'] },
-        { quote: "Nous n'avons plus de directeur technique.", decision: 'Intérim, recrutement, ou direction à temps partagé.', deliverable: 'Direction technique par intérim avec passation documentée.', format: 'Mission fractionnée', cycles: ['restructuration'] },
-        { quote: 'Où sont nos données, et qui peut y accéder ?', decision: 'Hébergement UE ou Suisse, clauses de réversibilité, exposition aux lois extraterritoriales.', deliverable: "Revue d'hébergement et plan de réversibilité.", format: 'Mission courte', cycles: ['lancement', 'croissance'] },
+        { quote: 'Notre plateforme ralentit nos livraisons.', decision: 'Refactorer, refondre ou remplacer.', deliverable: "Audit d'architecture, dette technique chiffrée par domaine, trajectoire à douze mois.", format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
+        { quote: 'Une seule personne comprend le système.', decision: 'Documenter, doubler ou internaliser.', deliverable: 'Registre des dépendances (personnes, prestataires, licences) et plan de réduction.', format: 'Mission courte', cycles: ['croissance', 'transmission'], image: '/images/advisory/situations/developer-desk.jpg' },
+        { quote: "Construire, acheter ou s'allier ?", decision: 'Le bon arbitrage, avec le coût de sortie.', deliverable: 'Analyse à critères pondérés, réversibilité comprise.', format: 'Mission courte', cycles: ['lancement', 'croissance'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: "Nos équipes utilisent l'IA sans cadre.", decision: 'Outils autorisés, données admises, hébergement.', deliverable: "Politique d'usage, inventaire, arbitrage des outils.", format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: "Nous n'avons plus de directeur technique.", decision: 'Intérim, recrutement, ou direction à temps partagé.', deliverable: 'Direction technique par intérim avec passation documentée.', format: 'Mission fractionnée', cycles: ['restructuration'], image: '/images/advisory/situations/open-office.jpg' },
+        { quote: 'Où sont nos données, et qui peut y accéder ?', decision: 'Hébergement UE ou Suisse, clauses de réversibilité, exposition aux lois extraterritoriales.', deliverable: "Revue d'hébergement et plan de réversibilité.", format: 'Mission courte', cycles: ['lancement', 'croissance'], image: '/images/advisory/situations/network-cables.jpg' },
       ],
     },
     services: {
@@ -424,12 +424,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Tout passe par moi.', decision: 'Quoi déléguer en premier, à qui.', deliverable: 'Indice de dépendance et plan de délégation sur douze mois.', format: 'Quelques semaines', cycles: ['croissance', 'transmission'] },
-        { quote: "Mon équipe de direction n'est pas encore une équipe.", decision: 'Rôles, rythmes de décision, délégations.', deliverable: 'Charte de gouvernance du comité de direction.', format: 'Quelques semaines', cycles: ['croissance'] },
-        { quote: 'Un profil clé veut partir.', decision: 'Retenir, remplacer ou doubler.', deliverable: 'Plan de rétention, doublure identifiée, transfert de savoir documenté.', format: 'Mission courte', cycles: ['restructuration'] },
-        { quote: 'Je dois recruter un dirigeant (technique, financier, opérationnel, pays).', decision: 'Le bon profil, dans la bonne gouvernance.', deliverable: "Définition du poste et critères d'intégration, puis relais vers Recruter.", format: 'Mission courte', cycles: ['croissance'] },
-        { quote: 'Je pense transmettre dans deux à cinq ans.', decision: 'Famille, interne ou repreneur externe.', deliverable: 'Plan de succession et gouvernance de transition.', format: 'Un à deux mois', cycles: ['transmission'] },
-        { quote: 'Une acquisition arrive, deux cultures vont se rencontrer.', decision: "Qui reste, qui pilote, comment s'organiser.", deliverable: "Évaluation de l'équipe cible, organisation cible, plan de rétention.", format: 'Quelques semaines', cycles: ['acquisition'] },
+        { quote: 'Tout passe par moi.', decision: 'Quoi déléguer en premier, à qui.', deliverable: 'Indice de dépendance et plan de délégation sur douze mois.', format: 'Quelques semaines', cycles: ['croissance', 'transmission'], image: '/images/advisory/situations/meeting-room.jpg' },
+        { quote: "Mon équipe de direction n'est pas encore une équipe.", decision: 'Rôles, rythmes de décision, délégations.', deliverable: 'Charte de gouvernance du comité de direction.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/discussion-hands.jpg' },
+        { quote: 'Un profil clé veut partir.', decision: 'Retenir, remplacer ou doubler.', deliverable: 'Plan de rétention, doublure identifiée, transfert de savoir documenté.', format: 'Mission courte', cycles: ['restructuration'], image: '/images/advisory/situations/laptop-hands.jpg' },
+        { quote: 'Je dois recruter un dirigeant (technique, financier, opérationnel, pays).', decision: 'Le bon profil, dans la bonne gouvernance.', deliverable: "Définition du poste et critères d'intégration, puis relais vers Recruter.", format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/handshake.jpg' },
+        { quote: 'Je pense transmettre dans deux à cinq ans.', decision: 'Famille, interne ou repreneur externe.', deliverable: 'Plan de succession et gouvernance de transition.', format: 'Un à deux mois', cycles: ['transmission'], image: '/images/advisory/situations/plan-writing.jpg' },
+        { quote: 'Une acquisition arrive, deux cultures vont se rencontrer.', decision: "Qui reste, qui pilote, comment s'organiser.", deliverable: "Évaluation de l'équipe cible, organisation cible, plan de rétention.", format: 'Quelques semaines', cycles: ['acquisition'], image: '/images/advisory/situations/office-corridor.jpg' },
       ],
     },
     services: {
@@ -543,12 +543,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Nous avons repéré une cible.', decision: "Ce qu'il faut regarder avant la lettre d'intention.", deliverable: 'Revue des quatre angles morts, avec traitement proposé pour chacun : prix, garantie, condition suspensive.', format: 'Quelques semaines', cycles: ['acquisition'] },
-        { quote: 'On nous approche pour nous acheter.', decision: "Jusqu'où se préparer avant de répondre.", deliverable: 'Diagnostic de préparation du cédant et position de négociation.', format: 'Quelques semaines', cycles: ['transmission'] },
-        { quote: 'Nous voulons faire deux ou trois acquisitions en trois ans.', decision: 'Thèse, critères, processus.', deliverable: "Programme de build-up reproductible : critères, revue standard, playbook d'intégration.", format: 'Un à deux mois', cycles: ['acquisition'] },
-        { quote: "L'acquisition est signée, l'intégration patine.", decision: 'Ce qui est urgent, ce qui peut attendre.', deliverable: 'Plan 30 / 60 / 100 jours et pilotage.', format: 'Mission de trois à six mois', cycles: ['acquisition'] },
-        { quote: 'Nous devons céder une activité non stratégique.', decision: 'Périmètre et séparation des systèmes.', deliverable: 'Plan de séparation : périmètre, systèmes, personnes, accords de transition.', format: 'Un à deux mois', cycles: ['restructuration'] },
-        { quote: 'Mon fonds doit valider une cible technologique.', decision: 'Investir, négocier ou renoncer.', deliverable: 'Revue technique et organisationnelle indépendante, notée par angle mort.', format: 'Quelques semaines', cycles: ['acquisition'] },
+        { quote: 'Nous avons repéré une cible.', decision: "Ce qu'il faut regarder avant la lettre d'intention.", deliverable: 'Revue des quatre angles morts, avec traitement proposé pour chacun : prix, garantie, condition suspensive.', format: 'Quelques semaines', cycles: ['acquisition'], image: '/images/advisory/situations/planning-laptops.jpg' },
+        { quote: 'On nous approche pour nous acheter.', decision: "Jusqu'où se préparer avant de répondre.", deliverable: 'Diagnostic de préparation du cédant et position de négociation.', format: 'Quelques semaines', cycles: ['transmission'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
+        { quote: 'Nous voulons faire deux ou trois acquisitions en trois ans.', decision: 'Thèse, critères, processus.', deliverable: "Programme de build-up reproductible : critères, revue standard, playbook d'intégration.", format: 'Un à deux mois', cycles: ['acquisition'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: "L'acquisition est signée, l'intégration patine.", decision: 'Ce qui est urgent, ce qui peut attendre.', deliverable: 'Plan 30 / 60 / 100 jours et pilotage.', format: 'Mission de trois à six mois', cycles: ['acquisition'], image: '/images/advisory/situations/open-office.jpg' },
+        { quote: 'Nous devons céder une activité non stratégique.', decision: 'Périmètre et séparation des systèmes.', deliverable: 'Plan de séparation : périmètre, systèmes, personnes, accords de transition.', format: 'Un à deux mois', cycles: ['restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
+        { quote: 'Mon fonds doit valider une cible technologique.', decision: 'Investir, négocier ou renoncer.', deliverable: 'Revue technique et organisationnelle indépendante, notée par angle mort.', format: 'Quelques semaines', cycles: ['acquisition'], image: '/images/advisory/situations/server-room-walk.jpg' },
       ],
     },
     services: {

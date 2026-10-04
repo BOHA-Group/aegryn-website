@@ -25,6 +25,8 @@ export interface Situation {
   /** Ordre de grandeur, jamais une durée ferme tant que non validée */
   format?:     string
   cycles:      LifecycleSlug[]
+  /** Vignette (public/images/advisory/situations/*), jamais deux fois sur une même page */
+  image:       string
 }
 
 export interface FrameworkAxis {
