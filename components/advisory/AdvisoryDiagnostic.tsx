@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { ArrowUpRight, RotateCcw } from 'lucide-react'
 import Link from 'next/link'
 import type { DiagnosticLevel, DiagnosticQuestion } from '@/content/advisory/types'
+import { ADVISORY_UI } from '@/content/advisory/ui'
 
 interface Props {
   title:     string
@@ -13,6 +14,7 @@ interface Props {
   privacy:   string
   ctaLabel:  string
   ctaHref:   string
+  locale:    string
 }
 
 /**
@@ -20,7 +22,8 @@ interface Props {
  * aucune donnée n'est envoyée ni stockée : le CTA renvoie vers le formulaire
  * de contact pour celles et ceux qui souhaitent aller plus loin.
  */
-export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, ctaLabel, ctaHref }: Props) {
+export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, ctaLabel, ctaHref, locale }: Props) {
+  const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const answered = answers.every(a => a !== null)
   const yesCount = answers.filter(Boolean).length
@@ -36,7 +39,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
   return (
     <div className="rounded-2xl border border-ag-border bg-ag-white overflow-hidden">
       <div className="px-6 md:px-10 py-8 border-b border-ag-border">
-        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">Auto-diagnostic</p>
+        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{ui.autoDiag}</p>
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] mb-2">{title}</h3>
         <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{intro}</p>
       </div>
@@ -46,7 +49,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
           <li key={i} className="px-6 md:px-10 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
             <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
             <p className="font-sans text-[14px] text-ag-black leading-relaxed flex-1">{item.q}</p>
-            <div className="flex gap-2 shrink-0" role="group" aria-label={`Question ${i + 1}`}>
+            <div className="flex gap-2 shrink-0" role="group" aria-label={`${ui.question} ${i + 1}`}>
               {([true, false] as const).map(v => {
                 const active = answers[i] === v
                 return (
@@ -61,7 +64,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
                         : 'bg-ag-white text-ag-gray border-ag-border hover:border-ag-navy hover:text-ag-navy'
                     }`}
                   >
-                    {v ? 'Oui' : 'Non'}
+                    {v ? ui.yes : ui.no}
                   </button>
                 )
               })}
@@ -74,12 +77,12 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
         {level ? (
           <div className="flex flex-col gap-5">
             <div className="flex items-baseline gap-4 flex-wrap">
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{yesCount} / {questions.length} oui</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ui.yesCount(yesCount, questions.length)}</span>
               <span className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em]">{level.label}</span>
             </div>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{level.desc}</p>
             <div className="rounded-2xl bg-ag-white border border-ag-border p-6">
-              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink mb-2">Prochaine action</p>
+              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink mb-2">{ui.nextAction}</p>
               <p className="font-sans text-[14px] text-ag-black leading-relaxed max-w-2xl">{level.nextAction}</p>
             </div>
             <div className="flex items-center gap-4 flex-wrap pt-2">
@@ -90,13 +93,13 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
                 {ctaLabel} <ArrowUpRight size={13} />
               </Link>
               <button type="button" onClick={reset} className="inline-flex items-center gap-2 font-sans text-[12px] text-ag-gray hover:text-ag-navy transition-colors">
-                <RotateCcw size={12} /> Recommencer
+                <RotateCcw size={12} /> {ui.restart}
               </button>
             </div>
           </div>
         ) : (
           <p className="font-sans text-[13px] text-ag-gray-light">
-            {answers.filter(a => a !== null).length} / {questions.length} réponses. Le résultat s’affiche une fois les cinq questions renseignées.
+            {ui.progress(answers.filter(a => a !== null).length, questions.length)}
           </p>
         )}
         <p className="font-sans text-[11px] text-ag-gray-light leading-relaxed mt-6 max-w-2xl">{privacy}</p>

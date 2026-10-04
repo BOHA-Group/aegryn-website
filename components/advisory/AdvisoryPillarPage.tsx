@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
-import { LIFECYCLE_LABELS } from '@/content/advisory'
+import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
 import type { AdvisoryPageContent } from '@/content/advisory/types'
 
 interface Props {
@@ -27,6 +27,7 @@ const BTN_SEC = 'rounded-lg inline-flex items-center gap-2 border border-white/2
  */
 export function AdvisoryPillarPage({ content: c, locale }: Props) {
   const cycleLabels = LIFECYCLE_LABELS[locale] ?? LIFECYCLE_LABELS.fr
+  const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const L = (href: string) => `/${locale}${href}`
   const contactHref = L(`/contact?subject=${c.cta.subject}`)
 
@@ -78,7 +79,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed pt-2">{c.observation.sources}</p>
             </div>
             <div className="rounded-2xl bg-ag-off-white border border-ag-border p-8 self-start">
-              <p className={`${LABEL} mb-4`}>Ce que cela change</p>
+              <p className={`${LABEL} mb-4`}>{ui.change}</p>
               <p className="font-sans font-semibold text-[18px] text-ag-black leading-[1.5] tracking-[-0.01em]">{c.observation.change}</p>
             </div>
           </div>
@@ -104,7 +105,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
-            <p className={`${LABEL} mb-4`}>Six situations</p>
+            <p className={`${LABEL} mb-4`}>{ui.sixSituations}</p>
             <h2 className={`${H2} text-[30px] md:text-[38px]`}>{c.situations.title}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,11 +131,11 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                 {/* Décision / livrable / format */}
                 <div className="p-6 flex flex-col gap-4 flex-1">
                   <div>
-                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex-ink mb-1.5">Décision</p>
+                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex-ink mb-1.5">{ui.decision}</p>
                     <p className="font-sans text-[13.5px] text-ag-black leading-relaxed">{s.decision}</p>
                   </div>
                   <div>
-                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1.5">Livrable</p>
+                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1.5">{ui.deliverable}</p>
                     <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.deliverable}</p>
                   </div>
                   {s.format && (
@@ -173,7 +174,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             </ul>
           </div>
           <div className="rounded-2xl bg-ag-off-white border border-ag-border p-8 md:p-10">
-            <p className={`${LABEL} mb-4`}>Notre cadre</p>
+            <p className={`${LABEL} mb-4`}>{ui.ourFramework}</p>
             <h2 className={`${H2} text-[26px] md:text-[32px] mb-4`}>{c.framework.name}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">{c.framework.intro}</p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -185,7 +186,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               ))}
             </div>
             <div className="border-t border-ag-border pt-5">
-              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2">Livrable</p>
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2">{ui.deliverable}</p>
               <p className="font-sans text-[14px] text-ag-black leading-relaxed">{c.framework.deliverable}</p>
             </div>
           </div>
@@ -266,6 +267,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             privacy={c.diagnostic.privacy}
             ctaLabel={c.cta.primary}
             ctaHref={contactHref}
+            locale={locale}
           />
         </div>
       </section>
@@ -281,7 +283,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                   <Link key={i} href={L(p.href)} className={`${CARD} group px-6 py-5 flex items-center justify-between gap-6 hover:border-ag-navy/40 transition-colors`}>
                     <span className="font-sans font-semibold text-[15px] text-ag-black group-hover:text-ag-navy transition-colors">{p.title}</span>
                     <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-ag-gray-light shrink-0 flex items-center gap-2">
-                      {p.kind === 'magazine' ? 'Magazine' : 'Article'} <ArrowUpRight size={11} />
+                      {p.kind === 'magazine' ? ui.magazine : ui.article} <ArrowUpRight size={11} />
                     </span>
                   </Link>
                 ))}
@@ -289,7 +291,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             </div>
           )}
           <div>
-            <p className={`${LABEL} mb-6`}>Ce que cette page ne couvre pas</p>
+            <p className={`${LABEL} mb-6`}>{ui.notCovered}</p>
             <div className="flex flex-col gap-3">
               {c.scope.map((s, i) => (
                 <Link key={i} href={L(s.href)} className={`${CARD} group px-6 py-5 flex items-center justify-between gap-6 hover:border-ag-navy/40 transition-colors`}>
@@ -306,10 +308,10 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
       <section className="bg-ag-navy py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>
-            <p className={`${LABEL_G} mb-6`}>Échange de cadrage confidentiel</p>
+            <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
             <h2 className="font-sans font-bold text-white text-[30px] md:text-[38px] tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl">{c.cta.primary}.</h2>
             <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-lg mb-10">
-              Trente minutes avec un expert du réseau, nommé et responsable de son périmètre. Pas d’engagement à ce stade ; les conditions sont transmises après cadrage.
+              {ui.ctaBody}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href={contactHref} className={BTN_PRI}>{c.cta.primary} <ArrowUpRight size={12} /></Link>
@@ -317,8 +319,8 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             </div>
           </div>
           <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-8">
-            <p className={`${LABEL_G} mb-3`}>Newsletter · Built to Last</p>
-            <p className="font-sans text-[14px] text-white/60 leading-relaxed mb-6">Analyses de marché, cycles de vie des organisations, retours d’expérience. Une lettre, pas de prospection.</p>
+            <p className={`${LABEL_G} mb-3`}>{ui.newsletterLabel}</p>
+            <p className="font-sans text-[14px] text-white/60 leading-relaxed mb-6">{ui.newsletterBody}</p>
             <NewsletterSubscribeForm locale={locale} />
           </div>
         </div>
