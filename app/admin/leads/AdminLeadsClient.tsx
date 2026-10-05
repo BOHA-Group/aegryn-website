@@ -11,7 +11,8 @@ const SOURCES = [
   // assessment: archivé — API retourne 410, aucun nouveau lead possible
   { key: 'alliances',      label: 'Alliances'       },
   { key: 'prospects',      label: 'Waitlist Session'},
-  { key: 'auction_access', label: 'Accès Catalogue' },
+  // auction_access: masqué — le catalogue privé n'est plus proposé ; la table
+  // auction_access_requests est conservée en historique (source toujours lisible via ?source=auction_access)
   { key: 'advisory',       label: 'Advisory'        },
 ] as const
 

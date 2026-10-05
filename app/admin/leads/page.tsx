@@ -117,7 +117,7 @@ export default async function AdminLeadsPage({
       // assessment_day_bookings exclu — feature archivée (API 410 Gone)
       { key: 'alliances',      table: 'alliance_applications'   },
       { key: 'prospects',      table: 'prospects'               },
-      { key: 'auction_access', table: 'auction_access_requests' },
+      // auction_access_requests exclu des badges — onglet masqué, table conservée en historique
       { key: 'advisory',       table: 'advisory_leads'          },
       // cifso_index_waitlist n'a pas de colonne status → count total
     ]
