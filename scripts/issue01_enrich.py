@@ -1,8 +1,8 @@
 """
 issue01_enrich.py — Issue 01 v1.1 : graphiques, dossier, charte, frise.
 
-Lit les deux fichiers de l'Issue 01 tels qu'ils sont dans git (HEAD) pour
-etre rejouable, insere les nouvelles pages dans le flipbook, renumerote,
+Lit les deux fichiers de l'Issue 01 tels qu'ils etaient avant enrichissement
+(commit BASE, edition 1.0 a 138 pages) pour etre rejouable, insere les nouvelles pages dans le flipbook, renumerote,
 puis reporte les memes contenus dans la web edition et regenere toc.ts.
 
 Toutes les donnees des graphiques sont des chiffres deja cites dans le
@@ -21,9 +21,11 @@ FLIP = ROOT / 'private/magazine/issue-01/aegryn-magazine-issue-01_1.html'
 WEB  = ROOT / 'private/magazine/issue-01/aegryn-magazine-issue-01_web.html'
 TOC  = ROOT / 'content/magazine/issue-01/toc.ts'
 
+BASE = '5719aa6'   # derniere version 138 pages (edition 1.0)
+
 def git_show(p):
     rel = p.relative_to(ROOT)
-    return subprocess.run(['git', 'show', f'HEAD:{rel}'], capture_output=True, text=True, cwd=ROOT).stdout
+    return subprocess.run(['git', 'show', f'{BASE}:{rel}'], capture_output=True, text=True, cwd=ROOT).stdout
 
 flip = git_show(FLIP)
 web  = git_show(WEB)
@@ -195,16 +197,17 @@ events = [
  ('2 Feb 2025', 'AI Act, first obligations', 'Prohibited practices banned; AI literacy duties for deployers.', 'past'),
  ('2 Aug 2025', 'AI Act, general-purpose models', 'Duties for providers of general-purpose AI models; governance in place.', 'past'),
  ('12 Sep 2025', 'EU Data Act applies', 'Access, portability and switching rights for connected products and cloud.', 'past'),
- ('2 Aug 2026', 'AI Act, high-risk and transparency', 'Annex III high-risk systems; Article 50 disclosure duties.', 'past'),
+ ('2 Aug 2026', 'AI Act, transparency duties', 'Article 50: disclose AI interaction and synthetic content. High-risk rules deferred.', 'past'),
  ('11 Sep 2026', 'Cyber Resilience Act, reporting', 'Vulnerability and incident reporting for products with digital elements.', 'past'),
- ('2 Aug 2027', 'AI Act, regulated products', 'High-risk AI embedded in Annex I products (machinery, medical devices).', 'next'),
+ ('2 Dec 2027', 'AI Act, high-risk systems (Annex III)', 'Employment, education, credit, essential services: full obligations, post-Omnibus.', 'next'),
  ('11 Dec 2027', 'Cyber Resilience Act, full application', 'Security-by-design and conformity obligations for all products in scope.', 'next'),
+ ('2 Aug 2028', 'AI Act, regulated products (Annex I)', 'High-risk AI embedded in machinery, medical devices, other regulated products.', 'next'),
 ]
 D.append(chart_page('Dossier', 'The Regulatory Clock', 'Dossier · 04 · Timeline',
-                    'Ten dates a board should <strong>already have in its calendar.</strong>',
-                    '', C.timeline(events, row_h=35),
-                    "Dates as adopted at the time of going to press. The European Commission's digital omnibus proposals of November 2025 may shift the high-risk AI deadlines; verify before acting. Swiss companies selling into the EU are in scope of the EU texts for that activity.",
-                    'Sources: Official Journal of the EU (Regulations 2022/2554, 2022/2555, 2023/2854, 2024/1689, 2024/2847); Swiss Federal Chancellery, FADP. Not legal advice.'))
+                    'Eleven dates a board should <strong>already have in its calendar.</strong>',
+                    '', C.timeline(events, row_h=31),
+                    "Dates as in force at the time of going to press. The Digital Omnibus on AI (Regulation (EU) 2026/1744, in force 27 July 2026) moved the high-risk deadlines from August 2026 and 2027 to 2 December 2027 and 2 August 2028. Swiss companies selling into the EU are in scope of the EU texts for that activity.",
+                    'Sources: Official Journal of the EU (Regulations 2022/2554, 2022/2555, 2023/2854, 2024/1689 as amended by 2026/1744, 2024/2847); Fedlex, FADP (SR 235.1). Not legal advice.'))
 
 # D7 five words
 words = [
@@ -250,7 +253,7 @@ NEW['dossier'] = (29, D, [
     ('dossier-where-the-value-moves', 'Where the Value Moves', 'Dossier',
      ''.join(f'<p>{p}</p>' for p in val_paras) + '<div class="cta"><div class="cta-title">What a tool will not do</div><p class="cta-body">It will not decide which rules are right, only apply the ones it is given. It will not carry legal responsibility for a filing, a payment or a disclosure. And it will not tell a buyer where your data is; your contract has to.</p></div>'),
     ('dossier-the-regulatory-clock', 'The Regulatory Clock', 'Dossier',
-     f'<figure class="chart">{C.timeline(events, row_h=40)}<figcaption>Dates as adopted at the time of going to press. The European Commission\'s digital omnibus proposals of November 2025 may shift the high-risk AI deadlines; verify before acting. Sources: Official Journal of the EU; Swiss Federal Chancellery. Not legal advice.</figcaption></figure>'),
+     f'<figure class="chart">{C.timeline(events, row_h=40)}<figcaption>Dates as in force at the time of going to press. The Digital Omnibus on AI (Regulation (EU) 2026/1744, in force 27 July 2026) moved the high-risk deadlines to 2 December 2027 (Annex III) and 2 August 2028 (Annex I). Sources: Official Journal of the EU (2022/2554, 2022/2555, 2023/2854, 2024/1689 as amended by 2026/1744, 2024/2847); Fedlex, FADP. Not legal advice.</figcaption></figure>'),
     ('dossier-five-words-for-the-board', 'Five Words for the Board', 'Dossier',
      ''.join(f'<p><strong>{w}.</strong> {d}</p>' for w, d in words)),
     ('dossier-what-to-do-on-monday', 'What to Do on Monday', 'Dossier',
@@ -338,7 +341,7 @@ chart_list = [
     ('index', 'Where first CIFSO 5000 submissions fail', 'Aegryn Value Desk', ('index', 0)),
     ('succession', 'The succession wave, Germany 2029', 'KfW; UBS and HSG', ('succession', 0)),
     ('digital', 'Digital intensity of EU SMEs, 2025', 'Eurostat', ('dossier', 7)),
-    ('clock', 'The regulatory clock, 2023 to 2027', 'Official Journal of the EU', ('dossier', 5)),
+    ('clock', 'The regulatory clock, 2023 to 2028', 'Official Journal of the EU; Fedlex', ('dossier', 5)),
 ]
 rows_html = ''.join(
     f'<div style="display:grid;grid-template-columns:22px 1fr 44px;gap:8px;padding:7px 0;border-bottom:.5px solid #e8e4dc;align-items:baseline">'
