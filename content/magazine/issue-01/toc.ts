@@ -33,7 +33,7 @@ export const TOC_01: TocSection[] = [
     { anchor: 'dossier-the-regulatory-clock', title: "The Regulatory Clock", page: 36 },
     { anchor: 'dossier-five-words-for-the-board', title: "Five Words for the Board", page: 37 },
     { anchor: 'dossier-what-to-do-on-monday', title: "What to Do on Monday", page: 38 },
-    { anchor: 'advertising-subblink', title: "subblink, read the contract before you sign it", page: 41 },
+    { anchor: 'advertising-subblink', title: "subblink. Clarity before commitment.", page: 41 },
   ] },
   { id: 's-build', label: "Build", pillar: 'build', pageRange: 'p.43–66', articles: [
     { anchor: 'build-field-notes', title: "Field Notes", page: 43 },
