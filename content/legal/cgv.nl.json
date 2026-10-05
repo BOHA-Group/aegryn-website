@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Algemene Verkoop- en Dienstverleningsvoorwaarden | Aegryn",
+    "desc": "Contractuele voorwaarden voor de adviesdiensten, de CIFSO 5000-certificering, het ontwerp van activa, de werving van leidinggevenden, het expertnetwerk en de publicaties van Aegryn."
+  },
+  "label": "Algemene Verkoop- en Dienstverleningsvoorwaarden",
+  "version": "Versie: oktober 2026",
+  "note": "Dit document vormt de bindende contractuele referentie tussen Aegryn en zijn klanten. De omvang, duur en honoraria van elke dienst worden vastgelegd in het schriftelijke voorstel, de offerte of de door de partijen ondertekende opdracht, die op die punten voorrang heeft bij tegenstrijdigheid. Aegryn is een geïntegreerd adviesbureau: het exploiteert geen marktplaats en treedt niet op als financieel tussenpersoon.",
+  "sections": [
+    {
+      "title": "Voorwerp en toepassingsgebied",
+      "blocks": [
+        { "body": "Deze Algemene Verkoop- en Dienstverleningsvoorwaarden («AV») regelen alle diensten die Aegryn, een vennootschap naar Zwitsers recht met zetel te Saint-Sulpice (Vaud), levert aan elke rechtspersoon of natuurlijke persoon die beroepsmatig handelt («Klant»). Elke bestelling, ondertekening van een voorstel of opdracht houdt de onvoorwaardelijke aanvaarding van deze AV in, met uitsluiting van alle inkoopvoorwaarden van de Klant." },
+        { "body": "De AV zijn van toepassing op de volgende diensten: advies (Begeleiden), CIFSO 5000-certificering (Valoriseren), ontwerp en exploitatie van digitale activa (Bouwen), werving van leidinggevenden (Werven, Aegryn Talent), vermelding in het expertnetwerk, publicaties (Aegryn Magazine, nieuwsbrief) en, bij specifieke overeenkomst, vertrouwelijke gestructureerde opdrachten." }
+      ]
+    },
+    {
+      "title": "Definities",
+      "defs": [
+        ["Aegryn", "Aegryn, geïntegreerd adviesbureau en operationele groep naar Zwitsers recht, alsook zijn verbonden entiteiten die bij de uitvoering van de diensten betrokken zijn."],
+        ["Klant", "Elke organisatie (vennootschap, groep, stichting, overheid) of haar gemachtigde vertegenwoordiger die een dienst bij Aegryn bestelt."],
+        ["Organisatie", "De onderneming, entiteit of activiteitenperimeter van de Klant die het voorwerp is van de dienst (advies, certificering, waardering, werving)."],
+        ["CIFSO 5000-certificering", "Onafhankelijke audit van de waarde van een organisatie op vijf dimensies: Code & Architectuur (C), IP & Rechten (I), Financiën & Kengetallen (F), Beveiliging, Soevereiniteit & AI (S), Organisatie, Talent & Opvolging (O). Zij leidt tot een rapport en een officiële grade die in het gecertificeerde Aegryn-register wordt ingeschreven."],
+        ["Grade", "Beoordeling toegekend na afloop van de certificering: ★, AAA, AA, A of B. De grade attesteert een op een bepaalde datum geverifieerd kwaliteitsniveau; zij vormt noch een waardegarantie, noch een beleggingsaanbeveling."],
+        ["Indicatieve schatting", "Resultaat van de online schattingstool (/valuation) of advies van een analist zonder audit. Nooit tegenwerpbaar aan derden, steeds als indicatief aangeduid."],
+        ["Partnerexpert", "Onafhankelijke professional die via een actief Expertprofiel-abonnement in het Aegryn-expertnetwerk is vermeld, of door Aegryn wordt ingeschakeld om bij te dragen aan een certificeringsdimensie of een adviesopdracht."],
+        ["Vertrouwelijke gestructureerde opdracht", "Specifieke, schriftelijk toevertrouwde opdracht waarin Aegryn de Klant begeleidt bij een overdracht, overname, kapitaalopenstelling of herstructurering, onder geheimhoudingsovereenkomst, met identiteitsverificatie en, in voorkomend geval, dataroom en escrow bij een derde bank. De financiële uitvoering wordt toevertrouwd aan erkende partners."]
+      ]
+    },
+    {
+      "title": "Diensten",
+      "blocks": [
+        { "title": "Advies (Begeleiden)", "body": "Adviesopdrachten in strategie en innovatie, risico en compliance, technologie en soevereiniteit, talent en organisatie, M&A en post-overname-integratie. Elke opdracht wordt vastgelegd in een schriftelijk voorstel met omvang, deliverables, duur, team (met naam genoemde experts) en honoraria. De deliverables zijn analyses, aanbevelingen en beslissingsdocumenten; de uitvoering blijft de verantwoordelijkheid van de Klant. Aegryn verstrekt geen gereglementeerd juridisch, fiscaal of boekhoudkundig advies: waar dergelijke adviezen nodig zijn, worden zij verstrekt door bevoegde professionals, partners of door de Klant aangewezen." },
+        { "title": "CIFSO 5000-certificering (Valoriseren)", "body": "Onafhankelijke audit op de vijf dimensies, uitgevoerd door Aegryn-analisten volgens het CIFSO 5000-protocol, waar nodig met medewerking van partnerexperts. Drie pakketten naargelang de omvang van de organisatie: Express (minder dan 20 medewerkers, één vestiging), Standard (20 tot 100 medewerkers), Premium (meer dan 100 medewerkers of meerdere vestigingen). Elk pakket omvat de audit, het certificeringsrapport, de officiële grade, de inschrijving in het gecertificeerde register en het verifieerbare certificaat. De op aegryn.com vermelde prijzen zijn indicatief en exclusief btw; de definitieve offerte wordt opgesteld na prekwalificatie. De grade wordt niet gegarandeerd: hij volgt uit de audit. Het certificaat is twaalf maanden geldig vanaf de uitgifte; de vernieuwing is het voorwerp van een nieuwe opdracht." },
+        { "title": "Online schatting en prekwalificatie", "body": "De schattingstool (/valuation) en de pre-screening van een certificeringsaanvraag zijn gratis en vrijblijvend. Zij leveren een indicatieve schatting op, gegenereerd op basis van de opgegeven gegevens zonder verificatie. Aegryn behoudt zich het recht voor om na de prekwalificatie geen gevolg te geven aan een certificeringsaanvraag." },
+        { "title": "Ontwerp van activa (Bouwen)", "body": "Ontwerp, ontwikkeling en, in voorkomend geval, exploitatie van digitale activa voor rekening van de Klant, tegen een in het voorstel overeengekomen vaste prijs. Tenzij schriftelijk anders bepaald, wordt de Klant eigenaar van de geleverde en volledig betaalde specifieke ontwikkelingen; Aegryn behoudt de eigendom van zijn methoden, tools en generieke componenten, die in niet-exclusieve gebruikslicentie worden verleend." },
+        { "title": "Werving van leidinggevenden (Werven, Aegryn Talent)", "body": "Zoektocht naar leidinggevenden en directieprofielen (vaste aanwerving) en tijdelijke plaatsing (interim-management). Vaste aanwerving: honorarium van 20 % van het bruto jaarsalaris van de geplaatste kandidaat, verschuldigd bij effectieve indiensttreding, met een vervangingsgarantie van drie maanden. Tijdelijke plaatsing: 20 % van het equivalente bruto jaarsalaris, pro rata de duur van de opdracht, maandelijks gefactureerd, zonder vervangingsgarantie. Er is geen honorarium verschuldigd indien geen kandidaat wordt geplaatst." },
+        { "title": "Expertnetwerk en Expertprofiel-abonnement", "body": "Aegryn vermeldt onafhankelijke professionals («Partnerexperts») die zichtbaar zijn via de rubriek Expertnetwerk van de website. De vermelding is onderworpen aan een Expertprofiel-abonnement (CHF 89 excl. btw per maand of het geldende jaartarief), zonder minimumduur, op elk moment opzegbaar met ingang van het einde van de lopende periode. De Partnerexpert bepaalt vrij zijn honoraria en voorwaarden; Aegryn ontvangt geen commissie op zijn diensten en is geen partij bij de relatie tussen de Partnerexpert en zijn klanten. Aanbrengprogramma: één gratis maand voor aanbrenger en aangebrachte bij elk nieuw abonnement; Aegryn kan dit programma wijzigen met een opzegtermijn van dertig dagen." },
+        { "title": "Publicaties", "body": "Aegryn Magazine en de nieuwsbrief Built to Last zijn redactionele publicaties, gratis in digitale vorm. Hun inhoud is informatief en vormt geen gepersonaliseerd advies. De gedrukte editie, waar beschikbaar, is onderworpen aan eigen voorwaarden die bij de bestelling worden meegedeeld." },
+        { "title": "Vertrouwelijke gestructureerde opdrachten", "body": "Bij specifieke schriftelijke overeenkomst begeleidt Aegryn de Klant bij een overdracht, overname, kapitaalopenstelling of herstructurering. Deze opdrachten zijn onderworpen aan een geheimhoudingsovereenkomst, een verificatie van identiteit en uiteindelijk begunstigde (KYC) en, in voorkomend geval, de opening van een beveiligde dataroom. Wanneer een escrow is voorzien, wordt deze aangehouden door een derde bank; Aegryn bewaart nooit gelden. Honoraria, termijnen en herroepingsvoorwaarden worden uitsluitend in de opdracht vastgelegd. Aegryn adviseert en structureert; de financiële en juridische uitvoering wordt toevertrouwd aan erkende partners (banken, advocatenkantoren, notarissen)." }
+      ]
+    },
+    {
+      "title": "Bestelling en totstandkoming van de overeenkomst",
+      "blocks": [
+        { "body": "Elke aanvraag via aegryn.com (contactformulieren, actieaanvragen van de adviespagina's, certificeringsaanvraag, talentformulier) geldt als informatieaanvraag en niet als bestelling. De overeenkomst komt tot stand bij ondertekening door beide partijen van het voorstel, de offerte of de opdracht, of bij schriftelijke bevestiging van de bestelling door Aegryn." },
+        { "body": "Het schriftelijke voorstel vermeldt minstens: voorwerp en omvang, deliverables, planning, ingezette experts, honoraria en betalingsvoorwaarden, aannames en uitsluitingen. Het is dertig dagen geldig vanaf de uitgifte, tenzij anders vermeld." }
+      ]
+    },
+    {
+      "title": "Verplichtingen van de Klant",
+      "blocks": [
+        { "body": "De Klant verbindt zich ertoe binnen de overeengekomen termijnen juiste, volledige en actuele informatie te verstrekken; een gemachtigde contactpersoon aan te wijzen; te garanderen dat hij over de nodige rechten beschikt op de meegedeelde documenten, gegevens en activa; de vertrouwelijkheid van het beoordelings- of adviesproces te bewaren; en Aegryn te informeren over elke gebeurtenis die de opdracht kan beïnvloeden (wijziging van zeggenschap, geschil, beveiligingsincident, regelgevend bevel)." },
+        { "body": "Vertragingen of informatietekorten die aan de Klant toe te rekenen zijn, verlengen de termijnen van Aegryn dienovereenkomstig en kunnen aanleiding geven tot een herziening van de honoraria indien de werklast daardoor wijzigt." }
+      ]
+    },
+    {
+      "title": "Verplichtingen van Aegryn",
+      "blocks": [
+        { "body": "Aegryn voert zijn diensten zorgvuldig en onafhankelijk uit, volgens de regels van de kunst en de in het voorstel beschreven methoden. Aegryn is gebonden aan een inspanningsverbintenis. De experts die aan een opdracht werken, worden met naam genoemd en zijn verantwoordelijk voor hun domein; Aegryn blijft de enige contractuele gesprekspartner van de Klant." },
+        { "body": "Aegryn treedt niet op in een niet-gemelde belangenconflictsituatie. Wanneer tijdens een opdracht een conflict ontstaat, informeert Aegryn de Klant onverwijld en stelt het, naargelang het geval, afschermingsmaatregelen of de beëindiging van de opdracht voor." }
+      ]
+    },
+    {
+      "title": "Prijzen, facturatie en betaling",
+      "blocks": [
+        { "body": "De honoraria zijn uitgedrukt exclusief btw, in Zwitserse frank of euro volgens het voorstel. Adviesopdrachten worden forfaitair of volgens het in het voorstel voorziene schema gefactureerd; bij aanvang kan een voorschot worden gevraagd. De CIFSO 5000-certificering wordt bij bestelling gefactureerd, volgens het gekozen pakket; betaling kan per overschrijving of via Stripe Checkout op aegryn.com. Expertprofiel-abonnementen worden maandelijks of jaarlijks vooraf geïnd." },
+        { "body": "Tenzij anders overeengekomen, zijn facturen betaalbaar binnen dertig dagen netto vanaf de factuurdatum. Elke betalingsachterstand brengt van rechtswege verwijlinteresten tegen de Zwitserse wettelijke rentevoet met zich mee, alsook de opschorting van lopende diensten na een ingebrekestelling die tien dagen zonder gevolg is gebleven. Reiskosten en uitgaven gemaakt met instemming van de Klant worden tegen kostprijs doorgefactureerd." }
+      ]
+    },
+    {
+      "title": "Vertrouwelijkheid, dataroom en identiteitsverificatie",
+      "blocks": [
+        { "body": "Aegryn behandelt alle door de Klant meegedeelde niet-openbare informatie als vertrouwelijk en gebruikt ze uitsluitend voor de dienst. Deze verplichting blijft vijf jaar na het einde van de opdracht gelden. Aegryn kan vóór elke uitwisseling van gevoelige documenten de ondertekening van een specifieke geheimhoudingsovereenkomst voorstellen; de Partnerexperts die aan een opdracht werken, zijn aan dezelfde verplichtingen onderworpen." },
+        { "body": "Wanneer een beveiligde dataroom ter beschikking wordt gesteld (certificering, vertrouwelijke opdracht), wordt de toegang strikt gecontroleerd per autorisatieniveau en wordt elke raadpleging gelogd (identiteit, IP-adres, tijdstempel). Technische ontradingsmaatregelen zijn ingevoerd (blokkering van rechtstreeks downloaden, dynamisch watermerk). Zij vormen een ernstige ontrading en een bewijs bij geschil, zonder de absolute onmogelijkheid van elke vastlegging via externe middelen te kunnen garanderen; de contractuele aansprakelijkheid bij openbaarmaking berust op de ondertekende geheimhoudingsovereenkomst." },
+        { "body": "Overeenkomstig de Zwitserse witwaswet (GwG) en de toepasselijke Europese regels verifieert Aegryn de identiteit van de Klanten en de uiteindelijk begunstigden (deelneming van 25 % of meer) in het kader van certificeringsaanvragen en vertrouwelijke opdrachten. Bij twijfel kan Aegryn de opdracht zonder vergoeding opschorten of beëindigen." }
+      ]
+    },
+    {
+      "title": "Intellectuele eigendom",
+      "blocks": [
+        { "body": "Het CIFSO 5000-protocol, de CIFSO Valuation Index, de methodologische kaders en rasters, de merken Aegryn en het monogram AE, alsook de rapportsjablonen zijn de exclusieve eigendom van Aegryn. De Klant verkrijgt op de volledig betaalde rapporten en deliverables een niet-exclusief en niet-overdraagbaar gebruiksrecht voor zijn interne behoeften en, wat het certificaat en de grade betreft, een recht om deze aan derden mee te delen (banken, investeerders, overnemers, partners) tijdens de geldigheidsduur van het certificaat." },
+        { "body": "Elke reproductie, wijziging of openbare verspreiding van het certificeringsrapport, de methode of het merk buiten deze gebruiken vereist de voorafgaande schriftelijke toestemming van Aegryn. De Klant machtigt Aegryn om zijn naam en grade in het gecertificeerde register te vermelden en, behoudens schriftelijk bezwaar, als referentie." }
+      ]
+    },
+    {
+      "title": "Gegevensbescherming",
+      "blocks": [
+        { "body": "Aegryn verwerkt persoonsgegevens overeenkomstig de Zwitserse federale wet op de gegevensbescherming (DSG) en, waar van toepassing, de Algemene Verordening Gegevensbescherming (AVG). De verwerkingsmodaliteiten, bewaartermijnen en rechten van de betrokkenen worden beschreven in het privacybeleid op aegryn.com/privacy. Via de formulieren van de website verzamelde gegevens worden gebruikt om de aanvraag te beantwoorden en, met uitdrukkelijke toestemming van de persoon, voor het verzenden van de nieuwsbrief." }
+      ]
+    },
+    {
+      "title": "Aansprakelijkheid",
+      "blocks": [
+        { "body": "Aegryn is gebonden aan een inspanningsverbintenis. Het garandeert noch het behalen van een bepaalde grade, noch de toekomstige waarde van een organisatie, noch de uitkomst van een transactie, financiering of werving, noch de beslissingen die de Klant op basis van de deliverables neemt. De grade en het rapport weerspiegelen de op de auditdatum geverifieerde elementen op basis van de door de Klant verstrekte informatie." },
+        { "body": "De aansprakelijkheid van Aegryn, op welke grond ook, is beperkt tot het bedrag van de honoraria exclusief btw die daadwerkelijk voor de betrokken dienst zijn ontvangen in de twaalf maanden voorafgaand aan het schadeveroorzakende feit. Aegryn is niet aansprakelijk voor indirecte schade, winstderving, verlies van gegevens of van kansen. Deze beperkingen gelden niet bij opzet of grove nalatigheid." }
+      ]
+    },
+    {
+      "title": "Betwisting van de grade",
+      "blocks": [
+        { "body": "Elke betwisting van de grade of het certificeringsrapport moet schriftelijk aan Aegryn worden gemeld via aegryn.com/contact, binnen vijftien kalenderdagen na overhandiging van het rapport, met de ondersteunende elementen. Aegryn antwoordt binnen vijftien werkdagen en kan, naargelang het geval, de grade bevestigen, herzien of een aanvullende audit voorstellen. Een remediëringsplan gevolgd door een nieuwe indiening vormt een afzonderlijke opdracht." }
+      ]
+    },
+    {
+      "title": "Duur, beëindiging en annulering",
+      "blocks": [
+        { "body": "Elke opdracht eindigt bij de oplevering van de voorziene deliverables. De Klant kan een adviesopdracht beëindigen met een schriftelijke opzegtermijn van vijftien dagen; de verrichte diensten en de jegens derden aangegane verbintenissen op de ingangsdatum blijven verschuldigd. Een certificeringsaanvraag die na de start van de audit wordt geannuleerd, geeft aanleiding tot facturatie van de verrichte werkzaamheden, tot maximaal 50 % van het pakket." },
+        { "body": "Elke partij kan van rechtswege beëindigen bij een ernstige tekortkoming die niet binnen dertig dagen na schriftelijke ingebrekestelling is hersteld. Aegryn kan zonder vergoeding opschorten of beëindigen bij valse verklaringen, mislukte identiteitsverificatie of gegrond vermoeden van witwassen." }
+      ]
+    },
+    {
+      "title": "Toepasselijk recht en bevoegde rechter",
+      "blocks": [
+        { "body": "Deze AV en alle diensten van Aegryn zijn onderworpen aan het Zwitserse materiële recht, met uitsluiting van de conflictregels en het Weens Koopverdrag. De partijen streven ernaar elk geschil binnen dertig dagen minnelijk te regelen. Bij gebreke daarvan zijn de rechtbanken van de zetel van Aegryn (kanton Vaud, Zwitserland) exclusief bevoegd, onder voorbehoud van dwingende consumentenbeschermingsbepalingen." }
+      ]
+    }
+  ],
+  "ctaContact": "Contact opnemen met het Aegryn-team",
+  "ctaTermsUse": "Gebruiksvoorwaarden"
+}

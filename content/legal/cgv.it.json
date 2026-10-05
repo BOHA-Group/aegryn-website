@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Condizioni Generali di Vendita e di Servizio | Aegryn",
+    "desc": "Condizioni contrattuali che regolano le prestazioni di consulenza, la certificazione CIFSO 5000, la progettazione di asset, il recruiting, la rete di esperti e le pubblicazioni Aegryn."
+  },
+  "label": "Condizioni Generali di Vendita e di Servizio",
+  "version": "Versione: ottobre 2026",
+  "note": "Il presente documento costituisce il riferimento contrattuale vincolante tra Aegryn e i suoi clienti. Perimetro, durata e onorari di ogni prestazione sono precisati nella proposta scritta, nel preventivo o nel mandato firmato dalle parti, che prevale su tali punti in caso di divergenza. Aegryn è una società di consulenza integrata: non gestisce una piattaforma di scambio e non interviene come intermediario finanziario.",
+  "sections": [
+    {
+      "title": "Oggetto e ambito di applicazione",
+      "blocks": [
+        { "body": "Le presenti Condizioni Generali di Vendita e di Servizio («CGV») regolano l'insieme delle prestazioni fornite da Aegryn, società di diritto svizzero con sede a Saint-Sulpice (Vaud), a qualsiasi persona giuridica o fisica che agisce a titolo professionale («Cliente»). Qualsiasi ordine, firma di proposta o di mandato comporta l'accettazione senza riserve delle presenti CGV, con esclusione di qualsiasi condizione generale di acquisto del Cliente." },
+        { "body": "Le CGV si applicano alle seguenti prestazioni: consulenza (Accompagnare), certificazione CIFSO 5000 (Valorizzare), progettazione e gestione di asset digitali (Costruire), ricerca di dirigenti (Reclutare, Aegryn Talent), referenziamento nella rete di esperti, pubblicazioni (Aegryn Magazine, newsletter) e, su accordo specifico, mandati riservati strutturati." }
+      ]
+    },
+    {
+      "title": "Definizioni",
+      "defs": [
+        ["Aegryn", "Aegryn, società di consulenza integrata e gruppo operativo di diritto svizzero, nonché le sue entità affiliate che intervengono nell'esecuzione delle prestazioni."],
+        ["Cliente", "Qualsiasi organizzazione (società, gruppo, fondazione, ente pubblico) o il suo rappresentante autorizzato che ordina una prestazione Aegryn."],
+        ["Organizzazione", "L'impresa, l'entità o il perimetro di attività del Cliente oggetto della prestazione (consulenza, certificazione, valutazione, recruiting)."],
+        ["Certificazione CIFSO 5000", "Audit indipendente del valore di un'organizzazione su cinque dimensioni: Codice & Architettura (C), IP & Diritti (I), Finanza & Metriche (F), Sicurezza, Sovranità & IA (S), Organizzazione, Talento & Successione (O). Si conclude con un rapporto e un grade ufficiale iscritto nel registro certificato Aegryn."],
+        ["Grade", "Valutazione attribuita al termine della certificazione: ★, AAA, AA, A o B. Il grade attesta un livello di qualità verificato a una data determinata; non costituisce né una garanzia di valore né una raccomandazione di investimento."],
+        ["Stima indicativa", "Risultato prodotto dallo strumento di stima online (/valuation) o parere di un analista senza audit. Mai opponibile a terzi, sempre segnalato come indicativo."],
+        ["Esperto partner", "Professionista indipendente referenziato nella rete di esperti Aegryn tramite un abbonamento Scheda Esperto attivo, oppure incaricato da Aegryn di intervenire su una dimensione della certificazione o su una missione di consulenza."],
+        ["Mandato riservato strutturato", "Missione specifica, affidata per iscritto, in cui Aegryn accompagna il Cliente in un'operazione di trasmissione, acquisizione, apertura del capitale o ristrutturazione, sotto accordo di riservatezza, con verifica dell'identità e, se del caso, data room e deposito fiduciario presso una banca terza. L'esecuzione finanziaria è affidata a partner accreditati."]
+      ]
+    },
+    {
+      "title": "Prestazioni",
+      "blocks": [
+        { "title": "Consulenza (Accompagnare)", "body": "Missioni di consulenza in strategia e innovazione, rischi e conformità, tecnologia e sovranità, talento e organizzazione, M&A e integrazione post-acquisizione. Ogni missione è oggetto di una proposta scritta che precisa perimetro, deliverable, durata, team (esperti nominati) e onorari. I deliverable sono analisi, raccomandazioni e documenti decisionali; l'attuazione resta di responsabilità del Cliente. Aegryn non fornisce pareri legali, fiscali o contabili regolamentati: quando tali pareri sono necessari, sono resi da professionisti abilitati, partner o designati dal Cliente." },
+        { "title": "Certificazione CIFSO 5000 (Valorizzare)", "body": "Audit indipendente sulle cinque dimensioni, realizzato dagli analisti Aegryn secondo il protocollo CIFSO 5000, con il concorso di esperti partner se necessario. Tre pacchetti secondo la dimensione dell'organizzazione: Express (meno di 20 collaboratori, sede unica), Standard (da 20 a 100 collaboratori), Premium (oltre 100 collaboratori o multi-sede). Ogni pacchetto comprende l'audit, il rapporto di certificazione, il grade ufficiale, l'iscrizione nel registro certificato e il certificato verificabile. I prezzi indicati su aegryn.com sono indicativi e IVA esclusa; il preventivo definitivo è redatto dopo la pre-qualifica. Il grade non è garantito: risulta dall'audit. Il certificato è valido dodici mesi dall'emissione; il suo rinnovo è oggetto di una nuova missione." },
+        { "title": "Stima online e pre-qualifica", "body": "Lo strumento di stima (/valuation) e il pre-screening di una richiesta di certificazione sono gratuiti e senza impegno. Producono una stima indicativa, generata a partire dai dati dichiarati senza verifica. Aegryn si riserva il diritto di non dare seguito a una richiesta di certificazione al termine della pre-qualifica." },
+        { "title": "Progettazione di asset (Costruire)", "body": "Progettazione, sviluppo e, se del caso, gestione di asset digitali per conto del Cliente, a prezzo fisso convenuto nella proposta. Salvo diversa pattuizione scritta, il Cliente diventa proprietario degli sviluppi specifici consegnati e integralmente pagati; Aegryn conserva la proprietà dei propri metodi, strumenti e componenti generici, concessi in licenza d'uso non esclusiva." },
+        { "title": "Ricerca di dirigenti (Reclutare, Aegryn Talent)", "body": "Ricerca di dirigenti e profili direttivi (assunzione a tempo indeterminato) e collocamento temporaneo (interim management). Assunzione a tempo indeterminato: onorari pari al 20 % della retribuzione annua lorda del candidato collocato, dovuti all'effettiva presa di servizio, con garanzia di sostituzione di tre mesi. Collocamento temporaneo: 20 % della retribuzione annua lorda equivalente, pro rata della durata della missione, fatturati mensilmente, senza garanzia di sostituzione. Nessun onorario è dovuto se nessun candidato viene collocato." },
+        { "title": "Rete di esperti e abbonamento Scheda Esperto", "body": "Aegryn referenzia professionisti indipendenti («Esperti partner») visibili dalla sezione Rete di esperti del sito. Il referenziamento è subordinato a un abbonamento Scheda Esperto (CHF 89 IVA esclusa al mese o tariffa annuale in vigore), senza impegno minimo, disdicibile in qualsiasi momento con effetto al termine del periodo in corso. L'Esperto partner fissa liberamente onorari e condizioni; Aegryn non percepisce alcuna commissione sulle sue prestazioni e non è parte del rapporto tra l'Esperto partner e i suoi clienti. Programma di referral: un mese gratuito per chi presenta e per chi è presentato per ogni nuovo abbonamento sottoscritto; Aegryn può modificare il programma con preavviso di trenta giorni." },
+        { "title": "Pubblicazioni", "body": "Aegryn Magazine e la newsletter Built to Last sono pubblicazioni editoriali, gratuite in versione digitale. Il loro contenuto è informativo e non costituisce consulenza personalizzata. L'edizione cartacea, quando esiste, è soggetta a condizioni proprie comunicate al momento dell'ordine." },
+        { "title": "Mandati riservati strutturati", "body": "Su accordo specifico e scritto, Aegryn accompagna il Cliente in un'operazione di trasmissione, acquisizione, apertura del capitale o ristrutturazione. Tali mandati sono soggetti a un accordo di riservatezza, a una verifica dell'identità e del titolare effettivo (KYC) e, se del caso, all'apertura di una data room sicura. Quando è previsto un deposito fiduciario, esso è detenuto da una banca terza; Aegryn non è mai depositaria di fondi. Onorari, tempi e condizioni di recesso sono definiti esclusivamente nel mandato. Aegryn consiglia e struttura; l'esecuzione finanziaria e legale è affidata a partner accreditati (banche, studi legali, notai)." }
+      ]
+    },
+    {
+      "title": "Ordine e formazione del contratto",
+      "blocks": [
+        { "body": "Qualsiasi richiesta effettuata da aegryn.com (moduli di contatto, richieste di azione delle pagine di consulenza, richiesta di certificazione, modulo talent) vale come richiesta di informazioni e non come ordine. Il contratto si forma con la firma, da parte di entrambe le parti, della proposta, del preventivo o del mandato, oppure con la conferma scritta dell'ordine da parte di Aegryn." },
+        { "body": "La proposta scritta precisa almeno: oggetto e perimetro, deliverable, calendario, esperti mobilitati, onorari e modalità di pagamento, ipotesi ed esclusioni. È valida trenta giorni dall'emissione, salvo diversa indicazione." }
+      ]
+    },
+    {
+      "title": "Obblighi del Cliente",
+      "blocks": [
+        { "body": "Il Cliente si impegna a fornire, nei termini convenuti, informazioni esatte, complete e aggiornate; a designare un interlocutore autorizzato; a garantire di disporre dei diritti necessari su documenti, dati e asset comunicati; a mantenere la riservatezza del processo di valutazione o consulenza; e a informare Aegryn di qualsiasi evento suscettibile di incidere sulla missione (cambio di controllo, contenzioso, incidente di sicurezza, ingiunzione regolamentare)." },
+        { "body": "Ritardi o carenze informative imputabili al Cliente prolungano di conseguenza i termini di Aegryn e possono dar luogo a una revisione degli onorari se il carico di lavoro ne risulta modificato." }
+      ]
+    },
+    {
+      "title": "Obblighi di Aegryn",
+      "blocks": [
+        { "body": "Aegryn esegue le proprie prestazioni con diligenza e indipendenza, secondo le regole dell'arte e i metodi descritti nella proposta. Aegryn è tenuta a un'obbligazione di mezzi. Gli esperti che intervengono in una missione sono nominati e responsabili del proprio perimetro; Aegryn resta l'unico interlocutore contrattuale del Cliente." },
+        { "body": "Aegryn si astiene dall'intervenire in una situazione di conflitto di interessi non dichiarato. Qualora un conflitto emerga nel corso della missione, Aegryn ne informa il Cliente senza indugio e propone, a seconda del caso, misure di separazione o la conclusione della missione." }
+      ]
+    },
+    {
+      "title": "Prezzi, fatturazione e pagamento",
+      "blocks": [
+        { "body": "Gli onorari sono espressi IVA esclusa, in franchi svizzeri o in euro secondo la proposta. Le missioni di consulenza sono fatturate a forfait o secondo il piano previsto nella proposta; all'avvio può essere richiesto un acconto. La certificazione CIFSO 5000 è fatturata all'ordine, secondo il pacchetto scelto; il pagamento può avvenire tramite bonifico o Stripe Checkout su aegryn.com. Gli abbonamenti Scheda Esperto sono addebitati mensilmente o annualmente in anticipo." },
+        { "body": "Salvo diversa pattuizione, le fatture sono pagabili a trenta giorni netti dalla data di emissione. Ogni ritardo di pagamento comporta di diritto interessi di mora al tasso legale svizzero e la sospensione delle prestazioni in corso dopo diffida rimasta senza effetto per dieci giorni. Le spese di viaggio e gli esborsi sostenuti con l'accordo del Cliente sono rifatturati al costo effettivo." }
+      ]
+    },
+    {
+      "title": "Riservatezza, data room e verifica dell'identità",
+      "blocks": [
+        { "body": "Aegryn tratta come riservate tutte le informazioni non pubbliche comunicate dal Cliente e le utilizza esclusivamente ai fini della prestazione. Tale obbligo sopravvive cinque anni dopo la fine della missione. Aegryn può proporre la firma di un accordo di riservatezza specifico prima di qualsiasi scambio di documenti sensibili; gli Esperti partner che intervengono in una missione sono soggetti agli stessi obblighi." },
+        { "body": "Quando viene messa a disposizione una data room sicura (certificazione, mandato riservato), l'accesso è strettamente controllato per livelli di autorizzazione e ogni consultazione è registrata (identità, indirizzo IP, data e ora). Sono adottate misure tecniche dissuasive (blocco del download diretto, filigrana dinamica). Esse costituiscono una seria dissuasione e una prova in caso di controversia, senza poter garantire l'impossibilità assoluta di qualsiasi acquisizione con mezzi esterni; la responsabilità contrattuale in caso di divulgazione è disciplinata dall'accordo di riservatezza firmato." },
+        { "body": "Conformemente alla legge svizzera sul riciclaggio di denaro (LRD) e alle norme europee applicabili, Aegryn verifica l'identità dei Clienti e dei titolari effettivi (partecipazione pari o superiore al 25 %) nell'ambito delle richieste di certificazione e dei mandati riservati. In caso di dubbio, Aegryn può sospendere o porre fine alla missione senza indennizzo." }
+      ]
+    },
+    {
+      "title": "Proprietà intellettuale",
+      "blocks": [
+        { "body": "Il protocollo CIFSO 5000, il CIFSO Valuation Index, i framework e le griglie metodologiche, i marchi Aegryn e il monogramma AE, nonché i modelli di rapporto sono proprietà esclusiva di Aegryn. Il Cliente riceve, sui rapporti e deliverable integralmente pagati, un diritto d'uso non esclusivo e non cedibile per le proprie esigenze interne e, per quanto riguarda certificato e grade, un diritto di comunicazione a terzi (banche, investitori, acquirenti, partner) durante il periodo di validità del certificato." },
+        { "body": "Qualsiasi riproduzione, modifica o diffusione pubblica del rapporto di certificazione, del metodo o del marchio al di fuori di tali usi richiede il previo consenso scritto di Aegryn. Il Cliente autorizza Aegryn a menzionare il suo nome e il suo grade nel registro certificato e, salvo opposizione scritta, a titolo di referenza." }
+      ]
+    },
+    {
+      "title": "Protezione dei dati",
+      "blocks": [
+        { "body": "Aegryn tratta i dati personali conformemente alla legge federale svizzera sulla protezione dei dati (LPD) e al Regolamento generale sulla protezione dei dati (GDPR) ove applicabile. Le modalità di trattamento, i periodi di conservazione e i diritti degli interessati sono descritti nell'informativa sulla privacy disponibile su aegryn.com/privacy. I dati raccolti tramite i moduli del sito sono utilizzati per rispondere alla richiesta e, con il consenso esplicito della persona, per l'invio della newsletter." }
+      ]
+    },
+    {
+      "title": "Responsabilità",
+      "blocks": [
+        { "body": "Aegryn è tenuta a un'obbligazione di mezzi. Non garantisce né l'ottenimento di un grade determinato, né il valore futuro di un'organizzazione, né l'esito di un'operazione, di un finanziamento o di un recruiting, né le decisioni assunte dal Cliente sulla base dei deliverable. Il grade e il rapporto riflettono gli elementi verificati alla data dell'audit sulla base delle informazioni fornite dal Cliente." },
+        { "body": "La responsabilità di Aegryn, a qualsiasi titolo, è limitata all'importo degli onorari IVA esclusa effettivamente percepiti per la prestazione in questione nei dodici mesi precedenti il fatto generatore. Aegryn non risponde dei danni indiretti, del mancato guadagno, della perdita di dati o di opportunità. Tali limitazioni non si applicano in caso di dolo o colpa grave." }
+      ]
+    },
+    {
+      "title": "Contestazione del grade",
+      "blocks": [
+        { "body": "Qualsiasi contestazione del grade o del rapporto di certificazione deve essere notificata per iscritto ad Aegryn, tramite aegryn.com/contact, entro quindici giorni di calendario dalla consegna del rapporto, con gli elementi a supporto. Aegryn risponde entro quindici giorni lavorativi e può, a seconda del caso, confermare il grade, rivederlo o proporre un audit integrativo. Un piano di rimediazione seguito da una nuova sottomissione è oggetto di una missione distinta." }
+      ]
+    },
+    {
+      "title": "Durata, risoluzione e annullamento",
+      "blocks": [
+        { "body": "Ogni missione termina con la consegna dei deliverable previsti. Il Cliente può porre fine a una missione di consulenza con preavviso scritto di quindici giorni; le prestazioni realizzate e gli impegni assunti verso terzi alla data di efficacia restano dovuti. Una richiesta di certificazione annullata dopo l'avvio dell'audit comporta la fatturazione dei lavori svolti, nel limite del 50 % del pacchetto." },
+        { "body": "Ciascuna parte può risolvere di diritto in caso di inadempimento grave non sanato entro trenta giorni da diffida scritta. Aegryn può sospendere o risolvere senza indennizzo in caso di dichiarazioni false, mancata verifica dell'identità o fondato sospetto di riciclaggio." }
+      ]
+    },
+    {
+      "title": "Legge applicabile e foro competente",
+      "blocks": [
+        { "body": "Le presenti CGV e qualsiasi prestazione Aegryn sono soggette al diritto svizzero sostanziale, con esclusione delle norme di conflitto e della Convenzione di Vienna sulla vendita internazionale di merci. Le parti si adoperano per risolvere amichevolmente qualsiasi controversia entro trenta giorni. In mancanza, sono esclusivamente competenti i tribunali della sede di Aegryn (Cantone di Vaud, Svizzera), fatte salve le disposizioni imperative applicabili ai consumatori." }
+      ]
+    }
+  ],
+  "ctaContact": "Contattare il team Aegryn",
+  "ctaTermsUse": "Condizioni d'uso"
+}

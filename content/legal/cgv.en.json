@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "General Terms of Sale and Service | Aegryn",
+    "desc": "Contractual terms governing Aegryn's advisory services, CIFSO 5000 certification, asset engineering, executive recruitment, expert network and publications."
+  },
+  "label": "General Terms of Sale and Service",
+  "version": "Version: October 2026",
+  "note": "This document is the binding contractual reference between Aegryn and its clients. The scope, duration and fees of each engagement are set out in the written proposal, quote or mandate signed by the parties, which prevails on those points in case of discrepancy. Aegryn is an integrated advisory firm: it does not operate a marketplace and does not act as a financial intermediary.",
+  "sections": [
+    {
+      "title": "Purpose and scope",
+      "blocks": [
+        { "body": "These General Terms of Sale and Service (\"Terms\") govern all services provided by Aegryn, a company incorporated under Swiss law with its registered office in Saint-Sulpice (Vaud), to any legal entity or individual acting in a professional capacity (\"Client\"). Any order or signature of a proposal or mandate constitutes unreserved acceptance of these Terms, to the exclusion of any purchasing terms of the Client." },
+        { "body": "The Terms apply to the following services: advisory (Advise), CIFSO 5000 certification (Value), design and operation of digital assets (Build), executive recruitment (Recruit, Aegryn Talent), listing in the expert network, publications (Aegryn Magazine, newsletter) and, by specific agreement, confidential structured mandates." }
+      ]
+    },
+    {
+      "title": "Definitions",
+      "defs": [
+        ["Aegryn", "Aegryn, an integrated advisory firm and operating group under Swiss law, together with its affiliated entities involved in delivering the services."],
+        ["Client", "Any organisation (company, group, foundation, public body) or its authorised representative ordering a service from Aegryn."],
+        ["Organisation", "The Client's company, entity or business perimeter that is the subject of the service (advisory, certification, valuation, recruitment)."],
+        ["CIFSO 5000 Certification", "Independent audit of an organisation's value across five dimensions: Code & Architecture (C), IP & Rights (I), Finance & Metrics (F), Security, Sovereignty & AI (S), Organisation, Talent & Succession (O). It results in a report and an official grade entered in the Aegryn certified register."],
+        ["Grade", "Rating awarded at the end of certification: ★, AAA, AA, A or B. The grade attests to a level of quality verified on a given date; it is neither a guarantee of value nor an investment recommendation."],
+        ["Indicative estimate", "Result produced by the online estimation tool (/valuation) or an analyst's opinion without audit. Never binding on third parties, always flagged as indicative."],
+        ["Partner expert", "Independent professional listed in the Aegryn expert network through an active Expert Profile subscription, or engaged by Aegryn to contribute to a certification dimension or an advisory engagement."],
+        ["Confidential structured mandate", "Specific engagement, entrusted in writing, in which Aegryn supports the Client in a transfer, acquisition, capital opening or restructuring, under a non-disclosure agreement, with identity verification and, where applicable, a data room and a third-party bank escrow. Financial execution is entrusted to accredited partners."]
+      ]
+    },
+    {
+      "title": "Services",
+      "blocks": [
+        { "title": "Advisory (Advise)", "body": "Advisory engagements in strategy and innovation, risk and compliance, technology and sovereignty, talent and organisation, M&A and post-merger integration. Each engagement is set out in a written proposal specifying scope, deliverables, duration, team (named experts) and fees. Deliverables are analyses, recommendations and decision documents; implementation remains the Client's responsibility. Aegryn does not provide regulated legal, tax or accounting opinions: where such opinions are required, they are issued by qualified professionals, either partners or appointed by the Client." },
+        { "title": "CIFSO 5000 Certification (Value)", "body": "Independent audit across the five dimensions, carried out by Aegryn analysts under the CIFSO 5000 protocol, with the support of partner experts where needed. Three packages depending on the size of the organisation: Express (under 20 employees, single site), Standard (20 to 100 employees), Premium (over 100 employees or multi-site). Each package includes the audit, the certification report, the official grade, registration in the certified register and the verifiable certificate. Prices shown on aegryn.com are indicative and exclusive of tax; the final quote is issued after pre-qualification. The grade is not guaranteed: it results from the audit. The certificate is valid for twelve months from issue; renewal is a new engagement." },
+        { "title": "Online estimate and pre-qualification", "body": "The estimation tool (/valuation) and the pre-screening of a certification request are free and non-binding. They produce an indicative estimate generated from declared data without verification. Aegryn reserves the right not to proceed with a certification request after pre-qualification." },
+        { "title": "Asset engineering (Build)", "body": "Design, development and, where applicable, operation of digital assets on behalf of the Client, at a fixed price agreed in the proposal. Unless otherwise agreed in writing, the Client becomes the owner of the specific developments delivered and paid in full; Aegryn retains ownership of its methods, tools and generic components, licensed on a non-exclusive basis." },
+        { "title": "Executive recruitment (Recruit, Aegryn Talent)", "body": "Search for executives and leadership profiles (permanent recruitment) and temporary placement (interim management). Permanent recruitment: fee of 20% of the placed candidate's gross annual salary, due on effective start date, with a three-month replacement guarantee. Temporary placement: 20% of the equivalent gross annual salary, pro rata to the duration of the assignment, invoiced monthly, with no replacement guarantee. No fee is due if no candidate is placed." },
+        { "title": "Expert network and Expert Profile subscription", "body": "Aegryn lists independent professionals (\"Partner experts\") visible from the Expert Network section of the site. Listing is subject to an Expert Profile subscription (CHF 89 excl. VAT per month or the annual rate in force), with no minimum term, cancellable at any time with effect at the end of the current period. The Partner expert freely sets their fees and terms; Aegryn receives no commission on their services and is not a party to the relationship between the Partner expert and their clients. Referral programme: one month free for both referrer and referee for each new subscription; Aegryn may amend this programme with thirty days' notice." },
+        { "title": "Publications", "body": "Aegryn Magazine and the Built to Last newsletter are editorial publications, free in digital form. Their content is informational and does not constitute personalised advice. The print edition, where available, is subject to its own terms communicated at the time of order." },
+        { "title": "Confidential structured mandates", "body": "By specific written agreement, Aegryn supports the Client in a transfer, acquisition, capital opening or restructuring. These mandates are subject to a non-disclosure agreement, verification of identity and beneficial owner (KYC) and, where applicable, the opening of a secure data room. Where an escrow is provided for, it is held by a third-party bank; Aegryn never holds funds. Fees, timelines and withdrawal terms are defined exclusively in the mandate. Aegryn advises and structures; financial and legal execution is entrusted to accredited partners (banks, law firms, notaries)." }
+      ]
+    },
+    {
+      "title": "Order and formation of the contract",
+      "blocks": [
+        { "body": "Any request made via aegryn.com (contact forms, action requests from the advisory pages, certification request, talent form) is a request for information, not an order. The contract is formed upon signature by both parties of the proposal, quote or mandate, or upon written confirmation of the order by Aegryn." },
+        { "body": "The written proposal specifies at least: purpose and scope, deliverables, timeline, experts involved, fees and payment terms, assumptions and exclusions. It is valid for thirty days from issue unless otherwise stated." }
+      ]
+    },
+    {
+      "title": "Client obligations",
+      "blocks": [
+        { "body": "The Client undertakes to provide, within the agreed timelines, accurate, complete and up-to-date information; to appoint an authorised contact; to warrant that it holds the necessary rights over the documents, data and assets provided; to keep the assessment or advisory process confidential; and to inform Aegryn of any event likely to affect the engagement (change of control, litigation, security incident, regulatory injunction)." },
+        { "body": "Delays or information gaps attributable to the Client extend Aegryn's timelines accordingly and may give rise to a fee revision if the workload is altered." }
+      ]
+    },
+    {
+      "title": "Aegryn obligations",
+      "blocks": [
+        { "body": "Aegryn performs its services diligently and independently, in accordance with professional standards and the methods described in the proposal. Aegryn is bound by an obligation of means. Experts working on an engagement are named and accountable for their scope; Aegryn remains the Client's sole contractual counterpart." },
+        { "body": "Aegryn will not act in an undisclosed conflict of interest. Where a conflict arises during an engagement, Aegryn informs the Client without delay and proposes, as appropriate, ring-fencing measures or termination of the engagement." }
+      ]
+    },
+    {
+      "title": "Prices, invoicing and payment",
+      "blocks": [
+        { "body": "Fees are stated exclusive of tax, in Swiss francs or euros as set out in the proposal. Advisory engagements are invoiced as a fixed fee or according to the schedule in the proposal; a deposit may be requested at the start. CIFSO 5000 certification is invoiced on order, according to the chosen package; payment may be made by bank transfer or via Stripe Checkout on aegryn.com. Expert Profile subscriptions are charged monthly or annually in advance." },
+        { "body": "Unless otherwise agreed, invoices are payable within thirty days net of the invoice date. Late payment automatically incurs default interest at the Swiss statutory rate and suspension of ongoing services after a formal notice remaining unanswered for ten days. Travel expenses and disbursements incurred with the Client's agreement are re-invoiced at cost." }
+      ]
+    },
+    {
+      "title": "Confidentiality, data room and identity verification",
+      "blocks": [
+        { "body": "Aegryn treats all non-public information provided by the Client as confidential and uses it solely for the purposes of the service. This obligation survives for five years after the end of the engagement. Aegryn may propose a specific non-disclosure agreement before any exchange of sensitive documents; Partner experts working on an engagement are bound by the same obligations." },
+        { "body": "Where a secure data room is made available (certification, confidential mandate), access is strictly controlled by authorisation levels and every consultation is logged (identity, IP address, timestamp). Technical deterrents are in place (direct download blocked, dynamic watermarking). They constitute a serious deterrent and evidence in case of dispute, without guaranteeing the absolute impossibility of capture by external means; contractual liability in case of disclosure rests on the signed non-disclosure agreement." },
+        { "body": "In accordance with the Swiss Anti-Money Laundering Act (AMLA) and applicable European rules, Aegryn verifies the identity of Clients and beneficial owners (holdings of 25% or more) in connection with certification requests and confidential mandates. In case of doubt, Aegryn may suspend or terminate the engagement without compensation." }
+      ]
+    },
+    {
+      "title": "Intellectual property",
+      "blocks": [
+        { "body": "The CIFSO 5000 protocol, the CIFSO Valuation Index, the methodological frameworks and grids, the Aegryn trademarks and the AE monogram, and the report templates are the exclusive property of Aegryn. On reports and deliverables paid in full, the Client receives a non-exclusive, non-transferable right of use for its internal needs and, as regards the certificate and grade, a right to communicate them to third parties (banks, investors, acquirers, partners) during the certificate's validity period." },
+        { "body": "Any reproduction, modification or public dissemination of the certification report, the method or the trademark beyond these uses requires Aegryn's prior written consent. The Client authorises Aegryn to mention its name and grade in the certified register and, unless it objects in writing, as a reference." }
+      ]
+    },
+    {
+      "title": "Data protection",
+      "blocks": [
+        { "body": "Aegryn processes personal data in accordance with the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR) where applicable. Processing arrangements, retention periods and data subjects' rights are described in the privacy policy available at aegryn.com/privacy. Data collected through the site's forms is used to respond to the request and, with the person's explicit consent, to send the newsletter." }
+      ]
+    },
+    {
+      "title": "Liability",
+      "blocks": [
+        { "body": "Aegryn is bound by an obligation of means. It guarantees neither a given grade, nor the future value of an organisation, nor the outcome of a transaction, financing or recruitment, nor the decisions taken by the Client on the basis of the deliverables. The grade and report reflect the elements verified at the date of the audit on the basis of information provided by the Client." },
+        { "body": "Aegryn's liability, on any grounds whatsoever, is limited to the amount of fees excluding tax actually received for the service concerned in the twelve months preceding the triggering event. Aegryn is not liable for indirect damages, loss of profit, loss of data or loss of opportunity. These limitations do not apply in case of wilful misconduct or gross negligence." }
+      ]
+    },
+    {
+      "title": "Grade dispute",
+      "blocks": [
+        { "body": "Any dispute of the grade or the certification report must be notified to Aegryn in writing, via aegryn.com/contact, within fifteen calendar days of delivery of the report, with supporting elements. Aegryn responds within fifteen business days and may, as appropriate, confirm the grade, revise it or propose an additional audit. A remediation plan followed by a new submission is a separate engagement." }
+      ]
+    },
+    {
+      "title": "Term, termination and cancellation",
+      "blocks": [
+        { "body": "Each engagement ends upon delivery of the agreed deliverables. The Client may terminate an advisory engagement with fifteen days' written notice; services performed and commitments made to third parties as at the effective date remain due. A certification request cancelled after the audit has started gives rise to invoicing of the work performed, up to 50% of the package." },
+        { "body": "Either party may terminate as of right in case of a material breach not remedied within thirty days of written notice. Aegryn may suspend or terminate without compensation in case of misrepresentation, failed identity verification or well-founded suspicion of money laundering." }
+      ]
+    },
+    {
+      "title": "Governing law and jurisdiction",
+      "blocks": [
+        { "body": "These Terms and all Aegryn services are governed by Swiss substantive law, to the exclusion of conflict-of-law rules and the Vienna Convention on Contracts for the International Sale of Goods. The parties shall endeavour to settle any dispute amicably within thirty days. Failing that, the courts of Aegryn's registered office (Canton of Vaud, Switzerland) have exclusive jurisdiction, subject to mandatory consumer protection provisions." }
+      ]
+    }
+  ],
+  "ctaContact": "Contact the Aegryn team",
+  "ctaTermsUse": "Terms of use"
+}
