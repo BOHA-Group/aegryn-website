@@ -5,6 +5,7 @@ import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubsc
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
 import { PAGE_ACTIONS, getAction } from '@/content/advisory/actions'
+import { ADVISORY_BLUR } from '@/content/advisory/blur'
 import { routing } from '@/i18n/routing'
 import type { AdvisoryPageContent } from '@/content/advisory/types'
 
@@ -75,7 +76,18 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12">
-        <Image src={c.image} alt={c.imageAlt} fill priority sizes="100vw" className="object-cover object-center" />
+        <Image
+          src={c.image}
+          alt={c.imageAlt}
+          fill
+          priority
+          fetchPriority="high"
+          quality={70}
+          sizes="100vw"
+          placeholder={ADVISORY_BLUR[c.image] ? 'blur' : 'empty'}
+          blurDataURL={ADVISORY_BLUR[c.image]}
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
