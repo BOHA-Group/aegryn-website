@@ -43,7 +43,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Lo que obtiene',
       items: [
         'Una decisión que su comité puede defender ante un banquero o un accionista.',
-        'Un rumbo documentado, que existe sin usted.',
+        'Un rumbo que su comité puede aplicar en su ausencia, sin llamarle.',
         'Una primera acción fechada en los próximos treinta días.',
       ],
     },

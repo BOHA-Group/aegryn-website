@@ -43,7 +43,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Wat u krijgt',
       items: [
         'Een beslissing die uw comité kan verdedigen tegenover een bankier of een aandeelhouder.',
-        'Een gedocumenteerde koers, die bestaat zonder u.',
+        'Een koers die uw comité in uw afwezigheid kan toepassen, zonder u te bellen.',
         'Een eerste gedateerde actie binnen dertig dagen.',
       ],
     },

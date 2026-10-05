@@ -43,7 +43,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Che cosa ottenete',
       items: [
         'Una decisione che il vostro comitato può difendere davanti a una banca o a un azionista.',
-        'Una rotta documentata, che esiste senza di voi.',
+        'Una rotta che il vostro comitato può applicare in vostra assenza, senza chiamarvi.',
         'Una prima azione datata entro trenta giorni.',
       ],
     },

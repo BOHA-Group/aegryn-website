@@ -43,7 +43,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'What you get',
       items: [
         'A decision your board can defend in front of a banker or a shareholder.',
-        'A documented direction that exists without you.',
+        'A direction your committee can execute in your absence, without calling you.',
         'A first dated action within thirty days.',
       ],
     },

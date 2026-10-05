@@ -43,7 +43,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Was Sie erhalten',
       items: [
         'Eine Entscheidung, die Ihr Gremium vor einer Bank oder einem Aktionär vertreten kann.',
-        'Einen dokumentierten Kurs, der ohne Sie existiert.',
+        'Einen Kurs, den Ihr Gremium in Ihrer Abwesenheit umsetzen kann, ohne Sie anzurufen.',
         'Eine erste terminierte Massnahme innerhalb von dreissig Tagen.',
       ],
     },

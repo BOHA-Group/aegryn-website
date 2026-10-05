@@ -48,7 +48,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Ce que vous obtenez',
       items: [
         'Une décision que votre comité peut défendre devant un banquier ou un actionnaire.',
-        'Un cap documenté, qui existe sans vous.',
+        'Un cap que votre comité peut appliquer en votre absence, sans vous appeler.',
         'Une première action datée dans les trente jours.',
       ],
     },
