@@ -6,6 +6,7 @@ import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { INDUSTRIES, getIndustry, getOtherIndustries, getLocaleText } from '@/data/industries'
+import { HERO_BLUR } from '@/content/shared/heroBlur'
 import { ARTICLES }  from '@/data/articles'
 import { IndustryArticles } from '@/components/sections/industries/IndustryArticles'
 
@@ -64,6 +65,9 @@ export default async function IndustryDetailPage({ params }: Props) {
           className="object-cover opacity-45"
           sizes="100vw"
           priority
+          fetchPriority="high"
+          placeholder={HERO_BLUR[ind.img] ? 'blur' : 'empty'}
+          blurDataURL={HERO_BLUR[ind.img]}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/60 via-ag-navy/40 to-ag-navy/95" />
 

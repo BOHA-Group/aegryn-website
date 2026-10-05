@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useRef } from 'react'
 import Image                  from 'next/image'
+import { HERO_BLUR }           from '@/content/shared/heroBlur'
 import { gsap, SplitText }    from '@/lib/gsap'
 
 /**
@@ -113,7 +114,10 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           alt="Aegryn | Nos actifs numériques"
           fill
           priority
+          fetchPriority="high"
           quality={95}
+          placeholder="blur"
+          blurDataURL={HERO_BLUR['/images/assets/assets-intro.jpg']}
           className="object-cover object-center"
           sizes="100vw"
         />
