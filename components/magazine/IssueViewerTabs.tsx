@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { FlipbookViewer } from './FlipbookViewer'
 import { WebViewer }      from './WebViewer'
+import { TOC_01 }         from '@/content/magazine/issue-01/toc'
 
 interface Props {
   flipbookSrc: string
@@ -12,10 +13,14 @@ interface Props {
 
 /**
  * IssueViewerTabs — onglets Flipbook / Web Edition
- * Flipbook : version magazine 138 pages a feuilleter (StPageFlip)
+ * Flipbook : version magazine a feuilleter (StPageFlip), pagination derivee du sommaire
  * Web Edition : le meme contenu, article par article (_web.html),
  * pilote par la barre laterale MagazineNav via l'evenement aegryn:magazine-navigate
  */
+/* Derives du sommaire : derniere page referencee + 2 (page publicitaire et quatrieme de couverture), nombre d'articles */
+const ARTICLE_COUNT = TOC_01.reduce((n, s) => n + s.articles.length, 0)
+const PAGE_COUNT    = Math.max(...TOC_01.flatMap(s => s.articles.map(a => a.page))) + 2
+
 export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
   const [tab, setTab] = useState<'flipbook' | 'web'>('flipbook')
   const [anchor, setAnchor] = useState<string | null>(null)
@@ -59,7 +64,7 @@ export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
           ≡ Web Edition
         </button>
         <span className="ml-auto font-mono text-[7px] tracking-[0.14em] uppercase text-black/20 py-3 hidden md:block">
-          {tab === 'flipbook' ? '138 p. · Print format' : 'Full edition · 81 articles'}
+          {tab === 'flipbook' ? `${PAGE_COUNT} p. · Print format` : `Full edition · ${ARTICLE_COUNT} articles`}
         </span>
       </div>
 
