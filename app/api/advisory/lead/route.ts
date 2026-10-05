@@ -10,8 +10,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { createServiceClient } from '@/lib/supabase'
-import { sendEmail } from '@/lib/sendEmail'
-import { getAction, type Metier, type ActionSlug } from '@/content/advisory/actions'
+import { sendEmail, emailAdvisoryLeadConfirmation } from '@/lib/sendEmail'
+import { getAction, REVENUE_BANDS, type Metier, type ActionSlug } from '@/content/advisory/actions'
 import { ACTION_FORM_UI } from '@/content/advisory/actionForm'
 
 const schema = z.object({
@@ -84,14 +84,21 @@ export async function POST(req: NextRequest) {
     'advisory-lead-internal',
   ).catch(err => console.error('[advisory/lead] internal email error', err))
 
-  /* ── Accusé de réception au visiteur ── */
+  /* ── Accusé de réception au visiteur, avec rappel de sa demande ── */
   const ui = ACTION_FORM_UI[locale] ?? ACTION_FORM_UI.fr
-  await sendEmail(
-    data.email,
-    `Aegryn — ${ui.successTitle}`,
-    `<p>${ui.successTitle} ${ui.successDesc}</p>`,
-    'advisory-lead-confirmation',
-  ).catch(err => console.error('[advisory/lead] confirmation email error', err))
+  const revenueLabel = (REVENUE_BANDS[locale] ?? REVENUE_BANDS.fr).find(r => r.value === data.revenueBand)?.label ?? null
+  const confirmation = emailAdvisoryLeadConfirmation({
+    ui: ui.email_,
+    lang:        locale,
+    fullName:    data.fullName,
+    actionLabel: actionDef?.label ?? data.action,
+    question:    actionDef?.question ?? '',
+    answer:      data.answer ?? null,
+    revenueLabel,
+    sector:      data.sector ?? null,
+  })
+  await sendEmail(data.email, confirmation.subject, confirmation.html, 'advisory-lead-confirmation')
+    .catch(err => console.error('[advisory/lead] confirmation email error', err))
 
   return NextResponse.json({ ok: true })
 }

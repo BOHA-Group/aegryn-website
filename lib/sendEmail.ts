@@ -141,6 +141,48 @@ function WRAP(body: string): string {
 </body></html>`
 }
 
+/* ── Gabarit client (prospects / demandes publiques), sans mention partenaire ── */
+function WRAP_CLIENT(body: string, opts: { lang: string; subtitle: string; footnote: string }): string {
+  return `<!DOCTYPE html>
+<html lang="${opts.lang}">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e2e8f0;max-width:560px;width:100%;">
+          <tr>
+            <td style="padding:24px 32px 20px;border-bottom:1px solid #e2e8f0;">
+              <table cellpadding="0" cellspacing="0"><tr>
+                <td style="padding-right:12px;">${LOGO_SVG}</td>
+                <td>
+                  <p style="margin:0;font-size:18px;font-weight:700;color:#0F1C3F;letter-spacing:-0.02em;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Aegryn</p>
+                  <p style="margin:0;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#5ADDA4;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">${opts.subtitle}</p>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+          <tr><td style="padding:28px 32px;">
+            ${body}
+          </td></tr>
+          <tr>
+            <td style="padding:24px 32px 20px;border-top:1px solid #e2e8f0;">
+              <p style="margin:0 0 4px 0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                <strong style="color:#64748b;">Aegryn</strong> · +41 24 539 18 81 · <a href="mailto:contact@boha-group.com" style="color:#94a3b8;text-decoration:none;">contact@boha-group.com</a>
+              </p>
+              <p style="margin:0;font-size:11px;color:#94a3b8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                <a href="https://aegryn.com" style="color:#5ADDA4;text-decoration:none;">aegryn.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <p style="font-size:10px;color:#94a3b8;margin:12px 0 0 0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">${opts.footnote}</p>
+      </td>
+    </tr>
+  </table>
+</body></html>`
+}
+
 /* ── Helpers affichage montant ─────────────────────────────────────────── */
 function amountRow(label: string, chfFormatted: string): string {
   return `<tr>
@@ -510,6 +552,44 @@ export function emailKycDocSubmitted(opts: {
     <p style="margin:0;">${ctaButton('Ouvrir le dossier KYC', 'https://aegryn.com/admin/kyc/' + opts.memberId, false)}</p>
   `)
   return { subject, html }
+}
+
+/* ── Advisory : accusé de réception au visiteur, avec rappel de la demande ── */
+export function emailAdvisoryLeadConfirmation(opts: {
+  ui: {
+    subject: string; kicker: string; greeting: (name: string) => string; intro: string
+    recap: string; request: string; revenue: string; sector: string; yourAnswer: string
+    next: string; reply: string; sign: string
+    headerSubtitle: string; footnote: string
+  }
+  lang: string
+  fullName: string
+  actionLabel: string
+  question: string
+  answer?: string | null
+  revenueLabel?: string | null
+  sector?: string | null
+}): { subject: string; html: string } {
+  const esc = (v: string) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const u = opts.ui
+  const rows = [
+    infoRow(u.request, esc(opts.actionLabel)),
+    opts.revenueLabel ? infoRow(u.revenue, esc(opts.revenueLabel)) : '',
+    opts.sector       ? infoRow(u.sector,  esc(opts.sector))       : '',
+    infoRow(esc(opts.question), opts.answer ? esc(opts.answer).replace(/\n/g, '<br/>') : '—'),
+  ].join('')
+  const html = WRAP_CLIENT(`
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">${esc(u.kicker)}</p>
+    <h1 style="margin:0 0 16px 0;font-size:20px;font-weight:700;color:#0F1C3F;line-height:1.25;">${esc(opts.actionLabel)}</h1>
+    <p style="margin:0 0 8px 0;font-size:14px;color:#475569;line-height:1.6;">${esc(u.greeting(opts.fullName))}</p>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">${esc(u.intro)}</p>
+    <p style="margin:0 0 8px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">${esc(u.recap)}</p>
+    <table cellpadding="0" cellspacing="0" style="margin:0 0 24px 0;">${rows}</table>
+    <p style="margin:0 0 12px 0;font-size:14px;color:#475569;line-height:1.6;">${esc(u.next)}</p>
+    <p style="margin:0 0 20px 0;font-size:13px;color:#64748b;line-height:1.6;">${esc(u.reply)}</p>
+    <p style="margin:0;font-size:13px;color:#0F1C3F;font-weight:600;">${esc(u.sign)}</p>
+  `, { lang: opts.lang, subtitle: esc(u.headerSubtitle), footnote: esc(u.footnote) })
+  return { subject: u.subject, html }
 }
 
 /* ── KYC : email final profil approuvé (buyer, seller ou partner) ──────── */
