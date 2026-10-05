@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
-import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2 } from 'lucide-react'
+import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2, Users } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
-  title: 'Expert Network | Aegryn Grade',
-  description: 'Aegryn Grade is an independent certification. Independent experts (IP legal, chartered accountants, cybersecurity, code audit) can apply to align with the certification or support sellers and buyers.',
+  title: 'Réseau d’auditeurs indépendants | Certification CIFSO 5000 | Aegryn',
+  description: 'La certification CIFSO 5000 est indépendante. Des experts indépendants (code, juridique IP, finance, cybersécurité, organisation) peuvent candidater pour s’adosser à la certification sur l’une des cinq dimensions.',
 }
 
-const PARTNER_ICONS = [Code2, Scale, Calculator, ShieldCheck] as const
-const PARTNER_KEYS = ['code', 'legal', 'finance', 'security'] as const
+const PARTNER_ICONS = [Code2, Scale, Calculator, ShieldCheck, Users] as const
+const PARTNER_KEYS = ['code', 'legal', 'finance', 'security', 'organisation'] as const
 
 export default async function GradePartnersPage() {
   const t = await getTranslations('gradePartners')
@@ -47,7 +47,7 @@ export default async function GradePartnersPage() {
 
       {/* 4 colonnes experts */}
       <section className="py-20 px-6 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {PARTNER_TYPES.map((p) => {
             const Icon = p.icon
             return (

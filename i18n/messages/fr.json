@@ -875,10 +875,10 @@
       {
         "id": "web3",
         "label": "Art numérique, Web3 & Philanthropie",
-        "desc": "Actifs créatifs numériques, smart contracts à haute valeur IP, fonds philanthropiques à vocation numérique. Inclut les structures à mission, fondations technologiques et actifs créatifs à impact. Extension du label Aegryn Grade aux actifs Web3 en cours d'étude."
+        "desc": "Actifs créatifs numériques, smart contracts à haute valeur IP, fonds philanthropiques à vocation numérique. Inclut les structures à mission, fondations technologiques et actifs créatifs à impact. Extension de la certification CIFSO 5000 aux actifs Web3 en cours d'étude."
       }
     ],
-    "cta": "Soumettre votre actif pour certification"
+    "cta": "Demander une certification"
   },
   "about": {
     "hero": {
@@ -1364,9 +1364,9 @@
   },
   "gradePartners": {
     "back": "← Certification CIFSO 5000",
-    "eyebrow": "Aegryn GRADE",
+    "eyebrow": "Certification CIFSO 5000",
     "title": "Un réseau d'auditeurs indépendants, pas une obligation.",
-    "intro1": "L'Aegryn Grade est une certification indépendante : Aegryn évalue et note la qualité des organisations tech sans dépendre d'auditeurs imposés. Des professionnels indépendants peuvent être mandatés pour approfondir certains axes.",
+    "intro1": "La certification CIFSO 5000 est indépendante : Aegryn évalue et note la qualité des organisations sans dépendre d'auditeurs imposés. Des professionnels indépendants peuvent être mandatés pour approfondir certaines des cinq dimensions.",
     "intro2": "Nous restons ouverts aux candidatures d'experts indépendants souhaitant s'adosser à la certification ou rejoindre notre réseau, mobilisable à la demande avant, pendant et après une certification ou un accompagnement.",
     "types": {
       "code": {
@@ -1388,15 +1388,20 @@
         "label": "CYBERSÉCURITÉ",
         "desc": "Spécialiste cybersécurité accrédité (PASSI ou CREST), en support sur la dimension S (Sécurité) pour les organisations qui le souhaitent.",
         "dimension": "Dimension S : Sécurité"
+      },
+      "organisation": {
+        "label": "ORGANISATION & TALENT",
+        "desc": "Expert en gouvernance, organisation ou ressources humaines (dépendance au dirigeant, succession, rétention), en support sur la dimension O (Organisation & Talent) pour les organisations qui le souhaitent.",
+        "dimension": "Dimension O : Organisation & Talent"
       }
     },
     "ctaLabel": "POUR LES AUDITEURS INDÉPENDANTS",
-    "ctaTitle": "Vous êtes cabinet juridique, expert-comptable ou spécialiste cybersécurité ?",
-    "ctaDesc": "Candidatez pour rejoindre le réseau d'auditeurs indépendants Aegryn Grade : accès à un flux régulier de dossiers de certification nécessitant votre expertise.",
+    "ctaTitle": "Vous êtes cabinet juridique, expert-comptable, spécialiste cybersécurité ou expert en organisation ?",
+    "ctaDesc": "Candidatez pour rejoindre le réseau d'auditeurs indépendants de la certification CIFSO 5000 : accès à un flux régulier de dossiers de certification nécessitant votre expertise.",
     "ctaBtn": "Candidater au réseau d'auditeurs",
     "benefitsLabel": "CE QUE VOUS OBTENEZ",
     "benefits": [
-      "Accès à un flux régulier d'actifs tech nécessitant votre expertise",
+      "Accès à un flux régulier de dossiers d'organisations nécessitant votre expertise",
       "Visibilité en tant que partenaire du réseau Aegryn (dès les premiers mandats)",
       "Clientèle institutionnelle qualifiée : dirigeants, fonds PE, VC, Family Office",
       "Rémunération définie dans le cadre du partenariat"
@@ -1985,7 +1990,7 @@
         {
           "num": "02",
           "title": "Accès au pipeline certifié",
-          "desc": "Accès prioritaire au catalogue Aegryn et au flux off-market. Actifs certifiés Grade AA et au-dessus. Grade A disponibles sur demande avec plan de remédiation inclus."
+          "desc": "Accès au réseau Aegryn et à ses partenaires : cibles identifiées en amont des processus concurrentiels, revue indépendante des organisations certifiées CIFSO 5000, grade A et au-dessus avec plan de remédiation sur demande."
         },
         {
           "num": "03",
@@ -2013,7 +2018,7 @@
         },
         {
           "title": "Off-market en priorité",
-          "desc": "La majorité des actifs Aegryn n'est jamais listée publiquement. Les membres acquéreurs qualifiés y accèdent avant tout listing, ou exclusivement."
+          "desc": "La plupart des opportunités que nous accompagnons ne font l'objet d'aucune annonce publique. Elles naissent de la relation de conseil, en amont de tout processus de vente."
         },
         {
           "title": "Experts mobilisés au bon moment",
@@ -2986,7 +2991,7 @@
         "range": "45 a 59 / 100",
         "color": "#4A90D9",
         "rarity": "30 a 35% des actifs certifiés",
-        "profile": "Actif en développement avec un potentiel identifiable mais des faiblesses structurelles à adresser. Éligible à l'Aegryn Review avec plan de remédiation.",
+        "profile": "Organisation en développement avec un potentiel identifiable mais des faiblesses structurelles à adresser. Éligible à la certification avec plan de remédiation.",
         "typical": "Produit en early traction, dette technique significative, métriques financières partiellement documentées.",
         "subcodes": [
           "C-03, C-04",
@@ -7301,7 +7306,7 @@
     "s9Title": "Droit applicable et règlement des litiges",
     "s9": "Les présentes CGV sont soumises au droit suisse matériel. Tout litige sera soumis à la compétence exclusive des tribunaux du canton de domicile d'Aegryn. Les parties s'efforceront de résoudre tout différend à l'amiable dans un délai de 30 jours avant toute saisine judiciaire.",
     "s10Title": "Data Room et accès aux documents de due diligence",
-    "s10": "Dans le cadre du processus de certification et de transaction, Aegryn met à disposition une data room sécurisée permettant au vendeur de déposer les documents requis pour l'analyse CIFS. L'accès à ces documents est strictement contrôlé selon un système de niveaux d'autorisation : administrateur/vendeur, partenaire certifié assigné, acquéreur ayant signé l'accord de confidentialité Aegryn.\n\nChaque consultation est journalisée (identité, adresse IP, horodatage, durée). Des mesures techniques de dissuasion sont mises en place (blocage du téléchargement direct, détection de tentatives de capture, watermarking dynamique). Ces mesures constituent une dissuasion sérieuse et une preuve journalisée en cas de litige, mais ne peuvent garantir à 100% l'impossibilité de toute capture par des moyens externes (photographie, capture par un tiers appareil).\n\nL'acquéreur reconnaît et accepte que les documents consultés dans la data room sont protégés par les présentes CGV et l'accord de confidentialité Aegryn signé. Il s'engage contractuellement à ne reproduire, transmettre ou divulguer aucun document consulté, sous peine de dommages-intérêts et de poursuites judiciaires. La responsabilité d'Aegryn en cas de fuite résultant d'un contournement des protections techniques est expressément exclue, la responsabilité contractuelle étant portée par le NDA et les présentes CGV.",
+    "s10": "Dans le cadre du processus de certification et de transaction, Aegryn met à disposition une data room sécurisée permettant au vendeur de déposer les documents requis pour l'analyse CIFSO 5000. L'accès à ces documents est strictement contrôlé selon un système de niveaux d'autorisation : administrateur/vendeur, partenaire certifié assigné, acquéreur ayant signé l'accord de confidentialité Aegryn.\n\nChaque consultation est journalisée (identité, adresse IP, horodatage, durée). Des mesures techniques de dissuasion sont mises en place (blocage du téléchargement direct, détection de tentatives de capture, watermarking dynamique). Ces mesures constituent une dissuasion sérieuse et une preuve journalisée en cas de litige, mais ne peuvent garantir à 100% l'impossibilité de toute capture par des moyens externes (photographie, capture par un tiers appareil).\n\nL'acquéreur reconnaît et accepte que les documents consultés dans la data room sont protégés par les présentes CGV et l'accord de confidentialité Aegryn signé. Il s'engage contractuellement à ne reproduire, transmettre ou divulguer aucun document consulté, sous peine de dommages-intérêts et de poursuites judiciaires. La responsabilité d'Aegryn en cas de fuite résultant d'un contournement des protections techniques est expressément exclue, la responsabilité contractuelle étant portée par le NDA et les présentes CGV.",
     "s11Title": "Honoraires de transaction",
     "s11Charge": "La commission de transaction Aegryn est intégralement à la charge du cédant (vendeur). Elle est prélevée directement par Aegryn sur les fonds séquestrés à la date du closing, avant reversement du solde net au cédant. L'acquéreur (acheteur) ne paie aucune commission à Aegryn au titre de la transaction. L'accès au catalogue et au processus d'acquisition est gratuit pour les membres acheteurs qualifiés.",
     "s11Grid": "La commission de transaction Aegryn est calculée sur le prix ferme de cession effectivement réglé à la date du closing, selon la grille dégressive suivante :",
@@ -7471,7 +7476,7 @@
           "Vous informer sur nos services et offres.",
           "Gérer votre compte et votre abonnement (inscription, facturation, parrainage).",
           "Traiter les demandes d'accès NDA aux dossiers d'actifs et conserver les traces de signature.",
-          "Conduire les missions de certification CIFS (collecte et évaluation des dossiers vendeur).",
+          "Conduire les missions de certification CIFSO 5000 (collecte et évaluation des dossiers vendeur).",
           "Générer des statistiques de trafic utiles à l'amélioration de notre site web.",
           "Nous conformer aux lois, directives et recommandations des autorités."
         ],
@@ -7510,7 +7515,7 @@
         "providers": [
           [
             "Supabase",
-            "Base de données, authentification, stockage des dossiers (comptes, KYC, NDA, certification CIFS).",
+            "Base de données, authentification, stockage des dossiers (comptes, KYC, NDA, certification CIFSO 5000).",
             "EEE/USA"
           ],
           [
@@ -7581,7 +7586,7 @@
     ],
     "s4Title": "Processus de paiement, normal vs frauduleux",
     "s4NormalTitle": "Normal",
-    "s4Normal1": "Paiement des honoraires Aegryn Review (2 000€) ou Review+ (5 000€) via Stripe Checkout sur aegryn.com",
+    "s4Normal1": "Paiement des honoraires de certification CIFSO 5000 (forfaits Express, Standard ou Premium) sur facture ou via Stripe Checkout sur aegryn.com",
     "s4Normal2": "Versement du séquestre (10% du prix convenu) par virement bancaire vers l'IBAN de la banque partenaire désignée, avec référence de transaction",
     "s4FraudTitle": "Frauduleux",
     "s4Fraud1": "Toute demande de virement vers un compte personnel",
@@ -7625,7 +7630,7 @@
           "certification"
         ],
         "q": "Quelles sont les options de certification et leurs tarifs ?",
-        "a": "Deux parcours sont disponibles. Certification uniquement (Aegryn Review) : obtenir un Grade officiel à 2 000 CHF HT (Review interne) ou 5 000 CHF HT (Review+ co-signée), déductibles si une Certification Complète est engagée dans les 6 mois. Certification Complète CIFSO 5000 : audit complet sur les 5 dimensions, grade officiel et rapport détaillé, utilisable dans le cadre d'une levée de fonds, d'une transmission ou d'un partenariat."
+        "a": "La certification CIFSO 5000 se décline en trois forfaits selon la taille de l'organisation : Express (moins de 20 collaborateurs, site unique) dès 5 000 €, Standard (20 à 100 collaborateurs) dès 9 000 €, Premium (plus de 100 collaborateurs ou multi-sites) dès 15 000 €. Tous incluent l'audit complet sur les cinq dimensions, le rapport de certification indépendant, le grade officiel et l'inscription au registre certifié Aegryn. Prix hors taxes, indicatifs ; devis définitif après pré-qualification."
       },
       {
         "id": "what-grade",
@@ -7731,7 +7736,7 @@
           "certification"
         ],
         "q": "Proposez-vous des valorisations d'organisations ?",
-        "a": "Oui, via /valuation. Soumettez votre organisation pour obtenir une estimation indicative gratuite sous 48h. Pour une valorisation certifiée avec rapport détaillé, optez pour Aegryn Review (2 000 CHF HT) ou Review+ (5 000 CHF HT), déductibles si certification complète engagée dans les 6 mois."
+        "a": "Oui, via /valuation. Soumettez votre organisation pour obtenir une estimation indicative gratuite. Pour une valorisation opposable avec rapport détaillé, la certification CIFSO 5000 (forfaits Express, Standard, Premium) atteste la valeur sur cinq dimensions."
       }
     ],
     "filterLifecycle": "Cycle de vie"
@@ -7939,7 +7944,7 @@
       "itemIntroductionsLabel": "Introductions partenaire",
       "itemIntroductionsDesc": "Vos introductions client enregistrées.",
       "itemPartnerCertsLabel": "Certifications partenaire",
-      "itemPartnerCertsDesc": "Vos contributions aux certifications CIFS.",
+      "itemPartnerCertsDesc": "Vos contributions aux certifications CIFSO 5000.",
       "deletePartialSubmit": "Supprimer ({count, plural, one {# catégorie} other {# catégories}})",
       "deletePartialCancel": "Annuler",
       "deletePartialConfirmWarning": "Cette suppression est irréversible. Confirmer ?",
@@ -9108,7 +9113,7 @@
       "certifications": {
         "meta": "Co-signatures | Espace Partenaire Aegryn",
         "title": "Mes co-signatures",
-        "subtitle": "Missions de certification CIFS en cours.",
+        "subtitle": "Missions de certification CIFSO 5000 en cours.",
         "noCertifications": "Aucune co-signature assignée pour le moment.",
         "areaLabel": "Espace Partenaire"
       },
@@ -9345,7 +9350,7 @@
         "transaction": "Structuration de cession et processus de transaction",
         "buyers": "Profils, attentes et critères des acquéreurs",
         "outlook": "Tendances et projections marché pour 2027",
-        "index": "Scores et classements de certification CIFS",
+        "index": "Scores et classements de certification CIFSO 5000",
         "people": "Portraits et parcours d'entrepreneurs",
         "life": "Art de vivre, culture et territoires"
       },

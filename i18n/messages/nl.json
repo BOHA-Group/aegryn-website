@@ -779,10 +779,10 @@
       {
         "id": "web3",
         "label": "Digitale kunst & Web3",
-        "desc": "Digitale creatieve assets, smart contracts met hoge IP-waarde. Uitbreiding van het Aegryn Grade-label naar Web3-assets in onderzoek."
+        "desc": "Digitale creatieve activa, smart contracts met hoge IP-waarde, filantropische fondsen met digitale roeping. Omvat missiegedreven structuren, technologiestichtingen en creatieve impactactiva. Uitbreiding van de CIFSO 5000-certificering naar Web3-activa in onderzoek."
       }
     ],
-    "cta": "Dien uw asset in voor certificering"
+    "cta": "Een certificering aanvragen"
   },
   "founderQuote": {
     "text": "We hebben meer dan twintig jaar besteed aan het opbouwen, adviseren en herstructureren van organisaties. Wat we hebben geleerd, valt niet te onderwijzen. Bedrijven die standhouden kiezen niet tussen strategie en technologie, ze denken ze samen. En wat we aanbevelen, passen we ook op onszelf toe. Onze eigen activa doorlopen onze eigen methoden. Dat is onze eerste geloofwaardigheid.",
@@ -1404,9 +1404,9 @@
   },
   "gradePartners": {
     "back": "← Certificering CIFSO 5000",
-    "eyebrow": "Aegryn GRADE",
+    "eyebrow": "CIFSO 5000-certificering",
     "title": "Een netwerk van onafhankelijke auditoren, geen verplichting.",
-    "intro1": "De Aegryn Grade is een onafhankelijke certificering: Aegryn beoordeelt en beoordeelt de kwaliteit van tech-organisaties zonder afhankelijk te zijn van opgelegde auditors. Onafhankelijke professionals kunnen worden gemandateerd om bepaalde assen te verdiepen.",
+    "intro1": "De CIFSO 5000-certificering is onafhankelijk: Aegryn beoordeelt en waardeert de kwaliteit van organisaties zonder afhankelijk te zijn van opgelegde auditors. Onafhankelijke professionals kunnen worden ingeschakeld om een van de vijf dimensies uit te diepen.",
     "intro2": "Wij blijven open voor kandidaturen van onafhankelijke experts die de certificering willen ondersteunen of zich bij ons netwerk willen aansluiten, op aanvraag inzetbaar voor, tijdens en na een certificering of begeleiding.",
     "types": {
       "code": {
@@ -1428,15 +1428,20 @@
         "label": "CYBERBEVEILIGING",
         "desc": "Geaccrediteerde cybersecurity-specialist (PASSI of CREST), ter ondersteuning van dimensie S (Beveiliging) voor organisaties die dit wensen.",
         "dimension": "Dimensie S, Beveiliging"
+      },
+      "organisation": {
+        "label": "ORGANISATIE & TALENT",
+        "desc": "Expert in governance, organisatie of human resources (afhankelijkheid van de leider, opvolging, retentie), ter ondersteuning van dimensie O (Organisatie & Talent) voor organisaties die dat wensen.",
+        "dimension": "Dimensie O: Organisatie & Talent"
       }
     },
     "ctaLabel": "VOOR ONAFHANKELIJKE AUDITOREN",
-    "ctaTitle": "Bent u een advocatenkantoor, accountant of cybersecurity-specialist?",
-    "ctaDesc": "Solliciteer om lid te worden van het Aegryn Grade-netwerk van onafhankelijke auditors: toegang tot een regelmatige stroom van certificeringsdossiers die uw expertise vereisen.",
+    "ctaTitle": "Bent u advocatenkantoor, accountant, cyberbeveiligingsspecialist of organisatie-expert?",
+    "ctaDesc": "Solliciteer om toe te treden tot het netwerk van onafhankelijke auditors van de CIFSO 5000-certificering: toegang tot een regelmatige stroom certificeringsdossiers die uw expertise vereisen.",
     "ctaBtn": "Solliciteren voor het auditorennetwerk",
     "benefitsLabel": "WAT U KRIJGT",
     "benefits": [
-      "Toegang tot een regelmatige stroom van tech-activa die uw expertise vereisen",
+      "Toegang tot een regelmatige stroom organisatiedossiers die uw expertise vereisen",
       "Zichtbaarheid als Aegryn-netwerkpartner (vanaf de eerste mandaten)",
       "Gekwalificeerde institutionele klantenkring: leidinggevenden, PE-fondsen, VC, Family Offices",
       "Vergoeding bepaald binnen het partnerschapskader"
@@ -1960,7 +1965,7 @@
         {
           "num": "02",
           "title": "Toegang tot de gecertificeerde pipeline",
-          "desc": "Prioriteitstoegang tot de Aegryn-catalogus en off-market flow. Gecertificeerde assets Grade AA en hoger. Grade A op aanvraag met remediëringsplan inbegrepen."
+          "desc": "Toegang tot het Aegryn-netwerk en zijn partners: doelwitten geïdentificeerd vóór concurrentiële processen, onafhankelijke beoordeling van CIFSO 5000-gecertificeerde organisaties, grade A en hoger met remediëringsplan op aanvraag."
         },
         {
           "num": "03",
@@ -1988,7 +1993,7 @@
         },
         {
           "title": "Off-market eerst",
-          "desc": "De meeste Aegryn-assets worden nooit publiek gelistet. Gekwalificeerde overnemer-leden krijgen toegang vóór enige publieke listung, of exclusief."
+          "desc": "De meeste transacties die wij begeleiden worden nooit publiek aangekondigd. Ze ontstaan uit de adviesrelatie, vóór elk verkoopproces."
         },
         {
           "title": "Experts op het juiste moment",
@@ -2065,7 +2070,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Certificering CIFSO 5000 — Aegryn | Onafhankelijk Methodologie & Protocol",
-      "desc": "Het Aegryn Grade-protocol: CIFS-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
+      "desc": "Het Aegryn Grade-protocol: CIFSO 5000-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
     },
     "label": "Certificering CIFSO 5000 — Methodologie",
     "version": "Certification CIFSO 5000 v4.0",
@@ -2073,7 +2078,7 @@
     "intro": "CIFSO 5000 is de eerste onafhankelijke certificeringsstandaard die organisatorische waarde en overdraagbaarheid beoordeelt. Naast operationele compliance documenteert het wat de echte waarde van een organisatie vormt: haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
     "downloadLabel": "Volledige documentatie",
     "downloadCta": "Protocol PDF downloaden",
-    "cifsTitle": "Het CIFS-kader",
+    "cifsTitle": "Het CIFSO 5000-kader",
     "cifsDesc": "Elk asset wordt beoordeeld op vier onafhankelijke dimensies, elk gescoord van 0 tot 25 punten. De totale score op 100 bepaalt het grade.",
     "cifs": [
       {
@@ -2225,7 +2230,7 @@
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% van gecertificeerde activa",
-        "profile": "Asset in ontwikkeling met identificeerbaar potentieel maar structurele zwakheden.",
+        "profile": "Organisatie in ontwikkeling met herkenbaar potentieel maar structurele zwakheden om aan te pakken. Certificeerbaar met een remediëringsplan.",
         "typical": "Product in early traction, aanzienlijke technische schuld.",
         "subcodes": [
           "C-03, C-04",
@@ -2420,7 +2425,7 @@
         "rule": "Waardering uitsluitend op tastbare activa. Dimensie F krijgt speciale notitie \"Pre-revenue\" zonder numerieke score. Maximale AEG: A."
       }
     ],
-    "fullCodesTitle": "Volledige CIFS-subcodetabel",
+    "fullCodesTitle": "Volledige CIFSO 5000-subcodetabel",
     "fullCodesDesc": "Elke subcode identificeert een specifiek criterium dat tijdens de certificering wordt beoordeeld. Codes gemarkeerd met ⛔ zijn automatische weigeringsgronden.",
     "fullCodesTable": [
       {
@@ -4038,7 +4043,7 @@
         "sell": {
           "kicker": "Asset-overdracht",
           "title": "U wilt verkopen",
-          "desc": "Draag uw tech-asset of bedrijf over aan een gekwalificeerde koper. CIFS-certificering, exclusief mandaat, systematische NDA.",
+          "desc": "Draag uw tech-asset of bedrijf over aan een gekwalificeerde koper. CIFSO 5000-certificering, exclusief mandaat, systematische NDA.",
           "cta": "Verkoopsmandaat"
         },
         "buy": {
@@ -4062,7 +4067,7 @@
       },
       "valueLabel": "DE AEGRYN TRANSACT-WAARDE",
       "valueTitle": "Een gekwalificeerde kopersbase.\nGecertificeerde assets.",
-      "valueDesc": "Aegryn werkt alleen met kopers die het KYC-proces hebben voltooid en de NDA hebben ondertekend. Elk asset wordt CIFS-gewaardeerd voordat het wordt gepresenteerd. Dat is het verschil tussen een transactie die sluit en een die mislukt.",
+      "valueDesc": "Aegryn werkt alleen met kopers die het KYC-proces hebben voltooid en de NDA hebben ondertekend. Elk asset wordt CIFSO 5000-gewaardeerd voordat het wordt gepresenteerd. Dat is het verschil tussen een transactie die sluit en een die mislukt.",
       "valueCta": "Gecertificeerde catalogus bekijken",
       "howLabel": "TRANSACT-PROCES IN 4 STAPPEN",
       "how": {
@@ -4122,7 +4127,7 @@
           "title": "Een asset of bedrijf verkopen",
           "desc": "U bent oprichter, holding of studio. U wilt uw tech-asset of bedrijf onder de beste voorwaarden overdragen.",
           "points": [
-            "Verplichte CIFS-certificering vóór elke presentatie",
+            "Verplichte CIFSO 5000-certificering vóór elke presentatie",
             "Presentatie onder NDA uitsluitend aan gekwalificeerde kopers",
             "Doelverkoopprijs vastgesteld door de verkoper",
             "Institutionele escrow en veilige afsluiting",
@@ -4135,7 +4140,7 @@
           "title": "Een acquisitiedoelwit zoeken",
           "desc": "U bent ondernemer, corporate of family office. U wilt een tech-asset verwerven op basis van precieze criteria.",
           "points": [
-            "Toegang tot de CIFS-gecertificeerde offmarket-catalogus",
+            "Toegang tot de CIFSO 5000-gecertificeerde offmarket-catalogus",
             "Matching op basis van uw criteria (sector, ARR, grade, omvang)",
             "Wederzijdse NDA vóór elke openbaarmaking",
             "Begeleiding bij due diligence en structurering",
@@ -4163,7 +4168,7 @@
           "points": [
             "Operationele, financiële of industriële partner",
             "Overdracht van 5% tot 49% van het kapitaal",
-            "CIFS-waardering vóór elke onderhandeling",
+            "CIFSO 5000-waardering vóór elke onderhandeling",
             "Aandeelhoudersovereenkomst onder toezicht van onze juridisch adviseurs",
             "Absolute vertrouwelijkheid gedurende het gehele proces"
           ],
@@ -4268,18 +4273,18 @@
     "sell": {
       "meta": {
         "title": "Uw asset overdragen | Aegryn TRANSACT",
-        "desc": "Exclusief verkoopsmandaat. CIFS-certificering, officiële grade, voorgekwalificeerde kopers onder NDA. Alleen succesvergoeding."
+        "desc": "Exclusief verkoopsmandaat. CIFSO 5000-certificering, officiële grade, voorgekwalificeerde kopers onder NDA. Alleen succesvergoeding."
       },
       "hero": {
         "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
         "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
-        "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
+        "desc": "Aegryn certificeert uw asset CIFSO 5000, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
         "ctaValuation": "Indicatieve waardering",
         "ctaMandat": "Mandaat indienen"
       },
       "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
       "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
-      "desc": "Aegryn certificeert uw asset CIFS, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
+      "desc": "Aegryn certificeert uw asset CIFSO 5000, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
       "ctaButton": "Verkoopsmandaat indienen",
       "steps": {
         "label": "VERKOPERSPROCES IN 3 STAPPEN",
@@ -4287,7 +4292,7 @@
         "step2Label": "GEREEDHEIDS-SCORE",
         "step2Title": "Beoordeel de volwassenheid van uw asset vóór certificering.",
         "s1": {
-          "title": "CIFS-certificering",
+          "title": "CIFSO 5000-certificering",
           "desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
           "cta": "Certificering verkrijgen"
         },
@@ -4315,7 +4320,7 @@
           "desc": "Institutionele escrow. Veilige afsluiting onder Zwitserse jurisdictie."
         },
         "g4": {
-          "title": "Verplichte CIFS-certificering",
+          "title": "Verplichte CIFSO 5000-certificering",
           "desc": "Officiële grade toegekend vóór elke presentatie. Totale transparantie."
         },
         "label": "AEGRYN-GARANTIES",
@@ -4327,7 +4332,7 @@
         "ctaMandat": "Mandaat indienen",
         "ctaAdvisor": "Praten met een adviseur"
       },
-      "step1Title": "CIFS-certificering",
+      "step1Title": "CIFSO 5000-certificering",
       "step1Desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
       "step2Title": "Presentatie onder NDA",
       "step2Desc": "Het gecertificeerde asset wordt opgenomen in de gesloten offmarket-catalogus. Elke koper ondertekent een NDA voordat hij toegang krijgt tot vertrouwelijke documenten.",
@@ -4336,8 +4341,8 @@
       "step4Title": "Veilige afsluiting",
       "step4Desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht. Maximale bescherming voor verkoper en koper.",
       "feesTitle": "VERGOEDINGSSTRUCTUUR",
-      "feesDesc": "Geen voorafgaande vergoedingen. Aegryn wordt uitsluitend vergoed bij transactiesucces. De CIFS-certificering wordt apart gefactureerd op basis van de toegekende grade.",
-      "feesCert": "CIFS-CERTIFICERING",
+      "feesDesc": "Geen voorafgaande vergoedingen. Aegryn wordt uitsluitend vergoed bij transactiesucces. De CIFSO 5000-certificering wordt apart gefactureerd op basis van de toegekende grade.",
+      "feesCert": "CIFSO 5000-CERTIFICERING",
       "feesCertValue": "Gefactureerd bij afgifte van de officiële grade. Bedrag afhankelijk van de complexiteit van het asset, gecommuniceerd bij ondertekening van het mandaat.",
       "feesSuccess": "SUCCESVERGOEDING",
       "feesSuccessValue": "Alleen ingehouden bij afsluiting. Berekend op de netto-verkoopprijs. Tarief gecommuniceerd bij ondertekening van het exclusieve mandaat."
@@ -4345,7 +4350,7 @@
     "buy": {
       "label": "AEGRYN TRANSACT | ACQUISITIEMANDAAT",
       "title": "Een gecertificeerd tech-asset verwerven.\nZonder ruis. Onder NDA.",
-      "desc": "Toegang tot de Aegryn offmarket-catalogus: CIFS-gecertificeerde assets, gekwalificeerde verkopers, gestructureerd proces. Elke transactie wordt geregeld door een exclusief mandaat onder Zwitsers recht.",
+      "desc": "Toegang tot de Aegryn offmarket-catalogus: CIFSO 5000-gecertificeerde assets, gekwalificeerde verkopers, gestructureerd proces. Elke transactie wordt geregeld door een exclusief mandaat onder Zwitsers recht.",
       "cta": "Acquisitiemandaat indienen",
       "qualifTitle": "GEKWALIFICEERD KOPERSPROFIEL",
       "qualifDesc": "De Aegryn-catalogus is voorbehouden aan kopers die het kwalificatieproces hebben voltooid. Deze vereiste beschermt de vertrouwelijkheid van verkopers en garandeert de kwaliteit van de uitwisseling.",
@@ -4384,7 +4389,7 @@
   "transaction": {
     "meta": {
       "title": "Veiling, Gecertificeerde tech-assettransacties",
-      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen. Vertrouwelijk proces, CIFS-certificering, institutioneel escrow en gekwalificeerde kopers."
+      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen. Vertrouwelijk proces, CIFSO 5000-certificering, institutioneel escrow en gekwalificeerde kopers."
     },
     "index": {
       "label": "Aegryn M&A-Transacties",
@@ -4534,7 +4539,7 @@
     "sell": {
       "meta": {
         "title": "Uw activa overdragen | Aegryn",
-        "desc": "Aegryn-verkoopproces: indicatieve waardering, gereedheidscore, exclusief mandaat. CIFS-certificering, officiële grade, vooraf gekwalificeerde kopers."
+        "desc": "Aegryn-verkoopproces: indicatieve waardering, gereedheidscore, exclusief mandaat. CIFSO 5000-certificering, officiële grade, vooraf gekwalificeerde kopers."
       },
       "ctaButton": "Mandaat indienen",
       "hero": {
@@ -4560,7 +4565,7 @@
         },
         "s3": {
           "title": "Mandaatindiening",
-          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFS-certificering, officiële grade-toewijzing, toegang tot een M&A-proces onder een exclusief mandaat van 60 dagen.",
+          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFSO 5000-certificering, officiële grade-toewijzing, toegang tot een M&A-proces onder een exclusief mandaat van 60 dagen.",
           "cta": "Uw mandaat indienen →"
         }
       },
@@ -4580,7 +4585,7 @@
           "desc": "10% van de prijs bij HoT via institutionele escrow. Geen overdracht van activa vóór vrijgave van fondsen. Zwitserse jurisdictie."
         },
         "g4": {
-          "title": "Onafhankelijke CIFS-certificering",
+          "title": "Onafhankelijke CIFSO 5000-certificering",
           "desc": "Grade ★/AAA/AA/A/B toegewezen door een onafhankelijke auditor, financiën, code, IP, beveiliging. Afdwingbaar en gedocumenteerd."
         }
       },
@@ -6018,7 +6023,7 @@
         {
           "num": "02",
           "title": "Architectuur en Ontwerp",
-          "desc": "Het asset wordt gearchitectureerd volgens de CIFS-criteria: gedocumenteerde code, gedeponeerde IP, security by design, getrackte metrics. De grade is het bouwplan."
+          "desc": "Het asset wordt gearchitectureerd volgens de CIFSO 5000-criteria: gedocumenteerde code, gedeponeerde IP, security by design, getrackte metrics. De grade is het bouwplan."
         },
         {
           "num": "03",
@@ -7340,7 +7345,7 @@
     "s9Title": "Toepasselijk recht en geschillenbeslechting",
     "s9": "Deze Voorwaarden worden beheerst door materieel Zwitsers recht. Elk geschil wordt voorgelegd aan de exclusieve jurisdictie van de rechtbanken van het kanton waar Aegryn statutair is gevestigd. De partijen zullen trachten elk geschil binnen 30 dagen minnelijk te schikken vóór gerechtelijke procedures.",
     "s10Title": "Dataroom en toegang tot due-diligence-documenten",
-    "s10": "In het kader van het certificerings- en transactieproces stelt Aegryn een beveiligde dataroom ter beschikking waarmee de verkoper de voor de CIFS-analyse vereiste documenten kan uploaden. Toegang tot deze documenten wordt strikt gecontroleerd via een autorisatiesysteem met drie niveaus: beheerder/verkoper, aangewezen gecertificeerde partner en koper die de NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische afschrikmiddelen zijn aanwezig (blokkering van downloads, detectie van screenshot-pogingen, dynamische watermerken). Deze maatregelen vormen een serieuze afschrikking en een vastgelegd bewijs in geval van geschil, maar kunnen geen 100% preventie van vastlegging via externe middelen garanderen (fotografie, vastlegging via een apparaat van derden).\n\nDe koper erkent en aanvaardt dat documenten bekeken in de dataroom worden beschermd door deze Voorwaarden en de ondertekende NDA. De koper verbindt zich contractueel ertoe geen bekeken document te reproduceren, over te dragen of bekend te maken, op straffe van schadevergoeding en gerechtelijke procedures. De aansprakelijkheid van Aegryn in geval van een lek voortvloeiend uit omzeiling van de technische bescherming is uitdrukkelijk uitgesloten; de contractuele aansprakelijkheid wordt gedragen door de NDA en deze Voorwaarden.",
+    "s10": "In het kader van het certificerings- en transactieproces stelt Aegryn een beveiligde dataroom ter beschikking waarmee de verkoper de voor de CIFSO 5000-analyse vereiste documenten kan uploaden. Toegang tot deze documenten wordt strikt gecontroleerd via een autorisatiesysteem met drie niveaus: beheerder/verkoper, aangewezen gecertificeerde partner en koper die de NDA heeft ondertekend.\n\nElke raadpleging wordt gelogd (identiteit, IP-adres, tijdstempel, duur). Technische afschrikmiddelen zijn aanwezig (blokkering van downloads, detectie van screenshot-pogingen, dynamische watermerken). Deze maatregelen vormen een serieuze afschrikking en een vastgelegd bewijs in geval van geschil, maar kunnen geen 100% preventie van vastlegging via externe middelen garanderen (fotografie, vastlegging via een apparaat van derden).\n\nDe koper erkent en aanvaardt dat documenten bekeken in de dataroom worden beschermd door deze Voorwaarden en de ondertekende NDA. De koper verbindt zich contractueel ertoe geen bekeken document te reproduceren, over te dragen of bekend te maken, op straffe van schadevergoeding en gerechtelijke procedures. De aansprakelijkheid van Aegryn in geval van een lek voortvloeiend uit omzeiling van de technische bescherming is uitdrukkelijk uitgesloten; de contractuele aansprakelijkheid wordt gedragen door de NDA en deze Voorwaarden.",
     "s11Title": "Transactiekosten",
     "s11Charge": "De transactiecommissie van Aegryn wordt volledig gedragen door de verkoper (cedent). Zij wordt bij de closing rechtstreeks door Aegryn ingehouden op de escrow-fondsen, voordat de netto-opbrengst aan de verkoper wordt overgemaakt. De koper betaalt geen commissie aan Aegryn in verband met de transactie. Toegang tot de catalogus en het acquisitieproces is gratis voor gekwalificeerde koperleden.",
     "s11Grid": "De transactiecommissie van Aegryn wordt berekend op de vaste transactieprijs die effectief bij de closing is betaald, volgens het volgende degressieve schema:",
@@ -7511,7 +7516,7 @@
           "U te informeren over onze diensten en aanbiedingen.",
           "Uw account en abonnement te beheren (registratie, facturatie, verwijzingsprogramma).",
           "NDA-toegangsverzoeken voor assetdossiers te verwerken en ondertekeningsregistraties te bewaren.",
-          "CIFS-certificeringsopdrachten uit te voeren (verzameling en evaluatie van verkopersdossiers).",
+          "CIFSO 5000-certificeringsopdrachten uit te voeren (verzameling en evaluatie van verkopersdossiers).",
           "Verkeersstatistieken te genereren die nuttig zijn voor het verbeteren van onze website.",
           "Wetten, richtlijnen en aanbevelingen van autoriteiten na te leven."
         ],
@@ -7550,7 +7555,7 @@
         "providers": [
           [
             "Supabase",
-            "Database, authenticatie en dossieropslag (accounts, KYC, NDA, CIFS-certificering).",
+            "Database, authenticatie en dossieropslag (accounts, KYC, NDA, CIFSO 5000-certificering).",
             "EER/VS"
           ],
           [
@@ -7621,7 +7626,7 @@
     ],
     "s4Title": "Betalingsprocessen, normaal vs frauduleus",
     "s4NormalTitle": "Normaal",
-    "s4Normal1": "Betaling van Aegryn Review (€2.000) of Review+ (€5.000) via Stripe Checkout op aegryn.com",
+    "s4Normal1": "Betaling van de CIFSO 5000-certificeringskosten (pakketten Express, Standard of Premium) op factuur of via Stripe Checkout op aegryn.com",
     "s4Normal2": "Escrow-betaling (10% van de overeengekomen prijs) per bankoverschrijving naar de aangewezen partnerbank-IBAN met transactiereferentie",
     "s4FraudTitle": "Frauduleus",
     "s4Fraud1": "Elk betalingsverzoek naar een persoonlijke rekening",
@@ -7665,7 +7670,7 @@
           "certification"
         ],
         "q": "Wat zijn de certificeringsopties en tarieven?",
-        "a": "Er zijn twee trajecten beschikbaar. Alleen certificering (Aegryn Review): een officiële Grade verkrijgen voor CHF 2.000 excl. btw (interne Review) of CHF 5.000 excl. btw (medeondertekende Review+), aftrekbaar bij opdracht van een Volledige Certificering binnen 6 maanden. Volledige CIFSO 5000-certificering: volledige audit over de 5 dimensies, officiële grade en gedetailleerd rapport, bruikbaar bij een financieringsronde, een overdracht of een partnerschap."
+        "a": "De CIFSO 5000-certificering bestaat in drie pakketten naargelang de omvang van de organisatie: Express (minder dan 20 medewerkers, één vestiging) vanaf € 5 000, Standard (20 tot 100 medewerkers) vanaf € 9 000, Premium (meer dan 100 medewerkers of meerdere vestigingen) vanaf € 15 000. Alle omvatten de volledige audit op de vijf dimensies, het onafhankelijke certificeringsrapport, de officiële grade en de inschrijving in het gecertificeerde Aegryn-register. Prijzen excl. btw, indicatief; definitieve offerte na prekwalificatie."
       },
       {
         "id": "what-grade",
@@ -7771,7 +7776,7 @@
           "certification"
         ],
         "q": "Bieden jullie organisatiewaarderingen aan?",
-        "a": "Ja, via /valuation. Dien uw organisatie in voor een gratis indicatieve schatting binnen 48u. Voor een gecertificeerde waardering met gedetailleerd rapport kiest u Aegryn Review (CHF 2.000 excl. btw) of Review+ (CHF 5.000 excl. btw), aftrekbaar bij opdracht van een volledige certificering binnen 6 maanden."
+        "a": "Ja, via /valuation. Dien uw organisatie in voor een gratis indicatieve schatting. Voor een tegenwerpbare waardering met gedetailleerd rapport attesteert de CIFSO 5000-certificering (pakketten Express, Standard, Premium) de waarde op vijf dimensies."
       }
     ],
     "filterLifecycle": "Levenscyclus"
@@ -7979,7 +7984,7 @@
       "itemIntroductionsLabel": "Partnerintroducties",
       "itemIntroductionsDesc": "Uw geregistreerde klantintroducties.",
       "itemPartnerCertsLabel": "Partnercertificeringen",
-      "itemPartnerCertsDesc": "Uw bijdragen aan CIFS-certificeringen.",
+      "itemPartnerCertsDesc": "Uw bijdragen aan CIFSO 5000-certificeringen.",
       "deletePartialSubmit": "Verwijderen ({count, plural, one {# categorie} other {# categorieën}})",
       "deletePartialCancel": "Annuleren",
       "deletePartialConfirmWarning": "Deze verwijdering is onomkeerbaar. Bevestigen?",
@@ -9148,7 +9153,7 @@
       "certifications": {
         "meta": "Mede-ondertekeningen, Aegryn-partnerruimte",
         "title": "Mijn mede-ondertekeningen",
-        "subtitle": "Lopende CIFS-certificeringsopdrachten.",
+        "subtitle": "Lopende CIFSO 5000-certificeringsopdrachten.",
         "noCertifications": "Nog geen mede-ondertekeningen toegewezen.",
         "areaLabel": "Partnerruimte"
       },
@@ -9285,7 +9290,7 @@
       "subscribeTitle": "Ontvang elke editie 48 uur vóór publicatie.",
       "subscribeBody": "Aegryn Magazine verschijnt in januari, april, juli en oktober. Digitale toegang is permanent. Abonnees ontvangen elke editie 48 uur voor de openbare release.",
       "subscribeBullet1": "Europese M&A-data, elk kwartaal geüpdatet",
-      "subscribeBullet2": "CIFS Index: exclusieve certificeringsdata",
+      "subscribeBullet2": "CIFSO 5000 Index: exclusieve certificeringsdata",
       "subscribeBullet3": "Analyses die nergens anders beschikbaar zijn, zonder belangenconflicten",
       "subscribePlaceholder": "uw@email.com",
       "subscribeCta": "Abonneren",
@@ -9296,7 +9301,7 @@
       "contactEditCta": "media@boha-group.com →",
       "subscribeSuccess": "U staat op de lijst. Eerste editie binnen 48 uur in uw inbox.",
       "subscribeError": "Er is iets misgegaan. Probeer het opnieuw of schrijf ons op contact@boha-group.com",
-      "cifsLabel": "CIFS-certificering",
+      "cifsLabel": "CIFSO 5000-certificering",
       "cifsBody": "Minder dan 25% van de ingediende activa bereikt de Full Grade-status. Ontdek waar uw actief staat voordat een koper dat doet.",
       "cifsCta": "Start certificering →",
       "footerLegal": "Aegryn, Saint-Sulpice, Kanton Vaud, Zwitserland, CHE-402.011.821",
@@ -9385,7 +9390,7 @@
         "transaction": "Dealstructurering en transactieproces",
         "buyers": "Acquirerprofielen, verwachtingen en criteria",
         "outlook": "Markttrends en projecties voor 2027",
-        "index": "CIFS-certificeringsscores en -rankings",
+        "index": "CIFSO 5000-certificeringsscores en -rankings",
         "people": "Ondernemersportretten en -trajecten",
         "life": "Lifestyle, cultuur en gebieden"
       },

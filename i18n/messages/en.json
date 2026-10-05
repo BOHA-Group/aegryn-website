@@ -779,10 +779,10 @@
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "desc": "Digital creative assets, high-IP-value smart contracts. Extension of the Aegryn Grade label to Web3 assets under study."
+        "desc": "Digital creative assets, high-IP-value smart contracts, digitally focused philanthropic funds. Includes mission-driven structures, technology foundations and impact creative assets. Extension of CIFSO 5000 certification to Web3 assets under study."
       }
     ],
-    "cta": "Submit your asset for certification"
+    "cta": "Request a certification"
   },
   "founderQuote": {
     "text": "We have spent more than twenty years building, advising and restructuring organisations. What we have learned cannot be taught. Companies that endure do not choose between strategy and technology, they think them together. And what we recommend, we apply to ourselves. Our own assets go through our own methods. That is our first credibility.",
@@ -1404,9 +1404,9 @@
   },
   "gradePartners": {
     "back": "← Certification CIFSO 5000",
-    "eyebrow": "Aegryn GRADE",
+    "eyebrow": "CIFSO 5000 Certification",
     "title": "A network of independent auditors, not an obligation.",
-    "intro1": "The Aegryn Grade is an independent certification: Aegryn assesses and grades the quality of tech organisations without relying on imposed auditors. Independent professionals may be mandated to deepen specific areas.",
+    "intro1": "CIFSO 5000 certification is independent: Aegryn assesses and grades the quality of organisations without relying on imposed auditors. Independent professionals may be engaged to deepen any of the five dimensions.",
     "intro2": "We remain open to applications from independent experts wishing to back the certification or join our network, available on demand before, during and after a certification or support mandate.",
     "types": {
       "code": {
@@ -1428,15 +1428,20 @@
         "label": "CYBERSECURITY",
         "desc": "Accredited cybersecurity specialist (PASSI or CREST), supporting dimension S (Security) for organisations that wish it.",
         "dimension": "Dimension S : Security"
+      },
+      "organisation": {
+        "label": "ORGANISATION & TALENT",
+        "desc": "Governance, organisation or human-resources expert (founder dependency, succession, retention), supporting dimension O (Organisation & Talent) for organisations that wish it.",
+        "dimension": "Dimension O: Organisation & Talent"
       }
     },
     "ctaLabel": "FOR INDEPENDENT AUDITORS",
-    "ctaTitle": "Are you a law firm, chartered accountant or cybersecurity specialist?",
-    "ctaDesc": "Apply to join the Aegryn Grade independent auditor network: access to a regular flow of certification files requiring your expertise.",
+    "ctaTitle": "Are you a law firm, chartered accountant, cybersecurity specialist or organisation expert?",
+    "ctaDesc": "Apply to join the CIFSO 5000 certification's network of independent auditors: access to a regular flow of certification files requiring your expertise.",
     "ctaBtn": "Apply to the auditor network",
     "benefitsLabel": "WHAT YOU GET",
     "benefits": [
-      "Access to a regular flow of tech assets requiring your expertise",
+      "Access to a regular flow of organisation files requiring your expertise",
       "Visibility as an Aegryn network partner (from the first mandates)",
       "Qualified institutional clientele: executives, PE funds, VC, Family Offices",
       "Remuneration defined within the partnership framework"
@@ -2025,7 +2030,7 @@
         {
           "num": "02",
           "title": "Access to certified pipeline",
-          "desc": "Priority access to the Aegryn catalogue and off-market flow. Certified assets Grade AA and above. Grade A available on request with remediation plan included."
+          "desc": "Access to the Aegryn network and its partners: targets identified ahead of competitive processes, independent review of CIFSO 5000-certified organisations, grade A and above with a remediation plan on request."
         },
         {
           "num": "03",
@@ -2053,7 +2058,7 @@
         },
         {
           "title": "Off-market first",
-          "desc": "Most Aegryn assets are never publicly listed. Qualified acquirer members access them before any public listing, or exclusively."
+          "desc": "Most of the opportunities we support are never publicly announced. They arise from the advisory relationship, ahead of any sale process."
         },
         {
           "title": "Experts mobilised at the right time",
@@ -2866,7 +2871,7 @@
   "gradingSystem": {
     "meta": {
       "title": "Certification CIFSO 5000 — Aegryn | Independent Methodology & Protocol",
-      "desc": "The Aegryn Grade protocol: CIFS framework, AEG ★ to B grade definitions, sub-codes, analysis process and independence principles."
+      "desc": "The Aegryn Grade protocol: CIFSO 5000 framework, AEG ★ to B grade definitions, sub-codes, analysis process and independence principles."
     },
     "label": "Certification CIFSO 5000 — Methodology",
     "version": "Certification CIFSO 5000 v4.0",
@@ -2874,7 +2879,7 @@
     "intro": "CIFSO 5000 is the first independent certification standard that assesses organizational value and transferability. Beyond operational compliance, it documents what makes an organization's real value: its intellectual capital, integrity, financial health, security, and organizational resilience.",
     "downloadLabel": "Full documentation",
     "downloadCta": "Download protocol PDF",
-    "cifsTitle": "The CIFS framework",
+    "cifsTitle": "The CIFSO 5000 framework",
     "cifsDesc": "Each asset is assessed across four independent dimensions, each scored from 0 to 25 points. The total score out of 100 determines the grade.",
     "cifs": [
       {
@@ -3026,7 +3031,7 @@
         "range": "45–59 / 100",
         "color": "#4A90D9",
         "rarity": "30–35% of certified assets",
-        "profile": "Developing asset with identifiable potential but structural weaknesses to address. Eligible for Aegryn Review with remediation plan.",
+        "profile": "Developing organisation with identifiable potential but structural weaknesses to address. Eligible for certification with a remediation plan.",
         "typical": "Product in early traction, significant technical debt, partially documented financial metrics.",
         "subcodes": [
           "C-03, C-04",
@@ -3221,7 +3226,7 @@
         "rule": "Valuation on tangible assets only. F dimension gets a special \"Pre-revenue\" note with no numeric score. Maximum AEG: A."
       }
     ],
-    "fullCodesTitle": "Full CIFS sub-code table",
+    "fullCodesTitle": "Full CIFSO 5000 sub-code table",
     "fullCodesDesc": "Each sub-code identifies a specific criterion evaluated during certification. Codes marked ⛔ are automatic refusal conditions.",
     "fullCodesTable": [
       {
@@ -4103,7 +4108,7 @@
         "sell": {
           "kicker": "Asset sale",
           "title": "You want to sell",
-          "desc": "Divest your tech asset or company to a qualified acquirer. CIFS certification, exclusive mandate, systematic NDA.",
+          "desc": "Divest your tech asset or company to a qualified acquirer. CIFSO 5000 certification, exclusive mandate, systematic NDA.",
           "cta": "Sale mandate"
         },
         "buy": {
@@ -4127,7 +4132,7 @@
       },
       "valueLabel": "THE AEGRYN TRANSACT VALUE",
       "valueTitle": "A qualified buyer base.\nCertified assets.",
-      "valueDesc": "Aegryn only works with buyers who have completed the KYC procedure and signed the NDA. Every asset is CIFS-rated before being presented. That is the difference between a transaction that closes and one that fails.",
+      "valueDesc": "Aegryn only works with buyers who have completed the KYC procedure and signed the NDA. Every asset is CIFSO 5000-rated before being presented. That is the difference between a transaction that closes and one that fails.",
       "valueCta": "View certified catalog",
       "howLabel": "TRANSACT PROCESS IN 4 STEPS",
       "how": {
@@ -4187,7 +4192,7 @@
           "title": "Sell an asset or company",
           "desc": "You are a founder, holding or studio. You wish to divest your tech asset or company under the best conditions.",
           "points": [
-            "Mandatory CIFS certification before presentation",
+            "Mandatory CIFSO 5000 certification before presentation",
             "Presentation under NDA to qualified buyers only",
             "Target sale price set by the seller",
             "Institutional escrow and secure closing",
@@ -4200,7 +4205,7 @@
           "title": "Search for an acquisition target",
           "desc": "You are an entrepreneur, corporate or family office. You wish to acquire a tech asset based on precise criteria.",
           "points": [
-            "Access to CIFS-certified offmarket catalog",
+            "Access to CIFSO 5000-certified offmarket catalog",
             "Matching based on your criteria (sector, ARR, grade, size)",
             "Mutual NDA before any disclosure",
             "Due diligence and structuring support",
@@ -4228,7 +4233,7 @@
           "points": [
             "Operational, financial or industrial partner",
             "Divestiture of 5% to 49% of capital",
-            "CIFS valuation before any negotiation",
+            "CIFSO 5000 valuation before any negotiation",
             "Shareholder agreement governed by our legal counsel",
             "Absolute confidentiality throughout the process"
           ],
@@ -4333,18 +4338,18 @@
     "sell": {
       "meta": {
         "title": "Sell your asset | Aegryn TRANSACT",
-        "desc": "Exclusive sale mandate. CIFS certification, official grade, pre-qualified buyers under NDA. Success fee only."
+        "desc": "Exclusive sale mandate. CIFSO 5000 certification, official grade, pre-qualified buyers under NDA. Success fee only."
       },
       "hero": {
         "label": "AEGRYN TRANSACT | SALE MANDATE",
         "title": "Divest your tech asset\nat the price it deserves.",
-        "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
+        "desc": "Aegryn certifies your asset CIFSO 5000, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
         "ctaValuation": "Indicative valuation",
         "ctaMandat": "Submit mandate"
       },
       "label": "AEGRYN TRANSACT | SALE MANDATE",
       "title": "Divest your tech asset\nat the price it deserves.",
-      "desc": "Aegryn certifies your asset CIFS, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
+      "desc": "Aegryn certifies your asset CIFSO 5000, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
       "ctaButton": "Submit a sale mandate",
       "steps": {
         "label": "SELLER JOURNEY IN 3 STEPS",
@@ -4352,7 +4357,7 @@
         "step2Label": "READINESS SCORE",
         "step2Title": "Assess your asset's maturity before certification.",
         "s1": {
-          "title": "CIFS Certification",
+          "title": "CIFSO 5000 Certification",
           "desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
           "cta": "Get certified"
         },
@@ -4380,7 +4385,7 @@
           "desc": "Institutional escrow. Secure closing under Swiss jurisdiction."
         },
         "g4": {
-          "title": "Mandatory CIFS certification",
+          "title": "Mandatory CIFSO 5000 certification",
           "desc": "Official grade assigned before any presentation. Total transparency."
         },
         "label": "AEGRYN GUARANTEES",
@@ -4392,7 +4397,7 @@
         "ctaMandat": "Submit mandate",
         "ctaAdvisor": "Talk to an advisor"
       },
-      "step1Title": "CIFS Certification",
+      "step1Title": "CIFSO 5000 Certification",
       "step1Desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
       "step2Title": "Presentation under NDA",
       "step2Desc": "The certified asset enters the closed offmarket catalog. Every acquirer signs an NDA before accessing any confidential document.",
@@ -4401,8 +4406,8 @@
       "step4Title": "Secure closing",
       "step4Desc": "Institutional escrow, secure transfer, closing under Swiss law. Maximum protection for seller and acquirer.",
       "feesTitle": "FEE STRUCTURE",
-      "feesDesc": "No upfront fees. Aegryn is remunerated exclusively on transaction success. CIFS certification is invoiced separately based on the grade assigned.",
-      "feesCert": "CIFS CERTIFICATION",
+      "feesDesc": "No upfront fees. Aegryn is remunerated exclusively on transaction success. CIFSO 5000 certification is invoiced separately based on the grade assigned.",
+      "feesCert": "CIFSO 5000 CERTIFICATION",
       "feesCertValue": "Invoiced upon delivery of the official grade. Amount based on asset complexity, communicated at mandate signing.",
       "feesSuccess": "SUCCESS FEE",
       "feesSuccessValue": "Deducted at closing only. Calculated on the net sale price. Rate communicated at exclusive mandate signing."
@@ -4410,7 +4415,7 @@
     "buy": {
       "label": "AEGRYN TRANSACT | ACQUISITION MANDATE",
       "title": "Acquire a certified tech asset.\nNo noise. Under NDA.",
-      "desc": "Access the Aegryn offmarket catalog: CIFS-certified assets, qualified sellers, structured process. Every transaction is governed by exclusive mandate under Swiss law.",
+      "desc": "Access the Aegryn offmarket catalog: CIFSO 5000-certified assets, qualified sellers, structured process. Every transaction is governed by exclusive mandate under Swiss law.",
       "cta": "Submit an acquisition mandate",
       "qualifTitle": "QUALIFIED BUYER PROFILE",
       "qualifDesc": "The Aegryn catalog is reserved for buyers who have completed the qualification procedure. This requirement protects seller confidentiality and guarantees the quality of exchanges.",
@@ -4642,7 +4647,7 @@
     "sell": {
       "meta": {
         "title": "Sell your asset | Aegryn",
-        "desc": "Aegryn seller journey: indicative valuation, readiness score, mandate submission. CIFS certification, absolute confidentiality, Swiss institutional escrow."
+        "desc": "Aegryn seller journey: indicative valuation, readiness score, mandate submission. CIFSO 5000 certification, absolute confidentiality, Swiss institutional escrow."
       },
       "hero": {
         "label": "Sell your asset",
@@ -4667,7 +4672,7 @@
         },
         "s3": {
           "title": "Mandate submission",
-          "desc": "Submit your asset to the Aegryn team. Independent CIFS certification, official grade assignment, entry into an M&A process under a 60-day exclusive mandate.",
+          "desc": "Submit your asset to the Aegryn team. Independent CIFSO 5000 certification, official grade assignment, entry into an M&A process under a 60-day exclusive mandate.",
           "cta": "Submit your mandate →"
         }
       },
@@ -4687,7 +4692,7 @@
           "desc": "10% of the price at HoT via institutional escrow. No asset transfer before funds are released. Swiss jurisdiction."
         },
         "g4": {
-          "title": "Independent CIFS certification",
+          "title": "Independent CIFSO 5000 certification",
           "desc": "Grade ★/AAA/AA/A/B assigned by an independent auditor, finance, code, IP, security. Enforceable and documented."
         }
       },
@@ -6018,7 +6023,7 @@
         {
           "num": "02",
           "title": "Architecture and Design",
-          "desc": "The asset is architected to CIFS criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan."
+          "desc": "The asset is architected to CIFSO 5000 criteria: documented code, registered IP, security by design, tracked metrics. The grade is the construction plan."
         },
         {
           "num": "03",
@@ -7340,7 +7345,7 @@
     "s9Title": "Governing Law and Dispute Resolution",
     "s9": "These Terms are governed by Swiss substantive law. Any dispute shall be submitted to the exclusive jurisdiction of the courts of Aegryn's registered canton. The parties will endeavour to resolve any dispute amicably within 30 days before any legal proceedings.",
     "s10Title": "Data Room and Access to Due Diligence Documents",
-    "s10": "As part of the certification and transaction process, Aegryn provides a secure data room enabling the seller to upload the documents required for CIFS analysis. Access to these documents is strictly controlled through a three-tier authorisation system: administrator/seller, assigned certified partner, and buyer who has signed the NDA.\n\nEvery consultation is logged (identity, IP address, timestamp, duration). Technical deterrence measures are in place (download blocking, screenshot detection attempts, dynamic watermarking). These measures constitute a serious deterrent and a logged record in the event of a dispute, but cannot guarantee 100% prevention of capture via external means (photography, third-party device capture).\n\nThe buyer acknowledges and accepts that documents viewed in the data room are protected by these Terms and the signed NDA. The buyer contractually undertakes not to reproduce, transmit or disclose any document viewed, under penalty of damages and legal proceedings. Aegryn's liability in the event of a leak resulting from a circumvention of the technical protections is expressly excluded; contractual liability is borne by the NDA and these Terms.",
+    "s10": "As part of the certification and transaction process, Aegryn provides a secure data room enabling the seller to upload the documents required for CIFSO 5000 analysis. Access to these documents is strictly controlled through a three-tier authorisation system: administrator/seller, assigned certified partner, and buyer who has signed the NDA.\n\nEvery consultation is logged (identity, IP address, timestamp, duration). Technical deterrence measures are in place (download blocking, screenshot detection attempts, dynamic watermarking). These measures constitute a serious deterrent and a logged record in the event of a dispute, but cannot guarantee 100% prevention of capture via external means (photography, third-party device capture).\n\nThe buyer acknowledges and accepts that documents viewed in the data room are protected by these Terms and the signed NDA. The buyer contractually undertakes not to reproduce, transmit or disclose any document viewed, under penalty of damages and legal proceedings. Aegryn's liability in the event of a leak resulting from a circumvention of the technical protections is expressly excluded; contractual liability is borne by the NDA and these Terms.",
     "s11Title": "Transaction Fees",
     "s11Charge": "Aegryn's transaction commission is borne entirely by the seller (transferor). It is deducted directly by Aegryn from the escrowed funds at closing, before the net proceeds are remitted to the seller. The buyer does not pay any commission to Aegryn in connection with the transaction. Access to the catalogue and the acquisition process is free of charge for qualified buyer members.",
     "s11Grid": "Aegryn's transaction commission is calculated on the firm transaction price effectively paid at closing, according to the following degressive schedule:",
@@ -7511,7 +7516,7 @@
           "Inform you about our services and offerings.",
           "Manage your account and subscription (registration, billing, referral programme).",
           "Process NDA access requests for asset dossiers and retain signature records.",
-          "Conduct CIFS certification missions (collection and evaluation of seller dossiers).",
+          "Conduct CIFSO 5000 certification missions (collection and evaluation of seller dossiers).",
           "Generate traffic statistics useful for improving our website.",
           "Comply with laws, directives and recommendations from authorities."
         ],
@@ -7550,7 +7555,7 @@
         "providers": [
           [
             "Supabase",
-            "Database, authentication and dossier storage (accounts, KYC, NDA, CIFS certification).",
+            "Database, authentication and dossier storage (accounts, KYC, NDA, CIFSO 5000 certification).",
             "EEA/USA"
           ],
           [
@@ -7621,7 +7626,7 @@
     ],
     "s4Title": "Payment processes, normal vs fraudulent",
     "s4NormalTitle": "Normal",
-    "s4Normal1": "Payment of Aegryn Review (€2,000) or Review+ (€5,000) fees via Stripe Checkout on aegryn.com",
+    "s4Normal1": "Payment of CIFSO 5000 certification fees (Express, Standard or Premium packages) by invoice or via Stripe Checkout on aegryn.com",
     "s4Normal2": "Escrow payment (10% of agreed price) by bank transfer to the designated partner bank IBAN with transaction reference",
     "s4FraudTitle": "Fraudulent",
     "s4Fraud1": "Any payment request to a personal account",
@@ -7665,7 +7670,7 @@
           "certification"
         ],
         "q": "What are the certification options and their pricing?",
-        "a": "Two paths are available. Certification only (Aegryn Review): obtain an official Grade at CHF 2,000 excl. VAT (internal Review) or CHF 5,000 excl. VAT (co-signed Review+), deductible if a Full Certification is engaged within 6 months. Full CIFSO 5000 Certification: complete audit across the 5 dimensions, official grade and detailed report, usable for a fundraise, a transfer or a partnership."
+        "a": "CIFSO 5000 certification comes in three packages depending on the size of the organisation: Express (under 20 employees, single site) from €5,000, Standard (20 to 100 employees) from €9,000, Premium (over 100 employees or multi-site) from €15,000. All include the full audit across the five dimensions, the independent certification report, the official grade and registration in the Aegryn certified register. Prices exclusive of tax, indicative; final quote after pre-qualification."
       },
       {
         "id": "what-grade",
@@ -7771,7 +7776,7 @@
           "certification"
         ],
         "q": "Do you offer organisation valuations?",
-        "a": "Yes, via /valuation. Submit your organisation for a free indicative estimate within 48h. For a certified valuation with detailed report, choose Aegryn Review (CHF 2,000 excl. VAT) or Review+ (CHF 5,000 excl. VAT), deductible if full certification is engaged within 6 months."
+        "a": "Yes, via /valuation. Submit your organisation to receive a free indicative estimate. For a defensible valuation with a detailed report, CIFSO 5000 certification (Express, Standard, Premium packages) attests value across five dimensions."
       }
     ],
     "filterLifecycle": "Lifecycle"
@@ -7979,7 +7984,7 @@
       "itemIntroductionsLabel": "Partner introductions",
       "itemIntroductionsDesc": "Your recorded client introductions.",
       "itemPartnerCertsLabel": "Partner certifications",
-      "itemPartnerCertsDesc": "Your contributions to CIFS certifications.",
+      "itemPartnerCertsDesc": "Your contributions to CIFSO 5000 certifications.",
       "deletePartialSubmit": "Delete ({count, plural, one {# category} other {# categories}})",
       "deletePartialCancel": "Cancel",
       "deletePartialConfirmWarning": "This deletion is irreversible. Confirm?",
@@ -9148,7 +9153,7 @@
       "certifications": {
         "meta": "Co-signatures, Partner Space Aegryn",
         "title": "My co-signatures",
-        "subtitle": "Ongoing CIFS certification missions.",
+        "subtitle": "Ongoing CIFSO 5000 certification missions.",
         "noCertifications": "No co-signatures assigned yet.",
         "areaLabel": "Partner Space"
       },
@@ -9285,7 +9290,7 @@
       "subscribeTitle": "Receive each issue 48 hours before publication.",
       "subscribeBody": "Aegryn Magazine is published in January, April, July and October. Digital access is permanent. Subscribers receive each issue 48 hours before public release.",
       "subscribeBullet1": "European M&A data, updated every quarter",
-      "subscribeBullet2": "CIFS Index: exclusive certification data",
+      "subscribeBullet2": "CIFSO 5000 Index: exclusive certification data",
       "subscribeBullet3": "Analyses unavailable elsewhere, conflict-free",
       "subscribePlaceholder": "your@email.com",
       "subscribeCta": "Subscribe",
@@ -9296,7 +9301,7 @@
       "contactEditCta": "media@boha-group.com →",
       "subscribeSuccess": "You are on the list. First issue in your inbox within 48 hours.",
       "subscribeError": "Something went wrong. Please try again or write to us at contact@boha-group.com",
-      "cifsLabel": "CIFS Certification",
+      "cifsLabel": "CIFSO 5000 Certification",
       "cifsBody": "Fewer than 25% of submitted assets reach Full Grade status. Find out where your asset stands before a buyer does.",
       "cifsCta": "Start certification →",
       "footerLegal": "Aegryn, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",
@@ -9385,7 +9390,7 @@
         "transaction": "Deal structuring and transaction process",
         "buyers": "Acquirer profiles, expectations and criteria",
         "outlook": "Market trends and projections for 2027",
-        "index": "CIFS certification scores and rankings",
+        "index": "CIFSO 5000 certification scores and rankings",
         "people": "Entrepreneur portraits and journeys",
         "life": "Lifestyle, culture and territories"
       },

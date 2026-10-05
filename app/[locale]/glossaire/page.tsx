@@ -105,12 +105,12 @@ const TERMS: { letter: string; terms: { id: string; name: string; def: Def }[] }
     letter: 'G',
     terms: [
       { id: 'grade-aeg', name: 'Grade AEG', def: {
-        fr: 'Certification indépendante des analystes Aegryn sur un actif tech, émise selon un protocole reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé. Basé sur 4 dimensions : Code, IP, Finance, Sécurité.',
-        en: 'Independent certification from Aegryn analysts on a tech asset, issued following a reproducible protocol. From ★ (Exceptional) to B (Standard). Not assigned = Refused. Based on 4 dimensions: Code, IP, Finance, Security.',
-        de: 'Unabhängige Zertifizierung eines Tech-Assets durch Aegryn-Analysten nach einem reproduzierbaren Protokoll. Von ★ (Aussergewöhnlich) bis B (Standard). Nicht vergeben = Abgelehnt. Basierend auf 4 Dimensionen: Code, IP, Finanzen, Sicherheit.',
-        es: 'Certificación independiente de los analistas de Aegryn sobre un activo tech, emitida según un protocolo reproducible. De ★ (Excepcional) a B (Correcta). No asignada = Rechazada. Basada en 4 dimensiones: Código, IP, Finanzas, Seguridad.',
-        it: 'Certificazione indipendente degli analisti Aegryn su un asset tech, emessa secondo un protocollo riproducibile. Da ★ (Eccezionale) a B (Corretta). Non assegnata = Rifiutata. Basata su 4 dimensioni: Codice, IP, Finanza, Sicurezza.',
-        nl: 'Onafhankelijke certificering van een tech-actief door Aegryn-analisten volgens een reproduceerbaar protocol. Van ★ (Uitzonderlijk) tot B (Correct). Niet toegekend = Afgewezen. Gebaseerd op 4 dimensies: Code, IP, Financiën, Beveiliging.',
+        fr: "Certification indépendante des analystes Aegryn sur une organisation, émise selon le protocole CIFSO 5000, reproductible. De ★ (Exceptionnel) à B (Correct). Non attribué = Refusé. Basée sur 5 dimensions : Code, IP, Finance, Sécurité, Organisation.",
+        en: "Independent certification by Aegryn analysts of an organisation, issued under the reproducible CIFSO 5000 protocol. From ★ (Exceptional) to B (Fair). Not awarded = Refused. Based on 5 dimensions: Code, IP, Finance, Security, Organisation.",
+        de: "Unabhängige Zertifizierung einer Organisation durch Aegryn-Analysten nach dem reproduzierbaren CIFSO 5000-Protokoll. Von ★ (Aussergewöhnlich) bis B (Korrekt). Nicht vergeben = Abgelehnt. Basiert auf 5 Dimensionen: Code, IP, Finanzen, Sicherheit, Organisation.",
+        es: "Certificación independiente de los analistas de Aegryn sobre una organización, emitida según el protocolo CIFSO 5000, reproducible. De ★ (Excepcional) a B (Correcto). No atribuido = Rechazado. Basada en 5 dimensiones: Código, PI, Finanzas, Seguridad, Organización.",
+        it: "Certificazione indipendente degli analisti Aegryn su un'organizzazione, emessa secondo il protocollo CIFSO 5000, riproducibile. Da ★ (Eccezionale) a B (Corretto). Non attribuito = Rifiutato. Basata su 5 dimensioni: Codice, IP, Finanza, Sicurezza, Organizzazione.",
+        nl: "Onafhankelijke certificering door Aegryn-analisten van een organisatie, uitgereikt volgens het reproduceerbare CIFSO 5000-protocol. Van ★ (Uitzonderlijk) tot B (Correct). Niet toegekend = Geweigerd. Gebaseerd op 5 dimensies: Code, IP, Financiën, Beveiliging, Organisatie.",
       }},
     ],
   },
