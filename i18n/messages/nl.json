@@ -4922,28 +4922,28 @@
         "cta": "M&A-adviespartner worden"
       },
       "finance": {
-        "label": "BANKEN & FINANCIËLE PARTNERS",
+        "label": "Banken & Financiële partners",
         "title": "Financiële partners",
         "desc": "Bankinstellingen, regionale banken en financiële instellingen die ondernemers in elke fase van hun ontwikkeling begeleiden. Een natuurlijke synergie met ons advies- en begeleidingsaanbod.",
         "profiles": "Bankinstellingen & regionale banken · Schulden- en groeifondsen · Family offices & multi-family offices · Garantie- en borgstellingmaatschappijen · Publieke financiële instellingen (BPI, enz.)",
         "cta": "Financiële partner worden"
       },
       "sequestre": {
-        "label": "ESCROW EN JURIDISCH",
+        "label": "Escrow & Juridisch",
         "profiles": "Depotbanken · Zakenrechtadvocaten",
         "title": "Escrow & juridische partners",
         "desc": "Depotbanken en zakenrechtadvocaten die escrow- en closingmechanismen van begeleide trajecten structureren en beveiligen.",
         "cta": "Toetreden als juridische partner"
       },
       "technique": {
-        "label": "TECHNISCHE EXPERTISE",
+        "label": "Technische expertise",
         "profiles": "Senior freelance CTO's · PASSI/CREST-beveiligingsauditors · Web3-specialisten",
         "title": "Onafhankelijke technische experts",
         "desc": "CTO's, cyberbeveiligingsauditors en blockchainspecialisten die onze technische due diligence- en certificeringsmissies versterken.",
         "cta": "Toetreden als technisch expert"
       },
       "assurance": {
-        "label": "VERZEKERING EN COMPLIANCE",
+        "label": "Verzekering & Compliance",
         "profiles": "W&I-verzekeraars · Corporate fiscalisten",
         "title": "Verzekeringsexperts & belastingspecialisten",
         "desc": "W&I-verzekeraars en deskundige fiscalisten die trajecten en risico's in elke fase van de bedrijfslevenscyclus beveiligen.",

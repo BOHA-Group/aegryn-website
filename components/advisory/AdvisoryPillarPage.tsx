@@ -39,8 +39,40 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
   const hrefFor = (action: string) => L(`${contactPath}?metier=${c.cta.metier}&action=${action}`)
   const contactHref = hrefFor(pageActions.echange)
 
+  /* JSON-LD : service de conseil + fil d'Ariane, pour le référencement */
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: c.eyebrow,
+        description: c.meta.description,
+        serviceType: c.eyebrow,
+        provider: { '@type': 'Organization', name: 'Aegryn', url: 'https://aegryn.com' },
+        areaServed: [{ '@type': 'Country', name: 'Switzerland' }, { '@type': 'Place', name: 'Europe' }],
+        audience: { '@type': 'BusinessAudience', name: 'SMEs and mid-caps, EUR 10M to 300M' },
+        url: `https://aegryn.com/${locale}${c.path}`,
+        inLanguage: locale,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: c.services.title,
+          itemListElement: c.services.items.map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Aegryn', item: `https://aegryn.com/${locale}` },
+          { '@type': 'ListItem', position: 2, name: 'Advisory', item: `https://aegryn.com/${locale}/advisory` },
+          { '@type': 'ListItem', position: 3, name: c.eyebrow, item: `https://aegryn.com/${locale}${c.path}` },
+        ],
+      },
+    ],
+  }
+
   return (
     <main className="bg-ag-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12">
         <Image src={c.image} alt={c.imageAlt} fill priority sizes="100vw" className="object-cover object-center" />

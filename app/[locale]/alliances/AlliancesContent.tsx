@@ -285,7 +285,7 @@ export default function AlliancesContent() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12">
                 <div>
                   <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                    / Application
+                    {t('tabs.apply')}
                   </p>
                   <h2
                     className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"

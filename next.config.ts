@@ -87,6 +87,20 @@ const nextConfig: NextConfig = {
       /* /magazine/report/2027/* → /magazine/issue-01 (301 permanent, architecture migration) */
       { source: '/:locale/magazine/report/2027',        destination: '/:locale/magazine/issue-01',       permanent: true },
       { source: '/:locale/magazine/report/2027/:path*', destination: '/:locale/magazine/issue-01',       permanent: true },
+      /* Anciennes pages d'articles du magazine → le numéro (web edition), 301 */
+      { source: '/:locale/magazine/issue-01/editorial-why-europe-needs-a-standard', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/market-european-tech-ma-2026-numbers', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/ai-recomposition-of-tech-value', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/perspective-certification-table', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/deal-watch-h1-2026', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/buyers-who-is-buying-european-tech', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/outlook-2027-three-forces', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/aegryn-index-edition-1', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/build-the-habit-that-changes-everything', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/build-he-built-fast', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/money-the-compliance-premium', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/transaction-what-an-earnout-feels-like', destination: '/:locale/magazine/issue-01', permanent: true },
+      { source: '/:locale/magazine/issue-01/life-on-building-for-the-long-view', destination: '/:locale/magazine/issue-01', permanent: true },
       { source: '/:locale/magazine/report',             destination: '/:locale/magazine',                permanent: true },
       /* /transact (vue d'ensemble) + how-to-sell/how-to-buy → /valoriser (301 permanent, refonte cycle de vie) */
       { source: '/transact',                            destination: '/valoriser',                       permanent: true },

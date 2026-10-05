@@ -4922,28 +4922,28 @@
         "cta": "M&A-Beratungspartner werden"
       },
       "finance": {
-        "label": "BANKEN & FINANZPARTNER",
+        "label": "Banken & Finanzpartner",
         "title": "Finanzpartner",
         "desc": "Bankinstitute, Regionalbanken und Finanzinstitutionen, die Unternehmer in jeder Phase ihrer Entwicklung begleiten. Eine natürliche Synergie mit unserem Beratungs- und Begleitungsangebot.",
         "profiles": "Bankinstitute & Regionalbanken · Fremdkapital- und Wachstumsfonds · Family Offices & Multi-Family Offices · Bürgschafts- und Garantiegesellschaften · Öffentliche Finanzinstitutionen (BPI usw.)",
         "cta": "Finanzpartner werden"
       },
       "sequestre": {
-        "label": "TREUHAND & RECHT",
+        "label": "Treuhand & Recht",
         "profiles": "Depotbanken · Wirtschaftskanzleien",
         "title": "Treuhand- & Rechtspartner",
         "desc": "Depotbanken und Wirtschaftskanzleien, die Escrow- und Closing-Mechanismen begleiteter Vorhaben strukturieren und absichern.",
         "cta": "Als Rechtspartner beitreten"
       },
       "technique": {
-        "label": "TECHNISCHE EXPERTISE",
+        "label": "Technische Expertise",
         "profiles": "Senior Freelance-CTOs · PASSI/CREST-Sicherheitsauditoren · Web3-Spezialisten",
         "title": "Unabhängige technische Experten",
         "desc": "CTOs, Cybersicherheitsprüfer und Blockchain-Spezialisten, die unsere technischen Due-Diligence- und Zertifizierungsmissionen stärken.",
         "cta": "Als technischer Experte beitreten"
       },
       "assurance": {
-        "label": "VERSICHERUNG & COMPLIANCE",
+        "label": "Versicherung & Compliance",
         "profiles": "W&I-Versicherer · Corporate-Steuerexperten",
         "title": "Versicherungs- & Steuerexperten",
         "desc": "W&I-Versicherer und Fachfiscalisten, die Vorhaben und Risiken in jeder Phase des Unternehmenslebenszyklus absichern.",

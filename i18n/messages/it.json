@@ -4922,28 +4922,28 @@
         "cta": "Diventare partner Consulenza M&A"
       },
       "finance": {
-        "label": "BANCHE & PARTNER FINANZIARI",
+        "label": "Banche & Partner finanziari",
         "title": "Partner finanziari",
         "desc": "Istituti bancari, banche regionali e istituzioni finanziarie che accompagnano gli imprenditori in ogni fase del loro sviluppo. Una sinergia naturale con il nostro dispositivo di consulenza e accompagnamento.",
         "profiles": "Istituti bancari e banche regionali · Fondi di debito e sviluppo del capitale · Family office e multi-family office · Società di garanzia e cauzioni · Istituzioni finanziarie pubbliche (BPI, ecc.)",
         "cta": "Diventare partner finanziario"
       },
       "sequestre": {
-        "label": "DEPOSITO E LEGALE",
+        "label": "Deposito fiduciario & Legale",
         "profiles": "Banche depositarie · Studi legali d'affari",
         "title": "Deposito a garanzia e partner legali",
         "desc": "Banche depositarie e studi legali d'affari che strutturano e garantiscono i meccanismi di escrow e closing delle operazioni accompagnate.",
         "cta": "Aderire come partner legale"
       },
       "technique": {
-        "label": "COMPETENZA TECNICA",
+        "label": "Competenza tecnica",
         "profiles": "CTO freelance senior · Auditor di sicurezza PASSI/CREST · Specialisti Web3",
         "title": "Esperti tecnici indipendenti",
         "desc": "CTO, revisori della cybersicurezza e specialisti blockchain che rafforzano le nostre missioni di due diligence tecnica e certificazione.",
         "cta": "Aderire come esperto tecnico"
       },
       "assurance": {
-        "label": "ASSICURAZIONE E COMPLIANCE",
+        "label": "Assicurazione & Conformità",
         "profiles": "Assicuratori W&I · Fiscalisti corporate",
         "title": "Assicuratori e fiscalisti specializzati",
         "desc": "Assicuratori W&I e fiscalisti esperti che garantiscono le operazioni e i rischi in ogni fase del ciclo di vita dell'impresa.",

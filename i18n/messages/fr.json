@@ -4897,28 +4897,28 @@
         "cta": "Devenir partenaire Conseil M&A"
       },
       "finance": {
-        "label": "BANQUES & PARTENAIRES FINANCIERS",
+        "label": "Banques & Partenaires financiers",
         "title": "Partenaires financiers",
         "desc": "Établissements bancaires, banques régionales et institutionnels financiers qui accompagnent les entrepreneurs à chaque étape de leur développement. Une synergie naturelle avec notre dispositif de conseil et d'accompagnement.",
         "profiles": "Établissements bancaires & banques régionales · Fonds de dette et de capital-développement · Family offices & multi-family offices · Sociétés de cautionnement & garantie · Institutions financières publiques (BPI, etc.)",
         "cta": "Devenir partenaire financier"
       },
       "sequestre": {
-        "label": "SÉQUESTRE & JURIDIQUE",
+        "label": "Séquestre & Juridique",
         "profiles": "Banques dépositaires · Cabinets juridiques d'affaires",
         "title": "Séquestre & Partenaires juridiques",
         "desc": "Banques dépositaires et cabinets juridiques d'affaires qui structurent et sécurisent les mécanismes de séquestre et de closing des opérations accompagnées.",
         "cta": "Rejoindre en tant que partenaire juridique"
       },
       "technique": {
-        "label": "EXPERTISE TECHNIQUE",
+        "label": "Expertise technique",
         "profiles": "CTO freelance senior · Auditeurs sécurité PASSI/CREST · Spécialistes Web3",
         "title": "Experts techniques indépendants",
         "desc": "CTO, auditeurs cybersécurité et spécialistes blockchain qui renforcent nos missions de due diligence technique et de certification.",
         "cta": "Rejoindre en tant qu'expert technique"
       },
       "assurance": {
-        "label": "ASSURANCE & CONFORMITÉ",
+        "label": "Assurance & Conformité",
         "profiles": "Assureurs W&I · Fiscalistes corporate",
         "title": "Assureurs & Fiscalistes spécialisés",
         "desc": "Assureurs W&I et fiscalistes experts qui sécurisent les opérations et les risques à chaque étape du cycle de vie de l'entreprise.",

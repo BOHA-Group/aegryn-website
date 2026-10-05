@@ -15,7 +15,7 @@ Incorporated in Switzerland. HQ: St-Sulpice, Canton de Vaud.
 Positioning: operational-compliance standards certify that systems and processes conform to a norm; Aegryn certifies a different object — the value and the transferability of an organisation and its assets. The two are complementary, not competing.
 
 Tagline: "Engineered to Last" / "Building What Endures" / "Built to Last" — keeping founders in control of their growth and their assets, including in the age of autonomous AI.
-Contact: contact@boha-group.com
+Contact: contact@boha-group.com · +41 24 539 18 81 (Swiss office)
 Website: https://aegryn.com
 
 ## Key Topics & Search Terms
@@ -98,6 +98,7 @@ Pages: /assets, /services/build, /ce-que-nous-construisons (fr) / /what-we-build
 Business Strategy & Innovation (growth strategy, board advisory, digital transformation), Risk Management & Compliance (NIS2, DORA, EU AI Act, GDPR/FADP, incident readiness, audit preparation), Technology & Sovereignty (cybersecurity, AI audit, cloud independence, tech architecture), Talent & Organization (founder dependency, succession planning, management team depth, executive recruitment via Aegryn Talent), M&A, Transactions & PMI (buy-side, sell-side, deal structuring, post-merger integration).
 Operates across 23+ industries: aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom, transport.
 Pages: /advisory, /advisory/strategy, /advisory/risk-compliance, /advisory/technology, /advisory/talent-organization, /advisory/ma
+Each advisory page (v2, October 2026) is built for leaders of organisations between EUR 10M and 300M (SMEs and mid-caps) across the five industry clusters: a sourced market observation (Bpifrance, Syntec, SECO, NZZ-KMU-Barometer, Swiss NCSC, European Commission, EU Regulations 2024/1689 and 2026/1744), six client situations linked to the Valoriser lifecycle, named services, a proprietary framework, SME vs mid-cap reading, sector reading, an illustrative scenario, what an AI tool will not do, a five-question self-assessment, and two actions (a 30-minute scoping call and a page-specific action). Proprietary frameworks: the Four-Test Grid (strategy), the Three-Track Exposure Map (compliance: mandatory, contractual, to watch), the 90-Day Reversibility Test (technology), the Dependency Index (talent and organisation), the Four Blind Spots Review (M&A: code and chain of rights, contracts and change of control, compliance and security, people and dependencies). Aegryn advises; financial execution of transactions is entrusted to accredited partners.
 
 ### 3. Valoriser — Measure, Certify, Realise across the organisation lifecycle (at /valoriser)
 Valuing an organisation is not limited to transferring it. Aegryn measures value with the CIFSO Valuation Index, certifies it independently with CIFSO 5000, and accompanies its creation and realisation at every stage of the organisation's lifecycle. Five cycles: Launch & Structuring (build a transmissible, certifiable asset from day one), Growth & Scaling (secure hyper-growth without fragilising governance or technology), Restructuring & Pivot (regain control fast in crisis, cyber incident or regulatory injunction situations), Acquisition & External Growth (independent technical, regulatory and organisational due diligence for buy-side), Transmission & Cession (twelve to thirty-six month vendor readiness before going to market).
@@ -126,7 +127,7 @@ The certificate attests four things: what the organisation owns, what it control
 
 The Data Room traces the evidence per dimension, including AI-exposure evidence (S-10 AI inventory — blocking requirement, S-11 AI usage policy, S-12 AI vendor contracts/DPA).
 
-Regulatory compliance (CIFSO v4.11): each asset's regulatory perimeter is profiled, then validated during the audit. A regulation is only assessed when applicable, never penalised when out of scope. Controls are distributed across the dimensions that actually control them: EU Data Act access-by-design and portability (C) plus B2B FRAND data-sharing terms (I); Cyber Resilience Act SBOM and vulnerability management (C); ePrivacy/cookies, DSA/P2B platform terms, sanctions & embargo declaration, AML policy (I); NIS2, DORA and EU AI Act (S); compliance governance accountability (O). A non-compliant applicable regulation never blocks the CIFSO report: it lowers the dimension score, caps the grade at AA, and affects the Transaction Readiness Score.
+Regulatory compliance (CIFSO 5000): each asset's regulatory perimeter is profiled, then validated during the audit. A regulation is only assessed when applicable, never penalised when out of scope. Controls are distributed across the dimensions that actually control them: EU Data Act access-by-design and portability (C) plus B2B FRAND data-sharing terms (I); Cyber Resilience Act SBOM and vulnerability management (C); ePrivacy/cookies, DSA/P2B platform terms, sanctions & embargo declaration, AML policy (I); NIS2, DORA and EU AI Act (S); compliance governance accountability (O). A non-compliant applicable regulation never blocks the CIFSO report: it lowers the dimension score, caps the grade at AA, and affects the Transaction Readiness Score.
 
 5 grades immutable:
 - AEG ★ — Apex (absolute excellence) #5ADDA4
@@ -175,7 +176,7 @@ Five industry hubs with dedicated pages (/industries + /industries/[slug]): Fina
 
 Publication on tech M&A, AI, exits and art de vivre (English only). Editions are named by date only — e.g. "January 2027 — Built to Last". Available in web reader and interactive flipbook format.
 Tagline: "Deals, multiples, portraits et art de vivre."
-Pages: /magazine, /magazine/issue-01, /magazine/issue-01/cover, /magazine/issue-01/web, /magazine/issue-01/flipbook
+Pages: /magazine, /magazine/issue-01, /magazine/issue-01/cover, /magazine/issue-01/web, /magazine/issue-01/flipbook. Issue 01 (January 2027, "Built to Last"): 138 pages, 81 articles in the web edition, sourced 2026 data (Eurostat, Invest Europe, CMS European M&A Study 2026, Mergermarket, PitchBook, Swiss Venture Capital Report 2026, UBS/HSG, KfW), six named 2026 deals, an interview with Julien Guex (FIT, Lausanne), five company-lifecycle moments across the five industry clusters.
 
 ## Philosophy
 

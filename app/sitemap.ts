@@ -2,7 +2,6 @@ import type { MetadataRoute } from 'next'
 import { ARTICLES }    from '@/data/articles'
 import { INDUSTRIES }  from '@/data/industries'
 import { Aegryn_ASSETS } from '@/data/assets'
-import { ARTICLES_01 } from '@/content/magazine/issue-01/articles'
 import { routing }     from '@/i18n/routing'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
@@ -147,14 +146,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
-  // Articles du magazine (issue-01) × 6 locales
-  for (const article of ARTICLES_01) {
-    pushLocalized(entries, `/magazine/issue-01/${article.slug}`, {
-      lastModified:    now,
-      changeFrequency: 'yearly',
-      priority:        0.6,
-    })
-  }
+  // Anciennes pages d'articles du magazine (/magazine/issue-01/[slug]) : remplacées par
+  // la web edition, redirigées en 301 vers /magazine/issue-01, donc hors sitemap.
 
   // Articles de blog × 6 locales
   for (const article of ARTICLES) {

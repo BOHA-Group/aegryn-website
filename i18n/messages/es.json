@@ -4922,28 +4922,28 @@
         "cta": "Convertirse en socio de Asesoramiento M&A"
       },
       "finance": {
-        "label": "BANCOS & SOCIOS FINANCIEROS",
+        "label": "Bancos y Socios financieros",
         "title": "Socios financieros",
         "desc": "Entidades bancarias, bancos regionales e instituciones financieras que acompañan a los emprendedores en cada etapa de su desarrollo. Una sinergia natural con nuestro dispositivo de asesoramiento y acompañamiento.",
         "profiles": "Entidades bancarias y bancos regionales · Fondos de deuda y capital de crecimiento · Family offices y multi-family offices · Sociedades de aval y garantía · Instituciones financieras públicas (BPI, etc.)",
         "cta": "Convertirse en socio financiero"
       },
       "sequestre": {
-        "label": "DEPÓSITO Y LEGAL",
+        "label": "Depósito en garantía y Jurídico",
         "profiles": "Bancos depositarios · Bufetes de derecho mercantil",
         "title": "Depósito en garantía y socios jurídicos",
         "desc": "Bancos depositarios y bufetes de derecho mercantil que estructuran y aseguran los mecanismos de escrow y closing de las operaciones acompañadas.",
         "cta": "Unirse como socio jurídico"
       },
       "technique": {
-        "label": "EXPERIENCIA TÉCNICA",
+        "label": "Experiencia técnica",
         "profiles": "CTO freelance senior · Auditores de seguridad PASSI/CREST · Especialistas Web3",
         "title": "Expertos técnicos independientes",
         "desc": "CTOs, auditores de ciberseguridad y especialistas en blockchain que refuerzan nuestras misiones de due diligence técnica y certificación.",
         "cta": "Unirse como experto técnico"
       },
       "assurance": {
-        "label": "SEGURO Y CUMPLIMIENTO",
+        "label": "Seguros y Cumplimiento",
         "profiles": "Aseguradoras W&I · Fiscalistas corporate",
         "title": "Aseguradores y fiscalistas especializados",
         "desc": "Aseguradoras W&I y fiscalistas expertos que aseguran las operaciones y los riesgos en cada etapa del ciclo de vida de la empresa.",

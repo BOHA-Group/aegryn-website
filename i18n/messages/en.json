@@ -4937,28 +4937,28 @@
         "cta": "Become an M&A Advisory partner"
       },
       "finance": {
-        "label": "BANKS & FINANCIAL PARTNERS",
+        "label": "Banks & Financial partners",
         "title": "Financial partners",
         "desc": "Banking institutions, regional banks and financial institutions that support entrepreneurs at every stage of their development. A natural synergy with our advisory and support offering.",
         "profiles": "Banking institutions & regional banks · Debt and growth capital funds · Family offices & multi-family offices · Guarantee & surety companies · Public financial institutions (BPI, etc.)",
         "cta": "Become a financial partner"
       },
       "sequestre": {
-        "label": "ESCROW & LEGAL",
+        "label": "Escrow & Legal",
         "profiles": "Custodian banks · Business law firms",
         "title": "Escrow & Legal Partners",
         "desc": "Custodian banks and business law firms that structure and secure escrow and closing mechanisms for supported operations.",
         "cta": "Join as a legal partner"
       },
       "technique": {
-        "label": "TECHNICAL EXPERTISE",
+        "label": "Technical expertise",
         "profiles": "Senior freelance CTOs · PASSI/CREST security auditors · Web3 specialists",
         "title": "Independent Technical Experts",
         "desc": "CTOs, cybersecurity auditors and blockchain specialists who strengthen our technical due diligence and certification missions.",
         "cta": "Join as a technical expert"
       },
       "assurance": {
-        "label": "INSURANCE & COMPLIANCE",
+        "label": "Insurance & Compliance",
         "profiles": "W&I insurers · Corporate tax specialists",
         "title": "Insurance & Tax Specialists",
         "desc": "W&I insurers and expert tax advisors who secure operations and risks at every stage of the company lifecycle.",

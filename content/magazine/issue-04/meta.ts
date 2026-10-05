@@ -8,7 +8,7 @@ export const ISSUE_04: MagazineIssue = {
   publishedAt: '2027-10-01',
   coverStat: '3.5M',
   coverStatLabel: 'PME européennes sans successeur identifié — 2027',
-  coverLine: 'Transmit. Transform. Transact.',
+  coverLine: 'Transmit. Transform. Endure.',
   status: 'published',
   sections: [],
 }
