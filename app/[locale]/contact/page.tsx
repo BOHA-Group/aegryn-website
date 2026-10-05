@@ -2,6 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata } from 'next'
 import ContactForm from '@/components/contact/ContactForm'
+import { AdvisoryActionForm } from '@/components/advisory/AdvisoryActionForm'
+import { getAction, type Metier, type ActionSlug } from '@/content/advisory/actions'
 
 const BASE = 'https://aegryn.com'
 const CONTACT_SLUG: Record<string, string> = {
@@ -13,7 +15,12 @@ const CONTACT_SLUG: Record<string, string> = {
   nl: '/contact',
 }
 
-type Props = { params: Promise<{ locale: string }> }
+type Props = {
+  params: Promise<{ locale: string }>
+  searchParams: Promise<{ metier?: string; action?: string }>
+}
+
+const VALID_METIERS: Metier[] = ['strategie', 'conformite', 'technologie', 'talent', 'ma']
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
@@ -41,9 +48,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function ContactPage({ params }: Props) {
+export default async function ContactPage({ params, searchParams }: Props) {
   const { locale } = await params
+  const sp = await searchParams
   const t = await getTranslations({ locale, namespace: 'contact' })
+
+  const metier = VALID_METIERS.includes(sp.metier as Metier) ? (sp.metier as Metier) : null
+  const actionDef = metier && sp.action ? getAction(locale, metier, sp.action as ActionSlug) : null
 
   return (
     <>
@@ -54,10 +65,10 @@ export default async function ContactPage({ params }: Props) {
             Contact
           </p>
           <h1 className="font-sans text-6xl font-bold tracking-tighter text-ag-black sm:text-7xl max-w-xl">
-            {t('hero.title')}
+            {actionDef ? `${actionDef.label}.` : t('hero.title')}
           </h1>
           <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">
-            {t('hero.desc')}
+            {actionDef ? actionDef.question : t('hero.desc')}
           </p>
         </div>
       </section>
@@ -117,7 +128,11 @@ export default async function ContactPage({ params }: Props) {
           </div>
 
           {/* Form */}
-          <ContactForm locale={locale} />
+          {metier && actionDef ? (
+            <AdvisoryActionForm locale={locale} metier={metier} action={sp.action as string} def={actionDef} />
+          ) : (
+            <ContactForm locale={locale} />
+          )}
         </div>
       </section>
 

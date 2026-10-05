@@ -36,6 +36,7 @@ Convention de nommage : `NNN_nom_table.sql` (NNN = ordre d'exécution).
 
 | # | Objectif | Prérequis |
 |---|----------|-----------|
+| 119 | `119_advisory_leads.sql` : table `advisory_leads` (demandes des pages métiers /advisory, source Advisory dans /admin/leads). À exécuter dans le SQL Editor. | Trigger `set_updated_at` (004) |
 | 092+ | À définir selon évolution produit |, |
 
 ---

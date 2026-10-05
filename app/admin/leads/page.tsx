@@ -90,6 +90,17 @@ export default async function AdminLeadsPage({
       if (error) fetchError = error.message
       rows = (data ?? []) as Record<string, unknown>[]
     }
+
+    if (source === 'advisory') {
+      let q = supa
+        .from('advisory_leads')
+        .select('id, metier, action, full_name, email, revenue_band, sector_cluster, answer, newsletter_optin, status, locale, created_at')
+        .order('created_at', { ascending: false }).limit(200)
+      if (params.status && params.status !== 'all') q = q.eq('status', params.status)
+      const { data, error } = await q
+      if (error) fetchError = error.message
+      rows = (data ?? []) as Record<string, unknown>[]
+    }
   } catch (e) {
     fetchError = String(e)
   }
@@ -107,6 +118,7 @@ export default async function AdminLeadsPage({
       { key: 'alliances',      table: 'alliance_applications'   },
       { key: 'prospects',      table: 'prospects'               },
       { key: 'auction_access', table: 'auction_access_requests' },
+      { key: 'advisory',       table: 'advisory_leads'          },
       // cifso_index_waitlist n'a pas de colonne status → count total
     ]
     await Promise.all([

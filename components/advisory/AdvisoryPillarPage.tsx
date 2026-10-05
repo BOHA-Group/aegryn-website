@@ -4,6 +4,8 @@ import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
+import { PAGE_ACTIONS, getAction } from '@/content/advisory/actions'
+import { routing } from '@/i18n/routing'
 import type { AdvisoryPageContent } from '@/content/advisory/types'
 
 interface Props {
@@ -17,7 +19,7 @@ const LABEL_G = 'font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex'
 const H2      = 'font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]'
 const CARD    = 'rounded-2xl bg-ag-white border border-ag-border'
 const BTN_PRI = 'rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors'
-const BTN_SEC = 'rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all'
+const BTN_SEC = 'rounded-lg inline-flex items-center gap-2 border border-white/60 bg-white/10 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-white hover:text-ag-navy transition-all'
 
 /**
  * Gabarit des pages métiers ACCOMPAGNER, version 2.
@@ -29,7 +31,13 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
   const cycleLabels = LIFECYCLE_LABELS[locale] ?? LIFECYCLE_LABELS.fr
   const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const L = (href: string) => `/${locale}${href}`
-  const contactHref = L(`/contact?subject=${c.cta.subject}`)
+  const pageActions = PAGE_ACTIONS[c.cta.metier]
+  const echangeDef  = getAction(locale, c.cta.metier, pageActions.echange)
+  const actionDef   = getAction(locale, c.cta.metier, pageActions.action)
+  const contactSlugs = routing.pathnames['/contact'] as Record<string, string>
+  const contactPath  = contactSlugs[locale] ?? '/contact'
+  const hrefFor = (action: string) => L(`${contactPath}?metier=${c.cta.metier}&action=${action}`)
+  const contactHref = hrefFor(pageActions.echange)
 
   return (
     <main className="bg-ag-white">
@@ -50,8 +58,8 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </h1>
           <p className="font-sans text-[15px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
           <div className="flex flex-wrap gap-3">
-            <Link href={contactHref} className={BTN_PRI}>{c.cta.primary} <ArrowUpRight size={12} /></Link>
-            {c.cta.secondary && <Link href={contactHref} className={BTN_SEC}>{c.cta.secondary}</Link>}
+            {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
+            {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
           </div>
         </div>
       </section>
@@ -265,7 +273,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             questions={c.diagnostic.questions}
             levels={c.diagnostic.levels}
             privacy={c.diagnostic.privacy}
-            ctaLabel={c.cta.primary}
+            ctaLabel={echangeDef?.label ?? ''}
             ctaHref={contactHref}
             locale={locale}
           />
@@ -309,13 +317,13 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>
             <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
-            <h2 className="font-sans font-bold text-white text-[30px] md:text-[38px] tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl">{c.cta.primary}.</h2>
+            <h2 className="font-sans font-bold text-white text-[30px] md:text-[38px] tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl">{echangeDef?.label}.</h2>
             <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-lg mb-10">
               {ui.ctaBody}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href={contactHref} className={BTN_PRI}>{c.cta.primary} <ArrowUpRight size={12} /></Link>
-              {c.cta.secondary && <Link href={contactHref} className={BTN_SEC}>{c.cta.secondary}</Link>}
+              {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
+              {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
             </div>
           </div>
           <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-8">

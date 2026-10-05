@@ -129,7 +129,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 01 · Built to Last', href: '/magazine/issue-01', kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Uw beslissing kaderen', secondary: 'Een beslissingsfiche aanvragen', subject: 'advisory' },
+    cta: { metier: 'strategie' },
   },
 
   riskCompliance: {
@@ -247,7 +247,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: PRIVACY,
     },
     perspectives: { title: 'Perspectieven', items: [] },
-    cta: { primary: 'Uw blootstelling beoordelen', secondary: 'De Blootstellingskaart aanvragen', subject: 'advisory' },
+    cta: { metier: 'conformite' },
   },
 
   technology: {
@@ -369,7 +369,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Wat een tech-actief echt certificeerbaar maakt', href: '/blog/actif-tech-certifiable', kind: 'article' },
       ],
     },
-    cta: { primary: 'Uw architectuur auditen', secondary: 'Uw tien kritieke componenten aan de toets onderwerpen', subject: 'tech' },
+    cta: { metier: 'technologie' },
   },
 
   talentOrganization: {
@@ -486,7 +486,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: PRIVACY,
     },
     perspectives: { title: 'Perspectieven', items: [] },
-    cta: { primary: 'Uw afhankelijkheid meten', secondary: 'Uw opvolging kaderen', subject: 'advisory' },
+    cta: { metier: 'talent' },
   },
 
   ma: {
@@ -613,6 +613,6 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 02 · The Exit Equation (april 2027)', href: '/magazine', kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Een doelwit door de zeef halen', secondary: 'Een integratie voorbereiden', subject: 'advisory' },
+    cta: { metier: 'ma' },
   },
 }

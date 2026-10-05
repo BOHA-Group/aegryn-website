@@ -134,7 +134,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 01 · Built to Last',    href: '/magazine/issue-01',                   kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Poser votre décision', secondary: 'Demander une fiche de décision', subject: 'advisory' },
+    cta: { metier: 'strategie' },
   },
 
   /* ───────────────────────── 2. RISQUES & CONFORMITÉ ───────────────────────── */
@@ -254,7 +254,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: DIAG_LEVELS_PRIVACY,
     },
     perspectives: { title: 'Perspectives', items: [] },
-    cta: { primary: 'Évaluer votre exposition', secondary: "Demander la Carte d'exposition", subject: 'advisory' },
+    cta: { metier: 'conformite' },
   },
 
   /* ───────────────────────── 3. TECHNOLOGIE & SOUVERAINETÉ ───────────────────────── */
@@ -378,7 +378,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Ce qui rend un actif tech vraiment certifiable', href: '/blog/actif-tech-certifiable', kind: 'article' },
       ],
     },
-    cta: { primary: 'Auditer votre architecture', secondary: 'Faire passer vos dix composants critiques au test', subject: 'tech' },
+    cta: { metier: 'technologie' },
   },
 
   /* ───────────────────────── 4. TALENT & ORGANISATION ───────────────────────── */
@@ -497,7 +497,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: DIAG_LEVELS_PRIVACY,
     },
     perspectives: { title: 'Perspectives', items: [] },
-    cta: { primary: 'Mesurer votre dépendance', secondary: 'Cadrer votre succession', subject: 'advisory' },
+    cta: { metier: 'talent' },
   },
 
   /* ───────────────────────── 5. M&A, TRANSACTIONS & PMI ───────────────────────── */
@@ -626,6 +626,6 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 02 · The Exit Equation (avril 2027)', href: '/magazine', kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Passer une cible au crible', secondary: 'Préparer une intégration', subject: 'advisory' },
+    cta: { metier: 'ma' },
   },
 }

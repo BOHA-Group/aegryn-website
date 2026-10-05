@@ -112,5 +112,6 @@ export interface AdvisoryPageContent {
     privacy:    string
   }
   perspectives: { title: string; items: Perspective[] }
-  cta:          { primary: string; secondary?: string; subject: string }
+  /** Metier utilise comme parametre ?metier= vers /contact (voir content/advisory/actions.ts) */
+  cta:          { metier: 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' }
 }

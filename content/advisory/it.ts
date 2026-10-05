@@ -129,7 +129,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 01 · Built to Last', href: '/magazine/issue-01', kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Porre la vostra decisione', secondary: 'Richiedere una scheda decisionale', subject: 'advisory' },
+    cta: { metier: 'strategie' },
   },
 
   riskCompliance: {
@@ -247,7 +247,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: PRIVACY,
     },
     perspectives: { title: 'Prospettive', items: [] },
-    cta: { primary: 'Valutare la vostra esposizione', secondary: 'Richiedere la Mappa di esposizione', subject: 'advisory' },
+    cta: { metier: 'conformite' },
   },
 
   technology: {
@@ -369,7 +369,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Che cosa rende un attivo tech davvero certificabile', href: '/blog/actif-tech-certifiable', kind: 'article' },
       ],
     },
-    cta: { primary: 'Verificare la vostra architettura', secondary: 'Sottoporre al test i vostri dieci componenti critici', subject: 'tech' },
+    cta: { metier: 'technologie' },
   },
 
   talentOrganization: {
@@ -486,7 +486,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       privacy: PRIVACY,
     },
     perspectives: { title: 'Prospettive', items: [] },
-    cta: { primary: 'Misurare la vostra dipendenza', secondary: 'Inquadrare la vostra successione', subject: 'advisory' },
+    cta: { metier: 'talent' },
   },
 
   ma: {
@@ -613,6 +613,6 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
         { title: 'Aegryn Magazine, Issue 02 · The Exit Equation (aprile 2027)', href: '/magazine', kind: 'magazine' },
       ],
     },
-    cta: { primary: 'Passare un target al vaglio', secondary: 'Preparare un’integrazione', subject: 'advisory' },
+    cta: { metier: 'ma' },
   },
 }

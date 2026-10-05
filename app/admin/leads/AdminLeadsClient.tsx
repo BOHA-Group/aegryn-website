@@ -12,6 +12,7 @@ const SOURCES = [
   { key: 'alliances',      label: 'Alliances'       },
   { key: 'prospects',      label: 'Waitlist Session'},
   { key: 'auction_access', label: 'Accès Catalogue' },
+  { key: 'advisory',       label: 'Advisory'        },
 ] as const
 
 const GRADES   = ['all', '★', 'AAA', 'AA', 'A', 'B', 'NG'] as const
@@ -354,6 +355,36 @@ function AlliancesTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
 }
 
 /* ── Micro-composants ── */
+function AdvisoryLeadsTable({ rows, onDelete }: { rows: Record<string, unknown>[]; onDelete: (id: string) => void }) {
+  if (!rows.length) return <EmptyState />
+  return (
+    <table className="w-full text-[12px] bg-white border border-gray-200">
+      <thead className="bg-gray-50 border-b border-gray-200">
+        <tr>{['Date','Métier','Action','Nom','Email','CA','Secteur','Réponse','Newsletter','Statut',''].map(h => <Th key={h}>{h}</Th>)}</tr>
+      </thead>
+      <tbody className="divide-y divide-gray-100">
+        {rows.map((r, i) => (
+          <tr key={i} className="hover:bg-gray-50">
+            <Td mono>{fmtDate(r.created_at)}</Td>
+            <Td><span className="rounded-lg px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{String(r.metier ?? '—')}</span></Td>
+            <Td small>{String(r.action ?? '—')}</Td>
+            <Td>{String(r.full_name ?? '—')}</Td>
+            <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
+            <Td>{String(r.revenue_band ?? '—')}</Td>
+            <Td small>{String(r.sector_cluster ?? '—')}</Td>
+            <Td small>{String(r.answer ?? '—')}</Td>
+            <Td>{r.newsletter_optin ? '✓' : '—'}</Td>
+            <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
+            <td className="px-4 py-3">
+              <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
 function Th({ children }: { children: React.ReactNode }) {
   return <th className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">{children}</th>
 }
@@ -564,6 +595,7 @@ export default function AdminLeadsClient({
         {source === 'alliances'      && <AlliancesTable       rows={rows} onDelete={deleteOne} />}
         {source === 'prospects'      && <ProspectsTable       rows={rows} onDelete={deleteOne} />}
         {source === 'auction_access' && <TransactionAccessTable rows={rows} onDelete={deleteOne} />}
+        {source === 'advisory'       && <AdvisoryLeadsTable    rows={rows} onDelete={deleteOne} />}
       </div>
 
     </div>

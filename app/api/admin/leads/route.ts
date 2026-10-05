@@ -10,6 +10,7 @@ const SOURCE_TABLE: Record<string, string> = {
   alliances:      'alliance_applications',
   prospects:      'prospects',
   auction_access: 'auction_access_requests',
+  advisory:       'advisory_leads',
 }
 
 /**
