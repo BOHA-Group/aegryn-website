@@ -31,13 +31,13 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9 000', label: 'Beratungsmandate von Bpifrance im Jahr 2024, +50 % in einem Jahr', source: 'Bpifrance Presse, 2025' },
         { value: '−2 %', label: 'französischer Beratungsmarkt 2025, inflationsbereinigt', source: 'Syntec Conseil' },
-        { value: '−7,3', label: 'Schweizer KMU-Barometer 2026, tiefster Stand seit 2021', source: 'SECO, KMU-Barometer 2026' },
+        { value: '−7,3', label: 'Indexpunkte, NZZ-KMU-Barometer 2026, tiefster Stand seit Erhebungsbeginn 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
       paragraphs: [
-        'KMU- und Mid-Cap-Führungskräfte kaufen Beratung, aber anders. Bpifrance führte 2024 fast 9 000 Beratungsmandate durch, 50 % mehr als im Vorjahr, während der französische Beratungsmarkt 2025 inflationsbereinigt um 2 % schrumpfte. In der Schweiz liegt der Index des KMU-Barometers 2026 bei −7,3, dem tiefsten Stand seit 2021; einzig die Technologieintegration legt zu.',
+        'KMU- und Mid-Cap-Führungskräfte kaufen Beratung, aber anders. Bpifrance führte 2024 fast 9 000 Beratungsmandate durch, 50 % mehr als im Vorjahr, während der französische Beratungsmarkt 2025 inflationsbereinigt um 2 % schrumpfte. In der Schweiz fällt der Gesamtindex des NZZ-KMU-Barometers 2026 (NZZ und Kalaidos Fachhochschule) auf −7,3 Punkte, den tiefsten Stand seit Erhebungsbeginn 2021; einzig die Technologieintegration legt zu.',
       ],
       change: 'Wenn das Umfeld rauer wird, steigen die Kosten einer Fehlentscheidung. Gefragt ist kein grosses Programm mehr, sondern eine präzise Entscheidung, rasch getroffen, mit erfahrenem Blick.',
-      sources: 'Quellen: Bpifrance Presse (2025) · Syntec Conseil · SECO, KMU-Barometer 2026.',
+      sources: 'Quellen: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (vom SECO aufgegriffen).',
     },
     outcomes: {
       title: 'Was Sie erhalten',

@@ -31,13 +31,13 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9 000', label: 'missioni di consulenza Bpifrance nel 2024, +50 % in un anno', source: 'Bpifrance Presse, 2025' },
         { value: '−2 %', label: 'mercato francese della consulenza nel 2025, al netto dell’inflazione', source: 'Syntec Conseil' },
-        { value: '−7,3', label: 'barometro delle PMI svizzere 2026, livello più basso dal 2021', source: 'SECO, barometro PMI 2026' },
+        { value: '−7,3', label: 'punti indice, barometro delle PMI NZZ 2026, livello più basso dall’avvio dell’indagine nel 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
       paragraphs: [
-        'I dirigenti di PMI e mid-cap comprano consulenza, ma in modo diverso. Bpifrance ha realizzato quasi 9 000 missioni di consulenza nel 2024, in aumento del 50 % in un anno, mentre il mercato francese della consulenza arretra del 2 % nel 2025 al netto dell’inflazione. In Svizzera, l’indice del barometro delle PMI 2026 è a −7,3, il livello più basso dal 2021; solo l’integrazione delle tecnologie progredisce.',
+        'I dirigenti di PMI e mid-cap comprano consulenza, ma in modo diverso. Bpifrance ha realizzato quasi 9 000 missioni di consulenza nel 2024, in aumento del 50 % in un anno, mentre il mercato francese della consulenza arretra del 2 % nel 2025 al netto dell’inflazione. In Svizzera, l’indice composito del barometro delle PMI NZZ 2026 (NZZ e Kalaidos Fachhochschule) scende a −7,3 punti, il livello più basso dall’avvio dell’indagine nel 2021; solo l’integrazione delle tecnologie progredisce.',
       ],
       change: 'Quando il contesto si irrigidisce, il costo di un arbitraggio sbagliato aumenta. Il bisogno non è più un grande programma, è una decisione precisa, presa in fretta, con uno sguardo senior.',
-      sources: 'Fonti: Bpifrance Presse (2025) · Syntec Conseil · SECO, barometro PMI 2026.',
+      sources: 'Fonti: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (ripreso dalla SECO).',
     },
     outcomes: {
       title: 'Che cosa ottenete',

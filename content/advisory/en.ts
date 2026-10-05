@@ -31,13 +31,13 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9,000', label: 'Bpifrance consulting missions in 2024, up 50% in one year', source: 'Bpifrance Press, 2025' },
         { value: '−2%', label: 'French consulting market in 2025, excluding inflation', source: 'Syntec Conseil' },
-        { value: '−7.3', label: 'Swiss SME barometer 2026, lowest level since 2021', source: 'SECO, SME barometer 2026' },
+        { value: '−7.3', label: 'index points, NZZ SME barometer 2026, lowest level since the survey began in 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos University of Applied Sciences' },
       ],
       paragraphs: [
-        'SME and mid-cap leaders do buy consulting, but differently. Bpifrance delivered close to 9,000 consulting missions in 2024, up 50% in one year, while the French consulting market declined by 2% in 2025 excluding inflation. In Switzerland, the 2026 SME barometer index stands at −7.3, its lowest level since 2021; only technology integration is improving.',
+        'SME and mid-cap leaders do buy consulting, but differently. Bpifrance delivered close to 9,000 consulting missions in 2024, up 50% in one year, while the French consulting market declined by 2% in 2025 excluding inflation. In Switzerland, the composite index of the 2026 NZZ SME barometer (NZZ and Kalaidos University of Applied Sciences) falls to −7.3 points, its lowest level since the survey began in 2021; only technology integration is improving.',
       ],
       change: 'When conditions tighten, the cost of a wrong call rises. The need is no longer a large programme; it is one precise decision, taken quickly, with senior eyes on it.',
-      sources: 'Sources: Bpifrance Press (2025) · Syntec Conseil · SECO, SME barometer 2026.',
+      sources: 'Sources: Bpifrance Press (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos University of Applied Sciences (relayed by SECO).',
     },
     outcomes: {
       title: 'What you get',

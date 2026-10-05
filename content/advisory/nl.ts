@@ -31,13 +31,13 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9 000', label: 'adviesopdrachten van Bpifrance in 2024, +50 % in één jaar', source: 'Bpifrance Presse, 2025' },
         { value: '−2 %', label: 'Franse adviesmarkt in 2025, gecorrigeerd voor inflatie', source: 'Syntec Conseil' },
-        { value: '−7,3', label: 'Zwitserse kmo-barometer 2026, laagste stand sinds 2021', source: 'SECO, kmo-barometer 2026' },
+        { value: '−7,3', label: 'indexpunten, NZZ-kmo-barometer 2026, laagste stand sinds de start van de enquête in 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
       paragraphs: [
-        'Leiders van kmo’s en middelgrote bedrijven kopen advies, maar anders. Bpifrance voerde in 2024 bijna 9 000 adviesopdrachten uit, 50 % meer dan een jaar eerder, terwijl de Franse adviesmarkt in 2025 gecorrigeerd voor inflatie met 2 % krimpt. In Zwitserland staat de index van de kmo-barometer 2026 op −7,3, de laagste stand sinds 2021; alleen de integratie van technologie gaat vooruit.',
+        'Leiders van kmo’s en middelgrote bedrijven kopen advies, maar anders. Bpifrance voerde in 2024 bijna 9 000 adviesopdrachten uit, 50 % meer dan een jaar eerder, terwijl de Franse adviesmarkt in 2025 gecorrigeerd voor inflatie met 2 % krimpt. In Zwitserland daalt de samengestelde index van de NZZ-kmo-barometer 2026 (NZZ en Kalaidos Fachhochschule) naar −7,3 punten, de laagste stand sinds de start van de enquête in 2021; alleen de integratie van technologie gaat vooruit.',
       ],
       change: 'Wanneer de context verstrakt, stijgen de kosten van een verkeerde afweging. Er is geen groot programma meer nodig, maar één precieze beslissing, snel genomen, met een ervaren blik.',
-      sources: 'Bronnen: Bpifrance Presse (2025) · Syntec Conseil · SECO, kmo-barometer 2026.',
+      sources: 'Bronnen: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (overgenomen door SECO).',
     },
     outcomes: {
       title: 'Wat u krijgt',

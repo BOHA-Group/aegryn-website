@@ -31,13 +31,13 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9 000', label: 'misiones de consultoría de Bpifrance en 2024, +50 % en un año', source: 'Bpifrance Presse, 2025' },
         { value: '−2 %', label: 'mercado francés de la consultoría en 2025, descontada la inflación', source: 'Syntec Conseil' },
-        { value: '−7,3', label: 'barómetro de las pymes suizas 2026, nivel más bajo desde 2021', source: 'SECO, barómetro pymes 2026' },
+        { value: '−7,3', label: 'puntos de índice, barómetro de pymes NZZ 2026, nivel más bajo desde el inicio de la encuesta en 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
       paragraphs: [
-        'Los directivos de pymes y empresas medianas compran consultoría, pero de otra manera. Bpifrance realizó cerca de 9 000 misiones de consultoría en 2024, un 50 % más en un año, mientras el mercado francés de la consultoría retrocede un 2 % en 2025 descontada la inflación. En Suiza, el índice del barómetro de las pymes 2026 está en −7,3, su nivel más bajo desde 2021; solo la integración de las tecnologías progresa.',
+        'Los directivos de pymes y empresas medianas compran consultoría, pero de otra manera. Bpifrance realizó cerca de 9 000 misiones de consultoría en 2024, un 50 % más en un año, mientras el mercado francés de la consultoría retrocede un 2 % en 2025 descontada la inflación. En Suiza, el índice compuesto del barómetro de pymes NZZ 2026 (NZZ y la escuela superior Kalaidos) cae a −7,3 puntos, su nivel más bajo desde el inicio de la encuesta en 2021; solo la integración de las tecnologías progresa.',
       ],
       change: 'Cuando el contexto se tensa, el coste de un mal arbitraje aumenta. La necesidad ya no es un gran programa, es una decisión precisa, tomada rápido, con una mirada sénior.',
-      sources: 'Fuentes: Bpifrance Presse (2025) · Syntec Conseil · SECO, barómetro pymes 2026.',
+      sources: 'Fuentes: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (recogido por el SECO).',
     },
     outcomes: {
       title: 'Lo que obtiene',

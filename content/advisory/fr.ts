@@ -36,13 +36,13 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       cards: [
         { value: '≈ 9 000', label: 'missions de conseil Bpifrance en 2024, +50 % en un an', source: 'Bpifrance Presse, 2025' },
         { value: '−2 %',    label: 'marché français du conseil en 2025, hors inflation', source: 'Syntec Conseil' },
-        { value: '−7,3',    label: 'baromètre des PME suisses 2026, plus bas niveau depuis 2021', source: 'SECO, baromètre PME 2026' },
+        { value: '−7,3',    label: 'points d’indice, baromètre des PME NZZ 2026, plus bas niveau depuis le lancement de l’enquête en 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
       paragraphs: [
-        "Les dirigeants de PME et d'ETI achètent du conseil, mais autrement. Bpifrance a réalisé près de 9 000 missions de conseil en 2024, en hausse de 50 % en un an, alors que le marché français du conseil recule de 2 % en 2025 hors inflation. En Suisse, l'indice du baromètre des PME 2026 est à −7,3, son plus bas niveau depuis 2021 ; seule l'intégration des technologies progresse.",
+        "Les dirigeants de PME et d'ETI achètent du conseil, mais autrement. Bpifrance a réalisé près de 9 000 missions de conseil en 2024, en hausse de 50 % en un an, alors que le marché français du conseil recule de 2 % en 2025 hors inflation. En Suisse, l'indice composite du baromètre des PME NZZ 2026 (NZZ et haute école Kalaidos) tombe à −7,3 points, son plus bas niveau depuis le lancement de l'enquête en 2021 ; seule l'intégration des technologies progresse.",
       ],
       change:  "Quand le contexte se tend, le coût d'un mauvais arbitrage augmente. Le besoin n'est plus un grand programme, c'est une décision précise, prise vite, avec un regard senior.",
-      sources: 'Sources : Bpifrance Presse (2025) · Syntec Conseil · SECO, baromètre PME 2026.',
+      sources: 'Sources : Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (relayé par le SECO).',
     },
     outcomes: {
       title: 'Ce que vous obtenez',
