@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { captureLead }              from '@/lib/leadCapture'
+import { emailClientAck } from '@/lib/emailAck'
+import { ack } from '@/content/emails/ack'
 
 const schema = z.object({
   civility:     z.enum(['M', 'Mme']).optional().nullable(),
@@ -25,6 +27,7 @@ export async function POST(req: NextRequest) {
     const fullName      = `${data.first_name} ${data.last_name}`
     const interestsList = (data.interests ?? []).join(', ') || '—'
 
+    const ackP = ack('printWishlist', data.locale)
     await captureLead(
       'print_wishlist',
       {
@@ -45,7 +48,9 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  'Aegryn — Liste d\'intérêt édition papier',
+        subjectFounder:  ackP.subject,
+        htmlFounder:     emailClientAck({ lang: data.locale, subject: ackP.subject, kicker: ackP.kicker, title: ackP.title, name: data.first_name, intro: ackP.intro,
+          rows: [[ackP.interests, interestsList], [ackP.company, data.company]], paragraphs: [ackP.next] }).html,
         textFounder:     `Bonjour ${data.first_name},\n\nNous avons bien enregistré votre intérêt pour l'édition papier du magazine Aegryn.\n\nCentres d'intérêt : ${interestsList}\n\nNous vous contacterons lors du lancement de la production.\n\nL'équipe Aegryn\nhttps://aegryn.com/magazine`,
         subjectInternal: `[Print Wishlist] ${fullName} — ${data.email}`,
         textInternal:    `Nouvelle entrée liste papier\nNom : ${fullName}\nEmail : ${data.email}\nEntreprise : ${data.company ?? '—'}\nAdresse : ${data.address ?? '—'}, ${data.postal_code ?? ''} ${data.city ?? ''}, ${data.country ?? ''}\nIntérêts : ${interestsList}\nLocale : ${data.locale ?? '—'}`,

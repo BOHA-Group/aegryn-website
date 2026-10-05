@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { captureLead, fmtEur }      from '@/lib/leadCapture'
+import { emailClientAck } from '@/lib/emailAck'
+import { ack } from '@/content/emails/ack'
 
 /* ─── Validation ─────────────────────────────────────────── */
 const schema = z.object({
@@ -99,6 +101,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const data = schema.parse(body)
 
+    const ackV = ack('valuation', data.locale)
     await captureLead(
       'valuation_leads',
       {
@@ -123,7 +126,14 @@ export async function POST(req: NextRequest) {
       },
       {
         to:              data.email,
-        subjectFounder:  `Votre estimation Aegryn — Grade ${data.estimated_grade} (${data.score_total}/100)`,
+        subjectFounder:  `${ackV.subject} · ${data.estimated_grade} (${data.score_total}/100)`,
+        htmlFounder:     emailClientAck({ lang: data.locale, subject: ackV.subject, kicker: ackV.kicker, title: ackV.title, intro: ackV.intro,
+          rows: [
+            [ackV.grade, String(data.estimated_grade)], [ackV.score, `${data.score_total} / 100`], [ackV.industry, data.industry ?? null],
+            [ackV.range, data.pre_revenue ? null : `${fmtEur(data.valuation_low)} à ${fmtEur(data.valuation_high)}`],
+          ],
+          pre: reportText(data), paragraphs: [ackV.disclaimer],
+          cta: { label: ackV.cta, href: 'https://aegryn.com/grade/submit' } }).html,
         textFounder:     reportText(data),
         subjectInternal: `[Lead Valuation] ${data.estimated_grade} — ${data.email}`,
         textInternal:    internalNotifText(data),

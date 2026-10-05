@@ -12,6 +12,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                         from 'zod'
 import { createServiceClient }       from '@/lib/supabase'
 import { getUser }                   from '@/lib/supabaseServer'
+import { sendEmail }                 from '@/lib/sendEmail'
+import { emailClientAck }            from '@/lib/emailAck'
+import { ack }                       from '@/content/emails/ack'
 
 export const runtime = 'nodejs'
 
@@ -55,48 +58,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 
-  /* ── Email de confirmation ── */
-  const resendKey = process.env.RESEND_API_KEY
-  const fromEmail = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-  const fromName  = process.env.RESEND_FROM_NAME ?? 'Aegryn'
-
-  if (resendKey) {
-    /* IMPORTANT : le token doit être présent dans l'URL — la route
-       /api/newsletter/unsubscribe rejette toute requête sans ?token=,
-       sans quoi le lien de désabonnement est toujours "invalide". */
-    const unsubUrl = `https://aegryn.com/api/newsletter/unsubscribe?token=${subRow.unsubscribe_token}`
-    await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization:  `Bearer ${resendKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from:    `${fromName} <${fromEmail}>`,
-        to:      [email],
-        subject: "Aegryn \u2014 Vous \u00eates inscrit(e).",
-        text: [
-          "Votre inscription est confirm\u00e9e.",
-          '',
-          "Vous recevrez d\u00e9sormais les communications Aegryn suivantes :",
-          '',
-          "\u2014 Articles & Insights : analyses march\u00e9, M&A, tech (fr\u00e9quence hebdomadaire)",
-          "\u2014 Aegryn Magazine : chaque num\u00e9ro trimestriel d\u00e8s parution",
-          '    Issue 01 \u2014 Built to Last \u2014 janvier 2027',
-          '    Issue 02 \u2014 The Exit Equation \u2014 avril 2027',
-          '',
-          "D\u00e9sabonnement en un clic.",
-          '',
-          '\u2014',
-          'Aegryn Editorial',
-          'media@boha-group.com',
-          `Se d\u00e9sabonner : ${unsubUrl}`,
-        ].join('\n'),
-      }),
-    }).catch(err => console.error('[newsletter/subscribe] Resend error', err))
-  } else {
-    console.warn('[newsletter/subscribe] RESEND_API_KEY not set \u2014 confirmation skipped for', email)
-  }
+  /* ── Email de confirmation, gabarit client commun, langue du visiteur ── */
+  /* IMPORTANT : le token doit être présent dans l'URL — la route
+     /api/newsletter/unsubscribe rejette toute requête sans ?token=. */
+  const unsubUrl = `https://aegryn.com/api/newsletter/unsubscribe?token=${subRow.unsubscribe_token}`
+  const a = ack('newsletter', locale)
+  const confirmation = emailClientAck({
+    lang: locale, subject: a.subject, kicker: a.kicker, title: a.title, intro: a.intro,
+    rows: [['01', a.item1], ['02', a.item2]],
+    paragraphs: [a.next],
+    footerLine: `<a href="${unsubUrl}" style="color:#94a3b8;text-decoration:underline;">${a.unsubscribe}</a>`,
+  })
+  await sendEmail(email, confirmation.subject, confirmation.html, 'newsletter-ack')
+    .catch(err => console.error('[newsletter/subscribe] Resend error', err))
 
   return NextResponse.json({ ok: true })
 }

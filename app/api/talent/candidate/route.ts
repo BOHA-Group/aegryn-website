@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabaseServer'
 import { Resend } from 'resend'
 import { z } from 'zod'
-import TalentCandidateConfirmation from '@/emails/TalentCandidateConfirmation'
+import { emailClientAck } from '@/lib/emailAck'
+import { ack } from '@/content/emails/ack'
 import TalentAdminNotification from '@/emails/TalentAdminNotification'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -56,18 +57,18 @@ export async function POST(req: NextRequest) {
     }
 
     try {
+      const a = ack('talentCandidate', validated.locale)
+      const confirmation = emailClientAck({
+        lang: validated.locale, subject: a.subject, kicker: a.kicker, title: a.title, name: validated.fullName, intro: a.intro,
+        headerSubtitle: 'Talent',
+        rows: [[a.availability, validated.availability], [a.linkedin, validated.linkedinUrl]],
+        paragraphs: [a.next, a.confidential],
+      })
       await resend.emails.send({
         from: 'Aegryn Talent <contact@boha-group.com>',
         to: validated.email,
-        subject: validated.locale === 'fr' ? 'Votre candidature Aegryn Talent' : 'Your Aegryn Talent application',
-        react: TalentCandidateConfirmation({
-          fullName: validated.fullName,
-          email: validated.email,
-          phone: validated.phone,
-          linkedinUrl: validated.linkedinUrl,
-          availability: validated.availability,
-          locale: validated.locale,
-        }),
+        subject: confirmation.subject,
+        html: confirmation.html,
       })
 
       await resend.emails.send({

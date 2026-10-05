@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { sendLeadEmails }           from '@/lib/leadCapture'
+import { emailClientAck } from '@/lib/emailAck'
+import { ack } from '@/content/emails/ack'
 
 const PROFESSIONS = [
   'M&A Advisor', 'Lawyer', 'Accountant', 'CTO', 'Cybersecurity',
@@ -20,6 +22,7 @@ const schema = z.object({
   country:      z.string().max(4).optional(),
   bio:          z.string().max(1200).optional(),
   organization: z.string().max(150).optional(),
+  locale:       z.string().optional(),
   website:      z.string().url().optional().or(z.literal('')),
 })
 
@@ -69,9 +72,12 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    const ackE = ack('expert', data.locale)
     await sendLeadEmails({
       to:              data.email,
-      subjectFounder:  'Aegryn — Candidature réseau d\'experts reçue',
+      subjectFounder:  ackE.subject,
+      htmlFounder:     emailClientAck({ lang: data.locale, subject: ackE.subject, kicker: ackE.kicker, title: ackE.title, name: data.prenom, intro: ackE.intro,
+        rows: [[ackE.profile, data.profession], [ackE.org, data.organization]], paragraphs: [ackE.next, ackE.fee] }).html,
       textFounder:     `Bonjour ${data.prenom},\n\nVotre candidature au réseau d'experts Aegryn a bien été reçue.\n\nProfil : ${data.profession}${data.organization ? ` · ${data.organization}` : ''}\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification. L'accès au réseau se fait via un abonnement mensuel de référencement (89 CHF HT/mois).\n\nPour toute question : contact@boha-group.com\n\nL'équipe Aegryn\nhttps://aegryn.com/experts`,
       subjectInternal: `[Réseau Experts] Candidature — ${data.prenom} ${data.nom} (${data.profession})`,
       textInternal:    `Nouvelle candidature réseau expert\n\nNom : ${data.prenom} ${data.nom}\nEmail : ${data.email}\nProfession : ${data.profession}\nOrganisation : ${data.organization ?? '—'}\nVille : ${data.city ?? '—'} ${data.country ?? ''}\nSite : ${data.website ?? '—'}\n\nBio :\n${data.bio ?? '—'}\n\nSpécialités : ${(data.specialties ?? []).join(', ') || '—'}\n\nGérer : /admin/experts`,

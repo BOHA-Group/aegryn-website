@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabaseServer'
 import { Resend } from 'resend'
 import { z } from 'zod'
-import TalentHiringConfirmation from '@/emails/TalentHiringConfirmation'
+import { emailClientAck } from '@/lib/emailAck'
+import { ack } from '@/content/emails/ack'
 import TalentAdminNotification from '@/emails/TalentAdminNotification'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -58,20 +59,18 @@ export async function POST(req: NextRequest) {
     }
 
     try {
+      const a = ack('talentHiring', validated.locale)
+      const confirmation = emailClientAck({
+        lang: validated.locale, subject: a.subject, kicker: a.kicker, title: a.title, name: validated.contactName, intro: a.intro,
+        headerSubtitle: 'Talent',
+        rows: [[a.company, validated.company], [a.role, validated.roleTitle], [a.location, validated.location], [a.urgency, a[`urgency_${validated.urgency}`] ?? validated.urgency]],
+        paragraphs: [a.next, a.confidential],
+      })
       await resend.emails.send({
         from: 'Aegryn Talent <contact@boha-group.com>',
         to: validated.email,
-        subject: validated.locale === 'fr' ? 'Votre mandat de recrutement Aegryn Talent' : 'Your Aegryn Talent recruitment mandate',
-        react: TalentHiringConfirmation({
-          company: validated.company,
-          contactName: validated.contactName,
-          email: validated.email,
-          phone: validated.phone,
-          roleTitle: validated.roleTitle,
-          location: validated.location,
-          urgency: validated.urgency,
-          locale: validated.locale,
-        }),
+        subject: confirmation.subject,
+        html: confirmation.html,
       })
 
       await resend.emails.send({

@@ -83,7 +83,7 @@ export default function ContactForm({ locale }: Props) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, phone: phoneFormatted, locale }),
+        body: JSON.stringify({ ...data, phone: phoneFormatted, locale, subjectLabel: subject ? t(`subjects.${subject}` as Parameters<typeof t>[0]) : undefined }),
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))

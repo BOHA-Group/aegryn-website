@@ -551,6 +551,7 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           country:      raw.country      || undefined,
           bio:          raw.bio          || undefined,
           website:      raw.website      || undefined,
+          locale:       document.documentElement.lang || 'fr',
         }),
       })
       const data = await res.json()

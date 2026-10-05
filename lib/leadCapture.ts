@@ -6,13 +6,15 @@ export type EmailConfig = {
   to: string
   subjectFounder: string
   textFounder: string
+  /** Version HTML (gabarit client commun) ; le texte sert d'alternative */
+  htmlFounder?: string
   /** Email interne équipe Aegryn */
   subjectInternal: string
   textInternal: string
 }
 
 /* ─── Resend helper ──────────────────────────────────────── */
-async function sendEmail(to: string, subject: string, text: string) {
+async function sendEmail(to: string, subject: string, text: string, html?: string) {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
   if (!key) {
@@ -28,6 +30,7 @@ async function sendEmail(to: string, subject: string, text: string) {
       to: [to],
       subject,
       text,
+      ...(html ? { html } : {}),
     }),
   })
   if (!res.ok) console.error(`[leadCapture] Resend error (${to})`, await res.text())
@@ -58,7 +61,7 @@ export async function captureLead(
   const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
 
   await Promise.allSettled([
-    sendEmail(email.to, email.subjectFounder, email.textFounder),
+    sendEmail(email.to, email.subjectFounder, email.textFounder, email.htmlFounder),
     sendEmail(internalEmail, email.subjectInternal, email.textInternal),
   ])
 
@@ -73,7 +76,7 @@ export async function captureLead(
 export async function sendLeadEmails(email: EmailConfig): Promise<void> {
   const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
   await Promise.allSettled([
-    sendEmail(email.to, email.subjectFounder, email.textFounder),
+    sendEmail(email.to, email.subjectFounder, email.textFounder, email.htmlFounder),
     sendEmail(internalEmail, email.subjectInternal, email.textInternal),
   ])
 }

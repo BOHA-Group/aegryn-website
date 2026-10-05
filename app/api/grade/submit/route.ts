@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
 import { getUser }                  from '@/lib/supabaseServer'
+import { sendEmail as sendHtmlEmail } from '@/lib/sendEmail'
+import { emailClientAck }           from '@/lib/emailAck'
+import { ack }                      from '@/content/emails/ack'
 
 async function sendEmail(to: string, subject: string, text: string) {
   const key  = process.env.RESEND_API_KEY
@@ -37,6 +40,9 @@ const schema = z.object({
   orgCountry:      z.string().max(100).optional(),
   objective:       z.string().max(50).optional(),
   pack:            z.enum(['express', 'standard', 'premium']).optional(),
+  packLabel:       z.string().max(120).optional(),
+  objectiveLabel:  z.string().max(120).optional(),
+  orgSizeLabel:    z.string().max(120).optional(),
   cgvAgreed:       z.boolean().optional(),
   techStack:       z.string().max(200).optional(),
   status:          z.string().max(50).optional(),
@@ -135,15 +141,20 @@ export async function POST(req: NextRequest) {
     /* ── 2. Emails ── */
     const internal = process.env.AEGRYN_INTERNAL_EMAIL ?? 'tech@boha-group.com'
     const ref = asset?.id ?? "en cours d'attribution"
-    const clientBody = isCertification
-      ? `Bonjour ${body.fullName},\n\nNous avons bien reçu votre demande de Certification CIFSO 5000 pour "${body.assetName}"${body.pack ? ` (pack ${body.pack})` : ''}.\n\nProchaines étapes :\n1. Pré-qualification sous 5 jours ouvrés, puis envoi du devis et de l'accord de confidentialité (NDA).\n2. Après acceptation, ouverture de votre Data Room sécurisée pour le dépôt des pièces justificatives.\n3. Audit CIFSO sur les cinq dimensions (15 à 35 jours ouvrés selon la taille de l'organisation).\n4. Remise du certificat, du rapport détaillé et de la feuille de route dans votre espace client.\n\nSuivez l'avancement de votre dossier : https://aegryn.com/client/login\nRéférence dossier : ${ref}\n\nAegryn. Organisme de certification indépendant. Suisse.\nhttps://aegryn.com/grade/brochure`
-      : `Bonjour ${body.fullName},\n\nNous avons bien reçu votre dossier de certification pour "${body.assetName}".\n\nNotre équipe va l'examiner dans les prochaines 48-72h ouvrées et vous recontactera pour planifier la phase d'audit initiale.\n\nRéférence dossier : ${ref}\n\nL'équipe Aegryn\nhttps://aegryn.com/grade`
+    const a = ack('certification', body.locale)
+    const confirmation = emailClientAck({
+      lang: body.locale, subject: a.subject, kicker: a.kicker, title: a.title, name: body.fullName, intro: a.intro,
+      rows: [
+        [a.org, body.assetName],
+        [a.pack, body.packLabel ?? body.pack],
+        [a.objective, body.objectiveLabel ?? body.objective],
+        [a.size, body.orgSizeLabel ?? body.orgSize],
+        [a.country, body.orgCountry],
+      ],
+      paragraphs: [a.next, a.nda],
+    })
     await Promise.allSettled([
-      sendEmail(
-        body.email,
-        isCertification ? 'Aegryn. Votre demande de Certification CIFSO 5000 a été reçue' : 'Aegryn — Votre dossier de certification a été reçu',
-        clientBody,
-      ),
+      sendHtmlEmail(body.email, confirmation.subject, confirmation.html, 'grade-submit-ack'),
       sendEmail(
         internal,
         isCertification

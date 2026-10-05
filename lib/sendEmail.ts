@@ -142,7 +142,7 @@ function WRAP(body: string): string {
 }
 
 /* ── Gabarit client (prospects / demandes publiques), sans mention partenaire ── */
-function WRAP_CLIENT(body: string, opts: { lang: string; subtitle: string; footnote: string }): string {
+export function WRAP_CLIENT(body: string, opts: { lang: string; subtitle: string; footnote: string }): string {
   return `<!DOCTYPE html>
 <html lang="${opts.lang}">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
@@ -191,14 +191,14 @@ function amountRow(label: string, chfFormatted: string): string {
   </tr>`
 }
 
-function infoRow(label: string, value: string): string {
+export function infoRow(label: string, value: string): string {
   return `<tr>
     <td style="padding:5px 12px 5px 0;font-size:12px;font-weight:600;color:#64748b;white-space:nowrap;">${label}</td>
     <td style="padding:5px 0;font-size:13px;color:#1e293b;">${value}</td>
   </tr>`
 }
 
-function ctaButton(label: string, href: string, accent = true): string {
+export function ctaButton(label: string, href: string, accent = true): string {
   return `<a href="${href}" style="display:inline-block;padding:11px 28px;background:${accent ? '#5ADDA4' : '#0F1C3F'};color:${accent ? '#0F1C3F' : '#ffffff'};text-decoration:none;font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">${label} →</a>`
 }
 
@@ -475,59 +475,19 @@ export function emailCifsoWaitlistConfirmation(opts: {
     : isIt ? 'Nel frattempo, avviate il vostro CIFSO Pre-screen (15 min)'
     : 'Start ondertussen uw CIFSO Pre-screen (15 min)'
 
-  const html = `<!DOCTYPE html>
-<html lang="${lang}">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
-<body style="margin:0;padding:0;background:#0D1F3C;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0D1F3C;padding:32px 0;">
-    <tr>
-      <td align="center">
-        <table width="560" cellpadding="0" cellspacing="0" style="background:#0D1F3C;border:1px solid rgba(255,255,255,0.1);max-width:560px;width:100%;">
-
-          <!-- Header -->
-          <tr>
-            <td style="padding:28px 32px 20px;border-bottom:1px solid rgba(255,255,255,0.08);">
-              <table cellpadding="0" cellspacing="0"><tr>
-                <td style="padding-right:12px;">${LOGO_SVG}</td>
-                <td>
-                  <p style="margin:0;font-size:18px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;">Aegryn</p>
-                  <p style="margin:0;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#4ADDA5;">CIFSO Valuation Index</p>
-                </td>
-              </tr></table>
-            </td>
-          </tr>
-
-          <!-- Corps -->
-          <tr><td style="padding:28px 32px;">
-            <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#4ADDA5;font-weight:600;">Early Access · Q1 2027</p>
-            <h1 style="margin:0 0 16px 0;font-size:22px;font-weight:700;color:#ffffff;line-height:1.25;">${greeting}</h1>
-            <p style="margin:0 0 20px 0;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;">${body1}</p>
-
-            <div style="border:1px solid rgba(74,221,165,0.25);background:rgba(74,221,165,0.06);padding:20px 24px;margin-bottom:24px;">
-              <p style="margin:0 0 12px 0;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#4ADDA5;">${featureTitle}</p>
-              ${features.map(f => `<p style="margin:0 0 8px 0;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.5;padding-left:12px;border-left:2px solid rgba(74,221,165,0.4);">${f}</p>`).join('')}
-            </div>
-
-            <p style="margin:0 0 20px 0;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">${prescreenLabel}</p>
-
-            <a href="https://aegryn.com/fr/grade/submit" style="display:inline-block;padding:12px 28px;background:#4ADDA5;color:#0D1F3C;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">CIFSO Pre-screen →</a>
-          </td></tr>
-
-          <!-- Footer -->
-          <tr>
-            <td style="padding:20px 32px;border-top:1px solid rgba(255,255,255,0.08);">
-              <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.3);">
-                <strong style="color:rgba(255,255,255,0.5);">Aegryn</strong> — Genève, Suisse &nbsp;·&nbsp;
-                <a href="https://aegryn.com" style="color:#4ADDA5;text-decoration:none;">aegryn.com</a>
-              </p>
-            </td>
-          </tr>
-
-        </table>
-      </td>
-    </tr>
-  </table>
-</body></html>`
+  /* Gabarit client commun (meme visuel que les autres accuses de reception) */
+  const strip = (v: string) => v.replace(/<[^>]+>/g, '')
+  const rows = features.map((f, i) => infoRow(String(i + 1).padStart(2, '0'), f)).join('')
+  const html = WRAP_CLIENT(`
+    <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5ADDA4;font-weight:600;">Early Access · Q1 2027</p>
+    <h1 style="margin:0 0 16px 0;font-size:20px;font-weight:700;color:#0F1C3F;line-height:1.25;">${greeting}</h1>
+    <p style="margin:0 0 20px 0;font-size:14px;color:#475569;line-height:1.6;">${strip(body1)}</p>
+    <p style="margin:0 0 8px 0;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#94a3b8;font-weight:600;">${featureTitle}</p>
+    <table cellpadding="0" cellspacing="0" style="margin:0 0 24px 0;">${rows}</table>
+    <p style="margin:0 0 12px 0;font-size:14px;color:#475569;line-height:1.6;">${prescreenLabel}</p>
+    <p style="margin:8px 0 20px 0;">${ctaButton('CIFSO Pre-screen', `https://aegryn.com/${lang}/grade/submit`)}</p>
+    <p style="margin:0;font-size:13px;color:#0F1C3F;font-weight:600;">Aegryn</p>
+  `, { lang, subtitle: 'CIFSO Valuation Index', footnote: '' })
 
   return { subject, html }
 }
