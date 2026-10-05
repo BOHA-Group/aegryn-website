@@ -16,7 +16,7 @@ export const TOC_01: TocSection[] = [
     { anchor: 'sources-how-we-know-what-we-say', title: "How We Know What We Say", page: 12 },
     { anchor: 'editorial-why-a-consulting-firm-publishes', title: "Why a Consulting Firm Publishes a Magazine", page: 13 },
   ] },
-  { id: 's-tech-and-ai', label: "Tech and AI", pillar: 'ai', pageRange: 'p.14–38', articles: [
+  { id: 's-tech-and-ai', label: "Tech and AI", pillar: 'ai', pageRange: 'p.14–41', articles: [
     { anchor: 'tech-and-ai-european-tech-certified-and-', title: "European tech. Certified and ready to\u2026", page: 14 },
     { anchor: 'tech-and-ai-founder-diary', title: "Founder Diary", page: 18 },
     { anchor: 'tech-and-ai-she-quit-on-a-tuesday', title: "She Quit on a Tuesday", page: 19 },
@@ -33,6 +33,7 @@ export const TOC_01: TocSection[] = [
     { anchor: 'dossier-the-regulatory-clock', title: "The Regulatory Clock", page: 36 },
     { anchor: 'dossier-five-words-for-the-board', title: "Five Words for the Board", page: 37 },
     { anchor: 'dossier-what-to-do-on-monday', title: "What to Do on Monday", page: 38 },
+    { anchor: 'advertising-subblink', title: "subblink, read the contract before you sign it", page: 41 },
   ] },
   { id: 's-build', label: "Build", pillar: 'build', pageRange: 'p.43–66', articles: [
     { anchor: 'build-field-notes', title: "Field Notes", page: 43 },

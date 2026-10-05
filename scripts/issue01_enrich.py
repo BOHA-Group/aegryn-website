@@ -125,6 +125,56 @@ NEW['charter'] = (12, [text_page('Editorial standards', 'Why a Consulting Firm P
                   [('editorial-why-a-consulting-firm-publishes', 'Why a Consulting Firm Publishes a Magazine', 'Editorial standards',
                     ''.join(f'<p>{p}</p>' for p in charter_paras))])
 
+# 3.5 Emplacement publicitaire 03 (ancienne p32, juste apres le dossier) : subblink, actif Aegryn
+SB_ACC = '#4ADDA5'
+def sb_lbl(t, color='rgba(255,255,255,.45)'):
+    return f'<div style="font-family:\'DM Mono\',ui-monospace,monospace;font-size:6.6px;letter-spacing:.22em;text-transform:uppercase;color:{color};margin-bottom:5px">{t}</div>'
+def sb_cell(title, body):
+    return (f'<div style="padding:7px 0;border-top:.5px solid rgba(255,255,255,.1)">'
+            f'<div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:8.6px;font-weight:700;color:#fff;margin-bottom:2px">{title}</div>'
+            f'<div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:7.6px;line-height:1.5;color:rgba(255,255,255,.62)">{body}</div></div>')
+SUBBLINK_INNER = (
+  '<div style="position:absolute;inset:0;background:#0c0c0c"></div>'
+  '<div style="position:absolute;top:0;left:0;right:0;height:28px;display:flex;align-items:center;justify-content:center;font-family:\'Plus Jakarta Sans\',sans-serif;font-size:6px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.3);border-bottom:.5px solid rgba(255,255,255,.08)"><span style="opacity:.6">Advertising</span><span style="margin:0 5px;opacity:.4">·</span>An Aegryn proprietary asset</div>'
+  '<div style="position:absolute;top:28px;bottom:24px;left:0;right:0;padding:18px 28px 12px;display:flex;flex-direction:column">'
+  # wordmark
+  '<div style="display:flex;align-items:baseline;gap:3px;margin-bottom:10px"><span style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.04em;color:#fff;line-height:1">subblink</span><span style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:9px;color:#fff;position:relative;top:-14px">®</span></div>'
+  f'<div style="width:22px;height:2px;background:{SB_ACC};margin-bottom:10px"></div>'
+  '<div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:19px;font-weight:700;letter-spacing:-.025em;line-height:1.08;color:#fff;margin-bottom:8px">Read the contract<br>before you sign it.<br><span style="color:' + SB_ACC + '">In sixty seconds.</span></div>'
+  '<p style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:8.6px;line-height:1.55;color:rgba(255,255,255,.7);margin:0 0 10px">subblink is an AI contract analyser built in Switzerland by Aegryn. Upload a PDF; receive a risk score from 1 to 10, the clauses that need attention, and the points you can negotiate, in plain language. Swiss and European law, six languages. A basic analysis needs no account.</p>'
+  # two columns
+  '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;flex:1">'
+  '<div>' + sb_lbl('What it reads', SB_ACC)
+  + sb_cell('Employment and freelance contracts', 'Notice, non-compete, IP assignment, variable pay.')
+  + sb_cell('Leases', 'Termination clauses, charges, works at the tenant\'s expense.')
+  + sb_cell('Supplier and partnership agreements', 'Liability caps, auto-renewal, unilateral changes, penalties.')
+  + sb_cell('Subscriptions and service terms', 'Hidden commitments, price revisions, exit conditions.')
+  + '<div style="margin-top:8px">' + sb_lbl('For whom', SB_ACC) + '<div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:7.8px;line-height:1.5;color:rgba(255,255,255,.62)">Freelancers, SMEs, legal practices and individuals in Switzerland and the EU (CH, FR, DE, ES, IT, NL legal frameworks).</div></div>'
+  '</div>'
+  '<div>' + sb_lbl('Why AI helps here, and where it stops', SB_ACC)
+  + sb_cell('It reads everything, once', 'A forty-page agreement is read in full, not skimmed. The model finds the patterns that hide risk: a renewal buried in an annex, a cap that excludes the one liability that matters.')
+  + sb_cell('It explains, it does not decide', 'Each flagged clause comes with the reason and a negotiation point. subblink gives information, not legal advice; a verified lawyer from the network can take over from the report.')
+  + sb_cell('It scores, so you can compare', 'A ContractScore from A to E and a market benchmark put the document next to its peers, instead of leaving you with a feeling.')
+  + '</div></div>'
+  # privacy strip
+  f'<div style="margin-top:8px;padding:8px 10px;border:1px solid rgba(74,221,165,.3);background:rgba(74,221,165,.07)">'
+  + sb_lbl('Protection · GDPR and Swiss FADP', SB_ACC)
+  + '<div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:7.6px;line-height:1.5;color:rgba(255,255,255,.75)">Documents are processed for the analysis and not retained. No account is required for a basic analysis. Processing complies with the EU General Data Protection Regulation and the Swiss Federal Act on Data Protection. The service is operated from Switzerland.</div></div>'
+  # footer line
+  '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-family:\'DM Mono\',ui-monospace,monospace;font-size:6.6px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4)"><span>subblink.com</span><span>Built by Aegryn · Switzerland</span></div>'
+  '</div>'
+  '<div class="pn pn-dk pn-l" style="position:absolute">0</div>')
+SUBBLINK_PAGE = f'<div id="pNEW" class="pg pg-navy">{FRAME_N.replace("#0A1628", "#0c0c0c")}{SUBBLINK_INNER}</div></div>'
+SUBBLINK_WEB = (
+  '<p><em>Advertising. subblink is a proprietary asset of Aegryn.</em></p>'
+  '<p><strong>Read the contract before you sign it. In sixty seconds.</strong> subblink is an AI contract analyser built in Switzerland by Aegryn. Upload a PDF; receive a risk score from 1 to 10, the clauses that need attention, and the points you can negotiate, in plain language. Swiss and European law, six languages. A basic analysis needs no account.</p>'
+  '<p><strong>What it reads.</strong> Employment and freelance contracts (notice, non-compete, IP assignment, variable pay); leases (termination clauses, charges, works at the tenant\'s expense); supplier and partnership agreements (liability caps, auto-renewal, unilateral changes, penalties); subscriptions and service terms (hidden commitments, price revisions, exit conditions).</p>'
+  '<p><strong>For whom.</strong> Freelancers, SMEs, legal practices and individuals in Switzerland and the EU (CH, FR, DE, ES, IT, NL legal frameworks).</p>'
+  '<p><strong>Why AI helps here, and where it stops.</strong> It reads everything, once: a forty-page agreement is read in full, not skimmed, and the model finds the patterns that hide risk, a renewal buried in an annex, a cap that excludes the one liability that matters. It explains, it does not decide: each flagged clause comes with the reason and a negotiation point; subblink gives information, not legal advice, and a verified lawyer from the network can take over from the report. It scores, so you can compare: a ContractScore from A to E and a market benchmark put the document next to its peers.</p>'
+  '<div class="cta"><div class="cta-title">Protection · GDPR and Swiss FADP</div><p class="cta-body">Documents are processed for the analysis and not retained. No account is required for a basic analysis. Processing complies with the EU General Data Protection Regulation and the Swiss Federal Act on Data Protection. The service is operated from Switzerland.</p></div>'
+  '<p><a href="https://subblink.com" target="_blank" rel="noopener">subblink.com</a> · Built by Aegryn, Switzerland.</p>')
+
+
 # 3.2 Dossier (apres p29, fin de Tech and AI) : 8 pages
 D = []
 # D1 opener navy
@@ -259,6 +309,7 @@ NEW['dossier'] = (29, D, [
     ('dossier-what-to-do-on-monday', 'What to Do on Monday', 'Dossier',
      ''.join(f'<p><strong>{n}</strong> {t}</p>' for n, t in monday)
      + f'<figure class="chart">{CH["digital"]}<figcaption>Digital Intensity Index, EU SMEs, 2025: 71 percent reach at least a basic level, 27 percent a high level, 9 percent a very high level. Source: Eurostat.</figcaption></figure>'),
+    ('advertising-subblink', 'subblink, read the contract before you sign it', 'Advertising', SUBBLINK_WEB),
 ])
 
 # 3.3 Pages graphiques dans les articles existants
@@ -297,6 +348,7 @@ chart_entry('succession', 121, 'People', 'The Succession Wave, in Numbers', 'peo
             'German Mittelstand firms by intention, thousands, horizon 2029.',
             'Sources: KfW Mittelstandspanel, January 2026; UBS and HSG, Swiss SME succession study 2026, as cited on pages 10 and 121.', 'people-workshop-to-platform')
 
+
 # 3.4 Index des graphiques (Closing, apres p133) : rempli apres renumerotation
 NEW['dataindex'] = (133, ['__DATAINDEX__'], [('life-the-charts', 'The Charts', 'Life', '__DATAINDEX_WEB__')])
 
@@ -313,6 +365,9 @@ assert old_nums == list(range(1, 139))
 
 ordered = []   # (old_num or None, html, key, idx_in_group)
 for b, n in zip(pages, old_nums):
+    if n == 32:
+        assert 'Emplacement 03' in b, 'p32 devait etre l emplacement publicitaire 03'
+        b = SUBBLINK_PAGE   # pleine page subblink a la place du placeholder
     ordered.append((n, b, None, None))
     for key, (after, newpages, _w) in NEW.items():
         if after == n:
@@ -367,7 +422,9 @@ for i, n, b, key, idx in final:
         b = b.replace('id="pNEW"', f'id="p{i}"', 1)
         b = re.sub(r'<div class="pn([^"]*)">0</div>', lambda m: f'<div class="pn{m.group(1)}">{i}</div>', b)
     else:
+        b = b.replace('id="pNEW"', f'id="p{i}"', 1)
         b = re.sub(r'^<div id="p\d+"', f'<div id="p{i}"', b, count=1)
+        b = re.sub(r'<div class="pn([^"]*)"( style="[^"]*")?>0</div>', lambda m: f'<div class="pn{m.group(1)}"{m.group(2) or ""}>{i}</div>', b)
         b = re.sub(r'(<div class="pn[^"]*">)\d+(</div>)', lambda m: f'{m.group(1)}{i}{m.group(2)}', b)
     side = 'pn-l' if i % 2 == 0 else 'pn-r'
     b = re.sub(r'class="pn([^"]*?)\s?pn-[lr]', lambda m: f'class="pn{m.group(1)} {side}', b)
@@ -464,7 +521,7 @@ for key, (after, newpages, websecs) in NEW.items():
     if key == 'dossier':
         ents += '  <div class="sb-div"></div>  <div class="sb-lbl">Dossier</div>'
         for i, ws in enumerate(websecs):
-            ents += sb_entry(ws[0], ws[1], new_page_of('dossier', [0, 1, 2, 4, 5, 6, 7][i]))
+            ents += sb_entry(ws[0], ws[1], old2new[32] if ws[0] == 'advertising-subblink' else new_page_of('dossier', [0, 1, 2, 4, 5, 6, 7][i]))
     else:
         for i, ws in enumerate(websecs):
             ents += sb_entry(ws[0], ws[1], new_page_of(key, 0))
@@ -486,7 +543,7 @@ def toc_insert_after(doc, anchor_after, lines):
     j = doc.find('\n', i) + 1
     return doc[:j] + lines + doc[j:]
 toc = toc_insert_after(toc, 'sources-how-we-know-what-we-say', toc_line('editorial-why-a-consulting-firm-publishes', 'Why a Consulting Firm Publishes a Magazine', new_page_of('charter')))
-dossier_lines = ''.join(toc_line(ws[0], ws[1].replace('"', '\\"'), new_page_of('dossier', [0, 1, 2, 4, 5, 6, 7][i])) for i, ws in enumerate(NEW['dossier'][2]))
+dossier_lines = ''.join(toc_line(ws[0], ws[1].replace('"', '\\"'), old2new[32] if ws[0] == 'advertising-subblink' else new_page_of('dossier', [0, 1, 2, 4, 5, 6, 7][i])) for i, ws in enumerate(NEW['dossier'][2]))
 toc = toc_insert_after(toc, 'tech-and-ai-five-honest-lessons', dossier_lines)
 for key, after_anchor in [('funding', 'money-market-analysis'), ('multiples', 'money-what-buyers-actually-pay'), ('compliance', 'money-the-compliance-premium'),
                           ('swiss', 'portrait-julien-guex-fit'), ('index', 'value-aegryn-index-grade-distribution'), ('succession', 'people-workshop-to-platform'),
