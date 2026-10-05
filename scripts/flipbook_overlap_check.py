@@ -10,7 +10,7 @@ import subprocess, os, sys, json
 
 REPO_ROOT = subprocess.run(['git', 'rev-parse', '--show-toplevel'],
                             capture_output=True, text=True).stdout.strip()
-FLIPBOOK_ABS = os.path.join(REPO_ROOT, 'public/magazine/issue-01/aegryn-magazine-issue-01_1.html')
+FLIPBOOK_ABS = os.path.join(REPO_ROOT, 'private/magazine/issue-01/aegryn-magazine-issue-01_1.html')
 
 JS = r"""
 const { chromium } = require('playwright');
