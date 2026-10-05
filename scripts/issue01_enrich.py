@@ -337,7 +337,7 @@ NEW['dossier'] = (29, D, [
     ('dossier-what-to-do-on-monday', 'What to Do on Monday', 'Dossier',
      ''.join(f'<p><strong>{n}</strong> {t}</p>' for n, t in monday)
      + f'<figure class="chart">{CH["digital"]}<figcaption>Digital Intensity Index, EU SMEs, 2025: 71 percent reach at least a basic level, 27 percent a high level, 9 percent a very high level. Source: Eurostat.</figcaption></figure>'),
-    ('advertising-subblink', 'subblink. Clarity before commitment.', 'Advertising', SUBBLINK_WEB),
+    ('advertising-subblink', 'subblink. Clarity before commitment.', 'Aegryn', SUBBLINK_WEB),
 ])
 
 # 3.3 Pages graphiques dans les articles existants

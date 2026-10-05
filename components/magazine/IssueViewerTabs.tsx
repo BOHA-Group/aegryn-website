@@ -17,9 +17,9 @@ interface Props {
  * Web Edition : le meme contenu, article par article (_web.html),
  * pilote par la barre laterale MagazineNav via l'evenement aegryn:magazine-navigate
  */
-/* Derives du sommaire : derniere page referencee + 2 (page publicitaire et quatrieme de couverture), nombre d'articles */
+/* Derives du sommaire : derniere page referencee + 1 (quatrieme de couverture immediatement apres), nombre d'articles */
 const ARTICLE_COUNT = TOC_01.reduce((n, s) => n + s.articles.length, 0)
-const PAGE_COUNT    = Math.max(...TOC_01.flatMap(s => s.articles.map(a => a.page))) + 2
+const PAGE_COUNT    = Math.max(...TOC_01.flatMap(s => s.articles.map(a => a.page))) + 1
 
 export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
   const [tab, setTab] = useState<'flipbook' | 'web'>('flipbook')
