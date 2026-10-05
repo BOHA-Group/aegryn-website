@@ -16,7 +16,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   strategy: {
     key:      'strategy',
     path:     '/advisory/strategy',
-    image:    '/images/advisory/strategy-towers.jpg',
+    image:    '/images/advisory/strategy-towers.webp',
     imageAlt: "Tours de bureaux vues en contre-plongée, le cap et la hauteur de vue",
     meta: {
       title:       'Conseil en stratégie pour PME et ETI | Aegryn',
@@ -141,7 +141,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   riskCompliance: {
     key:      'riskCompliance',
     path:     '/advisory/risk-compliance',
-    image:    '/images/advisory/risk-compliance.jpg',
+    image:    '/images/advisory/risk-compliance.webp',
     imageAlt: 'Revue de documents contractuels et réglementaires',
     meta: {
       title:       'Conformité réglementaire pour PME et ETI : NIS2, DORA, AI Act, LPD | Aegryn',
@@ -261,7 +261,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   technology: {
     key:      'technology',
     path:     '/advisory/technology',
-    image:    '/images/advisory/technology.jpg',
+    image:    '/images/advisory/technology.webp',
     imageAlt: 'Baies de serveurs dans un centre de données',
     meta: {
       title:       'Conseil en technologie : architecture, dette, IA, hébergement | Aegryn',
@@ -385,7 +385,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   talentOrganization: {
     key:      'talentOrganization',
     path:     '/advisory/talent-organization',
-    image:    '/images/advisory/talent.jpg',
+    image:    '/images/advisory/talent.webp',
     imageAlt: 'Salle de conseil vide, prête pour la prochaine séance',
     meta: {
       title:       'Succession, gouvernance, équipe de direction | Aegryn',
@@ -504,7 +504,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
   ma: {
     key:      'ma',
     path:     '/advisory/ma',
-    image:    '/images/advisory/ma.jpg',
+    image:    '/images/advisory/ma.webp',
     imageAlt: 'Dirigeant se rendant à une réunion de négociation',
     meta: {
       title:       'Acquisition, cession, intégration : le conseil en amont des transactions | Aegryn',

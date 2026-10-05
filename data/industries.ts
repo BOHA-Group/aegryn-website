@@ -70,7 +70,7 @@ const finance: Industry = {
     it: 'Finanza & Capitale',
     nl: 'Financiën & Kapitaal',
   },
-  img: '/images/industries/theme_fintech.jpg',
+  img: '/images/industries/theme_fintech.webp',
   imgAlt: {
     fr: 'Finance & Capital — Aegryn',
     en: 'Finance & Capital — Aegryn',
@@ -433,7 +433,7 @@ const sante: Industry = {
     it: 'Salute & Scienze della Vita',
     nl: 'Gezondheid & Life Sciences',
   },
-  img: '/images/grade-usecases/uc-due-diligence.jpg',
+  img: '/images/grade-usecases/uc-due-diligence.webp',
   imgAlt: {
     fr: 'Santé & Sciences de la Vie — Aegryn',
     en: 'Health & Life Sciences — Aegryn',
@@ -773,7 +773,7 @@ const industrie: Industry = {
     it: 'Industria, Energia & Infrastrutture',
     nl: 'Industrie, Energie & Infrastructuur',
   },
-  img: '/images/industries/theme_marketplace.jpg',
+  img: '/images/industries/theme_marketplace.webp',
   imgAlt: {
     fr: 'Industrie, Énergie & Infrastructure — Aegryn',
     en: 'Industry, Energy & Infrastructure — Aegryn',
@@ -1274,7 +1274,7 @@ const commerce: Industry = {
     it: 'Commercio, Servizi & Customer Experience',
     nl: 'Handel, Diensten & Klantervaring',
   },
-  img: '/images/industries/theme_saas.jpg',
+  img: '/images/industries/theme_saas.webp',
   imgAlt: {
     fr: 'Commerce, Services & Expérience Client — Aegryn',
     en: 'Commerce, Services & Customer Experience — Aegryn',
@@ -1683,7 +1683,7 @@ const tech: Industry = {
     it: 'Tech, Innovazione & Settore Pubblico',
     nl: 'Tech, Innovatie & Publieke Sector',
   },
-  img: '/images/industries/theme_AI.jpg',
+  img: '/images/industries/theme_AI.webp',
   imgAlt: {
     fr: 'Tech, Innovation & Secteur Public — Aegryn',
     en: 'Tech, Innovation & Public Sector — Aegryn',

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FileText, Check } from 'lucide-react'
 
-const COVER = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop'
+const COVER = '/images/grade/brochure/cover.jpg'
 
 export function GradeBrochure() {
   const locale = useLocale()

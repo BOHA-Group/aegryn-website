@@ -14,14 +14,14 @@ import {
 
 /* ── Images dédiées à la brochure (aucune réutilisée ailleurs sur le site) ── */
 const IMG = {
-  cover:      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop',
-  purpose:    'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600&auto=format&fit=crop',
-  audience:   'https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?q=80&w=1600&auto=format&fit=crop',
-  value:      'https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=1600&auto=format&fit=crop',
-  process:    'https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1600&auto=format&fit=crop',
-  results:    'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1600&auto=format&fit=crop',
-  auditors:   'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1600&auto=format&fit=crop',
-  closing:    'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop',
+  cover:      '/images/grade/brochure/cover.jpg',
+  purpose:    '/images/grade/brochure/purpose.jpg',
+  audience:   '/images/grade/brochure/audience.jpg',
+  value:      '/images/grade/brochure/value.jpg',
+  process:    '/images/grade/brochure/process.jpg',
+  results:    '/images/grade/brochure/results.jpg',
+  auditors:   '/images/grade/brochure/auditors.jpg',
+  closing:    '/images/grade/brochure/closing.jpg',
 }
 
 type Cifs      = { code: string; name: string; full: string; weight: string; desc: string; criteria: string[] }
@@ -129,7 +129,7 @@ export function CifsoBrochure() {
         {/* ── COUVERTURE ── */}
         <article className="brochure-page relative mx-auto w-full max-w-[900px] overflow-hidden shadow-[0_2px_24px_rgba(0,0,0,0.12)] print:shadow-none">
          <div className="brochure-sheet relative min-h-[1272px] overflow-hidden">
-          <Image src={IMG.cover} alt="" fill priority fetchPriority="high" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4gJASUNDX1BST0ZJTEUAAQEAAAIwQURCRQIQAABtbnRyUkdCIFhZWiAHzwAGAAMAAAAAAABhY3NwQVBQTAAAAABub25lAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLUFEQkUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApjcHJ0AAAA/AAAADJkZXNjAAABMAAAAGt3dHB0AAABnAAAABRia3B0AAABsAAAABRyVFJDAAABxAAAAA5nVFJDAAAB1AAAAA5iVFJDAAAB5AAAAA5yWFlaAAAB9AAAABRnWFlaAAACCAAAABRiWFlaAAACHAAAABR0ZXh0AAAAAENvcHlyaWdodCAxOTk5IEFkb2JlIFN5c3RlbXMgSW5jb3Jwb3JhdGVkAAAAZGVzYwAAAAAAAAARQWRvYmUgUkdCICgxOTk4KQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAPNRAAEAAAABFsxYWVogAAAAAAAAAAAAAAAAAAAAAGN1cnYAAAAAAAAAAQIzAABjdXJ2AAAAAAAAAAECMwAAY3VydgAAAAAAAAABAjMAAFhZWiAAAAAAAACcGAAAT6UAAAT8WFlaIAAAAAAAADSNAACgLAAAD5VYWVogAAAAAAAAJjEAABAvAAC+nP/bAIQABgcHCQsJDA0NDBAREBEQGBYUFBYYIxkbGRsZIzUhJyEhJyE1LzkvKy85L1RCOztCVGFSTlJhdmlpdpSNlMHB/wEGBwcJCwkMDQ0MEBEQERAYFhQUFhgjGRsZGxkjNSEnISEnITUvOS8rLzkvVEI7O0JUYVJOUmF2aWl2lI2UwcH//8AAEQgAEAAYAwEiAAIRAQMRAf/EAGUAAAMBAAAAAAAAAAAAAAAAAAAFBwgQAAEDAwQDAQEAAAAAAAAAAAIBAwQABhIFESFBE1FhMXEBAQEAAAAAAAAAAAAAAAAAAAMEEQACAgIDAAAAAAAAAAAAAAAAAQIRAzETIVH/2gAMAwEAAhEDEQA/AGgXXb0JhG4GUt3tS4EapOl3RAmRicIvFg2hHlxx7SsXg+0we0d0VElxx6/qeqbQrkkR3XF3QxcZNogX8xPtPtNyq+w1j8NAXtDmsxlkNH5m1Tf7z2lFTvRLqc1LSz0hx5Wnk3WMfRInPjWiqITtbAlFJ6P/2Q==" className="object-cover" sizes="900px" />
+          <Image src={IMG.cover} alt="" fill priority fetchPriority="high" unoptimized className="object-cover" sizes="900px" />
           {/* Bandeau bas opaque pour un contraste garanti */}
           <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-ag-navy via-ag-navy/95 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-between px-5 sm:px-10 md:px-20 print:px-20 py-16">

@@ -11,7 +11,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
-    image: '/images/advisory/strategy-towers.jpg',
+    image: '/images/advisory/strategy-towers.webp',
     imageAlt: 'Bürotürme aus der Froschperspektive, Kurs und Weitblick',
     meta: {
       title: 'Strategieberatung für KMU und Mid-Caps | Aegryn',
@@ -134,7 +134,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   riskCompliance: {
     key: 'riskCompliance', path: '/advisory/risk-compliance',
-    image: '/images/advisory/risk-compliance.jpg',
+    image: '/images/advisory/risk-compliance.webp',
     imageAlt: 'Prüfung von Vertrags- und Regulierungsdokumenten',
     meta: {
       title: 'Regulatorische Compliance für KMU und Mid-Caps: NIS2, DORA, AI Act, DSG | Aegryn',
@@ -252,7 +252,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   technology: {
     key: 'technology', path: '/advisory/technology',
-    image: '/images/advisory/technology.jpg',
+    image: '/images/advisory/technology.webp',
     imageAlt: 'Serverschränke in einem Rechenzentrum',
     meta: {
       title: 'Technologieberatung: Architektur, Schulden, KI, Hosting | Aegryn',
@@ -374,7 +374,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   talentOrganization: {
     key: 'talentOrganization', path: '/advisory/talent-organization',
-    image: '/images/advisory/talent.jpg',
+    image: '/images/advisory/talent.webp',
     imageAlt: 'Leerer Sitzungssaal, bereit für die nächste Sitzung',
     meta: {
       title: 'Nachfolge, Governance, Führungsteam | Aegryn',
@@ -491,7 +491,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   ma: {
     key: 'ma', path: '/advisory/ma',
-    image: '/images/advisory/ma.jpg',
+    image: '/images/advisory/ma.webp',
     imageAlt: 'Führungskraft auf dem Weg zu einem Verhandlungstermin',
     meta: {
       title: 'Akquisition, Verkauf, Integration: Beratung im Vorfeld von Transaktionen | Aegryn',

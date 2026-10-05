@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import Image                  from 'next/image'
-import { HERO_BLUR }           from '@/content/shared/heroBlur'
 import { gsap, SplitText }    from '@/lib/gsap'
 
 /**
@@ -65,14 +64,12 @@ export function AssetHeroBanner() {
       {/* Photo */}
       <div ref={photoRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/assets/assets-intro.jpg"
+          src="/images/assets/assets-intro.webp"
           alt="Aegryn | Nos actifs numériques"
           fill
           priority
           fetchPriority="high"
-          quality={95}
-          placeholder="blur"
-          blurDataURL={HERO_BLUR['/images/assets/assets-intro.jpg']}
+          unoptimized
           className="object-cover object-center"
           sizes="100vw"
         />

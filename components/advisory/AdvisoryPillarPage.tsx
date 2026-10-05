@@ -5,7 +5,6 @@ import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubsc
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
 import { PAGE_ACTIONS, getAction } from '@/content/advisory/actions'
-import { ADVISORY_BLUR } from '@/content/advisory/blur'
 import { routing } from '@/i18n/routing'
 import type { AdvisoryPageContent } from '@/content/advisory/types'
 
@@ -82,10 +81,8 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           fill
           priority
           fetchPriority="high"
-          quality={70}
+          unoptimized
           sizes="100vw"
-          placeholder={ADVISORY_BLUR[c.image] ? 'blur' : 'empty'}
-          blurDataURL={ADVISORY_BLUR[c.image]}
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />

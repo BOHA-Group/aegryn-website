@@ -11,7 +11,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
-    image: '/images/advisory/strategy-towers.jpg',
+    image: '/images/advisory/strategy-towers.webp',
     imageAlt: 'Torres de oficinas vistas desde abajo, el rumbo y la altura de miras',
     meta: {
       title: 'Consultoría estratégica para pymes y empresas medianas | Aegryn',
@@ -134,7 +134,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   riskCompliance: {
     key: 'riskCompliance', path: '/advisory/risk-compliance',
-    image: '/images/advisory/risk-compliance.jpg',
+    image: '/images/advisory/risk-compliance.webp',
     imageAlt: 'Revisión de documentos contractuales y regulatorios',
     meta: {
       title: 'Cumplimiento normativo para pymes y empresas medianas: NIS2, DORA, AI Act, LPD | Aegryn',
@@ -252,7 +252,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   technology: {
     key: 'technology', path: '/advisory/technology',
-    image: '/images/advisory/technology.jpg',
+    image: '/images/advisory/technology.webp',
     imageAlt: 'Armarios de servidores en un centro de datos',
     meta: {
       title: 'Consultoría tecnológica: arquitectura, deuda, IA, alojamiento | Aegryn',
@@ -374,7 +374,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   talentOrganization: {
     key: 'talentOrganization', path: '/advisory/talent-organization',
-    image: '/images/advisory/talent.jpg',
+    image: '/images/advisory/talent.webp',
     imageAlt: 'Sala de consejo vacía, lista para la próxima sesión',
     meta: {
       title: 'Sucesión, gobernanza, equipo directivo | Aegryn',
@@ -491,7 +491,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   ma: {
     key: 'ma', path: '/advisory/ma',
-    image: '/images/advisory/ma.jpg',
+    image: '/images/advisory/ma.webp',
     imageAlt: 'Directivo de camino a una reunión de negociación',
     meta: {
       title: 'Adquisición, venta, integración: la consultoría previa a las transacciones | Aegryn',

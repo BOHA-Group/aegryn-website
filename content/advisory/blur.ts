@@ -1,8 +1,0 @@
-/** Placeholders flous (base64, ~20 px) des heros advisory : affiches instantanement avant l'image, generes par script. */
-export const ADVISORY_BLUR: Record<string, string> = {
-  '/images/advisory/ma.jpg': 'data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACwBACdASoYABAAPrVInkmnJCKhMAgA4BaJZwC/OtSMdqIUt/Ut03ZnjX4LHTwgAPwYvOkrOm7U2/fmFmp873mMrrnBwZxbGeA7u0pCBvpQ3NfLSTqsVrb5OK+b99tKuiSdYvBZ+GBn6+oaoygDAcFr5qQ66UmozLTGlonbUFu7+kD1DwBS1oQfK0yFBa8XnBjBQXsFrsosb8JvdEtyhJQvj+42algahkbf/+lITfpZjqGxBGVL72JoCDXoE+AA',
-  '/images/advisory/risk-compliance.jpg': 'data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAABwBACdASoYABAAPrVInkmnJCKhMAgA4BaJQBOg7UAHPOG3jLE2OR3Z/3bmAAD+8X/MrEJMd/yVVDwYL1r1aIHxoLx+5aLmF6a7rRsr3PXPj5+Xn213fz/glAi05loP906MQhdNN7/t5/h4Ubk0nI3xkOLLp5rqiwRYt2EtUvWNNyDwhTW2YPQryjrCsjIfw9zZiUSfsOapSBerkUw5ZVPC9Fb3Rj7YMvWSXcFrdM9YR6ScMG1gIKuTvNZIq1X/+z0cAA==',
-  '/images/advisory/strategy-towers.jpg': 'data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBACdASoYABAAPrVInkmnJCKhMAgA4BaJZQCdAYu44KI/Ibuu5dXRpHeK2dQA/P/nkQqMhyDTQGf8d+LZp2CKda4A3bOPkst2nU7Dx2FTG2k8iUheSkR8YyuWW90GdinlD7xeynW3jn6bP77ZvONUeEzcP7r3tEs9+LMmxZ7ti4EhAImPo2YDErMYg3KnpRK9tDrkBJAOYV3ruM/piwZQom72lfkjan8AgczNlktDztSd/LxQsmqQTqXnqQAA',
-  '/images/advisory/talent.jpg': 'data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABwBACdASoYABAAPrVInkmnJCKhMAgA4BaJZQCdAYvCwNoMvWUko0iQI9UQAAD+hBdNBSbIGLtsA12N2C/BpnHGGhxtkxxKtFLMZWOpNyqRRVrB1xAd/v1peCnfODvQjvhqOnm59FaLHv8vWkYxdXk2RCbDr8MrVx2mP2Kdw5BAErg+k37Q53JRhXoo8GD2lJ910X4uzoarzIAA',
-  '/images/advisory/technology.jpg': 'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoYAA0APrVInkmnJCKhMAgA4BaJZwAAUqrmPn6Unn6IAP7sw6q+1GTvdQCIP3wRlhP/9XRh6PjemWp8PM88nUsxmy3K741e6+cM0vtVCgAAAA==',
-}

@@ -11,7 +11,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
-    image: '/images/advisory/strategy-towers.jpg',
+    image: '/images/advisory/strategy-towers.webp',
     imageAlt: 'Torri di uffici viste dal basso, la rotta e l’altezza dello sguardo',
     meta: {
       title: 'Consulenza strategica per PMI e mid-cap | Aegryn',
@@ -134,7 +134,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   riskCompliance: {
     key: 'riskCompliance', path: '/advisory/risk-compliance',
-    image: '/images/advisory/risk-compliance.jpg',
+    image: '/images/advisory/risk-compliance.webp',
     imageAlt: 'Revisione di documenti contrattuali e regolamentari',
     meta: {
       title: 'Conformità regolamentare per PMI e mid-cap: NIS2, DORA, AI Act, LPD | Aegryn',
@@ -252,7 +252,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   technology: {
     key: 'technology', path: '/advisory/technology',
-    image: '/images/advisory/technology.jpg',
+    image: '/images/advisory/technology.webp',
     imageAlt: 'Armadi server in un centro dati',
     meta: {
       title: 'Consulenza tecnologica: architettura, debito, IA, hosting | Aegryn',
@@ -374,7 +374,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   talentOrganization: {
     key: 'talentOrganization', path: '/advisory/talent-organization',
-    image: '/images/advisory/talent.jpg',
+    image: '/images/advisory/talent.webp',
     imageAlt: 'Sala del consiglio vuota, pronta per la prossima seduta',
     meta: {
       title: 'Successione, governance, squadra di direzione | Aegryn',
@@ -491,7 +491,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   ma: {
     key: 'ma', path: '/advisory/ma',
-    image: '/images/advisory/ma.jpg',
+    image: '/images/advisory/ma.webp',
     imageAlt: 'Dirigente che si reca a una riunione di negoziazione',
     meta: {
       title: 'Acquisizione, cessione, integrazione: la consulenza a monte delle transazioni | Aegryn',

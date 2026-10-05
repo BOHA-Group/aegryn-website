@@ -11,7 +11,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
-    image: '/images/advisory/strategy-towers.jpg',
+    image: '/images/advisory/strategy-towers.webp',
     imageAlt: 'Kantoortorens van onderaf gezien, de koers en het overzicht',
     meta: {
       title: 'Strategieadvies voor kmo’s en middelgrote bedrijven | Aegryn',
@@ -134,7 +134,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   riskCompliance: {
     key: 'riskCompliance', path: '/advisory/risk-compliance',
-    image: '/images/advisory/risk-compliance.jpg',
+    image: '/images/advisory/risk-compliance.webp',
     imageAlt: 'Beoordeling van contractuele en regelgevende documenten',
     meta: {
       title: 'Regelgevende compliance voor kmo’s en middelgrote bedrijven: NIS2, DORA, AI Act, DSG | Aegryn',
@@ -252,7 +252,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   technology: {
     key: 'technology', path: '/advisory/technology',
-    image: '/images/advisory/technology.jpg',
+    image: '/images/advisory/technology.webp',
     imageAlt: 'Serverkasten in een datacenter',
     meta: {
       title: 'Technologieadvies: architectuur, schuld, AI, hosting | Aegryn',
@@ -374,7 +374,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   talentOrganization: {
     key: 'talentOrganization', path: '/advisory/talent-organization',
-    image: '/images/advisory/talent.jpg',
+    image: '/images/advisory/talent.webp',
     imageAlt: 'Lege bestuurskamer, klaar voor de volgende vergadering',
     meta: {
       title: 'Opvolging, governance, directieteam | Aegryn',
@@ -491,7 +491,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   ma: {
     key: 'ma', path: '/advisory/ma',
-    image: '/images/advisory/ma.jpg',
+    image: '/images/advisory/ma.webp',
     imageAlt: 'Leidinggevende op weg naar een onderhandelingsvergadering',
     meta: {
       title: 'Overname, verkoop, integratie: advies vóór de transactie | Aegryn',

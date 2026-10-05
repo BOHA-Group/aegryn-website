@@ -11,7 +11,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
-    image: '/images/advisory/strategy-towers.jpg',
+    image: '/images/advisory/strategy-towers.webp',
     imageAlt: 'Office towers seen from below, direction and height of view',
     meta: {
       title: 'Strategy consulting for SMEs and mid-caps | Aegryn',
@@ -134,7 +134,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   riskCompliance: {
     key: 'riskCompliance', path: '/advisory/risk-compliance',
-    image: '/images/advisory/risk-compliance.jpg',
+    image: '/images/advisory/risk-compliance.webp',
     imageAlt: 'Review of contractual and regulatory documents',
     meta: {
       title: 'Regulatory compliance for SMEs and mid-caps: NIS2, DORA, AI Act, FADP | Aegryn',
@@ -252,7 +252,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   technology: {
     key: 'technology', path: '/advisory/technology',
-    image: '/images/advisory/technology.jpg',
+    image: '/images/advisory/technology.webp',
     imageAlt: 'Server racks in a data centre',
     meta: {
       title: 'Technology consulting: architecture, debt, AI, hosting | Aegryn',
@@ -374,7 +374,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   talentOrganization: {
     key: 'talentOrganization', path: '/advisory/talent-organization',
-    image: '/images/advisory/talent.jpg',
+    image: '/images/advisory/talent.webp',
     imageAlt: 'Empty boardroom, ready for the next session',
     meta: {
       title: 'Succession, governance, leadership team | Aegryn',
@@ -491,7 +491,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
 
   ma: {
     key: 'ma', path: '/advisory/ma',
-    image: '/images/advisory/ma.jpg',
+    image: '/images/advisory/ma.webp',
     imageAlt: 'Executive on the way to a negotiation meeting',
     meta: {
       title: 'Acquisition, sale, integration: advisory ahead of the transaction | Aegryn',
