@@ -84,8 +84,10 @@ export function IssueMiniCard({ issue, locale = 'fr', active = false, labelComin
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg`}
+        src={`/magazine/issue-${padNum}/cover-magazine-issue-${padNum}-card.webp`}
         alt={`Aegryn Magazine - ${issue.title}`}
+        loading="lazy"
+        decoding="async"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: photoPos }}
       />
       <div style={{ position: 'absolute', inset: 0, background: TEXT_OVERLAY }} />

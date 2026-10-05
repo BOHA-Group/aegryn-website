@@ -173,7 +173,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
 
         <div className="flex items-end justify-between mb-12 gap-6">
           <div className="space-y-3">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex flex items-center gap-3">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink flex items-center gap-3">
               <span className="w-5 h-px bg-ag-apex/50 inline-block" />
               {articlesLabel}
             </p>

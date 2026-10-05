@@ -82,10 +82,13 @@ export function HomeVideoSection({ children }: { children: React.ReactNode }) {
         muted
         loop
         playsInline
-        poster="/images/home/home-mountains.png"
-        preload="auto"
+        poster="/images/home/home-mountains-poster.webp"
+        preload="metadata"
+        aria-hidden="true"
       >
+        <source src="/videos/assets-animation1-mobile.mp4" type="video/mp4" media="(max-width: 1023px)" />
         <source src="/videos/assets-animation1-web.mp4" type="video/mp4" />
+        <track kind="captions" />
       </video>
 
       {/* ── Couche blur (GSAP scrub) ── */}

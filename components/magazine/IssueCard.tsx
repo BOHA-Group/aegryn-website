@@ -31,7 +31,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
         const coverInner = (
           <div style={{ width: 420, height: 595, position: 'relative', overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,.28)', cursor: (isPublic || isPreview) ? 'pointer' : 'default' }}>
             {/* Image de fond */}
-            <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-magazine-issue-${padNum}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(/magazine/issue-${padNum}/cover-magazine-issue-${padNum}-card.webp)`, backgroundSize: 'cover', backgroundPosition: 'center top' }} />
             {/* Contenu */}
             <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '28px 30px' }}>
               {/* TOP BAR */}

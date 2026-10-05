@@ -1,6 +1,6 @@
 'use client'
 
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useEffect } from 'react'
 import { useTranslations }   from 'next-intl'
 import { gsap, SplitText }   from '@/lib/gsap'
 
@@ -22,6 +22,27 @@ export function MissionVideoSection() {
 
   const tM = useTranslations('missionSection')
   const missionItems = tM.raw('items') as { title: string; desc: string }[]
+
+  /* Vidéo chargée seulement quand la section approche du viewport (8 Mo desktop,
+     1,7 Mo mobile) : évite de télécharger la vidéo pendant le chargement initial. */
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    const load = () => {
+      if (video.dataset.loaded) return
+      video.dataset.loaded = '1'
+      const small = window.matchMedia('(max-width: 1023px)').matches
+      video.src = small ? video.dataset.srcMobile ?? '' : video.dataset.srcDesktop ?? ''
+      video.load()
+      video.play().catch(() => {})
+    }
+    if (!('IntersectionObserver' in window)) { load(); return }
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) { load(); io.disconnect() }
+    }, { rootMargin: '600px 0px' })
+    io.observe(video)
+    return () => io.disconnect()
+  }, [])
 
   useLayoutEffect(() => {
     const wrap    = wrapRef.current
@@ -60,7 +81,7 @@ export function MissionVideoSection() {
 
       /* Phase 0–40% — labels / borders : dark → white */
       tl.fromTo(section.querySelectorAll('.mv-label'),
-        { color: 'rgb(148,163,184)' },
+        { color: 'rgb(100,116,139)' },
         { color: 'rgba(255,255,255,0.50)', ease: 'none', duration: 0.40 },
         0,
       )
@@ -70,8 +91,8 @@ export function MissionVideoSection() {
         0,
       )
       tl.fromTo(section.querySelectorAll('.mv-num'),
-        { color: 'rgb(90,221,164)' },
-        { color: 'rgba(90,221,164,0.60)', ease: 'none', duration: 0.40 },
+        { color: 'rgb(12,122,82)' },
+        { color: 'rgba(90,221,164,0.85)', ease: 'none', duration: 0.40 },
         0,
       )
 
@@ -112,10 +133,13 @@ export function MissionVideoSection() {
         muted
         loop
         playsInline
-        poster="/images/home/home-mountains.png"
-        preload="auto"
+        poster="/images/home/home-mountains-poster.webp"
+        preload="none"
+        aria-hidden="true"
+        data-src-mobile="/videos/assets-animation1-mobile.mp4"
+        data-src-desktop="/videos/assets-animation1-web.mp4"
       >
-        <source src="/videos/assets-animation1-web.mp4" type="video/mp4" />
+        <track kind="captions" />
       </video>
 
       {/* ── Couche 2 : section Mission sticky, bg transparent ── */}

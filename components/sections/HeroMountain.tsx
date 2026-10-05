@@ -88,7 +88,7 @@ export function HeroMountain() {
           alt={HERO_IMAGE.alt}
           fill
           priority
-          unoptimized
+          fetchPriority="high"
           sizes="100vw"
           placeholder="blur"
           blurDataURL={HERO_BLUR_DATA_URL}
@@ -134,9 +134,9 @@ export function HeroMountain() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta2Title')}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
                     {t('cta2Desc')}
                   </p>
@@ -153,9 +153,9 @@ export function HeroMountain() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta1Title')}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
                     {t('cta1Desc')}
                   </p>
@@ -172,9 +172,9 @@ export function HeroMountain() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta3Title')}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
                     {t('cta3Desc')}
                   </p>
@@ -191,9 +191,9 @@ export function HeroMountain() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta4Title')}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
                     {t('cta4Desc')}
                   </p>
@@ -210,9 +210,9 @@ export function HeroMountain() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
                 <div className="relative">
-                  <h3 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
+                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
                     {t('cta5Title')}
-                  </h3>
+                  </h2>
                   <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
                     {t('cta5Desc')}
                   </p>

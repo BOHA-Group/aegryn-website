@@ -289,7 +289,7 @@ export default function Footer() {
         {/* Legal strip — compact, fused above marquee */}
         <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center">
           <div className="flex flex-col gap-1">
-            <p className="font-sans font-semibold text-[10px] text-white/45">
+            <p className="font-sans font-semibold text-[10px] text-white/70">
               {t('legal')}
             </p>
             <p className="font-sans text-[10px] text-white/60">
@@ -307,7 +307,7 @@ export default function Footer() {
                   href={href as string}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
+                  className="font-sans font-semibold text-[10px] text-white/70 hover:text-white transition-colors inline-block py-2"
                 >
                   {tL(key as 'termsUse')}
                 </a>
@@ -315,7 +315,7 @@ export default function Footer() {
                 <Link
                   key={key}
                   href={href}
-                  className="font-sans font-semibold text-[10px] text-white/45 hover:text-white transition-colors"
+                  className="font-sans font-semibold text-[10px] text-white/70 hover:text-white transition-colors inline-block py-2"
                 >
                   {tL(key as 'termsUse')}
                 </Link>

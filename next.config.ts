@@ -10,7 +10,7 @@ const CSP = [
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: blob: https: https://www.google-analytics.com",
   "media-src 'self' blob:",
-  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vitals.vercel-insights.com https://cloudflareinsights.com wss: wss://ws-us3.pusher.com https://*.cookie-script.com https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
+  "connect-src 'self' https://aegryn.com https://www.aegryn.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googletagmanager.com https://vitals.vercel-insights.com https://cloudflareinsights.com wss: wss://ws-us3.pusher.com https://*.cookie-script.com https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
   "frame-src 'self' https://js.stripe.com",
   "frame-ancestors 'self'",
   "object-src 'none'",
