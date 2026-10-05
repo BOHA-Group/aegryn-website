@@ -260,3 +260,25 @@ toc = recompute_ranges(toc)
 TOC.write_text(toc)
 print('4. toc.ts et sommaire web mis a jour : ok')
 print(f'\nTotal pages : {TOTAL} (etait 154, -{154 - TOTAL})')
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 5. Remplacement de 3 photos sans rapport avec leur contenu (cf. CREDITS.md)
+#    - pexels-374870.jpg : tour CN de Toronto, identifiable, dans un numero
+#      consacre a la tech europeenne.
+#    - 1555952517-2e8e729e0b44.jpg : portrait au maquillage, sans lien avec
+#      l'ouverture du chapitre "European Tech Cities".
+#    - 1494783367193-149034c05e8f.jpg : route desertique, sans lien avec
+#      Lausanne et Geneve.
+# ─────────────────────────────────────────────────────────────────────────────
+flip = FLIP.read_text()
+SWAPS = {
+    'pexels-374870.jpg': 'unsplash-glass-skyscrapers-dusk.jpg',
+    '1555952517-2e8e729e0b44.jpg': 'unsplash-silhouette-city-window.jpg',
+    '1494783367193-149034c05e8f.jpg': 'unsplash-lavaux-lake-geneva-alps.jpg',
+}
+for old, new in SWAPS.items():
+    n = flip.count(old)
+    assert n == 1, f'{old}: attendu 1 occurrence, trouve {n}'
+    flip = flip.replace(old, new, 1)
+FLIP.write_text(flip)
+print('5. 3 photos sans rapport remplacees (voir images/CREDITS.md) : ok')
