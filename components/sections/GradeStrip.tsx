@@ -2,9 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
+import { getFranchirIntro } from '@/content/franchir'
 
 const GRADE_COLORS: Record<string, string> = {
   '★':  'bg-ag-grade-star text-ag-navy',
@@ -16,6 +17,8 @@ const GRADE_COLORS: Record<string, string> = {
 
 export function GradeStrip() {
   const t      = useTranslations('gradeStrip')
+  const locale = useLocale()
+  const franchir = getFranchirIntro(locale)
   const grades = (t.raw('grades') as { grade: string; label: string; desc: string }[]) || []
   const secRef = useRef<HTMLElement>(null)
 
@@ -81,13 +84,27 @@ export function GradeStrip() {
           ))}
         </div>
 
-        <div className="border-t border-ag-border pt-10 flex justify-end">
-          <Link
-            href="/grade"
-            className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-6 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
-          >
-            {t('cta')} <ArrowUpRight size={12} />
-          </Link>
+        <div className="pt-10 flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md">
+            {franchir.assetsLink.text}{' '}
+            <Link href="/assets" className="text-ag-apex-ink hover:text-ag-black underline underline-offset-4 transition-colors">
+              {franchir.assetsLink.label}
+            </Link>
+          </p>
+          <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
+            <Link
+              href="/grade"
+              className="shrink-0 inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-6 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
+            >
+              {t('cta')} <ArrowUpRight size={12} />
+            </Link>
+            <Link
+              href={{ pathname: '/contact', query: { action: 'echange' } }}
+              className="shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold rounded-lg hover:bg-ag-navy-mid transition-colors"
+            >
+              {franchir.cta.label} <ArrowUpRight size={13} />
+            </Link>
+          </div>
         </div>
 
       </div>

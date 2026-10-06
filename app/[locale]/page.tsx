@@ -12,7 +12,7 @@ import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStr
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
 import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { TransactNarrative } from '@/components/sections/TransactionNarrative'
-import { FranchirHomeSection, FranchirAssetsStrip } from '@/components/sections/FranchirHomeSection'
+import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
 import { DiscoverStrip }     from '@/components/sections/DiscoverStrip'
@@ -65,7 +65,6 @@ export default async function HomePage({ params }: Props) {
       <GradeStrip />
 
       {/* ── 09. Transact ───────────────────────────────────── */}
-      <FranchirAssetsStrip locale={locale} />
       <TransactNarrative />
       <MarketStatStrip />
 
