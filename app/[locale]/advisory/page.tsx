@@ -55,7 +55,7 @@ export default async function AdvisoryPage({ params }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
-            style={{ fontSize: 'clamp(40px,5.5vw,80px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title').split('\n').map((line, i, arr) => (
               <span key={i}>{line}{i < arr.length - 1 && <br />}</span>

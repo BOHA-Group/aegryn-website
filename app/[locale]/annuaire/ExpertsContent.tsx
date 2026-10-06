@@ -745,7 +745,7 @@ export default function ExpertsContent() {
           </p>
           <h1
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
-            style={{ fontSize: 'clamp(44px,6vw,80px)' }}
+            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('hero.title')}
           </h1>

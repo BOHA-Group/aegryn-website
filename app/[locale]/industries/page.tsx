@@ -46,7 +46,7 @@ export default function IndustriesPage() {
             {t('label')}
           </p>
           <h1 className="font-sans font-bold text-white leading-[1.02] tracking-[-0.03em] max-w-3xl mb-7 whitespace-pre-line"
-            style={{ fontSize: 'clamp(40px,5.5vw,72px)' }}>
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
             {t('title')}
           </h1>
           <p className="font-sans text-[15px] text-white/45 max-w-xl leading-relaxed mb-12">

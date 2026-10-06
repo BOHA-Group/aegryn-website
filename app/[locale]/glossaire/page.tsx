@@ -296,7 +296,7 @@ export default async function GlossairePage({ params }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-5"
-            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+            style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {ui.title}
           </h1>

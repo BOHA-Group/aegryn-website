@@ -26,7 +26,7 @@ export default async function PortfolioPage({ params }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(40px,5.5vw,72px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
           </h1>

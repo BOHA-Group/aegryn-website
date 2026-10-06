@@ -34,7 +34,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(36px,5vw,76px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
           </h1>

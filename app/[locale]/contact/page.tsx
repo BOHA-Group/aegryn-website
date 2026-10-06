@@ -72,7 +72,10 @@ export default async function ContactPage({ params, searchParams }: Props) {
           <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex-ink mb-6">
             Contact
           </p>
-          <h1 className="font-sans text-6xl font-bold tracking-tighter text-ag-black sm:text-7xl max-w-xl">
+          <h1
+            className="font-sans font-bold tracking-tighter text-ag-black max-w-xl"
+            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
+          >
             {actionDef ? `${actionDef.label}.` : t('hero.title')}
           </h1>
           <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">

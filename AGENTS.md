@@ -19,6 +19,14 @@
 
 - `AEGRYN_INTERNAL_EMAIL` override global ; `internalTo` par formulaire dans `EmailConfig` (`partnerships@boha-group.com` pour `/api/alliances/apply`) ; fallback `contact@boha-group.com`.
 
+## Norme titres H1 (4 gabarits)
+
+- **A — Landing éditorial** (navy, `py-32`) : `clamp(48px,6vw,86px)` — alliances, career, talent, services/build, about, blog
+- **B — Page de rubrique** (navy, `pt-24/32 pb-20`) : `clamp(36px,5vw,72px)` — advisory, acquisition-support, industries, portfolio, magazine, workforce, roadmap, valuation
+- **C — Page standard** (blanc, `pt-24 pb-20`) : `clamp(32px,4.5vw,64px)` — experts, investisseurs, audit, annuaire, assets/[slug], grade/submit, contact
+- **D — Compact référence** (navy, `pt-24 pb-14/16`) : `clamp(28px,3.5vw,52px)` — privacy, security, terms, faq, glossaire, verify
+- Legacy `/transact/*` : hors norme
+
 ## Positionnement
 
 - Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). 5 disciplines : ACCOMPAGNER, CONSTRUIRE, FRANCHIR, RECRUTER, INFORMER. 5 métiers conseil : Stratégie & Innovation, Risques & Conformité, Technologie & Souveraineté, Talent & Organisation, M&A & PMI. Ne pas répéter l'énumération à chaque page, privilégier des formulations de fond.
