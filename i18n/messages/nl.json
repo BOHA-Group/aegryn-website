@@ -60,11 +60,11 @@
     "craftBuildCIFSO": "CIFSO 5000-certificering",
     "craftSupport": "Begeleiden",
     "craftSupportDesc": "Strategie-, Risico & Compliance-, Technologie-, Talent- & M&A-advies : Alle sectoren",
-    "craftSupportStrategy": "Bedrijfsstrategie, en Innovatie",
-    "craftSupportRiskCompliance": "Risicobeheer, en Compliance",
-    "craftSupportTechnology": "Technologie, en Soevereiniteit",
-    "craftSupportTalentOrg": "Talent, en Organisatie",
-    "craftSupportMA": "M&A, Transacties, en PMI",
+    "craftSupportStrategy": "Bedrijfsstrategie en Innovatie",
+    "craftSupportRiskCompliance": "Risicobeheer en Compliance",
+    "craftSupportTechnology": "Technologie en Soevereiniteit",
+    "craftSupportTalentOrg": "Talent en Organisatie",
+    "craftSupportMA": "M&A, Transacties en PMI",
     "craftSupportAdvisory": "Tech & AI-advies",
     "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
@@ -336,7 +336,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Bedrijfsstrategie, en Innovatie",
+        "title": "Bedrijfsstrategie en Innovatie",
         "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor succes.",
         "why": {
           "title": "Waarom strategieadvies?",
@@ -392,7 +392,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Risicobeheer, en Compliance",
+        "title": "Risicobeheer en Compliance",
         "desc": "Wij brengen de regelgevende en operationele blootstelling van uw organisatie in kaart, documenteren deze en sturen erop, van cybercompliance tot risicogovernance.",
         "why": {
           "title": "Waarom risico- en compliance-advies?",
@@ -448,7 +448,7 @@
         ]
       },
       "technology": {
-        "title": "Technologie, en Soevereiniteit",
+        "title": "Technologie en Soevereiniteit",
         "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
         "why": {
           "title": "Waarom technologieadvies?",
@@ -500,7 +500,7 @@
         ]
       },
       "talentOrganization": {
-        "title": "Talent, en Organisatie",
+        "title": "Talent en Organisatie",
         "desc": "Wij structureren de organisatie, de leidinggevende teams en de opvolgingsplannen die een onderneming overdraagbaar, financierbaar en veerkrachtig maken, voorbij de oprichter.",
         "why": {
           "title": "Waarom advies over talent en organisatie?",
@@ -556,7 +556,7 @@
         ]
       },
       "ma": {
-        "title": "M&A, Transacties, en PMI",
+        "title": "M&A, Transacties en PMI",
         "desc": "Wij structureren externe groeioperaties en begeleiden hun integratie.",
         "why": {
           "title": "Waarom M&A-advies?",
@@ -611,7 +611,7 @@
       },
       "experts": {
         "title": "Expertennetwerk",
-        "desc": "Wij mobiliseren een netwerk van onafhankelijke experts (advocaten, accountants, fiscalisten, notarissen) om onze missies aan te vullen volgens de specifieke behoeften van elk project."
+        "desc": "Wij mobiliseren een netwerk van onafhankelijke experts (advocaten, accountants, fiscalisten) om onze missies aan te vullen volgens de specifieke behoeften van elk project."
       }
     },
     "approach": {
@@ -910,7 +910,7 @@
       {
         "num": "04",
         "title": "Wij activeren een netwerk van specialisten per missie.",
-        "desc": "M&A-advocaten, accountants, belastingadviseurs, CISO’s, FG’s, W&I-verzekeraars ingeschakeld wanneer de behoefte bestaat, niet permanent geïnternaliseerd. Uitgebreide capaciteit zonder zware structuur."
+        "desc": "M&A-advocaten, accountants, belastingadviseurs, CISO’s, FG’s ingeschakeld wanneer de behoefte bestaat, niet permanent geïnternaliseerd. Uitgebreide capaciteit zonder zware structuur."
       },
       {
         "num": "05",
@@ -1436,15 +1436,75 @@
     },
     "ctaLabel": "VOOR ONAFHANKELIJKE AUDITOREN",
     "ctaTitle": "Bent u advocatenkantoor, accountant, cyberbeveiligingsspecialist of organisatie-expert?",
-    "ctaDesc": "Solliciteer om toe te treden tot het netwerk van onafhankelijke auditors van de CIFSO 5000-certificering: toegang tot een regelmatige stroom certificeringsdossiers die uw expertise vereisen.",
+    "ctaDesc": "Kandideer voor het netwerk van onafhankelijke auditors van de CIFSO 5000-certificering: zichtbaarheid als partner van het Aegryn-netwerk; opdrachten toegewezen volgens de bovenstaande onafhankelijkheidsregels.",
     "ctaBtn": "Solliciteren voor het auditorennetwerk",
     "benefitsLabel": "WAT U KRIJGT",
     "benefits": [
-      "Toegang tot een regelmatige stroom organisatiedossiers die uw expertise vereisen",
-      "Zichtbaarheid als Aegryn-netwerkpartner (vanaf de eerste mandaten)",
-      "Gekwalificeerde institutionele klantenkring: leidinggevenden, PE-fondsen, VC, Family Offices",
-      "Vergoeding bepaald binnen het partnerschapskader"
-    ]
+      "Zichtbaarheid als partner van het Aegryn-netwerk",
+      "Opdrachten toegewezen op basis van competentie, onafhankelijkheid en beschikbaarheid",
+      "Gekwalificeerde institutionele clientèle: directeuren, PE-fondsen, VC, family offices"
+    ],
+    "dims": {
+      "label": "HOE WIJ AUDITEN",
+      "title": "Vijf dimensies. Vijf onafhankelijke profielen.",
+      "col1": "CIFSO 5000-dimensie",
+      "col2": "Onafhankelijk profiel",
+      "col3": "Wat wordt geverifieerd",
+      "rows": [
+        {
+          "dim": "Code & Architectuur",
+          "profile": "Technisch auditor (onafhankelijke senior CTO of code-auditbureau)",
+          "check": "Codekwaliteit, architectuur, technische schuld, reversibiliteit"
+        },
+        {
+          "dim": "IP & Rechten",
+          "profile": "Advocaat of adviseur intellectuele eigendom",
+          "check": "Rechtenketen, licenties, auteurscontracten"
+        },
+        {
+          "dim": "Financiën & Metrics",
+          "profile": "Accountant of tech-gespecialiseerde revisor",
+          "check": "Consistentie van financiële en terugkerende indicatoren"
+        },
+        {
+          "dim": "Security & Soevereiniteit",
+          "profile": "Geaccrediteerde security-auditor (PASSI, CREST)",
+          "check": "Securityposture, datalocatie en -controle"
+        },
+        {
+          "dim": "Organisatie & Talent",
+          "profile": "Auditor governance en human resources",
+          "check": "Afhankelijkheid van de directeur, sleutelpersonen, opvolging"
+        }
+      ]
+    },
+    "transverse": {
+      "label": "TRANSVERSALE ROLLEN",
+      "items": [
+        {
+          "title": "Onafhankelijke reviewer",
+          "desc": "Tweede lectuur van elk rapport vóór de beoordeling."
+        },
+        {
+          "title": "Beoordelingscomité",
+          "desc": "Kent het grade toe op basis van de rapporten."
+        },
+        {
+          "title": "Expert digitaal recht en gegevensbescherming",
+          "desc": "Puntadvies."
+        }
+      ]
+    },
+    "independence": {
+      "label": "ONAFHANKELIJKHEIDSREGELS",
+      "title": "Een onafhankelijke auditor, of niets.",
+      "items": [
+        "Geen auditor certificeert een organisatie die hij heeft geadviseerd.",
+        "Belangenconflicten worden vóór elke opdracht verklaard.",
+        "Vertrouwelijkheid wordt voor elk dossier ondertekend.",
+        "Opdrachten worden toegewezen op basis van competentie, onafhankelijkheid en beschikbaarheid."
+      ]
+    }
   },
   "contact": {
     "faq": {
@@ -1727,7 +1787,7 @@
         {
           "num": "04",
           "title": "Closing & Post-acquisitie",
-          "desc": "Begeleiding bij ondertekening, escrow, post-acquisitie-integratie, werving van uitvoeringsteams."
+          "desc": "Begeleiding bij ondertekening, post-acquisitie-integratie, werving van uitvoeringsteams."
         }
       ],
       "fundsNote": "Wij ondersteunen ook fondsen en family offices als transitie operating partner, uitbesteed, op hun deelnemingen.",
@@ -1737,7 +1797,7 @@
     "network": {
       "label": "EXPERTENNETWERK : VAARDIGHEDEN PER MISSIE GEACTIVEERD",
       "title": "De juiste experts. Op het juiste moment. Bij elke missie.",
-      "desc": "Voor gespecialiseerde missies activeren we ons netwerk van geverifieerde onafhankelijke experts. M&A-advocaten, accountants, belastingadviseurs, notarissen, digitaalrechtspecialisten, W&I-verzekeraars.\n\nEen pool van specialisten die onze capaciteiten uitbreidt zonder onze structuur te belasten.",
+      "desc": "Voor gespecialiseerde missies activeren we ons netwerk van geverifieerde onafhankelijke experts. M&A-advocaten, accountants, belastingadviseurs, digitaalrechtspecialisten. Een pool van specialisten die onze capaciteiten uitbreidt zonder onze structuur te belasten.",
       "cta1": "Toegang tot het netwerk →",
       "cta1Href": "/alliances",
       "cta2": "Het netwerk vervoegen →",
@@ -1835,7 +1895,7 @@
   "acquisition": {
     "meta": {
       "title": "Transactie-advies & M&A | Aegryn",
-      "desc": "M&A-begeleiding voor gecertificeerde tech-asset-overnames: due diligence, structurering, escrow, closing. Aegryn coördineert de experts."
+      "desc": "M&A-begeleiding voor gecertificeerde tech-asset-overnames: due diligence, structurering, closing. Aegryn coördineert de experts."
     },
     "label": "Services : Transactie-advies",
     "title": "Uw overname.\nGestructureerd om te sluiten.",
@@ -1888,8 +1948,8 @@
             },
             {
               "num": "07",
-              "title": "Warranty & Indemnity Insurance",
-              "desc": "Introductie bij W&I-verzekeraars voor transacties boven € 500.000. Faciliteert de volledige prijsvrijgave bij closing en dekt reps & warranties."
+              "title": "Closing-voorbereiding",
+              "desc": "Opschortende voorwaarden, closing-checklist, overdracht van IP-rechten en kerncontracten, transitie-deliverables."
             }
           ]
         },
@@ -1979,7 +2039,7 @@
         {
           "num": "05",
           "title": "Ondertekening & veilige closing",
-          "desc": "Institutionele escrow (10 % van de prijs bij LOI). Volledige codebасedocumentatie op ondertekeningsdatum. Overdracht van rechten. Uitgifte van het Aegryn-transactiecertificaat."
+          "desc": "Volledige codebase-documentatie op de ondertekeningsdatum. Rechtenoverdracht. Uitgifte van het Aegryn-transactiecertificaat."
         }
       ]
     },
@@ -2041,8 +2101,8 @@
         },
         {
           "phase": "In uitrol",
-          "title": "Warranty & Indemnity Insurance",
-          "desc": "Introductie bij W&I-partnerverzekeraar voor transacties boven de € 500.000. Faciliteert de volledige prijsvrijgave bij closing.",
+          "title": "Closing-voorbereiding",
+          "desc": "Opschortende voorwaarden, closing-checklist, overdracht van IP-rechten en kerncontracten, transitie-deliverables.",
           "status": "in_deployment"
         },
         {
@@ -3000,10 +3060,6 @@
         "title": "Systematische NDA",
         "desc": "Toegang tot vertrouwelijke dossiers is afhankelijk van het ondertekenen van een NDA. Vertrouwelijkheid bij elke stap gegarandeerd."
       },
-      "escrow": {
-        "title": "Institutionele escrow",
-        "desc": "In het kader van overdrachtsopdrachten vloeien de middelen via een gecontroleerde institutionele escrowrekening tot de closing."
-      },
       "buyers": {
         "title": "Gekwalificeerde partijen",
         "desc": "Elke stakeholder wordt gekwalificeerd vóór toegang tot beschermde dossiers. Capaciteit en intentie geverifieerd."
@@ -3014,7 +3070,7 @@
       },
       "transaction": {
         "title": "Experts on-demand",
-        "desc": "Toegang tot het Aegryn-expertsnetwerk (advocaten, notarissen, fiscalisten), inzetbaar naar behoefte van de opdracht."
+        "desc": "Toegang tot het Aegryn-expertsnetwerk (advocaten, fiscalisten), inzetbaar naar behoefte van de opdracht."
       }
     },
     "roadmapLabel": "20 kernfunctionaliteiten",
@@ -3036,13 +3092,6 @@
         "live": true
       },
       {
-        "iconKey": "escrow",
-        "theme": "Opdrachten",
-        "title": "Institutionele escrow",
-        "desc": "Bij overdrachtsopdrachten vloeien de middelen via een gecontroleerde escrowrekening tot de closing.",
-        "live": true
-      },
-      {
         "iconKey": "nda",
         "theme": "Compliance",
         "title": "Geautomatiseerde digitale NDA",
@@ -3053,7 +3102,7 @@
         "iconKey": "closing",
         "theme": "Opdrachten",
         "title": "Experts on-demand",
-        "desc": "Expertsnetwerk inzetbaar naar behoefte van de opdracht: advocaten, notarissen, fiscalisten.",
+        "desc": "Expertsnetwerk inzetbaar naar behoefte van de opdracht: advocaten, fiscalisten.",
         "live": true
       },
       {
@@ -3166,7 +3215,6 @@
     "current": [
       "Aegryn Grade-certificering: CIFSO 5000-protocol",
       "Begeleiding van de vijf levenscyclusfasen (Valoriser)",
-      "Institutionele escrow bij overdrachtsopdrachten",
       "Geautomatiseerde digitale NDA",
       "Kwalificatie van partijen en speciale ruimtes",
       "Certificeringsruimte: indiening en dossieropvolging",
@@ -3328,7 +3376,7 @@
           "readings": [
             "Institutioneel-niveau actief. Uitvoerbaar tegen premiumwaardering. Due diligence aanzienlijk versneld.",
             "Hoogwaardig doelwit. Standaardproces, geen materieel risicosignaal. Betrouwbare waarderingsbasis.",
-            "Solide actief met gedocumenteerde voorbehouden. Deal uitvoerbaar met escrow of prijsaanpassingsmechanisme.",
+            "Solide asset met gedocumenteerde voorbehouden. Deal uitvoerbaar met garantieclausules of prijsaanpassing.",
             "Levensvatbaar actief, saneringsgebieden geïdentificeerd. Waardeplan vereist voor volledig proces.",
             "CIFSO-saneringsplan vereist vóór transactie. Tijdlijn dienovereenkomstig verlengd."
           ],
@@ -3383,7 +3431,7 @@
           "readings": [
             "Sluitingsklaar actief. Volledige documentatie beschikbaar. Uitzonderlijke premie gerechtvaardigd.",
             "Standaard acquisitietijdlijn. Documentatie volledig. Betrouwbare basis voor SPA.",
-            "Acquisitie met geïdentificeerde voorbehouden. Escrow of prijsaanpassingsmechanisme aanbevolen.",
+            "Acquisitie met vastgestelde voorbehouden. Garantieclausules of prijsaanpassingsmechanisme aanbevolen.",
             "Acquisitie met voorwaarden. Integratieplan en waardecorrectie te onderhandelen.",
             "Transactie niet aanbevolen zonder voorafgaande sanering. Kopersrisico verhoogd."
           ],
@@ -4519,290 +4567,156 @@
   },
   "alliances": {
     "meta": {
-      "title": "Partners | Aegryn",
-      "desc": "Partners voor certificering, advies en expertise. Aegryn selecteert zijn partners met dezelfde zorgvuldigheid als zijn standaarden."
+      "title": "Partner worden | Aegryn",
+      "desc": "Sluit u aan bij het Aegryn-netwerk: adviesexperts in vijf domeinen, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
     },
     "hero": {
-      "label": "Aegryn Partnerships",
+      "label": "Partner worden",
       "title": "Ons netwerk.\nOnze kracht.",
-      "desc": "Aegryn werkt met een netwerk van zorgvuldig per discipline geselecteerde expertpartners. Juridisch, technisch, financieel, advies, verzekering: elke partner versterkt ons vermogen om waardecreatie te begeleiden in elke fase van de levenscyclus van een organisatie."
+      "desc": "Aegryn mobiliseert een netwerk van één voor één geselecteerde experts: vijf adviesdomeinen, een kring van investeerders en instellingen, en onafhankelijke auditors van de CIFSO 5000-certificering."
     },
-    "types": {
-      "certification": {
-        "label": "Certificering",
-        "title": "Expertnetwerk Aegryn",
-        "desc": "Tech-advocaatkantoren, accountants, cybersecuritypartners. Sluit u aan bij de eerste kring van partners die het CIFSO 5000-certificeringsprotocol verrijken met een cross-review, naarmate het systeem wordt uitgerold.",
-        "cta": "Certificeringspartner worden",
-        "dimensions": {
-          "C": {
-            "label": "C — Code & Architectuur",
-            "profiles": [
-              "Bureaus voor code- en architectuuraudits",
-              "Senior onafhankelijke freelance CTO's",
-              "DevSecOps- en applicatiebeveiligingsadviesbureaus"
-            ]
-          },
-          "I": {
-            "label": "I — IP & Rechten",
-            "profiles": [
-              "IP- & tech-kantoren (titelketen, licenties)",
-              "M&A-transactieadvocaten (SPA, SHA, APA)",
-              "Kantoren voor intellectueel eigendom en merken"
-            ]
-          },
-          "F": {
-            "label": "F — Financiën & Metrics",
-            "profiles": [
-              "Op SaaS/tech gespecialiseerde accountants",
-              "Onafhankelijke wettelijke controleurs",
-              "Corporate belastingadviseurs (CH/FR/LU)"
-            ]
-          },
-          "S": {
-            "label": "S — Veiligheid & Soevereiniteit",
-            "profiles": [
-              "Erkende cybersecurityspecialisten (PASSI, CREST)",
-              "AVG/LPD/NIS2-compliance-auditors",
-              "Auditors voor AI-soevereiniteit en infrastructuur"
-            ]
-          },
-          "O": {
-            "label": "O — Organisatie & Talent",
-            "profiles": [
-              "HR- & arbeidsrechtkantoren",
-              "Executive search-specialisten in tech",
-              "Consultants voor organisatie en leiderschapsopvolging"
-            ]
-          }
+    "side": {
+      "group": "Partners & expertise",
+      "groupDesc": "De structuren en expertise die we op onze opdrachten inzetten.",
+      "investors": "Investeerders & Institutionelen",
+      "investorsDesc": "Banken, fondsen, family offices, instellingen: Aegryn als operating partner van hun deelnemingen.",
+      "auditors": "Onafhankelijke auditors",
+      "auditorsDesc": "Onafhankelijke bijdrage aan de CIFSO-certificering op de vijf dimensies.",
+      "apply": "Kandidatuur"
+    },
+    "intro": {
+      "label": "HET NETWERK",
+      "title": "Experts die onze standaard delen.",
+      "desc": "Het Aegryn-netwerk: zorgvuldig gekozen specialisten, ingezet naar behoefte.",
+      "cards": [
+        {
+          "title": "Partners & expertise",
+          "desc": "Vijf adviesdomeinen, elk gedragen door experts van het netwerk.",
+          "cta": "De domeinen verkennen"
+        },
+        {
+          "title": "Investeerders & Institutionelen",
+          "desc": "Fondsen, family offices, banken en instellingen: een operating partner die de organisaties die zij financieren voorbereidt en volgt.",
+          "cta": "Naar de pagina"
+        },
+        {
+          "title": "Onafhankelijke auditors",
+          "desc": "De experts die elke dimensie van de CIFSO 5000-certificering verifiëren, zonder de gecertificeerde organisatie te adviseren.",
+          "cta": "Naar de pagina"
         }
-      },
-      "distribution": {
-        "label": "Distributie",
-        "title": "Toegang tot mandaten",
-        "desc": "Family offices, privébanken, fondsen. Uw klanten krijgen prioritaire toegang tot gecertificeerde organisaties en lopende waarderingsmandaten.",
-        "profiles": "Zwitserse private banks · Family offices · Vermogensbeheerders",
-        "cta": "Distributiepartnerschap verkennen"
-      },
-      "dealflow": {
-        "label": "Doorverwijzingen",
-        "title": "Deal sourcing",
-        "desc": "VC/PE-fondsen, M&A-boutiques, tech-acceleratoren. Meld organisaties aan die in elke fase van hun levenscyclus begeleiding nodig hebben: certificering, waardering, groei, structurering. De partnerschapsvoorwaarden worden vastgelegd tijdens het kwalificatiegesprek.",
-        "profiles": "Micro-PE-fondsen · M&A-boutiques · Tech-acceleratoren · Incubatoren voor bedrijfsoprichting en -ontwikkeling",
-        "cta": "Een organisatie aanmelden"
-      },
-      "advisory_tech": {
-        "label": "Advisory Tech",
-        "title": "Gecertificeerde technische experts",
-        "desc": "Partners gemobiliseerd om de robuustheid en certificeerbaarheid van activa te verbeteren vóór of tijdens het Aegryn-gradeproces.",
-        "profiles": "Cybersecuritybedrijven (PASSI/CREST/OSCP) · Senior freelance CTO's (architectuur, DevSecOps) · Data & AI-experts (MLOps, governance) · Geaccrediteerde externe DPO's (AVG/LPD) · EU AI Act-conformiteitsexperts · Digitale toegankelijkheidsauditors (WCAG)",
-        "cta": "Advisory Tech-partner worden"
-      },
-      "advisory_transaction": {
-        "label": "M&A-advies",
-        "title": "M&A tech-experts",
-        "desc": "Partners die worden ingezet in elke fase van M&A-trajecten, van voorbereiding tot closing en integratie na de overname.",
-        "profiles": "IP & tech-kantoren (eigendomsketen, licenties) · M&A-transactieadvocaten (SPA, SHA, APA) · Accountants en commissarissen · Corporate belastingadviseurs (CH/FR/LU) · HR & arbeidsrechtskantoren · W&I-verzekeraars (AIG, Tokio Marine) · Sectorale due diligence-experts (FinTech, HealthTech, AI)",
-        "cta": "M&A-adviespartner worden"
-      },
-      "finance": {
-        "label": "Banken & Financiële partners",
-        "title": "Financiële partners",
-        "desc": "Bankinstellingen, regionale banken en financiële instellingen die ondernemers in elke fase van hun ontwikkeling begeleiden. Een natuurlijke synergie met ons advies- en begeleidingsaanbod.",
-        "profiles": "Bankinstellingen & regionale banken · Schulden- en groeifondsen · Family offices & multi-family offices · Garantie- en borgstellingmaatschappijen · Publieke financiële instellingen (BPI, enz.)",
-        "cta": "Financiële partner worden"
-      },
-      "sequestre": {
-        "label": "Escrow & Juridisch",
-        "profiles": "Depotbanken · Zakenrechtadvocaten",
-        "title": "Escrow & juridische partners",
-        "desc": "Depotbanken en zakenrechtadvocaten die escrow- en closingmechanismen van begeleide trajecten structureren en beveiligen.",
-        "cta": "Toetreden als juridische partner"
-      },
-      "technique": {
-        "label": "Technische expertise",
-        "profiles": "Senior freelance CTO's · PASSI/CREST-beveiligingsauditors · Web3-specialisten",
-        "title": "Onafhankelijke technische experts",
-        "desc": "CTO's, cyberbeveiligingsauditors en blockchainspecialisten die onze technische due diligence- en certificeringsmissies versterken.",
-        "cta": "Toetreden als technisch expert"
-      },
-      "assurance": {
-        "label": "Verzekering & Compliance",
-        "profiles": "W&I-verzekeraars · Corporate fiscalisten",
-        "title": "Verzekeringsexperts & belastingspecialisten",
-        "desc": "W&I-verzekeraars en deskundige fiscalisten die trajecten en risico's in elke fase van de bedrijfslevenscyclus beveiligen.",
-        "cta": "Toetreden als verzekeringspartner"
+      ]
+    },
+    "metiers": {
+      "label": "PARTNERS & EXPERTISE",
+      "title": "Vijf adviesdomeinen.",
+      "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
+      "profilesLabel": "Gezochte profielen",
+      "viewPage": "Naar de domeinpagina",
+      "join": "Bij dit domein aansluiten",
+      "items": {
+        "strategie": {
+          "title": "Ondernemingsstrategie en Innovatie",
+          "profiles": "Oud-directeuren, strategiedirecteuren, senior consultants, innovatieprofessionals.",
+          "expertises": [
+            "Review van de strategische positie",
+            "Afweging tussen opties",
+            "Driejarenplan",
+            "Voorbereiding van comité, raad van bestuur en bank",
+            "Entree op een nieuwe markt",
+            "Bedrijfsmodellen en innovatie",
+            "Strategie voor het gebruik van AI",
+            "Board advisory"
+          ]
+        },
+        "risques": {
+          "title": "Risicobeheer en Compliance",
+          "profiles": "Juristen digitale compliance, compliance-verantwoordelijken, crisismanagementspecialisten.",
+          "expertises": [
+            "Kartering van de regelgevingsexposure",
+            "Europese AI-verordening en AI-governance",
+            "Cybersecurity en regelgevende weerbaarheid (NIS2, DORA)",
+            "Gegevensbescherming (AVG, nLPD)",
+            "Bewijsdossier tegenover klanten",
+            "Incidentbeheer en melding",
+            "Sturing van remediëring",
+            "Training van directiecomités"
+          ]
+        },
+        "technologie": {
+          "title": "Technologie en Soevereiniteit",
+          "profiles": "CTO's, architecten, security-verantwoordelijken, data- en AI-ingenieurs.",
+          "expertises": [
+            "Audit van architectuur en technische schuld",
+            "Afweging: bouwen, kopen of samenwerken",
+            "Register van kritieke afhankelijkheden en reversibiliteit",
+            "Interim-CTO (CTO as a service)",
+            "Operationele cybersecurity en DevSecOps",
+            "Cloud en infrastructuur",
+            "Data, AI en integraties",
+            "Technische due diligence"
+          ]
+        },
+        "talent": {
+          "title": "Talent en Organisatie",
+          "profiles": "HR-directeuren, governance- en opvolgingsspecialisten, arbeidsrechtadvocaten, interim-directeuren.",
+          "expertises": [
+            "Meten van de afhankelijkheid van de directeur",
+            "Opvolging en familiegovernance",
+            "Structuur en directiecomité",
+            "Delegatie en besliskader",
+            "Retentie en beloning van sleutelprofielen",
+            "Interimmanagement",
+            "Arbeidsrecht en reorganisatie",
+            "Werving van leidinggevenden (zie pagina Rekruteren)"
+          ]
+        },
+        "ma": {
+          "title": "M&A, Transacties en PMI",
+          "profiles": "M&A-professionals, bedrijfsjuristen, fiscale experts, integratieverantwoordelijken.",
+          "expertises": [
+            "Acquisitiethese en targetcriteria",
+            "Beoordeling van een target (financieel, juridisch, fiscaal, technisch)",
+            "Voorbereiding van de verkoper en dataroom",
+            "Kadering van de onderhandelingspunten",
+            "Vennootschapsrecht en fiscale aspecten van transacties",
+            "Integratie in 100 dagen",
+            "Buy-and-build-programma",
+            "Aandeelhoudersakkoorden en governance na de transactie"
+          ],
+          "note": "Aegryn adviseert en bereidt voor. De uitvoering van transacties wordt toevertrouwd aan zakenbanken, M&A-boutiques en beëdigde advocaten van het netwerk."
+        }
       }
     },
-    "form": {
-      "title": "Partner worden.",
-      "structure": "Organisatie",
-      "type": "Type",
-      "typePlaceholder": "Kies een type",
-      "typeOptions": {
-        "certification": "Certificering (expertnetwerk)",
-        "distribution": "Distributie (geprivilegieerde toegang)",
-        "dealflow": "Doorverwijzingen",
-        "other": "Overig"
-      },
+    "candidature": {
+      "label": "KANDIDATUUR",
+      "title": "Aansluiten bij het Aegryn-netwerk.",
+      "desc": "Eén formulier, drie profielen: adviserend expert, onafhankelijke auditor, aanbrenger van zaken.",
+      "typeLabel": "U bent",
+      "typeExpert": "Adviserend expert",
+      "typeAuditeur": "Onafhankelijke auditor",
+      "typeApporteur": "Aanbrenger van zaken",
+      "metierLabel": "Vakgebied",
+      "dimensionLabel": "CIFSO-dimensie",
+      "name": "Naam",
+      "org": "Organisatie",
       "country": "Land",
-      "description": "Beschrijving van de kans",
-      "email": "Professioneel e-mailadres",
-      "submit": "Sollicitatie indienen",
-      "note": "Antwoord binnen 7 werkdagen. Kwalificatiegesprek vereist.",
-      "successTitle": "Aanmelding ontvangen",
-      "successDesc": "Ons team beoordeelt uw aanvraag en neemt contact met u op voor een kwalificatiegesprek.",
+      "experience": "Uw ervaring in drie regels",
+      "website": "Website of professioneel profiel",
+      "email": "E-mail",
+      "consent": "Ik stem in met de verwerking van mijn persoonsgegevens conform de AVG en de nLPD.",
+      "submit": "Mijn kandidatuur versturen",
+      "submitting": "Versturen…",
+      "successTitle": "Ontvangen.",
+      "successDesc": "Aegryn bestudeert elke kandidatuur en antwoordt binnen 10 werkdagen.",
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "submitting": "Verzenden...",
-      "structureOpts": {
-        "law_firm": "Advocatenkantoor",
-        "audit": "Accountancy / Audit",
-        "bank": "Bank / Fiduciair",
-        "fund": "Fonds (PE, VC, Family Office)",
-        "notary": "Notaris",
-        "accelerator": "Accelerator / Incubator",
-        "platform": "Platform / Marketplace",
-        "other": "Overige"
-      },
-      "typeOtherLabel": "Overige",
-      "structurePlaceholder": "Kies een structuur",
-      "organizationLabel": "Organisatie"
-    },
-    "partnerNote": "Aegryn vermeldt nog geen partners met naam publiekelijk. Deze categorieën presenteren de gezochte profielen. De eerste partners worden gepubliceerd op /grade/partners zodra de eerste mandaten zijn geformaliseerd.",
-    "tabs": {
-      "overview": "Overzicht",
-      "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "M&A-advies",
-      "certification": "Certificering",
-      "distribution": "Distributie",
-      "dealflow": "Doorverwijzingen",
-      "apply": "Aanmelden",
-      "sequestre": "Escrow",
-      "technique": "Technisch",
-      "assurance": "Verzekering",
-      "finance": "Banken & Financiën"
-    },
-    "disciplines": {
-      "label": "DE 6 NETWERKEXPERTISES",
-      "intro": "Ons netwerk dekt alle expertise die nodig is om een organisatie te waarderen in elke fase van haar levenscyclus.",
-      "items": [
-        {
-          "num": "01",
-          "id": "advisory_tech",
-          "title": "Tech Advisory",
-          "desc": "CTO as a service, beveiligingsaudit, architectuur, DevSecOps, AI.",
-          "tags": [
-            "CTO as a Service",
-            "SI-architectuur",
-            "Beveiligingsaudit",
-            "DevSecOps",
-            "AI & Machine Learning",
-            "Cloud & Infra",
-            "API & Integraties",
-            "Operationele cyberbeveiliging",
-            "Data Engineering",
-            "Product Management tech"
-          ]
-        },
-        {
-          "num": "02",
-          "id": "advisory_transaction",
-          "title": "M&A-advies",
-          "desc": "Strategische due diligence, waardering, M&A-structurering.",
-          "tags": [
-            "Strategische due diligence",
-            "Assetwaardering",
-            "M&A-structurering",
-            "NDA & Vertrouwelijkheid",
-            "Data room",
-            "Quality of Earnings",
-            "Earn-out-ontwerp",
-            "Acquisitiefinanciering",
-            "LOI & SPA",
-            "Post-fusie-integratie"
-          ]
-        },
-        {
-          "num": "03",
-          "id": "juridique",
-          "title": "Juridisch & Certificering",
-          "desc": "M&A-advocaten, IP, digitaal recht, notarissen, juridische audit.",
-          "tags": [
-            "Vennootschapsrecht",
-            "Intellectueel eigendom",
-            "Digitaal recht",
-            "AVG & Compliance",
-            "M&A-fiscaal recht",
-            "Juridische audit",
-            "Notariaat",
-            "Arbeidsrecht",
-            "SaaS-contracten",
-            "NIS2 & DORA"
-          ]
-        },
-        {
-          "num": "04",
-          "id": "dealflow",
-          "title": "Doorverwijzingen & Distributie",
-          "desc": "Toegang tot een kring van gekwalificeerde financiële en industriële partners.",
-          "tags": [
-            "Family offices",
-            "Private Equity-fondsen",
-            "VC-fondsen",
-            "Strategische kopers",
-            "Buy-side advisory",
-            "Sell-side advisory",
-            "Co-investering",
-            "Club deals",
-            "Secundaire transacties",
-            "Distressed assets"
-          ]
-        },
-        {
-          "num": "05",
-          "id": "sequestre",
-          "title": "Escrow & Financiële Structurering",
-          "desc": "Overbruggingsfinanciering, earn-out, escrow, structurering.",
-          "tags": [
-            "Overbruggingsfinanciering",
-            "Gestructureerde earn-out",
-            "Fiduciaire escrow",
-            "Passiefgarantie",
-            "Vendor loan",
-            "Mezzanine",
-            "Bridge financing",
-            "LBO-structurering",
-            "Garantie W&I",
-            "Escrow agreements"
-          ]
-        },
-        {
-          "num": "06",
-          "id": "assurance",
-          "title": "W&I Verzekering & Risico",
-          "desc": "W&I-verzekeringsspecialisten, risk managers, beroepsverzekeraars.",
-          "tags": [
-            "W&I-verzekering",
-            "Tax liability insurance",
-            "Cyberverzekering",
-            "Beroepsaansprakelijkheid",
-            "Directors & Officers",
-            "Errors & omissions-verzekering",
-            "Risicokartering",
-            "Milieuaansprakelijkheid",
-            "IP-inbreukdekking",
-            "Transactieverzekering"
-          ]
-        }
-      ],
-      "filterAll": "Alle domeinen",
-      "filterLabel": "Filteren op domein"
-    },
-    "alliancePartners": {
-      "label": "ALLIANCE PARTNERS",
-      "title": "Partners die onze standaard delen.",
-      "desc": "Alliance Partners zijn organisaties die een formele samenwerkingsovereenkomst met Aegryn hebben ondertekend. Zij genieten prioritaire toegang tot certificerings- en waarderingsmandaten, zicht op vertrouwelijke dossiers en directe samenwerking bij lopende mandaten.",
-      "cta": "Alliance Partner worden →",
-      "ctaHref": "/alliances?tab=apply"
+      "selectPlaceholder": "Selecteren…",
+      "dimensions": {
+        "C": "Code & Architectuur",
+        "I": "IP & Rechten",
+        "F": "Financiën & Metrics",
+        "S": "Security & Soevereiniteit",
+        "O": "Organisatie & Talent"
+      }
     }
   },
   "network": {
@@ -5222,23 +5136,6 @@
             "Holdingstructuur",
             "Exit tax",
             "Treaty"
-          ]
-        },
-        {
-          "title": "Escrow & Financiering",
-          "tags": [
-            "Escrow",
-            "Bridge",
-            "Mezzanine",
-            "LBO"
-          ]
-        },
-        {
-          "title": "W&I-verzekering & Risico",
-          "tags": [
-            "W&I insurance",
-            "Tax liability",
-            "D&O"
           ]
         },
         {
@@ -5921,153 +5818,6 @@
       "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem direct contact met ons op.",
       "legalNote": "Geen verbintenis in dit stadium. De definitieve financiële voorwaarden worden na pre-kwalificatie meegedeeld.",
       "cancelledNote": "Aanvraag geannuleerd. U kunt uw aanvraag opnieuw indienen."
-    }
-  },
-  "bidModels": {
-    "meta": {
-      "title": "Acquisitiemodellen | Aegryn",
-      "desc": "Club Deal, Corporate, Fund, Equity Stake: de 4 Aegryn-acquisitiemodellen met de Tech Transaction Promise in 5 stappen."
-    },
-    "hero": {
-      "back": "← M&A-transacties",
-      "label": "Aegryn TRANSACT",
-      "title": "Kies uw acquisitiemodel",
-      "desc": "Vier kopersprofielen, één vereiste: dealkwaliteit. Elk model wordt afgestemd op uw structuur en doelstellingen."
-    },
-    "conditionsLabel": "Sleutelvoorwaarden",
-    "structuresLabel": "Beschikbare structuren",
-    "models": [
-      {
-        "badge": "HNWI · Ondernemers · Gekwalificeerde particulieren",
-        "label": "MODEL 01",
-        "title": "Club Deal",
-        "summary": "Een hoofdbieder mag tot 4 aangemelde mede-investeerders associëren. Eén bod, één escrow betaald door de hoofdbieder. Interne allocatie blijft vertrouwelijk.",
-        "conditions": [
-          "Aanbevolen minimumticket: €100.000",
-          "Volledige KYC hoofdbieder + vereenvoudigde KYC mede-investeerders (alleen ID + adresbewijs, de hoofdbieder neemt de financiële verantwoordelijkheid voor de volledige escrow)",
-          "10% escrow betaald door hoofdbieder binnen 5 werkdagen",
-          "Tot 4 aangemelde mede-investeerders, die elk individueel de Aegryn-NDA ondertekenen. Interne allocatie blijft vertrouwelijk voor Aegryn.",
-          "Interne allocatie wijzigbaar tot de ondertekeningsdatum van de Heads of Agreement."
-        ],
-        "structures": [
-          "Volledig cash",
-          "Cash + earnout (tijdlijn en KPI's te specificeren)",
-          "Overige (nader te detailleren)"
-        ]
-      },
-      {
-        "badge": "MKB · Holdings · Corporates · Groepen",
-        "label": "MODEL 02",
-        "title": "Corporate",
-        "summary": "Een rechtspersoon verwerft het actief rechtstreeks op zijn balans. Twee entiteiten kunnen co-acquireren via een bij Aegryn aangemelde JV. Asset deal of share deal afhankelijk van de gekozen structuur.",
-        "conditions": [
-          "Aanbevolen minimumticket: €250.000",
-          "Volledige B2B-KYC: Kbis < 3 maanden, statuten, UBO ≥ 25%, ID van bestuurder",
-          "10% escrow betaald vanaf de rekening van de rechtspersoon",
-          "JV mogelijk: de JV-entiteit moet zijn opgericht of in laatste oprichtingsfase verkeren vóór de ondertekening van de Heads of Agreement."
-        ],
-        "structures": [
-          "Asset deal (code, IP, contracten, klantenbestand)",
-          "Share deal (overname van de holding)",
-          "Directe balansacquisitie",
-          "Acquisitie via toegewijde dochteronderneming",
-          "Acqui-hire: acquisitie gestructureerd om het oprichtersteam na de overdracht te behouden, vereist specifieke SHA- en arbeidsclausules."
-        ]
-      },
-      {
-        "badge": "PE · VC · Family Office · Search Fund",
-        "label": "MODEL 03",
-        "title": "Fund",
-        "summary": "Institutionele fondsen beschikken over een IC-window van 5 tot 10 werkdagen vóór indiening van een definitief bod. SPV beschikbaar voor directe LP-co-investering bij specifieke deals.",
-        "conditions": [
-          "Aanbevolen minimumticket: €500.000 (geen maximum)",
-          "Institutionele KYC: regelgevende vergunning indien van toepassing (FINMA, AMF, FCA)",
-          "IC-window: vertrouwelijke reservering 5–10 werkdagen zonder escrow",
-          "SPV mogelijk voor directe LP-co-investering",
-          "Managementpresentatie georganiseerd door Aegryn op wederzijds verzoek, nooit direct contact tussen verkoper en fonds vóór de Heads of Agreement."
-        ],
-        "structures": [
-          "Platformacquisitie (eerste actief in een PE-roll-up)",
-          "Add-on (complementair actief voor een bestaand portfoliobedrijf)",
-          "Volledige acquisitie (100%)",
-          "Minderheidsacquisitie (< 50%) met gestructureerde SHA",
-          "LMBO: management buyout met hefboom, vereist externe financiering onafhankelijk van Aegryn."
-        ]
-      },
-      {
-        "badge": "Strategische investeerders · Operationele partners",
-        "label": "MODEL 04",
-        "title": "Equity Stake",
-        "subBadge": "Geen escrow",
-        "summary": "Voor investeerders of partners die een belang in het actief willen nemen zonder het volledig te verwerven: aandelen tegen adviesvergoeding, carried interest of operationele bijdrage. Live commitment, zonder bankescrow.",
-        "conditions": [
-          "Geen vast aanbevolen minimumticket (waardering onderhandeld tussen partijen)",
-          "KYC volgens profiel (vereenvoudigd voor gekwalificeerde particulieren, volledig voor entiteiten)",
-          "Geen escrow, commitment via SHA mede-opgesteld met de adviseurs van beide partijen",
-          "Live commitment: SHA-ondertekening + eventueel warrant of BSA",
-          "Aegryn ontvangt een vaste bemiddelingsvergoeding op de overeengekomen waardering, gedefinieerd in het mandaat. Geen escrowmechanisme van toepassing op dit model."
-        ],
-        "structures": [
-          "Advisory equity (X% voor advies/expertise over N maanden)",
-          "Carried interest (X% op toekomstige winst van het actief)",
-          "Gedeeltelijke cash-minderheidsinvestering + board seat",
-          "Warrant / BSA (recht om in de toekomst aandelen te verwerven)",
-          "Revenue share + toekomstige koopoptie (indien de koopoptie wordt uitgeoefend, wordt de transactie omgezet naar een standaard Aegryn-acquisitiemodel met volledig PTT-proces)"
-        ]
-      }
-    ],
-    "ptt": {
-      "label": "GEMEENSCHAPPELIJK PROCES, MODELLEN 01, 02, 03",
-      "title": "De Tech Transaction Promise",
-      "desc": "5 gestructureerde stappen voor alle deals met reële acquisitie. Het Equity Stake-model volgt een toegewijd SHA-proces zonder escrow.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Expression of Interest (EI)",
-          "desc": "Niet-bindend. Binnen 48 uur aan de verkoper overgebracht. Geen aanbetaling vereist."
-        },
-        {
-          "num": "02",
-          "title": "Agreement in Principle (AP)",
-          "desc": "Prijs en structuur overeengekomen. Ondertekening van de AP activeert de escrowverplichting."
-        },
-        {
-          "num": "03",
-          "title": "10% escrow",
-          "desc": "Binnen 5 werkdagen gestort op een derdenrekening. Aegryn heeft nooit toegang tot de gelden. Partnerbank treedt op als custodian."
-        },
-        {
-          "num": "04",
-          "title": "Due Diligence: 30 dagen standaard",
-          "desc": "Volledige dataroomtoegang onder NDA. Q&A uitsluitend via Aegryn (nooit rechtstreeks verkoper/koper). Verlenging mogelijk in onderling overleg (max +30 dagen)."
-        },
-        {
-          "num": "05",
-          "title": "Signing & Closing",
-          "desc": "KRYV-protocol certificeert de exacte staat van de code. Betaling saldo (resterende 90%). Overdracht van het actief + afgifte van het Aegryn-transactiecertificaat."
-        }
-      ],
-      "protection": {
-        "title": "Bilaterale bescherming",
-        "buyer": {
-          "title": "Terugtrekking koper",
-          "desc": "Zonder geldige reden → escrow verbeurd aan de verkoper."
-        },
-        "seller": {
-          "title": "Terugtrekking verkoper",
-          "desc": "Zonder geldige reden → escrow dubbel terugbetaald aan de koper."
-        },
-        "condition": {
-          "title": "Opschortende voorwaarde vervallen",
-          "desc": "→ Escrow volledig terugbetaald aan de koper (zonder schuld)."
-        }
-      }
-    },
-    "cta": {
-      "title": "Klaar om een bod in te dienen?",
-      "desc": "Bekijk de beschikbare activa of neem contact met ons op om uw acquisitieprofiel te bespreken.",
-      "btnGuide": "Kopersgids",
-      "btnCatalog": "Catalogus bekijken"
     }
   },
   "valuation": {
@@ -7013,7 +6763,7 @@
     "s3Row6Data": "Geanonimiseerde gegevens",
     "s3Row6Basis": "Gerechtvaardigde belangen / Algemeen belang",
     "s4Title": "Wie heeft toegang tot uw gegevens?",
-    "s4": "Binnen Aegryn: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Escrow-bank: voor het beheer van de escrow-rekening. Technische dienstverleners: hosting, e-mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. Aegryn verkoopt uw gegevens nooit aan derden.",
+    "s4": "Binnen Aegryn: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Technische dienstverleners: hosting e -mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. Aegryn verkoopt uw gegevens nooit aan derden.",
     "s5Title": "Internationale doorgifte",
     "s5": "Gegevens worden gehost op servers in de Europese Unie of Zwitserland. Voor doorgifte aan derde landen implementeren wij passende waarborgen (goedgekeurde standaardcontractbepalingen).",
     "s6Title": "Bewaring",
@@ -7197,7 +6947,7 @@
     "s1": "Fraudeurs kunnen nepwebsites, sociale-mediaprofielen of e-mails aanmaken die van Aegryn lijken te komen om u tot frauduleuze betalingen te verleiden.",
     "s1Official": "Onze officiële e-mails komen uitsluitend van het domein @boha-group.com. Elk betalingsverzoek vanaf een ander domein is frauduleus.",
     "s1NeverTitle": "Aegryn zal u nooit vragen om:",
-    "s1Never1": "Een aanbetaling te doen op een persoonlijke rekening",
+    "s1Never1": "Vertrouwelijke documenten buiten de beveiligde ruimtes te delen",
     "s1Never2": "Vooruitbetalingen te doen die niet in uw ondertekende mandaat zijn vermeld",
     "s1Never3": "Uw inloggegevens per e-mail of telefoon te delen",
     "s2Title": "Frauduleuze communicatie herkennen",
@@ -7213,7 +6963,7 @@
     "s4Title": "Betalingsprocessen, normaal vs frauduleus",
     "s4NormalTitle": "Normaal",
     "s4Normal1": "Betaling van de CIFSO 5000-certificeringskosten (pakketten Express, Standard of Premium) op factuur of via Stripe Checkout op aegryn.com",
-    "s4Normal2": "Escrow-betaling (10% van de overeengekomen prijs) per bankoverschrijving naar de aangewezen partnerbank-IBAN met transactiereferentie",
+    "s4Normal2": "Documentuitwisseling (dataroom, certificeringsrapporten) uitsluitend via geauthenticeerde ruimtes op aegryn.com",
     "s4FraudTitle": "Frauduleus",
     "s4Fraud1": "Elk betalingsverzoek naar een persoonlijke rekening",
     "s4Fraud2": "Elke cryptocurrency-betaling die niet in het contract is vermeld",
@@ -7354,7 +7104,7 @@
           "account"
         ],
         "q": "Hoe word je lid van het Aegryn-expertnetwerk?",
-        "a": "Professionals (advocaten, tech-experts, M&A, cyber, finance, W&I-verzekering) kunnen een Expertprofiel-abonnement nemen (CHF 89 excl. btw/maand). Dit geeft toegang tot certificerings- en begeleidingsopdrachten van Aegryn-klanten. Geen commissie aan Aegryn over uw honoraria. Details op /grade/partners."
+        "a": "Onafhankelijke professionals (advocaten, tech-experts, M&A, cyber, finance) kunnen solliciteren via de pagina Partner worden (/alliances), sectie Sollicitatie. Aegryn beoordeelt elke sollicitatie en antwoordt binnen 10 werkdagen."
       },
       {
         "id": "valuation",
@@ -8245,7 +7995,7 @@
       "lawDesc": "Vennootschapsrecht, SPA, SHA, IP, licenties",
       "accounting": "Accountancy",
       "hr": "HR & Arbeidsrecht",
-      "insurance": "W&I-verzekering",
+      "insurance": "Verzekering",
       "real_estate": "Vastgoed",
       "finance": "Financiën",
       "financeDesc": "Financiering, LBO, structurering, senior debt",
@@ -8275,8 +8025,6 @@
       "dd_hrDesc": "Sleutelcontracten, aandelenplannen, arbeidsrechtelijke verplichtingen, classificatie van freelancers, non-concurrentiebedingen.",
       "dd_regulatory": "Sectorale Regelgevings-Due Diligence",
       "dd_regulatoryDesc": "FinTech (DORA/FINMA), HealthTech (HDS), AI-native (EU AI Act), LegalTech, EdTech.",
-      "wi_insurance": "Warranty & Indemnity-verzekering",
-      "wi_insuranceDesc": "Koppeling aan W&I-verzekeraars voor operaties > €500.000. Vergemakkelijkt de closing.",
       "tax_corporate": "Fiscale & Corporate Structurering",
       "tax_corporateDesc": "Exit-optimalisatie, holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-ruil.",
       "financing": "Financiering & Financiële Partners",
@@ -8369,7 +8117,7 @@
       "CTO": "CTO / Tech-architect",
       "Cybersecurity": "Cybersecurity",
       "HR & Social": "HR & Arbeidsrecht",
-      "Insurance": "Verzekeringen (W&I)",
+      "Insurance": "Verzekering",
       "Tax": "Fiscaal adviseur",
       "Investor": "Investeerder / Family Office",
       "Other": "Overig"
@@ -10998,5 +10746,63 @@
       "title": "Onze analyses over werkgelegenheid, vaardigheden en talent.",
       "readMore": "Artikel lezen"
     }
+  },
+  "investisseurs": {
+    "eyebrow": "INVESTEERDERS & INSTITUTIONELEN",
+    "title": "Uw kapitaal verdient\neen operating partner.",
+    "line1": "De bank financiert. Het fonds investeert.",
+    "line2": "Aegryn begeleidt de operationele waardecreatie in uw deelnemingen.",
+    "cta": "Laten we uw portefeuille bespreken",
+    "problems": {
+      "label": "DRIE SITUATIES DIE WIJ OPLOSSEN",
+      "items": [
+        "Uw deelneming heeft geen operationeel team om de waarde te sturen.",
+        "Uw deal flow is technisch en organisatorisch moeilijk te lezen.",
+        "Uw exit is over 24 tot 36 maanden en de organisatie is niet klaar."
+      ]
+    },
+    "roles": {
+      "label": "ONZE DRIE ROLLEN",
+      "title": "Een operationele inzet, geen adviserende.",
+      "items": [
+        {
+          "title": "Operating partner voor uw directe deelnemingen",
+          "desc": "Wij nemen een operationele rol in uw deelnemingen: governance, talent, dagelijkse waardesturing. Aanwezigheid ter plaatse, niet alleen in het board."
+        },
+        {
+          "title": "Technische en organisatorische deal-flow-screening",
+          "desc": "Vóór de investering kwalificeren wij targets op de 5 CIFSO-dimensies: code & architectuur, IP & rechten, financiën & metrics, security & soevereiniteit, organisatie & talent. U investeert met een volledige lezing."
+        },
+        {
+          "title": "Value creation na de acquisitie en exit-voorbereiding",
+          "desc": "Na de acquisitie structureren wij het waardeplan over 12 tot 36 maanden, documenteren de organisatie en bereiden de overdracht onder de beste voorwaarden voor."
+        }
+      ]
+    },
+    "banks": {
+      "label": "BANKEN & FINANCIERS",
+      "title": "Begeleidt u bedrijfsleiders?",
+      "desc": "Verwijs ze naar Aegryn. Banken (MKB, private, zaken-), financiers, family offices, fondsen, M&A-boutiques, bedrijfsjuristen en accountants: Aegryn bereidt uw cliënten voor op een beslissing (financiering, acquisitie, overdracht) en begeleidt ze daarna. Aegryn voert geen transacties uit: wij concurreren noch met uw zakenbank noch met uw adviseur.",
+      "cta": "Kandideren als aanbrenger"
+    },
+    "alignment": {
+      "label": "ONZE INZET",
+      "title": "Dicht bij uw deelnemingen.",
+      "desc": "Een langetermijninzet op operationeel vlak, naast de teams en de governance.",
+      "items": [
+        "Operationele aanwezigheid, niet alleen in het board.",
+        "CIFSO-certificering inbegrepen in het mandaat.",
+        "Gedocumenteerd en opgevolgd waardeplan.",
+        "Gestructureerde maandelijkse rapportage over de 5 dimensies."
+      ]
+    },
+    "final": {
+      "label": "EERSTE CONTACT",
+      "title": "Een portefeuille te valoriseren of over te dragen?",
+      "desc": "Fonds, family office, holding met een te structureren deelneming. Antwoord binnen 48u.",
+      "cta": "Laten we uw portefeuille bespreken"
+    },
+    "metaTitle": "Investeerders & Institutionelen | Aegryn",
+    "metaDesc": "Aegryn treedt op als operating partner voor fondsen, banken en family offices: technische screening, value creation na de acquisitie, voorbereiding van de overdracht."
   }
 }

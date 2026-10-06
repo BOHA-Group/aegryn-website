@@ -22,6 +22,9 @@ export default async function GradePartnersPage() {
   }))
 
   const benefits = t.raw('benefits') as string[]
+  const dimRows = t.raw('dims.rows') as { dim: string; profile: string; check: string }[]
+  const transverse = t.raw('transverse.items') as { title: string; desc: string }[]
+  const rules = t.raw('independence.items') as string[]
 
   return (
     <main className="bg-ag-white">
@@ -66,6 +69,63 @@ export default async function GradePartnersPage() {
         </div>
       </section>
 
+      {/* Tableau dimensions × profils × vérifications */}
+      <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('dims.label')}</p>
+          <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-12 max-w-xl" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>
+            {t('dims.title')}
+          </h2>
+          <div className="border border-ag-border rounded-2xl overflow-hidden">
+            <div className="hidden md:grid grid-cols-[1fr_1.4fr_1.4fr] gap-px bg-ag-border font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
+              <div className="bg-ag-white px-6 py-4">{t('dims.col1')}</div>
+              <div className="bg-ag-white px-6 py-4">{t('dims.col2')}</div>
+              <div className="bg-ag-white px-6 py-4">{t('dims.col3')}</div>
+            </div>
+            {dimRows.map((row) => (
+              <div key={row.dim} className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] gap-px bg-ag-border border-t border-ag-border">
+                <div className="bg-ag-white px-6 py-5 font-sans font-bold text-ag-black text-[13px]">{row.dim}</div>
+                <div className="bg-ag-white px-6 py-5 font-sans text-[13px] text-ag-gray leading-relaxed">{row.profile}</div>
+                <div className="bg-ag-white px-6 py-5 font-sans text-[13px] text-ag-gray leading-relaxed">{row.check}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rôles transverses + indépendance */}
+      <section className="py-20 px-6 border-b border-ag-border">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('transverse.label')}</p>
+            <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+              {transverse.map((item) => (
+                <div key={item.title} className="bg-ag-white p-6">
+                  <h3 className="font-sans font-bold text-ag-black text-[14px] mb-1.5">{item.title}</h3>
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('independence.label')}</p>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-8" style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}>
+              {t('independence.title')}
+            </h2>
+            <ul className="flex flex-col gap-4">
+              {rules.map((rule, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-5 h-5 border border-ag-apex/40 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-1.5 h-1.5 bg-ag-apex rounded-full" />
+                  </span>
+                  <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{rule}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* CTA partenaires potentiels */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -78,7 +138,7 @@ export default async function GradePartnersPage() {
               {t('ctaDesc')}
             </p>
             <Link
-              href={"/alliances?tab=certification" as never}
+              href={"/alliances?type=auditeur#candidature" as never}
               className="rounded-lg inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
             >
               {t('ctaBtn')} <ArrowUpRight size={13} />

@@ -224,11 +224,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={{ pathname: '/', hash: 'franchir' }} className="text-sm text-white/75 hover:text-white transition-colors">
-                  {t('col2DataRoom')}
-                </Link>
-              </li>
-              <li>
                 <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2Subblink')}
                 </a>

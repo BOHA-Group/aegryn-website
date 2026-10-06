@@ -334,16 +334,22 @@ function AlliancesTable({ rows, onDelete }: { rows: Record<string, unknown>[]; o
   return (
     <table className="w-full text-[12px] bg-white border border-gray-200">
       <thead className="bg-gray-50 border-b border-gray-200">
-        <tr>{['Date','Organisation','Type','Email','Pays','Statut',''].map(h => <Th key={h}>{h}</Th>)}</tr>
+        <tr>{['Date','Candidat','Profil','Métier / Dimension','Organisation','Email','Pays','Expérience','Statut',''].map(h => <Th key={h}>{h}</Th>)}</tr>
       </thead>
       <tbody className="divide-y divide-gray-100">
         {rows.map((r, i) => (
-          <tr key={i} className="hover:bg-gray-50">
+          <tr key={i} className="hover:bg-gray-50 align-top">
             <Td mono>{fmtDate(r.created_at)}</Td>
-            <Td>{String(r.organization_name ?? '—')}</Td>
+            <Td>{String(r.applicant_name ?? '—')}</Td>
             <Td><span className="rounded-lg px-2 py-0.5 bg-gray-100 text-gray-700 text-[10px] font-semibold uppercase">{String(r.alliance_type ?? '—')}</span></Td>
+            <Td small>{[r.metier, r.dimension].filter(Boolean).map(String).join(' · ') || '—'}</Td>
+            <Td>
+              {String(r.organization_name ?? '—')}
+              {r.website ? <a href={String(r.website).startsWith('http') ? String(r.website) : `https://${r.website}`} target="_blank" rel="noreferrer" className="block text-[10px] font-mono text-blue-500 hover:underline truncate max-w-[180px]">{String(r.website)}</a> : null}
+            </Td>
             <Td><a href={`mailto:${r.email}`} className="hover:text-blue-600">{String(r.email)}</a></Td>
             <Td>{String(r.country ?? '—')}</Td>
+            <Td small><span className="line-clamp-3 max-w-[260px]">{String(r.description ?? '—')}</span></Td>
             <Td><span className={`px-2 py-0.5 text-[10px] font-semibold uppercase ${statusColor(String(r.status ?? ''))}`}>{String(r.status ?? '—')}</span></Td>
             <td className="px-4 py-3">
               <button onClick={() => onDelete(String(r.id))} className="text-red-400 hover:text-red-700 transition-colors"><Trash2 size={11} /></button>

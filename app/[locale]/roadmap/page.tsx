@@ -4,7 +4,7 @@ import { Link }             from '@/i18n/navigation'
 import {
   ArrowUpRight, CheckCircle2,
   ShieldCheck, Scale, Globe, Lock,
-  Landmark, Users, FileSearch, Handshake,
+  Users, FileSearch, Handshake,
   LayoutGrid, Filter, Send, Award,
   Gift, Briefcase, ShieldAlert, BarChart2,
   Code2, Cpu, Star, Eye,
@@ -24,7 +24,7 @@ const FEATURE_ICONS = [
   { key: 'swissLaw',       Icon: Scale       },
   { key: 'international',  Icon: Globe       },
   { key: 'nda',            Icon: Lock        },
-  { key: 'escrow',         Icon: Landmark    },
+
   { key: 'buyers',         Icon: Users       },
   { key: 'dueDiligence',   Icon: FileSearch  },
   { key: 'transaction',    Icon: Handshake   },
@@ -33,7 +33,6 @@ const FEATURE_ICONS = [
 const ITEM_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   certification:  ShieldCheck,
   grade:          Star,
-  escrow:         Landmark,
   nda:            Lock,
   closing:        Handshake,
   swissLaw:       Scale,

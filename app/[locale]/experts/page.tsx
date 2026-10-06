@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('meta.desc'),
     path:        slug,
     locale,
-    keywords:    ['réseau experts M&A', 'M&A expert network', 'due diligence tech', 'W&I insurance'],
+    keywords:    ['réseau experts M&A', 'M&A expert network', 'due diligence tech'],
   })
   return {
     ...base,

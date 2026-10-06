@@ -396,18 +396,6 @@ export const EXPERTISE_TAXONOMY: Category[] = [
         regulatory: true,
       },
       {
-        id: 'trans-wi',
-        label: 'Warranty & Indemnity Insurance',
-        labelFr: 'Assurance W&I',
-        labelEn: 'Warranty & Indemnity Insurance',
-        labelDe: 'Gewährleistungs- & Freistellungsversicherung',
-        labelEs: 'Seguro de garantías e indemnizaciones (W&I)',
-        labelIt: 'Assicurazione Warranty & Indemnity',
-        labelNl: 'Garantie- en vrijwaringsverzekering (W&I)',
-        description: 'Insurer introduction for transactions +500K€',
-        descriptionFr: 'Introduction assureurs pour transactions +500K€',
-      },
-      {
         id: 'trans-tax',
         label: 'Tax & Corporate Structuring',
         labelFr: 'Structuration fiscale & Corporate',

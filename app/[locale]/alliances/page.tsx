@@ -3,7 +3,6 @@ import { Suspense }        from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }  from 'next'
 import AlliancesContent   from './AlliancesContent'
-import ExpertiseGrid      from '@/components/sections/alliances/ExpertiseGrid'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -24,7 +23,6 @@ export default async function AlliancesPage() {
       <Suspense>
         <AlliancesContent />
       </Suspense>
-      <ExpertiseGrid />
     </>
   )
 }

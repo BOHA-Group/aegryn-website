@@ -91,14 +91,6 @@ const TERMS: { letter: string; terms: { id: string; name: string; def: Def }[] }
         it: 'Integrazione di prezzo condizionale versata dopo il closing, basata sul raggiungimento di obiettivi definiti (ARR, crescita, retention). Meccanismo di allineamento degli interessi tra venditore e acquirente.',
         nl: 'Voorwaardelijke prijstoeslag die na de closing wordt betaald, gebaseerd op het bereiken van vastgelegde doelen (ARR, groei, retentie). Een mechanisme om de belangen van verkoper en koper af te stemmen.',
       }},
-      { id: 'escrow', name: 'Escrow (séquestre)', def: {
-        fr: 'Montant bloqué par une tierce partie (banque ou notaire) pendant la période entre la signature et le closing. Garantit le vendeur contre le défaut de paiement.',
-        en: 'Amount held by a third party (bank or notary) during the period between signing and closing. Protects the seller against payment default.',
-        de: 'Betrag, der von einem Dritten (Bank oder Notar) während der Zeit zwischen Unterzeichnung und Closing hinterlegt wird. Schützt den Verkäufer gegen Zahlungsausfall.',
-        es: 'Importe retenido por un tercero (banco o notario) durante el período entre la firma y el cierre. Protege al vendedor contra el impago.',
-        it: 'Importo vincolato presso un terzo (banca o notaio) durante il periodo tra firma e closing. Protegge il venditore dal mancato pagamento.',
-        nl: 'Bedrag dat door een derde partij (bank of notaris) wordt vastgehouden tijdens de periode tussen ondertekening en closing. Beschermt de verkoper tegen wanbetaling.',
-      }},
     ],
   },
   {

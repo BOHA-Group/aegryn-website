@@ -60,7 +60,6 @@ export const routing = defineRouting({
     '/transact/buyers':                   '/transact/buyers',
     '/transact/how-it-works':             '/transact/how-it-works',
     '/transact/lot/[slug]':               '/transact/lot/[slug]',
-    '/transact/bid-models':               '/transact/bid-models',
     '/transact/teaser-preview':           '/transact/teaser-preview',
     '/assets':                            '/assets',
     '/assets/[slug]':                     '/assets/[slug]',

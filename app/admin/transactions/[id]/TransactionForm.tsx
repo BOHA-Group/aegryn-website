@@ -6,11 +6,13 @@ import { useRouter } from 'next/navigation'
 const STATUS_STEPS = [
   { key: 'ei_submitted',   label: 'EI soumise' },
   { key: 'ap_signed',      label: 'AP signé' },
-  { key: 'escrow_paid',    label: 'Séquestre versé' },
   { key: 'dd_in_progress', label: 'DD en cours' },
   { key: 'signing',        label: 'Signing' },
   { key: 'closed',         label: 'Clôturé' },
 ] as const
+
+// Statut historique désactivé — affiché en lecture seule sur les transactions existantes
+const ARCHIVED_STATUS_LABELS: Record<string, string> = { escrow_paid: 'Séquestre versé (archivé)' }
 
 const inputCls   = 'w-full border border-gray-200 bg-white px-3 py-2.5 text-[12px] font-mono focus:outline-none focus:border-gray-500 transition-colors'
 const labelCls   = 'block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-1.5'
@@ -27,10 +29,10 @@ export default function TransactionForm({ transaction }: Props) {
   const [error, setError]     = useState('')
 
   const [status, setStatus] = useState(String(transaction.status ?? 'ei_submitted'))
-  const [escrowAmount, setEscrowAmount]     = useState(String(transaction.escrow_amount_chf ?? ''))
-  const [escrowProvider, setEscrowProvider] = useState(String(transaction.escrow_provider ?? ''))
-  const [escrowReference, setEscrowReference] = useState(String(transaction.escrow_reference ?? ''))
-  const [escrowNote, setEscrowNote]         = useState(String(transaction.escrow_note ?? ''))
+  const escrowAmount    = String(transaction.escrow_amount_chf ?? '')
+  const escrowProvider  = String(transaction.escrow_provider ?? '')
+  const escrowReference = String(transaction.escrow_reference ?? '')
+  const escrowNote      = String(transaction.escrow_note ?? '')
   const [ddStarted, setDdStarted]   = useState(String(transaction.dd_started_at ?? ''))
   const [ddDeadline, setDdDeadline] = useState(String(transaction.dd_deadline_at ?? ''))
   const [dataroomUrl, setDataroomUrl] = useState(String(transaction.dataroom_url ?? ''))
@@ -105,7 +107,9 @@ export default function TransactionForm({ transaction }: Props) {
     }
   }
 
-  const currentStepIdx = STATUS_STEPS.findIndex(s => s.key === status)
+  const currentStepIdx = status === 'escrow_paid'
+    ? STATUS_STEPS.findIndex(s => s.key === 'ap_signed')
+    : STATUS_STEPS.findIndex(s => s.key === status)
 
   return (
     <div className="flex flex-col gap-6">
@@ -145,61 +149,28 @@ export default function TransactionForm({ transaction }: Props) {
           Accord de Principe (AP) : accepté manuellement par les deux parties via case à cocher (pas de signature électronique).
           Buyer : {transaction.ap_accepted_buyer ? '✅' : '—'} · Seller : {transaction.ap_accepted_seller ? '✅' : '—'}
         </p>
+        {ARCHIVED_STATUS_LABELS[status] && (
+          <p className="text-[11px] text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2">
+            Statut archivé : {ARCHIVED_STATUS_LABELS[status]} — ce statut n'est plus attribuable.
+          </p>
+        )}
       </div>
 
-      {/* Séquestre */}
-      <div className={sectionCls}>
-        <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Séquestre — géré manuellement par une banque/fiduciaire externe</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className={labelCls}>Montant (CHF)</label>
-            <input className={inputCls} value={escrowAmount} onChange={e => setEscrowAmount(e.target.value)} />
-          </div>
-          <div>
-            <label className={labelCls}>Banque / fiduciaire partenaire</label>
-            <input className={inputCls} value={escrowProvider} onChange={e => setEscrowProvider(e.target.value)} placeholder="ex: Banque XYZ" />
-          </div>
-          <div>
-            <label className={labelCls}>Référence de virement</label>
-            <input className={inputCls} value={escrowReference} onChange={e => setEscrowReference(e.target.value)} />
-          </div>
-        </div>
-        <div>
-          <label className={labelCls}>Note (confirmation reçue, contact fiduciaire, etc.)</label>
-          <textarea className={inputCls} rows={2} value={escrowNote} onChange={e => setEscrowNote(e.target.value)} />
-        </div>
-        <div className="flex items-center gap-3">
+      {/* Séquestre — données historiques (lecture seule, workflow désactivé) */}
+      {(escrowAmount || escrowProvider || escrowReference || escrowNote || transaction.escrow_confirmed_at) ? (
+        <div className={sectionCls}>
+          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">Séquestre — archivé (workflow désactivé)</h2>
+          <dl className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[12px]">
+            <div><dt className={labelCls}>Montant (CHF)</dt><dd className="font-mono">{escrowAmount || '—'}</dd></div>
+            <div><dt className={labelCls}>Banque / fiduciaire</dt><dd className="font-mono">{escrowProvider || '—'}</dd></div>
+            <div><dt className={labelCls}>Référence</dt><dd className="font-mono">{escrowReference || '—'}</dd></div>
+          </dl>
+          {escrowNote ? <p className="text-[12px] text-gray-500">{escrowNote}</p> : null}
           {transaction.escrow_confirmed_at ? (
-            <span className="text-[11px] text-emerald-600 font-semibold">Séquestre confirmé le {String(transaction.escrow_confirmed_at).slice(0,10)}</span>
-          ) : (
-            <button
-              disabled={saving}
-              onClick={() => patch({
-                escrow_amount_chf: escrowAmount ? Number(escrowAmount) : undefined,
-                escrow_provider: escrowProvider || undefined,
-                escrow_reference: escrowReference || undefined,
-                escrow_note: escrowNote || undefined,
-                escrow_confirmed: true,
-              })}
-              className="rounded-lg bg-gray-900 text-white text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:bg-gray-700 transition-colors"
-            >
-              Confirmer réception du séquestre
-            </button>
-          )}
-          <button
-            disabled={saving}
-            onClick={() => patch({
-              escrow_amount_chf: escrowAmount ? Number(escrowAmount) : undefined,
-              escrow_provider: escrowProvider || undefined,
-              escrow_reference: escrowReference || undefined,
-              escrow_note: escrowNote || undefined,
-            })}
-            className="rounded-lg border border-gray-300 text-gray-600 text-[11px] font-semibold uppercase tracking-wide px-4 py-2 hover:border-gray-500 transition-colors"
-          >
-            Sauvegarder
-          </button>
+            <p className="text-[11px] text-emerald-600 font-semibold">Séquestre confirmé le {String(transaction.escrow_confirmed_at).slice(0,10)}</p>
+          ) : null}
         </div>
-      </div>
+      ) : null}
 
       {/* Due Diligence */}
       <div className={sectionCls}>

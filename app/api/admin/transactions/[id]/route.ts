@@ -1,19 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
-import { getChfToEurRate }          from '@/lib/fxRate'
 import { getAdminUser }             from '@/lib/adminAuth'
 
 const schema = z.object({
   token: z.string().optional(),
-  status: z.enum(['ei_submitted', 'ap_signed', 'escrow_paid', 'dd_in_progress', 'signing', 'closed', 'cancelled']).optional(),
+  // 'escrow_paid' archivé : le séquestre n'est plus un statut actif du pipeline
+  status: z.enum(['ei_submitted', 'ap_signed', 'dd_in_progress', 'signing', 'closed', 'cancelled']).optional(),
   ap_accepted_buyer:  z.boolean().optional(),
   ap_accepted_seller: z.boolean().optional(),
-  escrow_amount_chf:   z.number().optional(),
-  escrow_provider:     z.string().max(200).optional(),
-  escrow_reference:    z.string().max(200).optional(),
-  escrow_confirmed:    z.boolean().optional(),
-  escrow_note:         z.string().max(2000).optional(),
   dd_started_at:       z.string().optional(),
   dd_deadline_at:      z.string().optional(),
   dd_extended_to:      z.string().optional(),
@@ -60,12 +55,6 @@ export async function PATCH(
     if (body.ap_accepted_buyer  != null) update.ap_accepted_buyer  = body.ap_accepted_buyer
     if (body.ap_accepted_seller != null) update.ap_accepted_seller = body.ap_accepted_seller
 
-    if (body.escrow_amount_chf  != null) update.escrow_amount_chf = body.escrow_amount_chf
-    if (body.escrow_provider)            update.escrow_provider   = body.escrow_provider
-    if (body.escrow_reference)           update.escrow_reference  = body.escrow_reference
-    if (body.escrow_confirmed)           update.escrow_confirmed_at = new Date().toISOString()
-    if (body.escrow_note)                update.escrow_note       = body.escrow_note
-
     if (body.dd_started_at)  update.dd_started_at  = body.dd_started_at
     if (body.dd_deadline_at) update.dd_deadline_at = body.dd_deadline_at
     if (body.dd_extended_to) update.dd_extended_to = body.dd_extended_to
@@ -82,46 +71,6 @@ export async function PATCH(
     if (body.net_seller_proceeds_chf      != null) update.net_seller_proceeds_chf      = body.net_seller_proceeds_chf
 
     if (body.admin_note) update.admin_note = body.admin_note
-
-    // ── Audit log enrichi pour escrow_amount_chf ───────────────────────
-    if (body.escrow_amount_chf != null || body.escrow_confirmed) {
-      const { data: txCurrent } = await supa
-        .from('transactions')
-        .select('escrow_amount_chf, status')
-        .eq('id', id)
-        .single()
-
-      const fx = await getChfToEurRate().catch(() => null)
-      const newAmount = body.escrow_amount_chf ?? (txCurrent?.escrow_amount_chf as number | null)
-
-      if (body.escrow_amount_chf != null) {
-        await supa.from('transaction_audit_log').insert({
-          transaction_id: id,
-          actor_role:     'admin',
-          event_type:     txCurrent?.escrow_amount_chf == null ? 'escrow_amount_set' : 'escrow_amount_updated',
-          old_amount_chf: txCurrent?.escrow_amount_chf ?? null,
-          new_amount_chf: body.escrow_amount_chf,
-          eur_rate:       fx?.eurPerChf ?? null,
-          eur_rate_date:  fx?.rateDate  ?? null,
-          amount_eur_approx: fx && newAmount ? Math.round(Number(newAmount) * fx.eurPerChf) : null,
-          note:           body.audit_note ?? body.admin_note ?? null,
-        })
-      }
-
-      if (body.escrow_confirmed) {
-        await supa.from('transaction_audit_log').insert({
-          transaction_id: id,
-          actor_role:     'admin',
-          event_type:     'escrow_confirmed',
-          new_amount_chf: newAmount,
-          eur_rate:       fx?.eurPerChf ?? null,
-          eur_rate_date:  fx?.rateDate  ?? null,
-          amount_eur_approx: fx && newAmount ? Math.round(Number(newAmount) * fx.eurPerChf) : null,
-          note:           'Séquestre confirmé — valeur contractuelle figée',
-        })
-      }
-    }
-    // ────────────────────────────────────────────────────────────
 
     if (body.partner_email          != null) update.partner_email          = body.partner_email
     if (body.partner_commission_pct != null) update.partner_commission_pct = body.partner_commission_pct

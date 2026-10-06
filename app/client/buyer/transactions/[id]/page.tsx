@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 const TX_STEPS = [
   { key: 'ei_submitted',   label: 'EI reçue',        desc: 'Expression d\'Intérêt acceptée par Aegryn.' },
   { key: 'ap_signed',      label: 'AP signé',         desc: 'Accord de Principe validé par les deux parties.' },
-  { key: 'escrow_paid',    label: 'Séquestre versé',  desc: 'Montant séquestre confirmé auprès du partenaire fiduciaire.' },
   { key: 'dd_in_progress', label: 'Due Diligence',    desc: 'Accès à la data room et vérification des éléments.' },
   { key: 'signing',        label: 'Signing',          desc: 'Documents de transfert en cours de signature.' },
   { key: 'closed',         label: 'Transaction clôturée', desc: 'Transfert de propriété finalisé.' },
@@ -60,7 +59,7 @@ export default async function BuyerTransactionDetailPage({
   if (!tx) notFound()
 
   const asset = Array.isArray(tx.assets) ? tx.assets[0] : tx.assets
-  const stepIdx = TX_STEPS.findIndex(s => s.key === tx.status)
+  const stepIdx = TX_STEPS.findIndex(s => s.key === (tx.status === 'escrow_paid' ? 'ap_signed' : tx.status))
   const isCancelled = tx.status === 'cancelled'
 
   return (

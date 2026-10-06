@@ -39,7 +39,7 @@ const STATIC_ROUTES = [
   { path: '/franchir/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Transact — infrastructure legacy ────────────────────────────────────────
   // Toutes les routes /transact/* restent fonctionnelles pour les workflows
-  // structurés (NDA, KYC, escrow) mais sont masquées : hors sitemap, noindex.
+  // structurés (NDA, KYC) mais sont masquées : hors sitemap, noindex.
   // ── Grade & Certification CIFSO 5000 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },

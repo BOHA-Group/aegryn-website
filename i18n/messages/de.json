@@ -60,11 +60,11 @@
     "craftBuildCIFSO": "CIFSO 5000 Zertifizierung",
     "craftSupport": "Begleiten",
     "craftSupportDesc": "Strategie-, Risiko & Compliance-, Technologie-, Talent- & M&A-Beratung : Alle Branchen",
-    "craftSupportStrategy": "Unternehmensstrategie, und Innovation",
-    "craftSupportRiskCompliance": "Risikomanagement, und Compliance",
-    "craftSupportTechnology": "Technologie, und Souveränität",
-    "craftSupportTalentOrg": "Talent, und Organisation",
-    "craftSupportMA": "M&A, Transaktionen, und PMI",
+    "craftSupportStrategy": "Unternehmensstrategie und Innovation",
+    "craftSupportRiskCompliance": "Risikomanagement und Compliance",
+    "craftSupportTechnology": "Technologie und Souveränität",
+    "craftSupportTalentOrg": "Talent und Organisation",
+    "craftSupportMA": "M&A, Transaktionen und PMI",
     "craftSupportAdvisory": "Tech & KI-Beratung",
     "craftSupportNetwork": "Partner- & Expertennetzwerk",
     "craftSupportAlliances": "Partnernetzwerk",
@@ -336,7 +336,7 @@
         "href": "/advisory/strategy"
       },
       "strategy": {
-        "title": "Unternehmensstrategie, und Innovation",
+        "title": "Unternehmensstrategie und Innovation",
         "desc": "Wir definieren gemeinsam mit Führungskräften die Entwicklungslinie ihrer Organisation und die Bedingungen für deren Erfolg.",
         "why": {
           "title": "Warum Strategieberatung?",
@@ -392,7 +392,7 @@
         ]
       },
       "riskCompliance": {
-        "title": "Risikomanagement, und Compliance",
+        "title": "Risikomanagement und Compliance",
         "desc": "Wir kartieren, dokumentieren und steuern die regulatorische und operative Risikoexposition Ihrer Organisation, von Cyber-Compliance bis zur Risikogovernance.",
         "why": {
           "title": "Warum Risiko- und Compliance-Beratung?",
@@ -448,7 +448,7 @@
         ]
       },
       "technology": {
-        "title": "Technologie, und Souveränität",
+        "title": "Technologie und Souveränität",
         "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
         "why": {
           "title": "Warum Technologieberatung?",
@@ -500,7 +500,7 @@
         ]
       },
       "talentOrganization": {
-        "title": "Talent, und Organisation",
+        "title": "Talent und Organisation",
         "desc": "Wir strukturieren die Organisation, die Führungsteams und die Nachfolgepläne, die ein Unternehmen übertragbar, finanzierbar und über seinen Gründer hinaus widerstandsfähig machen.",
         "why": {
           "title": "Warum Beratung zu Talent und Organisation?",
@@ -556,7 +556,7 @@
         ]
       },
       "ma": {
-        "title": "M&A, Transaktionen, und PMI",
+        "title": "M&A, Transaktionen und PMI",
         "desc": "Wir strukturieren externe Wachstumsoperationen und begleiten deren Integration.",
         "why": {
           "title": "Warum M&A-Beratung?",
@@ -611,7 +611,7 @@
       },
       "experts": {
         "title": "Expertennetzwerk",
-        "desc": "Wir mobilisieren ein Netzwerk unabhängiger Experten (Anwälte, Wirtschaftsprüfer, Steuerberater, Notare), um unsere Missionen entsprechend den spezifischen Bedürfnissen jedes Projekts zu ergänzen."
+        "desc": "Wir mobilisieren ein Netzwerk unabhängiger Experten (Anwälte, Wirtschaftsprüfer, Steuerberater), um unsere Missionen entsprechend den spezifischen Bedürfnissen jedes Projekts zu ergänzen."
       }
     },
     "approach": {
@@ -910,7 +910,7 @@
       {
         "num": "04",
         "title": "Wir aktivieren ein Netzwerk von Spezialisten für die Mission.",
-        "desc": "M&A-Anwälte, Wirtschaftsprüfer, Steuerberater, CISOs, DSBs, W&I-Versicherer werden eingesetzt, wenn der Bedarf besteht, nicht dauerhaft intern. Erweiterte Kapazität ohne schwere Struktur."
+        "desc": "M&A-Anwälte, Wirtschaftsprüfer, Steuerberater, CISOs, DSBs werden eingesetzt, wenn der Bedarf besteht, nicht dauerhaft intern. Erweiterte Kapazität ohne schwere Struktur."
       },
       {
         "num": "05",
@@ -1436,15 +1436,75 @@
     },
     "ctaLabel": "FÜR UNABHÄNGIGE PRÜFER",
     "ctaTitle": "Sind Sie Anwaltskanzlei, Treuhänder, Cybersicherheitsspezialist oder Organisationsexperte?",
-    "ctaDesc": "Bewerben Sie sich für das Netzwerk unabhängiger Prüfer der CIFSO 5000-Zertifizierung: Zugang zu einem regelmässigen Fluss von Zertifizierungsdossiers, die Ihre Expertise erfordern.",
+    "ctaDesc": "Bewerben Sie sich für das Netzwerk unabhängiger Auditoren der CIFSO-5000-Zertifizierung: Sichtbarkeit als Partner des Aegryn-Netzwerks; Mandate werden nach den obigen Unabhängigkeitsregeln vergeben.",
     "ctaBtn": "Für das Prüfernetzwerk bewerben",
     "benefitsLabel": "WAS SIE ERHALTEN",
     "benefits": [
-      "Zugang zu einem regelmässigen Fluss von Organisationsdossiers, die Ihre Expertise erfordern",
-      "Sichtbarkeit als Aegryn-Netzwerkpartner (ab den ersten Mandaten)",
-      "Qualifizierte institutionelle Klientel: Führungskräfte, PE-Fonds, VC, Family Offices",
-      "Im Rahmen der Partnerschaft definierte Vergütung"
-    ]
+      "Sichtbarkeit als Partner des Aegryn-Netzwerks",
+      "Mandate vergeben nach Kompetenz, Unabhängigkeit und Verfügbarkeit",
+      "Qualifizierte institutionelle Klientel: Geschäftsführer, PE-Fonds, VC, Family Offices"
+    ],
+    "dims": {
+      "label": "WIE WIR AUDITIEREN",
+      "title": "Fünf Dimensionen. Fünf unabhängige Profile.",
+      "col1": "CIFSO-5000-Dimension",
+      "col2": "Unabhängiges Profil",
+      "col3": "Was geprüft wird",
+      "rows": [
+        {
+          "dim": "Code & Architektur",
+          "profile": "Technischer Auditor (unabhängiger Senior-CTO oder Code-Audit-Unternehmen)",
+          "check": "Codequalität, Architektur, technische Schuld, Reversibilität"
+        },
+        {
+          "dim": "IP & Rechte",
+          "profile": "Anwalt oder Berater für geistiges Eigentum",
+          "check": "Rechtekette, Lizenzen, Urheberverträge"
+        },
+        {
+          "dim": "Finanzen & Metriken",
+          "profile": "Wirtschaftsprüfer oder tech-spezialisierter Revisor",
+          "check": "Kohärenz der finanziellen und wiederkehrenden Kennzahlen"
+        },
+        {
+          "dim": "Sicherheit & Souveränität",
+          "profile": "Akkreditierter Sicherheitsauditor (PASSI, CREST)",
+          "check": "Sicherheitslage, Datenstandort und -kontrolle"
+        },
+        {
+          "dim": "Organisation & Talent",
+          "profile": "Auditor für Governance und Personalwesen",
+          "check": "Abhängigkeit von der Geschäftsführung, Schlüsselpersonen, Nachfolge"
+        }
+      ]
+    },
+    "transverse": {
+      "label": "QUERSCHNITTSROLLEN",
+      "items": [
+        {
+          "title": "Unabhängiger Gutachter",
+          "desc": "Zweitlektüre jedes Berichts vor der Einstufung."
+        },
+        {
+          "title": "Bewertungskomitee",
+          "desc": "Vergibt den Grad anhand der Berichte."
+        },
+        {
+          "title": "Experte für Digitalrecht und Datenschutz",
+          "desc": "Punktuelles Gutachten."
+        }
+      ]
+    },
+    "independence": {
+      "label": "UNABHÄNGIGKEITSREGELN",
+      "title": "Ein unabhängiger Auditor, oder nichts.",
+      "items": [
+        "Kein Auditor zertifiziert eine Organisation, die er beraten hat.",
+        "Interessenkonflikte werden vor jedem Mandat deklariert.",
+        "Vertraulichkeit wird für jedes Dossier unterzeichnet.",
+        "Mandate werden nach Kompetenz, Unabhängigkeit und Verfügbarkeit vergeben."
+      ]
+    }
   },
   "contact": {
     "faq": {
@@ -1727,7 +1787,7 @@
         {
           "num": "04",
           "title": "Closing & Post-Akquisition",
-          "desc": "Signing-Begleitung, Treuhand, Post-Akquisitionsintegration, Rekrutierung von Ausführungsteams."
+          "desc": "Signing-Begleitung, Post-Akquisitionsintegration, Rekrutierung von Ausführungsteams."
         }
       ],
       "fundsNote": "Wir begleiten auch Fonds und Family Offices als transitorischen, ausgelagerten Operating Partner für ihre Beteiligungen.",
@@ -1737,7 +1797,7 @@
     "network": {
       "label": "EXPERTENNETZWERK : KOMPETENZEN PRO MISSION AKTIVIERT",
       "title": "Die richtigen Experten. Zur richtigen Zeit. Bei jeder Mission.",
-      "desc": "Für Spezialmissionen aktivieren wir unser Netzwerk geprüfter unabhängiger Experten. M&A-Anwälte, Wirtschaftsprüfer, Steuerberater, Notare, Digitalrechtsexperten, W&I-Versicherer.\n\nEin Spezialistenpool, der unsere Kapazitäten erweitert ohne unsere Struktur zu belasten.",
+      "desc": "Für Spezialmissionen aktivieren wir unser Netzwerk geprüfter unabhängiger Experten. M&A-Anwälte, Wirtschaftsprüfer, Steuerberater, Digitalrechtsexperten. Ein Spezialistenpool, der unsere Kapazitäten erweitert ohne unsere Struktur zu belasten.",
       "cta1": "Netzwerk aufrufen →",
       "cta1Href": "/alliances",
       "cta2": "Netzwerk beitreten →",
@@ -1835,7 +1895,7 @@
   "acquisition": {
     "meta": {
       "title": "Transaktionsberatung & M&A | Aegryn",
-      "desc": "M&A-Begleitung für zertifizierte Tech-Assets: Due Diligence, Strukturierung, Escrow, Closing. Aegryn koordiniert die Experten für jede Transaktion."
+      "desc": "M&A-Begleitung für zertifizierte Tech-Assets: Due Diligence, Strukturierung, Closing. Aegryn koordiniert die Experten."
     },
     "label": "Services : Transaktionsberatung",
     "title": "Ihre Akquisition.\nStrukturiert für den Abschluss.",
@@ -1888,8 +1948,8 @@
             },
             {
               "num": "07",
-              "title": "Warranty & Indemnity Insurance",
-              "desc": "Vermittlung zu W&I-Versicherern für Transaktionen über 500.000 €. Ermöglicht die vollständige Kaufpreisfreigabe beim Closing und deckt Reps & Warranties ab."
+              "title": "Closing-Vorbereitung",
+              "desc": "Vollzugsbedingungen, Closing-Checkliste, Übertragung der IP-Rechte und Schlüsselverträge, Übergabe-Unterlagen."
             }
           ]
         },
@@ -1979,7 +2039,7 @@
         {
           "num": "05",
           "title": "Signing & sicherer Closing",
-          "desc": "Institutioneller Treuhand (10 % des Preises bei der LOI). Vollständige Dokumentation des Codebase-Zustands zum Signing-Datum. Rechtsübertragung. Ausstellung des Aegryn-Transaktionszertifikats."
+          "desc": "Vollständige Codebase-Dokumentation zum Signing-Datum. Rechteübertragung. Ausstellung des Aegryn-Transaktionszertifikats."
         }
       ]
     },
@@ -2041,8 +2101,8 @@
         },
         {
           "phase": "Im Einsatz",
-          "title": "Warranty & Indemnity Insurance",
-          "desc": "Vermittlung zu W&I-Partnerversicherern für Transaktionen über 500.000 €. Ermöglicht die vollständige Kaufpreisfreigabe beim Closing.",
+          "title": "Closing-Vorbereitung",
+          "desc": "Vollzugsbedingungen, Closing-Checkliste, Übertragung der IP-Rechte und Schlüsselverträge, Übergabe-Unterlagen.",
           "status": "in_deployment"
         },
         {
@@ -3000,10 +3060,6 @@
         "title": "Systematische NDA",
         "desc": "Der Zugang zu vertraulichen Dossiers setzt die Unterzeichnung eines NDA voraus. Vertraulichkeit bei jedem Schritt garantiert."
       },
-      "escrow": {
-        "title": "Institutionelles Treuhandkonto",
-        "desc": "Im Rahmen von Übertragungsmandaten fliessen die Mittel über ein kontrolliertes institutionelles Treuhandkonto bis zum Closing."
-      },
       "buyers": {
         "title": "Qualifizierte Parteien",
         "desc": "Jede Partei wird vor dem Zugang zu geschützten Dossiers qualifiziert. Kapazität und Absicht geprüft."
@@ -3014,7 +3070,7 @@
       },
       "transaction": {
         "title": "Experten on-demand",
-        "desc": "Zugang zum Aegryn-Expertennetzwerk (Anwälte, Notare, Steuerberater), mobilisierbar nach Bedarf des Mandats."
+        "desc": "Zugang zum Aegryn-Expertennetzwerk (Anwälte, Steuerberater), mobilisierbar nach Bedarf des Mandats."
       }
     },
     "roadmapLabel": "20 Schlüsselfunktionen",
@@ -3036,13 +3092,6 @@
         "live": true
       },
       {
-        "iconKey": "escrow",
-        "theme": "Mandate",
-        "title": "Institutionelles Treuhandkonto",
-        "desc": "Bei Übertragungsmandaten fliessen die Mittel über ein kontrolliertes Treuhandkonto bis zum Closing.",
-        "live": true
-      },
-      {
         "iconKey": "nda",
         "theme": "Compliance",
         "title": "Automatisiertes digitales NDA",
@@ -3053,7 +3102,7 @@
         "iconKey": "closing",
         "theme": "Mandate",
         "title": "Experten on-demand",
-        "desc": "Expertennetzwerk, mobilisierbar nach Bedarf des Mandats: Anwälte, Notare, Steuerberater.",
+        "desc": "Expertennetzwerk, mobilisierbar nach Bedarf des Mandats: Anwälte, Steuerberater.",
         "live": true
       },
       {
@@ -3166,7 +3215,6 @@
     "current": [
       "Aegryn-Grade-Zertifizierung: CIFSO-5000-Protokoll",
       "Begleitung der fünf Lebenszyklusphasen (Valoriser)",
-      "Institutionelles Treuhandkonto bei Übertragungsmandaten",
       "Automatisiertes digitales NDA",
       "Qualifizierung der Parteien und dedizierte Bereiche",
       "Zertifizierungsbereich: Einreichung und Dossierverfolgung",
@@ -3328,7 +3376,7 @@
           "readings": [
             "Asset auf institutionellem Niveau. Zu Premium-Bewertung ausführbar. Due Diligence erheblich beschleunigt.",
             "Hochwertige Zielgesellschaft. Standardprozess, kein wesentliches Risikosignal. Verlässliche Bewertungsgrundlage.",
-            "Solides Asset mit dokumentierten Vorbehalten. Deal ausführbar mit Escrow oder Preisanpassungsmechanismus.",
+            "Solides Asset mit dokumentierten Vorbehalten. Deal mit Garantieklauseln oder Preisanpassung umsetzbar.",
             "Rentables Asset, Sanierungsbereiche identifiziert. Wertplan vor vollem Prozess erforderlich.",
             "CIFSO-Sanierungsplan vor Transaktion erforderlich. Zeitplan entsprechend verlängert."
           ],
@@ -3383,7 +3431,7 @@
           "readings": [
             "Abschlussreifes Asset. Vollständige Dokumentation verfügbar. Außergewöhnliche Prämie gerechtfertigt.",
             "Standardakquisitionszeitplan. Dokumentation vollständig. Zuverlässige Grundlage für SPA.",
-            "Akquisition mit identifizierten Vorbehalten. Escrow oder Preisanpassungsmechanismus empfohlen.",
+            "Akquisition mit identifizierten Vorbehalten. Garantieklauseln oder Preisanpassungsmechanismus empfohlen.",
             "Akquisition mit Bedingungen. Integrationsplan und Wertanpassung zu verhandeln.",
             "Transaktion ohne vorherige Sanierung nicht empfohlen. Käuferrisiko erhöht."
           ],
@@ -4519,290 +4567,156 @@
   },
   "alliances": {
     "meta": {
-      "title": "Partner | Aegryn",
-      "desc": "Partner für Zertifizierung, Beratung und Expertise. Aegryn wählt seine Partner mit derselben Sorgfalt aus wie seine Standards."
+      "title": "Partner werden | Aegryn",
+      "desc": "Treten Sie dem Aegryn-Netzwerk bei: Beratungsexperten in fünf Disziplinen, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
     "hero": {
-      "label": "Aegryn Partnerships",
+      "label": "Partner werden",
       "title": "Unser Netzwerk.\nUnsere Stärke.",
-      "desc": "Aegryn arbeitet mit einem Netzwerk sorgfältig nach Disziplin ausgewählter Expertenpartner. Recht, Technik, Finanzen, Beratung, Versicherung: Jeder Partner stärkt unsere Fähigkeit, Wertschöpfung in jeder Phase des Lebenszyklus eines Unternehmens zu begleiten."
+      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: fünf Beratungsdisziplinen, ein Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
-    "types": {
-      "certification": {
-        "label": "Zertifizierung",
-        "title": "Partner des Expertennetzwerks",
-        "desc": "Tech-Anwaltskanzleien, Wirtschaftsprüfer, Cybersicherheitspartner. Treten Sie dem ersten Kreis von Partnern bei, die das CIFSO-5000-Zertifizierungsprotokoll durch eine Cross-Review anreichern, während das System eingeführt wird.",
-        "cta": "Zertifizierungspartner werden",
-        "dimensions": {
-          "C": {
-            "label": "C — Code & Architektur",
-            "profiles": [
-              "Kanzleien für Code- & Architekturprüfung",
-              "Erfahrene unabhängige Freelance-CTOs",
-              "DevSecOps- & Anwendungssicherheitsberatungen"
-            ]
-          },
-          "I": {
-            "label": "I — IP & Rechte",
-            "profiles": [
-              "IP- & Tech-Kanzleien (Rechtekette, Lizenzen)",
-              "M&A-Transaktionsanwälte (SPA, SHA, APA)",
-              "Kanzleien für geistiges Eigentum & Marken"
-            ]
-          },
-          "F": {
-            "label": "F — Finanzen & Kennzahlen",
-            "profiles": [
-              "Auf SaaS/Tech spezialisierte Wirtschaftsprüfer",
-              "Unabhängige Abschlussprüfer",
-              "Unternehmenssteuerberater (CH/FR/LU)"
-            ]
-          },
-          "S": {
-            "label": "S — Sicherheit & Souveränität",
-            "profiles": [
-              "Akkreditierte Cybersicherheitsspezialisten (PASSI, CREST)",
-              "DSGVO/DSG/NIS2-Compliance-Prüfer",
-              "Prüfer für KI-Souveränität & Infrastruktur"
-            ]
-          },
-          "O": {
-            "label": "O — Organisation & Talent",
-            "profiles": [
-              "HR- & Arbeitsrechtskanzleien",
-              "Executive-Search-Spezialisten für Tech",
-              "Berater für Organisation & Führungsnachfolge"
-            ]
-          }
+    "side": {
+      "group": "Partner & Expertisen",
+      "groupDesc": "Die Strukturen und Expertisen, die wir in unseren Mandaten mobilisieren.",
+      "investors": "Investoren & Institutionen",
+      "investorsDesc": "Banken, Fonds, Family Offices, Institutionen: Aegryn als Operating Partner ihrer Beteiligungen.",
+      "auditors": "Unabhängige Auditoren",
+      "auditorsDesc": "Unabhängiger Beitrag zur CIFSO-Zertifizierung über die fünf Dimensionen.",
+      "apply": "Bewerbung"
+    },
+    "intro": {
+      "label": "DAS NETZWERK",
+      "title": "Experten, die unseren Standard teilen.",
+      "desc": "Das Aegryn-Netzwerk: einzeln ausgewählte Spezialisten, je nach Bedarf mobilisiert.",
+      "cards": [
+        {
+          "title": "Partner & Expertisen",
+          "desc": "Fünf Beratungsdisziplinen, jede getragen von Experten des Netzwerks.",
+          "cta": "Disziplinen entdecken"
+        },
+        {
+          "title": "Investoren & Institutionen",
+          "desc": "Fonds, Family Offices, Banken und Institutionen: ein Operating Partner, der die von ihnen finanzierten Organisationen vorbereitet und begleitet.",
+          "cta": "Zur Seite"
+        },
+        {
+          "title": "Unabhängige Auditoren",
+          "desc": "Die Experten, die jede Dimension der CIFSO-5000-Zertifizierung prüfen, ohne die zertifizierte Organisation zu beraten.",
+          "cta": "Zur Seite"
         }
-      },
-      "distribution": {
-        "label": "Distribution",
-        "title": "Zugang zu Mandaten",
-        "desc": "Family Offices, Privatbanken, Fonds. Ihre Kunden erhalten vorrangigen Zugang zu zertifizierten Unternehmen und laufenden Bewertungsmandaten.",
-        "profiles": "Schweizer Privatbanken · Family Offices · Vermögensverwalter",
-        "cta": "Distributions-Partnerschaft erkunden"
-      },
-      "dealflow": {
-        "label": "Geschäftsanbahnung",
-        "title": "Deal-Sourcing",
-        "desc": "VC/PE-Fonds, M&A-Boutiquen, Tech-Acceleratoren. Melden Sie Unternehmen, die in jeder Phase ihres Lebenszyklus Begleitung benötigen: Zertifizierung, Bewertung, Wachstum, Strukturierung. Die Partnerschaftskonditionen werden im Qualifikationsgespräch festgelegt.",
-        "profiles": "Micro-PE-Fonds · M&A-Boutiquen · Tech-Acceleratoren · Gründungs- und Unternehmensentwicklungs-Inkubatoren",
-        "cta": "Ein Unternehmen melden"
-      },
-      "advisory_tech": {
-        "label": "Advisory Tech",
-        "title": "Zertifizierte technische Experten",
-        "desc": "Partner, die mobilisiert werden, um die Robustheit und Zertifizierbarkeit von Assets vor oder während des Aegryn-Grade-Prozesses zu verbessern.",
-        "profiles": "Cybersicherheitsfirmen (PASSI/CREST/OSCP) · Senior Freelance-CTOs (Architektur, DevSecOps) · Data & KI-Experten (MLOps, Governance) · Akkreditierte externe DPOs (DSGVO/DSG) · EU-KI-Gesetz-Compliance-Experten · Digitale Barrierefreiheits-Auditoren (WCAG)",
-        "cta": "Advisory Tech-Partner werden"
-      },
-      "advisory_transaction": {
-        "label": "M&A-Beratung",
-        "title": "M&A Tech-Experten",
-        "desc": "Partner, die in jeder Phase von M&A-Vorhaben eingesetzt werden — von der Vorbereitung über das Closing bis zur Integration nach der Akquisition.",
-        "profiles": "IP & Tech-Kanzleien (Eigentumskette, Lizenzen) · Transaktionsrechtliche M&A-Anwälte (SPA, SHA, APA) · Wirtschaftsprüfer & Abschlussprufer · Unternehmenssteuerberater (CH/FR/LU) · HR & Arbeitsrechtskanzleien · W&I-Versicherer (AIG, Tokio Marine) · Sektorale Due-Diligence-Experten (FinTech, HealthTech, KI)",
-        "cta": "M&A-Beratungspartner werden"
-      },
-      "finance": {
-        "label": "Banken & Finanzpartner",
-        "title": "Finanzpartner",
-        "desc": "Bankinstitute, Regionalbanken und Finanzinstitutionen, die Unternehmer in jeder Phase ihrer Entwicklung begleiten. Eine natürliche Synergie mit unserem Beratungs- und Begleitungsangebot.",
-        "profiles": "Bankinstitute & Regionalbanken · Fremdkapital- und Wachstumsfonds · Family Offices & Multi-Family Offices · Bürgschafts- und Garantiegesellschaften · Öffentliche Finanzinstitutionen (BPI usw.)",
-        "cta": "Finanzpartner werden"
-      },
-      "sequestre": {
-        "label": "Treuhand & Recht",
-        "profiles": "Depotbanken · Wirtschaftskanzleien",
-        "title": "Treuhand- & Rechtspartner",
-        "desc": "Depotbanken und Wirtschaftskanzleien, die Escrow- und Closing-Mechanismen begleiteter Vorhaben strukturieren und absichern.",
-        "cta": "Als Rechtspartner beitreten"
-      },
-      "technique": {
-        "label": "Technische Expertise",
-        "profiles": "Senior Freelance-CTOs · PASSI/CREST-Sicherheitsauditoren · Web3-Spezialisten",
-        "title": "Unabhängige technische Experten",
-        "desc": "CTOs, Cybersicherheitsprüfer und Blockchain-Spezialisten, die unsere technischen Due-Diligence- und Zertifizierungsmissionen stärken.",
-        "cta": "Als technischer Experte beitreten"
-      },
-      "assurance": {
-        "label": "Versicherung & Compliance",
-        "profiles": "W&I-Versicherer · Corporate-Steuerexperten",
-        "title": "Versicherungs- & Steuerexperten",
-        "desc": "W&I-Versicherer und Fachfiscalisten, die Vorhaben und Risiken in jeder Phase des Unternehmenslebenszyklus absichern.",
-        "cta": "Als Versicherungspartner beitreten"
+      ]
+    },
+    "metiers": {
+      "label": "PARTNER & EXPERTISEN",
+      "title": "Fünf Beratungsdisziplinen.",
+      "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
+      "profilesLabel": "Gesuchte Profile",
+      "viewPage": "Zur Fachseite",
+      "join": "Dieser Disziplin beitreten",
+      "items": {
+        "strategie": {
+          "title": "Unternehmensstrategie und Innovation",
+          "profiles": "Ehemalige Geschäftsführer, Strategieleiter, Senior Consultants, Innovationspraktiker.",
+          "expertises": [
+            "Überprüfung der strategischen Position",
+            "Abwägung zwischen Optionen",
+            "Drei-Jahres-Plan",
+            "Vorbereitung von Ausschuss, Verwaltungsrat und Bank",
+            "Eintritt in einen neuen Markt",
+            "Geschäftsmodelle und Innovation",
+            "Strategie für den KI-Einsatz",
+            "Board Advisory"
+          ]
+        },
+        "risques": {
+          "title": "Risikomanagement und Compliance",
+          "profiles": "Juristen für digitale Compliance, Compliance-Verantwortliche, Krisenmanagement-Spezialisten.",
+          "expertises": [
+            "Kartierung der regulatorischen Exposition",
+            "EU-KI-Verordnung und KI-Governance",
+            "Cybersicherheit und regulatorische Resilienz (NIS2, DORA)",
+            "Datenschutz (DSGVO, nDSG)",
+            "Beweisdossier gegenüber Kunden",
+            "Incident-Management und Meldung",
+            "Steuerung der Sanierung",
+            "Schulung der Geschäftsleitung"
+          ]
+        },
+        "technologie": {
+          "title": "Technologie und Souveränität",
+          "profiles": "CTOs, Architekten, Sicherheitsverantwortliche, Daten- und KI-Ingenieure.",
+          "expertises": [
+            "Architektur- und Tech-Debt-Audit",
+            "Abwägung: bauen, kaufen oder Partnerschaft eingehen",
+            "Register kritischer Abhängigkeiten und Reversibilität",
+            "Interims-CTO (CTO as a Service)",
+            "Operative Cybersicherheit und DevSecOps",
+            "Cloud und Infrastruktur",
+            "Daten, KI und Integrationen",
+            "Technische Due Diligence"
+          ]
+        },
+        "talent": {
+          "title": "Talent und Organisation",
+          "profiles": "HR-Leiter, Governance- und Nachfolgespezialisten, Arbeitsrechtler, Interimsmanager.",
+          "expertises": [
+            "Messung der Abhängigkeit von der Geschäftsführung",
+            "Nachfolge und Familien-Governance",
+            "Struktur und Geschäftsleitung",
+            "Delegation und Entscheidungsrahmen",
+            "Bindung und Vergütung von Schlüsselprofilen",
+            "Interimsmanagement",
+            "Arbeitsrecht und Reorganisation",
+            "Rekrutierung von Führungskräften (siehe Seite Rekrutieren)"
+          ]
+        },
+        "ma": {
+          "title": "M&A, Transaktionen und PMI",
+          "profiles": "M&A-Professionals, Wirtschaftsjuristen, Steuerexperten, Integrationsverantwortliche.",
+          "expertises": [
+            "Akquisitionsthese und Zielkriterien",
+            "Prüfung eines Ziels (finanziell, juristisch, steuerlich, technisch)",
+            "Vorbereitung des Verkäufers und Datenraum",
+            "Rahmung der Verhandlungspunkte",
+            "Gesellschaftsrecht und Transaktionsbesteuerung",
+            "100-Tage-Integration",
+            "Buy-and-Build-Programm",
+            "Gesellschafterverträge und Governance nach der Transaktion"
+          ],
+          "note": "Aegryn berät und bereitet vor. Die Ausführung der Transaktionen wird den Investmentbanken, M&A-Boutiquen und zugelassenen Anwälten des Netzwerks anvertraut."
+        }
       }
     },
-    "form": {
-      "title": "Partner werden.",
-      "structure": "Organisation",
-      "type": "Typ",
-      "typePlaceholder": "Typ auswählen",
-      "typeOptions": {
-        "certification": "Zertifizierung (Expertennetzwerk)",
-        "distribution": "Distribution (privilegierter Zugang)",
-        "dealflow": "Geschäftsanbahnung",
-        "other": "Andere"
-      },
+    "candidature": {
+      "label": "BEWERBUNG",
+      "title": "Dem Aegryn-Netzwerk beitreten.",
+      "desc": "Ein Formular, drei Profile: Beratungsexperte, unabhängiger Auditor, Geschäftsvermittler.",
+      "typeLabel": "Sie sind",
+      "typeExpert": "Beratungsexperte",
+      "typeAuditeur": "Unabhängiger Auditor",
+      "typeApporteur": "Geschäftsvermittler",
+      "metierLabel": "Fachgebiet",
+      "dimensionLabel": "CIFSO-Dimension",
+      "name": "Name",
+      "org": "Organisation",
       "country": "Land",
-      "description": "Beschreibung der Möglichkeit",
-      "email": "Professionelle E-Mail",
-      "submit": "Bewerbung einreichen",
-      "note": "Antwort innerhalb von 7 Werktagen. Qualifikationsgespräch erforderlich.",
-      "successTitle": "Bewerbung eingegangen",
-      "successDesc": "Unser Team wird Ihre Unterlagen prüfen und sich für ein Qualifizierungsgespräch bei Ihnen melden.",
-      "errorMsg": "Ein Fehler ist aufgetreten. Bitte erneut versuchen.",
-      "submitting": "Wird gesendet...",
-      "structureOpts": {
-        "law_firm": "Kanzlei / Anwälte",
-        "audit": "Wirtschaftsprüfung / Steuerberatung",
-        "bank": "Bank / Treuhand",
-        "fund": "Fonds (PE, VC, Family Office)",
-        "notary": "Notar",
-        "accelerator": "Accelerator / Inkubator",
-        "platform": "Plattform / Marketplace",
-        "other": "Sonstiges"
-      },
-      "typeOtherLabel": "Sonstiges",
-      "structurePlaceholder": "Struktur wählen",
-      "organizationLabel": "Organisation"
-    },
-    "partnerNote": "Aegryn listet noch keine namentlich genannten Partner öffentlich. Diese Kategorien präsentieren die gesuchten Profile. Die ersten Partner werden auf /grade/partners veröffentlicht, sobald die ersten Mandate formalisiert sind.",
-    "tabs": {
-      "overview": "Übersicht",
-      "advisory_tech": "Advisory Tech",
-      "advisory_transaction": "M&A-Beratung",
-      "certification": "Zertifizierung",
-      "distribution": "Distribution",
-      "dealflow": "Anbahnung",
-      "apply": "Bewerbung",
-      "sequestre": "Treuhand",
-      "technique": "Technisch",
-      "assurance": "Versicherung",
-      "finance": "Banken & Finanzen"
-    },
-    "disciplines": {
-      "label": "DIE 6 NETZWERK-EXPERTISEN",
-      "intro": "Unser Netzwerk deckt sämtliche Expertisen ab, die für die Bewertung eines Unternehmens in jeder Phase seines Lebenszyklus erforderlich sind.",
-      "items": [
-        {
-          "num": "01",
-          "id": "advisory_tech",
-          "title": "Tech Advisory",
-          "desc": "CTO as a Service, Sicherheitsaudit, Architektur, DevSecOps, KI.",
-          "tags": [
-            "CTO as a Service",
-            "Architecture SI",
-            "Audit sécurité",
-            "DevSecOps",
-            "IA & Machine Learning",
-            "Cloud & Infra",
-            "API & Intégrations",
-            "Operative Cybersicherheit",
-            "Data Engineering",
-            "Product Management tech"
-          ]
-        },
-        {
-          "num": "02",
-          "id": "advisory_transaction",
-          "title": "M&A-Beratung",
-          "desc": "Strategische Due Diligence, Bewertung, M&A-Strukturierung.",
-          "tags": [
-            "Strategische Due Diligence",
-            "Valorisation d'actifs",
-            "Structuration M&A",
-            "NDA & Vertraulichkeit",
-            "Data room",
-            "Quality of Earnings",
-            "Earn-out design",
-            "Financement acquisition",
-            "LOI & SPA",
-            "Post-merger integration"
-          ]
-        },
-        {
-          "num": "03",
-          "id": "juridique",
-          "title": "Recht & Zertifizierung",
-          "desc": "Anwälte für M&A, IP und Digitalrecht, Notare, Legal Audit.",
-          "tags": [
-            "Droit des sociétés",
-            "Geistiges Eigentum",
-            "Droit numérique",
-            "RGPD & Conformité",
-            "Droit fiscal M&A",
-            "Audit légal",
-            "Notariat",
-            "Droit du travail",
-            "Contrats SaaS",
-            "NIS2 & DORA"
-          ]
-        },
-        {
-          "num": "04",
-          "id": "dealflow",
-          "title": "Geschäftsanbahnung & Distribution",
-          "desc": "Zugang zu einem Kreis qualifizierter finanzieller und industrieller Partner.",
-          "tags": [
-            "Family offices",
-            "Fonds de Private Equity",
-            "Fonds de VC",
-            "Strategic buyers",
-            "Buy-side advisory",
-            "Sell-side advisory",
-            "Co-investissement",
-            "Club deals",
-            "Secondary transactions",
-            "Distressed assets"
-          ]
-        },
-        {
-          "num": "05",
-          "id": "sequestre",
-          "title": "Treuhand & Finanzstrukturierung",
-          "desc": "Brückenfinanzierung, Earn-out, Treuhand, Strukturierung.",
-          "tags": [
-            "Zwischenfinanzierung",
-            "Strukturiertes Earn-out",
-            "Treuhandkonto",
-            "Passivgarantie",
-            "Vendor loan",
-            "Mezzanine",
-            "Bridge financing",
-            "LBO-Strukturierung",
-            "Garantie W&I",
-            "Escrow agreements"
-          ]
-        },
-        {
-          "num": "06",
-          "id": "assurance",
-          "title": "W&I Versicherung & Risiko",
-          "desc": "W&I-Versicherungsspezialisten, Risikomanager, Berufsversicherer.",
-          "tags": [
-            "W&I Insurance",
-            "Tax liability insurance",
-            "Cyber insurance",
-            "Berufshaftpflicht",
-            "Directors & Officers",
-            "Assurance erreurs & omissions",
-            "Risikoanalyse",
-            "Environmental liability",
-            "IP infringement cover",
-            "Transaction insurance"
-          ]
-        }
-      ],
-      "filterAll": "Alle Bereiche",
-      "filterLabel": "Nach Bereich filtern"
-    },
-    "alliancePartners": {
-      "label": "ALLIANCE-PARTNER",
-      "title": "Partner, die unseren Standard teilen.",
-      "desc": "Alliance-Partner sind Organisationen, die einen formellen Partnerschaftsvertrag mit Aegryn unterzeichnet haben. Sie profitieren von vorrangigem Zugang zu Zertifizierungs- und Bewertungsmandaten, Einblick in vertrauliche Dossiers und direkter Zusammenarbeit bei laufenden Mandaten.",
-      "cta": "Alliance-Partner werden →",
-      "ctaHref": "/alliances?tab=apply"
+      "experience": "Ihre Erfahrung in drei Zeilen",
+      "website": "Website oder berufliches Profil",
+      "email": "E-Mail",
+      "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäss DSGVO und nDSG zu.",
+      "submit": "Bewerbung senden",
+      "submitting": "Senden…",
+      "successTitle": "Erhalten.",
+      "successDesc": "Aegryn prüft jede Bewerbung und antwortet innerhalb von 10 Werktagen.",
+      "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "selectPlaceholder": "Auswählen…",
+      "dimensions": {
+        "C": "Code & Architektur",
+        "I": "IP & Rechte",
+        "F": "Finanzen & Metriken",
+        "S": "Sicherheit & Souveränität",
+        "O": "Organisation & Talent"
+      }
     }
   },
   "network": {
@@ -5222,23 +5136,6 @@
             "Holding-Strukturierung",
             "Exit tax",
             "Treaty"
-          ]
-        },
-        {
-          "title": "Treuhand & Finanzierung",
-          "tags": [
-            "Escrow",
-            "Bridge",
-            "Mezzanine",
-            "LBO"
-          ]
-        },
-        {
-          "title": "W&I-Versicherung & Risiko",
-          "tags": [
-            "W&I insurance",
-            "Tax liability",
-            "D&O"
           ]
         },
         {
@@ -5906,153 +5803,6 @@
       "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
       "legalNote": "Kein Engagement in dieser Phase. Die endgültigen finanziellen Konditionen werden nach der Vorqualifikation mitgeteilt.",
       "cancelledNote": "Anfrage abgebrochen. Sie können Ihren Antrag erneut einreichen."
-    }
-  },
-  "bidModels": {
-    "meta": {
-      "title": "Akquisitionsmodelle | Aegryn",
-      "desc": "Club Deal, Corporate, Fonds, Equity Stake, die 4 Aegryn-Akquisitionsmodelle mit dem Tech Transaction Promise in 5 Schritten."
-    },
-    "hero": {
-      "back": "← Transaction",
-      "label": "Aegryn TRANSACTION",
-      "title": "Wählen Sie Ihr Akquisitionsmodell",
-      "desc": "Vier Käuferprofile, eine Anforderung: Dealqualität. Jedes Modell ist auf Ihre Struktur und Ziele zugeschnitten."
-    },
-    "conditionsLabel": "Wesentliche Bedingungen",
-    "structuresLabel": "Verfügbare Strukturen",
-    "models": [
-      {
-        "badge": "HNWI · Unternehmer · Qualifizierte Privatpersonen",
-        "label": "MODELL 01",
-        "title": "Club Deal",
-        "summary": "Ein Hauptbieter kann bis zu 4 erklärte Co-Investoren einbeziehen. Ein einziges Angebot, ein einziges Treuhandkonto, das vom Lead bezahlt wird. Die interne Aufteilung bleibt vertraulich.",
-        "conditions": [
-          "Empfohlenes Mindestticket: 100.000 €",
-          "Vollständiges KYC Hauptbieter + vereinfachtes KYC Co-Investoren",
-          "10% Treuhand vom Hauptbieter innerhalb von 5 Werktagen",
-          "Bis zu 4 erklärte Co-Investoren unter NDA",
-          "Interne Aufteilung bis zum Signing anpassbar"
-        ],
-        "structures": [
-          "Vollständig bar",
-          "Bar + Earnout (Frist und KPIs anzugeben)",
-          "Sonstiges (zu präzisieren)"
-        ]
-      },
-      {
-        "badge": "KMU · Holdings · Corporates · Gruppen",
-        "label": "MODELL 02",
-        "title": "Corporate",
-        "summary": "Eine juristische Person erwirbt den Vermögenswert direkt in ihrer Bilanz. Zwei Unternehmen können über ein bei Aegryn gemeldetes JV co-erwerben. Asset Deal oder Share Deal je nach gewählter Struktur.",
-        "conditions": [
-          "Empfohlenes Mindestticket: 250.000 €",
-          "Vollständiges B2B-KYC : Handelsregisterauszug < 3 Monate, Satzung, UBO ≥ 25%, Lichtbildausweis des Geschäftsführers",
-          "10% Treuhand vom Konto der juristischen Person",
-          "JV möglich: zwei Co-Erwerber, Struktur vor verbindlichem Angebot zu melden"
-        ],
-        "structures": [
-          "Asset Deal (Code, IP, Verträge, Kundenstamm)",
-          "Share Deal (Übernahme der Trägergesellschaft)",
-          "Direkterwerb in die Bilanz",
-          "Erwerb über eine zweckgebundene Tochtergesellschaft",
-          "Acqui-Hire (Team- und Technologieintegration)"
-        ]
-      },
-      {
-        "badge": "PE · VC · Family Office · Search Fund · Staatsfonds",
-        "label": "MODELL 03",
-        "title": "Fonds",
-        "summary": "Institutionelle Fonds erhalten ein IC-Fenster von 5 bis 10 Werktagen vor der Einreichung eines verbindlichen Angebots. SPV für direktes LP-Co-Investment bei bestimmten Deals verfügbar.",
-        "conditions": [
-          "Empfohlenes Mindestticket: 500.000 € (kein Maximum)",
-          "Institutionelles KYC : regulatorische Zulassung falls zutreffend (FINMA, AMF, FCA)",
-          "IC-Fenster: vertrauliche Reservierung 5–10 Werktage ohne Treuhand",
-          "SPV für direktes LP-Co-Investment möglich",
-          "Management-Präsentation über Aegryn, niemals direkt Verkäufer/Käufer"
-        ],
-        "structures": [
-          "Plattformerwerb (erster Asset in einem PE Roll-up)",
-          "Add-on (Ergänzungsasset zu einem bestehenden Portfolio)",
-          "Vollerwerb (100%)",
-          "Minderheitserwerb (< 50%) mit strukturiertem SHA",
-          "LMBO (mit Beteiligung des aktuellen Teams)"
-        ]
-      },
-      {
-        "badge": "Strategische Investoren · Operative Partner",
-        "label": "MODELL 04",
-        "title": "Equity Stake",
-        "subBadge": "Kein Verkauf · Kein Treuhand",
-        "summary": "Für Investoren oder Partner, die eine Beteiligung am Vermögenswert erwerben möchten, ohne ihn vollständig zu übernehmen, Anteile gegen Advisory Fees, Carried Interest oder operativen Beitrag. Sofortige Bindung, ohne Banktreuhand.",
-        "conditions": [
-          "Kein festes empfohlenes Mindestticket (Bewertung zwischen den Parteien verhandelt)",
-          "KYC nach Profil (vereinfacht für qualifizierte Privatpersonen, vollständig für Unternehmen)",
-          "Kein Treuhand, Bindung via SHA, gemeinsam von den Beratern beider Parteien erstellt",
-          "Sofortige Bindung: SHA-Unterzeichnung + ggf. Warrant oder BSA",
-          "Aegryn erhält eine Vermittlungsprovision auf die vereinbarte Bewertung"
-        ],
-        "structures": [
-          "Advisory Equity (X% gegen Beratung/Expertise über N Monate)",
-          "Carried Interest (X% auf künftige Gewinne des Vermögenswerts)",
-          "Teilweise Bar-Minderheitsbeteiligung + Sitz im Board",
-          "Warrant / BSA (Recht auf künftigen Aktienerwerb)",
-          "Revenue Share + zukünftige Kaufoption"
-        ]
-      }
-    ],
-    "ptt": {
-      "label": "GEMEINSAMER PROZESS, MODELLE 01, 02, 03",
-      "title": "Das Tech Transaction Promise",
-      "desc": "5 strukturierte Schritte für alle Deals mit realem Erwerb. Das Equity Stake Modell folgt einem eigenen SHA-Prozess ohne Treuhand.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Interessensbekundung (EI)",
-          "desc": "Unverbindlich. Innerhalb von 48 Std. an den Verkäufer übermittelt. Keine Einlage erforderlich."
-        },
-        {
-          "num": "02",
-          "title": "Grundsatzvereinbarung (AP)",
-          "desc": "Preis und Struktur vereinbart. Die Unterzeichnung der AP löst die Treuhandpflicht aus."
-        },
-        {
-          "num": "03",
-          "title": "10% Treuhand",
-          "desc": "Auf ein Drittbankkonto innerhalb von 5 Werktagen eingezahlt. Aegryn hat niemals Zugang zu den Geldern. Partnerbank fungiert als Verwahrer."
-        },
-        {
-          "num": "04",
-          "title": "Due Diligence, Standard 30 Tage",
-          "desc": "Vollständiger Data-Room-Zugang unter NDA. Q&A nur über Aegryn (niemals direkt Verkäufer/Käufer). Verlängerung auf gegenseitiges Einvernehmen möglich (max. +30 Tage)."
-        },
-        {
-          "num": "05",
-          "title": "Signing & Closing",
-          "desc": "KRYV Protocol zertifiziert den genauen Zustand des Codes. Restzahlung (90% verbleibend). Vermögensübertragung + Ausstellung des Aegryn-Transaktionszertifikats."
-        }
-      ],
-      "protection": {
-        "title": "Bilateraler Schutz",
-        "buyer": {
-          "title": "Rücktritt des Käufers",
-          "desc": "Ohne triftigen Grund → Treuhand fällt dem Verkäufer zu."
-        },
-        "seller": {
-          "title": "Rücktritt des Verkäufers",
-          "desc": "Ohne triftigen Grund → Treuhand wird doppelt an den Käufer zurückgegeben."
-        },
-        "condition": {
-          "title": "Aufschiebende Bedingung aufgehoben",
-          "desc": "→ Treuhand vollständig an den Käufer zurückgegeben (no fault)."
-        }
-      }
-    },
-    "cta": {
-      "title": "Bereit, ein Angebot abzugeben?",
-      "desc": "Entdecken Sie verfügbare Assets oder kontaktieren Sie uns, um Ihr Akquisitionsprofil zu besprechen.",
-      "btnGuide": "Käufer-Leitfaden",
-      "btnCatalog": "Katalog anzeigen"
     }
   },
   "valuation": {
@@ -6998,7 +6748,7 @@
     "s3Row6Data": "Anonymisierte Daten",
     "s3Row6Basis": "Berechtigte Interessen / Öffentliches Interesse",
     "s4Title": "Wer hat Zugang zu Ihren Daten?",
-    "s4": "Innerhalb von Aegryn: Teammitglieder mit berechtigtem operativem Bedarf. Zertifizierungspartner (unterliegen strengen Vertraulichkeitspflichten). Treuhandbank. Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. Aegryn verkauft Ihre Daten niemals an Dritte.",
+    "s4": "Innerhalb von Aegryn: Teammitglieder mit berechtigtem operativem Bedarf. Zertifizierungspartner (unterliegen strengen Vertraulichkeitspflichten). Technische Dienstleister: Hosting, E-Mail, Zahlung über Stripe. Behörden: wenn gesetzlich vorgeschrieben. Aegryn verkauft Ihre Daten niemals an Dritte.",
     "s5Title": "Internationale Übermittlungen",
     "s5": "Daten werden auf Servern in der Europäischen Union oder der Schweiz gehostet. Bei Übermittlungen in Drittländer setzen wir geeignete Garantien ein (genehmigte Standardvertragsklauseln).",
     "s6Title": "Aufbewahrung",
@@ -7182,7 +6932,7 @@
     "s1": "Betrüger können gefälschte Websites, Social-Media-Profile oder E-Mails erstellen, die scheinbar von Aegryn stammen, um Sie zu betrügerischen Zahlungen zu verleiten.",
     "s1Official": "Unsere offiziellen E-Mails stammen ausschliesslich von der Domain @boha-group.com. Jede Zahlungsaufforderung von einer anderen Domain ist betrügerisch.",
     "s1NeverTitle": "Aegryn verlangt niemals:",
-    "s1Never1": "Eine Einzahlung auf ein Privatkonto",
+    "s1Never1": "Vertrauliche Dokumente ausserhalb der gesicherten Bereiche zu teilen",
     "s1Never2": "Vorauszahlungen, die nicht in Ihrem unterzeichneten Mandat vorgesehen sind",
     "s1Never3": "Ihre Zugangsdaten per E-Mail oder Telefon",
     "s2Title": "Betrügerische Kommunikation erkennen",
@@ -7198,7 +6948,7 @@
     "s4Title": "Zahlungsprozesse, normal vs. betrügerisch",
     "s4NormalTitle": "Normal",
     "s4Normal1": "Zahlung der Gebühren für die CIFSO 5000-Zertifizierung (Pakete Express, Standard oder Premium) per Rechnung oder über Stripe Checkout auf aegryn.com",
-    "s4Normal2": "Treuhandzahlung (10% des vereinbarten Preises) per Banküberweisung an die IBAN der benannten Partnerbank mit Transaktionsreferenz",
+    "s4Normal2": "Dokumentenaustausch (Data Room, Zertifizierungsberichte) ausschliesslich über authentifizierte Bereiche auf aegryn.com",
     "s4FraudTitle": "Betrügerisch",
     "s4Fraud1": "Jede Zahlungsaufforderung an ein Privatkonto",
     "s4Fraud2": "Jede Kryptowährungszahlung, die nicht im Vertrag vorgesehen ist",
@@ -7339,7 +7089,7 @@
           "account"
         ],
         "q": "Wie tritt man dem Aegryn-Expertennetzwerk bei?",
-        "a": "Fachleute (Anwälte, Tech-Experten, M&A, Cyber, Finanzen, W&I-Versicherung) können ein Expert-Profil-Abonnement abschliessen (89 CHF zzgl. MwSt./Monat). Dies gewährt Zugang zu Zertifizierungs- und Begleitungsmandaten von Aegryn-Kunden. Keine Kommission an Aegryn auf Ihre Honorare. Details unter /grade/partners."
+        "a": "Unabhängige Fachleute (Anwälte, Tech-Experten, M&A, Cyber, Finanzen) können sich über die Seite Partner werden (/alliances), Abschnitt Bewerbung, bewerben. Aegryn prüft jede Bewerbung und antwortet innert 10 Arbeitstagen."
       },
       {
         "id": "valuation",
@@ -8230,7 +7980,7 @@
       "lawDesc": "Gesellschaftsrecht, SPA, SHA, IP, Lizenzen",
       "accounting": "Rechnungswesen",
       "hr": "HR & Arbeitsrecht",
-      "insurance": "W&I-Versicherung",
+      "insurance": "Versicherung",
       "real_estate": "Immobilien",
       "finance": "Finanzen",
       "financeDesc": "Finanzierung, LBO, Strukturierung, vorrangige Schulden",
@@ -8260,8 +8010,6 @@
       "dd_hrDesc": "Schlüsselverträge, BSPCE, Arbeitspassiva, Freelancer-Klassifizierung, Wettbewerbsverbote.",
       "dd_regulatory": "Branchenregulatorische Due Diligence",
       "dd_regulatoryDesc": "FinTech (DORA/FINMA), HealthTech (HDS), KI-nativ (EU AI Act), LegalTech, EdTech.",
-      "wi_insurance": "Warranty & Indemnity Insurance",
-      "wi_insuranceDesc": "Vermittlung von W&I-Versicherern für Operationen > 500.000 €. Erleichtert das Closing.",
       "tax_corporate": "Steuerrecht & Corporate Structuring",
       "tax_corporateDesc": "Exit-Optimierung, Holding, SPV, Luxemburg, Schweiz, Frankreich. Einbringung-Tausch.",
       "financing": "Finanzierung & Finanzpartner",
@@ -8354,7 +8102,7 @@
       "CTO": "CTO / Technischer Architekt",
       "Cybersecurity": "Cybersicherheit",
       "HR & Social": "HR & Arbeitsrecht",
-      "Insurance": "Versicherung (W&I)",
+      "Insurance": "Versicherung",
       "Tax": "Steuerberater",
       "Investor": "Investor / Family Office",
       "Other": "Sonstiges"
@@ -10998,5 +10746,63 @@
       "title": "Unsere Analysen zu Beschäftigung, Kompetenzen und Talent.",
       "readMore": "Artikel lesen"
     }
+  },
+  "investisseurs": {
+    "eyebrow": "INVESTOREN & INSTITUTIONEN",
+    "title": "Ihr Kapital verdient\neinen Operating Partner.",
+    "line1": "Die Bank finanziert. Der Fonds investiert.",
+    "line2": "Aegryn begleitet die operative Wertschöpfung in Ihren Beteiligungen.",
+    "cta": "Sprechen wir über Ihr Portfolio",
+    "problems": {
+      "label": "DREI SITUATIONEN, DIE WIR LÖSEN",
+      "items": [
+        "Ihre Beteiligung hat kein operatives Team, das den Wert steuert.",
+        "Ihr Deal Flow ist technisch und organisatorisch schwer zu lesen.",
+        "Ihr Exit liegt in 24 bis 36 Monaten und die Organisation ist nicht bereit."
+      ]
+    },
+    "roles": {
+      "label": "UNSERE DREI ROLLEN",
+      "title": "Ein operatives Engagement, kein beratendes.",
+      "items": [
+        {
+          "title": "Operating Partner für Ihre Direktbeteiligungen",
+          "desc": "Wir übernehmen eine operative Rolle in Ihren Beteiligungen: Governance, Talent, tägliche Wertsteuerung. Präsenz vor Ort, nicht nur im Board."
+        },
+        {
+          "title": "Technisches und organisatorisches Deal-Flow-Screening",
+          "desc": "Vor der Investition qualifizieren wir Ziele auf den 5 CIFSO-Dimensionen: Code & Architektur, IP & Rechte, Finanzen & Metriken, Sicherheit & Souveränität, Organisation & Talent. Sie investieren mit vollständiger Lesart."
+        },
+        {
+          "title": "Value Creation nach der Akquisition und Exit-Vorbereitung",
+          "desc": "Nach der Akquisition strukturieren wir den Wertplan über 12 bis 36 Monate, dokumentieren die Organisation und bereiten die Übertragung unter besten Bedingungen vor."
+        }
+      ]
+    },
+    "banks": {
+      "label": "BANKEN & FINANZIERER",
+      "title": "Sie begleiten Unternehmenslenker?",
+      "desc": "Verweisen Sie sie an Aegryn. Banken (KMU-, Privat-, Firmenkunden-), Finanzierer, Family Offices, Fonds, M&A-Boutiquen, Wirtschaftsjuristen und Wirtschaftsprüfer: Aegryn bereitet Ihre Kunden vor einer Entscheidung vor (Finanzierung, Akquisition, Übergabe) und begleitet sie danach. Aegryn führt keine Transaktionen aus: Wir konkurrieren weder mit Ihrer Investmentbank noch mit Ihrem Berater.",
+      "cta": "Als Vermittler bewerben"
+    },
+    "alignment": {
+      "label": "UNSER ENGAGEMENT",
+      "title": "Nah an Ihren Beteiligungen.",
+      "desc": "Ein langfristiges operatives Engagement, an der Seite der Teams und der Governance.",
+      "items": [
+        "Operative Präsenz, nicht nur im Board.",
+        "CIFSO-Zertifizierung im Mandat enthalten.",
+        "Dokumentierter und verfolgter Wertplan.",
+        "Strukturiertes monatliches Reporting zu den 5 Dimensionen."
+      ]
+    },
+    "final": {
+      "label": "ERSTER KONTAKT",
+      "title": "Ein Portfolio zu entwickeln oder zu übergeben?",
+      "desc": "Fonds, Family Office, Holding mit einer zu strukturierenden Beteiligung. Antwort innerhalb von 48h.",
+      "cta": "Sprechen wir über Ihr Portfolio"
+    },
+    "metaTitle": "Investoren & Institutionen | Aegryn",
+    "metaDesc": "Aegryn agiert als Operating Partner für Fonds, Banken und Family Offices: technisches Screening, Value Creation nach der Akquisition, Vorbereitung der Übergabe."
   }
 }

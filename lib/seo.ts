@@ -38,7 +38,6 @@ const BASE_KEYWORDS = [
   'accompagnement dirigeant', 'entreprise transmissible', 'business transferability',
   // Certification & process
   'certification CIFSO', 'audit code indépendant', 'CIFSO tech audit',
-  'séquestre institutionnel', 'séquestre bancaire institutionnel', 'Swiss escrow',
   'closing tech sécurisé', 'NDA confidentialité entreprise', 'data room certifiée',
   'KYC certification', 'confidentialité dossier entreprise',
   // M&A advisory
@@ -59,7 +58,7 @@ const BASE_KEYWORDS = [
   'estimation valeur startup', 'multiples valorisation sectoriels',
   // Experts & network
   'M&A experts', 'expert network', 'réseau experts M&A', 'expert M&A tech',
-  'due diligence tech', 'réseau experts certifiés', 'W&I insurance',
+  'due diligence tech', 'réseau experts certifiés',
   'cybersecurity expert', 'AI audit', 'expert technique M&A',
   'expert conformité', 'expert valorisation', 'auditeur indépendant tech',
   // Advisory
@@ -70,8 +69,7 @@ const BASE_KEYWORDS = [
   'advisory M&A', 'conseil M&A', 'réseau experts', 'expert network alliance',
   'alliance partenaires', 'alliance partners tech', 'apporteur affaires tech',
   'Aegryn Advisory', 'Aegryn Alliance', 'partenariat Aegryn',
-  'W&I insurance', 'warranty indemnity', 'assurance risques M&A',
-  'séquestre structuré', 'structured escrow', 'financement croissance tech',
+  'financement croissance tech',
   'recrutement dirigeant', 'executive recruitment tech', 'talent tech suisse',
   // Compliance & governance
   'conformité NIS2', 'conformité DORA', 'gouvernance données', 'audit interne tech',

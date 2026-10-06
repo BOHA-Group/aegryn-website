@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 const TX_STEPS = [
   { key: 'ei_submitted',   label: 'EI reçue' },
   { key: 'ap_signed',      label: 'AP signé' },
-  { key: 'escrow_paid',    label: 'Séquestre' },
   { key: 'dd_in_progress', label: 'Due Diligence' },
   { key: 'signing',        label: 'Signing' },
   { key: 'closed',         label: 'Clôturé' },
@@ -79,7 +78,7 @@ export default async function SellerTransactionsPage() {
       ) : (
         <div className="flex flex-col gap-4">
           {(transactions as unknown as Transaction[]).map(tx => {
-            const stepIdx = TX_STEPS.findIndex(s => s.key === tx.status)
+            const stepIdx = TX_STEPS.findIndex(s => s.key === (tx.status === 'escrow_paid' ? 'ap_signed' : tx.status))
             const isCancelled = tx.status === 'cancelled'
 
             return (

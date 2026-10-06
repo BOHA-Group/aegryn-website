@@ -58,7 +58,7 @@ export async function captureLead(
     console.error(`[leadCapture] Supabase insert error (${table})`, error)
   }
 
-  const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
+  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
 
   await Promise.allSettled([
     sendEmail(email.to, email.subjectFounder, email.textFounder, email.htmlFounder),
@@ -74,7 +74,7 @@ export async function captureLead(
  * sans insérer en base. Utile quand l'insert est fait en amont.
  */
 export async function sendLeadEmails(email: EmailConfig): Promise<void> {
-  const internalEmail = process.env.Aegryn_INTERNAL_EMAIL ?? 'team@boha-group.com'
+  const internalEmail = process.env.AEGRYN_INTERNAL_EMAIL ?? 'team@boha-group.com'
   await Promise.allSettled([
     sendEmail(email.to, email.subjectFounder, email.textFounder, email.htmlFounder),
     sendEmail(internalEmail, email.subjectInternal, email.textInternal),
