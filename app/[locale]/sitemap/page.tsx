@@ -45,7 +45,6 @@ const GROUPS: SitemapGroup[] = [
   {
     labelKey: 'groupValoriser',
     links: [
-      { labelKey: 'valoriser',                href: '/valoriser' },
       { labelKey: 'valoriserLancement',       href: '/franchir/lancement' },
       { labelKey: 'valoriserCroissance',      href: '/franchir/croissance' },
       { labelKey: 'valoriserRestructuration', href: '/franchir/restructuration' },

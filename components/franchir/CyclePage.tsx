@@ -66,7 +66,7 @@ export function CyclePage({ content: c, locale }: Props) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Aegryn', item: `https://aegryn.com/${locale}` },
-          { '@type': 'ListItem', position: 2, name: c.eyebrow.split('·')[0].trim(), item: `https://aegryn.com/${locale}/valoriser` },
+          { '@type': 'ListItem', position: 2, name: c.eyebrow.split('·')[0].trim(), item: `https://aegryn.com/${locale}#franchir` },
           { '@type': 'ListItem', position: 3, name: c.eyebrow, item: `https://aegryn.com/${locale}${c.path}` },
         ],
       },

@@ -9,7 +9,7 @@ import { routing } from '@/i18n/routing'
 
 interface Props {
   locale: string
-  /** Métier ACCOMPAGNER, slug de cycle FRANCHIR ou 'general' (intro /valoriser). */
+  /** Métier ACCOMPAGNER, slug de cycle FRANCHIR ou 'general' (intro accueil #franchir). */
   metier: string
   action: string
   def:    ActionDef

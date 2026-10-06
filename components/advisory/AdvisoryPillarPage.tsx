@@ -13,7 +13,7 @@ interface Props {
   locale:  string
 }
 
-/* Styles alignés sur les pages /valoriser et /industries */
+/* Styles alignés sur les pages /franchir et /industries */
 const LABEL   = 'font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light'
 const LABEL_G = 'font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex'
 const H2      = 'font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]'

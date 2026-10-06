@@ -146,7 +146,6 @@
     "solutionsCategoryServices": "Servizi & Lifestyle",
     "craftSupportNetworkNew": "Partner & competenze",
     "craftSupportInvestors": "Investitori & Istituzionali",
-    "craftTransactOverview": "Introduzione",
     "craftTransactAuditors": "Revisori indipendenti",
     "whoIndustries": "I nostri settori",
     "whoIndustriesDesc": "Tutti i settori coperti",
@@ -160,7 +159,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Dalla strategia alla trasmissione. Svizzera.",
-    "metaDescription": "Aegryn accompagna i dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Consulenza, costruzione di asset, certificazione, M&A, talento. Radicato in Svizzera. Operativo in Europa.",
+    "metaDescription": "Aegryn accompagna i dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Consulenza, costruzione di asset, transizioni di ciclo di vita, talento, intelligence di mercato. Radicato in Svizzera. Operativo in Europa.",
     "eyebrow": "CINQUE DISCIPLINE. UN MARCHIO DI QUALITÀ.",
     "title": "Raro per selezione.",
     "sub": "Accompagniamo i dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.",
@@ -791,7 +790,7 @@
   "aboutSection": {
     "label": "Chi è Aegryn",
     "title": "Cinque discipline.\nUna sola azienda.",
-    "desc": "Aegryn accompagna decisori, fondatori e dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.\n\nNon siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione.",
+    "desc": "Aegryn accompagna decisori, fondatori e dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.\n\nNon siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: consulenza, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
     "tagline": "STUDIO DI CONSULENZA, RADICATO IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
@@ -802,7 +801,7 @@
       {
         "val": "5",
         "label": "Discipline integrate",
-        "sub": "Consulenza · Costruzione · Valorizzazione · Talento · Informazione"
+        "sub": "Consulenza · Costruzione · Transizioni · Talento · Informazione"
       },
       {
         "val": "22+",
@@ -836,8 +835,8 @@
         "desc": "Asset digitali duraturi, piena proprietà del cliente. Ogni asset è progettato per valorizzare l'azienda. Indipendenza tecnologica."
       },
       {
-        "title": "VALORIZZARE",
-        "desc": "Certificazione indipendente CIFSO e valorizzazione degli asset aziendali. Un protocollo rigoroso su cinque dimensioni: Codice & Architettura, IP & Diritti, Finanze & Metriche, Sicurezza & Sovranità, Organizzazione & Talento."
+        "title": "AFFRONTARE",
+        "desc": "Ogni ciclo di vita è una transizione da affrontare: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Diagnosi, piano, esecuzione — il valore si costruisce e si dimostra a ogni fase."
       },
       {
         "title": "RECLUTARE",
@@ -1453,7 +1452,7 @@
       "items": [
         {
           "q": "Chi siamo e cosa facciamo?",
-          "a": "Aegryn è una società di consulenza integrata, radicata in Svizzera, che accompagna i dirigenti d'impresa nella creazione, documentazione e realizzazione del valore della loro organizzazione e dei loro asset. Cinque discipline complementari: consulenza in strategia, tech e M&A, costruzione di asset digitali proprietari, certificazione indipendente, executive recruitment e intelligence di mercato. Dalla strategia alla trasmissione. Lavoriamo con fondatori, dirigenti, fondi d'investimento e family office in ogni fase di sviluppo di un'organizzazione, dal lancio alla successione."
+          "a": "Aegryn è una società di consulenza integrata, radicata in Svizzera, che accompagna i dirigenti d'impresa nella creazione, documentazione e realizzazione del valore della loro organizzazione e dei loro asset. Cinque discipline complementari: consulenza in strategia, tech e M&A, costruzione di asset digitali proprietari incl. certificazione CIFSO, accompagnamento delle transizioni a ogni ciclo di vita, executive recruitment e intelligence di mercato. Dalla strategia alla trasmissione. Lavoriamo con fondatori, dirigenti, fondi d'investimento e family office in ogni fase di sviluppo di un'organizzazione, dal lancio alla successione."
         },
         {
           "q": "Cosa ci differenzia?",
@@ -2981,7 +2980,7 @@
     },
     "label": "Aegryn — Gruppo svizzero",
     "title": "Il gruppo.\nLe sue funzionalità.",
-    "desc": "Aegryn accompagna le organizzazioni tecnologiche in ogni fase del loro ciclo di vita: certificazione, valutazione, consulenza, talento, trasferimento. Ogni mandato è regolato dal diritto svizzero.",
+    "desc": "Aegryn accompagna le organizzazioni tecnologiche in ogni fase del loro ciclo di vita: consulenza, costruzione di asset, transizioni, talento, informazione. Ogni mandato è regolato dal diritto svizzero.",
     "swissNote": "Diritto svizzero applicabile a ogni mandato, qualunque sia la provenienza dell'organizzazione o la nazionalità delle parti.",
     "featuresLabel": "Cosa offre il dispositivo",
     "features": {
@@ -4683,7 +4682,7 @@
       "finance": "Banche & Finanza"
     },
     "disciplines": {
-      "label": "LE 6 DISCIPLINE DELLA RETE",
+      "label": "LE 6 COMPETENZE DELLA RETE",
       "intro": "La nostra rete copre tutte le expertise necessarie alla valorizzazione di un'organizzazione in ogni fase del suo ciclo di vita.",
       "items": [
         {
@@ -7226,7 +7225,7 @@
           "lifecycle"
         ],
         "q": "Chi è Aegryn e cosa fate?",
-        "a": "Aegryn è un gruppo svizzero di consulenza e certificazione che accompagna le organizzazioni in ogni fase del loro ciclo di vita: strategia, tecnologia, conformità, talento, valutazione e trasferimento. Il nostro protocollo di certificazione indipendente CIFSO 5000 valuta e documenta il valore reale di un'organizzazione."
+        "a": "Aegryn è un gruppo svizzero di consulenza e certificazione che accompagna le organizzazioni in ogni fase del loro ciclo di vita: consulenza, costruzione di asset, transizioni di ciclo di vita, talento e informazione. Il nostro protocollo di certificazione indipendente CIFSO 5000 valuta e documenta il valore reale di un'organizzazione."
       },
       {
         "id": "what-differentiates",
@@ -7672,7 +7671,6 @@
     "security": "Sicurezza",
     "faq": "FAQ",
     "groupValoriser": "Affrontare",
-    "valoriser": "Affrontare — Introduzione",
     "valoriserLancement": "Lancio & Strutturazione",
     "valoriserCroissance": "Crescita & Scalabilità",
     "valoriserRestructuration": "Ristrutturazione & Pivot",
@@ -9059,7 +9057,7 @@
     }
   },
   "transactNarrative": {
-    "label": "Valutazione & Trasferimento",
+    "label": "Certificazione & Trasferimento",
     "title": "Il valore deve potersi dimostrare\nsenza compromessi.",
     "desc": "Certificazione indipendente. Valutazione documentata.\nAccompagnamento riservato in ogni fase del ciclo di vita.",
     "stat1Val": "100%",
@@ -10079,7 +10077,7 @@
     "workWith": {
       "label": "LAVORARE CON AEGRYN",
       "title": "Cinque discipline.\nUna relazione.",
-      "sub": "Consulenza, costruzione, valutazione, talento, conoscenza: integrati in un unico gruppo, portati dagli stessi standard.",
+      "sub": "Consulenza, costruzione, transizioni, talento, informazione: integrati in un unico gruppo, portati dagli stessi standard.",
       "items": [
         {
           "key": "accompagner",
@@ -10100,10 +10098,10 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "VALORIZZARE",
-          "desc": "Certificazione CIFSO 5000, valutazione documentata e accompagnamento al trasferimento in un quadro riservato. Un processo strutturato e graduato, senza esposizione pubblica.",
+          "title": "AFFRONTARE",
+          "desc": "Ogni ciclo di vita è una transizione da affrontare: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Diagnosi, piano, esecuzione — il valore si costruisce e si dimostra a ogni fase.",
           "cta": "Scoprire Affrontare",
-          "href": "/valoriser"
+          "href": "/#franchir"
         },
         {
           "key": "recruter",

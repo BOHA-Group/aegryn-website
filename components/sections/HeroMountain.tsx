@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link  from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
 
 const HERO_IMAGE = { src: '/images/home/home_geneva.webp', alt: 'Genève — Aegryn Group' }
@@ -12,6 +12,7 @@ const HERO_BLUR_DATA_URL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/7
 
 export function HeroMountain() {
   const t = useTranslations('hero')
+  const locale = useLocale()
   const sectionRef  = useRef<HTMLElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
@@ -167,7 +168,7 @@ export function HeroMountain() {
 
               {/* CTA 3: Franchir */}
               <Link
-                href="/valoriser"
+                href={`/${locale}#franchir`}
                 className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />

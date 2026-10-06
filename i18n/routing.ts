@@ -46,7 +46,6 @@ export const routing = defineRouting({
     '/verify':                            '/verify',
     '/verify/[code]':                     '/verify/[code]',
 
-    '/valoriser':                         '/valoriser',
     '/franchir/lancement':                '/franchir/lancement',
     '/franchir/croissance':               '/franchir/croissance',
     '/franchir/restructuration':          '/franchir/restructuration',

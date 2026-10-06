@@ -146,7 +146,6 @@
     "solutionsCategoryServices": "Services & Lifestyle",
     "craftSupportNetworkNew": "Partner & Expertise",
     "craftSupportInvestors": "Investoren & Institutionelle",
-    "craftTransactOverview": "Einführung",
     "craftTransactAuditors": "Unabhängige Prüfer",
     "whoIndustries": "Unsere Branchen",
     "whoIndustriesDesc": "Alle abgedeckten Sektoren",
@@ -160,7 +159,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Von der Strategie bis zum Abschluss. Schweiz.",
-    "metaDescription": "Aegryn begleitet Unternehmensentscheider dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Beratung, Asset-Aufbau, Zertifizierung, M&A, Talent. Verankert in der Schweiz. Aktiv in Europa.",
+    "metaDescription": "Aegryn begleitet Unternehmensentscheider dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Beratung, Asset-Aufbau, Transitionen im Lebenszyklus, Talent, Marktintelligenz. Verankert in der Schweiz. Aktiv in Europa.",
     "eyebrow": "FÜNF DISZIPLINEN. EIN QUALITÄTSLABEL.",
     "title": "Selten durch Auswahl.",
     "sub": "Wir begleiten Unternehmensentscheider dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.",
@@ -791,7 +790,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Unternehmen.",
-    "desc": "Aegryn begleitet Entscheider, Gründer und Führungskräfte dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.\n\nWir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind.",
+    "desc": "Aegryn begleitet Entscheider, Gründer und Führungskräfte dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.\n\nWir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
     "tagline": "BERATUNGSFIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
@@ -802,7 +801,7 @@
       {
         "val": "5",
         "label": "Integrierte Disziplinen",
-        "sub": "Beratung · Aufbau · Bewertung · Talent · Information"
+        "sub": "Beratung · Aufbau · Transitionen · Talent · Information"
       },
       {
         "val": "22+",
@@ -836,8 +835,8 @@
         "desc": "Nachhaltige digitale Assets, vollständiges Kundeneigentum. Jedes Asset ist darauf ausgelegt, den Unternehmenswert zu steigern. Technologische Unabhängigkeit."
       },
       {
-        "title": "BEWERTEN",
-        "desc": "Unabhängige CIFSO-Zertifizierung und Bewertung der Unternehmenswerte. Ein strenges Protokoll auf fünf Dimensionen: Code & Architektur, IP & Rechte, Finanzen & Kennzahlen, Sicherheit & Souveränität, Organisation & Talent."
+        "title": "MEISTERN",
+        "desc": "Jeder Lebenszyklus ist eine Transition, die es zu meistern gilt: Launch, Wachstum, Restrukturierung, Akquisition, Übergabe. Diagnose, Plan, Umsetzung — Wert entsteht und beweist sich in jeder Phase."
       },
       {
         "title": "REKRUTIEREN",
@@ -1453,7 +1452,7 @@
       "items": [
         {
           "q": "Wer sind wir und was tun wir?",
-          "a": "Aegryn ist eine integrierte Beratungsgesellschaft mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf komplementäre Disziplinen: Strategie-, Tech- und M&A-Beratung, Aufbau proprietärer digitaler Assets, unabhängige Zertifizierung, Executive Recruitment und Marktintelligenz. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
+          "a": "Aegryn ist eine integrierte Beratungsgesellschaft mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf komplementäre Disziplinen: Strategie-, Tech- und M&A-Beratung, Aufbau proprietärer digitaler Assets inkl. CIFSO-Zertifizierung, Begleitung der Transitionen in jedem Lebenszyklus, Executive Recruitment und Marktintelligenz. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
         },
         {
           "q": "Was unterscheidet uns?",
@@ -2981,7 +2980,7 @@
     },
     "label": "Aegryn — Schweizer Gruppe",
     "title": "Die Gruppe.\nIhre Funktionen.",
-    "desc": "Aegryn begleitet Technologieorganisationen in jeder Phase ihres Lebenszyklus: Zertifizierung, Bewertung, Beratung, Talent, Übertragung. Jedes Mandat unterliegt Schweizer Recht.",
+    "desc": "Aegryn begleitet Technologieorganisationen in jeder Phase ihres Lebenszyklus: Beratung, Asset-Aufbau, Transitionen, Talent, Information. Jedes Mandat unterliegt Schweizer Recht.",
     "swissNote": "Schweizer Recht gilt für jedes Mandat, unabhängig von der Herkunft der Organisation oder der Nationalität der Parteien.",
     "featuresLabel": "Was die Plattform bietet",
     "features": {
@@ -4683,7 +4682,7 @@
       "finance": "Banken & Finanzen"
     },
     "disciplines": {
-      "label": "DIE 6 NETZWERKDISZIPLINEN",
+      "label": "DIE 6 NETZWERK-EXPERTISEN",
       "intro": "Unser Netzwerk deckt sämtliche Expertisen ab, die für die Bewertung eines Unternehmens in jeder Phase seines Lebenszyklus erforderlich sind.",
       "items": [
         {
@@ -7226,7 +7225,7 @@
           "lifecycle"
         ],
         "q": "Wer ist Aegryn und was machen Sie?",
-        "a": "Aegryn ist eine Schweizer Beratungs- und Zertifizierungsgruppe, die Organisationen in jeder Phase ihres Lebenszyklus begleitet: Strategie, Technologie, Compliance, Talent, Bewertung und Übertragung. Unser unabhängiges Zertifizierungsprotokoll CIFSO 5000 bewertet und dokumentiert den realen Wert einer Organisation."
+        "a": "Aegryn ist eine Schweizer Beratungs- und Zertifizierungsgruppe, die Organisationen in jeder Phase ihres Lebenszyklus begleitet: Beratung, Asset-Aufbau, Transitionen im Lebenszyklus, Talent und Information. Unser unabhängiges Zertifizierungsprotokoll CIFSO 5000 bewertet und dokumentiert den realen Wert einer Organisation."
       },
       {
         "id": "what-differentiates",
@@ -7672,7 +7671,6 @@
     "security": "Sicherheit",
     "faq": "FAQ",
     "groupValoriser": "Meistern",
-    "valoriser": "Meistern — Einführung",
     "valoriserLancement": "Launch & Strukturierung",
     "valoriserCroissance": "Wachstum & Skalierung",
     "valoriserRestructuration": "Restrukturierung & Pivot",
@@ -9189,7 +9187,7 @@
     }
   },
   "transactNarrative": {
-    "label": "Bewertung & Übertragung",
+    "label": "Zertifizierung & Übertragung",
     "title": "Wert muss sich beweisen lassen,\nohne Kompromisse.",
     "desc": "Unabhängige Zertifizierung. Dokumentierte Bewertung.\nVertrauliche Begleitung in jeder Phase des Lebenszyklus.",
     "stat1Val": "100%",
@@ -10209,7 +10207,7 @@
     "workWith": {
       "label": "MIT AEGRYN ZUSAMMENARBEITEN",
       "title": "Fünf Disziplinen.\nEine Beziehung.",
-      "sub": "Beratung, Bau, Bewertung, Talent, Wissen: integriert in einer Gruppe, getragen von denselben Standards.",
+      "sub": "Beratung, Bau, Transitionen, Talent, Information: integriert in einer Gruppe, getragen von denselben Standards.",
       "items": [
         {
           "key": "accompagner",
@@ -10230,10 +10228,10 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "BEWERTEN",
-          "desc": "CIFSO-5000-Zertifizierung, dokumentierte Bewertung und Begleitung der Übertragung in einem vertraulichen Rahmen. Ein strukturierter, graduierter Prozess ohne öffentliche Exposition.",
+          "title": "MEISTERN",
+          "desc": "Jeder Lebenszyklus ist eine Transition, die es zu meistern gilt: Launch, Wachstum, Restrukturierung, Akquisition, Übergabe. Diagnose, Plan, Umsetzung — Wert entsteht und beweist sich in jeder Phase.",
           "cta": "Meistern entdecken",
-          "href": "/valoriser"
+          "href": "/#franchir"
         },
         {
           "key": "recruter",

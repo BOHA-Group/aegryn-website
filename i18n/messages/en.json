@@ -146,7 +146,6 @@
     "solutionsCategoryServices": "Services & Lifestyle",
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investors & Institutional",
-    "craftTransactOverview": "Introduction",
     "craftTransactAuditors": "Independent auditors",
     "whoIndustries": "Our industries",
     "whoIndustriesDesc": "All covered sectors",
@@ -160,7 +159,7 @@
   },
   "hero": {
     "tagline": "Aegryn. From strategy to closing. Switzerland & Europe.",
-    "metaDescription": "Aegryn helps business leaders create, document and realise the value of their organisation. Advisory, asset building, certification, M&A, talent. Rooted in Switzerland. Active across Europe.",
+    "metaDescription": "Aegryn helps business leaders create, document and realise the value of their organisation. Advisory, asset building, lifecycle transitions, talent, market intelligence. Rooted in Switzerland. Active across Europe.",
     "eyebrow": "FIVE DISCIPLINES. ONE QUALITY LABEL.",
     "title": "Rare by selection.",
     "sub": "We help business leaders create, document and realise the value of their organisation. From strategy to closing.",
@@ -791,7 +790,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne firm.",
-    "desc": "Aegryn helps decision-makers, founders and executives create, document and realise the value of their organisation. From strategy to closing.\n\nWe are neither a classic consulting firm, nor a tech agency, nor an M&A boutique. We are an integrated advisory firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: advisory, asset building, certification, talent and market intelligence.",
+    "desc": "Aegryn helps decision-makers, founders and executives create, document and realise the value of their organisation. From strategy to closing.\n\nWe are neither a classic consulting firm, nor a tech agency, nor an M&A boutique. We are an integrated advisory firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: advisory, asset building, transitions at every lifecycle stage, talent and market intelligence.",
     "tagline": "ADVISORY FIRM, ROOTED IN SWITZERLAND.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
@@ -802,7 +801,7 @@
       {
         "val": "5",
         "label": "Integrated disciplines",
-        "sub": "Advisory · Build · Valuation · Talent · Information"
+        "sub": "Advisory · Build · Transitions · Talent · Information"
       },
       {
         "val": "22+",
@@ -836,8 +835,8 @@
         "desc": "Durable digital assets, full client ownership. Each asset is designed to enhance company value and withstand certification. Technological independence."
       },
       {
-        "title": "VALUE",
-        "desc": "Independent CIFSO certification and company asset valuation. A rigorous protocol on five dimensions: Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent."
+        "title": "NAVIGATE",
+        "desc": "Every lifecycle stage is a transition to navigate: launch, growth, restructuring, acquisition, succession. Diagnostic, plan, execution — value is built and proven at every stage."
       },
       {
         "title": "RECRUIT",
@@ -1453,7 +1452,7 @@
       "items": [
         {
           "q": "Who are we and what do we do?",
-          "a": "Aegryn is an integrated advisory firm, rooted in Switzerland, that helps business leaders create, document and realise the value of their organisation and assets. Five complementary disciplines: strategy, tech and M&A advisory, proprietary digital asset building, independent certification, executive recruitment and market intelligence. From strategy to transfer. We work with founders, executives, investment funds and family offices at every stage of an organisation's development, from launch to succession."
+          "a": "Aegryn is an integrated advisory firm, rooted in Switzerland, that helps business leaders create, document and realise the value of their organisation and assets. Five complementary disciplines: strategy, tech and M&A advisory, proprietary digital asset building incl. CIFSO certification, transitions at every lifecycle stage, executive recruitment and market intelligence. From strategy to transfer. We work with founders, executives, investment funds and family offices at every stage of an organisation's development, from launch to succession."
         },
         {
           "q": "What sets us apart?",
@@ -1877,7 +1876,7 @@
     ]
   },
   "transactNarrative": {
-    "label": "Valuation & Transfer",
+    "label": "Certification & Transfer",
     "title": "Value must be demonstrable,\nwithout compromise.",
     "desc": "Independent certification. Documented valuation.\nConfidential support at every stage of the lifecycle.",
     "stat1Val": "100%",
@@ -2139,7 +2138,7 @@
     },
     "label": "Aegryn — Swiss group",
     "title": "The group.\nIts features.",
-    "desc": "Aegryn supports technology organisations at every stage of their lifecycle: certification, valuation, advisory, talent, transfer. Every mandate is governed by Swiss law.",
+    "desc": "Aegryn supports technology organisations at every stage of their lifecycle: advisory, asset building, transitions, talent, information. Every mandate is governed by Swiss law.",
     "swissNote": "Swiss law applies to every mandate, whatever the origin of the organisation or the nationality of the parties.",
     "featuresLabel": "What the platform offers",
     "features": {
@@ -4698,7 +4697,7 @@
       "finance": "Banks & Finance"
     },
     "disciplines": {
-      "label": "THE 6 NETWORK DISCIPLINES",
+      "label": "THE 6 NETWORK EXPERTISES",
       "intro": "Our network covers the full range of expertise required to value an organisation at every stage of its lifecycle.",
       "items": [
         {
@@ -7241,7 +7240,7 @@
           "lifecycle"
         ],
         "q": "Who is Aegryn and what do you do?",
-        "a": "Aegryn is a Swiss advisory and certification group that supports organisations at every stage of their lifecycle: strategy, technology, compliance, talent, valuation and transfer. Our independent CIFSO 5000 certification protocol assesses and documents the real value of an organisation."
+        "a": "Aegryn is a Swiss advisory and certification group that supports organisations at every stage of their lifecycle: advisory, asset building, lifecycle transitions, talent and information. Our independent CIFSO 5000 certification protocol assesses and documents the real value of an organisation."
       },
       {
         "id": "what-differentiates",
@@ -7687,7 +7686,6 @@
     "security": "Security",
     "faq": "FAQ",
     "groupValoriser": "Navigate",
-    "valoriser": "Navigate — Introduction",
     "valoriserLancement": "Launch & Structuring",
     "valoriserCroissance": "Growth & Scaling",
     "valoriserRestructuration": "Restructuring & Pivot",
@@ -10079,7 +10077,7 @@
     "workWith": {
       "label": "WORKING WITH AEGRYN",
       "title": "Five disciplines.\nOne relationship.",
-      "sub": "Advisory, building, valuation, talent, knowledge: integrated in a single group, carried by the same standards.",
+      "sub": "Advisory, building, transitions, talent, information: integrated in a single group, carried by the same standards.",
       "items": [
         {
           "key": "accompagner",
@@ -10100,10 +10098,10 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "VALUE",
-          "desc": "CIFSO 5000 certification, documented valuation and transfer support in a confidential framework. A structured, graded process, without public exposure.",
+          "title": "NAVIGATE",
+          "desc": "Every lifecycle stage is a transition to navigate: launch, growth, restructuring, acquisition, succession. Diagnostic, plan, execution — value is built and proven at every stage.",
           "cta": "Discover Navigate",
-          "href": "/valoriser"
+          "href": "/#franchir"
         },
         {
           "key": "recruter",

@@ -146,7 +146,6 @@
     "solutionsCategoryServices": "Servicios & Lifestyle",
     "craftSupportNetworkNew": "Socios & experiencia",
     "craftSupportInvestors": "Inversores e Institucionales",
-    "craftTransactOverview": "Introducción",
     "craftTransactAuditors": "Auditores independientes",
     "whoIndustries": "Nuestras industrias",
     "whoIndustriesDesc": "Todos los sectores cubiertos",
@@ -160,7 +159,7 @@
   },
   "hero": {
     "tagline": "Aegryn. De la estrategia a la transmisión. Suiza & Europa.",
-    "metaDescription": "Aegryn acompaña a los directivos a crear, documentar y realizar el valor de su organización. Consultoría, construcción de activos, certificación, M&A, talento. Arraigado en Suiza. Operativo en Europa.",
+    "metaDescription": "Aegryn acompaña a los directivos a crear, documentar y realizar el valor de su organización. Consultoría, construcción de activos, transiciones de ciclo de vida, talento, inteligencia de mercado. Arraigado en Suiza. Operativo en Europa.",
     "eyebrow": "CINCO DISCIPLINAS. UN SELLO DE CALIDAD.",
     "title": "Selecto por definición.",
     "sub": "Acompañamos a los directivos a crear, documentar y realizar el valor de su organización. De la estrategia a la transmisión.",
@@ -791,7 +790,7 @@
   "aboutSection": {
     "label": "Sobre Aegryn",
     "title": "Cinco disciplinas.\nUna sola empresa.",
-    "desc": "Aegryn acompaña a directivos, fundadores y ejecutivos a crear, documentar y realizar el valor de su organización. De la estrategia a la transmisión.\n\nNo somos ni una consultora clásica, ni una agencia tech, ni una boutique de M&A. Somos una firma integrada, arraigada en Suiza, que reúne las cinco disciplinas necesarias para el valor duradero de una organización.",
+    "desc": "Aegryn acompaña a directivos, fundadores y ejecutivos a crear, documentar y realizar el valor de su organización. De la estrategia a la transmisión.\n\nNo somos ni una consultora clásica, ni una agencia tech, ni una boutique de M&A. Somos una firma integrada, arraigada en Suiza, que reúne las cinco disciplinas necesarias para el valor duradero de una organización: asesoría, construcción de activos, transiciones en cada ciclo de vida, talento e inteligencia de mercado.",
     "tagline": "FIRMA DE ASESORAMIENTO, ARRAIGADA EN SUIZA.",
     "cta": "Nuestras disciplinas →",
     "ctaHref": "/advisory",
@@ -802,7 +801,7 @@
       {
         "val": "5",
         "label": "Disciplinas integradas",
-        "sub": "Asesoría · Construcción · Valorización · Talento · Información"
+        "sub": "Asesoría · Construcción · Transiciones · Talento · Información"
       },
       {
         "val": "22+",
@@ -836,8 +835,8 @@
         "desc": "Activos digitales duraderos, propiedad total del cliente. Cada activo está diseñado para valorizar la empresa. Independencia tecnológica."
       },
       {
-        "title": "VALORIZAR",
-        "desc": "Certificación independiente CIFSO y valorización de los activos de la empresa. Un protocolo riguroso en cinco dimensiones: Código & Arquitectura, PI & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento."
+        "title": "SUPERAR",
+        "desc": "Cada ciclo de vida es una transición que superar: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Diagnóstico, plan, ejecución — el valor se construye y se demuestra en cada etapa."
       },
       {
         "title": "RECLUTAR",
@@ -1453,7 +1452,7 @@
       "items": [
         {
           "q": "¿Quiénes somos y qué hacemos?",
-          "a": "Aegryn es una firma de asesoramiento integrada, con sede en Suiza, que acompaña a los directivos empresariales en la creación, documentación y realización del valor de su organización y sus activos. Cinco disciplinas complementarias: consultoría en estrategia, tecnología y M&A, construcción de activos digitales propietarios, certificación independiente, reclutamiento ejecutivo e inteligencia de mercado. De la estrategia a la transmisión. Trabajamos con fundadores, directivos, fondos de inversión y family offices en cada etapa del desarrollo de una organización, desde el lanzamiento hasta la sucesión."
+          "a": "Aegryn es una firma de asesoramiento integrada, con sede en Suiza, que acompaña a los directivos empresariales en la creación, documentación y realización del valor de su organización y sus activos. Cinco disciplinas complementarias: consultoría en estrategia, tecnología y M&A, construcción de activos digitales propietarios incl. certificación CIFSO, acompañamiento de las transiciones en cada ciclo de vida, reclutamiento ejecutivo e inteligencia de mercado. De la estrategia a la transmisión. Trabajamos con fundadores, directivos, fondos de inversión y family offices en cada etapa del desarrollo de una organización, desde el lanzamiento hasta la sucesión."
         },
         {
           "q": "¿Qué nos diferencia?",
@@ -2981,7 +2980,7 @@
     },
     "label": "Aegryn — Grupo suizo",
     "title": "El grupo.\nSus funcionalidades.",
-    "desc": "Aegryn acompaña a las organizaciones tecnológicas en cada etapa de su ciclo de vida: certificación, valoración, asesoría, talento, transmisión. Cada mandato se rige por el derecho suizo.",
+    "desc": "Aegryn acompaña a las organizaciones tecnológicas en cada etapa de su ciclo de vida: asesoría, construcción de activos, transiciones, talento, información. Cada mandato se rige por el derecho suizo.",
     "swissNote": "Derecho suizo aplicable a cada mandato, cualquiera que sea la procedencia de la organización o la nacionalidad de las partes.",
     "featuresLabel": "Lo que el dispositivo ofrece",
     "features": {
@@ -4683,7 +4682,7 @@
       "finance": "Bancos & Finanzas"
     },
     "disciplines": {
-      "label": "LAS 6 DISCIPLINAS DE LA RED",
+      "label": "LAS 6 ESPECIALIDADES DE LA RED",
       "intro": "Nuestra red cubre todas las expertises necesarias para valorar una organización en cada etapa de su ciclo de vida.",
       "items": [
         {
@@ -7226,7 +7225,7 @@
           "lifecycle"
         ],
         "q": "¿Quién es Aegryn y qué hacen?",
-        "a": "Aegryn es un grupo suizo de asesoría y certificación que acompaña a las organizaciones en cada etapa de su ciclo de vida: estrategia, tecnología, cumplimiento, talento, valoración y transmisión. Nuestro protocolo de certificación independiente CIFSO 5000 evalúa y documenta el valor real de una organización."
+        "a": "Aegryn es un grupo suizo de asesoría y certificación que acompaña a las organizaciones en cada etapa de su ciclo de vida: asesoría, construcción de activos, transiciones de ciclo de vida, talento e información. Nuestro protocolo de certificación independiente CIFSO 5000 evalúa y documenta el valor real de una organización."
       },
       {
         "id": "what-differentiates",
@@ -7672,7 +7671,6 @@
     "security": "Seguridad",
     "faq": "FAQ",
     "groupValoriser": "Superar",
-    "valoriser": "Superar — Introducción",
     "valoriserLancement": "Lanzamiento & Estructuración",
     "valoriserCroissance": "Crecimiento & Escalado",
     "valoriserRestructuration": "Reestructuración & Pivote",
@@ -9059,7 +9057,7 @@
     }
   },
   "transactNarrative": {
-    "label": "Valoración & Transmisión",
+    "label": "Certificación & Transmisión",
     "title": "El valor debe poder demostrarse\nsin concesiones.",
     "desc": "Certificación independiente. Valoración documentada.\nAcompañamiento confidencial en cada etapa del ciclo de vida.",
     "stat1Val": "100%",
@@ -10079,7 +10077,7 @@
     "workWith": {
       "label": "TRABAJAR CON AEGRYN",
       "title": "Cinco disciplinas.\nUna relación.",
-      "sub": "Asesoría, construcción, valoración, talento, conocimiento: integrados en un mismo grupo, sostenidos por los mismos estándares.",
+      "sub": "Asesoría, construcción, transiciones, talento, información: integrados en un mismo grupo, sostenidos por los mismos estándares.",
       "items": [
         {
           "key": "accompagner",
@@ -10100,10 +10098,10 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "VALORIZAR",
-          "desc": "Certificación CIFSO 5000, valoración documentada y acompañamiento de la transmisión en un marco confidencial. Un proceso estructurado y graduado, sin exposición pública.",
+          "title": "SUPERAR",
+          "desc": "Cada ciclo de vida es una transición que superar: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Diagnóstico, plan, ejecución — el valor se construye y se demuestra en cada etapa.",
           "cta": "Descubrir Superar",
-          "href": "/valoriser"
+          "href": "/#franchir"
         },
         {
           "key": "recruter",

@@ -31,8 +31,7 @@ const STATIC_ROUTES = [
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Valoriser — cycles de vie ────────────────────────────────────────────────
-  { path: '/valoriser',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
+  // ── Franchir — cycles de vie (intro en section accueil #franchir) ────────────
   { path: '/franchir/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/franchir/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/franchir/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },

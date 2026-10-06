@@ -37,8 +37,7 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
 ]
 
-// Nos métiers - Franchir : Introduction, cycles de vie, réseau
-const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/valoriser' as LinkHref }
+// Nos métiers - Franchir : cycles de vie (l'intro vit désormais en section accueil #franchir)
 const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactLancement',       href: '/franchir/lancement' as LinkHref },
   { labelKey: 'craftTransactCroissance',      href: '/franchir/croissance' as LinkHref },
@@ -168,13 +167,6 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             {t('craftTransactDesc')}
           </div>
           <div className="flex flex-col gap-1">
-            <Link
-              href={CRAFT_TRANSACT_INTRO.href}
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-            >
-              {t(CRAFT_TRANSACT_INTRO.labelKey)}
-            </Link>
             {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
@@ -416,7 +408,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isCraftActive =
     isActive('/assets') || isActive('/services/build') ||
     isActive('/advisory') || isActive('/services/acquisition-support') ||
-    isActive('/grade') || isActive('/valoriser') || isActive('/franchir') ||
+    isActive('/grade') || isActive('/franchir') ||
     isActive('/valuation') || isActive('/verify')
 
 
@@ -703,10 +695,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </div>
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftTransact')}</p>
-                  <Link href={CRAFT_TRANSACT_INTRO.href} onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                    {t(CRAFT_TRANSACT_INTRO.labelKey)}
-                  </Link>
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">

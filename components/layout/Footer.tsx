@@ -127,7 +127,7 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
 const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
   { footerKey: 'footerCraftBuild',    href: '/services/build' },
   { footerKey: 'footerCraftSupport',  href: '/advisory' },
-  { footerKey: 'footerCraftTransact', href: '/valoriser' },
+  { footerKey: 'footerCraftTransact', href: '/#franchir' as LinkHref },
   { footerKey: 'footerWhoTalent',     href: '/talent' as never },
   { footerKey: 'footerInform',        href: '/blog' },
 ]
@@ -224,7 +224,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/valoriser" className="text-sm text-white/75 hover:text-white transition-colors">
+                <Link href={{ pathname: '/', hash: 'franchir' }} className="text-sm text-white/75 hover:text-white transition-colors">
                   {t('col2DataRoom')}
                 </Link>
               </li>

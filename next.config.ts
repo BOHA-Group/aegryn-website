@@ -102,9 +102,11 @@ const nextConfig: NextConfig = {
       { source: '/:locale/magazine/issue-01/transaction-what-an-earnout-feels-like', destination: '/:locale/magazine/issue-01', permanent: true },
       { source: '/:locale/magazine/issue-01/life-on-building-for-the-long-view', destination: '/:locale/magazine/issue-01', permanent: true },
       { source: '/:locale/magazine/report',             destination: '/:locale/magazine',                permanent: true },
-      /* /transact (vue d'ensemble) + how-to-sell/how-to-buy → /valoriser|franchir (301 permanent, refonte cycle de vie) */
-      { source: '/transact',                            destination: '/valoriser',                       permanent: true },
-      { source: '/:locale/transact',                    destination: '/:locale/valoriser',                permanent: true },
+      /* /transact (vue d'ensemble) + /valoriser → section accueil #franchir (301 permanent, refonte cycle de vie) */
+      { source: '/transact',                            destination: '/#franchir',                       permanent: true },
+      { source: '/:locale/transact',                    destination: '/:locale#franchir',                permanent: true },
+      { source: '/valoriser',                           destination: '/#franchir',                       permanent: true },
+      { source: '/:locale/valoriser',                   destination: '/:locale#franchir',                permanent: true },
       { source: '/transact/how-to-sell',                destination: '/franchir/transmission',           permanent: true },
       { source: '/:locale/transact/how-to-sell',        destination: '/:locale/franchir/transmission',    permanent: true },
       { source: '/transact/how-to-buy',                 destination: '/franchir/acquisition',            permanent: true },

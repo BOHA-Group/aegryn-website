@@ -146,7 +146,6 @@
     "solutionsCategoryServices": "Services & Lifestyle",
     "craftSupportNetworkNew": "Partners & expertise",
     "craftSupportInvestors": "Investeerders & Institutioneel",
-    "craftTransactOverview": "Introductie",
     "craftTransactAuditors": "Onafhankelijke auditoren",
     "whoIndustries": "Onze sectoren",
     "whoIndustriesDesc": "Alle gedekte sectoren",
@@ -160,7 +159,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
-    "metaDescription": "Aegryn begeleidt bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Advies, asset-opbouw, certificering, M&A, talent. Verankerd in Zwitserland. Actief in Europa.",
+    "metaDescription": "Aegryn begeleidt bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Advies, asset-opbouw, levenscyclus-transities, talent, marktintelligentie. Verankerd in Zwitserland. Actief in Europa.",
     "eyebrow": "VIJF DISCIPLINES. ÉÉN KWALITEITSLABEL.",
     "title": "Zeldzaam door selectie.",
     "sub": "Wij begeleiden bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.",
@@ -791,7 +790,7 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "Aegryn begeleidt besluitvormers, oprichters en leidinggevenden bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.\n\nWe zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde.",
+    "desc": "Aegryn begeleidt besluitvormers, oprichters en leidinggevenden bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.\n\nWe zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
     "tagline": "ADVIESFIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
@@ -802,7 +801,7 @@
       {
         "val": "5",
         "label": "Geïntegreerde disciplines",
-        "sub": "Advies · Opbouw · Waardering · Talent · Informatie"
+        "sub": "Advies · Opbouw · Transities · Talent · Informatie"
       },
       {
         "val": "22+",
@@ -836,8 +835,8 @@
         "desc": "Duurzame digitale assets, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten. Technologische onafhankelijkheid."
       },
       {
-        "title": "WAARDEREN",
-        "desc": "Onafhankelijke CIFSO-certificering en waardering van de bedrijfsactiva. Een rigoureus protocol op vijf dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent."
+        "title": "DOORLOPEN",
+        "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering — waarde wordt in elke fase opgebouwd en bewezen."
       },
       {
         "title": "REKRUTEREN",
@@ -1453,7 +1452,7 @@
       "items": [
         {
           "q": "Wie zijn wij en wat doen we?",
-          "a": "Aegryn is een geïntegreerd advieskantoor, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire disciplines: strategie-, tech- en M&A-advies, bouw van proprietäre digitale activa, onafhankelijke certificering, executive recruitment en marktintelligentie. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
+          "a": "Aegryn is een geïntegreerd advieskantoor, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire disciplines: strategie-, tech- en M&A-advies, bouw van propriëtaire digitale activa incl. CIFSO-certificering, begeleiding van transities in elke levenscyclus, executive recruitment en marktintelligentie. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
         },
         {
           "q": "Wat onderscheidt ons?",
@@ -2981,7 +2980,7 @@
     },
     "label": "Aegryn — Zwitserse groep",
     "title": "De groep.\nZijn functionaliteiten.",
-    "desc": "Aegryn begeleidt technologieorganisaties in elke fase van hun levenscyclus: certificering, waardering, advies, talent, overdracht. Elke opdracht valt onder Zwitsers recht.",
+    "desc": "Aegryn begeleidt technologieorganisaties in elke fase van hun levenscyclus: advies, asset-opbouw, transities, talent, informatie. Elke opdracht valt onder Zwitsers recht.",
     "swissNote": "Zwitsers recht is op elke opdracht van toepassing, ongeacht de herkomst van de organisatie of de nationaliteit van de partijen.",
     "featuresLabel": "Wat het dispositief biedt",
     "features": {
@@ -4683,7 +4682,7 @@
       "finance": "Banken & Financiën"
     },
     "disciplines": {
-      "label": "DE 6 NETWERKDISCIPLINES",
+      "label": "DE 6 NETWERKEXPERTISES",
       "intro": "Ons netwerk dekt alle expertise die nodig is om een organisatie te waarderen in elke fase van haar levenscyclus.",
       "items": [
         {
@@ -5307,7 +5306,7 @@
     "contactCta": "Contact opnemen"
   },
   "transactNarrative": {
-    "label": "Waardering & Overdracht",
+    "label": "Certificering & Overdracht",
     "title": "Waarde moet bewezen kunnen worden,\nzonder concessies.",
     "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke begeleiding in elke fase van de levenscyclus.",
     "stat1Val": "100%",
@@ -7241,7 +7240,7 @@
           "lifecycle"
         ],
         "q": "Wie is Aegryn en wat doen jullie?",
-        "a": "Aegryn is een Zwitsere advies- en certificeringsgroep die organisaties begeleidt in elke fase van hun levenscyclus: strategie, technologie, compliance, talent, waardering en overdracht. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
+        "a": "Aegryn is een Zwitsere advies- en certificeringsgroep die organisaties begeleidt in elke fase van hun levenscyclus: advies, asset-opbouw, levenscyclus-transities, talent en informatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
       },
       {
         "id": "what-differentiates",
@@ -7687,7 +7686,6 @@
     "security": "Beveiliging",
     "faq": "FAQ",
     "groupValoriser": "Doorlopen",
-    "valoriser": "Doorlopen — Introductie",
     "valoriserLancement": "Lancering & Structurering",
     "valoriserCroissance": "Groei & Opschaling",
     "valoriserRestructuration": "Herstructurering & Pivot",
@@ -10079,7 +10077,7 @@
     "workWith": {
       "label": "WERKEN MET AEGRYN",
       "title": "Vijf disciplines.\nÉén relatie.",
-      "sub": "Advies, bouw, waardering, talent, kennis: geïntegreerd in één groep, gedragen door dezelfde standaarden.",
+      "sub": "Advies, bouw, transities, talent, informatie: geïntegreerd in één groep, gedragen door dezelfde standaarden.",
       "items": [
         {
           "key": "accompagner",
@@ -10100,10 +10098,10 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "WAARDEREN",
-          "desc": "CIFSO 5000-certificering, gedocumenteerde waardering en begeleiding van de overdracht in een vertrouwelijk kader. Een gestructureerd, gegradeerd proces zonder publieke blootstelling.",
+          "title": "DOORLOPEN",
+          "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering — waarde wordt in elke fase opgebouwd en bewezen.",
           "cta": "Ontdek Doorlopen",
-          "href": "/valoriser"
+          "href": "/#franchir"
         },
         {
           "key": "recruter",

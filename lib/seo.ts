@@ -32,7 +32,7 @@ const BASE_KEYWORDS = [
   'cabinet conseil tech suisse', 'cabinet conseil valorisation', 'Swiss advisory group',
   'digital assets', 'actifs numériques', 'valorisation entreprise', 'organisation value',
   'valeur entreprise tech', 'cycle de vie entreprise', 'organisation lifecycle',
-  'Aegryn Valoriser', 'valoriser son entreprise', 'certification valeur entreprise',
+  'Aegryn Franchir', 'valoriser son entreprise', 'certification valeur entreprise',
   'lancement structuration entreprise', 'croissance mise à l\'échelle', 'restructuration pivot',
   'croissance externe', 'transmission entreprise', 'préparer transmission entreprise',
   'accompagnement dirigeant', 'entreprise transmissible', 'business transferability',
@@ -335,9 +335,9 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Valoriser',
+          name: 'Aegryn Franchir',
           description: 'Value measurement, certification and realization across the organisation lifecycle: launch, growth, restructuring, acquisition, transfer. Europe & Switzerland.',
-          url: `${BASE_URL}/en/valoriser`,
+          url: `${BASE_URL}/en#franchir`,
         },
       },
       {
@@ -404,7 +404,7 @@ export const aegrynSiteNavigationSchema = {
   name: 'Aegryn Site Navigation',
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',                       url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'Valoriser',                     url: `${BASE_URL}/fr/valoriser` },
+    { '@type': 'ListItem', position: 2,  name: 'Franchir',                      url: `${BASE_URL}/fr#franchir` },
     { '@type': 'ListItem', position: 3,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/franchir/transmission` },
     { '@type': 'ListItem', position: 4,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/franchir/acquisition` },
     { '@type': 'ListItem', position: 5,  name: 'Réseau d\'experts',             url: `${BASE_URL}/fr/network` },
@@ -480,7 +480,7 @@ export function generateTransactionSchema({
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
       '@type': 'VirtualLocation',
-      url: `${BASE_URL}/en/valoriser`,
+      url: `${BASE_URL}/en#franchir`,
     },
     ...(startDate ? { startDate } : {}),
     ...(endDate   ? { endDate }   : {}),
