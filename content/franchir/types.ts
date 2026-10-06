@@ -18,6 +18,8 @@ export type MetierChip = 'strategie' | 'conformite' | 'technologie' | 'talent' |
 export interface CycleSituation {
   /** La situation dans les mots du client (affichée entre guillemets) */
   quote:       string
+  /** Vignette optionnelle ; par defaut /images/franchir/situations/<cycle>-<position>.jpg */
+  image?:      string
   decision:    string
   /** Métiers mobilisés, affichés en puces liées */
   metiers:     MetierChip[]

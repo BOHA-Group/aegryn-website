@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { AdvisoryDiagnostic } from '@/components/advisory/AdvisoryDiagnostic'
-import { FRANCHIR_UI, METIER_HREF, METIER_LABELS } from '@/content/franchir/ui'
+import { FRANCHIR_UI, METIER_HREF, METIER_LABELS, CYCLE_IMAGES } from '@/content/franchir/ui'
 import { getCycleAction } from '@/content/franchir/actions'
 import { routing } from '@/i18n/routing'
 import type { CycleContent, MetierChip } from '@/content/franchir/types'
@@ -75,8 +76,19 @@ export function CyclePage({ content: c, locale }: Props) {
   return (
     <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {/* ── 1. Hero : titre, sous-titre, trois verbes ── */}
+      {/* ── 1. Hero : visuel, titre, sous-titre, trois verbes ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12">
+        <Image
+          src={CYCLE_IMAGES[c.slug].hero}
+          alt={ui.heroAlt[c.slug]}
+          fill
+          priority
+          fetchPriority="high"
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
@@ -116,11 +128,25 @@ export function CyclePage({ content: c, locale }: Props) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {c.situations.items.map((s, i) => (
-              <article key={i} className={`${CARD} p-6 flex flex-col gap-4 hover:border-ag-navy/40 transition-colors`}>
-                <div className="flex items-start gap-4">
-                  <span className="font-mono text-[11px] text-ag-apex-ink tabular-nums shrink-0 pt-1">{String(i + 1).padStart(2, '0')}</span>
-                  <p className="font-sans font-bold text-[16px] text-ag-black leading-[1.35] tracking-[-0.01em]">« {s.quote} »</p>
+              <article key={i} className="group rounded-2xl bg-ag-white border border-ag-border overflow-hidden flex flex-col hover:border-ag-navy/40 transition-colors">
+                {/* Visuel + situation, format /advisory */}
+                <div className="relative h-[200px] overflow-hidden">
+                  <Image
+                    src={s.image ?? CYCLE_IMAGES[c.slug].situations[i]}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/50">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <p className="font-sans font-bold text-white text-[18px] leading-[1.3] tracking-[-0.01em]">« {s.quote} »</p>
+                  </div>
                 </div>
+                <div className="p-6 flex flex-col gap-4 flex-1">
                 <div>
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-apex-ink mb-1.5">{ui.decision}</p>
                   <p className="font-sans text-[13.5px] text-ag-black leading-relaxed">{s.decision}</p>
@@ -136,6 +162,7 @@ export function CyclePage({ content: c, locale }: Props) {
                       <MetierChipLink key={m} m={m} labels={metierLabels} L={L} />
                     ))}
                   </div>
+                </div>
                 </div>
               </article>
             ))}
