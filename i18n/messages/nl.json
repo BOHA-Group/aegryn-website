@@ -309,7 +309,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Strategie-, technologie- en M&A-advies voor Europese techbedrijven",
+    "strip": "Aegryn Advisory | Geïntegreerd advies voor Europese tech-organisaties",
     "cta": "Contact opnemen",
     "hero": {
       "title": "Begeleiden wat jij bouwt.",
@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ADVISEREN",
-        "desc": "Strategisch, technologisch en M&A-advies. We interveniëren wanneer beslissingen de koers van een organisatie bepalen. Geen aanbevelingen. Resultaten."
+        "desc": "Geïntegreerd advies over de beslissingen die tellen: we interveniëren wanneer ze de koers van een organisatie bepalen — transformatie, pivot, overname of overdracht."
       },
       {
         "title": "BOUWEN",
@@ -4746,12 +4746,12 @@
   "network": {
     "meta": {
       "title": "Vakexperts | Aegryn",
-      "desc": "Het Aegryn-netwerk: betrouwbare partners en mobiliseerbare experts voor advies op het gebied van strategie, technologie en M&A in Zwitserland en Europa."
+      "desc": "Het Aegryn-netwerk: senior onafhankelijke experts, één voor één geselecteerd en ingezet op adviesopdrachten in Zwitserland en Europa."
     },
     "hero": {
       "label": "Aegryn Netwerk",
-      "title": "Vak-\nexperts.",
-      "desc": "Aegryn steunt op een zorgvuldig geselecteerd netwerk van partners en experts om elke dimensie van ons adviesdiensten te versterken: strategie, technologie, transacties.",
+      "title": "De juiste expert.\nOp de juiste missie.",
+      "desc": "Senior, onafhankelijke en geverifieerde specialisten — één voor één gekozen. Aegryn zet ze per geval in, naar de exacte behoefte van elke missie — geen vast team, geen anonieme pool.",
       "stat1": "Gekwalificeerde partners",
       "stat2": "Mobiliseerbare experts",
       "stat3": "Zwitserland & Europa"
@@ -4766,7 +4766,7 @@
     "experts": {
       "label": "ONZE EXPERTISE",
       "title": "De vaardigheden ingezet\nvoor elke opdracht.",
-      "desc": "Het Aegryn-expertennetwerk combineert interne capaciteiten (advies in strategie, technologie en M&A) met die van onze uitgebreide partners. Elk profiel wordt gemobiliseerd op basis van de specifieke behoeften van het dossier.",
+      "desc": "Het Aegryn-netwerk combineert interne competenties met geselecteerde externe experts. Elk profiel wordt ingezet naar de specifieke behoeften van het dossier.",
       "profilesLabel": "Illustratieve profielen",
       "comingSoonTitle": "Register in opbouw",
       "comingSoonDesc": "Individuele expertprofielen worden geleidelijk gepubliceerd. Deze sectie illustreert de soorten mobiliseerbare profielen over de adviesinstrumenten van Aegryn.",

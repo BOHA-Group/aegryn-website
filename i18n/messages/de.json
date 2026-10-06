@@ -309,7 +309,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Strategie-, Technologie- und M&A-Beratung für europäische Tech-Unternehmen",
+    "strip": "Aegryn Advisory | Integrierte Beratung für europäische Tech-Organisationen",
     "cta": "Kontakt aufnehmen",
     "hero": {
       "title": "Begleiten, was Sie aufbauen.",
@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "BERATEN",
-        "desc": "Strategie-, Technologie- und M&A-Beratung. Wir intervenieren, wenn Entscheidungen die Bahn einer Organisation definieren: Transformation, Pivot, Akquisition, Übertragung. Keine Empfehlungen. Ergebnisse."
+        "desc": "Integrierte Beratung bei den Entscheidungen, die zählen: wir intervenieren, wenn sie die Bahn einer Organisation definieren — Transformation, Pivot, Akquisition oder Übergabe."
       },
       {
         "title": "AUFBAUEN",
@@ -4746,12 +4746,12 @@
   "network": {
     "meta": {
       "title": "Fachexperten | Aegryn",
-      "desc": "Das Aegryn-Netzwerk: vertrauenswürdige Partner und mobilisierbare Experten für Strategie-, Technologie- und M&A-Beratung in der Schweiz und Europa."
+      "desc": "Das Aegryn-Netzwerk: unabhängige Senior-Experten, einzeln ausgewählt und für Beratungsmandate in der Schweiz und Europa mobilisiert."
     },
     "hero": {
       "label": "Aegryn Netzwerk",
-      "title": "Fach-\nexperten.",
-      "desc": "Aegryn stützt sich auf ein ausgewähltes Netzwerk von Partnern und Experten, um jede Dimension unseres Beratungsangebots zu stärken: Strategie, Technologie, Transaktionen.",
+      "title": "Der richtige Experte.\nFür den richtigen Auftrag.",
+      "desc": "Unabhängige, geprüfte Senior-Spezialisten — einzeln ausgewählt. Aegryn setzt sie fallweise ein, je nach exaktem Bedarf des Mandats — kein festes Team, kein anonymer Pool.",
       "stat1": "Qualifizierte Partner",
       "stat2": "Mobilisierbare Experten",
       "stat3": "Schweiz & Europa"
@@ -4766,7 +4766,7 @@
     "experts": {
       "label": "UNSERE EXPERTISE",
       "title": "Die Kompetenzen für\njeden Auftrag.",
-      "desc": "Das Aegryn-Expertennetzwerk vereint interne Fähigkeiten (Strategie-, Technologie- und M&A-Beratung) mit denen unserer erweiterten Partner. Jedes Profil wird je nach spezifischen Anforderungen des Mandats mobilisiert.",
+      "desc": "Das Aegryn-Netzwerk kombiniert interne Kompetenzen mit ausgewählten externen Experten. Jedes Profil wird je nach spezifischem Bedarf des Dossiers eingesetzt.",
       "profilesLabel": "Illustrative Profile",
       "comingSoonTitle": "Verzeichnis im Aufbau",
       "comingSoonDesc": "Individuelle Expertenprofile werden schrittweise veröffentlicht. Dieser Abschnitt illustriert die mobilisierbaren Profiltypen über die Beratungsdimensionen von Aegryn.",

@@ -309,7 +309,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Consulenza in strategia, tecnologia e M&A per aziende tech europee",
+    "strip": "Aegryn Advisory | Consulenza integrata per organizzazioni tech europee",
     "cta": "Contattaci",
     "hero": {
       "title": "Accompagnare ciò che costruisci.",
@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ACCOMPAGNARE",
-        "desc": "Consulenza strategica, tecnologica e di M&A. Interveniamo quando le decisioni definiscono la traiettoria di un'organizzazione. Non raccomandazioni. Risultati."
+        "desc": "Consulenza integrata sulle decisioni che contano: interveniamo quando definiscono la traiettoria di un'organizzazione — trasformazione, pivot, acquisizione o trasmissione."
       },
       {
         "title": "COSTRUIRE",
@@ -4746,12 +4746,12 @@
   "network": {
     "meta": {
       "title": "Esperti di mestiere | Aegryn",
-      "desc": "La rete Aegryn: partner di fiducia ed esperti mobilizzabili per consulenza in strategia, tecnologia e M&A in Svizzera e in Europa."
+      "desc": "La rete Aegryn: esperti senior indipendenti, selezionati uno a uno e mobilitati su incarichi di consulenza in Svizzera e in Europa."
     },
     "hero": {
       "label": "Rete Aegryn",
-      "title": "Esperti\ndi mestiere.",
-      "desc": "Aegryn si avvale di una rete selezionata di partner ed esperti per rafforzare ogni dimensione della nostra offerta di consulenza: strategia, tecnologia, transazioni.",
+      "title": "L'esperto giusto.\nSulla missione giusta.",
+      "desc": "Specialisti senior, indipendenti e verificati — scelti uno a uno. Aegryn li mobilita caso per caso, secondo il bisogno esatto di ogni incarico — né squadra permanente, né pool anonimo.",
       "stat1": "Partner qualificati",
       "stat2": "Esperti mobilizzabili",
       "stat3": "Svizzera & Europa"
@@ -4766,7 +4766,7 @@
     "experts": {
       "label": "LE NOSTRE COMPETENZE",
       "title": "Le competenze mobilitate\nper ogni missione.",
-      "desc": "La rete di esperti Aegryn combina le capacità interne (consulenza in strategia, tecnologia e M&A) con quelle dei nostri partner estesi. Ogni profilo viene mobilizzato in base alle esigenze specifiche del dossier.",
+      "desc": "La rete Aegryn combina competenze interne ed esperti esterni selezionati. Ogni profilo è mobilitato secondo le esigenze specifiche del dossier.",
       "profilesLabel": "Profili illustrativi",
       "comingSoonTitle": "Registro in costruzione",
       "comingSoonDesc": "I profili di esperti individuali saranno pubblicati progressivamente. Questa sezione illustra i tipi di profili mobilizzabili nelle dimensioni di consulenza Aegryn.",

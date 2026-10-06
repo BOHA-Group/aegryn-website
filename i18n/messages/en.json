@@ -309,7 +309,7 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Strategy, technology and M&A consulting for European tech companies",
+    "strip": "Aegryn Advisory | Integrated advisory for European tech organisations",
     "cta": "Get in touch",
     "hero": {
       "title": "Supporting what you build.",
@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ADVISE",
-        "desc": "Strategic, technology and M&A advisory. We intervene when decisions define the trajectory of an organisation: transformation, pivot, acquisition, transmission. Not recommendations. Results."
+        "desc": "Integrated advisory on the decisions that matter: we intervene when they define the trajectory of an organisation — transformation, pivot, acquisition or succession."
       },
       {
         "title": "BUILD",
@@ -4761,12 +4761,12 @@
   "network": {
     "meta": {
       "title": "Domain Experts | Aegryn",
-      "desc": "The Aegryn network: trusted partners and mobilisable experts for strategy, technology and M&A advisory across Switzerland and Europe."
+      "desc": "The Aegryn network: senior independent experts, selected one by one and deployed on advisory missions across Switzerland and Europe."
     },
     "hero": {
       "label": "Aegryn Network",
-      "title": "Domain\nexperts.",
-      "desc": "Aegryn relies on a curated network of partners and experts to reinforce every dimension of our advisory offering: strategy, technology, transactions.",
+      "title": "The right expert.\nOn the right mission.",
+      "desc": "Senior, independent, vetted specialists — chosen one by one. Aegryn deploys them case by case, according to each mission's exact need — no permanent bench, no anonymous pool.",
       "stat1": "Qualified partners",
       "stat2": "Mobilisable experts",
       "stat3": "Switzerland & Europe"
@@ -4781,7 +4781,7 @@
     "experts": {
       "label": "OUR EXPERTISE",
       "title": "The skills mobilised\nfor each engagement.",
-      "desc": "The Aegryn expert network combines internal capabilities (strategy, technology, M&A advisory) with those of our extended partners. Each profile is mobilised based on the specific needs of the assignment.",
+      "desc": "The Aegryn network combines in-house capabilities with selected external experts. Each profile is deployed according to the dossier's specific needs.",
       "profilesLabel": "Illustrative profiles",
       "comingSoonTitle": "Directory under construction",
       "comingSoonDesc": "Individual expert profiles will be published progressively. This section illustrates the types of profiles mobilisable across Aegryn advisory dimensions.",
