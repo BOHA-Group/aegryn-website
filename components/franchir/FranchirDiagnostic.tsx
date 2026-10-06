@@ -36,13 +36,18 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        className={`w-full py-6 flex items-center justify-between gap-6 text-left group${open ? ' border-b border-ag-border' : ''}`}
+        className={`w-full py-6 flex items-center gap-5 text-left group${open ? ' border-b border-ag-border' : ''}`}
       >
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] group-hover:text-ag-navy transition-colors">{title}</h3>
-        <ChevronDown
-          size={18}
-          className={`shrink-0 text-ag-gray-light transition-transform duration-200 ${open ? 'rotate-180' : 'animate-pulse'}`}
-        />
+        <span className="flex items-center gap-2 shrink-0 translate-y-[3px]">
+          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light group-hover:text-ag-navy transition-colors">
+            {open ? ui.diagClose : ui.diagOpen}
+          </span>
+          <ChevronDown
+            size={18}
+            className={`shrink-0 text-ag-gray-light group-hover:text-ag-navy transition-all duration-200 ${open ? 'rotate-180' : 'animate-pulse'}`}
+          />
+        </span>
       </button>
 
       {open && (
