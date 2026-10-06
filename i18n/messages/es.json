@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ASESORAR",
-        "desc": "Asesoría integrada sobre las decisiones que cuentan: intervenimos cuando definen la trayectoria de una organización — transformación, pivote, adquisición o transmisión."
+        "desc": "Asesoría integrada sobre las decisiones que cuentan: intervenimos cuando definen la trayectoria de una organización: transformación, pivote, adquisición o transmisión."
       },
       {
         "title": "CONSTRUIR",
@@ -1504,6 +1504,13 @@
         "Confidencialidad firmada para cada expediente.",
         "Asignación de misiones según competencia, independencia y disponibilidad."
       ]
+    },
+    "partners": {
+      "label": "NUESTROS SOCIOS",
+      "badge": "Firmas & auditores",
+      "title": "Las estructuras independientes que contribuyen a la certificación.",
+      "desc": "Firmas de auditoría y asesoría y especialistas independientes movilizados sobre las dimensiones CIFSO 5000, respetando las reglas de independencia.",
+      "note": "Los logos representan a nuestros socios activos. Aegryn no divulga los términos de las asociaciones individuales."
     }
   },
   "contact": {
@@ -4751,7 +4758,7 @@
     "hero": {
       "label": "Red Aegryn",
       "title": "El experto adecuado.\nEn la misión adecuada.",
-      "desc": "Especialistas senior, independientes y verificados — elegidos uno a uno. Aegryn los moviliza caso por caso, según la necesidad exacta de cada misión — ni equipo permanente, ni bolsa anónima.",
+      "desc": "Especialistas senior, independientes y verificados, elegidos uno a uno. Aegryn los moviliza caso por caso, según la necesidad exacta de cada misión: ni equipo permanente, ni bolsa anónima.",
       "stat1": "Socios cualificados",
       "stat2": "Expertos movilizables",
       "stat3": "Suiza & Europa"
@@ -10827,6 +10834,13 @@
       "cta": "Hablemos de su cartera"
     },
     "metaTitle": "Inversores e Institucionales | Aegryn",
-    "metaDesc": "Aegryn actúa como operating partner para fondos, bancos y family offices: screening técnico, value creation post-adquisición, preparación de la transmisión."
+    "metaDesc": "Aegryn actúa como operating partner para fondos, bancos y family offices: screening técnico, value creation post-adquisición, preparación de la transmisión.",
+    "partners": {
+      "label": "NUESTROS SOCIOS",
+      "badge": "Instituciones & financieros",
+      "title": "Las instituciones que trabajan con Aegryn.",
+      "desc": "Bancos, fondos, family offices y estructuras de financiación asociados a los expedientes de nuestros clientes y a las organizaciones que acompañamos.",
+      "note": "Los logos representan a nuestros socios activos. Aegryn no divulga los términos de las asociaciones individuales."
+    }
   }
 }

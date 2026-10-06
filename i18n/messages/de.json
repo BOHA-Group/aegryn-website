@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "BERATEN",
-        "desc": "Integrierte Beratung bei den Entscheidungen, die zählen: wir intervenieren, wenn sie die Bahn einer Organisation definieren — Transformation, Pivot, Akquisition oder Übergabe."
+        "desc": "Integrierte Beratung bei den Entscheidungen, die zählen: wir intervenieren, wenn sie die Bahn einer Organisation definieren: Transformation, Pivot, Akquisition oder Übergabe."
       },
       {
         "title": "AUFBAUEN",
@@ -1406,7 +1406,7 @@
     "eyebrow": "CIFSO 5000-Zertifizierung",
     "title": "Ein Netzwerk unabhängiger Prüfer, keine Pflicht.",
     "intro1": "Die CIFSO 5000-Zertifizierung ist unabhängig: Aegryn bewertet und benotet die Qualität von Organisationen, ohne auf vorgegebene Prüfer angewiesen zu sein. Unabhängige Fachleute können beigezogen werden, um einzelne der fünf Dimensionen zu vertiefen.",
-    "intro2": "Wir bleiben offen für Bewerbungen unabhängiger Experten, die sich der Zertifizierung anschliessen oder unserem Netzwerk beitreten möchten — auf Abruf vor, während und nach einer Zertifizierung oder Begleitung einsetzbar.",
+    "intro2": "Wir bleiben offen für Bewerbungen unabhängiger Experten, die sich der Zertifizierung anschliessen oder unserem Netzwerk beitreten möchten, auf Abruf vor, während und nach einer Zertifizierung oder Begleitung einsetzbar.",
     "types": {
       "code": {
         "label": "CODE & TECH AUDIT",
@@ -1504,6 +1504,13 @@
         "Vertraulichkeit wird für jedes Dossier unterzeichnet.",
         "Mandate werden nach Kompetenz, Unabhängigkeit und Verfügbarkeit vergeben."
       ]
+    },
+    "partners": {
+      "label": "UNSERE PARTNER",
+      "badge": "Kanzleien & Auditoren",
+      "title": "Die unabhängigen Strukturen, die zur Zertifizierung beitragen.",
+      "desc": "Audit- und Beratungskanzleien sowie unabhängige Spezialisten, die auf den CIFSO-5000-Dimensionen eingesetzt werden, unter Einhaltung der Unabhängigkeitsregeln.",
+      "note": "Die Logos stehen für unsere aktiven Partner. Aegryn gibt die Bedingungen einzelner Partnerschaften nicht bekannt."
     }
   },
   "contact": {
@@ -4751,7 +4758,7 @@
     "hero": {
       "label": "Aegryn Netzwerk",
       "title": "Der richtige Experte.\nFür den richtigen Auftrag.",
-      "desc": "Unabhängige, geprüfte Senior-Spezialisten — einzeln ausgewählt. Aegryn setzt sie fallweise ein, je nach exaktem Bedarf des Mandats — kein festes Team, kein anonymer Pool.",
+      "desc": "Unabhängige, geprüfte Senior-Spezialisten, einzeln ausgewählt. Aegryn setzt sie fallweise ein, je nach exaktem Bedarf des Mandats: kein festes Team, kein anonymer Pool.",
       "stat1": "Qualifizierte Partner",
       "stat2": "Mobilisierbare Experten",
       "stat3": "Schweiz & Europa"
@@ -10827,6 +10834,13 @@
       "cta": "Sprechen wir über Ihr Portfolio"
     },
     "metaTitle": "Investoren & Institutionen | Aegryn",
-    "metaDesc": "Aegryn agiert als Operating Partner für Fonds, Banken und Family Offices: technisches Screening, Value Creation nach der Akquisition, Vorbereitung der Übergabe."
+    "metaDesc": "Aegryn agiert als Operating Partner für Fonds, Banken und Family Offices: technisches Screening, Value Creation nach der Akquisition, Vorbereitung der Übergabe.",
+    "partners": {
+      "label": "UNSERE PARTNER",
+      "badge": "Institutionen & Finanziers",
+      "title": "Die Institutionen, die mit Aegryn arbeiten.",
+      "desc": "Banken, Fonds, Family Offices und Finanzierungsstrukturen, die an den Dossiers unserer Kunden und den von uns begleiteten Organisationen beteiligt sind.",
+      "note": "Die Logos stehen für unsere aktiven Partner. Aegryn gibt die Bedingungen einzelner Partnerschaften nicht bekannt."
+    }
   }
 }

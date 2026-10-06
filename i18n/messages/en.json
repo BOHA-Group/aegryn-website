@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ADVISE",
-        "desc": "Integrated advisory on the decisions that matter: we intervene when they define the trajectory of an organisation — transformation, pivot, acquisition or succession."
+        "desc": "Integrated advisory on the decisions that matter: we intervene when they define the trajectory of an organisation: transformation, pivot, acquisition or succession."
       },
       {
         "title": "BUILD",
@@ -1504,6 +1504,13 @@
         "Confidentiality signed for each file.",
         "Assignments allocated according to competence, independence and availability."
       ]
+    },
+    "partners": {
+      "label": "OUR PARTNERS",
+      "badge": "Firms & auditors",
+      "title": "The independent structures contributing to certification.",
+      "desc": "Audit and advisory firms and independent specialists deployed on CIFSO 5000 dimensions, in compliance with the independence rules.",
+      "note": "Logos represent our active partners. Aegryn does not disclose the terms of individual partnerships."
     }
   },
   "contact": {
@@ -4766,7 +4773,7 @@
     "hero": {
       "label": "Aegryn Network",
       "title": "The right expert.\nOn the right mission.",
-      "desc": "Senior, independent, vetted specialists — chosen one by one. Aegryn deploys them case by case, according to each mission's exact need — no permanent bench, no anonymous pool.",
+      "desc": "Senior, independent, vetted specialists, chosen one by one. Aegryn deploys them case by case, according to each mission's exact need: no permanent bench, no anonymous pool.",
       "stat1": "Qualified partners",
       "stat2": "Mobilisable experts",
       "stat3": "Switzerland & Europe"
@@ -10827,6 +10834,13 @@
       "cta": "Let's discuss your portfolio"
     },
     "metaTitle": "Investors & Institutions | Aegryn",
-    "metaDesc": "Aegryn acts as operating partner for funds, banks and family offices: technical screening, post-acquisition value creation, transfer preparation."
+    "metaDesc": "Aegryn acts as operating partner for funds, banks and family offices: technical screening, post-acquisition value creation, transfer preparation.",
+    "partners": {
+      "label": "OUR PARTNERS",
+      "badge": "Institutions & financiers",
+      "title": "The institutions that work with Aegryn.",
+      "desc": "Banks, funds, family offices and financing structures involved in our clients' dossiers and the organisations we support.",
+      "note": "Logos represent our active partners. Aegryn does not disclose the terms of individual partnerships."
+    }
   }
 }

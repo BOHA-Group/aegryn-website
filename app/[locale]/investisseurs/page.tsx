@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, AlertTriangle, BarChart2, TrendingUp } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import PartnersSection from '@/components/sections/PartnersSection'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -173,6 +174,15 @@ export default async function InvestisseursPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Nos partenaires — institutions & financeurs */}
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+      />
 
       {/* CTA final */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">

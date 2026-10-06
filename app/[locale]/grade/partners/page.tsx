@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2, Users } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
+import PartnersSection from '@/components/sections/PartnersSection'
 
 export const metadata: Metadata = {
   title: 'Réseau d’auditeurs indépendants | Certification CIFSO 5000 | Aegryn',
@@ -125,6 +126,15 @@ export default async function GradePartnersPage() {
           </div>
         </div>
       </section>
+
+      {/* Nos partenaires — cabinets & auditeurs indépendants */}
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+      />
 
       {/* CTA partenaires potentiels */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">

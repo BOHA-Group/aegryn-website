@@ -7,7 +7,7 @@ import {
   ArrowUpRight, BrainCircuit, Scale, Cpu,
   Building2, Users, Globe, UserSearch, Landmark, ShieldCheck,
 } from 'lucide-react'
-import PartnersCarousel from '@/components/sections/PartnersCarousel'
+import PartnersSection from '@/components/sections/PartnersSection'
 import { GridFillers } from '@/components/ui/GridFillers'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
@@ -212,33 +212,13 @@ export default function NetworkContent() {
       </section>
 
       {/* ── Section 1 : Nos partenaires (structures externes) ── */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
-              {t('partners.label')}
-            </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
-              {t('partners.badge')}
-            </span>
-          </div>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] max-w-2xl mb-6"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('partners.title')}
-          </h2>
-          <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-6">
-            {t('partners.desc')}
-          </p>
-          <p className="font-sans text-[11px] text-ag-gray-light italic">
-            {t('partners.note')}
-          </p>
-          <div className="mt-10">
-            <PartnersCarousel />
-          </div>
-        </div>
-      </section>
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+      />
 
       {/* ── Section 2 : Nos expertises (Aegryn interne + partenaires par extension) ── */}
       <section className="border-b border-ag-border bg-ag-off-white">

@@ -828,7 +828,7 @@
     "items": [
       {
         "title": "ADVISEREN",
-        "desc": "Geïntegreerd advies over de beslissingen die tellen: we interveniëren wanneer ze de koers van een organisatie bepalen — transformatie, pivot, overname of overdracht."
+        "desc": "Geïntegreerd advies over de beslissingen die tellen: we interveniëren wanneer ze de koers van een organisatie bepalen: transformatie, pivot, overname of overdracht."
       },
       {
         "title": "BOUWEN",
@@ -1504,6 +1504,13 @@
         "Vertrouwelijkheid wordt voor elk dossier ondertekend.",
         "Opdrachten worden toegewezen op basis van competentie, onafhankelijkheid en beschikbaarheid."
       ]
+    },
+    "partners": {
+      "label": "ONZE PARTNERS",
+      "badge": "Kantoren & auditors",
+      "title": "De onafhankelijke structuren die bijdragen aan de certificering.",
+      "desc": "Audit- en advieskantoren en onafhankelijke specialisten ingezet op de CIFSO 5000-dimensies, conform de onafhankelijkheidsregels.",
+      "note": "De logo's vertegenwoordigen onze actieve partners. Aegryn maakt de voorwaarden van individuele samenwerkingen niet bekend."
     }
   },
   "contact": {
@@ -4751,7 +4758,7 @@
     "hero": {
       "label": "Aegryn Netwerk",
       "title": "De juiste expert.\nOp de juiste missie.",
-      "desc": "Senior, onafhankelijke en geverifieerde specialisten — één voor één gekozen. Aegryn zet ze per geval in, naar de exacte behoefte van elke missie — geen vast team, geen anonieme pool.",
+      "desc": "Senior, onafhankelijke en geverifieerde specialisten, één voor één gekozen. Aegryn zet ze per geval in, naar de exacte behoefte van elke missie: geen vast team, geen anonieme pool.",
       "stat1": "Gekwalificeerde partners",
       "stat2": "Mobiliseerbare experts",
       "stat3": "Zwitserland & Europa"
@@ -10827,6 +10834,13 @@
       "cta": "Laten we uw portefeuille bespreken"
     },
     "metaTitle": "Investeerders & Institutionelen | Aegryn",
-    "metaDesc": "Aegryn treedt op als operating partner voor fondsen, banken en family offices: technische screening, value creation na de acquisitie, voorbereiding van de overdracht."
+    "metaDesc": "Aegryn treedt op als operating partner voor fondsen, banken en family offices: technische screening, value creation na de acquisitie, voorbereiding van de overdracht.",
+    "partners": {
+      "label": "ONZE PARTNERS",
+      "badge": "Instellingen & financiers",
+      "title": "De instellingen die met Aegryn werken.",
+      "desc": "Banken, fondsen, family offices en financieringsstructuren betrokken bij de dossiers van onze klanten en de organisaties die wij begeleiden.",
+      "note": "De logo's vertegenwoordigen onze actieve partners. Aegryn maakt de voorwaarden van individuele samenwerkingen niet bekend."
+    }
   }
 }
