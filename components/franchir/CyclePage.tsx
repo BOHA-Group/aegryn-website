@@ -77,7 +77,10 @@ export function CyclePage({ content: c, locale }: Props) {
     <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* ── 1. Hero : visuel, titre, sous-titre, trois verbes ── */}
-      <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12">
+      <section
+        className="relative overflow-hidden bg-ag-navy pt-36 pb-32 px-6 md:px-12"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
         <Image
           src={CYCLE_IMAGES[c.slug].hero}
           alt={ui.heroAlt[c.slug]}
@@ -100,7 +103,7 @@ export function CyclePage({ content: c, locale }: Props) {
           >
             {c.h1}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 max-w-2xl leading-relaxed mb-8">{c.subtitle}</p>
+          <p className="font-sans text-[15px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50">
             {ui.whatWeDo}&nbsp;&nbsp;·&nbsp;&nbsp;
             <span className="text-ag-apex">{c.verbs.join(' · ')}</span>

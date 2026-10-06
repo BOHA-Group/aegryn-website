@@ -74,7 +74,10 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
     <main className="bg-ag-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12">
+      <section
+        className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
         <Image
           src={c.image}
           alt={c.imageAlt}

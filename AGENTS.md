@@ -31,3 +31,17 @@
 
 - Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). 5 disciplines : ACCOMPAGNER, CONSTRUIRE, FRANCHIR, RECRUTER, INFORMER. 5 métiers conseil : Stratégie & Innovation, Risques & Conformité, Technologie & Souveraineté, Talent & Organisation, M&A & PMI. Ne pas répéter l'énumération à chaque page, privilégier des formulations de fond.
 - `/transact/*` et le statut `escrow_paid` : archivés/désactivés (noindex, redirects, lecture seule) — ne pas réintroduire en UI active.
+
+## Heroes avec image en header — hauteur standard
+
+Toutes les pages à hero photo pleine (`Image fill` sur fond navy) utilisent
+le même plancher de hauteur pour garantir une harmonie visuelle :
+
+- `style={{ minHeight: 'clamp(460px,50vw,620px)' }}` sur la section hero
+- Templates concernés : `AdvisoryPillarPage`, `franchir/CyclePage`, `industries/[slug]`
+- Le contenu long (h1 3 lignes, locales DE/NL) peut dépasser : le plancher
+  assure l'uniformité sans tronquer.
+- Exclus volontairement : heroes signature `/` (96vh) et `/about` (88vh) —
+  format landing distinct.
+
+Toute nouvelle page avec image en header doit réutiliser ce minHeight.

@@ -56,7 +56,7 @@ export default async function IndustryDetailPage({ params }: Props) {
       {/* ════════════════════════════════════════════════════════
           HERO — photo pleine + titre bold
       ════════════════════════════════════════════════════════ */}
-      <section className="relative bg-ag-navy overflow-hidden" style={{ minHeight: 'clamp(380px, 45vw, 560px)' }}>
+      <section className="relative bg-ag-navy overflow-hidden" style={{ minHeight: 'clamp(460px, 50vw, 620px)' }}>
         <Image
           src={ind.img}
           alt={getLocaleText(ind.imgAlt, locale)}

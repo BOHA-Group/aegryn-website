@@ -6,7 +6,7 @@ Stockage local (pas de hotlink), affichage via next/image avec voile sombre (cha
 
 | Fichier | Page | Source |
 |---|---|---|
-| strategy-towers.jpg | /advisory/strategy | https://unsplash.com/photos/1486406146926-c627a92ad1ab |
+| strategy-towers.webp | /advisory/strategy | https://unsplash.com/photos/1529699211952-734e80c4d42b |
 | risk-compliance.jpg | /advisory/risk-compliance | https://unsplash.com/photos/1450101499163-c8848c66ca85 |
 | technology.jpg | /advisory/technology | https://unsplash.com/photos/1558494949-ef010cbdcc31 |
 | talent.jpg | /advisory/talent-organization | https://unsplash.com/photos/1431540015161-0bf868a2d407 |
