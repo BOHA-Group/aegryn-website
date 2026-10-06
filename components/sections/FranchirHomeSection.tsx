@@ -25,30 +25,30 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
   return (
     <section id="franchir" className="scroll-mt-20">
       {/* ── Intro : texte + image montagne illustrative ── */}
-      <div className="bg-ag-navy py-20 px-6">
+      <div className="bg-ag-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
               <span className="w-6 h-px bg-ag-apex/50 inline-block" />
               {c.eyebrow}
             </p>
             <h2
-              className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-6"
+              className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] mb-6"
               style={{ fontSize: 'clamp(30px,4vw,56px)' }}
             >
               {c.heroTitle}
             </h2>
-            <p className="font-sans text-[15px] text-white/55 max-w-xl mb-10 leading-relaxed">
+            <p className="font-sans text-[15px] text-ag-gray max-w-xl mb-10 leading-relaxed">
               {c.heroSub}
             </p>
             <Link
               href={echangeHref}
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-navy-mid transition-colors"
             >
               {c.cta.label} <ArrowUpRight size={13} />
             </Link>
           </div>
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-white/10">
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-ag-border">
             <Image
               src="/images/transact/hero-valorisation.webp"
               alt="Aegryn Group"
@@ -126,17 +126,17 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
       </div>
 
       {/* ── Lien vers les actifs + CTA ── */}
-      <div className="bg-ag-navy py-16 px-6 border-t border-white/10">
+      <div className="bg-ag-off-white py-16 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <p className="font-sans text-[14px] text-white/60 leading-relaxed max-w-md">
+          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md">
             {c.assetsLink.text}{' '}
-            <Link href={L('/assets')} className="text-ag-apex hover:text-white underline underline-offset-4 transition-colors">
+            <Link href={L('/assets')} className="text-ag-apex-ink hover:text-ag-black underline underline-offset-4 transition-colors">
               {c.assetsLink.label}
             </Link>
           </p>
           <Link
             href={echangeHref}
-            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-navy-mid transition-colors"
           >
             {c.cta.label} <ArrowUpRight size={13} />
           </Link>
