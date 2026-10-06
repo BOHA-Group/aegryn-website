@@ -2335,7 +2335,7 @@
         "iconKey": "referral",
         "theme": "Partners",
         "title": "Referral programme",
-        "desc": "Partner experts can refer other certifiers. Subscription credits.",
+        "desc": "Partner experts can refer other certifiers.",
         "live": true
       },
       {
@@ -6886,7 +6886,7 @@
         "items": [
           "Communicate with you, in particular to respond to your requests and exercise your rights.",
           "Inform you about our services and offerings.",
-          "Manage your account and subscription (registration, billing, referral programme).",
+          "Manage your account and your access (registration, billing, referrals).",
           "Process NDA access requests for asset dossiers and retain signature records.",
           "Conduct CIFSO 5000 certification missions (collection and evaluation of seller dossiers).",
           "Generate traffic statistics useful for improving our website.",
@@ -6932,7 +6932,7 @@
           ],
           [
             "Stripe",
-            "Payment processing and Expert subscription management.",
+            "Payment processing and management of access to Expert services.",
             "EEA/USA"
           ],
           [
@@ -7428,7 +7428,8 @@
     "offerAmountStatus": "Offer of {amount}, status: {status}",
     "confidentialityTitle": "Confidentiality",
     "confidentialityText": "The information presented in this file is strictly reserved for qualified buyers who have signed an NDA. Any disclosure is prohibited.",
-    "catalogSubtitle": "Certified and published assets, access restricted to qualified buyers."
+    "catalogSubtitle": "Certified and published assets, access restricted to qualified buyers.",
+    "navAnnuaire": "Directory"
   },
   "comingSoon": {
     "label": "Coming soon",
@@ -8127,7 +8128,7 @@
     "waitlist": {
       "label": "Are you an expert?",
       "title": "Join the network.",
-      "desc": "The Aegryn expert network is opening. Submit your application, our team reviews every profile and will contact you for a qualification interview. Access is via a monthly listing subscription (CHF 89 excl. VAT/month).",
+      "desc": "The Aegryn expert network is opening. Submit your application: our team reviews every profile and will contact you for a qualification interview. Network access is reserved for validated profiles.",
       "fieldPrenom": "First name",
       "fieldNom": "Last name",
       "fieldEmail": "Professional email",

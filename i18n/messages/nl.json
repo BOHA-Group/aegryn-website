@@ -3177,7 +3177,7 @@
         "iconKey": "referral",
         "theme": "Partners",
         "title": "Verwijzingsprogramma",
-        "desc": "Partnerexperts kunnen andere certificeerders verwijzen. Abonnementcredits.",
+        "desc": "Partnerexperts kunnen andere certificeerders aanbevelen.",
         "live": true
       },
       {
@@ -6886,7 +6886,7 @@
         "items": [
           "Met u te communiceren, in het bijzonder om uw verzoeken te beantwoorden en uw rechten uit te oefenen.",
           "U te informeren over onze diensten en aanbiedingen.",
-          "Uw account en abonnement te beheren (registratie, facturatie, verwijzingsprogramma).",
+          "Beheer uw account en uw toegangen (registratie, facturering, verwijzingen).",
           "NDA-toegangsverzoeken voor assetdossiers te verwerken en ondertekeningsregistraties te bewaren.",
           "CIFSO 5000-certificeringsopdrachten uit te voeren (verzameling en evaluatie van verkopersdossiers).",
           "Verkeersstatistieken te genereren die nuttig zijn voor het verbeteren van onze website.",
@@ -6932,7 +6932,7 @@
           ],
           [
             "Stripe",
-            "Betalingsverwerking en beheer van Expert-abonnementen.",
+            "Betalingsverwerking en beheer van toegang tot Expert-services.",
             "EER/VS"
           ],
           [
@@ -7428,7 +7428,8 @@
     "offerAmountStatus": "Bod van {amount}, status: {status}",
     "confidentialityTitle": "Vertrouwelijkheid",
     "confidentialityText": "De informatie in dit dossier is strikt voorbehouden aan gekwalificeerde kopers die een NDA hebben ondertekend. Elke openbaarmaking is verboden.",
-    "catalogSubtitle": "Gecertificeerde en gepubliceerde activa, toegang voorbehouden aan gekwalificeerde kopers."
+    "catalogSubtitle": "Gecertificeerde en gepubliceerde activa, toegang voorbehouden aan gekwalificeerde kopers.",
+    "navAnnuaire": "Gids"
   },
   "comingSoon": {
     "label": "Binnenkort beschikbaar",
@@ -8127,7 +8128,7 @@
     "waitlist": {
       "label": "Bent u een expert?",
       "title": "Word lid van het netwerk.",
-      "desc": "Het Aegryn-expertnetwerk opent. Dien uw kandidatuur in; ons team beoordeelt elk profiel en neemt contact met u op voor een kwalificatiegesprek. Toegang verloopt via een maandelijks vermeldingsabonnement (CHF 89 excl. btw/maand).",
+      "desc": "Het Aegryn-expertnetwerk wordt geopend. Dien uw kandidatuur in: ons team beoordeelt elk profiel en neemt contact met u op voor een kwalificatiegesprek. Toegang tot het netwerk is voorbehouden aan gevalideerde profielen.",
       "fieldPrenom": "Voornaam",
       "fieldNom": "Achternaam",
       "fieldEmail": "Professioneel e-mailadres",

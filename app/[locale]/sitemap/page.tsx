@@ -30,7 +30,6 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'acquisition',  href: '/services/acquisition-support' },
       { labelKey: 'alliances',    href: '/alliances' },
       { labelKey: 'experts',      href: '/experts' },
-      { labelKey: 'annuaire',     href: '/annuaire' },
       { labelKey: 'valuation',    href: '/valuation' },
     ],
   },

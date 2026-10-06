@@ -34,7 +34,7 @@ export default async function ClientLayout({ children }: { children: React.React
       else if (roles.includes('client'))                                label = 'Mon espace'
       else if (roles.includes('partner'))                               label = t('spaceNamePartner')
       else if (roles.includes('seller') && !roles.includes('buyer'))   label = t('spaceNameSeller')
-      else                                                               label = t('spaceNameBuyer')
+      else                                                               label = 'Mon espace'
       navUser = { name: profile?.full_name ?? user.email ?? '', label }
     }
   } catch { /* pages auth : pas de session, navbar publique */ }

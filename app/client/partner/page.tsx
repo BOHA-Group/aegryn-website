@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { Award, Users, Bell, ArrowUpRight, CreditCard } from 'lucide-react'
+import { Award, Users, Bell, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dashboard — Partner Space Aegryn',
@@ -76,7 +76,6 @@ export default async function PartnerDashboardPage() {
 
   const displayName = profile?.full_name ?? user.email ?? ''
   const unreadCount = (notifications ?? []).filter(n => !n.read_at).length
-  const expertPlan  = (profile as Record<string, unknown> | null)?.expert_plan as string | null
 
   const activeCertCount = (certifications as unknown[] ?? []).filter(c =>
     ['assigned', 'in_review'].includes((c as Certification).status)
@@ -130,17 +129,6 @@ export default async function PartnerDashboardPage() {
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiIntroductions')}</p>
         </Link>
 
-        <Link href="/client/partner/subscription"
-          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group col-span-2">
-          <div className="flex items-center justify-between mb-3">
-            <CreditCard size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
-            <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-          </div>
-          <p className={`font-mono font-bold text-[13px] ${expertPlan === 'active' ? 'text-emerald-600' : 'text-amber-600'}`}>
-            {expertPlan === 'active' ? t('subscriptionActive') : t('subscriptionInactive')}
-          </p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('subscriptionDesc')}</p>
-        </Link>
       </div>
 
       {/* Co-signatures actives */}

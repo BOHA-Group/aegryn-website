@@ -26,7 +26,7 @@ export default async function SellerLayout({ children }: { children: React.React
   /* Client demandeur de certification CIFSO (sans rôle cédant) : accès dossiers + data room,
      sans transactions ni NDA cédant (CGV + NDA acceptés lors de la demande de certification) */
   const certificationOnly = !isSeller && roles.includes('client')
-  if (!isSeller && !certificationOnly) redirect('/client/buyer')
+  if (!isSeller && !certificationOnly) redirect('/client/account')
 
   if (isSeller) {
     const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at

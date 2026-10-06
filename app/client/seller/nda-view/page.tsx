@@ -38,7 +38,7 @@ export default async function SellerNdaViewPage() {
   if (!p?.seller_nda_accepted_at) redirect('/client/nda/seller')
 
   const roles = Array.isArray(p?.roles) ? p.roles as string[] : []
-  if (!roles.includes('seller')) redirect('/client/buyer')
+  if (!roles.includes('seller')) redirect('/client/account')
 
   const signedDate = new Date(p.seller_nda_accepted_at!).toLocaleDateString('fr-CH', {
     day: '2-digit', month: 'long', year: 'numeric',

@@ -104,7 +104,10 @@ async function checkAccess(
 
   if (asset?.seller_email === profile.email) return true
 
-  /* Partenaire assigné */
+  /* Partenaire CIFSO assigné — data room de certification uniquement.
+     Les tiers 'light_buyers' / 'nda_buyers' (hérités du périmètre enchères)
+     ne donnent plus d'accès aux profils client : ils sont réservés à la
+     future data room acquisition/cession, à structurer séparément. */
   if (doc.visible_to === 'assigned_partner' || doc.visible_to === 'nda_buyers') {
     /* Périmètre : uniquement la dimension du mandat (les pièces transversales, sans dimension, restent accessibles) */
     const docDim = (doc as unknown as { dimension?: string | null }).dimension ?? null
@@ -117,37 +120,6 @@ async function checkAccess(
     if (docDim) q = q.eq('dimension', docDim)
     const { data: cert } = await q.limit(1).maybeSingle()
     if (cert) return true
-  }
-
-  /* Acheteur light : KYC approuvé + demande light approved */
-  if (doc.visible_to === 'light_buyers') {
-    const { data: lightProfile } = await supa
-      .from('profiles')
-      .select('kyc_status')
-      .eq('id', userId)
-      .single() as { data: { kyc_status: string | null } | null }
-
-    if (lightProfile?.kyc_status === 'approved') {
-      const { data: lightReq } = await supa
-        .from('data_room_light_requests')
-        .select('id')
-        .eq('asset_id', doc.asset_id)
-        .eq('user_id', userId)
-        .eq('status', 'approved')
-        .maybeSingle()
-      if (lightReq) return true
-    }
-  }
-
-  /* Acheteur NDA : le NDA est global — auction_nda_signed_at suffit */
-  if (doc.visible_to === 'nda_buyers') {
-    const { data: ndaProfile } = await supa
-      .from('profiles')
-      .select('auction_nda_signed_at')
-      .eq('id', userId)
-      .single() as { data: { auction_nda_signed_at: string | null } | null }
-
-    if (ndaProfile?.auction_nda_signed_at) return true
   }
 
   return false

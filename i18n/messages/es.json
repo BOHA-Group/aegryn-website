@@ -3177,7 +3177,7 @@
         "iconKey": "referral",
         "theme": "Socios",
         "title": "Programa de patrocinio",
-        "desc": "Los expertos socios pueden patrocinar a otros certificadores. Créditos de suscripción.",
+        "desc": "Los expertos socios pueden recomendar a otros certificadores.",
         "live": true
       },
       {
@@ -6871,7 +6871,7 @@
         "items": [
           "Comunicarnos con usted, en particular para responder a sus solicitudes y ejercer sus derechos.",
           "Informarle sobre nuestros servicios y ofertas.",
-          "Gestionar su cuenta y suscripción (registro, facturación, programa de referidos).",
+          "Gestiona tu cuenta y tus accesos (registro, facturación, recomendaciones).",
           "Tramitar solicitudes de acceso NDA a dossiers de activos y conservar los registros de firma.",
           "Realizar misiones de certificación CIFSO 5000 (recolección y evaluación de dossiers del vendedor).",
           "Generar estadísticas de tráfico útiles para mejorar nuestro sitio web.",
@@ -6917,7 +6917,7 @@
           ],
           [
             "Stripe",
-            "Procesamiento de pagos y gestión de suscripciones Expert.",
+            "Procesamiento de pagos y gestión de accesos a los servicios Expert.",
             "EEE/USA"
           ],
           [
@@ -7413,7 +7413,8 @@
     "offerAmountStatus": "Oferta de {amount}, estado: {status}",
     "confidentialityTitle": "Confidencialidad",
     "confidentialityText": "La información presentada en este expediente está estrictamente reservada a los compradores cualificados que hayan firmado un NDA. Cualquier divulgación está prohibida.",
-    "catalogSubtitle": "Activos certificados y publicados, acceso restringido a compradores cualificados."
+    "catalogSubtitle": "Activos certificados y publicados, acceso restringido a compradores cualificados.",
+    "navAnnuaire": "Directorio"
   },
   "comingSoon": {
     "label": "Próximamente",
@@ -8112,7 +8113,7 @@
     "waitlist": {
       "label": "¿Es usted experto?",
       "title": "Únase a la red.",
-      "desc": "La red de expertos Aegryn está abriéndose. Envíe su candidatura: nuestro equipo revisa cada perfil y le contactará para una entrevista de cualificación. El acceso se realiza mediante una suscripción mensual de referenciación (89 CHF + IVA/mes).",
+      "desc": "La red de expertos Aegryn está en fase de apertura. Envía tu candidatura: nuestro equipo examina cada perfil y te contactará para una entrevista de cualificación. El acceso a la red está reservado a los perfiles validados.",
       "fieldPrenom": "Nombre",
       "fieldNom": "Apellido",
       "fieldEmail": "Email profesional",

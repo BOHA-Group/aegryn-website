@@ -1,9 +1,10 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, getLocale } from 'next-intl/server'
 import SideNav from '@/app/client/SideNav'
 import type { NavGroup } from '@/app/client/SideNav'
 
 export default async function PartnerNav({ unreadCount: _unreadCount }: { unreadCount: number }) {
   const t = await getTranslations('clientSpace')
+  const locale = await getLocale()
 
   const groups: NavGroup[] = [
     {
@@ -16,6 +17,7 @@ export default async function PartnerNav({ unreadCount: _unreadCount }: { unread
       label: 'Ma fiche',
       items: [
         { href: '/client/partner/expert-profile', label: t('navExpertProfile') || 'Fiche expert', icon: 'BadgeCheck' },
+        { href: `/${locale}/annuaire`,            label: t('navAnnuaire') || 'Annuaire',           icon: 'BookOpen' },
       ],
     },
     {

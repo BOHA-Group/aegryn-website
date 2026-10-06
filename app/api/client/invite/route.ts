@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
           ? '/client/seller'
           : (body.role === 'partner' || body.role === 'expert')
             ? '/client/partner'
-            : '/client/buyer/catalogue'
+            : '/client/account'
         const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com'
         const { error: otpError } = await supa.auth.admin.generateLink({
           type:        'magiclink',

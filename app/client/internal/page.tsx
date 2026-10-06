@@ -16,7 +16,7 @@ const SECTION_DEFS: {
   icon: LucideIcon
   href: string
 }[] = [
-  { permission: 'catalog.manage_access', label: 'Accès catalogue',   desc: 'Valider et révoquer les accès qualifiés acquéreurs.',       icon: BookOpen,    href: '/client/internal/catalog'  },
+  { permission: 'catalog.manage_access', label: 'Accès data room',   desc: 'Valider et révoquer les accès des clients demandeurs.',     icon: BookOpen,    href: '/client/internal/catalog'  },
   { permission: 'kyc.review',            label: 'Revue KYC',         desc: 'Instruire et valider les dossiers de vérification.',        icon: ShieldCheck, href: '/client/internal/kyc'      },
   { permission: 'grading.review',        label: 'Revue grading',     desc: 'Conduire des revues de notation CIFSO en interne.',          icon: Star,        href: '/client/internal/grading'  },
   { permission: 'dataroom.manage',       label: 'Data room',         desc: 'Gérer les documents et accès aux data rooms des actifs.',   icon: FolderOpen,  href: '/client/internal/dataroom' },

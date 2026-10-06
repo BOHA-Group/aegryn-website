@@ -29,7 +29,6 @@ const STATIC_ROUTES = [
   { path: '/roadmap',                            priority: 0.5,  changeFrequency: 'monthly' as const },
   { path: '/what-we-build',                      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
-  { path: '/annuaire',                           priority: 0.6,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Franchir — cycles de vie (intro en section accueil #franchir) ────────────

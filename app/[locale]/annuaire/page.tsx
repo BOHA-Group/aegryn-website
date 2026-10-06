@@ -1,6 +1,9 @@
 import type { Metadata }  from 'next'
 import { getTranslations } from 'next-intl/server'
+import { redirect }        from 'next/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { getUser }         from '@/lib/supabaseServer'
+import { createServiceClient }    from '@/lib/supabase'
 import { Suspense } from 'react'
 import ExpertsContent from './ExpertsContent'
 
@@ -29,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
   return {
     ...base,
+    robots: { index: false, follow: false },
     alternates: {
       canonical:  `${BASE}/${locale}${slug}`,
       languages: {
@@ -44,7 +48,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ExpertsPage() {
+export const dynamic = 'force-dynamic'
+
+export default async function ExpertsPage() {
+  const user = await getUser()
+  if (!user) redirect('/client/login')
+
+  const supa = createServiceClient()
+  const [{ data: expertProfile }, { data: profile }] = await Promise.all([
+    supa
+      .from('expert_profiles')
+      .select('id')
+      .eq('user_id', user.id)
+      .not('verified_at', 'is', null)
+      .maybeSingle(),
+    supa
+      .from('profiles')
+      .select('role, roles')
+      .eq('id', user.id)
+      .maybeSingle(),
+  ])
+
+  const roles   = (profile?.roles ?? []) as string[]
+  const isAdmin = user.app_metadata?.role === 'admin' ||
+    profile?.role === 'admin' || profile?.role === 'super_admin' ||
+    roles.includes('admin') || roles.includes('super_admin')
+
+  if (!expertProfile && !isAdmin) redirect('/client')
+
   return (
     <Suspense>
       <ExpertsContent />

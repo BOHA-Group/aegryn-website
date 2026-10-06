@@ -2295,7 +2295,7 @@
         "iconKey": "referral",
         "theme": "Partenaires",
         "title": "Programme de parrainage",
-        "desc": "Les experts partenaires peuvent parrainer d'autres certificateurs. Crédits d'abonnement.",
+        "desc": "Les experts partenaires peuvent parrainer d'autres certificateurs.",
         "live": true
       },
       {
@@ -6846,7 +6846,7 @@
         "items": [
           "Communiquer avec vous, notamment pour répondre à vos demandes et exercer vos droits.",
           "Vous informer sur nos services et offres.",
-          "Gérer votre compte et votre abonnement (inscription, facturation, parrainage).",
+          "Gérer votre compte et vos accès (inscription, facturation, parrainage).",
           "Traiter les demandes d'accès NDA aux dossiers d'actifs et conserver les traces de signature.",
           "Conduire les missions de certification CIFSO 5000 (collecte et évaluation des dossiers vendeur).",
           "Générer des statistiques de trafic utiles à l'amélioration de notre site web.",
@@ -6892,7 +6892,7 @@
           ],
           [
             "Stripe",
-            "Traitement des paiements et gestion des abonnements Expert.",
+            "Traitement des paiements et gestion des accès aux services Expert.",
             "EEE/USA"
           ],
           [
@@ -7388,7 +7388,8 @@
     "offerAmountStatus": "Offre de {amount}, statut : {status}",
     "confidentialityTitle": "Confidentialité",
     "confidentialityText": "Les informations présentées dans cette fiche sont strictement réservées aux acquéreurs qualifiés ayant signé un NDA. Toute divulgation est interdite.",
-    "catalogSubtitle": "Actifs certifiés et publiés, accès réservé aux acquéreurs qualifiés."
+    "catalogSubtitle": "Actifs certifiés et publiés, accès réservé aux acquéreurs qualifiés.",
+    "navAnnuaire": "Annuaire"
   },
   "comingSoon": {
     "label": "Prochainement disponible",
@@ -8087,7 +8088,7 @@
     "waitlist": {
       "label": "Vous êtes expert ?",
       "title": "Rejoignez le réseau.",
-      "desc": "Le réseau d'experts Aegryn est en cours d'ouverture. Déposez votre candidature : notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau se fera via un abonnement mensuel de référencement (89 CHF HT/mois).",
+      "desc": "Le réseau d'experts Aegryn est en cours d'ouverture. Déposez votre candidature : notre équipe examine chaque profil et vous contactera pour un entretien de qualification. L'accès au réseau est réservé aux fiches validées.",
       "fieldPrenom": "Prénom",
       "fieldNom": "Nom",
       "fieldEmail": "Email professionnel",

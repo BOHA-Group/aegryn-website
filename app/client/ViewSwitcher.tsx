@@ -4,26 +4,27 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowLeftRight } from 'lucide-react'
 
+/* La vue « Acquéreur » est retirée : l'espace /client/buyer (enchères)
+   est archivé et redirige vers /client/account. Le rôle buyer sera
+   réactivé avec la future data room acquisition/cession. */
 type Props = {
-  hasBuyer:   boolean
+  hasBuyer?:  boolean
   hasSeller:  boolean
   hasPartner?: boolean
 }
 
-export default function ViewSwitcher({ hasBuyer, hasSeller, hasPartner }: Props) {
+export default function ViewSwitcher({ hasSeller, hasPartner }: Props) {
   const pathname = usePathname()
 
-  const activeSpaces = [hasBuyer, hasSeller, hasPartner].filter(Boolean).length
+  const activeSpaces = [hasSeller, hasPartner].filter(Boolean).length
   if (activeSpaces < 2) return null
 
-  const isBuyerView   = pathname.startsWith('/client/buyer')
   const isSellerView  = pathname.startsWith('/client/seller')
   const isPartnerView = pathname.startsWith('/client/partner')
 
-  if (!isBuyerView && !isSellerView && !isPartnerView) return null
+  if (!isSellerView && !isPartnerView) return null
 
   const views = [
-    hasBuyer   && { href: '/client/buyer',   label: 'Acquéreur', active: isBuyerView },
     hasSeller  && { href: '/client/seller',  label: 'Cédant',    active: isSellerView },
     hasPartner && { href: '/client/partner', label: 'Partenaire', active: isPartnerView },
   ].filter(Boolean) as { href: string; label: string; active: boolean }[]

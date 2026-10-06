@@ -183,6 +183,10 @@ async function checkAccess(
 
   if (asset?.seller_email === profile.email) return true
 
+  /* Partenaire CIFSO assigné — data room de certification uniquement.
+     Les tiers 'light_buyers' / 'nda_buyers' (hérités du périmètre enchères)
+     ne donnent plus d'accès aux profils client : ils sont réservés à la
+     future data room acquisition/cession, à structurer séparément. */
   if (doc.visible_to === 'assigned_partner' || doc.visible_to === 'nda_buyers') {
     const { data: cert } = await supa
       .from('partner_certifications')
@@ -193,21 +197,6 @@ async function checkAccess(
       .maybeSingle()
     if (cert) return true
   }
-
-  if (doc.visible_to === 'light_buyers') {
-    if (profile.kyc_status === 'approved') {
-      const { data: lightReq } = await supa
-        .from('data_room_light_requests')
-        .select('id')
-        .eq('asset_id', doc.asset_id)
-        .eq('user_id', userId)
-        .eq('status', 'approved')
-        .maybeSingle()
-      if (lightReq) return true
-    }
-  }
-
-  if (doc.visible_to === 'nda_buyers' && profile.auction_nda_signed_at) return true
 
   return false
 }

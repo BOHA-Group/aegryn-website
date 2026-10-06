@@ -1,10 +1,38 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }      from '@/lib/supabase'
+import { getUser }                  from '@/lib/supabaseServer'
 
 const PAGE_SIZE = 24
 
 export async function GET(req: NextRequest) {
   try {
+    /* Annuaire interne : session + fiche expert active (verified_at)
+       ou rôle admin requis. */
+    const user = await getUser()
+    if (!user) return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+
+    const supa = createServiceClient()
+    const [{ data: expertProfile }, { data: profile }] = await Promise.all([
+      supa
+        .from('expert_profiles')
+        .select('id')
+        .eq('user_id', user.id)
+        .not('verified_at', 'is', null)
+        .maybeSingle(),
+      supa
+        .from('profiles')
+        .select('role, roles')
+        .eq('id', user.id)
+        .maybeSingle(),
+    ])
+    const roles   = (profile?.roles ?? []) as string[]
+    const isAdmin = user.app_metadata?.role === 'admin' ||
+      profile?.role === 'admin' || profile?.role === 'super_admin' ||
+      roles.includes('admin') || roles.includes('super_admin')
+    if (!expertProfile && !isAdmin) {
+      return NextResponse.json({ error: 'forbidden' }, { status: 403 })
+    }
+
     const { searchParams } = req.nextUrl
     const page       = Math.max(1, parseInt(searchParams.get('page') ?? '1', 10))
     const profession = searchParams.get('profession') ?? ''
@@ -14,7 +42,6 @@ export async function GET(req: NextRequest) {
     const category   = searchParams.get('category')   ?? ''
     const domain     = searchParams.get('domain')     ?? ''
 
-    const supa = createServiceClient()
     let query = supa
       .from('expert_profiles')
       .select(`

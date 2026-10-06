@@ -38,8 +38,6 @@ export default async function AccountLayout({ children }: { children: React.Reac
     spaceLabel = t('spaceNamePartner'); rootHref = '/client/partner'
   } else if (roles.includes('seller') && !roles.includes('buyer') && !roles.includes('client')) {
     spaceLabel = t('spaceNameSeller'); rootHref = '/client/seller'
-  } else if (roles.includes('buyer') && !roles.includes('client')) {
-    spaceLabel = t('spaceNameBuyer'); rootHref = '/client/buyer'
   }
 
   return (

@@ -3177,7 +3177,7 @@
         "iconKey": "referral",
         "theme": "Partner",
         "title": "Programma di sponsorizzazione",
-        "desc": "Gli esperti partner possono sponsorizzare altri certificatori. Crediti di abbonamento.",
+        "desc": "Gli esperti partner possono segnalare altri certificatori.",
         "live": true
       },
       {
@@ -6871,7 +6871,7 @@
         "items": [
           "Comunicare con voi, in particolare per rispondere alle vostre richieste e per esercitare i vostri diritti.",
           "Informarvi sui nostri servizi e offerte.",
-          "Gestire il vostro account e abbonamento (registrazione, fatturazione, programma referral).",
+          "Gestisci il tuo account e i tuoi accessi (registrazione, fatturazione, segnalazioni).",
           "Gestire le richieste di accesso NDA ai dossier di attivi e conservare le prove di firma.",
           "Condurre missioni di certificazione CIFSO 5000 (raccolta e valutazione dei dossier del venditore).",
           "Generare statistiche di traffico utili per migliorare il nostro sito web.",
@@ -6917,7 +6917,7 @@
           ],
           [
             "Stripe",
-            "Elaborazione dei pagamenti e gestione degli abbonamenti Expert.",
+            "Elaborazione dei pagamenti e gestione degli accessi ai servizi Expert.",
             "SEE/USA"
           ],
           [
@@ -7413,7 +7413,8 @@
     "offerAmountStatus": "Offerta di {amount}, stato: {status}",
     "confidentialityTitle": "Riservatezza",
     "confidentialityText": "Le informazioni presentate in questo dossier sono riservate esclusivamente agli acquirenti qualificati che hanno firmato un NDA. Qualsiasi divulgazione è vietata.",
-    "catalogSubtitle": "Asset certificati e pubblicati, accesso riservato agli acquirenti qualificati."
+    "catalogSubtitle": "Asset certificati e pubblicati, accesso riservato agli acquirenti qualificati.",
+    "navAnnuaire": "Elenco"
   },
   "comingSoon": {
     "label": "Disponibile a breve",
@@ -8112,7 +8113,7 @@
     "waitlist": {
       "label": "Sei un esperto?",
       "title": "Unisciti alla rete.",
-      "desc": "La rete di esperti Aegryn sta aprendo. Invia la tua candidatura: il nostro team esamina ogni profilo e ti contatterà per un colloquio di qualificazione. L'accesso avviene tramite un abbonamento mensile di referenziazione (89 CHF + IVA/mese).",
+      "desc": "La rete di esperti Aegryn è in fase di apertura. Invia la tua candidatura: il nostro team esamina ogni profilo e ti contatterà per un colloquio di qualificazione. L'accesso alla rete è riservato ai profili validati.",
       "fieldPrenom": "Nome",
       "fieldNom": "Cognome",
       "fieldEmail": "Email professionale",

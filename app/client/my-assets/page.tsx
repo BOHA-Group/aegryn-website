@@ -16,8 +16,8 @@ const STATUS_STEPS = [
   { key: 'submitted',    label: 'Dossier reçu',            desc: 'Votre dossier a bien été soumis.' },
   { key: 'under_review', label: 'Analyse en cours',        desc: 'Nos analystes étudient votre dossier.' },
   { key: 'graded',       label: 'Grade attribué',          desc: 'Votre actif a reçu un grade officiel Aegryn.' },
-  { key: 'published',    label: 'Publié au catalogue',     desc: 'Votre actif est visible par les acquéreurs qualifiés.' },
-  { key: 'sold',         label: 'Transaction finalisée',   desc: 'La transaction a été clôturée avec succès.' },
+  { key: 'published',    label: 'Dossier certifié',        desc: 'Votre actif est certifié et visible dans votre data room.' },
+  { key: 'sold',         label: 'Mandat finalisé',         desc: 'Le mandat d\'accompagnement a été clôturé avec succès.' },
 ]
 
 function getStepIndex(status: string) {
@@ -56,7 +56,7 @@ export default async function ClientMyAssetsPage() {
 
   const roles = (profile?.roles ?? []) as string[]
   if (roles.includes('admin') || roles.includes('super_admin')) redirect('/admin')
-  if (roles.includes('buyer'))   redirect('/client/buyer')
+  if (roles.includes('buyer'))   redirect('/client/account')
   if (roles.includes('partner')) redirect('/client/partner')
   // seller → reste sur cette page (my-assets legacy)
 

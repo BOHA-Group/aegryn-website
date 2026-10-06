@@ -3177,7 +3177,7 @@
         "iconKey": "referral",
         "theme": "Partner",
         "title": "Empfehlungsprogramm",
-        "desc": "Partnerexperten können weitere Zertifizierer empfehlen. Abonnementguthaben.",
+        "desc": "Partner-Experten können andere Zertifizierer empfehlen.",
         "live": true
       },
       {
@@ -6871,7 +6871,7 @@
         "items": [
           "Mit Ihnen zu kommunizieren, insbesondere um auf Ihre Anfragen zu antworten und Ihre Rechte auszuüben.",
           "Sie über unsere Dienstleistungen und Angebote zu informieren.",
-          "Ihr Konto und Ihr Abonnement zu verwalten (Registrierung, Abrechnung, Empfehlungsprogramm).",
+          "Verwalten Sie Ihr Konto und Ihre Zugänge (Registrierung, Abrechnung, Empfehlungen).",
           "NDA-Zugriffsanfragen für Asset-Dossiers zu bearbeiten und Unterschriftsnachweise aufzubewahren.",
           "CIFSO 5000-Zertifizierungsmissionen durchzuführen (Sammlung und Bewertung von Verkäufer-Dossiers).",
           "Verkehrsstatistiken zu erstellen, die zur Verbesserung unserer Website nützlich sind.",
@@ -6917,7 +6917,7 @@
           ],
           [
             "Stripe",
-            "Zahlungsabwicklung und Verwaltung von Expert-Abonnements.",
+            "Zahlungsabwicklung und Verwaltung des Zugangs zu Expert-Services.",
             "EWR/USA"
           ],
           [
@@ -7413,7 +7413,8 @@
     "offerAmountStatus": "Angebot von {amount}, Status: {status}",
     "confidentialityTitle": "Vertraulichkeit",
     "confidentialityText": "Die in diesem Dossier enthaltenen Informationen sind ausschließlich für qualifizierte Käufer bestimmt, die eine NDA unterzeichnet haben. Jede Weitergabe ist verboten.",
-    "catalogSubtitle": "Zertifizierte und veröffentlichte Assets, Zugang nur für qualifizierte Käufer."
+    "catalogSubtitle": "Zertifizierte und veröffentlichte Assets, Zugang nur für qualifizierte Käufer.",
+    "navAnnuaire": "Verzeichnis"
   },
   "comingSoon": {
     "label": "Demnächst verfügbar",
@@ -8112,7 +8113,7 @@
     "waitlist": {
       "label": "Sind Sie Experte?",
       "title": "Treten Sie dem Netzwerk bei.",
-      "desc": "Das Aegryn-Expertennetzwerk öffnet sich. Reichen Sie Ihre Bewerbung ein: unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang erfolgt über ein monatliches Listing-Abonnement (89 CHF zzgl. MwSt./Monat).",
+      "desc": "Das Aegryn-Expertennetzwerk wird eröffnet. Reichen Sie Ihre Bewerbung ein: Unser Team prüft jedes Profil und kontaktiert Sie für ein Qualifikationsgespräch. Der Zugang zum Netzwerk ist validierten Profilen vorbehalten.",
       "fieldPrenom": "Vorname",
       "fieldNom": "Nachname",
       "fieldEmail": "Geschäftliche E-Mail",

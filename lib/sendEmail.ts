@@ -560,15 +560,15 @@ export function emailKycApproved(opts: {
   const { role } = opts
   const subject = '[Aegryn] Votre profil KYC est validé'
 
-  const roleLabel  = role === 'buyer' ? 'acquéreur' : role === 'seller' ? 'cédant' : 'partenaire expert'
-  const ctaLabel   = role === 'buyer'   ? 'Accéder aux sessions d\'acquisition'
+  const roleLabel  = role === 'partner' ? 'partenaire expert' : 'client'
+  const ctaLabel   = role === 'buyer'   ? 'Accéder à votre espace client'
                    : role === 'seller'  ? 'Soumettre un actif'
                    : 'Mon espace partenaire'
-  const ctaHref    = role === 'buyer'   ? 'https://aegryn.com/client/buyer/catalogue'
+  const ctaHref    = role === 'buyer'   ? 'https://aegryn.com/client/account'
                    : role === 'seller'  ? 'https://aegryn.com/client/seller/actifs'
                    : 'https://aegryn.com/client/partner'
-  const roleAction = role === 'buyer'   ? 'vous pouvez désormais <strong>vous inscrire et accéder aux sessions de vente Aegryn</strong>.'
-                   : role === 'seller'  ? 'vous pouvez désormais <strong>soumettre un actif pour certification et mise en vente</strong>.'
+  const roleAction = role === 'buyer'   ? 'vous pouvez désormais <strong>accéder à votre espace client et être accompagné dans vos projets d\'acquisition ou de transmission</strong>.'
+                   : role === 'seller'  ? 'vous pouvez désormais <strong>soumettre un actif pour certification CIFSO</strong>.'
                    : 'vous pouvez désormais <strong>publier votre fiche profil expert et recevoir des mandats clients Aegryn</strong>.'
 
   const html = WRAP(`

@@ -194,6 +194,24 @@ export default async function middleware(req: NextRequest) {
     return response
   }
 
+  /* ── 2bis. Annuaire experts — interne, session requise ──
+     Page réservée aux profils connectés (fiche expert active ou admin).
+     Les non-loggés sont renvoyés vers /client/login ; l'éligibilité fine
+     est vérifiée côté page + API. */
+  if (/^\/(fr|en|de|it|es|nl)\/annuaire(?:\/|$)/.test(pathname)) {
+    const isPrefetch = req.headers.get('Next-Router-Prefetch') === '1'
+    if (!isPrefetch) {
+      const { hasSession } = await refreshAndCheckSession(req)
+      if (!hasSession && !hasValidActivityCookie(req)) {
+        const loginUrl = req.nextUrl.clone()
+        loginUrl.pathname = '/client/login'
+        loginUrl.search   = ''
+        return NextResponse.redirect(loginUrl)
+      }
+    }
+    /* session valide (ou prefetch) → on continue vers intlMiddleware */
+  }
+
   /* ── 3. Routes API — pass-through ── */
   if (pathname.startsWith('/api/')) {
     return NextResponse.next()
