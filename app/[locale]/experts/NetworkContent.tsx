@@ -181,18 +181,19 @@ export default function NetworkContent() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+      <section className="border-b border-ag-border pt-24 pb-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
+            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
-            style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-2xl mb-6 whitespace-pre-line"
+            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-6">
