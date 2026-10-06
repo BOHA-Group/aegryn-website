@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, ArrowRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { routing } from '@/i18n/routing'
 import { getFranchirIntro } from '@/content/franchir'
 import { FRANCHIR_UI } from '@/content/franchir/ui'
@@ -95,20 +95,20 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
             <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">{c.overlap.text}</p>
           </div>
           <div className="flex flex-col gap-3">
-            {c.overlap.examples.map((ex, i) => (
-              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border px-6 py-5 flex items-center justify-between gap-4">
-                <span className="font-sans font-semibold text-[14px] text-ag-black">{ex.label}</span>
-                <span className="flex items-center gap-2 shrink-0">
-                  <Link href={L(`/franchir/${ex.a}`)} className="font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex-ink transition-colors flex items-center gap-1">
-                    {cycleTitle[ex.a]} <ArrowRight size={9} />
+            {c.overlap.examples.map((ex, i) => {
+              const [partA, partB] = ex.label.split('+').map(s => s.trim())
+              return (
+                <div key={i} className="rounded-2xl bg-ag-white border border-ag-border px-6 py-5 whitespace-nowrap">
+                  <Link href={L(`/franchir/${ex.a}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
+                    {partA}
                   </Link>
-                  <span className="text-ag-gray-light">·</span>
-                  <Link href={L(`/franchir/${ex.b}`)} className="font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex-ink transition-colors flex items-center gap-1">
-                    {cycleTitle[ex.b]} <ArrowRight size={9} />
+                  <span className="font-sans text-ag-gray-light mx-1">+</span>
+                  <Link href={L(`/franchir/${ex.b}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
+                    {partB}
                   </Link>
-                </span>
-              </div>
-            ))}
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -125,23 +125,36 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* ── Lien vers les actifs + CTA ── */}
-      <div className="bg-ag-off-white py-16 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md">
-            {c.assetsLink.text}{' '}
-            <Link href={L('/assets')} className="text-ag-apex-ink hover:text-ag-black underline underline-offset-4 transition-colors">
-              {c.assetsLink.label}
-            </Link>
-          </p>
-          <Link
-            href={echangeHref}
-            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-navy-mid transition-colors"
-          >
-            {c.cta.label} <ArrowUpRight size={13} />
-          </Link>
-        </div>
-      </div>
     </section>
+  )
+}
+
+/**
+ * Bandeau « actifs + Échanger » — placé en accueil entre GradeStrip
+ * (« Découvrir la méthodologie ») et TransactNarrative (« Certification & Transmission »).
+ */
+export function FranchirAssetsStrip({ locale }: { locale: string }) {
+  const c  = getFranchirIntro(locale)
+  const L  = (href: string) => `/${locale}${href}`
+  const contactPath = (routing.pathnames['/contact'] as Record<string, string>)[locale] ?? '/contact'
+  const echangeHref = L(`${contactPath}?action=echange`)
+
+  return (
+    <div className="bg-ag-off-white py-16 px-6 border-t border-ag-border">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-md">
+          {c.assetsLink.text}{' '}
+          <Link href={L('/assets')} className="text-ag-apex-ink hover:text-ag-black underline underline-offset-4 transition-colors">
+            {c.assetsLink.label}
+          </Link>
+        </p>
+        <Link
+          href={echangeHref}
+          className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-navy-mid transition-colors"
+        >
+          {c.cta.label} <ArrowUpRight size={13} />
+        </Link>
+      </div>
+    </div>
   )
 }

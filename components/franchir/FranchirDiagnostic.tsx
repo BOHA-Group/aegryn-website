@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { FRANCHIR_UI } from '@/content/franchir/ui'
 import type { CycleSlug } from '@/content/franchir/types'
@@ -26,15 +26,26 @@ interface Props {
  */
 export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Props) {
   const ui = FRANCHIR_UI[locale] ?? FRANCHIR_UI.fr
+  const [open, setOpen] = useState(false)
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
 
   return (
     <div className="rounded-2xl border border-ag-border bg-ag-white overflow-hidden">
-      <div className="px-6 md:px-10 py-8 border-b border-ag-border">
-        <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em]">{title}</h3>
-      </div>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
+        className={`w-full px-6 md:px-10 py-8 flex items-center justify-between gap-6 text-left group${open ? ' border-b border-ag-border' : ''}`}
+      >
+        <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] group-hover:text-ag-navy transition-colors">{title}</h3>
+        <ChevronDown
+          size={18}
+          className={`shrink-0 text-ag-gray-light transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
 
+      {open && (
       <ol className="divide-y divide-ag-border">
         {questions.map((item, i) => {
           const yes = answers[i] === true
@@ -74,6 +85,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
           )
         })}
       </ol>
+      )}
     </div>
   )
 }
