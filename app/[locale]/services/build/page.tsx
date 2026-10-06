@@ -59,18 +59,18 @@ export default async function BuildServicePage({ params }: Props) {
     <main>
 
       {/* ── Section 1 : Hero ─────────────────────────────────────────── */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-28 md:py-36">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
+      <section className="border-b border-ag-border bg-ag-navy">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('label')}
           </p>
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
-            style={{ fontSize: 'clamp(44px,6vw,80px)' }}
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('title')}
           </h1>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
+          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl">
             {t('desc')}
           </p>
         </div>

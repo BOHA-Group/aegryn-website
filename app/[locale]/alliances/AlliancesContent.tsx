@@ -93,7 +93,7 @@ export default function AlliancesContent() {
           </p>
           <h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
-            style={{ fontSize: 'clamp(48px,6vw,88px)' }}
+            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('hero.title')}
           </h1>

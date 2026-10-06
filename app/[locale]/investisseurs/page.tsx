@@ -37,27 +37,27 @@ export default async function InvestisseursPage({ params }: Props) {
     <main className="bg-ag-white">
 
       {/* Hero */}
-      <section className="bg-ag-navy pt-32 pb-24 px-6">
+      <section className="border-b border-ag-border pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(36px,5vw,64px)' }}
+            className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
+            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-2xl mb-4 leading-relaxed">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('line1')}
           </p>
-          <p className="font-sans text-[16px] text-white/55 max-w-2xl mb-12 leading-relaxed">
+          <p className="font-sans text-[13px] text-ag-gray-light max-w-xl mb-8">
             {t('line2')}
           </p>
           <Link
             href={{ pathname: '/contact', query: { subject: 'investisseurs' } }}
-            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
           </Link>

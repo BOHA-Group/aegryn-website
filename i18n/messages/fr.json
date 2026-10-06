@@ -54,7 +54,7 @@
     "craftBuild": "Construire",
     "craftBuildDesc": "Conception d'actifs tech durables",
     "craftBuildAssets": "Actifs propriétaires",
-    "craftBuildEngineering": "Solutions sur-mesure",
+    "craftBuildEngineering": "Solutions sur mesure",
     "craftBuildSubblink": "Analyse risques contrats",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certification CIFSO 5000",
@@ -672,7 +672,7 @@
     },
     "sovereignty": {
       "title": "Logiciel à code maîtrisé",
-      "desc": "Le vrai enjeu du cloud n'est pas la localisation des machines : c'est le logiciel. Nous créons des logiciels à code maîtrisé, déployables sur des infrastructures physiquement localisées en Europe, offrant une véritable indépendance technologique. Pour nos clients entreprises et institutionnels, nous concevons, maintenons ou refaisons des logiciels sur mesure : une demande en très forte croissance face aux enjeux de sécurité, conformité et indépendance."
+      "desc": "Le vrai enjeu du cloud n'est pas la localisation des machines : c'est le logiciel. Nous créons des logiciels à code maîtrisé, déployables sur des infrastructures physiquement localisées en Europe, offrant une véritable indépendance technologique. Pour nos clients entreprises et institutionnels, nous concevons, maintenons ou refaisons des logiciels sur mesure : une demande en très forte croissance face aux enjeux de sécurité, conformité et indépendance."
     },
     "categories": {
       "ai": "IA & Protocoles",
@@ -5210,11 +5210,11 @@
   },
   "build_service": {
     "meta": {
-      "title": "Conception d'actifs numériques sur-mesure - Aegryn",
-      "desc": "Actifs numériques sur-mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
+      "title": "Conception d'actifs numériques sur mesure - Aegryn",
+      "desc": "Actifs numériques sur mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
     },
-    "label": "Conception : Solutions sur mesure",
-    "title": "Solutions sur-mesure\npour vos opérations.",
+    "label": "Conception : Solutions sur mesure",
+    "title": "Solutions sur mesure\npour vos opérations.",
     "builtToLast": {
       "label": "NOTRE CONVICTION",
       "title": "Built to Last.",
@@ -5277,9 +5277,9 @@
       "label": "Indépendance technologique",
       "badge": "INDÉPENDANCE TECHNOLOGIQUE"
     },
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : hébergement en Suisse ou dans l'UE, sans dépendance imposée.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : hébergement en Suisse ou dans l'UE, sans dépendance imposée.",
     "whySection": {
-      "label": "Pourquoi des solutions sur mesure",
+      "label": "Pourquoi des solutions sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
       "desc": "46,7 % des entreprises européennes utilisent le cloud. 39,9 % l'analyse de données. Près de 20 % l'IA en 2026. Le besoin en logiciel de qualité, indépendant et sans vendor lock-in, est structurel. La Commission européenne reconnaît en 2026 que les dépendances vis-à-vis de fournisseurs tiers restent significatives dans le cloud et la cybersécurité. La Suisse a placé l'indépendance numérique parmi les priorités de sa stratégie numérique 2026.",
       "points": [
@@ -7078,8 +7078,8 @@
         "cat": [
           "account"
         ],
-        "q": "Construisez-vous des actifs sur mesure ?",
-        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Délai : 10-16 semaines. Fourchette indicative : CHF 15'000-150'000+. Détails sur /services/build."
+        "q": "Construisez-vous des actifs sur mesure ?",
+        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Délai : 10-16 semaines. Fourchette indicative : CHF 15'000-150'000+. Détails sur /services/build."
       },
       {
         "id": "magazine",
@@ -8130,7 +8130,7 @@
     "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Voir le portefeuille",
     "engineeringLabel": "Ingénierie d'actifs",
-    "engineeringTitle": "Solutions sur-mesure\npour vos opérations.",
+    "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
     "engineeringCta": "Découvrir l'ingénierie"
   },
@@ -8140,7 +8140,7 @@
     "chip1": "PROPRIÉTÉ IP TOTALE CLIENT",
     "chip2": "PRÊT POUR LA CERTIFICATION",
     "chip3": "INDÉPENDANCE CHOIX TECHNOLOGIQUE",
-    "chip4": "CODE SUR-MESURE CERTIFIABLE",
+    "chip4": "CODE SUR MESURE CERTIFIABLE",
     "cta": "Voir la conception d'actifs",
     "builtToLastQuote": "Dans un monde où la technologie s’obsolète en quelques mois, concevoir pour durer est un acte de résistance. Chaque actif que nous construisons augmente la valeur de votre organisation, pas votre facture mensuelle cloud."
   },
@@ -8914,7 +8914,7 @@
     "employer": {
       "services": {
         "title": "Notre approche executive search",
-        "subtitle": "Des solutions sur mesure pour identifier et recruter vos leaders tech & IA",
+        "subtitle": "Des solutions sur mesure pour identifier et recruter vos leaders tech & IA",
         "search": {
           "label": "Executive Search",
           "title": "Recherche de cadres dirigeants",
@@ -9106,7 +9106,7 @@
           "desc": "Votre recherche reste strictement confidentielle. Nous ne partageons votre profil qu'avec votre accord explicite et uniquement auprès d'entreprises pré-qualifiées."
         },
         "curated": {
-          "title": "Opportunités triées sur mesure",
+          "title": "Opportunités triées sur mesure",
           "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence."
         }
       },
@@ -9501,11 +9501,11 @@
     "page": {
       "meta": {
         "title": "Nos industries — Aegryn",
-        "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Conseil stratégique, technologique, M&A, logiciels sur-mesure et Certification CIFSO 5000."
+        "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Conseil stratégique, technologique, M&A, logiciels sur mesure et Certification CIFSO 5000."
       },
       "label": "Nos industries",
       "title": "Une expertise sectorielle\npour chaque enjeu organisationnel.",
-      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Solutions sur-mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
+      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Solutions sur mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
       "servicesTitle": "Nos métiers mobilisés",
       "services": [
         {
@@ -9521,7 +9521,7 @@
           "desc": "Préparation à la cession, due diligence acheteur, structuration de transaction et accompagnement au closing."
         },
         {
-          "name": "Solutions sur-mesure",
+          "name": "Solutions sur mesure",
           "desc": "Développement de produits digitaux, intégrations métier et plateformes propriétaires adaptées à vos contraintes sectorielles."
         },
         {
@@ -9605,7 +9605,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en Technologie",
-            "Solutions sur-mesure",
+            "Solutions sur mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9700,7 +9700,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en M&A",
-            "Solutions sur-mesure",
+            "Solutions sur mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9744,7 +9744,7 @@
           "services": [
             "Conseil en Stratégie",
             "Conseil en Technologie",
-            "Solutions sur-mesure",
+            "Solutions sur mesure",
             "Certification CIFSO 5000"
           ],
           "cifsoDims": [
@@ -9872,7 +9872,7 @@
           "num": "02",
           "title": "CONSTRUIRE",
           "desc": "Actifs numériques durables, propriété totale du client, prêts pour la certification. Nous concevons et opérons des SaaS, apps et protocoles : pour vous, et pour nos propres portefeuilles.",
-          "cta": "Voir les solutions sur-mesure",
+          "cta": "Voir les solutions sur mesure",
           "href": "/services/build"
         },
         {
