@@ -799,7 +799,7 @@
       },
       {
         "title": "FRANCHIR",
-        "desc": "Chaque cycle de vie est une transition à franchir : lancement, croissance, restructuration, acquisition, transmission. Diagnostic, plan, exécution — la valeur se construit et se prouve à chaque étape."
+        "desc": "Chaque cycle de vie est une transition à franchir : lancement, croissance, restructuration, acquisition, transmission. Diagnostic, plan, exécution : la valeur se construit et se prouve à chaque étape."
       },
       {
         "title": "RECRUTER",
@@ -10099,7 +10099,7 @@
           "key": "transmettre",
           "num": "03",
           "title": "FRANCHIR",
-          "desc": "Chaque cycle de vie est une transition à franchir : lancement, croissance, restructuration, acquisition, transmission. Diagnostic, plan, exécution — la valeur se construit et se prouve à chaque étape.",
+          "desc": "Chaque cycle de vie est une transition à franchir : lancement, croissance, restructuration, acquisition, transmission. Diagnostic, plan, exécution : la valeur se construit et se prouve à chaque étape.",
           "cta": "Découvrir Franchir",
           "href": "/#franchir"
         },

@@ -836,7 +836,7 @@
       },
       {
         "title": "DOORLOPEN",
-        "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering — waarde wordt in elke fase opgebouwd en bewezen."
+        "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen."
       },
       {
         "title": "REKRUTEREN",
@@ -10099,7 +10099,7 @@
           "key": "transmettre",
           "num": "03",
           "title": "DOORLOPEN",
-          "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering — waarde wordt in elke fase opgebouwd en bewezen.",
+          "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen.",
           "cta": "Ontdek Doorlopen",
           "href": "/#franchir"
         },
