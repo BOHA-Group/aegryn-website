@@ -405,8 +405,8 @@ export const aegrynSiteNavigationSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',                       url: `${BASE_URL}/fr` },
     { '@type': 'ListItem', position: 2,  name: 'Valoriser',                     url: `${BASE_URL}/fr/valoriser` },
-    { '@type': 'ListItem', position: 3,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/valoriser/transmission` },
-    { '@type': 'ListItem', position: 4,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/valoriser/acquisition` },
+    { '@type': 'ListItem', position: 3,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/franchir/transmission` },
+    { '@type': 'ListItem', position: 4,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/franchir/acquisition` },
     { '@type': 'ListItem', position: 5,  name: 'Réseau d\'experts',             url: `${BASE_URL}/fr/network` },
     { '@type': 'ListItem', position: 6,  name: 'Portfolio',                     url: `${BASE_URL}/fr/portfolio` },
     { '@type': 'ListItem', position: 7,  name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },

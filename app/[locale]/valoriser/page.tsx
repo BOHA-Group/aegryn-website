@@ -1,45 +1,40 @@
-import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Link } from '@/i18n/navigation'
-import { ArrowUpRight, Gauge, BadgeCheck, Rocket, TrendingUp, RefreshCw, Search, Handshake } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
-import { GridFillers } from '@/components/ui/GridFillers'
+import { routing } from '@/i18n/routing'
+import { getFranchirIntro } from '@/content/franchir'
+import { FRANCHIR_UI } from '@/content/franchir/ui'
+import { FranchirDiagnostic } from '@/components/franchir/FranchirDiagnostic'
+import type { CycleSlug } from '@/content/franchir/types'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'valoriser.overview.meta' })
-  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/valoriser', locale })
+  const c = getFranchirIntro(locale)
+  return generateAegrynMetadata({ title: c.meta.title, description: c.meta.description, path: '/valoriser', locale })
 }
 
-export default async function ValoriserPage({ params }: Props) {
+export default async function FranchirIntroPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'valoriser.overview' })
-
-  const CYCLES = [
-    { key: 'cycle1', href: '/valoriser/lancement',       icon: <Rocket size={20} className="text-ag-apex-ink" /> },
-    { key: 'cycle2', href: '/valoriser/croissance',       icon: <TrendingUp size={20} className="text-ag-apex-ink" /> },
-    { key: 'cycle3', href: '/valoriser/restructuration',  icon: <RefreshCw size={20} className="text-ag-apex-ink" /> },
-    { key: 'cycle4', href: '/valoriser/acquisition',      icon: <Search size={20} className="text-ag-apex-ink" /> },
-    { key: 'cycle5', href: '/valoriser/transmission',     icon: <Handshake size={20} className="text-ag-apex-ink" /> },
-  ] as const
-
-  const STATS = [
-    { value: t('stat1Value'), label: t('stat1Label') },
-    { value: t('stat2Value'), label: t('stat2Label') },
-    { value: t('stat3Value'), label: t('stat3Label') },
-    { value: t('stat4Value'), label: t('stat4Label') },
-  ]
+  const c  = getFranchirIntro(locale)
+  const ui = FRANCHIR_UI[locale] ?? FRANCHIR_UI.fr
+  const L  = (href: string) => `/${locale}${href}`
+  const contactPath = (routing.pathnames['/contact'] as Record<string, string>)[locale] ?? '/contact'
+  const echangeHref = L(`${contactPath}?action=echange`)
+  const cycleTitle = Object.fromEntries(
+    c.cycles.map(cy => [cy.slug, cy.title]),
+  ) as Record<CycleSlug, string>
 
   return (
     <main>
-      {/* ── Hero ── */}
+      {/* ── Hero : image montagne conservée ── */}
       <section className="relative overflow-hidden bg-ag-navy pt-32 pb-24 px-6">
         <Image
           src="/images/transact/hero-valorisation.webp"
-          alt="Valorisation d'organisation — Aegryn Group"
+          alt="Aegryn Group"
           fill
           priority
           unoptimized
@@ -52,155 +47,105 @@ export default async function ValoriserPage({ params }: Props) {
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            {t('eyebrow')}
+            {c.eyebrow}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6 whitespace-pre-line"
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
-            {t('heroTitle')}
+            {c.heroTitle}
           </h1>
           <p className="font-sans text-[16px] text-white/55 max-w-xl mb-12 leading-relaxed">
-            {t('heroDesc')}
+            {c.heroSub}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/valuation"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
-            >
-              {t('ctaValuation')} <ArrowUpRight size={13} />
-            </Link>
-            <Link
-              href="/grade"
-              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
-            >
-              {t('ctaGrade')}
-            </Link>
-          </div>
+          <Link
+            href={echangeHref}
+            className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
+          >
+            {c.cta.label} <ArrowUpRight size={13} />
+          </Link>
         </div>
       </section>
 
-      {/* ── Séquence en deux temps ── */}
-      <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-14">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
-              {t('sequenceLabel')}
-            </p>
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-tight max-w-2xl whitespace-pre-line"
-              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-            >
-              {t('sequenceTitle')}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link
-              href="/valuation"
-              className="group rounded-2xl bg-ag-white border border-ag-border p-10 flex flex-col gap-5 hover:border-ag-navy/40 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-lg border border-ag-apex/30 flex items-center justify-center"><Gauge size={18} className="text-ag-apex-ink" /></div>
-              <div>
-                <p className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em] mb-3">{t('step1Title')}</p>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('step1Desc')}</p>
-              </div>
-            </Link>
-            <Link
-              href="/grade"
-              className="group rounded-2xl bg-ag-white border border-ag-border p-10 flex flex-col gap-5 hover:border-ag-navy/40 transition-colors"
-            >
-              <div className="w-10 h-10 rounded-lg border border-ag-apex/30 flex items-center justify-center"><BadgeCheck size={18} className="text-ag-apex-ink" /></div>
-              <div>
-                <p className="font-sans font-bold text-ag-black text-[22px] leading-snug tracking-[-0.02em] mb-3">{t('step2Title')}</p>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('step2Desc')}</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── À quel moment Aegryn intervient ── */}
+      {/* ── Cinq cartes de cycle ── */}
       <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-14">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
-              {t('momentsLabel')}
-            </p>
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-tight max-w-2xl whitespace-pre-line"
-              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-            >
-              {t('momentsTitle')}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ag-border border border-ag-border">
-            {CYCLES.map(({ key, href, icon }) => (
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
+            {ui.introCyclesTag}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {c.cycles.map(cy => (
               <Link
-                key={key}
-                href={href}
-                className="group bg-ag-white p-8 flex flex-col gap-5 hover:bg-ag-off-white transition-colors"
+                key={cy.slug}
+                href={L(`/franchir/${cy.slug}`)}
+                className="group rounded-2xl bg-ag-white border border-ag-border p-7 flex flex-col gap-4 hover:border-ag-navy/40 transition-colors"
               >
-                <div className="w-10 h-10 border border-ag-apex/30 flex items-center justify-center">{icon}</div>
-                <div>
-                  <p className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.02em] mb-2">
-                    {t(`${key}Title`)}
-                  </p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
-                    {t(`${key}Desc`)}
-                  </p>
-                </div>
+                <p className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.02em]">{cy.title}</p>
+                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{cy.stake}</p>
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
                   <ArrowUpRight size={11} />
                 </span>
               </Link>
             ))}
-            <GridFillers count={CYCLES.length} cols={{ sm: 2, lg: 5 }} />
           </div>
         </div>
       </section>
 
-      {/* ── Chiffres clés ── */}
+      {/* ── Deux cycles à la fois ? ── */}
       <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-14">
-            {t('statsLabel')}
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border border border-ag-border">
-            {STATS.map(({ value, label }) => (
-              <div key={label} className="bg-ag-white p-5 sm:p-8 flex flex-col gap-2">
-                <span className="font-sans font-bold text-ag-black tracking-[-0.03em]" style={{ fontSize: 'clamp(24px,2.5vw,36px)' }}>{value}</span>
-                <span className="font-sans text-[12px] text-ag-gray leading-snug">{label}</span>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">
+          <div>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight text-[26px] md:text-[32px] mb-6">
+              {c.overlap.title}
+            </h2>
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">{c.overlap.text}</p>
+          </div>
+          <div className="flex flex-col gap-3">
+            {c.overlap.examples.map((ex, i) => (
+              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border px-6 py-5 flex items-center justify-between gap-4">
+                <span className="font-sans font-semibold text-[14px] text-ag-black">{ex.label}</span>
+                <span className="flex items-center gap-2 shrink-0">
+                  <Link href={L(`/franchir/${ex.a}`)} className="font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex-ink transition-colors flex items-center gap-1">
+                    {cycleTitle[ex.a]} <ArrowRight size={9} />
+                  </Link>
+                  <span className="text-ag-gray-light">·</span>
+                  <Link href={L(`/franchir/${ex.b}`)} className="font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex-ink transition-colors flex items-center gap-1">
+                    {cycleTitle[ex.b]} <ArrowRight size={9} />
+                  </Link>
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Bottom CTA strip ── */}
+      {/* ── Où en êtes-vous ? ── */}
+      <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
+        <div className="max-w-7xl mx-auto">
+          <FranchirDiagnostic
+            title={c.diagnostic.title}
+            questions={c.diagnostic.questions}
+            cycleTitle={cycleTitle}
+            locale={locale}
+          />
+        </div>
+      </section>
+
+      {/* ── Lien vers les actifs + CTA ── */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col gap-8">
-          <div className="flex flex-wrap gap-3">
-            {CYCLES.map(({ key, href }) => (
-              <Link
-                key={key}
-                href={href}
-                className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/75 font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-2.5 hover:border-white/50 hover:text-white transition-all"
-              >
-                {t(`${key}Title`)}
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <p className="font-sans font-bold text-white text-[22px] max-w-md leading-snug">
-              {t('momentsTitle')}
-            </p>
-            <Link
-              href="/contact"
-              className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
-            >
-              {t('ctaContact')} <ArrowUpRight size={13} />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <p className="font-sans text-[14px] text-white/60 leading-relaxed max-w-md">
+            {c.assetsLink.text}{' '}
+            <Link href={L('/assets')} className="text-ag-apex hover:text-white underline underline-offset-4 transition-colors">
+              {c.assetsLink.label}
             </Link>
-          </div>
+          </p>
+          <Link
+            href={echangeHref}
+            className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors"
+          >
+            {c.cta.label} <ArrowUpRight size={13} />
+          </Link>
         </div>
       </section>
     </main>

@@ -26,12 +26,16 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
   const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const answered = answers.every(a => a !== null)
-  const yesCount = answers.filter(Boolean).length
+  /* Score de reponses favorables : 'yes' par defaut, 'no' quand goodIf est 'no' */
+  const favorable = useMemo(
+    () => questions.reduce((n, q, i) => n + (answers[i] === (q.goodIf !== 'no') ? 1 : 0), 0),
+    [answers, questions],
+  )
 
   const level = useMemo(() => {
     if (!answered) return null
-    return [...levels].sort((a, b) => b.min - a.min).find(l => yesCount >= l.min) ?? levels[0]
-  }, [answered, yesCount, levels])
+    return [...levels].sort((a, b) => b.min - a.min).find(l => favorable >= l.min) ?? levels[0]
+  }, [answered, favorable, levels])
 
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
   const reset = () => setAnswers(questions.map(() => null))
@@ -77,7 +81,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
         {level ? (
           <div className="flex flex-col gap-5">
             <div className="flex items-baseline gap-4 flex-wrap">
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ui.yesCount(yesCount, questions.length)}</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ui.favCount(favorable, questions.length)}</span>
               <span className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em]">{level.label}</span>
             </div>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{level.desc}</p>

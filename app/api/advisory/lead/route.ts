@@ -12,10 +12,13 @@ import { z } from 'zod'
 import { createServiceClient } from '@/lib/supabase'
 import { sendEmail, emailAdvisoryLeadConfirmation } from '@/lib/sendEmail'
 import { getAction, REVENUE_BANDS, type Metier, type ActionSlug } from '@/content/advisory/actions'
+import { getCycleAction } from '@/content/franchir/actions'
 import { ACTION_FORM_UI } from '@/content/advisory/actionForm'
 
+const CYCLE_SLUGS = ['general', 'lancement', 'croissance', 'restructuration', 'acquisition', 'transmission'] as const
+
 const schema = z.object({
-  metier:   z.enum(['strategie', 'conformite', 'technologie', 'talent', 'ma']),
+  metier:   z.enum(['strategie', 'conformite', 'technologie', 'talent', 'ma', ...CYCLE_SLUGS]),
   action:   z.string().min(1).max(60),
   fullName: z.string().min(2).max(120),
   email:    z.string().email(),
@@ -38,7 +41,10 @@ export async function POST(req: NextRequest) {
   }
 
   const locale = data.locale ?? 'fr'
-  const actionDef = getAction(locale, data.metier as Metier, data.action as ActionSlug)
+  const isCycle = (CYCLE_SLUGS as readonly string[]).includes(data.metier)
+  const actionDef = isCycle
+    ? getCycleAction(locale, data.metier, data.action)
+    : getAction(locale, data.metier as Metier, data.action as ActionSlug)
   const supa = createServiceClient()
 
   const { error: dbErr } = await supa.from('advisory_leads').insert({
@@ -69,7 +75,7 @@ export async function POST(req: NextRequest) {
   const internalTo = 'contact@boha-group.com'
   await sendEmail(
     internalTo,
-    `[Aegryn Advisory] ${data.metier} / ${data.action} — ${data.fullName}`,
+    `[Aegryn ${isCycle ? 'Franchir' : 'Advisory'}] ${data.metier} / ${data.action} — ${data.fullName}`,
     `
       <p><strong>Métier :</strong> ${data.metier}</p>
       <p><strong>Action :</strong> ${actionDef?.label ?? data.action}</p>

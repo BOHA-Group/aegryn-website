@@ -37,14 +37,14 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
 ]
 
-// Nos métiers - Valoriser : Introduction, cycles de vie, réseau
+// Nos métiers - Franchir : Introduction, cycles de vie, réseau
 const CRAFT_TRANSACT_INTRO: { labelKey: string; href: LinkHref } = { labelKey: 'craftTransactOverview', href: '/valoriser' as LinkHref }
 const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactLancement',       href: '/valoriser/lancement' as LinkHref },
-  { labelKey: 'craftTransactCroissance',      href: '/valoriser/croissance' as LinkHref },
-  { labelKey: 'craftTransactRestructuration', href: '/valoriser/restructuration' as LinkHref },
-  { labelKey: 'craftTransactBuy',             href: '/valoriser/acquisition' as LinkHref },
-  { labelKey: 'craftTransactSell',            href: '/valoriser/transmission' as LinkHref },
+  { labelKey: 'craftTransactLancement',       href: '/franchir/lancement' as LinkHref },
+  { labelKey: 'craftTransactCroissance',      href: '/franchir/croissance' as LinkHref },
+  { labelKey: 'craftTransactRestructuration', href: '/franchir/restructuration' as LinkHref },
+  { labelKey: 'craftTransactBuy',             href: '/franchir/acquisition' as LinkHref },
+  { labelKey: 'craftTransactSell',            href: '/franchir/transmission' as LinkHref },
 ]
 // Nos métiers - Recruter section
 const CRAFT_RECRUIT_LINKS: { labelKey: string; href: LinkHref }[] = [
@@ -159,7 +159,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </div>
         </div>
 
-        {/* Valoriser */}
+        {/* Franchir */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
@@ -416,7 +416,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isCraftActive =
     isActive('/assets') || isActive('/services/build') ||
     isActive('/advisory') || isActive('/services/acquisition-support') ||
-    isActive('/grade') || isActive('/valoriser') ||
+    isActive('/grade') || isActive('/valoriser') || isActive('/franchir') ||
     isActive('/valuation') || isActive('/verify')
 
 

@@ -194,7 +194,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                     {s.cycles.map(cy => (
                       <Link
                         key={cy}
-                        href={L(`/valoriser/${cy}`)}
+                        href={L(`/franchir/${cy}`)}
                         className="rounded-full inline-flex items-center gap-1.5 border border-ag-border px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:border-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
                       >
                         {cycleLabels[cy]} <ArrowRight size={9} />

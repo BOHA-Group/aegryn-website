@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import ContactForm from '@/components/contact/ContactForm'
 import { AdvisoryActionForm } from '@/components/advisory/AdvisoryActionForm'
 import { getAction, type Metier, type ActionSlug } from '@/content/advisory/actions'
+import { getCycleAction } from '@/content/franchir/actions'
 
 const BASE = 'https://aegryn.com'
 const CONTACT_SLUG: Record<string, string> = {
@@ -17,10 +18,11 @@ const CONTACT_SLUG: Record<string, string> = {
 
 type Props = {
   params: Promise<{ locale: string }>
-  searchParams: Promise<{ metier?: string; action?: string }>
+  searchParams: Promise<{ metier?: string; cycle?: string; action?: string }>
 }
 
 const VALID_METIERS: Metier[] = ['strategie', 'conformite', 'technologie', 'talent', 'ma']
+const VALID_CYCLES = ['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission']
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
@@ -54,7 +56,13 @@ export default async function ContactPage({ params, searchParams }: Props) {
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   const metier = VALID_METIERS.includes(sp.metier as Metier) ? (sp.metier as Metier) : null
-  const actionDef = metier && sp.action ? getAction(locale, metier, sp.action as ActionSlug) : null
+  const cycle  = VALID_CYCLES.includes(sp.cycle ?? '') ? sp.cycle! : null
+  /* ACCOMPAGNER : ?metier=&action= — FRANCHIR : ?cycle=&action= ou ?action= (intro) */
+  const actionDef = sp.action
+    ? (metier ? getAction(locale, metier, sp.action as ActionSlug)
+              : getCycleAction(locale, cycle ?? 'general', sp.action))
+    : null
+  const formKey = metier ?? cycle ?? (actionDef ? 'general' : null)
 
   return (
     <>
@@ -128,8 +136,8 @@ export default async function ContactPage({ params, searchParams }: Props) {
           </div>
 
           {/* Form */}
-          {metier && actionDef ? (
-            <AdvisoryActionForm locale={locale} metier={metier} action={sp.action as string} def={actionDef} />
+          {formKey && actionDef ? (
+            <AdvisoryActionForm locale={locale} metier={formKey} action={sp.action as string} def={actionDef} />
           ) : (
             <ContactForm locale={locale} />
           )}

@@ -102,13 +102,24 @@ const nextConfig: NextConfig = {
       { source: '/:locale/magazine/issue-01/transaction-what-an-earnout-feels-like', destination: '/:locale/magazine/issue-01', permanent: true },
       { source: '/:locale/magazine/issue-01/life-on-building-for-the-long-view', destination: '/:locale/magazine/issue-01', permanent: true },
       { source: '/:locale/magazine/report',             destination: '/:locale/magazine',                permanent: true },
-      /* /transact (vue d'ensemble) + how-to-sell/how-to-buy → /valoriser (301 permanent, refonte cycle de vie) */
+      /* /transact (vue d'ensemble) + how-to-sell/how-to-buy → /valoriser|franchir (301 permanent, refonte cycle de vie) */
       { source: '/transact',                            destination: '/valoriser',                       permanent: true },
       { source: '/:locale/transact',                    destination: '/:locale/valoriser',                permanent: true },
-      { source: '/transact/how-to-sell',                destination: '/valoriser/transmission',          permanent: true },
-      { source: '/:locale/transact/how-to-sell',        destination: '/:locale/valoriser/transmission',   permanent: true },
-      { source: '/transact/how-to-buy',                 destination: '/valoriser/acquisition',           permanent: true },
-      { source: '/:locale/transact/how-to-buy',         destination: '/:locale/valoriser/acquisition',    permanent: true },
+      { source: '/transact/how-to-sell',                destination: '/franchir/transmission',           permanent: true },
+      { source: '/:locale/transact/how-to-sell',        destination: '/:locale/franchir/transmission',    permanent: true },
+      { source: '/transact/how-to-buy',                 destination: '/franchir/acquisition',            permanent: true },
+      { source: '/:locale/transact/how-to-buy',         destination: '/:locale/franchir/acquisition',     permanent: true },
+      /* Anciens chemins de cycle /valoriser/* → /franchir/* (301, bloc FRANCHIR 10/2026) */
+      { source: '/valoriser/lancement',                 destination: '/franchir/lancement',               permanent: true },
+      { source: '/valoriser/croissance',                destination: '/franchir/croissance',              permanent: true },
+      { source: '/valoriser/restructuration',           destination: '/franchir/restructuration',         permanent: true },
+      { source: '/valoriser/acquisition',               destination: '/franchir/acquisition',             permanent: true },
+      { source: '/valoriser/transmission',              destination: '/franchir/transmission',            permanent: true },
+      { source: '/:locale/valoriser/lancement',         destination: '/:locale/franchir/lancement',       permanent: true },
+      { source: '/:locale/valoriser/croissance',        destination: '/:locale/franchir/croissance',      permanent: true },
+      { source: '/:locale/valoriser/restructuration',   destination: '/:locale/franchir/restructuration', permanent: true },
+      { source: '/:locale/valoriser/acquisition',       destination: '/:locale/franchir/acquisition',     permanent: true },
+      { source: '/:locale/valoriser/transmission',      destination: '/:locale/franchir/transmission',    permanent: true },
     ]
   },
   async headers() {

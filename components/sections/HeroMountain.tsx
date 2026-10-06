@@ -165,9 +165,9 @@ export function HeroMountain() {
                 </div>
               </Link>
 
-              {/* CTA 3: Transiger */}
+              {/* CTA 3: Franchir */}
               <Link
-                href="/grade"
+                href="/valoriser"
                 className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />

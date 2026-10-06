@@ -6,6 +6,8 @@ export interface AdvisoryUi {
   yes:             string
   no:              string
   yesCount:        (n: number, total: number) => string
+  /** Score affiché quand des questions sont à polarité inversée (goodIf: 'no') */
+  favCount:        (n: number, total: number) => string
   progress:        (n: number, total: number) => string
   nextAction:      string
   restart:         string
@@ -26,6 +28,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   fr: {
     autoDiag: 'Auto-diagnostic', decision: 'Décision', deliverable: 'Livrable', yes: 'Oui', no: 'Non',
     yesCount: (n, t) => `${n} / ${t} oui`,
+    favCount: (n, t) => `${n} / ${t} réponses favorables`,
     progress: (n, t) => `${n} / ${t} réponses. Le résultat s’affiche une fois les cinq questions renseignées.`,
     nextAction: 'Prochaine action', restart: 'Recommencer', question: 'Question',
     change: 'Ce que cela change', ourFramework: 'Notre cadre', sixSituations: 'Six situations',
@@ -38,6 +41,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   en: {
     autoDiag: 'Self-assessment', decision: 'Decision', deliverable: 'Deliverable', yes: 'Yes', no: 'No',
     yesCount: (n, t) => `${n} / ${t} yes`,
+    favCount: (n, t) => `${n} / ${t} favorable answers`,
     progress: (n, t) => `${n} / ${t} answered. Your result appears once all five questions are completed.`,
     nextAction: 'Next step', restart: 'Start again', question: 'Question',
     change: 'What this changes', ourFramework: 'Our framework', sixSituations: 'Six situations',
@@ -50,6 +54,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   de: {
     autoDiag: 'Selbsteinschätzung', decision: 'Entscheidung', deliverable: 'Ergebnis', yes: 'Ja', no: 'Nein',
     yesCount: (n, t) => `${n} / ${t} Ja`,
+    favCount: (n, t) => `${n} / ${t} positive Antworten`,
     progress: (n, t) => `${n} / ${t} beantwortet. Das Ergebnis erscheint, sobald alle fünf Fragen beantwortet sind.`,
     nextAction: 'Nächster Schritt', restart: 'Neu beginnen', question: 'Frage',
     change: 'Was das ändert', ourFramework: 'Unser Rahmenwerk', sixSituations: 'Sechs Situationen',
@@ -62,6 +67,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   it: {
     autoDiag: 'Autodiagnosi', decision: 'Decisione', deliverable: 'Risultato', yes: 'Sì', no: 'No',
     yesCount: (n, t) => `${n} / ${t} sì`,
+    favCount: (n, t) => `${n} / ${t} risposte favorevoli`,
     progress: (n, t) => `${n} / ${t} risposte. Il risultato appare una volta completate le cinque domande.`,
     nextAction: 'Prossimo passo', restart: 'Ricomincia', question: 'Domanda',
     change: 'Che cosa cambia', ourFramework: 'Il nostro metodo', sixSituations: 'Sei situazioni',
@@ -74,6 +80,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   es: {
     autoDiag: 'Autodiagnóstico', decision: 'Decisión', deliverable: 'Entregable', yes: 'Sí', no: 'No',
     yesCount: (n, t) => `${n} / ${t} sí`,
+    favCount: (n, t) => `${n} / ${t} respuestas favorables`,
     progress: (n, t) => `${n} / ${t} respuestas. El resultado aparece al completar las cinco preguntas.`,
     nextAction: 'Siguiente paso', restart: 'Volver a empezar', question: 'Pregunta',
     change: 'Qué cambia esto', ourFramework: 'Nuestro marco', sixSituations: 'Seis situaciones',
@@ -86,6 +93,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
   nl: {
     autoDiag: 'Zelfdiagnose', decision: 'Beslissing', deliverable: 'Resultaat', yes: 'Ja', no: 'Nee',
     yesCount: (n, t) => `${n} / ${t} ja`,
+    favCount: (n, t) => `${n} / ${t} gunstige antwoorden`,
     progress: (n, t) => `${n} / ${t} beantwoord. Het resultaat verschijnt zodra alle vijf vragen zijn ingevuld.`,
     nextAction: 'Volgende stap', restart: 'Opnieuw beginnen', question: 'Vraag',
     change: 'Wat dit verandert', ourFramework: 'Ons kader', sixSituations: 'Zes situaties',

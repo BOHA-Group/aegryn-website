@@ -8,7 +8,7 @@
 
 export type AdvisoryKey = 'strategy' | 'riskCompliance' | 'technology' | 'talentOrganization' | 'ma'
 
-/** Cycles de vie VALORISER (slugs FR de /valoriser/*) */
+/** Cycles de vie FRANCHIR (slugs FR de /franchir/*) */
 export type LifecycleSlug = 'lancement' | 'croissance' | 'restructuration' | 'acquisition' | 'transmission'
 
 export interface StatCard {
@@ -59,6 +59,8 @@ export interface Scenario {
 
 export interface DiagnosticQuestion {
   q: string
+  /** Reponse favorable : 'yes' par defaut, 'no' quand « oui » signale une fragilite */
+  goodIf?: 'yes' | 'no'
 }
 
 export interface DiagnosticLevel {

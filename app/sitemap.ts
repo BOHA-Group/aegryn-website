@@ -33,11 +33,11 @@ const STATIC_ROUTES = [
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Valoriser — cycles de vie ────────────────────────────────────────────────
   { path: '/valoriser',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
-  { path: '/valoriser/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/valoriser/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/valoriser/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/valoriser/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/valoriser/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/franchir/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/franchir/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/franchir/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/franchir/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/franchir/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Transact — infrastructure legacy ────────────────────────────────────────
   // Toutes les routes /transact/* restent fonctionnelles pour les workflows
   // structurés (NDA, KYC, escrow) mais sont masquées : hors sitemap, noindex.

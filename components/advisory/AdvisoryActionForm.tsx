@@ -2,14 +2,15 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import type { ActionDef, Metier } from '@/content/advisory/actions'
+import type { ActionDef } from '@/content/advisory/actions'
 import { SECTOR_CLUSTERS, REVENUE_BANDS } from '@/content/advisory/actions'
 import { ACTION_FORM_UI } from '@/content/advisory/actionForm'
 import { routing } from '@/i18n/routing'
 
 interface Props {
   locale: string
-  metier: Metier
+  /** Métier ACCOMPAGNER, slug de cycle FRANCHIR ou 'general' (intro /valoriser). */
+  metier: string
   action: string
   def:    ActionDef
 }
