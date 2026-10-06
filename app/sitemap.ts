@@ -29,6 +29,7 @@ const STATIC_ROUTES = [
   { path: '/roadmap',                            priority: 0.5,  changeFrequency: 'monthly' as const },
   { path: '/what-we-build',                      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
+  { path: '/annuaire',                           priority: 0.6,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Franchir — cycles de vie (intro en section accueil #franchir) ────────────
@@ -44,7 +45,7 @@ const STATIC_ROUTES = [
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/verify',                             priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/grade/partners',                     priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/audit',                              priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/grade/submit',                       priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Valuation / CIFSO Valuation Index ────────────────────────────────────────
   { path: '/valuation',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
@@ -58,7 +59,6 @@ const STATIC_ROUTES = [
   // ── Talent ───────────────────────────────────────────────────────────────────
   { path: '/talent',                             priority: 0.9,  changeFrequency: 'weekly'  as const },
   // ── Network ──────────────────────────────────────────────────────────────────
-  { path: '/network',                            priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Assets & Portfolio ───────────────────────────────────────────────────────
   { path: '/assets',                             priority: 0.8,  changeFrequency: 'weekly'  as const },
   { path: '/portfolio',                          priority: 0.7,  changeFrequency: 'monthly' as const },

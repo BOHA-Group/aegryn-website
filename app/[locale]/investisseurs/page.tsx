@@ -64,6 +64,15 @@ export default async function InvestisseursPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Nos partenaires — institutions & financeurs */}
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+      />
+
       {/* Section 1 — Le problème */}
       <section className="py-24 px-6 border-t border-ag-border">
         <div className="max-w-7xl mx-auto">
@@ -174,15 +183,6 @@ export default async function InvestisseursPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* Nos partenaires — institutions & financeurs */}
-      <PartnersSection
-        label={t('partners.label')}
-        badge={t('partners.badge')}
-        title={t('partners.title')}
-        desc={t('partners.desc')}
-        note={t('partners.note')}
-      />
 
       {/* CTA final */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">

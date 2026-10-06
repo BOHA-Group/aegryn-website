@@ -105,6 +105,11 @@ const nextConfig: NextConfig = {
       /* /transact (vue d'ensemble) + /valoriser → section accueil #franchir (301 permanent, refonte cycle de vie) */
       { source: '/transact',                            destination: '/#franchir',                       permanent: true },
       { source: '/:locale/transact',                    destination: '/:locale#franchir',                permanent: true },
+      /* Renommages routes partenaires : /network → /experts, /grade/partners → /audit */
+      { source: '/network',                           destination: '/experts',                       permanent: true },
+      { source: '/:locale/network',                   destination: '/:locale/experts',               permanent: true },
+      { source: '/grade/partners',                    destination: '/audit',                         permanent: true },
+      { source: '/:locale/grade/partners',            destination: '/:locale/audit',                 permanent: true },
       /* bid-models : archivé/désactivé — les modèles d'offre ne sont plus publiés */
       { source: '/transact/bid-models',                 destination: '/#franchir',                       permanent: true },
       { source: '/:locale/transact/bid-models',         destination: '/:locale#franchir',                permanent: true },

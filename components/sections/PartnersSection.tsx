@@ -1,4 +1,4 @@
-import PartnersCarousel from './PartnersCarousel'
+import PartnersCarousel, { type PartnerLogo } from './PartnersCarousel'
 
 type Props = {
   label: string
@@ -6,10 +6,11 @@ type Props = {
   title: string
   desc: string
   note: string
+  logos?: PartnerLogo[]
 }
 
-/* Section partenaires réutilisable (/network, /investisseurs, /grade/partners) */
-export default function PartnersSection({ label, badge, title, desc, note }: Props) {
+/* Section partenaires réutilisable (/experts, /investisseurs, /audit) */
+export default function PartnersSection({ label, badge, title, desc, note, logos }: Props) {
   return (
     <section className="border-b border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
@@ -33,9 +34,11 @@ export default function PartnersSection({ label, badge, title, desc, note }: Pro
         <p className="font-sans text-[11px] text-ag-gray-light italic">
           {note}
         </p>
-        <div className="mt-10">
-          <PartnersCarousel />
-        </div>
+        {logos && logos.length > 0 && (
+          <div className="mt-10">
+            <PartnersCarousel logos={logos} />
+          </div>
+        )}
       </div>
     </section>
   )

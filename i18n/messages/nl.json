@@ -4765,7 +4765,7 @@
     },
     "partners": {
       "label": "ONZE PARTNERS",
-      "title": "De structuren die met Aegryn samenwerken.",
+      "title": "De gespecialiseerde structuren die met Aegryn samenwerken.",
       "desc": "Een netwerk van partners en bedrijven waarmee Aegryn samenwerkt aan zijn opdrachten. Strikte selectie. Geen publieke categorisering.",
       "note": "Logo's vertegenwoordigen actieve partners. Aegryn maakt individuele partnervoorwaarden niet openbaar.",
       "badge": "Externe structuren"
@@ -7472,7 +7472,8 @@
     "valoriserRestructuration": "Herstructurering & Pivot",
     "valoriserAcquisition": "Acquisitie & Externe groei",
     "valoriserTransmission": "Overdracht & Cessie",
-    "roadmap": "Roadmap"
+    "roadmap": "Roadmap",
+    "annuaire": "Expertregister"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",

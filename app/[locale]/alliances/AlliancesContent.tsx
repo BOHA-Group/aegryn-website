@@ -268,7 +268,7 @@ export default function AlliancesContent() {
               </div>
 
               <SectionCtas
-                pageHref="/network"
+                pageHref="/experts"
                 viewLabel={t('ctas.viewPage')}
                 joinLabel={t('ctas.joinPartner')}
                 onJoin={() => joinAs('expert')}
@@ -330,7 +330,7 @@ export default function AlliancesContent() {
               </ul>
 
               <SectionCtas
-                pageHref="/grade/partners"
+                pageHref="/audit"
                 viewLabel={t('ctas.viewPage')}
                 joinLabel={t('ctas.joinPartner')}
                 onJoin={() => joinAs('auditeur')}

@@ -1,8 +1,8 @@
-import type { Metadata }  from 'next'
+import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Suspense } from 'react'
-import ExpertsContent from './ExpertsContent'
+import NetworkContent from './NetworkContent'
 
 const BASE = 'https://aegryn.com'
 const EXPERTS_SLUG: Record<string, string> = {
@@ -18,19 +18,19 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'experts' })
+  const t = await getTranslations({ locale, namespace: 'network' })
   const slug = EXPERTS_SLUG[locale] ?? '/experts'
   const base = generateAegrynMetadata({
     title:       t('meta.title'),
     description: t('meta.desc'),
     path:        slug,
     locale,
-    keywords:    ['réseau experts M&A', 'M&A expert network', 'due diligence tech'],
+    keywords:    ['réseau Aegryn', 'partenaires tech M&A', 'experts conseil stratégie', 'réseau conseil tech'],
   })
   return {
     ...base,
     alternates: {
-      canonical:  `${BASE}/${locale}${slug}`,
+      canonical: `${BASE}/${locale}${slug}`,
       languages: {
         fr:          `${BASE}/fr/experts`,
         en:          `${BASE}/en/experts`,
@@ -44,10 +44,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ExpertsPage() {
+export default function NetworkPage() {
   return (
     <Suspense>
-      <ExpertsContent />
+      <NetworkContent />
     </Suspense>
   )
 }

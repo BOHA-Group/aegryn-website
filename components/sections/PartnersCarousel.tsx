@@ -17,7 +17,7 @@ export const PARTNER_LOGOS: PartnerLogo[] = [
 const LOGO_HEIGHT = 36
 const GAP         = 64
 
-export default function PartnersCarousel() {
+export default function PartnersCarousel({ logos = PARTNER_LOGOS }: { logos?: PartnerLogo[] }) {
   const trackRef    = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const animRef     = useRef<gsap.core.Tween | null>(null)
@@ -66,7 +66,7 @@ export default function PartnersCarousel() {
     return () => { animRef.current?.kill() }
   }, [shouldAnimate])
 
-  const logos = PARTNER_LOGOS.map((p, i) => (
+  const logoItems = logos.map((p, i) => (
     <div
       key={i}
       className="shrink-0 flex items-center justify-center"
@@ -88,8 +88,8 @@ export default function PartnersCarousel() {
         ref={trackRef}
         className="flex items-center whitespace-nowrap will-change-transform"
       >
-        {logos}
-        {shouldAnimate && logos}
+        {logoItems}
+        {shouldAnimate && logoItems}
       </div>
     </div>
   )

@@ -30,6 +30,7 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'acquisition',  href: '/services/acquisition-support' },
       { labelKey: 'alliances',    href: '/alliances' },
       { labelKey: 'experts',      href: '/experts' },
+      { labelKey: 'annuaire',     href: '/annuaire' },
       { labelKey: 'valuation',    href: '/valuation' },
     ],
   },
@@ -39,7 +40,7 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'grade',         href: '/grade' },
       { labelKey: 'gradeMethod',   href: '/grade/brochure' },
       { labelKey: 'gradeSubmit',   href: '/grade/submit' },
-      { labelKey: 'gradePartners', href: '/grade/partners' },
+      { labelKey: 'gradePartners', href: '/audit' },
     ],
   },
   {

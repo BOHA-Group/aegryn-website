@@ -49,6 +49,15 @@ export default async function GradePartnersPage() {
         </div>
       </section>
 
+      {/* Nos partenaires — cabinets & auditeurs indépendants */}
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+      />
+
       {/* 4 colonnes experts */}
       <section className="py-20 px-6 border-b border-ag-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -126,15 +135,6 @@ export default async function GradePartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Nos partenaires — cabinets & auditeurs indépendants */}
-      <PartnersSection
-        label={t('partners.label')}
-        badge={t('partners.badge')}
-        title={t('partners.title')}
-        desc={t('partners.desc')}
-        note={t('partners.note')}
-      />
 
       {/* CTA partenaires potentiels */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">

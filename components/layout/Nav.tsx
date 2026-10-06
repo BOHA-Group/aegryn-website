@@ -79,9 +79,9 @@ const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
 const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoCareers',   href: '/career' },
   { labelKey: 'whoAlliances', href: '/alliances' },
-  { labelKey: 'craftSupportNetworkNew', href: '/network' as LinkHref },
+  { labelKey: 'craftSupportNetworkNew', href: '/experts' as LinkHref },
   { labelKey: 'craftSupportInvestors',  href: '/investisseurs' as LinkHref },
-  { labelKey: 'craftTransactAuditors',  href: '/grade/partners' as LinkHref },
+  { labelKey: 'craftTransactAuditors',  href: '/audit' as LinkHref },
 ]
 
 // Mega-menu Nos métiers (4 sections)
@@ -420,7 +420,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isWhoActive =
     isActive('/about') ||
     isActive('/career') || isActive('/alliances') ||
-    isActive('/network') || isActive('/investisseurs') ||
+    isActive('/experts') || isActive('/investisseurs') ||
+    isActive('/audit') ||
     isActive('/portfolio') || isActive('/industries')
 
   const [mobileOpen, setMobileOpen] = useState(false)

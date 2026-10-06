@@ -4765,7 +4765,7 @@
     },
     "partners": {
       "label": "NUESTROS SOCIOS",
-      "title": "Las estructuras que trabajan con Aegryn.",
+      "title": "Las estructuras especializadas que trabajan con Aegryn.",
       "desc": "Una red de socios y empresas con quienes Aegryn colabora en sus misiones. Selección rigurosa. Sin categorización pública.",
       "note": "Los logos representan socios activos. Aegryn no divulga los términos individuales de las alianzas.",
       "badge": "Estructuras externas"
@@ -7457,7 +7457,8 @@
     "valoriserRestructuration": "Reestructuración & Pivote",
     "valoriserAcquisition": "Adquisición & Crecimiento externo",
     "valoriserTransmission": "Transmisión & Cesión",
-    "roadmap": "Hoja de ruta"
+    "roadmap": "Hoja de ruta",
+    "annuaire": "Directorio de expertos"
   },
   "clientTransaction": {
     "eyebrow": "Espacio comprador",

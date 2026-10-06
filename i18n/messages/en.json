@@ -4780,7 +4780,7 @@
     },
     "partners": {
       "label": "OUR PARTNERS",
-      "title": "The firms that work with Aegryn.",
+      "title": "The specialist structures that work with Aegryn.",
       "desc": "A network of partners and companies with whom Aegryn collaborates on its assignments. Rigorous selection. No public categorisation.",
       "note": "Logos represent active partners. Aegryn does not disclose individual partnership terms.",
       "badge": "External structures"
@@ -7472,7 +7472,8 @@
     "valoriserRestructuration": "Restructuring & Pivot",
     "valoriserAcquisition": "Acquisition & External Growth",
     "valoriserTransmission": "Transfer & Cession",
-    "roadmap": "Roadmap"
+    "roadmap": "Roadmap",
+    "annuaire": "Expert directory"
   },
   "clientTransaction": {
     "eyebrow": "Buyer space",

@@ -8,6 +8,7 @@ import {
   Building2, Users, Globe, UserSearch, Landmark, ShieldCheck,
 } from 'lucide-react'
 import PartnersSection from '@/components/sections/PartnersSection'
+import { PARTNER_LOGOS } from '@/components/sections/PartnersCarousel'
 import { GridFillers } from '@/components/ui/GridFillers'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
@@ -218,6 +219,7 @@ export default function NetworkContent() {
         title={t('partners.title')}
         desc={t('partners.desc')}
         note={t('partners.note')}
+        logos={PARTNER_LOGOS}
       />
 
       {/* ── Section 2 : Nos expertises (Aegryn interne + partenaires par extension) ── */}
