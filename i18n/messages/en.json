@@ -144,7 +144,7 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Real Estate",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "craftSupportNetworkNew": "Partners & expertise",
+    "craftSupportNetworkNew": "Domain experts",
     "craftSupportInvestors": "Investors & Institutional",
     "craftTransactAuditors": "Independent auditors",
     "whoIndustries": "Our industries",
@@ -4591,7 +4591,7 @@
       "desc": "Aegryn mobilises a network of individually selected experts: five advisory professions, a circle of investors and institutions, and independent auditors of the CIFSO 5000 certification."
     },
     "side": {
-      "group": "Partners & expertise",
+      "group": "Domain experts",
       "groupDesc": "The structures and expertises mobilised on our engagements.",
       "investors": "Investors & Institutions",
       "investorsDesc": "Banks, funds, family offices, institutions: Aegryn as operating partner of their portfolio companies.",
@@ -4605,7 +4605,7 @@
       "desc": "The Aegryn network: hand-picked specialists, deployed as needed.",
       "cards": [
         {
-          "title": "Partners & expertise",
+          "title": "Domain experts",
           "desc": "Five advisory professions, each carried by experts of the network.",
           "cta": "Explore the professions"
         },
@@ -4622,7 +4622,7 @@
       ]
     },
     "metiers": {
-      "label": "PARTNERS & EXPERTISE",
+      "label": "DOMAIN EXPERTS",
       "title": "Five advisory professions.",
       "desc": "Each profession is carried by experts of the network, deployed according to the needs of each engagement.",
       "profilesLabel": "Profiles sought",
@@ -4760,12 +4760,12 @@
   },
   "network": {
     "meta": {
-      "title": "Partner & Expert Network | Aegryn",
+      "title": "Domain Experts | Aegryn",
       "desc": "The Aegryn network: trusted partners and mobilisable experts for strategy, technology and M&A advisory across Switzerland and Europe."
     },
     "hero": {
       "label": "Aegryn Network",
-      "title": "Trusted partners\nand expertise.",
+      "title": "Domain\nexperts.",
       "desc": "Aegryn relies on a curated network of partners and experts to reinforce every dimension of our advisory offering: strategy, technology, transactions.",
       "stat1": "Qualified partners",
       "stat2": "Mobilisable experts",

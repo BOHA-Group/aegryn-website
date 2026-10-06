@@ -144,7 +144,7 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Vastgoed",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "craftSupportNetworkNew": "Partners & expertise",
+    "craftSupportNetworkNew": "Vakexperts",
     "craftSupportInvestors": "Investeerders & Institutioneel",
     "craftTransactAuditors": "Onafhankelijke auditoren",
     "whoIndustries": "Onze sectoren",
@@ -4576,7 +4576,7 @@
       "desc": "Aegryn mobiliseert een netwerk van één voor één geselecteerde experts: vijf adviesdomeinen, een kring van investeerders en instellingen, en onafhankelijke auditors van de CIFSO 5000-certificering."
     },
     "side": {
-      "group": "Partners & expertise",
+      "group": "Vakexperts",
       "groupDesc": "De structuren en expertise die we op onze opdrachten inzetten.",
       "investors": "Investeerders & Institutionelen",
       "investorsDesc": "Banken, fondsen, family offices, instellingen: Aegryn als operating partner van hun deelnemingen.",
@@ -4590,7 +4590,7 @@
       "desc": "Het Aegryn-netwerk: zorgvuldig gekozen specialisten, ingezet naar behoefte.",
       "cards": [
         {
-          "title": "Partners & expertise",
+          "title": "Vakexperts",
           "desc": "Vijf adviesdomeinen, elk gedragen door experts van het netwerk.",
           "cta": "De domeinen verkennen"
         },
@@ -4607,7 +4607,7 @@
       ]
     },
     "metiers": {
-      "label": "PARTNERS & EXPERTISE",
+      "label": "VAKEXPERTS",
       "title": "Vijf adviesdomeinen.",
       "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
       "profilesLabel": "Gezochte profielen",
@@ -4745,12 +4745,12 @@
   },
   "network": {
     "meta": {
-      "title": "Partner- & Expertennetwerk | Aegryn",
+      "title": "Vakexperts | Aegryn",
       "desc": "Het Aegryn-netwerk: betrouwbare partners en mobiliseerbare experts voor advies op het gebied van strategie, technologie en M&A in Zwitserland en Europa."
     },
     "hero": {
       "label": "Aegryn Netwerk",
-      "title": "Vertrouwde partners\nen expertise.",
+      "title": "Vak-\nexperts.",
       "desc": "Aegryn steunt op een zorgvuldig geselecteerd netwerk van partners en experts om elke dimensie van ons adviesdiensten te versterken: strategie, technologie, transacties.",
       "stat1": "Gekwalificeerde partners",
       "stat2": "Mobiliseerbare experts",

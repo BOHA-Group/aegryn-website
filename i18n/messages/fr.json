@@ -145,7 +145,7 @@
     "industriesDesc": "Tous secteurs",
     "talent": "Talent",
     "whoFounder": "Le fondateur",
-    "craftSupportNetworkNew": "Partenaires & expertises",
+    "craftSupportNetworkNew": "Experts métier",
     "craftSupportInvestors": "Investisseurs & Institutionnels",
     "craftTransactAuditors": "Auditeurs indépendants",
     "whoIndustries": "Nos industries",
@@ -4551,7 +4551,7 @@
       "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : cinq métiers de conseil, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000."
     },
     "side": {
-      "group": "Partenaires & expertises",
+      "group": "Experts métier",
       "groupDesc": "Les structures et expertises mobilisées sur nos missions.",
       "investors": "Investisseurs & Institutionnels",
       "investorsDesc": "Banques, fonds, family offices, institutions : Aegryn operating partner de leurs participations.",
@@ -4565,7 +4565,7 @@
       "desc": "Le réseau Aegryn : des spécialistes choisis un par un, mobilisés selon le besoin.",
       "cards": [
         {
-          "title": "Partenaires & expertises",
+          "title": "Experts métier",
           "desc": "Cinq métiers de conseil, chacun porté par des experts du réseau.",
           "cta": "Explorer les métiers"
         },
@@ -4582,7 +4582,7 @@
       ]
     },
     "metiers": {
-      "label": "PARTENAIRES & EXPERTISES",
+      "label": "EXPERTS MÉTIER",
       "title": "Cinq métiers de conseil.",
       "desc": "Chaque métier est porté par des experts du réseau, mobilisés selon le besoin de la mission.",
       "profilesLabel": "Profils recherchés",
@@ -4720,12 +4720,12 @@
   },
   "network": {
     "meta": {
-      "title": "Réseau de partenaires & experts | Aegryn",
+      "title": "Experts métier | Aegryn",
       "desc": "Le réseau Aegryn : partenaires de confiance et experts mobilisables sur des missions de conseil en stratégie, technologie et M&A en Suisse et en Europe."
     },
     "hero": {
       "label": "Réseau Aegryn",
-      "title": "Partenaires de confiance\net expertises.",
+      "title": "Experts\nmétier.",
       "desc": "Aegryn s'appuie sur un réseau sélectionné de partenaires et d'experts pour renforcer chaque dimension de notre offre de conseil : stratégie, technologie, transactions.",
       "stat1": "Partenaires qualifiés",
       "stat2": "Experts mobilisables",

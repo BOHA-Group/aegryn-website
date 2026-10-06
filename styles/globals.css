@@ -79,7 +79,7 @@ body {
   font-weight            : 400;
   font-size              : 16px;
   line-height            : 1.6;
-  overflow-x             : hidden;
+  overflow-x             : clip;
 }
 
 /* ── Force Plus Jakarta Sans on every element — no exceptions */
@@ -201,7 +201,9 @@ body {
 }
 
 /* ── Mobile-safe overflow ─────────────────────────────── */
-html, body { max-width: 100vw; overflow-x: hidden; }
+/* overflow-x: clip (et non hidden) : clip ne crée pas de contexte de scroll,
+   ce qui préserve position: sticky dans la page (sidebar /alliances, etc.) */
+html, body { max-width: 100vw; overflow-x: clip; }
 
 /* ── Système d'angles arrondis (design system) ────────────────────────
    Règles de base, surchargées par les utilitaires Tailwind (rounded-*).

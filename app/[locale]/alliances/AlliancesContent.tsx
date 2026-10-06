@@ -107,39 +107,40 @@ export default function AlliancesContent() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-0">
 
-          {/* ── Sidebar flottante : toujours visible, CANDIDATURE épinglé en bas ── */}
-          <aside className="hidden lg:flex lg:flex-col shrink-0 w-64 border-r border-ag-border sticky top-20 self-start max-h-[calc(100vh-80px)]">
-            <nav className="flex-1 overflow-y-auto flex flex-col gap-0 pr-6 pt-10 pb-4">
+          {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
+          <aside className="hidden lg:block shrink-0 w-64 border-r border-ag-border sticky top-20 self-start">
+            <nav className="flex flex-col gap-0 pr-6 pt-8 pb-6">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
-                  {gi > 0 && <div className="border-t border-ag-border mx-5 my-5" />}
+                  {gi > 0 && <div className="border-t border-ag-border mx-5 my-4" />}
                   <button
                     onClick={() => scrollToId(g.id)}
-                    className="w-full text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
+                    className="w-full text-left px-5 pt-2 pb-1.5 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
                   >
                     {g.title}
                   </button>
-                  <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-relaxed">
+                  <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-snug">
                     {g.desc}
                   </p>
                   {g.subs?.map(key => (
                     <button
                       key={key}
                       onClick={() => scrollToId(key)}
-                      className="w-full text-left pl-8 pr-5 py-2 font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors"
+                      className="w-full text-left pl-8 pr-5 py-1.5 font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors"
                     >
                       {t(`metiers.items.${key}.title`)}
                     </button>
                   ))}
                 </div>
               ))}
+              <div className="border-t border-ag-border mx-5 mt-4" />
+              <button
+                onClick={() => scrollToId('candidature')}
+                className="w-full text-left px-5 pt-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black transition-colors"
+              >
+                {t('side.apply')}
+              </button>
             </nav>
-            <button
-              onClick={() => scrollToId('candidature')}
-              className="shrink-0 border-t border-ag-border w-full text-left px-5 py-4 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black bg-ag-white transition-colors"
-            >
-              {t('side.apply')}
-            </button>
           </aside>
 
           {/* ── Nav mobile (visible < lg) ── */}

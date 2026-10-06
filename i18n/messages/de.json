@@ -144,7 +144,7 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Immobilien",
     "solutionsCategoryServices": "Services & Lifestyle",
-    "craftSupportNetworkNew": "Partner & Expertise",
+    "craftSupportNetworkNew": "Fachexperten",
     "craftSupportInvestors": "Investoren & Institutionelle",
     "craftTransactAuditors": "Unabhängige Prüfer",
     "whoIndustries": "Unsere Branchen",
@@ -4576,7 +4576,7 @@
       "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: fünf Beratungsdisziplinen, ein Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
     "side": {
-      "group": "Partner & Expertisen",
+      "group": "Fachexperten",
       "groupDesc": "Die Strukturen und Expertisen, die wir in unseren Mandaten mobilisieren.",
       "investors": "Investoren & Institutionen",
       "investorsDesc": "Banken, Fonds, Family Offices, Institutionen: Aegryn als Operating Partner ihrer Beteiligungen.",
@@ -4590,7 +4590,7 @@
       "desc": "Das Aegryn-Netzwerk: einzeln ausgewählte Spezialisten, je nach Bedarf mobilisiert.",
       "cards": [
         {
-          "title": "Partner & Expertisen",
+          "title": "Fachexperten",
           "desc": "Fünf Beratungsdisziplinen, jede getragen von Experten des Netzwerks.",
           "cta": "Disziplinen entdecken"
         },
@@ -4607,7 +4607,7 @@
       ]
     },
     "metiers": {
-      "label": "PARTNER & EXPERTISEN",
+      "label": "FACHEXPERTEN",
       "title": "Fünf Beratungsdisziplinen.",
       "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
       "profilesLabel": "Gesuchte Profile",
@@ -4745,12 +4745,12 @@
   },
   "network": {
     "meta": {
-      "title": "Partner- & Expertennetzwerk | Aegryn",
+      "title": "Fachexperten | Aegryn",
       "desc": "Das Aegryn-Netzwerk: vertrauenswürdige Partner und mobilisierbare Experten für Strategie-, Technologie- und M&A-Beratung in der Schweiz und Europa."
     },
     "hero": {
       "label": "Aegryn Netzwerk",
-      "title": "Vertrauenspartner\nund Expertise.",
+      "title": "Fach-\nexperten.",
       "desc": "Aegryn stützt sich auf ein ausgewähltes Netzwerk von Partnern und Experten, um jede Dimension unseres Beratungsangebots zu stärken: Strategie, Technologie, Transaktionen.",
       "stat1": "Qualifizierte Partner",
       "stat2": "Mobilisierbare Experten",

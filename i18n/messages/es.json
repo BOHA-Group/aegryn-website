@@ -144,7 +144,7 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Inmobiliario",
     "solutionsCategoryServices": "Servicios & Lifestyle",
-    "craftSupportNetworkNew": "Socios & experiencia",
+    "craftSupportNetworkNew": "Expertos de oficio",
     "craftSupportInvestors": "Inversores e Institucionales",
     "craftTransactAuditors": "Auditores independientes",
     "whoIndustries": "Nuestras industrias",
@@ -4576,7 +4576,7 @@
       "desc": "Aegryn moviliza una red de expertos seleccionados uno a uno: cinco profesiones de asesoramiento, un círculo de inversores e instituciones, y auditores independientes de la certificación CIFSO 5000."
     },
     "side": {
-      "group": "Socios y expertise",
+      "group": "Expertos de oficio",
       "groupDesc": "Las estructuras y expertises movilizadas en nuestras misiones.",
       "investors": "Inversores e Institucionales",
       "investorsDesc": "Bancos, fondos, family offices, instituciones: Aegryn operating partner de sus participaciones.",
@@ -4590,7 +4590,7 @@
       "desc": "La red Aegryn: especialistas elegidos uno a uno, movilizados según la necesidad.",
       "cards": [
         {
-          "title": "Socios y expertise",
+          "title": "Expertos de oficio",
           "desc": "Cinco profesiones de asesoramiento, cada una impulsada por expertos de la red.",
           "cta": "Explorar las profesiones"
         },
@@ -4607,7 +4607,7 @@
       ]
     },
     "metiers": {
-      "label": "SOCIOS Y EXPERTISE",
+      "label": "EXPERTOS DE OFICIO",
       "title": "Cinco profesiones de asesoramiento.",
       "desc": "Cada profesión está impulsada por expertos de la red, movilizados según la necesidad de la misión.",
       "profilesLabel": "Perfiles buscados",
@@ -4745,12 +4745,12 @@
   },
   "network": {
     "meta": {
-      "title": "Red de socios y expertos | Aegryn",
+      "title": "Expertos de oficio | Aegryn",
       "desc": "La red Aegryn: socios de confianza y expertos movilizables para asesoramiento en estrategia, tecnología y M&A en Suiza y Europa."
     },
     "hero": {
       "label": "Red Aegryn",
-      "title": "Socios de confianza\ny expertises.",
+      "title": "Expertos\nde oficio.",
       "desc": "Aegryn se apoya en una red seleccionada de socios y expertos para reforzar cada dimensión de nuestra oferta de asesoramiento: estrategia, tecnología, transacciones.",
       "stat1": "Socios cualificados",
       "stat2": "Expertos movilizables",

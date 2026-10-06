@@ -144,7 +144,7 @@
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Immobiliare",
     "solutionsCategoryServices": "Servizi & Lifestyle",
-    "craftSupportNetworkNew": "Partner & competenze",
+    "craftSupportNetworkNew": "Esperti di mestiere",
     "craftSupportInvestors": "Investitori & Istituzionali",
     "craftTransactAuditors": "Revisori indipendenti",
     "whoIndustries": "I nostri settori",
@@ -4576,7 +4576,7 @@
       "desc": "Aegryn mobilita una rete di esperti selezionati uno a uno: cinque professioni di consulenza, un circolo di investitori e istituzioni, e revisori indipendenti della certificazione CIFSO 5000."
     },
     "side": {
-      "group": "Partner ed expertise",
+      "group": "Esperti di mestiere",
       "groupDesc": "Le strutture e le expertise mobilitate nei nostri incarichi.",
       "investors": "Investitori e Istituzionali",
       "investorsDesc": "Banche, fondi, family office, istituzioni: Aegryn operating partner delle loro partecipazioni.",
@@ -4590,7 +4590,7 @@
       "desc": "La rete Aegryn: specialisti scelti uno a uno, mobilitati secondo il bisogno.",
       "cards": [
         {
-          "title": "Partner ed expertise",
+          "title": "Esperti di mestiere",
           "desc": "Cinque professioni di consulenza, ciascuna portata dagli esperti della rete.",
           "cta": "Esplorare le professioni"
         },
@@ -4607,7 +4607,7 @@
       ]
     },
     "metiers": {
-      "label": "PARTNER ED EXPERTISE",
+      "label": "ESPERTI DI MESTIERE",
       "title": "Cinque professioni di consulenza.",
       "desc": "Ogni professione è portata dagli esperti della rete, mobilitati secondo il bisogno dell'incarico.",
       "profilesLabel": "Profili ricercati",
@@ -4745,12 +4745,12 @@
   },
   "network": {
     "meta": {
-      "title": "Rete di partner ed esperti | Aegryn",
+      "title": "Esperti di mestiere | Aegryn",
       "desc": "La rete Aegryn: partner di fiducia ed esperti mobilizzabili per consulenza in strategia, tecnologia e M&A in Svizzera e in Europa."
     },
     "hero": {
       "label": "Rete Aegryn",
-      "title": "Partner di fiducia\ned expertise.",
+      "title": "Esperti\ndi mestiere.",
       "desc": "Aegryn si avvale di una rete selezionata di partner ed esperti per rafforzare ogni dimensione della nostra offerta di consulenza: strategia, tecnologia, transazioni.",
       "stat1": "Partner qualificati",
       "stat2": "Esperti mobilizzabili",
