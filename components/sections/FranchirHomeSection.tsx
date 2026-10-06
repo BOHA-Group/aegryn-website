@@ -114,7 +114,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
       </div>
 
       {/* ── Où en êtes-vous ? ── */}
-      <div className="py-14 px-6 bg-ag-white border-t border-ag-border">
+      <div className="pb-14 pt-4 px-6 bg-ag-white">
         <div className="max-w-7xl mx-auto">
           <FranchirDiagnostic
             title={c.diagnostic.title}

@@ -31,17 +31,17 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
 
   return (
-    <div className="rounded-2xl border border-ag-border bg-ag-white overflow-hidden">
+    <div className="bg-ag-white">
       <button
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        className={`w-full px-6 md:px-10 py-8 flex items-center justify-between gap-6 text-left group${open ? ' border-b border-ag-border' : ''}`}
+        className={`w-full py-6 flex items-center justify-between gap-6 text-left group${open ? ' border-b border-ag-border' : ''}`}
       >
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] group-hover:text-ag-navy transition-colors">{title}</h3>
         <ChevronDown
           size={18}
-          className={`shrink-0 text-ag-gray-light transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          className={`shrink-0 text-ag-gray-light transition-transform duration-200 ${open ? 'rotate-180' : 'animate-pulse'}`}
         />
       </button>
 
@@ -50,7 +50,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
         {questions.map((item, i) => {
           const yes = answers[i] === true
           return (
-            <li key={i} className="px-6 md:px-10 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+            <li key={i} className="py-5 flex flex-col sm:flex-row sm:items-center gap-4">
               <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
               <p className="font-sans text-[14px] text-ag-black leading-relaxed flex-1">{item.q}</p>
               <div className="flex items-center gap-2 shrink-0" role="group" aria-label={`Question ${i + 1}`}>
