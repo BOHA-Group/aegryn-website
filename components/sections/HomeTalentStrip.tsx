@@ -24,7 +24,7 @@ export function HomeTalentStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="border-t border-ag-border bg-ag-white py-20 md:py-28">
+    <section ref={ref} id="recruter" className="border-t border-ag-border bg-ag-white py-20 md:py-28 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 md:gap-24 items-start">
 

@@ -28,7 +28,7 @@ export function BuildStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="border-t border-ag-border bg-white">
+    <section ref={ref} id="construire" className="border-t border-ag-border bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-6">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8 md:mb-10">
           {t('label')}

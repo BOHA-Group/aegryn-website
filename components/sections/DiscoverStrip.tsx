@@ -85,7 +85,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
   const featuredArticles = ARTICLES.filter(a => a.featured)
 
   return (
-    <section ref={ref} className="bg-ag-white border-t border-ag-border mt-20">
+    <section ref={ref} id="informer" className="bg-ag-white border-t border-ag-border mt-20 scroll-mt-20">
 
       {/* ── Bloc 1 : Teaser Magazine — fidèle au modèle Barnes ── */}
       <div
