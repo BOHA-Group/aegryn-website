@@ -1,5 +1,5 @@
 # Aegryn — Full LLM Context File
-> https://aegryn.com | Updated: 2026-09-14
+> https://aegryn.com | Updated: 2026-10-01
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -31,7 +31,9 @@ Synthesis: "Aegryn protects what endures."
 
 ---
 
-## Five Disciplines + Inform (homepage positioning: Build · Advise · Value · Recruit · Inform)
+## Five Disciplines (Advise · Build · Navigate · Recruit · Inform — FR: Accompagner · Construire · Franchir · Recruter · Informer)
+
+CIFSO is a proprietary protocol and service layer — CIFSO 5000 certification and CIFSO Valuation Index — supporting all five disciplines; it is not a discipline itself.
 
 ### 1. Asset Engineering — Build
 Aegryn designs, funds and operates its own portfolio of digital assets AND builds custom digital assets for third parties.
@@ -45,7 +47,7 @@ Aegryn designs, funds and operates its own portfolio of digital assets AND build
 - CIFSO Protocol — Organisation-value certification protocol. 5 dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security/Sovereignty & AI Exposure, Organisation/Talent & Succession. Licensable to audit and advisory firms.
 - Compliance Engine — Automated regulatory compliance engine. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
 - KYB/KYC Engine — Business onboarding and identity verification. KYB, beneficial owners, sanctions, credentials. Licensable.
-- Data Room — Secure M&A data room. RLS, watermarking, audit trail, AI-exposure evidence tracking. Licensable to M&A boutiques.
+- Data Room — Secure data room dedicated to CIFSO certification evidence (access: admin, assigned CIFSO audit partners, asset owner). A separate acquisition/cession data room for M&A mandates is being structured. RLS, watermarking, audit trail, AI-exposure evidence tracking. Licensable.
 
 Pages: /assets (proprietary ecosystem), /portfolio (group participations)
 
@@ -98,42 +100,25 @@ Five specialized advisory pillars across 23+ industries, each named with an "X, 
 
 ---
 
-### 3. Valoriser — Measure, Certify, Realise across the organisation lifecycle (at /valoriser)
+### 3. Franchir — Navigate (operational execution of lifecycle transitions, at /franchir)
 
-Valuing an organisation is not limited to transferring it. Aegryn measures value with the CIFSO Valuation Index, certifies it independently with CIFSO 5000, and accompanies its creation and realisation at every stage of the organisation's lifecycle.
+Franchir is the Navigate discipline: Aegryn executes transitions at every stage of an organisation's lifecycle — distinct from M&A advisory, which sits under the Advise pillar (/advisory/ma). Value measurement (CIFSO Valuation Index) and certification (CIFSO 5000) are CIFSO services supporting all disciplines.
 
-**Measure** — Aegryn CIFSO Valuation Index (see dedicated section below). **Certify** — CIFSO 5000 (see dedicated section below). **Realise** — five lifecycle cycles:
-- Launch & Structuring (/valoriser/lancement) — build a transmissible, certifiable and sovereign asset from day one: strategy, technology, IP, governance, key hires.
-- Growth & Scaling (/valoriser/croissance) — secure hyper-growth without fragilising governance, compliance (NIS2, DORA, EU AI Act) or the technical stack.
-- Restructuring & Pivot (/valoriser/restructuration) — regain control fast in a crisis, cyber incident or regulatory injunction, including defensive carve-outs.
-- Acquisition & External Growth (/valoriser/acquisition) — independent technical, IP, regulatory and organisational due diligence for buy-side, plus CIFSO certification of the target and PMI planning.
-- Transmission & Cession (/valoriser/transmission) — twelve to thirty-six month vendor readiness, data room preparation, CIFSO 5000 certification, coordination with the M&A execution network.
+Five lifecycle cycles:
+- Launch & Structuring (/franchir/lancement) — build a transmissible, certifiable and sovereign asset from day one: strategy, technology, IP, governance, key hires.
+- Growth & Scaling (/franchir/croissance) — secure hyper-growth without fragilising governance, compliance (NIS2, DORA, EU AI Act) or the technical stack.
+- Restructuring & Pivot (/franchir/restructuration) — regain control fast in a crisis, cyber incident or regulatory injunction, including defensive carve-outs.
+- Acquisition & External Growth (/franchir/acquisition) — independent technical, IP, regulatory and organisational due diligence for buy-side, plus CIFSO certification of the target and PMI planning.
+- Transmission & Cession (/franchir/transmission) — twelve to thirty-six month vendor readiness, data room preparation, CIFSO 5000 certification, coordination with the M&A execution network.
 
-Structured session-based tools remain available through AEGRYN Transact for qualified confidential dossiers of digital tech assets.
-Range: €100K-€50M. NDA-gated. Graded assets only.
-
-Not an auction: no real-time public bidding. A structured, on-demand confidential process reserved for CIFSO-certified organisations and pre-qualified acquirers.
-
-**Process:**
-1. Seller submits asset → AEGRYN grades (AEG★ to B)
-2. Asset listed with confidential dossier (CIM)
-3. Buyer KYC → signs NDA → accesses full dossier
-4. Qualified offer submitted under exclusive mandate
-5. Closing → structured legal process with advisors
-
-**Offer Models (Bid Models):**
-- Club Deal — Lead bidder + up to 4 co-investors, single bid, min €100K
-- Corporate — Legal entity (asset deal or share deal), min €250K
-- Fund — PE, VC, Family Office, Search Fund, IC window 5-10 days, min €500K
-- Equity Stake — Partial stake, no fixed minimum, SHA-based commitment
+Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network — advisory first, execution via accredited partners. A dedicated acquisition/cession data room for these workflows is being structured (the CIFSO data room remains reserved for certification evidence: admin, assigned audit partners and the asset owner only).
 
 **Key Pages:**
-- /valoriser — Value lifecycle overview
-- /valoriser/lancement — Launch & Structuring cycle
-- /valoriser/croissance — Growth & Scaling cycle
-- /valoriser/restructuration — Restructuring & Pivot cycle
-- /valoriser/acquisition — Acquisition & External Growth cycle (due diligence, target certification, PMI)
-- /valoriser/transmission — Transmission & Cession cycle (vendor readiness, data room, certification)
+- /franchir/lancement — Launch & Structuring cycle
+- /franchir/croissance — Growth & Scaling cycle
+- /franchir/restructuration — Restructuring & Pivot cycle
+- /franchir/acquisition — Acquisition & External Growth cycle (due diligence, target certification, PMI)
+- /franchir/transmission — Transmission & Cession cycle (vendor readiness, data room, certification)
 
 ---
 
@@ -181,7 +166,7 @@ Regulatory compliance (CIFSO 5000): each asset's regulatory perimeter is profile
 At publication, the certified dossier carries a quantified valuation: market multiple of the industry adjusted by the 5 CIFSO scores, per-dimension impact in euros, and roadmap potential (value if each dimension reaches its target level).
 
 MANDATORY for any certified valuation or transmission mandate handled by Aegryn. Cannot be replaced by a self-assessment or any third-party estimate.
-Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify (public certificate verification), /verify/[code]
+Pages: /grade, /grade/brochure, /grade/submit, /audit, /verify (public certificate verification), /verify/[code]
 
 ---
 
@@ -196,7 +181,7 @@ Benchmark engine branded "Aegryn CIFSO Valuation Index" — the single source na
 
 **Freemium access model:**
 - Free: 15-min self-assessment, estimated grade, deliberately WIDE illustrative range built on a subset of benchmarks — no precise estimate is possible without analysing the underlying documents;
-- Subscription (monthly, 3-day free trial, free cancellation before activation — opening soon): full multiples per industry (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, comparison vs certified dossiers by grade;
+- Extended access (planned — opening soon, reserved to validated profiles): full multiples per industry (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, comparison vs certified dossiers by grade;
 - Certified: quantified valuation delivered with a published CIFSO 5000 grade.
 
 **Honest limitation:** private M&A transaction multiples are not published by any official open source; licensed feeds (FactSet, PitchBook, Dealroom, Morningstar) are NOT currently used. The Index is built to absorb them via connectors if a licence is taken.
@@ -225,7 +210,7 @@ Curated network of vetted tech and M&A experts:
 - Real Estate — asset-backed real estate in tech transactions
 - ESG/RSE — sustainability due diligence
 
-Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /network, /alliances
+Pages: /experts (fr/en/nl), /experten (de), /expertos (es), /esperti (it), /alliances. The detailed expert directory (/annuaire) is internal — authenticated partners and admin only, not indexed.
 
 ---
 
@@ -247,7 +232,6 @@ Pages:
 - /magazine/issue-01/cover — Cover overview
 - /magazine/issue-01/web — Web reader (article by article)
 - /magazine/issue-01/flipbook — Interactive flipbook
-- /magazine/issue-01/[slug] — Individual article pages
 
 ---
 
@@ -285,16 +269,15 @@ Incorporated: Aegryn, Switzerland
 | Investors | /fr/investisseurs | Financing & investors |
 | Industries | /fr/industries | Five industry hubs |
 | Industry detail | /fr/industries/[slug] | Per-industry page |
-| Valoriser | /fr/valoriser | Value lifecycle overview |
-| Lancement & Structuration | /fr/valoriser/lancement | Launch & Structuring cycle |
-| Croissance & Mise à l'échelle | /fr/valoriser/croissance | Growth & Scaling cycle |
-| Restructuration & Pivot | /fr/valoriser/restructuration | Restructuring & Pivot cycle |
-| Acquisition & Croissance externe | /fr/valoriser/acquisition | Acquisition due diligence cycle |
-| Transmission & Cession | /fr/valoriser/transmission | Transfer & cession cycle |
+| Lancement & Structuration | /fr/franchir/lancement | Launch & Structuring cycle |
+| Croissance & Mise à l'échelle | /fr/franchir/croissance | Growth & Scaling cycle |
+| Restructuration & Pivot | /fr/franchir/restructuration | Restructuring & Pivot cycle |
+| Acquisition & Croissance externe | /fr/franchir/acquisition | Acquisition due diligence cycle |
+| Transmission & Cession | /fr/franchir/transmission | Transfer & cession cycle |
 | Grade | /fr/grade | Certification CIFSO 5000 |
 | Brochure | /fr/grade/brochure | Full protocol presentation |
 | Grade Submit | /fr/grade/submit | Submit for certification |
-| Grade Partners | /fr/grade/partners | Grading partners |
+| Audit | /fr/audit | Auditors & grading partners |
 | Verify | /fr/verify | Public certificate verification |
 | Verify certificate | /fr/verify/[code] | One URL per certificate |
 | Valuation | /fr/valuation | CIFSO Valuation Index + estimate |
@@ -306,8 +289,7 @@ Incorporated: Aegryn, Switzerland
 | M&A, Transactions, and PMI | /fr/advisory/ma | M&A advisory, PMI |
 | Workforce & AI Skills | /fr/workforce | Employment/AI-skills market data (WEF, PwC) |
 | Talent | /fr/talent | Executive recruitment |
-| Experts | /fr/experts | Expert network |
-| Network | /fr/network | Partner certifications |
+| Experts | /fr/experts | Expert network & partner certifications |
 | Assets | /fr/assets | Proprietary ecosystem |
 | Asset detail | /fr/assets/[slug] | Per-asset page |
 | Portfolio | /fr/portfolio | Group participations |
@@ -315,7 +297,7 @@ Incorporated: Aegryn, Switzerland
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
 | Magazine | /fr/magazine | Magazine hub (English) |
 | Magazine Jan 2027 | /fr/magazine/issue-01 | Edition — cover, web reader, flipbook |
-| Magazine articles | /fr/magazine/issue-01/[slug] | Individual articles |
+
 | Roadmap | /fr/roadmap | Group roadmap & capabilities |
 | FAQ | /fr/help/faq | Frequently asked questions |
 | Privacy | /fr/privacy | Privacy policy |

@@ -12,21 +12,21 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
+  const privateAreas = ['/api/', '/admin/', '/client/', '/*/annuaire']
+
   return {
     rules: [
       {
         userAgent: '*',
         allow: ['/', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
-        disallow: ['/api/', '/admin/', '/client/'],
+        disallow: privateAreas,
       },
-      /* Explicit allow for major AI crawlers */
-      { userAgent: 'GPTBot',       allow: '/' },
-      { userAgent: 'ClaudeBot',    allow: '/' },
-      { userAgent: 'PerplexityBot',allow: '/' },
-      { userAgent: 'Applebot',     allow: '/' },
-      { userAgent: 'Googlebot',    allow: '/' },
-      { userAgent: 'Bingbot',      allow: '/' },
-      { userAgent: 'OAI-SearchBot',allow: '/' },
+      /* Explicit allow for major AI crawlers — mêmes zones privées exclues */
+      {
+        userAgent: ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Applebot', 'Googlebot', 'Bingbot', 'OAI-SearchBot'],
+        allow: '/',
+        disallow: privateAreas,
+      },
     ],
     sitemap: [`${base}/sitemap.xml`],
     host:    base,

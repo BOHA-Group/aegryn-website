@@ -12,7 +12,7 @@
   "categories": ["business", "technology", "finance"],
   "shortcuts": [
     { "name": "Valorisation", "url": "/fr/valuation", "description": "Outil de valorisation illustratif gratuit" },
-    { "name": "Transact", "url": "/fr/transact", "description": "Plateforme de transactions certifiées" },
+    { "name": "Advisory", "url": "/fr/advisory", "description": "Cinq piliers de conseil intégré" },
     { "name": "Aegryn Grade", "url": "/fr/grade", "description": "Certification CIFSO v4.0" },
     { "name": "Contact", "url": "/fr/contact", "description": "Nous contacter" }
   ],

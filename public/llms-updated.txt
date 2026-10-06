@@ -1,14 +1,16 @@
-# Aegryn — Swiss Integrated Advisory Group: Build · Advise · Value · Recruit · Inform
-> https://aegryn.com | Updated: 2026-09-21
+# Aegryn — Swiss Integrated Advisory Group: Advise · Build · Navigate · Recruit · Inform
+> https://aegryn.com | Updated: 2026-10-01
 
 ## What is Aegryn?
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Homepage positioning, 5 words:
-1. **Build — Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
-2. **Advise — Advisory** — Cybersecurity, AI audit, M&A strategy, digital transformation across 23+ industries
-3. **Value** — Measure with the CIFSO Valuation Index (industry multiples adjusted on the 5 CIFSO dimensions, refreshed automatically every Monday 06:00 Europe/Zurich), certify with CIFSO 5000 (evidence-backed ownership and value record — "acte de propriété"), then realise through confidential structured mandates: transfer, acquisition, fundraising or equity opening (€100K-€50M)
+Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Five disciplines (FR: Accompagner · Construire · Franchir · Recruter · Informer):
+1. **Advise — Advisory** — Five pillars: strategy & innovation, risk & compliance, technology & sovereignty, talent & organisation, M&A & PMI; across 23+ industries
+2. **Build — Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
+3. **Navigate — Franchir** — Operational execution of lifecycle transitions: launch, scaling, restructuring, acquisition & external growth, transmission
 4. **Recruit — Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
 5. **Inform** — Aegryn Magazine (English), blog in 6 languages, tech M&A glossary
+
+CIFSO is a proprietary protocol and service layer — CIFSO 5000 certification and CIFSO Valuation Index — supporting all five disciplines.
 
 Positioning: operational-compliance standards certify conformity of systems and processes; Aegryn certifies the value and transferability of an organisation — complementary objects.
 
@@ -114,7 +116,7 @@ Software assets designed, built and operated by Aegryn, available under direct a
 - **CIFSO Protocol** — Organisation-value certification (Code & Architecture, IP & Rights, Finance & Metrics, Security/Sovereignty & AI Exposure, Organisation/Talent & Succession). Licensable.
 - **Compliance Engine** — Automated regulatory compliance. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
 - **KYB/KYC Engine** — Business onboarding, identity verification, beneficial owners, sanctions. Licensable.
-- **Data Room** — Secure M&A data room. RLS, watermarking, full audit trail, AI-exposure evidence. Licensable.
+- **Data Room** — Secure data room dedicated to CIFSO certification evidence (admin + assigned CIFSO audit partners + asset owner); separate acquisition/cession data room in structuring. RLS, watermarking, full audit trail. Licensable.
 - **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory
 
 Each asset: "An Aegryn company."
@@ -143,21 +145,18 @@ succession plan and board governance, executive recruitment and key talent reten
 Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
 valuation, post-merger integration
 
-## Valoriser — Realise across the organisation lifecycle (https://aegryn.com/valoriser)
+## Franchir — Lifecycle transitions, executed operationally (https://aegryn.com/franchir)
 
-Third step of the Value discipline, after Measure (CIFSO Valuation Index) and Certify (CIFSO 5000). Five lifecycle cycles: Launch & Structuring, Growth & Scaling, Restructuring & Pivot, Acquisition & External Growth, Transmission & Cession.
+The Navigate discipline — distinct from M&A advisory (Advise pillar). Five lifecycle cycles: Launch & Structuring, Growth & Scaling, Restructuring & Pivot, Acquisition & External Growth, Transmission & Cession.
 
-Structured session-based tools remain available for qualified confidential dossiers of digital tech assets. €100K-€50M range. NDA-gated. Graded assets only.
-
-Offer Models: Club Deal (min €100K), Corporate (min €250K), Fund (min €500K), Equity Stake (SHA-based)
+Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network; a dedicated data room for these workflows is being structured. CIFSO 5000 certification is mandatory upstream of any transmission mandate.
 
 Key Pages:
-- /valoriser — Value lifecycle overview
-- /valoriser/lancement — Launch & Structuring
-- /valoriser/croissance — Growth & Scaling
-- /valoriser/restructuration — Restructuring & Pivot
-- /valoriser/acquisition — Acquisition & External Growth (due diligence)
-- /valoriser/transmission — Transmission & Cession (vendor readiness)
+- /franchir/lancement — Launch & Structuring
+- /franchir/croissance — Growth & Scaling
+- /franchir/restructuration — Restructuring & Pivot
+- /franchir/acquisition — Acquisition & External Growth (due diligence)
+- /franchir/transmission — Transmission & Cession (vendor readiness)
 
 ## Certification CIFSO 5000 (/grade)
 
@@ -174,7 +173,7 @@ Protocol CIFSO 5000: 5 audited dimensions, each 0-20 pts, total /100:
 Regulatory compliance (v4.11): applicable perimeter profiled then validated; controls distributed per dimension: Data Act (C+I), CRA (C), ePrivacy/DSA/P2B/sanctions/AML (I), NIS2/DORA/AI Act (S), compliance governance (O). Non-compliance lowers the score, caps the grade at AA and affects the TRS; the report is never blocked.
 At publication: quantified valuation (industry multiple adjusted on the 5 CIFSO scores) + roadmap potential.
 MANDATORY for any certified valuation or transmission mandate handled by Aegryn.
-Pages: /grade, /grade/brochure, /grade/submit, /grade/partners, /verify
+Pages: /grade, /grade/brochure, /grade/submit, /audit, /verify
 
 ## CIFSO Valuation Index (/valuation)
 
@@ -182,7 +181,7 @@ Benchmark engine branded "Aegryn CIFSO Valuation Index". Automatic collection ev
 
 Freemium:
 - Free: 15-min self-assessment, deliberately WIDE illustrative range on a subset of benchmarks — no precise estimate without document analysis;
-- Subscription (monthly, 3-day free trial, free cancellation before activation — opening soon): full industry multiples (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, certified comparables;
+- Extended access (planned — opening soon, reserved to validated profiles): full industry multiples (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, certified comparables;
 - Certified: quantified valuation with a published grade.
 
 Not used today: licensed private-transaction feeds (FactSet, PitchBook, Dealroom, Morningstar) — connector-ready if licensed.
@@ -202,7 +201,7 @@ premium (62%, up from 57% a year earlier), by-role and by-sector exposure readin
 the CIFSO 5000 Organisation & Talent dimension. Includes related-articles section linking to blog
 content on the same data (skills gap, AI hiring, executive tech salaries, founder dependency).
 
-## Expert Network (/experts, /network)
+## Expert Network (/experts) — detailed directory /annuaire is internal (authenticated partners & admin)
 
 M&A Advisors, Lawyers, Accountants/Auditors, CTO/Tech Architects, Cybersecurity (PASSI/CREST),
 HR/Employment Law, W&I Insurance, Tax Advisors, Real Estate, ESG/RSE.
@@ -216,8 +215,8 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 
 - General: contact@boha-group.com
 - Certify: https://aegryn.com/grade/submit
-- Transmission: https://aegryn.com/valoriser/transmission
-- Acquisition: https://aegryn.com/valoriser/acquisition
+- Transmission: https://aegryn.com/franchir/transmission
+- Acquisition: https://aegryn.com/franchir/acquisition
 - Advisory: https://aegryn.com/advisory
 - Talent: https://aegryn.com/talent
 - Custom Build: https://aegryn.com/services/build
@@ -228,7 +227,23 @@ Incorporated: Aegryn, Switzerland
 GDPR/FADP compliant — Data requests: contact@boha-group.com
 Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms/ai-usage
 
-## Recent Updates (September 2026)
+## Recent Updates (October 2026)
+
+- Repositioning as integrated advisory group: lifecycle section renamed Valoriser → Franchir
+  (/franchir/* — Navigate discipline); FRANCHIR covers launch, scaling, restructuring,
+  acquisition and transmission execution — M&A advisory remains under Advise (/advisory/ma)
+- Public routes renamed: /network → /experts (expert directory), /grade/partners → /audit
+- Expert directory /annuaire is now internal: authenticated expert/admin access only, noindex,
+  removed from sitemap and public structured data
+- Expert-profile subscription model parked: public mentions reworded, partner dashboard
+  subscription card removed
+- CIFSO data room access restricted: admin + assigned CIFSO audit partners + asset owner only;
+  client-facing visibility tiers reserved for a dedicated acquisition/cession data room
+  (in structuring). Legacy buyer workspace (/client/buyer, auction/session workflows) archived
+- Site language standardised on CIFSO framing; auction/catalog/transaction vocabulary removed
+  from client-facing surfaces
+
+### September 2026
 
 - Advisory repositioned from 3 to 5 pillars, each renamed with an "X, and Y" naming convention:
   Business Strategy, and Innovation (/advisory/strategy); Risk Management, and Compliance
@@ -262,5 +277,5 @@ Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms
 
 ---
 
-Last updated: September 21, 2026
-Version: 3.1
+Last updated: October 2026
+Version: 3.2
