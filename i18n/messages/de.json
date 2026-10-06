@@ -1059,9 +1059,9 @@
   },
   "career": {
     "hero": {
-      "label": "Aegryn Advisory & Karriere",
+      "label": "Karrierechancen",
       "title": "Advisory & Experten für digitale Ökosysteme",
-      "desc": "Aegryn ist eine Schweizer Zertifizierungs- und Begleitungsgruppe für europäische Technologieorganisationen. Wir besetzen keine Nische: Wir definieren ihre Regeln."
+      "desc": "Aegryn ist eine integrierte Beratungsgruppe. Wir begleiten europäische Organisationen über ihren gesamten Lebenszyklus: Beratung, Aufbau, Übergänge, Talente, Marktintelligenz. Wir besetzen keine Nische: Wir definieren ihre Regeln."
     },
     "positions": {
       "label": "Kommende Stellen",
@@ -1088,7 +1088,7 @@
       "product": "Produkt"
     },
     "about": {
-      "desc": "Gegründet auf drei Prinzipien — Präzision, Dauerhaftigkeit, Unabhängigkeit — begleitet Aegryn Tech-Organisationen über ihren gesamten Lebenszyklus mit einer Strenge, die der Markt bisher nicht bot. Unsere eigenen Assets, unser Zertifizierungsprotokoll und unser Advisory-Netzwerk bilden ein integriertes Ökosystem, konzipiert für die nächsten 10 Jahre.",
+      "desc": "Gegründet auf drei Prinzipien, Präzision, Dauerhaftigkeit, Unabhängigkeit, begleitet Aegryn Organisationen aller Branchen über ihren gesamten Lebenszyklus mit einer Strenge, die der Markt bisher nicht bot. Unsere eigenen Assets, unser Zertifizierungsprotokoll und unser Beraternetzwerk bilden ein integriertes Ökosystem für die nächsten 10 Jahre.",
       "label": "Karriere",
       "tagline": "Aegryn | Saint-Sulpice, Schweiz",
       "title": "Bauen, was bleibt."
@@ -1099,23 +1099,23 @@
       "items": {
         "accompagner": {
           "title": "Beratung & Strategie",
-          "desc": "Wir begleiten Führungskräfte bei komplexen strategischen, technologischen und transaktionalen Entscheidungen. Wir suchen Senior-Profile mit hoher Autonomie: ehemalige Partner, Practice-Direktoren, Executive-Berater."
+          "desc": "Sie beraten Führungskräfte bei den Entscheidungen, die ihre Organisation prägen: Strategie, Compliance, Technologie, Organisation, externes Wachstum. Sie sind ein erfahrenes, eigenständiges Profil: ehemaliger Partner, Practice-Director, Executive Consultant."
         },
         "construire": {
           "title": "Engineering & Produkt",
-          "desc": "Wir entwickeln und betreiben eigene digitale Assets : SaaS, KI-Plattformen, Protokolle. Wir suchen Ingenieure, Tech-Leads und Product Manager, die für Dauerhaftigkeit bauen."
+          "desc": "Sie entwickeln massgeschneiderte Lösungen für unsere Kunden und tragen zu unseren eigenen digitalen Assets bei: SaaS, KI-Plattformen, Protokolle. Sie sind Ingenieur, Tech Lead oder Product Manager und bauen für Dauer, nicht für schnelle Lieferung."
         },
-        "transmettre": {
-          "title": "Bewertung & Übertragung",
-          "desc": "Wir zertifizieren, bewerten und begleiten Übertragungen und Akquisitionen von Tech-Organisationen. Wir arbeiten mit M&A-, Rechts- und Finanzprofis, die die Bewertungsfragen digitaler Assets verstehen."
+        "franchir": {
+          "title": "Transformation & Übergänge",
+          "desc": "Sie steuern die entscheidenden Phasen des Lebenszyklus unserer Kunden: Launch, Skalierung, Restrukturierung, Post-Akquisitions-Integration, Nachfolge. Sie sind Transformationsdirektor, Interim-Manager oder ein operatives Profil mit Erfahrung in der Umsetzung von Veränderungen."
         },
         "recruter": {
           "title": "Talent & Research",
-          "desc": "Wir vermitteln Führungskräfte und Tech-Experten für unsere Kunden. Wir suchen auf Tech, M&A und Transformation spezialisierte Headhunter mit starkem europäischen Netzwerk."
+          "desc": "Sie identifizieren und vermitteln Führungskräfte und Experten für unsere Kunden. Sie sind Headhunter oder Researcher für Führungs-, Fach- und Transformationsprofile mit einem starken europäischen Netzwerk."
         },
         "informer": {
           "title": "Intelligence & Content",
-          "desc": "Wir veröffentlichen unser eigenes Marktmagazin und produzieren Branchenintelligenz. Wir suchen Analysten, Fachjournalisten und Redakteure, die Tech- und M&A-Trends fundiert dokumentieren."
+          "desc": "Sie dokumentieren Marktdynamiken: Magazin, Branchenanalysen, Beobachtung. Sie sind Analyst, Fachjournalist oder Editor mit dem Anspruch einer Referenzpublikation."
         }
       }
     },
@@ -1123,7 +1123,8 @@
       "cta": "Kontakt aufnehmen",
       "desc": "Derzeit keine offenen Stellen. Wir rekrutieren nach Talent, nicht nach Vakanz. Senden Sie uns Ihr Profil.",
       "label": "Offene Stellen",
-      "title": "Aktuelle Stellen."
+      "title": "Aktuelle Stellen.",
+      "ctaPartner": "Partner werden"
     },
     "values": {
       "items": {
@@ -1511,6 +1512,10 @@
       "title": "Die unabhängigen Strukturen, die zur Zertifizierung beitragen.",
       "desc": "Audit- und Beratungskanzleien sowie unabhängige Spezialisten, die auf den CIFSO-5000-Dimensionen eingesetzt werden, unter Einhaltung der Unabhängigkeitsregeln.",
       "note": "Die Logos stehen für unsere aktiven Partner. Aegryn gibt die Bedingungen einzelner Partnerschaften nicht bekannt."
+    },
+    "meta": {
+      "title": "Unabhängige Auditoren | CIFSO 5000 Zertifizierung | Aegryn",
+      "desc": "Die CIFSO 5000 Zertifizierung ist unabhängig. Unabhängige Experten (Code, IP-Recht, Finanzen, Cybersicherheit, Organisation) können sich bewerben, um zur Zertifizierung auf einer der fünf Dimensionen beizutragen."
     }
   },
   "contact": {
@@ -8790,33 +8795,33 @@
       "wishlistDesc": "Die Druckausgabe des Aegryn-Magazins ist eine Initiative für registrierte Kunden. Mit diesem Formular können Sie Ihre Interessensgebiete angeben, um auf die Wunschliste aufgenommen zu werden. Wir werden Sie kontaktieren, wenn die Produktion beginnt."
     },
     "notify": {
-      "cta": "Être notifié",
-      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de Aegryn Magazine. Accès libre, aucun engagement, désabonnement en un clic.",
-      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "cta": "Benachrichtigt werden",
+      "desc": "Geben Sie Ihre E-Mail-Adresse ein, um bei jeder neuen jährlichen Ausgabe des Aegryn Magazins benachrichtigt zu werden. Kostenlos, unverbindlich, Abmeldung mit einem Klick.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
       "meta": {
         "description": "Erhalten Sie jede Ausgabe des Aegryn Magazins per E-Mail.",
         "title": "Aegryn Magazine, Informiert bleiben"
       },
       "placeholder": "Ihre E-Mail-Adresse",
-      "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
-      "title": "Être notifié de chaque édition",
+      "success": "Danke. Sie erhalten die nächste Ausgabe, sobald sie erscheint.",
+      "title": "Über jede Ausgabe benachrichtigt werden",
       "unsubscribed": "Sie wurden abgemeldet."
     },
     "press": {
-      "label": "Ils parlent de nous",
+      "label": "Pressestimmen",
       "neediu": {
-        "context": "Couverture dans Gala, magazine grand public de référence. Reportage vidéo sur neediu, actif Aegryn dans le secteur des services à domicile.",
-        "excerpt": "neediu, la plateforme de mise en relation entre particuliers et prestataires de services à domicile, a fait l'objet d'un reportage vidéo dans le magazine Gala.",
+        "context": "Berichterstattung im Magazin Gala, einem führenden Publikumsmagazin. Videoreportage über neediu, ein Aegryn-Asset im Bereich Haushaltsdienstleistungen.",
+        "excerpt": "neediu, die Plattform zur Vermittlung zwischen Privatpersonen und Dienstleistern für Haushaltsdienste, war Gegenstand einer Videoreportage im Magazin Gala.",
         "title": "neediu im Magazin Gala"
       },
-      "readArticle": "Lire l'article",
+      "readArticle": "Artikel lesen",
       "subblink": {
-        "context": "Article publié sur Village de la Justice, plateforme de référence du droit français et européen. Présentation de subblink, actif Aegryn d'analyse contractuelle par IA.",
-        "excerpt": "Village Justice bietet an, alle Ihre Verträge prüfen zu lassen, um einen Risikoscore für rechtliche Risiken zu erhalten — dank subblink, einer KI-gestützten Lösung, die für Schweizer und europäisches Recht kalibriert ist.",
-        "title": "Village de la Justice propose de faire auditer tous vos contrats"
+        "context": "Artikel veröffentlicht auf Village de la Justice, einer Referenzplattform für französisches und europäisches Recht. Vorstellung von subblink, dem Aegryn-Asset für KI-gestützte Vertragsanalyse.",
+        "excerpt": "Village Justice bietet an, alle Ihre Verträge prüfen zu lassen, um einen Risikoscore für rechtliche Risiken zu erhalten. Möglich macht dies subblink, eine KI-gestützte Lösung, die auf Schweizer und europäisches Recht kalibriert ist.",
+        "title": "Village de la Justice regt an, alle Verträge prüfen zu lassen"
       },
-      "title": "La presse cite nos actifs.",
-      "videoAvailable": "Vidéo disponible sur demande"
+      "title": "Die Presse berichtet über unsere Assets.",
+      "videoAvailable": "Video auf Anfrage verfügbar"
     },
     "nda": {
       "addressLabel": "Lieferadresse",

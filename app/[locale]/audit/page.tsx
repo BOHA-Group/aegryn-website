@@ -4,9 +4,15 @@ import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2, Users } from 'luci
 import { getTranslations } from 'next-intl/server'
 import PartnersSection from '@/components/sections/PartnersSection'
 
-export const metadata: Metadata = {
-  title: 'Réseau d’auditeurs indépendants | Certification CIFSO 5000 | Aegryn',
-  description: 'La certification CIFSO 5000 est indépendante. Des experts indépendants (code, juridique IP, finance, cybersécurité, organisation) peuvent candidater pour s’adosser à la certification sur l’une des cinq dimensions.',
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'gradePartners' })
+  return {
+    title: t('meta.title'),
+    description: t('meta.desc'),
+  }
 }
 
 const PARTNER_ICONS = [Code2, Scale, Calculator, ShieldCheck, Users] as const

@@ -149,7 +149,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords:    ['NIS2 PME', 'DORA conformité', 'AI Act obligations', 'LPD RGPD Suisse', 'cartographie réglementaire', "gestion d'incident cyber", 'OFCS signalement 24 h'],
     },
     eyebrow:  'Risques & Conformité',
-    h1:       "Savoir ce qui vous oblige aujourd'hui, ce que vos clients vous imposeront demain, et ce qui peut attendre.",
+    h1:       "Anticiper ce qui vous oblige, avant qu'on ne vous l'impose.",
     subtitle: "NIS2 pas encore transposée en France, un régime suisse distinct, un AI Act aux échéances redessinées, des clients qui exigent déjà des preuves. La conformité n'est plus un sujet de juristes : c'est un arbitrage de direction.",
     scope: [
       { label: 'Architecture et hébergement : Technologie', href: '/advisory/technology' },
@@ -269,7 +269,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords:    ["audit d'architecture", 'dette technique', 'direction technique à temps partagé', 'CTO intérim', "gouvernance IA PME", 'hébergement souverain Suisse', 'réversibilité'],
     },
     eyebrow:  'Technologie & Souveraineté',
-    h1:       "Votre technologie est un actif ou une dépendance. Mesurez lequel avant qu'un client, un investisseur ou une panne ne le fasse pour vous.",
+    h1:       "Votre technologie est un actif ou une dépendance. Mesurez lequel.",
     subtitle: 'Architecture, dette technique, IA, hébergement : les choix des trois premières années pèsent sur les dix suivantes. Aegryn intervient aux moments où ils se décident.',
     scope: [
       { label: 'Obligations légales : Risques & Conformité', href: '/advisory/risk-compliance' },

@@ -1059,9 +1059,9 @@
   },
   "career": {
     "hero": {
-      "label": "Aegryn Advisory & Carrières",
+      "label": "Carrièremogelijkheden",
       "title": "Advisory & Experts in Digitale Ecosystemen",
-      "desc": "Aegryn is een Zwitsere certificerings- en begeleidingsgroep voor Europese technologieorganisaties. Wij bezetten geen niche: wij definiëren haar regels."
+      "desc": "Aegryn is een geïntegreerde adviesgroep. Wij begeleiden Europese organisaties gedurende hun hele levenscyclus: advies, opbouw, transities, talent, marktintelligentie. Wij bezetten geen niche: wij bepalen de regels."
     },
     "positions": {
       "label": "Aankomende functies",
@@ -1088,7 +1088,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Gefundeerd op drie principes — precisie, duurzaamheid, onafhankelijkheid — begeleidt Aegryn tech-organisaties over hun hele levenscyclus met een strengheid die de markt nog niet bood. Onze eigen activa, ons certificeringsprotocol en ons advisorynetwerk vormen een geïntegreerd ecosysteem, ontworpen voor de komende 10 jaar.",
+      "desc": "Gebaseerd op drie principes, precisie, duurzaamheid, onafhankelijkheid, begeleidt Aegryn organisaties uit alle sectoren gedurende hun hele levenscyclus met een strengheid die de markt nog niet bood. Onze eigen assets, ons certificeringsprotocol en ons advisorynetwerk vormen een geïntegreerd ecosysteem voor de komende 10 jaar.",
       "label": "Carrières",
       "tagline": "Aegryn | Saint-Sulpice, Zwitserland",
       "title": "Bouwen wat blijft."
@@ -1099,23 +1099,23 @@
       "items": {
         "accompagner": {
           "title": "Advies & Strategie",
-          "desc": "Wij begeleiden leidinggevenden bij complexe strategische, technologische en transactionele beslissingen. Wij zoeken senior profielen met hoge autonomie: voormalige partners, practice-directeuren, executive consultants."
+          "desc": "U adviseert leidinggevenden over de beslissingen die hun organisatie bepalen: strategie, compliance, technologie, organisatie, externe groei. U bent een senior, autonoom profiel: oud-partner, practice director, executive consultant."
         },
         "construire": {
           "title": "Engineering & Product",
-          "desc": "Wij ontwerpen en exploiteren onze eigen digitale assets : SaaS, AI-platformen, protocollen. Wij werven ingenieurs, tech leads en product managers die bouwen om te blijven."
+          "desc": "U ontwerpt maatwerkoplossingen voor onze klanten en draagt bij aan onze eigen digitale assets: SaaS, AI-platforms, protocollen. U bent engineer, tech lead of productmanager en bouwt voor de lange termijn, niet voor snelle levering."
         },
-        "transmettre": {
-          "title": "Waardering & Overdracht",
-          "desc": "Wij certificeren, waarderen en begeleiden overdrachten en acquisities van tech-organisaties. Wij werken met M&A-, juridische en financiële professionals die de waarderingsvraagstukken van digitale activa begrijpen."
+        "franchir": {
+          "title": "Transformatie & Transities",
+          "desc": "U stuurt de cruciale fasen van de levenscyclus van onze klanten: lancering, opschaling, herstructurering, post-acquisitie-integratie, overdracht. U bent transformatiedirecteur, interim-manager of een operationeel profiel dat verandering in de praktijk uitvoert."
         },
         "recruter": {
           "title": "Talent & Research",
-          "desc": "Wij plaatsen leidinggevenden en tech experts voor onze klanten. Wij zoeken headhunters en researchers gespecialiseerd in tech-, M&A- en transformatieprofielen, met een sterk Europees netwerk."
+          "desc": "U identificeert en plaatst leidinggevenden en experts voor onze klanten. U bent headhunter of researcher voor leidinggevende, specialistische en transformatieprofielen, met een sterk Europees netwerk."
         },
         "informer": {
           "title": "Intelligence & Content",
-          "desc": "Wij publiceren ons eigen marktmagazine en produceren sectorintelligentie. Wij werven analisten, gespecialiseerde journalisten en redacteuren die tech- en M&A-trends met nauwkeurigheid documenteren."
+          "desc": "U documenteert marktdynamiek: magazine, sectoranalyses, intelligence. U bent analist, gespecialiseerd journalist of redacteur met de standaard van een referentieredactie."
         }
       }
     },
@@ -1123,7 +1123,8 @@
       "cta": "Neem contact op",
       "desc": "Momenteel geen openstaande functies. Wij werven op talent, niet op vacature. Stuur ons uw profiel.",
       "label": "Openstaande functies",
-      "title": "Huidige vacatures."
+      "title": "Huidige vacatures.",
+      "ctaPartner": "Word partner"
     },
     "values": {
       "items": {
@@ -1511,6 +1512,10 @@
       "title": "De onafhankelijke structuren die bijdragen aan de certificering.",
       "desc": "Audit- en advieskantoren en onafhankelijke specialisten ingezet op de CIFSO 5000-dimensies, conform de onafhankelijkheidsregels.",
       "note": "De logo's vertegenwoordigen onze actieve partners. Aegryn maakt de voorwaarden van individuele samenwerkingen niet bekend."
+    },
+    "meta": {
+      "title": "Onafhankelijke auditors | CIFSO 5000-certificering | Aegryn",
+      "desc": "De CIFSO 5000-certificering is onafhankelijk. Onafhankelijke experts (code, IP-recht, financiën, cybersecurity, organisatie) kunnen zich kandideren om bij te dragen aan de certificering op een van de vijf dimensies."
     }
   },
   "contact": {

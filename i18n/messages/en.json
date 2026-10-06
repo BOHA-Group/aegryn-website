@@ -1059,9 +1059,9 @@
   },
   "career": {
     "hero": {
-      "label": "Aegryn Advisory & Careers",
+      "label": "Career opportunities",
       "title": "Advisory & Digital Ecosystem Experts",
-      "desc": "Aegryn is a Swiss certification and support group for European technology organisations. We do not occupy a niche: we define its rules."
+      "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, transitions, talent, market intelligence. We do not occupy a niche: we define its rules."
     },
     "positions": {
       "label": "Upcoming positions",
@@ -1088,7 +1088,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Founded on three principles — precision, durability, independence — Aegryn supports tech organisations across their entire lifecycle with a rigour the market had not yet offered. Our proprietary assets, our certification protocol and our advisory network form an integrated ecosystem designed for the next 10 years.",
+      "desc": "Founded on three principles, precision, durability, independence, Aegryn supports organisations across all sectors throughout their lifecycle with a rigour the market had yet to offer. Our proprietary assets, certification protocol and advisory network form an integrated ecosystem built for the next 10 years.",
       "label": "Careers",
       "tagline": "Aegryn | Saint-Sulpice, Switzerland",
       "title": "Build what endures."
@@ -1099,23 +1099,23 @@
       "items": {
         "accompagner": {
           "title": "Advisory & Strategy",
-          "desc": "We advise leaders on complex strategic, technology and transactional decisions. We seek senior profiles capable of operating with high autonomy: former partners, practice directors, executive consultants."
+          "desc": "You advise leaders on the decisions that shape their organisation: strategy, compliance, technology, organisation, external growth. You are a senior, autonomous profile: former partner, practice director, executive consultant."
         },
         "construire": {
           "title": "Engineering & Product",
-          "desc": "We design and operate our own digital assets : SaaS, AI platforms, protocols. We hire engineers, tech leads and product managers who build to last, not to ship fast."
+          "desc": "You design custom solutions for our clients and contribute to our proprietary digital assets: SaaS, AI platforms, protocols. You are an engineer, tech lead or product manager who builds to last, not to ship fast."
         },
-        "transmettre": {
-          "title": "Valuation & Transfer",
-          "desc": "We certify, value and support the transfers and acquisitions of tech organisations. We work with M&A, legal and finance professionals who understand the valuation stakes of digital assets."
+        "franchir": {
+          "title": "Transformation & Transitions",
+          "desc": "You lead the pivotal phases of our clients' lifecycle: launch, scaling, restructuring, post-acquisition integration, succession. You are a transformation director, interim manager or operational profile seasoned in executing change."
         },
         "recruter": {
           "title": "Talent & Research",
-          "desc": "We place executives and tech experts for our clients. We seek headhunters and researchers specialised in tech, M&A and transformation profiles, with a strong European network."
+          "desc": "You identify and place executives and experts for our clients. You are a headhunter or researcher covering leadership, specialist and transformation profiles, with a strong European network."
         },
         "informer": {
           "title": "Intelligence & Content",
-          "desc": "We publish our own market magazine and produce sector intelligence. We recruit analysts, specialist journalists and editors capable of documenting tech and M&A trends with rigour."
+          "desc": "You document market dynamics: magazine, sector analyses, intelligence. You are an analyst, specialist journalist or editor with the standards of a reference publication."
         }
       }
     },
@@ -1123,7 +1123,8 @@
       "cta": "Contact us",
       "desc": "No open position at the moment. We recruit on talent, not vacancy. Send us your profile.",
       "label": "Open positions",
-      "title": "Current openings."
+      "title": "Current openings.",
+      "ctaPartner": "Become a partner"
     },
     "values": {
       "items": {
@@ -1511,6 +1512,10 @@
       "title": "The independent structures contributing to certification.",
       "desc": "Audit and advisory firms and independent specialists deployed on CIFSO 5000 dimensions, in compliance with the independence rules.",
       "note": "Logos represent our active partners. Aegryn does not disclose the terms of individual partnerships."
+    },
+    "meta": {
+      "title": "Independent Auditors | CIFSO 5000 Certification | Aegryn",
+      "desc": "CIFSO 5000 certification is independent. Independent experts (code, IP law, finance, cybersecurity, organisation) can apply to contribute to certification on one of the five dimensions."
     }
   },
   "contact": {

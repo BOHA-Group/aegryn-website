@@ -142,7 +142,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['NIS2 SME', 'DORA compliance', 'AI Act obligations', 'FADP GDPR Switzerland', 'regulatory mapping', 'cyber incident management', 'NCSC 24-hour reporting'],
     },
     eyebrow: 'Risk & Compliance',
-    h1: 'Know what binds you today, what your customers will impose tomorrow, and what can wait.',
+    h1: 'Anticipate what binds you, before it is imposed on you.',
     subtitle: 'NIS2 not yet transposed in France, a distinct Swiss regime, an AI Act with redrawn deadlines, customers already demanding evidence. Compliance is no longer a matter for lawyers: it is a management trade-off.',
     scope: [
       { label: 'Architecture and hosting: Technology', href: '/advisory/technology' },
@@ -260,7 +260,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['architecture audit', 'technical debt', 'fractional CTO', 'interim CTO', 'AI governance SME', 'sovereign hosting Switzerland', 'reversibility'],
     },
     eyebrow: 'Technology & Sovereignty',
-    h1: 'Your technology is an asset or a dependency. Measure which, before a customer, an investor or an outage does it for you.',
+    h1: 'Your technology is an asset or a dependency. Measure which.',
     subtitle: 'Architecture, technical debt, AI, hosting: the choices of the first three years weigh on the next ten. Aegryn steps in at the moments when they are decided.',
     scope: [
       { label: 'Legal obligations: Risk & Compliance', href: '/advisory/risk-compliance' },

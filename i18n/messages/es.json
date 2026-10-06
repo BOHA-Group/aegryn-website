@@ -1059,9 +1059,9 @@
   },
   "career": {
     "hero": {
-      "label": "Aegryn Advisory & Carreras",
+      "label": "Oportunidades de carrera",
       "title": "Advisory & Expertos en Ecosistemas Digitales",
-      "desc": "Aegryn es un grupo suizo de certificación y acompañamiento de organizaciones tecnológicas europeas. No ocupamos un nicho: definimos sus reglas."
+      "desc": "Aegryn es un grupo de asesoría integrada. Acompañamos a las organizaciones europeas durante todo su ciclo de vida: asesoría, construcción, transiciones, talento, inteligencia de mercado. No ocupamos un nicho: definimos sus reglas."
     },
     "positions": {
       "label": "Próximas posiciones",
@@ -1088,7 +1088,7 @@
       "product": "Producto"
     },
     "about": {
-      "desc": "Fundada sobre tres principios — precisión, durabilidad, independencia — Aegryn acompaña a las organizaciones tecnológicas en todo su ciclo de vida con un rigor que el mercado aún no ofrecía. Nuestros activos propios, nuestro protocolo de certificación y nuestra red advisory forman un ecosistema integrado diseñado para los próximos 10 años.",
+      "desc": "Fundada sobre tres principios, precisión, durabilidad, independencia, Aegryn acompaña a organizaciones de todos los sectores durante todo su ciclo de vida con un rigor que el mercado aún no ofrecía. Nuestros activos propios, nuestro protocolo de certificación y nuestra red advisory forman un ecosistema integrado pensado para los próximos 10 años.",
       "label": "Carreras",
       "tagline": "Aegryn | Saint-Sulpice, Suiza",
       "title": "Construir lo que perdura."
@@ -1098,24 +1098,24 @@
       "title": "Lo que hacemos. Los perfiles que buscamos.",
       "items": {
         "accompagner": {
-          "title": "Consultoría & Estrategia",
-          "desc": "Asesoramos a directivos en decisiones estratégicas, tecnológicas y transaccionales complejas. Buscamos perfiles sénior con alta autonomía: ex-socios, directores de práctica, consultores ejecutivos."
+          "title": "Asesoría & Estrategia",
+          "desc": "Asesoras a directivos en las decisiones que determinan su organización: estrategia, cumplimiento, tecnología, organización, crecimiento externo. Eres un perfil senior autónomo: ex socio, director de practice, consultor ejecutivo."
         },
         "construire": {
           "title": "Ingeniería & Producto",
-          "desc": "Diseñamos y operamos nuestros propios activos digitales : SaaS, plataformas IA, protocolos. Contratamos ingenieros, tech leads y product managers que construyen para durar."
+          "desc": "Diseñas soluciones a medida para nuestros clientes y contribuyes a nuestros activos digitales propios: SaaS, plataformas de IA, protocolos. Eres ingeniero, tech lead o product manager y construyes para durar, no para entregar rápido."
         },
-        "transmettre": {
-          "title": "Valoración & Transmisión",
-          "desc": "Certificamos, valoramos y acompañamos las transmisiones y adquisiciones de organizaciones tecnológicas. Trabajamos con profesionales de M&A, derecho y finanzas que entienden las apuestas de valoración de los activos digitales."
+        "franchir": {
+          "title": "Transformación & Transiciones",
+          "desc": "Pilotas las fases cruciales del ciclo de vida de nuestros clientes: lanzamiento, escalado, reestructuración, integración post-adquisición, transmisión. Eres director de transformación, manager de transición o un perfil operativo acostumbrado a ejecutar el cambio."
         },
         "recruter": {
-          "title": "Talento & Research",
-          "desc": "Colocamos directivos y expertos tech para nuestros clientes. Buscamos headhunters y researchers especializados en perfiles tech, M&A y transformación, con sólida red europea."
+          "title": "Talento & Investigación",
+          "desc": "Identificas y colocas directivos y expertos para nuestros clientes. Eres headhunter o researcher sobre perfiles directivos, especialistas y de transformación, con una sólida red en Europa."
         },
         "informer": {
           "title": "Inteligencia & Contenido",
-          "desc": "Publicamos nuestra propia revista de mercado y producimos inteligencia sectorial. Reclutamos analistas, periodistas especializados y editores capaces de documentar tendencias tech y M&A con rigor."
+          "desc": "Documentas las dinámicas de mercado: revista, análisis sectoriales, inteligencia. Eres analista, periodista especializado o editor con la exigencia de una redacción de referencia."
         }
       }
     },
@@ -1123,7 +1123,8 @@
       "cta": "Contáctenos",
       "desc": "Sin posiciones abiertas por el momento. Reclutamos por talento, no por vacante. Envíenos su perfil.",
       "label": "Posiciones abiertas",
-      "title": "Posiciones actuales."
+      "title": "Posiciones actuales.",
+      "ctaPartner": "Hazte socio"
     },
     "values": {
       "items": {
@@ -1511,6 +1512,10 @@
       "title": "Las estructuras independientes que contribuyen a la certificación.",
       "desc": "Firmas de auditoría y asesoría y especialistas independientes movilizados sobre las dimensiones CIFSO 5000, respetando las reglas de independencia.",
       "note": "Los logos representan a nuestros socios activos. Aegryn no divulga los términos de las asociaciones individuales."
+    },
+    "meta": {
+      "title": "Auditores independientes | Certificación CIFSO 5000 | Aegryn",
+      "desc": "La certificación CIFSO 5000 es independiente. Expertos independientes (código, derecho IP, finanzas, ciberseguridad, organización) pueden candidatarse para contribuir a la certificación en una de las cinco dimensiones."
     }
   },
   "contact": {

@@ -142,7 +142,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['NIS2 kmo', 'DORA compliance', 'AI Act verplichtingen', 'DSG AVG Zwitserland', 'regelgevende kartering', 'cyberincidentbeheer', 'NCSC melding 24 u'],
     },
     eyebrow: 'Risico’s & Compliance',
-    h1: 'Weten wat u vandaag bindt, wat uw klanten u morgen zullen opleggen, en wat kan wachten.',
+    h1: 'Anticiperen op wat u bindt, voordat het u wordt opgelegd.',
     subtitle: 'NIS2 nog niet omgezet in Frankrijk, een apart Zwitsers regime, een AI Act met hertekende termijnen, klanten die nu al bewijs eisen. Compliance is niet langer een zaak van juristen: het is een directieafweging.',
     scope: [
       { label: 'Architectuur en hosting: Technologie', href: '/advisory/technology' },
@@ -260,7 +260,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['architectuuraudit', 'technische schuld', 'technische leiding in deeltijd', 'interim-CTO', 'AI-governance kmo', 'soevereine hosting Zwitserland', 'omkeerbaarheid'],
     },
     eyebrow: 'Technologie & Soevereiniteit',
-    h1: 'Uw technologie is een actief of een afhankelijkheid. Meet welke, voordat een klant, een investeerder of een storing het voor u doet.',
+    h1: 'Uw technologie is een actief of een afhankelijkheid. Meet welke.',
     subtitle: 'Architectuur, technische schuld, AI, hosting: de keuzes van de eerste drie jaar wegen op de volgende tien. Aegryn grijpt in op de momenten waarop ze worden beslist.',
     scope: [
       { label: 'Wettelijke verplichtingen: Risico’s & Compliance', href: '/advisory/risk-compliance' },

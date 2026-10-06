@@ -1019,14 +1019,14 @@
   },
   "career": {
     "hero": {
-      "label": "Aegryn · Carrières",
+      "label": "Opportunités de carrière",
       "title": "Construire ce qui dure.",
-      "desc": "Aegryn est un groupe suisse de certification et d'accompagnement des organisations technologiques européennes. Nous n'occupons pas une niche : nous en définissons les règles."
+      "desc": "Aegryn est un cabinet de conseil intégré. Nous accompagnons les organisations européennes sur tout leur cycle de vie : conseil, construction, transitions, talents, intelligence de marché. Nous n'occupons pas une niche : nous en définissons les règles."
     },
     "about": {
       "label": "Qui sommes-nous",
       "title": "Une infrastructure, pas une agence.",
-      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn accompagne les organisations tech sur tout leur cycle de vie avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
+      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn accompagne les organisations européennes de tous secteurs sur tout leur cycle de vie avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
       "tagline": "Suisse · Europe · Indépendant"
     },
     "crafts": {
@@ -1035,23 +1035,23 @@
       "items": {
         "accompagner": {
           "title": "Conseil & Stratégie",
-          "desc": "Nous accompagnons des dirigeants sur des décisions stratégiques, technologiques et transactionnelles complexes. Nous cherchons des profils senior capables d'opérer à haut niveau d'autonomie : anciens associés, directeurs de practice, consultants exécutifs."
+          "desc": "Vous conseillez des dirigeants sur les décisions qui engagent leur organisation : stratégie, conformité, technologie, organisation, croissance externe. Vous êtes un profil senior autonome : ancien associé, directeur de practice, consultant exécutif."
         },
         "construire": {
           "title": "Engineering & Produit",
-          "desc": "Nous concevons et opérons nos propres actifs numériques : SaaS, plateformes IA, protocoles. Nous recrutons des ingénieurs, tech leads et product managers qui construisent pour durer, pas pour livrer vite."
+          "desc": "Vous concevez des solutions sur mesure pour nos clients et contribuez à nos actifs numériques propriétaires : SaaS, plateformes IA, protocoles. Vous êtes ingénieur, tech lead ou product manager, et vous construisez pour durer, pas pour livrer vite."
         },
-        "transmettre": {
-          "title": "Valorisation & Transmission",
-          "desc": "Nous certifions, valorisons et accompagnons les transmissions et acquisitions d'organisations tech. Nous travaillons avec des professionnels du M&A, du juridique et de la finance qui comprennent les enjeux de valorisation des actifs numériques."
+        "franchir": {
+          "title": "Transformation & Transitions",
+          "desc": "Vous pilotez les phases charnières du cycle de vie de nos clients : lancement, passage à l'échelle, restructuration, intégration post-acquisition, transmission. Vous êtes directeur de transformation, manager de transition ou profil opérationnel rompu à l'exécution du changement."
         },
         "recruter": {
           "title": "Talent & Recherche",
-          "desc": "Nous plaçons des dirigeants et experts tech pour nos clients. Nous cherchons des chasseurs de têtes et researchers spécialisés dans les profils tech, M&A et transformation, avec un réseau solide en Europe."
+          "desc": "Vous identifiez et placez des dirigeants et des experts pour nos clients. Vous êtes chasseur de têtes ou researcher sur les profils de direction, d'expertise et de transformation, avec un réseau solide en Europe."
         },
         "informer": {
           "title": "Intelligence & Contenu",
-          "desc": "Nous publions notre propre magazine de marché et produisons de la veille sectorielle. Nous recrutons des analystes, journalistes spécialisés et éditeurs capables de documenter les tendances tech et M&A avec rigueur."
+          "desc": "Vous documentez les dynamiques de marché : magazine, analyses sectorielles, veille. Vous êtes analyste, journaliste spécialisé ou éditeur, avec l'exigence d'une rédaction de référence."
         }
       }
     },
@@ -1081,7 +1081,8 @@
       "label": "Rejoindre Aegryn",
       "title": "Pas de postes ouverts pour le moment.",
       "desc": "Nous grandissons prudemment, par cooptation et candidature spontanée. Si vous incarnez l'un de nos métiers avec l'exigence qu'ils demandent, envoyez-nous un message.",
-      "cta": "Candidature spontanée"
+      "cta": "Candidature spontanée",
+      "ctaPartner": "Devenir partenaire"
     },
     "apply": "Postuler",
     "spontaneous": "Candidature spontanée",
@@ -1471,6 +1472,10 @@
       "title": "Les structures indépendantes qui contribuent à la certification.",
       "desc": "Cabinets d'audit, de conseil et spécialistes indépendants mobilisés sur les dimensions CIFSO 5000, dans le respect des règles d'indépendance.",
       "note": "Les logos représentent nos partenaires actifs. Aegryn ne divulgue pas les termes des partenariats individuels."
+    },
+    "meta": {
+      "title": "Auditeurs indépendants | Certification CIFSO 5000 | Aegryn",
+      "desc": "La certification CIFSO 5000 est indépendante. Des experts indépendants (code, juridique IP, finance, cybersécurité, organisation) peuvent candidater pour contribuer à la certification sur l'une des cinq dimensions."
     }
   },
   "contact": {

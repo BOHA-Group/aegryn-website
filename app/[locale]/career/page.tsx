@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import Link                from 'next/link'
+import Image               from 'next/image'
 import { ArrowUpRight }    from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }   from 'next'
@@ -9,19 +10,29 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return generateAegrynMetadata({
-    title: 'Careers | Advisory & Digital Ecosystem Experts | Aegryn',
-    description: 'Join Aegryn, a Swiss Tech Asset Builder seeking senior advisory talents in Data, AI and Cybersecurity to structure durable digital ecosystems.',
+    title: 'Careers | Integrated Advisory Group | Aegryn',
+    description: 'Join Aegryn, an integrated advisory group hiring senior talents across advisory, build, transitions, talent and market intelligence.',
     path: '/career',
     locale,
   })
 }
 
-const CRAFTS = ['accompagner', 'construire', 'transmettre', 'recruter', 'informer'] as const
+const CRAFTS = ['accompagner', 'construire', 'franchir', 'recruter', 'informer'] as const
 const VALUES = ['precision', 'durability', 'sovereignty', 'trust'] as const
+
+const CRAFT_IMAGES: Record<(typeof CRAFTS)[number], string> = {
+  accompagner: '/images/career/craft-conseil.jpg',
+  construire:  '/images/career/craft-engineering.jpg',
+  franchir:    '/images/career/craft-transformation.jpg',
+  recruter:    '/images/career/craft-talent.jpg',
+  informer:    '/images/career/craft-intelligence.jpg',
+}
 
 export default async function CareerPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'career' })
+  const tm = await getTranslations({ locale, namespace: 'missionSection' })
+  const disciplines = (tm.raw('items') as { title: string }[]).map((i) => i.title)
 
   return (
     <>
@@ -82,16 +93,36 @@ export default async function CareerPage({ params }: Props) {
           >
             {t('crafts.title')}
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-0 border-t border-ag-border">
-            {CRAFTS.map((key) => (
-              <div key={key} className="border-b sm:border-b-0 sm:border-r last:border-r-0 border-ag-border py-10 px-8 first:pl-0 last:pr-0">
-                <div className="w-8 h-px bg-ag-apex mb-6" />
-                <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
-                  {t(`crafts.items.${key}.title`)}
-                </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">
-                  {t(`crafts.items.${key}.desc`)}
-                </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {CRAFTS.map((key, i) => (
+              <div
+                key={key}
+                className="group flex flex-col overflow-hidden rounded-xl border border-ag-border bg-white"
+              >
+                <div className="relative overflow-hidden" style={{ height: 'clamp(160px,16vw,210px)' }}>
+                  <Image
+                    src={CRAFT_IMAGES[key]}
+                    alt={t(`crafts.items.${key}.title`)}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/50">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <p className="absolute bottom-4 left-4 right-4 font-mono text-[8px] tracking-[0.22em] uppercase text-white/70">
+                    {disciplines[i]}
+                  </p>
+                </div>
+                <div className="flex-1 p-5">
+                  <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] mb-3">
+                    {t(`crafts.items.${key}.title`)}
+                  </h3>
+                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                    {t(`crafts.items.${key}.desc`)}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -142,13 +173,22 @@ export default async function CareerPage({ params }: Props) {
               {t('openings.desc')}
             </p>
           </div>
-          <Link
-            href="/contact"
-            className="rounded-lg shrink-0 inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
-          >
-            {t('openings.cta')}
-            <ArrowUpRight size={14} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <Link
+              href="/contact"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
+            >
+              {t('openings.cta')}
+              <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href="/alliances"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase border border-white/30 text-white px-6 py-3 hover:bg-white/10 transition-colors"
+            >
+              {t('openings.ctaPartner')}
+              <ArrowUpRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
     </>

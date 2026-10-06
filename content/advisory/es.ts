@@ -142,7 +142,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['NIS2 pyme', 'cumplimiento DORA', 'obligaciones AI Act', 'LPD RGPD Suiza', 'cartografía regulatoria', 'gestión de incidentes ciber', 'notificación OFCS 24 h'],
     },
     eyebrow: 'Riesgos y Cumplimiento',
-    h1: 'Saber qué le obliga hoy, qué le impondrán sus clientes mañana, y qué puede esperar.',
+    h1: 'Anticipar lo que le obliga, antes de que se lo impongan.',
     subtitle: 'NIS2 aún sin transponer en Francia, un régimen suizo distinto, un AI Act con plazos rediseñados, clientes que ya exigen pruebas. El cumplimiento ya no es un asunto de juristas: es un arbitraje de dirección.',
     scope: [
       { label: 'Arquitectura y alojamiento: Tecnología', href: '/advisory/technology' },
@@ -260,7 +260,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['auditoría de arquitectura', 'deuda técnica', 'dirección técnica a tiempo compartido', 'CTO interino', 'gobernanza IA pyme', 'alojamiento soberano Suiza', 'reversibilidad'],
     },
     eyebrow: 'Tecnología y Soberanía',
-    h1: 'Su tecnología es un activo o una dependencia. Mida cuál, antes de que un cliente, un inversor o una avería lo hagan por usted.',
+    h1: 'Su tecnología es un activo o una dependencia. Mida cuál.',
     subtitle: 'Arquitectura, deuda técnica, IA, alojamiento: las decisiones de los tres primeros años pesan sobre los diez siguientes. Aegryn interviene en los momentos en que se deciden.',
     scope: [
       { label: 'Obligaciones legales: Riesgos y Cumplimiento', href: '/advisory/risk-compliance' },

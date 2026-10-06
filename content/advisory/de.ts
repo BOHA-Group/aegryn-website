@@ -142,7 +142,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['NIS2 KMU', 'DORA Compliance', 'AI Act Pflichten', 'DSG DSGVO Schweiz', 'regulatorische Kartierung', 'Cyber-Vorfallmanagement', 'BACS Meldung 24 h'],
     },
     eyebrow: 'Risiken & Compliance',
-    h1: 'Wissen, was Sie heute bindet, was Ihre Kunden morgen verlangen werden, und was warten kann.',
+    h1: 'Voraussehen, was Sie bindet, bevor es Ihnen auferlegt wird.',
     subtitle: 'NIS2 in Frankreich noch nicht umgesetzt, ein eigenes Schweizer Regime, ein AI Act mit neu gezogenen Fristen, Kunden, die bereits Nachweise verlangen. Compliance ist keine Juristensache mehr: Sie ist eine Führungsentscheidung.',
     scope: [
       { label: 'Architektur und Hosting: Technologie', href: '/advisory/technology' },
@@ -260,7 +260,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       keywords: ['Architekturaudit', 'technische Schulden', 'CTO in Teilzeit', 'Interim-CTO', 'KI-Governance KMU', 'souveränes Hosting Schweiz', 'Reversibilität'],
     },
     eyebrow: 'Technologie & Souveränität',
-    h1: 'Ihre Technologie ist ein Vermögenswert oder eine Abhängigkeit. Messen Sie, welches von beiden, bevor ein Kunde, ein Investor oder ein Ausfall es für Sie tut.',
+    h1: 'Ihre Technologie ist ein Vermögenswert oder eine Abhängigkeit. Messen Sie, welche.',
     subtitle: 'Architektur, technische Schulden, KI, Hosting: Die Entscheidungen der ersten drei Jahre lasten auf den nächsten zehn. Aegryn greift in den Momenten ein, in denen sie fallen.',
     scope: [
       { label: 'Gesetzliche Pflichten: Risiken & Compliance', href: '/advisory/risk-compliance' },
