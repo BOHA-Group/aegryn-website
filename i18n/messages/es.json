@@ -4611,8 +4611,6 @@
       "title": "Cinco profesiones de asesoramiento.",
       "desc": "Cada profesión está impulsada por expertos de la red, movilizados según la necesidad de la misión.",
       "profilesLabel": "Perfiles buscados",
-      "viewPage": "Ver la página de la profesión",
-      "join": "Unirse a esta profesión",
       "items": {
         "strategie": {
           "title": "Estrategia empresarial e Innovación",
@@ -4717,6 +4715,32 @@
         "S": "Seguridad & Soberanía",
         "O": "Organización & Talento"
       }
+    },
+    "investisseurs": {
+      "label": "INVERSORES & INSTITUCIONALES",
+      "title": "Financiadores, con un operating partner.",
+      "desc": "El banco financia. El fondo invierte. Aegryn acompaña la creación de valor operativo: prepara las organizaciones antes de la decisión y las sigue durante la tenencia, hasta la salida.",
+      "points": [
+        "Asociación operativa: un senior operator movilizado sobre sus participaciones",
+        "Selección de expedientes: lectura independiente vía el marco CIFSO 5000",
+        "Acompañamiento de la creación de valor y preparación de salida",
+        "Bancos & financieros: orienten a sus clientes dirigentes hacia Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "AUDITORES INDEPENDIENTES",
+      "title": "Verificar, sin asesorar.",
+      "desc": "Cinco perfiles de expertos verifican cada dimensión de la certificación CIFSO 5000, sin asesorar nunca a la organización certificada. Los encargos se atribuyen según competencia, independencia y disponibilidad.",
+      "points": [
+        "Cinco dimensiones: Código & Arquitectura, IP & Derechos, Finanzas & Métricas, Seguridad & Soberanía, Organización & Talento",
+        "Roles transversales: revisor independiente, comité de calificación, experto en derecho digital",
+        "Ningún auditor certifica una organización a la que ha asesorado",
+        "Declaración de conflictos de interés y confidencialidad firmada para cada expediente"
+      ]
+    },
+    "ctas": {
+      "viewPage": "Ver la página",
+      "joinPartner": "Unirse como socio"
     }
   },
   "network": {

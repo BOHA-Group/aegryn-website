@@ -9,14 +9,6 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 const METIER_KEYS = ['strategie', 'risques', 'technologie', 'talent', 'ma'] as const
 type MetierKey = typeof METIER_KEYS[number]
 
-const METIER_HREFS: Record<MetierKey, string> = {
-  strategie:   '/advisory/strategy',
-  risques:     '/advisory/risk-compliance',
-  technologie: '/advisory/technology',
-  talent:      '/advisory/talent-organization',
-  ma:          '/advisory/ma',
-}
-
 const DIMENSION_KEYS = ['C', 'I', 'F', 'S', 'O'] as const
 
 type ApplicantType = 'expert' | 'auditeur' | 'apporteur'
@@ -49,9 +41,8 @@ export default function AlliancesContent() {
   const [loading,   setLoading]   = useState(false)
   const [formError, setFormError] = useState(false)
 
-  function joinMetier(key: MetierKey) {
-    setAppType('expert')
-    setMetier(key)
+  function joinAs(type: ApplicantType) {
+    setAppType(type)
     scrollToId('candidature')
   }
 
@@ -85,7 +76,12 @@ export default function AlliancesContent() {
   }
 
   const cards = t.raw('intro.cards') as { title: string; desc: string; cta: string }[]
-  const cardHrefs = ['#strategie', '/investisseurs', '/grade/partners'] as const
+  const cardHrefs = ['#partenaires', '#investisseurs', '#auditeurs'] as const
+  const sideGroups: { id: string; title: string; desc: string; subs?: readonly MetierKey[] }[] = [
+    { id: 'partenaires',   title: t('side.group'),        desc: t('side.groupDesc'),     subs: METIER_KEYS },
+    { id: 'investisseurs', title: t('side.investors'),    desc: t('side.investorsDesc') },
+    { id: 'auditeurs',     title: t('side.auditors'),     desc: t('side.auditorsDesc') },
+  ]
 
   return (
     <>
@@ -111,71 +107,50 @@ export default function AlliancesContent() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-0">
 
-          {/* ── Sidebar navigation verticale ── */}
-          <aside className="hidden lg:block shrink-0 w-64 border-r border-ag-border sticky top-20 self-start pt-10 pb-10 max-h-[calc(100vh-80px)] overflow-y-auto">
-            <nav className="flex flex-col gap-0 pr-6">
-
-              {/* Partenaires & expertises → /network + 5 ancres */}
-              <Link
-                href={'/network' as never}
-                className="px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
-              >
-                {t('side.group')}
-              </Link>
-              <p className="px-5 pb-3 font-sans text-[11px] text-ag-gray-light leading-relaxed">
-                {t('side.groupDesc')}
-              </p>
-              {METIER_KEYS.map(key => (
-                <button
-                  key={key}
-                  onClick={() => scrollToId(key)}
-                  className="relative text-left pl-8 pr-5 py-2 font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors"
-                >
-                  {t(`metiers.items.${key}.title`)}
-                </button>
+          {/* ── Sidebar flottante : toujours visible, CANDIDATURE épinglé en bas ── */}
+          <aside className="hidden lg:flex lg:flex-col shrink-0 w-64 border-r border-ag-border sticky top-20 self-start max-h-[calc(100vh-80px)]">
+            <nav className="flex-1 overflow-y-auto flex flex-col gap-0 pr-6 pt-10 pb-4">
+              {sideGroups.map((g, gi) => (
+                <div key={g.id}>
+                  {gi > 0 && <div className="border-t border-ag-border mx-5 my-5" />}
+                  <button
+                    onClick={() => scrollToId(g.id)}
+                    className="w-full text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
+                  >
+                    {g.title}
+                  </button>
+                  <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-relaxed">
+                    {g.desc}
+                  </p>
+                  {g.subs?.map(key => (
+                    <button
+                      key={key}
+                      onClick={() => scrollToId(key)}
+                      className="w-full text-left pl-8 pr-5 py-2 font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors"
+                    >
+                      {t(`metiers.items.${key}.title`)}
+                    </button>
+                  ))}
+                </div>
               ))}
-
-              <div className="border-t border-ag-border mx-5 my-6" />
-
-              {/* Investisseurs → /investisseurs */}
-              <Link
-                href={'/investisseurs' as never}
-                className="px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
-              >
-                {t('side.investors')}
-              </Link>
-              <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-relaxed">
-                {t('side.investorsDesc')}
-              </p>
-
-              <div className="border-t border-ag-border mx-5 my-6" />
-
-              {/* Auditeurs → /grade/partners */}
-              <Link
-                href={'/grade/partners' as never}
-                className="px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
-              >
-                {t('side.auditors')}
-              </Link>
-              <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-relaxed">
-                {t('side.auditorsDesc')}
-              </p>
-
-              <div className="border-t border-ag-border mx-5 my-6" />
-
-              {/* Candidature */}
-              <button
-                onClick={() => scrollToId('candidature')}
-                className="relative text-left px-5 py-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black transition-colors"
-              >
-                {t('side.apply')}
-              </button>
             </nav>
+            <button
+              onClick={() => scrollToId('candidature')}
+              className="shrink-0 border-t border-ag-border w-full text-left px-5 py-4 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black bg-ag-white transition-colors"
+            >
+              {t('side.apply')}
+            </button>
           </aside>
 
           {/* ── Nav mobile (visible < lg) ── */}
-          <div className="lg:hidden w-full border-b border-ag-border overflow-x-auto">
+          <div className="lg:hidden w-full border-b border-ag-border overflow-x-auto sticky top-16 bg-ag-white z-30">
             <div className="flex gap-0 min-w-max">
+              <button
+                onClick={() => scrollToId('partenaires')}
+                className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-black whitespace-nowrap"
+              >
+                {t('side.group')}
+              </button>
               {METIER_KEYS.map(key => (
                 <button
                   key={key}
@@ -185,12 +160,18 @@ export default function AlliancesContent() {
                   {t(`metiers.items.${key}.title`)}
                 </button>
               ))}
-              <Link href={'/investisseurs' as never} className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black whitespace-nowrap">
+              <button
+                onClick={() => scrollToId('investisseurs')}
+                className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black whitespace-nowrap"
+              >
                 {t('side.investors')}
-              </Link>
-              <Link href={'/grade/partners' as never} className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black whitespace-nowrap">
+              </button>
+              <button
+                onClick={() => scrollToId('auditeurs')}
+                className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-gray-light hover:text-ag-black whitespace-nowrap"
+              >
                 {t('side.auditors')}
-              </Link>
+              </button>
               <button
                 onClick={() => scrollToId('candidature')}
                 className="px-4 py-3.5 font-sans font-semibold text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink whitespace-nowrap"
@@ -241,8 +222,8 @@ export default function AlliancesContent() {
               </div>
             </div>
 
-            {/* Cinq métiers */}
-            <div>
+            {/* Partenaires & expertises — cinq métiers */}
+            <section id="partenaires" className="scroll-mt-24">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
                 {t('metiers.label')}
               </p>
@@ -268,7 +249,7 @@ export default function AlliancesContent() {
                       </span>
                       {t(`metiers.items.${key}.profiles`)}
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 mb-8 max-w-3xl">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 max-w-3xl">
                       {(t.raw(`metiers.items.${key}.expertises`) as string[]).map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
@@ -277,28 +258,83 @@ export default function AlliancesContent() {
                       ))}
                     </ul>
                     {key === 'ma' && (
-                      <p className="font-sans text-[12px] text-ag-gray-light italic leading-relaxed mb-8 max-w-xl">
+                      <p className="font-sans text-[12px] text-ag-gray-light italic leading-relaxed mt-6 max-w-xl">
                         {t('metiers.items.ma.note')}
                       </p>
                     )}
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link
-                        href={METIER_HREFS[key] as never}
-                        className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
-                      >
-                        {t('metiers.viewPage')} <ArrowUpRight size={12} />
-                      </Link>
-                      <button
-                        onClick={() => joinMetier(key)}
-                        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
-                      >
-                        {t('metiers.join')} <ArrowUpRight size={12} />
-                      </button>
-                    </div>
                   </div>
                 ))}
               </div>
-            </div>
+
+              <SectionCtas
+                pageHref="/network"
+                viewLabel={t('ctas.viewPage')}
+                joinLabel={t('ctas.joinPartner')}
+                onJoin={() => joinAs('expert')}
+              />
+            </section>
+
+            {/* Investisseurs & Institutionnels — introduction */}
+            <section id="investisseurs" className="scroll-mt-24">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
+                {t('investisseurs.label')}
+              </p>
+              <h2
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
+                style={{ fontSize: 'clamp(24px,2.8vw,40px)' }}
+              >
+                {t('investisseurs.title')}
+              </h2>
+              <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-8">
+                {t('investisseurs.desc')}
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 max-w-3xl mb-10">
+                {(t.raw('investisseurs.points') as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <SectionCtas
+                pageHref="/investisseurs"
+                viewLabel={t('ctas.viewPage')}
+                joinLabel={t('ctas.joinPartner')}
+                onJoin={() => joinAs('apporteur')}
+              />
+            </section>
+
+            {/* Auditeurs indépendants — introduction */}
+            <section id="auditeurs" className="scroll-mt-24">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
+                {t('auditeurs.label')}
+              </p>
+              <h2
+                className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
+                style={{ fontSize: 'clamp(24px,2.8vw,40px)' }}
+              >
+                {t('auditeurs.title')}
+              </h2>
+              <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-8">
+                {t('auditeurs.desc')}
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 max-w-3xl mb-10">
+                {(t.raw('auditeurs.points') as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
+                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <SectionCtas
+                pageHref="/grade/partners"
+                viewLabel={t('ctas.viewPage')}
+                joinLabel={t('ctas.joinPartner')}
+                onJoin={() => joinAs('auditeur')}
+              />
+            </section>
 
             {/* Candidature */}
             <div id="candidature" className="scroll-mt-24">
@@ -434,5 +470,29 @@ export default function AlliancesContent() {
         </div>
       </div>
     </>
+  )
+}
+
+/* ── CTAs de fin de section : Voir la page + Rejoindre comme partenaire ── */
+function SectionCtas({
+  pageHref, viewLabel, joinLabel, onJoin,
+}: {
+  pageHref: string; viewLabel: string; joinLabel: string; onJoin: () => void
+}) {
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-ag-border">
+      <Link
+        href={pageHref as never}
+        className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
+      >
+        {viewLabel} <ArrowUpRight size={12} />
+      </Link>
+      <button
+        onClick={onJoin}
+        className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
+      >
+        {joinLabel} <ArrowUpRight size={12} />
+      </button>
+    </div>
   )
 }

@@ -4586,8 +4586,6 @@
       "title": "Cinq métiers de conseil.",
       "desc": "Chaque métier est porté par des experts du réseau, mobilisés selon le besoin de la mission.",
       "profilesLabel": "Profils recherchés",
-      "viewPage": "Voir la page métier",
-      "join": "Rejoindre ce métier",
       "items": {
         "strategie": {
           "title": "Stratégie d'entreprise et Innovation",
@@ -4692,6 +4690,32 @@
         "S": "Sécurité & Souveraineté",
         "O": "Organisation & Talent"
       }
+    },
+    "investisseurs": {
+      "label": "INVESTISSEURS & INSTITUTIONNELS",
+      "title": "Des financeurs, un operating partner.",
+      "desc": "La banque finance. Le fonds investit. Aegryn accompagne la création de valeur opérationnelle : il prépare les organisations avant la décision et les suit pendant la détention, jusqu'à la sortie.",
+      "points": [
+        "Partenariat opérationnel : un senior operator mobilisé sur vos participations",
+        "Sélection de dossiers : lecture indépendante via le cadre CIFSO 5000",
+        "Accompagnement de la création de valeur et préparation de sortie",
+        "Banques & financiers : orientation de vos clients dirigeants vers Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "AUDITEURS INDÉPENDANTS",
+      "title": "Vérifier, sans conseiller.",
+      "desc": "Cinq profils d'experts vérifient chaque dimension de la certification CIFSO 5000, sans jamais conseiller l'organisation certifiée. Les missions sont attribuées selon la compétence, l'indépendance et la disponibilité.",
+      "points": [
+        "Cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent",
+        "Rôles transverses : relecteur indépendant, comité de notation, expert en droit numérique",
+        "Aucun auditeur ne certifie une organisation qu'il a conseillée",
+        "Déclaration des conflits d'intérêts et confidentialité signée pour chaque dossier"
+      ]
+    },
+    "ctas": {
+      "viewPage": "Voir la page",
+      "joinPartner": "Rejoindre comme partenaire"
     }
   },
   "network": {

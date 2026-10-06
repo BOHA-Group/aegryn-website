@@ -4626,8 +4626,6 @@
       "title": "Five advisory professions.",
       "desc": "Each profession is carried by experts of the network, deployed according to the needs of each engagement.",
       "profilesLabel": "Profiles sought",
-      "viewPage": "View the profession page",
-      "join": "Join this profession",
       "items": {
         "strategie": {
           "title": "Corporate Strategy and Innovation",
@@ -4732,6 +4730,32 @@
         "S": "Security & Sovereignty",
         "O": "Organisation & Talent"
       }
+    },
+    "investisseurs": {
+      "label": "INVESTORS & INSTITUTIONALS",
+      "title": "Funders, with an operating partner.",
+      "desc": "The bank finances. The fund invests. Aegryn supports operational value creation: it prepares organisations before the decision and follows them through ownership, up to exit.",
+      "points": [
+        "Operational partnership: a senior operator deployed on your portfolio companies",
+        "Deal selection: independent reading via the CIFSO 5000 framework",
+        "Value creation support and exit preparation",
+        "Banks & financiers: refer your business-owner clients to Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "INDEPENDENT AUDITORS",
+      "title": "Verify, never advise.",
+      "desc": "Five expert profiles verify each dimension of CIFSO 5000 certification, without ever advising the certified organisation. Assignments follow competence, independence and availability.",
+      "points": [
+        "Five dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security & Sovereignty, Organisation & Talent",
+        "Cross-functional roles: independent reviewer, grading committee, digital law expert",
+        "No auditor certifies an organisation they have advised",
+        "Conflict-of-interest declaration and confidentiality signed for every dossier"
+      ]
+    },
+    "ctas": {
+      "viewPage": "View the page",
+      "joinPartner": "Join as a partner"
     }
   },
   "network": {

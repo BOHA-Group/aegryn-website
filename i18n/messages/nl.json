@@ -4611,8 +4611,6 @@
       "title": "Vijf adviesdomeinen.",
       "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
       "profilesLabel": "Gezochte profielen",
-      "viewPage": "Naar de domeinpagina",
-      "join": "Bij dit domein aansluiten",
       "items": {
         "strategie": {
           "title": "Ondernemingsstrategie en Innovatie",
@@ -4717,6 +4715,32 @@
         "S": "Security & Soevereiniteit",
         "O": "Organisatie & Talent"
       }
+    },
+    "investisseurs": {
+      "label": "INVESTEERDERS & INSTITUTIONELEN",
+      "title": "Financiers, met een operating partner.",
+      "desc": "De bank financiert. Het fonds investeert. Aegryn begeleidt operationele waardecreatie: het bereidt organisaties voor vóór de beslissing en volgt ze tijdens het bezit, tot aan de exit.",
+      "points": [
+        "Operationele partnership: een senior operator ingezet op uw deelnemingen",
+        "Dossierselectie: onafhankelijke beoordeling via het CIFSO 5000-raamwerk",
+        "Begeleiding van waardecreatie en exitvoorbereiding",
+        "Banken & financiers: verwijs uw ondernemersklanten door naar Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "ONAFHANKELIJKE AUDITORS",
+      "title": "Verifiëren, zonder te adviseren.",
+      "desc": "Vijf expertprofielen verifiëren elke dimensie van de CIFSO 5000-certificering, zonder de gecertificeerde organisatie ooit te adviseren. Opdrachten worden toegewezen op basis van competentie, onafhankelijkheid en beschikbaarheid.",
+      "points": [
+        "Vijf dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Security & Soevereiniteit, Organisatie & Talent",
+        "Transversale rollen: onafhankelijke reviewer, beoordelingscomité, expert digitaal recht",
+        "Geen auditor certificeert een organisatie die hij heeft geadviseerd",
+        "Belangenconflict-verklaring en vertrouwelijkheid ondertekend voor elk dossier"
+      ]
+    },
+    "ctas": {
+      "viewPage": "Bekijk de pagina",
+      "joinPartner": "Word partner"
     }
   },
   "network": {

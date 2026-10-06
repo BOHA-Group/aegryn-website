@@ -4611,8 +4611,6 @@
       "title": "Cinque professioni di consulenza.",
       "desc": "Ogni professione è portata dagli esperti della rete, mobilitati secondo il bisogno dell'incarico.",
       "profilesLabel": "Profili ricercati",
-      "viewPage": "Vedi la pagina della professione",
-      "join": "Unirsi a questa professione",
       "items": {
         "strategie": {
           "title": "Strategia d'impresa e Innovazione",
@@ -4717,6 +4715,32 @@
         "S": "Sicurezza & Sovranità",
         "O": "Organizzazione & Talento"
       }
+    },
+    "investisseurs": {
+      "label": "INVESTITORI & ISTITUZIONALI",
+      "title": "Finanziatori, con un operating partner.",
+      "desc": "La banca finanzia. Il fondo investe. Aegryn accompagna la creazione di valore operativo: prepara le organizzazioni prima della decisione e le segue durante la detenzione, fino all'uscita.",
+      "points": [
+        "Partnership operativa: un senior operator mobilitato sulle vostre partecipazioni",
+        "Selezione dei dossier: lettura indipendente tramite il quadro CIFSO 5000",
+        "Accompagnamento della creazione di valore e preparazione all'uscita",
+        "Banche & finanziatori: orientate i vostri clienti dirigenti verso Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "AUDITOR INDIPENDENTI",
+      "title": "Verificare, senza consigliare.",
+      "desc": "Cinque profili di esperti verificano ogni dimensione della certificazione CIFSO 5000, senza mai consigliare l'organizzazione certificata. Gli incarichi sono attribuiti secondo competenza, indipendenza e disponibilità.",
+      "points": [
+        "Cinque dimensioni: Codice & Architettura, IP & Diritti, Finanze & Metriche, Sicurezza & Sovranità, Organizzazione & Talent",
+        "Ruoli trasversali: revisore indipendente, comitato di valutazione, esperto di diritto digitale",
+        "Nessun auditor certifica un'organizzazione che ha consigliato",
+        "Dichiarazione dei conflitti di interesse e riservatezza firmata per ogni dossier"
+      ]
+    },
+    "ctas": {
+      "viewPage": "Vedi la pagina",
+      "joinPartner": "Unisciti come partner"
     }
   },
   "network": {

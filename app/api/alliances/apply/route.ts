@@ -44,6 +44,7 @@ export async function POST(req: NextRequest) {
         htmlFounder:     emailClientAck({ lang: data.locale, subject: ackA.subject, kicker: ackA.kicker, title: ackA.title, intro: ackA.intro,
           rows: [[ackA.org, data.organization_name], [ackA.type, data.applicant_type], [ackA.country, data.country]], paragraphs: [ackA.next] }).html,
         textFounder:     `Bonjour,\n\nNous avons bien reçu la candidature de ${data.organization_name} pour un partenariat de type "${data.applicant_type}".\n\nNos équipes examineront votre dossier et vous contacteront pour un entretien de qualification.\n\nL'équipe Aegryn\nhttps://aegryn.com/alliances`,
+        internalTo:      'partnerships@boha-group.com',
         subjectInternal: `[Partenariat] Candidature ${data.applicant_type} — ${data.organization_name}`,
         textInternal:    `Nouvelle candidature Partenariat\nType : ${data.applicant_type}\nMétier : ${data.metier ?? '—'}\nDimension : ${data.dimension ?? '—'}\nNom : ${data.applicant_name}\nOrganisation : ${data.organization_name}\nEmail : ${data.email}\nPays : ${data.country ?? '—'}\nSite : ${data.website || '—'}\nExpérience : ${data.experience ?? '—'}\nLocale : ${data.locale ?? '—'}`,
       },

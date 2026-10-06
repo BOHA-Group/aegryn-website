@@ -4611,8 +4611,6 @@
       "title": "Fünf Beratungsdisziplinen.",
       "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
       "profilesLabel": "Gesuchte Profile",
-      "viewPage": "Zur Fachseite",
-      "join": "Dieser Disziplin beitreten",
       "items": {
         "strategie": {
           "title": "Unternehmensstrategie und Innovation",
@@ -4717,6 +4715,32 @@
         "S": "Sicherheit & Souveränität",
         "O": "Organisation & Talent"
       }
+    },
+    "investisseurs": {
+      "label": "INVESTOREN & INSTITUTIONELLE",
+      "title": "Finanzierer, mit einem Operating Partner.",
+      "desc": "Die Bank finanziert. Der Fonds investiert. Aegryn begleitet die operative Wertschöpfung: Es bereitet Organisationen vor der Entscheidung vor und begleitet sie während der Haltedauer bis zum Exit.",
+      "points": [
+        "Operative Partnerschaft: ein Senior Operator für Ihre Beteiligungen",
+        "Dossierauswahl: unabhängige Bewertung via CIFSO-5000-Rahmen",
+        "Begleitung der Wertschöpfung und Exit-Vorbereitung",
+        "Banken & Finanziers: verweisen Sie Ihre Unternehmerkunden an Aegryn"
+      ]
+    },
+    "auditeurs": {
+      "label": "UNABHÄNGIGE AUDITOREN",
+      "title": "Prüfen, ohne zu beraten.",
+      "desc": "Fünf Expertenprofile prüfen jede Dimension der CIFSO-5000-Zertifizierung, ohne die zertifizierte Organisation jemals zu beraten. Die Mandate werden nach Kompetenz, Unabhängigkeit und Verfügbarkeit vergeben.",
+      "points": [
+        "Fünf Dimensionen: Code & Architektur, IP & Rechte, Finanzen & Metriken, Sicherheit & Souveränität, Organisation & Talent",
+        "Querschnittsrollen: unabhängiger Reviewer, Bewertungskomitee, Experte für Digitalrecht",
+        "Kein Auditor zertifiziert eine Organisation, die er beraten hat",
+        "Interessenkonflikt-Erklärung und Vertraulichkeit für jedes Dossier"
+      ]
+    },
+    "ctas": {
+      "viewPage": "Seite ansehen",
+      "joinPartner": "Als Partner beitreten"
     }
   },
   "network": {
