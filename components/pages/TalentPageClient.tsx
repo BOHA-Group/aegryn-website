@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import TalentHiringForm from '@/components/forms/TalentHiringForm'
 import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
 
@@ -113,7 +113,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 {t('insights.salaryReportDesc')}
               </p>
               <Link
-                href="/blog/salaires-executive-tech-suisse-europe-2026"
+                href={{ pathname: '/blog/[slug]', params: { slug: 'salaires-executive-tech-suisse-europe-2026' } }}
                 className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
               >
                 {t('insights.salaryReportCta')}

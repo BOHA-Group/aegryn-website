@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import {
   ArrowUpRight, CheckCircle2, TrendingUp, Building2,
   Landmark, Users, Lock, Check,
@@ -237,7 +237,7 @@ export default function CifsoValuationIndex() {
                       <WaitlistForm />
                     </div>
                   ) : (
-                    <Link href={pl.href.startsWith('#') ? pl.href : `/${locale}${pl.href}`}
+                    <Link href={pl.href as never}
                       className={`rounded-lg inline-flex items-center justify-center gap-2 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 font-semibold transition-colors ${featured ? 'bg-ag-navy text-white hover:bg-ag-navy/90' : 'bg-ag-apex text-ag-navy hover:bg-ag-apex/90'}`}>
                       {pl.cta} <ArrowUpRight size={12} />
                     </Link>
@@ -390,7 +390,7 @@ export default function CifsoValuationIndex() {
                 {/* CTA */}
                 <div className="border-t border-ag-border pt-5 mt-auto">
                   <Link
-                    href={`/${locale}${example.ctaHref}`}
+                    href={example.ctaHref as never}
                     className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
                   >
                     {example.cta} <ArrowUpRight size={12} />
@@ -490,7 +490,7 @@ export default function CifsoValuationIndex() {
               </div>
             ))}
           </div>
-          <Link href={investors.ctaHref} className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy/90 transition-colors">
+          <Link href={investors.ctaHref as never} className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:bg-ag-navy/90 transition-colors">
             {investors.cta} <ArrowUpRight size={12} />
           </Link>
         </div>

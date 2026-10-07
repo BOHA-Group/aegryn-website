@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import {
   ArrowUpRight, BrainCircuit, Scale, Cpu,
   Building2, Users, Globe, UserSearch, Landmark, ShieldCheck,

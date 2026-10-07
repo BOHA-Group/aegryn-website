@@ -1,5 +1,5 @@
 import { notFound }          from 'next/navigation'
-import Link                   from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image                  from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'

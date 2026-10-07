@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 const TEXT     = 'Aegryn'
 const REPEAT   = 20

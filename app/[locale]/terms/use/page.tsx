@@ -1,6 +1,6 @@
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }        from 'next'
-import Link                     from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight }         from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 
@@ -45,7 +45,7 @@ export default async function TermsUsePage({ params }: Props) {
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
             <Link
               key={k}
-              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i]}
+              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i] as never}
               className={`font-mono text-[10px] tracking-[0.18em] uppercase transition-colors ${
                 k === 'termsUse'
                   ? 'text-ag-black'

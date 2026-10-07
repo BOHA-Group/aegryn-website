@@ -1,4 +1,4 @@
-import Link                     from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight }          from 'lucide-react'
 import { getTranslations }       from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
@@ -296,13 +296,13 @@ export default async function AdvisoryPage({ params }: Props) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href={t('network.cta1Href')}
+              href={t('network.cta1Href') as never}
               className="rounded-lg inline-flex items-center gap-3 bg-white text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-apex transition-colors"
             >
               {t('network.cta1')} <ArrowUpRight size={14} />
             </Link>
             <Link
-              href={t('network.cta2Href')}
+              href={t('network.cta2Href') as never}
               className="rounded-lg inline-flex items-center gap-3 border border-white/30 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-ag-apex hover:text-ag-apex transition-colors"
             >
               {t('network.cta2')} <ArrowUpRight size={14} />

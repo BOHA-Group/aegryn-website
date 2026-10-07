@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import Link         from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, ChevronDown } from 'lucide-react'
 
 type DomainKey = 'strategy' | 'cyber' | 'finance' | 'growth' | 'ai' | 'architecture' | 'ux' | 'product'

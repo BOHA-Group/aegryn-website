@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import Link                from 'next/link'
+import { Link } from '@/i18n/navigation'
 import {
   ArrowUpRight, ChevronRight, ChevronLeft,
   RotateCcw, CheckCircle2, Mail, Lock,
@@ -792,11 +792,10 @@ function ResultPanel({ result, finance, t, industryLabel, email, setEmail, email
           : gradeKey === 'A'
           ? 'review_partner'
           : 'full_certification'
-        const leadParam = savedLeadId ? `&source_lead=${savedLeadId}` : ''
-        const submitHref = `/grade/submit?suggested=${suggested}${leadParam}`
+        const submitQuery = { suggested, ...(savedLeadId ? { source_lead: savedLeadId } : {}) }
         return (
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href={submitHref}
+            <Link href={{ pathname: '/grade/submit', query: submitQuery }}
               className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.14em] px-6 py-3.5 hover:bg-ag-navy-mid transition-colors">
               {t('result.ctaGrade')} <ArrowUpRight size={12} />
             </Link>

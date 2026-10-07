@@ -123,7 +123,7 @@ export default async function WorkforcePage({ params }: Props) {
             {stats.map((stat, i) => (
               <div key={i} className="bg-white p-8 flex flex-col gap-3">
                 <p
-                  className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none"
+                  className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none"
                   style={{ fontSize: 'clamp(26px,2.8vw,38px)' }}
                 >
                   {stat.value}
@@ -159,7 +159,7 @@ export default async function WorkforcePage({ params }: Props) {
             {hwItems.map((item, i) => (
               <div key={i} className="bg-ag-off-white p-8">
                 <p
-                  className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none mb-3"
+                  className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-none mb-3"
                   style={{ fontSize: 'clamp(26px,2.8vw,38px)' }}
                 >
                   {item.value}

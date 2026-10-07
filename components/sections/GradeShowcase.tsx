@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Link                  from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { useTranslations }   from 'next-intl'
 import { ArrowRight }        from 'lucide-react'
 import { gsap }              from '@/lib/gsap'
