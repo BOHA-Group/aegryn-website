@@ -10,7 +10,6 @@ import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
 import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
-import { GradeStrip }        from '@/components/sections/GradeStrip'
 import { TransactNarrative } from '@/components/sections/TransactionNarrative'
 import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
@@ -60,9 +59,6 @@ export default async function HomePage({ params }: Props) {
       {/* ── 07. Conception ─────────────────────────────────── */}
       <BuildStrip />
       <BuildEngineeringStrip />
-
-      {/* ── 08. Notation ───────────────────────────────────── */}
-      <GradeStrip />
 
       {/* ── 09. Transact ───────────────────────────────────── */}
       <TransactNarrative />

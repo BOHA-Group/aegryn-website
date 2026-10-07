@@ -22,10 +22,10 @@ export function MarketStatStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="py-20 bg-ag-navy">
+    <section ref={ref} className="py-20 bg-ag-off-white border-t border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-12">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-12">
           {t('label')}
         </p>
 
@@ -33,16 +33,16 @@ export function MarketStatStrip() {
           {stats.map((stat, i) => (
             <div key={i} className="market-stat">
               <p
-                className="font-display font-black text-ag-apex tracking-[-0.03em] leading-none mb-2"
+                className="font-display font-black text-ag-apex-ink tracking-[-0.03em] leading-none mb-2"
                 style={{ fontSize: 'clamp(28px,3vw,46px)' }}
               >
                 {stat.value}
               </p>
-              <p className="text-[12px] text-white/60 leading-snug mb-1.5 whitespace-pre-line">
+              <p className="text-[12px] text-ag-gray leading-snug mb-1.5 whitespace-pre-line">
                 {stat.label}
               </p>
               {stat.source && (
-                <p className="font-mono text-[10px] text-white/60 tracking-wide">
+                <p className="font-mono text-[10px] text-ag-gray-light tracking-wide">
                   {stat.source}
                 </p>
               )}

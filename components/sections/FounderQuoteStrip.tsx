@@ -23,7 +23,7 @@ export function FounderQuoteStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="border-t border-ag-border bg-ag-black py-20 md:py-28">
+    <section ref={ref} className="border-t border-ag-border bg-ag-navy py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <blockquote className="fq-text" style={{ opacity: 0 }}>
           <p
