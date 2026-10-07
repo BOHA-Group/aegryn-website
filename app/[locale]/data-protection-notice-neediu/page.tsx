@@ -36,10 +36,10 @@ export default async function NeediuLegalPage({ params }: Props) {
         <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">{t('sectionDpn')}</p>
 
         <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
-          style={{ fontSize: 'clamp(28px,3.5vw,46px)' }}>
+          style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>
           {t('h1')}
         </h1>
-        <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed mb-4 border-l-2 border-ag-border pl-4">
+        <p className="font-sans font-normal text-[16px] text-ag-gray leading-relaxed mb-4 border-l-2 border-ag-border pl-4">
           {t('disclaimer')}
         </p>
         <p className="font-sans font-semibold text-[11px] text-ag-gray-light mb-16">{t('updated')}</p>

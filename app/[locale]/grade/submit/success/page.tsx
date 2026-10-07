@@ -28,10 +28,10 @@ export default async function GradeSubmitSuccessPage({ params }: Props) {
       <div className="w-full max-w-lg text-center">
         <CheckCircle2 size={40} className="text-ag-apex mx-auto mb-6" />
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-4">Aegryn</p>
-        <h1 className="font-sans font-bold text-white text-[28px] tracking-[-0.03em] mb-4">
+        <h1 className="font-sans font-bold text-white tracking-[-0.03em] mb-4" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>
           {t('title')}
         </h1>
-        <p className="font-sans text-[15px] text-white/60 leading-relaxed mb-3">
+        <p className="font-sans text-[16px] text-white/60 leading-relaxed mb-3">
           {t('desc')}
         </p>
         <p className="font-sans text-[13px] text-white/65 mb-10">

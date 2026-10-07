@@ -82,7 +82,7 @@ export function AssetCarousel() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-            style={{ fontSize: 'clamp(32px,4vw,56px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('title')}
           </h2>

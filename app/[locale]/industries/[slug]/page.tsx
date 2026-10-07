@@ -89,7 +89,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           {/* Titre */}
           <h1
             className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
-            style={{ fontSize: 'clamp(36px,5vw,68px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {getLocaleText(ind.name, locale)}
           </h1>

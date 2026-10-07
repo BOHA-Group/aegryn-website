@@ -180,7 +180,7 @@ export default async function MagazineHubPage({ params }: Props) {
               </p>
               <h2
                 className="font-sans font-bold text-magazine-black mb-6"
-                style={{ fontSize: 'clamp(28px,4vw,52px)', lineHeight: 1.08, letterSpacing: '-0.02em' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)', lineHeight: 1.08, letterSpacing: '-0.02em' }}
               >
                 {tHub('subscribeTitle')}
               </h2>
@@ -242,7 +242,7 @@ export default async function MagazineHubPage({ params }: Props) {
               </p>
               <h2
                 className="font-sans font-bold text-magazine-black mb-6"
-                style={{ fontSize: 'clamp(24px,3.5vw,44px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
                 {tSub('wishlistTitle')}
               </h2>

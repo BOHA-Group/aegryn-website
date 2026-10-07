@@ -34,7 +34,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
             </p>
             <h2
               className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] mb-6"
-              style={{ fontSize: 'clamp(30px,4vw,56px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {c.heroTitle}
             </h2>

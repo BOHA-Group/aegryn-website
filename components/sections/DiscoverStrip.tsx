@@ -102,7 +102,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         >
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1]"
-            style={{ fontSize: 'clamp(22px, 2.2vw, 32px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {magLabel}
           </h2>
@@ -179,7 +179,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('title')}
             </h2>

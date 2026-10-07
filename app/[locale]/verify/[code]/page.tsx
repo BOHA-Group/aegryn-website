@@ -38,7 +38,7 @@ export default async function VerifyCodePage({ params }: Props) {
     <main className="bg-ag-white min-h-[70vh]">
       <section className="max-w-4xl mx-auto px-6 pt-32 pb-24">
         <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{t('eyebrow')}</p>
-        <h1 className="font-sans font-bold text-ag-black text-[32px] md:text-[42px] tracking-[-0.03em] leading-[1.05] mb-8">{t('title')}</h1>
+        <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-8" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>{t('title')}</h1>
 
         <div className={`rounded-xl border px-6 py-5 flex items-center gap-4 mb-8 ${st.cls}`}>
           <st.Icon size={28} className="shrink-0" />

@@ -97,7 +97,7 @@ export default function AlliancesContent() {
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl">
+          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>
@@ -192,7 +192,7 @@ export default function AlliancesContent() {
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6 max-w-2xl"
-                style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('intro.title')}
               </h2>
@@ -230,7 +230,7 @@ export default function AlliancesContent() {
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
-                style={{ fontSize: 'clamp(24px,2.8vw,40px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('metiers.title')}
               </h2>
@@ -282,7 +282,7 @@ export default function AlliancesContent() {
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
-                style={{ fontSize: 'clamp(24px,2.8vw,40px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('investisseurs.title')}
               </h2>
@@ -313,7 +313,7 @@ export default function AlliancesContent() {
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
-                style={{ fontSize: 'clamp(24px,2.8vw,40px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('auditeurs.title')}
               </h2>
@@ -346,7 +346,7 @@ export default function AlliancesContent() {
                   </p>
                   <h2
                     className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                    style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+                    style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                   >
                     {t('candidature.title')}
                   </h2>

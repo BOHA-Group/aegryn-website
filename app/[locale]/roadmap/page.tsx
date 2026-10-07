@@ -77,7 +77,7 @@ export default async function RoadmapPage({ params }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/55 leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
             {t('desc')}
           </p>
           <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-xl">

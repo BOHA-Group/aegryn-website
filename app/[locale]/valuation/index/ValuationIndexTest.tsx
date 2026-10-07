@@ -55,10 +55,10 @@ export default function ValuationIndexTest() {
               <span className="w-6 h-px bg-ag-apex/50 inline-block" />
               {ti('hero.label')}
             </p>
-            <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.035em] max-w-2xl mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(28px,4vw,48px)' }}>
+            <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.035em] max-w-2xl mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
               {ti('hero.titleStep2')}
             </h1>
-            <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl">
+            <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
               {ti('hero.descStep2')}
             </p>
             <StepIndicator phase={phase} t={ti} />

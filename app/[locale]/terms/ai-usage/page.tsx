@@ -29,7 +29,7 @@ export default async function AiUsagePage({ params }: Props) {
           >
             {t('label')}
           </h1>
-          <p className="font-sans text-[13px] text-white/40">{t('version')}</p>
+          <p className="font-sans text-[16px] text-white/40">{t('version')}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             {(['fr','en','de','es','it','nl'] as const).map(lang => (
               <Link

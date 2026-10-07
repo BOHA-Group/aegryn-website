@@ -48,7 +48,7 @@ export default async function CareerPage({ params }: Props) {
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl">
+          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>
@@ -64,7 +64,7 @@ export default async function CareerPage({ params }: Props) {
               </p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-                style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('about.title')}
               </h2>
@@ -165,7 +165,7 @@ export default async function CareerPage({ params }: Props) {
             </p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
-              style={{ fontSize: 'clamp(22px,2.5vw,38px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('openings.title')}
             </h2>

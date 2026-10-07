@@ -49,7 +49,7 @@ export default async function InvestisseursPage({ params }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('line1')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light max-w-xl mb-8">

@@ -193,7 +193,7 @@ export default function NetworkContent() {
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-6">
@@ -306,7 +306,7 @@ export default function NetworkContent() {
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/50 mb-4">Aegryn Network</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,2.8vw,42px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('cta.title')}
             </h2>

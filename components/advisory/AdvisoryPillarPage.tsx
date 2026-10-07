@@ -96,11 +96,11 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(34px,4.6vw,64px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {c.h1}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
+          <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
           <div className="flex flex-wrap gap-3">
             {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
             {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
@@ -158,7 +158,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.sixSituations}</p>
-            <h2 className={`${H2} text-[30px] md:text-[38px]`}>{c.situations.title}</h2>
+            <h2 className={`${H2}`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.situations.title}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {c.situations.items.map((s, i) => (
@@ -227,7 +227,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </div>
           <div className="rounded-2xl bg-ag-off-white border border-ag-border p-8 md:p-10">
             <p className={`${LABEL} mb-4`}>{ui.ourFramework}</p>
-            <h2 className={`${H2} text-[26px] md:text-[32px] mb-4`}>{c.framework.name}</h2>
+            <h2 className={`${H2} mb-4`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.framework.name}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">{c.framework.intro}</p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {c.framework.axes.map((a, i) => (
@@ -361,7 +361,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>
             <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
-            <h2 className="font-sans font-bold text-white text-[30px] md:text-[38px] tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl">{echangeDef?.label}.</h2>
+            <h2 className="font-sans font-bold text-white tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{echangeDef?.label}.</h2>
             <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-lg mb-10">
               {ui.ctaBody}
             </p>

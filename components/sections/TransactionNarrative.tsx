@@ -34,7 +34,7 @@ export function TransactNarrative() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.08] mb-8 whitespace-pre-line"
-            style={{ fontSize: 'clamp(30px,4.5vw,58px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('title')}
           </h2>

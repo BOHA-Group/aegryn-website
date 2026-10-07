@@ -29,7 +29,7 @@ export default async function PrivacyPage({ params }: Props) {
           >
             {tP('label')}
           </h1>
-          <p className="font-sans text-[13px] text-white/40">{tP('updated')}</p>
+          <p className="font-sans text-[16px] text-white/40">{tP('updated')}</p>
           {/* Sélecteur de langue */}
           <div className="mt-6 flex flex-wrap gap-3">
             {(['fr','en','de','es','it','nl'] as const).map(lang => (

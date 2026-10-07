@@ -15,7 +15,7 @@ export default function GradeDeed() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <div>
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{t('label')}</p>
-          <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(28px,3.4vw,48px)' }}>{t('title')}</h2>
+          <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('title')}</h2>
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">{t('desc')}</p>
         </div>
         <div className="rounded-2xl bg-ag-navy text-white p-8 md:p-10">

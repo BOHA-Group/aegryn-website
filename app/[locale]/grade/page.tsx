@@ -61,7 +61,7 @@ export default async function GradePage({ params }: Props) {
             </p>
             <h2
               className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-lg whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {tSubmit('title')}
             </h2>

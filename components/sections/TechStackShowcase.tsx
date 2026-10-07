@@ -174,7 +174,7 @@ export function TechStackShowcase() {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight"
-              style={{ fontSize: 'clamp(20px,2.8vw,34px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('title')}
             </h2>

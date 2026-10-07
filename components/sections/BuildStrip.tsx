@@ -44,7 +44,7 @@ export function BuildStrip() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.08] whitespace-pre-line"
-            style={{ fontSize: 'clamp(22px,2.6vw,36px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('assetsTitle')}
           </h2>
@@ -66,7 +66,7 @@ export function BuildStrip() {
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.025em] leading-[1.08] whitespace-pre-line"
-            style={{ fontSize: 'clamp(22px,2.6vw,36px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('engineeringTitle')}
           </h2>

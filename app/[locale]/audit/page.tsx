@@ -46,7 +46,7 @@ export default async function GradePartnersPage() {
           <h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
             {t('title')}
           </h1>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('intro1')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light max-w-xl">
@@ -89,7 +89,7 @@ export default async function GradePartnersPage() {
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('dims.label')}</p>
-          <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-12 max-w-xl" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>
+          <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-12 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('dims.title')}
           </h2>
           <div className="border border-ag-border rounded-2xl overflow-hidden">
@@ -125,7 +125,7 @@ export default async function GradePartnersPage() {
           </div>
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('independence.label')}</p>
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-8" style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-8" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('independence.title')}
             </h2>
             <ul className="flex flex-col gap-4">
@@ -147,7 +147,7 @@ export default async function GradePartnersPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('ctaLabel')}</p>
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('ctaTitle')}
             </h2>
             <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8">

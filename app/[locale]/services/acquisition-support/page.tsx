@@ -183,7 +183,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,2.5vw,38px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('fees.title')}
             </h2>
@@ -210,7 +210,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <div>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-lg mb-3"
-              style={{ fontSize: 'clamp(22px,2.5vw,36px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('cta.title')}
             </h2>

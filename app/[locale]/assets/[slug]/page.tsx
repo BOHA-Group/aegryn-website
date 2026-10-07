@@ -101,7 +101,7 @@ export default async function AssetPage({ params }: Props) {
           >
             {asset.name}
           </h1>
-          <p className="font-sans font-semibold text-[15px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-sans font-semibold text-[16px] text-ag-gray leading-relaxed max-w-xl mb-10">
             {tItems(`${asset.id}.tagline`)}
           </p>
 
@@ -376,7 +376,7 @@ export default async function AssetPage({ params }: Props) {
             </p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
-              style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('cta.title')}
             </h2>

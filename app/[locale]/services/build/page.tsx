@@ -70,7 +70,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl">
+          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('desc')}
           </p>
         </div>
@@ -84,7 +84,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-8"
-            style={{ fontSize: 'clamp(32px,4.5vw,60px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('builtToLast.title')}
           </h2>
@@ -107,7 +107,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('formatsSection.title')}
           </h2>
@@ -157,7 +157,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('useCasesSection.title')}
           </h2>
@@ -179,7 +179,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-6 max-w-2xl whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3.5vw,46px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('whySection.title')}
           </h2>
@@ -209,7 +209,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('domainsSection.title')}
           </h2>
@@ -241,7 +241,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-4"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('platformSection.title')}
           </h2>
@@ -269,7 +269,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('sovereigntySection.title')}
           </h2>
@@ -295,7 +295,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('difference.title')}
           </h2>
@@ -319,7 +319,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('marketComparison.title')}
           </h2>
@@ -354,7 +354,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('certificationBenefits.title')}
           </h2>
@@ -380,7 +380,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('process.title')}
           </h2>
@@ -428,7 +428,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4 whitespace-pre-line"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('maintenance.title')}
           </h2>
@@ -461,7 +461,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('fees.title')}
           </h2>
@@ -488,7 +488,7 @@ export default async function BuildServicePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-6 whitespace-pre-line max-w-2xl"
-            style={{ fontSize: 'clamp(28px,4vw,52px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('transmissionSection.title')}
           </h2>
@@ -542,7 +542,7 @@ export default async function BuildServicePage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-center flex flex-col items-center gap-8">
           <h2
             className="font-sans font-bold text-white tracking-[-0.02em] leading-tight"
-            style={{ fontSize: 'clamp(32px,5vw,64px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('cta.title')}
           </h2>

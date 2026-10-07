@@ -30,7 +30,7 @@ export default async function PortfolioPage({ params }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">
+          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl">
             {t('sub')}
           </p>
         </div>

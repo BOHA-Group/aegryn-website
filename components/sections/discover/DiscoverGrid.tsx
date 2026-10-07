@@ -174,7 +174,7 @@ export function DiscoverGrid({ locale }: Props) {
                 <div className="mt-5">
                   <h2
                     className="font-sans font-bold text-ag-black leading-[1.15] tracking-[-0.03em] mb-3 group-hover:text-ag-navy transition-colors"
-                    style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}
+                    style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                   >
                     {mainArticle.title[lang] ?? mainArticle.title.en}
                   </h2>

@@ -35,7 +35,7 @@ export function HomeTalentStrip() {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2]"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('title')}
             </h2>

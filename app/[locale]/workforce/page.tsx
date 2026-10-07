@@ -112,7 +112,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('marketData.title')}
           </h2>
@@ -148,7 +148,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('hundredWorkers.title')}
           </h2>
@@ -184,7 +184,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('skillsRanking.title')}
           </h2>
@@ -233,7 +233,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('byRole.title')}
           </h2>
@@ -266,7 +266,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('industries.title')}
           </h2>
@@ -299,7 +299,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] mb-8 max-w-2xl"
-            style={{ fontSize: 'clamp(24px,3vw,38px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('cifso.title')}
           </h2>
@@ -331,7 +331,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('forWho.title')}
           </h2>
@@ -358,7 +358,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
-            style={{ fontSize: 'clamp(22px,2.6vw,34px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('sources.title')}
           </h2>
@@ -376,7 +376,7 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
-            style={{ fontSize: 'clamp(24px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('articles.title')}
           </h2>

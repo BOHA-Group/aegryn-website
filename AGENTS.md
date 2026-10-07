@@ -27,6 +27,15 @@
 - **D — Compact référence** (navy, `pt-24 pb-14/16`) : `clamp(28px,3.5vw,52px)` — privacy, security, terms, faq, glossaire, verify
 - Legacy `/transact/*` : hors norme
 
+## Norme typographique (corps et sous-niveaux)
+
+- **H2 section** : `clamp(26px,3vw,44px)` — tous les h2 de section hors cartes
+- **Sous-titre hero / lead** (premier `<p>` après h1) : `text-[16px]` — hors pages documents signature (brochure CIFSO, teaser)
+- **Corps de texte** : `text-[15px]` minimum — hors cartes, tableaux, formulaires, méta, captions, disclaimers (11–13px)
+- **Sous-titres de bloc / cartes** (h2/h3 fixes ≤24px) : taille libre selon densité
+- **Labels** : mono uppercase 9–11px (signature visuelle, jamais de corps)
+- Signatures assumées : h1 home `clamp(90px,14vw,190px)`, cover magazine, brochure CIFSO `clamp(52px,8vw,88px)`
+
 ## Positionnement
 
 - Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). 5 disciplines : ACCOMPAGNER, CONSTRUIRE, FRANCHIR, RECRUTER, INFORMER. 5 métiers conseil : Stratégie & Innovation, Risques & Conformité, Technologie & Souveraineté, Talent & Organisation, M&A & PMI. Ne pas répéter l'énumération à chaque page, privilégier des formulations de fond.

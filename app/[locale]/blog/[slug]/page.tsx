@@ -157,7 +157,7 @@ export default async function ArticlePage({ params }: Props) {
           >
             {getLocaleText(article.title, locale)}
           </h1>
-          <p className="font-sans text-[15px] text-white/55 leading-relaxed mb-8">
+          <p className="font-sans text-[16px] text-white/55 leading-relaxed mb-8">
             {getLocaleText(article.excerpt, locale)}
           </p>
           <div className="flex items-center gap-6 text-white/60">

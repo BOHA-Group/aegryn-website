@@ -189,7 +189,7 @@ export default function CifsoValuationIndex() {
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl">
+          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>
@@ -270,7 +270,7 @@ export default function CifsoValuationIndex() {
               </p>
               <h2
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line"
-                style={{ fontSize: 'clamp(24px,3vw,40px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('chart.title')}
               </h2>
@@ -300,7 +300,7 @@ export default function CifsoValuationIndex() {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4"
-              style={{ fontSize: 'clamp(24px,3vw,40px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {example.title}
             </h2>
@@ -412,7 +412,7 @@ export default function CifsoValuationIndex() {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,3vw,40px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('marketData.title')}
             </h2>
@@ -441,7 +441,7 @@ export default function CifsoValuationIndex() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.dimLabel}</p>
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.dimTitle}</h2>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{fm.dimTitle}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.dimDesc}</p>
           </div>
           <div className="relative overflow-x-auto rounded-xl border border-ag-border">
@@ -474,7 +474,7 @@ export default function CifsoValuationIndex() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">{fm.segLabel}</p>
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{fm.segTitle}</h2>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{fm.segTitle}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{fm.segDesc}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
@@ -507,7 +507,7 @@ export default function CifsoValuationIndex() {
             </p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
-              style={{ fontSize: 'clamp(24px,3vw,40px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('prescreenCta.title')}
             </h2>

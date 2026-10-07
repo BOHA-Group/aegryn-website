@@ -49,7 +49,7 @@ export default function IndustriesPage() {
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
             {t('title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/45 max-w-xl leading-relaxed mb-12">
+          <p className="font-sans text-[16px] text-white/45 max-w-xl leading-relaxed mb-12">
             {t('desc')}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -121,7 +121,7 @@ export default function IndustriesPage() {
                       {t('sectorCount', { count: cl.sectors.length })}
                     </p>
                     <h2 className="font-sans font-bold text-white leading-[1.1] tracking-[-0.02em]"
-                      style={{ fontSize: 'clamp(14px,1.3vw,17px)' }}>
+                      style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
                       {cl.cluster}
                     </h2>
                   </div>

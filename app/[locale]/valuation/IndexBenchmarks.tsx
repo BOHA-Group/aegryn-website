@@ -74,7 +74,7 @@ export default function IndexBenchmarks() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('metricsLabel')}</p>
-            <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{t('metricsTitle')}</h2>
+            <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('metricsTitle')}</h2>
             <p className="font-sans text-[14px] text-white/60 leading-relaxed">{t('metricsDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -99,7 +99,7 @@ export default function IndexBenchmarks() {
       <section className="py-24 px-6 border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
-            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{t('coverageTitle')}</h2>
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('coverageTitle')}</h2>
             <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('coverageDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -171,7 +171,7 @@ export function IndexFaq() {
   return (
       <section className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-10" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>{t('faqTitle')}</h2>
+          <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-10" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('faqTitle')}</h2>
           <div className="flex flex-col gap-2">
             {(t.raw('faq') as { q: string; a: string }[]).map((f, i) => <FaqItem key={i} q={f.q} a={f.a} />)}
           </div>

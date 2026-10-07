@@ -99,11 +99,11 @@ export function CyclePage({ content: c, locale }: Props) {
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(34px,4.6vw,64px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {c.h1}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
+          <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50">
             {ui.whatWeDo}&nbsp;&nbsp;·&nbsp;&nbsp;
             <span className="text-ag-apex">{c.verbs.join(' · ')}</span>
@@ -127,7 +127,7 @@ export function CyclePage({ content: c, locale }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.situationsTag}</p>
-            <h2 className={`${H2} text-[30px] md:text-[38px]`}>{c.situations.title}</h2>
+            <h2 className={`${H2}`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.situations.title}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {c.situations.items.map((s, i) => (
@@ -282,7 +282,7 @@ export function CyclePage({ content: c, locale }: Props) {
       <section className="bg-ag-navy py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
-          <h2 className="font-sans font-bold text-white text-[30px] md:text-[38px] tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl">
+          <h2 className="font-sans font-bold text-white tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {echangeDef?.label ?? ui.ctaExchange}.
           </h2>
           <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-lg mb-10">{ui.ctaBody}</p>

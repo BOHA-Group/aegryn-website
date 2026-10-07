@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <AboutHeroLogo onDark />
               </div>
             </div>
-            <p className="text-[15px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
+            <p className="text-[16px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
               {t('hero.desc')}
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-16 whitespace-pre-line"
-            style={{ fontSize: 'clamp(32px,4vw,56px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('name.title')}
           </h2>
@@ -176,7 +176,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('contribution.title')}
             </h2>
@@ -210,7 +210,7 @@ export default function AboutPage() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-12"
-            style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {ta('whyAegryn.title')}
           </h2>
@@ -259,7 +259,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {ta('founder.title')}
             </h2>
@@ -295,7 +295,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {ta('workWith.title')}
             </h2>
@@ -337,7 +337,7 @@ export default function AboutPage() {
               </p>
               <h2
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] whitespace-pre-line mb-8"
-                style={{ fontSize: 'clamp(26px,3vw,48px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('swiss.title')}
               </h2>
@@ -368,7 +368,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
-              style={{ fontSize: 'clamp(28px,3.5vw,48px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('whatsnext.title')}
             </h2>

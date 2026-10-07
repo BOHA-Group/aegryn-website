@@ -52,7 +52,7 @@ export function GradeISOMapping() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('isoTitle')}
           </h2>

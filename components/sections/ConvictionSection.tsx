@@ -35,7 +35,7 @@ export function ConvictionSection() {
           </p>
           <h2
             className="font-display font-black text-ag-black tracking-[-0.03em] leading-[1.05]"
-            style={{ fontSize: 'clamp(26px,3vw,42px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('title')}
           </h2>

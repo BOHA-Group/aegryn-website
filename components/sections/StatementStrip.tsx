@@ -71,7 +71,7 @@ export function StatementStrip({ label, title, cta, href }: Props) {
         <h2
           ref={titleRef}
           className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] max-w-2xl mb-12"
-          style={{ fontSize: 'clamp(32px,4vw,60px)' }}
+          style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           dangerouslySetInnerHTML={{ __html: title.replace(/\n/g, '<br>') }}
         />
         <Link

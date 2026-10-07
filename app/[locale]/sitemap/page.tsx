@@ -119,10 +119,10 @@ export default function SitemapPage() {
             <span className="w-5 h-px bg-ag-apex/50 inline-block" />
             Aegryn
           </p>
-          <h1 className="font-sans font-bold text-ag-black text-[32px] tracking-tight">
+          <h1 className="font-sans font-bold text-ag-black tracking-tight" style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}>
             {t('title')}
           </h1>
-          <p className="mt-2 font-sans text-[14px] text-ag-gray-light max-w-xl">
+          <p className="mt-2 font-sans text-[16px] text-ag-gray-light max-w-xl">
             {t('subtitle')}
           </p>
         </div>

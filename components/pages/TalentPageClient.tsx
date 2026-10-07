@@ -24,7 +24,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
             {t('hero.desc1')}
             <br /><br />
             {t('hero.desc2')}
@@ -63,7 +63,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
       <section className="py-24 border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-16">
-            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('marketRoles.marketRolesTitle')}
             </h2>
             <p className="text-[14px] text-ag-gray">
@@ -97,7 +97,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
       <section className="py-24 bg-ag-off-white border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-12">
-            <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+            <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('insights.insightsTitle')}
             </h2>
             <p className="text-[14px] text-ag-gray">
@@ -147,7 +147,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 <div>
                   <h2
                     className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                    style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+                    style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                   >
                     {t('candidate.intro.title')}
                   </h2>
@@ -188,7 +188,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           {/* Candidate: Form */}
           <section className="py-24 bg-ag-off-white">
             <div className="max-w-3xl mx-auto px-6 md:px-12">
-              <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-4">
+              <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
                 {t('forms.candidate.title')}
               </h2>
               <p className="text-[14px] text-ag-gray leading-relaxed mb-10">
@@ -204,7 +204,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           <section className="py-24 bg-ag-off-white border-b border-ag-border">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
               <div className="text-center mb-16">
-                <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+                <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
                   {t('hiring.coverage.coverageTitle')}
                 </h2>
                 <p className="text-[14px] text-ag-gray uppercase tracking-[0.2em]">
@@ -246,7 +246,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           <section className="py-24 border-b border-ag-border">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
               <div className="mb-16 text-center">
-                <h2 className="font-sans font-bold text-ag-black text-[36px] tracking-[-0.02em] mb-3">
+                <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
                   {t('employer.services.title')}
                 </h2>
                 <p className="text-[14px] text-ag-gray max-w-2xl mx-auto">
@@ -298,7 +298,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
                 <div>
                   <h2
                     className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-                    style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+                    style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                   >
                     {t('employer.intro.title')}
                   </h2>
@@ -380,7 +380,7 @@ export default function TalentPageClient({ locale: _locale }: { locale: string }
           {/* Employer: Form */}
           <section className="py-24">
             <div className="max-w-3xl mx-auto px-6 md:px-12">
-              <h2 className="font-sans font-bold text-ag-black text-[32px] tracking-[-0.02em] mb-4">
+              <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
                 {t('forms.hiring.title')}
               </h2>
               <p className="text-[14px] text-ag-gray leading-relaxed mb-10">

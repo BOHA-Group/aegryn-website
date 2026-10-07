@@ -104,7 +104,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
             <BadgePill badge={tItems(`${asset.id}.badge`)} />
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] mt-3"
-              style={{ fontSize: 'clamp(28px,3vw,38px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {asset.name}
             </h2>

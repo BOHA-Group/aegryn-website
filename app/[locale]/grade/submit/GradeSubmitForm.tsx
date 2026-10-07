@@ -91,7 +91,7 @@ export default function GradeSubmitForm() {
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl">
+          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>

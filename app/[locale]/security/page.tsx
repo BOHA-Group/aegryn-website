@@ -36,7 +36,7 @@ export default async function SecurityPage({ params }: Props) {
               >
                 {t('label')}
               </h1>
-              <p className="font-sans text-[14px] text-white/50">{t('subtitle')}</p>
+              <p className="font-sans text-[16px] text-white/50">{t('subtitle')}</p>
             </div>
           </div>
           <p className="font-sans text-[13px] text-ag-apex/80 mt-4">

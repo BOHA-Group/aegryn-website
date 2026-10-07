@@ -70,7 +70,7 @@ export function EcosystemDomains() {
         <h2
           ref={h2Ref}
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden pb-4"
-          style={{ fontSize: 'clamp(42px,5.5vw,80px)' }}
+          style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
         />
       </div>

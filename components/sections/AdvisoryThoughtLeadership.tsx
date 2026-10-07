@@ -11,7 +11,7 @@ export function AdvisoryThoughtLeadership() {
         {/* Header */}
         <div className="max-w-4xl mb-16">
           <h2 className="font-sans font-bold tracking-[-0.02em] leading-[1.2] text-ag-navy mb-6"
-              style={{ fontSize: 'clamp(32px,4vw,48px)' }}>
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('title')}
           </h2>
           <p className="text-[15px] text-ag-gray leading-relaxed">

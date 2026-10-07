@@ -62,7 +62,7 @@ export default async function AdvisoryPage({ params }: Props) {
             ))}
           </h1>
           <div className="max-w-xl mb-10 space-y-4">
-            <p className="text-[15px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
+            <p className="text-[16px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
             <p className="text-[15px] text-white/50 leading-relaxed">{t('hero.desc2')}</p>
           </div>
           <p className="font-sans font-normal italic text-[15px] text-white/50 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
@@ -109,7 +109,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 </p>
                 <h2
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
-                  style={{ fontSize: 'clamp(14px,1.2vw,17px)' }}
+                  style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                 >
                   {item.title}
                 </h2>
@@ -287,7 +287,7 @@ export default async function AdvisoryPage({ params }: Props) {
           </p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] max-w-2xl mb-8"
-            style={{ fontSize: 'clamp(22px,2.5vw,36px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('network.title')}
           </h2>
@@ -336,7 +336,7 @@ export default async function AdvisoryPage({ params }: Props) {
             <div className="max-w-2xl">
               <h2
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] mb-6"
-                style={{ fontSize: 'clamp(22px,2.5vw,34px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
               >
                 {t('approach.title')}
               </h2>

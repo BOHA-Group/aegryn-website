@@ -139,7 +139,7 @@ export function ManifestoSection() {
           <div className="py-16 border-b border-ag-border text-center px-4 max-w-3xl mx-auto">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] mb-5"
-              style={{ fontSize: 'clamp(22px,2.8vw,38px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {tW('convictionTitle').split('. ').map((part, i, arr) => (
                 <span key={i}>
@@ -194,7 +194,7 @@ export function ManifestoSection() {
               <h2
                 ref={aboutH2Ref}
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] pb-[0.15em] mb-12 overflow-hidden"
-                style={{ fontSize: 'clamp(34px,4.5vw,58px)' }}
+                style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                 dangerouslySetInnerHTML={{ __html: tA('title').replace(/\n/g, '<br>') }}
               />
               <div className="about-body space-y-8">

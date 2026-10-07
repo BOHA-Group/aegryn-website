@@ -749,7 +749,7 @@ export default function ExpertsContent() {
           >
             {t('hero.title')}
           </h1>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl">
+          <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
         </div>
@@ -763,7 +763,7 @@ export default function ExpertsContent() {
           </p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
-            style={{ fontSize: 'clamp(24px,3.5vw,44px)' }}
+            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('showcase.title')}
           </h2>
@@ -894,7 +894,7 @@ export default function ExpertsContent() {
             </p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
-              style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             >
               {t('waitlist.title')}
             </h2>

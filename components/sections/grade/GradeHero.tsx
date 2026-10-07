@@ -32,7 +32,7 @@ export function GradeHero() {
         <h1
           ref={headingRef}
           className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6"
-          style={{ fontSize: 'clamp(36px,5vw,76px)' }}
+          style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
         />
         <p ref={descRef} className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
