@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import { Link }            from '@/i18n/navigation'
-import { ArrowUpRight }    from 'lucide-react'
+import { ArrowUpRight, ClipboardList, Radar, UserCheck, Handshake } from 'lucide-react'
 import { Suspense }        from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import TalentHiringForm    from '@/components/forms/TalentHiringForm'
@@ -24,7 +24,8 @@ export default async function TalentEntreprisesPage({ params }: Props) {
   const t  = await getTranslations({ locale, namespace: 'talent.entreprises' })
   const tm = await getTranslations({ locale, namespace: 'talent' })
 
-  const steps   = tm.raw('method.steps') as { title: string; desc: string }[]
+  const steps      = tm.raw('method.steps') as { title: string; desc: string }[]
+  const stepIcons  = [ClipboardList, Radar, UserCheck, Handshake]
   const aiItems = t.raw('ai.items') as string[]
   const diagQ   = t.raw('diagnostic.questions') as string[]
 
@@ -61,10 +62,17 @@ export default async function TalentEntreprisesPage({ params }: Props) {
             {tm('method.title')}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-            {steps.map((step, i) => (
+            {steps.map((step, i) => {
+              const Icon = stepIcons[i]
+              return (
               <div key={i}>
-                <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
-                  {String(i + 1).padStart(2, '0')}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-9 h-9 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink shrink-0">
+                    <Icon size={16} strokeWidth={1.8} />
+                  </span>
+                  <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
                 </div>
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {step.title}
@@ -73,7 +81,8 @@ export default async function TalentEntreprisesPage({ params }: Props) {
                   {step.desc}
                 </p>
               </div>
-            ))}
+              )
+            })}
           </div>
           <div className="border-l-2 border-ag-apex pl-6 max-w-3xl">
             <h3 className="font-sans font-bold text-ag-black text-[15px] mb-2">
