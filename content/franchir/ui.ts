@@ -27,9 +27,6 @@ export interface FranchirUi {
   seeCycle:       string
   yes:            string
   no:             string
-  /** Accordéon du diagnostic d'introduction */
-  diagOpen:       string
-  diagClose:      string
 }
 
 export const FRANCHIR_UI: Record<string, FranchirUi> = {
@@ -44,7 +41,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: "Situation d'urgence : contact direct",
     ctaEyebrow: 'Échange de cadrage confidentiel',
     ctaBody: 'Trente minutes avec un expert du réseau, nommé et responsable de son périmètre. Pas d’engagement à ce stade ; les conditions sont transmises après cadrage.',
-    introCyclesTag: 'Cinq cycles', seeCycle: 'Voir ce cycle', yes: 'Oui', no: 'Non', diagOpen: 'Ouvrir', diagClose: 'Fermer',
+    introCyclesTag: 'Cinq cycles', seeCycle: 'Voir ce cycle', yes: 'Oui', no: 'Non',
   },
   en: {
     heroAlt: { lancement: 'Workspace of a young company', croissance: 'Modern skyscrapers under a blue sky', restructuration: 'Lighthouse surrounded by a breaking wave', acquisition: 'Office towers seen from below', transmission: 'Two hands reaching out to each other' },
@@ -57,7 +54,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: 'Urgent situation: direct contact',
     ctaEyebrow: 'Confidential scoping call',
     ctaBody: 'Thirty minutes with a named expert from our network, accountable for their scope. No commitment at this stage; terms follow the scoping call.',
-    introCyclesTag: 'Five stages', seeCycle: 'See this stage', yes: 'Yes', no: 'No', diagOpen: 'Open', diagClose: 'Close',
+    introCyclesTag: 'Five stages', seeCycle: 'See this stage', yes: 'Yes', no: 'No',
   },
   de: {
     heroAlt: { lancement: 'Arbeitsplatz eines jungen Unternehmens', croissance: 'Moderne Wolkenkratzer unter blauem Himmel', restructuration: 'Leuchtturm inmitten einer brechenden Welle', acquisition: 'Bürotürme aus der Froschperspektive', transmission: 'Zwei Hände, die sich entgegenkommen' },
@@ -70,7 +67,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: 'Notlage: direkter Kontakt',
     ctaEyebrow: 'Vertrauliches Orientierungsgespräch',
     ctaBody: 'Dreissig Minuten mit einem benannten Experten aus unserem Netz, verantwortlich für sein Gebiet. Noch keine Verpflichtung; die Konditionen folgen nach dem Gespräch.',
-    introCyclesTag: 'Fünf Zyklen', seeCycle: 'Diesen Zyklus ansehen', yes: 'Ja', no: 'Nein', diagOpen: 'Öffnen', diagClose: 'Schliessen',
+    introCyclesTag: 'Fünf Zyklen', seeCycle: 'Diesen Zyklus ansehen', yes: 'Ja', no: 'Nein',
   },
   it: {
     heroAlt: { lancement: 'Spazio di lavoro di una giovane impresa', croissance: 'Grattacieli moderni sotto un cielo azzurro', restructuration: "Faro circondato da un'onda che si infrange", acquisition: 'Torri di uffici viste dal basso', transmission: 'Due mani che si incontrano' },
@@ -83,7 +80,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: 'Situazione urgente: contatto diretto',
     ctaEyebrow: 'Scambio di inquadramento riservato',
     ctaBody: 'Trenta minuti con un esperto della rete, nominato e responsabile del suo ambito. Nessun impegno a questo stadio; le condizioni vengono trasmesse dopo l’inquadramento.',
-    introCyclesTag: 'Cinque cicli', seeCycle: 'Vedere questo ciclo', yes: 'Sì', no: 'No', diagOpen: 'Aprire', diagClose: 'Chiudere',
+    introCyclesTag: 'Cinque cicli', seeCycle: 'Vedere questo ciclo', yes: 'Sì', no: 'No',
   },
   es: {
     heroAlt: { lancement: 'Espacio de trabajo de una empresa joven', croissance: 'Rascacielos modernos bajo un cielo azul', restructuration: 'Faro rodeado por una ola rompiente', acquisition: 'Torres de oficinas vistas desde abajo', transmission: 'Dos manos que se acercan' },
@@ -96,7 +93,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: 'Situación urgente: contacto directo',
     ctaEyebrow: 'Intercambio de encuadre confidencial',
     ctaBody: 'Treinta minutos con un experto de la red, designado y responsable de su ámbito. Sin compromiso en esta fase; las condiciones se transmiten tras el encuadre.',
-    introCyclesTag: 'Cinco ciclos', seeCycle: 'Ver este ciclo', yes: 'Sí', no: 'No', diagOpen: 'Abrir', diagClose: 'Cerrar',
+    introCyclesTag: 'Cinco ciclos', seeCycle: 'Ver este ciclo', yes: 'Sí', no: 'No',
   },
   nl: {
     heroAlt: { lancement: 'Werkruimte van een jonge onderneming', croissance: 'Moderne wolkenkrabbers onder een blauwe lucht', restructuration: 'Vuurtoren omringd door een brekende golf', acquisition: 'Kantoorgebouwen van onderaf gezien', transmission: 'Twee handen die elkaar bereiken' },
@@ -109,7 +106,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     ctaUrgency: 'Spoedgeval: direct contact',
     ctaEyebrow: 'Vertrouwelijk kadergesprek',
     ctaBody: 'Dertig minuten met een benoemde expert uit ons netwerk, verantwoordelijk voor zijn domein. Nog geen engagement; voorwaarden volgen na het kadergesprek.',
-    introCyclesTag: 'Vijf trajecten', seeCycle: 'Bekijk dit traject', yes: 'Ja', no: 'Nee', diagOpen: 'Openen', diagClose: 'Sluiten',
+    introCyclesTag: 'Vijf trajecten', seeCycle: 'Bekijk dit traject', yes: 'Ja', no: 'Nee',
   },
 }
 

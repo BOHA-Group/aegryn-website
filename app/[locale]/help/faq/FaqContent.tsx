@@ -2,7 +2,7 @@
 
 import { useState }           from 'react'
 import Link                   from 'next/link'
-import { ChevronDown }        from 'lucide-react'
+import { Plus }               from 'lucide-react'
 import { useTranslations }    from 'next-intl'
 import { FilterPills }        from '@/components/ui/FilterPills'
 
@@ -88,12 +88,14 @@ export default function FaqContent() {
                 <span className="font-sans font-semibold text-[15px] text-ag-black leading-snug group-hover:text-ag-navy transition-colors">
                   {item.q}
                 </span>
-                <ChevronDown
-                  size={16}
-                  className={`shrink-0 text-ag-gray-light mt-0.5 transition-transform duration-200 ${
-                    open === item.id ? 'rotate-180' : ''
+                <span
+                  className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                    open === item.id ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
                   }`}
-                />
+                  aria-hidden="true"
+                >
+                  <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${open === item.id ? 'rotate-45' : ''}`} />
+                </span>
               </button>
               {open === item.id && (
                 <div className="pb-6 pr-8">

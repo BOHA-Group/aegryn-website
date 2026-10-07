@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Plus, Minus } from 'lucide-react'
+import { Plus } from 'lucide-react'
 
 type IndustryItem = { name: string; desc?: string }
 type IndustryCluster = { cluster: string; items: IndustryItem[] }
@@ -25,8 +25,13 @@ export default function IndustriesSection() {
               <span className="font-sans font-bold text-[14px] tracking-[-0.01em] text-ag-navy group-hover:text-ag-black transition-colors">
                 {cluster.cluster}
               </span>
-              <span className="shrink-0 text-ag-apex-ink">
-                {isOpen ? <Minus size={14} strokeWidth={2} /> : <Plus size={14} strokeWidth={2} />}
+              <span
+                className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                  isOpen ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
+                }`}
+                aria-hidden="true"
+              >
+                <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`} />
               </span>
             </button>
             {isOpen && (

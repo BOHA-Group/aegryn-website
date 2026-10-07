@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { Lock, ChevronDown, Check } from 'lucide-react'
+import { Lock, Plus, Check } from 'lucide-react'
 import type { IndexSnapshot, IndexCluster } from '@/lib/cifsoIndex'
 import { INDEX_METRICS, INDEX_CLUSTER_SLUGS } from '@/lib/indexTaxonomy'
 import IndustryClusterMap from './IndustryClusterMap'
@@ -186,7 +186,14 @@ function FaqItem({ q, a }: { q: string; a: string }) {
     <div className="rounded-xl border border-ag-border bg-white">
       <button type="button" onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left">
         <span className="font-sans font-semibold text-ag-black text-[14px]">{q}</span>
-        <ChevronDown size={16} className={`shrink-0 text-ag-gray transition-transform ${open ? 'rotate-180' : ''}`} />
+        <span
+          className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+            open ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
+          }`}
+          aria-hidden="true"
+        >
+          <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${open ? 'rotate-45' : ''}`} />
+        </span>
       </button>
       {open && <p className="px-5 pb-5 font-sans text-[13px] text-ag-gray leading-relaxed">{a}</p>}
     </div>

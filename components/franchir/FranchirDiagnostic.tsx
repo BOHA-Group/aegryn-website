@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, ChevronDown } from 'lucide-react'
+import { ArrowUpRight, Plus } from 'lucide-react'
 import Link from 'next/link'
 import { FRANCHIR_UI } from '@/content/franchir/ui'
 import type { CycleSlug } from '@/content/franchir/types'
@@ -39,14 +39,13 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
         className={`w-full py-6 flex items-center gap-5 text-left group${open ? ' border-b border-ag-border' : ''}`}
       >
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] group-hover:text-ag-navy transition-colors">{title}</h3>
-        <span className="flex items-center gap-2 shrink-0 translate-y-[3px]">
-          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light group-hover:text-ag-navy transition-colors">
-            {open ? ui.diagClose : ui.diagOpen}
-          </span>
-          <ChevronDown
-            size={18}
-            className={`shrink-0 text-ag-gray-light group-hover:text-ag-navy transition-all duration-200 ${open ? 'rotate-180' : 'animate-pulse'}`}
-          />
+        <span
+          className={`ml-auto shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+            open ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light group-hover:border-ag-navy group-hover:text-ag-navy'
+          }`}
+          aria-hidden="true"
+        >
+          <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${open ? 'rotate-45' : ''}`} />
         </span>
       </button>
 

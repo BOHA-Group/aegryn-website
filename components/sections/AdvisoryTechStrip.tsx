@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, ShieldCheck, Brain, ShieldAlert, Compass, Users, BarChart2 } from 'lucide-react'
+import { ArrowUpRight, Plus, ShieldCheck, Brain, ShieldAlert, Compass, Users, BarChart2 } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 
 const ICONS = [ShieldCheck, Brain, ShieldAlert, Compass, Users, BarChart2]
@@ -16,6 +16,9 @@ export function AdvisoryTechStrip() {
 
   const pillars = (t.raw('pillars') as Record<string, { title: string; desc: string; dimensions: { label: string; desc: string }[] }>) || {}
   const pillarKeys = Object.keys(pillars)
+
+  const [hovered, setHovered] = useState<string | null>(null)
+  const [pinned,  setPinned]  = useState<string | null>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -60,15 +63,30 @@ export function AdvisoryTechStrip() {
         {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
           {pillarKeys.map((key, i) => {
-            const pillar = pillars[key]
-            const Icon   = ICONS[i] ?? ShieldCheck
+            const pillar   = pillars[key]
+            const Icon     = ICONS[i] ?? ShieldCheck
+            const expanded = hovered === key || pinned === key
             return (
               <div
                 key={key}
-                className="adv-service-card bg-ag-white p-8 md:p-10 flex flex-col gap-5"
+                className="adv-service-card bg-ag-white p-8 md:p-10 flex flex-col gap-5 cursor-pointer"
                 style={{ opacity: 0 }}
+                onMouseEnter={() => setHovered(key)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setPinned(pinned === key ? null : key)}
+                aria-expanded={expanded}
               >
-                <Icon size={18} className="text-ag-apex-ink shrink-0" strokeWidth={1.5} />
+                <div className="flex items-start justify-between gap-4">
+                  <Icon size={18} className="text-ag-apex-ink shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <span
+                    className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                      expanded ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
+                    }`}
+                    aria-hidden="true"
+                  >
+                    <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${expanded ? 'rotate-45' : ''}`} />
+                  </span>
+                </div>
                 <h3
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
                   style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
@@ -78,14 +96,19 @@ export function AdvisoryTechStrip() {
                 <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
                   {pillar.desc}
                 </p>
-                <ul className="space-y-1.5">
-                  {(pillar.dimensions || []).map((dim) => (
-                    <li key={dim.label} className="flex items-start gap-2 font-sans text-[12px] text-ag-gray-light">
-                      <span className="mt-[5px] w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                      {dim.label}
-                    </li>
-                  ))}
-                </ul>
+                <div
+                  className="grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  style={{ gridTemplateRows: expanded ? '1fr' : '0fr', opacity: expanded ? 1 : 0 }}
+                >
+                  <ul className="space-y-1.5 overflow-hidden min-h-0">
+                    {(pillar.dimensions || []).map((dim) => (
+                      <li key={dim.label} className="flex items-start gap-2 font-sans text-[12px] text-ag-gray-light">
+                        <span className="mt-[5px] w-1 h-1 rounded-full bg-ag-apex shrink-0" />
+                        {dim.label}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             )
           })}

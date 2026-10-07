@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import { ChevronDown } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import { INDEX_CLUSTERS, type IndexLocale } from '@/lib/indexTaxonomy'
 import { clustersByIndustry, verticalsByCluster } from '@/lib/industryClusters'
 import type { ClusterKey } from '@/lib/cifsoValuation'
@@ -44,7 +44,14 @@ export default function IndustryClusterMap() {
                   <span className="font-mono text-[10px] text-ag-gray-light">
                     {clusters.length} {t('clustersLabel')} · {totalVerticals} {t('techVerticalsLabel')}
                   </span>
-                  <ChevronDown size={14} className={`text-ag-gray transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  <span
+                    className={`w-6 h-6 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                      isOpen ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
+                    }`}
+                    aria-hidden="true"
+                  >
+                    <Plus size={12} strokeWidth={2} className={`transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`} />
+                  </span>
                 </span>
               </button>
 
@@ -63,7 +70,14 @@ export default function IndustryClusterMap() {
                           <span className="font-sans font-semibold text-ag-black text-[13px]">{cluster.label[locale]}</span>
                           <span className="flex items-center gap-2 shrink-0">
                             <span className="font-mono text-[9px] text-ag-gray-light">{verticals.length} {t('techVerticalsLabel')}</span>
-                            <ChevronDown size={12} className={`text-ag-gray-light transition-transform ${clusterOpen ? 'rotate-180' : ''}`} />
+                            <span
+                              className={`w-6 h-6 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                                clusterOpen ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
+                              }`}
+                              aria-hidden="true"
+                            >
+                              <Plus size={12} strokeWidth={2} className={`transition-transform duration-300 ${clusterOpen ? 'rotate-45' : ''}`} />
+                            </span>
                           </span>
                         </button>
                         {clusterOpen && (
