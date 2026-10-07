@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "Voor kandidaten",
     "craftRecruitHire": "Profiel werven",
     "craftRecruitTransition": "Overgangsprofielen",
-    "craftRecruitPool": "Deelnemen aan de pool",
-    "craftRecruitMissions": "Gepubliceerde mandates"
+    "craftRecruitPool": "Deelnemen aan de pool"
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
@@ -9128,13 +9127,8 @@
         "cta": "Mijn profiel indienen"
       },
       "paths": {
-        "title": "Drie manieren om binnen te komen",
+        "title": "Twee manieren om binnen te komen",
         "items": [
-          {
-            "title": "Solliciteren op een gepubliceerd mandaat",
-            "desc": "Open mandaten, beschreven per sector, land, levensfase en senioriteit. Geen bedrijfsnaam wordt zonder akkoord gecommuniceerd.",
-            "cta": "Mandaten bekijken"
-          },
           {
             "title": "Profiel indienen",
             "desc": "Voor profielen die niet actief zoeken: wij contacteren u wanneer een zoektocht past.",
@@ -9147,16 +9141,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Gepubliceerde mandaten",
-        "desc": "Open mandaten worden hier gepubliceerd, met akkoord van de klant.",
-        "emptyTitle": "Momenteel geen mandaten gepubliceerd.",
-        "emptyDesc": "Dien uw profiel in: wij contacteren u wanneer een zoektocht past.",
-        "emptyCta": "Profiel indienen"
-      },
       "form": {
         "title": "Mijn profiel indienen",
         "desc": "Uw gegevens blijven vertrouwelijk en worden alleen met uw toestemming aan een bedrijf gedeeld."
+      },
+      "types": {
+        "title": "De mandaten die de pool bedient",
+        "desc": "Onze zoekopdrachten zijn vertrouwelijk: geen enkel mandaat wordt gepubliceerd. Wanneer een mandaat bij uw profiel past, nemen we contact op.",
+        "items": [
+          {
+            "title": "Directiefuncties",
+            "desc": "Directe aanwerving van leidinggevenden en experts, in vaste functies, in elke levensfase van het bedrijf."
+          },
+          {
+            "title": "Transitie-opdrachten",
+            "desc": "Leidinggevenden en experts ingezet voor een bepaalde periode: schriftelijk mandaat, vastgelegde doelstellingen, voorbereide overdracht."
+          }
+        ]
       }
     },
     "forms": {

@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "Per i candidati",
     "craftRecruitHire": "Reclutare un profilo",
     "craftRecruitTransition": "Profili di transizione",
-    "craftRecruitPool": "Entrare nel pool",
-    "craftRecruitMissions": "Mandati pubblicati"
+    "craftRecruitPool": "Entrare nel pool"
   },
   "hero": {
     "tagline": "Aegryn. Dalla strategia alla trasmissione. Svizzera.",
@@ -9128,13 +9127,8 @@
         "cta": "Depositare il mio profilo"
       },
       "paths": {
-        "title": "Tre modi per entrare",
+        "title": "Due modi per entrare",
         "items": [
-          {
-            "title": "Candidarsi a un mandato pubblicato",
-            "desc": "Mandati aperti, descritti per settore, paese, fase del ciclo e seniority. Nessun nome d’impresa comunicato senza accordo.",
-            "cta": "Vedere i mandati"
-          },
           {
             "title": "Depositare il proprio profilo",
             "desc": "Per i profili non in ricerca attiva: vi contattiamo quando una ricerca corrisponde.",
@@ -9147,16 +9141,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Mandati pubblicati",
-        "desc": "I mandati aperti sono pubblicati qui, con l’accordo del cliente.",
-        "emptyTitle": "Nessun mandato pubblicato per il momento.",
-        "emptyDesc": "Depositare il profilo: vi contattiamo quando una ricerca corrisponde.",
-        "emptyCta": "Depositare il mio profilo"
-      },
       "form": {
         "title": "Depositare il mio profilo",
         "desc": "Le vostre informazioni restano riservate e sono condivise con un’impresa solo con il vostro consenso."
+      },
+      "types": {
+        "title": "I mandati serviti dal pool",
+        "desc": "Le nostre ricerche sono confidenziali: nessun mandato viene pubblicato. Quando un mandato corrisponde al tuo profilo, ti contattiamo.",
+        "items": [
+          {
+            "title": "Posizioni dirigenziali",
+            "desc": "Assunzioni dirette di dirigenti ed esperti, in ruoli permanenti, in ogni fase di vita dell'impresa."
+          },
+          {
+            "title": "Incarichi di transizione",
+            "desc": "Dirigenti ed esperti impegnati per un periodo definito: mandato scritto, obiettivi fissati, passaggio di consegne preparato."
+          }
+        ]
       }
     },
     "forms": {

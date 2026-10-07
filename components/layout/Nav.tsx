@@ -52,7 +52,6 @@ const CRAFT_RECRUIT_COMPANY_LINKS: { labelKey: string; href: LinkHref }[] = [
 ]
 const CRAFT_RECRUIT_CANDIDATE_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftRecruitPool',      href: '/talent/candidats' },
-  { labelKey: 'craftRecruitMissions',  href: '/talent/candidats#missions' as LinkHref },
 ]
 
 // Nos convictions - Magazine (les éditions à venir sont grisées mais restent cliquables)

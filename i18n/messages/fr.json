@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "Pour les candidats",
     "craftRecruitHire": "Recruter un profil",
     "craftRecruitTransition": "Profils de transition",
-    "craftRecruitPool": "Rejoindre le vivier",
-    "craftRecruitMissions": "Missions publiées"
+    "craftRecruitPool": "Rejoindre le vivier"
   },
   "hero": {
     "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
@@ -9088,13 +9087,8 @@
         "cta": "Déposer mon profil"
       },
       "paths": {
-        "title": "Trois façons d’entrer",
+        "title": "Deux façons d'entrer",
         "items": [
-          {
-            "title": "Postuler à une mission publiée",
-            "desc": "Des missions ouvertes, décrites par secteur, pays, cycle de vie et séniorité. Aucun nom d’entreprise n’est communiqué sans accord.",
-            "cta": "Voir les missions"
-          },
           {
             "title": "Déposer son profil",
             "desc": "Pour les profils qui ne sont pas en recherche active : nous vous contactons quand une recherche correspond.",
@@ -9107,16 +9101,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Missions publiées",
-        "desc": "Les missions ouvertes sont publiées ici, avec l’accord du client.",
-        "emptyTitle": "Aucune mission publiée pour le moment.",
-        "emptyDesc": "Déposez votre profil : nous vous contactons lorsqu’une recherche correspond.",
-        "emptyCta": "Déposer mon profil"
-      },
       "form": {
         "title": "Déposer mon profil",
         "desc": "Vos informations restent confidentielles et ne sont partagées avec une entreprise qu’avec votre accord."
+      },
+      "types": {
+        "title": "Les missions que le vivier sert",
+        "desc": "Nos recherches sont confidentielles : aucune mission n'est publiée. Quand un mandat correspond à votre profil, nous vous contactons.",
+        "items": [
+          {
+            "title": "Postes de direction",
+            "desc": "Recrutement en propre de dirigeants et d'experts, en poste durable, à chaque étape de vie de l'entreprise."
+          },
+          {
+            "title": "Missions de transition",
+            "desc": "Dirigeants et experts mobilisés sur une période bornée : mandat écrit, objectifs fixés, relais préparé."
+          }
+        ]
       }
     },
     "forms": {

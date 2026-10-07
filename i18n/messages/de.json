@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "Für Kandidaten",
     "craftRecruitHire": "Profil rekrutieren",
     "craftRecruitTransition": "Übergangsprofile",
-    "craftRecruitPool": "Dem Talentpool beitreten",
-    "craftRecruitMissions": "Veröffentlichte Mandate"
+    "craftRecruitPool": "Dem Talentpool beitreten"
   },
   "hero": {
     "tagline": "Aegryn. Von der Strategie bis zum Abschluss. Schweiz.",
@@ -9258,13 +9257,8 @@
         "cta": "Mein Profil einreichen"
       },
       "paths": {
-        "title": "Drei Wege hinein",
+        "title": "Zwei Wege zum Einstieg",
         "items": [
-          {
-            "title": "Auf ein veröffentlichtes Mandat bewerben",
-            "desc": "Offene Mandate, beschrieben nach Sektor, Land, Lebenszyklusphase und Seniorität. Kein Firmenname wird ohne Zustimmung genannt.",
-            "cta": "Mandate ansehen"
-          },
           {
             "title": "Profil einreichen",
             "desc": "Für Profile, die nicht aktiv suchen: Wir melden uns, wenn eine Suche passt.",
@@ -9277,16 +9271,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Veröffentlichte Mandate",
-        "desc": "Offene Mandate werden hier veröffentlicht, mit Zustimmung des Kunden.",
-        "emptyTitle": "Derzeit keine Mandate veröffentlicht.",
-        "emptyDesc": "Reichen Sie Ihr Profil ein: Wir melden uns, wenn eine Suche passt.",
-        "emptyCta": "Profil einreichen"
-      },
       "form": {
         "title": "Profil einreichen",
         "desc": "Ihre Angaben bleiben vertraulich und werden nur mit Ihrer Zustimmung an ein Unternehmen weitergegeben."
+      },
+      "types": {
+        "title": "Die Mandate, die der Pool bedient",
+        "desc": "Unsere Suchen sind vertraulich: kein Mandat wird veröffentlicht. Entspricht ein Mandat Ihrem Profil, kontaktieren wir Sie.",
+        "items": [
+          {
+            "title": "Führungspositionen",
+            "desc": "Direkteinstellungen von Führungskräften und Experten, in Festanstellung, in jeder Lebensphase eines Unternehmens."
+          },
+          {
+            "title": "Übergangsmandate",
+            "desc": "Führungskräfte und Experten für einen befristeten Zeitraum: schriftliches Mandat, feste Ziele, vorbereitete Übergabe."
+          }
+        ]
       }
     },
     "forms": {

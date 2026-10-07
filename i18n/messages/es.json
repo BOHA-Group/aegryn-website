@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "Para candidatos",
     "craftRecruitHire": "Reclutar un perfil",
     "craftRecruitTransition": "Perfiles de transición",
-    "craftRecruitPool": "Unirse al pool",
-    "craftRecruitMissions": "Mandatos publicados"
+    "craftRecruitPool": "Unirse al pool"
   },
   "hero": {
     "tagline": "Aegryn. De la estrategia a la transmisión. Suiza & Europa.",
@@ -9128,13 +9127,8 @@
         "cta": "Depositar mi perfil"
       },
       "paths": {
-        "title": "Tres formas de entrar",
+        "title": "Dos formas de entrar",
         "items": [
-          {
-            "title": "Candidatarse a un mandato publicado",
-            "desc": "Mandatos abiertos, descritos por sector, país, fase del ciclo y seniority. Ningún nombre de empresa se comunica sin acuerdo.",
-            "cta": "Ver los mandatos"
-          },
           {
             "title": "Depositar su perfil",
             "desc": "Para perfiles que no buscan activamente: le contactamos cuando una búsqueda corresponde.",
@@ -9147,16 +9141,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Mandatos publicados",
-        "desc": "Los mandatos abiertos se publican aquí, con el acuerdo del cliente.",
-        "emptyTitle": "Ningún mandato publicado por el momento.",
-        "emptyDesc": "Deposite su perfil: le contactamos cuando una búsqueda corresponde.",
-        "emptyCta": "Depositar mi perfil"
-      },
       "form": {
         "title": "Depositar mi perfil",
         "desc": "Su información permanece confidencial y solo se comparte con una empresa con su consentimiento."
+      },
+      "types": {
+        "title": "Los mandatos que sirve el pool",
+        "desc": "Nuestras búsquedas son confidenciales: ningún mandato se publica. Cuando un mandato coincide con su perfil, le contactamos.",
+        "items": [
+          {
+            "title": "Puestos de dirección",
+            "desc": "Contratación directa de directivos y expertos, en puestos permanentes, en cada etapa de vida de la empresa."
+          },
+          {
+            "title": "Misiones de transición",
+            "desc": "Directivos y expertos contratados por un período definido: mandato escrito, objetivos fijados, relevo preparado."
+          }
+        ]
       }
     },
     "forms": {

@@ -158,8 +158,7 @@
     "craftRecruitForCandidates": "For candidates",
     "craftRecruitHire": "Hire a profile",
     "craftRecruitTransition": "Transition profiles",
-    "craftRecruitPool": "Join the talent pool",
-    "craftRecruitMissions": "Published assignments"
+    "craftRecruitPool": "Join the talent pool"
   },
   "hero": {
     "tagline": "Aegryn. From strategy to closing. Switzerland & Europe.",
@@ -9128,13 +9127,8 @@
         "cta": "Submit my profile"
       },
       "paths": {
-        "title": "Three ways in",
+        "title": "Two ways in",
         "items": [
-          {
-            "title": "Apply to a published assignment",
-            "desc": "Open assignments described by sector, country, lifecycle stage and seniority. No company name is shared without consent.",
-            "cta": "See the assignments"
-          },
           {
             "title": "Submit your profile",
             "desc": "For profiles not actively searching: we contact you when a search matches.",
@@ -9147,16 +9141,23 @@
           }
         ]
       },
-      "missions": {
-        "title": "Published assignments",
-        "desc": "Open assignments are published here, with the client’s consent.",
-        "emptyTitle": "No assignment published for now.",
-        "emptyDesc": "Submit your profile: we contact you when a search matches.",
-        "emptyCta": "Submit my profile"
-      },
       "form": {
         "title": "Submit my profile",
         "desc": "Your information stays confidential and is only shared with a company with your consent."
+      },
+      "types": {
+        "title": "The mandates the pool serves",
+        "desc": "Our searches are confidential: no mandate is published. When a search matches your profile, we contact you.",
+        "items": [
+          {
+            "title": "Executive positions",
+            "desc": "Direct hires of executives and experts, in permanent roles, at every stage of a company's life."
+          },
+          {
+            "title": "Transition assignments",
+            "desc": "Executives and experts engaged for a defined period: written mandate, set objectives, handover prepared."
+          }
+        ]
       }
     },
     "forms": {
