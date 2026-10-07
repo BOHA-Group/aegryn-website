@@ -9027,7 +9027,7 @@
         ]
       },
       "diagnostic": {
-        "title": "Before calling us: 5 questions",
+        "title": "Before calling us: 4 questions",
         "questions": [
           "Is the role defined by the decision it must enable?",
           "Are the success criteria written down?",
