@@ -229,13 +229,6 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 </Link>
               ))}
             </div>
-            <Link
-              href={'/talent#marche' as LinkHref}
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 mt-1"
-            >
-              {t('craftRecruitInsights')}
-            </Link>
           </div>
         </div>
       </div>
@@ -758,10 +751,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <Link href={'/talent#marche' as LinkHref} onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
-                    {t('craftRecruitInsights')}
-                  </Link>
                 </div>
               )}
             </div>
