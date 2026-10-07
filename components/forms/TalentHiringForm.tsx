@@ -4,9 +4,12 @@ import { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import PhoneInput from '@/components/ui/PhoneInput'
+
+const CYCLES = ['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission'] as const
 
 const hiringSchema = z.object({
   company: z.string().min(2, 'Company name required'),
@@ -14,7 +17,11 @@ const hiringSchema = z.object({
   email: z.string().email('Valid email required'),
   phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
   roleTitle: z.string().min(2, 'Role title required'),
-  roleDescription: z.string().min(20, 'Role description too short (min 20 characters)'),
+  missionType: z.enum(['permanent', 'transition']).optional(),
+  lifecycleCycle: z.enum(CYCLES).optional(),
+  companySize: z.string().optional(),
+  confidential: z.boolean().optional(),
+  roleDescription: z.string().min(20, 'Role description too short (min 20 characters)').max(2000),
   location: z.string().min(2, 'Location required'),
   budgetAnnualChf: z.string().optional(),
   urgency: z.enum(['immediate', 'month', 'quarter', 'flexible']),
@@ -27,8 +34,13 @@ type HiringFormData = z.infer<typeof hiringSchema>
 
 export default function TalentHiringForm() {
   const t = useTranslations('talent.forms.hiring')
+  const locale = useLocale()
+  const params = useSearchParams()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const prefillCycle = params.get('cycle')
+  const prefillType  = params.get('type')
 
   const {
     register,
@@ -38,6 +50,10 @@ export default function TalentHiringForm() {
     formState: { errors },
   } = useForm<HiringFormData>({
     resolver: zodResolver(hiringSchema),
+    defaultValues: {
+      lifecycleCycle: (CYCLES as readonly string[]).includes(prefillCycle ?? '') ? (prefillCycle as typeof CYCLES[number]) : undefined,
+      missionType: prefillType === 'transition' ? 'transition' : undefined,
+    },
   })
 
   const onSubmit = async (data: HiringFormData) => {
@@ -48,7 +64,7 @@ export default function TalentHiringForm() {
       const res = await fetch('/api/talent/hiring', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, locale }),
       })
 
       if (!res.ok) throw new Error('Submission failed')
@@ -165,6 +181,49 @@ export default function TalentHiringForm() {
           )}
         </div>
 
+        {/* Mission type */}
+        <div>
+          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
+            {t('missionType')}
+          </label>
+          <select
+            {...register('missionType')}
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+          >
+            <option value="permanent">{t('missionPermanent')}</option>
+            <option value="transition">{t('missionTransition')}</option>
+          </select>
+        </div>
+
+        {/* Lifecycle cycle */}
+        <div>
+          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
+            {t('lifecycleCycle')}
+          </label>
+          <select
+            {...register('lifecycleCycle')}
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+          >
+            <option value="">{t('lifecycleCyclePlaceholder')}</option>
+            {CYCLES.map((c) => (
+              <option key={c} value={c}>{t(`cycles.${c}`)}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Company size */}
+        <div>
+          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
+            {t('companySize')}
+          </label>
+          <input
+            {...register('companySize')}
+            type="text"
+            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+            placeholder={t('companySizePlaceholder')}
+          />
+        </div>
+
         {/* Budget */}
         <div>
           <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
@@ -212,6 +271,19 @@ export default function TalentHiringForm() {
         {errors.roleDescription && (
           <p className="mt-1 text-[12px] text-red-600">{errors.roleDescription.message}</p>
         )}
+      </div>
+
+      {/* Confidential search */}
+      <div className="flex items-start gap-3">
+        <input
+          {...register('confidential')}
+          type="checkbox"
+          id="confidential"
+          className="mt-1 w-4 h-4 rounded border-ag-border text-ag-apex focus:ring-ag-apex focus:ring-2"
+        />
+        <label htmlFor="confidential" className="text-[13px] text-ag-gray leading-relaxed">
+          {t('confidential')}
+        </label>
       </div>
 
       {/* RGPD/LPD Consent */}

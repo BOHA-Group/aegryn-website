@@ -6,8 +6,13 @@ import { useSearchParams }  from 'next/navigation'
 
 type Props = { locale: string }
 
-const subjects   = ['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'investor', 'press', 'career', 'other'] as const
-const MSG_LIMIT  = 250
+const subjects   = ['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'investor', 'press', 'recruter', 'transition', 'career', 'other'] as const
+const MSG_LIMIT  = 1000
+
+/* alias ?type= → sujet (liens depuis /talent et FRANCHIR) */
+const TYPE_TO_SUBJECT: Record<string, string> = {
+  recruter: 'recruter', transition: 'transition', candidat: 'career', candidate: 'career',
+}
 
 const COUNTRY_OPTIONS = [
   { code: 'CH', label: 'Suisse',      dial: '+41',  maxLen: 9  },
@@ -55,9 +60,12 @@ export default function ContactForm({ locale }: Props) {
   const params = useSearchParams()
   const [subject, setSubject] = useState(() => {
     const q = params.get('subject')
-    return q && (subjects as readonly string[]).includes(q) ? q : ''
+    if (q && (subjects as readonly string[]).includes(q)) return q
+    const ty = params.get('type')
+    return ty ? (TYPE_TO_SUBJECT[ty] ?? '') : ''
   })
   const [message, setMessage] = useState('')
+  const cycle = params.get('cycle') ?? ''
 
   const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === phoneCountry) ?? COUNTRY_OPTIONS[0]
 
@@ -83,7 +91,7 @@ export default function ContactForm({ locale }: Props) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, phone: phoneFormatted, locale, subjectLabel: subject ? t(`subjects.${subject}` as Parameters<typeof t>[0]) : undefined }),
+        body: JSON.stringify({ ...data, phone: phoneFormatted, locale, cycle: cycle || undefined, subjectLabel: subject ? t(`subjects.${subject}` as Parameters<typeof t>[0]) : undefined }),
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))

@@ -78,10 +78,7 @@
     "craftTransactRestructuration": "Herstructurering & Pivot",
     "craftTransactVerify": "Certificaat verifiëren",
     "craftRecruit": "Rekruteren",
-    "craftRecruitDesc": "Leiderplaatsing: bestuur, tech, M&A",
-    "craftRecruitBoard": "Bestuursleden & C-Level",
-    "craftRecruitExecutiveTech": "Executive Tech",
-    "craftRecruitExecutiveMA": "Executive M&A",
+    "craftRecruitDesc": "Werving en overgangsprofielen, in elke levensfase van het bedrijf.",
     "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
@@ -123,7 +120,7 @@
     "whoContact": "Contact",
     "whoJoin": "Sluit je bij ons aan",
     "whoJoinDesc": "Carrières, talenten, partners",
-    "whoCareers": "Carrières",
+    "whoCareers": "Werken bij Aegryn",
     "whoTalent": "Executive Recruitment",
     "whoAlliances": "Partner worden",
     "talent": "Talent",
@@ -155,7 +152,15 @@
     "clusterIndustrie": "Industrie, Energie & Infrastructuur",
     "clusterCommerce": "Handel, Diensten & Klantervaring",
     "clusterTech": "Technologie, Innovatie & Publieke Sector",
-    "solutionsViewAllLink": "Alle oplossingen bekijken"
+    "solutionsViewAllLink": "Alle oplossingen bekijken",
+    "craftRecruitIntro": "Introductie",
+    "craftRecruitForCompanies": "Voor bedrijven",
+    "craftRecruitForCandidates": "Voor kandidaten",
+    "craftRecruitHire": "Profiel werven",
+    "craftRecruitTransition": "Overgangsprofielen",
+    "craftRecruitPool": "Deelnemen aan de pool",
+    "craftRecruitMissions": "Gepubliceerde mandates",
+    "craftRecruitInsights": "Insights & Marktdata"
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
@@ -851,11 +856,11 @@
   "homeTalent": {
     "label": "REKRUTEREN",
     "title": "De profielen die het verschil maken.",
-    "desc": "Wij identificeren en plaatsen leidinggevenden, tech-experts en innovatieprofielen die organisaties vooruitbrengen. CTO, CISO, Head of AI, COO, DPO, Chief Transformation Officer. In Zwitserland en Europa.\n\nOns doel is altijd hetzelfde: de waarde van uw bedrijf versterken met de juiste mensen op het juiste moment.",
+    "desc": "Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf.\n\nOns doel blijft hetzelfde: de waarde van uw organisatie versterken met de juiste mensen op het juiste moment.",
     "cta1": "Profiel zoeken →",
-    "cta1Href": "/talent",
+    "cta1Href": "/talent/entreprises",
     "cta2": "Ik ben kandidaat →",
-    "cta2Href": "/talent"
+    "cta2Href": "/talent/candidats"
   },
   "homeSegments": {
     "label": "ONZE KLANTEN",
@@ -1547,7 +1552,7 @@
     },
     "responseTime": {
       "label": "Reactietijd",
-      "value": "Binnen 48 uur"
+      "value": "Binnen 2 werkdagen"
     },
     "form": {
       "name": "Volledige naam",
@@ -1565,8 +1570,10 @@
         "partnership": "Partnerschap",
         "investor": "Investeerder",
         "press": "Pers & Media",
-        "career": "Carrière",
-        "other": "Overige"
+        "career": "Sollicitatie",
+        "other": "Overige",
+        "recruter": "Profiel werven",
+        "transition": "Overgangsprofiel"
       },
       "message": "Bericht",
       "messagePlaceholder": "Beschrijf uw vraag...",
@@ -7465,7 +7472,7 @@
     "glossaire": "M&A-woordenlijst",
     "about": "Over Aegryn",
     "whatWeBuild": "Wat wij bouwen",
-    "career": "Carrières",
+    "career": "Werken bij Aegryn",
     "contact": "Contact",
     "termsUse": "Gebruiksvoorwaarden",
     "termsCgv": "Verkoopvoorwaarden",
@@ -7479,7 +7486,17 @@
     "valoriserAcquisition": "Acquisitie & Externe groei",
     "valoriserTransmission": "Overdracht & Cessie",
     "roadmap": "Roadmap",
-    "annuaire": "Expertregister"
+    "annuaire": "Expertregister",
+    "groupAccompagner": "Begeleiden",
+    "groupConstruire": "Bouwen",
+    "groupFranchir": "Levenscyclus",
+    "groupRecruter": "Werven",
+    "groupInformer": "Informeren",
+    "talent": "Aegryn Talent",
+    "talentEntreprises": "Profiel werven",
+    "talentTransition": "Overgangsprofielen",
+    "talentCandidats": "Deelnemen aan de pool",
+    "workforce": "Arbeidsmarktdata"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",
@@ -8859,416 +8876,292 @@
   },
   "talent": {
     "meta": {
-      "title": "Executive Recruitment | Aegryn Talent",
-      "desc": "Wij plaatsen de leiders die bedrijven transformeren: bestuursleden, tech-executives en M&A-executives. Gespecialiseerde executive search."
+      "title": "Werving van sleutelprofielen & overgang | Aegryn Talent",
+      "desc": "Aegryn werft leidinggevenden en experts en plaatst overgangsprofielen, in elke levensfase van het bedrijf."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Executive recruitment\nBoard · Tech · M&A",
-      "desc1": "Wij plaatsen de leiders die bedrijven transformeren: bestuursleden (CEO, COO, CTO, CIO, CHRO), tech-executives en M&A-executives.",
-      "desc2": "Operators, geen HR-consultants. Alleen success fee. 3 maanden garantie.",
-      "quote": "Zwitserland & Europa • 30 landen • 22 sectoren\nReactie binnen 48 uur"
+      "title": "Het juiste profiel, in elke levensfase van het bedrijf.",
+      "desc": "Aegryn werft leidinggevenden en experts en plaatst overgangsprofielen wanneer het bedrijf start, groeit, herstructureert, overneemt of wordt overgedragen.",
+      "trust1": "Antwoord binnen 2 werkdagen",
+      "trust2": "Geen profiel wordt doorgegeven zonder toestemming van de kandidaat."
     },
-    "pillars": {
-      "board": {
-        "title": "Bestuursleden & C-Level",
-        "desc": "Wij plaatsen bestuursleden en executives die de strategie bepalen en transformatie stimuleren.",
-        "profiles": [
-          {
-            "label": "CEO & Managing Director",
-            "desc": "Strategische leiders die visie, groei en bedrijfstransformatie kunnen sturen."
-          },
-          {
-            "label": "COO & Chief Operating Officer",
-            "desc": "Experts in operationele excellentie, schaalvergroting, procesoptimalisatie en strategische uitvoering."
-          },
-          {
-            "label": "CTO & Chief Technology Officer",
-            "desc": "Tech-visionairs die architectuur, innovatie en technologieroadmap kunnen bepalen."
-          },
-          {
-            "label": "CIO & Chief Information Officer",
-            "desc": "Leiders van digitale transformatie, IT-infrastructuur, governance en systeemmodernisering."
-          },
-          {
-            "label": "CHRO & Chief Human Resources Officer",
-            "desc": "Architecten van HR-strategie, bedrijfscultuur, talentwerving en organisatieontwikkeling."
-          },
-          {
-            "label": "CFO & Chief Financial Officer",
-            "desc": "Experts in financiële strategie, kapitaalwerving, M&A, management control en financiële optimalisatie."
-          }
-        ]
+    "doors": {
+      "recruit": "Ik werv",
+      "candidate": "Ik ben kandidaat"
+    },
+    "doorsBottom": {
+      "title": "U weet waar te beginnen."
+    },
+    "offers": {
+      "title": "Wat Aegryn biedt",
+      "recruit": {
+        "title": "Werving van sleutelprofielen",
+        "desc": "Een zoektocht tot aan de integratie, voor een duurzame functie.",
+        "cta": "Ontdekken"
       },
-      "executiveTech": {
-        "title": "Executive Tech",
-        "desc": "Wij plaatsen technische leiders die innovatie, beveiliging, data en AI sturen.",
-        "profiles": [
-          {
-            "label": "Chief AI Officer & VP AI",
-            "desc": "Leiders in kunstmatige intelligentie, machine learning, GenAI, datagedreven strategie en AI-transformatie."
-          },
-          {
-            "label": "CISO & VP Security",
-            "desc": "Experts in cybersecurity, AVG-compliance, risicobeheer, weerbaarheid en governance."
-          },
-          {
-            "label": "Chief Data Officer & VP Data",
-            "desc": "Architecten van datastrategie: data engineering, analytics, governance, monetisatie en datacultuur."
-          },
-          {
-            "label": "Chief Product Officer & VP Product",
-            "desc": "Tech-productvisionairs: roadmap, discovery, groei, product-led growth en go-to-market-strategie."
-          },
-          {
-            "label": "VP Engineering & Engineering Director",
-            "desc": "Leiders van technische teams: schaalvergroting, engineeringcultuur, delivery, architectuur en operationele excellentie."
-          },
-          {
-            "label": "VP Infrastructure & Head of Platform",
-            "desc": "Leiders van IT-infrastructuur, cloud, DevOps, SRE, legacy-modernisering en developer experience."
-          }
-        ]
+      "transition": {
+        "title": "Overgangsprofielen",
+        "desc": "Een leidinggevende of expert in een tijdelijk mandaat, geschreven doelen, voorbereide overdracht.",
+        "cta": "Ontdekken"
       },
-      "executiveMA": {
-        "title": "Executive M&A",
-        "desc": "Wij plaatsen leiders gespecialiseerd in fusies & overnames, due diligence en post-fusie-integratie.",
-        "profiles": [
-          {
-            "label": "VP M&A & Head of Corporate Development",
-            "desc": "Experts in M&A-strategie, dealsourcing, transactiestructurering en acquisitie-uitvoering."
-          },
-          {
-            "label": "M&A Director & Transaction Lead",
-            "desc": "Transactieleiders: waardering, onderhandeling, financiële en juridische due diligence, closing."
-          },
-          {
-            "label": "Head of Integration (PMI)",
-            "desc": "Specialisten in post-fusie-integratie: synergiën, procesharmonisatie, verandermanagement."
-          },
-          {
-            "label": "VP Strategy & Corporate Strategy Director",
-            "desc": "Architecten van corporate strategie: anorganische groei, strategische partnerships, portfoliobeheer."
-          }
-        ]
+      "pool": {
+        "title": "Kandidatenpool",
+        "desc": "Leiderschapsprofielen ontmoet voordat een zoektocht bestaat, alleen gecontacteerd als een mandaat past.",
+        "cta": "Ontdekken"
       }
     },
-    "hiring": {
-      "title": "Ik zoek personeel",
-      "desc": "Op zoek naar een zeldzaam tech-profiel? Vertrouw ons uw mandaat toe.",
-      "formTitle": "Recruteringsmandaat indienen",
-      "company": "Bedrijf",
-      "companyPlaceholder": "Uw bedrijfsnaam",
-      "contactName": "Contactpersoon",
-      "contactNamePlaceholder": "Uw volledige naam",
-      "email": "E-mail",
-      "emailPlaceholder": "uw@email.com",
-      "phone": "Telefoon",
-      "phonePlaceholder": "+41 XX XXX XX XX",
-      "roleTitle": "Functietitel",
-      "roleTitlePlaceholder": "Bijv.: CTO, Lead DevOps, Data Scientist...",
-      "roleDesc": "Functiebeschrijving",
-      "roleDescPlaceholder": "Missies, verantwoordelijkheden, tech stack, context...",
-      "location": "Locatie",
-      "locationPlaceholder": "Bijv.: Lausanne, Remote Europa, Hybride Genève...",
-      "budget": "Jaarbudget (CHF)",
-      "budgetPlaceholder": "Bijv.: 120'000 - 150'000 CHF",
-      "urgency": "Urgentie",
-      "urgencyImmediate": "Onmiddellijk (< 1 maand)",
-      "urgencyMonth": "Binnen een maand",
-      "urgencyQuarter": "Binnen een kwartaal",
-      "urgencyFlexible": "Flexibel",
-      "submit": "Mandaat indienen",
-      "success": "Bedankt. Uw mandaat is geregistreerd. Wij nemen binnen 48 uur contact met u op.",
-      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "coverage": {
-        "coverageTitle": "Onze geografische & sectorale dekking",
-        "coverageSubtitle": "Zwitserland en Europa",
-        "countriesTitle": "Gedekte landen",
-        "countries": [
-          "Oostenrijk",
-          "België",
-          "Bulgarije",
-          "Kroatië",
-          "Cyprus",
-          "Tsjechië",
-          "Denemarken",
-          "Estland",
-          "Finland",
-          "Frankrijk",
-          "Duitsland",
-          "Griekenland",
-          "Hongarije",
-          "IJsland",
-          "Ierland",
-          "Italië",
-          "Letland",
-          "Litouwen",
-          "Luxemburg",
-          "Malta",
-          "Nederland",
-          "Noorwegen",
-          "Polen",
-          "Portugal",
-          "Roemenië",
-          "Slowakije",
-          "Slovenië",
-          "Spanje",
-          "Zweden",
-          "Zwitserland"
-        ],
-        "industriesTitle": "Gedekte sectoren",
-        "industries": [
-          "Luchtvaart & Defensie",
-          "Automotive",
-          "Bankwezen & Kapitaalmarkten",
-          "Chemie & Life Sciences",
-          "Consumentenproducten",
-          "Onderwijs",
-          "Energie & Utilities",
-          "Financiële Diensten",
-          "Voeding & Dranken",
-          "Gezondheidszorg & Medtech",
-          "Industriële Goederen & Productie",
-          "Verzekeringen",
-          "Luxe & Mode",
-          "Media & Telecommunicatie",
-          "Natuurlijke Grondstoffen",
-          "Farma & Biotechnologie",
-          "Principal Investors & Private Equity",
-          "Publieke Sector",
-          "Vastgoed & Bouw",
-          "Retail",
-          "Technologie & Software",
-          "Transport & Logistiek",
-          "Reizen & Toerisme",
-          "Horlogerie & Juweliers"
-        ]
-      }
-    },
-    "candidate": {
-      "title": "Ik ben kandidaat",
-      "desc": "Bent u een tech-talent in transitie? Dien uw kandidatuur in.",
-      "formTitle": "Kandidatuur indienen",
-      "fullName": "Volledige naam",
-      "fullNamePlaceholder": "Voornaam Achternaam",
-      "email": "E-mail",
-      "emailPlaceholder": "uw@email.com",
-      "phone": "Telefoon",
-      "phonePlaceholder": "+41 XX XXX XX XX",
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://linkedin.com/in/...",
-      "cv": "CV (PDF)",
-      "cvUpload": "Upload uw CV",
-      "cvUploaded": "CV geüpload",
-      "motivation": "Motivatiebrief",
-      "motivationPlaceholder": "Vertel ons over uw achtergrond, kernvaardigheden en wat u zoekt...",
-      "availability": "Beschikbaarheid",
-      "availabilityPlaceholder": "Bijv.: Onmiddellijk, 3 maanden opzegtermijn, Flexibel...",
-      "submit": "Kandidatuur indienen",
-      "success": "Bedankt. Uw kandidatuur is geregistreerd. Wij nemen contact op als uw profiel overeenkomt met onze mandaten.",
-      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "benefits": {
-        "confidential": {
-          "desc": "Uw zoektocht blijft strikt vertrouwelijk. Wij delen uw profiel alleen met uw uitdrukkelijke toestemming en alleen met vooraf gekwalificeerde bedrijven.",
-          "title": "Gegarandeerde vertrouwelijkheid"
+    "cycles": {
+      "title": "In elke levensfase",
+      "desc": "De in te vullen functies veranderen met de fase: deze tabel toont typische profielen voor duurzame functies en overgangsmandates.",
+      "colCycle": "Fase",
+      "colRecruit": "Werven (duurzame functie)",
+      "colTransition": "Plaatsen in overgang (tijdelijk mandaat)",
+      "decisionLink": "De beslissing in deze fase",
+      "needLink": "Mijn behoefte",
+      "rows": [
+        {
+          "name": "Lancering & Structurering",
+          "recruit": "Eerste verkoper · operationele partner · eerste technisch leider",
+          "transition": "Deeltijdverkoopdirecteur of operationsleider om de verkoop te structureren"
         },
-        "curated": {
-          "desc": "Wij presenteren alleen executive-posities die aansluiten bij uw expertise, ambities en senioriteitsniveau. Geen spam, 100% relevantie.",
-          "title": "Geselecteerde kansen"
+        {
+          "name": "Groei & Schaalbaarheid",
+          "recruit": "Financieel directeur · operationeel directeur · HR-directeur · beveiligingsverantwoordelijke",
+          "transition": "Programmaleider voor schaalvergroting, interim CFO"
         },
-        "network": {
-          "desc": "Directe toegang tot besluitvormers bij de meest innovatieve techbedrijven: hypergroei-scale-ups, SaaS-leiders, fintechs, deeptech en groepen in digitale transformatie.",
-          "title": "Premium Europees netwerk"
+        {
+          "name": "Herstructurering & Pivot",
+          "recruit": "Complianceverantwoordelijke · HR-directeur (arbeidsverhoudingen)",
+          "transition": "Interim-directeur (algemeen, financieel), treasuryverantwoordelijke"
+        },
+        {
+          "name": "Acquisitie & Externe groei",
+          "recruit": "Directeur bedrijfsontwikkeling · CIO",
+          "transition": "Integratieverantwoordelijke (PMI) voor de integratieperiode"
+        },
+        {
+          "name": "Overdracht & Opvolging",
+          "recruit": "Opvolger-CEO · leden van het directiecomité",
+          "transition": "Interim-directeur tijdens de overdrachtsperiode"
         }
-      },
-      "intro": {
-        "desc": "Aegryn Talent verbindt u met Europese scale-ups en tech-leiders die executive-profielen werven. Absolute vertrouwelijkheid, premium proces, geselecteerde kansen.",
-        "title": "Toegang tot de meest exclusieve tech-kansen in Europa"
-      }
+      ]
     },
-    "admin": {
-      "title": "Talentbeheer",
-      "tabHiring": "Recruteringsmandaten",
-      "tabCandidates": "Kandidaturen",
-      "statusNew": "Nieuw",
-      "statusInProgress": "In behandeling",
-      "statusClosed": "Gesloten",
-      "filterAll": "Alle",
-      "filterNew": "Nieuw",
-      "filterInProgress": "In behandeling",
-      "filterClosed": "Gesloten",
-      "company": "Bedrijf",
-      "contact": "Contact",
-      "role": "Functie",
-      "urgency": "Urgentie",
-      "status": "Status",
-      "createdAt": "Datum",
-      "actions": "Acties",
-      "viewDetails": "Details bekijken",
-      "updateStatus": "Status bijwerken",
-      "addNote": "Notitie toevoegen",
-      "candidate": "Kandidaat",
-      "availability": "Beschikbaarheid",
-      "downloadCV": "CV downloaden",
-      "viewLinkedIn": "LinkedIn bekijken",
-      "noHiring": "Geen recruteringsmandaten.",
-      "noCandidates": "Geen kandidaturen.",
-      "noteLabel": "Admin-notitie",
-      "notePlaceholder": "Interne notitie toevoegen...",
-      "saveNote": "Notitie opslaan"
-    },
-    "toggle": {
-      "candidate": "Ik ben kandidaat",
-      "employer": "Ik zoek personeel"
-    },
-    "coverage": {
-      "coverageTitle": "Onze dekking",
-      "coverageSubtitle": "Zwitserland en Europa",
-      "countriesTitle": "Gedekte landen",
-      "countriesDesc": "Zwitserland, Frankrijk, Duitsland, Italië, Spanje, Nederland, België, Luxemburg, Oostenrijk, Ierland, Portugal, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije, Griekenland, Kroatië, Slovenië, Slowakije, Estland, Letland, Litouwen, Malta, Cyprus, Finland, Zweden, Denemarken, Noorwegen, IJsland",
-      "industriesTitle": "Gedekte sectoren",
-      "industriesDesc": "Alle Aegryn-sectoren: Fintech & Bankwezen, Healthtech & Medtech, Proptech & Bouw, Insurtech & Verzekeringen, Legaltech & Compliance, SaaS B2B & Enterprise, E-commerce & Retail, Mobiliteit & Logistiek, Energie & Cleantech, Agritech & Foodtech, Edtech & Opleiding, HR Tech & Talent, Martech & Adtech, Cybersecurity & Privacy, AI & Data Science, Cloud & Infrastructuur, Blockchain & Web3, Gaming & Entertainment, Media & Publishing, Reizen & Horeca, Sport & Fitness, Mode & Luxe, Manufacturing & Industrie 4.0"
-    },
-    "marketRoles": {
-      "marketRolesTitle": "Meest gezochte tech- & AI-functies",
-      "marketRolesSubtitle": "Executive-marktanalyse Zwitserland & Europa 2026",
-      "roles": [
+    "demand": {
+      "title": "Waar de vraag zit",
+      "note": "Geen openbare bron rangschikt de meest gezochte leiderschapsposities in Zwitserland. Dit is wat de beschikbare bronnen zeggen, met omvang en datum.",
+      "cards": [
         {
-          "title": "Chief Technology Officer (CTO)",
-          "location": "Zwitserland, Duitsland, Frankrijk",
-          "salary": "€180K - €350K",
-          "demand": "Zeer hoge vraag"
+          "stat": "305 800",
+          "desc": "verwachte aanwervingen van kaderleden in 2026 (+4 % t.o.v. 2025). Topfuncties: informatici (61 160), onderzoek & R&D (52 000), commercieel (51 990).",
+          "source": "Apec, aanwervingsprognoses kaderleden 2026 — Frankrijk",
+          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
-          "title": "Chief Information Security Officer (CISO)",
-          "location": "Zwitserland, Nederland, Ierland",
-          "salary": "€160K - €300K",
-          "demand": "Groeiende vraag (+35% vs 2025)"
+          "stat": "7 %",
+          "desc": "van de bedrijven overweegt in Q3 2026 minstens één kaderlid aan te werven, laagste niveau in jaren; 42 % van de midcaps en grote ondernemingen.",
+          "source": "Apec, barometer Q3 2026 — Frankrijk",
+          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
-          "title": "Chief AI Officer / VP AI",
-          "location": "Zwitserland, Frankrijk, Duitsland",
-          "salary": "€200K - €400K",
-          "demand": "Exploderende vraag (+120% vs 2025)"
+          "stat": "−0,2 %",
+          "desc": "vacatures in Zwitserland op jaarbasis (Q2 2026). Voortschrijdend jaar: zorg +17 %, industrie +12 %, IT +6 %; dalend: commerciële functies −13 %, economie & management −10 %.",
+          "source": "Adecco Swiss Job Market Index Q2 2026 — Zwitserland",
+          "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
-          "title": "VP Engineering",
-          "location": "Europa (remote-first)",
-          "salary": "€140K - €250K",
-          "demand": "Hoge vraag bij scale-ups"
-        },
-        {
-          "title": "Chief Data Officer (CDO)",
-          "location": "Zwitserland, Frankrijk, Benelux",
-          "salary": "€150K - €280K",
-          "demand": "Aanhoudende vraag"
-        },
-        {
-          "title": "Chief Product Officer (CPO)",
-          "location": "Zwitserland, Duitsland, Spanje",
-          "salary": "€140K - €270K",
-          "demand": "Hoge vraag SaaS B2B"
+          "stat": "4 / 32",
+          "desc": "beroepscategorieën met tekort in Zwitserland (zorg, werfleiders, technici ingenieurs, elektriciens); index 2025 met 22 % gedaald. Overschot aan sollicitaties in administratie, IT en financiën.",
+          "source": "Adecco Swiss Skills Shortage Index 2025 — Zwitserland",
+          "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
-      "locationLabel": "Locatie",
-      "salaryLabel": "Salaris"
+      "reading": "De vraag naar kaderleden verdeelt zich over tech, engineering en verkoop; de Zwitserse markt is vrij vlak en tekorten zitten vooral buiten leidinggevende functies."
+    },
+    "method": {
+      "title": "Onze methode",
+      "steps": [
+        {
+          "title": "Kaderen",
+          "desc": "Roledoelen, levensfase, succescriteria, vertrouwelijkheidsregels, deadline."
+        },
+        {
+          "title": "Mappen",
+          "desc": "Identificatie en directe benadering van profielen, regelmatige voortgangsrapporten."
+        },
+        {
+          "title": "Selecteren",
+          "desc": "Gestructureerde interviews, geverifieerde referenties, onderbouwde presentatie van elke kandidaat."
+        },
+        {
+          "title": "Integreren",
+          "desc": "Monitoring van de eerste 100 dagen, drie maanden vervangingsgarantie."
+        }
+      ],
+      "discreet": {
+        "title": "Discrete zoektocht",
+        "desc": "Voor we beginnen, spreken we drie regels af: wie wordt geïnformeerd, wat wordt verteld aan benaderde kandidaten, hoe profielen worden gepresenteerd."
+      }
     },
     "insights": {
-      "insightsTitle": "Inzichten & Marktdata",
-      "insightsSubtitle": "Analyse en trends van de executive-techmarkt",
-      "salaryReportTitle": "Executive Tech-salarissen Zwitserland & Europa 2026",
-      "salaryReportDesc": "Uitgebreid rapport over C-Level- en VP-vergoedingen in tech. Data van 2000+ executive-plaatsingen in Europa.",
-      "salaryReportCta": "Rapport bekijken",
+      "insightsTitle": "Insights & Marktdata",
+      "insightsSubtitle": "Analyses en data over de leiderschapsmarkt",
+      "salaryReportTitle": "Executive Tech salarissen Zwitserland & Europa 2026",
+      "salaryReportDesc": "Studie van de vergoedingen van leidinggevende functies in tech, in Zwitserland en Europa.",
+      "salaryReportCta": "Rapport lezen",
       "magazineTitle": "Aegryn Magazine",
-      "magazineDesc": "Driemaandelijkse publicatie over tech-transacties, AI, exits en M&A-trends in Europa.",
-      "magazineCta": "Lees het magazine",
-      "responseTime": "Ons team neemt binnen 48 uur contact met u op"
+      "magazineDesc": "Driemaandelijkse publicatie over bedrijfsovergangen, governance en organisatiewaarde in Europa.",
+      "magazineCta": "Magazine lezen"
     },
-    "employer": {
-      "services": {
-        "title": "Onze executive-search-aanpak",
-        "subtitle": "Oplossingen op maat om uw tech- & AI-leiders te identificeren en te werven",
-        "search": {
-          "label": "Executive Search",
-          "title": "Zoektocht naar executive-leiderschap",
-          "desc": "Wij vormen de briefing samen met u, met bewezen frameworks en marktinzicht om leiderschapstalent te identificeren dat aansluit bij uw strategische uitdagingen."
-        },
-        "assessment": {
-          "label": "Assessment",
-          "title": "Executive-assessment",
-          "desc": "Wij beoordelen leiders voor senior functies via gestructureerde interviews, psychometrische tests en diepgaande analyse van hun eerdere prestaties."
-        },
-        "advisory": {
-          "label": "Advisory",
-          "title": "Talentstrategie-advies",
-          "desc": "Wij ondersteunen uw leiderschapsstrategie via marktkartering, compensatieanalyse en coaching om techteams van wereldklasse op te bouwen."
-        }
+    "entreprises": {
+      "meta": {
+        "title": "Sleutelprofiel werven | Aegryn Talent",
+        "desc": "Een zoektocht naar leidinggevenden en experts tot aan de integratie: kadering, directe benadering, selectie, monitoring van de eerste 100 dagen."
       },
-      "intro": {
-        "desc": "Aegryn Talent identificeert en plaatst zeldzame tech-profielen die uw groei versnellen. Onze aanpak combineert sectorexpertise, Europees netwerk en een rigoureus certificeringsproces.",
-        "title": "Werf de leiders die transformeren"
+      "hero": {
+        "label": "Voor bedrijven",
+        "title": "Een sleutelprofiel wordt geworven als een strategische beslissing.",
+        "desc": "Wij voeren de zoektocht tot aan de integratie van het profiel, met vooraf afgesproken vertrouwelijkheidsregels.",
+        "cta": "Mijn behoefte"
       },
-      "process": {
-        "brief": {
-          "desc": "Diepgaande analyse van uw organisatie, cultuur, technische uitdagingen en groeiambities.",
-          "title": "Strategische briefing"
-        },
-        "placement": {
-          "desc": "Begeleiding tot succesvolle integratie. Vervangingsgarantie en opvolging na plaatsing.",
-          "title": "Plaatsing & opvolging"
-        },
-        "search": {
-          "desc": "Identificatie van de beste profielen via ons Europese netwerk, directe benadering en rigoureuze evaluatie.",
-          "title": "Gerichte zoektocht"
-        },
-        "title": "Ons proces"
+      "ai": {
+        "title": "Wat een AI-tool niet voor u zal doen",
+        "items": [
+          "Beoordelen of een leidinggevende in uw cultuur past.",
+          "Een referentiegesprek voeren.",
+          "Onderhandelen met een kandidaat die opties heeft."
+        ]
       },
-      "profiles": {
-        "cdo": {
-          "desc": "Architecten van datastrategie: data engineering, analytics, governance, monetisatie en datacultuur.",
-          "title": "Chief Data Officer & VP Data"
-        },
-        "cio": {
-          "desc": "Leiders van IT-infrastructuur, cloud, DevOps, SRE, legacy-modernisering en digitale transformatie.",
-          "title": "CIO & VP Infrastructure"
-        },
-        "ciso": {
-          "desc": "Cybersecurity-experts, AVG-compliance, risicobeheer, weerbaarheid en governance. Gecertificeerde profielen.",
-          "title": "CISO & VP Security"
-        },
-        "cpo": {
-          "desc": "Tech-productvisionairs: roadmap, discovery, groei, product-led growth en go-to-market-strategie.",
-          "title": "Chief Product Officer & VP Product"
-        },
-        "cto": {
-          "desc": "Technische leiders die kunnen structureren, schalen en innoveren. Beheersing van moderne architecturen, AI, cloud, beveiliging.",
-          "title": "CTO & VP Engineering"
-        },
-        "headAI": {
-          "desc": "Leiders in kunstmatige intelligentie, machine learning, GenAI, datagedreven strategie en AI-transformatie.",
-          "title": "Chief AI Officer & VP AI"
-        },
-        "headML": {
-          "desc": "ML/AI-experts: deep learning, NLP, computer vision, MLOps, toegepast onderzoek en implementatie op schaal.",
-          "title": "Head of Machine Learning & AI Research"
-        },
-        "headPlatform": {
-          "desc": "Architecten van interne platforms: developer-productiviteit, API-design, infrastructure as code, observability.",
-          "title": "Head of Platform & Developer Experience"
-        },
-        "headQA": {
-          "desc": "Kwaliteitsleiders: testautomatisering, CI/CD, performancetests, shift-left en quality-engineeringcultuur.",
-          "title": "VP Quality & Head of QA Engineering"
-        },
-        "intro": "Executive-profielen die wij plaatsen (C-Level, VP, Director)",
-        "vpe": {
-          "desc": "Leiders van technische teams: schaalvergroting, engineeringcultuur, delivery, architectuur en operationele excellentie.",
-          "title": "VP Engineering & Engineering Director"
-        }
+      "diagnostic": {
+        "title": "Voor u ons belt: 5 vragen",
+        "questions": [
+          "Is de functie gedefinieerd door de beslissing die ze moet mogelijk maken?",
+          "Zijn de succescriteria geschreven?",
+          "Is de vertrouwelijkheid van de zoektocht gekaderd?",
+          "Weet u wat een maand vacante kost?",
+          "Is er een opvolger geïdentificeerd voor de functie?"
+        ]
       },
-      "_legacy_profiles": {
-        "intro": "Executive-profielen die wij plaatsen (C-Level, VP, Director)"
+      "form": {
+        "title": "Mijn behoefte",
+        "desc": "Beschrijf functie, context en deadline. Een voorstel wordt u overhandigd na de kadering.",
+        "note": "Honoraria worden niet gepubliceerd: ze hangen af van het mandaat."
+      },
+      "transitionTeaser": {
+        "title": "Nu een leidinggevende nodig?",
+        "desc": "Een overgangsprofiel kan de functie binnen enkele weken overnemen, terwijl u de vaste invulling werft.",
+        "cta": "Overgangsprofielen"
+      }
+    },
+    "transition": {
+      "meta": {
+        "title": "Overgangsprofielen | Aegryn Talent",
+        "desc": "Operationele leidinggevenden en experts in tijdelijke mandaten: geschreven doelen, voorbereide overdracht."
+      },
+      "hero": {
+        "label": "Overgangsprofielen",
+        "title": "Een operationele leidinggevende, binnen enkele weken.",
+        "desc": "Voor momenten waarop de organisatie geen lange werving kan afwachten: plotseling vertrek, herstructurering, integratie, transformatie of overdracht.",
+        "ctaNeed": "Mijn behoefte",
+        "ctaProfile": "Mijn overgangsprofiel aanbieden"
+      },
+      "situations": {
+        "title": "Wanneer overgang het juiste antwoord is",
+        "items": [
+          "Plotseling vertrek van een leidinggevende",
+          "Herstructurering of pivot",
+          "Integratie na overname",
+          "Transformatieproject",
+          "Overdrachtsperiode voor een overdracht"
+        ]
+      },
+      "format": {
+        "title": "Het mandaatformaat",
+        "items": [
+          {
+            "title": "Bepaalde duur",
+            "desc": "Een begrensd mandaat, van enkele maanden tot een jaar, met een vanaf het begin vastgesteld einde."
+          },
+          {
+            "title": "Geschreven doelen",
+            "desc": "Het mandaat specificeert wat het profiel moet opleveren, en wanneer."
+          },
+          {
+            "title": "Voorbereide overdracht",
+            "desc": "Het mandaat bereidt de aankomst van de titularis of de terugkeer naar normale werking voor."
+          }
+        ]
+      },
+      "data": {
+        "title": "Wat de onderzoeken zeggen",
+        "note": "Marktcontext, geen belofte: deze data beschrijven de Europese vraag naar overgangsprofielen.",
+        "cards": [
+          {
+            "stat": "×4,1",
+            "desc": "vraag naar interim-leidinggevenden sinds 2020. CFO’s vertegenwoordigen 51 % van de C-suite interimvraag. Gemiddelde opdracht: 6 tot 9 maanden.",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, april 2025 — VS & Europa",
+            "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
+          },
+          {
+            "stat": "66 %",
+            "desc": "van de ondervraagde organisaties overweegt in 2025 een interimmanager in te zetten; 39 % citeert snelheid en onmiddellijke impact. Mandaten van 6 tot 12 maanden gemiddeld.",
+            "source": "Robert Walters, onderzoek februari 2025 — Europa",
+            "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
+          },
+          {
+            "stat": "11,5 mnd",
+            "desc": "gemiddelde mandaatsduur in Europa; meer dan 60 % van de mandaten op C-niveau of hoger.",
+            "source": "INIMA Europe Survey 2025 — Europa",
+            "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
+          }
+        ],
+        "reading": "Volgens de onderzoeken ligt de gebruikelijke mandaatsduur tussen 6 en 12 maanden."
+      },
+      "bottom": {
+        "title": "Een overgangsbehoefte?"
+      }
+    },
+    "candidats": {
+      "meta": {
+        "title": "Deelnemen aan de pool | Aegryn Talent",
+        "desc": "Leidinggevende functies en overgangsmandaten, wanneer ze passen bij uw loopbaan. Geen profiel doorgegeven zonder uw toestemming."
+      },
+      "hero": {
+        "label": "Voor kandidaten",
+        "title": "Leidinggevende functies, wanneer ze passen bij uw loopbaan.",
+        "desc": "Aegryn contacteert u alleen als een zoektocht past. Geen profiel wordt doorgegeven zonder uw toestemming.",
+        "cta": "Mijn profiel indienen"
+      },
+      "paths": {
+        "title": "Drie manieren om binnen te komen",
+        "items": [
+          {
+            "title": "Solliciteren op een gepubliceerd mandaat",
+            "desc": "Open mandaten, beschreven per sector, land, levensfase en senioriteit. Geen bedrijfsnaam wordt zonder akkoord gecommuniceerd.",
+            "cta": "Mandaten bekijken"
+          },
+          {
+            "title": "Profiel indienen",
+            "desc": "Voor profielen die niet actief zoeken: wij contacteren u wanneer een zoektocht past.",
+            "cta": "Mijn profiel indienen"
+          },
+          {
+            "title": "Overgangsprofiel aanbieden",
+            "desc": "Voor leidinggevenden en experts beschikbaar voor tijdelijke mandaten.",
+            "cta": "Mijn profiel aanbieden"
+          }
+        ]
+      },
+      "missions": {
+        "title": "Gepubliceerde mandaten",
+        "desc": "Open mandaten worden hier gepubliceerd, met akkoord van de klant.",
+        "emptyTitle": "Momenteel geen mandaten gepubliceerd.",
+        "emptyDesc": "Dien uw profiel in: wij contacteren u wanneer een zoektocht past.",
+        "emptyCta": "Profiel indienen"
+      },
+      "form": {
+        "title": "Mijn profiel indienen",
+        "desc": "Uw gegevens blijven vertrouwelijk en worden alleen met uw toestemming aan een bedrijf gedeeld."
       }
     },
     "forms": {
@@ -9289,15 +9182,47 @@
         "gdprConsent": "Ik ga ermee akkoord dat mijn persoonsgegevens door Aegryn worden verwerkt in het kader van mijn kandidatuur/aanvraag. Ik kan te allen tijde verwijdering van mijn gegevens vragen door contact op te nemen met",
         "linkedin": "LinkedIn",
         "linkedinPlaceholder": "https://linkedin.com/in/...",
-        "motivation": "Motivatiebrief",
-        "motivationPlaceholder": "Vertel ons over uw achtergrond, kernvaardigheden en wat u zoekt...",
+        "motivation": "Bericht (optioneel)",
+        "motivationPlaceholder": "Context, beschikbaarheid, functievoorkeur…",
         "phone": "Telefoon",
         "phonePlaceholder": "+41 XX XXX XX XX",
         "submit": "Kandidatuur indienen",
         "submitting": "Verzenden...",
         "success": "Bedankt. Uw kandidatuur is geregistreerd. Wij nemen contact op als uw profiel overeenkomt met onze mandaten.",
         "successMessage": "Bedankt. Uw kandidatuur is geregistreerd. Wij nemen contact op als uw profiel overeenkomt met onze mandaten.",
-        "title": "Solliciteren als kandidaat"
+        "title": "Solliciteren als kandidaat",
+        "country": "Land",
+        "countryPlaceholder": "Zwitserland, Frankrijk…",
+        "cvLabel": "CV (PDF of Word, max. 10 MB)",
+        "cvPlaceholder": "Bestand kiezen",
+        "cvUploading": "Uploaden…",
+        "cvError_file_too_large": "Bestand te groot (max. 10 MB)",
+        "cvError_invalid_file_type": "Geaccepteerd: PDF of Word",
+        "cvError_upload_failed": "Upload mislukt",
+        "functionFamily": "Functiefamilie",
+        "functionFamilyPlaceholder": "Selecteren",
+        "families": {
+          "general": "Algemene directie",
+          "finance": "Financiën",
+          "operations": "Operations",
+          "technology": "Technologie",
+          "hr": "Human resources",
+          "sales": "Commercieel",
+          "other": "Andere"
+        },
+        "profileType": "Functietype",
+        "profileTypePlaceholder": "Selecteren",
+        "profilePermanent": "Duurzame functie",
+        "profileTransition": "Overgangsmandaat",
+        "lifecycleCycle": "Levensfase van interesse",
+        "lifecycleCyclePlaceholder": "Selecteren",
+        "cycles": {
+          "lancement": "Lancering & Structurering",
+          "croissance": "Groei & Schaalbaarheid",
+          "restructuration": "Herstructurering & Pivot",
+          "acquisition": "Acquisitie & Externe groei",
+          "transmission": "Overdracht & Opvolging"
+        }
       },
       "hiring": {
         "budget": "Jaarbudget (CHF)",
@@ -9331,8 +9256,54 @@
         "urgencyFlexible": "Flexibel",
         "urgencyImmediate": "Onmiddellijk (< 1 maand)",
         "urgencyMonth": "Binnen een maand",
-        "urgencyQuarter": "Binnen een kwartaal"
+        "urgencyQuarter": "Binnen een kwartaal",
+        "missionType": "Mandaattype",
+        "missionPermanent": "Duurzame functie",
+        "missionTransition": "Overgangsmandaat",
+        "lifecycleCycle": "Levensfase",
+        "lifecycleCyclePlaceholder": "Selecteren",
+        "cycles": {
+          "lancement": "Lancering & Structurering",
+          "croissance": "Groei & Schaalbaarheid",
+          "restructuration": "Herstructurering & Pivot",
+          "acquisition": "Acquisitie & Externe groei",
+          "transmission": "Overdracht & Opvolging"
+        },
+        "companySize": "Grootte (omzet)",
+        "companySizePlaceholder": "Bijv.: CHF 12M, 80 medewerkers",
+        "confidential": "Vertrouwelijke zoektocht (bedrijfsnaam wordt kandidaten niet zonder akkoord gecommuniceerd)"
       }
+    },
+    "admin": {
+      "title": "Talentbeheer",
+      "tabHiring": "Recruteringsmandaten",
+      "tabCandidates": "Kandidaturen",
+      "statusNew": "Nieuw",
+      "statusInProgress": "In behandeling",
+      "statusClosed": "Gesloten",
+      "filterAll": "Alle",
+      "filterNew": "Nieuw",
+      "filterInProgress": "In behandeling",
+      "filterClosed": "Gesloten",
+      "company": "Bedrijf",
+      "contact": "Contact",
+      "role": "Functie",
+      "urgency": "Urgentie",
+      "status": "Status",
+      "createdAt": "Datum",
+      "actions": "Acties",
+      "viewDetails": "Details bekijken",
+      "updateStatus": "Status bijwerken",
+      "addNote": "Notitie toevoegen",
+      "candidate": "Kandidaat",
+      "availability": "Beschikbaarheid",
+      "downloadCV": "CV downloaden",
+      "viewLinkedIn": "LinkedIn bekijken",
+      "noHiring": "Geen recruteringsmandaten.",
+      "noCandidates": "Geen kandidaturen.",
+      "noteLabel": "Admin-notitie",
+      "notePlaceholder": "Interne notitie toevoegen...",
+      "saveNote": "Notitie opslaan"
     }
   },
   "industries": {

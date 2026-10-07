@@ -8,12 +8,14 @@ const schema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   company: z.string().max(100).optional(),
-  subject: z.enum(['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'press', 'media', 'investor', 'career', 'other']),
+  subject: z.enum(['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'press', 'media', 'investor', 'recruter', 'transition', 'career', 'other']),
   message: z.string().min(10).max(5000),
   locale: z.string().optional(),
   /** Libellé lisible du sujet, fourni par le formulaire dans la langue du visiteur */
   subjectLabel: z.string().max(100).optional(),
   phone: z.string().max(40).optional(),
+  /** Cycle de vie FRANCHIR prérempli via ?cycle= (liens talent) */
+  cycle: z.string().max(40).optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -46,6 +48,7 @@ Nom: ${data.name}
 Email: ${data.email}
 Entreprise: ${data.company ?? '—'}
 Sujet: ${data.subject}
+Cycle: ${data.cycle ?? '—'}
 Locale: ${data.locale ?? '—'}
 
 Message:

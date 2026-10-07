@@ -78,10 +78,7 @@
     "craftTransactRestructuration": "Restructuration & Pivot",
     "craftTransactVerify": "Vérifier un certificat",
     "craftRecruit": "Recruter",
-    "craftRecruitDesc": "Placement de leaders : board, tech, M&A",
-    "craftRecruitBoard": "Board Members & C-Level",
-    "craftRecruitExecutiveTech": "Executive Tech",
-    "craftRecruitExecutiveMA": "Executive M&A",
+    "craftRecruitDesc": "Recrutement et profils de transition, à chaque cycle de vie de l’entreprise.",
     "craftGrade": "Certification",
     "craftGradeDesc": "Système de notation indépendant",
     "solutionsCore": "CATÉGORIES PRINCIPALES",
@@ -138,7 +135,7 @@
     "whoContact": "Nous contacter",
     "whoJoin": "Nous rejoindre",
     "whoJoinDesc": "Carrières, talents, partenaires",
-    "whoCareers": "Carrières",
+    "whoCareers": "Travailler chez Aegryn",
     "whoTalent": "Recrutement Executive",
     "whoAlliances": "Devenir partenaire",
     "industries": "Industries",
@@ -155,7 +152,15 @@
     "clusterSante": "Santé & Sciences de la Vie",
     "clusterIndustrie": "Industrie, Énergie & Infrastructure",
     "clusterCommerce": "Commerce, Services & Expérience Client",
-    "clusterTech": "Tech, Innovation & Secteur Public"
+    "clusterTech": "Tech, Innovation & Secteur Public",
+    "craftRecruitIntro": "Introduction",
+    "craftRecruitForCompanies": "Pour les entreprises",
+    "craftRecruitForCandidates": "Pour les candidats",
+    "craftRecruitHire": "Recruter un profil",
+    "craftRecruitTransition": "Profils de transition",
+    "craftRecruitPool": "Rejoindre le vivier",
+    "craftRecruitMissions": "Missions publiées",
+    "craftRecruitInsights": "Insights & Données Marché"
   },
   "hero": {
     "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
@@ -1507,7 +1512,7 @@
     },
     "responseTime": {
       "label": "Délai de réponse",
-      "value": "Sous 48 heures"
+      "value": "Sous 2 jours ouvrés"
     },
     "form": {
       "name": "Nom complet",
@@ -1525,8 +1530,10 @@
         "partnership": "Partenariat",
         "investor": "Investisseur",
         "press": "Presse & Médias",
-        "career": "Carrière",
-        "other": "Autre"
+        "career": "Candidature",
+        "other": "Autre",
+        "recruter": "Recruter un profil",
+        "transition": "Profil de transition"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",
@@ -7425,7 +7432,7 @@
     "glossaire": "Glossaire M&A",
     "about": "À propos d'Aegryn",
     "whatWeBuild": "Ce que nous construisons",
-    "career": "Carrières",
+    "career": "Travailler chez Aegryn",
     "contact": "Contact",
     "termsUse": "CGU",
     "termsCgv": "CGV",
@@ -7439,7 +7446,17 @@
     "valoriserAcquisition": "Acquisition & Croissance externe",
     "valoriserTransmission": "Transmission & Cession",
     "roadmap": "Feuille de route",
-    "annuaire": "Annuaire d'experts"
+    "annuaire": "Annuaire d'experts",
+    "groupAccompagner": "Accompagner",
+    "groupConstruire": "Construire",
+    "groupFranchir": "Franchir",
+    "groupRecruter": "Recruter",
+    "groupInformer": "S’informer",
+    "talent": "Recruter un profil / Talent",
+    "talentEntreprises": "Recruter un profil",
+    "talentTransition": "Profils de transition",
+    "talentCandidats": "Rejoindre le vivier",
+    "workforce": "Données marché du travail"
   },
   "clientTransaction": {
     "eyebrow": "Espace acquéreur",
@@ -8819,192 +8836,370 @@
   },
   "talent": {
     "meta": {
-      "title": "Recrutement Executive | Aegryn Talent",
-      "desc": "Nous plaçons les leaders qui transforment les entreprises : board members, executives tech et executives M&A. Executive search spécialisé."
+      "title": "Recrutement de profils clés & transition | Aegryn Talent",
+      "desc": "Aegryn recrute des dirigeants et des experts, et place des profils de transition, à chaque cycle de vie de l’entreprise."
     },
     "hero": {
       "label": "Aegryn Talent",
-      "title": "Recrutement executive\nBoard · Tech · M&A",
-      "desc1": "Nous plaçons les leaders qui transforment les entreprises : board members (CEO, COO, CTO, CIO, CHRO), executives tech et executives M&A.",
-      "desc2": "Opérateurs, pas consultants RH. Success fee uniquement. Garantie 3 mois.",
-      "quote": "Suisse & Europe • 30 pays • 22 industries\nRéponse sous 48h"
+      "title": "Le bon profil, à chaque cycle de vie de l’entreprise.",
+      "desc": "Aegryn recrute des dirigeants et des experts, et place des profils de transition, quand l’entreprise lance, grandit, se restructure, acquiert ou se transmet.",
+      "trust1": "Réponse sous 2 jours ouvrés",
+      "trust2": "Aucun profil transmis sans l’accord du candidat."
     },
-    "pillars": {
-      "board": {
-        "title": "Board Members & C-Level",
-        "desc": "Nous plaçons les membres du conseil d'administration et les dirigeants qui définissent la stratégie et pilotent la transformation.",
-        "profiles": [
-          {
-            "label": "CEO & Managing Director",
-            "desc": "Leaders stratégiques capables de piloter la vision, la croissance et la transformation de l'entreprise."
-          },
-          {
-            "label": "COO & Chief Operating Officer",
-            "desc": "Experts en excellence opérationnelle, scaling, optimisation des processus et exécution stratégique."
-          },
-          {
-            "label": "CTO & Chief Technology Officer",
-            "desc": "Visionnaires tech capables de définir l'architecture, l'innovation et la roadmap technologique."
-          },
-          {
-            "label": "CIO & Chief Information Officer",
-            "desc": "Leaders de la transformation digitale, infrastructure IT, gouvernance et modernisation des systèmes."
-          },
-          {
-            "label": "CHRO & Chief Human Resources Officer",
-            "desc": "Architectes de la stratégie RH, culture d'entreprise, talent acquisition et développement organisationnel."
-          },
-          {
-            "label": "CFO & Chief Financial Officer",
-            "desc": "Experts en stratégie financière, fundraising, M&A, contrôle de gestion et optimisation financière."
-          }
-        ]
+    "doors": {
+      "recruit": "Je recrute",
+      "candidate": "Je suis candidat"
+    },
+    "doorsBottom": {
+      "title": "Vous savez où commencer."
+    },
+    "offers": {
+      "title": "Ce que propose Aegryn",
+      "recruit": {
+        "title": "Recrutement de profils clés",
+        "desc": "Une recherche conduite jusqu’à l’intégration, pour un poste durable.",
+        "cta": "Découvrir"
       },
-      "executiveTech": {
-        "title": "Executive Tech",
-        "desc": "Nous plaçons les leaders techniques qui pilotent l'innovation, la sécurité, les données et l'IA.",
-        "profiles": [
-          {
-            "label": "Chief AI Officer & VP AI",
-            "desc": "Leaders en intelligence artificielle, machine learning, GenAI, stratégie data-driven et transformation IA."
-          },
-          {
-            "label": "CISO & VP Security",
-            "desc": "Experts en cybersécurité, conformité RGPD, gestion des risques, résilience et gouvernance."
-          },
-          {
-            "label": "Chief Data Officer & VP Data",
-            "desc": "Architectes de la stratégie data : data engineering, analytics, gouvernance, monétisation et culture data."
-          },
-          {
-            "label": "Chief Product Officer & VP Product",
-            "desc": "Visionnaires produit tech : roadmap, discovery, growth, product-led growth et stratégie go-to-market."
-          },
-          {
-            "label": "VP Engineering & Engineering Director",
-            "desc": "Leaders d'équipes techniques : scaling, culture engineering, delivery, architecture et excellence opérationnelle."
-          },
-          {
-            "label": "VP Infrastructure & Head of Platform",
-            "desc": "Responsables infrastructure IT, cloud, DevOps, SRE, modernisation legacy et developer experience."
-          }
-        ]
+      "transition": {
+        "title": "Profils de transition",
+        "desc": "Un dirigeant ou un expert en mission de durée définie, objectifs écrits, passage de relais préparé.",
+        "cta": "Découvrir"
       },
-      "executiveMA": {
-        "title": "Executive M&A",
-        "desc": "Nous plaçons les leaders spécialisés en fusions-acquisitions, due diligence et intégration post-fusion.",
-        "profiles": [
-          {
-            "label": "VP M&A & Head of Corporate Development",
-            "desc": "Experts en stratégie M&A, deal sourcing, structuration de transactions et exécution d'acquisitions."
-          },
-          {
-            "label": "M&A Director & Transaction Lead",
-            "desc": "Leaders de transactions : valuation, négociation, due diligence financière et juridique, closing."
-          },
-          {
-            "label": "Head of Integration (PMI)",
-            "desc": "Spécialistes de l'intégration post-fusion : synergies, harmonisation des processus, gestion du changement."
-          },
-          {
-            "label": "VP Strategy & Corporate Strategy Director",
-            "desc": "Architectes de la stratégie corporate : croissance inorganique, partenariats stratégiques, portfolio management."
-          }
-        ]
+      "pool": {
+        "title": "Vivier de candidats",
+        "desc": "Des profils de direction rencontrés avant qu’une recherche existe, contactés seulement si une mission correspond.",
+        "cta": "Découvrir"
       }
     },
-    "toggle": {
-      "candidate": "Je suis candidat",
-      "employer": "Je recrute"
+    "cycles": {
+      "title": "À chaque cycle de vie",
+      "desc": "Les fonctions à pourvoir changent avec le cycle : ce tableau montre les profils typiques en poste durable et en mission de transition.",
+      "colCycle": "Cycle",
+      "colRecruit": "Recruter (poste durable)",
+      "colTransition": "Placer en transition (mission de durée définie)",
+      "decisionLink": "La décision à ce cycle",
+      "needLink": "Présenter mon besoin",
+      "rows": [
+        {
+          "name": "Lancement & Structuration",
+          "recruit": "Premier commercial · associé opérationnel · premier responsable technique",
+          "transition": "Directeur commercial ou responsable des opérations à temps partiel pour structurer la vente"
+        },
+        {
+          "name": "Croissance & Mise à l’échelle",
+          "recruit": "Directeur financier · directeur des opérations · directeur des ressources humaines · responsable de la sécurité",
+          "transition": "Responsable de programme pour passer à l’échelle, directeur financier de transition"
+        },
+        {
+          "name": "Restructuration & Pivot",
+          "recruit": "Responsable de la conformité · directeur des ressources humaines (relations sociales)",
+          "transition": "Dirigeant de transition (général, financier), responsable de la trésorerie"
+        },
+        {
+          "name": "Acquisition & Croissance externe",
+          "recruit": "Directeur du développement · directeur des systèmes d’information",
+          "transition": "Responsable de l’intégration (PMI) pour la durée de l’intégration"
+        },
+        {
+          "name": "Transmission & Cession",
+          "recruit": "Directeur général successeur · membres du comité de direction",
+          "transition": "Dirigeant de transition pendant la période de passage"
+        }
+      ]
     },
-    "employer": {
-      "services": {
-        "title": "Notre approche executive search",
-        "subtitle": "Des solutions sur mesure pour identifier et recruter vos leaders tech & IA",
-        "search": {
-          "label": "Executive Search",
-          "title": "Recherche de cadres dirigeants",
-          "desc": "Nous façonnons le brief avec vous, en utilisant des frameworks éprouvés et notre connaissance du marché pour identifier les talents de leadership adaptés à vos enjeux stratégiques."
+    "demand": {
+      "title": "Où se trouve la demande",
+      "note": "Aucune source publique ne classe les postes de direction les plus recherchés en Suisse. Voici ce que disent les sources disponibles, avec leur périmètre et leur date.",
+      "cards": [
+        {
+          "stat": "305 800",
+          "desc": "recrutements de cadres prévus en 2026 (+4 % vs 2025). Fonctions en tête : informaticiens (61 160), études et R&D (52 000), commerciaux (51 990).",
+          "source": "Apec, prévisions de recrutements de cadres 2026 — France",
+          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
-        "assessment": {
-          "label": "Assessment",
-          "title": "Évaluation executive",
-          "desc": "Nous évaluons les leaders pour les postes senior à travers des entretiens structurés, des tests psychométriques et une analyse approfondie de leurs réalisations passées."
+        {
+          "stat": "7 %",
+          "desc": "des entreprises envisagent de recruter au moins un cadre au T3 2026, plus bas niveau depuis plusieurs années ; 42 % des ETI et grandes entreprises.",
+          "source": "Apec, baromètre T3 2026 — France",
+          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
-        "advisory": {
-          "label": "Conseil",
-          "title": "Conseil en stratégie talent",
-          "desc": "Nous accompagnons votre stratégie de leadership à travers le market mapping, l'analyse de rémunération et le coaching pour construire des équipes tech de classe mondiale."
+        {
+          "stat": "−0,2 %",
+          "desc": "d’offres d’emploi en Suisse sur un an (T2 2026). Sur l’année mobile : santé +17 %, industrie +12 %, informatique +6 % ; en baisse : métiers commerciaux −13 %, économie et gestion −10 %.",
+          "source": "Adecco Swiss Job Market Index T2 2026 — Suisse",
+          "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
+        },
+        {
+          "stat": "4 / 32",
+          "desc": "catégories professionnelles en pénurie en Suisse (santé, chefs de chantier, techniciens en ingénierie, électriciens) ; indice 2025 en baisse de 22 %. Excédent de candidatures en administration, informatique et finance.",
+          "source": "Adecco Swiss Skills Shortage Index 2025 — Suisse",
+          "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
-      },
-      "intro": {
-        "title": "Recrutez les leaders qui transforment",
-        "desc": "Aegryn Talent identifie et place les profils tech rares qui accélèrent votre croissance. Notre approche combine expertise sectorielle, réseau européen et processus de certification rigoureux."
-      },
-      "_legacy_profiles": {
-        "intro": "Profils executive que nous plaçons (niveau C-Level, VP, Director)"
-      },
-      "process": {
-        "title": "Notre processus",
-        "brief": {
-          "title": "Brief stratégique",
-          "desc": "Analyse approfondie de votre organisation, culture, enjeux techniques et ambitions de croissance."
+      ],
+      "reading": "La demande de cadres est répartie entre tech, ingénierie et vente ; le marché suisse est plutôt atone et les pénuries se situent surtout hors fonctions de direction."
+    },
+    "method": {
+      "title": "Notre méthode",
+      "steps": [
+        {
+          "title": "Cadrer",
+          "desc": "Enjeux du poste, cycle de vie, critères de réussite, règles de confidentialité, délai."
         },
-        "search": {
-          "title": "Recherche ciblée",
-          "desc": "Identification des meilleurs profils via notre réseau européen, approche directe et évaluation rigoureuse."
+        {
+          "title": "Cartographier",
+          "desc": "Identification et approche directe des profils, point d’avancement régulier."
         },
-        "placement": {
-          "title": "Placement & suivi",
-          "desc": "Accompagnement jusqu'à l'intégration réussie. Garantie de remplacement et suivi post-placement."
+        {
+          "title": "Sélectionner",
+          "desc": "Entretiens structurés, références vérifiées, présentation argumentée de chaque candidat."
+        },
+        {
+          "title": "Intégrer",
+          "desc": "Suivi des 100 premiers jours, garantie de remplacement de trois mois."
         }
+      ],
+      "discreet": {
+        "title": "Recherche discrète",
+        "desc": "Avant de commencer, nous convenons de trois règles : qui est informé, ce qui est dit aux candidats approchés, comment les profils sont présentés."
+      }
+    },
+    "insights": {
+      "insightsTitle": "Insights & Données Marché",
+      "insightsSubtitle": "Analyses et données du marché des fonctions de direction",
+      "salaryReportTitle": "Salaires Executive Tech Suisse & Europe 2026",
+      "salaryReportDesc": "Étude des rémunérations des fonctions de direction dans la tech, en Suisse et en Europe.",
+      "salaryReportCta": "Consulter le rapport",
+      "magazineTitle": "Magazine Aegryn",
+      "magazineDesc": "Publication trimestrielle sur les transitions d’entreprise, la gouvernance et la valeur des organisations en Europe.",
+      "magazineCta": "Lire le magazine"
+    },
+    "entreprises": {
+      "meta": {
+        "title": "Recruter un profil clé | Aegryn Talent",
+        "desc": "Une recherche de dirigeants et d’experts conduite jusqu’à l’intégration : cadrage, approche directe, sélection, suivi des 100 premiers jours."
       },
-      "profiles": {
-        "intro": "Profils Tech & Digital recherchés.",
-        "cdo": {
-          "title": "Chief Digital Officer",
-          "desc": "Pilotage de la transformation digitale."
-        },
-        "cio": {
-          "title": "Chief Information Officer",
-          "desc": "Gouvernance des systèmes d'information."
-        },
-        "ciso": {
-          "title": "Chief Information Security Officer",
-          "desc": "Sécurité de l'information et conformité."
-        },
-        "cpo": {
-          "title": "Chief Product Officer",
-          "desc": "Vision et roadmap produit."
-        },
-        "cto": {
-          "title": "Chief Technology Officer",
-          "desc": "Architecture technique et stack technologique."
-        },
-        "headAI": {
-          "title": "Head of AI",
-          "desc": "Développement et déploiement de modèles IA."
-        },
-        "headML": {
-          "title": "Head of ML",
-          "desc": "Machine learning et traitement de données."
-        },
-        "headPlatform": {
-          "title": "Head of Platform",
-          "desc": "Infrastructure et plateformes cloud."
-        },
-        "headQA": {
-          "title": "Head of QA",
-          "desc": "Qualité et tests produit."
-        },
-        "vpe": {
-          "title": "VP Engineering",
-          "desc": "Direction de l'ingénierie logicielle."
-        }
+      "hero": {
+        "label": "Pour les entreprises",
+        "title": "Un profil clé se recrute comme une décision stratégique.",
+        "desc": "Nous conduisons la recherche jusqu’à l’intégration du profil, avec des règles de confidentialité convenues d’avance.",
+        "cta": "Présenter mon besoin"
+      },
+      "ai": {
+        "title": "Ce qu’un outil d’IA ne fera pas à votre place",
+        "items": [
+          "Juger si un dirigeant tiendra dans votre culture.",
+          "Mener un entretien de référence.",
+          "Négocier avec un candidat qui a le choix."
+        ]
+      },
+      "diagnostic": {
+        "title": "Avant de nous appeler : 5 questions",
+        "questions": [
+          "Le poste est-il défini par la décision qu’il doit permettre ?",
+          "Les critères de réussite sont-ils écrits ?",
+          "La confidentialité de la recherche est-elle cadrée ?",
+          "Savez-vous ce que coûte un mois de poste vacant ?",
+          "Un successeur est-il identifié pour la fonction ?"
+        ]
+      },
+      "form": {
+        "title": "Présenter mon besoin",
+        "desc": "Décrivez la fonction, le contexte et le délai. Une proposition vous est remise après le cadrage.",
+        "note": "Les honoraires ne sont pas publiés : ils dépendent du mandat."
+      },
+      "transitionTeaser": {
+        "title": "Besoin d’un dirigeant maintenant ?",
+        "desc": "Un profil de transition peut prendre la fonction en quelques semaines, le temps de recruter le titulaire.",
+        "cta": "Profils de transition"
+      }
+    },
+    "transition": {
+      "meta": {
+        "title": "Profils de transition | Aegryn Talent",
+        "desc": "Des dirigeants et experts opérationnels en mission de durée définie : objectifs écrits, passage de relais préparé."
+      },
+      "hero": {
+        "label": "Profils de transition",
+        "title": "Un dirigeant opérationnel, en quelques semaines.",
+        "desc": "Pour les moments où l’organisation ne peut pas attendre un recrutement long : départ soudain, restructuration, intégration, transformation ou passage de relais.",
+        "ctaNeed": "Présenter mon besoin",
+        "ctaProfile": "Proposer mon profil de transition"
+      },
+      "situations": {
+        "title": "Quand la transition est la bonne réponse",
+        "items": [
+          "Départ soudain d’un dirigeant",
+          "Restructuration ou pivot",
+          "Intégration après acquisition",
+          "Projet de transformation",
+          "Période de passage avant une transmission"
+        ]
+      },
+      "format": {
+        "title": "Le format de la mission",
+        "items": [
+          {
+            "title": "Durée définie",
+            "desc": "Une mission bornée, de quelques mois à un an, avec une fin assumée dès le départ."
+          },
+          {
+            "title": "Objectifs écrits",
+            "desc": "Le mandat précise ce que le profil doit livrer, et quand."
+          },
+          {
+            "title": "Passage de relais préparé",
+            "desc": "La mission prépare l’arrivée du titulaire ou le retour à un fonctionnement normal."
+          }
+        ]
+      },
+      "data": {
+        "title": "Ce que disent les enquêtes",
+        "note": "Contexte de marché, pas promesse : ces données décrivent la demande européenne de profils de transition.",
+        "cards": [
+          {
+            "stat": "×4,1",
+            "desc": "de demande de dirigeants de transition depuis 2020. Les CFO représentent 51 % des demandes de niveau C-suite en intérim. Mission moyenne : 6 à 9 mois.",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, avril 2025 — US & Europe",
+            "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
+          },
+          {
+            "stat": "66 %",
+            "desc": "des organisations interrogées envisagent de recourir à un manager de transition en 2025 ; 39 % citent la rapidité et l’impact immédiat. Missions de 6 à 12 mois en moyenne.",
+            "source": "Robert Walters, enquête de février 2025 — Europe",
+            "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
+          },
+          {
+            "stat": "11,5 mois",
+            "desc": "de durée moyenne de mission en Europe ; plus de 60 % des missions au niveau C ou supérieur.",
+            "source": "INIMA Europe Survey 2025 — Europe",
+            "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
+          }
+        ],
+        "reading": "Selon les enquêtes, la durée habituelle d’une mission se situe entre 6 et 12 mois."
+      },
+      "bottom": {
+        "title": "Un besoin de transition ?"
+      }
+    },
+    "candidats": {
+      "meta": {
+        "title": "Rejoindre le vivier | Aegryn Talent",
+        "desc": "Des postes de direction et des missions de transition, quand ils correspondent à votre parcours. Aucun profil transmis sans votre accord."
+      },
+      "hero": {
+        "label": "Pour les candidats",
+        "title": "Des postes de direction, quand ils correspondent à votre parcours.",
+        "desc": "Aegryn ne vous contacte que si une recherche correspond. Aucun profil n’est transmis sans votre accord.",
+        "cta": "Déposer mon profil"
+      },
+      "paths": {
+        "title": "Trois façons d’entrer",
+        "items": [
+          {
+            "title": "Postuler à une mission publiée",
+            "desc": "Des missions ouvertes, décrites par secteur, pays, cycle de vie et séniorité. Aucun nom d’entreprise n’est communiqué sans accord.",
+            "cta": "Voir les missions"
+          },
+          {
+            "title": "Déposer son profil",
+            "desc": "Pour les profils qui ne sont pas en recherche active : nous vous contactons quand une recherche correspond.",
+            "cta": "Déposer mon profil"
+          },
+          {
+            "title": "Proposer son profil de transition",
+            "desc": "Pour les dirigeants et experts disponibles pour des missions de durée définie.",
+            "cta": "Proposer mon profil"
+          }
+        ]
+      },
+      "missions": {
+        "title": "Missions publiées",
+        "desc": "Les missions ouvertes sont publiées ici, avec l’accord du client.",
+        "emptyTitle": "Aucune mission publiée pour le moment.",
+        "emptyDesc": "Déposez votre profil : nous vous contactons lorsqu’une recherche correspond.",
+        "emptyCta": "Déposer mon profil"
+      },
+      "form": {
+        "title": "Déposer mon profil",
+        "desc": "Vos informations restent confidentielles et ne sont partagées avec une entreprise qu’avec votre accord."
       }
     },
     "forms": {
+      "candidate": {
+        "country": "Pays",
+        "countryPlaceholder": "Suisse, France…",
+        "cvLabel": "CV (PDF ou Word, 10 Mo max)",
+        "cvPlaceholder": "Choisir un fichier",
+        "cvUploading": "Envoi en cours…",
+        "cvError_file_too_large": "Fichier trop volumineux (10 Mo max)",
+        "cvError_invalid_file_type": "Format accepté : PDF ou Word",
+        "cvError_upload_failed": "Échec de l’envoi du fichier",
+        "functionFamily": "Famille de fonctions",
+        "functionFamilyPlaceholder": "Sélectionner",
+        "families": {
+          "general": "Direction générale",
+          "finance": "Finance",
+          "operations": "Opérations",
+          "technology": "Technologie",
+          "hr": "Ressources humaines",
+          "sales": "Commercial",
+          "other": "Autre"
+        },
+        "profileType": "Type de poste",
+        "profileTypePlaceholder": "Sélectionner",
+        "profilePermanent": "Poste durable",
+        "profileTransition": "Mission de transition",
+        "lifecycleCycle": "Cycle de vie d’intérêt",
+        "lifecycleCyclePlaceholder": "Sélectionner",
+        "cycles": {
+          "lancement": "Lancement & Structuration",
+          "croissance": "Croissance & Mise à l’échelle",
+          "restructuration": "Restructuration & Pivot",
+          "acquisition": "Acquisition & Croissance externe",
+          "transmission": "Transmission & Cession"
+        },
+        "motivation": "Lettre de motivation",
+        "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
+        "title": "Postuler comme candidat",
+        "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
+        "fullName": "Nom complet",
+        "fullNamePlaceholder": "Prénom Nom",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "phone": "Téléphone",
+        "phonePlaceholder": "+41 XX XXX XX XX",
+        "linkedin": "LinkedIn",
+        "linkedinPlaceholder": "https://linkedin.com/in/...",
+        "cv": "CV (PDF)",
+        "cvUpload": "Déposer votre CV",
+        "cvUploaded": "CV déposé",
+        "availability": "Disponibilité",
+        "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
+        "submit": "Envoyer ma candidature",
+        "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "submitting": "Envoi en cours...",
+        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
+        "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
+        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant"
+      },
       "hiring": {
+        "missionType": "Type de mission",
+        "missionPermanent": "Poste durable",
+        "missionTransition": "Mission de transition",
+        "lifecycleCycle": "Cycle de vie",
+        "lifecycleCyclePlaceholder": "Sélectionner",
+        "cycles": {
+          "lancement": "Lancement & Structuration",
+          "croissance": "Croissance & Mise à l’échelle",
+          "restructuration": "Restructuration & Pivot",
+          "acquisition": "Acquisition & Croissance externe",
+          "transmission": "Transmission & Cession"
+        },
+        "companySize": "Taille (CA)",
+        "companySizePlaceholder": "Ex : 12 M CHF, 80 collaborateurs",
+        "confidential": "Recherche confidentielle (le nom de l’entreprise n’est pas communiqué aux candidats sans accord)",
         "title": "Lancer un mandat de recrutement",
         "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 48h.",
         "company": "Entreprise",
@@ -9037,33 +9232,6 @@
         "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
         "successMessage": "Merci. Votre demande a été enregistrée. Nous vous contacterons sous 48h.",
         "errorMessage": "Une erreur est survenue. Veuillez réessayer."
-      },
-      "candidate": {
-        "title": "Postuler comme candidat",
-        "desc": "Partagez votre profil et accédez à des opportunités exclusives.",
-        "fullName": "Nom complet",
-        "fullNamePlaceholder": "Prénom Nom",
-        "email": "Email",
-        "emailPlaceholder": "votre@email.com",
-        "phone": "Téléphone",
-        "phonePlaceholder": "+41 XX XXX XX XX",
-        "linkedin": "LinkedIn",
-        "linkedinPlaceholder": "https://linkedin.com/in/...",
-        "cv": "CV (PDF)",
-        "cvUpload": "Déposer votre CV",
-        "cvUploaded": "CV déposé",
-        "motivation": "Lettre de motivation",
-        "motivationPlaceholder": "Parlez-nous de votre parcours, vos compétences clés, et ce que vous recherchez...",
-        "availability": "Disponibilité",
-        "availabilityPlaceholder": "Ex: Immédiate, Préavis 3 mois, Flexible...",
-        "submit": "Envoyer ma candidature",
-        "success": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-        "error": "Une erreur est survenue. Veuillez réessayer.",
-        "submitting": "Envoi en cours...",
-        "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
-        "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
-        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
-        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant"
       }
     },
     "admin": {
@@ -9096,203 +9264,6 @@
       "noteLabel": "Note admin",
       "notePlaceholder": "Ajouter une note interne...",
       "saveNote": "Enregistrer note"
-    },
-    "candidate": {
-      "intro": {
-        "title": "Accédez aux opportunités tech les plus exclusives d'Europe",
-        "desc": "Aegryn Talent vous connecte aux scale-ups et leaders tech européens qui recrutent des profils executive. Confidentialité absolue, processus premium, opportunités triées."
-      },
-      "benefits": {
-        "network": {
-          "title": "Réseau européen premium",
-          "desc": "Accès direct aux décideurs des entreprises tech les plus innovantes : scale-ups en hyper-croissance, leaders SaaS, fintechs, deeptech et groupes en transformation digitale."
-        },
-        "confidential": {
-          "title": "Confidentialité garantie",
-          "desc": "Votre recherche reste strictement confidentielle. Nous ne partageons votre profil qu'avec votre accord explicite et uniquement auprès d'entreprises pré-qualifiées."
-        },
-        "curated": {
-          "title": "Opportunités triées sur mesure",
-          "desc": "Nous ne vous présentons que des postes executive alignés avec votre expertise, vos ambitions et votre niveau de séniorité. Zéro spam, 100% pertinence."
-        }
-      },
-      "availability": "Disponibilité",
-      "availabilityPlaceholder": "Ex : immédiate, 3 mois",
-      "cv": "CV",
-      "cvUpload": "Télécharger votre CV",
-      "cvUploaded": "CV téléchargé",
-      "desc": "Postulez pour rejoindre un projet Aegryn.",
-      "email": "Email",
-      "emailPlaceholder": "votre@email.com",
-      "error": "Une erreur est survenue. Veuillez réessayer.",
-      "formTitle": "Candidature",
-      "fullName": "Nom complet",
-      "fullNamePlaceholder": "Prénom Nom",
-      "linkedin": "LinkedIn",
-      "linkedinPlaceholder": "https://linkedin.com/in/...",
-      "motivation": "Lettre de motivation",
-      "motivationPlaceholder": "Décrivez votre motivation...",
-      "phone": "Téléphone",
-      "phonePlaceholder": "+41 ...",
-      "submit": "Envoyer ma candidature",
-      "success": "Candidature envoyée avec succès.",
-      "title": "Postuler"
-    },
-    "coverage": {
-      "coverageTitle": "Notre couverture",
-      "coverageSubtitle": "Suisse et Europe",
-      "countriesTitle": "Pays couverts",
-      "countriesDesc": "Suisse, France, Allemagne, Italie, Espagne, Pays-Bas, Belgique, Luxembourg, Autriche, Irlande, Portugal, Pologne, République Tchèque, Hongrie, Roumanie, Bulgarie, Grèce, Croatie, Slovénie, Slovaquie, Estonie, Lettonie, Lituanie, Malte, Chypre, Finlande, Suède, Danemark, Norvège, Islande",
-      "industriesTitle": "Industries couvertes",
-      "industriesDesc": "Toutes les industries Aegryn : Fintech & Banking, Healthtech & Medtech, Proptech & Construction, Insurtech & Assurance, Legaltech & Compliance, SaaS B2B & Enterprise, E-commerce & Retail, Mobility & Logistics, Energy & Cleantech, Agritech & Foodtech, Edtech & Formation, HR Tech & Talent, Martech & Adtech, Cybersecurity & Privacy, AI & Data Science, Cloud & Infrastructure, Blockchain & Web3, Gaming & Entertainment, Media & Publishing, Travel & Hospitality, Sports & Fitness, Fashion & Luxury, Manufacturing & Industry 4.0"
-    },
-    "marketRoles": {
-      "marketRolesTitle": "Postes tech & IA les plus recherchés",
-      "marketRolesSubtitle": "Analyse du marché executive Suisse & Europe 2026",
-      "roles": [
-        {
-          "title": "Chief Technology Officer (CTO)",
-          "location": "Suisse, Allemagne, France",
-          "salary": "€180K - €350K",
-          "demand": "Très forte demande"
-        },
-        {
-          "title": "Chief Information Security Officer (CISO)",
-          "location": "Suisse, Pays-Bas, Irlande",
-          "salary": "€160K - €300K",
-          "demand": "Demande croissante (+35% vs 2025)"
-        },
-        {
-          "title": "Chief AI Officer / VP AI",
-          "location": "Suisse, France, Allemagne",
-          "salary": "€200K - €400K",
-          "demand": "Explosion de la demande (+120% vs 2025)"
-        },
-        {
-          "title": "VP Engineering",
-          "location": "Europe (remote-first)",
-          "salary": "€140K - €250K",
-          "demand": "Forte demande scale-ups"
-        },
-        {
-          "title": "Chief Data Officer (CDO)",
-          "location": "Suisse, France, Benelux",
-          "salary": "€150K - €280K",
-          "demand": "Demande soutenue"
-        },
-        {
-          "title": "Chief Product Officer (CPO)",
-          "location": "Suisse, Allemagne, Espagne",
-          "salary": "€140K - €270K",
-          "demand": "Forte demande SaaS B2B"
-        }
-      ],
-      "locationLabel": "Localisation",
-      "salaryLabel": "Salaire"
-    },
-    "insights": {
-      "insightsTitle": "Insights & Données Marché",
-      "insightsSubtitle": "Analyses et tendances du marché executive tech",
-      "salaryReportTitle": "Salaires Executive Tech Suisse & Europe 2026",
-      "salaryReportDesc": "Rapport complet sur les rémunérations C-Level et VP dans la tech. Données issues de 2000+ placements executive en Europe.",
-      "salaryReportCta": "Consulter le rapport",
-      "magazineTitle": "Magazine Aegryn",
-      "magazineDesc": "Publication trimestrielle sur les transactions tech, l'IA, les exits et les tendances M&A en Europe.",
-      "magazineCta": "Lire le magazine",
-      "responseTime": "Notre équipe vous contactera sous 48h"
-    },
-    "hiring": {
-      "coverage": {
-        "coverageTitle": "Notre couverture géographique & sectorielle",
-        "coverageSubtitle": "Suisse et Europe",
-        "countriesTitle": "Pays couverts",
-        "countries": [
-          "Allemagne",
-          "Autriche",
-          "Belgique",
-          "Bulgarie",
-          "Chypre",
-          "Croatie",
-          "Danemark",
-          "Espagne",
-          "Estonie",
-          "Finlande",
-          "France",
-          "Grèce",
-          "Hongrie",
-          "Irlande",
-          "Islande",
-          "Italie",
-          "Lettonie",
-          "Lituanie",
-          "Luxembourg",
-          "Malte",
-          "Norvège",
-          "Pays-Bas",
-          "Pologne",
-          "Portugal",
-          "République Tchèque",
-          "Roumanie",
-          "Slovaquie",
-          "Slovénie",
-          "Suède",
-          "Suisse"
-        ],
-        "industriesTitle": "Industries couvertes",
-        "industries": [
-          "Aéronautique & Défense",
-          "Agroalimentaire",
-          "Assurance",
-          "Automobile",
-          "Banque & Marchés Financiers",
-          "Biens de Consommation",
-          "Capital-Investissement & Private Equity",
-          "Chimie & Sciences de la Vie",
-          "Commerce de Détail",
-          "Éducation",
-          "Énergie & Utilities",
-          "Horlogerie & Joaillerie",
-          "Immobilier & Construction",
-          "Industrie & Manufacturing",
-          "Logistique & Transport",
-          "Luxe & Mode",
-          "Médias & Télécommunications",
-          "Pharma & Biotechnologie",
-          "Ressources Naturelles",
-          "Santé & Medtech",
-          "Secteur Public",
-          "Services Financiers",
-          "Technology & Software",
-          "Tourisme & Hôtellerie"
-        ]
-      },
-      "budget": "Budget",
-      "budgetPlaceholder": "Ex : 120 000 CHF/an",
-      "company": "Entreprise",
-      "companyPlaceholder": "Nom de votre entreprise",
-      "contactName": "Contact",
-      "contactNamePlaceholder": "Prénom Nom",
-      "desc": "Décrivez votre besoin de recrutement.",
-      "email": "Email",
-      "emailPlaceholder": "contact@entreprise.com",
-      "error": "Une erreur est survenue. Veuillez réessayer.",
-      "formTitle": "Demande de recrutement",
-      "location": "Localisation",
-      "locationPlaceholder": "Ex : Genève, hybride",
-      "phone": "Téléphone",
-      "phonePlaceholder": "+41 ...",
-      "roleDesc": "Description du poste",
-      "roleDescPlaceholder": "Décrivez les responsabilités...",
-      "roleTitle": "Intitulé du poste",
-      "roleTitlePlaceholder": "Ex : CTO, Head of AI",
-      "submit": "Envoyer ma demande",
-      "success": "Demande envoyée avec succès.",
-      "title": "Recruter via Aegryn",
-      "urgency": "Urgence",
-      "urgencyFlexible": "Flexible",
-      "urgencyImmediate": "Immédiate",
-      "urgencyMonth": "Dans le mois",
-      "urgencyQuarter": "Ce trimestre"
     }
   },
   "industries": {
@@ -9830,11 +9801,11 @@
   "homeTalent": {
     "label": "RECRUTER",
     "title": "Les profils qui font la différence.",
-    "desc": "Nous identifions et plaçons les dirigeants, experts tech et profils de l'innovation qui font avancer les organisations. CTO, CISO, Head of AI, COO, DPO, Directeur de Transformation. En Suisse et en Europe.\n\nNotre objectif est toujours le même : renforcer la valeur de votre actif entreprise par les bonnes personnes au bon moment.",
+    "desc": "Recrutement de profils clés et placement de profils de transition, à chaque cycle de vie de l’entreprise.\n\nNotre objectif est toujours le même : renforcer la valeur de votre organisation par les bonnes personnes au bon moment.",
     "cta1": "Trouver un profil →",
-    "cta1Href": "/talent",
+    "cta1Href": "/talent/entreprises",
     "cta2": "Je suis candidat →",
-    "cta2Href": "/talent"
+    "cta2Href": "/talent/candidats"
   },
   "aboutPage": {
     "intro": "Nous croyons que la valeur d'une entreprise ne se négocie pas dans l'urgence. Elle se construit dans la rigueur stratégique, se renforce par la technologie, se valide dans la transparence, et se réalise dans la confiance.\n\nC'est pour ça qu'Aegryn existe : pour accompagner les dirigeants qui refusent de subir leur trajectoire.",

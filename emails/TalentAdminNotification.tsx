@@ -8,8 +8,12 @@ interface CandidateData {
   email: string
   phone?: string
   linkedinUrl?: string
-  motivation: string
+  motivation: string | null
   availability?: string
+  function_family?: string | null
+  lifecycle_cycle?: string | null
+  profile_type?: string | null
+  country?: string | null
   locale?: string
 }
 
@@ -23,6 +27,10 @@ interface HiringData {
   location: string
   budgetAnnualChf?: string
   urgency: string
+  mission_type?: string | null
+  lifecycle_cycle?: string | null
+  confidential?: boolean
+  company_size?: string | null
   locale?: string
 }
 
@@ -78,13 +86,19 @@ export default function TalentAdminNotification({ type, data }: Props) {
                     </Text>
                   )}
                   {candidateData.availability && <Text style={s.boxItem}><strong>Disponibilité:</strong> {candidateData.availability}</Text>}
+                  {candidateData.function_family && <Text style={s.boxItem}><strong>Famille de fonctions:</strong> {candidateData.function_family}</Text>}
+                  {candidateData.profile_type && <Text style={s.boxItem}><strong>Type de poste:</strong> {candidateData.profile_type === 'transition' ? 'Mission de transition' : 'Poste durable'}</Text>}
+                  {candidateData.lifecycle_cycle && <Text style={s.boxItem}><strong>Cycle de vie:</strong> {candidateData.lifecycle_cycle}</Text>}
+                  {candidateData.country && <Text style={s.boxItem}><strong>Pays:</strong> {candidateData.country}</Text>}
                   <Text style={s.boxItem}><strong>Langue:</strong> {candidateData.locale?.toUpperCase() || 'FR'}</Text>
                 </div>
 
-                <div style={s.motivationBox}>
-                  <Text style={s.boxTitle}>Lettre de motivation</Text>
-                  <Text style={s.motivationText}>{candidateData.motivation}</Text>
-                </div>
+                {candidateData.motivation && (
+                  <div style={s.motivationBox}>
+                    <Text style={s.boxTitle}>Message</Text>
+                    <Text style={s.motivationText}>{candidateData.motivation}</Text>
+                  </div>
+                )}
               </>
             )}
 
@@ -96,6 +110,8 @@ export default function TalentAdminNotification({ type, data }: Props) {
                   <Text style={s.boxItem}><strong>Contact:</strong> {hiringData.contactName}</Text>
                   <Text style={s.boxItem}><strong>Email:</strong> <a href={`mailto:${hiringData.email}`} style={s.link}>{hiringData.email}</a></Text>
                   {hiringData.phone && <Text style={s.boxItem}><strong>Téléphone:</strong> {hiringData.phone}</Text>}
+                  {hiringData.company_size && <Text style={s.boxItem}><strong>Taille (CA):</strong> {hiringData.company_size}</Text>}
+                  {hiringData.confidential && <Text style={s.boxItem}><strong>Recherche confidentielle:</strong> Oui</Text>}
                   <Text style={s.boxItem}><strong>Langue:</strong> {hiringData.locale?.toUpperCase() || 'FR'}</Text>
                 </div>
 
@@ -104,6 +120,8 @@ export default function TalentAdminNotification({ type, data }: Props) {
                   <Text style={s.boxItem}><strong>Intitulé:</strong> {hiringData.roleTitle}</Text>
                   <Text style={s.boxItem}><strong>Localisation:</strong> {hiringData.location}</Text>
                   <Text style={s.boxItem}><strong>Urgence:</strong> {urgencyLabels[hiringData.urgency] || hiringData.urgency}</Text>
+                  {hiringData.mission_type && <Text style={s.boxItem}><strong>Type de mission:</strong> {hiringData.mission_type === 'transition' ? 'Mission de transition' : 'Poste durable'}</Text>}
+                  {hiringData.lifecycle_cycle && <Text style={s.boxItem}><strong>Cycle de vie:</strong> {hiringData.lifecycle_cycle}</Text>}
                   {hiringData.budgetAnnualChf && <Text style={s.boxItem}><strong>Budget annuel:</strong> {hiringData.budgetAnnualChf}</Text>}
                 </div>
 

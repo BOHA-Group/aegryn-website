@@ -17,25 +17,22 @@ type SitemapGroup = {
 
 const GROUPS: SitemapGroup[] = [
   {
-    labelKey: 'groupBuild',
-    links: [
-      { labelKey: 'assets',        href: '/assets' },
-      { labelKey: 'servicesBuild', href: '/services/build' },
-    ],
-  },
-  {
-    labelKey: 'groupAdvisory',
+    labelKey: 'groupAccompagner',
     links: [
       { labelKey: 'advisory',     href: '/advisory' },
       { labelKey: 'acquisition',  href: '/services/acquisition-support' },
-      { labelKey: 'alliances',    href: '/alliances' },
-      { labelKey: 'experts',      href: '/experts' },
       { labelKey: 'valuation',    href: '/valuation' },
+      { labelKey: 'experts',      href: '/experts' },
+      { labelKey: 'alliances',    href: '/alliances' },
+      { labelKey: 'annuaire',     href: '/annuaire' },
     ],
   },
   {
-    labelKey: 'groupGrade',
+    labelKey: 'groupConstruire',
     links: [
+      { labelKey: 'whatWeBuild',   href: '/what-we-build' },
+      { labelKey: 'servicesBuild', href: '/services/build' },
+      { labelKey: 'assets',        href: '/assets' },
       { labelKey: 'grade',         href: '/grade' },
       { labelKey: 'gradeMethod',   href: '/grade/brochure' },
       { labelKey: 'gradeSubmit',   href: '/grade/submit' },
@@ -43,7 +40,7 @@ const GROUPS: SitemapGroup[] = [
     ],
   },
   {
-    labelKey: 'groupValoriser',
+    labelKey: 'groupFranchir',
     links: [
       { labelKey: 'valoriserLancement',       href: '/franchir/lancement' },
       { labelKey: 'valoriserCroissance',      href: '/franchir/croissance' },
@@ -53,11 +50,21 @@ const GROUPS: SitemapGroup[] = [
     ],
   },
   {
-    labelKey: 'groupDiscover',
+    labelKey: 'groupRecruter',
+    links: [
+      { labelKey: 'talent',            href: '/talent' },
+      { labelKey: 'talentEntreprises', href: '/talent/entreprises' },
+      { labelKey: 'talentTransition',  href: '/talent/transition' },
+      { labelKey: 'talentCandidats',   href: '/talent/candidats' },
+    ],
+  },
+  {
+    labelKey: 'groupInformer',
     links: [
       { labelKey: 'magazine',          href: '/magazine' },
       { labelKey: 'magazineIssue01',   href: '/magazine/issue-01' },
       { labelKey: 'blog',              href: '/blog' },
+      { labelKey: 'workforce',         href: '/workforce' },
       { labelKey: 'glossaire',         href: '/glossaire' },
     ],
   },
@@ -66,7 +73,6 @@ const GROUPS: SitemapGroup[] = [
     links: [
       { labelKey: 'about',        href: '/about' },
       { labelKey: 'roadmap',      href: '/roadmap' },
-      { labelKey: 'whatWeBuild',  href: '/what-we-build' },
       { labelKey: 'career',       href: '/career' },
       { labelKey: 'contact',      href: '/contact' },
     ],

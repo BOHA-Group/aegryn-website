@@ -4,16 +4,24 @@ import { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { useTranslations } from 'next-intl'
-import { Loader2 } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
+import { Loader2, Upload } from 'lucide-react'
 import PhoneInput from '@/components/ui/PhoneInput'
+
+const CYCLES = ['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission'] as const
+const FAMILIES = ['general', 'finance', 'operations', 'technology', 'hr', 'sales', 'other'] as const
 
 const candidateSchema = z.object({
   fullName: z.string().min(2, 'Full name required'),
   email: z.string().email('Valid email required'),
   phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
   linkedinUrl: z.string().url().optional().or(z.literal('')),
-  motivation: z.string().min(50, 'Motivation letter too short (min 50 characters)'),
+  functionFamily: z.enum(FAMILIES).optional(),
+  lifecycleCycle: z.enum(CYCLES).optional(),
+  profileType: z.enum(['permanent', 'transition']).optional(),
+  country: z.string().optional(),
+  motivation: z.string().optional().or(z.literal('')),
   availability: z.string().optional(),
   gdprConsent: z.boolean().refine((val) => val === true, {
     message: 'Vous devez accepter la politique de confidentialité',
@@ -22,10 +30,21 @@ const candidateSchema = z.object({
 
 type CandidateFormData = z.infer<typeof candidateSchema>
 
+const inputCls = 'w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors'
+const labelCls = 'block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2'
+
 export default function TalentCandidateForm() {
   const t = useTranslations('talent.forms.candidate')
+  const locale = useLocale()
+  const params = useSearchParams()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [cvUploading, setCvUploading] = useState(false)
+  const [cvState, setCvState] = useState<{ path: string; filename: string } | null>(null)
+  const [cvError, setCvError] = useState<string | null>(null)
+
+  const prefillCycle = params.get('cycle')
+  const prefillType  = params.get('type')
 
   const {
     register,
@@ -35,7 +54,31 @@ export default function TalentCandidateForm() {
     formState: { errors },
   } = useForm<CandidateFormData>({
     resolver: zodResolver(candidateSchema),
+    defaultValues: {
+      lifecycleCycle: (CYCLES as readonly string[]).includes(prefillCycle ?? '') ? (prefillCycle as typeof CYCLES[number]) : undefined,
+      profileType: prefillType === 'transition' ? 'transition' : undefined,
+    },
   })
+
+  async function handleCvChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setCvUploading(true)
+    setCvError(null)
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      const res = await fetch('/api/talent/candidate/cv', { method: 'POST', body: fd })
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(body?.error ?? 'upload_failed')
+      setCvState({ path: body.path, filename: body.filename })
+    } catch (err) {
+      setCvError(err instanceof Error ? err.message : 'upload_failed')
+      setCvState(null)
+    } finally {
+      setCvUploading(false)
+    }
+  }
 
   const onSubmit = async (data: CandidateFormData) => {
     setIsSubmitting(true)
@@ -45,13 +88,19 @@ export default function TalentCandidateForm() {
       const res = await fetch('/api/talent/candidate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          cvUrl: cvState?.path,
+          cvFilename: cvState?.filename,
+          locale,
+        }),
       })
 
       if (!res.ok) throw new Error('Submission failed')
 
       setSubmitStatus('success')
       reset()
+      setCvState(null)
     } catch (error) {
       console.error('Candidate form error:', error)
       setSubmitStatus('error')
@@ -65,13 +114,11 @@ export default function TalentCandidateForm() {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Full Name */}
         <div>
-          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-            {t('fullName')} *
-          </label>
+          <label className={labelCls}>{t('fullName')} *</label>
           <input
             {...register('fullName')}
             type="text"
-            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+            className={inputCls}
             placeholder={t('fullNamePlaceholder')}
           />
           {errors.fullName && (
@@ -81,13 +128,11 @@ export default function TalentCandidateForm() {
 
         {/* Email */}
         <div>
-          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-            {t('email')} *
-          </label>
+          <label className={labelCls}>{t('email')} *</label>
           <input
             {...register('email')}
             type="email"
-            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+            className={inputCls}
             placeholder={t('emailPlaceholder')}
           />
           {errors.email && (
@@ -97,9 +142,7 @@ export default function TalentCandidateForm() {
 
         {/* Phone */}
         <div>
-          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-            {t('phone')}
-          </label>
+          <label className={labelCls}>{t('phone')}</label>
           <Controller
             name="phone"
             control={control}
@@ -114,15 +157,24 @@ export default function TalentCandidateForm() {
           />
         </div>
 
+        {/* Country */}
+        <div>
+          <label className={labelCls}>{t('country')}</label>
+          <input
+            {...register('country')}
+            type="text"
+            className={inputCls}
+            placeholder={t('countryPlaceholder')}
+          />
+        </div>
+
         {/* LinkedIn */}
         <div>
-          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-            {t('linkedin')}
-          </label>
+          <label className={labelCls}>{t('linkedin')}</label>
           <input
             {...register('linkedinUrl')}
             type="url"
-            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+            className={inputCls}
             placeholder={t('linkedinPlaceholder')}
           />
           {errors.linkedinUrl && (
@@ -130,41 +182,77 @@ export default function TalentCandidateForm() {
           )}
         </div>
 
-        {/* Availability */}
-        <div className="md:col-span-2">
-          <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-            {t('availability')}
+        {/* CV upload */}
+        <div>
+          <label className={labelCls}>{t('cvLabel')}</label>
+          <label className={`${inputCls} flex items-center gap-3 cursor-pointer text-ag-gray`}>
+            <Upload size={14} className="shrink-0" />
+            <span className="truncate">
+              {cvUploading ? t('cvUploading') : cvState ? cvState.filename : t('cvPlaceholder')}
+            </span>
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx"
+              onChange={handleCvChange}
+              className="hidden"
+            />
           </label>
+          {cvError && <p className="mt-1 text-[12px] text-red-600">{t(`cvError_${cvError}` as never)}</p>}
+        </div>
+
+        {/* Function family */}
+        <div>
+          <label className={labelCls}>{t('functionFamily')}</label>
+          <select {...register('functionFamily')} className={inputCls}>
+            <option value="">{t('functionFamilyPlaceholder')}</option>
+            {FAMILIES.map((f) => (
+              <option key={f} value={f}>{t(`families.${f}`)}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Profile type */}
+        <div>
+          <label className={labelCls}>{t('profileType')}</label>
+          <select {...register('profileType')} className={inputCls}>
+            <option value="">{t('profileTypePlaceholder')}</option>
+            <option value="permanent">{t('profilePermanent')}</option>
+            <option value="transition">{t('profileTransition')}</option>
+          </select>
+        </div>
+
+        {/* Lifecycle cycle */}
+        <div>
+          <label className={labelCls}>{t('lifecycleCycle')}</label>
+          <select {...register('lifecycleCycle')} className={inputCls}>
+            <option value="">{t('lifecycleCyclePlaceholder')}</option>
+            {CYCLES.map((c) => (
+              <option key={c} value={c}>{t(`cycles.${c}`)}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Availability */}
+        <div>
+          <label className={labelCls}>{t('availability')}</label>
           <input
             {...register('availability')}
             type="text"
-            className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] transition-colors"
+            className={inputCls}
             placeholder={t('availabilityPlaceholder')}
           />
         </div>
       </div>
 
-      {/* Motivation */}
+      {/* Message facultatif */}
       <div>
-        <label className="block font-sans font-semibold text-[11px] uppercase tracking-[0.2em] text-ag-gray mb-2">
-          {t('motivation')} *
-        </label>
+        <label className={labelCls}>{t('motivation')}</label>
         <textarea
           {...register('motivation')}
-          rows={6}
-          className="w-full px-4 py-3 rounded-xl border border-ag-border focus:border-ag-apex focus:outline-none text-[14px] resize-none transition-colors"
+          rows={4}
+          className={`${inputCls} resize-none`}
           placeholder={t('motivationPlaceholder')}
         />
-        {errors.motivation && (
-          <p className="mt-1 text-[12px] text-red-600">{errors.motivation.message}</p>
-        )}
-      </div>
-
-      {/* CV Upload Note */}
-      <div className="p-4 bg-ag-off-white border border-ag-border rounded-xl">
-        <p className="text-[13px] text-ag-gray leading-relaxed">
-          {t('cvNote')}
-        </p>
       </div>
 
       {/* RGPD/LPD Consent */}

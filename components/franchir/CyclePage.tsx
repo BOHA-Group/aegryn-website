@@ -21,10 +21,10 @@ const BTN_PRI = 'rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-na
 const BTN_SEC = 'rounded-lg inline-flex items-center gap-2 border border-white/60 bg-white/10 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-white hover:text-ag-navy transition-all'
 const BTN_WARN = 'rounded-lg inline-flex items-center gap-2 border border-ag-apex/60 text-ag-apex font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex hover:text-ag-navy transition-all'
 
-function MetierChipLink({ m, labels, L }: { m: MetierChip; labels: Record<MetierChip, string>; L: (h: string) => string }) {
+function MetierChipLink({ m, labels, href }: { m: MetierChip; labels: Record<MetierChip, string>; href: string }) {
   return (
     <Link
-      href={L(METIER_HREF[m])}
+      href={href}
       className="rounded-full inline-flex items-center gap-1.5 border border-ag-border px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:border-ag-navy hover:bg-ag-navy hover:text-white transition-colors"
     >
       {labels[m]} <ArrowRight size={9} />
@@ -47,6 +47,8 @@ export function CyclePage({ content: c, locale }: Props) {
   const echangeHref  = L(`${contactPath}?cycle=${c.slug}&action=echange`)
   const echangeDef   = getCycleAction(locale, c.slug, 'echange')
   const urgenceDef   = c.urgency ? getCycleAction(locale, c.slug, 'urgence') : null
+  /* Le métier Recruter renvoie à la ligne du tableau « À chaque cycle de vie » sur /talent */
+  const metierHref   = (m: MetierChip) => L(m === 'recruter' ? `/talent#cycle-${c.slug}` : METIER_HREF[m])
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -162,7 +164,7 @@ export function CyclePage({ content: c, locale }: Props) {
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2.5">{ui.metierUsed}</p>
                   <div className="flex flex-wrap gap-2">
                     {s.metiers.map(m => (
-                      <MetierChipLink key={m} m={m} labels={metierLabels} L={L} />
+                      <MetierChipLink key={m} m={m} labels={metierLabels} href={metierHref(m)} />
                     ))}
                   </div>
                 </div>
@@ -179,13 +181,13 @@ export function CyclePage({ content: c, locale }: Props) {
           <p className={`${LABEL} mb-8`}>{ui.metiersTitle}</p>
           <div className="flex flex-wrap gap-3 mb-4">
             {c.metiers.mobilized.map(m => (
-              <Link key={m} href={L(METIER_HREF[m])}
+              <Link key={m} href={metierHref(m)}
                 className="rounded-full inline-flex items-center gap-2 border border-ag-navy/30 bg-ag-navy text-white px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] hover:bg-ag-black transition-colors">
                 <span aria-hidden>●</span> {metierLabels[m]} <ArrowRight size={9} />
               </Link>
             ))}
             {c.metiers.available.map(m => (
-              <Link key={m} href={L(METIER_HREF[m])}
+              <Link key={m} href={metierHref(m)}
                 className="rounded-full inline-flex items-center gap-2 border border-ag-border text-ag-navy px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] hover:border-ag-navy transition-colors">
                 <span aria-hidden>○</span> {metierLabels[m]} <ArrowRight size={9} />
               </Link>
