@@ -795,11 +795,11 @@
     "items": [
       {
         "title": "ACCOMPAGNER",
-        "desc": "Conseil intégré sur les décisions qui engagent : nous intervenons quand ces décisions définissent la trajectoire d'une organisation : transformation, pivot, acquisition ou transmission."
+        "desc": "Conseil intégré sur les décisions qui engagent : transformation, pivot, acquisition ou transmission. Nous intervenons quand elles définissent la trajectoire d'une organisation."
       },
       {
         "title": "CONSTRUIRE",
-        "desc": "Actifs numériques durables, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et résister à la certification. Indépendance technologique."
+        "desc": "Actifs numériques durables, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise et passer la certification. Indépendance technologique."
       },
       {
         "title": "FRANCHIR",
@@ -807,11 +807,11 @@
       },
       {
         "title": "RECRUTER",
-        "desc": "Profils executive, tech et innovation. Du CTO au DG, nous plaçons les talents qui exécutent la transformation et renforcent la valeur de l’organisation."
+        "desc": "Sans les bonnes personnes, la stratégie reste un plan. Recrutement de dirigeants et d'experts, missions de transition : nous trouvons celles et ceux qui exécutent."
       },
       {
         "title": "INFORMER",
-        "desc": "Magazine trimestriel de référence, articles et veille de marché. Nous documentons ce que nous observons et ce que nous vivons au quotidien."
+        "desc": "Magazine trimestriel, articles et veille de marché. Nous documentons ce que nous observons et ce que nous vivons au quotidien."
       }
     ]
   },
