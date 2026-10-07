@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
-import { ArrowRight }      from 'lucide-react'
+import { ArrowRight, FileSearch, FileUp, Timer, Inbox } from 'lucide-react'
 import { Suspense }        from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
@@ -22,7 +22,8 @@ export default async function TalentCandidatsPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'talent.candidats' })
 
-  const paths = t.raw('paths.items') as { title: string; desc: string; cta: string }[]
+  const paths      = t.raw('paths.items') as { title: string; desc: string; cta: string }[]
+  const pathIcons  = [FileSearch, FileUp, Timer]
 
   return (
     <>
@@ -57,8 +58,13 @@ export default async function TalentCandidatsPage({ params }: Props) {
             {t('paths.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {paths.map((p, i) => (
+            {paths.map((p, i) => {
+              const Icon = pathIcons[i]
+              return (
               <div key={i} className="border border-ag-border bg-white p-8 flex flex-col">
+                <span className="w-10 h-10 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink mb-5">
+                  <Icon size={18} strokeWidth={1.8} />
+                </span>
                 <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
                   {p.title}
                 </h3>
@@ -72,7 +78,8 @@ export default async function TalentCandidatsPage({ params }: Props) {
                   {p.cta} <ArrowRight size={11} />
                 </a>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -87,6 +94,7 @@ export default async function TalentCandidatsPage({ params }: Props) {
             {t('missions.desc')}
           </p>
           <div className="border border-dashed border-ag-border bg-white p-10 text-center">
+            <Inbox size={28} strokeWidth={1.5} className="mx-auto mb-4 text-ag-gray-light" />
             <p className="font-sans font-bold text-ag-black text-[17px] mb-3">
               {t('missions.emptyTitle')}
             </p>

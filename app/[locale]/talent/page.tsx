@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import { Link }            from '@/i18n/navigation'
-import { ArrowUpRight, ArrowRight } from 'lucide-react'
+import { ArrowUpRight, ArrowRight, ClipboardList, Radar, UserCheck, Handshake, UserPlus, Clock, Users } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -46,6 +46,8 @@ export default async function TalentPage({ params }: Props) {
   const cycleRows = t.raw('cycles.rows') as CycleRow[]
   const demandCards = t.raw('demand.cards') as DemandCard[]
   const steps = t.raw('method.steps') as { title: string; desc: string }[]
+  const stepIcons  = [ClipboardList, Radar, UserCheck, Handshake]
+  const offerIcons = { recruit: UserPlus, transition: Clock, pool: Users } as const
 
   return (
     <>
@@ -96,8 +98,13 @@ export default async function TalentPage({ params }: Props) {
             {t('offers.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {(['recruit', 'transition', 'pool'] as const).map((k) => (
+            {(['recruit', 'transition', 'pool'] as const).map((k) => {
+              const Icon = offerIcons[k]
+              return (
               <div key={k} className="border border-ag-border bg-white p-8 flex flex-col hover:border-ag-apex/40 transition-colors">
+                <span className="w-10 h-10 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink mb-5">
+                  <Icon size={18} strokeWidth={1.8} />
+                </span>
                 <h3 className="font-sans font-bold text-ag-black text-[19px] tracking-[-0.01em] mb-4">
                   {t(`offers.${k}.title`)}
                 </h3>
@@ -111,7 +118,8 @@ export default async function TalentPage({ params }: Props) {
                   {t(`offers.${k}.cta`)} <ArrowRight size={11} />
                 </Link>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -209,10 +217,17 @@ export default async function TalentPage({ params }: Props) {
             {t('method.title')}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-            {steps.map((step, i) => (
+            {steps.map((step, i) => {
+              const Icon = stepIcons[i]
+              return (
               <div key={i}>
-                <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink mb-4">
-                  {String(i + 1).padStart(2, '0')}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-9 h-9 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink shrink-0">
+                    <Icon size={16} strokeWidth={1.8} />
+                  </span>
+                  <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
                 </div>
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {step.title}
@@ -221,7 +236,8 @@ export default async function TalentPage({ params }: Props) {
                   {step.desc}
                 </p>
               </div>
-            ))}
+              )
+            })}
           </div>
           <div className="border-l-2 border-ag-apex pl-6 max-w-3xl">
             <h3 className="font-sans font-bold text-ag-black text-[15px] mb-2">

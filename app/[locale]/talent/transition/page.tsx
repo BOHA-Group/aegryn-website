@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
 import { Link }            from '@/i18n/navigation'
-import { ArrowUpRight }    from 'lucide-react'
+import { ArrowUpRight, CalendarClock, ListChecks, ArrowLeftRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -23,6 +23,7 @@ export default async function TalentTransitionPage({ params }: Props) {
 
   const situations = t.raw('situations.items') as string[]
   const formatItems = t.raw('format.items') as { title: string; desc: string }[]
+  const formatIcons = [CalendarClock, ListChecks, ArrowLeftRight]
   const dataCards  = t.raw('data.cards') as { stat: string; desc: string; source: string; url?: string }[]
 
   return (
@@ -83,8 +84,13 @@ export default async function TalentTransitionPage({ params }: Props) {
             {t('format.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {formatItems.map((f, i) => (
+            {formatItems.map((f, i) => {
+              const Icon = formatIcons[i]
+              return (
               <div key={i} className="border border-ag-border bg-white p-8">
+                <span className="w-10 h-10 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink mb-5">
+                  <Icon size={18} strokeWidth={1.8} />
+                </span>
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {f.title}
                 </h3>
@@ -92,7 +98,8 @@ export default async function TalentTransitionPage({ params }: Props) {
                   {f.desc}
                 </p>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
