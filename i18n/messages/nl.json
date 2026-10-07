@@ -153,7 +153,7 @@
     "clusterCommerce": "Handel, Diensten & Klantervaring",
     "clusterTech": "Technologie, Innovatie & Publieke Sector",
     "solutionsViewAllLink": "Alle oplossingen bekijken",
-    "craftRecruitIntro": "Introductie",
+    "craftRecruitIntro": "Het juiste profiel, in de juiste fase",
     "craftRecruitForCompanies": "Voor bedrijven",
     "craftRecruitForCandidates": "Voor kandidaten",
     "craftRecruitHire": "Profiel werven",
@@ -8995,7 +8995,7 @@
         },
         {
           "title": "Integreren",
-          "desc": "Monitoring van de eerste 100 dagen, drie maanden vervangingsgarantie."
+          "desc": "Monitoring van de eerste 100 dagen. No-cure-no-pay honoraria bij indiensttreding; drie maanden vervangingsgarantie."
         }
       ],
       "discreet": {
@@ -9045,7 +9045,7 @@
       "form": {
         "title": "Mijn behoefte",
         "desc": "Beschrijf functie, context en deadline. Een voorstel wordt u overhandigd na de kadering.",
-        "note": "Honoraria worden niet gepubliceerd: ze hangen af van het mandaat."
+        "note": "No-cure-no-pay honoraria, verschuldigd bij indiensttreding; het bedrag hangt af van het mandaat."
       },
       "transitionTeaser": {
         "title": "Nu een leidinggevende nodig?",

@@ -153,7 +153,7 @@
     "clusterCommerce": "Commerce, Services & Customer Experience",
     "clusterTech": "Tech, Innovation & Public Sector",
     "solutionsViewAllLink": "View all solutions",
-    "craftRecruitIntro": "Introduction",
+    "craftRecruitIntro": "The right profile, at the right stage",
     "craftRecruitForCompanies": "For companies",
     "craftRecruitForCandidates": "For candidates",
     "craftRecruitHire": "Hire a profile",
@@ -8995,7 +8995,7 @@
         },
         {
           "title": "Integrate",
-          "desc": "Follow-up of the first 100 days, three-month replacement guarantee."
+          "desc": "First-100-days follow-up. Success-based fees, due at start date; three-month replacement guarantee."
         }
       ],
       "discreet": {
@@ -9045,7 +9045,7 @@
       "form": {
         "title": "Present my need",
         "desc": "Describe the function, the context and the timeline. A proposal is issued after the framing.",
-        "note": "Fees are not published: they depend on the mandate."
+        "note": "Success-based fees, due at start date; the amount depends on the mandate."
       },
       "transitionTeaser": {
         "title": "Need an executive now?",

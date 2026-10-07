@@ -153,7 +153,7 @@
     "clusterCommerce": "Comercio, Servicios & Experiencia Cliente",
     "clusterTech": "Tecnología, Innovación & Sector Público",
     "solutionsViewAllLink": "Ver todas las soluciones",
-    "craftRecruitIntro": "Introducción",
+    "craftRecruitIntro": "El perfil adecuado, en la fase adecuada",
     "craftRecruitForCompanies": "Para empresas",
     "craftRecruitForCandidates": "Para candidatos",
     "craftRecruitHire": "Reclutar un perfil",
@@ -8995,7 +8995,7 @@
         },
         {
           "title": "Integrar",
-          "desc": "Seguimiento de los primeros 100 días, garantía de sustitución de tres meses."
+          "desc": "Seguimiento de los primeros 100 días. Honorarios al éxito, a la toma de posesión; garantía de sustitución de tres meses."
         }
       ],
       "discreet": {
@@ -9045,7 +9045,7 @@
       "form": {
         "title": "Presentar mi necesidad",
         "desc": "Describa la función, el contexto y el plazo. Recibirá una propuesta tras el encuadre.",
-        "note": "Los honorarios no se publican: dependen del mandato."
+        "note": "Honorarios al éxito, a la toma de posesión; el importe depende del mandato."
       },
       "transitionTeaser": {
         "title": "¿Necesita un directivo ahora?",

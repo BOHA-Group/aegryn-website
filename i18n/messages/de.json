@@ -153,7 +153,7 @@
     "clusterCommerce": "Handel, Dienstleistungen & Kundenerlebnis",
     "clusterTech": "Technologie, Innovation & Öffentlicher Sektor",
     "solutionsViewAllLink": "Alle Lösungen ansehen",
-    "craftRecruitIntro": "Einführung",
+    "craftRecruitIntro": "Das richtige Profil, zur richtigen Phase",
     "craftRecruitForCompanies": "Für Unternehmen",
     "craftRecruitForCandidates": "Für Kandidaten",
     "craftRecruitHire": "Profil rekrutieren",
@@ -9125,7 +9125,7 @@
         },
         {
           "title": "Integrieren",
-          "desc": "Begleitung der ersten 100 Tage, dreimonatige Ersatzgarantie."
+          "desc": "Begleitung der ersten 100 Tage. Erfolgshonorar, fällig bei Amtsantritt; dreimonatige Ersatzgarantie."
         }
       ],
       "discreet": {
@@ -9175,7 +9175,7 @@
       "form": {
         "title": "Mein Bedarf",
         "desc": "Beschreiben Sie Funktion, Kontext und Frist. Nach der Rahmung erhalten Sie ein Angebot.",
-        "note": "Honorare werden nicht veröffentlicht: Sie hängen vom Mandat ab."
+        "note": "Erfolgshonorar, fällig bei Amtsantritt; die Höhe hängt vom Mandat ab."
       },
       "transitionTeaser": {
         "title": "Brauchen Sie jetzt eine Führungskraft?",

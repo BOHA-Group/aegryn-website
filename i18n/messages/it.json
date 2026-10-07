@@ -153,7 +153,7 @@
     "clusterCommerce": "Commercio, Servizi & Esperienza Cliente",
     "clusterTech": "Tecnologia, Innovazione & Settore Pubblico",
     "solutionsViewAllLink": "Vedere tutte le soluzioni",
-    "craftRecruitIntro": "Introduzione",
+    "craftRecruitIntro": "Il profilo giusto, nella fase giusta",
     "craftRecruitForCompanies": "Per le aziende",
     "craftRecruitForCandidates": "Per i candidati",
     "craftRecruitHire": "Reclutare un profilo",
@@ -8995,7 +8995,7 @@
         },
         {
           "title": "Integrare",
-          "desc": "Monitoraggio dei primi 100 giorni, garanzia di sostituzione di tre mesi."
+          "desc": "Monitoraggio dei primi 100 giorni. Onorari al successo, alla presa di servizio; garanzia di sostituzione di tre mesi."
         }
       ],
       "discreet": {
@@ -9045,7 +9045,7 @@
       "form": {
         "title": "Presentare il mio bisogno",
         "desc": "Descrivete funzione, contesto e scadenze. Una proposta vi viene consegnata dopo l’inquadramento.",
-        "note": "Gli onorari non sono pubblicati: dipendono dal mandato."
+        "note": "Onorari al successo, alla presa di servizio; l’importo dipende dal mandato."
       },
       "transitionTeaser": {
         "title": "Serve un dirigente subito?",

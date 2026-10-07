@@ -153,7 +153,7 @@
     "clusterIndustrie": "Industrie, Énergie & Infrastructure",
     "clusterCommerce": "Commerce, Services & Expérience Client",
     "clusterTech": "Tech, Innovation & Secteur Public",
-    "craftRecruitIntro": "Introduction",
+    "craftRecruitIntro": "Le bon profil, au bon cycle",
     "craftRecruitForCompanies": "Pour les entreprises",
     "craftRecruitForCandidates": "Pour les candidats",
     "craftRecruitHire": "Recruter un profil",
@@ -8955,7 +8955,7 @@
         },
         {
           "title": "Intégrer",
-          "desc": "Suivi des 100 premiers jours, garantie de remplacement de trois mois."
+          "desc": "Suivi des 100 premiers jours. Honoraires au succès, dus à la prise de poste ; garantie de remplacement de trois mois."
         }
       ],
       "discreet": {
@@ -9005,7 +9005,7 @@
       "form": {
         "title": "Présenter mon besoin",
         "desc": "Décrivez la fonction, le contexte et le délai. Une proposition vous est remise après le cadrage.",
-        "note": "Les honoraires ne sont pas publiés : ils dépendent du mandat."
+        "note": "Honoraires au succès, dus à la prise de poste ; le montant dépend du mandat."
       },
       "transitionTeaser": {
         "title": "Besoin d’un dirigeant maintenant ?",
