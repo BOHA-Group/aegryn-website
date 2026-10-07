@@ -243,7 +243,7 @@ export default async function TalentPage({ params }: Props) {
             <h3 className="font-sans font-bold text-ag-black text-[15px] mb-2">
               {t('method.discreet.title')}
             </h3>
-            <p className="text-[14px] text-ag-gray leading-relaxed">
+            <p className="text-[15px] text-ag-gray leading-relaxed">
               {t('method.discreet.desc')}
             </p>
           </div>

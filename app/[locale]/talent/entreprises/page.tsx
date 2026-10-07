@@ -88,7 +88,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
             <h3 className="font-sans font-bold text-ag-black text-[15px] mb-2">
               {tm('method.discreet.title')}
             </h3>
-            <p className="text-[14px] text-ag-gray leading-relaxed">
+            <p className="text-[15px] text-ag-gray leading-relaxed">
               {tm('method.discreet.desc')}
             </p>
           </div>
@@ -121,7 +121,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
                   <span className="font-mono text-[10px] tracking-[0.2em] text-ag-apex-ink pt-1 shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-[14px] text-ag-gray leading-relaxed">{q}</span>
+                  <span className="text-[15px] text-ag-gray leading-relaxed">{q}</span>
                 </li>
               ))}
             </ol>
@@ -154,7 +154,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
             <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.01em] mb-2">
               {t('transitionTeaser.title')}
             </h2>
-            <p className="text-[14px] text-ag-gray max-w-xl">
+            <p className="text-[15px] text-ag-gray max-w-xl">
               {t('transitionTeaser.desc')}
             </p>
           </div>

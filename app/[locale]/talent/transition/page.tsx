@@ -94,7 +94,7 @@ export default async function TalentTransitionPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {f.desc}
                 </p>
               </div>
