@@ -66,7 +66,7 @@ export default function IndexSubscriberPreview() {
         <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{t('label')}</span>
       </div>
       <h3 className="font-sans font-bold text-white text-[20px] tracking-[-0.02em] mb-2">{t('title')}</h3>
-      <p className="font-sans text-[13px] text-white/60 leading-relaxed max-w-2xl mb-6">{t('desc')}</p>
+      <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-2xl mb-6">{t('desc')}</p>
 
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
         {/* Tabs */}

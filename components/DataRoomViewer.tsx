@@ -148,7 +148,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       {blacked && (
         <div className="absolute inset-0 bg-black z-[110] flex flex-col items-center justify-center gap-4">
           <Lock size={32} className="text-white/40" />
-          <p className="text-white/70 text-[14px] font-semibold text-center max-w-sm leading-relaxed">
+          <p className="text-white/70 text-[15px] font-semibold text-center max-w-sm leading-relaxed">
             Document masqué<br />
             <span className="text-white/40 text-[11px] font-normal">Activité détectée — cette consultation a été journalisée.</span>
           </p>

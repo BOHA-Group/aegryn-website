@@ -55,7 +55,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               {t('ctaDiscover')}
             </Link>
           </div>
-          <p className="font-sans text-[13px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed border-t border-white/10 pt-8">
+          <p className="font-sans text-[15px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed border-t border-white/10 pt-8">
             {t('advisorNote')}
           </p>
         </div>

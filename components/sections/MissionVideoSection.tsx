@@ -171,7 +171,7 @@ export function MissionVideoSection() {
                   style={{ fontSize: 'clamp(13px,1.1vw,16px)' }}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="mv-desc font-sans font-normal text-[14px] leading-[1.75]">
+                <p className="mv-desc font-sans font-normal text-[15px] leading-[1.75]">
                   {item.desc}
                 </p>
               </div>

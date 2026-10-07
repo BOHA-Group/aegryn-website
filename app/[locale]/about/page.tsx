@@ -110,7 +110,7 @@ export default function AboutPage() {
                 <p className="font-sans font-bold text-ag-black tracking-[0.08em] text-[22px] mb-4">
                   {t(`name.roots.${i}.word`)}
                 </p>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {t(`name.roots.${i}.meaning`)}
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
             <p className="text-[16px] text-ag-black leading-relaxed font-semibold">
               {t('name.synthesis')}
             </p>
-            <p className="text-[14px] text-ag-gray leading-relaxed">
+            <p className="text-[15px] text-ag-gray leading-relaxed">
               {t('name.formerly')}
             </p>
           </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
                   / {ta('whyAegryn.p3Label')}
                 </p>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {ta('whyAegryn.p3')}
                 </p>
               </div>

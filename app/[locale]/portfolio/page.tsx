@@ -30,7 +30,7 @@ export default async function PortfolioPage({ params }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">
             {t('sub')}
           </p>
         </div>
@@ -41,7 +41,7 @@ export default async function PortfolioPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
           <div className="flex items-start gap-3">
             <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
-            <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-2xl">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
               {t('note')}
             </p>
           </div>

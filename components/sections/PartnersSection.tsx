@@ -28,7 +28,7 @@ export default function PartnersSection({ label, badge, title, desc, note, logos
         >
           {title}
         </h2>
-        <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-6">
+        <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-6">
           {desc}
         </p>
         <p className="font-sans text-[11px] text-ag-gray-light italic">

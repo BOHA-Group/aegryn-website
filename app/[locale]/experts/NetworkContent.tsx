@@ -243,7 +243,7 @@ export default function NetworkContent() {
             >
               {t('experts.title')}
             </h2>
-            <p className="text-[14px] text-ag-gray leading-relaxed mt-4 max-w-xl">
+            <p className="text-[15px] text-ag-gray leading-relaxed mt-4 max-w-xl">
               {t('experts.desc')}
             </p>
           </div>

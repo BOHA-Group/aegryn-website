@@ -116,7 +116,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('marketData.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('marketData.desc')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
@@ -152,7 +152,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('hundredWorkers.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('hundredWorkers.desc')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-4">
@@ -188,7 +188,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('skillsRanking.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('skillsRanking.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border mb-4">
@@ -237,7 +237,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('byRole.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('byRole.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
@@ -270,7 +270,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('industries.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('industries.desc')}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
@@ -362,7 +362,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('sources.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
             {t('sources.desc')}
           </p>
         </div>

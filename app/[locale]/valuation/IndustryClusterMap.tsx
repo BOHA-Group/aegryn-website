@@ -24,7 +24,7 @@ export default function IndustryClusterMap() {
       <h3 className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.1] mb-3" style={{ fontSize: 'clamp(20px,2.4vw,30px)' }}>
         {t('extMapTitle')}
       </h3>
-      <p className="font-sans text-[13px] text-ag-gray leading-relaxed max-w-2xl mb-3">{t('extMapDesc')}</p>
+      <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-3">{t('extMapDesc')}</p>
       <p className="font-sans text-[12px] text-ag-gray-light italic mb-6">{t('englishOnlyNote')}</p>
 
       <div className="flex flex-col gap-2">

@@ -23,7 +23,7 @@ export default async function VerifyIndexPage({ params }: Props) {
         <VerifyForm />
         <div className="mt-16 border-l-4 border-ag-apex pl-6 max-w-2xl">
           <h2 className="font-sans font-bold text-ag-black text-[18px] mb-2">{t('whatTitle')}</h2>
-          <p className="font-sans text-[14px] text-ag-black/70 leading-relaxed">{t('whatDesc')}</p>
+          <p className="font-sans text-[15px] text-ag-black/70 leading-relaxed">{t('whatDesc')}</p>
         </div>
       </section>
     </main>

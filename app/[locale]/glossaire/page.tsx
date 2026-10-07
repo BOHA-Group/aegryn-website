@@ -336,7 +336,7 @@ export default async function GlossairePage({ params }: Props) {
                     <p className="font-sans font-bold text-ag-black text-[16px] tracking-[-0.01em] mb-2 group-hover:text-ag-navy transition-colors">
                       {term.name}
                     </p>
-                    <p className="font-sans text-[14px] text-ag-gray leading-relaxed">
+                    <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                       {term.def[lang]}
                     </p>
                   </div>

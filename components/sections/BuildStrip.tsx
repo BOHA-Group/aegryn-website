@@ -48,7 +48,7 @@ export function BuildStrip() {
           >
             {t('assetsTitle')}
           </h2>
-          <p className="font-sans text-[13px] text-ag-gray leading-relaxed max-w-sm flex-1">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-sm flex-1">
             {t('assetsDesc')}
           </p>
           <Link
@@ -70,7 +70,7 @@ export function BuildStrip() {
           >
             {t('engineeringTitle')}
           </h2>
-          <p className="font-sans text-[13px] text-white/65 leading-relaxed max-w-sm flex-1">
+          <p className="font-sans text-[15px] text-white/65 leading-relaxed max-w-sm flex-1">
             {t('engineeringDesc')}
           </p>
           <Link

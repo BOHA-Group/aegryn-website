@@ -53,7 +53,7 @@ export function ConvictionSection() {
               >
                 {t(`${key}.title` as Parameters<typeof t>[0])}
               </h3>
-              <p className="text-[14px] text-ag-gray leading-relaxed">
+              <p className="text-[15px] text-ag-gray leading-relaxed">
                 {t(`${key}.desc` as Parameters<typeof t>[0])}
               </p>
             </div>

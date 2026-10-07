@@ -72,7 +72,7 @@ export default async function SecurityPage({ params }: Props) {
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4 flex items-center gap-2">
             <AlertTriangle size={14} className="text-ag-grade-b" /> {t('s1Title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s1')}</p>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">{t('s1')}</p>
           <div className="rounded-lg bg-ag-apex/8 border border-ag-apex/20 px-5 py-4 mb-6">
             <p className="font-sans font-semibold text-[13px] text-ag-black">{t('s1Official')}</p>
           </div>
@@ -92,7 +92,7 @@ export default async function SecurityPage({ params }: Props) {
         {/* Section 2 — Communications frauduleuses */}
         <section className="border-t border-ag-border pt-8">
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4">{t('s2Title')}</h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{t('s2')}</p>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">{t('s2')}</p>
           <div className="rounded-lg bg-ag-off-white border border-ag-border px-5 py-4">
             <p className="font-sans text-[13px] text-ag-gray italic">{t('s2Doubt')}</p>
           </div>

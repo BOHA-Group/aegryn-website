@@ -48,7 +48,7 @@ export function AcqSupportStrip() {
               dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
             />
           </div>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-sm self-end">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-sm self-end">
             {t('desc')}
           </p>
         </div>

@@ -234,7 +234,7 @@ export default function AlliancesContent() {
               >
                 {t('metiers.title')}
               </h2>
-              <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-12">
+              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-12">
                 {t('metiers.desc')}
               </p>
 
@@ -244,7 +244,7 @@ export default function AlliancesContent() {
                     <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.01em] leading-tight mb-3">
                       {t(`metiers.items.${key}.title`)}
                     </h3>
-                    <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-8 max-w-xl">
+                    <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8 max-w-xl">
                       <span className="font-semibold uppercase tracking-[0.14em] text-[10px] text-ag-gray-light block mb-1">
                         {t('metiers.profilesLabel')}
                       </span>
@@ -259,7 +259,7 @@ export default function AlliancesContent() {
                       ))}
                     </ul>
                     {key === 'ma' && (
-                      <p className="font-sans text-[12px] text-ag-gray-light italic leading-relaxed mt-6 max-w-xl">
+                      <p className="font-sans text-[15px] text-ag-gray-light italic leading-relaxed mt-6 max-w-xl">
                         {t('metiers.items.ma.note')}
                       </p>
                     )}
@@ -286,7 +286,7 @@ export default function AlliancesContent() {
               >
                 {t('investisseurs.title')}
               </h2>
-              <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-8">
+              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
                 {t('investisseurs.desc')}
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 max-w-3xl mb-10">
@@ -317,7 +317,7 @@ export default function AlliancesContent() {
               >
                 {t('auditeurs.title')}
               </h2>
-              <p className="text-[14px] text-ag-gray leading-relaxed max-w-xl mb-8">
+              <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-8">
                 {t('auditeurs.desc')}
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 max-w-3xl mb-10">

@@ -111,7 +111,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('formatsSection.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-14">
             {t('formatsSection.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -213,7 +213,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('domainsSection.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl mb-14">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
             {t('domainsSection.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -245,7 +245,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('platformSection.title')}
           </h2>
-          <p className="font-sans text-[14px] text-white/70 leading-relaxed max-w-2xl mb-14">
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-2xl mb-14">
             {t('platformSection.desc')}
           </p>
           {/* Schéma animé */}
@@ -273,7 +273,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('sovereigntySection.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-14">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-14">
             {t('sovereigntySection.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -432,7 +432,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('maintenance.title')}
           </h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl mb-12">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-12">
             {t('maintenance.desc')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
@@ -447,7 +447,7 @@ export default async function BuildServicePage({ params }: Props) {
               <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.evolutive.format')}</p>
             </div>
           </div>
-          <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
+          <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
             {t('maintenance.note')}
           </p>
         </div>
@@ -474,7 +474,7 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-          <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
+          <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
             {t('fees.coInvestNote')}
           </p>
         </div>
@@ -516,7 +516,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('buyerNoteSection.title')}
           </h3>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex pl-4">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex pl-4">
             {t('buyerNoteSection.desc')}
           </p>
         </div>

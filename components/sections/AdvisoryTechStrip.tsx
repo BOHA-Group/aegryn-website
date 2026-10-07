@@ -52,7 +52,7 @@ export function AdvisoryTechStrip() {
               dangerouslySetInnerHTML={{ __html: t('hero.title').replace(/\n/g, '<br>') }}
             />
           </div>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-sm self-end">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-sm self-end">
             {t('hero.desc')}
           </p>
         </div>

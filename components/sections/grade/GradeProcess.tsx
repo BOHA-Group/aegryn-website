@@ -68,7 +68,7 @@ export function GradeProcess() {
                   <h3 className="font-sans font-bold text-ag-black text-[17px] leading-snug mt-1.5 mb-2.5">
                     {title}
                   </h3>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed md:max-w-[260px] md:mx-auto">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed md:max-w-[260px] md:mx-auto">
                     {desc}
                   </p>
                 </div>

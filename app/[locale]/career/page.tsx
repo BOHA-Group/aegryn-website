@@ -169,7 +169,7 @@ export default async function CareerPage({ params }: Props) {
             >
               {t('openings.title')}
             </h2>
-            <p className="mt-4 text-[14px] text-white/60 leading-relaxed max-w-lg">
+            <p className="mt-4 text-[15px] text-white/60 leading-relaxed max-w-lg">
               {t('openings.desc')}
             </p>
           </div>

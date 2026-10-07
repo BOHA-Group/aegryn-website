@@ -117,7 +117,7 @@ export default async function InvestisseursPage({ params }: Props) {
                   <h3 className="font-sans font-semibold text-ag-black text-[18px] leading-snug tracking-[-0.02em] mb-3">
                     {title}
                   </h3>
-                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">{desc}</p>
                 </div>
               </div>
             ))}
@@ -177,7 +177,7 @@ export default async function InvestisseursPage({ params }: Props) {
             {alignment.map((item) => (
               <div key={item} className="flex items-start gap-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-ag-apex shrink-0 mt-2" />
-                <p className="font-sans text-[14px] text-white/75 leading-relaxed">{item}</p>
+                <p className="font-sans text-[15px] text-white/75 leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -194,7 +194,7 @@ export default async function InvestisseursPage({ params }: Props) {
             <p className="font-sans font-bold text-white text-[22px] max-w-md leading-snug">
               {t('final.title')}
             </p>
-            <p className="font-sans text-[14px] text-white/55 mt-3 max-w-md leading-relaxed">
+            <p className="font-sans text-[15px] text-white/55 mt-3 max-w-md leading-relaxed">
               {t('final.desc')}
             </p>
           </div>

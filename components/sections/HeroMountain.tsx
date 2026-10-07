@@ -122,7 +122,7 @@ export function HeroMountain() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-4xl">
             <p
               ref={subtitleRef}
-              className="font-sans font-normal text-[14px] text-white/80 leading-relaxed max-w-xs"
+              className="font-sans font-normal text-[15px] text-white/80 leading-relaxed max-w-xs"
             >
               {t('sub').split('\n').join(' ')}
             </p>

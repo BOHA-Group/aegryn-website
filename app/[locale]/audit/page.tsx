@@ -150,7 +150,7 @@ export default async function GradePartnersPage() {
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(24px,3vw,40px)' }}>
               {t('ctaTitle')}
             </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8">
               {t('ctaDesc')}
             </p>
             <Link

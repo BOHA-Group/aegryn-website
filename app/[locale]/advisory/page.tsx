@@ -65,7 +65,7 @@ export default async function AdvisoryPage({ params }: Props) {
             <p className="text-[15px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
             <p className="text-[15px] text-white/50 leading-relaxed">{t('hero.desc2')}</p>
           </div>
-          <p className="font-sans font-normal italic text-[14px] text-white/50 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
+          <p className="font-sans font-normal italic text-[15px] text-white/50 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
             {t('hero.quote').split('\n').map((line, i) => (
               <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
@@ -224,7 +224,7 @@ export default async function AdvisoryPage({ params }: Props) {
                     +
                   </span>
                 </summary>
-                <p className="pb-6 text-[13px] text-ag-gray leading-relaxed max-w-2xl">
+                <p className="pb-6 text-[15px] text-ag-gray leading-relaxed max-w-2xl">
                   {uc.desc}
                 </p>
               </details>
@@ -270,7 +270,7 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
-          <p className="mt-10 text-[14px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex/30 pl-5">
+          <p className="mt-10 text-[15px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex/30 pl-5">
             {t('ma.fundsNote')}{' '}
             <Link href={t('ma.fundsHref') as never} className="underline underline-offset-2 hover:text-ag-navy transition-colors">
               {t('ma.fundsLink')} ↗
@@ -340,7 +340,7 @@ export default async function AdvisoryPage({ params }: Props) {
               >
                 {t('approach.title')}
               </h2>
-              <p className="text-[14px] text-white/50 leading-relaxed">
+              <p className="text-[15px] text-white/50 leading-relaxed">
                 {t('approach.desc')}
               </p>
             </div>

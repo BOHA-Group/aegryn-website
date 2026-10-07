@@ -58,7 +58,7 @@ export default function ValuationIndexTest() {
             <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.035em] max-w-2xl mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(28px,4vw,48px)' }}>
               {ti('hero.titleStep2')}
             </h1>
-            <p className="font-sans text-[14px] text-white/60 leading-relaxed max-w-xl">
+            <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl">
               {ti('hero.descStep2')}
             </p>
             <StepIndicator phase={phase} t={ti} />

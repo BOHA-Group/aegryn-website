@@ -83,7 +83,7 @@ export function WhyUseApps() {
                 style={{ fontSize: 'clamp(14px,1.15vw,16px)' }}
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
-              <p className="why-desc font-sans font-normal text-[12px] text-ag-gray leading-[1.7]" style={{ opacity: 0 }}>
+              <p className="why-desc font-sans font-normal text-[13px] text-ag-gray leading-[1.7]" style={{ opacity: 0 }}>
                 {item.desc}
               </p>
             </div>

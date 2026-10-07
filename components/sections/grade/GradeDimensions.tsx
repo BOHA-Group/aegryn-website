@@ -87,7 +87,7 @@ export function GradeDimensions() {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-3">
             {t('regulatoryLabel')}
           </p>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-3xl">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-3xl">
             {t('regulatoryText')}
           </p>
           <div className="flex flex-wrap gap-2 mt-5">

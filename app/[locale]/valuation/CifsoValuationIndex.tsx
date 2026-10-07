@@ -304,7 +304,7 @@ export default function CifsoValuationIndex() {
             >
               {example.title}
             </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
               {example.desc}
             </p>
           </div>
@@ -416,7 +416,7 @@ export default function CifsoValuationIndex() {
             >
               {t('marketData.title')}
             </h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
               {t('marketData.desc')}
             </p>
           </div>

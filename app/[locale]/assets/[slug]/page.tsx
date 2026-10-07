@@ -101,7 +101,7 @@ export default async function AssetPage({ params }: Props) {
           >
             {asset.name}
           </h1>
-          <p className="font-sans font-semibold text-[14px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-sans font-semibold text-[15px] text-ag-gray leading-relaxed max-w-xl mb-10">
             {tItems(`${asset.id}.tagline`)}
           </p>
 

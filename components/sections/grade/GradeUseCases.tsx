@@ -117,7 +117,7 @@ export function GradeUseCases() {
                     </h3>
 
                     {/* Description — normal weight */}
-                    <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed max-w-xl mb-6">
+                    <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed max-w-xl mb-6">
                       {uc.desc}
                     </p>
 

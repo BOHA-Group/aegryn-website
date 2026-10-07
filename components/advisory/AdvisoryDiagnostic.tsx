@@ -45,7 +45,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
       <div className="px-6 md:px-10 py-8 border-b border-ag-border">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{ui.autoDiag}</p>
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] mb-2">{title}</h3>
-        <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{intro}</p>
+        <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">{intro}</p>
       </div>
 
       <ol className="divide-y divide-ag-border">
@@ -84,10 +84,10 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ui.favCount(favorable, questions.length)}</span>
               <span className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em]">{level.label}</span>
             </div>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-2xl">{level.desc}</p>
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">{level.desc}</p>
             <div className="rounded-2xl bg-ag-white border border-ag-border p-6">
               <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-ag-apex-ink mb-2">{ui.nextAction}</p>
-              <p className="font-sans text-[14px] text-ag-black leading-relaxed max-w-2xl">{level.nextAction}</p>
+              <p className="font-sans text-[15px] text-ag-black leading-relaxed max-w-2xl">{level.nextAction}</p>
             </div>
             <div className="flex items-center gap-4 flex-wrap pt-2">
               <Link

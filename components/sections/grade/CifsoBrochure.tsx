@@ -243,7 +243,7 @@ export function CifsoBrochure() {
         {/* ── 04 CINQ DIMENSIONS (2 pages) ── */}
         <Page n={6} total={TOTAL} label={pageLabel}>
           <SectionHead num={num(4)} title={b('s4Title')} lead={b('s4Lead')} />
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">{gs('cifsDesc')}</p>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8">{gs('cifsDesc')}</p>
           <div className="flex flex-col gap-5">
             {cifs.slice(0, 3).map((d) => <DimensionCard key={d.code} d={d} weightLabel={b('s4Weight')} criteriaLabel={b('s4Criteria')} />)}
           </div>
@@ -328,7 +328,7 @@ export function CifsoBrochure() {
                   <span className="font-mono text-[10px] text-ag-gray-light">{num(i + 1)}</span>
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[17px] mb-1.5">{p.title}</h3>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-xl">{p.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -413,7 +413,7 @@ export function CifsoBrochure() {
 
           <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">{num(11)}</p>
           <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.03em] mb-3">{b('s11Title')}</h2>
-          <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-6">{b('s11Lead')}</p>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-6">{b('s11Lead')}</p>
           <div className="overflow-x-auto -mx-5 sm:-mx-10 md:mx-0 px-5 sm:px-10 md:px-0">
           <table className="w-full min-w-[520px] border-collapse">
             <thead>

@@ -179,7 +179,7 @@ export function TechStackShowcase() {
               {t('title')}
             </h2>
           </div>
-          <p className="font-sans text-[12px] text-ag-gray leading-relaxed max-w-sm md:text-right">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-sm md:text-right">
             {t('desc')}
           </p>
         </div>

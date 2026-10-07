@@ -171,7 +171,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           />
           <p
             ref={subRef}
-            className="font-sans font-normal text-[14px] text-white/75 leading-relaxed max-w-sm"
+            className="font-sans font-normal text-[15px] text-white/75 leading-relaxed max-w-sm"
             style={{ opacity: 0 }}
           >
             {sub ?? '6 actifs · 3 catégories · Suisse & Europe'}

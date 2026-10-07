@@ -45,8 +45,8 @@ export function HybridBlock() {
                   line === ''
                     ? 'h-4'
                     : line.startsWith('Aegryn')
-                    ? 'font-semibold text-[13px] text-ag-black'
-                    : 'font-normal text-[13px] text-ag-gray'
+                    ? 'font-semibold text-[15px] text-ag-black'
+                    : 'font-normal text-[15px] text-ag-gray'
                 }`}
                 style={{ opacity: 0 }}
               >

@@ -34,7 +34,7 @@ export default function IndexBenchmarks() {
             <div>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('label')}</p>
               <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('title')}</h2>
-              <p className="font-sans text-[14px] text-white/60 leading-relaxed max-w-xl mb-8">{t('desc')}</p>
+              <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-8">{t('desc')}</p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   [snap?.coverage.clusters ?? 5, t('kpis.clusters')],

@@ -147,7 +147,7 @@ export default function GradeSubmitForm() {
               <h2 className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em]">
                 {t('form.successTitle')}
               </h2>
-              <p className="font-sans text-[14px] text-ag-gray leading-relaxed max-w-sm">
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-sm">
                 {t('form.successDesc')}
               </p>
               <Link

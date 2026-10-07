@@ -71,7 +71,7 @@ export default async function VerifyCodePage({ params }: Props) {
               {cert.summary && (
                 <>
                   <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mt-8 mb-2">{t('summary')}</p>
-                  <p className="font-sans text-[14px] text-ag-black/80 leading-relaxed border-l-4 border-ag-apex pl-4">{cert.summary}</p>
+                  <p className="font-sans text-[15px] text-ag-black/80 leading-relaxed border-l-4 border-ag-apex pl-4">{cert.summary}</p>
                 </>
               )}
             </div>
@@ -87,15 +87,15 @@ export default async function VerifyCodePage({ params }: Props) {
             </div>
           </div>
         ) : (
-          <p className="font-sans text-[14px] text-ag-black/70 leading-relaxed max-w-2xl mb-10">{t('notFoundHint')}</p>
+          <p className="font-sans text-[15px] text-ag-black/70 leading-relaxed max-w-2xl mb-10">{t('notFoundHint')}</p>
         )}
 
         <VerifyForm initial={cert ? '' : clean} />
 
         <div className="mt-16 border-l-4 border-ag-apex pl-6 max-w-2xl">
           <h2 className="font-sans font-bold text-ag-black text-[18px] mb-2">{t('whatTitle')}</h2>
-          <p className="font-sans text-[14px] text-ag-black/70 leading-relaxed mb-4">{t('whatDesc')}</p>
-          <p className="font-sans text-[14px] text-ag-black/70 leading-relaxed mb-4">{t('whatDeed')}</p>
+          <p className="font-sans text-[15px] text-ag-black/70 leading-relaxed mb-4">{t('whatDesc')}</p>
+          <p className="font-sans text-[15px] text-ag-black/70 leading-relaxed mb-4">{t('whatDeed')}</p>
           <Link href={`/${locale}/grade`} className="font-sans font-semibold text-[12px] tracking-[0.14em] uppercase text-ag-navy underline underline-offset-4">{t('learnMore')}</Link>
         </div>
       </section>
