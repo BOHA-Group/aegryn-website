@@ -106,7 +106,7 @@ export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
                 <button
                   type="button"
                   onClick={() => handleSelect(code)}
-                  className={`w-full text-left px-4 py-2 font-sans text-[13px] transition-colors ${
+                  className={`w-full text-left px-3 py-1 font-sans !font-normal text-[13px] transition-colors ${
                     current
                       ? 'text-ag-apex-ink'
                       : dark
