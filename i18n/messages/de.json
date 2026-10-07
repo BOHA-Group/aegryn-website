@@ -9185,8 +9185,7 @@
         "label": "Übergangsprofile",
         "title": "Eine operative Führungskraft, innert Wochen.",
         "desc": "Für Momente, in denen die Organisation kein langes Rekrutierungsverfahren abwarten kann: plötzlicher Abgang, Restrukturierung, Integration, Transformation oder Übergabe.",
-        "ctaNeed": "Mein Bedarf",
-        "ctaProfile": "Mein Übergangsprofil anbieten"
+        "ctaNeed": "Mein Bedarf"
       },
       "situations": {
         "title": "Wann Übergang die richtige Antwort ist",

@@ -9015,8 +9015,7 @@
         "label": "Profils de transition",
         "title": "Un dirigeant opérationnel, en quelques semaines.",
         "desc": "Pour les moments où l’organisation ne peut pas attendre un recrutement long : départ soudain, restructuration, intégration, transformation ou passage de relais.",
-        "ctaNeed": "Présenter mon besoin",
-        "ctaProfile": "Proposer mon profil de transition"
+        "ctaNeed": "Présenter mon besoin"
       },
       "situations": {
         "title": "Quand la transition est la bonne réponse",

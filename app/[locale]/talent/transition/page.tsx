@@ -50,12 +50,6 @@ export default async function TalentTransitionPage({ params }: Props) {
             >
               {t('hero.ctaNeed')} <ArrowUpRight size={12} />
             </Link>
-            <Link
-              href="/talent/candidats"
-              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/40 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-white hover:text-ag-navy transition-colors"
-            >
-              {t('hero.ctaProfile')} <ArrowUpRight size={12} />
-            </Link>
           </div>
         </div>
       </section>
@@ -150,12 +144,6 @@ export default async function TalentTransitionPage({ params }: Props) {
               className="rounded-lg inline-flex items-center justify-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {t('hero.ctaNeed')} <ArrowUpRight size={12} />
-            </Link>
-            <Link
-              href="/talent/candidats"
-              className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/40 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-white hover:text-ag-navy transition-colors"
-            >
-              {t('hero.ctaProfile')} <ArrowUpRight size={12} />
             </Link>
           </div>
         </div>

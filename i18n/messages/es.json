@@ -9055,8 +9055,7 @@
         "label": "Perfiles de transición",
         "title": "Un directivo operativo, en pocas semanas.",
         "desc": "Para los momentos en que la organización no puede esperar un reclutamiento largo: salida repentina, reestructuración, integración, transformación o relevo.",
-        "ctaNeed": "Presentar mi necesidad",
-        "ctaProfile": "Proponer mi perfil de transición"
+        "ctaNeed": "Presentar mi necesidad"
       },
       "situations": {
         "title": "Cuando la transición es la respuesta adecuada",
