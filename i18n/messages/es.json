@@ -801,7 +801,7 @@
       {
         "val": "5",
         "label": "Disciplinas integradas",
-        "sub": "Asesoría · Construcción · Transiciones · Talento · Información"
+        "sub": "Asesoría · Construcción · Trayectoria · Talento · Información"
       },
       {
         "val": "22+",
@@ -814,9 +814,9 @@
         "sub": "Lo que aconsejamos, lo aplicamos"
       },
       {
-        "val": "5",
-        "label": "Dimensiones CIFSO",
-        "sub": "Código · PI · Finanzas · Seguridad · Organización"
+        "val": "20+",
+        "label": "Años de experiencia del equipo directivo",
+        "sub": "Estrategia · Tech · M&A · Operaciones"
       }
     ],
     "text": "Hemos pasado más de veinte años construyendo, asesorando y reestructurando organizaciones. Lo que hemos adquirido no tiene precio. Las empresas que perduran no eligen entre estrategia y tecnología. Las piensan juntas. Aegryn existe para quienes han comprendido eso."
