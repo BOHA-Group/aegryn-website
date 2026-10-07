@@ -2754,7 +2754,6 @@
       "audienceShowMatrix": "Show full matrix",
       "audienceHideMatrix": "Collapse",
       "audienceColProfile": "Profile",
-      "pricingRecommended": "Recommended",
       "contactCta": "Get in touch",
       "processLabel": "Certification process",
       "processTitle": "Certification process",
@@ -2769,7 +2768,8 @@
           "What it is worth: reference multiple from the CIFSO Valuation Index",
           "What it can transfer: verifiable certificate, valid twelve months"
         ]
-      }
+      },
+      "pricingRecommended": "Recommended"
     },
     "grades": [
       {

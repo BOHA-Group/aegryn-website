@@ -3596,7 +3596,6 @@
       "audienceShowMatrix": "Visualizza la matrice completa",
       "audienceHideMatrix": "Comprimi",
       "audienceColProfile": "Profilo",
-      "pricingRecommended": "Consigliato",
       "contactCta": "Contattaci",
       "processLabel": "Processo di certificazione",
       "processTitle": "Processo di certificazione",
@@ -3611,7 +3610,8 @@
           "Ciò che vale: multiplo di riferimento dal CIFSO Valuation Index",
           "Ciò che può trasmettere: certificato verificabile, valido dodici mesi"
         ]
-      }
+      },
+      "pricingRecommended": "Consigliato"
     },
     "grades": [
       {

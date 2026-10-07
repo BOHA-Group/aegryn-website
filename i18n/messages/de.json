@@ -3596,7 +3596,6 @@
       "audienceShowMatrix": "Vollständige Matrix anzeigen",
       "audienceHideMatrix": "Reduzieren",
       "audienceColProfile": "Profil",
-      "pricingRecommended": "Empfohlen",
       "contactCta": "Kontakt aufnehmen",
       "processLabel": "Zertifizierungsprozess",
       "processTitle": "Zertifizierungsprozess",
@@ -3611,7 +3610,8 @@
           "Was es wert ist: Referenz-Multiplikator aus dem CIFSO Valuation Index",
           "Was es übertragen kann: prüfbares Zertifikat, zwölf Monate gültig"
         ]
-      }
+      },
+      "pricingRecommended": "Empfohlen"
     },
     "grades": [
       {

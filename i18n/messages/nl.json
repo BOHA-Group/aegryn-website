@@ -3596,7 +3596,6 @@
       "audienceShowMatrix": "Volledige matrix tonen",
       "audienceHideMatrix": "Inklappen",
       "audienceColProfile": "Profiel",
-      "pricingRecommended": "Aanbevolen",
       "contactCta": "Contact opnemen",
       "processLabel": "Certificeringsproces",
       "processTitle": "Certificeringsproces",
@@ -3611,7 +3610,8 @@
           "Wat zij waard is: referentiemultiple uit de CIFSO Valuation Index",
           "Wat zij kan overdragen: verifieerbaar certificaat, twaalf maanden geldig"
         ]
-      }
+      },
+      "pricingRecommended": "Aanbevolen"
     },
     "grades": [
       {

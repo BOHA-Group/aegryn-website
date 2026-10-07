@@ -2714,7 +2714,6 @@
       "audienceShowMatrix": "Voir la matrice complète",
       "audienceHideMatrix": "Réduire",
       "audienceColProfile": "Profil",
-      "pricingRecommended": "Recommandé",
       "contactCta": "Prendre contact",
       "processLabel": "Processus de certification",
       "processTitle": "Processus de certification",
@@ -2729,7 +2728,8 @@
           "Ce qu'elle vaut : multiple de référence issu du CIFSO Valuation Index",
           "Ce qu'elle peut transmettre : certificat vérifiable, valable douze mois"
         ]
-      }
+      },
+      "pricingRecommended": "Recommandé"
     },
     "grades": [
       {

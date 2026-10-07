@@ -74,16 +74,7 @@ export function GradePricing() {
                   : 'border-white/20 bg-white/[0.07] hover:bg-white/[0.12]'
               }`}
             >
-              {/* Recommended badge */}
-              {tier.highlight && (
-                <div className="absolute top-0 left-0 right-0 flex justify-center">
-                  <span className="bg-ag-apex text-ag-navy font-mono text-[9px] tracking-[0.2em] uppercase font-bold px-4 py-1 rounded-b-lg">
-                    {t('pricingRecommended')}
-                  </span>
-                </div>
-              )}
-
-              <div className={`flex flex-col flex-1 p-8 ${tier.highlight ? 'pt-10' : ''}`}>
+              <div className="flex flex-col flex-1 p-8">
 
                 {/* Tier name + target */}
                 <div className="mb-8">
