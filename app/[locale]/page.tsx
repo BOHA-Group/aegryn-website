@@ -2,7 +2,6 @@ import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
-import { FounderQuoteStrip } from '@/components/sections/FounderQuoteStrip'
 import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { SegmentsSection }   from '@/components/sections/SegmentsSection'
@@ -40,9 +39,6 @@ export default async function HomePage({ params }: Props) {
 
       {/* ── 01. Notre Conviction + About ───────────────────── */}
       <ManifestoSection />
-
-      {/* ── 02. Citation fondateur ─────────────────────────── */}
-      <FounderQuoteStrip />
 
       {/* ── 03. Le Modèle Aegryn — 5 disciplines ──────────── */}
       <MissionVideoSection />
