@@ -7094,7 +7094,7 @@
           "account"
         ],
         "q": "Bieten Sie Rekrutierungsdienste an?",
-        "a": "Ja, Aegryn Talent bietet die Rekrutierung von Schlüsselprofilen — Führungskräfte und Experten — und die Vermittlung von Übergangsprofilen für jede Lebenszyklusphase des Unternehmens. Erfolgshonorar, fällig bei Amtsantritt, mit dreimonatiger Ersatzgarantie. Formulare auf /talent."
+        "a": "Ja, Aegryn Talent bietet die Rekrutierung von Schlüsselprofilen (Führungskräfte und Experten) und die Vermittlung von Übergangsprofilen für jede Lebenszyklusphase des Unternehmens. Erfolgshonorar, fällig bei Amtsantritt, mit dreimonatiger Ersatzgarantie. Formulare auf /talent."
       },
       {
         "id": "advisory-service",
@@ -9078,25 +9078,25 @@
         {
           "stat": "305 800",
           "desc": "geplante Führungskräfte-Rekrutierungen 2026 (+4 % ggü. 2025). Top-Funktionen: Informatiker (61 160), Studien & F&E (52 000), Vertrieb (51 990).",
-          "source": "Apec, Rekrutierungsprognosen Führungskräfte 2026 — Frankreich",
+          "source": "Apec, Rekrutierungsprognosen Führungskräfte 2026, Frankreich",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
           "stat": "7 %",
           "desc": "der Unternehmen planen im Q3 2026 mindestens eine Führungskraft einzustellen – tiefster Stand seit Jahren; 42 % der Midcaps und Grossunternehmen.",
-          "source": "Apec, Barometer Q3 2026 — Frankreich",
+          "source": "Apec, Barometer Q3 2026, Frankreich",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
           "stat": "−0,2 %",
           "desc": "Stellenanzeigen in der Schweiz im Jahresvergleich (Q2 2026). Zwölfmonatswert: Gesundheit +17 %, Industrie +12 %, Informatik +6 %; rückläufig: Verkaufsberufe −13 %, Wirtschaft & Management −10 %.",
-          "source": "Adecco Swiss Job Market Index Q2 2026 — Schweiz",
+          "source": "Adecco Swiss Job Market Index Q2 2026, Schweiz",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
           "stat": "4 / 32",
           "desc": "Berufskategorien mit Fachkräftemangel in der Schweiz (Gesundheit, Bauleiter, Ingenieurtechniker, Elektriker); Index 2025 um 22 % gesunken. Überschuss in Administration, Informatik und Finanzen.",
-          "source": "Adecco Swiss Skills Shortage Index 2025 — Schweiz",
+          "source": "Adecco Swiss Skills Shortage Index 2025, Schweiz",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
@@ -9223,19 +9223,19 @@
           {
             "stat": "×4,1",
             "desc": "Nachfrage nach Interims-Führungskräften seit 2020. CFOs stehen für 51 % der C-Suite-Interimsnachfrage. Mittlere Mandatsdauer: 6 bis 9 Monate.",
-            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, April 2025 — US & Europa",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, April 2025, US & Europa",
             "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
           },
           {
             "stat": "66 %",
             "desc": "der befragten Organisationen planen 2025 den Einsatz eines Interimsmanagers; 39 % nennen Geschwindigkeit und sofortige Wirkung. Mandate von 6 bis 12 Monaten im Schnitt.",
-            "source": "Robert Walters, Erhebung Februar 2025 — Europa",
+            "source": "Robert Walters, Erhebung Februar 2025, Europa",
             "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
           },
           {
             "stat": "11,5 Monate",
             "desc": "mittlere Mandatsdauer in Europa; über 60 % der Mandate auf C-Level oder höher.",
-            "source": "INIMA Europe Survey 2025 — Europa",
+            "source": "INIMA Europe Survey 2025, Europa",
             "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
           }
         ],
@@ -9281,7 +9281,7 @@
         "items": [
           {
             "title": "Festanstellungen",
-            "desc": "Direkteinstellungen von Führungskräften, Managern und Schlüsselexperten — vom Top-Management bis zu Expertenfunktionen, je nach Lebenszyklus des Unternehmens."
+            "desc": "Direkteinstellungen von Führungskräften, Managern und Schlüsselexperten, vom Top-Management bis zu Expertenfunktionen, je nach Lebenszyklus des Unternehmens."
           },
           {
             "title": "Übergangsmandate",

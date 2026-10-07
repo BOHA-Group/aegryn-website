@@ -7094,7 +7094,7 @@
           "account"
         ],
         "q": "¿Ofrecen servicios de reclutamiento?",
-        "a": "Sí, Aegryn Talent ofrece reclutamiento de perfiles clave — directivos y expertos — y colocación de perfiles de transición, en cada fase del ciclo de vida de la empresa. Honorarios al éxito, a la toma de posesión, con garantía de sustitución de tres meses. Formularios en /talent."
+        "a": "Sí, Aegryn Talent ofrece reclutamiento de perfiles clave (directivos y expertos) y colocación de perfiles de transición, en cada fase del ciclo de vida de la empresa. Honorarios al éxito, a la toma de posesión, con garantía de sustitución de tres meses. Formularios en /talent."
       },
       {
         "id": "advisory-service",
@@ -8948,25 +8948,25 @@
         {
           "stat": "305 800",
           "desc": "contrataciones de cuadros previstas en 2026 (+4 % vs 2025). Funciones en cabeza: informáticos (61 160), estudios e I+D (52 000), comerciales (51 990).",
-          "source": "Apec, previsiones de contratación de cuadros 2026 — Francia",
+          "source": "Apec, previsiones de contratación de cuadros 2026, Francia",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
           "stat": "7 %",
           "desc": "de las empresas prevén contratar al menos un cuadro en el T3 2026, nivel más bajo en años; 42 % de las ETI y grandes empresas.",
-          "source": "Apec, barómetro T3 2026 — Francia",
+          "source": "Apec, barómetro T3 2026, Francia",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
           "stat": "−0,2 %",
           "desc": "de ofertas de empleo en Suiza en un año (T2 2026). Año móvil: sanidad +17 %, industria +12 %, informática +6 %; en baja: comerciales −13 %, economía y gestión −10 %.",
-          "source": "Adecco Swiss Job Market Index T2 2026 — Suiza",
+          "source": "Adecco Swiss Job Market Index T2 2026, Suiza",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
           "stat": "4 / 32",
           "desc": "categorías profesionales en penuria en Suiza (sanidad, jefes de obra, técnicos de ingeniería, electricistas); índice 2025 en baja del 22 %. Excedente de candidaturas en administración, informática y finanzas.",
-          "source": "Adecco Swiss Skills Shortage Index 2025 — Suiza",
+          "source": "Adecco Swiss Skills Shortage Index 2025, Suiza",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
@@ -9093,19 +9093,19 @@
           {
             "stat": "×4,1",
             "desc": "de demanda de directivos interinos desde 2020. Los CFO representan el 51 % de las solicitudes C-suite interinas. Misión media: 6 a 9 meses.",
-            "source": "Heidrick & Struggles / Business Talent Group, vía Fortune, abril 2025 — EE.UU. & Europa",
+            "source": "Heidrick & Struggles / Business Talent Group, vía Fortune, abril 2025, EE.UU. & Europa",
             "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
           },
           {
             "stat": "66 %",
             "desc": "de las organizaciones encuestadas prevén recurrir a un manager de transición en 2025; el 39 % cita rapidez e impacto inmediato. Misiones de 6 a 12 meses de media.",
-            "source": "Robert Walters, encuesta de febrero de 2025 — Europa",
+            "source": "Robert Walters, encuesta de febrero de 2025, Europa",
             "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
           },
           {
             "stat": "11,5 meses",
             "desc": "de duración media de misión en Europa; más del 60 % de las misiones a nivel C o superior.",
-            "source": "INIMA Europe Survey 2025 — Europa",
+            "source": "INIMA Europe Survey 2025, Europa",
             "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
           }
         ],
@@ -9151,7 +9151,7 @@
         "items": [
           {
             "title": "Puestos permanentes",
-            "desc": "Contratación directa de directivos, managers y expertos clave — de la alta dirección a las funciones expertas, según el ciclo de vida de la empresa."
+            "desc": "Contratación directa de directivos, managers y expertos clave, de la alta dirección a las funciones expertas, según el ciclo de vida de la empresa."
           },
           {
             "title": "Misiones de transición",

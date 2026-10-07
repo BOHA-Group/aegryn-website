@@ -7069,7 +7069,7 @@
           "account"
         ],
         "q": "Proposez-vous des services de recrutement ?",
-        "a": "Oui, Aegryn Talent propose du recrutement de profils clés — dirigeants et experts — et le placement de profils de transition, à chaque cycle de vie de l'entreprise. Honoraires au succès, dus à la prise de poste, avec garantie de remplacement de trois mois. Formulaires disponibles sur /talent."
+        "a": "Oui, Aegryn Talent propose du recrutement de profils clés (dirigeants et experts) et le placement de profils de transition, à chaque cycle de vie de l'entreprise. Honoraires au succès, dus à la prise de poste, avec garantie de remplacement de trois mois. Formulaires disponibles sur /talent."
       },
       {
         "id": "advisory-service",
@@ -8908,25 +8908,25 @@
         {
           "stat": "305 800",
           "desc": "recrutements de cadres prévus en 2026 (+4 % vs 2025). Fonctions en tête : informaticiens (61 160), études et R&D (52 000), commerciaux (51 990).",
-          "source": "Apec, prévisions de recrutements de cadres 2026 — France",
+          "source": "Apec, prévisions de recrutements de cadres 2026, France",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
           "stat": "7 %",
           "desc": "des entreprises envisagent de recruter au moins un cadre au T3 2026, plus bas niveau depuis plusieurs années ; 42 % des ETI et grandes entreprises.",
-          "source": "Apec, baromètre T3 2026 — France",
+          "source": "Apec, baromètre T3 2026, France",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
           "stat": "−0,2 %",
           "desc": "d’offres d’emploi en Suisse sur un an (T2 2026). Sur l’année mobile : santé +17 %, industrie +12 %, informatique +6 % ; en baisse : métiers commerciaux −13 %, économie et gestion −10 %.",
-          "source": "Adecco Swiss Job Market Index T2 2026 — Suisse",
+          "source": "Adecco Swiss Job Market Index T2 2026, Suisse",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
           "stat": "4 / 32",
           "desc": "catégories professionnelles en pénurie en Suisse (santé, chefs de chantier, techniciens en ingénierie, électriciens) ; indice 2025 en baisse de 22 %. Excédent de candidatures en administration, informatique et finance.",
-          "source": "Adecco Swiss Skills Shortage Index 2025 — Suisse",
+          "source": "Adecco Swiss Skills Shortage Index 2025, Suisse",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
@@ -9053,19 +9053,19 @@
           {
             "stat": "×4,1",
             "desc": "de demande de dirigeants de transition depuis 2020. Les CFO représentent 51 % des demandes de niveau C-suite en intérim. Mission moyenne : 6 à 9 mois.",
-            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, avril 2025 — US & Europe",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, avril 2025, US & Europe",
             "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
           },
           {
             "stat": "66 %",
             "desc": "des organisations interrogées envisagent de recourir à un manager de transition en 2025 ; 39 % citent la rapidité et l’impact immédiat. Missions de 6 à 12 mois en moyenne.",
-            "source": "Robert Walters, enquête de février 2025 — Europe",
+            "source": "Robert Walters, enquête de février 2025, Europe",
             "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
           },
           {
             "stat": "11,5 mois",
             "desc": "de durée moyenne de mission en Europe ; plus de 60 % des missions au niveau C ou supérieur.",
-            "source": "INIMA Europe Survey 2025 — Europe",
+            "source": "INIMA Europe Survey 2025, Europe",
             "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
           }
         ],
@@ -9111,7 +9111,7 @@
         "items": [
           {
             "title": "Postes permanents",
-            "desc": "Recrutement en propre de dirigeants, de managers et d'experts clés — du top management aux fonctions expertes, selon le cycle de vie de l'entreprise."
+            "desc": "Recrutement en propre de dirigeants, de managers et d'experts clés, du top management aux fonctions expertes, selon le cycle de vie de l'entreprise."
           },
           {
             "title": "Missions de transition",

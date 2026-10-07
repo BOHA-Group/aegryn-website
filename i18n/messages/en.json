@@ -7109,7 +7109,7 @@
           "account"
         ],
         "q": "Do you offer recruitment services?",
-        "a": "Yes, Aegryn Talent offers key-profile recruitment — executives and experts — and transition-profile placement, at every stage of the company lifecycle. Success-based fees due at start date, with a three-month replacement guarantee. Forms available at /talent."
+        "a": "Yes, Aegryn Talent offers key-profile recruitment (executives and experts) and transition-profile placement, at every stage of the company lifecycle. Success-based fees due at start date, with a three-month replacement guarantee. Forms available at /talent."
       },
       {
         "id": "advisory-service",
@@ -8948,25 +8948,25 @@
         {
           "stat": "305,800",
           "desc": "executive hires forecast for 2026 (+4% vs 2025). Top functions: IT specialists (61,160), research & R&D (52,000), sales executives (51,990).",
-          "source": "Apec, 2026 executive hiring forecasts — France",
+          "source": "Apec, 2026 executive hiring forecasts, France",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
           "stat": "7%",
           "desc": "of companies plan to hire at least one executive in Q3 2026, the lowest level in years; 42% of mid-caps and large companies.",
-          "source": "Apec, Q3 2026 barometer — France",
+          "source": "Apec, Q3 2026 barometer, France",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
           "stat": "−0.2%",
           "desc": "job postings in Switzerland year over year (Q2 2026). Trailing year: healthcare +17%, industry +12%, IT +6%; declining: sales roles −13%, economics & management −10%.",
-          "source": "Adecco Swiss Job Market Index Q2 2026 — Switzerland",
+          "source": "Adecco Swiss Job Market Index Q2 2026, Switzerland",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
           "stat": "4 / 32",
           "desc": "occupational categories in shortage in Switzerland (healthcare, site managers, engineering technicians, electricians); 2025 index down 22%. Surplus of applications in administration, IT and finance.",
-          "source": "Adecco Swiss Skills Shortage Index 2025 — Switzerland",
+          "source": "Adecco Swiss Skills Shortage Index 2025, Switzerland",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
@@ -9093,19 +9093,19 @@
           {
             "stat": "×4.1",
             "desc": "demand for interim executives since 2020. CFOs represent 51% of C-suite interim demand. Average assignment: 6 to 9 months.",
-            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, April 2025 — US & Europe",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, April 2025, US & Europe",
             "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
           },
           {
             "stat": "66%",
             "desc": "of surveyed organisations plan to use an interim manager in 2025; 39% cite speed and immediate impact. Average assignments of 6 to 12 months.",
-            "source": "Robert Walters, February 2025 survey — Europe",
+            "source": "Robert Walters, February 2025 survey, Europe",
             "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
           },
           {
             "stat": "11.5 mo",
             "desc": "average assignment length in Europe; over 60% of assignments at C-level or above.",
-            "source": "INIMA Europe Survey 2025 — Europe",
+            "source": "INIMA Europe Survey 2025, Europe",
             "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
           }
         ],
@@ -9151,7 +9151,7 @@
         "items": [
           {
             "title": "Permanent positions",
-            "desc": "Direct hires of executives, managers and key experts — from top management to expert functions, according to the company's lifecycle."
+            "desc": "Direct hires of executives, managers and key experts, from top management to expert functions, according to the company's lifecycle."
           },
           {
             "title": "Transition assignments",

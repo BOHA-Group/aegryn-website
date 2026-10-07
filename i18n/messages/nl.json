@@ -7109,7 +7109,7 @@
           "account"
         ],
         "q": "Bieden jullie recruitmentdiensten aan?",
-        "a": "Ja, Aegryn Talent biedt werving van sleutelprofielen — leidinggevenden en experts — en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf. No-cure-no-pay honoraria bij indiensttreding, met drie maanden vervangingsgarantie. Formulieren op /talent."
+        "a": "Ja, Aegryn Talent biedt werving van sleutelprofielen (leidinggevenden en experts) en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf. No-cure-no-pay honoraria bij indiensttreding, met drie maanden vervangingsgarantie. Formulieren op /talent."
       },
       {
         "id": "advisory-service",
@@ -8948,25 +8948,25 @@
         {
           "stat": "305 800",
           "desc": "verwachte aanwervingen van kaderleden in 2026 (+4 % t.o.v. 2025). Topfuncties: informatici (61 160), onderzoek & R&D (52 000), commercieel (51 990).",
-          "source": "Apec, aanwervingsprognoses kaderleden 2026 — Frankrijk",
+          "source": "Apec, aanwervingsprognoses kaderleden 2026, Frankrijk",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
         },
         {
           "stat": "7 %",
           "desc": "van de bedrijven overweegt in Q3 2026 minstens één kaderlid aan te werven, laagste niveau in jaren; 42 % van de midcaps en grote ondernemingen.",
-          "source": "Apec, barometer Q3 2026 — Frankrijk",
+          "source": "Apec, barometer Q3 2026, Frankrijk",
           "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
         },
         {
           "stat": "−0,2 %",
           "desc": "vacatures in Zwitserland op jaarbasis (Q2 2026). Voortschrijdend jaar: zorg +17 %, industrie +12 %, IT +6 %; dalend: commerciële functies −13 %, economie & management −10 %.",
-          "source": "Adecco Swiss Job Market Index Q2 2026 — Zwitserland",
+          "source": "Adecco Swiss Job Market Index Q2 2026, Zwitserland",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/job-index/job-index-q2-2026/job_index_q2_2026_medienmitteilung.pdf"
         },
         {
           "stat": "4 / 32",
           "desc": "beroepscategorieën met tekort in Zwitserland (zorg, werfleiders, technici ingenieurs, elektriciens); index 2025 met 22 % gedaald. Overschot aan sollicitaties in administratie, IT en financiën.",
-          "source": "Adecco Swiss Skills Shortage Index 2025 — Zwitserland",
+          "source": "Adecco Swiss Skills Shortage Index 2025, Zwitserland",
           "url": "https://www.adeccogroup.com/-/media/project/adecco-group/switzerland/swiss-skills-shortage/2025/files/medienmitteilung_fkm_national_2025.pdf"
         }
       ],
@@ -9093,19 +9093,19 @@
           {
             "stat": "×4,1",
             "desc": "vraag naar interim-leidinggevenden sinds 2020. CFO’s vertegenwoordigen 51 % van de C-suite interimvraag. Gemiddelde opdracht: 6 tot 9 maanden.",
-            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, april 2025 — VS & Europa",
+            "source": "Heidrick & Struggles / Business Talent Group, via Fortune, april 2025, VS & Europa",
             "url": "https://fortune.com/2025/04/23/demand-interim-c-suite-leaders-skyrocketing-cfo/"
           },
           {
             "stat": "66 %",
             "desc": "van de ondervraagde organisaties overweegt in 2025 een interimmanager in te zetten; 39 % citeert snelheid en onmiddellijke impact. Mandaten van 6 tot 12 maanden gemiddeld.",
-            "source": "Robert Walters, onderzoek februari 2025 — Europa",
+            "source": "Robert Walters, onderzoek februari 2025, Europa",
             "url": "https://www.robertwalters.be/insights/hiring-advice/blog/interim-management-europe-leadership.html"
           },
           {
             "stat": "11,5 mnd",
             "desc": "gemiddelde mandaatsduur in Europa; meer dan 60 % van de mandaten op C-niveau of hoger.",
-            "source": "INIMA Europe Survey 2025 — Europa",
+            "source": "INIMA Europe Survey 2025, Europa",
             "url": "https://www.inima.management/blog/the-european-interim-management-landscape-in-2025"
           }
         ],
@@ -9151,7 +9151,7 @@
         "items": [
           {
             "title": "Vaste functies",
-            "desc": "Directe aanwerving van leidinggevenden, managers en sleutelexperts — van topmanagement tot expertfuncties, afhankelijk van de levensfase van het bedrijf."
+            "desc": "Directe aanwerving van leidinggevenden, managers en sleutelexperts, van topmanagement tot expertfuncties, afhankelijk van de levensfase van het bedrijf."
           },
           {
             "title": "Transitie-opdrachten",
