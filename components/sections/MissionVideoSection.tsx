@@ -69,10 +69,10 @@ export function MissionVideoSection() {
         },
       })
 
-      /* Phase 0–25% — vidéo monte en opacité */
+      /* Phase 0–55% — vidéo monte en opacité progressivement */
       tl.fromTo(videoRef.current,
         { opacity: 0 },
-        { opacity: 1, ease: 'none', duration: 0.25 },
+        { opacity: 1, ease: 'sine.in', duration: 0.55 },
         0,
       )
 
