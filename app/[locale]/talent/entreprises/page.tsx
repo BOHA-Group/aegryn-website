@@ -70,9 +70,6 @@ export default async function TalentEntreprisesPage({ params }: Props) {
                   <span className="w-9 h-9 rounded-lg bg-ag-apex/10 border border-ag-apex/25 flex items-center justify-center text-ag-apex-ink shrink-0">
                     <Icon size={16} strokeWidth={1.8} />
                   </span>
-                  <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-apex-ink">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
                 </div>
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {step.title}
