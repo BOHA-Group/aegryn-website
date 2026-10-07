@@ -15,10 +15,10 @@ const hiringSchema = z.object({
   company: z.string().min(2, 'Company name required'),
   contactName: z.string().min(2, 'Contact name required'),
   email: z.string().email('Valid email required'),
-  phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
+  phone: z.union([z.literal(''), z.string().regex(/^\+\d{1,3}\s\d/, 'Format invalide')]).optional(),
   roleTitle: z.string().min(2, 'Role title required'),
-  missionType: z.enum(['permanent', 'transition']).optional(),
-  lifecycleCycle: z.enum(CYCLES).optional(),
+  missionType: z.enum(['permanent', 'transition']).optional().or(z.literal('')),
+  lifecycleCycle: z.enum(CYCLES).optional().or(z.literal('')),
   companySize: z.string().optional(),
   confidential: z.boolean().optional(),
   roleDescription: z.string().min(20, 'Role description too short (min 20 characters)').max(2000),
@@ -47,6 +47,7 @@ export default function TalentHiringForm() {
     handleSubmit,
     reset,
     control,
+    watch,
     formState: { errors },
   } = useForm<HiringFormData>({
     resolver: zodResolver(hiringSchema),
@@ -55,6 +56,27 @@ export default function TalentHiringForm() {
       missionType: prefillType === 'transition' ? 'transition' : undefined,
     },
   })
+
+  const wCompany  = watch('company')
+  const wContact  = watch('contactName')
+  const wEmail    = watch('email')
+  const wRole     = watch('roleTitle')
+  const wDesc     = watch('roleDescription')
+  const wLocation = watch('location')
+  const wUrgency  = watch('urgency')
+  const wGdpr     = watch('gdprConsent')
+
+  const missing = [
+    !wCompany?.trim()              && t('company'),
+    !wContact?.trim()              && t('contactName'),
+    !wEmail?.trim()                && t('email'),
+    !wRole?.trim()                 && t('roleTitle'),
+    (!wDesc || wDesc.trim().length < 20) && t('roleDescription'),
+    !wLocation?.trim()             && t('location'),
+    !wUrgency                      && t('urgency'),
+    !wGdpr                         && t('gdprShort'),
+  ].filter(Boolean) as string[]
+  const canSubmit = missing.length === 0
 
   const onSubmit = async (data: HiringFormData) => {
     setIsSubmitting(true)
@@ -308,9 +330,15 @@ export default function TalentHiringForm() {
 
       {/* Submit */}
       <div>
+        {!canSubmit && !isSubmitting && submitStatus === 'idle' && (
+          <p className="mb-3 text-[12px] text-ag-gray">
+            {t('requiredHint')} {missing.join(' · ')}
+          </p>
+        )}
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !canSubmit}
+          title={!canSubmit ? t('requiredHint') : undefined}
           className="rounded-lg w-full md:w-auto inline-flex items-center justify-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy bg-ag-apex px-8 py-4 hover:bg-ag-apex/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (

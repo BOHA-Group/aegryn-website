@@ -9269,7 +9269,9 @@
         },
         "companySize": "Tamaño (facturación)",
         "companySizePlaceholder": "Ej.: CHF 12M, 80 empleados",
-        "confidential": "Búsqueda confidencial (el nombre de la empresa no se comunica a los candidatos sin acuerdo)"
+        "confidential": "Búsqueda confidencial (el nombre de la empresa no se comunica a los candidatos sin acuerdo)",
+        "requiredHint": "Por completar antes de enviar:",
+        "gdprShort": "Consentimiento"
       }
     },
     "admin": {

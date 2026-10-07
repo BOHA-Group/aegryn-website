@@ -9229,7 +9229,9 @@
         "roleDescriptionPlaceholder": "Missions, responsabilités, stack technique, contexte...",
         "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
         "successMessage": "Merci. Votre demande a été enregistrée. Nous vous contacterons sous 2 jours ouvrés.",
-        "errorMessage": "Une erreur est survenue. Veuillez réessayer."
+        "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
+        "requiredHint": "À compléter pour envoyer :",
+        "gdprShort": "Consentement"
       }
     },
     "admin": {

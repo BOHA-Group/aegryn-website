@@ -9269,7 +9269,9 @@
         },
         "companySize": "Size (revenue)",
         "companySizePlaceholder": "E.g.: CHF 12M, 80 employees",
-        "confidential": "Confidential search (the company name is not shared with candidates without consent)"
+        "confidential": "Confidential search (the company name is not shared with candidates without consent)",
+        "requiredHint": "To complete before submitting:",
+        "gdprShort": "Consent"
       }
     },
     "admin": {

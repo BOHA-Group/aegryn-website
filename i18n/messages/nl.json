@@ -9269,7 +9269,9 @@
         },
         "companySize": "Grootte (omzet)",
         "companySizePlaceholder": "Bijv.: CHF 12M, 80 medewerkers",
-        "confidential": "Vertrouwelijke zoektocht (bedrijfsnaam wordt kandidaten niet zonder akkoord gecommuniceerd)"
+        "confidential": "Vertrouwelijke zoektocht (bedrijfsnaam wordt kandidaten niet zonder akkoord gecommuniceerd)",
+        "requiredHint": "Nog in te vullen voor verzending:",
+        "gdprShort": "Toestemming"
       }
     },
     "admin": {

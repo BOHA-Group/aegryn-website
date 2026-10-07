@@ -1,6 +1,7 @@
 import { createServiceClient } from '@/lib/supabase'
 import type { Metadata }       from 'next'
 import { checkAdminAccess }   from '@/lib/adminAuth'
+import { TalentStatusSelect, TalentCandidateDelete } from './AdminTalentActions'
 
 export const metadata: Metadata = {
   title: 'Talent | Aegryn Admin',
@@ -17,19 +18,6 @@ const FAMILY_LABELS: Record<string, string> = {
 }
 const URGENCY_LABELS: Record<string, string> = {
   immediate: 'Immédiat', month: 'Ce mois', quarter: 'Ce trimestre', flexible: 'Flexible',
-}
-
-function StatusBadge({ status }: { status: string }) {
-  const cls =
-    status === 'new'         ? 'bg-ag-apex/15 text-ag-apex-ink border-ag-apex/30' :
-    status === 'in_progress' ? 'bg-blue-50 text-blue-700 border-blue-200' :
-                               'bg-ag-off-white text-ag-gray-light border-ag-border'
-  const label = status === 'new' ? 'Nouveau' : status === 'in_progress' ? 'En cours' : 'Clôturé'
-  return (
-    <span className={`inline-block rounded-full border px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.12em] ${cls}`}>
-      {label}
-    </span>
-  )
 }
 
 const th = 'px-4 py-2.5 text-left font-mono text-[9px] uppercase tracking-[0.18em] text-ag-gray-light font-semibold'
@@ -126,11 +114,14 @@ export default async function AdminTalentPage({
                   <td className={td}>{CYCLE_LABELS[c.lifecycle_cycle ?? ''] ?? '—'}</td>
                   <td className={td}>{c.country ?? '—'}</td>
                   <td className={td}>
-                    {cvLinks[c.id]
-                      ? <a href={cvLinks[c.id]} target="_blank" rel="noreferrer" className="text-ag-apex-ink hover:underline text-[12px]">{c.cv_filename ?? 'CV'}</a>
-                      : '—'}
+                    <div className="flex flex-col gap-1.5">
+                      {cvLinks[c.id]
+                        ? <a href={cvLinks[c.id]} target="_blank" rel="noreferrer" className="text-ag-apex-ink hover:underline text-[12px]">{c.cv_filename ?? 'CV'}</a>
+                        : <span className="text-[12px] text-ag-gray-light">Aucun CV</span>}
+                      <TalentCandidateDelete id={c.id} />
+                    </div>
                   </td>
-                  <td className={td}><StatusBadge status={c.status} /></td>
+                  <td className={td}><TalentStatusSelect id={c.id} kind="candidate" status={c.status} /></td>
                   <td className={td}>{fmt(c.created_at)}</td>
                 </tr>
               ))}
@@ -177,7 +168,7 @@ export default async function AdminTalentPage({
                   <td className={td}>{CYCLE_LABELS[h.lifecycle_cycle ?? ''] ?? '—'}</td>
                   <td className={td}>{h.location}</td>
                   <td className={td}>{URGENCY_LABELS[h.urgency] ?? h.urgency}</td>
-                  <td className={td}><StatusBadge status={h.status} /></td>
+                  <td className={td}><TalentStatusSelect id={h.id} kind="hiring" status={h.status} /></td>
                   <td className={td}>{fmt(h.created_at)}</td>
                 </tr>
               ))}

@@ -9269,7 +9269,9 @@
         },
         "companySize": "Dimensione (fatturato)",
         "companySizePlaceholder": "Es.: CHF 12M, 80 collaboratori",
-        "confidential": "Ricerca riservata (il nome dell’impresa non è comunicato ai candidati senza accordo)"
+        "confidential": "Ricerca riservata (il nome dell’impresa non è comunicato ai candidati senza accordo)",
+        "requiredHint": "Da completare prima dell'invio:",
+        "gdprShort": "Consenso"
       }
     },
     "admin": {

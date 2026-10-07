@@ -9399,7 +9399,9 @@
         },
         "companySize": "Grösse (Umsatz)",
         "companySizePlaceholder": "Z. B.: CHF 12 Mio., 80 Mitarbeitende",
-        "confidential": "Vertrauliche Suche (Firmenname wird Kandidaten nur mit Zustimmung genannt)"
+        "confidential": "Vertrauliche Suche (Firmenname wird Kandidaten nur mit Zustimmung genannt)",
+        "requiredHint": "Vor dem Absenden auszufüllen:",
+        "gdprShort": "Einwilligung"
       }
     },
     "admin": {
