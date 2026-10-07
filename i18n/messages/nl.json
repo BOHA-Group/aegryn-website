@@ -6,7 +6,7 @@
     "blog": "Blog",
     "advisory": "Advies",
     "growWithUs": "Partners",
-    "career": "Carrières",
+    "career": "Werken bij Aegryn",
     "contact": "Contact",
     "transact": "TRANSACT",
     "grade": "Certificering",
@@ -44,7 +44,7 @@
     "magazine": "Magazines",
     "aboutGroup": "Over ons",
     "aboutPublications": "Publicaties",
-    "aboutCareers": "Carrières",
+    "aboutCareers": "Werken bij Aegryn",
     "articles": "Artikelen",
     "ourCraft": "ONS VAKMANSCHAP",
     "ourSolutions": "ONZE OPLOSSINGEN",
@@ -119,7 +119,7 @@
     "whoOffices": "Onze kantoren",
     "whoContact": "Contact",
     "whoJoin": "Sluit je bij ons aan",
-    "whoJoinDesc": "Carrières, talenten, partners",
+    "whoJoinDesc": "Werken bij Aegryn, talenten, partners",
     "whoCareers": "Werken bij Aegryn",
     "whoTalent": "Executive Recruitment",
     "whoAlliances": "Partner worden",
@@ -904,7 +904,7 @@
       {
         "num": "02",
         "title": "Wij opereren op het niveau van de beslissers.",
-        "desc": "Boardleden, oprichters, algemeen directeuren. Wij leveren geen generieke rapporten. Wij delen een realistisch strategisch standpunt met degenen die de echte beslissingen nemen."
+        "desc": "Bestuursleden, oprichters, algemeen directeuren. Wij leveren geen generieke rapporten. Wij delen een realistisch strategisch standpunt met degenen die de echte beslissingen nemen."
       },
       {
         "num": "03",
@@ -963,7 +963,7 @@
         {
           "num": "01",
           "title": "Een grade vóór een prijs",
-          "desc": "De Aegryn C/I/F/S/O grade wordt vastgesteld vóór elke notering, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
+          "desc": "De Aegryn C/I/F/S/O grade wordt vastgesteld vóór elke overdracht, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
         },
         {
           "num": "02",
@@ -1063,7 +1063,7 @@
   },
   "career": {
     "hero": {
-      "label": "Carrièremogelijkheden",
+      "label": "Werken bij Aegryn",
       "title": "Advisory & Experts in Digitale Ecosystemen",
       "desc": "Aegryn is een geïntegreerde adviesgroep. Wij begeleiden Europese organisaties gedurende hun hele levenscyclus: advies, opbouw, transities, talent, marktintelligentie. Wij bezetten geen niche: wij bepalen de regels."
     },
@@ -1536,7 +1536,7 @@
         },
         {
           "q": "Hoe werkt u samen met Aegryn?",
-          "a": "Wij treden alleen op waar wij meetbare waarde kunnen creëren. Elk engagement begint met een eerste gesprek om uw situatie, uw fase en uw doelstellingen te begrijpen. Gebruik het contactformulier, selecteer het onderwerp dat overeenstemt met uw behoefte: advies, bouw, certificering, recruitment of partnerschap, en wij nemen binnen 48 uur contact met u op."
+          "a": "Wij treden alleen op waar wij meetbare waarde kunnen creëren. Elk engagement begint met een eerste gesprek om uw situatie, uw fase en uw doelstellingen te begrijpen. Gebruik het contactformulier, selecteer het onderwerp dat overeenstemt met uw behoefte: advies, bouw, certificering, recruitment of partnerschap, en wij nemen binnen 2 werkdagen contact met u op."
         },
         {
           "q": "Waar zijn wij gevestigd?",
@@ -1887,7 +1887,7 @@
     "col4Title": "Wie we zijn",
     "col4About": "Over Aegryn",
     "col4Contact": "Contact",
-    "col4Careers": "Carrières",
+    "col4Careers": "Werken bij Aegryn",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Adviseren",
     "footerCraftTransact": "Doorlopen",
@@ -2092,7 +2092,7 @@
     },
     "cta": {
       "title": "Interesse in een asset?",
-      "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 48u met een haalbaarheidsanalyse.",
+      "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 2 werkdagen met een haalbaarheidsanalyse.",
       "btn": "Ons contacteren",
       "partnerNote": "Wilt u uitgaande deal flow in het Aegryn-ecosysteem inbrengen?",
       "partnerCta": "Deal Flow-partnerschappen ontdekken",
@@ -7114,7 +7114,7 @@
           "account"
         ],
         "q": "Bieden jullie recruitmentdiensten aan?",
-        "a": "Ja, Aegryn Talent biedt executive recruitment (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en interim management. Honoraria uitsluitend bij succes (success fee), met 3 maanden vervangingsgarantie bij vaste plaatsing. Formulieren beschikbaar op /talent."
+        "a": "Ja, Aegryn Talent biedt werving van sleutelprofielen — leidinggevenden en experts — en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf. No-cure-no-pay honoraria bij indiensttreding, met drie maanden vervangingsgarantie. Formulieren op /talent."
       },
       {
         "id": "advisory-service",
@@ -9230,7 +9230,7 @@
         "companyPlaceholder": "Uw bedrijfsnaam",
         "contactName": "Contactpersoon",
         "contactNamePlaceholder": "Uw volledige naam",
-        "desc": "Beschrijf het profiel dat u zoekt. Wij nemen binnen 48 uur contact met u op.",
+        "desc": "Beschrijf het profiel dat u zoekt. Wij nemen binnen 2 werkdagen contact met u op.",
         "email": "E-mail",
         "emailPlaceholder": "uw@email.com",
         "error": "Er is een fout opgetreden. Probeer het opnieuw.",
@@ -9248,8 +9248,8 @@
         "roleTitlePlaceholder": "Bijv.: CTO, Lead DevOps, Data Scientist...",
         "submit": "Mandaat indienen",
         "submitting": "Verzenden...",
-        "success": "Bedankt. Uw mandaat is geregistreerd. Wij nemen binnen 48 uur contact met u op.",
-        "successMessage": "Bedankt. Uw aanvraag is geregistreerd. Wij nemen binnen 48 uur contact met u op.",
+        "success": "Bedankt. Uw mandaat is geregistreerd. Wij nemen binnen 2 werkdagen contact met u op.",
+        "successMessage": "Bedankt. Uw aanvraag is geregistreerd. Wij nemen binnen 2 werkdagen contact met u op.",
         "title": "Recruteringsmandaat starten",
         "urgency": "Urgentie",
         "urgencyFlexible": "Flexibel",
@@ -9863,7 +9863,7 @@
           "key": "recruter",
           "num": "04",
           "title": "WERVEN",
-          "desc": "Executive-, tech- en innovatieprofielen. CTO tot CISO : wij plaatsen het talent dat transformatie uitvoert. Vertrouwelijk, pre-gekwalificeerd, 48u respons.",
+          "desc": "Leidinggevenden en experts. Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase; vertrouwelijk, vooraf gekwalificeerd, antwoord binnen 2 werkdagen.",
           "cta": "Mandaat indienen",
           "href": "/talent"
         },
@@ -10744,7 +10744,7 @@
       },
       "talent": {
         "title": "U werft de profielen die deze transformatie aansturen.",
-        "desc": "Head of AI, Chief Data Officer, Transformatiedirecteur: wij identificeren en plaatsen hen.",
+        "desc": "Leidinggevenden en experts: werving van sleutelprofielen en overgangsprofielen, in elke levensfase.",
         "cta": "Aegryn Talent ontdekken",
         "href": "/talent"
       }

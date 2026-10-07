@@ -6,7 +6,7 @@
     "blog": "Blog",
     "advisory": "Advisory",
     "growWithUs": "Partners",
-    "career": "Careers",
+    "career": "Work at Aegryn",
     "contact": "Contact",
     "transact": "TRANSACT",
     "grade": "Certification",
@@ -44,7 +44,7 @@
     "magazine": "Magazines",
     "aboutGroup": "About",
     "aboutPublications": "Publications",
-    "aboutCareers": "Careers",
+    "aboutCareers": "Work at Aegryn",
     "articles": "Articles",
     "ourCraft": "OUR CRAFT",
     "ourSolutions": "OUR SOLUTIONS",
@@ -126,7 +126,7 @@
     "whoOffices": "Our offices",
     "whoContact": "Contact us",
     "whoJoin": "Join us",
-    "whoJoinDesc": "Careers, talent, partners",
+    "whoJoinDesc": "Work at Aegryn, talent, partners",
     "whoCareers": "Work at Aegryn",
     "whoTalent": "Executive Recruitment",
     "whoAlliances": "Become a partner",
@@ -942,7 +942,7 @@
         {
           "num": "01",
           "title": "A grade before a price",
-          "desc": "The Aegryn C/I/F/S/O grade is established before any listing, before any negotiation. Not a valuation opinion, a certification of what the asset actually is, documented, versioned and reproducible. The price follows the grade. The grade does not depend on it."
+          "desc": "The Aegryn C/I/F/S/O grade is established before any sale, before any negotiation. Not a valuation opinion, a certification of what the asset actually is, documented, versioned and reproducible. The price follows the grade. The grade does not depend on it."
         },
         {
           "num": "02",
@@ -1063,7 +1063,7 @@
   },
   "career": {
     "hero": {
-      "label": "Career opportunities",
+      "label": "Work at Aegryn",
       "title": "Advisory & Digital Ecosystem Experts",
       "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, transitions, talent, market intelligence. We do not occupy a niche: we define its rules."
     },
@@ -1536,7 +1536,7 @@
         },
         {
           "q": "How do I work with Aegryn?",
-          "a": "We engage only where we can create measurable value. Every engagement starts with an initial conversation to understand your situation, your stage and your objectives. Use the contact form, select the subject that matches your need: advisory, build, certification, recruitment or partnership, and we will get back to you within 48 hours."
+          "a": "We engage only where we can create measurable value. Every engagement starts with an initial conversation to understand your situation, your stage and your objectives. Use the contact form, select the subject that matches your need: advisory, build, certification, recruitment or partnership, and we will get back to you within 2 business days."
         },
         {
           "q": "Where are we based?",
@@ -1887,7 +1887,7 @@
     "col4Title": "Who we are",
     "col4About": "About Aegryn",
     "col4Contact": "Contact us",
-    "col4Careers": "Careers",
+    "col4Careers": "Work at Aegryn",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Advise",
     "footerCraftTransact": "Navigate",
@@ -2157,7 +2157,7 @@
     },
     "cta": {
       "title": "Interested in an asset?",
-      "desc": "Tell us about your acquisition project. We'll come back within 48h with a feasibility analysis.",
+      "desc": "Tell us about your acquisition project. We'll come back within 2 business days with a feasibility analysis.",
       "btn": "Contact us",
       "partnerNote": "Looking to source outgoing deal flow into the Aegryn ecosystem?",
       "partnerCta": "Discover Deal Flow partnerships",
@@ -7114,7 +7114,7 @@
           "account"
         ],
         "q": "Do you offer recruitment services?",
-        "a": "Yes, Aegryn Talent offers executive recruitment (CTO, CISO, Chief AI Officer, VP Engineering, etc.) and interim management. Success-fee-only fees, with a 3-month replacement guarantee for permanent hires. Forms available at /talent."
+        "a": "Yes, Aegryn Talent offers key-profile recruitment — executives and experts — and transition-profile placement, at every stage of the company lifecycle. Success-based fees due at start date, with a three-month replacement guarantee. Forms available at /talent."
       },
       {
         "id": "advisory-service",
@@ -9230,7 +9230,7 @@
         "companyPlaceholder": "Your company name",
         "contactName": "Contact name",
         "contactNamePlaceholder": "Your full name",
-        "desc": "Describe the profile you're looking for. We will contact you within 48h.",
+        "desc": "Describe the profile you're looking for. We will contact you within 2 business days.",
         "email": "Email",
         "emailPlaceholder": "your@email.com",
         "error": "An error occurred. Please try again.",
@@ -9248,8 +9248,8 @@
         "roleTitlePlaceholder": "E.g.: CTO, Lead DevOps, Data Scientist...",
         "submit": "Submit mandate",
         "submitting": "Sending...",
-        "success": "Thank you. Your mandate has been registered. We will contact you within 48h.",
-        "successMessage": "Thank you. Your request has been registered. We will contact you within 48h.",
+        "success": "Thank you. Your mandate has been registered. We will contact you within 2 business days.",
+        "successMessage": "Thank you. Your request has been registered. We will contact you within 2 business days.",
         "title": "Launch a recruitment mandate",
         "urgency": "Urgency",
         "urgencyFlexible": "Flexible",
@@ -9863,7 +9863,7 @@
           "key": "recruter",
           "num": "04",
           "title": "RECRUIT",
-          "desc": "Executive, tech and innovation profiles. CTO to CISO : we place the talent that drives transformation. Confidential, pre-qualified, 48h response.",
+          "desc": "Executives and experts. Key-profile recruitment and transition-profile placement, at every lifecycle stage; confidential, pre-qualified, reply within 2 business days.",
           "cta": "Submit a mandate",
           "href": "/talent"
         },
@@ -10744,7 +10744,7 @@
       },
       "talent": {
         "title": "You recruit the profiles driving this transformation.",
-        "desc": "Head of AI, Chief Data Officer, Transformation Director: we identify and place them.",
+        "desc": "Executives and experts: key-profile recruitment and transition profiles, at every lifecycle stage.",
         "cta": "Discover Aegryn Talent",
         "href": "/talent"
       }

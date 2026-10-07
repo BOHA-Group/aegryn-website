@@ -6,7 +6,7 @@
     "blog": "Blog",
     "advisory": "Beratung",
     "growWithUs": "Partner",
-    "career": "Karriere",
+    "career": "Bei Aegryn arbeiten",
     "contact": "Kontakt",
     "transact": "TRANSACT",
     "grade": "Zertifizierung",
@@ -44,7 +44,7 @@
     "magazine": "Magazines",
     "aboutGroup": "Über uns",
     "aboutPublications": "Publikationen",
-    "aboutCareers": "Karriere",
+    "aboutCareers": "Bei Aegryn arbeiten",
     "articles": "Artikel",
     "ourCraft": "UNSER HANDWERK",
     "ourSolutions": "UNSERE LÖSUNGEN",
@@ -119,7 +119,7 @@
     "whoOffices": "Unsere Büros",
     "whoContact": "Kontakt",
     "whoJoin": "Uns beitreten",
-    "whoJoinDesc": "Karriere, Talente, Partner",
+    "whoJoinDesc": "Bei Aegryn arbeiten, Talente, Partner",
     "whoCareers": "Bei Aegryn arbeiten",
     "whoTalent": "Executive Recruitment",
     "whoAlliances": "Partner werden",
@@ -904,7 +904,7 @@
       {
         "num": "02",
         "title": "Wir agieren auf Entscheiderebene.",
-        "desc": "Board-Mitglieder, Gründer, Geschäftsführer. Wir liefern keine generischen Berichte. Wir teilen einen realistischen strategischen Standpunkt mit denen, die die echten Entscheidungen treffen."
+        "desc": "Verwaltungsräte, Gründer, Geschäftsführer. Wir liefern keine generischen Berichte. Wir teilen einen realistischen strategischen Standpunkt mit denen, die die echten Entscheidungen treffen."
       },
       {
         "num": "03",
@@ -963,7 +963,7 @@
         {
           "num": "01",
           "title": "Ein Grade vor einem Preis",
-          "desc": "Der Aegryn C/I/F/S/O Grade wird vor jeder Listung, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
+          "desc": "Der Aegryn C/I/F/S/O Grade wird vor jedem Verkauf, vor jeder Verhandlung festgestellt. Kein Bewertungsgutachten, eine Zertifizierung dessen, was der Asset tatsächlich ist, dokumentiert, versioniert und reproduzierbar. Der Preis folgt dem Grade. Der Grade hängt nicht davon ab."
         },
         {
           "num": "02",
@@ -1063,7 +1063,7 @@
   },
   "career": {
     "hero": {
-      "label": "Karrierechancen",
+      "label": "Bei Aegryn arbeiten",
       "title": "Advisory & Experten für digitale Ökosysteme",
       "desc": "Aegryn ist eine integrierte Beratungsgruppe. Wir begleiten europäische Organisationen über ihren gesamten Lebenszyklus: Beratung, Aufbau, Übergänge, Talente, Marktintelligenz. Wir besetzen keine Nische: Wir definieren ihre Regeln."
     },
@@ -1536,7 +1536,7 @@
         },
         {
           "q": "Wie arbeite ich mit Aegryn zusammen?",
-          "a": "Wir engagieren uns nur dort, wo wir messbaren Mehrwert schaffen können. Jedes Engagement beginnt mit einem ersten Gespräch, um Ihre Situation, Ihre Phase und Ihre Ziele zu verstehen. Nutzen Sie das Kontaktformular, wählen Sie das Thema, das Ihrem Bedarf entspricht: Beratung, Aufbau, Zertifizierung, Recruitment oder Partnerschaft, und wir melden uns innerhalb von 48 Stunden."
+          "a": "Wir engagieren uns nur dort, wo wir messbaren Mehrwert schaffen können. Jedes Engagement beginnt mit einem ersten Gespräch, um Ihre Situation, Ihre Phase und Ihre Ziele zu verstehen. Nutzen Sie das Kontaktformular, wählen Sie das Thema, das Ihrem Bedarf entspricht: Beratung, Aufbau, Zertifizierung, Recruitment oder Partnerschaft, und wir melden uns innerhalb von 2 Arbeitstagen."
         },
         {
           "q": "Wo haben wir unseren Sitz?",
@@ -1887,7 +1887,7 @@
     "col4Title": "Wer wir sind",
     "col4About": "Über Aegryn",
     "col4Contact": "Kontakt",
-    "col4Careers": "Karriere",
+    "col4Careers": "Bei Aegryn arbeiten",
     "col4Talent": "Headhunting & Transition",
     "footerCraftSupport": "Beraten",
     "footerCraftTransact": "Meistern",
@@ -2092,7 +2092,7 @@
     },
     "cta": {
       "title": "Interesse an einem Asset?",
-      "desc": "Erzählen Sie uns von Ihrem Akquisitionsprojekt. Wir melden uns innerhalb von 48h mit einer Machbarkeitsanalyse.",
+      "desc": "Erzählen Sie uns von Ihrem Akquisitionsprojekt. Wir melden uns innerhalb von 2 Arbeitstagen mit einer Machbarkeitsanalyse.",
       "btn": "Kontakt aufnehmen",
       "partnerNote": "Möchten Sie ausgehenden Deal Flow in das Aegryn-Ökosystem einbringen?",
       "partnerCta": "Deal-Flow-Partnerschaften entdecken",
@@ -7099,7 +7099,7 @@
           "account"
         ],
         "q": "Bieten Sie Rekrutierungsdienste an?",
-        "a": "Ja, Aegryn Talent bietet Executive Recruitment (CTO, CISO, Chief AI Officer, VP Engineering usw.) und Interim Management an. Honorare nur bei Erfolg (Success Fee), mit 3-monatiger Ersatzgarantie bei Festanstellung. Formulare unter /talent."
+        "a": "Ja, Aegryn Talent bietet die Rekrutierung von Schlüsselprofilen — Führungskräfte und Experten — und die Vermittlung von Übergangsprofilen für jede Lebenszyklusphase des Unternehmens. Erfolgshonorar, fällig bei Amtsantritt, mit dreimonatiger Ersatzgarantie. Formulare auf /talent."
       },
       {
         "id": "advisory-service",
@@ -9360,7 +9360,7 @@
         "companyPlaceholder": "Ihr Unternehmensname",
         "contactName": "Kontaktname",
         "contactNamePlaceholder": "Ihr vollständiger Name",
-        "desc": "Beschreiben Sie das gesuchte Profil. Wir kontaktieren Sie innerhalb von 48 Stunden.",
+        "desc": "Beschreiben Sie das gesuchte Profil. Wir kontaktieren Sie innerhalb von 2 Arbeitstagen.",
         "email": "E-Mail",
         "emailPlaceholder": "ihre@email.com",
         "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
@@ -9378,8 +9378,8 @@
         "roleTitlePlaceholder": "Z.B.: CTO, Lead DevOps, Data Scientist...",
         "submit": "Mandat absenden",
         "submitting": "Wird gesendet...",
-        "success": "Vielen Dank. Ihr Mandat wurde registriert. Wir kontaktieren Sie innerhalb von 48 Stunden.",
-        "successMessage": "Vielen Dank. Ihre Anfrage wurde registriert. Wir kontaktieren Sie innerhalb von 48 Stunden.",
+        "success": "Vielen Dank. Ihr Mandat wurde registriert. Wir kontaktieren Sie innerhalb von 2 Arbeitstagen.",
+        "successMessage": "Vielen Dank. Ihre Anfrage wurde registriert. Wir kontaktieren Sie innerhalb von 2 Arbeitstagen.",
         "title": "Rekrutierungsmandat starten",
         "urgency": "Dringlichkeit",
         "urgencyFlexible": "Flexibel",
@@ -9993,7 +9993,7 @@
           "key": "recruter",
           "num": "04",
           "title": "REKRUTIEREN",
-          "desc": "Executive-, Tech- und Innovationsprofile. CTO bis CISO : wir vermitteln die Talente, die Transformation umsetzen. Vertraulich, vorqualifiziert, 48h Reaktion.",
+          "desc": "Führungskräfte und Experten. Rekrutierung von Schlüsselprofilen und Vermittlung von Übergangsprofilen, für jede Lebenszyklusphase; vertraulich, vorqualifiziert, Antwort innert 2 Arbeitstagen.",
           "cta": "Mandat einreichen",
           "href": "/talent"
         },
@@ -10744,7 +10744,7 @@
       },
       "talent": {
         "title": "Sie rekrutieren die Profile, die diese Transformation vorantreiben.",
-        "desc": "Head of AI, Chief Data Officer, Transformationsdirektor: Wir identifizieren und platzieren sie.",
+        "desc": "Führungskräfte und Experten: Rekrutierung von Schlüsselprofilen und Übergangsprofile, für jede Lebenszyklusphase.",
         "cta": "Aegryn Talent entdecken",
         "href": "/talent"
       }
