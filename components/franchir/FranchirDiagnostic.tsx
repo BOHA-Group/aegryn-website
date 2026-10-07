@@ -26,21 +26,27 @@ interface Props {
  */
 export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Props) {
   const ui = FRANCHIR_UI[locale] ?? FRANCHIR_UI.fr
-  const [open, setOpen] = useState(false)
+  const [hovered, setHovered] = useState(false)
+  const [pinned, setPinned] = useState(false)
+  const open = hovered || pinned
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
 
   return (
-    <div className="bg-ag-white">
+    <div
+      className="bg-ag-white"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <button
         type="button"
-        onClick={() => setOpen(o => !o)}
+        onClick={() => setPinned(p => !p)}
         aria-expanded={open}
         className={`w-full py-6 flex items-center gap-5 text-left group${open ? ' border-b border-ag-border' : ''}`}
       >
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] group-hover:text-ag-navy transition-colors">{title}</h3>
         <span
-          className={`ml-auto shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+          className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
             open ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light group-hover:border-ag-navy group-hover:text-ag-navy'
           }`}
           aria-hidden="true"
@@ -49,7 +55,11 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
         </span>
       </button>
 
-      {open && (
+      <div
+        className="grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        style={{ gridTemplateRows: open ? '1fr' : '0fr', opacity: open ? 1 : 0 }}
+      >
+        <div className="overflow-hidden min-h-0">
       <ol className="divide-y divide-ag-border">
         {questions.map((item, i) => {
           const yes = answers[i] === true
@@ -89,7 +99,8 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
           )
         })}
       </ol>
-      )}
+        </div>
+      </div>
     </div>
   )
 }

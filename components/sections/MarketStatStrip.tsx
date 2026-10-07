@@ -68,12 +68,16 @@ export function MarketStatStrip() {
         </p>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, i) => (
+          {stats.map((stat, i) => {
+            /* Valeur à plage (« 30 à 50% ») : nowrap + taille réduite pour
+               tenir sur une ligne dans les colonnes étroites */
+            const isRange = /\d[^\d]+\d/.test(stat.value)
+            return (
             <div key={i} className="market-stat">
               <p
                 data-counter={stat.value}
-                className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
-                style={{ fontSize: 'clamp(38px,4.5vw,60px)' }}
+                className={`font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2${isRange ? ' whitespace-nowrap' : ''}`}
+                style={{ fontSize: isRange ? 'clamp(28px,3vw,44px)' : 'clamp(38px,4.5vw,60px)' }}
               >
                 {stat.value}
               </p>
@@ -86,7 +90,8 @@ export function MarketStatStrip() {
                 </p>
               )}
             </div>
-          ))}
+            )
+          })}
         </div>
 
       </div>
