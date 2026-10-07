@@ -19,7 +19,7 @@ const hiringSchema = z.object({
   budgetAnnualChf: z.string().optional(),
   urgency: z.enum(['immediate', 'month', 'quarter', 'flexible']),
   missionType: z.enum(['permanent', 'transition']).optional(),
-  lifecycleCycle: z.enum(['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission']).optional(),
+  lifecycleCycle: z.enum(['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission']).optional().or(z.literal('')),
   confidential: z.boolean().optional(),
   companySize: z.string().optional(),
   gdprConsent: z.boolean().refine((val) => val === true, {

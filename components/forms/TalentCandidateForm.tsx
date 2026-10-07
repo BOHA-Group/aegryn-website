@@ -15,7 +15,7 @@ const FAMILIES = ['general', 'finance', 'operations', 'technology', 'hr', 'sales
 const candidateSchema = z.object({
   fullName: z.string().min(2, 'Full name required'),
   email: z.string().email('Valid email required'),
-  phone: z.string().min(1, 'Téléphone requis').regex(/^\+\d{1,3}\s\d/, 'Format invalide').optional(),
+  phone: z.union([z.literal(''), z.string().regex(/^\+\d{1,3}\s\d/, 'Format invalide')]).optional(),
   linkedinUrl: z.string().url().optional().or(z.literal('')),
   functionFamily: z.enum(FAMILIES).optional(),
   lifecycleCycle: z.enum(CYCLES).optional(),
@@ -51,6 +51,7 @@ export default function TalentCandidateForm() {
     handleSubmit,
     reset,
     control,
+    watch,
     formState: { errors },
   } = useForm<CandidateFormData>({
     resolver: zodResolver(candidateSchema),
@@ -59,6 +60,15 @@ export default function TalentCandidateForm() {
       profileType: prefillType === 'transition' ? 'transition' : undefined,
     },
   })
+
+  /* Champs requis : bouton désactivé + rappel des champs manquants,
+     jamais de message d'erreur en premier écran */
+  const [wName, wEmail, wConsent] = watch(['fullName', 'email', 'gdprConsent'])
+  const missing: string[] = []
+  if (!wName || wName.trim().length < 2) missing.push(t('fullName'))
+  if (!wEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wEmail)) missing.push(t('email'))
+  if (!wConsent) missing.push(t('gdprShort'))
+  const canSubmit = missing.length === 0
 
   async function handleCvChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
@@ -277,9 +287,14 @@ export default function TalentCandidateForm() {
 
       {/* Submit */}
       <div>
+        {!canSubmit && (
+          <p className="mb-3 font-sans text-[12px] text-ag-gray-light">
+            {t('requiredHint')} {missing.join(' · ')}
+          </p>
+        )}
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !canSubmit}
           className="rounded-lg w-full md:w-auto inline-flex items-center justify-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white bg-ag-navy px-8 py-4 hover:bg-ag-apex hover:text-ag-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (

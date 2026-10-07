@@ -9218,7 +9218,9 @@
           "restructuration": "Restructuring & Pivot",
           "acquisition": "Acquisition & External growth",
           "transmission": "Transfer & Succession"
-        }
+        },
+        "requiredHint": "To complete before sending:",
+        "gdprShort": "Consent"
       },
       "hiring": {
         "budget": "Annual budget (CHF)",

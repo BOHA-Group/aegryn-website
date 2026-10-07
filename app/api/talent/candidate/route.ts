@@ -17,8 +17,8 @@ const candidateSchema = z.object({
   cvFilename: z.string().optional(),
   motivation: z.string().optional().or(z.literal('')),
   functionFamily: z.string().optional(),
-  lifecycleCycle: z.enum(['lancement','croissance','restructuration','acquisition','transmission']).optional(),
-  profileType: z.enum(['permanent','transition']).optional(),
+  lifecycleCycle: z.enum(['lancement','croissance','restructuration','acquisition','transmission']).optional().or(z.literal('')),
+  profileType: z.enum(['permanent','transition']).optional().or(z.literal('')),
   country: z.string().optional(),
   availability: z.string().optional(),
   gdprConsent: z.boolean().refine((val) => val === true, {

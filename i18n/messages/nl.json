@@ -9218,7 +9218,9 @@
           "restructuration": "Herstructurering & Pivot",
           "acquisition": "Acquisitie & Externe groei",
           "transmission": "Overdracht & Opvolging"
-        }
+        },
+        "requiredHint": "In te vullen voor verzending:",
+        "gdprShort": "Toestemming"
       },
       "hiring": {
         "budget": "Jaarbudget (CHF)",

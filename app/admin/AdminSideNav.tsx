@@ -41,6 +41,12 @@ const SECTIONS = [
     ],
   },
   {
+    label: 'Talent',
+    items: [
+      { href: '/admin/talent', label: 'Vivier & mandats' },
+    ],
+  },
+  {
     label: 'Acquisition',
     items: [
       { href: '/admin/leads',       label: 'Leads' },

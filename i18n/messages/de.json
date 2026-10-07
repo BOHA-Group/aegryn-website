@@ -9348,7 +9348,9 @@
           "restructuration": "Restrukturierung & Pivot",
           "acquisition": "Akquisition & externes Wachstum",
           "transmission": "Übertragung & Nachfolge"
-        }
+        },
+        "requiredHint": "Vor dem Absenden auszufüllen:",
+        "gdprShort": "Einwilligung"
       },
       "hiring": {
         "budget": "Jahresbudget (CHF)",

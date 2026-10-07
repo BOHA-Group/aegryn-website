@@ -9178,7 +9178,9 @@
         "cvNote": "Votre CV sera demandé lors de l'entretien si votre profil correspond à nos mandats.",
         "successMessage": "Merci. Votre candidature a été enregistrée. Nous vous contacterons si votre profil correspond à nos mandats.",
         "errorMessage": "Une erreur est survenue. Veuillez réessayer.",
-        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant"
+        "gdprConsent": "J'accepte que mes données personnelles soient traitées par Aegryn dans le cadre de ma candidature/demande. Je peux demander la suppression de mes données à tout moment en contactant",
+        "requiredHint": "À compléter pour envoyer :",
+        "gdprShort": "Consentement"
       },
       "hiring": {
         "missionType": "Type de mission",
