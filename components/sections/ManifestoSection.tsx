@@ -257,7 +257,7 @@ export function ManifestoSection() {
                       <p
                         className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none pt-10 pb-4"
                         style={{
-                          fontSize: 'clamp(48px,6vw,80px)',
+                          fontSize: 'clamp(38px,4.5vw,60px)',
                           gridRow: numRow,
                           gridColumn: col,
                           opacity: 0,

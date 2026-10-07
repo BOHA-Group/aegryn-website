@@ -73,7 +73,7 @@ export function MarketStatStrip() {
               <p
                 data-counter={stat.value}
                 className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
-                style={{ fontSize: 'clamp(28px,3vw,46px)' }}
+                style={{ fontSize: 'clamp(38px,4.5vw,60px)' }}
               >
                 {stat.value}
               </p>
