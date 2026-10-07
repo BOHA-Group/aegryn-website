@@ -9118,11 +9118,11 @@
     "candidats": {
       "meta": {
         "title": "Join the pool | Aegryn Talent",
-        "desc": "Executive roles and transition assignments, when they match your track record. No profile shared without your consent."
+        "desc": "Key positions and transition assignments, when they match your background. No profile shared without your consent."
       },
       "hero": {
         "label": "For candidates",
-        "title": "Executive roles, when they match your track record.",
+        "title": "Key positions, when they match your background.",
         "desc": "Aegryn only contacts you when a search matches. No profile is shared without your consent.",
         "cta": "Submit my profile"
       },
@@ -9146,12 +9146,12 @@
         "desc": "Your information stays confidential and is only shared with a company with your consent."
       },
       "types": {
-        "title": "The mandates the pool serves",
+        "title": "What the pool can offer you",
         "desc": "Our searches are confidential: no mandate is published. When a search matches your profile, we contact you.",
         "items": [
           {
-            "title": "Executive positions",
-            "desc": "Direct hires of executives and experts, in permanent roles, at every stage of a company's life."
+            "title": "Permanent positions",
+            "desc": "Direct hires of executives, managers and key experts — from top management to expert functions, according to the company's lifecycle."
           },
           {
             "title": "Transition assignments",

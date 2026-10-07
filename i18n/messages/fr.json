@@ -9078,11 +9078,11 @@
     "candidats": {
       "meta": {
         "title": "Rejoindre le vivier | Aegryn Talent",
-        "desc": "Des postes de direction et des missions de transition, quand ils correspondent à votre parcours. Aucun profil transmis sans votre accord."
+        "desc": "Des postes clés et des missions de transition, quand ils correspondent à votre parcours. Aucun profil transmis sans votre accord."
       },
       "hero": {
         "label": "Pour les candidats",
-        "title": "Des postes de direction, quand ils correspondent à votre parcours.",
+        "title": "Des postes clés, quand ils correspondent à votre parcours.",
         "desc": "Aegryn ne vous contacte que si une recherche correspond. Aucun profil n’est transmis sans votre accord.",
         "cta": "Déposer mon profil"
       },
@@ -9106,12 +9106,12 @@
         "desc": "Vos informations restent confidentielles et ne sont partagées avec une entreprise qu’avec votre accord."
       },
       "types": {
-        "title": "Les missions que le vivier sert",
+        "title": "Ce que le vivier peut vous proposer",
         "desc": "Nos recherches sont confidentielles : aucune mission n'est publiée. Quand un mandat correspond à votre profil, nous vous contactons.",
         "items": [
           {
-            "title": "Postes de direction",
-            "desc": "Recrutement en propre de dirigeants et d'experts, en poste durable, à chaque étape de vie de l'entreprise."
+            "title": "Postes permanents",
+            "desc": "Recrutement en propre de dirigeants, de managers et d'experts clés — du top management aux fonctions expertes, selon le cycle de vie de l'entreprise."
           },
           {
             "title": "Missions de transition",

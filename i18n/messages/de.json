@@ -9248,11 +9248,11 @@
     "candidats": {
       "meta": {
         "title": "Dem Pool beitreten | Aegryn Talent",
-        "desc": "Führungspositionen und Übergangsmandate, wenn sie zu Ihrem Werdegang passen. Kein Profil wird ohne Ihre Zustimmung weitergegeben."
+        "desc": "Schlüsselpositionen und Übergangsmandate, wenn sie zu Ihrem Werdegang passen. Kein Profil wird ohne Ihr Einverständnis weitergegeben."
       },
       "hero": {
         "label": "Für Kandidaten",
-        "title": "Führungspositionen, wenn sie zu Ihrem Werdegang passen.",
+        "title": "Schlüsselpositionen, wenn sie zu Ihrem Werdegang passen.",
         "desc": "Aegryn kontaktiert Sie nur, wenn eine Suche passt. Kein Profil wird ohne Ihre Zustimmung weitergegeben.",
         "cta": "Mein Profil einreichen"
       },
@@ -9276,12 +9276,12 @@
         "desc": "Ihre Angaben bleiben vertraulich und werden nur mit Ihrer Zustimmung an ein Unternehmen weitergegeben."
       },
       "types": {
-        "title": "Die Mandate, die der Pool bedient",
+        "title": "Was der Pool Ihnen bieten kann",
         "desc": "Unsere Suchen sind vertraulich: kein Mandat wird veröffentlicht. Entspricht ein Mandat Ihrem Profil, kontaktieren wir Sie.",
         "items": [
           {
-            "title": "Führungspositionen",
-            "desc": "Direkteinstellungen von Führungskräften und Experten, in Festanstellung, in jeder Lebensphase eines Unternehmens."
+            "title": "Festanstellungen",
+            "desc": "Direkteinstellungen von Führungskräften, Managern und Schlüsselexperten — vom Top-Management bis zu Expertenfunktionen, je nach Lebenszyklus des Unternehmens."
           },
           {
             "title": "Übergangsmandate",

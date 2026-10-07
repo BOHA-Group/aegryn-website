@@ -9118,11 +9118,11 @@
     "candidats": {
       "meta": {
         "title": "Deelnemen aan de pool | Aegryn Talent",
-        "desc": "Leidinggevende functies en overgangsmandaten, wanneer ze passen bij uw loopbaan. Geen profiel doorgegeven zonder uw toestemming."
+        "desc": "Sleutelposities en transitie-opdrachten, wanneer ze bij uw traject passen. Geen profiel wordt gedeeld zonder uw toestemming."
       },
       "hero": {
         "label": "Voor kandidaten",
-        "title": "Leidinggevende functies, wanneer ze passen bij uw loopbaan.",
+        "title": "Sleutelposities, wanneer ze bij uw traject passen.",
         "desc": "Aegryn contacteert u alleen als een zoektocht past. Geen profiel wordt doorgegeven zonder uw toestemming.",
         "cta": "Mijn profiel indienen"
       },
@@ -9146,12 +9146,12 @@
         "desc": "Uw gegevens blijven vertrouwelijk en worden alleen met uw toestemming aan een bedrijf gedeeld."
       },
       "types": {
-        "title": "De mandaten die de pool bedient",
+        "title": "Wat de pool u kan bieden",
         "desc": "Onze zoekopdrachten zijn vertrouwelijk: geen enkel mandaat wordt gepubliceerd. Wanneer een mandaat bij uw profiel past, nemen we contact op.",
         "items": [
           {
-            "title": "Directiefuncties",
-            "desc": "Directe aanwerving van leidinggevenden en experts, in vaste functies, in elke levensfase van het bedrijf."
+            "title": "Vaste functies",
+            "desc": "Directe aanwerving van leidinggevenden, managers en sleutelexperts — van topmanagement tot expertfuncties, afhankelijk van de levensfase van het bedrijf."
           },
           {
             "title": "Transitie-opdrachten",

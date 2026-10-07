@@ -9118,11 +9118,11 @@
     "candidats": {
       "meta": {
         "title": "Unirse al pool | Aegryn Talent",
-        "desc": "Puestos directivos y misiones de transición, cuando corresponden a su trayectoria. Ningún perfil transmitido sin su consentimiento."
+        "desc": "Puestos clave y misiones de transición, cuando corresponden a su trayectoria. Ningún perfil se transmite sin su acuerdo."
       },
       "hero": {
         "label": "Para candidatos",
-        "title": "Puestos directivos, cuando corresponden a su trayectoria.",
+        "title": "Puestos clave, cuando corresponden a su trayectoria.",
         "desc": "Aegryn solo le contacta si una búsqueda corresponde. Ningún perfil se transmite sin su consentimiento.",
         "cta": "Depositar mi perfil"
       },
@@ -9146,12 +9146,12 @@
         "desc": "Su información permanece confidencial y solo se comparte con una empresa con su consentimiento."
       },
       "types": {
-        "title": "Los mandatos que sirve el pool",
+        "title": "Lo que el pool puede ofrecerle",
         "desc": "Nuestras búsquedas son confidenciales: ningún mandato se publica. Cuando un mandato coincide con su perfil, le contactamos.",
         "items": [
           {
-            "title": "Puestos de dirección",
-            "desc": "Contratación directa de directivos y expertos, en puestos permanentes, en cada etapa de vida de la empresa."
+            "title": "Puestos permanentes",
+            "desc": "Contratación directa de directivos, managers y expertos clave — de la alta dirección a las funciones expertas, según el ciclo de vida de la empresa."
           },
           {
             "title": "Misiones de transición",
