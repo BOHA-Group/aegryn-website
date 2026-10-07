@@ -7026,7 +7026,7 @@
           "lifecycle"
         ],
         "q": "Wie is Aegryn en wat doen jullie?",
-        "a": "Aegryn is een Zwitsere advies- en certificeringsgroep die organisaties begeleidt in elke fase van hun levenscyclus: advies, asset-opbouw, levenscyclus-transities, talent en informatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
+        "a": "Aegryn is een Zwitsers geïntegreerd adviesbureau dat organisaties begeleidt in elke fase van hun levenscyclus: advies over strategie, risico's, technologie, talent en M&A, bouw van eigen digitale assets, levenscyclusovergangen, executive recruitment en marktinformatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
       },
       {
         "id": "what-differentiates",
@@ -7050,7 +7050,7 @@
           "certification"
         ],
         "q": "Wat is de Aegryn Grade?",
-        "a": "De Aegryn Grade is een officiële multidimensionale certificering die 5 dimensies beoordeelt: Code (C), IP & Rechten (I), Financiën (F), Beveiliging (S), Organisatie (O). Elke dimensie wordt beoordeeld op 20 punten. De totaalscore bepaalt de officiële Grade: AEG ★ Uitzonderlijk (90+), AAA Excellent (75+), AA Zeer goed (60+), A Goed (45+), B Redelijk (30+)."
+        "a": "De Aegryn Grade is een officiële multidimensionale certificering over 5 dimensies: Code (C), IP & Rechten (I), Financiën (F), Beveiliging (S), Organisatie (O). Elke dimensie wordt beoordeeld op 20 punten. De totaalscore bepaalt de officiële Grade: AEG ★ Uitzonderlijk (90+), AAA Excellent (75+), AA Solide (60+), A In ontwikkeling (45+), B Opkomend (30+)."
       },
       {
         "id": "what-assets",
@@ -7108,7 +7108,7 @@
           "account"
         ],
         "q": "Bieden jullie recruitmentdiensten aan?",
-        "a": "Ja, Aegryn Talent biedt executive recruitment (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en tijdelijke plaatsing (interim management). Honoraria: 20% van het bruto jaarsalaris, alleen bij succesvolle plaatsing (success fee). Vervangingsgarantie van 3 maanden voor vaste plaatsing. Formulieren beschikbaar op /talent."
+        "a": "Ja, Aegryn Talent biedt executive recruitment (CTO, CISO, Chief AI Officer, VP Engineering, enz.) en interim management. Honoraria uitsluitend bij succes (success fee), met 3 maanden vervangingsgarantie bij vaste plaatsing. Formulieren beschikbaar op /talent."
       },
       {
         "id": "advisory-service",
@@ -7116,7 +7116,7 @@
           "account"
         ],
         "q": "Welke advisorydiensten bieden jullie aan?",
-        "a": "Aegryn Advisory is actief op 4 assen: Tech & AI (digitale transformatie, AI-strategie, architectuur), Cybersecurity (audits, GDPR/FADP/SOC2/ISO27001-compliance), M&A Advisory (buy-side, sell-side, due diligence, waardering), Data Privacy (EU AI Act, data governance). Wij zijn actief in meer dan 23 industrieën in Europa. Zie /advisory voor details."
+        "a": "Aegryn Advisory werkt in 5 domeinen: Strategie & Innovatie (traject, businessmodel, expansie), Risicobeheer & Compliance (NIS2, DORA, GDPR, AI Act), Technologie & Soevereiniteit (architectuur, cloud, cybersecurity, technologische onafhankelijkheid), Talent & Organisatie (opvolging, governance, oprichtersafhankelijkheid), M&A & PMI (due diligence, post-acquisitie-integratie, carve-outs). Wij zijn actief in 22 industrieën in Europa. Zie /advisory voor details."
       },
       {
         "id": "build-service",
@@ -7124,7 +7124,7 @@
           "account"
         ],
         "q": "Bouwen jullie maatwerk-assets?",
-        "a": "Ja, Aegryn ontwerpt maatwerk tech-assets (SaaS, platforms, tools) voor ondernemers en instellingen. Honoraria gedefinieerd en ondertekend in de discovery-fase, alleen custom code (geen no-code), IP volledig overgedragen aan de klant, certification-ready vanaf dag 1. Doorlooptijd: 10-16 weken. Indicatief bereik: CHF 15.000-150.000+. Details op /services/build."
+        "a": "Ja, Aegryn bouwt tech-assets op maat (SaaS, platformen, tools) voor ondernemers en instituties. Honoraria gedefinieerd en ondertekend in de discovery-fase, uitsluitend custom code (geen no-code), IP volledig overgedragen aan de klant, certificeerbaar vanaf dag 1. Richtprijzen: B2B SaaS vanaf € 25.000 excl. btw, B2C mobiele app vanaf € 35.000, natief AI-product vanaf € 40.000. Quick builds geleverd in 4 tot 8 weken. Details op /services/build."
       },
       {
         "id": "magazine",
@@ -7140,7 +7140,7 @@
           "account"
         ],
         "q": "Hoe word je lid van het Aegryn-expertnetwerk?",
-        "a": "Onafhankelijke professionals (advocaten, tech-experts, M&A, cyber, finance) kunnen solliciteren via de pagina Partner worden (/alliances), sectie Sollicitatie. Aegryn beoordeelt elke sollicitatie en antwoordt binnen 10 werkdagen."
+        "a": "Het Aegryn-netwerk omvat drie kringen: domeinexperts (vijf adviesdomeinen), investeerders & institutionelen, en onafhankelijke CIFSO-auditors. Zelfstandige professionals kunnen solliciteren via de pagina Partner worden (/alliances), sectie Kandidatuur. Aegryn beoordeelt elke kandidatuur en antwoordt binnen 10 werkdagen."
       },
       {
         "id": "valuation",

@@ -6986,7 +6986,7 @@
           "lifecycle"
         ],
         "q": "Qui est Aegryn et que faites-vous ?",
-        "a": "Aegryn est un groupe suisse de conseil et de certification qui accompagne les organisations à chaque étape de leur cycle de vie : conseil, construction d'actifs, transitions de cycle de vie, talent et information. Notre protocole de certification indépendant CIFSO 5000 évalue et documente la valeur réelle d'une organisation."
+        "a": "Aegryn est un cabinet de conseil intégré suisse qui accompagne les organisations à chaque étape de leur cycle de vie : conseil en stratégie, risques, technologie, talent et M&A, construction d'actifs numériques propriétaires, transitions de cycle de vie, recrutement executive et intelligence de marché. Notre protocole de certification indépendant CIFSO 5000 évalue et documente la valeur réelle d'une organisation."
       },
       {
         "id": "what-differentiates",
@@ -7010,7 +7010,7 @@
           "certification"
         ],
         "q": "Qu'est-ce que le Grade Aegryn ?",
-        "a": "Le Grade Aegryn est une certification officielle multi-dimensionnelle évaluant 5 dimensions : Code (C), IP et Droits (I), Finance (F), Sécurité (S), Organisation (O). Chaque dimension est notée sur 20 points. Le score total détermine le Grade officiel : AEG ★ Exceptionnel (90 et plus), AAA Excellent (75 et plus), AA Très bon (60 et plus), A Bon (45 et plus), B Correct (30 et plus)."
+        "a": "Le Grade Aegryn est une certification officielle multi-dimensionnelle évaluant 5 dimensions : Code (C), IP et Droits (I), Finance (F), Sécurité (S), Organisation (O). Chaque dimension est notée sur 20 points. Le score total détermine le Grade officiel : AEG ★ Exceptionnel (90 et plus), AAA Excellent (75 et plus), AA Solide (60 et plus), A En développement (45 et plus), B Émergent (30 et plus)."
       },
       {
         "id": "what-assets",
@@ -7068,7 +7068,7 @@
           "account"
         ],
         "q": "Proposez-vous des services de recrutement ?",
-        "a": "Oui, Aegryn Talent propose du recrutement executive (CTO, CISO, Chief AI Officer, VP Engineering, etc.) et du placement temporaire (interim management). Honoraires : 20% du salaire annuel brut, uniquement en cas de placement réussi (success fee). Garantie de remplacement de 3 mois pour le recrutement permanent. Formulaires disponibles sur /talent."
+        "a": "Oui, Aegryn Talent propose du recrutement executive (CTO, CISO, Chief AI Officer, VP Engineering, etc.) et du placement temporaire (interim management). Honoraires au succès uniquement (success fee), avec garantie de remplacement de 3 mois pour le recrutement permanent. Formulaires disponibles sur /talent."
       },
       {
         "id": "advisory-service",
@@ -7076,7 +7076,7 @@
           "account"
         ],
         "q": "Quels services d'advisory proposez-vous ?",
-        "a": "Aegryn Advisory intervient sur 4 axes : Tech & IA (transformation digitale, stratégie IA, architecture), Cybersécurité (audits, conformité RGPD/FADP/SOC2/ISO27001), M&A Advisory (buy-side, sell-side, due diligence, valorisation), Data Privacy (EU AI Act, gouvernance data). Nous opérons dans 23+ industries en Europe. Consultez /advisory pour plus de détails."
+        "a": "Aegryn Advisory intervient sur 5 métiers : Stratégie & Innovation (trajectoire, business model, expansion), Gestion des Risques & Conformité (NIS2, DORA, RGPD, AI Act), Technologie & Souveraineté (architecture, cloud, cybersécurité, indépendance tech), Talent & Organisation (succession, gouvernance, dépendance fondateur), M&A & PMI (due diligence, intégration post-acquisition, carve-out). Nous opérons dans 22 industries en Europe. Consultez /advisory pour plus de détails."
       },
       {
         "id": "build-service",
@@ -7084,7 +7084,7 @@
           "account"
         ],
         "q": "Construisez-vous des actifs sur mesure ?",
-        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Délai : 10-16 semaines. Fourchette indicative : CHF 15'000-150'000+. Détails sur /services/build."
+        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Fourchettes indicatives : SaaS B2B à partir de 25 000 € HT, app mobile B2C dès 35 000 € HT, produit IA natif dès 40 000 € HT. Quick build livré en 4 à 8 semaines. Détails sur /services/build."
       },
       {
         "id": "magazine",
@@ -7100,7 +7100,7 @@
           "account"
         ],
         "q": "Comment rejoindre le réseau d'experts Aegryn ?",
-        "a": "Les professionnels indépendants (avocats, experts tech, M&A, cyber, finance) peuvent candidater via la page Devenir partenaire (/alliances), section Candidature. Aegryn étudie chaque candidature et répond sous 10 jours ouvrés."
+        "a": "Le réseau Aegryn rassemble trois cercles : experts métiers (cinq métiers conseil), investisseurs & institutionnels, auditeurs indépendants CIFSO. Les professionnels indépendants peuvent candidater via la page Devenir partenaire (/alliances), section Candidature. Aegryn étudie chaque candidature et répond sous 10 jours ouvrés."
       },
       {
         "id": "valuation",

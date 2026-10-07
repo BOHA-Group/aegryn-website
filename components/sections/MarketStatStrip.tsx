@@ -15,7 +15,45 @@ export function MarketStatStrip() {
       gsap.from('.market-stat', {
         opacity: 0, y: 20, stagger: 0.1,
         ease: 'expo.out', duration: 0.7,
-        scrollTrigger: { trigger: ref.current, start: 'top 80%' },
+        scrollTrigger: {
+          trigger: ref.current, start: 'top 80%',
+          onEnter: () => {
+            ref.current?.querySelectorAll<HTMLElement>('[data-counter]').forEach(el => {
+              const raw = el.getAttribute('data-counter') ?? ''
+              const range = raw.match(/^(\D*)(\d+)(\D*)(\d+)(\D*)$/)
+              if (range) {
+                /* Plage à deux nombres (ex. « 30 à 50% ») : le premier compte
+                   jusqu'à sa cible, puis le second enchaîne jusqu'à la sienne. */
+                const [, p1, n1, mid, n2, suf] = range
+                const t1 = parseInt(n1, 10)
+                const t2 = parseInt(n2, 10)
+                const obj = { a: 0, b: 0 }
+                gsap.to(obj, {
+                  a: t1, duration: 1.1, ease: 'power2.out',
+                  onUpdate()   { el.textContent = `${p1}${Math.round(obj.a)}` },
+                  onComplete() {
+                    gsap.to(obj, {
+                      b: t2, duration: 1.1, ease: 'power2.out',
+                      onUpdate()   { el.textContent = `${p1}${t1}${mid}${Math.round(obj.b)}${suf}` },
+                      onComplete() { el.textContent = raw },
+                    })
+                  },
+                })
+                return
+              }
+              const m = raw.match(/^(\D*)(\d+)([^\d]*)$/)
+              if (!m) return
+              const [, prefix, num, suffix] = m
+              const target = parseInt(num, 10)
+              const obj = { val: 0 }
+              gsap.to(obj, {
+                val: target, duration: 1.4, ease: 'power2.out',
+                onUpdate()   { el.textContent = `${prefix}${Math.round(obj.val)}${suffix}` },
+                onComplete() { el.textContent = raw },
+              })
+            })
+          },
+        },
       })
     }, ref)
     return () => ctx.revert()
@@ -33,7 +71,8 @@ export function MarketStatStrip() {
           {stats.map((stat, i) => (
             <div key={i} className="market-stat">
               <p
-                className="font-display font-black text-ag-apex-ink tracking-[-0.03em] leading-none mb-2"
+                data-counter={stat.value}
+                className="font-display font-black text-ag-black tracking-[-0.03em] leading-none mb-2"
                 style={{ fontSize: 'clamp(28px,3vw,46px)' }}
               >
                 {stat.value}

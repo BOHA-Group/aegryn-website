@@ -95,7 +95,7 @@ export function ManifestoSection() {
             start: 'top 85%',
             once: true,
             onEnter: () => {
-              document.querySelectorAll<HTMLElement>('[data-counter]').forEach(el => {
+              aboutRef.current?.querySelectorAll<HTMLElement>('[data-counter]').forEach(el => {
                 const raw    = el.getAttribute('data-counter') ?? '0'
                 const suffix = raw.endsWith('+') ? '+' : raw.endsWith('%') ? '%' : ''
                 const target = parseInt(raw.replace(/\D/g, ''), 10)
