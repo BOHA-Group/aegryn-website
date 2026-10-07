@@ -8,12 +8,11 @@ import { gsap, SplitText }   from '@/lib/gsap'
  * MissionVideoSection
  *
  * Architecture :
- *   - Wrapper pin +=300vh
+ *   - Pas de pinning : la section suit le flux normal
  *   - Couche 1 : vidéo assets-animation1 plein fond (opacity 0→1 scrubé)
- *   - Couche 2 : section "Notre Mission" sticky, bg transparent
- *               Texte dark→blanc progressivement via GSAP scrub (color interpolation)
- *               Borders dark→white/20
- *   - Après dépinning : AssetGrid apparaît en dessous normalement (normal flow)
+ *   - Couche 2 : contenu au-dessus, bg transparent
+ *               Texte dark→blanc via GSAP scrub lissé (0.6) pendant
+ *               la traversée du viewport — jouable dans les deux sens
  */
 export function MissionVideoSection() {
   const wrapRef    = useRef<HTMLDivElement>(null)
@@ -49,8 +48,6 @@ export function MissionVideoSection() {
     const section = sectionRef.current
     if (!wrap || !section) return
 
-    const isMobile = window.innerWidth < 1024
-
     /* SplitText sur les titres Mission pour animer mot par mot */
     const splits: SplitText[] = []
     const titleEls = section.querySelectorAll<HTMLElement>('.mv-title')
@@ -60,14 +57,14 @@ export function MissionVideoSection() {
     })
 
     const ctx = gsap.context(() => {
+      /* Scrub non pinné : la transition suit la traversée du viewport,
+         dans les deux sens, lissée (0.6) pour épouser la vitesse du scroll */
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger:       wrap,
-          start:         'top top',
-          end:           isMobile ? 'bottom bottom' : '+=300%',
-          pin:           !isMobile,
-          scrub:         true,
-          anticipatePin: isMobile ? 0 : 1,
+          start:         'top bottom',
+          end:           'top 20%',
+          scrub:         0.6,
           invalidateOnRefresh: true,
         },
       })
@@ -121,7 +118,7 @@ export function MissionVideoSection() {
   }, [])
 
   return (
-    /* Wrapper — desktop: 100vh pinné | mobile: hauteur auto (contenu complet visible) */
+    /* Wrapper — 100vh desktop, hauteur auto mobile ; flux normal, pas de pin */
     <div ref={wrapRef} className="relative min-h-screen lg:h-screen">
 
       {/* ── Couche 1 : vidéo plein fond ── */}
