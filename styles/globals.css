@@ -129,6 +129,8 @@ button, input, select, textarea,
 }
 
 /* ── Scrollbar ────────────────────────────────────────── */
+.scrollbar-hide           { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
 ::-webkit-scrollbar       { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--ag-off-white); }
 ::-webkit-scrollbar-thumb {

@@ -140,7 +140,7 @@ export default async function MagazineHubPage({ params }: Props) {
                   <p className="font-mono text-[8px] tracking-[0.22em] uppercase text-magazine-black/30 mb-8">
                     {tHub('allIssuesLabel')}
                   </p>
-                  <div className="flex items-end gap-5 overflow-x-auto pb-2">
+                  <div className="flex items-end gap-5 overflow-x-auto pb-2 scrollbar-hide">
                     {ALL_ISSUES.map(issue => (
                       <IssueMiniCard
                         key={issue.slug}
