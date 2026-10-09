@@ -8644,11 +8644,11 @@
       "reportLabel": "Jaarrapport",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "notifyLabel": "Ontvang elke editie",
-      "notifyDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe jaarlijkse editie verschijnt.",
+      "notifyDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe driemaandelijkse editie verschijnt.",
       "newsletterLabel": "Artikelen & Inzichten",
       "newsletterDesc": "Ontvang onze artikelen over de tech-M&A-markt, één per week.",
       "subscribeLabel": "Ontvang elke editie",
-      "subscribeDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe jaarlijkse editie verschijnt.",
+      "subscribeDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe driemaandelijkse editie verschijnt.",
       "charteFreqLabel": "Frequentie",
       "charteFreqVal": "Driemaandelijks",
       "charteLangLabel": "Taal",
@@ -8704,7 +8704,7 @@
     },
     "notify": {
       "title": "Word op de hoogte gesteld van elke editie",
-      "desc": "Voer uw e-mailadres in om een publicatiemelding te ontvangen voor elke nieuwe jaarlijkse editie van Aegryn Magazine. Gratis toegang, geen verplichting, uitschrijven met één klik.",
+      "desc": "Voer uw e-mailadres in om een publicatiemelding te ontvangen voor elke nieuwe driemaandelijkse editie van Aegryn Magazine. Geen verplichting, uitschrijven met één klik.",
       "placeholder": "Uw e-mailadres",
       "cta": "Houd mij op de hoogte",
       "success": "Bedankt. U ontvangt de volgende editie zodra deze verschijnt.",
@@ -8712,7 +8712,7 @@
       "unsubscribed": "U bent uitgeschreven.",
       "meta": {
         "title": "Notificaties | Aegryn Magazine",
-        "description": "Ontvang een publicatiemelding voor elke nieuwe jaarlijkse editie van AEGRYN Magazine over de Europese tech-M&A-markt."
+        "description": "Ontvang een publicatiemelding voor elke nieuwe driemaandelijkse editie van AEGRYN Magazine over de Europese tech-M&A-markt."
       }
     },
     "report": {
@@ -8748,7 +8748,7 @@
       "printBadge": "Printeditie",
       "title": "Interesselijst: printeditie",
       "desc": "De printeditie van het Aegryn-magazine is een initiatief voorbehouden aan geregistreerde klanten. Via dit formulier kunt u uw interessegebieden aangeven om aan de wenslijst te worden toegevoegd. Wij nemen contact met u op zodra de productie start.",
-      "digitalNote": "De digitale versie is vrij toegankelijk, net als onze artikelen en nieuws.",
+      "digitalNote": "De digitale versie is online toegankelijk, net als onze artikelen en nieuws.",
       "digitalNoteCta": "Lees het rapport online",
       "namePlaceholder": "Uw naam",
       "emailPlaceholder": "Uw e-mailadres",
@@ -8780,7 +8780,7 @@
       "success": "Bedankt. Uw interesse is geregistreerd. Wij nemen contact met u op wanneer de printeditie in productie gaat.",
       "error": "Er is een fout opgetreden. Probeer het opnieuw.",
       "clientNote": "Voorbehouden aan geregistreerde Aegryn-klanten. De printeditie is niet beschikbaar of printbaar via het web. Ze wordt fysiek geproduceerd als de vraag dit rechtvaardigt.",
-      "disclaimer": "De digitale versie blijft vrij toegankelijk. De printeditie wordt, indien geproduceerd, uitsluitend verzonden aan geregistreerde klanten op de wenslijst.",
+      "disclaimer": "De digitale versie blijft online toegankelijk. De printeditie wordt, indien geproduceerd, uitsluitend verzonden aan geregistreerde klanten op de wenslijst.",
       "backToMagazine": "Terug naar Magazine",
       "firstNamePlaceholder": "Voornaam",
       "lastNamePlaceholder": "Achternaam",

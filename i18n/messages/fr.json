@@ -8604,11 +8604,11 @@
       "reportLabel": "Rapport annuel",
       "reportDesc": "Aegryn Magazine | Intelligence M&A Tech Européenne",
       "notifyLabel": "Recevoir chaque édition",
-      "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
+      "notifyDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution trimestrielle.",
       "newsletterLabel": "Articles & Analyses",
       "newsletterDesc": "Recevez nos articles sur le marché M&A tech, un par semaine.",
       "subscribeLabel": "Recevoir chaque édition",
-      "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution annuelle.",
+      "subscribeDesc": "Inscrivez-vous pour être notifié à chaque nouvelle parution trimestrielle.",
       "charteFreqLabel": "Fréquence",
       "charteFreqVal": "Trimestriel",
       "charteLangLabel": "Langue",
@@ -8689,7 +8689,7 @@
     },
     "notify": {
       "title": "Être notifié de chaque édition",
-      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition annuelle de Aegryn Magazine. Accès libre, aucun engagement, désabonnement en un clic.",
+      "desc": "Renseignez votre email pour recevoir un avis de parution à chaque nouvelle édition trimestrielle de Aegryn Magazine. Aucun engagement, désabonnement en un clic.",
       "placeholder": "Votre adresse email",
       "cta": "Être notifié",
       "success": "Merci. Vous recevrez la prochaine édition dès sa publication.",
@@ -8697,7 +8697,7 @@
       "unsubscribed": "Vous avez été désabonné.",
       "meta": {
         "title": "Notifications | Aegryn Magazine",
-        "description": "Recevez un avis de parution à chaque nouvelle édition annuelle du rapport AEGRYN sur le marché M&A tech européen."
+        "description": "Recevez un avis de parution à chaque nouvelle édition trimestrielle de Aegryn Magazine sur le marché M&A tech européen."
       }
     },
     "subscribe": {
@@ -8708,7 +8708,7 @@
       "printBadge": "Édition papier",
       "title": "Liste d'intérêt : Édition imprimée",
       "desc": "L'édition papier du magazine Aegryn est une initiative réservée aux clients enregistrés. Ce formulaire vous permet d'exprimer vos centres d'intérêt pour figurer sur la liste de souhait. Nous vous contacterons lors de la mise en production.",
-      "digitalNote": "La version digitale est accessible librement, comme nos articles et actualités.",
+      "digitalNote": "La version digitale est accessible en ligne, comme nos articles et actualités.",
       "digitalNoteCta": "Lire le rapport en ligne",
       "namePlaceholder": "Votre nom",
       "emailPlaceholder": "Votre adresse email",
@@ -8740,7 +8740,7 @@
       "success": "Merci. Votre intérêt a été enregistré. Nous vous contacterons lors de la production de l'édition papier.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
       "clientNote": "Réservé aux clients enregistrés Aegryn. L'édition papier n'est ni disponible ni imprimable via le web : elle fera l'objet d'une production physique dédiée si la demande le justifie.",
-      "disclaimer": "La version digitale est accessible librement à tous, comme nos articles et actualités. L'édition papier, si elle est produite, sera expédiée uniquement aux clients enregistrés figurant sur la liste de souhait.",
+      "disclaimer": "La version digitale est accessible en ligne, comme nos articles et actualités. L'édition papier, si elle est produite, sera expédiée uniquement aux clients enregistrés figurant sur la liste de souhait.",
       "backToMagazine": "Retour au Magazine",
       "firstNamePlaceholder": "Prénom",
       "lastNamePlaceholder": "Nom",

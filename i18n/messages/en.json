@@ -8644,11 +8644,11 @@
       "reportLabel": "Annual Report",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
       "notifyLabel": "Receive each edition",
-      "notifyDesc": "Sign up to be notified when each new annual edition is published.",
+      "notifyDesc": "Sign up to be notified when each new quarterly edition is published.",
       "newsletterLabel": "Articles & Insights",
       "newsletterDesc": "Receive our articles on the tech M&A market, one per week.",
       "subscribeLabel": "Receive each edition",
-      "subscribeDesc": "Sign up to be notified when each new annual edition is published.",
+      "subscribeDesc": "Sign up to be notified when each new quarterly edition is published.",
       "charteFreqLabel": "Frequency",
       "charteFreqVal": "Quarterly",
       "charteLangLabel": "Language",
@@ -8704,7 +8704,7 @@
     },
     "notify": {
       "title": "Be notified of each edition",
-      "desc": "Enter your email to receive a publication notice for each new annual edition of Aegryn Magazine. Free access, no commitment, unsubscribe in one click.",
+      "desc": "Enter your email to receive a publication notice for each new quarterly edition of Aegryn Magazine. No commitment, unsubscribe in one click.",
       "placeholder": "Your email address",
       "cta": "Get notified",
       "success": "Thank you. You will receive the next edition as soon as it is published.",
@@ -8712,7 +8712,7 @@
       "unsubscribed": "You have been unsubscribed.",
       "meta": {
         "title": "Notifications | Aegryn Magazine",
-        "description": "Receive a publication notice for each new annual edition of AEGRYN Magazine on the European tech M&A market."
+        "description": "Receive a publication notice for each new quarterly edition of AEGRYN Magazine on the European tech M&A market."
       }
     },
     "report": {
@@ -8748,7 +8748,7 @@
       "printBadge": "Print edition",
       "title": "Interest list: Print edition",
       "desc": "The print edition of the Aegryn magazine is an initiative reserved for registered clients. This form allows you to express your areas of interest to be added to the wish list. We will contact you when production begins.",
-      "digitalNote": "The digital version is freely accessible, like our articles and news.",
+      "digitalNote": "The digital version is accessible online, like our articles and news.",
       "digitalNoteCta": "Read the report online",
       "namePlaceholder": "Your name",
       "emailPlaceholder": "Your email address",
@@ -8780,7 +8780,7 @@
       "success": "Thank you. Your interest has been registered. We will contact you when the print edition goes into production.",
       "error": "An error occurred. Please try again.",
       "clientNote": "Reserved for registered Aegryn clients. The print edition is not available or printable via the web. It will be produced physically if demand justifies it.",
-      "disclaimer": "The digital version remains freely accessible. The print edition, if produced, will be shipped only to registered clients on the wish list.",
+      "disclaimer": "The digital version remains accessible online. The print edition, if produced, will be shipped only to registered clients on the wish list.",
       "backToMagazine": "Back to Magazine",
       "firstNamePlaceholder": "First name",
       "lastNamePlaceholder": "Last name",
