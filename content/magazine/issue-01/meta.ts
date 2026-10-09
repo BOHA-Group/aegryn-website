@@ -8,7 +8,7 @@ export const ISSUE_01: MagazineIssue = {
   publishedAt: '2027-01-01',
   coverStat: '€44.1B',
   coverStatLabel: 'European tech funding, H1 2026 · 1,740 deals',
-  coverLine: 'Build. Certify. Value.',
+  coverLine: 'Build. Certify. Transmit.',
   status: 'published',
   sections: [
     { id: 's-opening',     label: 'Opening',     pillar: 'build',  pageRange: 'p.04–12'  },
