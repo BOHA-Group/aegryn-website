@@ -166,11 +166,11 @@
     "eyebrow": "CINQUE DISCIPLINE. UN MARCHIO DI QUALITÀ.",
     "sub": "Accompagniamo i dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.",
     "phrases": [
-      "CONSIGLIARE tuoi progetti.",
-      "COSTRUIRE tue soluzioni.",
-      "AFFRONTARE ogni ciclo.",
-      "RECLUTARE talenti.",
-      "INFORMARSI sul mercato."
+      "consigliare\ntuoi progetti.",
+      "costruire\ntue soluzioni.",
+      "affrontare\nogni ciclo.",
+      "reclutare\ntalenti.",
+      "informarsi\nsul mercato."
     ],
     "scroll": "Scorri"
   },

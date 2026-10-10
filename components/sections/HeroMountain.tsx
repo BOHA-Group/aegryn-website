@@ -23,21 +23,21 @@ function useTypedPhrases(phrases: string[]) {
       if (!deleting) {
         char++
         setText(current.slice(0, char))
-        if (char === current.length) { deleting = true; timer = setTimeout(tick, 2400); return }
-        timer = setTimeout(tick, 42 + Math.random() * 48)
+        if (char === current.length) { deleting = true; timer = setTimeout(tick, 3000); return }
+        timer = setTimeout(tick, 110 + Math.random() * 70)
       } else {
         char--
         setText(current.slice(0, char))
         if (char === 0) {
           deleting = false
           phrase = (phrase + 1) % phrases.length
-          timer = setTimeout(tick, 500)
+          timer = setTimeout(tick, 650)
           return
         }
-        timer = setTimeout(tick, 26)
+        timer = setTimeout(tick, 55)
       }
     }
-    timer = setTimeout(tick, 900)
+    timer = setTimeout(tick, 1100)
     return () => clearTimeout(timer)
   }, [phrases])
 
@@ -48,7 +48,6 @@ export function HeroMountain() {
   const t = useTranslations('hero')
   const phrases = t.raw('phrases') as string[]
   const typed = useTypedPhrases(phrases)
-  const longest = phrases.reduce((a, b) => (b.length > a.length ? b : a), '')
 
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
@@ -78,15 +77,6 @@ export function HeroMountain() {
         },
       })
 
-      gsap.to('#hero-overlay', {
-        opacity: 0.45, ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: '60% top',
-          scrub: true,
-        },
-      })
     }, sectionRef)
 
     return () => ctx.revert()
@@ -110,7 +100,6 @@ export function HeroMountain() {
           playsInline
           aria-hidden="true"
         />
-        <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
       </div>
 
       {/* Content — bottom anchored, left-aligned */}
@@ -125,20 +114,31 @@ export function HeroMountain() {
             {t('eyebrow')}
           </p>
 
-          {/* H1 — rotation machine à écrire, police conservée */}
+          {/* H1 — rotation machine à écrire, police conservée.
+              Verbe en ligne 1, complément en ligne 2 ; toutes les phrases
+              invisibles dans la même cellule de grille réservent la hauteur max. */}
           <h1
             ref={headingRef}
             id="hero-title"
-            aria-label={phrases.join(' ')}
+            aria-label={phrases.map((p) => p.replace('\n', ' ')).join(' ')}
             className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-8"
-            style={{ fontSize: 'clamp(36px,6.5vw,104px)' }}
+            style={{ fontSize: 'clamp(36px,6.5vw,104px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
           >
-            <span className="relative inline-block">
-              {/* Réserve la hauteur de la phrase la plus longue — pas de saut de mise en page */}
-              <span className="invisible" aria-hidden="true">{longest}</span>
-              <span className="absolute inset-0" aria-hidden="true">
-                {typed}
-                <span className="typed-caret" />
+            <span className="inline-grid">
+              {phrases.map((p, i) => (
+                <span key={i} className="invisible col-start-1 row-start-1" aria-hidden="true">
+                  {p.split('\n').map((line, j) => (
+                    <span key={j} className="block">{line}</span>
+                  ))}
+                </span>
+              ))}
+              <span className="col-start-1 row-start-1" aria-hidden="true">
+                {typed.split('\n').map((line, j) => (
+                  <span key={j} className="block">
+                    {line}
+                    {j === typed.split('\n').length - 1 && <span className="typed-caret" />}
+                  </span>
+                ))}
               </span>
             </span>
           </h1>
