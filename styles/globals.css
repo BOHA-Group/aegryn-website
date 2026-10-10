@@ -146,7 +146,7 @@ button, input, select, textarea,
 .marquee-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 100s linear infinite;
   will-change: transform;
 }
 @media (prefers-reduced-motion: reduce) {

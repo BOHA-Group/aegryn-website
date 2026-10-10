@@ -51,7 +51,6 @@ export function HeroMountain() {
 
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
-  const labelRef    = useRef<HTMLParagraphElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
   const ruleRef     = useRef<HTMLDivElement>(null)
   const marqueeRef  = useRef<HTMLDivElement>(null)
@@ -62,8 +61,7 @@ export function HeroMountain() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
 
-      tl.from(labelRef.current, { opacity: 0, y: 8, duration: 0.5, delay: 0.1 })
-        .from(headingRef.current, { opacity: 0, y: 24, duration: 0.9 }, '-=0.2')
+      tl.from(headingRef.current, { opacity: 0, y: 24, duration: 0.9, delay: 0.15 })
         .from(ruleRef.current, { scaleX: 0, duration: 0.8, transformOrigin: 'left' }, '-=0.5')
         .from(marqueeRef.current, { opacity: 0, duration: 0.6 }, '-=0.4')
 
@@ -106,14 +104,6 @@ export function HeroMountain() {
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-14">
 
-          {/* Eyebrow */}
-          <p
-            ref={labelRef}
-            className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-apex mb-6"
-          >
-            {t('eyebrow')}
-          </p>
-
           {/* H1 — rotation machine à écrire, police conservée.
               Verbe en ligne 1, complément en ligne 2 ; toutes les phrases
               invisibles dans la même cellule de grille réservent la hauteur max. */}
@@ -121,8 +111,8 @@ export function HeroMountain() {
             ref={headingRef}
             id="hero-title"
             aria-label={phrases.map((p) => p.replace('\n', ' ')).join(' ')}
-            className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-8"
-            style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
+            className="font-sans font-bold text-white leading-[1.15] tracking-[-0.03em] max-w-4xl mb-8"
+            style={{ fontSize: 'clamp(26px,3.6vw,46px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
           >
             <span className="inline-grid">
               {phrases.map((p, i) => (
