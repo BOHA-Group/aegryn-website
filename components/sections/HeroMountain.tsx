@@ -122,7 +122,7 @@ export function HeroMountain() {
             id="hero-title"
             aria-label={phrases.map((p) => p.replace('\n', ' ')).join(' ')}
             className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-8"
-            style={{ fontSize: 'clamp(36px,6.5vw,104px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
+            style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
           >
             <span className="inline-grid">
               {phrases.map((p, i) => (
