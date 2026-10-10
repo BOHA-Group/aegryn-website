@@ -79,10 +79,12 @@ export function AboutHeroScroll() {
           <div className="flex items-start justify-between gap-8 mb-8">
             <h1
               id="about-hero-title"
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18] max-w-3xl whitespace-pre-line"
+              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] max-w-3xl"
               style={{ fontSize: 'clamp(48px,6vw,86px)' }}
             >
-              {t('hero.title')}
+              {t('hero.title').split('\n').map((line, i) => (
+                <span key={i} className={i === 0 ? 'block font-normal' : 'block'}>{line}</span>
+              ))}
             </h1>
             <div className="shrink-0 mt-16 -mr-3">
               <AboutHeroLogo />
