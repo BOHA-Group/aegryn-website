@@ -52,7 +52,6 @@ export function HeroMountain() {
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
-  const ruleRef     = useRef<HTMLDivElement>(null)
   const marqueeRef  = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -62,7 +61,6 @@ export function HeroMountain() {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
 
       tl.from(headingRef.current, { opacity: 0, y: 24, duration: 0.9, delay: 0.15 })
-        .from(ruleRef.current, { scaleX: 0, duration: 0.8, transformOrigin: 'left' }, '-=0.5')
         .from(marqueeRef.current, { opacity: 0, duration: 0.6 }, '-=0.4')
 
       gsap.to(mediaRef.current, {
@@ -132,12 +130,6 @@ export function HeroMountain() {
               </span>
             </span>
           </h1>
-
-          {/* Horizontal rule */}
-          <div
-            ref={ruleRef}
-            className="w-full max-w-4xl h-px bg-white/20"
-          />
         </div>
 
         {/* Bottom bar — marquee signature, droite → gauche */}
