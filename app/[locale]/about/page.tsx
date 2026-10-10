@@ -71,9 +71,6 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
         <div className="relative flex h-full flex-col justify-end">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-12 pb-24">
-            <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-white/70 mb-8">
-              {t('hero.label')}
-            </p>
             <div className="flex items-start justify-between gap-8 mb-8">
               <h1
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl whitespace-pre-line"
