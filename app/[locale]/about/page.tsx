@@ -4,7 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
-import { AboutHeroLogo }       from '@/components/brand/AboutHeroLogo'
+import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
 import { SegmentsSection }     from '@/components/sections/SegmentsSection'
 import type { Metadata } from 'next'
 
@@ -55,39 +55,8 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative h-[88vh] min-h-[620px] overflow-hidden border-b border-ag-border bg-ag-navy">
-        <Image
-          src="/images/about/about_regatta.webp"
-          alt={t('hero.imageAlt')}
-          fill
-          priority
-          unoptimized
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAArAEADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgEDBAUGBwD/xAAtEAACAQMDAgQGAgMAAAAAAAABAgMABBEFEiETMQZBYXEUMlFSgbEi4ZGhwf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAaEQEBAAMBAQAAAAAAAAAAAAAAARESITEC/9oADAMBAAIRAxEAPwDroWiC0WKXFZaDtpQuOaXFewaITAP1oWUeVHikxRTJUU0yVJK0JSpQN1qFnY7Pi7qG36hwnVcLuPpmvXeoWtkubiYKT8qjlm9gOTXMfE7ahqttDPdSystujsxeARrHnHmO/anNEc6rIetLqUVrJEGjmRFLT59SMgCm0MVsn8SyzytDYWRkZe+7kj3A4H5IpTLr0wyz20Q+0/1n90zAtrBAscMmppGvAVdij/QourZEKJb7UYS0gRRJLguSM8YHvTaGKkG71mBclILjH2jB/Yr1v4kiMvSubd43HzBckj1KnBx7ZqIl5pjo8q6tqG1WZeGYnIPPG2sl4q1PUHhxp9tqMscR6guZcMVUeYGwFPfNNoYrc+FLwXPhaxmkmEjrCBK27OCM5z/ip1nqNlqVv8RY3UVzFnaXibcM/SuCQ63r9jG0EfWjTDEBosEKSQecfKefSndI8Xa94ctXtdPUJFI+9hJb7ucAefoBVvTzjpN2hit2JLRoRkhl7epzxjtUJpJI+nLLsnQgIFjwFZsd+f8AlU91fXZ0y8nNzKZIYcodxwDkeXY/msrpGoXk+qTGS7mOWPZyP1W5HO1v8NtzM0C4UEjtn6kfrmqyaN2Ekgd0hUEnftLMM8du374qu1qFLo37TGRtikKokYKAFz8oOO/NU8Op31pOIYrqQxhcgSHfjt92avz3xPrnq7e9uNiskCdv5by43D6jAqKmoXtzO+LTYo4A6hz+c/3UgTy3OqWnVcthQwxxyVye1OardzwSl42AYqoJKg5488jmt4YyFHaaN2kTAI4Bk74/OTUXfG6dLbMrvjAyQfXHfilupZZLe/kaWTdE0fTw5G3IGcCobYnYLKA4UbQCOw5pgf/Z"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
-        <div className="relative flex h-full flex-col justify-end">
-          <div className="mx-auto w-full max-w-7xl px-6 md:px-12 pb-24">
-            <div className="flex items-start justify-between gap-8 mb-8">
-              <h1
-                className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl whitespace-pre-line"
-                style={{ fontSize: 'clamp(48px,6vw,86px)' }}
-              >
-                {t('hero.title')}
-              </h1>
-              <div className="shrink-0 mt-16 -mr-3">
-                <AboutHeroLogo onDark />
-              </div>
-            </div>
-            <p className="text-[16px] text-white/80 leading-relaxed max-w-xl whitespace-pre-line">
-              {t('hero.desc')}
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Hero — scroll-driven, style size.swiss */}
+      <AboutHeroScroll />
 
       {/* Name — Etymology */}
       <section className="border-b border-ag-border">
