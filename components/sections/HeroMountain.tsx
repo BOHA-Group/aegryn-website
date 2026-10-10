@@ -118,13 +118,13 @@ export function HeroMountain() {
               {phrases.map((p, i) => (
                 <span key={i} className="invisible col-start-1 row-start-1" aria-hidden="true">
                   {p.split('\n').map((line, j) => (
-                    <span key={j} className="block">{line}</span>
+                    <span key={j} className={j === 0 ? 'block' : 'block font-normal'}>{line}</span>
                   ))}
                 </span>
               ))}
               <span className="col-start-1 row-start-1" aria-hidden="true">
                 {typed.split('\n').map((line, j) => (
-                  <span key={j} className="block">
+                  <span key={j} className={j === 0 ? 'block' : 'block font-normal'}>
                     {line}
                     {j === typed.split('\n').length - 1 && <span className="typed-caret" />}
                   </span>
