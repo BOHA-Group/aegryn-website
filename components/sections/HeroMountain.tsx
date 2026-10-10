@@ -1,54 +1,74 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import Link  from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
-import { useTranslations, useLocale } from 'next-intl'
-import { gsap, SplitText } from '@/lib/gsap'
+import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { gsap } from '@/lib/gsap'
 
-const HERO_IMAGE = { src: '/images/home/home_geneva.webp', alt: 'Genève — Aegryn Group' }
-const HERO_BLUR_DATA_URL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/7QAkUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAgcAVoAAxslR//hAIBFeGlmAABJSSoACAAAAAUAEgEDAAEAAAABAAAAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAaYcEAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAAAACAAKgBAABAAAAMBgAAAOgBAABAAAAIBAAAAAAAAD/4QD6aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49IiIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJHbyBYTVAgU0RLIDEuMCI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48L3JkZjpSREY+PC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InciPz7/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAAQABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEEQUUITFRQaLB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/EAB0RAAEEAgMAAAAAAAAAAAAAAAABAgMUESEEUVL/2gAMAwEAAhEDEQA/AFacN2ZVC62QJu2C6OVI8fPuRa+UvNikXOO/oRyzmXaoVkkMu9MG/JbYkzpDLTiR424afDYDxCS25PKI11H0EI7D+gqx+j//2Q=='
+const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
+const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
+
+/** Animation machine à écrire — style size.swiss : tape, pause, efface, phrase suivante. */
+function useTypedPhrases(phrases: string[]) {
+  const [text, setText] = useState('')
+
+  useEffect(() => {
+    if (!phrases.length) return
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduced) { setText(phrases[0]); return }
+
+    let phrase = 0, char = 0, deleting = false, timer: ReturnType<typeof setTimeout>
+
+    const tick = () => {
+      const current = phrases[phrase]
+      if (!deleting) {
+        char++
+        setText(current.slice(0, char))
+        if (char === current.length) { deleting = true; timer = setTimeout(tick, 2400); return }
+        timer = setTimeout(tick, 42 + Math.random() * 48)
+      } else {
+        char--
+        setText(current.slice(0, char))
+        if (char === 0) {
+          deleting = false
+          phrase = (phrase + 1) % phrases.length
+          timer = setTimeout(tick, 500)
+          return
+        }
+        timer = setTimeout(tick, 26)
+      }
+    }
+    timer = setTimeout(tick, 900)
+    return () => clearTimeout(timer)
+  }, [phrases])
+
+  return text
+}
 
 export function HeroMountain() {
   const t = useTranslations('hero')
-  const locale = useLocale()
+  const phrases = t.raw('phrases') as string[]
+  const typed = useTypedPhrases(phrases)
+  const longest = phrases.reduce((a, b) => (b.length > a.length ? b : a), '')
+
   const sectionRef  = useRef<HTMLElement>(null)
-  const headingRef  = useRef<HTMLHeadingElement>(null)
-  const subtitleRef = useRef<HTMLParagraphElement>(null)
-  const photoRef    = useRef<HTMLDivElement>(null)
+  const mediaRef    = useRef<HTMLDivElement>(null)
   const labelRef    = useRef<HTMLParagraphElement>(null)
-  const ctasRef     = useRef<HTMLDivElement>(null)
+  const headingRef  = useRef<HTMLHeadingElement>(null)
   const ruleRef     = useRef<HTMLDivElement>(null)
+  const marqueeRef  = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (!headingRef.current || !sectionRef.current || !labelRef.current || !ruleRef.current || !subtitleRef.current) return
-
-    /* Split by LINES — boha-group.com style: each line clips up from below */
-    const split = new SplitText(headingRef.current, {
-      type: 'lines',
-      linesClass: 'hero-line-inner',
-    })
-
-    gsap.set(split.lines, { overflow: 'hidden', display: 'block' })
+    if (!sectionRef.current) return
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
 
       tl.from(labelRef.current, { opacity: 0, y: 8, duration: 0.5, delay: 0.1 })
-        .from(split.lines, {
-          yPercent: 105,
-          duration: 1.0,
-          stagger: 0.12,
-          ease: 'expo.out',
-        }, '-=0.2')
-        .from(ruleRef.current, { scaleX: 0, duration: 0.8, transformOrigin: 'left' }, '-=0.6')
-        .from(subtitleRef.current, { opacity: 0, y: 12, duration: 0.6 }, '-=0.55')
-        .from(ctasRef.current?.children ?? [], {
-          opacity: 0, y: 10, stagger: 0.1, duration: 0.5,
-        }, '-=0.4')
+        .from(headingRef.current, { opacity: 0, y: 24, duration: 0.9 }, '-=0.2')
+        .from(ruleRef.current, { scaleX: 0, duration: 0.8, transformOrigin: 'left' }, '-=0.5')
+        .from(marqueeRef.current, { opacity: 0, duration: 0.6 }, '-=0.4')
 
-      gsap.to(photoRef.current, {
+      gsap.to(mediaRef.current, {
         yPercent: -12, ease: 'none',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -58,7 +78,6 @@ export function HeroMountain() {
         },
       })
 
-      /* Éclaircissement progressif au scroll — overlay s'estompe */
       gsap.to('#hero-overlay', {
         opacity: 0.45, ease: 'none',
         scrollTrigger: {
@@ -70,10 +89,7 @@ export function HeroMountain() {
       })
     }, sectionRef)
 
-    return () => {
-      split.revert()
-      ctx.revert()
-    }
+    return () => ctx.revert()
   }, [])
 
   return (
@@ -82,20 +98,18 @@ export function HeroMountain() {
       className="relative h-[96vh] min-h-[640px] overflow-hidden pt-20"
       aria-labelledby="hero-title"
     >
-      {/* Photo plein format — parallax */}
-      <div ref={photoRef} className="absolute inset-0 scale-[1.12] will-change-transform">
-        <Image
-          src={HERO_IMAGE.src}
-          alt={HERO_IMAGE.alt}
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL={HERO_BLUR_DATA_URL}
-          className="object-cover object-center"
+      {/* Vidéo plein format — parallax */}
+      <div ref={mediaRef} className="absolute inset-0 scale-[1.12] will-change-transform">
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          src={HERO_VIDEO}
+          poster={HERO_POSTER}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
         />
-        {/* Gradient foncé au départ — s'éclaircit au scroll via GSAP */}
         <div id="hero-overlay" className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/80" />
       </div>
 
@@ -103,139 +117,57 @@ export function HeroMountain() {
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-14">
 
-          {/* H1 — Unbounded display */}
+          {/* Eyebrow */}
+          <p
+            ref={labelRef}
+            className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-apex mb-6"
+          >
+            {t('eyebrow')}
+          </p>
+
+          {/* H1 — rotation machine à écrire, police conservée */}
           <h1
             ref={headingRef}
             id="hero-title"
-            className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(38px,7.5vw,116px)' }}
-            dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
-          />
+            aria-label={phrases.join(' ')}
+            className="font-sans font-bold text-white leading-[1.28] tracking-[-0.03em] max-w-4xl mb-8"
+            style={{ fontSize: 'clamp(36px,6.5vw,104px)' }}
+          >
+            <span className="relative inline-block">
+              {/* Réserve la hauteur de la phrase la plus longue — pas de saut de mise en page */}
+              <span className="invisible" aria-hidden="true">{longest}</span>
+              <span className="absolute inset-0" aria-hidden="true">
+                {typed}
+                <span className="typed-caret" />
+              </span>
+            </span>
+          </h1>
 
-          {/* Horizontal rule — Rolex signature separator */}
+          {/* Horizontal rule */}
           <div
             ref={ruleRef}
-            className="w-full max-w-4xl h-px bg-white/20 mb-8"
+            className="w-full max-w-4xl h-px bg-white/20"
           />
-
-          {/* Subtitle + CTAs — side by side on desktop */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-4xl">
-            <p
-              ref={subtitleRef}
-              className="font-sans font-normal text-[15px] text-white/80 leading-relaxed max-w-xs"
-            >
-              {t('sub').split('\n').join(' ')}
-            </p>
-
-            <div ref={ctasRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 w-full max-w-5xl">
-              {/* CTA 1: Accompagner — en 1er */}
-              <Link
-                href={`/${locale}#accompagner`}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta2Title')}
-                  </h2>
-                  <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
-                    {t('cta2Desc')}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta2Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-
-              {/* CTA 2: Construire — en 2ème */}
-              <Link
-                href={`/${locale}#construire`}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta1Title')}
-                  </h2>
-                  <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
-                    {t('cta1Desc')}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta1Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-
-              {/* CTA 3: Franchir */}
-              <Link
-                href={`/${locale}#franchir`}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta3Title')}
-                  </h2>
-                  <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
-                    {t('cta3Desc')}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta3Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-
-              {/* CTA 4: Placer */}
-              <Link
-                href={`/${locale}#recruter`}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta4Title')}
-                  </h2>
-                  <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
-                    {t('cta4Desc')}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta4Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-
-              {/* CTA 5: S'informer */}
-              <Link
-                href={`/${locale}#informer`}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.04] backdrop-blur-md border border-white/10 px-4 py-4 transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)]"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-ag-apex/0 to-ag-apex/0 group-hover:from-ag-apex/5 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative">
-                  <h2 className="font-sans font-bold text-white text-[11px] tracking-wide mb-1 uppercase leading-tight">
-                    {t('cta5Title')}
-                  </h2>
-                  <p className="font-sans text-[12px] text-white/75 leading-snug line-clamp-2 mb-3">
-                    {t('cta5Desc')}
-                  </p>
-                  <span className="inline-flex items-center gap-1 font-sans text-[10px] text-ag-apex group-hover:text-white uppercase tracking-[0.16em] transition-colors duration-300">
-                    {t('cta5Link')} <ArrowUpRight size={11} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-            </div>
-          </div>
         </div>
 
-        {/* Bottom bar — info strip */}
-        <div className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center gap-8">
-            <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-apex">
-              {t('chip2')}
-            </span>
-            <span className="hidden sm:block w-px h-3 bg-white/25" />
-            <span className="hidden sm:block font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-white/60">
-              {t('geo')}
-            </span>
+        {/* Bottom bar — marquee signature, droite → gauche */}
+        <div
+          ref={marqueeRef}
+          className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm overflow-hidden"
+        >
+          <div className="py-3 marquee-track" aria-hidden="true">
+            {[0, 1].map((copy) => (
+              <span key={copy} className="flex items-center shrink-0">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <span key={i} className="flex items-center shrink-0">
+                    <span className="font-sans font-medium text-[13px] text-white/80 px-6">
+                      {t('sub')}
+                    </span>
+                    <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
+                  </span>
+                ))}
+              </span>
+            ))}
           </div>
         </div>
       </div>
