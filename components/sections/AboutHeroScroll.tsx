@@ -80,7 +80,7 @@ export function AboutHeroScroll() {
             <h1
               id="about-hero-title"
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] max-w-3xl"
-              style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+              style={{ fontSize: 'clamp(36px,5vw,72px)' }}
             >
               {t('hero.title').split('\n').map((line, i) => (
                 <span key={i} className={i === 0 ? 'block font-normal' : 'block'}>{line}</span>
