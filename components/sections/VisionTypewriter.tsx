@@ -7,6 +7,10 @@ export interface VisionSegment {
   bold?: boolean
 }
 
+// Persiste tant que la session SPA vit : la frappe ne rejoue pas
+// après navigation, seulement après un reload complet du site.
+let played = false
+
 /**
  * « Notre vision » : frappe machine à écrire (~2x le rythme du hero home)
  * déclenchée au scroll, sans effacement une fois le texte complet.
@@ -15,15 +19,16 @@ export interface VisionSegment {
  */
 export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
   const full = segments.map((s) => s.t).join('')
-  const [chars, setChars] = useState(0)
-  const [started, setStarted] = useState(false)
+  const [chars, setChars] = useState(played ? full.length : 0)
+  const [started, setStarted] = useState(played)
   const ref = useRef<HTMLParagraphElement>(null)
   const done = chars >= full.length
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (played || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      played = true
       setChars(full.length)
       return
     }
@@ -38,6 +43,7 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
   }, [full.length])
 
   useEffect(() => {
+    if (done) played = true
     if (!started || done) return
     const t = setTimeout(
       () => setChars((c) => Math.min(c + 1, full.length)),
