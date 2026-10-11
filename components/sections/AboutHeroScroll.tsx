@@ -38,8 +38,8 @@ export function AboutHeroScroll() {
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
         const start = mq.conditions?.isDesktop
-          ? 'inset(58% 6% 8% 62% round 4px)'
-          : 'inset(88% 5% 1% 5% round 4px)'
+          ? 'inset(58% 6% 8% 62% round 16px)'
+          : 'inset(88% 5% 1% 5% round 16px)'
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
           { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },

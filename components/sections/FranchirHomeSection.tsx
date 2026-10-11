@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { routing } from '@/i18n/routing'
 import { getFranchirIntro } from '@/content/franchir'
 import { FRANCHIR_UI } from '@/content/franchir/ui'
 import { FranchirDiagnostic } from '@/components/franchir/FranchirDiagnostic'
+import { FranchirHeroScroll } from '@/components/sections/FranchirHeroScroll'
 import type { CycleSlug } from '@/content/franchir/types'
 
 /**
@@ -24,42 +24,14 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
 
   return (
     <section id="franchir" className="scroll-mt-20">
-      {/* ── Intro : texte + image montagne illustrative ── */}
-      <div className="bg-ag-white py-20 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
-              <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-              {c.eyebrow}
-            </p>
-            <h2
-              className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] mb-6"
-              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-            >
-              {c.heroTitle}
-            </h2>
-            <p className="font-sans text-[15px] text-ag-gray max-w-xl mb-10 leading-relaxed">
-              {c.heroSub}
-            </p>
-            <Link
-              href={echangeHref}
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-navy-mid transition-colors"
-            >
-              {c.cta.label} <ArrowUpRight size={13} />
-            </Link>
-          </div>
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-ag-border">
-            <Image
-              src="/images/transact/hero-valorisation.webp"
-              alt="Aegryn Group"
-              fill
-              unoptimized
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover object-center"
-            />
-          </div>
-        </div>
-      </div>
+      {/* ── Intro : texte + image montagne qui s'étend au scroll ── */}
+      <FranchirHeroScroll
+        eyebrow={c.eyebrow}
+        title={c.heroTitle}
+        sub={c.heroSub}
+        ctaLabel={c.cta.label}
+        ctaHref={echangeHref}
+      />
 
       {/* ── Cinq cartes de cycle ── */}
       <div className="py-20 px-6 bg-ag-white border-t border-ag-border">
