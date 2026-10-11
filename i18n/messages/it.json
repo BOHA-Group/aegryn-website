@@ -162,7 +162,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Dalla strategia alla trasmissione. Svizzera.",
-    "metaDescription": "Aegryn accompagna i dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Consulenza, costruzione di asset, transizioni di ciclo di vita, talento, intelligence di mercato. Radicato in Svizzera. Operativo in Europa.",
+    "metaDescription": "Aegryn accompagna i dirigenti che lanciano, sviluppano, riorientano, rilevano o trasmettono un'organizzazione. Consulenza, asset, talenti, guida di progetto. Radicato in Svizzera, operativo in Europa.",
     "sub": "Accompagniamo i dirigenti che lanciano, sviluppano, riorientano, rilevano o trasmettono un'organizzazione. Consulenza, asset, talenti, guida di progetto: una società integrata, radicata in Svizzera.",
     "phrases": [
       "Consigliare\ntuoi progetti.",
@@ -776,7 +776,7 @@
   "aboutSection": {
     "label": "Chi è Aegryn",
     "title": "Cinque discipline.\nUna sola azienda.",
-    "desc": "Aegryn accompagna decisori, fondatori e dirigenti a creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.\n\nNon siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: consulenza, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
+    "desc": "Non siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: consulenza, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
     "tagline": "STUDIO DI CONSULENZA, RADICATO IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
@@ -1858,7 +1858,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosistema",
     "advisoryLabel": "Consulenza",
-    "advisoryDesc": "Supportare i dirigenti nel creare, documentare e realizzare il valore della loro organizzazione. Dalla strategia alla trasmissione.",
+    "advisoryDesc": "Accompagnare i dirigenti in ogni ciclo di vita: lanciare, sviluppare, riorientare, rilevare, trasmettere.",
     "advisoryBook": "Prenota una sessione ↗",
     "medallionText": "Parliamo . Contattaci . Parliamo . Contattaci .",
     "contactLabel": "Contattaci",

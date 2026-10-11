@@ -162,7 +162,7 @@
   },
   "hero": {
     "tagline": "Aegryn. From strategy to closing. Switzerland & Europe.",
-    "metaDescription": "Aegryn helps business leaders create, document and realise the value of their organisation. Advisory, asset building, lifecycle transitions, talent, market intelligence. Rooted in Switzerland. Active across Europe.",
+    "metaDescription": "Aegryn supports leaders who launch, grow, reorient, acquire or hand down an organisation. Advisory, assets, talent, project management. Anchored in Switzerland, active across Europe.",
     "sub": "We support leaders who launch, grow, reorient, acquire or hand down an organisation. Advisory, assets, talent, project management: an integrated firm, anchored in Switzerland.",
     "phrases": [
       "Advise\nyour projects.",
@@ -776,7 +776,7 @@
   "aboutSection": {
     "label": "About Aegryn",
     "title": "Five disciplines.\nOne firm.",
-    "desc": "Aegryn helps decision-makers, founders and executives create, document and realise the value of their organisation. From strategy to closing.\n\nWe are neither a classic consulting firm, nor a tech agency, nor an M&A boutique. We are an integrated advisory firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: advisory, asset building, transitions at every lifecycle stage, talent and market intelligence.",
+    "desc": "We are neither a classic consulting firm, nor a tech agency, nor an M&A boutique. We are an integrated advisory firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: advisory, asset building, transitions at every lifecycle stage, talent and market intelligence.",
     "tagline": "ADVISORY FIRM, ROOTED IN SWITZERLAND.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
@@ -1858,7 +1858,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "Consulting",
-    "advisoryDesc": "Supporting leaders to create, document and realise the value of their organisation. From strategy to transmission.",
+    "advisoryDesc": "Supporting leaders at every lifecycle stage: launch, grow, reorient, acquire, hand down.",
     "advisoryBook": "Book a session ↗",
     "medallionText": "Let's talk . Contact us . Let's talk . Contact us .",
     "contactLabel": "Contact us",

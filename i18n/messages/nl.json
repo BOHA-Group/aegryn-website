@@ -162,7 +162,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
-    "metaDescription": "Aegryn begeleidt bedrijfsleiders bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Advies, asset-opbouw, levenscyclus-transities, talent, marktintelligentie. Verankerd in Zwitserland. Actief in Europa.",
+    "metaDescription": "Aegryn begeleidt leiders die een organisatie lanceren, ontwikkelen, heroriënteren, overnemen of overdragen. Advies, assets, talent, projectsturing. Verankerd in Zwitserland, actief in Europa.",
     "sub": "Wij begeleiden leiders die een organisatie lanceren, ontwikkelen, heroriënteren, overnemen of overdragen. Advies, assets, talent, projectsturing: een geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Adviseren\nuw projecten.",
@@ -776,7 +776,7 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "Aegryn begeleidt besluitvormers, oprichters en leidinggevenden bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.\n\nWe zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
+    "desc": "We zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
     "tagline": "ADVIESFIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
@@ -1858,7 +1858,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Advies",
-    "advisoryDesc": "Leiders ondersteunen bij het creëren, documenteren en realiseren van de waarde van hun organisatie. Van strategie tot overdracht.",
+    "advisoryDesc": "Leiders begeleiden in elke levensfase: lanceren, ontwikkelen, heroriënteren, overnemen, overdragen.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
     "contactLabel": "Neem contact op",

@@ -162,7 +162,7 @@
   },
   "hero": {
     "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
-    "metaDescription": "Aegryn accompagne les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation. Conseil, construction d'actifs, transitions de cycle de vie, talent, intelligence de marché. Ancré en Suisse. Opérationnel en Europe.",
+    "metaDescription": "Aegryn accompagne les dirigeants qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet. Ancré en Suisse, opérationnel en Europe.",
     "sub": "Nous accompagnons les dirigeants qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Accompagner\nvos projets.",
@@ -739,7 +739,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq disciplines.\nUn seul cabinet.",
-    "desc": "Aegryn accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation. De la stratégie à la transmission.\n\nNous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d’une entreprise : conseil, construction d’actifs, transitions à chaque cycle de vie, talent et intelligence de marché.",
+    "desc": "Nous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d’une entreprise : conseil, construction d’actifs, transitions à chaque cycle de vie, talent et intelligence de marché.",
     "tagline": "CABINET DE CONSEIL, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
@@ -1818,7 +1818,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Écosystème",
     "advisoryLabel": "Conseil",
-    "advisoryDesc": "Accompagner les dirigeants à créer, documenter et réaliser la valeur de leur organisation. De la stratégie à la transmission.",
+    "advisoryDesc": "Accompagner les dirigeants à chaque cycle de vie : lancer, développer, réorienter, reprendre, transmettre.",
     "advisoryBook": "Prendre contact ↗",
     "medallionText": "Discutons . Contactez-nous . Discutons . Contactez-nous .",
     "contactLabel": "Nous contacter",

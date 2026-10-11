@@ -162,7 +162,7 @@
   },
   "hero": {
     "tagline": "Aegryn. Von der Strategie bis zum Abschluss. Schweiz.",
-    "metaDescription": "Aegryn begleitet Unternehmensentscheider dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Beratung, Asset-Aufbau, Transitionen im Lebenszyklus, Talent, Marktintelligenz. Verankert in der Schweiz. Aktiv in Europa.",
+    "metaDescription": "Aegryn begleitet Unternehmenslenker, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Beratung, Assets, Talente, Projektführung. Verankert in der Schweiz, aktiv in Europa.",
     "sub": "Wir begleiten Unternehmenslenker, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Beratung, Assets, Talente, Projektführung: eine integrierte Firma, verankert in der Schweiz.",
     "phrases": [
       "Beraten\nihre projekte.",
@@ -776,7 +776,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Unternehmen.",
-    "desc": "Aegryn begleitet Entscheider, Gründer und Führungskräfte dabei, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zum Abschluss.\n\nWir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
+    "desc": "Wir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
     "tagline": "BERATUNGSFIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
@@ -1858,7 +1858,7 @@
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
     "advisoryLabel": "Beratung",
-    "advisoryDesc": "Führungskräfte dabei unterstützen, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren. Von der Strategie bis zur Übertragung.",
+    "advisoryDesc": "Führungskräfte in jedem Lebenszyklus begleiten: gründen, entwickeln, neu ausrichten, übernehmen, übergeben.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
     "contactLabel": "Kontaktieren Sie uns",
