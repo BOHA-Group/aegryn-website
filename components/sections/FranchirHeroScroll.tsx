@@ -56,7 +56,7 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
       }, (mq) => {
         const start = mq.conditions?.isDesktop
           ? 'inset(20% 6% 20% 55% round 16px)'
-          : 'inset(55% 5% 4% 5% round 16px)'
+          : 'inset(72% 5% 6% 5% round 16px)'
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
           { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
@@ -130,8 +130,8 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
 
   return (
     <div ref={wrapRef} className="relative h-[240vh] bg-ag-white">
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
-        <div ref={textRef} className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center max-lg:items-start">
+        <div ref={textRef} className="relative z-10 max-w-7xl mx-auto px-6 w-full max-lg:pt-28">
           <div className="max-w-[52%] max-lg:max-w-full">
             {heading}
           </div>
