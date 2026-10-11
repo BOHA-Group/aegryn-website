@@ -159,10 +159,10 @@ export function ManifestoSection() {
             {whatwedoItems.map((item) => (
               <div
                 key={item.num}
-                className="what-col group relative border-t border-ag-border py-4 md:py-5 cursor-default"
+                className="what-col group border-t border-ag-border py-4 md:py-5 flex flex-col md:flex-row md:items-start gap-2 md:gap-10 cursor-default"
                 style={{ opacity: 0 }}
               >
-                <div className="flex items-baseline gap-6 md:gap-10">
+                <div className="flex items-baseline gap-6 md:gap-10 shrink-0 md:pt-0.5">
                   <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink">
                     {item.num}
                   </p>
@@ -173,11 +173,13 @@ export function ManifestoSection() {
                     {item.title}
                   </h3>
                 </div>
-                <div className="mt-2 md:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:z-10 md:w-[400px] md:flex md:items-start md:gap-4 md:bg-ag-white md:border md:border-ag-border md:p-5 md:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:pointer-events-none md:opacity-0 md:translate-x-3 md:group-hover:opacity-100 md:group-hover:translate-x-0 md:transition-all md:duration-300">
-                  <span className="hidden md:inline text-ag-apex-ink mt-0.5" aria-hidden="true">→</span>
-                  <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed">
-                    {item.desc}
-                  </p>
+                <div className="md:ml-auto md:mr-[10%] md:w-[360px] md:shrink-0 md:grid md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
+                  <div className="md:min-h-0 md:overflow-hidden flex items-start gap-4">
+                    <span className="hidden md:inline text-ag-apex-ink mt-1" aria-hidden="true">→</span>
+                    <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 md:delay-100">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
