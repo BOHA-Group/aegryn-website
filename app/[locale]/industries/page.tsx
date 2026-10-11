@@ -121,7 +121,7 @@ export default function IndustriesPage() {
                       {t('sectorCount', { count: cl.sectors.length })}
                     </p>
                     <h2 className="font-sans font-bold text-white leading-[1.15] tracking-[-0.02em]"
-                      style={{ fontSize: 'clamp(16px,1.6vw,22px)' }}>
+                      style={{ fontSize: 'clamp(18px,1.8vw,22px)' }}>
                       {cl.cluster}
                     </h2>
                   </div>
