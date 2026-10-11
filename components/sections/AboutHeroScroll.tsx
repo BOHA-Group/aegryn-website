@@ -83,7 +83,7 @@ export function AboutHeroScroll() {
               style={{ fontSize: 'clamp(36px,5vw,72px)' }}
             >
               {t('hero.title').split('\n').map((line, i) => (
-                <span key={i} className={i === 0 ? 'block font-normal' : 'block'}>{line}</span>
+                <span key={i} className="block">{line}</span>
               ))}
             </h1>
             <div className="shrink-0 mt-16 -mr-3">
