@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
+import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
 import { SegmentsSection }     from '@/components/sections/SegmentsSection'
 import type { Metadata } from 'next'
@@ -101,12 +102,10 @@ export default function AboutPage() {
           </p>
         }
         visionText={
-          <p
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
-            style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
-          >
-            {t('vision.text')}
-          </p>
+          <VisionTypewriter
+            bold={t('vision.bold')}
+            text={t('vision.text')}
+          />
         }
         dnaContent={
           <section className="border-b border-ag-border bg-ag-off-white/80">

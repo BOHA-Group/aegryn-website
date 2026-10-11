@@ -934,7 +934,8 @@
     },
     "vision": {
       "label": "La nostra visione",
-      "text": "La nostra visione è quella di un gruppo di consulenza europeo che accompagna le aziende da un capo all'altro, dalla strategia al capitale, dalla trasformazione alla valorizzazione.\n\nSiamo operatori: costruiamo e gestiamo i nostri asset tech. Ciò che consigliamo, lo viviamo. Questa coerenza è la nostra prima credibilità.\n\nAegryn non è né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. È un gruppo ibrido, ancorato in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'azienda."
+      "bold": "Aegryn vuole essere la società che accompagna i dirigenti dall'inizio alla fine",
+      "text": ": dalla decisione alla sua realizzazione, in ogni ciclo di vita dell'impresa, dal lancio alla trasmissione o alla ripresa.\n\nSiamo operatori. Costruiamo e gestiamo i nostri asset, e conduciamo i progetti dei nostri clienti come un architetto conduce un cantiere: inquadramento, coordinamento degli intervenienti, tappe, collaudo. Ciò che raccomandiamo, lo viviamo.\n\nSocietà integrata, radicata in Svizzera, Aegryn riunisce in un unico interlocutore le cinque discipline necessarie al valore duraturo di un'impresa: consulenza, costruzione di asset, passaggio dei cicli, talenti e conoscenza del mercato."
     },
     "contribution": {
       "label": "Il nostro contributo",

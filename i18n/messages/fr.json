@@ -894,7 +894,8 @@
     },
     "vision": {
       "label": "Notre vision",
-      "text": "Notre vision est celle d'un groupe de conseil européen qui accompagne les entreprises de bout en bout, de la stratégie au capital, de la transformation à la valorisation.\n\nNous sommes des opérateurs : nous construisons et opérons nos propres actifs. Ce que nous conseillons, nous le vivons. Cette cohérence est notre première crédibilité.\n\nAegryn n'est ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. C'est un groupe hybride, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d'une entreprise."
+      "bold": "Aegryn veut être le cabinet qui accompagne les dirigeants de bout en bout",
+      "text": " : de la décision à sa réalisation, à chaque cycle de vie de l'entreprise, du lancement à la transmission ou à la reprise.\n\nNous sommes des opérateurs. Nous construisons et opérons nos propres actifs, et nous tenons les projets de nos clients comme un architecte tient un chantier : cadrage, coordination des intervenants, jalons, réception. Ce que nous recommandons, nous le vivons.\n\nCabinet intégré, ancré en Suisse, Aegryn réunit en un seul interlocuteur les cinq disciplines nécessaires à la valeur durable d'une entreprise : conseil, construction d'actifs, passage des cycles, talents et connaissance du marché."
     },
     "contribution": {
       "label": "Notre contribution",
