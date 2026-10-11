@@ -90,7 +90,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                     <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
                       <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                       <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                      <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{desc}</p>
                     </div>
                   ))}
                   <GridFillers count={phase.items.length} cols={{ sm: 2, lg: 3 }} />
@@ -120,7 +120,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                   <Check size={14} className="text-ag-apex-ink" />
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[17px] tracking-[-0.02em]">{title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -138,7 +138,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               <div key={num} className="bg-ag-white p-8 flex flex-col gap-4">
                 <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
                 <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">{title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
             ))}
             <GridFillers count={steps.length} cols={{ sm: 2, lg: 5 }} />
@@ -158,7 +158,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                 <Shield size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-sans font-semibold text-ag-black text-[16px] mb-2">{title}</h3>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{desc}</p>
                 </div>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             <Info size={14} className="text-ag-gray-light shrink-0 mt-1" />
             <div>
               <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">Important notice</p>
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                 {t('fees.note')}{' '}
                 <Link href={t('fees.noteHref') as never} className="underline underline-offset-2 hover:text-ag-black transition-colors">
                   {t('fees.noteLink')}

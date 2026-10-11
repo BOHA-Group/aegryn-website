@@ -105,7 +105,7 @@ export default function AcquisitionRoadmap({
                       <h3 className="font-sans font-semibold text-ag-black text-[16px] leading-snug">
                         {itemTitle}
                       </h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+                      <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                         {itemDesc}
                       </p>
                       {hasCta && (

@@ -130,7 +130,7 @@ export default async function WorkforcePage({ params }: Props) {
                 >
                   {stat.value}
                 </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                   {stat.label}
                 </p>
                 <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
@@ -166,7 +166,7 @@ export default async function WorkforcePage({ params }: Props) {
                 >
                   {item.value}
                 </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                   {item.label}
                 </p>
               </div>
@@ -200,7 +200,7 @@ export default async function WorkforcePage({ params }: Props) {
               </p>
               <ul className="space-y-3">
                 {rising.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 font-sans text-[14px] text-ag-gray leading-relaxed">
+                  <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
                     <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-apex rounded-full" />
                     {item}
                   </li>
@@ -213,7 +213,7 @@ export default async function WorkforcePage({ params }: Props) {
               </p>
               <ul className="space-y-3">
                 {declining.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 font-sans text-[14px] text-ag-gray leading-relaxed">
+                  <li key={j} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
                     <span className="shrink-0 mt-1.5 w-1.5 h-1.5 bg-ag-gray-light rounded-full" />
                     {item}
                   </li>
@@ -248,7 +248,7 @@ export default async function WorkforcePage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
                   {item.title}
                 </h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                   {item.desc}
                 </p>
                 <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
@@ -281,7 +281,7 @@ export default async function WorkforcePage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
                   {item.cluster}
                 </h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -343,7 +343,7 @@ export default async function WorkforcePage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
                   {item.title}
                 </h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -431,7 +431,7 @@ export default async function WorkforcePage({ params }: Props) {
             <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.employer.title')}
             </p>
-            <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
               {t('cta.employer.desc')}
             </p>
             <Link
@@ -445,7 +445,7 @@ export default async function WorkforcePage({ params }: Props) {
             <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.talent.title')}
             </p>
-            <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
               {t('cta.talent.desc')}
             </p>
             <Link

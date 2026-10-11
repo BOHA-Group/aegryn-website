@@ -128,7 +128,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                 <p className="font-sans font-bold text-ag-black tabular-nums tracking-[-0.03em] leading-none mb-4" style={{ fontSize: 'clamp(30px,3.4vw,46px)' }}>
                   {s.value}
                 </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{s.label}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{s.label}</p>
                 <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-gray-light mt-6">{s.source}</p>
               </div>
             ))}
@@ -198,7 +198,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                   </div>
                   <div>
                     <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1.5">{ui.deliverable}</p>
-                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.deliverable}</p>
+                    <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.deliverable}</p>
                   </div>
                   {s.format && (
                     <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light">{s.format}</p>
@@ -238,12 +238,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           <div className="rounded-2xl bg-ag-off-white border border-ag-border p-8 md:p-10">
             <p className={`${LABEL} mb-4`}>{ui.ourFramework}</p>
             <h2 className={`${H2} mb-4`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.framework.name}</h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed mb-8">{c.framework.intro}</p>
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8">{c.framework.intro}</p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {c.framework.axes.map((a, i) => (
                 <div key={i} className={`${CARD} p-5`}>
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{a.label}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{a.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{a.desc}</p>
                 </div>
               ))}
             </div>
@@ -264,7 +264,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               {c.bySize.items.map((s, i) => (
                 <div key={i} className={`${CARD} p-8`}>
                   <p className="font-sans font-bold text-[16px] text-ag-black mb-2 tracking-[-0.01em]">{s.label}</p>
-                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{s.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -275,7 +275,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               {c.bySector.items.map((s, i) => (
                 <div key={i} className="px-6 py-5">
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{s.cluster}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -305,13 +305,13 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             {c.operator && (
               <div className={`${CARD} p-8`}>
                 <p className={`${LABEL} mb-3`}>{c.operator.title}</p>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{c.operator.text}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{c.operator.text}</p>
               </div>
             )}
             {c.complement && (
               <div className={`${CARD} p-8`}>
                 <p className={`${LABEL} mb-3`}>{c.complement.title}</p>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{c.complement.text}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{c.complement.text}</p>
               </div>
             )}
           </ScrollReveal>
@@ -357,7 +357,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             <div className="flex flex-col gap-3">
               {c.scope.map((s, i) => (
                 <Link key={i} href={L(s.href)} className={`${CARD} group px-6 py-5 flex items-center justify-between gap-6 hover:border-ag-navy/40 transition-colors`}>
-                  <span className="font-sans text-[14px] text-ag-gray group-hover:text-ag-black transition-colors">{s.label}</span>
+                  <span className="font-sans text-[15px] text-ag-gray group-hover:text-ag-black transition-colors">{s.label}</span>
                   <ArrowRight size={12} className="text-ag-gray-light shrink-0" />
                 </Link>
               ))}

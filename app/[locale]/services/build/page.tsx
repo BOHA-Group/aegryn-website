@@ -194,7 +194,7 @@ export default async function BuildServicePage({ params }: Props) {
                 <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex-ink mb-2">
                   {pt.title}
                 </p>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {pt.desc}
                 </p>
               </div>
@@ -228,7 +228,7 @@ export default async function BuildServicePage({ params }: Props) {
                   </span>
                 </div>
                 <h3 className="font-sans font-bold text-ag-black text-[16px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -282,7 +282,7 @@ export default async function BuildServicePage({ params }: Props) {
             {sovereigntyPillars.map((pillar) => (
               <div key={pillar.key} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] leading-snug">{pillar.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{pillar.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{pillar.desc}</p>
               </div>
             ))}
           </div>
@@ -306,7 +306,7 @@ export default async function BuildServicePage({ params }: Props) {
               <div key={item.num} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
                 <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -364,7 +364,7 @@ export default async function BuildServicePage({ params }: Props) {
             {certBenefits.map((item, i) => (
               <div key={i} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
                 <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -440,12 +440,12 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
             <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
               <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.corrective.title')}</h3>
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{t('maintenance.corrective.desc')}</p>
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{t('maintenance.corrective.desc')}</p>
               <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.corrective.format')}</p>
             </div>
             <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
               <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.evolutive.title')}</h3>
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{t('maintenance.evolutive.desc')}</p>
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{t('maintenance.evolutive.desc')}</p>
               <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.evolutive.format')}</p>
             </div>
           </div>
@@ -471,7 +471,7 @@ export default async function BuildServicePage({ params }: Props) {
             {feeItems.map((item) => (
               <div key={item.title} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[16px]">{item.title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
                 <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{item.format}</p>
               </div>
             ))}
@@ -527,7 +527,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Exit Banner ──────────────────────────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-          <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
             {t('exitBanner.text')}
           </p>
           <Link

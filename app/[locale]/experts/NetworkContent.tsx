@@ -201,15 +201,15 @@ export default function NetworkContent() {
           <div className="flex flex-wrap gap-6">
             <div className="flex items-center gap-2">
               <Building2 size={16} className="text-ag-apex-ink" />
-              <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat1')}</span>
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat1')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Users size={16} className="text-ag-apex-ink" />
-              <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat2')}</span>
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat2')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Globe size={16} className="text-ag-apex-ink" />
-              <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat3')}</span>
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat3')}</span>
             </div>
           </div></ScrollReveal>
         </div>

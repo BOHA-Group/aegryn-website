@@ -208,7 +208,7 @@ export default function AlliancesContent() {
                       <h3 className="font-sans font-bold text-ag-black text-[15px] leading-tight">
                         {card.title}
                       </h3>
-                      <p className="text-[13px] text-ag-gray leading-relaxed flex-1">{card.desc}</p>
+                      <p className="text-[15px] text-ag-gray leading-relaxed flex-1">{card.desc}</p>
                       <span className="inline-flex items-center gap-1.5 font-sans font-semibold text-[10px] uppercase tracking-[0.16em] text-ag-apex-ink group-hover:text-ag-black transition-colors">
                         {card.cta} <ArrowUpRight size={12} />
                       </span>
@@ -256,7 +256,7 @@ export default function AlliancesContent() {
                       {(t.raw(`metiers.items.${key}.expertises`) as string[]).map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
-                          <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                          <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -295,7 +295,7 @@ export default function AlliancesContent() {
                 {(t.raw('investisseurs.points') as string[]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
-                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                    <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -326,7 +326,7 @@ export default function AlliancesContent() {
                 {(t.raw('auditeurs.points') as string[]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 size={13} className="text-ag-apex mt-0.5 shrink-0" />
-                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                    <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -352,7 +352,7 @@ export default function AlliancesContent() {
                   >
                     {t('candidature.title')}
                   </h2>
-                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                  <p className="text-[15px] text-ag-gray leading-relaxed">
                     {t('candidature.desc')}
                   </p>
                 </div>
@@ -361,7 +361,7 @@ export default function AlliancesContent() {
                   <div className="border border-ag-apex/30 bg-ag-off-white p-10 rounded-2xl flex flex-col items-start gap-4">
                     <CheckCircle2 size={28} className="text-ag-apex-ink" />
                     <p className="font-sans font-bold text-ag-black text-[18px]">{t('candidature.successTitle')}</p>
-                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('candidature.successDesc')}</p>
+                    <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{t('candidature.successDesc')}</p>
                   </div>
                 ) : (
                   <form onSubmit={handleApply} className="space-y-5">

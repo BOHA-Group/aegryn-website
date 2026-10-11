@@ -168,7 +168,7 @@ export function CyclePage({ content: c, locale }: Props) {
                 </div>
                 <div>
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1.5">{ui.deliverable}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.deliverable}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.deliverable}</p>
                 </div>
                 <div className="mt-auto pt-4 border-t border-ag-border">
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2.5">{ui.metierUsed}</p>
@@ -218,7 +218,7 @@ export function CyclePage({ content: c, locale }: Props) {
               {c.bySize.items.map((s, i) => (
                 <div key={i} className={`${CARD} p-8`}>
                   <p className="font-sans font-bold text-[16px] text-ag-black mb-2 tracking-[-0.01em]">{s.label}</p>
-                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{s.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -229,7 +229,7 @@ export function CyclePage({ content: c, locale }: Props) {
               {c.bySector.items.map((s, i) => (
                 <div key={i} className="px-6 py-5">
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{s.cluster}</p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>

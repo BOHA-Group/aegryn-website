@@ -234,7 +234,7 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           ) : (
             <div className="border border-ag-border bg-ag-off-white p-10 text-center">
-              <p className="font-sans text-[14px] text-ag-gray mb-2">
+              <p className="font-sans text-[15px] text-ag-gray mb-2">
                 {t('bodyComingSoon')}
               </p>
               <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">

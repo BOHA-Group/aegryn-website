@@ -76,7 +76,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {step.title}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {step.desc}
                 </p>
               </div>

@@ -100,7 +100,7 @@ export default function IndexBenchmarks() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('coverageTitle')}</h2>
-            <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{t('coverageDesc')}</p>
+            <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{t('coverageDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {clusters.map(c => (
@@ -195,7 +195,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
           <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${open ? 'rotate-45' : ''}`} />
         </span>
       </button>
-      {open && <p className="px-5 pb-5 font-sans text-[13px] text-ag-gray leading-relaxed">{a}</p>}
+      {open && <p className="px-5 pb-5 font-sans text-[15px] text-ag-gray leading-relaxed">{a}</p>}
     </div>
   )
 }

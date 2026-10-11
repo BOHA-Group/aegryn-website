@@ -81,7 +81,7 @@ export default async function TermsCgvPage({ params }: Props) {
                 <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{b.body}</p>
               </div>
             ) : (
-              <p key={j} className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{b.body}</p>
+              <p key={j} className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">{b.body}</p>
             ))}
           </section>
         ))}

@@ -152,7 +152,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               </p>
 
               {/* Description */}
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                 {tItems(`${asset.id}.description`)}
               </p>
 

@@ -68,7 +68,7 @@ export function GradeShowcase() {
                 <span className={`shrink-0 inline-flex items-center justify-center w-16 h-10 font-mono font-bold text-[13px] tracking-wider ${color} ${text}`}>
                   {t(`grades.${key}.label` as Parameters<typeof t>[0])}
                 </span>
-                <span className="text-[13px] text-ag-gray">
+                <span className="text-[15px] text-ag-gray">
                   {t(`grades.${key}.desc` as Parameters<typeof t>[0])}
                 </span>
               </div>

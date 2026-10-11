@@ -29,7 +29,7 @@ export function AdvisoryThoughtLeadership() {
               <h3 className="font-sans font-bold text-[20px] text-ag-navy mb-4 leading-tight">
                 {pillar.label}
               </h3>
-              <p className="text-[14px] text-ag-gray leading-relaxed">
+              <p className="text-[15px] text-ag-gray leading-relaxed">
                 {pillar.desc}
               </p>
             </div>

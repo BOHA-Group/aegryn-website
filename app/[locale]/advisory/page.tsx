@@ -115,7 +115,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 >
                   {item.title}
                 </h2>
-                <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                <p className="text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {item.title}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                <p className="text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -165,7 +165,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {item.title}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                <p className="text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -268,7 +268,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight mb-3">
                   {phase.title}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">{phase.desc}</p>
+                <p className="text-[15px] text-ag-gray leading-relaxed">{phase.desc}</p>
               </div>
             ))}
           </div>

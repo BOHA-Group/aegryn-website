@@ -283,7 +283,7 @@ function ContactLeadModal({ expert, filters, onClose }: ContactLeadModalProps) {
             <div className="flex flex-col gap-4">
               <CheckCircle2 size={28} className="text-ag-apex-ink" />
               <p className="font-sans font-bold text-ag-black text-[18px]">{t('contactModal.successTitle')}</p>
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('contactModal.successDesc')}</p>
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{t('contactModal.successDesc')}</p>
               {revealedEmail && (
                 <a
                   href={`mailto:${revealedEmail}`}
@@ -572,7 +572,7 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
       <div className="border border-ag-apex/30 bg-ag-off-white p-10 flex flex-col items-start gap-4">
         <CheckCircle2 size={28} className="text-ag-apex-ink" />
         <p className="font-sans font-bold text-ag-black text-[18px]">{t('waitlist.successTitle')}</p>
-        <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('waitlist.successDesc')}</p>
+        <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{t('waitlist.successDesc')}</p>
       </div>
     )
   }
@@ -769,7 +769,7 @@ export default function ExpertsContent() {
           >
             {t('showcase.title')}
           </h2>
-          <p className="font-sans text-[13px] text-ag-gray max-w-lg mx-auto mb-10">
+          <p className="font-sans text-[15px] text-ag-gray max-w-lg mx-auto mb-10">
             {t('showcase.desc')}
           </p>
         </div>
@@ -842,7 +842,7 @@ export default function ExpertsContent() {
         {isEmpty && (
           <div className="border border-ag-border bg-ag-off-white p-16 text-center">
             <p className="font-sans font-semibold text-ag-black text-[16px] mb-2">{t('empty.title')}</p>
-            <p className="font-sans text-[13px] text-ag-gray">{t('empty.desc')}</p>
+            <p className="font-sans text-[15px] text-ag-gray">{t('empty.desc')}</p>
           </div>
         )}
 
@@ -853,7 +853,7 @@ export default function ExpertsContent() {
                 <Star size={10} className="text-ag-apex-ink" /> {t('placeholder.badge')}
               </span>
               <p className="font-sans font-bold text-ag-black text-[20px] leading-tight">{t('placeholder.title')}</p>
-              <p className="font-sans text-[13px] text-ag-gray max-w-md">{t('placeholder.desc')}</p>
+              <p className="font-sans text-[15px] text-ag-gray max-w-md">{t('placeholder.desc')}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {PLACEHOLDERS.map(p => (
@@ -900,7 +900,7 @@ export default function ExpertsContent() {
             >
               {t('waitlist.title')}
             </h2>
-            <p className="text-[13px] text-ag-gray leading-relaxed">
+            <p className="text-[15px] text-ag-gray leading-relaxed">
               {t('waitlist.desc')}
             </p>
           </div>

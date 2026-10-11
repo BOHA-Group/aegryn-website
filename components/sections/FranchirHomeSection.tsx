@@ -47,7 +47,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
                 className="group rounded-2xl bg-ag-white border border-ag-border p-7 flex flex-col gap-4 hover:border-ag-navy/40 transition-colors"
               >
                 <p className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.02em]">{cy.title}</p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">{cy.stake}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{cy.stake}</p>
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
                   <ArrowUpRight size={11} />
                 </span>

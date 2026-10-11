@@ -149,11 +149,11 @@ export default async function TalentPage({ params }: Props) {
                   <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em]">
                     {row.name}
                   </h3>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                     <span className="md:hidden block font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{t('cycles.colRecruit')}</span>
                     {row.recruit}
                   </p>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                     <span className="md:hidden block font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">{t('cycles.colTransition')}</span>
                     {row.transition}
                   </p>
@@ -193,7 +193,7 @@ export default async function TalentPage({ params }: Props) {
                 <p className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] mb-3">
                   {card.stat}
                 </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-4">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">
                   {card.desc}
                 </p>
                 <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-ag-gray-light">
@@ -231,7 +231,7 @@ export default async function TalentPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[17px] tracking-[-0.01em] mb-3">
                   {step.title}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {step.desc}
                 </p>
               </div>

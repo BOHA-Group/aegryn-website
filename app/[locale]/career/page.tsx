@@ -121,7 +121,7 @@ export default async function CareerPage({ params }: Props) {
                   <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] mb-3">
                     {t(`crafts.items.${key}.title`)}
                   </h3>
-                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                  <p className="text-[15px] text-ag-gray leading-relaxed">
                     {t(`crafts.items.${key}.desc`)}
                   </p>
                 </div>
@@ -149,7 +149,7 @@ export default async function CareerPage({ params }: Props) {
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[0.04em] uppercase mb-3">
                   {t(`values.items.${key}.title`)}
                 </h3>
-                <p className="text-[14px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {t(`values.items.${key}.desc`)}
                 </p>
               </div>

@@ -144,7 +144,7 @@ export default async function AssetPage({ params }: Props) {
                   <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
                     {t('audience')}
                   </p>
-                  <p className="text-[14px] text-ag-gray">{audience}</p>
+                  <p className="text-[15px] text-ag-gray">{audience}</p>
                 </div>
               )}
             </div>
@@ -160,7 +160,7 @@ export default async function AssetPage({ params }: Props) {
                     <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
                       <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                     </span>
-                    <span className="text-[14px] text-ag-gray leading-relaxed">{f}</span>
+                    <span className="text-[15px] text-ag-gray leading-relaxed">{f}</span>
                   </li>
                 ))}
               </ul>

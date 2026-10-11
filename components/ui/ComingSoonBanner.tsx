@@ -19,7 +19,7 @@ export function ComingSoonBanner({ section }: ComingSoonBannerProps) {
         <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-apex mb-1">
           {t('label')}
         </p>
-        <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+        <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
           {section ? t('descSection', { section }) : t('desc')}
         </p>
       </div>

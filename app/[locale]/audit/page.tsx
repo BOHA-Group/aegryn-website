@@ -80,7 +80,7 @@ export default async function GradePartnersPage() {
                   <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-2">{p.label}</p>
                   <p className="font-sans font-bold text-ag-black text-[16px] mb-1">{p.dimension}</p>
                 </div>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{p.desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{p.desc}</p>
               </div>
             )
           })}
@@ -103,8 +103,8 @@ export default async function GradePartnersPage() {
             {dimRows.map((row) => (
               <div key={row.dim} className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] gap-px bg-ag-border border-t border-ag-border">
                 <div className="bg-ag-white px-6 py-5 font-sans font-bold text-ag-black text-[13px]">{row.dim}</div>
-                <div className="bg-ag-white px-6 py-5 font-sans text-[13px] text-ag-gray leading-relaxed">{row.profile}</div>
-                <div className="bg-ag-white px-6 py-5 font-sans text-[13px] text-ag-gray leading-relaxed">{row.check}</div>
+                <div className="bg-ag-white px-6 py-5 font-sans text-[15px] text-ag-gray leading-relaxed">{row.profile}</div>
+                <div className="bg-ag-white px-6 py-5 font-sans text-[15px] text-ag-gray leading-relaxed">{row.check}</div>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default async function GradePartnersPage() {
               {transverse.map((item) => (
                 <div key={item.title} className="bg-ag-white p-6">
                   <h3 className="font-sans font-bold text-ag-black text-[14px] mb-1.5">{item.title}</h3>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -136,7 +136,7 @@ export default async function GradePartnersPage() {
                   <span className="w-5 h-5 border border-ag-apex/40 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="w-1.5 h-1.5 bg-ag-apex rounded-full" />
                   </span>
-                  <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{rule}</span>
+                  <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{rule}</span>
                 </li>
               ))}
             </ul>
@@ -170,7 +170,7 @@ export default async function GradePartnersPage() {
                   <span className="w-5 h-5 border border-ag-apex/40 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="w-1.5 h-1.5 bg-ag-apex rounded-full" />
                   </span>
-                  <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                  <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>

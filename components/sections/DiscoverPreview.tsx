@@ -61,7 +61,7 @@ export function DiscoverPreview() {
                 style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}>
                 {article.title}
               </h3>
-              <p className="text-[13px] text-ag-gray leading-relaxed flex-1">
+              <p className="text-[15px] text-ag-gray leading-relaxed flex-1">
                 {article.desc}
               </p>
               <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light group-hover:text-ag-apex-ink transition-colors flex items-center gap-1.5">

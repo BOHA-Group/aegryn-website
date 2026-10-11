@@ -214,7 +214,7 @@ export function ProprietaryAssetsGrid() {
               </p>
 
               {/* Description */}
-              <div className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1 space-y-2">
+              <div className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1 space-y-2">
                 {tItems(asset.descKey).split('\n\n').map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}

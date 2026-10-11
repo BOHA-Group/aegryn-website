@@ -185,7 +185,7 @@ export function AssetCarousel() {
                 >
                   {asset.name}
                 </h3>
-                <p className="font-sans font-normal text-[13px] text-ag-gray leading-relaxed mb-3">
+                <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed mb-3">
                   {tItems(`${asset.id}.tagline`)}
                 </p>
                 <p className="font-sans font-normal text-[12px] text-ag-gray-light leading-relaxed mb-5 line-clamp-2">

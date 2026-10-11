@@ -106,7 +106,7 @@ export default async function RoadmapPage({ params }: Props) {
                 <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.01em]">
                   {t(`features.${key}.title`)}
                 </h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">
                   {t(`features.${key}.desc`)}
                 </p>
               </div>
@@ -143,7 +143,7 @@ export default async function RoadmapPage({ params }: Props) {
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}
                         </h3>
-                        <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                        <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
                       <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-apex-ink border border-ag-apex/30 px-2 py-1">
                         ● {t('statusLive')}
@@ -176,7 +176,7 @@ export default async function RoadmapPage({ params }: Props) {
                         <h3 className="font-sans font-semibold text-ag-black text-[15px] tracking-[-0.01em] leading-snug mb-2">
                           {item.title}
                         </h3>
-                        <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{item.desc}</p>
+                        <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
                       </div>
                       <span className="rounded-lg shrink-0 self-start font-mono text-[10px] uppercase tracking-widest text-ag-gray-light border border-ag-border px-2 py-1">
                         ○ {t('statusUpcoming')}

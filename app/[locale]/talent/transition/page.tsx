@@ -115,7 +115,7 @@ export default async function TalentTransitionPage({ params }: Props) {
                 <p className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] mb-3">
                   {card.stat}
                 </p>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-4">
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">
                   {card.desc}
                 </p>
                 <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-ag-gray-light">

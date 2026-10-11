@@ -134,7 +134,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
 
               <div className="space-y-4">
                 {[t(`assets.${assetKey}.p1`), t(`assets.${assetKey}.p2`)].map((p, i) => (
-                  <p key={i} className="font-sans font-normal text-[14px] text-ag-gray leading-[1.8]">
+                  <p key={i} className="font-sans font-normal text-[15px] text-ag-gray leading-[1.8]">
                     {p}
                   </p>
                 ))}
@@ -155,7 +155,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               </div>
             </>
           ) : (
-            <p className="text-[14px] text-ag-gray leading-relaxed">{tItems(`${asset.id}.description`)}</p>
+            <p className="text-[15px] text-ag-gray leading-relaxed">{tItems(`${asset.id}.description`)}</p>
           )}
 
           {/* Status */}

@@ -87,7 +87,7 @@ export default async function SecurityPage({ params }: Props) {
             {neverItems.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <XCircle size={14} className="text-red-500 shrink-0 mt-0.5" />
-                <span className="font-sans text-[14px] text-ag-gray">{item}</span>
+                <span className="font-sans text-[15px] text-ag-gray">{item}</span>
               </li>
             ))}
           </ul>
@@ -98,7 +98,7 @@ export default async function SecurityPage({ params }: Props) {
           <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4">{t('s2Title')}</h2>
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">{t('s2')}</p>
           <div className="rounded-lg bg-ag-off-white border border-ag-border px-5 py-4">
-            <p className="font-sans text-[13px] text-ag-gray italic">{t('s2Doubt')}</p>
+            <p className="font-sans text-[15px] text-ag-gray italic">{t('s2Doubt')}</p>
           </div>
         </section>
 
@@ -109,7 +109,7 @@ export default async function SecurityPage({ params }: Props) {
             {accountItems.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <CheckCircle2 size={14} className="text-ag-apex-ink shrink-0 mt-0.5" />
-                <span className="font-sans text-[14px] text-ag-gray">{item}</span>
+                <span className="font-sans text-[15px] text-ag-gray">{item}</span>
               </li>
             ))}
           </ul>
@@ -125,7 +125,7 @@ export default async function SecurityPage({ params }: Props) {
                 {[t('s4Normal1'), t('s4Normal2')].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 size={14} className="text-ag-apex-ink shrink-0 mt-0.5" />
-                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                    <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -136,7 +136,7 @@ export default async function SecurityPage({ params }: Props) {
                 {[t('s4Fraud1'), t('s4Fraud2'), t('s4Fraud3')].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <XCircle size={14} className="text-red-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-[13px] text-ag-gray leading-relaxed">{item}</span>
+                    <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -153,7 +153,7 @@ export default async function SecurityPage({ params }: Props) {
                 <span className="font-mono text-[11px] text-ag-gray-light w-6 shrink-0 mt-0.5">
                   {String(i+1).padStart(2,'0')}
                 </span>
-                <span className="font-sans text-[14px] text-ag-gray leading-relaxed">{step}</span>
+                <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{step}</span>
               </li>
             ))}
           </ol>

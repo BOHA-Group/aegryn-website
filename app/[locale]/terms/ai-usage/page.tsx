@@ -78,7 +78,7 @@ export default async function AiUsagePage({ params }: Props) {
                 <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-3">Ce que nous faisons</p>
                 <ul className="space-y-2">
                   {t('s4Do').split('. ').filter(Boolean).map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 font-sans text-[13px] text-ag-gray leading-snug">
+                    <li key={i} className="flex items-start gap-2 font-sans text-[15px] text-ag-gray leading-snug">
                       <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-ag-apex" />
                       {item.replace(/\.$/, '')}
                     </li>
@@ -89,7 +89,7 @@ export default async function AiUsagePage({ params }: Props) {
                 <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-red-500 mb-3">Ce que nous ne faisons pas</p>
                 <ul className="space-y-2">
                   {t('s4Dont').split('. ').filter(Boolean).map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 font-sans text-[13px] text-ag-gray leading-snug">
+                    <li key={i} className="flex items-start gap-2 font-sans text-[15px] text-ag-gray leading-snug">
                       <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400" />
                       {item.replace(/\.$/, '')}
                     </li>

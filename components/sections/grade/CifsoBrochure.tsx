@@ -209,7 +209,7 @@ export function CifsoBrochure() {
                     </div>
                     <div>
                       <h3 className="font-sans font-semibold text-ag-black text-[15px] mb-1">{p.title}</h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{p.desc}</p>
+                      <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
                 )
@@ -232,7 +232,7 @@ export function CifsoBrochure() {
                   </div>
                   <div>
                     <h3 className="font-sans font-semibold text-ag-black text-[15px] mb-1.5">{it.title}</h3>
-                    <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{it.desc}</p>
+                    <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{it.desc}</p>
                   </div>
                 </div>
               )
@@ -338,7 +338,7 @@ export function CifsoBrochure() {
               <p className="font-sans font-bold text-white text-[28px] leading-tight">{gi('processDuration')}</p>
             </div>
             <div className="rounded-xl border border-ag-border p-6">
-              <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{b('s7Note')}</p>
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{b('s7Note')}</p>
             </div>
           </div>
         </Page>
@@ -357,7 +357,7 @@ export function CifsoBrochure() {
                     </div>
                     <div>
                       <h3 className="font-sans font-semibold text-ag-black text-[15px] mb-1">{d.title}</h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{d.desc}</p>
+                      <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{d.desc}</p>
                     </div>
                   </div>
                 )
@@ -382,7 +382,7 @@ export function CifsoBrochure() {
                   <Icon size={18} className="text-ag-apex" />
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[16px] mb-2">{title}</h3>
-                <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{desc}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -403,7 +403,7 @@ export function CifsoBrochure() {
                     </div>
                     <div>
                       <h3 className="font-sans font-semibold text-ag-black text-[15px] mb-1">{a.title}</h3>
-                      <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{a.desc}</p>
+                      <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{a.desc}</p>
                     </div>
                   </div>
                 )
@@ -496,7 +496,7 @@ function DimensionCard({ d, weightLabel, criteriaLabel }: { d: Cifs; weightLabel
           <p className="font-mono text-[14px] font-bold text-ag-navy">{d.weight}</p>
         </div>
       </div>
-      <p className="font-sans text-[13px] text-ag-gray leading-relaxed mb-4">{d.desc}</p>
+      <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4">{d.desc}</p>
       <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-2">{criteriaLabel}</p>
       <ul className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-6 gap-y-1.5">
         {d.criteria.map((c) => (
@@ -518,7 +518,7 @@ function StepCard({ s, labels }: { s: Step; labels: [string, string, string] | s
         </div>
         <div>
           <h3 className="font-sans font-semibold text-ag-black text-[16px] mb-1">{s.title}</h3>
-          <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{s.desc}</p>
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-4 pt-4 border-t border-ag-border">

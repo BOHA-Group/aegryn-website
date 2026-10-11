@@ -66,7 +66,7 @@ export function GradeBrochure() {
                 <span className="shrink-0 w-5 h-5 rounded bg-ag-apex/15 flex items-center justify-center">
                   <Check size={13} className="text-ag-navy" />
                 </span>
-                <span className="font-sans text-[14px] text-ag-gray">{f}</span>
+                <span className="font-sans text-[15px] text-ag-gray">{f}</span>
               </li>
             ))}
           </ul>

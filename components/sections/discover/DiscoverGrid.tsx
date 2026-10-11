@@ -178,7 +178,7 @@ export function DiscoverGrid({ locale }: Props) {
                   >
                     {mainArticle.title[lang] ?? mainArticle.title.en}
                   </h2>
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed line-clamp-3 mb-4">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed line-clamp-3 mb-4">
                     {mainArticle.excerpt[lang] ?? mainArticle.excerpt.en}
                   </p>
                   <div className="flex items-center gap-2 flex-wrap mb-4">
@@ -289,7 +289,7 @@ export function DiscoverGrid({ locale }: Props) {
           {/* Grille cards */}
           <div ref={gridRef}>
             {filtered.length === 0 ? (
-              <p className="font-sans text-[14px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
+              <p className="font-sans text-[15px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {shown.map((article) => (
@@ -361,7 +361,7 @@ export function DiscoverGrid({ locale }: Props) {
             <div>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">{t('newsletterLabel')}</p>
               <p className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] mb-1">{t('newsletterTitle')}</p>
-              <p className="font-sans text-[13px] text-ag-gray">{t('newsletterDesc')}</p>
+              <p className="font-sans text-[15px] text-ag-gray">{t('newsletterDesc')}</p>
             </div>
             <NewsletterSubscribeForm locale={locale} />
           </div>
