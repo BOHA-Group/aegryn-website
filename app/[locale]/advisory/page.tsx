@@ -111,7 +111,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 </p>
                 <h2
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
-                  style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+                  style={{ fontSize: 'clamp(16px,1.5vw,20px)' }}
                 >
                   {item.title}
                 </h2>
