@@ -90,14 +90,15 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
       {/* ── Bloc 1 : Teaser Magazine — fidèle au modèle Barnes ── */}
       <div
         ref={magRef}
-        className="relative overflow-hidden border-b border-ag-border"
+        className="relative overflow-hidden border-b border-ag-border flex flex-col md:block"
         style={{ background: '#F5F2EE', minHeight: 560 }}
       >
-        {/* Card texte — mobile: pleine largeur haut / desktop: absolute centre-gauche */}
+        {/* Card texte — dans le flux : le bloc grandit avec le contenu,
+            plus de rognage desktop ni mobile */}
         <div
-          className="absolute z-10 bg-white space-y-4
-            inset-x-4 top-28
-            md:inset-x-[unset] md:left-[12%] md:right-auto md:top-1/2 md:-translate-y-1/2"
+          className="relative z-10 bg-white space-y-4
+            mx-4 mt-10 mb-2
+            md:mx-0 md:mb-0 md:ml-[12%] md:my-14 md:self-center"
           style={{ maxWidth: 380, padding: '36px 40px' }}
         >
           <h2
@@ -156,8 +157,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           ))}
         </div>
 
-        {/* Zone covers — mobile : scroll horizontal sous la card texte */}
-        <div className="md:hidden absolute bottom-0 left-0 right-0 flex gap-3 overflow-x-auto px-6 pb-4 pt-2 pointer-events-none"
+        {/* Zone covers — mobile : scroll horizontal sous la card texte, dans le flux */}
+        <div className="md:hidden flex gap-3 overflow-x-auto px-6 pb-6 pt-4 pointer-events-none"
           style={{ scrollbarWidth: 'none' }}
         >
           {COVER_LAYOUT.map(({ issue }, i) => (
