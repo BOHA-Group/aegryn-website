@@ -1,19 +1,20 @@
 # Images — pages FRANCHIR (/franchir/*)
 
-Toutes les images proviennent d'Unsplash, sous [Unsplash License](https://unsplash.com/license) :
-usage commercial autorisé, sans attribution obligatoire. Stockage local (pas de hotlink),
+Les en-têtes de cycle proviennent de Pexels, sous [Pexels License](https://www.pexels.com/license/) ;
+les vignettes de situations proviennent d'Unsplash, sous [Unsplash License](https://unsplash.com/license).
+Usage commercial autorisé, sans attribution obligatoire. Stockage local (pas de hotlink),
 affichage via next/image avec voile sombre (charte Aegryn). Aucune image n'est réutilisée
 ailleurs sur le site.
 
-## En-têtes de cycle (1920 px, q78)
+## En-têtes de cycle (1920 px) — série nature symbolique (Pexels)
 
 | Fichier | Page | Source |
 |---|---|---|
-| lancement.jpg | /franchir/lancement | https://unsplash.com/photos/wawEfYdpkag |
-| croissance.jpg | /franchir/croissance | https://unsplash.com/photos/pstpqOv5Ntc |
-| restructuration.jpg | /franchir/restructuration | https://unsplash.com/photos/NcociWzk23A |
-| acquisition.jpg | /franchir/acquisition | https://unsplash.com/photos/Nl_FMFpXo2g |
-| transmission.jpg | /franchir/transmission | https://unsplash.com/photos/WDRF9ONTYJ0 |
+| lancement.jpg | /franchir/lancement | https://www.pexels.com/photo/32447552/ |
+| croissance.jpg | /franchir/croissance | https://www.pexels.com/photo/12956558/ |
+| restructuration.jpg | /franchir/restructuration | https://www.pexels.com/photo/19300204/ |
+| acquisition.jpg | /franchir/acquisition | https://www.pexels.com/photo/13963384/ |
+| transmission.jpg | /franchir/transmission | https://www.pexels.com/photo/1632790/ |
 
 ## Vignettes des situations (1200 px, q78) — une image n'apparaît jamais deux fois
 

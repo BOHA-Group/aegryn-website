@@ -31,7 +31,7 @@ export interface FranchirUi {
 
 export const FRANCHIR_UI: Record<string, FranchirUi> = {
   fr: {
-    heroAlt: { lancement: "Espace de travail d'une jeune entreprise", croissance: 'Gratte-ciel modernes sous ciel bleu', restructuration: 'Phare entouré par une vague déferlante', acquisition: 'Tours de bureaux vues en contre-plongée', transmission: 'Deux mains qui se rejoignent' },
+    heroAlt: { lancement: 'Jeune pousse de pin émergeant du sol', croissance: 'Terrasses de Lavaux, lac Léman et Alpes suisses', restructuration: 'Lacet de route en montagne vu du ciel', acquisition: 'Cascade en Y, deux flux qui convergent', transmission: 'Deux arbres majestueux côte à côte dans la lumière' },
     whatWeDo: 'Ce que nous faisons', finding: 'Constat', situationsTag: 'Six situations',
     decision: 'Décision à prendre', metierUsed: 'Métier mobilisé', deliverable: 'Ce que vous recevez',
     metiersTitle: 'Métiers mobilisés à ce cycle', mobilized: 'Mobilisé', available: 'Disponible',
@@ -44,7 +44,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     introCyclesTag: 'Cinq cycles', seeCycle: 'Voir ce cycle', yes: 'Oui', no: 'Non',
   },
   en: {
-    heroAlt: { lancement: 'Workspace of a young company', croissance: 'Modern skyscrapers under a blue sky', restructuration: 'Lighthouse surrounded by a breaking wave', acquisition: 'Office towers seen from below', transmission: 'Two hands reaching out to each other' },
+    heroAlt: { lancement: 'Young pine seedling emerging from soil', croissance: 'Lavaux vineyard terraces, Lake Geneva and Swiss Alps', restructuration: 'Mountain road hairpin turn from above', acquisition: 'Y-shaped waterfall, two streams converging', transmission: 'Two majestic trees side by side in the light' },
     whatWeDo: 'What we do', finding: 'The evidence', situationsTag: 'Six situations',
     decision: 'Decision to make', metierUsed: 'Discipline engaged', deliverable: 'What you receive',
     metiersTitle: 'Disciplines engaged at this stage', mobilized: 'Engaged', available: 'Available',
@@ -57,7 +57,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     introCyclesTag: 'Five stages', seeCycle: 'See this stage', yes: 'Yes', no: 'No',
   },
   de: {
-    heroAlt: { lancement: 'Arbeitsplatz eines jungen Unternehmens', croissance: 'Moderne Wolkenkratzer unter blauem Himmel', restructuration: 'Leuchtturm inmitten einer brechenden Welle', acquisition: 'Bürotürme aus der Froschperspektive', transmission: 'Zwei Hände, die sich entgegenkommen' },
+    heroAlt: { lancement: 'Junge Kiefernkeimling, der aus dem Boden wächst', croissance: 'Lavaux-Weinterrassen, Genfersee und Schweizer Alpen', restructuration: 'Bergstrassen-Serpentine von oben', acquisition: 'Y-förmiger Wasserfall, zwei zusammenlaufende Ströme', transmission: 'Zwei majestätische Bäume nebeneinander im Licht' },
     whatWeDo: 'Was wir tun', finding: 'Befund', situationsTag: 'Sechs Situationen',
     decision: 'Zu treffende Entscheidung', metierUsed: 'Mobilisierte Disziplin', deliverable: 'Was Sie erhalten',
     metiersTitle: 'In diesem Zyklus mobilisierte Disziplinen', mobilized: 'Mobilisiert', available: 'Verfügbar',
@@ -70,7 +70,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     introCyclesTag: 'Fünf Zyklen', seeCycle: 'Diesen Zyklus ansehen', yes: 'Ja', no: 'Nein',
   },
   it: {
-    heroAlt: { lancement: 'Spazio di lavoro di una giovane impresa', croissance: 'Grattacieli moderni sotto un cielo azzurro', restructuration: "Faro circondato da un'onda che si infrange", acquisition: 'Torri di uffici viste dal basso', transmission: 'Due mani che si incontrano' },
+    heroAlt: { lancement: 'Giovane germoglio di pino che emerge dal suolo', croissance: 'Terrazze di Lavaux, lago Lemano e Alpi svizzere', restructuration: 'Tornante di montagna visto dall’alto', acquisition: 'Cascata a Y, due flussi che convergono', transmission: 'Due alberi maestosi fianco a fianco nella luce' },
     whatWeDo: 'Cosa facciamo', finding: 'Constatazione', situationsTag: 'Sei situazioni',
     decision: 'Decisione da prendere', metierUsed: 'Competenza mobilitata', deliverable: 'Cosa ricevete',
     metiersTitle: 'Competenze mobilitate in questo ciclo', mobilized: 'Mobilitata', available: 'Disponibile',
@@ -83,7 +83,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     introCyclesTag: 'Cinque cicli', seeCycle: 'Vedere questo ciclo', yes: 'Sì', no: 'No',
   },
   es: {
-    heroAlt: { lancement: 'Espacio de trabajo de una empresa joven', croissance: 'Rascacielos modernos bajo un cielo azul', restructuration: 'Faro rodeado por una ola rompiente', acquisition: 'Torres de oficinas vistas desde abajo', transmission: 'Dos manos que se acercan' },
+    heroAlt: { lancement: 'Joven brote de pino emergiendo del suelo', croissance: 'Terrazas de Lavaux, lago Lemán y Alpes suizos', restructuration: 'Curva cerrada de montaña vista desde arriba', acquisition: 'Cascada en Y, dos corrientes que convergen', transmission: 'Dos árboles majestuosos uno junto al otro en la luz' },
     whatWeDo: 'Qué hacemos', finding: 'Constatación', situationsTag: 'Seis situaciones',
     decision: 'Decisión a tomar', metierUsed: 'Disciplina movilizada', deliverable: 'Lo que recibe',
     metiersTitle: 'Disciplinas movilizadas en este ciclo', mobilized: 'Movilizada', available: 'Disponible',
@@ -96,7 +96,7 @@ export const FRANCHIR_UI: Record<string, FranchirUi> = {
     introCyclesTag: 'Cinco ciclos', seeCycle: 'Ver este ciclo', yes: 'Sí', no: 'No',
   },
   nl: {
-    heroAlt: { lancement: 'Werkruimte van een jonge onderneming', croissance: 'Moderne wolkenkrabbers onder een blauwe lucht', restructuration: 'Vuurtoren omringd door een brekende golf', acquisition: 'Kantoorgebouwen van onderaf gezien', transmission: 'Twee handen die elkaar bereiken' },
+    heroAlt: { lancement: 'Jonge dennenzaailing die uit de grond komt', croissance: 'Wijnterrassen van Lavaux, Meer van Genève en Zwitserse Alpen', restructuration: 'Haarspeldbocht in de bergen van bovenaf', acquisition: 'Y-vormige waterval, twee samenkomende stromen', transmission: 'Twee majestueuze bomen naast elkaar in het licht' },
     whatWeDo: 'Wat wij doen', finding: 'Constatering', situationsTag: 'Zes situaties',
     decision: 'Te nemen beslissing', metierUsed: 'Ingezette discipline', deliverable: 'Wat u ontvangt',
     metiersTitle: 'In dit traject ingezette disciplines', mobilized: 'Ingezet', available: 'Beschikbaar',
