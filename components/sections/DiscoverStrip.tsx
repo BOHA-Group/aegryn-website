@@ -24,11 +24,11 @@ import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/b
  * - Covers = IssueMiniCard identiques à la page magazine (overlays texte inclus)
  * - Pas de badge "À venir" (isPublic/isPreview ne sont pas utilisés pour le rendu décoratif)
  */
-const COVER_LAYOUT = [
-  { issue: ISSUE_03, rot: '-5deg', left: '-8%',  top: '414px', z: 1 },
-  { issue: ISSUE_01, rot:  '3deg', left: '18%',  top: '151px', z: 2 },
-  { issue: ISSUE_02, rot: '-3deg', left: '48%',  top: '-15px', z: 3 },
-  { issue: ISSUE_04, rot:  '6deg', left: '70%',  top: '-68px', z: 4 },
+const COVER_LAYOUT: { issue: typeof ISSUE_01; rot: string; left: string; top?: string; bottom?: string; z: number }[] = [
+  { issue: ISSUE_03, rot: '-5deg', left: '3.5%', bottom: '42px', z: 1 },
+  { issue: ISSUE_01, rot:  '3deg', left: '20%',  top: '170px',   z: 2 },
+  { issue: ISSUE_02, rot: '-3deg', left: '46%',  top: '55px',    z: 3 },
+  { issue: ISSUE_04, rot:  '6deg', left: '61%',  top: '14px',    z: 4 },
 ]
 
 interface Props {
@@ -133,10 +133,10 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
 
         {/* Zone covers — desktop : diagonale montante haut-droit */}
         <div
-          className="hidden md:block absolute top-0 bottom-0 overflow-hidden pointer-events-none"
+          className="hidden lg:block absolute top-0 bottom-0 overflow-hidden pointer-events-none"
           style={{ left: '38%', right: 0 }}
         >
-          {COVER_LAYOUT.map(({ issue, rot, left, top, z }, i) => (
+          {COVER_LAYOUT.map(({ issue, rot, left, top, bottom, z }, i) => (
             <div
               key={i}
               className="mag-cover-card absolute"
@@ -146,6 +146,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
                 zIndex: z,
                 left,
                 top,
+                bottom,
               }}
             >
               <IssueMiniCard
@@ -158,7 +159,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         </div>
 
         {/* Zone covers — mobile : scroll horizontal sous la card texte, dans le flux */}
-        <div className="md:hidden flex gap-3 overflow-x-auto px-6 pb-6 pt-4 pointer-events-none"
+        <div className="lg:hidden flex gap-3 overflow-x-auto px-6 pb-6 pt-4 pointer-events-none"
           style={{ scrollbarWidth: 'none' }}
         >
           {COVER_LAYOUT.map(({ issue }, i) => (
