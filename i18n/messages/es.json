@@ -934,8 +934,29 @@
     },
     "vision": {
       "label": "Nuestra visión",
-      "bold": "Aegryn quiere ser la firma que acompaña a los dirigentes de principio a fin",
-      "text": ": de la decisión a su realización, en cada ciclo de vida de la empresa, del lanzamiento a la transmisión o a la reanudación.\n\nSomos operadores. Construimos y operamos nuestros propios activos, y llevamos los proyectos de nuestros clientes como un arquitecto lleva una obra: encuadre, coordinación de los intervinientes, hitos, recepción. Lo que recomendamos, lo vivimos.\n\nFirma integrada, anclada en Suiza, Aegryn reúne en un solo interlocutor las cinco disciplinas necesarias para el valor duradero de una empresa: asesoramiento, construcción de activos, paso de los ciclos, talento y conocimiento del mercado."
+      "segments": [
+        {
+          "t": "Aegryn quiere ser la firma que acompaña a los dirigentes de principio a fin",
+          "b": true
+        },
+        {
+          "t": ": de la decisión a su realización, en cada ciclo de vida de la empresa, del lanzamiento a la transmisión o a la reanudación.\n\n"
+        },
+        {
+          "t": "Somos operadores.",
+          "b": true
+        },
+        {
+          "t": " Construimos y operamos nuestros propios activos, y llevamos los proyectos de nuestros clientes como un arquitecto lleva una obra: encuadre, coordinación de los intervinientes, hitos, recepción. Lo que recomendamos, lo vivimos.\n\n"
+        },
+        {
+          "t": "Firma integrada, anclada en Suiza por su rigor,",
+          "b": true
+        },
+        {
+          "t": " Aegryn reúne en un solo interlocutor las cinco disciplinas necesarias para el valor duradero de una empresa: asesoramiento, construcción de activos, paso de los ciclos, talento y conocimiento del mercado."
+        }
+      ]
     },
     "contribution": {
       "label": "Nuestra contribución",

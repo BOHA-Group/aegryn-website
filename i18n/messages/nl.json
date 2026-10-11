@@ -934,8 +934,29 @@
     },
     "vision": {
       "label": "Onze visie",
-      "bold": "Aegryn wil het adviesbureau zijn dat leidinggevenden van begin tot eind begeleidt",
-      "text": ": van beslissing tot realisatie, in elke levenscyclus van het bedrijf, van lancering tot overdracht of herstart.\n\nWij zijn operators. Wij bouwen en exploiteren onze eigen activa, en wij voeren de projecten van onze klanten zoals een architect een bouwplaats leidt: kader, coördinatie van betrokkenen, mijlpalen, oplevering. Wat wij aanbevelen, leven wij.\n\nAls geïntegreerd bureau, verankerd in Zwitserland, brengt Aegryn in één aanspreekpunt de vijf disciplines samen die nodig zijn voor duurzame bedrijfswaarde: advies, opbouw van activa, het doorlopen van de cycli, talent en marktkennis."
+      "segments": [
+        {
+          "t": "Aegryn wil het adviesbureau zijn dat leidinggevenden van begin tot eind begeleidt",
+          "b": true
+        },
+        {
+          "t": ": van beslissing tot realisatie, in elke levenscyclus van het bedrijf, van lancering tot overdracht of herstart.\n\n"
+        },
+        {
+          "t": "Wij zijn operators.",
+          "b": true
+        },
+        {
+          "t": " Wij bouwen en exploiteren onze eigen activa, en wij voeren de projecten van onze klanten zoals een architect een bouwplaats leidt: kader, coördinatie van betrokkenen, mijlpalen, oplevering. Wat wij aanbevelen, leven wij.\n\n"
+        },
+        {
+          "t": "Als geïntegreerd bureau, verankerd in Zwitserland om zijn grondigheid,",
+          "b": true
+        },
+        {
+          "t": " brengt Aegryn in één aanspreekpunt de vijf disciplines samen die nodig zijn voor duurzame bedrijfswaarde: advies, opbouw van activa, het doorlopen van de cycli, talent en marktkennis."
+        }
+      ]
     },
     "contribution": {
       "label": "Onze bijdrage",

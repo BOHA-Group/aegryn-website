@@ -934,8 +934,29 @@
     },
     "vision": {
       "label": "Unsere Vision",
-      "bold": "Aegryn will das Beratungshaus sein, das Führungskräfte von Anfang bis Ende begleitet",
-      "text": ": von der Entscheidung bis zu ihrer Umsetzung, in jedem Lebenszyklus des Unternehmens, von der Gründung bis zur Übergabe oder zum Neustart.\n\nWir sind Operatoren. Wir bauen und betreiben unsere eigenen Assets, und wir führen die Projekte unserer Kunden wie ein Architekt eine Baustelle leitet: Rahmung, Koordination der Beteiligten, Meilensteine, Abnahme. Was wir empfehlen, leben wir.\n\nAls integrierte Beratung mit Verankerung in der Schweiz vereint Aegryn in einem einzigen Ansprechpartner die fünf Disziplinen, die für den dauerhaften Wert eines Unternehmens nötig sind: Beratung, Aufbau von Assets, Begleitung der Zyklen, Talente und Marktkenntnis."
+      "segments": [
+        {
+          "t": "Aegryn will das Beratungshaus sein, das Führungskräfte von Anfang bis Ende begleitet",
+          "b": true
+        },
+        {
+          "t": ": von der Entscheidung bis zu ihrer Umsetzung, in jedem Lebenszyklus des Unternehmens, von der Gründung bis zur Übergabe oder zum Neustart.\n\n"
+        },
+        {
+          "t": "Wir sind Operatoren.",
+          "b": true
+        },
+        {
+          "t": " Wir bauen und betreiben unsere eigenen Assets, und wir führen die Projekte unserer Kunden wie ein Architekt eine Baustelle leitet: Rahmung, Koordination der Beteiligten, Meilensteine, Abnahme. Was wir empfehlen, leben wir.\n\n"
+        },
+        {
+          "t": "Als integrierte Beratung mit Verankerung in der Schweiz für ihre Gründlichkeit,",
+          "b": true
+        },
+        {
+          "t": " vereint Aegryn in einem einzigen Ansprechpartner die fünf Disziplinen, die für den dauerhaften Wert eines Unternehmens nötig sind: Beratung, Aufbau von Assets, Begleitung der Zyklen, Talente und Marktkenntnis."
+        }
+      ]
     },
     "contribution": {
       "label": "Unser Beitrag",

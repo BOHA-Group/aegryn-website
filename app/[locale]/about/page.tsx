@@ -103,8 +103,7 @@ export default function AboutPage() {
         }
         visionText={
           <VisionTypewriter
-            bold={t('vision.bold')}
-            text={t('vision.text')}
+            segments={t.raw('vision.segments') as { t: string; bold?: boolean }[]}
           />
         }
         dnaContent={

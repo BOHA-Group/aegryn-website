@@ -894,8 +894,29 @@
     },
     "vision": {
       "label": "Notre vision",
-      "bold": "Aegryn veut être le cabinet qui accompagne les dirigeants de bout en bout",
-      "text": " : de la décision à sa réalisation, à chaque cycle de vie de l'entreprise, du lancement à la transmission ou à la reprise.\n\nNous sommes des opérateurs. Nous construisons et opérons nos propres actifs, et nous tenons les projets de nos clients comme un architecte tient un chantier : cadrage, coordination des intervenants, jalons, réception. Ce que nous recommandons, nous le vivons.\n\nCabinet intégré, ancré en Suisse, Aegryn réunit en un seul interlocuteur les cinq disciplines nécessaires à la valeur durable d'une entreprise : conseil, construction d'actifs, passage des cycles, talents et connaissance du marché."
+      "segments": [
+        {
+          "t": "Aegryn veut être le cabinet qui accompagne les dirigeants de bout en bout",
+          "b": true
+        },
+        {
+          "t": " : de la décision à sa réalisation, à chaque cycle de vie de l'entreprise, du lancement à la transmission ou à la reprise.\n\n"
+        },
+        {
+          "t": "Nous sommes des opérateurs.",
+          "b": true
+        },
+        {
+          "t": " Nous construisons et opérons nos propres actifs, et nous tenons les projets de nos clients comme un architecte tient un chantier : cadrage, coordination des intervenants, jalons, réception. Ce que nous recommandons, nous le vivons.\n\n"
+        },
+        {
+          "t": "Cabinet intégré, ancré en Suisse pour sa rigueur,",
+          "b": true
+        },
+        {
+          "t": " Aegryn réunit en un seul interlocuteur les cinq disciplines nécessaires à la valeur durable d'une entreprise : conseil, construction d'actifs, passage des cycles, talents et connaissance du marché."
+        }
+      ]
     },
     "contribution": {
       "label": "Notre contribution",

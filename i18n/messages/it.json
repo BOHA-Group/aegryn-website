@@ -934,8 +934,29 @@
     },
     "vision": {
       "label": "La nostra visione",
-      "bold": "Aegryn vuole essere la società che accompagna i dirigenti dall'inizio alla fine",
-      "text": ": dalla decisione alla sua realizzazione, in ogni ciclo di vita dell'impresa, dal lancio alla trasmissione o alla ripresa.\n\nSiamo operatori. Costruiamo e gestiamo i nostri asset, e conduciamo i progetti dei nostri clienti come un architetto conduce un cantiere: inquadramento, coordinamento degli intervenienti, tappe, collaudo. Ciò che raccomandiamo, lo viviamo.\n\nSocietà integrata, radicata in Svizzera, Aegryn riunisce in un unico interlocutore le cinque discipline necessarie al valore duraturo di un'impresa: consulenza, costruzione di asset, passaggio dei cicli, talenti e conoscenza del mercato."
+      "segments": [
+        {
+          "t": "Aegryn vuole essere la società che accompagna i dirigenti dall'inizio alla fine",
+          "b": true
+        },
+        {
+          "t": ": dalla decisione alla sua realizzazione, in ogni ciclo di vita dell'impresa, dal lancio alla trasmissione o alla ripresa.\n\n"
+        },
+        {
+          "t": "Siamo operatori.",
+          "b": true
+        },
+        {
+          "t": " Costruiamo e gestiamo i nostri asset, e conduciamo i progetti dei nostri clienti come un architetto conduce un cantiere: inquadramento, coordinamento degli intervenienti, tappe, collaudo. Ciò che raccomandiamo, lo viviamo.\n\n"
+        },
+        {
+          "t": "Società integrata, radicata in Svizzera per il suo rigore,",
+          "b": true
+        },
+        {
+          "t": " Aegryn riunisce in un unico interlocutore le cinque discipline necessarie al valore duraturo di un'impresa: consulenza, costruzione di asset, passaggio dei cicli, talenti e conoscenza del mercato."
+        }
+      ]
     },
     "contribution": {
       "label": "Il nostro contributo",
