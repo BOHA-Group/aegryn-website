@@ -23,6 +23,10 @@ export function WhyUseApps() {
         if (titleEl) {
           const split = new SplitText(titleEl, { type: 'lines', linesClass: 'why-line' })
           splits.push(split)
+          ;(split.lines as HTMLElement[]).forEach(line => {
+            line.style.paddingBottom = '0.18em'
+            line.style.marginBottom = '-0.18em'
+          })
           gsap.set(split.lines, { display: 'block', overflow: 'hidden' })
 
           const tl = gsap.timeline({

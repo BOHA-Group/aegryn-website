@@ -37,6 +37,10 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
 
     /* ── SplitText lignes ── */
     const split = new SplitText(heading, { type: 'lines', linesClass: 'ahb-line' })
+    ;(split.lines as HTMLElement[]).forEach(line => {
+      line.style.paddingBottom = '0.18em'
+      line.style.marginBottom = '-0.18em'
+    })
 
     const ctx = gsap.context(() => {
       /*

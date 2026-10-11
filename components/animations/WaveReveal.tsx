@@ -26,6 +26,13 @@ export function WaveReveal({ children, className, delay = 0 }: Props) {
 
     const target = (el.firstElementChild as HTMLElement) ?? el
     const split = new SplitText(target, { type: 'lines', linesClass: 'wave-line-inner' })
+    /* Laisse de la place aux jambages (g, y, p, q, j) sous le masque
+       overflow:hidden : +0.18em de padding clip, -0.18em de marge pour
+       conserver l'interligne exact. */
+    ;(split.lines as HTMLElement[]).forEach(line => {
+      line.style.paddingBottom = '0.18em'
+      line.style.marginBottom = '-0.18em'
+    })
     gsap.set(split.lines, { overflow: 'hidden' })
 
     const ctx = gsap.context(() => {

@@ -24,6 +24,10 @@ export function StatementStrip({ label, title, cta, href }: Props) {
 
     /* Standard 5 Rolex: SplitText on LINES, not chars/words */
     const split = new SplitText(titleEl, { type: 'lines', linesClass: 'stmt-line-inner' })
+    ;(split.lines as HTMLElement[]).forEach(line => {
+      line.style.paddingBottom = '0.18em'
+      line.style.marginBottom = '-0.18em'
+    })
     gsap.set(split.lines, { overflow: 'hidden' })
 
     const ctx = gsap.context(() => {

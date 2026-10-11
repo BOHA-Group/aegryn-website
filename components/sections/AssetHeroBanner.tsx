@@ -27,6 +27,10 @@ export function AssetHeroBanner() {
       linesClass: 'ab-line',
     })
 
+    ;(split.lines as HTMLElement[]).forEach(line => {
+      line.style.paddingBottom = '0.18em'
+      line.style.marginBottom = '-0.18em'
+    })
     gsap.set(split.lines, { overflow: 'hidden' })
 
     const ctx = gsap.context(() => {
