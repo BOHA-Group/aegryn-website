@@ -10,9 +10,9 @@ import { gsap }         from '@/lib/gsap'
 /* ── Slugs et photos par cluster ───────────────────────────── */
 const CLUSTER_META: Record<string, { slug: string; img: string }> = {
   finance:   { slug: 'finance-capital',                      img: '/images/industries/theme_fintech.jpg' },
-  sante:     { slug: 'sante-sciences-de-la-vie',             img: '/images/grade-usecases/uc-due-diligence.jpg' },
-  industrie: { slug: 'industrie-energie-infrastructure',     img: '/images/industries/theme_marketplace.jpg' },
-  commerce:  { slug: 'commerce-services-experience-client',  img: '/images/industries/theme_saas.jpg' },
+  sante:     { slug: 'sante-sciences-de-la-vie',             img: '/images/industries/cluster-sante.jpg' },
+  industrie: { slug: 'industrie-energie-infrastructure',     img: '/images/industries/cluster-industrie.jpg' },
+  commerce:  { slug: 'commerce-services-experience-client',  img: '/images/industries/theme_marketplace.jpg' },
   tech:      { slug: 'tech-innovation-secteur-public',       img: '/images/industries/theme_AI.jpg' },
 }
 

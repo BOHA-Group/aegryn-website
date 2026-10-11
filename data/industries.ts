@@ -181,7 +181,7 @@ De CIFSO 5000-certificering is bijzonder relevant om te documenteren en te verde
       },
     },
     {
-      img: '/images/blog/investment-coins.jpg',
+      img: '/images/industries/sector-proptech.jpg',
       name: {
         fr: 'PropTech & Immobilier',
         en: 'PropTech & Real Estate',
@@ -433,7 +433,7 @@ const sante: Industry = {
     it: 'Salute & Scienze della Vita',
     nl: 'Gezondheid & Life Sciences',
   },
-  img: '/images/grade-usecases/uc-due-diligence.webp',
+  img: '/images/industries/cluster-sante.jpg',
   imgAlt: {
     fr: 'Santé & Sciences de la Vie — Aegryn',
     en: 'Health & Life Sciences — Aegryn',
@@ -521,7 +521,7 @@ De CIFSO 5000-certificering wordt toegepast met een granulariteit afgestemd op d
       },
     },
     {
-      img: '/images/blog/robot-ai.jpg',
+      img: '/images/industries/sector-healthtech.jpg',
       name: {
         fr: 'HealthTech & MedTech',
         en: 'HealthTech & MedTech',
@@ -773,7 +773,7 @@ const industrie: Industry = {
     it: 'Industria, Energia & Infrastrutture',
     nl: 'Industrie, Energie & Infrastructuur',
   },
-  img: '/images/industries/theme_marketplace.webp',
+  img: '/images/industries/cluster-industrie.jpg',
   imgAlt: {
     fr: 'Industrie, Énergie & Infrastructure — Aegryn',
     en: 'Industry, Energy & Infrastructure — Aegryn',
@@ -838,7 +838,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
   ],
   sectors: [
     {
-      img: '/images/blog/tech-circuit.jpg',
+      img: '/images/industries/sector-energie.jpg',
       name: {
         fr: 'Énergie & Utilities',
         en: 'Energy & Utilities',
@@ -884,7 +884,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/europe-skyline.jpg',
+      img: '/images/industries/sector-logistique.jpg',
       name: {
         fr: 'Logistique & Supply Chain',
         en: 'Logistics & Supply Chain',
@@ -930,7 +930,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/server-room.jpg',
+      img: '/images/industries/sector-aero.jpg',
       name: {
         fr: 'Aérospatiale & Défense',
         en: 'Aerospace & Defence',
@@ -953,7 +953,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/mobile-analytics.jpg',
+      img: '/images/industries/sector-auto.jpg',
       name: {
         fr: 'Automobile & Mobilité',
         en: 'Automotive & Mobility',
@@ -976,7 +976,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/alpine-swiss.jpg',
+      img: '/images/industries/sector-agriculture.jpg',
       name: {
         fr: 'Agriculture & Agroalimentaire',
         en: 'Agriculture & Agri-food',
@@ -999,7 +999,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/analytics-graphs.jpg',
+      img: '/images/industries/sector-chimie.jpg',
       name: {
         fr: 'Chimie & Matériaux Avancés',
         en: 'Chemicals & Advanced Materials',
@@ -1022,7 +1022,7 @@ In de sectoren energietransitie en infrastructuur worden robuustheid en overdraa
       },
     },
     {
-      img: '/images/blog/office-building.jpg',
+      img: '/images/industries/sector-fret.jpg',
       name: {
         fr: 'Transport & Fret',
         en: 'Transport & Freight',
@@ -1274,7 +1274,7 @@ const commerce: Industry = {
     it: 'Commercio, Servizi & Customer Experience',
     nl: 'Handel, Diensten & Klantervaring',
   },
-  img: '/images/industries/theme_saas.webp',
+  img: '/images/industries/theme_marketplace.webp',
   imgAlt: {
     fr: 'Commerce, Services & Expérience Client — Aegryn',
     en: 'Commerce, Services & Customer Experience — Aegryn',
@@ -1362,7 +1362,7 @@ Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van p
       },
     },
     {
-      img: '/images/blog/business-meeting.jpg',
+      img: '/images/industries/sector-hotel.jpg',
       name: {
         fr: 'Hôtellerie & Tourisme',
         en: 'Hospitality & Tourism',
@@ -1385,7 +1385,7 @@ Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van p
       },
     },
     {
-      img: '/images/blog/executive-suit.jpg',
+      img: '/images/industries/sector-luxe.jpg',
       name: {
         fr: 'Luxe & Retail Premium',
         en: 'Luxury & Premium Retail',
@@ -1408,7 +1408,7 @@ Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van p
       },
     },
     {
-      img: '/images/blog/startup-team.jpg',
+      img: '/images/industries/sector-medias.jpg',
       name: {
         fr: 'Médias & Entertainment',
         en: 'Media & Entertainment',
@@ -1431,7 +1431,7 @@ Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van p
       },
     },
     {
-      img: '/images/blog/mobile-app.jpg',
+      img: '/images/industries/sector-telecom.jpg',
       name: {
         fr: 'Télécommunications',
         en: 'Telecommunications',
@@ -1771,7 +1771,7 @@ De CIFSO 5000-certificering lost deze paradox op met een onafhankelijke beoordel
       },
     },
     {
-      img: '/images/blog/team-laptops.jpg',
+      img: '/images/industries/sector-education.jpg',
       name: {
         fr: 'Éducation & EdTech',
         en: 'Education & EdTech',
@@ -1794,7 +1794,7 @@ De CIFSO 5000-certificering lost deze paradox op met een onafhankelijke beoordel
       },
     },
     {
-      img: '/images/blog/whiteboard-strategy.jpg',
+      img: '/images/industries/sector-govtech.jpg',
       name: {
         fr: 'GovTech & Secteur Public',
         en: 'GovTech & Public Sector',

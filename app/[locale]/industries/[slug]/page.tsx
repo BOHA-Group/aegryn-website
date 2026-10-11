@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* ── Helpers ────────────────────────────────────────────────── */
 const CLUSTER_IMAGES: Record<string, string> = {
   finance:   '/images/industries/theme_fintech.jpg',
-  sante:     '/images/grade-usecases/uc-due-diligence.jpg',
-  industrie: '/images/industries/theme_marketplace.jpg',
-  commerce:  '/images/industries/theme_saas.jpg',
+  sante:     '/images/industries/cluster-sante.jpg',
+  industrie: '/images/industries/cluster-industrie.jpg',
+  commerce:  '/images/industries/theme_marketplace.jpg',
   tech:      '/images/industries/theme_AI.jpg',
 }
 
