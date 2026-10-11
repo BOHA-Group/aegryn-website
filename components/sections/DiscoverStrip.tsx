@@ -25,10 +25,10 @@ import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/b
  * - Pas de badge "À venir" (isPublic/isPreview ne sont pas utilisés pour le rendu décoratif)
  */
 const COVER_LAYOUT = [
-  { issue: ISSUE_03, rot: '-5deg', left: '-8%',  top: '55%',  z: 1 },
-  { issue: ISSUE_01, rot:  '3deg', left: '18%',  top: '20%',  z: 2 },
-  { issue: ISSUE_02, rot: '-3deg', left: '48%',  top: '-2%',  z: 3 },
-  { issue: ISSUE_04, rot:  '6deg', left: '70%',  top: '-9%',  z: 4 },
+  { issue: ISSUE_03, rot: '-5deg', left: '-8%',  top: '414px', z: 1 },
+  { issue: ISSUE_01, rot:  '3deg', left: '18%',  top: '151px', z: 2 },
+  { issue: ISSUE_02, rot: '-3deg', left: '48%',  top: '-15px', z: 3 },
+  { issue: ISSUE_04, rot:  '6deg', left: '70%',  top: '-68px', z: 4 },
 ]
 
 interface Props {
@@ -97,8 +97,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
             plus de rognage desktop ni mobile */}
         <div
           className="relative z-10 bg-white space-y-4
-            mx-4 mt-10 mb-2
-            md:mx-0 md:ml-[12%] md:my-14"
+            mx-4 mt-6 mb-2
+            md:mx-0 md:ml-[12%] md:my-4"
           style={{ maxWidth: 380, padding: '36px 40px' }}
         >
           <h2
