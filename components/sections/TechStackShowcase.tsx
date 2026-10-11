@@ -102,7 +102,7 @@ function TechBadge({ item }: { item: TechItem }) {
 
   return (
     <div
-      className="tech-badge flex flex-col items-center gap-1.5 cursor-default"
+      className="tech-badge w-16 flex flex-col items-center gap-1.5 cursor-default"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -125,7 +125,7 @@ function TechBadge({ item }: { item: TechItem }) {
       {/* Label */}
       <span
         className="font-sans text-[10px] tracking-[0.04em] text-center leading-tight transition-colors duration-200"
-        style={{ color: hovered ? '#0D1B2A' : '#6B7280', maxWidth: '48px' }}
+        style={{ color: hovered ? '#0D1B2A' : '#6B7280', maxWidth: '64px' }}
       >
         {item.name}
       </span>
@@ -200,7 +200,7 @@ export function TechStackShowcase() {
           {displayedCategories.map((cat) => (
             <div key={cat.labelKey} className="flex flex-col sm:flex-row sm:items-start gap-4">
               {/* Category label — fixed width, navy, readable */}
-              <p className="font-mono text-[10px] tracking-[0.20em] uppercase text-ag-navy font-semibold shrink-0 sm:w-28 pt-1">
+              <p className="font-mono text-[10px] tracking-[0.20em] uppercase text-ag-navy font-semibold shrink-0 sm:w-32 pt-1">
                 {t(cat.labelKey)}
               </p>
               {/* Badges row */}
