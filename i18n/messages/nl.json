@@ -1003,22 +1003,22 @@
       "precision": {
         "label": "01",
         "title": "Precisie",
-        "desc": "Elke beslissing is gedocumenteerd, gemeten en traceerbaar. De Aegryn Grade is geen mening, het is een protocol. Twee analisten, hetzelfde protocol, dezelfde grade."
+        "desc": "Elke beslissing is gedocumenteerd, traceerbaar en reproduceerbaar. Dezelfde vraag, dezelfde methode, hetzelfde resultaat. U weet waarom wij aanbevelen wat wij aanbevelen."
       },
       "durability": {
         "label": "02",
         "title": "Duurzaamheid",
-        "desc": "We bouwen voor het decennium, niet voor het kwartaal. Elk asset in het Aegryn-ecosysteem is ontworpen om over tien jaar certificeerbaar te zijn, niet alleen vandaag."
+        "desc": "Wij bouwen voor het decennium, niet voor het kwartaal. Wat wij opleveren, zowel assets als plannen, kan zonder ons worden overgenomen, geauditeerd en overgedragen."
       },
-      "sovereignty": {
+      "accountability": {
         "label": "03",
-        "title": "Structurele onafhankelijkheid",
-        "desc": "Onze assets, onze infrastructuur, onze data. Geen kritieke externe afhankelijkheden. Zwitsers recht. Europese hosting. Volledige controle."
+        "title": "Verantwoordelijkheid voor uitvoering",
+        "desc": "Advies is wat het oplevert. Wij blijven tot het resultaat, onder een benoemde contactpersoon die daarvoor instaat."
       },
       "independence": {
         "label": "04",
         "title": "Onafhankelijkheid",
-        "desc": "De analist die een organisatie certificeert heeft geen financieel belang bij de beslissingen die volgen. Die scheiding is geen beleid — het is de structurele voorwaarde die de grade zijn waarde geeft."
+        "desc": "Wij ontvangen geen commissie van uitgevers, banken of fondsen voor wat wij aanbevelen. De scoring van activa wordt apart van elk adviesmandaat opgesteld, zodat het resultaat nooit afhangt van onze belangen."
       }
     },
     "swiss": {

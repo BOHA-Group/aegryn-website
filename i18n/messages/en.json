@@ -982,22 +982,22 @@
       "precision": {
         "label": "01",
         "title": "Precision",
-        "desc": "Every decision is documented, measured and traceable. The Aegryn Grade is not an opinion, it is a protocol. Two analysts, same protocol, same grade."
+        "desc": "Every decision is documented, traceable and reproducible. Same question, same method, same result. You know why we recommend what we recommend."
       },
       "durability": {
         "label": "02",
         "title": "Durability",
-        "desc": "We build for the decade, not the quarter. Every asset in the Aegryn ecosystem is designed to be certifiable in ten years, not just today."
+        "desc": "We build for the decade, not the quarter. What we deliver, assets and plans alike, can be taken over, audited and handed down without us."
       },
-      "sovereignty": {
+      "accountability": {
         "label": "03",
-        "title": "Structural independence",
-        "desc": "Our assets, our infrastructure, our data. No critical external dependencies. Swiss law. European hosting. Full control."
+        "title": "Execution accountability",
+        "desc": "Advice is worth what it produces. We stay until the result, under a named point of contact who answers for it."
       },
       "independence": {
         "label": "04",
         "title": "Independence",
-        "desc": "The analyst who certifies an organisation has no financial interest in the decisions that follow. This separation is not a policy — it is the structural condition that gives the grade its value."
+        "desc": "We receive no commission from any vendor, bank or fund on what we recommend. Asset scoring is established separately from any advisory mandate, so its outcome never depends on our interests."
       }
     },
     "swiss": {

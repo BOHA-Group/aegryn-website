@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const values = ['precision', 'durability', 'sovereignty', 'independence'] as const
+const values = ['precision', 'durability', 'accountability', 'independence'] as const
 const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
@@ -121,7 +121,7 @@ export default function AboutPage() {
                     <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
                       {t(`values.${v}.title`)}
                     </p>
-                    <p className="text-[13px] text-ag-gray leading-relaxed">
+                    <p className="text-[15px] text-ag-gray leading-relaxed">
                       {t(`values.${v}.desc`)}
                     </p>
                   </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-4">
                   {t(`contribution.items.${i}.title`)}
                 </h3>
-                <p className="text-[13px] text-ag-gray leading-relaxed">
+                <p className="text-[15px] text-ag-gray leading-relaxed">
                   {t(`contribution.items.${i}.desc`)}
                 </p>
               </div>
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 <p className="font-sans font-bold text-ag-black text-[13px] tracking-[0.12em] leading-none">
                   {ta(`workWith.items.${i}.title`)}
                 </p>
-                <p className="text-[13px] text-ag-gray leading-relaxed flex-1">
+                <p className="text-[15px] text-ag-gray leading-relaxed flex-1">
                   {ta(`workWith.items.${i}.desc`)}
                 </p>
                 <Link
@@ -365,7 +365,7 @@ export default function AboutPage() {
                   <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug mb-3">
                     {t(`cta.${profile}.title`)}
                   </h3>
-                  <p className="text-[13px] text-ag-gray leading-relaxed">
+                  <p className="text-[15px] text-ag-gray leading-relaxed">
                     {t(`cta.${profile}.desc`)}
                   </p>
                 </div>

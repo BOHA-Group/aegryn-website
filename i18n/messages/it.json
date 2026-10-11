@@ -1003,22 +1003,22 @@
       "precision": {
         "label": "01",
         "title": "Precisione",
-        "desc": "Ogni decisione è documentata, misurata e tracciabile. Il Grade Aegryn non è un'opinione, è un protocollo. Due analisti, stesso protocollo, stesso grade."
+        "desc": "Ogni decisione è documentata, tracciata e riproducibile. Stessa domanda, stesso metodo, stesso risultato. Sapete perché raccomandiamo ciò che raccomandiamo."
       },
       "durability": {
         "label": "02",
         "title": "Durabilità",
-        "desc": "Costruiamo per il decennio, non per il trimestre. Ogni asset nell'ecosistema Aegryn è progettato per essere certificabile tra dieci anni, non solo oggi."
+        "desc": "Costruiamo per il decennio, non per il trimestre. Ciò che consegniamo, asset come piani, può essere ripreso, verificato e trasmesso senza di noi."
       },
-      "sovereignty": {
+      "accountability": {
         "label": "03",
-        "title": "Indipendenza strutturale",
-        "desc": "I nostri asset, la nostra infrastruttura, i nostri dati. Nessuna dipendenza esterna critica. Diritto svizzero. Hosting europeo. Controllo totale."
+        "title": "Responsabilità di esecuzione",
+        "desc": "Un consiglio vale ciò che produce. Restiamo fino al risultato, con un interlocutore nominato che ne risponde."
       },
       "independence": {
         "label": "04",
         "title": "Indipendenza",
-        "desc": "L'analista che certifica un'organizzazione non ha alcun interesse finanziario nelle decisioni che seguono. Questa separazione non è una policy, è la condizione strutturale che dà valore al grado."
+        "desc": "Non percepiamo alcuna commissione da editori, banche o fondi su ciò che raccomandiamo. La valutazione degli asset è stabilita separatamente da qualsiasi mandato di consulenza, affinché il suo risultato non dipenda mai dai nostri interessi."
       }
     },
     "swiss": {
