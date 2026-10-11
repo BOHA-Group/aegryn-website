@@ -155,21 +155,30 @@ export function ManifestoSection() {
               {tW('convictionDesc')}
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y lg:divide-y-0 lg:divide-x divide-ag-border">
+          <div className="border-b border-ag-border">
             {whatwedoItems.map((item) => (
-              <div key={item.num} className="what-col py-16 lg:px-10 first:pl-0 last:pr-0" style={{ opacity: 0 }}>
-                <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6">
-                  {item.num}
-                </p>
-                <h3
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.25] mb-5"
-                  style={{ fontSize: 'clamp(15px,1.25vw,17px)' }}
-                >
-                  {item.title}
-                </h3>
-                <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed whitespace-pre-line">
-                  {item.desc}
-                </p>
+              <div
+                key={item.num}
+                className="what-col group border-t border-ag-border py-7 md:py-9 flex flex-col md:flex-row md:items-center gap-3 md:gap-10 cursor-default"
+                style={{ opacity: 0 }}
+              >
+                <div className="flex items-baseline gap-6 md:gap-10 shrink-0">
+                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink">
+                    {item.num}
+                  </p>
+                  <h3
+                    className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] transition-transform duration-500 ease-out md:group-hover:translate-x-2"
+                    style={{ fontSize: 'clamp(24px,2.6vw,38px)' }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="md:ml-auto md:flex md:items-center md:gap-4 md:pl-10 md:max-w-md md:shrink">
+                  <span className="hidden md:inline text-ag-apex-ink md:opacity-0 md:-translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 md:transition-all md:duration-500" aria-hidden="true">→</span>
+                  <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed md:opacity-0 md:translate-x-3 md:group-hover:opacity-100 md:group-hover:translate-x-0 md:transition-all md:duration-500 md:delay-75">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
