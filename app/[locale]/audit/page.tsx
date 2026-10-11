@@ -51,7 +51,7 @@ export default async function GradePartnersPage() {
 <ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('intro1')}
           </p>
-          <p className="font-sans text-[13px] text-ag-gray-light max-w-xl">
+          <p className="font-sans text-[15px] text-ag-gray-light max-w-xl">
             {t('intro2')}
           </p></ScrollReveal>
         </div>

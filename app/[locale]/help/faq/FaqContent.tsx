@@ -100,7 +100,7 @@ export default function FaqContent() {
               </button>
               {open === item.id && (
                 <div className="pb-6 pr-8">
-                  <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{item.a}</p>
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.a}</p>
                 </div>
               )}
             </div>

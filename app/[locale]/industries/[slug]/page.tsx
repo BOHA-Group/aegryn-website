@@ -126,7 +126,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           </div>
           <div className="lg:col-span-8">
             {getLocaleText(ind.vision, locale).split('\n').filter(Boolean).map((para, i) => (
-              <p key={i} className="font-sans text-[15px] text-ag-gray leading-relaxed mb-4 last:mb-0">
+              <p key={i} className="font-sans text-[16px] text-ag-gray leading-relaxed mb-4 last:mb-0">
                 {para.trim()}
               </p>
             ))}

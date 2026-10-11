@@ -70,7 +70,7 @@ export default async function TermsCgvPage({ params }: Props) {
                 {section.defs.map(([term, def]) => (
                   <div key={term} className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-2 sm:gap-6">
                     <dt className="font-sans font-semibold text-[13px] text-ag-black pt-0.5">{term}</dt>
-                    <dd className="font-sans text-[14px] text-ag-gray leading-relaxed">{def}</dd>
+                    <dd className="font-sans text-[15px] text-ag-gray leading-relaxed">{def}</dd>
                   </div>
                 ))}
               </dl>
@@ -78,7 +78,7 @@ export default async function TermsCgvPage({ params }: Props) {
             {section.blocks?.map((b, j) => b.title ? (
               <div key={j} className="mb-6 pl-4 border-l-2 border-ag-border">
                 <h3 className="font-sans font-semibold text-[13px] text-ag-black mb-2">{b.title}</h3>
-                <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{b.body}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{b.body}</p>
               </div>
             ) : (
               <p key={j} className="font-sans text-[14px] text-ag-gray leading-relaxed mb-4">{b.body}</p>

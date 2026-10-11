@@ -62,7 +62,7 @@ export default async function TermsUsePage({ params }: Props) {
 
       {/* Content */}
       <article className="max-w-4xl mx-auto px-6 py-16">
-        <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-12 max-w-2xl">
+        <p className="font-sans text-[16px] text-ag-gray leading-relaxed mb-12 max-w-2xl">
           {t('intro')}
         </p>
 

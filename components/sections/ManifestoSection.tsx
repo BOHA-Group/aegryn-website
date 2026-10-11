@@ -150,7 +150,7 @@ export function ManifestoSection() {
             </h2>
             <p
               className="font-sans font-normal text-ag-gray leading-[1.75]"
-              style={{ fontSize: 'clamp(14px,1.2vw,17px)' }}
+              style={{ fontSize: 'clamp(15px,1.2vw,17px)' }}
             >
               {tW('convictionDesc')}
             </p>

@@ -80,7 +80,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
           >
             {actionDef ? `${actionDef.label}.` : t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">
+<ScrollReveal delay={0.25}>          <p className="mt-4 text-[16px] text-ag-gray max-w-md leading-relaxed">
             {actionDef ? actionDef.question : t('hero.desc')}
           </p></ScrollReveal>
         </div>
