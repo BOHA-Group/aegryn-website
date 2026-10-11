@@ -45,7 +45,7 @@ export default async function GradePartnersPage() {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
-          <WaveReveal delay={0.1}><h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
+          <WaveReveal delay={0.1}><h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
             {t('title')}
           </h1></WaveReveal>
 <ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">

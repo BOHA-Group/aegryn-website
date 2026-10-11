@@ -47,7 +47,7 @@ export default async function InvestisseursPage({ params }: Props) {
           </p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
           </h1></WaveReveal>
