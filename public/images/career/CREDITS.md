@@ -12,3 +12,9 @@ sur le site — IDs vérifiés contre les CREDITS existants (advisory, franchir,
 | craft-transformation.jpg | Transformation & Transitions | https://unsplash.com/photos/1449034446853-66c86144b0ad |
 | craft-talent.jpg | Talent & Recherche | https://unsplash.com/photos/1600880292203-757bb62b4baf |
 | craft-intelligence.jpg | Intelligence & Contenu | https://unsplash.com/photos/1504711434969-e33886168f5c |
+
+## En-tête (1920 px) — Pexels
+
+| Fichier | Page | Source |
+|---|---|---|
+| hero-lighthouse.jpg | /career | https://www.pexels.com/photo/11019534/ |

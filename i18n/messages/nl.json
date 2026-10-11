@@ -1068,7 +1068,8 @@
     "hero": {
       "label": "Werken bij Aegryn",
       "title": "Advisory & Experts in Digitale Ecosystemen",
-      "desc": "Aegryn is een geïntegreerde adviesgroep. Wij begeleiden Europese organisaties gedurende hun hele levenscyclus: advies, opbouw, koers, talent, marktintelligentie. Wij bezetten geen niche: wij bepalen de regels."
+      "desc": "Aegryn is een geïntegreerde adviesgroep. Wij begeleiden Europese organisaties gedurende hun hele levenscyclus: advies, opbouw, koers, talent, marktintelligentie. Wij bezetten geen niche: wij bepalen de regels.",
+      "imageAlt": "Rode vuurtoren overeind tegen de golven, woelige zee"
     },
     "positions": {
       "label": "Aankomende functies",

@@ -1068,7 +1068,8 @@
     "hero": {
       "label": "Work at Aegryn",
       "title": "Advisory & Digital Ecosystem Experts",
-      "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, trajectory, talent, market intelligence. We do not occupy a niche: we define its rules."
+      "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, trajectory, talent, market intelligence. We do not occupy a niche: we define its rules.",
+      "imageAlt": "Red lighthouse standing against the sea spray, rough sea"
     },
     "positions": {
       "label": "Upcoming positions",

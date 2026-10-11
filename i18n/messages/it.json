@@ -1068,7 +1068,8 @@
     "hero": {
       "label": "Lavorare in Aegryn",
       "title": "Advisory & Esperti di Ecosistemi Digitali",
-      "desc": "Aegryn è un gruppo di consulenza integrata. Accompagniamo le organizzazioni europee lungo tutto il loro ciclo di vita: consulenza, costruzione, traiettoria, talenti, market intelligence. Non occupiamo una nicchia: ne definiamo le regole."
+      "desc": "Aegryn è un gruppo di consulenza integrata. Accompagniamo le organizzazioni europee lungo tutto il loro ciclo di vita: consulenza, costruzione, traiettoria, talenti, market intelligence. Non occupiamo una nicchia: ne definiamo le regole.",
+      "imageAlt": "Faro rosso in piedi contro gli spruzzi, mare agitato"
     },
     "positions": {
       "label": "Posizioni a venire",

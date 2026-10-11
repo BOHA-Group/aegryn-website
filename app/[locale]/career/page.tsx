@@ -38,9 +38,23 @@ export default async function CareerPage({ params }: Props) {
 
   return (
     <>
-      {/* Hero */}
-      <section className="border-b border-ag-border bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
+      {/* Hero — image pleine, gabarit pages cycles */}
+      <section
+        className="relative overflow-hidden bg-ag-navy pt-36 pb-32 px-6 md:px-12 border-b border-ag-border"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
+        <Image
+          src="/images/career/hero-lighthouse.jpg"
+          alt={t('hero.imageAlt')}
+          fill
+          priority
+          fetchPriority="high"
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
+        <div className="relative max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
