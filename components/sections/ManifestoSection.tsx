@@ -162,7 +162,7 @@ export function ManifestoSection() {
                 className="what-col group border-t border-ag-border py-4 md:py-5 flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-10 cursor-default"
                 style={{ opacity: 0 }}
               >
-                <div className="flex items-baseline gap-6 md:gap-10 lg:shrink-0 md:pt-0.5">
+                <div className="flex items-baseline gap-6 md:gap-10 lg:min-w-0 md:pt-0.5">
                   <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink">
                     {item.num}
                   </p>
@@ -173,7 +173,7 @@ export function ManifestoSection() {
                     {item.title}
                   </h3>
                 </div>
-                <div className="lg:ml-auto lg:w-[460px] lg:shrink-0 md:grid md:grid-rows-[0fr] md:grid-cols-[minmax(0,1fr)] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
+                <div className="lg:ml-auto lg:w-[560px] lg:shrink-0 md:grid md:grid-rows-[0fr] md:grid-cols-[minmax(0,1fr)] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
                   <div className="md:min-h-0 md:min-w-0 md:overflow-hidden flex items-start gap-4">
                     <span className="hidden md:inline text-ag-apex-ink mt-[3px]" aria-hidden="true">→</span>
                     <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 md:delay-100">
