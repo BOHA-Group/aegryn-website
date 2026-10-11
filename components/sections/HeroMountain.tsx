@@ -7,14 +7,29 @@ import { gsap } from '@/lib/gsap'
 const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
 const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
 
-/** Animation machine à écrire — style size.swiss : tape, pause, efface, phrase suivante. */
-function useTypedPhrases(phrases: string[]) {
-  const [text, setText] = useState('')
+/** Animation machine à écrire — style size.swiss : tape, pause, efface, phrase suivante.
+    Le temps de lecture est budgété sur la durée de la vidéo : la dernière phrase
+    reste affichée jusqu'au rebouclage, puis `restart` ramène à la première. */
+function useTypedPhrases(phrases: string[], videoMs: number) {
+  const [text, setText]   = useState('')
+  const [cycle, setCycle] = useState(0)
 
   useEffect(() => {
     if (!phrases.length) return
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduced) { setText(phrases[0]); return }
+    setText('')
+
+    const START = 600, DEL = 35, GAP = 250
+    const n = phrases.length
+    /* Budget vidéo : démarrage + frappe + pauses + effacements (sauf la dernière
+       phrase, qui reste affichée jusqu'au rebouclage). La pause par phrase est
+       ce qui reste du budget une fois les coûts fixes retirés. */
+    const fixed =
+      START +
+      phrases.reduce((acc, p, i) =>
+        acc + p.length * 100 + (i < n - 1 ? p.length * DEL + GAP : 0), 0)
+    const pause = Math.max(600, (videoMs - fixed) / n)
 
     let phrase = 0, char = 0, deleting = false, timer: ReturnType<typeof setTimeout>
 
@@ -23,31 +38,38 @@ function useTypedPhrases(phrases: string[]) {
       if (!deleting) {
         char++
         setText(current.slice(0, char))
-        if (char === current.length) { deleting = true; timer = setTimeout(tick, 3000); return }
-        timer = setTimeout(tick, 110 + Math.random() * 70)
+        if (char === current.length) {
+          if (phrase === n - 1) return // dernière phrase : attend le rebouclage vidéo
+          deleting = true
+          timer = setTimeout(tick, pause)
+          return
+        }
+        timer = setTimeout(tick, 85 + Math.random() * 30)
       } else {
         char--
         setText(current.slice(0, char))
         if (char === 0) {
           deleting = false
-          phrase = (phrase + 1) % phrases.length
-          timer = setTimeout(tick, 650)
+          phrase = (phrase + 1) % n
+          timer = setTimeout(tick, GAP)
           return
         }
-        timer = setTimeout(tick, 55)
+        timer = setTimeout(tick, DEL)
       }
     }
-    timer = setTimeout(tick, 1100)
+    timer = setTimeout(tick, START)
     return () => clearTimeout(timer)
-  }, [phrases])
+  }, [phrases, cycle, videoMs])
 
-  return text
+  return { text, restart: () => setCycle((c) => c + 1) }
 }
 
 export function HeroMountain() {
   const t = useTranslations('hero')
   const phrases = t.raw('phrases') as string[]
-  const typed = useTypedPhrases(phrases)
+  const [videoMs, setVideoMs] = useState(23700)
+  const { text: typed, restart } = useTypedPhrases(phrases, videoMs)
+  const lastVideoTime = useRef(0)
 
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
@@ -95,6 +117,12 @@ export function HeroMountain() {
           loop
           playsInline
           aria-hidden="true"
+          onLoadedMetadata={(e) => setVideoMs(e.currentTarget.duration * 1000)}
+          onTimeUpdate={(e) => {
+            const ct = e.currentTarget.currentTime
+            if (ct < lastVideoTime.current - 0.5) restart()
+            lastVideoTime.current = ct
+          }}
         />
       </div>
 
