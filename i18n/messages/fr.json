@@ -8846,7 +8846,8 @@
       "title": "Le bon profil, à chaque cycle de vie de l’entreprise.",
       "desc": "Aegryn recrute des dirigeants et des experts, et place des profils de transition, quand l’entreprise lance, grandit, se restructure, acquiert ou se transmet.",
       "trust1": "Réponse sous 2 jours ouvrés",
-      "trust2": "Aucun profil transmis sans l’accord du candidat."
+      "trust2": "Aucun profil transmis sans l’accord du candidat.",
+      "imageAlt": "Poignée de main entre deux partenaires, accord scellé"
     },
     "doors": {
       "recruit": "Je recrute",

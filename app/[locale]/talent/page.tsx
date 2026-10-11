@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata }   from 'next'
+import Image               from 'next/image'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowRight, ClipboardList, Radar, UserCheck, Handshake, UserPlus, Clock, Users } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
@@ -53,9 +54,23 @@ export default async function TalentPage({ params }: Props) {
 
   return (
     <>
-      {/* Hero — deux portes */}
-      <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
-        <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
+      {/* Hero — image pleine, gabarit pages cycles */}
+      <section
+        className="relative overflow-hidden bg-ag-navy pt-36 pb-32 px-6 md:px-12 border-b border-ag-border"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
+        <Image
+          src="/images/talent/hero-handshake.jpg"
+          alt={t('hero.imageAlt')}
+          fill
+          priority
+          fetchPriority="high"
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
+        <div className="relative mx-auto max-w-7xl">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>

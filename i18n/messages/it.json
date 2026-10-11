@@ -8886,7 +8886,8 @@
       "title": "Il profilo giusto, in ogni fase del ciclo di vita dell’impresa.",
       "desc": "Aegryn recluta dirigenti ed esperti e colloca profili di transizione, quando l’impresa nasce, cresce, si ristruttura, acquisisce o si trasmette.",
       "trust1": "Risposta entro 2 giorni lavorativi",
-      "trust2": "Nessun profilo trasmesso senza il consenso del candidato."
+      "trust2": "Nessun profilo trasmesso senza il consenso del candidato.",
+      "imageAlt": "Stretta di mano tra due partner, accordo siglato"
     },
     "doors": {
       "recruit": "Devo reclutare",

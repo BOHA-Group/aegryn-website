@@ -8886,7 +8886,8 @@
       "title": "The right profile, at every stage of the company lifecycle.",
       "desc": "Aegryn recruits executives and experts, and places transition profiles, when the company launches, grows, restructures, acquires or transfers.",
       "trust1": "Reply within 2 business days",
-      "trust2": "No profile shared without the candidate’s consent."
+      "trust2": "No profile shared without the candidate’s consent.",
+      "imageAlt": "Handshake between two partners, deal sealed"
     },
     "doors": {
       "recruit": "I’m hiring",
