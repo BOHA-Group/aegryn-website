@@ -120,8 +120,8 @@ export default function IndustriesPage() {
                     <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-white/40 mb-1.5 group-hover:text-ag-apex/60 transition-colors">
                       {t('sectorCount', { count: cl.sectors.length })}
                     </p>
-                    <h2 className="font-sans font-bold text-white leading-[1.1] tracking-[-0.02em]"
-                      style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
+                    <h2 className="font-sans font-bold text-white leading-[1.15] tracking-[-0.02em]"
+                      style={{ fontSize: 'clamp(16px,1.6vw,22px)' }}>
                       {cl.cluster}
                     </h2>
                   </div>
