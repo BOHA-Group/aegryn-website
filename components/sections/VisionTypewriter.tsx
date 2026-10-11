@@ -47,8 +47,8 @@ export function VisionTypewriter({ bold, text }: { bold: string; text: string })
   return (
     <p
       ref={ref}
-      className="relative font-sans font-normal text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
-      style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}
+      className="relative font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
+      style={{ fontSize: 'clamp(19px,2vw,26px)' }}
     >
       <span aria-hidden="true" className="invisible">
         <strong className="font-bold">{bold}</strong>
