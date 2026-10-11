@@ -3,6 +3,8 @@ import type { Metadata }        from 'next'
 import Link                     from 'next/link'
 import { ShieldCheck, AlertTriangle, CheckCircle2, XCircle } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -30,18 +32,20 @@ export default async function SecurityPage({ params }: Props) {
           <div className="flex items-start gap-4 mb-4">
             <ShieldCheck size={32} className="text-ag-apex shrink-0 mt-1" />
             <div>
-              <h1
+              <WaveReveal delay={0.1}><h1
                 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-2"
                 style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
               >
                 {t('label')}
-              </h1>
-              <p className="font-sans text-[16px] text-white/50">{t('subtitle')}</p>
+              </h1></WaveReveal>
+              <ScrollReveal delay={0.25}><p className="font-sans text-[16px] text-white/50">{t('subtitle')}</p></ScrollReveal>
             </div>
           </div>
-          <p className="font-sans text-[13px] text-ag-apex/80 mt-4">
-            Contact : <a href={`mailto:${t('contactEmail')}`} className="underline underline-offset-2">{t('contactEmail')}</a>
-          </p>
+          <ScrollReveal delay={0.35}>
+            <p className="font-sans text-[13px] text-ag-apex/80 mt-4">
+              Contact : <a href={`mailto:${t('contactEmail')}`} className="underline underline-offset-2">{t('contactEmail')}</a>
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 

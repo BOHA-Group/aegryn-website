@@ -3,6 +3,8 @@ import type { Metadata }        from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight }         from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -29,13 +31,13 @@ export default async function TermsUsePage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">
             Aegryn — Legal
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {t('label')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/40">{t('version')}</p>
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/40">{t('version')}</p></ScrollReveal>
         </div>
       </section>
 

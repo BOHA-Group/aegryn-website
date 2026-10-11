@@ -5,6 +5,7 @@ import Link                   from 'next/link'
 import { Plus }               from 'lucide-react'
 import { useTranslations }    from 'next-intl'
 import { FilterPills }        from '@/components/ui/FilterPills'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type FaqItem = {
   id: string
@@ -38,12 +39,12 @@ export default function FaqContent() {
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Help</p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em]"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {t('label')}
-          </h1>
+          </h1></WaveReveal>
         </div>
       </section>
 

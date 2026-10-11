@@ -3,6 +3,8 @@ import type { Metadata }   from 'next'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowRight, ClipboardList, Radar, UserCheck, Handshake, UserPlus, Clock, Users } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -57,19 +59,19 @@ export default async function TalentPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <DoorButtons t={t} dark />
           <p className="mt-8 font-sans text-[13px] text-white/50">
             {t('hero.trust1')} · {t('hero.trust2')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
@@ -93,7 +95,7 @@ export default async function TalentPage({ params }: Props) {
 
       {/* Ce que propose Aegryn — 3 cartes */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-16" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('offers.title')}
           </h2>
@@ -121,12 +123,12 @@ export default async function TalentPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* À chaque cycle de vie */}
       <section className="py-24 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('cycles.title')}
           </h2>
@@ -173,12 +175,12 @@ export default async function TalentPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Où se trouve la demande — données sourcées */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('demand.title')}
           </h2>
@@ -207,12 +209,12 @@ export default async function TalentPage({ params }: Props) {
           <p className="mt-8 text-[13px] text-ag-gray-light italic leading-relaxed max-w-3xl">
             {t('demand.reading')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Notre méthode */}
       <section className="py-24 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-16" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('method.title')}
           </h2>
@@ -244,12 +246,12 @@ export default async function TalentPage({ params }: Props) {
               {t('method.discreet.desc')}
             </p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Insights & Données Marché */}
       <section id="marche" className="py-24 border-b border-ag-border scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('insights.insightsTitle')}
@@ -288,17 +290,17 @@ export default async function TalentPage({ params }: Props) {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Repli — deux portes répétées */}
       <section className="py-24 bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-white tracking-[-0.02em] mb-10" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('doorsBottom.title')}
           </h2>
           <DoorButtons t={t} dark />
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

@@ -4,6 +4,8 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight }         from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { getCgv, roman }        from '@/content/legal/cgv'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -27,14 +29,14 @@ export default async function TermsCgvPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">
             Aegryn — Legal
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {cgv.label}
-          </h1>
-          <p className="font-sans text-[16px] text-white/40 mb-3">{cgv.version}</p>
-          <p className="font-sans text-[13px] text-ag-apex/70 max-w-2xl italic">{cgv.note}</p>
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/40 mb-3">{cgv.version}</p>
+          <p className="font-sans text-[13px] text-ag-apex/70 max-w-2xl italic">{cgv.note}</p></ScrollReveal>
         </div>
       </section>
 

@@ -4,6 +4,8 @@ import { ArrowRight, Briefcase, FileUp, Timer } from 'lucide-react'
 import { Suspense }        from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import TalentCandidateForm from '@/components/forms/TalentCandidateForm'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -35,13 +37,13 @@ export default async function TalentCandidatsPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <a
@@ -49,13 +51,13 @@ export default async function TalentCandidatsPage({ params }: Props) {
             className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('hero.cta')} <ArrowRight size={12} />
-          </a>
+          </a></ScrollReveal>
         </div>
       </section>
 
       {/* Deux parcours */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-12" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('paths.title')}
           </h2>
@@ -83,12 +85,12 @@ export default async function TalentCandidatsPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Types de missions */}
       <section className="py-24 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('types.title')}
           </h2>
@@ -113,12 +115,12 @@ export default async function TalentCandidatsPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Formulaire candidat */}
       <section id="profil" className="py-24 scroll-mt-24">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-3xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('form.title')}
           </h2>
@@ -128,7 +130,7 @@ export default async function TalentCandidatsPage({ params }: Props) {
           <Suspense fallback={null}>
             <TalentCandidateForm />
           </Suspense>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

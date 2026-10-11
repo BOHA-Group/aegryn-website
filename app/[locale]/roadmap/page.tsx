@@ -10,6 +10,8 @@ import {
   Code2, Cpu, Star, Eye,
 } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -71,13 +73,13 @@ export default async function RoadmapPage({ params }: Props) {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6 whitespace-pre-line max-w-2xl"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
             {t('desc')}
           </p>
           <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-xl">
@@ -85,13 +87,13 @@ export default async function RoadmapPage({ params }: Props) {
             <p className="font-sans text-[12px] text-white/80 leading-relaxed">
               {t('swissNote')}
             </p>
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* ── Features grid ── */}
       <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('featuresLabel')}
           </p>
@@ -110,12 +112,12 @@ export default async function RoadmapPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Timeline top 20 ── */}
       <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-5xl mx-auto">
+        <ScrollReveal className="max-w-5xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-16">
             {t('roadmapLabel')}
           </p>
@@ -185,12 +187,12 @@ export default async function RoadmapPage({ params }: Props) {
               })}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA ── */}
       <section className="py-20 px-6 bg-ag-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-6">
               {t('currentLabel')}
@@ -218,7 +220,7 @@ export default async function RoadmapPage({ params }: Props) {
               {t('ctaSecondary')}
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   )

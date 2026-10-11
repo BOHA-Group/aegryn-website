@@ -11,6 +11,8 @@ import { CifsoChart } from './CifsoChart'
 import IndexBenchmarks, { IndexFaq } from './IndexBenchmarks'
 import IndexSubscriberPreview from './IndexSubscriberPreview'
 import WaitlistForm from './WaitlistForm'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Plan = { key: string; name: string; price: string; badge: string; desc: string; features: string[]; cta: string; href: string }
 type Freemium = {
@@ -183,15 +185,15 @@ export default function CifsoValuationIndex() {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.035em] max-w-2xl mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 

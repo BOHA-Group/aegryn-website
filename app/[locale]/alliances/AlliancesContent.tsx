@@ -5,6 +5,8 @@ import { useTranslations }     from 'next-intl'
 import { useSearchParams }     from 'next/navigation'
 import { Link }                from '@/i18n/navigation'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 const METIER_KEYS = ['strategie', 'risques', 'technologie', 'talent', 'ma'] as const
 type MetierKey = typeof METIER_KEYS[number]
@@ -91,15 +93,15 @@ export default function AlliancesContent() {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 

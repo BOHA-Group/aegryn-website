@@ -3,6 +3,8 @@ import type { Metadata }   from 'next'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, CalendarClock, ListChecks, ArrowLeftRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -34,13 +36,13 @@ export default async function TalentTransitionPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -50,13 +52,13 @@ export default async function TalentTransitionPage({ params }: Props) {
             >
               {t('hero.ctaNeed')} <ArrowUpRight size={12} />
             </Link>
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* Situations */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-12" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('situations.title')}
           </h2>
@@ -68,12 +70,12 @@ export default async function TalentTransitionPage({ params }: Props) {
               </li>
             ))}
           </ul>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Format de la mission */}
       <section className="py-24 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-12" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('format.title')}
           </h2>
@@ -95,12 +97,12 @@ export default async function TalentTransitionPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Données de cadrage */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-3" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('data.title')}
           </h2>
@@ -129,12 +131,12 @@ export default async function TalentTransitionPage({ params }: Props) {
           <p className="mt-8 text-[13px] text-ag-gray-light italic leading-relaxed max-w-3xl">
             {t('data.reading')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Repli */}
       <section className="py-24 bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-white tracking-[-0.02em] mb-10" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('bottom.title')}
           </h2>
@@ -146,7 +148,7 @@ export default async function TalentTransitionPage({ params }: Props) {
               {t('hero.ctaNeed')} <ArrowUpRight size={12} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

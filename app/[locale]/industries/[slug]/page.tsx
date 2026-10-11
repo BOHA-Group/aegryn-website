@@ -5,6 +5,8 @@ import Image               from 'next/image'
 import { Link }            from '@/i18n/navigation'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 import { INDUSTRIES, getIndustry, getOtherIndustries, getLocaleText } from '@/data/industries'
 import { ARTICLES }  from '@/data/articles'
 import { IndustryArticles } from '@/components/sections/industries/IndustryArticles'
@@ -77,24 +79,27 @@ export default async function IndustryDetailPage({ params }: Props) {
           </Link>
 
           {/* Métriques clés en ligne */}
-          <div className="flex flex-wrap gap-6 mt-2">
+          <ScrollReveal y={8} className="flex flex-wrap gap-6 mt-2" staggerChildren>
             {ind.keyMetrics.map((m, i) => (
               <div key={i} className="flex flex-col gap-0.5">
                 <span className="font-mono font-bold text-ag-apex" style={{ fontSize: 'clamp(18px,2vw,26px)' }}>{m.value}</span>
                 <span className="font-sans text-[11px] text-white/40 max-w-[180px] leading-snug">{getLocaleText(m.label, locale)}</span>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
 
           {/* Titre */}
-          <h1
-            className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
-            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
-          >
-            {getLocaleText(ind.name, locale)}
-          </h1>
+          <WaveReveal delay={0.1}>
+            <h1
+              className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
+              style={{ fontSize: 'clamp(36px,5vw,72px)' }}
+            >
+              {getLocaleText(ind.name, locale)}
+            </h1>
+          </WaveReveal>
 
           {/* CTAs */}
+          <ScrollReveal delay={0.3}>
           <div className="flex flex-wrap gap-3 mt-2">
             <Link href="/grade"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
@@ -105,6 +110,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               {t('contactCta')}
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -112,7 +118,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           VISION
       ════════════════════════════════════════════════════════ */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-3">
               {t('readingLabel')}
@@ -125,14 +131,14 @@ export default async function IndustryDetailPage({ params }: Props) {
               </p>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ════════════════════════════════════════════════════════
           SECTEURS — cartes avec image (format carte industrie)
       ════════════════════════════════════════════════════════ */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             {t('sectorsLabel')}
           </p>
@@ -183,14 +189,14 @@ export default async function IndustryDetailPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ════════════════════════════════════════════════════════
           EXPERTISES — 2 colonnes
       ════════════════════════════════════════════════════════ */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             {t('expertiseLabel')}
           </p>
@@ -205,14 +211,14 @@ export default async function IndustryDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ════════════════════════════════════════════════════════
           SEGMENTS & PROBLÉMATIQUES — avec storytelling persona
       ════════════════════════════════════════════════════════ */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-2">
             {t('segmentsLabel')}
           </p>
@@ -248,7 +254,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ════════════════════════════════════════════════════════
@@ -260,7 +266,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           CTA CERTIFICATION
       ════════════════════════════════════════════════════════ */}
       <section className="bg-ag-navy border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex/70 mb-3">
               {t('ctaKicker')}
@@ -280,14 +286,14 @@ export default async function IndustryDetailPage({ params }: Props) {
               {t('contactCta')}
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ════════════════════════════════════════════════════════
           EXPLORE OTHER INDUSTRIES — compact, évite le scroll up
       ════════════════════════════════════════════════════════ */}
       <section className="py-10 px-6 md:px-12 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[9px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
             {t('exploreLabel')}
           </p>
@@ -314,7 +320,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               </Link>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

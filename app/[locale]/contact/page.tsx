@@ -5,6 +5,8 @@ import ContactForm from '@/components/contact/ContactForm'
 import { AdvisoryActionForm } from '@/components/advisory/AdvisoryActionForm'
 import { getAction, type Metier, type ActionSlug } from '@/content/advisory/actions'
 import { getCycleAction } from '@/content/franchir/actions'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 const BASE = 'https://aegryn.com'
 const CONTACT_SLUG: Record<string, string> = {
@@ -72,15 +74,15 @@ export default async function ContactPage({ params, searchParams }: Props) {
           <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex-ink mb-6">
             Contact
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold tracking-tighter text-ag-black max-w-xl"
             style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {actionDef ? `${actionDef.label}.` : t('hero.title')}
-          </h1>
-          <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="mt-4 text-sm text-ag-gray max-w-md leading-relaxed">
             {actionDef ? actionDef.question : t('hero.desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
@@ -149,7 +151,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
 
       {/* FAQ */}
       <section className="border-t border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 py-20">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
             {t('faq.label')}
           </p>
@@ -165,7 +167,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

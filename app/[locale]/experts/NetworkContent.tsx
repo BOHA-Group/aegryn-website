@@ -10,6 +10,8 @@ import {
 import PartnersSection from '@/components/sections/PartnersSection'
 import { PARTNER_LOGOS } from '@/components/sections/PartnersCarousel'
 import { GridFillers } from '@/components/ui/GridFillers'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
 type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma' | 'execsearch'
@@ -187,13 +189,13 @@ export default function NetworkContent() {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-2xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-6">
@@ -209,7 +211,7 @@ export default function NetworkContent() {
               <Globe size={16} className="text-ag-apex-ink" />
               <span className="font-sans text-[13px] text-ag-gray">{t('hero.stat3')}</span>
             </div>
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 

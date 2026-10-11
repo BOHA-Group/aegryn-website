@@ -5,6 +5,8 @@ import { ArrowUpRight, Check, Shield, Info } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import AcquisitionRoadmap from '@/components/sections/AcquisitionRoadmap'
 import { GridFillers } from '@/components/ui/GridFillers'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -32,13 +34,13 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-10 leading-relaxed">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-10 leading-relaxed">
             {t('desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -57,13 +59,13 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           </div>
           <p className="font-sans text-[15px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed border-t border-white/10 pt-8">
             {t('advisorNote')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
       {/* ── Expertises transactionnelles ── */}
       <section className="py-24 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('experts.label')}
           </p>
@@ -96,12 +98,12 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── For whom ── */}
       <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
             {t('forWhom.label')}
           </p>
@@ -122,12 +124,12 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Process ── */}
       <section className="py-24 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('offer.label')}
           </p>
@@ -141,12 +143,12 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             ))}
             <GridFillers count={steps.length} cols={{ sm: 2, lg: 5 }} />
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Differentiators ── */}
       <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
           </p>
@@ -161,7 +163,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Roadmap services ── */}
@@ -176,7 +178,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
 
       {/* ── Fees ── */}
       <section className="py-20 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
               {t('fees.label')}
@@ -201,12 +203,12 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA ── */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-lg mb-3"
@@ -228,7 +230,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           >
             {t('cta.btn')} <ArrowUpRight size={13} />
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

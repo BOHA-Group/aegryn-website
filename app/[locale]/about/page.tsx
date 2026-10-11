@@ -7,6 +7,7 @@ import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
 import { SegmentsSection }     from '@/components/sections/SegmentsSection'
 import type { Metadata } from 'next'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
 
 const BASE = 'https://aegryn.com'
 const ABOUT_SLUG: Record<string, string> = {
@@ -60,7 +61,7 @@ export default function AboutPage() {
 
       {/* Name — Etymology */}
       <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {t('name.label')}
           </p>
@@ -90,7 +91,7 @@ export default function AboutPage() {
               {t('name.formerly')}
             </p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       <VisionMissionBlock
@@ -109,7 +110,7 @@ export default function AboutPage() {
         }
         dnaContent={
           <section className="border-b border-ag-border bg-ag-off-white/80">
-            <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
+            <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
                 / {t('dna.label')}
               </p>
@@ -128,14 +129,14 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           </section>
         }
       />
 
       {/* Contribution */}
       <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {t('contribution.label')}
           </p>
@@ -165,12 +166,12 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Pourquoi Aegryn */}
       <section className="border-b border-ag-border bg-ag-white">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {ta('whyAegryn.label')}
           </p>
@@ -213,12 +214,12 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Founder */}
       <section id="fondateur" className="border-b border-ag-border" style={{ scrollMarginTop: '80px' }}>
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {ta('founder.label')}
           </p>
@@ -249,12 +250,12 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Travailler avec Aegryn — 5 disciplines */}
       <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {ta('workWith.label')}
           </p>
@@ -290,12 +291,12 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Swiss */}
       <section className="bg-ag-navy py-28 px-6 md:px-12 border-b border-ag-navy">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
@@ -318,7 +319,7 @@ export default function AboutPage() {
               {t('swiss.desc')}
             </p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Segments clients */}
@@ -327,7 +328,7 @@ export default function AboutPage() {
 
       {/* What's next */}
       <section className="border-b border-ag-border bg-ag-off-white/60">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
             / {t('whatsnext.label')}
           </p>
@@ -350,12 +351,12 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA tripartite */}
       <section className="border-b border-ag-border">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-24">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-16">
             / {t('cta.label')}
           </p>
@@ -379,7 +380,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

@@ -3,6 +3,8 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Scale, Calculator, ShieldCheck, Code2, Users } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import PartnersSection from '@/components/sections/PartnersSection'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -43,15 +45,15 @@ export default async function GradePartnersPage() {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
-          <h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
+          <WaveReveal delay={0.1}><h1 className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
             {t('title')}
-          </h1>
-          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('intro1')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light max-w-xl">
             {t('intro2')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
@@ -66,7 +68,7 @@ export default async function GradePartnersPage() {
 
       {/* 4 colonnes experts */}
       <section className="py-20 px-6 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {PARTNER_TYPES.map((p) => {
             const Icon = p.icon
             return (
@@ -82,12 +84,12 @@ export default async function GradePartnersPage() {
               </div>
             )
           })}
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Tableau dimensions × profils × vérifications */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('dims.label')}</p>
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-12 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('dims.title')}
@@ -106,12 +108,12 @@ export default async function GradePartnersPage() {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Rôles transverses + indépendance */}
       <section className="py-20 px-6 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('transverse.label')}</p>
             <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
@@ -139,12 +141,12 @@ export default async function GradePartnersPage() {
               ))}
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA partenaires potentiels */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('ctaLabel')}</p>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
@@ -173,7 +175,7 @@ export default async function GradePartnersPage() {
               ))}
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

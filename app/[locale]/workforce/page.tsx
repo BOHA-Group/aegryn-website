@@ -6,6 +6,8 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import type { Metadata } from 'next'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 /* Articles du blog pertinents pour cette page, curés manuellement */
 const RELATED_ARTICLE_SLUGS = [
@@ -78,13 +80,13 @@ export default async function WorkforcePage({ params }: Props) {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5 whitespace-pre-line"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -100,13 +102,13 @@ export default async function WorkforcePage({ params }: Props) {
             >
               {t('hero.cta2')}
             </Link>
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* ── Chiffres 2025-2026 ─────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('marketData.label')}
           </p>
@@ -137,12 +139,12 @@ export default async function WorkforcePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Sur 100 collaborateurs ─────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('hundredWorkers.label')}
           </p>
@@ -173,12 +175,12 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
             {t('hundredWorkers.source')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Compétences en hausse / en recul ────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('skillsRanking.label')}
           </p>
@@ -222,12 +224,12 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
             {t('skillsRanking.source')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Par nature de poste ──────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('byRole.label')}
           </p>
@@ -255,12 +257,12 @@ export default async function WorkforcePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Par secteur ──────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('industries.label')}
           </p>
@@ -288,12 +290,12 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-ag-gray-light">
             {t('industries.sourceLine')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CIFSO ────────────────────────────────────────────────────── */}
       <section className="bg-ag-navy border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex/70 mb-4">
             {t('cifso.label')}
           </p>
@@ -320,12 +322,12 @@ export default async function WorkforcePage({ params }: Props) {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Pour qui ces données comptent ───────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('forWho.label')}
           </p>
@@ -347,12 +349,12 @@ export default async function WorkforcePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Sources ──────────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('sources.label')}
           </p>
@@ -365,12 +367,12 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
             {t('sources.desc')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Articles liés ────────────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
             {t('articles.label')}
           </p>
@@ -419,12 +421,12 @@ export default async function WorkforcePage({ params }: Props) {
               </Link>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA final ────────────────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+        <ScrollReveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
           <div className="bg-ag-off-white p-10 flex flex-col gap-4">
             <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.employer.title')}
@@ -453,7 +455,7 @@ export default async function WorkforcePage({ params }: Props) {
               {t('cta.talent.cta')} <ArrowUpRight size={12} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

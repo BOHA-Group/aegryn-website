@@ -1,6 +1,8 @@
 import type { Metadata }   from 'next'
 import { Link } from '@/i18n/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -294,13 +296,13 @@ export default async function GlossairePage({ params }: Props) {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {ui.kicker}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-5"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {ui.title}
-          </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-8">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/55 max-w-xl mb-8">
             {ui.sub}
           </p>
 
@@ -315,13 +317,13 @@ export default async function GlossairePage({ params }: Props) {
                 {l}
               </a>
             ))}
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* Terms */}
       <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto space-y-16">
+        <ScrollReveal className="max-w-4xl mx-auto space-y-16">
           {TERMS.map(group => (
             <div key={group.letter} id={`letter-${group.letter}`}>
               <div className="flex items-center gap-4 mb-8">
@@ -344,12 +346,12 @@ export default async function GlossairePage({ params }: Props) {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA */}
       <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <ScrollReveal className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">Aegryn Blog</p>
             <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em]">
@@ -362,7 +364,7 @@ export default async function GlossairePage({ params }: Props) {
           >
             {ui.ctaButton}
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   )

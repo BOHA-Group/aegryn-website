@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 import { AdvisoryDiagnostic } from '@/components/advisory/AdvisoryDiagnostic'
 import { FRANCHIR_UI, METIER_HREF, METIER_LABELS, CYCLE_IMAGES } from '@/content/franchir/ui'
 import { getCycleAction } from '@/content/franchir/actions'
@@ -95,38 +97,46 @@ export function CyclePage({ content: c, locale }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
-            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            {c.eyebrow}
-          </p>
-          <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
-          >
-            {c.h1}
-          </h1>
-          <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50">
-            {ui.whatWeDo}&nbsp;&nbsp;·&nbsp;&nbsp;
-            <span className="text-ag-apex">{c.verbs.join(' · ')}</span>
-          </p>
+          <ScrollReveal y={8}>
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+              <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+              {c.eyebrow}
+            </p>
+          </ScrollReveal>
+          <WaveReveal delay={0.1}>
+            <h1
+              className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
+              style={{ fontSize: 'clamp(36px,5vw,72px)' }}
+            >
+              {c.h1}
+            </h1>
+          </WaveReveal>
+          <ScrollReveal delay={0.25}>
+            <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.35}>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50">
+              {ui.whatWeDo}&nbsp;&nbsp;·&nbsp;&nbsp;
+              <span className="text-ag-apex">{c.verbs.join(' · ')}</span>
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── 2. Constat chiffré et sourcé ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL} mb-8`}>{ui.finding}</p>
           <div className="rounded-2xl bg-ag-off-white border border-ag-border p-8 md:p-10 max-w-4xl">
             <p className="font-sans font-semibold text-[18px] md:text-[20px] text-ag-black leading-[1.55] tracking-[-0.01em] mb-6">{c.constat.text}</p>
             <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-ag-gray-light">{c.constat.source}</p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 3. Situations : décision, métier, livrable ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.situationsTag}</p>
             <h2 className={`${H2}`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.situations.title}</h2>
@@ -172,12 +182,12 @@ export function CyclePage({ content: c, locale }: Props) {
               </article>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 4. Métiers mobilisés à ce cycle ── */}
       <section className="py-20 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL} mb-8`}>{ui.metiersTitle}</p>
           <div className="flex flex-wrap gap-3 mb-4">
             {c.metiers.mobilized.map(m => (
@@ -196,12 +206,12 @@ export function CyclePage({ content: c, locale }: Props) {
           <p className="font-sans text-[12px] text-ag-gray-light">
             ● {ui.mobilized}&nbsp;&nbsp;·&nbsp;&nbsp;○ {ui.available}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 5 + 6. Selon la taille · Selon le secteur ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
           <div>
             <p className={`${LABEL} mb-8`}>{c.bySize.title}</p>
             <div className="flex flex-col gap-4">
@@ -224,12 +234,12 @@ export function CyclePage({ content: c, locale }: Props) {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 7 + 8. Scénario illustratif · limites de l'IA ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
           <div className={`${CARD} p-8 md:p-10`}>
             <p className={`${LABEL} mb-4`}>{c.scenario.tag}</p>
             <p className="font-sans text-[15px] text-ag-black leading-[1.8]">{c.scenario.text}</p>
@@ -238,7 +248,7 @@ export function CyclePage({ content: c, locale }: Props) {
             <p className={`${LABEL_G} mb-4`}>{c.ai.title}</p>
             <p className="font-sans text-[15px] text-white/80 leading-[1.8]">{c.ai.text}</p>
           </div>
-        </div>
+        </ScrollReveal>
         {c.mandate && (
           <div className="max-w-7xl mx-auto mt-6">
             <p className="rounded-2xl border border-ag-border bg-ag-off-white px-6 py-4 font-sans text-[12.5px] text-ag-gray leading-relaxed">
@@ -250,7 +260,7 @@ export function CyclePage({ content: c, locale }: Props) {
 
       {/* ── 9. Auto-diagnostic ── */}
       <section id="diagnostic" className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border scroll-mt-24">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <AdvisoryDiagnostic
             title={c.diagnostic.title}
             intro={c.diagnostic.intro}
@@ -261,12 +271,12 @@ export function CyclePage({ content: c, locale }: Props) {
             ctaHref={echangeHref}
             locale={locale}
           />
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 10. Cycle suivant ── */}
       <section className="py-20 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL} mb-6`}>{c.nextLabel}</p>
           <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
             {c.next.map(n => (
@@ -277,12 +287,12 @@ export function CyclePage({ content: c, locale }: Props) {
               </Link>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── 11. CTAs ── */}
       <section className="bg-ag-navy py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
           <h2 className="font-sans font-bold text-white tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {echangeDef?.label ?? ui.ctaExchange}.
@@ -295,7 +305,7 @@ export function CyclePage({ content: c, locale }: Props) {
               <Link href={L(`${contactPath}?cycle=${c.slug}&action=urgence`)} className={BTN_WARN}>{urgenceDef.label}</Link>
             )}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   )

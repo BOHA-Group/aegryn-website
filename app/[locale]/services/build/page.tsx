@@ -4,6 +4,8 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
 import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
 import { PlatformArchitectureDiagram } from '@/components/sections/PlatformArchitectureDiagram'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 const BASE = 'https://aegryn.com'
 
@@ -64,21 +66,21 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
       {/* ── Section 1b : Conviction Built to Last ──────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6">
             {t('builtToLast.label')}
           </p>
@@ -96,12 +98,12 @@ export default async function BuildServicePage({ params }: Props) {
               {t('builtToLast.p2')}
             </p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1c : 3 formats de mission ──────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('formatsSection.label')}
           </p>
@@ -146,12 +148,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1d : Cas d'usage rapides ───────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('useCasesSection.label')}
           </p>
@@ -168,12 +170,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1e : Why Sovereign Software ─────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('whySection.label')}
           </p>
@@ -198,12 +200,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1c : 10 Domaines logiciels ───────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('domainsSection.label')}
           </p>
@@ -230,12 +232,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1c : AEGRYN Enterprise Intelligence Platform ──────── */}
       <section className="border-b border-ag-border bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-4">
             {t('platformSection.label')}
           </p>
@@ -258,12 +260,12 @@ export default async function BuildServicePage({ params }: Props) {
             flowLabel={t('platformSection.flowLabel')}
             govTooltipLabel={t('platformSection.govTooltipLabel')}
           />
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('sovereigntySection.label')}
           </p>
@@ -284,12 +286,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 2 : La différence Aegryn ─────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('difference.label')}
           </p>
@@ -308,12 +310,12 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 3 : Comparaison marché ───────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('marketComparison.label')}
           </p>
@@ -343,12 +345,12 @@ export default async function BuildServicePage({ params }: Props) {
               </tbody>
             </table>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 4 : Bénéfices certification ──────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('certificationBenefits.label')}
           </p>
@@ -366,7 +368,7 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 5b : Tech Stack ──────────────────────────────────── */}
@@ -374,7 +376,7 @@ export default async function BuildServicePage({ params }: Props) {
 
       {/* ── Section 6 : Process ──────────────────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('process.label')}
           </p>
@@ -417,12 +419,12 @@ export default async function BuildServicePage({ params }: Props) {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 7 : Maintenance ──────────────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('maintenance.label')}
           </p>
@@ -450,12 +452,12 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
             {t('maintenance.note')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 8 : Honoraires ───────────────────────────────────── */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('fees.label')}
           </p>
@@ -477,12 +479,12 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
             {t('fees.coInvestNote')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section : Construire pour transmettre ────────────────────── */}
       <section className="border-b border-ag-border bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-6">
             {t('transmissionSection.label')}
           </p>
@@ -501,12 +503,12 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('transmissionSection.cta')} →
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section : Note acheteurs institutionnels ─────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
             {t('buyerNoteSection.label')}
           </p>
@@ -519,12 +521,12 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex pl-4">
             {t('buyerNoteSection.desc')}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Exit Banner ──────────────────────────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
           <p className="font-sans text-[13px] text-ag-gray leading-relaxed flex-1">
             {t('exitBanner.text')}
           </p>
@@ -534,12 +536,12 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('exitBanner.cta')} →
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Section 9 : CTA final ────────────────────────────────────── */}
       <section className="bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-center flex flex-col items-center gap-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 text-center flex flex-col items-center gap-8">
           <h2
             className="font-sans font-bold text-white tracking-[-0.02em] leading-tight"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -563,7 +565,7 @@ export default async function BuildServicePage({ params }: Props) {
               {t('cta.secondary')}
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

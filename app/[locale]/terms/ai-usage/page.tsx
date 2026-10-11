@@ -2,6 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -23,13 +25,13 @@ export default async function AiUsagePage({ params }: Props) {
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Legal</p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
           >
             {t('label')}
-          </h1>
-          <p className="font-sans text-[16px] text-white/40">{t('version')}</p>
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/40">{t('version')}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             {(['fr','en','de','es','it','nl'] as const).map(lang => (
               <Link
@@ -44,13 +46,13 @@ export default async function AiUsagePage({ params }: Props) {
                 {lang.toUpperCase()}
               </Link>
             ))}
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <ScrollReveal className="max-w-4xl mx-auto space-y-12">
 
           <div className="rounded-lg border border-ag-apex/20 bg-ag-apex/5 px-6 py-4">
             <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-1">EU AI Act — Article 50</p>
@@ -117,7 +119,7 @@ export default async function AiUsagePage({ params }: Props) {
             ))}
           </div>
 
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   )

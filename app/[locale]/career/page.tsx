@@ -4,6 +4,8 @@ import Image               from 'next/image'
 import { ArrowUpRight }    from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import type { Metadata }   from 'next'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -42,21 +44,21 @@ export default async function CareerPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('hero.desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 
       {/* About Aegryn */}
       <section className="border-b border-ag-border py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
@@ -78,12 +80,12 @@ export default async function CareerPage({ params }: Props) {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Our crafts */}
       <section className="border-b border-ag-border py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-4">
             {t('crafts.label')}
           </p>
@@ -126,12 +128,12 @@ export default async function CareerPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Values */}
       <section className="border-b border-ag-border py-24 bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-4">
             {t('values.label')}
           </p>
@@ -153,12 +155,12 @@ export default async function CareerPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* No open positions — spontaneous application */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+        <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
               {t('openings.label')}
@@ -189,7 +191,7 @@ export default async function CareerPage({ params }: Props) {
               <ArrowUpRight size={14} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

@@ -4,6 +4,8 @@ import { getTranslations }       from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import IndustriesSection         from '@/components/sections/IndustriesSection'
 import type { Metadata }         from 'next'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -53,15 +55,15 @@ export default async function AdvisoryPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             / {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title').split('\n').map((line, i, arr) => (
               <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
             ))}
-          </h1>
-          <div className="max-w-xl mb-10 space-y-4">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <div className="max-w-xl mb-10 space-y-4">
             <p className="text-[16px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
             <p className="text-[15px] text-white/50 leading-relaxed">{t('hero.desc2')}</p>
           </div>
@@ -89,13 +91,13 @@ export default async function AdvisoryPage({ params }: Props) {
             >
               {t('hero.cta3')} <ArrowUpRight size={14} />
             </Link>
-          </div>
+          </div></ScrollReveal>
         </div>
       </section>
 
       {/* ── Who is it for (5 profiles) ── */}
       <section className="border-b border-ag-border bg-ag-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center border-b border-ag-border py-4">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('whoFor.label')}
@@ -117,12 +119,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC A — Stratégie d'entreprise & Board Advisory ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center border-b border-ag-border pb-4 mb-14">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('strategy.label')}
@@ -142,12 +144,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC A2 — Risque & Conformité ── */}
       <section className="border-b border-ag-border bg-ag-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center border-b border-ag-border pb-4 mb-14">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('riskCompliance.label')}
@@ -167,12 +169,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC B — Advisory Tech ── */}
       <section className="border-b border-ag-border bg-ag-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center border-b border-ag-border pb-4 mb-12">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('experts.label')}
@@ -204,12 +206,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Use Cases accordéon ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-14">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-14">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             / {t('experts.useCases.label')}
           </p>
@@ -230,12 +232,12 @@ export default async function AdvisoryPage({ params }: Props) {
               </details>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Mid CTA ── */}
       <section className="border-b border-ag-border bg-ag-navy/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="font-sans font-bold text-ag-navy text-[18px] tracking-[-0.01em]">
             {t('midCta.title')}
           </p>
@@ -245,12 +247,12 @@ export default async function AdvisoryPage({ params }: Props) {
           >
             {t('midCta.cta')} <ArrowUpRight size={14} />
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC C — Advisory M&A ── */}
       <section className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="flex items-center border-b border-ag-border pb-4 mb-14">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('ma.label')}
@@ -276,12 +278,12 @@ export default async function AdvisoryPage({ params }: Props) {
               {t('ma.fundsLink')} ↗
             </Link>
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC D — Réseau d'experts ── */}
       <section className="border-b border-ag-border bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
             / {t('network.label')}
           </p>
@@ -308,12 +310,12 @@ export default async function AdvisoryPage({ params }: Props) {
               {t('network.cta2')} <ArrowUpRight size={14} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BLOC E — Industries (accordéon) ── */}
       <section className="border-b border-ag-border bg-ag-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16">
           <div className="flex items-center border-b border-ag-border pb-4 mb-10">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
               / {t('industries.label')}
@@ -323,12 +325,12 @@ export default async function AdvisoryPage({ params }: Props) {
             {t('industries.intro')}
           </p>
           <IndustriesSection />
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Approach CTA ── */}
       <section className="bg-ag-navy border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-20">
+        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
             / {t('approach.label')}
           </p>
@@ -351,7 +353,7 @@ export default async function AdvisoryPage({ params }: Props) {
               {t('approach.cta')} <ArrowUpRight size={14} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

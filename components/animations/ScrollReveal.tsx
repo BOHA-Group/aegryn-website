@@ -30,19 +30,24 @@ export function ScrollReveal({
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const targets = staggerChildren ? Array.from(el.children) : [el]
+
+    /* Amplitude adaptative : le y demandé est ramené à ~60% sous 768px
+       pour garder le mouvement proportionné à l'écran. */
+    const amp = window.innerWidth < 768 ? Math.round(y * 0.6) : y
 
     const ctx = gsap.context(() => {
       gsap.from(targets, {
         opacity: 0,
-        y,
+        y: amp,
         duration: 0.7,
         delay,
         stagger: stagger || (staggerChildren ? 0.08 : 0),
         ease: 'expo.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 80%',
+          start: 'top 82%',
           once: true,
         },
       })

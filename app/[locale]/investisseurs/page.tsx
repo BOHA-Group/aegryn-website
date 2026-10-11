@@ -4,6 +4,8 @@ import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, AlertTriangle, BarChart2, TrendingUp } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import PartnersSection from '@/components/sections/PartnersSection'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -43,13 +45,13 @@ export default async function InvestisseursPage({ params }: Props) {
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
             {t('eyebrow')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-ag-black leading-[1.05] tracking-[-0.03em] max-w-2xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('title')}
-          </h1>
-          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
             {t('line1')}
           </p>
           <p className="font-sans text-[13px] text-ag-gray-light max-w-xl mb-8">
@@ -60,7 +62,7 @@ export default async function InvestisseursPage({ params }: Props) {
             className="rounded-lg inline-flex items-center gap-2 bg-ag-black text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-navy transition-colors"
           >
             {t('cta')} <ArrowUpRight size={13} />
-          </Link>
+          </Link></ScrollReveal>
         </div>
       </section>
 
@@ -75,7 +77,7 @@ export default async function InvestisseursPage({ params }: Props) {
 
       {/* Section 1 — Le problème */}
       <section className="py-24 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('problems.label')}
           </p>
@@ -92,12 +94,12 @@ export default async function InvestisseursPage({ params }: Props) {
               )
             })}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Section 2 — Nos 3 rôles */}
       <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
             {t('roles.label')}
           </p>
@@ -122,12 +124,12 @@ export default async function InvestisseursPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Section 3 — Banques & financiers (apporteurs d'affaires) */}
       <section className="py-24 px-6 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
               {t('banks.label')}
@@ -150,12 +152,12 @@ export default async function InvestisseursPage({ params }: Props) {
               {t('banks.cta')} <ArrowUpRight size={13} />
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Section 4 — Modèle d'engagement */}
       <section className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
               {t('alignment.label')}
@@ -181,12 +183,12 @@ export default async function InvestisseursPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA final */}
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-3">
               {t('final.label')}
@@ -204,7 +206,7 @@ export default async function InvestisseursPage({ params }: Props) {
           >
             {t('final.cta')} <ArrowUpRight size={13} />
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
     </main>

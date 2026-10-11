@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X, Phone } from 'lucide-react'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 import {
   EXPERTISE_TAXONOMY,
   getCategoryIdsByDimension,
@@ -743,15 +745,15 @@ export default function ExpertsContent() {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl">
             {t('hero.desc')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 

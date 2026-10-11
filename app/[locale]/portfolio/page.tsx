@@ -3,6 +3,8 @@ import type { Metadata }           from 'next'
 import { Info }                    from 'lucide-react'
 import { AssetsGrid }              from '@/components/sections/assets/AssetsGrid'
 import { generateAegrynMetadata }  from '@/lib/seo'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -24,15 +26,15 @@ export default async function PortfolioPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             {t('label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('title')}
-          </h1>
-          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl">
             {t('sub')}
-          </p>
+          </p></ScrollReveal>
         </div>
       </section>
 

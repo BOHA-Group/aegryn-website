@@ -5,6 +5,8 @@ import { ArrowUpRight, ClipboardList, Radar, UserCheck, Handshake } from 'lucide
 import { Suspense }        from 'react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import TalentHiringForm    from '@/components/forms/TalentHiringForm'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -37,13 +39,13 @@ export default async function TalentEntreprisesPage({ params }: Props) {
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
           </p>
-          <h1
+          <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {t('hero.title')}
-          </h1>
-          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <a
@@ -51,13 +53,13 @@ export default async function TalentEntreprisesPage({ params }: Props) {
             className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
           >
             {t('hero.cta')} <ArrowUpRight size={12} />
-          </a>
+          </a></ScrollReveal>
         </div>
       </section>
 
       {/* Méthode en 4 étapes */}
       <section className="py-24 border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-16" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {tm('method.title')}
           </h2>
@@ -89,12 +91,12 @@ export default async function TalentEntreprisesPage({ params }: Props) {
               {tm('method.discreet.desc')}
             </p>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Ce qu'un outil d'IA ne fera pas */}
       <section className="py-24 border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-8" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('ai.title')}
@@ -123,12 +125,12 @@ export default async function TalentEntreprisesPage({ params }: Props) {
               ))}
             </ol>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Formulaire Présenter mon besoin */}
       <section id="besoin" className="py-24 scroll-mt-24">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
+        <ScrollReveal className="max-w-3xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('form.title')}
           </h2>
@@ -141,12 +143,12 @@ export default async function TalentEntreprisesPage({ params }: Props) {
           <Suspense fallback={null}>
             <TalentHiringForm />
           </Suspense>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Repli transition */}
       <section className="py-20 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div>
             <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.01em] mb-2">
               {t('transitionTeaser.title')}
@@ -161,7 +163,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
           >
             {t('transitionTeaser.cta')} <ArrowUpRight size={12} />
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
     </>
   )

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
@@ -90,27 +92,35 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
-            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            {c.eyebrow}
-          </p>
-          <h1
-            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
-            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
-          >
-            {c.h1}
-          </h1>
-          <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
-          <div className="flex flex-wrap gap-3">
-            {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
-            {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
-          </div>
+          <ScrollReveal y={8}>
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+              <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+              {c.eyebrow}
+            </p>
+          </ScrollReveal>
+          <WaveReveal delay={0.1}>
+            <h1
+              className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
+              style={{ fontSize: 'clamp(36px,5vw,72px)' }}
+            >
+              {c.h1}
+            </h1>
+          </WaveReveal>
+          <ScrollReveal delay={0.25}>
+            <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.35}>
+            <div className="flex flex-wrap gap-3">
+              {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
+              {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── Constat ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL} mb-8`}>{c.observation.title}</p>
           <div className="grid md:grid-cols-3 gap-6 mb-14">
             {c.observation.cards.map((s, i) => (
@@ -135,12 +145,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               <p className="font-sans font-semibold text-[18px] text-ag-black leading-[1.5] tracking-[-0.01em]">{c.observation.change}</p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Ce que vous obtenez ── */}
       <section className="bg-ag-navy py-16 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL_G} mb-10`}>{c.outcomes.title}</p>
           <div className="grid md:grid-cols-3 gap-6">
             {c.outcomes.items.map((o, i) => (
@@ -150,12 +160,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Situations ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.sixSituations}</p>
             <h2 className={`${H2}`} style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{c.situations.title}</h2>
@@ -208,12 +218,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               </article>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Services + Cadre ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.5fr] gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.5fr] gap-12">
           <div>
             <p className={`${LABEL} mb-8`}>{c.services.title}</p>
             <ul className="flex flex-col gap-3">
@@ -242,12 +252,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               <p className="font-sans text-[14px] text-ag-black leading-relaxed">{c.framework.deliverable}</p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Taille + Secteur ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
           <div>
             <p className={`${LABEL} mb-8`}>{c.bySize.title}</p>
             <div className="flex flex-col gap-4">
@@ -270,12 +280,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Scénario + IA ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
           <div className={`${CARD} p-8 md:p-10`}>
             <p className={`${LABEL} mb-4`}>{c.scenario.tag}</p>
             <p className="font-sans text-[15px] text-ag-black leading-[1.8]">{c.scenario.text}</p>
@@ -285,13 +295,13 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             <p className="font-sans text-[15px] text-white/80 leading-[1.8]">{c.ai.text}</p>
             {c.ai.legal && <p className="font-sans text-[12px] text-white/50 leading-relaxed mt-5 pt-5 border-t border-white/10">{c.ai.legal}</p>}
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Retour d'expérience d'opérateur / complément ── */}
       {(c.operator || c.complement) && (
         <section className="pb-24 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+          <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
             {c.operator && (
               <div className={`${CARD} p-8`}>
                 <p className={`${LABEL} mb-3`}>{c.operator.title}</p>
@@ -304,13 +314,13 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                 <p className="font-sans text-[14px] text-ag-gray leading-relaxed">{c.complement.text}</p>
               </div>
             )}
-          </div>
+          </ScrollReveal>
         </section>
       )}
 
       {/* ── Auto-diagnostic ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto">
+        <ScrollReveal className="max-w-7xl mx-auto">
           <AdvisoryDiagnostic
             title={c.diagnostic.title}
             intro={c.diagnostic.intro}
@@ -321,12 +331,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             ctaHref={contactHref}
             locale={locale}
           />
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Perspectives + périmètre ── */}
       <section className="py-20 px-6 md:px-12 border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
           {c.perspectives.items.length > 0 && (
             <div>
               <p className={`${LABEL} mb-6`}>{c.perspectives.title}</p>
@@ -353,12 +363,12 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA + newsletter ── */}
       <section className="bg-ag-navy py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
+        <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>
             <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
             <h2 className="font-sans font-bold text-white tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{echangeDef?.label}.</h2>
@@ -375,7 +385,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             <p className="font-sans text-[14px] text-white/60 leading-relaxed mb-6">{ui.newsletterBody}</p>
             <NewsletterSubscribeForm locale={locale} />
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   )
