@@ -107,7 +107,7 @@ export default function AboutPage() {
           />
         }
         dnaContent={
-          <section className="border-b border-ag-border bg-ag-off-white/80">
+          <section className="border-b border-ag-border bg-ag-white">
             <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
                 / {t('dna.label')}

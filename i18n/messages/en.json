@@ -916,21 +916,21 @@
       "segments": [
         {
           "t": "Aegryn aims to be the firm that supports leaders end to end",
-          "b": true
+          "bold": true
         },
         {
           "t": ": from decision to realisation, at every stage of the company's life cycle, from launch to handover or takeover.\n\n"
         },
         {
           "t": "We are operators.",
-          "b": true
+          "bold": true
         },
         {
           "t": " We build and operate our own assets, and we run our clients' projects the way an architect runs a construction site: scoping, coordination of contributors, milestones, delivery. What we recommend, we live.\n\n"
         },
         {
           "t": "An integrated firm anchored in Switzerland for its rigour,",
-          "b": true
+          "bold": true
         },
         {
           "t": " Aegryn brings together in a single point of contact the five disciplines required for a company's lasting value: advisory, asset building, navigating the cycles, talent and market knowledge."
