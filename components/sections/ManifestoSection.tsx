@@ -173,9 +173,9 @@ export function ManifestoSection() {
                     {item.title}
                   </h3>
                 </div>
-                <div className="lg:ml-auto lg:w-[460px] lg:shrink-0 md:grid md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
-                  <div className="md:min-h-0 md:overflow-hidden flex items-start gap-4">
-                    <span className="hidden md:inline text-ag-apex-ink mt-1" aria-hidden="true">→</span>
+                <div className="lg:ml-auto lg:w-[460px] lg:shrink-0 md:grid md:grid-rows-[0fr] md:grid-cols-[minmax(0,1fr)] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
+                  <div className="md:min-h-0 md:min-w-0 md:overflow-hidden flex items-start gap-4">
+                    <span className="hidden md:inline text-ag-apex-ink mt-[3px]" aria-hidden="true">→</span>
                     <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 md:delay-100">
                       {item.desc}
                     </p>
