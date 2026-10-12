@@ -253,16 +253,6 @@ export default async function IndustryDetailPage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
-                  {seg.duration && (
-                    <p className="mt-auto pt-3 font-sans text-[12px] font-semibold text-ag-black">
-                      {getLocaleText(seg.duration, locale)}
-                    </p>
-                  )}
-                  {seg.scenario && (
-                    <p className="mt-3 rounded-lg bg-ag-off-white border border-ag-border px-4 py-3 font-sans text-[12px] text-ag-gray leading-relaxed">
-                      {getLocaleText(seg.scenario, locale)}
-                    </p>
-                  )}
                 </div>
               </div>
             ))}

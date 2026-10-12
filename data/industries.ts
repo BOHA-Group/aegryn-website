@@ -37,13 +37,9 @@ export interface IndustryExpertise {
 }
 
 export interface IndustrySegment {
-  label:     LocaleText
-  story:     LocaleText
-  problems:  LocaleText[]
-  /** Ligne « Durée type » affichée sous la liste (optionnel) */
-  duration?: LocaleText
-  /** Encadré « Scénario illustratif » affiché sous la carte (optionnel) */
-  scenario?: LocaleText
+  label:    LocaleText
+  story:    LocaleText
+  problems: LocaleText[]
 }
 
 export interface Industry {
@@ -1616,14 +1612,6 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
           nl: 'De landverantwoordelijke of operationeel directeur werven → functieprofiel en talentpool.',
         },
       ],
-      duration: {
-        fr: 'Durée type : 6 à 12 mois, point hebdomadaire et comité mensuel.',
-        en: 'Typical duration: 6 to 12 months, weekly check-in and monthly committee.',
-        de: 'Typische Dauer: 6 bis 12 Monate, wöchentliches Update und monatlicher Ausschuss.',
-        es: 'Duración típica: 6 a 12 meses, punto semanal y comité mensual.',
-        it: 'Durata tipica: da 6 a 12 mesi, punto settimanale e comitato mensile.',
-        nl: 'Typische duur: 6 tot 12 maanden, wekelijkse update en maandelijks comité.',
-      },
     },
     {
       label: {
@@ -1668,22 +1656,6 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
           nl: 'Na de opening: selectie van de directeur en retentieplan voor de teams → functieprofiel, voorgeselecteerde profielen.',
         },
       ],
-      duration: {
-        fr: 'Durée type : 3 à 9 mois selon l\'ampleur des travaux.',
-        en: 'Typical duration: 3 to 9 months depending on the scale of the works.',
-        de: 'Typische Dauer: 3 bis 9 Monate je nach Umfang der Arbeiten.',
-        es: 'Duración típica: 3 a 9 meses según la envergadura de las obras.',
-        it: 'Durata tipica: da 3 a 9 mesi a seconda dell\'entità dei lavori.',
-        nl: 'Typische duur: 3 tot 9 maanden, afhankelijk van de omvang van de werkzaamheden.',
-      },
-      scenario: {
-        fr: 'Scénario illustratif : un groupe de restauration de 12 M€ rachète un hôtel de 40 chambres. La revue révèle un contrat de gestion avec clause de changement de contrôle et une dépendance à deux responsables. Les conditions de rétention sont ajoutées à l\'accord avant signature ; le planning de rénovation est calé sur la saison creuse.',
-        en: 'Illustrative scenario: a €12M restaurant group acquires a 40-room hotel. The review reveals a management contract with a change-of-control clause and a dependency on two managers. Retention conditions are added to the agreement before signing; the renovation schedule is aligned with the low season.',
-        de: 'Illustratives Szenario: eine Restaurantgruppe mit 12 Mio. EUR übernimmt ein Hotel mit 40 Zimmern. Die Prüfung deckt einen Managementvertrag mit Change-of-Control-Klausel und eine Abhängigkeit von zwei Führungskräften auf. Retentionsbedingungen werden vor der Unterzeichnung in die Vereinbarung aufgenommen; der Renovierungsplan wird auf die Nebensaison gelegt.',
-        es: 'Escenario ilustrativo: un grupo de restauración de 12 M€ adquiere un hotel de 40 habitaciones. La revisión revela un contrato de gestión con cláusula de cambio de control y una dependencia de dos responsables. Las condiciones de retención se añaden al acuerdo antes de la firma; el calendario de renovación se ajusta a la temporada baja.',
-        it: 'Scenario illustrativo: un gruppo di ristorazione da 12 M€ acquisisce un hotel da 40 camere. La revisione rivela un contratto di gestione con clausola di cambio di controllo e una dipendenza da due responsabili. Le condizioni di retention vengono aggiunte all\'accordo prima della firma; il calendario di ristrutturazione è calibrato sulla bassa stagione.',
-        nl: 'Illustratief scenario: een restaurantgroep van 12 miljoen euro neemt een hotel met 40 kamers over. De beoordeling brengt een managementcontract met change-of-control-clausule aan het licht en een afhankelijkheid van twee managers. Retentievoorwaarden worden vóór ondertekening aan de overeenkomst toegevoegd; de renovatieplanning wordt op het laagseizoen afgestemd.',
-      },
     },
     {
       label: {
@@ -1728,14 +1700,6 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
           nl: 'Directieteam: opvolgers, groei in verantwoordelijkheid → 24-maandenplan.',
         },
       ],
-      duration: {
-        fr: 'Durée type : 3 à 12 mois.',
-        en: 'Typical duration: 3 to 12 months.',
-        de: 'Typische Dauer: 3 bis 12 Monate.',
-        es: 'Duración típica: 3 a 12 meses.',
-        it: 'Durata tipica: da 3 a 12 mesi.',
-        nl: 'Typische duur: 3 tot 12 maanden.',
-      },
     },
   ],
   segmentsFootnote: {
