@@ -37,23 +37,33 @@ export interface IndustryExpertise {
 }
 
 export interface IndustrySegment {
-  label:    LocaleText
-  story:    LocaleText
-  problems: LocaleText[]
+  label:     LocaleText
+  story:     LocaleText
+  problems:  LocaleText[]
+  /** Ligne « Durée type » affichée sous la liste (optionnel) */
+  duration?: LocaleText
+  /** Encadré « Scénario illustratif » affiché sous la carte (optionnel) */
+  scenario?: LocaleText
 }
 
 export interface Industry {
-  slug:         string
-  clusterId:    string
-  name:         LocaleText
-  img:          string
-  imgAlt:       LocaleText
-  vision:       LocaleText
-  keyMetrics:   IndustryMetric[]
-  sectors:      IndustrySector[]
-  expertise:    IndustryExpertise[]
-  segments:     IndustrySegment[]
-  articleSlugs: string[]
+  slug:              string
+  clusterId:         string
+  name:              LocaleText
+  img:               string
+  imgAlt:            LocaleText
+  vision:            LocaleText
+  keyMetrics:        IndustryMetric[]
+  sectors:           IndustrySector[]
+  expertise:         IndustryExpertise[]
+  /** Ligne de pied sous la grille expertise (optionnel) */
+  expertiseFootnote?: LocaleText
+  /** Surcharge du libellé de liste des segments, ex. « Ce que nous pilotons » (optionnel) */
+  problemsLabel?:    LocaleText
+  segments:          IndustrySegment[]
+  /** Ligne finale sous la grille segments (optionnel) */
+  segmentsFootnote?: LocaleText
+  articleSlugs:      string[]
 }
 
 /* ════════════════════════════════════════════════════════════════════
@@ -1286,22 +1296,22 @@ const commerce: Industry = {
   vision: {
     fr: `Les organisations du commerce, des services et de l'expérience client naviguent entre des cycles d'innovation très courts, des attentes consommateurs en transformation permanente et une pression réglementaire croissante sur les données et la publicité numérique.
 
-Leur valeur repose sur la fidélité client, les données propriétaires et la robustesse des plateformes. La Certification CIFSO 5000 structure ce capital immatériel en un référentiel indépendant et défendable face aux investisseurs et acquéreurs.`,
+Dans ces secteurs, les marges sont serrées, la demande est saisonnière et les équipes de terrain tournent vite. Les clients passent par des plateformes (places de marché, réservation en ligne) qui captent une part de la relation et des données. Ce qui fait la différence : une clientèle fidèle, des données dont vous êtes propriétaire, une marque et des équipes stables. Cela se joue à chaque cycle : lancer un concept, changer d'échelle, repositionner un établissement, en reprendre un autre ou préparer la transmission d'une enseigne. Aegryn aide à décider, puis pilote le projet jusqu'à sa mise en œuvre.`,
     en: `Commerce, services and customer experience organisations navigate between very short innovation cycles, permanently evolving consumer expectations and growing regulatory pressure on data and digital advertising.
 
-Their value rests on customer loyalty, proprietary data and platform robustness. CIFSO 5000 Certification structures this intangible capital into an independent framework that is defensible to investors and acquirers.`,
+In these sectors, margins are tight, demand is seasonal and front-line teams turn over fast. Customers come through platforms (marketplaces, online booking) that capture part of the relationship and the data. What makes the difference: a loyal customer base, data you own, a brand and stable teams. This plays out at every cycle: launching a concept, scaling up, repositioning a site, taking over another or preparing the transfer of a brand. Aegryn helps you decide, then steers the project through to implementation.`,
     de: `Organisationen aus Handel, Dienstleistungen und Kundenerlebnis bewegen sich zwischen sehr kurzen Innovationszyklen, sich permanent wandelnden Verbrauchererwartungen und wachsendem regulatorischem Druck auf Daten und digitale Werbung.
 
-Ihr Wert beruht auf Kundenloyalität, proprietären Daten und der Robustheit der Plattformen. Die CIFSO-5000-Zertifizierung strukturiert dieses immaterielle Kapital zu einem unabhängigen Referenzrahmen, der gegenüber Investoren und Käufern Bestand hat.`,
+In diesen Branchen sind die Margen knapp, die Nachfrage saisonal und die Teams vor Ort wechseln schnell. Kunden kommen über Plattformen (Marktplätze, Online-Buchung), die einen Teil der Beziehung und der Daten abschöpfen. Den Unterschied machen: ein loyaler Kundenstamm, Daten, die Ihnen gehören, eine Marke und stabile Teams. Das entscheidet sich in jedem Zyklus: ein Konzept lancieren, skalieren, einen Standort neu positionieren, einen anderen übernehmen oder die Übergabe einer Marke vorbereiten. Aegryn hilft bei der Entscheidung und steuert das Projekt bis zur Umsetzung.`,
     es: `Las organizaciones de comercio, servicios y experiencia de cliente navegan entre ciclos de innovación muy cortos, expectativas de consumidores en transformación permanente y una presión regulatoria creciente sobre los datos y la publicidad digital.
 
-Su valor descansa en la fidelidad del cliente, los datos propietarios y la robustez de las plataformas. La Certificación CIFSO 5000 estructura este capital intangible en un marco independiente y defendible ante inversores y compradores.`,
+En estos sectores, los márgenes son ajustados, la demanda es estacional y los equipos de campo rotan rápido. Los clientes llegan a través de plataformas (marketplaces, reservas en línea) que capturan parte de la relación y de los datos. Lo que marca la diferencia: una clientela fiel, datos de su propiedad, una marca y equipos estables. Esto se juega en cada ciclo: lanzar un concepto, cambiar de escala, reposicionar un establecimiento, adquirir otro o preparar la transmisión de una enseña. Aegryn ayuda a decidir y luego pilota el proyecto hasta su implementación.`,
     it: `Le organizzazioni del commercio, dei servizi e della customer experience navigano tra cicli di innovazione molto brevi, aspettative dei consumatori in trasformazione permanente e una pressione regolamentare crescente su dati e pubblicità digitale.
 
-Il loro valore si fonda sulla fedeltà dei clienti, sui dati proprietari e sulla robustezza delle piattaforme. La Certificazione CIFSO 5000 struttura questo capitale immateriale in un framework indipendente e difendibile di fronte a investitori e acquirenti.`,
+In questi settori i margini sono stretti, la domanda è stagionale e i team sul campo ruotano velocemente. I clienti arrivano attraverso piattaforme (marketplace, prenotazioni online) che catturano parte della relazione e dei dati. Ciò che fa la differenza: una clientela fedele, dati di vostra proprietà, un marchio e team stabili. Questo si gioca a ogni ciclo: lanciare un concept, cambiare scala, riposizionare un esercizio, rilevarne un altro o preparare la trasmissione di un'insegna. Aegryn aiuta a decidere, poi pilota il progetto fino alla sua attuazione.`,
     nl: `Organisaties in handel, diensten en klantervaring bewegen zich tussen zeer korte innovatiecycli, permanent veranderende consumentenverwachtingen en groeiende regelgevende druk op data en digitale reclame.
 
-Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van platforms. De CIFSO 5000-certificering structureert dit immateriële kapitaal in een onafhankelijk raamwerk dat verdedigbaar is tegenover investeerders en kopers.`,
+In deze sectoren zijn de marges krap, is de vraag seizoensgebonden en rouleren de teams ter plaatse snel. Klanten komen via platforms (marktplaatsen, online reserveren) die een deel van de relatie en de data wegkapen. Wat het verschil maakt: een loyale klantenkring, data die u bezit, een merk en stabiele teams. Dit speelt in elke cyclus: een concept lanceren, opschalen, een vestiging herpositioneren, een andere overnemen of de overdracht van een merk voorbereiden. Aegryn helpt beslissen en stuurt het project vervolgens tot de implementatie.`,
   },
   keyMetrics: [
     { value: '887 Mrd EUR', label: {
@@ -1457,211 +1467,285 @@ Hun waarde berust op klantloyaliteit, propriëtaire data en de robuustheid van p
   expertise: [
     {
       title: {
-        fr: 'Certification CIFSO 5000',
-        en: 'CIFSO 5000 Certification',
-        de: 'CIFSO-5000-Zertifizierung',
-        es: 'Certificación CIFSO 5000',
-        it: 'Certificazione CIFSO 5000',
-        nl: 'CIFSO 5000-certificering',
+        fr: 'Stratégie & modèle économique',
+        en: 'Strategy & business model',
+        de: 'Strategie & Geschäftsmodell',
+        es: 'Estrategia y modelo económico',
+        it: 'Strategia & modello economico',
+        nl: 'Strategie & verdienmodel',
       },
       desc: {
-        fr: 'Documentation certifiée des données clients first-party, des marques, des plateformes propriétaires et des IP contenus — base opposable pour M&A, financement ou succession dans les secteurs du commerce et des services.',
-        en: 'Certified documentation of first-party customer data, brands, proprietary platforms and content IP — an enforceable basis for M&A, financing or succession in commerce and services.',
-        de: 'Zertifizierte Dokumentation von First-Party-Kundendaten, Marken, proprietären Plattformen und Content-IP — belastbare Basis für M&A, Finanzierung oder Nachfolge in Handel und Dienstleistungen.',
-        es: 'Documentación certificada de los datos de clientes first-party, las marcas, las plataformas propietarias y la IP de contenidos — base oponible para M&A, financiación o sucesión en comercio y servicios.',
-        it: 'Documentazione certificata dei dati clienti first-party, dei marchi, delle piattaforme proprietarie e delle IP dei contenuti — base opponibile per M&A, finanziamento o successione nel commercio e nei servizi.',
-        nl: 'Gecertificeerde documentatie van first-party-klantdata, merken, propriëtaire platforms en content-IP — een aantoombare basis voor M&A, financiering of opvolging in handel en diensten.',
+        fr: 'Ouvrir un deuxième pays, développer un canal en propre face aux places de marché, lancer un nouveau concept. Arbitrer entre exploitation en propre, franchise ou contrat de gestion. Livrable : plan à 12-18 mois et grille de décision.',
+        en: 'Open a second country, build a direct channel against marketplaces, launch a new concept. Choose between own operations, franchise or management contract. Deliverable: 12-18 month plan and decision grid.',
+        de: 'Ein zweites Land erschliessen, einen eigenen Kanal gegenüber den Marktplätzen aufbauen, ein neues Konzept lancieren. Abwägen zwischen Eigenbetrieb, Franchise oder Managementvertrag. Lieferung: 12-18-Monats-Plan und Entscheidungsraster.',
+        es: 'Abrir un segundo país, desarrollar un canal propio frente a los marketplaces, lanzar un nuevo concepto. Arbitrar entre explotación propia, franquicia o contrato de gestión. Entregable: plan a 12-18 meses y cuadrícula de decisión.',
+        it: 'Aprire un secondo paese, sviluppare un canale proprio contro i marketplace, lanciare un nuovo concept. Arbitrare tra gestione diretta, franchising o contratto di gestione. Deliverable: piano a 12-18 mesi e griglia decisionale.',
+        nl: 'Een tweede land openen, een eigen kanaal opbouwen tegenover marktplaatsen, een nieuw concept lanceren. Afwegen tussen eigen exploitatie, franchise of managementcontract. Deliverable: 12-18-maandenplan en beslisraster.',
       },
     },
     {
       title: {
-        fr: 'Conseil en Stratégie',
-        en: 'Strategy Advisory',
-        de: 'Strategieberatung',
-        es: 'Consultoría de Estrategia',
-        it: 'Consulenza Strategica',
-        nl: 'Strategieadvies',
+        fr: 'Technologie, données & conformité',
+        en: 'Technology, data & compliance',
+        de: 'Technologie, Daten & Compliance',
+        es: 'Tecnología, datos y cumplimiento',
+        it: 'Tecnologia, dati & conformità',
+        nl: 'Technologie, data & compliance',
       },
       desc: {
-        fr: 'Positionnement omnicanal, transformation du modèle économique face aux plateformes, consolidation sectorielle retail et planification de la croissance internationale.',
-        en: 'Omnichannel positioning, business model transformation against platforms, retail sector consolidation and international growth planning.',
-        de: 'Omnichannel-Positionierung, Geschäftsmodell-Transformation gegenüber Plattformen, sektorale Retail-Konsolidierung und Planung des internationalen Wachstums.',
-        es: 'Posicionamiento omnicanal, transformación del modelo de negocio frente a las plataformas, consolidación sectorial retail y planificación del crecimiento internacional.',
-        it: 'Posizionamento omnicanale, trasformazione del modello di business rispetto alle piattaforme, consolidamento settoriale retail e pianificazione della crescita internazionale.',
-        nl: 'Omnichannel-positionering, transformatie van het verdienmodel tegenover platforms, sectorale retailconsolidatie en planning van internationale groei.',
+        fr: 'Données clients first-party et consentement (RGPD, LPD), règles de la publicité numérique, choix et réversibilité des outils (e-commerce, ERP/CRM, systèmes de réservation et de gestion hôtelière). Livrable : carte d\'exposition et plan de mise à niveau priorisé.',
+        en: 'First-party customer data and consent (GDPR, Swiss FADP), digital advertising rules, tooling choices and reversibility (e-commerce, ERP/CRM, booking and hotel management systems). Deliverable: exposure map and prioritised upgrade plan.',
+        de: 'First-Party-Kundendaten und Einwilligung (DSGVO, DSG), Regeln der digitalen Werbung, Auswahl und Reversibilität der Tools (E-Commerce, ERP/CRM, Reservierungs- und Hotelmanagementsysteme). Lieferung: Expositionskarte und priorisierter Upgrade-Plan.',
+        es: 'Datos de clientes first-party y consentimiento (RGPD, LPD suiza), reglas de la publicidad digital, elección y reversibilidad de las herramientas (e-commerce, ERP/CRM, sistemas de reservas y gestión hotelera). Entregable: mapa de exposición y plan de actualización priorizado.',
+        it: 'Dati clienti first-party e consenso (GDPR, LPD svizzera), regole della pubblicità digitale, scelta e reversibilità degli strumenti (e-commerce, ERP/CRM, sistemi di prenotazione e gestione alberghiera). Deliverable: mappa di esposizione e piano di aggiornamento prioritizzato.',
+        nl: 'First-party-klantdata en toestemming (AVG, Zwitserse WBG), regels voor digitale reclame, keuze en omkeerbaarheid van tools (e-commerce, ERP/CRM, reserverings- en hotelmanagementsystemen). Deliverable: blootstellingskaart en geprioriteerd upgradeplan.',
       },
     },
     {
       title: {
-        fr: 'Solutions sur-mesure',
-        en: 'Custom Solutions',
+        fr: 'Solutions sur mesure',
+        en: 'Custom solutions',
         de: 'Massgeschneiderte Lösungen',
         es: 'Soluciones a medida',
         it: 'Soluzioni su misura',
         nl: 'Maatwerkoplossingen',
       },
       desc: {
-        fr: 'Plateformes e-commerce propriétaires, outils de personnalisation IA, systèmes de fidélité avancés et intégrations ERP/CRM — conçus pour la performance et la certification.',
-        en: 'Proprietary e-commerce platforms, AI personalisation tools, advanced loyalty systems and ERP/CRM integrations — designed for performance and certification.',
-        de: 'Proprietäre E-Commerce-Plattformen, KI-Personalisierungstools, fortschrittliche Loyalitätssysteme und ERP-/CRM-Integrationen — konzipiert für Performance und Zertifizierung.',
-        es: 'Plataformas e-commerce propietarias, herramientas de personalización IA, sistemas de fidelización avanzados e integraciones ERP/CRM — diseñados para el rendimiento y la certificación.',
-        it: 'Piattaforme e-commerce proprietarie, strumenti di personalizzazione IA, sistemi di loyalty avanzati e integrazioni ERP/CRM — progettati per la performance e la certificazione.',
-        nl: 'Propriëtaire e-commerceplatforms, AI-personalisatietools, geavanceerde loyaliteitssystemen en ERP/CRM-integraties — ontworpen voor prestaties en certificering.',
+        fr: 'Plateformes e-commerce propriétaires, personnalisation par l\'IA, programmes de fidélité, intégrations ERP/CRM. Le code et les données vous appartiennent, hébergés en Suisse ou dans l\'UE.',
+        en: 'Proprietary e-commerce platforms, AI personalisation, loyalty programmes, ERP/CRM integrations. The code and data belong to you, hosted in Switzerland or the EU.',
+        de: 'Proprietäre E-Commerce-Plattformen, KI-Personalisierung, Loyalitätsprogramme, ERP-/CRM-Integrationen. Code und Daten gehören Ihnen, gehostet in der Schweiz oder in der EU.',
+        es: 'Plataformas e-commerce propietarias, personalización por IA, programas de fidelización, integraciones ERP/CRM. El código y los datos le pertenecen, alojados en Suiza o en la UE.',
+        it: 'Piattaforme e-commerce proprietarie, personalizzazione tramite IA, programmi fedeltà, integrazioni ERP/CRM. Il codice e i dati vi appartengono, ospitati in Svizzera o nell\'UE.',
+        nl: 'Propriëtaire e-commerceplatforms, AI-personalisatie, loyaliteitsprogramma\'s, ERP/CRM-integraties. De code en de data zijn van u, gehost in Zwitserland of de EU.',
       },
     },
     {
       title: {
-        fr: 'M&A Advisory',
-        en: 'M&A Advisory',
-        de: 'M&A-Beratung',
-        es: 'Asesoría M&A',
-        it: 'Consulenza M&A',
-        nl: 'M&A-advies',
+        fr: 'Talent & organisation',
+        en: 'Talent & organisation',
+        de: 'Talent & Organisation',
+        es: 'Talento y organización',
+        it: 'Talent & organizzazione',
+        nl: 'Talent & organisatie',
       },
       desc: {
-        fr: 'Valorisation des actifs digitaux et des IP contenus, accompagnement des cessions retail et médias, structuration des deals sur droits numériques et due diligence acheteur.',
-        en: 'Valuation of digital assets and content IP, support for retail and media disposals, structuring of digital rights deals and buyer due diligence.',
-        de: 'Bewertung digitaler Assets und Content-IP, Begleitung von Retail- und Medien-Veräusserungen, Strukturierung von Deals über digitale Rechte und Käufer-Due-Diligence.',
-        es: 'Valoración de activos digitales e IP de contenidos, acompañamiento de ventas retail y medios, estructuración de operaciones sobre derechos digitales y due diligence comprador.',
-        it: 'Valorizzazione degli asset digitali e delle IP dei contenuti, supporto alle cessioni retail e media, strutturazione di deal su diritti digitali e due diligence acquirente.',
-        nl: 'Waardering van digitale activa en content-IP, begeleiding van retail- en mediaverkopen, structurering van deals over digitale rechten en koper-due diligence.',
+        fr: 'Directeur d\'exploitation ou de site, responsable e-commerce, directeur d\'hôtel ou de restaurant. Équipes saisonnières, rétention des postes clés, succession d\'une enseigne familiale. Livrable : fiche de poste, vivier, plan de rétention.',
+        en: 'Operations or site director, e-commerce manager, hotel or restaurant director. Seasonal teams, retention of key positions, succession of a family business. Deliverable: job description, talent pool, retention plan.',
+        de: 'Betriebs- oder Standortleiter, E-Commerce-Verantwortlicher, Hotel- oder Restaurantdirektor. Saisonale Teams, Bindung von Schlüsselpositionen, Nachfolge eines Familienbetriebs. Lieferung: Stellenprofil, Talentpool, Retentionsplan.',
+        es: 'Director de explotación o de establecimiento, responsable e-commerce, director de hotel o restaurante. Equipos estacionales, retención de puestos clave, sucesión de una enseña familiar. Entregable: ficha de puesto, cantera, plan de retención.',
+        it: 'Direttore di esercizio o di sede, responsabile e-commerce, direttore di hotel o ristorante. Team stagionali, retention delle posizioni chiave, successione di un\'attività familiare. Deliverable: scheda di posizione, serbatoio di talenti, piano di retention.',
+        nl: 'Operationeel of vestigingsdirecteur, e-commerceverantwoordelijke, hotel- of restaurantdirecteur. Seizoensteams, behoud van sleutelposities, opvolging van een familiebedrijf. Deliverable: functieprofiel, talentpool, retentieplan.',
+      },
+    },
+    {
+      title: {
+        fr: 'Reprise, M&A & intégration',
+        en: 'Acquisition, M&A & integration',
+        de: 'Übernahme, M&A & Integration',
+        es: 'Adquisición, M&A e integración',
+        it: 'Acquisizione, M&A & integrazione',
+        nl: 'Overname, M&A & integratie',
+      },
+      desc: {
+        fr: 'Revue d\'un hôtel, d\'une enseigne ou d\'une plateforme avant la lettre d\'intention : bail et autorisations, contrats de gestion ou de franchise, clauses de changement de contrôle, dépendance aux équipes clés. Plan d\'intégration à 100 jours. La certification CIFSO 5000 reste possible en appui si le dossier le justifie.',
+        en: 'Review of a hotel, a chain or a platform before the letter of intent: lease and permits, management or franchise contracts, change-of-control clauses, key-team dependency. 100-day integration plan. CIFSO 5000 certification remains available in support where the case warrants it.',
+        de: 'Prüfung eines Hotels, einer Kette oder einer Plattform vor der Absichtserklärung: Mietvertrag und Bewilligungen, Management- oder Franchiseverträge, Change-of-Control-Klauseln, Abhängigkeit von Schlüsselteams. 100-Tage-Integrationsplan. Die CIFSO-5000-Zertifizierung bleibt unterstützend möglich, wenn das Dossier es rechtfertigt.',
+        es: 'Revisión de un hotel, una enseña o una plataforma antes de la carta de intención: arrendamiento y autorizaciones, contratos de gestión o franquicia, cláusulas de cambio de control, dependencia de equipos clave. Plan de integración a 100 días. La certificación CIFSO 5000 sigue siendo posible como apoyo si el expediente lo justifica.',
+        it: 'Revisione di un hotel, di un\'insegna o di una piattaforma prima della lettera di intenti: affitto e autorizzazioni, contratti di gestione o franchising, clausole di cambio di controllo, dipendenza dai team chiave. Piano di integrazione a 100 giorni. La certificazione CIFSO 5000 resta possibile a supporto se il dossier lo giustifica.',
+        nl: 'Beoordeling van een hotel, een formule of een platform vóór de intentieverklaring: huur en vergunningen, management- of franchisecontracten, change-of-control-clausules, afhankelijkheid van sleutelteams. 100-dagen-integratieplan. De CIFSO 5000-certificering blijft ter ondersteuning mogelijk als het dossier dat rechtvaardigt.',
       },
     },
   ],
+  expertiseFootnote: {
+    fr: 'Mobilisables seules, ou réunies en un programme que nous pilotons.',
+    en: 'Available individually, or combined into a single programme we steer.',
+    de: 'Einzeln einsetzbar oder vereint zu einem Programm, das wir steuern.',
+    es: 'Movilizables por separado, o reunidas en un programa que pilotamos.',
+    it: 'Mobilitabili singolarmente, o riunite in un programma che pilotiamo.',
+    nl: 'Afzonderlijk inzetbaar, of gebundeld in een programma dat wij sturen.',
+  },
+  problemsLabel: {
+    fr: 'Ce que nous pilotons',
+    en: 'What we steer',
+    de: 'Was wir steuern',
+    es: 'Lo que pilotamos',
+    it: 'Ciò che pilotiamo',
+    nl: 'Wat wij sturen',
+  },
   segments: [
     {
       label: {
-        fr: 'Retailers & e-commerçants',
-        en: 'Retailers & e-merchants',
-        de: 'Retailer & E-Händler',
-        es: 'Retailers y e-comerciantes',
-        it: 'Retailer & e-commerce',
-        nl: 'Retailers & e-commercebedrijven',
+        fr: 'Retailers, e-commerçants & enseignes : cycle Croissance',
+        en: 'Retailers, e-merchants & chains: Growth cycle',
+        de: 'Retailer, E-Händler & Filialketten: Zyklus Wachstum',
+        es: 'Retailers, e-comerciantes y enseñas: ciclo Crecimiento',
+        it: 'Retailer, e-commerce e insegne: ciclo Crescita',
+        nl: 'Retailers, e-commercebedrijven & ketens: cyclus Groei',
       },
       story: {
-        fr: 'Vous avez construit une base client propriétaire et une plateforme e-commerce performante. Un fonds PE ou un acquéreur stratégique s\'intéresse à votre actif. Mais vos données first-party, votre plateforme et vos métriques de fidélité ne sont pas documentées de façon défendable pour une due diligence.',
-        en: 'You have built a proprietary customer base and a high-performance e-commerce platform. A PE fund or strategic acquirer is interested in your asset. But your first-party data, platform and loyalty metrics are not documented defensibly enough for due diligence.',
-        de: 'Sie haben eine proprietäre Kundenbasis und eine leistungsstarke E-Commerce-Plattform aufgebaut. Ein PE-Fonds oder strategischer Käufer interessiert sich für Ihr Unternehmen. Aber Ihre First-Party-Daten, Ihre Plattform und Ihre Loyalitätskennzahlen sind nicht belastbar genug für eine Due Diligence dokumentiert.',
-        es: 'Ha construido una base de clientes propietaria y una plataforma e-commerce eficaz. Un fondo PE o un comprador estratégico se interesa por su activo. Pero sus datos first-party, su plataforma y sus métricas de fidelidad no están documentados de forma defendible para una due diligence.',
-        it: 'Avete costruito una base clienti proprietaria e una piattaforma e-commerce performante. Un fondo PE o un acquirente strategico è interessato al vostro asset. Ma i dati first-party, la piattaforma e le metriche di fidelizzazione non sono documentati in modo difendibile per una due diligence.',
-        nl: 'U heeft een propriëtaire klantenbasis en een performant e-commerceplatform opgebouwd. Een PE-fonds of strategische koper is geïnteresseerd in uw actief. Maar uw first-party-data, platform en loyaliteitsmetrics zijn niet verdedigbaar genoeg gedocumenteerd voor een due diligence.',
+        fr: 'Vous réalisez l\'essentiel de votre chiffre en ligne et vous voulez ouvrir un deuxième pays et quelques boutiques en 18 mois. Plateforme, TVA et livraison multi-pays, consentement, logistique, recrutement : chaque chantier avance seul.',
+        en: 'You generate most of your revenue online and you want to open a second country and a few stores within 18 months. Platform, VAT and multi-country delivery, consent, logistics, recruitment: each workstream moves forward on its own.',
+        de: 'Sie erzielen den Grossteil Ihres Umsatzes online und wollen in 18 Monaten ein zweites Land und einige Filialen eröffnen. Plattform, MwSt. und Lieferung in mehrere Länder, Einwilligung, Logistik, Rekrutierung: jede Baustelle läuft für sich.',
+        es: 'Realiza la mayor parte de su facturación en línea y quiere abrir un segundo país y algunas tiendas en 18 meses. Plataforma, IVA y entrega multipaís, consentimiento, logística, contratación: cada obra avanza por su cuenta.',
+        it: 'Realizzate la maggior parte del fatturato online e volete aprire un secondo paese e alcuni negozi in 18 mesi. Piattaforma, IVA e consegne multi-paese, consenso, logistica, reclutamento: ogni cantiere avanza da solo.',
+        nl: 'U realiseert het grootste deel van uw omzet online en wilt binnen 18 maanden een tweede land en enkele winkels openen. Platform, btw en levering in meerdere landen, toestemming, logistiek, werving: elke werf loopt op zichzelf door.',
       },
       problems: [
         {
-          fr: 'Certifier la valeur des données clients first-party comme actif indépendant transmissible',
-          en: 'Certify the value of first-party customer data as an independent transferable asset',
-          de: 'Den Wert der First-Party-Kundendaten als unabhängiges, übertragbares Asset zertifizieren',
-          es: 'Certificar el valor de los datos de clientes first-party como activo independiente transmisible',
-          it: 'Certificare il valore dei dati clienti first-party come asset indipendente trasmissibile',
-          nl: 'De waarde van first-party-klantdata certificeren als onafhankelijk overdraagbaar actief',
+          fr: 'Décider quel pays et quel canal en premier → grille de décision et calendrier à 18 mois.',
+          en: 'Decide which country and which channel first → decision grid and 18-month roadmap.',
+          de: 'Entscheiden, welches Land und welcher Kanal zuerst → Entscheidungsraster und 18-Monats-Kalender.',
+          es: 'Decidir qué país y qué canal primero → cuadrícula de decisión y calendario a 18 meses.',
+          it: 'Decidere quale paese e quale canale per primi → griglia decisionale e calendario a 18 mesi.',
+          nl: 'Beslissen welk land en welk kanaal eerst → beslisraster en 18-maandenkalender.',
         },
         {
-          fr: 'Documenter la plateforme propriétaire et ses métriques pour un investisseur PE',
-          en: 'Document the proprietary platform and its metrics for a PE investor',
-          de: 'Die proprietäre Plattform und ihre Kennzahlen für einen PE-Investor dokumentieren',
-          es: 'Documentar la plataforma propietaria y sus métricas para un inversor PE',
-          it: 'Documentare la piattaforma proprietaria e le sue metriche per un investitore PE',
-          nl: 'Het propriëtaire platform en zijn metrics documenteren voor een PE-investeerder',
+          fr: 'Mettre la plateforme et les données à niveau pour plusieurs pays → feuille de route technique et test de réversibilité.',
+          en: 'Upgrade the platform and data for multiple countries → technical roadmap and reversibility test.',
+          de: 'Plattform und Daten für mehrere Länder auf den Stand bringen → technische Roadmap und Reversibilitätstest.',
+          es: 'Poner la plataforma y los datos a nivel para varios países → hoja de ruta técnica y prueba de reversibilidad.',
+          it: 'Adeguare piattaforma e dati per più paesi → roadmap tecnica e test di reversibilità.',
+          nl: 'Platform en data op niveau brengen voor meerdere landen → technische roadmap en omkeerbaarheidstest.',
         },
         {
-          fr: 'Préparer la due diligence sur les indicateurs de rétention, LTV et performance omnicanale',
-          en: 'Prepare due diligence on retention, LTV and omnichannel performance indicators',
-          de: 'Die Due Diligence zu Retention-, LTV- und Omnichannel-Performance-Kennzahlen vorbereiten',
-          es: 'Preparar la due diligence sobre los indicadores de retención, LTV y rendimiento omnicanal',
-          it: 'Preparare la due diligence sugli indicatori di retention, LTV e performance omnicanale',
-          nl: 'De due diligence voorbereiden over retentie-, LTV- en omnichannel-prestatie-indicatoren',
+          fr: 'Recruter le responsable pays ou le directeur des opérations → fiche de poste et vivier.',
+          en: 'Recruit the country manager or operations director → job description and talent pool.',
+          de: 'Den Länderverantwortlichen oder Betriebsleiter rekrutieren → Stellenprofil und Talentpool.',
+          es: 'Contratar al responsable de país o al director de operaciones → ficha de puesto y cantera.',
+          it: 'Reclutare il responsabile paese o il direttore delle operazioni → scheda di posizione e serbatoio.',
+          nl: 'De landverantwoordelijke of operationeel directeur werven → functieprofiel en talentpool.',
         },
       ],
+      duration: {
+        fr: 'Durée type : 6 à 12 mois, point hebdomadaire et comité mensuel.',
+        en: 'Typical duration: 6 to 12 months, weekly check-in and monthly committee.',
+        de: 'Typische Dauer: 6 bis 12 Monate, wöchentliches Update und monatlicher Ausschuss.',
+        es: 'Duración típica: 6 a 12 meses, punto semanal y comité mensual.',
+        it: 'Durata tipica: da 6 a 12 mesi, punto settimanale e comitato mensile.',
+        nl: 'Typische duur: 6 tot 12 maanden, wekelijkse update en maandelijks comité.',
+      },
     },
     {
       label: {
-        fr: 'Groupes médias & divertissement',
-        en: 'Media & entertainment groups',
-        de: 'Medien- & Entertainment-Gruppen',
-        es: 'Grupos de medios y entretenimiento',
-        it: 'Gruppi media & intrattenimento',
-        nl: 'Media- & entertainmentgroepen',
+        fr: 'Hôtellerie, restauration & lieux d\'exception : cycles Lancement et Reprise',
+        en: 'Hospitality, dining & exceptional venues: Launch and Acquisition cycles',
+        de: 'Hotellerie, Gastronomie & Ausnahmeorte: Zyklen Lancierung und Übernahme',
+        es: 'Hotelería, restauración y lugares excepcionales: ciclos Lanzamiento y Adquisición',
+        it: 'Hotellerie, ristorazione e luoghi d\'eccezione: cicli Lancio e Acquisizione',
+        nl: 'Horeca & bijzondere locaties: cycli Lancering en Overname',
       },
       story: {
-        fr: 'Vous gérez un catalogue de contenus ou une base d\'abonnés significative. Un acquéreur ou un partenaire de distribution veut comprendre la valeur de vos droits, de votre audience et de vos IP. La documentation est fragmentée entre vos équipes créatives, juridiques et techniques.',
-        en: 'You manage a content catalogue or a significant subscriber base. An acquirer or distribution partner wants to understand the value of your rights, audience and IP. Documentation is fragmented across your creative, legal and technical teams.',
-        de: 'Sie verwalten einen Content-Katalog oder eine bedeutende Abonnentenbasis. Ein Käufer oder Distributionspartner will den Wert Ihrer Rechte, Ihrer Reichweite und Ihrer IP verstehen. Die Dokumentation ist über Kreativ-, Rechts- und Technikteams fragmentiert.',
-        es: 'Gestiona un catálogo de contenidos o una base de abonados significativa. Un comprador o socio de distribución quiere comprender el valor de sus derechos, su audiencia y su IP. La documentación está fragmentada entre sus equipos creativos, jurídicos y técnicos.',
-        it: 'Gestite un catalogo di contenuti o una base abbonati significativa. Un acquirente o un partner di distribuzione vuole capire il valore dei vostri diritti, della vostra audience e delle vostre IP. La documentazione è frammentata tra team creativi, legali e tecnici.',
-        nl: 'U beheert een contentcatalogus of een aanzienlijke abonneebasis. Een koper of distributiepartner wil de waarde van uw rechten, publiek en IP begrijpen. De documentatie is versnipperd over uw creatieve, juridische en technische teams.',
+        fr: 'Vous reprenez un hôtel indépendant d\'une quarantaine de chambres à rénover et à repositionner. Entre le bail, les autorisations, les travaux, le recrutement et l\'ouverture, une dizaine d\'intervenants avancent chacun de leur côté.',
+        en: 'You are taking over an independent hotel of about forty rooms to renovate and reposition. Between the lease, permits, works, recruitment and the opening, a dozen parties each move forward on their own side.',
+        de: 'Sie übernehmen ein unabhängiges Hotel mit rund vierzig Zimmern, das renoviert und neu positioniert werden soll. Zwischen Mietvertrag, Bewilligungen, Arbeiten, Rekrutierung und Eröffnung arbeitet ein Dutzend Beteiligter jeder für sich.',
+        es: 'Usted adquiere un hotel independiente de una cuarentena de habitaciones para renovar y reposicionar. Entre el arrendamiento, las autorizaciones, las obras, la contratación y la apertura, una decena de intervinientes avanza cada uno por su lado.',
+        it: 'Rilevate un hotel indipendente di una quarantina di camere da ristrutturare e riposizionare. Tra affitto, autorizzazioni, lavori, reclutamento e apertura, una decina di soggetti avanza ciascuno per conto proprio.',
+        nl: 'U neemt een onafhankelijk hotel met een veertigtal kamers over om te renoveren en te herpositioneren. Tussen huur, vergunningen, werkzaamheden, werving en opening schiet een tiental partijen elk hun eigen kant op.',
       },
       problems: [
         {
-          fr: 'Certifier la valeur des IP contenus et des droits numériques pour un deal de cession ou de licence',
-          en: 'Certify the value of content IP and digital rights for a sale or licensing deal',
-          de: 'Den Wert von Content-IP und digitalen Rechten für einen Verkaufs- oder Lizenzdeal zertifizieren',
-          es: 'Certificar el valor de la IP de contenidos y los derechos digitales para una operación de venta o licencia',
-          it: 'Certificare il valore delle IP dei contenuti e dei diritti digitali per un deal di cessione o licenza',
-          nl: 'De waarde van content-IP en digitale rechten certificeren voor een verkoop- of licentiedeal',
+          fr: 'Avant l\'offre : revue des angles morts (propriété ou bail, autorisations d\'exploitation, contrats de gestion ou de franchise, distribution en ligne, équipes clés) → traitement proposé pour chacun : prix, garantie, condition suspensive.',
+          en: 'Before the offer: review of blind spots (freehold or lease, operating permits, management or franchise contracts, online distribution, key teams) → proposed treatment for each: price, warranty, condition precedent.',
+          de: 'Vor dem Angebot: Prüfung der blinden Flecken (Eigentum oder Miete, Betriebsbewilligungen, Management- oder Franchiseverträge, Online-Vertrieb, Schlüsselteams) → vorgeschlagene Behandlung für jeden: Preis, Garantie, aufschiebende Bedingung.',
+          es: 'Antes de la oferta: revisión de los ángulos muertos (propiedad o arrendamiento, autorizaciones de explotación, contratos de gestión o franquicia, distribución en línea, equipos clave) → tratamiento propuesto para cada uno: precio, garantía, condición suspensiva.',
+          it: 'Prima dell\'offerta: revisione dei punti ciechi (proprietà o affitto, autorizzazioni di esercizio, contratti di gestione o franchising, distribuzione online, team chiave) → trattamento proposto per ciascuno: prezzo, garanzia, condizione sospensiva.',
+          nl: 'Vóór het bod: beoordeling van de blinde vlekken (eigendom of huur, exploitatievergunningen, management- of franchisecontracten, online distributie, sleutelteams) → voorgestelde behandeling voor elk: prijs, garantie, opschortende voorwaarde.',
         },
         {
-          fr: 'Documenter et valoriser la base abonnés comme actif défendable face à un acquéreur ou distributeur',
-          en: 'Document and value the subscriber base as a defensible asset to an acquirer or distributor',
-          de: 'Die Abonnentenbasis als belastbares Asset gegenüber einem Käufer oder Distributor dokumentieren und bewerten',
-          es: 'Documentar y valorizar la base de abonados como activo defendible ante un comprador o distribuidor',
-          it: 'Documentare e valorizzare la base abbonati come asset difendibile verso un acquirente o distributore',
-          nl: 'De abonneebasis documenteren en waarderen als verdedigbaar actief tegenover een koper of distributeur',
+          fr: 'De la signature à l\'ouverture : planning intégré travaux, recrutement, marque et commercialisation → budget par lot et jalons.',
+          en: 'From signing to opening: integrated planning of works, recruitment, brand and go-to-market → budget per lot and milestones.',
+          de: 'Von der Unterzeichnung bis zur Eröffnung: integrierter Zeitplan für Arbeiten, Rekrutierung, Marke und Vermarktung → Budget pro Los und Meilensteine.',
+          es: 'De la firma a la apertura: planificación integrada de obras, contratación, marca y comercialización → presupuesto por lote e hitos.',
+          it: 'Dalla firma all\'apertura: pianificazione integrata di lavori, reclutamento, marchio e commercializzazione → budget per lotto e milestone.',
+          nl: 'Van ondertekening tot opening: geïntegreerde planning van werkzaamheden, werving, merk en commercialisering → budget per lot en mijlpalen.',
         },
         {
-          fr: 'Structurer un deal sur droits avec une documentation de gouvernance IP complète et certifiable',
-          en: 'Structure a rights deal with complete, certifiable IP governance documentation',
-          de: 'Einen Rechte-Deal mit vollständiger, zertifizierbarer IP-Governance-Dokumentation strukturieren',
-          es: 'Estructurar una operación sobre derechos con una documentación de gobernanza de IP completa y certificable',
-          it: 'Strutturare un deal sui diritti con una documentazione di governance IP completa e certificabile',
-          nl: 'Een rechten-deal structureren met volledige, certificeerbare IP-governance-documentatie',
+          fr: 'Après l\'ouverture : sélection du directeur et plan de rétention des équipes → fiche de poste, profils présélectionnés.',
+          en: 'After opening: selection of the director and team retention plan → job description, preselected profiles.',
+          de: 'Nach der Eröffnung: Auswahl des Direktors und Retentionsplan für die Teams → Stellenprofil, vorausgewählte Profile.',
+          es: 'Tras la apertura: selección del director y plan de retención de los equipos → ficha de puesto, perfiles preseleccionados.',
+          it: 'Dopo l\'apertura: selezione del direttore e piano di retention dei team → scheda di posizione, profili preselezionati.',
+          nl: 'Na de opening: selectie van de directeur en retentieplan voor de teams → functieprofiel, voorgeselecteerde profielen.',
         },
       ],
+      duration: {
+        fr: 'Durée type : 3 à 9 mois selon l\'ampleur des travaux.',
+        en: 'Typical duration: 3 to 9 months depending on the scale of the works.',
+        de: 'Typische Dauer: 3 bis 9 Monate je nach Umfang der Arbeiten.',
+        es: 'Duración típica: 3 a 9 meses según la envergadura de las obras.',
+        it: 'Durata tipica: da 3 a 9 mesi a seconda dell\'entità dei lavori.',
+        nl: 'Typische duur: 3 tot 9 maanden, afhankelijk van de omvang van de werkzaamheden.',
+      },
+      scenario: {
+        fr: 'Scénario illustratif : un groupe de restauration de 12 M€ rachète un hôtel de 40 chambres. La revue révèle un contrat de gestion avec clause de changement de contrôle et une dépendance à deux responsables. Les conditions de rétention sont ajoutées à l\'accord avant signature ; le planning de rénovation est calé sur la saison creuse.',
+        en: 'Illustrative scenario: a €12M restaurant group acquires a 40-room hotel. The review reveals a management contract with a change-of-control clause and a dependency on two managers. Retention conditions are added to the agreement before signing; the renovation schedule is aligned with the low season.',
+        de: 'Illustratives Szenario: eine Restaurantgruppe mit 12 Mio. EUR übernimmt ein Hotel mit 40 Zimmern. Die Prüfung deckt einen Managementvertrag mit Change-of-Control-Klausel und eine Abhängigkeit von zwei Führungskräften auf. Retentionsbedingungen werden vor der Unterzeichnung in die Vereinbarung aufgenommen; der Renovierungsplan wird auf die Nebensaison gelegt.',
+        es: 'Escenario ilustrativo: un grupo de restauración de 12 M€ adquiere un hotel de 40 habitaciones. La revisión revela un contrato de gestión con cláusula de cambio de control y una dependencia de dos responsables. Las condiciones de retención se añaden al acuerdo antes de la firma; el calendario de renovación se ajusta a la temporada baja.',
+        it: 'Scenario illustrativo: un gruppo di ristorazione da 12 M€ acquisisce un hotel da 40 camere. La revisione rivela un contratto di gestione con clausola di cambio di controllo e una dipendenza da due responsabili. Le condizioni di retention vengono aggiunte all\'accordo prima della firma; il calendario di ristrutturazione è calibrato sulla bassa stagione.',
+        nl: 'Illustratief scenario: een restaurantgroep van 12 miljoen euro neemt een hotel met 40 kamers over. De beoordeling brengt een managementcontract met change-of-control-clausule aan het licht en een afhankelijkheid van twee managers. Retentievoorwaarden worden vóór ondertekening aan de overeenkomst toegevoegd; de renovatieplanning wordt op het laagseizoen afgestemd.',
+      },
     },
     {
       label: {
-        fr: 'Opérateurs télécoms & services',
-        en: 'Telecom & service operators',
-        de: 'Telekom- & Service-Betreiber',
-        es: 'Operadores de telecom y servicios',
-        it: 'Operatori telecom & servizi',
-        nl: 'Telecom- & service-operators',
+        fr: 'Groupes médias, télécoms & services : cycles Transmission et Restructuration',
+        en: 'Media, telecom & services groups: Transfer and Restructuring cycles',
+        de: 'Medien-, Telekom- & Dienstleistungsgruppen: Zyklen Übergabe und Restrukturierung',
+        es: 'Grupos de medios, telecom y servicios: ciclos Transmisión y Reestructuración',
+        it: 'Gruppi media, telecom e servizi: cicli Trasmissione e Ristrutturazione',
+        nl: 'Media-, telecom- & dienstengroepen: cycli Overdracht en Herstructurering',
       },
       story: {
-        fr: 'Vous opérez une infrastructure ou une base d\'abonnés B2B significative et envisagez un rapprochement ou une cession partielle. La conformité BEREC, la documentation de vos actifs d\'infrastructure et la valorisation de vos contrats long terme sont des prérequis que votre acquéreur potentiel exige dès la phase d\'exclusivité.',
-        en: 'You operate an infrastructure or a significant B2B subscriber base and are considering a merger or partial sale. BEREC compliance, documentation of your infrastructure assets and valuation of your long-term contracts are prerequisites your potential acquirer demands from the exclusivity phase.',
-        de: 'Sie betreiben eine Infrastruktur oder eine bedeutende B2B-Abonnentenbasis und erwägen einen Zusammenschluss oder Teilverkauf. BEREC-Compliance, Dokumentation Ihrer Infrastruktur-Assets und Bewertung Ihrer langfristigen Verträge sind Voraussetzungen, die Ihr potenzieller Käufer bereits in der Exklusivphase verlangt.',
-        es: 'Opera una infraestructura o una base de abonados B2B significativa y considera una fusión o venta parcial. El cumplimiento BEREC, la documentación de sus activos de infraestructura y la valoración de sus contratos a largo plazo son requisitos que su comprador potencial exige desde la fase de exclusividad.',
-        it: 'Operate un\'infrastruttura o una base abbonati B2B significativa e valutate una fusione o una cessione parziale. Conformità BEREC, documentazione degli asset infrastrutturali e valorizzazione dei contratti di lungo periodo sono prerequisiti che il potenziale acquirente richiede fin dalla fase di esclusiva.',
-        nl: 'U exploiteert een infrastructuur of een aanzienlijke B2B-abonneebasis en overweegt een fusie of gedeeltelijke verkoop. BEREC-compliance, documentatie van uw infrastructuuractiva en waardering van uw langetermijncontracten zijn vereisten die uw potentiële koper al in de exclusiviteitsfase eist.',
+        fr: 'Vous exploitez un catalogue de droits ou une base d\'abonnés B2B et vous envisagez de céder une activité. Contrats long terme, droits, systèmes partagés, exigences du régulateur : l\'activité doit pouvoir tenir sans vous.',
+        en: 'You operate a rights catalogue or a B2B subscriber base and are considering divesting an activity. Long-term contracts, rights, shared systems, regulator requirements: the activity must be able to stand without you.',
+        de: 'Sie betreiben einen Rechtekatalog oder eine B2B-Abonnentenbasis und erwägen die Veräusserung einer Aktivität. Langfristige Verträge, Rechte, geteilte Systeme, Auflagen der Regulierungsbehörde: die Aktivität muss ohne Sie bestehen können.',
+        es: 'Explota un catálogo de derechos o una base de abonados B2B y considera ceder una actividad. Contratos a largo plazo, derechos, sistemas compartidos, exigencias del regulador: la actividad debe poder sostenerse sin usted.',
+        it: 'Gestite un catalogo di diritti o una base abbonati B2B e valutate di cedere un\'attività. Contratti di lungo periodo, diritti, sistemi condivisi, requisiti del regolatore: l\'attività deve poter reggere senza di voi.',
+        nl: 'U exploiteert een rechtencatalogus of een B2B-abonneebasis en overweegt een activiteit af te stoten. Langetermijncontracten, rechten, gedeelde systemen, eisen van de toezichthouder: de activiteit moet zonder u kunnen bestaan.',
       },
       problems: [
         {
-          fr: 'Documenter et certifier les actifs d\'infrastructure pour un financement ou une opération de fusion',
-          en: 'Document and certify infrastructure assets for financing or a merger operation',
-          de: 'Infrastruktur-Assets für eine Finanzierung oder Fusion dokumentieren und zertifizieren',
-          es: 'Documentar y certificar los activos de infraestructura para una financiación o una operación de fusión',
-          it: 'Documentare e certificare gli asset infrastrutturali per un finanziamento o un\'operazione di fusione',
-          nl: 'Infrastructuuractiva documenteren en certificeren voor een financiering of fusieoperatie',
+          fr: 'Dossier côté vendeur : droits, contrats long terme, clauses de changement de contrôle, conformité sectorielle (OFCOM en Suisse, BEREC dans l\'UE) → revue et liste des corrections.',
+          en: 'Vendor-side file: rights, long-term contracts, change-of-control clauses, sector compliance (OFCOM in Switzerland, BEREC in the EU) → review and list of corrections.',
+          de: 'Verkäuferseitiges Dossier: Rechte, langfristige Verträge, Change-of-Control-Klauseln, sektorale Compliance (OFCOM in der Schweiz, BEREC in der EU) → Prüfung und Liste der Korrekturen.',
+          es: 'Expediente del lado vendedor: derechos, contratos a largo plazo, cláusulas de cambio de control, cumplimiento sectorial (OFCOM en Suiza, BEREC en la UE) → revisión y lista de correcciones.',
+          it: 'Dossier lato venditore: diritti, contratti di lungo periodo, clausole di cambio di controllo, conformità settoriale (OFCOM in Svizzera, BEREC nell\'UE) → revisione e lista delle correzioni.',
+          nl: 'Dossier aan verkoperszijde: rechten, langetermijncontracten, change-of-control-clausules, sectorale compliance (OFCOM in Zwitserland, BEREC in de EU) → beoordeling en lijst van correcties.',
         },
         {
-          fr: 'Préparer la conformité réglementaire BEREC dans le cadre d\'un rapprochement transfrontalier',
-          en: 'Prepare BEREC regulatory compliance in the context of a cross-border merger',
-          de: 'BEREC-Compliance im Rahmen eines grenzüberschreitenden Zusammenschlusses vorbereiten',
-          es: 'Preparar el cumplimiento regulatorio BEREC en el marco de una fusión transfronteriza',
-          it: 'Preparare la conformità regolamentare BEREC nel contesto di una fusione transfrontaliera',
-          nl: 'BEREC-regelgevingscompliance voorbereiden in het kader van een grensoverschrijdende fusie',
+          fr: 'Séparation de l\'activité cédée : systèmes, personnes, accords de transition → plan de séparation.',
+          en: 'Separation of the divested activity: systems, people, transition agreements → separation plan.',
+          de: 'Abspaltung der veräusserten Aktivität: Systeme, Personen, Übergangsvereinbarungen → Separationsplan.',
+          es: 'Separación de la actividad cedida: sistemas, personas, acuerdos de transición → plan de separación.',
+          it: 'Separazione dell\'attività ceduta: sistemi, persone, accordi di transizione → piano di separazione.',
+          nl: 'Afsplitsing van de verkochte activiteit: systemen, mensen, overgangsafspraken → afsplitsingsplan.',
         },
         {
-          fr: 'Valoriser une base abonnés B2B avec des métriques de récurrence certifiables et transmissibles',
-          en: 'Value a B2B subscriber base with certifiable and transferable recurring metrics',
-          de: 'Eine B2B-Abonnentenbasis mit zertifizierbaren, übertragbaren Wiederkehr-Kennzahlen bewerten',
-          es: 'Valorizar una base de abonados B2B con métricas de recurrencia certificables y transmisibles',
-          it: 'Valorizzare una base abbonati B2B con metriche di ricorrenza certificabili e trasmissibili',
-          nl: 'Een B2B-abonneebasis waarderen met certificeerbare en overdraagbare recurrente metrics',
+          fr: 'Équipe de direction : successeurs, montée en responsabilité → plan sur 24 mois.',
+          en: 'Leadership team: successors, stepping up in responsibility → 24-month plan.',
+          de: 'Führungsteam: Nachfolger, Verantwortungsübernahme → 24-Monats-Plan.',
+          es: 'Equipo de dirección: sucesores, ascenso en responsabilidad → plan a 24 meses.',
+          it: 'Team dirigenziale: successori, crescita in responsabilità → piano a 24 mesi.',
+          nl: 'Directieteam: opvolgers, groei in verantwoordelijkheid → 24-maandenplan.',
         },
       ],
+      duration: {
+        fr: 'Durée type : 3 à 12 mois.',
+        en: 'Typical duration: 3 to 12 months.',
+        de: 'Typische Dauer: 3 bis 12 Monate.',
+        es: 'Duración típica: 3 a 12 meses.',
+        it: 'Durata tipica: da 3 a 12 mesi.',
+        nl: 'Typische duur: 3 tot 12 maanden.',
+      },
     },
   ],
+  segmentsFootnote: {
+    fr: 'L\'exécution de la transaction reste confiée à votre banque d\'affaires ou à vos avocats.',
+    en: 'Execution of the transaction remains with your investment bank or your lawyers.',
+    de: 'Die Ausführung der Transaktion bleibt Ihrer Investmentbank oder Ihren Anwälten überlassen.',
+    es: 'La ejecución de la transacción queda en manos de su banca de negocios o de sus abogados.',
+    it: 'L\'esecuzione della transazione resta affidata alla vostra banca d\'affari o ai vostri avvocati.',
+    nl: 'De uitvoering van de transactie blijft bij uw zakenbank of uw advocaten.',
+  },
   articleSlugs: [
     'valoriser-application-mobile-cession',
     'marche-ma-tech-europe-q4-2026',

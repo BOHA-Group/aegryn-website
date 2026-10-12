@@ -211,6 +211,11 @@ export default async function IndustryDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
+          {ind.expertiseFootnote && (
+            <p className="mt-6 font-sans text-[13px] text-ag-gray italic">
+              {getLocaleText(ind.expertiseFootnote, locale)}
+            </p>
+          )}
         </ScrollReveal>
       </section>
 
@@ -241,7 +246,9 @@ export default async function IndustryDetailPage({ params }: Props) {
                 </div>
                 {/* Problèmes */}
                 <div className="px-6 py-5 flex flex-col gap-2.5 bg-ag-white flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">{t('problemsLabel')}</p>
+                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
+                    {ind.problemsLabel ? getLocaleText(ind.problemsLabel, locale) : t('problemsLabel')}
+                  </p>
                   <ul className="flex flex-col gap-3">
                     {seg.problems.map((pb, j) => (
                       <li key={j} className="flex items-start gap-2.5">
@@ -250,10 +257,25 @@ export default async function IndustryDetailPage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
+                  {seg.duration && (
+                    <p className="mt-auto pt-3 font-sans text-[11px] font-semibold text-ag-black">
+                      {getLocaleText(seg.duration, locale)}
+                    </p>
+                  )}
+                  {seg.scenario && (
+                    <p className="mt-3 rounded-lg bg-ag-off-white border border-ag-border px-4 py-3 font-sans text-[11px] text-ag-gray leading-relaxed">
+                      {getLocaleText(seg.scenario, locale)}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
           </div>
+          {ind.segmentsFootnote && (
+            <p className="mt-6 font-sans text-[13px] text-ag-gray italic">
+              {getLocaleText(ind.segmentsFootnote, locale)}
+            </p>
+          )}
         </ScrollReveal>
       </section>
 
