@@ -29,7 +29,7 @@ const COVER_LAYOUT: { issue: typeof ISSUE_01; rot: string; left: string; top?: s
   { issue: ISSUE_01, rot: '-5deg', left: '3.5%', bottom: '42px', z: 1 },
   { issue: ISSUE_02, rot:  '3deg', left: '20%',  top: '170px',   z: 2 },
   { issue: ISSUE_03, rot: '-3deg', left: '46%',  top: '55px',    z: 3 },
-  { issue: ISSUE_04, rot:  '6deg', left: '61%',  top: '14px',    z: 4 },
+  { issue: ISSUE_04, rot:  '6deg', left: '66%',  bottom: '14px', z: 4 },
 ]
 
 interface Props {
