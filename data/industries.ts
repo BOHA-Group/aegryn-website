@@ -1380,22 +1380,6 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
       it: 'M&A retail e servizi Europa 2023 (Refinitiv 2024)',
       nl: 'retail- & diensten-M&A Europa 2023 (Refinitiv 2024)',
     }},
-    { value: '66%', label: {
-      fr: 'des deals retail bloqués par des manques de documentation data clients (Gartner 2023)',
-      en: 'of retail deals blocked by customer data documentation gaps (Gartner 2023)',
-      de: 'der Retail-Deals scheitern an fehlender Kundendaten-Dokumentation (Gartner 2023)',
-      es: 'de las operaciones retail bloqueadas por falta de documentación de datos de clientes (Gartner 2023)',
-      it: 'dei deal retail bloccati da carenze di documentazione dei dati clienti (Gartner 2023)',
-      nl: 'van retail-deals geblokkeerd door ontbrekende klantdata-documentatie (Gartner 2023)',
-    }},
-    { value: '4,6 Mrd EUR', label: {
-      fr: 'tourisme & hôtellerie M&A Europe 2023 (UNWTO / Dealroom)',
-      en: 'tourism & hospitality M&A Europe 2023 (UNWTO / Dealroom)',
-      de: 'Tourismus- & Hotel-M&A Europa 2023 (UNWTO / Dealroom)',
-      es: 'M&A turismo y hotelería Europa 2023 (UNWTO / Dealroom)',
-      it: 'M&A turismo e hotellerie Europa 2023 (UNWTO / Dealroom)',
-      nl: 'toerisme- & horeca-M&A Europa 2023 (UNWTO / Dealroom)',
-    }},
   ],
   sectors: [
     {
