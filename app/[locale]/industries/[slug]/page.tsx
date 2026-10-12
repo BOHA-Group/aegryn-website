@@ -101,10 +101,6 @@ export default async function IndustryDetailPage({ params }: Props) {
           {/* CTAs */}
           <ScrollReveal delay={0.3}>
           <div className="flex flex-wrap gap-3 mt-2">
-            <Link href="/grade"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
-              {t('certifCta')} <ArrowUpRight size={12} />
-            </Link>
             <Link href="/contact"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
               {t('contactCta')}
@@ -283,33 +279,6 @@ export default async function IndustryDetailPage({ params }: Props) {
           PUBLICATIONS ASSOCIÉES
       ════════════════════════════════════════════════════════ */}
       <IndustryArticles articles={articles} locale={locale} />
-
-      {/* ════════════════════════════════════════════════════════
-          CTA CERTIFICATION
-      ════════════════════════════════════════════════════════ */}
-      <section className="bg-ag-navy border-b border-white/10">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex/70 mb-3">
-              {t('ctaKicker')}
-            </p>
-            <p className="font-sans font-bold text-white max-w-lg leading-snug tracking-[-0.025em]"
-              style={{ fontSize: 'clamp(18px,2.2vw,28px)' }}>
-              {t('ctaTitle')}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3 shrink-0">
-            <Link href="/grade"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.16em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
-              {t('certifCta')} <ArrowUpRight size={12} />
-            </Link>
-            <Link href="/contact"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.16em] uppercase px-6 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
-              {t('contactCta')}
-            </Link>
-          </div>
-        </ScrollReveal>
-      </section>
 
       {/* ════════════════════════════════════════════════════════
           EXPLORE OTHER INDUSTRIES — compact, évite le scroll up
