@@ -17,4 +17,4 @@ sur le site — IDs vérifiés contre les CREDITS existants (advisory, franchir,
 
 | Fichier | Page | Source |
 |---|---|---|
-| hero-lighthouse.jpg | /career | https://www.pexels.com/photo/11019534/ |
+| hero-mountain.jpg | /career | https://www.pexels.com/photo/792167/ |

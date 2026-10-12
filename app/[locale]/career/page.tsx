@@ -44,7 +44,7 @@ export default async function CareerPage({ params }: Props) {
         style={{ minHeight: 'clamp(460px,50vw,620px)' }}
       >
         <Image
-          src="/images/career/hero-lighthouse.jpg"
+          src="/images/career/hero-mountain.jpg"
           alt={t('hero.imageAlt')}
           fill
           priority

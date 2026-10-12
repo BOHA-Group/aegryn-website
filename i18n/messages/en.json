@@ -1069,7 +1069,7 @@
       "label": "Work at Aegryn",
       "title": "Advisory & Digital Ecosystem Experts",
       "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, trajectory, talent, market intelligence. We do not occupy a niche: we define its rules.",
-      "imageAlt": "Red lighthouse standing against the sea spray, rough sea"
+      "imageAlt": "Snow-capped mountains by a lake"
     },
     "positions": {
       "label": "Upcoming positions",
@@ -4610,7 +4610,8 @@
     "hero": {
       "label": "Become a partner",
       "title": "Our network.\nOur strength.",
-      "desc": "Aegryn mobilises a network of individually selected experts: five advisory professions, a circle of investors and institutions, and independent auditors of the CIFSO 5000 certification."
+      "desc": "Aegryn mobilises a network of individually selected experts: five advisory professions, a circle of investors and institutions, and independent auditors of the CIFSO 5000 certification.",
+      "imageAlt": "White lighthouse by the sea, aerial view"
     },
     "side": {
       "group": "Domain experts",

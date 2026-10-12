@@ -1029,7 +1029,7 @@
       "label": "Travailler chez Aegryn",
       "title": "Construire ce qui dure.",
       "desc": "Aegryn est un cabinet de conseil intégré. Nous accompagnons les organisations européennes sur tout leur cycle de vie : conseil, construction, trajectoire, talents, intelligence de marché. Nous n'occupons pas une niche : nous en définissons les règles.",
-      "imageAlt": "Phare rouge dressé face aux embruns, mer agitée"
+      "imageAlt": "Montagnes enneigées au bord d'un lac"
     },
     "about": {
       "label": "Qui sommes-nous",
@@ -4570,7 +4570,8 @@
     "hero": {
       "label": "Devenir partenaire",
       "title": "Notre réseau.\nNotre force.",
-      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : cinq métiers de conseil, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000."
+      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : cinq métiers de conseil, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000.",
+      "imageAlt": "Phare blanc au bord de la mer, vue aérienne"
     },
     "side": {
       "group": "Experts métier",

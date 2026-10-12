@@ -1069,7 +1069,7 @@
       "label": "Bei Aegryn arbeiten",
       "title": "Advisory & Experten für digitale Ökosysteme",
       "desc": "Aegryn ist eine integrierte Beratungsgruppe. Wir begleiten europäische Organisationen über ihren gesamten Lebenszyklus: Beratung, Aufbau, Bahn, Talente, Marktintelligenz. Wir besetzen keine Nische: Wir definieren ihre Regeln.",
-      "imageAlt": "Roter Leuchtturm gegen die Gischt, aufgewühlte See"
+      "imageAlt": "Schneebedeckte Berge an einem See"
     },
     "positions": {
       "label": "Kommende Stellen",
@@ -4595,7 +4595,8 @@
     "hero": {
       "label": "Partner werden",
       "title": "Unser Netzwerk.\nUnsere Stärke.",
-      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: fünf Beratungsdisziplinen, ein Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung."
+      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: fünf Beratungsdisziplinen, ein Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
+      "imageAlt": "Weißer Leuchtturm am Meer, Luftaufnahme"
     },
     "side": {
       "group": "Fachexperten",
