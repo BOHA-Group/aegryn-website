@@ -139,7 +139,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-8">
             {t('sectorsLabel')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 ${ind.sectors.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
             {ind.sectors.map((sector, i) => {
               const sectorName = getLocaleText(sector.name, locale)
               const img = sector.img ?? SECTOR_IMG_FALLBACK
