@@ -67,8 +67,9 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
                 className="bg-ag-off-white px-6 pt-6 pb-5"
                 style={headerMinH ? { minHeight: headerMinH } : undefined}
               >
-                <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-3">
                   <Icon size={18} className="text-ag-apex-ink shrink-0" strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug flex-1">{seg.label}</h3>
                   <span
                     className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
                       expanded ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
@@ -77,10 +78,6 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
                   >
                     <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${expanded ? 'rotate-45' : ''}`} />
                   </span>
-                </div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex-ink shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug flex-1">{seg.label}</h3>
                 </div>
                 {/* Storytelling */}
                 <p className="font-sans text-[15px] text-ag-gray leading-relaxed italic">
@@ -95,11 +92,11 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
                 <div className="overflow-hidden min-h-0">
                   <div className="px-6 pt-5 pb-6 flex flex-col gap-2.5 bg-ag-white">
                     <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">{problemsLabel}</p>
-                    <ul className="flex flex-col gap-3">
+                    <ul className="space-y-1.5">
                       {seg.problems.map((pb, j) => (
-                        <li key={j} className="flex items-start gap-2.5">
-                          <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                          <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{pb}</span>
+                        <li key={j} className="flex items-start gap-2">
+                          <span className="mt-[5px] w-1 h-1 rounded-full bg-ag-apex shrink-0" />
+                          <span className="font-sans text-[12px] text-ag-gray-light leading-relaxed">{pb}</span>
                         </li>
                       ))}
                     </ul>
