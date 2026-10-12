@@ -67,9 +67,8 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
                 className="bg-ag-off-white px-6 pt-6 pb-5"
                 style={headerMinH ? { minHeight: headerMinH } : undefined}
               >
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center justify-between mb-4">
                   <Icon size={18} className="text-ag-apex-ink shrink-0" strokeWidth={1.5} aria-hidden="true" />
-                  <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug flex-1">{seg.label}</h3>
                   <span
                     className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
                       expanded ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
@@ -79,6 +78,7 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
                     <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${expanded ? 'rotate-45' : ''}`} />
                   </span>
                 </div>
+                <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug mb-3">{seg.label}</h3>
                 {/* Storytelling */}
                 <p className="font-sans text-[15px] text-ag-gray leading-relaxed italic">
                   &ldquo;{seg.story}&rdquo;
