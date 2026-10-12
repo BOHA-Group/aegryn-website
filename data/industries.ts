@@ -596,7 +596,7 @@ Drie punten bepalen de planning: markttoelating (MDR/IVDR, Swissmedic, EMA), de 
       },
     },
     {
-      img: '/images/industries/sector-biotech.jpg',
+      img: '/images/industries/sector-biotech-lab.jpg',
       name: {
         fr: 'Biotech, laboratoires & CRO',
         en: 'Biotech, laboratories & CROs',
