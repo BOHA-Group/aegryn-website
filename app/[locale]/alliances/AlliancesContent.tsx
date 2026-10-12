@@ -125,25 +125,25 @@ export default function AlliancesContent() {
         <div className="flex flex-col lg:flex-row gap-0">
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
-          <aside className="hidden lg:block shrink-0 w-64 border-r border-ag-border sticky top-20 self-start">
-            <nav className="flex flex-col gap-0 pr-6 pt-8 pb-6">
+          <aside className="hidden lg:block shrink-0 w-64 sticky top-20 self-start">
+            <nav className="flex flex-col gap-0 px-3 py-6 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
                   {gi > 0 && <div className="border-t border-ag-border mx-5 my-4" />}
                   <button
                     onClick={() => scrollToId(g.id)}
-                    className="w-full text-left px-5 pt-2 pb-1.5 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-black hover:text-ag-apex-ink transition-colors"
+                    className="w-full text-left px-5 pt-2 pb-1.5 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex-ink transition-colors"
                   >
                     {g.title}
                   </button>
-                  <p className="px-5 pb-2 font-sans text-[11px] text-ag-gray-light leading-snug">
+                  <p className="px-5 pb-2 font-sans text-[12px] text-ag-gray-light leading-snug">
                     {g.desc}
                   </p>
                   {g.subs?.map(key => (
                     <button
                       key={key}
                       onClick={() => scrollToId(key)}
-                      className="w-full text-left pl-8 pr-5 py-1.5 font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors"
+                      className="w-full text-left pl-8 pr-5 py-1.5 font-sans text-[13px] text-ag-gray-light hover:text-ag-black transition-colors"
                     >
                       {t(`metiers.items.${key}.title`)}
                     </button>
@@ -153,7 +153,7 @@ export default function AlliancesContent() {
               <div className="border-t border-ag-border mx-5 mt-4" />
               <button
                 onClick={() => scrollToId('candidature')}
-                className="w-full text-left px-5 pt-3 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black transition-colors"
+                className="w-full text-left px-5 pt-3 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-black transition-colors"
               >
                 {t('side.apply')}
               </button>
