@@ -40,6 +40,8 @@ export interface IndustrySegment {
   label:    LocaleText
   story:    LocaleText
   problems: LocaleText[]
+  /** Nom d'icone Lucide representant le profil (optionnel, voir IndustrySegments) */
+  icon?:    string
 }
 
 export interface Industry {
@@ -1578,6 +1580,7 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
         it: 'Retailer, e-commerce e insegne: ciclo Crescita',
         nl: 'Retailers, e-commercebedrijven & ketens: cyclus Groei',
       },
+      icon: 'Store',
       story: {
         fr: 'Vous réalisez l\'essentiel de votre chiffre en ligne et vous voulez ouvrir un deuxième pays et quelques boutiques en 18 mois. Plateforme, TVA et livraison multi-pays, consentement, logistique, recrutement : chaque chantier avance seul.',
         en: 'You generate most of your revenue online and you want to open a second country and a few stores within 18 months. Platform, VAT and multi-country delivery, consent, logistics, recruitment: each workstream moves forward on its own.',
@@ -1622,6 +1625,7 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
         it: 'Hotellerie, ristorazione e luoghi d\'eccezione: cicli Lancio e Acquisizione',
         nl: 'Horeca & bijzondere locaties: cycli Lancering en Overname',
       },
+      icon: 'Hotel',
       story: {
         fr: 'Vous reprenez un hôtel indépendant d\'une quarantaine de chambres à rénover et à repositionner. Entre le bail, les autorisations, les travaux, le recrutement et l\'ouverture, une dizaine d\'intervenants avancent chacun de leur côté.',
         en: 'You are taking over an independent hotel of about forty rooms to renovate and reposition. Between the lease, permits, works, recruitment and the opening, a dozen parties each move forward on their own side.',
@@ -1666,6 +1670,7 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
         it: 'Gruppi media, telecom e servizi: cicli Trasmissione e Ristrutturazione',
         nl: 'Media-, telecom- & dienstengroepen: cycli Overdracht en Herstructurering',
       },
+      icon: 'Radio',
       story: {
         fr: 'Vous exploitez un catalogue de droits ou une base d\'abonnés B2B et vous envisagez de céder une activité. Contrats long terme, droits, systèmes partagés, exigences du régulateur : l\'activité doit pouvoir tenir sans vous.',
         en: 'You operate a rights catalogue or a B2B subscriber base and are considering divesting an activity. Long-term contracts, rights, shared systems, regulator requirements: the activity must be able to stand without you.',

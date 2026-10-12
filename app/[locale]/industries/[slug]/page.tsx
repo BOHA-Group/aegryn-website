@@ -232,6 +232,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               label:    getLocaleText(seg.label, locale),
               story:    getLocaleText(seg.story, locale),
               problems: seg.problems.map(pb => getLocaleText(pb, locale)),
+              icon:     seg.icon,
             }))}
             problemsLabel={ind.problemsLabel ? getLocaleText(ind.problemsLabel, locale) : t('problemsLabel')}
             footnote={ind.segmentsFootnote ? getLocaleText(ind.segmentsFootnote, locale) : undefined}
