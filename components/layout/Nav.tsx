@@ -305,12 +305,12 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
 }
 
 // Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
-const INDUSTRY_CLUSTERS: { id: string; labelKey: string }[] = [
-  { id: 'finance',   labelKey: 'clusterFinance'   },
-  { id: 'sante',     labelKey: 'clusterSante'     },
-  { id: 'industrie', labelKey: 'clusterIndustrie' },
-  { id: 'commerce',  labelKey: 'clusterCommerce'  },
-  { id: 'tech',      labelKey: 'clusterTech'      },
+const INDUSTRY_CLUSTERS: { id: string; slug: string; labelKey: string }[] = [
+  { id: 'finance',   slug: 'finance-capital',                    labelKey: 'clusterFinance'   },
+  { id: 'sante',     slug: 'sante-sciences-de-la-vie',           labelKey: 'clusterSante'     },
+  { id: 'industrie', slug: 'industrie-energie-infrastructure',   labelKey: 'clusterIndustrie' },
+  { id: 'commerce',  slug: 'commerce-services-experience-client',labelKey: 'clusterCommerce'  },
+  { id: 'tech',      slug: 'tech-innovation-secteur-public',     labelKey: 'clusterTech'      },
 ]
 
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
@@ -376,10 +376,10 @@ function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; on
             {t('whoIndustriesDesc')}
           </p>
           <div className="flex flex-col divide-y divide-ag-border border-t border-ag-border">
-            {INDUSTRY_CLUSTERS.map(({ id, labelKey }) => (
+            {INDUSTRY_CLUSTERS.map(({ slug, labelKey }) => (
               <Link
-                key={id}
-                href={`/industries#${id}` as LinkHref}
+                key={slug}
+                href={`/industries/${slug}` as LinkHref}
                 onClick={onClose}
                 className="flex items-center justify-between py-2 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors group"
               >
@@ -837,8 +837,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   <div className="mt-2 pt-2 border-t border-white/10">
                     <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-2">{t('whoIndustries')}</p>
                     <div className="flex flex-col">
-                      {INDUSTRY_CLUSTERS.map(({ id, labelKey }) => (
-                        <Link key={id} href={`/industries#${id}` as LinkHref} onClick={closeMobile}
+                      {INDUSTRY_CLUSTERS.map(({ slug, labelKey }) => (
+                        <Link key={slug} href={`/industries/${slug}` as LinkHref} onClick={closeMobile}
                           className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors flex items-center justify-between group">
                           <span>{t(labelKey as Parameters<typeof t>[0])}</span>
                           <ArrowUpRight size={11} className="text-white/30 group-hover:text-white/70 transition-colors shrink-0" />
