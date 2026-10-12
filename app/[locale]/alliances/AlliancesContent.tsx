@@ -125,7 +125,7 @@ export default function AlliancesContent() {
         <div className="flex flex-col lg:flex-row gap-0">
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
-          <aside className="hidden lg:block shrink-0 w-64 sticky top-20 self-start">
+          <aside className="hidden lg:block shrink-0 w-64 lg:-ml-12 sticky top-20 self-start">
             <nav className="flex flex-col gap-0 px-3 py-6 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
@@ -200,7 +200,7 @@ export default function AlliancesContent() {
           </div>
 
           {/* ── Contenu ── */}
-          <div className="flex-1 min-w-0 py-10 lg:pl-12 flex flex-col gap-24">
+          <div className="flex-1 min-w-0 py-10 lg:pl-20 flex flex-col gap-24">
 
             {/* Intro — trois entrées */}
             <div>
