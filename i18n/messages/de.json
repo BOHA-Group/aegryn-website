@@ -1062,6 +1062,10 @@
         "btn": "Partnerschaften entdecken",
         "href": "/alliances"
       }
+    },
+    "meta": {
+      "title": "Über uns | Integrierte Beratungsgruppe | Aegryn",
+      "desc": "Aegryn ist eine in der Schweiz verankerte, integrierte Beratungsgruppe, die Führungskräfte über den gesamten Lebenszyklus ihrer Organisation begleitet: Beratung, Aufbau, Bahn, Talente, Marktintelligenz."
     }
   },
   "career": {
@@ -1155,6 +1159,10 @@
       },
       "label": "Unsere Werte",
       "title": "Wofür wir stehen."
+    },
+    "meta": {
+      "title": "Karriere | Integrierte Beratungsgruppe | Aegryn",
+      "desc": "Werden Sie Teil von Aegryn, einer integrierten Beratungsgruppe, die Organisationen über ihren gesamten Lebenszyklus begleitet: Beratung, Aufbau, Bahn, Talente, Marktintelligenz."
     }
   },
   "assetStatus": {

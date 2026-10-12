@@ -1062,6 +1062,10 @@
         "btn": "Scopri le partnership",
         "href": "/alliances"
       }
+    },
+    "meta": {
+      "title": "Chi siamo | Gruppo di consulenza integrata | Aegryn",
+      "desc": "Aegryn è un gruppo di consulenza integrata, con sede in Svizzera, che accompagna i dirigenti lungo tutto il ciclo di vita della loro organizzazione: consulenza, costruzione, traiettoria, talenti, market intelligence."
     }
   },
   "career": {
@@ -1155,6 +1159,10 @@
       },
       "label": "I nostri valori",
       "title": "In cosa crediamo."
+    },
+    "meta": {
+      "title": "Carriera | Gruppo di consulenza integrata | Aegryn",
+      "desc": "Unisciti ad Aegryn, un gruppo di consulenza integrata che accompagna le organizzazioni lungo tutto il loro ciclo di vita: consulenza, costruzione, traiettoria, talenti, market intelligence."
     }
   },
   "assetStatus": {

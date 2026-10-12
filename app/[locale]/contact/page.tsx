@@ -29,9 +29,10 @@ const VALID_CYCLES = ['lancement', 'croissance', 'restructuration', 'acquisition
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const slug = CONTACT_SLUG[locale] ?? '/contact'
+  const t = await getTranslations({ locale, namespace: 'contact.meta' })
   const base = generateAegrynMetadata({
-    title: 'Contact Aegryn | General, Partnership, Investor & Media',
-    description: "Reach out for general inquiries, media, partnerships, investments, or career opportunities. Let's build enduring digital ecosystems together.",
+    title: t('title'),
+    description: t('desc'),
     path: slug,
     locale,
   })

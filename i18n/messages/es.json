@@ -1062,6 +1062,10 @@
         "btn": "Descubrir asociaciones",
         "href": "/alliances"
       }
+    },
+    "meta": {
+      "title": "Sobre nosotros | Grupo de asesoría integrada | Aegryn",
+      "desc": "Aegryn es un grupo de asesoría integrada, con sede en Suiza, que acompaña a los dirigentes en cada ciclo de vida de su organización: asesoría, construcción, trayectoria, talento, inteligencia de mercado."
     }
   },
   "career": {
@@ -1155,6 +1159,10 @@
       },
       "label": "Nuestros valores",
       "title": "Lo que defendemos."
+    },
+    "meta": {
+      "title": "Carrera | Grupo de asesoría integrada | Aegryn",
+      "desc": "Únete a Aegryn, un grupo de asesoría integrada que acompaña a las organizaciones durante todo su ciclo de vida: asesoría, construcción, trayectoria, talento, inteligencia de mercado."
     }
   },
   "assetStatus": {

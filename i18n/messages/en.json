@@ -1062,6 +1062,10 @@
       "synthesis": "Three words from three civilisations. One synthesis: an entity that protects (AEGIS), facilitates flows (AEGIR), and builds for permanence (AEON). Aegryn.",
       "history": "Aegryn used to be called differently. As the company's positioning sharpened, from builder of digital assets to a certification and support group for organisations, its identity sharpened with it. The name changed. The conviction did not.",
       "formerly": "Aegryn used to be called differently. As the company's positioning sharpened, from builder of digital assets to a certification and support group for organisations, its identity sharpened with it. The name changed. The conviction did not."
+    },
+    "meta": {
+      "title": "About | Integrated Advisory Group | Aegryn",
+      "desc": "Aegryn is a Swiss integrated advisory group supporting leaders across every lifecycle of their organisation: advisory, build, trajectory, talent, market intelligence."
     }
   },
   "career": {
@@ -1155,6 +1159,10 @@
       },
       "label": "Our values",
       "title": "What we stand for."
+    },
+    "meta": {
+      "title": "Careers | Integrated Advisory Group | Aegryn",
+      "desc": "Join Aegryn, an integrated advisory group supporting organisations across their full lifecycle: advisory, build, trajectory, talent, market intelligence."
     }
   },
   "assetStatus": {

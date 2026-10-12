@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
@@ -25,9 +26,10 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const slug = ABOUT_SLUG[locale] ?? '/about'
+  const t = await getTranslations({ locale, namespace: 'about.meta' })
   const base = generateAegrynMetadata({
-    title: 'About Aegryn | Trust Infrastructure for European Tech M&A',
-    description: 'Certification. Discretion. Permanence. Three principles that shaped a name — and a company. Aegryn is the independent certification and transaction infrastructure for European tech M&A.',
+    title: t('title'),
+    description: t('desc'),
     path: slug,
     locale,
   })

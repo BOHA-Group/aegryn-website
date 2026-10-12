@@ -1062,6 +1062,10 @@
         "btn": "Partnerschappen ontdekken",
         "href": "/alliances"
       }
+    },
+    "meta": {
+      "title": "Over ons | Geïntegreerde adviesgroep | Aegryn",
+      "desc": "Aegryn is een in Zwitserland gevestigde, geïntegreerde adviesgroep die leiders begeleidt gedurende elke levenscyclus van hun organisatie: advies, opbouw, koers, talent, marktintelligentie."
     }
   },
   "career": {
@@ -1155,6 +1159,10 @@
       },
       "label": "Onze waarden",
       "title": "Waar wij voor staan."
+    },
+    "meta": {
+      "title": "Carrière | Geïntegreerde adviesgroep | Aegryn",
+      "desc": "Word onderdeel van Aegryn, een geïntegreerde adviesgroep die organisaties begeleidt gedurende hun hele levenscyclus: advies, opbouw, koers, talent, marktintelligentie."
     }
   },
   "assetStatus": {
