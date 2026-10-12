@@ -177,7 +177,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                     >
                       {sectorName}
                     </h3>
-                    <p className="font-sans text-[11px] text-white/60 leading-relaxed line-clamp-2">
+                    <p className="font-sans text-[12px] text-white/60 leading-relaxed line-clamp-2">
                       {getLocaleText(sector.desc, locale)}
                     </p>
                   </div>
@@ -201,9 +201,9 @@ export default async function IndustryDetailPage({ params }: Props) {
               <div key={i} className="bg-ag-white border border-ag-border rounded-xl p-7 flex flex-col gap-3 hover:bg-ag-off-white transition-colors">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-[9px] tracking-[0.22em] text-ag-apex-ink">{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(ex.title, locale)}</h3>
+                  <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug">{getLocaleText(ex.title, locale)}</h3>
                 </div>
-                <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{getLocaleText(ex.desc, locale)}</p>
+                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{getLocaleText(ex.desc, locale)}</p>
               </div>
             ))}
           </div>
@@ -233,10 +233,10 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <div className="bg-ag-off-white px-6 pt-6 pb-5 border-b border-ag-border">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex-ink shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                    <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug">{getLocaleText(seg.label, locale)}</h3>
+                    <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug">{getLocaleText(seg.label, locale)}</h3>
                   </div>
                   {/* Storytelling */}
-                  <p className="font-sans text-[12px] text-ag-gray leading-relaxed italic">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed italic">
                     &ldquo;{getLocaleText(seg.story, locale)}&rdquo;
                   </p>
                 </div>
@@ -249,17 +249,17 @@ export default async function IndustryDetailPage({ params }: Props) {
                     {seg.problems.map((pb, j) => (
                       <li key={j} className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                        <span className="font-sans text-[12px] text-ag-gray leading-relaxed">{getLocaleText(pb, locale)}</span>
+                        <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{getLocaleText(pb, locale)}</span>
                       </li>
                     ))}
                   </ul>
                   {seg.duration && (
-                    <p className="mt-auto pt-3 font-sans text-[11px] font-semibold text-ag-black">
+                    <p className="mt-auto pt-3 font-sans text-[12px] font-semibold text-ag-black">
                       {getLocaleText(seg.duration, locale)}
                     </p>
                   )}
                   {seg.scenario && (
-                    <p className="mt-3 rounded-lg bg-ag-off-white border border-ag-border px-4 py-3 font-sans text-[11px] text-ag-gray leading-relaxed">
+                    <p className="mt-3 rounded-lg bg-ag-off-white border border-ag-border px-4 py-3 font-sans text-[12px] text-ag-gray leading-relaxed">
                       {getLocaleText(seg.scenario, locale)}
                     </p>
                   )}
