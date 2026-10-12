@@ -1,11 +1,11 @@
 'use client'
 
 import { useLayoutEffect, useRef, useState } from 'react'
-import { Plus, Store, Hotel, Radio, Landmark, CreditCard, Briefcase, HeartPulse, Pill, Search, Factory, TrendingUp, Zap, Users } from 'lucide-react'
+import { Plus, Store, Hotel, Radio, Landmark, CreditCard, Briefcase, HeartPulse, Pill, Search, Factory, TrendingUp, Zap, Rocket, Users } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 const SEGMENT_ICONS: Record<string, LucideIcon> = {
-  Store, Hotel, Radio, Landmark, CreditCard, Briefcase, HeartPulse, Pill, Search, Factory, TrendingUp, Zap,
+  Store, Hotel, Radio, Landmark, CreditCard, Briefcase, HeartPulse, Pill, Search, Factory, TrendingUp, Zap, Rocket,
 }
 
 interface Segment {

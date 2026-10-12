@@ -1995,7 +1995,7 @@ export const ARTICLES: Article[] = [
 
   {
     slug:     'nrr-churn-ltv-cac-metriques-valorisation-saas',
-    category: 'certification',
+    category: 'vertical',
     date:     '2026-07-24',
     readMin:  12,
     featured: false,
@@ -3147,33 +3147,32 @@ export const ARTICLES: Article[] = [
     featured: false,
     aiAssisted: true,
     title: {
-      fr: "Tech, SaaS & IA : défendre la valeur des actifs immatériels face aux investisseurs",
-      en: "Tech, SaaS & AI: defending intangible asset value before investors and acquirers",
-      de: "Tech, SaaS & KI: den Wert immaterieller Vermögenswerte gegenüber Investoren verteidigen",
-      es: "Tech, SaaS & IA: defender el valor de los activos intangibles ante los inversores",
-      it: "Tech, SaaS & IA: difendere il valore degli asset immateriali davanti agli investitori",
-      nl: "Tech, SaaS & AI: de waarde van immateriële activa verdedigen tegenover investeerders"
+      fr: "Tech, SaaS & IA : ce que les investisseurs et les acheteurs publics vérifient avant de signer",
+      en: "Tech, SaaS & AI: what investors and public buyers verify before signing",
+      de: "Tech, SaaS & KI: was Investoren und öffentliche Auftraggeber vor der Unterzeichnung prüfen",
+      es: "Tech, SaaS & IA: lo que inversores y compradores públicos verifican antes de firmar",
+      it: "Tech, SaaS & IA: ciò che investitori e acquirenti pubblici verificano prima di firmare",
+      nl: "Tech, SaaS & AI: wat investeerders en publieke kopers controleren vóór het tekenen"
     },
     excerpt: {
-      fr: "Le paradoxe des organisations technologiques : une valeur intrinsèque élevée mais souvent indéfendable faute de documentation structurée. Analyse des enjeux de certification pour les SaaS, IA et GovTech en Europe.",
-      en: "The paradox of tech organisations: high intrinsic value but often indefensible for lack of structured documentation. Analysis of certification challenges for SaaS, AI and GovTech players in Europe.",
-      de: "Das Paradox der Technologieorganisationen: ein hoher intrinsischer Wert, der mangels strukturierter Dokumentation oft nicht belegbar ist. Analyse der Zertifizierungsfragen für SaaS, KI und GovTech in Europa.",
-      es: "La paradoja de las organizaciones tecnológicas: un valor intrínseco elevado pero a menudo indefendible por falta de documentación estructurada. Análisis de los retos de certificación para SaaS, IA y GovTech en Europa.",
-      it: "Il paradosso delle organizzazioni tecnologiche: un valore intrinseco elevato ma spesso indifendibile per mancanza di documentazione strutturata. Analisi delle questioni di certificazione per SaaS, IA e GovTech in Europa.",
-      nl: "De paradox van technologieorganisaties: een hoge intrinsieke waarde die bij gebrek aan gestructureerde documentatie vaak niet te verdedigen is. Analyse van de certificeringsvraagstukken voor SaaS, AI en GovTech in Europa."
+      fr: "Code, données, algorithmes, équipes : les actifs des organisations technologiques sont immatériels, et c'est leur maîtrise que les investisseurs et les acheteurs publics vérifient en premier. Analyse pour les SaaS, IA et GovTech en Europe.",
+      en: "Code, data, algorithms, teams: technology organisations' assets are intangible, and it is their control that investors and public buyers verify first. Analysis for SaaS, AI and GovTech players in Europe.",
+      de: "Code, Daten, Algorithmen, Teams: die Vermögenswerte von Technologieorganisationen sind immateriell, und genau deren Beherrschung prüfen Investoren und öffentliche Auftraggeber zuerst. Analyse für SaaS, KI und GovTech in Europa.",
+      es: "Código, datos, algoritmos, equipos: los activos de las organizaciones tecnológicas son intangibles, y es su dominio lo que inversores y compradores públicos verifican primero. Análisis para SaaS, IA y GovTech en Europa.",
+      it: "Codice, dati, algoritmi, team: gli asset delle organizzazioni tecnologiche sono immateriali, ed è il loro controllo che investitori e acquirenti pubblici verificano per primi. Analisi per SaaS, IA e GovTech in Europa.",
+      nl: "Code, data, algoritmen, teams: de activa van technologieorganisaties zijn immaterieel, en het is juist de beheersing daarvan die investeerders en publieke kopers als eerste controleren. Analyse voor SaaS, AI en GovTech in Europa."
     },
-    keywords: ['SaaS valeur défendable', 'IA actif immatériel', 'AI Act conformité valorisation', 'GovTech certification', 'CIFSO 5000 tech SaaS'],
+    keywords: ['SaaS due diligence', 'IA actif immatériel', 'AI Act conformité', 'GovTech marchés publics', 'souveraineté cloud tech'],
     body: [
       { type: 'p' as const, text: {
-        fr: "L'Atomico State of European Tech 2023 recense 131 milliards d'euros investis dans la tech européenne. Pourtant, dans la majorité des transactions, les actifs technologiques les plus précieux (algorithmes propriétaires, données d'entraînement, code métier) restent non documentés et donc indéfendables lors d'une due diligence.",
-        en: "The Atomico State of European Tech 2023 records 131 billion euros invested in European tech. Yet in most transactions, the most valuable tech assets (proprietary algorithms, training data, business code) remain undocumented and therefore indefensible in due diligence.",
-        de: "Der Atomico State of European Tech 2023 zählt 131 Milliarden Euro, die in europäische Tech investiert wurden. Dennoch bleiben in den meisten Transaktionen die wertvollsten Technologie-Assets, proprietäre Algorithmen, Trainingsdaten, Fachcode, undokumentiert und damit in einer Due Diligence nicht belegbar.",
-        es: "El Atomico State of European Tech 2023 contabiliza 131 000 millones de euros invertidos en la tecnología europea. Sin embargo, en la mayoría de las transacciones, los activos tecnológicos más valiosos, algoritmos propietarios, datos de entrenamiento, código de negocio, permanecen sin documentar y, por tanto, indefendibles en una due diligence.",
-        it: "L'Atomico State of European Tech 2023 conta 131 miliardi di euro investiti nella tecnologia europea. Eppure, nella maggior parte delle transazioni, gli asset tecnologici più preziosi, algoritmi proprietari, dati di addestramento, codice di business, restano non documentati e quindi indifendibili in una due diligence.",
-        nl: "De Atomico State of European Tech 2023 telt 131 miljard euro geïnvesteerd in Europese tech. Toch blijven in de meeste transacties de meest waardevolle technologische activa, eigen algoritmen, trainingsdata, bedrijfscode, ongedocumenteerd en dus niet te verdedigen in een due diligence."
+        fr: "Les organisations technologiques construisent sur des actifs immatériels : algorithmes propriétaires, données d'entraînement, code métier, équipes. Pourtant, dans la majorité des transactions, ces actifs restent peu documentés : propriété du code dispersée, dépendances aux fournisseurs de modèles non cartographiées, gouvernance des données informelle. C'est exactement ce que l'investisseur ou l'acheteur public cherche à vérifier.",
+        en: "Technology organisations build on intangible assets: proprietary algorithms, training data, business code, teams. Yet in most transactions these assets remain poorly documented: scattered code ownership, unmapped dependencies on model providers, informal data governance. That is exactly what the investor or the public buyer seeks to verify.",
+        de: "Technologieorganisationen bauen auf immaterielle Vermögenswerte: proprietäre Algorithmen, Trainingsdaten, Fachcode, Teams. Doch in den meisten Transaktionen bleiben diese Assets kaum dokumentiert: verstreutes Code-Eigentum, nicht kartierte Abhängigkeiten von Modellanbietern, informelle Data Governance. Genau das versuchen Investor oder öffentlicher Auftraggeber zu verifizieren.",
+        es: "Las organizaciones tecnológicas construyen sobre activos intangibles: algoritmos propietarios, datos de entrenamiento, código de negocio, equipos. Sin embargo, en la mayoría de las transacciones estos activos permanecen poco documentados: propiedad del código dispersa, dependencias de los proveedores de modelos no cartografiadas, gobernanza de datos informal. Es exactamente lo que el inversor o el comprador público busca verificar.",
+        it: "Le organizzazioni tecnologiche costruiscono su asset immateriali: algoritmi proprietari, dati di addestramento, codice di business, team. Eppure nella maggior parte delle transazioni questi asset restano poco documentati: proprietà del codice dispersa, dipendenze dai fornitori di modelli non mappate, governance dei dati informale. È esattamente ciò che l'investitore o l'acquirente pubblico cerca di verificare.",
+        nl: "Technologieorganisaties bouwen op immateriële activa: eigen algoritmen, trainingsdata, bedrijfscode, teams. Toch blijven deze activa in de meeste transacties nauwelijks gedocumenteerd: verspreid code-eigendom, niet in kaart gebrachte afhankelijkheden van modelleveranciers, informele datagovernance. Dat is precies wat de investeerder of de publieke koper wil verifiëren."
       }},
       { type: 'stats' as const, items: [
-        { value: '131 Mrd EUR', label: { fr: "investissement VC tech Europe 2023 (Atomico State of European Tech 2023)", en: "VC investment tech Europe 2023 (Atomico State of European Tech 2023)", de: "VC-Investitionen Tech Europa 2023 (Atomico State of European Tech 2023)", es: "inversión VC tech Europa 2023 (Atomico State of European Tech 2023)", it: "investimenti VC tech Europa 2023 (Atomico State of European Tech 2023)", nl: "VC-investeringen tech Europa 2023 (Atomico State of European Tech 2023)"} },
         { value: '4,5x ARR',    label: { fr: "multiple médian SaaS B2B Europe mid-market 2024 (SaaS Capital 2024)", en: "median ARR multiple SaaS B2B Europe mid-market 2024 (SaaS Capital 2024)", de: "Median-Multiplikator B2B-SaaS Europa Mid-Market 2024 (SaaS Capital 2024)", es: "múltiplo mediano SaaS B2B Europa mid-market 2024 (SaaS Capital 2024)", it: "multiplo mediano SaaS B2B Europa mid-market 2024 (SaaS Capital 2024)", nl: "mediane multiple B2B SaaS Europa mid-market 2024 (SaaS Capital 2024)"} },
         { value: '41 Mrd EUR',  label: { fr: "marché cloud souverain Europe 2028 estimé (IDC / Gartner 2024)", en: "estimated European sovereign cloud market 2028 (IDC / Gartner 2024)", de: "geschätzter Markt für souveräne Cloud Europa 2028 (IDC / Gartner 2024)", es: "mercado cloud soberano Europa 2028 estimado (IDC / Gartner 2024)", it: "mercato cloud sovrano Europa 2028 stimato (IDC / Gartner 2024)", nl: "geschatte markt soevereine cloud Europa 2028 (IDC / Gartner 2024)"} },
       ]},
@@ -3188,21 +3187,21 @@ export const ARTICLES: Article[] = [
       }},
       { type: 'h2' as const, text: { fr: "Les métriques SaaS ne suffisent plus", en: "SaaS metrics are no longer enough", de: "SaaS-Kennzahlen reichen nicht mehr aus", es: "Las métricas SaaS ya no bastan", it: "Le metriche SaaS non bastano più", nl: "SaaS-metrics volstaan niet meer"} },
       { type: 'p' as const, text: {
-        fr: "NRR, churn, LTV/CAC sont devenus des standards. Mais les acquéreurs sophistiqués examinent aujourd'hui la robustesse de l'architecture technique, la souveraineté des données et la dépendance aux personnes-clés, des dimensions couvertes par la Certification CIFSO 5000.",
-        en: "NRR, churn, LTV/CAC have become market standards. But sophisticated acquirers now examine the robustness of the technical architecture, data sovereignty and key person dependencies, dimensions covered by CIFSO 5000 Certification.",
-        de: "NRR, Churn, LTV/CAC sind zu Standards geworden. Doch anspruchsvolle Erwerber prüfen heute die Robustheit der technischen Architektur, die Datensouveränität und die Abhängigkeit von Schlüsselpersonen, Dimensionen, die die CIFSO 5000 Zertifizierung abdeckt.",
-        es: "NRR, churn, LTV/CAC se han convertido en estándares. Pero los adquirentes sofisticados examinan hoy la robustez de la arquitectura técnica, la soberanía de los datos y la dependencia de las personas clave, dimensiones cubiertas por la Certificación CIFSO 5000.",
-        it: "NRR, churn, LTV/CAC sono diventati standard. Ma gli acquirenti sofisticati esaminano oggi la robustezza dell'architettura tecnica, la sovranità dei dati e la dipendenza dalle persone chiave, dimensioni coperte dalla Certificazione CIFSO 5000.",
-        nl: "NRR, churn, LTV/CAC zijn standaarden geworden. Maar gesofisticeerde kopers onderzoeken vandaag de robuustheid van de technische architectuur, de datasoevereiniteit en de afhankelijkheid van sleutelpersonen, dimensies die de CIFSO 5000-certificering dekt."
+        fr: "NRR, churn, LTV/CAC sont devenus des standards. Mais les acquéreurs sophistiqués examinent aujourd'hui la robustesse de l'architecture technique, la souveraineté des données et la dépendance aux personnes clés : autant de dimensions qui ne figurent pas dans le reporting mensuel des fondateurs.",
+        en: "NRR, churn, LTV/CAC have become market standards. But sophisticated acquirers now examine the robustness of the technical architecture, data sovereignty and key person dependencies: dimensions that do not appear in founders' monthly reporting.",
+        de: "NRR, Churn, LTV/CAC sind zu Standards geworden. Doch anspruchsvolle Erwerber prüfen heute die Robustheit der technischen Architektur, die Datensouveränität und die Abhängigkeit von Schlüsselpersonen: Dimensionen, die im monatlichen Reporting der Gründer nicht auftauchen.",
+        es: "NRR, churn, LTV/CAC se han convertido en estándares. Pero los adquirentes sofisticados examinan hoy la robustez de la arquitectura técnica, la soberanía de los datos y la dependencia de las personas clave: dimensiones que no figuran en el reporting mensual de los fundadores.",
+        it: "NRR, churn, LTV/CAC sono diventati standard. Ma gli acquirenti sofisticati esaminano oggi la robustezza dell'architettura tecnica, la sovranità dei dati e la dipendenza dalle persone chiave: dimensioni che non compaiono nel reporting mensile dei fondatori.",
+        nl: "NRR, churn, LTV/CAC zijn standaarden geworden. Maar gesofisticeerde kopers onderzoeken vandaag de robuustheid van de technische architectuur, de datasoevereiniteit en de afhankelijkheid van sleutelpersonen: dimensies die niet in de maandelijkse rapportage van oprichters voorkomen."
       }},
-      { type: 'h2' as const, text: { fr: "GovTech : la certification comme condition d'accès au marché public", en: "GovTech: certification as a condition for public market access", de: "GovTech: Zertifizierung als Bedingung für den Zugang zu öffentlichen Aufträgen", es: "GovTech: la certificación como condición de acceso al mercado público", it: "GovTech: la certificazione come condizione di accesso agli appalti pubblici", nl: "GovTech: certificering als voorwaarde voor toegang tot de overheidsmarkt"} },
+      { type: 'h2' as const, text: { fr: "GovTech : la souveraineté comme condition d'accès aux marchés publics", en: "GovTech: sovereignty as a condition for access to public procurement", de: "GovTech: Souveränität als Bedingung für den Zugang zu öffentlichen Aufträgen", es: "GovTech: la soberanía como condición de acceso a la contratación pública", it: "GovTech: la sovranità come condizione di accesso agli appalti pubblici", nl: "GovTech: soevereiniteit als voorwaarde voor toegang tot overheidsopdrachten"} },
       { type: 'p' as const, text: {
-        fr: "Le marché GovTech européen impose des exigences croissantes : cloud souverain, conformité NIS2, interopérabilité. Pour un éditeur ciblant les marchés publics, la capacité à démontrer ces exigences dans un format indépendant est devenue un facteur différenciant dans les appels d'offres.",
-        en: "The European GovTech market imposes increasing requirements: sovereign cloud, NIS2 compliance, interoperability. For a publisher targeting public markets, the ability to demonstrate these requirements in an independent format has become a differentiating factor in tenders.",
-        de: "Der europäische GovTech-Markt stellt wachsende Anforderungen: souveräne Cloud, NIS2-Konformität, Interoperabilität. Für einen Anbieter, der öffentliche Aufträge anstrebt, ist die Fähigkeit, diese Anforderungen in einem unabhängigen Format nachzuweisen, zu einem Unterscheidungsmerkmal in Ausschreibungen geworden.",
-        es: "El mercado GovTech europeo impone exigencias crecientes: cloud soberano, conformidad NIS2, interoperabilidad. Para un editor que apunta a los mercados públicos, la capacidad de demostrar estas exigencias en un formato independiente se ha convertido en un factor diferenciador en las licitaciones.",
-        it: "Il mercato GovTech europeo impone esigenze crescenti: cloud sovrano, conformità NIS2, interoperabilità. Per un editore che punta agli appalti pubblici, la capacità di dimostrare queste esigenze in un formato indipendente è diventata un fattore differenziante nelle gare.",
-        nl: "De Europese GovTech-markt stelt toenemende eisen: soevereine cloud, NIS2-conformiteit, interoperabiliteit. Voor een leverancier die op overheidsopdrachten mikt, is het vermogen om die eisen in een onafhankelijk formaat aan te tonen een onderscheidende factor in aanbestedingen geworden."
+        fr: "Le marché GovTech européen impose des exigences croissantes : hébergement souverain, conformité NIS2, interopérabilité. Pour un éditeur ciblant les marchés publics, la capacité à démontrer ces exigences de manière documentée est devenue un facteur différenciant dans les appels d'offres.",
+        en: "The European GovTech market imposes increasing requirements: sovereign hosting, NIS2 compliance, interoperability. For a publisher targeting public procurement, the ability to demonstrate these requirements in a documented manner has become a differentiating factor in tenders.",
+        de: "Der europäische GovTech-Markt stellt wachsende Anforderungen: souveränes Hosting, NIS2-Konformität, Interoperabilität. Für einen Anbieter, der öffentliche Aufträge anstrebt, ist die dokumentierte Erfüllung dieser Anforderungen zu einem Unterscheidungsmerkmal in Ausschreibungen geworden.",
+        es: "El mercado GovTech europeo impone exigencias crecientes: alojamiento soberano, conformidad NIS2, interoperabilidad. Para un editor que apunta a la contratación pública, la capacidad de demostrar estas exigencias de forma documentada se ha convertido en un factor diferenciador en las licitaciones.",
+        it: "Il mercato GovTech europeo impone esigenze crescenti: hosting sovrano, conformità NIS2, interoperabilità. Per un editore che punta agli appalti pubblici, la capacità di dimostrare queste esigenze in modo documentato è diventata un fattore differenziante nelle gare.",
+        nl: "De Europese GovTech-markt stelt toenemende eisen: soevereine hosting, NIS2-conformiteit, interoperabiliteit. Voor een leverancier die op overheidsopdrachten mikt, is het vermogen om die eisen gedocumenteerd aan te tonen een onderscheidende factor in aanbestedingen geworden."
       }},
     ],
   },
