@@ -3031,20 +3031,20 @@ export const ARTICLES: Article[] = [
     featured: false,
     aiAssisted: true,
     title: {
-      fr: "Industrie, Énergie & Infrastructure : documenter la valeur que les bilans ne voient pas",
-      en: "Industry, Energy & Infrastructure: documenting value that balance sheets cannot see",
-      de: "Industrie, Energie & Infrastruktur: den Wert dokumentieren, den Bilanzen nicht sehen",
-      es: "Industria, Energía & Infraestructura: documentar el valor que los balances no ven",
-      it: "Industria, Energia & Infrastrutture: documentare il valore che i bilanci non vedono",
-      nl: "Industrie, Energie & Infrastructuur: de waarde documenteren die balansen niet zien"
+      fr: "Industrie, Énergie & Infrastructure : ce que les bilans ne voient pas, et ce que les repreneurs regardent",
+      en: "Industry, Energy & Infrastructure: what balance sheets cannot see, and what acquirers look at",
+      de: "Industrie, Energie & Infrastruktur: was Bilanzen nicht sehen, und worauf Übernehmer achten",
+      es: "Industria, Energía & Infraestructura: lo que los balances no ven, y lo que miran los compradores",
+      it: "Industria, Energia & Infrastrutture: ciò che i bilanci non vedono, e ciò che guardano gli acquirenti",
+      nl: "Industrie, Energie & Infrastructuur: wat balansen niet zien, en waarop overnemers letten"
     },
     excerpt: {
-      fr: "Les PME et ETI industrielles portent une valeur opérationnelle souvent indéfendable faute de documentation. En période de transition énergétique et de consolidation, cette lacune bloque le financement et la transmission.",
-      en: "Industrial SMEs and mid-caps carry operational value that is often indefensible for lack of documentation. In a period of energy transition and sector consolidation, this gap blocks financing and transfer.",
-      de: "Industrielle KMU und mittelgrosse Unternehmen tragen einen operativen Wert, der mangels Dokumentation oft nicht belegbar ist. In Zeiten der Energiewende und der Konsolidierung blockiert diese Lücke Finanzierung und Übertragung.",
-      es: "Las pymes y empresas medianas industriales encierran un valor operativo a menudo indefendible por falta de documentación. En periodo de transición energética y de consolidación, esta carencia bloquea la financiación y la transmisión.",
-      it: "Le PMI e le medie imprese industriali portano un valore operativo spesso indifendibile per mancanza di documentazione. In un periodo di transizione energetica e di consolidamento, questa lacuna blocca finanziamento e trasmissione.",
-      nl: "Industriële kmo's en middelgrote ondernemingen dragen een operationele waarde die bij gebrek aan documentatie vaak niet te verdedigen is. In tijden van energietransitie en consolidatie blokkeert die leemte financiering en overdracht."
+      fr: "Savoir-faire opérationnel, contrats de long terme, réseaux de sous-traitants : les ETI industrielles portent des actifs que les bilans montrent mal. En période de transition énergétique et de consolidation, ce sont ces points que les financeurs et les repreneurs regardent en premier.",
+      en: "Operational know-how, long-term contracts, subcontractor networks: industrial mid-caps carry assets that balance sheets barely show. During energy transition and consolidation, these are the points financiers and acquirers look at first.",
+      de: "Operatives Know-how, langfristige Verträge, Zulieferernetze: Industrielle Mid-Caps tragen Vermögenswerte, die Bilanzen kaum zeigen. In Zeiten von Energiewende und Konsolidierung sind es genau diese Punkte, auf die Finanzierer und Übernehmer zuerst schauen.",
+      es: "Saber hacer operativo, contratos a largo plazo, redes de subcontratistas: las ETI industriales encierran activos que los balances apenas muestran. En periodo de transición energética y consolidación, son precisamente estos puntos los que financiadores y compradores miran primero.",
+      it: "Know-how operativo, contratti di lungo periodo, reti di subappaltatori: le medie imprese industriali portano asset che i bilanci mostrano poco. In un periodo di transizione energetica e consolidamento, sono proprio questi i punti che finanziatori e acquirenti guardano per primi.",
+      nl: "Operationele knowhow, langetermijncontracten, toeleveranciersnetwerken: industriële midcaps dragen activa die balansen nauwelijks tonen. In tijden van energietransitie en consolidatie zijn het juist deze punten waarop financiers en overnemers als eerste letten."
     },
     keywords: ['PME ETI valeur transmissible', 'transition énergétique financement', 'industrie 4.0 M&A', 'certification opérationnelle', 'CIFSO 5000 industrie'],
     body: [
