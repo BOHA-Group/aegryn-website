@@ -234,6 +234,9 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 
 ### Talent
 - [Talent](https://aegryn.com/fr/talent) — Executive tech recruitment
+- [Talent — Entreprises](https://aegryn.com/fr/talent/entreprises) — Hiring mandate submission
+- [Talent — Candidats](https://aegryn.com/fr/talent/candidats) — Candidate profile submission
+- [Talent — Transition](https://aegryn.com/fr/talent/transition) — Interim and transition profiles
 - [Workforce & Skills](https://aegryn.com/fr/workforce) — Employment/AI-skills market data (World Economic Forum, PwC)
 
 ### Expert Network
