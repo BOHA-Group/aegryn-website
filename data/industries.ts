@@ -1359,8 +1359,8 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
         nl: 'Retail & E-commerce',
       },
       tag: {
-        fr: 'Masse', en: 'Mass market', de: 'Massenmarkt',
-        es: 'Masivo',  it: 'Mass market', nl: 'Massamarkt',
+        fr: 'Omnicanal', en: 'Omnichannel', de: 'Omnichannel',
+        es: 'Omnicanal',  it: 'Omnicanale',  nl: 'Omnikanaal',
       },
       desc: {
         fr: 'Plateformes omnicanales, IA personnalisation, logistique last-mile et données first-party défendables.',
@@ -1382,8 +1382,8 @@ In deze sectoren wegen margedruk, seizoensgebonden vraag of personeelsverloop pe
         nl: 'Horeca & Toerisme',
       },
       tag: {
-        fr: 'Récupération', en: 'Recovery', de: 'Erholung',
-        es: 'Recuperación',  it: 'Ripresa', nl: 'Herstel',
+        fr: 'Saisonnier', en: 'Seasonal', de: 'Saisonal',
+        es: 'Estacional',  it: 'Stagionale', nl: 'Seizoensgebonden',
       },
       desc: {
         fr: 'Revenue management, expérience digitale, ESG et valorisation des marques hôtelières pour cession.',
