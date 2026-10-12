@@ -146,8 +146,8 @@ export function MissionVideoSection() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:h-full flex flex-col justify-center py-16 lg:pt-20 lg:pb-0">
 
-          {/* Header row */}
-          <div className="mv-border flex items-center justify-between border-b py-4 mb-0">
+          {/* Header row — mobile : nom de section au-dessus du sous-titre */}
+          <div className="mv-border flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between border-b py-4 mb-0">
             <p className="mv-label font-sans font-semibold text-[10px] uppercase tracking-[0.28em]">
               / {tM('label')}
             </p>

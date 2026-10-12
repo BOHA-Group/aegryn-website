@@ -35,7 +35,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
   return (
     <div
       className="bg-ag-white"
-      onMouseEnter={() => setHovered(true)}
+      onMouseEnter={() => { if (window.matchMedia('(hover: hover)').matches) setHovered(true) }}
       onMouseLeave={() => setHovered(false)}
     >
       <button

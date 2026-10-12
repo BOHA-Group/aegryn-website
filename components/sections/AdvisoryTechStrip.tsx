@@ -71,7 +71,7 @@ export function AdvisoryTechStrip() {
                 key={key}
                 className="adv-service-card bg-ag-white p-8 md:p-10 flex flex-col gap-5 cursor-pointer"
                 style={{ opacity: 0 }}
-                onMouseEnter={() => setHovered(key)}
+                onMouseEnter={() => { if (window.matchMedia('(hover: hover)').matches) setHovered(key) }}
                 onMouseLeave={() => setHovered(null)}
                 onClick={() => setPinned(pinned === key ? null : key)}
                 aria-expanded={expanded}

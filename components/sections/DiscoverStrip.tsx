@@ -24,10 +24,11 @@ import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/b
  * - Covers = IssueMiniCard identiques à la page magazine (overlays texte inclus)
  * - Pas de badge "À venir" (isPublic/isPreview ne sont pas utilisés pour le rendu décoratif)
  */
+/* Covers classées par date de parution, issue-01 en premier à gauche */
 const COVER_LAYOUT: { issue: typeof ISSUE_01; rot: string; left: string; top?: string; bottom?: string; z: number }[] = [
-  { issue: ISSUE_03, rot: '-5deg', left: '3.5%', bottom: '42px', z: 1 },
-  { issue: ISSUE_01, rot:  '3deg', left: '20%',  top: '170px',   z: 2 },
-  { issue: ISSUE_02, rot: '-3deg', left: '46%',  top: '55px',    z: 3 },
+  { issue: ISSUE_01, rot: '-5deg', left: '3.5%', bottom: '42px', z: 1 },
+  { issue: ISSUE_02, rot:  '3deg', left: '20%',  top: '170px',   z: 2 },
+  { issue: ISSUE_03, rot: '-3deg', left: '46%',  top: '55px',    z: 3 },
   { issue: ISSUE_04, rot:  '6deg', left: '61%',  top: '14px',    z: 4 },
 ]
 
@@ -159,7 +160,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         </div>
 
         {/* Zone covers — mobile : scroll horizontal sous la card texte, dans le flux */}
-        <div className="lg:hidden flex gap-3 overflow-x-auto px-6 pb-6 pt-4 pointer-events-none"
+        <div className="lg:hidden flex gap-3 overflow-x-auto px-6 pb-6 pt-4"
           style={{ scrollbarWidth: 'none' }}
         >
           {COVER_LAYOUT.map(({ issue }, i) => (
