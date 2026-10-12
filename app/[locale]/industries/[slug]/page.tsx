@@ -10,6 +10,7 @@ import { WaveReveal }   from '@/components/animations/WaveReveal'
 import { INDUSTRIES, getIndustry, getOtherIndustries, getLocaleText } from '@/data/industries'
 import { ARTICLES }  from '@/data/articles'
 import { IndustryArticles } from '@/components/sections/industries/IndustryArticles'
+import { IndustrySegments } from '@/components/sections/industries/IndustrySegments'
 
 const SECTOR_IMG_FALLBACK = '/images/blog/modern-office.jpg'
 
@@ -226,42 +227,15 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="font-sans text-[13px] text-ag-gray-light mb-8 max-w-xl">
             {t('segmentsSub')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {ind.segments.map((seg, i) => (
-              <div key={i} className="border border-ag-border rounded-2xl flex flex-col overflow-hidden">
-                {/* Header persona */}
-                <div className="bg-ag-off-white px-6 pt-6 pb-5 border-b border-ag-border">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-[9px] tracking-[0.2em] text-ag-apex-ink shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                    <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug">{getLocaleText(seg.label, locale)}</h3>
-                  </div>
-                  {/* Storytelling */}
-                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed italic">
-                    &ldquo;{getLocaleText(seg.story, locale)}&rdquo;
-                  </p>
-                </div>
-                {/* Problèmes */}
-                <div className="px-6 py-5 flex flex-col gap-2.5 bg-ag-white flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-gray-light mb-1">
-                    {ind.problemsLabel ? getLocaleText(ind.problemsLabel, locale) : t('problemsLabel')}
-                  </p>
-                  <ul className="flex flex-col gap-3">
-                    {seg.problems.map((pb, j) => (
-                      <li key={j} className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1 h-1 rounded-full bg-ag-apex shrink-0" />
-                        <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{getLocaleText(pb, locale)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-          {ind.segmentsFootnote && (
-            <p className="mt-6 font-sans text-[13px] text-ag-gray italic">
-              {getLocaleText(ind.segmentsFootnote, locale)}
-            </p>
-          )}
+          <IndustrySegments
+            segments={ind.segments.map(seg => ({
+              label:    getLocaleText(seg.label, locale),
+              story:    getLocaleText(seg.story, locale),
+              problems: seg.problems.map(pb => getLocaleText(pb, locale)),
+            }))}
+            problemsLabel={ind.problemsLabel ? getLocaleText(ind.problemsLabel, locale) : t('problemsLabel')}
+            footnote={ind.segmentsFootnote ? getLocaleText(ind.segmentsFootnote, locale) : undefined}
+          />
         </ScrollReveal>
       </section>
 
