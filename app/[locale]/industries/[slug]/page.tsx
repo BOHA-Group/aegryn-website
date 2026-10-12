@@ -92,7 +92,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           {/* Titre */}
           <WaveReveal delay={0.1}>
             <h1
-              className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl"
+              className="font-sans font-bold text-white leading-[1.0] tracking-[-0.03em] max-w-3xl text-balance"
               style={{ fontSize: 'clamp(36px,5vw,72px)' }}
             >
               {getLocaleText(ind.name, locale)}

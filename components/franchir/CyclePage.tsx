@@ -105,7 +105,7 @@ export function CyclePage({ content: c, locale }: Props) {
           </ScrollReveal>
           <WaveReveal delay={0.1}>
             <h1
-              className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6"
+              className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6 text-balance"
               style={{ fontSize: 'clamp(36px,5vw,72px)' }}
             >
               {c.h1}
