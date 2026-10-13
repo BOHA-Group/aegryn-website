@@ -112,7 +112,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
       { industry: 'commerce-services-experience-client', sectorIndex: 0 },
       { industry: 'tech-innovation-secteur-public', sectorIndex: 2 },
     ],
-    skillPhases:      [0, 0, 0, 1, 1, 2, 3],
+    skillPhases:      [0, 0, 0, 0, 1, 1, 1, 2, 3],
     status:           'dev' as const,
     featured:         true,
     grade:            'pending' as const,
