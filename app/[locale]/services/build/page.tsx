@@ -6,7 +6,6 @@ import { Link } from '@/i18n/navigation'
 import type { ComponentProps } from 'react'
 
 type LinkHref = ComponentProps<typeof Link>['href']
-import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
 import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
@@ -23,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('meta.desc'),
     path:        '/services/build',
     locale,
-    keywords:    ['conception actifs numériques', 'build digital asset', 'SaaS B2B', 'exit structuré', 'asset engineering'],
+    keywords:    ['solutions logicielles sur mesure', 'bespoke software', 'maîtrise d\u2019œuvre numérique', 'souveraineté numérique', 'build to operate'],
   })
   return {
     ...base,
@@ -46,14 +45,11 @@ export default async function BuildServicePage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'build_service' })
 
-  const differenceItems         = t.raw('difference.items')           as { num: string; title: string; desc: string }[]
   const marketComparisonAgency  = t.raw('marketComparison.agencyItems') as string[]
   const marketComparisonAegryn  = t.raw('marketComparison.aegrynItems') as string[]
   const marketComparisonProcess = t.raw('marketComparison.processItems') as string[]
-  const certBenefits            = t.raw('certificationBenefits.items')  as { title: string; desc: string }[]
   const processSteps            = t.raw('process.steps')                as { num: string; title: string; desc: string }[]
 
-  const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
@@ -173,37 +169,7 @@ export default async function BuildServicePage({ params }: Props) {
         </ScrollReveal>
       </section>
 
-      {/* ── Section 1e : Why Sovereign Software ─────────────────────────── */}
-      <section className="border-b border-ag-border">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('whySection.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-6 max-w-2xl whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('whySection.title')}
-          </h2>
-          <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
-            {t('whySection.desc')}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {whyPoints.map((pt, i) => (
-              <div key={i} className="rounded-2xl border border-ag-border p-6 bg-ag-off-white">
-                <p className="font-sans font-semibold text-[12px] uppercase tracking-[0.2em] text-ag-apex-ink mb-2">
-                  {pt.title}
-                </p>
-                <p className="text-[15px] text-ag-gray leading-relaxed">
-                  {pt.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 1c : 10 Domaines logiciels ───────────────────────── */}
+      {/* ── Section : Domaines logiciels ───────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
@@ -235,24 +201,6 @@ export default async function BuildServicePage({ params }: Props) {
         </ScrollReveal>
       </section>
 
-      {/* ── Section 1c : Infrastructure commune ────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-navy">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-4">
-            {t('platformSection.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-4"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('platformSection.title')}
-          </h2>
-          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-2xl">
-            {t('platformSection.desc')}
-          </p>
-        </ScrollReveal>
-      </section>
-
       {/* ── Transition vidéo : petite, centrée, grossit en plein écran au scroll ── */}
       <VideoScrollGrow
         srcWeb="/videos/sailboat-rope-web.mp4"
@@ -272,10 +220,15 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('sovereigntySection.title')}
           </h2>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-14">
+          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-4">
             {t('sovereigntySection.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-ag-gray-light mb-14">
+            <a href={t('sovereigntySection.sourceUrl')} target="_blank" rel="noopener noreferrer" className="hover:text-ag-apex-ink transition-colors">
+              {t('sovereigntySection.source')} ↗
+            </a>
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
             {sovereigntyPillars.map((pillar) => (
               <div key={pillar.key} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] leading-snug">{pillar.title}</h3>
@@ -283,30 +236,9 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 2 : La différence Aegryn ─────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('difference.label')}
+          <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
+            {t('sovereigntySection.stackLine')}
           </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('difference.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {differenceItems.map((item) => (
-              <div key={item.num} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
-                <span className="font-mono text-[10px] tracking-[0.22em] text-ag-apex-ink">{item.num}</span>
-                <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </ScrollReveal>
       </section>
 
@@ -344,32 +276,6 @@ export default async function BuildServicePage({ params }: Props) {
           </div>
         </ScrollReveal>
       </section>
-
-      {/* ── Section 4 : Bénéfices certification ──────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('certificationBenefits.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('certificationBenefits.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {certBenefits.map((item, i) => (
-              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-4">
-                <h3 className="font-sans font-bold text-ag-black text-[18px] leading-snug">{item.title}</h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 5b : Tech Stack ──────────────────────────────────── */}
-      <TechStackShowcase />
 
       {/* ── Section 6 : Process ──────────────────────────────────────── */}
       <section className="border-b border-ag-border">
@@ -416,78 +322,6 @@ export default async function BuildServicePage({ params }: Props) {
               ))}
             </div>
           </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 7 : Maintenance ──────────────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('maintenance.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4 whitespace-pre-line"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('maintenance.title')}
-          </h2>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl mb-12">
-            {t('maintenance.desc')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
-              <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.corrective.title')}</h3>
-              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{t('maintenance.corrective.desc')}</p>
-              <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.corrective.format')}</p>
-            </div>
-            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
-              <h3 className="font-sans font-bold text-ag-black text-[16px]">{t('maintenance.evolutive.title')}</h3>
-              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{t('maintenance.evolutive.desc')}</p>
-              <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{t('maintenance.evolutive.format')}</p>
-            </div>
-          </div>
-          <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
-            {t('maintenance.note')}
-          </p>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section : Construire pour transmettre ────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-navy">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-6">
-            {t('transmissionSection.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-6 whitespace-pre-line max-w-2xl"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('transmissionSection.title')}
-          </h2>
-          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-10">
-            {t('transmissionSection.desc')}
-          </p>
-          <Link
-            href="/franchir/transmission"
-            className="rounded-lg inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
-          >
-            {t('transmissionSection.cta')} →
-          </Link>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Exit Banner ──────────────────────────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
-            {t('exitBanner.text')}
-          </p>
-          <Link
-            href="/franchir/transmission"
-            className="rounded-lg shrink-0 w-full md:w-auto text-center font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors"
-          >
-            {t('exitBanner.cta')} →
-          </Link>
         </ScrollReveal>
       </section>
 

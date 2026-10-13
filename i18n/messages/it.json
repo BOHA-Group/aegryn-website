@@ -5262,7 +5262,7 @@
       "title": "Soluzioni su misura: perimetro, realizzazione, gestione | Aegryn",
       "desc": "Pilotaggio end-to-end dei vostri progetti digitali: definizione del perimetro, scelta acquistare/integrare/costruire, realizzazione, messa in servizio, gestione. Hosting in Svizzera o nell'UE."
     },
-    "label": "Engineering: Software su misura",
+    "label": "Costruire",
     "title": "Software su misura\nper le vostre operazioni.",
     "heroAlt": "Barca a vela con vela blu fotografata dall'alto su un mare scuro",
     "builtToLast": {
@@ -5281,12 +5281,12 @@
           "badge": "QUICK BUILD",
           "subtitle": "4 a 8 settimane",
           "title": "Uno strumento operativo, veloce.",
-          "desc": "Per testare un caso d'uso, automatizzare un processo o colmare un divario. Ambito ristretto, consegna rapida, piena proprietà."
+          "desc": "Per testare un caso d'uso, automatizzare un processo o colmare un vuoto. Perimetro stretto, consegna rapida, proprietà totale. Esempi: dashboard di monitoraggio, strumento di scoring, workflow automatizzato, app mobile per il campo, reporting regolamentare."
         },
         {
           "key": "btl",
           "badge": "BUILD TO LAST",
-          "subtitle": "Asset proprietario durevole",
+          "subtitle": "Strumento duraturo",
           "title": "Uno strumento costruito per durare.",
           "desc": "Proprietà totale, architettura documentata, codice che qualsiasi team può riprendere. Per i sistemi che sostengono la vostra attività. Prezzo bloccato alla definizione del perimetro."
         },
@@ -5295,208 +5295,70 @@
           "badge": "BUILD TO OPERATE",
           "subtitle": "Build + manutenzione ricorrente",
           "title": "Costruiamo e gestiamo.",
-          "desc": "Per organizzazioni senza un team tecnico interno. Consegniamo l'asset e gestiamo le operazioni: manutenzione, evoluzioni, sicurezza. Un unico interlocutore nel lungo termine."
+          "desc": "Per organizzazioni senza un team tecnico interno. Consegniamo lo strumento e gestiamo le operazioni: manutenzione, evoluzioni, sicurezza. Un unico interlocutore nel lungo termine."
         }
       ]
-    },
-    "useCasesSection": {
-      "label": "Casi d'uso rapidi",
-      "title": "Quello che consegnamo in 4 a 8 settimane.",
-      "items": [
-        "Dashboard di tracciamento",
-        "Strumento di scoring",
-        "Workflow automatizzato",
-        "App mobile sul campo",
-        "Reporting normativo",
-        "Analisi contrattuale IA"
-      ]
-    },
-    "transmissionSection": {
-      "label": "Costruire per trasmettere",
-      "title": "Uno strumento senza documentazione né piano di ripresa\ndiventa un rischio non appena il suo autore se ne va.",
-      "desc": "In Aegryn, ogni strumento è documentato dal primo sprint per restare verificabile e poter essere ripreso senza di noi.",
-      "cta": "Scoprire l'accompagnamento al trasferimento",
-      "href": "/franchir/transmission"
-    },
-    "independenceSection": {
-      "label": "Indipendenza tecnologica",
-      "badge": "INDIPENDENZA TECNOLOGICA"
     },
     "desc": "Dalla PMI al grande gruppo, in Svizzera e in Europa: definiamo il vostro bisogno, scegliamo con voi tra acquistare, integrare o costruire, poi pilotiamo la realizzazione fino alla messa in servizio. Il vostro codice, i vostri dati, la vostra infrastruttura: hosting in Svizzera o nell'UE, senza dipendenza imposta.",
-    "whySection": {
-      "label": "Perché software su misura",
-      "title": "Ciò che il mercato standard non può offrirvi.",
-      "desc": "Il 46,7 % delle imprese europee usa il cloud. Il 39,9 % l'analisi dei dati. Quasi il 20 % l'IA nel 2026. Il bisogno di software di qualità, indipendente e senza vendor lock-in è strutturale. La Commissione europea riconosce nel 2026 che le dipendenze dai fornitori terzi rimangono significative nel cloud e nella cybersicurezza. La Svizzera ha posto l'indipendenza digitale tra le priorità della sua strategia digitale 2026.",
-      "points": [
-        {
-          "title": "Piena proprietà del codice",
-          "desc": "Siete proprietari al 100 % del codice consegnato. Nessuna licenza, nessun contratto di abbonamento, nessuna dipendenza dall'editore."
-        },
-        {
-          "title": "Hosting sulla vostra infrastruttura",
-          "desc": "Il software viene distribuito dove lo richiedete: cloud europeo, on-premise o infrastruttura svizzera, con alternative sovrane CH/UE disponibili. Nessun dato esce senza il vostro consenso."
-        },
-        {
-          "title": "Integrazione nei vostri processi reali",
-          "desc": "Costruiamo attorno alla vostra organizzazione, non il contrario. Ogni modulo si integra con i vostri strumenti, dati e workflow esistenti."
-        },
-        {
-          "title": "Verificabile e reversibile",
-          "desc": "Ogni software che consegniamo è documentato, verificabile e può essere ripreso senza di noi, dai vostri team o da un altro integratore."
-        }
-      ]
-    },
     "domainsSection": {
-      "label": "10 domini software",
+      "label": "Domini software",
       "title": "I domini in cui costruiamo\nper i nostri clienti.",
-      "desc": "Costruiamo in domini dove il bisogno è trasversale, ricorrente e normativo, con uno strato IA, indipendenza e integrazione nel vostro sistema informativo esistente, senza dipendenza imposta.",
+      "desc": "Costruiamo solo dove il mercato non propone una soluzione adatta, o quando l'indipendenza lo esige. Sei domini coprono i bisogni aziendali ricorrenti, con uno strato IA, indipendenza e integrazione nel vostro sistema informativo esistente.",
       "domains": [
         {
           "num": "01",
           "badge": "Agenti IA",
           "title": "Agenti IA & automazione aziendale",
-          "desc": "Orchestrazione di flussi di lavoro complessi da agenti IA aziendali collegabili ai vostri sistemi: CRM, ERP, email, documenti, API, database. Ogni agente è verificabile, con supervisione umana e monitoraggio qualità."
+          "desc": "Orchestrazione di flussi di lavoro complessi da agenti IA aziendali collegabili ai vostri sistemi: CRM, ERP, email, documenti, API, database. Automazione della fatturazione e del servizio clienti. Ogni agente è verificabile, con supervisione umana e monitoraggio qualità."
         },
         {
           "num": "02",
           "badge": "Governance IA",
           "title": "Conformità, rischio & governance IA",
-          "desc": "Piattaforma di conformità per EU AI Act, GDPR, LPD svizzera, NIS2, DORA, ISO 27001. Registro dei trattamenti, controlli, prove, tracciabilità di audit. La Svizzera conferma che la sua LPD si applica direttamente ai trattamenti basati su IA."
+          "desc": "Piattaforma di conformità per EU AI Act, GDPR, LPD svizzera, NIS2, DORA, ISO 27001: registro dei trattamenti, controlli, prove, tracciabilità di audit. Valutazione dei fornitori e del rischio di terze parti: contratti, cyber, ESG, concentrazione, sanzioni."
         },
         {
           "num": "03",
-          "badge": "Fiducia digitale",
-          "title": "Cybersicurezza & fiducia digitale",
-          "desc": "Valutazione del rischio informatico, inventario degli asset, rischio fornitore, gestione degli incidenti, prove di sicurezza, mappatura della conformità. Allineato ai requisiti NIS2 per i settori critici."
+          "badge": "Cybersicurezza",
+          "title": "Cybersicurezza & identità digitale",
+          "desc": "Valutazione del rischio informatico, inventario degli asset, gestione degli incidenti, prove di sicurezza, mappatura della conformità. Inizio del rapporto aziendale: KYC, KYB, verifica dell'identità, titolari effettivi."
         },
         {
           "num": "04",
           "badge": "Intelligenza documentale",
-          "title": "Documenti, contratti & intelligenza della conoscenza",
-          "desc": "Trasformate i vostri contratti, direttive, fatture e documenti in conoscenza azionabile. Identificazione dei rischi, scadenze critiche e azioni prioritarie. Subblink, asset principale Aegryn."
+          "title": "Documenti, contratti & conoscenza",
+          "desc": "Trasformate i vostri contratti, direttive, fatture e documenti in conoscenza azionabile. Identificazione dei rischi, scadenze critiche e azioni prioritarie. Subblink, soluzione proprietaria Aegryn."
         },
         {
           "num": "05",
-          "badge": "Operazioni finanziarie",
-          "title": "Finanza, fatturazione & fatturazione elettronica",
-          "desc": "Automazione della fatturazione, fatturazione elettronica (EU ViDA, obbligo Confederazione svizzera), riconciliazione pagamenti, tesoreria, IVA transfrontaliera. Strato di operazioni finanziarie tra CRM e contabilità."
-        },
-        {
-          "num": "06",
           "badge": "Intelligenza decisionale",
           "title": "Dati, BI & intelligenza decisionale",
           "desc": "Analisi causale, simulazione di scenari, raccomandazioni automatizzate. Il software risponde a: cosa è successo, perché, cosa succederà, cosa fare."
         },
         {
-          "num": "07",
-          "badge": "Esperienza cliente",
-          "title": "Esperienza cliente & automazione dei servizi",
-          "desc": "Architettura di operazioni cliente IA: agente clienti IA, bot di conoscenza, migliore azione successiva, sintesi dei casi, monitoraggio qualità. Rilevante per assicurazioni, banche, telecomunicazioni, commercio, sanità."
-        },
-        {
-          "num": "08",
-          "badge": "Rischio fornitori",
-          "title": "Fornitori, approvvigionamento & rischio terze parti",
-          "desc": "Valutazione dei fornitori, analisi dei contratti, rischio informatico, ESG, rischio di concentrazione, sanzioni, rinnovi."
-        },
-        {
-          "num": "09",
-          "badge": "Identità & fiducia",
-          "title": "Identità, KYC/KYB & fiducia digitale",
-          "desc": "Inizio del rapporto aziendale, KYB, KYC, verifica, titolari effettivi, firme, credenziali, registri di fiducia."
-        },
-        {
-          "num": "10",
+          "num": "06",
           "badge": "Gemello digitale",
-          "title": "Intelligenza degli asset & dei processi",
+          "title": "Gemello digitale dell'organizzazione",
           "desc": "Rappresentazione dinamica della vostra organizzazione: persone, applicazioni, processi, contratti, fornitori, dati. Risposte in tempo reale su dipendenze, costi e rischi operativi."
         }
       ],
       "sectionLabel": "DOMINI DI SOLUZIONE",
       "intro": "Dieci domini applicativi coprono l'insieme dei bisogni aziendali ricorrenti. Costruiamo solo dove il mercato non offre una soluzione adatta, o quando l'indipendenza lo richiede."
     },
-    "platformSection": {
-      "label": "Infrastruttura comune",
-      "title": "Cosa differenzia un asset Aegryn dallo sviluppo standard.",
-      "desc": "Ogni software consegnato da Aegryn è costruito sulla stessa infrastruttura: dati sovrani, modelli IA documentati, governance verificabile. Strumenti e fornitori sono utilizzati secondo il quadro di sovranità che scegliete, con alternative svizzere o europee.",
-      "layers": [
-        {
-          "key": "data",
-          "title": "Livello Dati",
-          "desc": "Raccolta dati unificata, laghi strutturati, pipeline in tempo reale e connettori API sicuri.",
-          "tag": "Ingestione · Normalizzazione · Archiviazione controllata",
-          "dep": null
-        },
-        {
-          "key": "ai",
-          "title": "Livello AI",
-          "desc": "Modelli proprietari, LLM ottimizzati, computer vision e agenti AI specializzati.",
-          "tag": "Modelli IA sovrani · On-premise o Cloud CH/EU",
-          "dep": "elabora"
-        },
-        {
-          "key": "knowledge",
-          "title": "Livello Conoscenza",
-          "desc": "Base di conoscenza arricchita, indicizzazione semantica, RAG sicuro e intelligenza normativa.",
-          "tag": "Grafo della conoscenza · Memoria organizzativa",
-          "dep": "arricchisce"
-        },
-        {
-          "key": "action",
-          "title": "Livello Governance",
-          "desc": "Audit trail, RBAC, registro dei trattamenti, conformità normativa (AI Act, NIS2, DORA, LPD) documentata in continuo su tutti i livelli.",
-          "tag": "Audit trail · RBAC · Conformità continua",
-          "dep": null
-        }
-      ],
-      "verticals": {
-        "label": "Mercati verticali",
-        "desc": "Finance & Capital, Salute, Industria, Commercio e Tech sono mercati verticali, non prodotti di base. Le applicazioni Aegryn possono essere pacchettizzate per questi mercati senza creare una nuova architettura ogni volta.",
-        "items": [
-          "Finance & Capital",
-          "Salute & Scienze della Vita",
-          "Industria, Energia & Infrastruttura",
-          "Commercio & Servizi",
-          "Tech, Innovazione & Settore Pubblico"
-        ]
-      },
-      "subtitle": "Un'architettura integrata. Quattro livelli complementari.",
-      "appsLabel": "Applicazioni aziendali",
-      "packagedLabel": "pacchettizzate →",
-      "flowLabel": "Le app consumano i livelli e scrivono nel livello dati",
-      "govTooltipLabel": "Comprende tutti i livelli",
-      "apps": [
-        "Analisi contrattuale",
-        "Scoring del rischio",
-        "Conformità normativa",
-        "Intelligenza documentale",
-        "HR & recruiting",
-        "Previsione finanziaria",
-        "CRM & intelligenza cliente",
-        "Supply chain & logistica",
-        "Sicurezza & anomalie",
-        "Reporting ESG & audit"
-      ]
-    },
     "sovereigntySection": {
-      "label": "Indipendenza per architettura",
+      "label": "Sovranità",
       "title": "Indipendenza per Architettura.",
-      "desc": "L'indipendenza non è un'etichetta di marketing. È una proprietà architettonica verificabile. La sovranità non è l'assenza di vendor: è il controllo. Dati sotto giurisdizione svizzera o europea, IP detenuta al 100 %, modelli IA distribuibili senza flussi verso infrastrutture soggette al Cloud Act senza il vostro accordo esplicito. Integriamo le soluzioni che rispettano questo quadro: on-premise, cloud sovrani certificati CH/UE, offerte europee dei grandi vendor.",
+      "desc": "Nel 2025, il 52,7 % delle imprese europee ha utilizzato servizi cloud a pagamento, il 33 % ha svolto analisi dati, il 20 % ha utilizzato l'IA (Eurostat, 2025). L'indipendenza non è un'etichetta di marketing: è una proprietà architettonica verificabile, applicata secondo il quadro di sovranità che scegliete. Dati sotto giurisdizione svizzera o europea, IP 100 % cliente, modelli IA distribuibili senza flussi verso infrastrutture soggette al Cloud Act senza il vostro accordo esplicito.",
       "pillars": [
         {
-          "key": "data",
-          "title": "Localizzazione dei dati",
-          "desc": "I vostri dati rimangono in Svizzera o nell'UE. Hosting su infrastruttura certificata, contratti di subappalto conformi."
+          "key": "localisation",
+          "title": "Localizzazione di dati & modelli IA",
+          "desc": "I vostri dati e modelli IA restano in Svizzera o nell'UE, sulla vostra infrastruttura o presso un hosting provider certificato. Nessun trattamento fuori giurisdizione senza il vostro accordo esplicito."
         },
         {
-          "key": "model",
-          "title": "Localizzazione dei modelli IA",
-          "desc": "I modelli vengono distribuiti nella vostra infrastruttura: on-premise o cloud CH/EU. Nessun trattamento al di fuori della giurisdizione CH/UE senza il vostro accordo esplicito."
-        },
-        {
-          "key": "ip",
-          "title": "Proprietà intellettuale",
-          "desc": "100% IP del cliente. Aegryn non è mai comproprietario del codice consegnato. Esportazione totale del codice sorgente, documentazione e database."
+          "key": "ownership",
+          "title": "Proprietà & esportazione",
+          "desc": "100 % IP cliente. Aegryn non è mai comproprietaria del codice. Esportazione completa di codice, dati, modelli e documentazione, in qualsiasi momento."
         },
         {
           "key": "fornitore",
@@ -5507,39 +5369,15 @@
           "key": "audit",
           "title": "Auditabilità & controllo umano",
           "desc": "Ogni decisione IA è tracciabile, spiegabile e reversibile. Un essere umano valida le decisioni critiche."
-        },
-        {
-          "key": "esportazione",
-          "title": "Esportazione totale garantita",
-          "desc": "In qualsiasi momento, esportazione completa del codice sorgente, dati, modelli e documentazione. Zero ritenzione."
         }
       ],
-      "subtitle": "Controllo del codice. Nessuna dipendenza dal fornitore. Infrastruttura in Europa."
-    },
-    "difference": {
-      "label": "Non un'agenzia. Non uno studio.",
-      "title": "La differenza Aegryn.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Prezzo bloccato alla definizione del perimetro.",
-          "desc": "Il prezzo viene definito e firmato al termine della definizione del perimetro, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
-        },
-        {
-          "num": "02",
-          "title": "Rimanete 100% proprietari",
-          "desc": "Nessuna quota presa senza la vostra richiesta. Lo strumento è al 100% vostro. Un eventuale conflitto di interesse legato a un intervento di Aegryn come co-investitore viene sempre dichiarato."
-        },
-        {
-          "num": "03",
-          "title": "Documentato alla consegna",
-          "desc": "Ogni strumento consegnato è accompagnato da documentazione tecnica completa (architettura, API, sicurezza, IP) che lo rende idoneo a un audit o a una ripresa da parte di un altro integratore."
-        }
-      ]
+      "source": "Eurostat, indagine ICT nelle imprese 2025",
+      "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
+      "stackLine": "Tecnologie aperte o sovrane (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; modelli Mistral). Gli strumenti americani sono utilizzati solo con il vostro accordo."
     },
     "marketComparison": {
       "label": "Ciò che pochissimi altri offrono",
-      "title": "Un prezzo. Uno scope.\nNessuna sorpresa.",
+      "title": "Non un'agenzia. Un prezzo, un perimetro,\nnessuna sorpresa.",
       "agencyCol": "Cosa fanno le agenzie",
       "aegrynCol": "Cosa fa Aegryn",
       "processCol": "Come ci arriviamo",
@@ -5548,95 +5386,26 @@
         "Tempo e materiale senza tetto",
         "Sforamenti fatturati come extra",
         "Consegna senza documentazione",
-        "Nessuna garanzia sul risultato finale"
+        "Nessun impegno sul risultato"
       ],
       "aegrynItems": [
         "Prezzo bloccato alla definizione del perimetro",
         "Milestone misurabili per sprint",
         "Sforamento scope assorbito da Aegryn",
         "Documentazione tecnica completa inclusa",
-        "Documentazione completa alla consegna"
+        "Collaudo formale a ogni milestone"
       ],
       "processItems": [
         "Definizione del perimetro 1-2 settimane inclusa",
         "Capitolato firmato",
-        "Prezzo bloccato prima del primo commit",
+        "Forfait firmato dopo la definizione del perimetro",
         "Addendum firmato se lo scope cambia",
         "Accettazione formale ad ogni milestone"
       ]
     },
-    "certificationBenefits": {
-      "label": "Perché la documentazione cambia tutto",
-      "title": "Una documentazione completa cambia tutto.",
-      "items": [
-        {
-          "title": "Audit facilitato",
-          "desc": "Architettura, API, sicurezza e IP sono documentati: lo strumento resiste a un audit, a una due diligence o a un cambio di team. Una certificazione indipendente (CIFSO 5000) resta possibile se lo desiderate."
-        },
-        {
-          "title": "Protezione contrattuale alla consegna",
-          "desc": "Ciò che ordinate è esattamente ciò che ricevete. La documentazione descrive lo stato di ogni dimensione alla consegna. Nessuna zona grigia."
-        },
-        {
-          "title": "Trasferibile a qualsiasi team",
-          "desc": "Architettura pulita, debito tecnico documentato, README completo. Il vostro asset può essere ripreso, modificato o verificato da qualsiasi sviluppatore o studio indipendente."
-        }
-      ]
-    },
-    "assetTypes": {
-      "label": "Cosa costruiamo",
-      "title": "Tre tipologie.\nUn'unica esigenza.",
-      "items": [
-        {
-          "badge": "SaaS B2B",
-          "title": "Soluzione SaaS verticale",
-          "desc": "Strumenti aziendali, piattaforme di gestione, RegTech, LegalTech, FinTech con metriche ARR/NRR misurabili dal lancio."
-        },
-        {
-          "badge": "IA Verticale",
-          "title": "Prodotto IA nativo",
-          "desc": "Agenti IA, automazione settoriale, analisi documentale costruiti su modelli con dati proprietari."
-        },
-        {
-          "badge": "App Mobile",
-          "title": "Applicazione mobile",
-          "desc": "iOS/Android per servizi, marketplace o strumenti business mobile-first. Metriche di retention (D1/D7/D30) come criteri di design."
-        }
-      ]
-    },
-    "exits": {
-      "label": "L'uscita è la vostra scelta",
-      "title": "Tre percorsi.\nUn asset per tutti.",
-      "items": [
-        {
-          "phase": "Early stage - 6 a 18 mesi",
-          "title": "Cessione early stage",
-          "desc": "Il vostro asset ha un'architettura solida e una prima trazione. Aegryn struttura il trasferimento nell'ambito del suo accompagnamento, in modo riservato.",
-          "grade": "Grade target: A - ticket 100K a 500K EUR",
-          "cta": "Preparare il trasferimento",
-          "href": "/franchir/transmission"
-        },
-        {
-          "phase": "Maturità di mercato - 18 a 36 mesi",
-          "title": "Cessione a maturità",
-          "desc": "L'asset ha ricavi ricorrenti documentati e una base clienti consolidata. Eleggibile ai gradi da AAA ad AEG. Trasferimento accompagnato in un quadro riservato e qualificato.",
-          "grade": "Grade target: AA a AEG - ticket 500K a 5M EUR",
-          "cta": "Invia per certificazione",
-          "href": "/grade/submit"
-        },
-        {
-          "phase": "Conservazione",
-          "title": "Manutenzione evolutiva e correttiva",
-          "desc": "Non desiderate trasferire. Aegryn mantiene l'asset tecnicamente: aggiornamenti, nuove funzionalità, sicurezza. Il trasferimento resta aperto secondo il vostro calendario.",
-          "grade": "Canone mensile o per consegna",
-          "cta": "Discutere la manutenzione",
-          "href": "/contact"
-        }
-      ]
-    },
     "process": {
       "label": "Il nostro processo",
-      "title": "Build to Operate.\nUn solo interlocutore.",
+      "title": "Dal perimetro alla gestione.\nUn solo interlocutore.",
       "steps": [
         {
           "num": "01",
@@ -5661,34 +5430,13 @@
         {
           "num": "05",
           "title": "Gestione & trasferimento",
-          "desc": "Manutenzione da parte di Aegryn, o trasferimento ai vostri team o a un altro integratore. Nessun obbligo di restare con noi."
+          "desc": "Manutenzione correttiva ed evolutiva da parte di Aegryn, canone mensile o ticket, o trasferimento ai vostri team o a un altro integratore. Nessun obbligo di restare con noi. Una certificazione indipendente (CIFSO 5000) resta possibile se lo desiderate."
         }
       ]
     },
-    "maintenance": {
-      "label": "Manutenzione su richiesta",
-      "title": "L'asset vive.\nNoi lo manteniamo.",
-      "desc": "Dopo il lancio o dopo un trasferimento parziale, Aegryn propone una manutenzione a due livelli.",
-      "corrective": {
-        "title": "Manutenzione correttiva",
-        "desc": "Correzione bug, risoluzione incidenti, aggiornamenti sicurezza, CVE, monitoraggio. SLA definito nel contratto.",
-        "format": "Canone mensile o ticket"
-      },
-      "evolutive": {
-        "title": "Manutenzione evolutiva",
-        "desc": "Nuove funzionalità, refactoring, aggiornamenti versione, integrazioni, adattamento normativo (GDPR, EU AI Act, NIS2). Lo strumento resta conforme in ogni momento.",
-        "format": "Canone mensile o per sprint"
-      },
-      "note": "La manutenzione Aegryn garantisce che lo strumento resti aggiornato, sicuro e ripreso senza di noi in qualsiasi momento."
-    },
-    "exitBanner": {
-      "text": "Il trasferimento è un'opzione, mai un obbligo. Se desiderate trasferire un giorno, early stage o a maturità, lo strumento è concepito per questo. L'accompagnamento Aegryn è disponibile quando sarà il momento.",
-      "cta": "Scoprire l'accompagnamento al trasferimento",
-      "href": "/franchir/transmission"
-    },
     "cta": {
       "title": "Hai un progetto in mente?",
-      "desc": "Descrivi la tua idea, il perimetro funzionale e i tuoi vincoli. Ti risponderemo con una valutazione di fattibilità e una prima stima dei costi entro 48 ore.",
+      "desc": "Descrivi la tua idea, il perimetro funzionale e i tuoi vincoli. Ti risponderemo con una valutazione di fattibilità e una prima definizione entro 2 giorni lavorativi.",
       "primary": "Avviare il processo",
       "secondary": "Scopri i nostri asset"
     },

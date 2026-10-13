@@ -5277,7 +5277,7 @@
       "title": "Bespoke solutions: scoping, delivery, operations | Aegryn",
       "desc": "End-to-end delivery of your digital projects: scoping, buy/integrate/build arbitration, delivery, commissioning, operations. Hosted in Switzerland or the EU."
     },
-    "label": "Engineering: Bespoke software",
+    "label": "Build",
     "title": "Bespoke software\nfor your operations.",
     "heroAlt": "Sailboat with a blue sail photographed from above on dark water",
     "builtToLast": {
@@ -5296,12 +5296,12 @@
           "badge": "QUICK BUILD",
           "subtitle": "4 to 8 weeks",
           "title": "An operational tool, fast.",
-          "desc": "To test a use case, automate a process, or fill a gap. Tight scope, fast delivery, full ownership."
+          "desc": "To test a use case, automate a process, or fill a gap. Tight scope, fast delivery, full ownership. Examples: tracking dashboard, scoring tool, automated workflow, field mobile app, regulatory reporting."
         },
         {
           "key": "btl",
           "badge": "BUILD TO LAST",
-          "subtitle": "Durable proprietary asset",
+          "subtitle": "Durable tool",
           "title": "A tool built to last.",
           "desc": "Full ownership, documented architecture, code any team can take over. For systems that carry your business. Price locked at scoping."
         },
@@ -5310,208 +5310,70 @@
           "badge": "BUILD TO OPERATE",
           "subtitle": "Build + recurring maintenance",
           "title": "We build and we operate.",
-          "desc": "For organisations without an internal tech team. We deliver the asset and handle operations: maintenance, evolutions, security. One point of contact over the long term."
+          "desc": "For organisations without an internal tech team. We deliver the tool and handle operations: maintenance, evolutions, security. One point of contact over the long term."
         }
       ]
-    },
-    "useCasesSection": {
-      "label": "Quick use cases",
-      "title": "What we deliver in 4 to 8 weeks.",
-      "items": [
-        "Tracking dashboard",
-        "Scoring tool",
-        "Automated workflow",
-        "Field mobile app",
-        "Regulatory reporting",
-        "AI contract analysis"
-      ]
-    },
-    "transmissionSection": {
-      "label": "Building to transfer",
-      "title": "A tool without documentation or a handover plan\nbecomes a risk the moment its author leaves.",
-      "desc": "At Aegryn, every tool is documented from the first sprint so it stays auditable and can be taken over without us.",
-      "cta": "See our transfer support",
-      "href": "/franchir/transmission"
-    },
-    "independenceSection": {
-      "label": "Technological independence",
-      "badge": "TECHNOLOGICAL INDEPENDENCE"
     },
     "desc": "From SMEs to large groups, in Switzerland and Europe: we scope your need, help you choose between buying, integrating or building, then run delivery through to commissioning. Your code, your data, your infrastructure: hosted in Switzerland or the EU, with no imposed dependency.",
-    "whySection": {
-      "label": "Why bespoke software",
-      "title": "What the standard market cannot offer you.",
-      "desc": "46.7% of European companies use the cloud. 39.9% use data analytics. Nearly 20% use AI in 2026. The need for quality, independent, vendor-lock-in-free software is structural. The European Commission acknowledges in 2026 that dependencies on third-country providers remain significant in cloud and cybersecurity. Switzerland has placed digital sovereignty among the priorities of its 2026 digital strategy.",
-      "points": [
-        {
-          "title": "Full code ownership",
-          "desc": "You own 100% of the delivered code. No licence, no subscription contract, no vendor dependency."
-        },
-        {
-          "title": "Hosted on your infrastructure",
-          "desc": "The software deploys where you require: European cloud, on-premise or Swiss infrastructure, with sovereign CH/EU alternatives available. No data leaves without your consent."
-        },
-        {
-          "title": "Integrated into your real processes",
-          "desc": "We build around your organisation, not the other way around. Each module integrates with your existing tools, data and workflows."
-        },
-        {
-          "title": "Auditable and reversible",
-          "desc": "Every piece of software we deliver is documented, auditable, and can be taken over without us, by your teams or another integrator."
-        }
-      ]
-    },
     "domainsSection": {
-      "label": "10 Software Domains",
+      "label": "Software domains",
       "title": "The domains where we build\nfor our clients.",
-      "desc": "We build in domains where the need is cross-functional, recurring and regulatory, with an AI, independence and integration layer that fits your existing information system, with no imposed dependency.",
+      "desc": "We build only where the market offers no suitable solution, or where independence requires it. Six domains cover recurring business needs, with an AI layer, independence and integration into your existing information system.",
       "domains": [
         {
           "num": "01",
           "badge": "AI Agents",
-          "title": "AI Agents & Business Automation",
-          "desc": "Autonomous AI agents, workflow automation, RPA and intelligent process orchestration to reduce operational costs and accelerate cycles."
+          "title": "AI agents & business automation",
+          "desc": "Orchestration of complex workflows by business AI agents connectable to your systems: CRM, ERP, email, documents, APIs, databases. Automation of billing and customer service. Every agent is auditable, with human supervision and quality monitoring."
         },
         {
           "num": "02",
-          "badge": "Compliance AI",
-          "title": "Compliance, Risk & AI Governance",
-          "desc": "Regulatory monitoring, risk scoring, AI governance and automated compliance for NIS2, DORA, RGPD and AI Act."
+          "badge": "AI Governance",
+          "title": "Compliance, risk & AI governance",
+          "desc": "Compliance platform covering EU AI Act, GDPR, Swiss FADP, NIS2, DORA, ISO 27001: processing register, controls, evidence, audit trail. Supplier and third-party risk assessment: contracts, cyber, ESG, concentration, sanctions."
         },
         {
           "num": "03",
-          "badge": "Cyber Trust",
-          "title": "Cybersecurity & Digital Trust",
-          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligned with NIS2 requirements for critical sectors."
+          "badge": "Cybersecurity",
+          "title": "Cybersecurity & digital identity",
+          "desc": "Cyber risk assessment, asset inventory, incident management, security evidence, compliance mapping. Business onboarding: KYC, KYB, identity verification, beneficial owners."
         },
         {
           "num": "04",
           "badge": "Knowledge AI",
-          "title": "Document, Contract & Knowledge Intelligence",
-          "desc": "AI contract analysis, automated document extraction, knowledge base and secure Q&A on proprietary corpus."
+          "title": "Documents, contracts & knowledge",
+          "desc": "Turn your contracts, policies, invoices and documents into actionable knowledge. Risk identification, critical deadlines and priority actions. Subblink, an Aegryn proprietary solution."
         },
         {
           "num": "05",
-          "badge": "Finance Ops",
-          "title": "Finance, Billing & E-Invoicing Automation",
-          "desc": "Invoice automation, factur-X / ZUGFeRD, payment reconciliation and financial closing acceleration."
+          "badge": "Decision Intelligence",
+          "title": "Data, BI & decision intelligence",
+          "desc": "Causal analysis, scenario simulation, automated recommendations. The software answers: what happened, why, what will happen, what to do."
         },
         {
           "num": "06",
-          "badge": "Decision Intelligence",
-          "title": "Data, BI & Decision Intelligence",
-          "desc": "Unified dashboards, predictive models, KPI automation and real-time decision support for executives."
-        },
-        {
-          "num": "07",
-          "badge": "CX Automation",
-          "title": "Customer Experience & Service Automation",
-          "desc": "Intelligent multichannel support, AI bots, ticket deflection and 360° customer experience orchestration."
-        },
-        {
-          "num": "08",
-          "badge": "Procurement AI",
-          "title": "Supplier, Procurement & Third-Party Risk",
-          "desc": "Supplier qualification, automated contract review, third-party risk scoring and ESG monitoring."
-        },
-        {
-          "num": "09",
-          "badge": "Identity & Trust",
-          "title": "Identity, KYC/KYB & Digital Trust",
-          "desc": "Digital identity verification, automated KYC/KYB, AML scoring and digital onboarding."
-        },
-        {
-          "num": "10",
-          "badge": "Asset Intelligence",
-          "title": "Enterprise Asset & Process Intelligence",
-          "desc": "Predictive maintenance, IoT asset management, process mining and operational efficiency automation."
+          "badge": "Digital Twin",
+          "title": "Digital twin of the organisation",
+          "desc": "Dynamic representation of your organisation: people, applications, processes, contracts, suppliers, data. Real-time answers on dependencies, costs and operational risks."
         }
       ],
       "sectionLabel": "Domains",
       "intro": "Ten application domains cover the full range of recurring business needs. We build only where the market offers no suitable solution, or where independence requires it."
     },
-    "platformSection": {
-      "label": "Shared infrastructure",
-      "title": "What sets an Aegryn asset apart from standard development.",
-      "desc": "Every software asset delivered by Aegryn is built on the same infrastructure: sovereign data, documented AI models, verifiable governance. Tools and providers are used according to the sovereignty framework you choose, with Swiss or European alternatives.",
-      "layers": [
-        {
-          "key": "data",
-          "title": "Data Layer",
-          "desc": "Unified data collection, structured lakes, real-time pipelines and secure API connectors.",
-          "tag": "Ingestion · Normalisation · Mastered storage",
-          "dep": null
-        },
-        {
-          "key": "ai",
-          "title": "AI Layer",
-          "desc": "Proprietary models, fine-tuned LLMs, computer vision and specialised AI agents.",
-          "tag": "Sovereign AI models · On-premise or Cloud CH/EU",
-          "dep": "processes"
-        },
-        {
-          "key": "knowledge",
-          "title": "Knowledge Layer",
-          "desc": "Enriched knowledge base, semantic indexing, secure RAG and regulatory intelligence.",
-          "tag": "Knowledge graph · Organisational memory",
-          "dep": "enriches"
-        },
-        {
-          "key": "action",
-          "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, processing register, regulatory compliance (AI Act, NIS2, DORA, GDPR) documented continuously across every layer.",
-          "tag": "Audit trail · RBAC · Continuous compliance",
-          "dep": null
-        }
-      ],
-      "verticals": {
-        "label": "Vertical Markets",
-        "desc": "Finance & Capital, Health, Industry, Commerce and Tech are vertical markets, not core products. Aegryn applications can be packaged for these markets without building a new architecture each time.",
-        "items": [
-          "Finance & Capital",
-          "Health & Life Sciences",
-          "Industry, Energy & Infrastructure",
-          "Commerce & Services",
-          "Tech, Innovation & Public Sector"
-        ]
-      },
-      "subtitle": "An integrated architecture. Four complementary layers.",
-      "appsLabel": "Business applications",
-      "packagedLabel": "packaged →",
-      "flowLabel": "Apps consume the layers and write to the Data Layer",
-      "govTooltipLabel": "Spans all layers",
-      "apps": [
-        "Contract analysis",
-        "Risk scoring",
-        "Regulatory compliance",
-        "Document intelligence",
-        "HR & recruitment",
-        "Financial forecasting",
-        "CRM & customer intelligence",
-        "Supply chain & logistics",
-        "Cybersecurity & anomalies",
-        "ESG reporting & audit"
-      ]
-    },
     "sovereigntySection": {
-      "label": "Independence by Architecture",
+      "label": "Sovereignty",
       "title": "Independence by Architecture.",
-      "desc": "Independence is not a marketing label. It is a verifiable architectural property. Sovereignty is not the absence of vendors: it is control. Data under Swiss or European jurisdiction, IP owned 100%, AI models deployable without flows to Cloud Act-subject infrastructure without your explicit consent. We integrate the solutions that respect this framework: on-premise, certified sovereign CH/EU clouds, European offerings from major vendors.",
+      "desc": "In 2025, 52.7% of European enterprises used paid cloud services, 33% performed data analytics, 20% used AI (Eurostat, 2025). Independence is not a marketing label: it is a verifiable architectural property, applied within the sovereignty framework you choose. Data under Swiss or EU jurisdiction, 100% client IP, AI models deployable without flows to Cloud Act-subject infrastructure without your explicit consent.",
       "pillars": [
         {
-          "key": "data",
-          "title": "Data Localisation",
-          "desc": "Your data stays in Switzerland or the EU. Hosting on certified infrastructure, compliant subcontracting agreements."
+          "key": "localisation",
+          "title": "Data & AI model localisation",
+          "desc": "Your data and AI models stay in Switzerland or the EU, on your infrastructure or with a certified hosting provider. No processing outside the jurisdiction without your explicit consent."
         },
         {
-          "key": "model",
-          "title": "AI Model Localisation",
-          "desc": "Models are deployed in your infrastructure: on-premise or CH/EU cloud. No processing outside CH/EU jurisdiction without your explicit agreement."
-        },
-        {
-          "key": "ip",
-          "title": "Intellectual Property",
-          "desc": "100% client IP. Aegryn is never co-owner of the delivered code. Full export of source code, documentation and database."
+          "key": "ownership",
+          "title": "Ownership & export",
+          "desc": "100% client IP. Aegryn is never a co-owner of the code. Full export of code, data, models and documentation, at any time."
         },
         {
           "key": "vendor",
@@ -5522,39 +5384,15 @@
           "key": "audit",
           "title": "Auditability & Human Control",
           "desc": "Every AI decision is traceable, explainable and reversible. A human validates critical decisions."
-        },
-        {
-          "key": "export",
-          "title": "Guaranteed Full Export",
-          "desc": "At any time, full export of source code, data, models and documentation. Zero retention."
         }
       ],
-      "subtitle": "Digital sovereignty"
-    },
-    "difference": {
-      "label": "Not an agency. Not a studio.",
-      "title": "The Aegryn difference.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Price locked at scoping.",
-          "desc": "The price is defined and signed at the end of scoping, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
-        },
-        {
-          "num": "02",
-          "title": "You stay 100% owner",
-          "desc": "No equity taken without your request. The tool is 100% yours. Any potential conflict of interest from Aegryn acting as co-investor is always declared."
-        },
-        {
-          "num": "03",
-          "title": "Documented at delivery",
-          "desc": "Every delivered tool comes with complete technical documentation (architecture, API, security, IP) making it ready for an audit or a handover to another integrator."
-        }
-      ]
+      "source": "Eurostat, ICT usage in enterprises survey 2025",
+      "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
+      "stackLine": "Open or sovereign technologies (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; Mistral models). US tools are used only with your consent."
     },
     "marketComparison": {
       "label": "What very few others offer",
-      "title": "One price. One scope.\nNo surprises.",
+      "title": "Not an agency. One price, one scope,\nno surprises.",
       "agencyCol": "What agencies do",
       "aegrynCol": "What Aegryn does",
       "processCol": "How we get there",
@@ -5563,95 +5401,26 @@
         "Time & materials with no ceiling",
         "Overruns billed as extras",
         "Delivery without documentation",
-        "No guarantee on the final outcome"
+        "No commitment on the outcome"
       ],
       "aegrynItems": [
         "Price locked at scoping",
         "Measurable milestones per sprint",
         "Scope overrun absorbed by Aegryn",
         "Full technical documentation included",
-        "Complete documentation at delivery"
+        "Formal acceptance at each milestone"
       ],
       "processItems": [
         "Scoping 1 to 2 weeks included",
         "Signed specification document",
-        "Price locked before first commit",
+        "Fixed fee signed after scoping",
         "Amendment signed if scope changes",
         "Formal sign-off at each milestone"
       ]
     },
-    "certificationBenefits": {
-      "label": "Why documentation changes everything",
-      "title": "Complete documentation changes everything.",
-      "items": [
-        {
-          "title": "Audit-ready",
-          "desc": "Architecture, API, security and IP are documented: the tool withstands an audit, a due diligence process or a team change. Independent certification (CIFSO 5000) remains possible if you wish."
-        },
-        {
-          "title": "Contractual protection at delivery",
-          "desc": "What you order is precisely what you receive. The documentation describes the state of every dimension at delivery. No grey areas."
-        },
-        {
-          "title": "Transferable to any team",
-          "desc": "Clean architecture, documented technical debt, complete README. Your asset can be taken over, modified or audited by any developer or independent firm."
-        }
-      ]
-    },
-    "assetTypes": {
-      "label": "What we build",
-      "title": "Three typologies.\nOne standard of excellence.",
-      "items": [
-        {
-          "badge": "B2B SaaS",
-          "title": "Vertical SaaS solution",
-          "desc": "Business tools, management platforms, RegTech, LegalTech, FinTech - SaaS designed for precise markets with measurable ARR/NRR metrics from launch."
-        },
-        {
-          "badge": "Vertical AI",
-          "title": "Native AI product",
-          "desc": "AI agents, sector automation, document analysis - built on models with proprietary data. The real certifiable moat of an AI asset."
-        },
-        {
-          "badge": "Mobile App",
-          "title": "Mobile application",
-          "desc": "iOS/Android for services, marketplaces or mobile-first business tools. Retention metrics (D1/D7/D30) as design criteria, not as after-the-fact indicators."
-        }
-      ]
-    },
-    "exits": {
-      "label": "The exit is your choice",
-      "title": "Three paths.\nOne asset built for all of them.",
-      "items": [
-        {
-          "phase": "Early stage - 6 to 18 months",
-          "title": "Early-stage sale",
-          "desc": "Your asset has a solid architecture and first traction. Aegryn structures the transfer within its support framework, confidentially.",
-          "grade": "Target grade: A - ticket 100K to 500K EUR",
-          "cta": "Prepare the transfer",
-          "href": "/franchir/transmission"
-        },
-        {
-          "phase": "Market maturity - 18 to 36 months",
-          "title": "Maturity sale",
-          "desc": "The asset has documented recurring revenue and an established client base. Eligible for AAA to AEG grades. Supported transfer in a confidential, qualified framework.",
-          "grade": "Target grade: AA to AEG - ticket 500K to 5M EUR",
-          "cta": "Submit for certification",
-          "href": "/grade/submit"
-        },
-        {
-          "phase": "Retention",
-          "title": "Evolutionary and corrective maintenance",
-          "desc": "You do not wish to transfer. Aegryn maintains the asset technically: updates, new features, security. The transfer remains open on your timeline.",
-          "grade": "Monthly retainer or per deliverable",
-          "cta": "Discuss maintenance",
-          "href": "/contact"
-        }
-      ]
-    },
     "process": {
       "label": "Our process",
-      "title": "Build to Operate.\nOne point of contact.",
+      "title": "From scoping to operations.\nOne point of contact.",
       "steps": [
         {
           "num": "01",
@@ -5676,34 +5445,13 @@
         {
           "num": "05",
           "title": "Operations & transfer",
-          "desc": "Maintenance by Aegryn, or handover to your teams or another integrator. No obligation to stay with us."
+          "desc": "Corrective and evolutionary maintenance by Aegryn, monthly retainer or tickets, or handover to your teams or another integrator. No obligation to stay with us. Independent certification (CIFSO 5000) remains possible if you wish."
         }
       ]
     },
-    "maintenance": {
-      "label": "On-demand maintenance",
-      "title": "The asset lives.\nWe keep it running.",
-      "desc": "After launch or after a partial transfer, Aegryn offers two levels of maintenance.",
-      "corrective": {
-        "title": "Corrective maintenance",
-        "desc": "Bug fixes, incident resolution, security updates, CVE management, monitoring and alerts. SLA defined in contract.",
-        "format": "Monthly retainer or on-demand tickets"
-      },
-      "evolutive": {
-        "title": "Evolutionary maintenance",
-        "desc": "New features, refactoring, version upgrades, integrations, regulatory adaptation (GDPR, EU AI Act, NIS2). The tool stays compliant at all times.",
-        "format": "Monthly retainer or per-sprint deliverable"
-      },
-      "note": "Aegryn maintenance ensures the tool stays up to date, secure, and can be taken over without us at any time."
-    },
-    "exitBanner": {
-      "text": "Transfer is an option, never an obligation. If you wish to transfer one day, early stage or at maturity, the tool is designed for it. Aegryn support is available when the time comes.",
-      "cta": "Learn more about transfer support",
-      "href": "/franchir/transmission"
-    },
     "cta": {
       "title": "Have a project in mind?",
-      "desc": "Describe your idea, the functional scope and your constraints. We will respond with a feasibility assessment and an initial price framework within 48h.",
+      "desc": "Describe your idea, the functional scope and your constraints. We will respond with a feasibility assessment and an initial scoping within 2 business days.",
       "primary": "Start the process",
       "secondary": "See our proprietary assets"
     },

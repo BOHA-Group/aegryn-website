@@ -5277,7 +5277,7 @@
       "title": "Maatwerkoplossingen: kaderstelling, realisatie, exploitatie | Aegryn",
       "desc": "End-to-end begeleiding van uw digitale projecten: kaderstelling, keuze kopen/integreren/bouwen, realisatie, inbedrijfstelling, exploitatie. Hosting in Zwitserland of de EU."
     },
-    "label": "Engineering: Maatwerk software",
+    "label": "Bouwen",
     "title": "Maatwerk software\nvoor uw activiteiten.",
     "heroAlt": "Zeilboot met blauw zeil vanuit de lucht gefotografeerd op donker water",
     "builtToLast": {
@@ -5296,12 +5296,12 @@
           "badge": "QUICK BUILD",
           "subtitle": "4 tot 8 weken",
           "title": "Een operationeel hulpmiddel, snel.",
-          "desc": "Om een use case te testen, een proces te automatiseren of een leemte op te vullen. Strakke scope, snelle levering, volledige eigendom."
+          "desc": "Om een use case te testen, een proces te automatiseren of een leemte op te vullen. Strakke scope, snelle levering, volledig eigendom. Voorbeelden: monitoringdashboard, scoringtool, geautomatiseerde workflow, mobiele app voor buitendienst, regelgevingrapportage."
         },
         {
           "key": "btl",
           "badge": "BUILD TO LAST",
-          "subtitle": "Duurzaam eigen activum",
+          "subtitle": "Duurzame tool",
           "title": "Een tool gebouwd om te duren.",
           "desc": "Volledige eigendom, gedocumenteerde architectuur, code die elk team kan overnemen. Voor systemen die uw activiteit dragen. Prijs vastgelegd bij kaderstelling."
         },
@@ -5310,208 +5310,70 @@
           "badge": "BUILD TO OPERATE",
           "subtitle": "Build + terugkerende onderhoud",
           "title": "Wij bouwen en beheren.",
-          "desc": "Voor organisaties zonder intern techteam. Wij leveren het activum en nemen de operaties over: onderhoud, evoluties, beveiliging. Één aanspreekpunt op lange termijn."
+          "desc": "Voor organisaties zonder intern techteam. Wij leveren de tool en nemen de operaties over: onderhoud, evoluties, beveiliging. Één aanspreekpunt op lange termijn."
         }
       ]
-    },
-    "useCasesSection": {
-      "label": "Snelle gebruikscases",
-      "title": "Wat wij in 4 tot 8 weken leveren.",
-      "items": [
-        "Volgdashboard",
-        "Scoringtool",
-        "Geautomatiseerde workflow",
-        "Mobiele veld-app",
-        "Regulatorische rapportage",
-        "AI-contractanalyse"
-      ]
-    },
-    "transmissionSection": {
-      "label": "Bouwen om over te dragen",
-      "title": "Een tool zonder documentatie of overdrachtsplan\nwordt een risico zodra de maker vertrekt.",
-      "desc": "Bij Aegryn wordt elke tool vanaf de eerste sprint gedocumenteerd, zodat ze auditeerbaar blijft en zonder ons kan worden overgenomen.",
-      "cta": "Bekijk de overdrachtsbegeleiding",
-      "href": "/franchir/transmission"
-    },
-    "independenceSection": {
-      "label": "Technologische onafhankelijkheid",
-      "badge": "TECHNOLOGISCHE ONAFHANKELIJKHEID"
     },
     "desc": "Van kmo tot groot concern, in Zwitserland en Europa: wij stellen uw behoefte in kader, kiezen samen met u tussen kopen, integreren of bouwen, en sturen vervolgens de realisatie tot aan de inbedrijfstelling. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
-    "whySection": {
-      "label": "Waarom maatwerksoftware",
-      "title": "Wat de standaardmarkt u niet kan bieden.",
-      "desc": "46,7% van de Europese bedrijven gebruikt de cloud. 39,9% data-analyse. Bijna 20% AI in 2026. De behoefte aan kwaliteitssoftware zonder vendor lock-in is structureel. De Europese Commissie erkent in 2026 dat de afhankelijkheden van externe leveranciers aanzienlijk blijven. Zwitserland heeft digitale onafhankelijkheid tot prioriteit van zijn digitale strategie 2026 gemaakt.",
-      "points": [
-        {
-          "title": "Volledige code-eigendom",
-          "desc": "U bezit 100% van de geleverde code. Geen licentie, geen abonnementscontract, geen leveranciersafhankelijkheid."
-        },
-        {
-          "title": "Vaste prijs, geen verrassingen",
-          "desc": "De software wordt ingezet waar u het vereist: Europese cloud, on-premise of Zwitserse infrastructuur, met beschikbare soevereine CH/EU-alternatieven. Geen data verlaat het systeem zonder uw toestemming."
-        },
-        {
-          "title": "Gecertificeerd bij oplevering",
-          "desc": "Elk geleverd asset bevat volledige technische documentatie (architectuur, API, beveiliging, IP) die het geschikt maakt voor onafhankelijke certificering."
-        },
-        {
-          "title": "Auditeerbaar en omkeerbaar",
-          "desc": "Elke software die wij leveren is gedocumenteerd, auditeerbaar en kan zonder ons worden overgenomen, door uw teams of een andere integrator."
-        }
-      ]
-    },
     "domainsSection": {
-      "label": "10 softwaredomeinen",
+      "label": "Softwaredomeinen",
       "title": "De domeinen waarin wij\nbouwen voor onze klanten.",
-      "desc": "Tien gespecialiseerde toepassingsdomeinen, gebaseerd op één gemeenschappelijk platform. Elk domein is een volledig product met gedocumenteerde architectuur, meetbare metrics en certificeerbare IP.",
+      "desc": "Wij bouwen alleen waar de markt geen passende oplossing biedt, of waar onafhankelijkheid het vereist. Zes domeinen dekken de terugkerende bedrijfsbehoeften, met een AI-laag, onafhankelijkheid en integratie in uw bestaande systeem.",
       "domains": [
         {
           "num": "01",
           "badge": "AI-agenten",
           "title": "AI-agenten & bedrijfsautomatisering",
-          "desc": "Autonome AI-agenten, workflowautomatisering, RPA en intelligente procesorkestratie om operationele kosten te verlagen en cycli te versnellen."
+          "desc": "Orkestratie van complexe workflows door bedrijfs-AI-agenten die met uw systemen verbonden zijn: CRM, ERP, e-mail, documenten, API's, databases. Automatisering van facturering en klantenservice. Elke agent is auditbaar, met menselijk toezicht en kwaliteitsmonitoring."
         },
         {
           "num": "02",
           "badge": "AI-governance",
           "title": "Compliance, risico & AI-governance",
-          "desc": "Monitoring van regelgeving, risicobeoordeling, AI-governance en geautomatiseerde compliance voor NIS2, DORA, AVG en AI Act."
+          "desc": "Complianceplatform voor EU AI Act, AVG, Zwitserse WBG, NIS2, DORA, ISO 27001: verwerkingsregister, controles, bewijs, audittrail. Beoordeling van leveranciers en derdenrisico: contracten, cyber, ESG, concentratie, sancties."
         },
         {
           "num": "03",
-          "badge": "Digitaal vertrouwen",
-          "title": "Cybersecurity & digitaal vertrouwen",
-          "desc": "Beoordeling van cyberrisico's, inventaris van activa, leveranciersrisico, incidentbeheer, beveiligingsbewijs, compliance-mapping. Afgestemd op de NIS2-vereisten voor kritieke sectoren."
+          "badge": "Cybersecurity",
+          "title": "Cybersecurity & digitale identiteit",
+          "desc": "Beoordeling van cyberrisico's, inventaris van activa, incidentbeheer, beveiligingsbewijs, compliance-mapping. Start van zakelijke relatie: KYC, KYB, identiteitsverificatie, uiteindelijk belanghebbenden."
         },
         {
           "num": "04",
           "badge": "Kennisintelligentie",
-          "title": "Document-, contract- & kennisintelligentie",
-          "desc": "AI-contractanalyse, geautomatiseerde documentextractie, kennisbank en beveiligde Q&A op eigen corpus."
+          "title": "Documenten, contracten & kennis",
+          "desc": "Zet uw contracten, richtlijnen, facturen en documenten om in bruikbare kennis. Identificatie van risico's, kritieke deadlines en prioritaire acties. Subblink, eigen Aegryn-oplossing."
         },
         {
           "num": "05",
-          "badge": "Financiële operaties",
-          "title": "Financiën, facturering & e-facturatieautomatisering",
-          "desc": "Factuurautomatisering, factur-X / ZUGFeRD, betalingsafstemming en versnelde financiële afsluiting."
-        },
-        {
-          "num": "06",
           "badge": "Beslissingsintelligentie",
           "title": "Data, BI & beslissingsintelligentie",
           "desc": "Geünificeerde dashboards, voorspellende modellen, KPI-automatisering en real-time besluitvormingsondersteuning voor het management."
         },
         {
-          "num": "07",
-          "badge": "Klantervaring",
-          "title": "Klantervaring & service-automatisering",
-          "desc": "Intelligente multichannel-ondersteuning, AI-bots, ticketdeflectie en 360°-klantervaringsorkestratie."
-        },
-        {
-          "num": "08",
-          "badge": "Derdenrisico",
-          "title": "Leveranciers, inkoop & derdenrisico",
-          "desc": "Leverancierskwalificatie, geautomatiseerde contractbeoordeling, risicoscore van derden en ESG-monitoring."
-        },
-        {
-          "num": "09",
-          "badge": "Identiteit & vertrouwen",
-          "title": "Identiteit, KYC/KYB & digitaal vertrouwen",
-          "desc": "Digitale identiteitsverificatie, geautomatiseerde KYC/KYB, AML-scoring en digitale onboarding."
-        },
-        {
-          "num": "10",
+          "num": "06",
           "badge": "Digitale tweeling",
-          "title": "Ondernemingsasset- & procesintelligentie",
-          "desc": "Predictief onderhoud, IoT-assetbeheer, procesmining en automatisering van operationele efficiëntie."
+          "title": "Digitale tweeling van de organisatie",
+          "desc": "Dynamische weergave van uw organisatie: mensen, applicaties, processen, contracten, leveranciers, data. Realtime antwoorden op afhankelijkheden, kosten en operationele risico's."
         }
       ],
       "sectionLabel": "TOEPASSINGSDOMEINEN",
       "intro": "Tien toepassingsdomeinen dekken de terugkerende bedrijfsbehoeften. Wij bouwen alleen waar de markt geen passende oplossing biedt, of wanneer onafhankelijkheid dit vereist."
     },
-    "platformSection": {
-      "label": "Gedeelde infrastructuur",
-      "title": "Wat een Aegryn-asset onderscheidt van standaardontwikkeling.",
-      "desc": "Elke software die Aegryn levert, is gebouwd op dezelfde infrastructuur: soevereine data, gedocumenteerde AI-modellen, verifieerbare governance. Tools en leveranciers worden ingezet volgens het soevereiniteitskader dat u kiest, met Zwitserse of Europese alternatieven.",
-      "layers": [
-        {
-          "key": "data",
-          "title": "Datalaag",
-          "desc": "Ingestie, normalisatie en beheerste opslag van uw bedrijfsdata.",
-          "tag": "Ingestie · Normalisatie · Beheerste opslag",
-          "dep": null
-        },
-        {
-          "key": "ai",
-          "title": "AI-laag",
-          "desc": "AI-modellen inzetbaar on-premise of cloud CH/EU. Geen dataverzending naar OpenAI, Azure of GCP zonder expliciete toestemming.",
-          "tag": "Soevereine AI-modellen · On-premise of Cloud CH/EU",
-          "dep": "verwerkt"
-        },
-        {
-          "key": "knowledge",
-          "title": "Kennislaag",
-          "desc": "Kennisgraaf, semantische indexering, persistente organisatorisch geheugen.",
-          "tag": "Kennisgraaf · Organisatiegeheugen",
-          "dep": "verrijkt"
-        },
-        {
-          "key": "governance",
-          "title": "Governance-laag",
-          "desc": "Audittrail, RBAC, verwerkingsregister, regelgevende naleving (AI Act, NIS2, DORA, AVG), doorlopend gedocumenteerd over alle lagen.",
-          "tag": "Audittrail · RBAC · Doorlopende naleving",
-          "dep": null
-        }
-      ],
-      "verticals": {
-        "label": "Verticale markten",
-        "desc": "Finance & Capital, Gezondheid, Industrie, Handel en Tech zijn verticale markten, geen kernproducten. Aegryn-applicaties kunnen voor deze markten worden verpakt zonder elke keer een nieuwe architectuur te bouwen.",
-        "items": [
-          "Finance & Capital",
-          "Gezondheid & Life Sciences",
-          "Industrie, Energie & Infrastructuur",
-          "Handel & Diensten",
-          "Tech, Innovatie & Publieke Sector"
-        ]
-      },
-      "appsLabel": "Bedrijfsapplicaties",
-      "packagedLabel": "verpakt →",
-      "flowLabel": "Apps verbruiken de lagen en schrijven naar de datalaag",
-      "govTooltipLabel": "Overspant alle lagen",
-      "apps": [
-        "Contractanalyse",
-        "Risicoscoring",
-        "Regelgevende compliance",
-        "Documentintelligentie",
-        "HR & werving",
-        "Financiële prognose",
-        "CRM & klantintelligentie",
-        "Supply chain & logistiek",
-        "Cyberbeveiliging & anomalieën",
-        "ESG-rapportage & audit"
-      ],
-      "subtitle": "Een geïntegreerde architectuur. Vier complementaire lagen."
-    },
     "sovereigntySection": {
-      "label": "Onafhankelijkheid door architectuur",
+      "label": "Soevereiniteit",
       "title": "Onafhankelijkheid door Architectuur.",
-      "desc": "Onafhankelijkheid is geen marketinglabel. Het is een verifieerbare architecturale eigenschap. Soevereiniteit is niet de afwezigheid van leveranciers: het is controle. Data onder Zwitserse of Europese jurisdictie, IP voor 100 % in uw bezit, AI-modellen inzetbaar zonder flows naar aan de Cloud Act onderworpen infrastructuren zonder uw expliciete toestemming. Wij integreren de oplossingen die dit kader respecteren: on-premise, gecertificeerde soevereine CH/EU-clouds, Europese aanbiedingen van grote leveranciers.",
+      "desc": "In 2025 gebruikte 52,7 % van de Europese ondernemingen betaalde clouddiensten, 33 % deed aan data-analyse, 20 % gebruikte AI (Eurostat, 2025). Onafhankelijkheid is geen marketinglabel: het is een verifieerbare architecturale eigenschap, toegepast volgens het soevereiniteitskader dat u kiest. Data onder Zwitserse of EU-jurisdictie, 100 % klant-IP, AI-modellen inzetbaar zonder stromen naar Cloud Act-onderworpen infrastructuur zonder uw uitdrukkelijke toestemming.",
       "pillars": [
         {
-          "key": "data",
-          "title": "Datalokalisatie",
-          "desc": "Uw data blijft in Zwitserland of de EU. Hosting op gecertificeerde infrastructuur, conforme onderaannemingscontracten."
+          "key": "localisation",
+          "title": "Lokalisatie van data & AI-modellen",
+          "desc": "Uw data en AI-modellen blijven in Zwitserland of de EU, op uw infrastructuur of bij een gecertificeerde hostingprovider. Geen verwerking buiten de jurisdictie zonder uw uitdrukkelijke toestemming."
         },
         {
-          "key": "model",
-          "title": "AI-modellokalisatie",
-          "desc": "Modellen worden ingezet in uw infrastructuur: on-premise of cloud CH/EU. Geen verwerking buiten de CH/EU-jurisdictie zonder uw expliciete toestemming."
-        },
-        {
-          "key": "ip",
-          "title": "Intellectueel eigendom",
-          "desc": "100% client-IP. Aegryn is nooit mede-eigenaar van de geleverde code. Volledige export van broncode, documentatie en database."
+          "key": "ownership",
+          "title": "Eigendom & export",
+          "desc": "100 % klant-IP. Aegryn is nooit mede-eigenaar van de code. Volledige export van code, data, modellen en documentatie, op elk moment."
         },
         {
           "key": "vendor",
@@ -5522,39 +5384,15 @@
           "key": "audit",
           "title": "Auditbaarheid & menselijke controle",
           "desc": "Elke AI-beslissing is traceerbaar, verklaarbaar en omkeerbaar. Een mens valideert kritieke beslissingen."
-        },
-        {
-          "key": "export",
-          "title": "Volledige export gegarandeerd",
-          "desc": "Op elk moment volledige export van broncode, data, modellen en documentatie. Nul retentie."
         }
       ],
-      "subtitle": "Digitale soevereiniteit"
-    },
-    "difference": {
-      "label": "Geen agentschap. Geen studio.",
-      "title": "Het Aegryn-verschil.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Prijs vastgelegd bij kaderstelling.",
-          "desc": "Het vaste tarief wordt bepaald en ondertekend na de kaderstelling, vóór de eerste commit. Als de scope verandert, wordt een addendum ondertekend vóór uitvoering. Nooit onverwachte facturering."
-        },
-        {
-          "num": "02",
-          "title": "U blijft 100% eigenaar.",
-          "desc": "Geen aandelen zonder uw verzoek. De tool is volledig van u. Een mogelijk belangenconflict door een optreden van Aegryn als co-investeerder wordt altijd gemeld."
-        },
-        {
-          "num": "03",
-          "title": "Gedocumenteerd bij oplevering.",
-          "desc": "Elke geleverde tool wordt vergezeld door volledige technische documentatie (architectuur, API, beveiliging, IP) die een audit mogelijk maakt of overname door een andere integrator."
-        }
-      ]
+      "source": "Eurostat, ICT-enquête ondernemingen 2025",
+      "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
+      "stackLine": "Open of soevereine technologieën (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; Mistral-modellen). Amerikaanse tools worden alleen met uw toestemming gebruikt."
     },
     "marketComparison": {
       "label": "Wat zeer weinig anderen bieden",
-      "title": "Één prijs. Één scope.\nGeen verrassingen.",
+      "title": "Geen bureau. Eén prijs, één scope,\ngeen verrassingen.",
       "agencyCol": "Wat bureaus doen",
       "aegrynCol": "Wat Aegryn doet",
       "processCol": "Hoe wij er komen",
@@ -5563,95 +5401,26 @@
         "Regie per dag/uur zonder plafond",
         "Overschrijdingen opnieuw gefactureerd",
         "Oplevering zonder documentatie",
-        "Geen garantie op het eindresultaat"
+        "Geen engagement op het resultaat"
       ],
       "aegrynItems": [
         "Prijs vastgelegd bij kaderstelling",
         "Meetbare mijlpalen per sprint",
         "Scopeoverschrijding door Aegryn geabsorbeerd",
         "Volledige technische documentatie inbegrepen",
-        "Volledige documentatie bij oplevering"
+        "Formele oplevering bij elke mijlpaal"
       ],
       "processItems": [
         "Kaderstelling 1 tot 2 weken inbegrepen",
         "Ondertekend bestek",
-        "Prijs vastgelegd voor eerste commit",
+        "Forfait ondertekend na kaderstelling",
         "Addendum ondertekend bij scopewijziging",
         "Formele oplevering bij elke mijlpaal"
       ]
     },
-    "certificationBenefits": {
-      "label": "Waarom documentatie alles verandert",
-      "title": "Volledige documentatie verandert alles.",
-      "items": [
-        {
-          "title": "Audit vergemakkelijkt",
-          "desc": "Architectuur, API, beveiliging en IP zijn gedocumenteerd: de tool doorstaat een audit, een due diligence of een teamwissel. Een onafhankelijke certificering (CIFSO 5000) blijft mogelijk indien gewenst."
-        },
-        {
-          "title": "Contractuele bescherming bij oplevering",
-          "desc": "Wat u bestelt is precies wat u ontvangt. De documentatie beschrijft de toestand van elke dimensie bij oplevering. Geen grijze zones."
-        },
-        {
-          "title": "Overneembaar door elk team",
-          "desc": "Schone architectuur, gedocumenteerde technische schuld, volledig README. Uw asset kan worden overgenomen, gewijzigd of geauditeerd door elke ontwikkelaar of onafhankelijk bureau."
-        }
-      ]
-    },
-    "assetTypes": {
-      "label": "Wat wij bouwen",
-      "title": "Drie typologieën.\nEén standaard van uitmuntendheid.",
-      "items": [
-        {
-          "badge": "SaaS B2B",
-          "title": "Verticale SaaS-oplossing",
-          "desc": "Bedrijfstools, beheerplatforms, RegTech, LegalTech, FinTech: SaaS ontworpen voor specifieke markten met meetbare ARR/NRR-metrics vanaf de lancering."
-        },
-        {
-          "badge": "Verticale AI",
-          "title": "Native AI-product",
-          "desc": "AI-agents, sectorale automatisering, documentanalyse: gebouwd op modellen met exclusieve data. De echte certificeerbare moat van een AI-asset."
-        },
-        {
-          "badge": "Mobiele app",
-          "title": "Mobiele applicatie",
-          "desc": "iOS/Android voor diensten, marktplaatsen of mobile-first bedrijfstools. Retentiemetrics (D1/D7/D30) als ontwerpcriterium, niet als achteraf indicator."
-        }
-      ]
-    },
-    "exits": {
-      "label": "De exit is uw keuze",
-      "title": "Drie paden.\nEén asset gebouwd voor alle drie.",
-      "items": [
-        {
-          "phase": "Early stage - 6 tot 18 maanden",
-          "title": "Early stage overdracht",
-          "desc": "Uw asset heeft een solide architectuur en eerste tractie. Aegryn structureert de overdracht in het kader van zijn begeleiding, vertrouwelijk.",
-          "grade": "Doelgrade: A - ticket 100K tot 500K euro",
-          "cta": "De overdracht voorbereiden",
-          "href": "/franchir/transmission"
-        },
-        {
-          "phase": "Marktrijpheid - 18 tot 36 maanden",
-          "title": "Overdracht bij rijpheid",
-          "desc": "De asset heeft gedocumenteerde terugkerende inkomsten en een gevestigde klantenbasis. In aanmerking voor de grades AAA tot AEG. Begeleide overdracht in een vertrouwelijk, gekwalificeerd kader.",
-          "grade": "Doelgrade: AA tot AEG - ticket 500K tot 5M euro",
-          "cta": "Indienen voor certificering",
-          "href": "/grade/submit"
-        },
-        {
-          "phase": "Behoud",
-          "title": "Evolutief en correctief onderhoud",
-          "desc": "U wilt niet overdragen. Aegryn onderhoudt de asset technisch: updates, nieuwe functionaliteiten, beveiliging. De overdracht blijft open volgens uw kalender.",
-          "grade": "Maandelijks abonnement of per deliverable",
-          "cta": "Onderhoud bespreken",
-          "href": "/contact"
-        }
-      ]
-    },
     "process": {
       "label": "Ons proces",
-      "title": "Build to Operate.\nÉén aanspreekpunt.",
+      "title": "Van kaderstelling tot exploitatie.\nÉén aanspreekpunt.",
       "steps": [
         {
           "num": "01",
@@ -5676,34 +5445,13 @@
         {
           "num": "05",
           "title": "Exploitatie & overdracht",
-          "desc": "Onderhoud door Aegryn, of overdracht aan uw teams of een andere integrator. Geen verplichting om bij ons te blijven."
+          "desc": "Correctief en doorlopend onderhoud door Aegryn, maandelijks forfait of tickets, of overdracht aan uw teams of een andere integrator. Geen verplichting om bij ons te blijven. Een onafhankelijke certificering (CIFSO 5000) blijft mogelijk indien gewenst."
         }
       ]
     },
-    "maintenance": {
-      "label": "Onderhoud op aanvraag",
-      "title": "Het asset leeft.\nWij houden het draaiende.",
-      "desc": "Na de lancering of na een gedeeltelijke overdracht biedt Aegryn onderhoud op twee niveaus.",
-      "corrective": {
-        "title": "Correctief onderhoud",
-        "desc": "Bugfixes, incidentoplossing, beveiligingsupdates, CVE-beheer, monitoring en alerts. SLA bepaald in het contract.",
-        "format": "Maandelijks abonnement of tickets op aanvraag"
-      },
-      "evolutive": {
-        "title": "Evolutief onderhoud",
-        "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regulatoire aanpassing (AVG, EU AI Act, NIS2). De tool blijft op elk moment conform.",
-        "format": "Maandelijks abonnement of deliverable per sprint"
-      },
-      "note": "Aegryn-onderhoud garandeert dat de tool altijd up-to-date, veilig en zonder ons overneembaar blijft."
-    },
-    "exitBanner": {
-      "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de tool daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar wanneer het zover is.",
-      "cta": "Meer over de overdrachtsbegeleiding",
-      "href": "/franchir/transmission"
-    },
     "cta": {
       "title": "Een project in gedachten?",
-      "desc": "Beschrijf uw idee, de functionele scope en uw beperkingen. Wij antwoorden met een haalbaarheidsschatting en een eerste tariefkader binnen 48 uur.",
+      "desc": "Beschrijf uw idee, de functionele scope en uw beperkingen. Wij antwoorden met een haalbaarheidsschatting en een eerste kaderstelling binnen 2 werkdagen.",
       "primary": "Het proces starten",
       "secondary": "Onze eigen assets bekijken"
     },
