@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
@@ -91,8 +92,21 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
           {filtered.map((asset) => (
             <div
               key={asset.id}
-              className="asset-card bg-ag-white rounded-2xl border border-ag-border p-8 flex flex-col gap-5 group hover:bg-ag-off-white transition-colors"
+              className="asset-card bg-ag-white rounded-2xl border border-ag-border overflow-hidden flex flex-col group hover:bg-ag-off-white transition-colors"
             >
+              {/* Image illustrative */}
+              {asset.image && (
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={asset.image}
+                    alt={tItems(`${asset.id}.tagline`)}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
+                  />
+                </div>
+              )}
+              <div className="p-8 flex flex-col gap-5 flex-1">
               {/* Top row */}
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1">
@@ -180,6 +194,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                     {t('visitSite')} <ExternalLink size={11} />
                   </a>
                 )}
+              </div>
               </div>
             </div>
           ))}

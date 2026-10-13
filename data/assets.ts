@@ -3,6 +3,7 @@ export interface AegrynAsset {
   name:            string
   slug:            string
   url:             string | null
+  image?:          string
   badge:           string
   tagline:         string
   description:     string
@@ -46,6 +47,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'neediu',
     slug:             'neediu',
     url:              null as string | null,
+    image:            '/images/portfolio/neediu.jpg',
     badge:            'B2C — Marketplace',
     tagline:          'Services à domicile, mise en relation intelligente',
     description:      'Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés.',
@@ -63,6 +65,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'movtoo',
     slug:             'movtoo',
     url:              null as string | null,
+    image:            '/images/portfolio/movtoo.jpg',
     badge:            'B2C — Transport',
     tagline:          'Transport à la demande, zones urbaines denses',
     description:      "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement — dispatch en temps réel pour particuliers et professionnels.",
@@ -82,6 +85,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'primiom',
     slug:             'primiom',
     url:              null as string | null,
+    image:            '/images/portfolio/primiom.jpg',
     badge:            'B2C — Immobilier',
     tagline:          'Transaction immobilière centrée sur le vendeur',
     description:      "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z.",
@@ -99,6 +103,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'hobconnect',
     slug:             'hobconnect',
     url:              null as string | null,
+    image:            '/images/portfolio/hobconnect.jpg',
     badge:            'B2C — Social',
     tagline:          'Réseau social centré sur les passions partagées',
     description:      "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations.",
