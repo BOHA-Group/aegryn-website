@@ -143,9 +143,9 @@ export default async function AssetPage({ params }: Props) {
                   <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                     {t('rubricSkills')}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {skills.map((s, i) => (
-                      <li key={i} className="flex items-start gap-4">
+                      <li key={i} className="flex items-start gap-3">
                         <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
                           <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                         </span>
@@ -166,9 +166,9 @@ export default async function AssetPage({ params }: Props) {
                 <p className="text-[15px] text-white leading-[1.8] mb-6">
                   {longDesc}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-4">
+                    <li key={i} className="flex items-start gap-3">
                       <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                       </span>
