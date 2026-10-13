@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation'
 import type { ComponentProps } from 'react'
 
 type LinkHref = ComponentProps<typeof Link>['href']
+import { Check, X } from 'lucide-react'
 import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -251,25 +252,40 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('marketComparison.title')}
           </h2>
-          <div className="rounded-2xl border border-ag-border overflow-x-auto overflow-hidden">
-            <table className="w-full min-w-[640px] text-left">
-              <thead>
-                <tr className="bg-ag-off-white border-b border-ag-border">
-                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.agencyCol')}</th>
-                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink px-6 py-4 w-1/3">{t('marketComparison.aegrynCol')}</th>
-                  <th className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light px-6 py-4 w-1/3">{t('marketComparison.processCol')}</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-ag-border">
-                {marketComparisonAgency.map((agencyItem, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}>
-                    <td className="px-6 py-4 font-sans text-[13px] text-ag-gray">{agencyItem}</td>
-                    <td className="px-6 py-4 font-sans text-[13px] text-ag-black font-medium">{marketComparisonAegryn[i]}</td>
-                    <td className="px-6 py-4 font-mono text-[11px] text-ag-gray-light tracking-[0.08em]">{marketComparisonProcess[i]}</td>
-                  </tr>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {/* Carte agences — fond blanc */}
+            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-5">
+              <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-border bg-ag-off-white text-ag-gray">
+                {t('marketComparison.agencyCol')}
+              </span>
+              <ul className="flex flex-col divide-y divide-ag-border">
+                {marketComparisonAgency.map((item, i) => (
+                  <li key={i} className="py-3.5 flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
+                    <X size={14} className="mt-1 shrink-0 text-ag-gray-light" strokeWidth={2} />
+                    {item}
+                  </li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+            </div>
+            {/* Carte Aegryn — fond navy */}
+            <div className="rounded-2xl bg-ag-navy p-8 flex flex-col gap-5">
+              <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
+                {t('marketComparison.aegrynCol')}
+              </span>
+              <ul className="flex flex-col divide-y divide-white/10">
+                {marketComparisonAegryn.map((item, i) => (
+                  <li key={i} className="py-3.5 flex flex-col gap-1">
+                    <p className="font-sans text-[15px] text-white leading-relaxed flex items-start gap-3">
+                      <Check size={14} className="mt-1 shrink-0 text-ag-apex" strokeWidth={2.5} />
+                      {item}
+                    </p>
+                    <p className="font-mono text-[11px] tracking-[0.08em] text-white/70 pl-[26px]">
+                      {marketComparisonProcess[i]}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </ScrollReveal>
       </section>
