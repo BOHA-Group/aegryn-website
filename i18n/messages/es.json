@@ -265,7 +265,7 @@
         "badge": "B2C · Inmobiliaria",
         "tagline": "Transacción inmobiliaria centrada en el vendedor",
         "description": "Reinventa la transacción inmobiliaria poniendo al vendedor en el centro del proceso. Valoración, análisis de mercado y acompañamiento personalizado de la A a la Z.",
-        "capability": "Repensar un recorrido complejo desde quien decide",
+        "capability": "Repensar un recorrido de cliente complejo desde quien decide",
         "keywords": "recorrido del vendedor · estimación · lectura del mercado · acompañamiento"
       },
       "dataroom": {
@@ -1912,7 +1912,6 @@
     "privacy": "Privacidad",
     "terms": "Términos",
     "dataProtection": "Aviso de protección de datos",
-    "neediuLegal": "neediu es una marca registrada de Aegryn. Todos los derechos reservados.",
     "swissTagline": "Firma de consultoría y grupo operacional. Arraigado en Suiza. Operativo en Europa.",
     "navLabel": "Aegryn",
     "companyLabel": "Empresa",

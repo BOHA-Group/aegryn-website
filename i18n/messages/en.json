@@ -265,7 +265,7 @@
         "badge": "B2C · Real Estate",
         "tagline": "Seller-centric real estate transactions",
         "description": "Reinvents the real estate transaction by placing the seller at the heart of the process. Valuation, market analysis and personalised support from A to Z.",
-        "capability": "Rethinking a complex journey from the decision-maker's side",
+        "capability": "Rethinking a complex client journey from the decision-maker",
         "keywords": "seller journey · valuation · market reading · guidance"
       },
       "dataroom": {
@@ -1912,7 +1912,6 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "dataProtection": "Data Protection Notice",
-    "neediuLegal": "neediu is a registered trademark of Aegryn. All rights reserved.",
     "swissTagline": "Advisory firm and operational group. Rooted in Switzerland. Operational across Europe.",
     "navLabel": "Aegryn",
     "companyLabel": "Company",

@@ -265,7 +265,7 @@
         "badge": "B2C · Vastgoed",
         "tagline": "Vastgoedtransactie gericht op de verkoper",
         "description": "Herdefinieert de vastgoedtransactie door de verkoper centraal te stellen. Waardering, marktanalyse en persoonlijke begeleiding van A tot Z.",
-        "capability": "Een complex traject herdenken vanuit wie beslist",
+        "capability": "Een complex klanttraject herdenken vanuit degene die beslist",
         "keywords": "verkoperstraject · schatting · marktlezing · begeleiding"
       },
       "dataroom": {
@@ -1912,7 +1912,6 @@
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
-    "neediuLegal": "neediu is een geregistreerd handelsmerk van Aegryn. Alle rechten voorbehouden.",
     "swissTagline": "Adviesbureau en operationele groep. Geworteld in Zwitserland. Operationeel in Europa.",
     "navLabel": "Aegryn",
     "companyLabel": "Bedrijf",

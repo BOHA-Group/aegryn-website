@@ -265,7 +265,7 @@
         "badge": "B2C · Immobilier",
         "tagline": "Transaction immobilière centrée sur le vendeur",
         "description": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z.",
-        "capability": "Repenser un parcours complexe depuis celui qui décide",
+        "capability": "Repenser un parcours client complexe depuis celui qui décide",
         "keywords": "parcours vendeur · estimation · lecture du marché · accompagnement"
       },
       "hobconnect": {
@@ -1872,7 +1872,6 @@
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
-    "neediuLegal": "neediu est une marque déposée d'Aegryn. Tous droits réservés.",
     "swissTagline": "Cabinet de conseil et groupe opérationnel. Ancré en Suisse. Opérationnel en Europe.",
     "navLabel": "Aegryn",
     "companyLabel": "Entreprise",

@@ -46,7 +46,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AssetPage({ params }: Props) {
   const { locale, slug } = await params
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
-  const tFooter  = await getTranslations({ locale, namespace: 'footer' })
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
@@ -237,20 +236,6 @@ export default async function AssetPage({ params }: Props) {
             )}
           </div>
         </section>
-      )}
-
-      {/* Neediu legal notice — only on the neediu page */}
-      {asset.id === 'neediu' && (
-        <div className="border-b border-ag-border bg-ag-off-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-end">
-            <Link
-              href="/data-protection-notice-neediu"
-              className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light hover:text-ag-black transition-colors"
-            >
-              {tFooter('neediuLegal')}
-            </Link>
-          </div>
-        </div>
       )}
 
       {/* Neediu press — Gala */}
