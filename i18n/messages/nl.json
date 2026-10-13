@@ -233,7 +233,8 @@
       "filterValuation": "Waardering",
       "publicNameSuffix": "publieke naam",
       "ctaDiscuss": "Uw project bespreken",
-      "ctaTools": "De operationele tools van de groep bekijken"
+      "ctaTools": "De operationele tools van de groep bekijken",
+      "compareCta": "Een vergelijkbare behoefte? Laten we praten"
     },
     "items": {
       "subblink": {
@@ -251,17 +252,23 @@
       "neediu": {
         "badge": "B2C · Marktplaats",
         "tagline": "Thuisdiensten, intelligente koppeling",
-        "description": "Verbindt particulieren en professionals met de beste aanbieders van thuisdiensten, op basis van locatie en geverifieerde beoordelingen."
+        "description": "Verbindt particulieren en professionals met de beste aanbieders van thuisdiensten, op basis van locatie en geverifieerde beoordelingen.",
+        "capability": "Een netwerk van onafhankelijke aanbieders orkestreren",
+        "keywords": "aanbiedernetwerk · directe boeking · geverifieerde reviews · nabijheid"
       },
       "movtoo": {
         "badge": "B2C · Transport",
         "tagline": "Transport op aanvraag, dichte stedelijke zones",
-        "description": "AI-aangedreven onmiddellijk transportplatform. Ritten, pakketten, verhuizingen: realtime dispatch voor particulieren en professionals."
+        "description": "AI-aangedreven onmiddellijk transportplatform. Ritten, pakketten, verhuizingen: realtime dispatch voor particulieren en professionals.",
+        "capability": "Stromen in realtime sturen met AI",
+        "keywords": "realtime dispatch · wagenpark · pakketten · laatste kilometer"
       },
       "primiom": {
         "badge": "B2C · Vastgoed",
         "tagline": "Vastgoedtransactie gericht op de verkoper",
-        "description": "Herdefinieert de vastgoedtransactie door de verkoper centraal te stellen. Waardering, marktanalyse en persoonlijke begeleiding van A tot Z."
+        "description": "Herdefinieert de vastgoedtransactie door de verkoper centraal te stellen. Waardering, marktanalyse en persoonlijke begeleiding van A tot Z.",
+        "capability": "Een complex traject herdenken vanuit wie beslist",
+        "keywords": "verkoperstraject · schatting · marktlezing · begeleiding"
       },
       "dataroom": {
         "badge": "Data Room · M&A",
@@ -285,7 +292,9 @@
       "hobconnect": {
         "badge": "B2C · Sociaal",
         "tagline": "Sociaal netwerk gericht op gedeelde passies",
-        "description": "Bouwt authentieke gemeenschappen rondom gedeelde passies, zonder reclamealgorithmen. Voor particulieren, professionals, creatieven en verenigingen."
+        "description": "Bouwt authentieke gemeenschappen rondom gedeelde passies, zonder reclamealgorithmen. Voor particulieren, professionals, creatieven en verenigingen.",
+        "capability": "Een eigen publiek opbouwen, zonder reclame-intermediair",
+        "keywords": "eigen publiek · gecontroleerde data · moderatie · engagement"
       },
       "categories": {
         "ai": "AI & Protocollen",
@@ -1226,7 +1235,18 @@
           "Live opdrachttracking",
           "Prestatieverzekering inbegrepen",
           "Dekking Zwitserland en Europa"
-        ]
+        ],
+        "need": "Een betrouwbare aanbieder aan huis vinden blijft traag en onzeker: verouderde directories, niet-geverifieerde reviews, ondoorzichtige beschikbaarheid.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsstudie",
+          "Businessplan",
+          "Merk & marketing",
+          "Ervaringsontwerp",
+          "Technische ontwikkeling",
+          "Lanceringsstrategie"
+        ],
+        "orgs": "Verzekeringen en banken (reparatienetwerken, assistentie), Gezondheid (thuiszorg), Handel & Diensten (installatie, nazorg), overheden."
       },
       "primiom": {
         "longDesc": "Hervindt vastgoedtransacties door de verkoper centraal te stellen in het koop- en verkoopproces. Nauwkeurige waardering, real-time marktanalyse en persoonlijke begeleiding van A tot Z.",
@@ -1238,7 +1258,13 @@
           "Financieringssimulatie",
           "Verbinding met partners",
           "Dekking Zwitserland en Europa"
-        ]
+        ],
+        "need": "Een pand verkopen blijft een ondoorzichtig, asymmetrisch traject: bij benadering geschatte waarde, marktkennis voorbehouden aan professionals, verkoper buiten de beslissingen gehouden.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsstudie"
+        ],
+        "orgs": "Financiën & Kapitaal, Industrie & Infrastructuur (promotie) en elke complexe transactie, waaronder bedrijfsoverdracht."
       },
       "movtoo": {
         "longDesc": "On-demand transportplatform aangedreven door kunstmatige intelligentie. Transport op aanvraag geoptimaliseerd voor dichte stedelijke gebieden.",
@@ -1250,7 +1276,13 @@
           "Multi-categorie: voeding, pakketten, documenten, verhuizing",
           "Geverifieerde onafhankelijke transporteurs",
           "API beschikbaar"
-        ]
+        ],
+        "need": "Dichte stedelijke gebieden vragen transportstromen die reactiever zijn dan klassieke schema's toelaten: directe ritten, pakketten, eenmalige verhuizingen.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsstudie"
+        ],
+        "orgs": "Industrie & Infrastructuur (logistiek), Handel (levering), Gezondheid (vervoer), overheden."
       },
       "hobconnect": {
         "longDesc": "Bouwt authentieke gemeenschappen rond gedeelde passies. Fotografie, koken, sport, muziek: een sociaal netwerk gericht op gemeenschappelijk belang in plaats van volgersaantallen.",
@@ -1262,7 +1294,13 @@
           "Privéberichten tussen enthousiastelingen",
           "Georganiseerde workshops en bijeenkomsten",
           "Geen opdringerige reclame"
-        ]
+        ],
+        "need": "Klassieke sociale netwerken gelden aandacht om via reclame en algoritmes; authentieke passiecommunities hebben geen eigen ruimte.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsstudie"
+        ],
+        "orgs": "Handel & Diensten (merken), Gezondheid (patiëntencommunities), Tech & publieke sector (verenigingen, instellingen)."
       }
     },
     "press": {
@@ -1285,7 +1323,11 @@
         "altBanner": "subblink — AI-gebaseerde contractanalyse",
         "partnerName": "Village de la Justice"
       }
-    }
+    },
+    "rubricNeed": "De behoefte",
+    "rubricSetup": "Wat wij hebben opgezet",
+    "rubricSkills": "Ingezette expertise",
+    "rubricOrgs": "Voor welke organisaties"
   },
   "assetCarousel": {
     "label": "Ons ecosysteem",
@@ -1608,7 +1650,8 @@
       "success": {
         "title": "Bericht ontvangen.",
         "desc": "Wij reageren binnen 24 uur."
-      }
+      },
+      "projectMessage": "Hallo, ik heb interesse in het project «{project}» voor een vergelijkbare behoefte."
     },
     "meta": {
       "title": "Contact | Aegryn",

@@ -233,7 +233,8 @@
       "filterValuation": "Bewertung",
       "publicNameSuffix": "öffentlicher Name",
       "ctaDiscuss": "Über Ihr Projekt sprechen",
-      "ctaTools": "Die operativen Werkzeuge der Gruppe ansehen"
+      "ctaTools": "Die operativen Werkzeuge der Gruppe ansehen",
+      "compareCta": "Ein vergleichbarer Bedarf? Sprechen wir darüber"
     },
     "items": {
       "subblink": {
@@ -251,17 +252,23 @@
       "neediu": {
         "badge": "B2C · Marktplatz",
         "tagline": "Haushaltsdienstleistungen, intelligente Vermittlung",
-        "description": "Verbindet Privatpersonen und Fachleute mit den besten Haushaltsdienstleistern, basierend auf Standort und verifizierten Bewertungen."
+        "description": "Verbindet Privatpersonen und Fachleute mit den besten Haushaltsdienstleistern, basierend auf Standort und verifizierten Bewertungen.",
+        "capability": "Ein Netzwerk unabhängiger Anbieter orchestrieren",
+        "keywords": "Anbieternetzwerk · Sofortbuchung · verifizierte Bewertungen · Nähe"
       },
       "movtoo": {
         "badge": "B2C · Transport",
         "tagline": "On-Demand-Transport, dichte Stadtzonen",
-        "description": "KI-gestützte Soforttransportplattform. Fahrten, Pakete, Umzüge: Echtzeit-Dispatch für Privatpersonen und Fachleute."
+        "description": "KI-gestützte Soforttransportplattform. Fahrten, Pakete, Umzüge: Echtzeit-Dispatch für Privatpersonen und Fachleute.",
+        "capability": "Flüsse in Echtzeit mit KI steuern",
+        "keywords": "Echtzeit-Dispatch · Flotte · Pakete · letzte Meile"
       },
       "primiom": {
         "badge": "B2C · Immobilien",
         "tagline": "Verkäuferzentrierte Immobilientransaktionen",
-        "description": "Erfindet die Immobilientransaktion neu, indem der Verkäufer in den Mittelpunkt gestellt wird. Bewertung, Marktanalyse und persönliche Begleitung von A bis Z."
+        "description": "Erfindet die Immobilientransaktion neu, indem der Verkäufer in den Mittelpunkt gestellt wird. Bewertung, Marktanalyse und persönliche Begleitung von A bis Z.",
+        "capability": "Einen komplexen Weg aus Sicht des Entscheiders neu denken",
+        "keywords": "Verkäuferweg · Schätzung · Marktkenntnis · Begleitung"
       },
       "dataroom": {
         "badge": "Data Room · M&A",
@@ -285,7 +292,9 @@
       "hobconnect": {
         "badge": "B2C · Sozial",
         "tagline": "Soziales Netzwerk rund um gemeinsame Leidenschaften",
-        "description": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften auf, ohne Werbealgorithmen. Für Privatpersonen, Fachleute, Kreative und Vereine."
+        "description": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften auf, ohne Werbealgorithmen. Für Privatpersonen, Fachleute, Kreative und Vereine.",
+        "capability": "Eine eigene Audience ohne Werbezwischenhändler aufbauen",
+        "keywords": "eigene Audience · kontrollierte Daten · Moderation · Engagement"
       },
       "categories": {
         "ai": "KI & Protokolle",
@@ -1226,7 +1235,18 @@
           "Live-Auftragsverfolgung",
           "Leistungsversicherung inbegriffen",
           "Abdeckung Schweiz und Europa"
-        ]
+        ],
+        "need": "Einen vertrauenswürdigen Anbieter für Dienstleistungen zu Hause zu finden bleibt langsam und unsicher: veraltete Verzeichnisse, ungeprüfte Bewertungen, undurchsichtige Verfügbarkeiten.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie",
+          "Businessplan",
+          "Marke & Marketing",
+          "Erlebnisdesign",
+          "Technische Entwicklung",
+          "Launch-Strategie"
+        ],
+        "orgs": "Versicherung und Banken (Reparaturnetzwerke, Assistance), Gesundheit (häusliche Pflege), Handel & Dienstleistungen (Installation, Kundendienst), Gemeinden."
       },
       "primiom": {
         "longDesc": "Erfindet Immobilientransaktionen neu, indem der Verkäufer in den Mittelpunkt des Kauf- und Verkaufsprozesses gestellt wird. Präzise Bewertung, Echtzeit-Marktanalyse und persönliche Begleitung von A bis Z.",
@@ -1238,7 +1258,13 @@
           "Finanzierungssimulation",
           "Anbindung an Partner",
           "Abdeckung Schweiz und Europa"
-        ]
+        ],
+        "need": "Eine Immobilie zu verkaufen bleibt ein intransparenter, asymmetrischer Weg: ungefähre Schätzung, den Profis vorbehaltene Marktkenntnis, von Entscheiden ausgeschlossene Verkäufer.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie"
+        ],
+        "orgs": "Finance & Capital, Industrie & Infrastruktur (Promotion) und jede komplexe Transaktion, einschliesslich Unternehmensverkauf."
       },
       "movtoo": {
         "longDesc": "On-Demand-Transportplattform, angetrieben durch künstliche Intelligenz. Bedarfsgesteuerter Transport optimiert für dichte städtische Gebiete.",
@@ -1250,7 +1276,13 @@
           "Multikategorie: Lebensmittel, Pakete, Dokumente, Umzug",
           "Verifizierte unabhängige Transporteure",
           "API verfügbar"
-        ]
+        ],
+        "need": "Dichte Stadtgebiete erfordern Transportflüsse, die klassische Schemata nicht mehr folgen können: Sofortfahrten, Pakete, punktuelle Umzüge.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie"
+        ],
+        "orgs": "Industrie & Infrastruktur (Logistik), Handel (Lieferung), Gesundheit (Transport), Gemeinden."
       },
       "hobconnect": {
         "longDesc": "Baut authentische Gemeinschaften rund um gemeinsame Leidenschaften. Fotografie, Kochen, Sport, Musik: ein soziales Netzwerk, das auf gemeinsamen Interessen statt auf Followern basiert.",
@@ -1262,7 +1294,13 @@
           "Private Nachrichten zwischen Begeisterten",
           "Organisierte Workshops und Treffen",
           "Keine aufdringliche Werbung"
-        ]
+        ],
+        "need": "Klassische soziale Netzwerke monetarisieren Aufmerksamkeit durch Werbung und Algorithmen; echte Leidenschafts-Communities haben keinen eigenen Raum.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie"
+        ],
+        "orgs": "Handel & Dienstleistungen (Marken), Gesundheit (Patienten-Communities), Tech & öffentlicher Sektor (Vereine, Institutionen)."
       }
     },
     "press": {
@@ -1285,7 +1323,11 @@
         "altBanner": "subblink — KI-gestützte Vertragsanalyse",
         "partnerName": "Village de la Justice"
       }
-    }
+    },
+    "rubricNeed": "Der Bedarf",
+    "rubricSetup": "Was wir umgesetzt haben",
+    "rubricSkills": "Mobilisiertes Know-how",
+    "rubricOrgs": "Für welche Organisationen"
   },
   "assetCarousel": {
     "label": "Unser Ökosystem",
@@ -1608,7 +1650,8 @@
       "success": {
         "title": "Nachricht erhalten.",
         "desc": "Wir melden uns innerhalb von 24 Stunden."
-      }
+      },
+      "projectMessage": "Guten Tag, ich interessiere mich für das Projekt «{project}» für einen vergleichbaren Bedarf."
     },
     "meta": {
       "title": "Kontakt | Aegryn",

@@ -233,7 +233,8 @@
       "filterValuation": "Valuation",
       "publicNameSuffix": "public name",
       "ctaDiscuss": "Discuss your project",
-      "ctaTools": "See the group's operational tools"
+      "ctaTools": "See the group's operational tools",
+      "compareCta": "A similar need? Let's talk"
     },
     "items": {
       "subblink": {
@@ -251,17 +252,23 @@
       "neediu": {
         "badge": "B2C · Marketplace",
         "tagline": "Home services, intelligent matching",
-        "description": "Connects individuals and professionals with the best home service providers, based on location and verified reviews."
+        "description": "Connects individuals and professionals with the best home service providers, based on location and verified reviews.",
+        "capability": "Orchestrating a network of independent providers",
+        "keywords": "provider network · instant booking · verified reviews · proximity"
       },
       "movtoo": {
         "badge": "B2C · Transport",
         "tagline": "On-demand transport, dense urban areas",
-        "description": "AI-powered immediate transport platform. Rides, parcels, moving: real-time dispatch for individuals and professionals."
+        "description": "AI-powered immediate transport platform. Rides, parcels, moving: real-time dispatch for individuals and professionals.",
+        "capability": "Steering flows in real time with AI",
+        "keywords": "real-time dispatch · fleet · parcels · last mile"
       },
       "primiom": {
         "badge": "B2C · Real Estate",
         "tagline": "Seller-centric real estate transactions",
-        "description": "Reinvents the real estate transaction by placing the seller at the heart of the process. Valuation, market analysis and personalised support from A to Z."
+        "description": "Reinvents the real estate transaction by placing the seller at the heart of the process. Valuation, market analysis and personalised support from A to Z.",
+        "capability": "Rethinking a complex journey from the decision-maker's side",
+        "keywords": "seller journey · valuation · market reading · guidance"
       },
       "dataroom": {
         "badge": "Data Room · M&A",
@@ -285,7 +292,9 @@
       "hobconnect": {
         "badge": "B2C · Social",
         "tagline": "Social network built around shared passions",
-        "description": "Builds authentic communities around shared passions, without advertising algorithms. For individuals, professionals, creators and associations."
+        "description": "Builds authentic communities around shared passions, without advertising algorithms. For individuals, professionals, creators and associations.",
+        "capability": "Building an owned audience without advertising intermediaries",
+        "keywords": "owned audience · controlled data · moderation · engagement"
       },
       "categories": {
         "ai": "AI & Protocols",
@@ -1226,7 +1235,18 @@
           "Live mission tracking",
           "Service insurance included",
           "Coverage Switzerland and Europe"
-        ]
+        ],
+        "need": "Finding a trustworthy home-service provider remains slow and uncertain: outdated directories, unverified reviews, opaque availability.",
+        "skills": [
+          "Concept development",
+          "Feasibility study",
+          "Business plan",
+          "Brand & marketing",
+          "Experience design",
+          "Technical development",
+          "Launch strategy"
+        ],
+        "orgs": "Insurance and banking (repairer networks, assistance), Health (home care), Commerce & Services (installation, after-sales), local authorities."
       },
       "primiom": {
         "longDesc": "Reinvents real estate transactions by placing the seller at the heart of the buying and selling process. Precise valuation, real-time market analysis and personalised guidance from A to Z.",
@@ -1238,7 +1258,13 @@
           "Financing simulation",
           "Connection to partners",
           "Coverage Switzerland and Europe"
-        ]
+        ],
+        "need": "Selling a property remains an opaque, asymmetric journey: approximate valuation, market reading reserved for professionals, sellers kept away from decisions.",
+        "skills": [
+          "Concept development",
+          "Feasibility study"
+        ],
+        "orgs": "Finance & Capital, Industry & Infrastructure (development), and any complex transaction, including business transfer."
       },
       "movtoo": {
         "longDesc": "On-demand transport platform powered by artificial intelligence. Transport on demand optimised for dense urban areas.",
@@ -1250,7 +1276,13 @@
           "Multi-category: food, parcels, documents, moving",
           "Verified independent carriers",
           "API available"
-        ]
+        ],
+        "need": "Dense urban areas demand transport flows more responsive than traditional schemes allow: instant rides, parcels, one-off moves.",
+        "skills": [
+          "Concept development",
+          "Feasibility study"
+        ],
+        "orgs": "Industry & Infrastructure (logistics), Commerce (delivery), Health (transport), local authorities."
       },
       "hobconnect": {
         "longDesc": "Builds authentic communities around shared passions. Photography, cooking, sport, music: a social network centred on common interest rather than follower counts.",
@@ -1262,7 +1294,13 @@
           "Private messaging between enthusiasts",
           "Organised workshops and meetups",
           "No intrusive advertising"
-        ]
+        ],
+        "need": "Mainstream social networks monetise attention through advertising and algorithms; genuine passion communities have no space of their own.",
+        "skills": [
+          "Concept development",
+          "Feasibility study"
+        ],
+        "orgs": "Commerce & Services (brands), Health (patient communities), Tech & Public sector (associations, institutions)."
       }
     },
     "press": {
@@ -1285,7 +1323,11 @@
         "altBanner": "subblink — AI-powered contract analysis",
         "partnerName": "Village de la Justice"
       }
-    }
+    },
+    "rubricNeed": "The need",
+    "rubricSetup": "What we put in place",
+    "rubricSkills": "Know-how mobilised",
+    "rubricOrgs": "For which organisations"
   },
   "assetCarousel": {
     "label": "Our ecosystem",
@@ -1608,7 +1650,8 @@
       "success": {
         "title": "Message received.",
         "desc": "We will get back to you within 24 hours."
-      }
+      },
+      "projectMessage": "Hello, I am interested in the “{project}” project for a similar need."
     },
     "meta": {
       "title": "Contact | Aegryn",

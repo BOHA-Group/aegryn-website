@@ -56,6 +56,9 @@ export default async function AssetPage({ params }: Props) {
   const longDesc  = hasAssetI18n ? t(`assets.${assetId}.longDesc`) : tItems(`${asset.id}.description`)
   const audience  = hasAssetI18n ? t(`assets.${assetId}.audience`) : ''
   const features  = hasAssetI18n ? (t.raw(`assets.${assetId}.features`) as string[]) : []
+  const need      = hasAssetI18n ? t(`assets.${assetId}.need`) : ''
+  const skills    = hasAssetI18n ? (t.raw(`assets.${assetId}.skills`) as string[]) : []
+  const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
   const categoryLabel = tCats(asset.category)
   const isLive   = !!asset.url
@@ -106,45 +109,76 @@ export default async function AssetPage({ params }: Props) {
       {/* Divider strip */}
       <div className="h-px bg-gradient-to-r from-transparent via-ag-apex/40 to-transparent" />
 
-      {/* Description + features */}
+      {/* Quatre rubriques */}
       <section className="border-b border-ag-border">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
 
-            {/* Long description */}
-            <div className="py-20 md:pr-16">
-              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {t('presentation')}
-              </p>
-              <p className="text-[15px] text-ag-dark leading-[1.8]">
-                {longDesc}
-              </p>
-              {audience && (
-                <div className="mt-10 pt-8 border-t border-ag-border">
-                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
-                    {t('audience')}
+            {/* Colonne gauche : Le besoin + Savoir-faire mobilisé */}
+            <div className="py-20 md:pr-16 space-y-12">
+              <div>
+                <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+                  {t('rubricNeed')}
+                </p>
+                <p className="text-[15px] text-ag-dark leading-[1.8]">
+                  {need}
+                </p>
+              </div>
+              {skills.length > 0 && (
+                <div className="pt-10 border-t border-ag-border">
+                  <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+                    {t('rubricSkills')}
                   </p>
-                  <p className="text-[15px] text-ag-gray">{audience}</p>
+                  <ul className="space-y-3">
+                    {skills.map((s, i) => (
+                      <li key={i} className="flex items-start gap-4">
+                        <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
+                          <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
+                        </span>
+                        <span className="text-[15px] text-ag-gray leading-relaxed">{s}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>
 
-            {/* Features */}
-            <div className="py-20 md:pl-16">
-              <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
-                {t('features')}
-              </p>
-              <ul className="space-y-4">
-                {features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
-                    </span>
-                    <span className="text-[15px] text-ag-gray leading-relaxed">{f}</span>
-                  </li>
-                ))}
-              </ul>
-
+            {/* Colonne droite : Mise en place + Organisations */}
+            <div className="py-20 md:pl-16 space-y-12">
+              <div>
+                <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+                  {t('rubricSetup')}
+                </p>
+                <p className="text-[15px] text-ag-dark leading-[1.8] mb-6">
+                  {longDesc}
+                </p>
+                <ul className="space-y-3">
+                  {features.map((f, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
+                      </span>
+                      <span className="text-[15px] text-ag-gray leading-relaxed">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                {audience && (
+                  <div className="mt-8 pt-6 border-t border-ag-border">
+                    <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                      {t('audience')}
+                    </p>
+                    <p className="text-[15px] text-ag-gray">{audience}</p>
+                  </div>
+                )}
+              </div>
+              {orgs && (
+                <div className="pt-10 border-t border-ag-border">
+                  <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+                    {t('rubricOrgs')}
+                  </p>
+                  <p className="text-[15px] text-ag-gray leading-relaxed">{orgs}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

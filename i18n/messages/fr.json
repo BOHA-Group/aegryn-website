@@ -233,7 +233,8 @@
       "filterValuation": "Valorisation",
       "publicNameSuffix": "nom public",
       "ctaDiscuss": "Discuter de votre projet",
-      "ctaTools": "Voir les outils opérationnels du groupe"
+      "ctaTools": "Voir les outils opérationnels du groupe",
+      "compareCta": "Un besoin comparable ? Parlons-en"
     },
     "items": {
       "subblink": {
@@ -251,22 +252,30 @@
       "neediu": {
         "badge": "B2C · Marketplace",
         "tagline": "Services à domicile, mise en relation intelligente",
-        "description": "Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés."
+        "description": "Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés.",
+        "capability": "Orchestrer un réseau de prestataires indépendants",
+        "keywords": "réseau de prestataires · réservation instantanée · avis vérifiés · proximité"
       },
       "movtoo": {
         "badge": "B2C · Transport",
         "tagline": "Transport à la demande, zones urbaines denses",
-        "description": "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement : dispatch en temps réel pour particuliers et professionnels."
+        "description": "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement : dispatch en temps réel pour particuliers et professionnels.",
+        "capability": "Piloter des flux en temps réel par l'IA",
+        "keywords": "dispatch temps réel · flotte · colis · dernier kilomètre"
       },
       "primiom": {
         "badge": "B2C · Immobilier",
         "tagline": "Transaction immobilière centrée sur le vendeur",
-        "description": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z."
+        "description": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z.",
+        "capability": "Repenser un parcours complexe depuis celui qui décide",
+        "keywords": "parcours vendeur · estimation · lecture du marché · accompagnement"
       },
       "hobconnect": {
         "badge": "B2C · Social",
         "tagline": "Réseau social centré sur les passions partagées",
-        "description": "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations."
+        "description": "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations.",
+        "capability": "Bâtir une audience propre, sans intermédiaire publicitaire",
+        "keywords": "audience propre · données maîtrisées · modération · engagement"
       },
       "dataroom": {
         "badge": "Data Room · M&A",
@@ -1186,7 +1195,18 @@
           "Suivi de mission en direct",
           "Assurance prestation incluse",
           "Couverture Suisse et Europe"
-        ]
+        ],
+        "need": "Trouver un prestataire de confiance à domicile reste lent et incertain : annuaires obsolètes, avis non vérifiés, disponibilités opaques.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité",
+          "Business plan",
+          "Marque & marketing",
+          "Design d'expérience",
+          "Développement technique",
+          "Stratégie de lancement"
+        ],
+        "orgs": "Assurance et banque (réseaux de réparateurs, assistance), Santé (soins à domicile), Commerce & Services (installation, SAV), collectivités."
       },
       "primiom": {
         "longDesc": "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus d'achat et de vente. Estimation précise, analyse de marché en temps réel et accompagnement personnalisé de A à Z.",
@@ -1198,7 +1218,13 @@
           "Simulation de financement",
           "Connexion aux partenaires",
           "Couverture Suisse et Europe"
-        ]
+        ],
+        "need": "Vendre un bien reste un parcours opaque et asymétrique : estimation approximative, lecture du marché réservée aux professionnels, vendeur tenu à l'écart des décisions.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité"
+        ],
+        "orgs": "Finance & Capital, Industrie & Infrastructure (promotion), et toute transaction complexe, dont la cession d'entreprise."
       },
       "movtoo": {
         "longDesc": "Plateforme de transport immédiat pilotée par l'intelligence artificielle. Transport à la demande optimisé pour les zones urbaines denses.",
@@ -1210,7 +1236,13 @@
           "Multi-catégories : alimentaire, colis, documents, déménagement",
           "Transporteurs indépendants vérifiés",
           "API disponible"
-        ]
+        ],
+        "need": "Les zones urbaines denses exigent des flux de transport plus réactifs que les schémas classiques ne le permettent : courses immédiates, colis, déménagements ponctuels.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité"
+        ],
+        "orgs": "Industrie & Infrastructure (logistique), Commerce (livraison), Santé (transport), collectivités."
       },
       "hobconnect": {
         "longDesc": "Crée des communautés authentiques autour des passions partagées. Photographie, cuisine, sport, musique : un réseau social centré sur l'intérêt commun plutôt que sur les abonnés.",
@@ -1222,7 +1254,13 @@
           "Messagerie privée entre passionnés",
           "Ateliers et rencontres organisés",
           "Sans publicité intrusive"
-        ]
+        ],
+        "need": "Les réseaux sociaux classiques monétisent l'attention par la publicité et l'algorithme ; les communautés de passion authentiques n'ont pas d'espace propre.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité"
+        ],
+        "orgs": "Commerce & Services (marques), Santé (communautés de patients), Tech & Secteur public (associations, institutions)."
       }
     },
     "press": {
@@ -1245,7 +1283,11 @@
         "altBanner": "subblink — Analyse contractuelle par IA",
         "partnerName": "Village de la Justice"
       }
-    }
+    },
+    "rubricNeed": "Le besoin",
+    "rubricSetup": "Ce que nous avons mis en place",
+    "rubricSkills": "Savoir-faire mobilisé",
+    "rubricOrgs": "Pour quelles organisations"
   },
   "assetDrawer": {
     "contactUs": "Nous contacter",
@@ -1568,7 +1610,8 @@
       "success": {
         "title": "Message reçu.",
         "desc": "Nous vous répondrons dans les 24 heures."
-      }
+      },
+      "projectMessage": "Bonjour, je m'intéresse au projet « {project} » pour un besoin comparable."
     },
     "meta": {
       "title": "Contact | Aegryn",

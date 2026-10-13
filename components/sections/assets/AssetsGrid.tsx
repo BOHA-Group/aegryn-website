@@ -108,12 +108,9 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                 </div>
               )}
               <div className="p-5 flex flex-col gap-3 flex-1">
-              {/* Titre : tagline + nom public éventuel */}
+              {/* Titre : capacité démontrée */}
               <h2 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] leading-snug">
-                {tItems(`${asset.id}.tagline`)}
-                {asset.namePublic && (
-                  <span className="font-normal text-ag-gray"> ({t('publicNameSuffix')} : {asset.name})</span>
-                )}
+                {tItems(`${asset.id}.capability`)}
               </h2>
 
               {/* Badges statut */}
@@ -135,8 +132,17 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               {/* Détails pliés — dépliés au survol */}
               <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
                 <div className="min-h-0 min-w-0 overflow-hidden">
-                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed pb-3">
+                  <p className="font-sans font-semibold text-[13px] text-ag-dark leading-snug">
+                    {tItems(`${asset.id}.tagline`)}
+                    {asset.namePublic && (
+                      <span className="font-normal text-ag-gray"> ({t('publicNameSuffix')} : {asset.name})</span>
+                    )}
+                  </p>
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed pt-2 pb-2">
                     {tItems(`${asset.id}.description`)}
+                  </p>
+                  <p className="font-mono text-[9px] tracking-[0.08em] text-ag-gray-light leading-relaxed pb-3">
+                    {tItems(`${asset.id}.keywords`)}
                   </p>
                   <div className="flex items-center gap-4 pt-3 border-t border-ag-border">
                     {asset.internalOnly ? (
@@ -162,6 +168,14 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                       </a>
                     )}
                   </div>
+                  {!asset.internalOnly && (
+                    <Link
+                      href={`/contact?subject=general&projet=${asset.id}` as never}
+                      className="mt-3 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
+                    >
+                      {t('compareCta')} <ArrowUpRight size={11} />
+                    </Link>
+                  )}
                 </div>
               </div>
               </div>

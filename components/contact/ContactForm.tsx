@@ -47,7 +47,6 @@ export default function ContactForm({ locale }: Props) {
   const t = useTranslations('contact.form')
 
   const [status, setStatus]         = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
-  const [msgLen, setMsgLen]         = useState(0)
   const [errorCode, setErrorCode]   = useState<string | null>(null)
   const [phoneCountry, setPhoneCountry] = useState('FR')
   const [phone, setPhone]           = useState('')
@@ -64,7 +63,16 @@ export default function ContactForm({ locale }: Props) {
     const ty = params.get('type')
     return ty ? (TYPE_TO_SUBJECT[ty] ?? '') : ''
   })
-  const [message, setMessage] = useState('')
+  /* Pré-remplissage du message quand on vient d'une fiche projet (?projet=<id>) */
+  const tItems = useTranslations('assets.items')
+  const projet = params.get('projet') ?? ''
+  const PROJECT_IDS = ['subblink', 'neediu', 'movtoo', 'primiom', 'hobconnect']
+  const [message, setMessage] = useState(() =>
+    PROJECT_IDS.includes(projet)
+      ? t('projectMessage', { project: tItems(`${projet}.tagline` as Parameters<typeof tItems>[0]) })
+      : ''
+  )
+  const [msgLen, setMsgLen]     = useState(() => message.length)
   const cycle = params.get('cycle') ?? ''
 
   const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === phoneCountry) ?? COUNTRY_OPTIONS[0]
