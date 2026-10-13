@@ -7,30 +7,27 @@ export interface VisionSegment {
   bold?: boolean
 }
 
-// Persiste tant que la session SPA vit : le texte deja entierement
-// revele ne rejoue pas apres navigation, seulement apres un reload.
-let played = false
-
 /**
  * « Notre vision » : le texte se revele au rythme du scroll, pas au timer.
- * La hauteur finale est reservee par un rendu invisible du texte complet ;
- * la portion visible est proportionnelle a la progression du paragraphe
- * dans le viewport. Bidirectionnel : remonter efface le texte, comme une
- * frappe a l'envers. Le curseur clignote tant que le texte est incomplet.
+ * La portion visible est strictement proportionnelle a la position du
+ * paragraphe dans le viewport, recalculee a chaque evenement de scroll :
+ * descendre tape, remonter efface, a la vitesse du geste. Aucun etat
+ * persistant : a chaque instant, l'affichage depend de la position de scroll.
+ * Le curseur clignote tant que le texte est incomplet. La hauteur finale
+ * est reservee par un rendu invisible du texte complet (pas de saut).
  * Les segments marques `bold` restent en gras pendant et apres la revelation.
  */
 export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
   const full = segments.map((s) => s.t).join('')
-  const [chars, setChars] = useState(played ? full.length : 0)
-  const [started, setStarted] = useState(played)
+  const [chars, setChars] = useState(0)
+  const [started, setStarted] = useState(false)
   const ref = useRef<HTMLParagraphElement>(null)
   const done = chars >= full.length
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (played || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      played = true
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setChars(full.length)
       setStarted(true)
       return
@@ -41,13 +38,13 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
       const r = el.getBoundingClientRect()
       const vh = window.innerHeight
       // 0% quand le haut du bloc entre en bas d'ecran,
-      // 100% quand il atteint ~30% de la hauteur du viewport.
-      const start = vh * 0.92
-      const end   = vh * 0.30
+      // 100% quand il approche du haut du viewport : la frappe
+      // s'etale sur presque toute la traversee de l'ecran.
+      const start = vh * 0.95
+      const end   = vh * 0.08
       const p = Math.min(1, Math.max(0, (start - r.top) / (start - end)))
       const n = Math.round(p * full.length)
       setStarted(p > 0)
-      if (n >= full.length) played = true
       setChars(n)
     }
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(update) }
