@@ -5370,8 +5370,10 @@
     "marketComparison": {
       "label": "Ce que font très peu les autres",
       "title": "Pas une agence. Un prix, un périmètre,\naucune surprise.",
-      "agencyCol": "Ce que font les agences",
-      "aegrynCol": "Ce que fait Aegryn",
+      "agencyCol": "Ce que font les agences.",
+      "aegrynCol": "Ce que fait Aegryn.",
+      "agencyCardLabel": "LE MARCHÉ",
+      "aegrynCardLabel": "AEGRYN",
       "processCol": "Comment on y arrive",
       "agencyItems": [
         "Devis indicatif, facture réelle différente",

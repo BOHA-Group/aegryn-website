@@ -255,9 +255,15 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* Carte agences — fond blanc */}
             <div className="rounded-2xl bg-ag-white border border-ag-border p-8 md:p-10 flex flex-col gap-6">
-              <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-border bg-ag-off-white text-ag-gray">
+              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light">
+                {t('marketComparison.agencyCardLabel')}
+              </p>
+              <h3
+                className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.08]"
+                style={{ fontSize: 'clamp(22px,2.4vw,34px)' }}
+              >
                 {t('marketComparison.agencyCol')}
-              </span>
+              </h3>
               <ul className="flex flex-col gap-5">
                 {marketComparisonAgency.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
@@ -269,9 +275,15 @@ export default async function BuildServicePage({ params }: Props) {
             </div>
             {/* Carte Aegryn — fond navy */}
             <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-6">
-              <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
+              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-white/70">
+                {t('marketComparison.aegrynCardLabel')}
+              </p>
+              <h3
+                className="font-sans font-bold text-white tracking-[-0.025em] leading-[1.08]"
+                style={{ fontSize: 'clamp(22px,2.4vw,34px)' }}
+              >
                 {t('marketComparison.aegrynCol')}
-              </span>
+              </h3>
               <ul className="flex flex-col gap-5">
                 {marketComparisonAegryn.map((item, i) => (
                   <li key={i} className="flex flex-col gap-1">

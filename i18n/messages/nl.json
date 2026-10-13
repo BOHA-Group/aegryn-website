@@ -5410,8 +5410,10 @@
     "marketComparison": {
       "label": "Wat zeer weinig anderen bieden",
       "title": "Geen bureau. Eén prijs, één scope,\ngeen verrassingen.",
-      "agencyCol": "Wat bureaus doen",
-      "aegrynCol": "Wat Aegryn doet",
+      "agencyCol": "Wat bureaus doen.",
+      "aegrynCol": "Wat Aegryn doet.",
+      "agencyCardLabel": "DE MARKT",
+      "aegrynCardLabel": "AEGRYN",
       "processCol": "Hoe wij er komen",
       "agencyItems": [
         "Indicatieve offerte, andere werkelijke factuur",

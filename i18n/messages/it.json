@@ -5395,8 +5395,10 @@
     "marketComparison": {
       "label": "Ciò che pochissimi altri offrono",
       "title": "Non un'agenzia. Un prezzo, un perimetro,\nnessuna sorpresa.",
-      "agencyCol": "Cosa fanno le agenzie",
-      "aegrynCol": "Cosa fa Aegryn",
+      "agencyCol": "Cosa fanno le agenzie.",
+      "aegrynCol": "Cosa fa Aegryn.",
+      "agencyCardLabel": "IL MERCATO",
+      "aegrynCardLabel": "AEGRYN",
       "processCol": "Come ci arriviamo",
       "agencyItems": [
         "Preventivo indicativo, fattura reale diversa",
