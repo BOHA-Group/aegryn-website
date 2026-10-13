@@ -5259,8 +5259,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Desarrollo de activos digitales a medida - Aegryn",
-      "desc": "Activos digitales a medida: SaaS B2B, IA, app móvil. Documentación completa, listo para certificación. Sin desviaciones, valorizable desde el día uno."
+      "title": "Soluciones a medida: cadrage, realización, explotación | Aegryn",
+      "desc": "Pilotaje de extremo a extremo de sus proyectos digitales: cadrage, arbitraje comprar/integrar/construir, realización, puesta en marcha, explotación. Alojamiento en Suiza o en la UE."
     },
     "label": "Ingeniería: Software a medida",
     "title": "Software a medida\npara sus operaciones.",
@@ -5268,7 +5268,7 @@
       "label": "NUESTRA CONVICCIÓN",
       "title": "Built to Last.",
       "p1": "En un mundo donde la tecnología queda obsoleta en meses, diseñar para durar es un acto de resistencia.",
-      "p2": "Creamos activos que aumentan el valor de su organización, no su factura mensual. Un activo que trabaja para usted, y para sus inversores."
+      "p2": "Creamos herramientas que reducen sus costes recurrentes en lugar de añadir una factura mensual. Una herramienta que sigue siendo suya, que sus equipos entienden y que otro integrador puede retomar."
     },
     "formatsSection": {
       "label": "Tres formatos de misión",
@@ -5286,8 +5286,8 @@
           "key": "btl",
           "badge": "BUILD TO LAST",
           "subtitle": "Activo propietario duradero",
-          "title": "Un activo diseñado para durar y valorizar.",
-          "desc": "IP total, arquitectura certificable, documentación completa. Diseñado para una posible salida o valoración institucional. Precio fijado en el Discovery."
+          "title": "Una herramienta diseñada para durar.",
+          "desc": "Propiedad total, arquitectura documentada, código que cualquier equipo puede retomar. Para los sistemas que sostienen su actividad. Precio fijado en el cadrage."
         },
         {
           "key": "bto",
@@ -5312,21 +5312,16 @@
     },
     "transmissionSection": {
       "label": "Construir para transmitir",
-      "title": "Un activo concebido sin plan de transmisión\npierde entre un 20 y un 30% de su valor.",
-      "desc": "En Aegryn, cada activo está diseñado para ser certificable desde el primer sprint.",
-      "cta": "Preparar mi salida",
+      "title": "Una herramienta sin documentación ni plan de reprise\nse convierte en un riesgo en cuanto su autor se va.",
+      "desc": "En Aegryn, cada herramienta está documentada desde el primer sprint para seguir siendo auditable y poder ser retomada sin nosotros.",
+      "cta": "Ver el acompañamiento a la transmisión",
       "href": "/franchir/transmission"
-    },
-    "buyerNoteSection": {
-      "label": "Nota para inversores institucionales",
-      "title": "Lo que exigen los inversores institucionales.",
-      "desc": "Un activo certificado CIFSO responde a las exigencias de los inversores institucionales que demandan una documentación defendible. El 58% de las adquisiciones tech en la UE provienen del private equity. Su prerrequisito: la trazabilidad."
     },
     "independenceSection": {
       "label": "Independencia tecnológica",
       "badge": "INDEPENDENCIA TECNOLÓGICA"
     },
-    "desc": "De la PYME al gran grupo, en Suiza y en Europa: Aegryn diseña, despliega y mantiene software empresarial a medida. Su código, sus datos, su infraestructura: alojamiento en Suiza o en la UE, sin dependencia impuesta.",
+    "desc": "De la pyme al gran grupo, en Suiza y en Europa: encuadramos su necesidad, elegimos con usted entre comprar, integrar o construir, y luego pilotamos la realización hasta la puesta en servicio. Su código, sus datos, su infraestructura: alojamiento en Suiza o en la UE, sin dependencia impuesta.",
     "whySection": {
       "label": "Por qué software a medida",
       "title": "Lo que el mercado estándar no puede ofrecerle.",
@@ -5338,15 +5333,15 @@
         },
         {
           "title": "Alojamiento en su infraestructura",
-          "desc": "El software se despliega donde usted lo exige: nube europea certificada, on-premise o infraestructura suiza. Ningún dato sale sin su consentimiento."
+          "desc": "El software se despliega donde usted lo exige: nube europea, on-premise o infraestructura suiza, con alternativas soberanas CH/UE disponibles. Ningún dato sale sin su consentimiento."
         },
         {
           "title": "Integración en sus procesos reales",
           "desc": "Construimos alrededor de su organización, no al revés. Cada módulo se integra con sus herramientas, datos y flujos de trabajo existentes."
         },
         {
-          "title": "Certificable y transferible",
-          "desc": "Cada activo de software entregado por Aegryn está estructurado para ser auditable, calificable y transferible según el protocolo de certificación Aegryn."
+          "title": "Auditable y reversible",
+          "desc": "Cada software que entregamos está documentado, es auditable y puede ser retomado sin nosotros, por sus equipos o por otro integrador."
         }
       ]
     },
@@ -5371,7 +5366,7 @@
           "num": "03",
           "badge": "Confianza Digital",
           "title": "Ciberseguridad & Confianza Digital",
-          "desc": "Evaluación del riesgo cyber, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con las prioridades europeas 2026 y los requisitos NIS2 para sectores críticos."
+          "desc": "Evaluación del riesgo cyber, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con los requisitos NIS2 para sectores críticos."
         },
         {
           "num": "04",
@@ -5407,7 +5402,7 @@
           "num": "09",
           "badge": "Identidad & Trust",
           "title": "Identidad, KYC/KYB & Confianza Digital",
-          "desc": "Onboarding empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza. Suiza hace del E-ID una prioridad de su estrategia digital 2026."
+          "desc": "Onboarding empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza."
         },
         {
           "num": "10",
@@ -5417,12 +5412,12 @@
         }
       ],
       "sectionLabel": "DOMINIOS DE SOLUCIÓN",
-      "intro": "Para cada desafío empresarial, una solución especializada basada en nuestra plataforma Enterprise Intelligence."
+      "intro": "Diez dominios de aplicación cubren el conjunto de necesidades empresariales recurrentes. Solo construimos donde el mercado no ofrece una solución adecuada, o cuando la independencia lo exige."
     },
     "platformSection": {
       "label": "Infraestructura compartida",
       "title": "Lo que diferencia un activo Aegryn del desarrollo estándar.",
-      "desc": "Cada software entregado por Aegryn se construye sobre la misma infraestructura: datos soberanos, modelos de IA certificables, gobernanza auditada. El resultado: un activo documentado desde el primer sprint, estructuralmente listo para certificación o cesión, sea cual sea el dominio empresarial.",
+      "desc": "Cada software entregado por Aegryn se construye sobre la misma infraestructura: datos soberanos, modelos de IA documentados, gobernanza verificable. Herramientas y proveedores se utilizan según el marco de soberanía que usted elija, con alternativas suizas o europeas.",
       "layers": [
         {
           "key": "data",
@@ -5447,15 +5442,22 @@
         },
         {
           "key": "action",
-          "title": "Capa de Acción",
-          "desc": "Automatización de flujos, árboles de decisión inteligentes, orquestación multi-sistema y audit trail certificado.",
-          "tag": "",
+          "title": "Capa de Gobernanza",
+          "desc": "Audit trail, RBAC, registro de tratamientos, conformidad regulatoria (AI Act, NIS2, DORA, LPD) documentada de forma continua en todas las capas.",
+          "tag": "Audit trail · RBAC · Conformidad continua",
           "dep": null
         }
       ],
       "verticals": {
         "label": "Mercados verticales",
-        "desc": "FinTech, HealthTech y PropTech son mercados verticales, no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez."
+        "desc": "Finance & Capital, Salud, Industria, Comercio y Tech son mercados verticales, no productos de base. Las aplicaciones Aegryn pueden empaquetarse para estos mercados sin crear una nueva arquitectura cada vez.",
+        "items": [
+          "Finance & Capital",
+          "Salud & Ciencias de la Vida",
+          "Industria, Energía & Infraestructura",
+          "Comercio & Servicios",
+          "Tech, Innovación & Sector Público"
+        ]
       },
       "subtitle": "Una arquitectura integrada. Cuatro capas complementarias.",
       "appsLabel": "Aplicaciones empresariales",
@@ -5519,18 +5521,18 @@
       "items": [
         {
           "num": "01",
-          "title": "Honorarios transparentes.",
-          "desc": "Los honorarios se definen y firman al final del Discovery, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
+          "title": "Precio fijado en el cadrage.",
+          "desc": "Los honorarios se definen y firman al final del cadrage, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
         },
         {
           "num": "02",
           "title": "Usted sigue siendo 100% propietario",
-          "desc": "Sin dilución. Sin participación de Aegryn. El activo es 100% suyo. Aegryn puede actuar como co-inversor a petición: es su decisión."
+          "desc": "Ninguna participación sin su solicitud. La herramienta es 100% suya. Cualquier posible conflicto de interés por una intervención de Aegryn como coinversor se declara siempre."
         },
         {
           "num": "03",
-          "title": "Listo para certificación en la entrega",
-          "desc": "Cada activo entregado incluye documentación técnica completa (arquitectura, API, seguridad, IP) que lo hace apto para certificación independiente por cualquier auditor externo."
+          "title": "Documentado en la entrega",
+          "desc": "Cada herramienta entregada viene acompañada de documentación técnica completa (arquitectura, API, seguridad, IP) que la hace apta para una auditoría o para su reprise por otro integrador."
         }
       ]
     },
@@ -5545,18 +5547,18 @@
         "Tiempo y material sin techo",
         "Desviaciones facturadas como extra",
         "Entrega sin documentación",
-        "Sin garantía sobre el valor final"
+        "Sin garantía sobre el resultado final"
       ],
       "aegrynItems": [
-        "Honorarios definidos en el Discovery",
+        "Precio fijado en el cadrage",
         "Hitos medibles por sprint",
         "Desviación de alcance absorbida por Aegryn",
         "Documentación técnica completa incluida",
-        "Activo listo para certificación en la entrega"
+        "Documentación completa en la entrega"
       ],
       "processItems": [
-        "Discovery 1 a 2 semanas incluido",
-        "Pliego de condiciones certificable",
+        "Cadrage 1 a 2 semanas incluido",
+        "Pliego de condiciones firmado",
         "Precio bloqueado antes del primer commit",
         "Anexo firmado si el alcance cambia",
         "Recepción formal en cada hito"
@@ -5564,15 +5566,15 @@
     },
     "certificationBenefits": {
       "label": "Por qué la documentación lo cambia todo",
-      "title": "Un activo listo para certificación\nvale estructuralmente más.",
+      "title": "Una documentación completa lo cambia todo.",
       "items": [
         {
-          "title": "Valor documentado y defendible",
-          "desc": "Un activo entregado con documentación completa tiene un múltiplo de valoración defendible en una ronda de financiación o una transmisión. No una estimación — una base verificable."
+          "title": "Auditoría facilitada",
+          "desc": "Arquitectura, API, seguridad e IP están documentados: la herramienta resiste una auditoría, una due diligence o un cambio de equipo. Una certificación independiente (CIFSO 5000) sigue siendo posible si lo desea."
         },
         {
           "title": "Protección contractual en la entrega",
-          "desc": "Lo que encarga es exactamente lo que recibe. La documentación técnica certifica el estado de cada dimensión en la entrega. Sin zonas grises."
+          "desc": "Lo que encarga es exactamente lo que recibe. La documentación describe el estado de cada dimensión en la entrega. Sin zonas grises."
         },
         {
           "title": "Transferible a cualquier equipo",
@@ -5633,32 +5635,32 @@
     },
     "process": {
       "label": "Nuestro proceso",
-      "title": "Del brief al closing.\nUn solo interlocutor.",
+      "title": "Build to Operate.\nUn solo interlocutor.",
       "steps": [
         {
           "num": "01",
-          "title": "Diagnostic & Planificación",
-          "desc": "Definición de la propuesta de valor, mercado objetivo, stack y plan de salida. Output: pliego de condiciones + acuerdo de honorarios firmado. Duración: 1 a 2 semanas. Coste: incluido en los honorarios totales."
+          "title": "Cadrage & arbitraje",
+          "desc": "Necesidad, alcance, elección entre comprar, integrar o construir, plan de salida. Resultado: pliego de condiciones y honorarios firmados. Duración: 1 a 2 semanas, incluido en los honorarios."
         },
         {
           "num": "02",
-          "title": "Arquitectura y Design",
-          "desc": "El activo se arquitectura según criterios CIFSO 5000: código documentado, IP registrada, seguridad by design."
+          "title": "Arquitectura & concepción",
+          "desc": "Arquitectura, seguridad desde el diseño, derechos de propiedad cedidos, alojamiento en Suiza o en la UE, documentación inicial."
         },
         {
           "num": "03",
-          "title": "Desarrollo e Iteraciones",
-          "desc": "Desarrollo en sprints con hitos medibles, revisión de código y documentación continua."
+          "title": "Realización por sprints",
+          "desc": "Hitos medibles, revisión de código, documentación continua, recepción formal en cada hito. Stack Aegryn o stack cliente."
         },
         {
           "num": "04",
-          "title": "Lanzamiento y Tracción",
-          "desc": "Despliegue, primeros usuarios, métricas ARR/NRR/churn. Tiempo hasta Grade A certificable: 6 a 12 meses."
+          "title": "Despliegue & adopción",
+          "desc": "Puesta en producción, migración de datos, formación de equipos, seguimiento de uso."
         },
         {
           "num": "05",
-          "title": "Certificación (y salida opcional)",
-          "desc": "Envío al protocolo CIFSO 5000 si se desea. Grado oficial emitido si se cumplen los criterios. La transmisión acompañada solo se inicia por decisión suya. La organización también puede conservarse con mantenimiento."
+          "title": "Explotación & transmisión",
+          "desc": "Mantenimiento por Aegryn, o transferencia a sus equipos o a otro integrador. Ninguna obligación de permanecer con nosotros."
         }
       ]
     },
@@ -5673,44 +5675,43 @@
       },
       "evolutive": {
         "title": "Mantenimiento evolutivo",
-        "desc": "Nuevas funcionalidades, refactoring, actualizaciones de versión, adaptación regulatoria (RGPD, EU AI Act, NIS2).",
+        "desc": "Nuevas funcionalidades, refactoring, actualizaciones de versión, integraciones, adaptación regulatoria (RGPD, EU AI Act, NIS2). La herramienta permanece conforme en todo momento.",
         "format": "Tarifa mensual o por sprint"
       },
-      "note": "El mantenimiento Aegryn garantiza que el activo conserve su grado o mejore su puntuación en cada ciclo: condición para que una transmisión siga siendo posible en cualquier momento."
+      "note": "El mantenimiento Aegryn garantiza que la herramienta se mantenga actualizada, segura y pueda ser retomada sin nosotros en cualquier momento."
     },
     "fees": {
       "label": "Honorarios",
       "title": "Honorarios transparentes. Sin sorpresas.",
       "items": [
         {
-          "title": "Diagnostic (incluido)",
-          "desc": "1 a 2 semanas. Pliego certificable. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
+          "title": "Cadrage (incluido)",
+          "desc": "1 a 2 semanas. Pliego de condiciones firmado. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
           "format": "Incluido en los honorarios totales"
         },
         {
           "title": "Concepción (precio bloqueado)",
-          "desc": "Precio bloqueado en el Discovery. Sin desviaciones. Sin tiempo y material. Si el alcance cambia: anexo firmado antes de la ejecución. Rangos indicativos (sin Discovery): SaaS B2B simple desde 25.000€ sin IVA, App móvil B2C desde 35.000€ sin IVA, Producto IA nativo desde 40.000€ sin IVA.",
-          "format": "Precio definido y firmado en el Discovery"
+          "desc": "Precio bloqueado en el cadrage. Sin desviaciones. Sin tiempo y material. Si el alcance cambia: anexo firmado antes de la ejecución. Quick Build desde 15.000 CHF sin IVA (automatización puntual), dashboard o herramienta de scoring desde 25.000 CHF sin IVA, flujo de trabajo integrado desde 40.000 CHF sin IVA.",
+          "format": "Precio definido en el cadrage"
         },
         {
           "title": "Mantenimiento (suscripción)",
-          "desc": "Tarifa mensual o por entregable. SLA en contrato. Cancelable en cualquier momento con 30 días de prêviso.",
+          "desc": "Tarifa mensual o por entregable. SLA en contrato. Cancelable en cualquier momento con 30 días de preaviso.",
           "format": "Tarifa mensual definida en contrato"
         }
       ],
-      "coInvestNote": "Aegryn puede actuar como co-inversor minoritario en ciertos proyectos. Evaluado caso por caso.",
       "cta": "Iniciar el proceso",
       "exitBanner": {
         "cta": "Más información sobre el acompañamiento de transmisión",
         "href": "/franchir/transmission",
-        "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, el activo está concebido para ello. El acompañamiento Aegryn está disponible si la certificación lo permite."
+        "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, la herramienta está concebida para ello. El acompañamiento Aegryn está disponible cuando llegue el momento."
       },
       "href": "/es/build",
       "secondary": "Más información",
       "secondaryHref": "/es/build"
     },
     "exitBanner": {
-      "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, el activo está concebido para ello. El acompañamiento Aegryn está disponible si la certificación lo permite.",
+      "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, la herramienta está concebida para ello. El acompañamiento Aegryn está disponible cuando llegue el momento.",
       "cta": "Más información sobre el acompañamiento de transmisión",
       "href": "/franchir/transmission"
     },
@@ -5719,7 +5720,8 @@
       "desc": "Describe tu idea, el alcance funcional y tus restricciones. Te responderemos con una evaluación de viabilidad y un primer marco de precios en 48h.",
       "primary": "Iniciar el proceso",
       "secondary": "Ver nuestros activos"
-    }
+    },
+    "advisoryLink": "¿No está seguro de necesitar construir? Empiece por Tecnología & Soberanía"
   },
   "gradeSubmit": {
     "meta": {
@@ -8207,7 +8209,7 @@
   "techStack": {
     "label": "Stack Tecnológico",
     "title": "Las tecnologías que dominamos.",
-    "desc": "Stack seleccionada según sus requisitos funcionales, escalabilidad esperada y elegibilidad para la certificación Aegryn Grade.",
+    "desc": "Stack seleccionada según sus requisitos funcionales, escalabilidad esperada y compatibilidad con su infraestructura y sus exigencias de auditoría.",
     "all": "Todo",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",
@@ -8215,7 +8217,7 @@
     "mobile": "Mobile",
     "infra": "Infraestructura",
     "integrations": "Integraciones",
-    "note": "Stack seleccionado proyecto por proyecto según los requisitos funcionales, la escalabilidad esperada y la elegibilidad para la certificación Aegryn Grade. Integración con los sistemas empresariales existentes (CRM, ERP) y despliegue posible en infraestructura soberana CH/UE.",
+    "note": "Stack seleccionado proyecto por proyecto según los requisitos funcionales, la escalabilidad esperada y sus exigencias de auditoría. Integración con los sistemas empresariales existentes (CRM, ERP) y despliegue posible en infraestructura soberana CH/UE.",
     "enterprise": "Sistemas empresariales"
   },
   "languageSwitcher": {

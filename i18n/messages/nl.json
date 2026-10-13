@@ -5274,8 +5274,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Maatwerk digitale asset ontwikkeling - Aegryn",
-      "desc": "Maatwerk digitale assets: B2B SaaS, AI, mobiele apps. Volledige documentatie, certificeringsklaar. Geen overschrijdingen, waardevol vanaf dag één."
+      "title": "Maatwerkoplossingen: kaderstelling, realisatie, exploitatie | Aegryn",
+      "desc": "End-to-end begeleiding van uw digitale projecten: kaderstelling, keuze kopen/integreren/bouwen, realisatie, inbedrijfstelling, exploitatie. Hosting in Zwitserland of de EU."
     },
     "label": "Engineering: Maatwerk software",
     "title": "Maatwerk software\nvoor uw activiteiten.",
@@ -5283,7 +5283,7 @@
       "label": "ONZE OVERTUIGING",
       "title": "Built to Last.",
       "p1": "In een wereld waar technologie in maanden veroudert, is ontwerpen voor de lange termijn een daad van weerstand.",
-      "p2": "Wij creëren activa die de waarde van uw organisatie verhogen, niet uw maandelijkse factuur. Een activum dat voor u werkt, en voor uw investeerders."
+      "p2": "Wij bouwen tools die uw terugkerende kosten verlagen in plaats van een maandelijkse factuur toe te voegen. Een tool die van u blijft, die uw teams begrijpen en die een andere integrator kan overnemen."
     },
     "formatsSection": {
       "label": "Drie missieformaten",
@@ -5301,8 +5301,8 @@
           "key": "btl",
           "badge": "BUILD TO LAST",
           "subtitle": "Duurzaam eigen activum",
-          "title": "Een activum gebouwd om te duren en te valoriseren.",
-          "desc": "Volledige IP, certificeerbare architectuur, volledige documentatie. Ontworpen voor een mogelijke exit of institutionele waardering. Prijs vastgelegd bij Discovery."
+          "title": "Een tool gebouwd om te duren.",
+          "desc": "Volledige eigendom, gedocumenteerde architectuur, code die elk team kan overnemen. Voor systemen die uw activiteit dragen. Prijs vastgelegd bij kaderstelling."
         },
         {
           "key": "bto",
@@ -5327,21 +5327,16 @@
     },
     "transmissionSection": {
       "label": "Bouwen om over te dragen",
-      "title": "Een asset ontworpen zonder overdrachtsplan\nverliest 20 tot 30% van zijn waarde.",
-      "desc": "Bij Aegryn is elk activum ontworpen om certificeerbaar te zijn vanaf de eerste sprint.",
-      "cta": "Mijn exit voorbereiden",
+      "title": "Een tool zonder documentatie of overdrachtsplan\nwordt een risico zodra de maker vertrekt.",
+      "desc": "Bij Aegryn wordt elke tool vanaf de eerste sprint gedocumenteerd, zodat ze auditeerbaar blijft en zonder ons kan worden overgenomen.",
+      "cta": "Bekijk de overdrachtsbegeleiding",
       "href": "/franchir/transmission"
-    },
-    "buyerNoteSection": {
-      "label": "Noot voor institutionele investeerders",
-      "title": "Wat institutionele investeerders vereisen.",
-      "desc": "Een CIFSO-gecertificeerde asset voldoet aan de eisen van institutionele investeerders die een verdedigbare documentatie verlangen. 58% van de tech-acquisities in de EU komt van private equity. Hun voorwaarde: traceerbaarheid."
     },
     "independenceSection": {
       "label": "Technologische onafhankelijkheid",
       "badge": "TECHNOLOGISCHE ONAFHANKELIJKHEID"
     },
-    "desc": "Van kmo tot groot bedrijf, in Zwitserland en Europa: Aegryn ontwerpt, implementeert en onderhoudt bedrijfssoftware op maat. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
+    "desc": "Van kmo tot groot concern, in Zwitserland en Europa: wij stellen uw behoefte in kader, kiezen samen met u tussen kopen, integreren of bouwen, en sturen vervolgens de realisatie tot aan de inbedrijfstelling. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
     "whySection": {
       "label": "Waarom maatwerksoftware",
       "title": "Wat de standaardmarkt u niet kan bieden.",
@@ -5353,15 +5348,15 @@
         },
         {
           "title": "Vaste prijs, geen verrassingen",
-          "desc": "De vaste prijs wordt bepaald na de Discovery en vóór de eerste commit. Als de scope wijzigt, wordt een addendum ondertekend vóór uitvoering."
+          "desc": "De software wordt ingezet waar u het vereist: Europese cloud, on-premise of Zwitserse infrastructuur, met beschikbare soevereine CH/EU-alternatieven. Geen data verlaat het systeem zonder uw toestemming."
         },
         {
           "title": "Gecertificeerd bij oplevering",
           "desc": "Elk geleverd asset bevat volledige technische documentatie (architectuur, API, beveiliging, IP) die het geschikt maakt voor onafhankelijke certificering."
         },
         {
-          "title": "Soevereine infrastructuur",
-          "desc": "Uw data en AI-modellen blijven in Zwitserland of de EU. Geen verwerking in Amerikaanse clouds zonder uw expliciete toestemming."
+          "title": "Auditeerbaar en omkeerbaar",
+          "desc": "Elke software die wij leveren is gedocumenteerd, auditeerbaar en kan zonder ons worden overgenomen, door uw teams of een andere integrator."
         }
       ]
     },
@@ -5386,7 +5381,7 @@
           "num": "03",
           "badge": "Complianceautomatisering",
           "title": "Compliance & Regulatoire intelligentie",
-          "desc": "Monitoring van regelgeving, geautomatiseerde naleving (GDPR, EU AI Act, NIS2), audittrails en rapportage."
+          "desc": "Monitoring van regelgeving, geautomatiseerde naleving (AVG, EU AI Act, NIS2), audittrails en rapportage."
         },
         {
           "num": "04",
@@ -5432,12 +5427,12 @@
         }
       ],
       "sectionLabel": "TOEPASSINGSDOMEINEN",
-      "intro": "Voor elke bedrijfsuitdaging een gespecialiseerde oplossing, gebaseerd op ons Enterprise Intelligence Platform."
+      "intro": "Tien toepassingsdomeinen dekken de terugkerende bedrijfsbehoeften. Wij bouwen alleen waar de markt geen passende oplossing biedt, of wanneer onafhankelijkheid dit vereist."
     },
     "platformSection": {
       "label": "Gedeelde infrastructuur",
       "title": "Wat een Aegryn-asset onderscheidt van standaardontwikkeling.",
-      "desc": "Elke software die Aegryn levert, is gebouwd op dezelfde infrastructuur: soevereine data, certificeerbare AI-modellen, gecontroleerde governance. Het resultaat: een asset dat vanaf de eerste sprint gedocumenteerd is en structureel klaar voor certificering of overdracht, ongeacht het bedrijfsdomein.",
+      "desc": "Elke software die Aegryn levert, is gebouwd op dezelfde infrastructuur: soevereine data, gedocumenteerde AI-modellen, verifieerbare governance. Tools en leveranciers worden ingezet volgens het soevereiniteitskader dat u kiest, met Zwitserse of Europese alternatieven.",
       "layers": [
         {
           "key": "data",
@@ -5463,14 +5458,21 @@
         {
           "key": "governance",
           "title": "Governance-laag",
-          "desc": "Audittrail, RBAC, verwerkingsregister, regelgevende naleving (AI Act, NIS2, DORA, AVG).",
-          "tag": "",
+          "desc": "Audittrail, RBAC, verwerkingsregister, regelgevende naleving (AI Act, NIS2, DORA, AVG), doorlopend gedocumenteerd over alle lagen.",
+          "tag": "Audittrail · RBAC · Doorlopende naleving",
           "dep": null
         }
       ],
       "verticals": {
         "label": "Verticale markten",
-        "desc": "FinTech, HealthTech en PropTech zijn verticale markten, geen kernproducten. Aegryn-applicaties kunnen voor deze markten worden verpakt zonder elke keer een nieuwe architectuur te bouwen."
+        "desc": "Finance & Capital, Gezondheid, Industrie, Handel en Tech zijn verticale markten, geen kernproducten. Aegryn-applicaties kunnen voor deze markten worden verpakt zonder elke keer een nieuwe architectuur te bouwen.",
+        "items": [
+          "Finance & Capital",
+          "Gezondheid & Life Sciences",
+          "Industrie, Energie & Infrastructuur",
+          "Handel & Diensten",
+          "Tech, Innovatie & Publieke Sector"
+        ]
       },
       "appsLabel": "Bedrijfsapplicaties",
       "packagedLabel": "verpakt →",
@@ -5534,18 +5536,18 @@
       "items": [
         {
           "num": "01",
-          "title": "Transparante honoraria.",
-          "desc": "Het vaste tarief wordt bepaald en ondertekend na de Discovery, vóór de eerste commit. Als de scope verandert, wordt een addendum ondertekend vóór uitvoering. Nooit onverwachte facturering."
+          "title": "Prijs vastgelegd bij kaderstelling.",
+          "desc": "Het vaste tarief wordt bepaald en ondertekend na de kaderstelling, vóór de eerste commit. Als de scope verandert, wordt een addendum ondertekend vóór uitvoering. Nooit onverwachte facturering."
         },
         {
           "num": "02",
           "title": "U blijft 100% eigenaar.",
-          "desc": "Geen verwatering. Geen aandelen van Aegryn. Het asset is volledig van u. Aegryn kan optreden als co-investeerder op verzoek: dat is uw beslissing, niet de onze."
+          "desc": "Geen aandelen zonder uw verzoek. De tool is volledig van u. Een mogelijk belangenconflict door een optreden van Aegryn als co-investeerder wordt altijd gemeld."
         },
         {
           "num": "03",
-          "title": "Certificeringsklaar bij oplevering.",
-          "desc": "Elk geleverd asset wordt vergezeld door volledige technische documentatie (architectuur, API, beveiliging, IP) die het geschikt maakt voor onafhankelijke certificering door elke externe auditor."
+          "title": "Gedocumenteerd bij oplevering.",
+          "desc": "Elke geleverde tool wordt vergezeld door volledige technische documentatie (architectuur, API, beveiliging, IP) die een audit mogelijk maakt of overname door een andere integrator."
         }
       ]
     },
@@ -5560,18 +5562,18 @@
         "Regie per dag/uur zonder plafond",
         "Overschrijdingen opnieuw gefactureerd",
         "Oplevering zonder documentatie",
-        "Geen garantie op eindwaarde"
+        "Geen garantie op het eindresultaat"
       ],
       "aegrynItems": [
-        "Prijs vastgelegd bij Discovery",
+        "Prijs vastgelegd bij kaderstelling",
         "Meetbare mijlpalen per sprint",
         "Scopeoverschrijding door Aegryn geabsorbeerd",
         "Volledige technische documentatie inbegrepen",
-        "Certificeringsklaar asset bij oplevering"
+        "Volledige documentatie bij oplevering"
       ],
       "processItems": [
-        "Discovery 1 tot 2 weken inbegrepen",
-        "Certificeerbaar bestek",
+        "Kaderstelling 1 tot 2 weken inbegrepen",
+        "Ondertekend bestek",
         "Prijs vastgelegd voor eerste commit",
         "Addendum ondertekend bij scopewijziging",
         "Formele oplevering bij elke mijlpaal"
@@ -5579,15 +5581,15 @@
     },
     "certificationBenefits": {
       "label": "Waarom documentatie alles verandert",
-      "title": "Een certificeringsklaar asset\nis structureel meer waard.",
+      "title": "Volledige documentatie verandert alles.",
       "items": [
         {
-          "title": "Gedocumenteerde en verdedigbare waarde",
-          "desc": "Een asset geleverd met volledige documentatie heeft een verdedigbare waarderingsmultiple bij een financieringsronde of overdracht. Geen schatting — een verifieerbare basis."
+          "title": "Audit vergemakkelijkt",
+          "desc": "Architectuur, API, beveiliging en IP zijn gedocumenteerd: de tool doorstaat een audit, een due diligence of een teamwissel. Een onafhankelijke certificering (CIFSO 5000) blijft mogelijk indien gewenst."
         },
         {
           "title": "Contractuele bescherming bij oplevering",
-          "desc": "Wat u bestelt is precies wat u ontvangt. De technische documentatie certificeert de toestand van elke dimensie bij oplevering. Geen grijze zones."
+          "desc": "Wat u bestelt is precies wat u ontvangt. De documentatie beschrijft de toestand van elke dimensie bij oplevering. Geen grijze zones."
         },
         {
           "title": "Overneembaar door elk team",
@@ -5648,32 +5650,32 @@
     },
     "process": {
       "label": "Ons proces",
-      "title": "Van briefing tot closing.\nEén aanspreekpunt.",
+      "title": "Build to Operate.\nÉén aanspreekpunt.",
       "steps": [
         {
           "num": "01",
-          "title": "Diagnose & Kaderstelling",
-          "desc": "Definitie van de waardepropositie, doelmarkt, stack en exitplan. Output: bestek en honoraria bepaald en ondertekend. Duur: 1 tot 2 weken. Kosten: inbegrepen in het totale pakket."
+          "title": "Kaderstelling & keuze",
+          "desc": "Behoefte, scope, keuze tussen kopen, integreren of bouwen, exitplan. Resultaat: ondertekend bestek en honorarium. Duur: 1 tot 2 weken, inbegrepen in het honorarium."
         },
         {
           "num": "02",
-          "title": "Architectuur en Ontwerp",
-          "desc": "Het asset wordt gearchitectureerd volgens de CIFSO 5000-criteria: gedocumenteerde code, gedeponeerde IP, security by design, getrackte metrics. De grade is het bouwplan."
+          "title": "Architectuur & ontwerp",
+          "desc": "Architectuur, security by design, overgedragen eigendomsrechten, hosting in Zwitserland of de EU, startdocumentatie."
         },
         {
           "num": "03",
-          "title": "Ontwikkeling en Iteraties",
-          "desc": "Ontwikkeling in sprints met meetbare mijlpalen, code review en continue documentatie. Aegryn eigen stack of klantstack."
+          "title": "Realisatie per sprint",
+          "desc": "Meetbare mijlpalen, code review, doorlopende documentatie, formele oplevering bij elke mijlpaal. Aegryn-stack of klantstack."
         },
         {
           "num": "04",
-          "title": "Lancering en Tractie",
-          "desc": "Implementatie, werving eerste gebruikers, opzetten van ARR/NRR/churn metrics. Duur tot certificeerbaar Grade A: 6 tot 12 maanden."
+          "title": "Implementatie & adoptie",
+          "desc": "Productie-uitrol, datamigratie, teamtraining, gebruiksmonitoring."
         },
         {
           "num": "05",
-          "title": "Certificering (en optionele exit)",
-          "desc": "Indiening bij het CIFSO 5000-protocol indien gewenst. Officiële grade wordt uitgegeven als de criteria zijn vervuld. De begeleide overdracht wordt alleen op uw beslissing ingezet. De organisatie kan ook met onderhoud behouden blijven."
+          "title": "Exploitatie & overdracht",
+          "desc": "Onderhoud door Aegryn, of overdracht aan uw teams of een andere integrator. Geen verplichting om bij ons te blijven."
         }
       ]
     },
@@ -5688,24 +5690,24 @@
       },
       "evolutive": {
         "title": "Evolutief onderhoud",
-        "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regulatoire aanpassing (AVG, EU AI Act, NIS2). Het asset blijft op elk moment certificeerbaar.",
+        "desc": "Nieuwe functies, refactoring, versie-upgrades, integraties, regulatoire aanpassing (AVG, EU AI Act, NIS2). De tool blijft op elk moment conform.",
         "format": "Maandelijks abonnement of deliverable per sprint"
       },
-      "note": "Aegryn-onderhoud garandeert dat de asset zijn grade behoudt of zijn score in elke cyclus verbetert: de voorwaarde opdat een overdracht altijd mogelijk blijft."
+      "note": "Aegryn-onderhoud garandeert dat de tool altijd up-to-date, veilig en zonder ons overneembaar blijft."
     },
     "fees": {
       "label": "Honoraria",
       "title": "Transparante honoraria. Geen verrassingen.",
       "items": [
         {
-          "title": "Diagnose (inbegrepen)",
-          "desc": "1 tot 2 weken. Certificeerbaar bestek. Buildprijs bepaald en ondertekend. Geen verbintenis vóór ondertekening van het pakket.",
+          "title": "Kaderstelling (inbegrepen)",
+          "desc": "1 tot 2 weken. Ondertekend bestek. Buildprijs bepaald en ondertekend. Geen verbintenis vóór ondertekening van het pakket.",
           "format": "Inbegrepen in het totale pakket"
         },
         {
           "title": "Ontwikkeling (prijs vastgelegd)",
-          "desc": "Prijs vastgelegd bij Discovery. Geen overschrijding. Geen regie. Als de scope wijzigt: addendum ondertekend vóór uitvoering. Indicatieve ranges (excl. Discovery): eenvoudige B2B SaaS vanaf 25.000€ excl. btw, B2C mobiele app vanaf 35.000€ excl. btw, native AI-product vanaf 40.000€ excl. btw.",
-          "format": "Prijs vastgelegd bij Discovery"
+          "desc": "Prijs vastgelegd bij kaderstelling. Geen overschrijding. Geen regie. Als de scope wijzigt: addendum ondertekend vóór uitvoering. Quick Build vanaf 15.000 CHF excl. btw (gerichte automatisering), dashboard of scoringtool vanaf 25.000 CHF excl. btw, geïntegreerde bedrijfsworkflow vanaf 40.000 CHF excl. btw.",
+          "format": "Prijs bepaald bij kaderstelling"
         },
         {
           "title": "Onderhoud (abonnement)",
@@ -5713,9 +5715,8 @@
           "format": "Maandelijks abonnement bepaald in het contract"
         }
       ],
-      "coInvestNote": "Aegryn kan optreden als minderheids-co-investeerder op bepaalde projecten: aandelenbelang in ruil voor verlaging van de buildhonoraria. Per geval beoordeeld.",
       "exitBanner": {
-        "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de asset daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar als de certificering het toelaat.",
+        "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de tool daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar wanneer het zover is.",
         "cta": "Meer over de overdrachtsbegeleiding",
         "href": "/franchir/transmission"
       },
@@ -5725,7 +5726,7 @@
       "secondaryHref": "/assets"
     },
     "exitBanner": {
-      "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de asset daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar als de certificering het toelaat.",
+      "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de tool daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar wanneer het zover is.",
       "cta": "Meer over de overdrachtsbegeleiding",
       "href": "/franchir/transmission"
     },
@@ -5734,7 +5735,8 @@
       "desc": "Beschrijf uw idee, de functionele scope en uw beperkingen. Wij antwoorden met een haalbaarheidsschatting en een eerste tariefkader binnen 48 uur.",
       "primary": "Het proces starten",
       "secondary": "Onze eigen assets bekijken"
-    }
+    },
+    "advisoryLink": "Niet zeker of u moet bouwen? Begin met Technologie & Soevereiniteit"
   },
   "gradeSubmit": {
     "meta": {
@@ -8222,7 +8224,7 @@
   "techStack": {
     "label": "Tech Stack",
     "title": "De technologieën die wij beheersen.",
-    "desc": "Stack geselecteerd op basis van uw functionele vereisten, verwachte schaalbaarheid en eligibiliteit voor Aegryn Grade-certificering.",
+    "desc": "Stack geselecteerd op basis van uw functionele vereisten, verwachte schaalbaarheid en compatibiliteit met uw infrastructuur en auditvereisten.",
     "all": "Alle",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",
@@ -8230,7 +8232,7 @@
     "mobile": "Mobiel",
     "infra": "Infrastructuur",
     "integrations": "Integraties",
-    "note": "Stack project per project geselecteerd op basis van functionele vereisten, verwachte schaalbaarheid en eligibiliteit voor Aegryn Grade-certificering. Integratie met bestaande enterprisesystemen (CRM, ERP) en inzet mogelijk op soevereine CH/EU-infrastructuur.",
+    "note": "Stack project per project geselecteerd op basis van functionele vereisten, verwachte schaalbaarheid en uw auditvereisten. Integratie met bestaande enterprisesystemen (CRM, ERP) en inzet mogelijk op soevereine CH/EU-infrastructuur.",
     "enterprise": "Enterprisesystemen"
   },
   "languageSwitcher": {

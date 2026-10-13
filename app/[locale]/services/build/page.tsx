@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
+import type { ComponentProps } from 'react'
+
+type LinkHref = ComponentProps<typeof Link>['href']
 import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
 import { PlatformArchitectureDiagram } from '@/components/sections/PlatformArchitectureDiagram'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -53,6 +56,7 @@ export default async function BuildServicePage({ params }: Props) {
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
   const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string; tag?: string; dep?: string | null }[]
   const platformApps            = t.raw('platformSection.apps')          as string[]
+  const platformVerticals       = t.raw('platformSection.verticals.items') as string[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
   const useCaseItems            = t.raw('useCasesSection.items')        as string[]
@@ -74,7 +78,13 @@ export default async function BuildServicePage({ params }: Props) {
           </h1></WaveReveal>
 <ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
             {t('desc')}
-          </p></ScrollReveal>
+          </p>
+          <Link
+            href={'/advisory/technology' as LinkHref}
+            className="mt-6 inline-block font-mono text-[11px] tracking-[0.18em] uppercase text-ag-apex/80 hover:text-ag-apex transition-colors"
+          >
+            {t('advisoryLink')} →
+          </Link></ScrollReveal>
         </div>
       </section>
 
@@ -254,6 +264,7 @@ export default async function BuildServicePage({ params }: Props) {
           <PlatformArchitectureDiagram
             layers={platformLayers}
             apps={platformApps}
+            verticals={platformVerticals}
             verticalsLabel={t('platformSection.verticals.label')}
             appsLabel={t('platformSection.appsLabel')}
             packagedLabel={t('platformSection.packagedLabel')}
@@ -476,9 +487,6 @@ export default async function BuildServicePage({ params }: Props) {
               </div>
             ))}
           </div>
-          <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex/40 pl-4 max-w-2xl">
-            {t('fees.coInvestNote')}
-          </p>
         </ScrollReveal>
       </section>
 
@@ -498,29 +506,11 @@ export default async function BuildServicePage({ params }: Props) {
             {t('transmissionSection.desc')}
           </p>
           <Link
-            href={{ pathname: '/', hash: 'franchir' }}
+            href="/franchir/transmission"
             className="rounded-lg inline-flex font-mono text-[11px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-8 py-3.5 hover:bg-ag-apex/90 transition-colors"
           >
             {t('transmissionSection.cta')} →
           </Link>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section : Note acheteurs institutionnels ─────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('buyerNoteSection.label')}
-          </p>
-          <h3
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
-            style={{ fontSize: 'clamp(20px,2.5vw,32px)' }}
-          >
-            {t('buyerNoteSection.title')}
-          </h3>
-          <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl border-l-2 border-ag-apex pl-4">
-            {t('buyerNoteSection.desc')}
-          </p>
         </ScrollReveal>
       </section>
 

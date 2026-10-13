@@ -71,6 +71,9 @@ const CATEGORIES: TechCategory[] = [
       { name: 'Vercel',       abbr: 'Vc', color: '#000000' },
       { name: 'Cloudflare',   abbr: 'CF', color: '#F48120' },
       { name: 'Nginx',        abbr: 'Nx', color: '#009639' },
+      { name: 'Infomaniak',   abbr: 'Ik', color: '#0098FF' },
+      { name: 'Exoscale',     abbr: 'Ex', color: '#D42E12' },
+      { name: 'OVHcloud',     abbr: 'OV', color: '#000E9C' },
     ],
   },
   {
@@ -78,6 +81,7 @@ const CATEGORIES: TechCategory[] = [
     items: [
       { name: 'Stripe',       abbr: 'St', color: '#635BFF' },
       { name: 'OpenAI',       abbr: 'AI', color: '#10A37F' },
+      { name: 'Mistral AI',   abbr: 'Mi', color: '#FA520F' },
       { name: 'Resend',       abbr: 'Rs', color: '#000000' },
       { name: 'NextAuth',     abbr: 'Au', color: '#FF3E00' },
       { name: 'n8n',          abbr: 'n8', color: '#EA4B71' },

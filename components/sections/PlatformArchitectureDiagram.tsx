@@ -13,6 +13,7 @@ interface Layer {
 interface Props {
   layers: Layer[]
   apps: string[]
+  verticals?: string[]
   verticalsLabel: string
   appsLabel: string
   packagedLabel: string
@@ -27,11 +28,12 @@ const COLOR: Record<string, string> = {
 }
 
 const CORE_ORDER = ['knowledge', 'ai', 'data']
-const VERTICALS  = ['FinTech', 'HealthTech', 'PropTech', 'LegalTech', 'HRTech']
+const DEFAULT_VERTICALS = ['FinTech', 'HealthTech', 'PropTech', 'LegalTech', 'HRTech']
 
 export function PlatformArchitectureDiagram({
-  layers, apps, verticalsLabel, appsLabel, packagedLabel, flowLabel, govTooltipLabel,
+  layers, apps, verticals, verticalsLabel, appsLabel, packagedLabel, flowLabel, govTooltipLabel,
 }: Props) {
+  const VERTICALS = verticals && verticals.length > 0 ? verticals : DEFAULT_VERTICALS
   const [active, setActive] = useState<string | null>(null)
   const [pulse, setPulse]   = useState(0)
   const [visible, setVisible] = useState(false)

@@ -5234,8 +5234,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Conception d'actifs numériques sur mesure - Aegryn",
-      "desc": "Actifs numériques sur mesure : : SaaS B2B, IA, app mobile. Documentation complète, prêt pour certification. Zéro dépassement, valorisable dès le premier jour."
+      "title": "Solutions sur mesure : cadrage, réalisation, exploitation | Aegryn",
+      "desc": "Pilotage de bout en bout de vos projets numériques : cadrage, arbitrage acheter/intégrer/construire, réalisation, mise en service, exploitation. Hébergement en Suisse ou dans l'UE."
     },
     "label": "Conception : Solutions sur mesure",
     "title": "Solutions sur mesure\npour vos opérations.",
@@ -5243,7 +5243,7 @@
       "label": "NOTRE CONVICTION",
       "title": "Built to Last.",
       "p1": "Dans un monde où la technologie s'obsolète en quelques mois, concevoir pour durer est un acte de résistance.",
-      "p2": "Nous créons des actifs qui augmentent la valeur de votre organisation, pas votre facture mensuelle. Un actif qui travaille pour vous, et pour vos investisseurs."
+      "p2": "Nous créons des outils qui réduisent vos coûts récurrents au lieu d'ajouter une facture mensuelle. Un outil qui reste à vous, que vos équipes comprennent et qu'un autre intégrateur peut reprendre."
     },
     "formatsSection": {
       "label": "Trois formats de mission",
@@ -5261,8 +5261,8 @@
           "key": "btl",
           "badge": "BUILD TO LAST",
           "subtitle": "Actif propriétaire durable",
-          "title": "Un actif conçu pour durer et valoriser.",
-          "desc": "IP totale, architecture certifiable, documentation complète. Conçu pour une sortie éventuelle ou une valorisation institutionnelle. Prix verrouillé au Discovery."
+          "title": "Un outil conçu pour durer.",
+          "desc": "Propriété totale, architecture documentée, code que n'importe quelle équipe peut reprendre. Pour les systèmes qui portent votre activité. Prix verrouillé au cadrage."
         },
         {
           "key": "bto",
@@ -5287,21 +5287,16 @@
     },
     "transmissionSection": {
       "label": "Construire pour transmettre",
-      "title": "Un actif conçu sans plan de transmission\nperd 20 à 30% de sa valeur.",
-      "desc": "Chez Aegryn, chaque actif est conçu certifiable dès le premier sprint.",
-      "cta": "Préparer ma transmission",
+      "title": "Un outil sans documentation ni plan de reprise\ndevient un risque dès que son auteur part.",
+      "desc": "Chez Aegryn, chaque outil est documenté dès le premier sprint pour rester auditable et repris sans nous.",
+      "cta": "Voir l'accompagnement à la transmission",
       "href": "/franchir/transmission"
-    },
-    "buyerNoteSection": {
-      "label": "Note pour les investisseurs institutionnels",
-      "title": "Ce que les investisseurs institutionnels exigent.",
-      "desc": "Un actif certifié CIFSO répond aux exigences des investisseurs institutionnels qui demandent une documentation défendable. 58% des acquisitions tech EU viennent du private equity. Leur prérequis : la traçabilité."
     },
     "independenceSection": {
       "label": "Indépendance technologique",
       "badge": "INDÉPENDANCE TECHNOLOGIQUE"
     },
-    "desc": "De la PME au grand groupe, en Suisse et en Europe : Aegryn conçoit, déploie et maintient des solutions sur mesure. Votre code, vos données, votre infrastructure : hébergement en Suisse ou dans l'UE, sans dépendance imposée.",
+    "desc": "De la PME au grand groupe, en Suisse et en Europe : nous cadrons votre besoin, choisissons avec vous entre acheter, intégrer ou construire, puis pilotons la réalisation jusqu'à la mise en service. Votre code, vos données, votre infrastructure : hébergement en Suisse ou dans l'UE, sans dépendance imposée.",
     "whySection": {
       "label": "Pourquoi des solutions sur mesure",
       "title": "Ce que le marché standard ne peut pas vous offrir.",
@@ -5313,15 +5308,15 @@
         },
         {
           "title": "Hébergement sur votre infrastructure",
-          "desc": "Le logiciel se déploie là où vous l'exigez : cloud européen certifié, on-premise ou infrastructure suisse. Aucune donnée ne sort sans votre consentement."
+          "desc": "Le logiciel se déploie là où vous l'exigez : cloud européen, on-premise ou infrastructure suisse, avec alternatives souveraines CH/EU disponibles. Aucune donnée ne sort sans votre consentement."
         },
         {
           "title": "Intégration dans vos processus réels",
           "desc": "Nous construisons autour de votre organisation, pas l'inverse. Chaque module s'intègre à vos outils, données et workflows existants."
         },
         {
-          "title": "Certifiable et transmissible",
-          "desc": "Chaque actif logiciel livré par Aegryn est structuré pour être auditable, gradable et transmissible selon le protocole de certification Aegryn."
+          "title": "Auditable et réversible",
+          "desc": "Chaque logiciel livré est documenté, auditable et repris sans nous, par vos équipes ou un autre intégrateur."
         }
       ]
     },
@@ -5346,7 +5341,7 @@
           "num": "03",
           "badge": "Trust Numérique",
           "title": "Cybersecurity & Digital Trust",
-          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligné avec les priorités européennes 2026 et les exigences NIS2 pour les secteurs critiques."
+          "desc": "Cyber risk assessment, asset inventory, vendor risk, incident management, security evidence, compliance mapping. Aligné avec les exigences NIS2 pour les secteurs critiques."
         },
         {
           "num": "04",
@@ -5364,7 +5359,7 @@
           "num": "06",
           "badge": "Decision Intelligence",
           "title": "Data, BI & Decision Intelligence",
-          "desc": "Analyse causale, simulation de scénarios, recommandations automatisées. Le logiciel répond : que s'est-il passé, pourquoi, que va-t-il se passer, que faire. Près de 40 % des entreprises européennes utilisent la data analytique en 2026."
+          "desc": "Analyse causale, simulation de scénarios, recommandations automatisées. Le logiciel répond : que s'est-il passé, pourquoi, que va-t-il se passer, que faire."
         },
         {
           "num": "07",
@@ -5376,13 +5371,13 @@
           "num": "08",
           "badge": "Procurement Risk",
           "title": "Supplier, Procurement & Third-Party Risk",
-          "desc": "Scoring fournisseurs, analyse de contrats, risque cyber, ESG, concentration risk, sanctions, renouvellements. La FINMA souligne que l'externalisation reste la première source de risque opérationnel dans la finance suisse."
+          "desc": "Scoring fournisseurs, analyse de contrats, risque cyber, ESG, concentration risk, sanctions, renouvellements."
         },
         {
           "num": "09",
           "badge": "Identity & Trust",
           "title": "Identity, KYC/KYB & Digital Trust",
-          "desc": "Onboarding entreprise, KYB, KYC, vérification, bénéficiaires effectifs, signatures, credentials, trust records. La Suisse fait de l'E-ID une priorité de sa stratégie numérique 2026."
+          "desc": "Onboarding entreprise, KYB, KYC, vérification, bénéficiaires effectifs, signatures, credentials, trust records."
         },
         {
           "num": "10",
@@ -5392,12 +5387,12 @@
         }
       ],
       "sectionLabel": "Domaines",
-      "intro": "Cinq domaines d'ingénierie couvrent l'ensemble de la construction d'un actif numérique certifiable."
+      "intro": "Dix domaines d'application couvrent l'ensemble des besoins métier récurrents. Nous construisons seulement là où le marché ne propose pas de solution adaptée, ou lorsque l'indépendance l'exige."
     },
     "platformSection": {
       "label": "Infrastructure commune",
       "title": "Ce qui différencie un actif Aegryn d'un développement standard.",
-      "desc": "Chaque logiciel livré par Aegryn est construit sur la même infrastructure : données souveraines, modèles IA certifiables, gouvernance auditée. Résultat : un actif documenté dès le premier sprint, structurellement prêt pour une certification ou une cession : quel que soit le domaine métier.",
+      "desc": "Chaque logiciel livré par Aegryn est construit sur la même infrastructure : données souveraines, modèles IA documentés, gouvernance vérifiable. Outils et prestataires utilisés selon le cadre souverain que vous choisissez, avec alternatives suisses ou européennes.",
       "layers": [
         {
           "key": "data",
@@ -5423,14 +5418,21 @@
         {
           "key": "governance",
           "title": "Governance Layer",
-          "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD).",
-          "tag": "",
+          "desc": "Audit trail, RBAC, registre des traitements, conformité réglementaire (AI Act, NIS2, DORA, LPD) documentée en continu sur l'ensemble des couches.",
+          "tag": "Audit trail · RBAC · Conformité continue",
           "dep": null
         }
       ],
       "verticals": {
         "label": "Marchés verticaux",
-        "desc": "FinTech, HealthTech et PropTech sont des marchés verticaux, pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois."
+        "desc": "Finance & Capital, Santé, Industrie, Commerce et Tech sont des marchés verticaux, pas des produits de base. Les applications Aegryn peuvent être packagées pour ces marchés sans créer une nouvelle architecture à chaque fois.",
+        "items": [
+          "Finance & Capital",
+          "Santé & Sciences de la Vie",
+          "Industrie, Énergie & Infrastructure",
+          "Commerce & Services",
+          "Tech, Innovation & Secteur Public"
+        ]
       },
       "appsLabel": "Applications métier",
       "packagedLabel": "packagées →",
@@ -5494,18 +5496,18 @@
       "items": [
         {
           "num": "01",
-          "title": "Honoraires transparents.",
-          "desc": "Le forfait est défini et signé à l'issue du Discovery, avant le premier commit. Si le périmètre évolue, un avenant est signé avant exécution. Jamais de facturation surprise."
+          "title": "Prix verrouillé au cadrage.",
+          "desc": "Le forfait est défini et signé à l'issue du cadrage, avant le premier commit. Si le périmètre évolue, un avenant est signé avant exécution. Jamais de facturation surprise."
         },
         {
           "num": "02",
           "title": "Vous restez propriétaire à 100%",
-          "desc": "Aucune dilution. Aucune part prise par Aegryn. L'actif vous appartient à 100%. Aegryn peut intervenir comme co-investisseur sur demande : c'est votre décision, pas la nôtre."
+          "desc": "Aucune part prise sans votre demande. L'outil vous appartient à 100%. Un conflit d'intérêts éventuel, lié à une intervention d'Aegryn en co-investisseur, est toujours déclaré."
         },
         {
           "num": "03",
-          "title": "Prêt pour la certification à la livraison",
-          "desc": "Chaque actif livré est accompagné d'une documentation technique complète (architecture, API, sécurité, IP) qui le rend apte à une certification indépendante par tout auditeur tiers."
+          "title": "Documenté à la livraison",
+          "desc": "Chaque outil livré est accompagné d'une documentation technique complète (architecture, API, sécurité, IP) qui le rend apte à un audit ou à une reprise par un autre intégrateur."
         }
       ]
     },
@@ -5520,18 +5522,18 @@
         "Régie au jour/homme sans plafond",
         "Dépassements refacturés",
         "Livraison sans documentation",
-        "Aucune garantie sur la valeur finale"
+        "Aucune garantie sur le résultat final"
       ],
       "aegrynItems": [
-        "Prix verrouillé au Discovery",
+        "Prix verrouillé au cadrage",
         "Jalons mesurables par sprint",
         "Dépassement périmètre absorbé par Aegryn",
         "Documentation technique complète incluse",
-        "Actif prêt pour la certification à la livraison"
+        "Documentation complète à la livraison"
       ],
       "processItems": [
-        "Discovery 1 à 2 semaines inclus",
-        "Cahier des charges certifiable",
+        "Cadrage 1 à 2 semaines inclus",
+        "Cahier des charges signé",
         "Prix verrouillé avant le premier commit",
         "Avenant signé si périmètre évolue",
         "Réception formelle à chaque jalon"
@@ -5539,15 +5541,15 @@
     },
     "certificationBenefits": {
       "label": "Pourquoi la documentation change tout",
-      "title": "Un actif prêt pour la certification\nvaut structurellement plus.",
+      "title": "Une documentation complète change tout.",
       "items": [
         {
-          "title": "Valeur documentée et défendable",
-          "desc": "Un actif livré avec documentation complète a un multiple de valorisation défendable lors d'une levée de fonds ou d'une transmission. Pas une estimation, une base vérifiable."
+          "title": "Audit facilité",
+          "desc": "Architecture, API, sécurité et IP sont documentées : l'outil résiste à un audit, à une due diligence ou à un changement d'équipe. Une certification indépendante (CIFSO 5000) reste possible si vous le souhaitez."
         },
         {
           "title": "Protection contractuelle à la livraison",
-          "desc": "Ce que vous commandez est précisément ce que vous recevez. La documentation technique certifie l'état de chaque dimension à la livraison. Aucune zone grise."
+          "desc": "Ce que vous commandez est précisément ce que vous recevez. La documentation décrit l'état de chaque dimension à la livraison. Aucune zone grise."
         },
         {
           "title": "Reprise par n'importe quelle équipe",
@@ -5608,32 +5610,32 @@
     },
     "process": {
       "label": "Notre process",
-      "title": "Du brief au closing.\nUn seul interlocuteur.",
+      "title": "Build to Operate.\nUn seul interlocuteur.",
       "steps": [
         {
           "num": "01",
-          "title": "Diagnostic & Cadrage",
-          "desc": "Définition de la proposition de valeur, du marché cible, de la stack et du plan de sortie. Output : cahier des charges + honoraires définis et signés. Durée : 1 à 2 semaines. Coût : inclus dans le forfait total."
+          "title": "Cadrage & arbitrage",
+          "desc": "Besoin, périmètre, choix entre acheter, intégrer ou construire, plan de sortie. Résultat : cahier des charges et forfait signés. Durée : 1 à 2 semaines, inclus dans le forfait."
         },
         {
           "num": "02",
-          "title": "Architecture et Design",
-          "desc": "L'organisation est architecturée selon les critères CIFSO 5000 : base technologique documentée, droits IP cédés, finances auditables, sécurité by design, gouvernance structurée. Le grade est le plan de construction."
+          "title": "Architecture & conception",
+          "desc": "Architecture, sécurité dès la conception, droits de propriété cédés, hébergement en Suisse ou dans l'UE, documentation de départ."
         },
         {
           "num": "03",
-          "title": "Conception et Itérations",
-          "desc": "Développement en sprints avec jalons mesurables, revue de code et documentation continue. Stack propriétaire Aegryn ou stack client."
+          "title": "Réalisation par sprints",
+          "desc": "Jalons mesurables, revue de code, documentation continue, réception formelle à chaque jalon. Stack Aegryn ou stack client."
         },
         {
           "num": "04",
-          "title": "Lancement et Traction",
-          "desc": "Déploiement, acquisition des premiers utilisateurs, mise en place des métriques ARR/NRR/churn. Durée avant Grade A certifiable : 6 à 12 mois."
+          "title": "Déploiement & adoption",
+          "desc": "Mise en production, reprise des données, formation des équipes, suivi d'usage."
         },
         {
           "num": "05",
-          "title": "Certification (et sortie optionnelle)",
-          "desc": "Soumission au protocole CIFSO 5000 si souhaité. Grade officiel émis si les critères sont remplis. La transmission accompagnée n'est engagée que sur votre décision. L'organisation peut aussi être conservée avec maintenance."
+          "title": "Exploitation & transmission",
+          "desc": "Maintenance par Aegryn, ou transfert à vos équipes ou à un autre intégrateur. Aucune obligation de rester chez nous."
         }
       ]
     },
@@ -5648,24 +5650,24 @@
       },
       "evolutive": {
         "title": "Maintenance évolutive",
-        "desc": "Nouvelles fonctionnalités, refactoring, montées de version, intégrations, adaptation réglementaire (RGPD, EU AI Act, NIS2). L'actif reste certifiable à tout moment.",
+        "desc": "Nouvelles fonctionnalités, refactoring, montées de version, intégrations, adaptation réglementaire (RGPD, EU AI Act, NIS2). L'outil reste conforme à tout moment.",
         "format": "Forfait mensuel ou livrable au sprint"
       },
-      "note": "La maintenance Aegryn garantit que l'actif conserve son grade ou améliore son score à chaque cycle : condition pour qu'une transmission reste possible à tout moment."
+      "note": "La maintenance Aegryn garantit que l'outil reste à jour, sécurisé et repris sans nous à tout moment."
     },
     "fees": {
       "label": "Honoraires",
       "title": "Honoraires transparents. Aucune surprise.",
       "items": [
         {
-          "title": "Diagnostic (inclus)",
-          "desc": "1 à 2 semaines. Cahier des charges certifiable. Prix de build défini et signé. Aucun engagement avant signature du forfait.",
+          "title": "Cadrage (inclus)",
+          "desc": "1 à 2 semaines. Cahier des charges signé. Prix de build défini et signé. Aucun engagement avant signature du forfait.",
           "format": "Inclus dans le forfait total"
         },
         {
           "title": "Conception (prix verrouillé)",
-          "desc": "Prix verrouillé au Discovery. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Fourchettes indicatives (hors Discovery) : SaaS B2B simple à partir de 25 000€ HT, App mobile B2C à partir de 35 000€ HT, Produit IA natif à partir de 40 000€ HT.",
-          "format": "Prix verrouillé au Discovery"
+          "desc": "Prix verrouillé au cadrage. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Quick Build à partir de 15 000 CHF HT (automatisation ciblée), dashboard ou outil de scoring à partir de 25 000 CHF HT, workflow métier intégré à partir de 40 000 CHF HT.",
+          "format": "Prix verrouillé au cadrage"
         },
         {
           "title": "Maintenance (abonnement)",
@@ -5673,9 +5675,8 @@
           "format": "Forfait mensuel défini au contrat"
         }
       ],
-      "coInvestNote": "Aegryn peut intervenir en co-investisseur minoritaire sur certains projets : prise de part en échange d'une réduction des honoraires de build. Examiné au cas par cas.",
       "exitBanner": {
-        "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'actif est conçu pour l'être. L'accompagnement Aegryn est disponible si la certification le permet.",
+        "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'outil est conçu pour l'être. L'accompagnement Aegryn est disponible le moment venu.",
         "cta": "En savoir plus sur l'accompagnement transmission",
         "href": "/franchir/transmission"
       },
@@ -5685,7 +5686,7 @@
       "secondaryHref": "/assets"
     },
     "exitBanner": {
-      "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'actif est conçu pour l'être. L'accompagnement Aegryn est disponible si la certification le permet.",
+      "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'outil est conçu pour l'être. L'accompagnement Aegryn est disponible le moment venu.",
       "cta": "En savoir plus sur l'accompagnement transmission",
       "href": "/franchir/transmission"
     },
@@ -5694,7 +5695,8 @@
       "desc": "Décrivez votre idée, le périmètre fonctionnel et vos contraintes. Nous vous répondons avec une estimation de faisabilité et un premier cadrage tarifaire sous 48h.",
       "primary": "Démarrer le processus",
       "secondary": "Voir nos actifs propriétaires"
-    }
+    },
+    "advisoryLink": "Pas sûr de devoir construire ? Commencez par Technologie & Souveraineté"
   },
   "gradeSubmit": {
     "meta": {
@@ -8182,7 +8184,7 @@
   "techStack": {
     "label": "Stack Technique",
     "title": "Les technologies que nous maîtrisons.",
-    "desc": "Stack sélectionnée selon vos besoins fonctionnels, scalabilité attendue et éligibilité à la certification Aegryn Grade.",
+    "desc": "Stack sélectionnée selon vos besoins fonctionnels, scalabilité attendue et compatibilité avec votre infrastructure et vos exigences d'audit.",
     "all": "Tout",
     "frontend": "Frontend & Web",
     "backend": "Backend & API",
@@ -8190,7 +8192,7 @@
     "mobile": "Mobile",
     "infra": "Infrastructure",
     "integrations": "Intégrations",
-    "note": "Stack sélectionnée projet par projet selon les besoins fonctionnels, la scalabilité attendue et l'éligibilité à la certification Aegryn Grade. Intégration aux systèmes enterprise existants (CRM, ERP) et déploiement possible sur infrastructure souveraine CH/EU.",
+    "note": "Stack sélectionnée projet par projet selon les besoins fonctionnels, la scalabilité attendue et vos exigences d'audit. Intégration aux systèmes enterprise existants (CRM, ERP) et déploiement possible sur infrastructure souveraine CH/EU.",
     "enterprise": "Systèmes enterprise"
   },
   "languageSwitcher": {
