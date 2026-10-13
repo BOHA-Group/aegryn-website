@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
@@ -63,10 +64,21 @@ export default async function BuildServicePage({ params }: Props) {
 
       {/* ── Section 1 : Hero ─────────────────────────────────────────── */}
       <section
-        className="border-b border-ag-border bg-ag-navy flex items-center"
+        className="relative overflow-hidden border-b border-ag-border bg-ag-navy flex items-center"
         style={{ minHeight: 'clamp(460px,50vw,620px)' }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 w-full">
+        <Image
+          src="/images/services/build-hero.jpg"
+          alt={t('heroAlt')}
+          fill
+          priority
+          fetchPriority="high"
+          unoptimized
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 w-full">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
             {t('label')}
           </p>
