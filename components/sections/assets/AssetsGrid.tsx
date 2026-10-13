@@ -3,13 +3,22 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { Aegryn_ASSETS } from '@/data/assets'
+import { Aegryn_ASSETS, type AegrynAsset } from '@/data/assets'
+import { INDUSTRIES, getLocaleText } from '@/data/industries'
 import { FilterPills } from '@/components/ui/FilterPills'
 
-type Category = 'all' | 'ai' | 'lifestyle' | 'transactions'
+type Category = string
+
+/* Résout le sous-secteur /industries rattaché à un actif */
+function sectorOf(asset: AegrynAsset) {
+  const ref = asset.industrySector
+  if (!ref) return null
+  const industry = INDUSTRIES.find((i) => i.slug === ref.industry)
+  return industry?.sectors[ref.sectorIndex] ?? null
+}
 
 export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) {
   const t = useTranslations('assets.page')
@@ -24,7 +33,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
 
   const filtered = active === 'all'
     ? visibleAssets
-    : visibleAssets.filter((a) => a.category === active)
+    : visibleAssets.filter((a) => a.industrySector && `${a.industrySector.industry}:${a.industrySector.sectorIndex}` === active)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -36,10 +45,19 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
     return () => ctx.revert()
   }, [active])
 
+  /* Filtres = sous-secteurs /industries des actifs visibles */
+  const locale = useLocale()
+  const sectorKeys = Array.from(new Set(
+    visibleAssets.map((a) => a.industrySector && `${a.industrySector.industry}:${a.industrySector.sectorIndex}`)
+      .filter((k): k is string => !!k)
+  ))
   const filters: { key: Category; label: string }[] = [
-    { key: 'all',          label: t('filterAll') },
-    { key: 'lifestyle',    label: t('filterLifestyle') },
-    { key: 'transactions', label: t('filterTransactions') },
+    { key: 'all', label: t('filterAll') },
+    ...sectorKeys.map((key) => {
+      const asset = visibleAssets.find((a) => a.industrySector && `${a.industrySector.industry}:${a.industrySector.sectorIndex}` === key)
+      const sector = asset ? sectorOf(asset) : null
+      return { key, label: sector ? getLocaleText(sector.name, locale) : key }
+    }),
   ]
 
   /* Badges d'avancement masqués pour les statuts internes (dev / non démarré) */

@@ -8,6 +8,8 @@ export interface AegrynAsset {
   tagline:         string
   description:     string
   category:        'ai' | 'lifestyle' | 'transactions'
+  /** Rattachement à un sous-secteur des pages /industries (sectors[index] de l'industrie) */
+  industrySector?: { industry: string; sectorIndex: number }
   status:          'live' | 'beta' | 'dev' | 'not_started'
   featured:        boolean
   grade:           AssetGrade
@@ -34,6 +36,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tagline:          'Analyse contractuelle par IA',
     description:      "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées — tout identifié en langage clair.",
     category:         'ai',
+    industrySector:   { industry: 'tech-innovation-secteur-public', sectorIndex: 0 },
     status:           'live' as const,
     featured:         true,
     grade:            'pending' as const,
@@ -54,6 +57,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tagline:          'Services à domicile, mise en relation intelligente',
     description:      'Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés.',
     category:         'lifestyle',
+    industrySector:   { industry: 'commerce-services-experience-client', sectorIndex: 0 },
     status:           'dev' as const,
     featured:         true,
     grade:            'pending' as const,
@@ -72,6 +76,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tagline:          'Transport à la demande, zones urbaines denses',
     description:      "Plateforme de transport immédiat pilotée par l'IA. Courses, colis, déménagement — dispatch en temps réel pour particuliers et professionnels.",
     category:         'lifestyle',
+    industrySector:   { industry: 'industrie-energie-infrastructure', sectorIndex: 5 },
     status:           'not_started' as const,
     featured:         false,
     grade:            'pending' as const,
@@ -92,6 +97,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tagline:          'Transaction immobilière centrée sur le vendeur',
     description:      "Réinvente la transaction immobilière en plaçant le vendeur au cœur du processus. Estimation, analyse de marché et accompagnement personnalisé de A à Z.",
     category:         'transactions',
+    industrySector:   { industry: 'finance-capital', sectorIndex: 2 },
     status:           'not_started' as const,
     featured:         false,
     grade:            'pending' as const,
@@ -110,6 +116,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tagline:          'Réseau social centré sur les passions partagées',
     description:      "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations.",
     category:         'transactions',
+    industrySector:   { industry: 'commerce-services-experience-client', sectorIndex: 3 },
     status:           'not_started' as const,
     featured:         false,
     grade:            'pending' as const,
