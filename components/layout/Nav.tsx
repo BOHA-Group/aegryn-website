@@ -634,7 +634,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           <div className="nav-link-item relative flex items-center">
             <Link
               href={'/portfolio' as LinkHref}
-              className={`relative flex items-center font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+              className={`relative flex items-center font-mono font-semibold text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isPortfolioActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
               aria-current={isPortfolioActive ? 'page' : undefined}
@@ -867,7 +867,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 href={'/portfolio' as LinkHref}
                 onClick={closeMobile}
                 aria-current={isPortfolioActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
+                className={`w-full flex items-center justify-between py-4 font-mono font-semibold text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
                   isPortfolioActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
