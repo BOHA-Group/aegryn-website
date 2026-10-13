@@ -109,6 +109,7 @@ export default async function BuildServicePage({ params }: Props) {
             <div className="py-16 md:px-16">
               <VisionTypewriter
                 segments={t.raw('builtToLast.segments') as { t: string; bold?: boolean }[]}
+                endVhFraction={0.9}
               />
             </div>
           </div>

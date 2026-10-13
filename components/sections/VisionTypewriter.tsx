@@ -16,8 +16,20 @@ export interface VisionSegment {
  * Le curseur clignote tant que le texte est incomplet. La hauteur finale
  * est reservee par un rendu invisible du texte complet (pas de saut).
  * Les segments marques `bold` restent en gras pendant et apres la revelation.
+ *
+ * `endVhFraction` regle le point de fin par rapport a la section suivante :
+ * a 1 (defaut), la frappe se termine des que la section suivante atteint le
+ * bas du viewport (elle n'est pas encore visible). Une valeur plus petite
+ * retarde la fin jusqu'a ce que la section suivante soit davantage visible,
+ * ce qui ralentit la revelation et termine le texte plus bas dans la page.
  */
-export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
+export function VisionTypewriter({
+  segments,
+  endVhFraction = 1,
+}: {
+  segments: VisionSegment[]
+  endVhFraction?: number
+}) {
   const full = segments.map((s) => s.t).join('')
   const [chars, setChars] = useState(0)
   const [started, setStarted] = useState(false)
@@ -40,11 +52,12 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
       const sy = window.scrollY
       // La frappe demarre quand le haut du bloc entre en bas d'ecran et se
       // termine quand la section suivante (ex. « Notre ADN ») atteint le bas
-      // du viewport : le texte est complet avant que la suite n'apparaisse.
+      // du viewport (ou plus bas si endVhFraction < 1) : le texte est
+      // complet avant, ou a mesure, que la suite devient visible.
       const next = el.closest('section')?.nextElementSibling
       const startY = r.top + sy - vh * 0.95
       const endY = next
-        ? next.getBoundingClientRect().top + sy - vh
+        ? next.getBoundingClientRect().top + sy - vh * endVhFraction
         : r.top + sy - vh * 0.45
       const p = Math.min(1, Math.max(0, (sy - startY) / Math.max(1, endY - startY)))
       const n = Math.round(p * full.length)
@@ -60,7 +73,7 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
       window.removeEventListener('resize', onScroll)
       if (raf) cancelAnimationFrame(raf)
     }
-  }, [full.length])
+  }, [full.length, endVhFraction])
 
   const renderSegments = (n: number) => {
     let off = 0
