@@ -5390,7 +5390,7 @@
       ],
       "source": "Eurostat, IKT-Erhebung in Unternehmen 2025",
       "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
-      "stackLine": "Offene oder souveräne Technologien (PostgreSQL, Python, Node.js, Docker; Hosting Infomaniak, Exoscale, OVHcloud; Mistral-Modelle). US-Tools werden nur mit Ihrer Zustimmung eingesetzt."
+      "stackLine": "Offene oder souveräne Technologien: PostgreSQL, Python, Node.js, Next.js/React, Docker; Hosting bei Infomaniak, Exoscale, OVHcloud; Mistral-Modelle. Integration in Ihre bestehenden Systeme (CRM, ERP, Business-APIs) und mobile Tools (React Native) möglich. Nicht-europäische Tools (OpenAI, Stripe, Cloudflare usw.) werden nur mit Ihrer ausdrücklichen, bei der Bedarfsklärung dokumentierten Zustimmung eingesetzt."
     },
     "marketComparison": {
       "label": "Was sehr wenige andere bieten",

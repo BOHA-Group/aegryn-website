@@ -5390,7 +5390,7 @@
       ],
       "source": "Eurostat, encuesta TIC en empresas 2025",
       "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
-      "stackLine": "Tecnologías abiertas o soberanas (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; modelos Mistral). Las herramientas estadounidenses solo se utilizan con su acuerdo."
+      "stackLine": "Tecnologías abiertas o soberanas: PostgreSQL, Python, Node.js, Next.js/React, Docker; alojamiento con Infomaniak, Exoscale, OVHcloud; modelos Mistral. Integración posible con sus sistemas existentes (CRM, ERP, APIs de negocio) y herramientas móviles (React Native). Las herramientas no europeas (OpenAI, Stripe, Cloudflare, etc.) solo se utilizan con su consentimiento explícito, documentado en la definición del alcance."
     },
     "marketComparison": {
       "label": "Lo que muy pocos ofrecen",

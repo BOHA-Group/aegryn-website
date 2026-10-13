@@ -5405,7 +5405,7 @@
       ],
       "source": "Eurostat, ICT-enquête ondernemingen 2025",
       "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
-      "stackLine": "Open of soevereine technologieën (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; Mistral-modellen). Amerikaanse tools worden alleen met uw toestemming gebruikt."
+      "stackLine": "Open of soevereine technologieën: PostgreSQL, Python, Node.js, Next.js/React, Docker; hosting bij Infomaniak, Exoscale, OVHcloud; Mistral-modellen. Integratie mogelijk met uw bestaande systemen (CRM, ERP, bedrijfs-API's) en mobiele tools (React Native). Niet-Europese tools (OpenAI, Stripe, Cloudflare, enz.) worden alleen gebruikt met uw expliciete toestemming, vastgelegd bij de kaderstelling."
     },
     "marketComparison": {
       "label": "Wat zeer weinig anderen bieden",

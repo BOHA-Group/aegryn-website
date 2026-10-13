@@ -5390,7 +5390,7 @@
       ],
       "source": "Eurostat, indagine ICT nelle imprese 2025",
       "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
-      "stackLine": "Tecnologie aperte o sovrane (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; modelli Mistral). Gli strumenti americani sono utilizzati solo con il vostro accordo."
+      "stackLine": "Tecnologie aperte o sovrane: PostgreSQL, Python, Node.js, Next.js/React, Docker; hosting con Infomaniak, Exoscale, OVHcloud; modelli Mistral. Integrazione possibile con i vostri sistemi esistenti (CRM, ERP, API aziendali) e strumenti mobili (React Native). Gli strumenti non europei (OpenAI, Stripe, Cloudflare, ecc.) sono utilizzati solo con il vostro consenso esplicito, documentato alla definizione del perimetro."
     },
     "marketComparison": {
       "label": "Ciò che pochissimi altri offrono",

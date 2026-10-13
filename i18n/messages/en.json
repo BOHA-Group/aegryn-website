@@ -5405,7 +5405,7 @@
       ],
       "source": "Eurostat, ICT usage in enterprises survey 2025",
       "sourceUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises",
-      "stackLine": "Open or sovereign technologies (PostgreSQL, Python, Node.js, Docker; hosting Infomaniak, Exoscale, OVHcloud; Mistral models). US tools are used only with your consent."
+      "stackLine": "Open or sovereign technologies: PostgreSQL, Python, Node.js, Next.js/React, Docker; hosting with Infomaniak, Exoscale, OVHcloud; Mistral models. Integration possible with your existing systems (CRM, ERP, business APIs) and mobile tools (React Native). Non-European tools (OpenAI, Stripe, Cloudflare, etc.) are only used with your explicit consent, documented at scoping."
     },
     "marketComparison": {
       "label": "What very few others offer",
