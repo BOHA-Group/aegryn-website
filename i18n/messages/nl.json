@@ -748,33 +748,6 @@
         "t": "waarde wordt opgebouwd vóór ze gerealiseerd wordt. Aegryn grijpt vroeg in.",
         "bold": true
       }
-    ],
-    "items": [
-      {
-        "num": "01",
-        "title": "Waarde wordt gebouwd voor ze gerealiseerd wordt.",
-        "desc": "Een solide organisatie is niet degene die goed verkoopt.\nHet is degene die waarde heeft, of ze nu wordt overgedragen, ontwikkeld\nof doorgegeven aan de volgende generatie.\nWij interveniëren vroeg: strategie, organisatie,\nassets, documentatie. Zodat waarde reëel is\nvoordat ze erkend wordt."
-      },
-      {
-        "num": "02",
-        "title": "Advies moet operationeel zijn.",
-        "desc": "Een firma die niet bouwt, kan niet adviseren.\nOnze eigen assets doorlopen onze eigen methoden.\nWat wij aanbevelen, voeren wij uit.\nDeze consistentie is onze eerste geloofwaardigheid."
-      },
-      {
-        "num": "03",
-        "title": "Bezitten wat men bouwt is een voorwaarde voor duurzaamheid.",
-        "desc": "Afhankelijk zijn van één leverancier of een niet-beheerste\ninfrastructuur stelt de organisatie bloot aan een risico\ndat men niet ziet, tot het kost.\nWij ontwerpen assets met volledig eigendom van de klant,\ninzetbaar op elke infrastructuur, certificeerbaar\nen overdraagbaar zonder wrijving."
-      },
-      {
-        "num": "04",
-        "title": "Documentatie verandert het gesprek.",
-        "desc": "Geen notitie. Een protocol.\nVoor elke strategische beslissing, voor elke overdracht,\nvoor elke kapitaalronde of onderhandeling.\nEen door Aegryn gedocumenteerde organisatie is geen belofte.\nHet is een verdedigbare zekerheid."
-      },
-      {
-        "num": "05",
-        "title": "Talent is een asset zoals alle andere.",
-        "desc": "Organisaties die standhouden, plaatsen de juiste mensen\nop het juiste moment.\nWij werven leidinggevenden en experts\nen plaatsen overgangsprofielen, wanneer het bedrijf\nstart, groeit, herstructureert, overneemt of wordt overgedragen."
-      }
     ]
   },
   "ecosystemDomains": {

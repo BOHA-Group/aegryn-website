@@ -748,33 +748,6 @@
         "t": "el valor se construye antes de realizarse. Aegryn interviene aguas arriba.",
         "bold": true
       }
-    ],
-    "items": [
-      {
-        "num": "01",
-        "title": "El valor se construye antes de realizarse.",
-        "desc": "Una organización sólida no es la que se vende bien.\nEs la que vale, ya sea que se ceda, se desarrolle\no se transmita a la siguiente generación.\nIntervenimos antes: estrategia, organización,\nactivos, documentación. Para que el valor sea real\nantes de ser reconocido."
-      },
-      {
-        "num": "02",
-        "title": "El asesoramiento debe ser operacional.",
-        "desc": "Una firma que no construye no puede asesorar.\nNuestros propios activos pasan por nuestros propios métodos.\nLo que recomendamos, lo ejecutamos.\nEsta coherencia es nuestra primera credibilidad."
-      },
-      {
-        "num": "03",
-        "title": "Poseer lo que se construye es una condición de durabilidad.",
-        "desc": "Depender de un único proveedor o de una infraestructura\nno controlada expone a la organización a un riesgo\nque no se ve, hasta que cuesta.\nConcebimos activos de propiedad total del cliente,\ndeployables en cualquier infraestructura, certificables\ny transmisibles sin fricción."
-      },
-      {
-        "num": "04",
-        "title": "La documentación cambia la conversación.",
-        "desc": "No una nota. Un protocolo.\nAntes de cualquier decisión estratégica, antes de cualquier cesión,\nantes de cualquier ronda de financiación o negociación.\nUna organización documentada por Aegryn no es una promesa.\nEs una certeza defendible."
-      },
-      {
-        "num": "05",
-        "title": "El talento es un activo como los demás.",
-        "desc": "Las organizaciones que perduran colocan a las personas correctas\nen el momento adecuado.\nReclutamos directivos y expertos\ny colocamos perfiles de transición, cuando la empresa\nnace, crece, se reestructura, adquiere o se transmite."
-      }
     ]
   },
   "ecosystemDomains": {

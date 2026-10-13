@@ -748,33 +748,6 @@
         "t": "value is built before it is realised. Aegryn intervenes upstream.",
         "bold": true
       }
-    ],
-    "items": [
-      {
-        "num": "01",
-        "title": "Value is built before it is realised.",
-        "desc": "A solid organisation is not one that sells well.\nIt is one that holds its value, whether it is sold, developed,\nor passed on to the next generation.\nWe intervene upstream: strategy, organisation,\nassets, documentation. So that value is real\nbefore it is recognised."
-      },
-      {
-        "num": "02",
-        "title": "Advisory must be operational.",
-        "desc": "A firm that does not build cannot advise.\nOur own assets go through our own methods.\nWhat we recommend, we execute.\nThis consistency is our primary credibility."
-      },
-      {
-        "num": "03",
-        "title": "Owning what you build is a condition for durability.",
-        "desc": "Depending on a single vendor or an uncontrolled infrastructure\nexposes the organisation to a risk\nthat goes unseen, until it costs.\nWe design assets with full client ownership,\ndeployable on any infrastructure, certifiable,\nand transferable without friction."
-      },
-      {
-        "num": "04",
-        "title": "Documentation changes the conversation.",
-        "desc": "Not a note. A protocol.\nBefore any strategic decision, before any sale,\nbefore any fundraise or negotiation.\nAn organisation documented by Aegryn is not a promise.\nIt is a defensible certainty."
-      },
-      {
-        "num": "05",
-        "title": "Talent is an asset like any other.",
-        "desc": "Organisations that last place the right people\nat the right time.\nWe recruit executives and experts,\nand place transition profiles, when the company\nlaunches, grows, restructures, acquires or transfers."
-      }
     ]
   },
   "ecosystemDomains": {

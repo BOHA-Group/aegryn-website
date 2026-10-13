@@ -24,7 +24,6 @@ export function ManifestoSection() {
   const tW = useTranslations('whatwedo')
   const tA = useTranslations('aboutSection')
 
-  const whatwedoItems = tW.raw('items') as { num: string; title: string; desc: string }[]
   const stats         = tA.raw('stats') as { val: string; label: string; sub?: string }[]
 
   const whatRef    = useRef<HTMLElement>(null)
@@ -48,16 +47,6 @@ export function ManifestoSection() {
     })
 
     const ctx = gsap.context(() => {
-
-      /* ── What we do: stagger clip-reveal per column ── */
-      gsap.fromTo('.what-col',
-        { opacity: 0, y: 30, clipPath: 'inset(0 0 100% 0)' },
-        {
-          opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)',
-          stagger: 0.1, duration: 0.9, ease: 'expo.out',
-          scrollTrigger: { trigger: whatRef.current, start: 'top 78%', once: true },
-        },
-      )
 
       /* ── About H2: words clip reveal scrub ── */
       gsap.fromTo(splitAbout.words,
@@ -144,35 +133,6 @@ export function ManifestoSection() {
                 completeAtVh={0.55}
               />
             </div>
-          </div>
-          <div className="border-b border-ag-border">
-            {whatwedoItems.map((item) => (
-              <div
-                key={item.num}
-                className="what-col group py-4 md:py-5 flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-10 cursor-default"
-                style={{ opacity: 0 }}
-              >
-                <div className="flex items-baseline gap-6 md:gap-10 lg:min-w-0 md:pt-0.5">
-                  <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink">
-                    {item.num}
-                  </p>
-                  <h3
-                    className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] transition-transform duration-500 ease-out md:group-hover:translate-x-2"
-                    style={{ fontSize: 'clamp(15px,1.4vw,18px)' }}
-                  >
-                    {item.title}
-                  </h3>
-                </div>
-                <div className="lg:ml-auto lg:w-[560px] lg:shrink-0 md:grid md:grid-rows-[0fr] md:grid-cols-[minmax(0,1fr)] md:group-hover:grid-rows-[1fr] md:transition-all md:duration-500 md:ease-out">
-                  <div className="md:min-h-0 md:min-w-0 md:overflow-hidden flex items-start gap-4">
-                    <span className="hidden md:inline text-ag-apex-ink mt-[3px]" aria-hidden="true">→</span>
-                    <p className="font-sans font-normal text-[15px] text-ag-gray leading-relaxed md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 md:delay-100">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -748,33 +748,6 @@
         "t": "Wert entsteht, bevor er sich realisiert. Aegryn greift vorgelagert ein.",
         "bold": true
       }
-    ],
-    "items": [
-      {
-        "num": "01",
-        "title": "Wert wird aufgebaut, bevor er realisiert wird.",
-        "desc": "Eine solide Organisation ist nicht eine, die sich gut verkauft.\nSie ist eine, die Wert hat, ob sie veräußert, entwickelt\noder an die nächste Generation weitergegeben wird.\nWir greifen frühzeitig ein: Strategie, Organisation,\nAssets, Dokumentation. Damit Wert real ist,\nbevor er anerkannt wird."
-      },
-      {
-        "num": "02",
-        "title": "Beratung muss operativ sein.",
-        "desc": "Eine Firma, die nicht baut, kann nicht beraten.\nUnsere eigenen Assets durchlaufen unsere eigenen Methoden.\nWas wir empfehlen, führen wir aus.\nDiese Kohärenz ist unsere primäre Glaubwürdigkeit."
-      },
-      {
-        "num": "03",
-        "title": "Zu besitzen, was man baut, ist eine Voraussetzung für Dauerhaftigkeit.",
-        "desc": "Von einem einzigen Anbieter oder einer nicht kontrollierten\nInfrastruktur abzuhängen setzt die Organisation\neinem Risiko aus, das man nicht sieht, bis es kostet.\nWir konzipieren Assets mit vollem Kundeneigentum,\nauf jeder Infrastruktur einsetzbar, zertifizierbar\nund reibungslos übertragbar."
-      },
-      {
-        "num": "04",
-        "title": "Dokumentation verändert das Gespräch.",
-        "desc": "Kein Gutachten. Ein Protokoll.\nVor jeder strategischen Entscheidung, vor jedem Verkauf,\nvor jeder Finanzierungsrunde oder Verhandlung.\nEine von Aegryn dokumentierte Organisation ist kein Versprechen.\nSie ist eine verteidigbare Gewissheit."
-      },
-      {
-        "num": "05",
-        "title": "Talent ist ein Asset wie jedes andere.",
-        "desc": "Organisationen, die Bestand haben, setzen die richtigen Personen\nzur richtigen Zeit ein.\nWir rekrutieren Führungskräfte und Experten\nund vermitteln Übergangsprofile, wenn das Unternehmen\nstartet, wächst, sich restrukturiert, akquiriert oder übertragen wird."
-      }
     ]
   },
   "ecosystemDomains": {
