@@ -5353,9 +5353,9 @@
       "domains": [
         {
           "num": "01",
-          "badge": "Agentische KI",
+          "badge": "KI-Agenten",
           "title": "KI-Agenten & Geschäftsautomatisierung",
-          "desc": "Orchestrierung komplexer Workflows durch Geschäfts-KI-Agenten, die mit Ihren Systemen verbunden sind: CRM, ERP, E-Mail, Dokumente, APIs, Datenbanken. Jeder Agent ist prüfbar, mit Human-in-the-Loop und Qualitätsüberwachung."
+          "desc": "Orchestrierung komplexer Arbeitsabläufe durch Geschäfts-KI-Agenten, die mit Ihren Systemen verbunden sind: CRM, ERP, E-Mail, Dokumente, APIs, Datenbanken. Jeder Agent ist prüfbar, mit menschlicher Aufsicht und Qualitätsüberwachung."
         },
         {
           "num": "02",
@@ -5365,50 +5365,50 @@
         },
         {
           "num": "03",
-          "badge": "Digital Trust",
-          "title": "Cybersicherheit & Digitales Vertrauen",
-          "desc": "Cyber-Risikobewertung, Asset-Inventar, Lieferantenrisiko, Incident-Management, Sicherheitsnachweise, Compliance-Mapping. Ausgerichtet an den NIS2-Anforderungen für kritische Sektoren."
+          "badge": "Digitales Vertrauen",
+          "title": "Cybersicherheit & digitales Vertrauen",
+          "desc": "Cyber-Risikobewertung, Inventar der Assets, Lieferantenrisiko, Störfallmanagement, Sicherheitsnachweise, Compliance-Zuordnung. Ausgerichtet an den NIS2-Anforderungen für kritische Sektoren."
         },
         {
           "num": "04",
-          "badge": "Dok-Intelligenz",
+          "badge": "Wissensintelligenz",
           "title": "Dokument-, Vertrags- & Wissensintelligenz",
           "desc": "Verwandeln Sie Ihre Verträge, Richtlinien, Rechnungen und Dokumente in handlungsfähiges Wissen. Risikoidentifikation, kritische Fristen und Prioritätsmaßnahmen. Subblink, Aegryn-Kernasset."
         },
         {
           "num": "05",
-          "badge": "Finance Ops",
-          "title": "Finanzen, Abrechnung & E-Rechnungsautomatisierung",
-          "desc": "Rechnungsautomatisierung, E-Invoicing (EU ViDA, Schweizer Bundespflicht), Zahlungsabgleich, Cash-Flow, grenzüberschreitende Mehrwertsteuer. Finance-Operations-Schicht zwischen CRM und Buchhaltung."
+          "badge": "Finanzoperationen",
+          "title": "Finanzen, Abrechnung & elektronische Rechnungsstellung",
+          "desc": "Rechnungsautomatisierung, elektronische Rechnungsstellung (EU ViDA, Schweizer Bundespflicht), Zahlungsabgleich, Liquidität, grenzüberschreitende Mehrwertsteuer. Finanzoperationsschicht zwischen CRM und Buchhaltung."
         },
         {
           "num": "06",
           "badge": "Entscheidungsintelligenz",
           "title": "Daten, BI & Entscheidungsintelligenz",
-          "desc": "Kausalanalyse, Szenariosimulation, automatisierte Empfehlungen. Die Software beantwortet: Was ist passiert, warum, was wird passieren, was ist zu tun. Fast 40 % der europäischen Unternehmen nutzen 2026 Datenanalyse."
+          "desc": "Kausalanalyse, Szenariosimulation, automatisierte Empfehlungen. Die Software beantwortet: Was ist passiert, warum, was wird passieren, was ist zu tun."
         },
         {
           "num": "07",
-          "badge": "Agentische CX",
-          "title": "Customer Experience & Service-Automatisierung",
-          "desc": "KI-Customer-Operations-Architektur: KI-Kundenagent, Wissensbot, Next-Best-Action, Fall-Zusammenfassung, Qualitätsüberwachung. Relevant für Versicherungen, Banken, Telekommunikation, Handel, Gesundheitswesen."
+          "badge": "Kundenerlebnis",
+          "title": "Kundenerlebnis & Service-Automatisierung",
+          "desc": "KI-Architektur für Kundenoperationen: KI-Kundenagent, Wissensbot, nächstbeste Aktion, Fallzusammenfassung, Qualitätsüberwachung. Relevant für Versicherungen, Banken, Telekommunikation, Handel, Gesundheitswesen."
         },
         {
           "num": "08",
           "badge": "Beschaffungsrisiko",
           "title": "Lieferanten, Beschaffung & Drittparteienrisiko",
-          "desc": "Lieferantenbewertung, Vertragsanalyse, Cyberrisiko, ESG, Konzentrationsrisiko, Sanktionen, Verlängerungen. Die FINMA stellt fest, dass Auslagerungen die primäre Quelle operationeller Risiken im Schweizer Finanzwesen bleiben."
+          "desc": "Lieferantenbewertung, Vertragsanalyse, Cyberrisiko, ESG, Konzentrationsrisiko, Sanktionen, Verlängerungen."
         },
         {
           "num": "09",
           "badge": "Identität & Vertrauen",
-          "title": "Identität, KYC/KYB & Digitales Vertrauen",
-          "desc": "Unternehmens-Onboarding, KYB, KYC, Prüfung, wirtschaftlich Berechtigte, Signaturen, Anmeldeinformationen, Vertrauensaufzeichnungen."
+          "title": "Identität, KYC/KYB & digitales Vertrauen",
+          "desc": "Geschäftsbeziehungsaufnahme, KYB, KYC, Prüfung, wirtschaftlich Berechtigte, Signaturen, Nachweise, Vertrauensregister."
         },
         {
           "num": "10",
           "badge": "Digitaler Zwilling",
-          "title": "Unternehmensasset & Prozessintelligenz",
+          "title": "Unternehmensasset- & Prozessintelligenz",
           "desc": "Dynamische Darstellung Ihrer Organisation: Personen, Anwendungen, Prozesse, Verträge, Lieferanten, Daten. Echtzeit-Antworten zu Abhängigkeiten, Kosten und operationellen Risiken."
         }
       ],

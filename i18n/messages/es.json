@@ -5353,62 +5353,62 @@
       "domains": [
         {
           "num": "01",
-          "badge": "IA Agéntica",
-          "title": "Agentes IA & Automatización empresarial",
-          "desc": "Orquestación de workflows complejos por agentes IA empresariales conectables a sus sistemas: CRM, ERP, email, documentos, APIs, bases de datos. Cada agente es auditable, con human-in-the-loop y monitoreo de calidad."
+          "badge": "IA agéntica",
+          "title": "Agentes IA & automatización empresarial",
+          "desc": "Orquestación de flujos de trabajo complejos por agentes IA empresariales conectables a sus sistemas: CRM, ERP, email, documentos, APIs, bases de datos. Cada agente es auditable, con supervisión humana y monitoreo de calidad."
         },
         {
           "num": "02",
           "badge": "Gobernanza IA",
-          "title": "Cumplimiento, Riesgo & Gobernanza IA",
-          "desc": "Plataforma de compliance para EU AI Act, RGPD, LPD suiza, NIS2, DORA, ISO 27001. Registro de tratamientos, controles, evidencias, audit trail. Suiza confirma que su LPD se aplica directamente a los tratamientos basados en IA."
+          "title": "Cumplimiento, riesgo & gobernanza IA",
+          "desc": "Plataforma de cumplimiento para EU AI Act, RGPD, LPD suiza, NIS2, DORA, ISO 27001. Registro de tratamientos, controles, evidencias, trazabilidad de auditoría. Suiza confirma que su LPD se aplica directamente a los tratamientos basados en IA."
         },
         {
           "num": "03",
-          "badge": "Confianza Digital",
-          "title": "Ciberseguridad & Confianza Digital",
-          "desc": "Evaluación del riesgo cyber, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con los requisitos NIS2 para sectores críticos."
+          "badge": "Confianza digital",
+          "title": "Ciberseguridad & confianza digital",
+          "desc": "Evaluación del riesgo cibernético, inventario de activos, riesgo de proveedores, gestión de incidentes, evidencias de seguridad, mapeo de conformidad. Alineado con los requisitos NIS2 para sectores críticos."
         },
         {
           "num": "04",
-          "badge": "Inteligencia Docs",
-          "title": "Documentos, Contratos & Knowledge Intelligence",
-          "desc": "Transforme sus contratos, políticas, facturas y documentos en conocimiento accionable. Identificación de riesgos, plazos críticos y acciones prioritarias. Subblink, activo core Aegryn."
+          "badge": "Inteligencia documental",
+          "title": "Inteligencia documental, contractual & del conocimiento",
+          "desc": "Transforme sus contratos, políticas, facturas y documentos en conocimiento aprovechable. Identificación de riesgos, plazos críticos y acciones prioritarias. Subblink, activo core Aegryn."
         },
         {
           "num": "05",
-          "badge": "Finance Ops",
-          "title": "Finanzas, Facturación & Automatización de E-Factura",
-          "desc": "Automatización de facturación, e-invoicing (EU ViDA, obligación Confederación suiza), reconciliación de pagos, cash-flow, IVA transfronterizo. Capa Finance Operations entre CRM y contabilidad."
+          "badge": "Operaciones financieras",
+          "title": "Finanzas, facturación & facturación electrónica",
+          "desc": "Automatización de facturación, facturación electrónica (EU ViDA, obligación Confederación suiza), reconciliación de pagos, tesorería, IVA transfronterizo. Capa de operaciones financieras entre CRM y contabilidad."
         },
         {
           "num": "06",
-          "badge": "Inteligencia de Decisión",
-          "title": "Datos, BI e Inteligencia de Decisión",
-          "desc": "Análisis causal, simulación de escenarios, recomendaciones automatizadas. El software responde a: qué pasó, por qué, qué pasará, qué hacer. Casi el 40% de las empresas europeas usa análisis de datos en 2026."
+          "badge": "Inteligencia de decisión",
+          "title": "Datos, BI & inteligencia de decisión",
+          "desc": "Análisis causal, simulación de escenarios, recomendaciones automatizadas. El software responde a: qué pasó, por qué, qué pasará, qué hacer."
         },
         {
           "num": "07",
-          "badge": "Agentic CX",
-          "title": "Customer Experience & Automatización del servicio",
-          "desc": "Arquitectura AI Customer Operations: agente de clientes IA, knowledge bot, next-best-action, resumen de casos, monitoreo de calidad. Relevante para seguros, banca, telecomunicaciones, retail, sanidad."
+          "badge": "Experiencia de cliente",
+          "title": "Experiencia de cliente & automatización del servicio",
+          "desc": "Arquitectura de operaciones de cliente IA: agente de clientes IA, bot de conocimiento, mejor acción siguiente, resumen de casos, monitoreo de calidad. Relevante para seguros, banca, telecomunicaciones, comercio, sanidad."
         },
         {
           "num": "08",
-          "badge": "Riesgo proveedores",
-          "title": "Proveedores, Compras & Riesgo de terceros",
-          "desc": "Scoring de proveedores, análisis de contratos, riesgo cyber, ESG, riesgo de concentración, sanciones, renovaciones. La FINMA señala que la externalización sigue siendo la principal fuente de riesgo operacional en las finanzas suizas."
+          "badge": "Riesgo de proveedores",
+          "title": "Proveedores, compras & riesgo de terceros",
+          "desc": "Evaluación de proveedores, análisis de contratos, riesgo cibernético, ESG, riesgo de concentración, sanciones, renovaciones."
         },
         {
           "num": "09",
-          "badge": "Identidad & Trust",
-          "title": "Identidad, KYC/KYB & Confianza Digital",
-          "desc": "Onboarding empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza."
+          "badge": "Identidad & confianza",
+          "title": "Identidad, KYC/KYB & confianza digital",
+          "desc": "Alta de relación empresarial, KYB, KYC, verificación, titulares reales, firmas, credenciales, registros de confianza."
         },
         {
           "num": "10",
-          "badge": "Gemelo Digital",
-          "title": "Inteligencia de Activos y Procesos Empresariales",
+          "badge": "Gemelo digital",
+          "title": "Inteligencia de activos & procesos empresariales",
           "desc": "Representación dinámica de su organización: personas, aplicaciones, procesos, contratos, proveedores, datos. Respuestas en tiempo real sobre dependencias, costos y riesgos operacionales."
         }
       ],

@@ -5368,63 +5368,63 @@
       "domains": [
         {
           "num": "01",
-          "badge": "Contractintelligentie",
-          "title": "Contractanalyse & Documentintelligentie",
-          "desc": "Automatische extractie, juridische clausuledetectie, risicoanalyse en contractonderhandelingsondersteuning via AI."
+          "badge": "AI-agenten",
+          "title": "AI-agenten & bedrijfsautomatisering",
+          "desc": "Autonome AI-agenten, workflowautomatisering, RPA en intelligente procesorkestratie om operationele kosten te verlagen en cycli te versnellen."
         },
         {
           "num": "02",
-          "badge": "Risicoplatform",
-          "title": "Risicobeheer & Beslissings-AI",
-          "desc": "Geautomatiseerde kredietscoring, fraudedetectie, operationeel risicobeheer en real-time risicosimulatie."
+          "badge": "AI-governance",
+          "title": "Compliance, risico & AI-governance",
+          "desc": "Monitoring van regelgeving, risicobeoordeling, AI-governance en geautomatiseerde compliance voor NIS2, DORA, AVG en AI Act."
         },
         {
           "num": "03",
-          "badge": "Complianceautomatisering",
-          "title": "Compliance & Regulatoire intelligentie",
-          "desc": "Monitoring van regelgeving, geautomatiseerde naleving (AVG, EU AI Act, NIS2), audittrails en rapportage."
+          "badge": "Digitaal vertrouwen",
+          "title": "Cybersecurity & digitaal vertrouwen",
+          "desc": "Beoordeling van cyberrisico's, inventaris van activa, leveranciersrisico, incidentbeheer, beveiligingsbewijs, compliance-mapping. Afgestemd op de NIS2-vereisten voor kritieke sectoren."
         },
         {
           "num": "04",
-          "badge": "Kennisbeheer",
-          "title": "Kennisbase & Organisatiegeheugen",
-          "desc": "Semantisch kennisbeheer, interne zoekopdrachten, organisatiegeheugen en geautomatiseerde documentatie."
+          "badge": "Kennisintelligentie",
+          "title": "Document-, contract- & kennisintelligentie",
+          "desc": "AI-contractanalyse, geautomatiseerde documentextractie, kennisbank en beveiligde Q&A op eigen corpus."
         },
         {
           "num": "05",
           "badge": "Financiële operaties",
-          "title": "FinOps & Treasury intelligentie",
-          "desc": "Financiële prognoses, kasstroomoptimalisatie, investeringssimulaties en geautomatiseerde financiële rapportage."
+          "title": "Financiën, facturering & e-facturatieautomatisering",
+          "desc": "Factuurautomatisering, factur-X / ZUGFeRD, betalingsafstemming en versnelde financiële afsluiting."
         },
         {
           "num": "06",
-          "badge": "HR & Talent",
-          "title": "HR-intelligentie & Talentbeheer",
-          "desc": "CV-analyse, geautomatiseerd pre-screening, onboarding-automatisering, prestatieanalyse en carrièreplanning."
+          "badge": "Beslissingsintelligentie",
+          "title": "Data, BI & beslissingsintelligentie",
+          "desc": "Geünificeerde dashboards, voorspellende modellen, KPI-automatisering en real-time besluitvormingsondersteuning voor het management."
         },
         {
           "num": "07",
-          "badge": "Klantintelligentie",
-          "title": "CX & Klantanalyse",
-          "desc": "Gedragsmodellen, churns-voorspelling, personalisatie op schaal en intelligente klantenservice."
+          "badge": "Klantervaring",
+          "title": "Klantervaring & service-automatisering",
+          "desc": "Intelligente multichannel-ondersteuning, AI-bots, ticketdeflectie en 360°-klantervaringsorkestratie."
         },
         {
           "num": "08",
-          "badge": "Supply Chain AI",
-          "title": "Supply Chain & Logistieke intelligentie",
-          "desc": "Vraagprognoses, voorraadbeheer, leveranciersrisico-analyse en logistieke optimalisatie."
+          "badge": "Derdenrisico",
+          "title": "Leveranciers, inkoop & derdenrisico",
+          "desc": "Leverancierskwalificatie, geautomatiseerde contractbeoordeling, risicoscore van derden en ESG-monitoring."
         },
         {
           "num": "09",
-          "badge": "Vastgoedintelligentie",
-          "title": "Vastgoed & Portfoliobeheer",
-          "desc": "Vastgoedwaardering via AI, portefeuilleanalyse, huurprognoses en vastgoed due diligence automatisering."
+          "badge": "Identiteit & vertrouwen",
+          "title": "Identiteit, KYC/KYB & digitaal vertrouwen",
+          "desc": "Digitale identiteitsverificatie, geautomatiseerde KYC/KYB, AML-scoring en digitale onboarding."
         },
         {
           "num": "10",
-          "badge": "Digital Twin",
-          "title": "Enterprise Asset & Procesintelligentie",
-          "desc": "Dynamische weergave van uw organisatie: mensen, applicaties, processen, contracten, leveranciers, data. Realtime antwoorden op afhankelijkheden, kosten en operationele risicos."
+          "badge": "Digitale tweeling",
+          "title": "Ondernemingsasset- & procesintelligentie",
+          "desc": "Predictief onderhoud, IoT-assetbeheer, procesmining en automatisering van operationele efficiëntie."
         }
       ],
       "sectionLabel": "TOEPASSINGSDOMEINEN",
