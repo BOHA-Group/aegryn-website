@@ -57,7 +57,7 @@ export default async function BuildServicePage({ params }: Props) {
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
-  const useCaseItems            = t.raw('useCasesSection.items')        as string[]
+
 
   return (
     <main>
@@ -167,28 +167,6 @@ export default async function BuildServicePage({ params }: Props) {
                 }`}>
                   {card.desc}
                 </p>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 1d : Cas d'usage rapides ───────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('useCasesSection.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('useCasesSection.title')}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {useCaseItems.map((item, i) => (
-              <div key={i} className="rounded-2xl bg-ag-white border border-ag-border px-6 py-5">
-                <p className="font-sans font-semibold text-ag-black text-[14px]">{item}</p>
               </div>
             ))}
           </div>
