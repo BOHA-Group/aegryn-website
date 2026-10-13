@@ -5267,9 +5267,26 @@
     "heroAlt": "Velero con vela azul fotografiado desde el aire sobre un mar oscuro",
     "builtToLast": {
       "label": "NUESTRA CONVICCIÓN",
-      "title": "Built to Last.",
-      "p1": "En un mundo donde la tecnología queda obsoleta en meses, diseñar para durar es un acto de resistencia.",
-      "p2": "Creamos herramientas que reducen sus costes recurrentes en lugar de añadir una factura mensual. Una herramienta que sigue siendo suya, que sus equipos entienden y que otro integrador puede retomar."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "En un mundo donde la tecnología queda obsoleta en meses, "
+        },
+        {
+          "t": "diseñar para durar es un acto de resistencia.",
+          "bold": true
+        },
+        {
+          "t": "\n\nCreamos herramientas que reducen sus costes recurrentes en lugar de añadir una factura mensual. "
+        },
+        {
+          "t": "Una herramienta que sigue siendo suya, que sus equipos entienden y que otro integrador puede retomar.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Tres formatos de misión",

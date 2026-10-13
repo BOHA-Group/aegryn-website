@@ -5267,9 +5267,26 @@
     "heroAlt": "Segelboot mit blauem Segel aus der Vogelperspektive auf dunklem Wasser",
     "builtToLast": {
       "label": "UNSERE ÜBERZEUGUNG",
-      "title": "Built to Last.",
-      "p1": "In einer Welt, in der Technologie in Monaten veraltet, ist auf Dauer zu entwickeln ein Akt des Widerstands.",
-      "p2": "Wir schaffen Tools, die Ihre wiederkehrenden Kosten senken, statt eine Monatsrechnung hinzuzufügen. Ein Tool, das Ihnen gehört, das Ihre Teams verstehen und das ein anderer Integrator übernehmen kann."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "In einer Welt, in der Technologie in Monaten veraltet, "
+        },
+        {
+          "t": "ist auf Dauer zu entwickeln ein Akt des Widerstands.",
+          "bold": true
+        },
+        {
+          "t": "\n\nWir schaffen Tools, die Ihre wiederkehrenden Kosten senken, statt eine Monatsrechnung hinzuzufügen. "
+        },
+        {
+          "t": "Ein Tool, das Ihnen gehört, das Ihre Teams verstehen und das ein anderer Integrator übernehmen kann.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Drei Missionsformate",

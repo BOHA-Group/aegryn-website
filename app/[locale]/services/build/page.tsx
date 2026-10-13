@@ -7,6 +7,7 @@ import type { ComponentProps } from 'react'
 
 type LinkHref = ComponentProps<typeof Link>['href']
 import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
+import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 
@@ -96,27 +97,22 @@ export default async function BuildServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Section 1b : Conviction Built to Last ──────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6">
-            {t('builtToLast.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-8"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('builtToLast.title')}
-          </h2>
-          <div className="max-w-2xl space-y-4">
-            <p className="text-[16px] text-ag-black font-medium leading-relaxed">
-              {t('builtToLast.p1')}
-            </p>
-            <p className="text-[15px] text-ag-gray leading-relaxed">
-              {t('builtToLast.p2')}
-            </p>
+      {/* ── Section 1b : Conviction, format « Notre vision » ───────────── */}
+      <section className="border-b border-ag-border bg-ag-off-white/80">
+        <div className="mx-auto max-w-7xl px-6 md:px-12">
+          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+            <div className="py-16 md:pr-16 flex items-start">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                / {t('builtToLast.label')}
+              </p>
+            </div>
+            <div className="py-16 md:px-16">
+              <VisionTypewriter
+                segments={t.raw('builtToLast.segments') as { t: string; bold?: boolean }[]}
+              />
+            </div>
           </div>
-        </ScrollReveal>
+        </div>
       </section>
 
       {/* ── Section 1c : 3 formats de mission ──────────────────────────── */}

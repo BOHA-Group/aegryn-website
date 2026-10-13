@@ -5267,9 +5267,26 @@
     "heroAlt": "Barca a vela con vela blu fotografata dall'alto su un mare scuro",
     "builtToLast": {
       "label": "LA NOSTRA CONVINZIONE",
-      "title": "Built to Last.",
-      "p1": "In un mondo in cui la tecnologia diventa obsoleta in mesi, progettare per durare è un atto di resistenza.",
-      "p2": "Creiamo strumenti che riducono i vostri costi ricorrenti invece di aggiungere una fattura mensile. Uno strumento che resta vostro, che i vostri team comprendono e che un altro integratore può riprendere."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "In un mondo in cui la tecnologia diventa obsoleta in mesi, "
+        },
+        {
+          "t": "progettare per durare è un atto di resistenza.",
+          "bold": true
+        },
+        {
+          "t": "\n\nCreiamo strumenti che riducono i vostri costi ricorrenti invece di aggiungere una fattura mensile. "
+        },
+        {
+          "t": "Uno strumento che resta vostro, che i vostri team comprendono e che un altro integratore può riprendere.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Tre formati di missione",

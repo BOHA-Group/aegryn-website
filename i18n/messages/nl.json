@@ -5282,9 +5282,26 @@
     "heroAlt": "Zeilboot met blauw zeil vanuit de lucht gefotografeerd op donker water",
     "builtToLast": {
       "label": "ONZE OVERTUIGING",
-      "title": "Built to Last.",
-      "p1": "In een wereld waar technologie in maanden veroudert, is ontwerpen voor de lange termijn een daad van weerstand.",
-      "p2": "Wij bouwen tools die uw terugkerende kosten verlagen in plaats van een maandelijkse factuur toe te voegen. Een tool die van u blijft, die uw teams begrijpen en die een andere integrator kan overnemen."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "In een wereld waar technologie in maanden veroudert, "
+        },
+        {
+          "t": "is ontwerpen voor de lange termijn een daad van weerstand.",
+          "bold": true
+        },
+        {
+          "t": "\n\nWij bouwen tools die uw terugkerende kosten verlagen in plaats van een maandelijkse factuur toe te voegen. "
+        },
+        {
+          "t": "Een tool die van u blijft, die uw teams begrijpen en die een andere integrator kan overnemen.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Drie missieformaten",

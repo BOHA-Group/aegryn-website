@@ -5242,9 +5242,26 @@
     "heroAlt": "Voilier à voile bleue photographié en vue aérienne sur une mer sombre",
     "builtToLast": {
       "label": "NOTRE CONVICTION",
-      "title": "Built to Last.",
-      "p1": "Dans un monde où la technologie s'obsolète en quelques mois, concevoir pour durer est un acte de résistance.",
-      "p2": "Nous créons des outils qui réduisent vos coûts récurrents au lieu d'ajouter une facture mensuelle. Un outil qui reste à vous, que vos équipes comprennent et qu'un autre intégrateur peut reprendre."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "Dans un monde où la technologie s'obsolète en quelques mois, "
+        },
+        {
+          "t": "concevoir pour durer est un acte de résistance.",
+          "bold": true
+        },
+        {
+          "t": "\n\nNous créons des outils qui réduisent vos coûts récurrents au lieu d'ajouter une facture mensuelle. "
+        },
+        {
+          "t": "Un outil qui reste à vous, que vos équipes comprennent et qu'un autre intégrateur peut reprendre.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Trois formats de mission",

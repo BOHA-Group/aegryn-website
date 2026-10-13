@@ -5282,9 +5282,26 @@
     "heroAlt": "Sailboat with a blue sail photographed from above on dark water",
     "builtToLast": {
       "label": "OUR CONVICTION",
-      "title": "Built to Last.",
-      "p1": "In a world where technology becomes obsolete in months, designing to last is an act of resistance.",
-      "p2": "We build tools that cut your recurring costs instead of adding a monthly bill. A tool that stays yours, that your teams understand and that another integrator can take over."
+      "segments": [
+        {
+          "t": "Built to Last.\n\n",
+          "bold": true
+        },
+        {
+          "t": "In a world where technology becomes obsolete in months, "
+        },
+        {
+          "t": "designing to last is an act of resistance.",
+          "bold": true
+        },
+        {
+          "t": "\n\nWe build tools that cut your recurring costs instead of adding a monthly bill. "
+        },
+        {
+          "t": "A tool that stays yours, that your teams understand and that another integrator can take over.",
+          "bold": true
+        }
+      ]
     },
     "formatsSection": {
       "label": "Three mission formats",
