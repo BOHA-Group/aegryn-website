@@ -22,13 +22,19 @@ export interface VisionSegment {
  * bas du viewport (elle n'est pas encore visible). Une valeur plus petite
  * retarde la fin jusqu'a ce que la section suivante soit davantage visible,
  * ce qui ralentit la revelation et termine le texte plus bas dans la page.
+ *
+ * `completeAtVh` ignore la section suivante : la frappe se termine quand le
+ * haut du bloc atteint cette fraction de la hauteur du viewport (ex. 0.5 =
+ * texte complet quand le bloc est au milieu de la page).
  */
 export function VisionTypewriter({
   segments,
   endVhFraction = 1,
+  completeAtVh,
 }: {
   segments: VisionSegment[]
   endVhFraction?: number
+  completeAtVh?: number
 }) {
   const full = segments.map((s) => s.t).join('')
   const [chars, setChars] = useState(0)
@@ -56,9 +62,11 @@ export function VisionTypewriter({
       // complet avant, ou a mesure, que la suite devient visible.
       const next = el.closest('section')?.nextElementSibling
       const startY = r.top + sy - vh * 0.95
-      const endY = next
-        ? next.getBoundingClientRect().top + sy - vh * endVhFraction
-        : r.top + sy - vh * 0.45
+      const endY = completeAtVh !== undefined
+        ? r.top + sy - vh * completeAtVh
+        : next
+          ? next.getBoundingClientRect().top + sy - vh * endVhFraction
+          : r.top + sy - vh * 0.45
       const p = Math.min(1, Math.max(0, (sy - startY) / Math.max(1, endY - startY)))
       const n = Math.round(p * full.length)
       setStarted(p > 0)
@@ -73,7 +81,7 @@ export function VisionTypewriter({
       window.removeEventListener('resize', onScroll)
       if (raf) cancelAnimationFrame(raf)
     }
-  }, [full.length, endVhFraction])
+  }, [full.length, endVhFraction, completeAtVh])
 
   const renderSegments = (n: number) => {
     let off = 0

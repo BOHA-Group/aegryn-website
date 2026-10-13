@@ -141,6 +141,7 @@ export function ManifestoSection() {
             <div className="py-16 md:px-16">
               <VisionTypewriter
                 segments={tW.raw('convictionSegments') as { t: string; bold?: boolean }[]}
+                completeAtVh={0.55}
               />
             </div>
           </div>
@@ -148,7 +149,7 @@ export function ManifestoSection() {
             {whatwedoItems.map((item) => (
               <div
                 key={item.num}
-                className="what-col group border-t border-ag-border py-4 md:py-5 flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-10 cursor-default"
+                className="what-col group py-4 md:py-5 flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-10 cursor-default"
                 style={{ opacity: 0 }}
               >
                 <div className="flex items-baseline gap-6 md:gap-10 lg:min-w-0 md:pt-0.5">
