@@ -176,16 +176,16 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
           </p>
           <div className="flex gap-3 shrink-0">
             <Link
-              href="/grade/submit"
+              href="/contact"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:bg-ag-navy-mid transition-colors"
             >
-              {t('ctaGrade')} <ArrowUpRight size={11} />
+              {t('ctaDiscuss')} <ArrowUpRight size={11} />
             </Link>
             <Link
-              href={"/franchir/lancement" as never}
+              href={"/assets" as never}
               className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-ag-black hover:text-ag-black transition-all"
             >
-              {t('ctaTransaction')}
+              {t('ctaTools')}
             </Link>
           </div>
         </div>

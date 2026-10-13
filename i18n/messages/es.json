@@ -115,7 +115,7 @@
     "whoGroup": "El grupo",
     "whoGroupDesc": "Historia, misión, valores",
     "whoAbout": "Acerca de Aegryn",
-    "whoPortfolio": "Nuestro grupo (participaciones)",
+    "whoPortfolio": "Nuestro portfolio",
     "whoOffices": "Nuestras oficinas",
     "whoContact": "Contáctenos",
     "whoJoin": "Únete a nosotros",
@@ -187,9 +187,11 @@
         "desc": "Participaciones estratégicas del grupo Aegryn: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Activos propietarios, no disponibles para la venta."
       },
       "label": "Nuestro Grupo",
-      "title": "Las participaciones\ndel grupo Aegryn.",
-      "sub": "Una cartera de activos diseñados, operados y seleccionados por el grupo Aegryn. Cada activo responde a una necesidad operativa real para nuestras propias operaciones, las de nuestros clientes, o ambas.",
-      "note": "Estas participaciones son activos en los que el grupo cree por su respuesta a necesidades operativas reales, su potencial de crecimiento de mercado y su capacidad para superar nuestro protocolo de certificación CIFSO. Algunas se dirigen a particulares, otras a profesionales o instituciones. Todas están construidas para durar y para valer."
+      "title": "Los proyectos del grupo Aegryn.",
+      "sub": "Proyectos concebidos, dirigidos y puestos en servicio por Aegryn, para o con nuestros clientes. Cada uno responde a una necesidad real y apunta a un mercado lo bastante amplio para durar.",
+      "note": "Las herramientas que utilizamos en nuestros mandatos se presentan en Activos.",
+      "sub2": "Cuando tomamos una participación, elegimos los proyectos en los que creemos: una necesidad verificada, un mercado en crecimiento, una gobernanza sana y una arquitectura que otros puedan retomar. Cuando trabajamos para un cliente, aplicamos las mismas exigencias. Algunos proyectos se dirigen a particulares, otros a profesionales o instituciones.",
+      "noteLink": "Ver los activos"
     },
     "page": {
       "label": "Ecosistema Aegryn",
@@ -219,9 +221,7 @@
       "heroTitle": "Nuestros activos\noperativos.",
       "heroSub": "Activos del grupo Aegryn | no enviados por terceros. Utilizados para nuestras operaciones y las de nuestros clientes, bajo demanda.",
       "publisherNote": "Estos activos están disponibles en acceso directo o bajo licencia para organizaciones que deseen integrarlos sin construir los suyos.",
-      "ctaBottom": "¿Desea enviar su propio activo para certificación?",
-      "ctaGrade": "Enviar un activo de terceros",
-      "ctaTransaction": "Descubrir Superar",
+      "ctaBottom": "¿Lleva un proyecto ambicioso? Trabajamos para usted o con usted: en mandato, o con una participación cuando el proyecto nos convence. Respuesta en 2 días laborables.",
       "notStarted": "No iniciado",
       "certificationInProgress": "Certificación en curso",
       "badgeCore": "CORE",
@@ -231,7 +231,9 @@
       "coreDesc": "Diseñados, desarrollados y operados por Aegryn",
       "portfolioDesc": "Participaciones estratégicas y acompañamiento",
       "filterValuation": "Valoración",
-      "publicNameSuffix": "nombre público"
+      "publicNameSuffix": "nombre público",
+      "ctaDiscuss": "Hablar de su proyecto",
+      "ctaTools": "Ver las herramientas operativas del grupo"
     },
     "items": {
       "subblink": {

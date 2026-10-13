@@ -115,7 +115,7 @@
     "whoGroup": "Die Gruppe",
     "whoGroupDesc": "Geschichte, Mission, Werte",
     "whoAbout": "Über Aegryn",
-    "whoPortfolio": "Unsere Gruppe (Beteiligungen)",
+    "whoPortfolio": "Unser Portfolio",
     "whoOffices": "Unsere Büros",
     "whoContact": "Kontakt",
     "whoJoin": "Uns beitreten",
@@ -187,9 +187,11 @@
         "desc": "Strategische Beteiligungen der Aegryn Gruppe: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Eigene Assets, nicht zum Verkauf stehend."
       },
       "label": "Unsere Gruppe",
-      "title": "Die Beteiligungen\nder Aegryn Gruppe.",
-      "sub": "Ein Portfolio von Assets, das von der Aegryn-Gruppe konzipiert, betrieben und ausgewählt wurde. Jedes Asset adressiert einen realen operativen Bedarf für unsere eigenen Operationen, die unserer Kunden oder beides.",
-      "note": "Diese Beteiligungen sind Assets, an die die Gruppe glaubt, aufgrund ihrer Antwort auf reale operative Bedürfnisse, ihres Marktpotenzials und ihrer Fähigkeit, unser CIFSO-Zertifizierungsprotokoll zu bestehen. Einige richten sich an Privatpersonen, andere an Fachleute oder Institutionen. Alle sind gebaut, um zu dauern und zu wachsen."
+      "title": "Die Projekte der Aegryn-Gruppe.",
+      "sub": "Von Aegryn konzipierte, gesteuerte und in Betrieb genommene Projekte, für oder mit unseren Kunden. Jedes beantwortet einen realen Bedarf und zielt auf einen Markt, der gross genug ist, um zu bestehen.",
+      "note": "Die Werkzeuge, die wir in unseren Mandaten einsetzen, finden Sie unter Assets.",
+      "sub2": "Wenn wir eine Beteiligung eingehen, wählen wir Projekte, an die wir glauben: ein geprüfter Bedarf, ein wachsender Markt, gesunde Governance und eine Architektur, die andere übernehmen können. Arbeiten wir für einen Kunden, gelten dieselben Anforderungen. Manche Projekte richten sich an Privatpersonen, andere an Fachleute oder Institutionen.",
+      "noteLink": "Assets ansehen"
     },
     "page": {
       "label": "Aegryn Ökosystem",
@@ -219,9 +221,7 @@
       "heroTitle": "Unsere operativen\nAssets.",
       "heroSub": "Assets der Aegryn-Gruppe | nicht von Dritten eingereicht. Für unsere Operationen und die unserer Kunden, auf Anfrage.",
       "publisherNote": "Diese Assets sind als Direktzugang oder Lizenz für Organisationen verfügbar, die sie nicht selbst aufbauen möchten.",
-      "ctaBottom": "Möchten Sie Ihr eigenes Asset zur Zertifizierung einreichen?",
-      "ctaGrade": "Drittanbieter-Asset einreichen",
-      "ctaTransaction": "Meistern entdecken",
+      "ctaBottom": "Sie tragen ein ambitioniertes Projekt? Wir arbeiten für Sie oder mit Ihnen: im Mandat oder mit einer Beteiligung, wenn das Projekt uns überzeugt. Antwort innerhalb von 2 Arbeitstagen.",
       "notStarted": "Nicht begonnen",
       "certificationInProgress": "Zertifizierung läuft",
       "badgeCore": "CORE",
@@ -231,7 +231,9 @@
       "coreDesc": "Von Aegryn konzipiert, entwickelt und betrieben",
       "portfolioDesc": "Strategische Beteiligungen und Begleitung",
       "filterValuation": "Bewertung",
-      "publicNameSuffix": "öffentlicher Name"
+      "publicNameSuffix": "öffentlicher Name",
+      "ctaDiscuss": "Über Ihr Projekt sprechen",
+      "ctaTools": "Die operativen Werkzeuge der Gruppe ansehen"
     },
     "items": {
       "subblink": {

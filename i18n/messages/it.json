@@ -115,7 +115,7 @@
     "whoGroup": "Il gruppo",
     "whoGroupDesc": "Storia, missione, valori",
     "whoAbout": "Chi è Aegryn",
-    "whoPortfolio": "Il nostro gruppo (partecipazioni)",
+    "whoPortfolio": "Il nostro portfolio",
     "whoOffices": "I nostri uffici",
     "whoContact": "Contattaci",
     "whoJoin": "Unisciti a noi",
@@ -187,9 +187,11 @@
         "desc": "Partecipazioni strategiche del gruppo Aegryn: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Asset proprietari, non in vendita."
       },
       "label": "Il nostro Gruppo",
-      "title": "Le partecipazioni\ndel gruppo Aegryn.",
-      "sub": "Un portafoglio di asset concepiti, operati e selezionati dal gruppo Aegryn. Ogni asset risponde a un bisogno operativo reale per le nostre operazioni, quelle dei nostri clienti, o entrambe.",
-      "note": "Queste partecipazioni sono asset in cui il gruppo crede per la loro risposta a bisogni operativi reali, il loro potenziale di crescita di mercato e la loro capacità di superare il nostro protocollo di certificazione CIFSO. Alcune si rivolgono ai privati, altre ai professionisti o alle istituzioni. Tutte sono costruite per durare e per valere."
+      "title": "I progetti del gruppo Aegryn.",
+      "sub": "Progetti concepiti, pilotati e messi in servizio da Aegryn, per o con i nostri clienti. Ognuno risponde a un bisogno reale e punta a un mercato abbastanza ampio da durare.",
+      "note": "Gli strumenti che utilizziamo nei nostri mandati sono presentati sotto Asset.",
+      "sub2": "Quando prendiamo una partecipazione, scegliamo i progetti in cui crediamo: un bisogno verificato, un mercato in crescita, una governance sana e un'architettura che altri possono riprendere. Quando lavoriamo per un cliente, applichiamo gli stessi requisiti. Alcuni progetti si rivolgono ai privati, altri a professionisti o istituzioni.",
+      "noteLink": "Vedere gli asset"
     },
     "page": {
       "label": "Ecosistema Aegryn",
@@ -219,9 +221,7 @@
       "heroTitle": "I nostri asset\noperativi.",
       "heroSub": "Asset del gruppo Aegryn | non inviati da terzi. Utilizzati per le nostre operazioni e quelle dei nostri clienti, su richiesta.",
       "publisherNote": "Questi asset sono disponibili in accesso diretto o in licenza per le organizzazioni che desiderano integrarli senza costruire i propri.",
-      "ctaBottom": "Vuole inviare il suo asset per la certificazione?",
-      "ctaGrade": "Invia un asset di terze parti",
-      "ctaTransaction": "Scoprire Affrontare",
+      "ctaBottom": "Portate un progetto ambizioso? Lavoriamo per voi o con voi: in mandato, o con una partecipazione quando il progetto ci convince. Risposta entro 2 giorni lavorativi.",
       "notStarted": "Non avviato",
       "certificationInProgress": "Certificazione in corso",
       "badgeCore": "CORE",
@@ -231,7 +231,9 @@
       "coreDesc": "Progettati, sviluppati e gestiti da Aegryn",
       "portfolioDesc": "Partecipazioni strategiche e accompagnamento",
       "filterValuation": "Valutazione",
-      "publicNameSuffix": "nome pubblico"
+      "publicNameSuffix": "nome pubblico",
+      "ctaDiscuss": "Parlare del vostro progetto",
+      "ctaTools": "Vedere gli strumenti operativi del gruppo"
     },
     "items": {
       "subblink": {

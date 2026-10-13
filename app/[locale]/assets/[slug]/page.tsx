@@ -9,13 +9,6 @@ import type { Metadata }      from 'next'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
-const STATUS_DOT: Record<string, { dot: string; text: string }> = {
-  live:        { dot: 'bg-ag-live',       text: 'text-ag-live'       },
-  beta:        { dot: 'bg-ag-beta',       text: 'text-ag-beta'       },
-  dev:         { dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
-  not_started: { dot: 'bg-ag-gray-light', text: 'text-ag-gray-light' },
-} as const
-
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
 
 export async function generateStaticParams() {
@@ -52,7 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AssetPage({ params }: Props) {
   const { locale, slug } = await params
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
-  const tStatus = await getTranslations({ locale, namespace: 'assetStatus' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
   const tCats    = await getTranslations({ locale, namespace: 'assets.items.categories' })
@@ -65,12 +57,6 @@ export default async function AssetPage({ params }: Props) {
   const audience  = hasAssetI18n ? t(`assets.${assetId}.audience`) : ''
   const features  = hasAssetI18n ? (t.raw(`assets.${assetId}.features`) as string[]) : []
 
-  const statusKey = asset.status as keyof typeof STATUS_DOT
-  const statusDot = STATUS_DOT[statusKey] ?? STATUS_DOT.not_started
-  const statusLabel = statusKey === 'live' ? tStatus('live')
-    : statusKey === 'beta' ? tStatus('beta')
-    : statusKey === 'dev'  ? tStatus('dev')
-    : tStatus('notStarted')
   const categoryLabel = tCats(asset.category)
   const isLive   = !!asset.url
 
@@ -86,12 +72,6 @@ export default async function AssetPage({ params }: Props) {
             </span>
             <span className="rounded-lg font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
               {tItems(`${asset.id}.badge`)}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className={`w-1.5 h-1.5 rounded-full ${statusDot.dot}`} />
-              <span className={`font-sans font-semibold text-[10px] tracking-[0.14em] uppercase ${statusDot.text}`}>
-                {statusLabel}
-              </span>
             </span>
           </div>
 

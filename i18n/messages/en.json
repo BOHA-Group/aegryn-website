@@ -122,7 +122,7 @@
     "whoGroup": "The group",
     "whoGroupDesc": "History, mission, values",
     "whoAbout": "About Aegryn",
-    "whoPortfolio": "Our group (holdings)",
+    "whoPortfolio": "Our portfolio",
     "whoOffices": "Our offices",
     "whoContact": "Contact us",
     "whoJoin": "Join us",
@@ -182,9 +182,11 @@
         "desc": "Strategic holdings of the Aegryn group: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Proprietary assets, not for sale."
       },
       "label": "Our Group",
-      "title": "The holdings\nof the Aegryn group.",
-      "sub": "A portfolio of assets designed, operated and selected by the Aegryn group. Each asset addresses a real operational need for our own operations, those of our clients, or both.",
-      "note": "These participations are assets in which the group believes for their response to real operational needs, their market growth potential, and their ability to pass our CIFSO certification protocol. Some address individuals, others professionals or institutions. All are built to last and to be valued."
+      "title": "The Aegryn group projects.",
+      "sub": "Projects designed, steered and brought into service by Aegryn, for or with our clients. Each one answers a real need and targets a market broad enough to last.",
+      "note": "The tools we use in our engagements are presented under Assets.",
+      "sub2": "When we take a stake, we choose the projects we believe in: a verified need, a growing market, sound governance and an architecture others can take over. When we work for a client, we apply the same standards. Some projects serve individuals, others professionals or institutions.",
+      "noteLink": "View the assets"
     },
     "categories": {
       "ai": "AI & Protocols",
@@ -219,9 +221,7 @@
       "heroTitle": "Our operational\nassets.",
       "heroSub": "Assets owned by the Aegryn group | not submitted by third parties. Used for our operations and those of our clients, on demand.",
       "publisherNote": "These assets are available for direct access or under licence for organisations that wish to integrate them without building their own.",
-      "ctaBottom": "Want to submit your own asset for certification?",
-      "ctaGrade": "Submit a third-party asset",
-      "ctaTransaction": "Discover Navigate",
+      "ctaBottom": "Carrying an ambitious project? We work for you or with you: as a mandate, or with an equity stake when the project convinces us. Reply within 2 business days.",
       "notStarted": "Not started",
       "certificationInProgress": "Certification in progress",
       "badgeCore": "CORE",
@@ -231,7 +231,9 @@
       "coreDesc": "Designed, developed and operated by Aegryn",
       "portfolioDesc": "Strategic participations and support",
       "filterValuation": "Valuation",
-      "publicNameSuffix": "public name"
+      "publicNameSuffix": "public name",
+      "ctaDiscuss": "Discuss your project",
+      "ctaTools": "See the group's operational tools"
     },
     "items": {
       "subblink": {

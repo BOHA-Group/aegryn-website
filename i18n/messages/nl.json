@@ -115,7 +115,7 @@
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
-    "whoPortfolio": "Onze groep (deelnemingen)",
+    "whoPortfolio": "Ons portfolio",
     "whoOffices": "Onze kantoren",
     "whoContact": "Contact",
     "whoJoin": "Sluit je bij ons aan",
@@ -187,9 +187,11 @@
         "desc": "Strategische deelnemingen van de Aegryn-groep: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Eigen activa, niet te koop."
       },
       "label": "Onze Groep",
-      "title": "De deelnemingen\nvan de Aegryn-groep.",
-      "sub": "Een portfolio van activa ontworpen, beheerd en geselecteerd door de Aegryn-groep. Elk activum beantwoordt aan een reale operationele behoefte voor onze eigen operaties, die van onze klanten, of beide.",
-      "note": "Deze participaties zijn activa waarin de groep gelooft vanwege hun antwoord op reale operationele behoeften, hun marktgroeipotentieel en hun vermogen om ons CIFSO-certificeringsprotocol te doorstaan. Sommige richten zich op particulieren, andere op professionals of instellingen. Alle zijn gebouwd om te duren en te valoriseren."
+      "title": "De projecten van de Aegryn-groep.",
+      "sub": "Projecten ontworpen, gestuurd en in gebruik genomen door Aegryn, voor of met onze klanten. Elk beantwoordt een reële behoefte en richt zich op een markt die groot genoeg is om te blijven bestaan.",
+      "note": "De tools die wij in onze opdrachten gebruiken, staan onder Assets.",
+      "sub2": "Wanneer wij een participatie nemen, kiezen wij projecten waarin wij geloven: een geverifieerde behoefte, een groeiende markt, gezonde governance en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen.",
+      "noteLink": "Bekijk de assets"
     },
     "page": {
       "label": "Aegryn Ecosysteem",
@@ -219,9 +221,7 @@
       "heroTitle": "Onze operationele\nactiva.",
       "heroSub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
       "publisherNote": "Deze activa zijn beschikbaar als directe toegang of licentie voor organisaties die ze willen integreren zonder ze zelf te bouwen.",
-      "ctaBottom": "Wilt u uw eigen asset indienen voor certificering?",
-      "ctaGrade": "Een extern asset indienen",
-      "ctaTransaction": "Ontdek Doorlopen",
+      "ctaBottom": "Draagt u een ambitieus project? Wij werken voor u of met u: in opdracht, of met een participatie wanneer het project ons overtuigt. Antwoord binnen 2 werkdagen.",
       "notStarted": "Niet gestart",
       "certificationInProgress": "Certificering bezig",
       "badgeCore": "CORE",
@@ -231,7 +231,9 @@
       "coreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
       "portfolioDesc": "Strategische participaties en begeleiding",
       "filterValuation": "Waardering",
-      "publicNameSuffix": "publieke naam"
+      "publicNameSuffix": "publieke naam",
+      "ctaDiscuss": "Uw project bespreken",
+      "ctaTools": "De operationele tools van de groep bekijken"
     },
     "items": {
       "subblink": {
