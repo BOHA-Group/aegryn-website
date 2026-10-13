@@ -11,30 +11,10 @@ import { FilterPills } from '@/components/ui/FilterPills'
 
 type Category = 'all' | 'ai' | 'lifestyle' | 'transactions'
 
-const GRADE_COLORS: Record<string, string> = {
-  star:    '#5ADDA4',
-  aaa:     '#C9A84C',
-  aa:      '#9BA8B0',
-  a:       '#4A90D9',
-  b:       '#D4820A',
-  pending: '#6B6B6B',
-  refused: '#C0392B',
-}
-
-const GRADE_LABELS: Record<string, string> = {
-  star:    'AEG ★',
-  aaa:     'AAA',
-  aa:      'AA',
-  a:       'A',
-  b:       'B',
-  pending: '—',
-}
-
 export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) {
   const t = useTranslations('assets.page')
   const tStatus = useTranslations('assetStatus')
   const tItems = useTranslations('assets.items')
-  const tCats = useTranslations('assets.items.categories')
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
@@ -107,42 +87,21 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                 </div>
               )}
               <div className="p-8 flex flex-col gap-5 flex-1">
-              {/* Top row */}
+              {/* Titre : nom public, sinon tagline descriptive */}
               <div className="flex items-start justify-between gap-3">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
-                      {tCats(asset.category)}
-                    </p>
-                    {/* Badge CORE/PORTFOLIO */}
-                    <span
-                      className={`font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border ${
-                        asset.ownership === 'core'
-                          ? 'border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink'
-                          : 'border-ag-border bg-ag-off-white text-ag-gray'
-                      }`}
-                    >
-                      {asset.ownership === 'core' ? 'CORE' : 'PORTFOLIO'}
-                    </span>
-                  </div>
-                  <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
-                    {asset.name}
+                <div className="flex-1 flex flex-col gap-1">
+                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug">
+                    {asset.namePublic ? asset.name : tItems(`${asset.id}.tagline`)}
                   </h2>
+                  {asset.namePublic && (
+                    <p className="font-sans text-[13px] text-ag-gray leading-snug">
+                      {tItems(`${asset.id}.tagline`)}
+                    </p>
+                  )}
                 </div>
-                {/* Grade badge */}
-                <span
-                  className="font-mono text-[11px] tracking-[0.1em] font-semibold shrink-0 mt-0.5"
-                  style={{ color: GRADE_COLORS[asset.grade] ?? '#6B6B6B' }}
-                >
-                  {asset.grade === 'pending'
-                    ? (asset.id === 'subblink' ? t('gradePending') : null)
-                    : asset.grade === 'refused'
-                      ? tStatus('refused')
-                      : GRADE_LABELS[asset.grade]}
-                </span>
               </div>
 
-              {/* Badge + status */}
+              {/* Badges */}
               <div className="flex items-center gap-3 flex-wrap">
                 <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1 rounded-md">
                   {tItems(`${asset.id}.badge`)}
@@ -160,18 +119,13 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
 
               </div>
 
-              {/* Tagline */}
-              <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug">
-                {tItems(`${asset.id}.tagline`)}
-              </p>
-
               {/* Description */}
               <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                 {tItems(`${asset.id}.description`)}
               </p>
 
-              {/* Actions */}
-              <div className="flex items-center gap-4 pt-2 border-t border-ag-border">
+              {/* Actions — révélées au survol */}
+              <div className="flex items-center gap-4 pt-2 border-t border-ag-border opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {asset.internalOnly ? (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
                     {t('confidential')}

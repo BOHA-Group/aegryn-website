@@ -17,6 +17,7 @@ export interface AegrynAsset {
   transactionEligible:   boolean
   showOnHomepage?:   boolean
   internalOnly?:     boolean
+  namePublic?:       boolean
 }
 
 export type AssetGrade    = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'pending' | 'refused'
@@ -48,6 +49,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     slug:             'neediu',
     url:              null as string | null,
     image:            '/images/portfolio/neediu.jpg',
+    namePublic:       true,
     badge:            'B2C — Marketplace',
     tagline:          'Services à domicile, mise en relation intelligente',
     description:      'Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés.',
