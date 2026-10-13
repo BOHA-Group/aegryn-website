@@ -791,7 +791,7 @@
     "label": "Chi è Aegryn",
     "title": "Cinque discipline.\nUna sola azienda.",
     "desc": "Non siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: consulenza, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
-    "tagline": "STUDIO DI CONSULENZA, RADICATO IN SVIZZERA.",
+    "tagline": "SOCIETÀ INTEGRATA, RADICATA IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
     "quote": "Quello che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri metodi. Questa coerenza è la nostra prima credibilità.",
@@ -815,7 +815,7 @@
       },
       {
         "val": "20+",
-        "label": "Anni di esperienza a fianco di comitati direzionali",
+        "label": "Anni a fianco di comitati direzionali",
         "sub": "Strategia · Tech · M&A · HR · Operazioni"
       }
     ],

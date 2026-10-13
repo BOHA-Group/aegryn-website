@@ -754,7 +754,7 @@
     "label": "À propos d'Aegryn",
     "title": "Cinq disciplines.\nUn seul cabinet.",
     "desc": "Nous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d’une entreprise : conseil, construction d’actifs, transitions à chaque cycle de vie, talent et intelligence de marché.",
-    "tagline": "CABINET DE CONSEIL, ANCRÉ EN SUISSE.",
+    "tagline": "CABINET INTÉGRÉ, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
     "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cette cohérence est notre première crédibilité.",
@@ -778,7 +778,7 @@
       },
       {
         "val": "20+",
-        "label": "Années d'expérience auprès de comités de direction",
+        "label": "Années auprès de comités de direction",
         "sub": "Stratégie · Tech · M&A · RH · Opérations"
       }
     ],

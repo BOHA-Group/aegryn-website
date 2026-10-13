@@ -791,7 +791,7 @@
     "label": "Sobre Aegryn",
     "title": "Cinco disciplinas.\nUna sola empresa.",
     "desc": "No somos ni una consultora clásica, ni una agencia tech, ni una boutique de M&A. Somos una firma integrada, arraigada en Suiza, que reúne las cinco disciplinas necesarias para el valor duradero de una organización: asesoría, construcción de activos, transiciones en cada ciclo de vida, talento e inteligencia de mercado.",
-    "tagline": "FIRMA DE ASESORAMIENTO, ARRAIGADA EN SUIZA.",
+    "tagline": "FIRMA INTEGRADA, ARRAIGADA EN SUIZA.",
     "cta": "Nuestras disciplinas →",
     "ctaHref": "/advisory",
     "quote": "Lo que hacemos por nuestros clientes, nos lo aplicamos a nosotros mismos. Nuestros propios activos pasan por nuestros propios métodos. Esta coherencia es nuestra primera credibilidad.",
@@ -815,7 +815,7 @@
       },
       {
         "val": "20+",
-        "label": "Años de experiencia junto a comités de dirección",
+        "label": "Años junto a comités de dirección",
         "sub": "Estrategia · Tech · M&A · RRHH · Operaciones"
       }
     ],

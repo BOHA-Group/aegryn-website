@@ -791,7 +791,7 @@
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Unternehmen.",
     "desc": "Wir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
-    "tagline": "BERATUNGSFIRMA, VERANKERT IN DER SCHWEIZ.",
+    "tagline": "INTEGRIERTE FIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
     "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
@@ -815,7 +815,7 @@
       },
       {
         "val": "20+",
-        "label": "Jahre Erfahrung an der Seite von Geschäftsleitungen",
+        "label": "Jahre an der Seite von Geschäftsleitungen",
         "sub": "Strategie · Technologie · M&A · HR · Operations"
       }
     ],
