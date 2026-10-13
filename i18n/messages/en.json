@@ -180,7 +180,7 @@
         "title": "Aegryn Group | Holdings and portfolio",
         "desc": "Strategic holdings of the Aegryn group: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Proprietary assets, not for sale."
       },
-      "label": "Our Group",
+      "label": "Our portfolio",
       "title": "What we build\nwith those who think big.",
       "introSegments": [
         {
@@ -203,7 +203,8 @@
         {
           "t": " and an architecture others can take over. When we work for a client, we apply the same standards. Some projects serve individuals, others professionals or institutions."
         }
-      ]
+      ],
+      "introLabel": "Our positioning"
     },
     "categories": {
       "ai": "AI & Protocols",

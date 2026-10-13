@@ -185,7 +185,7 @@
         "title": "Aegryn Groep | Deelnemingen en portfolio",
         "desc": "Strategische deelnemingen van de Aegryn-groep: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Eigen activa, niet te koop."
       },
-      "label": "Onze Groep",
+      "label": "Ons portfolio",
       "title": "Wat wij bouwen\nmet wie groot denkt.",
       "introSegments": [
         {
@@ -208,7 +208,8 @@
         {
           "t": " en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen."
         }
-      ]
+      ],
+      "introLabel": "Onze positionering"
     },
     "page": {
       "label": "Aegryn Ecosysteem",

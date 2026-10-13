@@ -185,7 +185,7 @@
         "title": "Aegryn Gruppe | Beteiligungen und Portfolio",
         "desc": "Strategische Beteiligungen der Aegryn Gruppe: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Eigene Assets, nicht zum Verkauf stehend."
       },
-      "label": "Unsere Gruppe",
+      "label": "Unser Portfolio",
       "title": "Was wir bauen\nmit denen, die gross denken.",
       "introSegments": [
         {
@@ -208,7 +208,8 @@
         {
           "t": " und eine Architektur, die andere übernehmen können. Arbeiten wir für einen Kunden, gelten dieselben Anforderungen. Manche Projekte richten sich an Privatpersonen, andere an Fachleute oder Institutionen."
         }
-      ]
+      ],
+      "introLabel": "Unsere Positionierung"
     },
     "page": {
       "label": "Aegryn Ökosystem",

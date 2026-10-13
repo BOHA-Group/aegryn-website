@@ -58,7 +58,7 @@ export default async function PortfolioPage({ params }: Props) {
           <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
             <div className="py-16 md:pr-16">
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {t('label')}
+                / {t('introLabel')}
               </p>
             </div>
             <div className="py-16 md:px-16">
