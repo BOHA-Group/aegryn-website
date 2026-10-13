@@ -40,7 +40,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           >
             {t('title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white max-w-xl mb-10 leading-relaxed">
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70 max-w-xl mb-10 leading-relaxed">
             {t('desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -52,7 +52,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             </Link>
             <Link
               href="/blog"
-              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('ctaDiscover')}
             </Link>
@@ -216,8 +216,8 @@ export default async function AcquisitionSupportPage({ params }: Props) {
             >
               {t('cta.title')}
             </h2>
-            <p className="font-sans text-[14px] text-white max-w-md mb-6">{t('cta.desc')}</p>
-            <p className="font-sans text-[12px] text-white max-w-md">
+            <p className="font-sans text-[14px] text-white/70 max-w-md mb-6">{t('cta.desc')}</p>
+            <p className="font-sans text-[12px] text-white/70 max-w-md">
               {t('cta.partnerNote')}{' '}
               <Link href={t('cta.partnerHref') as never} className="text-ag-apex/70 underline underline-offset-2 hover:text-ag-apex transition-colors">
                 {t('cta.partnerCta')}

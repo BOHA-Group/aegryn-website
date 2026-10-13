@@ -147,10 +147,10 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       {/* Écran noir sécurité */}
       {blacked && (
         <div className="absolute inset-0 bg-black z-[110] flex flex-col items-center justify-center gap-4">
-          <Lock size={32} className="text-white" />
-          <p className="text-white text-[15px] font-semibold text-center max-w-sm leading-relaxed">
+          <Lock size={32} className="text-white/70" />
+          <p className="text-white/70 text-[15px] font-semibold text-center max-w-sm leading-relaxed">
             Document masqué<br />
-            <span className="text-white text-[11px] font-normal">Activité détectée — cette consultation a été journalisée.</span>
+            <span className="text-white/70 text-[11px] font-normal">Activité détectée — cette consultation a été journalisée.</span>
           </p>
         </div>
       )}
@@ -158,8 +158,8 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       {/* Header viewer */}
       <div className="shrink-0 flex items-center justify-between px-6 py-3 bg-black/80 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <Lock size={13} className="text-white" />
-          <span className="text-[11px] font-semibold text-white max-w-[300px] truncate">{fileName}</span>
+          <Lock size={13} className="text-white/70" />
+          <span className="text-[11px] font-semibold text-white/70 max-w-[300px] truncate">{fileName}</span>
           {isSensitive && (
             <span className="rounded-lg flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-amber-400 border border-amber-400/40 px-2 py-0.5">
               <AlertTriangle size={9} /> Sensible
@@ -172,17 +172,17 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
               <button
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="text-white hover:text-white disabled:opacity-30 transition-colors"
+                className="text-white/70 hover:text-white disabled:opacity-30 transition-colors"
               >
                 <ChevronLeft size={16} />
               </button>
-              <span className="text-[11px] text-white font-mono w-16 text-center">
+              <span className="text-[11px] text-white/70 font-mono w-16 text-center">
                 {page} / {numPages}
               </span>
               <button
                 onClick={() => setPage((p) => Math.min(numPages, p + 1))}
                 disabled={page === numPages}
-                className="text-white hover:text-white disabled:opacity-30 transition-colors"
+                className="text-white/70 hover:text-white disabled:opacity-30 transition-colors"
               >
                 <ChevronRight size={16} />
               </button>
@@ -190,7 +190,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
           )}
           <button
             onClick={handleClose}
-            className="text-white hover:text-white transition-colors p-1"
+            className="text-white/70 hover:text-white transition-colors p-1"
             aria-label="Fermer"
           >
             <X size={18} />
@@ -201,7 +201,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
       {/* Zone document */}
       <div className="flex-1 overflow-auto flex items-start justify-center py-8 px-4 select-none">
         {loading && (
-          <div className="flex items-center gap-3 text-white mt-20">
+          <div className="flex items-center gap-3 text-white/70 mt-20">
             <Loader2 size={18} className="animate-spin" />
             <span className="text-[13px]">Chargement sécurisé…</span>
           </div>
@@ -217,7 +217,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
             <Document
               file={url}
               onLoadSuccess={({ numPages: n }: { numPages: number }) => setNumPages(n)}
-              loading={<Loader2 size={18} className="animate-spin text-white mt-20" />}
+              loading={<Loader2 size={18} className="animate-spin text-white/70 mt-20" />}
             >
               <Page
                 pageNumber={page}
@@ -250,7 +250,7 @@ export function DataRoomViewer({ documentId, fileName, userName, userEmail, onCl
 
       {/* Footer : rappel légal */}
       <div className="shrink-0 border-t border-white/10 px-6 py-2 bg-black/80">
-        <p className="text-[10px] text-white text-center">
+        <p className="text-[10px] text-white/70 text-center">
           Document confidentiel Aegryn — consultation journalisée (IP, horodatage, durée) — reproduction interdite par NDA
         </p>
       </div>

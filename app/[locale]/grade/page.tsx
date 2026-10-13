@@ -56,7 +56,7 @@ export default async function GradePage({ params }: Props) {
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white mb-3">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 mb-3">
               {tSubmit('label')}
             </p>
             <h2
@@ -65,7 +65,7 @@ export default async function GradePage({ params }: Props) {
             >
               {tSubmit('title')}
             </h2>
-            <p className="font-sans text-[14px] text-white max-w-md mt-3">{tSubmit('desc')}</p>
+            <p className="font-sans text-[14px] text-white/70 max-w-md mt-3">{tSubmit('desc')}</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
@@ -76,7 +76,7 @@ export default async function GradePage({ params }: Props) {
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
             >
               {t('contactCta')} <ArrowUpRight size={13} />
             </Link>

@@ -73,7 +73,7 @@ export function GradeAudienceTable() {
             <thead>
               <tr className="bg-ag-navy">
                 <th className="px-5 py-4 sticky left-0 bg-ag-navy z-10">
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">{t('audienceColProfile')}</span>
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{t('audienceColProfile')}</span>
                 </th>
                 {GRADES.map((g) => {
                   const c = GRADE_CONFIG[g]

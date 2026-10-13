@@ -64,7 +64,7 @@ export function FooterMarquee({
   const tiles = Array.from({ length: REPEAT }, (_, i) => (
     <span key={i} className="inline-flex items-center shrink-0">
       <span
-        className="font-sans font-black tracking-[0.22em] text-white/55 select-none"
+        className="font-sans font-black tracking-[0.22em] text-white/45 select-none"
         style={{ fontSize: 'clamp(32px,4.5vw,60px)' }}
       >
         {TEXT}

@@ -61,7 +61,7 @@ export default function SetPasswordForm() {
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
           {t('doneTitle')}
         </h2>
-        <p className="font-sans text-[13px] text-white">
+        <p className="font-sans text-[13px] text-white/70">
           {t('doneDesc')}
         </p>
       </div>
@@ -77,7 +77,7 @@ export default function SetPasswordForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('chooseLabel')}
         </label>
         <div className="relative">
@@ -93,7 +93,7 @@ export default function SetPasswordForm() {
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>
@@ -101,7 +101,7 @@ export default function SetPasswordForm() {
       </div>
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('confirmLabel')}
         </label>
         <input

@@ -21,14 +21,14 @@ export default async function RegisterPage() {
           <h1 className="font-sans font-bold text-white text-[26px] tracking-[-0.03em] mb-2">
             {t('title')}
           </h1>
-          <p className="font-sans text-[13px] text-white">
+          <p className="font-sans text-[13px] text-white/70">
             {t('subtitle')}
           </p>
         </div>
 
         <RegisterForm />
 
-        <p className="mt-6 text-center font-sans text-[12px] text-white">
+        <p className="mt-6 text-center font-sans text-[12px] text-white/70">
           {t('alreadyAccount')}{' '}
           <Link href="/client/login" className="text-ag-apex hover:text-ag-apex/80 underline underline-offset-2 transition-colors">
             {t('loginLink')}

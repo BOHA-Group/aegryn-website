@@ -74,7 +74,7 @@ export default function TransactionSubmitForm() {
         <div className="max-w-7xl mx-auto">
           <Link
             href={{ pathname: '/', hash: 'franchir' }}
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white hover:text-ag-apex transition-colors mb-10"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 hover:text-ag-apex transition-colors mb-10"
           >
             <ChevronLeft size={11} /> {tNav('transact')}
           </Link>
@@ -88,13 +88,13 @@ export default function TransactionSubmitForm() {
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl mb-8">
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-8">
             {t('hero.desc')}
           </p>
           {/* Swiss law badge */}
           <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-lg">
             <Scale size={13} className="text-ag-apex shrink-0 mt-0.5" />
-            <p className="font-sans text-[12px] text-white leading-relaxed">
+            <p className="font-sans text-[12px] text-white/70 leading-relaxed">
               {t('swissNote')}
             </p>
           </div>

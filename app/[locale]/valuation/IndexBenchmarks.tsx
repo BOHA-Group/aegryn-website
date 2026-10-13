@@ -34,7 +34,7 @@ export default function IndexBenchmarks() {
             <div>
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('label')}</p>
               <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('title')}</h2>
-              <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl mb-8">{t('desc')}</p>
+              <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-8">{t('desc')}</p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   [snap?.coverage.clusters ?? 5, t('kpis.clusters')],
@@ -44,7 +44,7 @@ export default function IndexBenchmarks() {
                 ].map(([v, l]) => (
                   <div key={String(l)} className="rounded-xl border border-white/10 bg-white/5 px-4 py-4">
                     <p className="font-sans font-bold text-ag-apex-ink text-[26px] leading-none">{v}</p>
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-white mt-2">{l}</p>
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 mt-2">{l}</p>
                   </div>
                 ))}
               </div>
@@ -75,20 +75,20 @@ export default function IndexBenchmarks() {
           <div className="mb-12 max-w-2xl">
             <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('metricsLabel')}</p>
             <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('metricsTitle')}</h2>
-            <p className="font-sans text-[14px] text-white leading-relaxed">{t('metricsDesc')}</p>
+            <p className="font-sans text-[14px] text-white/70 leading-relaxed">{t('metricsDesc')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {INDEX_METRICS.map(m => (
               <div key={m.key} className="rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-3">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-sans font-bold text-[14px]">{t(`metrics.${m.key}`)}</p>
-                  <span className={`shrink-0 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white' : 'text-ag-apex-ink'}`}>
+                  <span className={`shrink-0 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-widest ${m.locked ? 'text-white/70' : 'text-ag-apex-ink'}`}>
                     {m.locked ? <Lock size={10} /> : <Check size={11} />}
                     {m.locked ? t('lockedShort') : t('openShort')}
                   </span>
                 </div>
-                <p className="font-sans text-[12px] text-white leading-relaxed">{t(`metricsDetail.${m.key}`)}</p>
-                <span className="font-mono text-[9px] uppercase tracking-widest text-white">{t('unitLabel')} : {m.unit}</span>
+                <p className="font-sans text-[12px] text-white/70 leading-relaxed">{t(`metricsDetail.${m.key}`)}</p>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-white/70">{t('unitLabel')} : {m.unit}</span>
               </div>
             ))}
           </div>

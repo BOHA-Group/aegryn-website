@@ -129,7 +129,7 @@ export function CoverSection({ issue, ctaScroll, labelDesc, locale = 'fr' }: Pro
             href={`/${locale}/magazine/issue-01/web`}
             prefetch={false}
             className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.16em] uppercase
-                       border border-white/30 text-white px-4 py-2.5
+                       border border-white/30 text-white/70 px-4 py-2.5
                        hover:border-white/70 hover:text-white transition-colors"
           >
             <Globe size={11} /> Explorer en ligne
@@ -141,7 +141,7 @@ export function CoverSection({ issue, ctaScroll, labelDesc, locale = 'fr' }: Pro
             const firstSection = issue.sections[0]
             if (firstSection) document.getElementById(firstSection.id)?.scrollIntoView({ behavior: 'smooth' })
           }}
-          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white hover:text-white transition-colors"
+          className="flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white/70 hover:text-white transition-colors"
           aria-label={ctaScroll}
         >
           {ctaScroll} <ArrowDown size={11} />

@@ -36,7 +36,7 @@ export function GradeBrochure() {
               <h3 className="font-sans font-bold text-white text-[30px] leading-[0.95] tracking-[-0.04em] whitespace-pre-line mb-3">
                 {b('coverTitle')}
               </h3>
-              <p className="font-sans text-white text-[11px] leading-relaxed">{b('coverSubtitle')}</p>
+              <p className="font-sans text-white/70 text-[11px] leading-relaxed">{b('coverSubtitle')}</p>
             </div>
           </div>
         </Link>

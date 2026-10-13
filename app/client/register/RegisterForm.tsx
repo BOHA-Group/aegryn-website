@@ -105,7 +105,7 @@ export default function RegisterForm() {
       <div className="flex flex-col items-center gap-4 py-8 text-center">
         <CheckCircle size={40} className="text-ag-apex-ink" />
         <p className="font-sans font-bold text-white text-[18px]">{t('successTitle')}</p>
-        <p className="font-sans text-[13px] text-white">{t('successDesc')}</p>
+        <p className="font-sans text-[13px] text-white/70">{t('successDesc')}</p>
       </div>
     )
   }
@@ -146,7 +146,7 @@ export default function RegisterForm() {
 
       {/* Nom */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('fullNameLabel')}
         </label>
         <input
@@ -162,7 +162,7 @@ export default function RegisterForm() {
 
       {/* Email */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -178,7 +178,7 @@ export default function RegisterForm() {
 
       {/* Mot de passe */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('passwordLabel')}
         </label>
         <div className="relative">
@@ -194,7 +194,7 @@ export default function RegisterForm() {
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>
@@ -219,7 +219,7 @@ export default function RegisterForm() {
 
       {/* Rôle principal */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           Type de compte
         </label>
         <div className="flex flex-col gap-2">
@@ -231,15 +231,15 @@ export default function RegisterForm() {
               className={`flex items-start gap-3 px-4 py-3 border text-left transition-colors rounded-lg ${
                 primaryRole === value
                   ? 'border-ag-apex bg-ag-apex/10 text-white'
-                  : 'border-white/15 bg-white/5 text-white hover:border-white/30 hover:text-ag-apex'
+                  : 'border-white/15 bg-white/5 text-white/70 hover:border-white/30 hover:text-white'
               }`}
             >
-              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex-ink' : 'text-white'}`}>
+              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex-ink' : 'text-white/70'}`}>
                 {icon}
               </span>
               <span className="flex flex-col">
                 <span className="font-sans font-semibold text-[13px]">{label}</span>
-                <span className="font-sans text-[11px] text-white mt-0.5">{desc}</span>
+                <span className="font-sans text-[11px] text-white/70 mt-0.5">{desc}</span>
               </span>
             </button>
           ))}

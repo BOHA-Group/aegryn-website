@@ -42,7 +42,7 @@ export default async function TalentTransitionPage({ params }: Props) {
           >
             {t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white leading-relaxed max-w-xl mb-10">
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/70 leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

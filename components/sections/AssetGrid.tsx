@@ -120,7 +120,7 @@ export function AssetGrid() {
             {tItems(`${asset.id}.tagline`)}
           </p>
           <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <ArrowUpRight size={14} className="text-white" />
+            <ArrowUpRight size={14} className="text-white/70" />
           </div>
 
           {/* Badge presse — uniquement neediu */}

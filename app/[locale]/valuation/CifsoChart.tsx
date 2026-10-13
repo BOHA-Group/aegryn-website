@@ -61,14 +61,14 @@ function CustomTooltip({ active, payload }: any) {
   if (!d) return null
   return (
     <div className="bg-ag-navy border border-white/10 px-4 py-3 rounded-lg shadow-xl">
-      <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white mb-1">
+      <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/70 mb-1">
         Score CIFSO : <span className="text-ag-apex font-bold">{d.score}</span>
       </p>
-      <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white">
+      <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/70">
         Multiple : <span className="text-white font-bold">{d.multiple}x</span>
       </p>
       {d.sector && (
-        <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-white mt-1">
+        <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/70 mt-1">
           {d.sector}
         </p>
       )}
@@ -173,7 +173,7 @@ export function CifsoChart() {
           { score: '80–90', mult: t('annotationHigh'), color: ANNOTATION_COLOR },
         ].map(({ score, mult, color }) => (
           <div key={score} className="flex flex-col items-center gap-1 border border-white/8 px-3 py-2 rounded-lg bg-white/[0.03]">
-            <span className="font-mono text-[9px] tracking-[0.16em] text-white uppercase">Score {score}</span>
+            <span className="font-mono text-[9px] tracking-[0.16em] text-white/70 uppercase">Score {score}</span>
             <span className="font-mono text-[13px] font-bold" style={{ color }}>{mult}</span>
           </div>
         ))}

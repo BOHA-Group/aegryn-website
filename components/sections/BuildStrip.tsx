@@ -61,7 +61,7 @@ export function BuildStrip() {
 
         {/* Panneau droit — Asset Engineering */}
         <div className="rounded-lg build-panel bg-ag-navy px-8 md:px-12 py-12 md:py-16 flex flex-col gap-6">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-white">
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-white/70">
             {t('engineeringLabel')}
           </p>
           <h2
@@ -70,7 +70,7 @@ export function BuildStrip() {
           >
             {t('engineeringTitle')}
           </h2>
-          <p className="font-sans text-[15px] text-white leading-relaxed max-w-sm flex-1">
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-sm flex-1">
             {t('engineeringDesc')}
           </p>
           <Link

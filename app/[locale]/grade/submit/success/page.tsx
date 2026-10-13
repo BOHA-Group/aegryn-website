@@ -36,10 +36,10 @@ export default async function GradeSubmitSuccessPage({ params }: Props) {
           </h1>
         </WaveReveal>
         <ScrollReveal delay={0.25}>
-        <p className="font-sans text-[16px] text-white leading-relaxed mb-3">
+        <p className="font-sans text-[16px] text-white/70 leading-relaxed mb-3">
           {t('desc')}
         </p>
-        <p className="font-sans text-[13px] text-white mb-10">
+        <p className="font-sans text-[13px] text-white/70 mb-10">
           {t('emailSent')}
         </p>
         </ScrollReveal>
@@ -47,7 +47,7 @@ export default async function GradeSubmitSuccessPage({ params }: Props) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/grade"
-            className="rounded-lg inline-flex items-center gap-2 border border-white/20 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-colors"
+            className="rounded-lg inline-flex items-center gap-2 border border-white/20 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-6 py-3 hover:border-white/50 hover:text-white transition-colors"
           >
             {t('backToGrade')}
           </Link>

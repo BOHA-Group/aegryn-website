@@ -92,7 +92,7 @@ export function VideoScrollGrow({ srcWeb, srcMobile, poster, label }: VideoScrol
             <track kind="captions" />
           </video>
           {label && (
-            <p className="absolute bottom-6 left-6 md:bottom-10 md:left-12 font-sans font-semibold text-[11px] uppercase tracking-[0.24em] text-white z-10">
+            <p className="absolute bottom-6 left-6 md:bottom-10 md:left-12 font-sans font-semibold text-[11px] uppercase tracking-[0.24em] text-white/70 z-10">
               {label}
             </p>
           )}

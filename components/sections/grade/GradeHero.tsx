@@ -35,7 +35,7 @@ export function GradeHero() {
           style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
         />
-        <p ref={descRef} className="font-sans text-[16px] text-white leading-relaxed max-w-xl mb-10">
+        <p ref={descRef} className="font-sans text-[16px] text-white/70 leading-relaxed max-w-xl mb-10">
           {t('desc')}
         </p>
       </div>

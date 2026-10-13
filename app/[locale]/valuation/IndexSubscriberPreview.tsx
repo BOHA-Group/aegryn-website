@@ -66,7 +66,7 @@ export default function IndexSubscriberPreview() {
         <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{t('label')}</span>
       </div>
       <h3 className="font-sans font-bold text-white text-[20px] tracking-[-0.02em] mb-2">{t('title')}</h3>
-      <p className="font-sans text-[15px] text-white leading-relaxed max-w-2xl mb-6">{t('desc')}</p>
+      <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-2xl mb-6">{t('desc')}</p>
 
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
         {/* Tabs */}
@@ -76,25 +76,25 @@ export default function IndexSubscriberPreview() {
               key={tab}
               type="button"
               onClick={() => setActive(i)}
-              className={`rounded-full font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 transition-colors ${i === active ? 'bg-ag-apex text-ag-navy font-semibold' : 'bg-white/5 text-white border border-white/10 hover:text-ag-apex'}`}
+              className={`rounded-full font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 transition-colors ${i === active ? 'bg-ag-apex text-ag-navy font-semibold' : 'bg-white/5 text-white/70 border border-white/10 hover:text-white'}`}
             >
               {tab}
             </button>
           ))}
         </div>
         {tabsSubtitle[active] && (
-          <p className="font-sans text-[11px] text-white leading-relaxed px-4 pt-3 max-w-3xl">{tabsSubtitle[active]}</p>
+          <p className="font-sans text-[11px] text-white/70 leading-relaxed px-4 pt-3 max-w-3xl">{tabsSubtitle[active]}</p>
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-0 mt-4">
           {/* Filtres */}
           <div className="border-t lg:border-t-0 lg:border-r border-white/10 px-4 py-4 flex flex-col gap-3">
-            <p className="font-mono text-[9px] uppercase tracking-widest text-white flex items-center gap-1.5">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 flex items-center gap-1.5">
               <SlidersHorizontal size={10} /> {t('filtersLabel')}
             </p>
             {filters.map(f => (
               <div key={f} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">
-                <p className="font-sans text-[11px] text-white">{f}</p>
+                <p className="font-sans text-[11px] text-white/70">{f}</p>
               </div>
             ))}
           </div>
@@ -105,7 +105,7 @@ export default function IndexSubscriberPreview() {
               <table className="w-full min-w-[640px] text-left">
                 <thead>
                   <tr className="border-b border-white/10">
-                    {columnsMarket.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                    {columnsMarket.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                   </tr>
                 </thead>
                 <tbody>
@@ -113,15 +113,15 @@ export default function IndexSubscriberPreview() {
                     <tr key={r.verticalKey} className="border-b border-white/5">
                       <td className="px-4 py-3">
                         <p className="font-sans text-[12px] font-semibold text-white">{r.verticalLabel}</p>
-                        <p className="font-mono text-[9px] uppercase tracking-wide text-white">{r.clusterLabel}</p>
+                        <p className="font-mono text-[9px] uppercase tracking-wide text-white/70">{r.clusterLabel}</p>
                       </td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white whitespace-nowrap">
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70 whitespace-nowrap">
                         {r.evRevenue[0]}x · <strong className="text-ag-apex-ink">{r.evRevenue[1]}x</strong> · {r.evRevenue[2]}x
                       </td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white">{r.evEbitda ? `${r.evEbitda}x` : '—'}</td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white">{r.arr ? `${r.arr}x` : '—'}</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.evEbitda ? `${r.evEbitda}x` : '—'}</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.arr ? `${r.arr}x` : '—'}</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.score}/100</td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white">n={r.sample}</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70">n={r.sample}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -132,7 +132,7 @@ export default function IndexSubscriberPreview() {
               <table className="w-full min-w-[560px] text-left">
                 <thead>
                   <tr className="border-b border-white/10">
-                    {columnsCifso.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                    {columnsCifso.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                   </tr>
                 </thead>
                 <tbody>
@@ -142,8 +142,8 @@ export default function IndexSubscriberPreview() {
                         <p className="font-sans text-[12px] font-semibold text-white">{r.letter} — {r.label}</p>
                       </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.medianScore}/100</td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white">+{r.uplift}%</td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white">n={r.n}</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70">+{r.uplift}%</td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70">n={r.n}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -154,7 +154,7 @@ export default function IndexSubscriberPreview() {
               <table className="w-full min-w-[600px] text-left">
                 <thead>
                   <tr className="border-b border-white/10">
-                    {columnsValuation.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                    {columnsValuation.map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                   </tr>
                 </thead>
                 <tbody>
@@ -163,10 +163,10 @@ export default function IndexSubscriberPreview() {
                     return (
                       <tr key={r.clusterKey} className="border-b border-white/5">
                         <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{r.clusterLabel}</p></td>
-                        <td className="px-4 py-3 font-mono text-[11px] text-white">{r.grade}</td>
-                        <td className="px-4 py-3 font-mono text-[11px] text-white">{r.marketMultiple}x</td>
+                        <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.grade}</td>
+                        <td className="px-4 py-3 font-mono text-[11px] text-white/70">{r.marketMultiple}x</td>
                         <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.adjustedMultiple}x</td>
-                        <td className={`px-4 py-3 font-mono text-[11px] ${delta >= 0 ? 'text-ag-apex-ink' : 'text-white'}`}>{delta >= 0 ? '+' : ''}{delta}%</td>
+                        <td className={`px-4 py-3 font-mono text-[11px] ${delta >= 0 ? 'text-ag-apex-ink' : 'text-white/70'}`}>{delta >= 0 ? '+' : ''}{delta}%</td>
                       </tr>
                     )
                   })}
@@ -177,8 +177,8 @@ export default function IndexSubscriberPreview() {
         </div>
 
         <div className="flex items-center gap-2 px-4 py-3 border-t border-white/10">
-          <Lock size={10} className="text-white shrink-0" />
-          <p className="font-mono text-[9px] text-white leading-relaxed">{t('footnote')}</p>
+          <Lock size={10} className="text-white/70 shrink-0" />
+          <p className="font-mono text-[9px] text-white/70 leading-relaxed">{t('footnote')}</p>
         </div>
       </div>
     </div>

@@ -151,14 +151,14 @@ export default function Footer() {
               height={44}
               className="h-8 w-auto object-contain mb-4 brightness-0 invert"
             />
-            <p className="mt-1 font-sans font-semibold text-[11px] text-white">
+            <p className="mt-1 font-sans font-semibold text-[11px] text-white/70">
               {t('swissTagline')}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               {socialLinks.map(({ label, href, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                   aria-label={label}
-                  className="text-white hover:text-ag-apex transition-colors duration-200">
+                  className="text-white/70 hover:text-ag-apex transition-colors duration-200">
                   {icon}
                 </a>
               ))}
@@ -167,13 +167,13 @@ export default function Footer() {
 
           {/* Col 1 — Aegryn (institutionnel) */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white uppercase mb-4">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol1Title')}
             </p>
             <ul className="space-y-2.5">
               {aegrynLinks.map(({ navKey, href }) => (
                 <li key={navKey}>
-                  <Link href={href} className="text-sm text-white hover:text-white transition-colors">
+                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
                     {tNav(navKey)}
                   </Link>
                 </li>
@@ -183,13 +183,13 @@ export default function Footer() {
 
           {/* Col 2 — Services */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white uppercase mb-4">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol2Title')}
             </p>
             <ul className="space-y-2.5">
               {accompagnementLinks.map(({ footerKey, href }) => (
                 <li key={footerKey}>
-                  <Link href={href} className="text-sm text-white hover:text-white transition-colors">
+                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
                     {t(footerKey)}
                   </Link>
                 </li>
@@ -199,32 +199,32 @@ export default function Footer() {
 
           {/* Col 3 — Plateforme (outils) */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white uppercase mb-4">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol3Title')}
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/valuation" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/valuation" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Valuation')}
                 </Link>
               </li>
               <li>
-                <Link href="/grade" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/grade" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Code')}
                 </Link>
               </li>
               <li>
-                <Link href="/grade/submit" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/grade/submit" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Grade')}
                 </Link>
               </li>
               <li>
-                <Link href="/verify" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/verify" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Verify')}
                 </Link>
               </li>
               <li>
-                <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white hover:text-white transition-colors">
+                <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Subblink')}
                 </a>
               </li>
@@ -233,32 +233,32 @@ export default function Footer() {
 
           {/* Col 4 — Publications (éditorial) */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white uppercase mb-4">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol4Title')}
             </p>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/magazine" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/magazine" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Magazine')}
                 </Link>
               </li>
               <li>
-                <a href="https://www.linkedin.com/newsletters/7449391102052257793/?displayConfirmation=true" target="_blank" rel="noopener noreferrer" className="text-sm text-white hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/newsletters/7449391102052257793/?displayConfirmation=true" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Newsletter')}
                 </a>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/blog" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Blog')}
                 </Link>
               </li>
               <li>
-                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white hover:text-white transition-colors">
+                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Glossary')}
                 </Link>
               </li>
               <li>
-                <Link href="/help/faq" className="text-sm text-white hover:text-white transition-colors">
+                <Link href="/help/faq" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3FAQ')}
                 </Link>
               </li>
@@ -267,10 +267,10 @@ export default function Footer() {
 
           {/* Advisory CTA — macaron contact */}
           <div>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white uppercase mb-4">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('advisoryLabel')}
             </p>
-            <p className="text-sm text-white leading-relaxed mb-5">
+            <p className="text-sm text-white/70 leading-relaxed mb-5">
               {t('advisoryDesc')}
             </p>
             {/* Medallion inline (static version — no spin here) */}
@@ -284,13 +284,13 @@ export default function Footer() {
         {/* Legal strip — compact, fused above marquee */}
         <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center">
           <div className="flex flex-col gap-1">
-            <p className="font-sans font-semibold text-[10px] text-white">
+            <p className="font-sans font-semibold text-[10px] text-white/70">
               {t('legal')}
             </p>
-            <p className="font-sans text-[10px] text-white">
+            <p className="font-sans text-[10px] text-white/70">
               {t('aiNotice')}
             </p>
-            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white mt-1">
+            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/70 mt-1">
               {t('taglines')}
             </p>
           </div>
@@ -302,7 +302,7 @@ export default function Footer() {
                   href={href as string}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans font-semibold text-[10px] text-white hover:text-white transition-colors inline-block py-2"
+                  className="font-sans font-semibold text-[10px] text-white/70 hover:text-white transition-colors inline-block py-2"
                 >
                   {tL(key as 'termsUse')}
                 </a>
@@ -310,7 +310,7 @@ export default function Footer() {
                 <Link
                   key={key}
                   href={href}
-                  className="font-sans font-semibold text-[10px] text-white hover:text-white transition-colors inline-block py-2"
+                  className="font-sans font-semibold text-[10px] text-white/70 hover:text-white transition-colors inline-block py-2"
                 >
                   {tL(key as 'termsUse')}
                 </Link>

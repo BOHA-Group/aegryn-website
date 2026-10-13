@@ -60,11 +60,11 @@ export default async function SellerNdaViewPage() {
               <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">
                 Accord de confidentialité — Cédant
               </p>
-              <p className="text-[13px] font-semibold text-white">Lecture seule — document signé</p>
+              <p className="text-[13px] font-semibold text-white/70">Lecture seule — document signé</p>
             </div>
           </div>
           <Link href="/client/seller"
-            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white hover:text-white transition-colors border border-white/20 px-3 py-1.5">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white/70 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
             ← Espace Cédant
           </Link>
         </div>

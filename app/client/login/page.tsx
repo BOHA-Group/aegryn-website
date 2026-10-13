@@ -26,7 +26,7 @@ export default async function ClientLoginPage({
           <h1 className="font-sans font-bold text-white text-[28px] tracking-[-0.03em] mb-2">
             {t('title')}
           </h1>
-          <p className="font-sans text-[13px] text-white">
+          <p className="font-sans text-[13px] text-white/70">
             {t('subtitle')}
           </p>
         </div>
@@ -39,11 +39,11 @@ export default async function ClientLoginPage({
         )}
         <LoginForm />
         <p className="mt-5 text-center">
-          <Link href="/client/forgot-password" className="font-sans text-[12px] text-white hover:text-ag-apex transition-colors">
+          <Link href="/client/forgot-password" className="font-sans text-[12px] text-white/70 hover:text-ag-apex transition-colors">
             {t('forgotPassword')}
           </Link>
         </p>
-        <p className="mt-4 text-center font-sans text-[12px] text-white">
+        <p className="mt-4 text-center font-sans text-[12px] text-white/70">
           {t('noAccount')}{' '}
           <Link href="/client/register" className="text-ag-apex hover:text-ag-apex/80 underline underline-offset-2 transition-colors">
             {t('createAccount')}

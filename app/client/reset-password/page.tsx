@@ -21,7 +21,7 @@ export default async function ResetPasswordPage() {
           <h1 className="font-sans font-bold text-white text-[24px] tracking-[-0.03em] mb-2">
             {t('title')}
           </h1>
-          <p className="font-sans text-[13px] text-white">
+          <p className="font-sans text-[13px] text-white/70">
             {t('subtitle')}
           </p>
         </div>

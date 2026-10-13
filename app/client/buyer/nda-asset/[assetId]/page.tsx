@@ -67,7 +67,7 @@ export default async function NdaAssetPage({
           <Lock size={15} className="text-ag-apex shrink-0" />
           <div>
             <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">Data Room — Accès restreint</p>
-            <p className="text-[13px] font-semibold text-white">Signature NDA requise pour accéder au dossier</p>
+            <p className="text-[13px] font-semibold text-white/70">Signature NDA requise pour accéder au dossier</p>
           </div>
         </div>
       </div>

@@ -29,9 +29,9 @@ function Blurred({ children, locked }: { children: React.ReactNode; locked: bool
 
 /** n= toujours informatif : distingue "verrouillé mais échantillon réel" de "pas encore de donnée". */
 function SampleTag({ n, buildingLabel }: { n: number | null | undefined; buildingLabel: string }) {
-  if (n == null) return <span className="font-mono text-[10px] text-white">—</span>
-  if (n === 0) return <span className="font-mono text-[9px] uppercase tracking-wide text-white">{buildingLabel}</span>
-  return <span className="font-mono text-[11px] text-white">n={n}</span>
+  if (n == null) return <span className="font-mono text-[10px] text-white/70">—</span>
+  if (n === 0) return <span className="font-mono text-[9px] uppercase tracking-wide text-white/70">{buildingLabel}</span>
+  return <span className="font-mono text-[11px] text-white/70">n={n}</span>
 }
 
 /** Multiple ajusté = ev_revenue médian × coefficient CIFSO (le coefficient n'est PAS un multiple en soi). */
@@ -70,10 +70,10 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
       {/* Carte profil — persistante, ne se perd jamais en changeant d'onglet ou de filtre */}
       <div className="flex flex-wrap items-center gap-3 px-5 pt-5 pb-4 border-b border-white/10">
-        <span className="font-mono text-[9px] uppercase tracking-widest text-white">{t('yourProfileLabel')}</span>
+        <span className="font-mono text-[9px] uppercase tracking-widest text-white/70">{t('yourProfileLabel')}</span>
         <span className="font-sans text-[12px] font-semibold text-white">{userIndustryLabel}{userVerticalLabel ? ` · ${userVerticalLabel}` : ''}</span>
         <span className="font-mono text-[11px] uppercase tracking-wide text-ag-apex-ink border border-ag-apex/40 rounded-full px-2.5 py-0.5">{user.grade}</span>
-        <span className="font-mono text-[11px] text-white">{user.score}/100</span>
+        <span className="font-mono text-[11px] text-white/70">{user.score}/100</span>
       </div>
 
       {/* Tabs */}
@@ -83,27 +83,27 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             key={tab_}
             type="button"
             onClick={() => setTab(i)}
-            className={`rounded-full font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 transition-colors ${i === tab ? 'bg-ag-apex text-ag-navy font-semibold' : 'bg-white/5 text-white border border-white/10 hover:text-ag-apex'}`}
+            className={`rounded-full font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 transition-colors ${i === tab ? 'bg-ag-apex text-ag-navy font-semibold' : 'bg-white/5 text-white/70 border border-white/10 hover:text-white'}`}
           >
             {tab_}
           </button>
         ))}
       </div>
-      {tabsSubtitle[tab] && <p className="font-sans text-[11px] text-white leading-relaxed px-5 pt-3 max-w-3xl">{tabsSubtitle[tab]}</p>}
+      {tabsSubtitle[tab] && <p className="font-sans text-[11px] text-white/70 leading-relaxed px-5 pt-3 max-w-3xl">{tabsSubtitle[tab]}</p>}
 
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-0 mt-4">
         {/* Filtres réels — mettent en évidence une ligne, ne réduisent jamais le tableau à une seule */}
         <div className="border-t lg:border-t-0 lg:border-r border-white/10 px-5 py-4 flex flex-col gap-4">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-white flex items-center gap-1.5">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 flex items-center gap-1.5">
             <SlidersHorizontal size={10} /> {t('filtersLabel')}
           </p>
           <div>
-            <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-2">{t('filterIndustry')}</p>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 mb-2">{t('filterIndustry')}</p>
             <div className="flex flex-col gap-1.5">
               {INDEX_CLUSTERS.map(c => (
                 <button key={c.key} type="button"
                   onClick={() => { setFilterIndustry(c.key); setFilterVertical('all') }}
-                  className={`text-left rounded-lg px-3 py-2 font-sans text-[11px] transition-colors flex items-center gap-1.5 ${filterIndustry === c.key ? 'bg-ag-apex/15 border border-ag-apex/40 text-ag-apex-ink font-semibold' : 'border border-white/10 text-white hover:border-white/30'}`}>
+                  className={`text-left rounded-lg px-3 py-2 font-sans text-[11px] transition-colors flex items-center gap-1.5 ${filterIndustry === c.key ? 'bg-ag-apex/15 border border-ag-apex/40 text-ag-apex-ink font-semibold' : 'border border-white/10 text-white/70 hover:border-white/30 hover:text-white'}`}>
                   {c.key === user.industry && <MapPin size={10} className="shrink-0" />}
                   {c.label[locale]}
                 </button>
@@ -111,9 +111,9 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             </div>
           </div>
           <div>
-            <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-2">{t('filterVertical')}</p>
+            <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 mb-2">{t('filterVertical')}</p>
             <select value={filterVertical} onChange={e => setFilterVertical(e.target.value)}
-              className="w-full rounded-lg border border-white/10 bg-white/5 text-white font-sans text-[11px] px-3 py-2 focus:outline-none focus:border-ag-apex/50">
+              className="w-full rounded-lg border border-white/10 bg-white/5 text-white/70 font-sans text-[11px] px-3 py-2 focus:outline-none focus:border-ag-apex/50">
               <option value="all">{t('filterAll')}</option>
               {verticalsForFilter.map(v => <option key={v.key} value={v.key}>{v.label[locale]}</option>)}
             </select>
@@ -132,7 +132,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             <table className="w-full min-w-[560px] text-left">
               <thead>
                 <tr className="border-b border-white/10">
-                  {(t.raw('columnsMarket') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                  {(t.raw('columnsMarket') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                 </tr>
               </thead>
               <tbody>
@@ -153,7 +153,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             <table className="w-full min-w-[520px] text-left">
               <thead>
                 <tr className="border-b border-white/10">
-                  {(t.raw('columnsCifso') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                  {(t.raw('columnsCifso') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                 </tr>
               </thead>
               <tbody>
@@ -161,7 +161,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                   <tr key={d.key} className="border-b border-white/5">
                     <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{d.letter} — {d.label}</p></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold"><Blurred locked={d.locked}>{d.medianScore ?? '••'}/100</Blurred></td>
-                    <td className="px-4 py-3 font-mono text-[11px] text-white"><Blurred locked={d.locked}>{d.upliftPct != null ? `+${d.upliftPct}%` : '••%'}</Blurred></td>
+                    <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={d.locked}>{d.upliftPct != null ? `+${d.upliftPct}%` : '••%'}</Blurred></td>
                     <td className="px-4 py-3"><SampleTag n={d.sampleSize} buildingLabel={t('sampleBuilding')} /></td>
                   </tr>
                 ))}
@@ -173,7 +173,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
             <table className="w-full min-w-[600px] text-left">
               <thead>
                 <tr className="border-b border-white/10">
-                  {(t.raw('columnsValuation') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white px-4 py-3 whitespace-nowrap">{col}</th>)}
+                  {(t.raw('columnsValuation') as string[]).map(col => <th key={col} className="font-mono text-[9px] uppercase tracking-widest text-white/70 px-4 py-3 whitespace-nowrap">{col}</th>)}
                 </tr>
               </thead>
               <tbody>
@@ -190,9 +190,9 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
                           {c.label}
                         </p>
                       </td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white"><Blurred locked={c.evRevenue.locked}>{c.evRevenue.p50 ?? '••'}x</Blurred></td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={c.evRevenue.locked}>{c.evRevenue.p50 ?? '••'}x</Blurred></td>
                       <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold"><Blurred locked={locked}>{adj60 ?? '••'}x</Blurred></td>
-                      <td className="px-4 py-3 font-mono text-[11px] text-white"><Blurred locked={locked}>{adj40 ?? '••'}x — {adj80 ?? '••'}x</Blurred></td>
+                      <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={locked}>{adj40 ?? '••'}x — {adj80 ?? '••'}x</Blurred></td>
                     </tr>
                   )
                 })}
@@ -208,7 +208,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
           <Lock size={14} className="text-emerald-400 shrink-0 mt-0.5" />
           <div>
             <p className="font-sans font-bold text-white text-[13px] mb-1">{t('unlockTitle')}</p>
-            <p className="font-sans text-[12px] text-white leading-relaxed">{t('unlockDesc')}</p>
+            <p className="font-sans text-[12px] text-white/70 leading-relaxed">{t('unlockDesc')}</p>
           </div>
         </div>
         <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-emerald-400 mb-3 flex items-center gap-1.5">
@@ -236,11 +236,11 @@ function MarketRow({ label, highlighted, range, evEbitda, t }: {
           {label}
         </p>
       </td>
-      <td className="px-4 py-3 font-mono text-[11px] text-white whitespace-nowrap">
+      <td className="px-4 py-3 font-mono text-[11px] text-white/70 whitespace-nowrap">
         <Blurred locked={range.locked}>{range.p25 ?? '••'}x · {range.p50 ?? '••'}x · {range.p75 ?? '••'}x</Blurred>
       </td>
-      <td className="px-4 py-3 font-mono text-[11px] text-white">
-        {evEbitda ? <Blurred locked={evEbitda.locked}>{evEbitda.p50 ?? '••'}x</Blurred> : <span className="text-white">—</span>}
+      <td className="px-4 py-3 font-mono text-[11px] text-white/70">
+        {evEbitda ? <Blurred locked={evEbitda.locked}>{evEbitda.p50 ?? '••'}x</Blurred> : <span className="text-white/70">—</span>}
       </td>
       <td className="px-4 py-3"><SampleTag n={range.sampleSize} buildingLabel={t('sampleBuilding')} /></td>
     </tr>

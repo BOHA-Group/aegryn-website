@@ -25,20 +25,20 @@ export default async function ExpertClientLayout({ children }: { children: React
         <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
           <div className="px-5 py-4 border-b border-white/10">
             <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Espace Expert</p>
-            <p className="font-sans text-[11px] text-white mt-0.5 truncate">{displayName}</p>
+            <p className="font-sans text-[11px] text-white/70 mt-0.5 truncate">{displayName}</p>
           </div>
 
           <nav className="flex-1 px-3 py-4 flex flex-col gap-5 overflow-y-auto">
             <div className="flex flex-col gap-0.5">
               <Link
                 href="/client/expert"
-                className="rounded-lg flex items-center px-3 py-2 font-sans text-[12px] text-white hover:text-white hover:bg-white/5 transition-colors"
+                className="rounded-lg flex items-center px-3 py-2 font-sans text-[12px] text-white/70 hover:text-white hover:bg-white/5 transition-colors"
               >
                 Ma fiche expert
               </Link>
               <Link
                 href="/client/expert/account"
-                className="rounded-lg flex items-center px-3 py-2 font-sans text-[12px] text-white hover:text-ag-apex hover:bg-white/5 transition-colors"
+                className="rounded-lg flex items-center px-3 py-2 font-sans text-[12px] text-white/70 hover:text-white hover:bg-white/5 transition-colors"
               >
                 Mon compte
               </Link>
@@ -49,7 +49,7 @@ export default async function ExpertClientLayout({ children }: { children: React
             <form action="/api/client/logout" method="POST">
               <button
                 type="submit"
-                className="font-mono text-[10px] uppercase tracking-widest text-white hover:text-white transition-colors"
+                className="font-mono text-[10px] uppercase tracking-widest text-white/70 hover:text-white transition-colors"
               >
                 Déconnexion
               </button>

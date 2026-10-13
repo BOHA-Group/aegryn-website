@@ -86,7 +86,7 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white max-w-xl mb-10">
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70 max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -308,7 +308,7 @@ export default async function WorkforcePage({ params }: Props) {
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="space-y-4 border-l-2 border-ag-apex/40 pl-6">
               {t('cifso.body').split('\n\n').map((paragraph, i) => (
-                <p key={i} className="font-sans text-[14px] text-white leading-relaxed">
+                <p key={i} className="font-sans text-[14px] text-white/70 leading-relaxed">
                   {paragraph}
                 </p>
               ))}

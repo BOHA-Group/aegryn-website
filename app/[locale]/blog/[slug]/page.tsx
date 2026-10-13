@@ -144,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="max-w-3xl mx-auto">
           <Link
             href="/blog"
-            className="font-mono text-[10px] tracking-[0.22em] uppercase text-white hover:text-white transition-colors mb-8 inline-block"
+            className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 hover:text-white transition-colors mb-8 inline-block"
           >
             {t('backToDiscover')}
           </Link>
@@ -157,10 +157,10 @@ export default async function ArticlePage({ params }: Props) {
           >
             {getLocaleText(article.title, locale)}
           </h1>
-          <p className="font-sans text-[16px] text-white leading-relaxed mb-8">
+          <p className="font-sans text-[16px] text-white/70 leading-relaxed mb-8">
             {getLocaleText(article.excerpt, locale)}
           </p>
-          <div className="flex items-center gap-6 text-white">
+          <div className="flex items-center gap-6 text-white/70">
             <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em]">
               <Calendar size={11} /> {dateStr}
             </span>

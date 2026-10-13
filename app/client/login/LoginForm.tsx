@@ -139,7 +139,7 @@ export default function LoginForm() {
         )}
 
         <div>
-          <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+          <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
             Code de double authentification
           </label>
           <input
@@ -177,7 +177,7 @@ export default function LoginForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -192,7 +192,7 @@ export default function LoginForm() {
       </div>
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('passwordLabel')}
         </label>
         <div className="relative">
@@ -208,7 +208,7 @@ export default function LoginForm() {
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>

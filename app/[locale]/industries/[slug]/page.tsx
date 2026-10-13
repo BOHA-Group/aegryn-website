@@ -75,7 +75,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-36 pb-20 flex flex-col gap-6">
           {/* Breadcrumb */}
           <Link href={"/industries" as never}
-            className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.22em] uppercase text-white hover:text-white transition-colors w-fit">
+            className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.22em] uppercase text-white/70 hover:text-white transition-colors w-fit">
             <ArrowLeft size={11} /> {t('industriesTitle')}
           </Link>
 
@@ -84,7 +84,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             {ind.keyMetrics.map((m, i) => (
               <div key={i} className="flex flex-col gap-0.5">
                 <span className="font-mono font-bold text-ag-apex" style={{ fontSize: 'clamp(18px,2vw,26px)' }}>{m.value}</span>
-                <span className="font-sans text-[11px] text-white max-w-[180px] leading-snug">{getLocaleText(m.label, locale)}</span>
+                <span className="font-sans text-[11px] text-white/70 max-w-[180px] leading-snug">{getLocaleText(m.label, locale)}</span>
               </div>
             ))}
           </ScrollReveal>
@@ -161,12 +161,12 @@ export default async function IndustryDetailPage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent rounded-xl" />
 
                   {/* Numéro haut gauche */}
-                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white">
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/70">
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
                   {/* Tag haut droite */}
-                  <span className="absolute top-4 right-4 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white rounded-md whitespace-nowrap">
+                  <span className="absolute top-4 right-4 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
                     {getLocaleText(sector.tag, locale)}
                   </span>
 
@@ -178,7 +178,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                     >
                       {sectorName}
                     </h3>
-                    <p className="font-sans text-[12px] text-white leading-relaxed line-clamp-2">
+                    <p className="font-sans text-[12px] text-white/70 leading-relaxed line-clamp-2">
                       {getLocaleText(sector.desc, locale)}
                     </p>
                   </div>

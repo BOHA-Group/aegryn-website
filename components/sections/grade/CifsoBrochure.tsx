@@ -49,7 +49,7 @@ function Page({ n, total, label, children, dark = false, className = '' }: {
     >
       <div className="brochure-sheet relative min-h-[1272px]">
         <div className="px-5 sm:px-10 md:px-20 print:px-20 pt-16 pb-24 h-full">{children}</div>
-        <footer className={`absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
+        <footer className={`absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 flex items-center justify-between font-mono text-[10px] tracking-[0.18em] uppercase ${dark ? 'text-white/70 border-t border-white/10' : 'text-ag-gray-light border-t border-ag-border'}`}>
           <span>CERTIFICATION CIFSO 5000. AEGRYN.</span>
           <span>{label} {n} / {total}</span>
         </footer>
@@ -144,10 +144,10 @@ export function CifsoBrochure() {
               <h1 className="font-sans font-bold text-white text-[clamp(52px,8vw,88px)] leading-[0.95] tracking-[-0.04em] whitespace-pre-line mb-8">
                 {b('coverTitle')}
               </h1>
-              <p className="font-sans text-white text-[18px] md:text-[20px] print:text-[20px] leading-relaxed max-w-xl mb-14">
+              <p className="font-sans text-white/70 text-[18px] md:text-[20px] print:text-[20px] leading-relaxed max-w-xl mb-14">
                 {b('coverSubtitle')}
               </p>
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white">{b('coverIssuer')}</p>
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70">{b('coverIssuer')}</p>
             </div>
           </div>
          </div>
@@ -450,7 +450,7 @@ export function CifsoBrochure() {
           <div className="px-5 sm:px-10 md:px-20 print:px-20 pb-28 -mt-24 relative">
             <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-ag-apex mb-3">{num(12)}</p>
             <h2 className="font-sans font-bold text-white text-[42px] tracking-[-0.03em] leading-[1.05] mb-4">{b('s12Title')}</h2>
-            <p className="font-sans text-white text-[17px] leading-relaxed max-w-xl mb-12">{b('s12Lead')}</p>
+            <p className="font-sans text-white/70 text-[17px] leading-relaxed max-w-xl mb-12">{b('s12Lead')}</p>
             <ol className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 mb-12">
               {finalSteps.map((s, i) => (
                 <li key={s} className="flex items-center gap-4 rounded-xl border border-white/15 bg-white/5 p-5">
@@ -468,7 +468,7 @@ export function CifsoBrochure() {
               </Link>
             </div>
           </div>
-          <footer className="absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white">
+          <footer className="absolute bottom-0 left-0 right-0 px-5 sm:px-10 md:px-20 print:px-20 py-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/70">
             <span>{b('footerIssuer')}</span>
           </footer>
          </div>

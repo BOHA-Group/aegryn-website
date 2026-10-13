@@ -21,11 +21,11 @@ export default function GradeDeed() {
         <div className="rounded-2xl bg-ag-navy text-white p-8 md:p-10">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-ag-apex/15 border border-ag-apex/40 flex items-center justify-center"><FileCheck2 size={18} className="text-ag-apex" /></div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white">CIFSO 5000</p>
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70">CIFSO 5000</p>
           </div>
           <ul className="flex flex-col gap-4">
             {points.map(p => (
-              <li key={p} className="flex items-start gap-3 font-sans text-[14px] leading-snug text-white">
+              <li key={p} className="flex items-start gap-3 font-sans text-[14px] leading-snug text-white/70">
                 <Check size={15} className="text-ag-apex shrink-0 mt-0.5" /> {p}
               </li>
             ))}

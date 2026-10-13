@@ -69,7 +69,7 @@ export function PlatformArchitectureDiagram({
 
           {/* Applications — grille 3 colonnes numérotées par colonne */}
           <div className="rounded-lg flex-1 border border-white/30 bg-white/10 px-4 py-4">
-            <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mb-3 font-semibold">
+            <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mb-3 font-semibold">
               {appsLabel}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
@@ -80,8 +80,8 @@ export function PlatformArchitectureDiagram({
                   <div key={col} className="flex flex-col gap-2">
                     {apps.slice(start, end).map((a, j) => (
                       <div key={a} className="flex items-start gap-1.5">
-                        <span className="font-mono text-[10px] text-white shrink-0">{String(start + j + 1).padStart(2, '0')}</span>
-                        <span className="font-mono text-[10px] tracking-[0.04em] text-white leading-tight">{a}</span>
+                        <span className="font-mono text-[10px] text-white/70 shrink-0">{String(start + j + 1).padStart(2, '0')}</span>
+                        <span className="font-mono text-[10px] tracking-[0.04em] text-white/70 leading-tight">{a}</span>
                       </div>
                     ))}
                   </div>
@@ -93,18 +93,18 @@ export function PlatformArchitectureDiagram({
           {/* Separator */}
           <div className="hidden md:flex flex-col items-center justify-center px-1">
             <div className="w-px flex-1 bg-white/15" />
-            <span className="font-mono text-[10px] text-white whitespace-nowrap my-2">{packagedLabel}</span>
+            <span className="font-mono text-[10px] text-white/70 whitespace-nowrap my-2">{packagedLabel}</span>
             <div className="w-px flex-1 bg-white/15" />
           </div>
 
           {/* Verticals */}
           <div className="rounded-lg border border-white/25 bg-white/5 px-4 py-4 md:min-w-[130px]">
-            <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mb-3 font-semibold">
+            <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mb-3 font-semibold">
               {verticalsLabel}
             </p>
             <div className="flex md:flex-col flex-wrap gap-x-3 gap-y-1.5">
               {VERTICALS.map(v => (
-                <span key={v} className="font-mono text-[10px] tracking-[0.08em] text-white">{v}</span>
+                <span key={v} className="font-mono text-[10px] tracking-[0.08em] text-white/70">{v}</span>
               ))}
             </div>
           </div>
@@ -117,7 +117,7 @@ export function PlatformArchitectureDiagram({
             <line x1="6" y1="1" x2="6" y2="19" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5"/>
             <polyline points="3,15 6,19 9,15" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" fill="none"/>
           </svg>
-          <span className="font-mono text-[10px] tracking-[0.1em] text-white">{flowLabel}</span>
+          <span className="font-mono text-[10px] tracking-[0.1em] text-white/70">{flowLabel}</span>
         </div>
 
         {/* ── ROW 2 : Governance (transversale) + Couches core ── */}
@@ -149,7 +149,7 @@ export function PlatformArchitectureDiagram({
               {active === 'governance' && (
                 <div className="absolute left-full ml-2 top-1/2 -translate-y-1/2 z-20 w-56 border border-[#C4A882]/50 bg-ag-navy p-3 shadow-xl">
                   <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-[#C4A882] mb-1.5 font-semibold">{govTooltipLabel}</p>
-                  <p className="font-sans text-[10px] text-white leading-relaxed">{govLayer.desc}</p>
+                  <p className="font-sans text-[10px] text-white/70 leading-relaxed">{govLayer.desc}</p>
                 </div>
               )}
             </div>
@@ -186,9 +186,9 @@ export function PlatformArchitectureDiagram({
                         <p className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold" style={{ color }}>
                           {layer.title}
                         </p>
-                        {layer.tag && <p className="font-mono text-[10px] text-white mt-0.5">{layer.tag}</p>}
+                        {layer.tag && <p className="font-mono text-[10px] text-white/70 mt-0.5">{layer.tag}</p>}
                       </div>
-                      <p className="font-sans text-[10px] text-white leading-relaxed md:text-right transition-opacity duration-200"
+                      <p className="font-sans text-[10px] text-white/70 leading-relaxed md:text-right transition-opacity duration-200"
                         style={{ opacity: isOn ? 1 : 0.5 }}>
                         {layer.desc}
                       </p>

@@ -100,7 +100,7 @@ export default function ResetPasswordForm() {
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">
           {t('doneTitle')}
         </h2>
-        <p className="font-sans text-[13px] text-white">
+        <p className="font-sans text-[13px] text-white/70">
           {t('doneDesc')}
         </p>
       </div>
@@ -111,7 +111,7 @@ export default function ResetPasswordForm() {
     return (
       <div className="bg-red-900/20 border border-red-800/30 p-8 text-center flex flex-col items-center gap-4">
         <p className="font-sans font-semibold text-white text-[16px]">{t('linkErrorTitle')}</p>
-        <p className="font-sans text-[13px] text-white leading-relaxed">
+        <p className="font-sans text-[13px] text-white/70 leading-relaxed">
           {t('linkErrorDesc')}
         </p>
         <Link
@@ -127,7 +127,7 @@ export default function ResetPasswordForm() {
   if (!ready) {
     return (
       <div className="text-center py-12">
-        <p className="font-sans text-[13px] text-white">{t('checkingLink')}</p>
+        <p className="font-sans text-[13px] text-white/70">{t('checkingLink')}</p>
       </div>
     )
   }
@@ -141,7 +141,7 @@ export default function ResetPasswordForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('newPasswordLabel')}
         </label>
         <div className="relative">
@@ -157,7 +157,7 @@ export default function ResetPasswordForm() {
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>
@@ -165,7 +165,7 @@ export default function ResetPasswordForm() {
       </div>
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/70 mb-2">
           {t('confirmLabel')}
         </label>
         <input

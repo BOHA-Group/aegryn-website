@@ -37,7 +37,7 @@ export default async function TermsUsePage({ params }: Props) {
           >
             {t('label')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white">{t('version')}</p></ScrollReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70">{t('version')}</p></ScrollReveal>
         </div>
       </section>
 

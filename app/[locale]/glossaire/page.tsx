@@ -302,7 +302,7 @@ export default async function GlossairePage({ params }: Props) {
           >
             {ui.title}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white max-w-xl mb-8">
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70 max-w-xl mb-8">
             {ui.sub}
           </p>
 
@@ -312,7 +312,7 @@ export default async function GlossairePage({ params }: Props) {
               <a
                 key={l}
                 href={`#letter-${l}`}
-                className="rounded-lg font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white hover:border-ag-apex hover:text-ag-apex transition-colors"
+                className="rounded-lg font-mono text-[11px] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/20 text-white/70 hover:border-ag-apex hover:text-ag-apex transition-colors"
               >
                 {l}
               </a>

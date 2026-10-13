@@ -170,7 +170,7 @@ export function HeroMountain() {
               <span key={copy} className="flex items-center shrink-0">
                 {Array.from({ length: 4 }).map((_, i) => (
                   <span key={i} className="flex items-center shrink-0">
-                    <span className="font-sans font-medium text-[13px] text-white px-6">
+                    <span className="font-sans font-medium text-[13px] text-white/70 px-6">
                       {t('sub')}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
@@ -186,7 +186,7 @@ export function HeroMountain() {
       <div className="absolute bottom-20 right-10 z-10 hidden lg:flex flex-col items-center gap-2">
         <div className="w-px h-14 bg-white/40" />
         <span
-          className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-white"
+          className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-white/70"
           style={{ writingMode: 'vertical-rl' }}
         >
           {t('scroll')}

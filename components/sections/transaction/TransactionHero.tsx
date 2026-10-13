@@ -39,7 +39,7 @@ export function TransactionHero() {
           style={{ fontSize: 'clamp(36px,5vw,76px)' }}
           dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}
         />
-        <p ref={descRef} className="font-sans text-[16px] text-white leading-relaxed max-w-xl mb-10">
+        <p ref={descRef} className="font-sans text-[16px] text-white/70 leading-relaxed max-w-xl mb-10">
           {t('desc')}
         </p>
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
@@ -51,7 +51,7 @@ export function TransactionHero() {
           </Link>
           <Link
             href={{ pathname: '/', hash: 'franchir' }}
-            className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
+            className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white/70 font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-white/50 hover:text-white transition-all"
           >
             {t('ctaSession')}
           </Link>

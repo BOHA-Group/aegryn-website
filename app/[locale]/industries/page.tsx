@@ -49,7 +49,7 @@ export default function IndustriesPage() {
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
             {t('title')}
           </h1>
-          <p className="font-sans text-[16px] text-white max-w-xl leading-relaxed mb-12">
+          <p className="font-sans text-[16px] text-white/70 max-w-xl leading-relaxed mb-12">
             {t('desc')}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -105,19 +105,19 @@ export default function IndustriesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent rounded-xl" />
 
                   {/* Numéro haut gauche */}
-                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white">
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/70">
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
                   {/* Icône haut droite */}
                   <div className="absolute top-4 right-4 w-7 h-7 rounded-full border border-white/25 flex items-center justify-center
                     group-hover:border-ag-apex group-hover:bg-ag-apex/15 transition-all duration-300">
-                    <ArrowUpRight size={12} className="text-white group-hover:text-ag-apex transition-colors" />
+                    <ArrowUpRight size={12} className="text-white/70 group-hover:text-ag-apex transition-colors" />
                   </div>
 
                   {/* Titre + compteur secteurs */}
                   <div className="relative z-10 p-5">
-                    <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-white mb-1.5 group-hover:text-ag-apex/60 transition-colors">
+                    <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-white/70 mb-1.5 group-hover:text-ag-apex/60 transition-colors">
                       {t('sectorCount', { count: cl.sectors.length })}
                     </p>
                     <h2 className="font-sans font-bold text-white leading-[1.15] tracking-[-0.02em]"

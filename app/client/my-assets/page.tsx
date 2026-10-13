@@ -104,12 +104,12 @@ export default async function ClientMyAssetsPage() {
           <Link href="/" className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex font-bold">
             Aegryn
           </Link>
-          <span className="text-white">|</span>
-          <span className="font-sans text-[12px] text-white">Espace client</span>
+          <span className="text-white/70">|</span>
+          <span className="font-sans text-[12px] text-white/70">Espace client</span>
         </div>
         <form action="/api/client/logout" method="POST">
           <button type="submit"
-            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-white hover:text-white transition-colors">
+            className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-white/70 hover:text-white transition-colors">
             <LogOut size={12} /> Déconnexion
           </button>
         </form>

@@ -21,7 +21,7 @@ export default async function SetPasswordPage() {
           <h1 className="font-sans font-bold text-white text-[22px] tracking-tight mb-2">
             {t('title')}
           </h1>
-          <p className="font-sans text-[13px] text-white">
+          <p className="font-sans text-[13px] text-white/70">
             {t('subtitle')}
           </p>
         </div>

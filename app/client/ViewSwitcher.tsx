@@ -31,7 +31,7 @@ export default function ViewSwitcher({ hasSeller, hasPartner }: Props) {
 
   return (
     <div className="px-3 py-3 border-b border-white/10">
-      <p className="px-3 mb-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white">
+      <p className="px-3 mb-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-white/70">
         Vue active
       </p>
       <div className="flex flex-col gap-0.5">
@@ -43,7 +43,7 @@ export default function ViewSwitcher({ hasSeller, hasPartner }: Props) {
             className={`flex items-center gap-2.5 px-3 py-2 transition-colors ${
               active
                 ? 'bg-white/10 text-white'
-                : 'text-white hover:text-ag-apex hover:bg-white/5'
+                : 'text-white/70 hover:text-white hover:bg-white/5'
             }`}
           >
             <ArrowLeftRight size={12} className="shrink-0 opacity-60" />

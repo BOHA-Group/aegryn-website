@@ -46,8 +46,8 @@ export default function InternalNav({ permissions }: { permissions: string[] }) 
               className="flex items-center gap-3 px-3 py-2.5 opacity-35 cursor-not-allowed select-none"
               title="Section non activée — contactez un administrateur"
             >
-              <Lock size={13} className="text-white shrink-0" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-white truncate">
+              <Lock size={13} className="text-white/70 shrink-0" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/70 truncate">
                 {label}
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function InternalNav({ permissions }: { permissions: string[] }) 
             className={`flex items-center gap-3 px-3 py-2.5 transition-colors ${
               active
                 ? 'bg-white/10 text-white'
-                : 'text-white hover:bg-white/5 hover:text-white'
+                : 'text-white/70 hover:bg-white/5 hover:text-white'
             }`}
           >
             <Icon size={13} className="shrink-0" />

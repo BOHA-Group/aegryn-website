@@ -305,7 +305,7 @@ export default function NetworkContent() {
       <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white mb-4">Aegryn Network</p>
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">Aegryn Network</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl whitespace-pre-line"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

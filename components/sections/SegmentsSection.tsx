@@ -82,7 +82,7 @@ export function SegmentsSection() {
                   >
                     {card.title}
                   </h3>
-                  <p className="font-sans font-normal text-[12px] text-white leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                  <p className="font-sans font-normal text-[12px] text-white/70 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
                     {card.desc}
                   </p>
                 </div>

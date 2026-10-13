@@ -31,7 +31,7 @@ export default async function AiUsagePage({ params }: Props) {
           >
             {t('label')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white">{t('version')}</p>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70">{t('version')}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             {(['fr','en','de','es','it','nl'] as const).map(lang => (
               <Link
@@ -40,7 +40,7 @@ export default async function AiUsagePage({ params }: Props) {
                 className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1 border transition-colors ${
                   lang === locale
                     ? 'border-ag-apex text-ag-apex'
-                    : 'border-white/20 text-white hover:border-white/50 hover:text-white'
+                    : 'border-white/20 text-white/70 hover:border-white/50 hover:text-white'
                 }`}
               >
                 {lang.toUpperCase()}

@@ -59,7 +59,7 @@ export default async function TransactBuyersPage({ params }: Props) {
           >
             {t('heroTitle')}
           </h1>
-          <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-10">
             {t('heroDesc')}
           </p>
           <a

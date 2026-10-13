@@ -49,11 +49,11 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
     return (
       <span
         title="Soumettez d'abord votre actif pour accéder à la Data Room"
-        className="flex items-center gap-2.5 px-3 py-2 text-white cursor-not-allowed select-none"
+        className="flex items-center gap-2.5 px-3 py-2 text-white/70 cursor-not-allowed select-none"
       >
         <Icon size={13} className="shrink-0" />
         <span className="font-sans text-[12px] flex-1 leading-tight">{item.label}</span>
-        <span className="font-mono text-[8px] uppercase tracking-widest text-white border border-white/10 px-1 py-px">Requis</span>
+        <span className="font-mono text-[8px] uppercase tracking-widest text-white/70 border border-white/10 px-1 py-px">Requis</span>
       </span>
     )
   }
@@ -63,7 +63,7 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
       <Link
         href={item.href}
         prefetch={false}
-        className="flex items-center gap-2.5 px-3 py-2 text-white cursor-default select-none pointer-events-none"
+        className="flex items-center gap-2.5 px-3 py-2 text-white/70 cursor-default select-none pointer-events-none"
         aria-disabled="true"
         tabIndex={-1}
       >
@@ -81,7 +81,7 @@ function NavLink({ item, rootHref }: { item: NavItem; rootHref: string }) {
       className={`flex items-center gap-2.5 px-3 py-2 transition-colors ${
         isActive
           ? 'bg-white/10 text-white'
-          : 'text-white hover:text-ag-apex hover:bg-white/5'
+          : 'text-white/70 hover:text-white hover:bg-white/5'
       }`}
     >
       <Icon size={13} className="shrink-0" />
@@ -100,7 +100,7 @@ export default function SideNav({ groups, rootHref }: Props) {
     <nav className="flex-1 px-3 py-4 flex flex-col gap-5 overflow-y-auto">
       {groups.map((group) => (
         <div key={group.label}>
-          <p className="px-3 mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-white">
+          <p className="px-3 mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-white/70">
             {group.label}
           </p>
           <div className="flex flex-col gap-0.5">
