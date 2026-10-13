@@ -7,15 +7,16 @@ export interface VisionSegment {
   bold?: boolean
 }
 
-// Persiste tant que la session SPA vit : la frappe ne rejoue pas
-// après navigation, seulement après un reload complet du site.
+// Persiste tant que la session SPA vit : le texte deja entierement
+// revele ne rejoue pas apres navigation, seulement apres un reload.
 let played = false
 
 /**
- * « Notre vision » : frappe machine à écrire (~2x le rythme du hero home)
- * déclenchée au scroll, sans effacement une fois le texte complet.
- * Les segments marqués `bold` restent en gras pendant et après la frappe.
- * Le texte complet est rendu invisible pour réserver la hauteur finale.
+ * « Notre vision » : le texte se revele au rythme du scroll, pas au timer.
+ * La hauteur finale est reservee par un rendu invisible du texte complet ;
+ * la portion visible est proportionnelle a la progression du paragraphe
+ * dans le viewport. Monotone : le texte revele ne s'efface pas en remontant.
+ * Les segments marques `bold` restent en gras pendant et apres la revelation.
  */
 export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
   const full = segments.map((s) => s.t).join('')
@@ -30,27 +31,37 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
     if (played || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       played = true
       setChars(full.length)
+      setStarted(true)
       return
     }
-    const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) {
-        setStarted(true)
-        obs.disconnect()
-      }
-    }, { threshold: 0.35 })
-    obs.observe(el)
-    return () => obs.disconnect()
+    let raf = 0
+    const update = () => {
+      raf = 0
+      const r = el.getBoundingClientRect()
+      const vh = window.innerHeight
+      // 0% quand le haut du bloc entre en bas d'ecran,
+      // 100% quand il atteint ~30% de la hauteur du viewport.
+      const start = vh * 0.92
+      const end   = vh * 0.30
+      const p = Math.min(1, Math.max(0, (start - r.top) / (start - end)))
+      const n = Math.round(p * full.length)
+      if (n > 0) setStarted(true)
+      setChars((c) => {
+        const next = Math.max(c, n)
+        if (next >= full.length) played = true
+        return next
+      })
+    }
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update) }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (raf) cancelAnimationFrame(raf)
+    }
   }, [full.length])
-
-  useEffect(() => {
-    if (done) played = true
-    if (!started || done) return
-    const t = setTimeout(
-      () => setChars((c) => Math.min(c + 1, full.length)),
-      38 + Math.random() * 14,
-    )
-    return () => clearTimeout(t)
-  }, [started, chars, done, full.length])
 
   const renderSegments = (n: number) => {
     let off = 0
