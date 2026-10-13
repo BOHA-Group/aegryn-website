@@ -7928,16 +7928,7 @@
     "assetsCta": "Portfolio ansehen",
     "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
     "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
-    "engineeringCta": "Ingenieurwesen entdecken"
-  },
-  "buildEngineeringStrip": {
-    "label": "Asset-Ingenieurwesen",
-    "title": "Vollständiges IP-Eigentum. Zertifizierungsbereit.",
-    "chip1": "VOLLSTÄNDIGES KUNDEN-IP-EIGENTUM",
-    "chip2": "ZERTIFIZIERUNGSBEREIT",
-    "chip3": "UNABHÄNGIGE TECHNOLOGIEWAHL",
-    "chip4": "ZERTIFIZIERBARER CUSTOM CODE",
-    "cta": "Asset-Ingenieurwesen ansehen",
+    "engineeringCta": "Ingenieurwesen entdecken",
     "builtToLastQuote": "In einer Welt, in der Technologie in Monaten veraltet, ist das Entwerfen für die Dauer ein Akt des Widerstands. Jedes Asset, das wir bauen, steigert den Wert Ihrer Organisation, nicht Ihre monatliche Cloud-Rechnung."
   },
   "techStack": {

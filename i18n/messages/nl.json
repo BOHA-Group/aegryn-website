@@ -7943,16 +7943,7 @@
     "assetsCta": "Het portfolio bekijken",
     "engineeringTitle": "Maatwerksoftware\nvoor uw operaties.",
     "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant, certificeringsklaar. Een asset dat werkt voor u en uw investeerders.",
-    "engineeringCta": "Engineering ontdekken"
-  },
-  "buildEngineeringStrip": {
-    "label": "Asset Engineering",
-    "title": "Volledige IP-eigendom. Certificeringsklaar.",
-    "chip1": "VOLLEDIGE IP-EIGENDOM KLANT",
-    "chip2": "CERTIFICERINGSKLAAR",
-    "chip3": "ONAFHANKELIJKE TECHNOLOGIEKEUZE",
-    "chip4": "CERTIFICEERBARE MAATCODE",
-    "cta": "Asset engineering bekijken",
+    "engineeringCta": "Engineering ontdekken",
     "builtToLastQuote": "In een wereld waar technologie in maanden veroudert, is ontwerpen om te duren een daad van weerstand. Elk asset dat wij bouwen vergroot de waarde van uw organisatie, niet uw maandelijkse cloudrekening."
   },
   "techStack": {

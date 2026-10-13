@@ -75,6 +75,13 @@ export function BuildStrip() {
           </Link>
         </div>
       </div>
+
+      {/* Citation conviction — même format que la ligne stack de /services/build */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pb-12 md:pb-16">
+        <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
+          {t('builtToLastQuote')}
+        </p>
+      </div>
     </section>
   )
 }

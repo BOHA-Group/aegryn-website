@@ -7903,16 +7903,7 @@
     "assetsCta": "Voir le portefeuille",
     "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
-    "engineeringCta": "Découvrir l'ingénierie"
-  },
-  "buildEngineeringStrip": {
-    "label": "Ingénierie d'actifs",
-    "title": "Propriété IP totale. Prêt pour la certification.",
-    "chip1": "PROPRIÉTÉ IP TOTALE CLIENT",
-    "chip2": "PRÊT POUR LA CERTIFICATION",
-    "chip3": "INDÉPENDANCE CHOIX TECHNOLOGIQUE",
-    "chip4": "CODE SUR MESURE CERTIFIABLE",
-    "cta": "Voir la conception d'actifs",
+    "engineeringCta": "Découvrir l'ingénierie",
     "builtToLastQuote": "Dans un monde où la technologie s’obsolète en quelques mois, concevoir pour durer est un acte de résistance. Chaque actif que nous construisons augmente la valeur de votre organisation, pas votre facture mensuelle cloud."
   },
   "techStack": {

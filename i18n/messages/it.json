@@ -7928,16 +7928,7 @@
     "assetsCta": "Vedere il portafoglio",
     "engineeringTitle": "Software su misura\nper le vostre operazioni.",
     "engineeringDesc": "Imprese, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene il vostro software aziendale. Piena proprietà IP del cliente, pronto per la certificazione. Un asset che lavora per voi e i vostri investitori.",
-    "engineeringCta": "Scoprire l'ingegneria"
-  },
-  "buildEngineeringStrip": {
-    "label": "Ingegneria degli asset",
-    "title": "Piena proprietà IP. Pronto per la certificazione.",
-    "chip1": "PIENA PROPRIETÀ IP DEL CLIENTE",
-    "chip2": "PRONTO PER CERTIFICAZIONE",
-    "chip3": "INDIPENDENZA DI SCELTA TECNOLOGICA",
-    "chip4": "CODICE PERSONALIZZATO CERTIFICABILE",
-    "cta": "Vedere la progettazione di asset",
+    "engineeringCta": "Scoprire l'ingegneria",
     "builtToLastQuote": "In un mondo in cui la tecnologia diventa obsoleta in pochi mesi, progettare per durare è un atto di resistenza. Ogni asset che costruiamo aumenta il valore della vostra organizzazione, non la vostra bolletta mensile cloud."
   },
   "techStack": {

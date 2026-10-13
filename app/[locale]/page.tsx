@@ -7,7 +7,6 @@ import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { SegmentsSection }   from '@/components/sections/SegmentsSection'
 import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
-import { BuildEngineeringStrip } from '@/components/sections/BuildEngineeringStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
 import { TransactNarrative } from '@/components/sections/TransactionNarrative'
 import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
@@ -54,7 +53,6 @@ export default async function HomePage({ params }: Props) {
 
       {/* ── 07. Conception ─────────────────────────────────── */}
       <BuildStrip />
-      <BuildEngineeringStrip />
 
       {/* ── 09. Transact ───────────────────────────────────── */}
       <TransactNarrative />
