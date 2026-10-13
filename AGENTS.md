@@ -41,6 +41,22 @@
 - Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). 5 disciplines : ACCOMPAGNER, CONSTRUIRE, FRANCHIR, RECRUTER, INFORMER. 5 métiers conseil : Stratégie & Innovation, Risques & Conformité, Technologie & Souveraineté, Talent & Organisation, M&A & PMI. Ne pas répéter l'énumération à chaque page, privilégier des formulations de fond.
 - `/transact/*` et le statut `escrow_paid` : archivés/désactivés (noindex, redirects, lecture seule) — ne pas réintroduire en UI active.
 
+## Norme savoir-faire de bout en bout (fiches projets)
+
+Chaque fiche projet liste les savoir-faire mobilisés, rattachés en interne à une
+phase du cycle de vie (`SKILL_PHASES` + `skillPhases` dans `data/assets.ts` —
+non affichés en UI). 6 phases, chacune mobilisant des métiers :
+
+1. **Cadrer** (lancement) — Stratégie : concept, étude de marché, business plan · Conformité : faisabilité réglementaire, cadre juridique · Talent : gouvernance fondatrice
+2. **Concevoir** (pré-construction) — Stratégie : marque, positionnement · Technologie : architecture cible, design d'expérience · Conformité : privacy/security by design
+3. **Construire** (développement) — Technologie : développement, souveraineté, intégrations · Talent : équipe produit, recrutement clé · Conformité : documentation, contrats
+4. **Lancer** (mise en marché) — Stratégie : go-to-market, marque · Conformité : conformité opérationnelle · Talent : organisation de support
+5. **Grandir** (croissance, restructuration) — Stratégie : développement, diversification · Talent : organisation, dirigeants, rétention · Conformité : gouvernance, gestion des risques · Technologie : scalabilité
+6. **Transmettre** (acquisition, cession) — M&A & PMI : valorisation, due diligence, intégration · Conformité : data room documentaire · Talent : succession, continuité
+
+Risques & Conformité et Talent & Organisation sont des savoirs **transverses**
+mobilisables à chaque phase, pas des étapes séquentielles.
+
 ## Heroes avec image en header — hauteur standard
 
 Toutes les pages à hero photo pleine (`Image fill` sur fond navy) utilisent

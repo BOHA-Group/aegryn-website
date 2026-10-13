@@ -48,7 +48,7 @@ export default async function AssetPage({ params }: Props) {
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
-  const tCats    = await getTranslations({ locale, namespace: 'assets.items.categories' })
+  const tPort    = await getTranslations({ locale, namespace: 'assets.portfolio' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
@@ -61,7 +61,6 @@ export default async function AssetPage({ params }: Props) {
   const skills    = hasAssetI18n ? (t.raw(`assets.${assetId}.skills`) as string[]) : []
   const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
-  const categoryLabel = tCats(asset.category)
   const isLive   = !!asset.url
 
   /* Mini-covers des secteurs /industries où la capacité se transpose */
@@ -93,22 +92,17 @@ export default async function AssetPage({ params }: Props) {
         )}
         <div className="absolute inset-0 bg-linear-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
-          <div className="flex flex-wrap items-center gap-3 mb-10">
-            <span className="rounded-md font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/15 px-3 py-1">
-              {categoryLabel}
-            </span>
-            <span className="rounded-md font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/15 px-3 py-1">
-              {tItems(`${asset.id}.badge`)}
-            </span>
-          </div>
-
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+            {tPort('label')}
+          </p>
           <h1
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-6"
-            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
+            className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6 text-balance"
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
             {asset.name}
           </h1>
-          <p className="font-sans font-semibold text-[16px] text-white/70 leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[16px] text-white/70 max-w-2xl leading-relaxed mb-10">
             {tItems(`${asset.id}.tagline`)}
           </p>
 
@@ -117,10 +111,10 @@ export default async function AssetPage({ params }: Props) {
               href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 font-semibold hover:bg-ag-apex/90 transition-colors"
             >
               {t('visit')} {asset.name}
-              <ArrowUpRight size={14} />
+              <ArrowUpRight size={12} />
             </a>
           )}
         </div>
