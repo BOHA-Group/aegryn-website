@@ -37,12 +37,16 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
       raf = 0
       const r = el.getBoundingClientRect()
       const vh = window.innerHeight
-      // 0% quand le haut du bloc entre en bas d'ecran,
-      // 100% quand il approche du haut du viewport : la frappe
-      // s'etale sur presque toute la traversee de l'ecran.
-      const start = vh * 0.95
-      const end   = vh * 0.08
-      const p = Math.min(1, Math.max(0, (start - r.top) / (start - end)))
+      const sy = window.scrollY
+      // La frappe demarre quand le haut du bloc entre en bas d'ecran et se
+      // termine quand la section suivante (ex. « Notre ADN ») atteint le bas
+      // du viewport : le texte est complet avant que la suite n'apparaisse.
+      const next = el.closest('section')?.nextElementSibling
+      const startY = r.top + sy - vh * 0.95
+      const endY = next
+        ? next.getBoundingClientRect().top + sy - vh
+        : r.top + sy - vh * 0.45
+      const p = Math.min(1, Math.max(0, (sy - startY) / Math.max(1, endY - startY)))
       const n = Math.round(p * full.length)
       setStarted(p > 0)
       setChars(n)
