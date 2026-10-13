@@ -5696,36 +5696,6 @@
       },
       "note": "Aegryn maintenance ensures the tool stays up to date, secure, and can be taken over without us at any time."
     },
-    "fees": {
-      "label": "Pricing",
-      "title": "Transparent pricing. No surprises.",
-      "items": [
-        {
-          "title": "Scoping (included)",
-          "desc": "1 to 2 weeks. Signed specification. Build price defined and signed. No commitment before the price agreement is signed.",
-          "format": "Included in total price"
-        },
-        {
-          "title": "Design (locked price)",
-          "desc": "Price locked at scoping. No overruns. No time & materials. If scope changes: amendment signed before execution. Quick Build from CHF 15,000 excl. VAT (targeted automation), dashboard or scoring tool from CHF 25,000 excl. VAT, integrated business workflow from CHF 40,000 excl. VAT.",
-          "format": "Price defined at scoping"
-        },
-        {
-          "title": "Maintenance (subscription)",
-          "desc": "Monthly retainer or per deliverable. SLA defined in contract. Cancellable at any time with 30 days notice.",
-          "format": "Monthly retainer defined in contract"
-        }
-      ],
-      "cta": "Start the process",
-      "exitBanner": {
-        "cta": "Learn more about transfer support",
-        "href": "/franchir/transmission",
-        "text": "Transfer is an option, never an obligation. If you wish to transfer one day, early stage or at maturity, the tool is designed for it. Aegryn support is available when the time comes."
-      },
-      "href": "/en/build",
-      "secondary": "Learn more",
-      "secondaryHref": "/en/build"
-    },
     "exitBanner": {
       "text": "Transfer is an option, never an obligation. If you wish to transfer one day, early stage or at maturity, the tool is designed for it. Aegryn support is available when the time comes.",
       "cta": "Learn more about transfer support",
@@ -7146,7 +7116,7 @@
           "account"
         ],
         "q": "Do you build custom assets?",
-        "a": "Yes, Aegryn builds custom tech assets (SaaS, platforms, tools) for entrepreneurs and institutions. Fees defined and signed at the discovery phase, custom code only (no no-code), IP fully transferred to the client, certification-ready from day 1. Indicative ranges: B2B SaaS from €25,000 excl. VAT, B2C mobile app from €35,000, native AI product from €40,000. Quick builds delivered in 4 to 8 weeks. Details at /services/build."
+        "a": "Yes, Aegryn builds bespoke software solutions for SMEs and groups. We scope the need, decide with you whether to buy, integrate or build, then manage delivery through to go-live. Custom code only (no no-code), IP fully transferred to the client, hosting in Switzerland or the EU. Details at /services/build."
       },
       {
         "id": "magazine",

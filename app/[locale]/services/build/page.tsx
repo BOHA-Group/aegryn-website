@@ -52,7 +52,7 @@ export default async function BuildServicePage({ params }: Props) {
   const marketComparisonProcess = t.raw('marketComparison.processItems') as string[]
   const certBenefits            = t.raw('certificationBenefits.items')  as { title: string; desc: string }[]
   const processSteps            = t.raw('process.steps')                as { num: string; title: string; desc: string }[]
-  const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
+
   const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
@@ -449,30 +449,6 @@ export default async function BuildServicePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray-light leading-relaxed border-l-2 border-ag-apex pl-4 max-w-2xl">
             {t('maintenance.note')}
           </p>
-        </ScrollReveal>
-      </section>
-
-      {/* ── Section 8 : Honoraires ───────────────────────────────────── */}
-      <section className="border-b border-ag-border">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('fees.label')}
-          </p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {t('fees.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
-            {feeItems.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-3">
-                <h3 className="font-sans font-bold text-ag-black text-[16px]">{item.title}</h3>
-                <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">{item.desc}</p>
-                <p className="font-mono text-[10px] tracking-[0.14em] text-ag-gray-light">{item.format}</p>
-              </div>
-            ))}
-          </div>
         </ScrollReveal>
       </section>
 

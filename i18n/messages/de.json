@@ -5260,7 +5260,7 @@
   "build_service": {
     "meta": {
       "title": "Massgeschneiderte Lösungen: Planung, Umsetzung, Betrieb | Aegryn",
-      "desc": "Durchgängige Umsetzung Ihrer digitalen Projekte: Cadrage, Entscheidung kaufen/integrieren/bauen, Realisierung, Inbetriebnahme, Betrieb. Hosting in der Schweiz oder der EU."
+      "desc": "Durchgängige Umsetzung Ihrer digitalen Projekte: Bedarfsklärung, Entscheidung kaufen/integrieren/bauen, Realisierung, Inbetriebnahme, Betrieb. Hosting in der Schweiz oder der EU."
     },
     "label": "Engineering: Maßgeschneiderte Software",
     "title": "Maßgeschneiderte Software\nfür Ihre Abläufe.",
@@ -5288,7 +5288,7 @@
           "badge": "BUILD TO LAST",
           "subtitle": "Dauerhaftes proprietäres Asset",
           "title": "Ein Tool, das hält.",
-          "desc": "Vollständiges Eigentum, dokumentierte Architektur, Code, den jedes Team übernehmen kann. Für Systeme, die Ihr Geschäft tragen. Preis bei der Cadrage fixiert."
+          "desc": "Vollständiges Eigentum, dokumentierte Architektur, Code, den jedes Team übernehmen kann. Für Systeme, die Ihr Geschäft tragen. Preis bei der Bedarfsklärung fixiert."
         },
         {
           "key": "bto",
@@ -5522,8 +5522,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Preis bei der Cadrage fixiert.",
-          "desc": "Der Preis wird am Ende der Cadrage definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
+          "title": "Preis bei der Bedarfsklärung fixiert.",
+          "desc": "Der Preis wird am Ende der Bedarfsklärung definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
         },
         {
           "num": "02",
@@ -5551,14 +5551,14 @@
         "Keine Garantie auf das Endergebnis"
       ],
       "aegrynItems": [
-        "Preis bei der Cadrage fixiert",
+        "Preis bei der Bedarfsklärung fixiert",
         "Messbare Meilensteine pro Sprint",
         "Umfangsüberschreitung von Aegryn absorbiert",
         "Vollständige technische Dokumentation enthalten",
         "Vollständige Dokumentation bei Lieferung"
       ],
       "processItems": [
-        "Cadrage 1 bis 2 Wochen inklusive",
+        "Bedarfsklärung 1 bis 2 Wochen inklusive",
         "Unterzeichnetes Lastenheft",
         "Preis vor erstem Commit fixiert",
         "Nachtrag unterzeichnet bei Änderungen",
@@ -5640,7 +5640,7 @@
       "steps": [
         {
           "num": "01",
-          "title": "Cadrage & Entscheidung",
+          "title": "Bedarfsklärung & Entscheidung",
           "desc": "Bedarf, Umfang, Entscheidung zwischen Kaufen, Integrieren oder Bauen, Exit-Plan. Ergebnis: unterzeichnetes Lastenheft und Preis. Dauer: 1 bis 2 Wochen, im Preis enthalten."
         },
         {
@@ -5680,36 +5680,6 @@
         "format": "Monatliche Pauschale oder Sprint-Lieferung"
       },
       "note": "Die Aegryn-Wartung stellt sicher, dass das Tool jederzeit aktuell, sicher und ohne uns übernehmbar bleibt."
-    },
-    "fees": {
-      "label": "Preise",
-      "title": "Transparente Preise. Keine Überraschungen.",
-      "items": [
-        {
-          "title": "Cadrage (inklusive)",
-          "desc": "1 bis 2 Wochen. Unterzeichnetes Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Preisvereinbarung.",
-          "format": "Im Gesamtpreis enthalten"
-        },
-        {
-          "title": "Konzeption (fixierter Preis)",
-          "desc": "Preis bei der Cadrage fixiert. Keine Überschreitungen. Kein Zeit & Material. Bei Änderungen: Nachtrag vor Ausführung unterzeichnet. Quick Build ab CHF 15'000 netto (gezielte Automatisierung), Dashboard oder Scoring-Tool ab CHF 25'000 netto, integrierter Geschäftsworkflow ab CHF 40'000 netto.",
-          "format": "Preis bei der Cadrage definiert"
-        },
-        {
-          "title": "Wartung (Abonnement)",
-          "desc": "Monatliche Pauschale oder pro Lieferung. SLA im Vertrag. Kündigung jederzeit mit 30 Tagen Vorlaufzeit.",
-          "format": "Monatliche Pauschale im Vertrag"
-        }
-      ],
-      "cta": "Den Prozess starten",
-      "exitBanner": {
-        "cta": "Mehr über die Übertragungsbegleitung",
-        "href": "/franchir/transmission",
-        "text": "Die Übertragung ist eine Option, niemals eine Pflicht. Falls Sie eines Tages übertragen möchten, früh oder bei Reife, ist das Tool dafür konzipiert. Die Aegryn-Begleitung steht bereit, wenn der Zeitpunkt gekommen ist."
-      },
-      "href": "/de/build",
-      "secondary": "Mehr erfahren",
-      "secondaryHref": "/de/build"
     },
     "exitBanner": {
       "text": "Die Übertragung ist eine Option, niemals eine Pflicht. Falls Sie eines Tages übertragen möchten, früh oder bei Reife, ist das Tool dafür konzipiert. Die Aegryn-Begleitung steht bereit, wenn der Zeitpunkt gekommen ist.",
@@ -7131,7 +7101,7 @@
           "account"
         ],
         "q": "Bauen Sie massgeschneiderte Assets?",
-        "a": "Ja, Aegryn entwickelt massgeschneiderte Tech-Assets (SaaS, Plattformen, Tools) für Unternehmer und Institutionen. Honorare werden in der Discovery-Phase definiert und unterzeichnet, ausschliesslich Custom Code (kein No-Code), IP vollständig an den Kunden übertragen, ab Tag 1 zertifizierungsfähig. Richtwerte: B2B-SaaS ab 25 000 € zzgl. MwSt., B2C-Mobile-App ab 35 000 €, natives KI-Produkt ab 40 000 €. Quick Builds in 4 bis 8 Wochen geliefert. Details unter /services/build."
+        "a": "Ja, Aegryn entwickelt massgeschneiderte Softwarelösungen für KMU und Konzerne. Wir klären den Bedarf, entscheiden mit Ihnen zwischen kaufen, integrieren oder bauen und steuern die Umsetzung bis zur Inbetriebnahme. Ausschliesslich Custom Code (kein No-Code), IP vollständig an den Kunden übertragen, Hosting in der Schweiz oder der EU. Details unter /services/build."
       },
       {
         "id": "magazine",

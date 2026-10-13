@@ -5259,8 +5259,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Soluzioni su misura: cadrage, realizzazione, gestione | Aegryn",
-      "desc": "Pilotaggio end-to-end dei vostri progetti digitali: cadrage, arbitraggio acquistare/integrare/costruire, realizzazione, messa in servizio, gestione. Hosting in Svizzera o nell'UE."
+      "title": "Soluzioni su misura: perimetro, realizzazione, gestione | Aegryn",
+      "desc": "Pilotaggio end-to-end dei vostri progetti digitali: definizione del perimetro, scelta acquistare/integrare/costruire, realizzazione, messa in servizio, gestione. Hosting in Svizzera o nell'UE."
     },
     "label": "Engineering: Software su misura",
     "title": "Software su misura\nper le vostre operazioni.",
@@ -5288,7 +5288,7 @@
           "badge": "BUILD TO LAST",
           "subtitle": "Asset proprietario durevole",
           "title": "Uno strumento costruito per durare.",
-          "desc": "Proprietà totale, architettura documentata, codice che qualsiasi team può riprendere. Per i sistemi che sostengono la vostra attività. Prezzo bloccato al cadrage."
+          "desc": "Proprietà totale, architettura documentata, codice che qualsiasi team può riprendere. Per i sistemi che sostengono la vostra attività. Prezzo bloccato alla definizione del perimetro."
         },
         {
           "key": "bto",
@@ -5522,8 +5522,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Prezzo bloccato al cadrage.",
-          "desc": "Il prezzo viene definito e firmato al termine del cadrage, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
+          "title": "Prezzo bloccato alla definizione del perimetro.",
+          "desc": "Il prezzo viene definito e firmato al termine della definizione del perimetro, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
         },
         {
           "num": "02",
@@ -5551,14 +5551,14 @@
         "Nessuna garanzia sul risultato finale"
       ],
       "aegrynItems": [
-        "Prezzo bloccato al cadrage",
+        "Prezzo bloccato alla definizione del perimetro",
         "Milestone misurabili per sprint",
         "Sforamento scope assorbito da Aegryn",
         "Documentazione tecnica completa inclusa",
         "Documentazione completa alla consegna"
       ],
       "processItems": [
-        "Cadrage 1-2 settimane incluso",
+        "Definizione del perimetro 1-2 settimane inclusa",
         "Capitolato firmato",
         "Prezzo bloccato prima del primo commit",
         "Addendum firmato se lo scope cambia",
@@ -5640,7 +5640,7 @@
       "steps": [
         {
           "num": "01",
-          "title": "Cadrage & arbitraggio",
+          "title": "Perimetro & scelta",
           "desc": "Bisogno, perimetro, scelta tra acquistare, integrare o costruire, piano di uscita. Risultato: capitolato e prezzo firmati. Durata: 1-2 settimane, incluso nel prezzo."
         },
         {
@@ -5680,36 +5680,6 @@
         "format": "Canone mensile o per sprint"
       },
       "note": "La manutenzione Aegryn garantisce che lo strumento resti aggiornato, sicuro e ripreso senza di noi in qualsiasi momento."
-    },
-    "fees": {
-      "label": "Prezzi",
-      "title": "Prezzi trasparenti. Nessuna sorpresa.",
-      "items": [
-        {
-          "title": "Cadrage (incluso)",
-          "desc": "1-2 settimane. Capitolato firmato. Prezzo di build definito e firmato. Nessun impegno prima della firma dell'accordo.",
-          "format": "Incluso nel prezzo totale"
-        },
-        {
-          "title": "Progettazione (prezzo bloccato)",
-          "desc": "Prezzo bloccato al cadrage. Nessuno sforamento. Nessun tempo e materiale. Se lo scope cambia: addendum firmato prima dell'esecuzione. Quick Build da 15'000 CHF IVA esclusa (automazione mirata), dashboard o strumento di scoring da 25'000 CHF IVA esclusa, workflow aziendale integrato da 40'000 CHF IVA esclusa.",
-          "format": "Prezzo definito al cadrage"
-        },
-        {
-          "title": "Manutenzione (abbonamento)",
-          "desc": "Canone mensile o per consegna. SLA nel contratto. Disdetta in qualsiasi momento con 30 giorni di preavviso.",
-          "format": "Canone mensile definito nel contratto"
-        }
-      ],
-      "cta": "Avviare il processo",
-      "exitBanner": {
-        "cta": "Scoprire l'accompagnamento al trasferimento",
-        "href": "/franchir/transmission",
-        "text": "Il trasferimento è un'opzione, mai un obbligo. Se desiderate trasferire un giorno, early stage o a maturità, lo strumento è concepito per questo. L'accompagnamento Aegryn è disponibile quando sarà il momento."
-      },
-      "href": "/it/build",
-      "secondary": "Scopri di più",
-      "secondaryHref": "/it/build"
     },
     "exitBanner": {
       "text": "Il trasferimento è un'opzione, mai un obbligo. Se desiderate trasferire un giorno, early stage o a maturità, lo strumento è concepito per questo. L'accompagnamento Aegryn è disponibile quando sarà il momento.",
@@ -7131,7 +7101,7 @@
           "account"
         ],
         "q": "Costruite asset su misura?",
-        "a": "Sì, Aegryn costruisce asset tech su misura (SaaS, piattaforme, strumenti) per imprenditori e istituzioni. Onorari definiti e firmati nella fase di discovery, solo codice custom (niente no-code), IP trasferita integralmente al cliente, pronta per la certificazione dal giorno 1. Fasce indicative: SaaS B2B da 25 000 € IVA esclusa, app mobile B2C da 35 000 €, prodotto IA nativo da 40 000 €. Quick build consegnati in 4-8 settimane. Dettagli su /services/build."
+        "a": "Sì, Aegryn costruisce soluzioni software su misura per PMI e gruppi. Definiamo il perimetro, decidiamo con voi se acquistare, integrare o costruire, e pilotiamo la realizzazione fino alla messa in servizio. Solo codice custom (niente no-code), IP trasferita integralmente al cliente, hosting in Svizzera o nell'UE. Dettagli su /services/build."
       },
       {
         "id": "magazine",

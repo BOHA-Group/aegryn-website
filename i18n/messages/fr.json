@@ -5656,36 +5656,6 @@
       },
       "note": "La maintenance Aegryn garantit que l'outil reste à jour, sécurisé et repris sans nous à tout moment."
     },
-    "fees": {
-      "label": "Prix",
-      "title": "Prix transparents. Aucune surprise.",
-      "items": [
-        {
-          "title": "Cadrage (inclus)",
-          "desc": "1 à 2 semaines. Cahier des charges signé. Prix de build défini et signé. Aucun engagement avant signature du forfait.",
-          "format": "Inclus dans le forfait total"
-        },
-        {
-          "title": "Conception (prix verrouillé)",
-          "desc": "Prix verrouillé au cadrage. Aucun dépassement. Aucune régie. Si le périmètre évolue : avenant signé avant exécution. Quick Build à partir de 15 000 CHF HT (automatisation ciblée), dashboard ou outil de scoring à partir de 25 000 CHF HT, workflow métier intégré à partir de 40 000 CHF HT.",
-          "format": "Prix verrouillé au cadrage"
-        },
-        {
-          "title": "Maintenance (abonnement)",
-          "desc": "Forfait mensuel ou au livrable. SLA défini au contrat. Résiliation à tout moment avec 30 jours de préavis.",
-          "format": "Forfait mensuel défini au contrat"
-        }
-      ],
-      "exitBanner": {
-        "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'outil est conçu pour l'être. L'accompagnement Aegryn est disponible le moment venu.",
-        "cta": "En savoir plus sur l'accompagnement transmission",
-        "href": "/franchir/transmission"
-      },
-      "cta": "Démarrer le processus",
-      "href": "/contact",
-      "secondary": "Voir nos actifs propriétaires",
-      "secondaryHref": "/assets"
-    },
     "exitBanner": {
       "text": "La transmission est une option, jamais une obligation. Si vous souhaitez transmettre un jour, early stage ou à maturité, l'outil est conçu pour l'être. L'accompagnement Aegryn est disponible le moment venu.",
       "cta": "En savoir plus sur l'accompagnement transmission",
@@ -7106,7 +7076,7 @@
           "account"
         ],
         "q": "Construisez-vous des actifs sur mesure ?",
-        "a": "Oui, Aegryn conçoit des actifs tech sur mesure (SaaS, plateformes, outils) pour entrepreneurs et institutions. Honoraires définis et signés dès la phase de découverte, code custom uniquement (pas de no-code), IP transférée intégralement au client, certification-ready dès le jour 1. Fourchettes indicatives : SaaS B2B à partir de 25 000 € HT, app mobile B2C dès 35 000 € HT, produit IA natif dès 40 000 € HT. Quick build livré en 4 à 8 semaines. Détails sur /services/build."
+        "a": "Oui, Aegryn conçoit des solutions logicielles sur mesure pour PME et groupes. Nous cadrons le besoin, choisissons avec vous entre acheter, intégrer ou construire, puis pilotons la réalisation jusqu'à la mise en service. Code custom uniquement (pas de no-code), IP transférée intégralement au client, hébergement en Suisse ou dans l'UE. Détails sur /services/build."
       },
       {
         "id": "magazine",

@@ -5259,8 +5259,8 @@
   },
   "build_service": {
     "meta": {
-      "title": "Soluciones a medida: cadrage, realización, explotación | Aegryn",
-      "desc": "Pilotaje de extremo a extremo de sus proyectos digitales: cadrage, arbitraje comprar/integrar/construir, realización, puesta en marcha, explotación. Alojamiento en Suiza o en la UE."
+      "title": "Soluciones a medida: definición, realización, explotación | Aegryn",
+      "desc": "Pilotaje de extremo a extremo de sus proyectos digitales: definición del alcance, decisión comprar/integrar/construir, realización, puesta en marcha, explotación. Alojamiento en Suiza o en la UE."
     },
     "label": "Ingeniería: Software a medida",
     "title": "Software a medida\npara sus operaciones.",
@@ -5288,7 +5288,7 @@
           "badge": "BUILD TO LAST",
           "subtitle": "Activo propietario duradero",
           "title": "Una herramienta diseñada para durar.",
-          "desc": "Propiedad total, arquitectura documentada, código que cualquier equipo puede retomar. Para los sistemas que sostienen su actividad. Precio fijado en el cadrage."
+          "desc": "Propiedad total, arquitectura documentada, código que cualquier equipo puede retomar. Para los sistemas que sostienen su actividad. Precio fijado en la definición del alcance."
         },
         {
           "key": "bto",
@@ -5522,8 +5522,8 @@
       "items": [
         {
           "num": "01",
-          "title": "Precio fijado en el cadrage.",
-          "desc": "El precio se define y firma al final del cadrage, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
+          "title": "Precio fijado en la definición del alcance.",
+          "desc": "El precio se define y firma al final de la definición del alcance, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
         },
         {
           "num": "02",
@@ -5551,14 +5551,14 @@
         "Sin garantía sobre el resultado final"
       ],
       "aegrynItems": [
-        "Precio fijado en el cadrage",
+        "Precio fijado en la definición del alcance",
         "Hitos medibles por sprint",
         "Desviación de alcance absorbida por Aegryn",
         "Documentación técnica completa incluida",
         "Documentación completa en la entrega"
       ],
       "processItems": [
-        "Cadrage 1 a 2 semanas incluido",
+        "Definición del alcance 1 a 2 semanas incluida",
         "Pliego de condiciones firmado",
         "Precio bloqueado antes del primer commit",
         "Anexo firmado si el alcance cambia",
@@ -5640,7 +5640,7 @@
       "steps": [
         {
           "num": "01",
-          "title": "Cadrage & arbitraje",
+          "title": "Alcance & decisión",
           "desc": "Necesidad, alcance, elección entre comprar, integrar o construir, plan de salida. Resultado: pliego de condiciones y precio firmados. Duración: 1 a 2 semanas, incluido en el precio."
         },
         {
@@ -5680,36 +5680,6 @@
         "format": "Tarifa mensual o por sprint"
       },
       "note": "El mantenimiento Aegryn garantiza que la herramienta se mantenga actualizada, segura y pueda ser retomada sin nosotros en cualquier momento."
-    },
-    "fees": {
-      "label": "Precios",
-      "title": "Precios transparentes. Sin sorpresas.",
-      "items": [
-        {
-          "title": "Cadrage (incluido)",
-          "desc": "1 a 2 semanas. Pliego de condiciones firmado. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
-          "format": "Incluido en el precio total"
-        },
-        {
-          "title": "Concepción (precio bloqueado)",
-          "desc": "Precio bloqueado en el cadrage. Sin desviaciones. Sin tiempo y material. Si el alcance cambia: anexo firmado antes de la ejecución. Quick Build desde 15.000 CHF sin IVA (automatización puntual), dashboard o herramienta de scoring desde 25.000 CHF sin IVA, flujo de trabajo integrado desde 40.000 CHF sin IVA.",
-          "format": "Precio definido en el cadrage"
-        },
-        {
-          "title": "Mantenimiento (suscripción)",
-          "desc": "Tarifa mensual o por entregable. SLA en contrato. Cancelable en cualquier momento con 30 días de preaviso.",
-          "format": "Tarifa mensual definida en contrato"
-        }
-      ],
-      "cta": "Iniciar el proceso",
-      "exitBanner": {
-        "cta": "Más información sobre el acompañamiento de transmisión",
-        "href": "/franchir/transmission",
-        "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, la herramienta está concebida para ello. El acompañamiento Aegryn está disponible cuando llegue el momento."
-      },
-      "href": "/es/build",
-      "secondary": "Más información",
-      "secondaryHref": "/es/build"
     },
     "exitBanner": {
       "text": "La transmisión es una opción, nunca una obligación. Si desea transmitir un día, en fase inicial o en madurez, la herramienta está concebida para ello. El acompañamiento Aegryn está disponible cuando llegue el momento.",
@@ -7131,7 +7101,7 @@
           "account"
         ],
         "q": "¿Construyen activos a medida?",
-        "a": "Sí, Aegryn construye activos tech a medida (SaaS, plataformas, herramientas) para emprendedores e instituciones. Honorarios definidos y firmados en la fase de discovery, solo código a medida (sin no-code), IP transferida íntegramente al cliente, certificable desde el día 1. Rangos indicativos: SaaS B2B desde 25 000 € sin IVA, app móvil B2C desde 35 000 €, producto IA nativo desde 40 000 €. Quick builds entregados en 4 a 8 semanas. Detalles en /services/build."
+        "a": "Sí, Aegryn construye soluciones de software a medida para pymes y grupos. Definimos el alcance, decidimos con usted entre comprar, integrar o construir, y pilotamos la realización hasta la puesta en marcha. Solo código a medida (sin no-code), IP transferida íntegramente al cliente, alojamiento en Suiza o en la UE. Detalles en /services/build."
       },
       {
         "id": "magazine",

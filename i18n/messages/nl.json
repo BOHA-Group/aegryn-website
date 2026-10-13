@@ -5696,36 +5696,6 @@
       },
       "note": "Aegryn-onderhoud garandeert dat de tool altijd up-to-date, veilig en zonder ons overneembaar blijft."
     },
-    "fees": {
-      "label": "Prijzen",
-      "title": "Transparante prijzen. Geen verrassingen.",
-      "items": [
-        {
-          "title": "Kaderstelling (inbegrepen)",
-          "desc": "1 tot 2 weken. Ondertekend bestek. Buildprijs bepaald en ondertekend. Geen verbintenis vóór ondertekening van het pakket.",
-          "format": "Inbegrepen in het totale pakket"
-        },
-        {
-          "title": "Ontwikkeling (prijs vastgelegd)",
-          "desc": "Prijs vastgelegd bij kaderstelling. Geen overschrijding. Geen regie. Als de scope wijzigt: addendum ondertekend vóór uitvoering. Quick Build vanaf 15.000 CHF excl. btw (gerichte automatisering), dashboard of scoringtool vanaf 25.000 CHF excl. btw, geïntegreerde bedrijfsworkflow vanaf 40.000 CHF excl. btw.",
-          "format": "Prijs bepaald bij kaderstelling"
-        },
-        {
-          "title": "Onderhoud (abonnement)",
-          "desc": "Maandelijks abonnement of per deliverable. SLA bepaald in het contract. Opzegging op elk moment met 30 dagen opzegtermijn.",
-          "format": "Maandelijks abonnement bepaald in het contract"
-        }
-      ],
-      "exitBanner": {
-        "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de tool daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar wanneer het zover is.",
-        "cta": "Meer over de overdrachtsbegeleiding",
-        "href": "/franchir/transmission"
-      },
-      "cta": "Het proces starten",
-      "href": "/contact",
-      "secondary": "Onze eigen assets bekijken",
-      "secondaryHref": "/assets"
-    },
     "exitBanner": {
       "text": "Overdracht is een optie, nooit een verplichting. Als u ooit wilt overdragen, early stage of op volwassenheid, is de tool daarvoor ontworpen. De Aegryn-begeleiding is beschikbaar wanneer het zover is.",
       "cta": "Meer over de overdrachtsbegeleiding",
@@ -7146,7 +7116,7 @@
           "account"
         ],
         "q": "Bouwen jullie maatwerk-assets?",
-        "a": "Ja, Aegryn bouwt tech-assets op maat (SaaS, platformen, tools) voor ondernemers en instituties. Honoraria gedefinieerd en ondertekend in de discovery-fase, uitsluitend custom code (geen no-code), IP volledig overgedragen aan de klant, certificeerbaar vanaf dag 1. Richtprijzen: B2B SaaS vanaf € 25.000 excl. btw, B2C mobiele app vanaf € 35.000, natief AI-product vanaf € 40.000. Quick builds geleverd in 4 tot 8 weken. Details op /services/build."
+        "a": "Ja, Aegryn bouwt maatwerk softwareoplossingen voor het mkb en groepen. We stellen het kader vast, kiezen samen tussen kopen, integreren of bouwen, en sturen de realisatie tot de ingebruikname. Uitsluitend custom code (geen no-code), IP volledig overgedragen aan de klant, hosting in Zwitserland of de EU. Details op /services/build."
       },
       {
         "id": "magazine",
