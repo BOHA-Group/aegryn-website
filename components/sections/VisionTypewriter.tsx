@@ -15,7 +15,8 @@ let played = false
  * « Notre vision » : le texte se revele au rythme du scroll, pas au timer.
  * La hauteur finale est reservee par un rendu invisible du texte complet ;
  * la portion visible est proportionnelle a la progression du paragraphe
- * dans le viewport. Monotone : le texte revele ne s'efface pas en remontant.
+ * dans le viewport. Bidirectionnel : remonter efface le texte, comme une
+ * frappe a l'envers. Le curseur clignote tant que le texte est incomplet.
  * Les segments marques `bold` restent en gras pendant et apres la revelation.
  */
 export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
@@ -45,12 +46,9 @@ export function VisionTypewriter({ segments }: { segments: VisionSegment[] }) {
       const end   = vh * 0.30
       const p = Math.min(1, Math.max(0, (start - r.top) / (start - end)))
       const n = Math.round(p * full.length)
-      if (n > 0) setStarted(true)
-      setChars((c) => {
-        const next = Math.max(c, n)
-        if (next >= full.length) played = true
-        return next
-      })
+      setStarted(p > 0)
+      if (n >= full.length) played = true
+      setChars(n)
     }
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(update) }
     update()
