@@ -7923,11 +7923,9 @@
   },
   "buildStrip": {
     "label": "Aufbauen",
-    "assetsLabel": "Eigene Assets",
     "assetsTitle": "Ein Portfolio eigener\nTech-Assets.",
     "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist zertifiziert, dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
     "assetsCta": "Portfolio ansehen",
-    "engineeringLabel": "Asset-Ingenieurwesen",
     "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
     "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum, zertifizierungsbereit. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
     "engineeringCta": "Ingenieurwesen entdecken"

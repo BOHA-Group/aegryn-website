@@ -7938,11 +7938,9 @@
   },
   "buildStrip": {
     "label": "Build",
-    "assetsLabel": "Proprietary Assets",
     "assetsTitle": "A portfolio of proprietary\ntech assets.",
     "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. Each asset is certified, documented and operated under real conditions. Software built for the group's operations, available to the market.",
     "assetsCta": "View the portfolio",
-    "engineeringLabel": "Asset Engineering",
     "engineeringTitle": "Custom software\nfor your operations.",
     "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Full client IP ownership, certification-ready. An asset that works for you and your investors.",
     "engineeringCta": "Discover Engineering"

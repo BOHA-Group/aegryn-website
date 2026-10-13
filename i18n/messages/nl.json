@@ -7938,11 +7938,9 @@
   },
   "buildStrip": {
     "label": "Build",
-    "assetsLabel": "Eigen activa",
     "assetsTitle": "Een portfolio van eigen\ntech-activa.",
     "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, marketplaces, AI-tools. Elk actief is gecertificeerd, gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
     "assetsCta": "Het portfolio bekijken",
-    "engineeringLabel": "Asset Engineering",
     "engineeringTitle": "Maatwerksoftware\nvoor uw operaties.",
     "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant, certificeringsklaar. Een asset dat werkt voor u en uw investeerders.",
     "engineeringCta": "Engineering ontdekken"

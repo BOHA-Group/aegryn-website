@@ -7923,11 +7923,9 @@
   },
   "buildStrip": {
     "label": "Construir",
-    "assetsLabel": "Activos propietarios",
     "assetsTitle": "Una cartera de activos\ntech propietarios.",
     "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. Cada activo está certificado, documentado y operado en condiciones reales. Software concebido para las operaciones del grupo y abierto al mercado.",
     "assetsCta": "Ver la cartera",
-    "engineeringLabel": "Ingeniería de activos",
     "engineeringTitle": "Software a medida\npara sus operaciones.",
     "engineeringDesc": "Empresas, fondos de inversión, instituciones: Aegryn diseña, despliega y mantiene su software empresarial. Plena propiedad IP del cliente, listo para certificación. Un activo que trabaja para usted y sus inversores.",
     "engineeringCta": "Descubrir ingeniería"

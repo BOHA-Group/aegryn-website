@@ -7898,11 +7898,9 @@
   },
   "buildStrip": {
     "label": "Conception",
-    "assetsLabel": "Actifs propriétaires",
     "assetsTitle": "Un portefeuille\nd'actifs tech propriétaires.",
     "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Voir le portefeuille",
-    "engineeringLabel": "Ingénierie d'actifs",
     "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
     "engineeringCta": "Découvrir l'ingénierie"

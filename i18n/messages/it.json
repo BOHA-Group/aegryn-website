@@ -7923,11 +7923,9 @@
   },
   "buildStrip": {
     "label": "Costruire",
-    "assetsLabel": "Asset proprietari",
     "assetsTitle": "Un portafoglio di asset\ntech proprietari.",
     "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Ogni asset è certificato, documentato e gestito in condizioni reali. Software progettato per le operazioni del gruppo e aperto al mercato.",
     "assetsCta": "Vedere il portafoglio",
-    "engineeringLabel": "Ingegneria degli asset",
     "engineeringTitle": "Software su misura\nper le vostre operazioni.",
     "engineeringDesc": "Imprese, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene il vostro software aziendale. Piena proprietà IP del cliente, pronto per la certificazione. Un asset che lavora per voi e i vostri investitori.",
     "engineeringCta": "Scoprire l'ingegneria"
