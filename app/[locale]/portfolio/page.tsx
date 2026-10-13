@@ -1,7 +1,5 @@
 import { getTranslations }        from 'next-intl/server'
-import { Link }                    from '@/i18n/navigation'
 import type { Metadata }           from 'next'
-import { Info }                    from 'lucide-react'
 import { AssetsGrid }              from '@/components/sections/assets/AssetsGrid'
 import { generateAegrynMetadata }  from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -39,21 +37,6 @@ export default async function PortfolioPage({ params }: Props) {
           </div></ScrollReveal>
         </div>
       </section>
-
-      {/* Note éditoriale — lien discret vers les actifs */}
-      <div className="border-b border-ag-border bg-ag-off-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
-          <div className="flex items-start gap-3">
-            <Info size={14} className="text-ag-gray-light mt-0.5 shrink-0" />
-            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">
-              {t('note')}{' '}
-              <Link href={"/assets" as never} className="text-ag-black underline underline-offset-4 decoration-ag-border hover:decoration-ag-black transition-colors">
-                {t('noteLink')}
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Grille complète des actifs du groupe — subblink exclu (assets only) */}
       <AssetsGrid excludeIds={['subblink']} />

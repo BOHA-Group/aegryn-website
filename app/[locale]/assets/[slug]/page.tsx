@@ -4,6 +4,7 @@ import Image                  from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { Aegryn_ASSETS } from '@/data/assets'
+import { INDUSTRIES, getLocaleText, type Industry, type IndustrySector } from '@/data/industries'
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
 
@@ -63,45 +64,64 @@ export default async function AssetPage({ params }: Props) {
   const categoryLabel = tCats(asset.category)
   const isLive   = !!asset.url
 
+  /* Mini-covers des secteurs /industries où la capacité se transpose */
+  const sectorCovers = (asset.transposeSectors ?? []).map((ref) => {
+    const industry = INDUSTRIES.find((i) => i.slug === ref.industry)
+    const sector = industry?.sectors[ref.sectorIndex]
+    return sector ? { industry: industry!, sector } : null
+  }).filter((s): s is { industry: Industry; sector: IndustrySector } => !!s)
+
   return (
     <>
 
-      {/* Hero */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
+      {/* Hero — même format que les pages métiers (image plein cadre sur navy) */}
+      <section
+        className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
+        {asset.image && (
+          <Image
+            src={asset.image}
+            alt={tItems(`${asset.id}.tagline`)}
+            fill
+            priority
+            fetchPriority="high"
+            unoptimized
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        )}
+        <div className="absolute inset-0 bg-linear-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
+        <div className="relative max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center gap-3 mb-10">
-            <span className="rounded-lg font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light border border-ag-border px-3 py-1">
+            <span className="rounded-md font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/15 px-3 py-1">
               {categoryLabel}
             </span>
-            <span className="rounded-lg font-sans font-semibold text-[10px] tracking-[0.2em] uppercase border border-ag-border px-3 py-1 text-ag-gray-light">
+            <span className="rounded-md font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/15 px-3 py-1">
               {tItems(`${asset.id}.badge`)}
             </span>
           </div>
 
           <h1
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.18] max-w-3xl mb-6"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-6"
             style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {asset.name}
           </h1>
-          <p className="font-sans font-semibold text-[16px] text-ag-gray leading-relaxed max-w-xl mb-10">
+          <p className="font-sans font-semibold text-[16px] text-white/70 leading-relaxed max-w-xl mb-10">
             {tItems(`${asset.id}.tagline`)}
           </p>
 
-          {isLive ? (
+          {isLive && (
             <a
               href={asset.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg inline-flex items-center gap-3 bg-ag-black text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-ag-navy transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 bg-ag-apex text-ag-navy font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:bg-white transition-colors"
             >
               {t('visit')} {asset.name}
               <ArrowUpRight size={14} />
             </a>
-          ) : (
-            <span className="rounded-lg inline-flex items-center gap-3 border border-ag-border text-ag-gray-light font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 cursor-default select-none">
-              {t('comingSoon')}
-            </span>
           )}
         </div>
       </section>
@@ -109,13 +129,13 @@ export default async function AssetPage({ params }: Props) {
       {/* Divider strip */}
       <div className="h-px bg-gradient-to-r from-transparent via-ag-apex/40 to-transparent" />
 
-      {/* Quatre rubriques */}
+      {/* Rubriques en cartes — template carte du site */}
       <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+          <div className="grid md:grid-cols-2 gap-3">
 
-            {/* Colonne gauche : Le besoin + Savoir-faire mobilisé */}
-            <div className="py-20 md:pr-16 space-y-12">
+            {/* Carte : Le besoin + Savoir-faire mobilisé */}
+            <div className="rounded-2xl border border-ag-border p-8 md:p-10 flex flex-col gap-10">
               <div>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                   {t('rubricNeed')}
@@ -125,14 +145,14 @@ export default async function AssetPage({ params }: Props) {
                 </p>
               </div>
               {skills.length > 0 && (
-                <div className="pt-10 border-t border-ag-border">
+                <div>
                   <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                     {t('rubricSkills')}
                   </p>
                   <ul className="space-y-3">
                     {skills.map((s, i) => (
                       <li key={i} className="flex items-start gap-4">
-                        <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
+                        <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
                           <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                         </span>
                         <span className="text-[15px] text-ag-gray leading-relaxed">{s}</span>
@@ -143,46 +163,82 @@ export default async function AssetPage({ params }: Props) {
               )}
             </div>
 
-            {/* Colonne droite : Mise en place + Organisations */}
-            <div className="py-20 md:pl-16 space-y-12">
+            {/* Carte navy : Ce que nous avons mis en place */}
+            <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-10">
               <div>
-                <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 mb-6">
                   {t('rubricSetup')}
                 </p>
-                <p className="text-[15px] text-ag-dark leading-[1.8] mb-6">
+                <p className="text-[15px] text-white leading-[1.8] mb-6">
                   {longDesc}
                 </p>
                 <ul className="space-y-3">
                   {features.map((f, i) => (
                     <li key={i} className="flex items-start gap-4">
-                      <span className="mt-[3px] w-4 h-4 shrink-0 flex items-center justify-center">
+                      <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                       </span>
-                      <span className="text-[15px] text-ag-gray leading-relaxed">{f}</span>
+                      <span className="text-[15px] text-white/70 leading-relaxed">{f}</span>
                     </li>
                   ))}
                 </ul>
                 {audience && (
-                  <div className="mt-8 pt-6 border-t border-ag-border">
-                    <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light mb-2">
+                  <div className="mt-8 pt-6 border-t border-white/10">
+                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 mb-2">
                       {t('audience')}
                     </p>
-                    <p className="text-[15px] text-ag-gray">{audience}</p>
+                    <p className="text-[15px] text-white/70">{audience}</p>
                   </div>
                 )}
               </div>
-              {orgs && (
-                <div className="pt-10 border-t border-ag-border">
-                  <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
-                    {t('rubricOrgs')}
-                  </p>
-                  <p className="text-[15px] text-ag-gray leading-relaxed">{orgs}</p>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Secteurs où elle se transpose — mini-covers */}
+      {(orgs || sectorCovers.length > 0) && (
+        <section className="border-b border-ag-border">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+            <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-8">
+              {t('rubricOrgs')}
+            </p>
+            {orgs && (
+              <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-10">{orgs}</p>
+            )}
+            {sectorCovers.length > 0 && (
+              <div className={`grid grid-cols-2 gap-3 ${sectorCovers.length >= 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
+                {sectorCovers.map(({ industry, sector }) => {
+                  const sectorName = getLocaleText(sector.name, locale)
+                  return (
+                    <Link
+                      key={`${industry.slug}-${sectorName}`}
+                      href={`/industries/${industry.slug}` as never}
+                      className="group relative overflow-hidden rounded-xl flex flex-col justify-end"
+                      style={{ height: 'clamp(150px,14vw,200px)' }}
+                    >
+                      <Image
+                        src={sector.img}
+                        alt={sectorName}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 25vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
+                      <div className="relative z-10 p-4 flex items-end justify-between gap-2">
+                        <h3 className="font-sans font-bold text-white text-[13px] leading-[1.15] tracking-[-0.02em]">
+                          {sectorName}
+                        </h3>
+                        <ArrowUpRight size={13} className="text-white/70 group-hover:text-white transition-colors shrink-0 mb-0.5" />
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Neediu legal notice — only on the neediu page */}
       {asset.id === 'neediu' && (

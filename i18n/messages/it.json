@@ -189,9 +189,7 @@
       "label": "Il nostro Gruppo",
       "title": "Ciò che costruiamo\ncon chi pensa in grande.",
       "sub": "Progetti concepiti, pilotati e messi in servizio da Aegryn, per o con i nostri clienti. Ognuno risponde a un bisogno reale e punta a un mercato abbastanza ampio da durare.",
-      "note": "Gli strumenti che utilizziamo nei nostri mandati sono presentati sotto Asset.",
-      "sub2": "Quando prendiamo una partecipazione, scegliamo i progetti in cui crediamo: un bisogno verificato, un mercato in crescita, una governance sana e un'architettura che altri possono riprendere. Quando lavoriamo per un cliente, applichiamo gli stessi requisiti. Alcuni progetti si rivolgono ai privati, altri a professionisti o istituzioni.",
-      "noteLink": "Vedere gli asset"
+      "sub2": "Quando prendiamo una partecipazione, scegliamo i progetti in cui crediamo: un bisogno verificato, un mercato in crescita, una governance sana e un'architettura che altri possono riprendere. Quando lavoriamo per un cliente, applichiamo gli stessi requisiti. Alcuni progetti si rivolgono ai privati, altri a professionisti o istituzioni."
     },
     "page": {
       "label": "Ecosistema Aegryn",
@@ -1327,7 +1325,7 @@
     "rubricNeed": "Il bisogno",
     "rubricSetup": "Cosa abbiamo messo in campo",
     "rubricSkills": "Saperi mobilitati",
-    "rubricOrgs": "Per quali organizzazioni"
+    "rubricOrgs": "Settori in cui si traspone"
   },
   "assetCarousel": {
     "label": "Il nostro ecosistema",

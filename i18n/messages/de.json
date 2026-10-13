@@ -189,9 +189,7 @@
       "label": "Unsere Gruppe",
       "title": "Was wir bauen\nmit denen, die gross denken.",
       "sub": "Von Aegryn konzipierte, gesteuerte und in Betrieb genommene Projekte, für oder mit unseren Kunden. Jedes beantwortet einen realen Bedarf und zielt auf einen Markt, der gross genug ist, um zu bestehen.",
-      "note": "Die Werkzeuge, die wir in unseren Mandaten einsetzen, finden Sie unter Assets.",
-      "sub2": "Wenn wir eine Beteiligung eingehen, wählen wir Projekte, an die wir glauben: ein geprüfter Bedarf, ein wachsender Markt, gesunde Governance und eine Architektur, die andere übernehmen können. Arbeiten wir für einen Kunden, gelten dieselben Anforderungen. Manche Projekte richten sich an Privatpersonen, andere an Fachleute oder Institutionen.",
-      "noteLink": "Assets ansehen"
+      "sub2": "Wenn wir eine Beteiligung eingehen, wählen wir Projekte, an die wir glauben: ein geprüfter Bedarf, ein wachsender Markt, gesunde Governance und eine Architektur, die andere übernehmen können. Arbeiten wir für einen Kunden, gelten dieselben Anforderungen. Manche Projekte richten sich an Privatpersonen, andere an Fachleute oder Institutionen."
     },
     "page": {
       "label": "Aegryn Ökosystem",
@@ -1327,7 +1325,7 @@
     "rubricNeed": "Der Bedarf",
     "rubricSetup": "Was wir umgesetzt haben",
     "rubricSkills": "Mobilisiertes Know-how",
-    "rubricOrgs": "Für welche Organisationen"
+    "rubricOrgs": "Sektoren, in die sie übertragbar ist"
   },
   "assetCarousel": {
     "label": "Unser Ökosystem",

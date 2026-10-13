@@ -189,9 +189,7 @@
       "label": "Onze Groep",
       "title": "Wat wij bouwen\nmet wie groot denkt.",
       "sub": "Projecten ontworpen, gestuurd en in gebruik genomen door Aegryn, voor of met onze klanten. Elk beantwoordt een reële behoefte en richt zich op een markt die groot genoeg is om te blijven bestaan.",
-      "note": "De tools die wij in onze opdrachten gebruiken, staan onder Assets.",
-      "sub2": "Wanneer wij een participatie nemen, kiezen wij projecten waarin wij geloven: een geverifieerde behoefte, een groeiende markt, gezonde governance en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen.",
-      "noteLink": "Bekijk de assets"
+      "sub2": "Wanneer wij een participatie nemen, kiezen wij projecten waarin wij geloven: een geverifieerde behoefte, een groeiende markt, gezonde governance en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen."
     },
     "page": {
       "label": "Aegryn Ecosysteem",
@@ -1327,7 +1325,7 @@
     "rubricNeed": "De behoefte",
     "rubricSetup": "Wat wij hebben opgezet",
     "rubricSkills": "Ingezette expertise",
-    "rubricOrgs": "Voor welke organisaties"
+    "rubricOrgs": "Sectoren waarop het overdraagbaar is"
   },
   "assetCarousel": {
     "label": "Ons ecosysteem",
