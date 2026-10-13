@@ -90,7 +90,7 @@ export default async function AssetPage({ params }: Props) {
             className="object-cover object-center"
           />
         )}
-        <div className="absolute inset-0 bg-linear-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
@@ -218,7 +218,7 @@ export default async function AssetPage({ params }: Props) {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(min-width: 1024px) 25vw, 50vw"
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
                       <div className="relative z-10 p-4 flex items-end justify-between gap-2">
                         <h3 className="font-sans font-bold text-white text-[13px] leading-[1.15] tracking-[-0.02em]">
                           {sectorName}
