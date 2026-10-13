@@ -33,7 +33,7 @@ export default async function PortfolioPage({ params }: Props) {
           fetchPriority="high"
           unoptimized
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[center_80%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
         <div className="relative max-w-7xl mx-auto">
