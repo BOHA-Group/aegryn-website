@@ -34,7 +34,7 @@ function LockedOverlay({ title, desc, cta, soon }: { title: string; desc: string
         <Lock size={16} className="mx-auto text-ag-apex mb-2" />
         {soon && <p className="inline-flex rounded-full bg-ag-apex/15 border border-ag-apex/40 text-ag-apex font-mono text-[9px] uppercase tracking-widest px-3 py-1 mb-2">{soon}</p>}
         <p className="font-sans font-bold text-[14px] mb-1">{title}</p>
-        <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{desc}</p>
+        <p className="font-sans text-[12px] text-white leading-relaxed mb-4">{desc}</p>
         <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
           {cta} <ArrowUpRight size={11} />
         </a>
@@ -97,13 +97,13 @@ function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: stri
         {/* Header */}
         <div className="grid grid-cols-3 bg-ag-navy rounded-t-xl">
           <div className="px-5 py-4">
-            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{t('colCluster')}</p>
+            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">{t('colCluster')}</p>
           </div>
           <div className="px-5 py-4 border-l border-white/10">
-            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{t('colEvRevenue')}</p>
+            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">{t('colEvRevenue')}</p>
           </div>
           <div className="px-5 py-4 border-l border-white/10">
-            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{t('colEvEbitda')}</p>
+            <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">{t('colEvEbitda')}</p>
           </div>
         </div>
         {/* Rows */}
@@ -191,7 +191,7 @@ export default function CifsoValuationIndex() {
           >
             {t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p></ScrollReveal>
         </div>
@@ -218,14 +218,14 @@ export default function CifsoValuationIndex() {
                     </div>
                   )}
                   <div>
-                    <p className={`font-mono text-[10px] tracking-[0.22em] uppercase mb-2 ${featured ? 'text-ag-gray-light' : 'text-white/50'}`}>{pl.name}</p>
+                    <p className={`font-mono text-[10px] tracking-[0.22em] uppercase mb-2 ${featured ? 'text-ag-gray-light' : 'text-white'}`}>{pl.name}</p>
                     <p className="font-sans font-bold text-[24px] tracking-[-0.02em] leading-tight">{pl.price}</p>
-                    <p className={`font-sans text-[13px] leading-relaxed mt-3 ${featured ? 'text-ag-gray' : 'text-white/60'}`}>{pl.desc}</p>
+                    <p className={`font-sans text-[13px] leading-relaxed mt-3 ${featured ? 'text-ag-gray' : 'text-white'}`}>{pl.desc}</p>
                   </div>
                   <ul className="flex flex-col gap-2 flex-1">
                     {pl.features.map(f => (
                       <li key={f} className="flex items-start gap-2 font-sans text-[13px] leading-snug">
-                        <Check size={13} className="text-ag-apex-ink shrink-0 mt-0.5" /> <span className={featured ? 'text-ag-black' : 'text-white/80'}>{f}</span>
+                        <Check size={13} className="text-ag-apex-ink shrink-0 mt-0.5" /> <span className={featured ? 'text-ag-black' : 'text-white'}>{f}</span>
                       </li>
                     ))}
                   </ul>
@@ -276,10 +276,10 @@ export default function CifsoValuationIndex() {
               >
                 {t('chart.title')}
               </h2>
-              <p className="font-sans text-[14px] text-white/55 leading-relaxed">
+              <p className="font-sans text-[14px] text-white leading-relaxed">
                 {t('chart.desc')}
               </p>
-              <p className="font-sans text-[10px] text-white/30 leading-relaxed mt-6 border-t border-white/10 pt-4 italic">
+              <p className="font-sans text-[10px] text-white leading-relaxed mt-6 border-t border-white/10 pt-4 italic">
                 {t('chart.disclaimer')}
               </p>
             </div>
@@ -450,8 +450,8 @@ export default function CifsoValuationIndex() {
             <LockedOverlay title={fm.lockedTitle} desc={fm.lockedDesc} cta={fm.lockedCta} soon={fm.comingSoonLabel} />
             <div className="min-w-[720px]">
               <div className="grid grid-cols-[220px_repeat(4,1fr)] bg-ag-navy">
-                <div className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">Dimension</p></div>
-                {fm.dimLockedCells.map(c => <div key={c} className="px-5 py-4 border-l border-white/10"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/60">{c}</p></div>)}
+                <div className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">Dimension</p></div>
+                {fm.dimLockedCells.map(c => <div key={c} className="px-5 py-4 border-l border-white/10"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white">{c}</p></div>)}
               </div>
               {fm.dims.map((d, i) => (
                 <div key={d.letter} className={`grid grid-cols-[220px_repeat(4,1fr)] border-t border-ag-border ${i % 2 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
@@ -513,7 +513,7 @@ export default function CifsoValuationIndex() {
             >
               {t('prescreenCta.title')}
             </h2>
-            <p className="font-sans text-[14px] text-white/55 leading-relaxed">
+            <p className="font-sans text-[14px] text-white leading-relaxed">
               {t('prescreenCta.desc')}
             </p>
           </div>
@@ -526,7 +526,7 @@ export default function CifsoValuationIndex() {
             </Link>
             <Link
               href="/grade"
-              className="inline-flex items-center gap-2 border border-white/25 text-white/70 font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-white/50 hover:text-white transition-all"
+              className="inline-flex items-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-white/50 hover:text-white transition-all"
             >
               {t('prescreenCta.ctaSecondary')}
             </Link>

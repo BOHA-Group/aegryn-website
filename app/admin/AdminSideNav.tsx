@@ -76,8 +76,8 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
     <nav className="flex flex-col flex-1 overflow-y-auto py-3">
       {/* Identifiant admin */}
       <div className="px-5 py-3 border-b border-white/10 mb-2">
-        <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/30 mb-0.5">Connecté</p>
-        <p className="font-sans text-[11px] text-white/70 truncate">{adminEmail}</p>
+        <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-white mb-0.5">Connecté</p>
+        <p className="font-sans text-[11px] text-white truncate">{adminEmail}</p>
       </div>
 
       {/* Dashboard global */}
@@ -87,7 +87,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
           className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
             pathname === '/admin'
               ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
-              : 'text-white/50 hover:text-white/90 hover:bg-white/5 border-l-2 border-transparent'
+              : 'text-white hover:text-ag-apex hover:bg-white/5 border-l-2 border-transparent'
           }`}
         >
           Dashboard
@@ -97,7 +97,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
           className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
             pathname === '/client/account'
               ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
-              : 'text-white/50 hover:text-white/90 hover:bg-white/5 border-l-2 border-transparent'
+              : 'text-white hover:text-ag-apex hover:bg-white/5 border-l-2 border-transparent'
           }`}
         >
           Mon compte
@@ -106,7 +106,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
 
       {SECTIONS.map(section => (
         <div key={section.label} className="mb-1">
-          <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-white/25 px-5 py-2">
+          <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-white px-5 py-2">
             {section.label}
           </p>
           {section.items.map(item => {
@@ -118,7 +118,7 @@ function AdminSideNavInner({ adminEmail }: { adminEmail: string }) {
                 className={`flex items-center px-5 py-2 font-sans text-[12px] transition-colors ${
                   isActive
                     ? 'bg-white/10 text-white font-semibold border-l-2 border-ag-apex'
-                    : 'text-white/50 hover:text-white/90 hover:bg-white/5 border-l-2 border-transparent'
+                    : 'text-white hover:text-ag-apex hover:bg-white/5 border-l-2 border-transparent'
                 }`}
               >
                 {item.label}

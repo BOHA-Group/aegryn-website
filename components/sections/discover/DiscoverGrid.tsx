@@ -142,7 +142,7 @@ export function DiscoverGrid({ locale }: Props) {
           >
             {t('title')}
           </h1>
-          <p className="discover-hero-desc font-sans text-[16px] text-white/55 max-w-xl">
+          <p className="discover-hero-desc font-sans text-[16px] text-white max-w-xl">
             {t('desc')}
           </p>
         </div>

@@ -38,9 +38,9 @@ export default function ValuationPanel({ v, admin = false, valuationIndexHref }:
           <p className="font-mono text-[10px] text-gray-500">{v.multiple.low}x revenu récurrent</p>
         </div>
         <div className="rounded-lg bg-ag-navy text-white px-4 py-3">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-white/50 mb-1">Point médian</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-1">Point médian</p>
           <p className="font-sans font-bold text-ag-apex text-[22px]">{eur(v.value.mid)}</p>
-          <p className="font-mono text-[10px] text-white/60">{v.multiple.mid}x revenu récurrent</p>
+          <p className="font-mono text-[10px] text-white">{v.multiple.mid}x revenu récurrent</p>
         </div>
         <div className="rounded-lg bg-ag-off-white border border-gray-200 px-4 py-3">
           <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-1">Fourchette haute</p>

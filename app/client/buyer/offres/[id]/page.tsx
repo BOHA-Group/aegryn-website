@@ -135,7 +135,7 @@ export default async function BuyerOfferDetailPage({
       {/* Actions contextuelles */}
       {bid.status === 'retained' && (
         <div className="bg-ag-navy p-5">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mb-1">Prochaine étape</p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-1">Prochaine étape</p>
           <p className="font-sans text-white text-[13px] mb-3">
             Votre offre a été retenue. Un deal manager Aegryn vous contactera par email pour organiser la suite du processus (data room, Accord de Principe).
           </p>

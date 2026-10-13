@@ -69,9 +69,9 @@ export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
     window.location.assign(path)
   }
 
-  const wrapCls   = dark ? 'text-white/70' : 'text-ag-gray'
+  const wrapCls   = dark ? 'text-white' : 'text-ag-gray'
   const btnCls    = dark
-    ? 'bg-transparent font-mono text-[12px] uppercase tracking-[0.12em] text-white/70 cursor-pointer hover:text-white transition-colors focus:outline-none disabled:opacity-50'
+    ? 'bg-transparent font-mono text-[12px] uppercase tracking-[0.12em] text-white cursor-pointer hover:text-white transition-colors focus:outline-none disabled:opacity-50'
     : 'bg-transparent font-mono text-[12px] uppercase tracking-[0.12em] text-ag-gray cursor-pointer hover:text-ag-black transition-colors focus:outline-none disabled:opacity-50'
   const listCls   = dark
     ? 'absolute left-0 top-full mt-2 min-w-[110px] rounded-lg border border-white/15 bg-ag-navy py-1 shadow-xl z-50'
@@ -110,7 +110,7 @@ export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
                     current
                       ? 'text-ag-apex-ink'
                       : dark
-                        ? 'text-white/60 hover:text-white'
+                        ? 'text-white hover:text-white'
                         : 'text-ag-gray hover:text-ag-black'
                   }`}
                 >

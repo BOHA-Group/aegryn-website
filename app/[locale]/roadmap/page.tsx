@@ -79,12 +79,12 @@ export default async function RoadmapPage({ params }: Props) {
           >
             {t('title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/55 leading-relaxed max-w-xl mb-10">
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white leading-relaxed max-w-xl mb-10">
             {t('desc')}
           </p>
           <div className="rounded-lg inline-flex items-start gap-3 border border-ag-apex/30 bg-ag-apex/10 px-5 py-3 max-w-xl">
             <Scale size={14} className="text-ag-apex shrink-0 mt-0.5" />
-            <p className="font-sans text-[12px] text-white/80 leading-relaxed">
+            <p className="font-sans text-[12px] text-white leading-relaxed">
               {t('swissNote')}
             </p>
           </div></ScrollReveal>

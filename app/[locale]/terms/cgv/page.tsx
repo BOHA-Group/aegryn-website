@@ -35,7 +35,7 @@ export default async function TermsCgvPage({ params }: Props) {
           >
             {cgv.label}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/40 mb-3">{cgv.version}</p>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white mb-3">{cgv.version}</p>
           <p className="font-sans text-[13px] text-ag-apex/70 max-w-2xl italic">{cgv.note}</p></ScrollReveal>
         </div>
       </section>

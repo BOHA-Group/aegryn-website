@@ -42,7 +42,7 @@ export default async function NdaRequiredPage() {
           <Shield size={16} className="text-ag-apex shrink-0" />
           <div>
             <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">{t('stepLabel')}</p>
-            <p className="text-[13px] font-semibold text-white/90">{t('stepTitle')}</p>
+            <p className="text-[13px] font-semibold text-white">{t('stepTitle')}</p>
           </div>
         </div>
       </div>

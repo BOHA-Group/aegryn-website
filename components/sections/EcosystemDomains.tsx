@@ -103,7 +103,7 @@ export function EcosystemDomains() {
                 )}
 
                 <div className="relative z-10 w-full flex items-center justify-end mb-6">
-                  <ArrowUpRight size={14} className="text-white/40 group-hover:text-white/80 transition-all duration-500" />
+                  <ArrowUpRight size={14} className="text-white group-hover:text-ag-apex transition-all duration-500" />
                 </div>
 
                 <div className="relative z-10">
@@ -113,7 +113,7 @@ export function EcosystemDomains() {
                   >
                     {domain.label}
                   </h3>
-                  <p className="font-sans font-normal text-[12.5px] leading-relaxed text-white/70 transition-colors duration-500">
+                  <p className="font-sans font-normal text-[12.5px] leading-relaxed text-white transition-colors duration-500">
                     {domain.desc}
                   </p>
                 </div>

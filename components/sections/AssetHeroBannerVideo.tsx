@@ -161,7 +161,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
         <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-14">
           <p
             ref={labelRef}
-            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/70 mb-5 flex items-center gap-3"
+            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white mb-5 flex items-center gap-3"
             style={{ opacity: 0 }}
           >
             <span className="w-8 h-px bg-white/40 inline-block" />
@@ -175,7 +175,7 @@ export function AssetHeroBannerVideo({ label, title, sub }: AssetHeroBannerVideo
           />
           <p
             ref={subRef}
-            className="font-sans font-normal text-[15px] text-white/75 leading-relaxed max-w-sm"
+            className="font-sans font-normal text-[15px] text-white leading-relaxed max-w-sm"
             style={{ opacity: 0 }}
           >
             {sub ?? '6 actifs · 3 catégories · Suisse & Europe'}

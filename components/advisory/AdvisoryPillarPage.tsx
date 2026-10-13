@@ -107,7 +107,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
             </h1>
           </WaveReveal>
           <ScrollReveal delay={0.25}>
-            <p className="font-sans text-[16px] text-white/60 max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
+            <p className="font-sans text-[16px] text-white max-w-2xl leading-relaxed mb-10">{c.subtitle}</p>
           </ScrollReveal>
           <ScrollReveal delay={0.35}>
             <div className="flex flex-wrap gap-3">
@@ -183,7 +183,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
-                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/50">
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="absolute inset-x-0 bottom-0 p-5">
@@ -292,8 +292,8 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </div>
           <div className="rounded-2xl bg-ag-navy p-8 md:p-10">
             <p className={`${LABEL_G} mb-4`}>{c.ai.title}</p>
-            <p className="font-sans text-[15px] text-white/80 leading-[1.8]">{c.ai.text}</p>
-            {c.ai.legal && <p className="font-sans text-[12px] text-white/50 leading-relaxed mt-5 pt-5 border-t border-white/10">{c.ai.legal}</p>}
+            <p className="font-sans text-[15px] text-white leading-[1.8]">{c.ai.text}</p>
+            {c.ai.legal && <p className="font-sans text-[12px] text-white leading-relaxed mt-5 pt-5 border-t border-white/10">{c.ai.legal}</p>}
           </div>
         </ScrollReveal>
       </section>
@@ -372,7 +372,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           <div>
             <p className={`${LABEL_G} mb-6`}>{ui.ctaEyebrow}</p>
             <h2 className="font-sans font-bold text-white tracking-[-0.02em] leading-[1.1] mb-6 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{echangeDef?.label}.</h2>
-            <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-lg mb-10">
+            <p className="font-sans text-[15px] text-white leading-relaxed max-w-lg mb-10">
               {ui.ctaBody}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -382,7 +382,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </div>
           <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-8">
             <p className={`${LABEL_G} mb-3`}>{ui.newsletterLabel}</p>
-            <p className="font-sans text-[14px] text-white/60 leading-relaxed mb-6">{ui.newsletterBody}</p>
+            <p className="font-sans text-[14px] text-white leading-relaxed mb-6">{ui.newsletterBody}</p>
             <NewsletterSubscribeForm locale={locale} />
           </div>
         </ScrollReveal>

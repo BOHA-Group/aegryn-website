@@ -94,7 +94,7 @@ export default async function TransactionSellPage({ params }: Props) {
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl mb-10">
             {t('hero.desc')}
           </p>
           <div className="flex flex-wrap gap-4">

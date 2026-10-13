@@ -47,10 +47,10 @@ export function PillarsSection() {
                 <Icon size={16} strokeWidth={1.75} />
               </span>
               <div className="space-y-2">
-                <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/65">
+                <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white">
                   {t(`${key}.label`)}
                 </p>
-                <p className="font-sans text-[15px] text-white/80 leading-relaxed">
+                <p className="font-sans text-[15px] text-white leading-relaxed">
                   {t(`${key}.desc`)}
                 </p>
               </div>

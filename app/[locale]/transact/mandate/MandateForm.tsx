@@ -147,7 +147,7 @@ export default function MandateForm() {
             <p className={`font-sans font-semibold text-[13px] leading-snug ${mandateType === type ? 'text-white' : 'text-ag-black'}`}>
               {t(`segment.${type}.title`)}
             </p>
-            <p className={`font-sans text-[11px] mt-1.5 leading-snug ${mandateType === type ? 'text-white/60' : 'text-ag-gray'}`}>
+            <p className={`font-sans text-[11px] mt-1.5 leading-snug ${mandateType === type ? 'text-white' : 'text-ag-gray'}`}>
               {t(`segment.${type}.desc`)}
             </p>
           </button>

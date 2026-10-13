@@ -13,11 +13,11 @@ type Freemium = { estimateNote: string; illustrativeNote: string }
 function StepIndicator({ phase, t }: { phase: 'form' | 'index'; t: ReturnType<typeof useTranslations> }) {
   return (
     <div className="flex items-center gap-3 mt-8">
-      <span className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border ${phase === 'form' ? 'bg-ag-apex text-ag-navy border-ag-apex font-semibold' : 'border-white/20 text-white/40'}`}>
+      <span className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border ${phase === 'form' ? 'bg-ag-apex text-ag-navy border-ag-apex font-semibold' : 'border-white/20 text-white'}`}>
         {t('stepLabel1')}
       </span>
       <span className="w-6 h-px bg-white/20" />
-      <span className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border ${phase === 'index' ? 'bg-ag-apex text-ag-navy border-ag-apex font-semibold' : 'border-white/20 text-white/40'}`}>
+      <span className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border ${phase === 'index' ? 'bg-ag-apex text-ag-navy border-ag-apex font-semibold' : 'border-white/20 text-white'}`}>
         {t('stepLabel2')}
       </span>
     </div>
@@ -58,7 +58,7 @@ export default function ValuationIndexTest() {
             <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.035em] max-w-2xl mb-6 whitespace-pre-line" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
               {ti('hero.titleStep2')}
             </h1>
-            <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
+            <p className="font-sans text-[16px] text-white leading-relaxed max-w-xl">
               {ti('hero.descStep2')}
             </p>
             <StepIndicator phase={phase} t={ti} />

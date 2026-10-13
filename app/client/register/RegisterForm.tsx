@@ -105,7 +105,7 @@ export default function RegisterForm() {
       <div className="flex flex-col items-center gap-4 py-8 text-center">
         <CheckCircle size={40} className="text-ag-apex-ink" />
         <p className="font-sans font-bold text-white text-[18px]">{t('successTitle')}</p>
-        <p className="font-sans text-[13px] text-white/50">{t('successDesc')}</p>
+        <p className="font-sans text-[13px] text-white">{t('successDesc')}</p>
       </div>
     )
   }
@@ -146,7 +146,7 @@ export default function RegisterForm() {
 
       {/* Nom */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('fullNameLabel')}
         </label>
         <input
@@ -156,13 +156,13 @@ export default function RegisterForm() {
           value={fullName}
           onChange={e => setFullName(e.target.value)}
           placeholder={t('fullNamePlaceholder')}
-          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
       {/* Email */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -172,13 +172,13 @@ export default function RegisterForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:bg-ag-navy [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:text-[white] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
       {/* Mot de passe */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('passwordLabel')}
         </label>
         <div className="relative">
@@ -189,12 +189,12 @@ export default function RegisterForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder={t('passwordPlaceholder')}
-            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
           />
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/50 hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>
@@ -219,7 +219,7 @@ export default function RegisterForm() {
 
       {/* Rôle principal */}
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           Type de compte
         </label>
         <div className="flex flex-col gap-2">
@@ -231,15 +231,15 @@ export default function RegisterForm() {
               className={`flex items-start gap-3 px-4 py-3 border text-left transition-colors rounded-lg ${
                 primaryRole === value
                   ? 'border-ag-apex bg-ag-apex/10 text-white'
-                  : 'border-white/15 bg-white/5 text-white/50 hover:border-white/30 hover:text-white/80'
+                  : 'border-white/15 bg-white/5 text-white hover:border-white/30 hover:text-ag-apex'
               }`}
             >
-              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex-ink' : 'text-white/30'}`}>
+              <span className={`mt-0.5 shrink-0 ${primaryRole === value ? 'text-ag-apex-ink' : 'text-white'}`}>
                 {icon}
               </span>
               <span className="flex flex-col">
                 <span className="font-sans font-semibold text-[13px]">{label}</span>
-                <span className="font-sans text-[11px] text-white/35 mt-0.5">{desc}</span>
+                <span className="font-sans text-[11px] text-white mt-0.5">{desc}</span>
               </span>
             </button>
           ))}

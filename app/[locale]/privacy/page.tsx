@@ -31,7 +31,7 @@ export default async function PrivacyPage({ params }: Props) {
           >
             {tP('label')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/40">{tP('updated')}</p>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white">{tP('updated')}</p>
           {/* Sélecteur de langue */}
           <div className="mt-6 flex flex-wrap gap-3">
             {(['fr','en','de','es','it','nl'] as const).map(lang => (
@@ -41,7 +41,7 @@ export default async function PrivacyPage({ params }: Props) {
                 className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1 border transition-colors ${
                   lang === locale
                     ? 'border-ag-apex text-ag-apex'
-                    : 'border-white/20 text-white/40 hover:border-white/50 hover:text-white/70'
+                    : 'border-white/20 text-white hover:border-white/50 hover:text-white'
                 }`}
               >
                 {lang.toUpperCase()}

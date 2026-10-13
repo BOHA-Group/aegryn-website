@@ -114,7 +114,7 @@ export default function AlliancesContent() {
           >
             {t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p></ScrollReveal>
         </div>

@@ -77,9 +77,9 @@ export default async function VerifyCodePage({ params }: Props) {
             </div>
             <div className="flex flex-col gap-4">
               <div className="rounded-xl bg-ag-navy text-white p-8 text-center">
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50 mb-3">{t('grade')}</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white mb-3">{t('grade')}</p>
                 <p className="font-sans font-extrabold text-ag-apex text-[64px] leading-none">{cert.grade}</p>
-                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/50 mt-4">CIFSO 5000</p>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white mt-4">CIFSO 5000</p>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={`/api/certificate/${cert.code}/badge.svg`} alt={t('badgeAlt')} width={320} height={96} className="w-full h-auto rounded-xl border border-ag-border" />

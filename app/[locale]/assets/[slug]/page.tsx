@@ -327,7 +327,7 @@ export default async function AssetPage({ params }: Props) {
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('press.article')}</p>
                 <div className="border border-ag-border bg-ag-white w-[260px]">
                   <div className="rounded-lg bg-ag-navy px-5 py-3 flex items-center">
-                    <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/80">{t('press.subblink.partnerName')}</span>
+                    <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white">{t('press.subblink.partnerName')}</span>
                   </div>
                   <div className="px-5 py-5 flex flex-col gap-3">
                     <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">{t('press.publishedOn')}</p>
@@ -371,7 +371,7 @@ export default async function AssetPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white mb-4">
               {t('cta.label')}
             </p>
             <h2

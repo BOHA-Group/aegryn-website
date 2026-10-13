@@ -56,11 +56,11 @@ export default async function NdaViewPage() {
             <Shield size={16} className="text-ag-apex shrink-0" />
             <div>
               <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-ag-apex font-bold">Accord de confidentialité</p>
-              <p className="text-[13px] font-semibold text-white/90">Lecture seule — document signé</p>
+              <p className="text-[13px] font-semibold text-white">Lecture seule — document signé</p>
             </div>
           </div>
           <Link href="/client/buyer"
-            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/20 px-3 py-1.5">
+            className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-white hover:text-white transition-colors border border-white/20 px-3 py-1.5">
             ← Tableau de bord
           </Link>
         </div>

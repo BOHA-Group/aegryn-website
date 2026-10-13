@@ -41,7 +41,7 @@ export default async function InternalLayout({ children }: { children: React.Rea
         <aside className="w-56 bg-ag-navy flex-shrink-0 flex flex-col fixed top-16 left-0 bottom-0 z-40 overflow-y-auto">
           <div className="px-5 py-4 border-b border-white/10">
             <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-ag-apex font-bold">Accès interne</p>
-            <p className="font-sans text-[11px] text-white/60 mt-0.5 truncate">{displayName}</p>
+            <p className="font-sans text-[11px] text-white mt-0.5 truncate">{displayName}</p>
           </div>
 
           <InternalNav permissions={permissions} />

@@ -86,7 +86,7 @@ export function AssetHeroBanner() {
         <div className="max-w-7xl mx-auto w-full px-6 md:px-12 pb-12">
           <p
             ref={labelRef}
-            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white/70 mb-5 flex items-center gap-3"
+            className="font-sans font-semibold text-[10px] tracking-[0.3em] uppercase text-white mb-5 flex items-center gap-3"
           >
             <span className="w-8 h-px bg-white/40 inline-block" />
             Aegryn — Notre écosystème
@@ -101,7 +101,7 @@ export function AssetHeroBanner() {
 
           <p
             ref={subRef}
-            className="font-sans font-normal text-[15px] text-white/75 leading-relaxed max-w-sm"
+            className="font-sans font-normal text-[15px] text-white leading-relaxed max-w-sm"
           >
             6 actifs · 3 catégories · Suisse &amp; Europe
           </p>

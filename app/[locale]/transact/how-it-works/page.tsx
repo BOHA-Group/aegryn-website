@@ -68,7 +68,7 @@ export default async function HowItWorksPage({ params }: Props) {
           >
             {t('heroTitle')}
           </h1>
-          <p className="font-sans text-[15px] text-white/60 leading-relaxed max-w-xl mb-10">
+          <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl mb-10">
             {t('heroDesc')}
           </p>
           <div className="flex flex-wrap gap-4">
@@ -154,9 +154,9 @@ export default async function HowItWorksPage({ params }: Props) {
           <div className="border border-ag-border overflow-x-auto">
             <div className="min-w-[480px]">
               <div className="grid grid-cols-3 bg-ag-navy">
-                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50" />
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white" />
                 <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex border-l border-white/10">Aegryn</div>
-                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 border-l border-white/10">{t('compareOther')}</div>
+                <div className="px-5 py-3 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-white border-l border-white/10">{t('compareOther')}</div>
               </div>
               {compareRows.map(({ label, aegryn, other }, i) => (
                 <div key={label} className={`grid grid-cols-3 border-t border-ag-border ${i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'}`}>

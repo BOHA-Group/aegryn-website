@@ -85,7 +85,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-2xl">
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white leading-relaxed max-w-2xl">
             {t('desc')}
           </p>
           <Link
@@ -146,7 +146,7 @@ export default async function BuildServicePage({ params }: Props) {
                   </span>
                 </div>
                 <p className={`font-mono text-[10px] tracking-[0.14em] uppercase ${
-                  card.key === 'btl' ? 'text-white/50' : 'text-ag-gray-light'
+                  card.key === 'btl' ? 'text-white' : 'text-ag-gray-light'
                 }`}>
                   {card.subtitle}
                 </p>
@@ -156,7 +156,7 @@ export default async function BuildServicePage({ params }: Props) {
                   {card.title}
                 </h3>
                 <p className={`font-sans text-[15px] leading-relaxed flex-1 ${
-                  card.key === 'btl' ? 'text-white/70' : 'text-ag-gray'
+                  card.key === 'btl' ? 'text-white' : 'text-ag-gray'
                 }`}>
                   {card.desc}
                 </p>
@@ -331,7 +331,7 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('cta.title')}
           </h2>
-          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl">
+          <p className="font-sans text-[15px] text-white leading-relaxed max-w-xl">
             {t('cta.desc')}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-2">

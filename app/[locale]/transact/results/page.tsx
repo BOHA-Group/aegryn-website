@@ -70,7 +70,7 @@ export default async function TransactResultsPage({ params }: Props) {
           <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-2xl mb-5" style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}>
             {t('heroTitle')}
           </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-xl">
+          <p className="font-sans text-[16px] text-white max-w-xl">
             {t('heroDesc')}
           </p>
           {hasResults && (

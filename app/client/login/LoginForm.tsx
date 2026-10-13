@@ -139,7 +139,7 @@ export default function LoginForm() {
         )}
 
         <div>
-          <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+          <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
             Code de double authentification
           </label>
           <input
@@ -152,7 +152,7 @@ export default function LoginForm() {
             value={mfaCode}
             onChange={e => setMfaCode(e.target.value.replace(/\D/g, ''))}
             placeholder="123456"
-            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-mono text-[18px] text-center tracking-widest focus:outline-none focus:border-ag-apex transition-colors"
+            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 font-mono text-[18px] text-center tracking-widest focus:outline-none focus:border-ag-apex transition-colors"
           />
         </div>
 
@@ -177,7 +177,7 @@ export default function LoginForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -187,12 +187,12 @@ export default function LoginForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+          className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
         />
       </div>
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/55 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('passwordLabel')}
         </label>
         <div className="relative">
@@ -203,12 +203,12 @@ export default function LoginForm() {
             value={password}
             onChange={e => setPassword(e.target.value)}
             placeholder="••••••••••••"
-            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/35 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
+            className="rounded-lg w-full border border-white/20 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 pr-12 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#050a1a] [&:-webkit-autofill]:[-webkit-text-fill-color:white]"
           />
           <button
             type="button"
             onClick={() => setShow(v => !v)}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white/50 hover:text-white"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-white hover:text-white"
           >
             {show ? <EyeOff size={16} /> : <Eye size={16} />}
           </button>

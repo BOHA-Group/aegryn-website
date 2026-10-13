@@ -81,7 +81,7 @@ export function AssetGrid() {
           style={{ minHeight: '200px', opacity: 0 }}
         >
           <div className="w-full flex items-center justify-between mb-6">
-            <span className="font-sans font-semibold text-[10px] tracking-[0.18em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.18em] uppercase text-ag-gray-light group-hover:text-white transition-colors duration-500">
               {tItems(`${asset.id}.badge`)}
             </span>
             <span className={`inline-flex items-center justify-center w-7 h-7 font-sans font-bold text-[11px] transition-opacity duration-500 ${GRADE_BADGE[asset.grade]}`}>
@@ -90,7 +90,7 @@ export function AssetGrid() {
           </div>
 
           {isNotStarted && (
-            <span className="font-sans font-semibold text-[10px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white/40 transition-colors duration-500 mb-1">
+            <span className="font-sans font-semibold text-[10px] tracking-[0.1em] uppercase text-ag-gray-light/60 group-hover:text-white transition-colors duration-500 mb-1">
               {t('notStarted')}
             </span>
           )}
@@ -116,11 +116,11 @@ export function AssetGrid() {
           >
             {asset.name}
           </h3>
-          <p className="font-sans font-normal text-[12px] leading-relaxed text-ag-gray group-hover:text-white/70 transition-colors duration-500">
+          <p className="font-sans font-normal text-[12px] leading-relaxed text-ag-gray group-hover:text-white transition-colors duration-500">
             {tItems(`${asset.id}.tagline`)}
           </p>
           <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <ArrowUpRight size={14} className="text-white/60" />
+            <ArrowUpRight size={14} className="text-white" />
           </div>
 
           {/* Badge presse — uniquement neediu */}

@@ -257,7 +257,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
           >
             {t('hero.title')}
           </h1>
-          <p className="font-sans text-[16px] text-white/60 leading-relaxed max-w-xl">
+          <p className="font-sans text-[16px] text-white leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p>
           {stepIndicator}
@@ -723,7 +723,7 @@ function ResultPanel({ result, finance, t, industryLabel, email, setEmail, email
               <Lock size={16} className="mx-auto text-ag-apex mb-2" />
               {locked.soon && <p className="inline-flex rounded-full bg-ag-apex/15 border border-ag-apex/40 text-ag-apex font-mono text-[9px] uppercase tracking-widest px-3 py-1 mb-2">{locked.soon}</p>}
               <p className="font-sans font-bold text-[14px] mb-1">{locked.title}</p>
-              <p className="font-sans text-[12px] text-white/60 leading-relaxed mb-4">{locked.desc}</p>
+              <p className="font-sans text-[12px] text-white leading-relaxed mb-4">{locked.desc}</p>
               <a href="#waitlist" className="rounded-lg inline-flex items-center gap-1.5 bg-ag-apex text-ag-navy font-mono text-[10px] uppercase tracking-widest px-4 py-2 hover:bg-ag-apex/90 transition-colors">
                 {locked.cta} <ArrowUpRight size={11} />
               </a>

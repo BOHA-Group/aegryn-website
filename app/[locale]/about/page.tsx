@@ -299,7 +299,7 @@ export default function AboutPage() {
         <ScrollReveal className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
+              <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white mb-4">
                 {t('swiss.groupLabel')}
               </p>
               <h2
@@ -315,7 +315,7 @@ export default function AboutPage() {
                 {t('swiss.cta')} <ArrowUpRight size={14} />
               </Link>
             </div>
-            <p className="text-[15px] text-white/70 leading-relaxed self-center">
+            <p className="text-[15px] text-white leading-relaxed self-center">
               {t('swiss.desc')}
             </p>
           </div>

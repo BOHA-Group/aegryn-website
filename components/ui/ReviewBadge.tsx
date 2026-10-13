@@ -40,7 +40,7 @@ export default function ReviewBadge({
           {label}
         </span>
         {score != null && (
-          <span className={`font-mono text-[10px] mt-0.5 ${isPlus ? 'text-white/70' : 'text-blue-500'}`}>
+          <span className={`font-mono text-[10px] mt-0.5 ${isPlus ? 'text-white' : 'text-blue-500'}`}>
             {score}/100
           </span>
         )}

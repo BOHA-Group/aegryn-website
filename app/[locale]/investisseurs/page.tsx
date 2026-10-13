@@ -179,7 +179,7 @@ export default async function InvestisseursPage({ params }: Props) {
             {alignment.map((item) => (
               <div key={item} className="flex items-start gap-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-ag-apex shrink-0 mt-2" />
-                <p className="font-sans text-[15px] text-white/75 leading-relaxed">{item}</p>
+                <p className="font-sans text-[15px] text-white leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -190,13 +190,13 @@ export default async function InvestisseursPage({ params }: Props) {
       <section className="bg-ag-navy py-20 px-6 border-t border-white/10">
         <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/60 mb-3">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white mb-3">
               {t('final.label')}
             </p>
             <p className="font-sans font-bold text-white text-[22px] max-w-md leading-snug">
               {t('final.title')}
             </p>
-            <p className="font-sans text-[15px] text-white/55 mt-3 max-w-md leading-relaxed">
+            <p className="font-sans text-[15px] text-white mt-3 max-w-md leading-relaxed">
               {t('final.desc')}
             </p>
           </div>

@@ -38,7 +38,7 @@ export default async function MandatePage({ params }: Props) {
           >
             {t('heroTitle')}
           </h1>
-          <p className="font-sans text-[16px] text-white/55 max-w-xl leading-relaxed">
+          <p className="font-sans text-[16px] text-white max-w-xl leading-relaxed">
             {t('heroDesc')}
           </p>
         </div>

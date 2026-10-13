@@ -10,7 +10,7 @@ export default function WorkflowStepper({ progress, title, dark = false }: { pro
   const { steps, currentIndex } = progress
   const current = steps[currentIndex]
   const cls = dark
-    ? { wrap: 'bg-ag-navy text-white border-white/10', muted: 'text-white/50', line: 'bg-white/15', done: 'bg-ag-apex text-ag-navy', cur: 'bg-white text-ag-navy ring-4 ring-ag-apex/40', todo: 'bg-white/10 text-white/50', box: 'bg-white/5 border-white/10' }
+    ? { wrap: 'bg-ag-navy text-white border-white/10', muted: 'text-white', line: 'bg-white/15', done: 'bg-ag-apex text-ag-navy', cur: 'bg-white text-ag-navy ring-4 ring-ag-apex/40', todo: 'bg-white/10 text-white', box: 'bg-white/5 border-white/10' }
     : { wrap: 'bg-white text-gray-900 border-gray-200', muted: 'text-gray-500', line: 'bg-gray-200', done: 'bg-ag-apex text-ag-navy', cur: 'bg-ag-navy text-white ring-4 ring-ag-apex/30', todo: 'bg-gray-100 text-gray-400', box: 'bg-ag-off-white border-gray-200' }
 
   return (

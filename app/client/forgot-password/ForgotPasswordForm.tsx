@@ -42,12 +42,12 @@ export default function ForgotPasswordForm() {
       <div className="bg-white/5 border border-white/10 p-8 text-center">
         <CheckCircle2 size={32} className="text-ag-apex-ink mx-auto mb-4" />
         <h2 className="font-sans font-semibold text-white text-[17px] mb-2">{t('sentTitle')}</h2>
-        <p className="font-sans text-[13px] text-white/50 leading-relaxed">
+        <p className="font-sans text-[13px] text-white leading-relaxed">
           {t('sentDesc')}{' '}
-          <span className="text-white/80">{email}</span>.<br />
+          <span className="text-white">{email}</span>.<br />
           {t('sentValidity')}
         </p>
-        <p className="font-sans text-[11px] text-white/25 mt-4">
+        <p className="font-sans text-[11px] text-white mt-4">
           {t('notReceived')} contact@boha-group.com
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function ForgotPasswordForm() {
       )}
 
       <div>
-        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white/40 mb-2">
+        <label className="block font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-white mb-2">
           {t('emailLabel')}
         </label>
         <input
@@ -73,7 +73,7 @@ export default function ForgotPasswordForm() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
-          className="rounded-lg w-full border border-white/15 bg-white/5 text-white placeholder:text-white/20 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
+          className="rounded-lg w-full border border-white/15 bg-white/5 text-white placeholder:text-white/50 px-4 py-3.5 font-sans text-[14px] focus:outline-none focus:border-ag-apex transition-colors"
         />
       </div>
 
@@ -87,7 +87,7 @@ export default function ForgotPasswordForm() {
 
       <Link
         href="/client/login"
-        className="flex items-center justify-center gap-1.5 font-sans text-[12px] text-white/30 hover:text-white/60 transition-colors"
+        className="flex items-center justify-center gap-1.5 font-sans text-[12px] text-white hover:text-white transition-colors"
       >
         <ArrowLeft size={11} />
         {t('backToLogin')}

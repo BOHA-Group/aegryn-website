@@ -242,7 +242,7 @@ export function AssetGridWithDrawer() {
                   {/* Top — badge + catégorie + flèche */}
                   <div className="flex justify-between items-start w-full mb-auto">
                     <div className="space-y-2">
-                      <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light group-hover:text-white/50 transition-colors duration-500">
+                      <span className="font-sans font-semibold text-[10px] tracking-[0.16em] uppercase text-ag-gray-light group-hover:text-white transition-colors duration-500">
                         {tCats(asset.category)}
                       </span>
                       <br />
@@ -255,7 +255,7 @@ export function AssetGridWithDrawer() {
 
                   {/* Bottom — nom + tagline + status */}
                   <div className="mt-12">
-                    <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light group-hover:text-white/40 transition-colors duration-500 mb-2">
+                    <p className="font-sans font-semibold text-[10px] tracking-[0.2em] uppercase text-ag-gray-light group-hover:text-white transition-colors duration-500 mb-2">
                       {t('ownedBy')}
                     </p>
                     <h3
@@ -264,7 +264,7 @@ export function AssetGridWithDrawer() {
                     >
                       {asset.name}
                     </h3>
-                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed mb-4 group-hover:text-white/65 transition-colors duration-500">
+                    <p className="font-sans font-normal text-[12px] text-ag-gray leading-relaxed mb-4 group-hover:text-white transition-colors duration-500">
                       {tItems(`${asset.id}.tagline`)}
                     </p>
                     <StatusIndicator status={asset.status} isRestricted={isRestricted} />

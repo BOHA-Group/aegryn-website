@@ -51,7 +51,7 @@ export default async function TransactionSessionPage({ params }: Props) {
             {details.map(({ icon: Icon, label, value }) => (
               <div key={label} className="border border-white/15 p-6 flex flex-col gap-3">
                 <Icon size={16} className="text-ag-apex" />
-                <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">{label}</p>
+                <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white">{label}</p>
                 <p className="font-sans font-semibold text-white text-[14px]">{value}</p>
               </div>
             ))}

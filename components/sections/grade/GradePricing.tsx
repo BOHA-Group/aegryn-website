@@ -58,7 +58,7 @@ export function GradePricing() {
           >
             {t('pricingTitle')}
           </h2>
-          <p className="font-sans text-[15px] text-white/50 leading-relaxed">
+          <p className="font-sans text-[15px] text-white leading-relaxed">
             {t('pricingDesc')}
           </p>
         </div>
@@ -87,7 +87,7 @@ export function GradePricing() {
                   </p>
                   <p
                     className={`font-sans text-[12px] leading-snug ${
-                      tier.highlight ? 'text-ag-gray' : 'text-white/50'
+                      tier.highlight ? 'text-ag-gray' : 'text-white'
                     }`}
                   >
                     {tier.target}
@@ -106,7 +106,7 @@ export function GradePricing() {
                   </p>
                   <p
                     className={`font-mono text-[10px] tracking-[0.12em] ${
-                      tier.highlight ? 'text-ag-gray-light' : 'text-white/40'
+                      tier.highlight ? 'text-ag-gray-light' : 'text-white'
                     }`}
                   >
                     {tier.duration}
@@ -125,7 +125,7 @@ export function GradePricing() {
                       />
                       <p
                         className={`font-sans text-[12px] leading-relaxed ${
-                          tier.highlight ? 'text-ag-gray' : 'text-white/65'
+                          tier.highlight ? 'text-ag-gray' : 'text-white'
                         }`}
                       >
                         {item}
@@ -152,12 +152,12 @@ export function GradePricing() {
 
         {/* Note */}
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="font-mono text-[10px] text-white/35 leading-relaxed max-w-lg">
+          <p className="font-mono text-[10px] text-white leading-relaxed max-w-lg">
             {t('pricingNote')}
           </p>
           <Link
             href={`/${locale}/grade/brochure`}
-            className="shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase text-white/50 hover:text-white border border-white/15 hover:border-white/40 px-5 py-3 rounded-lg transition-all"
+            className="shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase text-white hover:text-white border border-white/15 hover:border-white/40 px-5 py-3 rounded-lg transition-all"
           >
             {t('pricingCtaSecondary')}
           </Link>

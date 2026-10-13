@@ -64,10 +64,10 @@ export default async function AdvisoryPage({ params }: Props) {
             ))}
           </h1></WaveReveal>
 <ScrollReveal delay={0.25}>          <div className="max-w-xl mb-10 space-y-4">
-            <p className="text-[16px] text-white/70 leading-relaxed">{t('hero.desc1')}</p>
-            <p className="text-[15px] text-white/50 leading-relaxed">{t('hero.desc2')}</p>
+            <p className="text-[16px] text-white leading-relaxed">{t('hero.desc1')}</p>
+            <p className="text-[15px] text-white leading-relaxed">{t('hero.desc2')}</p>
           </div>
-          <p className="font-sans font-normal italic text-[15px] text-white/50 leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
+          <p className="font-sans font-normal italic text-[15px] text-white leading-relaxed max-w-xl mb-10 border-l-2 border-ag-apex/30 pl-5">
             {t('hero.quote').split('\n').map((line, i) => (
               <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
@@ -87,7 +87,7 @@ export default async function AdvisoryPage({ params }: Props) {
             </Link>
             <Link
               href={t('hero.cta3Href') as never}
-              className="rounded-lg inline-flex items-center gap-3 border border-white/10 text-white/60 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-white/30 hover:text-white transition-colors"
+              className="rounded-lg inline-flex items-center gap-3 border border-white/10 text-white font-sans font-semibold text-[11px] tracking-[0.16em] uppercase px-7 py-4 hover:border-white/30 hover:text-white transition-colors"
             >
               {t('hero.cta3')} <ArrowUpRight size={14} />
             </Link>
@@ -293,7 +293,7 @@ export default async function AdvisoryPage({ params }: Props) {
           >
             {t('network.title')}
           </h2>
-          <p className="text-[15px] text-white/60 leading-relaxed max-w-2xl mb-10 whitespace-pre-line">
+          <p className="text-[15px] text-white leading-relaxed max-w-2xl mb-10 whitespace-pre-line">
             {t('network.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -342,7 +342,7 @@ export default async function AdvisoryPage({ params }: Props) {
               >
                 {t('approach.title')}
               </h2>
-              <p className="text-[15px] text-white/50 leading-relaxed">
+              <p className="text-[15px] text-white leading-relaxed">
                 {t('approach.desc')}
               </p>
             </div>

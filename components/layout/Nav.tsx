@@ -693,7 +693,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('craft')}
                 aria-current={isCraftActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isCraftActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isCraftActive ? 'text-white border-ag-apex' : 'text-white hover:text-white border-white/10'
                 }`}
               >
                 {t('ourCraft')}
@@ -701,52 +701,52 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'craft' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('craftSupport')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-2">{t('craftSupport')}</p>
                   {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftBuild')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-3">{t('craftBuild')}</p>
                   {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
                     <div key={labelKey} className="flex flex-col">
                       <Link href={href} onClick={closeMobile}
-                        className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                        className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                         {t(labelKey)}
                       </Link>
                       {/* Sous-actifs propriétaires (mobile) — imbriqués sous /assets comme sur desktop */}
                       {labelKey === 'craftBuildAssets' && CRAFT_BUILD_ASSET_SUBLINKS.map((sub) => (
                         <Link key={sub.labelKey} href={sub.href} onClick={closeMobile}
-                          className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                          className="py-1 pl-3 font-sans text-[13px] text-white hover:text-white transition-colors border-l border-white/25 ml-1">
                           {t(sub.labelKey)}
                         </Link>
                       ))}
                     </div>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftTransact')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-3">{t('craftTransact')}</p>
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('craftRecruit')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-3">{t('craftRecruit')}</p>
                   <Link href="/talent" onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                    className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                     {t('craftRecruitIntro')}
                   </Link>
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/35 mt-2">{t('craftRecruitForCompanies')}</p>
+                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white mt-2">{t('craftRecruitForCompanies')}</p>
                   {CRAFT_RECRUIT_COMPANY_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                      className="py-1 pl-3 font-sans text-[13px] text-white hover:text-white transition-colors border-l border-white/25 ml-1">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/35 mt-2">{t('craftRecruitForCandidates')}</p>
+                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white mt-2">{t('craftRecruitForCandidates')}</p>
                   {CRAFT_RECRUIT_CANDIDATE_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/35 hover:text-white/70 transition-colors border-l border-white/20 ml-1">
+                      className="py-1 pl-3 font-sans text-[13px] text-white hover:text-white transition-colors border-l border-white/25 ml-1">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -760,7 +760,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('thinking')}
                 aria-current={isThinkingActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isThinkingActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isThinkingActive ? 'text-white border-ag-apex' : 'text-white hover:text-white border-white/10'
                 }`}
               >
                 {t('ourThinking')}
@@ -768,25 +768,25 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'thinking' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('thinkingMagazine')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-2">{t('thinkingMagazine')}</p>
                   {THINKING_MAGAZINE_LINKS.map(({ labelKey, href, muted }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className={`py-1.5 font-sans text-[14px] transition-colors ${muted ? 'text-white/25 hover:text-white/50' : 'text-white/50 hover:text-white'}`}>
+                      className={`py-1.5 font-sans text-[14px] transition-colors ${muted ? 'text-white/60 hover:text-white' : 'text-white hover:text-ag-apex'}`}>
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('thinkingMarket')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-3">{t('thinkingMarket')}</p>
                   <a
                     href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors"
+                    className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors"
                   >
                     {t('thinkingMarketNewsletter')}
                   </a>
                   {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -800,7 +800,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('who')}
                 aria-current={isWhoActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isWhoActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isWhoActive ? 'text-white border-ag-apex' : 'text-white hover:text-white border-white/10'
                 }`}
               >
                 {t('whoWeAre')}
@@ -810,38 +810,38 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <div className="py-2 pl-4 flex flex-col gap-2">
 
                   {/* Le groupe */}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-2">{t('whoGroup')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-2">{t('whoGroup')}</p>
                   {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
                   <Link
                     href={'/about#fondateur' as LinkHref}
                     onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors"
+                    className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors"
                   >
                     {t('whoFounder')}
                   </Link>
 
                   {/* Nos bureaux */}
                   <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-1.5">{t('whoOffices')}</p>
-                    <p className="font-sans text-[12px] text-white/60 leading-relaxed">
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mb-1.5">{t('whoOffices')}</p>
+                    <p className="font-sans text-[12px] text-white leading-relaxed">
                       Switzerland, Rue du Centre 142, 1025 St-Sulpice
                     </p>
                   </div>
 
                   {/* Nos industries — liste statique mobile */}
                   <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mb-2">{t('whoIndustries')}</p>
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mb-2">{t('whoIndustries')}</p>
                     <div className="flex flex-col">
                       {INDUSTRY_CLUSTERS.map(({ slug, labelKey }) => (
                         <Link key={slug} href={`/industries/${slug}` as LinkHref} onClick={closeMobile}
-                          className="py-1.5 font-sans text-[13px] text-white/50 hover:text-white transition-colors flex items-center justify-between group">
+                          className="py-1.5 font-sans text-[13px] text-white hover:text-ag-apex transition-colors flex items-center justify-between group">
                           <span>{t(labelKey as Parameters<typeof t>[0])}</span>
-                          <ArrowUpRight size={11} className="text-white/30 group-hover:text-white/70 transition-colors shrink-0" />
+                          <ArrowUpRight size={11} className="text-white group-hover:text-white transition-colors shrink-0" />
                         </Link>
                       ))}
                     </div>
@@ -852,10 +852,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   </div>
 
                   {/* Nous rejoindre */}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/60 mt-3">{t('whoJoin')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white mt-3">{t('whoJoin')}</p>
                   {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/50 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-white hover:text-ag-apex transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -870,7 +870,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={closeMobile}
                 aria-current={isContactActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isContactActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isContactActive ? 'text-white border-ag-apex' : 'text-white hover:text-white border-white/10'
                 }`}
               >
                 {t('navContact')}
@@ -883,7 +883,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <div className="rounded-lg flex items-center gap-2.5 border border-white/15 px-4 py-3">
                   <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
                   <div className="leading-tight">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">{user.label}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white">{user.label}</p>
                     <p className="font-sans text-[14px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
                   </div>
                 </div>
@@ -891,7 +891,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <NextLink
                   href="/client/login"
                   onClick={closeMobile}
-                  className="rounded-lg flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                  className="rounded-lg flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-white hover:border-white/50 hover:text-ag-apex transition-all"
                 >
                   <User size={13} />
                   {t('clientSpace')}

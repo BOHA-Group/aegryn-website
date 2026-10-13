@@ -159,7 +159,7 @@ export function GradeUseCases() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/50 to-transparent flex items-end p-4 rounded-2xl">
-                        <span className="font-mono text-[18px] font-bold text-white/50">
+                        <span className="font-mono text-[18px] font-bold text-white">
                           {uc.num}
                         </span>
                       </div>

@@ -65,7 +65,7 @@ export default async function CareerPage({ params }: Props) {
           >
             {t('hero.title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white leading-relaxed max-w-xl">
             {t('hero.desc')}
           </p></ScrollReveal>
         </div>
@@ -125,10 +125,10 @@ export default async function CareerPage({ params }: Props) {
                     sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white/50">
+                  <span className="absolute top-4 left-4 font-mono text-[9px] tracking-[0.22em] text-white">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <p className="absolute bottom-4 left-4 right-4 font-mono text-[8px] tracking-[0.22em] uppercase text-white/70">
+                  <p className="absolute bottom-4 left-4 right-4 font-mono text-[8px] tracking-[0.22em] uppercase text-white">
                     {disciplines[i]}
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export default async function CareerPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/60 mb-4">
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white mb-4">
               {t('openings.label')}
             </p>
             <h2
@@ -186,7 +186,7 @@ export default async function CareerPage({ params }: Props) {
             >
               {t('openings.title')}
             </h2>
-            <p className="mt-4 text-[15px] text-white/60 leading-relaxed max-w-lg">
+            <p className="mt-4 text-[15px] text-white leading-relaxed max-w-lg">
               {t('openings.desc')}
             </p>
           </div>
