@@ -179,7 +179,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'hobconnect',
     slug:             'hobconnect',
     url:              null as string | null,
-    image:            '/images/portfolio/hobconnect.jpg',
+    image:            '/images/portfolio/hobconnect-vinyl.jpg',
     badge:            'B2C — Social',
     tagline:          'Réseau social centré sur les passions partagées',
     description:      "Crée des communautés authentiques autour des passions partagées, sans algorithme publicitaire. Pour particuliers, professionnels, créateurs et associations.",

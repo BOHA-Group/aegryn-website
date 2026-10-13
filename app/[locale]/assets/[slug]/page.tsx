@@ -48,7 +48,6 @@ export default async function AssetPage({ params }: Props) {
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
   const tFooter  = await getTranslations({ locale, namespace: 'footer' })
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
-  const tPort    = await getTranslations({ locale, namespace: 'assets.portfolio' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
@@ -62,6 +61,12 @@ export default async function AssetPage({ params }: Props) {
   const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
   const isLive   = !!asset.url
+
+  /* Secteur de rattachement (eyebrow hero) */
+  const sectorRef = asset.industrySector
+    ? INDUSTRIES.find((i) => i.slug === asset.industrySector!.industry)?.sectors[asset.industrySector.sectorIndex]
+    : undefined
+  const sectorName = sectorRef ? getLocaleText(sectorRef.name, locale) : ''
 
   /* Mini-covers des secteurs /industries où la capacité se transpose */
   const sectorCovers = (asset.transposeSectors ?? []).map((ref) => {
@@ -94,17 +99,14 @@ export default async function AssetPage({ params }: Props) {
         <div className="relative max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
-            {tPort('label')}
+            {sectorName}
           </p>
           <h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6 text-balance"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           >
-            {asset.name}
+            {tItems(`${asset.id}.capability`)}
           </h1>
-          <p className="font-sans text-[16px] text-white/70 max-w-2xl leading-relaxed mb-10">
-            {tItems(`${asset.id}.tagline`)}
-          </p>
 
           {isLive && (
             <a
@@ -133,6 +135,9 @@ export default async function AssetPage({ params }: Props) {
               <div>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                   {t('rubricNeed')}
+                </p>
+                <p className="font-sans font-semibold text-[16px] text-ag-black leading-relaxed mb-4">
+                  {tItems(`${asset.id}.tagline`)}
                 </p>
                 <p className="text-[15px] text-ag-dark leading-[1.8]">
                   {need}
