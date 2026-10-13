@@ -266,18 +266,20 @@ export default function Footer() {
           </div>
 
           {/* Advisory CTA — macaron contact */}
-          <div>
+          <div className="relative">
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('advisoryLabel')}
             </p>
-            <p className="text-sm text-white/70 leading-relaxed mb-5">
+            <p className="text-sm text-white/70 leading-relaxed">
               {t('advisoryDesc')}
             </p>
-            {/* Medallion inline (static version — no spin here) */}
-            <FooterMedallion
-              medallionText={t('medallionText')}
-              contactLabel={t('contactLabel')}
-            />
+            {/* Médaillon dans la colonne vide à droite sous lg, sous le texte sur desktop */}
+            <div className="absolute left-full top-1/2 -translate-y-1/2 ml-6 lg:static lg:translate-y-0 lg:ml-0 lg:mt-5">
+              <FooterMedallion
+                medallionText={t('medallionText')}
+                contactLabel={t('contactLabel')}
+              />
+            </div>
           </div>
         </div>
 
