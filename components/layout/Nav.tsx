@@ -73,7 +73,6 @@ const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
 // Qui sommes-nous - Le groupe (hors fondateur qui a un hash natif)
 const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'whoAbout',     href: '/about' },
-  { labelKey: 'whoPortfolio', href: '/portfolio' as LinkHref },
   { labelKey: 'whoContact',   href: '/contact' },
 ]
 
@@ -444,14 +443,13 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isThinkingActive =
     isActive('/magazine') || isActive('/blog')
 
-  const isContactActive = isActive('/contact')
+  const isPortfolioActive = isActive('/portfolio')
 
   const isWhoActive =
     isActive('/about') ||
     isActive('/career') || isActive('/alliances') ||
     isActive('/experts') || isActive('/investisseurs') ||
-    isActive('/audit') ||
-    isActive('/portfolio') || isActive('/industries')
+    isActive('/audit') || isActive('/industries')
 
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
@@ -632,17 +630,17 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             </AnimatePresence>
           </div>
 
-          {/* Contact */}
+          {/* Portfolio */}
           <div className="nav-link-item relative flex items-center">
             <Link
-              href="/contact"
+              href={'/portfolio' as LinkHref}
               className={`relative flex items-center font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isContactActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                isPortfolioActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
-              aria-current={isContactActive ? 'page' : undefined}
+              aria-current={isPortfolioActive ? 'page' : undefined}
             >
-              {t('navContact')}
-              {isContactActive && <span className="absolute left-0 bottom-0 w-full h-[2px] bg-ag-apex" />}
+              {t('navPortfolio')}
+              {isPortfolioActive && <span className="absolute left-0 bottom-0 w-full h-[2px] bg-ag-apex" />}
             </Link>
           </div>
         </nav>
@@ -863,17 +861,17 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               )}
             </div>
 
-            {/* Contact */}
+            {/* Portfolio */}
             <div className="mobile-nav-item">
               <Link
-                href="/contact"
+                href={'/portfolio' as LinkHref}
                 onClick={closeMobile}
-                aria-current={isContactActive ? 'page' : undefined}
+                aria-current={isPortfolioActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isContactActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isPortfolioActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
-                {t('navContact')}
+                {t('navPortfolio')}
               </Link>
             </div>
 

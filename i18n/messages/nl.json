@@ -50,7 +50,6 @@
     "ourSolutions": "ONZE OPLOSSINGEN",
     "ourThinking": "ONZE PUBLICATIES",
     "whoWeAre": "WIE WE ZIJN",
-    "navContact": "CONTACT",
     "craftBuild": "Bouwen",
     "craftBuildDesc": "Engineering van duurzame tech-assets",
     "craftBuildAssets": "Eigen assets",
@@ -115,7 +114,6 @@
     "whoGroup": "De groep",
     "whoGroupDesc": "Geschiedenis, missie, waarden",
     "whoAbout": "Over Aegryn",
-    "whoPortfolio": "Ons portfolio",
     "whoOffices": "Onze kantoren",
     "whoContact": "Contact",
     "whoJoin": "Sluit je bij ons aan",
@@ -158,7 +156,8 @@
     "craftRecruitForCandidates": "Voor kandidaten",
     "craftRecruitHire": "Profiel werven",
     "craftRecruitTransition": "Overgangsprofielen",
-    "craftRecruitPool": "Deelnemen aan de pool"
+    "craftRecruitPool": "Deelnemen aan de pool",
+    "navPortfolio": "PORTFOLIO"
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",

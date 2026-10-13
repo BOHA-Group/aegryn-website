@@ -50,7 +50,6 @@
     "ourSolutions": "NUESTRAS SOLUCIONES",
     "ourThinking": "NUESTRAS PUBLICACIONES",
     "whoWeAre": "QUIÉNES SOMOS",
-    "navContact": "CONTACTO",
     "craftBuild": "Construir",
     "craftBuildDesc": "Ingeniería de activos tech duraderos",
     "craftBuildAssets": "Activos propietarios",
@@ -115,7 +114,6 @@
     "whoGroup": "El grupo",
     "whoGroupDesc": "Historia, misión, valores",
     "whoAbout": "Acerca de Aegryn",
-    "whoPortfolio": "Nuestro portfolio",
     "whoOffices": "Nuestras oficinas",
     "whoContact": "Contáctenos",
     "whoJoin": "Únete a nosotros",
@@ -158,7 +156,8 @@
     "craftRecruitForCandidates": "Para candidatos",
     "craftRecruitHire": "Reclutar un perfil",
     "craftRecruitTransition": "Perfiles de transición",
-    "craftRecruitPool": "Unirse al pool"
+    "craftRecruitPool": "Unirse al pool",
+    "navPortfolio": "PORTFOLIO"
   },
   "hero": {
     "tagline": "Aegryn. De la estrategia a la transmisión. Suiza & Europa.",
