@@ -150,12 +150,12 @@ export default async function BuildServicePage({ params }: Props) {
                 }`}>
                   {card.subtitle}
                 </p>
-                <h3 className={`font-sans font-bold text-[17px] leading-snug ${
+                <h3 className={`font-sans font-bold text-[16px] leading-snug ${
                   card.key === 'btl' ? 'text-white' : 'text-ag-black'
                 }`}>
                   {card.title}
                 </h3>
-                <p className={`font-sans text-[13px] leading-relaxed flex-1 ${
+                <p className={`font-sans text-[15px] leading-relaxed flex-1 ${
                   card.key === 'btl' ? 'text-white/70' : 'text-ag-gray'
                 }`}>
                   {card.desc}
