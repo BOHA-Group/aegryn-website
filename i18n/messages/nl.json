@@ -188,8 +188,28 @@
       },
       "label": "Onze Groep",
       "title": "Wat wij bouwen\nmet wie groot denkt.",
-      "sub": "Projecten ontworpen, gestuurd en in gebruik genomen door Aegryn, voor of met onze klanten. Elk beantwoordt een reële behoefte en richt zich op een markt die groot genoeg is om te blijven bestaan.",
-      "sub2": "Wanneer wij een participatie nemen, kiezen wij projecten waarin wij geloven: een geverifieerde behoefte, een groeiende markt, gezonde governance en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen."
+      "introSegments": [
+        {
+          "t": "Projecten "
+        },
+        {
+          "t": "ontworpen, gestuurd en in gebruik genomen door Aegryn",
+          "bold": true
+        },
+        {
+          "t": ", voor of met onze klanten. Elk beantwoordt een reële behoefte en richt zich op een markt die groot genoeg is om te blijven bestaan. "
+        },
+        {
+          "t": "Wanneer wij een participatie nemen, kiezen wij projecten waarin wij geloven: "
+        },
+        {
+          "t": "een geverifieerde behoefte, een groeiende markt, gezonde governance",
+          "bold": true
+        },
+        {
+          "t": " en een architectuur die anderen kunnen overnemen. Wanneer wij voor een klant werken, gelden dezelfde eisen. Sommige projecten richten zich op particulieren, andere op professionals of instellingen."
+        }
+      ]
     },
     "page": {
       "label": "Aegryn Ecosysteem",

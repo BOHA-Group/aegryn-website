@@ -188,8 +188,28 @@
       },
       "label": "Il nostro Gruppo",
       "title": "Ciò che costruiamo\ncon chi pensa in grande.",
-      "sub": "Progetti concepiti, pilotati e messi in servizio da Aegryn, per o con i nostri clienti. Ognuno risponde a un bisogno reale e punta a un mercato abbastanza ampio da durare.",
-      "sub2": "Quando prendiamo una partecipazione, scegliamo i progetti in cui crediamo: un bisogno verificato, un mercato in crescita, una governance sana e un'architettura che altri possono riprendere. Quando lavoriamo per un cliente, applichiamo gli stessi requisiti. Alcuni progetti si rivolgono ai privati, altri a professionisti o istituzioni."
+      "introSegments": [
+        {
+          "t": "Progetti "
+        },
+        {
+          "t": "concepiti, pilotati e messi in servizio da Aegryn",
+          "bold": true
+        },
+        {
+          "t": ", per o con i nostri clienti. Ognuno risponde a un bisogno reale e punta a un mercato abbastanza ampio da durare. "
+        },
+        {
+          "t": "Quando prendiamo una partecipazione, scegliamo i progetti in cui crediamo: "
+        },
+        {
+          "t": "un bisogno verificato, un mercato in crescita, una governance sana",
+          "bold": true
+        },
+        {
+          "t": " e un'architettura che altri possono riprendere. Quando lavoriamo per un cliente, applichiamo gli stessi requisiti. Alcuni progetti si rivolgono ai privati, altri a professionisti o istituzioni."
+        }
+      ]
     },
     "page": {
       "label": "Ecosistema Aegryn",
