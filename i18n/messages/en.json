@@ -230,7 +230,8 @@
       "filterPortfolio": "PORTFOLIO assets",
       "coreDesc": "Designed, developed and operated by Aegryn",
       "portfolioDesc": "Strategic participations and support",
-      "filterValuation": "Valuation"
+      "filterValuation": "Valuation",
+      "publicNameSuffix": "public name"
     },
     "items": {
       "subblink": {

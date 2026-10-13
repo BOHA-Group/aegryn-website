@@ -230,7 +230,8 @@
       "filterPortfolio": "PORTFOLIO-assets",
       "coreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
       "portfolioDesc": "Strategische participaties en begeleiding",
-      "filterValuation": "Waardering"
+      "filterValuation": "Waardering",
+      "publicNameSuffix": "publieke naam"
     },
     "items": {
       "subblink": {

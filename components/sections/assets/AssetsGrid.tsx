@@ -74,7 +74,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               key={asset.id}
               className="asset-card bg-ag-white rounded-2xl border border-ag-border overflow-hidden flex flex-col group hover:bg-ag-off-white transition-colors"
             >
-              {/* Image illustrative */}
+              {/* Image illustrative + badge en haut à droite */}
               {asset.image && (
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
@@ -84,70 +84,67 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
                   />
+                  <span className="absolute top-4 right-4 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
+                    {tItems(`${asset.id}.badge`)}
+                  </span>
                 </div>
               )}
-              <div className="p-8 flex flex-col gap-5 flex-1">
-              {/* Titre : nom public, sinon tagline descriptive */}
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex-1 flex flex-col gap-1">
-                  <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug">
-                    {asset.namePublic ? asset.name : tItems(`${asset.id}.tagline`)}
-                  </h2>
-                  {asset.namePublic && (
-                    <p className="font-sans text-[13px] text-ag-gray leading-snug">
-                      {tItems(`${asset.id}.tagline`)}
-                    </p>
+              <div className="p-8 flex flex-col gap-4 flex-1">
+              {/* Titre : tagline + nom public éventuel */}
+              <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug">
+                {tItems(`${asset.id}.tagline`)}
+                {asset.namePublic && (
+                  <span className="font-normal text-ag-gray"> ({t('publicNameSuffix')} : {asset.name})</span>
+                )}
+              </h2>
+
+              {/* Badges statut */}
+              {(statusLabel(asset.status) || asset.internalOnly) && (
+                <div className="flex items-center gap-3 flex-wrap">
+                  {statusLabel(asset.status) && (
+                    <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
+                      {statusLabel(asset.status)}
+                    </span>
+                  )}
+                  {asset.internalOnly && (
+                    <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
+                      {t('internalOnly')}
+                    </span>
                   )}
                 </div>
-              </div>
+              )}
 
-              {/* Badges */}
-              <div className="flex items-center gap-3 flex-wrap">
-                <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray border border-ag-border px-2 py-1 rounded-md">
-                  {tItems(`${asset.id}.badge`)}
-                </span>
-                {statusLabel(asset.status) && (
-                  <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
-                    {statusLabel(asset.status)}
-                  </span>
-                )}
-                {asset.internalOnly && (
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
-                    {t('internalOnly')}
-                  </span>
-                )}
-
-              </div>
-
-              {/* Description */}
-              <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
-                {tItems(`${asset.id}.description`)}
-              </p>
-
-              {/* Actions — révélées au survol */}
-              <div className="flex items-center gap-4 pt-2 border-t border-ag-border opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {asset.internalOnly ? (
-                  <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
-                    {t('confidential')}
-                  </span>
-                ) : (
-                  <Link
-                    href={`/assets/${asset.slug}` as never}
-                    className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
-                  >
-                    {t('viewDetails')} <ArrowUpRight size={11} />
-                  </Link>
-                )}
-                {asset.url && (
-                  <a
-                    href={asset.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors flex items-center gap-1"
-                  >
-                    {t('visitSite')} <ExternalLink size={11} />
-                  </a>
-                )}
+              {/* Détails pliés — dépliés au survol */}
+              <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
+                <div className="min-h-0 min-w-0 overflow-hidden">
+                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed pb-4">
+                    {tItems(`${asset.id}.description`)}
+                  </p>
+                  <div className="flex items-center gap-4 pt-4 border-t border-ag-border">
+                    {asset.internalOnly ? (
+                      <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
+                        {t('confidential')}
+                      </span>
+                    ) : (
+                      <Link
+                        href={`/assets/${asset.slug}` as never}
+                        className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
+                      >
+                        {t('viewDetails')} <ArrowUpRight size={11} />
+                      </Link>
+                    )}
+                    {asset.url && (
+                      <a
+                        href={asset.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors flex items-center gap-1"
+                      >
+                        {t('visitSite')} <ExternalLink size={11} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
               </div>
             </div>

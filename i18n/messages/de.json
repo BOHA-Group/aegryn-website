@@ -230,7 +230,8 @@
       "filterPortfolio": "PORTFOLIO-Assets",
       "coreDesc": "Von Aegryn konzipiert, entwickelt und betrieben",
       "portfolioDesc": "Strategische Beteiligungen und Begleitung",
-      "filterValuation": "Bewertung"
+      "filterValuation": "Bewertung",
+      "publicNameSuffix": "öffentlicher Name"
     },
     "items": {
       "subblink": {

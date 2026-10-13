@@ -230,7 +230,8 @@
       "filterPortfolio": "Activos PORTFOLIO",
       "coreDesc": "Diseñados, desarrollados y operados por Aegryn",
       "portfolioDesc": "Participaciones estratégicas y acompañamiento",
-      "filterValuation": "Valoración"
+      "filterValuation": "Valoración",
+      "publicNameSuffix": "nombre público"
     },
     "items": {
       "subblink": {
