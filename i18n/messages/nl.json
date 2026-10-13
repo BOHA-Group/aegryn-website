@@ -706,8 +706,19 @@
   },
   "whatwedo": {
     "label": "Onze Overtuiging",
-    "convictionTitle": "Waarde wordt niet geïmproviseerd. Ze wordt opgebouwd.",
-    "convictionDesc": "Elke organisatie draagt in zich activa, een team, onafhankelijkheid en het vermogen om te blijven bestaan. Sommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquireren of gewoon iets opbouwen dat de tand des tijds doorstaat. Welke intentie ook, waarde wordt opgebouwd vóór ze gerealiseerd wordt. Aegryn grijpt vroeg in.",
+    "convictionSegments": [
+      {
+        "t": "Waarde wordt niet geïmproviseerd. Ze wordt opgebouwd.\n\n",
+        "bold": true
+      },
+      {
+        "t": "Elke organisatie draagt in zich activa, een team, onafhankelijkheid en het vermogen om te blijven bestaan. Sommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquireren of gewoon iets opbouwen dat de tand des tijds doorstaat. Welke intentie ook, "
+      },
+      {
+        "t": "waarde wordt opgebouwd vóór ze gerealiseerd wordt. Aegryn grijpt vroeg in.",
+        "bold": true
+      }
+    ],
     "items": [
       {
         "num": "01",

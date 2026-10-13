@@ -706,8 +706,19 @@
   },
   "whatwedo": {
     "label": "Nuestra Convicción",
-    "convictionTitle": "El valor no se improvisa. Se construye.",
-    "convictionDesc": "Cada organización lleva en sí activos, un equipo, independencia y capacidad de perdurar. Algunos directivos quieren transmitir. Otros quieren captar capital, adquirir o simplemente construir algo que resista al tiempo. Cualquiera que sea la intención, el valor se construye antes de realizarse. Aegryn interviene aguas arriba.",
+    "convictionSegments": [
+      {
+        "t": "El valor no se improvisa. Se construye.\n\n",
+        "bold": true
+      },
+      {
+        "t": "Cada organización lleva en sí activos, un equipo, independencia y capacidad de perdurar. Algunos directivos quieren transmitir. Otros quieren captar capital, adquirir o simplemente construir algo que resista al tiempo. Cualquiera que sea la intención, "
+      },
+      {
+        "t": "el valor se construye antes de realizarse. Aegryn interviene aguas arriba.",
+        "bold": true
+      }
+    ],
     "items": [
       {
         "num": "01",

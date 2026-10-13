@@ -706,8 +706,19 @@
   },
   "whatwedo": {
     "label": "La Nostra Convinzione",
-    "convictionTitle": "Il valore non si improvvisa. Si costruisce.",
-    "convictionDesc": "Ogni organizzazione porta in sé asset, un team, indipendenza e la capacità di durare. Alcuni dirigenti vogliono trasmettere. Altri vogliono raccogliere capitali, acquisire o semplicemente costruire qualcosa che resista al tempo. Qualunque sia l'intenzione, il valore si costruisce prima di realizzarsi. Aegryn interviene a monte.",
+    "convictionSegments": [
+      {
+        "t": "Il valore non si improvvisa. Si costruisce.\n\n",
+        "bold": true
+      },
+      {
+        "t": "Ogni organizzazione porta in sé asset, un team, indipendenza e la capacità di durare. Alcuni dirigenti vogliono trasmettere. Altri vogliono raccogliere capitali, acquisire o semplicemente costruire qualcosa che resista al tempo. Qualunque sia l'intenzione, "
+      },
+      {
+        "t": "il valore si costruisce prima di realizzarsi. Aegryn interviene a monte.",
+        "bold": true
+      }
+    ],
     "items": [
       {
         "num": "01",

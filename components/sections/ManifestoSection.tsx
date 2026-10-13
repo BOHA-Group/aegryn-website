@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, SplitText } from '@/lib/gsap'
+import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 
 /* ── Counter animation helper ─────────────────────────────── */
 function animateCounter(el: HTMLElement, target: number, duration = 1.4) {
@@ -128,32 +129,20 @@ export function ManifestoSection() {
       {/* ── What we do ─────────────────────────────────────── */}
       <section ref={whatRef} className="border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between border-b border-ag-border py-4 mb-0">
-            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {tW('label')}
-            </span>
-            <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
-              01
-            </span>
-          </div>
-          <div className="py-12 border-b border-ag-border text-center px-4 max-w-3xl mx-auto">
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] mb-5"
-              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-            >
-              {tW('convictionTitle').split('. ').map((part, i, arr) => (
-                <span key={i}>
-                  {part}{i < arr.length - 1 ? '.' : ''}
-                  {i < arr.length - 1 && <br />}
-                </span>
-              ))}
-            </h2>
-            <p
-              className="font-sans font-normal text-ag-gray leading-[1.75]"
-              style={{ fontSize: 'clamp(15px,1.2vw,17px)' }}
-            >
-              {tW('convictionDesc')}
-            </p>
+          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border border-b border-ag-border">
+            <div className="py-16 md:pr-16 flex items-start justify-between">
+              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
+                / {tW('label')}
+              </p>
+              <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
+                01
+              </span>
+            </div>
+            <div className="py-16 md:px-16">
+              <VisionTypewriter
+                segments={tW.raw('convictionSegments') as { t: string; bold?: boolean }[]}
+              />
+            </div>
           </div>
           <div className="border-b border-ag-border">
             {whatwedoItems.map((item) => (

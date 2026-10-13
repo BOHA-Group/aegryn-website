@@ -706,8 +706,19 @@
   },
   "whatwedo": {
     "label": "Notre Conviction",
-    "convictionTitle": "La valeur ne s'improvise pas. Elle se construit.",
-    "convictionDesc": "Chaque organisation porte en elle des actifs, une équipe, une indépendance, une capacité à durer. Certains dirigeants veulent transmettre. D'autres veulent lever, acquérir, ou simplement bâtir quelque chose qui résiste au temps. Quelle que soit l'intention, la valeur se construit avant de se réaliser. Aegryn intervient en amont.",
+    "convictionSegments": [
+      {
+        "t": "La valeur ne s'improvise pas. Elle se construit.\n\n",
+        "bold": true
+      },
+      {
+        "t": "Chaque organisation porte en elle des actifs, une équipe, une indépendance, une capacité à durer. Certains dirigeants veulent transmettre. D'autres veulent lever, acquérir, ou simplement bâtir quelque chose qui résiste au temps. Quelle que soit l'intention, "
+      },
+      {
+        "t": "la valeur se construit avant de se réaliser. Aegryn intervient en amont.",
+        "bold": true
+      }
+    ],
     "items": [
       {
         "num": "01",

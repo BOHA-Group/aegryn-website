@@ -706,8 +706,19 @@
   },
   "whatwedo": {
     "label": "Our Conviction",
-    "convictionTitle": "Value is not improvised. It is built.",
-    "convictionDesc": "Every organisation carries within it assets, a team, independence, and the capacity to endure. Some leaders want to transfer. Others want to raise, acquire, or simply build something that stands the test of time. Whatever the intention, value is built before it is realised. Aegryn intervenes upstream.",
+    "convictionSegments": [
+      {
+        "t": "Value is not improvised. It is built.\n\n",
+        "bold": true
+      },
+      {
+        "t": "Every organisation carries within it assets, a team, independence, and the capacity to endure. Some leaders want to transfer. Others want to raise, acquire, or simply build something that stands the test of time. Whatever the intention, "
+      },
+      {
+        "t": "value is built before it is realised. Aegryn intervenes upstream.",
+        "bold": true
+      }
+    ],
     "items": [
       {
         "num": "01",
