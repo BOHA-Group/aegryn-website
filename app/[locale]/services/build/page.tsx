@@ -255,9 +255,6 @@ export default async function BuildServicePage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* Carte agences — fond blanc */}
             <div className="rounded-2xl bg-ag-white border border-ag-border p-8 md:p-10 flex flex-col gap-6">
-              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light">
-                {t('marketComparison.agencyCardLabel')}
-              </p>
               <h3
                 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.08]"
                 style={{ fontSize: 'clamp(22px,2.4vw,34px)' }}
@@ -275,9 +272,6 @@ export default async function BuildServicePage({ params }: Props) {
             </div>
             {/* Carte Aegryn — fond navy */}
             <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-6">
-              <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-white/70">
-                {t('marketComparison.aegrynCardLabel')}
-              </p>
               <h3
                 className="font-sans font-bold text-white tracking-[-0.025em] leading-[1.08]"
                 style={{ fontSize: 'clamp(22px,2.4vw,34px)' }}
