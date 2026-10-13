@@ -5655,7 +5655,7 @@
         {
           "num": "01",
           "title": "Kaderstelling & keuze",
-          "desc": "Behoefte, scope, keuze tussen kopen, integreren of bouwen, exitplan. Resultaat: ondertekend bestek en honorarium. Duur: 1 tot 2 weken, inbegrepen in het honorarium."
+          "desc": "Behoefte, scope, keuze tussen kopen, integreren of bouwen, exitplan. Resultaat: ondertekend bestek en prijs. Duur: 1 tot 2 weken, inbegrepen in de prijs."
         },
         {
           "num": "02",
@@ -5696,8 +5696,8 @@
       "note": "Aegryn-onderhoud garandeert dat de tool altijd up-to-date, veilig en zonder ons overneembaar blijft."
     },
     "fees": {
-      "label": "Honoraria",
-      "title": "Transparante honoraria. Geen verrassingen.",
+      "label": "Prijzen",
+      "title": "Transparante prijzen. Geen verrassingen.",
       "items": [
         {
           "title": "Kaderstelling (inbegrepen)",

@@ -5522,7 +5522,7 @@
         {
           "num": "01",
           "title": "Preis bei der Cadrage fixiert.",
-          "desc": "Die Honorare werden am Ende der Cadrage definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
+          "desc": "Der Preis wird am Ende der Cadrage definiert und unterzeichnet, vor dem ersten Commit. Bei Änderungen des Umfangs wird vor der Ausführung ein Nachtrag unterzeichnet. Keine Überraschungsrechnungen."
         },
         {
           "num": "02",
@@ -5640,7 +5640,7 @@
         {
           "num": "01",
           "title": "Cadrage & Entscheidung",
-          "desc": "Bedarf, Umfang, Entscheidung zwischen Kaufen, Integrieren oder Bauen, Exit-Plan. Ergebnis: unterzeichnetes Lastenheft und Honorar. Dauer: 1 bis 2 Wochen, im Honorar enthalten."
+          "desc": "Bedarf, Umfang, Entscheidung zwischen Kaufen, Integrieren oder Bauen, Exit-Plan. Ergebnis: unterzeichnetes Lastenheft und Preis. Dauer: 1 bis 2 Wochen, im Preis enthalten."
         },
         {
           "num": "02",
@@ -5681,13 +5681,13 @@
       "note": "Die Aegryn-Wartung stellt sicher, dass das Tool jederzeit aktuell, sicher und ohne uns übernehmbar bleibt."
     },
     "fees": {
-      "label": "Honorare",
-      "title": "Transparente Honorare. Keine Überraschungen.",
+      "label": "Preise",
+      "title": "Transparente Preise. Keine Überraschungen.",
       "items": [
         {
           "title": "Cadrage (inklusive)",
-          "desc": "1 bis 2 Wochen. Unterzeichnetes Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Honorarvereinbarung.",
-          "format": "In den Gesamthonoraren enthalten"
+          "desc": "1 bis 2 Wochen. Unterzeichnetes Lastenheft. Build-Preis definiert und unterzeichnet. Kein Engagement vor Unterzeichnung der Preisvereinbarung.",
+          "format": "Im Gesamtpreis enthalten"
         },
         {
           "title": "Konzeption (fixierter Preis)",

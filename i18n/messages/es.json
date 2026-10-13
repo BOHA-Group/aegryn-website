@@ -5522,7 +5522,7 @@
         {
           "num": "01",
           "title": "Precio fijado en el cadrage.",
-          "desc": "Los honorarios se definen y firman al final del cadrage, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
+          "desc": "El precio se define y firma al final del cadrage, antes del primer commit. Si el alcance cambia, se firma un anexo antes de la ejecución. Sin facturas sorpresa."
         },
         {
           "num": "02",
@@ -5640,7 +5640,7 @@
         {
           "num": "01",
           "title": "Cadrage & arbitraje",
-          "desc": "Necesidad, alcance, elección entre comprar, integrar o construir, plan de salida. Resultado: pliego de condiciones y honorarios firmados. Duración: 1 a 2 semanas, incluido en los honorarios."
+          "desc": "Necesidad, alcance, elección entre comprar, integrar o construir, plan de salida. Resultado: pliego de condiciones y precio firmados. Duración: 1 a 2 semanas, incluido en el precio."
         },
         {
           "num": "02",
@@ -5681,13 +5681,13 @@
       "note": "El mantenimiento Aegryn garantiza que la herramienta se mantenga actualizada, segura y pueda ser retomada sin nosotros en cualquier momento."
     },
     "fees": {
-      "label": "Honorarios",
-      "title": "Honorarios transparentes. Sin sorpresas.",
+      "label": "Precios",
+      "title": "Precios transparentes. Sin sorpresas.",
       "items": [
         {
           "title": "Cadrage (incluido)",
           "desc": "1 a 2 semanas. Pliego de condiciones firmado. Precio de build definido y firmado. Sin compromiso antes de la firma del acuerdo.",
-          "format": "Incluido en los honorarios totales"
+          "format": "Incluido en el precio total"
         },
         {
           "title": "Concepción (precio bloqueado)",

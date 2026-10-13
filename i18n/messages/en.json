@@ -5537,7 +5537,7 @@
         {
           "num": "01",
           "title": "Price locked at scoping.",
-          "desc": "Fees are defined and signed at the end of scoping, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
+          "desc": "The price is defined and signed at the end of scoping, before the first commit. If scope changes, an amendment is signed before execution. No surprise invoicing."
         },
         {
           "num": "02",
@@ -5655,7 +5655,7 @@
         {
           "num": "01",
           "title": "Scoping & arbitration",
-          "desc": "Need, scope, choice between buying, integrating or building, exit plan. Outcome: signed specification and fee. Duration: 1 to 2 weeks, included in the fee."
+          "desc": "Need, scope, choice between buying, integrating or building, exit plan. Outcome: signed specification and price. Duration: 1 to 2 weeks, included in the price."
         },
         {
           "num": "02",
@@ -5696,13 +5696,13 @@
       "note": "Aegryn maintenance ensures the tool stays up to date, secure, and can be taken over without us at any time."
     },
     "fees": {
-      "label": "Fees",
-      "title": "Transparent fees. No surprises.",
+      "label": "Pricing",
+      "title": "Transparent pricing. No surprises.",
       "items": [
         {
           "title": "Scoping (included)",
-          "desc": "1 to 2 weeks. Signed specification. Build price defined and signed. No commitment before the fee agreement is signed.",
-          "format": "Included in total fee"
+          "desc": "1 to 2 weeks. Signed specification. Build price defined and signed. No commitment before the price agreement is signed.",
+          "format": "Included in total price"
         },
         {
           "title": "Design (locked price)",

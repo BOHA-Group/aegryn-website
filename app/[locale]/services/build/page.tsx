@@ -6,7 +6,7 @@ import type { ComponentProps } from 'react'
 
 type LinkHref = ComponentProps<typeof Link>['href']
 import { TechStackShowcase } from '@/components/sections/TechStackShowcase'
-import { PlatformArchitectureDiagram } from '@/components/sections/PlatformArchitectureDiagram'
+import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 
@@ -54,9 +54,6 @@ export default async function BuildServicePage({ params }: Props) {
   const feeItems                = t.raw('fees.items')                   as { title: string; desc: string; format: string }[]
   const whyPoints               = t.raw('whySection.points')            as { title: string; desc: string }[]
   const domainItems             = t.raw('domainsSection.domains')       as { num: string; badge: string; title: string; desc: string }[]
-  const platformLayers          = t.raw('platformSection.layers')       as { key: string; title: string; desc: string; tag?: string; dep?: string | null }[]
-  const platformApps            = t.raw('platformSection.apps')          as string[]
-  const platformVerticals       = t.raw('platformSection.verticals.items') as string[]
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
   const useCaseItems            = t.raw('useCasesSection.items')        as string[]
@@ -65,23 +62,26 @@ export default async function BuildServicePage({ params }: Props) {
     <main>
 
       {/* ── Section 1 : Hero ─────────────────────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-navy">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
+      <section
+        className="border-b border-ag-border bg-ag-navy flex items-center"
+        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
+      >
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 w-full">
+          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
             {t('label')}
           </p>
           <WaveReveal delay={0.1}><h1
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-8 whitespace-pre-line"
+            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6 whitespace-pre-line"
             style={{ fontSize: 'clamp(48px,6vw,86px)' }}
           >
             {t('title')}
           </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-xl">
+<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/60 leading-relaxed max-w-2xl">
             {t('desc')}
           </p>
           <Link
             href={'/advisory/technology' as LinkHref}
-            className="mt-6 inline-block font-mono text-[11px] tracking-[0.18em] uppercase text-ag-apex/80 hover:text-ag-apex transition-colors"
+            className="mt-5 inline-block font-mono text-[11px] tracking-[0.18em] uppercase text-ag-apex/80 hover:text-ag-apex transition-colors"
           >
             {t('advisoryLink')} →
           </Link></ScrollReveal>
@@ -245,9 +245,9 @@ export default async function BuildServicePage({ params }: Props) {
         </ScrollReveal>
       </section>
 
-      {/* ── Section 1c : AEGRYN Enterprise Intelligence Platform ──────── */}
+      {/* ── Section 1c : Infrastructure commune ────────────────────────── */}
       <section className="border-b border-ag-border bg-ag-navy">
-        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex mb-4">
             {t('platformSection.label')}
           </p>
@@ -257,22 +257,18 @@ export default async function BuildServicePage({ params }: Props) {
           >
             {t('platformSection.title')}
           </h2>
-          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-2xl mb-14">
+          <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-2xl">
             {t('platformSection.desc')}
           </p>
-          {/* Schéma animé */}
-          <PlatformArchitectureDiagram
-            layers={platformLayers}
-            apps={platformApps}
-            verticals={platformVerticals}
-            verticalsLabel={t('platformSection.verticals.label')}
-            appsLabel={t('platformSection.appsLabel')}
-            packagedLabel={t('platformSection.packagedLabel')}
-            flowLabel={t('platformSection.flowLabel')}
-            govTooltipLabel={t('platformSection.govTooltipLabel')}
-          />
         </ScrollReveal>
       </section>
+
+      {/* ── Transition vidéo : petite, centrée, grossit en plein écran au scroll ── */}
+      <VideoScrollGrow
+        srcWeb="/videos/sailboat-rope-web.mp4"
+        srcMobile="/videos/sailboat-rope-mobile.mp4"
+        poster="/images/services/sailboat-rope-poster.jpg"
+      />
 
       {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
       <section className="border-b border-ag-border">

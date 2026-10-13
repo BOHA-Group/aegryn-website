@@ -5522,7 +5522,7 @@
         {
           "num": "01",
           "title": "Prezzo bloccato al cadrage.",
-          "desc": "Gli onorari vengono definiti e firmati al termine del cadrage, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
+          "desc": "Il prezzo viene definito e firmato al termine del cadrage, prima del primo commit. Se lo scope cambia, viene firmato un addendum prima dell'esecuzione. Nessuna fattura a sorpresa."
         },
         {
           "num": "02",
@@ -5640,7 +5640,7 @@
         {
           "num": "01",
           "title": "Cadrage & arbitraggio",
-          "desc": "Bisogno, perimetro, scelta tra acquistare, integrare o costruire, piano di uscita. Risultato: capitolato e onorari firmati. Durata: 1-2 settimane, incluso negli onorari."
+          "desc": "Bisogno, perimetro, scelta tra acquistare, integrare o costruire, piano di uscita. Risultato: capitolato e prezzo firmati. Durata: 1-2 settimane, incluso nel prezzo."
         },
         {
           "num": "02",
@@ -5681,13 +5681,13 @@
       "note": "La manutenzione Aegryn garantisce che lo strumento resti aggiornato, sicuro e ripreso senza di noi in qualsiasi momento."
     },
     "fees": {
-      "label": "Onorari",
-      "title": "Onorari trasparenti. Nessuna sorpresa.",
+      "label": "Prezzi",
+      "title": "Prezzi trasparenti. Nessuna sorpresa.",
       "items": [
         {
           "title": "Cadrage (incluso)",
           "desc": "1-2 settimane. Capitolato firmato. Prezzo di build definito e firmato. Nessun impegno prima della firma dell'accordo.",
-          "format": "Incluso negli onorari totali"
+          "format": "Incluso nel prezzo totale"
         },
         {
           "title": "Progettazione (prezzo bloccato)",

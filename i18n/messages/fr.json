@@ -5656,8 +5656,8 @@
       "note": "La maintenance Aegryn garantit que l'outil reste à jour, sécurisé et repris sans nous à tout moment."
     },
     "fees": {
-      "label": "Honoraires",
-      "title": "Honoraires transparents. Aucune surprise.",
+      "label": "Prix",
+      "title": "Prix transparents. Aucune surprise.",
       "items": [
         {
           "title": "Cadrage (inclus)",
