@@ -254,13 +254,13 @@ export default async function BuildServicePage({ params }: Props) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* Carte agences — fond blanc */}
-            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 flex flex-col gap-5">
+            <div className="rounded-2xl bg-ag-white border border-ag-border p-8 md:p-10 flex flex-col gap-6">
               <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-border bg-ag-off-white text-ag-gray">
                 {t('marketComparison.agencyCol')}
               </span>
-              <ul className="flex flex-col divide-y divide-ag-border">
+              <ul className="flex flex-col gap-5">
                 {marketComparisonAgency.map((item, i) => (
-                  <li key={i} className="py-3.5 flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
+                  <li key={i} className="flex items-start gap-3 font-sans text-[15px] text-ag-gray leading-relaxed">
                     <X size={14} className="mt-1 shrink-0 text-ag-gray-light" strokeWidth={2} />
                     {item}
                   </li>
@@ -268,13 +268,13 @@ export default async function BuildServicePage({ params }: Props) {
               </ul>
             </div>
             {/* Carte Aegryn — fond navy */}
-            <div className="rounded-2xl bg-ag-navy p-8 flex flex-col gap-5">
+            <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-6">
               <span className="w-fit font-mono text-[10px] tracking-[0.24em] uppercase font-bold px-2 py-0.5 border border-ag-apex/40 bg-ag-apex/10 text-ag-apex-ink">
                 {t('marketComparison.aegrynCol')}
               </span>
-              <ul className="flex flex-col divide-y divide-white/10">
+              <ul className="flex flex-col gap-5">
                 {marketComparisonAegryn.map((item, i) => (
-                  <li key={i} className="py-3.5 flex flex-col gap-1">
+                  <li key={i} className="flex flex-col gap-1">
                     <p className="font-sans text-[15px] text-white leading-relaxed flex items-start gap-3">
                       <Check size={14} className="mt-1 shrink-0 text-ag-apex" strokeWidth={2.5} />
                       {item}
