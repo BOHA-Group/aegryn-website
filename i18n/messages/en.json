@@ -1196,8 +1196,7 @@
     "cta": {
       "label": "Interested in this asset?",
       "title": "Let's discuss your acquisition",
-      "allAssets": "View all assets",
-      "contact": "Contact Aegryn"
+      "allAssets": "View all assets"
     },
     "assets": {
       "subblink": {

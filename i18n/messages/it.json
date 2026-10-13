@@ -1196,8 +1196,7 @@
     "cta": {
       "label": "Interessato a questo asset?",
       "title": "Parliamo della sua acquisizione",
-      "allAssets": "Visualizza tutti gli asset",
-      "contact": "Contatta Aegryn"
+      "allAssets": "Visualizza tutti gli asset"
     },
     "assets": {
       "subblink": {

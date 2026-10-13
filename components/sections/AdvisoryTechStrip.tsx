@@ -3,10 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight, Plus, ShieldCheck, Brain, ShieldAlert, Compass, Users, BarChart2 } from 'lucide-react'
+import { ArrowUpRight, Plus } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-
-const ICONS = [ShieldCheck, Brain, ShieldAlert, Compass, Users, BarChart2]
 
 export function AdvisoryTechStrip() {
   const t        = useTranslations('advisory')
@@ -62,9 +60,8 @@ export function AdvisoryTechStrip() {
 
         {/* Pillars grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
-          {pillarKeys.map((key, i) => {
+          {pillarKeys.map((key) => {
             const pillar   = pillars[key]
-            const Icon     = ICONS[i] ?? ShieldCheck
             const expanded = hovered === key || pinned === key
             return (
               <div
@@ -76,8 +73,13 @@ export function AdvisoryTechStrip() {
                 onClick={() => setPinned(pinned === key ? null : key)}
                 aria-expanded={expanded}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <Icon size={18} className="text-ag-apex-ink shrink-0 mt-0.5" strokeWidth={1.5} />
+                <div className="flex items-center justify-between gap-4">
+                  <h3
+                    className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
+                    style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
+                  >
+                    {pillar.title}
+                  </h3>
                   <span
                     className={`shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-colors duration-300 ${
                       expanded ? 'border-ag-apex bg-ag-apex/10 text-ag-apex-ink' : 'border-ag-border text-ag-gray-light'
@@ -87,12 +89,6 @@ export function AdvisoryTechStrip() {
                     <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${expanded ? 'rotate-45' : ''}`} />
                   </span>
                 </div>
-                <h3
-                  className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.2]"
-                  style={{ fontSize: 'clamp(15px,1.3vw,18px)' }}
-                >
-                  {pillar.title}
-                </h3>
                 <p className="font-sans text-[15px] text-ag-gray leading-relaxed flex-1">
                   {pillar.desc}
                 </p>

@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AssetPage({ params }: Props) {
   const { locale, slug } = await params
   const t       = await getTranslations({ locale, namespace: 'assetPage' })
+  const tAssets  = await getTranslations({ locale, namespace: 'assets.page' })
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
@@ -444,10 +445,10 @@ export default async function AssetPage({ params }: Props) {
               <ArrowUpRight size={14} />
             </Link>
             <Link
-              href="/contact"
+              href={`/contact?subject=general&projet=${asset.id}` as never}
               className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
             >
-              {t('cta.contact')}
+              {tAssets('compareCta')}
               <ArrowUpRight size={14} />
             </Link>
           </div>

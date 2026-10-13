@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations, useLocale } from 'next-intl'
-import { ArrowUpRight, ExternalLink } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { Aegryn_ASSETS, type AegrynAsset } from '@/data/assets'
 import { INDUSTRIES, getLocaleText } from '@/data/industries'
@@ -92,9 +92,9 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               key={asset.id}
               className="asset-card bg-ag-white rounded-2xl border border-ag-border overflow-hidden flex flex-col group hover:bg-ag-off-white transition-colors"
             >
-              {/* Image dominante + badge en haut à droite */}
+              {/* Image dominante cliquable + badge en haut à droite */}
               {asset.image && (
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <Link href={`/assets/${asset.slug}` as never} className="relative aspect-[4/3] overflow-hidden block">
                   <Image
                     src={asset.image}
                     alt={tItems(`${asset.id}.tagline`)}
@@ -105,7 +105,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                   <span className="absolute top-3 right-3 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
                     {tItems(`${asset.id}.badge`)}
                   </span>
-                </div>
+                </Link>
               )}
               <div className="p-5 flex flex-col gap-3 flex-1">
               {/* Titre : capacité démontrée */}
@@ -141,40 +141,13 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
                   <p className="font-sans text-[13px] text-ag-gray leading-relaxed pt-2 pb-2">
                     {tItems(`${asset.id}.description`)}
                   </p>
-                  <p className="font-mono text-[9px] tracking-[0.08em] text-ag-gray-light leading-relaxed pb-3">
+                  <p className="font-mono text-[9px] tracking-[0.08em] text-ag-gray-light leading-relaxed pb-1">
                     {tItems(`${asset.id}.keywords`)}
                   </p>
-                  <div className="flex items-center gap-4 pt-3 border-t border-ag-border">
-                    {asset.internalOnly ? (
-                      <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
-                        {t('confidential')}
-                      </span>
-                    ) : (
-                      <Link
-                        href={`/assets/${asset.slug}` as never}
-                        className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
-                      >
-                        {t('viewDetails')} <ArrowUpRight size={11} />
-                      </Link>
-                    )}
-                    {asset.url && (
-                      <a
-                        href={asset.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray hover:text-ag-black transition-colors flex items-center gap-1"
-                      >
-                        {t('visitSite')} <ExternalLink size={11} />
-                      </a>
-                    )}
-                  </div>
-                  {!asset.internalOnly && (
-                    <Link
-                      href={`/contact?subject=general&projet=${asset.id}` as never}
-                      className="mt-3 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
-                    >
-                      {t('compareCta')} <ArrowUpRight size={11} />
-                    </Link>
+                  {asset.internalOnly && (
+                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light pt-3 border-t border-ag-border">
+                      {t('confidential')}
+                    </p>
                   )}
                 </div>
               </div>
