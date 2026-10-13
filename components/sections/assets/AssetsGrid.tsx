@@ -68,30 +68,30 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
         </div>
 
         {/* Grid */}
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {filtered.map((asset) => (
             <div
               key={asset.id}
               className="asset-card bg-ag-white rounded-2xl border border-ag-border overflow-hidden flex flex-col group hover:bg-ag-off-white transition-colors"
             >
-              {/* Image illustrative + badge en haut à droite */}
+              {/* Image dominante + badge en haut à droite */}
               {asset.image && (
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={asset.image}
                     alt={tItems(`${asset.id}.tagline`)}
                     fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
                   />
-                  <span className="absolute top-4 right-4 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
+                  <span className="absolute top-3 right-3 font-mono text-[8px] tracking-[0.1em] uppercase px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/15 text-white/70 rounded-md whitespace-nowrap">
                     {tItems(`${asset.id}.badge`)}
                   </span>
                 </div>
               )}
-              <div className="p-8 flex flex-col gap-4 flex-1">
+              <div className="p-5 flex flex-col gap-3 flex-1">
               {/* Titre : tagline + nom public éventuel */}
-              <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-snug">
+              <h2 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.02em] leading-snug">
                 {tItems(`${asset.id}.tagline`)}
                 {asset.namePublic && (
                   <span className="font-normal text-ag-gray"> ({t('publicNameSuffix')} : {asset.name})</span>
@@ -117,10 +117,10 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
               {/* Détails pliés — dépliés au survol */}
               <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
                 <div className="min-h-0 min-w-0 overflow-hidden">
-                  <p className="font-sans text-[15px] text-ag-gray leading-relaxed pb-4">
+                  <p className="font-sans text-[13px] text-ag-gray leading-relaxed pb-3">
                     {tItems(`${asset.id}.description`)}
                   </p>
-                  <div className="flex items-center gap-4 pt-4 border-t border-ag-border">
+                  <div className="flex items-center gap-4 pt-3 border-t border-ag-border">
                     {asset.internalOnly ? (
                       <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none flex items-center gap-1">
                         {t('confidential')}
