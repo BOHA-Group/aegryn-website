@@ -325,6 +325,13 @@
         "description": "Motore di benchmark che incrocia i multipli di valorizzazione delle aziende in Europa (per settore e verticale) con il punteggio CIFSO su cinque dimensioni. Produce una fascia di valorizzazione adeguata alla maturità reale dell'asset, non solo alle sue metriche finanziarie.\n\nDue livelli di accesso: stima illustrativa, abbonamento al database. Target: dirigenti, fondi, banche, consulenti M&A e acquirenti istituzionali.",
         "visitPage": "Vedi pagina",
         "name": "Benchmark di valorizzazione degli asset"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Cassaforte digitale successoria, trasmissione sicura",
+        "description": "Centralizza e trasmette, al momento giusto e alle persone giuste, le informazioni sensibili che una persona desidera lasciare: conti, documenti, accessi e messaggi personali.",
+        "capability": "Sigillare la trasmissione sicura di una vita",
+        "keywords": "cifratura end-to-end · controllo accessi multi-parte · rilascio condizionale · successione · cassaforte digitale"
       }
     }
   },
@@ -1293,6 +1300,33 @@
           "Studio di fattibilità"
         ],
         "orgs": "Commercio & Servizi (marchi), Sanità (comunità di pazienti), Tech & Settore pubblico (associazioni, istituzioni)."
+      },
+      "heritix": {
+        "longDesc": "Centralizza e trasmette, al momento giusto e alle persone giuste, le informazioni sensibili che una persona desidera lasciare: conti finanziari, credenziali di accesso, documenti legali e messaggi personali. Cifratura end-to-end, controllo accessi multi-parte, esecuzione condizionale.",
+        "audience": "Privati, famiglie, notai, consulenti di gestione patrimoniale",
+        "features": [
+          "Cassaforte digitale cifrata",
+          "Destinatari designati e gestione dei ruoli",
+          "Trigger di trasmissione condizionale",
+          "Flusso di validazione multi-parte",
+          "Capsule di messaggi personali",
+          "Archivio di documenti legali",
+          "Registro di audit immutabile",
+          "Copertura Svizzera ed Europa"
+        ],
+        "need": "Quando l’imprevisto accade, le informazioni critiche sono spesso inaccessibili, disperse o perse, mettendo eredi e familiari in una situazione dolorosa e complessa.",
+        "skills": [
+          "Sviluppo del concetto",
+          "Studio di fattibilità",
+          "Quadro legale e normativo",
+          "Business plan",
+          "Marca e identità",
+          "Architettura privacy e protezione dei dati",
+          "Design dell’esperienza",
+          "Sviluppo tecnico",
+          "Strategia di partnership notarili e finanziarie"
+        ],
+        "orgs": "Private banking & gestione patrimoniale, Reti notarili, Assicurazione vita, Servizi legali, Family office."
       }
     },
     "press": {

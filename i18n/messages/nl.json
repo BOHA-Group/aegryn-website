@@ -325,6 +325,13 @@
         "description": "Benchmarkmotor die de waarderingsmultiples van Europese bedrijven (per sector en verticaal) combineert met de CIFSO-score op vijf dimensies. Levert een waarderingsrange die is aangepast aan de werkelijke volwassenheid van het actief, niet alleen aan de financiële cijfers.\n\nTwee toegangsniveaus: illustratieve schatting, database-abonnement. Doelgroep: bestuurders, fondsen, banken, M&A-adviseurs en institutionele overnemers.",
         "visitPage": "Pagina bekijken",
         "name": "Benchmark voor activawaardering"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Digitale successiekluis, beveiligde overdracht",
+        "description": "Centraliseert en verzendt, op het juiste moment en naar de juiste personen, de gevoelige informatie die iemand wil nalaten: rekeningen, documenten, toegangen en persoonlijke berichten.",
+        "capability": "De veilige overdracht van een leven bezegelen",
+        "keywords": "end-to-end encryptie · multi-party toegangscontrole · voorwaardelijke vrijgave · nalatenschap · digitale kluis"
       }
     }
   },
@@ -1293,6 +1300,33 @@
           "Haalbaarheidsstudie"
         ],
         "orgs": "Handel & Diensten (merken), Gezondheid (patiëntencommunities), Tech & publieke sector (verenigingen, instellingen)."
+      },
+      "heritix": {
+        "longDesc": "Centraliseert en verzendt, op het juiste moment en naar de juiste personen, de gevoelige informatie die iemand wil nalaten: financiële rekeningen, toegangsgegevens, juridische documenten en persoonlijke berichten. End-to-end encryptie, multi-party toegangscontrole, voorwaardelijke uitvoering.",
+        "audience": "Particulieren, families, notarissen, vermogensbeheerders",
+        "features": [
+          "Versleutelde digitale kluis",
+          "Aangewezen ontvangers en rolbeheer",
+          "Voorwaardelijke overdrachtstrigger",
+          "Multi-party validatieworkflow",
+          "Persoonlijke berichtcapsules",
+          "Juridisch documentenarchief",
+          "Onveranderlijk auditlogboek",
+          "Dekking Zwitserland en Europa"
+        ],
+        "need": "Wanneer het onverwachte gebeurt, zijn kritieke gegevens vaak ontoegankelijk, verspreid of verloren en brengen erfgenamen en naasten in een pijnlijke en complexe situatie.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsonderzoek",
+          "Juridisch en regelgevend kader",
+          "Businessplan",
+          "Merk en identiteit",
+          "Privacy- en gegevensbeschermingsarchitectuur",
+          "Ervaringsontwerp",
+          "Technische ontwikkeling",
+          "Strategie voor notariële en financiële partnerschappen"
+        ],
+        "orgs": "Private banking & vermogensbeheer, Notarisnetwerken, Levensverzekering, Juridische diensten, Family offices."
       }
     },
     "press": {

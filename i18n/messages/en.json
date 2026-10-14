@@ -325,6 +325,13 @@
         "description": "Benchmark engine that cross-references company valuation multiples across Europe (by industry and vertical) with the CIFSO score on five dimensions. Produces a valuation range adjusted to the asset's real maturity, not just its financial metrics.\n\nTwo access levels: illustrative estimate, database subscription. Target: executives, funds, banks, M&A advisors and institutional acquirers.",
         "visitPage": "View page",
         "name": "Asset Valuation Benchmark"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Digital succession vault, secured transmission",
+        "description": "Centralises and transmits, at the right moment and to the right people, the sensitive information left by a person: accounts, documents, access and personal messages.",
+        "capability": "Sealing the secure transmission of a lifetime",
+        "keywords": "end-to-end encryption · multi-party access control · conditional release · succession · digital vault"
       }
     }
   },
@@ -1293,6 +1300,33 @@
           "Feasibility study"
         ],
         "orgs": "Commerce & Services (brands), Health (patient communities), Tech & Public sector (associations, institutions)."
+      },
+      "heritix": {
+        "longDesc": "Centralises and transmits, at the right moment and to the right people, the sensitive information a person wishes to pass on: financial accounts, access credentials, legal documents and personal messages. End-to-end encryption, multi-party access control, conditional execution.",
+        "audience": "Individuals, families, notaries, private banking advisors",
+        "features": [
+          "Encrypted digital vault",
+          "Designated recipients & role management",
+          "Conditional release trigger",
+          "Multi-party validation workflow",
+          "Personal message capsules",
+          "Legal document repository",
+          "Immutable audit log",
+          "Coverage Switzerland and Europe"
+        ],
+        "need": "When the unexpected occurs, critical information is often inaccessible, dispersed or lost, putting heirs and loved ones in a painful and complex situation.",
+        "skills": [
+          "Concept development",
+          "Feasibility study",
+          "Legal & regulatory framework",
+          "Business plan",
+          "Brand & identity",
+          "Privacy & data protection architecture",
+          "Experience design",
+          "Technical development",
+          "Notarial & financial partnership strategy"
+        ],
+        "orgs": "Private banking & wealth management, Notarial networks, Life insurance, Legal services, Family offices."
       }
     },
     "press": {

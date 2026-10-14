@@ -325,6 +325,13 @@
         "description": "Benchmark-Engine, die die Bewertungsmultiplikatoren europäischer Unternehmen (nach Branche und Vertikal) mit dem CIFSO-Score auf fünf Dimensionen abgleicht. Liefert eine Bewertungsspanne, die an die tatsächliche Reife des Vermögenswerts angepasst ist, nicht nur an seine Finanzkennzahlen.\n\nZwei Zugangsstufen: illustrative Schätzung, Datenbank-Abonnement. Zielgruppe: Führungskräfte, Fonds, Banken, M&A-Berater und institutionelle Erwerber.",
         "visitPage": "Seite anzeigen",
         "name": "Benchmark für Vermögensbewertung"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Digitaler Nachlass-Tresor, gesicherte Übertragung",
+        "description": "Zentralisiert und übermittelt zum richtigen Zeitpunkt an die richtigen Personen die sensiblen Informationen, die eine Person hinterlassen möchte: Konten, Dokumente, Zugänge und persönliche Nachrichten.",
+        "capability": "Die sichere Übertragung eines Lebens besiegeln",
+        "keywords": "Ende-zu-Ende-Verschlüsselung · Multi-Party-Zugriffskontrolle · bedingungslose Freigabe · Nachlass · digitaler Tresor"
       }
     }
   },
@@ -1293,6 +1300,33 @@
           "Machbarkeitsstudie"
         ],
         "orgs": "Handel & Dienstleistungen (Marken), Gesundheit (Patienten-Communities), Tech & öffentlicher Sektor (Vereine, Institutionen)."
+      },
+      "heritix": {
+        "longDesc": "Zentralisiert und übermittelt zum richtigen Zeitpunkt an die richtigen Personen die sensiblen Informationen, die eine Person hinterlassen möchte: Finanzkonten, Zugangsdaten, Rechtsdokumente und persönliche Nachrichten. Ende-zu-Ende-Verschlüsselung, Multi-Party-Zugriffskontrolle, bedingte Ausführung.",
+        "audience": "Privatpersonen, Familien, Notare, Vermögensberater",
+        "features": [
+          "Verschlüsselter digitaler Tresor",
+          "Designierte Empfänger & Rollenverwaltung",
+          "Bedingter Übertragungsauslöser",
+          "Multi-Party-Validierungsworkflow",
+          "Persönliche Nachrichtenkapseln",
+          "Rechtsdokumenten-Repository",
+          "Unveränderliches Prüfprotokoll",
+          "Abdeckung Schweiz und Europa"
+        ],
+        "need": "Wenn das Unvorhergesehene eintritt, sind kritische Informationen oft unzugänglich, verstreut oder verloren und bringen Erben und Angehörige in eine schmerzhafte Situation.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie",
+          "Rechtlicher & regulatorischer Rahmen",
+          "Geschäftsplan",
+          "Marke & Identität",
+          "Datenschutzarchitektur",
+          "Erlebnisdesign",
+          "Technische Entwicklung",
+          "Notarielle & finanzielle Partnerschaftsstrategie"
+        ],
+        "orgs": "Privatbanking & Vermögensverwaltung, Notarnetzwerke, Lebensversicherung, Rechtsdienste, Family Offices."
       }
     },
     "press": {

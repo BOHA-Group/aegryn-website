@@ -199,6 +199,32 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     ownership:        'portfolio' as const,
     transactionEligible:  false,
   },
+  {
+    id:               'heritix',
+    name:             'heritix',
+    slug:             'heritix',
+    url:              null as string | null,
+    image:            '/images/portfolio/heritix-vault.jpg',
+    badge:            'B2C · B2B — LegalTech',
+    tagline:          'Coffre numérique de succession, transmission sécurisée',
+    description:      "Centralise et transmet, au bon moment et aux bonnes personnes, les informations sensibles laissées par une personne : comptes, documents, accès et messages personnels. Sécurité de bout en bout, contrôle d'accès multi-parties, exécution conditionnelle.",
+    category:         'ai',
+    industrySector:   { industry: 'finance-capital', sectorIndex: 3 },
+    transposeSectors: [
+      { industry: 'finance-capital', sectorIndex: 0 },
+      { industry: 'finance-capital', sectorIndex: 3 },
+      { industry: 'sante-sciences-de-la-vie', sectorIndex: 0 },
+      { industry: 'tech-innovation-secteur-public', sectorIndex: 2 },
+    ],
+    skillPhases:      [0, 0, 0, 0, 1, 1, 1, 2, 3],
+    status:           'dev' as const,
+    featured:         true,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             1 as const,
+    ownership:        'portfolio' as const,
+    transactionEligible:  false,
+  },
 
 ]
 

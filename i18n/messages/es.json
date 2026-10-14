@@ -325,6 +325,13 @@
         "description": "Motor de benchmark que cruza los múltiplos de valorización de empresas en Europa (por industria y vertical) con el score CIFSO en cinco dimensiones. Produce un rango de valorización ajustado a la madurez real del activo, no solo a sus métricas financieras.\n\nDos niveles de acceso: estimación ilustrativa, suscripción a la base de datos. Objetivo: directivos, fondos, bancos, asesores de M&A y adquirentes institucionales.",
         "visitPage": "Ver página",
         "name": "Benchmark de valorización de activos"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Cámara acorazada digital de sucesión, transmisión segura",
+        "description": "Centraliza y transmite, en el momento adecuado y a las personas correctas, la información sensible que una persona desea legar: cuentas, documentos, accesos y mensajes personales.",
+        "capability": "Sellar la transmisión segura de toda una vida",
+        "keywords": "cifrado extremo a extremo · control de acceso multi-parte · liberación condicional · sucesión · cámara acorazada digital"
       }
     }
   },
@@ -1293,6 +1300,33 @@
           "Estudio de viabilidad"
         ],
         "orgs": "Comercio & Servicios (marcas), Salud (comunidades de pacientes), Tech & Sector público (asociaciones, instituciones)."
+      },
+      "heritix": {
+        "longDesc": "Centraliza y transmite, en el momento adecuado y a las personas correctas, la información sensible que una persona desea legar: cuentas financieras, credenciales de acceso, documentos legales y mensajes personales. Cifrado extremo a extremo, control de acceso multi-parte, ejecución condicional.",
+        "audience": "Particulares, familias, notarios, asesores de gestión patrimonial",
+        "features": [
+          "Cámara acorazada digital cifrada",
+          "Destinatarios designados y gestión de roles",
+          "Activador de transmisión condicional",
+          "Flujo de validación multi-parte",
+          "Cápsulas de mensajes personales",
+          "Repositorio de documentos legales",
+          "Registro de auditoría inmutable",
+          "Cobertura Suiza y Europa"
+        ],
+        "need": "Cuando ocurre lo imprevisto, la información crítica suele estar inaccesible, dispersa o perdida, colocando a los herederos y familiares en una situación dolorosa y compleja.",
+        "skills": [
+          "Desarrollo de concepto",
+          "Estudio de viabilidad",
+          "Marco legal y regulatorio",
+          "Plan de negocio",
+          "Marca e identidad",
+          "Arquitectura de privacidad y protección de datos",
+          "Diseño de experiencia",
+          "Desarrollo técnico",
+          "Estrategia de asociaciones notariales y financieras"
+        ],
+        "orgs": "Banca privada & gestión de patrimonio, Redes notariales, Seguro de vida, Servicios jurídicos, Family offices."
       }
     },
     "press": {

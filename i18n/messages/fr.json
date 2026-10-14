@@ -325,6 +325,13 @@
         "description": "Moteur de benchmark qui croise les multiples de valorisation des entreprises en Europe (par industrie et vertical) avec le score CIFSO sur cinq dimensions. Produit une fourchette de valorisation ajustée à la maturité réelle de l'actif, pas seulement à ses métriques financières.\n\nDeux niveaux d'accès : estimation illustrative, abonnement base de données. Cible : dirigeants, fonds, banques, conseils M&A et acquéreurs institutionnels.",
         "visitPage": "Voir la page",
         "name": "Benchmark de valorisation d'actifs"
+      },
+      "heritix": {
+        "badge": "B2C · B2B — LegalTech",
+        "tagline": "Coffre numérique de succession, transmission sécurisée",
+        "description": "Centralise et transmet, au bon moment et aux bonnes personnes, les informations sensibles qu’une personne souhaite transmettre : comptes, documents, accès et messages personnels.",
+        "capability": "Sceller la transmission sécurisée d’une vie",
+        "keywords": "chiffrement de bout en bout · contrôle d’accès multi-parties · déclenchement conditionnel · succession · coffre numérique"
       }
     }
   },
@@ -1253,6 +1260,33 @@
           "Étude de faisabilité"
         ],
         "orgs": "Commerce & Services (marques), Santé (communautés de patients), Tech & Secteur public (associations, institutions)."
+      },
+      "heritix": {
+        "longDesc": "Centralise et transmet, au bon moment et aux bonnes personnes, les informations sensibles qu’une personne souhaite laisser : comptes financiers, identifiants d’accès, documents juridiques et messages personnels. Chiffrement de bout en bout, contrôle d’accès multi-parties, exécution conditionnelle.",
+        "audience": "Particuliers, familles, notaires, conseillers en gestion de patrimoine",
+        "features": [
+          "Coffre numérique chiffré",
+          "Destinataires désignés & gestion des rôles",
+          "Déclencheur conditionnel de transmission",
+          "Workflow de validation multi-parties",
+          "Capsules de messages personnels",
+          "Référentiel de documents juridiques",
+          "Journal d’audit immuable",
+          "Couverture Suisse et Europe"
+        ],
+        "need": "Lorsque l’imprévu survient, les informations critiques sont souvent inaccessibles, dispersées ou perdues, plaçant les héritiers et les proches dans une situation douloureuse et complexe.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité",
+          "Cadre légal & réglementaire",
+          "Business plan",
+          "Marque & identité",
+          "Architecture vie privée & protection des données",
+          "Design d’expérience",
+          "Développement technique",
+          "Stratégie de partenariats notariaux & financiers"
+        ],
+        "orgs": "Banque privée & gestion de patrimoine, Réseaux notariaux, Assurance-vie, Services juridiques, Family offices."
       }
     },
     "press": {
