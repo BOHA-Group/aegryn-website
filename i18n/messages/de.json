@@ -332,6 +332,13 @@
         "description": "Zentralisiert und übermittelt zum richtigen Zeitpunkt an die richtigen Personen die sensiblen Informationen, die eine Person hinterlassen möchte: Konten, Dokumente, Zugänge und persönliche Nachrichten.",
         "capability": "Die sichere Übertragung eines Lebens besiegeln",
         "keywords": "Ende-zu-Ende-Verschlüsselung · Multi-Party-Zugriffskontrolle · bedingungslose Freigabe · Nachlass · digitaler Tresor"
+      },
+      "chrosium": {
+        "badge": "B2C — D2C-Kosmetik",
+        "capability": "Das Unsichtbare einer Schutzgeste sichtbar machen",
+        "tagline": "Sonnenschutz-Indikator, Schutz in Echtzeit sichtbar",
+        "description": "Verbindet eine SPF-50+-Clean-Label-Formel mit einem firmeneigenen Anwendungsindikator: Eltern und Kinder sehen, wo der Schutz aufgetragen wurde, bevor er nach gesicherter Abdeckung verblasst.",
+        "keywords": "Anwendungsindikator · SPF 50+ Clean Label · UVA/UVB-Formel · UV-reaktive Verpackung · D2C-Marke"
       }
     }
   },
@@ -1327,6 +1334,30 @@
           "Notarielle & finanzielle Partnerschaftsstrategie"
         ],
         "orgs": "Privatbanking & Vermögensverwaltung, Notarnetzwerke, Lebensversicherung, Rechtsdienste, Family Offices."
+      },
+      "chrosium": {
+        "need": "Das Auftragen von Sonnenschutz bleibt eine der am wenigsten zuverlässigen Schutzgesten: vergessene Zonen, ungleichmässige Abdeckung und der natürliche Widerstand von Kindern führen zu systematischen Lücken, selbst bei den besten Produkten. Kein visuelles Feedback beim Auftragen, völlige Abhängigkeit vom Urteil der Erwachsenen und eine Verpackung, die über die reine Aufbewahrung hinaus keinen Zweck erfüllt.",
+        "longDesc": "Eine SPF-50+-Breitband-UVA/UVB-Formel, die derzeit mit einem Clean-Label-Formulierungspartner entwickelt wird, frei von hormonaktiven Stoffen. Sie wird mit einem temporären visuellen Indikator kombiniert: geschützte Zonen verändern ihr Aussehen und verblassen dann, sobald die Abdeckung bestätigt ist, innerhalb von etwa zwei Minuten.",
+        "features": [
+          "SPF 50+ Breitband UVA/UVB (Spezifikation)",
+          "Keine hormonaktiven Stoffe, nur EU-zugelassene Filter",
+          "Temporärer visueller Indikator (~2 Minuten)",
+          "Leichte, nicht fettende Textur",
+          "UV-reaktive Verpackung",
+          "Dermatologische Tests geplant, Formel für Kinderhaut konzipiert"
+        ],
+        "audience": "Eltern kleiner Kinder, Apotheken, Travel Retail",
+        "skills": [
+          "Konzeptentwicklung",
+          "Regulatorische Strategie (EU-Kosmetikverordnung)",
+          "Clean-Label-Formelspezifikation",
+          "Technologie-Sourcing & IP-Rahmen",
+          "Packaging-Lastenheft",
+          "Marken- & Markteinführungsarchitektur",
+          "Markenanmeldung & -schutz",
+          "D2C-Launchstrategie"
+        ],
+        "orgs": "Der zentrale Mechanismus, eine zeitlich begrenzte visuelle Bestätigung der Produktanwendung, reicht weit über die Sonnenpflege hinaus. Angrenzende Märkte mit hohen Compliance-Anforderungen und geringem Vertrauen in die Anwendung teilen denselben strukturellen Bedarf."
       }
     },
     "press": {
@@ -1351,7 +1382,7 @@
       }
     },
     "rubricNeed": "Der Bedarf",
-    "rubricSetup": "Was wir umgesetzt haben",
+    "rubricSetup": "Was wir umsetzen",
     "rubricSkills": "Mobilisierte Kompetenzen",
     "rubricOrgs": "Sektoren, in die sie übertragbar ist"
   },

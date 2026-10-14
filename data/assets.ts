@@ -225,6 +225,32 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     ownership:        'portfolio' as const,
     transactionEligible:  false,
   },
+  {
+    id:               'chrosium',
+    name:             'chrosium',
+    slug:             'chrosium',
+    url:              null as string | null,
+    image:            '/images/portfolio/chrosium-sunscreen.jpg',
+    badge:            'B2C — Cosmétique D2C',
+    tagline:          "Indicateur d'application solaire, protection visible en temps réel",
+    description:      "Associe une formule SPF 50+ clean-label à un indicateur d'application propriétaire : parents et enfants voient où la protection a été posée, avant qu'elle ne s'estompe une fois la zone sécurisée.",
+    category:         'lifestyle',
+    industrySector:   { industry: 'sante-sciences-de-la-vie', sectorIndex: 0 },
+    transposeSectors: [
+      { industry: 'sante-sciences-de-la-vie', sectorIndex: 0 },
+      { industry: 'sante-sciences-de-la-vie', sectorIndex: 1 },
+      { industry: 'commerce-services-experience-client', sectorIndex: 1 },
+      { industry: 'commerce-services-experience-client', sectorIndex: 0 },
+    ],
+    skillPhases:      [0, 0, 1, 1, 1, 1, 1, 3],
+    status:           'dev' as const,
+    featured:         true,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             1 as const,
+    ownership:        'portfolio' as const,
+    transactionEligible:  false,
+  },
 
 ]
 

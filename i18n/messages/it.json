@@ -332,6 +332,13 @@
         "description": "Centralizza e trasmette, al momento giusto e alle persone giuste, le informazioni sensibili che una persona desidera lasciare: conti, documenti, accessi e messaggi personali.",
         "capability": "Sigillare la trasmissione sicura di una vita",
         "keywords": "cifratura end-to-end · controllo accessi multi-parte · rilascio condizionale · successione · cassaforte digitale"
+      },
+      "chrosium": {
+        "badge": "B2C — Cosmetica D2C",
+        "capability": "Rendere visibile l'invisibile di un gesto di protezione",
+        "tagline": "Indicatore di applicazione solare, protezione visibile in tempo reale",
+        "description": "Unisce una formula SPF 50+ clean-label a un indicatore di applicazione proprietario: genitori e bambini vedono dove è stata applicata la protezione, prima che svanisca una volta messa in sicurezza la zona.",
+        "keywords": "indicatore di applicazione · SPF 50+ clean label · formula UVA/UVB · packaging reattivo ai UV · marchio D2C"
       }
     }
   },
@@ -1327,6 +1334,30 @@
           "Strategia di partnership notarili e finanziarie"
         ],
         "orgs": "Private banking & gestione patrimoniale, Reti notarili, Assicurazione vita, Servizi legali, Family office."
+      },
+      "chrosium": {
+        "need": "Applicare la crema solare resta uno dei gesti di protezione meno affidabili: zone dimenticate, copertura irregolare e la naturale resistenza dei bambini creano lacune sistematiche, anche con i prodotti migliori. Nessun riscontro visivo al momento dell'applicazione, totale dipendenza dal giudizio dell'adulto, e un packaging che non serve ad altro che a contenere il prodotto.",
+        "longDesc": "Una formula SPF 50+ ad ampio spettro UVA/UVB, in fase di sviluppo con un partner di formulazione clean-label, priva di interferenti endocrini. Sarà abbinata a un indicatore visivo temporaneo: le zone protette cambieranno aspetto per poi svanire una volta confermata la copertura, nell'arco di circa due minuti.",
+        "features": [
+          "SPF 50+ ampio spettro UVA/UVB (specifica)",
+          "Zero interferenti endocrini, solo filtri approvati UE",
+          "Indicatore visivo temporaneo (~2 minuti)",
+          "Texture leggera, non grassa",
+          "Packaging reattivo ai UV",
+          "Test dermatologici previsti, formula pensata per la pelle dei bambini"
+        ],
+        "audience": "Genitori di bambini piccoli, farmacie, travel retail",
+        "skills": [
+          "Sviluppo del concetto",
+          "Strategia regolatoria (Regolamento cosmetico europeo)",
+          "Specifica di formula clean-label",
+          "Sourcing tecnologico & inquadramento della proprietà intellettuale",
+          "Capitolato packaging",
+          "Architettura di marchio & go-to-market",
+          "Deposito & protezione del marchio",
+          "Strategia di lancio D2C"
+        ],
+        "orgs": "Il meccanismo centrale, una conferma visiva e temporanea dell'applicazione di un prodotto, va ben oltre la cura solare. I mercati adiacenti con elevate esigenze di conformità e bassa fiducia nel gesto di applicazione condividono lo stesso bisogno strutturale."
       }
     },
     "press": {
@@ -1351,7 +1382,7 @@
       }
     },
     "rubricNeed": "Il bisogno",
-    "rubricSetup": "Cosa abbiamo messo in campo",
+    "rubricSetup": "Cosa stiamo mettendo in campo",
     "rubricSkills": "Saperi mobilitati",
     "rubricOrgs": "Settori in cui si traspone"
   },

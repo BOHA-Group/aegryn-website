@@ -332,6 +332,13 @@
         "description": "Centraliseert en verzendt, op het juiste moment en naar de juiste personen, de gevoelige informatie die iemand wil nalaten: rekeningen, documenten, toegangen en persoonlijke berichten.",
         "capability": "De veilige overdracht van een leven bezegelen",
         "keywords": "end-to-end encryptie · multi-party toegangscontrole · voorwaardelijke vrijgave · nalatenschap · digitale kluis"
+      },
+      "chrosium": {
+        "badge": "B2C — D2C-Cosmetica",
+        "capability": "Het onzichtbare van een beschermingsgebaar zichtbaar maken",
+        "tagline": "Zonbescherming-indicator, bescherming in realtime zichtbaar",
+        "description": "Combineert een SPF 50+ clean-label formule met een eigen toepassingsindicator: ouders en kinderen zien waar bescherming is aangebracht, voordat deze vervaagt zodra de zone beveiligd is.",
+        "keywords": "toepassingsindicator · SPF 50+ clean label · UVA/UVB-formule · UV-reactieve verpakking · D2C-merk"
       }
     }
   },
@@ -1327,6 +1334,30 @@
           "Strategie voor notariële en financiële partnerschappen"
         ],
         "orgs": "Private banking & vermogensbeheer, Notarisnetwerken, Levensverzekering, Juridische diensten, Family offices."
+      },
+      "chrosium": {
+        "need": "Het aanbrengen van zonnebrand blijft een van de minst betrouwbare beschermingsgebaren: gemiste zones, ongelijke dekking en de natuurlijke onrust van kinderen zorgen voor systematische hiaten, zelfs met de beste producten. Geen visuele feedback op het moment van aanbrengen, volledige afhankelijkheid van het oordeel van de volwassene, en verpakking die geen functie heeft buiten de opslag.",
+        "longDesc": "Een SPF 50+ breedspectrum UVA/UVB-formule, in ontwikkeling met een clean-label formulatiepartner, vrij van hormoonverstorende stoffen. Deze wordt gecombineerd met een tijdelijke visuele indicator: beschermde zones veranderen van aanzien en vervagen zodra de dekking bevestigd is, binnen ongeveer twee minuten.",
+        "features": [
+          "SPF 50+ breedspectrum UVA/UVB (specificatie)",
+          "Geen hormoonverstorende stoffen, alleen EU-goedgekeurde filters",
+          "Tijdelijke visuele indicator (~2 minuten)",
+          "Lichte, niet-vette textuur",
+          "UV-reactieve verpakking",
+          "Dermatologische tests gepland, formule ontworpen voor kinderhuid"
+        ],
+        "audience": "Ouders van jonge kinderen, apotheken, travel retail",
+        "skills": [
+          "Conceptontwikkeling",
+          "Regelgevingsstrategie (Europese cosmeticaverordening)",
+          "Specificatie van clean-label formule",
+          "Technologie-sourcing & IP-kadering",
+          "Packaging-lastenboek",
+          "Merk- & go-to-marketarchitectuur",
+          "Merkdepot & -bescherming",
+          "D2C-lanceringsstrategie"
+        ],
+        "orgs": "Het centrale mechanisme, een tijdelijke visuele bevestiging van productgebruik, reikt veel verder dan zonverzorging. Aangrenzende markten met hoge compliance-eisen en weinig vertrouwen in het toepassingsgebaar delen dezelfde structurele behoefte."
       }
     },
     "press": {
@@ -1351,7 +1382,7 @@
       }
     },
     "rubricNeed": "De behoefte",
-    "rubricSetup": "Wat wij hebben opgezet",
+    "rubricSetup": "Wat wij opzetten",
     "rubricSkills": "Ingezette expertise",
     "rubricOrgs": "Sectoren waarop het overdraagbaar is"
   },

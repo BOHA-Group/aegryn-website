@@ -332,6 +332,13 @@
         "description": "Centralises and transmits, at the right moment and to the right people, the sensitive information left by a person: accounts, documents, access and personal messages.",
         "capability": "Sealing the secure transmission of a lifetime",
         "keywords": "end-to-end encryption · multi-party access control · conditional release · succession · digital vault"
+      },
+      "chrosium": {
+        "badge": "B2C — D2C Cosmetics",
+        "capability": "Making the invisible visible in a protective gesture",
+        "tagline": "Sun-application indicator, protection visible in real time",
+        "description": "Combines an SPF 50+ clean-label formula with a proprietary application indicator: parents and children see where protection has been applied, before it fades once the zone is secured.",
+        "keywords": "application indicator · SPF 50+ clean label · UVA/UVB formula · UV-reactive packaging · D2C brand"
       }
     }
   },
@@ -1327,6 +1334,30 @@
           "Notarial & financial partnership strategy"
         ],
         "orgs": "Private banking & wealth management, Notarial networks, Life insurance, Legal services, Family offices."
+      },
+      "chrosium": {
+        "need": "Applying sunscreen remains one of the least reliable protection gestures: missed zones, uneven coverage and children's natural resistance create systematic gaps, even with the best products. No visual feedback at the moment of application, total reliance on adult judgement, and packaging that serves no purpose beyond containment.",
+        "longDesc": "An SPF 50+ broad-spectrum UVA/UVB formula, in development with a clean-label formulation partner, free of endocrine disruptors. It will be paired with a temporary visual indicator: protected zones will change appearance, then fade once coverage is confirmed, within roughly two minutes.",
+        "features": [
+          "SPF 50+ broad-spectrum UVA/UVB (specification)",
+          "Zero endocrine disruptors, EU-approved filters only",
+          "Temporary visual indicator (~2 minutes)",
+          "Lightweight, non-greasy texture",
+          "UV-reactive packaging",
+          "Dermatological testing planned, formulated for children's skin"
+        ],
+        "audience": "Parents of young children, pharmacies, travel retail",
+        "skills": [
+          "Concept development",
+          "Regulatory strategy (EU Cosmetics Regulation)",
+          "Clean-label formula specification",
+          "Technology sourcing & IP framing",
+          "Packaging engineering brief",
+          "Brand & go-to-market architecture",
+          "Trademark filing & protection",
+          "D2C launch strategy"
+        ],
+        "orgs": "The core mechanism, a time-limited visual confirmation of product application, travels far beyond sun care. Adjacent markets with high compliance stakes and low application confidence share the same structural need."
       }
     },
     "press": {
@@ -1351,7 +1382,7 @@
       }
     },
     "rubricNeed": "The need",
-    "rubricSetup": "What we put in place",
+    "rubricSetup": "What we are putting in place",
     "rubricSkills": "Know-how mobilised",
     "rubricOrgs": "Sectors where it transposes"
   },
