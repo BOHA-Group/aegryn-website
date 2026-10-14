@@ -181,17 +181,18 @@ export default function AboutPage() {
           >
             {ta('whyAegryn.title')}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              {ta('whyAegryn.p1').split('\n\n').map((para, i) => (
-                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {ta('whyAegryn.p2').split('\n\n').map((para, i) => (
-                <p key={i} className="text-[15px] text-ag-gray leading-relaxed">{para}</p>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:divide-x lg:divide-ag-border">
+            {[ta('whyAegryn.p1'), ta('whyAegryn.p2')].map((block, i) => {
+              const [constat, reponse] = block.split('\n\n')
+              return (
+                <div key={i} className={`space-y-5 ${i === 1 ? 'lg:pl-16' : ''}`}>
+                  <p className="text-[15px] text-ag-gray leading-relaxed">{constat}</p>
+                  <p className="text-[15px] text-ag-black font-semibold leading-relaxed pt-5 border-t border-ag-border">
+                    {reponse}
+                  </p>
+                </div>
+              )
+            })}
           </div>
           <div className="mt-12 pt-10 border-t border-ag-border">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
