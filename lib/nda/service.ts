@@ -124,7 +124,7 @@ export async function sendInvitation(agreement: AgreementRow, signatory: Signato
   await logEvent(agreement.id, signatory.id, reminder ? 'reminder_sent' : 'invitation_sent', actor)
 }
 
-/** Nouveau lien (le précédent cesse de fonctionner) et nouvel envoi. */
+/** Envoi manuel du NDA : génère un lien neuf (l'éventuel précédent cesse de fonctionner) et l'envoie. Premier envoi = invitation, suivants = rappel. */
 export async function resendSignatory(signatoryId: string, actor: string) {
   const s = await getSignatory(signatoryId)
   if (s.status === 'signed') throw new NdaError('invalid', 'already signed')
@@ -136,7 +136,7 @@ export async function resendSignatory(signatoryId: string, actor: string) {
     .update({ token_hash: hash, token_expires_at: expires, status: 'pending' }).eq('id', s.id).select('*').single()
   if (error || !data) throw new NdaError('db', error?.message)
   await logEvent(a.id, s.id, 'link_rotated', actor)
-  await sendInvitation(a, data as SignatoryRow, token, actor, true)
+  await sendInvitation(a, data as SignatoryRow, token, actor, !!s.sent_at)
 }
 
 export async function revokeSignatory(signatoryId: string, actor: string) {

@@ -26,7 +26,7 @@ const schema = z.object({
   sourceContactEmail: z.string().email().nullable().optional(),
   note:               z.string().max(1000).nullable().optional(),
   signatories:        z.array(signatorySchema).min(1).max(20),
-  send:               z.boolean().default(true),
+  send:               z.boolean().default(false),
 })
 
 export async function POST(req: NextRequest) {

@@ -17,7 +17,7 @@ const schema = z.object({
   company:  z.string().max(150).nullable().optional(),
   email:    z.string().email().max(200),
   roles:    z.array(z.enum(NDA_ROLES)).min(1),
-  send:     z.boolean().default(true),
+  send:     z.boolean().default(false),
 })
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {

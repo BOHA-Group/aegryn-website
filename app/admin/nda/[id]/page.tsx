@@ -51,6 +51,7 @@ export default async function NdaDetailPage({ params }: { params: Promise<{ id: 
 
       <section className="space-y-3">
         <h2 className="font-sans text-lg font-bold text-gray-900">Signataires</h2>
+        <p className="text-[13px] text-gray-500">Aucun envoi automatique : chaque NDA part uniquement quand vous cliquez sur « Envoyer le NDA », à l’e-mail du signataire.</p>
         <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
           <table className="w-full text-left text-sm">
             <thead className="bg-gray-50 font-mono text-[10px] uppercase tracking-[0.15em] text-gray-500">
@@ -62,7 +63,9 @@ export default async function NdaDetailPage({ params }: { params: Promise<{ id: 
                   <td className="px-4 py-3"><p className="font-semibold text-gray-900">{s.full_name}</p><p className="text-[12px] text-gray-500">{s.email}{s.company ? ` · ${s.company}` : ''}</p></td>
                   <td className="px-4 py-3 text-[12px] text-gray-600">{s.roles.map(r => ROLE_LABELS.fr[r]).join(', ')}</td>
                   <td className="px-4 py-3"><span className={`rounded-full border px-2.5 py-0.5 text-[11px] ${statusCls(s.status)}`}>{statusLabel[s.status] ?? s.status}</span>
-                    {s.status !== 'signed' && <p className="mt-1 text-[11px] text-gray-400">{s.sent_at ? `Envoyé ${fmt(s.sent_at)}` : 'Non envoyé'}<br />Lien jusqu’au {s.token_expires_at.slice(0, 10)}</p>}
+                    {s.status !== 'signed' && (s.sent_at
+                      ? <p className="mt-1 text-[11px] text-gray-400">Envoyé {fmt(s.sent_at)}<br />Lien jusqu’au {s.token_expires_at.slice(0, 10)}</p>
+                      : <p className="mt-1 text-[11px] font-semibold text-amber-700">Brouillon : à envoyer manuellement</p>)}
                   </td>
                   <td className="px-4 py-3 font-mono text-[11px] text-gray-500">
                     {s.signed_at ? (<>
@@ -71,7 +74,7 @@ export default async function NdaDetailPage({ params }: { params: Promise<{ id: 
                       <p title={s.pdf_sha256 ?? ''}>PDF SHA-256 {s.pdf_sha256 ? `${s.pdf_sha256.slice(0, 16)}…` : 'non archivé'}</p>
                     </>) : '-'}
                   </td>
-                  <td className="px-4 py-3"><SignatoryActions id={s.id} status={s.status} hasPdf={!!s.pdf_path} /></td>
+                  <td className="px-4 py-3"><SignatoryActions id={s.id} status={s.status} hasPdf={!!s.pdf_path} sent={!!s.sent_at} email={s.email} /></td>
                 </tr>
               ))}
             </tbody>

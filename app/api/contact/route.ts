@@ -75,7 +75,7 @@ Sujet: ${SUBJECT_LABEL_FR[data.subject] ?? data.subject}
 Cycle: ${data.cycle ?? '-'}
 Locale: ${data.locale ?? '-'}
 ${describeExtra(data.extra, 'fr', ASSET_NAMES).map(([k, v]) => `${k}: ${v}`).join('\n')}
-${data.ndaRequested ? `\nNDA PROJET DEMANDÉ : accord de confidentialité à envoyer avant tout échange détaillé.\nCréer et envoyer le NDA : ${ndaCreationLink(data)}\n` : ''}
+${data.ndaRequested ? `\nNDA PROJET DEMANDÉ : accord de confidentialité à envoyer avant tout échange détaillé.\nPréparer le NDA (brouillon, envoi manuel depuis l'admin) : ${ndaCreationLink(data)}\n` : ''}
 Message:
 ${data.message}
         `.replace(/\n{3,}/g, '\n\n').trim(),

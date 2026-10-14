@@ -12,7 +12,7 @@ import NdaCreateForm from './NdaCreateForm'
 export const metadata: Metadata = { title: 'NDA mutuels | Aegryn Admin', robots: { index: false, follow: false } }
 export const dynamic = 'force-dynamic'
 
-type Row = { id: string; reference: string; project_label: string; lang: string; status: string; created_at: string; nda_signatories: { status: string }[] }
+type Row = { id: string; reference: string; project_label: string; lang: string; status: string; created_at: string; nda_signatories: { status: string; sent_at: string | null }[] }
 
 const badge = (s: string) =>
   s === 'completed' ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -25,7 +25,7 @@ export default async function NdaAdminPage({ searchParams }: { searchParams: Pro
   const sp = await searchParams
   const { data, error } = await createServiceClient()
     .from('nda_agreements')
-    .select('id, reference, project_label, lang, status, created_at, nda_signatories(status)')
+    .select('id, reference, project_label, lang, status, created_at, nda_signatories(status, sent_at)')
     .order('created_at', { ascending: false }).limit(200)
   const rows = (data ?? []) as unknown as Row[]
   const signatory = getAegrynSignatory()
@@ -65,7 +65,7 @@ export default async function NdaAdminPage({ searchParams }: { searchParams: Pro
                   <td className="px-4 py-3 font-mono text-[12px]"><Link className="text-ag-navy underline" href={`/admin/nda/${r.id}`}>{r.reference}</Link></td>
                   <td className="px-4 py-3">{r.project_label}</td>
                   <td className="px-4 py-3 uppercase">{r.lang}</td>
-                  <td className="px-4 py-3">{live.filter(s => s.status === 'signed').length} / {live.length}</td>
+                  <td className="px-4 py-3">{live.filter(s => s.status === 'signed').length} / {live.length}{live.some(s => s.status === 'pending' && !s.sent_at) && <span className="ml-2 rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] text-amber-700">à envoyer</span>}</td>
                   <td className="px-4 py-3"><span className={`rounded-full border px-2.5 py-0.5 text-[11px] ${badge(r.status)}`}>{label[r.status] ?? r.status}</span></td>
                   <td className="px-4 py-3 text-gray-500">{new Date(r.created_at).toLocaleDateString('fr-CH')}</td>
                 </tr>

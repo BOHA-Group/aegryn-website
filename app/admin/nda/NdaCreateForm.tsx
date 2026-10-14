@@ -18,7 +18,6 @@ export default function NdaCreateForm({ defaults, initiallyOpen }: { defaults: C
   const [lang, setLang] = useState<'fr' | 'en'>('fr')
   const [term, setTerm] = useState(5)
   const [penalty, setPenalty] = useState('')
-  const [send, setSend] = useState(true)
   const [signatories, setSignatories] = useState<Draft[]>([{ fullName: defaults.name ?? '', company: '', email: defaults.email ?? '', roles: [startRole] }])
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -34,7 +33,7 @@ export default function NdaCreateForm({ defaults, initiallyOpen }: { defaults: C
     const res = await fetch('/api/admin/nda', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        projectLabel: project, lang, termYears: term, penaltyChf: penalty ? parseInt(penalty, 10) : null, send,
+        projectLabel: project, lang, termYears: term, penaltyChf: penalty ? parseInt(penalty, 10) : null, send: false,
         sourceContactEmail: defaults.email ?? null,
         signatories: signatories.map(s => ({ fullName: s.fullName, company: s.company || null, email: s.email, roles: s.roles })),
       }),
@@ -64,7 +63,7 @@ export default function NdaCreateForm({ defaults, initiallyOpen }: { defaults: C
             <div className="grid gap-3 md:grid-cols-3">
               <div><label className={labelCls}>Nom complet</label><input className={inputCls} value={s.fullName} onChange={e => patch(i, { fullName: e.target.value })} /></div>
               <div><label className={labelCls}>Société (facultatif)</label><input className={inputCls} value={s.company} onChange={e => patch(i, { company: e.target.value })} /></div>
-              <div><label className={labelCls}>E-mail</label><input className={inputCls} type="email" value={s.email} onChange={e => patch(i, { email: e.target.value })} /></div>
+              <div><label className={labelCls}>E-mail du destinataire</label><input className={inputCls} type="email" value={s.email} onChange={e => patch(i, { email: e.target.value })} /></div>
             </div>
             <div>
               <p className={labelCls}>Profils (annexes incluses)</p>
@@ -82,10 +81,10 @@ export default function NdaCreateForm({ defaults, initiallyOpen }: { defaults: C
         <button type="button" className="text-[13px] font-semibold text-ag-navy underline" onClick={() => setSignatories(prev => [...prev, { fullName: '', company: '', email: '', roles: ['project_owner'] }])}>+ Ajouter un signataire</button>
       </div>
 
-      <label className="flex items-center gap-2 text-[13px] text-gray-700"><input type="checkbox" checked={send} onChange={e => setSend(e.target.checked)} className="accent-ag-navy" />Envoyer les liens de signature maintenant</label>
+      <p className="text-[12px] text-gray-500">Rien n’est envoyé à la création : l’accord est créé en brouillon, puis vous envoyez le NDA vous-même, signataire par signataire, depuis la fiche de l’accord.</p>
       {error && <p className="text-[13px] text-red-600">{error}</p>}
       <div className="flex gap-3">
-        <button disabled={!valid || busy} className="rounded-lg bg-ag-navy px-5 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40">{busy ? 'Création...' : 'Créer l’accord'}</button>
+        <button disabled={!valid || busy} className="rounded-lg bg-ag-navy px-5 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40">{busy ? 'Création...' : 'Créer le brouillon'}</button>
         <button type="button" onClick={() => setOpen(false)} className="rounded-lg border border-gray-300 px-5 py-2 text-sm text-gray-600">Annuler</button>
       </div>
     </form>
