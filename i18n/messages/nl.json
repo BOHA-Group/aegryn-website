@@ -825,9 +825,9 @@
         "sub": "Voor onszelf · voor u · met u"
       },
       {
-        "val": "Beperkt",
-        "label": "Mandaten tegelijk",
-        "sub": "Een strikte selectie, onverdeelde aandacht"
+        "val": "5",
+        "label": "Grote sectoren gedekt",
+        "sub": "Financiën · Gezondheid · Industrie · Handel · Tech & Publieke sector"
       },
       {
         "val": "5",
@@ -836,8 +836,8 @@
       },
       {
         "val": "20+",
-        "label": "Jaar naast directiecomités",
-        "sub": "Strategie · Tech · M&A · HR · Operaties"
+        "label": "Jaar leiding, van strategie tot operaties",
+        "sub": "Marketing · Verkoop · Technologie · Financiën · Talent · M&A"
       }
     ],
     "text": "Meer dan twintig jaar kaderen, bouwen en herstructureren van organisaties leerde ons één ding: projecten die een markt tekenen, kiezen niet tussen strategie en uitvoering. Ze houden beide vast, van de eerste beslissing tot de oplevering."

@@ -825,9 +825,9 @@
         "sub": "Für uns · für Sie · mit Ihnen"
       },
       {
-        "val": "Begrenzt",
-        "label": "Mandate gleichzeitig",
-        "sub": "Eine enge Auswahl, ungeteilte Aufmerksamkeit"
+        "val": "5",
+        "label": "Abgedeckte Grossbranchen",
+        "sub": "Finanzen · Gesundheit · Industrie · Handel · Tech & Öffentlicher Sektor"
       },
       {
         "val": "5",
@@ -836,8 +836,8 @@
       },
       {
         "val": "20+",
-        "label": "Jahre an der Seite von Geschäftsleitungen",
-        "sub": "Strategie · Tech · M&A · HR · Operations"
+        "label": "Jahre in Führungsverantwortung, von der Strategie bis zum Betrieb",
+        "sub": "Marketing · Vertrieb · Technologie · Finanzen · Talente · M&A"
       }
     ],
     "text": "Mehr als zwanzig Jahre Rahmen setzen, aufbauen und sanieren haben uns eines gelehrt: Projekte, die einen Markt prägen, wählen nicht zwischen Strategie und Umsetzung. Sie halten beides, von der ersten Entscheidung bis zur Abnahme."

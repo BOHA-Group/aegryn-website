@@ -788,9 +788,9 @@
         "sub": "Pour nous · pour vous · avec vous"
       },
       {
-        "val": "Limités",
-        "label": "Mandats menés à la fois",
-        "sub": "Une sélection restreinte, une attention entière"
+        "val": "5",
+        "label": "Grandes industries couvertes",
+        "sub": "Finance · Santé · Industrie · Commerce · Tech & Secteur public"
       },
       {
         "val": "5",
@@ -799,8 +799,8 @@
       },
       {
         "val": "20+",
-        "label": "Années auprès de comités de direction",
-        "sub": "Stratégie · Tech · M&A · RH · Opérations"
+        "label": "Années de direction, de la stratégie aux opérations",
+        "sub": "Marketing · Ventes · Technologie · Finance · Talent · M&A"
       }
     ],
     "text": "Plus de vingt ans à cadrer, construire et redresser des organisations nous ont appris une chose : les projets qui marquent un marché ne choisissent pas entre la stratégie et l'exécution. Ils tiennent les deux, du premier arbitrage à la réception."

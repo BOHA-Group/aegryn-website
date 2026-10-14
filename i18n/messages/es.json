@@ -825,9 +825,9 @@
         "sub": "Para nosotros · para usted · con usted"
       },
       {
-        "val": "Limitados",
-        "label": "Mandatos a la vez",
-        "sub": "Una selección restringida, una atención entera"
+        "val": "5",
+        "label": "Grandes industrias cubiertas",
+        "sub": "Finanzas · Salud · Industria · Comercio · Tech & Sector público"
       },
       {
         "val": "5",
@@ -836,8 +836,8 @@
       },
       {
         "val": "20+",
-        "label": "Años junto a comités de dirección",
-        "sub": "Estrategia · Tech · M&A · RR. HH. · Operaciones"
+        "label": "Años de dirección, de la estrategia a las operaciones",
+        "sub": "Marketing · Ventas · Tecnología · Finanzas · Talento · M&A"
       }
     ],
     "text": "Más de veinte años encuadrando, construyendo y reflotando organizaciones nos han enseñado una cosa: los proyectos que marcan un mercado no eligen entre estrategia y ejecución. Sostienen ambas, de la primera decisión a la entrega."

@@ -825,9 +825,9 @@
         "sub": "For ourselves · for you · with you"
       },
       {
-        "val": "Limited",
-        "label": "Mandates at a time",
-        "sub": "A restricted selection, undivided attention"
+        "val": "5",
+        "label": "Major industries covered",
+        "sub": "Finance · Health · Industry · Commerce · Tech & Public sector"
       },
       {
         "val": "5",
@@ -836,8 +836,8 @@
       },
       {
         "val": "20+",
-        "label": "Years alongside executive committees",
-        "sub": "Strategy · Tech · M&A · HR · Operations"
+        "label": "Years in leadership, from strategy to operations",
+        "sub": "Marketing · Sales · Technology · Finance · Talent · M&A"
       }
     ],
     "text": "More than twenty years framing, building and turning around organisations taught us one thing: the projects that mark a market do not choose between strategy and execution. They hold both, from the first decision to delivery."
