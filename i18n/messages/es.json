@@ -338,6 +338,13 @@
         "tagline": "Indicador de aplicación solar, protección visible en tiempo real",
         "description": "Combina una fórmula SPF 50+ clean-label con un indicador de aplicación propio: padres e hijos ven dónde se ha aplicado la protección, antes de que se desvanezca una vez asegurada la zona.",
         "keywords": "indicador de aplicación · SPF 50+ clean label · fórmula UVA/UVB · envase reactivo a UV · marca D2C"
+      },
+      "insertdry": {
+        "badge": "B2B · B2C — Electrodomésticos",
+        "capability": "Preservar lo seco donde la humedad siempre gana",
+        "tagline": "Unidad tropical de conservación de alimentos secos con deshumidificación activa",
+        "description": "Unidad de conservación de alimentos secos pensada para mercados tropicales: refrigeración dirigida de 16 a 22 °C, humedad mantenida por debajo del 45 %, formatos compacto y encastrable.",
+        "keywords": "deshumidificación activa · conservación tropical · formatos compacto & encastrable · electrodomésticos OEM · marca propia"
       }
     }
   },
@@ -1357,6 +1364,31 @@
           "Estrategia de lanzamiento D2C"
         ],
         "orgs": "El mecanismo central, una confirmación visual y temporal de la aplicación de un producto, trasciende ampliamente el cuidado solar. Los mercados adyacentes con altas exigencias de cumplimiento y baja confianza en el gesto de aplicación comparten la misma necesidad estructural."
+      },
+      "insertdry": {
+        "need": "En climas tropicales, entre 28 y 38 °C ambiente y alta humedad, los alimentos secos se degradan rápido: apelmazamiento, moho, insectos y pérdida de valor. La refrigeración convencional trata la temperatura, no la humedad, y no existe un aparato dedicado y asequible para estos mercados.",
+        "longDesc": "Una unidad dedicada a la conservación de alimentos secos que combina refrigeración dirigida de 16 a 22 °C y deshumidificación activa para mantener la humedad por debajo del 45 %. Se estudian dos formatos: una versión compacta de ~60 L sobre encimera y una versión integrada de ~300 L en acero inoxidable acristalado.",
+        "features": [
+          "Refrigeración objetivo de 16 a 22 °C en ambientes de 28 a 38 °C",
+          "Deshumidificación activa, humedad mantenida por debajo del 45 %",
+          "Dos formatos: compacto ~60 L de encimera, integrado ~300 L inox acristalado",
+          "Prototipo MVP en curso (base vinoteca, módulo Peltier, sensor de humedad)",
+          "Puerta acristalada en la versión premium",
+          "Distribución B2B primero, luego marketplaces regionales"
+        ],
+        "audience": "Hogares y comercios en zonas tropicales, distribuidores autorizados, hostelería & restauración (Caribe, África Occidental francófona, Sudeste Asiático)",
+        "skills": [
+          "Desarrollo de concepto",
+          "Estudio de mercado & zonas de lanzamiento",
+          "Arquitectura jurídica, fiscal & supply chain internacional",
+          "Especificación de producto & ingeniería térmica",
+          "Diseño industrial & formatos",
+          "Marca & protección (registro previsto)",
+          "Prototipado MVP & validación",
+          "Sourcing & cualificación OEM/ODM",
+          "Estrategia de distribución & salida al mercado"
+        ],
+        "orgs": "La conservación controlada en climas hostiles se traspone a cualquier contexto donde la humedad ambiental degrada los productos almacenados, de la cocina profesional tropical a las cadenas de suministro alimentarias expuestas."
       }
     },
     "press": {

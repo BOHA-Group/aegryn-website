@@ -338,6 +338,13 @@
         "tagline": "Indicatore di applicazione solare, protezione visibile in tempo reale",
         "description": "Unisce una formula SPF 50+ clean-label a un indicatore di applicazione proprietario: genitori e bambini vedono dove è stata applicata la protezione, prima che svanisca una volta messa in sicurezza la zona.",
         "keywords": "indicatore di applicazione · SPF 50+ clean label · formula UVA/UVB · packaging reattivo ai UV · marchio D2C"
+      },
+      "insertdry": {
+        "badge": "B2B · B2C — Elettrodomestici",
+        "capability": "Preservare il secco dove l'umidità vince sempre",
+        "tagline": "Unità tropicale di conservazione per alimenti secchi con deumidificazione attiva",
+        "description": "Unità di conservazione per alimenti secchi pensata per i mercati tropicali: raffreddamento mirato da 16 a 22 °C, umidità mantenuta sotto il 45 %, formati compatto e da incasso.",
+        "keywords": "deumidificazione attiva · conservazione tropicale · formati compatto & da incasso · elettrodomestici OEM · marchio proprietario"
       }
     }
   },
@@ -1357,6 +1364,31 @@
           "Strategia di lancio D2C"
         ],
         "orgs": "Il meccanismo centrale, una conferma visiva e temporanea dell'applicazione di un prodotto, va ben oltre la cura solare. I mercati adiacenti con elevate esigenze di conformità e bassa fiducia nel gesto di applicazione condividono lo stesso bisogno strutturale."
+      },
+      "insertdry": {
+        "need": "Nei climi tropicali, tra 28 e 38 °C ambiente e forte umidità, gli alimenti secchi si degradano in fretta: agglomerazione, muffe, insetti e perdita di valore. La refrigerazione tradizionale tratta la temperatura, non l'umidità, e non esiste un apparecchio dedicato e accessibile per questi mercati.",
+        "longDesc": "Un'unità dedicata alla conservazione degli alimenti secchi che combina raffreddamento mirato da 16 a 22 °C e deumidificazione attiva per mantenere l'umidità sotto il 45 %. Due formati in studio: una versione compatta da ~60 L da appoggio e una versione integrata da ~300 L in inox vetrato.",
+        "features": [
+          "Raffreddamento obiettivo da 16 a 22 °C in ambienti da 28 a 38 °C",
+          "Deumidificazione attiva, umidità mantenuta sotto il 45 %",
+          "Due formati: compatto ~60 L da appoggio, integrato ~300 L inox vetrato",
+          "Prototipo MVP in corso (base cantinetta vino, modulo Peltier, sensore di umidità)",
+          "Porta vetrata sulla versione premium",
+          "Distribuzione B2B prima, poi marketplace regionali"
+        ],
+        "audience": "Famiglie e attività commerciali nelle zone tropicali, distributori autorizzati, hotellerie & ristorazione (Caraibi, Africa occidentale francofona, Sud-est asiatico)",
+        "skills": [
+          "Sviluppo del concept",
+          "Studio di mercato & aree di lancio",
+          "Architettura giuridica, fiscale & supply chain internazionale",
+          "Specifiche di prodotto & ingegneria termica",
+          "Design industriale & formati",
+          "Marchio & protezione (deposito previsto)",
+          "Prototipazione MVP & validazione",
+          "Sourcing & qualificazione OEM/ODM",
+          "Strategia di distribuzione & go-to-market"
+        ],
+        "orgs": "La conservazione controllata in climi ostili si traspone a qualsiasi contesto in cui l'umidità ambientale degrada i prodotti stoccati, dalla cucina professionale tropicale alle filiere alimentari esposte."
       }
     },
     "press": {

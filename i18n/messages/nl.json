@@ -338,6 +338,13 @@
         "tagline": "Zonbescherming-indicator, bescherming in realtime zichtbaar",
         "description": "Combineert een SPF 50+ clean-label formule met een eigen toepassingsindicator: ouders en kinderen zien waar bescherming is aangebracht, voordat deze vervaagt zodra de zone beveiligd is.",
         "keywords": "toepassingsindicator · SPF 50+ clean label · UVA/UVB-formule · UV-reactieve verpakking · D2C-merk"
+      },
+      "insertdry": {
+        "badge": "B2B · B2C — Huishoudelijke apparaten",
+        "capability": "Het droge bewaren waar de vocht altijd wint",
+        "tagline": "Tropische bewaareenheid voor droge voeding met actieve ontvochtiging",
+        "description": "Bewaareenheid voor droge levensmiddelen ontworpen voor tropische markten: gerichte koeling van 16 tot 22 °C, luchtvochtigheid onder 45 %, compacte en inbouwformaten.",
+        "keywords": "actieve ontvochtiging · tropische bewaring · compacte & inbouwformaten · OEM-apparaten · eigen merk"
       }
     }
   },
@@ -1357,6 +1364,31 @@
           "D2C-lanceringsstrategie"
         ],
         "orgs": "Het centrale mechanisme, een tijdelijke visuele bevestiging van productgebruik, reikt veel verder dan zonverzorging. Aangrenzende markten met hoge compliance-eisen en weinig vertrouwen in het toepassingsgebaar delen dezelfde structurele behoefte."
+      },
+      "insertdry": {
+        "need": "In tropische klimaten, tussen 28 en 38 °C omgevingstemperatuur en hoge luchtvochtigheid, bederven droge levensmiddelen snel: klontering, schimmel, ongedierte en waardeverlies. Klassieke koeling behandelt de temperatuur, niet de vochtigheid, en een toegewijd, betaalbaar apparaat ontbreekt op deze markten.",
+        "longDesc": "Een toegewijde bewaareenheid voor droge levensmiddelen die gerichte koeling van 16 tot 22 °C combineert met actieve ontvochtiging om de luchtvochtigheid onder 45 % te houden. Twee formaten worden onderzocht: een compacte ~60 L opbouwversie en een ~300 L inbouwversie in geglaasd roestvrij staal.",
+        "features": [
+          "Gerichte koeling van 16 tot 22 °C in omgevingen van 28 tot 38 °C",
+          "Actieve ontvochtiging, luchtvochtigheid onder 45 %",
+          "Twee formaten: compact ~60 L opbouw, ~300 L inbouw in geglaasd rvs",
+          "MVP-prototype in uitvoering (wijnkoelerbasis, Peltier-module, vochtsensor)",
+          "Glazen deur op de premiumversie",
+          "Eerst B2B-distributie, daarna regionale marktplaatsen"
+        ],
+        "audience": "Huishoudens en bedrijven in tropische zones, erkende distributeurs, horeca (Cariben, frankofoon West-Afrika, Zuidoost-Azië)",
+        "skills": [
+          "Conceptontwikkeling",
+          "Marktstudie & lanceringsgebieden",
+          "Internationale juridische, fiscale & supply-chain-structurering",
+          "Productspecificatie & thermische engineering",
+          "Industrieel ontwerp & formaten",
+          "Merk & bescherming (depot gepland)",
+          "MVP-prototyping & validatie",
+          "OEM/ODM-sourcing & kwalificatie",
+          "Distributie- & go-to-marketstrategie"
+        ],
+        "orgs": "Gecontroleerde bewaring in een vijandig klimaat vertaalt zich naar elke context waarin omgevingsvocht opgeslagen goederen aantast, van tropische professionele keukens tot blootgestelde voedselketens."
       }
     },
     "press": {

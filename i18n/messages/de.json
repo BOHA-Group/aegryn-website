@@ -338,6 +338,13 @@
         "tagline": "Sonnenschutz-Indikator, Schutz in Echtzeit sichtbar",
         "description": "Verbindet eine SPF-50+-Clean-Label-Formel mit einem firmeneigenen Anwendungsindikator: Eltern und Kinder sehen, wo der Schutz aufgetragen wurde, bevor er nach gesicherter Abdeckung verblasst.",
         "keywords": "Anwendungsindikator · SPF 50+ Clean Label · UVA/UVB-Formel · UV-reaktive Verpackung · D2C-Marke"
+      },
+      "insertdry": {
+        "badge": "B2B · B2C — Haushaltsgeräte",
+        "capability": "Trockenheit bewahren, wo die Feuchtigkeit immer gewinnt",
+        "tagline": "Tropisches Trockenvorratsgerät mit aktiver Entfeuchtung",
+        "description": "Vorratseinheit für trockene Lebensmittel, konzipiert für tropische Märkte: gezielte Kühlung von 16 bis 22 °C, Luftfeuchte unter 45 %, kompakte und Einbau-Formate.",
+        "keywords": "aktive Entfeuchtung · tropische Lagerung · kompakte & Einbau-Formate · OEM-Geräte · eigene Marke"
       }
     }
   },
@@ -1357,6 +1364,31 @@
           "D2C-Launchstrategie"
         ],
         "orgs": "Der zentrale Mechanismus, eine zeitlich begrenzte visuelle Bestätigung der Produktanwendung, reicht weit über die Sonnenpflege hinaus. Angrenzende Märkte mit hohen Compliance-Anforderungen und geringem Vertrauen in die Anwendung teilen denselben strukturellen Bedarf."
+      },
+      "insertdry": {
+        "need": "In tropischen Klimazonen, bei 28 bis 38 °C Umgebungstemperatur und hoher Luftfeuchtigkeit, verderben trockene Lebensmittel schnell: Verklumpen, Schimmel, Schädlinge und Wertverlust. Herkömmliche Kühlung behandelt die Temperatur, nicht die Feuchtigkeit, und ein dediziertes, erschwingliches Gerät fehlt auf diesen Märkten.",
+        "longDesc": "Eine dedizierte Vorratseinheit für trockene Lebensmittel, die gezielte Kühlung von 16 bis 22 °C mit aktiver Entfeuchtung kombiniert, um die Luftfeuchte unter 45 % zu halten. Zwei Formate werden geprüft: eine kompakte ~60-L-Standversion und eine ~300-L-Einbauversion aus verglastem Edelstahl.",
+        "features": [
+          "Gezielte Kühlung von 16 bis 22 °C bei 28 bis 38 °C Umgebung",
+          "Aktive Entfeuchtung, Luftfeuchte unter 45 % gehalten",
+          "Zwei Formate: kompakt ~60 L Standgerät, ~300 L Einbauversion aus verglastem Edelstahl",
+          "MVP-Prototyp in Arbeit (Weinkühler-Basis, Peltier-Modul, Feuchtigkeitssensor)",
+          "Glastür bei der Premium-Version",
+          "Zuerst B2B-Vertrieb, dann regionale Marktplätze"
+        ],
+        "audience": "Haushalte und Gewerbe in tropischen Zonen, autorisierte Distributoren, Hotellerie & Gastronomie (Karibik, frankophones Westafrika, Südostasien)",
+        "skills": [
+          "Konzeptentwicklung",
+          "Marktstudie & Launch-Geografien",
+          "Internationale juristische, steuerliche & Supply-Chain-Strukturierung",
+          "Produktspezifikation & Thermotechnik",
+          "Industriedesign & Formate",
+          "Marke & Schutz (Anmeldung geplant)",
+          "MVP-Prototyping & Validierung",
+          "OEM/ODM-Sourcing & Qualifizierung",
+          "Distributions- & Go-to-Market-Strategie"
+        ],
+        "orgs": "Kontrollierte Lagerung in schwierigem Klima lässt sich auf jeden Kontext übertragen, in dem Umgebungsfeuchtigkeit gelagerte Güter schädigt, von tropischen Profiküchen bis zu exponierten Lebensmittel-Lieferketten."
       }
     },
     "press": {

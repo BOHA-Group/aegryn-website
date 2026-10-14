@@ -251,6 +251,32 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     ownership:        'portfolio' as const,
     transactionEligible:  false,
   },
+  {
+    id:               'insertdry',
+    name:             'insertdry',
+    slug:             'insertdry',
+    url:              null as string | null,
+    image:            '/images/portfolio/insertdry-pantry.jpg',
+    badge:            'B2B · B2C — Électroménager',
+    tagline:          'Cave alimentaire tropicale à déshumidification active',
+    description:      "Unité de conservation d'aliments secs pensée pour les marchés tropicaux : régulation ciblée de 16 à 22 °C, hygrométrie maintenue sous 45 %, formats compact et encastrable.",
+    category:         'lifestyle',
+    industrySector:   { industry: 'industrie-energie-infrastructure', sectorIndex: 1 },
+    transposeSectors: [
+      { industry: 'industrie-energie-infrastructure', sectorIndex: 1 },
+      { industry: 'industrie-energie-infrastructure', sectorIndex: 6 },
+      { industry: 'commerce-services-experience-client', sectorIndex: 0 },
+      { industry: 'commerce-services-experience-client', sectorIndex: 1 },
+    ],
+    skillPhases:      [0, 0, 0, 1, 1, 1, 2, 2, 3],
+    status:           'dev' as const,
+    featured:         true,
+    grade:            'pending' as const,
+    gradeCode:        undefined,
+    tier:             1 as const,
+    ownership:        'portfolio' as const,
+    transactionEligible:  false,
+  },
 
 ]
 

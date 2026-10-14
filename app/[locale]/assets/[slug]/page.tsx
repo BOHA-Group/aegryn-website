@@ -51,8 +51,8 @@ export default async function AssetPage({ params }: Props) {
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
 
-  const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect' | 'heritix' | 'chrosium'
-  const hasAssetI18n = ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect', 'heritix', 'chrosium'].includes(assetId)
+  const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect' | 'heritix' | 'chrosium' | 'insertdry'
+  const hasAssetI18n = ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect', 'heritix', 'chrosium', 'insertdry'].includes(assetId)
   const longDesc  = hasAssetI18n ? t(`assets.${assetId}.longDesc`) : tItems(`${asset.id}.description`)
   const audience  = hasAssetI18n ? t(`assets.${assetId}.audience`) : ''
   const features  = hasAssetI18n ? (t.raw(`assets.${assetId}.features`) as string[]) : []

@@ -338,6 +338,13 @@
         "tagline": "Indicateur d'application solaire, protection visible en temps réel",
         "description": "Associe une formule SPF 50+ clean-label à un indicateur d'application propriétaire : parents et enfants voient où la protection a été posée, avant qu'elle ne s'estompe une fois la zone sécurisée.",
         "keywords": "indicateur d'application · SPF 50+ clean-label · formule UVA/UVB · emballage réactif UV · marque D2C"
+      },
+      "insertdry": {
+        "badge": "B2B · B2C — Électroménager",
+        "capability": "Préserver le sec là où l'humidité gagne toujours",
+        "tagline": "Cave alimentaire tropicale à déshumidification active",
+        "description": "Unité de conservation d'aliments secs pensée pour les marchés tropicaux : régulation ciblée de 16 à 22 °C, hygrométrie maintenue sous 45 %, formats compact et encastrable.",
+        "keywords": "déshumidification active · conservation tropicale · formats compact & encastrable · électroménager OEM · marque propriétaire"
       }
     }
   },
@@ -1317,6 +1324,31 @@
           "Stratégie de lancement D2C"
         ],
         "orgs": "Le mécanisme central, une confirmation visuelle et temporaire de l'application d'un produit, dépasse largement le soin solaire. Les marchés adjacents à forte exigence de conformité et faible confiance dans le geste d'application partagent le même besoin structurel."
+      },
+      "insertdry": {
+        "need": "Sous les climats tropicaux, entre 28 et 38 °C ambiants et forte hygrométrie, les aliments secs se dégradent vite : agglomération, moisissures, insectes et perte de valeur. Le froid classique traite la température, pas l'humidité, et aucun appareil dédié et abordable n'existe pour ces marchés.",
+        "longDesc": "Une unité de conservation dédiée aux aliments secs, combinant régulation thermique ciblée de 16 à 22 °C et déshumidification active pour maintenir l'hygrométrie sous 45 %. Deux formats sont à l'étude : une version compacte d'environ 60 L posée sur plan de travail, et une version intégrée d'environ 300 L en inox vitré.",
+        "features": [
+          "Régulation thermique cible de 16 à 22 °C en ambiance de 28 à 38 °C",
+          "Déshumidification active, hygrométrie maintenue sous 45 %",
+          "Deux formats : compact ~60 L posé, intégré ~300 L inox vitré",
+          "Prototype MVP en cours (base cave à vin, module Peltier, capteur d'humidité)",
+          "Porte vitrée sur la version premium",
+          "Distribution B2B d'abord, puis marketplaces régionales"
+        ],
+        "audience": "Ménages et commerces en zones tropicales, distributeurs agréés, hôtellerie & restauration (Caraïbes, Afrique de l'Ouest francophone, Asie du Sud-Est)",
+        "skills": [
+          "Développement de concept",
+          "Étude de marché & zones de lancement",
+          "Architecture juridique, fiscale & supply chain internationale",
+          "Spécification produit & ingénierie thermique",
+          "Design industriel & formats",
+          "Marque & protection (dépôt prévu)",
+          "Prototypage MVP & validation",
+          "Sourcing & qualification OEM/ODM",
+          "Stratégie de distribution & mise en marché"
+        ],
+        "orgs": "La conservation contrôlée en climat hostile se transpose à tout contexte où l'humidité ambiante dégrade les produits stockés, de la cuisine professionnelle tropicale aux supply chains alimentaires exposées."
       }
     },
     "press": {
