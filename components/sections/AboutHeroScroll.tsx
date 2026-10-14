@@ -12,12 +12,16 @@ const BLUR = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgo
  * fond blanc, titre noir, puis la photo part d'un cadre centré
  * en bas du viewport et s'étend en plein écran au scroll (scrub).
  */
+/* Cadre portrait de départ : hauteur entre le haut du titre et le bas du sous-titre, largeur déduite du ratio */
+const FRAME = { top: 0.2, bottom: 0.26, right: 0.06, ratio: 404 / 640 }
+
 export function AboutHeroScroll() {
   const t = useTranslations('about')
   const wrapRef  = useRef<HTMLElement>(null)
   const textRef  = useRef<HTMLDivElement>(null)
   const mediaRef = useRef<HTMLDivElement>(null)
   const imgRef   = useRef<HTMLDivElement>(null)
+  const frameRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!wrapRef.current || !mediaRef.current || !imgRef.current || !textRef.current) return
@@ -36,22 +40,35 @@ export function AboutHeroScroll() {
         isDesktop: '(min-width: 768px)',
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
-        const start = mq.conditions?.isDesktop
-          ? 'inset(33% 6% 26% 62% round 16px)'
-          : 'inset(88% 5% 1% 5% round 16px)'
+        /* Desktop : le clip de départ épouse le cadre portrait (ratio fixe) */
+        let start = 'inset(88% 5% 1% 5% round 16px)'
+        if (mq.conditions?.isDesktop) {
+          const vw = window.innerWidth, vh = window.innerHeight
+          const h  = vh * (1 - FRAME.top - FRAME.bottom)
+          const w  = h * FRAME.ratio
+          const left = Math.max(0, 1 - FRAME.right - w / vw)
+          start = `inset(${FRAME.top * 100}% ${FRAME.right * 100}% ${FRAME.bottom * 100}% ${left * 100}% round 16px)`
+        }
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
           { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
         )
       })
 
-      /* Zoom interne de la photo pendant l'expansion : origine sur le voilier
-         (≈ 76 % / 56 % de l'image en object-cover) et décalage vertical pour
-         que le bateau, mât compris, soit centré dans le cadre initial */
+      /* Zoom interne de la photo pendant l'expansion, origine sur le voilier */
       gsap.fromTo(imgRef.current,
-        { scale: 0.95, yPercent: -2, transformOrigin: '76% 56%' },
-        { scale: 1, yPercent: 0, ease: 'none', scrollTrigger: st },
+        { scale: 1.12, transformOrigin: '76% 56%' },
+        { scale: 1, ease: 'none', scrollTrigger: st },
       )
+
+      /* Calque de départ : recadrage portrait fixe sur le voilier (toujours
+         entier, quel que soit l'écran), fondu pendant le premier tiers */
+      if (frameRef.current) {
+        gsap.to(frameRef.current, {
+          opacity: 0, ease: 'none',
+          scrollTrigger: { trigger: wrapRef.current, start: 'top top', end: '35% top', scrub: true },
+        })
+      }
 
       /* Le texte s'estompe quand la photo recouvre le haut */
       gsap.to(textRef.current, {
@@ -91,6 +108,23 @@ export function AboutHeroScroll() {
           <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
             {t('hero.desc')}
           </p>
+        </div>
+
+        {/* Cadre de départ (desktop) : même boîte que le clip initial, ratio fixe */}
+        <div
+          ref={frameRef}
+          className="pointer-events-none absolute z-30 hidden overflow-hidden rounded-2xl md:block"
+          style={{ top: `${FRAME.top * 100}%`, bottom: `${FRAME.bottom * 100}%`, right: `${FRAME.right * 100}%`, aspectRatio: String(FRAME.ratio) }}
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/about/about_regatta_boat.jpg"
+            alt=""
+            fill
+            priority
+            sizes="30vw"
+            className="object-cover object-center"
+          />
         </div>
 
         {/* Photo — clip-path expansible, recouvre le texte au scroll */}
