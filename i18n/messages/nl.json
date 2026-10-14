@@ -50,14 +50,14 @@
     "ourSolutions": "ONZE OPLOSSINGEN",
     "ourThinking": "ONZE PUBLICATIES",
     "whoWeAre": "WIE WE ZIJN",
-    "craftBuild": "Bouwen",
+    "craftBuild": "Realiseren",
     "craftBuildDesc": "Engineering van duurzame tech-assets",
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerkoplossingen",
     "craftBuildSubblink": "Contractuele risicoanalyse",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000-certificering",
-    "craftSupport": "Begeleiden",
+    "craftSupport": "Kaderen",
     "craftSupportDesc": "Strategie-, Risico & Compliance-, Technologie-, Talent- & M&A-advies : Alle sectoren",
     "craftSupportStrategy": "Bedrijfsstrategie en Innovatie",
     "craftSupportRiskCompliance": "Risicobeheer en Compliance",
@@ -68,7 +68,7 @@
     "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
-    "craftTransact": "Doorlopen",
+    "craftTransact": "Begeleiden",
     "craftTransactDesc": "Een andere beslissing bij elke levensfase van de onderneming.",
     "craftTransactSell": "Overdracht & Verkoop",
     "craftTransactBuy": "Overname & Externe groei",
@@ -76,7 +76,7 @@
     "craftTransactCroissance": "Groei & Opschaling",
     "craftTransactRestructuration": "Herstructurering & Pivot",
     "craftTransactVerify": "Certificaat verifiëren",
-    "craftRecruit": "Rekruteren",
+    "craftRecruit": "Selecteren",
     "craftRecruitDesc": "Werving en overgangsprofielen, in elke levensfase van het bedrijf.",
     "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
@@ -811,7 +811,7 @@
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén bedrijf.",
     "desc": "We zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
-    "tagline": "GEÏNTEGREERDE FIRMA, VERANKERD IN ZWITSERLAND.",
+    "tagline": "ONDERNEMENDE BOUTIQUE, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
     "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze eerste geloofwaardigheid.",
@@ -847,19 +847,19 @@
     "sub": "Vijf disciplines die elkaar versterken. Dat is wat slechts weinig spelers echt kunnen aanbieden.",
     "items": [
       {
-        "title": "ADVISEREN",
+        "title": "KADEREN",
         "desc": "Geïntegreerd advies over alle dimensies van de organisatie: strategie en transacties, technologie en compliance, organisatie en talent. Wij begeleiden leidinggevenden en raden wanneer beslissingen de koers bepalen."
       },
       {
-        "title": "BOUWEN",
+        "title": "REALISEREN",
         "desc": "Duurzame digitale assets, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten, de certificering te behalen en technologische onafhankelijkheid te waarborgen."
       },
       {
-        "title": "DOORLOPEN",
+        "title": "BEGELEIDEN",
         "desc": "Begeleiding van de vijf levenscycli: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen."
       },
       {
-        "title": "REKRUTEREN",
+        "title": "SELECTEREN",
         "desc": "Werving van leidinggevenden en experts, transitie-opdrachten. Zonder de juiste mensen blijft strategie een plan."
       },
       {
@@ -869,7 +869,7 @@
     ]
   },
   "homeTalent": {
-    "label": "REKRUTEREN",
+    "label": "SELECTEREN",
     "title": "De profielen die het verschil maken.",
     "desc": "Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf.\n\nOns doel blijft hetzelfde: de waarde van uw organisatie versterken met de juiste mensen op het juiste moment.",
     "cta1": "Profiel zoeken →",
@@ -934,7 +934,7 @@
       },
       {
         "num": "05",
-        "title": "Geworteld in Zwitserland. Operationeel in Europa.",
+        "title": "Verankerd in Zwitserland. Open naar de wereld.",
         "desc": "Zwitserse institutionele strengheid als standaard voor elk mandaat. Een actieve aanwezigheid in Zwitserland, Frankrijk, Benelux, Monaco en daarbuiten. Het lokale met de globale visie."
       }
     ]
@@ -984,7 +984,7 @@
           "t": " Wij bouwen en exploiteren onze eigen activa, en wij voeren de projecten van onze klanten zoals een architect een bouwplaats leidt: kader, coördinatie van betrokkenen, mijlpalen, oplevering. Wat wij aanbevelen, leven wij.\n\n"
         },
         {
-          "t": "Als geïntegreerd bureau, verankerd in Zwitserland om zijn grondigheid,",
+          "t": "Als ondernemende boutique, verankerd in Zwitserland om zijn grondigheid,",
           "bold": true
         },
         {
@@ -1057,7 +1057,7 @@
     },
     "swiss": {
       "groupLabel": "Aegryn",
-      "title": "Geworteld in Zwitserland.\nDe Europese referentie.",
+      "title": "Verankerd in Zwitserland.\nOpen naar de wereld.",
       "desc": "Zwitserland is bewust gekozen, niet om zijn incorporatievoordelen, maar om zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financiële ecosysteem en de neutraliteit die er een geloofwaardig anker van maakt voor grensoverschrijdende operaties tussen partijen uit verschillende jurisdicties. Elke Aegryn-opdracht valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
       "cta": "Onze disciplines"
     },
@@ -1080,7 +1080,7 @@
       "label": "Werken met Aegryn",
       "seller": {
         "title": "U bereidt een overdracht voor.",
-        "desc": "Een Aegryn-adviseur reageert binnen 24u.",
+        "desc": "Een Aegryn-adviseur reageert binnen 2 werkdagen.",
         "btn": "Een certificering aanvragen",
         "href": "/grade/submit"
       },
@@ -1098,8 +1098,8 @@
       }
     },
     "meta": {
-      "title": "Over ons | Geïntegreerde adviesgroep | Aegryn",
-      "desc": "Aegryn is een in Zwitserland gevestigde, geïntegreerde adviesgroep die leiders begeleidt gedurende elke levenscyclus van hun organisatie: advies, opbouw, koers, talent, marktintelligentie."
+      "title": "Over ons | Ondernemende boutique | Aegryn",
+      "desc": "Aegryn is een ondernemende boutique voor emblematische projecten, verankerd in Zwitserland en open naar de wereld. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
     }
   },
   "career": {
@@ -1195,8 +1195,8 @@
       "title": "Waar wij voor staan."
     },
     "meta": {
-      "title": "Carrière | Geïntegreerde adviesgroep | Aegryn",
-      "desc": "Word onderdeel van Aegryn, een geïntegreerde adviesgroep die organisaties begeleidt gedurende hun hele levenscyclus: advies, opbouw, koers, talent, marktintelligentie."
+      "title": "Carrière | Ondernemende boutique | Aegryn",
+      "desc": "Word onderdeel van Aegryn, een ondernemende boutique voor emblematische projecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
     }
   },
   "assetStatus": {
@@ -1503,7 +1503,7 @@
   "ndaForm": {
     "requestBtn": "NDA-toegang aanvragen",
     "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 24-48u contact met u op om uw profiel te valideren en u de NDA te sturen.",
+    "doneDesc": "Ons team neemt binnen 2 werkdagen contact met u op om uw profiel te valideren en u de NDA te sturen.",
     "formTitle": "NDA-toegangsaanvraag",
     "labelName": "Volledige naam *",
     "labelEmail": "E-mail *",
@@ -1530,7 +1530,7 @@
   },
   "accessForm": {
     "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 24–48u contact met u op om uw profiel te valideren en u de NDA en Aegryn AV te sturen voor ondertekening.",
+    "doneDesc": "Ons team neemt binnen 2 werkdagen contact met u op om uw profiel te valideren en u de NDA en Aegryn AV te sturen voor ondertekening.",
     "doneNote": "Geen toegang zonder ondertekening van beide documenten.",
     "restrictedTitle": "Beperkte catalogustoegang",
     "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de Aegryn NDA en aanvaarding van de AV.",
@@ -1703,7 +1703,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advies, certificering, M&A-begeleiding, partnerschap of algemene vraag — wij antwoorden binnen 24u."
+      "desc": "Advies, certificering, M&A-begeleiding, partnerschap of algemene vraag — wij antwoorden binnen 2 werkdagen."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -1737,7 +1737,7 @@
       "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
       "success": {
         "title": "Bericht ontvangen.",
-        "desc": "Wij reageren binnen 24 uur."
+        "desc": "Wij reageren binnen 2 werkdagen."
       },
       "projectMessage": "Hallo, ik heb interesse in het project «{project}» voor een vergelijkbare behoefte."
     },
@@ -1995,12 +1995,12 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn · Saint-Sulpice, Vaud, Zwitserland",
+    "legal": "© 2026 Aegryn · Saint-Sulpice · Vaud · Zwitserland",
     "company": "Een Aegryn-onderneming",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
-    "swissTagline": "Adviesbureau en operationele groep. Geworteld in Zwitserland. Operationeel in Europa.",
+    "swissTagline": "Ondernemende boutique. Verankerd in Zwitserland, open naar de wereld.",
     "navLabel": "Aegryn",
     "companyLabel": "Bedrijf",
     "servicesLabel": "Diensten",
@@ -2024,14 +2024,14 @@
     "ecosystemCatalogLink": "Onze propriëtaire assets",
     "aiNotice": "Sommige inhoud op deze site wordt geproduceerd met behulp van systemen voor kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn | EU AI Act art. 50.",
     "col1Title": "Ons vakmanschap",
-    "col1Build": "Bouwen",
-    "col1Support": "Begeleiden",
+    "col1Build": "Realiseren",
+    "col1Support": "Kaderen",
     "col1Transact": "M&A-transactie",
     "col2Title": "Onze oplossingen",
     "col2Subblink": "Contractuele risicoanalyse",
     "col2Code": "CIFSO 5000-certificering",
     "col2Grade": "Certificering verkrijgen",
-    "col2DataRoom": "Doorlopen",
+    "col2DataRoom": "Begeleiden",
     "col2ViewAll": "Onze portfolio",
     "col3Title": "Onze overtuigingen",
     "col3Magazine": "Magazine",
@@ -2045,11 +2045,11 @@
     "col4Contact": "Contact",
     "col4Careers": "Werken bij Aegryn",
     "col4Talent": "Headhunting & Transition",
-    "footerCraftSupport": "Adviseren",
-    "footerCraftTransact": "Doorlopen",
-    "footerCraftBuild": "Bouwen",
+    "footerCraftSupport": "Kaderen",
+    "footerCraftTransact": "Begeleiden",
+    "footerCraftBuild": "Realiseren",
     "footerGradeSubmit": "Asset certificeren",
-    "footerWhoTalent": "Werven",
+    "footerWhoTalent": "Selecteren",
     "col4Alliances": "Partner worden",
     "col5Title": "Volg ons",
     "col5LinkedIn": "LinkedIn",
@@ -5421,7 +5421,7 @@
       "title": "Maatwerkoplossingen: kaderstelling, realisatie, exploitatie | Aegryn",
       "desc": "End-to-end begeleiding van uw digitale projecten: kaderstelling, keuze kopen/integreren/bouwen, realisatie, inbedrijfstelling, exploitatie. Hosting in Zwitserland of de EU."
     },
-    "label": "Bouwen",
+    "label": "Realiseren",
     "title": "Maatwerk software\nvoor uw activiteiten.",
     "heroAlt": "Zeilboot met blauw zeil vanuit de lucht gefotografeerd op donker water",
     "builtToLast": {
@@ -7373,7 +7373,7 @@
     "privacy": "Privacy",
     "security": "Beveiliging",
     "faq": "FAQ",
-    "groupValoriser": "Doorlopen",
+    "groupValoriser": "Begeleiden",
     "valoriserLancement": "Lancering & Structurering",
     "valoriserCroissance": "Groei & Opschaling",
     "valoriserRestructuration": "Herstructurering & Pivot",
@@ -7381,10 +7381,10 @@
     "valoriserTransmission": "Overdracht & Cessie",
     "roadmap": "Roadmap",
     "annuaire": "Expertregister",
-    "groupAccompagner": "Begeleiden",
-    "groupConstruire": "Bouwen",
-    "groupFranchir": "Levenscyclus",
-    "groupRecruter": "Werven",
+    "groupAccompagner": "Kaderen",
+    "groupConstruire": "Realiseren",
+    "groupFranchir": "Begeleiden",
+    "groupRecruter": "Selecteren",
     "groupInformer": "Informeren",
     "talent": "Aegryn Talent",
     "talentEntreprises": "Profiel werven",
@@ -8608,7 +8608,7 @@
     "report": {
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
-      "tagline": "Zeldzaam door selectie. Gecertificeerd voor de transactie.",
+      "tagline": "Zeldzaam door selectie. Discreet uit principe.",
       "edition2026": "Eerste editie · januari 2027",
       "readOnline": "Online verkennen",
       "downloadPdf": "De PDF bekijken",
@@ -8618,7 +8618,7 @@
       "ctaGrade": "Ontdek de Grade",
       "ctaTitle": "U heeft iets echts gebouwd.",
       "ctaSub": "Wij certificeren het. Wij waarderen het.",
-      "ctaLine": "AEGRYN | Gecertificeerd voor de transactie. Zwitserland.",
+      "ctaLine": "AEGRYN | Zeldzaam door selectie. Discreet uit principe.",
       "scrollDown": "Scrollen",
       "source": "Bron",
       "estimatedGrade": "Geschatte AEGRYN Grade",
@@ -9728,7 +9728,7 @@
         {
           "key": "accompagner",
           "num": "01",
-          "title": "BEGELEIDEN",
+          "title": "KADEREN",
           "desc": "Strategie-, technologie- en M&A-advisory. Wij treden op waar beslissingen de koers bepalen : van governance tot kapitaal.",
           "cta": "Advisory ontdekken",
           "href": "/advisory"
@@ -9736,7 +9736,7 @@
         {
           "key": "construire",
           "num": "02",
-          "title": "BOUWEN",
+          "title": "REALISEREN",
           "desc": "Duurzame digitale assets, volledige IP-eigendom klant, klaar voor certificering. Wij ontwikkelen en exploiteren SaaS, apps en protocollen.",
           "cta": "Asset Engineering",
           "href": "/services/build"
@@ -9744,7 +9744,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "DOORLOPEN",
+          "title": "BEGELEIDEN",
           "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen.",
           "cta": "Ontdek Doorlopen",
           "href": "/#franchir"
@@ -9752,7 +9752,7 @@
         {
           "key": "recruter",
           "num": "04",
-          "title": "WERVEN",
+          "title": "SELECTEREN",
           "desc": "Leidinggevenden en experts. Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase; vertrouwelijk, vooraf gekwalificeerd, antwoord binnen 2 werkdagen.",
           "cta": "Mandaat indienen",
           "href": "/talent"
@@ -10697,7 +10697,7 @@
     "final": {
       "label": "EERSTE CONTACT",
       "title": "Een portefeuille te valoriseren of over te dragen?",
-      "desc": "Fonds, family office, holding met een te structureren deelneming. Antwoord binnen 48u.",
+      "desc": "Fonds, family office, holding met een te structureren deelneming. Antwoord binnen 2 werkdagen.",
       "cta": "Laten we uw portefeuille bespreken"
     },
     "metaTitle": "Investeerders & Institutionelen | Aegryn",

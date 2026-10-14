@@ -398,7 +398,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Talent',
-          description: 'Executive tech recruitment and transition profiles: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search, pre-qualified candidates, 48h mandate response, all 23+ industries.',
+          description: 'Executive tech recruitment and transition profiles: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search, pre-qualified candidates, 2-business-day mandate response, all 23+ industries.',
           url: `${BASE_URL}/en/talent`,
         },
       },
@@ -412,7 +412,7 @@ export const aegrynSiteNavigationSchema = {
   name: 'Aegryn Site Navigation',
   itemListElement: [
     { '@type': 'ListItem', position: 1,  name: 'Accueil',                       url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'Franchir',                      url: `${BASE_URL}/fr#franchir` },
+    { '@type': 'ListItem', position: 2,  name: 'Accompagner',                   url: `${BASE_URL}/fr#franchir` },
     { '@type': 'ListItem', position: 3,  name: 'Lancement & Structuration',     url: `${BASE_URL}/fr/franchir/lancement` },
     { '@type': 'ListItem', position: 4,  name: 'Croissance & Mise à l\'échelle', url: `${BASE_URL}/fr/franchir/croissance` },
     { '@type': 'ListItem', position: 5,  name: 'Restructuration & Pivot',       url: `${BASE_URL}/fr/franchir/restructuration` },

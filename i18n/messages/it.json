@@ -50,14 +50,14 @@
     "ourSolutions": "LE NOSTRE SOLUZIONI",
     "ourThinking": "LE NOSTRE PUBBLICAZIONI",
     "whoWeAre": "CHI SIAMO",
-    "craftBuild": "Costruire",
+    "craftBuild": "Realizzare",
     "craftBuildDesc": "Ingegneria di asset tech durevoli",
     "craftBuildAssets": "Asset proprietari",
     "craftBuildEngineering": "Soluzioni su misura",
     "craftBuildSubblink": "Analisi rischi contrattuali",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificazione CIFSO 5000",
-    "craftSupport": "Accompagnare",
+    "craftSupport": "Inquadrare",
     "craftSupportDesc": "Consulenza in Strategia, Rischio & Conformità, Tecnologia, Talento & M&A : Tutti i settori",
     "craftSupportStrategy": "Strategia Aziendale e Innovazione",
     "craftSupportRiskCompliance": "Gestione del Rischio e Conformità",
@@ -68,7 +68,7 @@
     "craftSupportNetwork": "Rete di partner ed esperti",
     "craftSupportAlliances": "Rete di partner",
     "craftSupportExperts": "Rete di esperti",
-    "craftTransact": "Affrontare",
+    "craftTransact": "Accompagnare",
     "craftTransactDesc": "Una decisione diversa a ogni ciclo di vita dell'impresa.",
     "craftTransactSell": "Trasmissione & Cessione",
     "craftTransactBuy": "Acquisizione & Crescita esterna",
@@ -76,7 +76,7 @@
     "craftTransactCroissance": "Crescita & Scalabilità",
     "craftTransactRestructuration": "Ristrutturazione & Pivot",
     "craftTransactVerify": "Verificare un certificato",
-    "craftRecruit": "Reclutare",
+    "craftRecruit": "Selezionare",
     "craftRecruitDesc": "Reclutamento e profili di transizione, in ogni fase del ciclo di vita dell’impresa.",
     "craftGrade": "Certificazione",
     "craftGradeDesc": "Sistema di valutazione indipendente",
@@ -811,7 +811,7 @@
     "label": "Chi è Aegryn",
     "title": "Cinque discipline.\nUna sola azienda.",
     "desc": "Non siamo né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: consulenza, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
-    "tagline": "SOCIETÀ INTEGRATA, RADICATA IN SVIZZERA.",
+    "tagline": "BOUTIQUE IMPRENDITORIALE, RADICATA IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
     "quote": "Quello che facciamo per i nostri clienti, lo applichiamo a noi stessi. I nostri asset passano attraverso i nostri metodi. Questa coerenza è la nostra prima credibilità.",
@@ -847,29 +847,29 @@
     "sub": "Cinque discipline che si rafforzano a vicenda. Questo è ciò che pochissimi attori possono davvero offrire.",
     "items": [
       {
-        "title": "ACCOMPAGNARE",
+        "title": "INQUADRARE",
         "desc": "Consulenza integrata su tutte le dimensioni dell'organizzazione: strategia e transazioni, tecnologia e conformità, organizzazione e talenti. Accompagniamo dirigenti e board quando le decisioni definiscono la traiettoria."
       },
       {
-        "title": "COSTRUIRE",
+        "title": "REALIZZARE",
         "desc": "Asset digitali duraturi, piena proprietà del cliente. Ogni asset è progettato per valorizzare l'azienda, superare la certificazione e garantire l'indipendenza tecnologica."
       },
       {
-        "title": "AFFRONTARE",
+        "title": "ACCOMPAGNARE",
         "desc": "Accompagnamento dei cinque cicli di vita: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Diagnosi, piano, esecuzione: il valore si costruisce e si dimostra a ogni fase."
       },
       {
-        "title": "RECLUTARE",
+        "title": "SELEZIONARE",
         "desc": "Reclutamento di dirigenti ed esperti, incarichi di transizione. Senza le persone giuste, la strategia resta un piano."
       },
       {
-        "title": "INFORMARE",
+        "title": "INFORMARSI",
         "desc": "Rivista trimestrale, articoli e intelligence di mercato. Documentiamo ciò che osserviamo e viviamo."
       }
     ]
   },
   "homeTalent": {
-    "label": "RECLUTARE",
+    "label": "SELEZIONARE",
     "title": "I profili che fanno la differenza.",
     "desc": "Reclutamento di profili chiave e collocamento di profili di transizione, in ogni fase del ciclo di vita dell’impresa.\n\nIl nostro obiettivo resta sempre lo stesso: rafforzare il valore della vostra organizzazione con le persone giuste al momento giusto.",
     "cta1": "Trovare un profilo →",
@@ -934,7 +934,7 @@
       },
       {
         "num": "05",
-        "title": "Radicati in Svizzera. Operativi in Europa.",
+        "title": "Radicato in Svizzera. Aperto al mondo.",
         "desc": "Il rigore istituzionale svizzero come standard per ogni mandato. Una presenza attiva in Svizzera, Francia, Benelux, Monaco e oltre. Il locale con la visione globale."
       }
     ]
@@ -984,7 +984,7 @@
           "t": " Costruiamo e gestiamo i nostri asset, e conduciamo i progetti dei nostri clienti come un architetto conduce un cantiere: inquadramento, coordinamento degli intervenienti, tappe, collaudo. Ciò che raccomandiamo, lo viviamo.\n\n"
         },
         {
-          "t": "Società integrata, radicata in Svizzera per il suo rigore,",
+          "t": "Boutique imprenditoriale, radicata in Svizzera per il suo rigore,",
           "bold": true
         },
         {
@@ -1057,7 +1057,7 @@
     },
     "swiss": {
       "groupLabel": "Aegryn",
-      "title": "Radicato in Svizzera.\nIl riferimento europeo.",
+      "title": "Radicato in Svizzera.\nAperto al mondo.",
       "desc": "La Svizzera è stata scelta deliberatamente, non per i suoi vantaggi di costituzione, ma per i suoi standard istituzionali: il rigore del diritto svizzero, la discrezione del suo ecosistema finanziario e la neutralità che ne fanno un'ancora credibile per le operazioni transfrontaliere tra parti di giurisdizioni diverse. Ogni mandato Aegryn è regolato dal diritto svizzero, qualunque sia la nazionalità delle parti o l'origine dell'asset.",
       "cta": "Le nostre discipline"
     },
@@ -1080,7 +1080,7 @@
       "label": "Lavorare con Aegryn",
       "seller": {
         "title": "State preparando un trasferimento.",
-        "desc": "Un advisor Aegryn risponderà entro 24h.",
+        "desc": "Un advisor Aegryn risponderà entro 2 giorni lavorativi.",
         "btn": "Richiedere una certificazione",
         "href": "/grade/submit"
       },
@@ -1098,8 +1098,8 @@
       }
     },
     "meta": {
-      "title": "Chi siamo | Gruppo di consulenza integrata | Aegryn",
-      "desc": "Aegryn è un gruppo di consulenza integrata, con sede in Svizzera, che accompagna i dirigenti lungo tutto il ciclo di vita della loro organizzazione: consulenza, costruzione, traiettoria, talenti, market intelligence."
+      "title": "Chi siamo | Boutique imprenditoriale | Aegryn",
+      "desc": "Aegryn è una boutique imprenditoriale di progetti emblematici, radicata in Svizzera e aperta al mondo. Cinque mestieri: inquadrare, realizzare, accompagnare, selezionare, informarsi."
     }
   },
   "career": {
@@ -1195,8 +1195,8 @@
       "title": "In cosa crediamo."
     },
     "meta": {
-      "title": "Carriera | Gruppo di consulenza integrata | Aegryn",
-      "desc": "Unisciti ad Aegryn, un gruppo di consulenza integrata che accompagna le organizzazioni lungo tutto il loro ciclo di vita: consulenza, costruzione, traiettoria, talenti, market intelligence."
+      "title": "Carriera | Boutique imprenditoriale | Aegryn",
+      "desc": "Unisciti ad Aegryn, boutique imprenditoriale di progetti emblematici. Cinque mestieri: inquadrare, realizzare, accompagnare, selezionare, informarsi."
     }
   },
   "assetStatus": {
@@ -1503,7 +1503,7 @@
   "ndaForm": {
     "requestBtn": "Richiedere accesso NDA",
     "doneTitle": "Richiesta ricevuta",
-    "doneDesc": "Il nostro team vi ricontatterà entro 24-48h per validare il vostro profilo e inviarvi l'NDA.",
+    "doneDesc": "Il nostro team vi ricontatterà entro 2 giorni lavorativi per validare il vostro profilo e inviarvi l'NDA.",
     "formTitle": "Richiesta di accesso NDA",
     "labelName": "Nome completo *",
     "labelEmail": "Email *",
@@ -1530,7 +1530,7 @@
   },
   "accessForm": {
     "doneTitle": "Richiesta ricevuta",
-    "doneDesc": "Il nostro team vi ricontatterà entro 24–48h per validare il vostro profilo, poi vi invierà l'NDA e le CGV Aegryn da firmare.",
+    "doneDesc": "Il nostro team vi ricontatterà entro 2 giorni lavorativi per validare il vostro profilo, poi vi invierà l'NDA e le CGV Aegryn da firmare.",
     "doneNote": "Nessun accesso senza firma di entrambi i documenti.",
     "restrictedTitle": "Accesso catalogo limitato",
     "restrictedDesc": "Le schede degli asset e i nomi delle società sono accessibili solo dopo la creazione di un account, la firma dell'NDA Aegryn e l'accettazione delle CGV.",
@@ -1703,7 +1703,7 @@
     "hero": {
       "label": "Contattaci",
       "title": "Parliamo.",
-      "desc": "Consulenza, certificazione, accompagnamento M&A, partnership o domanda generale: rispondiamo entro 24 ore."
+      "desc": "Consulenza, certificazione, accompagnamento M&A, partnership o domanda generale: rispondiamo entro 2 giorni lavorativi."
     },
     "responseTime": {
       "label": "Tempo di risposta",
@@ -1737,7 +1737,7 @@
       "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
       "success": {
         "title": "Messaggio ricevuto.",
-        "desc": "Ti risponderemo entro 24 ore."
+        "desc": "Ti risponderemo entro 2 giorni lavorativi."
       },
       "projectMessage": "Buongiorno, sono interessato al progetto «{project}» per un bisogno simile."
     },
@@ -1995,12 +1995,12 @@
   },
   "footer": {
     "groupLabel": "Aegryn",
-    "legal": "© 2026 Aegryn · Saint-Sulpice, Vaud, Svizzera",
+    "legal": "© 2026 Aegryn · Saint-Sulpice · Vaud · Svizzera",
     "company": "Un'azienda Aegryn",
     "privacy": "Privacy",
     "terms": "Termini",
     "dataProtection": "Informativa sulla protezione dei dati",
-    "swissTagline": "Studio di consulenza e gruppo operativo. Radicato in Svizzera. Operativo in Europa.",
+    "swissTagline": "Boutique imprenditoriale. Radicata in Svizzera, aperta al mondo.",
     "navLabel": "Aegryn",
     "companyLabel": "Azienda",
     "servicesLabel": "Servizi",
@@ -2024,14 +2024,14 @@
     "ecosystemCatalogLink": "I nostri asset proprietari",
     "aiNotice": "Alcuni contenuti di questo sito vengono prodotti con l'ausilio di sistemi di intelligenza artificiale e revisionati sotto la responsabilità editoriale di Aegryn | Regolamento UE sull'IA art. 50.",
     "col1Title": "Il nostro mestiere",
-    "col1Build": "Costruire",
-    "col1Support": "Accompagnare",
+    "col1Build": "Realizzare",
+    "col1Support": "Inquadrare",
     "col1Transact": "Transazione M&A",
     "col2Title": "Le nostre soluzioni",
     "col2Subblink": "Analisi rischi contrattuali",
     "col2Code": "Certificazione CIFSO 5000",
     "col2Grade": "Ottenere la certificazione",
-    "col2DataRoom": "Affrontare",
+    "col2DataRoom": "Accompagnare",
     "col2ViewAll": "Il nostro portafoglio",
     "col3Title": "Le nostre convinzioni",
     "col3Magazine": "Rivista",
@@ -2045,11 +2045,11 @@
     "col4Contact": "Contattaci",
     "col4Careers": "Lavorare in Aegryn",
     "col4Talent": "Headhunting & Transition",
-    "footerCraftSupport": "Consigliare",
-    "footerCraftTransact": "Affrontare",
-    "footerCraftBuild": "Costruire",
+    "footerCraftSupport": "Inquadrare",
+    "footerCraftTransact": "Accompagnare",
+    "footerCraftBuild": "Realizzare",
     "footerGradeSubmit": "Certificare un asset",
-    "footerWhoTalent": "Reclutare",
+    "footerWhoTalent": "Selezionare",
     "col4Alliances": "Diventa partner",
     "col5Title": "Seguici",
     "col5LinkedIn": "LinkedIn",
@@ -5406,7 +5406,7 @@
       "title": "Soluzioni su misura: perimetro, realizzazione, gestione | Aegryn",
       "desc": "Pilotaggio end-to-end dei vostri progetti digitali: definizione del perimetro, scelta acquistare/integrare/costruire, realizzazione, messa in servizio, gestione. Hosting in Svizzera o nell'UE."
     },
-    "label": "Costruire",
+    "label": "Realizzare",
     "title": "Software su misura\nper le vostre operazioni.",
     "heroAlt": "Barca a vela con vela blu fotografata dall'alto su un mare scuro",
     "builtToLast": {
@@ -7358,7 +7358,7 @@
     "privacy": "Privacy",
     "security": "Sicurezza",
     "faq": "FAQ",
-    "groupValoriser": "Affrontare",
+    "groupValoriser": "Accompagnare",
     "valoriserLancement": "Lancio & Strutturazione",
     "valoriserCroissance": "Crescita & Scalabilità",
     "valoriserRestructuration": "Ristrutturazione & Pivot",
@@ -7366,10 +7366,10 @@
     "valoriserTransmission": "Trasferimento & Cessione",
     "roadmap": "Roadmap",
     "annuaire": "Elenco esperti",
-    "groupAccompagner": "Accompagnare",
-    "groupConstruire": "Costruire",
-    "groupFranchir": "Ciclo di vita",
-    "groupRecruter": "Reclutare",
+    "groupAccompagner": "Inquadrare",
+    "groupConstruire": "Realizzare",
+    "groupFranchir": "Accompagnare",
+    "groupRecruter": "Selezionare",
     "groupInformer": "Informarsi",
     "talent": "Aegryn Talent",
     "talentEntreprises": "Reclutare un profilo",
@@ -8580,7 +8580,7 @@
     "report": {
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
-      "tagline": "Raro per selezione. Certificato per la transazione.",
+      "tagline": "Raro per selezione. Discreto per principio.",
       "edition2026": "Prima edizione · Gennaio 2027",
       "readOnline": "Leggi online",
       "downloadPdf": "Sfoglia il PDF",
@@ -8590,7 +8590,7 @@
       "ctaGrade": "Scoprire il Grade",
       "ctaTitle": "Hai costruito qualcosa di reale.",
       "ctaSub": "Lo certifichiamo. Lo valorizziamo.",
-      "ctaLine": "AEGRYN | Certificato per la transazione. Svizzera.",
+      "ctaLine": "AEGRYN | Raro per selezione. Discreto per principio.",
       "scrollDown": "Scorrere",
       "source": "Fonte",
       "estimatedGrade": "Grade AEGRYN stimato",
@@ -9728,7 +9728,7 @@
         {
           "key": "accompagner",
           "num": "01",
-          "title": "ACCOMPAGNARE",
+          "title": "INQUADRARE",
           "desc": "Advisory in strategia, tecnologia e M&A. Interveniamo dove le decisioni definiscono la traiettoria : dalla governance al capitale.",
           "cta": "Scoprire Advisory",
           "href": "/advisory"
@@ -9736,7 +9736,7 @@
         {
           "key": "construire",
           "num": "02",
-          "title": "COSTRUIRE",
+          "title": "REALIZZARE",
           "desc": "Asset digitali duraturi, piena proprietà IP del cliente, pronti per la certificazione. Progettiamo e operiamo SaaS, app e protocolli.",
           "cta": "Vedere Asset Engineering",
           "href": "/services/build"
@@ -9744,7 +9744,7 @@
         {
           "key": "transmettre",
           "num": "03",
-          "title": "AFFRONTARE",
+          "title": "ACCOMPAGNARE",
           "desc": "Ogni ciclo di vita è una transizione da affrontare: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Diagnosi, piano, esecuzione: il valore si costruisce e si dimostra a ogni fase.",
           "cta": "Scoprire Affrontare",
           "href": "/#franchir"
@@ -9752,7 +9752,7 @@
         {
           "key": "recruter",
           "num": "04",
-          "title": "RECLUTARE",
+          "title": "SELEZIONARE",
           "desc": "Dirigenti ed esperti. Reclutamento di profili chiave e collocamento di profili di transizione, in ogni fase del ciclo di vita; riservato, pre-qualificati, risposta entro 2 giorni lavorativi.",
           "cta": "Inviare un mandato",
           "href": "/talent"
@@ -10697,7 +10697,7 @@
     "final": {
       "label": "PRIMO CONTATTO",
       "title": "Un portafoglio da valorizzare o da cedere?",
-      "desc": "Fondo, family office, holding con una partecipazione da strutturare. Risposta entro 48h.",
+      "desc": "Fondo, family office, holding con una partecipazione da strutturare. Risposta entro 2 giorni lavorativi.",
       "cta": "Parliamo del vostro portafoglio"
     },
     "metaTitle": "Investitori e Istituzionali | Aegryn",

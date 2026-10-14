@@ -49,7 +49,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'Un expert du réseau Aegryn, nommé et responsable de son périmètre, prend connaissance de votre demande et vous répond rapidement.',
       reply: 'Vous pouvez compléter votre demande en répondant simplement à cet e-mail.',
       sign: 'Aegryn · Suisse',
-      headerSubtitle: 'Cabinet de conseil intégré', footnote: 'Vous recevez cet e-mail parce que vous avez soumis une demande sur aegryn.com.',
+      headerSubtitle: 'Boutique entrepreneuriale', footnote: 'Vous recevez cet e-mail parce que vous avez soumis une demande sur aegryn.com.',
     },
   },
   en: {
@@ -69,7 +69,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'A named expert from the Aegryn network, accountable for their scope, is reviewing your request and will get back to you shortly.',
       reply: 'You can add to your request simply by replying to this email.',
       sign: 'Aegryn · Switzerland',
-      headerSubtitle: 'Integrated advisory firm', footnote: 'You are receiving this email because you submitted a request on aegryn.com.',
+      headerSubtitle: 'Entrepreneurial boutique', footnote: 'You are receiving this email because you submitted a request on aegryn.com.',
     },
   },
   de: {
@@ -89,7 +89,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'Ein namentlich benannter Experte aus dem Aegryn-Netzwerk, verantwortlich für seinen Bereich, prüft Ihre Anfrage und meldet sich in Kürze bei Ihnen.',
       reply: 'Sie können Ihre Anfrage ergänzen, indem Sie einfach auf diese E-Mail antworten.',
       sign: 'Aegryn · Schweiz',
-      headerSubtitle: 'Integrierte Beratungsgesellschaft', footnote: 'Sie erhalten diese E-Mail, weil Sie auf aegryn.com eine Anfrage gestellt haben.',
+      headerSubtitle: 'Unternehmerische Boutique', footnote: 'Sie erhalten diese E-Mail, weil Sie auf aegryn.com eine Anfrage gestellt haben.',
     },
   },
   it: {
@@ -109,7 +109,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'Un esperto della rete Aegryn, nominato e responsabile del proprio perimetro, esamina la vostra richiesta e vi risponderà a breve.',
       reply: 'Potete completare la vostra richiesta rispondendo semplicemente a questa e-mail.',
       sign: 'Aegryn · Svizzera',
-      headerSubtitle: 'Società di consulenza integrata', footnote: 'Ricevete questa e-mail perché avete inviato una richiesta su aegryn.com.',
+      headerSubtitle: 'Boutique imprenditoriale', footnote: 'Ricevete questa e-mail perché avete inviato una richiesta su aegryn.com.',
     },
   },
   es: {
@@ -129,7 +129,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'Un experto de la red Aegryn, con nombre y responsable de su perímetro, está revisando su solicitud y le responderá en breve.',
       reply: 'Puede completar su solicitud respondiendo simplemente a este correo.',
       sign: 'Aegryn · Suiza',
-      headerSubtitle: 'Firma de consultoría integrada', footnote: 'Recibe este correo porque ha enviado una solicitud en aegryn.com.',
+      headerSubtitle: 'Boutique emprendedora', footnote: 'Recibe este correo porque ha enviado una solicitud en aegryn.com.',
     },
   },
   nl: {
@@ -149,7 +149,7 @@ export const ACTION_FORM_UI: Record<string, ActionFormUi> = {
       next: 'Een met naam genoemde expert uit het Aegryn-netwerk, verantwoordelijk voor zijn domein, bekijkt uw aanvraag en neemt binnenkort contact met u op.',
       reply: 'U kunt uw aanvraag aanvullen door eenvoudig op deze e-mail te antwoorden.',
       sign: 'Aegryn · Zwitserland',
-      headerSubtitle: 'Geïntegreerd adviesbureau', footnote: 'U ontvangt deze e-mail omdat u een aanvraag heeft ingediend op aegryn.com.',
+      headerSubtitle: 'Ondernemende boutique', footnote: 'U ontvangt deze e-mail omdat u een aanvraag heeft ingediend op aegryn.com.',
     },
   },
 }

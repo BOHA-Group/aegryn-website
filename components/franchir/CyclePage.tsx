@@ -237,11 +237,10 @@ export function CyclePage({ content: c, locale }: Props) {
         </ScrollReveal>
       </section>
 
-      {/* ── 7 + 8. Scénario illustratif · limites de l'IA ── */}
+      {/* ── 7 + 8. Scénario · limites de l'IA ── */}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
           <div className={`${CARD} p-8 md:p-10`}>
-            <p className={`${LABEL} mb-4`}>{c.scenario.tag}</p>
             <p className="font-sans text-[15px] text-ag-black leading-[1.8]">{c.scenario.text}</p>
           </div>
           <div className="rounded-2xl bg-ag-navy p-8 md:p-10">

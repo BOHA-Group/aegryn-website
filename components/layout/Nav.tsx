@@ -96,7 +96,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
       className="absolute top-full left-0 mt-2 w-[980px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
     >
       <div className="grid grid-cols-[1.25fr_1fr_1.2fr_1fr] gap-px bg-ag-border rounded-2xl overflow-hidden">
-        {/* Support — ACCOMPAGNER en 1er */}
+        {/* Support — CADRER en 1er */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
@@ -118,7 +118,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           </div>
         </div>
 
-        {/* Build — CONSTRUIRE en 2ème */}
+        {/* Build — RÉALISER en 2ème */}
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
