@@ -37,7 +37,7 @@ export function AboutHeroScroll() {
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
         const start = mq.conditions?.isDesktop
-          ? 'inset(48% 6% 10% 62% round 16px)'
+          ? 'inset(36% 6% 8% 62% round 16px)'
           : 'inset(88% 5% 1% 5% round 16px)'
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
