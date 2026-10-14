@@ -45,10 +45,12 @@ export function AboutHeroScroll() {
         )
       })
 
-      /* Zoom interne de la photo pendant l'expansion */
+      /* Zoom interne de la photo pendant l'expansion : origine sur le voilier
+         (≈ 76 % / 56 % de l'image en object-cover) et décalage vertical pour
+         que le bateau, mât compris, soit centré dans le cadre initial */
       gsap.fromTo(imgRef.current,
-        { scale: 1.18 },
-        { scale: 1, ease: 'none', scrollTrigger: st },
+        { scale: 1.18, yPercent: 7, transformOrigin: '76% 56%' },
+        { scale: 1, yPercent: 0, ease: 'none', scrollTrigger: st },
       )
 
       /* Le texte s'estompe quand la photo recouvre le haut */
