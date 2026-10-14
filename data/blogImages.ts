@@ -3,6 +3,9 @@
  * Chaque image est unique — aucune répétition.
  */
 export const BLOG_IMAGES: Record<string, string> = {
+  'projets-emblematiques-cinq-signaux-a-suivre-2026':            '/images/blog/startup-team.jpg',
+  'une-journee-avec-un-fondateur-rituels-lieux-outils':         '/images/blog/team-laptops.jpg',
+  'du-concept-au-marche-anatomie-d-un-lancement':               '/images/blog/executive-suit.jpg',
   'recruter-ia-2026-salaires-competences-verifiees': '/images/blog/hiring-interview-handshake.jpg',
   'penurie-competences-ia-2026-former-ou-recruter': '/images/blog/training-workshop-office.jpg',
   'cyber-resilience-act-2026-obligations-signalement-produits-numeriques': '/images/blog/chip-hardware-security.jpg',

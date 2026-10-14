@@ -8,7 +8,6 @@ import { SegmentsSection }   from '@/components/sections/SegmentsSection'
 import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
-import { TransactNarrative } from '@/components/sections/TransactionNarrative'
 import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
@@ -54,8 +53,6 @@ export default async function HomePage({ params }: Props) {
       {/* ── 07. Conception ─────────────────────────────────── */}
       <BuildStrip />
 
-      {/* ── 09. Transact ───────────────────────────────────── */}
-      <TransactNarrative />
       <MarketStatStrip />
 
       {/* ── 09b. Franchir — cycles de vie (ex-page /valoriser) ── */}

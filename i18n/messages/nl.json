@@ -160,17 +160,18 @@
     "navPortfolio": "Portfolio"
   },
   "hero": {
-    "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
-    "metaDescription": "Aegryn begeleidt leiders die een organisatie lanceren, ontwikkelen, heroriënteren, overnemen of overdragen. Advies, assets, talent, projectsturing. Verankerd in Zwitserland, actief in Europa.",
-    "sub": "Wij begeleiden leiders die een organisatie lanceren, ontwikkelen, heroriënteren, overnemen of overdragen. Advies, assets, talent, projectsturing: een geïntegreerd bureau, verankerd in Zwitserland.",
+    "tagline": "De ondernemende boutique voor emblematische projecten.",
+    "metaDescription": "Aegryn, ondernemende boutique voor emblematische projecten. Wij kaderen, realiseren en begeleiden, voor onszelf, voor u of met u. Verankerd in Zwitserland, open naar de wereld.",
+    "sub": "Van idee tot markt, en daarna door de tijd: kaderen, realiseren, begeleiden. Voor onszelf, voor u of met u.",
     "phrases": [
-      "Adviseren\nuw projecten.",
-      "Bouwen\nuw oplossingen.",
-      "Doorlopen\nelke fase.",
-      "Selecteren\ntalenten.",
-      "Informeren\nover de markt."
+      "Uw project\nkaderen.",
+      "Realiseren\nmet de juiste experts.",
+      "Elke cyclus\nbegeleiden.",
+      "Talent\nselecteren.",
+      "Geïnformeerd blijven\nover de markt."
     ],
-    "scroll": "Scrollen"
+    "scroll": "Scrollen",
+    "signature": "Zeldzaam door selectie. Discreet uit principe."
   },
   "assets": {
     "title": "Ons eigen ecosysteem.",
@@ -352,8 +353,8 @@
     "strip": "Aegryn Advisory | Geïntegreerd advies voor Europese tech-organisaties",
     "cta": "Contact opnemen",
     "hero": {
-      "title": "Begeleiden wat jij bouwt.",
-      "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Één gesprekspartner, van diagnose tot uitvoering."
+      "title": "Uw project kaderen.",
+      "desc": "Zes adviesexpertises, op maat gemobiliseerd volgens het project: strategie, merk en lancering, risico, technologie, talent, overname. Eén gesprekspartner, van de eerste beslissing tot het bestek."
     },
     "pillars": {
       "board": {
@@ -695,7 +696,7 @@
       ],
       "conclusion": "Aegryn Advisory interveniëert op het snijpunt van deze drie dimensies. Wij helpen tech-leiders een coherente groeistrategie te definiëren, de technologische capaciteiten te bouwen om die uit te voeren, en de overnames te identificeren die het plan versnellen zonder technische schuld te creëren. Een geïntegreerde aanpak voor een markt die silo's niet meer vergeeft."
     },
-    "label": "Advies",
+    "label": "Kaderen",
     "contactCta": "Contact opnemen",
     "ctaDesc": "Elk mandaat begint met een uitgebreide diagnose vóór enige aanbeveling. Wij documenteren, meten en leveren.",
     "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
@@ -758,14 +759,14 @@
     "label": "Onze Overtuiging",
     "convictionSegments": [
       {
-        "t": "Waarde wordt niet geïmproviseerd. Ze wordt opgebouwd.\n\n",
+        "t": "Een emblematisch project onderga je niet. Je leidt het.\n\n",
         "bold": true
       },
       {
-        "t": "Elke organisatie draagt in zich activa, een team, onafhankelijkheid en het vermogen om te blijven bestaan. Sommige leiders willen overdragen. Anderen willen kapitaal aantrekken, acquireren of gewoon iets opbouwen dat de tand des tijds doorstaat. Welke intentie ook, "
+        "t": "Een sterk idee volstaat niet. Er is een kader nodig, experts, een product, een merk, een planning. En iemand die het geheel vasthoudt tot het resultaat. "
       },
       {
-        "t": "waarde wordt opgebouwd vóór ze gerealiseerd wordt. Aegryn grijpt vroeg in.",
+        "t": "Aegryn kadert, realiseert met de juiste experts en begeleidt het project daarna door de tijd.",
         "bold": true
       }
     ]
@@ -809,69 +810,69 @@
   },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "We zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
+    "title": "Een ondernemende boutique.\nVijf vakgebieden.",
+    "desc": "Een boutique: weinig mandaten, een benoemde gesprekspartner, een gekozen kring. Ondernemend: wij creëren en realiseren zelf. Geen klassiek adviesbureau, geen M&A-boutique, geen techbedrijf: advies is onze basis, uitvoering ons bewijs.",
     "tagline": "ONDERNEMENDE BOUTIQUE, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
-    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze eerste geloofwaardigheid.",
+    "quote": "Wat wij aanbevelen, leven wij. Onze eigen projecten doorlopen onze eigen methodes.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
       {
+        "val": "3",
+        "label": "Werkwijzen",
+        "sub": "Voor onszelf · voor u · met u"
+      },
+      {
+        "val": "Beperkt",
+        "label": "Mandaten tegelijk",
+        "sub": "Een strikte selectie, onverdeelde aandacht"
+      },
+      {
         "val": "5",
-        "label": "Geïntegreerde disciplines",
-        "sub": "Advies · Opbouw · Koers · Talent · Informatie"
-      },
-      {
-        "val": "22+",
-        "label": "Gedekte sectoren",
-        "sub": "Alle sectoren, Zwitserland. Europa"
-      },
-      {
-        "val": "100%",
-        "label": "Klantalignement",
-        "sub": "Wat we adviseren, passen we toe"
+        "label": "Vakgebieden",
+        "sub": "Kaderen · Realiseren · Begeleiden · Selecteren · Informeren"
       },
       {
         "val": "20+",
         "label": "Jaar naast directiecomités",
-        "sub": "Strategie · Tech · M&A · HR · Operations"
+        "sub": "Strategie · Tech · M&A · HR · Operaties"
       }
     ],
-    "text": "We hebben meer dan twintig jaar besteed aan het opbouwen, adviseren en herstructureren van organisaties. Wat we hebben verworven, is van onschatbare waarde. Bedrijven die standhouden, kiezen niet tussen strategie en technologie. Ze denken ze samen. Aegryn bestaat voor degenen die dat hebben begrepen."
+    "text": "Meer dan twintig jaar kaderen, bouwen en herstructureren van organisaties leerde ons één ding: projecten die een markt tekenen, kiezen niet tussen strategie en uitvoering. Ze houden beide vast, van de eerste beslissing tot de oplevering."
   },
   "missionSection": {
     "label": "Het Aegryn Model",
-    "title": "Vijf geïntegreerde disciplines. Één standaard.",
-    "sub": "Vijf disciplines die elkaar versterken. Dat is wat slechts weinig spelers echt kunnen aanbieden.",
+    "title": "Vijf vakgebieden. Eén traject.",
+    "sub": "Kaderen, realiseren, begeleiden vormen het traject van een project. Selecteren en informeren voeden het bij elke stap.",
     "items": [
       {
         "title": "KADEREN",
-        "desc": "Geïntegreerd advies over alle dimensies van de organisatie: strategie en transacties, technologie en compliance, organisatie en talent. Wij begeleiden leidinggevenden en raden wanneer beslissingen de koers bepalen."
+        "desc": "Beslissen voor het uitvoeren: strategie, businessplan, merk en positionering, juridisch en regelgevend kader, overname en overdracht. Het kader maakt van een intentie een uitvoerbaar project."
       },
       {
         "title": "REALISEREN",
-        "desc": "Duurzame digitale assets, volledig eigendom van de klant. Elk asset is ontworpen om de bedrijfswaarde te vergroten, de certificering te behalen en technologische onafhankelijkheid te waarborgen."
+        "desc": "Bouwen tot de oplevering: merk, product, platform, marktintroductie. Wij realiseren zelf en activeren de juiste experts wanneer het project het vereist."
       },
       {
         "title": "BEGELEIDEN",
-        "desc": "Begeleiding van de vijf levenscycli: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen."
+        "desc": "Duren, van de ene cyclus naar de andere: lancering, groei, herstructurering, overname, overdracht. Een benoemde gesprekspartner die het geheugen van het project bewaart."
       },
       {
         "title": "SELECTEREN",
-        "desc": "Werving van leidinggevenden en experts, transitie-opdrachten. Zonder de juiste mensen blijft strategie een plan."
+        "desc": "De juiste mensen op het juiste moment samenbrengen: leiders, experts, projectteams en partners, één voor één gekozen voor wat het project vereist."
       },
       {
         "title": "INFORMEREN",
-        "desc": "Kwartaalmagazine, artikelen en marktinformatie. We documenteren wat we observeren en beleven."
+        "desc": "De markt lezen vóór de anderen: trends, innovatieve projecten, portretten van wie bouwt. Het magazine documenteert wat wij waarnemen en wat wij beleven."
       }
     ]
   },
   "homeTalent": {
     "label": "SELECTEREN",
-    "title": "De profielen die het verschil maken.",
-    "desc": "Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf.\n\nOns doel blijft hetzelfde: de waarde van uw organisatie versterken met de juiste mensen op het juiste moment.",
+    "title": "De profielen die een project tot een goed einde brengen.",
+    "desc": "Een algemeen directeur om de opgerichte vennootschap te dragen, een productverantwoordelijke om de planning te bewaken, een regelgevingsexpert om de marktintroductie veilig te stellen, een distributiepartner om het eerste land te openen.\n\nWij identificeren en selecteren hen één voor één, onder geheimhoudingsovereenkomst, precies op het moment dat het project hen nodig heeft.",
     "cta1": "Profiel zoeken →",
     "cta1Href": "/talent/entreprises",
     "cta2": "Ik ben kandidaat →",
@@ -879,34 +880,53 @@
   },
   "homeSegments": {
     "label": "ONZE KLANTEN",
-    "title": "Wij begeleiden bedrijven in elke fase.",
+    "title": "Wie ons een project toevertrouwt.",
     "cards": [
       {
         "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "De juiste technische en strategische fundamenten leggen. Waarde creëren vanaf dag één. De volgende ronde of de volgende stap voorbereiden."
-      },
-      {
-        "key": "pme",
-        "title": "Groeiende KMO's",
-        "desc": "Transformeren, certificeren en werven vóór overdracht of kapitaalwerving. Assets bouwen die standhouden."
-      },
-      {
-        "key": "enterprise",
-        "title": "Grote groepen",
-        "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive recruitment."
+        "title": "Ondernemers",
+        "desc": "Een uniek concept, te kaderen en daarna te realiseren. Wij brengen het kader, de experts en de planning die van een idee een project maken dat standhoudt."
       },
       {
         "key": "funds",
-        "title": "Fondsen & Investeerders",
-        "desc": "Technische screening van kansen, post-acquisitiebegeleiding, plaatsing van leidinggevende teams, voorbereiding van de sleutelstappen.\n\nBanken, fondsen, family offices, accountants: wij zijn de partner van wie financiert en adviseert — daar waar hun diensten stoppen."
+        "title": "Investeerders & family offices",
+        "desc": "Projecten om bij aan te sluiten of te dragen, en een operating partner voor uw deelnemingen: kadering, sturing, voorbereiding van de sleutelmomenten."
+      },
+      {
+        "key": "enterprise",
+        "title": "Instellingen & grote groepen",
+        "desc": "Een signatuurproject, geleid van beslissing tot oplevering, met de strengheid en vertrouwelijkheid die uw governance vereist."
+      },
+      {
+        "key": "pme",
+        "title": "Industriëlen & merken",
+        "desc": "Een innovatie tot op de markt gebracht: specificatie, regelgeving, merk, lancering, met de realisatiepartners die wij selecteren."
       }
     ]
   },
   "homeHybrid": {
-    "label": "HYBRIDE MODEL",
-    "title": "Wij bouwen.\nWij adviseren.\nWij doorlopen elke levensfase.",
-    "desc": "Aegryn is geen investeringsbank noch een incubator.\n\nHet is een geïntegreerde adviesfirma die besluitvormers, oprichters en leidinggevenden helpt de waarde van hun organisatie te creëren, documenteren en realiseren.\n\nWe interveniëren waar theorie eindigt en uitvoering begint. Van strategie tot overdracht."
+    "label": "HET AEGRYN-TRAJECT",
+    "title": "Wij kaderen.\nWij realiseren.\nWij begeleiden.",
+    "desc": "Aegryn is geen zakenbank en geen incubator.\n\nAegryn is een ondernemende boutique: wij kaderen en realiseren emblematische projecten en begeleiden ze daarna in elke cyclus. Wij treden aan waar de theorie stopt en de uitvoering begint.",
+    "modesLabel": "Hoe wij optreden",
+    "modes": [
+      {
+        "k": "Ontwerpen",
+        "v": "als architect: wij tekenen het project, zijn kader en zijn planning."
+      },
+      {
+        "k": "Leiden",
+        "v": "als bouwheer: wij bewaken de mijlpalen, de beslissingen en de oplevering."
+      },
+      {
+        "k": "Coördineren",
+        "v": "als orkestrator: wij kiezen en sturen de experts die het project vereist."
+      },
+      {
+        "k": "Uitvoeren",
+        "v": "als operator: wij realiseren zelf wat binnen onze knowhow valt."
+      }
+    ]
   },
   "whyapps": {
     "label": "Waarom Aegryn",
@@ -914,28 +934,28 @@
     "items": [
       {
         "num": "01",
-        "title": "Wij zijn operators, geen theoretici.",
-        "desc": "Wij hebben gebouwd, gefaald, geleerd en opnieuw begonnen. Wat wij adviseren, hebben wij zelf meegemaakt. Geen template. Geen gestandaardiseerde presentatie. Een blik van binnenuit de ervaring."
+        "title": "Operators, geen theoretici.",
+        "desc": "Wij hebben gebouwd, gefaald, geleerd en opnieuw begonnen. Wat wij adviseren, hebben wij beleefd. Geen template, geen standaardslide: een blik van binnenuit het project."
       },
       {
         "num": "02",
-        "title": "Wij opereren op het niveau van de beslissers.",
-        "desc": "Bestuursleden, oprichters, algemeen directeuren. Wij leveren geen generieke rapporten. Wij delen een realistisch strategisch standpunt met degenen die de echte beslissingen nemen."
+        "title": "Wij kiezen onze projecten.",
+        "desc": "Een beperkt aantal mandaten tegelijk, zodat elk onze volle aandacht krijgt. Wij weigeren liever een project dan het half te leiden."
       },
       {
         "num": "03",
         "title": "Wij stemmen onze belangen af op uw resultaten.",
-        "desc": "Een leverancier factureert per uur. Een partner verbindt zich aan resultaten. Bij Aegryn is ons model zo opgebouwd dat ons succes afhangt van het uwe."
+        "desc": "Een leverancier factureert per uur. Een partner verbindt zich tot het resultaat. Ons model is zo gebouwd dat ons succes van het uwe afhangt."
       },
       {
         "num": "04",
-        "title": "Wij activeren het Aegryn-netwerk per missie.",
-        "desc": "Domeinexperts, onafhankelijke auditors, investeerders en instellingen: één voor één geselecteerd, ingeschakeld naar behoefte. Uitgebreide capaciteit zonder zware structuur."
+        "title": "Wij omringen ons met de juiste experts.",
+        "desc": "Ingenieursbureaus, creatieve studio’s, laboratoria, advocatenkantoren, productie- en distributiepartners: een kring één voor één gekozen, gemobiliseerd volgens het project, nooit standaard."
       },
       {
         "num": "05",
         "title": "Verankerd in Zwitserland. Open naar de wereld.",
-        "desc": "Zwitserse institutionele strengheid als standaard voor elk mandaat. Een actieve aanwezigheid in Zwitserland, Frankrijk, Benelux, Monaco en daarbuiten. Het lokale met de globale visie."
+        "desc": "Zwitserse institutionele strengheid als standaard van elk mandaat. Projecten geleid in Zwitserland, in Europa en daarbuiten, met dezelfde gesprekspartner van begin tot einde."
       }
     ]
   },
@@ -4674,12 +4694,12 @@
   },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
-    "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.",
+    "magTitle": "Trends. Projecten. Bouwers. Levenskunst.",
+    "magDesc": "Markttrends, de innovatieve projecten die ertoe doen en het dagelijks leven van wie bouwt: plekken, tools, rituelen. Aegryn Magazine documenteert wat wij waarnemen en wat wij beleven.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
-    "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot grote groepen met sterke groei.",
-    "title": "De markt, door degenen die hem bedienen.",
+    "label": "Wat wij in het veld waarnemen, in Zwitserland en daarbuiten: trends, projecten, bouwers.",
+    "title": "Trends, projecten, bouwers.",
     "article1Title": "De 5 kritieke punten om een organisatie voor te bereiden op een financieringsronde of verkoop",
     "article1Cat": "Strategie & Overdracht",
     "article2Title": "Small & mid-cap: wat bedrijven van minder dan 50M€ tot 300M€ echt verwachten van een adviesbureau",
@@ -4708,27 +4728,27 @@
     }
   },
   "marketStats": {
-    "label": "De markt in cijfers, 2026",
+    "label": "Wat de cijfers zeggen over uitvoering",
     "stats": [
       {
-        "value": "+59%",
-        "label": "Groei van PE-exits in Europa in H1 2026.\nEen markt in beweging voor wie klaar is.",
-        "source": ""
-      },
-      {
-        "value": "30 tot 50%",
-        "label": "Waarderingskorting voor Europese bedrijven\nvs hun Amerikaanse equivalenten bij identieke metrics.\nDit is het probleem dat Aegryn oplost.",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "Van de EU-kmo's noemt regelgevingscomplexiteit\nals grootste groeibelemmering.\nEen beperking. Een differentiatiemogelijkheid.",
-        "source": "Eurobarometer SME Survey 2025"
-      },
-      {
         "value": "Nr. 1",
-        "label": "Small en mid-cap: hoogste groeisegment verwacht\nvoor 2026 volgens 64% van de Europese PE-respondenten.\nDe markt die Aegryn vanaf het begin begeleidt.",
-        "source": ""
+        "label": "Zwitserland, voor het veertiende jaar op rij eerste in de Global Innovation Index.\nHet ecosysteem waarin wij onze projecten kiezen.",
+        "source": "WIPO, Global Innovation Index 2024"
+      },
+      {
+        "value": "70%",
+        "label": "Van de transformatieprogramma’s haalt zijn doelstellingen niet.\nHet verschil wordt gemaakt in de uitvoering, niet in de intentie.",
+        "source": "McKinsey & Company"
+      },
+      {
+        "value": "35%",
+        "label": "Van de startups faalt bij gebrek aan geverifieerde marktbehoefte.\nKaderen vóór realiseren is geen stap: het is wat het project draagt.",
+        "source": "CB Insights, The Top Reasons Startups Fail"
+      },
+      {
+        "value": "85%",
+        "label": "Van de lanceringen van consumentenproducten haalt zijn doelstellingen niet.\nEen merk, een product en een planning die samen worden vastgehouden, maken het verschil.",
+        "source": "Nielsen, Breakthrough Innovation Report"
       }
     ]
   },
@@ -8082,14 +8102,14 @@
     "cta": "Een actief indienen"
   },
   "buildStrip": {
-    "label": "Build",
-    "assetsTitle": "Een portfolio van eigen\ntech-activa.",
-    "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, marketplaces, AI-tools. Elk actief is gecertificeerd, gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
-    "assetsCta": "Het portfolio bekijken",
-    "engineeringTitle": "Maatwerksoftware\nvoor uw operaties.",
-    "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant, certificeringsklaar. Een asset dat werkt voor u en uw investeerders.",
-    "engineeringCta": "Engineering ontdekken",
-    "builtToLastQuote": "In een wereld waar technologie in maanden veroudert, is ontwerpen om te duren een daad van weerstand. Elk asset dat wij bouwen vergroot de waarde van uw organisatie, niet uw maandelijkse cloudrekening."
+    "label": "Realiseren",
+    "assetsTitle": "Gekozen\nrealisaties.",
+    "assetsDesc": "Onze eigen projecten en die wij voor onze klanten leiden, gepresenteerd zonder hun mechanismen prijs te geven. Elk werd met dezelfde methode gekaderd, gerealiseerd en op de markt gebracht.",
+    "assetsCta": "Portfolio bekijken",
+    "engineeringTitle": "Wij realiseren.\nMet de juiste experts.",
+    "engineeringDesc": "Merk, product, platform, marktintroductie: wij realiseren zelf en activeren een kring van gekozen experts wanneer het project het vereist. Volledige eigendom van de klant. Maatwerktools, alleen wanneer de markt er geen biedt.",
+    "engineeringCta": "Ontdek Realiseren",
+    "builtToLastQuote": "Ontwerpen om te duren is een daad van verzet. Elk project dat wij realiseren moet zonder ons overgenomen, geauditeerd en overgedragen kunnen worden."
   },
   "techStack": {
     "label": "Tech Stack",

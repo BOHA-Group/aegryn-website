@@ -160,17 +160,18 @@
     "navPortfolio": "Portfolio"
   },
   "hero": {
-    "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
-    "metaDescription": "Aegryn accompagne les dirigeants qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet. Ancré en Suisse, opérationnel en Europe.",
-    "sub": "Nous accompagnons les dirigeants qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
+    "tagline": "La boutique entrepreneuriale de projets emblématiques.",
+    "metaDescription": "Aegryn, boutique entrepreneuriale de projets emblématiques. Nous cadrons, réalisons et accompagnons, pour nous, pour vous ou avec vous. Ancrée en Suisse, ouverte à l'international.",
+    "sub": "De l'idée au marché, puis dans la durée : cadrer, réaliser, accompagner. Pour nous, pour vous ou avec vous.",
     "phrases": [
-      "Accompagner\nvos projets.",
-      "Construire\nvos solutions.",
-      "Franchir\nchaque cycle.",
+      "Cadrer\nvotre projet.",
+      "Réaliser\navec les bons experts.",
+      "Accompagner\nchaque cycle.",
       "Sélectionner\nles talents.",
       "S’informer\nsur le marché."
     ],
-    "scroll": "Défiler"
+    "scroll": "Défiler",
+    "signature": "Rare par sélection. Discret par principe."
   },
   "assets": {
     "title": "Nos outils. Votre infrastructure.",
@@ -352,8 +353,8 @@
     "strip": "Aegryn Conseil | Conseil intégré pour organisations tech européennes",
     "cta": "Prendre contact",
     "hero": {
-      "title": "Accompagner ce que vous construisez.",
-      "desc": "Nous intervenons aux moments où les décisions définissent la trajectoire d’une organisation. Un seul interlocuteur, du diagnostic à l’exécution."
+      "title": "Cadrer votre projet.",
+      "desc": "Six expertises de conseil, mobilisées sur mesure selon le projet : stratégie, marque et lancement, risques, technologie, talents, reprise. Un seul interlocuteur, du premier arbitrage au cahier des charges."
     },
     "pillars": {
       "board": {
@@ -695,7 +696,7 @@
       ],
       "conclusion": "Aegryn Conseil intervient à l'intersection de ces trois dimensions. Nous aidons les dirigeants tech à définir une stratégie de croissance cohérente, à construire les capacités technologiques pour l'exécuter, et à identifier les acquisitions qui accélèrent le plan sans créer de dette technique. Une approche intégrée pour un marché qui ne pardonne plus les silos."
     },
-    "label": "Conseil",
+    "label": "Cadrer",
     "contactCta": "Prendre contact",
     "ctaDesc": "Chaque mission démarre par un diagnostic exhaustif avant toute recommandation. Nous documentons, nous mesurons, nous livrons.",
     "ctaTitleMa": "Discutons de votre opération M&A",
@@ -758,43 +759,43 @@
     "label": "Notre Conviction",
     "convictionSegments": [
       {
-        "t": "La valeur ne s'improvise pas. Elle se construit.\n\n",
+        "t": "Un projet emblématique ne se subit pas. Il se conduit.\n\n",
         "bold": true
       },
       {
-        "t": "Chaque organisation porte en elle des actifs, une équipe, une indépendance, une capacité à durer. Certains dirigeants veulent transmettre. D'autres veulent lever, acquérir, ou simplement bâtir quelque chose qui résiste au temps. Quelle que soit l'intention, "
+        "t": "Une idée forte ne suffit pas. Il faut un cadre, des experts, un produit, une marque, un calendrier. Et quelqu'un qui tienne l'ensemble jusqu'au résultat. "
       },
       {
-        "t": "la valeur se construit avant de se réaliser. Aegryn intervient en amont.",
+        "t": "Aegryn cadre, réalise avec les bons experts, puis accompagne le projet dans la durée.",
         "bold": true
       }
     ]
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Cinq disciplines.\nUn seul cabinet.",
-    "desc": "Nous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d’une entreprise : conseil, construction d’actifs, transitions à chaque cycle de vie, talent et intelligence de marché.",
+    "title": "Une boutique entrepreneuriale.\nCinq métiers.",
+    "desc": "Une boutique : peu de mandats, un interlocuteur nommé, un cercle choisi. Entrepreneuriale : nous créons et réalisons nous-mêmes. Ni cabinet de conseil classique, ni boutique M&A, ni société tech : le conseil est notre socle, l'exécution notre preuve.",
     "tagline": "BOUTIQUE ENTREPRENEURIALE, ANCRÉE EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
-    "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cette cohérence est notre première crédibilité.",
+    "quote": "Ce que nous recommandons, nous le vivons. Nos propres projets passent par nos propres méthodes.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
       {
+        "val": "3",
+        "label": "Modes d'intervention",
+        "sub": "Pour nous · pour vous · avec vous"
+      },
+      {
+        "val": "Limités",
+        "label": "Mandats menés à la fois",
+        "sub": "Une sélection restreinte, une attention entière"
+      },
+      {
         "val": "5",
-        "label": "Disciplines intégrées",
-        "sub": "Conseil · Construction · Trajectoire · Talent · Information"
-      },
-      {
-        "val": "22+",
-        "label": "Industries couvertes",
-        "sub": "Tous secteurs, Suisse. Europe"
-      },
-      {
-        "val": "100%",
-        "label": "Alignement client",
-        "sub": "Ce que nous conseillons, nous nous l’appliquons"
+        "label": "Métiers",
+        "sub": "Cadrer · Réaliser · Accompagner · Sélectionner · S'informer"
       },
       {
         "val": "20+",
@@ -802,32 +803,32 @@
         "sub": "Stratégie · Tech · M&A · RH · Opérations"
       }
     ],
-    "text": "Nous avons passé plus de vingt ans à construire, conseiller et restructurer des organisations. Ce que nous avons acquis n’a pas de prix. Les entreprises qui durent ne choisissent pas entre la stratégie et la technologie. Elles les pensent ensemble. Aegryn existe pour ceux qui ont compris ça."
+    "text": "Plus de vingt ans à cadrer, construire et redresser des organisations nous ont appris une chose : les projets qui marquent un marché ne choisissent pas entre la stratégie et l'exécution. Ils tiennent les deux, du premier arbitrage à la réception."
   },
   "missionSection": {
     "label": "Le Modèle Aegryn",
-    "title": "Cinq disciplines intégrées. Un seul standard.",
-    "sub": "Cinq disciplines qui se renforcent mutuellement. C’est ce que peu d’acteurs peuvent réellement proposer.",
+    "title": "Cinq métiers. Un seul parcours.",
+    "sub": "Cadrer, réaliser, accompagner forment le parcours d'un projet. Sélectionner et s'informer l'alimentent à chaque étape.",
     "items": [
       {
         "title": "CADRER",
-        "desc": "Conseil intégré sur toutes les dimensions de l'organisation : stratégie et transactions, technologie et conformité, organisation et talents. Nous accompagnons dirigeants et boards quand les décisions définissent la trajectoire."
+        "desc": "Décider avant d'exécuter : stratégie, business plan, marque et positionnement, cadre légal et réglementaire, reprise et cession. Le cadrage transforme une intention en projet exécutable."
       },
       {
         "title": "RÉALISER",
-        "desc": "Actifs numériques durables, propriété totale du client. Chaque actif est conçu pour valoriser l’entreprise, passer la certification et garantir l’indépendance technologique."
+        "desc": "Construire jusqu’à la réception : marque, produit, plateforme, mise en marché. Nous réalisons nous-mêmes et activons les bons experts quand le projet l’exige."
       },
       {
         "title": "ACCOMPAGNER",
-        "desc": "Accompagnement des cinq cycles de vie : lancement, croissance, restructuration, acquisition, transmission. Diagnostic, plan, exécution : la valeur se construit et se prouve à chaque étape."
+        "desc": "Durer, d'un cycle à l'autre : lancement, croissance, restructuration, acquisition, transmission. Un interlocuteur nommé qui garde la mémoire du projet."
       },
       {
         "title": "SÉLECTIONNER",
-        "desc": "Recrutement de dirigeants et d'experts, missions de transition. Sans les bonnes personnes, la stratégie reste un plan."
+        "desc": "Réunir les bonnes personnes au bon moment : dirigeants, experts, équipes de projet et partenaires, choisis un par un pour ce que le projet exige."
       },
       {
         "title": "S'INFORMER",
-        "desc": "Magazine trimestriel, articles et veille de marché. Nous documentons ce que nous observons et ce que nous vivons au quotidien."
+        "desc": "Lire le marché avant les autres : tendances, projets innovants, portraits de ceux qui bâtissent. Le magazine documente ce que nous observons et ce que nous vivons."
       }
     ]
   },
@@ -837,28 +838,28 @@
     "items": [
       {
         "num": "01",
-        "title": "Nous sommes des opérateurs, pas des théoriciens.",
-        "desc": "Nous avons construit, échoué, appris et recommencé. Ce que nous conseillons, nous l’avons vécu. Pas de template. Pas de slide standardisé. Un regard depuis l’intérieur de l’expérience."
+        "title": "Des opérateurs, pas des théoriciens.",
+        "desc": "Nous avons construit, échoué, appris et recommencé. Ce que nous conseillons, nous l'avons vécu. Pas de template, pas de slide standardisé : un regard depuis l'intérieur du projet."
       },
       {
         "num": "02",
-        "title": "Nous intervenons au niveau des décideurs.",
-        "desc": "Membres de conseils, fondateurs, directeurs généraux. Nous ne livrons pas de rapports génériques. Nous partageons un point de vue stratégique réaliste avec ceux qui prennent les vraies décisions."
+        "title": "Nous choisissons nos projets.",
+        "desc": "Un nombre limité de mandats à la fois, pour que chacun reçoive notre pleine attention. Nous préférons refuser un projet plutôt que de le mener à moitié."
       },
       {
         "num": "03",
         "title": "Nous alignons nos intérêts sur vos résultats.",
-        "desc": "Un prestataire facture à l’heure. Un partenaire s’engage sur les résultats. Chez Aegryn, notre modèle est construit pour que notre succès dépende du vôtre."
+        "desc": "Un prestataire facture à l’heure. Un partenaire s’engage sur le résultat. Notre modèle est construit pour que notre réussite dépende de la vôtre."
       },
       {
         "num": "04",
-        "title": "Nous activons le réseau Aegryn à la mission.",
-        "desc": "Experts métiers, auditeurs indépendants, investisseurs et institutionnels: sélectionnés un par un, mobilisés selon le besoin. Une capacité élargie sans structure lourde."
+        "title": "Nous nous entourons des bons experts.",
+        "desc": "Bureaux d'études, studios de création, laboratoires, cabinets juridiques, partenaires de fabrication et de distribution : un cercle choisi un par un, mobilisé selon le projet, jamais par défaut."
       },
       {
         "num": "05",
         "title": "Ancré en Suisse. Ouvert à l'international.",
-        "desc": "La rigueur institutionnelle suisse comme standard pour chaque engagement. Une présence active en Suisse, France, Benelux, Monaco et au-delà. Le local avec la vision globale."
+        "desc": "La rigueur institutionnelle suisse comme standard de chaque mandat. Des projets menés en Suisse, en Europe et au-delà, avec le même interlocuteur du début à la fin."
       }
     ]
   },
@@ -2045,27 +2046,27 @@
     }
   },
   "marketStats": {
-    "label": "Le marché en chiffres, 2026",
+    "label": "Ce que les chiffres disent de l'exécution",
     "stats": [
       {
-        "value": "+59%",
-        "label": "Croissance des exits PE en Europe au premier semestre 2026.\nUn marché en mouvement pour ceux qui sont prêts.",
-        "source": ""
-      },
-      {
-        "value": "30 à 50%",
-        "label": "De discount de valorisation des entreprises européennes\nvs leurs équivalents US à métriques identiques.\nC'est le problème qu'Aegryn résout.",
-        "source": ""
-      },
-      {
-        "value": "64%",
-        "label": "Des PME EU citent la complexité réglementaire\ncomme premier frein à leur croissance.\nUne contrainte. Une opportunité de différenciation.",
-        "source": "Eurobarometer SME Survey 2025"
-      },
-      {
         "value": "N°1",
-        "label": "Small et mid-cap : segment à plus forte croissance attendue\npour 2026 selon 64% des répondants PE européens.\nLe marché qu'Aegryn accompagne depuis le début.",
-        "source": ""
+        "label": "La Suisse, première du Global Innovation Index pour la quatorzième année consécutive.\nL'écosystème dans lequel nous choisissons nos projets.",
+        "source": "OMPI, Global Innovation Index 2024"
+      },
+      {
+        "value": "70%",
+        "label": "Des programmes de transformation n'atteignent pas leurs objectifs.\nLa différence se joue à l'exécution, pas à l'intention.",
+        "source": "McKinsey & Company"
+      },
+      {
+        "value": "35%",
+        "label": "Des startups échouent faute de besoin de marché vérifié.\nCadrer avant de réaliser n’est pas une étape : c’est ce qui tient le projet.",
+        "source": "CB Insights, The Top Reasons Startups Fail"
+      },
+      {
+        "value": "85%",
+        "label": "Des lancements de produits de grande consommation n'atteignent pas leurs objectifs.\nUne marque, un produit et un calendrier tenus ensemble font la différence.",
+        "source": "Nielsen, Breakthrough Innovation Report"
       }
     ]
   },
@@ -4699,12 +4700,12 @@
   },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
-    "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Pour les fondateurs, dirigeants, investisseurs et familles actionnaires qui bâtissent, financent, acquièrent ou transmettent une organisation : Aegryn Magazine documente chaque trimestre ce que cela signifie vraiment de créer et de réaliser de la valeur, toutes industries, toutes tailles, en Suisse et en Europe.\n\nStratégies décryptées, portraits de décideurs, données de marché et vie de ceux qui construisent quelque chose qui compte.",
+    "magTitle": "Tendances. Projets. Bâtisseurs. Art de vivre.",
+    "magDesc": "Les tendances de marché, les projets innovants qui comptent et le quotidien de ceux qui bâtissent : lieux, outils, rituels. Aegryn Magazine documente ce que nous observons et ce que nous vivons.",
     "magFooter": "Quatre éditions par an.",
     "magCta": "Découvrir le magazine",
-    "label": "Nos analyses du marché suisse et européen, des scale-ups au grand groupe en forte croissance.",
-    "title": "Le marché, par ceux qui l’opèrent.",
+    "label": "Ce que nous observons sur le terrain, en Suisse et au-delà : tendances, projets, bâtisseurs.",
+    "title": "Tendances, projets, bâtisseurs.",
     "article1Title": "Les 5 points critiques pour préparer une organisation à une levée ou une cession",
     "article1Cat": "Stratégie & Transmission",
     "article2Title": "Small & mid-cap : ce que les entreprises de moins de 50M€ jusqu'à 300M€ attendent vraiment d'un cabinet de conseil",
@@ -8042,14 +8043,14 @@
     "cta": "Soumettre un actif"
   },
   "buildStrip": {
-    "label": "Conception",
-    "assetsTitle": "Un portefeuille\nd'actifs tech propriétaires.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est certifié, documenté, opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
-    "assetsCta": "Voir le portefeuille",
-    "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
-    "engineeringDesc": "Entreprises, fonds d'investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client, prêt pour la certification. Un actif qui travaille pour vous et vos investisseurs.",
-    "engineeringCta": "Découvrir l'ingénierie",
-    "builtToLastQuote": "Dans un monde où la technologie s’obsolète en quelques mois, concevoir pour durer est un acte de résistance. Chaque actif que nous construisons augmente la valeur de votre organisation, pas votre facture mensuelle cloud."
+    "label": "Réaliser",
+    "assetsTitle": "Des réalisations\nchoisies.",
+    "assetsDesc": "Nos propres projets et ceux que nous menons pour nos clients, présentés sans en dévoiler les ressorts. Chacun a été cadré, réalisé et mis en marché selon la même méthode.",
+    "assetsCta": "Voir le portfolio",
+    "engineeringTitle": "Nous réalisons.\nAvec les bons experts.",
+    "engineeringDesc": "Marque, produit, plateforme, mise en marché : nous réalisons nous-mêmes et activons un cercle d'experts choisis quand le projet l'exige. Propriété totale du client. Outils sur mesure, seulement lorsque le marché n'en propose pas.",
+    "engineeringCta": "Découvrir Réaliser",
+    "builtToLastQuote": "Concevoir pour durer est un acte de résistance. Chaque projet que nous réalisons doit pouvoir être repris, audité et transmis sans nous."
   },
   "techStack": {
     "label": "Stack Technique",
@@ -9658,39 +9659,58 @@
   },
   "homeSegments": {
     "label": "NOS CLIENTS",
-    "title": "Nous accompagnons les entreprises à chaque stade.",
+    "title": "Qui nous confie un projet.",
     "cards": [
       {
         "key": "startup",
-        "title": "Startup & Scale-up",
-        "desc": "Poser les bonnes fondations tech et stratégiques. Valoriser depuis le premier jour. Préparer la prochaine levée ou la prochaine étape."
-      },
-      {
-        "key": "pme",
-        "title": "PME en croissance",
-        "desc": "Transformer, certifier et recruter avant de transmettre ou de lever. Construire des actifs qui durent."
-      },
-      {
-        "key": "enterprise",
-        "title": "Grands groupes",
-        "desc": "Stratégie tech, M&A de portefeuille, actifs propriétaires internes, recrutement de direction."
+        "title": "Entrepreneurs",
+        "desc": "Un concept unique, à cadrer puis à réaliser. Nous apportons le cadre, les experts et le calendrier qui font d'une idée un projet qui tient."
       },
       {
         "key": "funds",
-        "title": "Fonds & Investisseurs",
-        "desc": "Screening technique des opportunités, accompagnement post-acquisition, placement des équipes dirigeantes, préparation des étapes clés.\n\nBanques, fonds, family offices, experts-comptables : nous sommes le partenaire de ceux qui financent et conseillent, pour intervenir là où leurs services s'arrêtent."
+        "title": "Investisseurs & family offices",
+        "desc": "Des projets à rejoindre ou à porter, et un operating partner pour vos participations : cadrage, pilotage, préparation des étapes clés."
+      },
+      {
+        "key": "enterprise",
+        "title": "Institutions & grands groupes",
+        "desc": "Un projet signature, mené de la décision à la réception, avec la rigueur et la confidentialité que votre gouvernance exige."
+      },
+      {
+        "key": "pme",
+        "title": "Industriels & marques",
+        "desc": "Une innovation menée jusqu'au marché : spécification, réglementaire, marque, lancement, avec les partenaires de réalisation que nous sélectionnons."
       }
     ]
   },
   "homeHybrid": {
-    "label": "MODÈLE HYBRIDE",
-    "title": "Nous construisons.\nNous conseillons.\nNous franchissons les cycles.",
-    "desc": "Aegryn n’est ni une banque d’affaires ni un incubateur.\n\nC’est un cabinet de conseil intégré qui accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation.\n\nNous intervenons là où la théorie s’arrête et où l’exécution commence. De la stratégie à la transmission."
+    "label": "LE PARCOURS AEGRYN",
+    "title": "Nous cadrons.\nNous réalisons.\nNous accompagnons.",
+    "desc": "Aegryn n'est ni une banque d'affaires ni un incubateur.\n\nC'est une boutique entrepreneuriale : nous cadrons et réalisons des projets emblématiques, puis nous les accompagnons à chaque cycle. Nous intervenons là où la théorie s'arrête et où l'exécution commence.",
+    "modesLabel": "Comment nous intervenons",
+    "modes": [
+      {
+        "k": "Concevoir",
+        "v": "en architecte : nous dessinons le projet, son cadre et son calendrier."
+      },
+      {
+        "k": "Conduire",
+        "v": "en maître d'œuvre : nous tenons les jalons, les arbitrages et la réception."
+      },
+      {
+        "k": "Coordonner",
+        "v": "en orchestrateur : nous choisissons et pilotons les experts que le projet exige."
+      },
+      {
+        "k": "Exécuter",
+        "v": "en opérateur : nous réalisons nous-mêmes ce qui relève de nos savoir-faire."
+      }
+    ]
   },
   "homeTalent": {
     "label": "SÉLECTIONNER",
-    "title": "Les profils qui font la différence.",
-    "desc": "Recrutement de profils clés et placement de profils de transition, à chaque cycle de vie de l’entreprise.\n\nNotre objectif est toujours le même : renforcer la valeur de votre organisation par les bonnes personnes au bon moment.",
+    "title": "Les profils qui font aboutir un projet.",
+    "desc": "Un directeur général pour porter la société créée, un responsable produit pour tenir le calendrier, un expert réglementaire pour sécuriser la mise en marché, un partenaire de distribution pour ouvrir le premier pays.\n\nNous les identifions et les sélectionnons un par un, sous accord de confidentialité, au moment précis où le projet en a besoin.",
     "cta1": "Trouver un profil →",
     "cta1Href": "/talent/entreprises",
     "cta2": "Je suis candidat →",

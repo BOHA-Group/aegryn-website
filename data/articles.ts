@@ -12,6 +12,9 @@ export type ArticleCategory =
   | 'talent'
   | 'financing'
   | 'compliance'
+  | 'trends'
+  | 'projects'
+  | 'builders'
 
 export type LocaleText = {
   fr: string; en: string;
@@ -49,8 +52,12 @@ import { NIS2_FRANCE_ARTICLE } from './articles-nis2'
 import { DORA_ARTICLE, AI_ACT_2026_ARTICLE, SWISS_ISG_ARTICLE } from './articles-compliance-2026'
 import { CRA_ARTICLE } from './articles-cra'
 import { SKILLS_GAP_ARTICLE, AI_HIRING_ARTICLE } from './articles-workforce'
+import { TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE } from './articles-home-2026'
 
 export const ARTICLES: Article[] = [
+  TRENDS_SIGNALS_ARTICLE,
+  BUILDER_DAY_ARTICLE,
+  LAUNCH_ANATOMY_ARTICLE,
   AI_HIRING_ARTICLE,
   SKILLS_GAP_ARTICLE,
   CRA_ARTICLE,
@@ -3482,6 +3489,9 @@ export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
   talent:        { fr: 'Organisation & Talent', en: 'Organisation & Talent', de: 'Organisation & Talent', es: 'Organización & Talento', it: 'Organizzazione & Talento', nl: 'Organisatie & Talent' },
   financing:     { fr: 'Financement & Investisseurs', en: 'Financing & Investors', de: 'Finanzierung & Investoren', es: 'Financiación & Inversores', it: 'Finanziamento & Investitori', nl: 'Financiering & Investeerders' },
   compliance:    { fr: 'Conformité', en: 'Compliance', de: 'Compliance', es: 'Cumplimiento', it: 'Conformità', nl: 'Compliance' },
+  trends:        { fr: 'Tendances', en: 'Trends', de: 'Trends', es: 'Tendencias', it: 'Tendenze', nl: 'Trends' },
+  projects:      { fr: 'Projets', en: 'Projects', de: 'Projekte', es: 'Proyectos', it: 'Progetti', nl: 'Projecten' },
+  builders:      { fr: 'Bâtisseurs', en: 'Builders', de: 'Macher', es: 'Constructores', it: 'Costruttori', nl: 'Bouwers' },
 }
 
 export function getLocaleText(text: LocaleText, locale: string): string {

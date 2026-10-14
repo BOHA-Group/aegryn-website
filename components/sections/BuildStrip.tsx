@@ -49,7 +49,7 @@ export function BuildStrip() {
             {t('assetsDesc')}
           </p>
           <Link
-            href="/assets"
+            href={"/portfolio" as never}
             className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-navy border border-ag-navy/30 px-5 py-2.5 hover:bg-ag-navy hover:text-white transition-colors self-start"
           >
             {t('assetsCta')} <ArrowUpRight size={11} />

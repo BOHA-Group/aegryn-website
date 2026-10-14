@@ -174,6 +174,10 @@ export function HeroMountain() {
                       {t('sub')}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
+                    <span className="font-sans font-semibold text-[13px] text-ag-apex/90 px-6 tracking-[0.02em]">
+                      {t('signature')}
+                    </span>
+                    <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
                   </span>
                 ))}
               </span>

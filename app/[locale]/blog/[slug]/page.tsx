@@ -30,6 +30,9 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   talent:        ['dépendance fondateur', 'plan de succession', 'organisation transmissible', 'executive tech', 'rétention talents'],
   financing:     ['financement entreprise', 'levée de fonds', 'banque PME', 'investisseurs', 'valorisation certifiée'],
   compliance:    ['NIS2', 'directive NIS2', 'DORA', 'AI Act', 'LSI Suisse', 'conformité réglementaire', 'obligations légales 2026', 'CIFSO 5000'],
+  trends:        ['tendances marché', 'projets innovants', 'signaux faibles', 'innovation Suisse', 'boutique entrepreneuriale'],
+  projects:      ['lancement produit', 'du concept au marché', 'cadrage projet', 'mise en marché', 'projet emblématique'],
+  builders:      ['portrait fondateur', 'rituels entrepreneur', 'lifestyle bâtisseur', 'outils fondateur', 'quotidien dirigeant'],
 }
 
 const BASE_ARTICLE_KEYWORDS = [

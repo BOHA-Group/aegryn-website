@@ -10,10 +10,10 @@ import { gsap } from '@/lib/gsap'
    /public/images/segments/segments-*.jpg — non partagées avec d'autres sections.
 ──────────────────────────────────────────────────────────────── */
 const SEGMENT_IMAGES: Record<string, { src: string; alt: string }> = {
-  startup:    { src: '/images/segments/segments-startup.jpg',    alt: 'Startup & Scale-up — équipe tech en open-space' },
-  pme:        { src: '/images/segments/segments-pme.jpg',        alt: 'PME en croissance — réunion de direction' },
-  enterprise: { src: '/images/segments/segments-enterprise.jpg', alt: 'Grands groupes — architecture corporative' },
-  funds:      { src: '/images/segments/segments-funds.jpg',      alt: 'Fonds & Investisseurs — analyse financière' },
+  startup:    { src: '/images/segments/segments-startup.jpg',    alt: 'Entrepreneurs, équipe projet en open-space' },
+  pme:        { src: '/images/segments/segments-pme.jpg',        alt: 'Industriels et marques, réunion de direction' },
+  enterprise: { src: '/images/segments/segments-enterprise.jpg', alt: 'Institutions et grands groupes, architecture corporative' },
+  funds:      { src: '/images/segments/segments-funds.jpg',      alt: 'Investisseurs et family offices, analyse de participations' },
 }
 
 export function SegmentsSection() {
