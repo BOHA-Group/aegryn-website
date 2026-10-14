@@ -163,7 +163,7 @@ export type SigningContext =
   | { state: 'revoked'; lang: NdaLang; reference: string }
   | { state: 'expired'; lang: NdaLang; reference: string }
   | { state: 'signed'; lang: NdaLang; reference: string; projectLabel: string; fullName: string; signedAtIso: string }
-  | { state: 'ready'; lang: NdaLang; reference: string; projectLabel: string; fullName: string; company: string | null; roles: NdaRole[]; blocks: NdaBlock[]; expiresAtIso: string }
+  | { state: 'ready'; lang: NdaLang; reference: string; projectLabel: string; fullName: string; company: string | null; roles: NdaRole[]; blocks: NdaBlock[]; expiresAtIso: string; aegryn: { name: string; title: string } }
 
 async function findByToken(token: string): Promise<{ s: SignatoryRow; a: AgreementRow } | null> {
   if (!/^[A-Za-z0-9_-]{40,60}$/.test(token)) return null
@@ -190,7 +190,7 @@ export async function getSigningContext(token: string): Promise<SigningContext> 
   if (!aegryn) return { state: 'unavailable' }
   return {
     state: 'ready', lang: a.lang, reference: a.reference, projectLabel: a.project_label, fullName: s.full_name, company: s.company,
-    roles: s.roles, blocks: renderNda(a.lang, varsFor(a, s, aegryn)), expiresAtIso: s.token_expires_at,
+    roles: s.roles, blocks: renderNda(a.lang, varsFor(a, s, aegryn)), expiresAtIso: s.token_expires_at, aegryn,
   }
 }
 
@@ -245,14 +245,14 @@ export async function signNda(token: string, input: { signedName: string; ip: st
   /* Le filtre sur status = 'pending' rend la signature idempotente en cas de double envoi */
   const { data: updated, error } = await db().from('nda_signatories').update({
     status: 'signed', signed_name: signedName, signed_at: now, ip_address: input.ip, user_agent: ua,
-    content_sha256: contentSha, template_version: a.template_version,
+    content_sha256: contentSha, template_version: NDA_TEMPLATE_VERSION,
     countersigned_by_name: aegryn.name, countersigned_by_title: aegryn.title, countersigned_at: now,
   }).eq('id', s.id).eq('status', 'pending').select('*').maybeSingle()
   if (error) throw new NdaError('db', error.message)
   if (!updated) return { already: true as const, reference: a.reference, lang: a.lang }
 
   const signed = updated as SignatoryRow
-  await logEvent(a.id, s.id, 'signed', 'signatory', input.ip, { signedName, contentSha256: contentSha, templateVersion: a.template_version })
+  await logEvent(a.id, s.id, 'signed', 'signatory', input.ip, { signedName, contentSha256: contentSha, templateVersion: NDA_TEMPLATE_VERSION })
   await logEvent(a.id, s.id, 'countersigned', 'system', null, { by: aegryn.name, title: aegryn.title })
   await refreshAgreementStatus(a.id)
 

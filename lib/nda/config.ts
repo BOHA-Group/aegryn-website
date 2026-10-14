@@ -7,7 +7,7 @@
  * Changer NDA_TEMPLATE_VERSION à chaque modification du texte : la version
  * et l'empreinte du texte accepté sont conservées avec chaque signature.
  */
-export const NDA_TEMPLATE_VERSION = '2026-10-v1'
+export const NDA_TEMPLATE_VERSION = '2026-10-v2'
 export const NDA_TEMPLATE_STATUS: 'draft' | 'validated' = 'draft'
 
 export const AEGRYN_PARTY = {

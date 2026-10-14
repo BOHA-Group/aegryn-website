@@ -31,10 +31,6 @@ export interface NdaVars {
   reference?:       string
 }
 
-const ANNEX_LETTER: Record<NdaRole, string> = {
-  project_owner: 'A', investor: 'B', institution: 'C', industrial: 'D', partner: 'E', profile: 'F', certification: 'G',
-}
-
 export const ROLE_LABELS: Record<NdaLang, Record<NdaRole, string>> = {
   fr: {
     project_owner: 'Porteur de projet', investor: 'Investisseur ou family office', institution: 'Institution ou grand groupe',
@@ -305,6 +301,8 @@ const spaced = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
 export function renderNda(lang: NdaLang, vars: NdaVars): NdaBlock[] {
   const c = CONTENT[lang]
   const roles = NDA_ROLES.filter(r => vars.roles.includes(r))
+  /* Annexes numérotées A, B, C... selon celles réellement incluses, dans l'ordre des profils */
+  const letter = (r: NdaRole) => String.fromCharCode(65 + roles.indexOf(r))
   const sub = (text: string) =>
     text
       .replaceAll('{{project}}', vars.projectLabel)
@@ -322,8 +320,8 @@ export function renderNda(lang: NdaLang, vars: NdaVars): NdaBlock[] {
         ? `${AEGRYN_PARTY.name}, ${AEGRYN_PARTY.address} (${AEGRYN_PARTY.uid}), représentée par ${vars.aegrynSignatory.name}, ${vars.aegrynSignatory.title} (« Aegryn »),`
         : `${AEGRYN_PARTY.name}, ${AEGRYN_PARTY.address} (${AEGRYN_PARTY.uid}), represented by ${vars.aegrynSignatory.name}, ${vars.aegrynSignatory.title} (“Aegryn”),` },
     { kind: 'p', text: lang === 'fr'
-        ? `et ${vars.signatoryName}${vars.signatoryCompany ? `, ${vars.signatoryCompany}` : ''} (le « Signataire »), agissant en qualité de : ${roles.map(r => `${ROLE_LABELS.fr[r]} (${c.annexWord} ${ANNEX_LETTER[r]})`).join(' ; ')}.`
-        : `and ${vars.signatoryName}${vars.signatoryCompany ? `, ${vars.signatoryCompany}` : ''} (the “Signatory”), acting as: ${roles.map(r => `${ROLE_LABELS.en[r]} (${c.annexWord} ${ANNEX_LETTER[r]})`).join('; ')}.` },
+        ? `et ${vars.signatoryName}${vars.signatoryCompany ? `, ${vars.signatoryCompany}` : ''} (le « Signataire »), agissant en qualité de : ${roles.map(r => `${ROLE_LABELS.fr[r]} (${c.annexWord} ${letter(r)})`).join(' ; ')}.`
+        : `and ${vars.signatoryName}${vars.signatoryCompany ? `, ${vars.signatoryCompany}` : ''} (the “Signatory”), acting as: ${roles.map(r => `${ROLE_LABELS.en[r]} (${c.annexWord} ${letter(r)})`).join('; ')}.` },
   ]
 
   c.common.forEach((clause, i) => {
@@ -335,7 +333,7 @@ export function renderNda(lang: NdaLang, vars: NdaVars): NdaBlock[] {
   })
 
   for (const r of roles) {
-    blocks.push({ kind: 'h', text: `${c.annexWord} ${ANNEX_LETTER[r]} : ${ROLE_LABELS[lang][r]}` })
+    blocks.push({ kind: 'h', text: `${c.annexWord} ${letter(r)} : ${ROLE_LABELS[lang][r]}` })
     for (const para of c.annexes[r]) blocks.push({ kind: 'p', text: sub(para) })
   }
   return blocks

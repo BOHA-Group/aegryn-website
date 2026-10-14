@@ -17,6 +17,12 @@ const MARGIN = 56
 const NAVY   = rgb(0.059, 0.11, 0.247)
 const GRAY   = rgb(0.4, 0.45, 0.52)
 const LINE   = rgb(0.85, 0.87, 0.9)
+const APEX   = rgb(0.353, 0.867, 0.643)   // #5adda4
+const BANNER_H = 74
+
+/* Logo officiel Aegryn (viewBox 441.14 x 487.91), mêmes polygones que components/brand/AegrynLogo */
+const LOGO_GREEN = 'M297.96 171.32 L266.09 100.56 L220.57 0 L191.6 64.14 L254.09 127.04 Z'
+const LOGO_BODY  = 'M317.41 214.36 L246.64 143.18 L184.15 80.28 L175.05 100.56 L0 487.91 L90.63 487.91 L220.57 201.12 L350.51 487.91 L441.14 487.91 Z'
 
 export interface SignedNdaInput {
   lang:            NdaLang
@@ -83,7 +89,19 @@ export async function buildSignedNdaPdf(input: SignedNdaInput): Promise<Uint8Arr
   doc.setCreationDate(new Date(input.signatory.signedAtIso))
 
   let page: PDFPage = doc.addPage([PAGE_W, PAGE_H])
-  let y = PAGE_H - MARGIN
+
+  /* Bandeau d'en-tête de la première page : fond navy, logo, intitulé et référence */
+  page.drawRectangle({ x: 0, y: PAGE_H - BANNER_H, width: PAGE_W, height: BANNER_H, color: NAVY })
+  page.drawRectangle({ x: 0, y: PAGE_H - BANNER_H - 3, width: PAGE_W, height: 3, color: APEX })
+  const logoH = 34, logoScale = logoH / 487.91
+  const logoY = PAGE_H - (BANNER_H - logoH) / 2
+  page.drawSvgPath(LOGO_GREEN, { x: MARGIN, y: logoY, scale: logoScale, color: APEX, borderWidth: 0 })
+  page.drawSvgPath(LOGO_BODY,  { x: MARGIN, y: logoY, scale: logoScale, color: rgb(1, 1, 1), borderWidth: 0 })
+  page.drawText('AEGRYN', { x: MARGIN + 441.14 * logoScale + 12, y: PAGE_H - BANNER_H / 2 - 5, size: 16, font: bold, color: rgb(1, 1, 1) })
+  const bannerRight = toWinAnsi(input.lang === 'fr' ? 'ACCORD DE CONFIDENTIALITÉ' : 'CONFIDENTIALITY AGREEMENT')
+  page.drawText(bannerRight, { x: PAGE_W - MARGIN - bold.widthOfTextAtSize(bannerRight, 8), y: PAGE_H - BANNER_H / 2 + 6, size: 8, font: bold, color: rgb(0.8, 0.84, 0.9) })
+  page.drawText(input.reference, { x: PAGE_W - MARGIN - regular.widthOfTextAtSize(input.reference, 10), y: PAGE_H - BANNER_H / 2 - 10, size: 10, font: regular, color: APEX })
+  let y = PAGE_H - BANNER_H - 3 - 36
   const newPage = () => { page = doc.addPage([PAGE_W, PAGE_H]); y = PAGE_H - MARGIN }
   const ensure = (h: number) => { if (y - h < MARGIN + 24) newPage() }
 
