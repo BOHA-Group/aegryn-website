@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
-import { AboutHeroLogo } from '@/components/brand/AboutHeroLogo'
 
 const BLUR = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAArAEADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgEDBAUGBwD/xAAtEAACAQMDAgQGAgMAAAAAAAABAgMABBEFEiETMQZBYXEUMlFSgbEi4ZGhwf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAaEQEBAAMBAQAAAAAAAAAAAAAAARESITEC/9oADAMBAAIRAxEAPwDroWiC0WKXFZaDtpQuOaXFewaITAP1oWUeVHikxRTJUU0yVJK0JSpQN1qFnY7Pi7qG36hwnVcLuPpmvXeoWtkubiYKT8qjlm9gOTXMfE7ahqttDPdSystujsxeARrHhHmO/anNEc6rIetLqUVrJEGjmRFLT59SMgCm0MVsn8SyzytDYWRkZe+7kj3A4H5IpTLr0wyz20Q+0/1n90zAtrBAscMmppGvAVdij/QourZEKJb7UYS0gRRJLguSM8YHvTaGKiG71mBclILjH2jB/Yr1v4kiMvSubd43HzBckj1KnBx7ZqIl5pjo8q6tqG1WZeGYnIPPG2sl4q1PUHhxp9tqMscR6guZcMVUeYGwFPfNNoYrc+FLwXPhaxmkmOBlYwCVWfQH4in/AOBLyR3PYGOMIa+b6a/oBudhu3PBNPsbWOCI5PA3i3y3dycOQR3owRmHFuHkKwHzsHYLn0WhA0t0H1nzjOAS0T2+ah+yCdCNrdcxNG4+adFdjrh7FMFj7nNO0qyuRA2k8uOuP7c0rdrAQpyGGcUEfpCC1OK9aEg+QOadbXIGDkHtzWnWW8jntjNdtF1ZpwUMTcluVbrnJHNei2eOIx3rtNE1Z6QWMPGNB4NAP0FK1y5UGi1QQnEdx9HtSrtdyMcr+dL+zO3G5Ofalbsi8r/OtGx1OJ7h0MnGMdaHchjDJGI5wzAzscckd6tyz7ADtUH1rM8Raq/ibV5L5eE3hFU/3QSazV2qAOSaNQVdOFWqUVJVHvS5weKWk4oEbqMrWV4puPs+k3E3dULY+tUvEGrlrSUW0R+Y8s+1Y4pGtzWhq5RCGBGBwKkt4zPdxwj+BPMm7r9nTGaLqby9ElrCc1oHQ0JLQnRUxn0qSPNc3olx9huopTwyuFPv2rp/Ja4jDJ94nFBqtKTWrRg8Pxtqd1bxNkKMH6mtyfw/Yxy/P8PJj5iVrJ0Qn7Bbj0B/SsaFb21PpgNaJXewsdS38P2w8rBX5pwA55B4Fqw5mWS4Zgf4iBWutGy21mva4bBHWtUVv//Z'
 
@@ -38,7 +37,7 @@ export function AboutHeroScroll() {
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
         const start = mq.conditions?.isDesktop
-          ? 'inset(58% 6% 8% 62% round 16px)'
+          ? 'inset(48% 6% 10% 62% round 16px)'
           : 'inset(88% 5% 1% 5% round 16px)'
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
@@ -86,9 +85,6 @@ export function AboutHeroScroll() {
                 <span key={i} className="block">{line}</span>
               ))}
             </h1>
-            <div className="shrink-0 mt-16 -mr-3">
-              <AboutHeroLogo />
-            </div>
           </div>
           <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
             {t('hero.desc')}
