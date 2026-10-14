@@ -1733,7 +1733,7 @@
     "hero": {
       "label": "Contattaci",
       "title": "Parliamo.",
-      "desc": "Consulenza, certificazione, accompagnamento M&A, partnership o domanda generale: rispondiamo entro 2 giorni lavorativi."
+      "desc": "Un progetto, una partnership, una domanda: una conversazione riservata. Risposta personale entro 2 giorni lavorativi."
     },
     "responseTime": {
       "label": "Tempo di risposta",
@@ -1747,18 +1747,17 @@
       "subject": "Oggetto",
       "subjectPlaceholder": "Scegli un oggetto",
       "subjects": {
-        "general": "Richiesta generale",
-        "advisory": "Consulenza strategica",
-        "tech": "Consulenza tecnologica",
-        "grade": "Certificazione asset",
-        "transaction": "Consulenza M&A",
+        "project": "Proporre un progetto",
+        "cycle": "Accompagnare un ciclo",
+        "profile": "Selezionare un profilo",
+        "transition": "Missione di transizione",
+        "join": "Unirsi a un progetto o sostenerlo",
+        "certification": "Certificazione CIFSO 5000",
         "partnership": "Partnership",
-        "investor": "Investitore",
-        "press": "Stampa & Media",
+        "press": "Stampa e media",
         "career": "Candidatura",
-        "other": "Altro",
-        "recruter": "Reclutare un profilo",
-        "transition": "Profilo di transizione"
+        "general": "Richiesta generale",
+        "other": "Altro"
       },
       "message": "Messaggio",
       "messagePlaceholder": "Descrivi la tua richiesta...",

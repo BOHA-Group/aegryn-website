@@ -1733,7 +1733,7 @@
     "hero": {
       "label": "Kontakt",
       "title": "Sprechen wir.",
-      "desc": "Beratung, Zertifizierung, M&A-Begleitung, Partnerschaft oder allgemeine Frage — wir antworten innerhalb von 2 Werktagen."
+      "desc": "Ein Projekt, eine Partnerschaft, eine Frage: ein vertrauliches Gespräch. Persönliche Antwort innerhalb von 2 Werktagen."
     },
     "responseTime": {
       "label": "Antwortzeit",
@@ -1747,18 +1747,17 @@
       "subject": "Betreff",
       "subjectPlaceholder": "Betreff wählen",
       "subjects": {
-        "general": "Allgemeine Anfrage",
-        "advisory": "Strategieberatung",
-        "tech": "Technologieberatung",
-        "grade": "Vermögenszertifizierung",
-        "transaction": "M&A-Beratung",
+        "project": "Projekt einreichen",
+        "cycle": "Einen Zyklus begleiten",
+        "profile": "Ein Profil auswählen",
+        "transition": "Transition-Mandat",
+        "join": "Einem Projekt beitreten oder es unterstützen",
+        "certification": "CIFSO-5000-Zertifizierung",
         "partnership": "Partnerschaft",
-        "investor": "Investor",
-        "press": "Presse & Medien",
+        "press": "Presse und Medien",
         "career": "Bewerbung",
-        "other": "Sonstiges",
-        "recruter": "Profil rekrutieren",
-        "transition": "Übergangsprofil"
+        "general": "Allgemeine Anfrage",
+        "other": "Sonstiges"
       },
       "message": "Nachricht",
       "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",

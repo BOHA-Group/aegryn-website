@@ -1674,7 +1674,7 @@
     "hero": {
       "label": "Nous contacter",
       "title": "Parlons.",
-      "desc": "Conseil, certification, accompagnement M&A, partenariat ou question générale, nous répondons sous 2 jours ouvrés."
+      "desc": "Un projet, un partenariat, une question : une conversation confidentielle. Réponse personnelle sous 2 jours ouvrés."
     },
     "responseTime": {
       "label": "Délai de réponse",
@@ -1688,18 +1688,17 @@
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
-        "general": "Demande générale",
-        "advisory": "Conseil en stratégie",
-        "tech": "Conseil technologique",
-        "grade": "Certification d'actif",
-        "transaction": "Conseil M&A",
+        "project": "Soumettre un projet",
+        "cycle": "Accompagner un cycle",
+        "profile": "Sélectionner un profil",
+        "transition": "Mission de transition",
+        "join": "Rejoindre ou soutenir un projet",
+        "certification": "Certification CIFSO 5000",
         "partnership": "Partenariat",
-        "investor": "Investisseur",
-        "press": "Presse & Médias",
+        "press": "Presse et médias",
         "career": "Candidature",
-        "other": "Autre",
-        "recruter": "Recruter un profil",
-        "transition": "Profil de transition"
+        "general": "Demande générale",
+        "other": "Autre"
       },
       "message": "Message",
       "messagePlaceholder": "Décrivez votre demande...",

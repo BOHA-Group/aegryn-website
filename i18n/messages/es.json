@@ -1733,7 +1733,7 @@
     "hero": {
       "label": "Contacto",
       "title": "Hablemos.",
-      "desc": "Asesoría, certificación, acompañamiento M&A, alianza o pregunta general: respondemos en 2 días hábiles."
+      "desc": "Un proyecto, una alianza, una pregunta: una conversación confidencial. Respuesta personal en 2 días hábiles."
     },
     "responseTime": {
       "label": "Tiempo de respuesta",
@@ -1747,18 +1747,17 @@
       "subject": "Asunto",
       "subjectPlaceholder": "Elegir un asunto",
       "subjects": {
-        "general": "Consulta general",
-        "advisory": "Consultoría estratégica",
-        "tech": "Consultoría tecnológica",
-        "grade": "Certificación de activo",
-        "transaction": "Asesoría M&A",
-        "partnership": "Asociación",
-        "investor": "Inversor",
-        "press": "Prensa & Medios",
+        "project": "Enviar un proyecto",
+        "cycle": "Acompañar un ciclo",
+        "profile": "Seleccionar un perfil",
+        "transition": "Misión de transición",
+        "join": "Unirse a un proyecto o apoyarlo",
+        "certification": "Certificación CIFSO 5000",
+        "partnership": "Alianza",
+        "press": "Prensa y medios",
         "career": "Candidatura",
-        "other": "Otro",
-        "recruter": "Reclutar un perfil",
-        "transition": "Perfil de transición"
+        "general": "Consulta general",
+        "other": "Otro"
       },
       "message": "Mensaje",
       "messagePlaceholder": "Describe tu solicitud...",

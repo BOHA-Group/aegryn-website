@@ -3,12 +3,18 @@ import { z } from 'zod'
 import { sendEmail } from '@/lib/sendEmail'
 import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
+import { Aegryn_ASSETS } from '@/data/assets'
+import {
+  CONTACT_SUBJECTS, LEGACY_SUBJECTS, FIELD_LABELS, SUBJECT_LABEL_FR, describeExtra, normalizeLang,
+} from '@/content/contact/fields'
+
+const ASSET_NAMES = Object.fromEntries(Aegryn_ASSETS.map(a => [a.id, a.name]))
 
 const schema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   company: z.string().max(100).optional(),
-  subject: z.enum(['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'press', 'media', 'investor', 'recruter', 'transition', 'career', 'other']),
+  subject: z.enum([...CONTACT_SUBJECTS, ...LEGACY_SUBJECTS]),
   message: z.string().min(10).max(5000),
   locale: z.string().optional(),
   /** Libellé lisible du sujet, fourni par le formulaire dans la langue du visiteur */
@@ -16,6 +22,11 @@ const schema = z.object({
   phone: z.string().max(40).optional(),
   /** Cycle de vie FRANCHIR prérempli via ?cycle= (liens talent) */
   cycle: z.string().max(40).optional(),
+  /** Champs additionnels du sujet choisi (facultatifs), clés connues uniquement */
+  extra: z.record(z.string().max(300)).optional()
+    .refine(v => !v || (Object.keys(v).length <= 8 && Object.keys(v).every(k => k in FIELD_LABELS)), 'extra'),
+  /** Case « accord de confidentialité avant d'écrire plus » : NDA projet à envoyer */
+  ndaRequested: z.boolean().optional(),
 })
 
 export async function POST(req: NextRequest) {
@@ -42,18 +53,20 @@ export async function POST(req: NextRequest) {
         from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${fromEmail}>`,
         to: [internalTo],
         reply_to: data.email,
-        subject: `[Aegryn] ${data.subject} — ${data.name}`,
+        subject: `[Aegryn]${data.ndaRequested ? ' [NDA projet]' : ''} ${SUBJECT_LABEL_FR[data.subject] ?? data.subject} - ${data.name}`,
         text: `
 Nom: ${data.name}
 Email: ${data.email}
-Entreprise: ${data.company ?? '—'}
-Sujet: ${data.subject}
-Cycle: ${data.cycle ?? '—'}
-Locale: ${data.locale ?? '—'}
-
+Téléphone: ${data.phone ?? '-'}
+Entreprise: ${data.company ?? '-'}
+Sujet: ${SUBJECT_LABEL_FR[data.subject] ?? data.subject}
+Cycle: ${data.cycle ?? '-'}
+Locale: ${data.locale ?? '-'}
+${describeExtra(data.extra, 'fr', ASSET_NAMES).map(([k, v]) => `${k}: ${v}`).join('\n')}
+${data.ndaRequested ? '\nNDA PROJET DEMANDÉ : accord de confidentialité à envoyer avant tout échange détaillé.\n' : ''}
 Message:
 ${data.message}
-        `.trim(),
+        `.replace(/\n{3,}/g, '\n\n').trim(),
       }),
     })
 
@@ -67,8 +80,13 @@ ${data.message}
     const a = ack('contact', data.locale)
     const confirmation = emailClientAck({
       lang: data.locale, subject: a.subject, kicker: a.kicker, title: a.title, name: data.name, intro: a.intro,
-      rows: [[a.subjectLabel, data.subjectLabel ?? data.subject], [a.company, data.company], [a.message, data.message]],
-      paragraphs: [a.next],
+      rows: [
+        [a.subjectLabel, data.subjectLabel ?? data.subject],
+        [a.company, data.company],
+        ...describeExtra(data.extra, normalizeLang(data.locale), ASSET_NAMES),
+        [a.message, data.message],
+      ],
+      paragraphs: [a.next, ...(data.ndaRequested ? [a.ndaNote] : [])],
     })
     await sendEmail(data.email, confirmation.subject, confirmation.html, 'contact-ack')
       .catch(e => console.error('[contact] ack email error', e))

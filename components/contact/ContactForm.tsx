@@ -3,16 +3,18 @@
 import { useTranslations }  from 'next-intl'
 import { useState }         from 'react'
 import { useSearchParams }  from 'next/navigation'
+import { Aegryn_ASSETS }    from '@/data/assets'
+import {
+  CONTACT_SUBJECTS, LEGACY_SUBJECT_ALIAS, TYPE_TO_SUBJECT, NDA_SUBJECTS, SUBJECT_FIELDS,
+  FIELD_LABELS, OPTION_LABELS, UI, normalizeLang, type FieldDef,
+} from '@/content/contact/fields'
 
 type Props = { locale: string }
 
-const subjects   = ['general', 'advisory', 'tech', 'grade', 'transaction', 'partnership', 'investor', 'press', 'recruter', 'transition', 'career', 'other'] as const
+const subjects   = CONTACT_SUBJECTS
 const MSG_LIMIT  = 1000
-
-/* alias ?type= → sujet (liens depuis /talent et FRANCHIR) */
-const TYPE_TO_SUBJECT: Record<string, string> = {
-  recruter: 'recruter', transition: 'transition', candidat: 'career', candidate: 'career',
-}
+const PROJECT_IDS = Aegryn_ASSETS.map(a => a.id)
+const PORTFOLIO_PROJECTS = Aegryn_ASSETS.filter(a => a.id !== 'subblink')
 
 const COUNTRY_OPTIONS = [
   { code: 'CH', label: 'Suisse',      dial: '+41',  maxLen: 9  },
@@ -57,16 +59,16 @@ export default function ContactForm({ locale }: Props) {
   const [company, setCompany] = useState('')
   /* Pré-sélection du sujet via ?subject= (liens depuis les pages métiers) */
   const params = useSearchParams()
-  const [subject, setSubject] = useState(() => {
+  const [subject, setSubject] = useState<string>(() => {
     const q = params.get('subject')
     if (q && (subjects as readonly string[]).includes(q)) return q
+    if (q && LEGACY_SUBJECT_ALIAS[q]) return LEGACY_SUBJECT_ALIAS[q]
     const ty = params.get('type')
     return ty ? (TYPE_TO_SUBJECT[ty] ?? '') : ''
   })
   /* Pré-remplissage du message quand on vient d'une fiche projet (?projet=<id>) */
   const tItems = useTranslations('assets.items')
   const projet = params.get('projet') ?? ''
-  const PROJECT_IDS = ['subblink', 'neediu', 'movtoo', 'primiom', 'hobconnect']
   const [message, setMessage] = useState(() =>
     PROJECT_IDS.includes(projet)
       ? t('projectMessage', { project: tItems(`${projet}.tagline` as Parameters<typeof tItems>[0]) })
@@ -74,6 +76,14 @@ export default function ContactForm({ locale }: Props) {
   )
   const [msgLen, setMsgLen]     = useState(() => message.length)
   const cycle = params.get('cycle') ?? ''
+  const lang  = normalizeLang(locale)
+
+  /* Champs additionnels selon le sujet, tous facultatifs */
+  const [extra, setExtra] = useState<Record<string, string>>(() => (cycle ? { cycle } : ({} as Record<string, string>)))
+  const [ndaRequested, setNdaRequested] = useState(false)
+  const fields: readonly FieldDef[] = SUBJECT_FIELDS[subject as keyof typeof SUBJECT_FIELDS] ?? []
+  const showNda = (NDA_SUBJECTS as readonly string[]).includes(subject)
+  const setExtraValue = (key: string, value: string) => setExtra(prev => ({ ...prev, [key]: value }))
 
   const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === phoneCountry) ?? COUNTRY_OPTIONS[0]
 
@@ -82,7 +92,6 @@ export default function ContactForm({ locale }: Props) {
   const isComplete  =
     name.trim().length > 0 &&
     email.trim().length > 0 &&
-    company.trim().length > 0 &&
     subject !== '' &&
     phoneDigits.length > 0 &&
     message.trim().length > 0
@@ -93,13 +102,15 @@ export default function ContactForm({ locale }: Props) {
     setStatus('sending')
     const form = e.currentTarget
     const data = Object.fromEntries(new FormData(form))
+    const visibleKeys = new Set(fields.map(f => f.key))
+    const extraPayload = Object.fromEntries(Object.entries(extra).filter(([k, v]) => visibleKeys.has(k) && v))
     const phoneFormatted = phoneDigits ? `${phoneCountryData.dial} ${phoneDigits}` : ''
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, phone: phoneFormatted, locale, cycle: cycle || undefined, subjectLabel: subject ? t(`subjects.${subject}` as Parameters<typeof t>[0]) : undefined }),
+        body: JSON.stringify({ ...data, phone: phoneFormatted, locale, cycle: cycle || undefined, extra: extraPayload, ndaRequested: showNda && ndaRequested, subjectLabel: subject ? t(`subjects.${subject}` as Parameters<typeof t>[0]) : undefined }),
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
@@ -109,7 +120,7 @@ export default function ContactForm({ locale }: Props) {
       }
       setStatus('sent')
       setMsgLen(0)
-      setName(''); setEmail(''); setCompany(''); setSubject(''); setPhone(''); setMessage('')
+      setName(''); setEmail(''); setCompany(''); setSubject(''); setPhone(''); setMessage(''); setExtra({}); setNdaRequested(false)
       form.reset()
     } catch {
       setErrorCode('network')
@@ -152,9 +163,9 @@ export default function ContactForm({ locale }: Props) {
 
       {/* Société */}
       <div>
-        <label htmlFor="company" className={labelCls}>{t('company')} *</label>
+        <label htmlFor="company" className={labelCls}>{t('company')}</label>
         <input
-          id="company" name="company" type="text" required
+          id="company" name="company" type="text"
           value={company} onChange={e => setCompany(e.target.value)}
           className={inputCls} placeholder={t('company')}
         />
@@ -210,6 +221,45 @@ export default function ContactForm({ locale }: Props) {
         </select>
       </div>
 
+      {/* Champs additionnels selon le sujet (facultatifs) */}
+      {fields.length > 0 && (
+        <div className="space-y-5 rounded-2xl border border-ag-border bg-ag-off-white/60 p-5">
+          <p className="font-sans text-[11px] text-ag-gray-light">{UI.detailsHint[lang]}</p>
+          <div className={`grid gap-5 ${fields.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+            {fields.map(f => (
+              <div key={f.key}>
+                <label htmlFor={`extra-${f.key}`} className={labelCls}>
+                  {FIELD_LABELS[f.key][lang]} <span className="normal-case tracking-normal">({UI.optional[lang]})</span>
+                </label>
+                {f.kind === 'text' ? (
+                  <input
+                    id={`extra-${f.key}`} type="text" maxLength={200}
+                    value={extra[f.key] ?? ''} onChange={e => setExtraValue(f.key, e.target.value)}
+                    className={inputCls}
+                  />
+                ) : (
+                  <select
+                    id={`extra-${f.key}`}
+                    value={extra[f.key] ?? ''} onChange={e => setExtraValue(f.key, e.target.value)}
+                    className={`${selectCls} w-full`}
+                  >
+                    <option value="">{UI.choose[lang]}</option>
+                    {f.key === 'portfolioProject'
+                      ? [
+                          ...PORTFOLIO_PROJECTS.map(a => <option key={a.id} value={a.id}>{a.name}</option>),
+                          <option key="none" value="none">{OPTION_LABELS['portfolioProject.none'][lang]}</option>,
+                        ]
+                      : (f.options ?? []).map(o => (
+                          <option key={o} value={o}>{OPTION_LABELS[`${f.key}.${o}`]?.[lang] ?? o}</option>
+                        ))}
+                  </select>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Message */}
       <div>
         <label htmlFor="message" className={labelCls}>{t('message')} *</label>
@@ -227,6 +277,19 @@ export default function ContactForm({ locale }: Props) {
           {msgLen}/{MSG_LIMIT}
         </p>
       </div>
+
+      {showNda && (
+        <label className="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox" checked={ndaRequested} onChange={e => setNdaRequested(e.target.checked)}
+            className="mt-1 h-4 w-4 shrink-0 rounded border-ag-border accent-ag-navy"
+          />
+          <span className="font-sans text-[13px] text-ag-black leading-relaxed">
+            {UI.ndaLabel[lang]}
+            <span className="mt-1 block text-[12px] text-ag-gray leading-relaxed">{UI.ndaHelp[lang]}</span>
+          </span>
+        </label>
+      )}
 
       {status === 'error' && (
         <p className="font-sans text-xs text-red-400">

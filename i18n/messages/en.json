@@ -1733,7 +1733,7 @@
     "hero": {
       "label": "Get in touch",
       "title": "Let's talk.",
-      "desc": "Advisory, certification, M&A support, partnership or general question — we reply within 2 business days."
+      "desc": "A project, a partnership, a question: a confidential conversation. Personal reply within 2 business days."
     },
     "responseTime": {
       "label": "Response time",
@@ -1747,18 +1747,17 @@
       "subject": "Subject",
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
-        "general": "General inquiry",
-        "advisory": "Strategy advisory",
-        "tech": "Technology advisory",
-        "grade": "Asset certification",
-        "transaction": "M&A Advisory",
+        "project": "Submit a project",
+        "cycle": "Accompany a cycle",
+        "profile": "Select a profile",
+        "transition": "Transition assignment",
+        "join": "Join or support a project",
+        "certification": "CIFSO 5000 certification",
         "partnership": "Partnership",
-        "investor": "Investor",
-        "press": "Press & Media",
+        "press": "Press and media",
         "career": "Application",
-        "other": "Other",
-        "recruter": "Hire a profile",
-        "transition": "Transition profile"
+        "general": "General enquiry",
+        "other": "Other"
       },
       "message": "Message",
       "messagePlaceholder": "Describe your request...",

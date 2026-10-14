@@ -1733,7 +1733,7 @@
     "hero": {
       "label": "Contact opnemen",
       "title": "Laten we praten.",
-      "desc": "Advies, certificering, M&A-begeleiding, partnerschap of algemene vraag — wij antwoorden binnen 2 werkdagen."
+      "desc": "Een project, een partnerschap, een vraag: een vertrouwelijk gesprek. Persoonlijk antwoord binnen 2 werkdagen."
     },
     "responseTime": {
       "label": "Reactietijd",
@@ -1747,18 +1747,17 @@
       "subject": "Onderwerp",
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {
-        "general": "Algemene vraag",
-        "advisory": "Strategisch advies",
-        "tech": "Technologisch advies",
-        "grade": "Activumcertificering",
-        "transaction": "M&A-advies",
+        "project": "Een project indienen",
+        "cycle": "Een cyclus begeleiden",
+        "profile": "Een profiel selecteren",
+        "transition": "Transitiemissie",
+        "join": "Aansluiten bij of steunen van een project",
+        "certification": "CIFSO 5000-certificering",
         "partnership": "Partnerschap",
-        "investor": "Investeerder",
-        "press": "Pers & Media",
+        "press": "Pers en media",
         "career": "Sollicitatie",
-        "other": "Overige",
-        "recruter": "Profiel werven",
-        "transition": "Overgangsprofiel"
+        "general": "Algemene vraag",
+        "other": "Overig"
       },
       "message": "Bericht",
       "messagePlaceholder": "Beschrijf uw vraag...",
