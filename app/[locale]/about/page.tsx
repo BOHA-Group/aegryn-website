@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const values = ['precision', 'durability', 'accountability', 'independence'] as const
+const values = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
 const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
                 / {t('dna.label')}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
                 {values.map((v) => (
                   <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
                     <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">
@@ -326,33 +326,6 @@ export default function AboutPage() {
       <SegmentsSection />
 
 
-      {/* What's next */}
-      <section className="border-b border-ag-border bg-ag-off-white/60">
-        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {t('whatsnext.label')}
-          </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <h2
-              className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
-              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-            >
-              {t('whatsnext.title')}
-            </h2>
-            <div className="space-y-5">
-              <p className="text-[15px] text-ag-gray leading-relaxed whitespace-pre-line">
-                {t('whatsnext.desc')}
-              </p>
-              <Link
-                href={{ pathname: '/', hash: 'franchir' }}
-                className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-black border border-ag-border px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
-              >
-                {t('whatsnext.cta')} <ArrowUpRight size={14} />
-              </Link>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
 
       {/* CTA tripartite */}
       <section className="border-b border-ag-border">

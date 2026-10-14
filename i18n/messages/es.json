@@ -252,7 +252,13 @@
       "filterValuation": "Valoración",
       "publicNameSuffix": "nombre público",
       "ctaDiscuss": "Hablar de su proyecto",
-      "compareCta": "¿Una necesidad comparable? Hablemos"
+      "compareCta": "¿Una necesidad comparable? Hablemos",
+      "cifso": {
+        "label": "Protocolo interno",
+        "title": "CIFSO 5000, el referencial de nuestras herramientas.",
+        "desc": "Cada herramienta del grupo pasa por el protocolo CIFSO 5000: documentación, propiedad, seguridad, finanzas y organización, evaluadas y versionadas antes de cualquier puesta a disposición. El trabajo en curso añade un anclaje blockchain que sellará cada evaluación en su fecha de emisión.",
+        "cta": "Descubrir el protocolo"
+      }
     },
     "items": {
       "subblink": {
@@ -962,8 +968,8 @@
   "about": {
     "hero": {
       "imageAlt": "Regata de veleros de competición en el mar",
-      "title": "Lo que dura se construye,\nse pilota y se transmite.",
-      "desc": "El valor de una organización no se negocia con urgencia. Se construye con rigor estratégico, se fortalece con sus activos, se demuestra en la transparencia y se realiza en la confianza. Llevamos los proyectos de principio a fin, de la decisión a su realización. Aegryn existe para los dirigentes que se niegan a sufrir su trayectoria."
+      "title": "Los proyectos que marcan un mercado\nse encuadran, se realizan, se acompañan.",
+      "desc": "Somos raros por selección: pocos proyectos, y un número limitado de mandatos a la vez. Un interlocutor nombrado, de la primera decisión a la entrega. Lo que entregamos puede retomarse, auditarse y transmitirse sin nosotros."
     },
     "name": {
       "label": "El nombre",
@@ -971,66 +977,66 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Símbolo de protección, autoridad y legitimidad. Actuar bajo la égida de algo es actuar bajo una autoridad certificadora, cuyo estándar otros confían."
+          "meaning": "Una protección y un estándar que hacen fe. Actuar bajo la égida de Aegryn es actuar en un marco del que alguien responde."
         },
         {
           "word": "AEGIR",
-          "meaning": "Maestro de los flujos, de lo que se mueve entre orillas, entre partes, entre el valor y su reconocimiento."
+          "meaning": "Maestro de los flujos: lo que circula entre la idea y su realización, entre el proyecto y su mercado."
         },
         {
           "word": "AEON",
           "meaning": "Eternidad. El largo plazo. Lo que perdura más allá de los ciclos, las tendencias y las rondas de financiación."
         }
       ],
-      "synthesis": "Tres palabras de tres civilizaciones. Una síntesis: una entidad que protege (AEGIS), facilita flujos (AEGIR) y construye para la permanencia (AEON). Aegryn.",
-      "history": "Aegryn se llamaba de otra manera antes. A medida que el posicionamiento de la empresa se afinó, de constructor de activos digitales a grupo de certificación y acompañamiento de organizaciones, su identidad se afinó con él. El nombre cambió. La convicción, no.",
-      "formerly": "Aegryn se llamaba de otra manera antes. A medida que el posicionamiento de la empresa se afinó, de constructor de activos digitales a grupo de certificación y acompañamiento de organizaciones, su identidad se afinó con él. El nombre cambió. La convicción, no."
+      "synthesis": "Tres palabras de tres civilizaciones. Una entidad que protege (AEGIS), lleva de la idea a la realización (AEGIR) y construye para durar (AEON). Aegryn.",
+      "history": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos emblemáticos, su identidad se afinó con él. El nombre cambió. La convicción, no.",
+      "formerly": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos emblemáticos, su identidad se afinó con él. El nombre cambió. La convicción, no."
     },
     "vision": {
       "label": "Nuestra visión",
       "segments": [
         {
-          "t": "Aegryn quiere ser la firma que acompaña a los dirigentes de principio a fin",
+          "t": "Aegryn quiere ser la boutique emprendedora de referencia para los proyectos emblemáticos",
           "bold": true
         },
         {
-          "t": ": de la decisión a su realización, en cada ciclo de vida de la empresa, del lanzamiento a la transmisión o a la reanudación.\n\n"
+          "t": ": de la idea a su realización, y después en cada ciclo de la empresa.\n\n"
         },
         {
           "t": "Somos operadores.",
           "bold": true
         },
         {
-          "t": " Construimos y operamos nuestros propios activos, y llevamos los proyectos de nuestros clientes como un arquitecto lleva una obra: encuadre, coordinación de los intervinientes, hitos, recepción. Lo que recomendamos, lo vivimos.\n\n"
+          "t": " Construimos nuestros propios proyectos y sostenemos los de nuestros clientes como un director de obra sostiene una obra: encuadre, coordinación, hitos, entrega. Lo que recomendamos, lo vivimos.\n\n"
         },
         {
-          "t": "Boutique emprendedora, anclada en Suiza por su rigor,",
+          "t": "Un solo interlocutor.",
           "bold": true
         },
         {
-          "t": " Aegryn reúne en un solo interlocutor las cinco disciplinas necesarias para el valor duradero de una empresa: asesoramiento, construcción de activos, paso de los ciclos, talento y conocimiento del mercado."
+          "t": " Aegryn reúne los oficios que exige un proyecto: encuadrar, realizar, acompañar, seleccionar, informarse."
         }
       ]
     },
     "contribution": {
       "label": "Nuestra contribución",
-      "title": "No un reemplazo.\nUna capa de infraestructura.",
-      "desc": "Las operaciones de M&A rigurosas ya existen. Aegryn no sustituye a los asesores, abogados y contables que las estructuran. Aporta lo que faltaba estructuralmente: una calificación independiente, emitida antes de cualquier decisión, que da a las partes un punto de partida certificado y documentado. Menos tiempo debatiendo el valor fundamental. Más tiempo para decidir.",
+      "title": "Una boutique,\nno una estructura pesada.",
+      "desc": "Las consultoras, las agencias y los expertos ya existen, y trabajamos con los mejores de ellos en cuanto un proyecto lo justifica. Lo que faltaba es alguien que sostenga el conjunto: un proyecto encuadrado, realizado y acompañado por el mismo interlocutor, sin la pesadez de una gran estructura.",
       "items": [
         {
           "num": "01",
-          "title": "Un grade antes que un precio",
-          "desc": "El grade C/I/F/S/O de Aegryn se establece antes de cualquier cesión, antes de cualquier negociación. No es una opinión de valoración, es una certificación de lo que el activo realmente es, documentada, versionada y reproducible. El precio sigue al grade. El grade no depende de él."
+          "title": "Un proyecto antes que un plan",
+          "desc": "Partimos de lo que debe existir en el mercado, no de un entregable. El plan sirve al proyecto, nunca al revés."
         },
         {
           "num": "02",
-          "title": "Un círculo cualificado, no un mercado",
-          "desc": "Cada organización acompañada por Aegryn ha superado la certificación. Cada parte interesada está cualificada de antemano. La discreción es estructural: no es una funcionalidad añadida en superficie, es la condición operativa de la que todo lo demás se deriva."
+          "title": "Un círculo elegido, no un mercado",
+          "desc": "Expertos, socios y talentos se seleccionan uno a uno para cada proyecto. La discreción no es una opción: es la condición del trabajo."
         },
         {
           "num": "03",
           "title": "Estándares institucionales suizos",
-          "desc": "El derecho suizo rige cada mandato. La confidencialidad es contractual y la documentación completa en cada etapa. Son condiciones operativas, no promesas."
+          "desc": "Confidencialidad contractual, documentación completa en cada etapa, entregables que se retoman sin nosotros: condiciones operativas, no promesas."
         }
       ]
     },
@@ -1054,32 +1060,42 @@
       "label": "Nuestro ADN"
     },
     "values": {
-      "precision": {
+      "exceptional": {
         "label": "01",
-        "title": "Precisión",
-        "desc": "Cada decisión está documentada, trazada y es reproducible. Misma pregunta, mismo método, mismo resultado. Usted sabe por qué recomendamos lo que recomendamos."
+        "title": "Excepcional",
+        "desc": "Elegimos pocos proyectos, y solo aquellos que pueden marcar su mercado."
       },
-      "durability": {
+      "exclusive": {
         "label": "02",
-        "title": "Durabilidad",
-        "desc": "Construimos para la década, no para el trimestre. Lo que entregamos, activos como planes, puede retomarse, auditarse y transmitirse sin nosotros."
+        "title": "Exclusividad",
+        "desc": "Un número limitado de mandatos a la vez, para que cada proyecto reciba toda nuestra atención."
       },
-      "accountability": {
+      "confidential": {
         "label": "03",
-        "title": "Responsabilidad de ejecución",
-        "desc": "Un consejo vale lo que produce. Permanecemos hasta el resultado, con un interlocutor designado que responde por él."
+        "title": "Confidencialidad",
+        "desc": "Un acuerdo de confidencialidad precede a cualquier intercambio detallado, y nada se desvela sin su consentimiento."
       },
-      "independence": {
+      "trust": {
         "label": "04",
-        "title": "Independencia",
-        "desc": "No percibimos ninguna comisión de editores, bancos o fondos sobre lo que recomendamos. La valoración de los activos se establece por separado de todo mandato de asesoramiento, para que su resultado nunca dependa de nuestros intereses."
+        "title": "Confianza",
+        "desc": "Un interlocutor nombrado, que responde del resultado y al que mantenemos hasta el resultado. Si tenemos un interés en un proyecto, lo declaramos antes de cualquier recomendación."
+      },
+      "experience": {
+        "label": "05",
+        "title": "Experiencia",
+        "desc": "Veinte años junto a comités de dirección, y la práctica de quienes han construido. Para usted, un recorrido fluido, de la primera conversación a la entrega."
+      },
+      "elegance": {
+        "label": "06",
+        "title": "Elegancia",
+        "desc": "El rigor suizo se ve en la simplicidad: decisiones claras, entregables cuidados, ningún exceso."
       }
     },
     "swiss": {
       "groupLabel": "Aegryn",
       "title": "Anclado en Suiza.\nAbierto al mundo.",
-      "desc": "Suiza fue elegida deliberadamente, no por sus ventajas de incorporación, sino por sus estándares institucionales: el rigor del derecho suizo, la discreción de su ecosistema financiero y la neutralidad que la convierte en un ancla creíble para operaciones transfronterizas entre partes de jurisdicciones diferentes. Cada mandato Aegryn se rige por el derecho suizo, cualquiera que sea la nacionalidad de las partes o el origen del activo.",
-      "cta": "Nuestras disciplinas"
+      "desc": "Suiza fue elegida deliberadamente, no por sus ventajas de constitución, sino por sus estándares institucionales: el rigor de su derecho, la discreción de su ecosistema y la neutralidad que la convierte en un ancla creíble para proyectos llevados entre varios países. Cada mandato Aegryn se rige por el derecho suizo, sea cual sea la nacionalidad de las partes o el país del proyecto.",
+      "cta": "Nuestros oficios"
     },
     "founder": {
       "label": "La convicción fundadora",
@@ -1090,30 +1106,24 @@
       "disciplinesCta": "Nuestras disciplinas",
       "storytelling": "Asesorar sin construir es entregar un mapa sin territorio.\nConstruir sin certificar es entregar sin prueba.\nCertificar sin transmitir es preparar sin concluir.\nTransmitir sin reclutar es pasar el relevo sin asegurar el relevo.\nInformar sin actuar es comentar sin responsabilidad."
     },
-    "whatsnext": {
-      "label": "Lo que viene después",
-      "title": "El protocolo evoluciona.\nEl estándar se mantiene.",
-      "desc": "Aegryn certifica y acompaña hoy organizaciones tecnológicas — editores SaaS, aplicaciones, plataformas, activos IP y activos Web3 — bajo el protocolo CIFSO 5000.\n\nEl principal proyecto de la hoja de ruta es la certificación blockchain: una capa de anclaje que sellará cada base de código certificada en la fecha exacta de emisión, haciendo cada grado definitivamente verificable y permanente. Esta capa se añadirá al protocolo independiente ya plenamente operativo.\n\nEn paralelo, constituimos una red de socios expertos — bufetes, contables, especialistas en ciberseguridad, arquitectos técnicos — para acompañar a nuestros clientes en cada etapa: asesoría tech antes de la certificación, estructuración jurídica y financiera durante los mandatos, integración después de las operaciones.",
-      "cta": "Ver sesiones actuales"
-    },
     "cta": {
       "label": "Trabajar con Aegryn",
       "seller": {
-        "title": "Está preparando una transmisión.",
-        "desc": "Un asesor Aegryn responderá en 2 días hábiles.",
-        "btn": "Solicitar una certificación",
-        "href": "/grade/submit"
+        "title": "Usted lleva un proyecto.",
+        "desc": "Un concepto que encuadrar, una realización que conducir, un ciclo que atravesar.",
+        "btn": "Enviar un proyecto",
+        "href": "/contact?subject=project"
       },
       "buyer": {
-        "title": "Está preparando una adquisición.",
-        "desc": "Due diligence independiente y certificación CIFSO sobre su objetivo.",
-        "btn": "Descubrir el acompañamiento",
-        "href": "/franchir/acquisition"
+        "title": "Busca un proyecto al que unirse.",
+        "desc": "Participaciones, codesarrollo, proyectos que impulsar con nosotros.",
+        "btn": "Descubrir el portfolio",
+        "href": "/portfolio"
       },
       "partner": {
         "title": "Es un socio potencial.",
-        "desc": "Bufetes de abogados, contables, especialistas en ciberseguridad, boutiques M&A, fondos PE.",
-        "btn": "Descubrir asociaciones",
+        "desc": "Oficinas de ingeniería, estudios creativos, laboratorios, despachos jurídicos, socios de fabricación y de distribución.",
+        "btn": "Descubrir las alianzas",
         "href": "/alliances"
       }
     },
@@ -9726,63 +9736,63 @@
     "founder": {
       "label": "EL FUNDADOR",
       "title": "Un fundador venido del terreno.",
-      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional y multisectorial en Europa, Estados Unidos y Asia.\n\nAntiguo director ejecutivo en una firma de consultoría de nivel mundial, ha acompañado a organizaciones públicas y privadas, grupos internacionales e instituciones a través de sus transformaciones más complejas, de la estrategia a las operaciones, de las finanzas a los recursos humanos, del asesoramiento en M&A a la integración post-adquisición.\n\nDespués se convirtió en emprendedor e inversor en aquello que le inspira para crear experiencias de cliente memorables: los activos tecnológicos en la era de la inteligencia artificial. Gestionó en solitario lo que aconsejaba a otros: la estrategia de producto, el diseño técnico, el marketing, lo jurídico y la propiedad intelectual, la contratación y las alianzas. Tuvo éxito en algunos proyectos. Aprendió en otros. Y capitalizó lo que ninguna misión de consultoría puede enseñar.\n\nEste doble recorrido es el origen de Aegryn.\n\nHoy, el mercado confirma lo que este recorrido había anticipado. Las grandes firmas de consultoría pivotan hacia las empresas de tamaño intermedio porque su modelo de negocio tradicional está bajo presión, porque la inteligencia artificial recompone la ecuación de los servicios, y porque los dirigentes exigen ahora más: velocidad de ejecución, responsabilidad real, resultados medibles, sin la complejidad ni los costes de los grandes compromisos de transformación.\n\nEste movimiento del mercado crea un espacio.\n\nAegryn lo ocupa desde el principio, no como una respuesta defensiva a una disrupción, sino como una convicción construida con el tiempo: las scale-ups, las PYME, las organizaciones ambiciosas y los inversores merecen un socio que combine el rigor de la consultoría estratégica mundial y la experiencia concreta del fundador que construyó, fracasó y aprendió.\n\nEligió crear Aegryn para reunir en una misma estructura lo que el mercado ofrece en silos: el asesoramiento desde la estrategia hasta la fusión-adquisición, la concepción de activos tecnológicos duraderos, la orquestación de los ciclos de vida y proyectos empresariales, la gestión del talento y el conocimiento del mercado de cada industria.\n\nSu convicción: una decisión solo tiene valor si se lleva hasta su resultado. Por eso Aegryn asesora, construye y pilota, desde la primera decisión hasta la transmisión.",
+      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional, multisectorial, en Europa, Estados Unidos y Asia.\n\nAntiguo director ejecutivo en una consultora de rango mundial, acompañó a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas, de la estrategia a las operaciones, de las finanzas a los recursos humanos, del asesoramiento en M&A a la integración posterior a la adquisición.\n\nDespués se convirtió en emprendedor e inversor en lo que le inspira: crear experiencias de cliente memorables en la era de la inteligencia artificial. Llevó solo lo que aconsejaba a otros: la estrategia de producto, el diseño técnico, el marketing, lo jurídico y la propiedad intelectual, la contratación y las alianzas. Tuvo éxito en algunos proyectos. Aprendió en otros. Y capitalizó lo que ninguna misión de consultoría puede enseñar.\n\nEste doble recorrido es el origen de Aegryn.\n\nEligió crear Aegryn para reunir en una misma estructura lo que el mercado ofrece en silos: el encuadre del proyecto, su ejecución, su acompañamiento en el tiempo y la selección del talento.\n\nSu convicción: una decisión solo tiene valor si se lleva hasta su resultado.",
       "cta": "Contactar",
-      "disciplinesCta": "Nuestras disciplinas",
+      "disciplinesCta": "Nuestros oficios",
       "storytelling": "Asesorar sin construir es entregar un mapa sin territorio.\nConstruir sin certificar es entregar sin prueba.\nCertificar sin transmitir es preparar sin concluir.\nTransmitir sin reclutar es ceder sin asegurar el relevo.\nInformar sin actuar es comentar sin responsabilidad."
     },
     "whyAegryn": {
       "label": "POR QUÉ AEGRYN",
       "title": "¿Por qué Aegryn?",
-      "p1": "La mayoría de los despachos asesoran sin construir. La mayoría de las agencias construyen sin asesorar. La mayoría de las boutiques M&A transaccionan sin reconstruir.\n\nAegryn hace las cinco. Y lo que aconseja a sus clientes, se lo aplica a sí mismo. Esta coherencia es lo que quisimos inscribir en nuestro ADN desde el primer día.",
-      "p2": "Asesorar sin construir es entregar un mapa sin el territorio. Construir sin asesorar es ejecutar sin rumbo. Transaccionar sin preparar es vender sin valorar. Reclutar sin estrategia es cubrir sin construir. Informar sin hacer es comentar sin actuar.\n\nEn Aegryn, cada disciplina refuerza a la siguiente. Este encadenamiento es lo que crea valor duradero para nuestros clientes y para nosotros mismos.\n\nLos socios financieros lo entendieron primero: los emprendedores no solo quieren capital. Quieren una mirada exigente y una red. Aegryn lleva esta misma convicción a lo largo de todo el recorrido empresarial : desde la construcción del valor hasta su realización.",
+      "p1": "La mayoría de las consultoras aconsejan sin construir. La mayoría de las empresas tech construyen sin estrategia. La mayoría de las boutiques de M&A transan sin haber construido.\n\nAegryn encuadra, realiza y se rodea de los expertos adecuados. Y lo que recomienda a sus clientes, se lo aplica.",
+      "p2": "Encuadrar sin realizar es entregar un mapa sin el territorio. Realizar sin encuadrar es ejecutar sin rumbo. Acompañar sin haber construido es aconsejar desde fuera. Seleccionar sin proyecto es reclutar en el vacío.\n\nEn Aegryn, cada oficio refuerza al siguiente. Ese encadenamiento es lo que hace que un proyecto se sostenga, para nuestros clientes como para nosotros.",
       "p3Label": "ANCLADO EN SUIZA",
       "p3": "Saint-Sulpice, Vaud. A dos kilómetros de la EPFL, una de las universidades tecnológicas más activas del mundo en spin-offs y transferencia de tecnología. Junto a la Fundación para la Innovación y la Tecnología (FIT), que apoya cada año cientos de proyectos de innovación suizos. En un cantón que concentra SwissTech, decenas de fondos de capital riesgo europeos y una densidad excepcional de directivos y adquirentes institucionales. No es una casualidad de ubicación. Es una elección de red. El rigor de una plaza financiera de referencia, la neutralidad de un territorio de confianza y el acceso directo a uno de los ecosistemas de innovación más activos de Europa.",
       "p3ImageAlt": "Atardecer dorado sobre Lausana entre la niebla"
     },
     "workWith": {
       "label": "TRABAJAR CON AEGRYN",
-      "title": "Cinco disciplinas.\nUna relación.",
-      "sub": "Asesoría, construcción, transiciones, talento, información: integrados en un mismo grupo, sostenidos por los mismos estándares.",
+      "title": "Cinco oficios.\nUna sola relación.",
+      "sub": "Encuadrar, realizar, acompañar, seleccionar, informarse: un mismo interlocutor, los mismos estándares.",
       "items": [
         {
           "key": "accompagner",
           "num": "01",
           "title": "ENCUADRAR",
-          "desc": "Asesoría en estrategia, tecnología y M&A. Intervenimos donde las decisiones definen la trayectoria : de la gobernanza al capital.",
-          "cta": "Descubrir Advisory",
+          "desc": "Decidir antes de ejecutar: estrategia, plan de negocio, marca y posicionamiento, marco legal y regulatorio, adquisición y cesión. El encuadre convierte una intención en un proyecto ejecutable.",
+          "cta": "Descubrir Encuadrar",
           "href": "/advisory"
         },
         {
           "key": "construire",
           "num": "02",
           "title": "REALIZAR",
-          "desc": "Activos digitales duraderos, propiedad total del cliente, listos para certificación. Diseñamos y operamos SaaS, apps y protocolos.",
-          "cta": "Ver Asset Engineering",
+          "desc": "Construir hasta la entrega: marca, producto, plataforma, salida al mercado. Realizamos nosotros mismos y activamos a los expertos adecuados cuando el proyecto lo exige.",
+          "cta": "Descubrir Realizar",
           "href": "/services/build"
         },
         {
           "key": "transmettre",
           "num": "03",
           "title": "ACOMPAÑAR",
-          "desc": "Cada ciclo de vida es una transición que superar: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Diagnóstico, plan, ejecución: el valor se construye y se demuestra en cada etapa.",
-          "cta": "Descubrir Superar",
+          "desc": "Durar, de un ciclo al siguiente: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Un interlocutor nombrado que guarda la memoria del proyecto.",
+          "cta": "Descubrir Acompañar",
           "href": "/#franchir"
         },
         {
           "key": "recruter",
           "num": "04",
           "title": "SELECCIONAR",
-          "desc": "Directivos y expertos. Reclutamiento de perfiles clave y colocación de perfiles de transición, en cada fase del ciclo de vida; confidencial, pre-cualificados, respuesta en 2 días laborables.",
-          "cta": "Enviar mandato",
+          "desc": "Reunir a las personas adecuadas en el momento adecuado: directivos, expertos, equipos de proyecto y socios, elegidos uno a uno para lo que el proyecto exige.",
+          "cta": "Enviar un mandato",
           "href": "/talent"
         },
         {
           "key": "informer",
           "num": "05",
           "title": "INFORMAR",
-          "desc": "Revista trimestral, artículos de fondo e inteligencia de mercado. Documentamos lo que observamos y vivimos.",
-          "cta": "Leer la Revista",
+          "desc": "Leer el mercado antes que los demás: tendencias, proyectos innovadores, retratos de quienes construyen. La revista documenta lo que observamos y lo que vivimos.",
+          "cta": "Leer la revista",
           "href": "/magazine"
         }
       ]

@@ -252,7 +252,13 @@
       "filterValuation": "Waardering",
       "publicNameSuffix": "publieke naam",
       "ctaDiscuss": "Uw project bespreken",
-      "compareCta": "Een vergelijkbare behoefte? Laten we praten"
+      "compareCta": "Een vergelijkbare behoefte? Laten we praten",
+      "cifso": {
+        "label": "Intern protocol",
+        "title": "CIFSO 5000, de referentie van onze tools.",
+        "desc": "Elke tool van de groep doorloopt het CIFSO 5000-protocol: documentatie, eigendom, veiligheid, financiën en organisatie, beoordeeld en geversioneerd vóór elke terbeschikkingstelling. De lopende werf voegt een blockchainverankering toe die elke beoordeling op haar uitgiftedatum verzegelt.",
+        "cta": "Ontdek het protocol"
+      }
     },
     "items": {
       "subblink": {
@@ -962,8 +968,8 @@
   "about": {
     "hero": {
       "imageAlt": "Zeilboten in wedstrijd op open zee",
-      "title": "Wat duurt, wordt gebouwd,\ngestuurd en overgedragen.",
-      "desc": "De waarde van een organisatie wordt niet in haast verhandeld. Ze wordt opgebouwd met strategische strengheid, versterkt door haar activa, bewezen in transparantie en gerealiseerd in vertrouwen. Wij voeren projecten van begin tot eind, van beslissing tot realisatie. Aegryn bestaat voor leidinggevenden die weigeren hun traject te ondergaan."
+      "title": "De projecten die een markt tekenen\nworden gekaderd, gerealiseerd, begeleid.",
+      "desc": "Wij zijn zeldzaam door selectie: weinig projecten, en een beperkt aantal mandaten tegelijk. Een benoemde gesprekspartner, van de eerste beslissing tot de oplevering. Wat wij opleveren kan zonder ons worden overgenomen, geauditeerd en overgedragen."
     },
     "name": {
       "label": "De naam",
@@ -971,66 +977,66 @@
       "roots": [
         {
           "word": "AEGIS",
-          "meaning": "Symbool van bescherming, autoriteit en legitimiteit. Handelen onder de aegis van iets betekent handelen onder een certificerende autoriteit, wiens standaard anderen vertrouwen."
+          "meaning": "Een bescherming en een standaard die gezag hebben. Handelen onder de aegis van Aegryn is handelen binnen een kader waarvoor iemand instaat."
         },
         {
           "word": "AEGIR",
-          "meaning": "Meester van de stromen, van wat zich beweegt tussen oevers, tussen partijen, tussen waarde en de erkenning ervan."
+          "meaning": "Meester van de stromen: wat circuleert tussen het idee en zijn realisatie, tussen het project en zijn markt."
         },
         {
           "word": "AEON",
           "meaning": "Eeuwigheid. De lange tijdspanne. Wat voortduurt voorbij cycli, trends en financieringsrondes."
         }
       ],
-      "synthesis": "Drie woorden uit drie beschavingen. Één synthese: een entiteit die beschermt (AEGIS), stromen faciliteert (AEGIR) en bouwt voor permanentie (AEON). Aegryn.",
-      "history": "Aegryn heette vroeger anders. Naarmate het positioneren van het bedrijf zich aanscherpte — van bouwer van digitale activa naar een certificerings- en begeleidingsgroep voor organisaties — is ook zijn identiteit aangescherpt. De naam is veranderd. De overtuiging niet.",
-      "formerly": "Aegryn heette vroeger anders. Naarmate het positioneren van het bedrijf zich aanscherpte — van bouwer van digitale activa naar een certificerings- en begeleidingsgroep voor organisaties — is ook zijn identiteit aangescherpt. De naam is veranderd. De overtuiging niet."
+      "synthesis": "Drie woorden uit drie beschavingen. Een entiteit die beschermt (AEGIS), van idee naar realisatie leidt (AEGIR) en bouwt om te duren (AEON). Aegryn.",
+      "history": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor emblematische projecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet.",
+      "formerly": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor emblematische projecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
       "segments": [
         {
-          "t": "Aegryn wil het adviesbureau zijn dat leidinggevenden van begin tot eind begeleidt",
+          "t": "Aegryn wil de ondernemende referentieboutique zijn voor emblematische projecten",
           "bold": true
         },
         {
-          "t": ": van beslissing tot realisatie, in elke levenscyclus van het bedrijf, van lancering tot overdracht of herstart.\n\n"
+          "t": ": van het idee tot zijn realisatie, en daarna in elke cyclus van de onderneming.\n\n"
         },
         {
           "t": "Wij zijn operators.",
           "bold": true
         },
         {
-          "t": " Wij bouwen en exploiteren onze eigen activa, en wij voeren de projecten van onze klanten zoals een architect een bouwplaats leidt: kader, coördinatie van betrokkenen, mijlpalen, oplevering. Wat wij aanbevelen, leven wij.\n\n"
+          "t": " Wij bouwen onze eigen projecten en houden die van onze klanten vast zoals een bouwheer een werf vasthoudt: kadering, coördinatie, mijlpalen, oplevering. Wat wij aanbevelen, leven wij.\n\n"
         },
         {
-          "t": "Als ondernemende boutique, verankerd in Zwitserland om zijn grondigheid,",
+          "t": "Eén gesprekspartner.",
           "bold": true
         },
         {
-          "t": " brengt Aegryn in één aanspreekpunt de vijf disciplines samen die nodig zijn voor duurzame bedrijfswaarde: advies, opbouw van activa, het doorlopen van de cycli, talent en marktkennis."
+          "t": " Aegryn verenigt de vakgebieden die een project vereist: kaderen, realiseren, begeleiden, selecteren, informeren."
         }
       ]
     },
     "contribution": {
       "label": "Onze bijdrage",
-      "title": "Geen vervanging.\nEen infrastructuurlaag.",
-      "desc": "Rigoureuze M&A-operaties bestaan al. Aegryn vervangt niet de adviseurs, advocaten en accountants die ze structureren. Het brengt wat structureel ontbrak: een onafhankelijke rating, uitgegeven vóór elke beslissing, die alle partijen een gecertificeerd en gedocumenteerd vertrekpunt geeft. Minder tijd debatteren over fundamentele waarde. Meer tijd om te beslissen.",
+      "title": "Een boutique,\ngeen zware structuur.",
+      "desc": "Kantoren, agentschappen en experts bestaan al, en wij werken met de besten onder hen zodra een project het rechtvaardigt. Wat ontbrak, is iemand die het geheel vasthoudt: een project gekaderd, gerealiseerd en begeleid door dezelfde gesprekspartner, zonder de zwaarte van een grote structuur.",
       "items": [
         {
           "num": "01",
-          "title": "Een grade vóór een prijs",
-          "desc": "De Aegryn C/I/F/S/O grade wordt vastgesteld vóór elke overdracht, vóór elke onderhandeling. Geen waarderingsopinie, een certificering van wat de asset daadwerkelijk is, gedocumenteerd, geversioneerd en reproduceerbaar. De prijs volgt de grade. De grade hangt er niet van af."
+          "title": "Een project vóór een plan",
+          "desc": "Wij vertrekken van wat op de markt moet bestaan, niet van een deliverable. Het plan dient het project, nooit omgekeerd."
         },
         {
           "num": "02",
-          "title": "Een gekwalificeerde kring, geen marktplaats",
-          "desc": "Elke door Aegryn begeleide organisatie heeft de certificering doorlopen. Elke stakeholder wordt vooraf gekwalificeerd. Discretie is structureel: geen feature die er later bovenop is gezet, maar de operationele voorwaarde waaruit al het andere volgt."
+          "title": "Een gekozen kring, geen marktplaats",
+          "desc": "Experts, partners en talenten worden één voor één geselecteerd voor elk project. Discretie is geen optie: het is de voorwaarde van het werk."
         },
         {
           "num": "03",
           "title": "Zwitserse institutionele standaarden",
-          "desc": "Zwitsers recht beheerst elke opdracht. Vertrouwelijkheid is contractueel en de documentatie is bij elke stap volledig. Dit zijn operationele voorwaarden, geen beloften."
+          "desc": "Contractuele vertrouwelijkheid, volledige documentatie bij elke stap, opleveringen die zonder ons kunnen worden overgenomen: operationele voorwaarden, geen beloften."
         }
       ]
     },
@@ -1054,32 +1060,42 @@
       "label": "Ons DNA"
     },
     "values": {
-      "precision": {
+      "exceptional": {
         "label": "01",
-        "title": "Precisie",
-        "desc": "Elke beslissing is gedocumenteerd, traceerbaar en reproduceerbaar. Dezelfde vraag, dezelfde methode, hetzelfde resultaat. U weet waarom wij aanbevelen wat wij aanbevelen."
+        "title": "Uitzonderlijk",
+        "desc": "Wij kiezen weinig projecten, en alleen die welke hun markt kunnen tekenen."
       },
-      "durability": {
+      "exclusive": {
         "label": "02",
-        "title": "Duurzaamheid",
-        "desc": "Wij bouwen voor het decennium, niet voor het kwartaal. Wat wij opleveren, zowel assets als plannen, kan zonder ons worden overgenomen, geauditeerd en overgedragen."
+        "title": "Exclusiviteit",
+        "desc": "Een beperkt aantal mandaten tegelijk, zodat elk project onze volle aandacht krijgt."
       },
-      "accountability": {
+      "confidential": {
         "label": "03",
-        "title": "Verantwoordelijkheid voor uitvoering",
-        "desc": "Advies is wat het oplevert. Wij blijven tot het resultaat, onder een benoemde contactpersoon die daarvoor instaat."
+        "title": "Vertrouwelijkheid",
+        "desc": "Een geheimhoudingsovereenkomst gaat elke gedetailleerde uitwisseling vooraf, en niets wordt onthuld zonder uw toestemming."
       },
-      "independence": {
+      "trust": {
         "label": "04",
-        "title": "Onafhankelijkheid",
-        "desc": "Wij ontvangen geen commissie van uitgevers, banken of fondsen voor wat wij aanbevelen. De scoring van activa wordt apart van elk adviesmandaat opgesteld, zodat het resultaat nooit afhangt van onze belangen."
+        "title": "Vertrouwen",
+        "desc": "Een benoemde gesprekspartner die instaat voor het resultaat en die wij behouden tot het resultaat. Hebben wij een belang in een project, dan verklaren wij dat vóór elke aanbeveling."
+      },
+      "experience": {
+        "label": "05",
+        "title": "Ervaring",
+        "desc": "Twintig jaar naast directiecomités, en de praktijk van wie gebouwd heeft. Voor u een vlot traject, van het eerste gesprek tot de oplevering."
+      },
+      "elegance": {
+        "label": "06",
+        "title": "Elegantie",
+        "desc": "Zwitserse strengheid toont zich in eenvoud: heldere beslissingen, verzorgde opleveringen, geen overdaad."
       }
     },
     "swiss": {
       "groupLabel": "Aegryn",
       "title": "Verankerd in Zwitserland.\nOpen naar de wereld.",
-      "desc": "Zwitserland is bewust gekozen, niet om zijn incorporatievoordelen, maar om zijn institutionele standaarden: de strengheid van het Zwitserse recht, de discretie van zijn financiële ecosysteem en de neutraliteit die er een geloofwaardig anker van maakt voor grensoverschrijdende operaties tussen partijen uit verschillende jurisdicties. Elke Aegryn-opdracht valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of de herkomst van de asset.",
-      "cta": "Onze disciplines"
+      "desc": "Zwitserland werd bewust gekozen, niet om oprichtingsvoordelen maar om zijn institutionele standaarden: de strengheid van zijn recht, de discretie van zijn ecosysteem en de neutraliteit die het tot een geloofwaardig anker maakt voor projecten die over meerdere landen lopen. Elk Aegryn-mandaat valt onder Zwitsers recht, ongeacht de nationaliteit van de partijen of het land van het project.",
+      "cta": "Onze vakgebieden"
     },
     "founder": {
       "label": "De oprichtende overtuiging",
@@ -1090,30 +1106,24 @@
       "disciplinesCta": "Onze disciplines",
       "storytelling": "Adviseren zonder te bouwen is een kaart zonder territorium leveren.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is de fakkel doorgeven zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaren zonder verantwoordelijkheid."
     },
-    "whatsnext": {
-      "label": "Wat er hierna komt",
-      "title": "Het protocol evolueert.\nDe standaard houdt stand.",
-      "desc": "Aegryn certificeert en begeleidt vandaag tech-organisaties — SaaS-uitgevers, applicaties, platforms, IP-activa en Web3-activa — volgens het CIFSO 5000-protocol.\n\nHet belangrijkste roadmap-project is blockchain-certificering: een verankeringslaag die elke gecertificeerde codebase verzegelt op de exacte datum van uitgifte, waardoor elke grade definitief verifieerbaar en permanent wordt. Deze laag wordt toegevoegd aan het onafhankelijke protocol dat al volledig operationeel is.\n\nParallel bouwen we een netwerk van expertpartners op — advocatenkantoren, accountants, cybersecurity-specialisten, technische architecten — om onze klanten bij elke stap te begeleiden: tech-advies vóór de certificering, juridische en financiële structurering tijdens de opdrachten, integratie na de operaties.",
-      "cta": "Huidige sessies bekijken"
-    },
     "cta": {
       "label": "Werken met Aegryn",
       "seller": {
-        "title": "U bereidt een overdracht voor.",
-        "desc": "Een Aegryn-adviseur reageert binnen 2 werkdagen.",
-        "btn": "Een certificering aanvragen",
-        "href": "/grade/submit"
+        "title": "U draagt een project.",
+        "desc": "Een concept om te kaderen, een realisatie om te leiden, een cyclus om door te komen.",
+        "btn": "Een project indienen",
+        "href": "/contact?subject=project"
       },
       "buyer": {
-        "title": "U bereidt een overname voor.",
-        "desc": "Onafhankelijke due diligence en CIFSO-certificering op uw target.",
-        "btn": "Ontdek de begeleiding",
-        "href": "/franchir/acquisition"
+        "title": "U zoekt een project om bij aan te sluiten.",
+        "desc": "Deelnemingen, co-ontwikkeling, projecten om samen met ons te dragen.",
+        "btn": "Ontdek het portfolio",
+        "href": "/portfolio"
       },
       "partner": {
         "title": "U bent een potentiële partner.",
-        "desc": "Advocatenkantoren, accountants, cyberbeveiligingsspecialisten, M&A-boutiques, PE-fondsen.",
-        "btn": "Partnerschappen ontdekken",
+        "desc": "Ingenieursbureaus, creatieve studio’s, laboratoria, advocatenkantoren, productie- en distributiepartners.",
+        "btn": "Ontdek de partnerschappen",
         "href": "/alliances"
       }
     },
@@ -9726,63 +9736,63 @@
     "founder": {
       "label": "DE OPRICHTER",
       "title": "Een oprichter uit de praktijk.",
-      "desc": "De oprichter van Aegryn is een leidinggevende en operator met meer dan twintig jaar internationale, sectoroverschrijdende ervaring in Europa, de Verenigde Staten en Azië.\n\nAls voormalig executive director bij een adviesbureau van wereldklasse heeft hij publieke en private organisaties, internationale groepen en instellingen begeleid door hun meest complexe transformaties, van strategie tot operaties, van finance tot human resources, van M&A-advies tot post-acquisitie-integratie.\n\nDaarna werd hij ondernemer en investeerder in wat hem inspireert om memorabele klantbelevingen te creëren: technologische activa in het tijdperk van kunstmatige intelligentie. Hij beheerde alleen wat hij anderen adviseerde: productstrategie, technisch ontwerp, marketing, juridische aspecten en intellectueel eigendom, werving en partnerships. Hij slaagde in sommige projecten. Hij leerde van andere. En hij kapitaliseerde op wat geen enkele adviesopdracht kan leren.\n\nDit dubbele traject is de oorsprong van Aegryn.\n\nVandaag bevestigt de markt wat dit traject had voorzien. De grote adviesbureaus verschuiven naar middelgrote ondernemingen omdat hun traditionele businessmodel onder druk staat, omdat kunstmatige intelligentie de dienstverleningsvergelijking hervormt, en omdat leidinggevenden nu meer eisen: uitvoeringssnelheid, echte verantwoordelijkheid, meetbare resultaten, zonder de complexiteit en kosten van grote transformatieopdrachten.\n\nDeze marktbeweging creëert ruimte.\n\nAegryn bezet die vanaf het begin, niet als defensief antwoord op een disruptie, maar als een overtuiging die in de tijd is opgebouwd: scale-ups, mkb'ers, ambitieuze organisaties en investeerders verdienen een partner die de strengheid van strategisch advies op wereldniveau combineert met de concrete ervaring van een oprichter die bouwde, faalde en leerde.\n\nHij koos ervoor Aegryn op te richten om in één structuur samen te brengen wat de markt in silo's aanbiedt: advies van strategie tot fusie-overname, het ontwerp van duurzame tech-activa, de orkestratie van levenscycli en bedrijfsprojecten, talentmanagement en marktkennis van elke industrie.\n\nZijn overtuiging: een beslissing heeft pas waarde als die tot zijn resultaat wordt gebracht. Daarom adviseert, bouwt en stuurt Aegryn, van de eerste beslissing tot de overdracht.",
+      "desc": "De oprichter van Aegryn is een bestuurder en operator met meer dan twintig jaar internationale, sectoroverschrijdende ervaring in Europa, de Verenigde Staten en Azië.\n\nAls voormalig executive director bij een adviesbureau van wereldniveau begeleidde hij publieke en private organisaties, internationale groepen en instellingen door hun meest complexe transformaties, van strategie tot operaties, van financiën tot human resources, van M&A-advies tot integratie na overname.\n\nDaarna werd hij ondernemer en investeerder in wat hem inspireert: gedenkwaardige klantervaringen creëren in het tijdperk van artificiële intelligentie. Hij droeg alleen wat hij anderen adviseerde: productstrategie, technisch ontwerp, marketing, juridische zaken en intellectuele eigendom, rekrutering en partnerschappen. Hij slaagde in sommige projecten. Hij leerde uit andere. En bouwde voort op wat geen enkele adviesopdracht kan leren.\n\nDit dubbele parcours is de oorsprong van Aegryn.\n\nHij koos ervoor Aegryn op te richten om in één structuur te verenigen wat de markt in silo’s aanbiedt: de kadering van het project, de uitvoering ervan, de begeleiding door de tijd en de selectie van talent.\n\nZijn overtuiging: een beslissing heeft alleen waarde als ze tot haar resultaat wordt doorgevoerd.",
       "cta": "Neem contact op",
-      "disciplinesCta": "Onze disciplines",
+      "disciplinesCta": "Onze vakgebieden",
       "storytelling": "Adviseren zonder te bouwen is een kaart leveren zonder territorium.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is overhandigen zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaar geven zonder verantwoordelijkheid."
     },
     "whyAegryn": {
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
-      "p1": "De meeste bureaus adviseren zonder te bouwen. De meeste agencies bouwen zonder te adviseren. De meeste M&A-boutiques transacteren zonder te herbouwen.\n\nAegryn doet alle vijf. En wat het zijn klanten adviseert, past het op zichzelf toe. Deze coherentie is wat wij vanaf de eerste dag in ons DNA wilden verankeren.",
-      "p2": "Adviseren zonder te bouwen is een kaart leveren zonder het grondgebied. Bouwen zonder te adviseren is uitvoeren zonder koers. Transacteren zonder voor te bereiden is verkopen zonder te waarderen. Rekruteren zonder strategie is invullen zonder te bouwen. Informeren zonder te doen is commentariëren zonder te handelen.\n\nBij Aegryn versterkt elke discipline de volgende. Dit aaneenketenen creëert duurzame waarde voor onze klanten en voor onszelf.\n\nFinanciële partners begrepen het als eersten: ondernemers willen niet alleen kapitaal. Ze willen een kritische blik en een netwerk. Aegryn draagt dezelfde overtuiging door het volledige ondernemerstraject : van het opbouwen van waarde tot de realisatie ervan.",
+      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie. De meeste M&A-boutiques handelen zonder gebouwd te hebben.\n\nAegryn kadert, realiseert en omringt zich met de juiste experts. En wat het zijn klanten aanbeveelt, past het op zichzelf toe.",
+      "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elk vakgebied het volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
       "p3ImageAlt": "Gouden zonsondergang boven het mistige Lausanne"
     },
     "workWith": {
       "label": "WERKEN MET AEGRYN",
-      "title": "Vijf disciplines.\nÉén relatie.",
-      "sub": "Advies, bouw, transities, talent, informatie: geïntegreerd in één groep, gedragen door dezelfde standaarden.",
+      "title": "Vijf vakgebieden.\nEén relatie.",
+      "sub": "Kaderen, realiseren, begeleiden, selecteren, informeren: dezelfde gesprekspartner, dezelfde standaarden.",
       "items": [
         {
           "key": "accompagner",
           "num": "01",
           "title": "KADEREN",
-          "desc": "Strategie-, technologie- en M&A-advisory. Wij treden op waar beslissingen de koers bepalen : van governance tot kapitaal.",
-          "cta": "Advisory ontdekken",
+          "desc": "Beslissen voor het uitvoeren: strategie, businessplan, merk en positionering, juridisch en regelgevend kader, overname en overdracht. Het kader maakt van een intentie een uitvoerbaar project.",
+          "cta": "Ontdek Kaderen",
           "href": "/advisory"
         },
         {
           "key": "construire",
           "num": "02",
           "title": "REALISEREN",
-          "desc": "Duurzame digitale assets, volledige IP-eigendom klant, klaar voor certificering. Wij ontwikkelen en exploiteren SaaS, apps en protocollen.",
-          "cta": "Asset Engineering",
+          "desc": "Bouwen tot de oplevering: merk, product, platform, marktintroductie. Wij realiseren zelf en activeren de juiste experts wanneer het project het vereist.",
+          "cta": "Ontdek Realiseren",
           "href": "/services/build"
         },
         {
           "key": "transmettre",
           "num": "03",
           "title": "BEGELEIDEN",
-          "desc": "Elke levenscyclus is een transitie om te doorlopen: lancering, groei, herstructurering, acquisitie, overdracht. Diagnose, plan, uitvoering: waarde wordt in elke fase opgebouwd en bewezen.",
-          "cta": "Ontdek Doorlopen",
+          "desc": "Duren, van de ene cyclus naar de andere: lancering, groei, herstructurering, overname, overdracht. Een benoemde gesprekspartner die het geheugen van het project bewaart.",
+          "cta": "Ontdek Begeleiden",
           "href": "/#franchir"
         },
         {
           "key": "recruter",
           "num": "04",
           "title": "SELECTEREN",
-          "desc": "Leidinggevenden en experts. Werving van sleutelprofielen en plaatsing van overgangsprofielen, in elke levensfase; vertrouwelijk, vooraf gekwalificeerd, antwoord binnen 2 werkdagen.",
-          "cta": "Mandaat indienen",
+          "desc": "De juiste mensen op het juiste moment samenbrengen: leiders, experts, projectteams en partners, één voor één gekozen voor wat het project vereist.",
+          "cta": "Een mandaat indienen",
           "href": "/talent"
         },
         {
           "key": "informer",
           "num": "05",
           "title": "INFORMEREN",
-          "desc": "Kwartaalmagazine, diepte-artikelen en marktintelligentie. Wij documenteren wat wij observeren en beleven.",
-          "cta": "Magazine lezen",
+          "desc": "De markt lezen vóór de anderen: trends, innovatieve projecten, portretten van wie bouwt. Het magazine documenteert wat wij waarnemen en wat wij beleven.",
+          "cta": "Lees het Magazine",
           "href": "/magazine"
         }
       ]
