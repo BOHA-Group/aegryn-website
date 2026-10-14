@@ -256,7 +256,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'insertdry',
     slug:             'insertdry',
     url:              null as string | null,
-    image:            '/images/portfolio/insertdry-pantry.jpg',
+    image:            '/images/portfolio/insertdry-dryfood.jpg',
     badge:            'B2B · B2C — Électroménager',
     tagline:          'Cave alimentaire tropicale à déshumidification active',
     description:      "Unité de conservation d'aliments secs pensée pour les marchés tropicaux : régulation ciblée de 16 à 22 °C, hygrométrie maintenue sous 45 %, formats compact et encastrable.",
