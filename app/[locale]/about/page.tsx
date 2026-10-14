@@ -187,7 +187,7 @@ export default function AboutPage() {
               return (
                 <div key={i} className={`space-y-5 ${i === 1 ? 'lg:pl-16' : ''}`}>
                   <p className="text-[15px] text-ag-gray leading-relaxed">{constat}</p>
-                  <p className="text-[15px] text-ag-black font-semibold leading-relaxed pt-5 border-t border-ag-border">
+                  <p className="text-[15px] text-ag-black font-semibold leading-relaxed">
                     {reponse}
                   </p>
                 </div>
