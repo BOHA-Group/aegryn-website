@@ -37,7 +37,7 @@ export function AboutHeroScroll() {
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
         const start = mq.conditions?.isDesktop
-          ? 'inset(36% 6% 8% 62% round 16px)'
+          ? 'inset(33% 6% 26% 62% round 16px)'
           : 'inset(88% 5% 1% 5% round 16px)'
         gsap.fromTo(mediaRef.current,
           { clipPath: start },
@@ -49,7 +49,7 @@ export function AboutHeroScroll() {
          (≈ 76 % / 56 % de l'image en object-cover) et décalage vertical pour
          que le bateau, mât compris, soit centré dans le cadre initial */
       gsap.fromTo(imgRef.current,
-        { scale: 1.18, yPercent: 7, transformOrigin: '76% 56%' },
+        { scale: 0.95, yPercent: -2, transformOrigin: '76% 56%' },
         { scale: 1, yPercent: 0, ease: 'none', scrollTrigger: st },
       )
 
