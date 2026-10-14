@@ -11,7 +11,13 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'assets.portfolio.meta' })
-  return generateAegrynMetadata({ title: t('title'), description: t('desc'), path: '/portfolio', locale })
+  return generateAegrynMetadata({
+    title: t('title'),
+    description: t('desc'),
+    path: '/portfolio',
+    locale,
+    image: '/images/portfolio/hero-stars.jpg',
+  })
 }
 
 export default async function PortfolioPage({ params }: Props) {

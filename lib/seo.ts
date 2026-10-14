@@ -165,7 +165,7 @@ export function generateAegrynMetadata({
         it:          `${BASE_URL}/it${localizedPath(path, 'it')}`,
         es:          `${BASE_URL}/es${localizedPath(path, 'es')}`,
         nl:          `${BASE_URL}/nl${localizedPath(path, 'nl')}`,
-        'x-default': `${BASE_URL}/en${localizedPath(path, 'en')}`,
+        'x-default': `${BASE_URL}/fr${localizedPath(path, 'fr')}`,
       },
     },
     openGraph: {
@@ -273,6 +273,7 @@ export const aegrynOrganizationSchema = {
   sameAs: [
     'https://www.linkedin.com/company/106273747/',
     'https://www.instagram.com/aegrynhq/',
+    'https://www.facebook.com/aegrynhq',
     'https://www.tiktok.com/@aegrynhq',
     'https://www.youtube.com/@aegrynhq',
   ],

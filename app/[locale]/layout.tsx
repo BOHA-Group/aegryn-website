@@ -69,8 +69,8 @@ return {
   },
   twitter: {
     card:    'summary_large_image',
-    site:    '@aegryn',
-    creator: '@aegryn',
+    site:    '@aegrynhq',
+    creator: '@aegrynhq',
     title:   'Aegryn — Engineered to Last',
     description: 'Swiss integrated advisory group. CIFSO 5000 certification & Valuation Index.',
     images:  ['/og/default.jpg'],
