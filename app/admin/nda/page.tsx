@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { requireAdmin } from '@/lib/adminAuth'
 import { createServiceClient } from '@/lib/supabase'
-import { NDA_TEMPLATE_STATUS, getAegrynSignatory } from '@/lib/nda/config'
+import { NDA_TEMPLATE_STATUS } from '@/lib/nda/config'
 import NdaCreateForm from './NdaCreateForm'
 
 export const metadata: Metadata = { title: 'NDA mutuels | Aegryn Admin', robots: { index: false, follow: false } }
@@ -28,7 +28,6 @@ export default async function NdaAdminPage({ searchParams }: { searchParams: Pro
     .select('id, reference, project_label, lang, status, created_at, nda_signatories(status, sent_at)')
     .order('created_at', { ascending: false }).limit(200)
   const rows = (data ?? []) as unknown as Row[]
-  const signatory = getAegrynSignatory()
 
   return (
     <div className="space-y-6 p-8">
@@ -40,11 +39,6 @@ export default async function NdaAdminPage({ searchParams }: { searchParams: Pro
       {NDA_TEMPLATE_STATUS === 'draft' && (
         <div className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           Le modèle de NDA est en brouillon : à faire valider par le conseil juridique avant tout envoi à un tiers (voir <code>lib/nda/config.ts</code>).
-        </div>
-      )}
-      {!signatory && (
-        <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
-          Signataire Aegryn non configuré : définir <code>NDA_AEGRYN_SIGNATORY_NAME</code> et <code>NDA_AEGRYN_SIGNATORY_TITLE</code> pour permettre la contresignature automatique.
         </div>
       )}
       {error && <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">Lecture impossible ({error.message}). La migration 124_nda_agreements.sql est-elle exécutée ?</div>}

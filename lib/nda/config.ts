@@ -16,11 +16,12 @@ export const AEGRYN_PARTY = {
   uid:     'CHE-402.011.821',
 } as const
 
-/** Signataire autorisé d'Aegryn (contresignature automatique) : variables d'environnement */
-export function getAegrynSignatory(): { name: string; title: string } | null {
-  const name  = process.env.NDA_AEGRYN_SIGNATORY_NAME?.trim()
-  const title = process.env.NDA_AEGRYN_SIGNATORY_TITLE?.trim()
-  return name && title ? { name, title } : null
+/** Signataire autorisé d'Aegryn (contresignature automatique). Surchargeable par variables d'environnement. */
+export function getAegrynSignatory(): { name: string; title: string } {
+  return {
+    name:  process.env.NDA_AEGRYN_SIGNATORY_NAME?.trim()  || 'Yohann Bollack',
+    title: process.env.NDA_AEGRYN_SIGNATORY_TITLE?.trim() || 'CEO',
+  }
 }
 
 export const NDA_DEFAULT_TERM_YEARS = 5
