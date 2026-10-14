@@ -99,7 +99,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'neediu',
     slug:             'neediu',
     url:              null as string | null,
-    image:            '/images/portfolio/neediu-concierge.jpg',
+    image:            '/images/portfolio/neediu-roomservice.jpg',
     namePublic:       true,
     badge:            'B2C — Marketplace',
     tagline:          'Services à domicile, mise en relation intelligente',
