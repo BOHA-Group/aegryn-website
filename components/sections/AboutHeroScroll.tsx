@@ -11,9 +11,43 @@ const BLUR = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgo
  * Hero About — style size.swiss/capital :
  * fond blanc, titre noir, puis la photo part d'un cadre centré
  * en bas du viewport et s'étend en plein écran au scroll (scrub).
+ *
+ * Le cadre initial doit montrer le voilier en entier (mât compris), quel que
+ * soit le ratio d'écran. Pour cela, zoom et origine de transformation sont
+ * calculés dynamiquement : on connaît la position du voilier dans l'image
+ * source (fraction horizontale/verticale FX1..FY2, mesurée une fois sur le
+ * fichier), et on résout l'équation qui fait correspondre cette fenêtre à la
+ * géométrie exacte du cadre (FRAME). Au scroll, le zoom retombe à 1 (image
+ * pleine, non recadrée) pendant que le cadre s'étend au plein écran — un seul
+ * calque image, comme avant.
  */
-/* Cadre portrait de départ : hauteur entre le haut du titre et le bas du sous-titre, largeur déduite du ratio */
-const FRAME = { top: 0.2, bottom: 0.26, right: 0.06, ratio: 404 / 640 }
+const FRAME  = { top: 0.2, bottom: 0.26, right: 0.06, ratio: 0.5052631578947369 }
+const BOAT   = { fx1: 0.695, fx2: 0.845, fy1: 0.345, fy2: 0.79 }
+const IMG_W  = 1920
+const IMG_H  = 1280
+
+function computeBoatZoom(vw: number, vh: number) {
+  const s0 = Math.max(vw / IMG_W, vh / IMG_H)
+  const offsetX = (IMG_W * s0 - vw) / 2
+  const offsetY = (IMG_H * s0 - vh) / 2
+  const screenX = (fx: number) => fx * IMG_W * s0 - offsetX
+  const screenY = (fy: number) => fy * IMG_H * s0 - offsetY
+
+  const h = vh * (1 - FRAME.top - FRAME.bottom)
+  const w = h * FRAME.ratio
+  const boxLeft = vw - vw * FRAME.right - w
+  const boxTop  = vh * FRAME.top
+
+  const x1 = screenX(BOAT.fx1), x2 = screenX(BOAT.fx2)
+  const y1 = screenY(BOAT.fy1), y2 = screenY(BOAT.fy2)
+
+  const scaleX = w / (x2 - x1)
+  const scaleY = h / (y2 - y1)
+  const originX = (boxLeft - x1 * scaleX) / (1 - scaleX)
+  const originY = (boxTop  - y1 * scaleY) / (1 - scaleY)
+
+  return { scaleX, scaleY, originX, originY, boxLeft, boxTop, w, h }
+}
 
 export function AboutHeroScroll() {
   const t = useTranslations('about')
@@ -21,7 +55,6 @@ export function AboutHeroScroll() {
   const textRef  = useRef<HTMLDivElement>(null)
   const mediaRef = useRef<HTMLDivElement>(null)
   const imgRef   = useRef<HTMLDivElement>(null)
-  const frameRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!wrapRef.current || !mediaRef.current || !imgRef.current || !textRef.current) return
@@ -40,35 +73,30 @@ export function AboutHeroScroll() {
         isDesktop: '(min-width: 768px)',
         isMobile:  '(max-width: 767px)',
       }, (mq) => {
-        /* Desktop : le clip de départ épouse le cadre portrait (ratio fixe) */
-        let start = 'inset(88% 5% 1% 5% round 16px)'
         if (mq.conditions?.isDesktop) {
           const vw = window.innerWidth, vh = window.innerHeight
-          const h  = vh * (1 - FRAME.top - FRAME.bottom)
-          const w  = h * FRAME.ratio
-          const left = Math.max(0, 1 - FRAME.right - w / vw)
-          start = `inset(${FRAME.top * 100}% ${FRAME.right * 100}% ${FRAME.bottom * 100}% ${left * 100}% round 16px)`
+          const z  = computeBoatZoom(vw, vh)
+          const start = `inset(${FRAME.top * 100}% ${FRAME.right * 100}% ${FRAME.bottom * 100}% ${(1 - FRAME.right - z.w / vw) * 100}% round 16px)`
+
+          gsap.fromTo(mediaRef.current,
+            { clipPath: start },
+            { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
+          )
+          gsap.fromTo(imgRef.current,
+            { scaleX: z.scaleX, scaleY: z.scaleY, transformOrigin: `${z.originX}px ${z.originY}px` },
+            { scaleX: 1, scaleY: 1, ease: 'none', scrollTrigger: st },
+          )
+        } else {
+          gsap.fromTo(mediaRef.current,
+            { clipPath: 'inset(88% 5% 1% 5% round 16px)' },
+            { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
+          )
+          gsap.fromTo(imgRef.current,
+            { scale: 1.18 },
+            { scale: 1, ease: 'none', scrollTrigger: st },
+          )
         }
-        gsap.fromTo(mediaRef.current,
-          { clipPath: start },
-          { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
-        )
       })
-
-      /* Zoom interne de la photo pendant l'expansion, origine sur le voilier */
-      gsap.fromTo(imgRef.current,
-        { scale: 1.12, transformOrigin: '76% 56%' },
-        { scale: 1, ease: 'none', scrollTrigger: st },
-      )
-
-      /* Calque de départ : recadrage portrait fixe sur le voilier (toujours
-         entier, quel que soit l'écran), fondu pendant le premier tiers */
-      if (frameRef.current) {
-        gsap.to(frameRef.current, {
-          opacity: 0, ease: 'none',
-          scrollTrigger: { trigger: wrapRef.current, start: 'top top', end: '35% top', scrub: true },
-        })
-      }
 
       /* Le texte s'estompe quand la photo recouvre le haut */
       gsap.to(textRef.current, {
@@ -108,23 +136,6 @@ export function AboutHeroScroll() {
           <p className="text-[16px] text-ag-gray leading-relaxed max-w-xl whitespace-pre-line">
             {t('hero.desc')}
           </p>
-        </div>
-
-        {/* Cadre de départ (desktop) : même boîte que le clip initial, ratio fixe */}
-        <div
-          ref={frameRef}
-          className="pointer-events-none absolute z-30 hidden overflow-hidden rounded-2xl md:block"
-          style={{ top: `${FRAME.top * 100}%`, bottom: `${FRAME.bottom * 100}%`, right: `${FRAME.right * 100}%`, aspectRatio: String(FRAME.ratio) }}
-          aria-hidden="true"
-        >
-          <Image
-            src="/images/about/about_regatta_boat.jpg"
-            alt=""
-            fill
-            priority
-            sizes="30vw"
-            className="object-cover object-center"
-          />
         </div>
 
         {/* Photo — clip-path expansible, recouvre le texte au scroll */}
