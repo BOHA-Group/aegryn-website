@@ -217,6 +217,12 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
+  /* ── 3ter. NDA mutuel — lien de signature personnel (jeton), sans compte ni locale.
+     Pas de rafraîchissement de session : la page est publique et non indexée. */
+  if (pathname.startsWith('/nda/')) {
+    return NextResponse.next()
+  }
+
   /* ── 3bis. QR code magazine — pass-through ──
      URL imprimée physiquement sur la cover papier (aegryn.com/magazine/qr),
      ne doit jamais être préfixée par une locale (app/magazine/qr/page.tsx

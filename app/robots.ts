@@ -12,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  const privateAreas = ['/api/', '/admin/', '/client/', '/*/annuaire']
+  const privateAreas = ['/api/', '/admin/', '/client/', '/nda/', '/*/annuaire']
 
   return {
     rules: [

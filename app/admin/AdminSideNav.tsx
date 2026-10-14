@@ -27,6 +27,7 @@ const SECTIONS = [
     label: 'Utilisateurs',
     items: [
       { href: '/admin/members',   label: 'Membres & NDA' },
+      { href: '/admin/nda',       label: 'NDA mutuels' },
       { href: '/admin/kyc',       label: 'KYC' },
       { href: '/admin/partners',  label: 'Partenaires' },
       { href: '/admin/experts',   label: 'Experts réseau' },

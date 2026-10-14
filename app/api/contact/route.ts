@@ -5,8 +5,20 @@ import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
 import { Aegryn_ASSETS } from '@/data/assets'
 import {
-  CONTACT_SUBJECTS, LEGACY_SUBJECTS, FIELD_LABELS, SUBJECT_LABEL_FR, describeExtra, normalizeLang,
+  CONTACT_SUBJECTS, LEGACY_SUBJECTS, FIELD_LABELS, NDA_ROLE_BY_SUBJECT, SUBJECT_LABEL_FR, describeExtra, normalizeLang,
+  type ContactSubject,
 } from '@/content/contact/fields'
+
+/** Lien admin de création du NDA, prérempli depuis la demande de contact */
+function ndaCreationLink(d: { name: string; email: string; subject: string }): string {
+  const site = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
+  const q = new URLSearchParams({
+    new: '1', name: d.name, email: d.email,
+    project: `${SUBJECT_LABEL_FR[d.subject] ?? 'Projet'} (${d.name})`,
+    role: NDA_ROLE_BY_SUBJECT[d.subject as ContactSubject] ?? 'project_owner',
+  })
+  return `${site}/admin/nda?${q.toString()}`
+}
 
 const ASSET_NAMES = Object.fromEntries(Aegryn_ASSETS.map(a => [a.id, a.name]))
 
@@ -63,7 +75,7 @@ Sujet: ${SUBJECT_LABEL_FR[data.subject] ?? data.subject}
 Cycle: ${data.cycle ?? '-'}
 Locale: ${data.locale ?? '-'}
 ${describeExtra(data.extra, 'fr', ASSET_NAMES).map(([k, v]) => `${k}: ${v}`).join('\n')}
-${data.ndaRequested ? '\nNDA PROJET DEMANDÉ : accord de confidentialité à envoyer avant tout échange détaillé.\n' : ''}
+${data.ndaRequested ? `\nNDA PROJET DEMANDÉ : accord de confidentialité à envoyer avant tout échange détaillé.\nCréer et envoyer le NDA : ${ndaCreationLink(data)}\n` : ''}
 Message:
 ${data.message}
         `.replace(/\n{3,}/g, '\n\n').trim(),

@@ -5,11 +5,14 @@ import type { Article, LocaleText } from '@/data/articles'
  * Helper Resend centralisé.
  * Variables d'env : RESEND_API_KEY, RESEND_FROM, RESEND_FROM_NAME, RESEND_REPLY_TO
  */
+export interface EmailAttachment { filename: string; content: Uint8Array | Buffer }
+
 export async function sendEmail(
   to: string,
   subject: string,
   html: string,
   tag?: string,
+  attachments?: EmailAttachment[],
 ): Promise<void> {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
@@ -27,6 +30,9 @@ export async function sendEmail(
       to:       [to],
       subject,
       html,
+      ...(attachments?.length
+        ? { attachments: attachments.map(a => ({ filename: a.filename, content: Buffer.from(a.content).toString('base64') })) }
+        : {}),
     }),
   })
   if (!res.ok) console.error(`[sendEmail${tag ? ` ${tag}` : ''}] Resend error (${to})`, await res.text())
