@@ -230,7 +230,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     name:             'chrosium',
     slug:             'chrosium',
     url:              null as string | null,
-    image:            '/images/portfolio/chrosium-sunscreen.jpg',
+    image:            '/images/portfolio/chrosium-sunscreen-m.jpg',
     badge:            'B2C — Cosmétique D2C',
     tagline:          "Indicateur d'application solaire, protection visible en temps réel",
     description:      "Associe une formule SPF 50+ clean-label à un indicateur d'application propriétaire : parents et enfants voient où la protection a été posée, avant qu'elle ne s'estompe une fois la zone sécurisée.",
