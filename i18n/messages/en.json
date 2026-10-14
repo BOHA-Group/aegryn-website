@@ -157,7 +157,7 @@
     "craftRecruitHire": "Hire a profile",
     "craftRecruitTransition": "Transition profiles",
     "craftRecruitPool": "Join the talent pool",
-    "navPortfolio": "PORTFOLIO"
+    "navPortfolio": "Portfolio"
   },
   "hero": {
     "tagline": "Aegryn. From strategy to closing. Switzerland & Europe.",
@@ -7294,7 +7294,8 @@
     "talentEntreprises": "Hire a profile",
     "talentTransition": "Transition profiles",
     "talentCandidats": "Join the talent pool",
-    "workforce": "Workforce market data"
+    "workforce": "Workforce market data",
+    "portfolio": "Portfolio"
   },
   "clientTransaction": {
     "eyebrow": "Buyer space",

@@ -157,7 +157,7 @@
     "craftRecruitHire": "Profil rekrutieren",
     "craftRecruitTransition": "Übergangsprofile",
     "craftRecruitPool": "Dem Talentpool beitreten",
-    "navPortfolio": "PORTFOLIO"
+    "navPortfolio": "Portfolio"
   },
   "hero": {
     "tagline": "Aegryn. Von der Strategie bis zum Abschluss. Schweiz.",
@@ -7279,7 +7279,8 @@
     "talentEntreprises": "Profil rekrutieren",
     "talentTransition": "Übergangsprofile",
     "talentCandidats": "Dem Pool beitreten",
-    "workforce": "Arbeitsmarktdaten"
+    "workforce": "Arbeitsmarktdaten",
+    "portfolio": "Portfolio"
   },
   "clientTransaction": {
     "eyebrow": "Käuferbereich",

@@ -157,7 +157,7 @@
     "craftRecruitHire": "Profiel werven",
     "craftRecruitTransition": "Overgangsprofielen",
     "craftRecruitPool": "Deelnemen aan de pool",
-    "navPortfolio": "PORTFOLIO"
+    "navPortfolio": "Portfolio"
   },
   "hero": {
     "tagline": "Aegryn. Van strategie tot overdracht. Zwitserland & Europa.",
@@ -7294,7 +7294,8 @@
     "talentEntreprises": "Profiel werven",
     "talentTransition": "Overgangsprofielen",
     "talentCandidats": "Deelnemen aan de pool",
-    "workforce": "Arbeidsmarktdata"
+    "workforce": "Arbeidsmarktdata",
+    "portfolio": "Portfolio"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",

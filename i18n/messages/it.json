@@ -157,7 +157,7 @@
     "craftRecruitHire": "Reclutare un profilo",
     "craftRecruitTransition": "Profili di transizione",
     "craftRecruitPool": "Entrare nel pool",
-    "navPortfolio": "PORTFOLIO"
+    "navPortfolio": "Portfolio"
   },
   "hero": {
     "tagline": "Aegryn. Dalla strategia alla trasmissione. Svizzera.",
@@ -7279,7 +7279,8 @@
     "talentEntreprises": "Reclutare un profilo",
     "talentTransition": "Profili di transizione",
     "talentCandidats": "Entrare nel pool",
-    "workforce": "Dati mercato del lavoro"
+    "workforce": "Dati mercato del lavoro",
+    "portfolio": "Portfolio"
   },
   "clientTransaction": {
     "eyebrow": "Spazio acquirente",

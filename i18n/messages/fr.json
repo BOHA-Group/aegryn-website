@@ -157,7 +157,7 @@
     "craftRecruitHire": "Recruter un profil",
     "craftRecruitTransition": "Profils de transition",
     "craftRecruitPool": "Rejoindre le vivier",
-    "navPortfolio": "PORTFOLIO"
+    "navPortfolio": "Portfolio"
   },
   "hero": {
     "tagline": "Aegryn. De la stratégie à la transmission. Suisse & Europe.",
@@ -7254,7 +7254,8 @@
     "talentEntreprises": "Recruter un profil",
     "talentTransition": "Profils de transition",
     "talentCandidats": "Rejoindre le vivier",
-    "workforce": "Données marché du travail"
+    "workforce": "Données marché du travail",
+    "portfolio": "Portfolio"
   },
   "clientTransaction": {
     "eyebrow": "Espace acquéreur",
