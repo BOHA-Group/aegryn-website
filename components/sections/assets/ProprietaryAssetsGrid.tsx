@@ -63,7 +63,7 @@ const PROP_ASSETS: PropAsset[] = [
     status:      'live',
     ownership:   'domain',
     publisherReady: true,
-    visitPageHref: '/franchir/transmission',
+    visitPageHref: '/accompagner/transmission',
   },
   {
     id:               'valuation',

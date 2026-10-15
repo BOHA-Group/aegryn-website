@@ -88,7 +88,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
                 })}
                 {yes && (
                   <Link
-                    href={`/${locale}/franchir/${item.cycle}`}
+                    href={`/${locale}/accompagner/${item.cycle}`}
                     className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-navy transition-colors ml-2"
                   >
                     {ui.seeCycle} — {cycleTitle[item.cycle]} <ArrowUpRight size={11} />

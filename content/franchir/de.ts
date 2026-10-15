@@ -48,7 +48,7 @@ export const FRANCHIR_DE: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'lancement',
-    path: '/franchir/lancement',
+    path: '/accompagner/lancement',
     meta: {
       title:       'Gründung & Strukturierung — die richtigen Grundlagen legen, bevor Sie ausgeben | Aegryn',
       description: 'Dienstleister, Technologie, geistiges Eigentum, Compliance, Governance: Die Entscheidungen der ersten Monate kosten wenig und sind später sehr teuer zu korrigieren.',
@@ -122,7 +122,7 @@ export const FRANCHIR_DE: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'croissance',
-    path: '/franchir/croissance',
+    path: '/accompagner/croissance',
     meta: {
       title:       'Wachstum & Skalierung — wachsen, ohne zu zerbrechen, was funktioniert | Aegryn',
       description: 'Ab einem gewissen Volumen wird mit fünfzig Personen langsam, was mit zehn funktionierte: Tools, Entscheidungen, Regeln, Abhängigkeiten.',
@@ -199,7 +199,7 @@ export const FRANCHIR_DE: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'restructuration',
-    path: '/franchir/restructuration',
+    path: '/accompagner/restructuration',
     meta: {
       title:       'Restrukturierung & Pivot — Kurs ändern, ohne die Kontrolle zu verlieren | Aegryn',
       description: 'Verlust eines Grosskunden, Vorfall, regulatorische Anordnung, kippender Markt: die ersten Entscheidungen wiegen am schwersten.',
@@ -277,7 +277,7 @@ export const FRANCHIR_DE: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'acquisition',
-    path: '/franchir/acquisition',
+    path: '/accompagner/acquisition',
     meta: {
       title:       'Akquisition & externes Wachstum — kaufen im Wissen, was Sie übernehmen | Aegryn',
       description: 'Eine Akquisition entscheidet sich ebenso über die Integration wie über den Preis: vier blinde Flecken, ein Integrationsplan, Retentionszusagen.',
@@ -352,7 +352,7 @@ export const FRANCHIR_DE: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'transmission',
-    path: '/franchir/transmission',
+    path: '/accompagner/transmission',
     meta: {
       title:       'Übergabe & Verkauf — die Organisation darauf vorbereiten, ohne Sie zu bestehen | Aegryn',
       description: 'Die Übergabe wird Jahre im Voraus vorbereitet. Entscheidend ist die Fähigkeit der Organisation, ohne ihren Inhaber zu funktionieren.',

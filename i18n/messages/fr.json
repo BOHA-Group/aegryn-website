@@ -6973,7 +6973,7 @@
           "lifecycle"
         ],
         "q": "Accompagnez-vous les projets d'acquisition ?",
-        "a": "Oui. Les projets d'acquisition sont étudiés dans le cadre de notre accompagnement du cycle Acquisition : due diligence indépendante, audit de souveraineté, certification CIFSO 5000 de la cible et plan d'intégration. Consultez /franchir/acquisition ou contactez nos équipes."
+        "a": "Oui. Les projets d'acquisition sont étudiés dans le cadre de notre accompagnement du cycle Acquisition : due diligence indépendante, audit de souveraineté, certification CIFSO 5000 de la cible et plan d'intégration. Consultez /accompagner/acquisition ou contactez nos équipes."
       },
       {
         "id": "kyc-docs",
@@ -9782,7 +9782,7 @@
           "title": "ACCOMPAGNER",
           "desc": "Durer, d'un cycle à l'autre : lancement, croissance, restructuration, acquisition, transmission. Un interlocuteur nommé qui garde la mémoire du projet.",
           "cta": "Découvrir Accompagner",
-          "href": "/#franchir"
+          "href": "/#accompagner"
         },
         {
           "key": "recruter",

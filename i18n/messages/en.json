@@ -7013,7 +7013,7 @@
           "lifecycle"
         ],
         "q": "Do you support acquisition projects?",
-        "a": "Yes. Acquisition projects are assessed within our Acquisition lifecycle support: independent due diligence, sovereignty audit, CIFSO 5000 certification of the target and integration plan. See /franchir/acquisition or contact our teams."
+        "a": "Yes. Acquisition projects are assessed within our Acquisition lifecycle support: independent due diligence, sovereignty audit, CIFSO 5000 certification of the target and integration plan. See /accompagner/acquisition or contact our teams."
       },
       {
         "id": "kyc-docs",
@@ -9782,7 +9782,7 @@
           "title": "ACCOMPANY",
           "desc": "Endure, from one cycle to the next: launch, growth, restructuring, acquisition, transfer. A named counterpart who keeps the memory of the project.",
           "cta": "Discover Accompany",
-          "href": "/#franchir"
+          "href": "/#accompagner"
         },
         {
           "key": "recruter",

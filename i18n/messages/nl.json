@@ -7013,7 +7013,7 @@
           "lifecycle"
         ],
         "q": "Begeleiden jullie acquisitieprojecten?",
-        "a": "Ja. Acquisitieprojecten worden beoordeeld in het kader van onze begeleiding van de cyclus Acquisitie: onafhankelijke due diligence, soevereiniteitsaudit, CIFSO 5000-certificering van de target en een integratieplan. Zie /franchir/acquisition of neem contact op met onze teams."
+        "a": "Ja. Acquisitieprojecten worden beoordeeld in het kader van onze begeleiding van de cyclus Acquisitie: onafhankelijke due diligence, soevereiniteitsaudit, CIFSO 5000-certificering van de target en een integratieplan. Zie /accompagner/acquisition of neem contact op met onze teams."
       },
       {
         "id": "kyc-docs",
@@ -9782,7 +9782,7 @@
           "title": "BEGELEIDEN",
           "desc": "Duren, van de ene cyclus naar de andere: lancering, groei, herstructurering, overname, overdracht. Een benoemde gesprekspartner die het geheugen van het project bewaart.",
           "cta": "Ontdek Begeleiden",
-          "href": "/#franchir"
+          "href": "/#accompagner"
         },
         {
           "key": "recruter",

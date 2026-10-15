@@ -10,7 +10,7 @@ import type { CycleSlug } from '@/content/franchir/types'
 /**
  * Section accueil FRANCHIR — reprend le contenu de l'ancienne page /valoriser
  * (héros montagne + 5 cartes cycle + « deux cycles à la fois » + diagnostic).
- * La page /valoriser a été supprimée : /valoriser redirige 301 vers /#franchir.
+ * La page /valoriser a été supprimée : /valoriser redirige 301 vers /#accompagner.
  */
 export function FranchirHomeSection({ locale }: { locale: string }) {
   const c  = getFranchirIntro(locale)
@@ -23,7 +23,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
   ) as Record<CycleSlug, string>
 
   return (
-    <section id="franchir" className="scroll-mt-20">
+    <section id="accompagner" className="scroll-mt-20">
       {/* ── Intro : texte + image montagne qui s'étend au scroll ── */}
       <FranchirHeroScroll
         eyebrow={c.eyebrow}
@@ -43,7 +43,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
             {c.cycles.map(cy => (
               <Link
                 key={cy.slug}
-                href={L(`/franchir/${cy.slug}`)}
+                href={L(`/accompagner/${cy.slug}`)}
                 className="group rounded-2xl bg-ag-white border border-ag-border p-7 flex flex-col gap-4 hover:border-ag-navy/40 transition-colors"
               >
                 <p className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.02em] min-h-[2.75em]">{cy.title}</p>
@@ -71,11 +71,11 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
               const [partA, partB] = ex.label.split('+').map(s => s.trim())
               return (
                 <div key={i} className="rounded-2xl bg-ag-off-white border border-ag-border px-6 py-4 whitespace-nowrap">
-                  <Link href={L(`/franchir/${ex.a}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
+                  <Link href={L(`/accompagner/${ex.a}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
                     {partA}
                   </Link>
                   <span className="font-sans text-ag-gray-light mx-1">+</span>
-                  <Link href={L(`/franchir/${ex.b}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
+                  <Link href={L(`/accompagner/${ex.b}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
                     {partB}
                   </Link>
                 </div>

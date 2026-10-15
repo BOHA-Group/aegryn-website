@@ -47,7 +47,7 @@ export const FRANCHIR_EN: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'lancement',
-    path: '/franchir/lancement',
+    path: '/accompagner/lancement',
     meta: {
       title:       'Launch & Structuring — laying the right foundations before spending | Aegryn',
       description: 'Suppliers, technology, intellectual property, compliance, governance: first-month choices are cheap to make and very costly to fix.',
@@ -121,7 +121,7 @@ export const FRANCHIR_EN: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'croissance',
-    path: '/franchir/croissance',
+    path: '/accompagner/croissance',
     meta: {
       title:       'Growth & Scaling — grow without breaking what works | Aegryn',
       description: 'Beyond a certain volume, what worked with ten people slows down at fifty: tools, decisions, rules, dependencies.',
@@ -198,7 +198,7 @@ export const FRANCHIR_EN: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'restructuration',
-    path: '/franchir/restructuration',
+    path: '/accompagner/restructuration',
     meta: {
       title:       'Restructuring & Pivot — change course without losing control | Aegryn',
       description: 'Loss of a major client, an incident, a regulatory injunction, a market turning: the first decisions are the heaviest.',
@@ -276,7 +276,7 @@ export const FRANCHIR_EN: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'acquisition',
-    path: '/franchir/acquisition',
+    path: '/accompagner/acquisition',
     meta: {
       title:       'Acquisition & External Growth — buy knowing what you take on | Aegryn',
       description: 'An acquisition is decided as much on integration as on price: four blind spots, an integration plan, retention commitments.',
@@ -351,7 +351,7 @@ export const FRANCHIR_EN: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'transmission',
-    path: '/franchir/transmission',
+    path: '/accompagner/transmission',
     meta: {
       title:       'Succession & Sale — prepare the organisation to hold without you | Aegryn',
       description: 'Succession is prepared years in advance. What conditions it is the organisation’s capacity to run without its leader.',

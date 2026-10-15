@@ -134,7 +134,7 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
 const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
   { footerKey: 'footerCraftSupport',  href: '/advisory' },
   { footerKey: 'footerCraftBuild',    href: '/services/build' },
-  { footerKey: 'footerCraftTransact', href: '/franchir/lancement' as LinkHref },
+  { footerKey: 'footerCraftTransact', href: '/accompagner/lancement' as LinkHref },
   { footerKey: 'footerWhoTalent',     href: '/talent' as never },
   { footerKey: 'footerInform',        href: '/blog' },
 ]

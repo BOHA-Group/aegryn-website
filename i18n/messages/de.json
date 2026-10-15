@@ -6998,7 +6998,7 @@
           "lifecycle"
         ],
         "q": "Begleiten Sie Akquisitionsprojekte?",
-        "a": "Ja. Akquisitionsprojekte werden im Rahmen unserer Begleitung des Zyklus Akquisition geprüft: unabhängige Due Diligence, Souveränitätsaudit, CIFSO-5000-Zertifizierung der Zielorganisation und Integrationsplan. Siehe /franchir/acquisition oder kontaktieren Sie unsere Teams."
+        "a": "Ja. Akquisitionsprojekte werden im Rahmen unserer Begleitung des Zyklus Akquisition geprüft: unabhängige Due Diligence, Souveränitätsaudit, CIFSO-5000-Zertifizierung der Zielorganisation und Integrationsplan. Siehe /accompagner/acquisition oder kontaktieren Sie unsere Teams."
       },
       {
         "id": "kyc-docs",
@@ -9912,7 +9912,7 @@
           "title": "BEGLEITEN",
           "desc": "Bestehen, von einem Zyklus zum nächsten: Start, Wachstum, Restrukturierung, Übernahme, Übergabe. Ein benannter Ansprechpartner, der das Gedächtnis des Projekts bewahrt.",
           "cta": "Begleiten entdecken",
-          "href": "/#franchir"
+          "href": "/#accompagner"
         },
         {
           "key": "recruter",

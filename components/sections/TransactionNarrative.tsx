@@ -49,7 +49,7 @@ export function TransactNarrative() {
               {t('ctaSell')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/franchir/acquisition"
+              href="/accompagner/acquisition"
               className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-sans font-semibold text-[11px] tracking-[0.14em] uppercase px-7 py-3.5 hover:border-ag-black hover:text-ag-black transition-all"
             >
               {t('ctaBuy')} <ArrowUpRight size={13} />

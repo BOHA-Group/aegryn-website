@@ -48,7 +48,7 @@ export const FRANCHIR_ES: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'lancement',
-    path: '/franchir/lancement',
+    path: '/accompagner/lancement',
     meta: {
       title:       'Lanzamiento y Estructuración — sentar las bases antes de gastar | Aegryn',
       description: 'Proveedores, tecnologías, propiedad intelectual, cumplimiento, gobernanza: las decisiones de los primeros meses cuestan poco tomarlas y mucho corregirlas.',
@@ -122,7 +122,7 @@ export const FRANCHIR_ES: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'croissance',
-    path: '/franchir/croissance',
+    path: '/accompagner/croissance',
     meta: {
       title:       'Crecimiento y Escalado — crecer sin romper lo que funciona | Aegryn',
       description: 'A partir de cierto volumen, lo que funcionaba con diez personas se ralentiza con cincuenta: herramientas, decisiones, reglas, dependencias.',
@@ -199,7 +199,7 @@ export const FRANCHIR_ES: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'restructuration',
-    path: '/franchir/restructuration',
+    path: '/accompagner/restructuration',
     meta: {
       title:       'Reestructuración y Pivote — cambiar de rumbo sin perder el control | Aegryn',
       description: 'Pérdida de un cliente importante, incidente, requerimiento reglamentario, mercado que gira: las primeras decisiones son las más pesadas.',
@@ -277,7 +277,7 @@ export const FRANCHIR_ES: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'acquisition',
-    path: '/franchir/acquisition',
+    path: '/accompagner/acquisition',
     meta: {
       title:       'Adquisición y Crecimiento externo — comprar sabiendo lo que asume | Aegryn',
       description: 'Una adquisición se juega tanto en la integración como en el precio: cuatro ángulos muertos, un plan de integración, compromisos de retención.',
@@ -352,7 +352,7 @@ export const FRANCHIR_ES: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'transmission',
-    path: '/franchir/transmission',
+    path: '/accompagner/transmission',
     meta: {
       title:       'Transmisión y Venta — preparar la organización para resistir sin usted | Aegryn',
       description: 'La transmisión se prepara con años de antelación. Lo que la condiciona es la capacidad de la organización para funcionar sin su dirigente.',

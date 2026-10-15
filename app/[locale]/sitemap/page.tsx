@@ -42,11 +42,11 @@ const GROUPS: SitemapGroup[] = [
   {
     labelKey: 'groupFranchir',
     links: [
-      { labelKey: 'valoriserLancement',       href: '/franchir/lancement' },
-      { labelKey: 'valoriserCroissance',      href: '/franchir/croissance' },
-      { labelKey: 'valoriserRestructuration', href: '/franchir/restructuration' },
-      { labelKey: 'valoriserAcquisition',     href: '/franchir/acquisition' },
-      { labelKey: 'valoriserTransmission',    href: '/franchir/transmission' },
+      { labelKey: 'valoriserLancement',       href: '/accompagner/lancement' },
+      { labelKey: 'valoriserCroissance',      href: '/accompagner/croissance' },
+      { labelKey: 'valoriserRestructuration', href: '/accompagner/restructuration' },
+      { labelKey: 'valoriserAcquisition',     href: '/accompagner/acquisition' },
+      { labelKey: 'valoriserTransmission',    href: '/accompagner/transmission' },
     ],
   },
   {

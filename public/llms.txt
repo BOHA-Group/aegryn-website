@@ -104,7 +104,7 @@ Each advisory page (v2, October 2026) is built for leaders of organisations betw
 ### 3. Franchir — Operational execution of lifecycle transitions (at /franchir)
 Franchir is the Navigate discipline: Aegryn executes transitions at every stage of an organisation's lifecycle — distinct from M&A advisory (which sits under Advise). Five cycles: Launch & Structuring (build a transmissible, certifiable asset from day one), Growth & Scaling (secure hyper-growth without fragilising governance or technology), Restructuring & Pivot (regain control fast in crisis, cyber incident or regulatory injunction situations), Acquisition & External Growth (independent technical, regulatory and organisational due diligence for buy-side), Transmission & Cession (twelve to thirty-six month vendor readiness).
 Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network; a dedicated data room for these workflows is being structured. CIFSO 5000 certification is mandatory upstream of any transmission mandate.
-Pages: /franchir/lancement, /franchir/croissance, /franchir/restructuration, /franchir/acquisition, /franchir/transmission
+Pages: /accompagner/lancement, /accompagner/croissance, /accompagner/restructuration, /accompagner/acquisition, /accompagner/transmission
 
 ### 4. Talent — Executive Tech Recruitment
 Placement of rare executive tech profiles across Europe: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search. Pre-qualified candidates only. 48h response for mandates.
@@ -209,11 +209,11 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 - [Industries](https://aegryn.com/fr/industries) — Five industry hubs
 
 ### Franchir — Organisation Lifecycle
-- [Lancement & Structuration](https://aegryn.com/fr/franchir/lancement) — Launch & structuring cycle
-- [Croissance & Mise à l'échelle](https://aegryn.com/fr/franchir/croissance) — Growth & scaling cycle
-- [Restructuration & Pivot](https://aegryn.com/fr/franchir/restructuration) — Restructuring & pivot cycle
-- [Acquisition & Croissance externe](https://aegryn.com/fr/franchir/acquisition) — Acquisition due diligence cycle
-- [Transmission & Cession](https://aegryn.com/fr/franchir/transmission) — Transfer & cession cycle
+- [Lancement & Structuration](https://aegryn.com/fr/accompagner/lancement) — Launch & structuring cycle
+- [Croissance & Mise à l'échelle](https://aegryn.com/fr/accompagner/croissance) — Growth & scaling cycle
+- [Restructuration & Pivot](https://aegryn.com/fr/accompagner/restructuration) — Restructuring & pivot cycle
+- [Acquisition & Croissance externe](https://aegryn.com/fr/accompagner/acquisition) — Acquisition due diligence cycle
+- [Transmission & Cession](https://aegryn.com/fr/accompagner/transmission) — Transfer & cession cycle
 
 ### Grade & Valuation
 - [Grade](https://aegryn.com/fr/grade) — Certification CIFSO 5000 overview

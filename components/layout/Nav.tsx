@@ -32,13 +32,13 @@ const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
 ]
 
-// Nos métiers - Franchir : cycles de vie (l'intro vit désormais en section accueil #franchir)
+// Nos métiers - Franchir : cycles de vie (l'intro vit désormais en section accueil #accompagner)
 const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactLancement',       href: '/franchir/lancement' as LinkHref },
-  { labelKey: 'craftTransactCroissance',      href: '/franchir/croissance' as LinkHref },
-  { labelKey: 'craftTransactRestructuration', href: '/franchir/restructuration' as LinkHref },
-  { labelKey: 'craftTransactBuy',             href: '/franchir/acquisition' as LinkHref },
-  { labelKey: 'craftTransactSell',            href: '/franchir/transmission' as LinkHref },
+  { labelKey: 'craftTransactLancement',       href: '/accompagner/lancement' as LinkHref },
+  { labelKey: 'craftTransactCroissance',      href: '/accompagner/croissance' as LinkHref },
+  { labelKey: 'craftTransactRestructuration', href: '/accompagner/restructuration' as LinkHref },
+  { labelKey: 'craftTransactBuy',             href: '/accompagner/acquisition' as LinkHref },
+  { labelKey: 'craftTransactSell',            href: '/accompagner/transmission' as LinkHref },
 ]
 // Nos métiers - Recruter : deux portes (entreprises / candidats) + intro + marché
 const CRAFT_RECRUIT_COMPANY_LINKS: { labelKey: string; href: LinkHref }[] = [
@@ -460,7 +460,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isCraftActive =
     isActive('/assets') || isActive('/services/build') ||
     isActive('/advisory') || isActive('/services/acquisition-support') ||
-    isActive('/grade') || isActive('/franchir') ||
+    isActive('/grade') || isActive('/accompagner') ||
     isActive('/valuation') || isActive('/verify')
 
 

@@ -152,11 +152,11 @@ The Navigate discipline — distinct from M&A advisory (Advise pillar). Five lif
 Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network; a dedicated data room for these workflows is being structured. CIFSO 5000 certification is mandatory upstream of any transmission mandate.
 
 Key Pages:
-- /franchir/lancement — Launch & Structuring
-- /franchir/croissance — Growth & Scaling
-- /franchir/restructuration — Restructuring & Pivot
-- /franchir/acquisition — Acquisition & External Growth (due diligence)
-- /franchir/transmission — Transmission & Cession (vendor readiness)
+- /accompagner/lancement — Launch & Structuring
+- /accompagner/croissance — Growth & Scaling
+- /accompagner/restructuration — Restructuring & Pivot
+- /accompagner/acquisition — Acquisition & External Growth (due diligence)
+- /accompagner/transmission — Transmission & Cession (vendor readiness)
 
 ## Certification CIFSO 5000 (/grade)
 
@@ -215,8 +215,8 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 
 - General: contact@boha-group.com
 - Certify: https://aegryn.com/grade/submit
-- Transmission: https://aegryn.com/franchir/transmission
-- Acquisition: https://aegryn.com/franchir/acquisition
+- Transmission: https://aegryn.com/accompagner/transmission
+- Acquisition: https://aegryn.com/accompagner/acquisition
 - Advisory: https://aegryn.com/advisory
 - Talent: https://aegryn.com/talent
 - Custom Build: https://aegryn.com/services/build

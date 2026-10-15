@@ -48,7 +48,7 @@ export const FRANCHIR_NL: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'lancement',
-    path: '/franchir/lancement',
+    path: '/accompagner/lancement',
     meta: {
       title:       'Lancering & Structurering — de juiste basis leggen voor u uitgeeft | Aegryn',
       description: 'Leveranciers, technologie, intellectueel eigendom, compliance, governance: de keuzes van de eerste maanden kosten weinig om te nemen en veel om te corrigeren.',
@@ -122,7 +122,7 @@ export const FRANCHIR_NL: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'croissance',
-    path: '/franchir/croissance',
+    path: '/accompagner/croissance',
     meta: {
       title:       'Groei & Opschaling — groeien zonder te breken wat werkt | Aegryn',
       description: 'Vanaf een bepaald volume vertraagt met vijftig mensen wat met tien werkte: tools, beslissingen, regels, afhankelijkheden.',
@@ -199,7 +199,7 @@ export const FRANCHIR_NL: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'restructuration',
-    path: '/franchir/restructuration',
+    path: '/accompagner/restructuration',
     meta: {
       title:       'Herstructurering & Pivot — van koers veranderen zonder de controle te verliezen | Aegryn',
       description: 'Verlies van een grote klant, incident, regelgevingsbevel, kantelende markt: de eerste beslissingen wegen het zwaarst.',
@@ -277,7 +277,7 @@ export const FRANCHIR_NL: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'acquisition',
-    path: '/franchir/acquisition',
+    path: '/accompagner/acquisition',
     meta: {
       title:       'Overname & Externe groei — kopen wetend wat u overneemt | Aegryn',
       description: 'Een overname wordt evenzeer op de integratie als op de prijs beslist: vier blinde vlekken, een integratieplan, retentieafspraken.',
@@ -352,7 +352,7 @@ export const FRANCHIR_NL: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'transmission',
-    path: '/franchir/transmission',
+    path: '/accompagner/transmission',
     meta: {
       title:       'Overdracht & Verkoop — de organisatie voorbereiden om zonder u te blijven bestaan | Aegryn',
       description: 'De overdracht wordt jaren vooraf voorbereid. Bepalend is de capaciteit van de organisatie om zonder haar leidinggevende te functioneren.',

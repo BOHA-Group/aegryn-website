@@ -6998,7 +6998,7 @@
           "lifecycle"
         ],
         "q": "¿Acompañan proyectos de adquisición?",
-        "a": "Sí. Los proyectos de adquisición se estudian en el marco de nuestro acompañamiento del ciclo de Adquisición: due diligence independiente, auditoría de soberanía, certificación CIFSO 5000 del objetivo y plan de integración. Consulte /franchir/acquisition o contacte a nuestros equipos."
+        "a": "Sí. Los proyectos de adquisición se estudian en el marco de nuestro acompañamiento del ciclo de Adquisición: due diligence independiente, auditoría de soberanía, certificación CIFSO 5000 del objetivo y plan de integración. Consulte /accompagner/acquisition o contacte a nuestros equipos."
       },
       {
         "id": "kyc-docs",
@@ -9782,7 +9782,7 @@
           "title": "ACOMPAÑAR",
           "desc": "Durar, de un ciclo al siguiente: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Un interlocutor nombrado que guarda la memoria del proyecto.",
           "cta": "Descubrir Acompañar",
-          "href": "/#franchir"
+          "href": "/#accompagner"
         },
         {
           "key": "recruter",

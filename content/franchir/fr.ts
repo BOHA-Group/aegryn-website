@@ -49,7 +49,7 @@ export const FRANCHIR_FR: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'lancement',
-    path: '/franchir/lancement',
+    path: '/accompagner/lancement',
     meta: {
       title:       'Lancement & Structuration — poser les bonnes bases avant de dépenser | Aegryn',
       description: 'Prestataires, technologies, propriété intellectuelle, conformité, gouvernance : les choix des premiers mois coûtent peu à décider et très cher à corriger.',
@@ -123,7 +123,7 @@ export const FRANCHIR_FR: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'croissance',
-    path: '/franchir/croissance',
+    path: '/accompagner/croissance',
     meta: {
       title:       'Croissance & Mise à l’échelle — grandir sans casser ce qui fonctionne | Aegryn',
       description: 'À partir d’un certain volume, ce qui marchait à dix personnes ralentit à cinquante : outils, décisions, règles, dépendances.',
@@ -200,7 +200,7 @@ export const FRANCHIR_FR: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'restructuration',
-    path: '/franchir/restructuration',
+    path: '/accompagner/restructuration',
     meta: {
       title:       'Restructuration & Pivot — changer de cap sans perdre le contrôle | Aegryn',
       description: 'Perte d’un client majeur, incident, injonction réglementaire, marché qui bascule : les premières décisions sont les plus lourdes.',
@@ -278,7 +278,7 @@ export const FRANCHIR_FR: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'acquisition',
-    path: '/franchir/acquisition',
+    path: '/accompagner/acquisition',
     meta: {
       title:       'Acquisition & Croissance externe — acheter en sachant ce que vous reprenez | Aegryn',
       description: 'Une acquisition se joue autant sur l’intégration que sur le prix : quatre angles morts, un plan d’intégration, des engagements de rétention.',
@@ -353,7 +353,7 @@ export const FRANCHIR_FR: CycleContent[] = [
   /* ------------------------------------------------------------------ */
   {
     slug: 'transmission',
-    path: '/franchir/transmission',
+    path: '/accompagner/transmission',
     meta: {
       title:       'Transmission & Cession — préparer l’organisation à tenir sans vous | Aegryn',
       description: 'La transmission se prépare des années à l’avance. Ce qui la conditionne, c’est la capacité de l’organisation à fonctionner sans son dirigeant.',

@@ -174,7 +174,7 @@ export default async function TalentPage({ params }: Props) {
                   </p>
                   <div className="flex md:flex-col gap-3 md:gap-2 md:text-right shrink-0">
                     <Link
-                      href={`/franchir/${slug}` as never}
+                      href={`/accompagner/${slug}` as never}
                       className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-navy hover:text-ag-apex-ink transition-colors"
                     >
                       {t('cycles.decisionLink')} <ArrowRight size={9} />

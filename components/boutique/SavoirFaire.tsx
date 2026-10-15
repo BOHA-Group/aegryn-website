@@ -5,7 +5,7 @@
  * de vie, avec filtres par cycle et par thème (norme du projet). Présentation aérée :
  * des phases en lignes, des pastilles pour les thèmes, aucun trait de séparation.
  */
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   CYCLES, CYCLE_LABELS, ITEMS, PHASES, SF_UI, THEMES, THEME_LABELS,
   type Cycle, type Lang, type Theme,
@@ -23,6 +23,20 @@ export function SavoirFaire({ locale }: { locale: string }) {
   const lang = (['fr', 'en', 'de', 'es', 'it', 'nl'].includes(locale) ? locale : 'en') as Lang
   const [cycle, setCycle] = useState<Cycle | 'all'>('all')
   const [theme, setTheme] = useState<Theme | 'all'>('all')
+
+  /* Lien depuis une page cycle : /boutique#savoir-faire-<cycle> présélectionne le cycle */
+  useEffect(() => {
+    const apply = () => {
+      const m = window.location.hash.match(/^#savoir-faire-(.+)$/)
+      if (m && (CYCLES as readonly string[]).includes(m[1])) {
+        setCycle(m[1] as Cycle)
+        document.getElementById('savoir-faire')?.scrollIntoView()
+      }
+    }
+    apply()
+    window.addEventListener('hashchange', apply)
+    return () => window.removeEventListener('hashchange', apply)
+  }, [])
 
   const rows = useMemo(() => PHASES.map(ph => {
     const items = ITEMS.filter(it => {

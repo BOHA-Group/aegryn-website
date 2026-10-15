@@ -7,6 +7,7 @@ import { AdvisoryDiagnostic } from '@/components/advisory/AdvisoryDiagnostic'
 import { FRANCHIR_UI, METIER_HREF, METIER_LABELS, CYCLE_IMAGES } from '@/content/franchir/ui'
 import { getCycleAction } from '@/content/franchir/actions'
 import { routing } from '@/i18n/routing'
+import { BoutiqueKnowHowBanner } from '@/components/boutique/BoutiqueKnowHowBanner'
 import type { CycleContent, MetierChip } from '@/content/franchir/types'
 
 interface Props {
@@ -35,7 +36,7 @@ function MetierChipLink({ m, labels, href }: { m: MetierChip; labels: Record<Met
 }
 
 /**
- * Gabarit des pages cycle de vie FRANCHIR (/franchir/*).
+ * Gabarit des pages cycle de vie FRANCHIR (/accompagner/*).
  * Ordre fixe : hero (H1, sous-titre, trois verbes) · constat sourcé ·
  * situations (decision, metier, livrable) · metiers · taille · secteur ·
  * scenario · limites de l'IA · auto-diagnostic · cycle suivant · CTAs.
@@ -70,7 +71,7 @@ export function CyclePage({ content: c, locale }: Props) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Aegryn', item: `https://aegryn.com/${locale}` },
-          { '@type': 'ListItem', position: 2, name: c.eyebrow.split('·')[0].trim(), item: `https://aegryn.com/${locale}#franchir` },
+          { '@type': 'ListItem', position: 2, name: c.eyebrow.split('·')[0].trim(), item: `https://aegryn.com/${locale}#accompagner` },
           { '@type': 'ListItem', position: 3, name: c.eyebrow, item: `https://aegryn.com/${locale}${c.path}` },
         ],
       },
@@ -209,6 +210,8 @@ export function CyclePage({ content: c, locale }: Props) {
         </ScrollReveal>
       </section>
 
+      <BoutiqueKnowHowBanner cycle={c.slug} locale={locale} />
+
       {/* ── 5 + 6. Selon la taille · Selon le secteur ── */}
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
@@ -279,7 +282,7 @@ export function CyclePage({ content: c, locale }: Props) {
           <p className={`${LABEL} mb-6`}>{c.nextLabel}</p>
           <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
             {c.next.map(n => (
-              <Link key={n.slug} href={L(`/franchir/${n.slug}`)}
+              <Link key={n.slug} href={L(`/accompagner/${n.slug}`)}
                 className={`${CARD} group px-6 py-6 flex items-center justify-between gap-6 hover:border-ag-navy/40 transition-colors`}>
                 <span className="font-sans font-semibold text-[15px] text-ag-black group-hover:text-ag-navy transition-colors">{n.label}</span>
                 <ArrowUpRight size={13} className="text-ag-gray-light shrink-0" />

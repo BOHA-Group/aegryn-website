@@ -10,11 +10,11 @@ ailleurs sur le site.
 
 | Fichier | Page | Source |
 |---|---|---|
-| lancement.jpg | /franchir/lancement | https://www.pexels.com/photo/32447552/ |
-| croissance.jpg | /franchir/croissance | https://www.pexels.com/photo/12956558/ |
-| restructuration.jpg | /franchir/restructuration | https://www.pexels.com/photo/19300204/ |
-| acquisition.jpg | /franchir/acquisition | https://www.pexels.com/photo/13963384/ |
-| transmission.jpg | /franchir/transmission | https://www.pexels.com/photo/1632790/ |
+| lancement.jpg | /accompagner/lancement | https://www.pexels.com/photo/32447552/ |
+| croissance.jpg | /accompagner/croissance | https://www.pexels.com/photo/12956558/ |
+| restructuration.jpg | /accompagner/restructuration | https://www.pexels.com/photo/19300204/ |
+| acquisition.jpg | /accompagner/acquisition | https://www.pexels.com/photo/13963384/ |
+| transmission.jpg | /accompagner/transmission | https://www.pexels.com/photo/1632790/ |
 
 ## Vignettes des situations (1200 px, q78) — une image n'apparaît jamais deux fois
 

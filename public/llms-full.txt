@@ -105,20 +105,20 @@ Five specialized advisory pillars across 23+ industries, each named with an "X, 
 Franchir is the Navigate discipline: Aegryn executes transitions at every stage of an organisation's lifecycle — distinct from M&A advisory, which sits under the Advise pillar (/advisory/ma). Value measurement (CIFSO Valuation Index) and certification (CIFSO 5000) are CIFSO services supporting all disciplines.
 
 Five lifecycle cycles:
-- Launch & Structuring (/franchir/lancement) — build a transmissible, certifiable and sovereign asset from day one: strategy, technology, IP, governance, key hires.
-- Growth & Scaling (/franchir/croissance) — secure hyper-growth without fragilising governance, compliance (NIS2, DORA, EU AI Act) or the technical stack.
-- Restructuring & Pivot (/franchir/restructuration) — regain control fast in a crisis, cyber incident or regulatory injunction, including defensive carve-outs.
-- Acquisition & External Growth (/franchir/acquisition) — independent technical, IP, regulatory and organisational due diligence for buy-side, plus CIFSO certification of the target and PMI planning.
-- Transmission & Cession (/franchir/transmission) — twelve to thirty-six month vendor readiness, data room preparation, CIFSO 5000 certification, coordination with the M&A execution network.
+- Launch & Structuring (/accompagner/lancement) — build a transmissible, certifiable and sovereign asset from day one: strategy, technology, IP, governance, key hires.
+- Growth & Scaling (/accompagner/croissance) — secure hyper-growth without fragilising governance, compliance (NIS2, DORA, EU AI Act) or the technical stack.
+- Restructuring & Pivot (/accompagner/restructuration) — regain control fast in a crisis, cyber incident or regulatory injunction, including defensive carve-outs.
+- Acquisition & External Growth (/accompagner/acquisition) — independent technical, IP, regulatory and organisational due diligence for buy-side, plus CIFSO certification of the target and PMI planning.
+- Transmission & Cession (/accompagner/transmission) — twelve to thirty-six month vendor readiness, data room preparation, CIFSO 5000 certification, coordination with the M&A execution network.
 
 Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network — advisory first, execution via accredited partners. A dedicated acquisition/cession data room for these workflows is being structured (the CIFSO data room remains reserved for certification evidence: admin, assigned audit partners and the asset owner only).
 
 **Key Pages:**
-- /franchir/lancement — Launch & Structuring cycle
-- /franchir/croissance — Growth & Scaling cycle
-- /franchir/restructuration — Restructuring & Pivot cycle
-- /franchir/acquisition — Acquisition & External Growth cycle (due diligence, target certification, PMI)
-- /franchir/transmission — Transmission & Cession cycle (vendor readiness, data room, certification)
+- /accompagner/lancement — Launch & Structuring cycle
+- /accompagner/croissance — Growth & Scaling cycle
+- /accompagner/restructuration — Restructuring & Pivot cycle
+- /accompagner/acquisition — Acquisition & External Growth cycle (due diligence, target certification, PMI)
+- /accompagner/transmission — Transmission & Cession cycle (vendor readiness, data room, certification)
 
 ---
 
@@ -269,11 +269,11 @@ Incorporated: Aegryn, Switzerland
 | Investors | /fr/investisseurs | Financing & investors |
 | Industries | /fr/industries | Five industry hubs |
 | Industry detail | /fr/industries/[slug] | Per-industry page |
-| Lancement & Structuration | /fr/franchir/lancement | Launch & Structuring cycle |
-| Croissance & Mise à l'échelle | /fr/franchir/croissance | Growth & Scaling cycle |
-| Restructuration & Pivot | /fr/franchir/restructuration | Restructuring & Pivot cycle |
-| Acquisition & Croissance externe | /fr/franchir/acquisition | Acquisition due diligence cycle |
-| Transmission & Cession | /fr/franchir/transmission | Transfer & cession cycle |
+| Lancement & Structuration | /fr/accompagner/lancement | Launch & Structuring cycle |
+| Croissance & Mise à l'échelle | /fr/accompagner/croissance | Growth & Scaling cycle |
+| Restructuration & Pivot | /fr/accompagner/restructuration | Restructuring & Pivot cycle |
+| Acquisition & Croissance externe | /fr/accompagner/acquisition | Acquisition due diligence cycle |
+| Transmission & Cession | /fr/accompagner/transmission | Transfer & cession cycle |
 | Grade | /fr/grade | Certification CIFSO 5000 |
 | Brochure | /fr/grade/brochure | Full protocol presentation |
 | Grade Submit | /fr/grade/submit | Submit for certification |

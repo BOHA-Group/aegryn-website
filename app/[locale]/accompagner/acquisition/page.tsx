@@ -8,7 +8,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const c = getCycleContent(locale, 'acquisition')
-  return generateAegrynMetadata({ title: c.meta.title, description: c.meta.description, path: '/franchir/acquisition', locale })
+  return generateAegrynMetadata({ title: c.meta.title, description: c.meta.description, path: '/accompagner/acquisition', locale })
 }
 
 export default async function FranchirAcquisitionPage({ params }: Props) {

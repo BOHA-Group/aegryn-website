@@ -30,12 +30,12 @@ const STATIC_ROUTES = [
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Franchir — cycles de vie (intro en section accueil #franchir) ────────────
-  { path: '/franchir/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/franchir/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/franchir/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/franchir/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/franchir/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
+  // ── Franchir — cycles de vie (intro en section accueil #accompagner) ────────────
+  { path: '/accompagner/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/accompagner/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/accompagner/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/accompagner/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/accompagner/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
   // Catalogue, transactions et enchères : archivés (_archive/legacy-transact), /transact/* redirigé (301).
   // ── Grade & Certification CIFSO 5000 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
