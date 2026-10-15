@@ -66,10 +66,10 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale, panel
         {questions.map((item, i) => {
           const yes = answers[i] === true
           return (
-            <li key={i} className="py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+            <li key={i} className={panel ? 'grid grid-cols-[1.5rem_1fr] gap-x-4 gap-y-3 py-5' : 'py-5 flex flex-col sm:flex-row sm:items-center gap-4'}>
               <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
               <p className="font-sans text-[14px] text-ag-black leading-relaxed flex-1">{item.q}</p>
-              <div className="flex items-center gap-2 shrink-0" role="group" aria-label={`Question ${i + 1}`}>
+              <div className={panel ? 'col-start-2 flex flex-wrap items-center gap-2' : 'flex items-center gap-2 shrink-0'} role="group" aria-label={`Question ${i + 1}`}>
                 {([true, false] as const).map(v => {
                   const active = answers[i] === v
                   return (
@@ -91,7 +91,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale, panel
                 {yes && (
                   <Link
                     href={`/${locale}/accompagner/${item.cycle}`}
-                    className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-navy transition-colors ml-2"
+                    className={`inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-navy transition-colors ${panel ? 'mt-1 w-full' : 'ml-2'}`}
                   >
                     {ui.seeCycle} — {cycleTitle[item.cycle]} <ArrowUpRight size={11} />
                   </Link>

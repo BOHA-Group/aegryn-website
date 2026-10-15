@@ -66,7 +66,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Hero : patchwork vidéo sur le tempo de la musique, sous la barre de navigation transparente */}
       <section data-nav-hero className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
         <HeroPatchwork />
-        <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/90 via-ag-navy/20 to-ag-navy/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/90 via-ag-navy/40 to-ag-navy/45" />
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="mx-auto px-6 md:px-12 max-w-7xl px-6 pb-16 md:px-12 md:pb-20">
             <TypedTitle
@@ -76,7 +76,7 @@ export default async function BoutiquePage({ params }: Props) {
               className="mb-8 max-w-4xl font-sans font-bold leading-[1.15] tracking-[-0.03em] text-white"
               style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
             />
-            <p className="max-w-2xl text-[16px] leading-relaxed text-white/85"><span className="font-semibold text-ag-apex">{BOUTIQUE.signature[lang]}</span> {BOUTIQUE.sub[lang]}</p>
+            <p className="max-w-2xl text-[16px] leading-relaxed text-white" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.45)' }}><span className="font-semibold text-ag-apex">{BOUTIQUE.signature[lang]}</span> {BOUTIQUE.sub[lang]}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href={{ pathname: '/contact', query: { subject: 'project' } }} className="rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white">
                 {BOUTIQUE.cta1[lang]}
