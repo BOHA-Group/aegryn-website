@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
@@ -7,7 +7,7 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
-import { SegmentsSection }     from '@/components/sections/SegmentsSection'
+import { HomeBoutiqueSection }  from '@/components/sections/HomeBoutiqueSection'
 import type { Metadata } from 'next'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 
@@ -56,6 +56,7 @@ const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 export default function AboutPage() {
   const t  = useTranslations('about')
   const ta = useTranslations('aboutPage')
+  const locale = useLocale()
 
   return (
     <>
@@ -324,7 +325,7 @@ export default function AboutPage() {
       </section>
 
       {/* Segments clients */}
-      <SegmentsSection />
+      <HomeBoutiqueSection locale={locale} />
 
 
 

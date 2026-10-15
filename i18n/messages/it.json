@@ -963,8 +963,8 @@
   "about": {
     "hero": {
       "imageAlt": "Regata di barche a vela in mare",
-      "title": "I progetti che segnano un mercato\nsi inquadrano, si realizzano, si accompagnano.",
-      "desc": "Selezioniamo la rarità: pochi progetti, e un numero limitato di mandati alla volta. Un interlocutore nominato, dalla prima decisione alla consegna. Ciò che consegniamo può essere ripreso, verificato e trasmesso senza di noi."
+      "title": "Una società integrata.\nUna boutique imprenditoriale.",
+      "desc": "La società inquadra, realizza e accompagna le decisioni dei dirigenti di PMI e imprese di medie dimensioni. La Boutique guida, con lo stesso know-how, un numero limitato di progetti emblematici. Un interlocutore nominato, dalla prima decisione alla consegna."
     },
     "name": {
       "label": "Il nome",
@@ -991,7 +991,7 @@
       "label": "La nostra visione",
       "segments": [
         {
-          "t": "Aegryn vuole essere la boutique imprenditoriale di riferimento per i progetti emblematici",
+          "t": "Aegryn vuole essere la società integrata di riferimento per i dirigenti e la boutique imprenditoriale dei progetti emblematici",
           "bold": true
         },
         {
@@ -1015,7 +1015,7 @@
     },
     "contribution": {
       "label": "Il nostro contributo",
-      "title": "Una boutique,\nnon una struttura pesante.",
+      "title": "Una società integrata,\nnon una struttura pesante.",
       "desc": "Studi, agenzie ed esperti esistono già, e lavoriamo con i migliori tra loro non appena un progetto lo giustifica. Ciò che mancava è qualcuno che tenga insieme il tutto: un progetto inquadrato, realizzato e accompagnato dallo stesso interlocutore, senza la pesantezza di una grande struttura.",
       "items": [
         {

@@ -963,14 +963,14 @@
   "about": {
     "hero": {
       "imageAlt": "Racing sailboats competing on the sea",
-      "title": "The projects that mark a market\nare framed, delivered, accompanied.",
-      "desc": "We select rarity: few projects, and a limited number of mandates at a time. A named counterpart, from the first decision to delivery. What we deliver can be taken over, audited and transferred without us."
+      "title": "An integrated firm.\nAn entrepreneurial boutique.",
+      "desc": "The firm frames, delivers and accompanies the decisions of SME and mid-sized company leaders. La Boutique leads, with the same know-how, a limited number of emblematic projects. A named counterpart, from the first decision to delivery."
     },
     "vision": {
       "label": "Our vision",
       "segments": [
         {
-          "t": "Aegryn wants to be the reference entrepreneurial boutique for emblematic projects",
+          "t": "Aegryn wants to be the reference integrated firm for business leaders, and the entrepreneurial boutique for emblematic projects",
           "bold": true
         },
         {
@@ -994,7 +994,7 @@
     },
     "contribution": {
       "label": "Our contribution",
-      "title": "A boutique,\nnot a heavy structure.",
+      "title": "An integrated firm,\nnot a heavy structure.",
       "desc": "Firms, agencies and experts already exist, and we work with the best of them whenever a project calls for it. What was missing is someone to hold the whole: a project framed, delivered and accompanied by the same counterpart, without the weight of a large structure.",
       "items": [
         {

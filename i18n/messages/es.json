@@ -963,8 +963,8 @@
   "about": {
     "hero": {
       "imageAlt": "Regata de veleros de competición en el mar",
-      "title": "Los proyectos que marcan un mercado\nse encuadran, se realizan, se acompañan.",
-      "desc": "Seleccionamos la rareza: pocos proyectos, y un número limitado de mandatos a la vez. Un interlocutor nombrado, de la primera decisión a la entrega. Lo que entregamos puede retomarse, auditarse y transmitirse sin nosotros."
+      "title": "Una firma integrada.\nUna boutique emprendedora.",
+      "desc": "La firma encuadra, realiza y acompaña las decisiones de los directivos de pymes y empresas medianas. La Boutique conduce, con el mismo saber hacer, un número limitado de proyectos emblemáticos. Un interlocutor nombrado, de la primera decisión a la entrega."
     },
     "name": {
       "label": "El nombre",
@@ -991,7 +991,7 @@
       "label": "Nuestra visión",
       "segments": [
         {
-          "t": "Aegryn quiere ser la boutique emprendedora de referencia para los proyectos emblemáticos",
+          "t": "Aegryn quiere ser la firma integrada de referencia para los directivos y la boutique emprendedora de los proyectos emblemáticos",
           "bold": true
         },
         {
@@ -1015,7 +1015,7 @@
     },
     "contribution": {
       "label": "Nuestra contribución",
-      "title": "Una boutique,\nno una estructura pesada.",
+      "title": "Una firma integrada,\nno una estructura pesada.",
       "desc": "Las consultoras, las agencias y los expertos ya existen, y trabajamos con los mejores de ellos en cuanto un proyecto lo justifica. Lo que faltaba es alguien que sostenga el conjunto: un proyecto encuadrado, realizado y acompañado por el mismo interlocutor, sin la pesadez de una gran estructura.",
       "items": [
         {

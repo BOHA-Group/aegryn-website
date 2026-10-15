@@ -963,8 +963,8 @@
   "about": {
     "hero": {
       "imageAlt": "Regattaboote im Wettkampf auf offener See",
-      "title": "Projekte, die einen Markt prägen,\nwerden gerahmt, umgesetzt, begleitet.",
-      "desc": "Wir wählen das Seltene: wenige Projekte, und eine begrenzte Zahl von Mandaten gleichzeitig. Ein benannter Ansprechpartner, von der ersten Entscheidung bis zur Abnahme. Was wir liefern, kann ohne uns übernommen, geprüft und übergeben werden."
+      "title": "Eine integrierte Firma.\nEine unternehmerische Boutique.",
+      "desc": "Die Firma rahmt, setzt um und begleitet die Entscheidungen von Führungskräften in KMU und mittelständischen Unternehmen. La Boutique führt mit demselben Know-how eine begrenzte Zahl emblematischer Projekte. Ein benannter Ansprechpartner, von der ersten Entscheidung bis zur Abnahme."
     },
     "name": {
       "label": "Der Name",
@@ -991,7 +991,7 @@
       "label": "Unsere Vision",
       "segments": [
         {
-          "t": "Aegryn will die unternehmerische Referenz-Boutique für emblematische Projekte sein",
+          "t": "Aegryn will die integrierte Referenzfirma für Führungskräfte sein und die unternehmerische Boutique für emblematische Projekte",
           "bold": true
         },
         {
@@ -1015,7 +1015,7 @@
     },
     "contribution": {
       "label": "Unser Beitrag",
-      "title": "Eine Boutique,\nkeine schwere Struktur.",
+      "title": "Eine integrierte Firma,\nkeine schwere Struktur.",
       "desc": "Kanzleien, Agenturen und Experten gibt es bereits, und wir arbeiten mit den besten von ihnen, sobald ein Projekt es verlangt. Was fehlte, ist jemand, der das Ganze hält: ein Projekt, das vom selben Ansprechpartner gerahmt, umgesetzt und begleitet wird, ohne die Schwere einer grossen Struktur.",
       "items": [
         {

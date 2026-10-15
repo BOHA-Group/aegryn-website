@@ -963,8 +963,8 @@
   "about": {
     "hero": {
       "imageAlt": "Zeilboten in wedstrijd op open zee",
-      "title": "De projecten die een markt tekenen\nworden gekaderd, gerealiseerd, begeleid.",
-      "desc": "Wij selecteren het zeldzame: weinig projecten, en een beperkt aantal mandaten tegelijk. Een benoemde gesprekspartner, van de eerste beslissing tot de oplevering. Wat wij opleveren kan zonder ons worden overgenomen, geauditeerd en overgedragen."
+      "title": "Een geïntegreerd bureau.\nEen ondernemende boutique.",
+      "desc": "Het bureau kadert, realiseert en begeleidt de beslissingen van leidinggevenden van kmo’s en middelgrote ondernemingen. La Boutique leidt, met dezelfde expertise, een beperkt aantal emblematische projecten. Een benoemde gesprekspartner, van de eerste beslissing tot de oplevering."
     },
     "name": {
       "label": "De naam",
@@ -991,7 +991,7 @@
       "label": "Onze visie",
       "segments": [
         {
-          "t": "Aegryn wil de ondernemende referentieboutique zijn voor emblematische projecten",
+          "t": "Aegryn wil het geïntegreerde referentiebureau zijn voor leidinggevenden en de ondernemende boutique voor emblematische projecten",
           "bold": true
         },
         {
@@ -1015,7 +1015,7 @@
     },
     "contribution": {
       "label": "Onze bijdrage",
-      "title": "Een boutique,\ngeen zware structuur.",
+      "title": "Een geïntegreerd bureau,\ngeen zware structuur.",
       "desc": "Kantoren, agentschappen en experts bestaan al, en wij werken met de besten onder hen zodra een project het rechtvaardigt. Wat ontbrak, is iemand die het geheel vasthoudt: een project gekaderd, gerealiseerd en begeleid door dezelfde gesprekspartner, zonder de zwaarte van een grote structuur.",
       "items": [
         {

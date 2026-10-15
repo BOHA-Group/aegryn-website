@@ -923,8 +923,8 @@
   "about": {
     "hero": {
       "imageAlt": "Régate de voiliers en compétition sur la mer",
-      "title": "Les projets qui marquent un marché\nse cadrent, se réalisent, s’accompagnent.",
-      "desc": "Nous sélectionnons la rareté : peu de projets, et un nombre limité de mandats à la fois. Un interlocuteur nommé, du premier arbitrage à la réception. Ce que nous livrons peut être repris, audité et transmis sans nous."
+      "title": "Un cabinet intégré.\nUne boutique entrepreneuriale.",
+      "desc": "Le cabinet cadre, réalise et accompagne les décisions des dirigeants de PME et d’ETI. La Boutique conduit, avec le même savoir-faire, un nombre limité de projets emblématiques. Un interlocuteur nommé, du premier arbitrage à la réception."
     },
     "name": {
       "label": "Le nom",
@@ -951,7 +951,7 @@
       "label": "Notre vision",
       "segments": [
         {
-          "t": "Aegryn veut être la boutique entrepreneuriale de référence pour les projets emblématiques",
+          "t": "Aegryn veut être le cabinet intégré de référence des dirigeants, et la boutique entrepreneuriale des projets emblématiques",
           "bold": true
         },
         {
@@ -975,7 +975,7 @@
     },
     "contribution": {
       "label": "Notre contribution",
-      "title": "Une boutique,\npas une structure lourde.",
+      "title": "Un cabinet intégré,\npas une structure lourde.",
       "desc": "Les cabinets, les agences et les experts existent déjà, et nous travaillons avec les meilleurs d’entre eux dès qu’un projet le justifie. Ce qui manquait, c’est quelqu’un qui tienne l’ensemble : un projet cadré, réalisé et accompagné par le même interlocuteur, sans la lourdeur d’une grande structure.",
       "items": [
         {
