@@ -56,7 +56,7 @@ export const FRANCHIR_NL: CycleContent[] = [
     eyebrow:  'Begeleiden · Lancering & Structurering',
     h1:       'De juiste basis leggen voor u uitgeeft.',
     subtitle: 'Leveranciers, technologie, intellectueel eigendom, compliance, governance: de keuzes van de eerste maanden kosten weinig om te nemen en zeer veel om te corrigeren.',
-    verbs:    ['Kaderen', 'Bouwen', 'Rekruteren'],
+    verbs:    ['Kaderen', 'Realiseren', 'Selecteren'],
     constat: {
       text:   'De transparantieverplichtingen van de Europese AI-verordening (art. 50) gelden sinds 2 augustus 2026, met boetes tot 15 M€ of 3 % van de wereldwijde omzet voor verplichtingen buiten de verboden praktijken. Een organisatie die een product met AI lanceert, is vanaf dag één betrokken.',
       source: 'AI-verordening (EU).',

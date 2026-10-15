@@ -23,7 +23,7 @@ return {
     default: 'Aegryn — Engineered to Last',
     template: '%s | Aegryn',
   },
-  description: 'Aegryn is a Swiss integrated advisory group — cabinet de conseil intégré — covering the full organisation lifecycle: CIFSO 5000 certification (evidence-backed ownership and value record), CIFSO Valuation Index, advisory (strategy, compliance, technology, talent, M&A), executive talent, asset engineering, expert network and Aegryn Magazine. St-Sulpice (VD), Switzerland — serving Europe. Built to Last.',
+  description: 'Aegryn is a Swiss integrated firm covering the organisation lifecycle: frame, deliver, accompany, select, stay informed. La Boutique for signature projects. CIFSO 5000 certification and CIFSO Valuation Index as standalone tools. St-Sulpice (VD), Switzerland, serving Europe. Built to Last.',
   keywords: [
     'Aegryn', 'Swiss Tech', 'digital assets', 'actifs numériques',
     'cabinet de conseil intégré', 'integrated advisory group', 'cabinet conseil tech suisse',
@@ -60,7 +60,7 @@ return {
   manifest: '/manifest.webmanifest',
   openGraph: {
     title:       'Aegryn — Engineered to Last',
-    description: 'Swiss integrated advisory group. CIFSO 5000 certification, CIFSO Valuation Index, lifecycle support across launch, growth, restructuring, acquisition and transfer — Built to Last.',
+    description: 'Swiss integrated firm. Frame, deliver, accompany, select, stay informed, and La Boutique for signature projects. Built to Last.',
     url:         'https://aegryn.com',
     siteName:    'Aegryn',
     images:      [{ url: '/og/default.jpg', width: 1200, height: 630, alt: 'Aegryn — Engineered to Last' }],
@@ -72,7 +72,7 @@ return {
     site:    '@aegrynhq',
     creator: '@aegrynhq',
     title:   'Aegryn — Engineered to Last',
-    description: 'Swiss integrated advisory group. CIFSO 5000 certification & Valuation Index.',
+    description: 'Swiss integrated firm and La Boutique for signature projects.',
     images:  ['/og/default.jpg'],
   },
   verification: {

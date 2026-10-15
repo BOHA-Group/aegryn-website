@@ -120,7 +120,7 @@
     "whoJoinDesc": "Werken bij Aegryn, talenten, partners",
     "whoCareers": "Werken bij Aegryn",
     "whoTalent": "Executive Selectie",
-    "whoAlliances": "Partner worden",
+    "whoAlliances": "Partners",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
     "thinkingMarketDesc": "Data, analyses en inzichten van degenen die de markt maken.",
@@ -565,11 +565,11 @@
         "desc": "Wij structureren de organisatie, de leidinggevende teams en de opvolgingsplannen die een onderneming overdraagbaar, financierbaar en veerkrachtig maken, voorbij de oprichter.",
         "why": {
           "title": "Waarom advies over talent en organisatie?",
-          "desc": "Een buitensporige afhankelijkheid van de oprichter kan de waardering van een onderneming bij een verkoop of kapitaalronde met 20 tot 30 % verlagen. Overnemende partijen, investeerders en kredietverstrekkers beoordelen systematisch de diepgang van het managementteam, het opvolgingsplan en het vermogen van de organisatie om zonder één sleutelpersoon te functioneren. Wij helpen leidinggevenden deze dimensie te documenteren en te versterken voordat ze op de proef wordt gesteld door een transactie, een kritieke aanwerving of een onvoorzien vertrek."
+          "desc": "Een buitensporige afhankelijkheid van de oprichter kan de waardering van een onderneming bij een verkoop of kapitaalronde met 20 tot 30 % verlagen. Overnemende partijen, investeerders en kredietverstrekkers beoordelen systematisch de diepgang van het managementteam, het opvolgingsplan en het vermogen van de organisatie om zonder één sleutelpersoon te functioneren. Wij helpen leidinggevenden deze dimensie te documenteren en te versterken voordat ze op de proef wordt gesteld door een transactie, een kritieke aanselectie of een onvoorzien vertrek."
         },
         "approach": {
           "title": "Onze aanpak",
-          "desc": "Wij leveren geen theoretisch organigram. Wij diagnosticeren de werkelijke afhankelijkheid, brengen kritieke vaardigheden in kaart en structureren een uitvoerbaar opvolgings- en wervingsplan, afgestemd op uw financierings-, verkoop- of groeitermijnen.",
+          "desc": "Wij leveren geen theoretisch organigram. Wij diagnosticeren de werkelijke afhankelijkheid, brengen kritieke vaardigheden in kaart en structureren een uitvoerbaar opvolgings- en selectiesplan, afgestemd op uw financierings-, verkoop- of groeitermijnen.",
           "steps": [
             {
               "label": "Afhankelijkheidsdiagnose",
@@ -584,8 +584,8 @@
               "desc": "Structurering van het opvolgingsplan, verduidelijking van de rollen van de raad van bestuur en de directie, en invoering van een governance die besluiten buiten de oprichter om documenteert."
             },
             {
-              "label": "Werving & retentie van sleuteltalent",
-              "desc": "Identificatie en werving van ontbrekende leidinggevende profielen via Aegryn Talent, en structurering van retentiemechanismen (aandelenincentives, loopbaanplan, cultuur)."
+              "label": "Selectie & retentie van sleuteltalent",
+              "desc": "Identificatie en selectie van ontbrekende leidinggevende profielen via Aegryn Talent, en structurering van retentiemechanismen (aandelenincentives, loopbaanplan, cultuur)."
             }
           ]
         },
@@ -611,7 +611,7 @@
             "desc": ""
           },
           {
-            "label": "Executive werving & organisatieontwerp",
+            "label": "Executive selectie & organisatieontwerp",
             "desc": ""
           }
         ]
@@ -1130,8 +1130,8 @@
   "career": {
     "hero": {
       "label": "Werken bij Aegryn",
-      "title": "Advisory & Experts in Digitale Ecosystemen",
-      "desc": "Aegryn is een geïntegreerde adviesgroep. Wij begeleiden Europese organisaties gedurende hun hele levenscyclus: advies, opbouw, koers, talent, marktintelligentie. Wij bezetten geen niche: wij bepalen de regels.",
+      "title": "Projecten bouwen die standhouden.",
+      "desc": "Aegryn is een geïntegreerd bureau, met La Boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven. Wij groeien via coöptatie en spontane sollicitaties, met senior profielen die een project graag tot het einde leiden.",
       "imageAlt": "Door de zon beschenen bergtop weerspiegeld in een bergmeer"
     },
     "positions": {
@@ -1143,9 +1143,9 @@
     "apply": "Solliciteren",
     "spontaneous": "Open sollicitatie",
     "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Gecertificeerd om te duren, gebouwd door experts die erin geloven.",
-      "cta": "Ontdek Advisory"
+      "label": "Het bureau",
+      "title": "Gebouwd om te duren, geleid door experts die erin geloven.",
+      "cta": "Onze diensten ontdekken"
     },
     "domains": {
       "all": "Alle domeinen",
@@ -1159,7 +1159,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Gebaseerd op drie principes, precisie, duurzaamheid, onafhankelijkheid, begeleidt Aegryn organisaties uit alle sectoren gedurende hun hele levenscyclus met een strengheid die de markt nog niet bood. Onze eigen assets, ons certificeringsprotocol en ons advisorynetwerk vormen een geïntegreerd ecosysteem voor de komende 10 jaar.",
+      "desc": "Gebaseerd op drie principes, precisie, duurzaamheid, onafhankelijkheid, begeleidt Aegryn leidinggevenden en ondernemers, van beslissing tot realisatie en daarna in elke levensfase van de organisatie.",
       "label": "Carrières",
       "tagline": "Aegryn | Saint-Sulpice, Zwitserland",
       "title": "Bouwen wat blijft."
@@ -1169,8 +1169,8 @@
       "title": "Wat wij doen. De profielen die wij zoeken.",
       "items": {
         "accompagner": {
-          "title": "Advies & Strategie",
-          "desc": "U adviseert leidinggevenden over de beslissingen die hun organisatie bepalen: strategie, compliance, technologie, organisatie, externe groei. U bent een senior, autonoom profiel: oud-partner, practice director, executive consultant."
+          "title": "Kadering & Strategie",
+          "desc": "U kadert de beslissingen die een organisatie binden: strategie, compliance, technologie, organisatie, overname. U bent een zelfstandig seniorprofiel: voormalig partner van een adviesbureau, strategiedirecteur of operator, op uw gemak voor een directiecomité."
         },
         "construire": {
           "title": "Engineering & Product",
@@ -1181,8 +1181,8 @@
           "desc": "U stuurt de cruciale fasen van de levenscyclus van onze klanten: lancering, opschaling, herstructurering, post-acquisitie-integratie, overdracht. U bent transformatiedirecteur, interim-manager of een operationeel profiel dat verandering in de praktijk uitvoert."
         },
         "recruter": {
-          "title": "Talent & Research",
-          "desc": "U identificeert en plaatst leidinggevenden en experts voor onze klanten. U bent headhunter of researcher voor leidinggevende, specialistische en transformatieprofielen, met een sterk Europees netwerk."
+          "title": "Talent & Selectie",
+          "desc": "U identificeert en selecteert leidinggevenden en experts voor onze klanten en onze projecten. U bent headhunter of researcher voor leiderschaps-, expert- en transformatieprofielen, met een sterk netwerk."
         },
         "informer": {
           "title": "Intelligence & Content",
@@ -1204,7 +1204,7 @@
           "title": "Duurzaamheid"
         },
         "precision": {
-          "desc": "Elk detail telt. Kwaliteit is geen functie, het is een standaard.",
+          "desc": "Elke analyse, elke aanbeveling, elke oplevering berust op verifieerbare gegevens, niet op intuïtie.",
           "title": "Precisie"
         },
         "sovereignty": {
@@ -1212,7 +1212,7 @@
           "title": "Onafhankelijkheid"
         },
         "trust": {
-          "desc": "Transparantie naar klanten, partners en binnen het team.",
+          "desc": "Vertrouwen verklaar je niet, je bewijst het door de samenhang tussen wat wij aanbevelen en wat wij doen.",
           "title": "Vertrouwen"
         }
       },
@@ -1220,8 +1220,8 @@
       "title": "Waar wij voor staan."
     },
     "meta": {
-      "title": "Carrière | Ondernemende boutique | Aegryn",
-      "desc": "Word onderdeel van Aegryn, een ondernemende boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
+      "title": "Carrière | Aegryn",
+      "desc": "Word deel van Aegryn, een geïntegreerd bureau, en van La Boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven."
     }
   },
   "assetStatus": {
@@ -1814,11 +1814,11 @@
       "items": [
         {
           "title": "Startups & Scale-ups",
-          "desc": "De juiste technische en strategische fundamenten leggen. Voorbereiden op de volgende financieringsronde of exit. Structurele fouten vermijden die later duur zijn om te corrigeren."
+          "desc": "De juiste strategische en technologische fundamenten leggen, de volgende cyclus kaderen en de volgende stap voorbereiden."
         },
         {
           "title": "Groeiende KMO's",
-          "desc": "Transformeren, certificeren en rekruteren vóór verkoop of fondsenwerving. Assets bouwen die de toets van kopers en investeerders doorstaan."
+          "desc": "De organisatie kaderen, transformeren en structureren voordat ze groeit, overneemt of overdraagt."
         },
         {
           "title": "Middelgrote ondernemingen",
@@ -1998,7 +1998,7 @@
         {
           "num": "04",
           "title": "Closing & Post-acquisitie",
-          "desc": "Begeleiding bij ondertekening, post-acquisitie-integratie, werving van uitvoeringsteams."
+          "desc": "Begeleiding bij ondertekening, post-acquisitie-integratie, selectie van uitvoeringsteams."
         }
       ],
       "fundsNote": "Wij ondersteunen ook fondsen en family offices als transitie operating partner, uitbesteed, op hun deelnemingen.",
@@ -7389,7 +7389,7 @@
     "servicesBuild": "Asset Engineering",
     "advisory": "Strategisch advies",
     "acquisition": "Acquisitieondersteuning",
-    "alliances": "Allianties & Partners",
+    "alliances": "Partners",
     "experts": "Expertnetwerk",
     "valuation": "Waardering",
     "grade": "Certificeringssysteem",
@@ -10690,8 +10690,8 @@
       "label": "DRIE SITUATIES DIE WIJ OPLOSSEN",
       "items": [
         "Uw deelneming heeft geen operationeel team om de waarde te sturen.",
-        "Uw deal flow is technisch en organisatorisch moeilijk te lezen.",
-        "Uw exit is over 24 tot 36 maanden en de organisatie is niet klaar."
+        "Uw opportuniteiten zijn technisch en organisatorisch moeilijk te lezen.",
+        "Een belangrijke stap nadert (overname, overdracht) en de organisatie is er niet klaar voor."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "Wij nemen een operationele rol in uw deelnemingen: governance, talent, dagelijkse waardesturing. Aanwezigheid ter plaatse, niet alleen in het board."
         },
         {
-          "title": "Technische en organisatorische deal-flow-screening",
+          "title": "Technische en organisatorische screening van opportuniteiten",
           "desc": "Vóór de investering kwalificeren wij targets op de 5 CIFSO-dimensies: code & architectuur, IP & rechten, financiën & metrics, security & soevereiniteit, organisatie & talent. U investeert met een volledige lezing."
         },
         {
-          "title": "Value creation na de acquisitie en exit-voorbereiding",
+          "title": "Waardecreatie na de overname en voorbereiding van belangrijke stappen",
           "desc": "Na de acquisitie structureren wij het waardeplan over 12 tot 36 maanden, documenteren de organisatie en bereiden de overdracht onder de beste voorwaarden voor."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "EERSTE CONTACT",
-      "title": "Een portefeuille te valoriseren of over te dragen?",
+      "title": "Een deelneming om te structureren?",
       "desc": "Fonds, family office, holding met een te structureren deelneming. Antwoord binnen 2 werkdagen.",
       "cta": "Laten we uw portefeuille bespreken"
     },

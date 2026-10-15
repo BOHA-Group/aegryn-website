@@ -135,7 +135,7 @@
     "whoJoinDesc": "Travailler chez Aegryn, talents, partenaires",
     "whoCareers": "Travailler chez Aegryn",
     "whoTalent": "Sélection Executive",
-    "whoAlliances": "Devenir partenaire",
+    "whoAlliances": "Partenaires",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
     "talent": "Talent",
@@ -565,11 +565,11 @@
         "desc": "Nous structurons l'organisation, les équipes dirigeantes et les plans de succession qui rendent une entreprise transmissible, finançable et résiliente au-delà de son fondateur.",
         "why": {
           "title": "Pourquoi le conseil en talent et organisation ?",
-          "desc": "Une dépendance excessive au fondateur peut réduire la valorisation d'une entreprise de 20 à 30 % lors d'une cession ou d'une levée de fonds. Les acquéreurs, investisseurs et prêteurs évaluent systématiquement la profondeur de l'équipe de direction, le plan de succession et la capacité de l'organisation à fonctionner sans une personne clé. Nous aidons les dirigeants à documenter et à renforcer cette dimension avant qu'elle ne soit testée par une transaction, un recrutement critique ou un départ imprévu."
+          "desc": "Une dépendance excessive au fondateur peut réduire la valorisation d'une entreprise de 20 à 30 % lors d'une cession ou d'une levée de fonds. Les acquéreurs, investisseurs et prêteurs évaluent systématiquement la profondeur de l'équipe de direction, le plan de succession et la capacité de l'organisation à fonctionner sans une personne clé. Nous aidons les dirigeants à documenter et à renforcer cette dimension avant qu'elle ne soit testée par une transaction, un sélection critique ou un départ imprévu."
         },
         "approach": {
           "title": "Notre approche",
-          "desc": "Nous ne livrons pas un organigramme théorique. Nous diagnostiquons la dépendance réelle, cartographions les compétences critiques et structurons un plan de succession et de recrutement exécutable, aligné avec vos échéances de financement, de cession ou de croissance.",
+          "desc": "Nous ne livrons pas un organigramme théorique. Nous diagnostiquons la dépendance réelle, cartographions les compétences critiques et structurons un plan de succession et de sélection exécutable, aligné avec vos échéances de financement, de cession ou de croissance.",
           "steps": [
             {
               "label": "Diagnostic de dépendance",
@@ -584,8 +584,8 @@
               "desc": "Structuration du plan de succession, clarification des rôles du board et des dirigeants, et mise en place d'une gouvernance qui documente les décisions au-delà du fondateur."
             },
             {
-              "label": "Recrutement & rétention des talents clés",
-              "desc": "Identification et recrutement des profils de direction manquants via Aegryn Talent, et structuration des mécanismes de rétention (intéressement, plan de carrière, culture)."
+              "label": "Sélection & rétention des talents clés",
+              "desc": "Identification et sélection des profils de direction manquants via Aegryn Talent, et structuration des mécanismes de rétention (intéressement, plan de carrière, culture)."
             }
           ]
         },
@@ -611,7 +611,7 @@
             "desc": ""
           },
           {
-            "label": "Recrutement exécutif & structuration organisationnelle",
+            "label": "Sélection exécutif & structuration organisationnelle",
             "desc": ""
           }
         ]
@@ -1090,14 +1090,14 @@
   "career": {
     "hero": {
       "label": "Travailler chez Aegryn",
-      "title": "Construire ce qui dure.",
-      "desc": "Aegryn est un cabinet de conseil intégré. Nous accompagnons les organisations européennes sur tout leur cycle de vie : conseil, construction, trajectoire, talents, intelligence de marché. Nous n'occupons pas une niche : nous en définissons les règles.",
+      "title": "Bâtir des projets qui durent.",
+      "desc": "Aegryn est un cabinet intégré, avec La Boutique pour les projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer. Nous grandissons par cooptation et par candidature spontanée, avec des profils seniors qui aiment mener un projet jusqu'au bout.",
       "imageAlt": "Sommet ensoleillé se reflétant dans un lac de montagne"
     },
     "about": {
       "label": "Qui sommes-nous",
       "title": "Une infrastructure, pas une agence.",
-      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn accompagne les organisations européennes de tous secteurs sur tout leur cycle de vie avec une rigueur que le marché n'offrait pas encore. Nos actifs propriétaires, notre protocole de certification et notre réseau advisory forment un écosystème intégré conçu pour les 10 prochaines années.",
+      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn accompagne les dirigeants et les entrepreneurs, de la décision à la réalisation, puis à chaque cycle de vie de l'organisation.",
       "tagline": "Suisse · Europe · Indépendant"
     },
     "crafts": {
@@ -1105,8 +1105,8 @@
       "title": "Ce que nous faisons. Les profils que nous cherchons.",
       "items": {
         "accompagner": {
-          "title": "Conseil & Stratégie",
-          "desc": "Vous conseillez des dirigeants sur les décisions qui engagent leur organisation : stratégie, conformité, technologie, organisation, croissance externe. Vous êtes un profil senior autonome : ancien associé, directeur de practice, consultant exécutif."
+          "title": "Cadrage & Stratégie",
+          "desc": "Vous cadrez les décisions qui engagent une organisation : stratégie, conformité, technologie, organisation, reprise. Vous êtes un profil senior autonome : ancien associé de cabinet, directeur de la stratégie ou opérateur, à l'aise face à un comité de direction."
         },
         "construire": {
           "title": "Engineering & Produit",
@@ -1117,8 +1117,8 @@
           "desc": "Vous pilotez les phases charnières du cycle de vie de nos clients : lancement, passage à l'échelle, restructuration, intégration post-acquisition, transmission. Vous êtes directeur de transformation, manager de transition ou profil opérationnel rompu à l'exécution du changement."
         },
         "recruter": {
-          "title": "Talent & Recherche",
-          "desc": "Vous identifiez et placez des dirigeants et des experts pour nos clients. Vous êtes chasseur de têtes ou researcher sur les profils de direction, d'expertise et de transformation, avec un réseau solide en Europe."
+          "title": "Talent & Sélection",
+          "desc": "Vous identifiez et sélectionnez des dirigeants et des experts pour nos clients et nos projets. Vous êtes chasseur de têtes ou researcher sur les profils de direction, d'expertise et de transformation, avec un réseau solide."
         },
         "informer": {
           "title": "Intelligence & Contenu",
@@ -1132,7 +1132,7 @@
       "items": {
         "precision": {
           "title": "Précision",
-          "desc": "Chaque analyse, chaque certification, chaque conseil repose sur des données vérifiables, pas sur des intuitions."
+          "desc": "Chaque analyse, chaque recommandation, chaque livrable repose sur des données vérifiables, pas sur des intuitions."
         },
         "durability": {
           "title": "Durabilité",
@@ -1144,7 +1144,7 @@
         },
         "trust": {
           "title": "Confiance",
-          "desc": "La confiance ne se déclare pas, elle se prouve par la cohérence entre ce qu'on certifie et ce qu'on défend."
+          "desc": "La confiance ne se déclare pas, elle se prouve par la cohérence entre ce que nous recommandons et ce que nous faisons."
         }
       }
     },
@@ -1158,9 +1158,9 @@
     "apply": "Postuler",
     "spontaneous": "Candidature spontanée",
     "statement": {
-      "cta": "Découvrir Advisory",
-      "label": "Aegryn Advisory",
-      "title": "Certifiés pour durer, construits par des experts qui y croient."
+      "cta": "Découvrir nos métiers",
+      "label": "Le cabinet",
+      "title": "Conçus pour durer, menés par des experts qui y croient."
     },
     "positions": {
       "count": "08",
@@ -1180,8 +1180,8 @@
       "ux": "UX & Design"
     },
     "meta": {
-      "title": "Carrière | Boutique entrepreneuriale | Aegryn",
-      "desc": "Rejoignez Aegryn, boutique entrepreneuriale de projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
+      "title": "Carrière | Aegryn",
+      "desc": "Rejoignez Aegryn, cabinet intégré, et La Boutique pour les projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
     }
   },
   "assetStatus": {
@@ -1774,11 +1774,11 @@
       "items": [
         {
           "title": "Startups & Scale-ups",
-          "desc": "Poser les bonnes bases techniques et stratégiques. Préparer la prochaine levée ou le prochain exit. Éviter les erreurs structurelles qui coûtent cher à corriger plus tard."
+          "desc": "Poser les bonnes fondations stratégiques et technologiques, cadrer le prochain cycle et préparer la prochaine étape."
         },
         {
           "title": "PME en croissance",
-          "desc": "Transformer, certifier et recruter avant de vendre ou de lever des fonds. Construire des actifs qui tiennent la route face aux acquéreurs et aux investisseurs."
+          "desc": "Cadrer, transformer et structurer l’organisation avant de développer, de reprendre ou de transmettre."
         },
         {
           "title": "Entreprises de taille intermédiaire",
@@ -1958,7 +1958,7 @@
         {
           "num": "04",
           "title": "Closing & Post-acquisition",
-          "desc": "Accompagnement au signing, intégration post-acquisition, recrutement des équipes d'exécution."
+          "desc": "Accompagnement au signing, intégration post-acquisition, sélection des équipes d'exécution."
         }
       ],
       "fundsNote": "Nous accompagnons également les fonds et family offices comme operating partner de transition, externalisé, sur leurs participations.",
@@ -7349,7 +7349,7 @@
     "servicesBuild": "Conception d'actifs",
     "advisory": "Conseil stratégique",
     "acquisition": "Soutien à l'acquisition",
-    "alliances": "Alliances & Partenaires",
+    "alliances": "Partenaires",
     "experts": "Réseau d'experts",
     "valuation": "Valorisation",
     "grade": "Système de certification",
@@ -10690,8 +10690,8 @@
       "label": "TROIS SITUATIONS QUE NOUS RÉSOLVONS",
       "items": [
         "Votre participation n'a pas d'équipe opérationnelle pour piloter la valeur.",
-        "Votre deal flow est difficile à lire techniquement et organisationnellement.",
-        "Votre exit est dans 24 à 36 mois et l'organisation n'est pas prête."
+        "Vos opportunités sont difficiles à lire techniquement et organisationnellement.",
+        "Une étape clé approche (reprise, transmission) et l'organisation n'est pas prête."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "Nous prenons un rôle opérationnel dans vos participations : gouvernance, talent, pilotage de la valeur au quotidien. Présence terrain, pas uniquement en board."
         },
         {
-          "title": "Screening deal flow technique et organisationnel",
+          "title": "Screening technique et organisationnel des opportunités",
           "desc": "Avant l'investissement, nous qualifions les cibles sur les 5 dimensions CIFSO : code & architecture, IP & droits, finances & métriques, sécurité & souveraineté, organisation & talent. Vous investissez avec une lecture complète."
         },
         {
-          "title": "Value creation post-acquisition et préparation exit",
+          "title": "Création de valeur après reprise et préparation des étapes clés",
           "desc": "Après l'acquisition, nous structurons le plan de valeur sur 12 à 36 mois, documentons l'organisation et préparons la transmission dans les meilleures conditions."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "PREMIER CONTACT",
-      "title": "Un portefeuille à valoriser ou à céder ?",
+      "title": "Une participation à structurer ?",
       "desc": "Fonds, family office, holding avec une participation à structurer. Réponse sous 2 jours ouvrés.",
       "cta": "Discutons de votre portefeuille"
     },

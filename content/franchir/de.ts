@@ -56,7 +56,7 @@ export const FRANCHIR_DE: CycleContent[] = [
     eyebrow:  'Begleiten · Gründung & Strukturierung',
     h1:       'Die richtigen Grundlagen legen, bevor Sie ausgeben.',
     subtitle: 'Dienstleister, Technologie, geistiges Eigentum, Compliance, Governance: Die Entscheidungen der ersten Monate kosten wenig und sind später sehr teuer zu korrigieren.',
-    verbs:    ['Rahmen', 'Bauen', 'Rekrutieren'],
+    verbs:    ['Rahmen', 'Umsetzen', 'Auswählen'],
     constat: {
       text:   'Die Transparenzpflichten der europäischen KI-Verordnung (Art. 50) gelten seit dem 2. August 2026, mit Bussgeldern von bis zu 15 Mio. € oder 3 % des weltweiten Umsatzes für Pflichten ausserhalb verbotener Praktiken. Wer ein KI-gestütztes Produkt lanciert, ist vom ersten Tag an betroffen.',
       source: 'Verordnung (EU) über künstliche Intelligenz.',

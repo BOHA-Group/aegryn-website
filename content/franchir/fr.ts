@@ -57,7 +57,7 @@ export const FRANCHIR_FR: CycleContent[] = [
     eyebrow:  'Accompagner · Lancement & Structuration',
     h1:       'Poser les bonnes bases avant de dépenser.',
     subtitle: 'Prestataires, technologies, propriété intellectuelle, conformité, gouvernance : les choix des premiers mois coûtent peu à décider et très cher à corriger.',
-    verbs:    ['Cadrer', 'Construire', 'Recruter'],
+    verbs:    ['Cadrer', 'Réaliser', 'Sélectionner'],
     constat: {
       text:   'Les obligations de transparence du règlement européen sur l’IA (art. 50) s’appliquent depuis le 2 août 2026, avec des amendes pouvant atteindre 15 M€ ou 3 % du chiffre d’affaires mondial pour les obligations hors pratiques interdites. Une organisation qui lance un produit utilisant l’IA est concernée dès le premier jour.',
       source: 'Règlement (UE) sur l’IA.',

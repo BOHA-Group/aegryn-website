@@ -127,7 +127,7 @@
     "whoJoinDesc": "Work at Aegryn, talent, partners",
     "whoCareers": "Work at Aegryn",
     "whoTalent": "Executive Selection",
-    "whoAlliances": "Become a partner",
+    "whoAlliances": "Partners",
     "talent": "Talent",
     "industries": "Industries",
     "industriesDesc": "All sectors",
@@ -584,8 +584,8 @@
               "desc": "Structuring of the succession plan, clarification of board and executive roles, and implementation of governance that documents decisions beyond the founder."
             },
             {
-              "label": "Recruitment & retention of key talent",
-              "desc": "Identification and recruitment of missing leadership profiles via Aegryn Talent, and structuring of retention mechanisms (equity incentives, career path, culture)."
+              "label": "Selection & retention of key talent",
+              "desc": "Identification and selection of missing leadership profiles via Aegryn Talent, and structuring of retention mechanisms (equity incentives, career path, culture)."
             }
           ]
         },
@@ -611,7 +611,7 @@
             "desc": ""
           },
           {
-            "label": "Executive recruitment & organisational design",
+            "label": "Executive selection & organisational design",
             "desc": ""
           }
         ]
@@ -1130,8 +1130,8 @@
   "career": {
     "hero": {
       "label": "Work at Aegryn",
-      "title": "Advisory & Digital Ecosystem Experts",
-      "desc": "Aegryn is an integrated advisory group. We support European organisations across their entire lifecycle: advisory, build, trajectory, talent, market intelligence. We do not occupy a niche: we define its rules.",
+      "title": "Building projects that last.",
+      "desc": "Aegryn is an integrated firm, with La Boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed. We grow by co-optation and unsolicited applications, with senior profiles who like to take a project all the way through.",
       "imageAlt": "Sunlit mountain peak reflected in an alpine lake"
     },
     "positions": {
@@ -1143,9 +1143,9 @@
     "apply": "Apply",
     "spontaneous": "Unsolicited application",
     "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Certified to last, built by experts who believe in it.",
-      "cta": "Discover Advisory"
+      "label": "The firm",
+      "title": "Built to last, led by experts who believe in it.",
+      "cta": "Discover our services"
     },
     "domains": {
       "all": "All domains",
@@ -1159,7 +1159,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Founded on three principles, precision, durability, independence, Aegryn supports organisations across all sectors throughout their lifecycle with a rigour the market had yet to offer. Our proprietary assets, certification protocol and advisory network form an integrated ecosystem built for the next 10 years.",
+      "desc": "Founded on three principles, precision, durability, independence, Aegryn supports business leaders and entrepreneurs, from decision to delivery, then through every stage of the organisation's lifecycle.",
       "label": "Careers",
       "tagline": "Aegryn | Saint-Sulpice, Switzerland",
       "title": "Build what endures."
@@ -1169,8 +1169,8 @@
       "title": "What we do. The profiles we seek.",
       "items": {
         "accompagner": {
-          "title": "Advisory & Strategy",
-          "desc": "You advise leaders on the decisions that shape their organisation: strategy, compliance, technology, organisation, external growth. You are a senior, autonomous profile: former partner, practice director, executive consultant."
+          "title": "Framing & Strategy",
+          "desc": "You frame the decisions that commit an organisation: strategy, compliance, technology, organisation, acquisitions. You are an autonomous senior profile: former firm partner, head of strategy or operator, comfortable in front of an executive committee."
         },
         "construire": {
           "title": "Engineering & Product",
@@ -1181,8 +1181,8 @@
           "desc": "You lead the pivotal phases of our clients' lifecycle: launch, scaling, restructuring, post-acquisition integration, succession. You are a transformation director, interim manager or operational profile seasoned in executing change."
         },
         "recruter": {
-          "title": "Talent & Research",
-          "desc": "You identify and place executives and experts for our clients. You are a headhunter or researcher covering leadership, specialist and transformation profiles, with a strong European network."
+          "title": "Talent & Selection",
+          "desc": "You identify and select executives and experts for our clients and our projects. You are a headhunter or researcher on leadership, expert and transformation profiles, with a solid network."
         },
         "informer": {
           "title": "Intelligence & Content",
@@ -1204,7 +1204,7 @@
           "title": "Durability"
         },
         "precision": {
-          "desc": "Every detail matters. Quality is not a feature, it is a standard.",
+          "desc": "Every analysis, every recommendation, every deliverable rests on verifiable data, not on intuition.",
           "title": "Precision"
         },
         "sovereignty": {
@@ -1212,7 +1212,7 @@
           "title": "Independence"
         },
         "trust": {
-          "desc": "Transparency with clients, partners and within the team.",
+          "desc": "Trust is not declared, it is proven by the consistency between what we recommend and what we do.",
           "title": "Trust"
         }
       },
@@ -1220,8 +1220,8 @@
       "title": "What we stand for."
     },
     "meta": {
-      "title": "Careers | Entrepreneurial Boutique | Aegryn",
-      "desc": "Join Aegryn, an entrepreneurial boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed."
+      "title": "Careers | Aegryn",
+      "desc": "Join Aegryn, an integrated firm, and La Boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed."
     }
   },
   "assetStatus": {
@@ -1814,11 +1814,11 @@
       "items": [
         {
           "title": "Startups & Scale-ups",
-          "desc": "Lay the right technical and strategic foundations. Prepare for your next funding round or exit. Avoid structural mistakes that are expensive to fix later."
+          "desc": "Lay the right strategic and technology foundations, frame the next cycle and prepare the next step."
         },
         {
           "title": "Growing SMEs",
-          "desc": "Transform, certify and recruit before selling or raising funds. Build assets that hold up to acquirer and investor scrutiny."
+          "desc": "Frame, transform and structure the organisation before growing, acquiring or handing over."
         },
         {
           "title": "Mid-sized companies",
@@ -1998,7 +1998,7 @@
         {
           "num": "04",
           "title": "Closing & Post-acquisition",
-          "desc": "Signing support, post-acquisition integration, recruitment of execution teams."
+          "desc": "Signing support, post-acquisition integration, selection of execution teams."
         }
       ],
       "fundsNote": "We also support funds and family offices as a transitional, outsourced operating partner on their portfolio companies.",
@@ -7389,7 +7389,7 @@
     "servicesBuild": "Asset Engineering",
     "advisory": "Strategic Advisory",
     "acquisition": "Acquisition Support",
-    "alliances": "Alliances & Partners",
+    "alliances": "Partners",
     "experts": "Expert Network",
     "valuation": "Valuation",
     "grade": "Grading system",
@@ -10690,8 +10690,8 @@
       "label": "THREE SITUATIONS WE SOLVE",
       "items": [
         "Your portfolio company has no operational team to drive value.",
-        "Your deal flow is hard to read technically and organisationally.",
-        "Your exit is 24 to 36 months away and the organisation is not ready."
+        "Your opportunities are hard to read technically and organisationally.",
+        "A key milestone is coming (acquisition, handover) and the organisation is not ready."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "We take an operational role in your portfolio companies: governance, talent, day-to-day value management. On-the-ground presence, not only at board level."
         },
         {
-          "title": "Technical and organisational deal flow screening",
+          "title": "Technical and organisational screening of opportunities",
           "desc": "Before investing, we qualify targets on the 5 CIFSO dimensions: code & architecture, IP & rights, finance & metrics, security & sovereignty, organisation & talent. You invest with a complete read."
         },
         {
-          "title": "Post-acquisition value creation and exit preparation",
+          "title": "Value creation after acquisition and preparation of key milestones",
           "desc": "After the acquisition, we structure the 12 to 36-month value plan, document the organisation and prepare the transfer under the best conditions."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "FIRST CONTACT",
-      "title": "A portfolio to grow or to sell?",
+      "title": "A holding to structure?",
       "desc": "Fund, family office, holding with a participation to structure. Reply within 2 business days.",
       "cta": "Let's discuss your portfolio"
     },

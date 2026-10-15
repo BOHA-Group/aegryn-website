@@ -120,7 +120,7 @@
     "whoJoinDesc": "Trabajar en Aegryn, talentos, socios",
     "whoCareers": "Trabajar en Aegryn",
     "whoTalent": "Selección Executive",
-    "whoAlliances": "Convertirse en socio",
+    "whoAlliances": "Socios",
     "talent": "Talento",
     "thinkingMarket": "Nuestra visión del mercado",
     "thinkingMarketDesc": "Datos, análisis y puntos de vista de quienes hacen el mercado.",
@@ -1130,8 +1130,8 @@
   "career": {
     "hero": {
       "label": "Trabajar en Aegryn",
-      "title": "Advisory & Expertos en Ecosistemas Digitales",
-      "desc": "Aegryn es un grupo de asesoría integrada. Acompañamos a las organizaciones europeas durante todo su ciclo de vida: asesoría, construcción, trayectoria, talento, inteligencia de mercado. No ocupamos un nicho: definimos sus reglas.",
+      "title": "Construir proyectos que perduran.",
+      "desc": "Aegryn es una firma integrada, con La Boutique para los proyectos insignia. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse. Crecemos por cooptación y candidatura espontánea, con perfiles sénior a quienes les gusta llevar un proyecto hasta el final.",
       "imageAlt": "Cumbre iluminada por el sol reflejada en un lago de montaña"
     },
     "positions": {
@@ -1143,9 +1143,9 @@
     "apply": "Postularse",
     "spontaneous": "Candidatura espontanéa",
     "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Certificados para durar, construidos por expertos que creen en ello.",
-      "cta": "Descubrir Advisory"
+      "label": "La firma",
+      "title": "Concebidos para durar, dirigidos por expertos que creen en ello.",
+      "cta": "Descubrir nuestros servicios"
     },
     "domains": {
       "all": "Todos los dominios",
@@ -1159,7 +1159,7 @@
       "product": "Producto"
     },
     "about": {
-      "desc": "Fundada sobre tres principios, precisión, durabilidad, independencia, Aegryn acompaña a organizaciones de todos los sectores durante todo su ciclo de vida con un rigor que el mercado aún no ofrecía. Nuestros activos propios, nuestro protocolo de certificación y nuestra red advisory forman un ecosistema integrado pensado para los próximos 10 años.",
+      "desc": "Fundada sobre tres principios, precisión, durabilidad, independencia, Aegryn acompaña a directivos y emprendedores, de la decisión a la realización y después en cada ciclo de vida de la organización.",
       "label": "Carreras",
       "tagline": "Aegryn | Saint-Sulpice, Suiza",
       "title": "Construir lo que perdura."
@@ -1169,8 +1169,8 @@
       "title": "Lo que hacemos. Los perfiles que buscamos.",
       "items": {
         "accompagner": {
-          "title": "Asesoría & Estrategia",
-          "desc": "Asesoras a directivos en las decisiones que determinan su organización: estrategia, cumplimiento, tecnología, organización, crecimiento externo. Eres un perfil senior autónomo: ex socio, director de practice, consultor ejecutivo."
+          "title": "Encuadre y Estrategia",
+          "desc": "Usted encuadra las decisiones que comprometen a una organización: estrategia, cumplimiento, tecnología, organización, adquisición. Es un perfil sénior autónomo: antiguo socio de una consultora, director de estrategia u operador, cómodo ante un comité de dirección."
         },
         "construire": {
           "title": "Ingeniería & Producto",
@@ -1181,8 +1181,8 @@
           "desc": "Pilotas las fases cruciales del ciclo de vida de nuestros clientes: lanzamiento, escalado, reestructuración, integración post-adquisición, transmisión. Eres director de transformación, manager de transición o un perfil operativo acostumbrado a ejecutar el cambio."
         },
         "recruter": {
-          "title": "Talento & Investigación",
-          "desc": "Identificas y colocas directivos y expertos para nuestros clientes. Eres headhunter o researcher sobre perfiles directivos, especialistas y de transformación, con una sólida red en Europa."
+          "title": "Talento y Selección",
+          "desc": "Usted identifica y selecciona directivos y expertos para nuestros clientes y nuestros proyectos. Es headhunter o researcher de perfiles de dirección, de experiencia y de transformación, con una red sólida."
         },
         "informer": {
           "title": "Inteligencia & Contenido",
@@ -1204,7 +1204,7 @@
           "title": "Durabilidad"
         },
         "precision": {
-          "desc": "Cada detalle importa. La calidad no es una característica, es un estándar.",
+          "desc": "Cada análisis, cada recomendación, cada entregable se apoya en datos verificables, no en intuiciones.",
           "title": "Precisión"
         },
         "sovereignty": {
@@ -1212,7 +1212,7 @@
           "title": "Independencia"
         },
         "trust": {
-          "desc": "Transparencia con clientes, socios y dentro del equipo.",
+          "desc": "La confianza no se declara, se demuestra con la coherencia entre lo que recomendamos y lo que hacemos.",
           "title": "Confianza"
         }
       },
@@ -1220,8 +1220,8 @@
       "title": "Lo que defendemos."
     },
     "meta": {
-      "title": "Carrera | Boutique emprendedora | Aegryn",
-      "desc": "Únete a Aegryn, boutique emprendedora de proyectos insignia. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
+      "title": "Carrera | Aegryn",
+      "desc": "Únase a Aegryn, firma integrada, y a La Boutique para los proyectos insignia. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
     }
   },
   "assetStatus": {
@@ -1814,11 +1814,11 @@
       "items": [
         {
           "title": "Startups & Scale-ups",
-          "desc": "Establecer las bases técnicas y estratégicas correctas. Preparar la próxima ronda o el próximo exit. Evitar errores estructurales que son costosos de corregir más adelante."
+          "desc": "Sentar las bases estratégicas y tecnológicas adecuadas, encuadrar el próximo ciclo y preparar la siguiente etapa."
         },
         {
           "title": "PYMES en crecimiento",
-          "desc": "Transformar, certificar y reclutar antes de vender o captar fondos. Construir activos que resistan el escrutinio de compradores e inversores."
+          "desc": "Encuadrar, transformar y estructurar la organización antes de crecer, adquirir o transmitir."
         },
         {
           "title": "Empresas medianas",
@@ -1998,7 +1998,7 @@
         {
           "num": "04",
           "title": "Closing & Post-adquisición",
-          "desc": "Acompañamiento al signing, integración post-adquisición, reclutamiento de equipos de ejecución."
+          "desc": "Acompañamiento al signing, integración post-adquisición, selección de equipos de ejecución."
         }
       ],
       "fundsNote": "También acompañamos a fondos y family offices como operating partner de transición, externalizado, en sus participaciones.",
@@ -7374,7 +7374,7 @@
     "servicesBuild": "Concepción de activos",
     "advisory": "Asesoramiento estratégico",
     "acquisition": "Apoyo a la adquisición",
-    "alliances": "Alianzas & Partners",
+    "alliances": "Socios",
     "experts": "Red de expertos",
     "valuation": "Valoración",
     "grade": "Sistema de certificación",
@@ -10690,8 +10690,8 @@
       "label": "TRES SITUACIONES QUE RESOLVEMOS",
       "items": [
         "Su participación no tiene equipo operativo para pilotar el valor.",
-        "Su deal flow es difícil de leer técnica y organizativamente.",
-        "Su exit está a 24-36 meses y la organización no está preparada."
+        "Sus oportunidades son difíciles de leer técnica y organizativamente.",
+        "Se acerca una etapa clave (adquisición, transmisión) y la organización no está preparada."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "Asumimos un rol operativo en sus participaciones: gobernanza, talento, pilotaje diario del valor. Presencia sobre el terreno, no solo en el board."
         },
         {
-          "title": "Screening técnico y organizativo del deal flow",
+          "title": "Screening técnico y organizativo de oportunidades",
           "desc": "Antes de invertir, cualificamos los targets en las 5 dimensiones CIFSO: código y arquitectura, IP y derechos, finanzas y métricas, seguridad y soberanía, organización y talento. Invierte con una lectura completa."
         },
         {
-          "title": "Value creation post-adquisición y preparación de exit",
+          "title": "Creación de valor tras la adquisición y preparación de las etapas clave",
           "desc": "Tras la adquisición, estructuramos el plan de valor a 12-36 meses, documentamos la organización y preparamos la transmisión en las mejores condiciones."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "PRIMER CONTACTO",
-      "title": "¿Una cartera para valorizar o ceder?",
+      "title": "¿Una participación que estructurar?",
       "desc": "Fondo, family office, holding con una participación que estructurar. Respuesta en 2 días hábiles.",
       "cta": "Hablemos de su cartera"
     },

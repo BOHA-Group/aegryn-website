@@ -149,6 +149,15 @@ const nextConfig: NextConfig = {
       { source: '/:locale(fr|en|de|es|it|nl)/assets/:slug(neediu|movtoo|primiom|hobconnect|heritix|chrosium|insertdry)', destination: '/:locale/boutique/projets/:slug', permanent: true },
       { source: '/boutique/projets/subblink',            destination: '/assets/subblink',                permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/boutique/projets/subblink', destination: '/:locale/assets/subblink',       permanent: true },
+      /* Experts et Alliances fusionnés : page Partenaires (/alliances) */
+      { source: '/experts',                              destination: '/alliances',                       permanent: true },
+      { source: '/experten',                             destination: '/alliances',                       permanent: true },
+      { source: '/expertos',                             destination: '/alliances',                       permanent: true },
+      { source: '/esperti',                              destination: '/alliances',                       permanent: true },
+      { source: '/:locale(fr|en|nl)/experts',            destination: '/:locale/alliances',               permanent: true },
+      { source: '/de/experten',                          destination: '/de/alliances',                    permanent: true },
+      { source: '/es/expertos',                          destination: '/es/alliances',                    permanent: true },
+      { source: '/it/esperti',                           destination: '/it/alliances',                    permanent: true },
       /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
          Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },

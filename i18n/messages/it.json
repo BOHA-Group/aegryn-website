@@ -120,7 +120,7 @@
     "whoJoinDesc": "Lavorare in Aegryn, talenti, partner",
     "whoCareers": "Lavorare in Aegryn",
     "whoTalent": "Selezione Executive",
-    "whoAlliances": "Diventa partner",
+    "whoAlliances": "Partner",
     "talent": "Talento",
     "thinkingMarket": "Il nostro sguardo sul mercato",
     "thinkingMarketDesc": "Dati, analisi e punti di vista da chi fa il mercato.",
@@ -584,8 +584,8 @@
               "desc": "Strutturazione del piano di successione, chiarimento dei ruoli del board e dei dirigenti, e implementazione di una governance che documenti le decisioni al di là del fondatore."
             },
             {
-              "label": "Reclutamento e retention dei talenti chiave",
-              "desc": "Identificazione e reclutamento dei profili dirigenziali mancanti tramite Aegryn Talent, e strutturazione dei meccanismi di retention (incentivi azionari, piano di carriera, cultura)."
+              "label": "Selezione e retention dei talenti chiave",
+              "desc": "Identificazione e selezione dei profili dirigenziali mancanti tramite Aegryn Talent, e strutturazione dei meccanismi di retention (incentivi azionari, piano di carriera, cultura)."
             }
           ]
         },
@@ -611,7 +611,7 @@
             "desc": ""
           },
           {
-            "label": "Reclutamento executive e design organizzativo",
+            "label": "Selezione executive e design organizzativo",
             "desc": ""
           }
         ]
@@ -1130,8 +1130,8 @@
   "career": {
     "hero": {
       "label": "Lavorare in Aegryn",
-      "title": "Advisory & Esperti di Ecosistemi Digitali",
-      "desc": "Aegryn è un gruppo di consulenza integrata. Accompagniamo le organizzazioni europee lungo tutto il loro ciclo di vita: consulenza, costruzione, traiettoria, talenti, market intelligence. Non occupiamo una nicchia: ne definiamo le regole.",
+      "title": "Costruire progetti che durano.",
+      "desc": "Aegryn è una società integrata, con La Boutique per i progetti signature. Cinque mestieri: inquadrare, realizzare, accompagnare, selezionare, informarsi. Cresciamo per cooptazione e candidatura spontanea, con profili senior a cui piace portare un progetto fino in fondo.",
       "imageAlt": "Vetta illuminata dal sole riflessa in un lago di montagna"
     },
     "positions": {
@@ -1143,9 +1143,9 @@
     "apply": "Candidarsi",
     "spontaneous": "Candidatura spontanea",
     "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Certificati per durare, costruiti da esperti che ci credono.",
-      "cta": "Scopri Advisory"
+      "label": "La società",
+      "title": "Pensati per durare, guidati da esperti che ci credono.",
+      "cta": "Scoprire i nostri servizi"
     },
     "domains": {
       "all": "Tutti i domini",
@@ -1159,7 +1159,7 @@
       "product": "Prodotto"
     },
     "about": {
-      "desc": "Fondata su tre principi, precisione, durabilità, indipendenza, Aegryn accompagna le organizzazioni di ogni settore lungo tutto il loro ciclo di vita con un rigore che il mercato non offriva ancora. I nostri asset proprietari, il nostro protocollo di certificazione e la nostra rete advisory formano un ecosistema integrato pensato per i prossimi 10 anni.",
+      "desc": "Fondata su tre principi, precisione, durabilità, indipendenza, Aegryn accompagna dirigenti e imprenditori, dalla decisione alla realizzazione e poi in ogni ciclo di vita dell'organizzazione.",
       "label": "Carriere",
       "tagline": "Aegryn | Saint-Sulpice, Svizzera",
       "title": "Costruire ciò che dura."
@@ -1169,8 +1169,8 @@
       "title": "Cosa facciamo. I profili che cerchiamo.",
       "items": {
         "accompagner": {
-          "title": "Consulenza & Strategia",
-          "desc": "Consigli i dirigenti sulle decisioni che determinano la loro organizzazione: strategia, conformità, tecnologia, organizzazione, crescita esterna. Sei un profilo senior autonomo: ex partner, direttore di practice, consulente executive."
+          "title": "Inquadramento e Strategia",
+          "desc": "Voi inquadrate le decisioni che impegnano un'organizzazione: strategia, conformità, tecnologia, organizzazione, acquisizione. Siete un profilo senior autonomo: ex partner di una società di consulenza, direttore della strategia o operatore, a vostro agio davanti a un comitato di direzione."
         },
         "construire": {
           "title": "Engineering & Prodotto",
@@ -1181,8 +1181,8 @@
           "desc": "Guidi le fasi cruciali del ciclo di vita dei nostri clienti: lancio, scaling, ristrutturazione, integrazione post-acquisizione, trasmissione. Sei un direttore della trasformazione, un manager ad interim o un profilo operativo abituato a eseguire il cambiamento."
         },
         "recruter": {
-          "title": "Talent & Ricerca",
-          "desc": "Identifichi e collochi dirigenti ed esperti per i nostri clienti. Sei un cacciatore di teste o un researcher su profili dirigenziali, specialistici e di trasformazione, con una solida rete in Europa."
+          "title": "Talenti e Selezione",
+          "desc": "Voi individuate e selezionate dirigenti ed esperti per i nostri clienti e i nostri progetti. Siete cacciatori di teste o researcher su profili di direzione, di competenza e di trasformazione, con una rete solida."
         },
         "informer": {
           "title": "Intelligence & Contenuti",
@@ -1204,7 +1204,7 @@
           "title": "Durabilità"
         },
         "precision": {
-          "desc": "Ogni dettaglio conta. La qualità non è una funzionalità, è uno standard.",
+          "desc": "Ogni analisi, ogni raccomandazione, ogni consegna poggia su dati verificabili, non su intuizioni.",
           "title": "Precisione"
         },
         "sovereignty": {
@@ -1212,7 +1212,7 @@
           "title": "Indipendenza"
         },
         "trust": {
-          "desc": "Trasparenza con clienti, partner e all'interno del team.",
+          "desc": "La fiducia non si dichiara, si dimostra con la coerenza tra ciò che raccomandiamo e ciò che facciamo.",
           "title": "Fiducia"
         }
       },
@@ -1220,8 +1220,8 @@
       "title": "In cosa crediamo."
     },
     "meta": {
-      "title": "Carriera | Boutique imprenditoriale | Aegryn",
-      "desc": "Unisciti ad Aegryn, boutique imprenditoriale di progetti signature. Cinque mestieri: inquadrare, realizzare, accompagnare, selezionare, informarsi."
+      "title": "Carriera | Aegryn",
+      "desc": "Unitevi ad Aegryn, società integrata, e a La Boutique per i progetti signature. Cinque mestieri: inquadrare, realizzare, accompagnare, selezionare, informarsi."
     }
   },
   "assetStatus": {
@@ -1814,11 +1814,11 @@
       "items": [
         {
           "title": "Startup & Scale-up",
-          "desc": "Porre le giuste basi tecniche e strategiche. Prepararsi al prossimo round o all'exit. Evitare errori strutturali che sono costosi da correggere in seguito."
+          "desc": "Porre le giuste basi strategiche e tecnologiche, inquadrare il ciclo successivo e preparare la tappa seguente."
         },
         {
           "title": "PMI in crescita",
-          "desc": "Trasformare, certificare e reclutare prima di vendere o raccogliere fondi. Costruire asset che reggano al vaglio di acquirenti e investitori."
+          "desc": "Inquadrare, trasformare e strutturare l’organizzazione prima di crescere, rilevare o trasmettere."
         },
         {
           "title": "Imprese di medie dimensioni",
@@ -1998,7 +1998,7 @@
         {
           "num": "04",
           "title": "Closing & Post-acquisizione",
-          "desc": "Supporto alla firma, integrazione post-acquisizione, reclutamento dei team di esecuzione."
+          "desc": "Supporto alla firma, integrazione post-acquisizione, selezione dei team di esecuzione."
         }
       ],
       "fundsNote": "Affianchiamo anche fondi e family office come operating partner di transizione, esternalizzato, sulle loro partecipazioni.",
@@ -7374,7 +7374,7 @@
     "servicesBuild": "Progettazione di asset",
     "advisory": "Consulenza strategica",
     "acquisition": "Supporto all'acquisizione",
-    "alliances": "Alleanze & Partner",
+    "alliances": "Partner",
     "experts": "Rete di esperti",
     "valuation": "Valutazione",
     "grade": "Sistema di certificazione",
@@ -10690,8 +10690,8 @@
       "label": "TRE SITUAZIONI CHE RISOLVIAMO",
       "items": [
         "La vostra partecipazione non ha un team operativo per pilotare il valore.",
-        "Il vostro deal flow è difficile da leggere tecnicamente e organizzativamente.",
-        "La vostra exit è tra 24 e 36 mesi e l'organizzazione non è pronta."
+        "Le vostre opportunità sono difficili da leggere sul piano tecnico e organizzativo.",
+        "Si avvicina una tappa chiave (acquisizione, trasmissione) e l'organizzazione non è pronta."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "Assumiamo un ruolo operativo nelle vostre partecipazioni: governance, talento, pilotaggio quotidiano del valore. Presenza sul campo, non solo in board."
         },
         {
-          "title": "Screening tecnico e organizzativo del deal flow",
+          "title": "Screening tecnico e organizzativo delle opportunità",
           "desc": "Prima dell'investimento, qualifichiamo i target sulle 5 dimensioni CIFSO: codice e architettura, IP e diritti, finanza e metriche, sicurezza e sovranità, organizzazione e talento. Investite con una lettura completa."
         },
         {
-          "title": "Value creation post-acquisizione e preparazione exit",
+          "title": "Creazione di valore dopo l'acquisizione e preparazione delle tappe chiave",
           "desc": "Dopo l'acquisizione, strutturiamo il piano di valore su 12-36 mesi, documentiamo l'organizzazione e prepariamo la trasmissione nelle migliori condizioni."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "PRIMO CONTATTO",
-      "title": "Un portafoglio da valorizzare o da cedere?",
+      "title": "Una partecipazione da strutturare?",
       "desc": "Fondo, family office, holding con una partecipazione da strutturare. Risposta entro 2 giorni lavorativi.",
       "cta": "Parliamo del vostro portafoglio"
     },

@@ -55,7 +55,7 @@ export const FRANCHIR_EN: CycleContent[] = [
     eyebrow:  'Accompany · Launch & Structuring',
     h1:       'Lay the right foundations before you spend.',
     subtitle: 'Suppliers, technology, intellectual property, compliance, governance: the choices of the first months are cheap to decide and very costly to correct.',
-    verbs:    ['Frame', 'Build', 'Recruit'],
+    verbs:    ['Frame', 'Deliver', 'Select'],
     constat: {
       text:   'The transparency obligations of the EU AI Act (Article 50) have applied since 2 August 2026, with fines of up to €15M or 3% of worldwide turnover for obligations other than prohibited practices. An organisation launching an AI-powered product is concerned from day one.',
       source: 'EU AI Act.',

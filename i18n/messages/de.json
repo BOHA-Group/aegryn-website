@@ -120,7 +120,7 @@
     "whoJoinDesc": "Bei Aegryn arbeiten, Talente, Partner",
     "whoCareers": "Bei Aegryn arbeiten",
     "whoTalent": "Executive Selection",
-    "whoAlliances": "Partner werden",
+    "whoAlliances": "Partner",
     "talent": "Talent",
     "thinkingMarket": "Unser Marktblick",
     "thinkingMarketDesc": "Daten, Analysen und Einblicke von denen, die den Markt machen.",
@@ -584,8 +584,8 @@
               "desc": "Strukturierung des Nachfolgeplans, Klärung der Rollen von Verwaltungsrat und Geschäftsleitung sowie Einführung einer Governance, die Entscheidungen über den Gründer hinaus dokumentiert."
             },
             {
-              "label": "Rekrutierung & Bindung von Schlüsseltalenten",
-              "desc": "Identifizierung und Rekrutierung fehlender Führungsprofile über Aegryn Talent sowie Strukturierung von Bindungsmechanismen (Beteiligungsprogramme, Karriereplan, Kultur)."
+              "label": "Auswahl & Bindung von Schlüsseltalenten",
+              "desc": "Identifizierung und Auswahl fehlender Führungsprofile über Aegryn Talent sowie Strukturierung von Bindungsmechanismen (Beteiligungsprogramme, Karriereplan, Kultur)."
             }
           ]
         },
@@ -1130,8 +1130,8 @@
   "career": {
     "hero": {
       "label": "Bei Aegryn arbeiten",
-      "title": "Advisory & Experten für digitale Ökosysteme",
-      "desc": "Aegryn ist eine integrierte Beratungsgruppe. Wir begleiten europäische Organisationen über ihren gesamten Lebenszyklus: Beratung, Aufbau, Bahn, Talente, Marktintelligenz. Wir besetzen keine Nische: Wir definieren ihre Regeln.",
+      "title": "Projekte bauen, die Bestand haben.",
+      "desc": "Aegryn ist eine integrierte Firma, mit La Boutique für Signature-Projekte. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren. Wir wachsen durch Kooptation und Initiativbewerbungen, mit erfahrenen Profilen, die ein Projekt gern bis zum Ende führen.",
       "imageAlt": "Sonnenbeschienener Berggipfel, der sich in einem Bergsee spiegelt"
     },
     "positions": {
@@ -1143,9 +1143,9 @@
     "apply": "Bewerben",
     "spontaneous": "Initiativbewerbung",
     "statement": {
-      "label": "Aegryn Advisory",
-      "title": "Zertifiziert für die Dauer, gebaut von Experten, die daran glauben.",
-      "cta": "Advisory entdecken"
+      "label": "Die Firma",
+      "title": "Gebaut für die Dauer, geführt von Experten, die daran glauben.",
+      "cta": "Unsere Leistungen entdecken"
     },
     "domains": {
       "all": "Alle Bereiche",
@@ -1159,7 +1159,7 @@
       "product": "Produkt"
     },
     "about": {
-      "desc": "Gegründet auf drei Prinzipien, Präzision, Dauerhaftigkeit, Unabhängigkeit, begleitet Aegryn Organisationen aller Branchen über ihren gesamten Lebenszyklus mit einer Strenge, die der Markt bisher nicht bot. Unsere eigenen Assets, unser Zertifizierungsprotokoll und unser Beraternetzwerk bilden ein integriertes Ökosystem für die nächsten 10 Jahre.",
+      "desc": "Auf drei Prinzipien gegründet, Präzision, Dauerhaftigkeit, Unabhängigkeit, begleitet Aegryn Führungskräfte und Unternehmer von der Entscheidung bis zur Umsetzung und danach in jeder Lebenszyklusphase der Organisation.",
       "label": "Karriere",
       "tagline": "Aegryn | Saint-Sulpice, Schweiz",
       "title": "Bauen, was bleibt."
@@ -1169,8 +1169,8 @@
       "title": "Was wir tun. Die Profile, die wir suchen.",
       "items": {
         "accompagner": {
-          "title": "Beratung & Strategie",
-          "desc": "Sie beraten Führungskräfte bei den Entscheidungen, die ihre Organisation prägen: Strategie, Compliance, Technologie, Organisation, externes Wachstum. Sie sind ein erfahrenes, eigenständiges Profil: ehemaliger Partner, Practice-Director, Executive Consultant."
+          "title": "Konzeption & Strategie",
+          "desc": "Sie rahmen die Entscheidungen, die eine Organisation binden: Strategie, Compliance, Technologie, Organisation, Übernahme. Sie sind ein eigenständiges Senior-Profil: ehemaliger Partner einer Beratung, Strategiechef oder Operator, sicher vor einer Geschäftsleitung."
         },
         "construire": {
           "title": "Engineering & Produkt",
@@ -1181,8 +1181,8 @@
           "desc": "Sie steuern die entscheidenden Phasen des Lebenszyklus unserer Kunden: Launch, Skalierung, Restrukturierung, Post-Akquisitions-Integration, Nachfolge. Sie sind Transformationsdirektor, Interim-Manager oder ein operatives Profil mit Erfahrung in der Umsetzung von Veränderungen."
         },
         "recruter": {
-          "title": "Talent & Research",
-          "desc": "Sie identifizieren und vermitteln Führungskräfte und Experten für unsere Kunden. Sie sind Headhunter oder Researcher für Führungs-, Fach- und Transformationsprofile mit einem starken europäischen Netzwerk."
+          "title": "Talente & Auswahl",
+          "desc": "Sie identifizieren und wählen Führungskräfte und Experten für unsere Kunden und Projekte aus. Sie sind Headhunter oder Researcher für Führungs-, Experten- und Transformationsprofile, mit einem soliden Netzwerk."
         },
         "informer": {
           "title": "Intelligence & Content",
@@ -1204,7 +1204,7 @@
           "title": "Beständigkeit"
         },
         "precision": {
-          "desc": "Jedes Detail zählt. Qualität ist kein Feature, sondern ein Standard.",
+          "desc": "Jede Analyse, jede Empfehlung, jedes Ergebnis beruht auf überprüfbaren Daten, nicht auf Intuition.",
           "title": "Präzision"
         },
         "sovereignty": {
@@ -1212,7 +1212,7 @@
           "title": "Unabhängigkeit"
         },
         "trust": {
-          "desc": "Transparenz gegenüber Kunden, Partnern und im Team.",
+          "desc": "Vertrauen erklärt man nicht, man beweist es durch die Übereinstimmung von dem, was wir empfehlen, und dem, was wir tun.",
           "title": "Vertrauen"
         }
       },
@@ -1220,8 +1220,8 @@
       "title": "Wofür wir stehen."
     },
     "meta": {
-      "title": "Karriere | Unternehmerische Boutique | Aegryn",
-      "desc": "Werden Sie Teil von Aegryn, einer unternehmerischen Boutique für Signature-Projekte. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
+      "title": "Karriere | Aegryn",
+      "desc": "Werden Sie Teil von Aegryn, einer integrierten Firma, und von La Boutique für Signature-Projekte. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
     }
   },
   "assetStatus": {
@@ -1814,11 +1814,11 @@
       "items": [
         {
           "title": "Startups & Scale-ups",
-          "desc": "Die richtigen technischen und strategischen Grundlagen legen. Die nächste Finanzierungsrunde oder den Exit vorbereiten. Strukturelle Fehler vermeiden, die später teuer zu korrigieren sind."
+          "desc": "Die richtigen strategischen und technologischen Grundlagen legen, den nächsten Zyklus rahmen und den nächsten Schritt vorbereiten."
         },
         {
           "title": "Wachsende KMU",
-          "desc": "Transformieren, zertifizieren und rekrutieren, bevor verkauft oder Kapital aufgenommen wird. Assets aufbauen, die dem Blick von Käufern und Investoren standhalten."
+          "desc": "Die Organisation rahmen, transformieren und strukturieren, bevor sie wächst, übernimmt oder übergibt."
         },
         {
           "title": "Mittelständische Unternehmen",
@@ -1998,7 +1998,7 @@
         {
           "num": "04",
           "title": "Closing & Post-Akquisition",
-          "desc": "Signing-Begleitung, Post-Akquisitionsintegration, Rekrutierung von Ausführungsteams."
+          "desc": "Signing-Begleitung, Post-Akquisitionsintegration, Auswahl von Ausführungsteams."
         }
       ],
       "fundsNote": "Wir begleiten auch Fonds und Family Offices als transitorischen, ausgelagerten Operating Partner für ihre Beteiligungen.",
@@ -7374,7 +7374,7 @@
     "servicesBuild": "Asset-Ingenieurwesen",
     "advisory": "Strategische Beratung",
     "acquisition": "Akquisitionsunterstützung",
-    "alliances": "Allianzen & Partner",
+    "alliances": "Partner",
     "experts": "Expertennetzwerk",
     "valuation": "Bewertung",
     "grade": "Bewertungssystem",
@@ -10690,8 +10690,8 @@
       "label": "DREI SITUATIONEN, DIE WIR LÖSEN",
       "items": [
         "Ihre Beteiligung hat kein operatives Team, das den Wert steuert.",
-        "Ihr Deal Flow ist technisch und organisatorisch schwer zu lesen.",
-        "Ihr Exit liegt in 24 bis 36 Monaten und die Organisation ist nicht bereit."
+        "Ihre Opportunitäten sind technisch und organisatorisch schwer zu lesen.",
+        "Eine wichtige Etappe steht bevor (Übernahme, Übergabe) und die Organisation ist nicht bereit."
       ]
     },
     "roles": {
@@ -10703,11 +10703,11 @@
           "desc": "Wir übernehmen eine operative Rolle in Ihren Beteiligungen: Governance, Talent, tägliche Wertsteuerung. Präsenz vor Ort, nicht nur im Board."
         },
         {
-          "title": "Technisches und organisatorisches Deal-Flow-Screening",
+          "title": "Technisches und organisatorisches Screening von Opportunitäten",
           "desc": "Vor der Investition qualifizieren wir Ziele auf den 5 CIFSO-Dimensionen: Code & Architektur, IP & Rechte, Finanzen & Metriken, Sicherheit & Souveränität, Organisation & Talent. Sie investieren mit vollständiger Lesart."
         },
         {
-          "title": "Value Creation nach der Akquisition und Exit-Vorbereitung",
+          "title": "Wertschöpfung nach der Übernahme und Vorbereitung wichtiger Etappen",
           "desc": "Nach der Akquisition strukturieren wir den Wertplan über 12 bis 36 Monate, dokumentieren die Organisation und bereiten die Übertragung unter besten Bedingungen vor."
         }
       ]
@@ -10731,7 +10731,7 @@
     },
     "final": {
       "label": "ERSTER KONTAKT",
-      "title": "Ein Portfolio zu entwickeln oder zu übergeben?",
+      "title": "Eine Beteiligung, die Struktur braucht?",
       "desc": "Fonds, Family Office, Holding mit einer zu strukturierenden Beteiligung. Antwort innerhalb von 2 Werktagen.",
       "cta": "Sprechen wir über Ihr Portfolio"
     },

@@ -56,7 +56,7 @@ export const FRANCHIR_IT: CycleContent[] = [
     eyebrow:  'Accompagnare · Lancio & Strutturazione',
     h1:       'Porre le giuste basi prima di spendere.',
     subtitle: 'Fornitori, tecnologie, proprietà intellettuale, conformità, governance: le scelte dei primi mesi costano poco da decidere e molto da correggere.',
-    verbs:    ['Inquadrare', 'Costruire', 'Reclutare'],
+    verbs:    ['Inquadrare', 'Realizzare', 'Selezionare'],
     constat: {
       text:   'Gli obblighi di trasparenza del regolamento europeo sull’IA (art. 50) si applicano dal 2 agosto 2026, con sanzioni fino a 15 M€ o al 3 % del fatturato mondiale per gli obblighi diversi dalle pratiche vietate. Un’organizzazione che lancia un prodotto che usa l’IA è interessata fin dal primo giorno.',
       source: 'Regolamento (UE) sull’IA.',
