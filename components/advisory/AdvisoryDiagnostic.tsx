@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowUpRight, RotateCcw } from 'lucide-react'
 import Link from 'next/link'
 import type { DiagnosticLevel, DiagnosticQuestion } from '@/content/advisory/types'
@@ -38,6 +38,15 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
     if (!answered) return null
     return [...levels].sort((a, b) => b.min - a.min).find(l => favorable >= l.min) ?? levels[0]
   }, [answered, favorable, levels])
+
+  /* Panneau latéral : une fois les cinq réponses données, on fait défiler jusqu'au résultat. */
+  const resultRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (panel && answered) {
+      const t = setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 80)
+      return () => clearTimeout(t)
+    }
+  }, [panel, answered])
 
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
   const reset = () => setAnswers(questions.map(() => null))
@@ -79,7 +88,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
         ))}
       </ol>
 
-      <div className={panel ? 'mt-4 rounded-2xl bg-ag-off-white p-5' : 'px-6 md:px-10 py-8 bg-ag-off-white'}>
+      <div ref={resultRef} className={panel ? 'mt-4 rounded-2xl bg-ag-off-white p-5' : 'px-6 md:px-10 py-8 bg-ag-off-white'}>
         {level ? (
           <div className="flex flex-col gap-5">
             <div className="flex items-baseline gap-4 flex-wrap">
