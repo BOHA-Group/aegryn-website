@@ -172,8 +172,8 @@
     "craftBuildBoutique": "Marque, produit, mise en marché (La Boutique)"
   },
   "hero": {
-    "tagline": "Cabinet intégré, ancré en Suisse. Et La Boutique de projets emblématiques.",
-    "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer. Et La Boutique, pour les projets emblématiques.",
+    "tagline": "Cabinet intégré, ancré en Suisse.",
+    "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer.",
     "sub": "Nous accompagnons les dirigeants de PME et d’ETI, jusqu’à CHF 300M de chiffre d’affaires, qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Cadrage, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Cadrer\nvos décisions.",
@@ -4736,7 +4736,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Pour les fondateurs, dirigeants, investisseurs et familles actionnaires qui bâtissent, financent, acquièrent ou transmettent une organisation : Aegryn Magazine documente chaque trimestre ce que cela signifie vraiment de créer et de réaliser de la valeur, toutes industries, toutes tailles, en Suisse et en Europe.\n\nStratégies décryptées, portraits de décideurs, données de marché et vie de ceux qui construisent quelque chose qui compte.\n\nUne rubrique La Boutique y suit les projets, les bâtisseurs et l’art de vivre.",
+    "magDesc": "Pour les fondateurs, dirigeants, investisseurs et familles actionnaires qui bâtissent, financent, acquièrent ou transmettent une organisation : Aegryn Magazine documente chaque trimestre ce que cela signifie vraiment de créer et de réaliser de la valeur, toutes industries, toutes tailles, en Suisse et en Europe.\n\nStratégies décryptées, portraits de décideurs, données de marché et vie de ceux qui construisent quelque chose qui compte.",
     "magFooter": "Quatre éditions par an.",
     "magCta": "Découvrir le magazine",
     "label": "Nos analyses du marché suisse et européen, des scale-ups au grand groupe en forte croissance.",
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "POURQUOI AEGRYN",
       "title": "Pourquoi Aegryn ?",
-      "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie. La plupart des boutiques M&A transigent sans avoir bâti.\n\nAegryn cadre, réalise et s’entoure des bons experts. Et ce qu’il recommande à ses clients, il se l’applique.",
+      "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie.\n\nAegryn réunit les deux. Un socle de conseil corporate, le cabinet intégré, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, La Boutique, qui conduit de bout en bout un nombre limité de projets emblématiques. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
       "p2": "Cadrer sans réaliser, c’est livrer une carte sans le territoire. Réaliser sans cadrer, c’est exécuter sans cap. Accompagner sans avoir bâti, c’est conseiller de l’extérieur. Sélectionner sans projet, c’est recruter dans le vide.\n\nChez Aegryn, chaque métier renforce le suivant. C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. A deux kilomètres de l'EPFL, l'une des universités technologiques les plus actives au monde en matière de spin-offs et de transfert technologique. A proximité de la Fondation pour l'Innovation et la Technologie (FIT), qui soutient chaque année des centaines de projets d'innovation suisses. Dans un canton qui concentre SwissTech, des dizaines de fonds de capital-risque européens, et une densité rare de dirigeants et d'acquéreurs institutionnels. Ce n'est pas un hasard de localisation. C'est un choix de réseau. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance, et l'accès direct à un écosystème d'innovation qui compte parmi les plus actifs d'Europe.",
@@ -10752,5 +10752,31 @@
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Des projets signature, pour entrepreneurs, investisseurs et marques. Rare par sélection. Discret par principe.",
     "boutiqueLink": "Entrer dans La Boutique"
+  },
+  "homeClients": {
+    "label": "NOS CLIENTS",
+    "title": "Nous accompagnons les entreprises à chaque stade.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startups & scale-ups",
+        "desc": "Poser les bonnes fondations stratégiques et technologiques, cadrer le prochain cycle et préparer la prochaine étape."
+      },
+      {
+        "key": "pme",
+        "title": "PME en croissance",
+        "desc": "Cadrer, transformer et structurer l’organisation avant de développer, de reprendre ou de transmettre."
+      },
+      {
+        "key": "enterprise",
+        "title": "ETI",
+        "desc": "Stratégie, technologie, conformité et talents : un seul interlocuteur pour les décisions qui engagent le groupe."
+      },
+      {
+        "key": "funds",
+        "title": "Fonds & investisseurs",
+        "desc": "Cadrage des participations, accompagnement après reprise, sélection des équipes dirigeantes, préparation des étapes clés.\n\nBanques, fonds, family offices, experts-comptables : nous sommes le partenaire de ceux qui financent et conseillent, là où leurs services s’arrêtent."
+      }
+    ]
   }
 }

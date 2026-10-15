@@ -172,8 +172,8 @@
     "craftBuildBoutique": "Merk, product, marktintroductie (La Boutique)"
   },
   "hero": {
-    "tagline": "Geïntegreerd bureau, verankerd in Zwitserland. En La Boutique voor emblematische projecten.",
-    "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven. En La Boutique, voor emblematische projecten.",
+    "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
+    "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven.",
     "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen, tot CHF 300 mln omzet, die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Kadering, assets, talent, projectleiding: een geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Uw beslissingen\nkaderen.",
@@ -4711,7 +4711,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.\n\nEen rubriek La Boutique volgt projecten, bouwers en de kunst van het leven.",
+    "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
     "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot grote groepen met sterke groei.",
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
-      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie. De meeste M&A-boutiques handelen zonder gebouwd te hebben.\n\nAegryn kadert, realiseert en omringt zich met de juiste experts. En wat het zijn klanten aanbeveelt, past het op zichzelf toe.",
+      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie.\n\nAegryn brengt beide samen. Een fundament van corporate advies, het geïntegreerde bureau, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, La Boutique, die een beperkt aantal emblematische projecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
       "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elk vakgebied het volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
@@ -10752,5 +10752,31 @@
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Signatuurprojecten, voor ondernemers, investeerders en merken. Zeldzaam door selectie. Discreet uit principe.",
     "boutiqueLink": "La Boutique betreden"
+  },
+  "homeClients": {
+    "label": "ONZE KLANTEN",
+    "title": "Wij begeleiden bedrijven in elke fase.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startups & scale-ups",
+        "desc": "De juiste strategische en technologische fundamenten leggen, de volgende cyclus kaderen en de volgende stap voorbereiden."
+      },
+      {
+        "key": "pme",
+        "title": "Groeiende kmo’s",
+        "desc": "De organisatie kaderen, transformeren en structureren voordat ze groeit, overneemt of overdraagt."
+      },
+      {
+        "key": "enterprise",
+        "title": "Middelgrote ondernemingen",
+        "desc": "Strategie, technologie, compliance en talent: één gesprekspartner voor de beslissingen die de groep binden."
+      },
+      {
+        "key": "funds",
+        "title": "Fondsen & investeerders",
+        "desc": "Kadering van deelnemingen, begeleiding na de overname, selectie van directieteams, voorbereiding van belangrijke stappen.\n\nBanken, fondsen, family offices, accountants: wij zijn de partner van wie financiert en adviseert, waar hun diensten ophouden."
+      }
+    ]
   }
 }

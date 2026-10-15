@@ -172,8 +172,8 @@
     "craftBuildBoutique": "Brand, product, go-to-market (La Boutique)"
   },
   "hero": {
-    "tagline": "Integrated firm, anchored in Switzerland. And La Boutique for emblematic projects.",
-    "metaDescription": "Aegryn, integrated firm anchored in Switzerland: frame, deliver, accompany every cycle, select talent, stay informed. And La Boutique, for emblematic projects.",
+    "tagline": "Integrated firm, anchored in Switzerland.",
+    "metaDescription": "Aegryn, integrated firm anchored in Switzerland: frame, deliver, accompany every cycle, select talent, stay informed.",
     "sub": "We support the leaders of SMEs and mid-sized companies, up to CHF 300M in revenue, who launch, grow, reorient, acquire or hand over an organisation. Framing, assets, talent, project leadership: an integrated firm, anchored in Switzerland.",
     "phrases": [
       "Frame\nyour decisions.",
@@ -4776,7 +4776,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "For founders, executives, investors and shareholder families who build, finance, acquire or transfer an organisation: Aegryn Magazine documents every quarter what it really means to create and realise value, across all industries and sizes, in Switzerland and Europe.\n\nStrategies decoded, decision-maker portraits, market data and the lives of those building something that matters.\n\nA La Boutique section follows projects, builders and the art of living.",
+    "magDesc": "For founders, executives, investors and shareholder families who build, finance, acquire or transfer an organisation: Aegryn Magazine documents every quarter what it really means to create and realise value, across all industries and sizes, in Switzerland and Europe.\n\nStrategies decoded, decision-maker portraits, market data and the lives of those building something that matters.",
     "magFooter": "Four editions per year.",
     "magCta": "Discover the magazine",
     "label": "Our analysis of the Swiss and European market, from scale-ups to large high-growth groups.",
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "WHY AEGRYN",
       "title": "Why Aegryn?",
-      "p1": "Most firms advise without building. Most tech companies build without strategy. Most M&A boutiques transact without having built.\n\nAegryn frames, delivers and surrounds itself with the right experts. And what it recommends to its clients, it applies to itself.",
+      "p1": "Most firms advise without building. Most tech companies build without strategy.\n\nAegryn brings the two together. A corporate advisory foundation, the integrated firm, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, La Boutique, which leads a limited number of emblematic projects end to end. What it recommends to its clients, Aegryn applies to itself.",
       "p2": "Framing without delivering is handing over a map without the territory. Delivering without framing is executing without a heading. Accompanying without having built is advising from the outside. Selecting without a project is recruiting into a void.\n\nAt Aegryn, each discipline reinforces the next. That chain is what makes a project hold, for our clients as for ourselves.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",
@@ -10752,5 +10752,31 @@
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Signature projects, for entrepreneurs, investors and brands. Rare by selection. Discreet by principle.",
     "boutiqueLink": "Enter La Boutique"
+  },
+  "homeClients": {
+    "label": "OUR CLIENTS",
+    "title": "We support companies at every stage.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startups & scale-ups",
+        "desc": "Lay the right strategic and technology foundations, frame the next cycle and prepare the next step."
+      },
+      {
+        "key": "pme",
+        "title": "Growing SMEs",
+        "desc": "Frame, transform and structure the organisation before growing, acquiring or handing over."
+      },
+      {
+        "key": "enterprise",
+        "title": "Mid-sized companies",
+        "desc": "Strategy, technology, compliance and talent: a single counterpart for the decisions that commit the group."
+      },
+      {
+        "key": "funds",
+        "title": "Funds & investors",
+        "desc": "Framing of holdings, post-acquisition support, selection of leadership teams, preparation of key milestones.\n\nBanks, funds, family offices, accountants: we are the partner of those who finance and advise, where their services end."
+      }
+    ]
   }
 }

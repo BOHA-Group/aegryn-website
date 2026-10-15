@@ -595,11 +595,11 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         {/* Logo */}
         <Link ref={logoRef} href="/" aria-label="AEGRYN | Accueil" className="relative block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
           <Image
-            src="/images/brand/logo-aegryn-navbar.jpg"
+            src="/images/brand/logo-aegryn-navbar-black.png"
             alt="AEGRYN"
-            width={64}
-            height={64}
-            className="h-16 w-auto object-contain transition-opacity duration-300"
+            width={1024}
+            height={751}
+            className="h-11 w-auto object-contain transition-opacity duration-300"
             style={heroPage ? { opacity: onHero ? 0 : 1 } : undefined}
             priority
           />
@@ -607,10 +607,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             <Image
               src="/images/brand/logo-aegryn-navbar-white.png"
               alt=""
-              width={64}
-              height={64}
+              width={1024}
+              height={751}
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 h-16 w-auto object-contain transition-opacity duration-300"
+              className="pointer-events-none absolute inset-0 h-11 w-auto object-contain transition-opacity duration-300"
               style={{ opacity: onHero ? 1 : 0 }}
               priority
             />

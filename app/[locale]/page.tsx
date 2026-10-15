@@ -1,11 +1,10 @@
 import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
-import { HomeDoors }         from '@/components/sections/HomeDoors'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
-import { HomeBoutiqueSection } from '@/components/sections/HomeBoutiqueSection'
+import { SegmentsSection }   from '@/components/sections/SegmentsSection'
 import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
 import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
@@ -35,7 +34,6 @@ export default async function HomePage({ params }: Props) {
     <>
       {/* ── 0. Hero ────────────────────────────────────────── */}
       <HeroMountain />
-      <HomeDoors />
 
       {/* ── 01. Notre Conviction + About ───────────────────── */}
       <ManifestoSection />
@@ -46,8 +44,8 @@ export default async function HomePage({ params }: Props) {
       {/* ── 04. Notre ADN hybride ──────────────────────────── */}
       <HybridBlock />
 
-      {/* ── 05. La Boutique ────────────────────────────────── */}
-      <HomeBoutiqueSection locale={locale} />
+      {/* ── 05. Nos clients : de la startup à l'ETI ───────── */}
+      <SegmentsSection />
 
       {/* ── 06. Conseil ────────────────────────────────────── */}
       <AdvisoryTechStrip />

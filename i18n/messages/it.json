@@ -172,8 +172,8 @@
     "craftBuildBoutique": "Marchio, prodotto, messa sul mercato (La Boutique)"
   },
   "hero": {
-    "tagline": "Società integrata, radicata in Svizzera. E La Boutique dei progetti emblematici.",
-    "metaDescription": "Aegryn, società integrata radicata in Svizzera: inquadrare, realizzare, accompagnare ogni ciclo, selezionare talenti, informarsi. E La Boutique, per i progetti emblematici.",
+    "tagline": "Società integrata, radicata in Svizzera.",
+    "metaDescription": "Aegryn, società integrata radicata in Svizzera: inquadrare, realizzare, accompagnare ogni ciclo, selezionare talenti, informarsi.",
     "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni, fino a CHF 300 M di fatturato, che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Inquadramento, asset, talenti, guida dei progetti: una società integrata, radicata in Svizzera.",
     "phrases": [
       "Inquadrare\nle vostre decisioni.",
@@ -4711,7 +4711,7 @@
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
-    "magDesc": "Per fondatori, dirigenti, investitori e famiglie azioniste che costruiscono, finanziano, acquisiscono o trasmettono un'organizzazione: Aegryn Magazine documenta ogni trimestre cosa significa davvero creare e realizzare valore, in tutti i settori e dimensioni, in Svizzera e in Europa.\n\nStrategie decifrate, ritratti di decisori, dati di mercato e la vita di chi costruisce qualcosa che conta.\n\nUna rubrica La Boutique segue i progetti, i costruttori e l’arte di vivere.",
+    "magDesc": "Per fondatori, dirigenti, investitori e famiglie azioniste che costruiscono, finanziano, acquisiscono o trasmettono un'organizzazione: Aegryn Magazine documenta ogni trimestre cosa significa davvero creare e realizzare valore, in tutti i settori e dimensioni, in Svizzera e in Europa.\n\nStrategie decifrate, ritratti di decisori, dati di mercato e la vita di chi costruisce qualcosa che conta.",
     "magFooter": "Quattro edizioni all'anno.",
     "magCta": "Scopri la rivista",
     "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up ai grandi gruppi in forte crescita.",
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "PERCHÉ AEGRYN",
       "title": "Perché Aegryn?",
-      "p1": "La maggior parte degli studi consiglia senza costruire. La maggior parte delle aziende tech costruisce senza strategia. La maggior parte delle boutique M&A negozia senza aver costruito.\n\nAegryn inquadra, realizza e si circonda degli esperti giusti. E ciò che raccomanda ai suoi clienti, lo applica a sé stessa.",
+      "p1": "La maggior parte degli studi consiglia senza costruire. La maggior parte delle aziende tech costruisce senza strategia.\n\nAegryn riunisce le due cose. Una base di consulenza corporate, la società integrata, che inquadra, realizza e accompagna le decisioni dei dirigenti. E un verticale imprenditoriale, La Boutique, che guida dall’inizio alla fine un numero limitato di progetti emblematici. Ciò che raccomanda ai suoi clienti, Aegryn lo applica a sé stessa.",
       "p2": "Inquadrare senza realizzare è consegnare una mappa senza il territorio. Realizzare senza inquadrare è eseguire senza rotta. Accompagnare senza aver costruito è consigliare dall’esterno. Selezionare senza progetto è reclutare nel vuoto.\n\nIn Aegryn, ogni mestiere rafforza il successivo. È questa catena che fa reggere un progetto, per i nostri clienti come per noi.",
       "p3Label": "ANCORATO IN SVIZZERA",
       "p3": "Saint-Sulpice, Vaud. A due chilometri dall'EPFL, una delle università tecnologiche più attive al mondo in materia di spin-off e trasferimento tecnologico. A fianco della Fondazione per l'Innovazione e la Tecnologia (FIT), che sostiene ogni anno centinaia di progetti d'innovazione svizzeri. In un cantone che concentra SwissTech, decine di fondi di venture capital europei e una densità rara di dirigenti e acquirenti istituzionali. Non è un caso di localizzazione. È una scelta di rete. Il rigore di una piazza finanziaria di riferimento, la neutralità di un territorio di fiducia e l'accesso diretto a uno degli ecosistemi di innovazione più attivi d'Europa.",
@@ -10752,5 +10752,31 @@
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Progetti signature, per imprenditori, investitori e marchi. Raro per selezione. Discreto per principio.",
     "boutiqueLink": "Entrare nella Boutique"
+  },
+  "homeClients": {
+    "label": "I NOSTRI CLIENTI",
+    "title": "Accompagniamo le imprese in ogni fase.",
+    "cards": [
+      {
+        "key": "startup",
+        "title": "Startup e scale-up",
+        "desc": "Porre le giuste basi strategiche e tecnologiche, inquadrare il ciclo successivo e preparare la tappa seguente."
+      },
+      {
+        "key": "pme",
+        "title": "PMI in crescita",
+        "desc": "Inquadrare, trasformare e strutturare l’organizzazione prima di crescere, rilevare o trasmettere."
+      },
+      {
+        "key": "enterprise",
+        "title": "Imprese di medie dimensioni",
+        "desc": "Strategia, tecnologia, conformità e talenti: un solo interlocutore per le decisioni che impegnano il gruppo."
+      },
+      {
+        "key": "funds",
+        "title": "Fondi e investitori",
+        "desc": "Inquadramento delle partecipazioni, accompagnamento dopo l’acquisizione, selezione dei team dirigenti, preparazione delle tappe chiave.\n\nBanche, fondi, family office, commercialisti: siamo il partner di chi finanzia e consiglia, dove finiscono i loro servizi."
+      }
+    ]
   }
 }
