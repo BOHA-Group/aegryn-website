@@ -136,17 +136,17 @@ const nextConfig: NextConfig = {
       { source: '/:locale/valoriser/transmission',      destination: '/:locale/accompagner/transmission',    permanent: true },
       /* /franchir/* renommé /accompagner/* (les cinq cycles) */
       { source: '/franchir/:path*',                     destination: '/accompagner/:path*',              permanent: true },
-      { source: '/:locale/franchir/:path*',             destination: '/:locale/accompagner/:path*',      permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/franchir/:path*',             destination: '/:locale/accompagner/:path*',      permanent: true },
       /* Glossaire retiré : renvoi vers la FAQ */
       { source: '/glossaire',                           destination: '/help/faq',                        permanent: true },
-      { source: '/:locale/glossaire',                   destination: '/:locale/help/faq',                permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/glossaire',                   destination: '/:locale/help/faq',                permanent: true },
       { source: '/blog/glossaire-ma-tech-europe',       destination: '/blog',                            permanent: true },
-      { source: '/:locale/blog/glossaire-ma-tech-europe', destination: '/:locale/blog',                  permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/blog/glossaire-ma-tech-europe', destination: '/:locale/blog',                  permanent: true },
       /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
          Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },
-      { source: '/:locale/transact/:path*',             destination: '/:locale',                         permanent: true },
-      { source: '/:locale/client/auction',              destination: '/:locale',                         permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/transact/:path*',             destination: '/:locale',                         permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/client/auction',              destination: '/:locale',                         permanent: true },
       /* Espaces et pages d'admin archivés */
       { source: '/client/buyer/:path*',                 destination: '/client/account',                  permanent: false },
       { source: '/admin/:section(offers|transactions|transaction|introductions|catalog|commissions|sessions|light-bids|data-room-requests)/:path*', destination: '/admin', permanent: false },

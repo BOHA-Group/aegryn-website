@@ -8,9 +8,9 @@ import { gsap }            from '@/lib/gsap'
 /**
  * MissionVideoSection (Le Modèle Aegryn)
  *
- * Desktop : la section est épinglée quelques écrans. Une photo (voilier, cordage)
- * apparaît en carte arrondie, s'étend jusqu'au plein écran au scroll, s'assombrit
- * sous un voile navy, puis le contenu de la section se dévoile en superposition.
+ * Desktop : une photo (voilier, cordage) apparaît en carte arrondie (1/4 de la surface)
+ * et s'agrandit progressivement dès l'entrée de la section, jusqu'au plein écran ; la section
+ * s'épingle alors, la photo s'assombrit sous un voile navy et le contenu se dévoile en superposition.
  * Le voile (navy 70 %) garantit le contraste du texte blanc sur le ciel clair et le pont blanc.
  * Mobile / mouvement réduit : photo plein fond avec voile, contenu visible, sans épinglage.
  */
@@ -31,25 +31,19 @@ export function MissionVideoSection() {
 
     mm.add('(min-width: 1024px) and (prefers-reduced-motion: no-preference)', () => {
       const items = contentRef.current?.querySelectorAll('.mv-reveal') ?? []
+      /* Phase 1 : dès que la section entre dans l'écran, la carte (1/4 de la surface)
+         s'agrandit progressivement jusqu'au plein écran, au rythme du scroll */
+      const grow = { trigger: wrap, start: 'top bottom', end: 'top top', scrub: 0.6, invalidateOnRefresh: true }
+      gsap.fromTo(frameRef.current,
+        { clipPath: 'inset(25% 25% 25% 25% round 28px)' },
+        { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: grow })
+      gsap.fromTo(imgRef.current, { scale: 1.3 }, { scale: 1, ease: 'none', scrollTrigger: grow })
+      /* Phase 2 : section épinglée, voile navy puis contenu dévoilé colonne par colonne */
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrap,
-          start: 'top top',
-          end: '+=140%',
-          pin: true,
-          scrub: 0.6,
-          invalidateOnRefresh: true,
-        },
+        scrollTrigger: { trigger: wrap, start: 'top top', end: '+=110%', pin: true, scrub: 0.6, invalidateOnRefresh: true },
       })
-      /* 0 → 45 % : la carte s'étend jusqu'au plein écran, la photo se recadre */
-      tl.fromTo(frameRef.current,
-        { clipPath: 'inset(14% 10% 14% 10% round 28px)' },
-        { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'power2.inOut', duration: 0.45 }, 0)
-      tl.fromTo(imgRef.current, { scale: 1.14 }, { scale: 1, ease: 'none', duration: 0.6 }, 0)
-      /* 35 → 60 % : voile navy pour le contraste */
-      tl.fromTo(veilRef.current, { opacity: 0 }, { opacity: 1, ease: 'none', duration: 0.25 }, 0.35)
-      /* 50 → 100 % : le contenu se dévoile, colonne par colonne */
-      tl.fromTo(items, { opacity: 0, y: 36 }, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.3, stagger: 0.08 }, 0.5)
+      tl.fromTo(veilRef.current, { opacity: 0 }, { opacity: 1, ease: 'none', duration: 0.35 }, 0)
+      tl.fromTo(items, { opacity: 0, y: 36 }, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.35, stagger: 0.08 }, 0.25)
     })
 
     return () => mm.revert()
@@ -61,7 +55,7 @@ export function MissionVideoSection() {
       {/* Couche 1 : photo, carte arrondie qui s'étend au scroll (état final plein cadre hors desktop) */}
       <div
         ref={frameRef}
-        className="absolute inset-0 overflow-hidden lg:[clip-path:inset(14%_10%_14%_10%_round_28px)]"
+        className="absolute inset-0 overflow-hidden lg:[clip-path:inset(25%_25%_25%_25%_round_28px)]"
         aria-hidden="true"
       >
         <div ref={imgRef} className="absolute inset-0 will-change-transform">
