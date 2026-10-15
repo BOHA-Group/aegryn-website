@@ -73,6 +73,7 @@ export function SideDrawerLauncher({ label, title, targetId, mode, locale, child
         aria-hidden="true"
       />
       <aside
+        data-lenis-prevent
         role="dialog"
         aria-modal="true"
         aria-label={heading}
