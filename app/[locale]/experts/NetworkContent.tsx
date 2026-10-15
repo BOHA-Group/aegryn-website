@@ -1,0 +1,336 @@
+'use client'
+
+import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import {
+  ArrowUpRight, BrainCircuit, Scale, Cpu,
+  Building2, Users, Globe, UserSearch, Landmark, ShieldCheck, Sparkles,
+} from 'lucide-react'
+import PartnersSection from '@/components/sections/PartnersSection'
+import { PARTNER_LOGOS } from '@/components/sections/PartnersCarousel'
+import { GridFillers } from '@/components/ui/GridFillers'
+import { ScrollReveal } from '@/components/animations/ScrollReveal'
+import { WaveReveal }   from '@/components/animations/WaveReveal'
+
+/* ─── Types ────────────────────────────────────────────────────────────────── */
+type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma' | 'execsearch' | 'boutique'
+type ExpertDomain = {
+  Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
+  domainKey: string
+  color: string
+  dimension: DimensionKey | 'all'
+}
+
+type ExpertiseCard = {
+  title: string
+  tags: string[]
+  dimension: DimensionKey
+  color: string
+}
+
+/* Couleurs par dimension */
+const DIM_COLOR: Record<DimensionKey, string> = {
+  board:      '#C9A84C',
+  strategy:   '#5ADDA4',
+  compliance: '#14b8a6',
+  technology: '#60a5fa',
+  talent:     '#f472b6',
+  ma:         '#818cf8',
+  execsearch: '#fb923c',
+  boutique:   '#a78bfa',
+}
+
+/* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
+const EXPERT_DOMAINS: ExpertDomain[] = [
+  { Icon: Landmark,     domainKey: 'board',      color: '#C9A84C', dimension: 'board' },
+  { Icon: BrainCircuit, domainKey: 'strategy',   color: '#5ADDA4', dimension: 'strategy' },
+  { Icon: ShieldCheck,  domainKey: 'compliance', color: '#14b8a6', dimension: 'compliance' },
+  { Icon: Cpu,          domainKey: 'technology', color: '#60a5fa', dimension: 'technology' },
+  { Icon: Users,        domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
+  { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
+  { Icon: UserSearch,   domainKey: 'execsearch', color: '#fb923c', dimension: 'execsearch' },
+  { Icon: Sparkles,     domainKey: 'boutique',   color: '#a78bfa', dimension: 'boutique' },
+]
+
+
+/* ─── ExpertiseCard animée ──────────────────────────────────────────────────── */
+function ExpertiseCardItem({ card }: { card: ExpertiseCard }) {
+  const [hovered, setHovered] = useState(false)
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        transition: 'box-shadow 0.25s, transform 0.25s',
+        transform: hovered ? 'translateY(-3px)' : 'translateY(0)',
+        boxShadow: hovered ? `0 8px 32px rgba(0,0,0,0.10), 0 0 0 1.5px ${card.color}55` : '0 1px 4px rgba(0,0,0,0.04)',
+      }}
+      className="bg-ag-white border border-ag-border p-5 flex flex-col gap-3 cursor-default"
+    >
+      <div className="flex items-start justify-between gap-2">
+        <h3 className="font-sans font-bold text-ag-black text-[13px] leading-snug">{card.title}</h3>
+        <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: card.color }} />
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {card.tags.map(tag => (
+          <span
+            key={tag}
+            className="rounded-lg font-sans text-[10px] tracking-[0.07em] text-ag-gray border border-ag-border px-2 py-0.5"
+            style={{ borderColor: hovered ? `${card.color}55` : undefined }}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/* ─── FanCards ─────────────────────────────────────────────────────────────── */
+function FanCards({
+  domains, activeDomain, onSelect, t,
+}: {
+  domains: ExpertDomain[]
+  activeDomain: string | null
+  onSelect: (key: string) => void
+  t: ReturnType<typeof useTranslations>
+}) {
+  const [hovered, setHovered] = useState<number | null>(null)
+  const n = domains.length
+  const SPREAD   = 60
+  const SHIFT_PX = 150
+
+  return (
+    <div style={{ position: 'relative', height: 300, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'visible' }}>
+      {domains.map(({ Icon, domainKey, color }, i) => {
+        const rotDeg    = -SPREAD / 2 + (i / (n - 1)) * SPREAD
+        const arcY      = Math.abs(rotDeg) * 1.4
+        const shiftX    = (i - (n - 1) / 2) * SHIFT_PX
+        const isActive  = activeDomain === domainKey
+        const isHovered = hovered === i
+        // Si une autre carte est active, les cartes non-actives s'estompent légèrement
+        const isOtherActive = activeDomain !== null && !isActive
+        const rest  = `translateX(calc(-50% + ${shiftX}px)) translateY(${arcY}px) rotate(${rotDeg}deg)`
+        const lift  = `translateX(calc(-50% + ${shiftX}px)) translateY(-28px) rotate(0deg)`
+
+        return (
+          <button
+            key={domainKey}
+            onClick={() => onSelect(domainKey)}
+            onMouseEnter={() => setHovered(i)}
+            onMouseLeave={() => setHovered(null)}
+            style={{
+              position: 'absolute', bottom: 0, left: '50%',
+              width: 160, minHeight: 210, borderRadius: 12,
+              border: `1.5px solid ${isActive ? color + 'cc' : isHovered ? color + 'aa' : color + '40'}`,
+              background: '#FFFFFF',
+              padding: '18px 12px', textAlign: 'center',
+              transformOrigin: 'bottom center',
+              transform: isHovered || isActive ? lift : rest,
+              transition: 'transform 0.38s cubic-bezier(0.22,1,0.36,1), box-shadow 0.38s, border-color 0.2s, opacity 0.3s',
+              zIndex: isHovered || isActive ? 20 : i + 1,
+              boxShadow: isActive
+                ? `0 16px 48px rgba(0,0,0,0.18), 0 0 0 2.5px ${color}80`
+                : isHovered
+                  ? `0 12px 36px rgba(0,0,0,0.14), 0 0 0 1.5px ${color}50`
+                  : `0 4px 24px rgba(0,0,0,0.08)`,
+              opacity: isOtherActive && !isHovered ? 0.55 : 1,
+              cursor: 'pointer',
+            }}
+          >
+            <div style={{ width: 44, height: 44, borderRadius: '50%', background: `${color}18`, border: `1px solid ${color}35`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px' }}>
+              <Icon size={18} style={{ color }} />
+            </div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: '#0A0C14', marginBottom: 6, lineHeight: 1.3 }}>
+              {t(`domains.${domainKey}`)}
+            </div>
+            <div style={{ fontSize: 11, color: '#6B7280', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+              {t(`domains.${domainKey}Desc`)}
+            </div>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+/* ─── Main Component ─────────────────────────────────────────────────────────── */
+export default function NetworkContent() {
+  const t = useTranslations('network')
+  // Fan card sélectionnée : null = aucune (toutes expertises visibles)
+  const [activeDomain, setActiveDomain] = useState<string | null>(null)
+
+  const visibleDomains = EXPERT_DOMAINS
+
+  // Construire les cartes depuis i18n
+  const rawCards = t.raw('expertiseCards') as Record<DimensionKey, { title: string; tags: string[] }[]>
+  const EXPERTISE_CARDS: ExpertiseCard[] = (Object.entries(rawCards) as [DimensionKey, { title: string; tags: string[] }[]][]).flatMap(
+    ([dim, items]) => items.map(item => ({ ...item, dimension: dim, color: DIM_COLOR[dim] }))
+  )
+
+  const activeDomainMeta = activeDomain
+    ? EXPERT_DOMAINS.find(d => d.domainKey === activeDomain)
+    : null
+
+  const filteredExpertise = activeDomainMeta
+    ? EXPERTISE_CARDS.filter(c => c.dimension === activeDomainMeta.dimension)
+    : EXPERTISE_CARDS
+
+  function handleDomainSelect(domainKey: string) {
+    // Toggle : reclic sur la même carte = désélectionner
+    setActiveDomain(prev => prev === domainKey ? null : domainKey)
+  }
+
+  return (
+    <>
+      {/* ── Hero ── */}
+      <section className="border-b border-ag-border pt-24 pb-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
+            <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+            {t('hero.label')}
+          </p>
+          <WaveReveal delay={0.1}><h1
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] max-w-4xl mb-6 whitespace-pre-line"
+            style={{ fontSize: 'clamp(36px,5vw,72px)' }}
+          >
+            {t('hero.title')}
+          </h1></WaveReveal>
+<ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-ag-gray leading-relaxed max-w-xl mb-8">
+            {t('hero.desc')}
+          </p>
+          <div className="flex flex-wrap gap-6">
+            <div className="flex items-center gap-2">
+              <Building2 size={16} className="text-ag-apex-ink" />
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat1')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users size={16} className="text-ag-apex-ink" />
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat2')}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Globe size={16} className="text-ag-apex-ink" />
+              <span className="font-sans text-[15px] text-ag-gray">{t('hero.stat3')}</span>
+            </div>
+          </div></ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── Section 1 : Nos partenaires (structures externes) ── */}
+      <PartnersSection
+        label={t('partners.label')}
+        badge={t('partners.badge')}
+        title={t('partners.title')}
+        desc={t('partners.desc')}
+        note={t('partners.note')}
+        logos={PARTNER_LOGOS}
+      />
+
+      {/* ── Section 2 : Nos expertises (Aegryn interne + partenaires par extension) ── */}
+      <section className="border-b border-ag-border bg-ag-off-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+
+          {/* Header */}
+          <div className="mb-12">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="rounded-lg font-mono text-[10px] uppercase tracking-[0.28em] text-ag-gray-light border border-ag-border px-3 py-1">
+                {t('experts.label')}
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
+                {t('experts.badge')}
+              </span>
+            </div>
+            <h2
+              className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+            >
+              {t('experts.title')}
+            </h2>
+            <p className="text-[15px] text-ag-gray leading-relaxed mt-4 max-w-xl">
+              {t('experts.desc')}
+            </p>
+          </div>
+
+          {/* Boutons filtres — visibles sur toutes tailles d'écran */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            <button
+              onClick={() => setActiveDomain(null)}
+              className={[
+                'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
+                activeDomain === null
+                  ? 'bg-ag-navy text-white border-ag-navy'
+                  : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
+              ].join(' ')}
+            >
+              {t('filters.all')}
+            </button>
+            {EXPERT_DOMAINS.map(d => (
+              <button
+                key={d.domainKey}
+                onClick={() => handleDomainSelect(d.domainKey)}
+                style={activeDomain === d.domainKey ? { borderColor: d.color, background: d.color + '18', color: '#0A0C14' } : {}}
+                className={[
+                  'px-4 py-2 font-sans font-semibold text-[11px] uppercase tracking-[0.14em] border transition-colors',
+                  activeDomain === d.domainKey
+                    ? 'border-transparent'
+                    : 'text-ag-gray border-ag-border hover:border-ag-black hover:text-ag-black',
+                ].join(' ')}
+              >
+                {t(`domains.${d.domainKey}`)}
+              </button>
+            ))}
+          </div>
+
+          {/* Fan cards — masquées sur mobile, filtre live sur desktop */}
+          <div className="hidden md:block mb-12">
+            <FanCards
+              domains={visibleDomains}
+              activeDomain={activeDomain}
+              onSelect={handleDomainSelect}
+              t={t}
+            />
+          </div>
+
+          {/* Grille expertises animées — filtrée par dimension active */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+            {filteredExpertise.map((card) => (
+              <ExpertiseCardItem key={card.title} card={card} />
+            ))}
+            <GridFillers count={filteredExpertise.length} cols={{ sm: 2, lg: 3 }} />
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── CTA Devenir partenaire ── */}
+      <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">Aegryn Network</p>
+            <h2
+              className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl whitespace-pre-line"
+              style={{ fontSize: 'clamp(26px,3vw,44px)' }}
+            >
+              {t('cta.title')}
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <Link
+              href="/alliances"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-white/60 hover:bg-white/5 transition-all"
+            >
+              {t('cta.button')} <ArrowUpRight size={14} />
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
+            >
+              {t('contactCta')} <ArrowUpRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

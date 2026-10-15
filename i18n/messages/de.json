@@ -120,7 +120,7 @@
     "whoJoinDesc": "Bei Aegryn arbeiten, Talente, Partner",
     "whoCareers": "Bei Aegryn arbeiten",
     "whoTalent": "Executive Selection",
-    "whoAlliances": "Partner",
+    "whoAlliances": "Partner werden",
     "talent": "Talent",
     "thinkingMarket": "Unser Marktblick",
     "thinkingMarketDesc": "Daten, Analysen und Einblicke von denen, die den Markt machen.",
@@ -4778,17 +4778,17 @@
   "alliances": {
     "meta": {
       "title": "Partner werden | Aegryn",
-      "desc": "Treten Sie dem Aegryn-Netzwerk bei: Beratungsexperten in fünf Disziplinen, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
+      "desc": "Werden Sie Teil des Aegryn-Netzwerks: Experten der fünf Disziplinen der Firma, Umsetzungspartner für die Signature-Projekte von La Boutique, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
     "hero": {
       "label": "Partner werden",
       "title": "Unser Netzwerk.\nUnsere Stärke.",
-      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: fünf Beratungsdisziplinen, ein Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
+      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: die fünf Disziplinen der Firma, die Umsetzungspartner der Signature-Projekte von La Boutique, einen Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
       "imageAlt": "Weißer Leuchtturm am Meer, Luftaufnahme"
     },
     "side": {
       "group": "Fachexperten",
-      "groupDesc": "Die Strukturen und Expertisen, die wir in unseren Mandaten mobilisieren.",
+      "groupDesc": "Die Strukturen und Expertisen, die wir für unsere Mandate und die Projekte von La Boutique einbinden.",
       "investors": "Investoren & Institutionen",
       "investorsDesc": "Banken, Fonds, Family Offices, Institutionen: Aegryn als Operating Partner ihrer Beteiligungen.",
       "auditors": "Unabhängige Auditoren",
@@ -4802,7 +4802,7 @@
       "cards": [
         {
           "title": "Fachexperten",
-          "desc": "Fünf Beratungsdisziplinen, jede getragen von Experten des Netzwerks.",
+          "desc": "Die fünf Disziplinen der Firma und die Umsetzungsaktivitäten von La Boutique, jeweils getragen von Experten des Netzwerks.",
           "cta": "Disziplinen entdecken"
         },
         {
@@ -4819,7 +4819,7 @@
     },
     "metiers": {
       "label": "FACHEXPERTEN",
-      "title": "Fünf Beratungsdisziplinen.",
+      "title": "Fünf Beratungsdisziplinen und La Boutique.",
       "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
       "profilesLabel": "Gesuchte Profile",
       "items": {
@@ -4893,6 +4893,20 @@
             "Gesellschafterverträge und Governance nach der Transaktion"
           ],
           "note": "Aegryn berät und bereitet vor. Die Ausführung der Transaktionen wird den Investmentbanken, M&A-Boutiquen und zugelassenen Anwälten des Netzwerks anvertraut."
+        },
+        "boutique": {
+          "title": "Umsetzung von Signature-Projekten (La Boutique)",
+          "profiles": "Designer, Produktingenieure, Industrie- und Fertigungspartner, Vertriebsverantwortliche, Juristen für geistiges Eigentum, Markenexperten.",
+          "expertises": [
+            "Marken- und Erlebnisdesign",
+            "Industrie- und Produktdesign",
+            "Ingenieurwesen, F&E und Labore",
+            "Fertigung und Industrialisierung",
+            "Einkauf, Logistik und Supply Chain",
+            "Vertrieb und Markteinführung",
+            "Geistiges Eigentum und Produktregulierung",
+            "Kommunikation, Inhalte und Events"
+          ]
         }
       }
     },
@@ -4957,7 +4971,7 @@
   "network": {
     "meta": {
       "title": "Fachexperten | Aegryn",
-      "desc": "Das Aegryn-Netzwerk: unabhängige Senior-Experten, einzeln ausgewählt und für Beratungsmandate in der Schweiz und Europa mobilisiert."
+      "desc": "Das Aegryn-Netzwerk: unabhängige Senior-Experten, einzeln ausgewählt und für die Mandate der Firma und die Signature-Projekte von La Boutique eingesetzt, in der Schweiz und in Europa."
     },
     "hero": {
       "label": "Aegryn Netzwerk",
@@ -4977,7 +4991,7 @@
     "experts": {
       "label": "UNSERE EXPERTISE",
       "title": "Die Kompetenzen für\njeden Auftrag.",
-      "desc": "Das Aegryn-Netzwerk kombiniert interne Kompetenzen mit ausgewählten externen Experten. Jedes Profil wird je nach spezifischem Bedarf des Dossiers eingesetzt.",
+      "desc": "Das Aegryn-Netzwerk verbindet interne Kompetenzen und ausgewählte externe Experten, für die Mandate der Firma wie für die Projekte von La Boutique. Jedes Profil wird nach den spezifischen Anforderungen des Falls eingesetzt.",
       "profilesLabel": "Illustrative Profile",
       "comingSoonTitle": "Verzeichnis im Aufbau",
       "comingSoonDesc": "Individuelle Expertenprofile werden schrittweise veröffentlicht. Dieser Abschnitt illustriert die mobilisierbaren Profiltypen über die Beratungsdimensionen von Aegryn.",
@@ -5005,7 +5019,9 @@
       "talent": "Talent & Organisation",
       "talentDesc": "Organisation, Führungsteams, Nachfolgepläne und Bindung von Schlüsselkräften.",
       "execsearch": "Executive Search",
-      "execsearchDesc": "C-Level und VP Rekrutierung, Interim Management, Talent Mapping und Retention für Tech-Führungskräfte."
+      "execsearchDesc": "C-Level und VP Auswahl, Interim Management, Talent Mapping und Retention für Tech-Führungskräfte.",
+      "boutique": "Signature-Projekte",
+      "boutiqueDesc": "Design, Ingenieurwesen, Fertigung, Vertrieb, geistiges Eigentum und Marke im Dienst der Projekte von La Boutique."
     },
     "cta": {
       "title": "Dem Aegryn-Netzwerk beitreten.",
@@ -5014,7 +5030,7 @@
     "expertiseCards": {
       "board": [
         {
-          "title": "VR-Zusammensetzung & Rekrutierung",
+          "title": "VR-Zusammensetzung & Auswahl",
           "tags": [
             "Board members",
             "Unabh. Direktoren",
@@ -5317,7 +5333,7 @@
           "tags": [
             "Zielorganigramm",
             "Rollen & Verantwortlichkeiten",
-            "Executive-Rekrutierung"
+            "Executive-Auswahl"
           ]
         }
       ],
@@ -5394,7 +5410,7 @@
           ]
         },
         {
-          "title": "VP & Director Rekrutierung",
+          "title": "VP & Director Auswahl",
           "tags": [
             "VP Engineering",
             "VP Product",
@@ -5431,6 +5447,56 @@
             "BSPCE",
             "Aktienoptionen",
             "Comp benchmarking"
+          ]
+        }
+      ],
+      "boutique": [
+        {
+          "title": "Marken- und Erlebnisdesign",
+          "tags": [
+            "Identität",
+            "Naming",
+            "UX"
+          ]
+        },
+        {
+          "title": "Industrie- und Produktdesign",
+          "tags": [
+            "Prototyp",
+            "Spezifikationen",
+            "Verpackung"
+          ]
+        },
+        {
+          "title": "Ingenieurwesen, F&E und Labore",
+          "tags": [
+            "Machbarkeit",
+            "Tests",
+            "Validierung"
+          ]
+        },
+        {
+          "title": "Fertigung und Industrialisierung",
+          "tags": [
+            "Sourcing",
+            "Qualifizierung",
+            "Serien"
+          ]
+        },
+        {
+          "title": "Einkauf, Logistik und Supply Chain",
+          "tags": [
+            "Beschaffung",
+            "Transport",
+            "Lagerung"
+          ]
+        },
+        {
+          "title": "Vertrieb und Markteinführung",
+          "tags": [
+            "Kanäle",
+            "Einführung",
+            "Partner"
           ]
         }
       ]
@@ -7374,7 +7440,7 @@
     "servicesBuild": "Asset-Ingenieurwesen",
     "advisory": "Strategische Beratung",
     "acquisition": "Akquisitionsunterstützung",
-    "alliances": "Partner",
+    "alliances": "Allianzen & Partner",
     "experts": "Expertennetzwerk",
     "valuation": "Bewertung",
     "grade": "Bewertungssystem",

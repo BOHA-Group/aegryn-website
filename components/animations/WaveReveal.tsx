@@ -25,6 +25,12 @@ export function WaveReveal({ children, className, delay = 0 }: Props) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const target = (el.firstElementChild as HTMLElement) ?? el
+    /* Les sauts de ligne explicites (\n des textes i18n) sont conservés : SplitText les aplatirait en espaces. */
+    const original = target.innerHTML
+    const text = target.textContent ?? ''
+    if (target.children.length === 0 && text.includes('\n')) {
+      target.innerHTML = text.split('\n').map(l => l.replace(/&/g, '&amp;').replace(/</g, '&lt;')).join('<br>')
+    }
     const split = new SplitText(target, { type: 'lines', linesClass: 'wave-line-inner' })
     /* Laisse de la place aux jambages (g, y, p, q, j) sous le masque
        overflow:hidden : +0.18em de padding clip, -0.18em de marge pour
@@ -49,7 +55,7 @@ export function WaveReveal({ children, className, delay = 0 }: Props) {
       )
     }, ref)
 
-    return () => { ctx.revert(); split.revert() }
+    return () => { ctx.revert(); split.revert(); target.innerHTML = original }
   }, [delay])
 
   return (

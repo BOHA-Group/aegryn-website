@@ -146,7 +146,7 @@ export default async function InvestisseursPage({ params }: Props) {
               {t('banks.desc')}
             </p>
             <Link
-              href={'/contact?subject=partnership' as never}
+              href={'/alliances?type=apporteur#candidature' as never}
               className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:bg-ag-apex hover:text-ag-navy transition-colors"
             >
               {t('banks.cta')} <ArrowUpRight size={13} />

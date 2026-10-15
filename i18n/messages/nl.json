@@ -120,7 +120,7 @@
     "whoJoinDesc": "Werken bij Aegryn, talenten, partners",
     "whoCareers": "Werken bij Aegryn",
     "whoTalent": "Executive Selectie",
-    "whoAlliances": "Partners",
+    "whoAlliances": "Partner worden",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
     "thinkingMarketDesc": "Data, analyses en inzichten van degenen die de markt maken.",
@@ -4778,17 +4778,17 @@
   "alliances": {
     "meta": {
       "title": "Partner worden | Aegryn",
-      "desc": "Sluit u aan bij het Aegryn-netwerk: adviesexperts in vijf domeinen, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
+      "desc": "Sluit u aan bij het Aegryn-netwerk: experts uit de vijf vakgebieden van het bureau, uitvoeringspartners voor de signatuurprojecten van La Boutique, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
     },
     "hero": {
       "label": "Partner worden",
       "title": "Ons netwerk.\nOnze kracht.",
-      "desc": "Aegryn mobiliseert een netwerk van één voor één geselecteerde experts: vijf adviesdomeinen, een kring van investeerders en instellingen, en onafhankelijke auditors van de CIFSO 5000-certificering.",
+      "desc": "Aegryn schakelt een netwerk van één voor één geselecteerde experts in: de vijf vakgebieden van het bureau, de uitvoeringspartners van de signatuurprojecten van La Boutique, een kring van investeerders en instellingen en onafhankelijke auditors van de CIFSO 5000-certificering.",
       "imageAlt": "Witte vuurtoren aan zee, luchtfoto"
     },
     "side": {
       "group": "Vakexperts",
-      "groupDesc": "De structuren en expertise die we op onze opdrachten inzetten.",
+      "groupDesc": "De structuren en expertises die wij inzetten voor onze opdrachten en de projecten van La Boutique.",
       "investors": "Investeerders & Institutionelen",
       "investorsDesc": "Banken, fondsen, family offices, instellingen: Aegryn als operating partner van hun deelnemingen.",
       "auditors": "Onafhankelijke auditors",
@@ -4802,7 +4802,7 @@
       "cards": [
         {
           "title": "Vakexperts",
-          "desc": "Vijf adviesdomeinen, elk gedragen door experts van het netwerk.",
+          "desc": "De vijf vakgebieden van het bureau en de uitvoeringsactiviteiten van La Boutique, elk gedragen door experts uit het netwerk.",
           "cta": "De domeinen verkennen"
         },
         {
@@ -4819,7 +4819,7 @@
     },
     "metiers": {
       "label": "VAKEXPERTS",
-      "title": "Vijf adviesdomeinen.",
+      "title": "Vijf adviesvakgebieden, en La Boutique.",
       "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
       "profilesLabel": "Gezochte profielen",
       "items": {
@@ -4893,6 +4893,20 @@
             "Aandeelhoudersakkoorden en governance na de transactie"
           ],
           "note": "Aegryn adviseert en bereidt voor. De uitvoering van transacties wordt toevertrouwd aan zakenbanken, M&A-boutiques en beëdigde advocaten van het netwerk."
+        },
+        "boutique": {
+          "title": "Realisatie van signatuurprojecten (La Boutique)",
+          "profiles": "Ontwerpers, productingenieurs, industriëlen en producenten, verantwoordelijken voor distributie, juristen intellectueel eigendom, merkexperts.",
+          "expertises": [
+            "Merk- en ervaringsontwerp",
+            "Industrieel en productontwerp",
+            "Engineering, R&D en laboratoria",
+            "Productie en industrialisatie",
+            "Inkoop, logistiek en supply chain",
+            "Distributie en marktintroductie",
+            "Intellectueel eigendom en productregelgeving",
+            "Communicatie, content en evenementen"
+          ]
         }
       }
     },
@@ -4957,7 +4971,7 @@
   "network": {
     "meta": {
       "title": "Vakexperts | Aegryn",
-      "desc": "Het Aegryn-netwerk: senior onafhankelijke experts, één voor één geselecteerd en ingezet op adviesopdrachten in Zwitserland en Europa."
+      "desc": "Het Aegryn-netwerk: onafhankelijke seniorexperts, één voor één geselecteerd en ingezet voor de opdrachten van het bureau en de signatuurprojecten van La Boutique, in Zwitserland en Europa."
     },
     "hero": {
       "label": "Aegryn Netwerk",
@@ -4977,7 +4991,7 @@
     "experts": {
       "label": "ONZE EXPERTISE",
       "title": "De vaardigheden ingezet\nvoor elke opdracht.",
-      "desc": "Het Aegryn-netwerk combineert interne competenties met geselecteerde externe experts. Elk profiel wordt ingezet naar de specifieke behoeften van het dossier.",
+      "desc": "Het Aegryn-netwerk combineert interne vaardigheden en geselecteerde externe experts, voor de opdrachten van het bureau zoals voor de projecten van La Boutique. Elk profiel wordt ingezet volgens de specifieke behoeften van het dossier.",
       "profilesLabel": "Illustratieve profielen",
       "comingSoonTitle": "Register in opbouw",
       "comingSoonDesc": "Individuele expertprofielen worden geleidelijk gepubliceerd. Deze sectie illustreert de soorten mobiliseerbare profielen over de adviesinstrumenten van Aegryn.",
@@ -5005,7 +5019,9 @@
       "talent": "Talent & Organisatie",
       "talentDesc": "Organisatie, leiderschapsteams, opvolgingsplannen en behoud van sleuteltalent.",
       "execsearch": "Executive Search",
-      "execsearchDesc": "C-Level en VP werving, interim management, talent mapping en retentie voor tech-leiders."
+      "execsearchDesc": "C-Level en VP selectie, interim management, talent mapping en retentie voor tech-leiders.",
+      "boutique": "Signatuurprojecten",
+      "boutiqueDesc": "Design, engineering, productie, distributie, intellectueel eigendom en merk, ten dienste van de projecten van La Boutique."
     },
     "cta": {
       "title": "Word lid van het Aegryn-netwerk.",
@@ -5014,7 +5030,7 @@
     "expertiseCards": {
       "board": [
         {
-          "title": "Samenstelling & werving RvB",
+          "title": "Samenstelling & selectie RvB",
           "tags": [
             "Board members",
             "Onafh. bestuurders",
@@ -5394,7 +5410,7 @@
           ]
         },
         {
-          "title": "VP & Director werving",
+          "title": "VP & Director selectie",
           "tags": [
             "VP Engineering",
             "VP Product",
@@ -5431,6 +5447,56 @@
             "BSPCE",
             "Aandelenopties",
             "Comp benchmarking"
+          ]
+        }
+      ],
+      "boutique": [
+        {
+          "title": "Merk- en ervaringsontwerp",
+          "tags": [
+            "Identiteit",
+            "Naming",
+            "UX"
+          ]
+        },
+        {
+          "title": "Industrieel en productontwerp",
+          "tags": [
+            "Prototype",
+            "Specificaties",
+            "Verpakking"
+          ]
+        },
+        {
+          "title": "Engineering, R&D en laboratoria",
+          "tags": [
+            "Haalbaarheid",
+            "Testen",
+            "Validatie"
+          ]
+        },
+        {
+          "title": "Productie en industrialisatie",
+          "tags": [
+            "Sourcing",
+            "Kwalificatie",
+            "Series"
+          ]
+        },
+        {
+          "title": "Inkoop, logistiek en supply chain",
+          "tags": [
+            "Bevoorrading",
+            "Transport",
+            "Opslag"
+          ]
+        },
+        {
+          "title": "Distributie en marktintroductie",
+          "tags": [
+            "Kanalen",
+            "Lancering",
+            "Partners"
           ]
         }
       ]
@@ -7389,7 +7455,7 @@
     "servicesBuild": "Asset Engineering",
     "advisory": "Strategisch advies",
     "acquisition": "Acquisitieondersteuning",
-    "alliances": "Partners",
+    "alliances": "Allianties & Partners",
     "experts": "Expertnetwerk",
     "valuation": "Waardering",
     "grade": "Certificeringssysteem",

@@ -133,7 +133,7 @@ export default function TalentAdminNotification({ type, data }: Props) {
             )}
 
             <Section style={s.ctaSection}>
-              <Button href="https://aegryn.com/account?tab=talent" style={s.cta}>
+              <Button href="https://aegryn.com/admin/talent" style={s.cta}>
                 Voir dans l'admin →
               </Button>
             </Section>

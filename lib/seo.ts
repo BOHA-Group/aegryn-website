@@ -361,8 +361,8 @@ export const aegrynOrganizationSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Aegryn Partner Network',
-          description: 'Curated network of partners across twelve fields of activity, from legal, finance and strategy to engineering, design, technology, manufacturing and distribution, supporting organisations and signature projects.',
+          name: 'Aegryn Expert Network',
+          description: 'Curated network of experts and partners, from advisory, legal and finance to engineering, design, technology, manufacturing and distribution, supporting organisations and signature projects at every lifecycle stage.',
           url: `${BASE_URL}/en/experts`,
         },
       },
@@ -418,7 +418,7 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 5,  name: 'Restructuration & Pivot',       url: `${BASE_URL}/fr/accompagner/restructuration` },
     { '@type': 'ListItem', position: 6,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/accompagner/acquisition` },
     { '@type': 'ListItem', position: 7,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/accompagner/transmission` },
-    { '@type': 'ListItem', position: 8,  name: 'Partenaires',                    url: `${BASE_URL}/fr/alliances` },
+    { '@type': 'ListItem', position: 8,  name: 'Réseau d\'experts',             url: `${BASE_URL}/fr/experts` },
     { '@type': 'ListItem', position: 9,  name: 'Portfolio',                     url: `${BASE_URL}/fr/boutique/projets` },
     { '@type': 'ListItem', position: 10, name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },
     { '@type': 'ListItem', position: 11, name: 'Certification CIFSO 5000',      url: `${BASE_URL}/fr/grade` },
@@ -433,7 +433,7 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 20, name: 'Advisory — Technologie & Souveraineté', url: `${BASE_URL}/fr/advisory/technology` },
     { '@type': 'ListItem', position: 21, name: 'Advisory — Talent & Organisation', url: `${BASE_URL}/fr/advisory/talent-organization` },
     { '@type': 'ListItem', position: 22, name: 'Advisory — M&A, Transactions & PMI', url: `${BASE_URL}/fr/advisory/ma` },
-    { '@type': 'ListItem', position: 23, name: 'La Boutique',                   url: `${BASE_URL}/fr/boutique` },
+    { '@type': 'ListItem', position: 23, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
     { '@type': 'ListItem', position: 24, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
     { '@type': 'ListItem', position: 25, name: 'Talent — Entreprises',          url: `${BASE_URL}/fr/talent/entreprises` },
     { '@type': 'ListItem', position: 26, name: 'Talent — Candidats',            url: `${BASE_URL}/fr/talent/candidats` },
@@ -450,6 +450,7 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 37, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
     { '@type': 'ListItem', position: 38, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
     { '@type': 'ListItem', position: 39, name: 'Feuille de route',              url: `${BASE_URL}/fr/roadmap` },
+    { '@type': 'ListItem', position: 40, name: 'La Boutique',                   url: `${BASE_URL}/fr/boutique` },
   ],
 }
 

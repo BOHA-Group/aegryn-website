@@ -6,7 +6,7 @@ import { ack } from '@/content/emails/ack'
 
 const schema = z.object({
   applicant_type:    z.enum(['expert', 'auditeur', 'apporteur']),
-  metier:            z.enum(['strategie', 'risques', 'technologie', 'talent', 'ma']).optional(),
+  metier:            z.enum(['strategie', 'risques', 'technologie', 'talent', 'ma', 'boutique']).optional(),
   dimension:         z.enum(['C', 'I', 'F', 'S', 'O']).optional(),
   applicant_name:    z.string().min(2).max(150),
   organization_name: z.string().min(2).max(150),

@@ -135,7 +135,7 @@
     "whoJoinDesc": "Travailler chez Aegryn, talents, partenaires",
     "whoCareers": "Travailler chez Aegryn",
     "whoTalent": "Sélection Executive",
-    "whoAlliances": "Partenaires",
+    "whoAlliances": "Devenir partenaire",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
     "talent": "Talent",
@@ -4753,17 +4753,17 @@
   "alliances": {
     "meta": {
       "title": "Devenir partenaire | Aegryn",
-      "desc": "Rejoignez le réseau Aegryn : experts conseil sur cinq métiers, investisseurs et institutionnels, auditeurs indépendants de la certification CIFSO 5000."
+      "desc": "Rejoignez le réseau Aegryn : experts des cinq métiers du cabinet, partenaires de réalisation des projets signature de La Boutique, investisseurs et institutionnels, auditeurs indépendants de la certification CIFSO 5000."
     },
     "hero": {
       "label": "Devenir partenaire",
       "title": "Notre réseau.\nNotre force.",
-      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : cinq métiers de conseil, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000.",
+      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : les cinq métiers du cabinet, les partenaires de réalisation des projets signature de La Boutique, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000.",
       "imageAlt": "Phare blanc au bord de la mer, vue aérienne"
     },
     "side": {
       "group": "Experts métier",
-      "groupDesc": "Les structures et expertises mobilisées sur nos missions.",
+      "groupDesc": "Les structures et expertises mobilisées sur nos missions et sur les projets de La Boutique.",
       "investors": "Investisseurs & Institutionnels",
       "investorsDesc": "Banques, fonds, family offices, institutions : Aegryn operating partner de leurs participations.",
       "auditors": "Auditeurs indépendants",
@@ -4777,7 +4777,7 @@
       "cards": [
         {
           "title": "Experts métier",
-          "desc": "Cinq métiers de conseil, chacun porté par des experts du réseau.",
+          "desc": "Cinq métiers du cabinet et les activités de réalisation de La Boutique, chacun porté par des experts du réseau.",
           "cta": "Explorer les métiers"
         },
         {
@@ -4794,7 +4794,7 @@
     },
     "metiers": {
       "label": "EXPERTS MÉTIER",
-      "title": "Cinq métiers de conseil.",
+      "title": "Cinq métiers de conseil, et La Boutique.",
       "desc": "Chaque métier est porté par des experts du réseau, mobilisés selon le besoin de la mission.",
       "profilesLabel": "Profils recherchés",
       "items": {
@@ -4868,6 +4868,20 @@
             "Pactes d'actionnaires et gouvernance post-opération"
           ],
           "note": "Aegryn conseille et prépare. L'exécution des opérations est confiée à des banques d'affaires, boutiques M&A et avocats agréés du réseau."
+        },
+        "boutique": {
+          "title": "Réalisation des projets signature (La Boutique)",
+          "profiles": "Designers, ingénieurs produit, industriels et fabricants, responsables de la distribution, juristes de la propriété intellectuelle, experts de la marque.",
+          "expertises": [
+            "Design de marque et d'expérience",
+            "Design industriel et produit",
+            "Ingénierie, R&D et laboratoires",
+            "Fabrication et industrialisation",
+            "Achats, logistique et supply chain",
+            "Distribution et mise en marché",
+            "Propriété intellectuelle et réglementation produit",
+            "Communication, contenus et événements"
+          ]
         }
       }
     },
@@ -4932,7 +4946,7 @@
   "network": {
     "meta": {
       "title": "Experts métier | Aegryn",
-      "desc": "Le réseau Aegryn : des experts seniors indépendants, sélectionnés un par un et mobilisés sur les missions de conseil, en Suisse et en Europe."
+      "desc": "Le réseau Aegryn : des experts seniors indépendants, sélectionnés un par un et mobilisés sur les missions du cabinet et sur les projets signature de La Boutique, en Suisse et en Europe."
     },
     "hero": {
       "label": "Réseau Aegryn",
@@ -4952,7 +4966,7 @@
     "experts": {
       "label": "NOS EXPERTISES",
       "title": "Les compétences mobilisées\nsur chaque mission.",
-      "desc": "Le réseau Aegryn combine compétences internes et experts externes sélectionnés. Chaque profil est mobilisé selon les besoins spécifiques du dossier.",
+      "desc": "Le réseau Aegryn combine compétences internes et experts externes sélectionnés, pour les missions du cabinet comme pour les projets de La Boutique. Chaque profil est mobilisé selon les besoins spécifiques du dossier.",
       "profilesLabel": "Profils illustratifs",
       "comingSoonTitle": "Référentiel en construction",
       "comingSoonDesc": "Les fiches experts individuelles seront publiées progressivement. Cette section illustre les typologies de profils mobilisables selon les dimensions de conseil Aegryn.",
@@ -4980,7 +4994,9 @@
       "talent": "Talent & Organisation",
       "talentDesc": "Organisation, équipes dirigeantes, plans de succession et rétention des talents clés.",
       "execsearch": "Executive Search",
-      "execsearchDesc": "Recrutement C-Level et VP, interim management, talent mapping et rétention pour les leaders tech."
+      "execsearchDesc": "Sélection C-Level et VP, interim management, talent mapping et rétention pour les leaders tech.",
+      "boutique": "Projets signature",
+      "boutiqueDesc": "Design, ingénierie, fabrication, distribution, propriété intellectuelle et marque, au service des projets de La Boutique."
     },
     "cta": {
       "title": "Rejoindre le réseau Aegryn.",
@@ -4989,7 +5005,7 @@
     "expertiseCards": {
       "board": [
         {
-          "title": "Composition & recrutement CA",
+          "title": "Composition & sélection CA",
           "tags": [
             "Board members",
             "Administrateurs indép.",
@@ -5292,7 +5308,7 @@
           "tags": [
             "Organigramme cible",
             "Rôles & responsabilités",
-            "Recrutement exécutif"
+            "Sélection exécutif"
           ]
         }
       ],
@@ -5369,7 +5385,7 @@
           ]
         },
         {
-          "title": "Recrutement VP & Director",
+          "title": "Sélection VP & Director",
           "tags": [
             "VP Engineering",
             "VP Product",
@@ -5406,6 +5422,56 @@
             "BSPCE",
             "Stock options",
             "Comp benchmarking"
+          ]
+        }
+      ],
+      "boutique": [
+        {
+          "title": "Design de marque et d'expérience",
+          "tags": [
+            "Identité",
+            "Naming",
+            "UX"
+          ]
+        },
+        {
+          "title": "Design industriel et produit",
+          "tags": [
+            "Prototype",
+            "Spécifications",
+            "Packaging"
+          ]
+        },
+        {
+          "title": "Ingénierie, R&D et laboratoires",
+          "tags": [
+            "Faisabilité",
+            "Essais",
+            "Validation"
+          ]
+        },
+        {
+          "title": "Fabrication et industrialisation",
+          "tags": [
+            "Sourcing",
+            "Qualification",
+            "Séries"
+          ]
+        },
+        {
+          "title": "Achats, logistique et supply chain",
+          "tags": [
+            "Approvisionnement",
+            "Transport",
+            "Entreposage"
+          ]
+        },
+        {
+          "title": "Distribution et mise en marché",
+          "tags": [
+            "Canaux",
+            "Lancement",
+            "Partenaires"
           ]
         }
       ]
@@ -7349,7 +7415,7 @@
     "servicesBuild": "Conception d'actifs",
     "advisory": "Conseil stratégique",
     "acquisition": "Soutien à l'acquisition",
-    "alliances": "Partenaires",
+    "alliances": "Alliances & Partenaires",
     "experts": "Réseau d'experts",
     "valuation": "Valorisation",
     "grade": "Système de certification",
