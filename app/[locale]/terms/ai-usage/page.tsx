@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Link as LocalizedLink } from '@/i18n/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
@@ -112,10 +113,10 @@ export default async function AiUsagePage({ params }: Props) {
               { key: 'termsCgv',  href: '/terms/cgv' },
               { key: 'privacy',   href: '/privacy' },
             ] as const).map(({ key, href }) => (
-              <Link key={key} href={href}
+              <LocalizedLink key={key} href={href}
                 className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light hover:text-ag-black transition-colors">
                 {tL(key)}
-              </Link>
+              </LocalizedLink>
             ))}
           </div>
 

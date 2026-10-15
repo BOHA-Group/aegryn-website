@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
@@ -91,13 +91,13 @@ export default async function WorkforcePage({ params }: Props) {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
-              href={t('hero.cta1Href')}
+              href={t('hero.cta1Href') as never}
               className="rounded-lg inline-flex items-center justify-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
             >
               {t('hero.cta1')} <ArrowUpRight size={12} />
             </Link>
             <Link
-              href={t('hero.cta2Href')}
+              href={t('hero.cta2Href') as never}
               className="rounded-lg inline-flex items-center justify-center gap-2 border border-white/25 text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:border-ag-apex hover:text-ag-apex transition-colors"
             >
               {t('hero.cta2')}
@@ -303,7 +303,7 @@ export default async function WorkforcePage({ params }: Props) {
             </div>
             <div>
               <Link
-                href={t('cifso.ctaHref')}
+                href={t('cifso.ctaHref') as never}
                 className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
               >
                 {t('cifso.cta')} <ArrowUpRight size={12} />
@@ -368,7 +368,7 @@ export default async function WorkforcePage({ params }: Props) {
             {relatedArticles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/blog/${article.slug}`}
+                href={`/blog/${article.slug}` as never}
                 className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="relative h-40 w-full overflow-hidden">
@@ -417,7 +417,7 @@ export default async function WorkforcePage({ params }: Props) {
               {t('cta.employer.desc')}
             </p>
             <Link
-              href={t('cta.employer.href')}
+              href={t('cta.employer.href') as never}
               className="rounded-lg inline-flex items-center justify-center gap-2 bg-ag-navy text-white font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors self-start"
             >
               {t('cta.employer.cta')} <ArrowUpRight size={12} />
@@ -431,7 +431,7 @@ export default async function WorkforcePage({ params }: Props) {
               {t('cta.talent.desc')}
             </p>
             <Link
-              href={t('cta.talent.href')}
+              href={t('cta.talent.href') as never}
               className="rounded-lg inline-flex items-center justify-center gap-2 border border-ag-border text-ag-gray font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all self-start"
             >
               {t('cta.talent.cta')} <ArrowUpRight size={12} />

@@ -1,6 +1,7 @@
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }        from 'next'
 import Link                     from 'next/link'
+import { Link as LocalizedLink } from '@/i18n/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
@@ -55,15 +56,15 @@ export default async function PrivacyPage({ params }: Props) {
       <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
-            <Link
+            <LocalizedLink
               key={k}
-              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i]}
+              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i] as never}
               className={`font-mono text-[10px] tracking-[0.18em] uppercase transition-colors ${
                 k === 'privacy' ? 'text-ag-black' : 'text-ag-gray-light hover:text-ag-black'
               }`}
             >
               {tN(k)}
-            </Link>
+            </LocalizedLink>
           ))}
         </div>
       </div>

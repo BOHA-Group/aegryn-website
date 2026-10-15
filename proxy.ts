@@ -257,6 +257,14 @@ export default async function middleware(req: NextRequest) {
     const { response: refreshedRes } = await refreshAndCheckSession(req)
     const intlRes = intlMiddleware(req)
 
+    /* La langue de la page visitée devient la langue préférée : tout lien sans préfixe de langue
+       (espace client, liens hérités) renvoie ensuite vers la même langue, jamais vers une autre. */
+    const pathLocale = pathname.split('/')[1] as Locale
+    const speculative = (req.headers.get('sec-purpose') ?? req.headers.get('purpose') ?? '').includes('prefetch')
+    if (!speculative && req.cookies.get(PREF_COOKIE)?.value !== pathLocale) {
+      intlRes.cookies.set(PREF_COOKIE, pathLocale, { maxAge: 60 * 60 * 24 * 365, sameSite: 'lax', path: '/' })
+    }
+
     /* Si intlMiddleware retourne une redirection, les Set-Cookie sur la réponse
        intermédiaire ne sont pas persistés par certains navigateurs.
        Dans ce cas on fusionne les cookies dans la réponse intl quand même —
@@ -273,7 +281,20 @@ export default async function middleware(req: NextRequest) {
   const preferred = req.cookies.get(PREF_COOKIE)?.value as Locale | undefined
   let detectedLocale: Locale
 
-  if (preferred && LOCALES.includes(preferred)) {
+  let refererLocale: Locale | null = null
+  try {
+    const ref = req.headers.get('referer')
+    if (ref) {
+      const u = new URL(ref)
+      const seg = u.pathname.split('/')[1] as Locale
+      const hosts = [req.nextUrl.host, req.headers.get('host'), req.headers.get('x-forwarded-host')].filter(Boolean)
+      if (hosts.includes(u.host) && LOCALES.includes(seg)) refererLocale = seg
+    }
+  } catch { /* referer invalide : ignoré */ }
+
+  if (refererLocale) {
+    detectedLocale = refererLocale
+  } else if (preferred && LOCALES.includes(preferred)) {
     detectedLocale = preferred
   } else {
     // x-vercel-ip-country (Vercel) ou cf-ipcountry (Cloudflare) — même sémantique
@@ -287,7 +308,7 @@ export default async function middleware(req: NextRequest) {
   url.pathname   = `/${detectedLocale}${pathname === '/' ? '' : pathname}`
   const redirect = NextResponse.redirect(url, { status: 302 })
 
-  if (!preferred) {
+  if (preferred !== detectedLocale) {
     redirect.cookies.set(PREF_COOKIE, detectedLocale, {
       maxAge: 60 * 60 * 24 * 365,
       sameSite: 'lax',

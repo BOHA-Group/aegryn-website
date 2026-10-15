@@ -79,3 +79,8 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 - NDA : mutuel, numérique, signé par lien personnel sans compte (`lib/nda/*`, `/nda/[token]`, `/admin/nda`). Envoi **manuel** depuis l'admin ; contresignature automatique (Yohann Bollack, CEO) ; PDF archivé (bucket `nda-signed`). Accès certification et data room = rôle ouvert par l'admin **et** NDA signé (`lib/nda/access.ts`, y compris les API data room). L'ancien NDA par compte est retiré.
 - Catalogue, transactions, enchères, espace acheteur : archivés dans `_archive/legacy-transact/` (redirections 301 dans `next.config.ts`). Ne pas réintroduire.
 - Dev : ne pas lancer de requêtes en parallèle sur le serveur de développement (corruption du cache `.next`) ; Chromium de Puppeteer ne lit pas le H.264, tester la vidéo avec Google Chrome.
+
+## Langue de navigation
+
+- Tout lien interne passe par `Link` de `@/i18n/navigation` (ou un préfixe `/${locale}` explicite). Jamais de `<a href="/...">` ni de `next/link` avec un chemin sans préfixe de langue : l'utilisateur doit rester dans la langue choisie sur tout le site.
+- `proxy.ts` : la langue de la page visitée met à jour le cookie `ag-locale-pref`, et un lien sans préfixe reprend la langue du Referer.

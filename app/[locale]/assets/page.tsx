@@ -1,6 +1,6 @@
 import { getTranslations }               from 'next-intl/server'
 import type { Metadata }                  from 'next'
-import { AssetHeroBannerVideo }           from '@/components/sections/AssetHeroBannerVideo'
+import { AssetHero }                      from '@/components/sections/AssetHero'
 import { ProprietaryAssetsGrid }          from '@/components/sections/assets/ProprietaryAssetsGrid'
 import { generateAegrynMetadata }         from '@/lib/seo'
 import { Link }                           from '@/i18n/navigation'
@@ -20,7 +20,7 @@ export default async function AssetsPage({ params }: Props) {
 
   return (
     <main>
-      <AssetHeroBannerVideo
+      <AssetHero
         label={t('heroLabel')}
         title={t('heroTitle')}
         sub={t('heroSub')}

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink, Info, Lock } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { gsap } from '@/lib/gsap'
 import { FilterPills } from '@/components/ui/FilterPills'
 
@@ -227,19 +228,19 @@ export function ProprietaryAssetsGrid() {
                     {t('confidential')}
                   </span>
                 ) : asset.slug ? (
-                  <a
-                    href={`/assets/${asset.slug}`}
+                  <Link
+                    href={`/assets/${asset.slug}` as never}
                     className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
                   >
                     {t('viewDetails')} <ArrowUpRight size={11} />
-                  </a>
+                  </Link>
                 ) : asset.visitPageHref ? (
-                  <a
-                    href={asset.visitPageHref}
+                  <Link
+                    href={asset.visitPageHref as never}
                     className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
                   >
                     {asset.visitPageLabelKey ? tItems(asset.visitPageLabelKey) : t('visitPage')} <ArrowUpRight size={11} />
-                  </a>
+                  </Link>
                 ) : (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
                     {asset.status === 'dev' ? t('comingSoon') : t('visitSite')}
