@@ -53,7 +53,6 @@ export default async function SellerNav({
       label: t('navGroupCompliance'),
       items: [
         { href: '/client/seller/kyc', label: t('navKyc'), icon: 'ShieldCheck' },
-        ...(certificationOnly ? [] : [{ href: '/client/seller/nda-view', label: t('navSellerNda'), icon: 'FileText' }]),
       ],
     },
     {

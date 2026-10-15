@@ -1,3 +1,4 @@
+import { listSignedNdas } from '@/lib/nda/access'
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
@@ -52,17 +53,13 @@ export default async function AccountPage() {
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, created_at, email_notifications_enabled, partner_nda_accepted_at, partner_nda_version, client_nda_accepted_at, client_nda_version')
+    .select('full_name, roles, created_at, email_notifications_enabled')
     .eq('id', user.id)
     .single()
 
   const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
   const emailNotifEnabled = profile?.email_notifications_enabled !== false
-  const p = profile as Record<string, unknown> | null
-  const partnerNdaSignedAt = p?.partner_nda_accepted_at as string | null
-  const partnerNdaVersion  = p?.partner_nda_version  as string | null
-  const clientNdaSignedAt  = p?.client_nda_accepted_at  as string | null
-  const clientNdaVersion   = p?.client_nda_version   as string | null
+  const signedNdas = await listSignedNdas(user.email)
 
   const { data: ndaSignatures } = await supa
     .from('nda_signatures')
@@ -192,50 +189,33 @@ export default async function AccountPage() {
         </div>
 
         {/* NDA signés */}
-        {((ndaSignatures && ndaSignatures.length > 0) || partnerNdaSignedAt || clientNdaSignedAt) && (
+        {((ndaSignatures && ndaSignatures.length > 0) || signedNdas.length > 0) && (
           <div className="bg-white border border-gray-200 p-5 mt-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('ndaTitle')}</p>
             <div className="flex flex-col gap-3">
 
-              {/* NDA Partenaire */}
-              {partnerNdaSignedAt && (
-                <div className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
+              {/* NDA mutuels signés : exemplaire PDF avec les deux signatures */}
+              {signedNdas.map(n => (
+                <div key={n.id} className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
                   <div>
                     <p className="font-sans text-[13px] text-gray-700 font-medium">
-                      {t('ndaPartnerTitle')}
+                      Accord de confidentialité {n.reference}
                       <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
                         {t('ndaSigned')}
                       </span>
                     </p>
                     <p className="font-mono text-[10px] text-gray-400 mt-0.5">
-                      {t('ndaVersion')} {partnerNdaVersion ?? '—'} · {new Date(partnerNdaSignedAt).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })}
+                      {new Date(n.signedAt).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })}
                     </p>
                   </div>
-                  <Link
-                    href="/client/partner/nda"
+                  <a
+                    href={`/api/client/nda/pdf?id=${n.id}`}
                     className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
                   >
-                    {t('ndaView')}
-                  </Link>
+                    PDF signé
+                  </a>
                 </div>
-              )}
-
-              {/* NDA Client (certification CIFSO — accès données confidentielles) */}
-              {clientNdaSignedAt && (
-                <div className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
-                  <div>
-                    <p className="font-sans text-[13px] text-gray-700 font-medium">
-                      {t('ndaClientTitle')}
-                      <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
-                        {t('ndaSigned')}
-                      </span>
-                    </p>
-                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">
-                      {t('ndaVersion')} {clientNdaVersion ?? '—'} · {new Date(clientNdaSignedAt).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })}
-                    </p>
-                  </div>
-                </div>
-              )}
+              ))}
 
               {/* NDA Catalogue (acquéreur) */}
               {roles.includes('buyer') && ndaSignatures && ndaSignatures.map((sig, i) => (

@@ -62,6 +62,10 @@ const nextConfig: NextConfig = {
         destination: 'https://aegryn.com/:path*',
         permanent: true,
       },
+      /* Anciennes pages d'acceptation de NDA par compte : remplacées par le NDA mutuel (lien personnel) */
+      { source: '/client/nda/:path*',                 destination: '/client/nda-required',            permanent: true },
+      { source: '/client/partner/nda',                destination: '/client/nda-required?need=partner', permanent: true },
+      { source: '/client/seller/nda-view',            destination: '/client/nda-required',            permanent: true },
       /* Anciennes URLs internes aegryn.com */
       { source: '/:locale/grade/methodology',        destination: '/:locale/grade',                  permanent: true },
       { source: '/:locale/grade/grading-system',     destination: '/:locale/grade',                  permanent: true },

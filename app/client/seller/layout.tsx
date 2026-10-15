@@ -4,7 +4,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import SellerNav from './SellerNav'
 import ViewSwitcher    from '@/app/client/ViewSwitcher'
-import { NDA_VERSIONS } from '@/lib/ndaVersions'
+import { getNdaAccess } from '@/lib/nda/access'
 import KycBanner from '@/components/client/KycBanner'
 import { LogOut } from 'lucide-react'
 
@@ -17,7 +17,7 @@ export default async function SellerLayout({ children }: { children: React.React
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status, seller_nda_accepted_at, seller_nda_version, client_nda_accepted_at, client_nda_version')
+    .select('full_name, roles, kyc_status')
     .eq('id', user.id)
     .single()
 
@@ -28,17 +28,10 @@ export default async function SellerLayout({ children }: { children: React.React
   const certificationOnly = !isSeller && roles.includes('client')
   if (!isSeller && !certificationOnly) redirect('/client/account')
 
-  if (isSeller) {
-    const ndaOk = (profile as Record<string,unknown> | null)?.seller_nda_accepted_at
-      && (profile as Record<string,unknown> | null)?.seller_nda_version === NDA_VERSIONS.seller
-    if (!ndaOk) redirect('/client/nda/seller')
-  } else if (certificationOnly) {
-    /* Client demandeur CIFSO : NDA générique (accès données confidentielles)
-       exigé avant l'ouverture des dossiers et de la data room. */
-    const ndaOk = (profile as Record<string,unknown> | null)?.client_nda_accepted_at
-      && (profile as Record<string,unknown> | null)?.client_nda_version === NDA_VERSIONS.client
-    if (!ndaOk) redirect('/client/nda/client')
-  }
+  /* NDA mutuel signé (profil « certification ») exigé avant l'ouverture des dossiers
+     et de la data room. Il se signe par lien personnel envoyé par Aegryn, sans compte. */
+  const nda = await getNdaAccess(user.email, ['certification'])
+  if (nda.state !== 'signed') redirect('/client/nda-required?need=certification')
 
   const hasBuyer   = roles.includes('buyer')
   const hasPartner = roles.includes('partner')

@@ -5,6 +5,7 @@ import { createServiceClient } from '@/lib/supabase'
 import PartnerNav from './PartnerNav'
 import ViewSwitcher    from '@/app/client/ViewSwitcher'
 import KycBanner from '@/components/client/KycBanner'
+import { getNdaAccess } from '@/lib/nda/access'
 import { LogOut } from 'lucide-react'
 
 export default async function PartnerLayout({ children }: { children: React.ReactNode }) {
@@ -14,7 +15,7 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const supa = createServiceClient()
   const { data: profile } = await supa
     .from('profiles')
-    .select('full_name, roles, kyc_status, partner_nda_accepted_at, partner_nda_version')
+    .select('full_name, roles, kyc_status')
     .eq('id', user.id)
     .single()
 
@@ -22,8 +23,8 @@ export default async function PartnerLayout({ children }: { children: React.Reac
   const isPartner  = roles.includes('partner')
   if (!isPartner) redirect('/client/my-assets')
 
-  const ndaSigned = Boolean((profile as Record<string,unknown> | null)?.partner_nda_accepted_at)
-  if (!ndaSigned) redirect('/client/nda/partner')
+  const nda = await getNdaAccess(user.email, ['partner'])
+  if (nda.state !== 'signed') redirect('/client/nda-required?need=partner')
 
   const hasBuyer  = roles.includes('buyer')
   const hasSeller = roles.includes('seller')
