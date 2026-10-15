@@ -1829,7 +1829,7 @@
           "desc": "Ha invertido en una empresa tech y necesita una visión independiente de su estrategia, su equipo directivo o su preparación para la venta."
         },
         {
-          "title": "Grandes organizaciones en transformación",
+          "title": "Empresas medianas en transformación",
           "desc": "Gestiona un proyecto de transformación o desinversión. Estructuramos y acompañamos el proceso de principio a fin."
         }
       ]
@@ -1896,7 +1896,7 @@
             "desc": "DSI de transición, migración cloud, despliegue de herramientas empresariales propietarias, segurización sin competencia IT interna."
           },
           {
-            "profile": "Gran grupo en transformación",
+            "profile": "Empresa mediana en transformación",
             "desc": "Auditoría de ciberseguridad, mapeo de riesgos IT, hoja de ruta IA, gobernanza de datos a escala empresarial."
           }
         ]
@@ -4714,7 +4714,7 @@
     "magDesc": "Para fundadores, directivos, inversores y familias accionistas que construyen, financian, adquieren o transmiten una organización: Aegryn Magazine documenta cada trimestre lo que realmente significa crear y realizar valor, en todas las industrias y tamaños, en Suiza y en Europa.\n\nEstrategias descifradas, retratos de decisores, datos de mercado y la vida de quienes construyen algo que importa.",
     "magFooter": "Cuatro ediciones al año.",
     "magCta": "Descubrir la revista",
-    "label": "Nuestros análisis del mercado suizo y europeo, desde scale-ups hasta grandes grupos en fuerte crecimiento.",
+    "label": "Nuestros análisis del mercado suizo y europeo, desde scale-ups hasta empresas medianas en fuerte crecimiento.",
     "title": "El mercado, por quienes lo operan.",
     "article1Title": "Los 5 puntos críticos para preparar una organización para una ronda o una cesión",
     "article1Cat": "Estrategia & Transmisión",
@@ -5496,7 +5496,7 @@
         }
       ]
     },
-    "desc": "De la pyme al gran grupo, en Suiza y en Europa: encuadramos su necesidad, elegimos con usted entre comprar, integrar o construir, y luego pilotamos la realización hasta la puesta en servicio. Su código, sus datos, su infraestructura: alojamiento en Suiza o en la UE, sin dependencia impuesta.",
+    "desc": "De la pyme a la empresa mediana, en Suiza y en Europa: encuadramos su necesidad, elegimos con usted entre comprar, integrar o construir, y luego pilotamos la realización hasta la puesta en servicio. Su código, sus datos, su infraestructura: alojamiento en Suiza o en la UE, sin dependencia impuesta.",
     "domainsSection": {
       "label": "Dominios de software",
       "title": "Los dominios donde construimos\npara nuestros clientes.",

@@ -1829,7 +1829,7 @@
           "desc": "You have invested in a tech company. You need an independent perspective on its strategy, its leadership team or its readiness for exit."
         },
         {
-          "title": "Large organisations in transformation",
+          "title": "Mid-sized companies in transformation",
           "desc": "You are managing a transformation or divestiture project. We structure and accompany the process end to end."
         }
       ]
@@ -1896,7 +1896,7 @@
             "desc": "Interim CTO, cloud migration, deployment of proprietary business tools, system security without in-house IT expertise."
           },
           {
-            "profile": "Large group in transformation",
+            "profile": "Mid-sized company in transformation",
             "desc": "Cybersecurity audit, IT risk mapping, AI roadmap, enterprise-wide data governance."
           }
         ]
@@ -4779,7 +4779,7 @@
     "magDesc": "For founders, executives, investors and shareholder families who build, finance, acquire or transfer an organisation: Aegryn Magazine documents every quarter what it really means to create and realise value, across all industries and sizes, in Switzerland and Europe.\n\nStrategies decoded, decision-maker portraits, market data and the lives of those building something that matters.",
     "magFooter": "Four editions per year.",
     "magCta": "Discover the magazine",
-    "label": "Our analysis of the Swiss and European market, from scale-ups to large high-growth groups.",
+    "label": "Our analysis of the Swiss and European market, from scale-ups to fast-growing mid-sized companies.",
     "title": "The market, by those who operate it.",
     "article1Title": "The 5 critical steps to prepare an organisation for a fundraise or sale",
     "article1Cat": "Strategy & Transmission",
@@ -5511,7 +5511,7 @@
         }
       ]
     },
-    "desc": "From SMEs to large groups, in Switzerland and Europe: we scope your need, help you choose between buying, integrating or building, then run delivery through to commissioning. Your code, your data, your infrastructure: hosted in Switzerland or the EU, with no imposed dependency.",
+    "desc": "From SMEs to mid-sized companies, in Switzerland and Europe: we scope your need, help you choose between buying, integrating or building, then run delivery through to commissioning. Your code, your data, your infrastructure: hosted in Switzerland or the EU, with no imposed dependency.",
     "domainsSection": {
       "label": "Software domains",
       "title": "The domains where we build\nfor our clients.",

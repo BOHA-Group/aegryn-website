@@ -3,9 +3,9 @@
 import { useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations, useLocale } from 'next-intl'
-import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
+import { ArticleCard } from '@/components/sections/ArticleCard'
 import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
 import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
 import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
@@ -201,41 +201,18 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
           style={{ scrollbarWidth: 'thin' }}
         >
           {featuredArticles.map((article) => (
-            <Link
+            <ArticleCard
               key={article.slug}
-              href={`/blog/${article.slug}` as never}
-              className="discover-strip-card group snap-start shrink-0 w-[280px] sm:w-[320px] flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-ag-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              slug={article.slug}
+              title={article.title[lang] ?? article.title.en}
+              category={ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
+              date={formatDate(article.date)}
+              image={getImage(article.slug)}
+              imagePosition={getBlogImagePosition(getImage(article.slug))}
+              readMore={t('readMore')}
+              className="discover-strip-card"
               style={{ opacity: 0 }}
-            >
-              <div className="relative h-44 w-full overflow-hidden shrink-0">
-                <Image
-                  src={getImage(article.slug)}
-                  style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
-                  alt={article.title[lang] ?? article.title.en}
-                  fill
-                  sizes="320px"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col gap-3 flex-1">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink">
-                    {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
-                  </span>
-                  <span className="text-ag-gray-light text-[10px]">·</span>
-                  <span className="font-sans text-[10px] text-ag-gray-light">{formatDate(article.date)}</span>
-                </div>
-                <p
-                  className="font-sans font-semibold text-ag-black leading-[1.4] group-hover:text-ag-navy transition-colors flex-1"
-                  style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}
-                >
-                  {article.title[lang] ?? article.title.en}
-                </p>
-                <span className="mt-auto inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray group-hover:text-ag-black transition-colors">
-                  {t('readMore')} <ArrowUpRight size={11} />
-                </span>
-              </div>
-            </Link>
+            />
           ))}
         </div>
 

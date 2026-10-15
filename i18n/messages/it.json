@@ -1829,7 +1829,7 @@
           "desc": "Avete investito in un'azienda tech e avete bisogno di uno sguardo indipendente sulla strategia, il team di direzione o la preparazione alla cessione."
         },
         {
-          "title": "Grandi organizzazioni in trasformazione",
+          "title": "Imprese di medie dimensioni in trasformazione",
           "desc": "Gestite un progetto di trasformazione o disinvestimento. Strutturiamo e accompagniamo il processo dall'inizio alla fine."
         }
       ]
@@ -1896,7 +1896,7 @@
             "desc": "CTO ad interim, migrazione cloud, deployment di strumenti aziendali proprietari, sicurezza dei sistemi senza competenze IT interne."
           },
           {
-            "profile": "Grande gruppo in trasformazione",
+            "profile": "Impresa di medie dimensioni in trasformazione",
             "desc": "Audit di cybersicurezza, mappatura dei rischi IT, roadmap IA, governance dei dati su scala aziendale."
           }
         ]
@@ -4714,7 +4714,7 @@
     "magDesc": "Per fondatori, dirigenti, investitori e famiglie azioniste che costruiscono, finanziano, acquisiscono o trasmettono un'organizzazione: Aegryn Magazine documenta ogni trimestre cosa significa davvero creare e realizzare valore, in tutti i settori e dimensioni, in Svizzera e in Europa.\n\nStrategie decifrate, ritratti di decisori, dati di mercato e la vita di chi costruisce qualcosa che conta.",
     "magFooter": "Quattro edizioni all'anno.",
     "magCta": "Scopri la rivista",
-    "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up ai grandi gruppi in forte crescita.",
+    "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up alle imprese di medie dimensioni in forte crescita.",
     "title": "Il mercato, da chi lo opera.",
     "article1Title": "I 5 punti critici per preparare un'organizzazione a una raccolta fondi o una cessione",
     "article1Cat": "Strategia & Trasmissione",
@@ -5496,7 +5496,7 @@
         }
       ]
     },
-    "desc": "Dalla PMI al grande gruppo, in Svizzera e in Europa: definiamo il vostro bisogno, scegliamo con voi tra acquistare, integrare o costruire, poi pilotiamo la realizzazione fino alla messa in servizio. Il vostro codice, i vostri dati, la vostra infrastruttura: hosting in Svizzera o nell'UE, senza dipendenza imposta.",
+    "desc": "Dalla PMI all’impresa di medie dimensioni, in Svizzera e in Europa: definiamo il vostro bisogno, scegliamo con voi tra acquistare, integrare o costruire, poi pilotiamo la realizzazione fino alla messa in servizio. Il vostro codice, i vostri dati, la vostra infrastruttura: hosting in Svizzera o nell'UE, senza dipendenza imposta.",
     "domainsSection": {
       "label": "Domini software",
       "title": "I domini in cui costruiamo\nper i nostri clienti.",

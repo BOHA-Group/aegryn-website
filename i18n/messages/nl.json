@@ -1829,7 +1829,7 @@
           "desc": "U heeft geïnvesteerd in een techbedrijf en heeft een onafhankelijk perspectief nodig op de strategie, het leiderschapsteam of de exitgereedheid."
         },
         {
-          "title": "Grote organisaties in transformatie",
+          "title": "Middelgrote ondernemingen in transformatie",
           "desc": "U beheert een transformatie- of desinvesteringsproject. Wij structureren en begeleiden het proces van begin tot eind."
         }
       ]
@@ -1896,7 +1896,7 @@
             "desc": "Interim-CTO, cloudmigratie, implementatie van eigen bedrijfstools, systeembeveiliging zonder interne IT-expertise."
           },
           {
-            "profile": "Grote groep in transformatie",
+            "profile": "Middelgrote onderneming in transformatie",
             "desc": "Cybersecurityaudit, IT-risicokaart, AI-roadmap, bedrijfsbrede datagovernance."
           }
         ]
@@ -4714,7 +4714,7 @@
     "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
-    "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot grote groepen met sterke groei.",
+    "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot middelgrote ondernemingen met sterke groei.",
     "title": "De markt, door degenen die hem bedienen.",
     "article1Title": "De 5 kritieke punten om een organisatie voor te bereiden op een financieringsronde of verkoop",
     "article1Cat": "Strategie & Overdracht",
@@ -5511,7 +5511,7 @@
         }
       ]
     },
-    "desc": "Van kmo tot groot concern, in Zwitserland en Europa: wij stellen uw behoefte in kader, kiezen samen met u tussen kopen, integreren of bouwen, en sturen vervolgens de realisatie tot aan de inbedrijfstelling. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
+    "desc": "Van kmo tot middelgrote onderneming, in Zwitserland en Europa: wij stellen uw behoefte in kader, kiezen samen met u tussen kopen, integreren of bouwen, en sturen vervolgens de realisatie tot aan de inbedrijfstelling. Uw code, uw data, uw infrastructuur: hosting in Zwitserland of de EU, zonder opgelegde afhankelijkheid.",
     "domainsSection": {
       "label": "Softwaredomeinen",
       "title": "De domeinen waarin wij\nbouwen voor onze klanten.",

@@ -1829,7 +1829,7 @@
           "desc": "Sie haben in ein Tech-Unternehmen investiert und benötigen einen unabhängigen Blick auf die Strategie, das Führungsteam oder die Exit-Vorbereitung."
         },
         {
-          "title": "Große Organisationen im Wandel",
+          "title": "Mittelständische Unternehmen im Wandel",
           "desc": "Sie leiten ein Transformations- oder Desinvestitionsprojekt. Wir strukturieren und begleiten den gesamten Prozess."
         }
       ]
@@ -1896,7 +1896,7 @@
             "desc": "Interim-CTO, Cloud-Migration, Einsatz proprietärer Geschäftswerkzeuge, Systemsicherung ohne interne IT-Kompetenz."
           },
           {
-            "profile": "Grosskonzern in Transformation",
+            "profile": "Mittelständisches Unternehmen in Transformation",
             "desc": "Cybersicherheitsaudit, IT-Risikoanalyse, KI-Roadmap, unternehmensweite Datenverwaltung."
           }
         ]
@@ -4714,7 +4714,7 @@
     "magDesc": "Für Gründer, Führungskräfte, Investoren und Aktionärsfamilien, die eine Organisation aufbauen, finanzieren, erwerben oder übertragen: Aegryn Magazine dokumentiert jedes Quartal, was es wirklich bedeutet, Wert zu schaffen und zu realisieren – über alle Branchen und Größen hinweg, in der Schweiz und in Europa.\n\nEntschlüsselte Strategien, Porträts von Entscheidungsträgern, Marktdaten und das Leben derer, die etwas Bedeutendes aufbauen.",
     "magFooter": "Vier Ausgaben pro Jahr.",
     "magCta": "Das Magazin entdecken",
-    "label": "Unsere Analysen des Schweizer und europäischen Marktes, von Scale-ups bis hin zu grossen Unternehmen mit starkem Wachstum.",
+    "label": "Unsere Analysen des Schweizer und europäischen Marktes, von Scale-ups bis zu mittelständischen Unternehmen mit starkem Wachstum.",
     "title": "Der Markt, von denen, die ihn betreiben.",
     "article1Title": "Die 5 entscheidenden Punkte zur Vorbereitung einer Organisation auf eine Finanzierung oder einen Verkauf",
     "article1Cat": "Strategie & Übertragung",
@@ -5496,7 +5496,7 @@
         }
       ]
     },
-    "desc": "Vom KMU bis zum Grosskonzern, in der Schweiz und in Europa: Wir cadrieren Ihren Bedarf, entscheiden mit Ihnen zwischen Kaufen, Integrieren oder Bauen, und steuern dann die Realisierung bis zur Inbetriebnahme. Ihr Code, Ihre Daten, Ihre Infrastruktur: Hosting in der Schweiz oder der EU, ohne auferlegte Abhängigkeit.",
+    "desc": "Vom KMU bis zum mittelständischen Unternehmen, in der Schweiz und in Europa: Wir cadrieren Ihren Bedarf, entscheiden mit Ihnen zwischen Kaufen, Integrieren oder Bauen, und steuern dann die Realisierung bis zur Inbetriebnahme. Ihr Code, Ihre Daten, Ihre Infrastruktur: Hosting in der Schweiz oder der EU, ohne auferlegte Abhängigkeit.",
     "domainsSection": {
       "label": "Software-Domänen",
       "title": "Die Domänen, in denen wir\nfür unsere Kunden bauen.",

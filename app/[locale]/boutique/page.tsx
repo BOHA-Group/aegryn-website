@@ -13,7 +13,7 @@ import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { ProjectCard } from '@/components/sections/assets/ProjectCard'
 import Image from 'next/image'
-import { ArrowUpRight } from 'lucide-react'
+import { ArticleCard } from '@/components/sections/ArticleCard'
 import { ARTICLE_CATEGORIES } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SEGMENT_IMAGES: Record<string, string> = {
-  startup:    '/images/blog/founder-desk.jpg',
+  startup:    '/images/boutique/entrepreneurs-concept.jpg',
   funds:      '/images/blog/family-business.jpg',
   enterprise: '/images/blog/office-building.jpg',
   pme:        '/images/blog/factory-industry.jpg',
@@ -197,24 +197,20 @@ export default async function BoutiquePage({ params }: Props) {
             <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.magazineTitle[lang]}</h2>
             <Link href="/blog" className="font-sans text-[14px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4">{BOUTIQUE.magazineLink[lang]} →</Link>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
             {ARTICLES.map(a => {
               const img = BLOG_IMAGES[a.slug] ?? BLOG_IMAGE_FALLBACK
               return (
-                <Link key={a.slug} href={`/blog/${a.slug}` as never} className="group flex flex-col overflow-hidden rounded-2xl border border-ag-border bg-ag-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-                  <div className="relative h-44 w-full shrink-0 overflow-hidden">
-                    <Image src={img} alt={a.title[lang] ?? a.title.en} fill sizes="(min-width:768px) 33vw, 100vw" style={{ objectPosition: getBlogImagePosition(img) }} className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-3 p-6">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en}</span>
-                      <span className="text-[10px] text-ag-gray-light">·</span>
-                      <span className="font-sans text-[10px] text-ag-gray-light">{new Date(a.date).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                    </div>
-                    <p className="flex-1 font-sans font-semibold leading-[1.4] text-ag-black transition-colors group-hover:text-ag-navy" style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}>{a.title[lang] ?? a.title.en}</p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-ag-gray transition-colors group-hover:text-ag-black">{tDiscover('readMore')} <ArrowUpRight size={11} /></span>
-                  </div>
-                </Link>
+                <ArticleCard
+                  key={a.slug}
+                  slug={a.slug}
+                  title={a.title[lang] ?? a.title.en}
+                  category={ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en}
+                  date={new Date(a.date).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })}
+                  image={img}
+                  imagePosition={getBlogImagePosition(img)}
+                  readMore={tDiscover('readMore')}
+                />
               )
             })}
           </div>
