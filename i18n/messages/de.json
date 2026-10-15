@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Restrukturierung & Pivot",
     "craftTransactVerify": "Zertifikat prüfen",
     "craftRecruit": "Auswählen",
-    "craftRecruitDesc": "Rekrutierung und Übergangsprofile für jede Lebenszyklusphase des Unternehmens.",
+    "craftRecruitDesc": "Auswahl von Schlüsselprofilen und Übergangsprofilen für jede Lebenszyklusphase des Unternehmens.",
     "craftGrade": "Zertifizierung",
     "craftGradeDesc": "Unabhängiges Bewertungssystem",
     "solutionsCore": "CORE",
@@ -119,7 +119,7 @@
     "whoJoin": "Uns beitreten",
     "whoJoinDesc": "Bei Aegryn arbeiten, Talente, Partner",
     "whoCareers": "Bei Aegryn arbeiten",
-    "whoTalent": "Executive Recruitment",
+    "whoTalent": "Executive Selection",
     "whoAlliances": "Partner werden",
     "talent": "Talent",
     "thinkingMarket": "Unser Marktblick",
@@ -154,7 +154,7 @@
     "craftRecruitIntro": "Das richtige Profil, zur richtigen Phase",
     "craftRecruitForCompanies": "Für Unternehmen",
     "craftRecruitForCandidates": "Für Kandidaten",
-    "craftRecruitHire": "Profil rekrutieren",
+    "craftRecruitHire": "Profil auswählen",
     "craftRecruitTransition": "Übergangsprofile",
     "craftRecruitPool": "Dem Talentpool beitreten",
     "navPortfolio": "La Boutique",
@@ -172,9 +172,9 @@
     "craftBuildBoutique": "Marke, Produkt, Markteinführung (La Boutique)"
   },
   "hero": {
-    "tagline": "Integriertes Beratungshaus, verankert in der Schweiz. Und La Boutique für emblematische Projekte.",
-    "metaDescription": "Aegryn, integriertes Beratungshaus in der Schweiz: Rahmen setzen, umsetzen, jeden Zyklus begleiten, Talente auswählen, informieren. Und La Boutique für emblematische Projekte.",
-    "sub": "Wir begleiten Führungskräfte von KMU und mittelständischen Unternehmen mit bis zu CHF 300 Mio. Umsatz, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Beratung, Assets, Talente, Projektsteuerung: ein integriertes Beratungshaus, verankert in der Schweiz.",
+    "tagline": "Integrierte Firma, verankert in der Schweiz. Und La Boutique für emblematische Projekte.",
+    "metaDescription": "Aegryn, integrierte Firma in der Schweiz: Rahmen setzen, umsetzen, jeden Zyklus begleiten, Talente auswählen, informieren. Und La Boutique für emblematische Projekte.",
+    "sub": "Wir begleiten Führungskräfte von KMU und mittelständischen Unternehmen mit bis zu CHF 300 Mio. Umsatz, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Konzeption, Assets, Talente, Projektsteuerung: eine integrierte Firma, verankert in der Schweiz.",
     "phrases": [
       "Ihre Entscheidungen\nrahmen.",
       "Mit Ihnen\numsetzen.",
@@ -831,7 +831,7 @@
   "aboutSection": {
     "label": "Über Aegryn",
     "title": "Fünf Disziplinen.\nEin Unternehmen.",
-    "desc": "Wir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
+    "desc": "Wir sind weder eine klassische Firma, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Firma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Konzeption, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
     "tagline": "INTEGRIERTE FIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
@@ -869,7 +869,7 @@
     "items": [
       {
         "title": "RAHMEN SETZEN",
-        "desc": "Integrierte Beratung in allen Dimensionen der Organisation: Strategie und Transaktionen, Technologie und Compliance, Organisation und Talente. Wir begleiten Führungskräfte und Boards, wenn Entscheidungen die Bahn bestimmen."
+        "desc": "Integrierte Konzeption in allen Dimensionen der Organisation: Strategie und Transaktionen, Technologie und Compliance, Organisation und Talente. Wir begleiten Führungskräfte und Boards, wenn Entscheidungen die Bahn bestimmen."
       },
       {
         "title": "UMSETZEN",
@@ -927,7 +927,7 @@
   "homeHybrid": {
     "label": "HYBRIDES MODELL",
     "title": "Wir rahmen.\nWir setzen um.\nWir begleiten.",
-    "desc": "Aegryn ist weder eine Investmentbank noch ein Inkubator.\n\nEs ist eine integrierte Beratungsfirma, die Entscheider, Gründer und Führungskräfte dabei unterstützt, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren.\n\nWir intervenieren dort, wo die Theorie aufhört und die Ausführung beginnt. Von der Strategie bis zum Abschluss."
+    "desc": "Aegryn ist weder eine Investmentbank noch ein Inkubator.\n\nEs ist eine integrierte Firma, die Entscheider, Gründer und Führungskräfte dabei unterstützt, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren.\n\nWir intervenieren dort, wo die Theorie aufhört und die Ausführung beginnt. Von der Strategie bis zum Abschluss."
   },
   "whyapps": {
     "label": "Warum Aegryn",
@@ -1721,7 +1721,7 @@
       "items": [
         {
           "q": "Wer sind wir und was tun wir?",
-          "a": "Aegryn ist eine integrierte Beratungsgesellschaft mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf komplementäre Disziplinen: Strategie-, Tech- und M&A-Beratung, Aufbau proprietärer digitaler Assets inkl. CIFSO-Zertifizierung, Begleitung der Transitionen in jedem Lebenszyklus, Executive Recruitment und Marktintelligenz. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
+          "a": "Aegryn ist eine integrierte Firma mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf komplementäre Disziplinen: Konzeption zu Strategie, Tech und M&A, Umsetzung proprietärer digitaler Assets, Begleitung der Lebenszyklen, Talentauswahl und Marktinformation. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
         },
         {
           "q": "Was unterscheidet uns?",
@@ -2036,17 +2036,17 @@
     "privacy": "Datenschutz",
     "terms": "AGB",
     "dataProtection": "Datenschutzhinweis",
-    "swissTagline": "Integriertes Beratungshaus und La Boutique. In der Schweiz verankert, international offen.",
+    "swissTagline": "Integrierte Firma und La Boutique. In der Schweiz verankert, international offen.",
     "navLabel": "Aegryn",
     "companyLabel": "Unternehmen",
     "servicesLabel": "Dienstleistungen",
     "footerCol1Title": "Aegryn",
-    "footerCol2Title": "Das Beratungshaus",
+    "footerCol2Title": "Die Firma",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publikationen",
     "blogLink": "Blog",
     "ecosystemLabel": "Ökosystem",
-    "advisoryLabel": "Das Beratungshaus",
+    "advisoryLabel": "Die Firma",
     "advisoryDesc": "Führungskräfte in jedem Lebenszyklus begleiten: gründen, entwickeln, neu ausrichten, übernehmen, übergeben.",
     "advisoryBook": "Gespräch vereinbaren ↗",
     "medallionText": "Sprechen wir . Kontaktieren Sie uns . Sprechen wir . Kontaktieren Sie uns .",
@@ -2080,7 +2080,7 @@
     "col4About": "Über Aegryn",
     "col4Contact": "Kontakt",
     "col4Careers": "Bei Aegryn arbeiten",
-    "col4Talent": "Headhunting & Transition",
+    "col4Talent": "Auswahl & Transition",
     "footerCraftSupport": "Rahmen setzen",
     "footerCraftTransact": "Begleiten",
     "footerCraftBuild": "Umsetzen",
@@ -3459,7 +3459,7 @@
     "featuredLabel": "Empfohlen",
     "allArticles": "Alle Artikel",
     "ctaGrade": "Mein Asset zertifizieren",
-    "ctaTransaction": "Jeden Zyklus meistern",
+    "ctaTransaction": "Jeden Zyklus begleiten",
     "searchPlaceholder": "Artikel suchen...",
     "noArticles": "Noch keine Artikel in dieser Kategorie.",
     "newsletterLabel": "Newsletter",
@@ -6948,7 +6948,7 @@
           "lifecycle"
         ],
         "q": "Wer ist Aegryn und was machen Sie?",
-        "a": "Aegryn ist eine Schweizer integrierte Beratungsgesellschaft, die Organisationen in jeder Phase ihres Lebenszyklus begleitet: Beratung zu Strategie, Risiken, Technologie, Talent und M&A, Aufbau eigener digitaler Assets, Übergänge im Lebenszyklus, Executive Recruitment und Marktintelligenz. Unser unabhängiges Zertifizierungsprotokoll CIFSO 5000 bewertet und dokumentiert den realen Wert einer Organisation."
+        "a": "Aegryn ist eine Schweizer integrierte Firma, die Organisationen in jeder Phase ihres Lebenszyklus begleitet: Konzeption zu Strategie, Risiken, Technologie, Talent und M&A, Umsetzung eigener digitaler Assets, Begleitung der Lebenszyklen, Talentauswahl und Marktinformation. Unser unabhängiges Zertifizierungsprotokoll CIFSO 5000 bewertet und dokumentiert den realen Wert einer Organisation."
       },
       {
         "id": "what-differentiates",
@@ -7029,8 +7029,8 @@
         "cat": [
           "account"
         ],
-        "q": "Bieten Sie Rekrutierungsdienste an?",
-        "a": "Ja, Aegryn Talent bietet die Rekrutierung von Schlüsselprofilen (Führungskräfte und Experten) und die Vermittlung von Übergangsprofilen für jede Lebenszyklusphase des Unternehmens. Erfolgshonorar, fällig bei Amtsantritt, mit dreimonatiger Ersatzgarantie. Formulare auf /talent."
+        "q": "Bieten Sie Dienste zur Talentauswahl an?",
+        "a": "Ja, Aegryn Talent bietet die Auswahl von Schlüsselprofilen (Führungskräfte und Experten) und die Vermittlung von Übergangsprofilen für jede Lebenszyklusphase des Unternehmens. Erfolgshonorar, fällig bei Amtsantritt, mit dreimonatiger Ersatzgarantie. Formulare auf /talent."
       },
       {
         "id": "advisory-service",
@@ -7407,7 +7407,7 @@
     "groupRecruter": "Auswählen",
     "groupInformer": "Informieren",
     "talent": "Aegryn Talent",
-    "talentEntreprises": "Profil rekrutieren",
+    "talentEntreprises": "Profil auswählen",
     "talentTransition": "Übergangsprofile",
     "talentCandidats": "Dem Pool beitreten",
     "workforce": "Arbeitsmarktdaten",
@@ -10746,8 +10746,8 @@
     }
   },
   "homeDoors": {
-    "cabinetLabel": "Das Beratungshaus",
-    "cabinetText": "Integrierte Beratung für Führungskräfte von KMU und mittelständischen Unternehmen: Rahmen setzen, umsetzen, jeden Zyklus begleiten.",
+    "cabinetLabel": "Die Firma",
+    "cabinetText": "Integrierte Firma für Führungskräfte von KMU und mittelständischen Unternehmen: Rahmen setzen, umsetzen, jeden Zyklus begleiten.",
     "cabinetLink": "Unsere Leistungen entdecken",
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Signature-Projekte für Unternehmer, Investoren und Marken. Selten durch Auswahl. Diskret aus Prinzip.",

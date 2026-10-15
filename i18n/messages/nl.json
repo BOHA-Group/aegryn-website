@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Herstructurering & Pivot",
     "craftTransactVerify": "Certificaat verifiëren",
     "craftRecruit": "Selecteren",
-    "craftRecruitDesc": "Werving en overgangsprofielen, in elke levensfase van het bedrijf.",
+    "craftRecruitDesc": "Selectie van sleutelprofielen en overgangsprofielen, in elke levensfase van het bedrijf.",
     "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
@@ -119,7 +119,7 @@
     "whoJoin": "Sluit je bij ons aan",
     "whoJoinDesc": "Werken bij Aegryn, talenten, partners",
     "whoCareers": "Werken bij Aegryn",
-    "whoTalent": "Executive Recruitment",
+    "whoTalent": "Executive Selectie",
     "whoAlliances": "Partner worden",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
@@ -154,7 +154,7 @@
     "craftRecruitIntro": "Het juiste profiel, in de juiste fase",
     "craftRecruitForCompanies": "Voor bedrijven",
     "craftRecruitForCandidates": "Voor kandidaten",
-    "craftRecruitHire": "Profiel werven",
+    "craftRecruitHire": "Profiel selecteren",
     "craftRecruitTransition": "Overgangsprofielen",
     "craftRecruitPool": "Deelnemen aan de pool",
     "navPortfolio": "La Boutique",
@@ -172,9 +172,9 @@
     "craftBuildBoutique": "Merk, product, marktintroductie (La Boutique)"
   },
   "hero": {
-    "tagline": "Geïntegreerd adviesbureau, verankerd in Zwitserland. En La Boutique voor emblematische projecten.",
-    "metaDescription": "Aegryn, geïntegreerd adviesbureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven. En La Boutique, voor emblematische projecten.",
-    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen, tot CHF 300 mln omzet, die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Advies, assets, talent, projectleiding: een geïntegreerd adviesbureau, verankerd in Zwitserland.",
+    "tagline": "Geïntegreerd bureau, verankerd in Zwitserland. En La Boutique voor emblematische projecten.",
+    "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven. En La Boutique, voor emblematische projecten.",
+    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen, tot CHF 300 mln omzet, die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Kadering, assets, talent, projectleiding: een geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Uw beslissingen\nkaderen.",
       "Realiseren\nmet u.",
@@ -831,7 +831,7 @@
   "aboutSection": {
     "label": "Over Aegryn",
     "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "We zijn noch een klassiek adviesbureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde adviesfirma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: advies, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
+    "desc": "We zijn noch een klassiek bureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde firma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: kadering, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
     "tagline": "GEÏNTEGREERDE FIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
@@ -869,7 +869,7 @@
     "items": [
       {
         "title": "KADEREN",
-        "desc": "Geïntegreerd advies over alle dimensies van de organisatie: strategie en transacties, technologie en compliance, organisatie en talent. Wij begeleiden leidinggevenden en raden wanneer beslissingen de koers bepalen."
+        "desc": "Geïntegreerde kadering over alle dimensies van de organisatie: strategie en transacties, technologie en compliance, organisatie en talent. Wij begeleiden leidinggevenden en raden wanneer beslissingen de koers bepalen."
       },
       {
         "title": "REALISEREN",
@@ -927,7 +927,7 @@
   "homeHybrid": {
     "label": "HYBRIDE MODEL",
     "title": "Wij kaderen.\nWij realiseren.\nWij begeleiden.",
-    "desc": "Aegryn is geen investeringsbank noch een incubator.\n\nHet is een geïntegreerde adviesfirma die besluitvormers, oprichters en leidinggevenden helpt de waarde van hun organisatie te creëren, documenteren en realiseren.\n\nWe interveniëren waar theorie eindigt en uitvoering begint. Van strategie tot overdracht."
+    "desc": "Aegryn is geen investeringsbank noch een incubator.\n\nHet is een geïntegreerde firma die besluitvormers, oprichters en leidinggevenden helpt de waarde van hun organisatie te creëren, documenteren en realiseren.\n\nWe interveniëren waar theorie eindigt en uitvoering begint. Van strategie tot overdracht."
   },
   "whyapps": {
     "label": "Waarom Aegryn",
@@ -1721,7 +1721,7 @@
       "items": [
         {
           "q": "Wie zijn wij en wat doen we?",
-          "a": "Aegryn is een geïntegreerd advieskantoor, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire disciplines: strategie-, tech- en M&A-advies, bouw van propriëtaire digitale activa incl. CIFSO-certificering, begeleiding van transities in elke levenscyclus, executive recruitment en marktintelligentie. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
+          "a": "Aegryn is een geïntegreerd bureau, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire disciplines: kadering van strategie, tech en M&A, realisatie van propriëtaire digitale activa, begeleiding van transities in elke levenscyclus, talentselectie en marktinformatie. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
         },
         {
           "q": "Wat onderscheidt ons?",
@@ -2036,17 +2036,17 @@
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
-    "swissTagline": "Geïntegreerd adviesbureau en La Boutique. Verankerd in Zwitserland, open naar de wereld.",
+    "swissTagline": "Geïntegreerd bureau en La Boutique. Verankerd in Zwitserland, open naar de wereld.",
     "navLabel": "Aegryn",
     "companyLabel": "Bedrijf",
     "servicesLabel": "Diensten",
     "footerCol1Title": "Aegryn",
-    "footerCol2Title": "Het adviesbureau",
+    "footerCol2Title": "Het bureau",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publicaties",
     "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
-    "advisoryLabel": "Het adviesbureau",
+    "advisoryLabel": "Het bureau",
     "advisoryDesc": "Leiders begeleiden in elke levensfase: lanceren, ontwikkelen, heroriënteren, overnemen, overdragen.",
     "advisoryBook": "Sessie boeken ↗",
     "medallionText": "Laten we praten . Neem contact op . Laten we praten . Neem contact op .",
@@ -2080,7 +2080,7 @@
     "col4About": "Over Aegryn",
     "col4Contact": "Contact",
     "col4Careers": "Werken bij Aegryn",
-    "col4Talent": "Headhunting & Transition",
+    "col4Talent": "Selectie & Transitie",
     "footerCraftSupport": "Kaderen",
     "footerCraftTransact": "Begeleiden",
     "footerCraftBuild": "Realiseren",
@@ -3459,7 +3459,7 @@
     "featuredLabel": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "ctaGrade": "Mijn asset certificeren",
-    "ctaTransaction": "Elke levensfase doorlopen",
+    "ctaTransaction": "Elke levensfase begeleiden",
     "searchPlaceholder": "Artikelen zoeken...",
     "noArticles": "Nog geen artikelen in deze categorie.",
     "newsletterLabel": "Nieuwsbrief",
@@ -6963,7 +6963,7 @@
           "lifecycle"
         ],
         "q": "Wie is Aegryn en wat doen jullie?",
-        "a": "Aegryn is een Zwitsers geïntegreerd adviesbureau dat organisaties begeleidt in elke fase van hun levenscyclus: advies over strategie, risico's, technologie, talent en M&A, bouw van eigen digitale assets, levenscyclusovergangen, executive recruitment en marktinformatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
+        "a": "Aegryn is een Zwitsers geïntegreerd bureau dat organisaties begeleidt in elke fase van hun levenscyclus: kadering over strategie, risico's, technologie, talent en M&A, realisatie van eigen digitale assets, begeleiding van levenscycli, talentselectie en marktinformatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
       },
       {
         "id": "what-differentiates",
@@ -7044,8 +7044,8 @@
         "cat": [
           "account"
         ],
-        "q": "Bieden jullie recruitmentdiensten aan?",
-        "a": "Ja, Aegryn Talent biedt werving van sleutelprofielen (leidinggevenden en experts) en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf. No-cure-no-pay honoraria bij indiensttreding, met drie maanden vervangingsgarantie. Formulieren op /talent."
+        "q": "Bieden jullie diensten voor talentselectie aan?",
+        "a": "Ja, Aegryn Talent biedt selectie van sleutelprofielen (leidinggevenden en experts) en plaatsing van overgangsprofielen, in elke levensfase van het bedrijf. No-cure-no-pay honoraria bij indiensttreding, met drie maanden vervangingsgarantie. Formulieren op /talent."
       },
       {
         "id": "advisory-service",
@@ -7422,7 +7422,7 @@
     "groupRecruter": "Selecteren",
     "groupInformer": "Informeren",
     "talent": "Aegryn Talent",
-    "talentEntreprises": "Profiel werven",
+    "talentEntreprises": "Profiel selecteren",
     "talentTransition": "Overgangsprofielen",
     "talentCandidats": "Deelnemen aan de pool",
     "workforce": "Arbeidsmarktdata",
@@ -10746,8 +10746,8 @@
     }
   },
   "homeDoors": {
-    "cabinetLabel": "Het adviesbureau",
-    "cabinetText": "Geïntegreerd advies voor leidinggevenden van kmo’s en middelgrote ondernemingen: kaderen, realiseren, elke cyclus begeleiden.",
+    "cabinetLabel": "Het bureau",
+    "cabinetText": "Geïntegreerd bureau voor leidinggevenden van kmo’s en middelgrote ondernemingen: kaderen, realiseren, elke cyclus begeleiden.",
     "cabinetLink": "Onze diensten ontdekken",
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Signatuurprojecten, voor ondernemers, investeerders en merken. Zeldzaam door selectie. Discreet uit principe.",

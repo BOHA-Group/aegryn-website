@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Restructuration & Pivot",
     "craftTransactVerify": "Vérifier un certificat",
     "craftRecruit": "Sélectionner",
-    "craftRecruitDesc": "Recrutement et profils de transition, à chaque cycle de vie de l’entreprise.",
+    "craftRecruitDesc": "Sélection de profils clés et profils de transition, à chaque cycle de vie de l’entreprise.",
     "craftGrade": "Certification",
     "craftGradeDesc": "Système de notation indépendant",
     "solutionsCore": "CATÉGORIES PRINCIPALES",
@@ -134,7 +134,7 @@
     "whoJoin": "Nous rejoindre",
     "whoJoinDesc": "Travailler chez Aegryn, talents, partenaires",
     "whoCareers": "Travailler chez Aegryn",
-    "whoTalent": "Recrutement Executive",
+    "whoTalent": "Sélection Executive",
     "whoAlliances": "Devenir partenaire",
     "industries": "Industries",
     "industriesDesc": "Tous secteurs",
@@ -154,7 +154,7 @@
     "craftRecruitIntro": "Le bon profil, au bon cycle",
     "craftRecruitForCompanies": "Pour les entreprises",
     "craftRecruitForCandidates": "Pour les candidats",
-    "craftRecruitHire": "Recruter un profil",
+    "craftRecruitHire": "Sélectionner un profil",
     "craftRecruitTransition": "Profils de transition",
     "craftRecruitPool": "Rejoindre le vivier",
     "navPortfolio": "La Boutique",
@@ -172,9 +172,9 @@
     "craftBuildBoutique": "Marque, produit, mise en marché (La Boutique)"
   },
   "hero": {
-    "tagline": "Cabinet de conseil intégré, ancré en Suisse. Et La Boutique de projets emblématiques.",
-    "metaDescription": "Aegryn, cabinet de conseil intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer. Et La Boutique, pour les projets emblématiques.",
-    "sub": "Nous accompagnons les dirigeants de PME et d’ETI, jusqu’à CHF 300M de chiffre d’affaires, qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet : un cabinet de conseil intégré, ancré en Suisse.",
+    "tagline": "Cabinet intégré, ancré en Suisse. Et La Boutique de projets emblématiques.",
+    "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer. Et La Boutique, pour les projets emblématiques.",
+    "sub": "Nous accompagnons les dirigeants de PME et d’ETI, jusqu’à CHF 300M de chiffre d’affaires, qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Cadrage, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Cadrer\nvos décisions.",
       "Réaliser\navec vous.",
@@ -794,7 +794,7 @@
   "aboutSection": {
     "label": "À propos d'Aegryn",
     "title": "Cinq métiers.\nUn seul cabinet.",
-    "desc": "Nous ne sommes ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq métiers nécessaires à la valeur durable d’une entreprise : cadrage, réalisation, accompagnement des cycles de vie, sélection de talents et information de marché.",
+    "desc": "Nous ne sommes ni un cabinet classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq métiers nécessaires à la valeur durable d’une entreprise : cadrage, réalisation, accompagnement des cycles de vie, sélection de talents et information de marché.",
     "tagline": "CABINET INTÉGRÉ, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
@@ -832,7 +832,7 @@
     "items": [
       {
         "title": "CADRER",
-        "desc": "Conseil intégré sur toutes les dimensions de l'organisation : stratégie et transactions, technologie et conformité, organisation et talents. Nous accompagnons dirigeants et boards quand les décisions définissent la trajectoire."
+        "desc": "Cadrage intégré sur toutes les dimensions de l'organisation : stratégie et transactions, technologie et conformité, organisation et talents. Nous accompagnons dirigeants et boards quand les décisions définissent la trajectoire."
       },
       {
         "title": "RÉALISER",
@@ -1681,7 +1681,7 @@
       "items": [
         {
           "q": "Qui sommes-nous et que faisons-nous ?",
-          "a": "Aegryn est un cabinet de conseil intégré, ancré en Suisse, qui accompagne les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation et de leurs actifs. Cinq disciplines complémentaires : conseil en stratégie, tech et M&A, construction d'actifs numériques propriétaires incl. certification CIFSO, accompagnement des transitions à chaque cycle de vie, recrutement executive et intelligence de marché. De la stratégie à la transmission. Nous travaillons avec des fondateurs, des dirigeants, des fonds d'investissement et des family offices à chaque stade de développement d'une organisation, du lancement à la transmission."
+          "a": "Aegryn est un cabinet intégré, ancré en Suisse, qui accompagne les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation et de leurs actifs. Cinq métiers complémentaires : cadrage en stratégie, tech et M&A, réalisation d'actifs numériques propriétaires, accompagnement des transitions à chaque cycle de vie, sélection de talents et information de marché. De la stratégie à la transmission. Nous travaillons avec des fondateurs, des dirigeants, des fonds d'investissement et des family offices à chaque stade de développement d'une organisation, du lancement à la transmission."
         },
         {
           "q": "Qu'est-ce qui nous différencie ?",
@@ -1996,7 +1996,7 @@
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "dataProtection": "Politique de protection des données",
-    "swissTagline": "Cabinet de conseil intégré et La Boutique. Ancrés en Suisse, ouverts à l’international.",
+    "swissTagline": "Cabinet intégré et La Boutique. Ancrés en Suisse, ouverts à l’international.",
     "navLabel": "Aegryn",
     "companyLabel": "Entreprise",
     "servicesLabel": "Services",
@@ -2040,7 +2040,7 @@
     "col4About": "À propos d'Aegryn",
     "col4Contact": "Nous contacter",
     "col4Careers": "Travailler chez Aegryn",
-    "col4Talent": "Headhunting & Transition",
+    "col4Talent": "Sélection & Transition",
     "footerCraftSupport": "Cadrer",
     "footerCraftTransact": "Accompagner",
     "footerCraftBuild": "Réaliser",
@@ -2577,7 +2577,7 @@
     "featuredLabel": "À la une",
     "allArticles": "Tous les articles",
     "ctaGrade": "Certifier mon actif",
-    "ctaTransaction": "Franchir chaque cycle de vie",
+    "ctaTransaction": "Accompagner chaque cycle de vie",
     "searchPlaceholder": "Rechercher un article...",
     "noArticles": "Aucun article dans cette catégorie pour l'instant.",
     "newsletterLabel": "Lettre d'information",
@@ -6923,7 +6923,7 @@
           "lifecycle"
         ],
         "q": "Qui est Aegryn et que faites-vous ?",
-        "a": "Aegryn est un cabinet de conseil intégré suisse qui accompagne les organisations à chaque étape de leur cycle de vie : conseil en stratégie, risques, technologie, talent et M&A, construction d'actifs numériques propriétaires, transitions de cycle de vie, recrutement executive et intelligence de marché. Notre protocole de certification indépendant CIFSO 5000 évalue et documente la valeur réelle d'une organisation."
+        "a": "Aegryn est un cabinet intégré suisse qui accompagne les organisations à chaque étape de leur cycle de vie : cadrage en stratégie, risques, technologie, talent et M&A, réalisation d'actifs numériques propriétaires, accompagnement des cycles de vie, sélection de talents et information de marché. Notre protocole de certification indépendant CIFSO 5000 évalue et documente la valeur réelle d'une organisation."
       },
       {
         "id": "what-differentiates",
@@ -7004,8 +7004,8 @@
         "cat": [
           "account"
         ],
-        "q": "Proposez-vous des services de recrutement ?",
-        "a": "Oui, Aegryn Talent propose du recrutement de profils clés (dirigeants et experts) et le placement de profils de transition, à chaque cycle de vie de l'entreprise. Honoraires au succès, dus à la prise de poste, avec garantie de remplacement de trois mois. Formulaires disponibles sur /talent."
+        "q": "Proposez-vous des services de sélection de talents ?",
+        "a": "Oui, Aegryn Talent propose la sélection de profils clés (dirigeants et experts) et le placement de profils de transition, à chaque cycle de vie de l'entreprise. Honoraires au succès, dus à la prise de poste, avec garantie de remplacement de trois mois. Formulaires disponibles sur /talent."
       },
       {
         "id": "advisory-service",
@@ -7381,8 +7381,8 @@
     "groupFranchir": "Accompagner",
     "groupRecruter": "Sélectionner",
     "groupInformer": "S’informer",
-    "talent": "Recruter un profil / Talent",
-    "talentEntreprises": "Recruter un profil",
+    "talent": "Sélectionner un profil / Talent",
+    "talentEntreprises": "Sélectionner un profil",
     "talentTransition": "Profils de transition",
     "talentCandidats": "Rejoindre le vivier",
     "workforce": "Données marché du travail",
@@ -9720,7 +9720,7 @@
   "homeHybrid": {
     "label": "MODÈLE HYBRIDE",
     "title": "Nous cadrons.\nNous réalisons.\nNous accompagnons.",
-    "desc": "Aegryn n’est ni une banque d’affaires ni un incubateur.\n\nC’est un cabinet de conseil intégré qui accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation.\n\nNous intervenons là où la théorie s’arrête et où l’exécution commence. De la stratégie à la transmission."
+    "desc": "Aegryn n’est ni une banque d’affaires ni un incubateur.\n\nC’est un cabinet intégré qui accompagne les décideurs, fondateurs et dirigeants à créer, documenter et réaliser la valeur de leur organisation.\n\nNous intervenons là où la théorie s’arrête et où l’exécution commence. De la stratégie à la transmission."
   },
   "homeTalent": {
     "label": "SÉLECTIONNER",
@@ -10747,7 +10747,7 @@
   },
   "homeDoors": {
     "cabinetLabel": "Le cabinet",
-    "cabinetText": "Conseil intégré pour les dirigeants de PME et d’ETI : cadrer, réaliser, accompagner chaque cycle.",
+    "cabinetText": "Cabinet intégré pour les dirigeants de PME et d’ETI : cadrer, réaliser, accompagner chaque cycle.",
     "cabinetLink": "Découvrir nos métiers",
     "boutiqueLabel": "La Boutique",
     "boutiqueText": "Des projets signature, pour entrepreneurs, investisseurs et marques. Rare par sélection. Discret par principe.",

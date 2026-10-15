@@ -1,7 +1,7 @@
 /**
- * Hero de La Boutique : une seule vidéo plein cadre, qui change à chaque temps du
+ * Hero de La Boutique : une seule vidéo plein cadre, qui change sur le tempo du
  * morceau « Beyond the Clicks » (analyse : 105,76 BPM, premier temps à 0,107 s, sans
- * dérive sur toute la piste, soit un clip toutes les 0,57 s). Les 20 clips horizontaux
+ * dérive sur toute la piste, soit un temps = 0,57 s ; chaque clip dure 2 temps, soit 1,13 s). Les 20 clips horizontaux
  * suivent une journée type, du lac au soir, puis la séquence reboucle. Les clips
  * verticaux ne passent pas en hero : ils sont affichés dans le corps de la page.
  */
@@ -9,8 +9,8 @@ export const BOUTIQUE_TEMPO = {
   bpm: 105.76,
   firstBeat: 0.107,
   track: '/audio/ambient.mp3',
-  /** 1 = une vidéo à chaque temps ; 2 = une vidéo tous les deux temps (≈ 1,13 s) */
-  beatsPerClip: 1,
+  /** 2 = une vidéo tous les deux temps (≈ 1,13 s) ; 1 = une vidéo à chaque temps (0,57 s) */
+  beatsPerClip: 2,
 } as const
 
 export const BEAT_SECONDS = 60 / BOUTIQUE_TEMPO.bpm
