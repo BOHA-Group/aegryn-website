@@ -174,7 +174,7 @@
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
     "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer.",
-    "sub": "Nous accompagnons les dirigeants de PME et d’entreprises de taille intermédiaire, jusqu’à CHF 300M de chiffre d’affaires, qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Cadrage, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
+    "sub": "Nous accompagnons les dirigeants de PME et d’entreprises de taille intermédiaire qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Cadrage, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Cadrer\nvos décisions.",
       "Réaliser\navec vous.",
@@ -1781,15 +1781,15 @@
           "desc": "Transformer, certifier et recruter avant de vendre ou de lever des fonds. Construire des actifs qui tiennent la route face aux acquéreurs et aux investisseurs."
         },
         {
-          "title": "Grandes organisations",
-          "desc": "Stratégie tech, M&A de portefeuille, actifs internes propriétaires, recrutement dirigeant. Un partenaire qui comprend les enjeux de gouvernance, de scalabilité et de conformité à l'échelle."
+          "title": "Entreprises de taille intermédiaire",
+          "desc": "Stratégie, technologie, conformité et talents : un seul interlocuteur pour les décisions qui engagent le groupe."
         },
         {
           "title": "Fonds & Investisseurs",
           "desc": "Vous avez investi dans une société tech. Vous avez besoin d'un regard indépendant sur sa stratégie, son équipe dirigeante ou sa préparation à la cession."
         },
         {
-          "title": "Entreprises de taille intermédiaire en transformation",
+          "title": "Organisations en transformation",
           "desc": "Vous gérez un projet de transformation ou de désinvestissement. Nous structurons et accompagnons le processus de bout en bout."
         }
       ]
@@ -4743,7 +4743,7 @@
     "title": "Le marché, par ceux qui l’opèrent.",
     "article1Title": "Les 5 points critiques pour préparer une organisation à une levée ou une cession",
     "article1Cat": "Stratégie & Transmission",
-    "article2Title": "Small & mid-cap : ce que les entreprises de moins de 50M€ jusqu'à 300M€ attendent vraiment d'un cabinet de conseil",
+    "article2Title": "Small & mid-cap : ce que les entreprises attendent vraiment d'un cabinet de conseil",
     "article2Cat": "Marché & Insights",
     "article3Title": "Après le financement : pourquoi 60% des PME financées n'atteignent pas leurs objectifs de croissance",
     "article3Cat": "Financement & Exécution",
@@ -9707,7 +9707,7 @@
       },
       {
         "key": "enterprise",
-        "title": "Institutions & grands groupes",
+        "title": "Institutions & organisations",
         "desc": "Un projet signature, mené de la décision à la réception, avec la rigueur et la confidentialité que votre gouvernance exige."
       },
       {

@@ -9,7 +9,7 @@ import type { CycleContent, FranchirIntro } from './types'
 export const FRANCHIR_INTRO_EN: FranchirIntro = {
   meta: {
     title:       'Accompany — every stage has its decision | Aegryn',
-    description: 'Launch, growth, pivot, acquisition, succession: five stages in which an organisation of €10 to 300M commits its future. Here is what is at stake, and whom to engage.',
+    description: 'Launch, growth, pivot, acquisition, succession: five stages in which an organisation commits its future. Here is what is at stake, and whom to engage.',
   },
   eyebrow:   'Accompany',
   heroTitle: 'Every stage has its decision. Find yours.',

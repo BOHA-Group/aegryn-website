@@ -147,7 +147,7 @@ export default function Footer() {
   return (
     <footer className="bg-ag-navy border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-10">
-        <div className="grid gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid gap-10 grid-cols-2 sm:grid-cols-3 lg:grid-cols-7">
 
           {/* Brand */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
@@ -186,18 +186,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4 mt-8">
-              {tNav('navPortfolio')}
-            </p>
-            <ul className="space-y-2.5">
-              {boutiqueLinks.map(({ navKey, href }) => (
-                <li key={navKey}>
-                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
-                    {tNav(navKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Col 2 — Services */}
@@ -210,6 +198,22 @@ export default function Footer() {
                 <li key={footerKey}>
                   <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
                     {t(footerKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col La Boutique */}
+          <div>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
+              {tNav('navPortfolio')}
+            </p>
+            <ul className="space-y-2.5">
+              {boutiqueLinks.map(({ navKey, href }) => (
+                <li key={navKey}>
+                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
+                    {tNav(navKey)}
                   </Link>
                 </li>
               ))}
@@ -281,14 +285,8 @@ export default function Footer() {
 
           {/* Advisory CTA — macaron contact */}
           <div className="relative">
-            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
-              {t('advisoryLabel')}
-            </p>
-            <p className="text-sm text-white/70 leading-relaxed">
-              {t('advisoryDesc')}
-            </p>
             {/* Médaillon dans la colonne vide à droite sous lg, sous le texte sur desktop */}
-            <div className="absolute left-full top-1/2 -translate-y-1/2 ml-6 lg:static lg:translate-y-0 lg:ml-0 lg:mt-5">
+            <div className="absolute left-full top-1/2 -translate-y-1/2 ml-6 lg:static lg:translate-y-0 lg:ml-0 lg:mt-0">
               <FooterMedallion
                 medallionText={t('medallionText')}
                 contactLabel={t('contactLabel')}

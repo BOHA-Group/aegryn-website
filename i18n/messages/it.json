@@ -174,7 +174,7 @@
   "hero": {
     "tagline": "Società integrata, radicata in Svizzera.",
     "metaDescription": "Aegryn, società integrata radicata in Svizzera: inquadrare, realizzare, accompagnare ogni ciclo, selezionare talenti, informarsi.",
-    "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni, fino a CHF 300 M di fatturato, che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Inquadramento, asset, talenti, guida dei progetti: una società integrata, radicata in Svizzera.",
+    "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Inquadramento, asset, talenti, guida dei progetti: una società integrata, radicata in Svizzera.",
     "phrases": [
       "Inquadrare\nle vostre decisioni.",
       "Realizzare\ncon voi.",
@@ -914,7 +914,7 @@
       },
       {
         "key": "enterprise",
-        "title": "Istituzioni e grandi gruppi",
+        "title": "Istituzioni e organizzazioni",
         "desc": "Un progetto emblematico, condotto dalla decisione alla consegna, con il rigore e la riservatezza che la vostra governance richiede."
       },
       {
@@ -1821,15 +1821,15 @@
           "desc": "Trasformare, certificare e reclutare prima di vendere o raccogliere fondi. Costruire asset che reggano al vaglio di acquirenti e investitori."
         },
         {
-          "title": "Grandi organizzazioni",
-          "desc": "Strategia tech, M&A di portafoglio, asset interni proprietari, reclutamento dirigenziale. Un partner che comprende governance, scalabilità e compliance su larga scala."
+          "title": "Imprese di medie dimensioni",
+          "desc": "Strategia, tecnologia, conformità e talenti: un solo interlocutore per le decisioni che impegnano il gruppo."
         },
         {
           "title": "Fondi & Investitori",
           "desc": "Avete investito in un'azienda tech e avete bisogno di uno sguardo indipendente sulla strategia, il team di direzione o la preparazione alla cessione."
         },
         {
-          "title": "Imprese di medie dimensioni in trasformazione",
+          "title": "Organizzazioni in trasformazione",
           "desc": "Gestite un progetto di trasformazione o disinvestimento. Strutturiamo e accompagniamo il processo dall'inizio alla fine."
         }
       ]
@@ -4718,7 +4718,7 @@
     "title": "Il mercato, da chi lo opera.",
     "article1Title": "I 5 punti critici per preparare un'organizzazione a una raccolta fondi o una cessione",
     "article1Cat": "Strategia & Trasmissione",
-    "article2Title": "Small & mid-cap: cosa si aspettano davvero le aziende da meno di 50M€ fino a 300M€ da un cabinet di consulenza",
+    "article2Title": "Small & mid-cap: cosa si aspettano davvero le aziende da un cabinet di consulenza",
     "article2Cat": "Mercato & Insight",
     "article3Title": "Dopo il finanziamento: perché il 60% delle PMI finanziate non raggiunge i propri obiettivi di crescita",
     "article3Cat": "Finanziamento & Esecuzione",

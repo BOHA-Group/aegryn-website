@@ -125,10 +125,10 @@ export const SECTOR_CLUSTERS: Record<string, string[]> = {
 }
 
 export const REVENUE_BANDS: Record<string, { value: string; label: string }[]> = {
-  fr: [{ value: '10_50m', label: '10 à 50 M€' }, { value: '50_300m', label: '50 à 300 M€' }, { value: 'autre', label: 'Autre / non applicable' }],
-  en: [{ value: '10_50m', label: '€10 to 50 M' }, { value: '50_300m', label: '€50 to 300 M' }, { value: 'autre', label: 'Other / not applicable' }],
-  de: [{ value: '10_50m', label: '10 bis 50 Mio. €' }, { value: '50_300m', label: '50 bis 300 Mio. €' }, { value: 'autre', label: 'Andere / nicht zutreffend' }],
-  it: [{ value: '10_50m', label: 'da 10 a 50 M€' }, { value: '50_300m', label: 'da 50 a 300 M€' }, { value: 'autre', label: 'Altro / non applicabile' }],
-  es: [{ value: '10_50m', label: 'de 10 a 50 M€' }, { value: '50_300m', label: 'de 50 a 300 M€' }, { value: 'autre', label: 'Otro / no aplicable' }],
-  nl: [{ value: '10_50m', label: '10 tot 50 M€' }, { value: '50_300m', label: '50 tot 300 M€' }, { value: 'autre', label: 'Anders / niet van toepassing' }],
+  fr: [{ value: '10_50m', label: '10 à 50 M€' }, { value: '50_300m', label: '50 M€ et plus' }, { value: 'autre', label: 'Autre / non applicable' }],
+  en: [{ value: '10_50m', label: '€10 to 50 M' }, { value: '50_300m', label: '€50 M and above' }, { value: 'autre', label: 'Other / not applicable' }],
+  de: [{ value: '10_50m', label: '10 bis 50 Mio. €' }, { value: '50_300m', label: 'ab 50 Mio. €' }, { value: 'autre', label: 'Andere / nicht zutreffend' }],
+  it: [{ value: '10_50m', label: 'da 10 a 50 M€' }, { value: '50_300m', label: 'da 50 M€' }, { value: 'autre', label: 'Altro / non applicabile' }],
+  es: [{ value: '10_50m', label: 'de 10 a 50 M€' }, { value: '50_300m', label: 'desde 50 M€' }, { value: 'autre', label: 'Otro / no aplicable' }],
+  nl: [{ value: '10_50m', label: '10 tot 50 M€' }, { value: '50_300m', label: 'vanaf 50 M€' }, { value: 'autre', label: 'Anders / niet van toepassing' }],
 }

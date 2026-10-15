@@ -20,12 +20,12 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: "Tours de bureaux vues en contre-plongée, le cap et la hauteur de vue",
     meta: {
       title:       'Conseil en stratégie pour PME et ETI | Aegryn',
-      description: "Cap, modèle économique, croissance externe, nouveaux marchés : Aegryn aide les dirigeants d'organisations de 10 à 300 M€ à arbitrer, chiffrer et tenir leurs décisions stratégiques. Suisse et Europe.",
+      description: "Cap, modèle économique, croissance externe, nouveaux marchés : Aegryn aide les dirigeants d'organisations à arbitrer, chiffrer et tenir leurs décisions stratégiques. Suisse et Europe.",
       keywords:    ['conseil stratégie PME', 'conseil stratégie ETI', 'plan à trois ans', 'croissance externe', 'entrée nouveau marché', 'advisory stratégie Suisse'],
     },
     eyebrow:  'Stratégie d’entreprise & Innovation',
     h1:       'Choisir le bon cap, dans le bon ordre, avec les moyens que vous avez réellement.',
-    subtitle: "Pour un dirigeant d'organisation de 10 à 300 M€, la stratégie n'est pas un exercice de planification : ce sont des arbitrages sous contrainte de capital, de temps de direction et de capacité d'exécution. Aegryn vous aide à les poser, les chiffrer et les tenir.",
+    subtitle: "Pour un dirigeant d'organisation, la stratégie n'est pas un exercice de planification : ce sont des arbitrages sous contrainte de capital, de temps de direction et de capacité d'exécution. Aegryn vous aide à les poser, les chiffrer et les tenir.",
     scope: [
       { label: "Équipe de direction : Talent & Organisation", href: '/advisory/talent-organization' },
       { label: "Exécution d'une acquisition : M&A", href: '/advisory/ma' },
@@ -89,7 +89,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Selon votre taille',
       items: [
         { label: 'PME · 10 à 50 M€',  desc: 'Le dirigeant décide avec deux ou trois personnes, sans direction de la stratégie. La contrainte est son temps. Nous livrons court, sans structure de projet, dans un format qui tient en dix pages.' },
-        { label: 'ETI · 50 à 300 M€', desc: "Plusieurs activités, un comité exécutif, parfois un actionnaire familial ou un fonds. La contrainte est l'alignement. Nous animons l'arbitrage et documentons la décision pour le board." },
+        { label: 'ETI · à partir de 50 M€', desc: "Plusieurs activités, un comité exécutif, parfois un actionnaire familial ou un fonds. La contrainte est l'alignement. Nous animons l'arbitrage et documentons la décision pour le board." },
       ],
     },
     bySector: {
@@ -214,7 +214,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Selon votre taille',
       items: [
         { label: 'PME · 10 à 50 M€',  desc: 'Rarement de RSSI ni de DPO à temps plein. Nous visons un socle de contrôles opposables, pas un système de management complet, et mobilisons des fonctions externalisées du réseau.' },
-        { label: 'ETI · 50 à 300 M€', desc: "Une direction des risques existe, plusieurs référentiels se superposent. Nous les consolidons en un seul plan et préparons l'audit interne." },
+        { label: 'ETI · à partir de 50 M€', desc: "Une direction des risques existe, plusieurs référentiels se superposent. Nous les consolidons en un seul plan et préparons l'audit interne." },
       ],
     },
     bySector: {
@@ -265,7 +265,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Baies de serveurs dans un centre de données',
     meta: {
       title:       'Conseil en technologie : architecture, dette, IA, hébergement | Aegryn',
-      description: "Audit d'architecture, arbitrage construire-acheter-s'allier, gouvernance de l'IA, direction technique à temps partagé. Pour les PME et ETI de 10 à 300 M€. Suisse et Europe.",
+      description: "Audit d'architecture, arbitrage construire-acheter-s'allier, gouvernance de l'IA, direction technique à temps partagé. Pour les PME et ETI. Suisse et Europe.",
       keywords:    ["audit d'architecture", 'dette technique', 'direction technique à temps partagé', 'CTO intérim', "gouvernance IA PME", 'hébergement souverain Suisse', 'réversibilité'],
     },
     eyebrow:  'Technologie & Souveraineté',
@@ -334,7 +334,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Selon votre taille',
       items: [
         { label: 'PME · 10 à 50 M€',  desc: 'Une pile construite par accumulation, quelques développeurs, des prestataires. Priorité : documentation minimale et réversibilité des trois composants critiques.' },
-        { label: 'ETI · 50 à 300 M€', desc: "Système d'information hérité, plusieurs éditeurs, une DSI. Priorité : une trajectoire de modernisation arbitrée par le comité, et une gouvernance des données entre activités." },
+        { label: 'ETI · à partir de 50 M€', desc: "Système d'information hérité, plusieurs éditeurs, une DSI. Priorité : une trajectoire de modernisation arbitrée par le comité, et une gouvernance des données entre activités." },
       ],
     },
     bySector: {
@@ -389,7 +389,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Salle de conseil vide, prête pour la prochaine séance',
     meta: {
       title:       'Succession, gouvernance, équipe de direction | Aegryn',
-      description: 'Mesurer la dépendance au dirigeant, structurer le comité de direction, bâtir un plan de succession, retenir les profils clés. PME et ETI de 10 à 300 M€. Suisse et Europe.',
+      description: 'Mesurer la dépendance au dirigeant, structurer le comité de direction, bâtir un plan de succession, retenir les profils clés. PME et ETI. Suisse et Europe.',
       keywords:    ['plan de succession PME', 'dépendance au dirigeant', 'gouvernance comité de direction', 'rétention profils clés', 'transmission entreprise familiale', 'organisation ETI'],
     },
     eyebrow:  'Talent & Organisation',
@@ -458,7 +458,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Selon votre taille',
       items: [
         { label: 'PME · 10 à 50 M€',  desc: 'Le dirigeant est souvent premier commercial et premier décideur produit. Priorité : déléguer les relations clients clés et documenter les dix processus critiques.' },
-        { label: 'ETI · 50 à 300 M€', desc: 'Gouvernance familiale ou actionnaires. Priorité : plan de succession du directeur général et de ses N-1, comité de nomination, rôle de la famille.' },
+        { label: 'ETI · à partir de 50 M€', desc: 'Gouvernance familiale ou actionnaires. Priorité : plan de succession du directeur général et de ses N-1, comité de nomination, rôle de la famille.' },
       ],
     },
     bySector: {
@@ -577,7 +577,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Selon votre taille',
       items: [
         { label: 'PME · 10 à 50 M€',  desc: "Reprise, MBO ou rachat par un acteur de taille proche, avec peu de conseils autour de la table. Nous concentrons la revue sur les quatre angles morts en quelques semaines, aux côtés de l'avocat et de l'expert-comptable." },
-        { label: 'ETI · 50 à 300 M€', desc: "Programme de croissance externe, équipe M&A interne ou banque d'affaires. Aegryn intervient comme partenaire de revue technique, organisationnelle et d'intégration." },
+        { label: 'ETI · à partir de 50 M€', desc: "Programme de croissance externe, équipe M&A interne ou banque d'affaires. Aegryn intervient comme partenaire de revue technique, organisationnelle et d'intégration." },
       ],
     },
     bySector: {

@@ -15,12 +15,12 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Torri di uffici viste dal basso, la rotta e l’altezza dello sguardo',
     meta: {
       title: 'Consulenza strategica per PMI e mid-cap | Aegryn',
-      description: 'Rotta, modello economico, crescita esterna, nuovi mercati: Aegryn aiuta i dirigenti di organizzazioni da 10 a 300 M€ a decidere, quantificare e mantenere le proprie scelte strategiche. Svizzera ed Europa.',
+      description: 'Rotta, modello economico, crescita esterna, nuovi mercati: Aegryn aiuta i dirigenti di organizzazioni a decidere, quantificare e mantenere le proprie scelte strategiche. Svizzera ed Europa.',
       keywords: ['consulenza strategica PMI', 'consulenza strategica mid-cap', 'piano triennale', 'crescita esterna', 'ingresso in un nuovo mercato', 'advisory strategia Svizzera'],
     },
     eyebrow: 'Strategia d’impresa & Innovazione',
     h1: 'Scegliere la rotta giusta, nell’ordine giusto, con i mezzi che avete davvero.',
-    subtitle: 'Per chi dirige un’organizzazione da 10 a 300 M€, la strategia non è un esercizio di pianificazione: sono arbitraggi sotto vincolo di capitale, di tempo direzionale e di capacità di esecuzione. Aegryn vi aiuta a porli, quantificarli e mantenerli.',
+    subtitle: 'Per chi dirige un’organizzazione, la strategia non è un esercizio di pianificazione: sono arbitraggi sotto vincolo di capitale, di tempo direzionale e di capacità di esecuzione. Aegryn vi aiuta a porli, quantificarli e mantenerli.',
     scope: [
       { label: 'Squadra di direzione: Talento & Organizzazione', href: '/advisory/talent-organization' },
       { label: 'Esecuzione di un’acquisizione: M&A', href: '/advisory/ma' },
@@ -84,7 +84,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Secondo la vostra dimensione',
       items: [
         { label: 'PMI · da 10 a 50 M€', desc: 'Il dirigente decide con due o tre persone, senza direzione strategia. Il vincolo è il suo tempo. Consegniamo in breve, senza struttura di progetto, in un formato che sta in dieci pagine.' },
-        { label: 'Mid-cap · da 50 a 300 M€', desc: 'Più attività, un comitato esecutivo, a volte un azionista familiare o un fondo. Il vincolo è l’allineamento. Animiamo l’arbitraggio e documentiamo la decisione per il board.' },
+        { label: 'Mid-cap · da 50 M€', desc: 'Più attività, un comitato esecutivo, a volte un azionista familiare o un fondo. Il vincolo è l’allineamento. Animiamo l’arbitraggio e documentiamo la decisione per il board.' },
       ],
     },
     bySector: {
@@ -207,7 +207,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Secondo la vostra dimensione',
       items: [
         { label: 'PMI · da 10 a 50 M€', desc: 'Raramente un CISO o un DPO a tempo pieno. Puntiamo a una base di controlli opponibili, non a un sistema di gestione completo, e mobilitiamo funzioni esternalizzate della rete.' },
-        { label: 'Mid-cap · da 50 a 300 M€', desc: 'Una direzione dei rischi esiste, più riferimenti si sovrappongono. Li consolidiamo in un solo piano e prepariamo l’audit interno.' },
+        { label: 'Mid-cap · da 50 M€', desc: 'Una direzione dei rischi esiste, più riferimenti si sovrappongono. Li consolidiamo in un solo piano e prepariamo l’audit interno.' },
       ],
     },
     bySector: {
@@ -256,7 +256,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Armadi server in un centro dati',
     meta: {
       title: 'Consulenza tecnologica: architettura, debito, IA, hosting | Aegryn',
-      description: 'Audit di architettura, arbitraggio costruire-comprare-allearsi, governance dell’IA, direzione tecnica a tempo condiviso. Per PMI e mid-cap da 10 a 300 M€. Svizzera ed Europa.',
+      description: 'Audit di architettura, arbitraggio costruire-comprare-allearsi, governance dell’IA, direzione tecnica a tempo condiviso. Per PMI e mid-cap. Svizzera ed Europa.',
       keywords: ['audit di architettura', 'debito tecnico', 'direzione tecnica a tempo condiviso', 'CTO interim', 'governance IA PMI', 'hosting sovrano Svizzera', 'reversibilità'],
     },
     eyebrow: 'Tecnologia & Sovranità',
@@ -325,7 +325,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Secondo la vostra dimensione',
       items: [
         { label: 'PMI · da 10 a 50 M€', desc: 'Uno stack costruito per accumulo, qualche sviluppatore, dei fornitori. Priorità: documentazione minima e reversibilità dei tre componenti critici.' },
-        { label: 'Mid-cap · da 50 a 300 M€', desc: 'Sistema informativo ereditato, più editori, una direzione IT. Priorità: una traiettoria di modernizzazione arbitrata dal comitato, e una governance dei dati tra attività.' },
+        { label: 'Mid-cap · da 50 M€', desc: 'Sistema informativo ereditato, più editori, una direzione IT. Priorità: una traiettoria di modernizzazione arbitrata dal comitato, e una governance dei dati tra attività.' },
       ],
     },
     bySector: {
@@ -378,7 +378,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Sala del consiglio vuota, pronta per la prossima seduta',
     meta: {
       title: 'Successione, governance, squadra di direzione | Aegryn',
-      description: 'Misurare la dipendenza dal dirigente, strutturare il comitato di direzione, costruire un piano di successione, trattenere i profili chiave. PMI e mid-cap da 10 a 300 M€. Svizzera ed Europa.',
+      description: 'Misurare la dipendenza dal dirigente, strutturare il comitato di direzione, costruire un piano di successione, trattenere i profili chiave. PMI e mid-cap. Svizzera ed Europa.',
       keywords: ['piano di successione PMI', 'dipendenza dal fondatore', 'governance comitato di direzione', 'retention profili chiave', 'trasmissione impresa familiare', 'organizzazione mid-cap'],
     },
     eyebrow: 'Talento & Organizzazione',
@@ -447,7 +447,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Secondo la vostra dimensione',
       items: [
         { label: 'PMI · da 10 a 50 M€', desc: 'Il dirigente è spesso primo commerciale e primo decisore prodotto. Priorità: delegare le relazioni con i clienti chiave e documentare i dieci processi critici.' },
-        { label: 'Mid-cap · da 50 a 300 M€', desc: 'Governance familiare o azionisti. Priorità: piano di successione del direttore generale e dei suoi N-1, comitato di nomina, ruolo della famiglia.' },
+        { label: 'Mid-cap · da 50 M€', desc: 'Governance familiare o azionisti. Priorità: piano di successione del direttore generale e dei suoi N-1, comitato di nomina, ruolo della famiglia.' },
       ],
     },
     bySector: {
@@ -564,7 +564,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Secondo la vostra dimensione',
       items: [
         { label: 'PMI · da 10 a 50 M€', desc: 'Ripresa, MBO o acquisto da parte di un attore di dimensione simile, con pochi consulenti attorno al tavolo. Concentriamo la revisione sui quattro angoli ciechi in qualche settimana, a fianco dell’avvocato e del commercialista.' },
-        { label: 'Mid-cap · da 50 a 300 M€', desc: 'Programma di crescita esterna, squadra M&A interna o banca d’affari. Aegryn interviene come partner di revisione tecnica, organizzativa e d’integrazione.' },
+        { label: 'Mid-cap · da 50 M€', desc: 'Programma di crescita esterna, squadra M&A interna o banca d’affari. Aegryn interviene come partner di revisione tecnica, organizzativa e d’integrazione.' },
       ],
     },
     bySector: {

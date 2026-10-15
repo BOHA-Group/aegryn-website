@@ -52,7 +52,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         serviceType: c.eyebrow,
         provider: { '@type': 'Organization', name: 'Aegryn', url: 'https://aegryn.com' },
         areaServed: [{ '@type': 'Country', name: 'Switzerland' }, { '@type': 'Place', name: 'Europe' }],
-        audience: { '@type': 'BusinessAudience', name: 'SMEs and mid-caps, EUR 10M to 300M' },
+        audience: { '@type': 'BusinessAudience', name: 'SMEs and mid-sized companies' },
         url: `https://aegryn.com/${locale}${c.path}`,
         inLanguage: locale,
         hasOfferCatalog: {

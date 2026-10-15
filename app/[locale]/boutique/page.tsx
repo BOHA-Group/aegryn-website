@@ -14,6 +14,8 @@ import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { ProjectCard } from '@/components/sections/assets/ProjectCard'
 import Image from 'next/image'
 import { ArticleCard } from '@/components/sections/ArticleCard'
+import { ArticleStrip } from '@/components/sections/ArticleStrip'
+import { AllArticlesButton } from '@/components/sections/AllArticlesButton'
 import { ARTICLE_CATEGORIES } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
@@ -192,12 +194,17 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Magazine La Boutique */}
       <section className="bg-ag-off-white py-28 md:py-32">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <p className={eyebrow}>{BOUTIQUE.magazineLabel[lang]}</p>
-          <div className="mt-4 flex flex-wrap items-end justify-between gap-6">
-            <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.magazineTitle[lang]}</h2>
-            <Link href="/blog" className="font-sans text-[14px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4">{BOUTIQUE.magazineLink[lang]} →</Link>
+          <div className="mb-12 flex items-end justify-between gap-6">
+            <div className="space-y-3">
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink">
+                <span className="inline-block h-px w-5 bg-ag-apex/50" />
+                {BOUTIQUE.magazineLabel[lang]}
+              </p>
+              <h2 className="font-sans font-bold leading-[1.15] tracking-[-0.03em] text-ag-black" style={h2}>{BOUTIQUE.magazineTitle[lang]}</h2>
+            </div>
+            <AllArticlesButton label={BOUTIQUE.magazineLink[lang]} className="hidden shrink-0 md:inline-flex" />
           </div>
-          <div className="mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
+          <ArticleStrip>
             {ARTICLES.map(a => {
               const img = BLOG_IMAGES[a.slug] ?? BLOG_IMAGE_FALLBACK
               return (
@@ -213,7 +220,8 @@ export default async function BoutiquePage({ params }: Props) {
                 />
               )
             })}
-          </div>
+          </ArticleStrip>
+          <div className="mt-8 md:hidden"><AllArticlesButton label={BOUTIQUE.magazineLink[lang]} /></div>
         </div>
       </section>
 

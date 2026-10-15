@@ -10,7 +10,7 @@ import type { CycleContent, FranchirIntro } from './types'
 export const FRANCHIR_INTRO_DE: FranchirIntro = {
   meta: {
     title:       'Begleiten — jeder Zyklus hat seine Entscheidung | Aegryn',
-    description: 'Gründung, Wachstum, Pivot, Akquisition, Übergabe: fünf Zyklen, in denen eine Organisation von 10 bis 300 Mio. € ihre Zukunft entscheidet. Was auf dem Spiel steht, und wen Sie einsetzen.',
+    description: 'Gründung, Wachstum, Pivot, Akquisition, Übergabe: fünf Zyklen, in denen eine Organisation ihre Zukunft entscheidet. Was auf dem Spiel steht, und wen Sie einsetzen.',
   },
   eyebrow:   'Begleiten',
   heroTitle: 'Jeder Zyklus hat seine Entscheidung. Finden Sie Ihre.',

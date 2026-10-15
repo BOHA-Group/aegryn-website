@@ -174,7 +174,7 @@
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
     "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven.",
-    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen, tot CHF 300 mln omzet, die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Kadering, assets, talent, projectleiding: een geïntegreerd bureau, verankerd in Zwitserland.",
+    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Kadering, assets, talent, projectleiding: een geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Uw beslissingen\nkaderen.",
       "Realiseren\nmet u.",
@@ -914,7 +914,7 @@
       },
       {
         "key": "enterprise",
-        "title": "Instellingen & grote groepen",
+        "title": "Instellingen & organisaties",
         "desc": "Een signatuurproject, geleid van beslissing tot oplevering, met de strengheid en vertrouwelijkheid die uw governance vereist."
       },
       {
@@ -1821,15 +1821,15 @@
           "desc": "Transformeren, certificeren en rekruteren vóór verkoop of fondsenwerving. Assets bouwen die de toets van kopers en investeerders doorstaan."
         },
         {
-          "title": "Grote organisaties",
-          "desc": "Tech-strategie, portfolio M&A, eigen interne assets, executive rekrutering. Een partner die governance, schaalbaarheid en compliance op grote schaal begrijpt."
+          "title": "Middelgrote ondernemingen",
+          "desc": "Strategie, technologie, compliance en talent: één gesprekspartner voor de beslissingen die de groep binden."
         },
         {
           "title": "Fondsen & Investeerders",
           "desc": "U heeft geïnvesteerd in een techbedrijf en heeft een onafhankelijk perspectief nodig op de strategie, het leiderschapsteam of de exitgereedheid."
         },
         {
-          "title": "Middelgrote ondernemingen in transformatie",
+          "title": "Organisaties in transformatie",
           "desc": "U beheert een transformatie- of desinvesteringsproject. Wij structureren en begeleiden het proces van begin tot eind."
         }
       ]
@@ -4718,7 +4718,7 @@
     "title": "De markt, door degenen die hem bedienen.",
     "article1Title": "De 5 kritieke punten om een organisatie voor te bereiden op een financieringsronde of verkoop",
     "article1Cat": "Strategie & Overdracht",
-    "article2Title": "Small & mid-cap: wat bedrijven van minder dan 50M€ tot 300M€ echt verwachten van een adviesbureau",
+    "article2Title": "Small & mid-cap: wat bedrijven echt verwachten van een adviesbureau",
     "article2Cat": "Markt & Inzichten",
     "article3Title": "Na de financiering: waarom 60% van de gefinancierde kmo's hun groeidoelstellingen niet haalt",
     "article3Cat": "Financiering & Uitvoering",

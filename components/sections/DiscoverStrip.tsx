@@ -6,6 +6,8 @@ import { useTranslations, useLocale } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { ArticleCard } from '@/components/sections/ArticleCard'
+import { ArticleStrip } from '@/components/sections/ArticleStrip'
+import { AllArticlesButton } from '@/components/sections/AllArticlesButton'
 import { IssueMiniCard } from '@/components/magazine/IssueMiniCard'
 import { ISSUE_01 } from '@/content/magazine/issue-01/meta'
 import { ISSUE_02 } from '@/content/magazine/issue-02/meta'
@@ -188,18 +190,10 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
               {t('title')}
             </h2>
           </div>
-          <Link
-            href="/blog"
-            className="shrink-0 hidden md:inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
-          >
-            {articlesCta} <ArrowUpRight size={12} />
-          </Link>
+          <AllArticlesButton label={articlesCta} className="shrink-0 hidden md:inline-flex" />
         </div>
 
-        <div
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0"
-          style={{ scrollbarWidth: 'thin' }}
-        >
+        <ArticleStrip>
           {featuredArticles.map((article) => (
             <ArticleCard
               key={article.slug}
@@ -214,15 +208,10 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
               style={{ opacity: 0 }}
             />
           ))}
-        </div>
+        </ArticleStrip>
 
         <div className="mt-8 md:hidden">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-5 py-3 rounded-md hover:border-ag-black hover:bg-ag-black hover:text-white transition-all duration-300 rounded-lg"
-          >
-            {articlesCta} <ArrowUpRight size={12} />
-          </Link>
+          <AllArticlesButton label={articlesCta} />
         </div>
 
       </div>

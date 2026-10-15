@@ -15,12 +15,12 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Kantoortorens van onderaf gezien, de koers en het overzicht',
     meta: {
       title: 'Strategieadvies voor kmo’s en middelgrote bedrijven | Aegryn',
-      description: 'Koers, verdienmodel, externe groei, nieuwe markten: Aegryn helpt leiders van organisaties van 10 tot 300 M€ om strategische keuzes te maken, te becijferen en vol te houden. Zwitserland en Europa.',
+      description: 'Koers, verdienmodel, externe groei, nieuwe markten: Aegryn helpt leiders van organisaties om strategische keuzes te maken, te becijferen en vol te houden. Zwitserland en Europa.',
       keywords: ['strategieadvies kmo', 'strategieadvies middelgroot bedrijf', 'driejarenplan', 'externe groei', 'markttoetreding', 'strategy advisory Zwitserland'],
     },
     eyebrow: 'Bedrijfsstrategie & Innovatie',
     h1: 'De juiste koers kiezen, in de juiste volgorde, met de middelen die u werkelijk heeft.',
-    subtitle: 'Voor wie een organisatie van 10 tot 300 M€ leidt, is strategie geen planningsoefening: het zijn afwegingen onder beperkingen van kapitaal, managementtijd en uitvoeringscapaciteit. Aegryn helpt u ze te stellen, te becijferen en vol te houden.',
+    subtitle: 'Voor wie een organisatie leidt, is strategie geen planningsoefening: het zijn afwegingen onder beperkingen van kapitaal, managementtijd en uitvoeringscapaciteit. Aegryn helpt u ze te stellen, te becijferen en vol te houden.',
     scope: [
       { label: 'Directieteam: Talent & Organisatie', href: '/advisory/talent-organization' },
       { label: 'Uitvoering van een overname: M&A', href: '/advisory/ma' },
@@ -84,7 +84,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Naar omvang',
       items: [
         { label: 'Kmo · 10 tot 50 M€', desc: 'De leider beslist met twee of drie mensen, zonder strategieafdeling. De beperking is zijn tijd. Wij leveren kort, zonder projectstructuur, in een formaat dat in tien pagina’s past.' },
-        { label: 'Middelgroot bedrijf · 50 tot 300 M€', desc: 'Meerdere activiteiten, een directiecomité, soms een familiale aandeelhouder of een fonds. De beperking is afstemming. Wij begeleiden de afweging en documenteren de beslissing voor de raad.' },
+        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Meerdere activiteiten, een directiecomité, soms een familiale aandeelhouder of een fonds. De beperking is afstemming. Wij begeleiden de afweging en documenteren de beslissing voor de raad.' },
       ],
     },
     bySector: {
@@ -207,7 +207,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Naar omvang',
       items: [
         { label: 'Kmo · 10 tot 50 M€', desc: 'Zelden een voltijdse CISO of DPO. Wij mikken op een basis van tegenwerpbare controles, geen volledig managementsysteem, en zetten uitbestede functies uit het netwerk in.' },
-        { label: 'Middelgroot bedrijf · 50 tot 300 M€', desc: 'Er is een risicoafdeling, meerdere referentiekaders overlappen. Wij consolideren ze in één plan en bereiden de interne audit voor.' },
+        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Er is een risicoafdeling, meerdere referentiekaders overlappen. Wij consolideren ze in één plan en bereiden de interne audit voor.' },
       ],
     },
     bySector: {
@@ -256,7 +256,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Serverkasten in een datacenter',
     meta: {
       title: 'Technologieadvies: architectuur, schuld, AI, hosting | Aegryn',
-      description: 'Architectuuraudit, afweging bouwen-kopen-samenwerken, AI-governance, technische leiding in deeltijd. Voor kmo’s en middelgrote bedrijven van 10 tot 300 M€. Zwitserland en Europa.',
+      description: 'Architectuuraudit, afweging bouwen-kopen-samenwerken, AI-governance, technische leiding in deeltijd. Voor kmo’s en middelgrote bedrijven. Zwitserland en Europa.',
       keywords: ['architectuuraudit', 'technische schuld', 'technische leiding in deeltijd', 'interim-CTO', 'AI-governance kmo', 'soevereine hosting Zwitserland', 'omkeerbaarheid'],
     },
     eyebrow: 'Technologie & Soevereiniteit',
@@ -325,7 +325,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Naar omvang',
       items: [
         { label: 'Kmo · 10 tot 50 M€', desc: 'Een stack die door opeenstapeling is gebouwd, enkele ontwikkelaars, dienstverleners. Prioriteit: minimale documentatie en omkeerbaarheid van de drie kritieke componenten.' },
-        { label: 'Middelgroot bedrijf · 50 tot 300 M€', desc: 'Geërfd informatiesysteem, meerdere leveranciers, een IT-afdeling. Prioriteit: een moderniseringstraject afgewogen door het comité, en datagovernance over de activiteiten heen.' },
+        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Geërfd informatiesysteem, meerdere leveranciers, een IT-afdeling. Prioriteit: een moderniseringstraject afgewogen door het comité, en datagovernance over de activiteiten heen.' },
       ],
     },
     bySector: {
@@ -378,7 +378,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Lege bestuurskamer, klaar voor de volgende vergadering',
     meta: {
       title: 'Opvolging, governance, directieteam | Aegryn',
-      description: 'De afhankelijkheid van de leider meten, het directiecomité structureren, een opvolgingsplan opbouwen, sleutelprofielen behouden. Kmo’s en middelgrote bedrijven van 10 tot 300 M€. Zwitserland en Europa.',
+      description: 'De afhankelijkheid van de leider meten, het directiecomité structureren, een opvolgingsplan opbouwen, sleutelprofielen behouden. Kmo’s en middelgrote bedrijven. Zwitserland en Europa.',
       keywords: ['opvolgingsplan kmo', 'afhankelijkheid van de oprichter', 'governance directiecomité', 'retentie sleutelprofielen', 'overdracht familiebedrijf', 'organisatie middelgroot bedrijf'],
     },
     eyebrow: 'Talent & Organisatie',
@@ -447,7 +447,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Naar omvang',
       items: [
         { label: 'Kmo · 10 tot 50 M€', desc: 'De leider is vaak eerste verkoper en eerste productbeslisser. Prioriteit: de relaties met sleutelklanten delegeren en de tien kritieke processen documenteren.' },
-        { label: 'Middelgroot bedrijf · 50 tot 300 M€', desc: 'Familiale governance of aandeelhouders. Prioriteit: opvolgingsplan voor de algemeen directeur en zijn N-1, benoemingscomité, rol van de familie.' },
+        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Familiale governance of aandeelhouders. Prioriteit: opvolgingsplan voor de algemeen directeur en zijn N-1, benoemingscomité, rol van de familie.' },
       ],
     },
     bySector: {
@@ -564,7 +564,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Naar omvang',
       items: [
         { label: 'Kmo · 10 tot 50 M€', desc: 'Overname, MBO of aankoop door een speler van vergelijkbare omvang, met weinig adviseurs rond de tafel. Wij concentreren de beoordeling binnen enkele weken op de vier blinde vlekken, naast de advocaat en de accountant.' },
-        { label: 'Middelgroot bedrijf · 50 tot 300 M€', desc: 'Externe-groeiprogramma, intern M&A-team of zakenbank. Aegryn treedt op als partner voor technische, organisatorische en integratiebeoordeling.' },
+        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Externe-groeiprogramma, intern M&A-team of zakenbank. Aegryn treedt op als partner voor technische, organisatorische en integratiebeoordeling.' },
       ],
     },
     bySector: {

@@ -15,12 +15,12 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Torres de oficinas vistas desde abajo, el rumbo y la altura de miras',
     meta: {
       title: 'Consultoría estratégica para pymes y empresas medianas | Aegryn',
-      description: 'Rumbo, modelo de negocio, crecimiento externo, nuevos mercados: Aegryn ayuda a los directivos de organizaciones de 10 a 300 M€ a decidir, cuantificar y sostener sus decisiones estratégicas. Suiza y Europa.',
+      description: 'Rumbo, modelo de negocio, crecimiento externo, nuevos mercados: Aegryn ayuda a los directivos de organizaciones a decidir, cuantificar y sostener sus decisiones estratégicas. Suiza y Europa.',
       keywords: ['consultoría estratégica pyme', 'consultoría estratégica empresa mediana', 'plan a tres años', 'crecimiento externo', 'entrada en nuevo mercado', 'advisory estrategia Suiza'],
     },
     eyebrow: 'Estrategia empresarial e Innovación',
     h1: 'Elegir el rumbo correcto, en el orden correcto, con los medios que realmente tiene.',
-    subtitle: 'Para quien dirige una organización de 10 a 300 M€, la estrategia no es un ejercicio de planificación: son arbitrajes bajo restricciones de capital, de tiempo directivo y de capacidad de ejecución. Aegryn le ayuda a plantearlos, cuantificarlos y sostenerlos.',
+    subtitle: 'Para quien dirige una organización, la estrategia no es un ejercicio de planificación: son arbitrajes bajo restricciones de capital, de tiempo directivo y de capacidad de ejecución. Aegryn le ayuda a plantearlos, cuantificarlos y sostenerlos.',
     scope: [
       { label: 'Equipo directivo: Talento y Organización', href: '/advisory/talent-organization' },
       { label: 'Ejecución de una adquisición: M&A', href: '/advisory/ma' },
@@ -84,7 +84,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Según su tamaño',
       items: [
         { label: 'Pyme · de 10 a 50 M€', desc: 'El directivo decide con dos o tres personas, sin dirección de estrategia. La restricción es su tiempo. Entregamos corto, sin estructura de proyecto, en un formato que cabe en diez páginas.' },
-        { label: 'Empresa mediana · de 50 a 300 M€', desc: 'Varias actividades, un comité ejecutivo, a veces un accionista familiar o un fondo. La restricción es la alineación. Animamos el arbitraje y documentamos la decisión para el consejo.' },
+        { label: 'Empresa mediana · desde 50 M€', desc: 'Varias actividades, un comité ejecutivo, a veces un accionista familiar o un fondo. La restricción es la alineación. Animamos el arbitraje y documentamos la decisión para el consejo.' },
       ],
     },
     bySector: {
@@ -207,7 +207,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Según su tamaño',
       items: [
         { label: 'Pyme · de 10 a 50 M€', desc: 'Rara vez un CISO o un DPO a tiempo completo. Apuntamos a una base de controles oponibles, no a un sistema de gestión completo, y movilizamos funciones externalizadas de la red.' },
-        { label: 'Empresa mediana · de 50 a 300 M€', desc: 'Existe una dirección de riesgos, varios referenciales se superponen. Los consolidamos en un único plan y preparamos la auditoría interna.' },
+        { label: 'Empresa mediana · desde 50 M€', desc: 'Existe una dirección de riesgos, varios referenciales se superponen. Los consolidamos en un único plan y preparamos la auditoría interna.' },
       ],
     },
     bySector: {
@@ -256,7 +256,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Armarios de servidores en un centro de datos',
     meta: {
       title: 'Consultoría tecnológica: arquitectura, deuda, IA, alojamiento | Aegryn',
-      description: 'Auditoría de arquitectura, arbitraje construir-comprar-aliarse, gobernanza de la IA, dirección técnica a tiempo compartido. Para pymes y empresas medianas de 10 a 300 M€. Suiza y Europa.',
+      description: 'Auditoría de arquitectura, arbitraje construir-comprar-aliarse, gobernanza de la IA, dirección técnica a tiempo compartido. Para pymes y empresas medianas. Suiza y Europa.',
       keywords: ['auditoría de arquitectura', 'deuda técnica', 'dirección técnica a tiempo compartido', 'CTO interino', 'gobernanza IA pyme', 'alojamiento soberano Suiza', 'reversibilidad'],
     },
     eyebrow: 'Tecnología y Soberanía',
@@ -325,7 +325,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Según su tamaño',
       items: [
         { label: 'Pyme · de 10 a 50 M€', desc: 'Una pila construida por acumulación, algunos desarrolladores, proveedores. Prioridad: documentación mínima y reversibilidad de los tres componentes críticos.' },
-        { label: 'Empresa mediana · de 50 a 300 M€', desc: 'Sistema de información heredado, varios editores, una dirección de sistemas. Prioridad: una trayectoria de modernización arbitrada por el comité, y una gobernanza de datos entre actividades.' },
+        { label: 'Empresa mediana · desde 50 M€', desc: 'Sistema de información heredado, varios editores, una dirección de sistemas. Prioridad: una trayectoria de modernización arbitrada por el comité, y una gobernanza de datos entre actividades.' },
       ],
     },
     bySector: {
@@ -378,7 +378,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Sala de consejo vacía, lista para la próxima sesión',
     meta: {
       title: 'Sucesión, gobernanza, equipo directivo | Aegryn',
-      description: 'Medir la dependencia del directivo, estructurar el comité de dirección, construir un plan de sucesión, retener los perfiles clave. Pymes y empresas medianas de 10 a 300 M€. Suiza y Europa.',
+      description: 'Medir la dependencia del directivo, estructurar el comité de dirección, construir un plan de sucesión, retener los perfiles clave. Pymes y empresas medianas. Suiza y Europa.',
       keywords: ['plan de sucesión pyme', 'dependencia del fundador', 'gobernanza comité de dirección', 'retención perfiles clave', 'transmisión empresa familiar', 'organización empresa mediana'],
     },
     eyebrow: 'Talento y Organización',
@@ -447,7 +447,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Según su tamaño',
       items: [
         { label: 'Pyme · de 10 a 50 M€', desc: 'El directivo es a menudo primer comercial y primer decisor de producto. Prioridad: delegar las relaciones con los clientes clave y documentar los diez procesos críticos.' },
-        { label: 'Empresa mediana · de 50 a 300 M€', desc: 'Gobernanza familiar o accionistas. Prioridad: plan de sucesión del director general y de sus N-1, comité de nombramientos, papel de la familia.' },
+        { label: 'Empresa mediana · desde 50 M€', desc: 'Gobernanza familiar o accionistas. Prioridad: plan de sucesión del director general y de sus N-1, comité de nombramientos, papel de la familia.' },
       ],
     },
     bySector: {
@@ -564,7 +564,7 @@ export const ADVISORY_ES: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Según su tamaño',
       items: [
         { label: 'Pyme · de 10 a 50 M€', desc: 'Compra, MBO o adquisición por un actor de tamaño similar, con pocos asesores alrededor de la mesa. Concentramos la revisión en los cuatro ángulos muertos en unas semanas, junto al abogado y al experto contable.' },
-        { label: 'Empresa mediana · de 50 a 300 M€', desc: 'Programa de crecimiento externo, equipo de M&A interno o banco de negocios. Aegryn interviene como socio de revisión técnica, organizativa y de integración.' },
+        { label: 'Empresa mediana · desde 50 M€', desc: 'Programa de crecimiento externo, equipo de M&A interno o banco de negocios. Aegryn interviene como socio de revisión técnica, organizativa y de integración.' },
       ],
     },
     bySector: {

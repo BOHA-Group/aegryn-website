@@ -174,7 +174,7 @@
   "hero": {
     "tagline": "Firma integrada, con raíces en Suiza.",
     "metaDescription": "Aegryn, firma integrada con raíces en Suiza: encuadrar, realizar, acompañar cada ciclo, seleccionar talento, informarse.",
-    "sub": "Acompañamos a los directivos de pymes y empresas medianas, de hasta CHF 300 M de facturación, que lanzan, desarrollan, reorientan, adquieren o transmiten una organización. Encuadre, activos, talento, dirección de proyectos: una firma integrada, con raíces en Suiza.",
+    "sub": "Acompañamos a los directivos de pymes y empresas medianas que lanzan, desarrollan, reorientan, adquieren o transmiten una organización. Encuadre, activos, talento, dirección de proyectos: una firma integrada, con raíces en Suiza.",
     "phrases": [
       "Encuadrar\nsus decisiones.",
       "Realizar\ncon usted.",
@@ -914,7 +914,7 @@
       },
       {
         "key": "enterprise",
-        "title": "Instituciones y grandes grupos",
+        "title": "Instituciones y organizaciones",
         "desc": "Un proyecto emblemático, conducido de la decisión a la entrega, con el rigor y la confidencialidad que su gobernanza exige."
       },
       {
@@ -1821,15 +1821,15 @@
           "desc": "Transformar, certificar y reclutar antes de vender o captar fondos. Construir activos que resistan el escrutinio de compradores e inversores."
         },
         {
-          "title": "Grandes organizaciones",
-          "desc": "Estrategia tech, M&A de portafolio, activos internos propietarios, reclutamiento ejecutivo. Un socio que entiende la gobernanza, escalabilidad y cumplimiento normativo a gran escala."
+          "title": "Empresas medianas",
+          "desc": "Estrategia, tecnología, cumplimiento y talento: un único interlocutor para las decisiones que comprometen al grupo."
         },
         {
           "title": "Fondos e Inversores",
           "desc": "Ha invertido en una empresa tech y necesita una visión independiente de su estrategia, su equipo directivo o su preparación para la venta."
         },
         {
-          "title": "Empresas medianas en transformación",
+          "title": "Organizaciones en transformación",
           "desc": "Gestiona un proyecto de transformación o desinversión. Estructuramos y acompañamos el proceso de principio a fin."
         }
       ]
@@ -4718,7 +4718,7 @@
     "title": "El mercado, por quienes lo operan.",
     "article1Title": "Los 5 puntos críticos para preparar una organización para una ronda o una cesión",
     "article1Cat": "Estrategia & Transmisión",
-    "article2Title": "Small & mid-cap: lo que las empresas de menos de 50M€ hasta 300M€ esperan realmente de una firma de consultoría",
+    "article2Title": "Small & mid-cap: lo que las empresas esperan realmente de una firma de consultoría",
     "article2Cat": "Mercado & Perspectivas",
     "article3Title": "Después del financiamiento: por qué el 60% de las PYME financiadas no alcanzan sus objetivos de crecimiento",
     "article3Cat": "Financiamiento & Ejecución",

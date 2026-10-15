@@ -10,7 +10,7 @@ import type { CycleContent, FranchirIntro } from './types'
 export const FRANCHIR_INTRO_NL: FranchirIntro = {
   meta: {
     title:       'Begeleiden — elk traject heeft zijn beslissing | Aegryn',
-    description: 'Lancering, groei, pivot, overname, overdracht: vijf trajecten waarin een organisatie van 10 tot 300 M€ haar toekomst bepaalt. Dit staat er op het spel, en wie u inzet.',
+    description: 'Lancering, groei, pivot, overname, overdracht: vijf trajecten waarin een organisatie haar toekomst bepaalt. Dit staat er op het spel, en wie u inzet.',
   },
   eyebrow:   'Begeleiden',
   heroTitle: 'Elk traject heeft zijn beslissing. Vind de uwe.',

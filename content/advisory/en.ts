@@ -15,12 +15,12 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Office towers seen from below, direction and height of view',
     meta: {
       title: 'Strategy consulting for SMEs and mid-caps | Aegryn',
-      description: 'Direction, business model, external growth, new markets: Aegryn helps leaders of organisations between 10 and 300 M€ to decide, quantify and hold their strategic choices. Switzerland and Europe.',
+      description: 'Direction, business model, external growth, new markets: Aegryn helps leaders of organisations to decide, quantify and hold their strategic choices. Switzerland and Europe.',
       keywords: ['SME strategy consulting', 'mid-cap strategy consulting', 'three-year plan', 'external growth', 'market entry', 'strategy advisory Switzerland'],
     },
     eyebrow: 'Business Strategy & Innovation',
     h1: 'Choose the right direction, in the right order, with the means you actually have.',
-    subtitle: 'For the leader of a 10 to 300 M€ organisation, strategy is not a planning exercise: it is a set of trade-offs under constraints of capital, management time and execution capacity. Aegryn helps you frame them, quantify them and hold them.',
+    subtitle: 'For the leader of an organisation, strategy is not a planning exercise: it is a set of trade-offs under constraints of capital, management time and execution capacity. Aegryn helps you frame them, quantify them and hold them.',
     scope: [
       { label: 'Leadership team: Talent & Organisation', href: '/advisory/talent-organization' },
       { label: 'Executing an acquisition: M&A', href: '/advisory/ma' },
@@ -84,7 +84,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'By size',
       items: [
         { label: 'SME · 10 to 50 M€', desc: 'The CEO decides with two or three people, without a strategy function. The constraint is time. We deliver short, without project structure, in a format that fits in ten pages.' },
-        { label: 'Mid-cap · 50 to 300 M€', desc: 'Several businesses, an executive committee, sometimes a family shareholder or a fund. The constraint is alignment. We run the arbitration and document the decision for the board.' },
+        { label: 'Mid-cap · from 50 M€', desc: 'Several businesses, an executive committee, sometimes a family shareholder or a fund. The constraint is alignment. We run the arbitration and document the decision for the board.' },
       ],
     },
     bySector: {
@@ -207,7 +207,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'By size',
       items: [
         { label: 'SME · 10 to 50 M€', desc: 'Rarely a full-time CISO or DPO. We aim for a base of defensible controls, not a complete management system, and draw on outsourced functions from the network.' },
-        { label: 'Mid-cap · 50 to 300 M€', desc: 'A risk function exists, several frameworks overlap. We consolidate them into a single plan and prepare the internal audit.' },
+        { label: 'Mid-cap · from 50 M€', desc: 'A risk function exists, several frameworks overlap. We consolidate them into a single plan and prepare the internal audit.' },
       ],
     },
     bySector: {
@@ -256,7 +256,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Server racks in a data centre',
     meta: {
       title: 'Technology consulting: architecture, debt, AI, hosting | Aegryn',
-      description: 'Architecture audit, build-buy-partner arbitration, AI governance, fractional technical leadership. For SMEs and mid-caps between 10 and 300 M€. Switzerland and Europe.',
+      description: 'Architecture audit, build-buy-partner arbitration, AI governance, fractional technical leadership. For SMEs and mid-caps. Switzerland and Europe.',
       keywords: ['architecture audit', 'technical debt', 'fractional CTO', 'interim CTO', 'AI governance SME', 'sovereign hosting Switzerland', 'reversibility'],
     },
     eyebrow: 'Technology & Sovereignty',
@@ -325,7 +325,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'By size',
       items: [
         { label: 'SME · 10 to 50 M€', desc: 'A stack built by accretion, a few developers, some providers. Priority: minimal documentation and reversibility of the three critical components.' },
-        { label: 'Mid-cap · 50 to 300 M€', desc: 'Legacy information system, several vendors, an IT department. Priority: a modernisation trajectory arbitrated by the committee, and data governance across businesses.' },
+        { label: 'Mid-cap · from 50 M€', desc: 'Legacy information system, several vendors, an IT department. Priority: a modernisation trajectory arbitrated by the committee, and data governance across businesses.' },
       ],
     },
     bySector: {
@@ -378,7 +378,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Empty boardroom, ready for the next session',
     meta: {
       title: 'Succession, governance, leadership team | Aegryn',
-      description: 'Measure dependency on the CEO, structure the management committee, build a succession plan, retain key people. SMEs and mid-caps between 10 and 300 M€. Switzerland and Europe.',
+      description: 'Measure dependency on the CEO, structure the management committee, build a succession plan, retain key people. SMEs and mid-caps. Switzerland and Europe.',
       keywords: ['SME succession plan', 'founder dependency', 'management committee governance', 'key people retention', 'family business transfer', 'mid-cap organisation'],
     },
     eyebrow: 'Talent & Organisation',
@@ -447,7 +447,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'By size',
       items: [
         { label: 'SME · 10 to 50 M€', desc: 'The CEO is often the first salesperson and the first product decision-maker. Priority: delegate key customer relationships and document the ten critical processes.' },
-        { label: 'Mid-cap · 50 to 300 M€', desc: 'Family governance or shareholders. Priority: succession plan for the managing director and direct reports, nomination committee, role of the family.' },
+        { label: 'Mid-cap · from 50 M€', desc: 'Family governance or shareholders. Priority: succession plan for the managing director and direct reports, nomination committee, role of the family.' },
       ],
     },
     bySector: {
@@ -564,7 +564,7 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'By size',
       items: [
         { label: 'SME · 10 to 50 M€', desc: 'Takeover, MBO or acquisition by a player of similar size, with few advisers around the table. We focus the review on the four blind spots within a few weeks, alongside the lawyer and the accountant.' },
-        { label: 'Mid-cap · 50 to 300 M€', desc: 'External growth programme, in-house M&A team or investment bank. Aegryn acts as the technical, organisational and integration review partner.' },
+        { label: 'Mid-cap · from 50 M€', desc: 'External growth programme, in-house M&A team or investment bank. Aegryn acts as the technical, organisational and integration review partner.' },
       ],
     },
     bySector: {

@@ -11,7 +11,7 @@ import type { CycleContent, FranchirIntro } from './types'
 export const FRANCHIR_INTRO_FR: FranchirIntro = {
   meta: {
     title:       'Accompagner — chaque cycle a sa décision | Aegryn',
-    description: 'Lancement, croissance, pivot, acquisition, transmission : cinq cycles où une organisation de 10 à 300 M€ engage son avenir. Voici ce qui se joue, et qui mobiliser.',
+    description: 'Lancement, croissance, pivot, acquisition, transmission : cinq cycles où une organisation engage son avenir. Voici ce qui se joue, et qui mobiliser.',
   },
   eyebrow:   'Accompagner',
   heroTitle: 'Chaque cycle a sa décision. Trouvez la vôtre.',

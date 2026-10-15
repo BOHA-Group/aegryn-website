@@ -15,12 +15,12 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Bürotürme aus der Froschperspektive, Kurs und Weitblick',
     meta: {
       title: 'Strategieberatung für KMU und Mid-Caps | Aegryn',
-      description: 'Kurs, Geschäftsmodell, externes Wachstum, neue Märkte: Aegryn hilft Führungskräften von Organisationen mit 10 bis 300 Mio. € dabei, strategische Entscheidungen abzuwägen, zu beziffern und durchzuhalten. Schweiz und Europa.',
+      description: 'Kurs, Geschäftsmodell, externes Wachstum, neue Märkte: Aegryn hilft Führungskräften von Organisationen dabei, strategische Entscheidungen abzuwägen, zu beziffern und durchzuhalten. Schweiz und Europa.',
       keywords: ['Strategieberatung KMU', 'Strategieberatung Mid-Cap', 'Dreijahresplan', 'externes Wachstum', 'Markteintritt', 'Strategy Advisory Schweiz'],
     },
     eyebrow: 'Unternehmensstrategie & Innovation',
     h1: 'Den richtigen Kurs wählen, in der richtigen Reihenfolge, mit den Mitteln, die Sie tatsächlich haben.',
-    subtitle: 'Für die Leitung einer Organisation mit 10 bis 300 Mio. € ist Strategie keine Planungsübung: Es sind Abwägungen unter Kapital-, Zeit- und Umsetzungsrestriktionen. Aegryn hilft Ihnen, sie zu stellen, zu beziffern und durchzuhalten.',
+    subtitle: 'Für die Leitung einer Organisation ist Strategie keine Planungsübung: Es sind Abwägungen unter Kapital-, Zeit- und Umsetzungsrestriktionen. Aegryn hilft Ihnen, sie zu stellen, zu beziffern und durchzuhalten.',
     scope: [
       { label: 'Führungsteam: Talent & Organisation', href: '/advisory/talent-organization' },
       { label: 'Durchführung einer Akquisition: M&A', href: '/advisory/ma' },
@@ -84,7 +84,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Nach Grösse',
       items: [
         { label: 'KMU · 10 bis 50 Mio. €', desc: 'Die Geschäftsleitung entscheidet mit zwei oder drei Personen, ohne Strategieabteilung. Die Restriktion ist ihre Zeit. Wir liefern kurz, ohne Projektstruktur, in einem Format, das auf zehn Seiten passt.' },
-        { label: 'Mid-Cap · 50 bis 300 Mio. €', desc: 'Mehrere Geschäftsbereiche, eine Geschäftsleitung, manchmal ein Familienaktionär oder ein Fonds. Die Restriktion ist die Abstimmung. Wir moderieren die Abwägung und dokumentieren die Entscheidung für den Verwaltungsrat.' },
+        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Mehrere Geschäftsbereiche, eine Geschäftsleitung, manchmal ein Familienaktionär oder ein Fonds. Die Restriktion ist die Abstimmung. Wir moderieren die Abwägung und dokumentieren die Entscheidung für den Verwaltungsrat.' },
       ],
     },
     bySector: {
@@ -207,7 +207,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Nach Grösse',
       items: [
         { label: 'KMU · 10 bis 50 Mio. €', desc: 'Selten ein CISO oder DSB in Vollzeit. Wir zielen auf einen Sockel belastbarer Kontrollen, nicht auf ein vollständiges Managementsystem, und ziehen ausgelagerte Funktionen aus dem Netzwerk bei.' },
-        { label: 'Mid-Cap · 50 bis 300 Mio. €', desc: 'Eine Risikofunktion existiert, mehrere Referenzrahmen überlagern sich. Wir konsolidieren sie in einem einzigen Plan und bereiten das interne Audit vor.' },
+        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Eine Risikofunktion existiert, mehrere Referenzrahmen überlagern sich. Wir konsolidieren sie in einem einzigen Plan und bereiten das interne Audit vor.' },
       ],
     },
     bySector: {
@@ -256,7 +256,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Serverschränke in einem Rechenzentrum',
     meta: {
       title: 'Technologieberatung: Architektur, Schulden, KI, Hosting | Aegryn',
-      description: 'Architekturaudit, Abwägung Bauen-Kaufen-Kooperieren, KI-Governance, technische Leitung in Teilzeit. Für KMU und Mid-Caps mit 10 bis 300 Mio. €. Schweiz und Europa.',
+      description: 'Architekturaudit, Abwägung Bauen-Kaufen-Kooperieren, KI-Governance, technische Leitung in Teilzeit. Für KMU und Mid-Caps. Schweiz und Europa.',
       keywords: ['Architekturaudit', 'technische Schulden', 'CTO in Teilzeit', 'Interim-CTO', 'KI-Governance KMU', 'souveränes Hosting Schweiz', 'Reversibilität'],
     },
     eyebrow: 'Technologie & Souveränität',
@@ -325,7 +325,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Nach Grösse',
       items: [
         { label: 'KMU · 10 bis 50 Mio. €', desc: 'Ein über die Zeit angehäufter Stack, einige Entwickler, Dienstleister. Priorität: minimale Dokumentation und Reversibilität der drei kritischen Komponenten.' },
-        { label: 'Mid-Cap · 50 bis 300 Mio. €', desc: 'Gewachsenes Informationssystem, mehrere Anbieter, eine IT-Abteilung. Priorität: ein vom Gremium abgewogener Modernisierungspfad und eine Datengovernance über die Geschäftsbereiche hinweg.' },
+        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Gewachsenes Informationssystem, mehrere Anbieter, eine IT-Abteilung. Priorität: ein vom Gremium abgewogener Modernisierungspfad und eine Datengovernance über die Geschäftsbereiche hinweg.' },
       ],
     },
     bySector: {
@@ -378,7 +378,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
     imageAlt: 'Leerer Sitzungssaal, bereit für die nächste Sitzung',
     meta: {
       title: 'Nachfolge, Governance, Führungsteam | Aegryn',
-      description: 'Die Abhängigkeit von der Geschäftsleitung messen, die Geschäftsleitung strukturieren, einen Nachfolgeplan aufbauen, Schlüsselpersonen halten. KMU und Mid-Caps mit 10 bis 300 Mio. €. Schweiz und Europa.',
+      description: 'Die Abhängigkeit von der Geschäftsleitung messen, die Geschäftsleitung strukturieren, einen Nachfolgeplan aufbauen, Schlüsselpersonen halten. KMU und Mid-Caps. Schweiz und Europa.',
       keywords: ['Nachfolgeplan KMU', 'Abhängigkeit vom Gründer', 'Governance Geschäftsleitung', 'Bindung von Schlüsselpersonen', 'Übergabe Familienunternehmen', 'Organisation Mid-Cap'],
     },
     eyebrow: 'Talent & Organisation',
@@ -447,7 +447,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Nach Grösse',
       items: [
         { label: 'KMU · 10 bis 50 Mio. €', desc: 'Die Geschäftsleitung ist oft erster Verkäufer und erster Produktentscheider. Priorität: Schlüsselkundenbeziehungen delegieren und die zehn kritischen Prozesse dokumentieren.' },
-        { label: 'Mid-Cap · 50 bis 300 Mio. €', desc: 'Familien-Governance oder Aktionäre. Priorität: Nachfolgeplan für den CEO und die direkt Unterstellten, Nominationsausschuss, Rolle der Familie.' },
+        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Familien-Governance oder Aktionäre. Priorität: Nachfolgeplan für den CEO und die direkt Unterstellten, Nominationsausschuss, Rolle der Familie.' },
       ],
     },
     bySector: {
@@ -564,7 +564,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       title: 'Nach Grösse',
       items: [
         { label: 'KMU · 10 bis 50 Mio. €', desc: 'Übernahme, MBO oder Kauf durch einen Akteur ähnlicher Grösse, mit wenigen Beratern am Tisch. Wir konzentrieren die Prüfung innerhalb weniger Wochen auf die vier blinden Flecken, an der Seite des Anwalts und des Treuhänders.' },
-        { label: 'Mid-Cap · 50 bis 300 Mio. €', desc: 'Programm für externes Wachstum, internes M&A-Team oder Investmentbank. Aegryn tritt als Partner für technische, organisatorische und Integrationsprüfung auf.' },
+        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Programm für externes Wachstum, internes M&A-Team oder Investmentbank. Aegryn tritt als Partner für technische, organisatorische und Integrationsprüfung auf.' },
       ],
     },
     bySector: {
