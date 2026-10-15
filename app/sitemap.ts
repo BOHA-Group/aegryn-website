@@ -37,9 +37,7 @@ const STATIC_ROUTES = [
   { path: '/franchir/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/franchir/acquisition',              priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/franchir/transmission',             priority: 0.9,  changeFrequency: 'monthly' as const },
-  // ── Transact — infrastructure legacy ────────────────────────────────────────
-  // Toutes les routes /transact/* restent fonctionnelles pour les workflows
-  // structurés (NDA, KYC) mais sont masquées : hors sitemap, noindex.
+  // Catalogue, transactions et enchères : archivés (_archive/legacy-transact), /transact/* redirigé (301).
   // ── Grade & Certification CIFSO 5000 ─────────────────────────────────────────
   { path: '/grade',                              priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/grade/brochure',                     priority: 0.9,  changeFrequency: 'monthly' as const },
@@ -85,9 +83,7 @@ const STATIC_ROUTES = [
 ]
 
 /* Exclus volontairement : /client/* (privé), /grade/submit/success (confirmation),
-   /transact/teaser-preview (aperçu), /transact/lot/[slug] (noindex, accès NDA),
-   /transact/catalog (redirige désormais systématiquement vers /transact — catalogue
-   confidentiel, sélection après NDA), /verify/[code] (une URL par certificat),
+   /verify/[code] (une URL par certificat),
    /magazine/report* (301 → /magazine/issue-01), /platform, /advisory/ai,
    /valuation/guide (routes inexistantes → 404).
    /magazine/issue-01/web est conservé : c'est l'édition web du magazine (lecture

@@ -11,7 +11,7 @@ export default function KycViewButton({ docId }: { docId: string }) {
     setError('')
     setLoading(true)
     try {
-      const res  = await fetch(`/api/buyer/kyc/signed-url?doc_id=${docId}`)
+      const res  = await fetch(`/api/kyc/signed-url?doc_id=${docId}`)
       const json = await res.json()
       if (!res.ok) throw new Error(json.error ?? 'Erreur')
       window.open(json.url, '_blank', 'noopener,noreferrer')

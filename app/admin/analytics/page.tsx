@@ -84,18 +84,6 @@ async function buildKpis(
     : { data: null }
   const ndaPrev = (ndaPrevData as unknown as { count?: number })?.count ?? 0
 
-  /* ── Transactions ── */
-  const { data: txData } = await (from
-    ? supa.from('transactions').select('id, status, created_at').gte('created_at', from)
-    : supa.from('transactions').select('id, status, created_at'))
-  const txRows = txData ?? []
-
-  /* ── Term sheets ── */
-  const { data: tsData } = await (from
-    ? supa.from('term_sheets').select('id, status, created_at').gte('created_at', from)
-    : supa.from('term_sheets').select('id, status, created_at'))
-  const tsRows = tsData ?? []
-
   /* ── Expert applications ── */
   const { data: expAppData } = await (from
     ? supa.from('expert_applications').select('id, prenom, nom, email, profession, status, created_at').gte('created_at', from)
@@ -180,30 +168,6 @@ async function buildKpis(
         label: (r.buyer_name ?? r.buyer_email ?? r.id) as string,
         value: r.status as string,
         sub:   r.created_at ? new Date(r.created_at as string).toLocaleDateString('fr-CH') : null,
-      })) satisfies KpiDetail[],
-    },
-    {
-      key:   'transactions',
-      label: 'Transactions',
-      value: txRows.length,
-      href:  '/admin/transactions',
-      detail: txRows.slice(0, 50).map(r => ({
-        id:    r.id as string,
-        label: r.id as string,
-        value: r.status as string,
-        sub:   r.created_at ? new Date(r.created_at as string).toLocaleDateString('fr-CH') : null,
-        href:  `/admin/transactions`,
-      })) satisfies KpiDetail[],
-    },
-    {
-      key:   'termsheets',
-      label: 'Term Sheets',
-      value: tsRows.length,
-      href:  '/admin/transactions',
-      detail: tsRows.slice(0, 50).map(r => ({
-        id:    r.id as string,
-        label: r.id as string,
-        value: r.status as string,
       })) satisfies KpiDetail[],
     },
     {

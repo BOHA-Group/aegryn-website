@@ -15,7 +15,6 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
   const t = await getTranslations('clientSpace')
 
   const isClient  = roles.includes('client')
-  const isBuyer   = roles.includes('buyer')
   const isSeller  = roles.includes('seller')
   const isPartner = roles.includes('partner')
 
@@ -36,8 +35,8 @@ export default async function AccountNav({ roles, unreadCount: _unreadCount, roo
   /* Pour les comptes non-client (ancienne logique) */
   const legacyBackItems = []
   if (!isClient) {
-    if (isBuyer || isPartner) {
-      legacyBackItems.push({ href: isPartner ? '/client/partner' : '/client/buyer', label: t('navDashboard'), icon: 'LayoutDashboard' })
+    if (isPartner) {
+      legacyBackItems.push({ href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard' })
     } else if (isSeller) {
       legacyBackItems.push({ href: '/client/seller', label: t('navDashboard'), icon: 'LayoutDashboard' })
     }

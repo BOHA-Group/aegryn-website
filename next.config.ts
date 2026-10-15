@@ -134,6 +134,14 @@ const nextConfig: NextConfig = {
       { source: '/:locale/valoriser/restructuration',   destination: '/:locale/franchir/restructuration', permanent: true },
       { source: '/:locale/valoriser/acquisition',       destination: '/:locale/franchir/acquisition',     permanent: true },
       { source: '/:locale/valoriser/transmission',      destination: '/:locale/franchir/transmission',    permanent: true },
+      /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
+         Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
+      { source: '/transact/:path*',                     destination: '/',                                permanent: true },
+      { source: '/:locale/transact/:path*',             destination: '/:locale',                         permanent: true },
+      { source: '/:locale/client/auction',              destination: '/:locale',                         permanent: true },
+      /* Espaces et pages d'admin archivés */
+      { source: '/client/buyer/:path*',                 destination: '/client/account',                  permanent: false },
+      { source: '/admin/:section(offers|transactions|transaction|introductions|catalog|commissions|sessions|light-bids|data-room-requests)/:path*', destination: '/admin', permanent: false },
     ]
   },
   async headers() {

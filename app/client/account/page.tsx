@@ -1,7 +1,6 @@
 import { listSignedNdas } from '@/lib/nda/access'
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
 }
 
 const ROLE_LINKS: Record<string, string> = {
-  buyer:   '/client/buyer',
   seller:  '/client/seller',
   partner: '/client/partner',
   expert:  '/client/expert',
@@ -60,12 +58,6 @@ export default async function AccountPage() {
   const roles: string[] = Array.isArray(profile?.roles) ? profile.roles : []
   const emailNotifEnabled = profile?.email_notifications_enabled !== false
   const signedNdas = await listSignedNdas(user.email)
-
-  const { data: ndaSignatures } = await supa
-    .from('nda_signatures')
-    .select('nda_version, signed_at, scope')
-    .eq('buyer_id', user.id)
-    .order('signed_at', { ascending: false })
 
   /* Statut abonnement newsletter */
   const { data: newsletterSub } = await supa
@@ -189,7 +181,7 @@ export default async function AccountPage() {
         </div>
 
         {/* NDA signés */}
-        {((ndaSignatures && ndaSignatures.length > 0) || signedNdas.length > 0) && (
+        {signedNdas.length > 0 && (
           <div className="bg-white border border-gray-200 p-5 mt-4">
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-3">{t('ndaTitle')}</p>
             <div className="flex flex-col gap-3">
@@ -214,31 +206,6 @@ export default async function AccountPage() {
                   >
                     PDF signé
                   </a>
-                </div>
-              ))}
-
-              {/* NDA Catalogue (acquéreur) */}
-              {roles.includes('buyer') && ndaSignatures && ndaSignatures.map((sig, i) => (
-                <div key={i} className="rounded-lg flex items-start justify-between gap-4 border border-gray-100 px-4 py-3">
-                  <div>
-                    <p className="font-sans text-[13px] text-gray-700 font-medium">
-                      {t('ndaCatalogTitle')}
-                      <span className="ml-2 font-mono text-[10px] text-ag-apex bg-ag-navy px-1.5 py-0.5 uppercase tracking-wider">
-                        {t('ndaSigned')}
-                      </span>
-                    </p>
-                    <p className="font-mono text-[10px] text-gray-400 mt-0.5">
-                      {t('ndaVersion')} {String(sig.nda_version ?? '—')} · {sig.signed_at
-                        ? new Date(sig.signed_at as string).toLocaleDateString('fr-CH', { day: '2-digit', month: 'long', year: 'numeric' })
-                        : '—'}
-                    </p>
-                  </div>
-                  <Link
-                    href="/client/buyer/nda-view"
-                    className="rounded-lg font-mono text-[10px] uppercase tracking-widest text-ag-navy border border-ag-navy/30 px-3 py-1.5 hover:bg-ag-navy hover:text-white transition-colors shrink-0"
-                  >
-                    {t('ndaView')}
-                  </Link>
                 </div>
               ))}
 

@@ -14,7 +14,6 @@ const URLS_TO_SUBMIT = [
   'https://aegryn.com/fr/assets/hobconnect',
   'https://aegryn.com/fr/magazine',
   'https://aegryn.com/fr/magazine/issue-01',
-  'https://aegryn.com/fr/transact',
   'https://aegryn.com/fr/grade',
   'https://aegryn.com/fr/valuation',
   'https://aegryn.com/fr/advisory',

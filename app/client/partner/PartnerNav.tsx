@@ -24,7 +24,6 @@ export default async function PartnerNav({ unreadCount: _unreadCount }: { unread
       label: t('navGroupActivity'),
       items: [
         { href: '/client/partner/certifications', label: t('navCosigning'),    icon: 'Award' },
-        { href: '/client/partner/introductions',  label: t('navIntroductions'), icon: 'Users' },
         { href: '/client/partner/mandates',       label: t('navMandates'),      icon: 'Briefcase' },
       ],
     },

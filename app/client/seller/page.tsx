@@ -5,8 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { FileText, ArrowRightLeft, ShieldCheck, Bell, ArrowUpRight, Calculator, CheckCircle2, AlertTriangle, Zap } from 'lucide-react'
-import { calcCommission, fmtEur } from '@/lib/calcCommission'
+import { FileText, ShieldCheck, Bell, ArrowUpRight, CheckCircle2, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dashboard — Seller Space Aegryn',
@@ -16,11 +15,6 @@ export const metadata: Metadata = {
 function fmtDate(d: unknown, locale: string) {
   if (!d || typeof d !== 'string') return '—'
   return new Date(d).toLocaleDateString(locale, { day: '2-digit', month: 'long', year: 'numeric' })
-}
-
-function fmtChf(n: number | null) {
-  if (n == null) return '—'
-  return new Intl.NumberFormat('fr-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 }).format(n)
 }
 
 export default async function SellerDashboardPage() {
@@ -36,14 +30,12 @@ export default async function SellerDashboardPage() {
   const certPacks = tgs.raw('packs') as { key: string; name: string; price: string; duration: string; target: string; includes: string[] }[]
 
   const assetStatusLabel = (s: string) => t(`assetStatus.${s}` as Parameters<typeof t>[0]) || s
-  const txStatusLabel    = (s: string) => t(`txStatus.${s}` as Parameters<typeof t>[0]) || s
 
   const supa = createServiceClient()
 
   const [
     { data: profile },
     { data: assets },
-    { data: transactions },
     { count: kycPending },
     { data: notifications },
   ] = await Promise.all([
@@ -52,11 +44,6 @@ export default async function SellerDashboardPage() {
       .select('id, company_name, status, official_grade, aeg_grade, trs, auction_ready, submitted_at, published_at, arr')
       .or(`seller_email.eq.${user.email},seller_uid.eq.${user.id}`)
       .order('submitted_at', { ascending: false }),
-    supa.from('transactions')
-      .select('id, status, created_at, escrow_amount_chf, transaction_price, assets(company_name, arr)')
-      .eq('seller_id', user.id)
-      .order('created_at', { ascending: false })
-      .limit(3),
     supa.from('kyc_documents')
       .select('id', { count: 'exact', head: true })
       .eq('user_id', user.id)
@@ -76,7 +63,6 @@ export default async function SellerDashboardPage() {
   const unreadCount   = (notifications ?? []).filter(n => !n.read_at).length
 
   const certifiedCount  = (assets ?? []).filter(a => ['graded','published','sold'].includes(a.status)).length
-  const transactionReadyCount = (assets ?? []).filter(a => Boolean(a.auction_ready)).length
   const trsAlerts       = (assets ?? []).filter(a => a.trs === 'blocked' || a.trs === 'remediation')
 
   return (
@@ -157,24 +143,6 @@ export default async function SellerDashboardPage() {
           <p className="font-mono font-bold text-[22px] text-gray-900">{certifiedCount}</p>
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">Certifiés</p>
         </div>
-
-        <div className={`bg-white border p-5 ${ transactionReadyCount > 0 ? 'border-emerald-200 bg-emerald-50/30' : 'border-gray-200' }`}>
-          <div className="flex items-center justify-between mb-3">
-            <Zap size={16} className={transactionReadyCount > 0 ? 'text-emerald-500' : 'text-gray-300'} />
-          </div>
-          <p className={`font-mono font-bold text-[22px] ${ transactionReadyCount > 0 ? 'text-emerald-700' : 'text-gray-400' }`}>{transactionReadyCount}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">TRANSACT Ready</p>
-        </div>
-
-        <Link href="/client/seller/transactions"
-          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
-          <div className="flex items-center justify-between mb-3">
-            <ArrowRightLeft size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
-            <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-          </div>
-          <p className="font-mono font-bold text-[22px] text-gray-900">{transactions?.length ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiTransactions')}</p>
-        </Link>
 
         <Link href="/client/seller/kyc"
           className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
@@ -284,57 +252,6 @@ export default async function SellerDashboardPage() {
           </div>
         )}
       </div>
-
-      {/* Transactions récentes */}
-      {transactions && transactions.length > 0 && (
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">{t('activeTransactions')}</h2>
-            <Link href="/client/seller/transactions" className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 flex items-center gap-1">
-              Voir tout <ArrowUpRight size={10} />
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            {(transactions as unknown as { id: string; status: string; created_at: string; escrow_amount_chf: number | null; transaction_price: number | null; assets: { company_name: string | null; arr: number | null } | null }[]).map(tx => {
-              const priceRef = tx.transaction_price ?? (tx.escrow_amount_chf != null ? tx.escrow_amount_chf * 10 : null) ?? tx.assets?.arr ?? null
-              const commResult = priceRef != null ? calcCommission(priceRef) : null
-              return (
-                <Link key={tx.id} href={`/client/seller/transactions/${tx.id}`}
-                  className="bg-white border border-gray-200 hover:border-gray-300 transition-colors group block">
-                  <div className="px-5 py-4 flex items-center justify-between">
-                    <div>
-                      <p className="font-sans font-medium text-gray-900 text-[13px]">
-                        {tx.assets?.company_name ?? `Transaction #${tx.id.slice(0, 8)}`}
-                      </p>
-                      <p className="font-mono text-[10px] text-gray-400 mt-0.5">{fmtDate(tx.created_at, locale)}</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      {tx.escrow_amount_chf != null && (
-                        <span className="font-mono font-semibold text-[12px] text-gray-700">{fmtChf(tx.escrow_amount_chf)}</span>
-                      )}
-                      <span className="rounded-lg font-mono text-[9px] uppercase tracking-widest text-gray-400 border border-gray-200 px-2 py-0.5">
-                        {txStatusLabel(tx.status)}
-                      </span>
-                      <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-                    </div>
-                  </div>
-                  {commResult?.type === 'calculated' && tx.status !== 'closed' && tx.status !== 'cancelled' && (
-                    <div className="rounded-lg border-t border-gray-100 px-5 py-2.5 flex items-center gap-2 bg-gray-50/60">
-                      <Calculator size={11} className="text-gray-400 shrink-0" />
-                      <p className="font-sans text-[11px] text-gray-500">
-                        Commission Aegryn :
-                        <span className="font-semibold text-gray-700 mx-1">{fmtEur(commResult.commission)}</span>
-                        — Net :
-                        <span className="font-semibold text-emerald-700 ml-1">{fmtEur(commResult.netSeller)}</span>
-                      </p>
-                    </div>
-                  )}
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      )}
 
       {/* {t('recentNotifs')} */}
       {notifications && notifications.length > 0 && (

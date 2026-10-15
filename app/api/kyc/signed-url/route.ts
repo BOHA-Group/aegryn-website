@@ -1,5 +1,5 @@
 /**
- * GET /api/buyer/kyc/signed-url?doc_id=xxx
+ * GET /api/kyc/signed-url?doc_id=xxx
  * Génère une signed URL temporaire (5min) pour un document KYC appartenant
  * à l'utilisateur connecté. Bucket privé kyc-documents.
  */

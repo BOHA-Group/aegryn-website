@@ -211,7 +211,6 @@ export default async function AdminAssetDocumentsPage({
           assetId={id}
           catalog={catalogFiltered}
           documents={documents}
-          dataRoomLightEnabled={Boolean((asset as Record<string, unknown>).data_room_light_enabled)}
         />
 
         {/* Journal des consultations */}

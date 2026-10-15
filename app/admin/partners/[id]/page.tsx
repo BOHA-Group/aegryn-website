@@ -178,7 +178,6 @@ export default async function AdminPartnerDetailPage({
             <div className="bg-white border border-gray-200">
               <div className="rounded-lg px-6 py-4 bg-gray-50 flex items-center justify-between">
                 <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide">Commissions ({(comms ?? []).length})</p>
-                <Link href={`/admin/commissions`} className="text-[10px] text-gray-400 hover:text-gray-700">Voir toutes →</Link>
               </div>
               {(comms ?? []).length === 0 ? (
                 <div className="p-8 text-center text-[12px] text-gray-400">Aucune commission.</div>

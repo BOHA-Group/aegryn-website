@@ -40,9 +40,6 @@ export default async function AdminIndexPage({
     { count: ndaPending },
     { count: valLeads },
     { count: kycBuyerPending },
-    { count: offersSubmitted },
-    { count: transactionsOpen },
-    { count: commissionsDue },
     { count: expertAppsPending },
     { data: expertProfilesData },
     { data: kycDocsPending },
@@ -52,9 +49,6 @@ export default async function AdminIndexPage({
     supa.from('nda_requests').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
     supa.from('valuation_leads').select('*', { count: 'exact', head: true }).eq('status', 'new'),
     supa.from('buyer_kyc_verifications').select('*', { count: 'exact', head: true }).eq('kyc_status', 'pending'),
-    supa.from('auction_bids').select('*', { count: 'exact', head: true }).eq('status', 'submitted'),
-    supa.from('transactions').select('*', { count: 'exact', head: true }).not('status', 'in', '(closed,cancelled)'),
-    supa.from('commissions').select('*', { count: 'exact', head: true }).neq('status', 'paid'),
     supa.from('expert_applications').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
     supa.from('expert_profiles').select('id, is_visible, hidden_reason, review_status'),
     supa.from('kyc_documents').select('user_id').eq('status', 'pending'),
@@ -92,43 +86,9 @@ export default async function AdminIndexPage({
         {
           href:       `/admin/assets${qs}${qs ? '&' : '?'}status=graded`,
           title:      '🏷️ Grading',
-          desc:       'Actifs gradés, prêts à publier ou en révision finale avant catalogue.',
+          desc:       'Actifs gradés, prêts à publier ou en révision finale.',
           badge:      assetsGraded ?? 0,
           badgeLabel: 'à publier',
-        },
-        {
-          href:  `/admin/catalog${qs}`,
-          title: '📖 Catalogue',
-          desc:  'Publication et gestion de la visibilité des actifs auprès des acquéreurs.',
-          badge: null,
-        },
-      ],
-    },
-    {
-      key:   'transaction',
-      label: 'Transaction',
-      color: 'border-emerald-100 bg-emerald-50/40',
-      modules: [
-        {
-          href:       `/admin/offers${qs}`,
-          title:      '💬 Offres',
-          desc:       'Offres soumises tous actifs confondus — nouvelle / en examen / acceptée.',
-          badge:      offersSubmitted ?? 0,
-          badgeLabel: 'à examiner',
-        },
-        {
-          href:       `/admin/transactions${qs}`,
-          title:      '🔄 Transactions — Pipeline PTT',
-          desc:       'EI → AP → Séquestre → Due Diligence → Signing → Closing.',
-          badge:      transactionsOpen ?? 0,
-          badgeLabel: 'en cours',
-        },
-        {
-          href:       `/admin/commissions${qs}`,
-          title:      '💰 Commissions',
-          desc:       'Commissions de transaction et rémunérations des partenaires apporteurs.',
-          badge:      commissionsDue ?? 0,
-          badgeLabel: 'dues',
         },
       ],
     },
@@ -208,7 +168,7 @@ export default async function AdminIndexPage({
   ]
 
   const totalActionRequired =
-    (assetsNew ?? 0) + (offersSubmitted ?? 0) + (kycPending ?? 0) + (ndaPending ?? 0) + (valLeads ?? 0) + (expertsPending ?? 0)
+    (assetsNew ?? 0) + (kycPending ?? 0) + (ndaPending ?? 0) + (valLeads ?? 0) + (expertsPending ?? 0)
 
   return (
     <main className="min-h-screen bg-gray-50 p-6 md:p-10">
@@ -270,7 +230,6 @@ export default async function AdminIndexPage({
           <div className="flex flex-wrap gap-2">
             {[
               { label: '/grade/submit',    href: '/grade/submit' },
-              { label: '/transact/catalog', href: '/transact/catalog' },
               { label: '/valuation',       href: '/valuation' },
               { label: '/client/login',    href: '/client/login' },
             ].map(({ label, href }) => (

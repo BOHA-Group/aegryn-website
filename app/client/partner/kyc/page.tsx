@@ -6,7 +6,7 @@ import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { CheckCircle2, Clock, XCircle, AlertCircle, ShieldCheck } from 'lucide-react'
 import PartnerKycUploadForm from './PartnerKycUploadForm'
-import KycViewButton        from '@/app/client/buyer/kyc/KycViewButton'
+import KycViewButton        from '@/components/client/KycViewButton'
 
 export const metadata: Metadata = {
   title: 'KYC — Espace Partenaire Aegryn',

@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { getTranslations } from 'next-intl/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
-import { Award, Users, Bell, ArrowUpRight } from 'lucide-react'
+import { Award, Bell, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dashboard — Partner Space Aegryn',
@@ -25,14 +25,6 @@ type Certification = {
   assets: { company_name: string | null } | null
 }
 
-type Introduction = {
-  id: string
-  introduction_type: string
-  contact_name: string
-  introduction_status: string
-  created_at: string
-}
-
 export default async function PartnerDashboardPage() {
   const user = await getUser()
   if (!user) redirect('/client/login')
@@ -49,7 +41,6 @@ export default async function PartnerDashboardPage() {
   const [
     { data: profile },
     { data: certifications },
-    { data: introductions },
     { data: notifications },
   ] = await Promise.all([
     supa.from('profiles').select('full_name, expert_plan, expert_plan_start').eq('id', user.id).single(),
@@ -57,11 +48,6 @@ export default async function PartnerDashboardPage() {
       .select('id, dimension, status, deadline_at, assets(company_name)')
       .eq('partner_id', user.id)
       .not('status', 'eq', 'signed')
-      .order('created_at', { ascending: false })
-      .limit(3),
-    supa.from('introductions')
-      .select('id, introduction_type, contact_name, introduction_status, created_at')
-      .eq('partner_id', user.id)
       .order('created_at', { ascending: false })
       .limit(3),
     supa.from('user_notifications')
@@ -119,16 +105,6 @@ export default async function PartnerDashboardPage() {
           <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiCertifications')}</p>
         </Link>
 
-        <Link href="/client/partner/introductions"
-          className="bg-white border border-gray-200 p-5 hover:border-gray-300 transition-colors group">
-          <div className="flex items-center justify-between mb-3">
-            <Users size={16} className="text-gray-400 group-hover:text-ag-navy transition-colors" />
-            <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
-          </div>
-          <p className="font-mono font-bold text-[22px] text-gray-900">{introductions?.length ?? 0}</p>
-          <p className="font-sans text-[11px] text-gray-400 mt-0.5">{t('kpiIntroductions')}</p>
-        </Link>
-
       </div>
 
       {/* Co-signatures actives */}
@@ -170,38 +146,6 @@ export default async function PartnerDashboardPage() {
         </div>
       )}
 
-      {/* {t('recentIntroductions')} */}
-      {introductions && introductions.length > 0 && (
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-sans font-semibold text-gray-900 text-[14px]">Introductions récentes</h2>
-            <Link href="/client/partner/introductions"
-              className="font-mono text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-700 flex items-center gap-1">
-              Voir tout <ArrowUpRight size={10} />
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            {(introductions as Introduction[]).map(intro => (
-              <Link key={intro.id} href="/client/partner/introductions"
-                className="rounded-lg bg-white border border-gray-200 px-5 py-3 flex items-center justify-between hover:border-gray-300 transition-colors group">
-                <div>
-                  <p className="font-sans text-[13px] text-gray-800 font-medium">{intro.contact_name}</p>
-                  <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest mt-0.5">
-                    {intro.introduction_type === 'asset' ? t('introductionTypeAsset') : t('introductionTypeBuyer')}
-                    {' — '}{fmtDate(intro.created_at, locale)}
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-gray-400">
-                    {intro.introduction_status}
-                  </span>
-                  <ArrowUpRight size={12} className="text-gray-300 group-hover:text-gray-500" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   )
 }

@@ -45,7 +45,6 @@ export default async function SellerNav({
       label: certificationOnly ? 'Certification CIFSO 5000' : t('navGroupFiles'),
       items: [
         { href: '/client/seller/actifs', label: certificationOnly ? 'Mes dossiers' : t('navAssets'), icon: 'Award' },
-        ...(certificationOnly ? [] : [{ href: '/client/seller/transactions', label: t('navTransactions'), icon: 'ArrowRightLeft' }]),
         ...dataRoomItems,
       ],
     },

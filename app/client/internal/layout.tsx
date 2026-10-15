@@ -19,7 +19,6 @@ export default async function InternalLayout({ children }: { children: React.Rea
 
   /* Guard : seul le rôle 'internal' peut accéder à cet espace */
   if (!roles.includes('internal')) {
-    if (roles.includes('buyer'))   redirect('/client/buyer')
     if (roles.includes('seller'))  redirect('/client/seller')
     if (roles.includes('partner')) redirect('/client/partner')
     redirect('/client/login')

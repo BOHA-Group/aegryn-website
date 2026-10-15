@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronDown, ChevronUp, FileText, Upload, Eye, Loader2 } from 'lucide-react'
+import { ChevronDown, ChevronUp, FileText, Upload } from 'lucide-react'
 import type {
   DataRoomDocument, DocumentCatalogEntry, DocumentDimension,
   DocumentAdminQuality,
@@ -18,20 +18,15 @@ interface Props {
   assetId:                string
   catalog:                DocumentCatalogEntry[]
   documents:              DataRoomDocument[]
-  dataRoomLightEnabled:   boolean
 }
 
-export default function AdminDocumentsClient({ assetId, catalog, documents, dataRoomLightEnabled: initLightEnabled }: Props) {
+export default function AdminDocumentsClient({ catalog, documents }: Props) {
   const router = useRouter()
   const [_isPending, startTransition] = useTransition()
   const [openDims, setOpenDims] = useState<Set<DocumentDimension>>(new Set(DIMENSIONS))
   const [noteOpen, setNoteOpen] = useState<Record<string, boolean>>({})
   const [noteValues, setNoteValues] = useState<Record<string, string>>({})
   const [saving, setSaving] = useState<Record<string, boolean>>({})
-  const [lightEnabled, setLightEnabled] = useState(initLightEnabled)
-  const [lightSaving, setLightSaving]   = useState(false)
-  const [initSaving,  setInitSaving]    = useState(false)
-  const [initResult,  setInitResult]    = useState<{ created: number; skipped: number } | null>(null)
 
   function toggleDim(dim: DocumentDimension) {
     setOpenDims((prev) => {
@@ -57,93 +52,8 @@ export default function AdminDocumentsClient({ assetId, catalog, documents, data
     setNoteOpen((n) => ({ ...n, [docId]: false }))
   }
 
-  async function toggleLightEnabled() {
-    setLightSaving(true)
-    const next = !lightEnabled
-    try {
-      await fetch(`/api/admin/assets/${assetId}/toggle-light`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ enabled: next }),
-      })
-      setLightEnabled(next)
-      startTransition(() => router.refresh())
-    } finally {
-      setLightSaving(false)
-    }
-  }
-
-  async function initLightRoom() {
-    setInitSaving(true)
-    setInitResult(null)
-    try {
-      const res  = await fetch(`/api/admin/assets/${assetId}/init-light`, { method: 'POST' })
-      const json = await res.json()
-      if (res.ok) {
-        setInitResult({ created: json.created, skipped: json.skipped })
-        setLightEnabled(true)
-        startTransition(() => router.refresh())
-      }
-    } finally {
-      setInitSaving(false)
-    }
-  }
-
   return (
     <div className="space-y-4">
-      {/* ── Data Room Light — contrôles admin ── */}
-      <div className="rounded-lg bg-white border border-indigo-100 px-5 py-4 space-y-3">
-        {/* Header */}
-        <div className="flex items-center justify-between gap-4 flex-wrap">
-          <div>
-            <div className="flex items-center gap-2 mb-0.5">
-              <Eye size={13} className={lightEnabled ? 'text-indigo-600' : 'text-gray-400'} />
-              <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600 font-semibold">
-                Data Room Light — 12 documents
-              </p>
-              {lightEnabled && (
-                <span className="font-mono text-[9px] bg-indigo-50 text-indigo-700 border border-indigo-200 px-1.5 py-0.5">ACTIVE</span>
-              )}
-            </div>
-            <p className="font-sans text-[11px] text-gray-400 max-w-xl">
-              Accès automatique aux acquéreurs KYC validés. Le vendeur upload les 12 documents; l&apos;acquéreur soumet ensuite une offre de principe.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            {/* Initialiser */}
-            <button
-              type="button"
-              disabled={initSaving}
-              onClick={initLightRoom}
-              className="rounded-lg flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest bg-indigo-50 text-indigo-700 border border-indigo-200 px-3 py-1.5 hover:bg-indigo-100 transition-colors disabled:opacity-50"
-            >
-              {initSaving ? <Loader2 size={10} className="animate-spin" /> : null}
-              Initialiser les 12 docs
-            </button>
-            {/* Toggle */}
-            <button
-              type="button"
-              disabled={lightSaving}
-              onClick={toggleLightEnabled}
-              className={`flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors disabled:opacity-50 ${
-                lightEnabled
-                  ? 'bg-indigo-600 text-white border-indigo-600 hover:bg-indigo-700'
-                  : 'bg-white text-gray-500 border-gray-300 hover:border-gray-500'
-              }`}
-            >
-              {lightSaving && <Loader2 size={10} className="animate-spin" />}
-              {lightEnabled ? 'Désactiver' : 'Activer'}
-            </button>
-          </div>
-        </div>
-        {/* Résultat initialisation */}
-        {initResult && (
-          <p className="font-mono text-[10px] text-indigo-600">
-            ✓ {initResult.created} document{initResult.created !== 1 ? 's' : ''} créé{initResult.created !== 1 ? 's' : ''}
-            {initResult.skipped > 0 && `, ${initResult.skipped} déjà existant${initResult.skipped !== 1 ? 's' : ''}`}
-          </p>
-        )}
-      </div>
       {DIMENSIONS.map((dim) => {
         const dimCatalog = catalog.filter((c) => c.dimension === dim)
         const isOpen     = openDims.has(dim)
