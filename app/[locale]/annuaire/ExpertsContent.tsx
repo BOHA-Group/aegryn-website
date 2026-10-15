@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
+import { countryName, sortAlpha } from '@/lib/countries'
 import { ArrowUpRight, CheckCircle2, Mail, Globe, MapPin, Star, ChevronDown, Filter, ShieldCheck, BrainCircuit, Scale, Cpu, ClipboardCheck, X, Phone } from 'lucide-react'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
@@ -528,6 +529,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
 }
 
 function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
+  const locale = useLocale()
   const [submitted, setSubmitted] = useState(false)
   const [loading,   setLoading]   = useState(false)
   const [error,     setError]     = useState<string | null>(null)
@@ -626,8 +628,8 @@ function WaitlistForm({ t }: { t: ReturnType<typeof useTranslations> }) {
           <div className="relative">
             <select name="country" required className={selectCls}>
               <option value="">—</option>
-              {COUNTRIES.map(c => (
-                <option key={c} value={c}>{c}</option>
+              {sortAlpha(COUNTRIES, c => countryName(c, locale), locale).map(c => (
+                <option key={c} value={c}>{countryName(c, locale)}</option>
               ))}
             </select>
             <ChevronDown size={13} className="absolute right-3 top-1/2 -translate-y-1/2 text-ag-gray pointer-events-none" />

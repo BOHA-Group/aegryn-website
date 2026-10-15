@@ -1,6 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import { useLocale } from 'next-intl'
+import { countryName, flagEmoji, sortAlpha } from '@/lib/countries'
 import { ChevronDown } from 'lucide-react'
 
 // Formats téléphone par pays (regex + placeholder)
@@ -64,61 +66,7 @@ const PHONE_FORMATS = {
 
 type CountryCode = keyof typeof PHONE_FORMATS
 
-const COUNTRIES: { code: CountryCode; name: string; flag: string }[] = [
-  // Europe de l'Ouest
-  { code: 'CH', name: 'Suisse', flag: '🇨🇭' },
-  { code: 'FR', name: 'France', flag: '🇫🇷' },
-  { code: 'DE', name: 'Allemagne', flag: '🇩🇪' },
-  { code: 'IT', name: 'Italie', flag: '🇮🇹' },
-  { code: 'ES', name: 'Espagne', flag: '🇪🇸' },
-  { code: 'NL', name: 'Pays-Bas', flag: '🇳🇱' },
-  { code: 'BE', name: 'Belgique', flag: '🇧🇪' },
-  { code: 'LU', name: 'Luxembourg', flag: '🇱🇺' },
-  { code: 'AT', name: 'Autriche', flag: '🇦🇹' },
-  { code: 'GB', name: 'Royaume-Uni', flag: '🇬🇧' },
-  { code: 'IE', name: 'Irlande', flag: '🇮🇪' },
-  { code: 'PT', name: 'Portugal', flag: '🇵🇹' },
-  
-  // Europe du Nord
-  { code: 'SE', name: 'Suède', flag: '🇸🇪' },
-  { code: 'NO', name: 'Norvège', flag: '🇳🇴' },
-  { code: 'DK', name: 'Danemark', flag: '🇩🇰' },
-  { code: 'FI', name: 'Finlande', flag: '🇫🇮' },
-  { code: 'IS', name: 'Islande', flag: '🇮🇸' },
-  
-  // Europe de l'Est
-  { code: 'PL', name: 'Pologne', flag: '🇵🇱' },
-  { code: 'CZ', name: 'Tchéquie', flag: '🇨🇿' },
-  { code: 'SK', name: 'Slovaquie', flag: '🇸🇰' },
-  { code: 'HU', name: 'Hongrie', flag: '🇭🇺' },
-  { code: 'RO', name: 'Roumanie', flag: '🇷🇴' },
-  { code: 'BG', name: 'Bulgarie', flag: '🇧🇬' },
-  { code: 'HR', name: 'Croatie', flag: '🇭🇷' },
-  { code: 'SI', name: 'Slovénie', flag: '🇸🇮' },
-  
-  // Pays Baltes
-  { code: 'EE', name: 'Estonie', flag: '🇪🇪' },
-  { code: 'LV', name: 'Lettonie', flag: '🇱🇻' },
-  { code: 'LT', name: 'Lituanie', flag: '�🇹' },
-  
-  // Europe du Sud
-  { code: 'GR', name: 'Grèce', flag: '�🇬�' },
-  { code: 'CY', name: 'Chypre', flag: '🇨🇾' },
-  { code: 'MT', name: 'Malte', flag: '🇲🇹' },
-  
-  // Balkans
-  { code: 'RS', name: 'Serbie', flag: '🇷🇸' },
-  { code: 'BA', name: 'Bosnie-Herzégovine', flag: '�🇧🇦' },
-  { code: 'ME', name: 'Monténégro', flag: '🇲🇪' },
-  { code: 'MK', name: 'Macédoine du Nord', flag: '🇲🇰' },
-  { code: 'AL', name: 'Albanie', flag: '🇦🇱' },
-  
-  // Autres
-  { code: 'TR', name: 'Turquie', flag: '🇹🇷' },
-  { code: 'UA', name: 'Ukraine', flag: '🇺🇦' },
-  { code: 'US', name: 'États-Unis', flag: '🇺🇸' },
-  { code: 'CA', name: 'Canada', flag: '🇨🇦' },
-]
+const COUNTRY_CODES: CountryCode[] = ['CH', 'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'LU', 'AT', 'GB', 'IE', 'PT', 'SE', 'NO', 'DK', 'FI', 'IS', 'PL', 'CZ', 'SK', 'HU', 'RO', 'BG', 'HR', 'SI', 'EE', 'LV', 'LT', 'GR', 'CY', 'MT', 'RS', 'BA', 'ME', 'MK', 'AL', 'TR', 'UA', 'US', 'CA']
 
 type PhoneInputProps = {
   value?: string
@@ -145,7 +93,7 @@ export default function PhoneInput({
   const parseInitialValue = (val: string): { country: CountryCode; number: string } => {
     if (!val) return { country: 'CH', number: '' }
     
-    for (const country of COUNTRIES) {
+    for (const country of COUNTRY_CODES.map(code => ({ code }))) {
       const format = PHONE_FORMATS[country.code]
       if (val.startsWith(format.code)) {
         return {
@@ -158,6 +106,8 @@ export default function PhoneInput({
   }
 
   const initial = parseInitialValue(value)
+  const locale = useLocale()
+  const COUNTRIES = useMemo(() => sortAlpha(COUNTRY_CODES.map(code => ({ code, name: countryName(code, locale), flag: flagEmoji(code) })), c => c.name, locale), [locale])
   const [selectedCountry, setSelectedCountry] = useState<CountryCode>(initial.country)
   const [phoneNumber, setPhoneNumber] = useState(initial.number)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)

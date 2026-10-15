@@ -157,7 +157,18 @@
     "craftRecruitHire": "Reclutar un perfil",
     "craftRecruitTransition": "Perfiles de transición",
     "craftRecruitPool": "Unirse al pool",
-    "navPortfolio": "La Boutique"
+    "navPortfolio": "La Boutique",
+    "boutiqueDiscover": "Descubrir La Boutique",
+    "boutiqueDiscoverDesc": "El concepto, los proyectos y el saber hacer de una boutique emprendedora.",
+    "boutiqueAct": "Pasar a la acción",
+    "boutiqueActDesc": "Encontrarse, conversar, confiar un proyecto.",
+    "boutiqueConcept": "El concepto",
+    "boutiqueProjects": "Portfolio: proyectos emblemáticos",
+    "boutiqueForWho": "Para quién",
+    "boutiqueKnowHow": "Savoir-faire",
+    "boutiquePlaces": "Los lugares de encuentro",
+    "boutiqueSoon": "Próximamente",
+    "boutiqueSubmit": "Hablar con total confidencialidad"
   },
   "hero": {
     "tagline": "Consultoría integrada, con raíces en Suiza. Y La Boutique de proyectos emblemáticos.",

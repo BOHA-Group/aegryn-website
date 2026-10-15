@@ -1,9 +1,10 @@
 'use client'
 
 import { useTranslations }  from 'next-intl'
-import { useState }         from 'react'
+import { useMemo, useState } from 'react'
 import { useSearchParams }  from 'next/navigation'
 import { Aegryn_ASSETS }    from '@/data/assets'
+import { countryName, sortAlpha } from '@/lib/countries'
 import {
   CONTACT_SUBJECTS, LEGACY_SUBJECT_ALIAS, TYPE_TO_SUBJECT, NDA_SUBJECTS, SUBJECT_FIELDS,
   FIELD_LABELS, OPTION_LABELS, UI, normalizeLang, type FieldDef,
@@ -85,7 +86,9 @@ export default function ContactForm({ locale }: Props) {
   const showNda = (NDA_SUBJECTS as readonly string[]).includes(subject)
   const setExtraValue = (key: string, value: string) => setExtra(prev => ({ ...prev, [key]: value }))
 
-  const phoneCountryData = COUNTRY_OPTIONS.find(c => c.code === phoneCountry) ?? COUNTRY_OPTIONS[0]
+  const phoneCountries = useMemo(() => sortAlpha(COUNTRY_OPTIONS.map(c => ({ ...c, label: countryName(c.code, locale) })), c => c.label, locale), [locale])
+  const subjectList = useMemo(() => [...sortAlpha(subjects.filter(s => s !== 'other'), s => t(`subjects.${s}`), locale), 'other' as const], [locale, t])
+  const phoneCountryData = phoneCountries.find(c => c.code === phoneCountry) ?? phoneCountries[0]
 
   /* Le bouton s'active seulement quand tous les champs sont remplis */
   const phoneDigits = phone.replace(/\D/g, '')
@@ -180,7 +183,7 @@ export default function ContactForm({ locale }: Props) {
             onChange={e => { setPhoneCountry(e.target.value); setPhone('') }}
             className={`${selectCls} shrink-0 w-auto pr-8`}
           >
-            {COUNTRY_OPTIONS.map(c => (
+            {phoneCountries.map(c => (
               <option key={c.code} value={c.code}>{c.dial} {c.label}</option>
             ))}
           </select>
@@ -213,7 +216,7 @@ export default function ContactForm({ locale }: Props) {
           <option value="" disabled className="text-ag-gray-light">
             {t('subjectPlaceholder')}
           </option>
-          {subjects.map((s) => (
+          {subjectList.map((s) => (
             <option key={s} value={s} className="bg-ag-off-white">
               {t(`subjects.${s}`)}
             </option>

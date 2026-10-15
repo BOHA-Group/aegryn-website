@@ -157,7 +157,18 @@
     "craftRecruitHire": "Recruter un profil",
     "craftRecruitTransition": "Profils de transition",
     "craftRecruitPool": "Rejoindre le vivier",
-    "navPortfolio": "La Boutique"
+    "navPortfolio": "La Boutique",
+    "boutiqueDiscover": "Découvrir La Boutique",
+    "boutiqueDiscoverDesc": "Le concept, les projets et les savoir-faire d’une boutique entrepreneuriale.",
+    "boutiqueAct": "Passer à l’action",
+    "boutiqueActDesc": "Rencontrer, échanger, confier un projet.",
+    "boutiqueConcept": "Le concept",
+    "boutiqueProjects": "Portfolio : projets emblématiques",
+    "boutiqueForWho": "Pour qui",
+    "boutiqueKnowHow": "Savoir-faire",
+    "boutiquePlaces": "Les lieux de rencontre",
+    "boutiqueSoon": "Bientôt",
+    "boutiqueSubmit": "Échanger en toute confidentialité"
   },
   "hero": {
     "tagline": "Cabinet de conseil intégré, ancré en Suisse. Et La Boutique de projets emblématiques.",

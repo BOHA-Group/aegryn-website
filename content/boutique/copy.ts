@@ -60,7 +60,14 @@ export const BOUTIQUE = {
 
   valuesTitle: L('Nos valeurs', 'Our values', 'Unsere Werte', 'Nuestros valores', 'I nostri valori', 'Onze waarden'),
   projectsLabel: L('Projets emblématiques', 'Emblematic projects', 'Emblematische Projekte', 'Proyectos emblemáticos', 'Progetti emblematici', 'Emblematische projecten'),
-  projectsAll: L('Voir tous les projets', 'See all projects', 'Alle Projekte ansehen', 'Ver todos los proyectos', 'Vedere tutti i progetti', 'Alle projecten bekijken'),
+  projectsAll: L('Voir le portfolio', 'See the portfolio', 'Portfolio ansehen', 'Ver el portfolio', 'Vedere il portfolio', 'Portfolio bekijken'),
+  portraitCaption: L(
+    'Du premier rendez-vous à la remise des clés, chaque détail compte.',
+    'From the first meeting to the handover, every detail counts.',
+    'Vom ersten Treffen bis zur Schlüsselübergabe zählt jedes Detail.',
+    'Desde la primera cita hasta la entrega de llaves, cada detalle cuenta.',
+    'Dal primo incontro alla consegna delle chiavi, ogni dettaglio conta.',
+    'Van de eerste afspraak tot de sleuteloverdracht telt elk detail.'),
   placesLabel: L('Les lieux de rencontre', 'Meeting places', 'Begegnungsorte', 'Los lugares de encuentro', 'I luoghi d’incontro', 'Ontmoetingsplekken'),
   placesTitle: L('Des lieux d’exception, pour se retrouver autrement.', 'Exceptional places, to meet differently.', 'Außergewöhnliche Orte, um sich anders zu begegnen.', 'Lugares excepcionales, para reunirse de otra manera.', 'Luoghi eccezionali, per ritrovarsi in modo diverso.', 'Uitzonderlijke plekken om elkaar anders te ontmoeten.'),
   soon: L('Bientôt', 'Coming soon', 'Demnächst', 'Próximamente', 'Prossimamente', 'Binnenkort'),

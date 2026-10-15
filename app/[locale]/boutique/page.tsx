@@ -10,6 +10,8 @@ import { Link } from '@/i18n/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
+import { PortraitScroll } from '@/components/boutique/PortraitScroll'
+import Image from 'next/image'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
 import { BOUTIQUE } from '@/content/boutique/copy'
 import { SF_UI } from '@/content/boutique/savoirFaire'
@@ -37,10 +39,9 @@ const eyebrow = 'font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-
 export default async function BoutiquePage({ params }: Props) {
   const { locale } = await params
   const lang = toLang(locale)
-  const [tv, ts, ti] = await Promise.all([
+  const [tv, ts] = await Promise.all([
     getTranslations({ locale, namespace: 'about.values' }),
     getTranslations({ locale, namespace: 'homeSegments' }),
-    getTranslations({ locale, namespace: 'assets.items' }),
   ])
   const valueKeys = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
   const segments = ts.raw('cards') as { key: string; title: string; desc: string }[]
@@ -105,6 +106,8 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
+      <PortraitScroll caption={BOUTIQUE.portraitCaption[lang]} />
+
       {/* Les valeurs */}
       <section className="bg-ag-off-white py-28 md:py-32">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
@@ -121,22 +124,26 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Projets emblématiques */}
+      {/* Projets emblématiques : image et titre, clic direct vers la page du projet */}
       <section id="projets" className="scroll-mt-24 bg-white py-28 md:py-36">
-        <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.projectsLabel[lang]}</h2>
-            <Link href="/portfolio" className="font-sans text-[14px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4 hover:text-ag-apex-ink">
-              {BOUTIQUE.projectsAll[lang]} →
-            </Link>
-          </div>
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-7xl px-6 md:px-12">
+          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.projectsLabel[lang]}</h2>
+          <div className="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map(p => (
-              <Link key={p.id} href={`/assets/${p.slug}` as never} className="group rounded-2xl bg-ag-off-white p-7 transition-colors hover:bg-ag-navy">
-                <p className="font-sans text-[22px] font-bold capitalize tracking-[-0.015em] text-ag-black transition-colors group-hover:text-white">{p.name}</p>
-                <p className="mt-2 text-[15px] leading-relaxed text-ag-gray transition-colors group-hover:text-white/75">{ti(`${p.id}.tagline` as never)}</p>
+              <Link key={p.id} href={`/assets/${p.slug}` as never} className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ag-off-white">
+                  {p.image && (
+                    <Image src={p.image} alt="" fill sizes="(min-width:1024px) 400px, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.05]" />
+                  )}
+                </div>
+                <p className="mt-4 font-sans text-[22px] font-bold capitalize tracking-[-0.015em] text-ag-black">{p.name}</p>
               </Link>
             ))}
+          </div>
+          <div className="mt-14">
+            <Link href="/portfolio" className="font-sans text-[15px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4 hover:text-ag-apex-ink">
+              {BOUTIQUE.projectsAll[lang]} →
+            </Link>
           </div>
         </div>
       </section>
@@ -151,7 +158,7 @@ export default async function BoutiquePage({ params }: Props) {
       </section>
 
       {/* Pour qui */}
-      <section className="bg-white py-28 md:py-36">
+      <section id="pour-qui" className="scroll-mt-24 bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.forWhoTitle[lang]}</h2>
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

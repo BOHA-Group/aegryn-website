@@ -157,7 +157,18 @@
     "craftRecruitHire": "Profiel werven",
     "craftRecruitTransition": "Overgangsprofielen",
     "craftRecruitPool": "Deelnemen aan de pool",
-    "navPortfolio": "La Boutique"
+    "navPortfolio": "La Boutique",
+    "boutiqueDiscover": "La Boutique ontdekken",
+    "boutiqueDiscoverDesc": "Het concept, de projecten en de expertise van een ondernemende boutique.",
+    "boutiqueAct": "Actie ondernemen",
+    "boutiqueActDesc": "Elkaar ontmoeten, praten, een project toevertrouwen.",
+    "boutiqueConcept": "Het concept",
+    "boutiqueProjects": "Portfolio: emblematische projecten",
+    "boutiqueForWho": "Voor wie",
+    "boutiqueKnowHow": "Expertise",
+    "boutiquePlaces": "Ontmoetingsplekken",
+    "boutiqueSoon": "Binnenkort",
+    "boutiqueSubmit": "Vertrouwelijk spreken"
   },
   "hero": {
     "tagline": "Geïntegreerd adviesbureau, verankerd in Zwitserland. En La Boutique voor emblematische projecten.",

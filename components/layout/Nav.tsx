@@ -12,7 +12,7 @@ import Image             from 'next/image'
 import { AegrynLogo }    from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
-type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | null
+type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
 // Nos métiers - Build section (liens principaux)
@@ -235,6 +235,55 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
   )
 }
 
+// La Boutique : découvrir / passer à l'action
+const BOUTIQUE_DISCOVER_LINKS: { labelKey: string; href: LinkHref }[] = [
+  { labelKey: 'boutiqueConcept',  href: '/boutique' },
+  { labelKey: 'boutiqueProjects', href: '/portfolio' as LinkHref },
+  { labelKey: 'boutiqueForWho',   href: { pathname: '/boutique', hash: 'pour-qui' } as LinkHref },
+  { labelKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
+]
+const BOUTIQUE_SUBMIT_HREF = { pathname: '/contact', query: { subject: 'project' } } as LinkHref
+
+// Mega-menu La Boutique (2 colonnes : découvrir | passer à l'action)
+function BoutiqueMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -6 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -4 }}
+      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      className="absolute top-full right-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
+    >
+      <div className="grid grid-cols-2 gap-px bg-ag-border rounded-2xl overflow-hidden">
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueDiscover')}</p>
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueDiscoverDesc')}</div>
+          <div className="flex flex-col gap-1">
+            {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
+              <Link key={labelKey} href={href} onClick={onClose} className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1">
+                {t(labelKey)}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="bg-ag-white p-4">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueAct')}</p>
+          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueActDesc')}</div>
+          <div className="flex flex-col gap-1">
+            <span className="flex items-center gap-2 font-sans text-[13px] text-ag-gray-light/70 py-1 cursor-default" aria-disabled="true">
+              {t('boutiquePlaces')}
+              <span className="rounded-full bg-ag-off-white px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-gray">{t('boutiqueSoon')}</span>
+            </span>
+            <Link href={BOUTIQUE_SUBMIT_HREF} onClick={onClose} className="font-sans text-[13px] font-semibold text-ag-black hover:text-ag-apex-ink transition-colors py-1">
+              {t('boutiqueSubmit')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
 // Mega-menu Nos convictions (2 colonnes Magazine + Notre regard)
 function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
@@ -316,7 +365,7 @@ const INDUSTRY_CLUSTERS: { id: string; slug: string; labelKey: string }[] = [
 function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   // Utilise le path i18n '/about' — le Link next-intl traduit en /a-propos, /about, /chi-siamo… selon la locale
   // Le cast est nécessaire car LinkHref ne liste pas les variantes avec #hash
-  const founderHref = '/about#fondateur' as LinkHref
+  const founderHref = { pathname: '/about', hash: 'fondateur' } as LinkHref
 
   return (
     <motion.div
@@ -662,18 +711,31 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             </AnimatePresence>
           </div>
 
-          {/* Portfolio */}
-          <div className="nav-link-item relative flex items-center">
-            <Link
-              href={'/boutique' as LinkHref}
-              className={`relative flex items-center font-mono font-semibold text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
+          {/* La Boutique */}
+          <div
+            className="nav-link-item relative"
+            onMouseEnter={() => openMenu('boutique')}
+            onMouseLeave={closeMenu}
+          >
+            <button
+              onFocus={() => openMenu('boutique')}
+              className={`relative flex items-center gap-1 font-mono font-semibold text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isPortfolioActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
+              aria-expanded={activeDropdown === 'boutique'}
               aria-current={isPortfolioActive ? 'page' : undefined}
             >
               {t('navPortfolio')}
-              {isPortfolioActive && <span className="absolute left-0 bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </Link>
+              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'boutique' ? 'rotate-180' : ''}`} />
+              {isPortfolioActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
+            </button>
+            <AnimatePresence>
+              {activeDropdown === 'boutique' && (
+                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
+                  <BoutiqueMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
+                </div>
+              )}
+            </AnimatePresence>
           </div>
         </nav>
 
@@ -849,7 +911,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                     </Link>
                   ))}
                   <Link
-                    href={'/about#fondateur' as LinkHref}
+                    href={{ pathname: '/about', hash: 'fondateur' } as LinkHref}
                     onClick={closeMobile}
                     className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors"
                   >
@@ -894,18 +956,33 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               )}
             </div>
 
-            {/* Portfolio */}
+            {/* La Boutique */}
             <div className="mobile-nav-item">
-              <Link
-                href={'/portfolio' as LinkHref}
-                onClick={closeMobile}
+              <button
+                onClick={() => toggleMobileAccordion('boutique')}
                 aria-current={isPortfolioActive ? 'page' : undefined}
-                className={`w-full flex items-center justify-between py-4 font-mono font-semibold text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
+                className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
                   isPortfolioActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
                 }`}
               >
                 {t('navPortfolio')}
-              </Link>
+                <ChevronDown size={14} className={`transition-transform duration-200 ${mobileAccordion === 'boutique' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileAccordion === 'boutique' && (
+                <div className="py-2 pl-4 flex flex-col gap-2">
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('boutiqueDiscover')}</p>
+                  {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile} className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      {t(labelKey)}
+                    </Link>
+                  ))}
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('boutiqueAct')}</p>
+                  <span className="py-1.5 font-sans text-[14px] text-white/40">{t('boutiquePlaces')} · {t('boutiqueSoon')}</span>
+                  <Link href={BOUTIQUE_SUBMIT_HREF} onClick={closeMobile} className="py-1.5 font-sans text-[14px] font-semibold text-ag-apex hover:text-white transition-colors">
+                    {t('boutiqueSubmit')}
+                  </Link>
+                </div>
+              )}
             </div>
 
             {/* Bottom CTAs */}

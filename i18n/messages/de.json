@@ -157,7 +157,18 @@
     "craftRecruitHire": "Profil rekrutieren",
     "craftRecruitTransition": "Übergangsprofile",
     "craftRecruitPool": "Dem Talentpool beitreten",
-    "navPortfolio": "La Boutique"
+    "navPortfolio": "La Boutique",
+    "boutiqueDiscover": "La Boutique entdecken",
+    "boutiqueDiscoverDesc": "Konzept, Projekte und Know-how einer unternehmerischen Boutique.",
+    "boutiqueAct": "Aktiv werden",
+    "boutiqueActDesc": "Begegnen, austauschen, ein Projekt anvertrauen.",
+    "boutiqueConcept": "Das Konzept",
+    "boutiqueProjects": "Portfolio: emblematische Projekte",
+    "boutiqueForWho": "Für wen",
+    "boutiqueKnowHow": "Know-how",
+    "boutiquePlaces": "Begegnungsorte",
+    "boutiqueSoon": "Demnächst",
+    "boutiqueSubmit": "Vertraulich sprechen"
   },
   "hero": {
     "tagline": "Integriertes Beratungshaus, verankert in der Schweiz. Und La Boutique für emblematische Projekte.",

@@ -157,7 +157,18 @@
     "craftRecruitHire": "Hire a profile",
     "craftRecruitTransition": "Transition profiles",
     "craftRecruitPool": "Join the talent pool",
-    "navPortfolio": "La Boutique"
+    "navPortfolio": "La Boutique",
+    "boutiqueDiscover": "Discover La Boutique",
+    "boutiqueDiscoverDesc": "The concept, projects and know-how of an entrepreneurial boutique.",
+    "boutiqueAct": "Take action",
+    "boutiqueActDesc": "Meet, talk, entrust a project.",
+    "boutiqueConcept": "The concept",
+    "boutiqueProjects": "Portfolio: emblematic projects",
+    "boutiqueForWho": "Who it is for",
+    "boutiqueKnowHow": "Know-how",
+    "boutiquePlaces": "Meeting places",
+    "boutiqueSoon": "Coming soon",
+    "boutiqueSubmit": "Talk in full confidence"
   },
   "hero": {
     "tagline": "Integrated advisory firm, anchored in Switzerland. And La Boutique for emblematic projects.",

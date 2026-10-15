@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 import { Link } from '@/i18n/navigation'
 
-const HERO_VIDEO   = '/videos/home-fountain.mp4'
-const HERO_POSTER  = '/videos/home-fountain.jpg'
+const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
+const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
 
 /** Animation machine à écrire — style size.swiss : tape, pause, efface, phrase suivante.
     Le temps de lecture est budgété sur la durée de la vidéo : la dernière phrase

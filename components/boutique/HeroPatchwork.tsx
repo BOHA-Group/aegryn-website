@@ -1,103 +1,90 @@
 'use client'
 
 /**
- * Patchwork vidéo du hero de La Boutique, calé sur le tempo de la musique.
- * Les scènes (1, 2 ou 3 volets) changent exactement sur les temps du morceau ;
- * la séquence suit une journée type et reboucle une fois les 22 vidéos déroulées.
- * Le DOM est piloté directement (refs) pour garder une coupe nette à chaque temps.
+ * Hero de La Boutique : une vidéo plein cadre, alternée à chaque temps de la musique.
+ * Les 20 clips (journée type) se déroulent dans l'ordre, puis la séquence reboucle.
+ * Le DOM est piloté directement (refs) pour garder une coupe nette à chaque temps ;
+ * chaque clip repart du début et s'agrandit légèrement pendant son temps.
  */
-import { useEffect, useRef } from 'react'
-import { BEAT_SECONDS, BOUTIQUE_CLIPS, BOUTIQUE_TEMPO, SCENES, TOTAL_BEATS } from '@/content/boutique/clips'
+import { useEffect, useRef, useState } from 'react'
+import { BEAT_SECONDS, BOUTIQUE_TEMPO, HERO_CLIPS, TOTAL_BEATS, clipSrc } from '@/content/boutique/clips'
 import { useBoutiqueClock } from './BoutiqueAudio'
-
-const GAP = 3 // px entre les volets
-
-const SCENE_AT_BEAT: number[] = (() => {
-  const map = new Array<number>(TOTAL_BEATS)
-  SCENES.forEach(sc => { for (let b = sc.startBeat; b < sc.startBeat + sc.beats; b++) map[b] = sc.index })
-  return map
-})()
 
 export function HeroPatchwork() {
   const { getTime } = useBoutiqueClock()
-  const panels = useRef<(HTMLDivElement | null)[]>([])
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const current = useRef(-1)
+  const [small, setSmall] = useState<boolean | null>(null)
+
+  useEffect(() => { setSmall(window.matchMedia('(max-width: 899px)').matches) }, [])
 
   useEffect(() => {
+    if (small === null) return
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const n = HERO_CLIPS.length
 
-    const warm = (sceneIndex: number) => {
-      SCENES[sceneIndex].clips.forEach(i => {
-        const v = videos.current[i]
+    const warm = (from: number, count: number) => {
+      for (let k = 0; k < count; k++) {
+        const v = videos.current[(from + k) % n]
         if (v && v.preload !== 'auto') { v.preload = 'auto'; v.load() }
-      })
+      }
     }
 
-    const show = (sceneIndex: number) => {
-      const sc = SCENES[sceneIndex]
-      panels.current.forEach((p, i) => {
-        const v = videos.current[i]
-        if (!p || !v) return
-        const k = sc.clips.indexOf(i)
-        if (k < 0) {
-          if (p.style.opacity !== '0') { p.style.opacity = '0'; v.pause() }
-          return
-        }
-        const [x, y, w, h] = sc.rects[k]
-        Object.assign(p.style, {
-          left: `calc(${x}% + ${GAP / 2}px)`, top: `calc(${y}% + ${GAP / 2}px)`,
-          width: `calc(${w}% - ${GAP}px)`, height: `calc(${h}% - ${GAP}px)`, opacity: '1',
+    const show = (i: number) => {
+      const v = videos.current[i]
+      if (!v) return
+      const prev = current.current
+      v.style.zIndex = '2'
+      v.style.opacity = '1'
+      v.style.transition = 'none'
+      v.style.transform = 'scale(1)'
+      try { v.currentTime = 0 } catch { /* métadonnées pas encore chargées */ }
+      if (!reduced) {
+        v.play().catch(() => {})
+        requestAnimationFrame(() => {
+          v.style.transition = `transform ${BEAT_SECONDS * BOUTIQUE_TEMPO.beatsPerClip}s linear`
+          v.style.transform = 'scale(1.07)'
         })
-        v.style.transition = 'none'
-        v.style.transform = 'scale(1)'
-        try { v.currentTime = 0 } catch { /* métadonnées pas encore chargées */ }
-        if (!reduced) {
-          v.play().catch(() => {})
-          requestAnimationFrame(() => {
-            v.style.transition = `transform ${sc.beats * BEAT_SECONDS}s linear`
-            v.style.transform = 'scale(1.09)'
-          })
-        }
-      })
-      warm((sceneIndex + 1) % SCENES.length)
-      warm((sceneIndex + 2) % SCENES.length)
+      }
+      /* l'ancien clip reste dessous un instant : pas de flash noir si le nouveau n'est pas encore décodé */
+      if (prev >= 0 && prev !== i) {
+        const old = videos.current[prev]
+        if (old) { old.style.zIndex = '1'; setTimeout(() => { if (current.current !== prev) { old.style.opacity = '0'; old.pause() } }, 120) }
+      }
+      current.current = i
+      warm(i + 1, 4)
     }
 
-    if (reduced) { warm(0); show(0); return }
+    warm(0, 5)
+    if (reduced) { show(0); return }
 
     let raf = 0
+    let lastIdx = -1
     const loop = () => {
       const beat = Math.floor((getTime() - BOUTIQUE_TEMPO.firstBeat) / BEAT_SECONDS)
-      const si = SCENE_AT_BEAT[((beat % TOTAL_BEATS) + TOTAL_BEATS) % TOTAL_BEATS]
-      if (si !== current.current) { current.current = si; show(si) }
+      const idx = ((Math.floor(beat / BOUTIQUE_TEMPO.beatsPerClip) % n) + n) % n
+      if (idx !== lastIdx) { lastIdx = idx; show(idx) }
       raf = requestAnimationFrame(loop)
     }
-    warm(0)
     raf = requestAnimationFrame(loop)
     return () => cancelAnimationFrame(raf)
-  }, [getTime])
+  }, [getTime, small])
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-ag-navy" aria-hidden="true">
-      {BOUTIQUE_CLIPS.map((name, i) => (
-        <div
+    <div className="absolute inset-0 overflow-hidden bg-ag-navy" aria-hidden="true" data-beats={TOTAL_BEATS}>
+      {small !== null && HERO_CLIPS.map((name, i) => (
+        <video
           key={name}
-          ref={el => { panels.current[i] = el }}
-          className="absolute overflow-hidden bg-ag-navy"
+          ref={el => { videos.current[i] = el }}
+          className="absolute inset-0 h-full w-full object-cover will-change-transform"
           style={{ opacity: 0 }}
-        >
-          <video
-            ref={el => { videos.current[i] = el }}
-            className="absolute inset-0 h-full w-full object-cover will-change-transform"
-            src={`/videos/boutique/${name}.mp4`}
-            muted
-            playsInline
-            preload={i < 6 ? 'auto' : 'metadata'}
-            disablePictureInPicture
-            tabIndex={-1}
-          />
-        </div>
+          src={clipSrc(name, small)}
+          muted
+          playsInline
+          preload={i < 5 ? 'auto' : 'metadata'}
+          disablePictureInPicture
+          tabIndex={-1}
+        />
       ))}
     </div>
   )
