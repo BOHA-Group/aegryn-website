@@ -5,6 +5,7 @@ import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { AdvisoryDiagnostic } from './AdvisoryDiagnostic'
+import { SideDrawerLauncher } from '@/components/ui/SideDrawerLauncher'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
 import { PAGE_ACTIONS, getAction } from '@/content/advisory/actions'
 import { routing } from '@/i18n/routing'
@@ -164,7 +165,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
       </section>
 
       {/* ── Situations ── */}
-      <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
+      <section id="situations" className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.sixSituations}</p>
@@ -318,21 +319,20 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
         </section>
       )}
 
-      {/* ── Auto-diagnostic ── */}
-      <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
-        <ScrollReveal className="max-w-7xl mx-auto">
-          <AdvisoryDiagnostic
-            title={c.diagnostic.title}
-            intro={c.diagnostic.intro}
-            questions={c.diagnostic.questions}
-            levels={c.diagnostic.levels}
-            privacy={c.diagnostic.privacy}
-            ctaLabel={echangeDef?.label ?? ''}
-            ctaHref={contactHref}
-            locale={locale}
-          />
-        </ScrollReveal>
-      </section>
+      {/* ── Auto-diagnostic : bouton d'action vertical au bord droit, à partir de la section Six situations ── */}
+      <SideDrawerLauncher label={ui.autoDiag} title={c.diagnostic.title} targetId="situations" mode="from" locale={locale}>
+        <AdvisoryDiagnostic
+          title={c.diagnostic.title}
+          intro={c.diagnostic.intro}
+          questions={c.diagnostic.questions}
+          levels={c.diagnostic.levels}
+          privacy={c.diagnostic.privacy}
+          ctaLabel={echangeDef?.label ?? ''}
+          ctaHref={contactHref}
+          locale={locale}
+          panel
+        />
+      </SideDrawerLauncher>
 
       {/* ── Perspectives + périmètre ── */}
       <section className="py-20 px-6 md:px-12 border-t border-ag-border">

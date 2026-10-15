@@ -15,6 +15,8 @@ interface Props {
   ctaLabel:  string
   ctaHref:   string
   locale:    string
+  /** Mode panneau latéral : sans cadre, questions empilées */
+  panel?:    boolean
 }
 
 /**
@@ -22,7 +24,7 @@ interface Props {
  * aucune donnée n'est envoyée ni stockée : le CTA renvoie vers le formulaire
  * de contact pour celles et ceux qui souhaitent aller plus loin.
  */
-export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, ctaLabel, ctaHref, locale }: Props) {
+export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, ctaLabel, ctaHref, locale, panel = false }: Props) {
   const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const answered = answers.every(a => a !== null)
@@ -41,19 +43,19 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
   const reset = () => setAnswers(questions.map(() => null))
 
   return (
-    <div className="rounded-2xl border border-ag-border bg-ag-white overflow-hidden">
-      <div className="px-6 md:px-10 py-8">
-        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{ui.autoDiag}</p>
-        <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] mb-2">{title}</h3>
+    <div className={panel ? 'bg-ag-white' : 'rounded-2xl border border-ag-border bg-ag-white overflow-hidden'}>
+      <div className={panel ? 'pb-4' : 'px-6 md:px-10 py-8'}>
+        {!panel && <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{ui.autoDiag}</p>}
+        {!panel && <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] mb-2">{title}</h3>}
         <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">{intro}</p>
       </div>
 
       <ol className="">
         {questions.map((item, i) => (
-          <li key={i} className="px-6 md:px-10 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+          <li key={i} className={panel ? 'grid grid-cols-[1.5rem_1fr] gap-x-4 gap-y-2 py-[clamp(10px,2.2vh,20px)]' : 'px-6 md:px-10 py-5 flex flex-col sm:flex-row sm:items-center gap-4'}>
             <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
             <p className="font-sans text-[14px] text-ag-black leading-relaxed flex-1">{item.q}</p>
-            <div className="flex gap-2 shrink-0" role="group" aria-label={`${ui.question} ${i + 1}`}>
+            <div className={panel ? 'col-start-2 flex gap-2' : 'flex gap-2 shrink-0'} role="group" aria-label={`${ui.question} ${i + 1}`}>
               {([true, false] as const).map(v => {
                 const active = answers[i] === v
                 return (
@@ -77,7 +79,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
         ))}
       </ol>
 
-      <div className="px-6 md:px-10 py-8 bg-ag-off-white">
+      <div className={panel ? 'mt-4 rounded-2xl bg-ag-off-white p-5' : 'px-6 md:px-10 py-8 bg-ag-off-white'}>
         {level ? (
           <div className="flex flex-col gap-5">
             <div className="flex items-baseline gap-4 flex-wrap">
