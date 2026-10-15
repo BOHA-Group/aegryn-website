@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { BOUTIQUE } from '@/content/boutique/copy'
+import { BOUTIQUE, br } from '@/content/boutique/copy'
 
 /** Accueil du cabinet : La Boutique remplace « Nos clients » (les 4 profils de La Boutique). */
 export async function HomeBoutiqueSection({ locale }: { locale: string }) {
@@ -11,7 +11,7 @@ export async function HomeBoutiqueSection({ locale }: { locale: string }) {
     <section className="bg-ag-navy py-24 text-white md:py-32" aria-labelledby="home-boutique-title">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">{BOUTIQUE.label[lang]}</p>
-        <h2 id="home-boutique-title" className="mt-5 max-w-3xl font-sans font-bold leading-[1.1] tracking-[-0.025em] text-balance" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{BOUTIQUE.homeTitle[lang]}</h2>
+        <h2 id="home-boutique-title" className="mt-5 max-w-3xl whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{br(BOUTIQUE.homeTitle[lang])}</h2>
         <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-white/75">{BOUTIQUE.homeText[lang]}</p>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map(c => (

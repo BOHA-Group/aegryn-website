@@ -33,7 +33,7 @@ export function PortraitScroll({ caption }: { caption: string }) {
   return (
     <section ref={box} className="bg-ag-navy py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-12 md:px-12">
-        <p className="font-sans text-[clamp(24px,2.8vw,40px)] font-semibold leading-[1.2] tracking-[-0.02em] text-white md:col-span-5">{caption}</p>
+        <p className="whitespace-pre-line font-sans text-[clamp(24px,2.8vw,40px)] font-semibold leading-[1.2] tracking-[-0.02em] text-white md:col-span-5">{caption}</p>
         <div className="grid grid-cols-2 gap-4 md:col-span-7 md:gap-6">
           {PORTRAIT_CLIPS.map((name, i) => (
             <div key={name} className={`relative aspect-[9/14] overflow-hidden rounded-3xl bg-ag-navy-mid ${i === 1 ? 'md:mt-16' : ''}`}>

@@ -41,7 +41,7 @@ export function ScrollZoomVideo({ src, srcMobile, caption, className = '' }: { s
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/70 via-transparent to-ag-navy/20" />
       {caption && (
-        <p className="absolute bottom-10 left-6 right-6 mx-auto max-w-7xl font-sans text-[clamp(20px,2.4vw,34px)] font-semibold leading-snug tracking-[-0.02em] text-white md:px-12" style={{ textShadow: '0 1px 12px rgba(0,0,0,.4)' }}>
+        <p className="absolute bottom-10 left-6 right-6 mx-auto max-w-7xl whitespace-pre-line font-sans text-[clamp(20px,2.4vw,34px)] font-semibold leading-snug tracking-[-0.02em] text-white md:px-12" style={{ textShadow: '0 1px 12px rgba(0,0,0,.4)' }}>
           {caption}
         </p>
       )}

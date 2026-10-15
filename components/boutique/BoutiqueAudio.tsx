@@ -86,7 +86,7 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
         aria-pressed={playing}
         aria-label={playing ? txt.off : txt.on}
         title="Beyond the Clicks"
-        className="fixed bottom-5 left-5 z-40 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
+        className="fixed bottom-8 right-20 z-40 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
       >
         <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
           {[0.9, 0.5, 1, 0.65].map((h, i) => (

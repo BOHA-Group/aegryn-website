@@ -49,12 +49,12 @@ export const BOUTIQUE = {
     'A seconda dei progetti, ci impegniamo anche al loro fianco, anche con una partecipazione.',
     'Afhankelijk van het project engageren wij ons ook aan hun zijde, onder meer via een deelneming.'),
   bandCaption: L(
-    'Chaque projet signature a sa propre histoire. Nous aidons à l’écrire.',
-    'Every signature project has its own story. We help write it.',
-    'Jedes Signature-Projekt hat seine eigene Geschichte. Wir helfen, sie zu schreiben.',
-    'Cada proyecto insignia tiene su propia historia. Ayudamos a escribirla.',
-    'Ogni progetto signature ha la sua storia. Aiutiamo a scriverla.',
-    'Elk signatuurproject heeft zijn eigen verhaal. Wij helpen het te schrijven.'),
+    'Chaque projet emblématique a sa propre histoire. Nous aidons à l’écrire.',
+    'Every emblematic project has its own story. We help write it.',
+    'Jedes emblematische Projekt hat seine eigene Geschichte. Wir helfen, sie zu schreiben.',
+    'Cada proyecto emblemático tiene su propia historia. Ayudamos a escribirla.',
+    'Ogni progetto emblematico ha la sua storia. Aiutiamo a scriverla.',
+    'Elk emblematisch project heeft zijn eigen verhaal. Wij helpen het te schrijven.'),
 
   methodTitle: L('Cadrer. Réaliser. Accompagner.', 'Frame. Deliver. Accompany.', 'Rahmen setzen. Umsetzen. Begleiten.', 'Encuadrar. Realizar. Acompañar.', 'Inquadrare. Realizzare. Accompagnare.', 'Kaderen. Realiseren. Begeleiden.'),
   steps: [
@@ -91,4 +91,14 @@ export const BOUTIQUE = {
     'Un acuerdo de confidencialidad precede a cualquier intercambio detallado. Respuesta personal en 2 días hábiles.',
     'Un accordo di riservatezza precede ogni scambio dettagliato. Risposta personale entro 2 giorni lavorativi.',
     'Een geheimhoudingsovereenkomst gaat elke gedetailleerde uitwisseling vooraf. Persoonlijk antwoord binnen 2 werkdagen.'),
+}
+
+/** Coupure logique d'un titre : saut de ligne après la première proposition (virgule, point, point d'interrogation), si le texte est assez long. */
+export function br(text: string, minLength = 36): string {
+  if (text.length < minLength) return text
+  const m = /[,.?!:;]\s+/.exec(text.slice(12))
+  if (!m) return text
+  const cut = 12 + m.index + 1
+  const rest = text.slice(cut).trim()
+  return rest.length < 10 ? text : `${text.slice(0, cut).trim()}\n${rest}`
 }

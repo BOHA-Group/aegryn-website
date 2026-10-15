@@ -13,8 +13,11 @@ import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { ProjectCard } from '@/components/sections/assets/ProjectCard'
 import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
+import { ARTICLE_CATEGORIES } from '@/data/articles'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
-import { BOUTIQUE } from '@/content/boutique/copy'
+import { BOUTIQUE, br } from '@/content/boutique/copy'
 import { SF_UI } from '@/content/boutique/savoirFaire'
 import { Aegryn_ASSETS } from '@/data/assets'
 import { BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE, TRENDS_SIGNALS_ARTICLE } from '@/data/articles-home-2026'
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SEGMENT_IMAGES: Record<string, string> = {
-  startup:    '/images/blog/startup-team.jpg',
+  startup:    '/images/blog/founder-desk.jpg',
   funds:      '/images/blog/family-business.jpg',
   enterprise: '/images/blog/office-building.jpg',
   pme:        '/images/blog/factory-industry.jpg',
@@ -46,9 +49,10 @@ const eyebrow = 'font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-
 export default async function BoutiquePage({ params }: Props) {
   const { locale } = await params
   const lang = toLang(locale)
-  const [tv, ts] = await Promise.all([
+  const [tv, ts, tDiscover] = await Promise.all([
     getTranslations({ locale, namespace: 'about.values' }),
     getTranslations({ locale, namespace: 'homeSegments' }),
+    getTranslations({ locale, namespace: 'discoverStrip' }),
   ])
   const valueKeys = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
   const segments = ts.raw('cards') as { key: string; title: string; desc: string }[]
@@ -87,7 +91,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Le concept */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 grid max-w-7xl gap-10 md:grid-cols-12">
-          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black md:col-span-5" style={h2}>{BOUTIQUE.conceptTitle[lang]}</h2>
+          <h2 className="whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black md:col-span-5" style={h2}>{br(BOUTIQUE.conceptTitle[lang])}</h2>
           <div className="space-y-6 md:col-span-6 md:col-start-7">
             <p className="text-[18px] leading-relaxed text-ag-black/80">{BOUTIQUE.conceptText[lang]}</p>
             <p className="text-[15px] leading-relaxed text-ag-gray">{BOUTIQUE.participation[lang]}</p>
@@ -95,7 +99,7 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      <ScrollZoomVideo src="/videos/boutique/statue-of-liberty-full.mp4" srcMobile="/videos/boutique/statue-of-liberty-full-m.mp4" caption={BOUTIQUE.bandCaption[lang]} />
+      <ScrollZoomVideo src="/videos/boutique/statue-of-liberty-full.mp4" srcMobile="/videos/boutique/statue-of-liberty-full-m.mp4" caption={br(BOUTIQUE.bandCaption[lang])} />
 
       {/* La méthode */}
       <section className="bg-white py-28 md:py-36">
@@ -113,7 +117,7 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      <PortraitScroll caption={BOUTIQUE.portraitCaption[lang]} />
+      <PortraitScroll caption={br(BOUTIQUE.portraitCaption[lang])} />
 
       {/* Les valeurs */}
       <section className="bg-ag-off-white py-28 md:py-32">
@@ -150,7 +154,7 @@ export default async function BoutiquePage({ params }: Props) {
       <section className="bg-ag-navy py-28 text-white md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">{BOUTIQUE.placesLabel[lang]}</p>
-          <h2 className="mt-5 max-w-3xl font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={h2}>{BOUTIQUE.placesTitle[lang]}</h2>
+          <h2 className="mt-5 max-w-3xl whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={h2}>{br(BOUTIQUE.placesTitle[lang])}</h2>
           <p className="mt-8 inline-block rounded-full bg-white/10 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">{BOUTIQUE.soon[lang]}</p>
         </div>
       </section>
@@ -194,13 +198,25 @@ export default async function BoutiquePage({ params }: Props) {
             <Link href="/blog" className="font-sans text-[14px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4">{BOUTIQUE.magazineLink[lang]} →</Link>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {ARTICLES.map(a => (
-              <Link key={a.slug} href={`/blog/${a.slug}` as never} className="group rounded-2xl bg-white p-7 transition-shadow hover:shadow-[0_12px_40px_rgba(15,28,63,0.12)]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{a.category}</p>
-                <h3 className="mt-3 font-sans text-[20px] font-bold leading-snug tracking-[-0.015em] text-ag-black">{a.title[lang]}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ag-gray">{a.excerpt[lang]}</p>
-              </Link>
-            ))}
+            {ARTICLES.map(a => {
+              const img = BLOG_IMAGES[a.slug] ?? BLOG_IMAGE_FALLBACK
+              return (
+                <Link key={a.slug} href={`/blog/${a.slug}` as never} className="group flex flex-col overflow-hidden rounded-2xl border border-ag-border bg-ag-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                  <div className="relative h-44 w-full shrink-0 overflow-hidden">
+                    <Image src={img} alt={a.title[lang] ?? a.title.en} fill sizes="(min-width:768px) 33vw, 100vw" style={{ objectPosition: getBlogImagePosition(img) }} className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 p-6">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en}</span>
+                      <span className="text-[10px] text-ag-gray-light">·</span>
+                      <span className="font-sans text-[10px] text-ag-gray-light">{new Date(a.date).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                    </div>
+                    <p className="flex-1 font-sans font-semibold leading-[1.4] text-ag-black transition-colors group-hover:text-ag-navy" style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}>{a.title[lang] ?? a.title.en}</p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-ag-gray transition-colors group-hover:text-ag-black">{tDiscover('readMore')} <ArrowUpRight size={11} /></span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -208,7 +224,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Soumettre un projet */}
       <section className="bg-ag-navy py-28 text-white md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-4xl text-center">
-          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-balance" style={h2}>{BOUTIQUE.submitTitle[lang]}</h2>
+          <h2 className="whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={h2}>{br(BOUTIQUE.submitTitle[lang])}</h2>
           <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-relaxed text-white/75">{BOUTIQUE.submitText[lang]}</p>
           <Link href={{ pathname: '/contact', query: { subject: 'project' } }} className="mt-10 inline-block rounded-full bg-ag-apex px-8 py-4 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white">
             {BOUTIQUE.cta1[lang]}
