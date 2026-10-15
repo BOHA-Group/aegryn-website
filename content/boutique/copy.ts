@@ -23,6 +23,14 @@ export const BOUTIQUE = {
     'Wij kaderen, realiseren en begeleiden een beperkt aantal signatuurprojecten, voor ondernemers, investeerders, instellingen en merken die groot denken.'),
   cta1: L('Échanger en toute confidentialité', 'Talk in full confidence', 'Vertraulich sprechen', 'Hablar con total confidencialidad', 'Parlarne in piena riservatezza', 'Vertrouwelijk spreken'),
   cta2: L('Voir les projets', 'See the projects', 'Projekte ansehen', 'Ver los proyectos', 'Vedere i progetti', 'Projecten bekijken'),
+  homeTitle: L('Pour les projets qui comptent, une boutique.', 'For the projects that matter, a boutique.', 'Für Projekte, die zählen, eine Boutique.', 'Para los proyectos que cuentan, una boutique.', 'Per i progetti che contano, una boutique.', 'Voor projecten die tellen, een boutique.'),
+  homeText: L(
+    'Nous cadrons, réalisons et accompagnons un nombre limité de projets signature. Rare par sélection. Discret par principe.',
+    'We frame, deliver and accompany a limited number of signature projects. Rare by selection. Discreet by principle.',
+    'Wir rahmen, setzen um und begleiten eine begrenzte Zahl von Signature-Projekten. Selten durch Auswahl. Diskret aus Prinzip.',
+    'Encuadramos, realizamos y acompañamos un número limitado de proyectos insignia. Raro por selección. Discreto por principio.',
+    'Inquadriamo, realizziamo e accompagniamo un numero limitato di progetti signature. Raro per selezione. Discreto per principio.',
+    'Wij kaderen, realiseren en begeleiden een beperkt aantal signatuurprojecten. Zeldzaam door selectie. Discreet uit principe.'),
   scroll: L('Défiler', 'Scroll', 'Scrollen', 'Desplazar', 'Scorri', 'Scrollen'),
 
   conceptTitle: L('Peu de projets. Tout de bout en bout.', 'Few projects. End to end.', 'Wenige Projekte. Von Anfang bis Ende.', 'Pocos proyectos. De principio a fin.', 'Pochi progetti. Dall’inizio alla fine.', 'Weinig projecten. Van begin tot eind.'),

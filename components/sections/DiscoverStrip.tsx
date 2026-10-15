@@ -13,11 +13,6 @@ import { ISSUE_03 } from '@/content/magazine/issue-03/meta'
 import { ISSUE_04 } from '@/content/magazine/issue-04/meta'
 import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
 
-const HOME_ARTICLE_SLUGS = [
-  'projets-emblematiques-cinq-signaux-a-suivre-2026',
-  'une-journee-avec-un-fondateur-rituels-lieux-outils',
-  'du-concept-au-marche-anatomie-d-un-lancement',
-]
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 
 /*
@@ -88,10 +83,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
     return () => ctx.revert()
   }, [])
 
-  /* Articles à la une — les trois de la ligne éditoriale (tendances, bâtisseurs, coulisses) */
-  const featuredArticles = HOME_ARTICLE_SLUGS
-    .map(slug => ARTICLES.find(a => a.slug === slug))
-    .filter((a): a is NonNullable<typeof a> => Boolean(a))
+  /* Articles à la une — carrousel horizontal, image + texte, pas de spotlight */
+  const featuredArticles = ARTICLES.filter(a => a.featured)
 
   return (
     <section ref={ref} id="informer" className="bg-ag-white border-t border-ag-border mt-20 scroll-mt-20">

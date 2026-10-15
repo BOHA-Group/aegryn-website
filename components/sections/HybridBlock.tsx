@@ -23,7 +23,6 @@ export function HybridBlock() {
   }, [])
 
   const descLines = t('desc').split('\n')
-  const modes = t.raw('modes') as { k: string; v: string }[]
 
   return (
     <section ref={ref} className="border-t border-ag-border bg-ag-off-white py-20 md:py-28">
@@ -54,18 +53,6 @@ export function HybridBlock() {
                 {line || '\u00A0'}
               </p>
             ))}
-            <div className="hybrid-line pt-6 mt-2 border-t border-ag-border" style={{ opacity: 0 }}>
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4">
-                / {t('modesLabel')}
-              </p>
-              <ul className="space-y-2">
-                {modes.map((m) => (
-                  <li key={m.k} className="font-sans text-[15px] leading-relaxed text-ag-gray">
-                    <span className="font-semibold text-ag-black">{m.k}</span>{' '}{m.v}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>

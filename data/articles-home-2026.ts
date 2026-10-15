@@ -13,7 +13,7 @@ export const TRENDS_SIGNALS_ARTICLE: Article = {
   category: 'trends',
   date:     '2026-10-06',
   readMin:  7,
-  featured: true,
+  featured: false,
   aiAssisted: true,
   ogImage:  '/images/blog/startup-team.jpg',
   title: {
@@ -146,7 +146,7 @@ export const BUILDER_DAY_ARTICLE: Article = {
   category: 'builders',
   date:     '2026-10-02',
   readMin:  6,
-  featured: true,
+  featured: false,
   aiAssisted: true,
   ogImage:  '/images/blog/team-laptops.jpg',
   title: {
@@ -268,7 +268,7 @@ export const LAUNCH_ANATOMY_ARTICLE: Article = {
   category: 'projects',
   date:     '2026-09-29',
   readMin:  8,
-  featured: true,
+  featured: false,
   aiAssisted: true,
   ogImage:  '/images/blog/executive-suit.jpg',
   title: {

@@ -372,8 +372,8 @@
     "strip": "Aegryn Advisory | Integrierte Beratung für europäische Tech-Organisationen",
     "cta": "Kontakt aufnehmen",
     "hero": {
-      "title": "Ihr Projekt rahmen.",
-      "desc": "Sechs Beratungsexpertisen, massgeschneidert nach Projekt mobilisiert: Strategie, Marke und Launch, Risiken, Technologie, Talente, Übernahme. Ein einziger Ansprechpartner, von der ersten Entscheidung bis zum Pflichtenheft."
+      "title": "Die Entscheidungen rahmen, die zählen.",
+      "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Ein Ansprechpartner, von der Diagnose bis zur Ausführung."
     },
     "pillars": {
       "board": {
@@ -778,14 +778,14 @@
     "label": "Unsere Überzeugung",
     "convictionSegments": [
       {
-        "t": "Ein emblematisches Projekt erduldet man nicht. Man führt es.\n\n",
+        "t": "Wert entsteht nicht spontan. Er wird aufgebaut.\n\n",
         "bold": true
       },
       {
-        "t": "Eine starke Idee genügt nicht. Es braucht einen Rahmen, Experten, ein Produkt, eine Marke, einen Zeitplan. Und jemanden, der alles bis zum Ergebnis zusammenhält. "
+        "t": "Jede Organisation trägt in sich Vermögenswerte, ein Team, Unabhängigkeit und die Fähigkeit, zu bestehen. Manche Führungskräfte wollen übertragen. Andere wollen Kapital aufnehmen, akquirieren oder einfach etwas aufbauen, das der Zeit standhält. Was auch immer die Absicht ist: "
       },
       {
-        "t": "Aegryn setzt den Rahmen, setzt mit den richtigen Experten um und begleitet das Projekt über die Zeit.",
+        "t": "Wert entsteht, bevor er sich realisiert. Aegryn greift vorgelagert ein.",
         "bold": true
       }
     ]
@@ -829,69 +829,69 @@
   },
   "aboutSection": {
     "label": "Über Aegryn",
-    "title": "Eine unternehmerische Boutique.\nFünf Disziplinen.",
-    "desc": "Eine Boutique: wenige Mandate, ein benannter Ansprechpartner, ein ausgewählter Kreis. Unternehmerisch: wir schaffen und setzen selbst um. Weder klassische Beratung, noch M&A-Boutique, noch Tech-Firma: Beratung ist unser Fundament, Umsetzung unser Beweis.",
-    "tagline": "UNTERNEHMERISCHE BOUTIQUE, VERANKERT IN DER SCHWEIZ.",
+    "title": "Fünf Disziplinen.\nEin Unternehmen.",
+    "desc": "Wir sind weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Beratungsfirma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Beratung, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
+    "tagline": "INTEGRIERTE FIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
-    "quote": "Was wir empfehlen, leben wir. Unsere eigenen Projekte durchlaufen unsere eigenen Methoden.",
+    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
       {
-        "val": "3",
-        "label": "Arbeitsweisen",
-        "sub": "Für uns · für Sie · mit Ihnen"
-      },
-      {
         "val": "5",
-        "label": "Abgedeckte Grossbranchen",
-        "sub": "Finanzen · Gesundheit · Industrie · Handel · Tech & Öffentlicher Sektor"
-      },
-      {
-        "val": "5",
-        "label": "Disziplinen",
+        "label": "Integrierte Disziplinen",
         "sub": "Rahmen setzen · Umsetzen · Begleiten · Auswählen · Informieren"
       },
       {
+        "val": "22+",
+        "label": "Abgedeckte Branchen",
+        "sub": "Alle Sektoren, Schweiz. Europa"
+      },
+      {
+        "val": "100%",
+        "label": "Kundenbindung",
+        "sub": "Was wir empfehlen, wenden wir an"
+      },
+      {
         "val": "20+",
-        "label": "Jahre in Führungsverantwortung, von der Strategie bis zum Betrieb",
-        "sub": "Marketing · Vertrieb · Technologie · Finanzen · Talente · M&A"
+        "label": "Jahre an der Seite von Geschäftsleitungen",
+        "sub": "Strategie · Technologie · M&A · HR · Operations"
       }
     ],
-    "text": "Mehr als zwanzig Jahre Rahmen setzen, aufbauen und sanieren haben uns eines gelehrt: Projekte, die einen Markt prägen, wählen nicht zwischen Strategie und Umsetzung. Sie halten beides, von der ersten Entscheidung bis zur Abnahme."
+    "text": "Wir haben mehr als zwanzig Jahre damit verbracht, Organisationen aufzubauen, zu beraten und umzustrukturieren. Was wir gewonnen haben, ist unbezahlbar. Unternehmen, die Bestand haben, wählen nicht zwischen Strategie und Technologie. Sie denken sie zusammen. Aegryn existiert für diejenigen, die das verstanden haben."
   },
   "missionSection": {
     "label": "Das Aegryn-Modell",
-    "title": "Fünf Disziplinen. Ein Weg.",
-    "sub": "Rahmen setzen, umsetzen, begleiten bilden den Weg eines Projekts. Auswählen und informieren speisen ihn bei jedem Schritt.",
+    "title": "Fünf integrierte Disziplinen. Ein Standard.",
+    "sub": "Fünf Disziplinen, die sich gegenseitig stärken. Das können nur sehr wenige Akteure wirklich anbieten.",
     "items": [
       {
         "title": "RAHMEN SETZEN",
-        "desc": "Entscheiden, bevor man umsetzt: Strategie, Businessplan, Marke und Positionierung, rechtlicher und regulatorischer Rahmen, Übernahme und Veräusserung. Der Rahmen macht aus einer Absicht ein umsetzbares Projekt."
+        "desc": "Integrierte Beratung in allen Dimensionen der Organisation: Strategie und Transaktionen, Technologie und Compliance, Organisation und Talente. Wir begleiten Führungskräfte und Boards, wenn Entscheidungen die Bahn bestimmen."
       },
       {
         "title": "UMSETZEN",
-        "desc": "Bauen bis zur Abnahme: Marke, Produkt, Plattform, Markteinführung. Wir setzen selbst um und aktivieren die richtigen Experten, wenn das Projekt es verlangt."
+        "desc": "Nachhaltige digitale Lösungen, vollständiges Kundeneigentum. Jede Umsetzung ist darauf ausgelegt, den Unternehmenswert zu steigern und technologische Unabhängigkeit zu garantieren."
       },
       {
         "title": "BEGLEITEN",
-        "desc": "Bestehen, von einem Zyklus zum nächsten: Start, Wachstum, Restrukturierung, Übernahme, Übergabe. Ein benannter Ansprechpartner, der das Gedächtnis des Projekts bewahrt."
+        "desc": "Begleitung der fünf Lebenszyklen: Launch, Wachstum, Restrukturierung, Akquisition, Übergabe. Diagnose, Plan, Umsetzung: Wert entsteht und beweist sich in jeder Phase."
       },
       {
         "title": "AUSWÄHLEN",
-        "desc": "Die richtigen Menschen zur richtigen Zeit zusammenbringen: Führungskräfte, Experten, Projektteams und Partner, einzeln ausgewählt für das, was das Projekt verlangt."
+        "desc": "Auswahl von Führungskräften und Experten, Übergangsmandate. Ohne die richtigen Personen bleibt Strategie ein Plan."
       },
       {
         "title": "INFORMIEREN",
-        "desc": "Den Markt vor anderen lesen: Trends, innovative Projekte, Porträts derer, die bauen. Das Magazin dokumentiert, was wir beobachten und was wir leben."
+        "desc": "Quartalsmagazin, Artikel und Marktbeobachtung. Wir dokumentieren, was wir beobachten und erleben."
       }
     ]
   },
   "homeTalent": {
     "label": "AUSWÄHLEN",
-    "title": "Die Profile, die ein Projekt zum Ziel bringen.",
-    "desc": "Ein Geschäftsführer, der die neu gegründete Gesellschaft trägt, ein Produktverantwortlicher, der den Zeitplan hält, ein Regulatorik-Experte, der die Markteinführung absichert, ein Vertriebspartner, der das erste Land öffnet.\n\nWir identifizieren und wählen sie einzeln aus, unter Vertraulichkeitsvereinbarung, genau dann, wenn das Projekt sie braucht.",
+    "title": "Die Profile, die den Unterschied machen.",
+    "desc": "Auswahl von Schlüsselprofilen und Übergangsmandate, für jede Lebenszyklusphase des Unternehmens.\n\nUnser Ziel bleibt dasselbe: den Wert Ihrer Organisation durch die richtigen Personen zur richtigen Zeit zu stärken.",
     "cta1": "Profil finden →",
     "cta1Href": "/talent/entreprises",
     "cta2": "Ich bin Kandidat →",
@@ -924,28 +924,9 @@
     ]
   },
   "homeHybrid": {
-    "label": "DER AEGRYN-WEG",
+    "label": "HYBRIDES MODELL",
     "title": "Wir rahmen.\nWir setzen um.\nWir begleiten.",
-    "desc": "Aegryn ist weder Investmentbank noch Inkubator.\n\nAegryn ist eine unternehmerische Boutique: wir rahmen und setzen emblematische Projekte um, dann begleiten wir sie durch jeden Zyklus. Wir treten dort an, wo die Theorie endet und die Umsetzung beginnt.",
-    "modesLabel": "Wie wir eingreifen",
-    "modes": [
-      {
-        "k": "Entwerfen",
-        "v": "als Architekt: wir zeichnen das Projekt, seinen Rahmen und seinen Zeitplan."
-      },
-      {
-        "k": "Führen",
-        "v": "als Bauleiter: wir halten Meilensteine, Entscheidungen und Abnahme."
-      },
-      {
-        "k": "Koordinieren",
-        "v": "als Orchestrator: wir wählen und steuern die Experten, die das Projekt verlangt."
-      },
-      {
-        "k": "Ausführen",
-        "v": "als Operator: wir setzen selbst um, was in unser Know-how fällt."
-      }
-    ]
+    "desc": "Aegryn ist weder eine Investmentbank noch ein Inkubator.\n\nEs ist eine integrierte Beratungsfirma, die Entscheider, Gründer und Führungskräfte dabei unterstützt, den Wert ihrer Organisation zu schaffen, zu dokumentieren und zu realisieren.\n\nWir intervenieren dort, wo die Theorie aufhört und die Ausführung beginnt. Von der Strategie bis zum Abschluss."
   },
   "whyapps": {
     "label": "Warum Aegryn",
@@ -953,28 +934,28 @@
     "items": [
       {
         "num": "01",
-        "title": "Operatoren, keine Theoretiker.",
-        "desc": "Wir haben gebaut, versagt, gelernt und neu begonnen. Was wir raten, haben wir gelebt. Kein Template, keine Standardfolie: ein Blick aus dem Inneren des Projekts."
+        "title": "Wir sind Unternehmer, keine Theoretiker.",
+        "desc": "Wir haben aufgebaut, sind gescheitert, haben gelernt und neu angefangen. Was wir empfehlen, haben wir selbst erlebt. Kein Template. Keine standardisierte Präsentation. Ein Blick von innen."
       },
       {
         "num": "02",
-        "title": "Wir wählen unsere Projekte.",
-        "desc": "Eine begrenzte Zahl von Mandaten gleichzeitig, damit jedes unsere volle Aufmerksamkeit erhält. Lieber lehnen wir ein Projekt ab, als es halb zu führen."
+        "title": "Wir agieren auf Entscheiderebene.",
+        "desc": "Verwaltungsräte, Gründer, Geschäftsführer. Wir liefern keine generischen Berichte. Wir teilen einen realistischen strategischen Standpunkt mit denen, die die echten Entscheidungen treffen."
       },
       {
         "num": "03",
         "title": "Wir richten unsere Interessen an Ihren Ergebnissen aus.",
-        "desc": "Ein Dienstleister rechnet nach Stunden ab. Ein Partner verpflichtet sich auf das Ergebnis. Unser Modell ist so gebaut, dass unser Erfolg von Ihrem abhängt."
+        "desc": "Ein Dienstleister stellt nach Stunden in Rechnung. Ein Partner verpflichtet sich auf Ergebnisse. Bei Aegryn ist unser Modell so aufgebaut, dass unser Erfolg von Ihrem abhängt."
       },
       {
         "num": "04",
-        "title": "Wir umgeben uns mit den richtigen Experten.",
-        "desc": "Ingenieurbüros, Kreativstudios, Labore, Kanzleien, Fertigungs- und Vertriebspartner: ein einzeln ausgewählter Kreis, je nach Projekt mobilisiert, nie standardmässig."
+        "title": "Wir aktivieren das Aegryn-Netzwerk für die Mission.",
+        "desc": "Fachexperten, unabhängige Auditoren, Investoren und Institutionen: einzeln ausgewählt, je nach Bedarf mobilisiert. Erweiterte Kapazität ohne schwere Struktur."
       },
       {
         "num": "05",
-        "title": "In der Schweiz verankert. International offen.",
-        "desc": "Schweizer institutionelle Strenge als Standard jedes Mandats. Projekte in der Schweiz, in Europa und darüber hinaus, mit demselben Ansprechpartner von Anfang bis Ende."
+        "title": "Verwurzelt in der Schweiz. Operativ in Europa.",
+        "desc": "Schweizer institutionelle Strenge als Standard für jedes Mandat. Eine aktive Präsenz in der Schweiz, Frankreich, Benelux, Monaco und darüber hinaus. Das Lokale mit globaler Vision."
       }
     ]
   },
@@ -4728,12 +4709,12 @@
   },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
-    "magTitle": "Trends. Projekte. Macher. Lebensart.",
-    "magDesc": "Markttrends, die innovativen Projekte, die zählen, und der Alltag derer, die bauen: Orte, Werkzeuge, Rituale. Aegryn Magazine dokumentiert, was wir beobachten und was wir leben.",
+    "magTitle": "Tech. Money. Deals. People. Life.",
+    "magDesc": "Für Gründer, Führungskräfte, Investoren und Aktionärsfamilien, die eine Organisation aufbauen, finanzieren, erwerben oder übertragen: Aegryn Magazine dokumentiert jedes Quartal, was es wirklich bedeutet, Wert zu schaffen und zu realisieren – über alle Branchen und Größen hinweg, in der Schweiz und in Europa.\n\nEntschlüsselte Strategien, Porträts von Entscheidungsträgern, Marktdaten und das Leben derer, die etwas Bedeutendes aufbauen.\n\nEine Rubrik La Boutique begleitet Projekte, Macher und die Kunst zu leben.",
     "magFooter": "Vier Ausgaben pro Jahr.",
     "magCta": "Das Magazin entdecken",
-    "label": "Was wir im Feld beobachten, in der Schweiz und darüber hinaus: Trends, Projekte, Macher.",
-    "title": "Trends, Projekte, Macher.",
+    "label": "Unsere Analysen des Schweizer und europäischen Marktes, von Scale-ups bis hin zu grossen Unternehmen mit starkem Wachstum.",
+    "title": "Der Markt, von denen, die ihn betreiben.",
     "article1Title": "Die 5 entscheidenden Punkte zur Vorbereitung einer Organisation auf eine Finanzierung oder einen Verkauf",
     "article1Cat": "Strategie & Übertragung",
     "article2Title": "Small & Mid-Cap: Was Unternehmen von unter 50 Mio. bis 300 Mio. EUR wirklich von einer Beratungsfirma erwarten",
@@ -4762,27 +4743,27 @@
     }
   },
   "marketStats": {
-    "label": "Was die Zahlen über Umsetzung sagen",
+    "label": "Markt in Zahlen, 2026",
     "stats": [
       {
+        "value": "+59%",
+        "label": "Wachstum der PE-Exits in Europa im H1 2026.\nEin Markt in Bewegung für diejenigen, die bereit sind.",
+        "source": ""
+      },
+      {
+        "value": "30 bis 50%",
+        "label": "Bewertungsabschlag für europäische Unternehmen\nvs ihre US-Äquivalente bei identischen Kennzahlen.\nDas ist das Problem, das Aegryn löst.",
+        "source": ""
+      },
+      {
+        "value": "64%",
+        "label": "Der EU-KMU nennen regulatorische Komplexität\nals größtes Wachstumshindernis.\nEine Einschränkung. Eine Differenzierungschance.",
+        "source": "Eurobarometer SME Survey 2025"
+      },
+      {
         "value": "Nr. 1",
-        "label": "Die Schweiz, zum vierzehnten Mal in Folge Erste im Global Innovation Index.\nDas Ökosystem, in dem wir unsere Projekte wählen.",
-        "source": "WIPO, Global Innovation Index 2024"
-      },
-      {
-        "value": "70%",
-        "label": "Der Transformationsprogramme erreichen ihre Ziele nicht.\nDer Unterschied entsteht in der Umsetzung, nicht in der Absicht.",
-        "source": "McKinsey & Company"
-      },
-      {
-        "value": "35%",
-        "label": "Der Startups scheitern mangels geprüftem Marktbedarf.\nRahmen setzen vor dem Umsetzen ist kein Schritt: es ist, was das Projekt trägt.",
-        "source": "CB Insights, The Top Reasons Startups Fail"
-      },
-      {
-        "value": "85%",
-        "label": "Der Konsumgüter-Launches verfehlen ihre Ziele.\nMarke, Produkt und Zeitplan gemeinsam gehalten machen den Unterschied.",
-        "source": "Nielsen, Breakthrough Innovation Report"
+        "label": "Small und Mid-Cap: höchstes Wachstumssegment erwartet\nfür 2026 laut 64% der europäischen PE-Befragten.\nDer Markt, den Aegryn von Anfang an begleitet.",
+        "source": ""
       }
     ]
   },
@@ -8122,13 +8103,13 @@
   },
   "buildStrip": {
     "label": "Umsetzen",
-    "assetsTitle": "Ausgewählte\nRealisierungen.",
-    "assetsDesc": "Unsere eigenen Projekte und jene, die wir für unsere Kunden führen, präsentiert ohne ihre Mechanik preiszugeben. Jedes wurde mit derselben Methode gerahmt, umgesetzt und in den Markt gebracht.",
-    "assetsCta": "Portfolio ansehen",
-    "engineeringTitle": "Wir setzen um.\nMit den richtigen Experten.",
-    "engineeringDesc": "Marke, Produkt, Plattform, Markteinführung: wir setzen selbst um und aktivieren einen Kreis ausgewählter Experten, wenn das Projekt es verlangt. Volles Eigentum des Kunden. Massgeschneiderte Werkzeuge nur, wenn der Markt keine bietet.",
-    "engineeringCta": "Umsetzen entdecken",
-    "builtToLastQuote": "Auf Dauer zu konzipieren ist ein Akt des Widerstands. Jedes Projekt, das wir umsetzen, muss ohne uns übernommen, geprüft und übergeben werden können."
+    "assetsTitle": "Unsere eigenen\nAssets.",
+    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
+    "assetsCta": "Unsere Assets entdecken",
+    "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
+    "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
+    "engineeringCta": "Ingenieurwesen entdecken",
+    "builtToLastQuote": "In einer Welt, in der Technologie in Monaten veraltet, ist das Entwerfen für die Dauer ein Akt des Widerstands. Jedes Asset, das wir bauen, steigert den Wert Ihrer Organisation, nicht Ihre monatliche Cloud-Rechnung."
   },
   "techStack": {
     "label": "Tech-Stack",
