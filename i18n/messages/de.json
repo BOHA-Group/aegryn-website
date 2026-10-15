@@ -51,7 +51,7 @@
     "ourThinking": "UNSERE INSIGHTS",
     "whoWeAre": "WER WIR SIND",
     "craftBuild": "Umsetzen",
-    "craftBuildDesc": "Lösungen nach Mass, eigene Assets, Markteinführung.",
+    "craftBuildDesc": "Lösungen nach Mass und eigene Assets.",
     "craftBuildAssets": "Eigene Assets",
     "craftBuildEngineering": "Maßgeschneiderte Lösungen",
     "craftBuildSubblink": "Vertragsrisikoanalyse",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "Begegnungsorte",
     "boutiqueSoon": "Demnächst",
-    "boutiqueSubmit": "Vertraulich sprechen",
-    "craftBuildBoutique": "Marke, Produkt, Markteinführung (La Boutique)"
+    "boutiqueSubmit": "Vertraulich sprechen"
   },
   "hero": {
     "tagline": "Integrierte Firma, in der Schweiz verankert.",

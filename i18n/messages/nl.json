@@ -51,7 +51,7 @@
     "ourThinking": "ONZE PUBLICATIES",
     "whoWeAre": "WIE WE ZIJN",
     "craftBuild": "Realiseren",
-    "craftBuildDesc": "Oplossingen op maat, eigen activa, marktintroductie.",
+    "craftBuildDesc": "Oplossingen op maat en eigen activa.",
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerkoplossingen",
     "craftBuildSubblink": "Contractuele risicoanalyse",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Expertise",
     "boutiquePlaces": "Ontmoetingsplekken",
     "boutiqueSoon": "Binnenkort",
-    "boutiqueSubmit": "Vertrouwelijk spreken",
-    "craftBuildBoutique": "Merk, product, marktintroductie (La Boutique)"
+    "boutiqueSubmit": "Vertrouwelijk spreken"
   },
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",

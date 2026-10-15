@@ -51,7 +51,7 @@
     "ourThinking": "LE NOSTRE PUBBLICAZIONI",
     "whoWeAre": "CHI SIAMO",
     "craftBuild": "Realizzare",
-    "craftBuildDesc": "Soluzioni su misura, asset proprietari, messa sul mercato.",
+    "craftBuildDesc": "Soluzioni su misura e asset proprietari.",
     "craftBuildAssets": "Asset proprietari",
     "craftBuildEngineering": "Soluzioni su misura",
     "craftBuildSubblink": "Analisi rischi contrattuali",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "I luoghi d’incontro",
     "boutiqueSoon": "Prossimamente",
-    "boutiqueSubmit": "Parlarne in piena riservatezza",
-    "craftBuildBoutique": "Marchio, prodotto, messa sul mercato (La Boutique)"
+    "boutiqueSubmit": "Parlarne in piena riservatezza"
   },
   "hero": {
     "tagline": "Società integrata, radicata in Svizzera.",

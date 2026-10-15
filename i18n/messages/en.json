@@ -51,7 +51,7 @@
     "ourThinking": "OUR INSIGHTS",
     "whoWeAre": "WHO WE ARE",
     "craftBuild": "Deliver",
-    "craftBuildDesc": "Tailored solutions, proprietary assets, go-to-market.",
+    "craftBuildDesc": "Tailored solutions and proprietary assets.",
     "craftBuildAssets": "Proprietary assets",
     "craftBuildEngineering": "Custom Solutions",
     "craftBuildSubblink": "Contract Risk Analysis",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "Meeting places",
     "boutiqueSoon": "Coming soon",
-    "boutiqueSubmit": "Talk in full confidence",
-    "craftBuildBoutique": "Brand, product, go-to-market (La Boutique)"
+    "boutiqueSubmit": "Talk in full confidence"
   },
   "hero": {
     "tagline": "Integrated firm, anchored in Switzerland.",

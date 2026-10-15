@@ -19,7 +19,6 @@ type LinkHref = ComponentProps<typeof Link>['href']
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
   { labelKey: 'craftBuildAssets',      href: '/assets' },
-  { labelKey: 'craftBuildBoutique',    href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
 ]
 
 // Nos métiers - Support section

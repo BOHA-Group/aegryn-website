@@ -51,7 +51,7 @@
     "ourThinking": "NUESTRAS PUBLICACIONES",
     "whoWeAre": "QUIÉNES SOMOS",
     "craftBuild": "Realizar",
-    "craftBuildDesc": "Soluciones a medida, activos propios, salida al mercado.",
+    "craftBuildDesc": "Soluciones a medida y activos propios.",
     "craftBuildAssets": "Activos propietarios",
     "craftBuildEngineering": "Soluciones a medida",
     "craftBuildSubblink": "Análisis riesgos contratos",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Los lugares de encuentro",
     "boutiqueSoon": "Próximamente",
-    "boutiqueSubmit": "Hablar con total confidencialidad",
-    "craftBuildBoutique": "Marca, producto, salida al mercado (La Boutique)"
+    "boutiqueSubmit": "Hablar con total confidencialidad"
   },
   "hero": {
     "tagline": "Firma integrada, con raíces en Suiza.",

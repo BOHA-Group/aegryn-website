@@ -51,7 +51,7 @@
     "ourThinking": "NOS PUBLICATIONS",
     "whoWeAre": "QUI SOMMES-NOUS",
     "craftBuild": "Réaliser",
-    "craftBuildDesc": "Solutions sur mesure, actifs propriétaires, mise en marché.",
+    "craftBuildDesc": "Solutions sur mesure et actifs propriétaires.",
     "craftBuildAssets": "Actifs propriétaires",
     "craftBuildEngineering": "Solutions sur mesure",
     "craftBuildSubblink": "Analyse risques contrats",
@@ -168,8 +168,7 @@
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Les lieux de rencontre",
     "boutiqueSoon": "Bientôt",
-    "boutiqueSubmit": "Échanger en toute confidentialité",
-    "craftBuildBoutique": "Marque, produit, mise en marché (La Boutique)"
+    "boutiqueSubmit": "Échanger en toute confidentialité"
   },
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
