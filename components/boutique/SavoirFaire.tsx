@@ -73,13 +73,13 @@ export function SavoirFaire({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-px border border-ag-border bg-ag-border md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-px border border-ag-border bg-ag-border md:grid-cols-2 lg:grid-cols-3">
         {rows.map(({ ph, items }) => {
           const expanded = hovered === ph.key || pinned === ph.key
           return (
             <div
               key={ph.key}
-              className="flex cursor-pointer flex-col gap-4 bg-ag-white p-7 md:p-8"
+              className="flex cursor-pointer flex-col gap-3 bg-ag-white p-6"
               onMouseEnter={() => { if (window.matchMedia('(hover: hover)').matches) setHovered(ph.key) }}
               onMouseLeave={() => setHovered(null)}
               onClick={() => setPinned(pinned === ph.key ? null : ph.key)}
@@ -94,7 +94,7 @@ export function SavoirFaire({ locale }: { locale: string }) {
                   <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${expanded ? 'rotate-45' : ''}`} />
                 </span>
               </div>
-              <p className="text-[15px] leading-relaxed text-ag-gray">{ph.desc[lang]}</p>
+              <p className="text-[15px] leading-snug text-ag-gray">{ph.desc[lang]}</p>
               <p className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light">
                 {ph.cycles.map(c => <span key={c}>{CYCLE_LABELS[c][lang]}</span>)}
               </p>

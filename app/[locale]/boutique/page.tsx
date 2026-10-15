@@ -176,12 +176,12 @@ export default async function BoutiquePage({ params }: Props) {
       </section>
 
       {/* Savoir-faire */}
-      <section id="savoir-faire" className="scroll-mt-24 bg-white pb-28 md:pb-36">
+      <section id="savoir-faire" className="scroll-mt-24 bg-white pb-20 md:pb-24">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <p className={eyebrow}>{BOUTIQUE.label[lang]}</p>
           <h2 className="mt-4 font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{SF_UI.title[lang]}</h2>
           <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-ag-gray">{SF_UI.intro[lang]}</p>
-          <div className="mt-12"><SavoirFaire locale={locale} /></div>
+          <div className="mt-8"><SavoirFaire locale={locale} /></div>
         </div>
       </section>
 
