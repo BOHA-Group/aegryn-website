@@ -3,7 +3,7 @@ import type { L6 } from './savoirFaire'
 const L = (fr: string, en: string, de: string, es: string, it: string, nl: string): L6 => ({ fr, en, de, es, it, nl })
 
 export const BOUTIQUE = {
-  metaTitle: L('La Boutique, projets emblématiques | Aegryn', 'La Boutique, emblematic projects | Aegryn', 'La Boutique, emblematische Projekte | Aegryn', 'La Boutique, proyectos emblemáticos | Aegryn', 'La Boutique, progetti emblematici | Aegryn', 'La Boutique, emblematische projecten | Aegryn'),
+  metaTitle: L('La Boutique, projets signature | Aegryn', 'La Boutique, signature projects | Aegryn', 'La Boutique, Signature-Projekte | Aegryn', 'La Boutique, proyectos insignia | Aegryn', 'La Boutique, progetti signature | Aegryn', 'La Boutique, signatuurprojecten | Aegryn'),
   metaDesc: L(
     'La boutique entrepreneuriale d’Aegryn : nous cadrons, réalisons et accompagnons un nombre limité de projets signature. Rare par sélection. Discret par principe.',
     'Aegryn’s entrepreneurial boutique: we frame, deliver and accompany a limited number of signature projects. Rare by selection. Discreet by principle.',
@@ -12,7 +12,7 @@ export const BOUTIQUE = {
     'La boutique imprenditoriale di Aegryn: inquadriamo, realizziamo e accompagniamo un numero limitato di progetti signature. Raro per selezione. Discreto per principio.',
     'De ondernemende boutique van Aegryn: wij kaderen, realiseren en begeleiden een beperkt aantal signatuurprojecten. Zeldzaam door selectie. Discreet uit principe.'),
   label: L('La Boutique', 'La Boutique', 'La Boutique', 'La Boutique', 'La Boutique', 'La Boutique'),
-  h1: L('La boutique entrepreneuriale de projets emblématiques.', 'The entrepreneurial boutique for emblematic projects.', 'Die unternehmerische Boutique für emblematische Projekte.', 'La boutique emprendedora de proyectos emblemáticos.', 'La boutique imprenditoriale dei progetti emblematici.', 'De ondernemende boutique voor emblematische projecten.'),
+  h1: L('La boutique entrepreneuriale de projets signature.', 'The entrepreneurial boutique for signature projects.', 'Die unternehmerische Boutique für Signature-Projekte.', 'La boutique emprendedora de proyectos insignia.', 'La boutique imprenditoriale dei progetti signature.', 'De ondernemende boutique voor signatuurprojecten.'),
   signature: L('Rare par sélection. Discret par principe.', 'Rare by selection. Discreet by principle.', 'Selten durch Auswahl. Diskret aus Prinzip.', 'Raro por selección. Discreto por principio.', 'Raro per selezione. Discreto per principio.', 'Zeldzaam door selectie. Discreet uit principe.'),
   sub: L(
     'Nous cadrons, réalisons et accompagnons un nombre limité de projets signature, pour des entrepreneurs, des investisseurs, des institutions et des marques qui voient grand.',
@@ -67,7 +67,7 @@ export const BOUTIQUE = {
   ],
 
   valuesTitle: L('Nos valeurs', 'Our values', 'Unsere Werte', 'Nuestros valores', 'I nostri valori', 'Onze waarden'),
-  projectsLabel: L('Projets emblématiques', 'Emblematic projects', 'Emblematische Projekte', 'Proyectos emblemáticos', 'Progetti emblematici', 'Emblematische projecten'),
+  projectsLabel: L('Projets signature', 'Signature projects', 'Signature-Projekte', 'Proyectos insignia', 'Progetti signature', 'Signatuurprojecten'),
   projectsAll: L('Voir le portfolio', 'See the portfolio', 'Portfolio ansehen', 'Ver el portfolio', 'Vedere il portfolio', 'Portfolio bekijken'),
   portraitCaption: L(
     'Du premier rendez-vous à la remise des clés, chaque détail compte.',

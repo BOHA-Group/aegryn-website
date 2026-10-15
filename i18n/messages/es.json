@@ -51,14 +51,14 @@
     "ourThinking": "NUESTRAS PUBLICACIONES",
     "whoWeAre": "QUIÉNES SOMOS",
     "craftBuild": "Realizar",
-    "craftBuildDesc": "Soluciones a medida, activos propietarios, marca y salida al mercado.",
+    "craftBuildDesc": "Soluciones a medida, activos propios, salida al mercado.",
     "craftBuildAssets": "Activos propietarios",
     "craftBuildEngineering": "Soluciones a medida",
     "craftBuildSubblink": "Análisis riesgos contratos",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certificación CIFSO 5000",
     "craftSupport": "Encuadrar",
-    "craftSupportDesc": "Consultoría en Estrategia, Riesgo & Cumplimiento, Tecnología, Talento & M&A : Todas las industrias",
+    "craftSupportDesc": "Estrategia, riesgos, tecnología, talento y adquisición.",
     "craftSupportStrategy": "Estrategia Empresarial, e Innovación",
     "craftSupportRiskCompliance": "Gestión de Riesgos y Cumplimiento",
     "craftSupportTechnology": "Tecnología y Soberanía",
@@ -69,7 +69,7 @@
     "craftSupportAlliances": "Red de socios",
     "craftSupportExperts": "Red de expertos",
     "craftTransact": "Acompañar",
-    "craftTransactDesc": "Una decisión diferente en cada ciclo de vida de la empresa.",
+    "craftTransactDesc": "La decisión adecuada para cada ciclo de vida.",
     "craftTransactSell": "Transmisión & Cesión",
     "craftTransactBuy": "Adquisición & Crecimiento externo",
     "craftTransactLancement": "Lanzamiento & Estructuración",
@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Reestructuración & Pivote",
     "craftTransactVerify": "Verificar un certificado",
     "craftRecruit": "Seleccionar",
-    "craftRecruitDesc": "Selección de perfiles clave y perfiles de transición, en cada fase del ciclo de vida de la empresa.",
+    "craftRecruitDesc": "Perfiles clave y de transición, en cada fase.",
     "craftGrade": "Certificación",
     "craftGradeDesc": "Sistema de calificación independiente",
     "solutionsCore": "CORE",
@@ -159,11 +159,11 @@
     "craftRecruitPool": "Unirse al pool",
     "navPortfolio": "La Boutique",
     "boutiqueDiscover": "Descubrir La Boutique",
-    "boutiqueDiscoverDesc": "El concepto, los proyectos y el saber hacer de una boutique emprendedora.",
+    "boutiqueDiscoverDesc": "El concepto, los proyectos y el saber hacer.",
     "boutiqueAct": "Pasar a la acción",
     "boutiqueActDesc": "Encontrarse, conversar, confiar un proyecto.",
     "boutiqueConcept": "El concepto",
-    "boutiqueProjects": "Portfolio: proyectos emblemáticos",
+    "boutiqueProjects": "Portfolio",
     "boutiqueForWho": "Para quién",
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Los lugares de encuentro",
@@ -964,7 +964,7 @@
     "hero": {
       "imageAlt": "Regata de veleros de competición en el mar",
       "title": "Una firma integrada.\nUna boutique emprendedora.",
-      "desc": "La firma encuadra, realiza y acompaña las decisiones de los directivos de pymes y empresas medianas. La Boutique conduce, con el mismo saber hacer, un número limitado de proyectos emblemáticos. Un interlocutor nombrado, de la primera decisión a la entrega."
+      "desc": "La firma encuadra, realiza y acompaña las decisiones de los directivos de pymes y empresas medianas. La Boutique conduce, con el mismo saber hacer, un número limitado de proyectos insignia. Un interlocutor nombrado, de la primera decisión a la entrega."
     },
     "name": {
       "label": "El nombre",
@@ -984,14 +984,14 @@
         }
       ],
       "synthesis": "Tres palabras de tres civilizaciones. Una entidad que protege (AEGIS), lleva de la idea a la realización (AEGIR) y construye para durar (AEON). Aegryn.",
-      "history": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos emblemáticos, su identidad se afinó con él. El nombre cambió. La convicción, no.",
-      "formerly": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos emblemáticos, su identidad se afinó con él. El nombre cambió. La convicción, no."
+      "history": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos insignia, su identidad se afinó con él. El nombre cambió. La convicción, no.",
+      "formerly": "Aegryn se llamaba de otra forma antes. A medida que el posicionamiento se afinó, de constructor de soluciones digitales a boutique emprendedora de proyectos insignia, su identidad se afinó con él. El nombre cambió. La convicción, no."
     },
     "vision": {
       "label": "Nuestra visión",
       "segments": [
         {
-          "t": "Aegryn quiere ser la firma integrada de referencia para los directivos y la boutique emprendedora de los proyectos emblemáticos",
+          "t": "Aegryn quiere ser la firma integrada de referencia para los directivos y la boutique emprendedora de los proyectos insignia",
           "bold": true
         },
         {
@@ -1124,7 +1124,7 @@
     },
     "meta": {
       "title": "Sobre nosotros | Boutique emprendedora | Aegryn",
-      "desc": "Aegryn es una boutique emprendedora de proyectos emblemáticos, arraigada en Suiza y abierta al mundo. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
+      "desc": "Aegryn es una boutique emprendedora de proyectos insignia, arraigada en Suiza y abierta al mundo. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
     }
   },
   "career": {
@@ -1221,7 +1221,7 @@
     },
     "meta": {
       "title": "Carrera | Boutique emprendedora | Aegryn",
-      "desc": "Únete a Aegryn, boutique emprendedora de proyectos emblemáticos. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
+      "desc": "Únete a Aegryn, boutique emprendedora de proyectos insignia. Cinco oficios: encuadrar, realizar, acompañar, seleccionar, informarse."
     }
   },
   "assetStatus": {
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "POR QUÉ AEGRYN",
       "title": "¿Por qué Aegryn?",
-      "p1": "La mayoría de las consultoras aconsejan sin construir. La mayoría de las empresas tech construyen sin estrategia.\n\nAegryn reúne ambas cosas. Un núcleo de consultoría corporativa, la firma integrada, que encuadra, realiza y acompaña las decisiones de los directivos. Y un vertical emprendedor, La Boutique, que conduce de principio a fin un número limitado de proyectos emblemáticos. Lo que recomienda a sus clientes, Aegryn se lo aplica.",
+      "p1": "La mayoría de las consultoras aconsejan sin construir. La mayoría de las empresas tech construyen sin estrategia.\n\nAegryn reúne ambas cosas. Un núcleo de consultoría corporativa, la firma integrada, que encuadra, realiza y acompaña las decisiones de los directivos. Y un vertical emprendedor, La Boutique, que conduce de principio a fin un número limitado de proyectos insignia. Lo que recomienda a sus clientes, Aegryn se lo aplica.",
       "p2": "Encuadrar sin realizar es entregar un mapa sin el territorio. Realizar sin encuadrar es ejecutar sin rumbo. Acompañar sin haber construido es aconsejar desde fuera. Seleccionar sin proyecto es reclutar en el vacío.\n\nEn Aegryn, cada oficio refuerza al siguiente. Ese encadenamiento es lo que hace que un proyecto se sostenga, para nuestros clientes como para nosotros.",
       "p3Label": "ANCLADO EN SUIZA",
       "p3": "Saint-Sulpice, Vaud. A dos kilómetros de la EPFL, una de las universidades tecnológicas más activas del mundo en spin-offs y transferencia de tecnología. Junto a la Fundación para la Innovación y la Tecnología (FIT), que apoya cada año cientos de proyectos de innovación suizos. En un cantón que concentra SwissTech, decenas de fondos de capital riesgo europeos y una densidad excepcional de directivos y adquirentes institucionales. No es una casualidad de ubicación. Es una elección de red. El rigor de una plaza financiera de referencia, la neutralidad de un territorio de confianza y el acceso directo a uno de los ecosistemas de innovación más activos de Europa.",

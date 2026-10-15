@@ -51,14 +51,14 @@
     "ourThinking": "OUR INSIGHTS",
     "whoWeAre": "WHO WE ARE",
     "craftBuild": "Deliver",
-    "craftBuildDesc": "Tailored solutions, proprietary assets, brand and go-to-market.",
+    "craftBuildDesc": "Tailored solutions, proprietary assets, go-to-market.",
     "craftBuildAssets": "Proprietary assets",
     "craftBuildEngineering": "Custom Solutions",
     "craftBuildSubblink": "Contract Risk Analysis",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000 Certification",
     "craftSupport": "Frame",
-    "craftSupportDesc": "Strategy, Risk & Compliance, Technology, Talent & M&A Advisory : All industries",
+    "craftSupportDesc": "Strategy, risk, technology, talent and acquisitions.",
     "craftSupportStrategy": "Business Strategy and Innovation",
     "craftSupportRiskCompliance": "Risk Management and Compliance",
     "craftSupportTechnology": "Technology and Sovereignty",
@@ -69,7 +69,7 @@
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
     "craftTransact": "Accompany",
-    "craftTransactDesc": "A different decision at each stage of the company lifecycle.",
+    "craftTransactDesc": "The right decision for every lifecycle stage.",
     "craftTransactSell": "Transfer & Sale",
     "craftTransactBuy": "Acquisition & External Growth",
     "craftTransactLancement": "Launch & Structuring",
@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Restructuring & Pivot",
     "craftTransactVerify": "Verify a certificate",
     "craftRecruit": "Select",
-    "craftRecruitDesc": "Selection of key profiles and transition profiles, at every stage of the company lifecycle.",
+    "craftRecruitDesc": "Key and transition profiles, at every stage.",
     "craftGrade": "Certification",
     "craftGradeDesc": "Independent rating system",
     "solutionsCore": "CORE",
@@ -159,11 +159,11 @@
     "craftRecruitPool": "Join the talent pool",
     "navPortfolio": "La Boutique",
     "boutiqueDiscover": "Discover La Boutique",
-    "boutiqueDiscoverDesc": "The concept, projects and know-how of an entrepreneurial boutique.",
+    "boutiqueDiscoverDesc": "The concept, projects and know-how.",
     "boutiqueAct": "Take action",
     "boutiqueActDesc": "Meet, talk, entrust a project.",
     "boutiqueConcept": "The concept",
-    "boutiqueProjects": "Portfolio: emblematic projects",
+    "boutiqueProjects": "Portfolio",
     "boutiqueForWho": "Who it is for",
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "Meeting places",
@@ -964,13 +964,13 @@
     "hero": {
       "imageAlt": "Racing sailboats competing on the sea",
       "title": "An integrated firm.\nAn entrepreneurial boutique.",
-      "desc": "The firm frames, delivers and accompanies the decisions of SME and mid-sized company leaders. La Boutique leads, with the same know-how, a limited number of emblematic projects. A named counterpart, from the first decision to delivery."
+      "desc": "The firm frames, delivers and accompanies the decisions of SME and mid-sized company leaders. La Boutique leads, with the same know-how, a limited number of signature projects. A named counterpart, from the first decision to delivery."
     },
     "vision": {
       "label": "Our vision",
       "segments": [
         {
-          "t": "Aegryn wants to be the reference integrated firm for business leaders, and the entrepreneurial boutique for emblematic projects",
+          "t": "Aegryn wants to be the reference integrated firm for business leaders, and the entrepreneurial boutique for signature projects",
           "bold": true
         },
         {
@@ -1119,12 +1119,12 @@
         }
       ],
       "synthesis": "Three words from three civilisations. An entity that protects (AEGIS), leads from idea to realisation (AEGIR), and builds to last (AEON). Aegryn.",
-      "history": "Aegryn used to go by a different name. As the positioning sharpened, from builder of digital solutions to entrepreneurial boutique for emblematic projects, its identity sharpened with it. The name changed. The conviction did not.",
-      "formerly": "Aegryn used to go by a different name. As the positioning sharpened, from builder of digital solutions to entrepreneurial boutique for emblematic projects, its identity sharpened with it. The name changed. The conviction did not."
+      "history": "Aegryn used to go by a different name. As the positioning sharpened, from builder of digital solutions to entrepreneurial boutique for signature projects, its identity sharpened with it. The name changed. The conviction did not.",
+      "formerly": "Aegryn used to go by a different name. As the positioning sharpened, from builder of digital solutions to entrepreneurial boutique for signature projects, its identity sharpened with it. The name changed. The conviction did not."
     },
     "meta": {
       "title": "About | Entrepreneurial Boutique | Aegryn",
-      "desc": "Aegryn is an entrepreneurial boutique for emblematic projects, anchored in Switzerland and open to the world. Five disciplines: frame, deliver, accompany, select, stay informed."
+      "desc": "Aegryn is an entrepreneurial boutique for signature projects, anchored in Switzerland and open to the world. Five disciplines: frame, deliver, accompany, select, stay informed."
     }
   },
   "career": {
@@ -1221,7 +1221,7 @@
     },
     "meta": {
       "title": "Careers | Entrepreneurial Boutique | Aegryn",
-      "desc": "Join Aegryn, an entrepreneurial boutique for emblematic projects. Five disciplines: frame, deliver, accompany, select, stay informed."
+      "desc": "Join Aegryn, an entrepreneurial boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed."
     }
   },
   "assetStatus": {
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "WHY AEGRYN",
       "title": "Why Aegryn?",
-      "p1": "Most firms advise without building. Most tech companies build without strategy.\n\nAegryn brings the two together. A corporate advisory foundation, the integrated firm, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, La Boutique, which leads a limited number of emblematic projects end to end. What it recommends to its clients, Aegryn applies to itself.",
+      "p1": "Most firms advise without building. Most tech companies build without strategy.\n\nAegryn brings the two together. A corporate advisory foundation, the integrated firm, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, La Boutique, which leads a limited number of signature projects end to end. What it recommends to its clients, Aegryn applies to itself.",
       "p2": "Framing without delivering is handing over a map without the territory. Delivering without framing is executing without a heading. Accompanying without having built is advising from the outside. Selecting without a project is recruiting into a void.\n\nAt Aegryn, each discipline reinforces the next. That chain is what makes a project hold, for our clients as for ourselves.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",

@@ -94,7 +94,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftSupport')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftSupportDesc')}
           </div>
           <div className="flex flex-col gap-1">
@@ -116,7 +116,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftBuild')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftBuildDesc')}
           </div>
           <div className="flex flex-col gap-1">
@@ -138,7 +138,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftTransact')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftTransactDesc')}
           </div>
           <div className="flex flex-col gap-1">
@@ -160,7 +160,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftRecruit')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('craftRecruitDesc')}
           </div>
           <div className="flex flex-col gap-1">
@@ -225,15 +225,15 @@ function BoutiqueMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full right-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
+      className="absolute top-full right-0 mt-2 w-max bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
     >
-      <div className="grid grid-cols-2 gap-px bg-ag-border rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-[auto_auto] gap-px bg-ag-border rounded-2xl overflow-hidden">
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueDiscover')}</p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueDiscoverDesc')}</div>
+          <div className="h-9 line-clamp-2 max-w-[210px] font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueDiscoverDesc')}</div>
           <div className="flex flex-col gap-1">
             {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
-              <Link key={labelKey} href={href} onClick={onClose} className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1">
+              <Link key={labelKey} href={href} onClick={onClose} className={`font-sans text-[13px] whitespace-nowrap transition-colors py-1 ${labelKey === 'boutiqueConcept' ? 'font-semibold text-ag-black' : 'text-ag-gray hover:text-ag-black'}`}>
                 {t(labelKey)}
               </Link>
             ))}
@@ -241,13 +241,13 @@ function BoutiqueMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
         </div>
         <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueAct')}</p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueActDesc')}</div>
+          <div className="h-9 line-clamp-2 max-w-[210px] font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueActDesc')}</div>
           <div className="flex flex-col gap-1">
-            <span className="flex items-center gap-2 font-sans text-[13px] text-ag-gray-light/70 py-1 cursor-default" aria-disabled="true">
+            <span className="flex items-center gap-2 whitespace-nowrap font-sans text-[13px] text-ag-gray-light/70 py-1 cursor-default" aria-disabled="true">
               {t('boutiquePlaces')}
               <span className="rounded-full bg-ag-off-white px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-gray">{t('boutiqueSoon')}</span>
             </span>
-            <Link href={BOUTIQUE_SUBMIT_HREF} onClick={onClose} className="font-sans text-[13px] font-semibold text-ag-black hover:text-ag-apex-ink transition-colors py-1">
+            <Link href={BOUTIQUE_SUBMIT_HREF} onClick={onClose} className="font-sans text-[13px] whitespace-nowrap text-ag-gray hover:text-ag-black transition-colors py-1">
               {t('boutiqueSubmit')}
             </Link>
           </div>
@@ -273,7 +273,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMagazine')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('thinkingMagazineDesc')}
           </div>
           <div className="flex flex-col gap-1">
@@ -297,7 +297,7 @@ function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('thinkingMarket')}
           </p>
-          <div className="h-10 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
+          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
             {t('thinkingMarketDesc')}
           </div>
           <div className="flex flex-col gap-1">

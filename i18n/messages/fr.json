@@ -51,14 +51,14 @@
     "ourThinking": "NOS PUBLICATIONS",
     "whoWeAre": "QUI SOMMES-NOUS",
     "craftBuild": "Réaliser",
-    "craftBuildDesc": "Solutions sur mesure, actifs propriétaires, marque et mise en marché.",
+    "craftBuildDesc": "Solutions sur mesure, actifs propriétaires, mise en marché.",
     "craftBuildAssets": "Actifs propriétaires",
     "craftBuildEngineering": "Solutions sur mesure",
     "craftBuildSubblink": "Analyse risques contrats",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "Certification CIFSO 5000",
     "craftSupport": "Cadrer",
-    "craftSupportDesc": "Conseil en Stratégie, Risque & Conformité, Technologie, Talent & M&A : Toutes industries",
+    "craftSupportDesc": "Stratégie, risques, technologie, talents et reprise.",
     "craftSupportStrategy": "Stratégie d'entreprise et Innovation",
     "craftSupportRiskCompliance": "Gestion des Risques et Conformité",
     "craftSupportTechnology": "Technologie et Souveraineté",
@@ -69,7 +69,7 @@
     "craftSupportAlliances": "Réseau de partenaires",
     "craftSupportExperts": "Réseau d'experts",
     "craftTransact": "Accompagner",
-    "craftTransactDesc": "Une décision différente à chaque cycle de vie de l'entreprise.",
+    "craftTransactDesc": "Une décision adaptée à chaque cycle de vie.",
     "craftTransactSell": "Transmission & Cession",
     "craftTransactBuy": "Acquisition & Croissance externe",
     "craftTransactLancement": "Lancement & Structuration",
@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Restructuration & Pivot",
     "craftTransactVerify": "Vérifier un certificat",
     "craftRecruit": "Sélectionner",
-    "craftRecruitDesc": "Sélection de profils clés et profils de transition, à chaque cycle de vie de l’entreprise.",
+    "craftRecruitDesc": "Profils clés et profils de transition, à chaque cycle.",
     "craftGrade": "Certification",
     "craftGradeDesc": "Système de notation indépendant",
     "solutionsCore": "CATÉGORIES PRINCIPALES",
@@ -159,11 +159,11 @@
     "craftRecruitPool": "Rejoindre le vivier",
     "navPortfolio": "La Boutique",
     "boutiqueDiscover": "Découvrir La Boutique",
-    "boutiqueDiscoverDesc": "Le concept, les projets et les savoir-faire d’une boutique entrepreneuriale.",
+    "boutiqueDiscoverDesc": "Le concept, les projets et les savoir-faire.",
     "boutiqueAct": "Passer à l’action",
     "boutiqueActDesc": "Rencontrer, échanger, confier un projet.",
     "boutiqueConcept": "Le concept",
-    "boutiqueProjects": "Portfolio : projets emblématiques",
+    "boutiqueProjects": "Portfolio",
     "boutiqueForWho": "Pour qui",
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Les lieux de rencontre",
@@ -924,7 +924,7 @@
     "hero": {
       "imageAlt": "Régate de voiliers en compétition sur la mer",
       "title": "Un cabinet intégré.\nUne boutique entrepreneuriale.",
-      "desc": "Le cabinet cadre, réalise et accompagne les décisions des dirigeants de PME et d’ETI. La Boutique conduit, avec le même savoir-faire, un nombre limité de projets emblématiques. Un interlocuteur nommé, du premier arbitrage à la réception."
+      "desc": "Le cabinet cadre, réalise et accompagne les décisions des dirigeants de PME et d’ETI. La Boutique conduit, avec le même savoir-faire, un nombre limité de projets signature. Un interlocuteur nommé, du premier arbitrage à la réception."
     },
     "name": {
       "label": "Le nom",
@@ -944,14 +944,14 @@
         }
       ],
       "synthesis": "Trois mots issus de trois civilisations. Une entité qui protège (AEGIS), mène de l’idée à la réalisation (AEGIR), et construit pour durer (AEON). Aegryn.",
-      "history": "Aegryn s’appelait différemment autrefois. À mesure que le positionnement s’est affiné, de constructeur de solutions numériques à boutique entrepreneuriale de projets emblématiques, son identité s’est affinée avec lui. Le nom a changé. La conviction, non.",
-      "formerly": "Aegryn s’appelait différemment autrefois. À mesure que le positionnement s’est affiné, de constructeur de solutions numériques à boutique entrepreneuriale de projets emblématiques, son identité s’est affinée avec lui. Le nom a changé. La conviction, non."
+      "history": "Aegryn s’appelait différemment autrefois. À mesure que le positionnement s’est affiné, de constructeur de solutions numériques à boutique entrepreneuriale de projets signature, son identité s’est affinée avec lui. Le nom a changé. La conviction, non.",
+      "formerly": "Aegryn s’appelait différemment autrefois. À mesure que le positionnement s’est affiné, de constructeur de solutions numériques à boutique entrepreneuriale de projets signature, son identité s’est affinée avec lui. Le nom a changé. La conviction, non."
     },
     "vision": {
       "label": "Notre vision",
       "segments": [
         {
-          "t": "Aegryn veut être le cabinet intégré de référence des dirigeants, et la boutique entrepreneuriale des projets emblématiques",
+          "t": "Aegryn veut être le cabinet intégré de référence des dirigeants, et la boutique entrepreneuriale des projets signature",
           "bold": true
         },
         {
@@ -1084,7 +1084,7 @@
     },
     "meta": {
       "title": "À propos | Boutique entrepreneuriale | Aegryn",
-      "desc": "Aegryn est une boutique entrepreneuriale de projets emblématiques, ancrée en Suisse et ouverte à l'international. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
+      "desc": "Aegryn est une boutique entrepreneuriale de projets signature, ancrée en Suisse et ouverte à l'international. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
     }
   },
   "career": {
@@ -1181,7 +1181,7 @@
     },
     "meta": {
       "title": "Carrière | Boutique entrepreneuriale | Aegryn",
-      "desc": "Rejoignez Aegryn, boutique entrepreneuriale de projets emblématiques. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
+      "desc": "Rejoignez Aegryn, boutique entrepreneuriale de projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
     }
   },
   "assetStatus": {
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "POURQUOI AEGRYN",
       "title": "Pourquoi Aegryn ?",
-      "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie.\n\nAegryn réunit les deux. Un socle de conseil corporate, le cabinet intégré, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, La Boutique, qui conduit de bout en bout un nombre limité de projets emblématiques. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
+      "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie.\n\nAegryn réunit les deux. Un socle de conseil corporate, le cabinet intégré, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, La Boutique, qui conduit de bout en bout un nombre limité de projets signature. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
       "p2": "Cadrer sans réaliser, c’est livrer une carte sans le territoire. Réaliser sans cadrer, c’est exécuter sans cap. Accompagner sans avoir bâti, c’est conseiller de l’extérieur. Sélectionner sans projet, c’est recruter dans le vide.\n\nChez Aegryn, chaque métier renforce le suivant. C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. A deux kilomètres de l'EPFL, l'une des universités technologiques les plus actives au monde en matière de spin-offs et de transfert technologique. A proximité de la Fondation pour l'Innovation et la Technologie (FIT), qui soutient chaque année des centaines de projets d'innovation suisses. Dans un canton qui concentre SwissTech, des dizaines de fonds de capital-risque européens, et une densité rare de dirigeants et d'acquéreurs institutionnels. Ce n'est pas un hasard de localisation. C'est un choix de réseau. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance, et l'accès direct à un écosystème d'innovation qui compte parmi les plus actifs d'Europe.",

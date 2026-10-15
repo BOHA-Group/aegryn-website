@@ -51,14 +51,14 @@
     "ourThinking": "ONZE PUBLICATIES",
     "whoWeAre": "WIE WE ZIJN",
     "craftBuild": "Realiseren",
-    "craftBuildDesc": "Oplossingen op maat, eigen activa, merk en marktintroductie.",
+    "craftBuildDesc": "Oplossingen op maat, eigen activa, marktintroductie.",
     "craftBuildAssets": "Eigen assets",
     "craftBuildEngineering": "Maatwerkoplossingen",
     "craftBuildSubblink": "Contractuele risicoanalyse",
     "craftBuildValuation": "CIFSO Valuation Index",
     "craftBuildCIFSO": "CIFSO 5000-certificering",
     "craftSupport": "Kaderen",
-    "craftSupportDesc": "Strategie-, Risico & Compliance-, Technologie-, Talent- & M&A-advies : Alle sectoren",
+    "craftSupportDesc": "Strategie, risico, technologie, talent en overname.",
     "craftSupportStrategy": "Bedrijfsstrategie en Innovatie",
     "craftSupportRiskCompliance": "Risicobeheer en Compliance",
     "craftSupportTechnology": "Technologie en Soevereiniteit",
@@ -69,7 +69,7 @@
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
     "craftTransact": "Begeleiden",
-    "craftTransactDesc": "Een andere beslissing bij elke levensfase van de onderneming.",
+    "craftTransactDesc": "De juiste beslissing voor elke levensfase.",
     "craftTransactSell": "Overdracht & Verkoop",
     "craftTransactBuy": "Overname & Externe groei",
     "craftTransactLancement": "Lancering & Structurering",
@@ -77,7 +77,7 @@
     "craftTransactRestructuration": "Herstructurering & Pivot",
     "craftTransactVerify": "Certificaat verifiëren",
     "craftRecruit": "Selecteren",
-    "craftRecruitDesc": "Selectie van sleutelprofielen en overgangsprofielen, in elke levensfase van het bedrijf.",
+    "craftRecruitDesc": "Sleutel- en overgangsprofielen, in elke fase.",
     "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
     "solutionsCore": "CORE",
@@ -159,11 +159,11 @@
     "craftRecruitPool": "Deelnemen aan de pool",
     "navPortfolio": "La Boutique",
     "boutiqueDiscover": "La Boutique ontdekken",
-    "boutiqueDiscoverDesc": "Het concept, de projecten en de expertise van een ondernemende boutique.",
+    "boutiqueDiscoverDesc": "Het concept, de projecten en de expertise.",
     "boutiqueAct": "Actie ondernemen",
     "boutiqueActDesc": "Elkaar ontmoeten, praten, een project toevertrouwen.",
     "boutiqueConcept": "Het concept",
-    "boutiqueProjects": "Portfolio: emblematische projecten",
+    "boutiqueProjects": "Portfolio",
     "boutiqueForWho": "Voor wie",
     "boutiqueKnowHow": "Expertise",
     "boutiquePlaces": "Ontmoetingsplekken",
@@ -964,7 +964,7 @@
     "hero": {
       "imageAlt": "Zeilboten in wedstrijd op open zee",
       "title": "Een geïntegreerd bureau.\nEen ondernemende boutique.",
-      "desc": "Het bureau kadert, realiseert en begeleidt de beslissingen van leidinggevenden van kmo’s en middelgrote ondernemingen. La Boutique leidt, met dezelfde expertise, een beperkt aantal emblematische projecten. Een benoemde gesprekspartner, van de eerste beslissing tot de oplevering."
+      "desc": "Het bureau kadert, realiseert en begeleidt de beslissingen van leidinggevenden van kmo’s en middelgrote ondernemingen. La Boutique leidt, met dezelfde expertise, een beperkt aantal signatuurprojecten. Een benoemde gesprekspartner, van de eerste beslissing tot de oplevering."
     },
     "name": {
       "label": "De naam",
@@ -984,14 +984,14 @@
         }
       ],
       "synthesis": "Drie woorden uit drie beschavingen. Een entiteit die beschermt (AEGIS), van idee naar realisatie leidt (AEGIR) en bouwt om te duren (AEON). Aegryn.",
-      "history": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor emblematische projecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet.",
-      "formerly": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor emblematische projecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet."
+      "history": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor signatuurprojecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet.",
+      "formerly": "Aegryn heette vroeger anders. Naarmate de positionering scherper werd, van bouwer van digitale oplossingen tot ondernemende boutique voor signatuurprojecten, werd de identiteit mee scherper. De naam veranderde. De overtuiging niet."
     },
     "vision": {
       "label": "Onze visie",
       "segments": [
         {
-          "t": "Aegryn wil het geïntegreerde referentiebureau zijn voor leidinggevenden en de ondernemende boutique voor emblematische projecten",
+          "t": "Aegryn wil het geïntegreerde referentiebureau zijn voor leidinggevenden en de ondernemende boutique voor signatuurprojecten",
           "bold": true
         },
         {
@@ -1124,7 +1124,7 @@
     },
     "meta": {
       "title": "Over ons | Ondernemende boutique | Aegryn",
-      "desc": "Aegryn is een ondernemende boutique voor emblematische projecten, verankerd in Zwitserland en open naar de wereld. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
+      "desc": "Aegryn is een ondernemende boutique voor signatuurprojecten, verankerd in Zwitserland en open naar de wereld. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
     }
   },
   "career": {
@@ -1221,7 +1221,7 @@
     },
     "meta": {
       "title": "Carrière | Ondernemende boutique | Aegryn",
-      "desc": "Word onderdeel van Aegryn, een ondernemende boutique voor emblematische projecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
+      "desc": "Word onderdeel van Aegryn, een ondernemende boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
     }
   },
   "assetStatus": {
@@ -9749,7 +9749,7 @@
     "whyAegryn": {
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
-      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie.\n\nAegryn brengt beide samen. Een fundament van corporate advies, het geïntegreerde bureau, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, La Boutique, die een beperkt aantal emblematische projecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
+      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie.\n\nAegryn brengt beide samen. Een fundament van corporate advies, het geïntegreerde bureau, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, La Boutique, die een beperkt aantal signatuurprojecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
       "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elk vakgebied het volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
