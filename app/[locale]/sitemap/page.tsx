@@ -65,7 +65,6 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'magazineIssue01',   href: '/magazine/issue-01' },
       { labelKey: 'blog',              href: '/blog' },
       { labelKey: 'workforce',         href: '/workforce' },
-      { labelKey: 'glossaire',         href: '/glossaire' },
     ],
   },
   {

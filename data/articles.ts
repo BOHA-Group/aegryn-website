@@ -54,7 +54,9 @@ import { CRA_ARTICLE } from './articles-cra'
 import { SKILLS_GAP_ARTICLE, AI_HIRING_ARTICLE } from './articles-workforce'
 import { TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE } from './articles-home-2026'
 
-export const ARTICLES: Article[] = [
+const REMOVED_SLUGS = ['glossaire-ma-tech-europe']
+
+export const ARTICLES: Article[] = ([
   TRENDS_SIGNALS_ARTICLE,
   BUILDER_DAY_ARTICLE,
   LAUNCH_ANATOMY_ARTICLE,
@@ -3473,7 +3475,7 @@ export const ARTICLES: Article[] = [
     ],
   },
 
-]
+] as Article[]).filter(a => !REMOVED_SLUGS.includes(a.slug))
 
 export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
   market:        { fr: 'Rapport marché',   en: 'Market report',   de: 'Marktbericht',       es: 'Informe de mercado',   it: 'Report mercato',     nl: 'Marktrapport'       },

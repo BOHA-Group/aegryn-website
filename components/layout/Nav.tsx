@@ -15,18 +15,12 @@ import { gsap }          from '@/lib/gsap'
 type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
-// Nos métiers - Build section (liens principaux)
+// Nos métiers - Réaliser : solutions sur mesure, actifs propriétaires, savoir-faire de La Boutique
+// (les outils CIFSO ne figurent plus dans les menus : pied de page et page des actifs uniquement)
 const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftBuildAssets',      href: '/assets' },
   { labelKey: 'craftBuildEngineering', href: '/services/build' },
-]
-
-// Sous-actifs propriétaires (indentés sous craftBuildAssets)
-const CRAFT_BUILD_ASSET_SUBLINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftBuildSubblink',    href: 'https://subblink.com' as LinkHref },
-  { labelKey: 'craftBuildValuation',   href: '/valuation' as LinkHref },
-  { labelKey: 'craftBuildCIFSO',       href: '/grade' },
-  { labelKey: 'craftTransactVerify',   href: '/verify' as LinkHref },
+  { labelKey: 'craftBuildAssets',      href: '/assets' },
+  { labelKey: 'craftBuildBoutique',    href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
 ]
 
 // Nos métiers - Support section
@@ -67,7 +61,6 @@ const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref; muted?: boole
 const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'thinkingMarketArticles',   href: '/blog' },
   { labelKey: 'thinkingMarketWorkforce',  href: '/workforce' as LinkHref },
-  { labelKey: 'thinkingMarketGlossary',   href: '/glossaire' as LinkHref },
   { labelKey: 'thinkingMarketFAQ',        href: '/help/faq' as LinkHref },
 ]
 
@@ -128,35 +121,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             {t('craftBuildDesc')}
           </div>
           <div className="flex flex-col gap-1">
-            {/* Actifs propriétaires + ses sous-actifs */}
-            <Link
-              href="/assets"
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-            >
-              {t('craftBuildAssets')}
-            </Link>
-            {/* Sous-items indentés */}
-            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1">
-              {CRAFT_BUILD_ASSET_SUBLINKS.map(({ labelKey, href }) => (
-                <Link
-                  key={labelKey}
-                  href={href}
-                  onClick={onClose}
-                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
-                >
-                  {t(labelKey)}
-                </Link>
-              ))}
-            </div>
-            {/* Solutions sur-mesure */}
-            <Link
-              href="/services/build"
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 mt-0.5"
-            >
-              {t('craftBuildEngineering')}
-            </Link>
+            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
+              <Link
+                key={labelKey}
+                href={href}
+                onClick={onClose}
+                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
+              >
+                {t(labelKey)}
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -808,13 +782,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                         className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
                         {t(labelKey)}
                       </Link>
-                      {/* Sous-actifs propriétaires (mobile) — imbriqués sous /assets comme sur desktop */}
-                      {labelKey === 'craftBuildAssets' && CRAFT_BUILD_ASSET_SUBLINKS.map((sub) => (
-                        <Link key={sub.labelKey} href={sub.href} onClick={closeMobile}
-                          className="py-1 pl-3 font-sans text-[13px] text-white/70 hover:text-white transition-colors border-l border-white/20 ml-1">
-                          {t(sub.labelKey)}
-                        </Link>
-                      ))}
                     </div>
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('craftTransact')}</p>

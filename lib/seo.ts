@@ -450,7 +450,6 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 37, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
     { '@type': 'ListItem', position: 38, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
     { '@type': 'ListItem', position: 39, name: 'Feuille de route',              url: `${BASE_URL}/fr/roadmap` },
-    { '@type': 'ListItem', position: 40, name: 'Glossaire',                     url: `${BASE_URL}/fr/glossaire` },
   ],
 }
 

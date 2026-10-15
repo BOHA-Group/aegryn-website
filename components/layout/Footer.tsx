@@ -116,9 +116,15 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'sitemap',   href: '/sitemap',         ns: 'legalNav' },
 ]
 
+const boutiqueLinks: { navKey: string; href: LinkHref }[] = [
+  { navKey: 'boutiqueConcept',  href: '/boutique' },
+  { navKey: 'boutiqueProjects', href: '/portfolio' as LinkHref },
+  { navKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
+  { navKey: 'boutiqueSubmit',   href: { pathname: '/contact', query: { subject: 'project' } } as LinkHref },
+]
+
 const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoAbout',     href: '/about' },
-  { navKey: 'navPortfolio', href: '/boutique' as LinkHref },
   { navKey: 'roadmap',      href: '/roadmap' as never },
   { navKey: 'whoAlliances', href: '/alliances' },
   { navKey: 'whoContact',   href: '/contact' },
@@ -128,7 +134,7 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
 const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
   { footerKey: 'footerCraftSupport',  href: '/advisory' },
   { footerKey: 'footerCraftBuild',    href: '/services/build' },
-  { footerKey: 'footerCraftTransact', href: '/#franchir' as LinkHref },
+  { footerKey: 'footerCraftTransact', href: '/franchir/lancement' as LinkHref },
   { footerKey: 'footerWhoTalent',     href: '/talent' as never },
   { footerKey: 'footerInform',        href: '/blog' },
 ]
@@ -173,6 +179,18 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5">
               {aegrynLinks.map(({ navKey, href }) => (
+                <li key={navKey}>
+                  <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
+                    {tNav(navKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4 mt-8">
+              {tNav('navPortfolio')}
+            </p>
+            <ul className="space-y-2.5">
+              {boutiqueLinks.map(({ navKey, href }) => (
                 <li key={navKey}>
                   <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
                     {tNav(navKey)}
@@ -251,11 +269,6 @@ export default function Footer() {
               <li>
                 <Link href="/blog" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Blog')}
-                </Link>
-              </li>
-              <li>
-                <Link href={"/glossaire" as ComponentProps<typeof Link>['href']} className="text-sm text-white/70 hover:text-white transition-colors">
-                  {t('col3Glossary')}
                 </Link>
               </li>
               <li>

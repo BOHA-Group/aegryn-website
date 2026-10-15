@@ -8,7 +8,7 @@ Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group �
 - **Build** (Asset Engineering) — proprietary and custom digital assets
 - **Navigate** (Franchir) — operational execution of lifecycle transitions: launch, scaling, restructuring, acquisition, transmission
 - **Recruit** (Talent) — executive tech recruitment
-- **Inform** — Aegryn Magazine, blog, glossary
+- **Inform** — Aegryn Magazine, blog
 - **CIFSO** — proprietary protocol and services (CIFSO 5000 certification, CIFSO Valuation Index) supporting all disciplines; not a discipline itself
 
 Incorporated in Switzerland. HQ: St-Sulpice, Canton de Vaud.
@@ -204,7 +204,6 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 - [Contact](https://aegryn.com/fr/contact) — Reach AEGRYN team
 - [Career](https://aegryn.com/fr/career) — Open positions
 - [Roadmap](https://aegryn.com/fr/roadmap) — Group roadmap and capabilities
-- [Glossary](https://aegryn.com/fr/glossaire) — Tech M&A glossary
 - [Alliances](https://aegryn.com/fr/alliances) — Strategic partnerships
 - [Investors](https://aegryn.com/fr/investisseurs) — Financing & investors
 - [Industries](https://aegryn.com/fr/industries) — Five industry hubs

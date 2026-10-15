@@ -134,6 +134,11 @@ const nextConfig: NextConfig = {
       { source: '/:locale/valoriser/restructuration',   destination: '/:locale/franchir/restructuration', permanent: true },
       { source: '/:locale/valoriser/acquisition',       destination: '/:locale/franchir/acquisition',     permanent: true },
       { source: '/:locale/valoriser/transmission',      destination: '/:locale/franchir/transmission',    permanent: true },
+      /* Glossaire retiré : renvoi vers la FAQ */
+      { source: '/glossaire',                           destination: '/help/faq',                        permanent: true },
+      { source: '/:locale/glossaire',                   destination: '/:locale/help/faq',                permanent: true },
+      { source: '/blog/glossaire-ma-tech-europe',       destination: '/blog',                            permanent: true },
+      { source: '/:locale/blog/glossaire-ma-tech-europe', destination: '/:locale/blog',                  permanent: true },
       /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
          Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },
