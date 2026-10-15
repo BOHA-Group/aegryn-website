@@ -8925,19 +8925,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Rekrutierung & Übergangsprofile | Aegryn Talent",
-      "desc": "Aegryn rekrutiert Führungskräfte und Experten und vermittelt Übergangsprofile für jede Lebenszyklusphase des Unternehmens."
+      "title": "Auswahl von Schlüsselprofilen & Übergang | Aegryn Talent",
+      "desc": "Aegryn wählt Führungskräfte und Experten aus und vermittelt Übergangsprofile für jede Lebenszyklusphase des Unternehmens."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "Das richtige Profil für jede Lebenszyklusphase des Unternehmens.",
-      "desc": "Aegryn rekrutiert Führungskräfte und Experten und vermittelt Übergangsprofile – wenn das Unternehmen startet, wächst, sich restrukturiert, akquiriert oder übertragen wird.",
+      "desc": "Aegryn wählt Führungskräfte und Experten aus und vermittelt Übergangsprofile, wenn das Unternehmen startet, wächst, sich restrukturiert, akquiriert oder übertragen wird.",
       "trust1": "Antwort innerhalb von 2 Arbeitstagen",
       "trust2": "Kein Profil wird ohne Zustimmung des Kandidaten weitergegeben.",
       "imageAlt": "Handshake zwischen zwei Partnern, besiegelte Vereinbarung"
     },
     "doors": {
-      "recruit": "Ich rekrutiere",
+      "recruit": "Ich suche ein Profil",
       "candidate": "Ich bin Kandidat"
     },
     "doorsBottom": {
@@ -8946,7 +8946,7 @@
     "offers": {
       "title": "Was Aegryn anbietet",
       "recruit": {
-        "title": "Rekrutierung von Schlüsselprofilen",
+        "title": "Auswahl von Schlüsselprofilen",
         "desc": "Eine Suche bis zur Integration, für eine dauerhafte Position.",
         "cta": "Entdecken"
       },
@@ -8965,7 +8965,7 @@
       "title": "In jeder Lebenszyklusphase",
       "desc": "Die zu besetzenden Funktionen ändern sich mit der Phase: Diese Tabelle zeigt typische Profile für Dauerstellen und Übergangsmandate.",
       "colCycle": "Phase",
-      "colRecruit": "Rekrutieren (Dauerstelle)",
+      "colRecruit": "Auswählen (Dauerstelle)",
       "colTransition": "Übergang (befristetes Mandat)",
       "decisionLink": "Die Entscheidung in dieser Phase",
       "needLink": "Mein Bedarf",
@@ -8999,19 +8999,19 @@
     },
     "demand": {
       "title": "Wo die Nachfrage liegt",
-      "note": "Keine öffentliche Quelle listet die gesuchtesten Führungspositionen in der Schweiz. Hier steht, was die verfügbaren Quellen sagen – mit Umfang und Datum.",
+      "note": "Keine öffentliche Quelle listet die gesuchtesten Führungspositionen in der Schweiz. Hier steht, was die verfügbaren Schweizer und europäischen Quellen sagen, mit Umfang und Datum.",
       "cards": [
         {
-          "stat": "305 800",
-          "desc": "geplante Führungskräfte-Rekrutierungen 2026 (+4 % ggü. 2025). Top-Funktionen: Informatiker (61 160), Studien & F&E (52 000), Vertrieb (51 990).",
-          "source": "Apec, Rekrutierungsprognosen Führungskräfte 2026, Frankreich",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2,3 %",
+          "desc": "Quote offener Stellen im Euroraum im 1. Quartal 2026 (2,4 % ein Jahr zuvor); 2,1 % in der EU.",
+          "source": "Eurostat, Quote offener Stellen Q1 2026, Euroraum und EU",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7 %",
-          "desc": "der Unternehmen planen im Q3 2026 mindestens eine Führungskraft einzustellen – tiefster Stand seit Jahren; 42 % der Midcaps und Grossunternehmen.",
-          "source": "Apec, Barometer Q3 2026, Frankreich",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3,4 %",
+          "desc": "Quote offener Stellen in Belgien im 1. Quartal 2026, gegenüber 2,7 % in Deutschland und 0,9 % in Spanien: Die Anspannung ist von Land zu Land sehr unterschiedlich.",
+          "source": "Eurostat, Q1 2026, EU-Länder",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0,2 %",
@@ -9065,12 +9065,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Schlüsselprofil rekrutieren | Aegryn Talent",
+        "title": "Schlüsselprofil auswählen | Aegryn Talent",
         "desc": "Eine Führungskräfte- und Expertensuche bis zur Integration: Rahmung, Direktansprache, Auswahl, Begleitung der ersten 100 Tage."
       },
       "hero": {
         "label": "Für Unternehmen",
-        "title": "Ein Schlüsselprofil wird wie eine strategische Entscheidung rekrutiert.",
+        "title": "Ein Schlüsselprofil wird wie eine strategische Entscheidung ausgewählt.",
         "desc": "Wir führen die Suche bis zur Integration des Profils, mit vorab vereinbarten Vertraulichkeitsregeln.",
         "cta": "Mein Bedarf"
       },
@@ -9098,7 +9098,7 @@
       },
       "transitionTeaser": {
         "title": "Brauchen Sie jetzt eine Führungskraft?",
-        "desc": "Ein Übergangsprofil kann die Funktion innert Wochen übernehmen, bis die Dauerbesetzung gefunden ist.",
+        "desc": "Ein Übergangsprofil kann die Funktion innert Wochen übernehmen, bis die Dauerbesetzung ausgewählt ist.",
         "cta": "Übergangsprofile"
       }
     },
@@ -9110,7 +9110,7 @@
       "hero": {
         "label": "Übergangsprofile",
         "title": "Eine operative Führungskraft, innert Wochen.",
-        "desc": "Für Momente, in denen die Organisation kein langes Rekrutierungsverfahren abwarten kann: plötzlicher Abgang, Restrukturierung, Integration, Transformation oder Übergabe.",
+        "desc": "Für Momente, in denen die Organisation kein langes Auswahlverfahren abwarten kann: plötzlicher Abgang, Restrukturierung, Integration, Transformation oder Übergabe.",
         "ctaNeed": "Mein Bedarf"
       },
       "situations": {
@@ -9205,7 +9205,7 @@
         "items": [
           {
             "title": "Festanstellungen",
-            "desc": "Direkteinstellungen von Führungskräften, Managern und Schlüsselexperten, vom Top-Management bis zu Expertenfunktionen, je nach Lebenszyklus des Unternehmens."
+            "desc": "Auswahl von Führungskräften, Managern und Schlüsselexperten für eine Dauerstelle, vom Top-Management bis zu Expertenfunktionen, je nach Lebenszyklus des Unternehmens."
           },
           {
             "title": "Übergangsmandate",
@@ -9303,7 +9303,7 @@
         "submitting": "Wird gesendet...",
         "success": "Vielen Dank. Ihr Mandat wurde registriert. Wir kontaktieren Sie innerhalb von 2 Arbeitstagen.",
         "successMessage": "Vielen Dank. Ihre Anfrage wurde registriert. Wir kontaktieren Sie innerhalb von 2 Arbeitstagen.",
-        "title": "Rekrutierungsmandat starten",
+        "title": "Auswahlmandat starten",
         "urgency": "Dringlichkeit",
         "urgencyFlexible": "Flexibel",
         "urgencyImmediate": "Sofort (< 1 Monat)",

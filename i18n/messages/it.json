@@ -8795,19 +8795,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Reclutamento di profili chiave & transizione | Aegryn Talent",
-      "desc": "Aegryn recluta dirigenti ed esperti e colloca profili di transizione, in ogni fase del ciclo di vita dell’impresa."
+      "title": "Selezione di profili chiave & transizione | Aegryn Talent",
+      "desc": "Aegryn seleziona dirigenti ed esperti e colloca profili di transizione, in ogni fase del ciclo di vita dell’impresa."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "Il profilo giusto, in ogni fase del ciclo di vita dell’impresa.",
-      "desc": "Aegryn recluta dirigenti ed esperti e colloca profili di transizione, quando l’impresa nasce, cresce, si ristruttura, acquisisce o si trasmette.",
+      "desc": "Aegryn seleziona dirigenti ed esperti e colloca profili di transizione, quando l’impresa nasce, cresce, si ristruttura, acquisisce o si trasmette.",
       "trust1": "Risposta entro 2 giorni lavorativi",
       "trust2": "Nessun profilo trasmesso senza il consenso del candidato.",
       "imageAlt": "Stretta di mano tra due partner, accordo siglato"
     },
     "doors": {
-      "recruit": "Devo reclutare",
+      "recruit": "Cerco un profilo",
       "candidate": "Sono candidato"
     },
     "doorsBottom": {
@@ -8816,7 +8816,7 @@
     "offers": {
       "title": "Cosa propone Aegryn",
       "recruit": {
-        "title": "Reclutamento di profili chiave",
+        "title": "Selezione di profili chiave",
         "desc": "Una ricerca condotta fino all’integrazione, per un ruolo duraturo.",
         "cta": "Scopri"
       },
@@ -8835,7 +8835,7 @@
       "title": "In ogni fase del ciclo di vita",
       "desc": "Le funzioni da ricoprire cambiano con la fase: questa tabella mostra i profili tipici in ruolo duraturo e in missione di transizione.",
       "colCycle": "Fase",
-      "colRecruit": "Reclutare (ruolo duraturo)",
+      "colRecruit": "Selezionare (ruolo duraturo)",
       "colTransition": "Inserire in transizione (missione a durata definita)",
       "decisionLink": "La decisione in questa fase",
       "needLink": "Presentare il mio bisogno",
@@ -8869,19 +8869,19 @@
     },
     "demand": {
       "title": "Dove si trova la domanda",
-      "note": "Nessuna fonte pubblica classifica le posizioni dirigenziali più ricercate in Svizzera. Ecco cosa dicono le fonti disponibili, con perimetro e data.",
+      "note": "Nessuna fonte pubblica classifica le posizioni dirigenziali più ricercate in Svizzera. Ecco cosa dicono le fonti svizzere ed europee disponibili, con perimetro e data.",
       "cards": [
         {
-          "stat": "305 800",
-          "desc": "assunzioni di quadri previste nel 2026 (+4 % vs 2025). Funzioni in testa: informatici (61 160), studi e R&S (52 000), commerciali (51 990).",
-          "source": "Apec, previsioni assunzioni quadri 2026, Francia",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2,3%",
+          "desc": "tasso di posti vacanti nell’area euro nel 1° trimestre 2026 (2,4% un anno prima); 2,1% nell’UE.",
+          "source": "Eurostat, tasso di posti vacanti T1 2026, area euro e UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7 %",
-          "desc": "delle imprese prevede di assumere almeno un quadro nel T3 2026, livello minimo da anni; 42 % delle ETI e grandi imprese.",
-          "source": "Apec, barometro T3 2026, Francia",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3,4%",
+          "desc": "tasso di posti vacanti in Belgio nel 1° trimestre 2026, contro il 2,7% in Germania e lo 0,9% in Spagna: la tensione varia molto da un paese all’altro.",
+          "source": "Eurostat, T1 2026, paesi dell’UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0,2 %",
@@ -8935,12 +8935,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Reclutare un profilo chiave | Aegryn Talent",
+        "title": "Selezionare un profilo chiave | Aegryn Talent",
         "desc": "Una ricerca di dirigenti ed esperti condotta fino all’integrazione: inquadramento, approccio diretto, selezione, monitoraggio dei primi 100 giorni."
       },
       "hero": {
         "label": "Per le aziende",
-        "title": "Un profilo chiave si recluta come una decisione strategica.",
+        "title": "Un profilo chiave si seleziona come una decisione strategica.",
         "desc": "Conduciamo la ricerca fino all’integrazione del profilo, con regole di riservatezza concordate in anticipo.",
         "cta": "Presentare il mio bisogno"
       },
@@ -8968,7 +8968,7 @@
       },
       "transitionTeaser": {
         "title": "Serve un dirigente subito?",
-        "desc": "Un profilo di transizione può assumere la funzione in poche settimane, il tempo di reclutare il titolare.",
+        "desc": "Un profilo di transizione può assumere la funzione in poche settimane, il tempo di selezionare il titolare.",
         "cta": "Profili di transizione"
       }
     },
@@ -8980,7 +8980,7 @@
       "hero": {
         "label": "Profili di transizione",
         "title": "Un dirigente operativo, in poche settimane.",
-        "desc": "Per i momenti in cui l’organizzazione non può attendere un reclutamento lungo: uscita improvvisa, ristrutturazione, integrazione, trasformazione o passaggio di consegne.",
+        "desc": "Per i momenti in cui l’organizzazione non può attendere una selezione lunga: uscita improvvisa, ristrutturazione, integrazione, trasformazione o passaggio di consegne.",
         "ctaNeed": "Presentare il mio bisogno"
       },
       "situations": {
@@ -9075,7 +9075,7 @@
         "items": [
           {
             "title": "Posizioni permanenti",
-            "desc": "Assunzioni dirette di dirigenti, manager ed esperti chiave, dal top management alle funzioni esperte, secondo il ciclo di vita dell'impresa."
+            "desc": "Selezione di dirigenti, manager ed esperti chiave per un ruolo duraturo, dal top management alle funzioni esperte, secondo il ciclo di vita dell’impresa."
           },
           {
             "title": "Incarichi di transizione",
@@ -9173,7 +9173,7 @@
         "submitting": "Invio in corso...",
         "success": "Grazie. Il tuo mandato è stato registrato. Ti contatteremo entro 2 giorni lavorativi.",
         "successMessage": "Grazie. La tua richiesta è stata registrata. Ti contatteremo entro 2 giorni lavorativi.",
-        "title": "Avvia un mandato di reclutamento",
+        "title": "Avvia un mandato di selezione",
         "urgency": "Urgenza",
         "urgencyFlexible": "Flessibile",
         "urgencyImmediate": "Immediato (< 1 mese)",

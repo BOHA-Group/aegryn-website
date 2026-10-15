@@ -8795,19 +8795,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Key hires & transition profiles | Aegryn Talent",
-      "desc": "Aegryn recruits executives and experts, and places transition profiles, at every stage of the company lifecycle."
+      "title": "Key profile selection & transition | Aegryn Talent",
+      "desc": "Aegryn selects executives and experts, and places transition profiles, at every stage of the company lifecycle."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "The right profile, at every stage of the company lifecycle.",
-      "desc": "Aegryn recruits executives and experts, and places transition profiles, when the company launches, grows, restructures, acquires or transfers.",
+      "desc": "Aegryn selects executives and experts, and places transition profiles, when the company launches, grows, restructures, acquires or transfers.",
       "trust1": "Reply within 2 business days",
       "trust2": "No profile shared without the candidate’s consent.",
       "imageAlt": "Handshake between two partners, deal sealed"
     },
     "doors": {
-      "recruit": "I’m hiring",
+      "recruit": "I’m looking for a profile",
       "candidate": "I’m a candidate"
     },
     "doorsBottom": {
@@ -8816,7 +8816,7 @@
     "offers": {
       "title": "What Aegryn offers",
       "recruit": {
-        "title": "Key profile recruitment",
+        "title": "Key profile selection",
         "desc": "A search carried through to integration, for a lasting role.",
         "cta": "Discover"
       },
@@ -8835,7 +8835,7 @@
       "title": "At every lifecycle stage",
       "desc": "The roles to fill change with the stage: this table shows typical profiles for lasting positions and transition assignments.",
       "colCycle": "Stage",
-      "colRecruit": "Hire (lasting role)",
+      "colRecruit": "Select (lasting role)",
       "colTransition": "Place in transition (fixed-duration assignment)",
       "decisionLink": "The decision at this stage",
       "needLink": "Present my need",
@@ -8869,19 +8869,19 @@
     },
     "demand": {
       "title": "Where the demand is",
-      "note": "No public source ranks the most sought-after executive roles in Switzerland. Here is what the available sources say, with their scope and date.",
+      "note": "No public source ranks the most sought-after executive roles in Switzerland. Here is what the available Swiss and European sources say, with their scope and date.",
       "cards": [
         {
-          "stat": "305,800",
-          "desc": "executive hires forecast for 2026 (+4% vs 2025). Top functions: IT specialists (61,160), research & R&D (52,000), sales executives (51,990).",
-          "source": "Apec, 2026 executive hiring forecasts, France",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2.3%",
+          "desc": "job vacancy rate in the euro area in Q1 2026 (2.4% a year earlier); 2.1% in the EU.",
+          "source": "Eurostat, job vacancy rate Q1 2026, euro area and EU",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7%",
-          "desc": "of companies plan to hire at least one executive in Q3 2026, the lowest level in years; 42% of mid-caps and large companies.",
-          "source": "Apec, Q3 2026 barometer, France",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3.4%",
+          "desc": "job vacancy rate in Belgium in Q1 2026, against 2.7% in Germany and 0.9% in Spain: tension varies widely from one country to another.",
+          "source": "Eurostat, Q1 2026, EU countries",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0.2%",
@@ -8935,12 +8935,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Hire a key profile | Aegryn Talent",
+        "title": "Select a key profile | Aegryn Talent",
         "desc": "An executive and expert search carried through to integration: framing, direct approach, selection, first-100-days follow-up."
       },
       "hero": {
         "label": "For companies",
-        "title": "A key profile is hired like a strategic decision.",
+        "title": "A key profile is selected like a strategic decision.",
         "desc": "We run the search through to the profile’s integration, with confidentiality rules agreed upfront.",
         "cta": "Present my need"
       },
@@ -8968,7 +8968,7 @@
       },
       "transitionTeaser": {
         "title": "Need an executive now?",
-        "desc": "A transition profile can take the seat within weeks, while you recruit the permanent hire.",
+        "desc": "A transition profile can take the seat within weeks, while you select the permanent hire.",
         "cta": "Transition profiles"
       }
     },
@@ -8980,7 +8980,7 @@
       "hero": {
         "label": "Transition profiles",
         "title": "An operational executive, within weeks.",
-        "desc": "For the moments when the organisation cannot wait for a long recruitment: sudden departure, restructuring, integration, transformation or handover.",
+        "desc": "For the moments when the organisation cannot wait for a long selection process: sudden departure, restructuring, integration, transformation or handover.",
         "ctaNeed": "Present my need"
       },
       "situations": {
@@ -9075,7 +9075,7 @@
         "items": [
           {
             "title": "Permanent positions",
-            "desc": "Direct hires of executives, managers and key experts, from top management to expert functions, according to the company's lifecycle."
+            "desc": "Selection of executives, managers and key experts for a lasting role, from top management to expert functions, according to the company’s lifecycle."
           },
           {
             "title": "Transition assignments",
@@ -9173,7 +9173,7 @@
         "submitting": "Sending...",
         "success": "Thank you. Your mandate has been registered. We will contact you within 2 business days.",
         "successMessage": "Thank you. Your request has been registered. We will contact you within 2 business days.",
-        "title": "Launch a recruitment mandate",
+        "title": "Launch a selection mandate",
         "urgency": "Urgency",
         "urgencyFlexible": "Flexible",
         "urgencyImmediate": "Immediate (< 1 month)",

@@ -8795,19 +8795,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Werving van sleutelprofielen & overgang | Aegryn Talent",
-      "desc": "Aegryn werft leidinggevenden en experts en plaatst overgangsprofielen, in elke levensfase van het bedrijf."
+      "title": "Selectie van sleutelprofielen & overgang | Aegryn Talent",
+      "desc": "Aegryn selecteert leidinggevenden en experts en plaatst overgangsprofielen, in elke levensfase van het bedrijf."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "Het juiste profiel, in elke levensfase van het bedrijf.",
-      "desc": "Aegryn werft leidinggevenden en experts en plaatst overgangsprofielen wanneer het bedrijf start, groeit, herstructureert, overneemt of wordt overgedragen.",
+      "desc": "Aegryn selecteert leidinggevenden en experts en plaatst overgangsprofielen wanneer het bedrijf start, groeit, herstructureert, overneemt of wordt overgedragen.",
       "trust1": "Antwoord binnen 2 werkdagen",
       "trust2": "Geen profiel wordt doorgegeven zonder toestemming van de kandidaat.",
       "imageAlt": "Handdruk tussen twee partners, deal bezegeld"
     },
     "doors": {
-      "recruit": "Ik werv",
+      "recruit": "Ik zoek een profiel",
       "candidate": "Ik ben kandidaat"
     },
     "doorsBottom": {
@@ -8816,7 +8816,7 @@
     "offers": {
       "title": "Wat Aegryn biedt",
       "recruit": {
-        "title": "Werving van sleutelprofielen",
+        "title": "Selectie van sleutelprofielen",
         "desc": "Een zoektocht tot aan de integratie, voor een duurzame functie.",
         "cta": "Ontdekken"
       },
@@ -8835,7 +8835,7 @@
       "title": "In elke levensfase",
       "desc": "De in te vullen functies veranderen met de fase: deze tabel toont typische profielen voor duurzame functies en overgangsmandates.",
       "colCycle": "Fase",
-      "colRecruit": "Werven (duurzame functie)",
+      "colRecruit": "Selecteren (duurzame functie)",
       "colTransition": "Plaatsen in overgang (tijdelijk mandaat)",
       "decisionLink": "De beslissing in deze fase",
       "needLink": "Mijn behoefte",
@@ -8869,19 +8869,19 @@
     },
     "demand": {
       "title": "Waar de vraag zit",
-      "note": "Geen openbare bron rangschikt de meest gezochte leiderschapsposities in Zwitserland. Dit is wat de beschikbare bronnen zeggen, met omvang en datum.",
+      "note": "Geen openbare bron rangschikt de meest gezochte leiderschapsposities in Zwitserland. Dit is wat de beschikbare Zwitserse en Europese bronnen zeggen, met omvang en datum.",
       "cards": [
         {
-          "stat": "305 800",
-          "desc": "verwachte aanwervingen van kaderleden in 2026 (+4 % t.o.v. 2025). Topfuncties: informatici (61 160), onderzoek & R&D (52 000), commercieel (51 990).",
-          "source": "Apec, aanwervingsprognoses kaderleden 2026, Frankrijk",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2,3%",
+          "desc": "vacaturegraad in het eurogebied in Q1 2026 (2,4% een jaar eerder); 2,1% in de EU.",
+          "source": "Eurostat, vacaturegraad Q1 2026, eurogebied en EU",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7 %",
-          "desc": "van de bedrijven overweegt in Q3 2026 minstens één kaderlid aan te werven, laagste niveau in jaren; 42 % van de midcaps en grote ondernemingen.",
-          "source": "Apec, barometer Q3 2026, Frankrijk",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3,4%",
+          "desc": "vacaturegraad in België in Q1 2026, tegenover 2,7% in Duitsland en 0,9% in Spanje: de spanning verschilt sterk van land tot land.",
+          "source": "Eurostat, Q1 2026, EU-landen",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0,2 %",
@@ -8935,12 +8935,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Sleutelprofiel werven | Aegryn Talent",
+        "title": "Sleutelprofiel selecteren | Aegryn Talent",
         "desc": "Een zoektocht naar leidinggevenden en experts tot aan de integratie: kadering, directe benadering, selectie, monitoring van de eerste 100 dagen."
       },
       "hero": {
         "label": "Voor bedrijven",
-        "title": "Een sleutelprofiel wordt geworven als een strategische beslissing.",
+        "title": "Een sleutelprofiel wordt geselecteerd als een strategische beslissing.",
         "desc": "Wij voeren de zoektocht tot aan de integratie van het profiel, met vooraf afgesproken vertrouwelijkheidsregels.",
         "cta": "Mijn behoefte"
       },
@@ -8968,7 +8968,7 @@
       },
       "transitionTeaser": {
         "title": "Nu een leidinggevende nodig?",
-        "desc": "Een overgangsprofiel kan de functie binnen enkele weken overnemen, terwijl u de vaste invulling werft.",
+        "desc": "Een overgangsprofiel kan de functie binnen enkele weken overnemen, terwijl u de vaste invulling selecteert.",
         "cta": "Overgangsprofielen"
       }
     },
@@ -8980,7 +8980,7 @@
       "hero": {
         "label": "Overgangsprofielen",
         "title": "Een operationele leidinggevende, binnen enkele weken.",
-        "desc": "Voor momenten waarop de organisatie geen lange werving kan afwachten: plotseling vertrek, herstructurering, integratie, transformatie of overdracht.",
+        "desc": "Voor momenten waarop de organisatie geen lange selectie kan afwachten: plotseling vertrek, herstructurering, integratie, transformatie of overdracht.",
         "ctaNeed": "Mijn behoefte"
       },
       "situations": {
@@ -9075,7 +9075,7 @@
         "items": [
           {
             "title": "Vaste functies",
-            "desc": "Directe aanwerving van leidinggevenden, managers en sleutelexperts, van topmanagement tot expertfuncties, afhankelijk van de levensfase van het bedrijf."
+            "desc": "Selectie van leidinggevenden, managers en sleutelexperts voor een duurzame functie, van topmanagement tot expertfuncties, afhankelijk van de levensfase van het bedrijf."
           },
           {
             "title": "Transitie-opdrachten",
@@ -9173,7 +9173,7 @@
         "submitting": "Verzenden...",
         "success": "Bedankt. Uw mandaat is geregistreerd. Wij nemen binnen 2 werkdagen contact met u op.",
         "successMessage": "Bedankt. Uw aanvraag is geregistreerd. Wij nemen binnen 2 werkdagen contact met u op.",
-        "title": "Recruteringsmandaat starten",
+        "title": "Selectiemandaat starten",
         "urgency": "Urgentie",
         "urgencyFlexible": "Flexibel",
         "urgencyImmediate": "Onmiddellijk (< 1 maand)",

@@ -8755,19 +8755,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Recrutement de profils clés & transition | Aegryn Talent",
-      "desc": "Aegryn recrute des dirigeants et des experts, et place des profils de transition, à chaque cycle de vie de l’entreprise."
+      "title": "Sélection de profils clés & transition | Aegryn Talent",
+      "desc": "Aegryn sélectionne des dirigeants et des experts, et place des profils de transition, à chaque cycle de vie de l’entreprise."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "Le bon profil, à chaque cycle de vie de l’entreprise.",
-      "desc": "Aegryn recrute des dirigeants et des experts, et place des profils de transition, quand l’entreprise lance, grandit, se restructure, acquiert ou se transmet.",
+      "desc": "Aegryn sélectionne des dirigeants et des experts, et place des profils de transition, quand l’entreprise lance, grandit, se restructure, acquiert ou se transmet.",
       "trust1": "Réponse sous 2 jours ouvrés",
       "trust2": "Aucun profil transmis sans l’accord du candidat.",
       "imageAlt": "Poignée de main entre deux partenaires, accord scellé"
     },
     "doors": {
-      "recruit": "Je recrute",
+      "recruit": "Je cherche un profil",
       "candidate": "Je suis candidat"
     },
     "doorsBottom": {
@@ -8776,7 +8776,7 @@
     "offers": {
       "title": "Ce que propose Aegryn",
       "recruit": {
-        "title": "Recrutement de profils clés",
+        "title": "Sélection de profils clés",
         "desc": "Une recherche conduite jusqu’à l’intégration, pour un poste durable.",
         "cta": "Découvrir"
       },
@@ -8795,7 +8795,7 @@
       "title": "À chaque cycle de vie",
       "desc": "Les fonctions à pourvoir changent avec le cycle : ce tableau montre les profils typiques en poste durable et en mission de transition.",
       "colCycle": "Cycle",
-      "colRecruit": "Recruter (poste durable)",
+      "colRecruit": "Sélectionner (poste durable)",
       "colTransition": "Placer en transition (mission de durée définie)",
       "decisionLink": "La décision à ce cycle",
       "needLink": "Présenter mon besoin",
@@ -8829,19 +8829,19 @@
     },
     "demand": {
       "title": "Où se trouve la demande",
-      "note": "Aucune source publique ne classe les postes de direction les plus recherchés en Suisse. Voici ce que disent les sources disponibles, avec leur périmètre et leur date.",
+      "note": "Aucune source publique ne classe les postes de direction les plus recherchés en Suisse. Voici ce que disent les sources suisses et européennes disponibles, avec leur périmètre et leur date.",
       "cards": [
         {
-          "stat": "305 800",
-          "desc": "recrutements de cadres prévus en 2026 (+4 % vs 2025). Fonctions en tête : informaticiens (61 160), études et R&D (52 000), commerciaux (51 990).",
-          "source": "Apec, prévisions de recrutements de cadres 2026, France",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2,3 %",
+          "desc": "de taux de postes vacants dans la zone euro au T1 2026 (2,4 % un an plus tôt) ; 2,1 % dans l’UE.",
+          "source": "Eurostat, taux de postes vacants T1 2026, zone euro et UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7 %",
-          "desc": "des entreprises envisagent de recruter au moins un cadre au T3 2026, plus bas niveau depuis plusieurs années ; 42 % des ETI et grandes entreprises.",
-          "source": "Apec, baromètre T3 2026, France",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3,4 %",
+          "desc": "de taux de postes vacants en Belgique au T1 2026, contre 2,7 % en Allemagne et 0,9 % en Espagne : la tension varie fortement d’un pays à l’autre.",
+          "source": "Eurostat, T1 2026, pays de l’UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0,2 %",
@@ -8895,12 +8895,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Recruter un profil clé | Aegryn Talent",
+        "title": "Sélectionner un profil clé | Aegryn Talent",
         "desc": "Une recherche de dirigeants et d’experts conduite jusqu’à l’intégration : cadrage, approche directe, sélection, suivi des 100 premiers jours."
       },
       "hero": {
         "label": "Pour les entreprises",
-        "title": "Un profil clé se recrute comme une décision stratégique.",
+        "title": "Un profil clé se sélectionne comme une décision stratégique.",
         "desc": "Nous conduisons la recherche jusqu’à l’intégration du profil, avec des règles de confidentialité convenues d’avance.",
         "cta": "Présenter mon besoin"
       },
@@ -8928,7 +8928,7 @@
       },
       "transitionTeaser": {
         "title": "Besoin d’un dirigeant maintenant ?",
-        "desc": "Un profil de transition peut prendre la fonction en quelques semaines, le temps de recruter le titulaire.",
+        "desc": "Un profil de transition peut prendre la fonction en quelques semaines, le temps de sélectionner le titulaire.",
         "cta": "Profils de transition"
       }
     },
@@ -8940,7 +8940,7 @@
       "hero": {
         "label": "Profils de transition",
         "title": "Un dirigeant opérationnel, en quelques semaines.",
-        "desc": "Pour les moments où l’organisation ne peut pas attendre un recrutement long : départ soudain, restructuration, intégration, transformation ou passage de relais.",
+        "desc": "Pour les moments où l’organisation ne peut pas attendre une sélection longue : départ soudain, restructuration, intégration, transformation ou passage de relais.",
         "ctaNeed": "Présenter mon besoin"
       },
       "situations": {
@@ -9035,7 +9035,7 @@
         "items": [
           {
             "title": "Postes permanents",
-            "desc": "Recrutement en propre de dirigeants, de managers et d'experts clés, du top management aux fonctions expertes, selon le cycle de vie de l'entreprise."
+            "desc": "Sélection de dirigeants, de managers et d’experts clés pour un poste durable, du top management aux fonctions expertes, selon le cycle de vie de l’entreprise."
           },
           {
             "title": "Missions de transition",
@@ -9122,7 +9122,7 @@
         "companySize": "Taille (CA)",
         "companySizePlaceholder": "Ex : 12 M CHF, 80 collaborateurs",
         "confidential": "Recherche confidentielle (le nom de l’entreprise n’est pas communiqué aux candidats sans accord)",
-        "title": "Lancer un mandat de recrutement",
+        "title": "Lancer un mandat de sélection",
         "desc": "Décrivez le profil que vous recherchez. Nous vous recontacterons sous 2 jours ouvrés.",
         "company": "Entreprise",
         "companyPlaceholder": "Nom de votre entreprise",

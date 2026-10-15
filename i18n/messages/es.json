@@ -8795,19 +8795,19 @@
   },
   "talent": {
     "meta": {
-      "title": "Reclutamiento de perfiles clave & transición | Aegryn Talent",
-      "desc": "Aegryn recluta directivos y expertos y coloca perfiles de transición en cada fase del ciclo de vida de la empresa."
+      "title": "Selección de perfiles clave & transición | Aegryn Talent",
+      "desc": "Aegryn selecciona directivos y expertos y coloca perfiles de transición en cada fase del ciclo de vida de la empresa."
     },
     "hero": {
       "label": "Aegryn Talent",
       "title": "El perfil adecuado, en cada fase del ciclo de vida de la empresa.",
-      "desc": "Aegryn recluta directivos y expertos y coloca perfiles de transición cuando la empresa nace, crece, se reestructura, adquiere o se transmite.",
+      "desc": "Aegryn selecciona directivos y expertos y coloca perfiles de transición cuando la empresa nace, crece, se reestructura, adquiere o se transmite.",
       "trust1": "Respuesta en 2 días laborables",
       "trust2": "Ningún perfil se transmite sin el consentimiento del candidato.",
       "imageAlt": "Apretón de manos entre dos socios, acuerdo sellado"
     },
     "doors": {
-      "recruit": "Quiero reclutar",
+      "recruit": "Busco un perfil",
       "candidate": "Soy candidato"
     },
     "doorsBottom": {
@@ -8816,7 +8816,7 @@
     "offers": {
       "title": "Qué propone Aegryn",
       "recruit": {
-        "title": "Reclutamiento de perfiles clave",
+        "title": "Selección de perfiles clave",
         "desc": "Una búsqueda conducida hasta la integración, para un puesto duradero.",
         "cta": "Descubrir"
       },
@@ -8835,7 +8835,7 @@
       "title": "En cada fase del ciclo de vida",
       "desc": "Las funciones por cubrir cambian con la fase: esta tabla muestra los perfiles típicos en puesto duradero y en misión de transición.",
       "colCycle": "Fase",
-      "colRecruit": "Reclutar (puesto duradero)",
+      "colRecruit": "Seleccionar (puesto duradero)",
       "colTransition": "Colocar en transición (misión de duración definida)",
       "decisionLink": "La decisión en esta fase",
       "needLink": "Presentar mi necesidad",
@@ -8869,19 +8869,19 @@
     },
     "demand": {
       "title": "Dónde está la demanda",
-      "note": "Ninguna fuente pública clasifica los puestos directivos más buscados en Suiza. Esto es lo que dicen las fuentes disponibles, con su perímetro y fecha.",
+      "note": "Ninguna fuente pública clasifica los puestos directivos más buscados en Suiza. Esto es lo que dicen las fuentes suizas y europeas disponibles, con su perímetro y fecha.",
       "cards": [
         {
-          "stat": "305 800",
-          "desc": "contrataciones de cuadros previstas en 2026 (+4 % vs 2025). Funciones en cabeza: informáticos (61 160), estudios e I+D (52 000), comerciales (51 990).",
-          "source": "Apec, previsiones de contratación de cuadros 2026, Francia",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/quels-sont-les-cadres-qui-seront-les-plus-recrutes-en-2026-.html"
+          "stat": "2,3 %",
+          "desc": "tasa de vacantes en la zona euro en el T1 2026 (2,4 % un año antes); 2,1 % en la UE.",
+          "source": "Eurostat, tasa de vacantes T1 2026, zona euro y UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
-          "stat": "7 %",
-          "desc": "de las empresas prevén contratar al menos un cuadro en el T3 2026, nivel más bajo en años; 42 % de las ETI y grandes empresas.",
-          "source": "Apec, barómetro T3 2026, Francia",
-          "url": "https://www.apec.fr/tendances-emploi-cadre/recrutement-et-pratiques-rh/recrutement-de-cadres-au-3e-trimestre-2026-l-attentisme-s-installe.html"
+          "stat": "3,4 %",
+          "desc": "tasa de vacantes en Bélgica en el T1 2026, frente al 2,7 % en Alemania y el 0,9 % en España: la tensión varía mucho de un país a otro.",
+          "source": "Eurostat, T1 2026, países de la UE",
+          "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-16062026-ap"
         },
         {
           "stat": "−0,2 %",
@@ -8935,12 +8935,12 @@
     },
     "entreprises": {
       "meta": {
-        "title": "Reclutar un perfil clave | Aegryn Talent",
+        "title": "Seleccionar un perfil clave | Aegryn Talent",
         "desc": "Una búsqueda de directivos y expertos conducida hasta la integración: encuadre, aproximación directa, selección, seguimiento de los primeros 100 días."
       },
       "hero": {
         "label": "Para empresas",
-        "title": "Un perfil clave se recluta como una decisión estratégica.",
+        "title": "Un perfil clave se selecciona como una decisión estratégica.",
         "desc": "Conducimos la búsqueda hasta la integración del perfil, con reglas de confidencialidad acordadas de antemano.",
         "cta": "Presentar mi necesidad"
       },
@@ -8968,7 +8968,7 @@
       },
       "transitionTeaser": {
         "title": "¿Necesita un directivo ahora?",
-        "desc": "Un perfil de transición puede asumir la función en pocas semanas, el tiempo de reclutar al titular.",
+        "desc": "Un perfil de transición puede asumir la función en pocas semanas, el tiempo de seleccionar al titular.",
         "cta": "Perfiles de transición"
       }
     },
@@ -8980,7 +8980,7 @@
       "hero": {
         "label": "Perfiles de transición",
         "title": "Un directivo operativo, en pocas semanas.",
-        "desc": "Para los momentos en que la organización no puede esperar un reclutamiento largo: salida repentina, reestructuración, integración, transformación o relevo.",
+        "desc": "Para los momentos en que la organización no puede esperar una selección larga: salida repentina, reestructuración, integración, transformación o relevo.",
         "ctaNeed": "Presentar mi necesidad"
       },
       "situations": {
@@ -9075,7 +9075,7 @@
         "items": [
           {
             "title": "Puestos permanentes",
-            "desc": "Contratación directa de directivos, managers y expertos clave, de la alta dirección a las funciones expertas, según el ciclo de vida de la empresa."
+            "desc": "Selección de directivos, managers y expertos clave para un puesto duradero, de la alta dirección a las funciones expertas, según el ciclo de vida de la empresa."
           },
           {
             "title": "Misiones de transición",
@@ -9173,7 +9173,7 @@
         "submitting": "Enviando...",
         "success": "Gracias. Tu mandato ha sido registrado. Te contactaremos en 2 días laborables.",
         "successMessage": "Gracias. Tu solicitud ha sido registrada. Te contactaremos en 2 días laborables.",
-        "title": "Lanzar un mandato de reclutamiento",
+        "title": "Lanzar un mandato de selección",
         "urgency": "Urgencia",
         "urgencyFlexible": "Flexible",
         "urgencyImmediate": "Inmediato (< 1 mes)",
