@@ -8,6 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/supabaseServer'
 import { createServiceClient } from '@/lib/supabase'
 import { sendEmail } from '@/lib/sendEmail'
+import { getNdaNotifyEmail } from '@/lib/nda/config'
 
 export const runtime = 'nodejs'
 
@@ -25,6 +26,6 @@ export async function POST(req: NextRequest) {
   const link = `${site}/admin/nda?${new URLSearchParams({ new: '1', name, email: user.email, role, project: role === 'partner' ? `Partenaire, ${name}` : `Certification CIFSO, ${name}` }).toString()}`
 
   const html = `<p>${esc(name)} (${esc(user.email)}) demande son NDA depuis l'espace client (profil : ${role}).</p><p><a href="${link}">Préparer le NDA (brouillon, envoi manuel)</a></p>`
-  await sendEmail(process.env.AEGRYN_INTERNAL_EMAIL ?? 'contact@boha-group.com', `[NDA demandé] ${name}`, html, 'nda-request')
+  await sendEmail(getNdaNotifyEmail(), `[NDA demandé] ${name}`, html, 'nda-request')
   return NextResponse.json({ ok: true })
 }

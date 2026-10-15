@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { sendEmail } from '@/lib/sendEmail'
+import { getNdaNotifyEmail } from '@/lib/nda/config'
 import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
 import { Aegryn_ASSETS } from '@/data/assets'
@@ -63,7 +64,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: `${process.env.RESEND_FROM_NAME ?? 'Aegryn'} <${fromEmail}>`,
-        to: [internalTo],
+        to: [...new Set([internalTo, ...(data.ndaRequested ? [getNdaNotifyEmail()] : [])])],
         reply_to: data.email,
         subject: `[Aegryn]${data.ndaRequested ? ' [NDA projet]' : ''} ${SUBJECT_LABEL_FR[data.subject] ?? data.subject} - ${data.name}`,
         text: `

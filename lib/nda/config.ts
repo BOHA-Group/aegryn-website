@@ -24,6 +24,9 @@ export function getAegrynSignatory(): { name: string; title: string } {
   }
 }
 
+/** Destinataire des notifications NDA (copies signées, demandes) : le compte admin qui gère les NDA */
+export const getNdaNotifyEmail = () => process.env.NDA_NOTIFY_EMAIL?.trim() || 'admin@boha-group.com'
+
 export const NDA_DEFAULT_TERM_YEARS = 5
 export const NDA_LINK_VALIDITY_DAYS = 14
 export const NDA_BUCKET = 'nda-signed'

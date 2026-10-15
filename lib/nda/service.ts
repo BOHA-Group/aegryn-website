@@ -10,7 +10,7 @@
 import { createHash, randomBytes } from 'crypto'
 import { createServiceClient } from '@/lib/supabase'
 import { sendEmail } from '@/lib/sendEmail'
-import { AEGRYN_PARTY, NDA_BUCKET, NDA_LINK_VALIDITY_DAYS, NDA_TEMPLATE_VERSION, getAegrynSignatory } from './config'
+import { AEGRYN_PARTY, NDA_BUCKET, NDA_LINK_VALIDITY_DAYS, NDA_TEMPLATE_VERSION, getAegrynSignatory, getNdaNotifyEmail } from './config'
 import { ndaContentHash, renderNda, type NdaBlock, type NdaLang, type NdaRole, type NdaVars } from './template'
 import { buildSignedNdaPdf } from './pdf'
 import { ndaInternalEmail, ndaInvitationEmail, ndaLink, ndaSignedEmail } from './emails'
@@ -276,7 +276,7 @@ export async function signNda(token: string, input: { signedName: string; ip: st
         ...base, email: signed.email, company: signed.company, roles: signed.roles, signedAtIso: now, ip: input.ip,
         pdfSha256: pdf.sha, adminUrl: `${(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')}/admin/nda/${a.id}`,
       })
-      await sendEmail(process.env.AEGRYN_INTERNAL_EMAIL ?? 'contact@boha-group.com', internal.subject, internal.html, 'nda-internal', attachment)
+      await sendEmail(getNdaNotifyEmail(), internal.subject, internal.html, 'nda-internal', attachment)
     } catch (e) {
       console.error('[nda] email', e)
     }
