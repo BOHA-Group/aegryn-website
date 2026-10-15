@@ -167,7 +167,7 @@ export default async function RoadmapPage({ params }: Props) {
                 return (
                   <div key={i} className="relative pb-8 last:pb-0">
                     <span className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full border-2 border-ag-border bg-ag-off-white" />
-                    <div className="bg-ag-white border border-ag-border p-6 flex gap-5 opacity-80 hover:opacity-100 transition-opacity">
+                    <div className="bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 opacity-80 hover:opacity-100 transition-opacity">
                       <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0">
                         <Icon size={15} className="text-ag-gray-light" strokeWidth={1.5} />
                       </div>

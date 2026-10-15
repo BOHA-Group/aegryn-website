@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import {
@@ -97,12 +97,43 @@ function FanCards({
   t: ReturnType<typeof useTranslations>
 }) {
   const [hovered, setHovered] = useState<number | null>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(1200)
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    const ro = new ResizeObserver(() => setWidth(el.getBoundingClientRect().width))
+    ro.observe(el); setWidth(el.getBoundingClientRect().width)
+    return () => ro.disconnect()
+  }, [])
   const n = domains.length
   const SPREAD   = 60
-  const SHIFT_PX = 150
+  /* L'éventail s'adapte à la largeur disponible (8 cartes de 160 px) ; sous 720 px : grille de cartes. */
+  const SHIFT_PX = Math.min(150, Math.max(40, (width - 160 - 24) / (n - 1)))
+
+  if (width < 720) {
+    return (
+      <div ref={wrapRef} className="grid grid-cols-2 gap-3">
+        {domains.map(({ Icon, domainKey, color }) => {
+          const isActive = activeDomain === domainKey
+          return (
+            <button
+              key={domainKey}
+              onClick={() => onSelect(domainKey)}
+              className="flex flex-col items-start gap-2 rounded-xl bg-white p-4 text-left"
+              style={{ border: `1.5px solid ${isActive ? color + 'cc' : color + '40'}`, boxShadow: isActive ? `0 0 0 2px ${color}80` : undefined }}
+            >
+              <span className="flex h-9 w-9 items-center justify-center rounded-full" style={{ background: `${color}18`, border: `1px solid ${color}35` }}><Icon size={16} style={{ color }} /></span>
+              <span className="text-[13px] font-bold leading-tight text-ag-black">{t(`domains.${domainKey}`)}</span>
+            </button>
+          )
+        })}
+      </div>
+    )
+  }
 
   return (
-    <div style={{ position: 'relative', height: 300, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'visible' }}>
+    <div ref={wrapRef} style={{ position: 'relative', height: 300, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'visible' }}>
       {domains.map(({ Icon, domainKey, color }, i) => {
         const rotDeg    = -SPREAD / 2 + (i / (n - 1)) * SPREAD
         const arcY      = Math.abs(rotDeg) * 1.4

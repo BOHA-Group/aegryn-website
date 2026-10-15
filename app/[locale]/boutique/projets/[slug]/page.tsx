@@ -351,7 +351,7 @@ export default async function AssetPage({ params }: Props) {
             </p>
 
             {/* 3 items sur la même ligne — centrés */}
-            <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
 
               {/* 1 — Logo partenaire */}
               <div className="shrink-0 flex flex-col gap-3">
@@ -422,7 +422,7 @@ export default async function AssetPage({ params }: Props) {
 
       {/* CTA strip */}
       <section className="bg-ag-navy py-28 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
           <div>
             <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cta.label')}</p>
             <h2
@@ -432,7 +432,7 @@ export default async function AssetPage({ params }: Props) {
               {t('cta.title')}
             </h2>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:shrink-0">
             <Link
               href="/what-we-build"
               className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"

@@ -46,7 +46,7 @@ export function ArticleStrip({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative">
-      <div ref={ref} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
+      <div ref={ref} className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-pl-6 pb-4 -mx-6 px-6 md:mx-0 md:scroll-pl-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
         {children}
       </div>
       <div aria-hidden="true" className={`pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-ag-white to-transparent transition-opacity duration-300 ${canLeft ? 'opacity-100' : 'opacity-0'}`} />

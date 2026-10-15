@@ -274,8 +274,8 @@ export default function Footer() {
 
           {/* Advisory CTA — macaron contact */}
           <div className="relative">
-            {/* Médaillon dans la colonne vide à droite sous lg, sous le texte sur desktop */}
-            <div className="absolute left-full top-1/2 -translate-y-1/2 ml-6 lg:static lg:translate-y-0 lg:ml-0 lg:mt-0">
+            {/* Médaillon contact */}
+            <div>
               <FooterMedallion
                 medallionText={t('medallionText')}
                 contactLabel={t('contactLabel')}
