@@ -102,3 +102,13 @@ export function br(text: string, minLength = 36): string {
   const rest = text.slice(cut).trim()
   return rest.length < 10 ? text : `${text.slice(0, cut).trim()}\n${rest}`
 }
+
+/** Titre du hero sur deux lignes, comme le titre de l'accueil du cabinet. */
+export const H1_LINES: Record<'fr' | 'en' | 'de' | 'es' | 'it' | 'nl', [string, string]> = {
+  fr: ['La boutique entrepreneuriale', 'de projets signature.'],
+  en: ['The entrepreneurial boutique', 'for signature projects.'],
+  de: ['Die unternehmerische Boutique', 'für Signature-Projekte.'],
+  es: ['La boutique emprendedora', 'de proyectos insignia.'],
+  it: ['La boutique imprenditoriale', 'dei progetti signature.'],
+  nl: ['De ondernemende boutique', 'voor signatuurprojecten.'],
+}

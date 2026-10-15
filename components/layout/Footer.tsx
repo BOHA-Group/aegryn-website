@@ -236,16 +236,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/grade/submit" className="text-sm text-white/70 hover:text-white transition-colors">
-                  {t('col2Grade')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/verify" className="text-sm text-white/70 hover:text-white transition-colors">
-                  {t('col2Verify')}
-                </Link>
-              </li>
-              <li>
                 <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Subblink')}
                 </a>

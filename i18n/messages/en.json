@@ -1836,7 +1836,7 @@
     },
     "experts": {
       "label": "ADVISORY TECH : OPERATIONAL",
-      "desc": "Aegryn Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of a digital asset: before, during, or independently of any transaction.",
+      "desc": "Aegryn Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of an organisation and its assets: before, during, or independently of any transaction.",
       "items": [
         {
           "title": "Security Audit & Cybersecurity",

@@ -116,6 +116,7 @@ const STATUS_COLOR: Record<string, string> = {
 
 export function ProprietaryAssetsGrid() {
   const t      = useTranslations('assets.page')
+  const tFooter = useTranslations('footer')
   const tItems = useTranslations('assets.items')
   const [active, setActive] = useState<PropCategory>('all')
   const gridRef = useRef<HTMLDivElement>(null)
@@ -221,7 +222,8 @@ export function ProprietaryAssetsGrid() {
                 ))}
               </div>
 
-              {/* Actions */}
+              {/* Actions : bloc de hauteur commune, le premier lien reste aligné d'une fiche à l'autre */}
+              <div className="flex min-h-[3.75rem] flex-col gap-2">
               <div className="flex items-center gap-4 pt-2">
                 {asset.internalOnly ? (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none">
@@ -256,6 +258,15 @@ export function ProprietaryAssetsGrid() {
                     {t('visitSite')} <ExternalLink size={11} />
                   </a>
                 )}
+              </div>
+              {asset.id === 'cifso' && (
+                <Link
+                  href={'/verify' as never}
+                  className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1"
+                >
+                  {tFooter('col2Verify')} <ArrowUpRight size={11} />
+                </Link>
+              )}
               </div>
             </div>
           ))}

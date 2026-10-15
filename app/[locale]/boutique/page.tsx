@@ -11,6 +11,7 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
+import { TypedTitle } from '@/components/boutique/TypedTitle'
 import { ProjectCard } from '@/components/sections/assets/ProjectCard'
 import Image from 'next/image'
 import { ArticleCard } from '@/components/sections/ArticleCard'
@@ -19,7 +20,7 @@ import { AllArticlesButton } from '@/components/sections/AllArticlesButton'
 import { ARTICLE_CATEGORIES } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
-import { BOUTIQUE, br } from '@/content/boutique/copy'
+import { BOUTIQUE, H1_LINES, br } from '@/content/boutique/copy'
 import { SF_UI } from '@/content/boutique/savoirFaire'
 import { Aegryn_ASSETS } from '@/data/assets'
 import { BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE, TRENDS_SIGNALS_ARTICLE } from '@/data/articles-home-2026'
@@ -63,22 +64,20 @@ export default async function BoutiquePage({ params }: Props) {
   return (
     <main>
       {/* Hero : patchwork vidéo sur le tempo de la musique, sous la barre de navigation transparente */}
-      <section data-nav-hero className="relative -mt-16 h-[calc(100svh+4rem)] min-h-[700px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
+      <section data-nav-hero className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
         <HeroPatchwork />
         <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/90 via-ag-navy/20 to-ag-navy/45" />
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="mx-auto px-6 md:px-12 max-w-7xl px-6 pb-16 md:px-12 md:pb-20">
-            <p className="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.label[lang]}</p>
-            <h1
+            <TypedTitle
               id="boutique-title"
-              className="max-w-4xl font-sans font-bold leading-[1.05] tracking-[-0.03em] text-white text-balance"
-              style={{ fontSize: 'clamp(34px,4.8vw,68px)', textShadow: '0 2px 24px rgba(0,0,0,0.35)' }}
-            >
-              {BOUTIQUE.h1[lang]}
-            </h1>
-            <p className="mt-6 font-sans text-[clamp(18px,1.8vw,24px)] font-semibold tracking-[-0.01em] text-ag-apex">{BOUTIQUE.signature[lang]}</p>
-            <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-white/85">{BOUTIQUE.sub[lang]}</p>
-            <div className="mt-9 flex flex-wrap gap-3">
+              line1={H1_LINES[lang][0]}
+              line2={H1_LINES[lang][1]}
+              className="mb-8 max-w-4xl font-sans font-bold leading-[1.15] tracking-[-0.03em] text-white"
+              style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
+            />
+            <p className="max-w-2xl text-[16px] leading-relaxed text-white/85"><span className="font-semibold text-ag-apex">{BOUTIQUE.signature[lang]}</span> {BOUTIQUE.sub[lang]}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link href={{ pathname: '/contact', query: { subject: 'project' } }} className="rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white">
                 {BOUTIQUE.cta1[lang]}
               </Link>
