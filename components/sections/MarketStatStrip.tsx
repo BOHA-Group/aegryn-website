@@ -60,7 +60,7 @@ export function MarketStatStrip() {
   }, [])
 
   return (
-    <section ref={ref} className="py-20 bg-ag-off-white border-t border-ag-border">
+    <section ref={ref} className="py-20 bg-ag-off-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-12">

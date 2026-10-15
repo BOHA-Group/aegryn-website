@@ -89,12 +89,12 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
   const featuredArticles = ARTICLES.filter(a => a.featured)
 
   return (
-    <section ref={ref} id="informer" className="bg-ag-white border-t border-ag-border mt-20 scroll-mt-20">
+    <section ref={ref} id="informer" className="bg-ag-white mt-20 scroll-mt-20">
 
       {/* ── Bloc 1 : Teaser Magazine — fidèle au modèle Barnes ── */}
       <div
         ref={magRef}
-        className="relative overflow-hidden border-b border-ag-border flex flex-col md:justify-center"
+        className="relative overflow-hidden flex flex-col md:justify-center"
         style={{ background: '#F5F2EE', minHeight: 560 }}
       >
         {/* Card texte — dans le flux : le bloc grandit avec le contenu,

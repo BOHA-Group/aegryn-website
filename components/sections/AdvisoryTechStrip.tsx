@@ -36,7 +36,7 @@ export function AdvisoryTechStrip() {
   }, [])
 
   return (
-    <section ref={ref} id="cadrer" className="bg-ag-white border-t border-ag-border scroll-mt-20">
+    <section ref={ref} id="cadrer" className="bg-ag-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
 
         {/* Header */}

@@ -37,9 +37,9 @@ export function SegmentsSection() {
   }, [])
 
   return (
-    <section ref={ref} className="border-t border-ag-border bg-ag-white py-20 md:py-28">
+    <section ref={ref} className="bg-ag-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between border-b border-ag-border pb-4 mb-12">
+        <div className="flex items-center justify-between pb-4 mb-12">
           <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
             / {t('label')}
           </span>

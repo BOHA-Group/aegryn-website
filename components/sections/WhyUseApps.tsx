@@ -65,9 +65,9 @@ export function WhyUseApps() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="border-t border-ag-border bg-ag-off-white">
+    <section ref={sectionRef} className="bg-ag-off-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between border-b border-ag-border py-4">
+        <div className="flex items-center justify-between py-4">
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
             / {t('label')}
           </p>
