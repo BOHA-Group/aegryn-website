@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { ARTICLES }    from '@/data/articles'
 import { INDUSTRIES }  from '@/data/industries'
-import { Aegryn_ASSETS } from '@/data/assets'
+import { Aegryn_ASSETS, assetPath } from '@/data/assets'
 import { routing }     from '@/i18n/routing'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
@@ -60,7 +60,7 @@ const STATIC_ROUTES = [
   // ── Network ──────────────────────────────────────────────────────────────────
   // ── Assets & Portfolio ───────────────────────────────────────────────────────
   { path: '/assets',                             priority: 0.8,  changeFrequency: 'weekly'  as const },
-  { path: '/portfolio',                          priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/boutique/projets',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Services ─────────────────────────────────────────────────────────────────
   { path: '/services/acquisition-support',       priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/services/build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
@@ -135,7 +135,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Actifs propriétaires × 6 locales
   for (const asset of Aegryn_ASSETS.filter(a => a.id !== 'kryv')) {
-    pushLocalized(entries, `/assets/${asset.slug}`, {
+    pushLocalized(entries, assetPath(asset.slug), {
       lastModified:    now,
       changeFrequency: 'monthly',
       priority:        0.7,

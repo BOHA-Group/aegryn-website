@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateAegrynMetadata({
     title: t('title'),
     description: t('desc'),
-    path: '/portfolio',
+    path: '/boutique/projets',
     locale,
     image: '/images/portfolio/hero-stars.jpg',
   })

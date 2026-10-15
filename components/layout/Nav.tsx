@@ -212,7 +212,7 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
 // La Boutique : découvrir / passer à l'action
 const BOUTIQUE_DISCOVER_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'boutiqueConcept',  href: '/boutique' },
-  { labelKey: 'boutiqueProjects', href: '/portfolio' as LinkHref },
+  { labelKey: 'boutiqueProjects', href: '/boutique/projets' as LinkHref },
   { labelKey: 'boutiqueForWho',   href: { pathname: '/boutique', hash: 'pour-qui' } as LinkHref },
   { labelKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
 ]
@@ -467,7 +467,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isThinkingActive =
     isActive('/magazine') || isActive('/blog')
 
-  const isPortfolioActive = isActive('/boutique') || isActive('/portfolio')
+  const isPortfolioActive = isActive('/boutique')
 
   /* Pages à hero vidéo plein cadre : barre transparente, fond blanc progressif au scroll */
   const heroPage = pathname === '/' || pathname === '/boutique'

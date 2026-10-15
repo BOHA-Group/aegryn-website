@@ -120,7 +120,7 @@ Software assets designed, built and operated by Aegryn, available under direct a
 - **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory
 
 Each asset: "An Aegryn company."
-Pages: /assets (proprietary ecosystem), /portfolio (group participations)
+Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblematic projects)
 
 ## Advisory — Five Pillars (https://aegryn.com/advisory)
 

@@ -87,7 +87,7 @@ Software assets designed, built and operated by Aegryn. Available under direct a
 - **Data Room** — Secure data room dedicated to CIFSO certification evidence — access restricted to admin, assigned CIFSO audit partners and the asset owner. A separate acquisition/cession data room for M&A mandates is being structured. RLS, dynamic watermarking, full audit trail, AI-exposure evidence tracking. Licensable.
 
 Each asset carries the tagline: "An Aegryn company."
-Pages: /assets (proprietary ecosystem), /portfolio (group participations)
+Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblematic projects)
 
 ## Core Activities
 
@@ -243,7 +243,7 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 
 ### Build & Assets
 - [Assets](https://aegryn.com/fr/assets) — Proprietary digital ecosystem
-- [Portfolio](https://aegryn.com/fr/portfolio) — Group participations (Subblink, Neediu, Primiom, Movtoo, Hobconnect)
+- [Portfolio](https://aegryn.com/fr/boutique/projets) — Group participations (Subblink, Neediu, Primiom, Movtoo, Hobconnect)
 - [Asset Engineering](https://aegryn.com/fr/services/build) — Custom build for third parties
 - [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal services
 

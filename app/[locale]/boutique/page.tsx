@@ -11,7 +11,7 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
-import Image from 'next/image'
+import { ProjectCard } from '@/components/sections/assets/ProjectCard'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
 import { BOUTIQUE } from '@/content/boutique/copy'
 import { SF_UI } from '@/content/boutique/savoirFaire'
@@ -88,7 +88,7 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      <ScrollZoomVideo src="/videos/boutique/09-statue-of-liberty.mp4" caption={BOUTIQUE.bandCaption[lang]} />
+      <ScrollZoomVideo src="/videos/boutique/statue-of-liberty-full.mp4" srcMobile="/videos/boutique/statue-of-liberty-full-m.mp4" caption={BOUTIQUE.bandCaption[lang]} />
 
       {/* La méthode */}
       <section className="bg-white py-28 md:py-36">
@@ -128,20 +128,11 @@ export default async function BoutiquePage({ params }: Props) {
       <section id="projets" className="scroll-mt-24 bg-white py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.projectsLabel[lang]}</h2>
-          <div className="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map(p => (
-              <Link key={p.id} href={`/assets/${p.slug}` as never} className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ag-off-white">
-                  {p.image && (
-                    <Image src={p.image} alt="" fill sizes="(min-width:1024px) 400px, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.05]" />
-                  )}
-                </div>
-                <p className="mt-4 font-sans text-[22px] font-bold capitalize tracking-[-0.015em] text-ag-black">{p.name}</p>
-              </Link>
-            ))}
+          <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {projects.map(p => <ProjectCard key={p.id} asset={p} showDetails={false} />)}
           </div>
           <div className="mt-14">
-            <Link href="/portfolio" className="font-sans text-[15px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4 hover:text-ag-apex-ink">
+            <Link href={'/boutique/projets' as never} className="font-sans text-[15px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4 hover:text-ag-apex-ink">
               {BOUTIQUE.projectsAll[lang]} →
             </Link>
           </div>

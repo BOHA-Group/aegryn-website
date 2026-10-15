@@ -49,7 +49,7 @@ Aegryn designs, funds and operates its own portfolio of digital assets AND build
 - KYB/KYC Engine — Business onboarding and identity verification. KYB, beneficial owners, sanctions, credentials. Licensable.
 - Data Room — Secure data room dedicated to CIFSO certification evidence (access: admin, assigned CIFSO audit partners, asset owner). A separate acquisition/cession data room for M&A mandates is being structured. RLS, watermarking, audit trail, AI-exposure evidence tracking. Licensable.
 
-Pages: /assets (proprietary ecosystem), /portfolio (group participations)
+Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblematic projects)
 
 **Custom build for third parties** (Asset Engineering service):
 - Price agreed at discovery — no scope creep
@@ -294,8 +294,8 @@ Incorporated: Aegryn, Switzerland
 | Talent — Transition | /fr/talent/transition | Interim and transition profiles |
 | Experts | /fr/experts | Expert network & partner certifications |
 | Assets | /fr/assets | Proprietary ecosystem |
-| Asset detail | /fr/assets/[slug] | Per-asset page |
-| Portfolio | /fr/portfolio | Group participations |
+| Asset detail | /fr/boutique/projets/[slug] | Per-project page |
+| Portfolio | /fr/boutique/projets | Group participations |
 | Build Services | /fr/services/build | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
 | Magazine | /fr/magazine | Magazine hub (English) |

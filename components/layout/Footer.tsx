@@ -118,7 +118,7 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
 
 const boutiqueLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'boutiqueConcept',  href: '/boutique' },
-  { navKey: 'boutiqueProjects', href: '/portfolio' as LinkHref },
+  { navKey: 'boutiqueProjects', href: '/boutique/projets' as LinkHref },
   { navKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
   { navKey: 'boutiqueSubmit',   href: { pathname: '/contact', query: { subject: 'project' } } as LinkHref },
 ]

@@ -6,13 +6,14 @@
  *   sinon au premier clic, toucher ou touche du visiteur.
  * - Se poursuit pendant la navigation entre les pages de La Boutique (le fournisseur
  *   vit dans le layout /boutique) et s'arrête dès qu'on quitte cet espace.
+ * - Le bouton reste visible sur toutes les pages de La Boutique. Le choix « coupé » vaut
+ *   pour la navigation en cours : un rafraîchissement du navigateur relance la musique.
  * - Expose une horloge (`getTime`) : temps de lecture de la piste, ou un minuteur de
  *   secours tant que le son n'est pas lancé, pour caler les visuels sur le tempo.
  */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { BOUTIQUE_TEMPO } from '@/content/boutique/clips'
 
-const STORAGE_KEY = 'aegryn-boutique-sound'
 const VOLUME = 0.4
 const L: Record<string, { on: string; off: string; label: string }> = {
   fr: { on: 'Activer la musique', off: 'Couper la musique', label: 'Son' },
@@ -50,19 +51,18 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
     try {
       a.volume = 0
       await a.play()
-      setPlaying(true); localStorage.setItem(STORAGE_KEY, 'on'); rampTo(VOLUME)
+      setPlaying(true); rampTo(VOLUME)
       return true
     } catch { return false }
   }, [rampTo])
 
   const stop = useCallback(() => {
     rampTo(0, () => audioRef.current?.pause())
-    setPlaying(false); localStorage.setItem(STORAGE_KEY, 'off')
+    setPlaying(false)
   }, [rampTo])
 
   useEffect(() => {
     t0.current = performance.now()
-    if (localStorage.getItem(STORAGE_KEY) === 'off') return
     let armed = true
     const onGesture = async () => { if (armed && await start()) cleanup() }
     const cleanup = () => { armed = false; ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.removeEventListener(e, onGesture)) }

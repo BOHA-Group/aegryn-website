@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
-import { Aegryn_ASSETS } from '@/data/assets'
+import { Aegryn_ASSETS, assetPath } from '@/data/assets'
 import { useTranslations } from 'next-intl'
 
 const STATUS_DOT_CONFIG = {
@@ -160,7 +160,7 @@ export function AssetCarousel() {
           return (
             <Link
               key={asset.id}
-              href={`/assets/${asset.slug}` as never}
+              href={assetPath(asset.slug) as never}
               className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 md:border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
               style={{ minHeight: '420px' }}
             >

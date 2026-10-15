@@ -289,3 +289,6 @@ export const ASSET_CATEGORIES = {
   lifestyle:    { label: 'Services & Lifestyle',  en: 'Services & Lifestyle' },
   transactions: { label: 'Marchés & Communautés', en: 'Markets & Communities' },
 } as const
+
+/** Chemin public d'une fiche : les projets vivent dans La Boutique, subblink reste un actif propriétaire du cabinet. */
+export const assetPath = (slug: string) => (slug === 'subblink' ? `/assets/${slug}` : `/boutique/projets/${slug}`)

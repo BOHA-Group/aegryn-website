@@ -25,7 +25,6 @@ type Props = {
  */
 export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: Props) {
   const wrapRef  = useRef<HTMLDivElement>(null)
-  const veilRef  = useRef<HTMLDivElement>(null)
   const mediaRef = useRef<HTMLDivElement>(null)
   const imgRef   = useRef<HTMLDivElement>(null)
   const [animated, setAnimated] = useState(false)
@@ -39,7 +38,7 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
 
   useEffect(() => {
     if (!animated) return
-    if (!wrapRef.current || !mediaRef.current || !imgRef.current || !veilRef.current) return
+    if (!wrapRef.current || !mediaRef.current || !imgRef.current) return
 
     const ctx = gsap.context(() => {
       const st = {
@@ -70,11 +69,6 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
         { scale: 1, ease: 'none', scrollTrigger: st },
       )
 
-      /* Voile navy progressif sur la photo : le texte blanc reste lisible à mesure qu'elle s'étend */
-      gsap.fromTo(veilRef.current,
-        { opacity: 0.3 },
-        { opacity: 0.62, ease: 'none', scrollTrigger: { trigger: wrapRef.current, start: 'top top', end: '55% bottom', scrub: true } },
-      )
     }, wrapRef)
 
     return () => ctx.revert()
@@ -88,11 +82,11 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
       </p>
       <h2
         className={`font-sans font-bold leading-[1.05] tracking-[-0.03em] mb-6 ${light ? 'text-white' : 'text-ag-black'}`}
-        style={{ fontSize: 'clamp(26px,3vw,44px)', ...(light ? { textShadow: '0 1px 16px rgba(5,15,35,0.4)' } : {}) }}
+        style={{ fontSize: 'clamp(26px,3vw,44px)', ...(light ? { textShadow: '0 1px 4px rgba(5,15,35,0.55), 0 2px 24px rgba(5,15,35,0.55)' } : {}) }}
       >
         {title}
       </h2>
-      <p className={`font-sans text-[15px] max-w-xl mb-10 leading-relaxed ${light ? 'text-white/90' : 'text-ag-gray'}`}>
+      <p className={`font-sans text-[15px] max-w-xl mb-10 leading-relaxed ${light ? 'text-white' : 'text-ag-gray'}`} style={light ? { textShadow: '0 1px 4px rgba(5,15,35,0.6), 0 1px 18px rgba(5,15,35,0.5)' } : undefined}>
         {sub}
       </p>
       <Link
@@ -145,7 +139,6 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
               className="object-cover object-center"
             />
           </div>
-          <div ref={veilRef} className="absolute inset-0 bg-ag-navy" />
           {/* Copie blanche du texte, découpée par le même clip-path que la photo :
               elle n'apparaît qu'aux endroits recouverts par l'image zoomée. */}
           <div className="absolute inset-0 flex items-center max-lg:items-start" aria-hidden="true">

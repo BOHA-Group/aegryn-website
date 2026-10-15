@@ -142,6 +142,13 @@ const nextConfig: NextConfig = {
       { source: '/:locale(fr|en|de|es|it|nl)/glossaire',                   destination: '/:locale/help/faq',                permanent: true },
       { source: '/blog/glossaire-ma-tech-europe',       destination: '/blog',                            permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/blog/glossaire-ma-tech-europe', destination: '/:locale/blog',                  permanent: true },
+      /* Projets : /portfolio et /assets/<projet> migrent vers La Boutique (subblink reste un actif du cabinet) */
+      { source: '/portfolio',                           destination: '/boutique/projets',               permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/portfolio',               destination: '/:locale/boutique/projets',       permanent: true },
+      { source: '/assets/:slug(neediu|movtoo|primiom|hobconnect|heritix|chrosium|insertdry)',  destination: '/boutique/projets/:slug',         permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/assets/:slug(neediu|movtoo|primiom|hobconnect|heritix|chrosium|insertdry)', destination: '/:locale/boutique/projets/:slug', permanent: true },
+      { source: '/boutique/projets/subblink',            destination: '/assets/subblink',                permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/boutique/projets/subblink', destination: '/:locale/assets/subblink',       permanent: true },
       /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
          Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },

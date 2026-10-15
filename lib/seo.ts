@@ -320,7 +320,7 @@ export const aegrynOrganizationSchema = {
     {
       '@type':       'NewsArticle',
       name:          'neediu — Paru dans Gala, 27 novembre 2025',
-      url:           `${BASE_URL}/fr/assets/neediu`,
+      url:           `${BASE_URL}/fr/boutique/projets/neediu`,
       datePublished: '2025-11-27',
       isPartOf:      { '@type': 'Periodical', name: 'Gala', issn: '1163-5053' },
       about:         { '@type': 'SoftwareApplication', name: 'neediu', applicationCategory: 'LifestyleApplication' },
@@ -419,7 +419,7 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 6,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/accompagner/acquisition` },
     { '@type': 'ListItem', position: 7,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/accompagner/transmission` },
     { '@type': 'ListItem', position: 8,  name: 'Réseau d\'experts',             url: `${BASE_URL}/fr/experts` },
-    { '@type': 'ListItem', position: 9,  name: 'Portfolio',                     url: `${BASE_URL}/fr/portfolio` },
+    { '@type': 'ListItem', position: 9,  name: 'Portfolio',                     url: `${BASE_URL}/fr/boutique/projets` },
     { '@type': 'ListItem', position: 10, name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },
     { '@type': 'ListItem', position: 11, name: 'Certification CIFSO 5000',      url: `${BASE_URL}/fr/grade` },
     { '@type': 'ListItem', position: 12, name: 'Brochure CIFSO 5000',           url: `${BASE_URL}/fr/grade/brochure` },
