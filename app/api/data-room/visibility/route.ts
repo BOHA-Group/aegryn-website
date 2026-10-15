@@ -10,6 +10,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }        from '@/lib/supabase'
 import { getUser }                    from '@/lib/supabaseServer'
+import { hasSignedNda }               from '@/lib/nda/access'
 import type { DataRoomVisibility }    from '@/lib/dataRoom'
 
 const VALID_VISIBILITY: DataRoomVisibility[] = ['admin_only', 'assigned_partner', 'nda_buyers']
@@ -60,6 +61,9 @@ export async function PATCH(req: NextRequest) {
 
     if (!asset || profile.email !== asset.seller_email) {
       return NextResponse.json({ error: 'Accès interdit.' }, { status: 403 })
+    }
+    if (!(await hasSignedNda(profile.email, ['certification']))) {
+      return NextResponse.json({ error: 'NDA requis.' }, { status: 403 })
     }
   }
 

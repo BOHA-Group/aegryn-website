@@ -16,6 +16,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { PDFDocument, rgb, degrees } from 'pdf-lib'
 import { createServiceClient } from '@/lib/supabase'
 import { getUser } from '@/lib/supabaseServer'
+import { hasSignedNda } from '@/lib/nda/access'
 import { SIGNED_URL_EXPIRY_SECONDS, type DataRoomDocument } from '@/lib/dataRoom'
 
 export const runtime = 'nodejs'
@@ -181,7 +182,7 @@ async function checkAccess(
     .eq('id', doc.asset_id)
     .single() as { data: { seller_email: string } | null }
 
-  if (asset?.seller_email === profile.email) return true
+  if (asset?.seller_email === profile.email) return hasSignedNda(profile.email, ['certification'])
 
   /* Partenaire CIFSO assigné — data room de certification uniquement.
      Les tiers 'light_buyers' / 'nda_buyers' (hérités du périmètre enchères)
@@ -195,7 +196,7 @@ async function checkAccess(
       .eq('partner_id', userId)
       .in('status', ['assigned', 'in_review', 'submitted', 'validated'])
       .maybeSingle()
-    if (cert) return true
+    if (cert && await hasSignedNda(profile.email, ['partner'])) return true
   }
 
   return false

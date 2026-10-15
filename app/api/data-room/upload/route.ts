@@ -17,6 +17,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient }        from '@/lib/supabase'
 import { getUser }                    from '@/lib/supabaseServer'
+import { hasSignedNda }               from '@/lib/nda/access'
 import type { DataRoomCategory }      from '@/lib/dataRoom'
 import { refreshPrescore }            from '@/lib/prescoreServer'
 
@@ -86,6 +87,10 @@ export async function POST(req: NextRequest) {
   const isAdmin = profile.role === 'admin' || (profile.roles ?? []).some((r) => ['admin', 'super_admin'].includes(r))
   if (!isAdmin && profile.email !== asset.seller_email) {
     return NextResponse.json({ error: 'Accès interdit.' }, { status: 403 })
+  }
+
+  if (!isAdmin && !(await hasSignedNda(profile.email, ['certification']))) {
+    return NextResponse.json({ error: 'NDA requis avant de déposer des documents.' }, { status: 403 })
   }
 
   /* Chemin : data-room/{assetId}/{category}/{timestamp}_{fileName} */

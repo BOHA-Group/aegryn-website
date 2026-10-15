@@ -36,6 +36,11 @@ export async function getNdaAccess(email: string | null | undefined, anyOf: NdaR
   return { state: 'none' }
 }
 
+/** Vrai si l'e-mail a signé un NDA incluant au moins un des profils (verrou des API data room). */
+export async function hasSignedNda(email: string | null | undefined, anyOf: NdaRole[]): Promise<boolean> {
+  return (await getNdaAccess(email, anyOf)).state === 'signed'
+}
+
 /** NDA signés d'un e-mail (espace compte : copies PDF). */
 export async function listSignedNdas(email: string | null | undefined) {
   if (!email) return []
