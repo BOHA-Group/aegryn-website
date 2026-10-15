@@ -3,7 +3,7 @@
 /**
  * Bouton d'action vert « Où en êtes-vous ? » : onglet fixé au bord droit de l'accueil,
  * qui ouvre au clic un panneau avec les cinq questions (une par cycle de vie).
- * Apparaît dès que le hero est dépassé ; Échap ou clic hors du panneau le ferme.
+ * Apparaît uniquement face à la section « Cinq cycles » ; Échap ou clic hors du panneau le ferme.
  */
 import { useEffect, useState } from 'react'
 import { X, HelpCircle } from 'lucide-react'
@@ -23,11 +23,13 @@ export function DiagnosticLauncher({ title, questions, cycleTitle, locale }: Pro
   const [open, setOpen] = useState(false)
   const [shown, setShown] = useState(false)
 
+  /* Le bouton n'apparaît que face à la section « Cinq cycles » (cartes des cycles de vie). */
   useEffect(() => {
-    const onScroll = () => setShown(window.scrollY > window.innerHeight * 0.6)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const target = document.getElementById('cinq-cycles')
+    if (!target) return
+    const io = new IntersectionObserver(([e]) => setShown(e.isIntersecting), { rootMargin: '-15% 0px -15% 0px' })
+    io.observe(target)
+    return () => io.disconnect()
   }, [])
 
   useEffect(() => {
