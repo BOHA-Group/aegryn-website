@@ -157,21 +157,22 @@
     "craftRecruitHire": "Recruter un profil",
     "craftRecruitTransition": "Profils de transition",
     "craftRecruitPool": "Rejoindre le vivier",
-    "navPortfolio": "Portfolio"
+    "navPortfolio": "La Boutique"
   },
   "hero": {
-    "tagline": "La boutique entrepreneuriale de projets emblématiques.",
-    "metaDescription": "Aegryn, boutique entrepreneuriale de projets emblématiques. Nous cadrons, réalisons et accompagnons, pour nous, pour vous ou avec vous. Ancrée en Suisse, ouverte à l'international.",
-    "sub": "De l'idée au marché, puis dans la durée : cadrer, réaliser, accompagner. Pour nous, pour vous ou avec vous.",
+    "tagline": "Cabinet de conseil intégré, ancré en Suisse. Et La Boutique de projets emblématiques.",
+    "metaDescription": "Aegryn, cabinet de conseil intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer. Et La Boutique, pour les projets emblématiques.",
+    "sub": "Nous accompagnons les dirigeants de PME et d’ETI, jusqu’à CHF 300M de chiffre d’affaires, qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Conseil, actifs, talents, pilotage de projet : un cabinet de conseil intégré, ancré en Suisse.",
     "phrases": [
-      "Cadrer\nvotre projet.",
-      "Réaliser\navec les bons experts.",
+      "Cadrer\nvos décisions.",
+      "Réaliser\navec vous.",
       "Accompagner\nchaque cycle.",
       "Sélectionner\nles talents.",
       "S’informer\nsur le marché."
     ],
     "scroll": "Défiler",
-    "signature": "Rare par sélection. Discret par principe."
+    "signature": "Rare par sélection. Discret par principe.",
+    "cta": "Échanger 30 minutes"
   },
   "assets": {
     "title": "Nos outils. Votre infrastructure.",
@@ -265,7 +266,8 @@
         "badge": "Intelligence contractuelle",
         "tagline": "Nom public : subblink",
         "description": "Analyse tous vos contrats en quelques secondes grâce à une IA calibrée pour le droit suisse et européen. Risques, clauses critiques, obligations cachées : tout identifié en langage clair. Licenciable en marque blanche pour cabinets d'avocats, family offices et directions juridiques.",
-        "name": "Analyse risques contrats"
+        "name": "Analyse risques contrats",
+        "capability": "Analyser un contrat en 60 secondes avec une IA calibrée pour le droit suisse et européen"
       },
       "kryv": {
         "badge": "Intégrité du code IA",
@@ -1204,7 +1206,19 @@
           "Usage interne Aegryn : intelligence contractuelle sur tous nos mandats",
           "Code partenaire Village de la Justice : LEGI-4141-01",
           "API disponible pour intégration B2B"
-        ]
+        ],
+        "need": "Un contrat se signe vite et se relit mal : clauses déséquilibrées, risques cachés, négociation sans repères.",
+        "skills": [
+          "Développement de concept",
+          "Étude de faisabilité",
+          "Cadre légal & protection des données",
+          "Moteur d’analyse par IA",
+          "Benchmarks sectoriels anonymisés",
+          "Design d’expérience",
+          "Sécurité & souveraineté des données",
+          "Stratégie de lancement"
+        ],
+        "orgs": "Cabinets d’avocats, family offices et directions juridiques (licence en marque blanche), PME et entrepreneurs qui signent des contrats sans service juridique."
       },
       "neediu": {
         "longDesc": "Connecte les particuliers aux meilleurs prestataires de services à domicile. Ménage, jardinage, bricolage, baby-sitting : mise en relation intelligente basée sur la localisation et les avis vérifiés.",
@@ -1688,7 +1702,7 @@
       "subject": "Sujet",
       "subjectPlaceholder": "Choisir un sujet",
       "subjects": {
-        "project": "Soumettre un projet",
+        "project": "Travailler avec La Boutique",
         "cycle": "Accompagner un cycle",
         "profile": "Sélectionner un profil",
         "transition": "Mission de transition",
@@ -10738,5 +10752,13 @@
       "desc": "Banques, fonds, family offices et structures de financement associés aux dossiers de nos clients et aux organisations que nous accompagnons.",
       "note": "Les logos représentent nos partenaires actifs. Aegryn ne divulgue pas les termes des partenariats individuels."
     }
+  },
+  "homeDoors": {
+    "cabinetLabel": "Le cabinet",
+    "cabinetText": "Conseil intégré pour les dirigeants de PME et d’ETI : cadrer, réaliser, accompagner chaque cycle.",
+    "cabinetLink": "Découvrir nos métiers",
+    "boutiqueLabel": "La Boutique",
+    "boutiqueText": "Des projets signature, pour entrepreneurs, investisseurs et marques. Rare par sélection. Discret par principe.",
+    "boutiqueLink": "Entrer dans La Boutique"
   }
 }

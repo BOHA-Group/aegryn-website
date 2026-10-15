@@ -9,6 +9,7 @@ import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight } from 'lucide-rea
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
+import { AegrynLogo }    from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
 type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | null
@@ -443,7 +444,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isThinkingActive =
     isActive('/magazine') || isActive('/blog')
 
-  const isPortfolioActive = isActive('/portfolio')
+  const isPortfolioActive = isActive('/boutique') || isActive('/portfolio')
+
+  /* Pages à hero vidéo plein cadre : barre transparente, fond blanc progressif au scroll */
+  const heroPage = pathname === '/' || pathname === '/boutique'
 
   const isWhoActive =
     isActive('/about') ||
@@ -454,6 +458,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null)
   const [mobileAccordion, setMobileAccordion] = useState<DropdownKey>(null)
+  const [scrollP, setScrollP] = useState(0)
   
   const navRef    = useRef<HTMLElement>(null)
   const logoRef   = useRef<HTMLAnchorElement>(null)
@@ -508,6 +513,22 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     return () => ctx.revert()
   }, [mobileOpen])
 
+  useEffect(() => {
+    if (!heroPage) { setScrollP(1); return }
+    const update = () => {
+      const h = window.innerHeight
+      setScrollP(Math.min(1, Math.max(0, (window.scrollY - h * 0.3) / (h * 0.35))))
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
+  }, [heroPage])
+
+  /* Fond : transparent sur le hero, blanc dès que le menu est ouvert ou qu'on a défilé */
+  const barAlpha = !heroPage || activeDropdown !== null || mobileOpen ? 1 : scrollP
+  const onHero   = heroPage && barAlpha < 0.5
+
   const toggleMobileAccordion = (key: DropdownKey) =>
     setMobileAccordion(prev => (prev === key ? null : key))
 
@@ -531,19 +552,30 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           />
         )}
       </AnimatePresence>
-    <header ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-ag-white border-b border-ag-border">
+    <header
+      ref={navRef}
+      data-onhero={onHero ? 'true' : 'false'}
+      className={`fixed top-0 left-0 right-0 z-50 border-b ${heroPage ? '' : 'bg-ag-white border-ag-border'}`}
+      style={heroPage ? { backgroundColor: `rgba(255,255,255,${barAlpha})`, borderColor: `rgba(226,232,240,${barAlpha})`, transition: 'background-color 0.25s, border-color 0.25s' } : undefined}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link ref={logoRef} href="/" aria-label="AEGRYN | Accueil" className="block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
+        <Link ref={logoRef} href="/" aria-label="AEGRYN | Accueil" className="relative block hover:opacity-70 transition-opacity duration-200 shrink-0 leading-none">
           <Image
             src="/images/brand/logo-aegryn-navbar.jpg"
             alt="AEGRYN"
             width={64}
             height={64}
-            className="h-16 w-auto object-contain"
+            className="h-16 w-auto object-contain transition-opacity duration-300"
+            style={heroPage ? { opacity: barAlpha } : undefined}
             priority
           />
+          {heroPage && (
+            <span className="pointer-events-none absolute inset-0 flex items-center transition-opacity duration-300" style={{ opacity: 1 - barAlpha }} aria-hidden="true">
+              <AegrynLogo variant="full" onDark size={34} />
+            </span>
+          )}
         </Link>
 
         {/* Desktop nav */}
@@ -633,7 +665,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           {/* Portfolio */}
           <div className="nav-link-item relative flex items-center">
             <Link
-              href={'/portfolio' as LinkHref}
+              href={'/boutique' as LinkHref}
               className={`relative flex items-center font-mono font-semibold text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
                 isPortfolioActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
               }`}
@@ -646,9 +678,9 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         </nav>
 
         {/* Right side: locale + client + CTA */}
-        <div ref={rightRef} className="hidden lg:flex items-center gap-5">
+        <div ref={rightRef} data-nav-right className="hidden lg:flex items-center gap-5">
           {user && <NotificationBell />}
-          <LanguageSwitcher />
+          <LanguageSwitcher dark={onHero} />
 
           {user ? (
             <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
@@ -671,6 +703,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
         {/* Mobile toggle */}
         <button
+          data-nav-burger
           className="lg:hidden rounded-lg p-2 text-ag-gray hover:text-ag-black transition-colors"
           onClick={() => setMobileOpen(o => !o)}
           aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}

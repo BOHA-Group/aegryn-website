@@ -157,21 +157,22 @@
     "craftRecruitHire": "Profiel werven",
     "craftRecruitTransition": "Overgangsprofielen",
     "craftRecruitPool": "Deelnemen aan de pool",
-    "navPortfolio": "Portfolio"
+    "navPortfolio": "La Boutique"
   },
   "hero": {
-    "tagline": "De ondernemende boutique voor emblematische projecten.",
-    "metaDescription": "Aegryn, ondernemende boutique voor emblematische projecten. Wij kaderen, realiseren en begeleiden, voor onszelf, voor u of met u. Verankerd in Zwitserland, open naar de wereld.",
-    "sub": "Van idee tot markt, en daarna door de tijd: kaderen, realiseren, begeleiden. Voor onszelf, voor u of met u.",
+    "tagline": "Geïntegreerd adviesbureau, verankerd in Zwitserland. En La Boutique voor emblematische projecten.",
+    "metaDescription": "Aegryn, geïntegreerd adviesbureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven. En La Boutique, voor emblematische projecten.",
+    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen, tot CHF 300 mln omzet, die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Advies, assets, talent, projectleiding: een geïntegreerd adviesbureau, verankerd in Zwitserland.",
     "phrases": [
-      "Uw project\nkaderen.",
-      "Realiseren\nmet de juiste experts.",
+      "Uw beslissingen\nkaderen.",
+      "Realiseren\nmet u.",
       "Elke cyclus\nbegeleiden.",
       "Talent\nselecteren.",
       "Geïnformeerd blijven\nover de markt."
     ],
     "scroll": "Scrollen",
-    "signature": "Zeldzaam door selectie. Discreet uit principe."
+    "signature": "Zeldzaam door selectie. Discreet uit principe.",
+    "cta": "30 minuten praten"
   },
   "assets": {
     "title": "Ons eigen ecosysteem.",
@@ -265,7 +266,8 @@
         "badge": "Contractintelligentie",
         "tagline": "Publieke naam: subblink",
         "description": "Analyseert al uw contracten in seconden met AI gekalibreerd voor Zwitsers en Europees recht. Risico's, kritieke clausules, verborgen verplichtingen: alles geïdentificeerd in begrijpelijke taal. Licentieerbaar als white-label voor advocatenkantoren, family offices en juridische afdelingen.",
-        "name": "Contractuele risicoanalyse"
+        "name": "Contractuele risicoanalyse",
+        "capability": "Een contract in 60 seconden analyseren met een AI die is afgestemd op Zwitsers en Europees recht"
       },
       "kryv": {
         "badge": "AI-code-integriteit",
@@ -1263,7 +1265,19 @@
           "Intern gebruik bij Aegryn: contractuele intelligentie op alle mandaten",
           "Village de la Justice partnercode: LEGI-4141-01",
           "API beschikbaar voor B2B-integratie"
-        ]
+        ],
+        "need": "Een contract wordt snel getekend en slecht nagelezen: onevenwichtige clausules, verborgen risico’s, onderhandelen zonder referenties.",
+        "skills": [
+          "Conceptontwikkeling",
+          "Haalbaarheidsstudie",
+          "Juridisch kader en gegevensbescherming",
+          "AI-analysemotor",
+          "Geanonimiseerde sectorbenchmarks",
+          "Experience-design",
+          "Gegevensbeveiliging en soevereiniteit",
+          "Lanceringsstrategie"
+        ],
+        "orgs": "Advocatenkantoren, family offices en juridische afdelingen (white-label-licentie), kmo’s en ondernemers die contracten ondertekenen zonder eigen juridische dienst."
       },
       "neediu": {
         "longDesc": "Verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang: slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
@@ -1747,7 +1761,7 @@
       "subject": "Onderwerp",
       "subjectPlaceholder": "Kies een onderwerp",
       "subjects": {
-        "project": "Een project indienen",
+        "project": "Werken met La Boutique",
         "cycle": "Een cyclus begeleiden",
         "profile": "Een profiel selecteren",
         "transition": "Transitiemissie",
@@ -10738,5 +10752,13 @@
       "desc": "Banken, fondsen, family offices en financieringsstructuren betrokken bij de dossiers van onze klanten en de organisaties die wij begeleiden.",
       "note": "De logo's vertegenwoordigen onze actieve partners. Aegryn maakt de voorwaarden van individuele samenwerkingen niet bekend."
     }
+  },
+  "homeDoors": {
+    "cabinetLabel": "Het adviesbureau",
+    "cabinetText": "Geïntegreerd advies voor leidinggevenden van kmo’s en middelgrote ondernemingen: kaderen, realiseren, elke cyclus begeleiden.",
+    "cabinetLink": "Onze diensten ontdekken",
+    "boutiqueLabel": "La Boutique",
+    "boutiqueText": "Signatuurprojecten, voor ondernemers, investeerders en merken. Zeldzaam door selectie. Discreet uit principe.",
+    "boutiqueLink": "La Boutique betreden"
   }
 }

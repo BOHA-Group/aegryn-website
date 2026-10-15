@@ -118,7 +118,7 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
 
 const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoAbout',     href: '/about' },
-  { navKey: 'navPortfolio', href: '/portfolio' as LinkHref },
+  { navKey: 'navPortfolio', href: '/boutique' as LinkHref },
   { navKey: 'roadmap',      href: '/roadmap' as never },
   { navKey: 'whoAlliances', href: '/alliances' },
   { navKey: 'whoContact',   href: '/contact' },

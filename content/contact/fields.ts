@@ -155,7 +155,7 @@ export const UI: Record<string, L6> = {
 
 /** Libellés des sujets en français, pour l'objet de l'e-mail interne */
 export const SUBJECT_LABEL_FR: Record<string, string> = {
-  project: 'Soumettre un projet', cycle: 'Accompagner un cycle', profile: 'Sélectionner un profil',
+  project: 'Travailler avec La Boutique', cycle: 'Accompagner un cycle', profile: 'Sélectionner un profil',
   transition: 'Mission de transition', join: 'Rejoindre ou soutenir un projet',
   certification: 'Certification CIFSO 5000', partnership: 'Partenariat', press: 'Presse et médias',
   career: 'Candidature', general: 'Demande générale', other: 'Autre',

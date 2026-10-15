@@ -70,3 +70,12 @@ le même plancher de hauteur pour garantir une harmonie visuelle :
   format landing distinct.
 
 Toute nouvelle page avec image en header doit réutiliser ce minHeight.
+
+## La Boutique, NDA et archives (octobre 2026)
+
+- Deux voix : le **cabinet de conseil intégré** (navigation Nos métiers) et **La Boutique** (`/boutique`, remplace « Portfolio » dans la barre). Les cinq métiers (Cadrer, Réaliser, Accompagner, Sélectionner, S'informer) restent la navigation du cabinet ; Cadrer → Réaliser → Accompagner est la méthode de La Boutique. Cibles : PME et ETI jusqu'à CHF 300M (cabinet) ; entrepreneurs, investisseurs et family offices, institutions et grands groupes, industriels et marques (Boutique).
+- `/boutique` : hero en patchwork vidéo calé sur la musique (`content/boutique/clips.ts` : 22 clips dans `public/videos/boutique/`, 105,76 BPM, 1 visuel = 2 temps, 2 = 4, 3 = 6, boucle à la fin). Le lecteur (`components/boutique/BoutiqueAudio.tsx`) vit dans `app/[locale]/boutique/layout.tsx` : démarre à l'entrée, s'arrête en quittant. Savoir-faire complets : `content/boutique/savoirFaire.ts` (6 phases, 5 thèmes, 5 cycles).
+- Barre de navigation : transparente sur les heros vidéo (`/` et `/boutique`), fond blanc progressif au scroll, blanche partout ailleurs (`Nav.tsx`, `data-onhero`).
+- NDA : mutuel, numérique, signé par lien personnel sans compte (`lib/nda/*`, `/nda/[token]`, `/admin/nda`). Envoi **manuel** depuis l'admin ; contresignature automatique (Yohann Bollack, CEO) ; PDF archivé (bucket `nda-signed`). Accès certification et data room = rôle ouvert par l'admin **et** NDA signé (`lib/nda/access.ts`, y compris les API data room). L'ancien NDA par compte est retiré.
+- Catalogue, transactions, enchères, espace acheteur : archivés dans `_archive/legacy-transact/` (redirections 301 dans `next.config.ts`). Ne pas réintroduire.
+- Dev : ne pas lancer de requêtes en parallèle sur le serveur de développement (corruption du cache `.next`) ; Chromium de Puppeteer ne lit pas le H.264, tester la vidéo avec Google Chrome.

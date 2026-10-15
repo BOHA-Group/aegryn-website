@@ -1,6 +1,7 @@
 import { getTranslations }  from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { HeroMountain }      from '@/components/sections/HeroMountain'
+import { HomeDoors }         from '@/components/sections/HomeDoors'
 import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
@@ -34,6 +35,7 @@ export default async function HomePage({ params }: Props) {
     <>
       {/* ── 0. Hero ────────────────────────────────────────── */}
       <HeroMountain />
+      <HomeDoors />
 
       {/* ── 01. Notre Conviction + About ───────────────────── */}
       <ManifestoSection />

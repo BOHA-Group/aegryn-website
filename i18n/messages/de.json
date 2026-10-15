@@ -157,21 +157,22 @@
     "craftRecruitHire": "Profil rekrutieren",
     "craftRecruitTransition": "Übergangsprofile",
     "craftRecruitPool": "Dem Talentpool beitreten",
-    "navPortfolio": "Portfolio"
+    "navPortfolio": "La Boutique"
   },
   "hero": {
-    "tagline": "Die unternehmerische Boutique für emblematische Projekte.",
-    "metaDescription": "Aegryn, die unternehmerische Boutique für emblematische Projekte. Wir setzen den Rahmen, setzen um und begleiten, für uns, für Sie oder mit Ihnen. In der Schweiz verankert, international offen.",
-    "sub": "Von der Idee zum Markt, dann über die Zeit: Rahmen setzen, umsetzen, begleiten. Für uns, für Sie oder mit Ihnen.",
+    "tagline": "Integriertes Beratungshaus, verankert in der Schweiz. Und La Boutique für emblematische Projekte.",
+    "metaDescription": "Aegryn, integriertes Beratungshaus in der Schweiz: Rahmen setzen, umsetzen, jeden Zyklus begleiten, Talente auswählen, informieren. Und La Boutique für emblematische Projekte.",
+    "sub": "Wir begleiten Führungskräfte von KMU und mittelständischen Unternehmen mit bis zu CHF 300 Mio. Umsatz, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Beratung, Assets, Talente, Projektsteuerung: ein integriertes Beratungshaus, verankert in der Schweiz.",
     "phrases": [
-      "Ihr Projekt\nrahmen.",
-      "Mit den richtigen Experten\numsetzen.",
+      "Ihre Entscheidungen\nrahmen.",
+      "Mit Ihnen\numsetzen.",
       "Jeden Zyklus\nbegleiten.",
       "Talente\nauswählen.",
       "Über den Markt\ninformieren."
     ],
     "scroll": "Scrollen",
-    "signature": "Selten durch Auswahl. Diskret aus Prinzip."
+    "signature": "Selten durch Auswahl. Diskret aus Prinzip.",
+    "cta": "30 Minuten sprechen"
   },
   "assets": {
     "title": "Unser eigenes Ökosystem.",
@@ -265,7 +266,8 @@
         "badge": "Vertragsanalyse",
         "tagline": "Öffentlicher Name: subblink",
         "description": "Analysiert alle Ihre Verträge in Sekunden mit einer auf Schweizer und europäisches Recht kalibrierten KI. Risiken, kritische Klauseln, versteckte Verpflichtungen: alles in klarer Sprache identifiziert. Als White-Label für Anwaltskanzleien, Family Offices und Rechtsabteilungen lizenzierbar.",
-        "name": "Vertragsrisikoanalyse"
+        "name": "Vertragsrisikoanalyse",
+        "capability": "Einen Vertrag in 60 Sekunden analysieren, mit einer KI für Schweizer und europäisches Recht"
       },
       "kryv": {
         "badge": "KI-Code-Integrität",
@@ -1263,7 +1265,19 @@
           "Interner Einsatz bei Aegryn: Vertragsanalyse für alle Mandate",
           "Village de la Justice Partnercode: LEGI-4141-01",
           "API für B2B-Integration verfügbar"
-        ]
+        ],
+        "need": "Ein Vertrag ist schnell unterschrieben und schlecht geprüft: unausgewogene Klauseln, versteckte Risiken, Verhandlung ohne Referenzwerte.",
+        "skills": [
+          "Konzeptentwicklung",
+          "Machbarkeitsstudie",
+          "Rechtsrahmen & Datenschutz",
+          "KI-Analysemotor",
+          "Anonymisierte Branchen-Benchmarks",
+          "Experience-Design",
+          "Datensicherheit & Souveränität",
+          "Einführungsstrategie"
+        ],
+        "orgs": "Anwaltskanzleien, Family Offices und Rechtsabteilungen (White-Label-Lizenz), KMU und Unternehmer, die Verträge ohne eigene Rechtsabteilung unterzeichnen."
       },
       "neediu": {
         "longDesc": "Verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting: intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
@@ -1747,7 +1761,7 @@
       "subject": "Betreff",
       "subjectPlaceholder": "Betreff wählen",
       "subjects": {
-        "project": "Projekt einreichen",
+        "project": "Mit La Boutique arbeiten",
         "cycle": "Einen Zyklus begleiten",
         "profile": "Ein Profil auswählen",
         "transition": "Transition-Mandat",
@@ -10738,5 +10752,13 @@
       "desc": "Banken, Fonds, Family Offices und Finanzierungsstrukturen, die an den Dossiers unserer Kunden und den von uns begleiteten Organisationen beteiligt sind.",
       "note": "Die Logos stehen für unsere aktiven Partner. Aegryn gibt die Bedingungen einzelner Partnerschaften nicht bekannt."
     }
+  },
+  "homeDoors": {
+    "cabinetLabel": "Das Beratungshaus",
+    "cabinetText": "Integrierte Beratung für Führungskräfte von KMU und mittelständischen Unternehmen: Rahmen setzen, umsetzen, jeden Zyklus begleiten.",
+    "cabinetLink": "Unsere Leistungen entdecken",
+    "boutiqueLabel": "La Boutique",
+    "boutiqueText": "Signature-Projekte für Unternehmer, Investoren und Marken. Selten durch Auswahl. Diskret aus Prinzip.",
+    "boutiqueLink": "La Boutique betreten"
   }
 }

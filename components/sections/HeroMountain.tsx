@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
+import { Link } from '@/i18n/navigation'
 
-const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
-const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
+const HERO_VIDEO   = '/videos/home-fountain.mp4'
+const HERO_POSTER  = '/videos/home-fountain.jpg'
 
 /** Animation machine à écrire — style size.swiss : tape, pause, efface, phrase suivante.
     Le temps de lecture est budgété sur la durée de la vidéo : la dernière phrase
@@ -74,7 +75,6 @@ export function HeroMountain() {
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
-  const marqueeRef  = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -83,7 +83,6 @@ export function HeroMountain() {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
 
       tl.from(headingRef.current, { opacity: 0, y: 24, duration: 0.9, delay: 0.15 })
-        .from(marqueeRef.current, { opacity: 0, duration: 0.6 }, '-=0.4')
 
       gsap.to(mediaRef.current, {
         yPercent: -12, ease: 'none',
@@ -103,7 +102,7 @@ export function HeroMountain() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[96vh] min-h-[640px] overflow-hidden pt-20"
+      className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden pt-20"
       aria-labelledby="hero-title"
     >
       {/* Vidéo plein format — parallax */}
@@ -126,9 +125,12 @@ export function HeroMountain() {
         />
       </div>
 
+      {/* Voile de lisibilité : le titre reste net sur le lac clair */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/80 via-ag-navy/10 to-ag-navy/35" />
+
       {/* Content — bottom anchored, left-aligned */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-14">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pb-16 md:pb-20">
 
           {/* H1 — rotation machine à écrire, police conservée.
               Verbe en ligne 1, complément en ligne 2 ; toutes les phrases
@@ -158,30 +160,15 @@ export function HeroMountain() {
               </span>
             </span>
           </h1>
-        </div>
 
-        {/* Bottom bar — marquee signature, droite → gauche */}
-        <div
-          ref={marqueeRef}
-          className="border-t border-white/10 bg-ag-navy/80 backdrop-blur-sm overflow-hidden"
-        >
-          <div className="py-3 marquee-track" aria-hidden="true">
-            {[0, 1].map((copy) => (
-              <span key={copy} className="flex items-center shrink-0">
-                {Array.from({ length: 4 }).map((_, i) => (
-                  <span key={i} className="flex items-center shrink-0">
-                    <span className="font-sans font-medium text-[13px] text-white/70 px-6">
-                      {t('sub')}
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
-                    <span className="font-sans font-semibold text-[13px] text-ag-apex/90 px-6 tracking-[0.02em]">
-                      {t('signature')}
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-ag-apex/70 shrink-0" />
-                  </span>
-                ))}
-              </span>
-            ))}
+          <p className="max-w-2xl text-[16px] leading-relaxed text-white/85">{t('sub')}</p>
+          <div className="mt-8">
+            <Link
+              href={{ pathname: '/contact', query: { action: 'echange' } }}
+              className="inline-block rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white"
+            >
+              {t('cta')}
+            </Link>
           </div>
         </div>
       </div>

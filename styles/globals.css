@@ -330,3 +330,25 @@ img { image-rendering: auto; }
   }
   .brochure-page:last-child { break-after: auto; page-break-after: auto; }
 }
+
+/* La Boutique : égaliseur du lecteur de musique */
+@keyframes boutique-eq {
+  from { transform: scaleY(0.25); }
+  to   { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes boutique-eq { from { transform: scaleY(0.5); } to { transform: scaleY(0.5); } }
+}
+
+/* Barre de navigation sur hero vidéo : textes clairs tant que le fond est transparent */
+header[data-onhero='true'] .nav-link-item > button,
+header[data-onhero='true'] .nav-link-item > a,
+header[data-onhero='true'] [data-nav-right] > a,
+header[data-onhero='true'] [data-nav-burger] {
+  color: rgba(255, 255, 255, 0.92);
+}
+header[data-onhero='true'] .nav-link-item > button:hover,
+header[data-onhero='true'] .nav-link-item > a:hover,
+header[data-onhero='true'] [data-nav-right] > a:hover {
+  color: #fff;
+}

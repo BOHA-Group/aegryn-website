@@ -38,6 +38,8 @@ export const routing = defineRouting({
       nl: '/contact',
     },
     /* ── Routes non traduites — mapping identité (requis pour le typage du Link i18n) ── */
+    '/boutique': '/boutique',
+    '/portfolio': '/portfolio',
     '/grade':                             '/grade',
     '/grade/brochure':                    '/grade/brochure',
     '/grade/submit':                      '/grade/submit',

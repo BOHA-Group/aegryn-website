@@ -157,21 +157,22 @@
     "craftRecruitHire": "Hire a profile",
     "craftRecruitTransition": "Transition profiles",
     "craftRecruitPool": "Join the talent pool",
-    "navPortfolio": "Portfolio"
+    "navPortfolio": "La Boutique"
   },
   "hero": {
-    "tagline": "The entrepreneurial boutique for emblematic projects.",
-    "metaDescription": "Aegryn, the entrepreneurial boutique for emblematic projects. We frame, deliver and accompany, for ourselves, for you or with you. Anchored in Switzerland, open to the world.",
-    "sub": "From idea to market, then over time: frame, deliver, accompany. For ourselves, for you or with you.",
+    "tagline": "Integrated advisory firm, anchored in Switzerland. And La Boutique for emblematic projects.",
+    "metaDescription": "Aegryn, integrated advisory firm anchored in Switzerland: frame, deliver, accompany every cycle, select talent, stay informed. And La Boutique, for emblematic projects.",
+    "sub": "We support the leaders of SMEs and mid-sized companies, up to CHF 300M in revenue, who launch, grow, reorient, acquire or hand over an organisation. Advisory, assets, talent, project leadership: an integrated advisory firm, anchored in Switzerland.",
     "phrases": [
-      "Frame\nyour project.",
-      "Deliver\nwith the right experts.",
+      "Frame\nyour decisions.",
+      "Deliver\nwith you.",
       "Accompany\nevery cycle.",
       "Select\nthe talent.",
       "Stay informed\non the market."
     ],
     "scroll": "Scroll",
-    "signature": "Rare by selection. Discreet by principle."
+    "signature": "Rare by selection. Discreet by principle.",
+    "cta": "Book 30 minutes"
   },
   "assets": {
     "title": "Our tools. Your infrastructure.",
@@ -265,7 +266,8 @@
         "badge": "Contract intelligence",
         "tagline": "Public name: subblink",
         "description": "Analyses all your contracts in seconds using AI calibrated for Swiss and European law. Risks, critical clauses, hidden obligations: everything identified in plain language. Licensable as white-label for law firms, family offices and legal departments.",
-        "name": "Contract Risk Analysis"
+        "name": "Contract Risk Analysis",
+        "capability": "Analyse a contract in 60 seconds with an AI calibrated for Swiss and European law"
       },
       "kryv": {
         "badge": "AI code integrity",
@@ -1263,7 +1265,19 @@
           "Internal use at Aegryn: contractual intelligence on all our mandates",
           "Village de la Justice partner code: LEGI-4141-01",
           "API available for B2B integration"
-        ]
+        ],
+        "need": "A contract is signed fast and reviewed poorly: unbalanced clauses, hidden risks, negotiation without benchmarks.",
+        "skills": [
+          "Concept development",
+          "Feasibility study",
+          "Legal framework & data protection",
+          "AI analysis engine",
+          "Anonymised sector benchmarks",
+          "Experience design",
+          "Data security & sovereignty",
+          "Launch strategy"
+        ],
+        "orgs": "Law firms, family offices and legal departments (white-label licence), SMEs and entrepreneurs who sign contracts without an in-house legal team."
       },
       "neediu": {
         "longDesc": "Connects individuals with the best home service providers. Cleaning, gardening, DIY, babysitting: smart matching based on location and verified reviews.",
@@ -1747,7 +1761,7 @@
       "subject": "Subject",
       "subjectPlaceholder": "Choose a subject",
       "subjects": {
-        "project": "Submit a project",
+        "project": "Work with La Boutique",
         "cycle": "Accompany a cycle",
         "profile": "Select a profile",
         "transition": "Transition assignment",
@@ -10738,5 +10752,13 @@
       "desc": "Banks, funds, family offices and financing structures involved in our clients' dossiers and the organisations we support.",
       "note": "Logos represent our active partners. Aegryn does not disclose the terms of individual partnerships."
     }
+  },
+  "homeDoors": {
+    "cabinetLabel": "The firm",
+    "cabinetText": "Integrated advisory for the leaders of SMEs and mid-sized companies: frame, deliver, accompany every cycle.",
+    "cabinetLink": "Discover our services",
+    "boutiqueLabel": "La Boutique",
+    "boutiqueText": "Signature projects, for entrepreneurs, investors and brands. Rare by selection. Discreet by principle.",
+    "boutiqueLink": "Enter La Boutique"
   }
 }
