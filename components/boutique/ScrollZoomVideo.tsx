@@ -2,8 +2,8 @@
 
 /**
  * Bandeau vidéo pleine largeur : zoom avant progressif au scroll.
- * La vidéo est jouée en entier, sans coupe ni boucle : elle tourne tant que le bandeau
- * est à l'écran, se met en pause quand on le quitte et reprend où elle s'était arrêtée.
+ * Plan de 5 secondes en boucle : la vidéo tourne tant que le bandeau est à l'écran, se met en
+ * pause quand on le quitte et reprend où elle s'était arrêtée.
  */
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from '@/lib/gsap'
@@ -37,7 +37,7 @@ export function ScrollZoomVideo({ src, srcMobile, caption, className = '' }: { s
   return (
     <div ref={box} className={`relative h-[70vh] min-h-[420px] overflow-hidden bg-ag-navy ${className}`}>
       <div ref={media} className="absolute inset-0 will-change-transform">
-        {source && <video ref={video} className="h-full w-full object-cover" src={source} muted playsInline preload="auto" aria-hidden="true" />}
+        {source && <video ref={video} className="h-full w-full object-cover" src={source} muted loop playsInline preload="auto" aria-hidden="true" />}
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/70 via-transparent to-ag-navy/20" />
       {caption && (

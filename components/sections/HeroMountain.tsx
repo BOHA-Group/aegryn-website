@@ -102,6 +102,7 @@ export function HeroMountain() {
   return (
     <section
       ref={sectionRef}
+      data-nav-hero
       className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden pt-20"
       aria-labelledby="hero-title"
     >

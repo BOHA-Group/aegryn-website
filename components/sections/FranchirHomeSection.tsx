@@ -9,7 +9,7 @@ import type { CycleSlug } from '@/content/franchir/types'
 
 /**
  * Section accueil FRANCHIR — reprend le contenu de l'ancienne page /valoriser
- * (héros montagne + 5 cartes cycle + « deux cycles à la fois » + diagnostic).
+ * (héros montagne + 5 cartes cycle + diagnostic).
  * La page /valoriser a été supprimée : /valoriser redirige 301 vers /#accompagner.
  */
 export function FranchirHomeSection({ locale }: { locale: string }) {
@@ -53,34 +53,6 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
                 </span>
               </Link>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Deux cycles à la fois ? ── */}
-      <div className="py-14 px-6 bg-ag-white border-t border-ag-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-10 items-start">
-          <div>
-            <h3 className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight text-[24px] md:text-[30px] mb-6">
-              {c.overlap.title}
-            </h3>
-            <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-xl">{c.overlap.text}</p>
-          </div>
-          <div className="flex flex-col gap-3">
-            {c.overlap.examples.map((ex, i) => {
-              const [partA, partB] = ex.label.split('+').map(s => s.trim())
-              return (
-                <div key={i} className="rounded-2xl bg-ag-off-white border border-ag-border px-6 py-4 whitespace-nowrap">
-                  <Link href={L(`/accompagner/${ex.a}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
-                    {partA}
-                  </Link>
-                  <span className="font-sans text-ag-gray-light mx-1">+</span>
-                  <Link href={L(`/accompagner/${ex.b}`)} className="font-sans font-semibold text-[14px] text-ag-black hover:text-ag-apex-ink transition-colors">
-                    {partB}
-                  </Link>
-                </div>
-              )
-            })}
           </div>
         </div>
       </div>

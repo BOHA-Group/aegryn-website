@@ -12,6 +12,7 @@ import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { ProjectCard } from '@/components/sections/assets/ProjectCard'
+import Image from 'next/image'
 import { SavoirFaire } from '@/components/boutique/SavoirFaire'
 import { BOUTIQUE } from '@/content/boutique/copy'
 import { SF_UI } from '@/content/boutique/savoirFaire'
@@ -32,6 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
+const SEGMENT_IMAGES: Record<string, string> = {
+  startup:    '/images/blog/startup-team.jpg',
+  funds:      '/images/blog/family-business.jpg',
+  enterprise: '/images/blog/office-building.jpg',
+  pme:        '/images/blog/factory-industry.jpg',
+}
 const ARTICLES = [TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE]
 const h2 = { fontSize: 'clamp(26px,3vw,44px)' }
 const eyebrow = 'font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink'
@@ -50,7 +57,7 @@ export default async function BoutiquePage({ params }: Props) {
   return (
     <main>
       {/* Hero : patchwork vidéo sur le tempo de la musique, sous la barre de navigation transparente */}
-      <section className="relative -mt-16 h-[calc(100svh+4rem)] min-h-[700px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
+      <section data-nav-hero className="relative -mt-16 h-[calc(100svh+4rem)] min-h-[700px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
         <HeroPatchwork />
         <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/90 via-ag-navy/20 to-ag-navy/45" />
         <div className="absolute inset-x-0 bottom-0 z-10">
@@ -152,11 +159,16 @@ export default async function BoutiquePage({ params }: Props) {
       <section id="pour-qui" className="scroll-mt-24 bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.forWhoTitle[lang]}</h2>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {segments.map(c => (
-              <div key={c.key} className="rounded-2xl bg-ag-off-white p-7">
-                <h3 className="font-sans text-[19px] font-bold tracking-[-0.01em] text-ag-black">{c.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ag-gray">{c.desc}</p>
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {segments.map((c, i) => (
+              <div key={c.key} className="group relative flex flex-col justify-end overflow-hidden rounded-xl" style={{ minHeight: 'clamp(300px, 28vw, 380px)' }}>
+                <Image src={SEGMENT_IMAGES[c.key] ?? SEGMENT_IMAGES.startup} alt="" fill sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                <span className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.22em] text-white/70">{String(i + 1).padStart(2, '0')}</span>
+                <div className="relative z-10 p-5">
+                  <h3 className="font-sans font-bold leading-[1.15] tracking-[-0.02em] text-white" style={{ fontSize: 'clamp(18px,1.8vw,22px)' }}>{c.title}</h3>
+                  <p className="mt-2 text-[14px] leading-relaxed text-white/80">{c.desc}</p>
+                </div>
               </div>
             ))}
           </div>

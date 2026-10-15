@@ -9,7 +9,6 @@ import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight } from 'lucide-rea
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
-import { AegrynLogo }    from '@/components/brand/AegrynLogo'
 import { gsap }          from '@/lib/gsap'
 
 type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
@@ -536,21 +535,31 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     return () => ctx.revert()
   }, [mobileOpen])
 
+  /* Le fond blanc n'apparaît qu'une fois le hero sorti : il se fond sur ~140 px de scroll à partir
+     du moment où le bas du hero atteint le bas de la barre (64 px). Tant que le hero est sous la barre,
+     elle reste transparente avec textes et logo blancs. */
+  const [overHero, setOverHero] = useState(true)
   useEffect(() => {
-    if (!heroPage) { setScrollP(1); return }
+    if (!heroPage) { setScrollP(1); setOverHero(false); return }
+    const NAV_H = 64, FADE = 140
+    let raf = 0
     const update = () => {
-      const h = window.innerHeight
-      setScrollP(Math.min(1, Math.max(0, (window.scrollY - h * 0.3) / (h * 0.35))))
+      raf = 0
+      const hero = document.querySelector('[data-nav-hero]')
+      const bottom = hero ? hero.getBoundingClientRect().bottom : 0
+      setScrollP(Math.min(1, Math.max(0, (NAV_H - bottom) / FADE)))
+      setOverHero(bottom > NAV_H)
     }
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update) }
     update()
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update)
-    return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
-  }, [heroPage])
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => { if (raf) cancelAnimationFrame(raf); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll) }
+  }, [heroPage, pathname])
 
   /* Fond : transparent sur le hero, blanc dès que le menu est ouvert ou qu'on a défilé */
   const barAlpha = !heroPage || activeDropdown !== null || mobileOpen ? 1 : scrollP
-  const onHero   = heroPage && barAlpha < 0.5
+  const onHero   = heroPage && overHero && activeDropdown === null && !mobileOpen
 
   const toggleMobileAccordion = (key: DropdownKey) =>
     setMobileAccordion(prev => (prev === key ? null : key))
@@ -591,13 +600,20 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             width={64}
             height={64}
             className="h-16 w-auto object-contain transition-opacity duration-300"
-            style={heroPage ? { opacity: barAlpha } : undefined}
+            style={heroPage ? { opacity: onHero ? 0 : 1 } : undefined}
             priority
           />
           {heroPage && (
-            <span className="pointer-events-none absolute inset-0 flex items-center transition-opacity duration-300" style={{ opacity: 1 - barAlpha }} aria-hidden="true">
-              <AegrynLogo variant="full" onDark size={34} />
-            </span>
+            <Image
+              src="/images/brand/logo-aegryn-navbar-white.png"
+              alt=""
+              width={64}
+              height={64}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 h-16 w-auto object-contain transition-opacity duration-300"
+              style={{ opacity: onHero ? 1 : 0 }}
+              priority
+            />
           )}
         </Link>
 
