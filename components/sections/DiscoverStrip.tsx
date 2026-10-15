@@ -89,7 +89,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
   const featuredArticles = ARTICLES.filter(a => a.featured)
 
   return (
-    <section ref={ref} id="informer" className="bg-ag-white mt-20 scroll-mt-20">
+    <section ref={ref} id="informer" className="bg-ag-white border-t border-ag-border mt-20 scroll-mt-20">
 
       {/* ── Bloc 1 : Teaser Magazine — fidèle au modèle Barnes ── */}
       <div
@@ -100,9 +100,7 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
         {/* Card texte — dans le flux : le bloc grandit avec le contenu,
             plus de rognage desktop ni mobile */}
         <div
-          className="relative z-10 bg-white space-y-4
-            mx-4 mt-6 mb-2
-            md:mx-0 md:ml-[12%] md:my-4"
+          className="relative z-10 bg-white space-y-4 mx-4 mt-6 mb-2 md:mx-0 md:ml-[12%] md:my-4"
           style={{ maxWidth: 380, padding: '36px 40px' }}
         >
           <h2
@@ -179,10 +177,8 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
 
         <div className="flex items-end justify-between mb-12 gap-6">
           <div className="space-y-3">
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink flex items-center gap-3">
-              <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-              {articlesLabel}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="w-5 h-px bg-ag-apex/50 inline-block" />
+              {articlesLabel}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15] whitespace-pre-line"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

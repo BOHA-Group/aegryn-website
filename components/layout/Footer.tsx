@@ -44,8 +44,7 @@ function FooterMedallion({ medallionText, contactLabel }: { medallionText: strin
           </text>
         </svg>
       </div>
-      <div className="relative w-12 h-12 rounded-full bg-ag-apex/15 border border-ag-apex/40 flex items-center justify-center
-        group-hover:bg-ag-apex group-hover:border-ag-apex transition-all duration-300">
+      <div className="relative w-12 h-12 rounded-full bg-ag-apex/15 border border-ag-apex/40 flex items-center justify-center group-hover:bg-ag-apex group-hover:border-ag-apex transition-all duration-300">
         <svg width="13" height="13" viewBox="0 0 16 16" fill="none"
           className="text-ag-apex group-hover:text-ag-navy transition-colors duration-300">
           <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -296,7 +295,7 @@ export default function Footer() {
         </div>
 
         {/* Legal strip — compact, fused above marquee */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 pt-4 sm:flex-row sm:items-center">
           <div className="flex flex-col gap-1">
             <p className="font-sans font-semibold text-[10px] text-white/70">
               {t('legal')}

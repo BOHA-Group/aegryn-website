@@ -51,7 +51,7 @@ export default async function VerifyCodePage({ params }: Props) {
         {cert ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="md:col-span-2 rounded-xl border border-ag-border p-8">
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-1">{t('organisation')}</p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-1"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('organisation')}</p>
               <h2 className="font-sans font-bold text-ag-black text-[26px] tracking-[-0.02em] mb-6">{cert.organisation}</h2>
               <dl className="grid grid-cols-2 gap-5">
                 <div><dt className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-1">{t('score')}</dt><dd className="font-sans font-bold text-ag-black text-[18px]">{cert.score != null ? `${cert.score} / 100` : '—'}</dd></div>

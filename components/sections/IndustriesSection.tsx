@@ -13,7 +13,7 @@ export default function IndustriesSection() {
   const [openCluster, setOpenCluster] = useState<number | null>(null)
 
   return (
-    <div className="divide-y divide-ag-border border-t border-b border-ag-border">
+    <div className="border-t">
       {clusters.map((cluster, ci) => {
         const isOpen = openCluster === ci
         return (

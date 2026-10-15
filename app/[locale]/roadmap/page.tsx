@@ -97,7 +97,7 @@ export default async function RoadmapPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('featuresLabel')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px">
             {FEATURE_ICONS.map(({ key, Icon }) => (
               <div key={key} className="bg-ag-white p-8 flex flex-col gap-4 group hover:bg-ag-off-white transition-colors">
                 <div className="w-10 h-10 border border-ag-border flex items-center justify-center group-hover:border-ag-apex/40 transition-colors">
@@ -161,7 +161,7 @@ export default async function RoadmapPage({ params }: Props) {
               <span className="w-3.5 h-3.5 rounded-full border-2 border-ag-gray-light" />
               <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light">{t('statusUpcoming')}</p>
             </div>
-            <div className="relative border-l border-ag-border pl-8 space-y-0">
+            <div className="relative pl-8 space-y-0">
               {upcomingItems.map((item, i) => {
                 const Icon = ITEM_ICONS[item.iconKey] ?? Code2
                 return (

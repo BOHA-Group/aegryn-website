@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { routing } from '@/i18n/routing'
 import { getFranchirIntro } from '@/content/franchir'
 import { FRANCHIR_UI } from '@/content/franchir/ui'
-import { FranchirDiagnostic } from '@/components/franchir/FranchirDiagnostic'
+import { DiagnosticLauncher } from '@/components/franchir/DiagnosticLauncher'
 import { FranchirHeroScroll } from '@/components/sections/FranchirHeroScroll'
 import type { CycleSlug } from '@/content/franchir/types'
 
@@ -57,17 +57,13 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* ── Où en êtes-vous ? ── */}
-      <div className="pb-14 pt-4 px-6 bg-ag-white">
-        <div className="max-w-7xl mx-auto">
-          <FranchirDiagnostic
-            title={c.diagnostic.title}
-            questions={c.diagnostic.questions}
-            cycleTitle={cycleTitle}
-            locale={locale}
-          />
-        </div>
-      </div>
+      {/* ── Où en êtes-vous ? : bouton d'action vert au bord droit, panneau au clic ── */}
+      <DiagnosticLauncher
+        title={c.diagnostic.title}
+        questions={c.diagnostic.questions}
+        cycleTitle={cycleTitle}
+        locale={locale}
+      />
 
     </section>
   )

@@ -62,7 +62,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
     <section className="bg-ag-white border-t border-ag-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Filter bar */}
-        <div className="flex items-center flex-wrap gap-3 mb-12 border-b border-ag-border pb-6">
+        <div className="flex items-center flex-wrap gap-3 mb-12 pb-6">
           <FilterPills options={filters} active={active} onChange={setActive} />
           <span className="ml-auto font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
             {filtered.length} actif{filtered.length > 1 ? 's' : ''}
@@ -77,7 +77,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 pt-10 border-t border-ag-border flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="mt-16 pt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <p className="font-sans text-[15px] text-ag-gray max-w-md">
             {t('ctaBottom')}
           </p>

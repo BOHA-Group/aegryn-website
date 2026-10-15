@@ -50,11 +50,9 @@ export default async function AdvisoryPage({ params }: Props) {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
+      <section className="bg-ag-navy overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
-            / {t('hero.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-8"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('hero.label')}</p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.18] max-w-3xl mb-8"
             style={{ fontSize: 'clamp(36px,5vw,72px)' }}
@@ -96,14 +94,12 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── Who is it for (5 profiles) ── */}
-      <section className="border-b border-ag-border bg-ag-white">
+      <section className="bg-ag-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center border-b border-ag-border py-4">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('whoFor.label')}
-            </p>
+          <div className="flex items-center py-4">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('whoFor.label')}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y lg:divide-y-0 lg:divide-x divide-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
             {whoFor.map((item, i) => (
               <div key={i} className="py-12 px-6 first:pl-0 last:pr-0">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light mb-5">
@@ -111,7 +107,7 @@ export default async function AdvisoryPage({ params }: Props) {
                 </p>
                 <h2
                   className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
-                  style={{ fontSize: 'clamp(16px,1.5vw,20px)' }}
+                  style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                 >
                   {item.title}
                 </h2>
@@ -123,17 +119,15 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC A — Stratégie d'entreprise & Board Advisory ── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center border-b border-ag-border pb-4 mb-14">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('strategy.label')}
-            </p>
+          <div className="flex items-center pb-4 mb-14">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('strategy.label')}</p>
           </div>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
             {t('strategy.intro')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px">
             {stratItems.map((item) => (
               <div key={item.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{item.num}</p>
@@ -148,17 +142,15 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC A2 — Risque & Conformité ── */}
-      <section className="border-b border-ag-border bg-ag-white">
+      <section className="bg-ag-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center border-b border-ag-border pb-4 mb-14">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('riskCompliance.label')}
-            </p>
+          <div className="flex items-center pb-4 mb-14">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('riskCompliance.label')}</p>
           </div>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
             {t('riskCompliance.intro')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px">
             {riskItems.map((item) => (
               <div key={item.num} className="bg-ag-white p-8 hover:bg-ag-off-white transition-colors">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{item.num}</p>
@@ -173,19 +165,17 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC B — Advisory Tech ── */}
-      <section className="border-b border-ag-border bg-ag-white">
+      <section className="bg-ag-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center border-b border-ag-border pb-4 mb-12">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('experts.label')}
-            </p>
+          <div className="flex items-center pb-4 mb-12">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('experts.label')}</p>
           </div>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('experts.intro')}
           </p>
-          <div className="border border-ag-border divide-y divide-ag-border">
+          <div className="border border-ag-border">
             {Array.from({ length: Math.ceil(experts.length / 2) }, (_, row) => (
-              <div key={row} className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+              <div key={row} className="grid grid-cols-1 md:grid-cols-2">
                 {experts.slice(row * 2, row * 2 + 2).map((item, col) => (
                   <div key={col} className="p-6 hover:bg-ag-off-white transition-colors group">
                     <div className="flex items-start gap-4">
@@ -210,12 +200,10 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── Use Cases accordéon ── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-14">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
-            / {t('experts.useCases.label')}
-          </p>
-          <div className="divide-y divide-ag-border border-t border-b border-ag-border">
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-8"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('experts.useCases.label')}</p>
+          <div className="border-t">
             {useCases.map((uc, i) => (
               <details key={i} className="group">
                 <summary className="flex items-center justify-between py-5 cursor-pointer list-none">
@@ -236,7 +224,7 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── Mid CTA ── */}
-      <section className="border-b border-ag-border bg-ag-navy/5">
+      <section className="bg-ag-navy/5">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="font-sans font-bold text-ag-navy text-[18px] tracking-[-0.01em]">
             {t('midCta.title')}
@@ -251,17 +239,15 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC C — Advisory M&A ── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="flex items-center border-b border-ag-border pb-4 mb-14">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('ma.label')}
-            </p>
+          <div className="flex items-center pb-4 mb-14">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('ma.label')}</p>
           </div>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-14">
             {t('ma.intro')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px">
             {maPhases.map((phase) => (
               <div key={phase.num} className="bg-ag-off-white p-8 hover:bg-white transition-colors">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-5">{phase.num}</p>
@@ -282,11 +268,9 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC D — Réseau d'experts ── */}
-      <section className="border-b border-ag-border bg-ag-navy">
+      <section className="bg-ag-navy">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
-            / {t('network.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('network.label')}</p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.2] max-w-2xl mb-8"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -314,12 +298,10 @@ export default async function AdvisoryPage({ params }: Props) {
       </section>
 
       {/* ── BLOC E — Industries (accordéon) ── */}
-      <section className="border-b border-ag-border bg-ag-white">
+      <section className="bg-ag-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-          <div className="flex items-center border-b border-ag-border pb-4 mb-10">
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-              / {t('industries.label')}
-            </p>
+          <div className="flex items-center pb-4 mb-10">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('industries.label')}</p>
           </div>
           <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-10">
             {t('industries.intro')}
@@ -331,9 +313,7 @@ export default async function AdvisoryPage({ params }: Props) {
       {/* ── Approach CTA ── */}
       <section className="bg-ag-navy border-t border-white/10">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
-            / {t('approach.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('approach.label')}</p>
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
             <div className="max-w-2xl">
               <h2

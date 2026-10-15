@@ -17,7 +17,7 @@ export function BoutiqueKnowHowBanner({ cycle, locale }: { cycle: string; locale
   return (
     <section className="bg-ag-navy px-6 py-16 md:px-12 md:py-20">
       <div className="mx-auto max-w-7xl">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">{UI.label[lang]}</p>
+        <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{UI.label[lang]}</p>
         <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-white/80">{UI.text[lang]}</p>
         <ul className="mt-8 flex flex-wrap gap-2.5">
           {items.map((it, i) => (

@@ -77,9 +77,7 @@ export function AssetCarousel() {
       {/* Section header */}
       <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-10 flex items-end justify-between">
         <div>
-          <p className="font-sans font-semibold text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-3">
-            {t('label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-3"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -111,7 +109,7 @@ export function AssetCarousel() {
             return (
               <div
                 key={asset.id}
-                className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 md:border-r border-white/10 p-10 bg-ag-navy overflow-hidden"
+                className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 p-10 bg-ag-navy overflow-hidden"
                 style={{ minHeight: '420px' }}
               >
                 <div
@@ -161,7 +159,7 @@ export function AssetCarousel() {
             <Link
               key={asset.id}
               href={assetPath(asset.slug) as never}
-              className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 md:border-r border-ag-border p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
+              className="group relative flex flex-col w-full md:w-[340px] md:shrink-0 border-b md:border-b-0 p-10 bg-ag-white hover:bg-ag-off-white transition-colors duration-300 overflow-hidden"
               style={{ minHeight: '420px' }}
             >
               <div

@@ -64,9 +64,7 @@ export function EcosystemDomains() {
   return (
     <section className="bg-ag-white border-t border-ag-border">
       <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-14">
-        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-6">
-          {t('label')}
-        </p>
+        <p ref={labelRef} className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
         <h2
           ref={h2Ref}
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden pb-4"
@@ -78,14 +76,14 @@ export function EcosystemDomains() {
       <div ref={wrapRef} className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ag-border mb-10">
           {domains.map((domain, i) => {
-            const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-            const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
+            const borderRight   = i % 3 !== 2 ? '' : ''
+            const borderRightSm = i % 2 !== 1 ? '' : ''
             const image         = DOMAIN_IMAGES[domain.id]
             return (
               <div
                 key={domain.id}
                 className={`domain-card-${i} group relative flex flex-col justify-start overflow-hidden p-8 transition-all duration-500
-                  bg-ag-navy hover:bg-ag-navy border-b border-ag-border
+                  bg-ag-navy hover:bg-ag-navy 
                   ${borderRight} ${borderRightSm}`}
                 style={{ minHeight: '220px', opacity: 0 }}
               >
@@ -123,7 +121,7 @@ export function EcosystemDomains() {
         </div>
 
         {/* CTA */}
-        <div className="border-t border-ag-border pt-8 flex items-center justify-end">
+        <div className="pt-8 flex items-center justify-end">
           <Link
             href="/accompagner/transmission"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-navy bg-ag-apex px-6 py-3 rounded-lg hover:bg-ag-apex/90 transition-all duration-300"

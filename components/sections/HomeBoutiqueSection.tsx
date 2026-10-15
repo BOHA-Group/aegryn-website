@@ -10,7 +10,7 @@ export async function HomeBoutiqueSection({ locale }: { locale: string }) {
   return (
     <section className="bg-ag-navy py-24 text-white md:py-32" aria-labelledby="home-boutique-title">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">{BOUTIQUE.label[lang]}</p>
+        <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.label[lang]}</p>
         <h2 id="home-boutique-title" className="mt-5 max-w-3xl whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{br(BOUTIQUE.homeTitle[lang])}</h2>
         <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-white/75">{BOUTIQUE.homeText[lang]}</p>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

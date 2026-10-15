@@ -25,7 +25,7 @@ export function HybridBlock() {
   const descLines = t('desc').split('\n')
 
   return (
-    <section ref={ref} className="bg-ag-off-white py-20 md:py-28">
+    <section ref={ref} className="border-t border-ag-border bg-ag-off-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
 

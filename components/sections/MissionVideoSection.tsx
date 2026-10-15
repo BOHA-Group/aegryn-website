@@ -75,12 +75,12 @@ export function MissionVideoSection() {
       <div ref={contentRef} className="relative z-10 lg:absolute lg:inset-0">
         <div className="mx-auto flex max-w-7xl flex-col justify-center px-6 py-16 md:px-12 lg:h-full lg:pb-0 lg:pt-20">
 
-          <div className="mv-reveal flex flex-col items-start gap-2 border-b border-white/20 py-4 md:flex-row md:items-center md:justify-between">
-            <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">/ {tM('label')}</p>
+          <div className="mv-reveal flex flex-col items-start gap-2 py-4 md:flex-row md:items-center md:justify-between">
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tM('label')}</p>
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">{tM('sub')}</p>
           </div>
 
-          <div className="grid grid-cols-1 divide-y divide-white/20 border-b border-white/20 md:grid-cols-2 md:divide-x md:divide-y-0 lg:grid-cols-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
             {missionItems.map((item, i) => (
               <div key={item.title} className="mv-reveal py-12 first:pl-0 last:pr-0 md:px-10" style={{ textShadow: '0 1px 14px rgba(5,15,35,0.45)' }}>
                 <p className="mb-8 font-sans text-[10px] font-semibold tracking-[0.2em] text-ag-apex">{String(i + 1).padStart(2, '0')}</p>

@@ -160,7 +160,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           {/* ── CGU ── */}
           <hr className="my-14 border-ag-border" />
 
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink">{t('cgu.sectionLabel')}</p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cgu.sectionLabel')}</p>
           <h2 className="!mt-4">{t('cgu.h2')}</h2>
           <p className="border-l-2 border-ag-border pl-4 text-[14px]">{t('cgu.disclaimer')}</p>
 

@@ -4803,7 +4803,7 @@
     },
     "side": {
       "group": "Domain experts",
-      "groupDesc": "The firms and expertise called on for our assignments and La Boutique's projects.",
+      "groupDesc": "The structures and expertises mobilised on our engagements.",
       "investors": "Investors & Institutions",
       "investorsDesc": "Banks, funds, family offices, institutions: Aegryn as operating partner of their portfolio companies.",
       "auditors": "Independent auditors",
@@ -4910,7 +4910,7 @@
           "note": "Aegryn advises and prepares. Deal execution is entrusted to investment banks, M&A boutiques and accredited lawyers in the network."
         },
         "boutique": {
-          "title": "Delivery of signature projects (La Boutique)",
+          "title": "Signature projects (La Boutique)",
           "profiles": "Designers, product engineers, manufacturers and industrial partners, distribution leads, intellectual property lawyers, brand experts.",
           "expertises": [
             "Brand and experience design",

@@ -61,11 +61,9 @@ export default async function PortfolioPage({ params }: Props) {
       {/* Intro — format « Notre vision » (a-propos) : label a gauche, frappe au scroll */}
       <section className="border-b border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[280px_1fr]">
             <div className="py-16 md:pr-16">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {t('introLabel')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('introLabel')}</p>
             </div>
             <div className="py-16 md:px-16">
               <VisionTypewriter

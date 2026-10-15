@@ -50,7 +50,7 @@ export default async function SecurityPage({ params }: Props) {
       </section>
 
       {/* Legal nav */}
-      <div className="border-b border-ag-border bg-ag-off-white sticky top-16 z-20">
+      <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
             <Link
@@ -157,7 +157,7 @@ export default async function SecurityPage({ params }: Props) {
               </li>
             ))}
           </ol>
-          <div className="mt-8 pt-6 border-t border-ag-border">
+          <div className="mt-8 pt-6">
             <a
               href={`mailto:${t('contactEmail')}`}
               className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"

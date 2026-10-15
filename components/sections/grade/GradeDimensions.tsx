@@ -28,9 +28,7 @@ export function GradeDimensions() {
     <section ref={ref} className="bg-ag-white border-t border-ag-border py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-          {t('label')}
-        </p>
+        <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
         <h2
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-14"
           style={{ fontSize: 'clamp(26px,3vw,44px)' }}

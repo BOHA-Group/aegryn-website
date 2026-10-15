@@ -109,9 +109,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Chiffres 2025-2026 ─────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('marketData.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('marketData.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -121,7 +119,7 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('marketData.desc')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
             {stats.map((stat, i) => (
               <div key={i} className="bg-white p-8 flex flex-col gap-3">
                 <p
@@ -145,9 +143,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Sur 100 collaborateurs ─────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('hundredWorkers.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('hundredWorkers.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -157,7 +153,7 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('hundredWorkers.desc')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-ag-border border border-ag-border mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px mb-4">
             {hwItems.map((item, i) => (
               <div key={i} className="bg-ag-off-white p-8">
                 <p
@@ -181,9 +177,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Compétences en hausse / en recul ────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('skillsRanking.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('skillsRanking.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -193,7 +187,7 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('skillsRanking.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-4">
             <div className="bg-white p-8">
               <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink mb-5">
                 {t('skillsRanking.rising.title')}
@@ -230,9 +224,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Par nature de poste ──────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('byRole.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('byRole.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -242,7 +234,7 @@ export default async function WorkforcePage({ params }: Props) {
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-12">
             {t('byRole.desc')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {roleItems.map((item, i) => (
               <div key={i} className="bg-ag-off-white p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
@@ -263,9 +255,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Par secteur ──────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('industries.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('industries.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -296,9 +286,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── CIFSO ────────────────────────────────────────────────────── */}
       <section className="bg-ag-navy border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex/70 mb-4">
-            {t('cifso.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cifso.label')}</p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] mb-8 max-w-2xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -328,16 +316,14 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Pour qui ces données comptent ───────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('forWho.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('forWho.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('forWho.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {forWhoItems.map((item, i) => (
               <div key={i} className="bg-ag-off-white p-8 flex flex-col gap-3">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[-0.01em] leading-tight">
@@ -355,9 +341,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Sources ──────────────────────────────────────────────────── */}
       <section className="bg-ag-off-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('sources.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('sources.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -373,9 +357,7 @@ export default async function WorkforcePage({ params }: Props) {
       {/* ── Articles liés ────────────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4">
-            {t('articles.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('articles.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-12 max-w-3xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -406,7 +388,7 @@ export default async function WorkforcePage({ params }: Props) {
                   <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
                     {article.title[lang] ?? article.title.en}
                   </h3>
-                  <div className="flex items-center justify-between pt-3 border-t border-ag-border">
+                  <div className="flex items-center justify-between pt-3">
                     <div className="flex items-center gap-3 text-ag-gray-light">
                       <span className="flex items-center gap-1 font-mono text-[10px]">
                         <Calendar size={10} /> {formatDate(article.date)}
@@ -426,7 +408,7 @@ export default async function WorkforcePage({ params }: Props) {
 
       {/* ── CTA final ────────────────────────────────────────────────── */}
       <section className="bg-ag-white border-t border-ag-border py-16 px-6">
-        <ScrollReveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+        <ScrollReveal className="max-w-7xl mx-auto grid md:grid-cols-2 gap-px">
           <div className="bg-ag-off-white p-10 flex flex-col gap-4">
             <p className="font-sans font-bold text-ag-black text-[18px] leading-snug">
               {t('cta.employer.title')}

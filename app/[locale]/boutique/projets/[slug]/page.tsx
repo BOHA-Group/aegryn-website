@@ -182,10 +182,8 @@ export default async function AssetPage({ params }: Props) {
                   ))}
                 </ul>
                 {audience && (
-                  <div className="mt-8 pt-6 border-t border-white/10">
-                    <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 mb-2">
-                      {t('audience')}
-                    </p>
+                  <div className="mt-8 pt-6">
+                    <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-2"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('audience')}</p>
                     <p className="text-[15px] text-white/70">{audience}</p>
                   </div>
                 )}
@@ -369,7 +367,7 @@ export default async function AssetPage({ params }: Props) {
                   <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light leading-tight whitespace-pre-line">
                     {t('press.subblink.partnerStats')}
                   </p>
-                  <div className="w-full pt-3 border-t border-ag-border flex flex-col items-center gap-1">
+                  <div className="w-full pt-3 flex flex-col items-center gap-1">
                     <p className="font-mono text-[10px] tracking-[0.12em] uppercase text-ag-gray-light">{t('press.partnerCode')}</p>
                     <p className="font-mono text-[12px] font-bold text-ag-apex-ink tracking-widest">LEGI-4141-01</p>
                   </div>
@@ -426,9 +424,7 @@ export default async function AssetPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">
-              {t('cta.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cta.label')}</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

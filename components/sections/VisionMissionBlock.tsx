@@ -18,7 +18,7 @@ export function VisionMissionBlock({
       {/* Vision */}
       <section className="border-b border-ag-border bg-ag-off-white/80 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[280px_1fr]">
             <div className="py-16 md:pr-16 flex items-start">
               {visionLabel}
             </div>

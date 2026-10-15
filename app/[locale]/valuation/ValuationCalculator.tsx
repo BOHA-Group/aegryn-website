@@ -307,7 +307,7 @@ export default function ValuationCalculator({ freemiumNote, illustrative, locked
                 {t('marketContext.label')}
               </p>
               {marketItems.map(({ value, label }) => (
-                <div key={label} className="flex items-baseline justify-between gap-3 border-b border-ag-border pb-2.5 last:border-b-0 last:pb-0">
+                <div key={label} className="flex items-baseline justify-between gap-3 pb-2.5 last:border-b-0 last:pb-0">
                   <span className="font-sans font-bold text-ag-black text-[14px]">{value}</span>
                   <span className="font-sans text-[10px] text-ag-gray-light text-right leading-tight">{label}</span>
                 </div>
@@ -569,7 +569,7 @@ function StepHeader({ title, subtitle, step, total, t }: {
   t: ReturnType<typeof useTranslations>
 }) {
   return (
-    <div className="border-b border-ag-border pb-4">
+    <div className="pb-4">
       <div className="flex items-center justify-between mb-1">
         <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">{title}</h2>
         <span className="font-sans text-[11px] text-ag-gray-light">
@@ -642,7 +642,7 @@ function ResultPanel({ result, finance, t, industryLabel, email, setEmail, email
     <div className="flex flex-col gap-8">
 
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-ag-border pb-4">
+      <div className="flex items-center justify-between pb-4">
         <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] flex items-center gap-3 flex-wrap">
           {t('result.gradeTitle')}
           {illustrative && <span className="rounded-full border border-amber-300 bg-amber-50 text-amber-800 font-mono text-[9px] uppercase tracking-widest px-3 py-1">{illustrative}</span>}

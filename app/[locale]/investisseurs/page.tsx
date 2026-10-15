@@ -39,7 +39,7 @@ export default async function InvestisseursPage({ params }: Props) {
     <main className="bg-ag-white">
 
       {/* Hero */}
-      <section className="border-b border-ag-border pt-24 pb-20 px-6">
+      <section className="pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
@@ -81,7 +81,7 @@ export default async function InvestisseursPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('problems.label')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {problems.map((text, i) => {
               const Icon = PROBLEM_ICONS[i] ?? AlertTriangle
               return (
@@ -100,16 +100,14 @@ export default async function InvestisseursPage({ params }: Props) {
       {/* Section 2 — Nos 3 rôles */}
       <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">
-            {t('roles.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('roles.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-16 max-w-2xl"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('roles.title')}
           </h2>
-          <div className="flex flex-col gap-px bg-ag-border border border-ag-border">
+          <div className="flex flex-col gap-px">
             {roles.map(({ title, desc }, i) => (
               <div key={i} className="bg-ag-white p-10 grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-8 items-start">
                 <div className="w-12 h-12 bg-ag-navy flex items-center justify-center shrink-0">
@@ -131,9 +129,7 @@ export default async function InvestisseursPage({ params }: Props) {
       <section className="py-24 px-6 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
-              {t('banks.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-5"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('banks.label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05]"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -159,9 +155,7 @@ export default async function InvestisseursPage({ params }: Props) {
       <section className="py-24 px-6 border-t border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-5">
-              {t('alignment.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-5"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('alignment.label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-6"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

@@ -91,7 +91,7 @@ export default async function TalentPage({ params }: Props) {
       </section>
 
       {/* Sélecteur collant */}
-      <div className="sticky top-16 z-40 bg-white/95 backdrop-blur border-b border-ag-border">
+      <div className="sticky top-16 z-40 bg-white/95 backdrop-blur">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex gap-2">
           <Link
             href="/talent/entreprises"
@@ -150,7 +150,7 @@ export default async function TalentPage({ params }: Props) {
           <p className="text-[15px] text-ag-gray leading-relaxed mb-12 max-w-2xl">
             {t('cycles.desc')}
           </p>
-          <div className="border border-ag-border bg-white divide-y divide-ag-border">
+          <div className="border border-ag-border bg-white">
             <div className="hidden md:grid md:grid-cols-[1.1fr_1.4fr_1.4fr_auto] gap-6 px-6 py-4">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light">{t('cycles.colCycle')}</p>
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light">{t('cycles.colRecruit')}</p>

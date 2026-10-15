@@ -108,7 +108,7 @@ export function IndustryArticles({ articles, locale }: Props) {
                 <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-4 line-clamp-2">
                   {getText(article.excerpt as unknown as Record<string, string | undefined>, lang)}
                 </p>
-                <div className="flex items-center justify-between pt-3 border-t border-ag-border">
+                <div className="flex items-center justify-between pt-3">
                   <div className="flex items-center gap-3 text-ag-gray-light">
                     <span className="flex items-center gap-1 font-mono text-[10px]">
                       <Calendar size={10} /> {formatDate(article.date, locale)}

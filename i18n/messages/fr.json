@@ -4763,7 +4763,7 @@
     },
     "side": {
       "group": "Experts métier",
-      "groupDesc": "Les structures et expertises mobilisées sur nos missions et sur les projets de La Boutique.",
+      "groupDesc": "Les structures et expertises mobilisées sur nos missions.",
       "investors": "Investisseurs & Institutionnels",
       "investorsDesc": "Banques, fonds, family offices, institutions : Aegryn operating partner de leurs participations.",
       "auditors": "Auditeurs indépendants",
@@ -4870,7 +4870,7 @@
           "note": "Aegryn conseille et prépare. L'exécution des opérations est confiée à des banques d'affaires, boutiques M&A et avocats agréés du réseau."
         },
         "boutique": {
-          "title": "Réalisation des projets signature (La Boutique)",
+          "title": "Projets signature (La Boutique)",
           "profiles": "Designers, ingénieurs produit, industriels et fabricants, responsables de la distribution, juristes de la propriété intellectuelle, experts de la marque.",
           "expertises": [
             "Design de marque et d'expérience",

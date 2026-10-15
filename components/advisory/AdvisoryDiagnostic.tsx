@@ -42,13 +42,13 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
 
   return (
     <div className="rounded-2xl border border-ag-border bg-ag-white overflow-hidden">
-      <div className="px-6 md:px-10 py-8 border-b border-ag-border">
+      <div className="px-6 md:px-10 py-8">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{ui.autoDiag}</p>
         <h3 className="font-sans font-bold text-[26px] text-ag-black tracking-[-0.02em] mb-2">{title}</h3>
         <p className="font-sans text-[15px] text-ag-gray leading-relaxed max-w-2xl">{intro}</p>
       </div>
 
-      <ol className="divide-y divide-ag-border">
+      <ol className="">
         {questions.map((item, i) => (
           <li key={i} className="px-6 md:px-10 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
             <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
@@ -77,7 +77,7 @@ export function AdvisoryDiagnostic({ title, intro, questions, levels, privacy, c
         ))}
       </ol>
 
-      <div className="px-6 md:px-10 py-8 bg-ag-off-white border-t border-ag-border">
+      <div className="px-6 md:px-10 py-8 bg-ag-off-white">
         {level ? (
           <div className="flex flex-col gap-5">
             <div className="flex items-baseline gap-4 flex-wrap">

@@ -90,18 +90,18 @@ export default async function GradePartnersPage() {
       {/* Tableau dimensions × profils × vérifications */}
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('dims.label')}</p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('dims.label')}</p>
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-12 max-w-xl" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {t('dims.title')}
           </h2>
           <div className="border border-ag-border rounded-2xl overflow-hidden">
-            <div className="hidden md:grid grid-cols-[1fr_1.4fr_1.4fr] gap-px bg-ag-border font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
+            <div className="hidden md:grid grid-cols-[1fr_1.4fr_1.4fr] gap-px font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">
               <div className="bg-ag-white px-6 py-4">{t('dims.col1')}</div>
               <div className="bg-ag-white px-6 py-4">{t('dims.col2')}</div>
               <div className="bg-ag-white px-6 py-4">{t('dims.col3')}</div>
             </div>
             {dimRows.map((row) => (
-              <div key={row.dim} className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] gap-px bg-ag-border border-t border-ag-border">
+              <div key={row.dim} className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] gap-px">
                 <div className="bg-ag-white px-6 py-5 font-sans font-bold text-ag-black text-[13px]">{row.dim}</div>
                 <div className="bg-ag-white px-6 py-5 font-sans text-[15px] text-ag-gray leading-relaxed">{row.profile}</div>
                 <div className="bg-ag-white px-6 py-5 font-sans text-[15px] text-ag-gray leading-relaxed">{row.check}</div>
@@ -116,7 +116,7 @@ export default async function GradePartnersPage() {
         <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('transverse.label')}</p>
-            <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+            <div className="flex flex-col gap-px rounded-2xl overflow-hidden">
               {transverse.map((item) => (
                 <div key={item.title} className="bg-ag-white p-6">
                   <h3 className="font-sans font-bold text-ag-black text-[14px] mb-1.5">{item.title}</h3>
@@ -126,7 +126,7 @@ export default async function GradePartnersPage() {
             </div>
           </div>
           <div>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('independence.label')}</p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('independence.label')}</p>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-8" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('independence.title')}
             </h2>
@@ -148,7 +148,7 @@ export default async function GradePartnersPage() {
       <section className="py-20 px-6 border-b border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.22em] text-ag-gray-light mb-6">{t('ctaLabel')}</p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('ctaLabel')}</p>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.025em] leading-[1.1] mb-6" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
               {t('ctaTitle')}
             </h2>

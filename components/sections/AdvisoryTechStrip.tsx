@@ -36,16 +36,14 @@ export function AdvisoryTechStrip() {
   }, [])
 
   return (
-    <section ref={ref} id="cadrer" className="bg-ag-white scroll-mt-20">
+    <section ref={ref} id="cadrer" className="bg-ag-white border-t border-ag-border scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
 
         {/* Header */}
         <div className="flex items-start justify-between gap-8 mb-16 flex-wrap">
           <div className="max-w-xl">
-            <p ref={labelRef} className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4 flex items-center gap-3">
-              <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-              {t('label')}
-            </p>
+            <p ref={labelRef} className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="w-5 h-px bg-ag-apex/50 inline-block" />
+              {t('label')}</p>
             <h2
               ref={headRef}
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15]"
@@ -59,7 +57,7 @@ export function AdvisoryTechStrip() {
         </div>
 
         {/* Pillars grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px">
           {pillarKeys.map((key) => {
             const pillar   = pillars[key]
             const expanded = hovered === key || pinned === key

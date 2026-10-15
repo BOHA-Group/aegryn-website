@@ -66,16 +66,14 @@ export default function AboutPage() {
       {/* Name — Etymology */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {t('name.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('name.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-16 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('name.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px mb-16">
             {([0, 1, 2] as const).map((i) => (
               <div key={i} className="bg-ag-white p-10">
                 <p className="font-sans font-bold text-ag-black tracking-[0.08em] text-[22px] mb-4">
@@ -100,9 +98,7 @@ export default function AboutPage() {
 
       <VisionMissionBlock
         visionLabel={
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-            / {t('vision.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('vision.label')}</p>
         }
         visionText={
           <VisionTypewriter
@@ -112,10 +108,8 @@ export default function AboutPage() {
         dnaContent={
           <section className="border-b border-ag-border bg-ag-white">
             <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
-                / {t('dna.label')}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border">
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-12"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('dna.label')}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
                 {values.map((v) => (
                   <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
                     <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">
@@ -138,9 +132,7 @@ export default function AboutPage() {
       {/* Contribution */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {t('contribution.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('contribution.label')}</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
@@ -152,7 +144,7 @@ export default function AboutPage() {
               {t('contribution.desc')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {([0, 1, 2] as const).map((i) => (
               <div key={i} className="bg-ag-white p-10">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6">
@@ -173,16 +165,14 @@ export default function AboutPage() {
       {/* Pourquoi Aegryn */}
       <section className="border-b border-ag-border bg-ag-white">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {ta('whyAegryn.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('whyAegryn.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-12"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {ta('whyAegryn.title')}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:divide-x lg:divide-ag-border">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:">
             {[ta('whyAegryn.p1'), ta('whyAegryn.p2')].map((block, i) => {
               const [constat, reponse] = block.split('\n\n')
               return (
@@ -195,12 +185,10 @@ export default function AboutPage() {
               )
             })}
           </div>
-          <div className="mt-12 pt-10 border-t border-ag-border">
+          <div className="mt-12 pt-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-                  / {ta('whyAegryn.p3Label')}
-                </p>
+                <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('whyAegryn.p3Label')}</p>
                 <p className="text-[15px] text-ag-gray leading-relaxed">
                   {ta('whyAegryn.p3')}
                 </p>
@@ -222,9 +210,7 @@ export default function AboutPage() {
       {/* Founder */}
       <section id="fondateur" className="border-b border-ag-border" style={{ scrollMarginTop: '80px' }}>
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {ta('founder.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('founder.label')}</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
@@ -258,9 +244,7 @@ export default function AboutPage() {
       {/* Travailler avec Aegryn — 5 disciplines */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-10">
-            / {ta('workWith.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('workWith.label')}</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] whitespace-pre-line"
@@ -272,7 +256,7 @@ export default function AboutPage() {
               {ta('workWith.sub')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-px">
             {([0, 1, 2, 3, 4] as const).map((i) => (
               <div key={i} className="bg-ag-white p-8 flex flex-col gap-5">
                 <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-gray-light">
@@ -301,9 +285,7 @@ export default function AboutPage() {
         <ScrollReveal className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">
-                {t('swiss.groupLabel')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('swiss.groupLabel')}</p>
               <h2
                 className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] whitespace-pre-line mb-8"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -332,10 +314,8 @@ export default function AboutPage() {
       {/* CTA tripartite */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-16">
-            / {t('cta.label')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border">
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-16"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cta.label')}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {ctaProfiles.map((profile) => (
               <div key={profile} className="bg-ag-white p-10 flex flex-col gap-6">
                 <div className="flex-1">

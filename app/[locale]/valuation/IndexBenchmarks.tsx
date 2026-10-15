@@ -32,7 +32,7 @@ export default function IndexBenchmarks() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
             <div>
-              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('label')}</p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
               <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('title')}</h2>
               <p className="font-sans text-[15px] text-white/70 leading-relaxed max-w-xl mb-8">{t('desc')}</p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -73,7 +73,7 @@ export default function IndexBenchmarks() {
       <section className="py-24 px-6 border-t border-ag-border bg-ag-navy text-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 max-w-2xl">
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-4">{t('metricsLabel')}</p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('metricsLabel')}</p>
             <h2 className="font-sans font-bold tracking-[-0.03em] leading-[1.05] mb-4" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{t('metricsTitle')}</h2>
             <p className="font-sans text-[14px] text-white/70 leading-relaxed">{t('metricsDesc')}</p>
           </div>

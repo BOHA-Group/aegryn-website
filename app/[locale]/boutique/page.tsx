@@ -46,7 +46,7 @@ const SEGMENT_IMAGES: Record<string, string> = {
 }
 const ARTICLES = [TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE]
 const h2 = { fontSize: 'clamp(26px,3vw,44px)' }
-const eyebrow = 'font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink'
+const eyebrow = 'flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink'
 
 export default async function BoutiquePage({ params }: Props) {
   const { locale } = await params
@@ -68,7 +68,7 @@ export default async function BoutiquePage({ params }: Props) {
         <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/90 via-ag-navy/20 to-ag-navy/45" />
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="mx-auto px-6 md:px-12 max-w-7xl px-6 pb-16 md:px-12 md:pb-20">
-            <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.3em] text-ag-apex">{BOUTIQUE.label[lang]}</p>
+            <p className="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.label[lang]}</p>
             <h1
               id="boutique-title"
               className="max-w-4xl font-sans font-bold leading-[1.05] tracking-[-0.03em] text-white text-balance"
@@ -155,7 +155,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Les lieux de rencontre, bientôt */}
       <section className="bg-ag-navy py-28 text-white md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">{BOUTIQUE.placesLabel[lang]}</p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.placesLabel[lang]}</p>
           <h2 className="mt-5 max-w-3xl whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={h2}>{br(BOUTIQUE.placesTitle[lang])}</h2>
           <p className="mt-8 inline-block rounded-full bg-white/10 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">{BOUTIQUE.soon[lang]}</p>
         </div>
@@ -184,7 +184,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Savoir-faire */}
       <section id="savoir-faire" className="scroll-mt-24 bg-white pb-20 md:pb-24">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <p className={eyebrow}>{BOUTIQUE.label[lang]}</p>
+          <p className={eyebrow}><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.label[lang]}</p>
           <h2 className="mt-4 font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{SF_UI.title[lang]}</h2>
           <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-ag-gray">{SF_UI.intro[lang]}</p>
           <div className="mt-8"><SavoirFaire locale={locale} /></div>
@@ -196,10 +196,8 @@ export default async function BoutiquePage({ params }: Props) {
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div className="space-y-3">
-              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink">
-                <span className="inline-block h-px w-5 bg-ag-apex/50" />
-                {BOUTIQUE.magazineLabel[lang]}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />
+                {BOUTIQUE.magazineLabel[lang]}</p>
               <h2 className="font-sans font-bold leading-[1.15] tracking-[-0.03em] text-ag-black" style={h2}>{BOUTIQUE.magazineTitle[lang]}</h2>
             </div>
             <AllArticlesButton label={BOUTIQUE.magazineLink[lang]} className="hidden shrink-0 md:inline-flex" />

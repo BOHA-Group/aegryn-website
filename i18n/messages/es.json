@@ -4788,7 +4788,7 @@
     },
     "side": {
       "group": "Expertos de oficio",
-      "groupDesc": "Las estructuras y competencias movilizadas en nuestras misiones y en los proyectos de La Boutique.",
+      "groupDesc": "Las estructuras y expertises movilizadas en nuestras misiones.",
       "investors": "Inversores e Institucionales",
       "investorsDesc": "Bancos, fondos, family offices, instituciones: Aegryn operating partner de sus participaciones.",
       "auditors": "Auditores independientes",
@@ -4895,7 +4895,7 @@
           "note": "Aegryn asesora y prepara. La ejecución de las operaciones se confía a bancos de negocios, boutiques de M&A y abogados acreditados de la red."
         },
         "boutique": {
-          "title": "Realización de proyectos insignia (La Boutique)",
+          "title": "Proyectos insignia (La Boutique)",
           "profiles": "Diseñadores, ingenieros de producto, industriales y fabricantes, responsables de distribución, juristas de propiedad intelectual, expertos de marca.",
           "expertises": [
             "Diseño de marca y de experiencia",

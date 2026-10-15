@@ -43,7 +43,7 @@ export function GradeBrochure() {
 
         {/* Contenu */}
         <div>
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-4">{b('previewLabel')}</p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{b('previewLabel')}</p>
           <h2 className="font-sans font-bold text-ag-black text-[38px] sm:text-[46px] tracking-[-0.03em] leading-[1.05] mb-5">
             {b('previewTitle')}
           </h2>

@@ -42,7 +42,7 @@ export default async function TermsUsePage({ params }: Props) {
       </section>
 
       {/* Legal nav strip */}
-      <div className="border-b border-ag-border bg-ag-off-white sticky top-16 z-20">
+      <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
             <Link
@@ -80,7 +80,7 @@ export default async function TermsUsePage({ params }: Props) {
         </div>
 
         {/* CTAs */}
-        <div className="mt-16 pt-10 border-t border-ag-border flex flex-wrap gap-4">
+        <div className="mt-16 pt-10 flex flex-wrap gap-4">
           <Link
             href="/terms/cgv"
             className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"

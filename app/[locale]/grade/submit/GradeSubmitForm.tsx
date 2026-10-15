@@ -130,7 +130,7 @@ export default function GradeSubmitForm() {
               <p className="font-sans text-[12px] text-ag-gray leading-relaxed">{t('sidebar.mandateDesc')}</p>
             </div>
 
-            <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed border-t border-ag-border pt-6">
+            <p className="font-sans text-[12px] text-ag-gray-light leading-relaxed pt-6">
               {t('form.legalNote')}
             </p>
           </div>
@@ -195,7 +195,7 @@ export default function GradeSubmitForm() {
               </div>
 
               {/* ── Organisation ── */}
-              <div className="border-t border-ag-border pt-6 space-y-5">
+              <div className="pt-6 space-y-5">
                 <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
                   {t('form.orgTitle')}
                 </p>
@@ -242,7 +242,7 @@ export default function GradeSubmitForm() {
               </div>
 
               {/* ── Contact ── */}
-              <div className="border-t border-ag-border pt-6 space-y-5">
+              <div className="pt-6 space-y-5">
                 <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.01em]">
                   {t('form.contactTitle')}
                 </p>

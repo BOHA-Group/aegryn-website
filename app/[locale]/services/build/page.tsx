@@ -101,11 +101,9 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section 1b : Conviction, format « Notre vision » ───────────── */}
       <section className="border-b border-ag-border bg-ag-off-white/80">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[280px_1fr]">
             <div className="py-16 md:pr-16 flex items-start">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {t('builtToLast.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('builtToLast.label')}</p>
             </div>
             <div className="py-16 md:px-16">
               <VisionTypewriter
@@ -120,9 +118,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section 1c : 3 formats de mission ──────────────────────────── */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('formatsSection.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('formatsSection.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -170,9 +166,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section : Domaines logiciels ───────────────────────── */}
       <section className="border-b border-ag-border bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('domainsSection.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('domainsSection.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -209,9 +203,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('sovereigntySection.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('sovereigntySection.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-4"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -243,9 +235,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section 3 : Comparaison marché ───────────────────────────── */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('marketComparison.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('marketComparison.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-14 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -299,9 +289,7 @@ export default async function BuildServicePage({ params }: Props) {
       {/* ── Section 6 : Process ──────────────────────────────────────── */}
       <section className="border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-4">
-            {t('process.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('process.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-12 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}

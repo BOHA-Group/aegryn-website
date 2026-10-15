@@ -69,9 +69,7 @@ export default function AcquisitionRoadmap({
   return (
     <section className="py-24 px-6 bg-ag-off-white border-t border-ag-border">
       <div className="max-w-7xl mx-auto">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-          {label}
-        </p>
+        <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{label}</p>
         <h2
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4"
           style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -96,7 +94,7 @@ export default function AcquisitionRoadmap({
                   </span>
                   <span className="flex-1 h-px bg-ag-border" />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-2xl overflow-hidden">
                   {groupItems.map(({ title: itemTitle, desc: itemDesc }) => (
                     <div
                       key={itemTitle}

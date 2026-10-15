@@ -34,7 +34,7 @@ export function PillarsSection() {
   return (
     <section ref={ref} className="bg-ag-navy border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-white/[0.08]">
           {pillars.map((key) => {
             const Icon = PILLAR_ICONS[key]
             return (

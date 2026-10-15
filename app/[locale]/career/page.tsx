@@ -76,9 +76,7 @@ export default async function CareerPage({ params }: Props) {
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-6">
-                {t('about.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('about.label')}</p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1]"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -101,9 +99,7 @@ export default async function CareerPage({ params }: Props) {
       {/* Our crafts */}
       <section className="border-b border-ag-border py-24">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-4">
-            {t('crafts.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('crafts.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-16"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -149,16 +145,14 @@ export default async function CareerPage({ params }: Props) {
       {/* Values */}
       <section className="border-b border-ag-border py-24 bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.25em] text-ag-gray-light mb-4">
-            {t('values.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('values.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-16"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('values.title')}
           </h2>
-          <div className="grid sm:grid-cols-2 gap-px bg-ag-border">
+          <div className="grid sm:grid-cols-2 gap-px">
             {VALUES.map((key) => (
               <div key={key} className="bg-ag-off-white p-10">
                 <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[0.04em] uppercase mb-3">
@@ -177,9 +171,7 @@ export default async function CareerPage({ params }: Props) {
       <section className="bg-ag-navy py-28 px-6 md:px-12">
         <ScrollReveal className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">
-              {t('openings.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('openings.label')}</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

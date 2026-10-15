@@ -25,9 +25,7 @@ export function AcquisitionSupportHook() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <div className="acq-content max-w-3xl">
-          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-5">
-            {t('label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-5"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
           <h2
             className="font-display font-black text-ag-black tracking-[-0.03em] leading-[1.05] mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}

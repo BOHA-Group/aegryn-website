@@ -203,7 +203,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                   {s.format && (
                     <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ag-gray-light">{s.format}</p>
                   )}
-                  <div className="mt-auto pt-4 border-t border-ag-border flex flex-wrap gap-2">
+                  <div className="mt-auto pt-4 flex flex-wrap gap-2">
                     {s.cycles.map(cy => (
                       <Link
                         key={cy}
@@ -247,7 +247,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
                 </div>
               ))}
             </div>
-            <div className="border-t border-ag-border pt-5">
+            <div className="pt-5">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2">{ui.deliverable}</p>
               <p className="font-sans text-[14px] text-ag-black leading-relaxed">{c.framework.deliverable}</p>
             </div>
@@ -271,7 +271,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           </div>
           <div>
             <p className={`${LABEL} mb-8`}>{c.bySector.title}</p>
-            <div className={`${CARD} divide-y divide-ag-border`}>
+            <div className={`${CARD}  `}>
               {c.bySector.items.map((s, i) => (
                 <div key={i} className="px-6 py-5">
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{s.cluster}</p>
@@ -293,7 +293,7 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           <div className="rounded-2xl bg-ag-navy p-8 md:p-10">
             <p className={`${LABEL_G} mb-4`}>{c.ai.title}</p>
             <p className="font-sans text-[15px] text-white/70 leading-[1.8]">{c.ai.text}</p>
-            {c.ai.legal && <p className="font-sans text-[12px] text-white/70 leading-relaxed mt-5 pt-5 border-t border-white/10">{c.ai.legal}</p>}
+            {c.ai.legal && <p className="font-sans text-[12px] text-white/70 leading-relaxed mt-5 pt-5">{c.ai.legal}</p>}
           </div>
         </ScrollReveal>
       </section>

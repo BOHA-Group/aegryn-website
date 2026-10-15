@@ -185,7 +185,7 @@ export default function NetworkContent() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="border-b border-ag-border pt-24 pb-20 px-6">
+      <section className="pt-24 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-5 flex items-center gap-3">
             <span className="w-6 h-px bg-ag-apex/50 inline-block" />
@@ -228,7 +228,7 @@ export default function NetworkContent() {
       />
 
       {/* ── Section 2 : Nos expertises (Aegryn interne + partenaires par extension) ── */}
-      <section className="border-b border-ag-border bg-ag-off-white">
+      <section className="bg-ag-off-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
 
           {/* Header */}
@@ -293,7 +293,7 @@ export default function NetworkContent() {
           </div>
 
           {/* Grille expertises animées — filtrée par dimension active */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
             {filteredExpertise.map((card) => (
               <ExpertiseCardItem key={card.title} card={card} />
             ))}
@@ -307,7 +307,7 @@ export default function NetworkContent() {
       <section className="bg-ag-navy py-24 px-6 md:px-12 border-t border-ag-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           <div>
-            <p className="font-sans font-semibold text-[11px] tracking-[0.22em] uppercase text-white/70 mb-4">Aegryn Network</p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />Aegryn Network</p>
             <h2
               className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.1] max-w-xl whitespace-pre-line"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

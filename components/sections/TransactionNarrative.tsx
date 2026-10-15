@@ -28,10 +28,8 @@ export function TransactNarrative() {
     <section ref={ref} className="bg-ag-white border-t border-ag-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="transact-narr-text max-w-3xl">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-6 flex items-center gap-3">
-            <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-            {t('label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="w-5 h-px bg-ag-apex/50 inline-block" />
+            {t('label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.08] mb-8 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}

@@ -212,7 +212,7 @@ export function DiscoverGrid({ locale }: Props) {
                 >
                   {t('featuredLabel')}
                 </p>
-                <div className="flex flex-col divide-y divide-ag-border">
+                <div className="flex flex-col">
                   {sideList.map(article => (
                     <Link
                       key={article.slug}
@@ -322,7 +322,7 @@ export function DiscoverGrid({ locale }: Props) {
                       <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-4 line-clamp-2">
                         {article.excerpt[lang] ?? article.excerpt.en}
                       </p>
-                      <div className="flex items-center justify-between pt-3 border-t border-ag-border">
+                      <div className="flex items-center justify-between pt-3">
                         <div className="flex items-center gap-3 text-ag-gray-light">
                           <span className="flex items-center gap-1 font-mono text-[10px]">
                             <Calendar size={10} /> {formatDate(article.date)}

@@ -171,7 +171,7 @@ export function CyclePage({ content: c, locale }: Props) {
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-1.5">{ui.deliverable}</p>
                   <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.deliverable}</p>
                 </div>
-                <div className="mt-auto pt-4 border-t border-ag-border">
+                <div className="mt-auto pt-4">
                   <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ag-gray-light mb-2.5">{ui.metierUsed}</p>
                   <div className="flex flex-wrap gap-2">
                     {s.metiers.map(m => (
@@ -228,7 +228,7 @@ export function CyclePage({ content: c, locale }: Props) {
           </div>
           <div>
             <p className={`${LABEL} mb-8`}>{c.bySector.title}</p>
-            <div className={`${CARD} divide-y divide-ag-border`}>
+            <div className={`${CARD}  `}>
               {c.bySector.items.map((s, i) => (
                 <div key={i} className="px-6 py-5">
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{s.cluster}</p>

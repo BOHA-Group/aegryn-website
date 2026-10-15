@@ -86,7 +86,7 @@ export function IndustrySegments({ segments, problemsLabel, footnote }: Props) {
               </div>
               {/* Bloc entierement repliable : libelle + liste */}
               <div
-                className={`grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${expanded ? 'border-t border-ag-border' : ''}`}
+                className={`grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${expanded ? '' : ''}`}
                 style={{ gridTemplateRows: expanded ? '1fr' : '0fr', opacity: expanded ? 1 : 0 }}
               >
                 <div className="overflow-hidden min-h-0">

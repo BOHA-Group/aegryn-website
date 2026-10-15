@@ -47,9 +47,7 @@ export function GradeISOMapping() {
 
         {/* Header */}
         <div className="mb-14 max-w-3xl">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('isoLabel')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('isoLabel')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -78,12 +76,12 @@ export function GradeISOMapping() {
                 {t('isoColDimension')}
               </p>
             </div>
-            <div className="px-5 py-5 border-l border-white/15">
+            <div className="px-5 py-5">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-white">
                 {t('isoColExisting')}
               </p>
             </div>
-            <div className="px-5 py-5 border-l border-white/15">
+            <div className="px-5 py-5">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-apex">
                 {t('isoColCifso')}
               </p>
@@ -97,10 +95,10 @@ export function GradeISOMapping() {
             return (
               <div
                 key={row.dimension}
-                className="iso-row grid grid-cols-[160px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] border-t border-ag-border"
+                className="iso-row grid grid-cols-[160px_1fr_1fr] md:grid-cols-[200px_1fr_1fr]"
               >
                 {/* Dimension */}
-                <div className="px-6 py-5 bg-ag-off-white border-r border-ag-border flex items-start">
+                <div className="px-6 py-5 bg-ag-off-white flex items-start">
                   <div className="flex items-start gap-3">
                     <span
                       className="font-mono text-[13px] font-bold shrink-0 mt-0.5"
@@ -115,7 +113,7 @@ export function GradeISOMapping() {
                 </div>
 
                 {/* Existing standards */}
-                <div className="px-6 py-5 bg-ag-white border-r border-ag-border">
+                <div className="px-6 py-5 bg-ag-white">
                   <div className="flex items-start gap-2">
                     <span className="text-ag-gray-light text-[11px] mt-0.5 shrink-0">–</span>
                     <p className="font-sans text-[12px] text-ag-gray leading-relaxed">

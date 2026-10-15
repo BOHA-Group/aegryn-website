@@ -73,7 +73,7 @@ export function SavoirFaire({ locale }: { locale: string }) {
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-px border border-ag-border bg-ag-border md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3">
         {rows.map(({ ph, items }) => {
           const expanded = hovered === ph.key || pinned === ph.key
           return (

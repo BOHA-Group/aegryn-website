@@ -59,7 +59,7 @@ export default function CareerPositions({
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Header row */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-ag-border pb-4 mb-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-0">
           <div className="flex items-center gap-4">
             <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
               {positionsLabel}
@@ -118,7 +118,7 @@ export default function CareerPositions({
         {filtered.map((pos, i) => (
           <div
             key={i}
-            className="group flex items-center justify-between border-b border-ag-border py-6 hover:bg-ag-off-white transition-colors cursor-default"
+            className="group flex items-center justify-between py-6 hover:bg-ag-off-white transition-colors cursor-default"
           >
             <div className="flex items-start gap-6">
               <span className="font-sans font-semibold text-[10px] text-ag-gray-light w-6 shrink-0 pt-0.5">

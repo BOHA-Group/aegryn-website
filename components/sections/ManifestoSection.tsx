@@ -116,13 +116,11 @@ export function ManifestoSection() {
   return (
     <>
       {/* ── What we do ─────────────────────────────────────── */}
-      <section ref={whatRef} className="bg-ag-white">
+      <section ref={whatRef} className="border-t border-ag-border bg-ag-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-[280px_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[280px_1fr]">
             <div className="py-16 md:pr-16 flex items-start justify-between">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                / {tW('label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tW('label')}</p>
               <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
                 01
               </span>
@@ -138,16 +136,14 @@ export function ManifestoSection() {
       </section>
 
       {/* ── About us ───────────────────────────────────────── */}
-      <section ref={aboutRef} className="bg-ag-off-white overflow-hidden">
+      <section ref={aboutRef} className="border-t border-ag-border bg-ag-off-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-[1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-ag-border">
+          <div className="grid md:grid-cols-[1fr_1fr]">
 
             {/* Left col */}
             <div className="py-24 md:pr-16">
               <div className="flex items-center justify-between mb-10">
-                <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-                  / {tA('label')}
-                </p>
+                <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tA('label')}</p>
                 <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
                   02
                 </span>

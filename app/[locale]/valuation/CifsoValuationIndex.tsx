@@ -80,7 +80,7 @@ function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: stri
     return (
       <div className="border border-ag-border rounded-xl overflow-hidden">
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="grid grid-cols-3 border-b border-ag-border last:border-0 p-4 gap-4 animate-pulse">
+          <div key={i} className="grid grid-cols-3 last:border-0 p-4 gap-4 animate-pulse">
             <div className="h-4 bg-ag-border rounded w-3/4" />
             <div className="h-4 bg-ag-border rounded w-1/2" />
             <div className="h-4 bg-ag-border rounded w-1/2" />
@@ -99,10 +99,10 @@ function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: stri
           <div className="px-5 py-4">
             <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{t('colCluster')}</p>
           </div>
-          <div className="px-5 py-4 border-l border-white/10">
+          <div className="px-5 py-4">
             <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{t('colEvRevenue')}</p>
           </div>
-          <div className="px-5 py-4 border-l border-white/10">
+          <div className="px-5 py-4">
             <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{t('colEvEbitda')}</p>
           </div>
         </div>
@@ -110,16 +110,16 @@ function MarketTable({ rows, locale, locked }: { rows: MarketRow[]; locale: stri
         {rows.map((row, i) => (
           <div
             key={row.cluster_key}
-            className={`grid grid-cols-3 border-x border-b border-ag-border last:rounded-b-xl ${
+            className={`grid grid-cols-3 border-x  last:rounded-b-xl ${
               i % 2 === 0 ? 'bg-ag-white' : 'bg-ag-off-white'
             } hover:bg-ag-apex/5 transition-colors ${locked && i > 0 ? '[&>div:not(:first-child)]:blur-sm [&>div:not(:first-child)]:select-none' : ''}`}
           >
-            <div className="px-5 py-4 border-r border-ag-border">
+            <div className="px-5 py-4">
               <p className="font-sans font-semibold text-ag-black text-[13px]">
                 {row.cluster_label?.[locale] ?? row.cluster_label?.['fr'] ?? row.cluster_key}
               </p>
             </div>
-            <div className="px-5 py-4 border-r border-ag-border">
+            <div className="px-5 py-4">
               <p className="font-mono font-bold text-ag-apex-ink text-[13px]">
                 {row.ev_revenue_low}x à {row.ev_revenue_high}x
               </p>
@@ -279,7 +279,7 @@ export default function CifsoValuationIndex() {
               <p className="font-sans text-[14px] text-white/70 leading-relaxed">
                 {t('chart.desc')}
               </p>
-              <p className="font-sans text-[10px] text-white/70 leading-relaxed mt-6 border-t border-white/10 pt-4 italic">
+              <p className="font-sans text-[10px] text-white/70 leading-relaxed mt-6 pt-4 italic">
                 {t('chart.disclaimer')}
               </p>
             </div>
@@ -315,7 +315,7 @@ export default function CifsoValuationIndex() {
           <div className="border border-ag-border rounded-2xl overflow-hidden">
 
             {/* Header carte */}
-            <div className="bg-ag-off-white border-b border-ag-border px-8 py-5 flex flex-wrap items-center gap-3">
+            <div className="bg-ag-off-white px-8 py-5 flex flex-wrap items-center gap-3">
               <span className="font-mono text-[11px] tracking-[0.14em] text-ag-black bg-ag-border px-3 py-1 rounded">
                 {example.badgeOrg}
               </span>
@@ -327,7 +327,7 @@ export default function CifsoValuationIndex() {
               </span>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] divide-y lg:divide-y-0 lg:divide-x divide-ag-border">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr]">
 
               {/* Left — Score global + dimensions */}
               <div className="p-8 flex flex-col gap-6">
@@ -351,7 +351,7 @@ export default function CifsoValuationIndex() {
                 </div>
 
                 {/* Dimensions breakdown */}
-                <div className="flex flex-col gap-3 border-t border-ag-border pt-5">
+                <div className="flex flex-col gap-3 pt-5">
                   {example.dims.map(({ code, label, score }) => (
                     <div key={code} className="flex items-center gap-3">
                       <span
@@ -380,7 +380,7 @@ export default function CifsoValuationIndex() {
                 </div>
 
                 {/* Leviers */}
-                <div className="border-t border-ag-border pt-5 flex flex-col gap-3">
+                <div className="pt-5 flex flex-col gap-3">
                   <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-gray-light">{example.leversLabel}</p>
                   {example.levers.map((l, i) => (
                     <div key={i} className="flex items-start gap-3 border-l-2 border-ag-apex/30 pl-4">
@@ -390,7 +390,7 @@ export default function CifsoValuationIndex() {
                 </div>
 
                 {/* CTA */}
-                <div className="border-t border-ag-border pt-5 mt-auto">
+                <div className="pt-5 mt-auto">
                   <Link
                     href={example.ctaHref as never}
                     className="inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono font-semibold text-[11px] tracking-[0.14em] uppercase px-6 py-3.5 hover:bg-ag-apex/90 transition-colors"
@@ -451,16 +451,16 @@ export default function CifsoValuationIndex() {
             <div className="min-w-[720px]">
               <div className="grid grid-cols-[220px_repeat(4,1fr)] bg-ag-navy">
                 <div className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">Dimension</p></div>
-                {fm.dimLockedCells.map(c => <div key={c} className="px-5 py-4 border-l border-white/10"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{c}</p></div>)}
+                {fm.dimLockedCells.map(c => <div key={c} className="px-5 py-4"><p className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70">{c}</p></div>)}
               </div>
               {fm.dims.map((d, i) => (
-                <div key={d.letter} className={`grid grid-cols-[220px_repeat(4,1fr)] border-t border-ag-border ${i % 2 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
+                <div key={d.letter} className={`grid grid-cols-[220px_repeat(4,1fr)]  ${i % 2 ? 'bg-ag-off-white' : 'bg-ag-white'}`}>
                   <div className="px-5 py-4 flex items-center gap-3">
                     <span className="font-sans font-bold text-ag-navy text-[16px] w-5">{d.letter}</span>
                     <div><p className="font-sans font-semibold text-ag-black text-[13px]">{d.label}</p><p className="font-mono text-[10px] text-ag-gray-light">{d.teaser}</p></div>
                   </div>
                   {[0, 1, 2, 3].map(k => (
-                    <div key={k} className="px-5 py-4 border-l border-ag-border blur-sm select-none">
+                    <div key={k} className="px-5 py-4 blur-sm select-none">
                       <p className="font-mono text-[13px] text-ag-black">{['14,2 / 20', '+1,8x', '+420 k€', '▲ 3 %'][k]}</p>
                     </div>
                   ))}

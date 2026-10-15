@@ -72,9 +72,7 @@ export function GradeUseCases() {
 
         {/* Header */}
         <div className="mb-16 max-w-3xl">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('useCasesLabel')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('useCasesLabel')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -87,7 +85,7 @@ export function GradeUseCases() {
         </div>
 
         {/* Use cases */}
-        <div className="flex flex-col gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+        <div className="flex flex-col gap-px rounded-2xl overflow-hidden">
           {cases.map((uc, idx) => {
             const meta = UC_META[idx]
             return (
@@ -98,7 +96,7 @@ export function GradeUseCases() {
                 <div className="grid grid-cols-1 lg:grid-cols-[56px_1fr_320px] gap-0">
 
                   {/* Number */}
-                  <div className="hidden lg:flex items-start justify-center pt-10 border-r border-ag-border">
+                  <div className="hidden lg:flex items-start justify-center pt-10">
                     <span className="font-mono text-[11px] tracking-[0.2em] text-ag-apex-ink font-bold">
                       {uc.num}
                     </span>

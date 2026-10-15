@@ -52,7 +52,7 @@ export default async function PrivacyPage({ params }: Props) {
       </section>
 
       {/* Legal nav */}
-      <div className="border-b border-ag-border bg-ag-off-white sticky top-16 z-20">
+      <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
             <Link
@@ -70,17 +70,7 @@ export default async function PrivacyPage({ params }: Props) {
 
       <div className="mx-auto max-w-5xl px-6 md:px-16 py-16">
 
-        <div className="prose prose-slate max-w-none font-sans
-          prose-headings:font-sans prose-headings:font-bold prose-headings:text-ag-black prose-headings:tracking-[-0.02em]
-          prose-h2:text-[22px] prose-h2:mt-14 prose-h2:mb-5
-          prose-h3:text-[16px] prose-h3:mt-8 prose-h3:mb-3
-          prose-p:text-[15px] prose-p:text-ag-gray prose-p:leading-[1.75]
-          prose-li:text-[15px] prose-li:text-ag-gray prose-li:leading-[1.75]
-          prose-a:text-ag-navy prose-a:no-underline hover:prose-a:underline
-          prose-strong:text-ag-black
-          prose-table:text-[14px]
-          prose-th:text-ag-black prose-th:font-semibold prose-th:text-left prose-th:py-3 prose-th:px-4
-          prose-td:text-ag-gray prose-td:py-3 prose-td:px-4 prose-td:align-top">
+        <div className="prose prose-slate max-w-none font-sans prose-headings:font-sans prose-headings:font-bold prose-headings:text-ag-black prose-headings:tracking-[-0.02em] prose-h2:text-[22px] prose-h2:mt-14 prose-h2:mb-5 prose-h3:text-[16px] prose-h3:mt-8 prose-h3:mb-3 prose-p:text-[15px] prose-p:text-ag-gray prose-p:leading-[1.75] prose-li:text-[15px] prose-li:text-ag-gray prose-li:leading-[1.75] prose-a:text-ag-navy prose-a:no-underline hover:prose-a:underline prose-strong:text-ag-black prose-table:text-[14px] prose-th:text-ag-black prose-th:font-semibold prose-th:text-left prose-th:py-3 prose-th:px-4 prose-td:text-ag-gray prose-td:py-3 prose-td:px-4 prose-td:align-top">
 
             {/* Introduction */}
           <h2>{tP('content.intro.h')}</h2>

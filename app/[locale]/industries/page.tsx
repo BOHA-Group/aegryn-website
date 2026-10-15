@@ -110,8 +110,7 @@ export default function IndustriesPage() {
                   </span>
 
                   {/* Icône haut droite */}
-                  <div className="absolute top-4 right-4 w-7 h-7 rounded-full border border-white/25 flex items-center justify-center
-                    group-hover:border-ag-apex group-hover:bg-ag-apex/15 transition-all duration-300">
+                  <div className="absolute top-4 right-4 w-7 h-7 rounded-full border border-white/25 flex items-center justify-center group-hover:border-ag-apex group-hover:bg-ag-apex/15 transition-all duration-300">
                     <ArrowUpRight size={12} className="text-white/70 group-hover:text-ag-apex transition-colors" />
                   </div>
 
@@ -142,7 +141,7 @@ export default function IndustriesPage() {
         <div className="max-w-7xl mx-auto">
 
           {/* Ligne 1 — Benchmarks */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
               {t('cta1Text')}
             </p>
@@ -155,7 +154,7 @@ export default function IndustriesPage() {
           </div>
 
           {/* Ligne 2 — Certification */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6 border-b border-ag-border">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 px-6 md:px-12 py-6">
             <p className="font-sans text-[14px] text-ag-black leading-snug max-w-lg">
               {t('cta2Text')}
             </p>

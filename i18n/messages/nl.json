@@ -4788,7 +4788,7 @@
     },
     "side": {
       "group": "Vakexperts",
-      "groupDesc": "De structuren en expertises die wij inzetten voor onze opdrachten en de projecten van La Boutique.",
+      "groupDesc": "De structuren en expertise die we op onze opdrachten inzetten.",
       "investors": "Investeerders & Institutionelen",
       "investorsDesc": "Banken, fondsen, family offices, instellingen: Aegryn als operating partner van hun deelnemingen.",
       "auditors": "Onafhankelijke auditors",
@@ -4895,7 +4895,7 @@
           "note": "Aegryn adviseert en bereidt voor. De uitvoering van transacties wordt toevertrouwd aan zakenbanken, M&A-boutiques en beëdigde advocaten van het netwerk."
         },
         "boutique": {
-          "title": "Realisatie van signatuurprojecten (La Boutique)",
+          "title": "Signatuurprojecten (La Boutique)",
           "profiles": "Ontwerpers, productingenieurs, industriëlen en producenten, verantwoordelijken voor distributie, juristen intellectueel eigendom, merkexperts.",
           "expertises": [
             "Merk- en ervaringsontwerp",

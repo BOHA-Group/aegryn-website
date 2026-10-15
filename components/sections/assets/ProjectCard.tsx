@@ -80,7 +80,7 @@ export function ProjectCard({ asset, showDetails = true }: { asset: AegrynAsset;
                     {tItems(`${asset.id}.keywords`)}
                   </p>
                   {asset.internalOnly && (
-                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light pt-3 border-t border-ag-border">
+                    <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light pt-3">
                       {t('confidential')}
                     </p>
                   )}

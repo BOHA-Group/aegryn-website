@@ -173,9 +173,7 @@ export function TechStackShowcase() {
         {/* Header — compact horizontal */}
         <div className="tss-header flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-8">
           <div>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-1.5">
-              {t('label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-1"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

@@ -161,7 +161,7 @@ export function ProprietaryAssetsGrid() {
         </div>
 
         {/* Filter bar */}
-        <div className="flex items-center flex-wrap gap-3 mb-12 border-b border-ag-border pb-6">
+        <div className="flex items-center flex-wrap gap-3 mb-12 pb-6">
           <FilterPills options={filters} active={active} onChange={setActive} />
           <span className="ml-auto font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
             {filtered.length} actif{filtered.length > 1 ? 's' : ''}
@@ -221,7 +221,7 @@ export function ProprietaryAssetsGrid() {
               </div>
 
               {/* Actions */}
-              <div className="flex items-center gap-4 pt-2 border-t border-ag-border">
+              <div className="flex items-center gap-4 pt-2">
                 {asset.internalOnly ? (
                   <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light cursor-default select-none">
                     {t('confidential')}

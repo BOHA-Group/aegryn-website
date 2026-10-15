@@ -99,7 +99,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
         style={{ transform: 'translateX(100%)' }}
       >
         {/* Header */}
-        <div className="flex items-start justify-between p-8 border-b border-ag-border sticky top-0 bg-white z-10">
+        <div className="flex items-start justify-between p-8 sticky top-0 bg-white z-10">
           <div>
             <BadgePill badge={tItems(`${asset.id}.badge`)} />
             <h2
@@ -141,7 +141,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
               </div>
 
               {/* Highlights grid */}
-              <div className="grid grid-cols-2 gap-px bg-ag-border">
+              <div className="grid grid-cols-2 gap-px">
                 {getHighlights().map((h) => (
                   <div key={h.label} className="bg-ag-off-white p-4">
                     <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light mb-1">
@@ -165,7 +165,7 @@ function Drawer({ asset, onClose }: { asset: Asset; onClose: () => void }) {
         </div>
 
         {/* Footer CTA */}
-        <div className="p-8 border-t border-ag-border">
+        <div className="p-8">
           {assetKey === 'subblink' ? (
             <a
               href="https://subblink.app"
@@ -224,12 +224,12 @@ export function AssetGridWithDrawer() {
           </div>
 
           {/* Grille 3 colonnes flat — toutes catégories mélangées */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {Aegryn_ASSETS.map((asset, i) => {
               const isRestricted = asset.id === 'kryv'
-              const colBorder = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-              const colBorderSm = i % 2 !== 1 ? 'md:border-r border-ag-border' : ''
-              const rowBorder = 'border-b border-ag-border'
+              const colBorder = i % 3 !== 2 ? '' : ''
+              const colBorderSm = i % 2 !== 1 ? '' : ''
+              const rowBorder = ''
 
               return (
                 <button

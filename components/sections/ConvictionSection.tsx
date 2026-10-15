@@ -30,9 +30,7 @@ export function ConvictionSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         <div className="mb-16 max-w-2xl">
-          <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-ag-gray-light mb-4">
-            {t('label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
           <h2
             className="font-display font-black text-ag-black tracking-[-0.03em] leading-[1.05]"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -41,7 +39,7 @@ export function ConvictionSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {cols.map(({ key }) => (
             <div key={key} className={`conviction-col py-10 md:py-0 md:px-10 first:pl-0 last:pr-0`}>
               <p className={`font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-5`}>

@@ -57,7 +57,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
               {t('ctaDiscover')}
             </Link>
           </div>
-          <p className="font-sans text-[15px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed border-t border-white/10 pt-8">
+          <p className="font-sans text-[15px] text-ag-apex/70 mt-10 max-w-xl leading-relaxed pt-8">
             {t('advisorNote')}
           </p></ScrollReveal>
         </div>
@@ -66,9 +66,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       {/* ── Expertises transactionnelles ── */}
       <section className="py-24 px-6 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('experts.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('experts.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -85,7 +83,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
                   <span className="w-6 h-px bg-ag-apex inline-block" />
                   {phase.label}
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
                   {phase.items.map(({ num, title, desc }) => (
                     <div key={num} className="bg-ag-white p-8 flex flex-col gap-3">
                       <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
@@ -104,16 +102,14 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       {/* ── For whom ── */}
       <section className="py-24 px-6 bg-ag-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('forWhom.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('forWhom.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-14"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('forWhom.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
             {forWhom.map(({ title, desc }) => (
               <div key={title} className="bg-ag-white p-10 flex flex-col gap-4">
                 <div className="w-8 h-8 border border-ag-apex/30 flex items-center justify-center">
@@ -133,7 +129,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('offer.label')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="bg-ag-white p-8 flex flex-col gap-4">
                 <span className="font-mono text-[11px] tracking-[0.18em] text-ag-apex-ink">{num}</span>
@@ -152,7 +148,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-14">
             {t('diff.label')}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ag-border border border-ag-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px">
             {diffItems.map(({ title, desc }) => (
               <div key={title} className="bg-ag-white p-10 flex gap-6">
                 <Shield size={16} className="text-ag-apex-ink shrink-0 mt-0.5" />
@@ -180,9 +176,7 @@ export default async function AcquisitionSupportPage({ params }: Props) {
       <section className="py-20 px-6 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-              {t('fees.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('fees.label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-4 whitespace-pre-line"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

@@ -126,10 +126,10 @@ export default function AlliancesContent() {
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
           <aside className="hidden lg:block shrink-0 w-64 lg:-ml-12 sticky top-20 self-start">
-            <nav className="flex flex-col gap-0 px-3 py-6 bg-ag-off-white border border-ag-border rounded-2xl">
+            <nav className="flex max-h-[calc(100vh-6rem)] flex-col gap-0 overflow-y-auto px-3 py-6 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
-                  {gi > 0 && <div className="border-t border-ag-border mx-5 my-4" />}
+                  {gi > 0 && <div className="mx-5 my-4" />}
                   <button
                     onClick={() => scrollToId(g.id)}
                     className="w-full text-left px-5 pt-2 pb-1.5 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex-ink transition-colors"
@@ -150,7 +150,7 @@ export default function AlliancesContent() {
                   ))}
                 </div>
               ))}
-              <div className="border-t border-ag-border mx-5 mt-4" />
+              <div className="mx-5 mt-4" />
               <button
                 onClick={() => scrollToId('candidature')}
                 className="w-full text-left px-5 pt-3 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-black transition-colors"
@@ -161,7 +161,7 @@ export default function AlliancesContent() {
           </aside>
 
           {/* ── Nav mobile (visible < lg) ── */}
-          <div className="lg:hidden w-full border-b border-ag-border overflow-x-auto sticky top-16 bg-ag-white z-30">
+          <div className="lg:hidden w-full overflow-x-auto sticky top-16 bg-ag-white z-30">
             <div className="flex gap-0 min-w-max">
               <button
                 onClick={() => scrollToId('partenaires')}
@@ -204,9 +204,7 @@ export default function AlliancesContent() {
 
             {/* Intro — trois entrées */}
             <div>
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                {t('intro.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('intro.label')}</p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6 max-w-2xl"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -216,7 +214,7 @@ export default function AlliancesContent() {
               <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-12">
                 {t('intro.desc')}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ag-border border border-ag-border rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-2xl overflow-hidden">
                 {cards.map((card, i) => {
                   const inner = (
                     <div className="bg-ag-white p-8 h-full flex flex-col gap-4 group hover:bg-ag-off-white transition-colors">
@@ -242,9 +240,7 @@ export default function AlliancesContent() {
 
             {/* Partenaires & expertises — cinq métiers */}
             <section id="partenaires" className="scroll-mt-24">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                {t('metiers.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('metiers.label')}</p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -294,9 +290,7 @@ export default function AlliancesContent() {
 
             {/* Investisseurs & Institutionnels — introduction */}
             <section id="investisseurs" className="scroll-mt-24">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                {t('investisseurs.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('investisseurs.label')}</p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -325,9 +319,7 @@ export default function AlliancesContent() {
 
             {/* Auditeurs indépendants — introduction */}
             <section id="auditeurs" className="scroll-mt-24">
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                {t('auditeurs.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('auditeurs.label')}</p>
               <h2
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -358,9 +350,7 @@ export default function AlliancesContent() {
             <div id="candidature" className="scroll-mt-24">
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12">
                 <div>
-                  <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-                    {t('candidature.label')}
-                  </p>
+                  <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('candidature.label')}</p>
                   <h2
                     className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
                     style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -498,7 +488,7 @@ function SectionCtas({
   pageHref: string; viewLabel: string; joinLabel: string; onJoin: () => void
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8 border-t border-ag-border">
+    <div className="flex flex-col sm:flex-row gap-4 mt-12 pt-8">
       <Link
         href={pageHref as never}
         className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"

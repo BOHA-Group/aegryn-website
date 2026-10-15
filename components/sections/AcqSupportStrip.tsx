@@ -38,10 +38,8 @@ export function AcqSupportStrip() {
         {/* Header */}
         <div className="acq-header flex items-start justify-between gap-8 mb-16 flex-wrap">
           <div className="max-w-xl">
-            <p className="font-sans font-semibold text-[10px] tracking-[0.28em] uppercase text-ag-apex-ink mb-4 flex items-center gap-3">
-              <span className="w-5 h-px bg-ag-apex/50 inline-block" />
-              {t('sublabel')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="w-5 h-px bg-ag-apex/50 inline-block" />
+              {t('sublabel')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.15]"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -54,7 +52,7 @@ export function AcqSupportStrip() {
         </div>
 
         {/* Domains grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ag-border border border-ag-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-ag-border">
           {domains.map((domain, i) => {
             const Icon = ICONS[i] ?? Banknote
             return (

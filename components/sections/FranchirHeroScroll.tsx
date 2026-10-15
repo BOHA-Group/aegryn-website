@@ -83,10 +83,8 @@ export function FranchirHeroScroll({ eyebrow, title, sub, ctaLabel, ctaHref }: P
 
   const heading = (
     <>
-      <p className="font-mono text-[10px] tracking-[0.28em] uppercase mb-6 flex items-center gap-3 text-ag-apex-ink">
-        <span className="w-6 h-px inline-block bg-ag-apex/50" />
-        {eyebrow}
-      </p>
+      <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="w-6 h-px inline-block bg-ag-apex/50" />
+        {eyebrow}</p>
       <h2
         className="font-sans font-bold leading-[1.05] tracking-[-0.03em] mb-6 text-ag-black"
         style={{ fontSize: 'clamp(26px,3vw,44px)' }}

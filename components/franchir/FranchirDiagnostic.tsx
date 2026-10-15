@@ -17,6 +17,8 @@ interface Props {
   /** Titres des cycles pour le lien « Voir ce cycle » */
   cycleTitle: Record<CycleSlug, string>
   locale:     string
+  /** Mode panneau : liste toujours ouverte, sans l'en-tête dépliant */
+  panel?:     boolean
 }
 
 /**
@@ -24,11 +26,11 @@ interface Props {
  * Une reponse « oui » renvoie vers la page du cycle concerne ;
  * rien n'est envoye ni stocke.
  */
-export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Props) {
+export function FranchirDiagnostic({ title, questions, cycleTitle, locale, panel = false }: Props) {
   const ui = FRANCHIR_UI[locale] ?? FRANCHIR_UI.fr
   const [hovered, setHovered] = useState(false)
   const [pinned, setPinned] = useState(false)
-  const open = hovered || pinned
+  const open = panel || hovered || pinned
   const [answers, setAnswers] = useState<(boolean | null)[]>(() => questions.map(() => null))
   const set = (i: number, v: boolean) => setAnswers(prev => prev.map((a, idx) => (idx === i ? v : a)))
 
@@ -38,7 +40,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
       onMouseEnter={() => { if (window.matchMedia('(hover: hover)').matches) setHovered(true) }}
       onMouseLeave={() => setHovered(false)}
     >
-      <button
+      {!panel && <button
         type="button"
         onClick={() => setPinned(p => !p)}
         aria-expanded={open}
@@ -53,14 +55,14 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale }: Pro
         >
           <Plus size={13} strokeWidth={2} className={`transition-transform duration-300 ${open ? 'rotate-45' : ''}`} />
         </span>
-      </button>
+      </button>}
 
       <div
         className="grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{ gridTemplateRows: open ? '1fr' : '0fr', opacity: open ? 1 : 0 }}
       >
         <div className="overflow-hidden min-h-0">
-      <ol className="divide-y divide-ag-border">
+      <ol className="">
         {questions.map((item, i) => {
           const yes = answers[i] === true
           return (

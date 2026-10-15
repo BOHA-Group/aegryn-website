@@ -139,7 +139,7 @@ export default function SitemapPage() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-ag-border" />
+        <div className="mt-16 pt-8" />
       </div>
     </main>
   )

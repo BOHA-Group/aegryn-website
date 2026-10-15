@@ -70,7 +70,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-ag-border">
+      <section className="">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
           <p className="font-sans font-semibold text-xs uppercase tracking-[0.3em] text-ag-apex-ink mb-6">
             Contact
@@ -93,9 +93,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
           {/* Info column */}
           <div className="space-y-10">
             <div>
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
-                {t('info.baseLabel')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-3"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('info.baseLabel')}</p>
               <p className="text-sm text-ag-gray">{t('info.baseValue')}</p>
             </div>
             <div>
@@ -134,9 +132,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
               </a>
             </div>
             <div>
-              <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.25em] text-ag-gray-light mb-3">
-                {t('responseTime.label')}
-              </p>
+              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-3"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('responseTime.label')}</p>
               <p className="text-sm text-ag-gray">{t('responseTime.value')}</p>
             </div>
           </div>
@@ -156,7 +152,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
           <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-12">
             {t('faq.label')}
           </p>
-          <div className="grid gap-0 divide-y divide-ag-border">
+          <div className="grid gap-0">
             {(t.raw('faq.items') as { q: string; a: string }[]).map((item, i) => (
               <div key={i} className="py-8 grid md:grid-cols-[320px_1fr] gap-6">
                 <h3 className="font-sans font-bold text-ag-black" style={{ fontSize: 'clamp(15px,1.4vw,18px)' }}>

@@ -448,7 +448,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
 
       {/* ── Taxonomie — pied de fiche compact ── */}
       {(profile.expertise_dimension || categoryNodes.length > 0 || specialtyNodes.length > 0) && (
-        <div className="pt-2 border-t border-ag-border flex flex-wrap gap-1 items-center">
+        <div className="pt-2 flex flex-wrap gap-1 items-center">
           {profile.expertise_dimension && (() => {
             const dc = DIMENSION_COLORS_PUBLIC[profile.expertise_dimension]
             return (
@@ -476,7 +476,7 @@ function ExpertCard({ profile, t, locale = 'fr', blurred = false, filters = { ca
         </div>
       )}
 
-      <div className="pt-2 border-t border-ag-border mt-auto space-y-1.5">
+      <div className="pt-2 mt-auto space-y-1.5">
         {profile.languages.length > 0 && (
           <div className="flex flex-wrap gap-1">
             {profile.languages.map(l => (
@@ -742,7 +742,7 @@ export default function ExpertsContent() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="border-b border-ag-border">
+      <section className="">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-28 md:py-36">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-gray-light mb-8">
             {t('hero.label')}
@@ -760,11 +760,9 @@ export default function ExpertsContent() {
       </section>
 
       {/* ── Showcase catégories — éventail de cartes ─────────────────── */}
-      <section className="border-b border-ag-border bg-ag-off-white overflow-hidden">
+      <section className="bg-ag-off-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-4 text-center">
-          <p className="font-mono text-[10px] tracking-[0.30em] uppercase text-ag-gray-light mb-4">
-            {t('showcase.label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('showcase.label')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.02em] leading-tight mb-3"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
@@ -786,7 +784,7 @@ export default function ExpertsContent() {
       </section>
 
       {/* ── Filtres + compteur ───────────────────────────────────────── */}
-      <section className="border-b border-ag-border bg-ag-white sticky top-16 z-30">
+      <section className="bg-ag-white sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
           <div className="flex flex-wrap items-center gap-3">
             <Filter size={13} className="text-ag-gray-light shrink-0" />
@@ -893,9 +891,7 @@ export default function ExpertsContent() {
       <section className="bg-ag-off-white border-t border-ag-border py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16">
           <div>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light mb-6">
-              {t('waitlist.label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('waitlist.label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

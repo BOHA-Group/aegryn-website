@@ -34,7 +34,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-ag-border bg-ag-navy overflow-hidden">
+      <section className="bg-ag-navy overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 md:px-12 py-32">
           <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-8">
             {t('hero.label')}
@@ -58,7 +58,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
       </section>
 
       {/* Méthode en 4 étapes */}
-      <section className="py-24 border-b border-ag-border">
+      <section className="py-24">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-16" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>
             {tm('method.title')}
@@ -95,7 +95,7 @@ export default async function TalentEntreprisesPage({ params }: Props) {
       </section>
 
       {/* Ce qu'un outil d'IA ne fera pas */}
-      <section className="py-24 border-b border-ag-border bg-ag-off-white">
+      <section className="py-24 bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="font-sans font-bold text-ag-black tracking-[-0.02em] mb-8" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>

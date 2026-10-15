@@ -114,7 +114,7 @@ export function CifsoBrochure() {
   return (
     <main className="min-h-screen bg-[#e9ebee] print:bg-white">
       {/* Toolbar */}
-      <div className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-ag-border z-50 print:hidden">
+      <div className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur z-50 print:hidden">
         <div className="max-w-[900px] mx-auto px-6 py-4 flex items-center justify-between">
           <Link href={`/${locale}/grade`} className="inline-flex items-center gap-2 text-ag-gray hover:text-ag-black transition-colors text-sm">
             <ArrowLeft size={16} />
@@ -161,7 +161,7 @@ export function CifsoBrochure() {
             {toc.map((title, i) => {
               const page = [3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 14, 15][i]
               return (
-                <li key={i} className="flex items-baseline gap-3 sm:gap-5 py-3 sm:py-4 border-b border-ag-border last:border-0">
+                <li key={i} className="flex items-baseline gap-3 sm:gap-5 py-3 sm:py-4 last:border-0">
                   <span className="font-mono text-[11px] sm:text-[12px] text-ag-apex-ink font-bold w-6 sm:w-8 shrink-0">{num(i + 1)}</span>
                   <span className="font-sans text-[13px] sm:text-[16px] text-ag-black flex-1">{title}</span>
                   <span className="hidden sm:block flex-1 border-b border-dotted border-ag-border translate-y-[-4px]" />
@@ -255,7 +255,7 @@ export function CifsoBrochure() {
           </div>
           <div className="mt-8 flex items-stretch rounded-xl overflow-hidden border border-ag-border">
             {cifs.map((d) => (
-              <div key={d.code} className="flex-1 p-4 text-center border-r border-ag-border last:border-0">
+              <div key={d.code} className="flex-1 p-4 text-center last:border-0">
                 <p className="font-sans font-bold text-ag-navy text-[22px] leading-none mb-1">{d.code}</p>
                 <p className="font-mono text-[10px] text-ag-gray tracking-[0.1em]">{d.weight}</p>
               </div>
@@ -521,7 +521,7 @@ function StepCard({ s, labels }: { s: Step; labels: [string, string, string] | s
           <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-4 pt-4 border-t border-ag-border">
+      <div className="grid grid-cols-1 sm:grid-cols-3 print:grid-cols-3 gap-4 pt-4">
         {[s.inputs, s.outputs, s.outcomes].map((v, i) => (
           <div key={i}>
             <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-navy font-semibold mb-1">{labels[i]}</p>

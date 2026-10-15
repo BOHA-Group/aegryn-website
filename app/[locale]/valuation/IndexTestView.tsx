@@ -69,7 +69,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
       {/* Carte profil — persistante, ne se perd jamais en changeant d'onglet ou de filtre */}
-      <div className="flex flex-wrap items-center gap-3 px-5 pt-5 pb-4 border-b border-white/10">
+      <div className="flex flex-wrap items-center gap-3 px-5 pt-5 pb-4">
         <span className="font-mono text-[9px] uppercase tracking-widest text-white/70">{t('yourProfileLabel')}</span>
         <span className="font-sans text-[12px] font-semibold text-white">{userIndustryLabel}{userVerticalLabel ? ` · ${userVerticalLabel}` : ''}</span>
         <span className="font-mono text-[11px] uppercase tracking-wide text-ag-apex-ink border border-ag-apex/40 rounded-full px-2.5 py-0.5">{user.grade}</span>
@@ -93,7 +93,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-0 mt-4">
         {/* Filtres réels — mettent en évidence une ligne, ne réduisent jamais le tableau à une seule */}
-        <div className="border-t lg:border-t-0 lg:border-r border-white/10 px-5 py-4 flex flex-col gap-4">
+        <div className="border-t lg:border-t-0 px-5 py-4 flex flex-col gap-4">
           <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 flex items-center gap-1.5">
             <SlidersHorizontal size={10} /> {t('filtersLabel')}
           </p>
@@ -203,7 +203,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
       </div>
 
       {/* CTA vert — liste d'attente abonnement complet */}
-      <div className="border-t border-white/10 px-5 py-6 bg-white/[0.02]">
+      <div className="px-5 py-6 bg-white/[0.02]">
         <div className="flex items-start gap-3 mb-4">
           <Lock size={14} className="text-emerald-400 shrink-0 mt-0.5" />
           <div>

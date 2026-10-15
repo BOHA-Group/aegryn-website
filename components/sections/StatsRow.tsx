@@ -56,7 +56,7 @@ export function StatsRow() {
     <section className="bg-ag-white border-t border-ag-border py-20">
       <div
         ref={rowRef}
-        className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-ag-border"
+        className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row"
       >
         {items.map(({ num, label }) => (
           <div

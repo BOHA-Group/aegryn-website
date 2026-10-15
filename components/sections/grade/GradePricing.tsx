@@ -49,9 +49,7 @@ export function GradePricing() {
 
         {/* Header */}
         <div className="mb-14 max-w-2xl">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex/70 mb-4">
-            {t('pricingLabel')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('pricingLabel')}</p>
           <h2
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-5 whitespace-pre-line"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}

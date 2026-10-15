@@ -24,15 +24,13 @@ export function HomeTalentStrip() {
   }, [])
 
   return (
-    <section ref={ref} id="recruter" className="bg-ag-white py-20 md:py-28 scroll-mt-20">
+    <section ref={ref} id="recruter" className="border-t border-ag-border bg-ag-white py-20 md:py-28 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 md:gap-24 items-start">
 
           {/* Left — label + title */}
           <div>
-            <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6">
-              / {t('label')}
-            </p>
+            <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
             <h2
               className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2]"
               style={{ fontSize: 'clamp(26px,3vw,44px)' }}

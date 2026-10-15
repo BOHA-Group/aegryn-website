@@ -49,7 +49,7 @@ export default function FaqContent() {
       </section>
 
       {/* Legal nav */}
-      <div className="border-b border-ag-border bg-ag-off-white sticky top-16 z-20">
+      <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
           {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
             <Link
@@ -66,7 +66,7 @@ export default function FaqContent() {
       </div>
 
       {/* Filter pills */}
-      <div className="border-b border-ag-border bg-ag-white">
+      <div className="bg-ag-white">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <FilterPills
             options={FILTERS as unknown as { key: string; label: string }[]}
@@ -78,7 +78,7 @@ export default function FaqContent() {
 
       {/* FAQ accordion */}
       <div className="max-w-4xl mx-auto px-6 py-12">
-        <div className="divide-y divide-ag-border">
+        <div className="">
           {filtered.map(item => (
             <div key={item.id}>
               <button

@@ -88,7 +88,7 @@ export default function IndexSubscriberPreview() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-0 mt-4">
           {/* Filtres */}
-          <div className="border-t lg:border-t-0 lg:border-r border-white/10 px-4 py-4 flex flex-col gap-3">
+          <div className="border-t lg:border-t-0 px-4 py-4 flex flex-col gap-3">
             <p className="font-mono text-[9px] uppercase tracking-widest text-white/70 flex items-center gap-1.5">
               <SlidersHorizontal size={10} /> {t('filtersLabel')}
             </p>
@@ -176,7 +176,7 @@ export default function IndexSubscriberPreview() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 px-4 py-3 border-t border-white/10">
+        <div className="flex items-center gap-2 px-4 py-3">
           <Lock size={10} className="text-white/70 shrink-0" />
           <p className="font-mono text-[9px] text-white/70 leading-relaxed">{t('footnote')}</p>
         </div>

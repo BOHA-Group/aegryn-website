@@ -69,14 +69,14 @@ export function AssetGrid() {
   const AssetCard = ({ asset, i }: { asset: typeof Aegryn_ASSETS[0]; i: number }) => {
     const isNotStarted = NOT_STARTED_IDS.includes(asset.id)
     const isLive       = asset.status === 'live'
-    const borderRight   = i % 3 !== 2 ? 'lg:border-r border-ag-border' : ''
-    const borderRightSm = i % 2 !== 1 ? 'sm:border-r border-ag-border' : ''
+    const borderRight   = i % 3 !== 2 ? '' : ''
+    const borderRightSm = i % 2 !== 1 ? '' : ''
     return (
       <Link key={asset.id} href="/what-we-build">
         <div
           className={`asset-row-${i} group relative flex flex-col items-center justify-between
             text-center p-8 transition-all duration-500 cursor-pointer
-            bg-ag-white hover:bg-ag-navy border-b border-ag-border
+            bg-ag-white hover:bg-ag-navy 
             ${borderRight} ${borderRightSm}`}
           style={{ minHeight: '200px', opacity: 0 }}
         >
@@ -143,9 +143,7 @@ export function AssetGrid() {
   return (
     <section className="bg-ag-white border-t border-ag-border">
       <div ref={headerRef} className="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-14">
-        <p ref={labelRef} className="font-sans font-semibold text-[11px] tracking-[0.24em] uppercase text-ag-gray-light mb-6">
-          {t('sectionLabel')}
-        </p>
+        <p ref={labelRef} className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('sectionLabel')}</p>
         <h2
           ref={h2Ref}
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden"
@@ -172,7 +170,7 @@ export function AssetGrid() {
         </div>
 
         {/* CTA */}
-        <div className="border-t border-ag-border pt-8 flex items-center justify-end">
+        <div className="pt-8 flex items-center justify-end">
           <Link
             href="/accompagner/transmission"
             className="inline-flex items-center gap-2 font-sans font-semibold text-[11px] tracking-[0.14em] uppercase text-ag-black border border-ag-border px-6 py-3 rounded-lg hover:bg-ag-black hover:text-white hover:border-ag-black transition-all duration-300"

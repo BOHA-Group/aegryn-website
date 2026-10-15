@@ -186,7 +186,7 @@ export default async function ArticlePage({ params }: Props) {
                   </p>
                 )
                 if (block.type === 'h2') return (
-                  <h2 key={i} className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6 border-t border-ag-border">
+                  <h2 key={i} className="font-sans font-bold text-ag-black text-[22px] tracking-[-0.02em] leading-snug pt-6">
                     {getLocaleText(block.text, locale)}
                   </h2>
                 )
@@ -218,7 +218,7 @@ export default async function ArticlePage({ params }: Props) {
                   </blockquote>
                 )
                 if (block.type === 'stats') return (
-                  <div key={i} className="grid grid-cols-2 md:grid-cols-4 gap-px bg-ag-border border border-ag-border my-8">
+                  <div key={i} className="grid grid-cols-2 md:grid-cols-4 gap-px my-8">
                     {(block.items || []).map((stat, j) => (
                       <div key={j} className="bg-ag-off-white p-6">
                         <p className="font-sans font-bold text-ag-apex-ink tracking-[-0.03em] leading-none mb-2"

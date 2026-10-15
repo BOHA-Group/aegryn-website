@@ -65,18 +65,16 @@ export function WhyUseApps() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-ag-off-white">
+    <section ref={sectionRef} className="border-t border-ag-border bg-ag-off-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between py-4">
-          <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.28em] text-ag-gray-light">
-            / {t('label')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>
           <p className="font-sans font-bold text-ag-black text-[13px] tracking-[-0.02em]">
             {t('count')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-ag-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
           {items.map((item) => (
             <div key={item.num} className="why-col py-14 lg:px-6 first:pl-0 last:pr-0">
               <p className="why-num font-sans font-semibold text-[10px] tracking-[0.2em] text-ag-apex-ink mb-6" style={{ opacity: 0 }}>

@@ -35,9 +35,7 @@ export function GradeProcess() {
 
         {/* Header */}
         <div className="mb-16 max-w-3xl">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-4">
-            {t('index.processLabel')}
-          </p>
+          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('index.processLabel')}</p>
           <h2
             className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.05] mb-3"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}

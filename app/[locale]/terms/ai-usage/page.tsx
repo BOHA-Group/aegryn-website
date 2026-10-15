@@ -64,14 +64,14 @@ export default async function AiUsagePage({ params }: Props) {
             { title: t('s2Title'), body: t('s2Body') },
             { title: t('s3Title'), body: t('s3Body') },
           ] as const).map(({ title, body }) => (
-            <div key={title} className="border-t border-ag-border pt-8">
+            <div key={title} className="pt-8">
               <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] mb-4">{title}</h2>
               <p className="font-sans text-[15px] text-ag-gray leading-[1.85]">{body}</p>
             </div>
           ))}
 
           {/* Section 4 — Do / Don't */}
-          <div className="border-t border-ag-border pt-8">
+          <div className="pt-8">
             <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] mb-6">{t('s4Title')}</h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="border border-ag-apex/30 bg-ag-apex/5 p-5">
@@ -100,13 +100,13 @@ export default async function AiUsagePage({ params }: Props) {
           </div>
 
           {/* Section 5 — Contact */}
-          <div className="border-t border-ag-border pt-8">
+          <div className="pt-8">
             <h2 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] mb-4">{t('s5Title')}</h2>
             <p className="font-sans text-[15px] text-ag-gray leading-[1.85]">{t('s5Body')}</p>
           </div>
 
           {/* Nav légale */}
-          <div className="border-t border-ag-border pt-8 flex flex-wrap gap-4">
+          <div className="pt-8 flex flex-wrap gap-4">
             {([
               { key: 'termsUse',  href: '/terms/use' },
               { key: 'termsCgv',  href: '/terms/cgv' },
