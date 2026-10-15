@@ -59,17 +59,18 @@ export function DiagnosticLauncher({ title, questions, cycleTitle, locale }: Pro
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className={`fixed inset-y-0 right-0 z-[61] flex w-[min(540px,100vw)] flex-col bg-ag-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed right-0 top-0 z-[61] flex h-[100dvh] w-[min(540px,100vw)] flex-col bg-ag-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="flex items-center justify-between gap-4 px-6 pb-4 pt-6 md:px-8">
-          <h2 className="font-sans text-[26px] font-bold tracking-[-0.02em] text-ag-black">{title}</h2>
+        <div className="flex items-center justify-between gap-4 px-6 pb-2 pt-[clamp(14px,3vh,24px)] md:px-8">
+          <h2 className="font-sans font-bold tracking-[-0.02em] text-ag-black" style={{ fontSize: 'clamp(20px,3.8vh,26px)' }}>{title}</h2>
           <button type="button" onClick={() => setOpen(false)} aria-label={CLOSE[locale] ?? 'Close'} className="flex h-9 w-9 items-center justify-center rounded-full border border-ag-border text-ag-gray transition-colors hover:border-ag-navy hover:text-ag-navy">
             <X size={16} />
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto px-6 pb-8 md:px-8">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 pb-12 md:px-8">
           <FranchirDiagnostic title={title} questions={questions} cycleTitle={cycleTitle} locale={locale} panel />
         </div>
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-ag-white to-transparent" />
       </aside>
     </>
   )

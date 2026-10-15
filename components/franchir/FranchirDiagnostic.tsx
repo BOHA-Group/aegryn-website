@@ -66,9 +66,9 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale, panel
         {questions.map((item, i) => {
           const yes = answers[i] === true
           return (
-            <li key={i} className={panel ? 'grid grid-cols-[1.5rem_1fr] gap-x-4 gap-y-3 py-5' : 'py-5 flex flex-col sm:flex-row sm:items-center gap-4'}>
+            <li key={i} className={panel ? 'grid grid-cols-[1.5rem_1fr] gap-x-4 gap-y-2 py-[clamp(10px,2.2vh,20px)]' : 'py-5 flex flex-col sm:flex-row sm:items-center gap-4'}>
               <span className="font-mono text-[10px] text-ag-gray-light tabular-nums shrink-0 w-6">{String(i + 1).padStart(2, '0')}</span>
-              <p className="font-sans text-[14px] text-ag-black leading-relaxed flex-1">{item.q}</p>
+              <p className={`font-sans text-ag-black leading-relaxed flex-1 ${panel ? 'text-[clamp(13px,2.1vh,14px)]' : 'text-[14px]'}`}>{item.q}</p>
               <div className={panel ? 'col-start-2 flex flex-wrap items-center gap-2' : 'flex items-center gap-2 shrink-0'} role="group" aria-label={`Question ${i + 1}`}>
                 {([true, false] as const).map(v => {
                   const active = answers[i] === v
@@ -78,7 +78,7 @@ export function FranchirDiagnostic({ title, questions, cycleTitle, locale, panel
                       type="button"
                       onClick={() => set(i, v)}
                       aria-pressed={active}
-                      className={`rounded-full font-mono text-[10px] uppercase tracking-[0.14em] px-4 py-2 border transition-colors ${
+                      className={`rounded-full font-mono text-[10px] uppercase tracking-[0.14em] px-4 ${panel ? 'py-1.5' : 'py-2'} border transition-colors ${
                         active
                           ? 'bg-ag-navy text-white border-ag-navy'
                           : 'bg-ag-white text-ag-gray border-ag-border hover:border-ag-navy hover:text-ag-navy'
