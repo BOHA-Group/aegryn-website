@@ -5,7 +5,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { Check, X } from 'lucide-react'
-import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { IMPLEMENT_UI, type Lang } from '@/content/advisory/implement'
@@ -127,13 +126,6 @@ export async function BuildImplementation({ locale }: { locale: string }) {
           </div>
         </ScrollReveal>
       </section>
-
-      {/* ── Transition vidéo : petite, centrée, grossit en plein écran au scroll ── */}
-      <VideoScrollGrow
-        srcWeb="/videos/sailboat-rope-web.mp4"
-        srcMobile="/videos/sailboat-rope-mobile.mp4"
-        poster="/images/services/sailboat-rope-poster.jpg"
-      />
 
       {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
       <section className="border-b border-ag-border">
