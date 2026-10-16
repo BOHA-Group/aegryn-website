@@ -119,16 +119,17 @@ export const METIER_HREF: Record<MetierChip, string> = {
   ma:           '/advisory/ma',
   construire:   '/assets',
   recruter:     '/talent',
+  finance:      '/advisory/finance-performance',
 }
 
 /** Libellés des métiers par langue */
 export const METIER_LABELS: Record<string, Record<MetierChip, string>> = {
-  fr: { strategie: 'Stratégie', conformite: 'Risques & Conformité', technologie: 'Technologie', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Réaliser', recruter: 'Sélectionner' },
-  en: { strategie: 'Strategy', conformite: 'Risk & Compliance', technologie: 'Technology', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Deliver', recruter: 'Select' },
-  de: { strategie: 'Strategie', conformite: 'Risiken & Compliance', technologie: 'Technologie', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Umsetzen', recruter: 'Auswählen' },
-  it: { strategie: 'Strategia', conformite: 'Rischi & Conformità', technologie: 'Tecnologia', talent: 'Talento & Organizzazione', ma: 'M&A & PMI', construire: 'Realizzare', recruter: 'Selezionare' },
-  es: { strategie: 'Estrategia', conformite: 'Riesgos y Cumplimiento', technologie: 'Tecnología', talent: 'Talento y Organización', ma: 'M&A & PMI', construire: 'Realizar', recruter: 'Seleccionar' },
-  nl: { strategie: 'Strategie', conformite: 'Risico & Compliance', technologie: 'Technologie', talent: 'Talent & Organisatie', ma: 'M&A & PMI', construire: 'Realiseren', recruter: 'Selecteren' },
+  fr: { strategie: 'Stratégie', conformite: 'Risques & Conformité', technologie: 'Technologie', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Réaliser', recruter: 'Sélectionner', finance: 'Finance' },
+  en: { strategie: 'Strategy', conformite: 'Risk & Compliance', technologie: 'Technology', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Deliver', recruter: 'Select', finance: 'Finance' },
+  de: { strategie: 'Strategie', conformite: 'Risiken & Compliance', technologie: 'Technologie', talent: 'Talent & Organisation', ma: 'M&A & PMI', construire: 'Umsetzen', recruter: 'Auswählen', finance: 'Finanzen' },
+  it: { strategie: 'Strategia', conformite: 'Rischi & Conformità', technologie: 'Tecnologia', talent: 'Talento & Organizzazione', ma: 'M&A & PMI', construire: 'Realizzare', recruter: 'Selezionare', finance: 'Finanza' },
+  es: { strategie: 'Estrategia', conformite: 'Riesgos y Cumplimiento', technologie: 'Tecnología', talent: 'Talento y Organización', ma: 'M&A & PMI', construire: 'Realizar', recruter: 'Seleccionar', finance: 'Finanzas' },
+  nl: { strategie: 'Strategie', conformite: 'Risico & Compliance', technologie: 'Technologie', talent: 'Talent & Organisatie', ma: 'M&A & PMI', construire: 'Realiseren', recruter: 'Selecteren', finance: 'Financiën' }
 }
 
 /** Visuels locaux des pages cycle : en-tête + vignette par situation (Unsplash, voir CREDITS.md) */

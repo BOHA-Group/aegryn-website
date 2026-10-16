@@ -1,4 +1,4 @@
-import type { AdvisoryPageContent, AdvisoryKey } from './types'
+import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 
 /** Nederlandse inhoud van de vijf ACCOMPAGNER-pagina's, vertaald uit fr.ts (referentie). */
 
@@ -7,7 +7,7 @@ const PRIVACY =
 
 const S = '/images/advisory/situations/'
 
-export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
+export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
@@ -25,6 +25,7 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
       { label: 'Directieteam: Talent & Organisatie', href: '/advisory/talent-organization' },
       { label: 'Uitvoering van een overname: M&A', href: '/advisory/ma' },
       { label: 'Architectuurkeuzes: Technologie', href: '/advisory/technology' },
+          { label: 'Het becijferde model: Financiën en Prestaties', href: '/advisory/finance-performance' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

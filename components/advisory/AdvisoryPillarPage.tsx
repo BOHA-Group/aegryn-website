@@ -37,6 +37,7 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
   const pageActions = PAGE_ACTIONS[c.cta.metier]
   const echangeDef  = getAction(locale, c.cta.metier, pageActions.echange)
   const actionDef   = getAction(locale, c.cta.metier, pageActions.action)
+  const action2Def  = pageActions.action2 ? getAction(locale, c.cta.metier, pageActions.action2) : null
   const contactSlugs = routing.pathnames['/contact'] as Record<string, string>
   const contactPath  = contactSlugs[locale] ?? '/contact'
   const hrefFor = (action: string) => L(`${contactPath}?metier=${c.cta.metier}&action=${action}`)
@@ -112,8 +113,9 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
           </ScrollReveal>
           <ScrollReveal delay={0.35}>
             <div className="flex flex-wrap gap-3">
-              {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
-              {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
+              {!action2Def && echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
+              {actionDef && <Link href={hrefFor(pageActions.action)} className={action2Def ? BTN_PRI : BTN_SEC}>{actionDef.label} {action2Def ? <ArrowUpRight size={12} /> : null}</Link>}
+              {action2Def && <Link href={hrefFor(pageActions.action2 as string)} className={BTN_SEC}>{action2Def.label}</Link>}
             </div>
           </ScrollReveal>
         </div>
@@ -257,12 +259,13 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
       </section>
 
       {/* ── Taille + Secteur ── */}
+      {(c.bySize || c.bySector) && (
       <section className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
           <div>
-            <p className={`${LABEL} mb-8`}>{c.bySize.title}</p>
+            {c.bySize && <p className={`${LABEL} mb-8`}>{c.bySize.title}</p>}
             <div className="flex flex-col gap-4">
-              {c.bySize.items.map((s, i) => (
+              {(c.bySize?.items ?? []).map((s, i) => (
                 <div key={i} className={`${CARD} p-8`}>
                   <p className="font-sans font-bold text-[16px] text-ag-black mb-2 tracking-[-0.01em]">{s.label}</p>
                   <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
@@ -271,9 +274,9 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
             </div>
           </div>
           <div>
-            <p className={`${LABEL} mb-8`}>{c.bySector.title}</p>
+            {c.bySector && <p className={`${LABEL} mb-8`}>{c.bySector.title}</p>}
             <div className={`${CARD}  `}>
-              {c.bySector.items.map((s, i) => (
+              {(c.bySector?.items ?? []).map((s, i) => (
                 <div key={i} className="px-6 py-5">
                   <p className="font-sans font-semibold text-[14px] text-ag-black mb-1">{s.cluster}</p>
                   <p className="font-sans text-[15px] text-ag-gray leading-relaxed">{s.desc}</p>
@@ -283,21 +286,28 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
           </div>
         </ScrollReveal>
       </section>
+      )}
 
       {/* ── Scénario + IA ── */}
+      {(c.scenario || c.ai) && (
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
-          <div className={`${CARD} p-8 md:p-10`}>
-            <p className={`${LABEL} mb-4`}>{c.scenario.tag}</p>
-            <p className="font-sans text-[15px] text-ag-black leading-[1.8]">{c.scenario.text}</p>
-          </div>
-          <div className="rounded-2xl bg-ag-navy p-8 md:p-10">
-            <p className={`${LABEL_G} mb-4`}>{c.ai.title}</p>
-            <p className="font-sans text-[15px] text-white/70 leading-[1.8]">{c.ai.text}</p>
-            {c.ai.legal && <p className="font-sans text-[12px] text-white/70 leading-relaxed mt-5 pt-5">{c.ai.legal}</p>}
-          </div>
+          {c.scenario && (
+            <div className={`${CARD} p-8 md:p-10`}>
+              <p className={`${LABEL} mb-4`}>{c.scenario.tag}</p>
+              <p className="font-sans text-[15px] text-ag-black leading-[1.8]">{c.scenario.text}</p>
+            </div>
+          )}
+          {c.ai && (
+            <div className="rounded-2xl bg-ag-navy p-8 md:p-10">
+              <p className={`${LABEL_G} mb-4`}>{c.ai.title}</p>
+              <p className="font-sans text-[15px] text-white/70 leading-[1.8]">{c.ai.text}</p>
+              {c.ai.legal && <p className="font-sans text-[12px] text-white/70 leading-relaxed mt-5 pt-5">{c.ai.legal}</p>}
+            </div>
+          )}
         </ScrollReveal>
       </section>
+      )}
 
       {/* ── Retour d'expérience d'opérateur / complément ── */}
       {(c.operator || c.complement) && (
@@ -320,19 +330,21 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
       )}
 
       {/* ── Auto-diagnostic : bouton d'action vertical au bord droit, à partir de la section Six situations ── */}
-      <SideDrawerLauncher label={ui.autoDiag} title={c.diagnostic.title} targetId="situations" mode="from" locale={locale}>
-        <AdvisoryDiagnostic
-          title={c.diagnostic.title}
-          intro={c.diagnostic.intro}
-          questions={c.diagnostic.questions}
-          levels={c.diagnostic.levels}
-          privacy={c.diagnostic.privacy}
-          ctaLabel={echangeDef?.label ?? ''}
-          ctaHref={contactHref}
-          locale={locale}
-          panel
-        />
-      </SideDrawerLauncher>
+      {c.diagnostic && (
+        <SideDrawerLauncher label={ui.autoDiag} title={c.diagnostic.title} targetId="situations" mode="from" locale={locale}>
+          <AdvisoryDiagnostic
+            title={c.diagnostic.title}
+            intro={c.diagnostic.intro}
+            questions={c.diagnostic.questions}
+            levels={c.diagnostic.levels}
+            privacy={c.diagnostic.privacy}
+            ctaLabel={echangeDef?.label ?? ''}
+            ctaHref={contactHref}
+            locale={locale}
+            panel
+          />
+        </SideDrawerLauncher>
+      )}
 
       {/* ── Mettre en œuvre (cadrer et réaliser) ── */}
       {implement}
@@ -381,6 +393,7 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
             <div className="flex flex-wrap gap-3">
               {echangeDef && <Link href={contactHref} className={BTN_PRI}>{echangeDef.label} <ArrowUpRight size={12} /></Link>}
               {actionDef && <Link href={hrefFor(pageActions.action)} className={BTN_SEC}>{actionDef.label}</Link>}
+              {action2Def && <Link href={hrefFor(pageActions.action2 as string)} className={BTN_SEC}>{action2Def.label}</Link>}
             </div>
           </div>
           <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-8">

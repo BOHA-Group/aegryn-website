@@ -23,7 +23,7 @@ type Props = {
   searchParams: Promise<{ metier?: string; cycle?: string; action?: string }>
 }
 
-const VALID_METIERS: Metier[] = ['strategie', 'conformite', 'technologie', 'talent', 'ma']
+const VALID_METIERS: Metier[] = ['strategie', 'conformite', 'technologie', 'talent', 'ma', 'finance']
 const VALID_CYCLES = ['lancement', 'croissance', 'restructuration', 'acquisition', 'transmission']
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

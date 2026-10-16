@@ -6,7 +6,8 @@
  * la page retombe sur le gabarit i18n historique (advisory.pillars.*).
  */
 
-export type AdvisoryKey = 'strategy' | 'riskCompliance' | 'technology' | 'talentOrganization' | 'ma'
+export type AdvisoryClassicKey = 'strategy' | 'riskCompliance' | 'technology' | 'talentOrganization' | 'ma'
+export type AdvisoryKey = AdvisoryClassicKey | 'financePerformance'
 
 /** Cycles de vie FRANCHIR (slugs FR de /franchir/*) */
 export type LifecycleSlug = 'lancement' | 'croissance' | 'restructuration' | 'acquisition' | 'transmission'
@@ -99,14 +100,14 @@ export interface AdvisoryPageContent {
   situations:   { title: string; items: Situation[] }
   services:     { title: string; items: string[] }
   framework:    Framework
-  bySize:       { title: string; items: SizeReading[] }
-  bySector:     { title: string; items: SectorReading[] }
-  scenario:     Scenario
-  ai:           { title: string; text: string; legal?: string }
+  bySize?:      { title: string; items: SizeReading[] }
+  bySector?:    { title: string; items: SectorReading[] }
+  scenario?:    Scenario
+  ai?:          { title: string; text: string; legal?: string }
   /** Bloc « Retour d'expérience d'opérateur », à écrire par Aegryn ; non rendu si absent */
   operator?:    { title: string; text: string }
   complement?:  { title: string; text: string }
-  diagnostic:   {
+  diagnostic?:   {
     title:      string
     intro:      string
     questions:  DiagnosticQuestion[]
@@ -115,5 +116,5 @@ export interface AdvisoryPageContent {
   }
   perspectives: { title: string; items: Perspective[] }
   /** Metier utilise comme parametre ?metier= vers /contact (voir content/advisory/actions.ts) */
-  cta:          { metier: 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' }
+  cta:          { metier: 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' }
 }

@@ -13,7 +13,7 @@ export type { DiagnosticQuestion, DiagnosticLevel }
 export type CycleSlug = 'lancement' | 'croissance' | 'restructuration' | 'acquisition' | 'transmission'
 
 /** Métiers mobilisables sur une page cycle (liens fixes, cf. spec) */
-export type MetierChip = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'construire' | 'recruter'
+export type MetierChip = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'construire' | 'recruter' | 'finance'
 
 export interface CycleSituation {
   /** La situation dans les mots du client (affichée entre guillemets) */

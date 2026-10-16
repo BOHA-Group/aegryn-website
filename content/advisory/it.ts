@@ -1,4 +1,4 @@
-import type { AdvisoryPageContent, AdvisoryKey } from './types'
+import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 
 /** Contenuti italiani delle cinque pagine ACCOMPAGNER, tradotti da fr.ts (riferimento). */
 
@@ -7,7 +7,7 @@ const PRIVACY =
 
 const S = '/images/advisory/situations/'
 
-export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
+export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
@@ -25,6 +25,7 @@ export const ADVISORY_IT: Record<AdvisoryKey, AdvisoryPageContent> = {
       { label: 'Squadra di direzione: Talento & Organizzazione', href: '/advisory/talent-organization' },
       { label: 'Esecuzione di un’acquisizione: M&A', href: '/advisory/ma' },
       { label: 'Scelte di architettura: Tecnologia', href: '/advisory/technology' },
+          { label: 'Il modello numerico: Finanza e Performance', href: '/advisory/finance-performance' },
     ],
     observation: {
       title: 'Che cosa osserviamo',

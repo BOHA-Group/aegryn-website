@@ -1,4 +1,5 @@
 import type { AdvisoryKey, AdvisoryPageContent } from './types'
+import { ADVISORY_FINANCE } from './finance'
 import { ADVISORY_FR } from './fr'
 import { ADVISORY_EN } from './en'
 import { ADVISORY_DE } from './de'
@@ -11,7 +12,7 @@ export { ADVISORY_UI } from './ui'
 export type { AdvisoryUi } from './ui'
 
 /* Le français est la langue de référence ; les autres en sont traduites. */
-const BY_LOCALE: Record<string, Record<AdvisoryKey, AdvisoryPageContent>> = {
+const BY_LOCALE: Record<string, Record<Exclude<AdvisoryKey, 'financePerformance'>, AdvisoryPageContent>> = {
   fr: ADVISORY_FR,
   en: ADVISORY_EN,
   de: ADVISORY_DE,
@@ -21,6 +22,7 @@ const BY_LOCALE: Record<string, Record<AdvisoryKey, AdvisoryPageContent>> = {
 }
 
 export function getAdvisoryPage(locale: string, key: AdvisoryKey): AdvisoryPageContent | null {
+  if (key === 'financePerformance') return ADVISORY_FINANCE[locale] ?? ADVISORY_FINANCE.fr
   return (BY_LOCALE[locale] ?? BY_LOCALE.fr)?.[key] ?? null
 }
 

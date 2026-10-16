@@ -1,4 +1,4 @@
-import type { AdvisoryPageContent, AdvisoryKey } from './types'
+import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 
 /** Deutsche Inhalte der fünf ACCOMPAGNER-Seiten, übersetzt aus fr.ts (Referenz). Schweizer Schreibweise (ss). */
 
@@ -7,7 +7,7 @@ const PRIVACY =
 
 const S = '/images/advisory/situations/'
 
-export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
+export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
   strategy: {
     key: 'strategy', path: '/advisory/strategy',
@@ -25,6 +25,7 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
       { label: 'Führungsteam: Talent & Organisation', href: '/advisory/talent-organization' },
       { label: 'Durchführung einer Akquisition: M&A', href: '/advisory/ma' },
       { label: 'Architekturentscheide: Technologie', href: '/advisory/technology' },
+          { label: 'Das bezifferte Modell: Finanzen und Performance', href: '/advisory/finance-performance' },
     ],
     observation: {
       title: 'Was wir beobachten',

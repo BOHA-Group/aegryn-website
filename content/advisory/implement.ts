@@ -44,6 +44,14 @@ export const IMPLEMENT_ITEMS: Record<string, L6List> = {
     it: ['Mettere in piedi l’organizzazione obiettivo: ruoli, governance e comitati.', 'Attuare il piano di successione e di retention dei profili chiave.', 'Accompagnare le nomine e l’insediamento dei dirigenti.', 'Instaurare i rituali di pilotaggio che reggono l’organizzazione senza di noi.'],
     nl: ['De doelorganisatie inrichten: rollen, governance en comités.', 'Het opvolgings- en retentieplan voor sleutelfiguren uitrollen.', 'Benoemingen en indiensttredingen van leidinggevenden begeleiden.', 'Stuurroutines installeren waarmee de organisatie zonder ons standhoudt.'],
   },
+  financePerformance: {
+    fr: ['Installer le pilotage hebdomadaire de la trésorerie.', 'Mettre en place le budget, le reporting et le tableau de bord mensuel.', 'Conduire le programme de réduction du besoin en fonds de roulement (clients, stocks, fournisseurs).', 'Conduire le plan de redressement avec la direction, y compris le dialogue avec les créanciers, avec l’appui d’avocats partenaires.'],
+    en: ['Set up weekly cash-flow steering.', 'Install the budget, reporting and monthly dashboard.', 'Lead the working-capital reduction programme (receivables, inventory, suppliers).', 'Lead the turnaround plan with management, including dialogue with creditors, supported by partner lawyers.'],
+    de: ['Die wöchentliche Liquiditätssteuerung einrichten.', 'Budget, Reporting und monatliches Dashboard einführen.', 'Das Programm zur Senkung des Working Capital (Kunden, Lager, Lieferanten) führen.', 'Den Sanierungsplan mit der Geschäftsleitung umsetzen, einschliesslich des Dialogs mit den Gläubigern, mit Unterstützung von Partneranwälten.'],
+    es: ['Instalar el seguimiento semanal de la tesorería.', 'Implantar el presupuesto, el reporting y el cuadro de mando mensual.', 'Dirigir el programa de reducción del fondo de maniobra (clientes, inventarios, proveedores).', 'Dirigir el plan de reflotamiento con la dirección, incluido el diálogo con los acreedores, con el apoyo de abogados asociados.'],
+    it: ['Instaurare il pilotaggio settimanale della tesoreria.', 'Mettere in atto il budget, il reporting e il cruscotto mensile.', 'Guidare il programma di riduzione del capitale circolante (clienti, scorte, fornitori).', 'Guidare il piano di risanamento con la direzione, compreso il dialogo con i creditori, con l’appoggio di avvocati partner.'],
+    nl: ['De wekelijkse liquiditeitssturing instellen.', 'Budget, reporting en maandelijks dashboard invoeren.', 'Het programma ter vermindering van het werkkapitaal (klanten, voorraden, leveranciers) leiden.', 'Het saneringsplan met de directie uitvoeren, inclusief de dialoog met schuldeisers, met steun van partneradvocaten.'],
+  },
   ma: {
     fr: ['Conduire le processus de la revue à la signature : calendrier, intervenants, documents.', 'Préparer et coordonner la revue technique et organisationnelle.', 'Piloter l’intégration après l’opération : équipes, systèmes, cent premiers jours.', 'Suivre les engagements et les synergies jusqu’à la réception.'],
     en: ['Run the process from review to signing: timetable, parties, documents.', 'Prepare and coordinate the technical and organisational review.', 'Lead post-deal integration: teams, systems, the first 100 days.', 'Track commitments and synergies until delivery.'],
@@ -56,11 +64,6 @@ export const IMPLEMENT_ITEMS: Record<string, L6List> = {
 
 /** Les trois métiers ajoutés : pages en préparation (contenu à fournir), noindex. */
 export const NEW_PILLARS: Record<string, { slug: string; name: L6; desc: L6 }> = {
-  finance: {
-    slug: '/advisory/finance',
-    name: L('Finance et Performance', 'Finance and Performance', 'Finanzen und Performance', 'Finanzas y Rendimiento', 'Finanza e Performance', 'Financiën en Prestaties'),
-    desc: L('Piloter la performance financière, de la décision à sa mise en œuvre.', 'Steering financial performance, from decision to implementation.', 'Die finanzielle Performance steuern, von der Entscheidung bis zur Umsetzung.', 'Dirigir el rendimiento financiero, de la decisión a su puesta en práctica.', 'Guidare la performance finanziaria, dalla decisione alla sua attuazione.', 'De financiële prestaties sturen, van beslissing tot uitvoering.'),
-  },
   operations: {
     slug: '/advisory/operations',
     name: L('Opérations et Excellence opérationnelle', 'Operations and Operational Excellence', 'Operations und operative Exzellenz', 'Operaciones y Excelencia operativa', 'Operazioni ed Eccellenza operativa', 'Operations en Operationele excellentie'),
@@ -84,4 +87,16 @@ export const COMING_UI = {
   cta: L('Échanger 30 minutes', 'Book 30 minutes', '30 Minuten austauschen', 'Intercambiar 30 minutos', 'Scambiare 30 minuti', '30 minuten spreken'),
   all: L('Tous les métiers', 'All disciplines', 'Alle Fachgebiete', 'Todos los oficios', 'Tutti i mestieri', 'Alle vakgebieden'),
   label: L('Cadrer et réaliser', 'Frame and deliver', 'Rahmen setzen und umsetzen', 'Encuadrar y realizar', 'Inquadrare e realizzare', 'Kaderen en realiseren'),
+}
+
+/** Lignes d'accompagnement sous le bloc, par métier (ex. Finance : Sélectionner + régimes d'intervention). */
+export const IMPLEMENT_NOTES: Record<string, L6List> = {
+  financePerformance: {
+    fr: ['Un directeur financier de transition peut renforcer l’équipe : cette mission passe par Sélectionner (profils de transition).', 'Régimes d’intervention : nous réalisons, nous réalisons avec des experts, ou nous coordonnons des experts que vous avez choisis.'],
+    en: ['An interim CFO can reinforce the team: this assignment runs through Talent (interim profiles).', 'Engagement modes: we deliver, we deliver with experts, or we coordinate experts of your choosing.'],
+    de: ['Ein Interim-CFO kann das Team verstärken: Dieser Auftrag läuft über die Auswahl (Interim-Profile).', 'Einsatzformen: Wir setzen um, wir setzen mit Experten um, oder wir koordinieren von Ihnen gewählte Experten.'],
+    es: ['Un director financiero interino puede reforzar el equipo: esta misión pasa por Selección (perfiles interinos).', 'Modalidades de intervención: ejecutamos, ejecutamos con expertos, o coordinamos expertos elegidos por usted.'],
+    it: ['Un direttore finanziario ad interim può rafforzare il team: questo mandato passa per Selezione (profili ad interim).', 'Modalità d’intervento: attuiamo, attuiamo con degli esperti, o coordiniamo esperti scelti da voi.'],
+    nl: ['Een interim-CFO kan het team versterken: deze opdracht loopt via Selectie (interimprofielen).', 'Inzetvormen: wij voeren uit, wij voeren uit met experts, of wij coördineren experts die u heeft gekozen.'],
+  },
 }

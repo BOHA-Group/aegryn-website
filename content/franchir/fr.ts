@@ -147,7 +147,7 @@ export const FRANCHIR_FR: CycleContent[] = [
         { quote: 'Je dois ouvrir un deuxième marché ou une deuxième filiale.', decision: 'Quel rythme, quelles priorités, quel renoncement ?', metiers: ['strategie'], deliverable: 'Grille des quatre tests appliquée aux options' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'recruter'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Selon la taille',
       items: [
@@ -224,7 +224,7 @@ export const FRANCHIR_FR: CycleContent[] = [
         { quote: 'Il me faut un dirigeant de transition.', decision: 'Profil, mandat, durée', metiers: ['recruter'], deliverable: 'Fiche de mission et profils présélectionnés' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Selon la taille',
       items: [

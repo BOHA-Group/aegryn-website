@@ -6,13 +6,14 @@
  * stables (non traduits) ; seuls label/question/options sont localisés.
  */
 
-export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma'
+export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance'
 export type ActionSlug =
   | 'echange' | 'arbitrage'
   | 'cartographie'
   | 'audit' | 'reversibilite'
   | 'indice' | 'succession'
   | 'revue-cible'
+  | 'tresorerie' | 'rentabilite' | 'echange30'
 
 export interface ActionDef {
   /** Libellé du bouton, aussi utilisé comme titre du formulaire */
@@ -26,12 +27,13 @@ export interface ActionDef {
 type Key = `${Metier}:${ActionSlug}`
 
 /** Pour chaque page, le bouton d'échange et le bouton d'action affichés */
-export const PAGE_ACTIONS: Record<Metier, { echange: ActionSlug; action: ActionSlug }> = {
+export const PAGE_ACTIONS: Record<Metier, { echange: ActionSlug; action: ActionSlug; action2?: ActionSlug }> = {
   strategie:    { echange: 'echange', action: 'arbitrage' },
   conformite:   { echange: 'echange', action: 'cartographie' },
   technologie:  { echange: 'audit',   action: 'reversibilite' },
   talent:       { echange: 'indice',  action: 'succession' },
   ma:           { echange: 'echange', action: 'revue-cible' },
+  finance:      { echange: 'echange30', action: 'tresorerie', action2: 'rentabilite' },
 }
 
 export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> = {
@@ -46,6 +48,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Préparer votre succession', question: 'Horizon et cadre envisagés ?', questionType: 'select', options: ['Moins de 2 ans, famille', 'Moins de 2 ans, interne ou tiers', '2 à 5 ans, famille', '2 à 5 ans, interne ou tiers', 'Plus de 5 ans'] },
     'ma:echange':      { label: 'Parler de votre opération', question: 'Acquisition, cession ou séparation d’activité ?', questionType: 'select', options: ['Acquisition', 'Cession', 'Séparation d’activité', 'Pas encore défini'] },
     'ma:revue-cible':  { label: 'Passer une cible au crible', question: 'Secteur et taille de la cible, à quel stade ?', questionType: 'select', options: ['Cible repérée', 'En discussion', "Lettre d'intention signée", 'Acquisition signée, intégration en cours'] },
+    'finance:echange30': { label: 'Échanger 30 minutes', question: "Votre contexte, en deux lignes ?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Diagnostiquer votre trésorerie', question: "Quel est votre principal point de tension de trésorerie ?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Évaluer votre rentabilité', question: "Quelles activités ou clients souhaitez-vous analyser ?", questionType: 'text' },
   },
   en: {
     'strategie:echange':    { label: 'Frame your decision', question: 'Which decision, and by when?', questionType: 'text' },
@@ -58,6 +63,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Prepare your succession', question: 'Intended horizon and framework?', questionType: 'select', options: ['Under 2 years, family', 'Under 2 years, internal or external', '2 to 5 years, family', '2 to 5 years, internal or external', 'Over 5 years'] },
     'ma:echange':      { label: 'Talk about your deal', question: 'Acquisition, sale or business separation?', questionType: 'select', options: ['Acquisition', 'Sale', 'Business separation', 'Not yet defined'] },
     'ma:revue-cible':  { label: 'Run a target through the review', question: 'Target sector and size, what stage?', questionType: 'select', options: ['Target identified', 'In discussion', 'Letter of intent signed', 'Deal signed, integration under way'] },
+    'finance:echange30': { label: 'Book 30 minutes', question: "Your context, in two lines?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Review your cash flow', question: "What is your main cash-flow pinch point?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Assess your profitability', question: "Which activities or customers would you like to analyse?", questionType: 'text' },
   },
   de: {
     'strategie:echange':    { label: 'Ihre Entscheidung rahmen', question: 'Welche Entscheidung, und bis wann?', questionType: 'text' },
@@ -70,6 +78,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Ihre Nachfolge vorbereiten', question: 'Geplanter Horizont und Rahmen?', questionType: 'select', options: ['Unter 2 Jahre, Familie', 'Unter 2 Jahre, intern oder extern', '2 bis 5 Jahre, Familie', '2 bis 5 Jahre, intern oder extern', 'Über 5 Jahre'] },
     'ma:echange':      { label: 'Über Ihr Vorhaben sprechen', question: 'Akquisition, Verkauf oder Abspaltung?', questionType: 'select', options: ['Akquisition', 'Verkauf', 'Abspaltung', 'Noch nicht definiert'] },
     'ma:revue-cible':  { label: 'Ein Zielunternehmen prüfen lassen', question: 'Branche und Grösse des Zielunternehmens, welche Phase?', questionType: 'select', options: ['Zielunternehmen identifiziert', 'Im Gespräch', 'Absichtserklärung unterzeichnet', 'Deal unterzeichnet, Integration läuft'] },
+    'finance:echange30': { label: '30 Minuten austauschen', question: "Ihr Kontext, in zwei Zeilen?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Ihre Liquidität prüfen', question: "Was ist Ihr wichtigster Liquiditätsengpass?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Ihre Rentabilität bewerten', question: "Welche Tätigkeiten oder Kunden möchten Sie analysieren?", questionType: 'text' },
   },
   it: {
     'strategie:echange':    { label: 'Porre la vostra decisione', question: 'Quale decisione, ed entro quando?', questionType: 'text' },
@@ -82,6 +93,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Preparare la vostra successione', question: 'Orizzonte e quadro previsti?', questionType: 'select', options: ['Meno di 2 anni, famiglia', 'Meno di 2 anni, interno o esterno', 'Da 2 a 5 anni, famiglia', 'Da 2 a 5 anni, interno o esterno', 'Oltre 5 anni'] },
     'ma:echange':      { label: 'Parlare della vostra operazione', question: 'Acquisizione, cessione o separazione di un’attività?', questionType: 'select', options: ['Acquisizione', 'Cessione', 'Separazione di attività', 'Non ancora definito'] },
     'ma:revue-cible':  { label: 'Passare un target al vaglio', question: 'Settore e dimensione del target, a che fase?', questionType: 'select', options: ['Target individuato', 'In discussione', 'Lettera di intenti firmata', 'Operazione firmata, integrazione in corso'] },
+    'finance:echange30': { label: 'Scambiare 30 minuti', question: "Il vostro contesto, in due righe?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Diagnosticare la vostra tesoreria', question: "Qual è il vostro principale punto di tensione di tesoreria?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Valutare la vostra redditività', question: "Quali attività o clienti volete analizzare?", questionType: 'text' },
   },
   es: {
     'strategie:echange':    { label: 'Plantear su decisión', question: '¿Qué decisión, y para cuándo?', questionType: 'text' },
@@ -94,6 +108,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Preparar su sucesión', question: '¿Horizonte y marco previstos?', questionType: 'select', options: ['Menos de 2 años, familia', 'Menos de 2 años, interno o externo', 'De 2 a 5 años, familia', 'De 2 a 5 años, interno o externo', 'Más de 5 años'] },
     'ma:echange':      { label: 'Hablar de su operación', question: '¿Adquisición, venta o separación de una actividad?', questionType: 'select', options: ['Adquisición', 'Venta', 'Separación de actividad', 'Aún no definido'] },
     'ma:revue-cible':  { label: 'Pasar un objetivo por el tamiz', question: 'Sector y tamaño del objetivo, ¿en qué fase?', questionType: 'select', options: ['Objetivo identificado', 'En conversaciones', 'Carta de intenciones firmada', 'Operación firmada, integración en curso'] },
+    'finance:echange30': { label: 'Intercambiar 30 minutos', question: "Su contexto, en dos líneas ?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Diagnosticar su tesorería', question: "¿Cuál es su principal punto de tensión de tesorería?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Evaluar su rentabilidad', question: "¿Qué actividades o clientes desea analizar?", questionType: 'text' },
   },
   nl: {
     'strategie:echange':    { label: 'Uw beslissing kaderen', question: 'Welke beslissing, en tegen wanneer?', questionType: 'text' },
@@ -106,6 +123,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'talent:succession':  { label: 'Uw opvolging voorbereiden', question: 'Beoogde horizon en kader?', questionType: 'select', options: ['Minder dan 2 jaar, familie', 'Minder dan 2 jaar, intern of extern', '2 tot 5 jaar, familie', '2 tot 5 jaar, intern of extern', 'Meer dan 5 jaar'] },
     'ma:echange':      { label: 'Praten over uw transactie', question: 'Overname, verkoop of afsplitsing?', questionType: 'select', options: ['Overname', 'Verkoop', 'Afsplitsing', 'Nog niet bepaald'] },
     'ma:revue-cible':  { label: 'Een doelwit door de zeef halen', question: 'Sector en omvang van het doelwit, welke fase?', questionType: 'select', options: ['Doelwit geïdentificeerd', 'In gesprek', 'Intentieverklaring getekend', 'Deal getekend, integratie loopt'] },
+    'finance:echange30': { label: '30 minuten spreken', question: "Uw context, in twee regels?", questionType: 'text' },
+    'finance:tresorerie': { label: 'Uw liquiditeit diagnosticeren', question: "Wat is uw belangrijkste liquiditeitsknelpunt?", questionType: 'text' },
+    'finance:rentabilite': { label: 'Uw rendabiliteit beoordelen', question: "Welke activiteiten of klanten wilt u analyseren?", questionType: 'text' },
   },
 }
 

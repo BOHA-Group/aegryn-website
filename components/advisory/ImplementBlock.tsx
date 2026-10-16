@@ -1,4 +1,4 @@
-import { IMPLEMENT_ITEMS, IMPLEMENT_UI, type Lang } from '@/content/advisory/implement'
+import { IMPLEMENT_ITEMS, IMPLEMENT_NOTES, IMPLEMENT_UI, type Lang } from '@/content/advisory/implement'
 
 /** Bloc « Mettre en œuvre » : ce que le cabinet réalise une fois la décision prise (3 à 4 lignes par métier). */
 export function ImplementBlock({ pillar, locale }: { pillar: string; locale: string }) {
@@ -18,6 +18,13 @@ export function ImplementBlock({ pillar, locale }: { pillar: string; locale: str
             </li>
           ))}
         </ol>
+        {(IMPLEMENT_NOTES[pillar]?.[lang] ?? []).length > 0 && (
+          <div className="mt-10 flex max-w-3xl flex-col gap-2">
+            {IMPLEMENT_NOTES[pillar][lang].map((n, i) => (
+              <p key={i} className="text-[13px] leading-relaxed text-ag-gray">{n}</p>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

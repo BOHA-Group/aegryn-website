@@ -19,7 +19,7 @@ type LinkHref = ComponentProps<typeof Link>['href']
 const CRAFT_METIERS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',        href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportRiskCompliance',  href: '/advisory/risk-compliance' as LinkHref },
-  { labelKey: 'craftFinance',                href: '/advisory/finance' as LinkHref },
+  { labelKey: 'craftFinance',                href: '/advisory/finance-performance' as LinkHref },
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftOperations',             href: '/advisory/operations' as LinkHref },
   { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },

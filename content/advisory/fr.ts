@@ -1,4 +1,4 @@
-import type { AdvisoryPageContent, AdvisoryKey } from './types'
+import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 
 /**
  * Contenu FR des cinq pages métiers ACCOMPAGNER, version 2 (octobre 2026).
@@ -10,7 +10,7 @@ import type { AdvisoryPageContent, AdvisoryKey } from './types'
 const DIAG_LEVELS_PRIVACY =
   "Vos réponses restent dans votre navigateur. Rien n'est enregistré ni transmis sans votre accord. Le résultat tient sur une page : votre niveau et la prochaine action recommandée."
 
-export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
+export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
   /* ───────────────────────── 1. STRATÉGIE ───────────────────────── */
   strategy: {
@@ -30,6 +30,7 @@ export const ADVISORY_FR: Record<AdvisoryKey, AdvisoryPageContent> = {
       { label: "Équipe de direction : Talent & Organisation", href: '/advisory/talent-organization' },
       { label: "Exécution d'une acquisition : M&A", href: '/advisory/ma' },
       { label: "Choix d'architecture : Technologie", href: '/advisory/technology' },
+          { label: 'Le modèle chiffré : Finance et Performance', href: '/advisory/finance-performance' },
     ],
     observation: {
       title: 'Ce que nous constatons',
