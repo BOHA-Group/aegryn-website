@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'magazine.report.meta' })
   return {
-    title:       `Flipbook — ${t('title')}`,
+    title:       `Flipbook | ${t('title')}`,
     description: t('description'),
     robots:      { index: false, follow: false },
     alternates:  { canonical: `/${locale}/magazine/report/2027/pdf` },

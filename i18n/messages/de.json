@@ -353,21 +353,21 @@
         "name": "Benchmark für Vermögensbewertung"
       },
       "heritix": {
-        "badge": "B2C · B2B — LegalTech",
+        "badge": "B2C · B2B · LegalTech",
         "tagline": "Digitaler Nachlass-Tresor, gesicherte Übertragung",
         "description": "Zentralisiert und übermittelt zum richtigen Zeitpunkt an die richtigen Personen die sensiblen Informationen, die eine Person hinterlassen möchte: Konten, Dokumente, Zugänge und persönliche Nachrichten.",
         "capability": "Die sichere Übertragung eines Lebens besiegeln",
         "keywords": "Ende-zu-Ende-Verschlüsselung · Multi-Party-Zugriffskontrolle · bedingungslose Freigabe · Nachlass · digitaler Tresor"
       },
       "chrosium": {
-        "badge": "B2C — D2C-Kosmetik",
+        "badge": "B2C · D2C-Kosmetik",
         "capability": "Das Unsichtbare einer Schutzgeste sichtbar machen",
         "tagline": "Sonnenschutz-Indikator, Schutz in Echtzeit sichtbar",
         "description": "Verbindet eine SPF-50+-Clean-Label-Formel mit einem firmeneigenen Anwendungsindikator: Eltern und Kinder sehen, wo der Schutz aufgetragen wurde, bevor er nach gesicherter Abdeckung verblasst.",
         "keywords": "Anwendungsindikator · SPF 50+ Clean Label · UVA/UVB-Formel · UV-reaktive Verpackung · D2C-Marke"
       },
       "insertdry": {
-        "badge": "B2B · B2C — Haushaltsgeräte",
+        "badge": "B2B · B2C · Haushaltsgeräte",
         "capability": "Trockenheit bewahren, wo die Feuchtigkeit immer gewinnt",
         "tagline": "Tropisches Trockenvorratsgerät mit aktiver Entfeuchtung",
         "description": "Vorratseinheit für trockene Lebensmittel, konzipiert für tropische Märkte: gezielte Kühlung von 16 bis 22 °C, Luftfeuchte unter 45 %, kompakte und Einbau-Formate.",
@@ -901,7 +901,7 @@
     "tagline": "INTEGRIERTE FIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
-    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Unsere eigenen Assets durchlaufen unsere eigenen Methoden. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
+    "quote": "Was wir für unsere Kunden tun, wenden wir auf uns selbst an. Diese Kohärenz ist unsere erste Glaubwürdigkeit.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
@@ -1075,7 +1075,7 @@
           "bold": true
         },
         {
-          "t": " Aegryn vereint die Disziplinen, die ein Projekt verlangt: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
+          "t": " Aegryn vereint die fünf Arten zu handeln, die ein Projekt verlangt: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
         }
       ]
     },
@@ -1488,15 +1488,15 @@
       "partnerCode": "Partnercode",
       "publishedOn": "16. Juli 2026",
       "neediu": {
-        "altBadge": "In Gala erschienen — 27. November 2025",
-        "altCover": "Gala-Cover — 27. November 2025",
+        "altBadge": "In Gala erschienen, 27. November 2025",
+        "altCover": "Gala-Cover, 27. November 2025",
         "altAd": "neediu-Anzeige in Gala"
       },
       "subblink": {
         "partnerStats": "158.140 Mitglieder\n1.100.000 Besuche/Monat",
         "articleTitle": "Village de la Justice lädt Sie ein, alle Ihre Verträge online prüfen zu lassen und einen ContractScore zu erhalten",
         "articleDesc": "ContractScore von A bis E, Analyse in 60 Sekunden, Urteil UNTERZEICHNEN · VERHANDELN · ABLEHNEN. Gegenvorschläge Klausel für Klausel.",
-        "altBanner": "subblink — KI-gestützte Vertragsanalyse",
+        "altBanner": "subblink : KI-gestützte Vertragsanalyse",
         "partnerName": "Village de la Justice"
       }
     },
@@ -2153,7 +2153,7 @@
       "title": "Zertifizierung CIFSO 5000, Aegryn | Unabhängiges Methodik & Protokoll",
       "desc": "Das Aegryn Grade-Protokoll: CIFSO 5000-Rahmen, AEG ★ bis B Definitionen, Untercodes, Analyseprozess und Unabhängigkeitsprinzipien."
     },
-    "label": "Zertifizierung CIFSO 5000 — Methodik",
+    "label": "Zertifizierung CIFSO 5000 : Methodik",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nZertifizierung CIFSO 5000.",
     "intro": "CIFSO 5000 ist der erste unabhängige Zertifizierungsstandard, der den organisatorischen Wert und die Übertragbarkeit bewertet. Über die operative Compliance hinaus dokumentiert er, was den realen Wert einer Organisation ausmacht: ihr geistiges Kapital, ihre Integrität, ihre finanzielle Gesundheit, ihre Sicherheit und ihre organisatorische Resilienz.",
@@ -3302,14 +3302,14 @@
       "marketCtaSecondary": "Methodik lesen",
       "useCasesLabel": "Wer zertifiziert, und warum",
       "useCasesTitle": "Die Zertifizierung CIFSO 5000\nist für alle Akteure.",
-      "useCasesDesc": "Ob Finanzierungsvorbereitung, Unternehmensübertragung, Investitionsentscheidung oder Bankfinanzierung — die Zertifizierung CIFSO 5000 dokumentiert den Wert Ihrer Organisation für alle relevanten Gesprächspartner.",
+      "useCasesDesc": "Ob Finanzierungsvorbereitung, Unternehmensübertragung, Investitionsentscheidung oder Bankfinanzierung, die Zertifizierung CIFSO 5000 dokumentiert den Wert Ihrer Organisation für alle relevanten Gesprächspartner.",
       "useCases": [
         {
           "num": "01",
           "tag": "Jahresbericht & Investorenkommunikation",
           "title": "Ein Qualitätslabel in Ihrem Jahresbericht.",
           "audience": "Wachsende KMU, Mittelstand mit aktiven Investoren, börsennotierte Unternehmen",
-          "desc": "Wie ein bestehender unabhängiger Standard kann die Zertifizierung CIFSO 5000 in Ihrem Jahresbericht, Ihren Investorendokumenten oder Boardpräsentationen referenziert werden. Sie signalisiert Aktionären, Kreditgebern und Partnern, dass Ihr Wert unabhängig verifiziert — und nicht nur deklariert — wurde.",
+          "desc": "Wie ein bestehender unabhängiger Standard kann die Zertifizierung CIFSO 5000 in Ihrem Jahresbericht, Ihren Investorendokumenten oder Boardpräsentationen referenziert werden. Sie signalisiert Aktionären, Kreditgebern und Partnern, dass Ihr Wert unabhängig verifiziert (und nicht nur deklariert) wurde.",
           "signal": "Signal an Aktionäre und Partner: der organisationale Wert ist unabhängig dokumentiert.",
           "chips": [
             "Wachsende KMU",
@@ -3352,7 +3352,7 @@
           "title": "Zeigen Sie Investment-Readiness in allen Dimensionen.",
           "audience": "Startups und Scale-ups, die eine Finanzierungsrunde vorbereiten",
           "desc": "Investoren erwarten zunehmend von Gründern, dass sie ihre Bereitschaft nicht nur in Bezug auf Finanzen, sondern auch auf geistiges Eigentum, technische Architektur, Sicherheit und Governance nachweisen. Eine Zertifizierung CIFSO 5000 wird zu einem Data-Room-Dokument, das Due-Diligence-Fragen vorwegnimmt und die Investitionsentscheidung beschleunigt.",
-          "signal": "Signal an Investoren: investment-ready in allen fünf Dimensionen — nicht nur im Finanzmodell.",
+          "signal": "Signal an Investoren: investment-ready in allen fünf Dimensionen, nicht nur im Finanzmodell.",
           "chips": [
             "Startups",
             "Scale-ups",
@@ -3365,7 +3365,7 @@
           "tag": "Familiennachfolge & Unternehmensübertragung",
           "title": "Ein neutrales Dokument für ein komplexes Gespräch.",
           "audience": "Gründer, die ihre Nachfolge planen, Familienunternehmen, Management-Buyouts",
-          "desc": "Mehr als 3,5 Millionen europäische KMU stehen vor Nachfolgeherausforderungen ohne qualifizierten Käufer oder klare Bewertung. Die Zertifizierung CIFSO 5000 liefert eine neutrale, dokumentierte Beurteilung, auf die alle Parteien — abtretender Gründer, Erben, Käufer und Berater — vertrauen können. Unabhängig. Reproduzierbar. Verteidigbar.",
+          "desc": "Mehr als 3,5 Millionen europäische KMU stehen vor Nachfolgeherausforderungen ohne qualifizierten Käufer oder klare Bewertung. Die Zertifizierung CIFSO 5000 liefert eine neutrale, dokumentierte Beurteilung, auf die alle Parteien (abtretender Gründer, Erben, Käufer und Berater) vertrauen können. Unabhängig. Reproduzierbar. Verteidigbar.",
           "signal": "Signal an alle Parteien: der Wert dieser Organisation wurde unabhängig dokumentiert, bevor die Übertragung erfolgte.",
           "chips": [
             "Gründer",
@@ -3455,7 +3455,7 @@
       ],
       "isoLabel": "CIFSO 5000 und bestehende Zertifizierungsstandards",
       "isoTitle": "Wo bestehende Standards aufhören.\nWo CIFSO 5000 beginnt.",
-      "isoDesc": "Bestehende Normen (ISO 27001, SOC 2, ISO 9001...) zertifizieren Prozesse und Systeme. Die Zertifizierung CIFSO 5000 dokumentiert den Organisationswert und die Übertragbarkeit — ein ergänzendes, kein konkurrierendes Objekt.",
+      "isoDesc": "Bestehende Normen (ISO 27001, SOC 2, ISO 9001...) zertifizieren Prozesse und Systeme. Die Zertifizierung CIFSO 5000 dokumentiert den Organisationswert und die Übertragbarkeit, ein ergänzendes, kein konkurrierendes Objekt.",
       "isoStatement": "CIFSO 5000 ergänzt bestehende Standards. Es ersetzt sie nicht.",
       "isoRows": [
         {
@@ -3484,7 +3484,7 @@
           "cifso": "Zertifiziert Organisationsresilienz, Managementtiefe, Dokumentation des Wissenstransfers und Nachfolgeplanung."
         }
       ],
-      "pricingLabel": "Zertifizierung CIFSO 5000 — Tarife",
+      "pricingLabel": "Zertifizierung CIFSO 5000 : Tarife",
       "pricingTitle": "Eine Zertifizierung.\nFünf Dimensionen des Wertes.",
       "pricingDesc": "Die Zertifizierung CIFSO 5000 ist nach Organisationsgrösse gestaffelt. Drei Formate, ein einziger unabhängiger Standard.",
       "pricingNote": "Alle Preise exkl. MwSt. Pauschal, keine erfolgsabhängige Komponente.",
@@ -3538,22 +3538,22 @@
         }
       ],
       "whitepaperLabel": "Offizielle Dokumentation",
-      "whitepaperTitle": "Aegryn — Zertifizierungsmethodik CIFSO 5000",
-      "whitepaperDesc": "Protokollübersicht, fünf Dimensionen, Notenskala, Zertifizierungsprozess und Unabhängigkeitsgrundsätze — das offizielle Methodik-Whitepaper.",
+      "whitepaperTitle": "Aegryn : Zertifizierungsmethodik CIFSO 5000",
+      "whitepaperDesc": "Protokollübersicht, fünf Dimensionen, Notenskala, Zertifizierungsprozess und Unabhängigkeitsgrundsätze, das offizielle Methodik-Whitepaper.",
       "whitepaperCta": "Whitepaper lesen",
-      "whitepaperVersion": "CIFSO 5000 — Offizielles Methodik-Whitepaper",
+      "whitepaperVersion": "CIFSO 5000 : Offizielles Methodik-Whitepaper",
       "wpNavBack": "Zurück zur Zertifizierung",
       "wpNavPrint": "Drucken / PDF speichern",
       "wpProtocol": "Protokoll",
       "wpIssuer": "Herausgeber",
       "wpJurisdiction": "Rechtsordnung",
-      "wpEyebrow": "Aegryn Zertifizierung — Offizielle Methodik",
+      "wpEyebrow": "Aegryn Zertifizierung : Offizielle Methodik",
       "wpHeroTitle": "Gebaut für die Dauer.",
       "wpHeroDesc": "Das Zertifizierungsprotokoll CIFSO 5000: fünf Dimensionen des Organisationswerts, eine unabhängige Note und ein verteidigbares Dokument für alle Beteiligten.",
       "wpTocTitle": "Inhalt",
       "wpTocItems": [
         "1. Was ist die Zertifizierung CIFSO 5000?",
-        "2. Für wen ist sie — Anwendungsfälle",
+        "2. Für wen ist sie, Anwendungsfälle",
         "3. Die fünf Wertdimensionen (CIFSO)",
         "4. Notenskala und Definitionen",
         "5. CIFSO 5000 und bestehende Zertifizierungsstandards",
@@ -3567,7 +3567,7 @@
       "wpS1Body1": "Die <strong>Zertifizierung CIFSO 5000</strong> ist ein unabhängiges Organisationsbewertungsprotokoll, das von Aegryn entwickelt wurde. Es bewertet und zertifiziert den Wert und die Übertragbarkeit einer Organisation in fünf strukturierten Dimensionen: Code & Architektur, IP & Rechte, Finanzen & Kennzahlen, Sicherheit & Souveränität, sowie Organisation & Talent.",
       "wpS1Body2": "Im Gegensatz zu bestehenden Zertifizierungsstandards, die Systeme, Prozesse und die operative Konformität prüfen, zertifiziert die Zertifizierung CIFSO 5000 den <em>Organisationswert</em>: die dokumentierte, verteidigbare Grundlage für eine Bewertung, eine Finanzierungsentscheidung, eine Investition oder eine Unternehmensübertragung. Das sind zwei verschiedene Objekte. Ergänzend, nicht konkurrierend.",
       "wpS1Callout": "„Während bestehende Standards Systeme zertifizieren, zertifiziert CIFSO 5000 Wert und Übertragbarkeit.“",
-      "wpS2Title": "2. Für wen ist sie — Anwendungsfälle",
+      "wpS2Title": "2. Für wen ist sie, Anwendungsfälle",
       "wpS3Title": "3. Die fünf Wertdimensionen (CIFSO)",
       "wpS3Intro": "Das CIFSO-Framework bewertet fünf unabhängige Wertdimensionen, jede gleich gewichtet mit 25 Punkten. Der Gesamtscore (0–100) bestimmt die endgültige Note.",
       "wpS4Title": "4. Notenskala und Definitionen",
@@ -3590,7 +3590,7 @@
       "wpS9AllTiersLabel": "Alle Formate beinhalten",
       "wpS9AllTiersDesc": "Vollständiges CIFSO-5000-Audit über 5 Dimensionen · Unabhängiger Zertifizierungsbericht · Offizielle Note · Eintrag ins zertifizierte Aegryn-Register · Zertifikatsgültigkeit gemäß Format",
       "wpS10Title": "10. Haftungsausschluss",
-      "wpFooterVersion": "Zertifizierung CIFSO 5000 v4.0 — Offizielle Methodik",
+      "wpFooterVersion": "Zertifizierung CIFSO 5000 v4.0 : Offizielle Methodik",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Schweiz",
       "isoColDimension": "Dimension",
       "isoColExisting": "Bestehende Standards",
@@ -3649,7 +3649,7 @@
       }
     ],
     "dimensions": {
-      "label": "Das CIFSO-Protokoll — 5 Dimensionen",
+      "label": "Das CIFSO-Protokoll : 5 Dimensionen",
       "title": "Ein Grade, fünf Wahrheiten.",
       "items": [
         {
@@ -5967,7 +5967,7 @@
         "minor": "Geringfügig, in Klärung",
         "active": "Aktiv und erheblich"
       },
-      "opensourceHint": "MIT/Apache/BSD sind Open-Source-Lizenzen ohne Wiederverwendungsauflage. GPL verlangt die Veröffentlichung des Codes, der sie nutzt — vor einem Verkauf zu prüfen."
+      "opensourceHint": "MIT/Apache/BSD sind Open-Source-Lizenzen ohne Wiederverwendungsauflage. GPL verlangt die Veröffentlichung des Codes, der sie nutzt, vor einem Verkauf zu prüfen."
     },
     "security": {
       "title": "Sicherheit & Compliance",
@@ -6541,7 +6541,7 @@
         "Branche",
         "Median EV/Umsatz",
         "Multiplikator bei Score 60",
-        "Multiplikator bei Score 40 — 80"
+        "Multiplikator bei Score 40–80"
       ],
       "unlockTitle": "Dies ist eine Teilvorschau.",
       "unlockDesc": "Unscharfe Werte, Detail je Vertical und vollständiger Export sind Index-Abonnenten vorbehalten.",
@@ -8193,9 +8193,9 @@
     "cta": "Anlage einreichen"
   },
   "buildStrip": {
-    "label": "Umsetzen",
+    "label": "Assets und Software",
     "assetsTitle": "Unsere eigenen\nAssets.",
-    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Wir beteiligen uns auch an Assets Dritter. Jedes Asset ist dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
+    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Plattformen, KI-Tools. Wir beteiligen uns auch an Assets Dritter. Jedes Asset ist dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
     "assetsCta": "Unsere Assets entdecken",
     "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
     "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum. Ein Asset, das für Sie und Ihre Investoren arbeitet.",
@@ -8660,7 +8660,7 @@
       "nextIssuesTitle": "Nächste Ausgaben",
       "issue01Date": "Januar 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "Die Anatomie von Unternehmensassets, die sich verkaufen — und jenen, die es nicht tun.",
+      "issue01Desc": "Die Anatomie von Unternehmensassets, die sich verkaufen, und jenen, die es nicht tun.",
       "issue02Date": "April 2027",
       "issue02Theme": "Die Exit-Gleichung",
       "issue02Desc": "Die Entscheidung, die Vorbereitung, die Verhandlung. Und die 12 Monate danach.",
@@ -9663,11 +9663,11 @@
     "page": {
       "meta": {
         "title": "Unsere Branchen, Aegryn",
-        "desc": "Aegryn begleitet Organisationen in 5 Branchenclustern: Finanzen, Gesundheit, Industrie, Handel & Dienstleistungen, Technologie. Strategie-, Technologie-, M&A-Beratung, Individualsoftware und CIFSO-5000-Zertifizierung."
+        "desc": "Aegryn begleitet Organisationen in 5 Branchenclustern: Finanzen, Gesundheit, Industrie, Handel & Dienstleistungen, Technologie. Acht Fachgebiete der Beratung, von der Strategie bis zur Projektsteuerung, und CIFSO-5000-Zertifizierung."
       },
       "label": "Unsere Branchen",
       "title": "Branchenkompetenz für\njede organisatorische Herausforderung.",
-      "desc": "Unsere Leistungen — Strategieberatung, Technologieberatung, M&A, Individualsoftware und CIFSO-5000-Zertifizierung — gelten unterschiedlich je nach Branchenrealität.",
+      "desc": "Unsere acht Fachgebiete, von der Strategie bis zur Projektsteuerung, gelten je nach Branchenrealität unterschiedlich. So gehen wir sie an.",
       "servicesTitle": "Unsere eingesetzten Leistungen",
       "services": [
         {
@@ -9744,7 +9744,7 @@
           "sectors": [
             {
               "name": "Banken & Finanzdienstleistungen",
-              "desc": "DORA-Compliance, Basel IV, KI für Kreditrisiko, Backoffice-Modernisierung. Banken müssen ihre operative Resilienz und ihre Technologie-Abhängigkeiten dokumentieren — zentrale CIFSO-Themen.",
+              "desc": "DORA-Compliance, Basel IV, KI für Kreditrisiko, Backoffice-Modernisierung. Banken müssen ihre operative Resilienz und ihre Technologie-Abhängigkeiten dokumentieren, zentrale CIFSO-Themen.",
               "tag": "Reguliert"
             },
             {
@@ -9754,7 +9754,7 @@
             },
             {
               "name": "PropTech & Immobilien",
-              "desc": "Asset-Bewertung, KI für Mieter-Scoring, Transaktionsplattformen, ESG-Daten. PropTechs verbinden Software und physisches Asset — eine komplex zu zertifizierende Dualität.",
+              "desc": "Asset-Bewertung, KI für Mieter-Scoring, Transaktionsplattformen, ESG-Daten. PropTechs verbinden Software und physisches Asset, eine komplex zu zertifizierende Dualität.",
               "tag": "Hybrid"
             }
           ]
@@ -9779,7 +9779,7 @@
           "sectors": [
             {
               "name": "Gesundheit & Pharma",
-              "desc": "DSGVO-Daten, HL7-/FHIR-Interoperabilität, EMA-Compliance, Lieferkette. Pharma-Assets haben dokumentierbaren Wert — Patente, klinische Daten, regulatorische Dossiers — den CIFSO 5000 strukturiert.",
+              "desc": "DSGVO-Daten, HL7-/FHIR-Interoperabilität, EMA-Compliance, Lieferkette. Pharma-Assets haben dokumentierbaren Wert (Patente, klinische Daten, regulatorische Dossiers) den CIFSO 5000 strukturiert.",
               "tag": "Stark reguliert"
             },
             {
@@ -9844,7 +9844,7 @@
             },
             {
               "name": "Chemie & Hochleistungsmaterialien",
-              "desc": "F&E-Daten, REACH, Lieferantenverträge, geistiges Eigentum. Spezialchemie hat einen starken IP-Wert — schlecht dokumentiert, schwer zu verkaufen.",
+              "desc": "F&E-Daten, REACH, Lieferantenverträge, geistiges Eigentum. Spezialchemie hat einen starken IP-Wert, schlecht dokumentiert, schwer zu verkaufen.",
               "tag": "Starke IP"
             },
             {
@@ -9858,7 +9858,7 @@
           "id": "commerce",
           "cluster": "Handel, Dienstleistungen & Kundenerlebnis",
           "image": "/images/industries/theme_saas.jpg",
-          "vision": "Handels- und Dienstleistungsorganisationen haben einen Wert, der auf ihrer Kundenbasis, ihrem Umsatzmodell und ihrer Bindungsfähigkeit beruht. Die Dokumentation dieser Assets — CRM-Daten, Rahmenverträge, Retention-Kennzahlen — ist genau das, was CIFSO 5000 strukturiert.",
+          "vision": "Handels- und Dienstleistungsorganisationen haben einen Wert, der auf ihrer Kundenbasis, ihrem Umsatzmodell und ihrer Bindungsfähigkeit beruht. Die Dokumentation dieser Assets (CRM-Daten, Rahmenverträge, Retention-Kennzahlen) ist genau das, was CIFSO 5000 strukturiert.",
           "services": [
             "Strategieberatung",
             "M&A-Beratung",
@@ -9888,7 +9888,7 @@
             },
             {
               "name": "Hotellerie & Tourismus",
-              "desc": "Revenue Management, CRM, Kundendaten, Digitalisierung. Hotelgruppen wollen Assets oder Marken verkaufen — die Zertifizierung strukturiert den Wert jenseits des physischen Assets.",
+              "desc": "Revenue Management, CRM, Kundendaten, Digitalisierung. Hotelgruppen wollen Assets oder Marken verkaufen, die Zertifizierung strukturiert den Wert jenseits des physischen Assets.",
               "tag": "Verkauf"
             },
             {
@@ -9917,7 +9917,7 @@
           "sectors": [
             {
               "name": "Technologie & SaaS",
-              "desc": "Multi-Tenant-Architektur, Skalierbarkeit, technische Schulden, EU AI Act, Exit-Vorbereitung. B2B-SaaS haben dokumentierbaren Wert — ARR, NRR, Churn, Architektur — den die Zertifizierung vor Finanzierung oder Verkauf strukturiert.",
+              "desc": "Multi-Tenant-Architektur, Skalierbarkeit, technische Schulden, EU AI Act, Exit-Vorbereitung. B2B-SaaS haben dokumentierbaren Wert (ARR, NRR, Churn, Architektur) den die Zertifizierung vor Finanzierung oder Verkauf strukturiert.",
               "tag": "Exit-bereit"
             },
             {
@@ -9957,7 +9957,7 @@
     "vision": {
       "label": "UNSERE VISION",
       "title": "Eine hybride Gruppe.\nVerankert in der Schweiz.",
-      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Operatoren: Wir bauen und betreiben unsere eigenen Tech-Assets. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Arten zu handeln vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
+      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Unternehmer: Wir haben Organisationen aufgebaut, geführt und restrukturiert. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Arten zu handeln vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
     },
     "founder": {
       "label": "DER GRÜNDER",
@@ -9971,7 +9971,7 @@
       "label": "WARUM AEGRYN",
       "title": "Warum Aegryn?",
       "p1": "Die meisten Beratungen beraten, ohne zu bauen. Die meisten Tech-Firmen bauen ohne Strategie.\n\nAegryn vereint beides. Ein Fundament für Unternehmensberatung, die integrierte Firma, die die Entscheidungen von Führungskräften rahmt, umsetzt und begleitet. Und ein unternehmerisches Vertikal, La Boutique, das eine begrenzte Zahl Signature-Projekte von Anfang bis Ende führt. Was es seinen Kunden empfiehlt, wendet Aegryn auf sich selbst an.",
-      "p2": "Rahmen ohne Umsetzen heisst, eine Karte ohne Gelände zu liefern. Umsetzen ohne Rahmen heisst, ohne Kurs auszuführen. Begleiten, ohne gebaut zu haben, heisst, von aussen zu beraten. Auswählen ohne Projekt heisst, ins Leere zu rekrutieren.\n\nBei Aegryn stärkt jede Disziplin die nächste. Diese Kette ist es, die ein Projekt tragfähig macht, für unsere Kunden wie für uns.",
+      "p2": "Rahmen ohne Umsetzen heisst, eine Karte ohne Gelände zu liefern. Umsetzen ohne Rahmen heisst, ohne Kurs auszuführen. Begleiten, ohne gebaut zu haben, heisst, von aussen zu beraten. Auswählen ohne Projekt heisst, ins Leere zu rekrutieren.\n\nBei Aegryn stärkt jede Art zu handeln die nächste. Diese Kette ist es, die ein Projekt tragfähig macht, für unsere Kunden wie für uns.",
       "p3Label": "VERANKERT IN DER SCHWEIZ",
       "p3": "Saint-Sulpice, Waadt. Zwei Kilometer von der EPFL entfernt, einer der aktivsten Technologieuniversitäten der Welt im Bereich Spin-offs und Technologietransfer. In der Nähe der Stiftung für Innovation und Technologie (FIT), die jährlich Hunderte von Schweizer Innovationsprojekten unterstützt. In einem Kanton, der SwissTech, Dutzende von europäischen Risikokapitalfonds und eine seltene Dichte an Führungskräften und institutionellen Erwerber konzentriert. Dies ist kein Zufall des Standorts. Es ist eine bewusste Netzwerkentscheidung. Die Strenge eines führenden Finanzplatzes, die Neutralität eines vertrauenswürdigen Standorts und der direkte Zugang zu einem der aktivsten Innovationsökosysteme Europas.",
       "p3ImageAlt": "Goldener Sonnenuntergang über dem nebligen Lausanne"
@@ -10239,7 +10239,7 @@
     }
   },
   "gradeSubmitSuccess": {
-    "metaTitle": "Zahlung bestätigt — Aegryn",
+    "metaTitle": "Zahlung bestätigt | Aegryn",
     "metaDesc": "Ihre Akte wurde eingereicht.",
     "title": "Zahlung bestätigt",
     "desc": "Ihre Akte wurde eingereicht. Unser Team kontaktiert Sie innerhalb der vereinbarten Frist.",

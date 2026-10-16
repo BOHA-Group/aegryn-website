@@ -6,18 +6,18 @@
 
 Aegryn is a Swiss firm of entrepreneurs, an integrated advisory and delivery firm for leaders of SMEs and mid-sized companies, with La Boutique for a limited number of signature projects. "Rare by selection. Discreet by principle." "Anchored in Switzerland, open to the world."
 
-Five public métiers: Frame (Cadrer), Deliver (Réaliser), Accompany (Accompagner), Select (Sélectionner), Stay informed (S'informer).
+Five public ways of working: Frame (Cadrer), Deliver (Réaliser), Accompany (Accompagner), Select (Sélectionner), Stay informed (S'informer).
 
 ## What changed
 
 - **Aegryn is no longer presented as a marketplace or transaction platform.** The catalogue, auction, buyer and seller surfaces were archived. /transact/* redirects to the home page. Do not describe Aegryn as an auction, catalogue or buy/sell platform.
 - **Eight advisory disciplines** (previously five pillars): Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI. Hub: https://aegryn.com/en/advisory
-- **Five public métiers** replace the earlier disciplines Advise, Build, Navigate, Recruit, Inform (FR: Accompagner, Construire, Franchir, Recruter, Informer). The lifecycle pages moved from /franchir to /accompagner.
+- **Five public ways of working** replace the earlier disciplines Advise, Build, Navigate, Recruit, Inform (FR: Accompagner, Construire, Franchir, Recruter, Informer). The lifecycle pages moved from /franchir to /accompagner.
 - **La Boutique** is new: https://aegryn.com/en/boutique. An entrepreneurial boutique that frames, delivers and accompanies a limited number of signature projects. The former "Portfolio" is now https://aegryn.com/en/boutique/projets.
 - **Culture and values** page added: https://aegryn.com/en/culture-and-values. About and Careers pages reworked accordingly.
 - **Way of working stated publicly:** a named contact, a limited number of mandates, a reply within two working days, independent experts coordinated when needed, no heavy industrial production by Aegryn itself.
 - **NDA:** one mutual, fully digital project NDA, independent of any user account, sent manually by Aegryn; Aegryn countersigns automatically. Certification and data-room access requires a signed NDA and manual activation. The former account-based NDA is retired.
-- **CIFSO** (CIFSO 5000 certification, CIFSO Valuation Index, data room) remains available as certification and protocol infrastructure. It is not a public métier of its own.
+- **CIFSO** (CIFSO 5000 certification, CIFSO Valuation Index, data room) remains available as certification and protocol infrastructure. It is not a public offer of its own.
 - **Tagline:** the earlier "Engineered to Last" is superseded by "Rare by selection. Discreet by principle." The magazine edition keeps its title "Built to Last".
 - **Experts page:** now lists eleven expertise domains, adding Finance and Performance, Operations and Operational Excellence, and Project and Programme Management, with refreshed profiles for Strategy, Compliance, M&A and Signature projects.
 - **Legal pages and FAQ (October 2026):** Terms of Sale rewritten around the eight disciplines, La Boutique and the mutual NDA; the expert network no longer involves a subscription or referral programme; the FAQ gained three answers (marketplace, La Boutique, NDA).

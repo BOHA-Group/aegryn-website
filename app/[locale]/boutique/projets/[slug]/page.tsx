@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     'An Aegryn company',
   ] : []
   return generateAegrynMetadata({
-    title: isNeediu ? 'neediu — Services à domicile, paru dans Gala | Aegryn' : asset.name,
+    title: isNeediu ? 'neediu : Services à domicile, paru dans Gala | Aegryn' : asset.name,
     description: isNeediu
       ? 'neediu, application de mise en relation avec des prestataires à domicile. Paru dans Gala, 27 novembre 2025. Un actif propriétaire Aegryn.'
       : tItemsMeta(`${asset.id}.tagline`),
@@ -246,7 +246,7 @@ export default async function AssetPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             '@context':    'https://schema.org',
             '@type':       'NewsArticle',
-            headline:      'neediu — Services à domicile à 360° | Paru dans Gala',
+            headline:      'neediu : Services à domicile à 360° | Paru dans Gala',
             description:   'neediu, l\'application de mise en relation avec des prestataires à domicile de confiance, présentée dans le magazine Gala le 27 novembre 2025.',
             datePublished: '2025-11-27',
             url:           'https://aegryn.com/fr/boutique/projets/neediu',

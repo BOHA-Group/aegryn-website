@@ -68,7 +68,7 @@ export default function FlipbookContent() {
       <iframe
         ref={iframeRef}
         src="/api/magazine/issue-01/aegryn-magazine-issue-01_1.html"
-        title="Aegryn Magazine — Issue 01 Flipbook"
+        title="Aegryn Magazine | Issue 01 Flipbook"
         style={{ width: '100vw', height: '100vh', border: 'none', display: 'block' }}
         allow="fullscreen"
         allowFullScreen

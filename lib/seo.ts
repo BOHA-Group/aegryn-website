@@ -198,7 +198,7 @@ export const aegrynOrganizationSchema = {
     height:      50,
   },
   image:         `${BASE_URL}/og/default.jpg`,
-  description:   'Aegryn is a Swiss firm of entrepreneurs: an integrated advisory and delivery firm for leaders of SMEs and mid-sized companies, and La Boutique, an entrepreneurial boutique for a limited number of signature projects. Eight disciplines and five public métiers: frame, deliver, accompany, select, stay informed. A named contact, a limited number of engagements, a reply within two working days. Specialist experts are coordinated when a subject requires it. Rare by selection. Discreet by principle. Anchored in Switzerland, open to the world.',
+  description:   'Aegryn is a Swiss firm of entrepreneurs: an integrated advisory and delivery firm for leaders of SMEs and mid-sized companies, and La Boutique, an entrepreneurial boutique for a limited number of signature projects. Eight disciplines and five ways of working: frame, deliver, accompany, select, stay informed. A named contact, a limited number of engagements, a reply within two working days. Specialist experts are coordinated when a subject requires it. Rare by selection. Discreet by principle. Anchored in Switzerland, open to the world.',
   slogan:        'Rare by selection. Discreet by principle.',
   foundingDate:  '2023',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },

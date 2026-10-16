@@ -353,21 +353,21 @@
         "name": "Benchmark de valorisation d'actifs"
       },
       "heritix": {
-        "badge": "B2C · B2B — LegalTech",
+        "badge": "B2C · B2B · LegalTech",
         "tagline": "Coffre numérique de succession, transmission sécurisée",
         "description": "Centralise et transmet, au bon moment et aux bonnes personnes, les informations sensibles qu’une personne souhaite transmettre : comptes, documents, accès et messages personnels.",
         "capability": "Sceller la transmission sécurisée d’une vie",
         "keywords": "chiffrement de bout en bout · contrôle d’accès multi-parties · déclenchement conditionnel · succession · coffre numérique"
       },
       "chrosium": {
-        "badge": "B2C — Cosmétique D2C",
+        "badge": "B2C · Cosmétique D2C",
         "capability": "Rendre visible l'invisible d'un geste de protection",
         "tagline": "Indicateur d'application solaire, protection visible en temps réel",
         "description": "Associe une formule SPF 50+ clean-label à un indicateur d'application propriétaire : parents et enfants voient où la protection a été posée, avant qu'elle ne s'estompe une fois la zone sécurisée.",
         "keywords": "indicateur d'application · SPF 50+ clean-label · formule UVA/UVB · emballage réactif UV · marque D2C"
       },
       "insertdry": {
-        "badge": "B2B · B2C — Électroménager",
+        "badge": "B2B · B2C · Électroménager",
         "capability": "Préserver le sec là où l'humidité gagne toujours",
         "tagline": "Cave alimentaire tropicale à déshumidification active",
         "description": "Unité de conservation d'aliments secs pensée pour les marchés tropicaux : régulation ciblée de 16 à 22 °C, hygrométrie maintenue sous 45 %, formats compact et encastrable.",
@@ -864,7 +864,7 @@
     "tagline": "CABINET INTÉGRÉ, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
-    "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Nos propres actifs passent par nos propres méthodes. Cette cohérence est notre première crédibilité.",
+    "quote": "Ce que nous faisons pour nos clients, nous nous l'appliquons. Cette cohérence est notre première crédibilité.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
@@ -1035,7 +1035,7 @@
           "bold": true
         },
         {
-          "t": " Aegryn réunit les métiers qu’exige un projet : cadrer, réaliser, accompagner, sélectionner, s’informer."
+          "t": " Aegryn réunit les cinq façons d’agir qu’exige un projet : cadrer, réaliser, accompagner, sélectionner, s’informer."
         }
       ]
     },
@@ -1448,15 +1448,15 @@
       "partnerCode": "Code partenaire",
       "publishedOn": "16 juillet 2026",
       "neediu": {
-        "altBadge": "Paru dans Gala — 27 novembre 2025",
-        "altCover": "Couverture Gala — 27 novembre 2025",
+        "altBadge": "Paru dans Gala : 27 novembre 2025",
+        "altCover": "Couverture Gala : 27 novembre 2025",
         "altAd": "Publicité neediu dans Gala"
       },
       "subblink": {
         "partnerStats": "158 140 membres\n1 100 000 visites/mois",
         "articleTitle": "Village de la Justice vous propose de faire auditer en ligne tous vos contrats et d'obtenir un ContractScore",
         "articleDesc": "ContractScore de A à E, analyse en 60 secondes, verdict SIGNER · NÉGOCIER · REFUSER. Contre-propositions rédigées clause par clause.",
-        "altBanner": "subblink — Analyse contractuelle par IA",
+        "altBanner": "subblink : Analyse contractuelle par IA",
         "partnerName": "Village de la Justice"
       }
     },
@@ -2483,7 +2483,7 @@
           "tag": "Succession familiale & transmission d'entreprise",
           "title": "Un document neutre pour une conversation complexe.",
           "audience": "Dirigeants planifiant leur succession, entreprises familiales, MBO",
-          "desc": "Plus de 3,5 millions de PME européennes font face à des défis de transmission sans acheteur qualifié ni valorisation claire. La Certification CIFSO 5000 fournit une évaluation neutre et documentée sur laquelle toutes les parties — cédant, héritiers, acheteurs et conseillers — peuvent s'appuyer. Indépendante. Reproductible. Opposable.",
+          "desc": "Plus de 3,5 millions de PME européennes font face à des défis de transmission sans acheteur qualifié ni valorisation claire. La Certification CIFSO 5000 fournit une évaluation neutre et documentée sur laquelle toutes les parties (cédant, héritiers, acheteurs et conseillers) peuvent s'appuyer. Indépendante. Reproductible. Opposable.",
           "signal": "Signal à toutes les parties : la valeur de cette organisation a été documentée indépendamment avant la transmission.",
           "chips": [
             "Fondateurs",
@@ -2602,7 +2602,7 @@
           "cifso": "Certifie la résilience organisationnelle, la profondeur managériale, le plan de succession et la rétention, la dimension la plus sous-valorisée dans les transactions."
         }
       ],
-      "pricingLabel": "Certification CIFSO 5000 — Tarification",
+      "pricingLabel": "Certification CIFSO 5000 : Tarification",
       "pricingTitle": "Une certification.\nCinq dimensions de valeur.",
       "pricingDesc": "Tous les forfaits incluent l'audit complet CIFSO 5000 sur cinq dimensions, le rapport de certification indépendant, le grade officiel et l'inscription au registre certifié Aegryn.",
       "pricingNote": "Prix hors taxes. Juridiction suisse. Indicatif, devis définitif émis après pré-qualification.",
@@ -2656,22 +2656,22 @@
         }
       ],
       "whitepaperLabel": "Documentation officielle",
-      "whitepaperTitle": "Aegryn — Méthodologie Certification CIFSO 5000",
+      "whitepaperTitle": "Aegryn : Méthodologie Certification CIFSO 5000",
       "whitepaperDesc": "Vue d'ensemble du protocole, cinq dimensions, échelle de grades, processus de certification et principes d'indépendance.",
       "whitepaperCta": "Télécharger la brochure (PDF)",
-      "whitepaperVersion": "Certification CIFSO 5000 — Aegryn SA",
+      "whitepaperVersion": "Certification CIFSO 5000 : Aegryn SA",
       "wpNavBack": "Retour à la certification",
       "wpNavPrint": "Imprimer / Enregistrer PDF",
       "wpProtocol": "Protocole",
       "wpIssuer": "Émetteur",
       "wpJurisdiction": "Juridiction",
-      "wpEyebrow": "Aegryn Certification — Méthodologie Officielle",
+      "wpEyebrow": "Aegryn Certification : Méthodologie Officielle",
       "wpHeroTitle": "Construit pour durer.",
       "wpHeroDesc": "Le protocole Certification CIFSO 5000 : cinq dimensions de la valeur organisationnelle, une note indépendante et un document opposable pour chaque partie prenante.",
       "wpTocTitle": "Table des matières",
       "wpTocItems": [
         "1. Qu’est-ce que la Certification CIFSO 5000 ?",
-        "2. À qui s’adresse-t-elle — cas d’usage",
+        "2. À qui s’adresse-t-elle, cas d’usage",
         "3. Les cinq dimensions de la valeur (CIFSO)",
         "4. Échelle de notes et définitions",
         "5. CIFSO 5000 et les standards de certification existants",
@@ -2685,7 +2685,7 @@
       "wpS1Body1": "La <strong>Certification CIFSO 5000</strong> est un protocole d’évaluation organisationnelle indépendant développé par Aegryn. Elle évalue et certifie la valeur et la transmissibilité d’une organisation selon cinq dimensions structurées : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, et Organisation & Talent.",
       "wpS1Body2": "Contrairement aux standards de certification existants, qui vérifient des systèmes, des processus et une conformité opérationnelle, la Certification CIFSO 5000 certifie la <em>valeur organisationnelle</em> : la base documentée et opposable d’une valorisation, d’une décision de financement, d’un investissement ou d’une transmission. Ce sont deux objets différents. Complémentaires, pas concurrents.",
       "wpS1Callout": "« Là où les standards existants certifient des systèmes, CIFSO 5000 certifie la valeur et la transmissibilité. »",
-      "wpS2Title": "2. À qui s’adresse-t-elle — cas d’usage",
+      "wpS2Title": "2. À qui s’adresse-t-elle, cas d’usage",
       "wpS3Title": "3. Les cinq dimensions de la valeur (CIFSO)",
       "wpS3Intro": "Le cadre CIFSO note cinq dimensions indépendantes de la valeur, chacune pondérée également à 25 points. Le score total (0–100) détermine la note finale.",
       "wpS4Title": "4. Échelle de notes et définitions",
@@ -2708,7 +2708,7 @@
       "wpS9AllTiersLabel": "Tous les formats incluent",
       "wpS9AllTiersDesc": "Audit CIFSO 5000 complet sur 5 dimensions · Rapport de certification indépendant · Note officielle · Inscription au registre certifié Aegryn · Validité du certificat selon le format",
       "wpS10Title": "10. Avertissement",
-      "wpFooterVersion": "Certification CIFSO 5000 v4.0 — Méthodologie Officielle",
+      "wpFooterVersion": "Certification CIFSO 5000 v4.0 : Méthodologie Officielle",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Suisse",
       "isoColDimension": "Dimension",
       "isoColExisting": "Standards existants",
@@ -2895,7 +2895,7 @@
       "title": "Certification CIFSO 5000, Aegryn | Label qualité indépendant",
       "desc": "Le protocole Aegryn Grade CIFSO 5000 : cinq dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
-    "label": "Certification CIFSO 5000 — Méthodologie",
+    "label": "Certification CIFSO 5000 : Méthodologie",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertification CIFSO 5000.",
     "intro": "Le CIFSO 5000 est le premier standard de certification indépendant qui évalue la valeur organisationnelle et la transmissibilité d'une entreprise. Au-delà de la conformité opérationnelle, il documente ce qui fait la valeur réelle d'une organisation : son capital intellectuel, son intégrité, sa santé financière, sa sécurité et sa résilience organisationnelle.",
@@ -5942,7 +5942,7 @@
         "minor": "Mineurs, en cours de résolution",
         "active": "Actifs et significatifs"
       },
-      "opensourceHint": "MIT/Apache/BSD sont des licences open source sans contrainte de réutilisation. GPL impose de republier le code qui l'utilise — à vérifier avant une cession."
+      "opensourceHint": "MIT/Apache/BSD sont des licences open source sans contrainte de réutilisation. GPL impose de republier le code qui l'utilise, à vérifier avant une cession."
     },
     "security": {
       "title": "Sécurité & conformité",
@@ -6516,7 +6516,7 @@
         "Industrie",
         "EV/Revenue médian",
         "Multiple à score 60",
-        "Multiple à score 40 — 80"
+        "Multiple à score 40–80"
       ],
       "unlockTitle": "Ceci est un aperçu partiel.",
       "unlockDesc": "Les valeurs floutées, le détail par vertical et l'export complet sont réservés aux abonnés de l'Index.",
@@ -8168,9 +8168,9 @@
     "cta": "Soumettre un actif"
   },
   "buildStrip": {
-    "label": "Réaliser",
+    "label": "Actifs et logiciels",
     "assetsTitle": "Nos actifs\npropriétaires.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Nous prenons aussi des participations dans des actifs de tiers. Chaque actif est documenté et opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, plateformes, outils IA. Nous prenons aussi des participations dans des actifs de tiers. Chaque actif est documenté et opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Découvrir nos actifs",
     "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d’investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client. Un actif qui travaille pour vous et vos investisseurs.",
@@ -8809,8 +8809,8 @@
       "wishlistTitle": "Recevoir le magazine Aegryn en version imprimée"
     },
     "kyc": {
-      "meta": "KYC — Espace cédant Aegryn",
-      "title": "KYC — Vérification d'identité",
+      "meta": "KYC | Espace cédant Aegryn",
+      "title": "KYC : Vérification d'identité",
       "subtitle": "Documents requis pour votre processus de cession Aegryn.",
       "complete": "Dossier KYC complet",
       "inProgress": "Dossier KYC en cours",
@@ -8819,17 +8819,17 @@
       "validatedWarn": "Ce document est validé. Un nouvel upload remplace la version actuelle."
     },
     "ndaView": {
-      "meta": "NDA — Espace cédant Aegryn",
+      "meta": "NDA | Espace cédant Aegryn",
       "title": "Accord de confidentialité",
       "subtitle": "NDA signé dans le cadre de votre cession."
     },
     "notifications": {
-      "meta": "Notifications — Espace cédant Aegryn",
+      "meta": "Notifications | Espace cédant Aegryn",
       "title": "Notifications",
       "subtitle": "Notifications relatives à votre activité."
     },
     "transactions": {
-      "meta": "Transactions — Espace cédant Aegryn",
+      "meta": "Transactions | Espace cédant Aegryn",
       "title": "Mes transactions",
       "subtitle": "Transactions en cours et clôturées.",
       "noTransactions": "Aucune transaction pour le moment."
@@ -9493,11 +9493,11 @@
     "page": {
       "meta": {
         "title": "Nos industries, Aegryn",
-        "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Conseil stratégique, technologique, M&A, logiciels sur mesure et Certification CIFSO 5000."
+        "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Huit métiers de conseil, de la stratégie au pilotage de projets, et Certification CIFSO 5000."
       },
       "label": "Nos industries",
       "title": "Une expertise sectorielle\npour chaque enjeu organisationnel.",
-      "desc": "Nos métiers — Conseil en Stratégie, Technologie, M&A, Solutions sur mesure et Certification CIFSO 5000 — s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
+      "desc": "Nos huit métiers, de la stratégie au pilotage de projets, s'appliquent différemment selon les réalités de chaque secteur. Voici comment nous les abordons.",
       "servicesTitle": "Nos métiers mobilisés",
       "services": [
         {
@@ -9574,7 +9574,7 @@
           "sectors": [
             {
               "name": "Banque & Services Financiers",
-              "desc": "Conformité DORA, Bâle IV, IA de risque crédit, modernisation back-office. Les banques doivent documenter leur résilience opérationnelle et leurs dépendances technologiques — enjeux CIFSO majeurs.",
+              "desc": "Conformité DORA, Bâle IV, IA de risque crédit, modernisation back-office. Les banques doivent documenter leur résilience opérationnelle et leurs dépendances technologiques, enjeux CIFSO majeurs.",
               "tag": "Réglementé"
             },
             {
@@ -9584,7 +9584,7 @@
             },
             {
               "name": "PropTech & Immobilier",
-              "desc": "Valorisation d'actifs, IA scoring locataire, plateforme transaction, données ESG. Les PropTech combinent logiciel et actif immobilier — une dualité complexe à certifier.",
+              "desc": "Valorisation d'actifs, IA scoring locataire, plateforme transaction, données ESG. Les PropTech combinent logiciel et actif immobilier, une dualité complexe à certifier.",
               "tag": "Hybride"
             }
           ]
@@ -9609,7 +9609,7 @@
           "sectors": [
             {
               "name": "Santé & Pharmaceutique",
-              "desc": "Données RGPD, interopérabilité HL7/FHIR, conformité EMA, chaîne d'approvisionnement. Les actifs pharma ont une valeur documentable — brevets, données cliniques, dossiers réglementaires — que le CIFSO 5000 structure.",
+              "desc": "Données RGPD, interopérabilité HL7/FHIR, conformité EMA, chaîne d'approvisionnement. Les actifs pharma ont une valeur documentable (brevets, données cliniques, dossiers réglementaires) que le CIFSO 5000 structure.",
               "tag": "Très réglementé"
             },
             {
@@ -9674,7 +9674,7 @@
             },
             {
               "name": "Chimie & Matériaux Avancés",
-              "desc": "R&D data, REACH, contrats fournisseurs, propriété intellectuelle. Les chimistes spécialisés ont une valeur IP forte — mal documentée, difficile à céder.",
+              "desc": "R&D data, REACH, contrats fournisseurs, propriété intellectuelle. Les chimistes spécialisés ont une valeur IP forte, mal documentée, difficile à céder.",
               "tag": "IP forte"
             },
             {
@@ -9688,7 +9688,7 @@
           "id": "commerce",
           "cluster": "Commerce, Services & Expérience Client",
           "image": "/images/industries/theme_saas.jpg",
-          "vision": "Les organisations de commerce et services ont une valeur qui tient à leur base client, leur modèle de revenus et leur capacité à fidéliser. La documentation de ces actifs — données CRM, contrats cadres, métriques de rétention — est précisément ce que le CIFSO 5000 structure.",
+          "vision": "Les organisations de commerce et services ont une valeur qui tient à leur base client, leur modèle de revenus et leur capacité à fidéliser. La documentation de ces actifs (données CRM, contrats cadres, métriques de rétention) est précisément ce que le CIFSO 5000 structure.",
           "services": [
             "Conseil en Stratégie",
             "Conseil en M&A",
@@ -9718,7 +9718,7 @@
             },
             {
               "name": "Hôtellerie & Tourisme",
-              "desc": "Revenue management, CRM, données clients, digitalisation. Les groupes hôteliers cherchent à céder des actifs ou des marques — la certification structure la valeur au-delà de l'actif physique.",
+              "desc": "Revenue management, CRM, données clients, digitalisation. Les groupes hôteliers cherchent à céder des actifs ou des marques, la certification structure la valeur au-delà de l'actif physique.",
               "tag": "Cession"
             },
             {
@@ -9747,7 +9747,7 @@
           "sectors": [
             {
               "name": "Technologie & SaaS",
-              "desc": "Architecture multi-tenant, scalabilité, dette technique, EU AI Act, préparation à l'exit. Les SaaS B2B ont une valeur documentable — ARR, NRR, churn, architecture — que la certification structure avant une levée ou une cession.",
+              "desc": "Architecture multi-tenant, scalabilité, dette technique, EU AI Act, préparation à l'exit. Les SaaS B2B ont une valeur documentable (ARR, NRR, churn, architecture) que la certification structure avant une levée ou une cession.",
               "tag": "Exit-ready"
             },
             {
@@ -9826,8 +9826,8 @@
     "intro": "Nous croyons que la valeur d'une entreprise ne se négocie pas dans l'urgence. Elle se construit dans la rigueur stratégique, se renforce par la technologie, se valide dans la transparence, et se réalise dans la confiance.\n\nC'est pour ça qu'Aegryn existe : pour accompagner les dirigeants qui refusent de subir leur trajectoire.",
     "vision": {
       "label": "NOTRE VISION",
-      "title": "Un groupe hybride.\nAnncré en Suisse.",
-      "text": "Notre vision est celle d'un groupe de conseil européen qui accompagne les entreprises de bout en bout, de la stratégie au capital, de la transformation à la valorisation.\n\nNous sommes des opérateurs : nous construisons et opérons nos propres actifs tech. Ce que nous conseillons, nous le vivons. Cette cohérence est notre première crédibilité.\n\nAegryn n'est ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. C'est un groupe hybride, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d'une entreprise."
+      "title": "Un groupe hybride.\nAncré en Suisse.",
+      "text": "Notre vision est celle d'un groupe de conseil européen qui accompagne les entreprises de bout en bout, de la stratégie au capital, de la transformation à la valorisation.\n\nNous sommes des entrepreneurs : nous avons construit, dirigé et restructuré des organisations. Ce que nous conseillons, nous le vivons. Cette cohérence est notre première crédibilité.\n\nAegryn n'est ni un cabinet de conseil classique, ni une agence tech, ni une boutique M&A. C'est un groupe hybride, ancré en Suisse, qui réunit les cinq disciplines nécessaires à la valeur durable d'une entreprise."
     },
     "founder": {
       "label": "LE FONDATEUR",
@@ -9841,14 +9841,14 @@
       "label": "POURQUOI AEGRYN",
       "title": "Pourquoi Aegryn ?",
       "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie.\n\nAegryn réunit les deux. Un socle de conseil corporate, le cabinet intégré, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, La Boutique, qui conduit de bout en bout un nombre limité de projets signature. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
-      "p2": "Cadrer sans réaliser, c’est livrer une carte sans le territoire. Réaliser sans cadrer, c’est exécuter sans cap. Accompagner sans avoir bâti, c’est conseiller de l’extérieur. Sélectionner sans projet, c’est recruter dans le vide.\n\nChez Aegryn, chaque métier renforce le suivant. C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
+      "p2": "Cadrer sans réaliser, c’est livrer une carte sans le territoire. Réaliser sans cadrer, c’est exécuter sans cap. Accompagner sans avoir bâti, c’est conseiller de l’extérieur. Sélectionner sans projet, c’est recruter dans le vide.\n\nChez Aegryn, chaque façon d’agir renforce la suivante. C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. A deux kilomètres de l'EPFL, l'une des universités technologiques les plus actives au monde en matière de spin-offs et de transfert technologique. A proximité de la Fondation pour l'Innovation et la Technologie (FIT), qui soutient chaque année des centaines de projets d'innovation suisses. Dans un canton qui concentre SwissTech, des dizaines de fonds de capital-risque européens, et une densité rare de dirigeants et d'acquéreurs institutionnels. Ce n'est pas un hasard de localisation. C'est un choix de réseau. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance, et l'accès direct à un écosystème d'innovation qui compte parmi les plus actifs d'Europe.",
       "p3ImageAlt": "Coucher de soleil doré sur Lausanne dans la brume"
     }
   },
   "partner": {
-    "meta": "Dashboard — Espace partenaire Aegryn",
+    "meta": "Dashboard | Espace partenaire Aegryn",
     "areaLabel": "Espace partenaire",
     "hello": "Bonjour, {name}",
     "fallbackName": "Partenaire",
@@ -9868,54 +9868,54 @@
       "rejected": "Refusée"
     },
     "notifications": {
-      "meta": "Notifications — Espace partenaire Aegryn",
+      "meta": "Notifications | Espace partenaire Aegryn",
       "title": "Notifications",
       "subtitle": "Notifications relatives à votre activité."
     },
     "kyc": {
-      "meta": "KYC — Espace partenaire Aegryn",
-      "title": "KYC — Vérification d'identité",
+      "meta": "KYC | Espace partenaire Aegryn",
+      "title": "KYC : Vérification d'identité",
       "subtitle": "Documents requis pour votre profil partenaire."
     },
     "mandates": {
-      "meta": "Mandats — Espace partenaire Aegryn",
+      "meta": "Mandats | Espace partenaire Aegryn",
       "title": "Mes mandats",
       "subtitle": "Mandats de partenariat en cours.",
       "noMandates": "Aucun mandat pour le moment."
     },
     "mandateDetail": {
-      "meta": "Détail du mandat — Espace partenaire Aegryn",
+      "meta": "Détail du mandat | Espace partenaire Aegryn",
       "back": "← Retour aux mandats"
     },
     "certifications": {
-      "meta": "Co-certifications — Espace partenaire Aegryn",
+      "meta": "Co-certifications | Espace partenaire Aegryn",
       "title": "Mes co-certifications",
       "subtitle": "Missions de certification CIFSO en cours.",
       "noCertifications": "Aucune co-certification assignée."
     },
     "certDetail": {
-      "meta": "Détail co-certification — Espace partenaire Aegryn",
+      "meta": "Détail co-certification | Espace partenaire Aegryn",
       "back": "← Retour aux co-certifications"
     },
     "commissions": {
-      "meta": "Commissions — Espace partenaire Aegryn",
+      "meta": "Commissions | Espace partenaire Aegryn",
       "title": "Mes commissions",
       "subtitle": "Historique des commissions.",
       "noCommissions": "Aucune commission enregistrée."
     },
     "introductions": {
-      "meta": "Introductions — Espace partenaire Aegryn",
+      "meta": "Introductions | Espace partenaire Aegryn",
       "title": "Mes introductions",
       "subtitle": "Actifs et acquéreurs introduits.",
       "noIntroductions": "Aucune introduction pour le moment."
     },
     "expertProfile": {
-      "meta": "Profil expert — Espace partenaire Aegryn",
+      "meta": "Profil expert | Espace partenaire Aegryn",
       "title": "Mon profil expert",
       "subtitle": "Profil visible sur le réseau d’experts Aegryn."
     },
     "subscription": {
-      "meta": "Abonnement — Espace partenaire Aegryn",
+      "meta": "Abonnement | Espace partenaire Aegryn",
       "title": "Mon abonnement",
       "subtitle": "Gérez votre abonnement Fiche Expert.",
       "monthlyPlan": "Mensuel, CHF 89/mois",
@@ -9929,8 +9929,8 @@
         "description": "Manifestez votre intérêt pour l'édition print du AEGRYN Report, réservée aux clients Aegryn."
       },
       "printBadge": "Édition print",
-      "title": "Liste d'intérêt — édition print",
-      "desc": "L'édition print du AEGRYN Report est réservée aux clients actifs de l'écosystème. Indiquez vos centres d'intérêt pour rejoindre la liste d'attente — nous vous contacterons au lancement de la production.",
+      "title": "Liste d'intérêt : édition print",
+      "desc": "L'édition print du AEGRYN Report est réservée aux clients actifs de l'écosystème. Indiquez vos centres d'intérêt pour rejoindre la liste d'attente, nous vous contacterons au lancement de la production.",
       "digitalNote": "La version digitale reste librement accessible, comme nos articles et actualités.",
       "digitalNoteCta": "Lire le rapport en ligne",
       "namePlaceholder": "Votre nom",
@@ -10239,7 +10239,7 @@
     }
   },
   "gradeSubmitSuccess": {
-    "metaTitle": "Paiement confirmé — Aegryn",
+    "metaTitle": "Paiement confirmé | Aegryn",
     "metaDesc": "Votre dossier a bien été soumis.",
     "title": "Paiement confirmé",
     "desc": "Votre dossier a bien été soumis. Notre équipe vous contactera sous les délais convenus.",

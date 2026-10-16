@@ -353,21 +353,21 @@
         "name": "Benchmark voor activawaardering"
       },
       "heritix": {
-        "badge": "B2C · B2B — LegalTech",
+        "badge": "B2C · B2B · LegalTech",
         "tagline": "Digitale successiekluis, beveiligde overdracht",
         "description": "Centraliseert en verzendt, op het juiste moment en naar de juiste personen, de gevoelige informatie die iemand wil nalaten: rekeningen, documenten, toegangen en persoonlijke berichten.",
         "capability": "De veilige overdracht van een leven bezegelen",
         "keywords": "end-to-end encryptie · multi-party toegangscontrole · voorwaardelijke vrijgave · nalatenschap · digitale kluis"
       },
       "chrosium": {
-        "badge": "B2C — D2C-Cosmetica",
+        "badge": "B2C · D2C-Cosmetica",
         "capability": "Het onzichtbare van een beschermingsgebaar zichtbaar maken",
         "tagline": "Zonbescherming-indicator, bescherming in realtime zichtbaar",
         "description": "Combineert een SPF 50+ clean-label formule met een eigen toepassingsindicator: ouders en kinderen zien waar bescherming is aangebracht, voordat deze vervaagt zodra de zone beveiligd is.",
         "keywords": "toepassingsindicator · SPF 50+ clean label · UVA/UVB-formule · UV-reactieve verpakking · D2C-merk"
       },
       "insertdry": {
-        "badge": "B2B · B2C — Huishoudelijke apparaten",
+        "badge": "B2B · B2C · Huishoudelijke apparaten",
         "capability": "Het droge bewaren waar de vocht altijd wint",
         "tagline": "Tropische bewaareenheid voor droge voeding met actieve ontvochtiging",
         "description": "Bewaareenheid voor droge levensmiddelen ontworpen voor tropische markten: gerichte koeling van 16 tot 22 °C, luchtvochtigheid onder 45 %, compacte en inbouwformaten.",
@@ -901,7 +901,7 @@
     "tagline": "GEÏNTEGREERDE FIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
-    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is onze eerste geloofwaardigheid.",
+    "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Deze coherentie is onze eerste geloofwaardigheid.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
@@ -1075,7 +1075,7 @@
           "bold": true
         },
         {
-          "t": " Aegryn verenigt de vakgebieden die een project vereist: kaderen, realiseren, begeleiden, selecteren, informeren."
+          "t": " Aegryn verenigt de vijf manieren van handelen die een project vereist: kaderen, realiseren, begeleiden, selecteren, informeren."
         }
       ]
     },
@@ -1191,14 +1191,14 @@
     },
     "meta": {
       "title": "Over ons | Ondernemende boutique | Aegryn",
-      "desc": "Aegryn is een ondernemende boutique voor signatuurprojecten, verankerd in Zwitserland en open naar de wereld. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, informeren."
+      "desc": "Aegryn is een ondernemende boutique voor signatuurprojecten, verankerd in Zwitserland en open naar de wereld. Vijf manieren van handelen: kaderen, realiseren, begeleiden, selecteren, informeren."
     }
   },
   "career": {
     "hero": {
       "label": "Werken bij Aegryn",
       "title": "Projecten bouwen die standhouden.",
-      "desc": "Aegryn is een geïntegreerd bureau, met La Boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven. Wij groeien via coöptatie en spontane sollicitaties, met senior profielen die een project graag tot het einde leiden.",
+      "desc": "Aegryn is een geïntegreerd bureau, met La Boutique voor signatuurprojecten. Vijf manieren van handelen: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven. Wij groeien via coöptatie en spontane sollicitaties, met senior profielen die een project graag tot het einde leiden.",
       "imageAlt": "Door de zon beschenen bergtop weerspiegeld in een bergmeer"
     },
     "positions": {
@@ -1272,7 +1272,7 @@
     },
     "meta": {
       "title": "Carrière | Aegryn",
-      "desc": "Word deel van Aegryn, een geïntegreerd bureau, en van La Boutique voor signatuurprojecten. Vijf vakgebieden: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven."
+      "desc": "Word deel van Aegryn, een geïntegreerd bureau, en van La Boutique voor signatuurprojecten. Vijf manieren van handelen: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven."
     }
   },
   "assetStatus": {
@@ -1488,15 +1488,15 @@
       "partnerCode": "Partnercode",
       "publishedOn": "16 juli 2026",
       "neediu": {
-        "altBadge": "Verschenen in Gala — 27 november 2025",
-        "altCover": "Gala-cover — 27 november 2025",
+        "altBadge": "Verschenen in Gala : 27 november 2025",
+        "altCover": "Gala-cover : 27 november 2025",
         "altAd": "neediu-advertentie in Gala"
       },
       "subblink": {
         "partnerStats": "158.140 leden\n1.100.000 bezoekers/maand",
         "articleTitle": "Village de la Justice nodigt u uit al uw contracten online te laten auditen en een ContractScore te ontvangen",
         "articleDesc": "ContractScore van A tot E, analyse in 60 seconden, oordeel TEKENEN · ONDERHANDELEN · WEIGEREN. Tegenvoorstellen clausule voor clausule.",
-        "altBanner": "subblink — AI-gebaseerde contractanalyse",
+        "altBanner": "subblink : AI-gebaseerde contractanalyse",
         "partnerName": "Village de la Justice"
       }
     },
@@ -2153,7 +2153,7 @@
       "title": "Certificering CIFSO 5000, Aegryn | Onafhankelijk Methodologie & Protocol",
       "desc": "Het Aegryn Grade-protocol: CIFSO 5000-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
     },
-    "label": "Certificering CIFSO 5000 — Methodologie",
+    "label": "Certificering CIFSO 5000 : Methodologie",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertificering CIFSO 5000.",
     "intro": "CIFSO 5000 is de eerste onafhankelijke certificeringsstandaard die organisatorische waarde en overdraagbaarheid beoordeelt. Naast operationele compliance documenteert het wat de echte waarde van een organisatie vormt: haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
@@ -3302,14 +3302,14 @@
       "marketCtaSecondary": "Methodologie lezen",
       "useCasesLabel": "Wie certificeert, en waarom",
       "useCasesTitle": "De Certificering CIFSO 5000\nis voor alle actoren.",
-      "useCasesDesc": "Of het nu gaat om financieringsvoorbereiding, bedrijfsoverdracht, investeringsbeslissing of banklening — de Certificering CIFSO 5000 documenteert de waarde van uw organisatie voor alle relevante gesprekspartners.",
+      "useCasesDesc": "Of het nu gaat om financieringsvoorbereiding, bedrijfsoverdracht, investeringsbeslissing of banklening, de Certificering CIFSO 5000 documenteert de waarde van uw organisatie voor alle relevante gesprekspartners.",
       "useCases": [
         {
           "num": "01",
           "tag": "Jaarverslag & communicatie naar investeerders",
           "title": "Een kwaliteitslabel in uw jaarverslag.",
           "audience": "Groeiende kmo's, ETI's met actieve investeerders, beursgenoteerde bedrijven",
-          "desc": "Net als een bestaande onafhankelijke standaard kan de Certificering CIFSO 5000 worden vermeld in uw jaarverslag, investeerdersdocumenten of presentaties aan de raad van bestuur. Het geeft aandeelhouders, kredietverstrekkers en partners een signaal dat uw waarde onafhankelijk is geverifieerd — niet alleen verklaard.",
+          "desc": "Net als een bestaande onafhankelijke standaard kan de Certificering CIFSO 5000 worden vermeld in uw jaarverslag, investeerdersdocumenten of presentaties aan de raad van bestuur. Het geeft aandeelhouders, kredietverstrekkers en partners een signaal dat uw waarde onafhankelijk is geverifieerd, niet alleen verklaard.",
           "signal": "Signaal aan aandeelhouders en partners: de organisatorische waarde is onafhankelijk gedocumenteerd.",
           "chips": [
             "Groeiende kmo's",
@@ -3352,7 +3352,7 @@
           "title": "Toon uw investment-readiness op alle dimensies.",
           "audience": "Startups en scale-ups die een financieringsronde voorbereiden",
           "desc": "Investeerders verwachten steeds vaker dat oprichters hun bereidheid aantonen, niet alleen op financieel vlak, maar ook op het gebied van intellectueel eigendom, technische architectuur, beveiliging en governance. Een Certificering CIFSO 5000 wordt een document in de dataroom dat due-diligencevragen anticipeert en de investeringsbeslissing versnelt.",
-          "signal": "Signaal aan investeerders: investment-ready op alle vijf dimensies — niet alleen het financiële model.",
+          "signal": "Signaal aan investeerders: investment-ready op alle vijf dimensies, niet alleen het financiële model.",
           "chips": [
             "Startups",
             "Scale-ups",
@@ -3365,7 +3365,7 @@
           "tag": "Familiale opvolging & bedrijfsoverdracht",
           "title": "Een neutraal document voor een complex gesprek.",
           "audience": "Oprichters die hun opvolging plannen, familiebedrijven, management-buyouts",
-          "desc": "Meer dan 3,5 miljoen Europese kmo's staan voor opvolgingsproblemen zonder een gekwalificeerde koper of een duidelijke waardering. De Certificering CIFSO 5000 biedt een neutrale, gedocumenteerde beoordeling waarop alle partijen — cederende oprichter, erfgenamen, kopers en adviseurs — kunnen vertrouwen. Onafhankelijk. Reproduceerbaar. Verdedigbaar.",
+          "desc": "Meer dan 3,5 miljoen Europese kmo's staan voor opvolgingsproblemen zonder een gekwalificeerde koper of een duidelijke waardering. De Certificering CIFSO 5000 biedt een neutrale, gedocumenteerde beoordeling waarop alle partijen (cederende oprichter, erfgenamen, kopers en adviseurs) kunnen vertrouwen. Onafhankelijk. Reproduceerbaar. Verdedigbaar.",
           "signal": "Signaal aan alle partijen: de waarde van deze organisatie is onafhankelijk gedocumenteerd vóór de overdracht.",
           "chips": [
             "Oprichters",
@@ -3455,7 +3455,7 @@
       ],
       "isoLabel": "CIFSO 5000 en bestaande certificeringsstandaarden",
       "isoTitle": "Waar bestaande standaarden stoppen.\nWaar CIFSO 5000 begint.",
-      "isoDesc": "Bestaande normen (ISO 27001, SOC 2, ISO 9001...) certificeren processen en systemen. De Certificering CIFSO 5000 documenteert de organisatiewaarde en overdraagbaarheid — een aanvullend, geen concurrerend object.",
+      "isoDesc": "Bestaande normen (ISO 27001, SOC 2, ISO 9001...) certificeren processen en systemen. De Certificering CIFSO 5000 documenteert de organisatiewaarde en overdraagbaarheid, een aanvullend, geen concurrerend object.",
       "isoStatement": "CIFSO 5000 vult bestaande standaarden aan. Het vervangt ze niet.",
       "isoRows": [
         {
@@ -3484,7 +3484,7 @@
           "cifso": "Certificeert organisatorische veerkracht, managementdiepte, kennisoverdracht-documentatie en opvolgingsplanning."
         }
       ],
-      "pricingLabel": "Certificering CIFSO 5000 — Tarieven",
+      "pricingLabel": "Certificering CIFSO 5000 : Tarieven",
       "pricingTitle": "Één certificering.\nVijf dimensies van waarde.",
       "pricingDesc": "De Certificering CIFSO 5000 is afgestemd op de omvang van de organisatie. Drie formaten, één onafhankelijke standaard.",
       "pricingNote": "Alle prijzen zijn exclusief btw. Vaste prijs, geen variabele component.",
@@ -3538,22 +3538,22 @@
         }
       ],
       "whitepaperLabel": "Officiële documentatie",
-      "whitepaperTitle": "Aegryn — Methodologie Certificering CIFSO 5000",
-      "whitepaperDesc": "Overzicht van het protocol, vijf dimensies, notenschaal, certificeringsproces en onafhankelijkheidsbeginselen — het officiële methodologiewhitepaper.",
+      "whitepaperTitle": "Aegryn : Methodologie Certificering CIFSO 5000",
+      "whitepaperDesc": "Overzicht van het protocol, vijf dimensies, notenschaal, certificeringsproces en onafhankelijkheidsbeginselen, het officiële methodologiewhitepaper.",
       "whitepaperCta": "Whitepaper lezen",
-      "whitepaperVersion": "CIFSO 5000 — Officieel methodologiewhitepaper",
+      "whitepaperVersion": "CIFSO 5000 : Officieel methodologiewhitepaper",
       "wpNavBack": "Terug naar certificering",
       "wpNavPrint": "Afdrukken / PDF opslaan",
       "wpProtocol": "Protocol",
       "wpIssuer": "Uitgever",
       "wpJurisdiction": "Rechtsgebied",
-      "wpEyebrow": "Aegryn Certificering — Officiële Methodologie",
+      "wpEyebrow": "Aegryn Certificering : Officiële Methodologie",
       "wpHeroTitle": "Gebouwd om te blijven.",
       "wpHeroDesc": "Het Certificering CIFSO 5000-protocol: vijf dimensies van organisatiewaarde, een onafhankelijke note en een verdedigbaar document voor alle belanghebbenden.",
       "wpTocTitle": "Inhoudsopgave",
       "wpTocItems": [
         "1. Wat is de Certificering CIFSO 5000?",
-        "2. Voor wie is het bedoeld — gebruikscases",
+        "2. Voor wie is het bedoeld, gebruikscases",
         "3. De vijf waardedimensies (CIFSO)",
         "4. Notenschaal en definities",
         "5. CIFSO 5000 en bestaande certificeringsstandaarden",
@@ -3567,7 +3567,7 @@
       "wpS1Body1": "De <strong>Certificering CIFSO 5000</strong> is een onafhankelijk organisatiebeoordelingsprotocol ontwikkeld door Aegryn. Het evalueert en certificeert de waarde en overdraagbaarheid van een organisatie in vijf gestructureerde dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, en Organisatie & Talent.",
       "wpS1Body2": "In tegenstelling tot bestaande certificeringsstandaarden, die systemen, processen en operationele conformiteit verifiëren, certificeert de Certificering CIFSO 5000 de <em>organisatiewaarde</em>: de gedocumenteerde, verdedigbare basis voor een waardering, een financieringsbeslissing, een investering of een bedrijfsoverdracht. Dit zijn twee verschillende objecten. Aanvullend, niet concurrerend.",
       "wpS1Callout": "„Waar bestaande standaarden systemen certificeren, certificeert CIFSO 5000 waarde en overdraagbaarheid.“",
-      "wpS2Title": "2. Voor wie is het bedoeld — gebruikscases",
+      "wpS2Title": "2. Voor wie is het bedoeld, gebruikscases",
       "wpS3Title": "3. De vijf waardedimensies (CIFSO)",
       "wpS3Intro": "Het CIFSO-framework beoordeelt vijf onafhankelijke waardedimensies, elk gelijkwaardig gewogen op 25 punten. De totaalscore (0–100) bepaalt de eindbeoordeling.",
       "wpS4Title": "4. Notenschaal en definities",
@@ -3590,7 +3590,7 @@
       "wpS9AllTiersLabel": "Alle formaten bevatten",
       "wpS9AllTiersDesc": "Volledig CIFSO-5000-audit op 5 dimensies · Onafhankelijk certificeringsrapport · Officiële note · Inschrijving in het gecertificeerde Aegryn-register · Geldigheid certificaat zoals per formaat vermeld",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterVersion": "Certificering CIFSO 5000 v4.0 — Officiële Methodologie",
+      "wpFooterVersion": "Certificering CIFSO 5000 v4.0 : Officiële Methodologie",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Zwitserland",
       "isoColDimension": "Dimensie",
       "isoColExisting": "Bestaande standaarden",
@@ -3649,7 +3649,7 @@
       }
     ],
     "dimensions": {
-      "label": "Het CIFSO-protocol — 5 dimensies",
+      "label": "Het CIFSO-protocol : 5 dimensies",
       "title": "Één grade, vijf waarheden.",
       "items": [
         {
@@ -5982,7 +5982,7 @@
         "minor": "Klein, in oplossing",
         "active": "Actief en significant"
       },
-      "opensourceHint": "MIT/Apache/BSD zijn opensource-licenties zonder hergebruiksbeperking. GPL vereist het opnieuw publiceren van code die het gebruikt — te controleren vóór een verkoop."
+      "opensourceHint": "MIT/Apache/BSD zijn opensource-licenties zonder hergebruiksbeperking. GPL vereist het opnieuw publiceren van code die het gebruikt, te controleren vóór een verkoop."
     },
     "security": {
       "title": "Beveiliging & compliance",
@@ -6556,7 +6556,7 @@
         "Industrie",
         "Mediane EV/Omzet",
         "Multiple bij score 60",
-        "Multiple bij score 40 — 80"
+        "Multiple bij score 40–80"
       ],
       "unlockTitle": "Dit is een gedeeltelijke preview.",
       "unlockDesc": "Vervaagde waarden, detail per vertical en volledige export zijn voorbehouden aan Index-abonnees.",
@@ -7930,7 +7930,7 @@
       "s9H": "9. Terugbetalingen",
       "s9": "Indien een dienst waarvoor u heeft betaald niet wordt geleverd zoals beloofd, kunt u rechtstreeks via het platform een terugbetaling aanvragen. Verzoeken moeten worden ingediend binnen 7 dagen na het geplande dienstmoment en begeleidende details bevatten. Wij beoordelen terugbetalingsverzoeken van geval tot geval en behouden ons het recht voor een terugbetaling goed te keuren of af te wijzen. Toegekende terugbetalingen worden verwerkt via dezelfde betaalmethode als de oorspronkelijke transactie.",
       "s9DisputeTitle": "Geschil tussen gebruikers.",
-      "s9Dispute": "Wij zijn geen partij bij de contractuele relatie tussen Klanten en Dienstverleners en interveniëren niet in de uitvoering van de dienst. Wij kunnen echter de communicatie tussen partijen faciliteren in geval van geschil. Indien geen wederzijds akkoord wordt gevonden, kunnen wij — zonder daartoe verplicht te zijn — een oplossing voorstellen of een gedeeltelijke of volledige terugbetaling toekennen, op basis van het beschikbare bewijs en te goeder trouw.",
+      "s9Dispute": "Wij zijn geen partij bij de contractuele relatie tussen Klanten en Dienstverleners en interveniëren niet in de uitvoering van de dienst. Wij kunnen echter de communicatie tussen partijen faciliteren in geval van geschil. Indien geen wederzijds akkoord wordt gevonden, kunnen wij (zonder daartoe verplicht te zijn) een oplossing voorstellen of een gedeeltelijke of volledige terugbetaling toekennen, op basis van het beschikbare bewijs en te goeder trouw.",
       "s10H": "10. Intellectueel eigendom",
       "s10": "Met uitzondering van Gebruikerscontent blijft Aegryn de enige eigenaar van alle intellectuele-eigendomsrechten op het Platform, de Diensten en de via het Platform toegankelijke content.",
       "s11H": "11. Gebruiksbeperkingen",
@@ -8208,9 +8208,9 @@
     "cta": "Een actief indienen"
   },
   "buildStrip": {
-    "label": "Realiseren",
+    "label": "Activa en software",
     "assetsTitle": "Onze eigen\nactiva.",
-    "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, marketplaces, AI-tools. Wij nemen ook deelnemingen in activa van derden. Elk actief is gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
+    "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, platformen, AI-tools. Wij nemen ook deelnemingen in activa van derden. Elk actief is gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
     "assetsCta": "Onze activa ontdekken",
     "engineeringTitle": "Maatwerksoftware\nvoor uw operaties.",
     "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant. Een asset dat werkt voor u en uw investeerders.",
@@ -8675,7 +8675,7 @@
       "nextIssuesTitle": "Komende edities",
       "issue01Date": "Januari 2027",
       "issue01Theme": "Built to Last.",
-      "issue01Desc": "De anatomie van bedrijfsactiva die verkopen — en die dat niet doen.",
+      "issue01Desc": "De anatomie van bedrijfsactiva die verkopen : en die dat niet doen.",
       "issue02Date": "April 2027",
       "issue02Theme": "De exit-vergelijking",
       "issue02Desc": "De beslissing, de voorbereiding, de onderhandeling. En de 12 maanden die volgen.",
@@ -8849,8 +8849,8 @@
       }
     },
     "kyc": {
-      "meta": "KYC — Aegryn verkopersruimte",
-      "title": "KYC — Identiteitsverificatie",
+      "meta": "KYC | Aegryn verkopersruimte",
+      "title": "KYC : Identiteitsverificatie",
       "subtitle": "Vereiste documenten voor uw Aegryn-verkoopproces.",
       "complete": "KYC-dossier compleet",
       "inProgress": "KYC-dossier in behandeling",
@@ -8859,17 +8859,17 @@
       "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie."
     },
     "ndaView": {
-      "meta": "NDA — Aegryn verkopersruimte",
+      "meta": "NDA | Aegryn verkopersruimte",
       "title": "Geheimhoudingsovereenkomst",
       "subtitle": "NDA ondertekend in het kader van uw verkoop."
     },
     "notifications": {
-      "meta": "Meldingen — Aegryn verkopersruimte",
+      "meta": "Meldingen | Aegryn verkopersruimte",
       "title": "Meldingen",
       "subtitle": "Meldingen over uw activiteit."
     },
     "transactions": {
-      "meta": "Transacties — Aegryn verkopersruimte",
+      "meta": "Transacties | Aegryn verkopersruimte",
       "title": "Mijn transacties",
       "subtitle": "Lopende en afgesloten transacties.",
       "noTransactions": "Nog geen transacties."
@@ -9533,11 +9533,11 @@
     "page": {
       "meta": {
         "title": "Onze sectoren, Aegryn",
-        "desc": "Aegryn begeleidt organisaties in 5 sectoriale clusters: Financiën, Gezondheidszorg, Industrie, Handel & Diensten, Technologie. Strategisch, technologisch, M&A-advies, maatwerksoftware en CIFSO 5000-certificering."
+        "desc": "Aegryn begeleidt organisaties in 5 sectoriale clusters: Financiën, Gezondheidszorg, Industrie, Handel & Diensten, Technologie. Acht adviesvakgebieden, van strategie tot projectsturing, en CIFSO 5000-certificering."
       },
       "label": "Onze sectoren",
       "title": "Sectorale expertise voor elke\norganisatorische uitdaging.",
-      "desc": "Onze diensten — Strategisch Advies, Technologisch Advies, M&A, Maatwerksoftware en CIFSO 5000-certificering — worden anders toegepast afhankelijk van de sectorale realiteiten.",
+      "desc": "Onze acht vakgebieden, van strategie tot projectsturing, worden anders toegepast afhankelijk van de sectorale realiteiten. Zo pakken we ze aan.",
       "servicesTitle": "Onze ingezette diensten",
       "services": [
         {
@@ -9614,7 +9614,7 @@
           "sectors": [
             {
               "name": "Banken & Financiële Diensten",
-              "desc": "DORA-compliance, Bazel IV, AI voor kredietrisico, back-office-modernisering. Banken moeten hun operationele weerbaarheid en technologie-afhankelijkheden documenteren — kern-CIFSO-thema's.",
+              "desc": "DORA-compliance, Bazel IV, AI voor kredietrisico, back-office-modernisering. Banken moeten hun operationele weerbaarheid en technologie-afhankelijkheden documenteren, kern-CIFSO-thema's.",
               "tag": "Gereguleerd"
             },
             {
@@ -9624,7 +9624,7 @@
             },
             {
               "name": "PropTech & Vastgoed",
-              "desc": "Vastgoedwaardering, AI voor huurders-scoring, transactieplatforms, ESG-data. PropTechs combineren software en fysiek vastgoed — een complexe dualiteit om te certificeren.",
+              "desc": "Vastgoedwaardering, AI voor huurders-scoring, transactieplatforms, ESG-data. PropTechs combineren software en fysiek vastgoed, een complexe dualiteit om te certificeren.",
               "tag": "Hybride"
             }
           ]
@@ -9649,7 +9649,7 @@
           "sectors": [
             {
               "name": "Gezondheid & Farmacie",
-              "desc": "AVG-data, HL7/FHIR-interoperabiliteit, EMA-compliance, toeleveringsketen. Pharma-activa hebben documenteerbare waarde — patenten, klinische data, regelgevende dossiers — die CIFSO 5000 structureert.",
+              "desc": "AVG-data, HL7/FHIR-interoperabiliteit, EMA-compliance, toeleveringsketen. Pharma-activa hebben documenteerbare waarde (patenten, klinische data, regelgevende dossiers) die CIFSO 5000 structureert.",
               "tag": "Sterk gereguleerd"
             },
             {
@@ -9714,7 +9714,7 @@
             },
             {
               "name": "Chemie & Geavanceerde Materialen",
-              "desc": "R&D-data, REACH, leverancierscontracten, intellectueel eigendom. Gespecialiseerde chemiebedrijven hebben een sterke IP-waarde — slecht gedocumenteerd en moeilijk over te dragen.",
+              "desc": "R&D-data, REACH, leverancierscontracten, intellectueel eigendom. Gespecialiseerde chemiebedrijven hebben een sterke IP-waarde, slecht gedocumenteerd en moeilijk over te dragen.",
               "tag": "Sterke IP"
             },
             {
@@ -9728,7 +9728,7 @@
           "id": "commerce",
           "cluster": "Handel, Diensten & Klantervaring",
           "image": "/images/industries/theme_saas.jpg",
-          "vision": "Handels- en dienstverlenende organisaties hebben waarde gekoppeld aan hun klantenbasis, omzetmodel en retentievermogen. Het documenteren van deze activa — CRM-data, raamcontracten, retentiemetrics — is precies wat CIFSO 5000 structureert.",
+          "vision": "Handels- en dienstverlenende organisaties hebben waarde gekoppeld aan hun klantenbasis, omzetmodel en retentievermogen. Het documenteren van deze activa (CRM-data, raamcontracten, retentiemetrics) is precies wat CIFSO 5000 structureert.",
           "services": [
             "Strategieadvies",
             "M&A-advies",
@@ -9758,7 +9758,7 @@
             },
             {
               "name": "Horeca & Toerisme",
-              "desc": "Revenue management, CRM, klantdata, digitalisering. Hotelgroepen willen activa of merken overdragen — certificering structureert waarde voorbij het fysieke actief.",
+              "desc": "Revenue management, CRM, klantdata, digitalisering. Hotelgroepen willen activa of merken overdragen, certificering structureert waarde voorbij het fysieke actief.",
               "tag": "Overdracht"
             },
             {
@@ -9787,7 +9787,7 @@
           "sectors": [
             {
               "name": "Technologie & SaaS",
-              "desc": "Multi-tenant-architectuur, schaalbaarheid, technische schuld, EU AI Act, exit-voorbereiding. B2B-SaaS-bedrijven hebben documenteerbare waarde — ARR, NRR, churn, architectuur — die certificering structureert vóór een financieringsronde of verkoop.",
+              "desc": "Multi-tenant-architectuur, schaalbaarheid, technische schuld, EU AI Act, exit-voorbereiding. B2B-SaaS-bedrijven hebben documenteerbare waarde (ARR, NRR, churn, architectuur) die certificering structureert vóór een financieringsronde of verkoop.",
               "tag": "Exit-ready"
             },
             {
@@ -9827,7 +9827,7 @@
     "vision": {
       "label": "ONZE VISIE",
       "title": "Een hybride groep.\nVerankerd in Zwitserland.",
-      "text": "Onze visie is die van een Europese adviesgroep die bedrijven van begin tot eind begeleidt, van strategie naar kapitaal, van transformatie naar waardering.\n\nWij zijn operators: wij bouwen en beheren onze eigen tech-assets. Wat wij adviseren, leven wij. Deze coherentie is onze eerste geloofwaardigheid.\n\nAegryn is noch een klassiek adviesbureau, noch een tech-agency, noch een M&A-boutique. Het is een hybride groep, verankerd in Zwitserland, die de vijf manieren van handelen samenbrengt die nodig zijn voor de duurzame waarde van een bedrijf."
+      "text": "Onze visie is die van een Europese adviesgroep die bedrijven van begin tot eind begeleidt, van strategie naar kapitaal, van transformatie naar waardering.\n\nWij zijn ondernemers: wij hebben organisaties opgebouwd, geleid en geherstructureerd. Wat wij adviseren, leven wij. Deze coherentie is onze eerste geloofwaardigheid.\n\nAegryn is noch een klassiek adviesbureau, noch een tech-agency, noch een M&A-boutique. Het is een hybride groep, verankerd in Zwitserland, die de vijf manieren van handelen samenbrengt die nodig zijn voor de duurzame waarde van een bedrijf."
     },
     "founder": {
       "label": "DE OPRICHTER",
@@ -9841,14 +9841,14 @@
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
       "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie.\n\nAegryn brengt beide samen. Een fundament van corporate advies, het geïntegreerde bureau, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, La Boutique, die een beperkt aantal signatuurprojecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
-      "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elk vakgebied het volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
+      "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elke manier van handelen de volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
       "p3ImageAlt": "Gouden zonsondergang boven het mistige Lausanne"
     }
   },
   "partner": {
-    "meta": "Dashboard — Aegryn partnergedeelte",
+    "meta": "Dashboard | Aegryn partnergedeelte",
     "areaLabel": "Partnergedeelte",
     "hello": "Hallo, {name}",
     "fallbackName": "Partner",
@@ -9868,54 +9868,54 @@
       "rejected": "Afgewezen"
     },
     "notifications": {
-      "meta": "Meldingen — Aegryn partnergedeelte",
+      "meta": "Meldingen | Aegryn partnergedeelte",
       "title": "Meldingen",
       "subtitle": "Meldingen over uw activiteit."
     },
     "kyc": {
-      "meta": "KYC — Aegryn partnergedeelte",
-      "title": "KYC — Identiteitsverificatie",
+      "meta": "KYC | Aegryn partnergedeelte",
+      "title": "KYC : Identiteitsverificatie",
       "subtitle": "Vereiste documenten voor uw partnerprofiel."
     },
     "mandates": {
-      "meta": "Mandaten — Aegryn partnergedeelte",
+      "meta": "Mandaten | Aegryn partnergedeelte",
       "title": "Mijn mandaten",
       "subtitle": "Lopende partnerschapsmandaten.",
       "noMandates": "Nog geen mandaten."
     },
     "mandateDetail": {
-      "meta": "Mandaatdetail — Aegryn partnergedeelte",
+      "meta": "Mandaatdetail | Aegryn partnergedeelte",
       "back": "← Terug naar mandaten"
     },
     "certifications": {
-      "meta": "Mede-certificeringen — Aegryn partnergedeelte",
+      "meta": "Mede-certificeringen | Aegryn partnergedeelte",
       "title": "Mijn mede-certificeringen",
       "subtitle": "Lopende CIFSO-certificeringsopdrachten.",
       "noCertifications": "Geen mede-certificeringen toegewezen."
     },
     "certDetail": {
-      "meta": "Mede-certificering detail — Aegryn partnergedeelte",
+      "meta": "Mede-certificering detail | Aegryn partnergedeelte",
       "back": "← Terug naar mede-certificeringen"
     },
     "commissions": {
-      "meta": "Commissies — Aegryn partnergedeelte",
+      "meta": "Commissies | Aegryn partnergedeelte",
       "title": "Mijn commissies",
       "subtitle": "Commissiehistoriek.",
       "noCommissions": "Geen commissies geregistreerd."
     },
     "introductions": {
-      "meta": "Introducties — Aegryn partnergedeelte",
+      "meta": "Introducties | Aegryn partnergedeelte",
       "title": "Mijn introducties",
       "subtitle": "Geïntroduceerde assets en kopers.",
       "noIntroductions": "Nog geen introducties."
     },
     "expertProfile": {
-      "meta": "Expertprofiel — Aegryn partnergedeelte",
+      "meta": "Expertprofiel | Aegryn partnergedeelte",
       "title": "Mijn expertprofiel",
       "subtitle": "Profiel zichtbaar op het Aegryn-expertnetwerk."
     },
     "subscription": {
-      "meta": "Abonnement — Aegryn partnergedeelte",
+      "meta": "Abonnement | Aegryn partnergedeelte",
       "title": "Mijn abonnement",
       "subtitle": "Beheer uw Expertprofiel-abonnement.",
       "monthlyPlan": "Maandelijks, CHF 89/maand",
@@ -9929,8 +9929,8 @@
         "description": "Geef uw interesse door voor de printeditie van het AEGRYN Report, gereserveerd voor Aegryn-klanten."
       },
       "printBadge": "Printeditie",
-      "title": "Interesselijst — printeditie",
-      "desc": "De printeditie van het AEGRYN Report is gereserveerd voor actieve klanten van het ecosysteem. Geef uw interessegebieden aan om op de wachtlijst te komen — wij nemen contact op zodra de productie start.",
+      "title": "Interesselijst : printeditie",
+      "desc": "De printeditie van het AEGRYN Report is gereserveerd voor actieve klanten van het ecosysteem. Geef uw interessegebieden aan om op de wachtlijst te komen, wij nemen contact op zodra de productie start.",
       "digitalNote": "De digitale versie blijft vrij toegankelijk, zoals onze artikelen en nieuws.",
       "digitalNoteCta": "Lees het rapport online",
       "namePlaceholder": "Uw naam",
@@ -10239,7 +10239,7 @@
     }
   },
   "gradeSubmitSuccess": {
-    "metaTitle": "Betaling bevestigd — Aegryn",
+    "metaTitle": "Betaling bevestigd | Aegryn",
     "metaDesc": "Uw dossier is ingediend.",
     "title": "Betaling bevestigd",
     "desc": "Uw dossier is ingediend. Ons team neemt binnen de afgesproken termijn contact met u op.",

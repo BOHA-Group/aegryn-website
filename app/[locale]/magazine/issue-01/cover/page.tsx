@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return {
     title:       'Cover Preview | Aegryn Magazine Issue 01',
-    description: 'Preview and download the cover of Aegryn Magazine Issue 01 — The State of European Tech M&A',
+    description: 'Preview and download the cover of Aegryn Magazine Issue 01 : The State of European Tech M&A',
     robots:      { index: false, follow: false },
     alternates:  { canonical: `/${locale}/magazine/issue-01/cover` },
   }
@@ -32,7 +32,7 @@ export default async function IssueCoverPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-neutral-200 flex flex-col">
 
-      <h1 className="sr-only">Aegryn Magazine Issue 01 — Cover Preview</h1>
+      <h1 className="sr-only">Aegryn Magazine Issue 01 | Cover Preview</h1>
 
       {/* ── Top bar ── */}
       <div className="sticky top-0 z-20 bg-white border-b border-black/10

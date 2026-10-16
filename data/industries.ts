@@ -80,12 +80,12 @@ const finance: Industry = {
   },
   img: '/images/industries/theme_fintech.webp',
   imgAlt: {
-    fr: 'Finance & Capital — Aegryn',
-    en: 'Finance & Capital — Aegryn',
-    de: 'Finanzen & Kapital — Aegryn',
-    es: 'Finanzas y Capital — Aegryn',
-    it: 'Finanza & Capitale — Aegryn',
-    nl: 'Financiën & Kapitaal — Aegryn',
+    fr: 'Finance & Capital | Aegryn',
+    en: 'Finance & Capital | Aegryn',
+    de: 'Finanzen & Kapital | Aegryn',
+    es: 'Finanzas y Capital | Aegryn',
+    it: 'Finanza & Capitale | Aegryn',
+    nl: 'Financiën & Kapitaal | Aegryn',
   },
   vision: {
     fr: `Les organisations financières travaillent sous contrôle réglementaire permanent : chaque décision de structure, d'externalisation ou de cession est examinée par le régulateur, les clients et les investisseurs. Leur crédibilité repose sur la qualité des données, la solidité de la gouvernance et la fiabilité des chiffres.
@@ -495,12 +495,12 @@ const sante: Industry = {
   },
   img: '/images/industries/cluster-sante.jpg',
   imgAlt: {
-    fr: 'Santé & Sciences de la Vie — Aegryn',
-    en: 'Health & Life Sciences — Aegryn',
-    de: 'Gesundheit & Life Sciences — Aegryn',
-    es: 'Salud y Ciencias de la Vida — Aegryn',
-    it: 'Salute & Scienze della Vita — Aegryn',
-    nl: 'Gezondheid & Life Sciences — Aegryn',
+    fr: 'Santé & Sciences de la Vie | Aegryn',
+    en: 'Health & Life Sciences | Aegryn',
+    de: 'Gesundheit & Life Sciences | Aegryn',
+    es: 'Salud y Ciencias de la Vida | Aegryn',
+    it: 'Salute & Scienze della Vita | Aegryn',
+    nl: 'Gezondheid & Life Sciences | Aegryn',
   },
   vision: {
     fr: `Les organisations de santé et de sciences de la vie opèrent sous des exigences de conformité parmi les plus strictes au monde. Leur crédibilité tient à la qualité de leurs données cliniques, à la rigueur de leurs protocoles et à la solidité de leur gouvernance réglementaire.
@@ -895,12 +895,12 @@ const industrie: Industry = {
   },
   img: '/images/industries/cluster-industrie.jpg',
   imgAlt: {
-    fr: 'Industrie, Énergie & Infrastructure — Aegryn',
-    en: 'Industry, Energy & Infrastructure — Aegryn',
-    de: 'Industrie, Energie & Infrastruktur — Aegryn',
-    es: 'Industria, Energía e Infraestructura — Aegryn',
-    it: 'Industria, Energia & Infrastrutture — Aegryn',
-    nl: 'Industrie, Energie & Infrastructuur — Aegryn',
+    fr: 'Industrie, Énergie & Infrastructure | Aegryn',
+    en: 'Industry, Energy & Infrastructure | Aegryn',
+    de: 'Industrie, Energie & Infrastruktur | Aegryn',
+    es: 'Industria, Energía e Infraestructura | Aegryn',
+    it: 'Industria, Energia & Infrastrutture | Aegryn',
+    nl: 'Industrie, Energie & Infrastructuur | Aegryn',
   },
   vision: {
     fr: `Les organisations industrielles, énergétiques et d'infrastructure reposent sur des actifs que les bilans montrent mal : savoir-faire opérationnel, contrats de long terme, réseaux de sous-traitants stratégiques, dépendance à quelques personnes clés. Leur robustesse décide de leur capacité à investir, à se financer et à se transmettre.
@@ -1079,12 +1079,12 @@ Drie thema's keren in elke cyclus terug: de energetische en digitale transitie v
         es: 'Transformación',  it: 'Trasformazione', nl: 'Transformatie',
       },
       desc: {
-        fr: 'IA embarquée, Tier-1/2, électrification et MaaS — opportunités M&A inter-constructeurs.',
-        en: 'Embedded AI, Tier-1/2 suppliers, electrification and MaaS — cross-OEM M&A opportunities.',
-        de: 'Eingebettete KI, Tier-1/2-Zulieferer, Elektrifizierung und MaaS — M&A-Chancen zwischen Herstellern.',
-        es: 'IA embarcada, proveedores Tier-1/2, electrificación y MaaS — oportunidades M&A entre fabricantes.',
-        it: 'IA embedded, fornitori Tier-1/2, elettrificazione e MaaS — opportunità M&A tra costruttori.',
-        nl: 'Embedded AI, Tier-1/2-leveranciers, elektrificatie en MaaS — M&A-kansen tussen fabrikanten.',
+        fr: 'IA embarquée, Tier-1/2, électrification et MaaS, opportunités M&A inter-constructeurs.',
+        en: 'Embedded AI, Tier-1/2 suppliers, electrification and MaaS, cross-OEM M&A opportunities.',
+        de: 'Eingebettete KI, Tier-1/2-Zulieferer, Elektrifizierung und MaaS, M&A-Chancen zwischen Herstellern.',
+        es: 'IA embarcada, proveedores Tier-1/2, electrificación y MaaS, oportunidades M&A entre fabricantes.',
+        it: 'IA embedded, fornitori Tier-1/2, elettrificazione e MaaS, opportunità M&A tra costruttori.',
+        nl: 'Embedded AI, Tier-1/2-leveranciers, elektrificatie en MaaS, M&A-kansen tussen fabrikanten.',
       },
     },
     {
@@ -1433,12 +1433,12 @@ const commerce: Industry = {
   },
   img: '/images/industries/theme_marketplace.webp',
   imgAlt: {
-    fr: 'Commerce, Services & Expérience Client — Aegryn',
-    en: 'Commerce, Services & Customer Experience — Aegryn',
-    de: 'Handel, Dienstleistungen & Kundenerlebnis — Aegryn',
-    es: 'Comercio, Servicios y Experiencia de Cliente — Aegryn',
-    it: 'Commercio, Servizi & Customer Experience — Aegryn',
-    nl: 'Handel, Diensten & Klantervaring — Aegryn',
+    fr: 'Commerce, Services & Expérience Client | Aegryn',
+    en: 'Commerce, Services & Customer Experience | Aegryn',
+    de: 'Handel, Dienstleistungen & Kundenerlebnis | Aegryn',
+    es: 'Comercio, Servicios y Experiencia de Cliente | Aegryn',
+    it: 'Commercio, Servizi & Customer Experience | Aegryn',
+    nl: 'Handel, Diensten & Klantervaring | Aegryn',
   },
   vision: {
     fr: `Les organisations du commerce, des services et de l'expérience client naviguent entre des cycles d'innovation très courts, des attentes consommateurs en transformation permanente et une pression réglementaire croissante sur les données et la publicité numérique.
@@ -1871,12 +1871,12 @@ const tech: Industry = {
   },
   img: '/images/industries/theme_AI.webp',
   imgAlt: {
-    fr: 'Tech, Innovation & Secteur Public — Aegryn',
-    en: 'Tech, Innovation & Public Sector — Aegryn',
-    de: 'Tech, Innovation & öffentlicher Sektor — Aegryn',
-    es: 'Tech, Innovación y Sector Público — Aegryn',
-    it: 'Tech, Innovazione & Settore Pubblico — Aegryn',
-    nl: 'Tech, Innovatie & Publieke Sector — Aegryn',
+    fr: 'Tech, Innovation & Secteur Public | Aegryn',
+    en: 'Tech, Innovation & Public Sector | Aegryn',
+    de: 'Tech, Innovation & öffentlicher Sektor | Aegryn',
+    es: 'Tech, Innovación y Sector Público | Aegryn',
+    it: 'Tech, Innovazione & Settore Pubblico | Aegryn',
+    nl: 'Tech, Innovatie & Publieke Sector | Aegryn',
   },
   vision: {
     fr: `Les organisations technologiques, innovantes et du secteur public numérique construisent sur des actifs immatériels : code, données, algorithmes, équipes. Leur crédibilité auprès des investisseurs, des clients publics et des régulateurs tient à la maîtrise de ces actifs : qui détient le code, où sont hébergées les données, de qui dépend la plateforme.

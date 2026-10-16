@@ -353,21 +353,21 @@
         "name": "Asset Valuation Benchmark"
       },
       "heritix": {
-        "badge": "B2C · B2B — LegalTech",
+        "badge": "B2C · B2B · LegalTech",
         "tagline": "Digital succession vault, secured transmission",
         "description": "Centralises and transmits, at the right moment and to the right people, the sensitive information left by a person: accounts, documents, access and personal messages.",
         "capability": "Sealing the secure transmission of a lifetime",
         "keywords": "end-to-end encryption · multi-party access control · conditional release · succession · digital vault"
       },
       "chrosium": {
-        "badge": "B2C — D2C Cosmetics",
+        "badge": "B2C · D2C Cosmetics",
         "capability": "Making the invisible visible in a protective gesture",
         "tagline": "Sun-application indicator, protection visible in real time",
         "description": "Combines an SPF 50+ clean-label formula with a proprietary application indicator: parents and children see where protection has been applied, before it fades once the zone is secured.",
         "keywords": "application indicator · SPF 50+ clean label · UVA/UVB formula · UV-reactive packaging · D2C brand"
       },
       "insertdry": {
-        "badge": "B2B · B2C — Home appliances",
+        "badge": "B2B · B2C · Home appliances",
         "capability": "Keeping things dry where humidity always wins",
         "tagline": "Tropical dry-food storage unit with active dehumidification",
         "description": "A dry-food storage unit designed for tropical markets: targeted cooling from 16 to 22 °C, humidity held below 45 %, compact and built-in formats.",
@@ -901,7 +901,7 @@
     "tagline": "INTEGRATED FIRM, ANCHORED IN SWITZERLAND.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
-    "quote": "What we do for our clients, we apply to ourselves. Our own assets go through our own methods. This consistency is our first credibility.",
+    "quote": "What we do for our clients, we apply to ourselves. This consistency is our first credibility.",
     "ceoName": "",
     "ceoTitle": "",
     "stats": [
@@ -1054,7 +1054,7 @@
           "bold": true
         },
         {
-          "t": " Aegryn brings together the disciplines a project demands: frame, deliver, accompany, select, stay informed."
+          "t": " Aegryn brings together the five ways of working a project demands: frame, deliver, accompany, select, stay informed."
         }
       ]
     },
@@ -1488,15 +1488,15 @@
       "partnerCode": "Partner code",
       "publishedOn": "16 July 2026",
       "neediu": {
-        "altBadge": "Featured in Gala — 27 November 2025",
-        "altCover": "Gala cover — 27 November 2025",
+        "altBadge": "Featured in Gala : 27 November 2025",
+        "altCover": "Gala cover : 27 November 2025",
         "altAd": "neediu ad in Gala"
       },
       "subblink": {
         "partnerStats": "158,140 members\n1,100,000 visits/month",
         "articleTitle": "Village de la Justice invites you to have all your contracts audited online and get a ContractScore",
         "articleDesc": "ContractScore from A to E, analysis in 60 seconds, verdict SIGN · NEGOTIATE · REFUSE. Counterproposals drafted clause by clause.",
-        "altBanner": "subblink — AI-powered contract analysis",
+        "altBanner": "subblink : AI-powered contract analysis",
         "partnerName": "Village de la Justice"
       }
     },
@@ -2226,7 +2226,7 @@
     "features": {
       "integrated": {
         "title": "An integrated firm",
-        "desc": "Eight disciplines and five ways of acting: frame, deliver, accompany, select, stay informed."
+        "desc": "Eight disciplines and five ways of working: frame, deliver, accompany, select, stay informed."
       },
       "mandates": {
         "title": "A named contact",
@@ -2523,7 +2523,7 @@
           "tag": "Family succession & business transfer",
           "title": "A neutral document for a complex conversation.",
           "audience": "Founders planning succession, family businesses, management buyouts",
-          "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties — ceding founder, heirs, buyers, and advisors — can rely on. Independent. Reproducible. Defensible.",
+          "desc": "More than 3.5 million European SMEs face succession challenges without a qualified buyer or clear valuation. The Certification CIFSO 5000 provides a neutral, documented assessment that all parties (ceding founder, heirs, buyers, and advisors) can rely on. Independent. Reproducible. Defensible.",
           "signal": "Signal to all parties: the value of this organisation has been independently documented before the transfer.",
           "chips": [
             "Founders",
@@ -2642,7 +2642,7 @@
           "cifso": "Certifies organisational resilience, management depth, succession plan, and retention, the dimension most undervalued in transactions."
         }
       ],
-      "pricingLabel": "Certification CIFSO 5000 — Pricing",
+      "pricingLabel": "Certification CIFSO 5000 : Pricing",
       "pricingTitle": "One certification.\nFive dimensions of value.",
       "pricingDesc": "All tiers include the full five-dimension CIFSO 5000 audit, independent report, official grade, and registration in the Aegryn certified register.",
       "pricingNote": "Prices exclusive of tax. Swiss jurisdiction. Indicative, final quote issued after pre-qualification.",
@@ -2696,22 +2696,22 @@
         }
       ],
       "whitepaperLabel": "Official documentation",
-      "whitepaperTitle": "Aegryn — CIFSO 5000 Certification Methodology",
+      "whitepaperTitle": "Aegryn : CIFSO 5000 Certification Methodology",
       "whitepaperDesc": "Protocol overview, five dimensions, grade scale, certification process, and independence principles.",
       "whitepaperCta": "Download brochure (PDF)",
-      "whitepaperVersion": "Certification CIFSO 5000 — Aegryn SA",
+      "whitepaperVersion": "Certification CIFSO 5000 : Aegryn SA",
       "wpNavBack": "Back to certification",
       "wpNavPrint": "Print / Save PDF",
       "wpProtocol": "Protocol",
       "wpIssuer": "Issuer",
       "wpJurisdiction": "Jurisdiction",
-      "wpEyebrow": "Aegryn Certification — Official Methodology",
+      "wpEyebrow": "Aegryn Certification : Official Methodology",
       "wpHeroTitle": "Built to Last.",
       "wpHeroDesc": "The Certification CIFSO 5000 protocol: five dimensions of organisational value, an independent grade, and a defensible document for every stakeholder.",
       "wpTocTitle": "Contents",
       "wpTocItems": [
         "1. What is the Certification CIFSO 5000?",
-        "2. Who is it for — use cases",
+        "2. Who is it for, use cases",
         "3. The five dimensions of value (CIFSO)",
         "4. Grade scale and definitions",
         "5. CIFSO 5000 and existing certification standards",
@@ -2725,7 +2725,7 @@
       "wpS1Body1": "The <strong>Certification CIFSO 5000</strong> is an independent organisational assessment protocol developed by Aegryn. It evaluates and certifies the value and transferability of an organisation across five structured dimensions: Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, and Organisation & Talent.",
       "wpS1Body2": "Unlike existing certification standards, which verify systems, processes, and operational conformance, the Certification CIFSO 5000 certifies <em>organisational value</em>: the documented, defensible basis for a valuation, a financing decision, an investment, or a business transfer. These are two different objects. Complementary, not competing.",
       "wpS1Callout": "“Where existing standards certify systems, CIFSO 5000 certifies value and transferability.”",
-      "wpS2Title": "2. Who is it for — use cases",
+      "wpS2Title": "2. Who is it for, use cases",
       "wpS3Title": "3. The five dimensions of value (CIFSO)",
       "wpS3Intro": "The CIFSO framework scores five independent dimensions of value, each weighted equally at 25 points. The total score (0–100) determines the final grade.",
       "wpS4Title": "4. Grade scale and definitions",
@@ -2748,7 +2748,7 @@
       "wpS9AllTiersLabel": "All tiers include",
       "wpS9AllTiersDesc": "Full 5-dimension CIFSO 5000 audit · Independent certification report · Official grade · Registration in Aegryn certified register · Certificate validity as stated per tier",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterVersion": "Certification CIFSO 5000 v4.0 — Official Methodology",
+      "wpFooterVersion": "Certification CIFSO 5000 v4.0 : Official Methodology",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Switzerland",
       "isoColDimension": "Dimension",
       "isoColExisting": "Existing standards",
@@ -2807,7 +2807,7 @@
       }
     ],
     "dimensions": {
-      "label": "The CIFSO protocol — 5 dimensions",
+      "label": "The CIFSO protocol : 5 dimensions",
       "title": "One grade, five truths.",
       "items": [
         {
@@ -2935,7 +2935,7 @@
       "title": "Certification CIFSO 5000, Aegryn | Independent Methodology & Protocol",
       "desc": "The Aegryn Grade protocol: CIFSO 5000 framework, AEG ★ to B grade definitions, sub-codes, analysis process and independence principles."
     },
-    "label": "Certification CIFSO 5000 — Methodology",
+    "label": "Certification CIFSO 5000 : Methodology",
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertification CIFSO 5000.",
     "intro": "CIFSO 5000 is the first independent certification standard that assesses organizational value and transferability. Beyond operational compliance, it documents what makes an organization's real value: its intellectual capital, integrity, financial health, security, and organizational resilience.",
@@ -5982,7 +5982,7 @@
         "minor": "Minor, being resolved",
         "active": "Active and significant"
       },
-      "opensourceHint": "MIT/Apache/BSD are open source licences with no reuse constraint. GPL requires republishing code that uses it — worth checking before a sale."
+      "opensourceHint": "MIT/Apache/BSD are open source licences with no reuse constraint. GPL requires republishing code that uses it, worth checking before a sale."
     },
     "security": {
       "title": "Security & compliance",
@@ -6556,7 +6556,7 @@
         "Industry",
         "Median EV/Revenue",
         "Multiple at score 60",
-        "Multiple at score 40 — 80"
+        "Multiple at score 40–80"
       ],
       "unlockTitle": "This is a partial preview.",
       "unlockDesc": "Blurred values, per-vertical detail and full export are reserved for Index subscribers.",
@@ -8208,9 +8208,9 @@
     "cta": "Submit an asset"
   },
   "buildStrip": {
-    "label": "Deliver",
+    "label": "Assets and software",
     "assetsTitle": "Our proprietary\nassets.",
-    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. We also take stakes in third-party assets. Each asset is documented and operated under real conditions. Software built for the group’s operations, available to the market.",
+    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, platforms, AI tools. We also take stakes in third-party assets. Each asset is documented and operated under real conditions. Software built for the group’s operations, available to the market.",
     "assetsCta": "Discover our assets",
     "engineeringTitle": "Custom software\nfor your operations.",
     "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Full client IP ownership. An asset that works for you and your investors.",
@@ -8849,8 +8849,8 @@
       }
     },
     "kyc": {
-      "meta": "KYC — Aegryn Seller Space",
-      "title": "KYC — Identity verification",
+      "meta": "KYC | Aegryn Seller Space",
+      "title": "KYC : Identity verification",
       "subtitle": "Documents required for your Aegryn sale process.",
       "complete": "KYC file complete",
       "inProgress": "KYC file in progress",
@@ -8859,17 +8859,17 @@
       "validatedWarn": "This document is validated. A new upload replaces the current version."
     },
     "ndaView": {
-      "meta": "NDA — Aegryn Seller Space",
+      "meta": "NDA | Aegryn Seller Space",
       "title": "Non-disclosure agreement",
       "subtitle": "NDA signed as part of your sale."
     },
     "notifications": {
-      "meta": "Notifications — Aegryn Seller Space",
+      "meta": "Notifications | Aegryn Seller Space",
       "title": "Notifications",
       "subtitle": "Notifications about your activity."
     },
     "transactions": {
-      "meta": "Transactions — Aegryn Seller Space",
+      "meta": "Transactions | Aegryn Seller Space",
       "title": "My transactions",
       "subtitle": "Ongoing and closed transactions.",
       "noTransactions": "No transactions yet."
@@ -9533,11 +9533,11 @@
     "page": {
       "meta": {
         "title": "Our Industries, Aegryn",
-        "desc": "Aegryn serves organisations across 5 sector clusters: Finance & Capital, Health & Sciences, Industry, Commerce & Services, Tech & Public Sector. Strategy, Technology, M&A, bespoke software and CIFSO 5000 Certification."
+        "desc": "Aegryn serves organisations across 5 sector clusters: Finance & Capital, Health & Sciences, Industry, Commerce & Services, Tech & Public Sector. Eight advisory disciplines, from strategy to project management, and CIFSO 5000 Certification."
       },
       "label": "Our Industries",
       "title": "Sector expertise for every\norganisational challenge.",
-      "desc": "Our services — Strategy, Technology, M&A Advisory, Bespoke Software and CIFSO 5000 Certification — apply differently depending on each sector's realities. Here is how we approach them.",
+      "desc": "Our eight disciplines, from strategy to project management, apply differently depending on each sector's realities. Here is how we approach them.",
       "servicesTitle": "Our services deployed",
       "services": [
         {
@@ -9614,7 +9614,7 @@
           "sectors": [
             {
               "name": "Banking & Financial Services",
-              "desc": "DORA, Basel IV compliance, AI credit risk, back-office modernisation. Banks must document their operational resilience and technology dependencies — key CIFSO issues.",
+              "desc": "DORA, Basel IV compliance, AI credit risk, back-office modernisation. Banks must document their operational resilience and technology dependencies, key CIFSO issues.",
               "tag": "Regulated"
             },
             {
@@ -9624,7 +9624,7 @@
             },
             {
               "name": "PropTech & Real Estate",
-              "desc": "Asset valuation, tenant scoring AI, transaction platform, ESG data. PropTechs combine software and real estate — a complex duality to certify.",
+              "desc": "Asset valuation, tenant scoring AI, transaction platform, ESG data. PropTechs combine software and real estate, a complex duality to certify.",
               "tag": "Hybrid"
             }
           ]
@@ -9649,7 +9649,7 @@
           "sectors": [
             {
               "name": "Health & Pharmaceuticals",
-              "desc": "GDPR data, HL7/FHIR interoperability, EMA compliance, supply chain. Pharma assets have documentable value — patents, clinical data, regulatory files — which CIFSO 5000 structures.",
+              "desc": "GDPR data, HL7/FHIR interoperability, EMA compliance, supply chain. Pharma assets have documentable value (patents, clinical data, regulatory files) which CIFSO 5000 structures.",
               "tag": "Highly regulated"
             },
             {
@@ -9714,7 +9714,7 @@
             },
             {
               "name": "Chemicals & Advanced Materials",
-              "desc": "R&D data, REACH, supplier contracts, intellectual property. Specialist chemical companies have strong IP value — poorly documented and hard to transfer.",
+              "desc": "R&D data, REACH, supplier contracts, intellectual property. Specialist chemical companies have strong IP value, poorly documented and hard to transfer.",
               "tag": "Strong IP"
             },
             {
@@ -9728,7 +9728,7 @@
           "id": "commerce",
           "cluster": "Commerce, Services & Customer Experience",
           "image": "/images/industries/theme_saas.jpg",
-          "vision": "Commerce and services organisations have value tied to their customer base, revenue model and retention capacity. Documenting these assets — CRM data, framework contracts, retention metrics — is precisely what CIFSO 5000 structures.",
+          "vision": "Commerce and services organisations have value tied to their customer base, revenue model and retention capacity. Documenting these assets (CRM data, framework contracts, retention metrics) is precisely what CIFSO 5000 structures.",
           "services": [
             "Strategy Advisory",
             "M&A Advisory",
@@ -9758,7 +9758,7 @@
             },
             {
               "name": "Hospitality & Tourism",
-              "desc": "Revenue management, CRM, customer data, digitalisation. Hotel groups seek to transfer assets or brands — certification structures value beyond the physical asset.",
+              "desc": "Revenue management, CRM, customer data, digitalisation. Hotel groups seek to transfer assets or brands, certification structures value beyond the physical asset.",
               "tag": "Transfer"
             },
             {
@@ -9787,7 +9787,7 @@
           "sectors": [
             {
               "name": "Technology & SaaS",
-              "desc": "Multi-tenant architecture, scalability, tech debt, EU AI Act, exit preparation. B2B SaaS companies have documentable value — ARR, NRR, churn, architecture — which certification structures before a fundraise or disposal.",
+              "desc": "Multi-tenant architecture, scalability, tech debt, EU AI Act, exit preparation. B2B SaaS companies have documentable value (ARR, NRR, churn, architecture) which certification structures before a fundraise or disposal.",
               "tag": "Exit-ready"
             },
             {
@@ -9827,7 +9827,7 @@
     "vision": {
       "label": "OUR VISION",
       "title": "A hybrid group.\nAnchored in Switzerland.",
-      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are operators: we build and operate our own tech assets. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five ways of working necessary for the lasting value of a company."
+      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are entrepreneurs: we have built, led and restructured organisations. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five ways of working necessary for the lasting value of a company."
     },
     "founder": {
       "label": "THE FOUNDER",
@@ -9841,14 +9841,14 @@
       "label": "WHY AEGRYN",
       "title": "Why Aegryn?",
       "p1": "Most firms advise without building. Most tech companies build without strategy.\n\nAegryn brings the two together. A corporate advisory foundation, the integrated firm, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, La Boutique, which leads a limited number of signature projects end to end. What it recommends to its clients, Aegryn applies to itself.",
-      "p2": "Framing without delivering is handing over a map without the territory. Delivering without framing is executing without a heading. Accompanying without having built is advising from the outside. Selecting without a project is recruiting into a void.\n\nAt Aegryn, each discipline reinforces the next. That chain is what makes a project hold, for our clients as for ourselves.",
+      "p2": "Framing without delivering is handing over a map without the territory. Delivering without framing is executing without a heading. Accompanying without having built is advising from the outside. Selecting without a project is recruiting into a void.\n\nAt Aegryn, each way of working reinforces the next. That chain is what makes a project hold, for our clients as for ourselves.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",
       "p3ImageAlt": "Golden sunset over Lausanne's foggy landscape"
     }
   },
   "partner": {
-    "meta": "Dashboard — Aegryn Partner Space",
+    "meta": "Dashboard | Aegryn Partner Space",
     "areaLabel": "Partner space",
     "hello": "Hello, {name}",
     "fallbackName": "Partner",
@@ -9868,54 +9868,54 @@
       "rejected": "Rejected"
     },
     "notifications": {
-      "meta": "Notifications — Aegryn Partner Space",
+      "meta": "Notifications | Aegryn Partner Space",
       "title": "Notifications",
       "subtitle": "Notifications about your activity."
     },
     "kyc": {
-      "meta": "KYC — Aegryn Partner Space",
-      "title": "KYC — Identity verification",
+      "meta": "KYC | Aegryn Partner Space",
+      "title": "KYC : Identity verification",
       "subtitle": "Documents required for your partner profile."
     },
     "mandates": {
-      "meta": "Mandates — Aegryn Partner Space",
+      "meta": "Mandates | Aegryn Partner Space",
       "title": "My mandates",
       "subtitle": "Ongoing partnership mandates.",
       "noMandates": "No mandates yet."
     },
     "mandateDetail": {
-      "meta": "Mandate detail — Aegryn Partner Space",
+      "meta": "Mandate detail | Aegryn Partner Space",
       "back": "← Back to mandates"
     },
     "certifications": {
-      "meta": "Co-certifications — Aegryn Partner Space",
+      "meta": "Co-certifications | Aegryn Partner Space",
       "title": "My co-certifications",
       "subtitle": "Ongoing CIFSO certification missions.",
       "noCertifications": "No co-certifications assigned."
     },
     "certDetail": {
-      "meta": "Co-certification detail — Aegryn Partner Space",
+      "meta": "Co-certification detail | Aegryn Partner Space",
       "back": "← Back to co-certifications"
     },
     "commissions": {
-      "meta": "Commissions — Aegryn Partner Space",
+      "meta": "Commissions | Aegryn Partner Space",
       "title": "My commissions",
       "subtitle": "Commission history.",
       "noCommissions": "No commissions recorded."
     },
     "introductions": {
-      "meta": "Introductions — Aegryn Partner Space",
+      "meta": "Introductions | Aegryn Partner Space",
       "title": "My introductions",
       "subtitle": "Introduced assets and buyers.",
       "noIntroductions": "No introductions yet."
     },
     "expertProfile": {
-      "meta": "Expert profile — Aegryn Partner Space",
+      "meta": "Expert profile | Aegryn Partner Space",
       "title": "My expert profile",
       "subtitle": "Profile visible on the Aegryn expert network."
     },
     "subscription": {
-      "meta": "Subscription — Aegryn Partner Space",
+      "meta": "Subscription | Aegryn Partner Space",
       "title": "My subscription",
       "subtitle": "Manage your Expert profile subscription.",
       "monthlyPlan": "Monthly, CHF 89/month",
@@ -9929,8 +9929,8 @@
         "description": "Register your interest in the AEGRYN Report print edition, reserved for Aegryn clients."
       },
       "printBadge": "Print edition",
-      "title": "Interest list — print edition",
-      "desc": "The AEGRYN Report print edition is reserved for active ecosystem clients. Indicate your areas of interest to join the waitlist — we will contact you when production starts.",
+      "title": "Interest list : print edition",
+      "desc": "The AEGRYN Report print edition is reserved for active ecosystem clients. Indicate your areas of interest to join the waitlist, we will contact you when production starts.",
       "digitalNote": "The digital version remains freely accessible, like our articles and news.",
       "digitalNoteCta": "Read the report online",
       "namePlaceholder": "Your name",
@@ -10239,7 +10239,7 @@
     }
   },
   "gradeSubmitSuccess": {
-    "metaTitle": "Payment confirmed — Aegryn",
+    "metaTitle": "Payment confirmed | Aegryn",
     "metaDesc": "Your file has been submitted.",
     "title": "Payment confirmed",
     "desc": "Your file has been submitted. Our team will contact you within the agreed timeframe.",

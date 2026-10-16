@@ -139,7 +139,7 @@ export default function IndexSubscriberPreview() {
                   {CIFSO_ROWS.map(r => (
                     <tr key={r.letter} className="border-b border-white/5">
                       <td className="px-4 py-3">
-                        <p className="font-sans text-[12px] font-semibold text-white">{r.letter} — {r.label}</p>
+                        <p className="font-sans text-[12px] font-semibold text-white">{r.letter} : {r.label}</p>
                       </td>
                       <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold">{r.medianScore}/100</td>
                       <td className="px-4 py-3 font-mono text-[11px] text-white/70">+{r.uplift}%</td>

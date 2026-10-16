@@ -159,7 +159,7 @@ export default function IndexTestView({ user }: { user: UserPosition }) {
               <tbody>
                 {snap.dimensions.map(d => (
                   <tr key={d.key} className="border-b border-white/5">
-                    <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{d.letter} — {d.label}</p></td>
+                    <td className="px-4 py-3"><p className="font-sans text-[12px] font-semibold text-white">{d.letter} : {d.label}</p></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-ag-apex-ink font-semibold"><Blurred locked={d.locked}>{d.medianScore ?? '••'}/100</Blurred></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-white/70"><Blurred locked={d.locked}>{d.upliftPct != null ? `+${d.upliftPct}%` : '••%'}</Blurred></td>
                     <td className="px-4 py-3"><SampleTag n={d.sampleSize} buildingLabel={t('sampleBuilding')} /></td>

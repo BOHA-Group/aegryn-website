@@ -212,7 +212,7 @@ export default async function ArticlePage({ params }: Props) {
                     </p>
                     {block.author && (
                       <cite className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light not-italic">
-                        — {block.author}
+                        · {block.author}
                       </cite>
                     )}
                   </blockquote>
@@ -241,7 +241,7 @@ export default async function ArticlePage({ params }: Props) {
                 {t('bodyComingSoon')}
               </p>
               <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-ag-gray-light">
-                Aegryn Editorial — Q3 2026
+                Aegryn Editorial · Q3 2026
               </p>
             </div>
           )}
