@@ -173,7 +173,8 @@
     "craftFrameDeliverDesc": "Beslissen, sturen en uitvoeren: acht vakgebieden, tot en met de oplevering.",
     "craftFinance": "Financiën en Prestaties",
     "craftOperations": "Operations en Operationele excellentie",
-    "craftProgram": "Project- en programmamanagement"
+    "craftProgram": "Project- en programmamanagement",
+    "whoCulture": "Cultuur en waarden"
   },
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
@@ -1095,7 +1096,7 @@
         {
           "num": "03",
           "title": "Zwitserse institutionele standaarden",
-          "desc": "Contractuele vertrouwelijkheid, volledige documentatie bij elke stap, opleveringen die zonder ons kunnen worden overgenomen: operationele voorwaarden, geen beloften."
+          "desc": "Contractuele vertrouwelijkheid, duidelijke mijlpalen bij elke stap, werk dat zonder ons kan worden overgenomen: operationele voorwaarden, geen beloften."
         }
       ]
     },
@@ -1116,7 +1117,8 @@
       }
     },
     "dna": {
-      "label": "Ons DNA"
+      "label": "Ons DNA",
+      "cultureCta": "Onze cultuur en werkwaarden"
     },
     "values": {
       "exceptional": {
@@ -1147,7 +1149,7 @@
       "elegance": {
         "label": "06",
         "title": "Elegantie",
-        "desc": "Zwitserse strengheid toont zich in eenvoud: heldere beslissingen, verzorgde opleveringen, geen overdaad."
+        "desc": "Zwitserse strengheid toont zich in eenvoud: heldere beslissingen, zorgvuldig werk, geen overdaad."
       }
     },
     "swiss": {
@@ -1223,7 +1225,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Gebaseerd op drie principes, precisie, duurzaamheid, onafhankelijkheid, begeleidt Aegryn leidinggevenden en ondernemers, van beslissing tot realisatie en daarna in elke levensfase van de organisatie.",
+      "desc": "Aegryn begeleidt leidinggevenden, beslissers en ondernemers, van beslissing tot realisatie en daarna in elke levenscyclus van de organisatie, met constante aandacht voor het resultaat.",
       "label": "Carrières",
       "tagline": "Aegryn | Saint-Sulpice, Zwitserland",
       "title": "Bouwen wat blijft."
@@ -1262,26 +1264,10 @@
       "ctaPartner": "Word partner"
     },
     "values": {
-      "items": {
-        "durability": {
-          "desc": "Wij denken in cycli van 10 jaar. Één keer bouwen, goed bouwen.",
-          "title": "Duurzaamheid"
-        },
-        "precision": {
-          "desc": "Elke analyse, elke aanbeveling, elke oplevering berust op verifieerbare gegevens, niet op intuïtie.",
-          "title": "Precisie"
-        },
-        "sovereignty": {
-          "desc": "Totale structurele onafhankelijkheid ten opzichte van stakeholders en platforms. Onze enige uitlijning: kwaliteit.",
-          "title": "Onafhankelijkheid"
-        },
-        "trust": {
-          "desc": "Vertrouwen verklaar je niet, je bewijst het door de samenhang tussen wat wij aanbevelen en wat wij doen.",
-          "title": "Vertrouwen"
-        }
-      },
-      "label": "Onze waarden",
-      "title": "Waar wij voor staan."
+      "label": "Cultuur en waarden",
+      "title": "Hoe wij werken.",
+      "desc": "Een bureau van ondernemers, gericht op resultaat en de kwaliteit van relaties. Op afstand, hybride of in een gedeelde werkruimte, autonomie, voortdurend leren: ontdek hoe wij samenwerken.",
+      "cta": "Onze cultuur en waarden ontdekken"
     },
     "meta": {
       "title": "Carrière | Aegryn",
@@ -7349,7 +7335,8 @@
     "metierOps": "Operations en Operationele excellentie",
     "metierTalent": "Talent en Organisatie",
     "metierProgram": "Project- en programmamanagement",
-    "metierMA": "M&A, Transacties en PMI"
+    "metierMA": "M&A, Transacties en PMI",
+    "culture": "Cultuur en waarden"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",
@@ -10701,5 +10688,107 @@
         "desc": "Kadering van deelnemingen, begeleiding na de overname, selectie van directieteams, voorbereiding van belangrijke stappen.\n\nBanken, fondsen, family offices, accountants: wij zijn de partner van wie financiert en adviseert, waar hun diensten ophouden."
       }
     ]
+  },
+  "culture": {
+    "metaTitle": "Cultuur en waarden: een bureau van ondernemers | Aegryn",
+    "metaDesc": "Aegryn is een bureau van ondernemers, gericht op resultaat en klanttevredenheid: kwaliteit van relaties, gedeelde visie, autonomie en werkwijze.",
+    "label": "Cultuur en waarden",
+    "title": "Een bureau van ondernemers, gericht op resultaat.",
+    "intro": "Aegryn is een bureau van ondernemers. Wij begeleiden leidinggevenden, beslissers, visionairs, investeerders en ondernemers als gelijken, met één eis: het project moet slagen.",
+    "audience": {
+      "label": "Voor wie wij werken",
+      "title": "Wie beslist, bouwt en investeert.",
+      "items": [
+        {
+          "title": "Leidinggevenden",
+          "desc": "Zij dragen een onderneming en haar afwegingen. Wij helpen hen beslissen en daarna uitvoeren."
+        },
+        {
+          "title": "Beslissers",
+          "desc": "Bestuursleden, algemeen directeurs, programmaverantwoordelijken: wie beslist en voor het resultaat instaat."
+        },
+        {
+          "title": "Visionairs",
+          "desc": "Zij zien een markt voordat die bestaat. Wij helpen hen van een intuïtie een houdbaar project te maken."
+        },
+        {
+          "title": "Investeerders",
+          "desc": "Fondsen, family offices, instellingen: een operator die de gefinancierde organisaties voorbereidt en opvolgt."
+        },
+        {
+          "title": "Collega-ondernemers",
+          "desc": "Wij spreken als gelijken met wie onderneemt: wij hebben gebouwd, gefaald, geleerd en opnieuw begonnen."
+        }
+      ]
+    },
+    "result": {
+      "label": "Resultaat vóór document",
+      "title": "Wij meten ons werk aan wat er voor u verandert.",
+      "intro": "Een document heeft alleen waarde als het een beslissing of een actie dient. Wij maken geen rapporten voor het archief.",
+      "doLabel": "Wat wij doen",
+      "do": [
+        "Een beknopte oplevering die helpt beslissen of handelen",
+        "Duidelijke mijlpalen en een zichtbaar resultaat",
+        "Een benoemd aanspreekpunt, tot aan de oplevering",
+        "Werk dat zonder ons kan worden overgenomen"
+      ],
+      "avoidLabel": "Wat wij vermijden",
+      "avoid": [
+        "Dikke rapporten die niemand herleest",
+        "Presentaties die enkel voor het archief worden gemaakt",
+        "Aanbevelingen zonder uitvoeringsplan",
+        "Een opvolging die stopt bij de overhandiging van het document"
+      ]
+    },
+    "values": {
+      "label": "Onze werkwaarden",
+      "title": "Wat een samenwerking goed maakt.",
+      "items": [
+        {
+          "title": "Het resultaat",
+          "desc": "Onze opdracht is gericht op het resultaat en op de tevredenheid van de klant. Een geslaagd project meet men aan wat het oplevert."
+        },
+        {
+          "title": "De menselijke relatie",
+          "desc": "Wij zorgen voor kwaliteitsvolle relaties, met klanten en onderling: openheid, luisteren, respect voor ieders tijd, in een open en inclusieve omgeving."
+        },
+        {
+          "title": "Een gedeelde visie",
+          "desc": "Wij werken vanuit een gemeenschappelijke koers die iedereen begrijpt, van de klant tot elke ingezette expert."
+        },
+        {
+          "title": "Autonomie en verantwoordelijkheid",
+          "desc": "Iedereen neemt initiatief en staat in voor wat hij levert. Vertrouwen wordt vooraf gegeven en door daden bevestigd."
+        },
+        {
+          "title": "Altijd blijven leren",
+          "desc": "Wij komen vooruit door te doen, elkaar te helpen en lessen te trekken uit elk project."
+        }
+      ]
+    },
+    "work": {
+      "label": "Onze werkwijze",
+      "title": "Flexibiliteit, autonomie, kwaliteit.",
+      "items": [
+        {
+          "title": "Een flexibele werkplek",
+          "desc": "Op afstand, hybride of in een gedeelde werkruimte: iedereen kiest het kader waarin hij het nuttigst is. De plaats verandert noch de eisen noch de erkenning."
+        },
+        {
+          "title": "Efficiëntie boven werkduur",
+          "desc": "Wij stellen resultaten boven lange werkdagen. Een evenwicht tussen werk en privéleven maakt goed werk op lange termijn mogelijk."
+        },
+        {
+          "title": "Een groeipad",
+          "desc": "Paden op maat van ieder, mentoring en projecten met verantwoordelijkheid. Wanneer ieder groeit, groeit het bureau."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Onze cultuur delen.",
+      "desc": "Wij groeien via coöptatie en spontane sollicitatie, met profielen die een project graag tot het einde brengen.",
+      "careers": "Werken bij Aegryn",
+      "about": "Over Aegryn"
+    }
   }
 }

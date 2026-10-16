@@ -124,6 +124,7 @@ const boutiqueLinks: { navKey: string; href: LinkHref }[] = [
 
 const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoAbout',     href: '/about' },
+  { navKey: 'whoCulture',   href: '/culture' as LinkHref },
   { navKey: 'roadmap',      href: '/roadmap' as never },
   { navKey: 'whoAlliances', href: '/alliances' },
   { navKey: 'whoContact',   href: '/contact' },

@@ -45,6 +45,7 @@ export const NEWSLETTER_HREF = 'https://www.linkedin.com/build-relation/newslett
 /* Qui sommes-nous : le groupe, les industries, nous rejoindre */
 export const WHO_GROUP_LINKS: NavLink[] = [
   { labelKey: 'whoAbout',     href: '/about' },
+  { labelKey: 'whoCulture',   href: '/culture' as LinkHref },
   { labelKey: 'whoFounder',   href: { pathname: '/about', hash: 'fondateur' } as LinkHref },
   { labelKey: 'whoContact',   href: '/contact' },
 ]

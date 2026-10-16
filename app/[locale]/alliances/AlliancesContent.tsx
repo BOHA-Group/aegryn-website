@@ -126,34 +126,34 @@ export default function AlliancesContent() {
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
           <aside className="hidden lg:block shrink-0 w-64 lg:-ml-12 sticky top-20 self-start">
-            <nav data-lenis-prevent className="flex max-h-[calc(100vh-6rem)] flex-col gap-0 overflow-y-auto px-3 py-3 bg-ag-off-white border border-ag-border rounded-2xl">
+            <nav data-lenis-prevent className="flex max-h-[75vh] flex-col gap-0 overflow-y-auto px-3 py-3 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
                   {gi > 0 && <div className="mx-5 my-2" />}
                   <button
                     onClick={() => scrollToId(g.id)}
-                    className="w-full text-left px-5 pt-1 pb-0.5 font-sans font-semibold text-[11px] uppercase tracking-[0.12em] leading-tight text-ag-black hover:text-ag-apex-ink transition-colors"
+                    className="w-full text-left px-5 pt-1.5 pb-1 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] leading-tight text-ag-black hover:text-ag-apex-ink transition-colors"
                   >
                     {g.title}
                   </button>
-                  <p className="px-5 pb-1 font-sans text-[11px] text-ag-gray-light leading-tight">
+                  <p className="px-5 pb-1.5 font-sans text-[12px] text-ag-gray-light leading-snug">
                     {g.desc}
                   </p>
                   {g.subs?.map(key => (
                     <button
                       key={key}
                       onClick={() => scrollToId(key)}
-                      className="w-full text-left pl-8 pr-4 py-[3px] font-sans text-[12px] leading-tight text-ag-gray-light hover:text-ag-black transition-colors"
+                      className="w-full text-left pl-8 pr-4 py-[3px] font-sans text-[13px] font-normal leading-snug text-ag-black hover:text-ag-apex-ink transition-colors"
                     >
                       {t(`metiers.items.${key}.title`)}
                     </button>
                   ))}
                 </div>
               ))}
-              <div className="mx-5 mt-2" />
+              <div className="mx-5 mt-3" />
               <button
                 onClick={() => scrollToId('candidature')}
-                className="w-full text-left px-5 pt-1 pb-1 font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-apex-ink hover:text-ag-black transition-colors"
+                className="w-full text-left px-5 pt-2 pb-1 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-black transition-colors"
               >
                 {t('side.apply')}
               </button>

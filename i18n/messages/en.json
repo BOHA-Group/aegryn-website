@@ -173,7 +173,8 @@
     "craftFrameDeliverDesc": "Decide, steer and implement: eight disciplines, through to acceptance.",
     "craftFinance": "Finance and Performance",
     "craftOperations": "Operations and Operational Excellence",
-    "craftProgram": "Project and Programme Management"
+    "craftProgram": "Project and Programme Management",
+    "whoCulture": "Culture and values"
   },
   "hero": {
     "tagline": "Integrated firm, anchored in Switzerland.",
@@ -1074,7 +1075,7 @@
         {
           "num": "03",
           "title": "Swiss institutional standards",
-          "desc": "Contractual confidentiality, complete documentation at every step, deliverables that can be taken over without us: operating conditions, not promises."
+          "desc": "Contractual confidentiality, clear milestones at every step, work that can be taken over without us: operating conditions, not promises."
         }
       ]
     },
@@ -1095,7 +1096,8 @@
       }
     },
     "dna": {
-      "label": "Our DNA"
+      "label": "Our DNA",
+      "cultureCta": "Our culture and working values"
     },
     "values": {
       "exceptional": {
@@ -1126,7 +1128,7 @@
       "elegance": {
         "label": "06",
         "title": "Elegance",
-        "desc": "Swiss rigour shows in simplicity: clear decisions, polished deliverables, no excess."
+        "desc": "Swiss rigour shows in simplicity: clear decisions, careful work, no excess."
       }
     },
     "swiss": {
@@ -1223,7 +1225,7 @@
       "product": "Product"
     },
     "about": {
-      "desc": "Founded on three principles, precision, durability, independence, Aegryn supports business leaders and entrepreneurs, from decision to delivery, then through every stage of the organisation's lifecycle.",
+      "desc": "Aegryn supports business leaders, decision-makers and entrepreneurs, from decision to delivery, then through every life cycle of the organisation, with constant attention to results.",
       "label": "Careers",
       "tagline": "Aegryn | Saint-Sulpice, Switzerland",
       "title": "Build what endures."
@@ -1262,26 +1264,10 @@
       "ctaPartner": "Become a partner"
     },
     "values": {
-      "items": {
-        "durability": {
-          "desc": "We think in cycles of 10 years. Build once, build right.",
-          "title": "Durability"
-        },
-        "precision": {
-          "desc": "Every analysis, every recommendation, every deliverable rests on verifiable data, not on intuition.",
-          "title": "Precision"
-        },
-        "sovereignty": {
-          "desc": "Total structural independence from stakeholders and platforms. Our only alignment: quality.",
-          "title": "Independence"
-        },
-        "trust": {
-          "desc": "Trust is not declared, it is proven by the consistency between what we recommend and what we do.",
-          "title": "Trust"
-        }
-      },
-      "label": "Our values",
-      "title": "What we stand for."
+      "label": "Culture and values",
+      "title": "How we work.",
+      "desc": "A firm of entrepreneurs, focused on results and the quality of relationships. Remote, hybrid or collaborative workspace, autonomy, continuous learning: discover how we collaborate.",
+      "cta": "Discover our culture and values"
     },
     "meta": {
       "title": "Careers | Aegryn",
@@ -7349,7 +7335,8 @@
     "metierOps": "Operations and Operational Excellence",
     "metierTalent": "Talent and Organization",
     "metierProgram": "Project and Programme Management",
-    "metierMA": "M&A, Transactions and PMI"
+    "metierMA": "M&A, Transactions and PMI",
+    "culture": "Culture and values"
   },
   "clientTransaction": {
     "eyebrow": "Buyer space",
@@ -10701,5 +10688,107 @@
         "desc": "Framing of holdings, post-acquisition support, selection of leadership teams, preparation of key milestones.\n\nBanks, funds, family offices, accountants: we are the partner of those who finance and advise, where their services end."
       }
     ]
+  },
+  "culture": {
+    "metaTitle": "Culture and values: a firm of entrepreneurs | Aegryn",
+    "metaDesc": "Aegryn is a firm of entrepreneurs, focused on results and client satisfaction: quality of relationships, shared vision, autonomy and the way we work.",
+    "label": "Culture and values",
+    "title": "A firm of entrepreneurs, focused on results.",
+    "intro": "Aegryn is a firm of entrepreneurs. We work with business leaders, decision-makers, visionaries, investors and fellow entrepreneurs, with a single requirement: that the project succeeds.",
+    "audience": {
+      "label": "Who we work for",
+      "title": "Those who decide, build and invest.",
+      "items": [
+        {
+          "title": "Business leaders",
+          "desc": "They carry a company and its trade-offs. We help them decide, then execute."
+        },
+        {
+          "title": "Decision-makers",
+          "desc": "Board members, chief executives, programme sponsors: those who make the call and answer for the result."
+        },
+        {
+          "title": "Visionaries",
+          "desc": "They see a market before it exists. We help them turn an intuition into a project that holds."
+        },
+        {
+          "title": "Investors",
+          "desc": "Funds, family offices, institutions: an operator who prepares and follows the organisations they finance."
+        },
+        {
+          "title": "Fellow entrepreneurs",
+          "desc": "We speak as equals with those who undertake: we have built, failed, learned and started again."
+        }
+      ]
+    },
+    "result": {
+      "label": "Results before documents",
+      "title": "We measure our work by what changes for you.",
+      "intro": "A document only has value if it serves a decision or an action. We do not produce reports for the archives.",
+      "doLabel": "What we do",
+      "do": [
+        "A short deliverable that helps decide or act",
+        "Clear milestones and a visible result",
+        "A named contact, through to acceptance",
+        "Work that can be taken over without us"
+      ],
+      "avoidLabel": "What we avoid",
+      "avoid": [
+        "Bulky reports that nobody rereads",
+        "Presentations produced to be filed away",
+        "Recommendations without an execution plan",
+        "Follow-up that stops when the document is handed over"
+      ]
+    },
+    "values": {
+      "label": "Our working values",
+      "title": "What makes a collaboration good.",
+      "items": [
+        {
+          "title": "Results",
+          "desc": "Our mission is centred on results and client satisfaction. A successful project is measured by what it produces."
+        },
+        {
+          "title": "Human relationships",
+          "desc": "We care about the quality of relationships, with clients and among ourselves: candour, listening, respect for everyone's time, in an open and inclusive environment."
+        },
+        {
+          "title": "A shared vision",
+          "desc": "We work from a common direction, understood by everyone, from the client to each expert involved."
+        },
+        {
+          "title": "Autonomy and responsibility",
+          "desc": "Everyone takes initiative and answers for what they deliver. Trust is given from the start and confirmed by facts."
+        },
+        {
+          "title": "Always learning",
+          "desc": "We progress by doing, by helping one another and by drawing lessons from every project."
+        }
+      ]
+    },
+    "work": {
+      "label": "How we work",
+      "title": "Flexibility, autonomy, rigour.",
+      "items": [
+        {
+          "title": "A flexible workplace",
+          "desc": "Remote, hybrid or in a collaborative workspace: everyone chooses the setting where they are most useful. Location changes neither the standard nor the recognition."
+        },
+        {
+          "title": "Efficiency over hours",
+          "desc": "We favour results over long hours. A balance between professional and personal life makes it possible to work well over the long term."
+        },
+        {
+          "title": "A path for growth",
+          "desc": "Paths tailored to each person, mentoring and projects with responsibility. When everyone grows, the firm grows."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Share our culture.",
+      "desc": "We grow through co-optation and unsolicited applications, with profiles who like to see a project through to the end.",
+      "careers": "Work at Aegryn",
+      "about": "About Aegryn"
+    }
   }
 }

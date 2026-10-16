@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const CRAFTS = ['accompagner', 'construire', 'franchir', 'recruter', 'informer'] as const
-const VALUES = ['precision', 'durability', 'sovereignty', 'trust'] as const
 
 const CRAFT_IMAGES: Record<(typeof CRAFTS)[number], string> = {
   accompagner: '/images/career/craft-conseil.jpg',
@@ -142,28 +141,23 @@ export default async function CareerPage({ params }: Props) {
         </ScrollReveal>
       </section>
 
-      {/* Values */}
+      {/* Culture et valeurs */}
       <section className="border-b border-ag-border py-24 bg-ag-off-white">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('values.label')}</p>
           <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-16"
+            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-6"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           >
             {t('values.title')}
           </h2>
-          <div className="grid sm:grid-cols-2 gap-px">
-            {VALUES.map((key) => (
-              <div key={key} className="bg-ag-off-white p-10">
-                <h3 className="font-sans font-bold text-ag-black text-[15px] tracking-[0.04em] uppercase mb-3">
-                  {t(`values.items.${key}.title`)}
-                </h3>
-                <p className="text-[15px] text-ag-gray leading-relaxed">
-                  {t(`values.items.${key}.desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
+          <p className="text-[15px] text-ag-gray leading-relaxed max-w-2xl mb-10">{t('values.desc')}</p>
+          <Link
+            href="/culture"
+            className="rounded-lg inline-flex items-center gap-2 border border-ag-border bg-ag-white text-ag-black font-sans font-semibold text-[11px] uppercase tracking-[0.16em] px-7 py-4 hover:border-ag-black transition-colors"
+          >
+            {t('values.cta')} <ArrowUpRight size={13} />
+          </Link>
         </ScrollReveal>
       </section>
 

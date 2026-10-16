@@ -173,7 +173,8 @@
     "craftFrameDeliverDesc": "Entscheiden, steuern und umsetzen: acht Fachgebiete, bis zur Abnahme.",
     "craftFinance": "Finanzen und Performance",
     "craftOperations": "Operations und operative Exzellenz",
-    "craftProgram": "Projekt- und Programmsteuerung"
+    "craftProgram": "Projekt- und Programmsteuerung",
+    "whoCulture": "Kultur und Werte"
   },
   "hero": {
     "tagline": "Integrierte Firma, in der Schweiz verankert.",
@@ -1095,7 +1096,7 @@
         {
           "num": "03",
           "title": "Schweizer institutionelle Standards",
-          "desc": "Vertragliche Vertraulichkeit, vollständige Dokumentation bei jedem Schritt, Lieferungen, die ohne uns übernommen werden können: Betriebsbedingungen, keine Versprechen."
+          "desc": "Vertragliche Vertraulichkeit, klare Meilensteine bei jedem Schritt, eine Arbeit, die ohne uns übernommen werden kann: Betriebsbedingungen, keine Versprechen."
         }
       ]
     },
@@ -1116,7 +1117,8 @@
       }
     },
     "dna": {
-      "label": "Unsere DNA"
+      "label": "Unsere DNA",
+      "cultureCta": "Unsere Kultur und Arbeitswerte"
     },
     "values": {
       "exceptional": {
@@ -1147,7 +1149,7 @@
       "elegance": {
         "label": "06",
         "title": "Eleganz",
-        "desc": "Schweizer Strenge zeigt sich in Einfachheit: klare Entscheidungen, sorgfältige Lieferungen, kein Übermass."
+        "desc": "Schweizer Strenge zeigt sich in Einfachheit: klare Entscheidungen, sorgfältige Arbeit, kein Übermass."
       }
     },
     "swiss": {
@@ -1223,7 +1225,7 @@
       "product": "Produkt"
     },
     "about": {
-      "desc": "Auf drei Prinzipien gegründet, Präzision, Dauerhaftigkeit, Unabhängigkeit, begleitet Aegryn Führungskräfte und Unternehmer von der Entscheidung bis zur Umsetzung und danach in jeder Lebenszyklusphase der Organisation.",
+      "desc": "Aegryn begleitet Führungskräfte, Entscheider und Unternehmer von der Entscheidung bis zur Umsetzung und danach in jedem Lebenszyklus der Organisation, mit stetem Blick auf das Ergebnis.",
       "label": "Karriere",
       "tagline": "Aegryn | Saint-Sulpice, Schweiz",
       "title": "Bauen, was bleibt."
@@ -1262,26 +1264,10 @@
       "ctaPartner": "Partner werden"
     },
     "values": {
-      "items": {
-        "durability": {
-          "desc": "Wir denken in 10-Jahres-Zyklen. Einmal bauen, richtig bauen.",
-          "title": "Beständigkeit"
-        },
-        "precision": {
-          "desc": "Jede Analyse, jede Empfehlung, jedes Ergebnis beruht auf überprüfbaren Daten, nicht auf Intuition.",
-          "title": "Präzision"
-        },
-        "sovereignty": {
-          "desc": "Vollständige strukturelle Unabhängigkeit gegenüber Stakeholdern und Plattformen. Unsere einzige Ausrichtung: Qualität.",
-          "title": "Unabhängigkeit"
-        },
-        "trust": {
-          "desc": "Vertrauen erklärt man nicht, man beweist es durch die Übereinstimmung von dem, was wir empfehlen, und dem, was wir tun.",
-          "title": "Vertrauen"
-        }
-      },
-      "label": "Unsere Werte",
-      "title": "Wofür wir stehen."
+      "label": "Kultur und Werte",
+      "title": "Wie wir arbeiten.",
+      "desc": "Eine Firma von Unternehmern, ausgerichtet auf das Ergebnis und die Qualität der Beziehungen. Remote, hybrid oder im gemeinsamen Arbeitsraum, Autonomie, kontinuierliches Lernen: So arbeiten wir zusammen.",
+      "cta": "Unsere Kultur und Werte entdecken"
     },
     "meta": {
       "title": "Karriere | Aegryn",
@@ -7334,7 +7320,8 @@
     "metierOps": "Operations und operative Exzellenz",
     "metierTalent": "Talent und Organisation",
     "metierProgram": "Projekt- und Programmsteuerung",
-    "metierMA": "M&A, Transaktionen und PMI"
+    "metierMA": "M&A, Transaktionen und PMI",
+    "culture": "Kultur und Werte"
   },
   "clientTransaction": {
     "eyebrow": "Käuferbereich",
@@ -10701,5 +10688,107 @@
         "desc": "Rahmung von Beteiligungen, Begleitung nach der Übernahme, Auswahl von Führungsteams, Vorbereitung wichtiger Etappen.\n\nBanken, Fonds, Family Offices, Wirtschaftsprüfer: Wir sind der Partner derer, die finanzieren und beraten, dort, wo deren Leistungen enden."
       }
     ]
+  },
+  "culture": {
+    "metaTitle": "Kultur und Werte: eine Firma von Unternehmern | Aegryn",
+    "metaDesc": "Aegryn ist eine Firma von Unternehmern, ausgerichtet auf Ergebnis und Kundenzufriedenheit: Qualität der Beziehungen, gemeinsame Vision, Autonomie und Arbeitsweise.",
+    "label": "Kultur und Werte",
+    "title": "Eine Firma von Unternehmern, ausgerichtet auf das Ergebnis.",
+    "intro": "Aegryn ist eine Firma von Unternehmern. Wir begleiten Führungskräfte, Entscheider, Visionäre, Investoren und Unternehmerkollegen, mit einer einzigen Anforderung: Das Projekt soll gelingen.",
+    "audience": {
+      "label": "Für wen wir arbeiten",
+      "title": "Für alle, die entscheiden, aufbauen und investieren.",
+      "items": [
+        {
+          "title": "Führungskräfte",
+          "desc": "Sie tragen ein Unternehmen und seine Abwägungen. Wir helfen ihnen, zu entscheiden und dann umzusetzen."
+        },
+        {
+          "title": "Entscheider",
+          "desc": "Verwaltungsräte, Geschäftsführer, Programmverantwortliche: wer entscheidet und für das Ergebnis geradesteht."
+        },
+        {
+          "title": "Visionäre",
+          "desc": "Sie sehen einen Markt, bevor es ihn gibt. Wir helfen ihnen, aus einer Intuition ein tragfähiges Projekt zu machen."
+        },
+        {
+          "title": "Investoren",
+          "desc": "Fonds, Family Offices, Institutionen: ein Operator, der die finanzierten Organisationen vorbereitet und begleitet."
+        },
+        {
+          "title": "Unternehmerkollegen",
+          "desc": "Wir sprechen auf Augenhöhe mit allen, die unternehmen: Wir haben aufgebaut, sind gescheitert, haben gelernt und neu begonnen."
+        }
+      ]
+    },
+    "result": {
+      "label": "Das Ergebnis vor dem Dokument",
+      "title": "Wir messen unsere Arbeit an dem, was sich für Sie ändert.",
+      "intro": "Ein Dokument hat nur Wert, wenn es einer Entscheidung oder einer Handlung dient. Wir erstellen keine Berichte für das Archiv.",
+      "doLabel": "Was wir tun",
+      "do": [
+        "Ein kurzes Ergebnis, das beim Entscheiden oder Handeln hilft",
+        "Klare Meilensteine und ein sichtbares Ergebnis",
+        "Ein benannter Ansprechpartner bis zur Abnahme",
+        "Eine Arbeit, die ohne uns übernommen werden kann"
+      ],
+      "avoidLabel": "Was wir vermeiden",
+      "avoid": [
+        "Umfangreiche Berichte, die niemand nochmals liest",
+        "Präsentationen, die nur für das Archiv entstehen",
+        "Empfehlungen ohne Umsetzungsplan",
+        "Eine Begleitung, die mit der Übergabe des Dokuments endet"
+      ]
+    },
+    "values": {
+      "label": "Unsere Arbeitswerte",
+      "title": "Was eine Zusammenarbeit gut macht.",
+      "items": [
+        {
+          "title": "Das Ergebnis",
+          "desc": "Unser Auftrag ist auf das Ergebnis und die Zufriedenheit der Kunden ausgerichtet. Ein erfolgreiches Projekt misst sich an dem, was es bewirkt."
+        },
+        {
+          "title": "Menschliche Beziehungen",
+          "desc": "Wir pflegen die Qualität der Beziehungen, mit Kunden wie untereinander: Offenheit, Zuhören, Respekt vor der Zeit aller, in einem offenen und inklusiven Umfeld."
+        },
+        {
+          "title": "Eine gemeinsame Vision",
+          "desc": "Wir arbeiten auf ein gemeinsames Ziel hin, das alle verstehen, vom Kunden bis zu jedem beteiligten Experten."
+        },
+        {
+          "title": "Autonomie und Verantwortung",
+          "desc": "Jeder ergreift die Initiative und steht für das ein, was er liefert. Vertrauen wird von Anfang an geschenkt und durch Taten bestätigt."
+        },
+        {
+          "title": "Immer weiterlernen",
+          "desc": "Wir kommen voran, indem wir handeln, einander helfen und aus jedem Projekt lernen."
+        }
+      ]
+    },
+    "work": {
+      "label": "Unsere Arbeitsweise",
+      "title": "Flexibilität, Autonomie, Anspruch.",
+      "items": [
+        {
+          "title": "Ein flexibler Arbeitsort",
+          "desc": "Remote, hybrid oder in einem gemeinsamen Arbeitsraum: Jeder wählt den Rahmen, in dem er am meisten bewirkt. Der Ort ändert weder den Anspruch noch die Anerkennung."
+        },
+        {
+          "title": "Effizienz statt Arbeitsdauer",
+          "desc": "Wir stellen Ergebnisse über lange Arbeitszeiten. Ein Gleichgewicht zwischen Berufs- und Privatleben ermöglicht gutes Arbeiten auf Dauer."
+        },
+        {
+          "title": "Ein Entwicklungsweg",
+          "desc": "Wege, die zu jedem passen, Mentoring und Projekte mit Verantwortung. Wenn jeder wächst, wächst die Firma."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Unsere Kultur teilen.",
+      "desc": "Wir wachsen durch Empfehlung und Initiativbewerbung, mit Profilen, die ein Projekt gern bis zum Ende führen.",
+      "careers": "Bei Aegryn arbeiten",
+      "about": "Über Aegryn"
+    }
   }
 }

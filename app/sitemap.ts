@@ -18,6 +18,7 @@ const STATIC_ROUTES = [
   // ── Core ─────────────────────────────────────────────────────────────────────
   { path: '',                                    priority: 1.0,  changeFrequency: 'weekly'  as const },
   { path: '/about',                              priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/culture',                            priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/contact',                            priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/blog',                               priority: 0.8,  changeFrequency: 'weekly'  as const },
   { path: '/workforce',                          priority: 0.8,  changeFrequency: 'monthly' as const },

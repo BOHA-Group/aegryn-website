@@ -124,6 +124,12 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+              <Link
+                href="/culture"
+                className="mt-10 inline-flex items-center gap-2 font-sans text-[13px] font-semibold text-ag-black underline decoration-ag-border decoration-2 underline-offset-4 transition-colors hover:text-ag-apex-ink"
+              >
+                {t('dna.cultureCta')} <ArrowUpRight size={14} />
+              </Link>
             </ScrollReveal>
           </section>
         }

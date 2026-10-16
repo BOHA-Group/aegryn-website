@@ -46,7 +46,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const heroPage = pathname === '/' || pathname === '/boutique'
 
   const isWhoActive =
-    isActive('/about') ||
+    isActive('/about') || isActive('/culture') ||
     isActive('/career') || isActive('/alliances') ||
     isActive('/experts') || isActive('/investisseurs') ||
     isActive('/audit') || isActive('/industries')

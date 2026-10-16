@@ -173,7 +173,8 @@
     "craftFrameDeliverDesc": "Decidere, guidare e attuare: otto mestieri, fino alla consegna.",
     "craftFinance": "Finanza e Performance",
     "craftOperations": "Operazioni ed Eccellenza operativa",
-    "craftProgram": "Gestione di progetti e programmi"
+    "craftProgram": "Gestione di progetti e programmi",
+    "whoCulture": "Cultura e valori"
   },
   "hero": {
     "tagline": "Società integrata, radicata in Svizzera.",
@@ -1095,7 +1096,7 @@
         {
           "num": "03",
           "title": "Standard istituzionali svizzeri",
-          "desc": "Riservatezza contrattuale, documentazione completa a ogni tappa, consegne che si riprendono senza di noi: condizioni operative, non promesse."
+          "desc": "Riservatezza contrattuale, tappe chiare a ogni fase, un lavoro che si riprende senza di noi: condizioni operative, non promesse."
         }
       ]
     },
@@ -1116,7 +1117,8 @@
       }
     },
     "dna": {
-      "label": "Il nostro DNA"
+      "label": "Il nostro DNA",
+      "cultureCta": "La nostra cultura e i valori di lavoro"
     },
     "values": {
       "exceptional": {
@@ -1147,7 +1149,7 @@
       "elegance": {
         "label": "06",
         "title": "Eleganza",
-        "desc": "Il rigore svizzero si vede nella semplicità: decisioni chiare, consegne curate, nessun eccesso."
+        "desc": "Il rigore svizzero si vede nella semplicità: decisioni chiare, un lavoro curato, nessun eccesso."
       }
     },
     "swiss": {
@@ -1223,7 +1225,7 @@
       "product": "Prodotto"
     },
     "about": {
-      "desc": "Fondata su tre principi, precisione, durabilità, indipendenza, Aegryn accompagna dirigenti e imprenditori, dalla decisione alla realizzazione e poi in ogni ciclo di vita dell'organizzazione.",
+      "desc": "Aegryn accompagna dirigenti, decisori e imprenditori, dalla decisione alla realizzazione e poi in ogni ciclo di vita dell'organizzazione, con attenzione costante al risultato.",
       "label": "Carriere",
       "tagline": "Aegryn | Saint-Sulpice, Svizzera",
       "title": "Costruire ciò che dura."
@@ -1262,26 +1264,10 @@
       "ctaPartner": "Diventa partner"
     },
     "values": {
-      "items": {
-        "durability": {
-          "desc": "Pensiamo in cicli di 10 anni. Costruire una volta, costruire bene.",
-          "title": "Durabilità"
-        },
-        "precision": {
-          "desc": "Ogni analisi, ogni raccomandazione, ogni consegna poggia su dati verificabili, non su intuizioni.",
-          "title": "Precisione"
-        },
-        "sovereignty": {
-          "desc": "Indipendenza strutturale totale dalle parti interessate e dalle piattaforme. Il nostro unico allineamento: la qualità.",
-          "title": "Indipendenza"
-        },
-        "trust": {
-          "desc": "La fiducia non si dichiara, si dimostra con la coerenza tra ciò che raccomandiamo e ciò che facciamo.",
-          "title": "Fiducia"
-        }
-      },
-      "label": "I nostri valori",
-      "title": "In cosa crediamo."
+      "label": "Cultura e valori",
+      "title": "Come lavoriamo.",
+      "desc": "Una società di imprenditori, centrata sul risultato e sulla qualità delle relazioni. Lavoro a distanza, ibrido o in spazio collaborativo, autonomia, apprendimento continuo: scoprite come collaboriamo.",
+      "cta": "Scoprire la nostra cultura e i valori"
     },
     "meta": {
       "title": "Carriera | Aegryn",
@@ -7334,7 +7320,8 @@
     "metierOps": "Operazioni ed Eccellenza operativa",
     "metierTalent": "Talento e Organizzazione",
     "metierProgram": "Gestione di progetti e programmi",
-    "metierMA": "M&A, Transazioni e PMI"
+    "metierMA": "M&A, Transazioni e PMI",
+    "culture": "Cultura e valori"
   },
   "clientTransaction": {
     "eyebrow": "Spazio acquirente",
@@ -10701,5 +10688,107 @@
         "desc": "Inquadramento delle partecipazioni, accompagnamento dopo l’acquisizione, selezione dei team dirigenti, preparazione delle tappe chiave.\n\nBanche, fondi, family office, commercialisti: siamo il partner di chi finanzia e consiglia, dove finiscono i loro servizi."
       }
     ]
+  },
+  "culture": {
+    "metaTitle": "Cultura e valori: una società di imprenditori | Aegryn",
+    "metaDesc": "Aegryn è una società di imprenditori, orientata al risultato e alla soddisfazione del cliente: qualità delle relazioni, visione condivisa, autonomia e modo di lavorare.",
+    "label": "Cultura e valori",
+    "title": "Una società di imprenditori, orientata al risultato.",
+    "intro": "Aegryn è una società di imprenditori. Accompagniamo dirigenti, decisori, visionari, investitori e imprenditori pari, con una sola esigenza: che il progetto riesca.",
+    "audience": {
+      "label": "Per chi lavoriamo",
+      "title": "Chi decide, costruisce e investe.",
+      "items": [
+        {
+          "title": "Dirigenti",
+          "desc": "Portano un'azienda e le sue scelte. Li aiutiamo a decidere e poi a eseguire."
+        },
+        {
+          "title": "Decisori",
+          "desc": "Membri di consigli, direttori generali, responsabili di programmi: chi decide e risponde del risultato."
+        },
+        {
+          "title": "Visionari",
+          "desc": "Vedono un mercato prima che esista. Li aiutiamo a fare di un'intuizione un progetto che regge."
+        },
+        {
+          "title": "Investitori",
+          "desc": "Fondi, family office, istituzioni: un operatore che prepara e segue le organizzazioni che finanziano."
+        },
+        {
+          "title": "Imprenditori pari",
+          "desc": "Parliamo alla pari con chi intraprende: abbiamo costruito, fallito, imparato e ricominciato."
+        }
+      ]
+    },
+    "result": {
+      "label": "Il risultato prima del documento",
+      "title": "Misuriamo il nostro lavoro da ciò che cambia per voi.",
+      "intro": "Un documento ha valore solo se serve a una decisione o a un'azione. Non produciamo rapporti per l'archivio.",
+      "doLabel": "Ciò che facciamo",
+      "do": [
+        "Una consegna breve, che serve a decidere o ad agire",
+        "Tappe chiare e un risultato visibile",
+        "Un interlocutore nominato, fino alla consegna",
+        "Un lavoro che si riprende senza di noi"
+      ],
+      "avoidLabel": "Ciò che evitiamo",
+      "avoid": [
+        "Rapporti voluminosi che nessuno rilegge",
+        "Presentazioni prodotte per essere archiviate",
+        "Raccomandazioni senza piano di esecuzione",
+        "Un seguito che si ferma alla consegna del documento"
+      ]
+    },
+    "values": {
+      "label": "I nostri valori di lavoro",
+      "title": "Ciò che rende buona una collaborazione.",
+      "items": [
+        {
+          "title": "Il risultato",
+          "desc": "La nostra missione è centrata sul risultato e sulla soddisfazione del cliente. Un progetto riuscito si misura da ciò che produce."
+        },
+        {
+          "title": "La relazione umana",
+          "desc": "Curiamo la qualità delle relazioni, con i clienti come tra noi: franchezza, ascolto, rispetto del tempo di ciascuno, in un ambiente aperto e inclusivo."
+        },
+        {
+          "title": "Una visione condivisa",
+          "desc": "Lavoriamo a partire da una rotta comune, compresa da tutti, dal cliente a ogni esperto coinvolto."
+        },
+        {
+          "title": "Autonomia e responsabilità",
+          "desc": "Ciascuno prende l'iniziativa e risponde di ciò che consegna. La fiducia si dà subito e si conferma con i fatti."
+        },
+        {
+          "title": "Imparare sempre",
+          "desc": "Progrediamo facendo, aiutandoci a vicenda e traendo lezioni da ogni progetto."
+        }
+      ]
+    },
+    "work": {
+      "label": "Il nostro modo di lavorare",
+      "title": "Flessibilità, autonomia, rigore.",
+      "items": [
+        {
+          "title": "Un luogo di lavoro flessibile",
+          "desc": "A distanza, in modalità ibrida o in uno spazio di lavoro collaborativo: ciascuno sceglie il contesto in cui è più utile. Il luogo non cambia né l'esigenza né il riconoscimento."
+        },
+        {
+          "title": "Efficacia più che durata",
+          "desc": "Privilegiamo i risultati rispetto alle lunghe ore. L'equilibrio tra vita professionale e personale permette di lavorare bene nel tempo."
+        },
+        {
+          "title": "Un percorso di crescita",
+          "desc": "Percorsi adatti a ciascuno, mentoring e progetti con responsabilità. Quando ciascuno cresce, la società cresce."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Condividere la nostra cultura.",
+      "desc": "Cresciamo per cooptazione e per candidatura spontanea, con profili a cui piace portare un progetto fino in fondo.",
+      "careers": "Lavorare in Aegryn",
+      "about": "Su Aegryn"
+    }
   }
 }

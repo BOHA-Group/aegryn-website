@@ -89,3 +89,7 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 
 - Tout lien interne passe par `Link` de `@/i18n/navigation` (ou un préfixe `/${locale}` explicite). Jamais de `<a href="/...">` ni de `next/link` avec un chemin sans préfixe de langue : l'utilisateur doit rester dans la langue choisie sur tout le site.
 - `proxy.ts` : la langue de la page visitée met à jour le cookie `ag-locale-pref`, et un lien sans préfixe reprend la langue du Referer.
+
+## Culture et valeurs
+
+- `/culture` (fr `/culture-et-valeurs`) : page blanche sans hero navy, dans « Qui sommes-nous » après « À propos ». Elle complète `/about` (identité, ADN) et `/career` (qui renvoie vers elle) : cabinet d'entrepreneurs, résultat plutôt que documents d'archive, qualité des relations, vision partagée, travail flexible. Pas de promesse d'avantages (rémunération, programmes internes) : les textes LinkedIn restent indicatifs.

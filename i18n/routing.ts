@@ -13,6 +13,14 @@ export const routing = defineRouting({
       de: '/ueber-uns',
       nl: '/over-ons',
     },
+    '/culture': {
+      fr: '/culture-et-valeurs',
+      en: '/culture-and-values',
+      it: '/cultura-e-valori',
+      es: '/cultura-y-valores',
+      de: '/kultur-und-werte',
+      nl: '/cultuur-en-waarden',
+    },
     '/what-we-build': {
       fr: '/ce-que-nous-construisons',
       en: '/what-we-build',

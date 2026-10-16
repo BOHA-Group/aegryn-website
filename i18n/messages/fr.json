@@ -173,7 +173,8 @@
     "craftFrameDeliverDesc": "Décider, piloter et mettre en œuvre : huit métiers, jusqu’à la réception.",
     "craftFinance": "Finance et Performance",
     "craftOperations": "Opérations et Excellence opérationnelle",
-    "craftProgram": "Pilotage de projets et de programmes"
+    "craftProgram": "Pilotage de projets et de programmes",
+    "whoCulture": "Culture et valeurs"
   },
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
@@ -1055,7 +1056,7 @@
         {
           "num": "03",
           "title": "Des standards institutionnels suisses",
-          "desc": "Confidentialité contractuelle, documentation complète à chaque étape, livrables qui se reprennent sans nous : des conditions opératoires, pas des promesses."
+          "desc": "Confidentialité contractuelle, jalons clairs à chaque étape, un travail qui se reprend sans nous : des conditions opératoires, pas des promesses."
         }
       ]
     },
@@ -1076,7 +1077,8 @@
       }
     },
     "dna": {
-      "label": "Notre ADN"
+      "label": "Notre ADN",
+      "cultureCta": "Notre culture et nos valeurs de travail"
     },
     "values": {
       "exceptional": {
@@ -1107,7 +1109,7 @@
       "elegance": {
         "label": "06",
         "title": "Élégance",
-        "desc": "La rigueur suisse se voit à la simplicité : des décisions claires, des livrables soignés, aucun excès."
+        "desc": "La rigueur suisse se voit à la simplicité : des décisions claires, un travail soigné, aucun excès."
       }
     },
     "swiss": {
@@ -1160,8 +1162,8 @@
     },
     "about": {
       "label": "Qui sommes-nous",
-      "title": "Une infrastructure, pas une agence.",
-      "desc": "Fondée sur trois principes, précision, durabilité, indépendance, Aegryn accompagne les dirigeants et les entrepreneurs, de la décision à la réalisation, puis à chaque cycle de vie de l'organisation.",
+      "title": "Un cabinet d'entrepreneurs.",
+      "desc": "Aegryn accompagne les dirigeants, les décideurs et les entrepreneurs, de la décision à la réalisation, puis à chaque cycle de vie de l'organisation, avec une attention constante au résultat.",
       "tagline": "Suisse · Europe · Indépendant"
     },
     "crafts": {
@@ -1191,26 +1193,10 @@
       }
     },
     "values": {
-      "label": "Nos valeurs",
-      "title": "Ce que nous refusons de compromettre.",
-      "items": {
-        "precision": {
-          "title": "Précision",
-          "desc": "Chaque analyse, chaque recommandation, chaque livrable repose sur des données vérifiables, pas sur des intuitions."
-        },
-        "durability": {
-          "title": "Durabilité",
-          "desc": "Nous construisons pour durer. Pas de raccourcis, pas de bulles. Des actifs solides dans des structures qui tiennent."
-        },
-        "sovereignty": {
-          "title": "Indépendance",
-          "desc": "Indépendance structurelle totale vis-à-vis des parties prenantes et des plateformes. Notre seul alignement : la qualité."
-        },
-        "trust": {
-          "title": "Confiance",
-          "desc": "La confiance ne se déclare pas, elle se prouve par la cohérence entre ce que nous recommandons et ce que nous faisons."
-        }
-      }
+      "label": "Culture et valeurs",
+      "title": "Comment nous travaillons.",
+      "desc": "Un cabinet d'entrepreneurs, centré sur le résultat et la qualité des relations. Travail à distance, hybride ou en espace collaboratif, autonomie, apprentissage continu : découvrez la façon dont nous collaborons.",
+      "cta": "Découvrir notre culture et nos valeurs"
     },
     "openings": {
       "label": "Rejoindre Aegryn",
@@ -7309,7 +7295,8 @@
     "metierOps": "Opérations et Excellence opérationnelle",
     "metierTalent": "Talent et Organisation",
     "metierProgram": "Pilotage de projets et de programmes",
-    "metierMA": "M&A, Transactions et PMI"
+    "metierMA": "M&A, Transactions et PMI",
+    "culture": "Culture et valeurs"
   },
   "clientTransaction": {
     "eyebrow": "Espace acquéreur",
@@ -10701,5 +10688,107 @@
         "desc": "Cadrage des participations, accompagnement après reprise, sélection des équipes dirigeantes, préparation des étapes clés.\n\nBanques, fonds, family offices, experts-comptables : nous sommes le partenaire de ceux qui financent et conseillent, là où leurs services s’arrêtent."
       }
     ]
+  },
+  "culture": {
+    "metaTitle": "Culture et valeurs : un cabinet d'entrepreneurs | Aegryn",
+    "metaDesc": "Aegryn est un cabinet d'entrepreneurs, centré sur le résultat et la satisfaction client : qualité des relations, vision partagée, autonomie et façon de travailler.",
+    "label": "Culture et valeurs",
+    "title": "Un cabinet d'entrepreneurs, tourné vers le résultat.",
+    "intro": "Aegryn est un cabinet d'entrepreneurs. Nous accompagnons des dirigeants, des décideurs, des visionnaires, des investisseurs et des pairs entrepreneurs, avec une seule exigence : que le projet aboutisse.",
+    "audience": {
+      "label": "Pour qui nous travaillons",
+      "title": "Ceux qui décident, bâtissent et investissent.",
+      "items": [
+        {
+          "title": "Dirigeants",
+          "desc": "Ils portent une entreprise et ses arbitrages. Nous les aidons à décider, puis à exécuter."
+        },
+        {
+          "title": "Décideurs",
+          "desc": "Membres de conseils, directeurs généraux, responsables de programmes : ceux qui tranchent et répondent du résultat."
+        },
+        {
+          "title": "Visionnaires",
+          "desc": "Ils voient un marché avant qu'il n'existe. Nous les aidons à faire d'une intuition un projet qui tient."
+        },
+        {
+          "title": "Investisseurs",
+          "desc": "Fonds, family offices, institutions : un opérateur qui prépare et suit les organisations qu'ils financent."
+        },
+        {
+          "title": "Pairs entrepreneurs",
+          "desc": "Nous parlons d'égal à égal avec ceux qui entreprennent : nous avons construit, échoué, appris et recommencé."
+        }
+      ]
+    },
+    "result": {
+      "label": "Le résultat avant le document",
+      "title": "Nous mesurons notre travail à ce qui change pour vous.",
+      "intro": "Un document n'a de valeur que s'il sert une décision ou une action. Nous ne produisons pas de rapports pour les archives.",
+      "doLabel": "Ce que nous faisons",
+      "do": [
+        "Un livrable court, qui sert à décider ou à agir",
+        "Des jalons clairs et un résultat visible",
+        "Un interlocuteur nommé, jusqu'à la réception",
+        "Un travail qui se reprend sans nous"
+      ],
+      "avoidLabel": "Ce que nous évitons",
+      "avoid": [
+        "Des rapports volumineux que personne ne relit",
+        "Des présentations produites pour être archivées",
+        "Des recommandations sans plan d'exécution",
+        "Un suivi qui s'arrête à la remise du document"
+      ]
+    },
+    "values": {
+      "label": "Nos valeurs de travail",
+      "title": "Ce qui fait la qualité d'une collaboration.",
+      "items": [
+        {
+          "title": "Le résultat",
+          "desc": "Notre mission est centrée sur le résultat et sur la satisfaction du client. Un projet réussi se mesure à ce qu'il produit."
+        },
+        {
+          "title": "La relation humaine",
+          "desc": "Nous soignons la qualité des relations, avec nos clients comme entre nous : franchise, écoute, respect du temps de chacun, dans un environnement ouvert et inclusif."
+        },
+        {
+          "title": "Une vision partagée",
+          "desc": "Nous travaillons à partir d'un cap commun, compris par tous, du client à chaque expert mobilisé."
+        },
+        {
+          "title": "Autonomie et responsabilité",
+          "desc": "Chacun prend l'initiative et répond de ce qu'il livre. La confiance se donne d'emblée et se confirme par les faits."
+        },
+        {
+          "title": "Apprendre sans cesse",
+          "desc": "Nous progressons en faisant, en nous entraidant et en tirant les leçons de chaque projet."
+        }
+      ]
+    },
+    "work": {
+      "label": "Notre façon de travailler",
+      "title": "Souplesse, autonomie, exigence.",
+      "items": [
+        {
+          "title": "Un lieu de travail flexible",
+          "desc": "À distance, en mode hybride ou en espace de travail collaboratif : chacun choisit le cadre où il est le plus utile. Le lieu ne change ni l'exigence ni la reconnaissance."
+        },
+        {
+          "title": "L'efficacité plutôt que la durée",
+          "desc": "Nous privilégions les résultats aux longues heures. L'équilibre entre vie professionnelle et vie personnelle permet de bien travailler dans la durée."
+        },
+        {
+          "title": "Un parcours de croissance",
+          "desc": "Des parcours adaptés à chacun, du mentorat et des projets à responsabilité. Quand chacun progresse, le cabinet progresse."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Partager notre culture.",
+      "desc": "Nous grandissons par cooptation et par candidature spontanée, avec des profils qui aiment mener un projet jusqu'au bout.",
+      "careers": "Travailler chez Aegryn",
+      "about": "À propos d'Aegryn"
+    }
   }
 }
