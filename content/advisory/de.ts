@@ -267,6 +267,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Gesetzliche Pflichten: Risiken & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Prüfung eines Zielunternehmens: M&A', href: '/advisory/ma' },
+      { label: 'Projekt-Governance und Betriebsübergabe: Projektsteuerung', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Was wir beobachten',
@@ -389,6 +390,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Suche und Vermittlung: Rekrutieren', href: '/talent' },
       { label: 'Kurswahl: Strategie', href: '/advisory/strategy' },
       { label: 'Team eines Zielunternehmens: M&A', href: '/advisory/ma' },
+      { label: 'Die Programm-Governance: Projektsteuerung', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Was wir beobachten',
@@ -507,6 +509,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Prüftiefe: Technologie', href: '/advisory/technology' },
       { label: 'Teams: Talent & Organisation', href: '/advisory/talent-organization' },
           { label: 'Die operative Integration (Standorte, Einkauf, Systeme): Operations', href: '/advisory/operations-excellence' },
+      { label: 'Die Steuerung der Integration: Projektsteuerung', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Was wir beobachten',

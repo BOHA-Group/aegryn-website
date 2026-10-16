@@ -24,6 +24,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'La trésorerie et le fonds de roulement : Finance et Performance', href: '/advisory/finance-performance' },
       { label: 'Le plan d’intégration à 100 jours : M&A', href: '/advisory/ma' },
       { label: 'Un directeur des opérations de transition : Sélectionner', href: '/talent' },
+      { label: 'Le projet ou programme ponctuel : Pilotage', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Ce que nous constatons',
@@ -107,6 +108,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'Cash flow and working capital: Finance and Performance', href: '/advisory/finance-performance' },
       { label: 'The 100-day integration plan: M&A', href: '/advisory/ma' },
       { label: 'An interim operations director: Talent', href: '/talent' },
+      { label: 'The one-off project or programme: Project Management', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'What we observe',
@@ -190,6 +192,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'Liquidität und Working Capital: Finanzen und Performance', href: '/advisory/finance-performance' },
       { label: 'Der 100-Tage-Integrationsplan: M&A', href: '/advisory/ma' },
       { label: 'Ein Interim-Operations-Direktor: Auswahl', href: '/talent' },
+      { label: 'Das einmalige Projekt oder Programm: Projektsteuerung', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Was wir feststellen',
@@ -273,6 +276,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'La tesorería y el fondo de maniobra: Finanzas y Rendimiento', href: '/advisory/finance-performance' },
       { label: 'El plan de integración a 100 días: M&A', href: '/advisory/ma' },
       { label: 'Un director de operaciones interino: Selección', href: '/talent' },
+      { label: 'El proyecto o programa puntual: Gestión de proyectos', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Lo que constatamos',
@@ -356,6 +360,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'La tesoreria e il capitale circolante: Finanza e Performance', href: '/advisory/finance-performance' },
       { label: 'Il piano di integrazione a 100 giorni: M&A', href: '/advisory/ma' },
       { label: 'Un direttore delle operazioni ad interim: Selezione', href: '/talent' },
+      { label: 'Il progetto o programma puntuale: Gestione progetti', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Cosa constatiamo',
@@ -439,6 +444,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
       { label: 'De liquiditeit en het werkkapitaal: Financiën en Prestaties', href: '/advisory/finance-performance' },
       { label: 'Het integratieplan van 100 dagen: M&A', href: '/advisory/ma' },
       { label: 'Een interim operations director: Selectie', href: '/talent' },
+      { label: 'Het eenmalige project of programma: Projectmanagement', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

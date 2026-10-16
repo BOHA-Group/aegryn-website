@@ -18,7 +18,7 @@ import { ACTION_FORM_UI } from '@/content/advisory/actionForm'
 const CYCLE_SLUGS = ['general', 'lancement', 'croissance', 'restructuration', 'acquisition', 'transmission'] as const
 
 const schema = z.object({
-  metier:   z.enum(['strategie', 'conformite', 'technologie', 'talent', 'ma', 'finance', 'operations', ...CYCLE_SLUGS]),
+  metier:   z.enum(['strategie', 'conformite', 'technologie', 'talent', 'ma', 'finance', 'operations', 'program', ...CYCLE_SLUGS]),
   action:   z.string().min(1).max(60),
   fullName: z.string().min(2).max(120),
   email:    z.string().email(),

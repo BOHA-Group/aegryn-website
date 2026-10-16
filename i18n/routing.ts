@@ -87,7 +87,7 @@ export const routing = defineRouting({
     '/services/acquisition-support':      '/services/acquisition-support',
     '/advisory/finance-performance':      '/advisory/finance-performance',
     '/advisory/operations-excellence':     '/advisory/operations-excellence',
-    '/advisory/project-management':       '/advisory/project-management',
+    '/advisory/project-program-management': '/advisory/project-program-management',
     '/valuation':                         '/valuation',
     '/roadmap':                           '/roadmap',
     '/terms/use':                         '/terms/use',

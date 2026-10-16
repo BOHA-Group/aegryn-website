@@ -72,7 +72,7 @@ export const FRANCHIR_NL: CycleContent[] = [
         { quote: 'Onze groep creëert een nieuwe activiteit die afgezonderd moet worden.', decision: 'Welk domein isoleren van het informatiesysteem van de groep?', metiers: ['technologie', 'strategie'], deliverable: 'Isolatieplan en roadmap van de eerste 6 maanden' },
       ],
     },
-    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire'], available: ['talent', 'recruter'] },
+    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire', 'program'], available: ['talent', 'recruter'] },
     bySize: {
       title: 'Naar grootte',
       items: [
@@ -146,7 +146,7 @@ export const FRANCHIR_NL: CycleContent[] = [
         { quote: 'Ik moet een tweede markt of een tweede dochteronderneming openen.', decision: 'Welk tempo, welke prioriteiten, welke afstand?', metiers: ['strategie'], deliverable: 'Vier-testsraster toegepast op de opties' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter', 'program'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Naar grootte',
       items: [
@@ -223,7 +223,7 @@ export const FRANCHIR_NL: CycleContent[] = [
         { quote: 'Ik heb een ad-interim leidinggevende nodig.', decision: 'Profiel, mandaat, duur', metiers: ['recruter'], deliverable: 'Missieprofiel en voorgeselecteerde kandidaten' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter', 'program'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Naar grootte',
       items: [

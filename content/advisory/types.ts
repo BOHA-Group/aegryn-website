@@ -7,7 +7,7 @@
  */
 
 export type AdvisoryClassicKey = 'strategy' | 'riskCompliance' | 'technology' | 'talentOrganization' | 'ma'
-export type AdvisoryKey = AdvisoryClassicKey | 'financePerformance' | 'operationsExcellence'
+export type AdvisoryKey = AdvisoryClassicKey | 'financePerformance' | 'operationsExcellence' | 'projectProgram'
 
 /** Cycles de vie FRANCHIR (slugs FR de /franchir/*) */
 export type LifecycleSlug = 'lancement' | 'croissance' | 'restructuration' | 'acquisition' | 'transmission'
@@ -116,5 +116,5 @@ export interface AdvisoryPageContent {
   }
   perspectives: { title: string; items: Perspective[] }
   /** Metier utilise comme parametre ?metier= vers /contact (voir content/advisory/actions.ts) */
-  cta:          { metier: 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' | 'operations' }
+  cta:          { metier: 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' | 'operations' | 'program' }
 }

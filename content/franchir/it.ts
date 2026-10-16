@@ -72,7 +72,7 @@ export const FRANCHIR_IT: CycleContent[] = [
         { quote: 'Il nostro gruppo crea una nuova attività da isolare.', decision: 'Quale perimetro isolare dal sistema informativo del gruppo?', metiers: ['technologie', 'strategie'], deliverable: 'Piano di isolamento e roadmap dei primi 6 mesi' },
       ],
     },
-    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire'], available: ['talent', 'recruter'] },
+    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire', 'program'], available: ['talent', 'recruter'] },
     bySize: {
       title: 'Secondo la dimensione',
       items: [
@@ -146,7 +146,7 @@ export const FRANCHIR_IT: CycleContent[] = [
         { quote: 'Devo aprire un secondo mercato o una seconda filiale.', decision: 'Quale ritmo, quali priorità, quale rinuncia?', metiers: ['strategie'], deliverable: 'Griglia dei quattro test applicata alle opzioni' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter', 'program'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Secondo la dimensione',
       items: [
@@ -223,7 +223,7 @@ export const FRANCHIR_IT: CycleContent[] = [
         { quote: 'Mi serve un dirigente ad interim.', decision: 'Profilo, mandato, durata', metiers: ['recruter'], deliverable: 'Scheda di missione e profili preselezionati' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter', 'program'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Secondo la dimensione',
       items: [

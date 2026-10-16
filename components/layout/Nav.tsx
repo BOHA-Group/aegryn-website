@@ -23,7 +23,7 @@ const CRAFT_METIERS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
   { labelKey: 'craftOperations',             href: '/advisory/operations-excellence' as LinkHref },
   { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
-  { labelKey: 'craftProgram',                href: '/advisory/project-management' as LinkHref },
+  { labelKey: 'craftProgram',                href: '/advisory/project-program-management' as LinkHref },
   { labelKey: 'craftSupportMA',              href: '/advisory/ma' as LinkHref },
 ]
 

@@ -72,7 +72,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Unsere Gruppe schafft eine neue Aktivität, die abzugrenzen ist.', decision: 'Welchen Umfang vom Informationssystem der Gruppe isolieren?', metiers: ['technologie', 'strategie'], deliverable: 'Isolationsplan und Fahrplan der ersten 6 Monate' },
       ],
     },
-    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire'], available: ['talent', 'recruter'] },
+    metiers: { mobilized: ['technologie', 'conformite', 'strategie', 'construire', 'program'], available: ['talent', 'recruter'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [
@@ -146,7 +146,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Ich muss einen zweiten Markt oder eine zweite Tochtergesellschaft eröffnen.', decision: 'Welches Tempo, welche Prioritäten, welcher Verzicht?', metiers: ['strategie'], deliverable: 'Vier-Tests-Raster auf die Optionen angewendet' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter', 'program'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [
@@ -223,7 +223,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Ich brauche eine Interim-Geschäftsleitung.', decision: 'Profil, Mandat, Dauer', metiers: ['recruter'], deliverable: 'Mandatsprofil und vorausgewählte Kandidaten' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter', 'program'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [

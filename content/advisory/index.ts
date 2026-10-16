@@ -1,6 +1,7 @@
 import type { AdvisoryKey, AdvisoryClassicKey, AdvisoryPageContent } from './types'
 import { ADVISORY_FINANCE } from './finance'
 import { ADVISORY_OPERATIONS } from './operations'
+import { ADVISORY_PROGRAM } from './program'
 import { ADVISORY_FR } from './fr'
 import { ADVISORY_EN } from './en'
 import { ADVISORY_DE } from './de'
@@ -25,6 +26,7 @@ const BY_LOCALE: Record<string, Record<AdvisoryClassicKey, AdvisoryPageContent>>
 export function getAdvisoryPage(locale: string, key: AdvisoryKey): AdvisoryPageContent | null {
   if (key === 'financePerformance') return ADVISORY_FINANCE[locale] ?? ADVISORY_FINANCE.fr
   if (key === 'operationsExcellence') return ADVISORY_OPERATIONS[locale] ?? ADVISORY_OPERATIONS.fr
+  if (key === 'projectProgram') return ADVISORY_PROGRAM[locale] ?? ADVISORY_PROGRAM.fr
   return (BY_LOCALE[locale] ?? BY_LOCALE.fr)?.[key] ?? null
 }
 

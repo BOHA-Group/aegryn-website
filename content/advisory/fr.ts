@@ -276,6 +276,7 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Obligations légales : Risques & Conformité', href: '/advisory/risk-compliance' },
       { label: "Audit d'une cible : M&A", href: '/advisory/ma' },
+      { label: 'La gouvernance et le transfert à l’exploitation des projets : Pilotage', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Ce que nous constatons',
@@ -400,6 +401,7 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Recherche et placement : Recruter', href: '/talent' },
       { label: 'Choix de cap : Stratégie', href: '/advisory/strategy' },
       { label: "Équipe d'une cible : M&A", href: '/advisory/ma' },
+      { label: 'La gouvernance de programme : Pilotage', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Ce que nous constatons',
@@ -520,6 +522,7 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: "Profondeur d'audit : Technologie", href: '/advisory/technology' },
       { label: 'Équipes : Talent & Organisation', href: '/advisory/talent-organization' },
           { label: 'L’intégration opérationnelle (sites, achats, systèmes) : Opérations', href: '/advisory/operations-excellence' },
+      { label: 'Le pilotage de l’intégration : Pilotage', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Ce que nous constatons',

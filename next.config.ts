@@ -67,6 +67,7 @@ const nextConfig: NextConfig = {
       { source: '/client/partner/nda',                destination: '/client/nda-required?need=partner', permanent: true },
       { source: '/client/seller/nda-view',            destination: '/client/nda-required',            permanent: true },
       /* Anciennes URLs internes aegryn.com */
+      { source: '/:locale/advisory/project-management', destination: '/:locale/advisory/project-program-management', permanent: true },
       { source: '/:locale/grade/methodology',        destination: '/:locale/grade',                  permanent: true },
       { source: '/:locale/grade/grading-system',     destination: '/:locale/grade',                  permanent: true },
       { source: '/grade/methodology',                 destination: '/grade',                          permanent: true },

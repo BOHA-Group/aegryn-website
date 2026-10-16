@@ -267,6 +267,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Wettelijke verplichtingen: Risico’s & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Audit van een doelwit: M&A', href: '/advisory/ma' },
+      { label: 'Projectgovernance en de overdracht naar beheer: Projectmanagement', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Wat wij vaststellen',
@@ -389,6 +390,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Zoeken en plaatsen: Rekruteren', href: '/talent' },
       { label: 'Koerskeuze: Strategie', href: '/advisory/strategy' },
       { label: 'Team van een doelwit: M&A', href: '/advisory/ma' },
+      { label: 'De programmagovernance: Projectmanagement', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Wat wij vaststellen',
@@ -507,6 +509,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Auditdiepte: Technologie', href: '/advisory/technology' },
       { label: 'Teams: Talent & Organisatie', href: '/advisory/talent-organization' },
           { label: 'De operationele integratie (vestigingen, inkoop, systemen): Operations', href: '/advisory/operations-excellence' },
+      { label: 'De sturing van de integratie: Projectmanagement', href: '/advisory/project-program-management' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

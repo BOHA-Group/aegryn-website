@@ -6,7 +6,7 @@
  * stables (non traduits) ; seuls label/question/options sont localisés.
  */
 
-export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' | 'operations'
+export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' | 'operations' | 'program'
 export type ActionSlug =
   | 'echange' | 'arbitrage'
   | 'cartographie'
@@ -15,6 +15,7 @@ export type ActionSlug =
   | 'revue-cible'
   | 'tresorerie' | 'rentabilite' | 'echange30'
   | 'flux' | 'goulots'
+  | 'cadrage' | 'portefeuille'
 
 export interface ActionDef {
   /** Libellé du bouton, aussi utilisé comme titre du formulaire */
@@ -36,10 +37,14 @@ export const PAGE_ACTIONS: Record<Metier, { echange: ActionSlug; action: ActionS
   ma:           { echange: 'echange', action: 'revue-cible' },
   finance:      { echange: 'echange30', action: 'tresorerie', action2: 'rentabilite' },
   operations:   { echange: 'echange30', action: 'flux', action2: 'goulots' },
+  program:      { echange: 'echange30', action: 'cadrage', action2: 'portefeuille' },
 }
 
 export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> = {
-  fr: {
+  fr: {    'program:cadrage': { label: 'Cadrer votre projet', question: "Quel projet, et à quel horizon ?", questionType: 'text' },
+    'program:portefeuille': { label: 'Évaluer votre portefeuille', question: "Combien de projets courent en parallèle ?", questionType: 'text' },
+    'program:echange30': { label: 'Échanger 30 minutes', question: "Votre contexte, en deux lignes ?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Poser votre décision', question: 'Quelle décision, et pour quand ?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Faire arbitrer votre décision', question: 'Quelles options envisagez-vous ?', questionType: 'text' },
     'conformite:echange':   { label: 'Évaluer votre exposition', question: 'Dans quels pays opérez-vous ?', questionType: 'text' },
@@ -57,7 +62,10 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'operations:goulots': { label: 'Évaluer vos goulots', question: "Quel point limite aujourd’hui votre production ou votre service ?", questionType: 'text' },
     'operations:echange30': { label: 'Échanger 30 minutes', question: "Votre contexte, en deux lignes ?", questionType: 'text' },
   },
-  en: {
+  en: {    'program:cadrage': { label: 'Frame your project', question: "Which project, and on what horizon?", questionType: 'text' },
+    'program:portefeuille': { label: 'Assess your portfolio', question: "How many projects are running in parallel?", questionType: 'text' },
+    'program:echange30': { label: 'Book 30 minutes', question: "Your context, in two lines?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Frame your decision', question: 'Which decision, and by when?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Have your decision arbitrated', question: 'Which options are you considering?', questionType: 'text' },
     'conformite:echange':   { label: 'Assess your exposure', question: 'Which countries do you operate in?', questionType: 'text' },
@@ -75,7 +83,10 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'operations:goulots': { label: 'Assess your bottlenecks', question: "Which point currently limits your production or service?", questionType: 'text' },
     'operations:echange30': { label: 'Book 30 minutes', question: "Your context, in two lines?", questionType: 'text' },
   },
-  de: {
+  de: {    'program:cadrage': { label: 'Ihr Projekt einrahmen', question: "Welches Projekt, und in welchem Zeithorizont?", questionType: 'text' },
+    'program:portefeuille': { label: 'Ihr Portfolio bewerten', question: "Wie viele Projekte laufen parallel?", questionType: 'text' },
+    'program:echange30': { label: '30 Minuten austauschen', question: "Ihr Kontext, in zwei Zeilen?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Ihre Entscheidung rahmen', question: 'Welche Entscheidung, und bis wann?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Ihre Entscheidung prüfen lassen', question: 'Welche Optionen ziehen Sie in Betracht?', questionType: 'text' },
     'conformite:echange':   { label: 'Ihre Exposition bewerten', question: 'In welchen Ländern sind Sie tätig?', questionType: 'text' },
@@ -93,7 +104,10 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'operations:goulots': { label: 'Ihre Engpässe bewerten', question: "Welcher Punkt begrenzt derzeit Ihre Produktion oder Ihren Service?", questionType: 'text' },
     'operations:echange30': { label: '30 Minuten austauschen', question: "Ihr Kontext, in zwei Zeilen?", questionType: 'text' },
   },
-  it: {
+  it: {    'program:cadrage': { label: 'Inquadrare il vostro progetto', question: "Quale progetto, e in che orizzonte?", questionType: 'text' },
+    'program:portefeuille': { label: 'Valutare il vostro portafoglio', question: "Quanti progetti corrono in parallelo?", questionType: 'text' },
+    'program:echange30': { label: 'Scambiare 30 minuti', question: "Il vostro contesto, in due righe?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Porre la vostra decisione', question: 'Quale decisione, ed entro quando?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Far arbitrare la vostra decisione', question: 'Quali opzioni state considerando?', questionType: 'text' },
     'conformite:echange':   { label: 'Valutare la vostra esposizione', question: 'In quali paesi operate?', questionType: 'text' },
@@ -111,7 +125,10 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'operations:goulots': { label: 'Valutare i vostri colli di bottiglia', question: "Quale punto limita oggi la vostra produzione o il vostro servizio?", questionType: 'text' },
     'operations:echange30': { label: 'Scambiare 30 minuti', question: "Il vostro contesto, in due righe?", questionType: 'text' },
   },
-  es: {
+  es: {    'program:cadrage': { label: 'Encuadrar su proyecto', question: "¿Qué proyecto, y en qué horizonte?", questionType: 'text' },
+    'program:portefeuille': { label: 'Evaluar su cartera', question: "¿Cuántos proyectos corren en paralelo?", questionType: 'text' },
+    'program:echange30': { label: 'Intercambiar 30 minutos', question: "Su contexto, en dos líneas ?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Plantear su decisión', question: '¿Qué decisión, y para cuándo?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Hacer arbitrar su decisión', question: '¿Qué opciones está considerando?', questionType: 'text' },
     'conformite:echange':   { label: 'Evaluar su exposición', question: '¿En qué países opera?', questionType: 'text' },
@@ -129,7 +146,10 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'operations:goulots': { label: 'Evaluar sus cuellos de botella', question: "¿Qué punto limita hoy su producción o su servicio?", questionType: 'text' },
     'operations:echange30': { label: 'Intercambiar 30 minutos', question: "Su contexto, en dos líneas ?", questionType: 'text' },
   },
-  nl: {
+  nl: {    'program:cadrage': { label: 'Uw project kaderen', question: "Welk project, en op welke horizon?", questionType: 'text' },
+    'program:portefeuille': { label: 'Uw portefeuille beoordelen', question: "Hoeveel projecten lopen er parallel?", questionType: 'text' },
+    'program:echange30': { label: '30 minuten spreken', question: "Uw context, in twee regels?", questionType: 'text' },
+
     'strategie:echange':    { label: 'Uw beslissing kaderen', question: 'Welke beslissing, en tegen wanneer?', questionType: 'text' },
     'strategie:arbitrage':  { label: 'Uw beslissing laten toetsen', question: 'Welke opties overweegt u?', questionType: 'text' },
     'conformite:echange':   { label: 'Uw blootstelling beoordelen', question: 'In welke landen bent u actief?', questionType: 'text' },

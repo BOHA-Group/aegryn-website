@@ -51,6 +51,7 @@ const STATIC_ROUTES = [
   { path: '/advisory/strategy',                  priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/operations-excellence',   priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/finance-performance',    priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/project-program-management', priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/risk-compliance',           priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/talent-organization',       priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/advisory/ma',                        priority: 0.8,  changeFrequency: 'monthly' as const },

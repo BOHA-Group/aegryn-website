@@ -1,5 +1,5 @@
 /**
- * Bloc « Mettre en œuvre » des pages métier du cabinet, et pages métier en préparation.
+ * Bloc « Mettre en œuvre » des pages métier du cabinet.
  * Cadrer et réaliser : chaque métier couvre la décision et la mise en œuvre « jusqu'à la réception ».
  */
 export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it' | 'nl'
@@ -68,28 +68,14 @@ export const IMPLEMENT_ITEMS: Record<string, L6List> = {
     it: ['Condurre il processo dalla revisione alla firma: calendario, parti coinvolte, documenti.', 'Preparare e coordinare la revisione tecnica e organizzativa.', 'Guidare l’integrazione dopo l’operazione: team, sistemi, i primi 100 giorni.', 'Seguire impegni e sinergie fino alla consegna.'],
     nl: ['Het proces leiden van beoordeling tot ondertekening: planning, betrokkenen, documenten.', 'De technische en organisatorische beoordeling voorbereiden en coördineren.', 'De integratie na de transactie sturen: teams, systemen, de eerste 100 dagen.', 'Toezeggingen en synergieën volgen tot de oplevering.'],
   },
-}
-
-/** Les trois métiers ajoutés : pages en préparation (contenu à fournir), noindex. */
-export const NEW_PILLARS: Record<string, { slug: string; name: L6; desc: L6 }> = {
-  'project-management': {
-    slug: '/advisory/project-management',
-    name: L('Pilotage de projets et de programmes', 'Project and Programme Management', 'Projekt- und Programmsteuerung', 'Gestión de proyectos y programas', 'Gestione di progetti e programmi', 'Project- en programmamanagement'),
-    desc: L('Piloter projets et programmes jusqu’à la réception.', 'Leading projects and programmes through to acceptance.', 'Projekte und Programme bis zur Abnahme steuern.', 'Dirigir proyectos y programas hasta la entrega.', 'Guidare progetti e programmi fino alla consegna.', 'Projecten en programma’s leiden tot en met de oplevering.'),
+  projectProgram: {
+    fr: ['Mettre en place le bureau de projets (PMO) : méthode minimale, tableau de bord, rituels.', 'Piloter un projet ou un programme avec la direction : jalons, risques, arbitrages, reporting.', 'Conduire un plan de redressement : reprise du planning, du budget, de la relation fournisseur.', 'Réceptionner et transférer à l’exploitation : tests de réception, formation, reprise par les équipes.'],
+    en: ['Set up the project office (PMO): minimal method, dashboard, routines.', 'Lead a project or programme with management: milestones, risks, arbitration, reporting.', 'Lead a turnaround plan: recovering schedule, budget and vendor relationship.', 'Accept and transfer to operations: acceptance tests, training, handover to the teams.'],
+    de: ['Das Projektbüro (PMO) einrichten: minimale Methode, Dashboard, Routinen.', 'Ein Projekt oder Programm mit der Geschäftsleitung steuern: Meilensteine, Risiken, Vermittlungen, Reporting.', 'Einen Sanierungsplan umsetzen: Wiederaufnahme von Planung, Budget und Anbieterbeziehung.', 'Abnehmen und an den Betrieb übergeben: Abnahmetests, Schulung, Übernahme durch die Teams.'],
+    es: ['Poner en marcha la oficina de proyectos (PMO): método mínimo, cuadro de mando, rutinas.', 'Dirigir un proyecto o programa con la dirección: hitos, riesgos, arbitrajes, reporting.', 'Dirigir un plan de reflotamiento: recuperación del calendario, del presupuesto, de la relación con el proveedor.', 'Recepcionar y transferir a explotación: pruebas de recepción, formación, reanudación por los equipos.'],
+    it: ['Istituite l’ufficio progetti (PMO): metodo minimo, cruscotto, rituali.', 'Pilotare un progetto o un programma con la direzione: tappe, rischi, arbitraggi, reporting.', 'Condurre un piano di risanamento: ripresa di calendario, budget e rapporto con il fornitore.', 'Collaudare e trasferire all’esercizio: test di collaudo, formazione, ripresa da parte dei team.'],
+    nl: ['Het projectbureau (PMO) inrichten: minimale methode, dashboard, routines.', 'Een project of programma met de directie sturen: mijlpalen, risico’s, bemiddelingen, reporting.', 'Een saneringsplan uitvoeren: herstel van planning, budget en leveranciersrelatie.', 'Aannemen en overdragen aan beheer: acceptatietests, training, overname door de teams.'],
   },
-}
-
-export const COMING_UI = {
-  notice: L(
-    'Page en préparation. Pour échanger sur ce métier, notre équipe vous répond sous deux jours ouvrés.',
-    'Page in preparation. To discuss this discipline, our team replies within two business days.',
-    'Seite in Vorbereitung. Für ein Gespräch zu diesem Fachgebiet antwortet unser Team innerhalb von zwei Werktagen.',
-    'Página en preparación. Para hablar de este oficio, nuestro equipo responde en dos días hábiles.',
-    'Pagina in preparazione. Per parlare di questo mestiere, il nostro team risponde entro due giorni lavorativi.',
-    'Pagina in voorbereiding. Om over dit vakgebied te spreken, antwoordt ons team binnen twee werkdagen.'),
-  cta: L('Échanger 30 minutes', 'Book 30 minutes', '30 Minuten austauschen', 'Intercambiar 30 minutos', 'Scambiare 30 minuti', '30 minuten spreken'),
-  all: L('Tous les métiers', 'All disciplines', 'Alle Fachgebiete', 'Todos los oficios', 'Tutti i mestieri', 'Alle vakgebieden'),
-  label: L('Cadrer et réaliser', 'Frame and deliver', 'Rahmen setzen und umsetzen', 'Encuadrar y realizar', 'Inquadrare e realizzare', 'Kaderen en realiseren'),
 }
 
 /** Lignes d'accompagnement sous le bloc, par métier (ex. Finance : Sélectionner + régimes d'intervention). */
@@ -109,5 +95,13 @@ export const IMPLEMENT_NOTES: Record<string, L6List> = {
     es: ['Un director financiero interino puede reforzar el equipo: esta misión pasa por Selección (perfiles interinos).', 'Modalidades de intervención: ejecutamos, ejecutamos con expertos, o coordinamos expertos elegidos por usted.'],
     it: ['Un direttore finanziario ad interim può rafforzare il team: questo mandato passa per Selezione (profili ad interim).', 'Modalità d’intervento: attuiamo, attuiamo con degli esperti, o coordiniamo esperti scelti da voi.'],
     nl: ['Een interim-CFO kan het team versterken: deze opdracht loopt via Selectie (interimprofielen).', 'Inzetvormen: wij voeren uit, wij voeren uit met experts, of wij coördineren experts die u heeft gekozen.'],
+  },
+  projectProgram: {
+    fr: ['Une direction de projet à temps partiel peut renforcer l’équipe : cette mission passe par Sélectionner (profils de transition).', 'Régimes d’intervention : nous réalisons, nous réalisons avec des experts, ou nous coordonnons des experts que vous avez choisis.'],
+    en: ['A part-time project director can reinforce the team: this assignment runs through Talent (interim profiles).', 'Engagement modes: we deliver, we deliver with experts, or we coordinate experts of your choosing.'],
+    de: ['Eine Projektleitung in Teilzeit kann das Team verstärken: Dieser Auftrag läuft über die Auswahl (Interim-Profile).', 'Einsatzformen: Wir setzen um, wir setzen mit Experten um, oder wir koordinieren von Ihnen gewählte Experten.'],
+    es: ['Una dirección de proyectos a tiempo parcial puede reforzar el equipo: esta misión pasa por Selección (perfiles interinos).', 'Modalidades de intervención: ejecutamos, ejecutamos con expertos, o coordinamos expertos elegidos por usted.'],
+    it: ['Una direzione di progetto a tempo parziale può rafforzare il team: questo mandato passa per Selezione (profili ad interim).', 'Modalità d’intervento: attuiamo, attuiamo con degli esperti, o coordiniamo esperti scelti da voi.'],
+    nl: ['Een deeltijdse projectleiding kan het team versterken: deze opdracht loopt via Selectie (interimprofielen).', 'Inzetvormen: wij voeren uit, wij voeren uit met experts, of wij coördineren experts die u heeft gekozen.'],
   },
 }
