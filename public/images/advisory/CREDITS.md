@@ -34,3 +34,46 @@ Même licence Unsplash, 1200 px, qualité 75. Chaque vignette illustre une situa
 | laptop-hands.jpg | https://unsplash.com/photos/1515378791036-0648a3ef77b2 |
 | meeting-room.jpg | https://unsplash.com/photos/1497366811353-6870744d04b2 |
 | developer-desk.jpg | https://unsplash.com/photos/1551434678-e076c223a692 |
+
+## Vignettes ajoutées (Pexels, octobre 2026)
+
+Licence Pexels : usage commercial autorisé, sans attribution obligatoire.
+Téléchargées en 1200 px. Une image n'apparaît qu'une fois sur tout le site.
+
+| Fichier | Source |
+|---|---|
+| fin-swiss-francs.jpg | https://www.pexels.com/photo/39010335/ |
+| fin-calculator-docs.jpg | https://www.pexels.com/photo/8297220/ |
+| fin-signing-table.jpg | https://www.pexels.com/photo/6814521/ |
+| fin-revenue-report.jpg | https://www.pexels.com/photo/7947700/ |
+| fin-budget-flatlay.jpg | https://www.pexels.com/photo/16600134/ |
+| fin-archive-files.jpg | https://www.pexels.com/photo/17846111/ |
+| ops-assembly-line.jpg | https://www.pexels.com/photo/34221993/ |
+| ops-steel-measure.jpg | https://www.pexels.com/photo/36003961/ |
+| ops-warehouse-forklift.jpg | https://www.pexels.com/photo/36398150/ |
+| ops-food-production.jpg | https://www.pexels.com/photo/36823725/ |
+| ops-engineer-site.jpg | https://www.pexels.com/photo/8961126/ |
+| ops-industrial-machine.jpg | https://www.pexels.com/photo/5953729/ |
+| pm-task-board.jpg | https://www.pexels.com/photo/6804093/ |
+| pm-site-plans.jpg | https://www.pexels.com/photo/37198874/ |
+| pm-sticky-discussion.jpg | https://www.pexels.com/photo/4623474/ |
+| pm-transformation-workshop.jpg | https://www.pexels.com/photo/9034280/ |
+| pm-site-walkway.jpg | https://www.pexels.com/photo/8961153/ |
+| pm-launch-presentation.jpg | https://www.pexels.com/photo/15141496/ |
+| tal-overloaded-folders.jpg | https://www.pexels.com/photo/6538616/ |
+| tal-colleagues-office.jpg | https://www.pexels.com/photo/8297442/ |
+| tal-serious-talk.jpg | https://www.pexels.com/photo/9869647/ |
+| tal-interview.jpg | https://www.pexels.com/photo/5668863/ |
+| tal-family-meeting.jpg | https://www.pexels.com/photo/6340630/ |
+| tal-cultures-meeting.jpg | https://www.pexels.com/photo/8730181/ |
+| ma-deal-handshake.jpg | https://www.pexels.com/photo/8428084/ |
+| ma-contract-signing.jpg | https://www.pexels.com/photo/7875839/ |
+| ma-growth-presentation.jpg | https://www.pexels.com/photo/39190574/ |
+| ma-board-presentation.jpg | https://www.pexels.com/photo/6172540/ |
+| ma-tech-audit.jpg | https://www.pexels.com/photo/442151/ |
+| risk-doc-review.jpg | https://www.pexels.com/photo/7735699/ |
+| risk-audit-docs.jpg | https://www.pexels.com/photo/8970297/ |
+| risk-port-containers.jpg | https://www.pexels.com/photo/9211513/ |
+| tech-solo-coder.jpg | https://www.pexels.com/photo/16018144/ |
+| tech-code-screen.jpg | https://www.pexels.com/photo/36571389/ |
+| tech-server-rack.jpg | https://www.pexels.com/photo/37730211/ |

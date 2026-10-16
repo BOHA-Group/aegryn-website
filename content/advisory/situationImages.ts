@@ -3,72 +3,75 @@ import type { AdvisoryKey } from './types'
 /**
  * Visuels des cartes « Six situations », par métier, dans l'ordre des situations.
  * Centralisés ici : une image ne dépend pas de la langue.
- * Règles : aucune image répétée dans une page, aucune image de hero (`/images/advisory/*.webp`),
- * ni image déjà utilisée ailleurs sur le site (handshake, meeting-room : page Talent / blog).
+ * Zéro doublon sur tout le site : chaque image n'apparaît qu'une fois, dans une seule page
+ * métier ; aucune image de hero (`/images/advisory/*.webp`), ni image utilisée ailleurs
+ * (handshake, meeting-room : page Talent / blog — elles restent dans le dossier, hors usage).
+ * Crédits et sources : public/images/advisory/CREDITS.md
  */
+const S = '/images/advisory/situations'
 export const SITUATION_IMAGES: Record<AdvisoryKey, string[]> = {
   strategy: [
-    '/images/advisory/situations/dashboard-laptop.jpg',
-    '/images/advisory/situations/developer-desk.jpg',
-    '/images/advisory/situations/discussion-hands.jpg',
-    '/images/advisory/situations/office-corridor.jpg',
-    '/images/advisory/situations/planning-laptops.jpg',
-    '/images/advisory/situations/plan-writing.jpg',
+    `${S}/dashboard-laptop.jpg`,   // modèle qui s'érode
+    `${S}/developer-desk.jpg`,     // l'IA change le métier
+    `${S}/discussion-hands.jpg`,   // concurrent à vendre, alliance
+    `${S}/office-corridor.jpg`,    // nouveau marché
+    `${S}/planning-laptops.jpg`,   // plan à trois ans
+    `${S}/plan-writing.jpg`,       // stratégie dans ma tête
   ],
   riskCompliance: [
-    '/images/advisory/situations/laptop-hands.jpg',
-    '/images/advisory/situations/discussion-hands.jpg',
-    '/images/advisory/situations/laptop-phone.jpg',
-    '/images/advisory/situations/network-cables.jpg',
-    '/images/advisory/situations/planning-laptops.jpg',
-    '/images/advisory/situations/open-office.jpg',
+    `${S}/laptop-hands.jpg`,        // questionnaire sécurité
+    `${S}/risk-doc-review.jpg`,     // périmètre réglementaire
+    `${S}/laptop-phone.jpg`,        // IA sans règle
+    `${S}/network-cables.jpg`,      // incident
+    `${S}/risk-audit-docs.jpg`,     // audit investisseur ou acquéreur
+    `${S}/risk-port-containers.jpg`,// vente UE / Suisse
   ],
   technology: [
-    '/images/advisory/situations/server-room-walk.jpg',
-    '/images/advisory/situations/developer-desk.jpg',
-    '/images/advisory/situations/loft-office.jpg',
-    '/images/advisory/situations/laptop-phone.jpg',
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/network-cables.jpg',
+    `${S}/server-room-walk.jpg`,   // plateforme qui ralentit
+    `${S}/tech-solo-coder.jpg`,    // une seule personne comprend
+    `${S}/loft-office.jpg`,        // construire, acheter, s'allier
+    `${S}/tech-code-screen.jpg`,   // IA sans cadre
+    `${S}/open-office.jpg`,        // plus de directeur technique
+    `${S}/tech-server-rack.jpg`,   // où sont nos données
   ],
   talentOrganization: [
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/discussion-hands.jpg',
-    '/images/advisory/situations/laptop-hands.jpg',
-    '/images/advisory/situations/loft-office.jpg',
-    '/images/advisory/situations/plan-writing.jpg',
-    '/images/advisory/situations/office-corridor.jpg',
+    `${S}/tal-overloaded-folders.jpg`,  // tout passe par moi
+    `${S}/tal-colleagues-office.jpg`,   // équipe de direction pas encore une équipe
+    `${S}/tal-serious-talk.jpg`,        // profil clé veut partir
+    `${S}/tal-interview.jpg`,           // recruter un dirigeant
+    `${S}/tal-family-meeting.jpg`,      // transmettre dans deux à cinq ans
+    `${S}/tal-cultures-meeting.jpg`,    // deux cultures se rencontrent
   ],
   ma: [
-    '/images/advisory/situations/planning-laptops.jpg',
-    '/images/advisory/situations/dashboard-laptop.jpg',
-    '/images/advisory/situations/loft-office.jpg',
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/industrial-engineer.jpg',
-    '/images/advisory/situations/server-room-walk.jpg',
+    `${S}/ma-deal-handshake.jpg`,       // cible repérée
+    `${S}/ma-contract-signing.jpg`,     // on nous approche
+    `${S}/ma-growth-presentation.jpg`,  // programme de build-up
+    `${S}/ma-board-presentation.jpg`,   // intégration qui patine
+    `${S}/industrial-engineer.jpg`,     // cession d'activité, séparation
+    `${S}/ma-tech-audit.jpg`,           // cible technologique
   ],
   financePerformance: [
-    '/images/advisory/situations/dashboard-laptop.jpg',
-    '/images/advisory/situations/laptop-hands.jpg',
-    '/images/advisory/situations/planning-laptops.jpg',
-    '/images/advisory/situations/plan-writing.jpg',
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/loft-office.jpg',
+    `${S}/fin-swiss-francs.jpg`,       // trésorerie qui se tend
+    `${S}/fin-calculator-docs.jpg`,    // clients qui paient en retard
+    `${S}/fin-signing-table.jpg`,      // banquier ou investisseur
+    `${S}/fin-revenue-report.jpg`,     // rentabilité par activité
+    `${S}/fin-budget-flatlay.jpg`,     // situation qui se dégrade
+    `${S}/fin-archive-files.jpg`,      // qualité des résultats, data room
   ],
   operationsExcellence: [
-    '/images/advisory/situations/industrial-engineer.jpg',
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/laptop-phone.jpg',
-    '/images/advisory/situations/discussion-hands.jpg',
-    '/images/advisory/situations/plan-writing.jpg',
-    '/images/advisory/situations/office-corridor.jpg',
+    `${S}/ops-assembly-line.jpg`,        // coûts qui montent plus vite que les prix
+    `${S}/ops-steel-measure.jpg`,        // délais et qualité variables
+    `${S}/ops-warehouse-forklift.jpg`,   // fournisseur critique
+    `${S}/ops-food-production.jpg`,      // capacités sous-utilisées ou saturées
+    `${S}/ops-engineer-site.jpg`,        // réduire les coûts sans abîmer
+    `${S}/ops-industrial-machine.jpg`,   // reprise d'une activité
   ],
   projectProgram: [
-    '/images/advisory/situations/planning-laptops.jpg',
-    '/images/advisory/situations/open-office.jpg',
-    '/images/advisory/situations/dashboard-laptop.jpg',
-    '/images/advisory/situations/plan-writing.jpg',
-    '/images/advisory/situations/loft-office.jpg',
-    '/images/advisory/situations/developer-desk.jpg',
+    `${S}/pm-task-board.jpg`,              // trop de projets en parallèle
+    `${S}/pm-site-plans.jpg`,              // lancer un projet proprement
+    `${S}/pm-sticky-discussion.jpg`,       // projet qui dérape
+    `${S}/pm-transformation-workshop.jpg`, // transformation multi-équipes
+    `${S}/pm-site-walkway.jpg`,            // fournisseur ou intégrateur défaillant
+    `${S}/pm-launch-presentation.jpg`,     // livré mais pas adopté
   ],
 }
