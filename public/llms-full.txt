@@ -281,7 +281,7 @@ Incorporated: Aegryn, Switzerland
 | Verify | /fr/verify | Public certificate verification |
 | Verify certificate | /fr/verify/[code] | One URL per certificate |
 | Valuation | /fr/valuation | CIFSO Valuation Index + estimate |
-| Advisory | /fr/advisory | Advisory overview (5 pillars) |
+| Advisory | /fr/advisory | Advisory overview (eight disciplines) |
 | Business Strategy, and Innovation | /fr/advisory/strategy | Growth strategy, board advisory |
 | Risk Management, and Compliance | /fr/advisory/risk-compliance | NIS2, DORA, EU AI Act, incident readiness |
 | Technology, and Sovereignty | /fr/advisory/technology | Cybersecurity + AI audit |

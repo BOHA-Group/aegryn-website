@@ -68,8 +68,8 @@
     "craftSupportNetwork": "Partner & Expert Network",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
-    "craftTransact": "Accompany",
-    "craftTransactDesc": "The right decision for every lifecycle stage.",
+    "craftTransact": "By situation",
+    "craftTransactDesc": "Five key moments in a company’s life, with support suited to each.",
     "craftTransactSell": "Transfer & Sale",
     "craftTransactBuy": "Acquisition & External Growth",
     "craftTransactLancement": "Launch & Structuring",
@@ -170,7 +170,7 @@
     "boutiqueSoon": "Coming soon",
     "boutiqueSubmit": "Talk in full confidence",
     "craftFrameDeliver": "Frame and deliver",
-    "craftFrameDeliverDesc": "Eight disciplines, from decision to implementation.",
+    "craftFrameDeliverDesc": "Decide, steer and implement: eight disciplines, through to acceptance.",
     "craftFinance": "Finance and Performance",
     "craftOperations": "Operations and Operational Excellence",
     "craftProgram": "Project and Programme Management"
@@ -377,29 +377,10 @@
     "strip": "Aegryn Advisory | Integrated advisory for European tech organisations",
     "cta": "Get in touch",
     "hero": {
-      "title": "Eight disciplines, from decision to implementation.",
+      "title": "Eight disciplines to decide, steer and implement.",
       "desc": "We intervene at the moments when decisions define the trajectory of an organisation. One firm, from diagnosis to execution."
     },
     "pillars": {
-      "board": {
-        "title": "Board advisory",
-        "desc": "We act as strategic partners to founders and board members on high-stakes, long-horizon decisions.",
-        "dimensions": [
-          {
-            "label": "Governance and board composition",
-            "desc": ""
-          },
-          {
-            "label": "Valuation preparation (ahead of any transmission decision)",
-            "desc": ""
-          },
-          {
-            "label": "Strategic right-hand partner to the founder",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
-      },
       "strategy": {
         "title": "Business Strategy and Innovation",
         "desc": "We define with leaders the trajectory of their organisation and the conditions for its success.",
@@ -453,8 +434,13 @@
           {
             "label": "Organisational transformation",
             "desc": ""
+          },
+          {
+            "label": "Board advisory: high-stakes, long-horizon decisions",
+            "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/strategy"
       },
       "riskCompliance": {
         "title": "Risk Management and Compliance",
@@ -510,12 +496,31 @@
             "label": "Regulatory audit & due diligence readiness",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/risk-compliance"
       },
       "finance": {
         "title": "Finance and Performance",
-        "desc": "Steering financial performance, from decision to implementation.",
-        "dimensions": []
+        "desc": "We put figures on your decisions: thirteen-week cash flow, profitability, turnaround plan.",
+        "dimensions": [
+          {
+            "label": "Thirteen-week cash flow and scenarios",
+            "desc": ""
+          },
+          {
+            "label": "Profitability by activity and by customer",
+            "desc": ""
+          },
+          {
+            "label": "Three-year financial plan and lender file",
+            "desc": ""
+          },
+          {
+            "label": "Turnaround plan and quality of earnings before a sale",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/finance-performance"
       },
       "technology": {
         "title": "Technology and Sovereignty",
@@ -567,12 +572,31 @@
             "label": "Sovereignty and technological independence",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/technology"
       },
       "operations": {
         "title": "Operations and Operational Excellence",
-        "desc": "Making operations more reliable and efficient, from decision to implementation.",
-        "dimensions": []
+        "desc": "We look for the bottleneck that limits the rest: flow, costs, lead times, quality, suppliers.",
+        "dimensions": [
+          {
+            "label": "Order-to-cash flow map",
+            "desc": ""
+          },
+          {
+            "label": "Costs, lead times and quality, stage by stage",
+            "desc": ""
+          },
+          {
+            "label": "Capacity, purchasing and supplier dependency",
+            "desc": ""
+          },
+          {
+            "label": "Cost-reduction plan and operational integration",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/operations-excellence"
       },
       "talentOrganization": {
         "title": "Talent and Organization",
@@ -628,12 +652,31 @@
             "label": "Executive selection & organisational design",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/talent-organization"
       },
       "program": {
         "title": "Project and Programme Management",
-        "desc": "Leading projects and programmes through to acceptance.",
-        "dimensions": []
+        "desc": "We frame projects and programmes, install governance and lead delivery through to acceptance.",
+        "dimensions": [
+          {
+            "label": "Framing note: benefit, scope, decider",
+            "desc": ""
+          },
+          {
+            "label": "Project portfolio review and prioritisation",
+            "desc": ""
+          },
+          {
+            "label": "Governance, PMO and delivery steering",
+            "desc": ""
+          },
+          {
+            "label": "Turnaround, acceptance and handover to operations",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/project-program-management"
       },
       "ma": {
         "title": "M&A, Transactions and PMI",
@@ -681,7 +724,8 @@
             "label": "Carve-out and subsidiary disposal",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/ma"
       }
     },
     "network": {
@@ -742,7 +786,8 @@
     "ctaTitleTech": "Let's discuss your tech transformation",
     "ctaTitleStrategy": "Let's discuss your strategy",
     "ctaTitleRiskCompliance": "Let's discuss your regulatory exposure",
-    "ctaTitleTalentOrganization": "Let's discuss your organisation's depth"
+    "ctaTitleTalentOrganization": "Let's discuss your organisation's depth",
+    "pillarLink": "Explore the discipline"
   },
   "build": {
     "hero": {
@@ -1806,243 +1851,6 @@
       "phoneLabel": "Phone"
     }
   },
-  "advisoryPage": {
-    "hero": {
-      "label": "Aegryn Advisory",
-      "title": "Strategic clarity.\nOperational depth.\nActivated network.",
-      "desc1": "We support leaders in their strategic decisions, transformation and M&A operations at board level, with operational expertise and a network of specialists activated for each mission.",
-      "desc2": "What we advise, we apply to ourselves. Our own assets go through our own methods. This coherence is what differentiates Aegryn from a traditional advisory firm.",
-      "quote": "We have no generic playbooks.\nWe have methods proven in real environments.",
-      "cta": "Advisory mandate",
-      "ctaHref": "/contact?subject=advisory",
-      "cta2": "Find an expert",
-      "cta2Href": "/alliances",
-      "cta3": "Discuss my project",
-      "cta3Href": "/contact",
-      "metaTitle": "Aegryn Advisory: Strategy, Tech & M&A | Switzerland & Europe",
-      "metaDesc": "Strategy, tech and M&A advisory for leaders and organisations. Board advisory, transformation, operating partner for investors. Expert network activated per mission. Switzerland & Europe."
-    },
-    "why": {
-      "label": "Why Aegryn Advisory?",
-      "desc1": "Strategy, technology and M&A are not three separate disciplines. They are three facets of the same reality: how to create, grow and transfer value in a consolidating European tech market.",
-      "desc2": "Aegryn Advisory exists for leaders who want a partner who understands strategy, tech and transactions : all three. One partner for all three.",
-      "tagline": "We step in when decisions define the trajectory of your organisation."
-    },
-    "whoFor": {
-      "label": "Who is it for?",
-      "items": [
-        {
-          "title": "Startups & Scale-ups",
-          "desc": "Lay the right strategic and technology foundations, frame the next cycle and prepare the next step."
-        },
-        {
-          "title": "Growing SMEs",
-          "desc": "Frame, transform and structure the organisation before growing, acquiring or handing over."
-        },
-        {
-          "title": "Mid-sized companies",
-          "desc": "Strategy, technology, compliance and talent: a single counterpart for the decisions that commit the group."
-        },
-        {
-          "title": "Funds & Investors",
-          "desc": "You have invested in a tech company. You need an independent perspective on its strategy, its leadership team or its readiness for exit."
-        },
-        {
-          "title": "Organisations in transformation",
-          "desc": "You are managing a transformation or divestiture project. We structure and accompany the process end to end."
-        }
-      ]
-    },
-    "experts": {
-      "label": "ADVISORY TECH : OPERATIONAL",
-      "desc": "Aegryn Advisory Tech intervenes on the technical dimensions that define the robustness and certifiability of an organisation and its assets: before, during, or independently of any transaction.",
-      "items": [
-        {
-          "title": "Security Audit & Cybersecurity",
-          "desc": "Penetration testing (black/grey/white box), attack surface audit, application security, cloud infrastructure, NIS2 compliance."
-        },
-        {
-          "title": "Technical Architecture & Engineering",
-          "desc": "CTO as a service, full-stack architecture review, scalability, migration, stack selection, technical documentation."
-        },
-        {
-          "title": "DevSecOps & Software Quality",
-          "desc": "CI/CD, test coverage, technical debt reduction, QA automation, observability (logs, monitoring, alerts). Directly improves the Code score (dimension C) of the Aegryn grade."
-        },
-        {
-          "title": "Data & Artificial Intelligence",
-          "desc": "AI strategy, process automation, ML/MLOps pipelines, model evaluation, data governance."
-        },
-        {
-          "title": "EU AI Act Compliance & AI Ethics",
-          "desc": "AI system classification by risk level, regulatory technical documentation, AI system register, LLM red-teaming, algorithmic bias audit."
-        },
-        {
-          "title": "Data Engineering & Data Architecture",
-          "desc": "Data modelling, data warehouse, data lake, data governance and quality, portability and mastery of proprietary datasets."
-        },
-        {
-          "title": "Design & User Experience",
-          "desc": "UX/UI, design system, product identity, user journeys, usability testing."
-        },
-        {
-          "title": "Product Management & Roadmap",
-          "desc": "Product definition, backlog prioritisation, activation and retention metrics, roadmap coherence with certifiable value."
-        },
-        {
-          "title": "GDPR/LPD Compliance & Privacy by Design",
-          "desc": "Processing register, vendor DPAs, privacy policy, right to erasure, transfers outside the EU, Swiss LPD compliance."
-        },
-        {
-          "title": "Digital Accessibility",
-          "desc": "WCAG 2.1 AA audit, European Accessibility Act compliance (mandatory EU since June 2025). Critical for HealthTech and EdTech."
-        }
-      ],
-      "intro": "Our own assets go through our own methods. When we advise on cybersecurity, AI or architecture, we do so from inside a group that builds and operates its own systems.",
-      "useCases": {
-        "label": "Business use cases",
-        "items": [
-          {
-            "profile": "Financial institution",
-            "desc": "Regulatory compliance (NIS2, DORA, EU AI Act), risk scoring, secure API integration, data sovereignty audit."
-          },
-          {
-            "profile": "High-growth scale-up",
-            "desc": "Scalable architecture, technical debt management, data and AI strategy, CTO as a service support during scale phase."
-          },
-          {
-            "profile": "SME without internal IT",
-            "desc": "Interim CTO, cloud migration, deployment of proprietary business tools, system security without in-house IT expertise."
-          },
-          {
-            "profile": "Mid-sized company in transformation",
-            "desc": "Cybersecurity audit, IT risk mapping, AI roadmap, enterprise-wide data governance."
-          }
-        ]
-      }
-    },
-    "approach": {
-      "label": "Our approach",
-      "title": "Senior time, actionable deliverables, shared accountability.",
-      "desc": "We don't bill for presence. We deliver diagnostics, recommendations and execution plans. Guaranteed senior time, direct interlocutors, no intermediary layers.",
-      "cta": "Book a session"
-    },
-    "valuationCta": {
-      "label": "Asset valuation",
-      "title": "Want to estimate the value of your asset before starting a remediation process?",
-      "cta": "Estimate my asset",
-      "href": "/valuation"
-    },
-    "strategy": {
-      "label": "BUSINESS STRATEGY & BOARD ADVISORY",
-      "intro": "Beyond operational advisory, we support leaders on the decisions that define the trajectory of their strategic plan. A senior, independent perspective, rooted in execution.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Growth strategy & operating model",
-          "desc": "Market positioning, business model design, internationalisation strategy, operating model review."
-        },
-        {
-          "num": "02",
-          "title": "Exit preparation & pre-sale valuation",
-          "desc": "Investor storytelling, strategic data room, value audit before sale or fundraising. We prepare your company to be seen at its best.\n\nWe step in where bank financing stops: on the strategic, technological and M&A layer that determines the real value of the business at the time of transfer. A complementary service to your financial partners, not an alternative."
-        },
-        {
-          "num": "03",
-          "title": "Organisational transformation",
-          "desc": "Restructuring, organisational design, change management, support for leadership teams during transitions."
-        },
-        {
-          "num": "04",
-          "title": "Governance & Board Advisory",
-          "desc": "Board composition, clarification of executive roles, founder support during scale-up or handover phases."
-        },
-        {
-          "num": "05",
-          "title": "Tech independence & digital mastery",
-          "desc": "Technology dependency audit, multi-cloud strategy, vendor lock-in reduction, migration to durable proprietary assets."
-        },
-        {
-          "num": "06",
-          "title": "Strategic intelligence & market watch",
-          "desc": "Competitive mapping, weak signal analysis, sector positioning for M&A or organic growth."
-        }
-      ]
-    },
-    "riskCompliance": {
-      "label": "RISK & COMPLIANCE: SECURING THE TRAJECTORY",
-      "intro": "Regulatory obligations are no longer a side layer: they condition access to financing, enterprise clients and acquirers. We help leaders document their compliance before it is required.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Risk mapping & governance",
-          "desc": "Identification of the regulatory, operational and cyber risks specific to your organisation. Structuring of risk governance at executive committee level."
-        },
-        {
-          "num": "02",
-          "title": "Regulatory compliance (NIS2, DORA, AI Act)",
-          "desc": "Gap diagnostic, compliance roadmap and documentation enforceable before regulators, clients and financial partners."
-        },
-        {
-          "num": "03",
-          "title": "Business continuity & incident response",
-          "desc": "Business continuity and disaster recovery plans, incident detection and reporting procedures within regulatory deadlines (24h/72h)."
-        },
-        {
-          "num": "04",
-          "title": "Audit & due diligence readiness",
-          "desc": "Building a compliance evidence file usable during a regulatory audit, an M&A due diligence process or an insurer's request."
-        }
-      ]
-    },
-    "ma": {
-      "label": "ADVISORY M&A : TRANSACTION STRUCTURING",
-      "intro": "We orchestrate around each transaction the experts suited to its nature and ticket. Legal, tax, financial, HR : mobilised at the right moment, not all at once.",
-      "phases": [
-        {
-          "num": "01",
-          "title": "Pre-transaction",
-          "desc": "Strategic audit, valuation, data room preparation, investor storytelling, target or acquirer identification."
-        },
-        {
-          "num": "02",
-          "title": "Due Diligence",
-          "desc": "Coordination and supervision of technical, financial, legal and HR DD. Risk analysis, adjustment recommendations."
-        },
-        {
-          "num": "03",
-          "title": "Structuring",
-          "desc": "Transaction structure design, terms negotiation, mobilisation of appropriate legal and tax experts."
-        },
-        {
-          "num": "04",
-          "title": "Closing & Post-acquisition",
-          "desc": "Signing support, post-acquisition integration, selection of execution teams."
-        }
-      ],
-      "fundsNote": "We also support funds and family offices as a transitional, outsourced operating partner on their portfolio companies.",
-      "fundsHref": "/investisseurs",
-      "fundsLink": "Learn more about our investor role"
-    },
-    "network": {
-      "label": "EXPERT NETWORK : SKILLS ACTIVATED PER MISSION",
-      "title": "The right experts. At the right time. On every mission.",
-      "desc": "For specialist missions, we activate our network of verified independent experts. M&A lawyers, chartered accountants, tax advisors, statutory auditors, digital law specialists. A group of specialists that extends our capabilities without weighing down our structure. The equivalent of inorganic growth activated per mission.",
-      "cta1": "Access the network →",
-      "cta1Href": "/alliances",
-      "cta2": "Join the network →",
-      "cta2Href": "/alliances#candidater"
-    },
-    "industries": {
-      "label": "INDUSTRIES COVERED",
-      "intro": "We work across all industries where tech, data and valuation create or protect value."
-    },
-    "midCta": {
-      "title": "A topic to explore together?",
-      "cta": "Let's talk",
-      "href": "/contact"
-    }
-  },
   "stats": {
     "assets": "assets",
     "languages": "languages",
@@ -2060,7 +1868,7 @@
     "companyLabel": "Company",
     "servicesLabel": "Services",
     "footerCol1Title": "Aegryn",
-    "footerCol2Title": "The firm",
+    "footerCol2Title": "Our craft",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publications",
     "blogLink": "Blog",
@@ -2100,9 +1908,7 @@
     "col4Contact": "Contact us",
     "col4Careers": "Work at Aegryn",
     "col4Talent": "Selection & Transition",
-    "footerCraftSupport": "Frame",
-    "footerCraftTransact": "Accompany",
-    "footerCraftBuild": "Deliver",
+    "footerCraftTransact": "By situation",
     "footerGradeSubmit": "Certify an asset",
     "footerWhoTalent": "Select",
     "col4Alliances": "Become a partner",
@@ -2112,7 +1918,7 @@
     "col5GitHub": "GitHub",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Verify a certificate",
-    "footerInform": "Inform"
+    "footerCraftFrameDeliver": "Frame and deliver"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
@@ -7472,7 +7278,7 @@
     "groupLegal": "Legal",
     "assets": "Asset catalogue",
     "servicesBuild": "Asset Engineering",
-    "advisory": "Strategic Advisory",
+    "advisory": "Our eight disciplines",
     "acquisition": "Acquisition Support",
     "alliances": "Alliances & Partners",
     "experts": "Expert Network",
@@ -7501,9 +7307,9 @@
     "valoriserTransmission": "Transfer & Cession",
     "roadmap": "Roadmap",
     "annuaire": "Expert directory",
-    "groupAccompagner": "Frame",
-    "groupConstruire": "Deliver",
-    "groupFranchir": "Accompany",
+    "groupAccompagner": "Frame and deliver",
+    "groupConstruire": "Tools",
+    "groupFranchir": "By situation",
     "groupRecruter": "Select",
     "groupInformer": "Insights",
     "talent": "Aegryn Talent",
@@ -7511,7 +7317,15 @@
     "talentTransition": "Transition profiles",
     "talentCandidats": "Join the talent pool",
     "workforce": "Workforce market data",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "metierStrategy": "Business Strategy and Innovation",
+    "metierRisk": "Risk Management and Compliance",
+    "metierFinance": "Finance and Performance",
+    "metierTech": "Technology and Sovereignty",
+    "metierOps": "Operations and Operational Excellence",
+    "metierTalent": "Talent and Organization",
+    "metierProgram": "Project and Programme Management",
+    "metierMA": "M&A, Transactions and PMI"
   },
   "clientTransaction": {
     "eyebrow": "Buyer space",

@@ -38,7 +38,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'Le signal reste utile : le cash se resserre, les clients paient plus tard, et moins de PME peuvent s’appuyer sur leurs seuls fonds propres.',
       ],
       change: 'La bonne question n’est pas « faisons-nous du résultat ? » mais « aurons-nous du cash dans treize semaines, et qui le sait dans l’entreprise ? ». Une entreprise rentable peut manquer de trésorerie ; une entreprise en difficulté peut redresser si elle agit tôt.',
-      sources: 'Sources : Dun & Bradstreet (communiqué du 3 novembre 2025, cumul janvier à octobre) · Atradius, Tendances des pratiques de paiement B2B Suisse, juin 2026 · SECO, enquête auprès de 2 712 PME (kmu.admin.ch).',
     },
     outcomes: {
       title: 'Ce que vous obtenez',
@@ -51,12 +50,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Nous croissons, mais la trésorerie se tend.', decision: 'Financer la croissance par le cash généré, par les délais clients ou autrement.', deliverable: 'Plan de trésorerie à 13 semaines, trois scénarios, besoin en fonds de roulement cartographié.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'Nos clients paient en retard.', decision: 'Quelles conditions de paiement, quelles relances, quels clients à risque.', deliverable: 'Diagnostic du poste clients et plan de réduction du délai d’encaissement.', format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'Le banquier ou un investisseur demande un plan chiffré.', decision: 'Quelles hypothèses assumer, quel niveau de détail.', deliverable: 'Modèle financier sur trois ans, cohérent avec le plan stratégique, et dossier prêt pour l’échange.', format: 'Un à deux mois', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Nous ne savons pas quelles activités gagnent de l’argent.', decision: 'Quoi garder, relever, arrêter.', deliverable: 'Rentabilité par activité et par client, tableau de bord mensuel.', format: 'Quelques semaines', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'La situation se dégrade : il faut agir avant d’y être contraint.', decision: 'Redresser, restructurer ou céder, et quand informer les créanciers.', deliverable: 'Plan de redressement chiffré et calendrier, avec un avocat partenaire pour le droit des poursuites et des faillites.', format: 'Mission de trois à six mois', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Nous préparons une cession ou une acquisition.', decision: 'Quels chiffres seront regardés, comment les présenter.', deliverable: 'Qualité des résultats (retraitements, fonds de roulement normalisé) et partie financière de la data room.', format: 'Quelques semaines', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'Nous croissons, mais la trésorerie se tend.', decision: 'Financer la croissance par le cash généré, par les délais clients ou autrement.', deliverable: 'Plan de trésorerie à 13 semaines, trois scénarios, besoin en fonds de roulement cartographié.', format: 'Quelques semaines', cycles: ['croissance'] },
+        { quote: 'Nos clients paient en retard.', decision: 'Quelles conditions de paiement, quelles relances, quels clients à risque.', deliverable: 'Diagnostic du poste clients et plan de réduction du délai d’encaissement.', format: 'Mission courte', cycles: ['croissance'] },
+        { quote: 'Le banquier ou un investisseur demande un plan chiffré.', decision: 'Quelles hypothèses assumer, quel niveau de détail.', deliverable: 'Modèle financier sur trois ans, cohérent avec le plan stratégique, et dossier prêt pour l’échange.', format: 'Un à deux mois', cycles: ['lancement'] },
+        { quote: 'Nous ne savons pas quelles activités gagnent de l’argent.', decision: 'Quoi garder, relever, arrêter.', deliverable: 'Rentabilité par activité et par client, tableau de bord mensuel.', format: 'Quelques semaines', cycles: ['restructuration'] },
+        { quote: 'La situation se dégrade : il faut agir avant d’y être contraint.', decision: 'Redresser, restructurer ou céder, et quand informer les créanciers.', deliverable: 'Plan de redressement chiffré et calendrier, avec un avocat partenaire pour le droit des poursuites et des faillites.', format: 'Mission de trois à six mois', cycles: ['restructuration'] },
+        { quote: 'Nous préparons une cession ou une acquisition.', decision: 'Quels chiffres seront regardés, comment les présenter.', deliverable: 'Qualité des résultats (retraitements, fonds de roulement normalisé) et partie financière de la data room.', format: 'Quelques semaines', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {
@@ -116,7 +115,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'The signal still holds: cash is tightening, customers pay later, and fewer SMEs can rely on their own funds alone.',
       ],
       change: 'The right question is not “are we profitable?” but “will we have cash in thirteen weeks, and who in the company knows that?”. A profitable company can run out of cash; a struggling one can recover if it acts early.',
-      sources: 'Sources: Dun & Bradstreet (release of 3 November 2025, January to October cumulative) · Atradius, B2B Payment Practices Trends Switzerland, June 2026 · SECO, survey of 2,712 SMEs (kmu.admin.ch).',
     },
     outcomes: {
       title: 'What you get',
@@ -129,12 +127,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'We are growing, but cash is tightening.', decision: 'Fund growth through generated cash, customer terms, or otherwise.', deliverable: 'Thirteen-week cash plan, three scenarios, working-capital needs mapped.', format: 'A few weeks', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'Our customers pay late.', decision: 'Which payment terms, which reminders, which at-risk customers.', deliverable: 'Receivables review and a plan to shorten collection time.', format: 'Short engagement', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'The bank or an investor asks for a costed plan.', decision: 'Which assumptions to stand behind, which level of detail.', deliverable: 'A three-year financial model, consistent with the strategic plan, and a file ready for discussion.', format: 'One to two months', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'We do not know which activities make money.', decision: 'What to keep, fix or stop.', deliverable: 'Profitability by activity and by customer, monthly dashboard.', format: 'A few weeks', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'The situation is deteriorating: we must act before being forced to.', decision: 'Recover, restructure or sell, and when to inform creditors.', deliverable: 'A costed turnaround plan and timetable, with a partner lawyer for debt collection and bankruptcy law.', format: 'Three to six months', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'We are preparing a sale or an acquisition.', decision: 'Which figures will be examined, and how to present them.', deliverable: 'Quality of earnings (adjustments, normalised working capital) and the financial part of the data room.', format: 'A few weeks', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'We are growing, but cash is tightening.', decision: 'Fund growth through generated cash, customer terms, or otherwise.', deliverable: 'Thirteen-week cash plan, three scenarios, working-capital needs mapped.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'Our customers pay late.', decision: 'Which payment terms, which reminders, which at-risk customers.', deliverable: 'Receivables review and a plan to shorten collection time.', format: 'Short engagement', cycles: ['croissance'] },
+        { quote: 'The bank or an investor asks for a costed plan.', decision: 'Which assumptions to stand behind, which level of detail.', deliverable: 'A three-year financial model, consistent with the strategic plan, and a file ready for discussion.', format: 'One to two months', cycles: ['lancement'] },
+        { quote: 'We do not know which activities make money.', decision: 'What to keep, fix or stop.', deliverable: 'Profitability by activity and by customer, monthly dashboard.', format: 'A few weeks', cycles: ['restructuration'] },
+        { quote: 'The situation is deteriorating: we must act before being forced to.', decision: 'Recover, restructure or sell, and when to inform creditors.', deliverable: 'A costed turnaround plan and timetable, with a partner lawyer for debt collection and bankruptcy law.', format: 'Three to six months', cycles: ['restructuration'] },
+        { quote: 'We are preparing a sale or an acquisition.', decision: 'Which figures will be examined, and how to present them.', deliverable: 'Quality of earnings (adjustments, normalised working capital) and the financial part of the data room.', format: 'A few weeks', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {
@@ -194,7 +192,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'Das Signal bleibt aufschlussreich: Die Liquidität spannt sich, Kunden zahlen später, und immer weniger KMU können sich allein auf ihre Eigenmittel stützen.',
       ],
       change: 'Die richtige Frage lautet nicht «sind wir profitabel?», sondern «werden wir in dreizehn Wochen Liquidität haben, und wer weiss das im Unternehmen?». Ein profitables Unternehmen kann die Liquidität verlieren; ein Unternehmen in Schwierigkeiten kann sich fangen, wenn es früh handelt.',
-      sources: 'Quellen: Dun & Bradstreet (Mitteilung vom 3. November 2025, kumuliert Januar bis Oktober) · Atradius, B2B-Zahlungspraktiken Schweiz, Juni 2026 · SECO, Befragung von 2 712 KMU (kmu.admin.ch).',
     },
     outcomes: {
       title: 'Was Sie erhalten',
@@ -207,12 +204,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Wo Sie stehen. Wie wir eingreifen.',
       items: [
-        { quote: 'Wir wachsen, aber die Liquidität spannt sich.', decision: 'Das Wachstum über den erwirtschafteten Cashflow, Kundenfristen oder anders finanzieren.', deliverable: 'Liquiditätsplan über dreizehn Wochen, drei Szenarien, kartierter Working-Capital-Bedarf.', format: 'Wenige Wochen', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'Unsere Kunden zahlen zu spät.', decision: 'Welche Zahlungsbedingungen, welche Mahnungen, welche Risikokunden.', deliverable: 'Forderungsprüfung und Plan zur Senkung der Inkassofrist.', format: 'Kurzer Einsatz', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'Die Bank oder ein Investor verlangt einen bezifferten Plan.', decision: 'Welche Annahmen vertreten, welcher Detaillierungsgrad.', deliverable: 'Ein Finanzmodell auf drei Jahre, konsistent mit dem Strategieplan, und ein gesprächsbereites Dossier.', format: 'Ein bis zwei Monate', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Wir wissen nicht, welche Tätigkeiten Geld verdienen.', decision: 'Was behalten, anheben oder einstellen.', deliverable: 'Rentabilität je Tätigkeit und Kunde, monatliches Dashboard.', format: 'Wenige Wochen', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Die Lage verschlechtert sich: Handeln, bevor wir dazu gezwungen sind.', decision: 'Sanieren, umstrukturieren oder verkaufen, und wann die Gläubiger informiert werden.', deliverable: 'Bezifferter Sanierungsplan mit Zeitplan, mit einer Partneranwältin oder einem Partneranwalt für Betreibungs- und Konkursrecht.', format: 'Drei bis sechs Monate', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Wir bereiten einen Verkauf oder eine Akquisition vor.', decision: 'Welche Zahlen geprüft werden und wie sie darzustellen sind.', deliverable: 'Qualität der Ergebnisse (Bereinigungen, normalisiertes Umlaufvermögen) und der Finanzteil des Datenraums.', format: 'Wenige Wochen', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'Wir wachsen, aber die Liquidität spannt sich.', decision: 'Das Wachstum über den erwirtschafteten Cashflow, Kundenfristen oder anders finanzieren.', deliverable: 'Liquiditätsplan über dreizehn Wochen, drei Szenarien, kartierter Working-Capital-Bedarf.', format: 'Wenige Wochen', cycles: ['croissance'] },
+        { quote: 'Unsere Kunden zahlen zu spät.', decision: 'Welche Zahlungsbedingungen, welche Mahnungen, welche Risikokunden.', deliverable: 'Forderungsprüfung und Plan zur Senkung der Inkassofrist.', format: 'Kurzer Einsatz', cycles: ['croissance'] },
+        { quote: 'Die Bank oder ein Investor verlangt einen bezifferten Plan.', decision: 'Welche Annahmen vertreten, welcher Detaillierungsgrad.', deliverable: 'Ein Finanzmodell auf drei Jahre, konsistent mit dem Strategieplan, und ein gesprächsbereites Dossier.', format: 'Ein bis zwei Monate', cycles: ['lancement'] },
+        { quote: 'Wir wissen nicht, welche Tätigkeiten Geld verdienen.', decision: 'Was behalten, anheben oder einstellen.', deliverable: 'Rentabilität je Tätigkeit und Kunde, monatliches Dashboard.', format: 'Wenige Wochen', cycles: ['restructuration'] },
+        { quote: 'Die Lage verschlechtert sich: Handeln, bevor wir dazu gezwungen sind.', decision: 'Sanieren, umstrukturieren oder verkaufen, und wann die Gläubiger informiert werden.', deliverable: 'Bezifferter Sanierungsplan mit Zeitplan, mit einer Partneranwältin oder einem Partneranwalt für Betreibungs- und Konkursrecht.', format: 'Drei bis sechs Monate', cycles: ['restructuration'] },
+        { quote: 'Wir bereiten einen Verkauf oder eine Akquisition vor.', decision: 'Welche Zahlen geprüft werden und wie sie darzustellen sind.', deliverable: 'Qualität der Ergebnisse (Bereinigungen, normalisiertes Umlaufvermögen) und der Finanzteil des Datenraums.', format: 'Wenige Wochen', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {
@@ -272,7 +269,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'La señal sigue siendo útil: la liquidez se estrecha, los clientes pagan más tarde, y menos pymes pueden apoyarse solo en sus fondos propios.',
       ],
       change: 'La pregunta correcta no es «¿tenemos resultados?», sino «¿tendremos caja dentro de trece semanas, y quién lo sabe en la empresa?». Una empresa rentable puede quedarse sin tesorería; una empresa en dificultades puede remontar si actúa pronto.',
-      sources: 'Fuentes: Dun & Bradstreet (comunicado del 3 de noviembre de 2025, acumulado de enero a octubre) · Atradius, Tendencias de las prácticas de pago B2B Suiza, junio de 2026 · SECO, encuesta a 2 712 pymes (kmu.admin.ch).',
     },
     outcomes: {
       title: 'Lo que usted obtiene',
@@ -285,12 +281,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dónde está usted. Cómo intervenimos.',
       items: [
-        { quote: 'Crecemos, pero la tesorería se tensa.', decision: 'Financiar el crecimiento con la caja generada, los plazos de clientes u otros medios.', deliverable: 'Plan de tesorería a 13 semanas, tres escenarios, necesidad de fondo de maniobra cartografiada.', format: 'Algunas semanas', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'Nuestros clientes pagan tarde.', decision: 'Qué condiciones de pago, qué reclamaciones, qué clientes de riesgo.', deliverable: 'Diagnóstico del cliente y plan para reducir el plazo de cobro.', format: 'Misión corta', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'El banco o un inversor pide un plan cifrado.', decision: 'Qué hipótesis asumir, qué nivel de detalle.', deliverable: 'Un modelo financiero a tres años, coherente con el plan estratégico, y un expediente listo para el diálogo.', format: 'Uno a dos meses', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'No sabemos qué actividades ganan dinero.', decision: 'Qué conservar, subir o abandonar.', deliverable: 'Rentabilidad por actividad y por cliente, cuadro de mando mensual.', format: 'Algunas semanas', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'La situación se degrada: hay que actuar antes de verse obligado.', decision: 'Reflotar, reestructurar o vender, y cuándo informar a los acreedores.', deliverable: 'Plan de reflotamiento cifrado con calendario, con un abogado asociado para el derecho de apremio y quiebra.', format: 'Tres a seis meses', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Preparamos una venta o una adquisición.', decision: 'Qué cifras se examinarán y cómo presentarlas.', deliverable: 'Calidad de los resultados (ajustes, capital circulante normalizado) y la parte financiera del data room.', format: 'Algunas semanas', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'Crecemos, pero la tesorería se tensa.', decision: 'Financiar el crecimiento con la caja generada, los plazos de clientes u otros medios.', deliverable: 'Plan de tesorería a 13 semanas, tres escenarios, necesidad de fondo de maniobra cartografiada.', format: 'Algunas semanas', cycles: ['croissance'] },
+        { quote: 'Nuestros clientes pagan tarde.', decision: 'Qué condiciones de pago, qué reclamaciones, qué clientes de riesgo.', deliverable: 'Diagnóstico del cliente y plan para reducir el plazo de cobro.', format: 'Misión corta', cycles: ['croissance'] },
+        { quote: 'El banco o un inversor pide un plan cifrado.', decision: 'Qué hipótesis asumir, qué nivel de detalle.', deliverable: 'Un modelo financiero a tres años, coherente con el plan estratégico, y un expediente listo para el diálogo.', format: 'Uno a dos meses', cycles: ['lancement'] },
+        { quote: 'No sabemos qué actividades ganan dinero.', decision: 'Qué conservar, subir o abandonar.', deliverable: 'Rentabilidad por actividad y por cliente, cuadro de mando mensual.', format: 'Algunas semanas', cycles: ['restructuration'] },
+        { quote: 'La situación se degrada: hay que actuar antes de verse obligado.', decision: 'Reflotar, reestructurar o vender, y cuándo informar a los acreedores.', deliverable: 'Plan de reflotamiento cifrado con calendario, con un abogado asociado para el derecho de apremio y quiebra.', format: 'Tres a seis meses', cycles: ['restructuration'] },
+        { quote: 'Preparamos una venta o una adquisición.', decision: 'Qué cifras se examinarán y cómo presentarlas.', deliverable: 'Calidad de los resultados (ajustes, capital circulante normalizado) y la parte financiera del data room.', format: 'Algunas semanas', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {
@@ -350,7 +346,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'Il segnale resta utile: la liquidità si stringe, i clienti pagano più tardi, e meno PMI possono contare sui soli mezzi propri.',
       ],
       change: 'La domanda giusta non è «abbiamo un risultato?», ma «avremo cassa fra tredici settimane, e chi lo sa in azienda?». Un’impresa redditizia può restare senza liquidità; un’impresa in difficoltà può risalire se agisce presto.',
-      sources: 'Fonti: Dun & Bradstreet (comunicato del 3 novembre 2025, cumulato gennaio-ottobre) · Atradius, Tendenze delle pratiche di pagamento B2B Svizzera, giugno 2026 · SECO, indagine su 2 712 PMI (kmu.admin.ch).',
     },
     outcomes: {
       title: 'Cosa ottenete',
@@ -363,12 +358,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dove siete. Come interveniamo.',
       items: [
-        { quote: 'Cresciamo, ma la tesoreria si tende.', decision: 'Finanziare la crescita con la cassa generata, i termini clienti o altro.', deliverable: 'Piano di tesoreria a 13 settimane, tre scenari, fabbisogno di capitale circolante mappato.', format: 'Alcune settimane', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'I nostri clienti pagano in ritardo.', decision: 'Quali condizioni di pagamento, quali solleciti, quali clienti a rischio.', deliverable: 'Diagnosi del credito clienti e piano per ridurre i tempi di incasso.', format: 'Mandato breve', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'La banca o un investitore chiede un piano numerico.', decision: 'Quali ipotesi assumere, quale livello di dettaglio.', deliverable: 'Un modello finanziario a tre anni, coerente con il piano strategico, e un dossier pronto per lo scambio.', format: 'Uno a due mesi', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Non sappiamo quali attività guadagnino.', decision: 'Cosa tenere, alzare o fermare.', deliverable: 'Redditività per attività e per cliente, cruscotto mensile.', format: 'Alcune settimane', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'La situazione peggiora: bisogna agire prima di esservi obbligati.', decision: 'Risanare, ristrutturare o cedere, e quando informare i creditori.', deliverable: 'Piano di risanamento numerico con calendario, con un avvocato partner per il diritto dell’esecuzione e dei fallimenti.', format: 'Tre a sei mesi', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Prepariamo una vendita o un’acquisizione.', decision: 'Quali cifre saranno esaminate e come presentarle.', deliverable: 'Qualità dei risultati (rettifiche, capitale circolante normalizzato) e parte finanziaria della data room.', format: 'Alcune settimane', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'Cresciamo, ma la tesoreria si tende.', decision: 'Finanziare la crescita con la cassa generata, i termini clienti o altro.', deliverable: 'Piano di tesoreria a 13 settimane, tre scenari, fabbisogno di capitale circolante mappato.', format: 'Alcune settimane', cycles: ['croissance'] },
+        { quote: 'I nostri clienti pagano in ritardo.', decision: 'Quali condizioni di pagamento, quali solleciti, quali clienti a rischio.', deliverable: 'Diagnosi del credito clienti e piano per ridurre i tempi di incasso.', format: 'Mandato breve', cycles: ['croissance'] },
+        { quote: 'La banca o un investitore chiede un piano numerico.', decision: 'Quali ipotesi assumere, quale livello di dettaglio.', deliverable: 'Un modello finanziario a tre anni, coerente con il piano strategico, e un dossier pronto per lo scambio.', format: 'Uno a due mesi', cycles: ['lancement'] },
+        { quote: 'Non sappiamo quali attività guadagnino.', decision: 'Cosa tenere, alzare o fermare.', deliverable: 'Redditività per attività e per cliente, cruscotto mensile.', format: 'Alcune settimane', cycles: ['restructuration'] },
+        { quote: 'La situazione peggiora: bisogna agire prima di esservi obbligati.', decision: 'Risanare, ristrutturare o cedere, e quando informare i creditori.', deliverable: 'Piano di risanamento numerico con calendario, con un avvocato partner per il diritto dell’esecuzione e dei fallimenti.', format: 'Tre a sei mesi', cycles: ['restructuration'] },
+        { quote: 'Prepariamo una vendita o un’acquisizione.', decision: 'Quali cifre saranno esaminate e come presentarle.', deliverable: 'Qualità dei risultati (rettifiche, capitale circolante normalizzato) e parte finanziaria della data room.', format: 'Alcune settimane', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {
@@ -428,7 +423,6 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
         'Het signaal blijft bruikbaar: de liquide middelen nemen af, klanten betalen later, en steeds minder mkb’s kunnen op eigen middelen terugvallen.',
       ],
       change: 'De juiste vraag is niet «maken we winst?», maar «hebben we over dertien weken nog liquide middelen, en wie weet dat in het bedrijf?». Een winstgevend bedrijf kan zonder kasgeld komen; een bedrijf in moeilijkheden kan herstellen als het vroeg handelt.',
-      sources: 'Bronnen: Dun & Bradstreet (persbericht van 3 november 2025, cumulatief januari tot oktober) · Atradius, B2B-betalingspraktijken Zwitserland, juni 2026 · SECO, enquête onder 2 712 mkb’s (kmu.admin.ch).',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -441,12 +435,12 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'We groeien, maar de kas staat onder druk.', decision: 'De groei financieren via de gegenereerde kasstroom, klanttermijnen of anders.', deliverable: 'Liquiditeitsplan over dertien weken, drie scenario’s, werkkapitaalbehoefte in kaart.', format: 'Enkele weken', cycles: ['croissance'], image: '/images/advisory/situations/plan-writing.jpg' },
-        { quote: 'Onze klanten betalen te laat.', decision: 'Welke betalingsvoorwaarden, welke herinneringen, welke risicoklanten.', deliverable: 'Debiteurenanalyse en plan om de incassotermijn te verkorten.', format: 'Korte opdracht', cycles: ['croissance'], image: '/images/advisory/situations/dashboard-laptop.jpg' },
-        { quote: 'De bank of een investeerder vraagt om een becijferd plan.', decision: 'Welke veronderstellingen aannemen, welk detailniveau.', deliverable: 'Een financieel model over drie jaar, consistent met het strategisch plan, en een gespreksklaar dossier.', format: 'Eén tot twee maanden', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'We weten niet welke activiteiten geld verdienen.', decision: 'Wat houden, verhogen of stopzetten.', deliverable: 'Rendabiliteit per activiteit en per klant, maandelijks dashboard.', format: 'Enkele weken', cycles: ['restructuration'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'De situatie verslechtert: handelen voordat we gedwongen worden.', decision: 'Saneren, herstructureren of verkopen, en wanneer de schuldeisers informeren.', deliverable: 'Becijferd saneringsplan met tijdschema, met een partneradvocaat voor invorderings- en faillissementsrecht.', format: 'Drie tot zes maanden', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'We bereiden een verkoop of overname voor.', decision: 'Welke cijfers bekeken zullen worden en hoe ze te presenteren.', deliverable: 'Kwaliteit van de resultaten (aanpassingen, genormaliseerd werkkapitaal) en het financiële deel van de dataroom.', format: 'Enkele weken', cycles: ['acquisition', 'transmission'], image: '/images/advisory/situations/loft-office.jpg' },
+        { quote: 'We groeien, maar de kas staat onder druk.', decision: 'De groei financieren via de gegenereerde kasstroom, klanttermijnen of anders.', deliverable: 'Liquiditeitsplan over dertien weken, drie scenario’s, werkkapitaalbehoefte in kaart.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Onze klanten betalen te laat.', decision: 'Welke betalingsvoorwaarden, welke herinneringen, welke risicoklanten.', deliverable: 'Debiteurenanalyse en plan om de incassotermijn te verkorten.', format: 'Korte opdracht', cycles: ['croissance'] },
+        { quote: 'De bank of een investeerder vraagt om een becijferd plan.', decision: 'Welke veronderstellingen aannemen, welk detailniveau.', deliverable: 'Een financieel model over drie jaar, consistent met het strategisch plan, en een gespreksklaar dossier.', format: 'Eén tot twee maanden', cycles: ['lancement'] },
+        { quote: 'We weten niet welke activiteiten geld verdienen.', decision: 'Wat houden, verhogen of stopzetten.', deliverable: 'Rendabiliteit per activiteit en per klant, maandelijks dashboard.', format: 'Enkele weken', cycles: ['restructuration'] },
+        { quote: 'De situatie verslechtert: handelen voordat we gedwongen worden.', decision: 'Saneren, herstructureren of verkopen, en wanneer de schuldeisers informeren.', deliverable: 'Becijferd saneringsplan met tijdschema, met een partneradvocaat voor invorderings- en faillissementsrecht.', format: 'Drie tot zes maanden', cycles: ['restructuration'] },
+        { quote: 'We bereiden een verkoop of overname voor.', decision: 'Welke cijfers bekeken zullen worden en hoe ze te presenteren.', deliverable: 'Kwaliteit van de resultaten (aanpassingen, genormaliseerd werkkapitaal) en het financiële deel van de dataroom.', format: 'Enkele weken', cycles: ['acquisition', 'transmission'] },
       ],
     },
     services: {

@@ -68,8 +68,8 @@
     "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
-    "craftTransact": "Begeleiden",
-    "craftTransactDesc": "De juiste beslissing voor elke levensfase.",
+    "craftTransact": "Per situatie",
+    "craftTransactDesc": "Vijf sleutelmomenten in het leven van een bedrijf, met passende begeleiding.",
     "craftTransactSell": "Overdracht & Verkoop",
     "craftTransactBuy": "Overname & Externe groei",
     "craftTransactLancement": "Lancering & Structurering",
@@ -170,7 +170,7 @@
     "boutiqueSoon": "Binnenkort",
     "boutiqueSubmit": "Vertrouwelijk spreken",
     "craftFrameDeliver": "Kaderen en realiseren",
-    "craftFrameDeliverDesc": "Acht vakgebieden, van beslissing tot uitvoering.",
+    "craftFrameDeliverDesc": "Beslissen, sturen en uitvoeren: acht vakgebieden, tot en met de oplevering.",
     "craftFinance": "Financiën en Prestaties",
     "craftOperations": "Operations en Operationele excellentie",
     "craftProgram": "Project- en programmamanagement"
@@ -377,29 +377,10 @@
     "strip": "Aegryn Advisory | Geïntegreerd advies voor Europese tech-organisaties",
     "cta": "Contact opnemen",
     "hero": {
-      "title": "Acht vakgebieden, van beslissing tot uitvoering.",
+      "title": "Acht vakgebieden om te beslissen, te sturen en uit te voeren.",
       "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Één gesprekspartner, van diagnose tot uitvoering."
     },
     "pillars": {
-      "board": {
-        "title": "Board advisory",
-        "desc": "Wij treden op als strategische partners van oprichters en bestuurders bij beslissingen met hoge inzet en lange horizon.",
-        "dimensions": [
-          {
-            "label": "Governance en samenstelling van het board",
-            "desc": ""
-          },
-          {
-            "label": "Voorbereiding op waardering (voor elke beslissing over overdracht)",
-            "desc": ""
-          },
-          {
-            "label": "Strategische rechterhand van de oprichter",
-            "desc": ""
-          }
-        ],
-        "href": "/advisory/strategy"
-      },
       "strategy": {
         "title": "Bedrijfsstrategie en Innovatie",
         "desc": "Wij definiëren samen met leiders de ontwikkelingslijn van hun organisatie en de voorwaarden voor succes.",
@@ -453,8 +434,13 @@
           {
             "label": "Organisatorische transformatie",
             "desc": ""
+          },
+          {
+            "label": "Board advisory: beslissingen met grote impact en lange horizon",
+            "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/strategy"
       },
       "riskCompliance": {
         "title": "Risicobeheer en Compliance",
@@ -510,12 +496,31 @@
             "label": "Voorbereiding op regelgevende audits & due diligence",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/risk-compliance"
       },
       "finance": {
         "title": "Financiën en Prestaties",
-        "desc": "De financiële prestaties sturen, van beslissing tot uitvoering.",
-        "dimensions": []
+        "desc": "Wij becijferen uw beslissingen: liquiditeit op dertien weken, rendabiliteit, saneringsplan.",
+        "dimensions": [
+          {
+            "label": "Liquiditeit op dertien weken en scenario’s",
+            "desc": ""
+          },
+          {
+            "label": "Rendabiliteit per activiteit en per klant",
+            "desc": ""
+          },
+          {
+            "label": "Driejarig financieel plan en dossier voor financiers",
+            "desc": ""
+          },
+          {
+            "label": "Saneringsplan en kwaliteit van de resultaten vóór een verkoop",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/finance-performance"
       },
       "technology": {
         "title": "Technologie en Soevereiniteit",
@@ -567,12 +572,31 @@
             "label": "Technologische soevereiniteit en onafhankelijkheid",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/technology"
       },
       "operations": {
         "title": "Operations en Operationele excellentie",
-        "desc": "Operaties betrouwbaarder en efficiënter maken, van beslissing tot uitvoering.",
-        "dimensions": []
+        "desc": "Wij zoeken het knelpunt dat de rest beperkt: stroom, kosten, doorlooptijden, kwaliteit, leveranciers.",
+        "dimensions": [
+          {
+            "label": "Stroomkaart van bestelling tot inning",
+            "desc": ""
+          },
+          {
+            "label": "Kosten, doorlooptijden en kwaliteit, stap voor stap",
+            "desc": ""
+          },
+          {
+            "label": "Capaciteit, inkoop en leveranciersafhankelijkheid",
+            "desc": ""
+          },
+          {
+            "label": "Kostenverlagingsplan en operationele integratie",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/operations-excellence"
       },
       "talentOrganization": {
         "title": "Talent en Organisatie",
@@ -628,12 +652,31 @@
             "label": "Executive selectie & organisatieontwerp",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/talent-organization"
       },
       "program": {
         "title": "Project- en programmamanagement",
-        "desc": "Projecten en programma’s leiden tot en met de oplevering.",
-        "dimensions": []
+        "desc": "Wij kaderen projecten en programma’s, richten de governance in en leiden de uitvoering tot en met de oplevering.",
+        "dimensions": [
+          {
+            "label": "Kaderingsnotitie: baten, scope, beslisser",
+            "desc": ""
+          },
+          {
+            "label": "Beoordeling en prioritering van de projectenportefeuille",
+            "desc": ""
+          },
+          {
+            "label": "Governance, PMO en sturing van de uitvoering",
+            "desc": ""
+          },
+          {
+            "label": "Sanering, acceptatie en overdracht naar beheer",
+            "desc": ""
+          }
+        ],
+        "href": "/advisory/project-program-management"
       },
       "ma": {
         "title": "M&A, Transacties en PMI",
@@ -681,7 +724,8 @@
             "label": "Carve-out en verkoop van dochterondernemingen",
             "desc": ""
           }
-        ]
+        ],
+        "href": "/advisory/ma"
       }
     },
     "network": {
@@ -742,7 +786,8 @@
     "ctaTitleTech": "Laten we het hebben over uw tech-transformatie",
     "ctaTitleStrategy": "Laten we het hebben over uw strategie",
     "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken",
-    "ctaTitleTalentOrganization": "Laten we de diepgang van uw organisatie bespreken"
+    "ctaTitleTalentOrganization": "Laten we de diepgang van uw organisatie bespreken",
+    "pillarLink": "Het vakgebied bekijken"
   },
   "build": {
     "hero": {
@@ -1806,243 +1851,6 @@
       "phoneLabel": "Telefoon"
     }
   },
-  "advisoryPage": {
-    "hero": {
-      "label": "Aegryn Advies",
-      "title": "Strategische helderheid.\nOperationele diepgang.\nGeactiveerd netwerk.",
-      "desc1": "Wij ondersteunen leiders bij strategische beslissingen, transformatie en M&A-operaties op boardniveau, met operationele expertise en een netwerk van specialisten dat per missie wordt geactiveerd.",
-      "desc2": "Wat we adviseren, passen we op onszelf toe. Onze eigen assets doorlopen onze eigen methoden. Deze coherentie is wat Aegryn onderscheidt van een klassiek adviesbureau.",
-      "quote": "We hebben geen generieke playbooks.\nWe hebben methoden bewezen in echte omgevingen.",
-      "cta": "Adviesopdracht",
-      "ctaHref": "/contact?subject=advisory",
-      "cta2": "Vind een expert",
-      "cta2Href": "/alliances",
-      "cta3": "Over mijn project praten",
-      "cta3Href": "/contact",
-      "metaTitle": "Aegryn Advisory: Strategie, Tech & M&A | Zwitserland",
-      "metaDesc": "Strategie-, tech- en M&A-advies voor leiders. Board advisory, transformatie, operating partner voor investeerders. Expertnetwerk per missie. Zwitserland & Europa."
-    },
-    "why": {
-      "label": "Waarom Aegryn Advisory?",
-      "desc1": "Strategie, technologie en M&A zijn geen drie afzonderlijke disciplines. Ze zijn drie facetten van dezelfde realiteit: hoe waarde te creëren, te ontwikkelen en over te dragen in een consoliderende Europese techmarkt.",
-      "desc2": "Aegryn Advisory bestaat voor leiders die een partner willen die strategie, tech en transacties begrijpt : alle drie. Één partner voor alle drie.",
-      "tagline": "We stappen in wanneer beslissingen de koers van uw organisatie bepalen."
-    },
-    "whoFor": {
-      "label": "Voor wie?",
-      "items": [
-        {
-          "title": "Startups & Scale-ups",
-          "desc": "De juiste strategische en technologische fundamenten leggen, de volgende cyclus kaderen en de volgende stap voorbereiden."
-        },
-        {
-          "title": "Groeiende KMO's",
-          "desc": "De organisatie kaderen, transformeren en structureren voordat ze groeit, overneemt of overdraagt."
-        },
-        {
-          "title": "Middelgrote ondernemingen",
-          "desc": "Strategie, technologie, compliance en talent: één gesprekspartner voor de beslissingen die de groep binden."
-        },
-        {
-          "title": "Fondsen & Investeerders",
-          "desc": "U heeft geïnvesteerd in een techbedrijf en heeft een onafhankelijk perspectief nodig op de strategie, het leiderschapsteam of de exitgereedheid."
-        },
-        {
-          "title": "Organisaties in transformatie",
-          "desc": "U beheert een transformatie- of desinvesteringsproject. Wij structureren en begeleiden het proces van begin tot eind."
-        }
-      ]
-    },
-    "experts": {
-      "label": "ADVISORY TECH : OPERATIONEEL",
-      "desc": "Aegryn Advisory Tech grijpt in op de technische dimensies die de robuustheid en certificeerbaarheid van een organisatie en haar activa bepalen: voor, tijdens of onafhankelijk van een transactie.",
-      "items": [
-        {
-          "title": "Beveiligingsaudit & Cybersecurity",
-          "desc": "Penetratietests (black/grey/white box), audit van het aanvalsoppervlak, applicatiebeveiliging, cloudinfrastructuur, NIS2-conformiteit."
-        },
-        {
-          "title": "Technische architectuur & Engineering",
-          "desc": "CTO as a service, review van full-stack architectuur, schaalbaarheid, migratie, stackkeuze, technische documentatie."
-        },
-        {
-          "title": "DevSecOps & Softwarekwaliteit",
-          "desc": "CI/CD, testdekking, reductie van technische schuld, QA-automatisering, observability (logs, monitoring, alerts). Verbetert rechtstreeks de Code-score (dimensie C) van de Aegryn-grade."
-        },
-        {
-          "title": "Data & Kunstmatige Intelligentie",
-          "desc": "AI-strategie, procesautomatisering, ML/MLOps-pipelines, modelevaluatie, datagovernance."
-        },
-        {
-          "title": "EU AI Act-conformiteit & AI-ethiek",
-          "desc": "Classificatie van AI-systemen op risiconiveau, regulatoire technische documentatie, AI-systeemregister, LLM-red-teaming, audit van algoritmische bias."
-        },
-        {
-          "title": "Data Engineering & Dataarchitectuur",
-          "desc": "Datamodellering, data warehouse, data lake, datagovernance en -kwaliteit, portabiliteit en beheersing van eigen datasets."
-        },
-        {
-          "title": "Design & Gebruikerservaring",
-          "desc": "UX/UI, design system, productidentiteit, gebruikersreizen, usabilitytests."
-        },
-        {
-          "title": "Product Management & Roadmap",
-          "desc": "Productdefinitie, backlogprioritering, activerings- en retentiemetrics, coherentie van de roadmap met de certificeerbare waarde."
-        },
-        {
-          "title": "AVG/LPD-conformiteit & Privacy by Design",
-          "desc": "Verwerkingsregister, leveranciers-DPA's, privacyverklaring, recht op vergetelheid, overdrachten buiten de EU, Zwitserse LPD-conformiteit."
-        },
-        {
-          "title": "Digitale toegankelijkheid",
-          "desc": "WCAG 2.1 AA-audit, conformiteit met de European Accessibility Act (verplicht in de EU sinds juni 2025). Kritisch voor HealthTech en EdTech."
-        }
-      ],
-      "intro": "Onze eigen assets doorlopen onze eigen methoden. Wanneer we adviseren over cyberveiligheid, AI of architectuur, doen we dat vanuit een groep die zijn eigen systemen bouwt en beheert.",
-      "useCases": {
-        "label": "Zakelijke use cases",
-        "items": [
-          {
-            "profile": "Financiële instelling",
-            "desc": "Regelgevende compliance (NIS2, DORA, EU AI Act), risicoscoring, veilige API-integratie, data-soevereiniteitsaudit."
-          },
-          {
-            "profile": "Snelgroeiende scale-up",
-            "desc": "Schaalbare architectuur, management van technische schulden, data- en AI-strategie, CTO as a service in de scale-fase."
-          },
-          {
-            "profile": "KMO zonder interne IT",
-            "desc": "Interim-CTO, cloudmigratie, implementatie van eigen bedrijfstools, systeembeveiliging zonder interne IT-expertise."
-          },
-          {
-            "profile": "Middelgrote onderneming in transformatie",
-            "desc": "Cybersecurityaudit, IT-risicokaart, AI-roadmap, bedrijfsbrede datagovernance."
-          }
-        ]
-      }
-    },
-    "approach": {
-      "label": "Onze aanpak",
-      "title": "Senior tijd, uitvoerbare deliverables, gedeelde verantwoordelijkheid.",
-      "desc": "We factureren geen aanwezigheid. We leveren diagnoses, aanbevelingen en uitvoeringsplannen. Gegarandeerde senior tijd, directe contactpersonen, geen tussenlagen.",
-      "cta": "Sessie boeken"
-    },
-    "valuationCta": {
-      "label": "Activawaardering",
-      "title": "Wilt u de waarde van uw actief schatten voordat u een remediatieproces start?",
-      "cta": "Mijn actief waarderen",
-      "href": "/valuation"
-    },
-    "strategy": {
-      "label": "BEDRIJFSSTRATEGIE & BOARD ADVISORY",
-      "intro": "Naast operationeel advies begeleiden wij leiders bij de beslissingen die de trajectorie van hun strategisch plan bepalen. Een senior, onafhankelijke blik, geworteld in de uitvoering.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Groeistrategie & operationeel model",
-          "desc": "Marktpositionering, businessmodelontwerp, internationaliseringsstrategie, herziening van het operationele model."
-        },
-        {
-          "num": "02",
-          "title": "Exit-voorbereiding & pre-sale waardering",
-          "desc": "Investor storytelling, strategische dataroom, waardebeoordeling vóór verkoop of kapitaalronde. Wij bereiden uw bedrijf optimaal voor.\n\nWij grijpen in waar bankfinanciering ophoudt: op de strategische, technologische en M&A-laag die de werkelijke waarde van het bedrijf bepaalt op het moment van overdracht. Een aanvulling op uw financiële partners, geen alternatief."
-        },
-        {
-          "num": "03",
-          "title": "Organisatorische transformatie",
-          "desc": "Herstructurering, organisatieontwerp, verandermanagement, begeleiding van leiderschapsteams in transitieperiodes."
-        },
-        {
-          "num": "04",
-          "title": "Governance & Board Advisory",
-          "desc": "Samenstelling van de raad van bestuur, verduidelijking van uitvoerende rollen, begeleiding van de oprichter in scale-up- of overdrachtsfase."
-        },
-        {
-          "num": "05",
-          "title": "Tech-onafhankelijkheid & digitale beheersing",
-          "desc": "Audit van technologische afhankelijkheden, multi-cloudstrategie, vermindering van vendor lock-in, migratie naar duurzame eigen assets."
-        },
-        {
-          "num": "06",
-          "title": "Strategische intelligentie & marktobservatie",
-          "desc": "Concurrentiekartering, analyse van zwakke signalen, sectorpositionering voor M&A of organische groei."
-        }
-      ]
-    },
-    "riskCompliance": {
-      "label": "RISICO & COMPLIANCE: DE KOERS BEVEILIGEN",
-      "intro": "Regelgevende verplichtingen zijn geen bijzaak meer: ze bepalen de toegang tot financiering, grootzakelijke klanten en overnemende partijen. Wij helpen leidinggevenden hun compliance te documenteren voordat deze vereist is.",
-      "items": [
-        {
-          "num": "01",
-          "title": "Risicomapping & governance",
-          "desc": "Identificatie van de regelgevende, operationele en cyberrisico's die specifiek zijn voor uw organisatie. Structurering van risicogovernance op directieniveau."
-        },
-        {
-          "num": "02",
-          "title": "Regelgevende compliance (NIS2, DORA, AI Act)",
-          "desc": "Kloofdiagnose, complianceroutekaart en documentatie die standhoudt bij toezichthouders, klanten en financiële partners."
-        },
-        {
-          "num": "03",
-          "title": "Bedrijfscontinuïteit & incidentrespons",
-          "desc": "Bedrijfscontinuïteits- en herstelplannen, procedures voor detectie en melding van incidenten binnen de regelgevende termijnen (24u/72u)."
-        },
-        {
-          "num": "04",
-          "title": "Voorbereiding op audits & due diligence",
-          "desc": "Opbouw van een compliancebewijsdossier bruikbaar tijdens een regelgevende audit, een M&A-due-diligenceproces of een verzoek van een verzekeraar."
-        }
-      ]
-    },
-    "ma": {
-      "label": "ADVISORY M&A : TRANSACTIESTRUCTURERING",
-      "intro": "We orkestreren rond elke transactie de experts die passen bij de aard en omvang. Juridisch, fiscaal, financieel, HR : gemobiliseerd op het juiste moment, niet allemaal tegelijk.",
-      "phases": [
-        {
-          "num": "01",
-          "title": "Pre-transactie",
-          "desc": "Strategische audit, waardering, dataroom-voorbereiding, investor storytelling, identificatie van targets of kopers."
-        },
-        {
-          "num": "02",
-          "title": "Due Diligence",
-          "desc": "Coördinatie en toezicht op technische, financiële, juridische en HR-DD. Risicoanalyse, aanpassingsaanbevelingen."
-        },
-        {
-          "num": "03",
-          "title": "Structurering",
-          "desc": "Ontwerp van de transactiestructuur, onderhandeling over voorwaarden, mobilisatie van geschikte juridische en fiscale experts."
-        },
-        {
-          "num": "04",
-          "title": "Closing & Post-acquisitie",
-          "desc": "Begeleiding bij ondertekening, post-acquisitie-integratie, selectie van uitvoeringsteams."
-        }
-      ],
-      "fundsNote": "Wij ondersteunen ook fondsen en family offices als transitie operating partner, uitbesteed, op hun deelnemingen.",
-      "fundsHref": "/investisseurs",
-      "fundsLink": "Meer over onze rol als investeerder"
-    },
-    "network": {
-      "label": "EXPERTENNETWERK : VAARDIGHEDEN PER MISSIE GEACTIVEERD",
-      "title": "De juiste experts. Op het juiste moment. Bij elke missie.",
-      "desc": "Voor gespecialiseerde missies activeren we ons netwerk van geverifieerde onafhankelijke experts. M&A-advocaten, accountants, belastingadviseurs, digitaalrechtspecialisten. Een pool van specialisten die onze capaciteiten uitbreidt zonder onze structuur te belasten.",
-      "cta1": "Toegang tot het netwerk →",
-      "cta1Href": "/alliances",
-      "cta2": "Het netwerk vervoegen →",
-      "cta2Href": "/alliances#candidater"
-    },
-    "industries": {
-      "label": "GEDEKTE SECTOREN",
-      "intro": "We zijn actief in alle sectoren waar tech, data en waardering waarde creëren of beschermen."
-    },
-    "midCta": {
-      "title": "Een onderwerp om samen te verkennen?",
-      "cta": "Laten we praten",
-      "href": "/contact"
-    }
-  },
   "stats": {
     "assets": "assets",
     "languages": "talen",
@@ -2060,7 +1868,7 @@
     "companyLabel": "Bedrijf",
     "servicesLabel": "Diensten",
     "footerCol1Title": "Aegryn",
-    "footerCol2Title": "Het bureau",
+    "footerCol2Title": "Ons vakmanschap",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publicaties",
     "blogLink": "Blog",
@@ -2100,9 +1908,7 @@
     "col4Contact": "Contact",
     "col4Careers": "Werken bij Aegryn",
     "col4Talent": "Selectie & Transitie",
-    "footerCraftSupport": "Kaderen",
-    "footerCraftTransact": "Begeleiden",
-    "footerCraftBuild": "Realiseren",
+    "footerCraftTransact": "Per situatie",
     "footerGradeSubmit": "Asset certificeren",
     "footerWhoTalent": "Selecteren",
     "col4Alliances": "Partner worden",
@@ -2112,7 +1918,7 @@
     "col5GitHub": "GitHub",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Certificaat verifiëren",
-    "footerInform": "Informeren"
+    "footerCraftFrameDeliver": "Kaderen en realiseren"
   },
   "cookie": {
     "title": "Aegryn | Cookies & Analytics",
@@ -7472,7 +7278,7 @@
     "groupLegal": "Juridisch",
     "assets": "Assetcatalogus",
     "servicesBuild": "Asset Engineering",
-    "advisory": "Strategisch advies",
+    "advisory": "Onze acht vakgebieden",
     "acquisition": "Acquisitieondersteuning",
     "alliances": "Allianties & Partners",
     "experts": "Expertnetwerk",
@@ -7501,9 +7307,9 @@
     "valoriserTransmission": "Overdracht & Cessie",
     "roadmap": "Roadmap",
     "annuaire": "Expertregister",
-    "groupAccompagner": "Kaderen",
-    "groupConstruire": "Realiseren",
-    "groupFranchir": "Begeleiden",
+    "groupAccompagner": "Kaderen en realiseren",
+    "groupConstruire": "Tools",
+    "groupFranchir": "Per situatie",
     "groupRecruter": "Selecteren",
     "groupInformer": "Informeren",
     "talent": "Aegryn Talent",
@@ -7511,7 +7317,15 @@
     "talentTransition": "Overgangsprofielen",
     "talentCandidats": "Deelnemen aan de pool",
     "workforce": "Arbeidsmarktdata",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "metierStrategy": "Bedrijfsstrategie en Innovatie",
+    "metierRisk": "Risicobeheer en Compliance",
+    "metierFinance": "Financiën en Prestaties",
+    "metierTech": "Technologie en Soevereiniteit",
+    "metierOps": "Operations en Operationele excellentie",
+    "metierTalent": "Talent en Organisatie",
+    "metierProgram": "Project- en programmamanagement",
+    "metierMA": "M&A, Transacties en PMI"
   },
   "clientTransaction": {
     "eyebrow": "Kopersruimte",

@@ -38,7 +38,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Près de trois PME de l’industrie MEM sur quatre jugent leur situation défavorable selon l’enquête Swissmechanic d’avril 2026, et environ quatre sur dix ont vu leur marge baisser au premier trimestre. L’écart ne se comble pas par l’effort de tous : il se comble en traitant le bon point d’abord.',
       ],
       change: 'Une amélioration que personne ne mesure disparaît en six mois. La question n’est pas « que pouvons-nous optimiser ? » mais « quel goulot limite l’ensemble, et comment saurons-nous qu’il est traité ? ».',
-      sources: 'Sources : Swissmem, août 2026 (industrie MEM) · procure.ch–UBS, indice des prix d’achat de septembre 2026, relayé par Trading Economics, 1er octobre 2026 · Swissmechanic, enquête de conjoncture auprès des PME MEM, avril 2026.',
     },
     outcomes: {
       title: 'Ce que vous obtenez',
@@ -51,12 +50,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Nos coûts montent plus vite que nos prix.', decision: 'Où agir (achats, process, gamme) sans perdre en qualité.', deliverable: 'Carte des coûts par étape et plan de gains chiffré.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Nos délais et notre qualité varient d’une commande à l’autre.', decision: 'Quels processus standardiser, lesquels laisser sur mesure.', deliverable: 'Cartographie des processus clés, indicateurs de service, plan de standardisation.', format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Un fournisseur critique nous met en risque.', decision: 'Diversifier, stocker ou intégrer.', deliverable: 'Carte de dépendance aux fournisseurs et plan de sécurisation (seconde source, stock de sécurité).', format: 'Quelques semaines', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Nos capacités sont sous-utilisées, ou saturées.', decision: 'Investir, sous-traiter ou réorganiser.', deliverable: 'Analyse des goulots de capacité et trois scénarios chiffrés.', format: 'Un à deux mois', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'Nous devons réduire les coûts sans abîmer l’entreprise.', decision: 'Quels coûts, dans quel ordre, avec quel risque pour les équipes.', deliverable: 'Plan de réduction chiffré par levier, avec calendrier et critères d’arrêt, dans le respect des obligations d’information et de consultation du personnel.', format: 'Mission de trois à six mois', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'Nous reprenons une activité : comment faire tourner l’ensemble ?', decision: 'Quels sites, processus et fournisseurs garder.', deliverable: 'Plan d’intégration opérationnelle (sites, achats, systèmes).', format: 'Un à deux mois', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Nos coûts montent plus vite que nos prix.', decision: 'Où agir (achats, process, gamme) sans perdre en qualité.', deliverable: 'Carte des coûts par étape et plan de gains chiffré.', format: 'Quelques semaines', cycles: ['croissance'] },
+        { quote: 'Nos délais et notre qualité varient d’une commande à l’autre.', decision: 'Quels processus standardiser, lesquels laisser sur mesure.', deliverable: 'Cartographie des processus clés, indicateurs de service, plan de standardisation.', format: 'Mission courte', cycles: ['croissance'] },
+        { quote: 'Un fournisseur critique nous met en risque.', decision: 'Diversifier, stocker ou intégrer.', deliverable: 'Carte de dépendance aux fournisseurs et plan de sécurisation (seconde source, stock de sécurité).', format: 'Quelques semaines', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Nos capacités sont sous-utilisées, ou saturées.', decision: 'Investir, sous-traiter ou réorganiser.', deliverable: 'Analyse des goulots de capacité et trois scénarios chiffrés.', format: 'Un à deux mois', cycles: ['croissance'] },
+        { quote: 'Nous devons réduire les coûts sans abîmer l’entreprise.', decision: 'Quels coûts, dans quel ordre, avec quel risque pour les équipes.', deliverable: 'Plan de réduction chiffré par levier, avec calendrier et critères d’arrêt, dans le respect des obligations d’information et de consultation du personnel.', format: 'Mission de trois à six mois', cycles: ['restructuration'] },
+        { quote: 'Nous reprenons une activité : comment faire tourner l’ensemble ?', decision: 'Quels sites, processus et fournisseurs garder.', deliverable: 'Plan d’intégration opérationnelle (sites, achats, systèmes).', format: 'Un à deux mois', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -122,7 +121,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Nearly three in four MEM SMEs rate their situation as unfavourable in the April 2026 Swissmechanic survey, and about four in ten saw margins decline in the first quarter. The gap does not close through everyone’s effort: it closes by treating the right point first.',
       ],
       change: 'An improvement nobody measures disappears within six months. The question is not “what can we optimise?” but “which bottleneck limits the whole, and how will we know it is fixed?”.',
-      sources: 'Sources: Swissmem, August 2026 (MEM industry) · procure.ch–UBS, purchase price index September 2026, via Trading Economics, 1 October 2026 · Swissmechanic, business survey of MEM SMEs, April 2026.',
     },
     outcomes: {
       title: 'What you get',
@@ -135,12 +133,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'Our costs are rising faster than our prices.', decision: 'Where to act (purchasing, processes, range) without losing quality.', deliverable: 'Cost map by step and a costed gains plan.', format: 'A few weeks', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Our lead times and quality vary from order to order.', decision: 'Which processes to standardise, which to keep bespoke.', deliverable: 'Key-process mapping, service indicators, standardisation plan.', format: 'Short engagement', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'A critical supplier puts us at risk.', decision: 'Diversify, stock or integrate.', deliverable: 'Supplier-dependency map and securing plan (second source, safety stock).', format: 'A few weeks', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Our capacity is under-used, or saturated.', decision: 'Invest, outsource or reorganise.', deliverable: 'Capacity-bottleneck analysis and three costed scenarios.', format: 'One to two months', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'We must cut costs without damaging the company.', decision: 'Which costs, in what order, with what risk for the teams.', deliverable: 'A costed reduction plan by lever, with a timetable and stop criteria, respecting staff information and consultation duties.', format: 'Three to six months', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'We are taking over an activity: how do we run the whole?', decision: 'Which sites, processes and suppliers to keep.', deliverable: 'Operational integration plan (sites, purchasing, systems).', format: 'One to two months', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Our costs are rising faster than our prices.', decision: 'Where to act (purchasing, processes, range) without losing quality.', deliverable: 'Cost map by step and a costed gains plan.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'Our lead times and quality vary from order to order.', decision: 'Which processes to standardise, which to keep bespoke.', deliverable: 'Key-process mapping, service indicators, standardisation plan.', format: 'Short engagement', cycles: ['croissance'] },
+        { quote: 'A critical supplier puts us at risk.', decision: 'Diversify, stock or integrate.', deliverable: 'Supplier-dependency map and securing plan (second source, safety stock).', format: 'A few weeks', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Our capacity is under-used, or saturated.', decision: 'Invest, outsource or reorganise.', deliverable: 'Capacity-bottleneck analysis and three costed scenarios.', format: 'One to two months', cycles: ['croissance'] },
+        { quote: 'We must cut costs without damaging the company.', decision: 'Which costs, in what order, with what risk for the teams.', deliverable: 'A costed reduction plan by lever, with a timetable and stop criteria, respecting staff information and consultation duties.', format: 'Three to six months', cycles: ['restructuration'] },
+        { quote: 'We are taking over an activity: how do we run the whole?', decision: 'Which sites, processes and suppliers to keep.', deliverable: 'Operational integration plan (sites, purchasing, systems).', format: 'One to two months', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -206,7 +204,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Fast drei von vier MEM-KMU beurteilen ihre Lage als ungünstig, so die Swissmechanic-Umfrage vom April 2026, und rund vier von zehn verzeichneten im ersten Quartal sinkende Margen. Die Lücke schliesst sich nicht durch den Einsatz aller: Sie schliesst sich, indem man den richtigen Punkt zuerst behandelt.',
       ],
       change: 'Eine Verbesserung, die niemand misst, verschwindet in sechs Monaten. Die Frage lautet nicht «was können wir optimieren?», sondern «welcher Engpass begrenzt das Ganze, und woran erkennen wir, dass er behoben ist?».',
-      sources: 'Quellen: Swissmem, August 2026 (MEM-Industrie) · procure.ch–UBS, Einkaufspreisindex September 2026, via Trading Economics, 1. Oktober 2026 · Swissmechanic, Konjunkturumfrage bei MEM-KMU, April 2026.',
     },
     outcomes: {
       title: 'Was Sie erhalten',
@@ -219,12 +216,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Wo Sie stehen. Wie wir eingreifen.',
       items: [
-        { quote: 'Unsere Kosten steigen schneller als unsere Preise.', decision: 'Wo eingreifen (Einkauf, Prozesse, Sortiment), ohne Qualität zu verlieren.', deliverable: 'Kostenkarte je Etappe und bezifferter Gewinnplan.', format: 'Wenige Wochen', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Unsere Fristen und unsere Qualität schwanken von Auftrag zu Auftrag.', decision: 'Welche Prozesse standardisieren, welche massgeschneidert lassen.', deliverable: 'Kartierung der Schlüsselprozesse, Serviceindikatoren, Standardisierungsplan.', format: 'Kurzer Einsatz', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Ein kritischer Lieferant bringt uns in Gefahr.', decision: 'Diversifizieren, bevorraten oder integrieren.', deliverable: 'Karte der Lieferantenabhängigkeit und Absicherungsplan (Zweitquelle, Sicherheitsbestand).', format: 'Wenige Wochen', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Unsere Kapazitäten sind unterausgelastet, oder gesättigt.', decision: 'Investieren, fremdvergeben oder reorganisieren.', deliverable: 'Analyse der Kapazitätsengpässe und drei bezifferte Szenarien.', format: 'Ein bis zwei Monate', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'Wir müssen Kosten senken, ohne das Unternehmen zu beschädigen.', decision: 'Welche Kosten, in welcher Reihenfolge, mit welchem Risiko für die Teams.', deliverable: 'Bezifferter Senkungsplan je Hebel, mit Zeitplan und Abbruchkriterien, unter Beachtung der Informations- und Konsultationspflichten gegenüber dem Personal.', format: 'Drei bis sechs Monate', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'Wir übernehmen eine Tätigkeit: wie bringen wir das Ganze zum Laufen?', decision: 'Welche Standorte, Prozesse und Lieferanten behalten werden.', deliverable: 'Operativer Integrationsplan (Standorte, Einkauf, Systeme).', format: 'Ein bis zwei Monate', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Unsere Kosten steigen schneller als unsere Preise.', decision: 'Wo eingreifen (Einkauf, Prozesse, Sortiment), ohne Qualität zu verlieren.', deliverable: 'Kostenkarte je Etappe und bezifferter Gewinnplan.', format: 'Wenige Wochen', cycles: ['croissance'] },
+        { quote: 'Unsere Fristen und unsere Qualität schwanken von Auftrag zu Auftrag.', decision: 'Welche Prozesse standardisieren, welche massgeschneidert lassen.', deliverable: 'Kartierung der Schlüsselprozesse, Serviceindikatoren, Standardisierungsplan.', format: 'Kurzer Einsatz', cycles: ['croissance'] },
+        { quote: 'Ein kritischer Lieferant bringt uns in Gefahr.', decision: 'Diversifizieren, bevorraten oder integrieren.', deliverable: 'Karte der Lieferantenabhängigkeit und Absicherungsplan (Zweitquelle, Sicherheitsbestand).', format: 'Wenige Wochen', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Unsere Kapazitäten sind unterausgelastet, oder gesättigt.', decision: 'Investieren, fremdvergeben oder reorganisieren.', deliverable: 'Analyse der Kapazitätsengpässe und drei bezifferte Szenarien.', format: 'Ein bis zwei Monate', cycles: ['croissance'] },
+        { quote: 'Wir müssen Kosten senken, ohne das Unternehmen zu beschädigen.', decision: 'Welche Kosten, in welcher Reihenfolge, mit welchem Risiko für die Teams.', deliverable: 'Bezifferter Senkungsplan je Hebel, mit Zeitplan und Abbruchkriterien, unter Beachtung der Informations- und Konsultationspflichten gegenüber dem Personal.', format: 'Drei bis sechs Monate', cycles: ['restructuration'] },
+        { quote: 'Wir übernehmen eine Tätigkeit: wie bringen wir das Ganze zum Laufen?', decision: 'Welche Standorte, Prozesse und Lieferanten behalten werden.', deliverable: 'Operativer Integrationsplan (Standorte, Einkauf, Systeme).', format: 'Ein bis zwei Monate', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -290,7 +287,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Casi tres de cada cuatro pymes MEM consideran su situación desfavorable según la encuesta Swissmechanic de abril de 2026, y unas cuatro de cada diez vieron caer su margen en el primer trimestre. La brecha no se cierra con el esfuerzo de todos: se cierra tratando el punto correcto primero.',
       ],
       change: 'Una mejora que nadie mide desaparece en seis meses. La pregunta no es «¿qué podemos optimizar?», sino «¿qué cuello de botella limita el conjunto, y cómo sabremos que está resuelto?».',
-      sources: 'Fuentes: Swissmem, agosto de 2026 (industria MEM) · procure.ch–UBS, índice de precios de compra de septiembre de 2026, vía Trading Economics, 1 de octubre de 2026 · Swissmechanic, encuesta de coyuntura entre las pymes MEM, abril de 2026.',
     },
     outcomes: {
       title: 'Lo que usted obtiene',
@@ -303,12 +299,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dónde está usted. Cómo intervenimos.',
       items: [
-        { quote: 'Nuestros costes suben más rápido que nuestros precios.', decision: 'Dónde actuar (compras, procesos, gama) sin perder calidad.', deliverable: 'Mapa de costes por etapa y plan de ganancias cifrado.', format: 'Algunas semanas', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Nuestros plazos y nuestra calidad varían de un pedido a otro.', decision: 'Qué procesos estandarizar, cuáles dejar a medida.', deliverable: 'Cartografía de los procesos clave, indicadores de servicio, plan de estandarización.', format: 'Misión corta', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Un proveedor crítico nos pone en riesgo.', decision: 'Diversificar, almacenar o integrar.', deliverable: 'Mapa de dependencia de proveedores y plan de segurización (segunda fuente, stock de seguridad).', format: 'Algunas semanas', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Nuestras capacidades están infrautilizadas, o saturadas.', decision: 'Invertir, subcontratar o reorganizar.', deliverable: 'Análisis de los cuellos de botella de capacidad y tres escenarios cifrados.', format: 'Uno a dos meses', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'Debemos reducir costes sin dañar la empresa.', decision: 'Qué costes, en qué orden, con qué riesgo para los equipos.', deliverable: 'Plan de reducción cifrado por palanca, con calendario y criterios de parada, respetando las obligaciones de información y consulta del personal.', format: 'Tres a seis meses', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'Retomamos una actividad: ¿cómo hacer funcionar el conjunto?', decision: 'Qué sitios, procesos y proveedores conservar.', deliverable: 'Plan de integración operativa (sitios, compras, sistemas).', format: 'Uno a dos meses', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Nuestros costes suben más rápido que nuestros precios.', decision: 'Dónde actuar (compras, procesos, gama) sin perder calidad.', deliverable: 'Mapa de costes por etapa y plan de ganancias cifrado.', format: 'Algunas semanas', cycles: ['croissance'] },
+        { quote: 'Nuestros plazos y nuestra calidad varían de un pedido a otro.', decision: 'Qué procesos estandarizar, cuáles dejar a medida.', deliverable: 'Cartografía de los procesos clave, indicadores de servicio, plan de estandarización.', format: 'Misión corta', cycles: ['croissance'] },
+        { quote: 'Un proveedor crítico nos pone en riesgo.', decision: 'Diversificar, almacenar o integrar.', deliverable: 'Mapa de dependencia de proveedores y plan de segurización (segunda fuente, stock de seguridad).', format: 'Algunas semanas', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Nuestras capacidades están infrautilizadas, o saturadas.', decision: 'Invertir, subcontratar o reorganizar.', deliverable: 'Análisis de los cuellos de botella de capacidad y tres escenarios cifrados.', format: 'Uno a dos meses', cycles: ['croissance'] },
+        { quote: 'Debemos reducir costes sin dañar la empresa.', decision: 'Qué costes, en qué orden, con qué riesgo para los equipos.', deliverable: 'Plan de reducción cifrado por palanca, con calendario y criterios de parada, respetando las obligaciones de información y consulta del personal.', format: 'Tres a seis meses', cycles: ['restructuration'] },
+        { quote: 'Retomamos una actividad: ¿cómo hacer funcionar el conjunto?', decision: 'Qué sitios, procesos y proveedores conservar.', deliverable: 'Plan de integración operativa (sitios, compras, sistemas).', format: 'Uno a dos meses', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -374,7 +370,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Quasi tre PMI MEM su quattro giudicano sfavorevole la propria situazione secondo l’indagine Swissmechanic di aprile 2026, e circa quattro su dieci hanno visto calare il margine nel primo trimestre. Il divario non si colma con lo sforzo di tutti: si colma trattando prima il punto giusto.',
       ],
       change: 'Un miglioramento che nessuno misura scompare in sei mesi. La domanda non è «cosa possiamo ottimizzare?», ma «quale collo di bottiglia limita l’insieme, e come sapremo che è risolto?».',
-      sources: 'Fonti: Swissmem, agosto 2026 (industria MEM) · procure.ch–UBS, indice dei prezzi d’acquisto di settembre 2026, via Trading Economics, 1° ottobre 2026 · Swissmechanic, indagine congiunturale sulle PMI MEM, aprile 2026.',
     },
     outcomes: {
       title: 'Cosa ottenete',
@@ -387,12 +382,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dove siete. Come interveniamo.',
       items: [
-        { quote: 'I nostri costi salgono più in fretta dei nostri prezzi.', decision: 'Dove agire (acquisti, processi, gamma) senza perdere in qualità.', deliverable: 'Mappa dei costi per tappa e piano dei guadagni numerico.', format: 'Alcune settimane', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'I nostri tempi e la nostra qualità variano da un ordine all’altro.', decision: 'Quali processi standardizzare, quali lasciare su misura.', deliverable: 'Mappatura dei processi chiave, indicatori di servizio, piano di standardizzazione.', format: 'Mandato breve', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Un fornitore critico ci mette a rischio.', decision: 'Diversificare, stoccare o integrare.', deliverable: 'Mappa della dipendenza dai fornitori e piano di messa in sicurezza (seconda fonte, scorta di sicurezza).', format: 'Alcune settimane', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Le nostre capacità sono sotto utilizzate, o sature.', decision: 'Investire, esternalizzare o riorganizzare.', deliverable: 'Analisi dei colli di bottiglia di capacità e tre scenari numerici.', format: 'Uno a due mesi', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'Dobbiamo ridurre i costi senza danneggiare l’impresa.', decision: 'Quali costi, in quale ordine, con quale rischio per i team.', deliverable: 'Piano di riduzione numerico per leva, con calendario e criteri di arresto, nel rispetto degli obblighi di informazione e consultazione del personale.', format: 'Tre a sei mesi', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'Rileviamo un’attività: come far funzionare l’insieme?', decision: 'Quali siti, processi e fornitori mantenere.', deliverable: 'Piano di integrazione operativa (siti, acquisti, sistemi).', format: 'Uno a due mesi', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'I nostri costi salgono più in fretta dei nostri prezzi.', decision: 'Dove agire (acquisti, processi, gamma) senza perdere in qualità.', deliverable: 'Mappa dei costi per tappa e piano dei guadagni numerico.', format: 'Alcune settimane', cycles: ['croissance'] },
+        { quote: 'I nostri tempi e la nostra qualità variano da un ordine all’altro.', decision: 'Quali processi standardizzare, quali lasciare su misura.', deliverable: 'Mappatura dei processi chiave, indicatori di servizio, piano di standardizzazione.', format: 'Mandato breve', cycles: ['croissance'] },
+        { quote: 'Un fornitore critico ci mette a rischio.', decision: 'Diversificare, stoccare o integrare.', deliverable: 'Mappa della dipendenza dai fornitori e piano di messa in sicurezza (seconda fonte, scorta di sicurezza).', format: 'Alcune settimane', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Le nostre capacità sono sotto utilizzate, o sature.', decision: 'Investire, esternalizzare o riorganizzare.', deliverable: 'Analisi dei colli di bottiglia di capacità e tre scenari numerici.', format: 'Uno a due mesi', cycles: ['croissance'] },
+        { quote: 'Dobbiamo ridurre i costi senza danneggiare l’impresa.', decision: 'Quali costi, in quale ordine, con quale rischio per i team.', deliverable: 'Piano di riduzione numerico per leva, con calendario e criteri di arresto, nel rispetto degli obblighi di informazione e consultazione del personale.', format: 'Tre a sei mesi', cycles: ['restructuration'] },
+        { quote: 'Rileviamo un’attività: come far funzionare l’insieme?', decision: 'Quali siti, processi e fornitori mantenere.', deliverable: 'Piano di integrazione operativa (siti, acquisti, sistemi).', format: 'Uno a due mesi', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -458,7 +453,6 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
         'Bijna drie van vier MEM-mkb’s beoordelen hun situatie als ongunstig, volgens de Swissmechanic-enquête van april 2026, en ongeveer vier van tien zagen hun marge in het eerste kwartaal dalen. De kloof sluit niet door inspanning van iedereen: hij sluit door eerst het juiste punt aan te pakken.',
       ],
       change: 'Een verbetering die niemand meet, verdwijnt binnen zes maanden. De vraag is niet «wat kunnen we optimaliseren?», maar «welk knelpunt begrenst het geheel, en hoe weten we dat het opgelost is?».',
-      sources: 'Bronnen: Swissmem, augustus 2026 (MEM-industrie) · procure.ch–UBS, inkoopprijsindex september 2026, via Trading Economics, 1 oktober 2026 · Swissmechanic, conjunctuurenquête onder MEM-mkb’s, april 2026.',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -471,12 +465,12 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'Onze kosten stijgen sneller dan onze prijzen.', decision: 'Waar ingrijpen (inkoop, processen, assortiment) zonder kwaliteitsverlies.', deliverable: 'Kostenkaart per etappe en becijferd winstplan.', format: 'Enkele weken', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Onze doorlooptijden en kwaliteit variëren per bestelling.', decision: 'Welke processen standaardiseren, welke op maat houden.', deliverable: 'Kartering van de kernprocessen, service-indicatoren, standaardiseringsplan.', format: 'Korte opdracht', cycles: ['croissance'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Een kritieke leverancier brengt ons in gevaar.', decision: 'Diversifiëren, opslaan of integreren.', deliverable: 'Kaart van leveranciersafhankelijkheid en beveiligingsplan (tweede bron, veiligheidsvoorraad).', format: 'Enkele weken', cycles: ['croissance', 'restructuration'], image: '/images/advisory/situations/industrial-engineer.jpg' },
-        { quote: 'Onze capaciteit is onderbenut, of verzadigd.', decision: 'Investeren, uitbesteden of reorganiseren.', deliverable: 'Analyse van de capaciteitsknelpunten en drie becijferde scenario’s.', format: 'Eén tot twee maanden', cycles: ['croissance'], image: '/images/advisory/situations/server-room-walk.jpg' },
-        { quote: 'We moeten kosten verlagen zonder het bedrijf te beschadigen.', decision: 'Welke kosten, in welke volgorde, met welk risico voor de teams.', deliverable: 'Becijferd verlagingsplan per hefboom, met tijdschema en stopcriteria, met inachtneming van de informatie- en consultatieplichten jegens het personeel.', format: 'Drie tot zes maanden', cycles: ['restructuration'], image: '/images/advisory/situations/office-corridor.jpg' },
-        { quote: 'We nemen een activiteit over: hoe krijgen we het geheel draaiende?', decision: 'Welke vestigingen, processen en leveranciers behouden.', deliverable: 'Operationeel integratieplan (vestigingen, inkoop, systemen).', format: 'Eén tot twee maanden', cycles: ['acquisition'], image: '/images/advisory/situations/network-cables.jpg' },
+        { quote: 'Onze kosten stijgen sneller dan onze prijzen.', decision: 'Waar ingrijpen (inkoop, processen, assortiment) zonder kwaliteitsverlies.', deliverable: 'Kostenkaart per etappe en becijferd winstplan.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Onze doorlooptijden en kwaliteit variëren per bestelling.', decision: 'Welke processen standaardiseren, welke op maat houden.', deliverable: 'Kartering van de kernprocessen, service-indicatoren, standaardiseringsplan.', format: 'Korte opdracht', cycles: ['croissance'] },
+        { quote: 'Een kritieke leverancier brengt ons in gevaar.', decision: 'Diversifiëren, opslaan of integreren.', deliverable: 'Kaart van leveranciersafhankelijkheid en beveiligingsplan (tweede bron, veiligheidsvoorraad).', format: 'Enkele weken', cycles: ['croissance', 'restructuration'] },
+        { quote: 'Onze capaciteit is onderbenut, of verzadigd.', decision: 'Investeren, uitbesteden of reorganiseren.', deliverable: 'Analyse van de capaciteitsknelpunten en drie becijferde scenario’s.', format: 'Eén tot twee maanden', cycles: ['croissance'] },
+        { quote: 'We moeten kosten verlagen zonder het bedrijf te beschadigen.', decision: 'Welke kosten, in welke volgorde, met welk risico voor de teams.', deliverable: 'Becijferd verlagingsplan per hefboom, met tijdschema en stopcriteria, met inachtneming van de informatie- en consultatieplichten jegens het personeel.', format: 'Drie tot zes maanden', cycles: ['restructuration'] },
+        { quote: 'We nemen een activiteit over: hoe krijgen we het geheel draaiende?', decision: 'Welke vestigingen, processen en leveranciers behouden.', deliverable: 'Operationeel integratieplan (vestigingen, inkoop, systemen).', format: 'Eén tot twee maanden', cycles: ['acquisition'] },
       ],
     },
     services: {

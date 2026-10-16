@@ -5,7 +5,6 @@ import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 const PRIVACY =
   'Your answers stay in your browser. Nothing is stored or sent without your consent. The result fits on one page: your level and the recommended next step.'
 
-const S = '/images/advisory/situations/'
 
 export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
@@ -34,11 +33,8 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '−2%', label: 'French consulting market in 2025, excluding inflation', source: 'Syntec Conseil' },
         { value: '−7.3', label: 'index points, NZZ SME barometer 2026, lowest level since the survey began in 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos University of Applied Sciences' },
       ],
-      paragraphs: [
-        'SME and mid-cap leaders do buy consulting, but differently. Bpifrance delivered close to 9,000 consulting missions in 2024, up 50% in one year, while the French consulting market declined by 2% in 2025 excluding inflation. In Switzerland, the composite index of the 2026 NZZ SME barometer (NZZ and Kalaidos University of Applied Sciences) falls to −7.3 points, its lowest level since the survey began in 2021; only technology integration is improving.',
-      ],
+      paragraphs: [],
       change: 'When conditions tighten, the cost of a wrong call rises. The need is no longer a large programme; it is one precise decision, taken quickly, with senior eyes on it.',
-      sources: 'Sources: Bpifrance Press (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos University of Applied Sciences (relayed by SECO).',
     },
     outcomes: {
       title: 'What you get',
@@ -51,12 +47,12 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'Our model is eroding.', decision: 'Pivot, defend or change segment.', deliverable: 'Position review: unit economics by segment, competition, three costed options.', format: 'Short engagement', cycles: ['croissance', 'restructuration'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'AI is changing our business.', decision: 'Where to integrate it, what not to automate.', deliverable: 'Map of AI use cases by value-chain step, ranked by value created and risk carried.', format: 'A few weeks', cycles: ['croissance'], image: `${S}developer-desk.jpg` },
-        { quote: 'A competitor is for sale, or a partner could acquire us.', decision: 'Organic growth, alliance or acquisition.', deliverable: 'External growth thesis, target criteria, go / no-go framework.', format: 'A few weeks', cycles: ['acquisition'], image: `${S}handshake.jpg` },
-        { quote: 'We are opening a new market (DACH, Benelux, Southern Europe).', decision: 'Subsidiary, distributor, partner, or wait.', deliverable: 'Country entry plan, with local regulatory requirements and talent needs.', format: 'A few weeks', cycles: ['croissance'], image: `${S}meeting-room.jpg` },
-        { quote: 'My board, my bank or my shareholder wants a three-year plan.', decision: 'Which assumptions to own, which to test.', deliverable: 'Defensible plan, explicit sensitivities, ten-page memo for the committee.', format: 'One to two months', cycles: ['lancement', 'croissance'], image: `${S}planning-laptops.jpg` },
-        { quote: 'The strategy is in my head.', decision: 'What must exist without you.', deliverable: 'Strategy documented in five priorities, with owners and milestones.', format: 'A few weeks', cycles: ['croissance', 'transmission'], image: `${S}plan-writing.jpg` },
+        { quote: 'Our model is eroding.', decision: 'Pivot, defend or change segment.', deliverable: 'Position review: unit economics by segment, competition, three costed options.', format: 'Short engagement', cycles: ['croissance', 'restructuration'] },
+        { quote: 'AI is changing our business.', decision: 'Where to integrate it, what not to automate.', deliverable: 'Map of AI use cases by value-chain step, ranked by value created and risk carried.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'A competitor is for sale, or a partner could acquire us.', decision: 'Organic growth, alliance or acquisition.', deliverable: 'External growth thesis, target criteria, go / no-go framework.', format: 'A few weeks', cycles: ['acquisition'] },
+        { quote: 'We are opening a new market (DACH, Benelux, Southern Europe).', decision: 'Subsidiary, distributor, partner, or wait.', deliverable: 'Country entry plan, with local regulatory requirements and talent needs.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'My board, my bank or my shareholder wants a three-year plan.', decision: 'Which assumptions to own, which to test.', deliverable: 'Defensible plan, explicit sensitivities, ten-page memo for the committee.', format: 'One to two months', cycles: ['lancement', 'croissance'] },
+        { quote: 'The strategy is in my head.', decision: 'What must exist without you.', deliverable: 'Strategy documented in five priorities, with owners and milestones.', format: 'A few weeks', cycles: ['croissance', 'transmission'] },
       ],
     },
     services: {
@@ -163,7 +159,6 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         'AI. Article 50 of the AI Act has applied since 2 August 2026. The high-risk obligations of Annex III are postponed to 2 December 2027 by Regulation (EU) 2026/1744. Fines reach 35 M€ or 7% of worldwide turnover for prohibited practices, 15 M€ or 3% for most other obligations.',
       ],
       change: 'Three calendars, three jurisdictions. The right question is not “are we compliant?” but “what are we bound to, towards whom, by when?”.',
-      sources: 'Sources: Directive (EU) 2022/2555 · European Commission · NCSC, press release of 29.09.2025 · Regulations (EU) 2024/1689 and 2026/1744.',
     },
     outcomes: {
       title: 'What you get',
@@ -176,12 +171,12 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'A major customer sent us a forty-page security questionnaire.', decision: 'What level of evidence to provide, against which framework.', deliverable: 'Evidence file and gap-closure plan, reusable for the next customers.', format: 'A few weeks', cycles: ['croissance'], image: `${S}laptop-hands.jpg` },
-        { quote: 'We do not know whether we are in scope.', decision: 'What applies to us, what will be imposed on us, what can wait.', deliverable: 'Three-Track Exposure Map.', format: 'Short engagement', cycles: ['lancement', 'croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Our teams use AI without rules.', decision: 'Which tools, with which data, under whose responsibility.', deliverable: 'Usage policy, system inventory, classification under the AI Act.', format: 'Short engagement', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'We have had an incident.', decision: 'Whom to inform (authority, customers, insurer), within what deadlines.', deliverable: 'Documented incident file and improvement plan, with incident-response experts from the network.', format: 'On request', cycles: ['restructuration'], image: `${S}network-cables.jpg` },
-        { quote: 'An investor or an acquirer is going to audit us.', decision: 'What to regularise beforehand, what to own.', deliverable: 'Compliance file ready for the data room.', format: 'A few weeks', cycles: ['acquisition', 'transmission'], image: `${S}planning-laptops.jpg` },
-        { quote: 'We sell into the EU from Switzerland (or the reverse).', decision: 'Representative, DPO, data transfers.', deliverable: 'Jurisdiction matrix (FADP / GDPR) and associated obligations.', format: 'Short engagement', cycles: ['croissance'], image: `${S}office-corridor.jpg` },
+        { quote: 'A major customer sent us a forty-page security questionnaire.', decision: 'What level of evidence to provide, against which framework.', deliverable: 'Evidence file and gap-closure plan, reusable for the next customers.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'We do not know whether we are in scope.', decision: 'What applies to us, what will be imposed on us, what can wait.', deliverable: 'Three-Track Exposure Map.', format: 'Short engagement', cycles: ['lancement', 'croissance'] },
+        { quote: 'Our teams use AI without rules.', decision: 'Which tools, with which data, under whose responsibility.', deliverable: 'Usage policy, system inventory, classification under the AI Act.', format: 'Short engagement', cycles: ['croissance'] },
+        { quote: 'We have had an incident.', decision: 'Whom to inform (authority, customers, insurer), within what deadlines.', deliverable: 'Documented incident file and improvement plan, with incident-response experts from the network.', format: 'On request', cycles: ['restructuration'] },
+        { quote: 'An investor or an acquirer is going to audit us.', decision: 'What to regularise beforehand, what to own.', deliverable: 'Compliance file ready for the data room.', format: 'A few weeks', cycles: ['acquisition', 'transmission'] },
+        { quote: 'We sell into the EU from Switzerland (or the reverse).', decision: 'Representative, DPO, data transfers.', deliverable: 'Jurisdiction matrix (FADP / GDPR) and associated obligations.', format: 'Short engagement', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -276,11 +271,8 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '34%', label: 'have rules on the data entered into AI tools; 23% among companies with fewer than 10 employees', source: 'SECO, kmu.admin.ch' },
         { value: '2 Aug 2026', label: 'AI Act transparency obligations (Article 50) applicable', source: 'Regulation (EU) 2024/1689' },
       ],
-      paragraphs: [
-        'Adoption is ahead of governance. In Switzerland, AI use among SMEs rose from 22% to 34% between 2024 and 2025; 60% see it as an opportunity. Yet only 34% have clear rules on the data that may be entered into these tools, and 23% among companies with fewer than ten employees. On the European side, the AI Act’s transparency obligations have applied since 2 August 2026.',
-      ],
+      paragraphs: [],
       change: 'The risk does not come from the tool, but from the absence of a rule around it.',
-      sources: 'Sources: SECO, “AI gains ground among Swiss SMEs” · Regulation (EU) 2024/1689.',
     },
     outcomes: {
       title: 'What you get',
@@ -293,12 +285,12 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'Our platform is slowing down our releases.', decision: 'Refactor, rebuild or replace.', deliverable: 'Architecture audit, technical debt quantified by domain, twelve-month trajectory.', format: 'A few weeks', cycles: ['croissance'], image: `${S}server-room-walk.jpg` },
-        { quote: 'Only one person understands the system.', decision: 'Document, duplicate or insource.', deliverable: 'Dependency register (people, providers, licences) and reduction plan.', format: 'Short engagement', cycles: ['croissance', 'transmission'], image: `${S}developer-desk.jpg` },
-        { quote: 'Build, buy or partner?', decision: 'The right call, with the exit cost.', deliverable: 'Weighted-criteria analysis, reversibility included.', format: 'Short engagement', cycles: ['lancement', 'croissance'], image: `${S}loft-office.jpg` },
-        { quote: 'Our teams use AI without a framework.', decision: 'Authorised tools, admitted data, hosting.', deliverable: 'Usage policy, inventory, tool arbitration.', format: 'Short engagement', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'We no longer have a CTO.', decision: 'Interim, hire, or fractional leadership.', deliverable: 'Interim technical leadership with documented handover.', format: 'Fractional engagement', cycles: ['restructuration'], image: `${S}open-office.jpg` },
-        { quote: 'Where is our data, and who can access it?', decision: 'EU or Swiss hosting, reversibility clauses, exposure to extraterritorial laws.', deliverable: 'Hosting review and reversibility plan.', format: 'Short engagement', cycles: ['lancement', 'croissance'], image: `${S}network-cables.jpg` },
+        { quote: 'Our platform is slowing down our releases.', decision: 'Refactor, rebuild or replace.', deliverable: 'Architecture audit, technical debt quantified by domain, twelve-month trajectory.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'Only one person understands the system.', decision: 'Document, duplicate or insource.', deliverable: 'Dependency register (people, providers, licences) and reduction plan.', format: 'Short engagement', cycles: ['croissance', 'transmission'] },
+        { quote: 'Build, buy or partner?', decision: 'The right call, with the exit cost.', deliverable: 'Weighted-criteria analysis, reversibility included.', format: 'Short engagement', cycles: ['lancement', 'croissance'] },
+        { quote: 'Our teams use AI without a framework.', decision: 'Authorised tools, admitted data, hosting.', deliverable: 'Usage policy, inventory, tool arbitration.', format: 'Short engagement', cycles: ['croissance'] },
+        { quote: 'We no longer have a CTO.', decision: 'Interim, hire, or fractional leadership.', deliverable: 'Interim technical leadership with documented handover.', format: 'Fractional engagement', cycles: ['restructuration'] },
+        { quote: 'Where is our data, and who can access it?', decision: 'EU or Swiss hosting, reversibility clauses, exposure to extraterritorial laws.', deliverable: 'Hosting review and reversibility plan.', format: 'Short engagement', cycles: ['lancement', 'croissance'] },
       ],
     },
     services: {
@@ -400,11 +392,9 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '21%', label: 'of owners aged 66 to 90 did not yet have a transfer timetable', source: 'UBS / University of St. Gallen, 2026 study' },
       ],
       paragraphs: [
-        'According to the UBS and University of St. Gallen study (2026), 168,000 Swiss SMEs would be concerned by a succession by the end of 2030. For three owners in four who are preparing a transfer, success rests on one person. And one owner in five aged 66 and over has not yet set a timetable.',
         'The more detailed French market figures point the same way: 47% of family business leaders aged 60 to 69 have not formalised a succession plan (Bpifrance Le Lab).',
       ],
       change: 'The gap between intention and action has less to do with the market than with preparation. An organisation that depends on one person transfers badly, finances badly and steers badly.',
-      sources: 'Sources: UBS / University of St. Gallen, study on Swiss SME succession (2026, survey of September 2025) · Bpifrance Le Lab (27 November 2025), for the French reference.',
     },
     outcomes: {
       title: 'What you get',
@@ -417,12 +407,12 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'Everything goes through me.', decision: 'What to delegate first, to whom.', deliverable: 'Dependency Index and twelve-month delegation plan.', format: 'A few weeks', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
-        { quote: 'My leadership team is not yet a team.', decision: 'Roles, decision rhythms, delegations.', deliverable: 'Governance charter for the management committee.', format: 'A few weeks', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'A key person wants to leave.', decision: 'Retain, replace or back up.', deliverable: 'Retention plan, identified backup (internal, or interim profile if needed), documented knowledge transfer.', format: 'Short engagement', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'I need to hire an executive (technical, financial, operations, country).', decision: 'The right profile, in the right governance.', deliverable: 'Role definition and integration criteria, then, if you wish, Select a profile.', format: 'Short engagement', cycles: ['croissance'], image: `${S}handshake.jpg` },
-        { quote: 'I am thinking of transferring in two to five years.', decision: 'Family, internal or external buyer.', deliverable: 'Succession plan and transition governance.', format: 'One to two months', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
-        { quote: 'An acquisition is coming, two cultures are about to meet.', decision: 'Who stays, who leads, how to organise.', deliverable: 'Assessment of the target team, target organisation, retention plan.', format: 'A few weeks', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
+        { quote: 'Everything goes through me.', decision: 'What to delegate first, to whom.', deliverable: 'Dependency Index and twelve-month delegation plan.', format: 'A few weeks', cycles: ['croissance', 'transmission'] },
+        { quote: 'My leadership team is not yet a team.', decision: 'Roles, decision rhythms, delegations.', deliverable: 'Governance charter for the management committee.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'A key person wants to leave.', decision: 'Retain, replace or back up.', deliverable: 'Retention plan, identified backup (internal, or interim profile if needed), documented knowledge transfer.', format: 'Short engagement', cycles: ['restructuration'] },
+        { quote: 'I need to hire an executive (technical, financial, operations, country).', decision: 'The right profile, in the right governance.', deliverable: 'Role definition and integration criteria, then, if you wish, Select a profile.', format: 'Short engagement', cycles: ['croissance'] },
+        { quote: 'I am thinking of transferring in two to five years.', decision: 'Family, internal or external buyer.', deliverable: 'Succession plan and transition governance.', format: 'One to two months', cycles: ['transmission'] },
+        { quote: 'An acquisition is coming, two cultures are about to meet.', decision: 'Who stays, who leads, how to organise.', deliverable: 'Assessment of the target team, target organisation, retention plan.', format: 'A few weeks', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -519,11 +509,8 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '208', label: 'Swiss SME M&A deals in 2025, up 16%; up 28% in IT services and software', source: 'SECO, kmu.admin.ch' },
         { value: '23%', label: 'of potential French sellers report a lack of takeover offers', source: 'Bpifrance Le Lab, 2025' },
       ],
-      paragraphs: [
-        'Compiled studies place the failure of M&A operations between 48 and 66% depending on the definition used, and the observations of Kotter and his co-authors locate most failures at integration. In Switzerland, SME M&A deals rebounded by 16% in 2025 (208 deals), with +28% in IT services and software. In France, 23% of potential sellers report a lack of takeover offers.',
-      ],
+      paragraphs: [],
       change: 'The market has sellers and buyers; what is missing is the preparation that gets the deal done and keeps its promises.',
-      sources: 'Sources: Wiley Encyclopedia of Management; Kotter, Akhtar, Gupta, Change · SECO · Bpifrance Le Lab (2025).',
     },
     outcomes: {
       title: 'What you get',
@@ -536,12 +523,12 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'We have identified a target.', decision: 'What to look at before the letter of intent.', deliverable: 'Four Blind Spots review, with a proposed treatment for each: price, warranty, condition precedent.', format: 'A few weeks', cycles: ['acquisition'], image: `${S}planning-laptops.jpg` },
-        { quote: 'Someone has approached us to buy the company.', decision: 'How far to prepare before answering.', deliverable: 'Seller readiness diagnosis and negotiating position.', format: 'A few weeks', cycles: ['transmission'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'We want to make two or three acquisitions in three years.', decision: 'Thesis, criteria, process.', deliverable: 'Repeatable build-up programme: criteria, standard review, integration playbook.', format: 'One to two months', cycles: ['acquisition'], image: `${S}loft-office.jpg` },
-        { quote: 'The acquisition is signed, integration is stalling.', decision: 'What is urgent, what can wait.', deliverable: '30 / 60 / 100-day plan and steering.', format: 'Three to six-month engagement', cycles: ['acquisition'], image: `${S}open-office.jpg` },
-        { quote: 'We need to divest a non-core business.', decision: 'Scope and separation of systems.', deliverable: 'Separation plan: scope, systems, people, transition agreements.', format: 'One to two months', cycles: ['restructuration'], image: `${S}industrial-engineer.jpg` },
-        { quote: 'My fund needs to validate a technology target.', decision: 'Invest, negotiate or walk away.', deliverable: 'Independent technical and organisational review, scored by blind spot.', format: 'A few weeks', cycles: ['acquisition'], image: `${S}server-room-walk.jpg` },
+        { quote: 'We have identified a target.', decision: 'What to look at before the letter of intent.', deliverable: 'Four Blind Spots review, with a proposed treatment for each: price, warranty, condition precedent.', format: 'A few weeks', cycles: ['acquisition'] },
+        { quote: 'Someone has approached us to buy the company.', decision: 'How far to prepare before answering.', deliverable: 'Seller readiness diagnosis and negotiating position.', format: 'A few weeks', cycles: ['transmission'] },
+        { quote: 'We want to make two or three acquisitions in three years.', decision: 'Thesis, criteria, process.', deliverable: 'Repeatable build-up programme: criteria, standard review, integration playbook.', format: 'One to two months', cycles: ['acquisition'] },
+        { quote: 'The acquisition is signed, integration is stalling.', decision: 'What is urgent, what can wait.', deliverable: '30 / 60 / 100-day plan and steering.', format: 'Three to six-month engagement', cycles: ['acquisition'] },
+        { quote: 'We need to divest a non-core business.', decision: 'Scope and separation of systems.', deliverable: 'Separation plan: scope, systems, people, transition agreements.', format: 'One to two months', cycles: ['restructuration'] },
+        { quote: 'My fund needs to validate a technology target.', decision: 'Invest, negotiate or walk away.', deliverable: 'Independent technical and organisational review, scored by blind spot.', format: 'A few weeks', cycles: ['acquisition'] },
       ],
     },
     services: {

@@ -12,7 +12,7 @@ export function AdvisoryTechStrip() {
   const labelRef = useRef<HTMLParagraphElement>(null)
   const headRef  = useRef<HTMLHeadingElement>(null)
 
-  const pillars = (t.raw('pillars') as Record<string, { title: string; desc: string; dimensions: { label: string; desc: string }[] }>) || {}
+  const pillars = (t.raw('pillars') as Record<string, { title: string; desc: string; href?: string; dimensions: { label: string; desc: string }[] }>) || {}
   const pillarKeys = Object.keys(pillars)
 
   const [hovered, setHovered] = useState<string | null>(null)
@@ -103,6 +103,15 @@ export function AdvisoryTechStrip() {
                     ))}
                   </ul>
                 </div>
+                {pillar.href && (
+                  <Link
+                    href={pillar.href as never}
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 self-start font-mono text-[10px] uppercase tracking-[0.16em] text-ag-apex-ink hover:text-ag-black transition-colors"
+                  >
+                    {t('pillarLink')} <ArrowUpRight size={11} />
+                  </Link>
+                )}
               </div>
             )
           })}

@@ -129,13 +129,12 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoContact',   href: '/contact' },
 ]
 
-/* Les cinq disciplines, dans l'ordre du bandeau d'accueil */
-const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
-  { footerKey: 'footerCraftSupport',  href: '/advisory' },
-  { footerKey: 'footerCraftBuild',    href: '/advisory' },
-  { footerKey: 'footerCraftTransact', href: '/accompagner/lancement' as LinkHref },
-  { footerKey: 'footerWhoTalent',     href: '/talent' as never },
-  { footerKey: 'footerInform',        href: '/blog' },
+/* Colonne Nos métiers : les entrées du menu, plus Sélectionner (page Talent) */
+const metiersLinks: { navNs: 'footer' | 'nav'; key: string; href: LinkHref }[] = [
+  { navNs: 'footer', key: 'footerCraftFrameDeliver', href: '/advisory' },
+  { navNs: 'footer', key: 'footerCraftTransact',     href: { pathname: '/', hash: 'cinq-cycles' } as LinkHref },
+  { navNs: 'footer', key: 'footerWhoTalent',         href: '/talent' as never },
+  { navNs: 'nav',    key: 'whoIndustries',           href: '/industries' as LinkHref },
 ]
 
 export default function Footer() {
@@ -187,16 +186,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2 — Services */}
+          {/* Col 2 — Nos métiers */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol2Title')}
             </p>
             <ul className="space-y-2.5">
-              {accompagnementLinks.map(({ footerKey, href }) => (
-                <li key={footerKey}>
+              {metiersLinks.map(({ navNs, key, href }) => (
+                <li key={key}>
                   <Link href={href} className="text-sm text-white/70 hover:text-white transition-colors">
-                    {t(footerKey)}
+                    {navNs === 'nav' ? tNav(key) : t(key)}
                   </Link>
                 </li>
               ))}
@@ -226,6 +225,11 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5">
               <li>
+                <Link href="/assets" className="text-sm text-white/70 hover:text-white transition-colors">
+                  {tNav('craftBuildAssets')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/valuation" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col3Valuation')}
                 </Link>
@@ -239,11 +243,6 @@ export default function Footer() {
                 <a href="https://subblink.com" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-white transition-colors">
                   {t('col2Subblink')}
                 </a>
-              </li>
-              <li>
-                <Link href="/assets" className="text-sm text-white/70 hover:text-white transition-colors">
-                  {tNav('craftBuildAssets')}
-                </Link>
               </li>
             </ul>
           </div>

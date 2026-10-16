@@ -5,7 +5,6 @@ import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 const PRIVACY =
   'Uw antwoorden blijven in uw browser. Niets wordt opgeslagen of verzonden zonder uw toestemming. Het resultaat past op één pagina: uw niveau en de aanbevolen volgende stap.'
 
-const S = '/images/advisory/situations/'
 
 export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
@@ -34,11 +33,8 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '−2 %', label: 'Franse adviesmarkt in 2025, gecorrigeerd voor inflatie', source: 'Syntec Conseil' },
         { value: '−7,3', label: 'indexpunten, NZZ-kmo-barometer 2026, laagste stand sinds de start van de enquête in 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
-      paragraphs: [
-        'Leiders van kmo’s en middelgrote bedrijven kopen advies, maar anders. Bpifrance voerde in 2024 bijna 9 000 adviesopdrachten uit, 50 % meer dan een jaar eerder, terwijl de Franse adviesmarkt in 2025 gecorrigeerd voor inflatie met 2 % krimpt. In Zwitserland daalt de samengestelde index van de NZZ-kmo-barometer 2026 (NZZ en Kalaidos Fachhochschule) naar −7,3 punten, de laagste stand sinds de start van de enquête in 2021; alleen de integratie van technologie gaat vooruit.',
-      ],
+      paragraphs: [],
       change: 'Wanneer de context verstrakt, stijgen de kosten van een verkeerde afweging. Er is geen groot programma meer nodig, maar één precieze beslissing, snel genomen, met een ervaren blik.',
-      sources: 'Bronnen: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (overgenomen door SECO).',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -51,12 +47,12 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'Ons model erodeert.', decision: 'Pivoteren, verdedigen of van segment veranderen.', deliverable: 'Positiebeoordeling: unit economics per segment, concurrentie, drie becijferde opties.', format: 'Korte opdracht', cycles: ['croissance', 'restructuration'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'AI verandert ons vak.', decision: 'Waar integreren, wat niet automatiseren.', deliverable: 'Kaart van AI-toepassingen per stap in de waardeketen, gerangschikt naar gecreëerde waarde en gedragen risico.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}developer-desk.jpg` },
-        { quote: 'Een concurrent staat te koop, of een partner zou ons kunnen overnemen.', decision: 'Organische groei, alliantie of overname.', deliverable: 'Externe-groeithese, doelcriteria, go / no-go-kader.', format: 'Enkele weken', cycles: ['acquisition'], image: `${S}handshake.jpg` },
-        { quote: 'We betreden een nieuwe markt (DACH, Benelux, Zuid-Europa).', decision: 'Dochteronderneming, distributeur, partner, of wachten.', deliverable: 'Toetredingsplan per land, met lokale regelgevende eisen en talentbehoeften.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}meeting-room.jpg` },
-        { quote: 'Mijn raad, mijn bank of mijn aandeelhouder vraagt een driejarenplan.', decision: 'Welke hypothesen aannemen, welke toetsen.', deliverable: 'Verdedigbaar plan, expliciete gevoeligheden, memo van tien pagina’s voor het comité.', format: 'Eén tot twee maanden', cycles: ['lancement', 'croissance'], image: `${S}planning-laptops.jpg` },
-        { quote: 'De strategie zit in mijn hoofd.', decision: 'Wat moet bestaan zonder u.', deliverable: 'Strategie gedocumenteerd in vijf prioriteiten, met verantwoordelijken en mijlpalen.', format: 'Enkele weken', cycles: ['croissance', 'transmission'], image: `${S}plan-writing.jpg` },
+        { quote: 'Ons model erodeert.', decision: 'Pivoteren, verdedigen of van segment veranderen.', deliverable: 'Positiebeoordeling: unit economics per segment, concurrentie, drie becijferde opties.', format: 'Korte opdracht', cycles: ['croissance', 'restructuration'] },
+        { quote: 'AI verandert ons vak.', decision: 'Waar integreren, wat niet automatiseren.', deliverable: 'Kaart van AI-toepassingen per stap in de waardeketen, gerangschikt naar gecreëerde waarde en gedragen risico.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Een concurrent staat te koop, of een partner zou ons kunnen overnemen.', decision: 'Organische groei, alliantie of overname.', deliverable: 'Externe-groeithese, doelcriteria, go / no-go-kader.', format: 'Enkele weken', cycles: ['acquisition'] },
+        { quote: 'We betreden een nieuwe markt (DACH, Benelux, Zuid-Europa).', decision: 'Dochteronderneming, distributeur, partner, of wachten.', deliverable: 'Toetredingsplan per land, met lokale regelgevende eisen en talentbehoeften.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Mijn raad, mijn bank of mijn aandeelhouder vraagt een driejarenplan.', decision: 'Welke hypothesen aannemen, welke toetsen.', deliverable: 'Verdedigbaar plan, expliciete gevoeligheden, memo van tien pagina’s voor het comité.', format: 'Eén tot twee maanden', cycles: ['lancement', 'croissance'] },
+        { quote: 'De strategie zit in mijn hoofd.', decision: 'Wat moet bestaan zonder u.', deliverable: 'Strategie gedocumenteerd in vijf prioriteiten, met verantwoordelijken en mijlpalen.', format: 'Enkele weken', cycles: ['croissance', 'transmission'] },
       ],
     },
     services: {
@@ -163,7 +159,6 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         'AI. Artikel 50 van de AI Act is van toepassing sinds 2 augustus 2026. De verplichtingen voor «hoog risico» van bijlage III zijn door Verordening (EU) 2026/1744 uitgesteld tot 2 december 2027. De boetes lopen op tot 35 M€ of 7 % van de wereldwijde omzet voor verboden praktijken, 15 M€ of 3 % voor de meeste andere verplichtingen.',
       ],
       change: 'Drie kalenders, drie rechtsgebieden. De juiste vraag is niet «zijn we conform?» maar «waartoe zijn we gehouden, tegenover wie, tegen wanneer?».',
-      sources: 'Bronnen: Richtlijn (EU) 2022/2555 · Europese Commissie · NCSC, persbericht van 29.09.2025 · Verordeningen (EU) 2024/1689 en 2026/1744.',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -176,12 +171,12 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'Een grote klant stuurt ons een beveiligingsvragenlijst van veertig pagina’s.', decision: 'Welk bewijsniveau leveren, volgens welk referentiekader.', deliverable: 'Bewijsdossier en plan om de lacunes te dichten, herbruikbaar voor de volgende klanten.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}laptop-hands.jpg` },
-        { quote: 'We weten niet of we binnen het toepassingsgebied vallen.', decision: 'Wat op ons van toepassing is, wat ons zal worden opgelegd, wat kan wachten.', deliverable: 'Blootstellingskaart met drie sporen.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Onze teams gebruiken AI zonder regels.', decision: 'Welke tools, met welke data, onder wiens verantwoordelijkheid.', deliverable: 'Gebruiksbeleid, systeeminventaris, classificatie volgens de AI Act.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'We hebben een incident gehad.', decision: 'Wie informeren (autoriteit, klanten, verzekeraar), binnen welke termijnen.', deliverable: 'Gedocumenteerd incidentdossier en verbeterplan, met incident-responsexperts uit het netwerk.', format: 'Op aanvraag', cycles: ['restructuration'], image: `${S}network-cables.jpg` },
-        { quote: 'Een investeerder of een overnemer gaat ons auditen.', decision: 'Wat vooraf regulariseren, wat op zich nemen.', deliverable: 'Compliancedossier klaar voor de dataroom.', format: 'Enkele weken', cycles: ['acquisition', 'transmission'], image: `${S}planning-laptops.jpg` },
-        { quote: 'We verkopen in de EU vanuit Zwitserland (of omgekeerd).', decision: 'Vertegenwoordiger, DPO, gegevensoverdrachten.', deliverable: 'Matrix van rechtsgebieden (DSG / AVG) en bijbehorende verplichtingen.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}office-corridor.jpg` },
+        { quote: 'Een grote klant stuurt ons een beveiligingsvragenlijst van veertig pagina’s.', decision: 'Welk bewijsniveau leveren, volgens welk referentiekader.', deliverable: 'Bewijsdossier en plan om de lacunes te dichten, herbruikbaar voor de volgende klanten.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'We weten niet of we binnen het toepassingsgebied vallen.', decision: 'Wat op ons van toepassing is, wat ons zal worden opgelegd, wat kan wachten.', deliverable: 'Blootstellingskaart met drie sporen.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'] },
+        { quote: 'Onze teams gebruiken AI zonder regels.', decision: 'Welke tools, met welke data, onder wiens verantwoordelijkheid.', deliverable: 'Gebruiksbeleid, systeeminventaris, classificatie volgens de AI Act.', format: 'Korte opdracht', cycles: ['croissance'] },
+        { quote: 'We hebben een incident gehad.', decision: 'Wie informeren (autoriteit, klanten, verzekeraar), binnen welke termijnen.', deliverable: 'Gedocumenteerd incidentdossier en verbeterplan, met incident-responsexperts uit het netwerk.', format: 'Op aanvraag', cycles: ['restructuration'] },
+        { quote: 'Een investeerder of een overnemer gaat ons auditen.', decision: 'Wat vooraf regulariseren, wat op zich nemen.', deliverable: 'Compliancedossier klaar voor de dataroom.', format: 'Enkele weken', cycles: ['acquisition', 'transmission'] },
+        { quote: 'We verkopen in de EU vanuit Zwitserland (of omgekeerd).', decision: 'Vertegenwoordiger, DPO, gegevensoverdrachten.', deliverable: 'Matrix van rechtsgebieden (DSG / AVG) en bijbehorende verplichtingen.', format: 'Korte opdracht', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -276,11 +271,8 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '34 %', label: 'beschikken over regels voor de data die in AI-tools worden ingevoerd; 23 % bij bedrijven met minder dan 10 werknemers', source: 'SECO, kmu.admin.ch' },
         { value: '2 aug 2026', label: 'transparantieverplichtingen van de AI Act (artikel 50) van toepassing', source: 'Verordening (EU) 2024/1689' },
       ],
-      paragraphs: [
-        'De adoptie loopt voor op de governance. In Zwitserland steeg het AI-gebruik bij kmo’s van 22 % naar 34 % tussen 2024 en 2025; 60 % ziet er een kans in. Maar slechts 34 % beschikt over duidelijke regels voor de data die in deze tools mogen worden ingevoerd, en 23 % bij bedrijven met minder dan tien werknemers. Aan Europese zijde gelden de transparantieverplichtingen van de AI Act sinds 2 augustus 2026.',
-      ],
+      paragraphs: [],
       change: 'Het risico komt niet van de tool, maar van het ontbreken van een regel eromheen.',
-      sources: 'Bronnen: SECO, «AI gains ground among Swiss SMEs» · Verordening (EU) 2024/1689.',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -293,12 +285,12 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'Ons platform vertraagt onze opleveringen.', decision: 'Refactoren, herbouwen of vervangen.', deliverable: 'Architectuuraudit, technische schuld becijferd per domein, traject over twaalf maanden.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}server-room-walk.jpg` },
-        { quote: 'Eén enkele persoon begrijpt het systeem.', decision: 'Documenteren, dubbel bezetten of internaliseren.', deliverable: 'Afhankelijkhedenregister (personen, dienstverleners, licenties) en reductieplan.', format: 'Korte opdracht', cycles: ['croissance', 'transmission'], image: `${S}developer-desk.jpg` },
-        { quote: 'Bouwen, kopen of samenwerken?', decision: 'De juiste afweging, met de uitstapkosten.', deliverable: 'Analyse met gewogen criteria, omkeerbaarheid inbegrepen.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'], image: `${S}loft-office.jpg` },
-        { quote: 'Onze teams gebruiken AI zonder kader.', decision: 'Toegelaten tools, toegestane data, hosting.', deliverable: 'Gebruiksbeleid, inventaris, afweging van tools.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'We hebben geen technisch directeur meer.', decision: 'Interim, aanwerving of leiding in deeltijd.', deliverable: 'Technische interim-leiding met gedocumenteerde overdracht.', format: 'Deeltijdopdracht', cycles: ['restructuration'], image: `${S}open-office.jpg` },
-        { quote: 'Waar zijn onze data, en wie heeft er toegang toe?', decision: 'Hosting in de EU of Zwitserland, omkeerbaarheidsclausules, blootstelling aan extraterritoriale wetten.', deliverable: 'Hostingbeoordeling en omkeerbaarheidsplan.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'], image: `${S}network-cables.jpg` },
+        { quote: 'Ons platform vertraagt onze opleveringen.', decision: 'Refactoren, herbouwen of vervangen.', deliverable: 'Architectuuraudit, technische schuld becijferd per domein, traject over twaalf maanden.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Eén enkele persoon begrijpt het systeem.', decision: 'Documenteren, dubbel bezetten of internaliseren.', deliverable: 'Afhankelijkhedenregister (personen, dienstverleners, licenties) en reductieplan.', format: 'Korte opdracht', cycles: ['croissance', 'transmission'] },
+        { quote: 'Bouwen, kopen of samenwerken?', decision: 'De juiste afweging, met de uitstapkosten.', deliverable: 'Analyse met gewogen criteria, omkeerbaarheid inbegrepen.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'] },
+        { quote: 'Onze teams gebruiken AI zonder kader.', decision: 'Toegelaten tools, toegestane data, hosting.', deliverable: 'Gebruiksbeleid, inventaris, afweging van tools.', format: 'Korte opdracht', cycles: ['croissance'] },
+        { quote: 'We hebben geen technisch directeur meer.', decision: 'Interim, aanwerving of leiding in deeltijd.', deliverable: 'Technische interim-leiding met gedocumenteerde overdracht.', format: 'Deeltijdopdracht', cycles: ['restructuration'] },
+        { quote: 'Waar zijn onze data, en wie heeft er toegang toe?', decision: 'Hosting in de EU of Zwitserland, omkeerbaarheidsclausules, blootstelling aan extraterritoriale wetten.', deliverable: 'Hostingbeoordeling en omkeerbaarheidsplan.', format: 'Korte opdracht', cycles: ['lancement', 'croissance'] },
       ],
     },
     services: {
@@ -400,11 +392,9 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '21 %', label: 'van de eigenaars van 66 tot 90 jaar had nog geen overdrachtskalender', source: 'UBS / Universiteit van Sankt Gallen, studie 2026' },
       ],
       paragraphs: [
-        'Volgens de studie van UBS en de Universiteit van Sankt Gallen (2026) krijgen 168 000 Zwitserse kmo’s tegen eind 2030 met een opvolging te maken. Voor drie op de vier eigenaars die een overdracht voorbereiden, rust het succes op één persoon. En één op de vijf eigenaars van 66 jaar en ouder heeft nog geen kalender vastgelegd.',
         'De meer gedetailleerde cijfers van de Franse markt wijzen in dezelfde richting: 47 % van de leiders van familiebedrijven van 60 tot 69 jaar heeft geen opvolgingsplan geformaliseerd (Bpifrance Le Lab).',
       ],
       change: 'De kloof tussen intentie en daad heeft minder met de markt te maken dan met voorbereiding. Een organisatie die van één persoon afhangt, draagt slecht over, financiert slecht en stuurt slecht.',
-      sources: 'Bronnen: UBS / Universiteit van Sankt Gallen, studie over opvolging in Zwitserse kmo’s (2026, enquête van september 2025) · Bpifrance Le Lab (27 november 2025), voor de Franse referentie.',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -417,12 +407,12 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'Alles loopt via mij.', decision: 'Wat eerst delegeren, aan wie.', deliverable: 'Afhankelijkheidsindex en delegatieplan over twaalf maanden.', format: 'Enkele weken', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
-        { quote: 'Mijn directieteam is nog geen team.', decision: 'Rollen, beslissingsritmes, delegaties.', deliverable: 'Governancehandvest van het directiecomité.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Een sleutelprofiel wil vertrekken.', decision: 'Behouden, vervangen of dubbel bezetten.', deliverable: 'Retentieplan, geïdentificeerde back-up (intern, of overgangsprofiel indien nodig), gedocumenteerde kennisoverdracht.', format: 'Korte opdracht', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Ik moet een leidinggevende aanwerven (technisch, financieel, operationeel, land).', decision: 'Het juiste profiel, in de juiste governance.', deliverable: 'Functiedefinitie en integratiecriteria, daarna, als u dat wenst, een profiel selecteren.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}handshake.jpg` },
-        { quote: 'Ik overweeg over te dragen binnen twee tot vijf jaar.', decision: 'Familie, intern of externe overnemer.', deliverable: 'Opvolgingsplan en transitiegovernance.', format: 'Eén tot twee maanden', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
-        { quote: 'Er komt een overname aan, twee culturen gaan elkaar ontmoeten.', decision: 'Wie blijft, wie leidt, hoe organiseren.', deliverable: 'Beoordeling van het doelteam, doelorganisatie, retentieplan.', format: 'Enkele weken', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
+        { quote: 'Alles loopt via mij.', decision: 'Wat eerst delegeren, aan wie.', deliverable: 'Afhankelijkheidsindex en delegatieplan over twaalf maanden.', format: 'Enkele weken', cycles: ['croissance', 'transmission'] },
+        { quote: 'Mijn directieteam is nog geen team.', decision: 'Rollen, beslissingsritmes, delegaties.', deliverable: 'Governancehandvest van het directiecomité.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Een sleutelprofiel wil vertrekken.', decision: 'Behouden, vervangen of dubbel bezetten.', deliverable: 'Retentieplan, geïdentificeerde back-up (intern, of overgangsprofiel indien nodig), gedocumenteerde kennisoverdracht.', format: 'Korte opdracht', cycles: ['restructuration'] },
+        { quote: 'Ik moet een leidinggevende aanwerven (technisch, financieel, operationeel, land).', decision: 'Het juiste profiel, in de juiste governance.', deliverable: 'Functiedefinitie en integratiecriteria, daarna, als u dat wenst, een profiel selecteren.', format: 'Korte opdracht', cycles: ['croissance'] },
+        { quote: 'Ik overweeg over te dragen binnen twee tot vijf jaar.', decision: 'Familie, intern of externe overnemer.', deliverable: 'Opvolgingsplan en transitiegovernance.', format: 'Eén tot twee maanden', cycles: ['transmission'] },
+        { quote: 'Er komt een overname aan, twee culturen gaan elkaar ontmoeten.', decision: 'Wie blijft, wie leidt, hoe organiseren.', deliverable: 'Beoordeling van het doelteam, doelorganisatie, retentieplan.', format: 'Enkele weken', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -519,11 +509,8 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '208', label: 'M&A-transacties van Zwitserse kmo’s in 2025, +16 %; +28 % in IT-diensten en software', source: 'SECO, kmu.admin.ch' },
         { value: '23 %', label: 'van de potentiële Franse verkopers melden een gebrek aan overnamebiedingen', source: 'Bpifrance Le Lab, 2025' },
       ],
-      paragraphs: [
-        'De verzamelde studies situeren het mislukken van M&A-transacties tussen 48 en 66 % naargelang de gehanteerde definitie, en de waarnemingen van Kotter en zijn co-auteurs situeren het merendeel van de mislukkingen bij de integratie. In Zwitserland veerden de M&A-transacties van kmo’s in 2025 op met 16 % (208 transacties), met +28 % in IT-diensten en software. In Frankrijk meldt 23 % van de potentiële verkopers een gebrek aan overnamebiedingen.',
-      ],
+      paragraphs: [],
       change: 'De markt heeft verkopers en kopers; wat ontbreekt is de voorbereiding die de transactie doet slagen en haar beloften doet nakomen.',
-      sources: 'Bronnen: Wiley Encyclopedia of Management; Kotter, Akhtar, Gupta, Change · SECO · Bpifrance Le Lab (2025).',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -536,12 +523,12 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'We hebben een doelwit op het oog.', decision: 'Wat te bekijken vóór de intentieverklaring.', deliverable: 'Beoordeling van de vier blinde vlekken, met voorgestelde behandeling voor elk: prijs, garantie, opschortende voorwaarde.', format: 'Enkele weken', cycles: ['acquisition'], image: `${S}planning-laptops.jpg` },
-        { quote: 'Men benadert ons om ons over te nemen.', decision: 'Hoe ver voorbereiden alvorens te antwoorden.', deliverable: 'Diagnose van de verkoopgereedheid en onderhandelingspositie.', format: 'Enkele weken', cycles: ['transmission'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'We willen twee of drie overnames doen in drie jaar.', decision: 'These, criteria, proces.', deliverable: 'Herhaalbaar build-upprogramma: criteria, standaardbeoordeling, integratieplaybook.', format: 'Eén tot twee maanden', cycles: ['acquisition'], image: `${S}loft-office.jpg` },
-        { quote: 'De overname is getekend, de integratie hapert.', decision: 'Wat dringend is, wat kan wachten.', deliverable: '30 / 60 / 100-dagenplan en sturing.', format: 'Opdracht van drie tot zes maanden', cycles: ['acquisition'], image: `${S}open-office.jpg` },
-        { quote: 'We moeten een niet-strategische activiteit afstoten.', decision: 'Perimeter en scheiding van systemen.', deliverable: 'Scheidingsplan: perimeter, systemen, mensen, overgangsovereenkomsten.', format: 'Eén tot twee maanden', cycles: ['restructuration'], image: `${S}industrial-engineer.jpg` },
-        { quote: 'Mijn fonds moet een technologisch doelwit valideren.', decision: 'Investeren, onderhandelen of afzien.', deliverable: 'Onafhankelijke technische en organisatorische beoordeling, gescoord per blinde vlek.', format: 'Enkele weken', cycles: ['acquisition'], image: `${S}server-room-walk.jpg` },
+        { quote: 'We hebben een doelwit op het oog.', decision: 'Wat te bekijken vóór de intentieverklaring.', deliverable: 'Beoordeling van de vier blinde vlekken, met voorgestelde behandeling voor elk: prijs, garantie, opschortende voorwaarde.', format: 'Enkele weken', cycles: ['acquisition'] },
+        { quote: 'Men benadert ons om ons over te nemen.', decision: 'Hoe ver voorbereiden alvorens te antwoorden.', deliverable: 'Diagnose van de verkoopgereedheid en onderhandelingspositie.', format: 'Enkele weken', cycles: ['transmission'] },
+        { quote: 'We willen twee of drie overnames doen in drie jaar.', decision: 'These, criteria, proces.', deliverable: 'Herhaalbaar build-upprogramma: criteria, standaardbeoordeling, integratieplaybook.', format: 'Eén tot twee maanden', cycles: ['acquisition'] },
+        { quote: 'De overname is getekend, de integratie hapert.', decision: 'Wat dringend is, wat kan wachten.', deliverable: '30 / 60 / 100-dagenplan en sturing.', format: 'Opdracht van drie tot zes maanden', cycles: ['acquisition'] },
+        { quote: 'We moeten een niet-strategische activiteit afstoten.', decision: 'Perimeter en scheiding van systemen.', deliverable: 'Scheidingsplan: perimeter, systemen, mensen, overgangsovereenkomsten.', format: 'Eén tot twee maanden', cycles: ['restructuration'] },
+        { quote: 'Mijn fonds moet een technologisch doelwit valideren.', decision: 'Investeren, onderhandelen of afzien.', deliverable: 'Onafhankelijke technische en organisatorische beoordeling, gescoord per blinde vlek.', format: 'Enkele weken', cycles: ['acquisition'] },
       ],
     },
     services: {

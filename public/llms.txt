@@ -4,7 +4,7 @@
 ## What is Aegryn?
 
 Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Five disciplines (EN): Advise · Build · Navigate · Recruit · Inform — FR: Accompagner · Construire · Franchir · Recruter · Informer.
-- **Advise** (Advisory) — five pillars: strategy & innovation, risk & compliance, technology & sovereignty, talent & organisation, M&A & PMI
+- **Advise** (Advisory) — eight disciplines: strategy & innovation, risk & compliance, finance & performance, technology & sovereignty, operations & operational excellence, talent & organisation, project & programme management, M&A & PMI
 - **Build** (Asset Engineering) — proprietary and custom digital assets
 - **Navigate** (Franchir) — operational execution of lifecycle transitions: launch, scaling, restructuring, acquisition, transmission
 - **Recruit** (Talent) — executive tech recruitment
@@ -224,7 +224,7 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 - [Valuation](https://aegryn.com/fr/valuation) — CIFSO Valuation Index + illustrative estimate
 
 ### Advisory
-- [Advisory](https://aegryn.com/fr/advisory) — Five pillars overview
+- [Advisory](https://aegryn.com/fr/advisory) — Eight disciplines overview
 - [Business Strategy, and Innovation](https://aegryn.com/fr/advisory/strategy) — Growth strategy, board advisory
 - [Risk Management, and Compliance](https://aegryn.com/fr/advisory/risk-compliance) — NIS2, DORA, EU AI Act, incident readiness
 - [Technology, and Sovereignty](https://aegryn.com/fr/advisory/technology) — Cybersecurity, AI audit, cloud independence

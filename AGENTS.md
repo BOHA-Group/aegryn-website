@@ -38,7 +38,10 @@
 
 ## Positionnement
 
-- Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). 5 disciplines : ACCOMPAGNER, CONSTRUIRE, FRANCHIR, RECRUTER, INFORMER. 5 métiers conseil : Stratégie & Innovation, Risques & Conformité, Technologie & Souveraineté, Talent & Organisation, M&A & PMI. Ne pas répéter l'énumération à chaque page, privilégier des formulations de fond.
+- Aegryn = cabinet de conseil intégré (cabinet de conseil, pas marketplace). Le modèle en cinq temps (Cadrer · Réaliser · Accompagner · Sélectionner · S'informer) reste le récit de l'accueil et de La Boutique ; il n'est plus la structure du menu.
+- Menu **Nos métiers** : **Cadrer et réaliser** (huit métiers, sur deux colonnes : Stratégie, Risques et Conformité, Finance et Performance, Technologie et Souveraineté, Opérations et Excellence opérationnelle, Talent et Organisation, Pilotage de projets et de programmes, M&A) · **Par situation** (cinq cycles de vie, `/accompagner/*`) · lien « Nos industries » en pied de panneau. Sélectionner n'a plus de colonne : c'est un bloc de la page Talent et Organisation (`#selectionner`, `components/advisory/SelectBlock.tsx`) et les pages `/talent/*`.
+- `/advisory` est la page hub des huit métiers (`content/advisory/hub.ts`). Les noms, descriptions et dimensions des huit métiers viennent de `advisory.pillars.*` (même source que la section d'accueil).
+- Pages métier : `AdvisoryPillarPage` + `content/advisory/*.ts` (fr, en, de, es, it, nl pour les cinq historiques ; `finance.ts`, `operations.ts`, `program.ts` pour les trois autres). Pas de vignette par situation (cartes texte), pas de ligne « Sources » répétant les cartes, un seul bouton dans le bandeau final.
 - `/transact/*` et le statut `escrow_paid` : archivés/désactivés (noindex, redirects, lecture seule) — ne pas réintroduire en UI active.
 
 ## Norme savoir-faire de bout en bout (fiches projets)
@@ -73,7 +76,7 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 
 ## La Boutique, NDA et archives (octobre 2026)
 
-- Deux voix : le **cabinet de conseil intégré** (navigation Nos métiers) et **La Boutique** (`/boutique`, remplace « Portfolio » dans la barre). Les cinq métiers (Cadrer, Réaliser, Accompagner, Sélectionner, S'informer) restent la navigation du cabinet ; Cadrer → Réaliser → Accompagner est la méthode de La Boutique. Cibles : PME et ETI jusqu'à CHF 300M (cabinet) ; entrepreneurs, investisseurs et family offices, institutions et grands groupes, industriels et marques (Boutique).
+- Deux voix : le **cabinet de conseil intégré** (navigation Nos métiers) et **La Boutique** (`/boutique`, remplace « Portfolio » dans la barre). Les cinq métiers (Cadrer, Réaliser, Accompagner, Sélectionner, S'informer) restent le récit du cabinet (voir Positionnement pour la structure réelle du menu) ; Cadrer → Réaliser → Accompagner est la méthode de La Boutique. Cibles : PME et ETI jusqu'à CHF 300M (cabinet) ; entrepreneurs, investisseurs et family offices, institutions et grands groupes, industriels et marques (Boutique).
 - `/boutique` : hero : une vidéo plein cadre alternée sur le tempo de la musique (`content/boutique/clips.ts` : 20 clips horizontaux, 105,76 BPM, une vidéo tous les 2 temps soit 1,13 s (`beatsPerClip`), boucle ; les 2 clips verticaux sont dans le corps de page, `PortraitScroll`). Le lecteur (`components/boutique/BoutiqueAudio.tsx`) vit dans `app/[locale]/boutique/layout.tsx` : démarre à l'entrée, s'arrête en quittant. Savoir-faire complets : `content/boutique/savoirFaire.ts` (6 phases, 5 thèmes, 5 cycles).
 - Barre de navigation : transparente sur les heros vidéo (`/` et `/boutique`), fond blanc progressif au scroll, blanche partout ailleurs (`Nav.tsx`, `data-onhero`).
 - NDA : mutuel, numérique, signé par lien personnel sans compte (`lib/nda/*`, `/nda/[token]`, `/admin/nda`). Envoi **manuel** depuis l'admin ; contresignature automatique (Yohann Bollack, CEO) ; PDF archivé (bucket `nda-signed`). Accès certification et data room = rôle ouvert par l'admin **et** NDA signé (`lib/nda/access.ts`, y compris les API data room). L'ancien NDA par compte est retiré.

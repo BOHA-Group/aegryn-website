@@ -5,7 +5,6 @@ import type { AdvisoryPageContent, AdvisoryClassicKey } from './types'
 const PRIVACY =
   'Le sue risposte restano nel suo browser. Nulla viene registrato né trasmesso senza il suo consenso. Il risultato sta in una pagina: il suo livello e il prossimo passo consigliato.'
 
-const S = '/images/advisory/situations/'
 
 export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
 
@@ -34,11 +33,8 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '−2 %', label: 'mercato francese della consulenza nel 2025, al netto dell’inflazione', source: 'Syntec Conseil' },
         { value: '−7,3', label: 'punti indice, barometro delle PMI NZZ 2026, livello più basso dall’avvio dell’indagine nel 2021', source: 'NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule' },
       ],
-      paragraphs: [
-        'I dirigenti di PMI e mid-cap comprano consulenza, ma in modo diverso. Bpifrance ha realizzato quasi 9 000 missioni di consulenza nel 2024, in aumento del 50 % in un anno, mentre il mercato francese della consulenza arretra del 2 % nel 2025 al netto dell’inflazione. In Svizzera, l’indice composito del barometro delle PMI NZZ 2026 (NZZ e Kalaidos Fachhochschule) scende a −7,3 punti, il livello più basso dall’avvio dell’indagine nel 2021; solo l’integrazione delle tecnologie progredisce.',
-      ],
+      paragraphs: [],
       change: 'Quando il contesto si irrigidisce, il costo di un arbitraggio sbagliato aumenta. Il bisogno non è più un grande programma, è una decisione precisa, presa in fretta, con uno sguardo senior.',
-      sources: 'Fonti: Bpifrance Presse (2025) · Syntec Conseil · NZZ-KMU-Barometer 2026, Kalaidos Fachhochschule (ripreso dalla SECO).',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -51,12 +47,12 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'A che punto siete. Come interveniamo.',
       items: [
-        { quote: 'Il nostro modello si erode.', decision: 'Pivotare, difendere o cambiare segmento.', deliverable: 'Revisione di posizione: economia unitaria per segmento, concorrenza, tre opzioni quantificate.', format: 'Missione breve', cycles: ['croissance', 'restructuration'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'L’IA cambia il nostro mestiere.', decision: 'Dove integrarla, che cosa non automatizzare.', deliverable: 'Mappa degli usi dell’IA per fase della catena del valore, classificati per valore creato e rischio assunto.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}developer-desk.jpg` },
-        { quote: 'Un concorrente è in vendita, o un partner potrebbe acquisirci.', decision: 'Crescita organica, alleanza o acquisizione.', deliverable: 'Tesi di crescita esterna, criteri di target, quadro go / no-go.', format: 'Qualche settimana', cycles: ['acquisition'], image: `${S}handshake.jpg` },
-        { quote: 'Apriamo un nuovo mercato (DACH, Benelux, Europa del Sud).', decision: 'Filiale, distributore, partner, o attendere.', deliverable: 'Piano d’ingresso per paese, con requisiti regolamentari locali e fabbisogno di talenti.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}meeting-room.jpg` },
-        { quote: 'Il mio consiglio, la mia banca o il mio azionista chiede un piano a tre anni.', decision: 'Quali ipotesi assumere, quali testare.', deliverable: 'Piano difendibile, sensibilità esplicite, memo di dieci pagine per il comitato.', format: 'Da uno a due mesi', cycles: ['lancement', 'croissance'], image: `${S}planning-laptops.jpg` },
-        { quote: 'La strategia è nella mia testa.', decision: 'Che cosa deve esistere senza di voi.', deliverable: 'Strategia documentata in cinque priorità, con responsabili e tappe.', format: 'Qualche settimana', cycles: ['croissance', 'transmission'], image: `${S}plan-writing.jpg` },
+        { quote: 'Il nostro modello si erode.', decision: 'Pivotare, difendere o cambiare segmento.', deliverable: 'Revisione di posizione: economia unitaria per segmento, concorrenza, tre opzioni quantificate.', format: 'Missione breve', cycles: ['croissance', 'restructuration'] },
+        { quote: 'L’IA cambia il nostro mestiere.', decision: 'Dove integrarla, che cosa non automatizzare.', deliverable: 'Mappa degli usi dell’IA per fase della catena del valore, classificati per valore creato e rischio assunto.', format: 'Qualche settimana', cycles: ['croissance'] },
+        { quote: 'Un concorrente è in vendita, o un partner potrebbe acquisirci.', decision: 'Crescita organica, alleanza o acquisizione.', deliverable: 'Tesi di crescita esterna, criteri di target, quadro go / no-go.', format: 'Qualche settimana', cycles: ['acquisition'] },
+        { quote: 'Apriamo un nuovo mercato (DACH, Benelux, Europa del Sud).', decision: 'Filiale, distributore, partner, o attendere.', deliverable: 'Piano d’ingresso per paese, con requisiti regolamentari locali e fabbisogno di talenti.', format: 'Qualche settimana', cycles: ['croissance'] },
+        { quote: 'Il mio consiglio, la mia banca o il mio azionista chiede un piano a tre anni.', decision: 'Quali ipotesi assumere, quali testare.', deliverable: 'Piano difendibile, sensibilità esplicite, memo di dieci pagine per il comitato.', format: 'Da uno a due mesi', cycles: ['lancement', 'croissance'] },
+        { quote: 'La strategia è nella mia testa.', decision: 'Che cosa deve esistere senza di voi.', deliverable: 'Strategia documentata in cinque priorità, con responsabili e tappe.', format: 'Qualche settimana', cycles: ['croissance', 'transmission'] },
       ],
     },
     services: {
@@ -163,7 +159,6 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         'IA. L’articolo 50 dell’AI Act è applicabile dal 2 agosto 2026. Gli obblighi «ad alto rischio» dell’Allegato III sono rinviati al 2 dicembre 2027 dal Regolamento (UE) 2026/1744. Le sanzioni raggiungono 35 M€ o il 7 % del fatturato mondiale per le pratiche vietate, 15 M€ o il 3 % per la maggior parte degli altri obblighi.',
       ],
       change: 'Tre calendari, tre giurisdizioni. La domanda giusta non è «siamo conformi?» ma «a che cosa siamo tenuti, verso chi, entro quando?».',
-      sources: 'Fonti: Direttiva (UE) 2022/2555 · Commissione europea · UFCS, comunicato del 29.09.2025 · Regolamenti (UE) 2024/1689 e 2026/1744.',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -176,12 +171,12 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'A che punto siete. Come interveniamo.',
       items: [
-        { quote: 'Un grande cliente ci invia un questionario di sicurezza di quaranta pagine.', decision: 'Quale livello di prova fornire, su quale riferimento.', deliverable: 'Dossier di prove e piano di colmatura degli scarti, riutilizzabile per i clienti successivi.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Non sappiamo se siamo nel perimetro.', decision: 'Che cosa si applica a noi, che cosa ci sarà imposto, che cosa può attendere.', deliverable: 'Mappa di esposizione a tre vie.', format: 'Missione breve', cycles: ['lancement', 'croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Le nostre squadre usano l’IA senza regole.', decision: 'Quali strumenti, con quali dati, sotto quale responsabilità.', deliverable: 'Politica d’uso, inventario dei sistemi, classificazione ai sensi dell’AI Act.', format: 'Missione breve', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'Abbiamo subito un incidente.', decision: 'Chi informare (autorità, clienti, assicuratore), entro quali termini.', deliverable: 'Dossier d’incidente documentato e piano di miglioramento, con gli esperti di risposta agli incidenti della rete.', format: 'Su richiesta', cycles: ['restructuration'], image: `${S}network-cables.jpg` },
-        { quote: 'Un investitore o un acquirente ci farà un audit.', decision: 'Che cosa regolarizzare prima, che cosa assumere.', deliverable: 'Dossier di conformità pronto per la data room.', format: 'Qualche settimana', cycles: ['acquisition', 'transmission'], image: `${S}planning-laptops.jpg` },
-        { quote: 'Vendiamo nell’UE dalla Svizzera (o viceversa).', decision: 'Rappresentante, DPO, trasferimenti di dati.', deliverable: 'Matrice delle giurisdizioni (LPD / GDPR) e obblighi associati.', format: 'Missione breve', cycles: ['croissance'], image: `${S}office-corridor.jpg` },
+        { quote: 'Un grande cliente ci invia un questionario di sicurezza di quaranta pagine.', decision: 'Quale livello di prova fornire, su quale riferimento.', deliverable: 'Dossier di prove e piano di colmatura degli scarti, riutilizzabile per i clienti successivi.', format: 'Qualche settimana', cycles: ['croissance'] },
+        { quote: 'Non sappiamo se siamo nel perimetro.', decision: 'Che cosa si applica a noi, che cosa ci sarà imposto, che cosa può attendere.', deliverable: 'Mappa di esposizione a tre vie.', format: 'Missione breve', cycles: ['lancement', 'croissance'] },
+        { quote: 'Le nostre squadre usano l’IA senza regole.', decision: 'Quali strumenti, con quali dati, sotto quale responsabilità.', deliverable: 'Politica d’uso, inventario dei sistemi, classificazione ai sensi dell’AI Act.', format: 'Missione breve', cycles: ['croissance'] },
+        { quote: 'Abbiamo subito un incidente.', decision: 'Chi informare (autorità, clienti, assicuratore), entro quali termini.', deliverable: 'Dossier d’incidente documentato e piano di miglioramento, con gli esperti di risposta agli incidenti della rete.', format: 'Su richiesta', cycles: ['restructuration'] },
+        { quote: 'Un investitore o un acquirente ci farà un audit.', decision: 'Che cosa regolarizzare prima, che cosa assumere.', deliverable: 'Dossier di conformità pronto per la data room.', format: 'Qualche settimana', cycles: ['acquisition', 'transmission'] },
+        { quote: 'Vendiamo nell’UE dalla Svizzera (o viceversa).', decision: 'Rappresentante, DPO, trasferimenti di dati.', deliverable: 'Matrice delle giurisdizioni (LPD / GDPR) e obblighi associati.', format: 'Missione breve', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -276,11 +271,8 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '34 %', label: 'dispongono di regole sui dati inseriti negli strumenti IA; 23 % tra le aziende con meno di 10 dipendenti', source: 'SECO, kmu.admin.ch' },
         { value: '2 ago 2026', label: 'obblighi di trasparenza dell’AI Act (articolo 50) applicabili', source: 'Regolamento (UE) 2024/1689' },
       ],
-      paragraphs: [
-        'L’adozione precede la governance. In Svizzera, l’uso dell’IA da parte delle PMI è passato dal 22 % al 34 % tra il 2024 e il 2025; il 60 % vi vede un’opportunità. Ma solo il 34 % dispone di regole chiare sui dati che possono essere inseriti in questi strumenti, e il 23 % tra le aziende con meno di dieci dipendenti. Sul versante europeo, gli obblighi di trasparenza dell’AI Act si applicano dal 2 agosto 2026.',
-      ],
+      paragraphs: [],
       change: 'Il rischio non viene dallo strumento, ma dall’assenza di una regola attorno a esso.',
-      sources: 'Fonti: SECO, «AI gains ground among Swiss SMEs» · Regolamento (UE) 2024/1689.',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -293,12 +285,12 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'A che punto siete. Come interveniamo.',
       items: [
-        { quote: 'La nostra piattaforma rallenta i nostri rilasci.', decision: 'Rifattorizzare, rifare o sostituire.', deliverable: 'Audit di architettura, debito tecnico quantificato per dominio, traiettoria a dodici mesi.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}server-room-walk.jpg` },
-        { quote: 'Una sola persona capisce il sistema.', decision: 'Documentare, raddoppiare o internalizzare.', deliverable: 'Registro delle dipendenze (persone, fornitori, licenze) e piano di riduzione.', format: 'Missione breve', cycles: ['croissance', 'transmission'], image: `${S}developer-desk.jpg` },
-        { quote: 'Costruire, comprare o allearsi?', decision: 'L’arbitraggio giusto, con il costo di uscita.', deliverable: 'Analisi a criteri ponderati, reversibilità compresa.', format: 'Missione breve', cycles: ['lancement', 'croissance'], image: `${S}loft-office.jpg` },
-        { quote: 'Le nostre squadre usano l’IA senza quadro.', decision: 'Strumenti autorizzati, dati ammessi, hosting.', deliverable: 'Politica d’uso, inventario, arbitraggio degli strumenti.', format: 'Missione breve', cycles: ['croissance'], image: `${S}laptop-phone.jpg` },
-        { quote: 'Non abbiamo più un direttore tecnico.', decision: 'Interim, assunzione, o direzione a tempo condiviso.', deliverable: 'Direzione tecnica ad interim con passaggio di consegne documentato.', format: 'Missione frazionata', cycles: ['restructuration'], image: `${S}open-office.jpg` },
-        { quote: 'Dove sono i nostri dati, e chi può accedervi?', decision: 'Hosting UE o Svizzera, clausole di reversibilità, esposizione alle leggi extraterritoriali.', deliverable: 'Revisione dell’hosting e piano di reversibilità.', format: 'Missione breve', cycles: ['lancement', 'croissance'], image: `${S}network-cables.jpg` },
+        { quote: 'La nostra piattaforma rallenta i nostri rilasci.', decision: 'Rifattorizzare, rifare o sostituire.', deliverable: 'Audit di architettura, debito tecnico quantificato per dominio, traiettoria a dodici mesi.', format: 'Qualche settimana', cycles: ['croissance'] },
+        { quote: 'Una sola persona capisce il sistema.', decision: 'Documentare, raddoppiare o internalizzare.', deliverable: 'Registro delle dipendenze (persone, fornitori, licenze) e piano di riduzione.', format: 'Missione breve', cycles: ['croissance', 'transmission'] },
+        { quote: 'Costruire, comprare o allearsi?', decision: 'L’arbitraggio giusto, con il costo di uscita.', deliverable: 'Analisi a criteri ponderati, reversibilità compresa.', format: 'Missione breve', cycles: ['lancement', 'croissance'] },
+        { quote: 'Le nostre squadre usano l’IA senza quadro.', decision: 'Strumenti autorizzati, dati ammessi, hosting.', deliverable: 'Politica d’uso, inventario, arbitraggio degli strumenti.', format: 'Missione breve', cycles: ['croissance'] },
+        { quote: 'Non abbiamo più un direttore tecnico.', decision: 'Interim, assunzione, o direzione a tempo condiviso.', deliverable: 'Direzione tecnica ad interim con passaggio di consegne documentato.', format: 'Missione frazionata', cycles: ['restructuration'] },
+        { quote: 'Dove sono i nostri dati, e chi può accedervi?', decision: 'Hosting UE o Svizzera, clausole di reversibilità, esposizione alle leggi extraterritoriali.', deliverable: 'Revisione dell’hosting e piano di reversibilità.', format: 'Missione breve', cycles: ['lancement', 'croissance'] },
       ],
     },
     services: {
@@ -400,11 +392,9 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '21 %', label: 'dei titolari tra 66 e 90 anni non aveva ancora un calendario di trasmissione', source: 'UBS / Università di San Gallo, studio 2026' },
       ],
       paragraphs: [
-        'Secondo lo studio di UBS e Università di San Gallo (2026), 168 000 PMI svizzere sarebbero interessate da una successione entro fine 2030. Per tre titolari su quattro che preparano una trasmissione, il successo poggia su una sola persona. E un titolare su cinque tra i 66 anni e oltre non ha ancora fissato un calendario.',
         'Le cifre del mercato francese, più dettagliate, vanno nella stessa direzione: il 47 % dei dirigenti di imprese familiari tra 60 e 69 anni non ha formalizzato un piano di successione (Bpifrance Le Lab).',
       ],
       change: 'Lo scarto tra l’intenzione e l’atto dipende meno dal mercato che dalla preparazione. Un’organizzazione che dipende da una persona si trasmette male, si finanzia male e si pilota male.',
-      sources: 'Fonti: UBS / Università di San Gallo, studio sulla successione nelle PMI svizzere (2026, indagine di settembre 2025) · Bpifrance Le Lab (27 novembre 2025), per il riferimento francese.',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -417,12 +407,12 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'A che punto siete. Come interveniamo.',
       items: [
-        { quote: 'Tutto passa da me.', decision: 'Che cosa delegare per primo, a chi.', deliverable: 'Indice di dipendenza e piano di delega su dodici mesi.', format: 'Qualche settimana', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
-        { quote: 'La mia squadra di direzione non è ancora una squadra.', decision: 'Ruoli, ritmi decisionali, deleghe.', deliverable: 'Carta di governance del comitato di direzione.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Un profilo chiave vuole andarsene.', decision: 'Trattenere, sostituire o raddoppiare.', deliverable: 'Piano di retention, sostituto identificato (interno, o profilo di transizione se necessario), trasferimento di conoscenze documentato.', format: 'Missione breve', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Devo assumere un dirigente (tecnico, finanziario, operativo, paese).', decision: 'Il profilo giusto, nella governance giusta.', deliverable: 'Definizione del ruolo e criteri di integrazione, poi, se lo desiderate, selezionare un profilo.', format: 'Missione breve', cycles: ['croissance'], image: `${S}handshake.jpg` },
-        { quote: 'Penso di trasmettere tra due e cinque anni.', decision: 'Famiglia, interno o acquirente esterno.', deliverable: 'Piano di successione e governance di transizione.', format: 'Da uno a due mesi', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
-        { quote: 'Arriva un’acquisizione, due culture stanno per incontrarsi.', decision: 'Chi resta, chi guida, come organizzarsi.', deliverable: 'Valutazione della squadra target, organizzazione target, piano di retention.', format: 'Qualche settimana', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
+        { quote: 'Tutto passa da me.', decision: 'Che cosa delegare per primo, a chi.', deliverable: 'Indice di dipendenza e piano di delega su dodici mesi.', format: 'Qualche settimana', cycles: ['croissance', 'transmission'] },
+        { quote: 'La mia squadra di direzione non è ancora una squadra.', decision: 'Ruoli, ritmi decisionali, deleghe.', deliverable: 'Carta di governance del comitato di direzione.', format: 'Qualche settimana', cycles: ['croissance'] },
+        { quote: 'Un profilo chiave vuole andarsene.', decision: 'Trattenere, sostituire o raddoppiare.', deliverable: 'Piano di retention, sostituto identificato (interno, o profilo di transizione se necessario), trasferimento di conoscenze documentato.', format: 'Missione breve', cycles: ['restructuration'] },
+        { quote: 'Devo assumere un dirigente (tecnico, finanziario, operativo, paese).', decision: 'Il profilo giusto, nella governance giusta.', deliverable: 'Definizione del ruolo e criteri di integrazione, poi, se lo desiderate, selezionare un profilo.', format: 'Missione breve', cycles: ['croissance'] },
+        { quote: 'Penso di trasmettere tra due e cinque anni.', decision: 'Famiglia, interno o acquirente esterno.', deliverable: 'Piano di successione e governance di transizione.', format: 'Da uno a due mesi', cycles: ['transmission'] },
+        { quote: 'Arriva un’acquisizione, due culture stanno per incontrarsi.', decision: 'Chi resta, chi guida, come organizzarsi.', deliverable: 'Valutazione della squadra target, organizzazione target, piano di retention.', format: 'Qualche settimana', cycles: ['acquisition'] },
       ],
     },
     services: {
@@ -519,11 +509,8 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
         { value: '208', label: 'operazioni di M&A di PMI svizzere nel 2025, +16 %; +28 % nei servizi informatici e nel software', source: 'SECO, kmu.admin.ch' },
         { value: '23 %', label: 'dei cedenti potenziali francesi rilevano una mancanza di offerte di ripresa', source: 'Bpifrance Le Lab, 2025' },
       ],
-      paragraphs: [
-        'Gli studi compilati collocano il fallimento delle operazioni di M&A tra il 48 e il 66 % secondo la definizione adottata, e le osservazioni di Kotter e dei suoi coautori collocano l’essenziale dei fallimenti nell’integrazione. In Svizzera, le operazioni di M&A di PMI sono rimbalzate del 16 % nel 2025 (208 operazioni), con +28 % nei servizi informatici e nel software. In Francia, il 23 % dei cedenti potenziali rileva una mancanza di offerte di ripresa.',
-      ],
+      paragraphs: [],
       change: 'Il mercato ha cedenti e acquirenti; ciò che manca è la preparazione che fa andare in porto l’operazione e mantiene le sue promesse.',
-      sources: 'Fonti: Wiley Encyclopedia of Management; Kotter, Akhtar, Gupta, Change · SECO · Bpifrance Le Lab (2025).',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -536,12 +523,12 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     situations: {
       title: 'A che punto siete. Come interveniamo.',
       items: [
-        { quote: 'Abbiamo individuato un target.', decision: 'Che cosa guardare prima della lettera d’intenti.', deliverable: 'Revisione dei quattro angoli ciechi, con trattamento proposto per ciascuno: prezzo, garanzia, condizione sospensiva.', format: 'Qualche settimana', cycles: ['acquisition'], image: `${S}planning-laptops.jpg` },
-        { quote: 'Ci hanno contattato per acquisirci.', decision: 'Fino a che punto prepararsi prima di rispondere.', deliverable: 'Diagnosi di preparazione del cedente e posizione negoziale.', format: 'Qualche settimana', cycles: ['transmission'], image: `${S}dashboard-laptop.jpg` },
-        { quote: 'Vogliamo fare due o tre acquisizioni in tre anni.', decision: 'Tesi, criteri, processo.', deliverable: 'Programma di build-up riproducibile: criteri, revisione standard, playbook di integrazione.', format: 'Da uno a due mesi', cycles: ['acquisition'], image: `${S}loft-office.jpg` },
-        { quote: 'L’acquisizione è firmata, l’integrazione arranca.', decision: 'Che cosa è urgente, che cosa può attendere.', deliverable: 'Piano 30 / 60 / 100 giorni e pilotaggio.', format: 'Missione da tre a sei mesi', cycles: ['acquisition'], image: `${S}open-office.jpg` },
-        { quote: 'Dobbiamo cedere un’attività non strategica.', decision: 'Perimetro e separazione dei sistemi.', deliverable: 'Piano di separazione: perimetro, sistemi, persone, accordi di transizione.', format: 'Da uno a due mesi', cycles: ['restructuration'], image: `${S}industrial-engineer.jpg` },
-        { quote: 'Il mio fondo deve validare un target tecnologico.', decision: 'Investire, negoziare o rinunciare.', deliverable: 'Revisione tecnica e organizzativa indipendente, valutata per angolo cieco.', format: 'Qualche settimana', cycles: ['acquisition'], image: `${S}server-room-walk.jpg` },
+        { quote: 'Abbiamo individuato un target.', decision: 'Che cosa guardare prima della lettera d’intenti.', deliverable: 'Revisione dei quattro angoli ciechi, con trattamento proposto per ciascuno: prezzo, garanzia, condizione sospensiva.', format: 'Qualche settimana', cycles: ['acquisition'] },
+        { quote: 'Ci hanno contattato per acquisirci.', decision: 'Fino a che punto prepararsi prima di rispondere.', deliverable: 'Diagnosi di preparazione del cedente e posizione negoziale.', format: 'Qualche settimana', cycles: ['transmission'] },
+        { quote: 'Vogliamo fare due o tre acquisizioni in tre anni.', decision: 'Tesi, criteri, processo.', deliverable: 'Programma di build-up riproducibile: criteri, revisione standard, playbook di integrazione.', format: 'Da uno a due mesi', cycles: ['acquisition'] },
+        { quote: 'L’acquisizione è firmata, l’integrazione arranca.', decision: 'Che cosa è urgente, che cosa può attendere.', deliverable: 'Piano 30 / 60 / 100 giorni e pilotaggio.', format: 'Missione da tre a sei mesi', cycles: ['acquisition'] },
+        { quote: 'Dobbiamo cedere un’attività non strategica.', decision: 'Perimetro e separazione dei sistemi.', deliverable: 'Piano di separazione: perimetro, sistemi, persone, accordi di transizione.', format: 'Da uno a due mesi', cycles: ['restructuration'] },
+        { quote: 'Il mio fondo deve validare un target tecnologico.', decision: 'Investire, negoziare o rinunciare.', deliverable: 'Revisione tecnica e organizzativa indipendente, valutata per angolo cieco.', format: 'Qualche settimana', cycles: ['acquisition'] },
       ],
     },
     services: {

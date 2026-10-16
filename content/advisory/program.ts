@@ -38,7 +38,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'Ces erreurs ne tiennent pas à la taille de l’organisation : l’administration fédérale les répète depuis dix ans, et une PME les paie plus vite, faute de marge pour absorber le dérapage.',
       ],
       change: 'Une méthode de gestion de projet ne suffit pas. Il faut un cadrage qui nomme le bénéfice attendu, un décideur qui tranche, et un seuil à partir duquel on arrête ou on corrige.',
-      sources: 'Sources : McKinsey & Université d’Oxford, 2012 (grands projets informatiques de plus de 15 M USD) · PMI, Pulse of the Profession, mars 2025 · Contrôle fédéral des finances, 8 juillet 2026 (24 rapports sur les projets informatiques de la Confédération, 2024-2025).',
     },
     outcomes: {
       title: 'Ce que vous obtenez',
@@ -51,12 +50,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Où vous en êtes. Comment nous intervenons.',
       items: [
-        { quote: 'Nous avons trop de projets en parallèle, et rien n’avance.', decision: 'Lesquels poursuivre, suspendre, arrêter.', deliverable: 'Revue de portefeuille priorisée, avec capacité et bénéfice par projet.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Un projet important démarre : comment le lancer proprement ?', decision: 'Quel périmètre, quel bénéfice, quel décideur.', deliverable: 'Note de cadrage : bénéfice, périmètre, jalons, budget, risques, critères d’arrêt.', format: 'Quelques semaines', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Notre projet dérape (délai, budget, qualité).', decision: 'Corriger, redimensionner ou arrêter.', deliverable: 'Diagnostic de redressement et plan de reprise en trente jours.', format: 'Deux à quatre semaines', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Nous lançons une transformation qui touche plusieurs équipes.', decision: 'Comment gouverner, qui décide, à quel rythme.', deliverable: 'Modèle de gouvernance : instances, rôles, décisions réservées, tableau de bord.', format: 'Un à deux mois', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Le fournisseur ou l’intégrateur ne tient pas ses engagements.', decision: 'Renégocier, renforcer, remplacer.', deliverable: 'Revue du contrat et du plan de livraison, avec options chiffrées.', format: 'Quelques semaines', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'Le projet est livré, mais personne ne s’en sert.', decision: 'Comment réussir le passage en exploitation.', deliverable: 'Plan de transfert à l’exploitation : critères de réception, formation, responsabilités.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'Nous avons trop de projets en parallèle, et rien n’avance.', decision: 'Lesquels poursuivre, suspendre, arrêter.', deliverable: 'Revue de portefeuille priorisée, avec capacité et bénéfice par projet.', format: 'Quelques semaines', cycles: ['croissance'] },
+        { quote: 'Un projet important démarre : comment le lancer proprement ?', decision: 'Quel périmètre, quel bénéfice, quel décideur.', deliverable: 'Note de cadrage : bénéfice, périmètre, jalons, budget, risques, critères d’arrêt.', format: 'Quelques semaines', cycles: ['lancement'] },
+        { quote: 'Notre projet dérape (délai, budget, qualité).', decision: 'Corriger, redimensionner ou arrêter.', deliverable: 'Diagnostic de redressement et plan de reprise en trente jours.', format: 'Deux à quatre semaines', cycles: ['restructuration'] },
+        { quote: 'Nous lançons une transformation qui touche plusieurs équipes.', decision: 'Comment gouverner, qui décide, à quel rythme.', deliverable: 'Modèle de gouvernance : instances, rôles, décisions réservées, tableau de bord.', format: 'Un à deux mois', cycles: ['croissance'] },
+        { quote: 'Le fournisseur ou l’intégrateur ne tient pas ses engagements.', decision: 'Renégocier, renforcer, remplacer.', deliverable: 'Revue du contrat et du plan de livraison, avec options chiffrées.', format: 'Quelques semaines', cycles: ['restructuration', 'croissance'] },
+        { quote: 'Le projet est livré, mais personne ne s’en sert.', decision: 'Comment réussir le passage en exploitation.', deliverable: 'Plan de transfert à l’exploitation : critères de réception, formation, responsabilités.', format: 'Quelques semaines', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -114,7 +113,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'These mistakes do not depend on size: the federal administration has repeated them for ten years, and an SME pays for them sooner, lacking the margin to absorb the drift.',
       ],
       change: 'A project-management method is not enough. You need a framing that names the expected benefit, a decider who rules, and a threshold at which you stop or correct.',
-      sources: 'Sources: McKinsey & University of Oxford, 2012 (large IT projects over USD 15M) · PMI, Pulse of the Profession, March 2025 · Swiss Federal Audit Office, 8 July 2026 (24 reports on Confederation IT projects, 2024-2025).',
     },
     outcomes: {
       title: 'What you get',
@@ -127,12 +125,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Where you stand. How we step in.',
       items: [
-        { quote: 'We have too many projects running in parallel, and nothing moves.', decision: 'Which to continue, pause or stop.', deliverable: 'A prioritised portfolio review, with capacity and benefit per project.', format: 'A few weeks', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'An important project is starting: how do we launch it properly?', decision: 'Which scope, which benefit, which decider.', deliverable: 'Framing note: benefit, scope, milestones, budget, risks, stop criteria.', format: 'A few weeks', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Our project is drifting (deadline, budget, quality).', decision: 'Correct, rescope or stop.', deliverable: 'Turnaround diagnosis and a thirty-day recovery plan.', format: 'Two to four weeks', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'We are launching a transformation that touches several teams.', decision: 'How to govern, who decides, at what pace.', deliverable: 'Governance model: bodies, roles, reserved decisions, dashboard.', format: 'One to two months', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'The vendor or integrator is not keeping its commitments.', decision: 'Renegotiate, reinforce or replace.', deliverable: 'Review of the contract and delivery plan, with costed options.', format: 'A few weeks', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'The project is delivered, but nobody uses it.', decision: 'How to succeed in the handover to operations.', deliverable: 'Operations transfer plan: acceptance criteria, training, responsibilities.', format: 'A few weeks', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'We have too many projects running in parallel, and nothing moves.', decision: 'Which to continue, pause or stop.', deliverable: 'A prioritised portfolio review, with capacity and benefit per project.', format: 'A few weeks', cycles: ['croissance'] },
+        { quote: 'An important project is starting: how do we launch it properly?', decision: 'Which scope, which benefit, which decider.', deliverable: 'Framing note: benefit, scope, milestones, budget, risks, stop criteria.', format: 'A few weeks', cycles: ['lancement'] },
+        { quote: 'Our project is drifting (deadline, budget, quality).', decision: 'Correct, rescope or stop.', deliverable: 'Turnaround diagnosis and a thirty-day recovery plan.', format: 'Two to four weeks', cycles: ['restructuration'] },
+        { quote: 'We are launching a transformation that touches several teams.', decision: 'How to govern, who decides, at what pace.', deliverable: 'Governance model: bodies, roles, reserved decisions, dashboard.', format: 'One to two months', cycles: ['croissance'] },
+        { quote: 'The vendor or integrator is not keeping its commitments.', decision: 'Renegotiate, reinforce or replace.', deliverable: 'Review of the contract and delivery plan, with costed options.', format: 'A few weeks', cycles: ['restructuration', 'croissance'] },
+        { quote: 'The project is delivered, but nobody uses it.', decision: 'How to succeed in the handover to operations.', deliverable: 'Operations transfer plan: acceptance criteria, training, responsibilities.', format: 'A few weeks', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -190,7 +188,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'Diese Fehler hängen nicht von der Grösse der Organisation ab: Die Bundesverwaltung wiederholt sie seit zehn Jahren, und ein KMU bezahlt sie schneller, ohne die Marge, um den Rutsch aufzufangen.',
       ],
       change: 'Eine Projektmanagement-Methode reicht nicht. Es braucht eine Rahmung, die den erwarteten Nutzen benennt, eine Entscheiderin oder einen Entscheider, und eine Schwelle, ab der gestoppt oder korrigiert wird.',
-      sources: 'Quellen: McKinsey & Universität Oxford, 2012 (grosse IT-Projekte über 15 Mio. USD) · PMI, Pulse of the Profession, März 2025 · Eidgenössische Finanzkontrolle, 8. Juli 2026 (24 Berichte zu den IT-Projekten des Bundes, 2024-2025).',
     },
     outcomes: {
       title: 'Was Sie erhalten',
@@ -203,12 +200,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Wo Sie stehen. Wie wir eingreifen.',
       items: [
-        { quote: 'Wir haben zu viele Projekte parallel, und nichts kommt voran.', decision: 'Welche weiterführen, pausieren oder stoppen.', deliverable: 'Priorisierte Portfolioüberprüfung, mit Kapazität und Nutzen je Projekt.', format: 'Wenige Wochen', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Ein wichtiges Projekt beginnt: wie starten wir es sauber?', decision: 'Welcher Umfang, welcher Nutzen, welcher Entscheider.', deliverable: 'Rahmungsnotiz: Nutzen, Umfang, Meilensteine, Budget, Risiken, Abbruchkriterien.', format: 'Wenige Wochen', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Unser Projekt läuft aus dem Ruder (Frist, Budget, Qualität).', decision: 'Korrigieren, neu bemessen oder stoppen.', deliverable: 'Sanierungsdiagnose und Wiederaufnahmeplan in dreissig Tagen.', format: 'Zwei bis vier Wochen', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Wir starten eine Transformation, die mehrere Teams berührt.', decision: 'Wie steuern, wer entscheidet, in welchem Rhythmus.', deliverable: 'Governance-Modell: Gremien, Rollen, vorbehaltene Entscheide, Dashboard.', format: 'Ein bis zwei Monate', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Der Anbieter oder Integrator hält seine Zusagen nicht ein.', decision: 'Neu verhandeln, verstärken oder ersetzen.', deliverable: 'Überprüfung von Vertrag und Lieferplan, mit bezifferten Optionen.', format: 'Wenige Wochen', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'Das Projekt ist geliefert, aber niemand nutzt es.', decision: 'Wie der Übergang in den Betrieb gelingt.', deliverable: 'Betriebsübergabeplan: Abnahmekriterien, Schulung, Verantwortlichkeiten.', format: 'Wenige Wochen', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'Wir haben zu viele Projekte parallel, und nichts kommt voran.', decision: 'Welche weiterführen, pausieren oder stoppen.', deliverable: 'Priorisierte Portfolioüberprüfung, mit Kapazität und Nutzen je Projekt.', format: 'Wenige Wochen', cycles: ['croissance'] },
+        { quote: 'Ein wichtiges Projekt beginnt: wie starten wir es sauber?', decision: 'Welcher Umfang, welcher Nutzen, welcher Entscheider.', deliverable: 'Rahmungsnotiz: Nutzen, Umfang, Meilensteine, Budget, Risiken, Abbruchkriterien.', format: 'Wenige Wochen', cycles: ['lancement'] },
+        { quote: 'Unser Projekt läuft aus dem Ruder (Frist, Budget, Qualität).', decision: 'Korrigieren, neu bemessen oder stoppen.', deliverable: 'Sanierungsdiagnose und Wiederaufnahmeplan in dreissig Tagen.', format: 'Zwei bis vier Wochen', cycles: ['restructuration'] },
+        { quote: 'Wir starten eine Transformation, die mehrere Teams berührt.', decision: 'Wie steuern, wer entscheidet, in welchem Rhythmus.', deliverable: 'Governance-Modell: Gremien, Rollen, vorbehaltene Entscheide, Dashboard.', format: 'Ein bis zwei Monate', cycles: ['croissance'] },
+        { quote: 'Der Anbieter oder Integrator hält seine Zusagen nicht ein.', decision: 'Neu verhandeln, verstärken oder ersetzen.', deliverable: 'Überprüfung von Vertrag und Lieferplan, mit bezifferten Optionen.', format: 'Wenige Wochen', cycles: ['restructuration', 'croissance'] },
+        { quote: 'Das Projekt ist geliefert, aber niemand nutzt es.', decision: 'Wie der Übergang in den Betrieb gelingt.', deliverable: 'Betriebsübergabeplan: Abnahmekriterien, Schulung, Verantwortlichkeiten.', format: 'Wenige Wochen', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -266,7 +263,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'Estos errores no dependen del tamaño de la organización: la administración federal los repite desde hace diez años, y una pyme los paga antes, sin margen para absorber el desvío.',
       ],
       change: 'Un método de gestión de proyectos no basta. Hace falta un encuadre que nombre el beneficio esperado, un decisor que dicte, y un umbral a partir del cual se para o se corrige.',
-      sources: 'Fuentes: McKinsey y Universidad de Oxford, 2012 (grandes proyectos informáticos de más de 15 M USD) · PMI, Pulse of the Profession, marzo de 2025 · Control Federal de Finanzas, 8 de julio de 2026 (24 informes sobre proyectos informáticos de la Confederación, 2024-2025).',
     },
     outcomes: {
       title: 'Lo que obtiene',
@@ -279,12 +275,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dónde se encuentra. Cómo intervenimos.',
       items: [
-        { quote: 'Tenemos demasiados proyectos en paralelo y nada avanza.', decision: 'Cuáles seguir, suspender o parar.', deliverable: 'Revisión de cartera priorizada, con capacidad y beneficio por proyecto.', format: 'Algunas semanas', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Empieza un proyecto importante: ¿cómo lanzarlo correctamente?', decision: 'Qué alcance, qué beneficio, qué decisor.', deliverable: 'Nota de encuadre: beneficio, alcance, hitos, presupuesto, riesgos, criterios de parada.', format: 'Algunas semanas', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Nuestro proyecto se desvía (plazo, presupuesto, calidad).', decision: 'Corregir, redimensionar o parar.', deliverable: 'Diagnóstico de reflotamiento y plan de reanudación en treinta días.', format: 'Dos a cuatro semanas', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Lanzamos una transformación que toca a varios equipos.', decision: 'Cómo gobernar, quién decide, a qué ritmo.', deliverable: 'Modelo de gobierno: instancias, roles, decisiones reservadas, cuadro de mando.', format: 'Uno a dos meses', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'El proveedor o el integrador no cumple sus compromisos.', decision: 'Renegociar, reforzar o reemplazar.', deliverable: 'Revisión del contrato y del plan de entrega, con opciones cifradas.', format: 'Algunas semanas', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'El proyecto está entregado, pero nadie lo usa.', decision: 'Cómo lograr el traspaso a explotación.', deliverable: 'Plan de traspaso a explotación: criterios de recepción, formación, responsabilidades.', format: 'Algunas semanas', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'Tenemos demasiados proyectos en paralelo y nada avanza.', decision: 'Cuáles seguir, suspender o parar.', deliverable: 'Revisión de cartera priorizada, con capacidad y beneficio por proyecto.', format: 'Algunas semanas', cycles: ['croissance'] },
+        { quote: 'Empieza un proyecto importante: ¿cómo lanzarlo correctamente?', decision: 'Qué alcance, qué beneficio, qué decisor.', deliverable: 'Nota de encuadre: beneficio, alcance, hitos, presupuesto, riesgos, criterios de parada.', format: 'Algunas semanas', cycles: ['lancement'] },
+        { quote: 'Nuestro proyecto se desvía (plazo, presupuesto, calidad).', decision: 'Corregir, redimensionar o parar.', deliverable: 'Diagnóstico de reflotamiento y plan de reanudación en treinta días.', format: 'Dos a cuatro semanas', cycles: ['restructuration'] },
+        { quote: 'Lanzamos una transformación que toca a varios equipos.', decision: 'Cómo gobernar, quién decide, a qué ritmo.', deliverable: 'Modelo de gobierno: instancias, roles, decisiones reservadas, cuadro de mando.', format: 'Uno a dos meses', cycles: ['croissance'] },
+        { quote: 'El proveedor o el integrador no cumple sus compromisos.', decision: 'Renegociar, reforzar o reemplazar.', deliverable: 'Revisión del contrato y del plan de entrega, con opciones cifradas.', format: 'Algunas semanas', cycles: ['restructuration', 'croissance'] },
+        { quote: 'El proyecto está entregado, pero nadie lo usa.', decision: 'Cómo lograr el traspaso a explotación.', deliverable: 'Plan de traspaso a explotación: criterios de recepción, formación, responsabilidades.', format: 'Algunas semanas', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -342,7 +338,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'Questi errori non dipendono dalle dimensioni dell’organizzazione: l’amministrazione federale li ripete da dieci anni, e una PMI li paga prima, senza il margine per assorbire lo scostamento.',
       ],
       change: 'Un metodo di gestione dei progetti non basta. Serve un inquadramento che nomini il beneficio atteso, un decisore che tranchi, e una soglia oltre la quale si arresta o si corregge.',
-      sources: 'Fonti: McKinsey e Università di Oxford, 2012 (grandi progetti informatici oltre 15 M USD) · PMI, Pulse of the Profession, marzo 2025 · Controllo federale delle finanze, 8 luglio 2026 (24 rapporti sui progetti informatici della Confederazione, 2024-2025).',
     },
     outcomes: {
       title: 'Cosa ottenete',
@@ -355,12 +350,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Dove vi trovate. Come interveniamo.',
       items: [
-        { quote: 'Abbiamo troppi progetti in parallelo e nulla avanza.', decision: 'Quali proseguire, sospendere o fermare.', deliverable: 'Revisione del portafoglio prioritizzata, con capacità e beneficio per progetto.', format: 'Alcune settimane', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Parte un progetto importante: come lanciarlo correttamente?', decision: 'Quale perimetro, quale beneficio, quale decisore.', deliverable: 'Nota di inquadramento: beneficio, perimetro, tappe, budget, rischi, criteri di arresto.', format: 'Alcune settimane', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Il nostro progetto deraglia (tempi, budget, qualità).', decision: 'Correggere, ridimensionare o fermare.', deliverable: 'Diagnosi di risanamento e piano di ripresa in trenta giorni.', format: 'Da due a quattro settimane', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Lanciamo una trasformazione che tocca diversi team.', decision: 'Come governare, chi decide, a quale ritmo.', deliverable: 'Modello di governance: istanze, ruoli, decisioni riservate, cruscotto.', format: 'Da uno a due mesi', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'Il fornitore o l’integratore non mantiene gli impegni.', decision: 'Rinegoziare, rafforzare o sostituire.', deliverable: 'Revisione del contratto e del piano di consegna, con opzioni numeriche.', format: 'Alcune settimane', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'Il progetto è consegnato, ma nessuno lo usa.', decision: 'Come riuscire il passaggio all’esercizio.', deliverable: 'Piano di trasferimento all’esercizio: criteri di collaudo, formazione, responsabilità.', format: 'Alcune settimane', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'Abbiamo troppi progetti in parallelo e nulla avanza.', decision: 'Quali proseguire, sospendere o fermare.', deliverable: 'Revisione del portafoglio prioritizzata, con capacità e beneficio per progetto.', format: 'Alcune settimane', cycles: ['croissance'] },
+        { quote: 'Parte un progetto importante: come lanciarlo correttamente?', decision: 'Quale perimetro, quale beneficio, quale decisore.', deliverable: 'Nota di inquadramento: beneficio, perimetro, tappe, budget, rischi, criteri di arresto.', format: 'Alcune settimane', cycles: ['lancement'] },
+        { quote: 'Il nostro progetto deraglia (tempi, budget, qualità).', decision: 'Correggere, ridimensionare o fermare.', deliverable: 'Diagnosi di risanamento e piano di ripresa in trenta giorni.', format: 'Da due a quattro settimane', cycles: ['restructuration'] },
+        { quote: 'Lanciamo una trasformazione che tocca diversi team.', decision: 'Come governare, chi decide, a quale ritmo.', deliverable: 'Modello di governance: istanze, ruoli, decisioni riservate, cruscotto.', format: 'Da uno a due mesi', cycles: ['croissance'] },
+        { quote: 'Il fornitore o l’integratore non mantiene gli impegni.', decision: 'Rinegoziare, rafforzare o sostituire.', deliverable: 'Revisione del contratto e del piano di consegna, con opzioni numeriche.', format: 'Alcune settimane', cycles: ['restructuration', 'croissance'] },
+        { quote: 'Il progetto è consegnato, ma nessuno lo usa.', decision: 'Come riuscire il passaggio all’esercizio.', deliverable: 'Piano di trasferimento all’esercizio: criteri di collaudo, formazione, responsabilità.', format: 'Alcune settimane', cycles: ['croissance'] },
       ],
     },
     services: {
@@ -418,7 +413,6 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
         'Deze fouten hangen niet af van de omvang van de organisatie: de federale administratie herhaalt ze al tien jaar, en een mkb betaalt ze eerder, zonder de marge om de ontsporing op te vangen.',
       ],
       change: 'Een projectmanagementmethode is niet genoeg. Er is een kadering nodig die de verwachte baten benoemt, een beslisser die beslist, en een drempel waarop gestopt of bijgestuurd wordt.',
-      sources: 'Bronnen: McKinsey en Universiteit van Oxford, 2012 (grote IT-projecten van meer dan 15 mln USD) · PMI, Pulse of the Profession, maart 2025 · Federale Financiëncontrole, 8 juli 2026 (24 rapporten over IT-projecten van de Bondsstaat, 2024-2025).',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -431,12 +425,12 @@ export const ADVISORY_PROGRAM: Record<string, AdvisoryPageContent> = {
     situations: {
       title: 'Waar u staat. Hoe wij ingrijpen.',
       items: [
-        { quote: 'We hebben te veel projecten tegelijk lopen, en niets komt vooruit.', decision: 'Welke voortzetten, pauzeren of stoppen.', deliverable: 'Een geprioriteerde portefeuillereview, met capaciteit en baten per project.', format: 'Enkele weken', cycles: ['croissance'], image: '/images/advisory/situations/planning-laptops.jpg' },
-        { quote: 'Een belangrijk project start: hoe lanceren we het goed?', decision: 'Welke scope, welke baten, welke beslisser.', deliverable: 'Kaderingsnotitie: baten, scope, mijlpalen, budget, risico’s, stopcriteria.', format: 'Enkele weken', cycles: ['lancement'], image: '/images/advisory/situations/meeting-room.jpg' },
-        { quote: 'Ons project ontspoort (termijn, budget, kwaliteit).', decision: 'Corrigeren, opschonen of stoppen.', deliverable: 'Saneringsdiagnose en herstelplan in dertig dagen.', format: 'Twee tot vier weken', cycles: ['restructuration'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'We lanceren een transformatie die meerdere teams raakt.', decision: 'Hoe sturen, wie beslist, in welk tempo.', deliverable: 'Governancemodel: organen, rollen, voorbehouden beslissingen, dashboard.', format: 'Eén tot twee maanden', cycles: ['croissance'], image: '/images/advisory/situations/open-office.jpg' },
-        { quote: 'De leverancier of integrator houdt zijn toezeggingen niet na.', decision: 'Heronderhandelen, versterken of vervangen.', deliverable: 'Beoordeling van het contract en het leveringsplan, met becijferde opties.', format: 'Enkele weken', cycles: ['restructuration', 'croissance'], image: '/images/advisory/situations/handshake.jpg' },
-        { quote: 'Het project is opgeleverd, maar niemand gebruikt het.', decision: 'Hoe de overdracht naar beheer lukt.', deliverable: 'Overdrachtsplan naar beheer: acceptatiecriteria, training, verantwoordelijkheden.', format: 'Enkele weken', cycles: ['croissance'], image: '/images/advisory/situations/laptop-phone.jpg' },
+        { quote: 'We hebben te veel projecten tegelijk lopen, en niets komt vooruit.', decision: 'Welke voortzetten, pauzeren of stoppen.', deliverable: 'Een geprioriteerde portefeuillereview, met capaciteit en baten per project.', format: 'Enkele weken', cycles: ['croissance'] },
+        { quote: 'Een belangrijk project start: hoe lanceren we het goed?', decision: 'Welke scope, welke baten, welke beslisser.', deliverable: 'Kaderingsnotitie: baten, scope, mijlpalen, budget, risico’s, stopcriteria.', format: 'Enkele weken', cycles: ['lancement'] },
+        { quote: 'Ons project ontspoort (termijn, budget, kwaliteit).', decision: 'Corrigeren, opschonen of stoppen.', deliverable: 'Saneringsdiagnose en herstelplan in dertig dagen.', format: 'Twee tot vier weken', cycles: ['restructuration'] },
+        { quote: 'We lanceren een transformatie die meerdere teams raakt.', decision: 'Hoe sturen, wie beslist, in welk tempo.', deliverable: 'Governancemodel: organen, rollen, voorbehouden beslissingen, dashboard.', format: 'Eén tot twee maanden', cycles: ['croissance'] },
+        { quote: 'De leverancier of integrator houdt zijn toezeggingen niet na.', decision: 'Heronderhandelen, versterken of vervangen.', deliverable: 'Beoordeling van het contract en het leveringsplan, met becijferde opties.', format: 'Enkele weken', cycles: ['restructuration', 'croissance'] },
+        { quote: 'Het project is opgeleverd, maar niemand gebruikt het.', decision: 'Hoe de overdracht naar beheer lukt.', deliverable: 'Overdrachtsplan naar beheer: acceptatiecriteria, training, verantwoordelijkheden.', format: 'Enkele weken', cycles: ['croissance'] },
       ],
     },
     services: {

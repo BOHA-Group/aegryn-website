@@ -371,7 +371,7 @@ export const aegrynOrganizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Aegryn Advisory',
-          description: 'Corporate advisory for tech founders, boards and investors across 5 pillars: Business Strategy & Innovation, Risk Management & Compliance (NIS2, DORA, EU AI Act), Technology & Sovereignty, Talent & Organization (succession, founder dependency), and M&A, Transactions & PMI. Switzerland & Europe.',
+          description: 'Integrated advisory for SMEs and mid-sized companies across eight disciplines: Strategy, Risk & Compliance, Finance & Performance, Technology & Sovereignty, Operations & Operational Excellence, Talent & Organization (succession, profile selection), Project & Programme Management, and M&A. From decision to implementation. Switzerland & Europe.',
           url: `${BASE_URL}/en/advisory`,
         },
       },

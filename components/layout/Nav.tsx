@@ -5,7 +5,7 @@ import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, useCallback, type ComponentProps } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight, ArrowRight } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
@@ -119,6 +119,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex items-center justify-between bg-ag-off-white border-t border-ag-border px-4 py-3">
+        <p className="font-sans text-[11px] text-ag-gray-light">{t('whoIndustriesDesc')}</p>
+        <Link
+          href={'/industries' as LinkHref}
+          onClick={onClose}
+          className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
+        >
+          {t('whoIndustries')} <ArrowRight size={11} />
+        </Link>
       </div>
     </motion.div>
   )
@@ -714,6 +724,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
+                  <Link href={'/industries' as LinkHref} onClick={closeMobile}
+                    className="mt-3 pt-3 border-t border-white/10 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex hover:text-white transition-colors">
+                    {t('whoIndustries')} <ArrowRight size={11} />
+                  </Link>
                 </div>
               )}
             </div>
