@@ -15,12 +15,7 @@ export default async function ExpertClientPage() {
 
   const supa = createServiceClient()
 
-  const [{ data: profile }, { data: expertProfile }] = await Promise.all([
-    supa.from('profiles').select('expert_plan, expert_plan_start').eq('id', user.id).single(),
-    supa.from('expert_profiles').select('*').eq('user_id', user.id).maybeSingle(),
-  ])
-
-  const plan = profile?.expert_plan ?? null
+  const { data: expertProfile } = await supa.from('expert_profiles').select('*').eq('user_id', user.id).maybeSingle()
 
   return (
     <div className="pb-12 px-6 md:px-10 pt-10 max-w-3xl">
@@ -28,30 +23,6 @@ export default async function ExpertClientPage() {
         <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gray-500 mb-1">Espace Expert Aegryn</p>
         <h1 className="font-sans font-bold text-gray-900 text-[26px] tracking-tight">Ma fiche expert</h1>
         <p className="font-sans text-[13px] text-gray-500 mt-0.5">{user.email}</p>
-      </div>
-
-      {/* Statut abonnement */}
-      <div className={`border p-5 mb-6 ${
-        plan === 'active'
-          ? 'border-ag-apex/30 bg-ag-apex/5'
-          : 'border-amber-200 bg-amber-50'
-      }`}>
-        <p className="font-mono text-[9px] uppercase tracking-widest text-gray-400 mb-2">Abonnement référencement</p>
-        {plan === 'active' ? (
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-ag-apex shrink-0" />
-            <p className="font-sans text-[13px] text-gray-700">Abonnement actif — votre fiche est éligible à la publication (89 CHF HT/mois).</p>
-          </div>
-        ) : (
-          <div>
-            <p className="font-sans text-[13px] text-amber-800 mb-2">
-              Aucun abonnement actif. Votre fiche ne sera pas visible publiquement.
-            </p>
-            <p className="font-sans text-[11px] text-amber-700">
-              Le paiement par abonnement sera disponible prochainement (89 CHF HT/mois). Contactez-nous pour activer votre accès manuellement : <a href="mailto:contact@boha-group.com" className="underline">contact@boha-group.com</a>
-            </p>
-          </div>
-        )}
       </div>
 
       {/* Statut fiche */}

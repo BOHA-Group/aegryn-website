@@ -1,6 +1,5 @@
 {
   "nav": {
-    "home": "Home",
     "about": "About",
     "whatWeBuild": "Assets",
     "blog": "Blog",
@@ -16,33 +15,21 @@
     "clientSpace": "Client area",
     "logout": "Log out",
     "submitAsset": "Submit an asset",
-    "gradeSystem": "Grading system",
     "gradeMethod": "Methodology",
     "gradeSubmit": "Certify an asset",
     "gradePartners": "Expert network",
     "roadmap": "Roadmap",
     "servicesBuild": "Asset Engineering",
-    "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Partner Network",
-    "servicesAcquisition": "Advisory Transaction",
-    "servicesValuation": "Valuation",
     "servicesExperts": "Expert Network",
-    "servicesMenuLabel": "Aegryn Services",
     "servicesSectionTech": "Advisory Tech",
     "servicesSectionTechDesc": "Technical audit, security, AI, compliance",
-    "servicesSectionNetwork": "Partner Network",
     "servicesSectionNetworkDesc": "Advisory Tech & Transaction partners",
-    "gradeDimC": "Code",
-    "gradeDimI": "IP",
-    "gradeDimF": "Finance",
-    "gradeDimS": "Security",
     "build": "Build",
     "buildAssets": "Proprietary Assets",
-    "buildEngineering": "Asset Engineering",
     "comingSoon": "Coming soon",
     "soon": "Soon",
     "magazine": "Magazines",
-    "aboutGroup": "About",
     "aboutPublications": "Publications",
     "aboutCareers": "Work at Aegryn",
     "articles": "Articles",
@@ -53,19 +40,12 @@
     "craftBuild": "Deliver",
     "craftBuildDesc": "Tailored solutions and proprietary assets.",
     "craftBuildAssets": "Proprietary assets",
-    "craftBuildEngineering": "Custom Solutions",
-    "craftBuildSubblink": "Contract Risk Analysis",
-    "craftBuildValuation": "CIFSO Valuation Index",
-    "craftBuildCIFSO": "CIFSO 5000 Certification",
-    "craftSupport": "Frame",
     "craftSupportDesc": "Strategy, risk, technology, talent and acquisitions.",
     "craftSupportStrategy": "Business Strategy and Innovation",
     "craftSupportRiskCompliance": "Risk Management and Compliance",
     "craftSupportTechnology": "Technology and Sovereignty",
     "craftSupportTalentOrg": "Talent and Organization",
     "craftSupportMA": "M&A, Transactions and PMI",
-    "craftSupportAdvisory": "Tech & AI Advisory",
-    "craftSupportNetwork": "Partner & Expert Network",
     "craftSupportAlliances": "Partner network",
     "craftSupportExperts": "Expert network",
     "craftTransact": "By situation",
@@ -75,36 +55,14 @@
     "craftTransactLancement": "Launch & Structuring",
     "craftTransactCroissance": "Growth & Scaling",
     "craftTransactRestructuration": "Restructuring & Pivot",
-    "craftTransactVerify": "Verify a certificate",
     "craftRecruit": "Select",
     "craftRecruitDesc": "Key and transition profiles, at every stage.",
-    "craftGrade": "Certification",
     "craftGradeDesc": "Independent rating system",
-    "solutionsCore": "CORE",
-    "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Proprietary assets",
     "solutionsCoreDesc": "Designed, developed and operated by Aegryn",
     "solutionsPortfolioTitle": "Portfolio assets",
     "solutionsPortfolioDesc": "Strategic participations and support",
-    "solutionsDomainsLabel": "SOFTWARE ASSET DOMAINS",
     "solutionsDomainsDesc": "",
-    "solutionsDomain1": "AI Agents & Business Automation",
-    "solutionsDomain2": "Compliance, Risk & AI Governance",
-    "solutionsDomain3": "Cybersecurity & Digital Trust",
-    "solutionsDomain4": "Document, Contract & Knowledge Intelligence",
-    "solutionsDomain5": "Finance, Billing & E-Invoicing Automation",
-    "solutionsDomain6": "Data, BI & Decision Intelligence",
-    "solutionsDomain7": "Customer Experience & Service Automation",
-    "solutionsDomain8": "Supplier, Procurement & Third-Party Risk",
-    "solutionsDomain9": "Identity, KYC/KYB & Digital Trust",
-    "solutionsDomain10": "Enterprise Asset & Process Intelligence",
-    "solutionsViewAll": "View all assets",
-    "solutionsSubblink": "subblink (AI Contracts)",
-    "solutionsKryv": "kryv (AI Code)",
-    "solutionsNeediu": "neediu",
-    "solutionsMovtoo": "movtoo",
-    "solutionsPrimiom": "primiom",
-    "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Business, capital, technology and society. Aegryn's quarterly take on what's reshaping markets.",
     "thinkingMagazineIssues": "January 2027 - Built to Last",
@@ -116,7 +74,6 @@
     "thinkingMarketNewsletter": "LinkedIn Newsletter",
     "thinkingMarketArticles": "All articles",
     "thinkingMarketWorkforce": "Employment & Skills",
-    "thinkingMarketGlossary": "M&A Tech Glossary",
     "thinkingMarketFAQ": "FAQ",
     "whoGroup": "The group",
     "whoGroupDesc": "History, mission, values",
@@ -126,15 +83,11 @@
     "whoJoin": "Join us",
     "whoJoinDesc": "Work at Aegryn, talent, partners",
     "whoCareers": "Work at Aegryn",
-    "whoTalent": "Executive Selection",
     "whoAlliances": "Become a partner",
     "talent": "Talent",
     "industries": "Industries",
     "industriesDesc": "All sectors",
     "whoFounder": "The founder",
-    "solutionsCategoriesPrimary": "MAIN CATEGORIES",
-    "solutionsCategoriesSecondary": "ADDITIONAL CATEGORIES",
-    "solutionsCategoryAI": "AI & Protocols",
     "solutionsCategoryFinTech": "FinTech & Payments",
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Real Estate",
@@ -150,7 +103,6 @@
     "clusterIndustrie": "Industry, Energy & Infrastructure",
     "clusterCommerce": "Commerce, Services & Customer Experience",
     "clusterTech": "Tech, Innovation & Public Sector",
-    "solutionsViewAllLink": "View all solutions",
     "craftRecruitIntro": "The right profile, at the right stage",
     "craftRecruitForCompanies": "For companies",
     "craftRecruitForCandidates": "For candidates",
@@ -240,15 +192,12 @@
         "desc": "Discover Aegryn's proprietary assets: subblink, neediu, primiom, movtoo, hobconnect, engineered to last, certifiable and transferable."
       },
       "filterAll": "All",
-      "filterAI": "AI & Protocols",
-      "filterLifestyle": "Services & Lifestyle",
       "filterTransactions": "Markets & Communities",
       "filterIdentity": "Identity & Trust",
       "statusLive": "Live",
       "statusBeta": "Beta",
       "statusDev": "In development",
       "gradeLabel": "Aegryn Grade",
-      "gradePending": "Certification in progress",
       "visitSite": "Visit site",
       "visitPage": "View page",
       "comingSoon": "Coming soon",
@@ -262,10 +211,6 @@
       "ctaBottom": "Carrying an ambitious project? We work for you or with you: as a mandate, or with an equity stake when the project convinces us. Reply within 2 business days.",
       "notStarted": "Not started",
       "certificationInProgress": "Certification in progress",
-      "badgeCore": "CORE",
-      "badgePortfolio": "PORTFOLIO",
-      "filterCore": "CORE assets",
-      "filterPortfolio": "PORTFOLIO assets",
       "coreDesc": "Designed, developed and operated by Aegryn",
       "portfolioDesc": "Strategic participations and support",
       "filterValuation": "Valuation",
@@ -376,7 +321,6 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Integrated advisory for European tech organisations",
     "cta": "Get in touch",
     "hero": {
       "title": "Eight disciplines to decide, steer and implement.",
@@ -784,11 +728,7 @@
     "label": "Frame and deliver",
     "contactCta": "Get in touch",
     "ctaDesc": "Every engagement starts with an exhaustive diagnostic before any recommendation. We document, we measure, we deliver.",
-    "ctaTitleMa": "Let's discuss your M&A deal",
     "ctaTitleTech": "Let's discuss your tech transformation",
-    "ctaTitleStrategy": "Let's discuss your strategy",
-    "ctaTitleRiskCompliance": "Let's discuss your regulatory exposure",
-    "ctaTitleTalentOrganization": "Let's discuss your organisation's depth",
     "pillarLink": "Explore the discipline"
   },
   "build": {
@@ -812,11 +752,6 @@
     },
     "visitSite": "Visit site",
     "comingSoon": "Coming soon",
-    "philosophy": {
-      "label": "Our philosophy",
-      "title": "Proprietary. Independent. Durable.",
-      "desc": "We don't build MVPs. We don't sell minority stakes to VCs. Every Aegryn asset is designed to be fully owned, operated independently, and passed on to future generations."
-    },
     "pillars": {
       "proprietary": {
         "stat": "100%",
@@ -825,10 +760,6 @@
       "sovereign": {
         "stat": "CH",
         "label": "Independence"
-      },
-      "durable": {
-        "stat": "∞",
-        "label": "Durability"
       }
     },
     "advisoryCta": {
@@ -902,7 +833,6 @@
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
     "quote": "What we do for our clients, we apply to ourselves. This consistency is our first credibility.",
-    "ceoName": "",
     "ceoTitle": "",
     "stats": [
       {
@@ -1080,22 +1010,6 @@
         }
       ]
     },
-    "mission": {
-      "label": "Three disciplines",
-      "title": "Three disciplines.\nOne market standard.",
-      "create": {
-        "title": "BUILD",
-        "desc": "Proprietary, certifiable, transferable tech assets. Registered IP, documented codebase, mastered stack."
-      },
-      "simplify": {
-        "title": "GRADE",
-        "desc": "Certify independently. Refuse more than accept. A reproducible, traceable and definitive grade."
-      },
-      "embrace": {
-        "title": "M&A TRANSACTION",
-        "desc": "Transfer in discretion, with certainty for all parties. Complete documentation at every step."
-      }
-    },
     "dna": {
       "label": "Our DNA",
       "cultureCta": "Our culture and working values"
@@ -1141,11 +1055,8 @@
     "founder": {
       "label": "The founding conviction",
       "title": "Built from the inside.",
-      "bio1": "Aegryn's founder is an executive and operator with over twenty years of international experience in strategy, technology and M&A. A former executive director at a global consulting firm, he has supported public and private organisations, international groups and institutions through their most complex transformations.",
-      "bio2": "He chose to create Aegryn to bring together within a single structure what the market offers in silos: advisory, build, transaction, talent and market intelligence. His conviction: companies that last do not choose between strategy and technology. They think them together.",
       "cta": "Get in touch",
-      "disciplinesCta": "Our disciplines",
-      "storytelling": "Advising without building is delivering a map without territory.\nBuilding without certifying is delivering without proof.\nCertifying without transferring is preparing without concluding.\nTransferring without recruiting is handing over without securing what comes next.\nInforming without acting is commenting without responsibility."
+      "disciplinesCta": "Our disciplines"
     },
     "cta": {
       "label": "Work with Aegryn",
@@ -1209,11 +1120,6 @@
     },
     "apply": "Apply",
     "spontaneous": "Unsolicited application",
-    "statement": {
-      "label": "The firm",
-      "title": "Built to last, led by experts who believe in it.",
-      "cta": "Discover our services"
-    },
     "domains": {
       "all": "All domains",
       "strategy": "Business Strategy",
@@ -1284,7 +1190,6 @@
   },
   "assetPage": {
     "back": "← Back to assets",
-    "presentation": "Overview",
     "audience": "Target audience",
     "features": "Key features",
     "visit": "Visit",
@@ -1588,68 +1493,6 @@
     },
     "ownedBy": "An Aegryn asset"
   },
-  "ndaForm": {
-    "requestBtn": "Request NDA access",
-    "doneTitle": "Request received",
-    "doneDesc": "Our team will get back to you within 2 business days to validate your profile and send you the NDA.",
-    "formTitle": "NDA access request",
-    "labelName": "Full name *",
-    "labelEmail": "Email *",
-    "labelCompany": "Company",
-    "labelBuyerType": "Buyer profile",
-    "labelCapacity": "Declared acquisition capacity",
-    "labelMessage": "Message (optional)",
-    "placeholderName": "John Smith",
-    "placeholderEmail": "you@example.com",
-    "placeholderCompany": "Your company name",
-    "placeholderMessage": "Context of your interest in this asset...",
-    "selectDefault": "Select",
-    "submit": "Submit my request",
-    "sending": "Sending...",
-    "disclaimer": "Access subject to profile validation by our team.",
-    "errorGeneric": "An error occurred. Please try again.",
-    "errorNetwork": "Network error. Please try again.",
-    "buyerTypes": {
-      "pe": "PE / VC Fund",
-      "strategic": "Strategic buyer",
-      "family_office": "Family office",
-      "individual": "Individual / Freelancer"
-    }
-  },
-  "accessForm": {
-    "doneTitle": "Request received",
-    "doneDesc": "Our team will get back to you within 2 business days to validate your profile, then send you the NDA and Aegryn T&Cs to sign.",
-    "doneNote": "No access without signature of both documents.",
-    "restrictedTitle": "Restricted catalogue access",
-    "restrictedDesc": "Asset files and company names are accessible only after account creation, signing the Aegryn NDA and accepting the T&Cs.",
-    "pendingCgvDesc": "Your NDA is registered. The T&Cs will be sent to you shortly.",
-    "pendingNdaDesc": "Submit your request below. We will send you the NDA and T&Cs for signature.",
-    "ndaSignedTitle": "NDA signed, awaiting T&Cs",
-    "ndaSignedDesc": "Our team will send you the General Terms of Sale shortly.",
-    "formLabel": "Catalogue access request",
-    "labelName": "Full name *",
-    "labelEmail": "Email *",
-    "labelCompany": "Company",
-    "labelBuyerType": "Buyer profile",
-    "labelCapacity": "Declared acquisition capacity",
-    "labelMessage": "Message (optional)",
-    "placeholderName": "John Smith",
-    "placeholderEmail": "you@example.com",
-    "placeholderCompany": "Your company name",
-    "placeholderMessage": "Context of your interest in the next session...",
-    "selectDefault": "Select",
-    "submit": "Submit my request",
-    "sending": "Sending...",
-    "disclaimer": "Access subject to profile validation, NDA signature and T&Cs acceptance.",
-    "errorGeneric": "An error occurred. Please try again.",
-    "errorNetwork": "Network error. Please try again.",
-    "buyerTypes": {
-      "pe": "PE / VC Fund",
-      "strategic": "Strategic buyer",
-      "family_office": "Family office",
-      "individual": "Individual / Freelancer"
-    }
-  },
   "gradePartners": {
     "back": "← Certification CIFSO 5000",
     "eyebrow": "CIFSO 5000 Certification",
@@ -1818,7 +1661,6 @@
         "other": "Other"
       },
       "message": "Message",
-      "messagePlaceholder": "Describe your request...",
       "submit": "Send",
       "sending": "Sending...",
       "error": "An error occurred. Please retry or email us directly.",
@@ -1838,11 +1680,6 @@
       "phoneLabel": "Phone"
     }
   },
-  "stats": {
-    "assets": "assets",
-    "languages": "languages",
-    "base": "Swiss Base"
-  },
   "footer": {
     "groupLabel": "Aegryn",
     "legal": "© 2026 Aegryn · Saint-Sulpice · Vaud · Switzerland",
@@ -1851,14 +1688,10 @@
     "terms": "Terms",
     "dataProtection": "Data Protection Notice",
     "swissTagline": "Integrated firm and La Boutique. Anchored in Switzerland, open to the world.",
-    "navLabel": "Aegryn",
-    "companyLabel": "Company",
-    "servicesLabel": "Services",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "The firm",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publications",
-    "blogLink": "Blog",
     "ecosystemLabel": "Ecosystem",
     "advisoryLabel": "The firm",
     "advisoryDesc": "Supporting leaders at every lifecycle stage: launch, grow, reorient, acquire, hand down.",
@@ -1870,49 +1703,27 @@
       "link": "Product roadmap"
     },
     "assetsLink": "Asset Catalogue",
-    "glossaryLink": "Glossary",
     "ecosystemCatalogLink": "Our proprietary assets",
     "aiNotice": "Some content on this site is produced with the assistance of artificial intelligence systems and reviewed under Aegryn editorial responsibility, EU AI Act art. 50.",
     "col1Title": "Our craft",
     "col1Build": "Deliver",
-    "col1Support": "Frame",
-    "col1Transact": "M&A Transaction",
     "col2Title": "Our solutions",
     "col2Subblink": "Contract Risk Analysis",
     "col2Code": "Certification CIFSO",
-    "col2Grade": "Get certified",
-    "col2DataRoom": "Accompany",
-    "col2ViewAll": "Our portfolio",
     "col3Title": "Our convictions",
     "col3Magazine": "Magazine",
     "col3Newsletter": "LinkedIn Newsletter",
     "col3Blog": "Blog",
-    "col3Glossary": "Glossary",
     "col3Valuation": "Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Who we are",
-    "col4About": "About Aegryn",
-    "col4Contact": "Contact us",
     "col4Careers": "Work at Aegryn",
-    "col4Talent": "Selection & Transition",
     "footerCraftTransact": "By situation",
-    "footerGradeSubmit": "Certify an asset",
-    "footerWhoTalent": "Select",
     "col4Alliances": "Become a partner",
     "col5Title": "Follow us",
-    "col5LinkedIn": "LinkedIn",
-    "col5Twitter": "Twitter",
-    "col5GitHub": "GitHub",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Verify a certificate",
     "footerCraftFrameDeliver": "Frame and deliver"
-  },
-  "cookie": {
-    "title": "Aegryn | Cookies & Analytics",
-    "desc": "We use Cloudflare Analytics (anonymised) to measure audience and improve experience. No advertising data. GDPR & LPD compliant.",
-    "learnMore": "Learn more",
-    "accept": "Accept",
-    "refuse": "Decline"
   },
   "pillars": {
     "build": {
@@ -1961,257 +1772,8 @@
     "label": "Certification & Transfer",
     "title": "Value must be demonstrable,\nwithout compromise.",
     "desc": "Independent certification. Documented valuation.\nConfidential support at every stage of the lifecycle.",
-    "stat1Val": "100%",
-    "stat1Label": "Independent, documented assessments",
-    "stat2Val": "5",
-    "stat2Label": "CIFSO dimensions assessed",
-    "stat3Val": "12 months",
-    "stat3Label": "Certified grade validity",
     "ctaSell": "Assess my organization",
-    "ctaBuy": "Prepare an acquisition",
-    "stat4Val": "Switzerland",
-    "stat4Label": "Institutional anchor"
-  },
-  "acquisitionSupport": {
-    "label": "Acquisition Support",
-    "title": "You identified\nthe asset. We finance\nthe closing.",
-    "desc": "Co-investment, bridge, structured earnout, Aegryn connects qualified buyers with financial partners to close the deals that deserve to be closed.",
-    "cta": "Discover Acquisition Support",
-    "legal": "Aegryn is not a financial institution. This service connects you with independent third-party partners."
-  },
-  "acquisition": {
-    "meta": {
-      "title": "Transaction Advisory & M&A | Aegryn",
-      "desc": "Full M&A support for certified tech asset acquisitions: due diligence, legal structuring, closing. Experts coordinated by Aegryn."
-    },
-    "label": "Services : Transaction Advisory",
-    "title": "Your acquisition.\nStructured to close.",
-    "desc": "When acquiring a certified asset requires specific financial, legal or tax structuring, Aegryn mobilises the right experts for your profile and the nature of the deal.",
-    "ctaPrimary": "Discuss my acquisition",
-    "ctaDiscover": "Read our analyses",
-    "advisorNote": "An Aegryn advisor is assigned to your file from first contact to closing. One person. Direct line.",
-    "experts": {
-      "label": "Expertise mobilised",
-      "title": "The right experts.\nFor every stage of the deal.",
-      "desc": "Depending on your file and the transaction phase, Aegryn mobilises the right partner experts.",
-      "phases": [
-        {
-          "label": "Pre-transaction",
-          "items": [
-            {
-              "num": "01",
-              "title": "Valuation & Market Benchmark",
-              "desc": "ARR multiple estimation, Quality of Earnings, sector comparables, defensible valuation range. The foundation of any serious negotiation."
-            },
-            {
-              "num": "02",
-              "title": "Vendor Readiness, Sale Preparation",
-              "desc": "Seller file audit before submission: data room, contracts, registers, GDPR compliance, technical debt. Reduces certification timeline by 30 to 50%."
-            },
-            {
-              "num": "03",
-              "title": "Digital Law & Intellectual Property",
-              "desc": "IP chain of title, open-source licences, assignment of founder and contractor rights, trademark protection, client contract compliance. Covers dimension I of the Aegryn grade."
-            }
-          ]
-        },
-        {
-          "label": "Due diligence & negotiation",
-          "items": [
-            {
-              "num": "04",
-              "title": "Transaction Law & M&A",
-              "desc": "SPA, SHA, LOI, APA, conditions precedent, reps & warranties, price mechanisms (locked box vs completion accounts). Support before, during and after the transaction."
-            },
-            {
-              "num": "05",
-              "title": "HR & Employment Due Diligence",
-              "desc": "Review of key contracts, BSPCE and change of control, latent employment liabilities, freelancer vs employee classification, non-compete and non-solicitation clauses."
-            },
-            {
-              "num": "06",
-              "title": "Sectoral Regulatory Due Diligence",
-              "desc": "FinTech (DORA, ACPR/FINMA authorisation), HealthTech (HDS, health GDPR), AI-native (EU AI Act), LegalTech (UPL), EdTech (COPPA). Essential for regulated verticals."
-            },
-            {
-              "num": "07",
-              "title": "Closing preparation",
-              "desc": "Conditions precedent, closing checklist, transfer of IP rights and key contracts, transition deliverables."
-            }
-          ]
-        },
-        {
-          "label": "Structuring & financing",
-          "items": [
-            {
-              "num": "08",
-              "title": "Tax & Corporate Structuring",
-              "desc": "Exit optimisation for sellers, acquisition structuring for buyers: holding, SPV, Luxembourg, Switzerland, France. Contribution-exchange and tax deferral."
-            },
-            {
-              "num": "09",
-              "title": "Financing & Financial Partners",
-              "desc": "Bridge financing to accelerate closing, co-investment to share exposure, mezzanine debt. Each introduction is specific to your deal profile."
-            },
-            {
-              "num": "10",
-              "title": "Earn-out Design & KPI Framework",
-              "desc": "Earnout mechanism design, metric definition, contractual seller protections against post-acquisition manipulation, dispute resolution clauses."
-            }
-          ]
-        },
-        {
-          "label": "Post-closing",
-          "items": [
-            {
-              "num": "11",
-              "title": "Post-acquisition Integration",
-              "desc": "30/60/100-day integration plan: tech stack, HR, client communications, supplier contract migration. Maximises value preserved after closing."
-            },
-            {
-              "num": "12",
-              "title": "Executive HR Support",
-              "desc": "Post-sale management contract, non-compete (with financial consideration), leadership transition, golden parachute. Specific to founders who remain operational."
-            },
-            {
-              "num": "13",
-              "title": "Exit Tax Filing",
-              "desc": "Capital gains declaration, CH/FR/LU regimes by tax domicile, contribution-exchange, reinvestment of sale proceeds, PEA-PME. Distinct from pre-transaction structuring."
-            }
-          ]
-        }
-      ]
-    },
-    "forWhom": {
-      "label": "For whom",
-      "title": "When the standard process is not enough.",
-      "items": [
-        {
-          "title": "Funds and family offices",
-          "desc": "You have identified a target but the deal requires a SPV, LP co-investment or IC timeline. Aegryn structures the envelope around your offer."
-        },
-        {
-          "title": "Strategic buyers",
-          "desc": "You integrate an asset into your existing offer. We structure the earnout, integration conditions and post-acquisition protection so the closing is defensible."
-        },
-        {
-          "title": "First-time acquirers",
-          "desc": "You are completing your first tech acquisition and need full support: valuation, due diligence, negotiation, financing structuring. Aegryn guides you from the first conversation to transfer."
-        }
-      ]
-    },
-    "offer": {
-      "label": "Our process",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Briefing & qualification",
-          "desc": "Acquisition criteria definition: sector, target ARR, geography, maximum multiple, acquirer profile, financing constraints. Identification of the right bid model (Club Deal, Corporate, Fund)."
-        },
-        {
-          "num": "02",
-          "title": "Access to certified pipeline",
-          "desc": "Access to the Aegryn network and its partners: targets identified ahead of competitive processes, independent review of CIFSO 5000-certified organisations, grade A and above with a remediation plan on request."
-        },
-        {
-          "num": "03",
-          "title": "Due diligence & structuring",
-          "desc": "Data room access under NDA. The Aegryn grade report compresses DD by 30 to 45 days. Mobilisation of legal, tax and financial experts suited to the deal. Drafting of transaction documents (SPA, SHA, LOI)."
-        },
-        {
-          "num": "04",
-          "title": "Financing",
-          "desc": "If the deal requires additional financing: introduction to qualified financial partners (bridge, co-investment, earnout). Each introduction is specific to your profile."
-        },
-        {
-          "num": "05",
-          "title": "Signing & secure closing",
-          "desc": "Full codebase documentation at signing date. Rights transfer. Issuance of the Aegryn transaction certificate."
-        }
-      ]
-    },
-    "diff": {
-      "label": "Why Aegryn",
-      "items": [
-        {
-          "title": "Certified assets, reduced risk",
-          "desc": "Every pipeline asset has been audited on 4 dimensions (C/I/F/S) before listing. You negotiate on verified grades, not on declarations."
-        },
-        {
-          "title": "Off-market first",
-          "desc": "Most of the opportunities we support are never publicly announced. They arise from the advisory relationship, ahead of any sale process."
-        },
-        {
-          "title": "Experts mobilised at the right time",
-          "desc": "Aegryn doesn't do everything. We coordinate the right experts (legal, tax, financial) at the right moment in the process, not too early to avoid overcomplication, not too late to avoid fragility."
-        },
-        {
-          "title": "Liability on the grade",
-          "desc": "Our grade is issued by certified analysts following a rigorous independent protocol. Aegryn's professional liability is engaged on the integrity of the certification process, within the limits defined in our Terms of Service."
-        }
-      ]
-    },
-    "fees": {
-      "label": "Fees",
-      "title": "A success fee,\nzero fixed costs.",
-      "desc": "Our remuneration is exclusively contingent on effective closing. No retainer, no entry fees. Detailed conditions are available in our Terms of Service.",
-      "note": "Aegryn acts as a certified intermediary, not as a financial institution. The financing options presented involve independent third-party partners. This service does not constitute investment advice within the meaning of MiFID II.",
-      "noteLink": "View Terms of Service",
-      "noteHref": "/terms/cgv"
-    },
-    "cta": {
-      "title": "Interested in an asset?",
-      "desc": "Tell us about your acquisition project. We'll come back within 2 business days with a feasibility analysis.",
-      "btn": "Contact us",
-      "partnerNote": "Looking to source outgoing deal flow into the Aegryn ecosystem?",
-      "partnerCta": "Discover Deal Flow partnerships",
-      "partnerHref": "/alliances?tab=dealflow"
-    },
-    "roadmap": {
-      "label": "Services in development",
-      "title": "What's coming.",
-      "desc": "Aegryn is progressively expanding its transaction offering. These services are being deployed with our Alliance partners.",
-      "ctaLabel": "Contact us",
-      "ctaHref": "/contact",
-      "items": [
-        {
-          "phase": "Available on request",
-          "title": "Vendor Readiness",
-          "desc": "Complete preparation of the seller's file before Grade submission, contract audit, HR review, data room structuring. Reduces certification timeline by 30 to 50%.",
-          "status": "available_on_request"
-        },
-        {
-          "phase": "In deployment",
-          "title": "HR & Employment Due Diligence",
-          "desc": "Review of key contracts, stock options, change-of-control clauses, latent employment liabilities. Produced during the standard due diligence period.",
-          "status": "in_deployment"
-        },
-        {
-          "phase": "In deployment",
-          "title": "Closing preparation",
-          "desc": "Conditions precedent, closing checklist, transfer of IP rights and key contracts, transition deliverables.",
-          "status": "in_deployment"
-        },
-        {
-          "phase": "12-month roadmap",
-          "title": "Earn-out Design & KPI Framework",
-          "desc": "Design of earnout mechanisms, definition of metrics and contractual protections. Prevents post-acquisition disputes.",
-          "status": "roadmap"
-        },
-        {
-          "phase": "12-month roadmap",
-          "title": "Post-acquisition integration",
-          "desc": "100-day integration plan: technical, HR, client and supplier contracts. Maximises value preserved after closing.",
-          "status": "roadmap"
-        },
-        {
-          "phase": "24-month roadmap",
-          "title": "Sectoral regulatory due diligence",
-          "desc": "Sector-specific compliance audit for FinTech (DORA, FCA), HealthTech (HIPAA, GDPR health), native AI (EU AI Act). Essential for regulated verticals.",
-          "status": "roadmap_long"
-        }
-      ]
-    }
+    "ctaBuy": "Prepare an acquisition"
   },
   "roadmapPage": {
     "meta": {
@@ -2417,12 +1979,10 @@
     "filterVertical": "Verticals",
     "filterDACH": "DACH Market",
     "readMin": "min read",
-    "readMore": "Read article",
     "backToDiscover": "← Back to Blog",
     "featuredLabel": "Featured",
     "allArticles": "All articles",
     "ctaGrade": "Certify my asset",
-    "ctaTransaction": "Accompany every lifecycle",
     "searchPlaceholder": "Search articles...",
     "noArticles": "No articles in this category yet.",
     "newsletterLabel": "Newsletter",
@@ -2434,7 +1994,6 @@
     "newsletterSuccess": "Thanks! Check your inbox.",
     "newsletterError": "Something went wrong. Please try again.",
     "bodyComingSoon": "Full content available soon.",
-    "ctaTeaser": "Ready to submit your asset or access the catalogue?",
     "aiEditorialNotice": "This article was written with the assistance of artificial intelligence and reviewed under Aegryn editorial responsibility. In accordance with Article 50 of the EU AI Act, we assume editorial responsibility for this content.",
     "loadMore": "Load more",
     "filterSecurity": "Security & AI",
@@ -2453,11 +2012,8 @@
       "desc": "CIFSO 5000 Certification is a quality audit of the valuation of a company's assets. An organisation's value is not invented during a negotiation: it is documented well before, independently, reproducibly and defensibly.",
       "ctaSubmit": "Submit for certification",
       "ctaMethod": "Read the methodology",
-      "marketLabel": "Why certify now",
       "marketTitle": "Certification creates\nmeasurable value.",
       "marketDesc": "The M&A market has developed a clear premium for organisations whose quality is verifiable. This premium is not a projection, it is observable in completed transactions.",
-      "marketCta": "Submit my organisation",
-      "marketCtaSecondary": "View methodology",
       "useCasesLabel": "Who certifies, and why",
       "useCasesTitle": "Certification CIFSO 5000\nserves every stakeholder.",
       "useCasesDesc": "Certification is not reserved for organisations that want to sell. It is a tool for any leader who wants to document, prove, and communicate the value of their organisation , at any stage.",
@@ -2559,10 +2115,10 @@
           "profile": "Investment bank / M&A advisor",
           "icon": "landmark",
           "readings": [
-            "Certifiable mandate. Supports premium process and top-tier buyer pool.",
+            "Certifiable. Supports a demanding takeover or transfer and widens the pool of potential acquirers of the company or its assets.",
             "Standard mandate, full process executable. Complete documentation for information memorandum.",
             "Mandate with documented reservations. Improvement plan recommended in data room.",
-            "Mandate with conditions. Buyer pool may be narrower. Value plan strengthens positioning.",
+            "Conditional certification. The pool of potential acquirers may be narrower. The value plan strengthens positioning.",
             "Preliminary remediation phase required. Timeline impact: 60–90 additional days."
           ]
         },
@@ -2607,7 +2163,7 @@
             "Standard acquisition timeline. Documentation complete. Reliable basis for SPA.",
             "Acquisition with identified reservations. Warranty clauses or price adjustment mechanism recommended.",
             "Acquisition with conditions. Integration plan and value adjustment to be negotiated.",
-            "Transaction not recommended without prior remediation. Buyer risk elevated."
+            "Acquisition not recommended without prior remediation. Elevated risk for the acquirer."
           ]
         }
       ],
@@ -2695,17 +2251,9 @@
           ]
         }
       ],
-      "whitepaperLabel": "Official documentation",
       "whitepaperTitle": "Aegryn : CIFSO 5000 Certification Methodology",
       "whitepaperDesc": "Protocol overview, five dimensions, grade scale, certification process, and independence principles.",
-      "whitepaperCta": "Download brochure (PDF)",
-      "whitepaperVersion": "Certification CIFSO 5000 : Aegryn SA",
       "wpNavBack": "Back to certification",
-      "wpNavPrint": "Print / Save PDF",
-      "wpProtocol": "Protocol",
-      "wpIssuer": "Issuer",
-      "wpJurisdiction": "Jurisdiction",
-      "wpEyebrow": "Aegryn Certification : Official Methodology",
       "wpHeroTitle": "Built to Last.",
       "wpHeroDesc": "The Certification CIFSO 5000 protocol: five dimensions of organisational value, an independent grade, and a defensible document for every stakeholder.",
       "wpTocTitle": "Contents",
@@ -2722,33 +2270,16 @@
         "10. Disclaimer"
       ],
       "wpS1Title": "1. What is the Certification CIFSO 5000?",
-      "wpS1Body1": "The <strong>Certification CIFSO 5000</strong> is an independent organisational assessment protocol developed by Aegryn. It evaluates and certifies the value and transferability of an organisation across five structured dimensions: Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, and Organisation & Talent.",
-      "wpS1Body2": "Unlike existing certification standards, which verify systems, processes, and operational conformance, the Certification CIFSO 5000 certifies <em>organisational value</em>: the documented, defensible basis for a valuation, a financing decision, an investment, or a business transfer. These are two different objects. Complementary, not competing.",
-      "wpS1Callout": "“Where existing standards certify systems, CIFSO 5000 certifies value and transferability.”",
       "wpS2Title": "2. Who is it for, use cases",
       "wpS3Title": "3. The five dimensions of value (CIFSO)",
-      "wpS3Intro": "The CIFSO framework scores five independent dimensions of value, each weighted equally at 25 points. The total score (0–100) determines the final grade.",
       "wpS4Title": "4. Grade scale and definitions",
-      "wpS4ColGrade": "Grade",
-      "wpS4ColLevel": "Level",
-      "wpS4ColMeaning": "Meaning",
       "wpS5Title": "5. CIFSO 5000 and existing certification standards",
-      "wpS5Intro": "The Certification CIFSO 5000 is designed to operate alongside existing certification standards, not to replace them. The table below positions each CIFSO dimension relative to what existing standards cover.",
-      "wpS5ColDim": "CIFSO dimension",
-      "wpS5ColExisting": "Existing standards",
-      "wpS5ColCifso": "CIFSO 5000 scope",
-      "wpS5Note": "Certification CIFSO 5000 is not an accreditation under a national or international accreditation body. It is an independent proprietary protocol. It does not replace existing certification standards and is designed to complement them.",
       "wpS6Title": "6. Certification process",
-      "wpS6Intro": "The standard duration is 15 to 35 business days depending on the tier. All certifications follow the same protocol regardless of tier. The duration reflects scope and complexity.",
       "wpS7Title": "7. Independence principles",
       "wpS8Title": "8. Refusal conditions",
-      "wpS8Intro": "The following conditions result in an automatic refusal to certify one or more dimensions, or the entire certification.",
       "wpS9Title": "9. Pricing",
-      "wpS9Intro": "Prices are exclusive of tax, governed by Swiss law, and are indicative. A final quote is issued after pre-qualification based on the confirmed scope.",
-      "wpS9AllTiersLabel": "All tiers include",
       "wpS9AllTiersDesc": "Full 5-dimension CIFSO 5000 audit · Independent certification report · Official grade · Registration in Aegryn certified register · Certificate validity as stated per tier",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterVersion": "Certification CIFSO 5000 v4.0 : Official Methodology",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Switzerland",
       "isoColDimension": "Dimension",
       "isoColExisting": "Existing standards",
@@ -2873,61 +2404,6 @@
       "title": "Get the grade that\ngives your asset its price.",
       "desc": "Aegryn certification independently attests the value of your organisation at every stage of its lifecycle.",
       "cta": "Submit my asset"
-    },
-    "methodology": {
-      "label": "Methodology",
-      "title": "A reproducible protocol.\nNot a subjective opinion.",
-      "desc": "The Aegryn Grade methodology is documented, versioned and audited. Every analyst follows the same protocol.",
-      "versionLabel": "Protocol version",
-      "version": "Aegryn Grade 2026",
-      "principlesLabel": "Core principles",
-      "principles": [
-        {
-          "title": "Reproducibility",
-          "desc": "Two independent analysts applying the same protocol must reach the same grade within ±1 sub-code."
-        },
-        {
-          "title": "Traceability",
-          "desc": "Every grade is versioned. Any revision generates a new version with complete traceability. The original grade remains accessible."
-        },
-        {
-          "title": "Independence",
-          "desc": "Analysts have no financial interest in the assets they certify. Strict separation between certification and transaction."
-        },
-        {
-          "title": "Revisability",
-          "desc": "A grade can be revised after documented improvement. The original grade remains visible in the history."
-        }
-      ],
-      "scoringLabel": "Scoring system",
-      "scoringDesc": "Each dimension is scored 0–25 points. The total determines the grade according to a published table.",
-      "scores": [
-        {
-          "range": "90–100",
-          "grade": "AEG ★",
-          "color": "grade-star"
-        },
-        {
-          "range": "75–89",
-          "grade": "AAA",
-          "color": "grade-aaa"
-        },
-        {
-          "range": "60–74",
-          "grade": "AA",
-          "color": "grade-aa"
-        },
-        {
-          "range": "45–59",
-          "grade": "A",
-          "color": "grade-a"
-        },
-        {
-          "range": "30–44",
-          "grade": "B",
-          "color": "grade-b"
-        }
-      ]
     }
   },
   "gradingSystem": {
@@ -2939,8 +2415,6 @@
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertification CIFSO 5000.",
     "intro": "CIFSO 5000 is the first independent certification standard that assesses organizational value and transferability. Beyond operational compliance, it documents what makes an organization's real value: its intellectual capital, integrity, financial health, security, and organizational resilience.",
-    "downloadLabel": "Full documentation",
-    "downloadCta": "Download protocol PDF",
     "cifsTitle": "The CIFSO 5000 framework",
     "cifsDesc": "Each asset is assessed across four independent dimensions, each scored from 0 to 25 points. The total score out of 100 determines the grade.",
     "cifs": [
@@ -3136,28 +2610,6 @@
     ],
     "subcodesTitle": "Sub-code nomenclature",
     "subcodesDesc": "Each dimension receives a sub-code from M01 to M04 (Maturity) and D01 to D04 (Depth) specifying the exact level within the dimension.",
-    "subcodeTable": [
-      {
-        "code": "01",
-        "label": "Reference",
-        "desc": "Sector reference level, top 5%"
-      },
-      {
-        "code": "02",
-        "label": "Solid",
-        "desc": "Above median, fundamentals mastered"
-      },
-      {
-        "code": "03",
-        "label": "In progress",
-        "desc": "Below median, improvement areas identified"
-      },
-      {
-        "code": "04",
-        "label": "Remediation",
-        "desc": "Insufficient level, remediation plan required"
-      }
-    ],
     "exampleTitle": "Full code example",
     "exampleDesc": "An asset graded AAA with code C1-D01 | I2-M02 | F1-A01 | S2 reads as follows:",
     "exampleItems": [
@@ -3250,10 +2702,8 @@
     ],
     "ctaTitle": "Certify your asset",
     "ctaDesc": "Ready to submit your asset to the Aegryn Grade protocol?",
-    "ctaPrimary": "Start certification",
     "ctaSecondary": "Our independent network",
     "disclaimerTitle": "Mandatory notice",
-    "disclaimerText": "While every effort has been made to remain objective, clients are informed that any certification involves an element of expert judgement. The information contained in an Aegryn Grade report is provided as professional certification, issued by Aegryn certified analysts. It does not constitute a guarantee of market value.",
     "refusalTitle": "Automatic refusal conditions",
     "refusalDesc": "Certain configurations trigger an automatic refusal regardless of the overall score, the algorithm produces a score, the expert gives the final opinion, but an automatic refusal can never be overridden.",
     "refusalConditions": [
@@ -3290,520 +2740,10 @@
     ],
     "fullCodesTitle": "Full CIFSO 5000 sub-code table",
     "fullCodesDesc": "Each sub-code identifies a specific criterion evaluated during certification. Codes marked ⛔ are automatic refusal conditions.",
-    "fullCodesTable": [
-      {
-        "dim": "C",
-        "code": "C-11",
-        "label": "Architecture",
-        "desc": "Component decoupling, separation of concerns, documented patterns."
-      },
-      {
-        "dim": "C",
-        "code": "C-12",
-        "label": "Scalability",
-        "desc": "Capacity to handle ×10 load without major refactoring."
-      },
-      {
-        "dim": "C",
-        "code": "C-13",
-        "label": "Technical documentation",
-        "desc": "Up-to-date README, ADR, architecture diagrams."
-      },
-      {
-        "dim": "C",
-        "code": "C-14",
-        "label": "Test coverage",
-        "desc": "Unit + integration + E2E tests. Threshold: ≥70% for level 2."
-      },
-      {
-        "dim": "C",
-        "code": "C-15",
-        "label": "CI/CD",
-        "desc": "Automated build, test and deployment pipeline operational."
-      },
-      {
-        "dim": "C",
-        "code": "C-16",
-        "label": "Code quality",
-        "desc": "Linting, formatting, documented code reviews."
-      },
-      {
-        "dim": "C",
-        "code": "C-17",
-        "label": "Technical debt",
-        "desc": "Identification, quantification and remediation plan for existing debt."
-      },
-      {
-        "dim": "C",
-        "code": "C-18",
-        "label": "Third-party dependencies",
-        "desc": "Package inventory, compatible licences, no abandoned dependencies."
-      },
-      {
-        "dim": "C",
-        "code": "C-19",
-        "label": "Secrets management",
-        "desc": "Environment variables, vault, documented key rotation."
-      },
-      {
-        "dim": "C",
-        "code": "C-21",
-        "label": "Monitoring & observability",
-        "desc": "Structured logs, alerts, operational dashboards."
-      },
-      {
-        "dim": "C",
-        "code": "C-22",
-        "label": "Resilience & recovery",
-        "desc": "Backup strategy, documented RTO/RPO, restore tests performed."
-      },
-      {
-        "dim": "C",
-        "code": "C-23",
-        "label": "Environment separation",
-        "desc": "Dev / staging / prod isolated, no real data in dev."
-      },
-      {
-        "dim": "C",
-        "code": "C-31",
-        "label": "Maintainability",
-        "desc": "Ease of onboarding a new developer, estimated time documented."
-      },
-      {
-        "dim": "C",
-        "code": "C-32",
-        "label": "Versioning & history",
-        "desc": "Clean Git, commit conventions, changelogs maintained."
-      },
-      {
-        "dim": "C",
-        "code": "C-33",
-        "label": "Performance",
-        "desc": "Response time benchmarks documented, no unaddressed regression."
-      },
-      {
-        "dim": "C",
-        "code": "C-34",
-        "label": "Critical CVEs",
-        "desc": "No unresolved critical CVE in direct dependencies. Blocking if present."
-      },
-      {
-        "dim": "C",
-        "code": "C-35",
-        "label": "Codebase access",
-        "desc": "Access granted to analysts with defined scope and signed NDA."
-      },
-      {
-        "dim": "C",
-        "code": "C-40",
-        "label": "Exposed secrets",
-        "desc": "No secrets (API keys, tokens) exposed in Git history or code. Blocking if present."
-      },
-      {
-        "dim": "C",
-        "code": "C-41",
-        "label": "Code ownership",
-        "desc": "All code owned by the selling entity, no external contribution not assigned."
-      },
-      {
-        "dim": "I",
-        "code": "I-11",
-        "label": "Registered trademarks",
-        "desc": "National or international filing (WIPO, EUIPO) validated, no opposition pending."
-      },
-      {
-        "dim": "I",
-        "code": "I-12",
-        "label": "Software rights",
-        "desc": "Formal assignment of patrimonial rights to the selling entity, all contributors included."
-      },
-      {
-        "dim": "I",
-        "code": "I-13",
-        "label": "Patents",
-        "desc": "Patents filed or pending, value and scope documented."
-      },
-      {
-        "dim": "I",
-        "code": "I-14",
-        "label": "Technological moat",
-        "desc": "Identifiable and documented technical barrier to entry (proprietary algorithm, exclusive data, network)."
-      },
-      {
-        "dim": "I",
-        "code": "I-15",
-        "label": "Contractual exclusivities",
-        "desc": "Active exclusivity clauses with customers or suppliers."
-      },
-      {
-        "dim": "I",
-        "code": "I-16",
-        "label": "Proprietary data",
-        "desc": "Dataset or database created by the asset, not easily replicable by a competitor."
-      },
-      {
-        "dim": "I",
-        "code": "I-17",
-        "label": "Third-party licences",
-        "desc": "Complete licence inventory, compatibility with transfer verified."
-      },
-      {
-        "dim": "I",
-        "code": "I-18",
-        "label": "Trademark litigation",
-        "desc": "No active or pending IP dispute. Blocking if active litigation."
-      },
-      {
-        "dim": "I",
-        "code": "I-19",
-        "label": "Non-compete",
-        "desc": "Non-compete clauses with key employees and contractors documented."
-      },
-      {
-        "dim": "I",
-        "code": "I-21",
-        "label": "Third-party rights on codebase",
-        "desc": "No unassigned rights of external contributors on the produced code. Blocking if not formalised."
-      },
-      {
-        "dim": "I",
-        "code": "I-22",
-        "label": "Domain names",
-        "desc": "Strategic domains owned by the selling entity, renewals up to date."
-      },
-      {
-        "dim": "I",
-        "code": "I-23",
-        "label": "Social media & handles",
-        "desc": "Official accounts owned by the entity, no third-party squatting."
-      },
-      {
-        "dim": "I",
-        "code": "I-31",
-        "label": "Market positioning",
-        "desc": "Clear and defensible differentiation against 3 identified direct competitors."
-      },
-      {
-        "dim": "I",
-        "code": "I-32",
-        "label": "Reputation & reviews",
-        "desc": "Public reviews, NPS or documented customer feedback, no structural bad buzz."
-      },
-      {
-        "dim": "I",
-        "code": "I-39",
-        "label": "Chain of title",
-        "desc": "Clear ownership history since incorporation, no gap in chain of title."
-      },
-      {
-        "dim": "F",
-        "code": "F-11",
-        "label": "Documented ARR",
-        "desc": "ARR audited on supporting documents (contracts, invoices, statements) over 12 months minimum."
-      },
-      {
-        "dim": "F",
-        "code": "F-12",
-        "label": "MRR & seasonality",
-        "desc": "Monthly MRR over 24 months, seasonal peaks identified."
-      },
-      {
-        "dim": "F",
-        "code": "F-13",
-        "label": "Churn",
-        "desc": "Monthly churn calculated on evidence. Level 2 threshold: <3% monthly."
-      },
-      {
-        "dim": "F",
-        "code": "F-14",
-        "label": "NRR (Net Revenue Retention)",
-        "desc": "Expansion revenue included. Level 1 threshold: >120%. Level 2: >100%."
-      },
-      {
-        "dim": "F",
-        "code": "F-15",
-        "label": "LTV / CAC",
-        "desc": "LTV:CAC ratio documented and calculated on a representative cohort."
-      },
-      {
-        "dim": "F",
-        "code": "F-16",
-        "label": "Gross margins",
-        "desc": "Gross margin over 12 months. Level 1 threshold: >75% (SaaS)."
-      },
-      {
-        "dim": "F",
-        "code": "F-17",
-        "label": "Runway",
-        "desc": "Available cash and estimated cash-out date if applicable."
-      },
-      {
-        "dim": "F",
-        "code": "F-18",
-        "label": "Burn rate",
-        "desc": "Average monthly burn over 6 months, OPEX / CAPEX breakdown."
-      },
-      {
-        "dim": "F",
-        "code": "F-21",
-        "label": "ARR growth YoY",
-        "desc": "Annual growth rate documented. Level 1 threshold: >40%."
-      },
-      {
-        "dim": "F",
-        "code": "F-22",
-        "label": "Customer concentration",
-        "desc": "Top customer share of total revenue, concentration risk assessed."
-      },
-      {
-        "dim": "F",
-        "code": "F-23",
-        "label": "Recurring contracts",
-        "desc": "Average contract duration, renewal rates documented."
-      },
-      {
-        "dim": "F",
-        "code": "F-24",
-        "label": "Revenue cohorts",
-        "desc": "Cohort analysis over 4+ quarters to validate retention."
-      },
-      {
-        "dim": "F",
-        "code": "F-31",
-        "label": "Legal structure",
-        "desc": "Dedicated legal entity, separate accounts, no mix with other activities."
-      },
-      {
-        "dim": "F",
-        "code": "F-32",
-        "label": "Hidden liabilities",
-        "desc": "No undisclosed supplier debt, employment or tax disputes."
-      },
-      {
-        "dim": "F",
-        "code": "F-33",
-        "label": "Auditability",
-        "desc": "Annual accounts available, general ledger accessible on request."
-      },
-      {
-        "dim": "F",
-        "code": "F-41",
-        "label": "Sales pipeline",
-        "desc": "Documented pipeline of ongoing deals with probabilities and amounts."
-      },
-      {
-        "dim": "F",
-        "code": "F-42",
-        "label": "Founder dependency",
-        "desc": "Share of revenue personally carried by founder(s), key-person risk assessed."
-      },
-      {
-        "dim": "F",
-        "code": "F-43",
-        "label": "Verifiable data",
-        "desc": "All financial metrics verifiable on evidence, no blocking refusal. Blocking if refused."
-      },
-      {
-        "dim": "F",
-        "code": "F-46",
-        "label": "Unit economics",
-        "desc": "ARPU, CAC by channel, LTV by segment documented."
-      },
-      {
-        "dim": "S",
-        "code": "S-11",
-        "label": "GDPR/LPD compliance",
-        "desc": "Privacy policy, processing register, DPO or GDPR contact designated."
-      },
-      {
-        "dim": "S",
-        "code": "S-12",
-        "label": "MFA",
-        "desc": "Multi-factor authentication active on all admin and production access."
-      },
-      {
-        "dim": "S",
-        "code": "S-13",
-        "label": "Encryption at rest",
-        "desc": "Sensitive data encrypted in database and in backups."
-      },
-      {
-        "dim": "S",
-        "code": "S-14",
-        "label": "Encryption in transit",
-        "desc": "TLS 1.2+ on all communications, HSTS enabled."
-      },
-      {
-        "dim": "S",
-        "code": "S-15",
-        "label": "Access management",
-        "desc": "Least privilege principle applied, offboarding documented."
-      },
-      {
-        "dim": "S",
-        "code": "S-16",
-        "label": "Third-party security audit",
-        "desc": "Pentest or audit report by independent third party within the last 18 months."
-      },
-      {
-        "dim": "S",
-        "code": "S-17",
-        "label": "Critical vulnerabilities",
-        "desc": "No unresolved critical CVE on infrastructure. Blocking if present."
-      },
-      {
-        "dim": "S",
-        "code": "S-18",
-        "label": "Disclosure policy",
-        "desc": "Documented and accessible responsible disclosure process."
-      },
-      {
-        "dim": "S",
-        "code": "S-19",
-        "label": "WAF & perimeter protection",
-        "desc": "Application firewall, DDoS protection, isolation of exposed services."
-      },
-      {
-        "dim": "S",
-        "code": "S-21",
-        "label": "Logs & audit trail",
-        "desc": "Logging of critical accesses, retention ≥90 days, verifiable integrity."
-      },
-      {
-        "dim": "S",
-        "code": "S-22",
-        "label": "Incident management",
-        "desc": "Documented incident response procedure, simulation exercise performed."
-      },
-      {
-        "dim": "S",
-        "code": "S-23",
-        "label": "Backups",
-        "desc": "3-2-1 strategy, documented restore tests, RTO/RPO defined."
-      },
-      {
-        "dim": "S",
-        "code": "S-31",
-        "label": "Sub-processors & third parties",
-        "desc": "List of data sub-processors, signed DPAs, compliance level assessed."
-      },
-      {
-        "dim": "S",
-        "code": "S-32",
-        "label": "Security training",
-        "desc": "Team awareness of phishing and best practices, at least annual."
-      },
-      {
-        "dim": "S",
-        "code": "S-33",
-        "label": "Password policy",
-        "desc": "Password manager enforced, rotation of critical credentials documented."
-      },
-      {
-        "dim": "S",
-        "code": "S-34",
-        "label": "Environment isolation",
-        "desc": "Production isolated from staging and dev, restricted access."
-      },
-      {
-        "dim": "S",
-        "code": "S-37",
-        "label": "Ongoing incident",
-        "desc": "No active unresolved security incident. Blocking if present."
-      },
-      {
-        "dim": "S",
-        "code": "S-38",
-        "label": "Right to erasure",
-        "desc": "Operational personal data deletion process on request."
-      },
-      {
-        "dim": "S",
-        "code": "S-39",
-        "label": "Cross-border transfers",
-        "desc": "Non-EU/CH data transfer framework (standard contractual clauses or equivalent)."
-      },
-      {
-        "dim": "S",
-        "code": "S-40",
-        "label": "Data governance",
-        "desc": "Designated data owner, documented classification and retention policy."
-      },
-      {
-        "dim": "O",
-        "code": "O-11",
-        "label": "Founder dependency",
-        "desc": "Share of revenue carried directly by the founder(s). Level 1 threshold: ≤20%. Blocking if >80% without a mitigation plan."
-      },
-      {
-        "dim": "O",
-        "code": "O-12",
-        "label": "Team depth",
-        "desc": "At least one N-1 able to sign, hire and decide without the founder on at least 2 key functions."
-      },
-      {
-        "dim": "O",
-        "code": "O-13",
-        "label": "Succession plan",
-        "desc": "Formal document identifying key roles, internal or external successors and the transition timeline."
-      },
-      {
-        "dim": "O",
-        "code": "O-14",
-        "label": "Operational documentation",
-        "desc": "Runbooks, SOPs, internal wikis covering critical processes. Documented estimated onboarding time for a new manager."
-      },
-      {
-        "dim": "O",
-        "code": "O-15",
-        "label": "Key talent retention",
-        "desc": "Annual turnover on critical roles (tech, sales, product). Level 1 threshold: ≤10% per year over 2 years."
-      },
-      {
-        "dim": "O",
-        "code": "O-16",
-        "label": "Governance and cap table",
-        "desc": "Clear shareholding structure, aligned shareholders' agreement or articles, documented voting rights, no dispute between partners."
-      },
-      {
-        "dim": "O",
-        "code": "O-17",
-        "label": "Culture and values",
-        "desc": "Formalised company values, documented internal NPS or annual engagement survey."
-      },
-      {
-        "dim": "O",
-        "code": "O-21",
-        "label": "Recruitment process",
-        "desc": "Documented hiring procedure, up-to-date job descriptions, formal onboarding path."
-      },
-      {
-        "dim": "O",
-        "code": "O-22",
-        "label": "Employee and contractor agreements",
-        "desc": "Compliant employment contracts, confidentiality and non-compete clauses for key roles, inventions assigned to the entity."
-      },
-      {
-        "dim": "O",
-        "code": "O-31",
-        "label": "Transfer capacity",
-        "desc": "Documented estimate of the time an acquirer needs to take operational control (target: ≤90 days)."
-      },
-      {
-        "dim": "O",
-        "code": "O-32",
-        "label": "Client relationship held by the team",
-        "desc": "Share of client accounts fully managed by the team (excluding the founder). Post-sale churn risk assessed."
-      }
-    ],
-    "subcodesTypicalLabel": "Typical subcodes",
     "tableColGrade": "Grade",
     "tableColLabel": "Label",
     "tableColScore": "Score",
     "tableColRarity": "Rarity",
-    "subcodesColCode": "No.",
-    "subcodesColLabel": "Label",
-    "subcodesColDef": "Definition",
     "whyTitle": "Why CIFSO 5000 Certification?",
     "whyDesc": "Existing standards certify systems and processes. CIFSO 5000 certifies value and transferability. These are two different, complementary objects, not competitors.",
     "useCasesTitle": "Who is CIFSO 5000 Certification for?",
@@ -3837,747 +2777,6 @@
     "processOutputs": "Outputs",
     "processOutcomes": "Outcomes"
   },
-  "transact": {
-    "meta": {
-      "title": "Value | Measure, certify and realise the value of your organisation",
-      "desc": "Aegryn Value: CIFSO Valuation Index to measure, CIFSO 5000 Certification to certify, then sale, acquisition, fundraising or equity opening under exclusive mandate."
-    },
-    "index": {
-      "eyebrow": "AEGRYN. VALUE",
-      "heroTitle": "Measure, certify,\nrealise the value of your organisation.",
-      "heroDesc": "Valuing a company is not limited to transferring it. It starts with measuring its value, documenting it and certifying it independently. Sale, acquisition, fundraising or opening the capital are then so many ways to realise it.",
-      "ctaCatalog": "Access catalog",
-      "ctaMandate": "Submit a mandate",
-      "segmentsLabel": "FOUR WAYS TO REALISE VALUE",
-      "segmentsTitle": "Whatever your situation,\nthere is an Aegryn mandate.",
-      "segment": {
-        "sell": {
-          "kicker": "Asset sale",
-          "title": "You want to sell",
-          "desc": "Divest your tech asset or company to a qualified acquirer. CIFSO 5000 certification, exclusive mandate, systematic NDA.",
-          "cta": "Sale mandate"
-        },
-        "buy": {
-          "kicker": "Acquisition search",
-          "title": "You want to acquire",
-          "desc": "Mandate Aegryn to identify targets matching your criteria. Access to the closed catalog and our proprietary network.",
-          "cta": "Acquisition mandate"
-        },
-        "raise": {
-          "kicker": "Fundraising",
-          "title": "You are seeking investors",
-          "desc": "Access our network of qualified family offices, funds and corporates. Structured, confidential process under Swiss law.",
-          "cta": "Fundraising mandate"
-        },
-        "equity": {
-          "kicker": "Equity opening",
-          "title": "You are seeking partners",
-          "desc": "Divest minority shares to integrate a strategic, operational or financial partner into your capital.",
-          "cta": "Equity mandate"
-        }
-      },
-      "valueLabel": "THE AEGRYN TRANSACT VALUE",
-      "valueTitle": "A qualified buyer base.\nCertified assets.",
-      "valueDesc": "Aegryn only works with buyers who have completed the KYC procedure and signed the NDA. Every asset is CIFSO 5000-rated before being presented. That is the difference between a transaction that closes and one that fails.",
-      "valueCta": "View certified catalog",
-      "howLabel": "TRANSACT PROCESS IN 4 STEPS",
-      "how": {
-        "step1": {
-          "title": "Exclusive mandate",
-          "desc": "You sign a mandate with Aegryn. Duration, terms and success fee defined contractually."
-        },
-        "step2": {
-          "title": "Qualification & matching",
-          "desc": "Aegryn identifies the ideal counterpart in its qualified network. The asset is presented under NDA only."
-        },
-        "step3": {
-          "title": "Term sheet & negotiation",
-          "desc": "Parties submit structured term sheets. Aegryn supports negotiation and counter-proposals."
-        },
-        "step4": {
-          "title": "Secure closing",
-          "desc": "Institutional escrow, closing under Swiss law, secure transfer. Maximum protection for both parties."
-        }
-      },
-      "ctaStripLabel": "AEGRYN TRANSACT",
-      "ctaStripTitle": "Ready to entrust your transaction to Europe's reference?",
-      "ctaStripMandate": "Submit a mandate",
-      "ctaStripCatalog": "View catalog",
-      "ctaGrade": "CIFSO 5000 Certification",
-      "ctaStripContact": "Contact us",
-      "ctaValuation": "Estimate the value",
-      "introLabel": "A TWO-STEP SEQUENCE",
-      "introTitle": "First measure and certify.\nThen realise.",
-      "tools": {
-        "valuation": {
-          "kicker": "Step 1",
-          "title": "CIFSO Valuation Index",
-          "desc": "Independent estimate of your organisation's value, based on European market multiples and the CIFSO score. A first benchmark in fifteen minutes.",
-          "cta": "Estimate the value"
-        },
-        "certification": {
-          "kicker": "Step 2",
-          "title": "CIFSO 5000 Certification",
-          "desc": "Independent audit across five dimensions: Code, IP, Finance, Security, Organisation. A verifiable grade, valid for twelve months, documenting value and transferability.",
-          "cta": "Discover the certification"
-        }
-      }
-    },
-    "mandate": {
-      "meta": {
-        "title": "Submit a mandate | Aegryn TRANSACT",
-        "desc": "Entrust your transaction to Aegryn: asset sale, acquisition search, fundraising or equity opening. Exclusive mandate, closed catalog, maximum NDA protection."
-      },
-      "eyebrow": "AEGRYN TRANSACT | EXCLUSIVE MANDATE",
-      "heroTitle": "Which mandate would you like\nto entrust us with?",
-      "heroDesc": "All our transactions operate under exclusive mandate, in a closed catalog, with qualified counterparts. The NDA is systematic from the very first contact.",
-      "segmentsLabel": "CHOOSE YOUR SEGMENT",
-      "segment": {
-        "sell": {
-          "kicker": "Sale mandate",
-          "title": "Sell an asset or company",
-          "desc": "You are a founder, holding or studio. You wish to divest your tech asset or company under the best conditions.",
-          "points": [
-            "Mandatory CIFSO 5000 certification before presentation",
-            "Presentation under NDA to qualified buyers only",
-            "Target sale price set by the seller",
-            "Institutional escrow and secure closing",
-            "Success fee only"
-          ],
-          "cta": "Submit a sale mandate"
-        },
-        "buy": {
-          "kicker": "Acquisition mandate",
-          "title": "Search for an acquisition target",
-          "desc": "You are an entrepreneur, corporate or family office. You wish to acquire a tech asset based on precise criteria.",
-          "points": [
-            "Access to CIFSO 5000-certified offmarket catalog",
-            "Matching based on your criteria (sector, ARR, grade, size)",
-            "Mutual NDA before any disclosure",
-            "Due diligence and structuring support",
-            "Transaction fee only"
-          ],
-          "cta": "Submit an acquisition mandate"
-        },
-        "fundraise": {
-          "kicker": "Fundraising",
-          "title": "Find qualified investors",
-          "desc": "You are the founder of a certified tech asset. You are seeking institutional or private investors in our qualified network.",
-          "points": [
-            "Aegryn network: family offices, funds, corporates",
-            "Presentation of your file under exclusive NDA",
-            "Minimum ticket: from CHF 100,000",
-            "Structured process, median timeline 8 weeks",
-            "Success fee at closing"
-          ],
-          "cta": "Submit a fundraising mandate"
-        },
-        "equity_stake": {
-          "kicker": "Equity opening",
-          "title": "Integrate a strategic partner",
-          "desc": "You wish to divest minority shares to integrate an operational, financial or strategic partner into your capital.",
-          "points": [
-            "Operational, financial or industrial partner",
-            "Divestiture of 5% to 49% of capital",
-            "CIFSO 5000 valuation before any negotiation",
-            "Shareholder agreement governed by our legal counsel",
-            "Absolute confidentiality throughout the process"
-          ],
-          "cta": "Submit an equity mandate"
-        }
-      },
-      "processLabel": "THE MANDATE PROCESS",
-      "process": {
-        "step1": {
-          "title": "Initial contact",
-          "desc": "You describe your situation. We assess feasibility and define the type of mandate suited to your objective."
-        },
-        "step2": {
-          "title": "Mandate signing",
-          "desc": "Exclusive mandate signed for a defined duration. Success fee terms defined contractually."
-        },
-        "step3": {
-          "title": "Execution & closing",
-          "desc": "Aegryn identifies the counterpart, manages negotiations and supports closing in a secure framework under Swiss law."
-        }
-      },
-      "ndaLabel": "MAXIMUM PROTECTION",
-      "ndaTitle": "No transaction without NDA. No exceptions.",
-      "ndaDesc": "All our mandates include a reinforced confidentiality agreement. Identities and financial data are never disclosed without prior written consent from both parties.",
-      "ndaCta": "Contact us",
-      "form": {
-        "arrChf": "Current ARR (CHF)",
-        "arrPlaceholder": "E.g.: 400000",
-        "budgetMaxChf": "Maximum budget (CHF)",
-        "budgetMinChf": "Minimum budget (CHF)",
-        "budgetNote": "Indicative valuation for the sale / ticket for the raise",
-        "budgetPlaceholder": "E.g.: 500000",
-        "companyName": "Company / Entity (optional)",
-        "companyPlaceholder": "Holding, startup, firm…",
-        "contactEmail": "Email address",
-        "contactName": "Full name",
-        "currentMrr": "Current MRR (CHF)",
-        "description": "Description & context",
-        "descriptionPlaceholder": "Describe your situation, objectives, constraints and any relevant information for our team.",
-        "equityOfferedPct": "Equity offered (%)",
-        "equityPctPlaceholder": "E.g.: 15",
-        "errorMsg": "Something went wrong. Please try again or contact us directly.",
-        "hasIp": "Registered IP or patent?",
-        "hasIpNo": "No",
-        "hasIpPending": "Pending",
-        "hasIpYes": "Yes",
-        "mrrPlaceholder": "E.g.: 80000",
-        "partnerType": "Type of partner sought",
-        "partnerTypePlaceholder": "Operational, financial, industrial…",
-        "profitability": "Target profitability",
-        "profitabilityPlaceholder": "E.g. positive EBITDA, breakeven, early stage",
-        "revenueChf": "Annual revenue (CHF)",
-        "revenuePlaceholder": "E.g.: 600000",
-        "sectionAsset": "ASSET / COMPANY",
-        "sectionBudget": "BUDGET / VALUATION",
-        "sectionContact": "YOUR DETAILS",
-        "sectionContext": "CONTEXT & OBJECTIVES",
-        "sectionType": "MANDATE TYPE",
-        "stakePctMax": "Max. equity stake transferred (%)",
-        "stakePlaceholder": "E.g.: 30",
-        "submit": "Submit my mandate",
-        "submitting": "Sending…",
-        "successDesc": "Our team will review your request within 48–72 business hours and contact you to initiate the process.",
-        "successTitle": "Mandate received.",
-        "swissLawLabel": "By submitting this form, I acknowledge that Aegryn mandates operate under Swiss law and that every transaction is subject to a systematic NDA.",
-        "targetArrMin": "Minimum target ARR (CHF)",
-        "targetCountries": "Target countries (comma-separated)",
-        "targetCountriesPlaceholder": "E.g. fr, ch, de",
-        "teamPlaceholder": "E.g.: 4",
-        "teamSize": "Team size",
-        "typeLabel": "What type of mandate do you wish to submit?",
-        "typeOptions": {
-          "buy": "Acquisition mandate: Find a target",
-          "equity_stake": "Capital opening: Bring in a strategic partner",
-          "fundraise": "Fundraising: Find qualified investors",
-          "sell": "Sale mandate: Sell an asset or company"
-        },
-        "typePlaceholder": "Select a mandate type",
-        "useOfFunds": "Use of funds",
-        "useOfFundsPlaceholder": "Expansion, R&D, recruitment…",
-        "vertical": "Vertical sector",
-        "verticalOptions": {
-          "deeptech": "Deeptech / AI",
-          "ecommerce": "E-commerce",
-          "edtech": "Edtech",
-          "fintech": "Fintech",
-          "healthtech": "Healthtech",
-          "infra_devtools": "Infra / DevTools",
-          "marketplace": "Marketplace",
-          "media_content": "Media / Content",
-          "other": "Other",
-          "saas_b2b": "SaaS B2B",
-          "saas_b2c": "SaaS B2C"
-        },
-        "verticalOther": "Specify the sector",
-        "verticalOtherPlaceholder": "E.g.: LegalTech, PropTech...",
-        "verticalPlaceholder": "Select a sector",
-        "yoyGrowth": "YoY growth (%)",
-        "yoyPlaceholder": "E.g.: 35"
-      }
-    },
-    "sell": {
-      "meta": {
-        "title": "Sell your asset | Aegryn TRANSACT",
-        "desc": "Exclusive sale mandate. CIFSO 5000 certification, official grade, pre-qualified buyers under NDA. Success fee only."
-      },
-      "hero": {
-        "label": "AEGRYN TRANSACT | SALE MANDATE",
-        "title": "Divest your tech asset\nat the price it deserves.",
-        "desc": "Aegryn certifies your asset CIFSO 5000, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
-        "ctaValuation": "Indicative valuation",
-        "ctaMandat": "Submit mandate"
-      },
-      "label": "AEGRYN TRANSACT | SALE MANDATE",
-      "title": "Divest your tech asset\nat the price it deserves.",
-      "desc": "Aegryn certifies your asset CIFSO 5000, assigns the official grade and presents it under exclusive NDA to pre-qualified institutional acquirers. Success fee only.",
-      "ctaButton": "Submit a sale mandate",
-      "steps": {
-        "label": "SELLER JOURNEY IN 3 STEPS",
-        "title": "A structured process from certification to closing.",
-        "step2Label": "READINESS SCORE",
-        "step2Title": "Assess your asset's maturity before certification.",
-        "s1": {
-          "title": "CIFSO 5000 Certification",
-          "desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
-          "cta": "Get certified"
-        },
-        "s2": {
-          "title": "Presentation under NDA",
-          "desc": "The certified asset enters the closed offmarket catalog. Every acquirer signs an NDA before accessing any confidential document."
-        },
-        "s3": {
-          "title": "Secure closing",
-          "desc": "Institutional escrow, secure transfer, closing under Swiss law. Maximum protection for seller and acquirer.",
-          "cta": "Submit mandate"
-        }
-      },
-      "guarantees": {
-        "g1": {
-          "title": "Absolute confidentiality",
-          "desc": "NDA signed before any disclosure. No public listing."
-        },
-        "g2": {
-          "title": "Qualified buyers only",
-          "desc": "KYC procedure completed. Acquisition capacity verified."
-        },
-        "g3": {
-          "title": "Swiss law protection",
-          "desc": "Institutional escrow. Secure closing under Swiss jurisdiction."
-        },
-        "g4": {
-          "title": "Mandatory CIFSO 5000 certification",
-          "desc": "Official grade assigned before any presentation. Total transparency."
-        },
-        "label": "AEGRYN GUARANTEES",
-        "title": "Maximum protection for every transaction."
-      },
-      "cta": {
-        "title": "Ready to divest your asset?",
-        "desc": "Our team supports you from valuation to closing.",
-        "ctaMandat": "Submit mandate",
-        "ctaAdvisor": "Talk to an advisor"
-      },
-      "step1Title": "CIFSO 5000 Certification",
-      "step1Desc": "Your asset goes through the Aegryn evaluation protocol across 4 dimensions: Code, Infrastructure, Finance, Security. An official AEG grade is assigned before any presentation.",
-      "step2Title": "Presentation under NDA",
-      "step2Desc": "The certified asset enters the closed offmarket catalog. Every acquirer signs an NDA before accessing any confidential document.",
-      "step3Title": "Term sheet & negotiation",
-      "step3Desc": "Qualified acquirers submit structured offers. Aegryn manages negotiation and counter-proposals through to agreement.",
-      "step4Title": "Secure closing",
-      "step4Desc": "Institutional escrow, secure transfer, closing under Swiss law. Maximum protection for seller and acquirer.",
-      "feesTitle": "FEE STRUCTURE",
-      "feesDesc": "No upfront fees. Aegryn is remunerated exclusively on transaction success. CIFSO 5000 certification is invoiced separately based on the grade assigned.",
-      "feesCert": "CIFSO 5000 CERTIFICATION",
-      "feesCertValue": "Invoiced upon delivery of the official grade. Amount based on asset complexity, communicated at mandate signing.",
-      "feesSuccess": "SUCCESS FEE",
-      "feesSuccessValue": "Deducted at closing only. Calculated on the net sale price. Rate communicated at exclusive mandate signing."
-    },
-    "buy": {
-      "label": "AEGRYN TRANSACT | ACQUISITION MANDATE",
-      "title": "Acquire a certified tech asset.\nNo noise. Under NDA.",
-      "desc": "Access the Aegryn offmarket catalog: CIFSO 5000-certified assets, qualified sellers, structured process. Every transaction is governed by exclusive mandate under Swiss law.",
-      "cta": "Submit an acquisition mandate",
-      "qualifTitle": "QUALIFIED BUYER PROFILE",
-      "qualifDesc": "The Aegryn catalog is reserved for buyers who have completed the qualification procedure. This requirement protects seller confidentiality and guarantees the quality of exchanges.",
-      "qualifItems": [
-        "Entrepreneur, corporate, family office or investment fund",
-        "Demonstrated acquisition capacity (CHF 100,000, CHF 2,500,000)",
-        "KYC procedure completed and validated by the Aegryn team",
-        "NDA signed before any access to the catalog or asset sheets",
-        "Confidentiality commitment regarding seller identities"
-      ],
-      "processTitle": "ACQUISITION PROCESS",
-      "processSteps": [
-        {
-          "num": "01",
-          "title": "Qualification",
-          "desc": "You submit your profile and criteria. Aegryn validates your qualification within 48 business hours."
-        },
-        {
-          "num": "02",
-          "title": "Catalog access",
-          "desc": "You access certified asset sheets matching your criteria. NDA signed beforehand."
-        },
-        {
-          "num": "03",
-          "title": "Offer & due diligence",
-          "desc": "You submit a structured offer. Aegryn organises due diligence in a secure framework."
-        },
-        {
-          "num": "04",
-          "title": "Closing",
-          "desc": "Institutional escrow, secure transfer, closing under Swiss law."
-        }
-      ]
-    }
-  },
-  "transaction": {
-    "meta": {
-      "title": "M&A Transactions, Certified tech asset transaction sessions",
-      "desc": "Aegryn sessions: buy or sell certified tech assets. Catalog, next session, results."
-    },
-    "index": {
-      "label": "Aegryn M&A Transactions",
-      "title": "Europe's certified transaction platform\nfor digital tech assets.",
-      "desc": "No open bidding. Private, rigorous sessions reserved for certified sellers and qualified buyers. Every asset is graded. Every transaction is structured.",
-      "ctaCatalog": "View catalog",
-      "ctaSession": "Next session",
-      "ctaSubmit": "Submit an asset",
-      "statsLabel": "By the numbers",
-      "stats": [
-        {
-          "value": "<25%",
-          "label": "Acceptance rate"
-        },
-        {
-          "value": "100%",
-          "label": "Certified assets"
-        },
-        {
-          "value": "Escrow",
-          "label": "Fund security"
-        },
-        {
-          "value": "NDA",
-          "label": "Systematic confidentiality"
-        }
-      ],
-      "howLabel": "How it works",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Submit",
-          "desc": "Submit your asset via the form. Our experts conduct a pre-qualification within 5 business days."
-        },
-        {
-          "num": "02",
-          "title": "Certification",
-          "desc": "A 4-dimension evaluation protocol (Code, Infra, Finance, Strategy) results in an AEG grade."
-        },
-        {
-          "num": "03",
-          "title": "Session",
-          "desc": "The certified asset is presented to qualified buyers in a private session. You set your floor price."
-        },
-        {
-          "num": "04",
-          "title": "Transaction",
-          "desc": "Structured negotiation, NDA, institutional escrow. Secure closing for both parties."
-        }
-      ],
-      "segmentLabel": "OUR SEGMENT",
-      "segmentTitle": "100K€ to 2.5M€.\nWhere tech assets have real value but remain invisible.",
-      "segmentDesc": "Too large for informal resale. Too small for investment banks. Aegryn structures the transactions no one else certifies, with the institutional rigour this segment deserves.",
-      "segmentItems": [
-        "Assets valued between €100,000 and €2,500,000",
-        "B2B SaaS, marketplaces, digital IP, AI protocols",
-        "Sellers: founders, studios, operational holdings",
-        "Buyers: entrepreneurs, corporates, family offices"
-      ],
-      "marketLabel": "The market in 2026",
-      "marketTitle": "A bifurcating market.",
-      "marketDesc": "Certified tech assets and uncertified ones no longer play in the same league. The multiple gap has widened by 2.5x in 3 years and keeps growing.",
-      "marketCta": "Estimate my asset's value"
-    },
-    "catalog": {
-      "label": "Aegryn | Third-party assets",
-      "title": "Certified assets\navailable now.",
-      "desc": "Assets submitted by independent third-party sellers who have passed the Aegryn certification protocol. These assets are not part of the group's proprietary portfolio.",
-      "thirdPartyNote": "These assets are offered by independent sellers. Aegryn acts as a certified intermediary and transaction organiser, not as the seller.",
-      "filterAll": "All grades",
-      "filterStar": "AEG ★",
-      "filterAAA": "AAA",
-      "filterAA": "AA",
-      "filterA": "A",
-      "filterB": "B",
-      "emptyTitle": "Catalog in preparation.",
-      "emptyDesc": "The next session is being assembled. Sign up to be notified first.",
-      "notifyLabel": "Notify me",
-      "notifyCta": "Notify me first",
-      "assetGrade": "Grade",
-      "assetCategory": "Category",
-      "assetRevenue": "Indicative ARR",
-      "assetAsk": "Seller price",
-      "viewAsset": "View listing",
-      "confidential": "Confidential, NDA required",
-      "notifyEmail": "Your email",
-      "notifyEmailPlaceholder": "founder@example.com",
-      "notifyType": "You are",
-      "notifyTypeIndividual": "Entrepreneur",
-      "notifyTypeCompany": "Company",
-      "notifyTypeFund": "Fund / Family Office",
-      "notifyCapacity": "Acquisition capacity",
-      "notifySectors": "Sectors of interest",
-      "notifyLoading": "Sending...",
-      "notifyError": "An error occurred. Please try again.",
-      "notifySuccessTitle": "Registration confirmed",
-      "notifySuccessDesc": "You will be contacted on a priority basis as soon as the catalogue opens to members, before any public listing.",
-      "notifySuccessCta": "Submit my asset for certification",
-      "noResults": "No asset matches the selected filters",
-      "resetFilters": "Show all assets",
-      "portfolioLink": "Aegryn Portfolio",
-      "conditionalAccess": "Conditional access",
-      "qualifiedOnly": "Catalogue reserved for qualified acquirers",
-      "accessDesc": "Company names and full asset files are accessible only after account creation, signing the NDA, and accepting the Aegryn T&Cs.",
-      "step1": "Create an acquirer account",
-      "step2": "Sign the Aegryn NDA",
-      "step3": "Accept the T&Cs",
-      "loginCta": "Log in",
-      "registerCta": "Create an account",
-      "sellerCta": "Would you like to list your asset in the next catalogue?",
-      "arrAll": "All",
-      "arrBelow100k": "< 100K",
-      "arr100kTo1m": "100K – 1M",
-      "arr1mTo5m": "1M – 5M",
-      "arrAbove5m": "> 5M",
-      "assetCount": "{count} asset{count, plural, one {} other {s}}, current session",
-      "assetsHidden": "{n} hidden{n, plural, one {} other {}} by filters",
-      "resetFiltersShort": "Reset",
-      "viewFullDossier": "View full dossier",
-      "kycPending": "Your KYC verification is in progress. You will be notified once validated.",
-      "assetsAvailable": "certified assets available in the catalogue",
-      "requestQualifiedAccess": "Access the certified catalogue",
-      "notifySuccessCtaAcquirer": "Browse the catalogue",
-      "intro": "The Aegryn off-market catalogue brings together certified digital assets, prepared for transaction and accessible to qualified acquirers. Each dossier has been audited, valued and structured according to the Aegryn protocol before access.",
-      "upcomingAssets": "Upcoming assets",
-      "seller": {
-        "label": "SELL AN ASSET",
-        "title": "Looking to sell your tech asset?",
-        "desc": "Aegryn supports founders and executives in structuring and transferring their digital assets. Audit, valuation, data room, acquirer identification, signing. A discreet and rigorous process.",
-        "cta": "Submit for certification",
-        "ctaHref": "/grade/submit"
-      },
-      "notifySectorOther": "Other",
-      "notifySectorOtherPlaceholder": "Specify your sector…",
-      "buyer": {
-        "label": "BECOME A BUYER",
-        "title": "Looking to acquire a tech asset?",
-        "desc": "Aegryn identifies and presents certified assets matching your acquisition profile : sector, ticket, structure. A confidential process, reserved for qualified buyers.",
-        "cta": "Learn more about the process",
-        "ctaHref": "/transact/how-to-buy"
-      },
-      "upcomingLocked": "Access reserved for qualified members",
-      "upcomingLockedDesc": "This section is accessible after your account has been validated by the Aegryn team.",
-      "upcomingClientLink": "Access the private catalogue →",
-      "thirdPartyNote2": "Each asset presented has obtained the Aegryn CIFSO grade: a 5-dimension assessment protocol (Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent). Only assets reaching Grade A or above are admitted to the transaction process."
-    },
-    "session": {
-      "label": "Next session",
-      "title": "Next Aegryn session",
-      "date": "Date",
-      "dateTbd": "Date to be confirmed",
-      "format": "Format",
-      "formatValue": "Private session, invitation only",
-      "location": "Location",
-      "locationValue": "Switzerland (+ secure remote access)",
-      "assetsLabel": "Assets in session",
-      "assetsTbd": "Catalog published 30 days before the session",
-      "registerTitle": "Request access",
-      "registerDesc": "Session access is reserved for qualified buyers. Complete the form to submit your application.",
-      "registerCta": "Request buyer access",
-      "sellerTitle": "Looking to sell?",
-      "sellerDesc": "Submit your asset now. Certification takes 2 to 4 weeks.",
-      "sellerCta": "Submit my asset",
-      "pastSessions": "Past sessions",
-      "noSessions": "No past sessions yet.",
-      "sessionCardKicker": "Online sale",
-      "sessionCardStatus": "Upcoming",
-      "sessionCardCategory": "Legal-Tech",
-      "sessionCardTitle": "AI Contract Intelligence, Lot No.001",
-      "sessionCardLocation": "Online, Switzerland",
-      "sessionCardDateLabel": "Catalogue opens",
-      "sessionCardDateValue": "Exact date announced 30 days prior",
-      "sessionCardCtaPreview": "Lot preview",
-      "sessionCardLocked": "Access reserved for verified members",
-      "sessionCardLockedCta": "Create an account",
-      "sessionCardCtaCatalog": "Catalogue",
-      "sessionCardCtaNotify": "Get notified",
-      "upcomingSessions": "Upcoming session"
-    },
-    "results": {
-      "label": "Session results",
-      "title": "Full transparency\non closed transactions.",
-      "desc": "Every closed session is followed by an anonymised public report. Amounts, grades, negotiation durations, the market deserves clarity.",
-      "noResults": "No results available yet. Results from the first session will be published here.",
-      "sessionLabel": "Session",
-      "assetsTransacted": "Assets transacted",
-      "totalVolume": "Total volume",
-      "avgMultiple": "Median multiple"
-    },
-    "sell": {
-      "meta": {
-        "title": "Sell your asset | Aegryn",
-        "desc": "Aegryn seller journey: indicative valuation, readiness score, mandate submission. CIFSO 5000 certification, absolute confidentiality, Swiss institutional escrow."
-      },
-      "hero": {
-        "label": "Sell your asset",
-        "title": "Your asset deserves\na transaction at its real value.",
-        "desc": "Aegryn certifies, grades and puts pre-qualified institutional buyers in competition, in a confidential, structured framework, under Swiss law.",
-        "ctaValuation": "Estimate the value",
-        "ctaMandat": "Submit a mandate"
-      },
-      "steps": {
-        "label": "Seller journey",
-        "title": "Three steps, from valuation to mandate.",
-        "step2Label": "Step 02",
-        "step2Title": "Is your asset ready for an M&A process?",
-        "s1": {
-          "title": "Indicative valuation",
-          "desc": "Get a valuation range in 4 steps (finance, code, IP, security) and an estimated Aegryn grade. Free, confidential, no commitment.",
-          "cta": "Estimate the value →"
-        },
-        "s2": {
-          "title": "Readiness Score",
-          "desc": "Assess whether your file is ready for an M&A process: data room, contracts, operational independence, IP, technical debt. 6 questions, instant result."
-        },
-        "s3": {
-          "title": "Mandate submission",
-          "desc": "Submit your asset to the Aegryn team. Independent CIFSO 5000 certification, official grade assignment, entry into an M&A process under a 60-day exclusive mandate.",
-          "cta": "Submit your mandate →"
-        }
-      },
-      "guarantees": {
-        "label": "Aegryn commitments",
-        "title": "What you won't get elsewhere.",
-        "g1": {
-          "title": "Absolute confidentiality",
-          "desc": "Your asset's identity is never revealed before the buyer signs the NDA and the M&A process opens."
-        },
-        "g2": {
-          "title": "100% pre-qualified buyers",
-          "desc": "Every buyer is verified: financial capacity, sector, ticket size. Zero tyre-kickers, zero direct competitors without prior agreement."
-        },
-        "g3": {
-          "title": "Swiss bank escrow",
-          "desc": "10% of the price at HoT via institutional escrow. No asset transfer before funds are released. Swiss jurisdiction."
-        },
-        "g4": {
-          "title": "Independent CIFSO 5000 certification",
-          "desc": "Grade ★/AAA/AA/A/B assigned by an independent auditor, finance, code, IP, security. Enforceable and documented."
-        }
-      },
-      "cta": {
-        "title": "Ready to submit your asset?",
-        "desc": "Mandate submission is free. Our team gets back to you within 48h.",
-        "ctaMandat": "Submit a mandate",
-        "ctaAdvisor": "Talk to an advisor"
-      },
-      "readiness": {
-        "toolLabel": "Aegryn Tool",
-        "toolTitle": "Readiness Score",
-        "restart": "Restart",
-        "intro": "Assess in 2 minutes whether your asset is ready for submission to the Aegryn M&A process.",
-        "answerYes": "Yes",
-        "answerPartial": "Partial",
-        "answerNo": "No",
-        "progress": "{answered} / {total} questions",
-        "calculateBtn": "Calculate my score",
-        "scoreLabel": "Score: {score} / {max} points",
-        "weakPoints": "Areas to strengthen",
-        "levels": {
-          "ready": {
-            "label": "Asset ready for submission",
-            "message": "Your asset has the characteristics of a file eligible for the Aegryn M&A process. We recommend submitting your mandate for review by our team.",
-            "cta": "Submit your mandate →"
-          },
-          "almost": {
-            "label": "A few adjustments recommended",
-            "message": "Your asset is close to the required level. Fix the weak points identified above, then submit your file. Our team can assist you with preparation.",
-            "cta": "Consult an advisor →"
-          },
-          "not_ready": {
-            "label": "Preparation required before submission",
-            "message": "Several structural prerequisites are missing. We recommend an exit planning preparation programme before submitting your asset. Contact our advisory team.",
-            "cta": "Talk to an advisor →"
-          }
-        },
-        "questions": {
-          "dataroom": {
-            "label": "Data room available",
-            "hint": "Financial statements Y-2/Y-1/Y (auditable), cap table, key contracts, historical KPIs."
-          },
-          "contracts": {
-            "label": "Formalised client contracts",
-            "hint": "Signed contracts with assignment/transfer conditions, no blocking clause."
-          },
-          "founder_dependency": {
-            "label": "Operational independence from founder",
-            "hint": "The business can operate 6 months without the current founder."
-          },
-          "growth_documented": {
-            "label": "Growth documented over 12 months",
-            "hint": "Monthly MRR/ARR, churn, NRR tracked and exportable."
-          },
-          "ip_clean": {
-            "label": "Fully transferable IP",
-            "hint": "Registered trademark, proprietary code copyright, no blocking GPL component."
-          },
-          "tech_debt": {
-            "label": "Technical debt known and documented",
-            "hint": "Formalised tech debt backlog, no abandoned critical dependencies."
-          }
-        }
-      },
-      "ctaButton": "Submit the mandate"
-    },
-    "buy": {
-      "label": "Acquire via Aegryn",
-      "title": "Verified assets.\nSecured transactions.",
-      "desc": "Every asset you see in our catalog is certified, graded and documented. You negotiate with a seller who has accepted our protocol. You buy with escrow.",
-      "qualifTitle": "Buyer profile",
-      "qualifDesc": "Aegryn sessions are reserved for serious buyers: PE/VC funds, family offices, acquisition entrepreneurs, holdings. Complete the qualification file.",
-      "qualifItems": [
-        "Documented financial capacity",
-        "Letter of intent or acquisition track record",
-        "NDA signed with Aegryn",
-        "Qualification interview (30 min)"
-      ],
-      "processTitle": "The buyer process",
-      "processSteps": [
-        {
-          "num": "01",
-          "title": "Qualification",
-          "desc": "Qualification file + interview. Access to the full catalog once validated."
-        },
-        {
-          "num": "02",
-          "title": "Due diligence",
-          "desc": "Access to the asset data room under NDA. Aegryn certification report included."
-        },
-        {
-          "num": "03",
-          "title": "Offer",
-          "desc": "Submit an offer via our secure platform. The seller has 72 hours to respond."
-        },
-        {
-          "num": "04",
-          "title": "Closing",
-          "desc": "Agreement of parties → institutional escrow → rights transfer. Aegryn remains guarantor of the process."
-        }
-      ],
-      "cta": "Request buyer access"
-    }
-  },
-  "gradeStrip": {
-    "label": "Certification CIFSO 5000",
-    "title": "An independent quality label for organisations\nthat want to estimate, acquire or transmit their assets.",
-    "desc": "The CIFSO 5000 protocol certifies five dimensions: Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent. Reproducible, traceable, definitive.",
-    "quote": "An asset without an independent certification is a value without proof. An Aegryn Grade AAA asset is a documented and traceable certainty.",
-    "cta": "Discover the methodology",
-    "grades": [
-      {
-        "grade": "★",
-        "label": "Exceptional",
-        "desc": "Absolute excellence across all 5 CIFSO dimensions. Less than 5% of certified assets."
-      },
-      {
-        "grade": "AAA",
-        "label": "Excellent",
-        "desc": "High quality across all dimensions. A few minor optimisation points."
-      },
-      {
-        "grade": "AA",
-        "label": "Solid",
-        "desc": "Strong CIFSO fundamentals, some optimizations recommended. Confirmed valuation with improvement plan."
-      },
-      {
-        "grade": "A",
-        "label": "Developing",
-        "desc": "Potential identified across multiple dimensions. Documented improvement areas, value plan proposed."
-      },
-      {
-        "grade": "B",
-        "label": "Emerging",
-        "desc": "Organization in structuring phase. CIFSO remediation plan required before any transaction."
-      }
-    ]
-  },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
     "magTitle": "Tech. Money. Deals. People. Life.",
@@ -4587,13 +2786,9 @@
     "label": "Our analysis of the Swiss and European market, from scale-ups to mid-sized companies.",
     "title": "The market, by those who operate it.",
     "article1Title": "The 5 critical steps to prepare an organisation for a fundraise or sale",
-    "article1Cat": "Strategy & Transmission",
     "article2Title": "Small & mid-cap: what companies really expect from an advisory firm",
-    "article2Cat": "Market & Insights",
     "article3Title": "After the funding: why 60% of funded SMEs fail to meet their growth targets",
-    "article3Cat": "Financing & Execution",
-    "cta": "View all articles",
-    "readMore": "Read article"
+    "cta": "View all articles"
   },
   "alliances": {
     "meta": {
@@ -5642,7 +3837,6 @@
       "title": "Not an agency. One price, one scope,\nno surprises.",
       "agencyCol": "What agencies do.",
       "aegrynCol": "What Aegryn does.",
-      "processCol": "How we get there",
       "agencyItems": [
         "Indicative quote, real invoice differs",
         "Time & materials with no ceiling",
@@ -5812,8 +4006,6 @@
       "orgWeb": "Website (optional)",
       "ipFiled": "Intellectual property filed?",
       "ipYes": "Yes",
-      "ipNo": "No",
-      "ipPending": "Pending",
       "objective": "Primary certification objective",
       "objectivePlaceholder": "Choose",
       "objectiveOptions": {
@@ -6091,12 +4283,10 @@
       },
       "preRevenueTitle": "Pre-revenue asset",
       "preRevenueDesc": "Without ARR, valuation is based on your combined IP and Code score. The indicative range reflects the raw asset value.",
-      "preRevenueRange": "Indicative range",
       "preRevenueNote": "For a pre-revenue asset, the Aegryn C grade is the natural step. It values the IP and code before any fundraise or transfer.",
       "ngNote": "Your current score is below the gradability threshold. A free Assessment Day will help identify the 3 priority actions.",
       "disclaimer": "This tool is a public light version for illustrative purposes only. The estimate is generated by an algorithm from data you declare without independent verification. It does not constitute an official Aegryn Grade and cannot replace an independent Aegryn certification. Aegryn certification (CIFSO 5000 protocol, audit by certified Aegryn analysts) is mandatory for any certified transaction via the Aegryn Transact platform.",
       "ctaGrade": "Start my official certification",
-      "ctaAssessment": "Book a free Assessment Day",
       "emailTitle": "Receive my detailed report by email.",
       "emailDesc": "Detailed score by dimension, full range, and the 3 priority actions to improve your grade.",
       "emailPlaceholder": "Professional email",
@@ -6565,131 +4755,6 @@
       "sampleBuilding": "Sample building up"
     }
   },
-  "transactionSubmit": {
-    "meta": {
-      "title": "Submit an Asset | Aegryn M&A Switzerland",
-      "desc": "Submit your tech asset to an Aegryn M&A Switzerland session. Swiss law. Open internationally."
-    },
-    "hero": {
-      "label": "Aegryn M&A Switzerland",
-      "title": "Submit an asset\nfor sale.",
-      "desc": "Every sale is exclusive to Aegryn M&A Switzerland. Swiss law applies. Sellers from around the world are welcome."
-    },
-    "swissNote": "Swiss law governs every transaction, regardless of the seller's or asset's origin.",
-    "steps": [
-      {
-        "num": "01",
-        "title": "Submission",
-        "desc": "You fill out this form."
-      },
-      {
-        "num": "02",
-        "title": "Certification",
-        "desc": "Our team certifies your asset (Aegryn Grade)."
-      },
-      {
-        "num": "03",
-        "title": "Session",
-        "desc": "Your asset becomes accessible to qualified buyers registered for the session."
-      },
-      {
-        "num": "04",
-        "title": "Transaction",
-        "desc": "Supervised negotiation, escrow, transfer of rights."
-      }
-    ],
-    "form": {
-      "sectionAsset": "Your asset",
-      "assetName": "Asset name",
-      "assetType": "Asset type",
-      "assetTypePlaceholder": "Select",
-      "assetTypeOptions": {
-        "saas_b2b": "SaaS B2B",
-        "saas_b2c": "SaaS B2C",
-        "marketplace": "Marketplace",
-        "mobile": "Mobile application",
-        "protocol": "Protocol / API",
-        "ip": "IP rights only",
-        "other": "Other"
-      },
-      "assetUrl": "Website / application URL",
-      "techStack": "Tech stack (optional)",
-      "techStackPlaceholder": "e.g. Next.js, Supabase, Python",
-      "devStage": "Development stage",
-      "devStagePlaceholder": "Select",
-      "devStageOptions": {
-        "prod_revenue": "In production with revenue",
-        "prod_no_revenue": "In production without revenue",
-        "beta": "Beta / Pre-production",
-        "prototype": "Prototype / MVP",
-        "ip_only": "IP only"
-      },
-      "sectionFinancial": "Financial data",
-      "arr": "Annualised ARR / MRR (€ or CHF)",
-      "arrPlaceholder": "e.g. 150000",
-      "askPrice": "Desired sale price",
-      "askPricePlaceholder": "e.g. 1200000",
-      "askPriceCurrency": "Currency",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
-      "ipFiled": "Intellectual property filed",
-      "ipYes": "Yes",
-      "ipNo": "No",
-      "ipPending": "Pending",
-      "sectionTransaction": "Transaction context",
-      "motivation": "Motivation",
-      "motivationPlaceholder": "Select",
-      "motivationOptions": {
-        "full_exit": "Full exit",
-        "partial_exit": "Partial exit",
-        "liquidity": "Shareholder liquidity",
-        "other": "Other"
-      },
-      "timeline": "Desired timeline",
-      "timelinePlaceholder": "Select",
-      "timelineOptions": {
-        "urgent": "Urgent, less than 3 months",
-        "standard": "Standard : 3 to 6 months",
-        "long": "Long term, more than 6 months"
-      },
-      "targetSession": "Target session",
-      "targetSessionPlaceholder": "Select",
-      "targetSessionHelper": "Your selection determines the quarter and year of eligibility for the next sales catalogue.",
-      "targetSessionOptions": {
-        "q3_2026": "Q3 2026",
-        "q4_2026": "Q4 2026",
-        "q1_2027": "Q1 2027",
-        "q2_2027": "Q2 2027 (Apr. - Jun. 2027)",
-        "flexible": "Flexible"
-      },
-      "sectionContact": "Your contact details",
-      "fullName": "Full name",
-      "email": "Professional email",
-      "country": "Country of residence",
-      "countryPlaceholder": "e.g. France, Switzerland, Germany",
-      "company": "Company / Entity (optional)",
-      "message": "Additional message (optional)",
-      "swissLawLabel": "I acknowledge that Swiss law governs every transaction conducted via Aegryn M&A Switzerland.",
-      "submit": "Submit my dossier",
-      "submitting": "Sending…",
-      "successTitle": "Dossier received.",
-      "successDesc": "Our team will get back to you within 48–72 business hours to begin the certification process.",
-      "errorMsg": "An error occurred. Please try again or contact us directly."
-    }
-  },
-  "transactionLot": {
-    "accessDeniedTitle": "Restricted access",
-    "accessDeniedDesc": "This dossier is only accessible to qualified buyers with a valid admin authorisation and an active session access.",
-    "accessExpiredTitle": "Access expired",
-    "accessExpiredDesc": "Your access to this dossier has expired. Access is granted for 30 days from the session opening date.",
-    "requestAccessCta": "Submit a buyer dossier",
-    "requestAccessDesc": "Submit a buyer dossier to be qualified and receive access to session dossiers.",
-    "backToCatalog": "Back to catalogue",
-    "confidentialLabel": "Confidential dossier",
-    "teaserAccessLabel": "Access dossier",
-    "ndaLabel": "NDA required, Controlled access",
-    "lotRef": "Lot"
-  },
   "legalNav": {
     "termsUse": "Terms of Use",
     "termsCgv": "Terms of Service",
@@ -6757,38 +4822,21 @@
     },
     "label": "Privacy Policy",
     "updated": "Last updated: October 2026",
-    "langSelector": "Available in",
     "intro": "Like most businesses operating in the financial and transaction sector, Aegryn collects and processes data relating to its clients, partners and others who may be interested in its services. This notice explains the type of data we process, why we process it and how this may affect you.",
     "s1Title": "Who we are",
     "s1": "The data controller is Aegryn. When you use our services (certification, transaction, advisory, catalogue), the data controller is Aegryn.",
     "s2Title": "What data do we collect and how?",
     "s2DirectTitle": "Data you provide directly",
-    "s2Direct": "Name, professional contact details, entity information, financial information (investment capacity, proof of funds), identity documents, entity documents, beneficial owner (UBO) information. Collected during registration, asset submission, Alliance application, Assessment Day booking, use of the valuation calculator or any communication.",
     "s2AutoTitle": "Automatically collected data",
-    "s2Auto": "IP address, browser type, operating system, pages visited, visit duration, via cookies and similar technologies. See our Cookie Policy.",
     "s2ThirdTitle": "Data from third parties",
     "s2Third": "Public registers, identity verification and fraud prevention services, sanctions and politically exposed persons (PEP) databases.",
     "s3Title": "Why do we process your data?",
-    "s3TablePurpose": "Purpose",
-    "s3TableData": "Data concerned",
     "s3TableBasis": "Legal basis",
-    "s3Row1Purpose": "Providing requested services",
-    "s3Row1Data": "Identity, contact, financial data, documents",
     "s3Row1Basis": "Contract performance",
-    "s3Row2Purpose": "Legal obligations (AML, AMLD6, KYC)",
-    "s3Row2Data": "Identity, UBO, source of funds, PEP",
     "s3Row2Basis": "Legal obligation",
-    "s3Row3Purpose": "Anti-money laundering and fraud prevention",
-    "s3Row3Data": "Identity, transactions, documents",
     "s3Row3Basis": "Legal obligation / Legitimate interests",
-    "s3Row4Purpose": "Site security and fraud prevention",
-    "s3Row4Data": "Navigation data, IP",
     "s3Row4Basis": "Legitimate interests",
-    "s3Row5Purpose": "Service communications",
-    "s3Row5Data": "Email, preferences",
     "s3Row5Basis": "Legitimate interests / Consent",
-    "s3Row6Purpose": "Historical transaction catalogue",
-    "s3Row6Data": "Anonymised data",
     "s3Row6Basis": "Legitimate interests / Public interest",
     "s4Title": "Who can access your data?",
     "s4": "Within Aegryn: team members with a legitimate operational need. Certification partners (subject to strict confidentiality obligations). Technical service providers: hosting, email, payment via Stripe. Authorities: when legally required. Aegryn never sells your data to third parties.",
@@ -6798,16 +4846,12 @@
     "s6": "We retain your data as long as necessary for service delivery, legal and regulatory compliance (AML obligations: minimum 10 years after end of commercial relationship), and protection against claims. Anonymised historical catalogue data is retained indefinitely.",
     "s7Title": "Your rights",
     "s7": "Under Swiss LPD and GDPR: rights of access, rectification, erasure, objection, restriction and portability.",
-    "s7Contact": "To exercise these rights: legal@boha-group.com",
     "s8Title": "Data security",
     "s8": "Technical and organisational measures: encryption of sensitive data at rest and in transit, role-based access control (Supabase RLS), data room access logging, 2FA for admin access. In case of breach, notification of authorities and affected persons in accordance with Swiss LPD and GDPR.",
     "s9Title": "Cookies",
     "s9": "We use analytical cookies (Cloudflare Web Analytics, no personally identifiable data). No advertising cookies. You may decline analytical cookies via our consent banner.",
     "s10Title": "Complaints",
     "s10": "You have the right to lodge a complaint with the competent supervisory authority.",
-    "authorityCH": "Switzerland: FDPIC, www.edoeb.admin.ch",
-    "authorityFR": "France: CNIL, www.cnil.fr",
-    "authorityEU": "EU: EDPB, www.edpb.europa.eu",
     "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
@@ -7171,11 +5215,6 @@
     ],
     "filterLifecycle": "Lifecycle"
   },
-  "blogPage": {
-    "label": "Blog",
-    "title": "Insights & perspectives.",
-    "desc": "Our thinking on asset certification, tech transactions and Aegryn standards. First articles coming soon."
-  },
   "clientArea": {
     "login": {
       "title": "Client Area",
@@ -7270,7 +5309,6 @@
       "errorNetwork": "Unable to reach the server. Check your connection.",
       "rolePartner": "Join the partner network",
       "rolePartnerDesc": "Business introducers, expert co-certifiers, access the Aegryn partner space.",
-      "roleInternal": "Internal access",
       "roleInternalDesc": "Aegryn team account : section access is granted by an administrator."
     },
     "account": {
@@ -7334,8 +5372,6 @@
       "ndaPartnerTitle": "Aegryn Partner NDA",
       "ndaCatalogTitle": "Aegryn Catalog NDA",
       "ndaSigned": "Signed",
-      "ndaVersion": "Version",
-      "ndaView": "View →",
       "logout": "Log out",
       "gdprTitle": "Personal data management",
       "exportTitle": "Export my data",
@@ -7346,16 +5382,8 @@
       "deleteAccountTitle": "Delete my account",
       "deleteAccountDesc": "GDPR Art. 17 / nLPD Art. 30. Permanent deletion of your account and personal data. Certification files already engaged are kept for legal purposes, without link to your identity.",
       "activateTitle": "Activate an additional profile",
-      "activateSubtitle": "Each activated profile is accessible from the switcher in your client area.",
-      "activateErrorGeneric": "Unable to activate this profile",
-      "activateButton": "Activate",
-      "activating": "Activating…",
-      "activateFooterNote": "Identity KYC (ID document + proof of address) is common to all profiles, if already submitted, it remains valid. Additional documents may be required depending on the activated profile.",
-      "profileBuyerLabel": "Buyer",
       "profileBuyerDesc": "Access the certified catalog, sign NDAs and track your offers.",
-      "profileSellerLabel": "Seller",
       "profileSellerDesc": "Submit your asset, track certification and receive qualified offers.",
-      "profilePartnerLabel": "Partner",
       "profilePartnerDesc": "Business introducer or co-certifier, access the Aegryn partner space.",
       "kycNoteStandard": "KYC: ID document + proof of address",
       "kycNotePartner": "KYC: ID document + proof of address + business registration + professional insurance",
@@ -7396,7 +5424,6 @@
   },
   "clientSpace": {
     "spaceNameSeller": "Seller Space",
-    "spaceNameBuyer": "Buyer Space",
     "spaceNamePartner": "Partner Space",
     "logout": "Log out",
     "navGroupOverview": "Overview",
@@ -7412,48 +5439,27 @@
     "navNotifications": "Notifications",
     "navMyAccount": "My account",
     "navSettings": "Settings",
-    "navCatalog": "Catalogue",
     "navOffers": "My offers",
     "navCommissions": "Commissions due",
     "navCosigning": "Missions",
     "navIntroductions": "Introductions",
     "navMandates": "Client mandates",
     "navPartnerCommissions": "Commissions",
-    "navPartnerSubscription": "Subscription",
-    "navExpertProfile": "Expert profile",
-    "navBuyerNda": "My NDA",
-    "navSellerNda": "My NDA",
-    "navPartnerNda": "Signed NDA",
-    "filterLabel": "Filters",
     "filterAll": "All",
-    "filterGrade": "Certification",
-    "filterType": "Type",
     "viewDetails": "View details",
     "noAssets": "No assets available with these criteria.",
-    "backToCatalog": "Back to catalog",
-    "viewMyOffer": "View my offer",
-    "submitEi": "Submit an EI",
-    "expressInterest": "Express interest",
-    "assetDefault": "Asset",
     "publishedOn": "Published on {date}",
     "metricsTitle": "Financial indicators",
     "grossMargin": "Gross margin",
     "trackRecordMonths": "{n} months",
-    "certifiedSummary": "Aegryn certified summary",
-    "existingBidLabel": "You have already submitted an offer",
-    "submitInterestLabel": "Submit an Expression of Interest",
-    "offerReviewTime": "Your EI will be reviewed by the Aegryn team within 48 working hours.",
     "offerAmountStatus": "Offer of {amount}, status: {status}",
     "confidentialityTitle": "Confidentiality",
-    "confidentialityText": "The information presented in this file is strictly reserved for qualified buyers who have signed an NDA. Any disclosure is prohibited.",
-    "catalogSubtitle": "Certified and published assets, access restricted to qualified buyers.",
     "navAnnuaire": "Directory"
   },
   "comingSoon": {
     "label": "Coming soon",
     "desc": "This feature is currently being built. It will be available very soon.",
-    "descSection": "The \"{section}\" section is currently being built. It will be available very soon.",
-    "backHome": "← Back to home"
+    "descSection": "The \"{section}\" section is currently being built. It will be available very soon."
   },
   "sitemap": {
     "metaTitle": "Sitemap | Aegryn",
@@ -7469,7 +5475,6 @@
     "assets": "Proprietary assets",
     "servicesBuild": "Asset Engineering",
     "advisory": "Our eight disciplines",
-    "acquisition": "Acquisition Support",
     "alliances": "Alliances & Partners",
     "experts": "Expert Network",
     "valuation": "Valuation",
@@ -7518,200 +5523,6 @@
     "metierProgram": "Project and Programme Management",
     "metierMA": "M&A, Transactions and PMI",
     "culture": "Culture and values"
-  },
-  "clientTransaction": {
-    "eyebrow": "Buyer space",
-    "title": "My Aegryn files",
-    "subtitle": "Access links to complete dossiers are never sent by email. They appear here only after your application has been validated.",
-    "empty": "No access request in progress.",
-    "viewCatalog": "View the catalogue",
-    "statusApproved": "Approved",
-    "statusRejected": "Rejected",
-    "statusPending": "Pending",
-    "lotPrefix": "Lot",
-    "accessActive": "Active access · {days} day remaining",
-    "accessActivePlural": "Active access · {days} days remaining",
-    "accessConfidential": "This link is strictly personal and confidential.",
-    "openDossier": "Open the dossier",
-    "accessExpired": "The access period has expired or the M&A process is closed.",
-    "pendingReview": "Your request is under review by the Aegryn team (within 48 business hours). The link will appear here if approved.",
-    "rejected": "Your request was not selected for this session.",
-    "requestedOn": "Request submitted on",
-    "upcomingTitle": "Spaces under construction",
-    "sectionSeller": "Seller space",
-    "sectionPartner": "Partner space",
-    "disclaimer": "Aegryn · Geneva · Switzerland, Strictly confidential access"
-  },
-  "waitlist": {
-    "header": {
-      "label": "Waiting list, M&A Transactions",
-      "title": "Join the priority access list"
-    },
-    "step1": {
-      "profileLabel": "I am *",
-      "sourceLabel": "How did you hear about Aegryn?",
-      "next": "Next",
-      "profiles": {
-        "buyer": "Buyer",
-        "seller": "Seller",
-        "partner": "Partner",
-        "undecided": "Undecided"
-      }
-    },
-    "step2": {
-      "buyer": {
-        "categoryLabel": "Buyer profile *",
-        "ticketLabel": "Target acquisition ticket *",
-        "timelineLabel": "Deployment horizon *",
-        "intentLabel": "Acquisition intent",
-        "sectorsLabel": "Sectors of interest (5 max)",
-        "financingLabel": "Secured financing?",
-        "yes": "Yes",
-        "noInProgress": "No / in progress",
-        "categories": {
-          "individual_hnw": "High Net Worth Individual (HNW)",
-          "family_office": "Family office",
-          "search_fund": "Search fund / ETA",
-          "pe_vc_fund": "PE / VC fund",
-          "corporate_strategic": "Corporate / strategic acquirer",
-          "holding": "Patrimonial holding"
-        },
-        "tickets": {
-          "<500k": "< €500K",
-          "500k-2m": "€500K – €2M",
-          "2m-5m": "€2M – €5M",
-          "5m-20m": "€5M – €20M",
-          "20m+": "> €20M"
-        },
-        "timelines": {
-          "immediate": "Immediate (< 3 months)",
-          "3-6m": "3 – 6 months",
-          "6-12m": "6 – 12 months",
-          "opportunistic": "Opportunistic / no deadline"
-        },
-        "intents": {
-          "single_asset": "Targeted single acquisition",
-          "portfolio_buildup": "Portfolio build-up",
-          "exploratory": "Market exploration"
-        }
-      },
-      "seller": {
-        "stageLabel": "Asset stage *",
-        "arrLabel": "Estimated annual ARR *",
-        "reasonLabel": "Reason for sale *",
-        "timelineLabel": "Desired timeline",
-        "stages": {
-          "idea": "Idea / pre-launch",
-          "mvp": "MVP / beta",
-          "revenue_generating": "Revenue-generating",
-          "scaling": "Scaling",
-          "mature": "Mature / established"
-        },
-        "arrRanges": {
-          "<100k": "< €100K",
-          "100k-500k": "€100K – €500K",
-          "500k-2m": "€500K – €2M",
-          "2m-10m": "€2M – €10M",
-          "10m+": "> €10M"
-        },
-        "reasons": {
-          "full_exit": "Full exit",
-          "partial": "Partial exit / fundraising",
-          "succession": "Transfer / succession",
-          "burnout": "Founder fatigue / burnout",
-          "strategic_pivot": "Strategic pivot"
-        },
-        "timelines": {
-          "immediate": "Immediate (< 3 months)",
-          "3-6m": "3 – 6 months",
-          "6-12m": "6 – 12 months",
-          "flexible": "Flexible / depending on offer"
-        }
-      },
-      "partner": {
-        "categoryLabel": "Structure type *",
-        "dealflowLabel": "Estimated introduction volume",
-        "categories": {
-          "law_firm": "Law firm",
-          "accounting": "Accounting firm",
-          "ma_boutique": "M&A boutique / advisory",
-          "vc_pe": "VC / PE",
-          "accelerator": "Accelerator / incubator",
-          "other": "Other"
-        },
-        "dealflows": {
-          "<5_per_year": "< 5 introductions / year",
-          "5-10_per_year": "5 – 10 / year",
-          "10-20_per_year": "10 – 20 / year",
-          "20+_per_year": "> 20 / year"
-        }
-      },
-      "undecidedNote": "No problem, just fill in your contact details and our team will get in touch with you.",
-      "back": "Back",
-      "next": "Next"
-    },
-    "step3": {
-      "firstNameLabel": "First name",
-      "lastNameLabel": "Last name *",
-      "emailLabel": "Email *",
-      "firstNamePlaceholder": "John",
-      "lastNamePlaceholder": "Smith",
-      "emailPlaceholder": "you@example.com",
-      "gdprConsent": "I agree that my data will be processed by Aegryn as part of my request for access to M&A transactions, in compliance with GDPR / nFADP. *",
-      "marketingConsent": "I agree to receive Aegryn communications (new sessions, available assets).",
-      "back": "Back",
-      "submit": "Submit",
-      "submitting": "Sending..."
-    },
-    "sources": {
-      "linkedin": "LinkedIn",
-      "organic": "Search / word of mouth",
-      "referral": "Referral",
-      "event": "Event / conference",
-      "partner_intro": "Partner introduction",
-      "direct": "Direct Aegryn contact"
-    },
-    "sectors": [
-      "B2B SaaS",
-      "AI / ML",
-      "LegalTech",
-      "FinTech",
-      "EdTech",
-      "HealthTech",
-      "E-commerce",
-      "Marketplaces",
-      "Cybersecurity",
-      "PropTech",
-      "Logistics",
-      "Other"
-    ],
-    "placeholder": "Select",
-    "done": {
-      "title": "Request registered",
-      "desc": "Our team will review your profile and contact you within 48h to validate your access to the next Aegryn M&A process.",
-      "note": "No access without named invitation."
-    },
-    "errors": {
-      "server": "An error occurred.",
-      "network": "Network error. Please try again."
-    }
-  },
-  "transactionSheet": {
-    "executiveSummaryKicker": "Executive summary · Quick read",
-    "executiveSummaryTitle": "Asset synthesis",
-    "disclosureKicker": "Disclosure and distribution conditions",
-    "s1": "Presentation notice",
-    "s2": "Provenance and history",
-    "s3": "Asset rarity",
-    "s4": "Asset condition",
-    "s5": "Functional advancement level",
-    "s6": "Addressed customer segments",
-    "s7": "Growth potential, international expansion",
-    "s8": "Competitive positioning",
-    "s9": "Commercial traction and partnerships",
-    "s10": "Market maturity stage",
-    "s11": "Identified risks and reserves",
-    "s12": "Acquisition thesis"
   },
   "neediuDpn": {
     "meta": {
@@ -7964,65 +5775,6 @@
       "s18": "You may contact us via the contact form available on our platform."
     }
   },
-  "nda": {
-    "pageTitle": "Confidentiality Agreement | Aegryn Buyer Space",
-    "stepLabel": "Required step",
-    "stepTitle": "Confidentiality Agreement | Aegryn",
-    "introText": "Before accessing the Aegryn catalogue, you must read and accept the confidentiality agreement below. This agreement is mandatory and constitutes a contractual confidentiality commitment to Aegryn and the sellers. Your signature is timestamped and logged for legal purposes.",
-    "versionLabel": "NDA | Version",
-    "mainTitle": "Buyer Confidentiality Conditions",
-    "mainSubtitle": "Aegryn",
-    "partiesLabel": "Between the undersigned:",
-    "partiesAegryn": "Aegryn, a company registered in Switzerland, hereinafter referred to as « Aegryn »,",
-    "partiesAnd": "And",
-    "partiesBuyer": "The user identified by the information provided at registration on the Aegryn platform (name, surname or company name, professional email), hereinafter referred to as « the Buyer »,",
-    "a1Title": "Purpose",
-    "a1": "This non-disclosure agreement (\"NDA\") governs the Buyer's access to the Aegryn catalogue, asset profiles, grade reports, and any data room document made available in the context of Aegryn's certification and transaction process. Acceptance of this NDA is a mandatory prerequisite for any access to the catalogue, regardless of access level (anonymised preview or full post-qualification file).",
-    "a2Title": "Definition of Confidential Information",
-    "a2Intro": "The following are considered confidential information:",
-    "a2i1": "Any information relating to the identity of the seller or the transferring entity, prior to an explicit introduction decision by Aegryn",
-    "a2i2": "Any financial, technical, commercial or legal data contained in an asset profile or data room document",
-    "a2i3": "The content of Aegryn grade reports, including scores, sub-codes and reservations",
-    "a2i4": "Any information relating to other buyers, their offers, or the status of a negotiation",
-    "a2i5": "The very existence of an ongoing disposal process on a given asset",
-    "a3Title": "Buyer's Obligations",
-    "a3s1Title": "3.1 Strict confidentiality",
-    "a3s1": "Not to disclose any confidential information to any third party, including advisors, employees or partners, unless they are themselves bound by an equivalent confidentiality obligation strictly necessary for the evaluation of the opportunity.",
-    "a3s2Title": "3.2 Limited use",
-    "a3s2": "To use confidential information solely for the purpose of evaluating an acquisition opportunity through Aegryn | never for competitive, commercial, recruitment, or technical reproduction purposes.",
-    "a3s3Title": "3.3 Non-reproduction",
-    "a3s3": "Not to download, copy, capture, photograph, or reproduce by any means any document consulted in the Aegryn data room, including via screenshot, screen photography, or any other method of circumventing the technical protection measures in place.",
-    "a3s4Title": "3.4 Acknowledgement of technical limitations",
-    "a3s4": "The Buyer acknowledges that documents consulted are protected by technical deterrence measures (download blocking, screenshot attempt detection, personalised watermark). The Buyer acknowledges that these measures constitute reasonable deterrence whose effectiveness cannot be guaranteed 100% against external circumvention methods, and agrees that the confidentiality obligation under this NDA applies regardless of the effectiveness of these technical measures.",
-    "a3s5Title": "3.5 Non-circumvention",
-    "a3s5": "Not to directly contact, or attempt to contact, the seller or any party related to an asset consulted via Aegryn, outside of the Aegryn process, for a period of 24 months from the first consultation.",
-    "a3s6Title": "3.6 Non-disclosure of the process",
-    "a3s6": "Not to disclose to any third party the very existence of an ongoing disposal process on a consulted asset, including its sector, approximate size, or any data enabling its identification.",
-    "a4Title": "Traceability and Consent to Logging",
-    "a4Intro": "The Buyer acknowledges and accepts that:",
-    "a4i1": "Each document consultation is timestamped and logged (identity, date, time, IP address)",
-    "a4i2": "Any attempt to capture screenshots or circumvent technical protections is detected and logged",
-    "a4i3": "These logs may be used as evidence in the event of a breach of this NDA",
-    "a5Title": "Duration",
-    "a5": "The confidentiality obligations under this NDA remain in force for a period of 5 years from the first consultation of a document via the Aegryn platform, including after the closure, abandonment, or rejection of an acquisition opportunity, and including after deletion of the Buyer's account.",
-    "a5Years": "5 years",
-    "a6Title": "Sanctions for Breach",
-    "a6Intro": "In the event of a breach of this NDA, the Buyer may be subject to:",
-    "a6i1": "Immediate and permanent suspension of access to the Aegryn platform",
-    "a6i2": "Compensation for damages suffered by Aegryn and/or the seller concerned",
-    "a6i3": "Any legal action that Aegryn or the seller deems appropriate",
-    "a6i4": "A minimum lump-sum indemnity of CHF 50,000 (excl. VAT) per proven breach, regardless of actual damages suffered",
-    "a7Title": "Governing Law and Jurisdiction",
-    "a7": "This NDA is governed by Swiss law. Any dispute arising under this NDA shall be submitted to the exclusive jurisdiction of the courts of Aegryn's registered canton.",
-    "a8Title": "Acceptance",
-    "a8": "By checking the boxes below and clicking \"Accept and access the catalogue\", the Buyer acknowledges having read, understood and accepted without reservation all provisions of this NDA.",
-    "acceptSectionLabel": "Article 8, Acceptance",
-    "check1": "I have read and accept the confidentiality conditions above in their entirety.",
-    "check2": "I acknowledge that any attempt to circumvent the technical protection measures will be logged and may constitute evidence in the event of a breach of this agreement.",
-    "signingBtn": "Signing…",
-    "acceptBtn": "Accept and access the catalogue",
-    "versionFooter": "Timestamped and logged signature (IP, user agent)"
-  },
   "experts": {
     "meta": {
       "title": "Expert Network | Aegryn",
@@ -8072,7 +5824,6 @@
       "accounting": "Accounting",
       "hr": "HR & Employment Law",
       "insurance": "Insurance",
-      "real_estate": "Real Estate",
       "finance": "Finance",
       "financeDesc": "Financing, LBO, structuring, senior debt",
       "architecture": "Technical Architecture & Engineering",
@@ -8083,23 +5834,17 @@
       "data_engineeringDesc": "Data modelling, data warehouse, data lake, governance, portability of proprietary datasets.",
       "design_ux": "Design & User Experience",
       "design_uxDesc": "UX/UI, design system, product identity, user journeys, usability testing.",
-      "product_management": "Product Management & Roadmap",
       "product_managementDesc": "Product definition, backlog prioritisation, activation and retention metrics, roadmap.",
       "rgpd": "GDPR / LPD Compliance",
       "rgpdDesc": "Processing register, vendor DPAs, privacy policy, transfers outside the EU, Swiss LPD compliance.",
-      "accessibility": "Digital Accessibility",
       "accessibilityDesc": "WCAG 2.1 AA audit, European Accessibility Act compliance. Critical for HealthTech and EdTech.",
-      "eu_ai_act": "EU AI Act Compliance & AI Ethics",
       "eu_ai_actDesc": "AI system classification, regulatory documentation, LLM red-teaming, algorithmic bias audit.",
-      "ip_law": "Intellectual Property & Digital Law",
       "ip_lawDesc": "IP chain of title, open-source licences, assignment of founder rights, trademark protection.",
       "esg": "ESG / CSR",
       "esgDesc": "CSR strategy, extra-financial reporting, ESG due diligence, impact.",
       "vendor_readiness": "Transfer preparation",
       "vendor_readinessDesc": "Vendor file audit, data room, contracts, GDPR, technical debt. Reduces certification lead time.",
-      "dd_hr": "HR & Employment Due Diligence",
       "dd_hrDesc": "Key contracts, BSPCE, employment liabilities, freelancer classification, non-compete clauses.",
-      "dd_regulatory": "Sectoral Regulatory Due Diligence",
       "dd_regulatoryDesc": "FinTech (DORA/FINMA), HealthTech (HDS), AI-native (EU AI Act), LegalTech, EdTech.",
       "tax_corporate": "Tax & Corporate Structuring",
       "tax_corporateDesc": "Exit optimisation, holding, SPV, Luxembourg, Switzerland, France. Contribution-exchange.",
@@ -8107,9 +5852,7 @@
       "financingDesc": "Bridge financing, co-investment, mezzanine debt. Specific to your deal profile.",
       "earnout": "Earn-out Design & KPI Framework",
       "earnoutDesc": "Earnout mechanism design, metric definition, contractual seller protections.",
-      "post_acquisition": "Post-acquisition Integration",
       "post_acquisitionDesc": "30/60/100-day plan: tech stack, HR, client communications, supplier contract migration.",
-      "exec_hr": "Executive HR Support",
       "exec_hrDesc": "Post-sale management contract, non-compete, leadership transition, golden parachute.",
       "other": "Other"
     },
@@ -8142,8 +5885,7 @@
     "card": {
       "contact": "Contact",
       "verifiedBadge": "Aegryn Verified",
-      "rateFrom": "From",
-      "rateUnit": "€/h"
+      "rateFrom": "From"
     },
     "contactModal": {
       "label": "Contact request",
@@ -8170,7 +5912,6 @@
       "fieldPrenom": "First name",
       "fieldNom": "Last name",
       "fieldEmail": "Professional email",
-      "fieldProfession": "Main specialty",
       "fieldCategory": "Category",
       "fieldDomain": "Main area of expertise",
       "fieldOrg": "Firm / Organisation",
@@ -8270,17 +6011,14 @@
   "client": {
     "common": {
       "viewAll": "View all",
-      "noData": "No data.",
       "loading": "Loading…",
       "back": "Back",
       "submit": "Submit",
       "save": "Save",
-      "cancel": "Cancel",
       "delete": "Delete",
       "edit": "Edit",
       "download": "Download",
       "upload": "Upload a file",
-      "confirm": "Confirm",
       "close": "Close",
       "search": "Search",
       "filter": "Filter",
@@ -8307,7 +6045,6 @@
       "partner": "Partner Space",
       "expert": "Expert Space",
       "dashboard": "Dashboard",
-      "catalogue": "Catalogue",
       "offres": "My bids",
       "transactions": "Transactions",
       "kyc": "KYC Verification",
@@ -8319,7 +6056,6 @@
       "commissions": "Commissions",
       "introductions": "Introductions",
       "subscription": "Subscription",
-      "expertProfile": "Expert profile",
       "nda": "NDA",
       "logout": "Log out"
     },
@@ -8337,7 +6073,6 @@
       "recentNotifs": "Recent notifications",
       "noOffres": "No bids submitted yet.",
       "noTransactions": "No ongoing transactions.",
-      "exploreCatalog": "Browse the catalogue",
       "kycPending": "{count} KYC document pending or to correct",
       "kycPendingPlural": "{count} KYC documents pending or to correct",
       "bidStatus": {
@@ -8383,40 +6118,14 @@
         "exploreCatalog": "Browse the catalogue",
         "areaLabel": "Buyer Space"
       },
-      "offreDetail": {
-        "meta": "Bid detail, Buyer Space Aegryn",
-        "title": "Bid detail",
-        "back": "← Back to bids",
-        "areaLabel": "Buyer Space"
-      },
       "newOffre": {
         "meta": "New bid, Buyer Space Aegryn",
         "title": "Submit a bid",
         "areaLabel": "Buyer Space"
       },
-      "transactionDetail": {
-        "meta": "Transaction, Buyer Space Aegryn",
-        "back": "← Back to transactions",
-        "areaLabel": "Buyer Space"
-      },
-      "catalogue": {
-        "meta": "Catalogue, Buyer Space Aegryn",
-        "title": "Buyer catalogue",
-        "subtitle": "Assets available for acquisition.",
-        "noItems": "No assets available at the moment.",
-        "viewDossier": "View dossier",
-        "areaLabel": "Buyer Space"
-      },
       "kpiPublished": "Available assets",
-      "opportunitiesLabel": "Transaction opportunities",
       "opportunitiesTitle": "Aegryn will contact you for each qualified opportunity.",
-      "opportunitiesDesc": "Transaction opportunities are shared confidentially and individually, after a signed NDA and selection of your profile. No public access to published assets. Each qualification is handled directly by our teams.",
-      "opportunitiesNotifCta": "My alerts",
-      "opportunitiesNdaCta": "My NDA",
-      "processStep1": "Profile qualified by Aegryn",
-      "processStep2": "NDA signed",
-      "processStep3": "Opportunity shared confidentially",
-      "processStep4": "Data room granted after selection"
+      "opportunitiesDesc": "Transaction opportunities are shared confidentially and individually, after a signed NDA and selection of your profile. No public access to published assets. Each qualification is handled directly by our teams."
     },
     "seller": {
       "meta": "Dashboard, Seller Space Aegryn",
@@ -8425,7 +6134,6 @@
       "fallbackName": "Seller",
       "kpiActifs": "Assets submitted",
       "kpiCertified": "Certified",
-      "kpiTransactionReady": "M&A Ready",
       "kpiTransactions": "Transactions",
       "kpiKycOk": "KYC validated",
       "kpiKycIncomplete": "KYC incomplete",
@@ -8488,12 +6196,6 @@
         "back": "← Back to assets",
         "areaLabel": "Seller Space"
       },
-      "ndaView": {
-        "meta": "NDA | Seller Space Aegryn",
-        "title": "Non-Disclosure Agreement",
-        "subtitle": "NDA signed as part of your sale.",
-        "areaLabel": "Seller Space"
-      },
       "transactions": {
         "meta": "Transactions, Seller Space Aegryn",
         "title": "My transactions",
@@ -8511,13 +6213,9 @@
       "fallbackName": "Partner",
       "kpiCertifications": "Active co-signatures",
       "kpiIntroductions": "Introductions",
-      "subscriptionActive": "Active subscription",
-      "subscriptionInactive": "Inactive subscription",
       "subscriptionDesc": "Expert profile, CHF 89/month",
       "activeCertifications": "Ongoing co-signatures",
       "recentIntroductions": "Recent introductions",
-      "introductionTypeAsset": "Asset referral",
-      "introductionTypeBuyer": "Buyer referral",
       "certStatus": {
         "assigned": "Assigned",
         "in_review": "In review",
@@ -8543,21 +6241,11 @@
         "noMandates": "No mandates yet.",
         "areaLabel": "Partner Space"
       },
-      "mandateDetail": {
-        "meta": "Mandate detail, Partner Space Aegryn",
-        "back": "← Back to mandates",
-        "areaLabel": "Partner Space"
-      },
       "certifications": {
         "meta": "Co-signatures, Partner Space Aegryn",
         "title": "My co-signatures",
         "subtitle": "Ongoing CIFSO 5000 certification missions.",
         "noCertifications": "No co-signatures assigned yet.",
-        "areaLabel": "Partner Space"
-      },
-      "certDetail": {
-        "meta": "Co-signature detail, Partner Space Aegryn",
-        "back": "← Back to co-signatures",
         "areaLabel": "Partner Space"
       },
       "commissions": {
@@ -8572,12 +6260,6 @@
         "title": "My introductions",
         "subtitle": "Assets and buyers introduced.",
         "noIntroductions": "No introductions yet.",
-        "areaLabel": "Partner Space"
-      },
-      "expertProfile": {
-        "meta": "Expert profile, Partner Space Aegryn",
-        "title": "My expert profile",
-        "subtitle": "Profile visible on the Aegryn expert network.",
         "areaLabel": "Partner Space"
       },
       "subscription": {
@@ -8657,13 +6339,10 @@
     "hub": {
       "title": "AEGRYN Magazine",
       "desc": "Deals, multiples, portraits and lifestyle. Quarterly.",
-      "reportLabel": "Annual Report",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
-      "notifyLabel": "Receive each edition",
       "notifyDesc": "Sign up to be notified when each new quarterly edition is published.",
       "newsletterLabel": "Articles & Insights",
       "newsletterDesc": "Receive our articles on the tech M&A market, one per week.",
-      "subscribeLabel": "Receive each edition",
       "subscribeDesc": "Sign up to be notified when each new quarterly edition is published.",
       "charteFreqLabel": "Frequency",
       "charteFreqVal": "Quarterly",
@@ -8699,23 +6378,14 @@
       "contactEditCta": "media@boha-group.com →",
       "subscribeSuccess": "You are on the list. First issue in your inbox within 48 hours.",
       "subscribeError": "Something went wrong. Please try again or write to us at contact@boha-group.com",
-      "cifsLabel": "CIFSO 5000 Certification",
-      "cifsBody": "Fewer than 25% of submitted assets reach Full Grade status. Find out where your asset stands before a buyer does.",
-      "cifsCta": "Start certification →",
-      "footerLegal": "Aegryn, Saint-Sulpice, Canton de Vaud, Switzerland, CHE-402.011.821",
-      "footerCopyright": "© Aegryn 2027. Permanent digital access",
       "navTableOfContents": "Table of contents",
       "navDownloadPdf": "Download PDF",
-      "cardReadIssue": "Read issue",
-      "cardExploreOnline": "Explore online",
-      "cardSpecialEdition": "Special Edition",
       "readOnline": "Explore online",
       "downloadPdf": "Browse the PDF",
       "comingSoon": "Coming soon",
       "subscribe": "Subscribe",
       "manage": "Manage subscription",
       "successMsg": "Subscription activated successfully.",
-      "canceledMsg": "Payment cancelled.",
       "comingSoonBadge": "Coming soon"
     },
     "notify": {
@@ -8735,7 +6405,6 @@
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Rare by selection. Discreet by principle.",
-      "edition2026": "First edition · January 2027",
       "readOnline": "Explore online",
       "downloadPdf": "Browse the PDF",
       "notify": "Get notified",
@@ -8745,12 +6414,9 @@
       "ctaTitle": "You built something real.",
       "ctaSub": "We certify it. We value it.",
       "ctaLine": "AEGRYN | Rare by selection. Discreet by principle.",
-      "scrollDown": "Scroll",
       "source": "Source",
       "estimatedGrade": "Estimated AEGRYN Grade",
-      "whatMadeItWork": "What made it work",
       "disclaimer": "All private deal analyses are based on public information and AEGRYN estimates. They do not constitute investment advice.",
-      "indexNote": "The AEGRYN Index will deepen with each edition as our certification data accumulates.",
       "meta": {
         "title": "Aegryn Magazine | Deals, multiples, portraits and lifestyle",
         "description": "The quarterly magazine for European tech founders and the acquirers watching them. Decoded transactions, market data, entrepreneur portraits and lifestyle."
@@ -8761,12 +6427,8 @@
         "title": "Print Edition | Aegryn Magazine",
         "description": "Express your interest in the print edition of AEGRYN Magazine, reserved for Aegryn clients."
       },
-      "printBadge": "Print edition",
       "title": "Interest list: Print edition",
       "desc": "The print edition of the Aegryn magazine is an initiative reserved for registered clients. This form allows you to express your areas of interest to be added to the wish list. We will contact you when production begins.",
-      "digitalNote": "The digital version is accessible online, like our articles and news.",
-      "digitalNoteCta": "Read the report online",
-      "namePlaceholder": "Your name",
       "emailPlaceholder": "Your email address",
       "companyPlaceholder": "Your company (optional)",
       "interestsLabel": "Your areas of interest",
@@ -8797,7 +6459,6 @@
       "error": "An error occurred. Please try again.",
       "clientNote": "Reserved for registered Aegryn clients. The print edition is not available or printable via the web. It will be produced physically if demand justifies it.",
       "disclaimer": "The digital version remains accessible online. The print edition, if produced, will be shipped only to registered clients on the wish list.",
-      "backToMagazine": "Back to Magazine",
       "firstNamePlaceholder": "First name",
       "lastNamePlaceholder": "Last name",
       "addressPlaceholder": "Street number and name",
@@ -8836,7 +6497,6 @@
       "label": "They talk about us",
       "title": "The press covers our assets.",
       "readArticle": "Read the article",
-      "videoAvailable": "Video available on request",
       "subblink": {
         "title": "Village de la Justice proposes auditing all your contracts",
         "excerpt": "Village Justice offers to audit all your contracts to obtain a legal risk score using subblink, a solution powered by artificial intelligence calibrated for Swiss and European law.",
@@ -8854,14 +6514,7 @@
       "subtitle": "Documents required for your Aegryn sale process.",
       "complete": "KYC file complete",
       "inProgress": "KYC file in progress",
-      "completeHint": "Complete your KYC file to finalise your sale.",
-      "pendingUpload": "Document under review.",
-      "validatedWarn": "This document is validated. A new upload replaces the current version."
-    },
-    "ndaView": {
-      "meta": "NDA | Aegryn Seller Space",
-      "title": "Non-disclosure agreement",
-      "subtitle": "NDA signed as part of your sale."
+      "pendingUpload": "Document under review."
     },
     "notifications": {
       "meta": "Notifications | Aegryn Seller Space",
@@ -9293,11 +6946,9 @@
       "title": "Talent Management",
       "tabHiring": "Recruitment mandates",
       "tabCandidates": "Applications",
-      "statusNew": "New",
       "statusInProgress": "In progress",
       "statusClosed": "Closed",
       "filterAll": "All",
-      "filterNew": "New",
       "filterInProgress": "In progress",
       "filterClosed": "Closed",
       "company": "Company",
@@ -9305,231 +6956,16 @@
       "role": "Position",
       "urgency": "Urgency",
       "status": "Status",
-      "createdAt": "Date",
       "actions": "Actions",
       "viewDetails": "View details",
       "updateStatus": "Update status",
       "addNote": "Add note",
       "candidate": "Candidate",
       "availability": "Availability",
-      "downloadCV": "Download CV",
-      "viewLinkedIn": "View LinkedIn",
-      "noHiring": "No recruitment mandates.",
-      "noCandidates": "No applications.",
-      "noteLabel": "Admin note",
-      "notePlaceholder": "Add an internal note...",
-      "saveNote": "Save note"
+      "noCandidates": "No applications."
     }
   },
   "industries": {
-    "desc": "We operate across all industries where valuation and transformation create value.",
-    "footerNote": "All industries",
-    "list": [
-      {
-        "name": "Aerospace & Defence",
-        "desc": "Embedded systems, mission AI, ITAR/EAR compliance, strategic subcontractor management."
-      },
-      {
-        "name": "Agriculture & Agri-food",
-        "desc": "Supply chain traceability, yield forecasting AI, sanitary and ESG compliance."
-      },
-      {
-        "name": "Automotive & Mobility",
-        "desc": "Digital transformation, embedded AI, Tier-1/2 supplier management, logistics and MaaS."
-      },
-      {
-        "name": "Banking & Financial Services",
-        "desc": "Regulatory compliance (DORA, Basel IV), credit risk AI, back-office automation."
-      },
-      {
-        "name": "Chemicals & Advanced Materials",
-        "desc": "R&D data, REACH compliance, supplier contract management, intellectual property."
-      },
-      {
-        "name": "Construction & Infrastructure",
-        "desc": "BIM, predictive maintenance AI, complex contracts, multi-tier subcontractor management."
-      },
-      {
-        "name": "Education & EdTech",
-        "desc": "Adaptive learning platforms, educational GDPR compliance, personalisation AI."
-      },
-      {
-        "name": "Energy & Utilities",
-        "desc": "Energy transition, smart grid, EU ETS compliance, asset management AI and demand forecasting."
-      },
-      {
-        "name": "FinTech & Payments",
-        "desc": "PSD2, open banking, AML/KYC compliance, real-time payment architectures, tokenisation."
-      },
-      {
-        "name": "GovTech & Public Sector",
-        "desc": "Institutional digital transformation, data sovereignty, NIS2 and DORA compliance."
-      },
-      {
-        "name": "HealthTech & MedTech",
-        "desc": "Diagnostic AI, MDR/IVDR compliance, health data GDPR, HL7/FHIR interoperability."
-      },
-      {
-        "name": "Hospitality & Tourism",
-        "desc": "Revenue management AI, unified CRM, customer data compliance, experience digitalisation."
-      },
-      {
-        "name": "Industry & Manufacturing",
-        "desc": "Industry 4.0, predictive maintenance, MES/ERP integration, ISO compliance and quality management."
-      },
-      {
-        "name": "Logistics & Supply Chain",
-        "desc": "Real-time visibility, flow optimisation AI, customs compliance, 3PL/4PL contracts."
-      },
-      {
-        "name": "Luxury & Premium Retail",
-        "desc": "Origin traceability, blockchain anti-counterfeiting, omnichannel CX, first-party data."
-      },
-      {
-        "name": "Media & Entertainment",
-        "desc": "Digital rights, recommendation AI, content monetisation, DSA/AVMS compliance."
-      },
-      {
-        "name": "PropTech & Real Estate",
-        "desc": "AI valuation, automated due diligence, document management, real estate AML compliance."
-      },
-      {
-        "name": "Retail & E-commerce",
-        "desc": "Pricing and stock forecasting AI, automated CX, DSA compliance, first-party data."
-      },
-      {
-        "name": "Healthcare & Pharmaceuticals",
-        "desc": "Clinical trial data, pharmacovigilance, diagnostic AI, HDS and EU regulatory compliance."
-      },
-      {
-        "name": "Technology & SaaS",
-        "desc": "Scalability, multi-tenant architecture, SOC2/ISO27001 compliance, product AI and PLG."
-      },
-      {
-        "name": "Telecommunications",
-        "desc": "NIS2 compliance, network AI, service orchestration, BSS/OSS transformation."
-      },
-      {
-        "name": "Transport & Freight",
-        "desc": "Route and capacity AI optimisation, multimodal contracts, emissions compliance, fleet visibility."
-      }
-    ],
-    "title": "Industries covered",
-    "clusters": [
-      {
-        "cluster": "Finance & Capital",
-        "items": [
-          {
-            "name": "Banking & Financial Services",
-            "desc": "Regulatory compliance (DORA, Basel IV), credit risk AI, back-office automation."
-          },
-          {
-            "name": "FinTech & Payments",
-            "desc": "PSD2, open banking, AML/KYC compliance, real-time payment architectures, tokenisation."
-          },
-          {
-            "name": "PropTech & Real Estate",
-            "desc": "Asset valuation, tenant scoring AI, data compliance, transaction platform."
-          }
-        ]
-      },
-      {
-        "cluster": "Health & Life Sciences",
-        "items": [
-          {
-            "name": "Healthcare & Pharmaceuticals",
-            "desc": "GDPR health data, HL7/FHIR interoperability, EMA compliance, secure supply chain."
-          },
-          {
-            "name": "HealthTech & MedTech",
-            "desc": "Diagnostic AI, MDR/IVDR compliance, GDPR health data, HL7/FHIR interoperability."
-          }
-        ]
-      },
-      {
-        "cluster": "Industry, Energy & Infrastructure",
-        "items": [
-          {
-            "name": "Aerospace & Defence",
-            "desc": "Embedded systems, mission AI, ITAR/EAR compliance, strategic subcontractor management."
-          },
-          {
-            "name": "Agriculture & Food",
-            "desc": "Supply chain traceability, yield forecasting AI, sanitary and ESG compliance."
-          },
-          {
-            "name": "Automotive & Mobility",
-            "desc": "Digital transformation, embedded AI, Tier-1/2 supplier management, MaaS."
-          },
-          {
-            "name": "Chemistry & Advanced Materials",
-            "desc": "R&D data, REACH compliance, supplier contract management, IP."
-          },
-          {
-            "name": "Construction & Infrastructure",
-            "desc": "BIM, predictive maintenance AI, complex contracts, multi-level subcontractor management."
-          },
-          {
-            "name": "Energy & Utilities",
-            "desc": "Energy transition, smart grid, EU ETS compliance, asset management AI."
-          },
-          {
-            "name": "Industry & Manufacturing",
-            "desc": "Industry 4.0, predictive maintenance, MES/ERP integration, ISO compliance."
-          },
-          {
-            "name": "Logistics & Supply Chain",
-            "desc": "Real-time visibility, flow optimisation AI, customs compliance, 3PL/4PL contracts."
-          },
-          {
-            "name": "Transport & Freight",
-            "desc": "Fleet optimisation, transport regulatory compliance, digital management platforms."
-          }
-        ]
-      },
-      {
-        "cluster": "Commerce, Services & Customer Experience",
-        "items": [
-          {
-            "name": "Hospitality & Tourism",
-            "desc": "AI revenue management, unified CRM, customer data compliance, experience digitalisation."
-          },
-          {
-            "name": "Luxury & Premium Retail",
-            "desc": "Blockchain product authenticity, omnichannel experience, data clienteling, ESG compliance."
-          },
-          {
-            "name": "Media & Entertainment",
-            "desc": "Content monetisation, AI recommendation, digital rights, DSA compliance."
-          },
-          {
-            "name": "Retail & E-commerce",
-            "desc": "Omnichannel experience, AI personalisation, last-mile logistics, data compliance."
-          },
-          {
-            "name": "Telecommunications",
-            "desc": "Legacy modernisation, 5G edge computing, BEREC compliance, technology dependency management."
-          }
-        ]
-      },
-      {
-        "cluster": "Tech, Innovation & Public Sector",
-        "items": [
-          {
-            "name": "Education & EdTech",
-            "desc": "Adaptive learning platforms, educational GDPR compliance, personalisation AI."
-          },
-          {
-            "name": "GovTech & Public Sector",
-            "desc": "Digital transformation of institutions, data sovereignty, NIS2 and DORA compliance."
-          },
-          {
-            "name": "Technology & SaaS",
-            "desc": "Multi-tenant architecture, scalability, technical debt, EU AI Act compliance, exit readiness."
-          }
-        ]
-      }
-    ],
     "page": {
       "meta": {
         "title": "Our Industries, Aegryn",
@@ -9538,58 +6974,6 @@
       "label": "Our Industries",
       "title": "Sector expertise for every\norganisational challenge.",
       "desc": "Our eight disciplines, from strategy to project management, apply differently depending on each sector's realities. Here is how we approach them.",
-      "servicesTitle": "Our services deployed",
-      "services": [
-        {
-          "name": "Strategy Advisory",
-          "desc": "Positioning, business model, governance and long-term planning for organisations built to last."
-        },
-        {
-          "name": "Technology Advisory",
-          "desc": "System architecture, digital transformation, data sovereignty and tech regulatory compliance."
-        },
-        {
-          "name": "M&A Advisory",
-          "desc": "Disposal preparation, buyer due diligence, transaction structuring and closing support."
-        },
-        {
-          "name": "Bespoke Software",
-          "desc": "Digital product development, business integrations and proprietary platforms adapted to your sector constraints."
-        },
-        {
-          "name": "CIFSO 5000 Certification",
-          "desc": "Independent assessment across 5 dimensions (Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent) to document and defend value."
-        }
-      ],
-      "cifsoTitle": "CIFSO 5000 relevance by sector",
-      "cifsoDesc": "Each CIFSO 5000 dimension resonates differently depending on the sector. The certification adapts to the operational and regulatory realities of each industry.",
-      "cifso": [
-        {
-          "code": "C",
-          "dim": "Code & Architecture",
-          "desc": "Quality of the technology base, proprietary code or licensed systems: architecture, dependencies, reversibility. Critical for any organisation whose value rests on its IS."
-        },
-        {
-          "code": "I",
-          "dim": "IP & Rights",
-          "desc": "Rights over code, trademarks, patents, proprietary data, contracts. The chain of title an acquirer verifies first."
-        },
-        {
-          "code": "F",
-          "dim": "Finance & Metrics",
-          "desc": "Financial data quality, revenue predictability, margins and SaaS metrics. Defensible in due diligence and with lenders."
-        },
-        {
-          "code": "S",
-          "dim": "Security & Sovereignty",
-          "desc": "Cyber posture, regulatory compliance (NIS2, DORA, GDPR, AI Act), data sovereignty. Decisive in regulated sectors."
-        },
-        {
-          "code": "O",
-          "dim": "Organisation & Talent",
-          "desc": "Organisational resilience, know-how documentation, management depth. A key factor of transferability."
-        }
-      ],
       "industriesTitle": "Our sectors of intervention",
       "allArticles": "All our articles",
       "articlesCta": "Read our analyses",
@@ -9601,16 +6985,6 @@
           "cluster": "Finance & Capital",
           "image": "/images/industries/theme_fintech.jpg",
           "vision": "Financial organisations operate in a permanent compliance environment. Their value rests on data quality, governance robustness and metrics credibility. CIFSO 5000 is particularly relevant here to document what regulatory audits do not capture.",
-          "services": [
-            "Strategy Advisory",
-            "Technology Advisory",
-            "CIFSO 5000 Certification"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "S"
-          ],
           "sectors": [
             {
               "name": "Banking & Financial Services",
@@ -9634,18 +7008,6 @@
           "cluster": "Health & Life Sciences",
           "image": "/images/grade-usecases/uc-due-diligence.jpg",
           "vision": "Health organisations operate under some of the strictest compliance requirements. Their value depends on their data capital, protocols and the solidity of their clinical and regulatory governance. CIFSO 5000 certification applies with granularity adapted to these constraints.",
-          "services": [
-            "Strategy Advisory",
-            "Technology Advisory",
-            "Bespoke Software",
-            "CIFSO 5000 Certification"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "S",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Health & Pharmaceuticals",
@@ -9664,18 +7026,6 @@
           "cluster": "Industry, Energy & Infrastructure",
           "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Industrial organisations often have under-documented value: operational know-how, long-term contracts, process intellectual property. CIFSO 5000 provides a common language between the executive who knows their value and the investor who needs to verify it.",
-          "services": [
-            "Strategy Advisory",
-            "Technology Advisory",
-            "M&A Advisory",
-            "CIFSO 5000 Certification"
-          ],
-          "cifsoDims": [
-            "C",
-            "I",
-            "F",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Energy & Utilities",
@@ -9729,17 +7079,6 @@
           "cluster": "Commerce, Services & Customer Experience",
           "image": "/images/industries/theme_saas.jpg",
           "vision": "Commerce and services organisations have value tied to their customer base, revenue model and retention capacity. Documenting these assets (CRM data, framework contracts, retention metrics) is precisely what CIFSO 5000 structures.",
-          "services": [
-            "Strategy Advisory",
-            "M&A Advisory",
-            "Bespoke Software",
-            "CIFSO 5000 Certification"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "I"
-          ],
           "sectors": [
             {
               "name": "Retail & E-commerce",
@@ -9773,17 +7112,6 @@
           "cluster": "Tech, Innovation & Public Sector",
           "image": "/images/industries/theme_AI.jpg",
           "vision": "Tech organisations often have value concentrated in their code, data and teams. CIFSO 5000 certification is designed to make these intangible assets verifiable, defensible and transferable. For public institutions, it independently documents digital maturity.",
-          "services": [
-            "Strategy Advisory",
-            "Technology Advisory",
-            "Bespoke Software",
-            "CIFSO 5000 Certification"
-          ],
-          "cifsoDims": [
-            "C",
-            "S",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Technology & SaaS",
@@ -9809,7 +7137,6 @@
       "segmentsLabel": "How we support our clients",
       "segmentsSub": "Three typical profiles, three concrete situations.",
       "problemsLabel": "What we solve",
-      "ctaKicker": "CIFSO 5000 Certification",
       "ctaTitle": "Get your organisation assessed and obtain a defensible independent certification.",
       "exploreLabel": "Explore other industries",
       "sectorCount": "{count, plural, one {# sector} other {# sectors}}",
@@ -9823,19 +7150,12 @@
     }
   },
   "aboutPage": {
-    "intro": "We believe the value of a company is not negotiated under pressure. It is built through strategic rigour, strengthened by technology, validated in transparency, and realised in trust.\n\nThat is why Aegryn exists: to support leaders who refuse to let their trajectory be dictated to them.",
-    "vision": {
-      "label": "OUR VISION",
-      "title": "A hybrid group.\nAnchored in Switzerland.",
-      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are entrepreneurs: we have built, led and restructured organisations. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five ways of working necessary for the lasting value of a company."
-    },
     "founder": {
       "label": "THE FOUNDER",
       "title": "A founder from the field.",
       "desc": "Aegryn’s founder is an executive and operator with more than twenty years of international, cross-industry experience in Europe, the United States and Asia.\n\nA former executive director at a global consulting firm, he accompanied public and private organisations, international groups and institutions through their most complex transformations, from strategy to operations, from finance to human resources, from M&A advisory to post-acquisition integration.\n\nHe then became an entrepreneur and investor in what inspires him: creating memorable customer experiences in the age of artificial intelligence. He carried alone what he used to advise others on: product strategy, technical design, marketing, legal and intellectual property, recruitment and partnerships. He succeeded on some projects. He learned on others. And built on what no consulting assignment can teach.\n\nThis dual path is the origin of Aegryn.\n\nHe chose to create Aegryn to bring together in one structure what the market offers in silos: the framing of the project, its execution, its accompaniment over time and the selection of talent.\n\nHis conviction: a decision is only worth something when carried through to its result.",
       "cta": "Get in touch",
-      "disciplinesCta": "Our disciplines",
-      "storytelling": "Advising without building is delivering a map without the territory.\nBuilding without certifying is delivering without proof.\nCertifying without transferring is preparing without concluding.\nTransferring without recruiting is handing over without securing what comes next.\nInforming without acting is commenting without responsibility."
+      "disciplinesCta": "Our disciplines"
     },
     "whyAegryn": {
       "label": "WHY AEGRYN",
@@ -9845,397 +7165,6 @@
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",
       "p3ImageAlt": "Golden sunset over Lausanne's foggy landscape"
-    }
-  },
-  "partner": {
-    "meta": "Dashboard | Aegryn Partner Space",
-    "areaLabel": "Partner space",
-    "hello": "Hello, {name}",
-    "fallbackName": "Partner",
-    "kpiCertifications": "Active co-certifications",
-    "kpiIntroductions": "Introductions",
-    "subscriptionActive": "Subscription active",
-    "subscriptionInactive": "Subscription inactive",
-    "subscriptionDesc": "Expert profile, CHF 89/month",
-    "activeCertifications": "Ongoing co-certifications",
-    "recentIntroductions": "Recent introductions",
-    "introductionTypeAsset": "Asset introduction",
-    "introductionTypeBuyer": "Buyer introduction",
-    "certStatus": {
-      "assigned": "Assigned",
-      "in_review": "In review",
-      "validated": "Validated",
-      "rejected": "Rejected"
-    },
-    "notifications": {
-      "meta": "Notifications | Aegryn Partner Space",
-      "title": "Notifications",
-      "subtitle": "Notifications about your activity."
-    },
-    "kyc": {
-      "meta": "KYC | Aegryn Partner Space",
-      "title": "KYC : Identity verification",
-      "subtitle": "Documents required for your partner profile."
-    },
-    "mandates": {
-      "meta": "Mandates | Aegryn Partner Space",
-      "title": "My mandates",
-      "subtitle": "Ongoing partnership mandates.",
-      "noMandates": "No mandates yet."
-    },
-    "mandateDetail": {
-      "meta": "Mandate detail | Aegryn Partner Space",
-      "back": "← Back to mandates"
-    },
-    "certifications": {
-      "meta": "Co-certifications | Aegryn Partner Space",
-      "title": "My co-certifications",
-      "subtitle": "Ongoing CIFSO certification missions.",
-      "noCertifications": "No co-certifications assigned."
-    },
-    "certDetail": {
-      "meta": "Co-certification detail | Aegryn Partner Space",
-      "back": "← Back to co-certifications"
-    },
-    "commissions": {
-      "meta": "Commissions | Aegryn Partner Space",
-      "title": "My commissions",
-      "subtitle": "Commission history.",
-      "noCommissions": "No commissions recorded."
-    },
-    "introductions": {
-      "meta": "Introductions | Aegryn Partner Space",
-      "title": "My introductions",
-      "subtitle": "Introduced assets and buyers.",
-      "noIntroductions": "No introductions yet."
-    },
-    "expertProfile": {
-      "meta": "Expert profile | Aegryn Partner Space",
-      "title": "My expert profile",
-      "subtitle": "Profile visible on the Aegryn expert network."
-    },
-    "subscription": {
-      "meta": "Subscription | Aegryn Partner Space",
-      "title": "My subscription",
-      "subtitle": "Manage your Expert profile subscription.",
-      "monthlyPlan": "Monthly, CHF 89/month",
-      "yearlyPlan": "Yearly, CHF 80/month (–10%)",
-      "active": "Active",
-      "inactive": "Inactive"
-    },
-    "subscribe": {
-      "meta": {
-        "title": "Print edition | Aegryn Magazine",
-        "description": "Register your interest in the AEGRYN Report print edition, reserved for Aegryn clients."
-      },
-      "printBadge": "Print edition",
-      "title": "Interest list : print edition",
-      "desc": "The AEGRYN Report print edition is reserved for active ecosystem clients. Indicate your areas of interest to join the waitlist, we will contact you when production starts.",
-      "digitalNote": "The digital version remains freely accessible, like our articles and news.",
-      "digitalNoteCta": "Read the report online",
-      "namePlaceholder": "Your name",
-      "emailPlaceholder": "Your email",
-      "companyPlaceholder": "Your company (optional)",
-      "interestsLabel": "Your areas of interest",
-      "interests": {
-        "market": "The market, M&A & data",
-        "techAi": "Tech & AI",
-        "build": "Build: asset engineering",
-        "transaction": "Transaction & structuring",
-        "buyers": "Buyer profiles",
-        "outlook": "2027 outlook"
-      },
-      "cta": "Register my interest",
-      "success": "Thank you. Your interest has been recorded. We will contact you when the print edition is produced.",
-      "error": "Something went wrong. Please try again.",
-      "clientNote": "This list is reserved for Aegryn clients. A print edition will only be produced if demand justifies it.",
-      "disclaimer": "The digital version remains freely accessible without restriction. The print edition is an initiative currently under evaluation.",
-      "backToMagazine": "Back to the magazine"
-    },
-    "press": {
-      "label": "They talk about us",
-      "title": "The press covers our assets.",
-      "readArticle": "Read the article",
-      "videoAvailable": "Video available on request",
-      "subblink": {
-        "title": "Village de la Justice recommends auditing all your contracts",
-        "excerpt": "Village Justice offers to audit all your contracts to obtain a risk score with subblink, an AI solution for Swiss and European law.",
-        "context": "Article published on Village de la Justice, the reference platform for French and European law. Presentation of subblink, Aegryn's AI contract analysis asset."
-      },
-      "neediu": {
-        "title": "neediu in Gala magazine",
-        "excerpt": "neediu, the platform connecting individuals with home service providers, was featured in a video report in Gala magazine.",
-        "context": "Coverage in Gala, a leading lifestyle magazine. Video report on neediu, Aegryn's home services asset."
-      }
-    },
-    "notify": {
-      "title": "Be notified of upcoming editions",
-      "desc": "Enter your email to receive a release notice for each new annual edition.",
-      "placeholder": "your@email.com",
-      "cta": "Notify me",
-      "success": "Registration confirmed. You will be notified.",
-      "error": "Something went wrong."
-    }
-  },
-  "transactHow": {
-    "meta": {
-      "title": "How it works — Aegryn TRANSACT",
-      "desc": "The Aegryn process in 6 steps: CIFSO certification, independent grade, confidential data room, buyer matching, transaction process, Swiss bank escrow."
-    },
-    "heroLabel": "Aegryn Process",
-    "heroTitle": "From valuation\nto closing — 6 steps.",
-    "heroDesc": "A structured, confidential and institutional process. Each step is designed to protect the seller, qualify the buyer, and maximise the asset's transactional value.",
-    "ctaSeller": "I am a seller",
-    "ctaBuyer": "I am a buyer",
-    "stepsLabel": "Process steps",
-    "stepsTitle": "Certification, confidentiality, closing.",
-    "side": {
-      "seller": "Seller",
-      "aegryn": "Aegryn",
-      "both": "Seller + Buyers"
-    },
-    "steps": [
-      {
-        "num": "01",
-        "title": "Indicative valuation",
-        "desc": "The seller completes the Aegryn valuation calculator (finance, code, IP, security). They receive an indicative range and an estimated grade. Free, confidential, no commitment.",
-        "detail": "Self-serve tool in 4 steps · Estimated grade ★/AAA/AA/A/B · Report emailed",
-        "cta": "Estimate the value"
-      },
-      {
-        "num": "02",
-        "title": "Mandate submission & seller NDA",
-        "desc": "The seller submits their asset to the Aegryn team with the basics (internal name, ARR, type, country). They sign the Aegryn NDA before any processing. Exclusive 60-day mandate.",
-        "detail": "Submission form · Seller NDA signature · Exclusive 60-day mandate · Response within 48h",
-        "cta": "Submit a mandate"
-      },
-      {
-        "num": "03",
-        "title": "CIFSO 5000 certification & grade assignment",
-        "desc": "An independent CIFSO auditor examines the 5 dimensions: Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent. An official ★/AAA/AA/A/B grade is assigned, documented and enforceable. This is the fundamental difference with any other sale platform.",
-        "detail": "Independent audit · 5 CIFSO dimensions · Official enforceable grade · Full report delivered",
-        "cta": "Understand the grades"
-      },
-      {
-        "num": "04",
-        "title": "Pre-qualified buyer matching",
-        "desc": "Buyers whose profile matches (sector, ticket, geography) receive a confidential alert — generic sector and grade only. No name, no metrics, no URL. Identity is revealed only after buyer NDA and session opening.",
-        "detail": "Buyer profile matching · Notification: sector + grade only · Buyer NDA required before any information",
-        "cta": "Buyer access"
-      },
-      {
-        "num": "05",
-        "title": "TRANSACT process & data room",
-        "desc": "The process opens with access to the full data room (financials, KPIs, contracts, CIFSO report). Qualified buyers submit their offers within the allotted time. The seller chooses the winning offer.",
-        "detail": "Secure data room · Defined duration · Sealed bids · Seller decides",
-        "cta": null
-      },
-      {
-        "num": "06",
-        "title": "Closing & Swiss bank escrow",
-        "desc": "10% of the sale price is paid into an institutional Swiss bank escrow at the HoT (Heads of Terms) stage. Assets are transferred only after full release of funds. Swiss jurisdiction, civil law.",
-        "detail": "10% at HoT in escrow · Institutional Swiss banking · Transfer conditional on funds · SPA under Swiss law",
-        "cta": null
-      }
-    ],
-    "compareLabel": "Positioning",
-    "compareTitle": "Aegryn vs other platforms",
-    "compareOther": "Other platforms",
-    "compareRows": [
-      {
-        "label": "Asset certification",
-        "aegryn": "Independent CIFSO · 5 dimensions",
-        "other": "Informal internal vetting"
-      },
-      {
-        "label": "Confidentiality",
-        "aegryn": "Asset invisible before double NDA",
-        "other": "Semi-public listing + auto NDA"
-      },
-      {
-        "label": "Buyers",
-        "aegryn": "100% pre-qualified, proof of funds",
-        "other": "Open base, variable quality"
-      },
-      {
-        "label": "Escrow",
-        "aegryn": "Institutional Swiss banking",
-        "other": "Escrow.com (US)"
-      },
-      {
-        "label": "Jurisdiction",
-        "aegryn": "Switzerland / civil law",
-        "other": "California / US law"
-      },
-      {
-        "label": "Typical ticket",
-        "aegryn": "€100K – €10M",
-        "other": "$10K – $2M"
-      },
-      {
-        "label": "Seller commission",
-        "aegryn": "Success fee only",
-        "other": "6–8% + monthly listing fee"
-      }
-    ],
-    "ctaSellerLabel": "Seller",
-    "ctaSellerTitle": "Value and sell your asset",
-    "ctaSellerDesc": "Start with the free valuation tool, then submit your mandate in 5 minutes.",
-    "ctaSellerBtn": "Seller journey",
-    "ctaBuyerLabel": "Buyer",
-    "ctaBuyerTitle": "Access the certified deal flow",
-    "ctaBuyerDesc": "Submit your profile to join the circle of pre-qualified buyers and receive matching alerts.",
-    "ctaBuyerBtn": "Become a qualified buyer"
-  },
-  "transactBuyers": {
-    "meta": {
-      "title": "Buyer access — Aegryn TRANSACT",
-      "desc": "Join the Aegryn circle of pre-qualified buyers. Get priority access to the confidential deal flow of certified and graded tech assets. Ticket €100K–€10M+."
-    },
-    "heroLabel": "Pre-qualified buyers",
-    "heroTitle": "Access the deal flow\nbefore everyone else.",
-    "heroDesc": "Join the Aegryn circle of pre-qualified buyers and receive priority alerts on certified tech assets matching your profile — in complete confidentiality.",
-    "heroCta": "Submit my application",
-    "processLabel": "Access process",
-    "processTitle": "Four steps to join the circle.",
-    "accessSteps": [
-      {
-        "title": "Submit your profile",
-        "desc": "Complete the form below: acquirer type, ticket, target sectors, proof of financial capacity."
-      },
-      {
-        "title": "Validation within 48h",
-        "desc": "Our team verifies your profile and financial capacity. A call may be requested to finalise qualification."
-      },
-      {
-        "title": "Buyer NDA signature",
-        "desc": "After validation, you sign the Aegryn NDA. No asset information is shared before this step."
-      },
-      {
-        "title": "Confidential matching alerts",
-        "desc": "You receive alerts on assets matching your profile: sector, grade, ticket. Seller identity never revealed before session opening."
-      }
-    ],
-    "commitments": [
-      {
-        "title": "Total confidentiality",
-        "desc": "Each asset's identity is strictly protected throughout the TRANSACT process. No name, no URL before mutual NDA."
-      },
-      {
-        "title": "Certified and graded assets",
-        "desc": "Every asset in transaction has received an independent CIFSO 5000 certification (Code & Architecture, IP & Rights, Finances & Metrics, Security & Sovereignty, Organisation & Talent) and an enforceable ★/AAA/AA/A/B grade."
-      },
-      {
-        "title": "Closed circle of buyers",
-        "desc": "Access by invitation or pre-qualification only. Zero browsers, zero competitors without prior agreement."
-      },
-      {
-        "title": "Early-access deal flow",
-        "desc": "Pre-qualified buyers receive alerts before any external distribution. First come, first informed."
-      }
-    ],
-    "formLabel": "Pre-qualification",
-    "formTitle": "Deal flow access request",
-    "sellerNote": "Are you a seller looking to understand the sale process?",
-    "sellerCta": "Seller journey",
-    "form": {
-      "sectionIdentity": "Identity",
-      "fullName": "Full name",
-      "fullNamePlaceholder": "John Smith",
-      "email": "Professional email",
-      "emailPlaceholder": "john@company.com",
-      "organization": "Organisation",
-      "organizationPlaceholder": "Company or fund name",
-      "country": "Country",
-      "sectionProfile": "Buyer profile",
-      "buyerType": "Acquirer type",
-      "selectPlaceholder": "Select…",
-      "buyerTypes": {
-        "founder": "Founder / Entrepreneur",
-        "fund": "Investment fund",
-        "family_office": "Family Office",
-        "corporate": "Corporate / Group",
-        "other": "Other"
-      },
-      "ticketMin": "Min ticket (€)",
-      "ticketMax": "Max ticket (€)",
-      "sectorsLabel": "Target sectors",
-      "sectorsHint": "(at least 1)",
-      "sectors": {
-        "saas_b2b": "SaaS B2B",
-        "saas_b2c": "SaaS B2C",
-        "marketplace": "Marketplace",
-        "ecommerce": "E-commerce",
-        "mobile_app": "Mobile app",
-        "digital_agency": "Digital agency",
-        "ai_data": "AI / Data",
-        "fintech": "Fintech",
-        "proptech": "Proptech",
-        "healthtech": "Healthtech",
-        "cybersecurity": "Cybersecurity",
-        "infrastructure": "Infrastructure",
-        "content_media": "Content / Media"
-      },
-      "geosLabel": "Target geographies",
-      "geos": {
-        "ch": "Switzerland",
-        "fr": "France",
-        "de": "Germany",
-        "benelux": "Benelux",
-        "south_eu": "Southern Europe",
-        "east_eu": "Eastern Europe",
-        "all_eu": "Europe (all)",
-        "international": "International"
-      },
-      "opTypesLabel": "Operation types",
-      "opTypes": {
-        "full_acquisition": "Full acquisition",
-        "majority": "Majority",
-        "minority": "Minority",
-        "lbo": "LBO"
-      },
-      "sectionFunds": "Financial capacity",
-      "fundsProof": "Proof of capacity",
-      "fundsProofOptions": {
-        "bank_statement": "Bank statement",
-        "fund_commitment": "Fund commitment",
-        "self_declared": "Self-declaration",
-        "other": "Other document"
-      },
-      "fundsProofHint": "A supporting document will be requested during your profile validation.",
-      "fundsAmount": "Available amount (indicative)",
-      "fundsAmountPlaceholder": "e.g. €2M, $5M–$10M…",
-      "messageLabel": "Message (optional)",
-      "messagePlaceholder": "Specify your criteria, acquisition history, or any information useful to our team.",
-      "privacyNote": "Your data is processed in strict confidentiality and is never shared with third parties.",
-      "submit": "Submit my request",
-      "errorMsg": "Something went wrong. Please try again.",
-      "errorNetwork": "Network error. Please try again.",
-      "successTitle": "Request received",
-      "successDesc": "Our team will review your profile within 48 business hours and contact you to finalise your pre-qualification.",
-      "successCta": "View TRANSACT sessions"
-    }
-  },
-  "transactResults": {
-    "meta": {
-      "title": "Transaction results — Aegryn TRANSACT",
-      "desc": "Anonymised history of Aegryn certified transactions: grades, valuation ranges and process durations."
-    },
-    "heroTitle": "Historical catalogue",
-    "heroDesc": "Anonymised results of Aegryn certified transactions. Each entry attests that an asset went through the complete certification and sale process.",
-    "publishedCount": "{count, plural, one {# transaction published} other {# transactions published}}",
-    "gradesLabel": "Grades:",
-    "rangeLabel": "Indicative range",
-    "durationLabel": "Duration",
-    "durationUnit": "wks",
-    "closedLabel": "Closed",
-    "disclaimer": "Data is anonymised. No information allowing identification of the seller, buyer or asset is disclosed.",
-    "emptyState": "The first results will be published here after each Aegryn transaction. Data is anonymised.",
-    "formats": {
-      "private_transaction": "Private transaction",
-      "competitive_bid": "Competitive bid",
-      "equity_stake": "Equity stake",
-      "club_deal": "Club Deal"
     }
   },
   "gradeSubmitSuccess": {
@@ -10720,8 +7649,7 @@
     },
     "articles": {
       "label": "To go further",
-      "title": "Our analysis on employment, skills and talent.",
-      "readMore": "Read the article"
+      "title": "Our analysis on employment, skills and talent."
     }
   },
   "investisseurs": {
@@ -10790,11 +7718,6 @@
     }
   },
   "homeDoors": {
-    "cabinetLabel": "The firm",
-    "cabinetText": "Integrated firm for the leaders of SMEs and mid-sized companies: frame, deliver, accompany every cycle.",
-    "cabinetLink": "Discover our services",
-    "boutiqueLabel": "La Boutique",
-    "boutiqueText": "Signature projects, for entrepreneurs, investors and brands. Rare by selection. Discreet by principle.",
     "boutiqueLink": "Enter La Boutique"
   },
   "homeClients": {

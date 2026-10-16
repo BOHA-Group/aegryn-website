@@ -89,7 +89,7 @@ export default function RegisterForm() {
       setSuccess(true)
 
       setTimeout(() => {
-        if (primaryRole === 'partner')  router.push('/client/partner/expert-profile')
+        if (primaryRole === 'partner')  router.push('/client/partner')
         else if (primaryRole === 'internal') router.push('/client/internal')
         else                            router.push('/client/account')
       }, 2500)

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "home": "Home",
     "about": "Over ons",
     "whatWeBuild": "Wat we bouwen",
     "blog": "Blog",
@@ -16,33 +15,21 @@
     "clientSpace": "Klantenzone",
     "logout": "Afmelden",
     "submitAsset": "Asset indienen",
-    "gradeSystem": "Certificeringssysteem",
     "gradeMethod": "Methodologie",
     "gradeSubmit": "Een asset certificeren",
     "gradePartners": "Expertennetwerk",
     "roadmap": "Roadmap",
     "servicesBuild": "Asset ontwikkeling",
-    "servicesAdvisory": "Advisory Tech",
     "servicesAlliances": "Partnernetwerk",
-    "servicesAcquisition": "Advisory Transaction",
-    "servicesValuation": "Waardering",
     "servicesExperts": "Expertennetwerk",
-    "servicesMenuLabel": "Aegryn Services",
     "servicesSectionTech": "Advisory Tech",
     "servicesSectionTechDesc": "Technische audit, beveiliging, AI, compliance",
-    "servicesSectionNetwork": "Partnernetwerk",
     "servicesSectionNetworkDesc": "Advisory Tech & Transaction partners",
-    "gradeDimC": "Code",
-    "gradeDimI": "IP",
-    "gradeDimF": "Financiën",
-    "gradeDimS": "Beveiliging",
     "build": "Build",
     "buildAssets": "Eigen assets",
-    "buildEngineering": "Asset-engineering",
     "comingSoon": "Binnenkort beschikbaar",
     "soon": "Binnenkort",
     "magazine": "Magazines",
-    "aboutGroup": "Over ons",
     "aboutPublications": "Publicaties",
     "aboutCareers": "Werken bij Aegryn",
     "articles": "Artikelen",
@@ -53,19 +40,12 @@
     "craftBuild": "Realiseren",
     "craftBuildDesc": "Oplossingen op maat en eigen activa.",
     "craftBuildAssets": "Eigen assets",
-    "craftBuildEngineering": "Maatwerkoplossingen",
-    "craftBuildSubblink": "Contractuele risicoanalyse",
-    "craftBuildValuation": "CIFSO Valuation Index",
-    "craftBuildCIFSO": "CIFSO 5000-certificering",
-    "craftSupport": "Kaderen",
     "craftSupportDesc": "Strategie, risico, technologie, talent en overname.",
     "craftSupportStrategy": "Bedrijfsstrategie en Innovatie",
     "craftSupportRiskCompliance": "Risicobeheer en Compliance",
     "craftSupportTechnology": "Technologie en Soevereiniteit",
     "craftSupportTalentOrg": "Talent en Organisatie",
     "craftSupportMA": "M&A, Transacties en PMI",
-    "craftSupportAdvisory": "Tech & AI-advies",
-    "craftSupportNetwork": "Partner- & expertennetwerk",
     "craftSupportAlliances": "Partnernetwerk",
     "craftSupportExperts": "Expertennetwerk",
     "craftTransact": "Per situatie",
@@ -75,36 +55,14 @@
     "craftTransactLancement": "Lancering & Structurering",
     "craftTransactCroissance": "Groei & Opschaling",
     "craftTransactRestructuration": "Herstructurering & Pivot",
-    "craftTransactVerify": "Certificaat verifiëren",
     "craftRecruit": "Selecteren",
     "craftRecruitDesc": "Sleutel- en overgangsprofielen, in elke fase.",
-    "craftGrade": "Certificering",
     "craftGradeDesc": "Onafhankelijk beoordelingssysteem",
-    "solutionsCore": "CORE",
-    "solutionsPortfolio": "PORTFOLIO",
     "solutionsCoreTitle": "Eigen assets",
     "solutionsCoreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
     "solutionsPortfolioTitle": "Portfolio-assets",
     "solutionsPortfolioDesc": "Strategische participaties en begeleiding",
-    "solutionsDomainsLabel": "SOFTWARE-ASSET-DOMEINEN",
     "solutionsDomainsDesc": "",
-    "solutionsDomain1": "AI-agenten & Bedrijfsautomatisering",
-    "solutionsDomain2": "Compliance, Risico & AI-governance",
-    "solutionsDomain3": "Cybersecurity & Digitaal Vertrouwen",
-    "solutionsDomain4": "Document-, Contract- & Kennisintelligentie",
-    "solutionsDomain5": "Financiën, Facturatie & E-invoicing-automatisering",
-    "solutionsDomain6": "Data, BI & Beslissingsintelligentie",
-    "solutionsDomain7": "Klantervaring & Serviceautomatisering",
-    "solutionsDomain8": "Leveranciers-, Inkoop- & Derdenrisico",
-    "solutionsDomain9": "Identiteit, KYC/KYB & Digitaal Vertrouwen",
-    "solutionsDomain10": "Enterprise Asset- & Procesintelligentie",
-    "solutionsViewAll": "Alle assets bekijken",
-    "solutionsSubblink": "subblink (AI-contracten)",
-    "solutionsKryv": "kryv (AI-code)",
-    "solutionsNeediu": "neediu",
-    "solutionsMovtoo": "movtoo",
-    "solutionsPrimiom": "primiom",
-    "solutionsHobconnect": "hobconnect",
     "thinkingMagazine": "The Aegryn Magazine",
     "thinkingMagazineDesc": "Bedrijfsleven, kapitaal, technologie en samenleving. Aegryn's driemaandelijkse kijk op wat de markten verandert.",
     "thinkingMagazineIssues": "Januari 2027 - Built to Last",
@@ -119,7 +77,6 @@
     "whoJoin": "Sluit je bij ons aan",
     "whoJoinDesc": "Werken bij Aegryn, talenten, partners",
     "whoCareers": "Werken bij Aegryn",
-    "whoTalent": "Executive Selectie",
     "whoAlliances": "Partner worden",
     "talent": "Talent",
     "thinkingMarket": "Ons marktperspectief",
@@ -127,14 +84,10 @@
     "thinkingMarketNewsletter": "LinkedIn Nieuwsbrief",
     "thinkingMarketArticles": "Alle artikelen",
     "thinkingMarketWorkforce": "Werkgelegenheid & Vaardigheden",
-    "thinkingMarketGlossary": "M&A-tech Woordenlijst",
     "thinkingMarketFAQ": "FAQ",
     "industries": "Industries",
     "industriesDesc": "Alle sectoren",
     "whoFounder": "De oprichter",
-    "solutionsCategoriesPrimary": "HOOFDCATEGORIEËN",
-    "solutionsCategoriesSecondary": "AANVULLENDE CATEGORIEËN",
-    "solutionsCategoryAI": "AI & Protocollen",
     "solutionsCategoryFinTech": "FinTech & Betalingen",
     "solutionsCategoryHealthTech": "HealthTech & MedTech",
     "solutionsCategoryPropTech": "PropTech & Vastgoed",
@@ -150,7 +103,6 @@
     "clusterIndustrie": "Industrie, Energie & Infrastructuur",
     "clusterCommerce": "Handel, Diensten & Klantervaring",
     "clusterTech": "Technologie, Innovatie & Publieke Sector",
-    "solutionsViewAllLink": "Alle oplossingen bekijken",
     "craftRecruitIntro": "Het juiste profiel, in de juiste fase",
     "craftRecruitForCompanies": "Voor bedrijven",
     "craftRecruitForCandidates": "Voor kandidaten",
@@ -240,15 +192,12 @@
         "desc": "Ontdek de propriëtaire assets van Aegryn: subblink, neediu, primiom, movtoo en hobconnect, ontworpen om certificeerbaar en overdraagbaar te zijn."
       },
       "filterAll": "Alle",
-      "filterAI": "AI & Protocollen",
-      "filterLifestyle": "Services & Lifestyle",
       "filterTransactions": "Markten & Communities",
       "filterIdentity": "Identiteit & Vertrouwen",
       "statusLive": "Live",
       "statusBeta": "Beta",
       "statusDev": "In ontwikkeling",
       "gradeLabel": "Aegryn Grade",
-      "gradePending": "Certificering bezig",
       "visitSite": "Website bezoeken",
       "visitPage": "Pagina bekijken",
       "comingSoon": "Binnenkort",
@@ -262,10 +211,6 @@
       "ctaBottom": "Draagt u een ambitieus project? Wij werken voor u of met u: in opdracht, of met een participatie wanneer het project ons overtuigt. Antwoord binnen 2 werkdagen.",
       "notStarted": "Niet gestart",
       "certificationInProgress": "Certificering bezig",
-      "badgeCore": "CORE",
-      "badgePortfolio": "PORTFOLIO",
-      "filterCore": "CORE-assets",
-      "filterPortfolio": "PORTFOLIO-assets",
       "coreDesc": "Ontworpen, ontwikkeld en beheerd door Aegryn",
       "portfolioDesc": "Strategische participaties en begeleiding",
       "filterValuation": "Waardering",
@@ -376,7 +321,6 @@
     }
   },
   "advisory": {
-    "strip": "Aegryn Advisory | Geïntegreerd advies voor Europese tech-organisaties",
     "cta": "Contact opnemen",
     "hero": {
       "title": "Acht vakgebieden om te beslissen, te sturen en uit te voeren.",
@@ -784,11 +728,7 @@
     "label": "Kaderen en realiseren",
     "contactCta": "Contact opnemen",
     "ctaDesc": "Elk mandaat begint met een uitgebreide diagnose vóór enige aanbeveling. Wij documenteren, meten en leveren.",
-    "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
     "ctaTitleTech": "Laten we het hebben over uw tech-transformatie",
-    "ctaTitleStrategy": "Laten we het hebben over uw strategie",
-    "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken",
-    "ctaTitleTalentOrganization": "Laten we de diepgang van uw organisatie bespreken",
     "pillarLink": "Het vakgebied bekijken"
   },
   "build": {
@@ -812,11 +752,6 @@
     },
     "visitSite": "Website bezoeken",
     "comingSoon": "Binnenkort beschikbaar",
-    "philosophy": {
-      "label": "Onze filosofie",
-      "title": "Eigen. Onafhankelijk. Duurzaam.",
-      "desc": "We bouwen geen MVPs. We verkopen geen minderheidsbelangen aan VC's. Elk Aegryn-asset is ontworpen om volledig in eigendom te zijn, onafhankelijk te worden beheerd en aan volgende generaties te worden doorgegeven."
-    },
     "pillars": {
       "proprietary": {
         "stat": "100%",
@@ -825,10 +760,6 @@
       "sovereign": {
         "stat": "CH",
         "label": "Onafhankelijkheid"
-      },
-      "durable": {
-        "stat": "∞",
-        "label": "Duurzaamheid"
       }
     },
     "advisoryCta": {
@@ -902,7 +833,6 @@
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
     "quote": "Wat we voor onze klanten doen, passen we op onszelf toe. Deze coherentie is onze eerste geloofwaardigheid.",
-    "ceoName": "",
     "ceoTitle": "",
     "stats": [
       {
@@ -1101,22 +1031,6 @@
         }
       ]
     },
-    "mission": {
-      "label": "Drie disciplines",
-      "title": "Drie disciplines.\nEén marktstandaard.",
-      "create": {
-        "title": "ONTWERP",
-        "desc": "Eigen, certificeerbare, overdraagbare tech-assets. Geregistreerd IP, gedocumenteerde codebase, beheerste stack."
-      },
-      "simplify": {
-        "title": "CERTIFICERING",
-        "desc": "Onafhankelijk certificeren. Meer weigeren dan accepteren. Een reproduceerbare, traceerbare en definitieve grade."
-      },
-      "embrace": {
-        "title": "M&A-OVERDRACHT",
-        "desc": "Overdragen in discretie, met zekerheid voor alle partijen. Volledige documentatie bij elke stap."
-      }
-    },
     "dna": {
       "label": "Ons DNA",
       "cultureCta": "Onze cultuur en werkwaarden"
@@ -1162,11 +1076,8 @@
     "founder": {
       "label": "De oprichtende overtuiging",
       "title": "Van binnenuit gebouwd.",
-      "bio1": "De oprichter van Aegryn is een leidinggevende en operator met meer dan twintig jaar internationale ervaring in strategie, technologie en M&A. Als voormalig executive director bij een wereldwijd adviesbureau heeft hij publieke en private organisaties, internationale groepen en instellingen begeleid door hun meest complexe transformaties.",
-      "bio2": "Hij koos ervoor Aegryn op te richten om in één structuur samen te brengen wat de markt in silo's aanbiedt: advies, constructie, transactie, talent en marktintelligentie. Zijn overtuiging: bedrijven die standhouden kiezen niet tussen strategie en technologie. Ze denken ze samen.",
       "cta": "Contact opnemen",
-      "disciplinesCta": "Onze disciplines",
-      "storytelling": "Adviseren zonder te bouwen is een kaart zonder territorium leveren.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is de fakkel doorgeven zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaren zonder verantwoordelijkheid."
+      "disciplinesCta": "Onze disciplines"
     },
     "cta": {
       "label": "Werken met Aegryn",
@@ -1209,11 +1120,6 @@
     },
     "apply": "Solliciteren",
     "spontaneous": "Open sollicitatie",
-    "statement": {
-      "label": "Het bureau",
-      "title": "Gebouwd om te duren, geleid door experts die erin geloven.",
-      "cta": "Onze diensten ontdekken"
-    },
     "domains": {
       "all": "Alle domeinen",
       "strategy": "Business Strategy",
@@ -1284,7 +1190,6 @@
   },
   "assetPage": {
     "back": "← Terug naar activa",
-    "presentation": "Overzicht",
     "audience": "Doelgroep",
     "features": "Kernfuncties",
     "visit": "Bezoeken",
@@ -1588,68 +1493,6 @@
     },
     "ownedBy": "Een Aegryn-asset"
   },
-  "ndaForm": {
-    "requestBtn": "NDA-toegang aanvragen",
-    "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 2 werkdagen contact met u op om uw profiel te valideren en u de NDA te sturen.",
-    "formTitle": "NDA-toegangsaanvraag",
-    "labelName": "Volledige naam *",
-    "labelEmail": "E-mail *",
-    "labelCompany": "Bedrijf",
-    "labelBuyerType": "Kopersprofiel",
-    "labelCapacity": "Gedeclareerde acquisitiecapaciteit",
-    "labelMessage": "Bericht (optioneel)",
-    "placeholderName": "Jan Janssen",
-    "placeholderEmail": "u@voorbeeld.nl",
-    "placeholderCompany": "Naam van uw bedrijf",
-    "placeholderMessage": "Context van uw interesse in dit actief...",
-    "selectDefault": "Selecteren",
-    "submit": "Mijn aanvraag indienen",
-    "sending": "Verzenden...",
-    "disclaimer": "Toegang afhankelijk van profielvalidatie door ons team.",
-    "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw.",
-    "errorNetwork": "Netwerkfout. Probeer het opnieuw.",
-    "buyerTypes": {
-      "pe": "PE / VC Fonds",
-      "strategic": "Strategische koper",
-      "family_office": "Family office",
-      "individual": "Particulier / Zelfstandige"
-    }
-  },
-  "accessForm": {
-    "doneTitle": "Aanvraag ontvangen",
-    "doneDesc": "Ons team neemt binnen 2 werkdagen contact met u op om uw profiel te valideren en u de NDA en Aegryn AV te sturen voor ondertekening.",
-    "doneNote": "Geen toegang zonder ondertekening van beide documenten.",
-    "restrictedTitle": "Beperkte catalogustoegang",
-    "restrictedDesc": "Actiefdossiers en bedrijfsnamen zijn alleen toegankelijk na accountaanmaak, ondertekening van de Aegryn NDA en aanvaarding van de AV.",
-    "pendingCgvDesc": "Uw NDA is geregistreerd. De AV worden u binnenkort toegestuurd.",
-    "pendingNdaDesc": "Dien hieronder uw aanvraag in. Wij sturen u de NDA en AV ter ondertekening.",
-    "ndaSignedTitle": "NDA ondertekend, AV in afwachting",
-    "ndaSignedDesc": "Ons team stuurt u de Algemene Verkoopvoorwaarden binnenkort toe.",
-    "formLabel": "Catalogustoegangsaanvraag",
-    "labelName": "Volledige naam *",
-    "labelEmail": "E-mail *",
-    "labelCompany": "Bedrijf",
-    "labelBuyerType": "Kopersprofiel",
-    "labelCapacity": "Gedeclareerde acquisitiecapaciteit",
-    "labelMessage": "Bericht (optioneel)",
-    "placeholderName": "Jan Janssen",
-    "placeholderEmail": "u@voorbeeld.nl",
-    "placeholderCompany": "Naam van uw bedrijf",
-    "placeholderMessage": "Context van uw interesse in de volgende sessie...",
-    "selectDefault": "Selecteren",
-    "submit": "Mijn aanvraag indienen",
-    "sending": "Verzenden...",
-    "disclaimer": "Toegang afhankelijk van profielvalidatie, NDA-ondertekening en aanvaarding van de AV.",
-    "errorGeneric": "Er is een fout opgetreden. Probeer het opnieuw.",
-    "errorNetwork": "Netwerkfout. Probeer het opnieuw.",
-    "buyerTypes": {
-      "pe": "PE / VC Fonds",
-      "strategic": "Strategische koper",
-      "family_office": "Family office",
-      "individual": "Particulier / Zelfstandige"
-    }
-  },
   "gradePartners": {
     "back": "← Certificering CIFSO 5000",
     "eyebrow": "CIFSO 5000-certificering",
@@ -1818,7 +1661,6 @@
         "other": "Overig"
       },
       "message": "Bericht",
-      "messagePlaceholder": "Beschrijf uw vraag...",
       "submit": "Versturen",
       "sending": "Versturen...",
       "error": "Er is een fout opgetreden. Probeer het opnieuw of schrijf ons rechtstreeks.",
@@ -1838,11 +1680,6 @@
       "phoneLabel": "Telefoon"
     }
   },
-  "stats": {
-    "assets": "assets",
-    "languages": "talen",
-    "base": "Zwitserse basis"
-  },
   "footer": {
     "groupLabel": "Aegryn",
     "legal": "© 2026 Aegryn · Saint-Sulpice · Vaud · Zwitserland",
@@ -1851,14 +1688,10 @@
     "terms": "Voorwaarden",
     "dataProtection": "Gegevensbeschermingsverklaring",
     "swissTagline": "Geïntegreerd bureau en La Boutique. Verankerd in Zwitserland, open naar de wereld.",
-    "navLabel": "Aegryn",
-    "companyLabel": "Bedrijf",
-    "servicesLabel": "Diensten",
     "footerCol1Title": "Aegryn",
     "footerCol2Title": "Het bureau",
     "footerCol3Title": "Tools",
     "footerCol4Title": "Publicaties",
-    "blogLink": "Blog",
     "ecosystemLabel": "Ecosysteem",
     "advisoryLabel": "Het bureau",
     "advisoryDesc": "Leiders begeleiden in elke levensfase: lanceren, ontwikkelen, heroriënteren, overnemen, overdragen.",
@@ -1870,283 +1703,27 @@
       "link": "Routekaart"
     },
     "assetsLink": "Activacatalogus",
-    "glossaryLink": "Woordenlijst",
     "ecosystemCatalogLink": "Onze propriëtaire assets",
     "aiNotice": "Sommige inhoud op deze site wordt geproduceerd met behulp van systemen voor kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn | EU AI Act art. 50.",
     "col1Title": "Ons vakmanschap",
     "col1Build": "Realiseren",
-    "col1Support": "Kaderen",
-    "col1Transact": "M&A-transactie",
     "col2Title": "Onze oplossingen",
     "col2Subblink": "Contractuele risicoanalyse",
     "col2Code": "Certification CIFSO",
-    "col2Grade": "Certificering verkrijgen",
-    "col2DataRoom": "Begeleiden",
-    "col2ViewAll": "Onze portfolio",
     "col3Title": "Onze overtuigingen",
     "col3Magazine": "Magazine",
     "col3Newsletter": "LinkedIn-nieuwsbrief",
     "col3Blog": "Blog",
-    "col3Glossary": "Woordenlijst",
     "col3Valuation": "Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Wie we zijn",
-    "col4About": "Over Aegryn",
-    "col4Contact": "Contact",
     "col4Careers": "Werken bij Aegryn",
-    "col4Talent": "Selectie & Transitie",
     "footerCraftTransact": "Per situatie",
-    "footerGradeSubmit": "Asset certificeren",
-    "footerWhoTalent": "Selecteren",
     "col4Alliances": "Partner worden",
     "col5Title": "Volg ons",
-    "col5LinkedIn": "LinkedIn",
-    "col5Twitter": "Twitter",
-    "col5GitHub": "GitHub",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Certificaat verifiëren",
     "footerCraftFrameDeliver": "Kaderen en realiseren"
-  },
-  "cookie": {
-    "title": "Aegryn | Cookies & Analytics",
-    "desc": "Wij gebruiken Cloudflare Analytics (geanonimiseerd) om het publiek te meten. Geen advertentiedata. AVG-conform.",
-    "learnMore": "Meer info",
-    "accept": "Accepteren",
-    "refuse": "Weigeren"
-  },
-  "acquisition": {
-    "meta": {
-      "title": "Transactie-advies & M&A | Aegryn",
-      "desc": "M&A-begeleiding voor gecertificeerde tech-asset-overnames: due diligence, structurering, closing. Aegryn coördineert de experts."
-    },
-    "label": "Services : Transactie-advies",
-    "title": "Uw overname.\nGestructureerd om te sluiten.",
-    "desc": "Wanneer de overname van een gecertificeerd asset een specifieke financiële, juridische of fiscale structurering vereist, mobiliseert Aegryn de juiste experts voor uw profiel en de aard van de deal.",
-    "ctaPrimary": "Mijn acquisitie bespreken",
-    "ctaDiscover": "Onze analyses lezen",
-    "advisorNote": "Een Aegryn-adviseur wordt toegewezen aan uw dossier van het eerste contact tot de closing. Één persoon. Directe lijn.",
-    "experts": {
-      "label": "Ingezette expertise",
-      "title": "De juiste experts.\nVoor elke fase van de deal.",
-      "desc": "Afhankelijk van uw dossier en de transactiefase mobiliseert Aegryn de meest geschikte partnerexperts.",
-      "phases": [
-        {
-          "label": "Pre-transactie",
-          "items": [
-            {
-              "num": "01",
-              "title": "Waardering & Marktbenchmark",
-              "desc": "ARR-multiplicatieschatting, Quality of Earnings, sectorvergelijkingen, verdedigbare waarderingsbandband. De basis van elke serieuze onderhandeling."
-            },
-            {
-              "num": "02",
-              "title": "Verkoopvoorbereiding",
-              "desc": "Audit van het verkopersdossier vóór indiening: data room, contracten, registers, AVG-conformiteit, technische schuld. Verkort de certificeringstermijn met 30 tot 50%."
-            },
-            {
-              "num": "03",
-              "title": "Digitaal recht & Intellectueel eigendom",
-              "desc": "IP-eigendomsketen, open-sourcelicenties, overdracht van rechten van oprichters en onderaannemers, merkenrechtbescherming, contractuele naleving met klanten. Dekt dimensie I van de Aegryn-grade."
-            }
-          ]
-        },
-        {
-          "label": "Due diligence & onderhandeling",
-          "items": [
-            {
-              "num": "04",
-              "title": "Transactierecht & M&A",
-              "desc": "SPA, SHA, LOI, APA, opschortende voorwaarden, reps & warranties, prijsmechanismen (locked box vs. completion accounts). Begeleiding voor, tijdens en na de transactie."
-            },
-            {
-              "num": "05",
-              "title": "HR & arbeidsrechtelijke due diligence",
-              "desc": "Beoordeling van sleutelcontracten, BSPCE en controlewisseling, latente arbeidsverplichtingen, freelance vs. werknemer-classificatie, concurrentie- en niet-wervingsclausules."
-            },
-            {
-              "num": "06",
-              "title": "Sectorale regulatoire due diligence",
-              "desc": "FinTech (DORA, ACPR/FINMA-vergunning), HealthTech (HDS, gezondheids-AVG), AI-native (EU AI Act), LegalTech (UPL), EdTech (COPPA). Onmisbaar voor gereguleerde sectoren."
-            },
-            {
-              "num": "07",
-              "title": "Closing-voorbereiding",
-              "desc": "Opschortende voorwaarden, closing-checklist, overdracht van IP-rechten en kerncontracten, transitie-deliverables."
-            }
-          ]
-        },
-        {
-          "label": "Structurering & financiering",
-          "items": [
-            {
-              "num": "08",
-              "title": "Fiscaliteit & bedrijfsstructurering",
-              "desc": "Exit-optimalisatie voor verkopers, acquisitiestructurering voor kopers, holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-ruil en belastinguitstel."
-            },
-            {
-              "num": "09",
-              "title": "Financiering & financiële partners",
-              "desc": "Bridge-financiering om de closing te versnellen, co-investering om blootstelling te delen, mezzanineschuld. Elke introductie is specifiek voor uw dealprofiel."
-            },
-            {
-              "num": "10",
-              "title": "Earn-out-ontwerp en KPI",
-              "desc": "Ontwerp van earnout-mechanismen, metricdefinitie, contractuele verkopersbeschermingen tegen post-acquisitiemanipulatie, geschillenbeslechtingsclausules."
-            }
-          ]
-        },
-        {
-          "label": "Post-closing",
-          "items": [
-            {
-              "num": "11",
-              "title": "Post-acquisitie-integratie",
-              "desc": "30/60/100-dagenintegratieplan: tech-stack, HR, klantencommunicatie, migratie van leverancierscontracten. Maximaliseert de na de closing bewaarde waarde."
-            },
-            {
-              "num": "12",
-              "title": "Directie-HR-ondersteuning",
-              "desc": "Managementcontract na verkoop, concurrentiebeding (met financiële tegenprestatie), leiderschapstransitie, golden parachute. Specifiek voor oprichters die operationeel blijven."
-            },
-            {
-              "num": "13",
-              "title": "Belastingaangifte bij exit",
-              "desc": "Aangifte van de vermogenswinst, CH/FR/LU-regimes op basis van fiscale domicilie, inbreng-ruil, herinvestering van de verkoopopbrengst, PEA-PME. Afzonderlijke dienst vs. pre-transactiestructurering."
-            }
-          ]
-        }
-      ]
-    },
-    "forWhom": {
-      "label": "Voor wie",
-      "title": "Wanneer het standaardproces niet volstaat.",
-      "items": [
-        {
-          "title": "Fondsen en family offices",
-          "desc": "U heeft een doelonderneming geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. Aegryn structureert de enveloppe rond uw bod."
-        },
-        {
-          "title": "Strategische kopers",
-          "desc": "U integreert een asset in uw bestaand aanbod. Wij structureren de earnout, integratievoorwaarden en post-acquisitie bescherming zodat de closing verdedigbaar is."
-        },
-        {
-          "title": "Eerste overnemers",
-          "desc": "U voert uw eerste tech-acquisitie uit en heeft volledige begeleiding nodig, waardering, due diligence, onderhandeling, financieringsstructurering. Aegryn begeleidt u van het eerste gesprek tot de overdracht."
-        }
-      ]
-    },
-    "offer": {
-      "label": "Ons proces",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Briefing & kwalificatie",
-          "desc": "Definitie van de acquisitiecriteria: sector, doel-ARR, geografie, maximaal multiple, overnemersprofiel, financieringsbeperkingen. Identificatie van het juiste bid-model (Club Deal, Corporate, Fonds)."
-        },
-        {
-          "num": "02",
-          "title": "Toegang tot de gecertificeerde pipeline",
-          "desc": "Toegang tot het Aegryn-netwerk en zijn partners: doelwitten geïdentificeerd vóór concurrentiële processen, onafhankelijke beoordeling van CIFSO 5000-gecertificeerde organisaties, grade A en hoger met remediëringsplan op aanvraag."
-        },
-        {
-          "num": "03",
-          "title": "Due diligence & structurering",
-          "desc": "Toegang tot de data room onder NDA. Het Aegryn-grade-rapport reduceert de DD met 30 tot 45 dagen. Inzet van juridische, fiscale en financiële experts. Opstelling van de transactiedocumenten (SPA, SHA, LOI)."
-        },
-        {
-          "num": "04",
-          "title": "Financiering",
-          "desc": "Als de deal aanvullende financiering vereist: introductie bij gekwalificeerde financiële partners (bridge, co-investering, earnout). Elke introductie is specifiek voor uw profiel."
-        },
-        {
-          "num": "05",
-          "title": "Ondertekening & veilige closing",
-          "desc": "Volledige codebase-documentatie op de ondertekeningsdatum. Rechtenoverdracht. Uitgifte van het Aegryn-transactiecertificaat."
-        }
-      ]
-    },
-    "diff": {
-      "label": "Waarom Aegryn",
-      "items": [
-        {
-          "title": "Gecertificeerde assets, minder risico",
-          "desc": "Elk pipeline-asset is beoordeeld op 4 dimensies (C/I/F/S) vóór opname. U onderhandelt op geverifieerde grades, niet op verklaringen."
-        },
-        {
-          "title": "Off-market eerst",
-          "desc": "De meeste transacties die wij begeleiden worden nooit publiek aangekondigd. Ze ontstaan uit de adviesrelatie, vóór elk verkoopproces."
-        },
-        {
-          "title": "Experts op het juiste moment",
-          "desc": "Aegryn doet niet alles. Wij coördineren de juiste experts (juridisch, fiscaal, financieel) op het juiste moment, niet te vroeg om niet te verzwaren, niet te laat om niet te fragiliseren."
-        },
-        {
-          "title": "Aansprakelijkheid op de grade",
-          "desc": "Onze grade wordt uitgegeven door gecertificeerde analisten volgens een onafhankelijk, rigoureus protocol. De professionele aansprakelijkheid van Aegryn is betrokken bij de integriteit van het certificeringsproces, binnen de grenzen van onze Algemene Voorwaarden."
-        }
-      ]
-    },
-    "fees": {
-      "label": "Honoraria",
-      "title": "Een succesfee,\nnul vaste kosten.",
-      "desc": "Onze vergoeding is uitsluitend afhankelijk van een effectieve closing. Geen retainer, geen instapkosten. Gedetailleerde voorwaarden beschikbaar in onze Algemene Voorwaarden.",
-      "note": "Aegryn handelt als gecertificeerde tussenpersoon, niet als financiële instelling. De gepresenteerde financieringsopties betreffen onafhankelijke derde partners. Deze service vormt geen beleggingsadvies in de zin van MiFID II.",
-      "noteLink": "Algemene Voorwaarden raadplegen",
-      "noteHref": "/terms/cgv"
-    },
-    "cta": {
-      "title": "Interesse in een asset?",
-      "desc": "Vertel ons over uw acquisitieproject. Wij reageren binnen 2 werkdagen met een haalbaarheidsanalyse.",
-      "btn": "Ons contacteren",
-      "partnerNote": "Wilt u uitgaande deal flow in het Aegryn-ecosysteem inbrengen?",
-      "partnerCta": "Deal Flow-partnerschappen ontdekken",
-      "partnerHref": "/alliances?tab=dealflow"
-    },
-    "roadmap": {
-      "label": "Services in ontwikkeling",
-      "title": "Wat eraan komt.",
-      "desc": "Aegryn breidt zijn transactieaanbod geleidelijk uit. Deze services worden ingezet met onze Alliance-partners.",
-      "ctaLabel": "Ons contacteren",
-      "ctaHref": "/contact",
-      "items": [
-        {
-          "phase": "Beschikbaar op aanvraag",
-          "title": "Verkoopvoorbereiding",
-          "desc": "Volledige voorbereiding van het verkopersdossier vóór Grade-indiening: contractaudit, HR-beoordeling, data room-structurering. Verkort de certificeringstijd met 30 tot 50%.",
-          "status": "available_on_request"
-        },
-        {
-          "phase": "In uitrol",
-          "title": "HR & arbeidsrechtelijke due diligence",
-          "desc": "Beoordeling van sleutelcontracten, BSPCE, change-of-control-clausules, latente arbeidsverplichtingen. Geproduceerd tijdens de standaard due diligence-periode.",
-          "status": "in_deployment"
-        },
-        {
-          "phase": "In uitrol",
-          "title": "Closing-voorbereiding",
-          "desc": "Opschortende voorwaarden, closing-checklist, overdracht van IP-rechten en kerncontracten, transitie-deliverables.",
-          "status": "in_deployment"
-        },
-        {
-          "phase": "Roadmap 12 maanden",
-          "title": "Earn-out-ontwerp en KPI",
-          "desc": "Ontwerp van earnout-mechanismen, definitie van meetcriteria en contractuele beschermingen. Voorkomt post-acquisitiegeschillen.",
-          "status": "roadmap"
-        },
-        {
-          "phase": "Roadmap 12 maanden",
-          "title": "Post-acquisitie integratie",
-          "desc": "100-dagen integratieplan: technisch, HR, klanten en leverancierscontracten. Maximaliseert de na de closing behouden waarde.",
-          "status": "roadmap"
-        },
-        {
-          "phase": "Roadmap 24 maanden",
-          "title": "Sectorale regelgevende due diligence",
-          "desc": "Sectorspecifieke compliance-audit voor FinTech (DORA, AFM), HealthTech (AVG gezondheid, HDS), native AI (EU AI Act). Onmisbaar voor gereguleerde verticalen.",
-          "status": "roadmap_long"
-        }
-      ]
-    }
   },
   "gradingSystem": {
     "meta": {
@@ -2157,8 +1734,6 @@
     "version": "Certification CIFSO 5000 v4.0",
     "title": "Aegryn\nCertificering CIFSO 5000.",
     "intro": "CIFSO 5000 is de eerste onafhankelijke certificeringsstandaard die organisatorische waarde en overdraagbaarheid beoordeelt. Naast operationele compliance documenteert het wat de echte waarde van een organisatie vormt: haar intellectueel kapitaal, integriteit, financiële gezondheid, veiligheid en organisatorische veerkracht.",
-    "downloadLabel": "Volledige documentatie",
-    "downloadCta": "Protocol PDF downloaden",
     "cifsTitle": "Het CIFSO 5000-kader",
     "cifsDesc": "Elk asset wordt beoordeeld op vier onafhankelijke dimensies, elk gescoord van 0 tot 25 punten. De totale score op 100 bepaalt het grade.",
     "cifs": [
@@ -2354,28 +1929,6 @@
     ],
     "subcodesTitle": "Subcode-nomenclatuur",
     "subcodesDesc": "Elke dimensie ontvangt een subcode van M01 tot M04 (Volwassenheid) en D01 tot D04 (Diepte).",
-    "subcodeTable": [
-      {
-        "code": "01",
-        "label": "Referentie",
-        "desc": "Sectoraal referentieniveau, top 5%"
-      },
-      {
-        "code": "02",
-        "label": "Solide",
-        "desc": "Boven de mediaan, fundamenten beheerst"
-      },
-      {
-        "code": "03",
-        "label": "In uitvoering",
-        "desc": "Onder de mediaan, verbeterpunten geïdentificeerd"
-      },
-      {
-        "code": "04",
-        "label": "Remediatie",
-        "desc": "Onvoldoende niveau, remediatieplan vereist"
-      }
-    ],
     "exampleTitle": "Volledig codevoorbeeld",
     "exampleDesc": "Een asset met grade AAA en code C1-D01 | I2-M02 | F1-A01 | S2 wordt als volgt gelezen:",
     "exampleItems": [
@@ -2468,10 +2021,8 @@
     ],
     "ctaTitle": "Certificeer uw asset",
     "ctaDesc": "Klaar om uw asset in te dienen bij het Aegryn Grade-protocol?",
-    "ctaPrimary": "Certificering starten",
     "ctaSecondary": "Ons onafhankelijk netwerk",
     "disclaimerTitle": "Verplichte vermelding",
-    "disclaimerText": "Hoewel alles in het werk is gesteld om objectief te blijven, worden klanten geïnformeerd dat elke certificering een element van deskundig oordeel bevat. De informatie in een Aegryn Grade-rapport wordt verstrekt als professionele certificering, uitgegeven door gecertificeerde Aegryn-analisten. Dit vormt geen garantie voor marktwaarde.",
     "refusalTitle": "Voorwaarden voor automatische afwijzing",
     "refusalDesc": "Bepaalde configuraties leiden tot automatische afwijzing, ongeacht de totaalscore, het algoritme levert een score, de expert geeft het uiteindelijke oordeel, maar een automatische afwijzing kan nooit worden overruled.",
     "refusalConditions": [
@@ -2508,520 +2059,10 @@
     ],
     "fullCodesTitle": "Volledige CIFSO 5000-subcodetabel",
     "fullCodesDesc": "Elke subcode identificeert een specifiek criterium dat tijdens de certificering wordt beoordeeld. Codes gemarkeerd met ⛔ zijn automatische weigeringsgronden.",
-    "fullCodesTable": [
-      {
-        "dim": "C",
-        "code": "C-11",
-        "label": "Architectuur",
-        "desc": "Componentontkoppeling, scheiding van verantwoordelijkheden, gedocumenteerde patronen."
-      },
-      {
-        "dim": "C",
-        "code": "C-12",
-        "label": "Schaalbaarheid",
-        "desc": "Capaciteit om ×10 belasting te verwerken zonder grote refactoring."
-      },
-      {
-        "dim": "C",
-        "code": "C-13",
-        "label": "Technische documentatie",
-        "desc": "Actuele README, ADR's, architectuurdiagrammen."
-      },
-      {
-        "dim": "C",
-        "code": "C-14",
-        "label": "Testdekking",
-        "desc": "Unit- + integratie- + E2E-tests. Drempel: ≥70% voor niveau 2."
-      },
-      {
-        "dim": "C",
-        "code": "C-15",
-        "label": "CI/CD",
-        "desc": "Geautomatiseerde build-, test- en deploymentpipeline operationeel."
-      },
-      {
-        "dim": "C",
-        "code": "C-16",
-        "label": "Codekwaliteit",
-        "desc": "Linting, formatting, gedocumenteerde codereviews."
-      },
-      {
-        "dim": "C",
-        "code": "C-17",
-        "label": "Technische schuld",
-        "desc": "Identificatie, kwantificering en remediatieplan voor bestaande schuld."
-      },
-      {
-        "dim": "C",
-        "code": "C-18",
-        "label": "Afhankelijkheden van derden",
-        "desc": "Pakketinventaris, compatibele licenties, geen verlaten afhankelijkheden."
-      },
-      {
-        "dim": "C",
-        "code": "C-19",
-        "label": "Secrets-beheer",
-        "desc": "Omgevingsvariabelen, vault, gedocumenteerde sleutelrotatie."
-      },
-      {
-        "dim": "C",
-        "code": "C-21",
-        "label": "Monitoring & observeerbaarheid",
-        "desc": "Gestructureerde logs, alerts, operationele dashboards."
-      },
-      {
-        "dim": "C",
-        "code": "C-22",
-        "label": "Weerbaarheid & herstel",
-        "desc": "Back-upstrategie, gedocumenteerde RTO/RPO, uitgevoerde restore-tests."
-      },
-      {
-        "dim": "C",
-        "code": "C-23",
-        "label": "Omgevingsscheiding",
-        "desc": "Dev / staging / prod geïsoleerd, geen echte data in dev."
-      },
-      {
-        "dim": "C",
-        "code": "C-31",
-        "label": "Onderhoudbaarheid",
-        "desc": "Gemak waarmee een nieuwe developer kan onboarden, geschatte tijd gedocumenteerd."
-      },
-      {
-        "dim": "C",
-        "code": "C-32",
-        "label": "Versiebeheer & historiek",
-        "desc": "Schone Git, commit-conventies, bijgehouden changelogs."
-      },
-      {
-        "dim": "C",
-        "code": "C-33",
-        "label": "Prestaties",
-        "desc": "Responstijdbenchmarks gedocumenteerd, geen onbehandelde regressie."
-      },
-      {
-        "dim": "C",
-        "code": "C-34",
-        "label": "Kritieke CVE's",
-        "desc": "Geen onopgeloste kritieke CVE in directe afhankelijkheden. Blokkerend indien aanwezig."
-      },
-      {
-        "dim": "C",
-        "code": "C-35",
-        "label": "Toegang tot codebase",
-        "desc": "Toegang verleend aan analisten met gedefinieerde scope en ondertekende NDA."
-      },
-      {
-        "dim": "C",
-        "code": "C-40",
-        "label": "Blootgestelde geheimen",
-        "desc": "Geen geheimen (API-sleutels, tokens) blootgesteld in Git-historiek of code. Blokkerend indien aanwezig."
-      },
-      {
-        "dim": "C",
-        "code": "C-41",
-        "label": "Code-eigendom",
-        "desc": "Alle code eigendom van de verkopende entiteit, geen niet-overgedragen externe bijdragen."
-      },
-      {
-        "dim": "I",
-        "code": "I-11",
-        "label": "Geregistreerde merken",
-        "desc": "Nationale of internationale depots (WIPO, EUIPO) gevalideerd, geen lopende oppositie."
-      },
-      {
-        "dim": "I",
-        "code": "I-12",
-        "label": "Softwarerechten",
-        "desc": "Formele overdracht van vermogensrechten aan de verkopende entiteit, alle bijdragers inbegrepen."
-      },
-      {
-        "dim": "I",
-        "code": "I-13",
-        "label": "Octrooien",
-        "desc": "Ingediende of lopende octrooien, waarde en reikwijdte gedocumenteerd."
-      },
-      {
-        "dim": "I",
-        "code": "I-14",
-        "label": "Technologische slotgracht",
-        "desc": "Identificeerbare en gedocumenteerde technische toetredingsdrempel (eigen algoritme, exclusieve data, netwerk)."
-      },
-      {
-        "dim": "I",
-        "code": "I-15",
-        "label": "Contractuele exclusiviteiten",
-        "desc": "Actieve exclusiviteitsclausules met klanten of leveranciers."
-      },
-      {
-        "dim": "I",
-        "code": "I-16",
-        "label": "Eigen data",
-        "desc": "Dataset of database gecreëerd door het actief, niet gemakkelijk repliceerbaar door een concurrent."
-      },
-      {
-        "dim": "I",
-        "code": "I-17",
-        "label": "Licenties van derden",
-        "desc": "Volledige licentie-inventaris, compatibiliteit met overdracht geverifieerd."
-      },
-      {
-        "dim": "I",
-        "code": "I-18",
-        "label": "Merkenrechtspraak",
-        "desc": "Geen actief of lopend IP-geschil. Blokkerend bij actief geschil."
-      },
-      {
-        "dim": "I",
-        "code": "I-19",
-        "label": "Concurrentiebeding",
-        "desc": "Gedocumenteerde concurrentiebedingen met sleutelwerknemers en contractors."
-      },
-      {
-        "dim": "I",
-        "code": "I-21",
-        "label": "Rechten van derden op codebase",
-        "desc": "Geen niet-overgedragen rechten van externe bijdragers op de geproduceerde code. Blokkerend indien niet geformaliseerd."
-      },
-      {
-        "dim": "I",
-        "code": "I-22",
-        "label": "Domeinnamen",
-        "desc": "Strategische domeinen eigendom van de verkopende entiteit, verlengingen up-to-date."
-      },
-      {
-        "dim": "I",
-        "code": "I-23",
-        "label": "Sociale media & handles",
-        "desc": "Officiële accounts eigendom van de entiteit, geen derden-squatting."
-      },
-      {
-        "dim": "I",
-        "code": "I-31",
-        "label": "Marktpositionering",
-        "desc": "Duidelijke en verdedigbare differentiatie tegenover 3 geïdentificeerde directe concurrenten."
-      },
-      {
-        "dim": "I",
-        "code": "I-32",
-        "label": "Reputatie & reviews",
-        "desc": "Openbare reviews, NPS of gedocumenteerde klantfeedback, geen structurele bad buzz."
-      },
-      {
-        "dim": "I",
-        "code": "I-39",
-        "label": "Eigendomsketen",
-        "desc": "Duidelijke eigendomshistoriek sinds oprichting, geen hiaat in de eigendomsketen."
-      },
-      {
-        "dim": "F",
-        "code": "F-11",
-        "label": "Gedocumenteerde ARR",
-        "desc": "ARR geauditeerd op onderliggende documenten (contracten, facturen, uittreksels) over minimaal 12 maanden."
-      },
-      {
-        "dim": "F",
-        "code": "F-12",
-        "label": "MRR & seizoensgebondenheid",
-        "desc": "Maandelijkse MRR over 24 maanden, seizoenspieken geïdentificeerd."
-      },
-      {
-        "dim": "F",
-        "code": "F-13",
-        "label": "Churn",
-        "desc": "Maandelijkse churn berekend op bewijsstukken. Drempel niveau 2: <3% maandelijks."
-      },
-      {
-        "dim": "F",
-        "code": "F-14",
-        "label": "NRR (Net Revenue Retention)",
-        "desc": "Expansieomzet inbegrepen. Drempel niveau 1: >120%. Niveau 2: >100%."
-      },
-      {
-        "dim": "F",
-        "code": "F-15",
-        "label": "LTV / CAC",
-        "desc": "LTV:CAC-ratio gedocumenteerd en berekend op een representatieve cohort."
-      },
-      {
-        "dim": "F",
-        "code": "F-16",
-        "label": "Brutomarges",
-        "desc": "Brutomarge over 12 maanden. Drempel niveau 1: >75% (SaaS)."
-      },
-      {
-        "dim": "F",
-        "code": "F-17",
-        "label": "Runway",
-        "desc": "Beschikbaar kasgeld en geschatte cash-out-datum indien van toepassing."
-      },
-      {
-        "dim": "F",
-        "code": "F-18",
-        "label": "Burn rate",
-        "desc": "Gemiddelde maandelijkse burn over 6 maanden, OPEX-/CAPEX-uplitsing."
-      },
-      {
-        "dim": "F",
-        "code": "F-21",
-        "label": "ARR-groei YoY",
-        "desc": "Jaarlijkse groei gedocumenteerd. Drempel niveau 1: >40%."
-      },
-      {
-        "dim": "F",
-        "code": "F-22",
-        "label": "Klantconcentratie",
-        "desc": "Aandeel van de grootste klant in de totale omzet, concentratierisico beoordeeld."
-      },
-      {
-        "dim": "F",
-        "code": "F-23",
-        "label": "Terugkerende contracten",
-        "desc": "Gemiddelde contractduur, gedocumenteerde verlengingspercentages."
-      },
-      {
-        "dim": "F",
-        "code": "F-24",
-        "label": "Omzetcohorten",
-        "desc": "Cohortanalyse over 4+ kwartalen om retentie te valideren."
-      },
-      {
-        "dim": "F",
-        "code": "F-31",
-        "label": "Juridische structuur",
-        "desc": "Toegewijde juridische entiteit, aparte rekeningen, geen vermenging met andere activiteiten."
-      },
-      {
-        "dim": "F",
-        "code": "F-32",
-        "label": "Verborgen verplichtingen",
-        "desc": "Geen onbekende leveranciersschulden, arbeids- of fiscale geschillen."
-      },
-      {
-        "dim": "F",
-        "code": "F-33",
-        "label": "Auditeerbaarheid",
-        "desc": "Jaarrekening beschikbaar, grootboek op aanvraag toegankelijk."
-      },
-      {
-        "dim": "F",
-        "code": "F-41",
-        "label": "Verkooppipeline",
-        "desc": "Gedocumenteerde pipeline van lopende deals met kansen en bedragen."
-      },
-      {
-        "dim": "F",
-        "code": "F-42",
-        "label": "Oprichtersafhankelijkheid",
-        "desc": "Aandeel omzet persoonlijk gedragen door oprichter(s), key-person-risico beoordeeld."
-      },
-      {
-        "dim": "F",
-        "code": "F-43",
-        "label": "Verifieerbare data",
-        "desc": "Alle financiële statistieken verifieerbaar op bewijsstukken, geen blokkerende weigering. Blokkerend indien geweigerd."
-      },
-      {
-        "dim": "F",
-        "code": "F-46",
-        "label": "Unit economics",
-        "desc": "ARPU, CAC per kanaal, LTV per segment gedocumenteerd."
-      },
-      {
-        "dim": "S",
-        "code": "S-11",
-        "label": "AVG/DSG-naleving",
-        "desc": "Privacybeleid, verwerkingsregister, DPO of AVG-contactpersoon aangesteld."
-      },
-      {
-        "dim": "S",
-        "code": "S-12",
-        "label": "MFA",
-        "desc": "Multi-factor-authenticatie actief op alle beheerders- en productietoegang."
-      },
-      {
-        "dim": "S",
-        "code": "S-13",
-        "label": "Encryptie in rust",
-        "desc": "Gevoelige gegevens versleuteld in database en in back-ups."
-      },
-      {
-        "dim": "S",
-        "code": "S-14",
-        "label": "Encryptie in transit",
-        "desc": "TLS 1.2+ op alle communicaties, HSTS ingeschakeld."
-      },
-      {
-        "dim": "S",
-        "code": "S-15",
-        "label": "Toegangsbeheer",
-        "desc": "Principe van minimale privileges toegepast, offboarding gedocumenteerd."
-      },
-      {
-        "dim": "S",
-        "code": "S-16",
-        "label": "Beveiligingsaudit door derden",
-        "desc": "Pentest- of auditrapport door onafhankelijke derde binnen de laatste 18 maanden."
-      },
-      {
-        "dim": "S",
-        "code": "S-17",
-        "label": "Kritieke kwetsbaarheden",
-        "desc": "Geen onopgeloste kritieke CVE op infrastructuur. Blokkerend indien aanwezig."
-      },
-      {
-        "dim": "S",
-        "code": "S-18",
-        "label": "Disclosure-beleid",
-        "desc": "Gedocumenteerd en toegankelijk responsible-disclosure-proces."
-      },
-      {
-        "dim": "S",
-        "code": "S-19",
-        "label": "WAF & perimeterbescherming",
-        "desc": "Applicatiefirewall, DDoS-bescherming, isolatie van blootgestelde diensten."
-      },
-      {
-        "dim": "S",
-        "code": "S-21",
-        "label": "Logs & audittrail",
-        "desc": "Logging van kritieke toegangen, bewaring ≥90 dagen, verifieerbare integriteit."
-      },
-      {
-        "dim": "S",
-        "code": "S-22",
-        "label": "Incidentbeheer",
-        "desc": "Gedocumenteerde incidentresponsprocedure, uitgevoerde simulatieoefening."
-      },
-      {
-        "dim": "S",
-        "code": "S-23",
-        "label": "Back-ups",
-        "desc": "3-2-1-strategie, gedocumenteerde restore-tests, gedefinieerde RTO/RPO."
-      },
-      {
-        "dim": "S",
-        "code": "S-31",
-        "label": "Subverwerkers & derden",
-        "desc": "Lijst van gegevens-subverwerkers, ondertekende DPA's, nalevingsniveau beoordeeld."
-      },
-      {
-        "dim": "S",
-        "code": "S-32",
-        "label": "Beveiligingstraining",
-        "desc": "Teambewustwording van phishing en best practices, minstens jaarlijks."
-      },
-      {
-        "dim": "S",
-        "code": "S-33",
-        "label": "Wachtwoordbeleid",
-        "desc": "Wachtwoordbeheerder verplicht, rotatie van kritieke credentials gedocumenteerd."
-      },
-      {
-        "dim": "S",
-        "code": "S-34",
-        "label": "Omgevingsisolatie",
-        "desc": "Productie geïsoleerd van staging en dev, beperkte toegang."
-      },
-      {
-        "dim": "S",
-        "code": "S-37",
-        "label": "Lopend incident",
-        "desc": "Geen actief onopgelost beveiligingsincident. Blokkerend indien aanwezig."
-      },
-      {
-        "dim": "S",
-        "code": "S-38",
-        "label": "Recht op wissing",
-        "desc": "Operationeel proces voor verwijdering van persoonsgegevens op verzoek."
-      },
-      {
-        "dim": "S",
-        "code": "S-39",
-        "label": "Transborderdoorgifte",
-        "desc": "Kader voor gegevensdoorgifte buiten EU/CH (standaardcontractbepalingen of gelijkwaardig)."
-      },
-      {
-        "dim": "S",
-        "code": "S-40",
-        "label": "Gegevensgovernance",
-        "desc": "Aangestelde data-eigenaar, gedocumenteerd classificatie- en bewaarbeleid."
-      },
-      {
-        "dim": "O",
-        "code": "O-11",
-        "label": "Oprichtersafhankelijkheid",
-        "desc": "Aandeel van de omzet dat rechtstreeks door de oprichter(s) wordt gedragen. Drempel niveau 1: ≤20 %. Blokkerend bij >80 % zonder mitigatieplan."
-      },
-      {
-        "dim": "O",
-        "code": "O-12",
-        "label": "Teamdiepte",
-        "desc": "Minstens één N-1 die zonder de oprichter kan tekenen, aanwerven en beslissen op minstens 2 sleutelfuncties."
-      },
-      {
-        "dim": "O",
-        "code": "O-13",
-        "label": "Opvolgingsplan",
-        "desc": "Geformaliseerd document met sleutelfuncties, interne of externe opvolgers en overgangstermijn."
-      },
-      {
-        "dim": "O",
-        "code": "O-14",
-        "label": "Operationele documentatie",
-        "desc": "Runbooks, SOP's, interne wiki's voor kritieke processen. Gedocumenteerde geschatte inwerktijd van een nieuwe manager."
-      },
-      {
-        "dim": "O",
-        "code": "O-15",
-        "label": "Retentie van sleuteltalent",
-        "desc": "Jaarlijks verloop op kritieke functies (tech, sales, product). Drempel niveau 1: ≤10 % per jaar over 2 jaar."
-      },
-      {
-        "dim": "O",
-        "code": "O-16",
-        "label": "Governance en cap table",
-        "desc": "Heldere aandeelhoudersstructuur, afgestemde aandeelhoudersovereenkomst of statuten, gedocumenteerde stemrechten, geen geschil tussen vennoten."
-      },
-      {
-        "dim": "O",
-        "code": "O-17",
-        "label": "Cultuur en waarden",
-        "desc": "Geformaliseerde bedrijfswaarden, gedocumenteerde interne NPS of jaarlijkse betrokkenheidsenquête."
-      },
-      {
-        "dim": "O",
-        "code": "O-21",
-        "label": "Wervingsproces",
-        "desc": "Gedocumenteerde aanwervingsprocedure, actuele functiebeschrijvingen, geformaliseerd onboardingtraject."
-      },
-      {
-        "dim": "O",
-        "code": "O-22",
-        "label": "Contracten werknemers en dienstverleners",
-        "desc": "Conforme arbeidsovereenkomsten, vertrouwelijkheids- en niet-concurrentiebedingen voor sleutelfuncties, uitvindingen toegewezen aan de entiteit."
-      },
-      {
-        "dim": "O",
-        "code": "O-31",
-        "label": "Overdrachtscapaciteit",
-        "desc": "Gedocumenteerde schatting van de tijd die een koper nodig heeft om operationeel het roer over te nemen (doel: ≤90 dagen)."
-      },
-      {
-        "dim": "O",
-        "code": "O-32",
-        "label": "Klantrelatie gedragen door het team",
-        "desc": "Aandeel van klantaccounts volledig beheerd door het team (zonder oprichter). Churnrisico na overdracht beoordeeld."
-      }
-    ],
-    "subcodesTypicalLabel": "Typische subcodes",
     "tableColGrade": "Grade",
     "tableColLabel": "Label",
     "tableColScore": "Score",
     "tableColRarity": "Zeldzaamheid",
-    "subcodesColCode": "Nr.",
-    "subcodesColLabel": "Label",
-    "subcodesColDef": "Definitie",
     "whyTitle": "Waarom CIFSO 5000-certificering?",
     "whyDesc": "Bestaande standaarden certificeren systemen en processen. CIFSO 5000 certificeert waarde en overdraagbaarheid. Dit zijn twee verschillende, complementaire objecten, geen concurrenten.",
     "useCasesTitle": "Voor wie is CIFSO 5000-certificering?",
@@ -3259,12 +2300,10 @@
     "filterVertical": "Verticalen",
     "filterDACH": "DACH-markt",
     "readMin": "min leestijd",
-    "readMore": "Artikel lezen",
     "backToDiscover": "← Terug naar Blog",
     "featuredLabel": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "ctaGrade": "Mijn asset certificeren",
-    "ctaTransaction": "Elke levensfase begeleiden",
     "searchPlaceholder": "Artikelen zoeken...",
     "noArticles": "Nog geen artikelen in deze categorie.",
     "newsletterLabel": "Nieuwsbrief",
@@ -3276,7 +2315,6 @@
     "newsletterSuccess": "Bedankt! Controleer uw inbox.",
     "newsletterError": "Er is een fout opgetreden. Probeer het opnieuw.",
     "bodyComingSoon": "Volledige inhoud binnenkort beschikbaar.",
-    "ctaTeaser": "Klaar om uw actief in te dienen of de catalogus te raadplegen?",
     "aiEditorialNotice": "Dit artikel is geschreven met behulp van kunstmatige intelligentie en beoordeeld onder de redactionele verantwoordelijkheid van Aegryn. Overeenkomstig artikel 50 van de EU AI Act nemen wij de redactionele verantwoordelijkheid voor deze inhoud op ons.",
     "loadMore": "Meer laden",
     "filterSecurity": "Veiligheid & AI",
@@ -3295,11 +2333,8 @@
       "desc": "De CIFSO 5000-certificering is een kwaliteitsaudit van de waardering van de activa van een onderneming. De waarde van een organisatie ontstaat niet tijdens een onderhandeling: zij wordt lang daarvoor gedocumenteerd, onafhankelijk, reproduceerbaar en verdedigbaar.",
       "ctaSubmit": "Indienen voor certificering",
       "ctaMethod": "Methodologie lezen",
-      "marketLabel": "Waarom nu certificeren",
       "marketTitle": "Certificering creëert\nmeetbare waarde.",
       "marketDesc": "Een gecertificeerde organisatie versnelt financiering, versterkt de geloofwaardigheid bij investeerders, vereenvoudigt de overdracht en communiceert haar waarde onafhankelijk op elke markt.",
-      "marketCta": "Certificering starten",
-      "marketCtaSecondary": "Methodologie lezen",
       "useCasesLabel": "Wie certificeert, en waarom",
       "useCasesTitle": "De Certificering CIFSO 5000\nis voor alle actoren.",
       "useCasesDesc": "Of het nu gaat om financieringsvoorbereiding, bedrijfsoverdracht, investeringsbeslissing of banklening, de Certificering CIFSO 5000 documenteert de waarde van uw organisatie voor alle relevante gesprekspartners.",
@@ -3400,10 +2435,10 @@
         {
           "profile": "Investeringsbank / M&A-adviseur",
           "readings": [
-            "Certificeerbaar mandaat. Ondersteunt premiumproces en topniveau kopersgroep.",
+            "Certificeerbaar. Ondersteunt een veeleisende overname of overdracht en vergroot de kring van mogelijke overnemers van de onderneming of haar activa.",
             "Standaardmandaat, volledig proces uitvoerbaar. Volledige documentatie voor informatiememorandum.",
             "Mandaat met gedocumenteerde voorbehouden. Verbeterplan aanbevolen in de dataroom.",
-            "Mandaat met voorwaarden. Kopersgroep kan kleiner zijn. Waardeplan versterkt positionering.",
+            "Certificering met voorwaarden. De kring van mogelijke overnemers kan kleiner zijn. Het waardeplan versterkt de positionering.",
             "Voorafgaande saneringsfase vereist. Tijdsimpact: 60–90 extra dagen."
           ],
           "icon": "landmark"
@@ -3448,7 +2483,7 @@
             "Standaard acquisitietijdlijn. Documentatie volledig. Betrouwbare basis voor SPA.",
             "Acquisitie met vastgestelde voorbehouden. Garantieclausules of prijsaanpassingsmechanisme aanbevolen.",
             "Acquisitie met voorwaarden. Integratieplan en waardecorrectie te onderhandelen.",
-            "Transactie niet aanbevolen zonder voorafgaande sanering. Kopersrisico verhoogd."
+            "Overname niet aanbevolen zonder voorafgaande sanering. Verhoogd risico voor de overnemer."
           ],
           "icon": "target"
         }
@@ -3537,17 +2572,9 @@
           "price": "Vanaf €15.000"
         }
       ],
-      "whitepaperLabel": "Officiële documentatie",
       "whitepaperTitle": "Aegryn : Methodologie Certificering CIFSO 5000",
       "whitepaperDesc": "Overzicht van het protocol, vijf dimensies, notenschaal, certificeringsproces en onafhankelijkheidsbeginselen, het officiële methodologiewhitepaper.",
-      "whitepaperCta": "Whitepaper lezen",
-      "whitepaperVersion": "CIFSO 5000 : Officieel methodologiewhitepaper",
       "wpNavBack": "Terug naar certificering",
-      "wpNavPrint": "Afdrukken / PDF opslaan",
-      "wpProtocol": "Protocol",
-      "wpIssuer": "Uitgever",
-      "wpJurisdiction": "Rechtsgebied",
-      "wpEyebrow": "Aegryn Certificering : Officiële Methodologie",
       "wpHeroTitle": "Gebouwd om te blijven.",
       "wpHeroDesc": "Het Certificering CIFSO 5000-protocol: vijf dimensies van organisatiewaarde, een onafhankelijke note en een verdedigbaar document voor alle belanghebbenden.",
       "wpTocTitle": "Inhoudsopgave",
@@ -3564,33 +2591,16 @@
         "10. Disclaimer"
       ],
       "wpS1Title": "1. Wat is de Certificering CIFSO 5000?",
-      "wpS1Body1": "De <strong>Certificering CIFSO 5000</strong> is een onafhankelijk organisatiebeoordelingsprotocol ontwikkeld door Aegryn. Het evalueert en certificeert de waarde en overdraagbaarheid van een organisatie in vijf gestructureerde dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, en Organisatie & Talent.",
-      "wpS1Body2": "In tegenstelling tot bestaande certificeringsstandaarden, die systemen, processen en operationele conformiteit verifiëren, certificeert de Certificering CIFSO 5000 de <em>organisatiewaarde</em>: de gedocumenteerde, verdedigbare basis voor een waardering, een financieringsbeslissing, een investering of een bedrijfsoverdracht. Dit zijn twee verschillende objecten. Aanvullend, niet concurrerend.",
-      "wpS1Callout": "„Waar bestaande standaarden systemen certificeren, certificeert CIFSO 5000 waarde en overdraagbaarheid.“",
       "wpS2Title": "2. Voor wie is het bedoeld, gebruikscases",
       "wpS3Title": "3. De vijf waardedimensies (CIFSO)",
-      "wpS3Intro": "Het CIFSO-framework beoordeelt vijf onafhankelijke waardedimensies, elk gelijkwaardig gewogen op 25 punten. De totaalscore (0–100) bepaalt de eindbeoordeling.",
       "wpS4Title": "4. Notenschaal en definities",
-      "wpS4ColGrade": "Note",
-      "wpS4ColLevel": "Niveau",
-      "wpS4ColMeaning": "Betekenis",
       "wpS5Title": "5. CIFSO 5000 en bestaande certificeringsstandaarden",
-      "wpS5Intro": "De Certificering CIFSO 5000 is ontworpen om naast bestaande certificeringsstandaarden te functioneren, niet om ze te vervangen. De onderstaande tabel positioneert elke CIFSO-dimensie ten opzichte van wat bestaande standaarden afdekken.",
-      "wpS5ColDim": "CIFSO-dimensie",
-      "wpS5ColExisting": "Bestaande standaarden",
-      "wpS5ColCifso": "CIFSO-5000-bereik",
-      "wpS5Note": "De Certificering CIFSO 5000 is geen accreditatie bij een nationale of internationale accreditatie-instelling. Het is een onafhankelijk, eigendomsrechtelijk protocol dat bestaande standaarden aanvult zonder ze te vervangen.",
       "wpS6Title": "6. Certificeringsproces",
-      "wpS6Intro": "De standaardduur is 15 tot 35 werkdagen afhankelijk van het formaat. Alle certificeringen volgen hetzelfde protocol ongeacht het formaat. De duur weerspiegelt omvang en complexiteit.",
       "wpS7Title": "7. Onafhankelijkheidsbeginselen",
       "wpS8Title": "8. Weigeringsvoorwaarden",
-      "wpS8Intro": "De volgende voorwaarden leiden tot een automatische weigering om één of meer dimensies, of de gehele certificering, te certificeren.",
       "wpS9Title": "9. Prijzen",
-      "wpS9Intro": "Prijzen zijn exclusief btw, geregeld door Zwitsers recht en indicatief. Een definitieve offerte wordt na pre-kwalificatie op basis van de bevestigde omvang opgesteld.",
-      "wpS9AllTiersLabel": "Alle formaten bevatten",
       "wpS9AllTiersDesc": "Volledig CIFSO-5000-audit op 5 dimensies · Onafhankelijk certificeringsrapport · Officiële note · Inschrijving in het gecertificeerde Aegryn-register · Geldigheid certificaat zoals per formaat vermeld",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterVersion": "Certificering CIFSO 5000 v4.0 : Officiële Methodologie",
       "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Zwitserland",
       "isoColDimension": "Dimensie",
       "isoColExisting": "Bestaande standaarden",
@@ -3715,803 +2725,7 @@
       "title": "Ontvang de grade die\nwaarde geeft aan uw asset.",
       "desc": "De Aegryn-certificering bevestigt onafhankelijk de waarde van uw organisatie in elke fase van haar levenscyclus.",
       "cta": "Mijn asset indienen"
-    },
-    "methodology": {
-      "label": "Methodologie",
-      "title": "Een reproduceerbaar protocol.\nGeen subjectieve mening.",
-      "desc": "De Aegryn Grade-methodologie is gedocumenteerd, geversioneerd en geauditeerd.",
-      "versionLabel": "Protocolversie",
-      "version": "Aegryn Grade 2026",
-      "principlesLabel": "Grondbeginselen",
-      "principles": [
-        {
-          "title": "Reproduceerbaarheid",
-          "desc": "Twee onafhankelijke analisten moeten tot hetzelfde grade komen (±1 sub-code)."
-        },
-        {
-          "title": "Traceerbaarheid",
-          "desc": "Elke grade is digitaal ondertekend en geversioneerd. Elke wijziging genereert een nieuwe traceerbare versie."
-        },
-        {
-          "title": "Onafhankelijkheid",
-          "desc": "Analisten hebben geen financieel belang in de assets die ze certificeren."
-        },
-        {
-          "title": "Herzienbaarhheid",
-          "desc": "Een grade kan worden herzien na gedocumenteerde verbetering."
-        }
-      ],
-      "scoringLabel": "Scoresysteem",
-      "scoringDesc": "Elke dimensie wordt beoordeeld van 0 tot 25. De som bepaalt de grade.",
-      "scores": [
-        {
-          "range": "90–100",
-          "grade": "AEG ★",
-          "color": "grade-star"
-        },
-        {
-          "range": "75–89",
-          "grade": "AAA",
-          "color": "grade-aaa"
-        },
-        {
-          "range": "60–74",
-          "grade": "AA",
-          "color": "grade-aa"
-        },
-        {
-          "range": "45–59",
-          "grade": "A",
-          "color": "grade-a"
-        },
-        {
-          "range": "30–44",
-          "grade": "B",
-          "color": "grade-b"
-        }
-      ]
     }
-  },
-  "transact": {
-    "meta": {
-      "title": "Waarderen | De waarde van uw organisatie meten, certificeren en realiseren",
-      "desc": "Aegryn Waarderen: CIFSO Valuation Index om te meten, CIFSO 5000-certificering om te certificeren, daarna verkoop, acquisitie, kapitaalronde of openstelling van het kapitaal onder exclusief mandaat."
-    },
-    "index": {
-      "eyebrow": "AEGRYN. WAARDEREN",
-      "heroTitle": "De waarde van uw organisatie\nmeten, certificeren, realiseren.",
-      "heroDesc": "Een onderneming waarderen is meer dan haar overdragen. Het begint met het meten van haar waarde, het documenteren en het onafhankelijk certificeren ervan. Verkoop, acquisitie, kapitaalronde of openstelling van het kapitaal zijn daarna evenzoveel wegen om die waarde te realiseren.",
-      "ctaCatalog": "Catalogus bekijken",
-      "ctaMandate": "Mandaat indienen",
-      "segmentsLabel": "VIER WEGEN OM WAARDE TE REALISEREN",
-      "segmentsTitle": "Wat uw situatie ook is,\ner bestaat een Aegryn-mandaat.",
-      "segment": {
-        "sell": {
-          "kicker": "Asset-overdracht",
-          "title": "U wilt verkopen",
-          "desc": "Draag uw tech-asset of bedrijf over aan een gekwalificeerde koper. CIFSO 5000-certificering, exclusief mandaat, systematische NDA.",
-          "cta": "Verkoopsmandaat"
-        },
-        "buy": {
-          "kicker": "Acquisitiezoektocht",
-          "title": "U wilt verwerven",
-          "desc": "Geef Aegryn opdracht om targets te identificeren op basis van uw criteria. Toegang tot de gesloten catalogus en ons propriëtair netwerk.",
-          "cta": "Acquisitiemandaat"
-        },
-        "raise": {
-          "kicker": "Kapitaalzoektocht",
-          "title": "U zoekt investeerders",
-          "desc": "Toegang tot ons netwerk van gekwalificeerde family offices, fondsen en corporates. Gestructureerd en vertrouwelijk proces onder Zwitsers recht.",
-          "cta": "Kapitaalmandaat"
-        },
-        "equity": {
-          "kicker": "Kapitaalontsluiting",
-          "title": "U zoekt partners",
-          "desc": "Draag minderheidsaandelen over om een strategische, operationele of financiële partner in uw kapitaal op te nemen.",
-          "cta": "Equity-mandaat"
-        }
-      },
-      "valueLabel": "DE AEGRYN TRANSACT-WAARDE",
-      "valueTitle": "Een gekwalificeerde kopersbase.\nGecertificeerde assets.",
-      "valueDesc": "Aegryn werkt alleen met kopers die het KYC-proces hebben voltooid en de NDA hebben ondertekend. Elk asset wordt CIFSO 5000-gewaardeerd voordat het wordt gepresenteerd. Dat is het verschil tussen een transactie die sluit en een die mislukt.",
-      "valueCta": "Gecertificeerde catalogus bekijken",
-      "howLabel": "TRANSACT-PROCES IN 4 STAPPEN",
-      "how": {
-        "step1": {
-          "title": "Exclusief mandaat",
-          "desc": "U ondertekent een mandaat met Aegryn. Looptijd, voorwaarden en succesvergoeding contractueel vastgelegd."
-        },
-        "step2": {
-          "title": "Kwalificatie en matching",
-          "desc": "Aegryn identificeert de ideale tegenpartij in zijn gekwalificeerde netwerk. Het asset wordt alleen onder NDA gepresenteerd."
-        },
-        "step3": {
-          "title": "Term sheet en onderhandeling",
-          "desc": "Partijen presenteren gestructureerde term sheets. Aegryn begeleidt de onderhandeling en tegenoffers."
-        },
-        "step4": {
-          "title": "Veilige afsluiting",
-          "desc": "Institutionele escrow, afsluiting onder Zwitsers recht, veilige overdracht. Maximale bescherming voor beide partijen."
-        }
-      },
-      "ctaStripLabel": "AEGRYN TRANSACT",
-      "ctaStripTitle": "Klaar om uw transactie toe te vertrouwen aan de Europese referentie?",
-      "ctaStripMandate": "Mandaat indienen",
-      "ctaStripCatalog": "Catalogus bekijken",
-      "ctaGrade": "CIFSO 5000-certificering",
-      "ctaStripContact": "Contact opnemen",
-      "ctaValuation": "Waarde schatten",
-      "introLabel": "EEN SEQUENTIE IN TWEE STAPPEN",
-      "introTitle": "Eerst meten en certificeren.\nDaarna realiseren.",
-      "tools": {
-        "valuation": {
-          "kicker": "Stap 1",
-          "title": "CIFSO Valuation Index",
-          "desc": "Onafhankelijke schatting van de waarde van uw organisatie, op basis van Europese marktmultiples en de CIFSO-score. Een eerste referentie in vijftien minuten.",
-          "cta": "Waarde schatten"
-        },
-        "certification": {
-          "kicker": "Stap 2",
-          "title": "CIFSO 5000-certificering",
-          "desc": "Onafhankelijke audit op vijf dimensies: Code, IP, Financiën, Beveiliging, Organisatie. Een verifieerbare grade, twaalf maanden geldig, die waarde en overdraagbaarheid documenteert.",
-          "cta": "De certificering ontdekken"
-        }
-      }
-    },
-    "mandate": {
-      "meta": {
-        "title": "Mandaat indienen | Aegryn TRANSACT",
-        "desc": "Vertrouw uw transactie toe aan Aegryn: asset-overdracht, acquisitie of kapitaalzoektocht. Antwoord in 48u, exclusief mandaat 60 dagen, vertrouwelijk proces."
-      },
-      "eyebrow": "AEGRYN TRANSACT | EXCLUSIEF MANDAAT",
-      "heroTitle": "Welk mandaat wilt u\nons toevertrouwen?",
-      "heroDesc": "Al onze transacties verlopen onder exclusief mandaat, in een gesloten catalogus, met gekwalificeerde tegenpartijen. De NDA is systematisch vanaf het eerste contact.",
-      "segmentsLabel": "KIES UW SEGMENT",
-      "segment": {
-        "sell": {
-          "kicker": "Verkoopsmandaat",
-          "title": "Een asset of bedrijf verkopen",
-          "desc": "U bent oprichter, holding of studio. U wilt uw tech-asset of bedrijf onder de beste voorwaarden overdragen.",
-          "points": [
-            "Verplichte CIFSO 5000-certificering vóór elke presentatie",
-            "Presentatie onder NDA uitsluitend aan gekwalificeerde kopers",
-            "Doelverkoopprijs vastgesteld door de verkoper",
-            "Institutionele escrow en veilige afsluiting",
-            "Alleen succesvergoeding"
-          ],
-          "cta": "Verkoopsmandaat indienen"
-        },
-        "buy": {
-          "kicker": "Acquisitiemandaat",
-          "title": "Een acquisitiedoelwit zoeken",
-          "desc": "U bent ondernemer, corporate of family office. U wilt een tech-asset verwerven op basis van precieze criteria.",
-          "points": [
-            "Toegang tot de CIFSO 5000-gecertificeerde offmarket-catalogus",
-            "Matching op basis van uw criteria (sector, ARR, grade, omvang)",
-            "Wederzijdse NDA vóór elke openbaarmaking",
-            "Begeleiding bij due diligence en structurering",
-            "Alleen transactievergoeding"
-          ],
-          "cta": "Acquisitiemandaat indienen"
-        },
-        "fundraise": {
-          "kicker": "Kapitaalzoektocht",
-          "title": "Gekwalificeerde investeerders vinden",
-          "desc": "U bent oprichter van een gecertificeerd tech-asset. U zoekt institutionele of private investeerders in ons gekwalificeerde netwerk.",
-          "points": [
-            "Aegryn-netwerk: family offices, fondsen, corporates",
-            "Presentatie van uw dossier onder exclusieve NDA",
-            "Minimumticket: vanaf CHF 100.000",
-            "Gestructureerd proces, gemiddelde looptijd 8 weken",
-            "Succesvergoeding bij afsluiting"
-          ],
-          "cta": "Kapitaalmandaat indienen"
-        },
-        "equity_stake": {
-          "kicker": "Kapitaalontsluiting",
-          "title": "Een strategische partner opnemen",
-          "desc": "U wilt minderheidsaandelen overdragen om een operationele, financiële of strategische partner in uw kapitaal op te nemen.",
-          "points": [
-            "Operationele, financiële of industriële partner",
-            "Overdracht van 5% tot 49% van het kapitaal",
-            "CIFSO 5000-waardering vóór elke onderhandeling",
-            "Aandeelhoudersovereenkomst onder toezicht van onze juridisch adviseurs",
-            "Absolute vertrouwelijkheid gedurende het gehele proces"
-          ],
-          "cta": "Equity-mandaat indienen"
-        }
-      },
-      "processLabel": "HET MANDAATPROCES",
-      "process": {
-        "step1": {
-          "title": "Eerste contact",
-          "desc": "U beschrijft uw situatie. Wij beoordelen de haalbaarheid en bepalen het geschikte mandaattype."
-        },
-        "step2": {
-          "title": "Ondertekening van het mandaat",
-          "desc": "Exclusief mandaat voor een bepaalde looptijd ondertekend. Voorwaarden van de succesvergoeding contractueel vastgelegd."
-        },
-        "step3": {
-          "title": "Uitvoering en afsluiting",
-          "desc": "Aegryn identificeert de tegenpartij, leidt de onderhandelingen en begeleidt de afsluiting in een veilig kader onder Zwitsers recht."
-        }
-      },
-      "ndaLabel": "MAXIMALE BESCHERMING",
-      "ndaTitle": "Geen transactie zonder NDA. Geen uitzonderingen.",
-      "ndaDesc": "Al onze mandaten bevatten een versterkte vertrouwelijkheidsovereenkomst. Identiteiten en financiële gegevens worden nooit openbaar gemaakt zonder voorafgaande schriftelijke toestemming van beide partijen.",
-      "ndaCta": "Contact opnemen",
-      "form": {
-        "arrChf": "Huidige ARR (CHF)",
-        "arrPlaceholder": "Bijv. 400000",
-        "budgetMaxChf": "Maximumbudget (CHF)",
-        "budgetMinChf": "Minimumbudget (CHF)",
-        "budgetNote": "Indicatieve waardering voor de verkoop / ticket voor de ronde",
-        "budgetPlaceholder": "Bijv. 500000",
-        "companyName": "Bedrijf / Structuur (optioneel)",
-        "companyPlaceholder": "Holding, startup, kantoor…",
-        "contactEmail": "E-mailadres",
-        "contactName": "Volledige naam",
-        "currentMrr": "Huidige MRR (CHF)",
-        "description": "Beschrijving & context",
-        "descriptionPlaceholder": "Beschrijf uw situatie, doelstellingen, beperkingen en alle relevante informatie voor ons team.",
-        "equityOfferedPct": "Aangeboden kapitaal (%)",
-        "equityPctPlaceholder": "Bijv. 15",
-        "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem rechtstreeks contact met ons op.",
-        "hasIp": "Geregistreerd IP of octrooi?",
-        "hasIpNo": "Nee",
-        "hasIpPending": "In behandeling",
-        "hasIpYes": "Ja",
-        "mrrPlaceholder": "Bijv. 80000",
-        "partnerType": "Type gezochte partner",
-        "partnerTypePlaceholder": "Operationeel, financieel, industrieel…",
-        "profitability": "Beoogde winstgevendheid",
-        "profitabilityPlaceholder": "Bijv. positief EBITDA, breakeven, early stage",
-        "revenueChf": "Jaarlijkse omzet (CHF)",
-        "revenuePlaceholder": "Bijv. 600000",
-        "sectionAsset": "ACTIEF / BEDRIJF",
-        "sectionBudget": "BUDGET / WAARDERING",
-        "sectionContact": "UW GEGEVENS",
-        "sectionContext": "CONTEXT & DOELSTELLINGEN",
-        "sectionType": "MANDAATTYPE",
-        "stakePctMax": "Max. overgedragen aandelenbelang (%)",
-        "stakePlaceholder": "Bijv. 30",
-        "submit": "Mijn mandaat indienen",
-        "submitting": "Verzenden…",
-        "successDesc": "Ons team beoordeelt uw aanvraag binnen 48–72 werkuren en neemt contact met u op.",
-        "successTitle": "Mandaat ontvangen.",
-        "swissLawLabel": "Door dit formulier te verzenden, erken ik dat Aegryn-mandaten onder Zwitsers recht opereren en dat elke transactie onderworpen is aan een systematische NDA.",
-        "targetArrMin": "Minimum doel-ARR (CHF)",
-        "targetCountries": "Doellanden (kommagescheiden)",
-        "targetCountriesPlaceholder": "Bijv. fr, ch, de",
-        "teamPlaceholder": "Bijv. 4",
-        "teamSize": "Teamgrootte",
-        "typeLabel": "Welk type mandaat wilt u indienen?",
-        "typeOptions": {
-          "buy": "Acquisitiemandat: Een doelwit zoeken",
-          "equity_stake": "Kapitaalopening: Een strategische partner inbrengen",
-          "fundraise": "Kapitaalwerving: gekwalificeerde investeerders vinden",
-          "sell": "Verkoopsmandaat: Een actief of bedrijf verkopen"
-        },
-        "typePlaceholder": "Selecteer een mandaattype",
-        "useOfFunds": "Gebruik van de middelen",
-        "useOfFundsPlaceholder": "Uitbreiding, R&D, werving…",
-        "vertical": "Verticale sector",
-        "verticalOptions": {
-          "deeptech": "Deeptech / AI",
-          "ecommerce": "E-commerce",
-          "edtech": "Edtech",
-          "fintech": "Fintech",
-          "healthtech": "Healthtech",
-          "infra_devtools": "Infra / DevTools",
-          "marketplace": "Marketplace",
-          "media_content": "Media / Inhoud",
-          "other": "Overige",
-          "saas_b2b": "SaaS B2B",
-          "saas_b2c": "SaaS B2C"
-        },
-        "verticalOther": "Specificeer de sector",
-        "verticalOtherPlaceholder": "Bijv. LegalTech, PropTech...",
-        "verticalPlaceholder": "Selecteer een sector",
-        "yoyGrowth": "YoY-groei (%)",
-        "yoyPlaceholder": "Bijv. 35"
-      }
-    },
-    "sell": {
-      "meta": {
-        "title": "Uw asset overdragen | Aegryn TRANSACT",
-        "desc": "Exclusief verkoopsmandaat. CIFSO 5000-certificering, officiële grade, voorgekwalificeerde kopers onder NDA. Alleen succesvergoeding."
-      },
-      "hero": {
-        "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
-        "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
-        "desc": "Aegryn certificeert uw asset CIFSO 5000, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
-        "ctaValuation": "Indicatieve waardering",
-        "ctaMandat": "Mandaat indienen"
-      },
-      "label": "AEGRYN TRANSACT | VERKOOPSMANDAAT",
-      "title": "Uw tech-asset overdragen\ntegen de prijs die het verdient.",
-      "desc": "Aegryn certificeert uw asset CIFSO 5000, kent de officiële grade toe en presenteert het onder exclusieve NDA aan voorgekwalificeerde institutionele kopers. Alleen succesvergoeding.",
-      "ctaButton": "Verkoopsmandaat indienen",
-      "steps": {
-        "label": "VERKOPERSPROCES IN 3 STAPPEN",
-        "title": "Een gestructureerd proces van certificering tot afsluiting.",
-        "step2Label": "GEREEDHEIDS-SCORE",
-        "step2Title": "Beoordeel de volwassenheid van uw asset vóór certificering.",
-        "s1": {
-          "title": "CIFSO 5000-certificering",
-          "desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
-          "cta": "Certificering verkrijgen"
-        },
-        "s2": {
-          "title": "Presentatie onder NDA",
-          "desc": "Het gecertificeerde asset wordt opgenomen in de gesloten offmarket-catalogus. Elke koper ondertekent een NDA voordat hij toegang krijgt tot vertrouwelijke documenten."
-        },
-        "s3": {
-          "title": "Veilige afsluiting",
-          "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht. Maximale bescherming voor verkoper en koper.",
-          "cta": "Mandaat indienen"
-        }
-      },
-      "guarantees": {
-        "g1": {
-          "title": "Absolute vertrouwelijkheid",
-          "desc": "NDA ondertekend vóór elke openbaarmaking. Geen openbare publicatie."
-        },
-        "g2": {
-          "title": "Alleen gekwalificeerde kopers",
-          "desc": "KYC-proces voltooid. Verwervingscapaciteit geverifieerd."
-        },
-        "g3": {
-          "title": "Zwitserse rechtsbescherming",
-          "desc": "Institutionele escrow. Veilige afsluiting onder Zwitserse jurisdictie."
-        },
-        "g4": {
-          "title": "Verplichte CIFSO 5000-certificering",
-          "desc": "Officiële grade toegekend vóór elke presentatie. Totale transparantie."
-        },
-        "label": "AEGRYN-GARANTIES",
-        "title": "Maximale bescherming voor elke transactie."
-      },
-      "cta": {
-        "title": "Klaar om uw asset over te dragen?",
-        "desc": "Ons team begeleidt u van waardering tot afsluiting.",
-        "ctaMandat": "Mandaat indienen",
-        "ctaAdvisor": "Praten met een adviseur"
-      },
-      "step1Title": "CIFSO 5000-certificering",
-      "step1Desc": "Uw asset doorloopt het Aegryn-waarderingsprotocol in 4 dimensies: Code, Infrastructuur, Financiën, Beveiliging. Een officiële AEG-grade wordt toegekend vóór elke presentatie.",
-      "step2Title": "Presentatie onder NDA",
-      "step2Desc": "Het gecertificeerde asset wordt opgenomen in de gesloten offmarket-catalogus. Elke koper ondertekent een NDA voordat hij toegang krijgt tot vertrouwelijke documenten.",
-      "step3Title": "Term sheet en onderhandeling",
-      "step3Desc": "Gekwalificeerde kopers dienen gestructureerde offertes in. Aegryn begeleidt de onderhandeling en tegenoffers tot overeenstemming.",
-      "step4Title": "Veilige afsluiting",
-      "step4Desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht. Maximale bescherming voor verkoper en koper.",
-      "feesTitle": "VERGOEDINGSSTRUCTUUR",
-      "feesDesc": "Geen voorafgaande vergoedingen. Aegryn wordt uitsluitend vergoed bij transactiesucces. De CIFSO 5000-certificering wordt apart gefactureerd op basis van de toegekende grade.",
-      "feesCert": "CIFSO 5000-CERTIFICERING",
-      "feesCertValue": "Gefactureerd bij afgifte van de officiële grade. Bedrag afhankelijk van de complexiteit van het asset, gecommuniceerd bij ondertekening van het mandaat.",
-      "feesSuccess": "SUCCESVERGOEDING",
-      "feesSuccessValue": "Alleen ingehouden bij afsluiting. Berekend op de netto-verkoopprijs. Tarief gecommuniceerd bij ondertekening van het exclusieve mandaat."
-    },
-    "buy": {
-      "label": "AEGRYN TRANSACT | ACQUISITIEMANDAAT",
-      "title": "Een gecertificeerd tech-asset verwerven.\nZonder ruis. Onder NDA.",
-      "desc": "Toegang tot de Aegryn offmarket-catalogus: CIFSO 5000-gecertificeerde assets, gekwalificeerde verkopers, gestructureerd proces. Elke transactie wordt geregeld door een exclusief mandaat onder Zwitsers recht.",
-      "cta": "Acquisitiemandaat indienen",
-      "qualifTitle": "GEKWALIFICEERD KOPERSPROFIEL",
-      "qualifDesc": "De Aegryn-catalogus is voorbehouden aan kopers die het kwalificatieproces hebben voltooid. Deze vereiste beschermt de vertrouwelijkheid van verkopers en garandeert de kwaliteit van de uitwisseling.",
-      "qualifItems": [
-        "Ondernemer, corporate, family office of investeringsfonds",
-        "Aangetoonde verwervingscapaciteit (CHF 100.000, CHF 2.500.000)",
-        "KYC-proces voltooid en gevalideerd door het Aegryn-team",
-        "NDA ondertekend vóór toegang tot de catalogus of asset-fiches",
-        "Vertrouwelijkheidsverplichting met betrekking tot de identiteiten van verkopers"
-      ],
-      "processTitle": "ACQUISITIEPROCES",
-      "processSteps": [
-        {
-          "num": "01",
-          "title": "Kwalificatie",
-          "desc": "U dient uw profiel en criteria in. Aegryn valideert uw kwalificatie binnen 48 werkuren."
-        },
-        {
-          "num": "02",
-          "title": "Catalogustoegang",
-          "desc": "U krijgt toegang tot gecertificeerde asset-fiches die overeenkomen met uw criteria. NDA vooraf ondertekend."
-        },
-        {
-          "num": "03",
-          "title": "Offerte en due diligence",
-          "desc": "U dient een gestructureerde offerte in. Aegryn organiseert de due diligence in een veilig kader."
-        },
-        {
-          "num": "04",
-          "title": "Afsluiting",
-          "desc": "Institutionele escrow, veilige overdracht, afsluiting onder Zwitsers recht."
-        }
-      ]
-    }
-  },
-  "transaction": {
-    "meta": {
-      "title": "Veiling, Gecertificeerde tech-assettransacties",
-      "desc": "Aegryn-sessies: gecertificeerde tech-assets kopen of verkopen. Vertrouwelijk proces, CIFSO 5000-certificering, institutioneel escrow en gekwalificeerde kopers."
-    },
-    "index": {
-      "label": "Aegryn M&A-Transacties",
-      "title": "Het gecertificeerde transactieplatform\nvoor Europese tech-assets.",
-      "desc": "Geen open biedingen. Private, rigoureuze sessies voor gecertificeerde verkopers en gekwalificeerde kopers.",
-      "ctaCatalog": "Catalogus bekijken",
-      "ctaSession": "Volgende sessie",
-      "ctaSubmit": "Asset indienen",
-      "howLabel": "Hoe het werkt",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Certificering",
-          "desc": "Elk gepresenteerd asset heeft een Aegryn Grade."
-        },
-        {
-          "num": "02",
-          "title": "Kwalificatie",
-          "desc": "Kopers worden gekwalificeerd voor toegang."
-        },
-        {
-          "num": "03",
-          "title": "Sessie",
-          "desc": "Bilaterale onderhandelingen onder vertrouwelijkheid en escrow."
-        },
-        {
-          "num": "04",
-          "title": "Closing",
-          "desc": "Escrow, contractondertekening, eigendomsoverdracht."
-        }
-      ],
-      "statsLabel": "In cijfers",
-      "stats": [
-        {
-          "value": "<25%",
-          "label": "Acceptatiepercentage"
-        },
-        {
-          "value": "100%",
-          "label": "Gecertificeerde assets"
-        },
-        {
-          "value": "Escrow",
-          "label": "Fondsveiligheid"
-        },
-        {
-          "value": "NDA",
-          "label": "Systematische vertrouwelijkheid"
-        }
-      ],
-      "marketLabel": "De markt in 2026",
-      "marketTitle": "Een bifurcerende markt.",
-      "marketDesc": "Gecertificeerde en niet-gecertificeerde tech-assets spelen niet meer in dezelfde categorie. Het multiple-verschil is in 3 jaar met 2,5x gegroeid, en blijft groeien.",
-      "marketCta": "Mijn asset waarderen",
-      "segmentLabel": "ONS SEGMENT",
-      "segmentTitle": "100K€ : 2,5M€.\nWaar tech-assets echte waarde hebben maar onzichtbaar blijven.",
-      "segmentDesc": "Te groot voor informele doorverkoop. Te klein voor investeringsbanken. Aegryn structureert transacties die niemand anders certificeert, met de institutionele nauwkeurigheid die dit segment verdient.",
-      "segmentItems": [
-        "Assets tussen 100.000€ en 2.500.000€ waardering",
-        "B2B SaaS, marktplaatsen, digitaal IP, AI-protocollen",
-        "Verkopers: oprichters, studio's, operationele holdings",
-        "Kopers: ondernemers, corporates, family offices"
-      ]
-    },
-    "catalog": {
-      "label": "Aegryn Catalogus",
-      "title": "Nu beschikbare\ngecertificeerde assets.",
-      "desc": "Elk vermeld asset heeft het Aegryn-certificeringsprotocol doorstaan.",
-      "filterAll": "Alle grades",
-      "filterStar": "AEG ★",
-      "filterAAA": "AAA",
-      "filterAA": "AA",
-      "filterA": "A",
-      "filterB": "B",
-      "emptyTitle": "Catalogus in voorbereiding.",
-      "emptyDesc": "De volgende sessie wordt samengesteld. Meld u aan om als eerste op de hoogte te worden gesteld.",
-      "notifyLabel": "Mij melden",
-      "assetGrade": "Grade",
-      "assetCategory": "Categorie",
-      "assetRevenue": "Indicatieve ARR",
-      "assetAsk": "Verkoopprijs",
-      "viewAsset": "Dossier bekijken",
-      "confidential": "Vertrouwelijk, NDA vereist",
-      "thirdPartyNote": "Deze assets worden aangeboden door onafhankelijke verkopers. Aegryn treedt op als gecertificeerd tussenpersoon en transactieorganisator, niet als verkoper.",
-      "notifyEmail": "Uw e-mail",
-      "notifyEmailPlaceholder": "oprichter@voorbeeld.com",
-      "notifyType": "U bent",
-      "notifyTypeIndividual": "Ondernemer",
-      "notifyTypeCompany": "Bedrijf",
-      "notifyTypeFund": "Fonds / Family Office",
-      "notifyCapacity": "Acquisitiecapaciteit",
-      "notifySectors": "Interessesectoren",
-      "notifyCta": "Mij als eerste notificeren",
-      "notifyLoading": "Verzenden...",
-      "notifyError": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "notifySuccessTitle": "Registratie bevestigd",
-      "notifySuccessDesc": "U wordt als eerste gecontacteerd zodra de catalogus voor leden wordt geopend.",
-      "notifySuccessCta": "Mijn asset indienen voor certificering",
-      "noResults": "Geen activa komen overeen met de geselecteerde filters",
-      "resetFilters": "Alle activa weergeven",
-      "portfolioLink": "Aegryn Portfolio",
-      "conditionalAccess": "Voorwaardelijke toegang",
-      "qualifiedOnly": "Catalogus voorbehouden aan gekwalificeerde kopers",
-      "accessDesc": "Bedrijfsnamen en volledige asset-dossiers zijn alleen toegankelijk na accountaanmaak, ondertekening van de NDA en aanvaarding van de Aegryn-voorwaarden.",
-      "step1": "Een kopersaccount aanmaken",
-      "step2": "Aegryn NDA ondertekenen",
-      "step3": "Voorwaarden accepteren",
-      "loginCta": "Inloggen",
-      "registerCta": "Een account aanmaken",
-      "sellerCta": "Wilt u uw activa in de volgende catalogus opnemen?",
-      "arrAll": "Alle",
-      "arrBelow100k": "< 100K",
-      "arr100kTo1m": "100K – 1M",
-      "arr1mTo5m": "1M – 5M",
-      "arrAbove5m": "> 5M",
-      "assetCount": "{count} asset{count, plural, one {} other {s}}, huidige sessie",
-      "assetsHidden": "{n} verborgen door filters",
-      "resetFiltersShort": "Resetten",
-      "viewFullDossier": "Toegang tot het volledige dossier",
-      "kycPending": "Uw KYC-verificatie is in behandeling. U wordt op de hoogte gesteld zodra deze is gevalideerd.",
-      "assetsAvailable": "gecertificeerde assets beschikbaar in de catalogus",
-      "requestQualifiedAccess": "Toegang tot de gecertificeerde catalogus",
-      "notifySuccessCtaAcquirer": "Catalogus bekijken",
-      "intro": "De Aegryn off-market catalogus brengt gecertificeerde digitale assets samen, klaar voor transactie en toegankelijk voor gekwalificeerde kopers. Elk dossier is geauditeerd, gewaardeerd en gestructureerd volgens het Aegryn-protocol voor toegang.",
-      "upcomingAssets": "Komende assets",
-      "seller": {
-        "label": "EEN ASSET VERKOPEN",
-        "title": "Wilt u uw tech asset verkopen?",
-        "desc": "Aegryn begeleidt oprichters en leidinggevenden bij de structurering en overdracht van hun digitale assets. Audit, waardering, dataroom, identificatie van kopers, signing.",
-        "cta": "Indienen voor certificering",
-        "ctaHref": "/grade/submit"
-      },
-      "notifySectorOther": "Overige",
-      "notifySectorOtherPlaceholder": "Geef uw sector op…",
-      "buyer": {
-        "label": "KOPER WORDEN",
-        "title": "Wilt u een tech-actief verwerven?",
-        "desc": "Aegryn identificeert en presenteert u gecertificeerde activa die overeenkomen met uw acquisiteprofiel : sector, ticket, structuur. Een vertrouwelijk proces, voorbehouden aan gekwalificeerde kopers.",
-        "cta": "Meer weten over het proces",
-        "ctaHref": "/transact/how-to-buy"
-      },
-      "upcomingLocked": "Toegang voorbehouden aan gekwalificeerde leden",
-      "upcomingLockedDesc": "Dit gedeelte is toegankelijk na validatie van uw account door het Aegryn-team.",
-      "upcomingClientLink": "Toegang tot de privécatalogus →",
-      "thirdPartyNote2": "Elk gepresenteerd asset heeft de Aegryn CIFSO-grade behaald: een beoordelingsprotocol in 5 dimensies (Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent). Alleen assets met Grade A of hoger worden toegelaten tot het transactieproces."
-    },
-    "sell": {
-      "meta": {
-        "title": "Uw activa overdragen | Aegryn",
-        "desc": "Aegryn-verkoopproces: indicatieve waardering, gereedheidscore, exclusief mandaat. CIFSO 5000-certificering, officiële grade, vooraf gekwalificeerde kopers."
-      },
-      "ctaButton": "Mandaat indienen",
-      "hero": {
-        "label": "Uw asset verkopen",
-        "title": "Uw asset verdient\neen verkoop tegen zijn echte waarde.",
-        "desc": "Aegryn certificeert, beoordeelt en laat voorgeselecteerde institutionele kopers concurreren, in een vertrouwelijk en gestructureerd kader, onder Zwitsers recht.",
-        "ctaValuation": "Waarde schatten",
-        "ctaMandat": "Mandaat indienen"
-      },
-      "steps": {
-        "label": "Verkopersproces",
-        "title": "Drie stappen, van waardering tot mandaat.",
-        "step2Label": "Stap 02",
-        "step2Title": "Is uw activa klaar voor een M&A-proces?",
-        "s1": {
-          "title": "Indicatieve waardering",
-          "desc": "Ontvang een waarderingsrange in 4 stappen (financiën, code, IP, beveiliging) en een geschatte Aegryn-grade. Gratis, vertrouwelijk, vrijblijvend.",
-          "cta": "Waarde schatten →"
-        },
-        "s2": {
-          "title": "Gereedheidscore",
-          "desc": "Beoordeel of uw dossier klaar is voor een M&A-proces: data room, contracten, operationele onafhankelijkheid, IP, technische schuld. 6 vragen, direct resultaat."
-        },
-        "s3": {
-          "title": "Mandaatindiening",
-          "desc": "Dien uw activa in bij het Aegryn-team. Onafhankelijke CIFSO 5000-certificering, officiële grade-toewijzing, toegang tot een M&A-proces onder een exclusief mandaat van 60 dagen.",
-          "cta": "Uw mandaat indienen →"
-        }
-      },
-      "guarantees": {
-        "label": "Aegryn-verbintenissen",
-        "title": "Wat u elders niet krijgt.",
-        "g1": {
-          "title": "Absolute vertrouwelijkheid",
-          "desc": "De identiteit van uw activa wordt nooit onthuld voordat de koper de NDA ondertekent en de M&A-proces opent."
-        },
-        "g2": {
-          "title": "100% vooraf gekwalificeerde kopers",
-          "desc": "Elke koper wordt geverifieerd: financiële capaciteit, sector, ticketgrootte. Nul nieuwsgierigen, nul directe concurrenten zonder voorafgaande overeenkomst."
-        },
-        "g3": {
-          "title": "Zwitserse bancaire escrow",
-          "desc": "10% van de prijs bij HoT via institutionele escrow. Geen overdracht van activa vóór vrijgave van fondsen. Zwitserse jurisdictie."
-        },
-        "g4": {
-          "title": "Onafhankelijke CIFSO 5000-certificering",
-          "desc": "Grade ★/AAA/AA/A/B toegewezen door een onafhankelijke auditor, financiën, code, IP, beveiliging. Afdwingbaar en gedocumenteerd."
-        }
-      },
-      "cta": {
-        "title": "Klaar om uw activa in te dienen?",
-        "desc": "Mandaatindiening is gratis. Ons team reageert binnen 48u.",
-        "ctaMandat": "Mandaat indienen",
-        "ctaAdvisor": "Met een advisor spreken"
-      },
-      "readiness": {
-        "toolLabel": "Aegryn Tool",
-        "toolTitle": "Gereedheidscore",
-        "restart": "Opnieuw beginnen",
-        "intro": "Beoordeel in 2 minuten of uw activa klaar is voor indiening bij een Aegryn-M&A-proces.",
-        "answerYes": "Ja",
-        "answerPartial": "Gedeeltelijk",
-        "answerNo": "Nee",
-        "progress": "{answered} / {total} vragen",
-        "calculateBtn": "Mijn score berekenen",
-        "scoreLabel": "Score: {score} / {max} punten",
-        "weakPoints": "Te versterken gebieden",
-        "levels": {
-          "ready": {
-            "label": "Activa klaar voor indiening",
-            "message": "Uw activa heeft de kenmerken van een dossier dat in aanmerking komt voor een Aegryn-M&A-proces. Wij raden u aan uw mandaat in te dienen voor beoordeling door ons team.",
-            "cta": "Uw mandaat indienen →"
-          },
-          "almost": {
-            "label": "Enkele aanpassingen aanbevolen",
-            "message": "Uw activa is dicht bij het vereiste niveau. Herstel de zwakke punten die hierboven zijn geïdentificeerd en dien vervolgens uw dossier in. Ons team kan u begeleiden bij de voorbereiding.",
-            "cta": "Een advisor raadplegen →"
-          },
-          "not_ready": {
-            "label": "Voorbereiding vereist vóór indiening",
-            "message": "Meerdere structurele vereisten ontbreken. Wij raden een exit planning voorbereidingsprogramma aan voordat u uw activa indient. Neem contact op met ons advisory-team.",
-            "cta": "Met een advisor spreken →"
-          }
-        },
-        "questions": {
-          "dataroom": {
-            "label": "Data room beschikbaar",
-            "hint": "Jaarrekeningen J-2/J-1/J (controleerbaar), cap table, sleutelcontracten, historische KPI's."
-          },
-          "contracts": {
-            "label": "Geformaliseerde klantcontracten",
-            "hint": "Ondertekende contracten met overdrachts-/cessievoorwaarden, geen blokkerende clausule."
-          },
-          "founder_dependency": {
-            "label": "Operationele onafhankelijkheid van oprichter",
-            "hint": "Het bedrijf kan 6 maanden zonder de huidige oprichter opereren."
-          },
-          "growth_documented": {
-            "label": "Groei gedocumenteerd over 12 maanden",
-            "hint": "Maandelijkse MRR/ARR, churn, NRR bijgehouden en exporteerbaar."
-          },
-          "ip_clean": {
-            "label": "Volledig overdraagbaar IP",
-            "hint": "Geregistreerd handelsmerk, eigendomscode copyright, geen blokkerende GPL-component."
-          },
-          "tech_debt": {
-            "label": "Technische schuld bekend en gedocumenteerd",
-            "hint": "Geformaliseerde tech debt backlog, geen verlaten kritieke afhankelijkheden."
-          }
-        }
-      }
-    },
-    "buy": {
-      "label": "Koper",
-      "title": "Verwerf een gecertificeerd\ntech-asset.",
-      "desc": "Toegang tot geverifieerde opportuniteiten buiten de open markt.",
-      "qualifTitle": "Kopersprofiel",
-      "qualifDesc": "Aegryn-sessies zijn gereserveerd voor gekwalificeerde kopers.",
-      "qualifItems": [
-        "Institutionele of professionele investeerder",
-        "Aangetoonde acquisitie-ervaring",
-        "Ondertekende NDA",
-        "Financiële capaciteit passend bij het asset"
-      ],
-      "processTitle": "Proces",
-      "processSteps": [
-        {
-          "num": "01",
-          "title": "Registratie",
-          "desc": "Formulier + kwalificatiedocumenten indienen."
-        },
-        {
-          "num": "02",
-          "title": "Toegang",
-          "desc": "Toegang tot sessiecatalogus na validatie."
-        },
-        {
-          "num": "03",
-          "title": "Due Diligence",
-          "desc": "Toegang tot data room en analyse van assets."
-        },
-        {
-          "num": "04",
-          "title": "Bod",
-          "desc": "Bilaterale onderhandeling en closing onder escrow."
-        }
-      ],
-      "cta": "Koperstoegang aanvragen"
-    },
-    "results": {
-      "label": "Resultaten",
-      "title": "Sessieresultaten.",
-      "desc": "Voltooide transacties en gerealiseerde gradewaarderingen.",
-      "noResults": "Nog geen voltooide sessies.",
-      "sessionLabel": "Sessie",
-      "assetsTransacted": "Getransactioneerde assets",
-      "totalVolume": "Totaalvolume",
-      "avgMultiple": "Mediaan meervoud"
-    },
-    "session": {
-      "label": "Volgende sessie",
-      "title": "Volgende Aegryn-sessie",
-      "date": "Datum",
-      "dateTbd": "Datum nog te bevestigen",
-      "format": "Formaat",
-      "formatValue": "Private sessie, alleen op uitnodiging",
-      "location": "Locatie",
-      "locationValue": "Zwitserland (+ beveiligde externe toegang)",
-      "assetsLabel": "Assets in sessie",
-      "assetsTbd": "Catalogus gepubliceerd 30 dagen voor de sessie",
-      "registerTitle": "Toegang aanvragen",
-      "registerDesc": "Sesietoegang is gereserveerd voor gekwalificeerde kopers.",
-      "registerCta": "Koperstoegang aanvragen",
-      "sellerTitle": "Uw asset indienen",
-      "sellerDesc": "Dien uw asset in voor certificering.",
-      "sellerCta": "Asset indienen",
-      "pastSessions": "Vorige sessies",
-      "noSessions": "Nog geen voltooide sessies.",
-      "sessionCardKicker": "M&A-transactie",
-      "sessionCardStatus": "Binnenkort",
-      "sessionCardCategory": "Legal-Tech",
-      "sessionCardTitle": "AI-contractintelligentie, Kavel nr. 001",
-      "sessionCardLocation": "Online, Zwitserland",
-      "sessionCardDateLabel": "Catalogus opent",
-      "sessionCardDateValue": "Exacte datum 30 dagen vooraf gecommuniceerd",
-      "sessionCardCtaPreview": "Kavel-preview",
-      "sessionCardLocked": "Toegang voorbehouden aan geverifieerde leden",
-      "sessionCardLockedCta": "Account aanmaken",
-      "sessionCardCtaCatalog": "Catalogus",
-      "sessionCardCtaNotify": "Op de hoogte blijven",
-      "upcomingSessions": "Aankomende sessie"
-    }
-  },
-  "gradeStrip": {
-    "label": "Certification CIFSO 5000",
-    "title": "Een onafhankelijk kwaliteitslabel voor organisaties\ndie hun activa willen inschatten, verwerven of overdragen.",
-    "desc": "Het CIFSO 5000-protocol certificeert vijf dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent. Reproduceerbaar, traceerbaar, definitief.",
-    "quote": "Een asset zonder onafhankelijke certificering is een waarde zonder bewijs. Een Aegryn Grade AAA asset is een gedocumenteerde en traceerbare zekerheid.",
-    "cta": "Methodologie ontdekken",
-    "grades": [
-      {
-        "grade": "★",
-        "label": "Uitzonderlijk",
-        "desc": "Absolute excellentie op alle 5 CIFSO-dimensies. Minder dan 5% van gecertificeerde assets."
-      },
-      {
-        "grade": "AAA",
-        "label": "Uitstekend",
-        "desc": "Hoge kwaliteit op alle dimensies. Enkele kleinere optimalisatiepunten."
-      },
-      {
-        "grade": "AA",
-        "label": "Solide",
-        "desc": "Goede CIFSO-fundamenten, enkele optimalisaties aanbevolen. Bevestigde waardering met verbeterplan."
-      },
-      {
-        "grade": "A",
-        "label": "In ontwikkeling",
-        "desc": "Potentieel geïdentificeerd over meerdere dimensies. Gedocumenteerde verbetergebieden, waardeplan voorgesteld."
-      },
-      {
-        "grade": "B",
-        "label": "Opkomend",
-        "desc": "Organisatie in structureringsfase. CIFSO-herstelplan vereist vóór elke transactie."
-      }
-    ]
   },
   "discoverStrip": {
     "magLabel": "Aegryn Magazine",
@@ -4522,13 +2736,9 @@
     "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot middelgrote ondernemingen.",
     "title": "De markt, door degenen die hem bedienen.",
     "article1Title": "De 5 kritieke punten om een organisatie voor te bereiden op een financieringsronde of verkoop",
-    "article1Cat": "Strategie & Overdracht",
     "article2Title": "Small & mid-cap: wat bedrijven echt verwachten van een adviesbureau",
-    "article2Cat": "Markt & Inzichten",
     "article3Title": "Na de financiering: waarom 60% van de gefinancierde kmo's hun groeidoelstellingen niet haalt",
-    "article3Cat": "Financiering & Uitvoering",
-    "cta": "Bekijk alle artikelen",
-    "readMore": "Artikel lezen"
+    "cta": "Bekijk alle artikelen"
   },
   "pillars": {
     "build": {
@@ -4572,13 +2782,6 @@
         "source": ""
       }
     ]
-  },
-  "acquisitionSupport": {
-    "label": "Acquisition Support",
-    "title": "Uw volgende acquisitie verdient\nde juiste financiële partner.",
-    "desc": "Aegryn leent niet. Aegryn verbindt. Ons netwerk van VC-partners en investeringsfondsen kan uw volgende gecertificeerde tech-asset-acquisitie co-financieren, co-investeren of structureren.",
-    "cta": "Opties verkennen",
-    "legal": "Aegryn is geen financiële instelling. Deze dienst verbindt met onafhankelijke externe partners."
   },
   "alliances": {
     "meta": {
@@ -5495,16 +3698,8 @@
     "label": "Certificering & Overdracht",
     "title": "Waarde moet bewezen kunnen worden,\nzonder concessies.",
     "desc": "Onafhankelijke certificering. Gedocumenteerde waardering.\nVertrouwelijke begeleiding in elke fase van de levenscyclus.",
-    "stat1Val": "100%",
-    "stat1Label": "Onafhankelijke, gedocumenteerde beoordelingen",
-    "stat2Val": "5",
-    "stat2Label": "Beoordeelde CIFSO-dimensies",
-    "stat3Val": "12 maanden",
-    "stat3Label": "Geldigheid van het gecertificeerde grade",
     "ctaSell": "Mijn organisatie beoordelen",
-    "ctaBuy": "Een acquisitie voorbereiden",
-    "stat4Val": "Zwitserland",
-    "stat4Label": "Institutionele verankering"
+    "ctaBuy": "Een acquisitie voorbereiden"
   },
   "build_service": {
     "meta": {
@@ -5642,7 +3837,6 @@
       "title": "Geen bureau. Eén prijs, één scope,\ngeen verrassingen.",
       "agencyCol": "Wat bureaus doen.",
       "aegrynCol": "Wat Aegryn doet.",
-      "processCol": "Hoe wij er komen",
       "agencyItems": [
         "Indicatieve offerte, andere werkelijke factuur",
         "Regie per dag/uur zonder plafond",
@@ -5812,8 +4006,6 @@
       "orgWeb": "Website (optioneel)",
       "ipFiled": "Intellectueel eigendom ingediend?",
       "ipYes": "Ja",
-      "ipNo": "Nee",
-      "ipPending": "In behandeling",
       "objective": "Primaire doel van de certificering",
       "objectivePlaceholder": "Kiezen",
       "objectiveOptions": {
@@ -6091,12 +4283,10 @@
       },
       "preRevenueTitle": "Pre-revenue actief",
       "preRevenueDesc": "Zonder ARR is de waardering gebaseerd op uw gecombineerde IP- en Code-score. De indicatieve range weerspiegelt de ruwe assetwaarde.",
-      "preRevenueRange": "Indicatieve range",
       "preRevenueNote": "Voor een pre-revenue asset is de Aegryn C-grade de natuurlijke stap. Het waardeert de IP en code vóór elke ronde of overdracht.",
       "ngNote": "Uw huidige score ligt onder de beoordeeldrempel. Een gratis Assessment Day helpt de 3 prioritaire acties te identificeren.",
       "disclaimer": "Dit hulpmiddel is een publieke light-versie uitsluitend voor illustratieve doeleinden. De schatting wordt gegenereerd door een algoritme op basis van gegevens die u opgeeft zonder onafhankelijke verificatie. Het vormt geen officieel Aegryn Grade en kan een onafhankelijke Aegryn-certificering niet vervangen. De Aegryn-certificering (CIFSO 5000 protocol, audit door gecertificeerde Aegryn-analisten) is verplicht voor elke gecertificeerde transactie via het Aegryn Transact platform.",
       "ctaGrade": "Start mijn officiële certificering",
-      "ctaAssessment": "Boek een gratis Assessment Day",
       "emailTitle": "Ontvang mijn gedetailleerde rapport per e-mail.",
       "emailDesc": "Gedetailleerde score per dimensie, volledige range en de 3 prioritaire acties om uw grade te verbeteren.",
       "emailPlaceholder": "Zakelijk e-mailadres",
@@ -6565,131 +4755,6 @@
       "sampleBuilding": "Steekproef in opbouw"
     }
   },
-  "transactionSubmit": {
-    "meta": {
-      "title": "Een actief indienen | Aegryn M&A Switzerland",
-      "desc": "Dien uw tech-actief in voor een Aegryn M&A Switzerland-sessie. Zwitsers recht. Internationaal open."
-    },
-    "hero": {
-      "label": "Aegryn M&A Switzerland",
-      "title": "Een actief indienen\nvoor verkoop.",
-      "desc": "Elke verkoop is exclusief voorbehouden aan Aegryn M&A Switzerland. Zwitsers recht is van toepassing. Verkopers uit de hele wereld zijn welkom."
-    },
-    "swissNote": "Zwitsers recht beheerst elke transactie, ongeacht de herkomst van de verkoper of het actief.",
-    "steps": [
-      {
-        "num": "01",
-        "title": "Indiening",
-        "desc": "U vult dit formulier in."
-      },
-      {
-        "num": "02",
-        "title": "Certificering",
-        "desc": "Ons team certificeert uw actief (Aegryn Grade)."
-      },
-      {
-        "num": "03",
-        "title": "Sessie",
-        "desc": "Uw actief wordt toegankelijk voor gekwalificeerde kopers die voor de sessie zijn geregistreerd."
-      },
-      {
-        "num": "04",
-        "title": "Transactie",
-        "desc": "Begeleide onderhandeling, escrow, overdracht van rechten."
-      }
-    ],
-    "form": {
-      "sectionAsset": "Uw actief",
-      "assetName": "Naam van het actief",
-      "assetType": "Type actief",
-      "assetTypePlaceholder": "Selecteer",
-      "assetTypeOptions": {
-        "saas_b2b": "SaaS B2B",
-        "saas_b2c": "SaaS B2C",
-        "marketplace": "Marketplace",
-        "mobile": "Mobiele applicatie",
-        "protocol": "Protocol / API",
-        "ip": "Alleen IP-rechten",
-        "other": "Overige"
-      },
-      "assetUrl": "Website- / applicatie-URL",
-      "techStack": "Tech stack (optioneel)",
-      "techStackPlaceholder": "bijv. Next.js, Supabase, Python",
-      "devStage": "Ontwikkelingsstadium",
-      "devStagePlaceholder": "Selecteer",
-      "devStageOptions": {
-        "prod_revenue": "In productie met omzet",
-        "prod_no_revenue": "In productie zonder omzet",
-        "beta": "Bèta / pre-productie",
-        "prototype": "Prototype / MVP",
-        "ip_only": "Alleen IP"
-      },
-      "sectionFinancial": "Financiële gegevens",
-      "arr": "Geannualiseerde ARR / MRR (€ of CHF)",
-      "arrPlaceholder": "bijv. 150000",
-      "askPrice": "Gewenste verkoopprijs",
-      "askPricePlaceholder": "bijv. 1200000",
-      "askPriceCurrency": "Valuta",
-      "askPriceCurrencyEur": "EUR (€)",
-      "askPriceCurrencyChf": "CHF (Fr.)",
-      "ipFiled": "Intellectueel eigendom gedeponeerd",
-      "ipYes": "Ja",
-      "ipNo": "Nee",
-      "ipPending": "In behandeling",
-      "sectionTransaction": "Transactiecontext",
-      "motivation": "Motivatie",
-      "motivationPlaceholder": "Selecteer",
-      "motivationOptions": {
-        "full_exit": "Volledige exit",
-        "partial_exit": "Gedeeltelijke exit",
-        "liquidity": "Aandeelhoudersliquiditeit",
-        "other": "Overige"
-      },
-      "timeline": "Gewenste tijdlijn",
-      "timelinePlaceholder": "Selecteer",
-      "timelineOptions": {
-        "urgent": "Urgent, minder dan 3 maanden",
-        "standard": "Standaard: 3 tot 6 maanden",
-        "long": "Lange termijn, meer dan 6 maanden"
-      },
-      "targetSession": "Doelsessie",
-      "targetSessionPlaceholder": "Selecteer",
-      "targetSessionHelper": "Uw selectie bepaalt het kwartaal en jaar van eligibiliteit voor de volgende verkoopcatalogus.",
-      "targetSessionOptions": {
-        "q3_2026": "Q3 2026",
-        "q4_2026": "Q4 2026",
-        "q1_2027": "Q1 2027",
-        "q2_2027": "Q2 2027 (apr. - jun. 2027)",
-        "flexible": "Flexibel"
-      },
-      "sectionContact": "Uw contactgegevens",
-      "fullName": "Volledige naam",
-      "email": "Zakelijk e-mailadres",
-      "country": "Land van verblijf",
-      "countryPlaceholder": "bijv. Frankrijk, Zwitserland, Duitsland",
-      "company": "Bedrijf / entiteit (optioneel)",
-      "message": "Aanvullend bericht (optioneel)",
-      "swissLawLabel": "Ik erken dat Zwitsers recht elke via Aegryn M&A Switzerland gesloten transactie beheerst.",
-      "submit": "Mijn dossier indienen",
-      "submitting": "Verzenden…",
-      "successTitle": "Dossier ontvangen.",
-      "successDesc": "Ons team neemt binnen 48–72 werkuren contact met u op om het certificeringsproces te starten.",
-      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw of neem rechtstreeks contact met ons op."
-    }
-  },
-  "transactionLot": {
-    "accessDeniedTitle": "Beperkte toegang",
-    "accessDeniedDesc": "Dit dossier is alleen toegankelijk voor gekwalificeerde kopers met een geldige beheerdersautorisatie en actieve sessietoegang.",
-    "accessExpiredTitle": "Toegang verlopen",
-    "accessExpiredDesc": "Uw toegang tot dit dossier is verlopen. Toegang wordt verleend voor 30 dagen vanaf de openingsdatum van de sessie.",
-    "requestAccessCta": "Een kopersdossier indienen",
-    "requestAccessDesc": "Dien een kopersdossier in om gekwalificeerd te worden en toegang te krijgen tot de sessiedossiers.",
-    "backToCatalog": "Terug naar catalogus",
-    "confidentialLabel": "Vertrouwelijk dossier",
-    "teaserAccessLabel": "Dossier openen",
-    "ndaLabel": "NDA vereist, gecontroleerde toegang",
-    "lotRef": "Lot"
-  },
   "legalNav": {
     "termsUse": "Gebruiksvoorwaarden",
     "termsCgv": "Algemene Voorwaarden",
@@ -6757,38 +4822,21 @@
     },
     "label": "Privacybeleid",
     "updated": "Laatst bijgewerkt: oktober 2026",
-    "langSelector": "Beschikbaar in",
     "intro": "Zoals de meeste ondernemingen in de financiële en transactiesector verzamelt en verwerkt Aegryn gegevens over haar klanten, partners en andere personen die mogelijk geïnteresseerd zijn in haar diensten. Deze kennisgeving legt uit welk type gegevens wij verwerken, waarom wij ze verwerken en hoe dit u kan raken.",
     "s1Title": "Wie wij zijn",
     "s1": "De verwerkingsverantwoordelijke is Aegryn. Wanneer u onze diensten gebruikt (certificering, transactie, advies, catalogus), is Aegryn de verwerkingsverantwoordelijke.",
     "s2Title": "Welke gegevens verzamelen wij en hoe?",
     "s2DirectTitle": "Gegevens die u rechtstreeks verstrekt",
-    "s2Direct": "Naam, professionele contactgegevens, entiteitsinformatie, financiële informatie (investeringscapaciteit, bewijs van fondsen), identiteitsdocumenten, entiteitsdocumenten, informatie over de uiteindelijk belanghebbende (UBO). Verzameld bij registratie, indiening van een actief, Alliance-aanvraag, boeking van een Assessment Day, gebruik van de waarderingscalculator of elke communicatie.",
     "s2AutoTitle": "Automatisch verzamelde gegevens",
-    "s2Auto": "IP-adres, browsertype, besturingssysteem, bezochte pagina's, bezoekduur, via cookies en vergelijkbare technologieën. Zie ons Cookiebeleid.",
     "s2ThirdTitle": "Gegevens van derden",
     "s2Third": "Openbare registers, identiteitsverificatie- en fraudepreventiediensten, databases van sancties en politiek prominente personen (PEP).",
     "s3Title": "Waarom verwerken wij uw gegevens?",
-    "s3TablePurpose": "Doel",
-    "s3TableData": "Betrokken gegevens",
     "s3TableBasis": "Rechtsgrond",
-    "s3Row1Purpose": "Levering van gevraagde diensten",
-    "s3Row1Data": "Identiteit, contact, financiële gegevens, documenten",
     "s3Row1Basis": "Uitvoering van de overeenkomst",
-    "s3Row2Purpose": "Wettelijke verplichtingen (AML, AMLD6, KYC)",
-    "s3Row2Data": "Identiteit, UBO, herkomst van fondsen, PEP",
     "s3Row2Basis": "Wettelijke verplichting",
-    "s3Row3Purpose": "Anti-witwaspraktijken en fraudepreventie",
-    "s3Row3Data": "Identiteit, transacties, documenten",
     "s3Row3Basis": "Wettelijke verplichting / Gerechtvaardigde belangen",
-    "s3Row4Purpose": "Sitebeveiliging en fraudepreventie",
-    "s3Row4Data": "Navigatiegegevens, IP",
     "s3Row4Basis": "Gerechtvaardigde belangen",
-    "s3Row5Purpose": "Dienstcommunicatie",
-    "s3Row5Data": "E-mail, voorkeuren",
     "s3Row5Basis": "Gerechtvaardigde belangen / Toestemming",
-    "s3Row6Purpose": "Historische transactiecatalogus",
-    "s3Row6Data": "Geanonimiseerde gegevens",
     "s3Row6Basis": "Gerechtvaardigde belangen / Algemeen belang",
     "s4Title": "Wie heeft toegang tot uw gegevens?",
     "s4": "Binnen Aegryn: teamleden met een legitieme operationele behoefte. Certificeringspartners (onderworpen aan strikte vertrouwelijkheidsverplichtingen). Technische dienstverleners: hosting e -mail, betaling via Stripe. Autoriteiten: wanneer wettelijk vereist. Aegryn verkoopt uw gegevens nooit aan derden.",
@@ -6798,16 +4846,12 @@
     "s6": "Wij bewaren uw gegevens zolang als nodig voor de dienstverlening, wettelijke en regelgevingsnaleving (AML-verplichtingen: minimaal 10 jaar na einde van de commerciële relatie) en bescherming tegen claims. Geanonimiseerde historische catalogusgegevens worden onbeperkt bewaard.",
     "s7Title": "Uw rechten",
     "s7": "Onder de Zwitserse LPD en de AVG: rechten van inzage, rectificatie, wissing, bezwaar, beperking en overdraagbaarheid.",
-    "s7Contact": "Om deze rechten uit te oefenen: legal@boha-group.com",
     "s8Title": "Gegevensbeveiliging",
     "s8": "Technische en organisatorische maatregelen: versleuteling van gevoelige gegevens in rust en tijdens transport, op rollen gebaseerde toegangscontrole (Supabase RLS), logging van dataroom-toegang, 2FA voor admintoegang. Bij een inbreuk worden autoriteiten en betrokkenen op de hoogte gesteld conform de Zwitserse LPD en de AVG.",
     "s9Title": "Cookies",
     "s9": "Wij gebruiken analytische cookies (Cloudflare Web Analytics, geen persoonlijk identificeerbare gegevens). Geen advertentiecookies. U kunt analytische cookies weigeren via onze toestemmingsbanner.",
     "s10Title": "Klachten",
     "s10": "U heeft het recht een klacht in te dienen bij de bevoegde toezichthoudende autoriteit.",
-    "authorityCH": "Zwitserland: FDPIC, www.edoeb.admin.ch",
-    "authorityFR": "Frankrijk: CNIL, www.cnil.fr",
-    "authorityEU": "EU: EDPB, www.edpb.europa.eu",
     "contactEmail": "legal@boha-group.com",
     "content": {
       "intro": {
@@ -7171,11 +5215,6 @@
     ],
     "filterLifecycle": "Levenscyclus"
   },
-  "blogPage": {
-    "label": "Blog",
-    "title": "Inzichten & perspectieven.",
-    "desc": "Onze visie op assetcertificering, tech-transacties en de Aegryn-standaarden. Eerste artikelen binnenkort."
-  },
   "clientArea": {
     "login": {
       "title": "Klantenzone",
@@ -7270,7 +5309,6 @@
       "errorNetwork": "Kan de server niet bereiken. Controleer uw verbinding.",
       "rolePartner": "Lid worden van het partnernetwerk",
       "rolePartnerDesc": "Business-introducers, expert-mede-certificeerders: toegang tot de Aegryn-partnerruimte.",
-      "roleInternal": "Interne toegang",
       "roleInternalDesc": "Aegryn medewerkeraccount : sectiontoegang wordt ingeschakeld door een beheerder."
     },
     "account": {
@@ -7334,8 +5372,6 @@
       "ndaPartnerTitle": "Aegryn-partner-NDA",
       "ndaCatalogTitle": "Aegryn-catalogus-NDA",
       "ndaSigned": "Ondertekend",
-      "ndaVersion": "Versie",
-      "ndaView": "Bekijken →",
       "logout": "Afmelden",
       "gdprTitle": "Beheer van persoonsgegevens",
       "exportTitle": "Mijn gegevens exporteren",
@@ -7346,16 +5382,8 @@
       "deleteAccountTitle": "Mijn account verwijderen",
       "deleteAccountDesc": "AVG art. 17 / nLPD art. 30. Definitieve verwijdering van uw account en persoonsgegevens. Reeds gestarte certificeringsdossiers worden om juridische redenen bewaard, zonder link naar uw identiteit.",
       "activateTitle": "Een aanvullend profiel activeren",
-      "activateSubtitle": "Elk geactiveerd profiel is toegankelijk via de schakelaar in uw klantenzone.",
-      "activateErrorGeneric": "Kan dit profiel niet activeren",
-      "activateButton": "Activeren",
-      "activating": "Activeren…",
-      "activateFooterNote": "Identiteits-KYC (identiteitsdocument + adresbewijs) is gemeenschappelijk voor alle profielen; indien reeds ingediend, blijft deze geldig. Aanvullende documenten kunnen vereist zijn afhankelijk van het geactiveerde profiel.",
-      "profileBuyerLabel": "Koper",
       "profileBuyerDesc": "Toegang tot de gecertificeerde catalogus, NDA's ondertekenen en uw biedingen volgen.",
-      "profileSellerLabel": "Verkoper",
       "profileSellerDesc": "Dien uw actief in, volg de certificering en ontvang gekwalificeerde biedingen.",
-      "profilePartnerLabel": "Partner",
       "profilePartnerDesc": "Business-introducer of mede-certificeerder: toegang tot de Aegryn-partnerruimte.",
       "kycNoteStandard": "KYC: identiteitsdocument + adresbewijs",
       "kycNotePartner": "KYC: identiteitsdocument + adresbewijs + handelsregister + beroepsaansprakelijkheidsverzekering",
@@ -7396,7 +5424,6 @@
   },
   "clientSpace": {
     "spaceNameSeller": "Verkopersruimte",
-    "spaceNameBuyer": "Kopersruimte",
     "spaceNamePartner": "Partnerruimte",
     "logout": "Afmelden",
     "navGroupOverview": "Overzicht",
@@ -7412,48 +5439,27 @@
     "navNotifications": "Notificaties",
     "navMyAccount": "Mijn account",
     "navSettings": "Instellingen",
-    "navCatalog": "Catalogus",
     "navOffers": "Mijn biedingen",
     "navCommissions": "Verschuldigde commissies",
     "navCosigning": "Opdrachten",
     "navIntroductions": "Introducties",
     "navMandates": "Klantmandaten",
     "navPartnerCommissions": "Commissies",
-    "navPartnerSubscription": "Abonnement",
-    "navExpertProfile": "Expertprofiel",
-    "navBuyerNda": "Mijn NDA",
-    "navSellerNda": "Mijn NDA",
-    "navPartnerNda": "Ondertekende NDA",
-    "filterLabel": "Filters",
     "filterAll": "Alle",
-    "filterGrade": "Certificering",
-    "filterType": "Type",
     "viewDetails": "Details bekijken",
     "noAssets": "Geen activa beschikbaar met deze criteria.",
-    "backToCatalog": "Terug naar de catalogus",
-    "viewMyOffer": "Mijn bod bekijken",
-    "submitEi": "Een EI indienen",
-    "expressInterest": "Interesse tonen",
-    "assetDefault": "Actief",
     "publishedOn": "Gepubliceerd op {date}",
     "metricsTitle": "Financiële indicatoren",
     "grossMargin": "Brutomarge",
     "trackRecordMonths": "{n} maanden",
-    "certifiedSummary": "Door Aegryn gecertificeerde samenvatting",
-    "existingBidLabel": "U heeft al een bod ingediend",
-    "submitInterestLabel": "Een Expression of Interest indienen",
-    "offerReviewTime": "Uw EI wordt binnen 48 werkuren beoordeeld door het Aegryn-team.",
     "offerAmountStatus": "Bod van {amount}, status: {status}",
     "confidentialityTitle": "Vertrouwelijkheid",
-    "confidentialityText": "De informatie in dit dossier is strikt voorbehouden aan gekwalificeerde kopers die een NDA hebben ondertekend. Elke openbaarmaking is verboden.",
-    "catalogSubtitle": "Gecertificeerde en gepubliceerde activa, toegang voorbehouden aan gekwalificeerde kopers.",
     "navAnnuaire": "Gids"
   },
   "comingSoon": {
     "label": "Binnenkort beschikbaar",
     "desc": "Deze functie is momenteel in ontwikkeling. Zij zal zeer binnenkort beschikbaar zijn.",
-    "descSection": "De sectie \"{section}\" is momenteel in ontwikkeling. Zij zal zeer binnenkort beschikbaar zijn.",
-    "backHome": "← Terug naar home"
+    "descSection": "De sectie \"{section}\" is momenteel in ontwikkeling. Zij zal zeer binnenkort beschikbaar zijn."
   },
   "sitemap": {
     "metaTitle": "Sitemap | Aegryn",
@@ -7469,7 +5475,6 @@
     "assets": "Propriëtaire assets",
     "servicesBuild": "Asset Engineering",
     "advisory": "Onze acht vakgebieden",
-    "acquisition": "Acquisitieondersteuning",
     "alliances": "Allianties & Partners",
     "experts": "Expertnetwerk",
     "valuation": "Waardering",
@@ -7518,200 +5523,6 @@
     "metierProgram": "Project- en programmamanagement",
     "metierMA": "M&A, Transacties en PMI",
     "culture": "Cultuur en waarden"
-  },
-  "clientTransaction": {
-    "eyebrow": "Kopersruimte",
-    "title": "Mijn Aegryn-dossiers",
-    "subtitle": "Toegangslinks naar volledige dossiers worden nooit per e-mail verzonden. Zij verschijnen hier pas nadat uw aanvraag is gevalideerd.",
-    "empty": "Geen toegangsverzoek in behandeling.",
-    "viewCatalog": "Catalogus bekijken",
-    "statusApproved": "Goedgekeurd",
-    "statusRejected": "Afgewezen",
-    "statusPending": "In behandeling",
-    "lotPrefix": "Lot",
-    "accessActive": "Actieve toegang · nog {days} dag",
-    "accessActivePlural": "Actieve toegang · nog {days} dagen",
-    "accessConfidential": "Deze link is strikt persoonlijk en vertrouwelijk.",
-    "openDossier": "Dossier openen",
-    "accessExpired": "De toegangsperiode is verlopen of het M&A-proces is gesloten.",
-    "pendingReview": "Uw verzoek wordt beoordeeld door het Aegryn-team (binnen 48 werkuren). De link verschijnt hier indien goedgekeurd.",
-    "rejected": "Uw verzoek is niet geselecteerd voor deze sessie.",
-    "requestedOn": "Verzoek ingediend op",
-    "upcomingTitle": "Ruimtes in ontwikkeling",
-    "sectionSeller": "Verkopersruimte",
-    "sectionPartner": "Partnerruimte",
-    "disclaimer": "Aegryn · Genève · Zwitserland, strikt vertrouwelijke toegang"
-  },
-  "waitlist": {
-    "header": {
-      "label": "Wachtlijst, M&A-transacties",
-      "title": "Word lid van de prioritaire toegangslijst"
-    },
-    "step1": {
-      "profileLabel": "Ik ben *",
-      "sourceLabel": "Hoe heeft u over Aegryn gehoord?",
-      "next": "Volgende",
-      "profiles": {
-        "buyer": "Koper",
-        "seller": "Verkoper",
-        "partner": "Partner",
-        "undecided": "Onbeslist"
-      }
-    },
-    "step2": {
-      "buyer": {
-        "categoryLabel": "Kopersprofiel *",
-        "ticketLabel": "Beoogd acquisitieticket *",
-        "timelineLabel": "Implementatiehorizon *",
-        "intentLabel": "Acquisitie-intentie",
-        "sectorsLabel": "Sectoren van interesse (max. 5)",
-        "financingLabel": "Financiering gegarandeerd?",
-        "yes": "Ja",
-        "noInProgress": "Nee / in behandeling",
-        "categories": {
-          "individual_hnw": "High Net Worth Individual (HNW)",
-          "family_office": "Family office",
-          "search_fund": "Search fund / ETA",
-          "pe_vc_fund": "PE / VC-fonds",
-          "corporate_strategic": "Corporate / strategische overnemer",
-          "holding": "Vermogensholding"
-        },
-        "tickets": {
-          "<500k": "< €500K",
-          "500k-2m": "€500K – €2M",
-          "2m-5m": "€2M – €5M",
-          "5m-20m": "€5M – €20M",
-          "20m+": "> €20M"
-        },
-        "timelines": {
-          "immediate": "Onmiddellijk (< 3 maanden)",
-          "3-6m": "3 – 6 maanden",
-          "6-12m": "6 – 12 maanden",
-          "opportunistic": "Opportunistisch / geen deadline"
-        },
-        "intents": {
-          "single_asset": "Gerichte enkele acquisitie",
-          "portfolio_buildup": "Portefeuille-opbouw",
-          "exploratory": "Marktverkenning"
-        }
-      },
-      "seller": {
-        "stageLabel": "Fase van het actief *",
-        "arrLabel": "Geschatte jaarlijkse ARR *",
-        "reasonLabel": "Reden van verkoop *",
-        "timelineLabel": "Gewenste tijdlijn",
-        "stages": {
-          "idea": "Idee / pre-launch",
-          "mvp": "MVP / bèta",
-          "revenue_generating": "Omzetgenererend",
-          "scaling": "In schaalvergroting",
-          "mature": "Matur / gevestigd"
-        },
-        "arrRanges": {
-          "<100k": "< €100K",
-          "100k-500k": "€100K – €500K",
-          "500k-2m": "€500K – €2M",
-          "2m-10m": "€2M – €10M",
-          "10m+": "> €10M"
-        },
-        "reasons": {
-          "full_exit": "Volledige exit",
-          "partial": "Gedeeltelijke exit / kapitaalronde",
-          "succession": "Overdracht / opvolging",
-          "burnout": "Oprichtersmoeheid / burn-out",
-          "strategic_pivot": "Strategische pivot"
-        },
-        "timelines": {
-          "immediate": "Onmiddellijk (< 3 maanden)",
-          "3-6m": "3 – 6 maanden",
-          "6-12m": "6 – 12 maanden",
-          "flexible": "Flexibel / afhankelijk van het bod"
-        }
-      },
-      "partner": {
-        "categoryLabel": "Type structuur *",
-        "dealflowLabel": "Geschat introductievolume",
-        "categories": {
-          "law_firm": "Advocatenkantoor",
-          "accounting": "Accountantskantoor",
-          "ma_boutique": "M&A-boutique / advies",
-          "vc_pe": "VC / PE",
-          "accelerator": "Accelerator / incubator",
-          "other": "Overig"
-        },
-        "dealflows": {
-          "<5_per_year": "< 5 introducties / jaar",
-          "5-10_per_year": "5 – 10 / jaar",
-          "10-20_per_year": "10 – 20 / jaar",
-          "20+_per_year": "> 20 / jaar"
-        }
-      },
-      "undecidedNote": "Geen probleem, vul gewoon uw contactgegevens in en ons team neemt contact met u op.",
-      "back": "Terug",
-      "next": "Volgende"
-    },
-    "step3": {
-      "firstNameLabel": "Voornaam",
-      "lastNameLabel": "Achternaam *",
-      "emailLabel": "E-mail *",
-      "firstNamePlaceholder": "Jan",
-      "lastNamePlaceholder": "Jansen",
-      "emailPlaceholder": "u@voorbeeld.com",
-      "gdprConsent": "Ik ga ermee akkoord dat mijn gegevens door Aegryn worden verwerkt in het kader van mijn verzoek om toegang tot M&A-transacties, conform AVG / nFADP. *",
-      "marketingConsent": "Ik ga ermee akkoord communicatie van Aegryn te ontvangen (nieuwe sessies, beschikbare activa).",
-      "back": "Terug",
-      "submit": "Verzenden",
-      "submitting": "Verzenden..."
-    },
-    "sources": {
-      "linkedin": "LinkedIn",
-      "organic": "Zoeken / mond-tot-mondreclame",
-      "referral": "Verwijzing",
-      "event": "Evenement / conferentie",
-      "partner_intro": "Introductie via partner",
-      "direct": "Direct contact met Aegryn"
-    },
-    "sectors": [
-      "B2B SaaS",
-      "AI / ML",
-      "LegalTech",
-      "FinTech",
-      "EdTech",
-      "HealthTech",
-      "E-commerce",
-      "Marktplaatsen",
-      "Cybersecurity",
-      "PropTech",
-      "Logistiek",
-      "Overig"
-    ],
-    "placeholder": "Selecteer",
-    "done": {
-      "title": "Verzoek geregistreerd",
-      "desc": "Ons team beoordeelt uw profiel en neemt binnen 48 uur contact met u op om uw toegang tot het volgende Aegryn M&A-proces te valideren.",
-      "note": "Geen toegang zonder uitnodiging op naam."
-    },
-    "errors": {
-      "server": "Er is een fout opgetreden.",
-      "network": "Netwerkfout. Probeer het opnieuw."
-    }
-  },
-  "transactionSheet": {
-    "executiveSummaryKicker": "Executive summary · Snelle lezing",
-    "executiveSummaryTitle": "Synthese van het actief",
-    "disclosureKicker": "Voorwaarden voor openbaarmaking en distributie",
-    "s1": "Presentatienotitie",
-    "s2": "Herkomst en geschiedenis",
-    "s3": "Zeldzaamheid van het actief",
-    "s4": "Staat van het actief",
-    "s5": "Niveau van functionele ontwikkeling",
-    "s6": "Aangesproken klantsegmenten",
-    "s7": "Groeipotentieel, internationale expansie",
-    "s8": "Concurrentiepositie",
-    "s9": "Commerciële tractie en partnerships",
-    "s10": "Volwassenheidsfase van de markt",
-    "s11": "Geïdentificeerde risico's en voorbehouden",
-    "s12": "Acquisitiethese"
   },
   "neediuDpn": {
     "meta": {
@@ -7964,65 +5775,6 @@
       "s18": "U kunt contact met ons opnemen via het contactformulier op ons platform."
     }
   },
-  "nda": {
-    "pageTitle": "Vertrouwelijkheidsovereenkomst | Aegryn-kopersruimte",
-    "stepLabel": "Verplichte stap",
-    "stepTitle": "Vertrouwelijkheidsovereenkomst | Aegryn",
-    "introText": "Voordat u toegang krijgt tot de Aegryn-catalogus, moet u de onderstaande vertrouwelijkheidsovereenkomst lezen en aanvaarden. Deze overeenkomst is verplicht en vormt een contractuele vertrouwelijkheidsverbintenis jegens Aegryn en de verkopers. Uw ondertekening wordt van een tijdstempel voorzien en gelogd voor juridische doeleinden.",
-    "versionLabel": "NDA | Versie",
-    "mainTitle": "Vertrouwelijkheidsvoorwaarden Koper",
-    "mainSubtitle": "Aegryn",
-    "partiesLabel": "Tussen de ondertekenenden:",
-    "partiesAegryn": "Aegryn, een in Zwitserland geregistreerde vennootschap, hierna « Aegryn » genoemd,",
-    "partiesAnd": "En",
-    "partiesBuyer": "De gebruiker geïdentificeerd door de bij registratie op het Aegryn-platform verstrekte informatie (voornaam, achternaam of bedrijfsnaam, professioneel e-mailadres), hierna « de Koper » genoemd,",
-    "a1Title": "Doel",
-    "a1": "Deze geheimhoudingsovereenkomst (\"NDA\") regelt de toegang van de Koper tot de Aegryn-catalogus, assetprofielen, graderapporten en elk dataroom-document dat ter beschikking wordt gesteld in het kader van het certificerings- en transactieproces van Aegryn. Aanvaarding van deze NDA is een verplichte voorwaarde voor elke toegang tot de catalogus, ongeacht het toegangsniveau (geanonimiseerde preview of volledig dossier na kwalificatie).",
-    "a2Title": "Definitie van vertrouwelijke informatie",
-    "a2Intro": "Als vertrouwelijke informatie worden beschouwd:",
-    "a2i1": "Elke informatie met betrekking tot de identiteit van de verkoper of de overdragende entiteit, vóór een expliciete introductiebeslissing door Aegryn",
-    "a2i2": "Elke financiële, technische, commerciële of juridische gegevens vervat in een assetprofiel of dataroom-document",
-    "a2i3": "De inhoud van de Aegryn-graderapporten, inclusief scores, subcodes en voorbehouden",
-    "a2i4": "Elke informatie met betrekking tot andere kopers, hun biedingen of de status van een onderhandeling",
-    "a2i5": "Het loutere bestaan van een lopend verkoopproces voor een bepaald actief",
-    "a3Title": "Verplichtingen van de Koper",
-    "a3s1Title": "3.1 Strikte vertrouwelijkheid",
-    "a3s1": "Geen vertrouwelijke informatie aan enige derde bekend te maken, inclusief adviseurs, werknemers of partners, tenzij deze zelf gebonden zijn aan een equivalente vertrouwelijkheidsverplichting die strikt noodzakelijk is voor de evaluatie van de kans.",
-    "a3s2Title": "3.2 Beperkt gebruik",
-    "a3s2": "Vertrouwelijke informatie uitsluitend te gebruiken voor de evaluatie van een acquisitiekans via Aegryn | nooit voor competitieve, commerciële, rekruterings- of technische-reproductiedoeleinden.",
-    "a3s3Title": "3.3 Verbod op reproductie",
-    "a3s3": "Geen document dat in de Aegryn-dataroom is geraadpleegd te downloaden, kopiëren, vastleggen, fotograferen of op welke wijze dan ook te reproduceren, inclusief via screenshot, schermfotografie of elke andere methode om de aanwezige technische beschermingsmaatregelen te omzeilen.",
-    "a3s4Title": "3.4 Erkenning van technische beperkingen",
-    "a3s4": "De Koper erkent dat de geraadpleegde documenten worden beschermd door technische afschrikkingsmaatregelen (blokkering van downloads, detectie van screenshot-pogingen, gepersonaliseerd watermerk). De Koper erkent dat deze maatregelen een redelijke afschrikking vormen waarvan de effectiviteit niet voor 100% kan worden gegarandeerd tegen externe omzeilingsmethoden, en gaat ermee akkoord dat de vertrouwelijkheidsverplichting onder deze NDA geldt ongeacht de effectiviteit van deze technische maatregelen.",
-    "a3s5Title": "3.5 Non-circumventie",
-    "a3s5": "De verkoper of enige aan een via Aegryn geraadpleegd actief gerelateerde partij niet rechtstreeks te contacteren, of te trachten te contacteren, buiten het Aegryn-proces om, gedurende een periode van 24 maanden vanaf de eerste raadpleging.",
-    "a3s6Title": "3.6 Niet-openbaarmaking van het proces",
-    "a3s6": "Aan geen enkele derde het loutere bestaan van een lopend verkoopproces voor een geraadpleegd actief bekend te maken, inclusief de sector, geschatte omvang of enige gegevens die identificatie mogelijk maken.",
-    "a4Title": "Traceerbaarheid en toestemming voor logging",
-    "a4Intro": "De Koper erkent en aanvaardt dat:",
-    "a4i1": "Elke documentraadpleging wordt van een tijdstempel voorzien en gelogd (identiteit, datum, tijd, IP-adres)",
-    "a4i2": "Elke poging tot het maken van screenshots of het omzeilen van technische beschermingen wordt gedetecteerd en gelogd",
-    "a4i3": "Deze logs kunnen als bewijs worden gebruikt in geval van schending van deze NDA",
-    "a5Title": "Duur",
-    "a5": "De vertrouwelijkheidsverplichtingen onder deze NDA blijven van kracht gedurende 5 jaar vanaf de eerste raadpleging van een document via het Aegryn-platform, inclusief na de sluiting, verlating of afwijzing van een acquisitiekans, en inclusief na verwijdering van het account van de Koper.",
-    "a5Years": "5 jaar",
-    "a6Title": "Sancties bij schending",
-    "a6Intro": "In geval van schending van deze NDA kan de Koper onderworpen worden aan:",
-    "a6i1": "Onmiddellijke en permanente opschorting van de toegang tot het Aegryn-platform",
-    "a6i2": "Vergoeding van de schade geleden door Aegryn en/of de betrokken verkoper",
-    "a6i3": "Elke gerechtelijke actie die Aegryn of de verkoper passend acht",
-    "a6i4": "Een minimale forfaitaire schadevergoeding van CHF 50.000 (excl. btw) per bewezen schending, ongeacht de werkelijk geleden schade",
-    "a7Title": "Toepasselijk recht en jurisdictie",
-    "a7": "Deze NDA wordt beheerst door Zwitsers recht. Elk geschil voortvloeiend uit deze NDA wordt voorgelegd aan de exclusieve jurisdictie van de rechtbanken van het kanton waar Aegryn statutair is gevestigd.",
-    "a8Title": "Aanvaarding",
-    "a8": "Door de onderstaande vakjes aan te vinken en te klikken op \"Aanvaarden en toegang tot de catalogus\", erkent de Koper alle bepalingen van deze NDA te hebben gelezen, begrepen en zonder voorbehoud te hebben aanvaard.",
-    "acceptSectionLabel": "Artikel 8, Aanvaarding",
-    "check1": "Ik heb de bovenstaande vertrouwelijkheidsvoorwaarden in hun geheel gelezen en aanvaard deze.",
-    "check2": "Ik erken dat elke poging om de technische beschermingsmaatregelen te omzeilen zal worden gelogd en kan dienen als bewijs in geval van schending van deze overeenkomst.",
-    "signingBtn": "Ondertekenen…",
-    "acceptBtn": "Aanvaarden en toegang tot de catalogus",
-    "versionFooter": "Ondertekening met tijdstempel en logging (IP, user agent)"
-  },
   "experts": {
     "meta": {
       "title": "Expert Network | Aegryn",
@@ -8072,7 +5824,6 @@
       "accounting": "Accountancy",
       "hr": "HR & Arbeidsrecht",
       "insurance": "Verzekering",
-      "real_estate": "Vastgoed",
       "finance": "Financiën",
       "financeDesc": "Financiering, LBO, structurering, senior debt",
       "architecture": "Technische Architectuur & Engineering",
@@ -8083,23 +5834,17 @@
       "data_engineeringDesc": "Datamodellering, datawarehouse, datalake, governance, portabiliteit van propriëtaire datasets.",
       "design_ux": "Design & Gebruikerservaring",
       "design_uxDesc": "UX/UI, designsysteem, productidentiteit, user journeys, gebruikstests.",
-      "product_management": "Productbeheer & roadmap",
       "product_managementDesc": "Productdefinitie, backlog-prioritering, activatie- en retentiemetrics, roadmap.",
       "rgpd": "AVG / LPD-compliance",
       "rgpdDesc": "Verwerkingsregister, vendor-DPA's, privacybeleid, doorgifte buiten de EU, Zwitserse LPD-compliance.",
-      "accessibility": "Digitale Toegankelijkheid",
       "accessibilityDesc": "WCAG 2.1 AA-audit, European Accessibility Act-compliance. Cruciaal voor HealthTech en EdTech.",
-      "eu_ai_act": "EU AI Act-compliance & AI-ethiek",
       "eu_ai_actDesc": "Classificatie van AI-systemen, regelgevingsdocumentatie, LLM red-teaming, audit van algoritmische bias.",
-      "ip_law": "Intellectueel Eigendom & Digitaal Recht",
       "ip_lawDesc": "IP-eigendomsketen, open-source-licenties, overdracht van oprichtersrechten, merkbescherming.",
       "esg": "ESG / MVO",
       "esgDesc": "MVO-strategie, niet-financiële rapportage, ESG due diligence, impact.",
       "vendor_readiness": "Voorbereiding van de overdracht",
       "vendor_readinessDesc": "Audit van het verkopersdossier, dataroom, contracten, GDPR, technische schuld. Verkort de certificeringstermijn.",
-      "dd_hr": "HR & Arbeidsrecht Due Diligence",
       "dd_hrDesc": "Sleutelcontracten, aandelenplannen, arbeidsrechtelijke verplichtingen, classificatie van freelancers, non-concurrentiebedingen.",
-      "dd_regulatory": "Sectorale Regelgevings-Due Diligence",
       "dd_regulatoryDesc": "FinTech (DORA/FINMA), HealthTech (HDS), AI-native (EU AI Act), LegalTech, EdTech.",
       "tax_corporate": "Fiscale & Corporate Structurering",
       "tax_corporateDesc": "Exit-optimalisatie, holding, SPV, Luxemburg, Zwitserland, Frankrijk. Inbreng-ruil.",
@@ -8107,9 +5852,7 @@
       "financingDesc": "Overbruggingsfinanciering, co-investering, mezzanine-schuld. Specifiek voor uw dealprofiel.",
       "earnout": "Earn-out-ontwerp & KPI-framework",
       "earnoutDesc": "Ontwerp van earnout-mechanismen, definitie van metrics, contractuele verkopersbescherming.",
-      "post_acquisition": "Post-acquisitie-integratie",
       "post_acquisitionDesc": "30/60/100-dagenplan: tech stack, HR, klantcommunicatie, migratie van leverancierscontracten.",
-      "exec_hr": "Executive HR-ondersteuning",
       "exec_hrDesc": "Managementcontract na verkoop, non-concurrentie, leiderschapstransitie, golden parachute.",
       "other": "Overig"
     },
@@ -8142,8 +5885,7 @@
     "card": {
       "contact": "Contact",
       "verifiedBadge": "Aegryn Verified",
-      "rateFrom": "Vanaf",
-      "rateUnit": "€/u"
+      "rateFrom": "Vanaf"
     },
     "contactModal": {
       "label": "Contactverzoek",
@@ -8170,7 +5912,6 @@
       "fieldPrenom": "Voornaam",
       "fieldNom": "Achternaam",
       "fieldEmail": "Professioneel e-mailadres",
-      "fieldProfession": "Hoofdspecialiteit",
       "fieldCategory": "Categorie",
       "fieldDomain": "Hoofdgebied van expertise",
       "fieldOrg": "Firma / Organisatie",
@@ -8270,17 +6011,14 @@
   "client": {
     "common": {
       "viewAll": "Alles bekijken",
-      "noData": "Geen gegevens.",
       "loading": "Laden…",
       "back": "Terug",
       "submit": "Verzenden",
       "save": "Opslaan",
-      "cancel": "Annuleren",
       "delete": "Verwijderen",
       "edit": "Bewerken",
       "download": "Downloaden",
       "upload": "Bestand uploaden",
-      "confirm": "Bevestigen",
       "close": "Sluiten",
       "search": "Zoeken",
       "filter": "Filteren",
@@ -8307,7 +6045,6 @@
       "partner": "Partnerruimte",
       "expert": "Expertruimte",
       "dashboard": "Dashboard",
-      "catalogue": "Catalogus",
       "offres": "Mijn biedingen",
       "transactions": "Transacties",
       "kyc": "KYC-verificatie",
@@ -8319,7 +6056,6 @@
       "commissions": "Commissies",
       "introductions": "Introducties",
       "subscription": "Abonnement",
-      "expertProfile": "Expertprofiel",
       "nda": "NDA",
       "logout": "Afmelden"
     },
@@ -8337,7 +6073,6 @@
       "recentNotifs": "Recente notificaties",
       "noOffres": "Nog geen biedingen ingediend.",
       "noTransactions": "Geen lopende transacties.",
-      "exploreCatalog": "Catalogus bekijken",
       "kycPending": "{count} KYC-document in behandeling of te corrigeren",
       "kycPendingPlural": "{count} KYC-documenten in behandeling of te corrigeren",
       "bidStatus": {
@@ -8383,40 +6118,14 @@
         "exploreCatalog": "Catalogus bekijken",
         "areaLabel": "Kopersruimte"
       },
-      "offreDetail": {
-        "meta": "Biedingsdetail, Aegryn-kopersruimte",
-        "title": "Biedingsdetail",
-        "back": "← Terug naar biedingen",
-        "areaLabel": "Kopersruimte"
-      },
       "newOffre": {
         "meta": "Nieuwe bieding, Aegryn-kopersruimte",
         "title": "Een bod indienen",
         "areaLabel": "Kopersruimte"
       },
-      "transactionDetail": {
-        "meta": "Transactie, Aegryn-kopersruimte",
-        "back": "← Terug naar transacties",
-        "areaLabel": "Kopersruimte"
-      },
-      "catalogue": {
-        "meta": "Catalogus, Aegryn-kopersruimte",
-        "title": "Koperscatalogus",
-        "subtitle": "Activa beschikbaar voor acquisitie.",
-        "noItems": "Momenteel geen activa beschikbaar.",
-        "viewDossier": "Dossier bekijken",
-        "areaLabel": "Kopersruimte"
-      },
       "kpiPublished": "Beschikbare activa",
-      "opportunitiesLabel": "Transactiemogelijkheden",
       "opportunitiesTitle": "Aegryn neemt contact met u op voor elke gekwalificeerde kans.",
-      "opportunitiesDesc": "Transactiemogelijkheden worden vertrouwelijk en individueel gedeeld, na een ondertekende NDA en selectie van uw profiel. Geen publieke toegang tot gepubliceerde activa. Elke kwalificatie wordt rechtstreeks door onze teams uitgevoerd.",
-      "opportunitiesNotifCta": "Mijn meldingen",
-      "opportunitiesNdaCta": "Mijn NDA",
-      "processStep1": "Profiel gekwalificeerd door Aegryn",
-      "processStep2": "NDA ondertekend",
-      "processStep3": "Kans vertrouwelijk gedeeld",
-      "processStep4": "Data room toegekend na selectie"
+      "opportunitiesDesc": "Transactiemogelijkheden worden vertrouwelijk en individueel gedeeld, na een ondertekende NDA en selectie van uw profiel. Geen publieke toegang tot gepubliceerde activa. Elke kwalificatie wordt rechtstreeks door onze teams uitgevoerd."
     },
     "seller": {
       "meta": "Dashboard, Aegryn-verkopersruimte",
@@ -8425,7 +6134,6 @@
       "fallbackName": "Verkoper",
       "kpiActifs": "Ingediende activa",
       "kpiCertified": "Gecertificeerd",
-      "kpiTransactionReady": "M&A-klaar",
       "kpiTransactions": "Transacties",
       "kpiKycOk": "KYC gevalideerd",
       "kpiKycIncomplete": "KYC onvolledig",
@@ -8488,12 +6196,6 @@
         "back": "← Terug naar activa",
         "areaLabel": "Verkopersruimte"
       },
-      "ndaView": {
-        "meta": "NDA | Aegryn-verkopersruimte",
-        "title": "Geheimhoudingsovereenkomst",
-        "subtitle": "NDA ondertekend in het kader van uw verkoop.",
-        "areaLabel": "Verkopersruimte"
-      },
       "transactions": {
         "meta": "Transacties, Aegryn-verkopersruimte",
         "title": "Mijn transacties",
@@ -8511,13 +6213,9 @@
       "fallbackName": "Partner",
       "kpiCertifications": "Actieve mede-ondertekeningen",
       "kpiIntroductions": "Introducties",
-      "subscriptionActive": "Actief abonnement",
-      "subscriptionInactive": "Inactief abonnement",
       "subscriptionDesc": "Expertprofiel, CHF 89/maand",
       "activeCertifications": "Lopende mede-ondertekeningen",
       "recentIntroductions": "Recente introducties",
-      "introductionTypeAsset": "Assetverwijzing",
-      "introductionTypeBuyer": "Kopersverwijzing",
       "certStatus": {
         "assigned": "Toegewezen",
         "in_review": "In beoordeling",
@@ -8543,21 +6241,11 @@
         "noMandates": "Nog geen mandaten.",
         "areaLabel": "Partnerruimte"
       },
-      "mandateDetail": {
-        "meta": "Mandaatdetail, Aegryn-partnerruimte",
-        "back": "← Terug naar mandaten",
-        "areaLabel": "Partnerruimte"
-      },
       "certifications": {
         "meta": "Mede-ondertekeningen, Aegryn-partnerruimte",
         "title": "Mijn mede-ondertekeningen",
         "subtitle": "Lopende CIFSO 5000-certificeringsopdrachten.",
         "noCertifications": "Nog geen mede-ondertekeningen toegewezen.",
-        "areaLabel": "Partnerruimte"
-      },
-      "certDetail": {
-        "meta": "Detail mede-ondertekening, Aegryn-partnerruimte",
-        "back": "← Terug naar mede-ondertekeningen",
         "areaLabel": "Partnerruimte"
       },
       "commissions": {
@@ -8572,12 +6260,6 @@
         "title": "Mijn introducties",
         "subtitle": "Geïntroduceerde activa en kopers.",
         "noIntroductions": "Nog geen introducties.",
-        "areaLabel": "Partnerruimte"
-      },
-      "expertProfile": {
-        "meta": "Expertprofiel, Aegryn-partnerruimte",
-        "title": "Mijn expertprofiel",
-        "subtitle": "Profiel zichtbaar op het Aegryn-expertnetwerk.",
         "areaLabel": "Partnerruimte"
       },
       "subscription": {
@@ -8657,13 +6339,10 @@
     "hub": {
       "title": "AEGRYN Magazine",
       "desc": "Deals, multiples, portretten en lifestyle. Driemaandelijks.",
-      "reportLabel": "Jaarrapport",
       "reportDesc": "Aegryn Magazine, European Tech M&A Intelligence",
-      "notifyLabel": "Ontvang elke editie",
       "notifyDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe driemaandelijkse editie verschijnt.",
       "newsletterLabel": "Artikelen & Inzichten",
       "newsletterDesc": "Ontvang onze artikelen over de tech-M&A-markt, één per week.",
-      "subscribeLabel": "Ontvang elke editie",
       "subscribeDesc": "Schrijf u in om op de hoogte te worden gesteld wanneer elke nieuwe driemaandelijkse editie verschijnt.",
       "charteFreqLabel": "Frequentie",
       "charteFreqVal": "Driemaandelijks",
@@ -8699,23 +6378,14 @@
       "contactEditCta": "media@boha-group.com →",
       "subscribeSuccess": "U staat op de lijst. Eerste editie binnen 48 uur in uw inbox.",
       "subscribeError": "Er is iets misgegaan. Probeer het opnieuw of schrijf ons op contact@boha-group.com",
-      "cifsLabel": "CIFSO 5000-certificering",
-      "cifsBody": "Minder dan 25% van de ingediende activa bereikt de Full Grade-status. Ontdek waar uw actief staat voordat een koper dat doet.",
-      "cifsCta": "Start certificering →",
-      "footerLegal": "Aegryn, Saint-Sulpice, Kanton Vaud, Zwitserland, CHE-402.011.821",
-      "footerCopyright": "© Aegryn 2027. Permanente digitale toegang",
       "navTableOfContents": "Inhoudsopgave",
       "navDownloadPdf": "PDF downloaden",
-      "cardReadIssue": "Editie lezen",
-      "cardExploreOnline": "Online verkennen",
-      "cardSpecialEdition": "Speciale editie",
       "readOnline": "Online verkennen",
       "downloadPdf": "De PDF bekijken",
       "comingSoon": "Binnenkort beschikbaar",
       "subscribe": "Abonneren",
       "manage": "Abonnement beheren",
       "successMsg": "Abonnement succesvol geactiveerd.",
-      "canceledMsg": "Betaling geannuleerd.",
       "comingSoonBadge": "Binnenkort beschikbaar"
     },
     "notify": {
@@ -8735,7 +6405,6 @@
       "title": "Aegryn Magazine",
       "subtitle": "European Tech M&A Intelligence",
       "tagline": "Zeldzaam door selectie. Discreet uit principe.",
-      "edition2026": "Eerste editie · januari 2027",
       "readOnline": "Online verkennen",
       "downloadPdf": "De PDF bekijken",
       "notify": "Houd mij op de hoogte",
@@ -8745,12 +6414,9 @@
       "ctaTitle": "U heeft iets echts gebouwd.",
       "ctaSub": "Wij certificeren het. Wij waarderen het.",
       "ctaLine": "AEGRYN | Zeldzaam door selectie. Discreet uit principe.",
-      "scrollDown": "Scrollen",
       "source": "Bron",
       "estimatedGrade": "Geschatte AEGRYN Grade",
-      "whatMadeItWork": "Waardoor het werkte",
       "disclaimer": "Alle analyses van private deals zijn gebaseerd op openbare informatie en schattingen van AEGRYN. Ze vormen geen beleggingsadvies.",
-      "indexNote": "De AEGRYN Index verdiept zich bij elke editie naarmate onze certificeringsdata groeit.",
       "meta": {
         "title": "Aegryn Magazine | Deals, multiples, portretten en lifestyle",
         "description": "Het driemaandelijkse magazine voor Europese tech-ondernemers en de acquirers die hen volgen. Gedecodeerde transacties, marktdata, ondernemersportretten en lifestyle."
@@ -8761,12 +6427,8 @@
         "title": "Printeditie | Aegryn Magazine",
         "description": "Geef uw interesse in de printeditie van AEGRYN Magazine aan, voorbehouden aan Aegryn-klanten."
       },
-      "printBadge": "Printeditie",
       "title": "Interesselijst: printeditie",
       "desc": "De printeditie van het Aegryn-magazine is een initiatief voorbehouden aan geregistreerde klanten. Via dit formulier kunt u uw interessegebieden aangeven om aan de wenslijst te worden toegevoegd. Wij nemen contact met u op zodra de productie start.",
-      "digitalNote": "De digitale versie is online toegankelijk, net als onze artikelen en nieuws.",
-      "digitalNoteCta": "Lees het rapport online",
-      "namePlaceholder": "Uw naam",
       "emailPlaceholder": "Uw e-mailadres",
       "companyPlaceholder": "Uw bedrijf (optioneel)",
       "interestsLabel": "Uw interessegebieden",
@@ -8797,7 +6459,6 @@
       "error": "Er is een fout opgetreden. Probeer het opnieuw.",
       "clientNote": "Voorbehouden aan geregistreerde Aegryn-klanten. De printeditie is niet beschikbaar of printbaar via het web. Ze wordt fysiek geproduceerd als de vraag dit rechtvaardigt.",
       "disclaimer": "De digitale versie blijft online toegankelijk. De printeditie wordt, indien geproduceerd, uitsluitend verzonden aan geregistreerde klanten op de wenslijst.",
-      "backToMagazine": "Terug naar Magazine",
       "firstNamePlaceholder": "Voornaam",
       "lastNamePlaceholder": "Achternaam",
       "addressPlaceholder": "Straatnummer en naam",
@@ -8836,7 +6497,6 @@
       "label": "Over ons in de media",
       "title": "De pers besteedt aandacht aan onze activa.",
       "readArticle": "Lees het artikel",
-      "videoAvailable": "Video beschikbaar op aanvraag",
       "subblink": {
         "title": "Village de la Justice stelt voor al uw contracten te auditen",
         "excerpt": "Village Justice biedt aan al uw contracten te auditen om een juridische risicoscore te verkrijgen via subblink, een oplossing aangedreven door kunstmatige intelligentie gekalibreerd voor Zwitsers en Europees recht.",
@@ -8854,14 +6514,7 @@
       "subtitle": "Vereiste documenten voor uw Aegryn-verkoopproces.",
       "complete": "KYC-dossier compleet",
       "inProgress": "KYC-dossier in behandeling",
-      "completeHint": "Voltooi uw KYC-dossier om uw verkoop af te ronden.",
-      "pendingUpload": "Document wordt gecontroleerd.",
-      "validatedWarn": "Dit document is gevalideerd. Een nieuwe upload vervangt de huidige versie."
-    },
-    "ndaView": {
-      "meta": "NDA | Aegryn verkopersruimte",
-      "title": "Geheimhoudingsovereenkomst",
-      "subtitle": "NDA ondertekend in het kader van uw verkoop."
+      "pendingUpload": "Document wordt gecontroleerd."
     },
     "notifications": {
       "meta": "Meldingen | Aegryn verkopersruimte",
@@ -9293,11 +6946,9 @@
       "title": "Talentbeheer",
       "tabHiring": "Recruteringsmandaten",
       "tabCandidates": "Kandidaturen",
-      "statusNew": "Nieuw",
       "statusInProgress": "In behandeling",
       "statusClosed": "Gesloten",
       "filterAll": "Alle",
-      "filterNew": "Nieuw",
       "filterInProgress": "In behandeling",
       "filterClosed": "Gesloten",
       "company": "Bedrijf",
@@ -9305,231 +6956,16 @@
       "role": "Functie",
       "urgency": "Urgentie",
       "status": "Status",
-      "createdAt": "Datum",
       "actions": "Acties",
       "viewDetails": "Details bekijken",
       "updateStatus": "Status bijwerken",
       "addNote": "Notitie toevoegen",
       "candidate": "Kandidaat",
       "availability": "Beschikbaarheid",
-      "downloadCV": "CV downloaden",
-      "viewLinkedIn": "LinkedIn bekijken",
-      "noHiring": "Geen recruteringsmandaten.",
-      "noCandidates": "Geen kandidaturen.",
-      "noteLabel": "Admin-notitie",
-      "notePlaceholder": "Interne notitie toevoegen...",
-      "saveNote": "Notitie opslaan"
+      "noCandidates": "Geen kandidaturen."
     }
   },
   "industries": {
-    "desc": "Wij opereren in alle sectoren waar waardering en transformatie waarde creëren.",
-    "footerNote": "Alle sectoren",
-    "list": [
-      {
-        "name": "Ruimtevaart & Defensie",
-        "desc": "Embedded systemen, missie-AI, ITAR/EAR-compliance, strategisch onderaannemersbeheer."
-      },
-      {
-        "name": "Landbouw & Agri-food",
-        "desc": "Supply chain traceerbaarheid, opbrengstvoorspelling AI, sanitaire en ESG-compliance."
-      },
-      {
-        "name": "Automotive & Mobiliteit",
-        "desc": "Digitale transformatie, embedded AI, Tier-1/2 leveranciersbeheer, logistiek en MaaS."
-      },
-      {
-        "name": "Bankwezen & Financiële Diensten",
-        "desc": "Regelgevende compliance (DORA, Bazel IV), kredietrisico AI, back-office automatisering."
-      },
-      {
-        "name": "Chemie & Geavanceerde Materialen",
-        "desc": "R&D-data, REACH-compliance, leverancierscontractbeheer, intellectueel eigendom."
-      },
-      {
-        "name": "Bouw & Infrastructuur",
-        "desc": "BIM, voorspellend onderhoud AI, complexe contracten, meerlaags onderaannemersbeheer."
-      },
-      {
-        "name": "Onderwijs & EdTech",
-        "desc": "Adaptieve leerplatformen, educatieve AVG-compliance, personalisatie-AI."
-      },
-      {
-        "name": "Energie & Nutsbedrijven",
-        "desc": "Energietransitie, smart grid, EU ETS-compliance, asset management AI en vraagprognose."
-      },
-      {
-        "name": "FinTech & Betalingen",
-        "desc": "PSD2, open banking, AML/KYC-compliance, real-time betalingsarchitecturen, tokenisatie."
-      },
-      {
-        "name": "GovTech & Publieke Sector",
-        "desc": "Digitale transformatie van instellingen, datasouvereiniteit, NIS2 en DORA-compliance."
-      },
-      {
-        "name": "HealthTech & MedTech",
-        "desc": "Diagnostische AI, MDR/IVDR-compliance, gezondheidsdata AVG, HL7/FHIR-interoperabiliteit."
-      },
-      {
-        "name": "Horeca & Toerisme",
-        "desc": "Revenue management AI, unified CRM, klantdata-compliance, ervaringsdigitalisering."
-      },
-      {
-        "name": "Industrie & Productie",
-        "desc": "Industrie 4.0, voorspellend onderhoud, MES/ERP-integratie, ISO-compliance en kwaliteitsbeheer."
-      },
-      {
-        "name": "Logistiek & Supply Chain",
-        "desc": "Real-time zichtbaarheid, stroomoptimalisatie AI, douane-compliance, 3PL/4PL-contracten."
-      },
-      {
-        "name": "Luxe & Premium Retail",
-        "desc": "Oorsprongstraceerbaarheid, blockchain anti-vervalsing, omnichannel CX, first-party data."
-      },
-      {
-        "name": "Media & Entertainment",
-        "desc": "Digitale rechten, aanbevelings-AI, contentmonetisatie, DSA/AVMS-compliance."
-      },
-      {
-        "name": "PropTech & Vastgoed",
-        "desc": "AI-waardering, geautomatiseerde due diligence, documentbeheer, vastgoed AML-compliance."
-      },
-      {
-        "name": "Retail & E-commerce",
-        "desc": "Pricing en voorraadprognose AI, geautomatiseerde CX, DSA-compliance, first-party data."
-      },
-      {
-        "name": "Gezondheidszorg & Farmacie",
-        "desc": "Klinische proefdata, geneesmiddelenbewaking, diagnostische AI, HDS en EU-regelgevingscompliance."
-      },
-      {
-        "name": "Technologie & SaaS",
-        "desc": "Schaalbaarheid, multi-tenant architectuur, SOC2/ISO27001-compliance, product AI en PLG."
-      },
-      {
-        "name": "Telecommunicatie",
-        "desc": "NIS2-compliance, netwerk-AI, service-orkestratie, BSS/OSS-transformatie."
-      },
-      {
-        "name": "Transport & Vracht",
-        "desc": "Route- en capaciteits-AI-optimalisatie, multimodale contracten, emissie-compliance, vlootzichtbaarheid."
-      }
-    ],
-    "title": "Gedekte sectoren",
-    "clusters": [
-      {
-        "cluster": "Financiën & Kapitaal",
-        "items": [
-          {
-            "name": "Banken & Financiële Diensten",
-            "desc": "Regelgevende compliance (DORA, Bazel IV), kredietrisico-AI, back-office automatisering."
-          },
-          {
-            "name": "FinTech & Betalingen",
-            "desc": "PSD2, open banking, AML/KYC-compliance, real-time betalingsarchitecturen, tokenisatie."
-          },
-          {
-            "name": "PropTech & Vastgoed",
-            "desc": "Asset-waardering, huurder scoring AI, data-compliance, transactieplatform."
-          }
-        ]
-      },
-      {
-        "cluster": "Gezondheid & Biowetenschappen",
-        "items": [
-          {
-            "name": "Gezondheidszorg & Farmacie",
-            "desc": "AVG gezondheidsgegevens, HL7/FHIR interoperabiliteit, EMA-compliance, veilige supply chain."
-          },
-          {
-            "name": "HealthTech & MedTech",
-            "desc": "Diagnostische AI, MDR/IVDR-compliance, AVG gezondheidsgegevens, HL7/FHIR interoperabiliteit."
-          }
-        ]
-      },
-      {
-        "cluster": "Industrie, Energie & Infrastructuur",
-        "items": [
-          {
-            "name": "Lucht- en Ruimtevaart & Defensie",
-            "desc": "Ingebedde systemen, missie-AI, ITAR/EAR-compliance, strategisch onderaannemersbeheer."
-          },
-          {
-            "name": "Landbouw & Voeding",
-            "desc": "Toeleveringsketen traceerbaarheid, opbrengstvoorspelling AI, sanitaire en ESG-compliance."
-          },
-          {
-            "name": "Automotive & Mobiliteit",
-            "desc": "Digitale transformatie, ingebedde AI, Tier-1/2 leveranciersbeheer, MaaS."
-          },
-          {
-            "name": "Chemie & Geavanceerde Materialen",
-            "desc": "R&D-data, REACH-compliance, leverancierscontractbeheer, IP."
-          },
-          {
-            "name": "Bouw & Infrastructuur",
-            "desc": "BIM, voorspellende onderhouds-AI, complexe contracten, meerlagig onderaannemersbeheer."
-          },
-          {
-            "name": "Energie & Nutsbedrijven",
-            "desc": "Energietransitie, smart grid, EU ETS-compliance, asset management AI."
-          },
-          {
-            "name": "Industrie & Productie",
-            "desc": "Industrie 4.0, voorspellend onderhoud, MES/ERP-integratie, ISO-compliance."
-          },
-          {
-            "name": "Logistiek & Supply Chain",
-            "desc": "Real-time zichtbaarheid, stroomoptimalisatie AI, douane-compliance, 3PL/4PL-contracten."
-          },
-          {
-            "name": "Transport & Vracht",
-            "desc": "Vlootoptimalisatie, transport regelgevende compliance, digitale beheerplatforms."
-          }
-        ]
-      },
-      {
-        "cluster": "Handel, Diensten & Klantervaring",
-        "items": [
-          {
-            "name": "Horeca & Toerisme",
-            "desc": "AI revenue management, unified CRM, klantdata compliance, ervaringsdigitalisering."
-          },
-          {
-            "name": "Luxe & Premium Retail",
-            "desc": "Blockchain productauthenticiteit, omnichannel-ervaring, data clienteling, ESG-compliance."
-          },
-          {
-            "name": "Media & Entertainment",
-            "desc": "Content monetisering, AI aanbevelingen, digitale rechten, DSA-compliance."
-          },
-          {
-            "name": "Retail & E-commerce",
-            "desc": "Omnichannel-ervaring, AI personalisering, last-mile logistiek, data-compliance."
-          },
-          {
-            "name": "Telecommunicatie",
-            "desc": "Legacy modernisering, 5G edge computing, BEREC-compliance, technologieafhankelijkheidsbeheer."
-          }
-        ]
-      },
-      {
-        "cluster": "Tech, Innovatie & Publieke Sector",
-        "items": [
-          {
-            "name": "Onderwijs & EdTech",
-            "desc": "Adaptieve leerplatforms, AVG-compliance onderwijs, personalisatie AI."
-          },
-          {
-            "name": "GovTech & Publieke Sector",
-            "desc": "Digitale transformatie van instellingen, data-soevereiniteit, NIS2- en DORA-compliance."
-          },
-          {
-            "name": "Technologie & SaaS",
-            "desc": "Multi-tenant architectuur, schaalbaarheid, technische schulden, EU AI Act compliance, exit readiness."
-          }
-        ]
-      }
-    ],
     "page": {
       "meta": {
         "title": "Onze sectoren, Aegryn",
@@ -9538,58 +6974,6 @@
       "label": "Onze sectoren",
       "title": "Sectorale expertise voor elke\norganisatorische uitdaging.",
       "desc": "Onze acht vakgebieden, van strategie tot projectsturing, worden anders toegepast afhankelijk van de sectorale realiteiten. Zo pakken we ze aan.",
-      "servicesTitle": "Onze ingezette diensten",
-      "services": [
-        {
-          "name": "Strategisch Advies",
-          "desc": "Positionering, businessmodel, governance en langetermijnplanning voor organisaties die gebouwd zijn om te blijven."
-        },
-        {
-          "name": "Technologisch Advies",
-          "desc": "Systeemarchitectuur, digitale transformatie, data-soevereiniteit en naleving van tech-regelgeving."
-        },
-        {
-          "name": "M&A-advies",
-          "desc": "Verkoopvoorbereiding, kopers-due diligence, transactiestructurering en closing-begeleiding."
-        },
-        {
-          "name": "Maatwerksoftware",
-          "desc": "Digitale productontwikkeling, bedrijfsintegraties en eigen platforms aangepast aan uw sectorale beperkingen."
-        },
-        {
-          "name": "CIFSO 5000-certificering",
-          "desc": "Onafhankelijke beoordeling over 5 dimensies (Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent) om waarde te documenteren en te verdedigen."
-        }
-      ],
-      "cifsoTitle": "CIFSO 5000 relevantie per sector",
-      "cifsoDesc": "Elke CIFSO 5000-dimensie resoneert anders afhankelijk van de sector. De certificering past zich aan de operationele en regelgevende realiteiten van elke industrie aan.",
-      "cifso": [
-        {
-          "code": "C",
-          "dim": "Code & Architectuur",
-          "desc": "Kwaliteit van de technologiebasis, eigen code of gelicenseerde systemen: architectuur, afhankelijkheden, omkeerbaarheid. Cruciaal voor elke organisatie wier waarde op haar IS berust."
-        },
-        {
-          "code": "I",
-          "dim": "IP & Rechten",
-          "desc": "Rechten op code, merken, octrooien, eigen data, contracten. De eigendomsketen die een overnemer als eerste controleert."
-        },
-        {
-          "code": "F",
-          "dim": "Financiën & Metrics",
-          "desc": "Kwaliteit van financiële data, omzetvoorspelbaarheid, marges en SaaS-metrics. Verdedigbaar in due diligence en bij kredietverstrekkers."
-        },
-        {
-          "code": "S",
-          "dim": "Beveiliging & Soevereiniteit",
-          "desc": "Cyberhouding, regelgevende compliance (NIS2, DORA, AVG, AI Act), data-soevereiniteit. Beslissend in gereguleerde sectoren."
-        },
-        {
-          "code": "O",
-          "dim": "Organisatie & Talent",
-          "desc": "Organisatorische veerkracht, documentatie van knowhow, managementdiepte. Een sleutelfactor van overdraagbaarheid."
-        }
-      ],
       "industriesTitle": "Onze interventiebranches",
       "allArticles": "Al onze artikelen",
       "articlesCta": "Analyses lezen",
@@ -9601,16 +6985,6 @@
           "cluster": "Financiën & Kapitaal",
           "image": "/images/industries/theme_fintech.jpg",
           "vision": "Financiële organisaties opereren in een omgeving van permanente compliance. Hun waarde berust op datakwaliteit, robuuste governance en de geloofwaardigheid van metrics. CIFSO 5000 is hier bijzonder relevant om te documenteren wat regelgevende audits niet vastleggen.",
-          "services": [
-            "Strategieadvies",
-            "Technologieadvies",
-            "CIFSO 5000-certificering"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "S"
-          ],
           "sectors": [
             {
               "name": "Banken & Financiële Diensten",
@@ -9634,18 +7008,6 @@
           "cluster": "Gezondheid & Life Sciences",
           "image": "/images/grade-usecases/uc-due-diligence.jpg",
           "vision": "Gezondheidsorganisaties werken onder enkele van de strengste compliance-eisen. Hun waarde hangt af van hun datakapitaal, protocollen en de sterkte van hun klinische en regelgevende governance. De CIFSO 5000-certificering wordt toegepast met een op deze beperkingen afgestemde granulariteit.",
-          "services": [
-            "Strategieadvies",
-            "Technologieadvies",
-            "Maatwerkoplossingen",
-            "CIFSO 5000-certificering"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "S",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Gezondheid & Farmacie",
@@ -9664,18 +7026,6 @@
           "cluster": "Industrie, Energie & Infrastructuur",
           "image": "/images/industries/theme_marketplace.jpg",
           "vision": "Industriële organisaties hebben vaak een ondergedocumenteerde waarde: operationele knowhow, langetermijncontracten, intellectueel eigendom op processen. CIFSO 5000 biedt een gemeenschappelijke taal tussen de directeur die zijn waarde kent en de investeerder die die moet verifiëren.",
-          "services": [
-            "Strategieadvies",
-            "Technologieadvies",
-            "M&A-advies",
-            "CIFSO 5000-certificering"
-          ],
-          "cifsoDims": [
-            "C",
-            "I",
-            "F",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Energie & Utilities",
@@ -9729,17 +7079,6 @@
           "cluster": "Handel, Diensten & Klantervaring",
           "image": "/images/industries/theme_saas.jpg",
           "vision": "Handels- en dienstverlenende organisaties hebben waarde gekoppeld aan hun klantenbasis, omzetmodel en retentievermogen. Het documenteren van deze activa (CRM-data, raamcontracten, retentiemetrics) is precies wat CIFSO 5000 structureert.",
-          "services": [
-            "Strategieadvies",
-            "M&A-advies",
-            "Maatwerkoplossingen",
-            "CIFSO 5000-certificering"
-          ],
-          "cifsoDims": [
-            "C",
-            "F",
-            "I"
-          ],
           "sectors": [
             {
               "name": "Retail & E-commerce",
@@ -9773,17 +7112,6 @@
           "cluster": "Tech, Innovatie & Publieke Sector",
           "image": "/images/industries/theme_AI.jpg",
           "vision": "Tech-organisaties hebben vaak waarde geconcentreerd in hun code, data en teams. De CIFSO 5000-certificering is ontworpen om deze immateriële activa verifieerbaar, verdedigbaar en overdraagbaar te maken. Voor publieke instellingen documenteert zij de digitale maturiteit onafhankelijk.",
-          "services": [
-            "Strategieadvies",
-            "Technologieadvies",
-            "Maatwerkoplossingen",
-            "CIFSO 5000-certificering"
-          ],
-          "cifsoDims": [
-            "C",
-            "S",
-            "O"
-          ],
           "sectors": [
             {
               "name": "Technologie & SaaS",
@@ -9809,7 +7137,6 @@
       "segmentsLabel": "Hoe wij onze klanten begeleiden",
       "segmentsSub": "Drie typische profielen, drie concrete situaties.",
       "problemsLabel": "Wat wij oplossen",
-      "ctaKicker": "CIFSO 5000-certificering",
       "ctaTitle": "Laat uw organisatie beoordelen en verkrijg een verdedigbare onafhankelijke certificering.",
       "exploreLabel": "Ontdek andere sectoren",
       "sectorCount": "{count, plural, one {# sector} other {# sectoren}}",
@@ -9823,19 +7150,12 @@
     }
   },
   "aboutPage": {
-    "intro": "Wij geloven dat de waarde van een bedrijf niet onder druk wordt onderhandeld. Ze wordt opgebouwd door strategische strengheid, versterkt door technologie, gevalideerd in transparantie en gerealiseerd in vertrouwen.\n\nDaarom bestaat Aegryn: om leidinggevenden te begeleiden die weigeren hun koers te laten bepalen.",
-    "vision": {
-      "label": "ONZE VISIE",
-      "title": "Een hybride groep.\nVerankerd in Zwitserland.",
-      "text": "Onze visie is die van een Europese adviesgroep die bedrijven van begin tot eind begeleidt, van strategie naar kapitaal, van transformatie naar waardering.\n\nWij zijn ondernemers: wij hebben organisaties opgebouwd, geleid en geherstructureerd. Wat wij adviseren, leven wij. Deze coherentie is onze eerste geloofwaardigheid.\n\nAegryn is noch een klassiek adviesbureau, noch een tech-agency, noch een M&A-boutique. Het is een hybride groep, verankerd in Zwitserland, die de vijf manieren van handelen samenbrengt die nodig zijn voor de duurzame waarde van een bedrijf."
-    },
     "founder": {
       "label": "DE OPRICHTER",
       "title": "Een oprichter uit de praktijk.",
       "desc": "De oprichter van Aegryn is een bestuurder en operator met meer dan twintig jaar internationale, sectoroverschrijdende ervaring in Europa, de Verenigde Staten en Azië.\n\nAls voormalig executive director bij een adviesbureau van wereldniveau begeleidde hij publieke en private organisaties, internationale groepen en instellingen door hun meest complexe transformaties, van strategie tot operaties, van financiën tot human resources, van M&A-advies tot integratie na overname.\n\nDaarna werd hij ondernemer en investeerder in wat hem inspireert: gedenkwaardige klantervaringen creëren in het tijdperk van artificiële intelligentie. Hij droeg alleen wat hij anderen adviseerde: productstrategie, technisch ontwerp, marketing, juridische zaken en intellectuele eigendom, rekrutering en partnerschappen. Hij slaagde in sommige projecten. Hij leerde uit andere. En bouwde voort op wat geen enkele adviesopdracht kan leren.\n\nDit dubbele parcours is de oorsprong van Aegryn.\n\nHij koos ervoor Aegryn op te richten om in één structuur te verenigen wat de markt in silo’s aanbiedt: de kadering van het project, de uitvoering ervan, de begeleiding door de tijd en de selectie van talent.\n\nZijn overtuiging: een beslissing heeft alleen waarde als ze tot haar resultaat wordt doorgevoerd.",
       "cta": "Neem contact op",
-      "disciplinesCta": "Onze vakgebieden",
-      "storytelling": "Adviseren zonder te bouwen is een kaart leveren zonder territorium.\nBouwen zonder te certificeren is leveren zonder bewijs.\nCertificeren zonder over te dragen is voorbereiden zonder af te ronden.\nOverdragen zonder te rekruteren is overhandigen zonder het vervolg te verzekeren.\nInformeren zonder te handelen is commentaar geven zonder verantwoordelijkheid."
+      "disciplinesCta": "Onze vakgebieden"
     },
     "whyAegryn": {
       "label": "WAAROM AEGRYN",
@@ -9845,397 +7165,6 @@
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
       "p3ImageAlt": "Gouden zonsondergang boven het mistige Lausanne"
-    }
-  },
-  "partner": {
-    "meta": "Dashboard | Aegryn partnergedeelte",
-    "areaLabel": "Partnergedeelte",
-    "hello": "Hallo, {name}",
-    "fallbackName": "Partner",
-    "kpiCertifications": "Actieve mede-certificeringen",
-    "kpiIntroductions": "Introducties",
-    "subscriptionActive": "Abonnement actief",
-    "subscriptionInactive": "Abonnement inactief",
-    "subscriptionDesc": "Expertprofiel, CHF 89/maand",
-    "activeCertifications": "Lopende mede-certificeringen",
-    "recentIntroductions": "Recente introducties",
-    "introductionTypeAsset": "Asset-introductie",
-    "introductionTypeBuyer": "Koperintroductie",
-    "certStatus": {
-      "assigned": "Toegewezen",
-      "in_review": "In beoordeling",
-      "validated": "Gevalideerd",
-      "rejected": "Afgewezen"
-    },
-    "notifications": {
-      "meta": "Meldingen | Aegryn partnergedeelte",
-      "title": "Meldingen",
-      "subtitle": "Meldingen over uw activiteit."
-    },
-    "kyc": {
-      "meta": "KYC | Aegryn partnergedeelte",
-      "title": "KYC : Identiteitsverificatie",
-      "subtitle": "Vereiste documenten voor uw partnerprofiel."
-    },
-    "mandates": {
-      "meta": "Mandaten | Aegryn partnergedeelte",
-      "title": "Mijn mandaten",
-      "subtitle": "Lopende partnerschapsmandaten.",
-      "noMandates": "Nog geen mandaten."
-    },
-    "mandateDetail": {
-      "meta": "Mandaatdetail | Aegryn partnergedeelte",
-      "back": "← Terug naar mandaten"
-    },
-    "certifications": {
-      "meta": "Mede-certificeringen | Aegryn partnergedeelte",
-      "title": "Mijn mede-certificeringen",
-      "subtitle": "Lopende CIFSO-certificeringsopdrachten.",
-      "noCertifications": "Geen mede-certificeringen toegewezen."
-    },
-    "certDetail": {
-      "meta": "Mede-certificering detail | Aegryn partnergedeelte",
-      "back": "← Terug naar mede-certificeringen"
-    },
-    "commissions": {
-      "meta": "Commissies | Aegryn partnergedeelte",
-      "title": "Mijn commissies",
-      "subtitle": "Commissiehistoriek.",
-      "noCommissions": "Geen commissies geregistreerd."
-    },
-    "introductions": {
-      "meta": "Introducties | Aegryn partnergedeelte",
-      "title": "Mijn introducties",
-      "subtitle": "Geïntroduceerde assets en kopers.",
-      "noIntroductions": "Nog geen introducties."
-    },
-    "expertProfile": {
-      "meta": "Expertprofiel | Aegryn partnergedeelte",
-      "title": "Mijn expertprofiel",
-      "subtitle": "Profiel zichtbaar op het Aegryn-expertnetwerk."
-    },
-    "subscription": {
-      "meta": "Abonnement | Aegryn partnergedeelte",
-      "title": "Mijn abonnement",
-      "subtitle": "Beheer uw Expertprofiel-abonnement.",
-      "monthlyPlan": "Maandelijks, CHF 89/maand",
-      "yearlyPlan": "Jaarlijks, CHF 80/maand (–10%)",
-      "active": "Actief",
-      "inactive": "Inactief"
-    },
-    "subscribe": {
-      "meta": {
-        "title": "Printeditie | Aegryn Magazine",
-        "description": "Geef uw interesse door voor de printeditie van het AEGRYN Report, gereserveerd voor Aegryn-klanten."
-      },
-      "printBadge": "Printeditie",
-      "title": "Interesselijst : printeditie",
-      "desc": "De printeditie van het AEGRYN Report is gereserveerd voor actieve klanten van het ecosysteem. Geef uw interessegebieden aan om op de wachtlijst te komen, wij nemen contact op zodra de productie start.",
-      "digitalNote": "De digitale versie blijft vrij toegankelijk, zoals onze artikelen en nieuws.",
-      "digitalNoteCta": "Lees het rapport online",
-      "namePlaceholder": "Uw naam",
-      "emailPlaceholder": "Uw e-mailadres",
-      "companyPlaceholder": "Uw bedrijf (optioneel)",
-      "interestsLabel": "Uw interessegebieden",
-      "interests": {
-        "market": "De markt, M&A & data",
-        "techAi": "Tech & AI",
-        "build": "Build: asset-engineering",
-        "transaction": "Transactie & structurering",
-        "buyers": "Kopersprofielen",
-        "outlook": "Vooruitzichten 2027"
-      },
-      "cta": "Mijn interesse doorgeven",
-      "success": "Bedankt. Uw interesse is geregistreerd. Wij nemen contact op zodra de printeditie wordt geproduceerd.",
-      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "clientNote": "Deze lijst is gereserveerd voor Aegryn-klanten. Een printeditie wordt alleen geproduceerd als de vraag dit rechtvaardigt.",
-      "disclaimer": "De digitale versie blijft onbeperkt vrij toegankelijk. De printeditie is een initiatief dat momenteel wordt geëvalueerd.",
-      "backToMagazine": "Terug naar het magazine"
-    },
-    "press": {
-      "label": "Ze schrijven over ons",
-      "title": "De pers bericht over onze assets.",
-      "readArticle": "Lees het artikel",
-      "videoAvailable": "Video beschikbaar op aanvraag",
-      "subblink": {
-        "title": "Village de la Justice adviseert al uw contracten te laten auditen",
-        "excerpt": "Village Justice biedt aan al uw contracten te laten auditen om een risicoscore te verkrijgen met subblink, een AI-oplossing voor Zwitsers en Europees recht.",
-        "context": "Artikel verschenen op Village de la Justice, referentieplatform voor Frans en Europees recht. Presentatie van subblink, Aegryn's AI-contractanalyse-asset."
-      },
-      "neediu": {
-        "title": "neediu in Gala-magazine",
-        "excerpt": "neediu, het platform dat particulieren verbindt met huishoudelijke dienstverleners, werd gepresenteerd in een videoreportage in Gala-magazine.",
-        "context": "Berichtgeving in Gala, toonaangevend lifestyle-magazine. Videoreportage over neediu, Aegryn's huishoudelijke-diensten-asset."
-      }
-    },
-    "notify": {
-      "title": "Ontvang meldingen van komende edities",
-      "desc": "Vul uw e-mail in om bij elke nieuwe jaareditie een publicatiemelding te ontvangen.",
-      "placeholder": "uw@email.com",
-      "cta": "Houd mij op de hoogte",
-      "success": "Registratie bevestigd. U wordt op de hoogte gebracht.",
-      "error": "Er is een fout opgetreden."
-    }
-  },
-  "transactHow": {
-    "meta": {
-      "title": "Hoe het werkt — Aegryn TRANSACT",
-      "desc": "Het Aegryn-proces in 6 stappen: CIFSO-certificering, onafhankelijke grade, vertrouwelijke dataroom, kopersmatching, transactieproces, Zwitserse bancaire escrow."
-    },
-    "heroLabel": "Aegryn-proces",
-    "heroTitle": "Van waardering\ntot closing — 6 stappen.",
-    "heroDesc": "Een gestructureerd, vertrouwelijk en institutioneel proces. Elke stap is ontworpen om de verkoper te beschermen, de koper te kwalificeren en de transactionele waarde van het asset te maximaliseren.",
-    "ctaSeller": "Ik ben verkoper",
-    "ctaBuyer": "Ik ben koper",
-    "stepsLabel": "Processtappen",
-    "stepsTitle": "Certificering, vertrouwelijkheid, closing.",
-    "side": {
-      "seller": "Verkoper",
-      "aegryn": "Aegryn",
-      "both": "Verkoper + Kopers"
-    },
-    "steps": [
-      {
-        "num": "01",
-        "title": "Indicatieve waardering",
-        "desc": "De verkoper vult de Aegryn-waarderingscalculator in (financiën, code, IP, beveiliging). Hij ontvangt een indicatieve bandbreedte en een geschatte grade. Gratis, vertrouwelijk, vrijblijvend.",
-        "detail": "Self-serve tool in 4 stappen · Geschatte grade ★/AAA/AA/A/B · Rapport per e-mail",
-        "cta": "Waarde schatten"
-      },
-      {
-        "num": "02",
-        "title": "Mandaatindiening & verkopers-NDA",
-        "desc": "De verkoper dient zijn asset in bij het Aegryn-team met de basisgegevens (interne naam, ARR, type, land). Hij ondertekent de Aegryn-NDA voorafgaand aan elke verwerking. Exclusief mandaat 60 dagen.",
-        "detail": "Indieningsformulier · Verkopers-NDA · Exclusief mandaat 60 dagen · Antwoord binnen 48u",
-        "cta": "Mandaat indienen"
-      },
-      {
-        "num": "03",
-        "title": "CIFSO 5000-certificering & grade-toekenning",
-        "desc": "Een onafhankelijke CIFSO-auditor onderzoekt de 5 dimensies: Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent. Een officiële ★/AAA/AA/A/B-grade wordt toegekend, gedocumenteerd en afdwingbaar. Dit is het fundamentele verschil met elk ander verkoopplatform.",
-        "detail": "Onafhankelijke audit · 5 CIFSO-dimensies · Officiële afdwingbare grade · Volledig rapport overhandigd",
-        "cta": "De grades begrijpen"
-      },
-      {
-        "num": "04",
-        "title": "Vooraf gekwalificeerde kopersmatching",
-        "desc": "Kopers met een passend profiel (sector, ticket, geografie) ontvangen een vertrouwelijke melding — alleen generieke sector en grade. Geen naam, geen metrics, geen URL. De identiteit wordt pas onthuld na de kopers-NDA en het openen van de sessie.",
-        "detail": "Matching op kopersprofiel · Melding: alleen sector + grade · Kopers-NDA vereist voor elke informatie",
-        "cta": "Koperstoegang"
-      },
-      {
-        "num": "05",
-        "title": "TRANSACT-proces & dataroom",
-        "desc": "Het proces opent met toegang tot de volledige dataroom (financiële cijfers, KPI's, contracten, CIFSO-rapport). Gekwalificeerde kopers dienen hun biedingen binnen de gestelde termijn in. De verkoper kiest het winnende bod.",
-        "detail": "Beveiligde dataroom · Gedefinieerde duur · Gesloten biedingen · Verkoper beslist",
-        "cta": null
-      },
-      {
-        "num": "06",
-        "title": "Closing & Zwitserse bancaire escrow",
-        "desc": "10% van de verkoopprijs wordt gestort op een institutioneel Zwitserse escrowrekening bij de HoT (Heads of Terms). Assets worden pas overgedragen na volledige vrijgave van de middelen. Zwitserse jurisdictie, continentaal recht.",
-        "detail": "10% bij HoT in escrow · Institutioneel Zwitsers bankieren · Overdracht geconditioneerd op middelen · SPA onder Zwitsers recht",
-        "cta": null
-      }
-    ],
-    "compareLabel": "Positionering",
-    "compareTitle": "Aegryn vs andere platforms",
-    "compareOther": "Andere platforms",
-    "compareRows": [
-      {
-        "label": "Asset-certificering",
-        "aegryn": "Onafhankelijk CIFSO · 5 dimensies",
-        "other": "Informele interne screening"
-      },
-      {
-        "label": "Vertrouwelijkheid",
-        "aegryn": "Asset onzichtbaar vóór dubbele NDA",
-        "other": "Semi-openbare listing + auto-NDA"
-      },
-      {
-        "label": "Kopers",
-        "aegryn": "100% vooraf gekwalificeerd, bewijs van middelen",
-        "other": "Open basis, variabele kwaliteit"
-      },
-      {
-        "label": "Escrow",
-        "aegryn": "Institutioneel Zwitsers bankieren",
-        "other": "Escrow.com (VS)"
-      },
-      {
-        "label": "Jurisdictie",
-        "aegryn": "Zwitserland / continentaal recht",
-        "other": "Californië / Amerikaans recht"
-      },
-      {
-        "label": "Typisch ticket",
-        "aegryn": "€100K – €10M",
-        "other": "$10K – $2M"
-      },
-      {
-        "label": "Verkoperscommissie",
-        "aegryn": "Alleen success fee",
-        "other": "6–8% + maandelijkse listing fee"
-      }
-    ],
-    "ctaSellerLabel": "Verkoper",
-    "ctaSellerTitle": "Waardeer en verkoop uw asset",
-    "ctaSellerDesc": "Begin met de gratis waarderingstool en dien daarna uw mandaat in binnen 5 minuten.",
-    "ctaSellerBtn": "Verkopersproces",
-    "ctaBuyerLabel": "Koper",
-    "ctaBuyerTitle": "Toegang tot de gecertificeerde dealflow",
-    "ctaBuyerDesc": "Dien uw profiel in om toe te treden tot de kring van vooraf gekwalificeerde kopers en matching-meldingen te ontvangen.",
-    "ctaBuyerBtn": "Gekwalificeerde koper worden"
-  },
-  "transactBuyers": {
-    "meta": {
-      "title": "Koperstoegang — Aegryn TRANSACT",
-      "desc": "Word lid van de Aegryn-kring van vooraf gekwalificeerde kopers. Krijg prioritaire toegang tot de vertrouwelijke dealflow van gecertificeerde en gegradeerde tech-assets. Ticket €100K–€10M+."
-    },
-    "heroLabel": "Vooraf gekwalificeerde kopers",
-    "heroTitle": "Toegang tot de dealflow\nvoor iedereen.",
-    "heroDesc": "Word lid van de Aegryn-kring van vooraf gekwalificeerde kopers en ontvang prioritaire meldingen over gecertificeerde tech-assets die bij uw profiel passen — in volledige vertrouwelijkheid.",
-    "heroCta": "Mijn aanvraag indienen",
-    "processLabel": "Toegangsproces",
-    "processTitle": "Vier stappen om tot de kring toe te treden.",
-    "accessSteps": [
-      {
-        "title": "Dien uw profiel in",
-        "desc": "Vul het onderstaande formulier in: kopertype, ticket, doelsectoren, bewijs van financiële capaciteit."
-      },
-      {
-        "title": "Validatie binnen 48u",
-        "desc": "Ons team verifieert uw profiel en financiële capaciteit. Er kan een gesprek worden aangevraagd om de kwalificatie af te ronden."
-      },
-      {
-        "title": "Ondertekening kopers-NDA",
-        "desc": "Na validatie ondertekent u de Aegryn-NDA. Er wordt geen asset-informatie gedeeld vóór deze stap."
-      },
-      {
-        "title": "Vertrouwelijke matching-meldingen",
-        "desc": "U ontvangt meldingen over assets die bij uw profiel passen: sector, grade, ticket. De identiteit van de verkoper wordt nooit onthuld vóór het openen van de sessie."
-      }
-    ],
-    "commitments": [
-      {
-        "title": "Volledige vertrouwelijkheid",
-        "desc": "De identiteit van elk asset is strikt beschermd gedurende het hele TRANSACT-proces. Geen naam, geen URL vóór wederzijdse NDA."
-      },
-      {
-        "title": "Gecertificeerde en gegradeerde assets",
-        "desc": "Elk asset in transactie heeft een onafhankelijke CIFSO 5000-certificering ontvangen (Code & Architectuur, IP & Rechten, Financiën & Metrics, Veiligheid & Soevereiniteit, Organisatie & Talent) en een afdwingbare ★/AAA/AA/A/B-grade."
-      },
-      {
-        "title": "Gesloten koperskring",
-        "desc": "Toegang alleen op uitnodiging of voorafgaande kwalificatie. Geen kijkers, geen concurrenten zonder voorafgaande overeenkomst."
-      },
-      {
-        "title": "Dealflow in preview",
-        "desc": "Vooraf gekwalificeerde kopers ontvangen meldingen vóór elke externe verspreiding. Wie eerst komt, wordt eerst geïnformeerd."
-      }
-    ],
-    "formLabel": "Voorafgaande kwalificatie",
-    "formTitle": "Toegangsaanvraag dealflow",
-    "sellerNote": "Bent u verkoper en wilt u het verkoopproces begrijpen?",
-    "sellerCta": "Verkopersproces",
-    "form": {
-      "sectionIdentity": "Identiteit",
-      "fullName": "Volledige naam",
-      "fullNamePlaceholder": "Jan de Vries",
-      "email": "Zakelijk e-mailadres",
-      "emailPlaceholder": "jan@bedrijf.com",
-      "organization": "Organisatie",
-      "organizationPlaceholder": "Naam van het bedrijf of fonds",
-      "country": "Land",
-      "sectionProfile": "Kopersprofiel",
-      "buyerType": "Kopertype",
-      "selectPlaceholder": "Selecteren…",
-      "buyerTypes": {
-        "founder": "Oprichter / Ondernemer",
-        "fund": "Investeringsfonds",
-        "family_office": "Family Office",
-        "corporate": "Corporate / Groep",
-        "other": "Anders"
-      },
-      "ticketMin": "Min. ticket (€)",
-      "ticketMax": "Max. ticket (€)",
-      "sectorsLabel": "Doelsectoren",
-      "sectorsHint": "(minimaal 1)",
-      "sectors": {
-        "saas_b2b": "SaaS B2B",
-        "saas_b2c": "SaaS B2C",
-        "marketplace": "Marketplace",
-        "ecommerce": "E-commerce",
-        "mobile_app": "Mobiele app",
-        "digital_agency": "Digitaal bureau",
-        "ai_data": "AI / Data",
-        "fintech": "Fintech",
-        "proptech": "Proptech",
-        "healthtech": "Healthtech",
-        "cybersecurity": "Cyberbeveiliging",
-        "infrastructure": "Infrastructuur",
-        "content_media": "Content / Media"
-      },
-      "geosLabel": "Doelgeografieën",
-      "geos": {
-        "ch": "Zwitserland",
-        "fr": "Frankrijk",
-        "de": "Duitsland",
-        "benelux": "Benelux",
-        "south_eu": "Zuid-Europa",
-        "east_eu": "Oost-Europa",
-        "all_eu": "Europa (geheel)",
-        "international": "Internationaal"
-      },
-      "opTypesLabel": "Transactietypes",
-      "opTypes": {
-        "full_acquisition": "Volledige overname",
-        "majority": "Meerderheid",
-        "minority": "Minderheid",
-        "lbo": "LBO"
-      },
-      "sectionFunds": "Financiële capaciteit",
-      "fundsProof": "Bewijs van capaciteit",
-      "fundsProofOptions": {
-        "bank_statement": "Bankafschrift",
-        "fund_commitment": "Fondscommitment",
-        "self_declared": "Eigen verklaring",
-        "other": "Ander document"
-      },
-      "fundsProofHint": "Een bewijsstuk wordt gevraagd bij de validatie van uw profiel.",
-      "fundsAmount": "Beschikbaar bedrag (indicatief)",
-      "fundsAmountPlaceholder": "bijv.: €2M, $5M–$10M…",
-      "messageLabel": "Bericht (optioneel)",
-      "messagePlaceholder": "Geef uw criteria, uw overnamehistoriek of andere nuttige informatie voor ons team.",
-      "privacyNote": "Uw gegevens worden strikt vertrouwelijk verwerkt en nooit aan derden doorgegeven.",
-      "submit": "Mijn aanvraag indienen",
-      "errorMsg": "Er is een fout opgetreden. Probeer het opnieuw.",
-      "errorNetwork": "Netwerkfout. Probeer het opnieuw.",
-      "successTitle": "Aanvraag ontvangen",
-      "successDesc": "Ons team beoordeelt uw profiel binnen 48 werkuren en neemt contact op om uw voorafgaande kwalificatie af te ronden.",
-      "successCta": "TRANSACT-sessies bekijken"
-    }
-  },
-  "transactResults": {
-    "meta": {
-      "title": "Transactieresultaten — Aegryn TRANSACT",
-      "desc": "Geanonimiseerde historiek van Aegryn-gecertificeerde transacties: grades, waarderingsbandbreedtes en procesduren."
-    },
-    "heroTitle": "Historische catalogus",
-    "heroDesc": "Geanonimiseerde resultaten van Aegryn-gecertificeerde transacties. Elke entry getuigt dat een asset het volledige certificerings- en verkoopproces heeft doorlopen.",
-    "publishedCount": "{count, plural, one {# transactie gepubliceerd} other {# transacties gepubliceerd}}",
-    "gradesLabel": "Grades:",
-    "rangeLabel": "Indicatieve bandbreedte",
-    "durationLabel": "Duur",
-    "durationUnit": "wkn",
-    "closedLabel": "Gesloten",
-    "disclaimer": "De gegevens zijn geanonimiseerd. Geen informatie die de verkoper, koper of het asset kan identificeren wordt vrijgegeven.",
-    "emptyState": "De eerste resultaten worden hier gepubliceerd na elke Aegryn-transactie. De gegevens zijn geanonimiseerd.",
-    "formats": {
-      "private_transaction": "Privétransactie",
-      "competitive_bid": "Openbare aanbesteding",
-      "equity_stake": "Deelneming",
-      "club_deal": "Club Deal"
     }
   },
   "gradeSubmitSuccess": {
@@ -10720,8 +7649,7 @@
     },
     "articles": {
       "label": "Meer weten",
-      "title": "Onze analyses over werkgelegenheid, vaardigheden en talent.",
-      "readMore": "Artikel lezen"
+      "title": "Onze analyses over werkgelegenheid, vaardigheden en talent."
     }
   },
   "investisseurs": {
@@ -10790,11 +7718,6 @@
     }
   },
   "homeDoors": {
-    "cabinetLabel": "Het bureau",
-    "cabinetText": "Geïntegreerd bureau voor leidinggevenden van kmo’s en middelgrote ondernemingen: kaderen, realiseren, elke cyclus begeleiden.",
-    "cabinetLink": "Onze diensten ontdekken",
-    "boutiqueLabel": "La Boutique",
-    "boutiqueText": "Signatuurprojecten, voor ondernemers, investeerders en merken. Zeldzaam door selectie. Discreet uit principe.",
     "boutiqueLink": "La Boutique betreden"
   },
   "homeClients": {

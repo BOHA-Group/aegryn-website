@@ -11,13 +11,7 @@ export default async function PartnerNav({ unreadCount: _unreadCount }: { unread
       label: t('navGroupOverview'),
       items: [
         { href: '/client/partner', label: t('navDashboard'), icon: 'LayoutDashboard' },
-      ],
-    },
-    {
-      label: 'Ma fiche',
-      items: [
-        { href: '/client/partner/expert-profile', label: t('navExpertProfile') || 'Fiche expert', icon: 'BadgeCheck' },
-        { href: `/${locale}/annuaire`,            label: t('navAnnuaire') || 'Annuaire',           icon: 'BookOpen' },
+        { href: `/${locale}/annuaire`, label: t('navAnnuaire') || 'Annuaire', icon: 'BookOpen' },
       ],
     },
     {

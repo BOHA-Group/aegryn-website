@@ -28,7 +28,6 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'metierTalent',   href: '/advisory/talent-organization' },
       { labelKey: 'metierProgram',  href: '/advisory/project-program-management' },
       { labelKey: 'metierMA',       href: '/advisory/ma' },
-      { labelKey: 'acquisition',  href: '/services/acquisition-support' },
       { labelKey: 'valuation',    href: '/valuation' },
       { labelKey: 'experts',      href: '/experts' },
       { labelKey: 'alliances',    href: '/alliances' },

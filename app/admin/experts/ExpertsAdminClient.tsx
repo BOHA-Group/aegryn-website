@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronDown, ChevronUp, Loader2, PlusCircle, TrendingUp, Mail, Globe, Clock, Trash2 } from 'lucide-react'
+import { ChevronDown, ChevronUp, Loader2, TrendingUp, Mail, Globe, Clock, Trash2 } from 'lucide-react'
 
 type Application = {
   id:           string
@@ -212,12 +212,8 @@ function ProfileRow({
     onRefresh()
   }
 
-  const plan        = profile.profile?.expert_plan ?? null
-  const planEnd     = profile.profile?.expert_plan_end ?? null
   const kycStatus   = profile.profile?.kyc_status ?? null
   const kycOk       = kycStatus === 'approved'
-  const hasCredit   = planEnd ? new Date(planEnd) > new Date() : false
-  const planOk      = plan === 'active' || hasCredit
 
   return (
     <div id={`expert-${profile.user_id}`} className="border border-gray-200 bg-white scroll-mt-4">
@@ -250,13 +246,6 @@ function ProfileRow({
               : profile.review_status === 'pending_review'
               ? 'À réviser'
               : 'Brouillon'}
-          </span>
-          <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 border ${
-            plan === 'active'  ? 'bg-ag-apex/10 text-ag-apex-ink border-ag-apex/30'
-            : hasCredit        ? 'bg-blue-50 text-blue-600 border-blue-200'
-            : 'bg-amber-50 text-amber-600 border-amber-200'
-          }`}>
-            {plan === 'active' ? 'Plan actif' : hasCredit ? 'Crédit admin' : 'Sans plan'}
           </span>
           <span className="font-sans font-semibold text-[13px] text-gray-900 truncate">
             {profile.first_name} {profile.last_name}
@@ -303,9 +292,9 @@ function ProfileRow({
               {patchError}
             </div>
           )}
-          {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && (!kycOk || !planOk) && (
+          {profile.review_status === 'approved' && !profile.is_visible && profile.hidden_reason !== 'admin_hidden' && !kycOk && (
             <p className="rounded-lg mb-3 font-sans text-[11px] text-blue-600 bg-blue-50 border border-blue-100 px-3 py-2">
-              Fiche approuvée — prérequis manquants : {!kycOk && 'KYC'}{!kycOk && !planOk && ' + '}{!planOk && 'abonnement'}. Publication automatique dès qu&apos;ils seront actifs, ou utilisez &quot;Publier directement&quot;.
+              Fiche approuvée : KYC manquant. Publication automatique dès qu&apos;il sera validé, ou utilisez &quot;Publier directement&quot;.
             </p>
           )}
 
@@ -377,145 +366,12 @@ function ProfileRow({
             </div>
           )}
 
-          {/* Actions plan — lecture seule, l'admin ne contrôle pas l'abonnement Stripe */}
           <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-100">
-            <p className="w-full font-mono text-[9px] uppercase tracking-widest text-gray-300 mb-1">
-              Abonnement — <span className="text-gray-400 normal-case tracking-normal">géré par le partenaire via Stripe. Les crédits manuels sont dans le bloc ci-dessous.</span>
-            </p>
             <button onClick={del} disabled={loading}
               className="rounded-lg font-mono text-[9px] uppercase tracking-widest px-3 py-1.5 border border-red-100 text-red-300 hover:bg-red-50 hover:text-red-500 disabled:opacity-50 transition-colors ml-auto">
               Supprimer fiche
             </button>
           </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
- * AdminSubscriptionPanel — attribution manuelle de mois d'abonnement expert
- * ───────────────────────────────────────────────────────────────────────────── */
-
-function AdminSubscriptionPanel({ partners }: { partners: CreditablePartner[] }) {
-  const [open,      setOpen]      = useState(true)
-  const [userId,    setUserId]    = useState('')
-  const [months,    setMonths]    = useState('1')
-  const [note,      setNote]      = useState('')
-  const [loading,   setLoading]   = useState(false)
-  const [msg,       setMsg]       = useState<{ ok: boolean; text: string } | null>(null)
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!userId || !months) return
-    setLoading(true)
-    setMsg(null)
-    const res  = await fetch('/api/admin/expert/subscription', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ user_id: userId, months: parseInt(months, 10), note: note || undefined }),
-    })
-    const data = await res.json() as { ok?: boolean; error?: string; expert_plan_end?: string }
-    if (data.ok) {
-      setMsg({ ok: true, text: `Abonnement prolongé jusqu'au ${data.expert_plan_end ? new Date(data.expert_plan_end).toLocaleDateString('fr-CH') : '—'}.` })
-      setNote('')
-    } else {
-      setMsg({ ok: false, text: data.error ?? 'Erreur inconnue.' })
-    }
-    setLoading(false)
-  }
-
-  const sortedPartners = [...partners].sort((a, b) =>
-    a.email.localeCompare(b.email)
-  )
-
-  return (
-    <div className="bg-white border border-gray-200">
-      <button
-        onClick={() => setOpen(v => !v)}
-        className="rounded-lg w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
-      >
-        <div className="flex items-center gap-2">
-          <PlusCircle size={14} className="text-ag-navy" />
-          <h2 className="font-sans font-bold text-gray-900 text-[14px]">Attribution manuelle d&apos;abonnement</h2>
-        </div>
-        {open ? <ChevronUp size={14} className="text-gray-400" /> : <ChevronDown size={14} className="text-gray-400" />}
-      </button>
-
-      {open && (
-        <div className="px-5 pb-6 border-t border-gray-100">
-          <p className="font-sans text-[12px] text-gray-500 mt-4 mb-5">
-            Crédite N mois sur un partenaire (avec ou sans abonnement Stripe actif).
-            L&apos;admin peut agir même si le partenaire n&apos;a jamais souscrit via Stripe.
-          </p>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-lg">
-            <div>
-              <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
-                Partenaire
-              </label>
-              <select
-                value={userId}
-                onChange={e => setUserId(e.target.value)}
-                className="rounded-lg w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
-                required
-              >
-                <option value="">— Sélectionner —</option>
-                {sortedPartners.map(p => (
-                  <option key={p.user_id} value={p.user_id}>
-                    {p.display_name} — {p.email}
-                    {p.expert_plan === 'active' ? ' ✓ actif' : ' ✗ inactif'}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="flex gap-4">
-              <div>
-                <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
-                  Mois à créditer
-                </label>
-                <input
-                  type="number"
-                  min={1}
-                  max={24}
-                  value={months}
-                  onChange={e => setMonths(e.target.value)}
-                  className="rounded-lg w-24 border border-gray-300 px-3 py-2 font-mono text-[14px] focus:outline-none focus:border-ag-navy"
-                  required
-                />
-              </div>
-              <div className="flex-1">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-gray-400 block mb-1">
-                  Note (facultatif)
-                </label>
-                <input
-                  type="text"
-                  maxLength={300}
-                  value={note}
-                  onChange={e => setNote(e.target.value)}
-                  placeholder="Raison du crédit…"
-                  className="rounded-lg w-full border border-gray-300 px-3 py-2 font-sans text-[13px] focus:outline-none focus:border-ag-navy"
-                />
-              </div>
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                disabled={loading || !userId}
-                className="rounded-lg flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest bg-ag-navy text-white px-5 py-3 hover:bg-ag-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                {loading && <Loader2 size={12} className="animate-spin" />}
-                Créditer les mois
-              </button>
-            </div>
-
-            {msg && (
-              <p className={`font-sans text-[12px] ${msg.ok ? 'text-emerald-700' : 'text-red-600'}`}>
-                {msg.text}
-              </p>
-            )}
-          </form>
         </div>
       )}
     </div>
@@ -548,19 +404,11 @@ const PERIODS: { key: string; label: string }[] = [
   { key: 'all', label: 'Tout'},
 ]
 
-type CreditablePartner = {
-  user_id:      string
-  email:        string
-  display_name: string
-  expert_plan:  string | null
-}
-
 type Props = {
   applications:       Application[]
   profiles:           ExpertProfile[]
   clickStats:         ClickStat[]
   initialPeriod?:     string
-  creditablePartners: CreditablePartner[]
 }
 
 function TractionPanel({
@@ -738,7 +586,7 @@ function TractionPanel({
   )
 }
 
-export default function ExpertsAdminClient({ applications, profiles, clickStats, initialPeriod, creditablePartners }: Props) {
+export default function ExpertsAdminClient({ applications, profiles, clickStats, initialPeriod }: Props) {
   const [apps,   setApps]   = useState(applications)
   const [profs,  setProfs]  = useState(profiles)
   const [stats,  setStats]  = useState(clickStats)
@@ -872,9 +720,6 @@ export default function ExpertsAdminClient({ applications, profiles, clickStats,
             </div>
           )}
         </div>
-
-        {/* Section 3 — Attribution manuelle abonnement */}
-        <AdminSubscriptionPanel partners={creditablePartners} />
 
         <div className="mb-10" />
 

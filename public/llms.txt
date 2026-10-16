@@ -50,7 +50,6 @@ CIFSO is the certification, protocol and tooling infrastructure behind the firm.
 - [Acquisition and External Growth](https://aegryn.com/en/accompagner/acquisition)
 - [Transfer and Cession](https://aegryn.com/en/accompagner/transmission)
 - [Industries](https://aegryn.com/en/industries): five industry hubs covering 22+ sectors
-- [Acquisition Support](https://aegryn.com/en/services/acquisition-support)
 
 ## Select, network and partners
 - [Aegryn Talent](https://aegryn.com/en/talent): key profile selection, transition profiles, candidate pool ([companies](https://aegryn.com/en/talent/entreprises), [candidates](https://aegryn.com/en/talent/candidats), [transition](https://aegryn.com/en/talent/transition))

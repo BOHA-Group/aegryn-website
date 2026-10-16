@@ -75,7 +75,7 @@ Industries (/industries and /industries/[slug]): five hubs (Finance and Capital;
 - **Restructuring and Pivot** (/accompagner/restructuration): regain control fast in a crisis, cyber incident or regulatory injunction.
 - **Acquisition and External Growth** (/accompagner/acquisition): independent technical, IP, regulatory and organisational reading of a target, and integration planning.
 - **Transfer and Cession** (/accompagner/transmission): twelve to thirty-six months of preparation, documented data room, certification, coordination with accredited execution partners.
-- Related: /services/acquisition-support (post-deal services).
+- Related: the M&A, Transactions and PMI discipline (/advisory/ma). The former /services/acquisition-support page is archived and redirects there.
 
 Confidential acquisition or transfer mandates are accompanied under NDA through the Aegryn expert network. Advisory first; execution by accredited partners.
 
@@ -225,7 +225,6 @@ Swiss rigour shows in simplicity: clear decisions, careful work, no excess.
 | Restructuring | /fr/accompagner/restructuration |
 | Acquisition | /fr/accompagner/acquisition |
 | Transfer | /fr/accompagner/transmission |
-| Acquisition support | /fr/services/acquisition-support |
 | Industries | /fr/industries, /fr/industries/[slug] |
 | Talent | /fr/talent, /fr/talent/entreprises, /fr/talent/candidats, /fr/talent/transition |
 | Experts | /fr/experts |

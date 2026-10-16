@@ -32,7 +32,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   
   const isCraftActive =
     isActive('/assets') ||
-    isActive('/advisory') || isActive('/services/acquisition-support') ||
+    isActive('/advisory') ||
     isActive('/grade') || isActive('/accompagner') ||
     isActive('/valuation') || isActive('/verify')
 

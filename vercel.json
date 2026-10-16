@@ -241,10 +241,6 @@
       "schedule": "0 9 * * 1"
     },
     {
-      "path": "/api/cron/expert-expiry",
-      "schedule": "0 8 * * *"
-    },
-    {
       "path": "/api/cron/magazine-publish",
       "schedule": "0 * * * *"
     },

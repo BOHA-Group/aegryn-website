@@ -223,7 +223,7 @@ export async function PATCH(req: NextRequest) {
           type:        'broadcast_alert',
           title:       'Votre fiche expert a été réinitialisée',
           body:        'Un administrateur a vidé votre fiche expert. Vous pouvez la reconstruire depuis votre espace partenaire.',
-          link:        '/client/partner/expert-profile',
+          link:        '/client/partner',
           target_role: 'partner',
         })
       }
@@ -301,7 +301,7 @@ export async function PATCH(req: NextRequest) {
           type:        (becamePublished || approvedPending) ? 'broadcast_info' : 'broadcast_alert',
           title:       notifTitle,
           body:        notifBody,
-          link:        '/client/partner/expert-profile',
+          link:        '/client/partner',
           target_role: 'partner',
         })
       }

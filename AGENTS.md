@@ -22,7 +22,7 @@
 ## Norme titres H1 (4 gabarits)
 
 - **A — Landing éditorial** (navy, `py-32`) : `clamp(48px,6vw,86px)` — alliances, career, talent, services/build, about, blog
-- **B — Page de rubrique** (navy, `pt-24/32 pb-20`) : `clamp(36px,5vw,72px)` — advisory, acquisition-support, industries, portfolio, magazine, workforce, roadmap, valuation
+- **B — Page de rubrique** (navy, `pt-24/32 pb-20`) : `clamp(36px,5vw,72px)` — advisory, industries, portfolio, magazine, workforce, roadmap, valuation
 - **C — Page standard** (blanc, `pt-24 pb-20`) : `clamp(32px,4.5vw,64px)` — experts, investisseurs, audit, annuaire, assets/[slug], grade/submit, contact
 - **D — Compact référence** (navy, `pt-24 pb-14/16`) : `clamp(28px,3.5vw,52px)` — privacy, security, terms, faq, glossaire, verify
 - Legacy `/transact/*` : hors norme
@@ -84,6 +84,8 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 - Barre de navigation : transparente sur les heros vidéo (`/` et `/boutique`), fond blanc progressif au scroll, blanche partout ailleurs (`Nav.tsx`, `data-onhero`).
 - NDA : mutuel, numérique, signé par lien personnel sans compte (`lib/nda/*`, `/nda/[token]`, `/admin/nda`). Envoi **manuel** depuis l'admin ; contresignature automatique (Yohann Bollack, CEO) ; PDF archivé (bucket `nda-signed`). Accès certification et data room = rôle ouvert par l'admin **et** NDA signé (`lib/nda/access.ts`, y compris les API data room). L'ancien NDA par compte est retiré.
 - Catalogue, transactions, enchères, espace acheteur : archivés dans `_archive/legacy-transact/` (redirections 301 dans `next.config.ts`). Ne pas réintroduire.
+- Archivés en octobre 2026 (redirections 301 dans `next.config.ts`, ne pas réintroduire) : `/services/acquisition-support` (→ `/advisory/ma`, dans `_archive/legacy-transact/`) ; abonnement « Fiche Expert », parrainage et fiche expert partenaire (`/client/partner/subscription`, `/client/partner/expert-profile`, APIs `partner/subscribe|portal|referral`, `admin/expert/subscription`, cron `expert-expiry`, admin Parrainages, dans `_archive/legacy-partner-subscription/`). Le réseau n'a ni abonnement ni parrainage ; seules les commissions d'apport d'affaires restent prévues.
+- i18n : les textes inutilisés (anciens `transact*`, `nda` par compte, `partner`, `accessForm`, `waitlist`, etc.) ont été supprimés des 6 locales ; vérifier qu'un nouveau texte est bien référencé dans le code.
 - Dev : ne pas lancer de requêtes en parallèle sur le serveur de développement (corruption du cache `.next`) ; Chromium de Puppeteer ne lit pas le H.264, tester la vidéo avec Google Chrome.
 
 ## Langue de navigation

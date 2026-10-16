@@ -110,6 +110,12 @@ const nextConfig: NextConfig = {
       /* /transact (vue d'ensemble) + /valoriser → section accueil #accompagner (301 permanent, refonte cycle de vie) */
       { source: '/transact',                            destination: '/#accompagner',                       permanent: true },
       { source: '/:locale/transact',                    destination: '/:locale#accompagner',                permanent: true },
+      /* Espace partenaire : abonnement, parrainage et fiche expert archivés */
+      { source: '/client/partner/subscription',      destination: '/client/partner', permanent: true },
+      { source: '/client/partner/expert-profile',     destination: '/client/partner', permanent: true },
+      /* /services/acquisition-support : archivé (dossier vendeur et logique de cession), repris par le métier M&A */
+      { source: '/services/acquisition-support',           destination: '/advisory/ma',                    permanent: true },
+      { source: '/:locale/services/acquisition-support',   destination: '/:locale/advisory/ma',            permanent: true },
       /* Renommages routes partenaires : /network → /experts, /grade/partners → /audit */
       { source: '/network',                           destination: '/experts',                       permanent: true },
       { source: '/:locale/network',                   destination: '/:locale/experts',               permanent: true },

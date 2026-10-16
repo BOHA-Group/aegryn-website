@@ -20,6 +20,7 @@ Five public ways of working: Frame (Cadrer), Deliver (Réaliser), Accompany (Acc
 - **CIFSO** (CIFSO 5000 certification, CIFSO Valuation Index, data room) remains available as certification and protocol infrastructure. It is not a public offer of its own.
 - **Tagline:** the earlier "Engineered to Last" is superseded by "Rare by selection. Discreet by principle." The magazine edition keeps its title "Built to Last".
 - **Experts page:** now lists eleven expertise domains, adding Finance and Performance, Operations and Operational Excellence, and Project and Programme Management, with refreshed profiles for Strategy, Compliance, M&A and Signature projects.
+- **Acquisition Support archived:** /services/acquisition-support is retired and redirects permanently to /advisory/ma.
 - **Legal pages and FAQ (October 2026):** Terms of Sale rewritten around the eight disciplines, La Boutique and the mutual NDA; the expert network no longer involves a subscription or referral programme; the FAQ gained three answers (marketplace, La Boutique, NDA).
 - **SEO and structured data:** sitemap now lists /boutique and the eight discipline pages with priority; noindex pages (magazine cover and flipbook) removed from the sitemap; Organization, WebSite and navigation JSON-LD rewritten; WebPage and Service JSON-LD added to La Boutique, the advisory hub and Culture.
 

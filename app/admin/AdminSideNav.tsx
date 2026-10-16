@@ -26,7 +26,6 @@ const SECTIONS = [
       { href: '/admin/kyc',       label: 'KYC' },
       { href: '/admin/partners',  label: 'Partenaires' },
       { href: '/admin/experts',   label: 'Experts réseau' },
-      { href: '/admin/referrals', label: 'Parrainages' },
     ],
   },
   {

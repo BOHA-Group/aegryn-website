@@ -120,7 +120,7 @@ export default async function AdminIndexPage({
         {
           href:       `/admin/experts${qs}`,
           title:      '🧑‍💼 Experts réseau',
-          desc:       'Candidatures formulaire + fiches partenaires à réviser. Abonnement 89 CHF HT/mois.',
+          desc:       'Candidatures formulaire + fiches partenaires à réviser.',
           badge:      expertsPending ?? 0,
           badgeLabel: 'à traiter',
         },
