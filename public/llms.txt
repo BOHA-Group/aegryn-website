@@ -54,7 +54,7 @@ CIFSO is the certification, protocol and tooling infrastructure behind the firm.
 
 ## Select, network and partners
 - [Aegryn Talent](https://aegryn.com/en/talent): key profile selection, transition profiles, candidate pool ([companies](https://aegryn.com/en/talent/entreprises), [candidates](https://aegryn.com/en/talent/candidats), [transition](https://aegryn.com/en/talent/transition))
-- [Expert network](https://aegryn.com/en/experts): independent experts coordinated by Aegryn
+- [Expert network](https://aegryn.com/en/experts): independent experts coordinated by Aegryn, eleven expertise domains (the eight disciplines, Board Advisory, Executive Search, Signature projects)
 - [Become a partner](https://aegryn.com/en/alliances): domain experts, investors and institutions, independent CIFSO auditors
 - [Investors and institutions](https://aegryn.com/en/investisseurs): an operating partner for portfolio companies
 
@@ -69,7 +69,7 @@ CIFSO is the certification, protocol and tooling infrastructure behind the firm.
 - [Aegryn Magazine](https://aegryn.com/en/magazine): quarterly, English, "Tech. Money. Deals. People. Life." Edition January 2027 "Built to Last" ([issue](https://aegryn.com/en/magazine/issue-01), [web reader](https://aegryn.com/en/magazine/issue-01/web))
 - [Blog](https://aegryn.com/en/blog): market analyses and guides for Swiss and European leaders, in six languages
 - [Employment and skills data](https://aegryn.com/en/workforce): AI and labour-market data (World Economic Forum, PwC)
-- [FAQ](https://aegryn.com/en/help/faq)
+- [FAQ](https://aegryn.com/en/help/faq): 19 answers, including whether Aegryn is a marketplace (it is not), La Boutique and the NDA
 
 ## Company
 - [About](https://aegryn.com/en/about), [Culture and values](https://aegryn.com/en/culture-and-values), [Roadmap](https://aegryn.com/en/roadmap), [Careers](https://aegryn.com/en/career), [Contact](https://aegryn.com/en/contact)

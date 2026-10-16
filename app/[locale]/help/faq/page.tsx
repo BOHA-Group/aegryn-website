@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('desc'),
     path: '/help/faq',
     locale,
-    keywords: ['FAQ Aegryn', 'questions fréquentes Aegryn', 'aide Aegryn', 'certification CIFSO FAQ', 'valorisation organisation'],
+    keywords: ['FAQ Aegryn', 'questions fréquentes Aegryn', 'aide Aegryn', 'La Boutique Aegryn', 'accord de confidentialité NDA', 'certification CIFSO FAQ', 'valorisation organisation'],
   })
 }
 

@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation'
 import {
   ArrowUpRight, BrainCircuit, Scale, Cpu,
   Building2, Users, Globe, UserSearch, Landmark, ShieldCheck, Sparkles,
+  TrendingUp, Cog, ListChecks,
 } from 'lucide-react'
 import PartnersSection from '@/components/sections/PartnersSection'
 import { PARTNER_LOGOS } from '@/components/sections/PartnersCarousel'
@@ -14,7 +15,7 @@ import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 
 /* ─── Types ────────────────────────────────────────────────────────────────── */
-type DimensionKey = 'board' | 'strategy' | 'compliance' | 'technology' | 'talent' | 'ma' | 'execsearch' | 'boutique'
+type DimensionKey = 'board' | 'strategy' | 'compliance' | 'finance' | 'technology' | 'operations' | 'talent' | 'program' | 'ma' | 'execsearch' | 'boutique'
 type ExpertDomain = {
   Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
   domainKey: string
@@ -34,20 +35,26 @@ const DIM_COLOR: Record<DimensionKey, string> = {
   board:      '#C9A84C',
   strategy:   '#5ADDA4',
   compliance: '#14b8a6',
+  finance:    '#facc15',
   technology: '#60a5fa',
+  operations: '#a3e635',
   talent:     '#f472b6',
+  program:    '#e879f9',
   ma:         '#818cf8',
   execsearch: '#fb923c',
   boutique:   '#a78bfa',
 }
 
-/* ─── Domaines d'expertise disponibles (alignés Conseil Board/Strategy/Tech/M&A/Talent) ── */
+/* ─── Domaines d'expertise disponibles (huit métiers du cabinet, Board Advisory, Executive Search et projets signature) ── */
 const EXPERT_DOMAINS: ExpertDomain[] = [
   { Icon: Landmark,     domainKey: 'board',      color: '#C9A84C', dimension: 'board' },
   { Icon: BrainCircuit, domainKey: 'strategy',   color: '#5ADDA4', dimension: 'strategy' },
   { Icon: ShieldCheck,  domainKey: 'compliance', color: '#14b8a6', dimension: 'compliance' },
+  { Icon: TrendingUp,   domainKey: 'finance',    color: '#facc15', dimension: 'finance' },
   { Icon: Cpu,          domainKey: 'technology', color: '#60a5fa', dimension: 'technology' },
+  { Icon: Cog,          domainKey: 'operations', color: '#a3e635', dimension: 'operations' },
   { Icon: Users,        domainKey: 'talent',     color: '#f472b6', dimension: 'talent' },
+  { Icon: ListChecks,   domainKey: 'program',    color: '#e879f9', dimension: 'program' },
   { Icon: Scale,        domainKey: 'ma',         color: '#818cf8', dimension: 'ma' },
   { Icon: UserSearch,   domainKey: 'execsearch', color: '#fb923c', dimension: 'execsearch' },
   { Icon: Sparkles,     domainKey: 'boutique',   color: '#a78bfa', dimension: 'boutique' },
@@ -99,19 +106,22 @@ function FanCards({
   const [hovered, setHovered] = useState<number | null>(null)
   const wrapRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(1200)
+  const [vw, setVw] = useState(1200)
   useEffect(() => {
     const el = wrapRef.current
     if (!el) return
-    const ro = new ResizeObserver(() => setWidth(el.getBoundingClientRect().width))
-    ro.observe(el); setWidth(el.getBoundingClientRect().width)
+    const measure = () => { setWidth(el.getBoundingClientRect().width); setVw(window.innerWidth) }
+    const ro = new ResizeObserver(measure)
+    ro.observe(el); measure()
     return () => ro.disconnect()
   }, [])
   const n = domains.length
   const SPREAD   = 60
-  /* L'éventail s'adapte à la largeur disponible (8 cartes de 160 px) ; sous 720 px : grille de cartes. */
-  const SHIFT_PX = Math.min(150, Math.max(40, (width - 160 - 24) / (n - 1)))
+  /* L'éventail s'adapte à la largeur disponible (11 cartes de 140 px) ; sous 1100 px : grille de cartes. */
+  const CARD_W = n > 8 ? 140 : 160
+  const SHIFT_PX = Math.min(150, Math.max(40, (Math.max(width, vw - 150) - CARD_W - 24) / (n - 1)))
 
-  if (width < 720) {
+  if (width < (n > 8 ? 1100 : 900)) {
     return (
       <div ref={wrapRef} className="grid grid-cols-2 gap-3">
         {domains.map(({ Icon, domainKey, color }) => {
@@ -133,7 +143,7 @@ function FanCards({
   }
 
   return (
-    <div ref={wrapRef} style={{ position: 'relative', height: 300, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'visible' }}>
+    <div ref={wrapRef} style={{ position: 'relative', height: 300, marginBottom: 40, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'visible' }}>
       {domains.map(({ Icon, domainKey, color }, i) => {
         const rotDeg    = -SPREAD / 2 + (i / (n - 1)) * SPREAD
         const arcY      = Math.abs(rotDeg) * 1.4
@@ -153,7 +163,7 @@ function FanCards({
             onMouseLeave={() => setHovered(null)}
             style={{
               position: 'absolute', bottom: 0, left: '50%',
-              width: 160, minHeight: 210, borderRadius: 12,
+              width: CARD_W, minHeight: 210, borderRadius: 12,
               border: `1.5px solid ${isActive ? color + 'cc' : isHovered ? color + 'aa' : color + '40'}`,
               background: '#FFFFFF',
               padding: '18px 12px', textAlign: 'center',

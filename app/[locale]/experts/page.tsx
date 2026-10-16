@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('meta.desc'),
     path:        slug,
     locale,
-    keywords:    ['réseau Aegryn', 'partenaires tech M&A', 'experts conseil stratégie', 'réseau conseil tech'],
+    keywords:    ['réseau Aegryn', 'réseau d\'experts', 'experts finance et performance', 'experts opérations', 'experts pilotage de projets', 'board advisory', 'executive search', 'projets signature', 'Aegryn expert network'],
   })
   return {
     ...base,

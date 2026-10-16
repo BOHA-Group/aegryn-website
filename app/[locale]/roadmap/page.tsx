@@ -4,10 +4,11 @@ import { Link }             from '@/i18n/navigation'
 import {
   ArrowUpRight, CheckCircle2,
   ShieldCheck, Scale, Globe, Lock,
-  Users, FileSearch, Handshake,
+  Users,
   LayoutGrid, Filter, Send, Award,
-  Gift, Briefcase, ShieldAlert, BarChart2,
-  Code2, Cpu, Star, Eye,
+  Briefcase, ShieldAlert, BarChart2,
+  Code2, Cpu, Star, Compass, Gem,
+  UserSearch, Network, Newspaper, KeyRound,
 } from 'lucide-react'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -22,34 +23,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const FEATURE_ICONS = [
-  { key: 'certification',  Icon: ShieldCheck },
+  { key: 'integrated',     Icon: Briefcase   },
+  { key: 'mandates',       Icon: Users       },
   { key: 'swissLaw',       Icon: Scale       },
   { key: 'international',  Icon: Globe       },
   { key: 'nda',            Icon: Lock        },
-
-  { key: 'buyers',         Icon: Users       },
-  { key: 'dueDiligence',   Icon: FileSearch  },
-  { key: 'transaction',    Icon: Handshake   },
+  { key: 'certification',  Icon: ShieldCheck },
+  { key: 'boutique',       Icon: Gem         },
 ] as const
 
 const ITEM_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
+  advisory:       Briefcase,
+  program:        LayoutGrid,
+  cycles:         Compass,
+  talent:         UserSearch,
+  network:        Network,
+  boutique:       Gem,
+  nda:            Lock,
+  access:         KeyRound,
+  kyc:            ShieldAlert,
   certification:  ShieldCheck,
   grade:          Star,
-  nda:            Lock,
-  closing:        Handshake,
-  swissLaw:       Scale,
-  sessions:       LayoutGrid,
-  catalogFilter:  Filter,
-  buyers:         Users,
-  dataRoom:       Eye,
   sellerSubmit:   Send,
-  dueDiligence:   FileSearch,
   certifiers:     Award,
-  referral:       Gift,
-  mandates:       Briefcase,
-  kyc:            ShieldAlert,
-  international:  Globe,
   intelligence:   BarChart2,
+  magazine:       Newspaper,
+  catalogFilter:  Filter,
   api:            Code2,
   onChain:        Cpu,
 }
@@ -97,10 +96,10 @@ export default async function RoadmapPage({ params }: Props) {
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-12">
             {t('featuresLabel')}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {FEATURE_ICONS.map(({ key, Icon }) => (
-              <div key={key} className="bg-ag-white p-8 flex flex-col gap-4 group hover:bg-ag-off-white transition-colors">
-                <div className="w-10 h-10 border border-ag-border flex items-center justify-center group-hover:border-ag-apex/40 transition-colors">
+              <div key={key} className="rounded-2xl border border-ag-border bg-ag-white p-8 flex flex-col gap-4 group hover:bg-ag-off-white transition-colors">
+                <div className="w-10 h-10 rounded-lg border border-ag-border flex items-center justify-center group-hover:border-ag-apex/40 transition-colors">
                   <Icon size={18} className="text-ag-apex-ink" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-sans font-semibold text-ag-black text-[15px] leading-snug tracking-[-0.01em]">
@@ -134,8 +133,8 @@ export default async function RoadmapPage({ params }: Props) {
                 return (
                   <div key={i} className="relative pb-8 last:pb-0">
                     <span className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full border-2 border-ag-apex bg-ag-off-white" />
-                    <div className="bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 group hover:border-ag-apex/40 transition-colors">
-                      <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0 group-hover:border-ag-apex/40 transition-colors">
+                    <div className="rounded-2xl bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 group hover:border-ag-apex/40 transition-colors">
+                      <div className="w-8 h-8 rounded-lg border border-ag-border flex items-center justify-center shrink-0 group-hover:border-ag-apex/40 transition-colors">
                         <Icon size={15} className="text-ag-apex-ink" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1 min-w-[200px]">
@@ -167,8 +166,8 @@ export default async function RoadmapPage({ params }: Props) {
                 return (
                   <div key={i} className="relative pb-8 last:pb-0">
                     <span className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full border-2 border-ag-border bg-ag-off-white" />
-                    <div className="bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 opacity-80 hover:opacity-100 transition-opacity">
-                      <div className="w-8 h-8 border border-ag-border flex items-center justify-center shrink-0">
+                    <div className="rounded-2xl bg-ag-white border border-ag-border p-6 flex flex-wrap gap-5 opacity-80 hover:opacity-100 transition-opacity">
+                      <div className="w-8 h-8 rounded-lg border border-ag-border flex items-center justify-center shrink-0">
                         <Icon size={15} className="text-ag-gray-light" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1 min-w-[200px]">
@@ -208,13 +207,13 @@ export default async function RoadmapPage({ params }: Props) {
           </div>
           <div className="flex flex-col gap-4 md:pt-2">
             <Link
-              href="/grade/submit"
+              href="/contact"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 font-semibold hover:bg-ag-navy-mid transition-colors self-start"
             >
               {t('cta')} <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/grade"
+              href="/advisory"
               className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-7 py-4 hover:border-ag-black hover:text-ag-black transition-all self-start"
             >
               {t('ctaSecondary')}

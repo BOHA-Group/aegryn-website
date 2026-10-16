@@ -1879,7 +1879,7 @@
     "col1Transact": "M&A-transactie",
     "col2Title": "Onze oplossingen",
     "col2Subblink": "Contractuele risicoanalyse",
-    "col2Code": "CIFSO 5000-certificering",
+    "col2Code": "Certification CIFSO",
     "col2Grade": "Certificering verkrijgen",
     "col2DataRoom": "Begeleiden",
     "col2ViewAll": "Onze portfolio",
@@ -1888,7 +1888,7 @@
     "col3Newsletter": "LinkedIn-nieuwsbrief",
     "col3Blog": "Blog",
     "col3Glossary": "Woordenlijst",
-    "col3Valuation": "CIFSO Valuation Index",
+    "col3Valuation": "Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Wie we zijn",
     "col4About": "Over Aegryn",
@@ -3058,162 +3058,155 @@
   "roadmapPage": {
     "meta": {
       "title": "Roadmap | Aegryn",
-      "desc": "De Aegryn-roadmap: CIFSO 5000-certificering, begeleiding van de levenscyclus van organisaties, waarderingsindex en expertsnetwerk."
+      "desc": "De Aegryn-roadmap: de acht vakgebieden, La Boutique, de digitale NDA, de CIFSO 5000-certificering, de waarderingsindex en het expertnetwerk."
     },
-    "label": "Aegryn — Zwitserse groep",
-    "title": "De groep.\nZijn functionaliteiten.",
-    "desc": "Aegryn begeleidt technologieorganisaties in elke fase van hun levenscyclus: advies, asset-opbouw, transities, talent, informatie. Elke opdracht valt onder Zwitsers recht.",
+    "label": "Aegryn · Zwitsers kantoor",
+    "title": "Het kantoor.\nZijn mogelijkheden.",
+    "desc": "Aegryn is een in Zwitserland verankerde ondernemersfirma: zij kadert, realiseert en begeleidt de projecten van leidinggevenden, selecteert sleutelprofielen en informeert over de markt. La Boutique voert een beperkt aantal signatuurprojecten. Elke opdracht valt onder Zwitsers recht.",
     "swissNote": "Zwitsers recht is op elke opdracht van toepassing, ongeacht de herkomst van de organisatie of de nationaliteit van de partijen.",
-    "featuresLabel": "Wat het dispositief biedt",
+    "featuresLabel": "Wat het kantoor biedt",
     "features": {
-      "certification": {
-        "title": "Aegryn Grade-certificering",
-        "desc": "Elke organisatie wordt vóór elke begeleiding beoordeeld volgens het CIFSO 5000-protocol op 5 dimensies."
+      "integrated": {
+        "title": "Een geïntegreerd kantoor",
+        "desc": "Acht vakgebieden en vijf manieren van handelen: kaderen, realiseren, begeleiden, selecteren, geïnformeerd blijven."
+      },
+      "mandates": {
+        "title": "Een benoemd aanspreekpunt",
+        "desc": "Een beperkt aantal opdrachten tegelijk, een antwoord binnen twee werkdagen, onafhankelijke experts die worden gecoördineerd wanneer het onderwerp dat vraagt."
       },
       "swissLaw": {
         "title": "Zwitsers recht: 100 %",
         "desc": "Alle opdrachten vallen onder Zwitsers recht, ongeacht de nationaliteit van de partijen."
       },
       "international": {
-        "title": "Internationale reikwijdte",
-        "desc": "Gekwalificeerde organisaties en partners wereldwijd. Geen geografische beperking op herkomst."
+        "title": "Verankerd in Zwitserland, open voor de wereld",
+        "desc": "Zwitserland en Europa, zes talen. Geen geografische beperking op de herkomst van organisaties en partners."
       },
       "nda": {
-        "title": "Systematische NDA",
-        "desc": "Toegang tot vertrouwelijke dossiers is afhankelijk van het ondertekenen van een NDA. Vertrouwelijkheid bij elke stap gegarandeerd."
+        "title": "Wederzijdse digitale NDA",
+        "desc": "Een geheimhoudingsovereenkomst gaat elke gedetailleerde uitwisseling vooraf: online ondertekend via een persoonlijke link, zonder account, automatisch meeondertekend."
       },
-      "buyers": {
-        "title": "Gekwalificeerde partijen",
-        "desc": "Elke stakeholder wordt gekwalificeerd vóór toegang tot beschermde dossiers. Capaciteit en intentie geverifieerd."
+      "certification": {
+        "title": "CIFSO 5000-certificering",
+        "desc": "Onafhankelijke beoordeling van de waarde en overdraagbaarheid van een organisatie op 5 dimensies."
       },
-      "dueDiligence": {
-        "title": "Vooraf gevalideerde due diligence",
-        "desc": "Het Aegryn Grade-rapport vervangt de due diligence gedeeltelijk en comprimeert de operatiesplanning."
-      },
-      "transaction": {
-        "title": "Experts on-demand",
-        "desc": "Toegang tot het Aegryn-expertsnetwerk (advocaten, fiscalisten), inzetbaar naar behoefte van de opdracht."
+      "boutique": {
+        "title": "La Boutique",
+        "desc": "Een beperkt aantal signatuurprojecten, van begin tot eind gekaderd, gerealiseerd en begeleid."
       }
     },
-    "roadmapLabel": "20 kernfunctionaliteiten",
+    "roadmapLabel": "Belangrijkste mogelijkheden",
     "statusLive": "Beschikbaar",
     "statusUpcoming": "Binnenkort",
     "items": [
       {
+        "iconKey": "advisory",
+        "theme": "Kantoor",
+        "title": "Acht adviesvakgebieden",
+        "desc": "Strategie, risico's en compliance, financiën, technologie, operations, talent en organisatie, projectsturing, M&A.",
+        "live": true
+      },
+      {
+        "iconKey": "program",
+        "theme": "Kantoor",
+        "title": "Sturing van projecten en programma's",
+        "desc": "Van governance tot oplevering, met gecoördineerde experts en één aanspreekpunt.",
+        "live": true
+      },
+      {
+        "iconKey": "cycles",
+        "theme": "Kantoor",
+        "title": "Begeleiding van vijf levenscycli",
+        "desc": "Lancering, groei, herstructurering, overname en overdracht.",
+        "live": true
+      },
+      {
+        "iconKey": "talent",
+        "theme": "Talent",
+        "title": "Selectie van sleutel- en transitieprofielen",
+        "desc": "Leidinggevenden en experts, in elke fase geselecteerd; geen profiel wordt gedeeld zonder toestemming van de kandidaat.",
+        "live": true
+      },
+      {
+        "iconKey": "network",
+        "theme": "Netwerk",
+        "title": "Gecoördineerde onafhankelijke experts",
+        "desc": "Elf expertisedomeinen, van de acht vakgebieden tot signatuurprojecten, geval per geval ingezet.",
+        "live": true
+      },
+      {
+        "iconKey": "boutique",
+        "theme": "Boutique",
+        "title": "Signatuurprojecten van begin tot eind",
+        "desc": "Kaderen, realiseren, begeleiden: een beperkt aantal projecten tegelijk, van concept tot oplevering.",
+        "live": true
+      },
+      {
+        "iconKey": "nda",
+        "theme": "Vertrouwelijkheid",
+        "title": "Wederzijdse digitale NDA",
+        "desc": "Ondertekening via een persoonlijke link, zonder account, automatische medeondertekening door Aegryn en extra ondertekenaars mogelijk.",
+        "live": true
+      },
+      {
+        "iconKey": "access",
+        "theme": "Vertrouwelijkheid",
+        "title": "Toegang via handmatige activering",
+        "desc": "Certificering en dataroom: een ondertekende NDA en de handmatige activering van elke sectie door Aegryn.",
+        "live": true
+      },
+      {
+        "iconKey": "kyc",
+        "theme": "Vertrouwelijkheid",
+        "title": "Identiteitscontrole (KYC)",
+        "desc": "Geïntegreerde controle voor klanten, partners en partijen bij opdrachten. Zwitserse compliance.",
+        "live": true
+      },
+      {
         "iconKey": "certification",
         "theme": "Certificering",
-        "title": "CIFSO 5000-certificering: Aegryn Grade-protocol",
-        "desc": "Elke organisatie wordt beoordeeld op 5 CIFSO-dimensies (Code, IP, Financiën, Beveiliging, Organisatie) volgens een gedocumenteerde methodologie.",
+        "title": "CIFSO 5000-certificering",
+        "desc": "Elke organisatie wordt beoordeeld op 5 dimensies (Code, IP, Financiën, Beveiliging, Organisatie) volgens een gedocumenteerde methodologie.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certificering",
-        "title": "5-gradenschaal: B tot AEG ★",
-        "desc": "Objectief en onveranderlijk beoordelingssysteem: B, A, AA, AAA, AEG ★. Elke grade berust op verifieerbare criteria.",
-        "live": true
-      },
-      {
-        "iconKey": "nda",
-        "theme": "Compliance",
-        "title": "Geautomatiseerde digitale NDA",
-        "desc": "Toegang tot vertrouwelijke dossiers is afhankelijk van het ondertekenen van een NDA. Gegarandeerde vertrouwelijkheid.",
-        "live": true
-      },
-      {
-        "iconKey": "closing",
-        "theme": "Opdrachten",
-        "title": "Experts on-demand",
-        "desc": "Expertsnetwerk inzetbaar naar behoefte van de opdracht: advocaten, fiscalisten.",
-        "live": true
-      },
-      {
-        "iconKey": "swissLaw",
-        "theme": "Juridisch",
-        "title": "Zwitsers recht voor 100 %",
-        "desc": "Alle opdrachten vallen onder Zwitsers recht, ongeacht de nationaliteit van de partijen.",
-        "live": true
-      },
-      {
-        "iconKey": "sessions",
-        "theme": "Dossiers",
-        "title": "Vertrouwelijke sessies",
-        "desc": "Gestructureerde presentaties van gecertificeerde dossiers aan gekwalificeerde partijen, in het kader van opdrachten.",
-        "live": true
-      },
-      {
-        "iconKey": "catalogFilter",
-        "theme": "Dossiers",
-        "title": "Filteren op grade, categorie en metrics",
-        "desc": "Geavanceerde navigatie in de dossiers: filters op Aegryn-grade, type organisatie en metrics.",
-        "live": true
-      },
-      {
-        "iconKey": "buyers",
-        "theme": "Partijen",
-        "title": "Kwalificatie van partijen",
-        "desc": "Elke partij wordt gekwalificeerd vóór toegang tot beschermde dossiers. Capaciteit en intentie geverifieerd.",
-        "live": true
-      },
-      {
-        "iconKey": "dataRoom",
-        "theme": "Partijen",
-        "title": "Beveiligde dataroom onder NDA",
-        "desc": "Toegang tot volledige dossiers, financiële en juridische documenten in een beveiligde omgeving.",
+        "title": "Vijf scores: van B tot AEG ★",
+        "desc": "Objectieve en onveranderlijke scoring: B, A, AA, AAA, AEG ★. Elke score berust op verifieerbare criteria.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Organisaties",
-        "title": "Online indiening van organisatie",
-        "desc": "Begeleid indieningsproces: informatie, documenten, initiële beoordeling.",
-        "live": true
-      },
-      {
-        "iconKey": "dueDiligence",
-        "theme": "Organisaties",
-        "title": "Vooraf gevalideerde due diligence",
-        "desc": "Het Aegryn Grade-rapport vervangt de due diligence gedeeltelijk en comprimeert de planning.",
+        "theme": "Certificering",
+        "title": "Online indiening van organisaties",
+        "desc": "Begeleid indieningsproces: informatie, documenten, eerste beoordeling.",
         "live": true
       },
       {
         "iconKey": "certifiers",
-        "theme": "Partners",
-        "title": "CIFSO-certificeerdersnetwerk",
-        "desc": "Expert-partnerprogramma: certificeringsopdrachten, missiedashboard.",
-        "live": true
-      },
-      {
-        "iconKey": "referral",
-        "theme": "Partners",
-        "title": "Verwijzingsprogramma",
-        "desc": "Partnerexperts kunnen andere certificeerders aanbevelen.",
-        "live": true
-      },
-      {
-        "iconKey": "kyc",
-        "theme": "Compliance",
-        "title": "Multi-rol KYC",
-        "desc": "Geïntegreerde identiteitsverificatie voor klanten, partners en partijen bij opdrachten. Zwitserse compliance.",
+        "theme": "Certificering",
+        "title": "Onafhankelijke CIFSO-auditors",
+        "desc": "Een netwerk van auditors die elke dimensie verifiëren zonder de gecertificeerde organisatie te adviseren.",
         "live": true
       },
       {
         "iconKey": "intelligence",
-        "theme": "Intelligence",
-        "title": "Blog & marktrapporten",
-        "desc": "Verdiepende artikelen, casestudy's en rapporten over de Europese tech-markt.",
+        "theme": "Waardering",
+        "title": "CIFSO Valuation Index",
+        "desc": "Referentiemultiples per sector en een gratis illustratieve schatting, die de certificering niet vervangt.",
         "live": true
       },
       {
-        "iconKey": "international",
-        "theme": "Markt",
-        "title": "Internationale reikwijdte",
-        "desc": "Organisaties en partijen van over de hele wereld toegelaten. Geen geografische beperking.",
+        "iconKey": "magazine",
+        "theme": "Informatie",
+        "title": "Magazine, blog en marktdata",
+        "desc": "Aegryn Magazine, verdiepende artikelen en data over werkgelegenheid en vaardigheden, in Zwitserland en Europa.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Dossiers",
+        "theme": "Certificering",
         "title": "Gepersonaliseerde alarmmeldingen",
         "desc": "Meldingen over nieuwe certificeringen, grade-updates en dossierstatussen.",
         "live": false
@@ -3235,17 +3228,17 @@
     ],
     "currentLabel": "Al beschikbaar",
     "current": [
-      "Aegryn Grade-certificering: CIFSO 5000-protocol",
-      "Begeleiding van de vijf levenscyclusfasen (Valoriser)",
-      "Geautomatiseerde digitale NDA",
-      "Kwalificatie van partijen en speciale ruimtes",
-      "Certificeringsruimte: indiening en dossieropvolging",
-      "CIFSO-certificeerderspartnernetwerk",
-      "Geïntegreerde multi-rol KYC",
-      "Dossierfiltering op grade, categorie en metrics"
+      "Acht adviesvakgebieden, van beslissing tot oplevering",
+      "La Boutique: signatuurprojecten van begin tot eind",
+      "Begeleiding van vijf levenscycli",
+      "Wederzijdse digitale NDA, zonder account ondertekend",
+      "CIFSO 5000-certificering: indiening en opvolging van dossiers",
+      "CIFSO Valuation Index en openbare verificatie van certificaten",
+      "Netwerk van onafhankelijke experts en auditors",
+      "Aegryn Magazine, blog en marktdata"
     ],
-    "cta": "Mijn organisatie indienen",
-    "ctaSecondary": "Meer informatie over de Grade"
+    "cta": "Contact opnemen",
+    "ctaSecondary": "Onze acht vakgebieden ontdekken"
   },
   "discover": {
     "meta": {
@@ -4861,7 +4854,13 @@
       "execsearch": "Executive Search",
       "execsearchDesc": "C-Level en VP selectie, interim management, talent mapping en retentie voor tech-leiders.",
       "boutique": "Signatuurprojecten",
-      "boutiqueDesc": "Design, engineering, productie, distributie, intellectueel eigendom en merk, ten dienste van de projecten van La Boutique."
+      "boutiqueDesc": "Design, engineering, productie, distributie, intellectueel eigendom en merk, ten dienste van de projecten van La Boutique.",
+      "finance": "Financiën en Prestaties",
+      "financeDesc": "Liquiditeit, rendabiliteit, budgetsturing, bank- of investeerdersdossier en interim financiële leiding.",
+      "operations": "Operations en Operationele excellentie",
+      "operationsDesc": "Stromen, eenheidskosten, doorlooptijden en kwaliteit, leveranciers, inkoop en logistiek, overname van een activiteit.",
+      "program": "Project- en programmamanagement",
+      "programDesc": "Afbakening, governance, bewaking van termijnen, budgetten en risico's, oplevering en projectredding."
     },
     "cta": {
       "title": "Word lid van het Aegryn-netwerk.",
@@ -4936,28 +4935,11 @@
           ]
         },
         {
-          "title": "Governance & Compliance",
-          "tags": [
-            "AVG",
-            "NIS2",
-            "DORA",
-            "AI Act"
-          ]
-        },
-        {
           "title": "Concurrentiële intelligentie",
           "tags": [
             "Marktobservatie",
             "Benchmarking",
             "Trends"
-          ]
-        },
-        {
-          "title": "Finance & Herstructurering",
-          "tags": [
-            "Businessplan",
-            "Herstructurering",
-            "Kasstroom"
           ]
         },
         {
@@ -4969,27 +4951,19 @@
           ]
         },
         {
-          "title": "Risicobeheer",
-          "tags": [
-            "Risk mapping",
-            "Continuïteit",
-            "Schadegevallen"
-          ]
-        },
-        {
-          "title": "Operaties & Lean",
-          "tags": [
-            "Process mining",
-            "Efficiëntie",
-            "Ops-KPIs"
-          ]
-        },
-        {
           "title": "Innovatie & Ventures",
           "tags": [
             "Open innovatie",
             "Intrapreneurship",
             "Labs"
+          ]
+        },
+        {
+          "title": "Toetreding tot een nieuwe markt",
+          "tags": [
+            "Marktonderzoek",
+            "Go-to-market",
+            "Partnerschappen"
           ]
         }
       ],
@@ -5048,6 +5022,64 @@
             "IP-eigendomsketen",
             "Rechtsoverdrachten",
             "Licenties & merken"
+          ]
+        },
+        {
+          "title": "Verzekering en risicodekking",
+          "tags": [
+            "Verzekeringsprogramma",
+            "Cyberverzekering",
+            "Eigen risico"
+          ]
+        }
+      ],
+      "finance": [
+        {
+          "title": "Liquiditeitsplanning op 13 weken",
+          "tags": [
+            "Cashflow",
+            "Prognoses",
+            "Waarschuwingen"
+          ]
+        },
+        {
+          "title": "Rendabiliteit per activiteit en klant",
+          "tags": [
+            "Marges",
+            "Kosten",
+            "Afwegingen"
+          ]
+        },
+        {
+          "title": "Herstelplan",
+          "tags": [
+            "Maatregelen",
+            "Bankonderhandeling",
+            "Opvolging"
+          ]
+        },
+        {
+          "title": "Bank- of investeerdersdossier",
+          "tags": [
+            "Businessplan",
+            "Financiering",
+            "Covenants"
+          ]
+        },
+        {
+          "title": "Budget, werkkapitaal en sturing",
+          "tags": [
+            "Budget",
+            "Werkkapitaal",
+            "Dashboard"
+          ]
+        },
+        {
+          "title": "Interim financiële leiding",
+          "tags": [
+            "Interim-CFO",
+            "Afsluitingen",
+            "Rapportage"
           ]
         }
       ],
@@ -5127,6 +5159,56 @@
           ]
         }
       ],
+      "operations": [
+        {
+          "title": "Stromen en knelpunten",
+          "tags": [
+            "Process mining",
+            "Stromen",
+            "Knelpunten"
+          ]
+        },
+        {
+          "title": "Eenheidskosten en marges",
+          "tags": [
+            "Kostprijs",
+            "Marge",
+            "Benchmark"
+          ]
+        },
+        {
+          "title": "Doorlooptijden en kwaliteit",
+          "tags": [
+            "Lead times",
+            "Foutenpercentage",
+            "Service"
+          ]
+        },
+        {
+          "title": "Leveranciers, inkoop en logistiek",
+          "tags": [
+            "Sourcing",
+            "Transport",
+            "Opslag"
+          ]
+        },
+        {
+          "title": "Capaciteit en werklastplanning",
+          "tags": [
+            "Planning",
+            "Capaciteit",
+            "Roosterplanning"
+          ]
+        },
+        {
+          "title": "Overname en integratie van een activiteit",
+          "tags": [
+            "Overdracht",
+            "Integratie",
+            "Continuïteit"
+          ]
+        }
+      ],
       "talent": [
         {
           "title": "Oprichtersafhankelijkheid",
@@ -5174,6 +5256,56 @@
             "Doelorganigram",
             "Rollen & verantwoordelijkheden",
             "Executive recruitment"
+          ]
+        }
+      ],
+      "program": [
+        {
+          "title": "Afbakening en lancering van projecten",
+          "tags": [
+            "Scope",
+            "Charter",
+            "Business case"
+          ]
+        },
+        {
+          "title": "Governance en stuurcomités",
+          "tags": [
+            "Stuurcomité",
+            "RACI",
+            "Beslissingen"
+          ]
+        },
+        {
+          "title": "Projectportfolio",
+          "tags": [
+            "Prioritering",
+            "Capaciteit",
+            "Afwegingen"
+          ]
+        },
+        {
+          "title": "Termijnen, budgetten en risico's",
+          "tags": [
+            "Planning",
+            "Budget",
+            "Risicoregister"
+          ]
+        },
+        {
+          "title": "Transformatieprogramma's",
+          "tags": [
+            "PMO",
+            "Mijlpalen",
+            "Verandermanagement"
+          ]
+        },
+        {
+          "title": "Oplevering, adoptie en projectredding",
+          "tags": [
+            "Tests",
+            "Oplevering",
+            "Projectredding"
           ]
         }
       ],
@@ -5236,6 +5368,14 @@
             "Synergieën",
             "Governance",
             "Cultuur"
+          ]
+        },
+        {
+          "title": "Herstructurering en overdracht",
+          "tags": [
+            "Herstelplan",
+            "Opvolging",
+            "Overname"
           ]
         }
       ],
@@ -5337,6 +5477,14 @@
             "Kanalen",
             "Lancering",
             "Partners"
+          ]
+        },
+        {
+          "title": "Juridisch, intellectueel eigendom en regelgeving",
+          "tags": [
+            "Merkregistratie",
+            "Contracten",
+            "Goedkeuringen"
           ]
         }
       ]
@@ -6857,7 +7005,7 @@
   "faq": {
     "meta": {
       "title": "FAQ, Veelgestelde vragen | Aegryn",
-      "desc": "Antwoorden op veelgestelde vragen over CIFSO 5000-certificering, waardering en begeleiding van de levenscyclus."
+      "desc": "Antwoorden op veelgestelde vragen over Aegryn: de acht vakgebieden, La Boutique, de geheimhoudingsovereenkomst, de CIFSO 5000-certificering en de begeleiding van de levenscyclus."
     },
     "label": "Veelgestelde vragen",
     "filterAll": "Alle",

@@ -292,7 +292,7 @@ export const aegrynOrganizationSchema = {
       offer('La Boutique', 'An entrepreneurial boutique that frames, delivers and accompanies a limited number of signature projects for entrepreneurs, investors and family offices, institutions and large groups, industrials and brands.', en('/boutique')),
       offer('Aegryn Grade: CIFSO 5000 certification', 'Independent certification of organisations and digital assets under the CIFSO 5000 protocol (5 audited dimensions: Code and Architecture, IP and Rights, Finance and Metrics, Security, Sovereignty and AI Exposure, Organisation, Talent and Succession). 5 immutable grades: AEG, AAA, AA, A, B.', en('/grade')),
       offer('Aegryn CIFSO Valuation Index', 'Public valuation entry point powered by the Aegryn CIFSO Valuation Index: market multiples per industry adjusted on the 5 audited CIFSO 5000 dimensions. The free estimate is illustrative and does not replace official certification.', en('/valuation')),
-      offer('Aegryn Expert Network', 'Curated network of experts and partners, from advisory, legal and finance to engineering, design, technology, manufacturing and distribution.', en('/experts')),
+      offer('Aegryn Expert Network', 'Curated network of independent experts coordinated by Aegryn: the eight advisory disciplines, Board Advisory, Executive Search, and the trades of signature projects (design, engineering, manufacturing, logistics, distribution, legal and intellectual property).', en('/experts')),
       offer('Proprietary assets', 'Digital assets designed and operated by Aegryn: Subblink, neediu, Primiom, Movtoo, Hobconnect.', en('/assets')),
     ],
   },

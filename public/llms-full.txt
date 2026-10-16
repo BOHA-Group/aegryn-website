@@ -120,6 +120,8 @@ Pages: /talent, /talent/entreprises, /talent/candidats, /talent/transition. Rela
 
 Aegryn calls on a network of experts selected one by one: experts for each of the eight disciplines, a circle of investors and institutions (Aegryn as operating partner of portfolio companies, /investisseurs), and independent auditors of CIFSO 5000 certification (/audit). The detailed expert directory (/annuaire) is internal and not indexed. Partnership activity families span advisory, legal and finance to engineering, design, technology, manufacturing and distribution.
 
+The public Experts page (/experts, localised as /experten, /expertos, /esperti) presents eleven expertise domains with illustrative profiles: the eight disciplines (Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI), plus Board Advisory, Executive Search and Signature projects (design, engineering, manufacturing, procurement and logistics, distribution, legal and intellectual property for La Boutique). Participation in the network carries no promise of remuneration, subscription or volume of cases.
+
 ---
 
 ## Certification CIFSO 5000 (/grade): the ownership record of an organisation's value
@@ -176,6 +178,12 @@ Blog (/blog): market analyses and guides in six languages. Workforce (/workforce
 ## Proprietary assets (/assets)
 
 Software designed and operated by Aegryn, each carrying the line "An Aegryn company". Subblink (https://subblink.com): B2B SaaS, AI contract analysis, risk and obligation detection. The CIFSO protocol, a secure data room dedicated to certification evidence (access limited to Aegryn, assigned audit partners and the asset owner), a compliance engine and an identity-verification engine support the certification work. Signature projects of La Boutique are listed under /boutique/projets.
+
+---
+
+## Terms, privacy and help
+
+Terms of Sale and Service (/terms/cgv, October 2026) cover advisory, project steering, CIFSO 5000 certification, executive selection, La Boutique, the expert network, publications and confidential mandates; Aegryn does not operate a marketplace or act as a financial intermediary. Terms of Use (/terms/use) include a confidential-access article tied to the mutual NDA. Also: /privacy, /security (fraud prevention, official sender domain @boha-group.com), /terms/ai-usage and the FAQ (/help/faq, 19 answers including "Is Aegryn a marketplace?", "What is La Boutique?" and "How does the NDA work?").
 
 ---
 

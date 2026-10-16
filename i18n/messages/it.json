@@ -1879,7 +1879,7 @@
     "col1Transact": "Transazione M&A",
     "col2Title": "Le nostre soluzioni",
     "col2Subblink": "Analisi rischi contrattuali",
-    "col2Code": "Certificazione CIFSO 5000",
+    "col2Code": "Certification CIFSO",
     "col2Grade": "Ottenere la certificazione",
     "col2DataRoom": "Accompagnare",
     "col2ViewAll": "Il nostro portafoglio",
@@ -1888,7 +1888,7 @@
     "col3Newsletter": "Newsletter LinkedIn",
     "col3Blog": "Blog",
     "col3Glossary": "Glossario",
-    "col3Valuation": "CIFSO Valuation Index",
+    "col3Valuation": "Valuation Index",
     "col3FAQ": "FAQ",
     "col4Title": "Chi siamo",
     "col4About": "Chi è Aegryn",
@@ -3058,162 +3058,155 @@
   "roadmapPage": {
     "meta": {
       "title": "Roadmap | Aegryn",
-      "desc": "La roadmap Aegryn: certificazione CIFSO 5000, accompagnamento del ciclo di vita delle organizzazioni, indice di valutazione e rete di esperti."
+      "desc": "La roadmap di Aegryn: le otto discipline, La Boutique, l'NDA digitale, la certificazione CIFSO 5000, l'indice di valutazione e la rete di esperti."
     },
-    "label": "Aegryn — Gruppo svizzero",
-    "title": "Il gruppo.\nLe sue funzionalità.",
-    "desc": "Aegryn accompagna le organizzazioni tecnologiche in ogni fase del loro ciclo di vita: consulenza, costruzione di asset, transizioni, talento, informazione. Ogni mandato è regolato dal diritto svizzero.",
+    "label": "Aegryn · Studio svizzero",
+    "title": "Lo studio.\nLe sue capacità.",
+    "desc": "Aegryn è uno studio di imprenditori radicato in Svizzera: inquadra, realizza e accompagna i progetti dei dirigenti, seleziona i profili chiave e informa sul mercato. La Boutique conduce un numero limitato di progetti signature. Ogni mandato è regolato dal diritto svizzero.",
     "swissNote": "Diritto svizzero applicabile a ogni mandato, qualunque sia la provenienza dell'organizzazione o la nazionalità delle parti.",
-    "featuresLabel": "Cosa offre il dispositivo",
+    "featuresLabel": "Ciò che lo studio offre",
     "features": {
-      "certification": {
-        "title": "Certificazione Aegryn Grade",
-        "desc": "Ogni organizzazione è valutata secondo il protocollo CIFSO 5000 su 5 dimensioni prima di qualsiasi accompagnamento."
+      "integrated": {
+        "title": "Uno studio integrato",
+        "desc": "Otto discipline e cinque modi di agire: inquadrare, realizzare, accompagnare, selezionare, informarsi."
+      },
+      "mandates": {
+        "title": "Un interlocutore nominato",
+        "desc": "Un numero limitato di mandati alla volta, risposta entro due giorni lavorativi, esperti indipendenti coordinati quando il tema lo richiede."
       },
       "swissLaw": {
         "title": "Diritto svizzero: 100 %",
         "desc": "Tutti i mandati sono regolati dal diritto svizzero, qualunque sia la nazionalità delle parti."
       },
       "international": {
-        "title": "Apertura internazionale",
-        "desc": "Organizzazioni e partner qualificati in tutto il mondo. Nessuna restrizione geografica sull'origine."
+        "title": "Radicato in Svizzera, aperto al mondo",
+        "desc": "Svizzera ed Europa, sei lingue. Nessuna restrizione geografica sull'origine delle organizzazioni e dei partner."
       },
       "nda": {
-        "title": "NDA sistematico",
-        "desc": "L'accesso ai dossier riservati è subordinato alla firma di un NDA. Riservatezza garantita a ogni tappa."
+        "title": "NDA reciproco digitale",
+        "desc": "Un accordo di riservatezza precede ogni scambio dettagliato: firma online tramite link personale, senza account, controfirmato automaticamente."
       },
-      "buyers": {
-        "title": "Parti qualificate",
-        "desc": "Ogni parte interessata è qualificata prima di accedere ai dossier protetti. Capacità e intenzione verificate."
+      "certification": {
+        "title": "Certificazione CIFSO 5000",
+        "desc": "Valutazione indipendente del valore e della trasmissibilità di un'organizzazione su 5 dimensioni."
       },
-      "dueDiligence": {
-        "title": "Due diligence pre-validata",
-        "desc": "Il rapporto Aegryn Grade sostituisce parzialmente la due diligence e comprime il calendario delle operazioni."
-      },
-      "transaction": {
-        "title": "Esperti mobilitabili on-demand",
-        "desc": "Accesso alla rete di esperti Aegryn (avvocati, fiscalisti) mobilitabile secondo le esigenze del mandato."
+      "boutique": {
+        "title": "La Boutique",
+        "desc": "Un numero limitato di progetti signature, inquadrati, realizzati e accompagnati da cima a fondo."
       }
     },
-    "roadmapLabel": "20 funzionalità chiave",
+    "roadmapLabel": "Capacità chiave",
     "statusLive": "Disponibile",
     "statusUpcoming": "In arrivo",
     "items": [
       {
+        "iconKey": "advisory",
+        "theme": "Studio",
+        "title": "Otto discipline di consulenza",
+        "desc": "Strategia, rischi e conformità, finanza, tecnologia, operazioni, talenti e organizzazione, guida di progetti, M&A.",
+        "live": true
+      },
+      {
+        "iconKey": "program",
+        "theme": "Studio",
+        "title": "Guida di progetti e programmi",
+        "desc": "Dalla governance alla consegna, con esperti coordinati e un unico interlocutore.",
+        "live": true
+      },
+      {
+        "iconKey": "cycles",
+        "theme": "Studio",
+        "title": "Accompagnamento dei cinque cicli di vita",
+        "desc": "Lancio, crescita, ristrutturazione, acquisizione e trasmissione.",
+        "live": true
+      },
+      {
+        "iconKey": "talent",
+        "theme": "Talento",
+        "title": "Selezione di profili chiave e di transizione",
+        "desc": "Dirigenti ed esperti selezionati a ogni tappa; nessun profilo è condiviso senza il consenso del candidato.",
+        "live": true
+      },
+      {
+        "iconKey": "network",
+        "theme": "Rete",
+        "title": "Esperti indipendenti coordinati",
+        "desc": "Undici ambiti di competenza, dalle otto discipline ai progetti signature, mobilitati caso per caso.",
+        "live": true
+      },
+      {
+        "iconKey": "boutique",
+        "theme": "Boutique",
+        "title": "Progetti signature da cima a fondo",
+        "desc": "Inquadrare, realizzare, accompagnare: un numero limitato di progetti alla volta, dal concept alla consegna.",
+        "live": true
+      },
+      {
+        "iconKey": "nda",
+        "theme": "Riservatezza",
+        "title": "NDA reciproco digitale",
+        "desc": "Firma tramite link personale, senza account, controfirma automatica di Aegryn e firmatari aggiuntivi possibili.",
+        "live": true
+      },
+      {
+        "iconKey": "access",
+        "theme": "Riservatezza",
+        "title": "Accesso tramite attivazione manuale",
+        "desc": "Certificazione e data room: un NDA firmato e l'attivazione manuale di ogni sezione da parte di Aegryn.",
+        "live": true
+      },
+      {
+        "iconKey": "kyc",
+        "theme": "Riservatezza",
+        "title": "Verifica dell'identità (KYC)",
+        "desc": "Verifica integrata per clienti, partner e parti dei mandati. Conformità svizzera.",
+        "live": true
+      },
+      {
         "iconKey": "certification",
         "theme": "Certificazione",
-        "title": "Certificazione CIFSO 5000: Protocollo Aegryn Grade",
-        "desc": "Ogni organizzazione è valutata su 5 dimensioni CIFSO (Codice, IP, Finanza, Sicurezza, Organizzazione) secondo una metodologia documentata.",
+        "title": "Certificazione CIFSO 5000",
+        "desc": "Ogni organizzazione è valutata su 5 dimensioni (Codice, IP, Finanza, Sicurezza, Organizzazione) con una metodologia documentata.",
         "live": true
       },
       {
         "iconKey": "grade",
         "theme": "Certificazione",
-        "title": "Scala di 5 gradi: da B ad AEG ★",
-        "desc": "Sistema di notazione oggettivo e immutabile: B, A, AA, AAA, AEG ★. Ogni grado si fonda su criteri verificabili.",
-        "live": true
-      },
-      {
-        "iconKey": "nda",
-        "theme": "Conformità",
-        "title": "NDA digitale automatizzato",
-        "desc": "L'accesso ai dossier riservati è subordinato alla firma di un NDA. Riservatezza garantita.",
-        "live": true
-      },
-      {
-        "iconKey": "closing",
-        "theme": "Mandati",
-        "title": "Esperti mobilitabili on-demand",
-        "desc": "Rete di esperti mobilitabile secondo le esigenze del mandato: avvocati, fiscalisti.",
-        "live": true
-      },
-      {
-        "iconKey": "swissLaw",
-        "theme": "Giuridico",
-        "title": "Diritto svizzero applicabile al 100 %",
-        "desc": "Tutti i mandati sono regolati dal diritto svizzero, qualunque sia la nazionalità delle parti.",
-        "live": true
-      },
-      {
-        "iconKey": "sessions",
-        "theme": "Dossier",
-        "title": "Sessioni riservate",
-        "desc": "Presentazioni strutturate di dossier certificati a parti qualificate, nell'ambito di mandati.",
-        "live": true
-      },
-      {
-        "iconKey": "catalogFilter",
-        "theme": "Dossier",
-        "title": "Filtraggio per grado, categoria e metriche",
-        "desc": "Navigazione avanzata nei dossier: filtri per grado Aegryn, tipo di organizzazione e metriche.",
-        "live": true
-      },
-      {
-        "iconKey": "buyers",
-        "theme": "Parti",
-        "title": "Qualificazione delle parti",
-        "desc": "Ogni parte è qualificata prima di accedere ai dossier protetti. Capacità e intenzione verificate.",
-        "live": true
-      },
-      {
-        "iconKey": "dataRoom",
-        "theme": "Parti",
-        "title": "Data room sicura sotto NDA",
-        "desc": "Accesso ai dossier completi, documenti finanziari e giuridici in un ambiente sicuro.",
+        "title": "Scala a cinque gradi: da B a AEG ★",
+        "desc": "Punteggio oggettivo e immutabile: B, A, AA, AAA, AEG ★. Ogni grado si basa su criteri verificabili.",
         "live": true
       },
       {
         "iconKey": "sellerSubmit",
-        "theme": "Organizzazioni",
-        "title": "Sottomissione di organizzazione online",
-        "desc": "Processo di sottomissione guidato: informazioni, documenti, valutazione iniziale.",
-        "live": true
-      },
-      {
-        "iconKey": "dueDiligence",
-        "theme": "Organizzazioni",
-        "title": "Due diligence pre-validata",
-        "desc": "Il rapporto Aegryn Grade sostituisce parzialmente la due diligence e comprime il calendario.",
+        "theme": "Certificazione",
+        "title": "Presentazione online delle organizzazioni",
+        "desc": "Processo guidato: informazioni, documenti, valutazione iniziale.",
         "live": true
       },
       {
         "iconKey": "certifiers",
-        "theme": "Partner",
-        "title": "Rete di certificatori CIFSO",
-        "desc": "Programma partner esperto: mandati di certificazione, dashboard missioni.",
-        "live": true
-      },
-      {
-        "iconKey": "referral",
-        "theme": "Partner",
-        "title": "Programma di sponsorizzazione",
-        "desc": "Gli esperti partner possono segnalare altri certificatori.",
-        "live": true
-      },
-      {
-        "iconKey": "kyc",
-        "theme": "Conformità",
-        "title": "KYC multi-ruolo",
-        "desc": "Verifica dell'identità integrata per clienti, partner e parti dei mandati. Conformità svizzera.",
+        "theme": "Certificazione",
+        "title": "Revisori indipendenti CIFSO",
+        "desc": "Rete di revisori che verificano ogni dimensione senza consigliare l'organizzazione certificata.",
         "live": true
       },
       {
         "iconKey": "intelligence",
-        "theme": "Intelligence",
-        "title": "Blog & rapporti di mercato",
-        "desc": "Articoli di approfondimento, casi di studio e rapporti sul mercato tech europeo.",
+        "theme": "Valutazione",
+        "title": "CIFSO Valuation Index",
+        "desc": "Riferimenti di multipli per settore e una stima illustrativa gratuita, che non sostituisce la certificazione.",
         "live": true
       },
       {
-        "iconKey": "international",
-        "theme": "Mercato",
-        "title": "Apertura internazionale",
-        "desc": "Organizzazioni e parti da tutto il mondo ammesse. Nessuna restrizione geografica.",
+        "iconKey": "magazine",
+        "theme": "Informazione",
+        "title": "Magazine, blog e dati di mercato",
+        "desc": "Aegryn Magazine, articoli di approfondimento e dati su occupazione e competenze, in Svizzera e in Europa.",
         "live": true
       },
       {
         "iconKey": "catalogFilter",
-        "theme": "Dossier",
+        "theme": "Certificazione",
         "title": "Notifiche di alert personalizzate",
         "desc": "Alert su nuove certificazioni, aggiornamenti di grado e stati dei dossier.",
         "live": false
@@ -3235,17 +3228,17 @@
     ],
     "currentLabel": "Già disponibile",
     "current": [
-      "Certificazione Aegryn Grade: protocollo CIFSO 5000",
-      "Accompagnamento dei cinque cicli di vita (Valoriser)",
-      "NDA digitale automatizzato",
-      "Qualificazione delle parti e spazi dedicati",
-      "Spazio certificazione: sottomissione e monitoraggio dei dossier",
-      "Rete di partner certificatori CIFSO",
-      "KYC integrato multi-ruolo",
-      "Filtraggio dei dossier per grado, categoria e metriche"
+      "Otto discipline di consulenza, dalla decisione alla consegna",
+      "La Boutique: progetti signature da cima a fondo",
+      "Accompagnamento dei cinque cicli di vita",
+      "NDA reciproco digitale, firmato senza account",
+      "Certificazione CIFSO 5000: presentazione e monitoraggio dei dossier",
+      "CIFSO Valuation Index e verifica pubblica dei certificati",
+      "Rete di esperti e revisori indipendenti",
+      "Aegryn Magazine, blog e dati di mercato"
     ],
-    "cta": "Sottoporre la mia organizzazione",
-    "ctaSecondary": "Ulteriori informazioni sul Grade"
+    "cta": "Mettersi in contatto",
+    "ctaSecondary": "Scoprire le nostre otto discipline"
   },
   "discover": {
     "meta": {
@@ -4861,7 +4854,13 @@
       "execsearch": "Executive Search",
       "execsearchDesc": "Selezione C-Level e VP, interim management, talent mapping e retention per i leader tech.",
       "boutique": "Progetti signature",
-      "boutiqueDesc": "Design, ingegneria, produzione, distribuzione, proprietà intellettuale e marchio, al servizio dei progetti di La Boutique."
+      "boutiqueDesc": "Design, ingegneria, produzione, distribuzione, proprietà intellettuale e marchio, al servizio dei progetti di La Boutique.",
+      "finance": "Finanza e Performance",
+      "financeDesc": "Tesoreria, redditività, controllo del budget, dossier per banche o investitori e direzione finanziaria ad interim.",
+      "operations": "Operazioni ed Eccellenza operativa",
+      "operationsDesc": "Flussi, costi unitari, tempi e qualità, fornitori, acquisti e logistica, rilevamento di un'attività.",
+      "program": "Gestione di progetti e programmi",
+      "programDesc": "Inquadramento, governance, controllo di tempi, budget e rischi, collaudo e recupero dei progetti."
     },
     "cta": {
       "title": "Unisciti alla rete Aegryn.",
@@ -4936,28 +4935,11 @@
           ]
         },
         {
-          "title": "Governance & Compliance",
-          "tags": [
-            "GDPR",
-            "NIS2",
-            "DORA",
-            "AI Act"
-          ]
-        },
-        {
           "title": "Intelligenza competitiva",
           "tags": [
             "Market watch",
             "Benchmarking",
             "Tendenze"
-          ]
-        },
-        {
-          "title": "Finanza & Ristrutturazione",
-          "tags": [
-            "Business plan",
-            "Ristrutturazione",
-            "Tesoreria"
           ]
         },
         {
@@ -4969,27 +4951,19 @@
           ]
         },
         {
-          "title": "Gestione del rischio",
-          "tags": [
-            "Risk mapping",
-            "Continuità",
-            "Sinistri"
-          ]
-        },
-        {
-          "title": "Operazioni & Lean",
-          "tags": [
-            "Process mining",
-            "Efficienza",
-            "KPI ops"
-          ]
-        },
-        {
           "title": "Innovazione & Ventures",
           "tags": [
             "Open innovation",
             "Intrapreneurship",
             "Labs"
+          ]
+        },
+        {
+          "title": "Ingresso in un nuovo mercato",
+          "tags": [
+            "Studio di mercato",
+            "Go-to-market",
+            "Partnership"
           ]
         }
       ],
@@ -5048,6 +5022,64 @@
             "Catena di titolarità IP",
             "Trasferimenti di diritti",
             "Licenze & marchi"
+          ]
+        },
+        {
+          "title": "Assicurazioni e copertura dei rischi",
+          "tags": [
+            "Programma assicurativo",
+            "Cyber-assicurazione",
+            "Franchigie"
+          ]
+        }
+      ],
+      "finance": [
+        {
+          "title": "Tesoreria a 13 settimane",
+          "tags": [
+            "Cash flow",
+            "Previsioni",
+            "Allerte"
+          ]
+        },
+        {
+          "title": "Redditività per attività e cliente",
+          "tags": [
+            "Margini",
+            "Costi",
+            "Arbitraggi"
+          ]
+        },
+        {
+          "title": "Piano di risanamento",
+          "tags": [
+            "Misure",
+            "Trattativa bancaria",
+            "Monitoraggio"
+          ]
+        },
+        {
+          "title": "Dossier per banca o investitore",
+          "tags": [
+            "Business plan",
+            "Finanziamento",
+            "Covenant"
+          ]
+        },
+        {
+          "title": "Budget, capitale circolante e controllo",
+          "tags": [
+            "Budget",
+            "Capitale circolante",
+            "Cruscotto"
+          ]
+        },
+        {
+          "title": "Direzione finanziaria ad interim",
+          "tags": [
+            "CFO ad interim",
+            "Chiusure",
+            "Reporting"
           ]
         }
       ],
@@ -5127,6 +5159,56 @@
           ]
         }
       ],
+      "operations": [
+        {
+          "title": "Flussi e colli di bottiglia",
+          "tags": [
+            "Process mining",
+            "Flussi",
+            "Colli di bottiglia"
+          ]
+        },
+        {
+          "title": "Costi unitari e margini",
+          "tags": [
+            "Costo di produzione",
+            "Margine",
+            "Benchmark"
+          ]
+        },
+        {
+          "title": "Tempi e qualità",
+          "tags": [
+            "Lead time",
+            "Tasso di difetti",
+            "Servizio"
+          ]
+        },
+        {
+          "title": "Fornitori, acquisti e logistica",
+          "tags": [
+            "Sourcing",
+            "Trasporto",
+            "Magazzino"
+          ]
+        },
+        {
+          "title": "Capacità e carico di lavoro",
+          "tags": [
+            "Pianificazione",
+            "Capacità",
+            "Schedulazione"
+          ]
+        },
+        {
+          "title": "Rilevamento e integrazione di un'attività",
+          "tags": [
+            "Trasferimento",
+            "Integrazione",
+            "Continuità"
+          ]
+        }
+      ],
       "talent": [
         {
           "title": "Dipendenza dal fondatore",
@@ -5174,6 +5256,56 @@
             "Organigramma obiettivo",
             "Ruoli & responsabilità",
             "Selezione executive"
+          ]
+        }
+      ],
+      "program": [
+        {
+          "title": "Inquadramento e avvio dei progetti",
+          "tags": [
+            "Perimetro",
+            "Charter",
+            "Business case"
+          ]
+        },
+        {
+          "title": "Governance e comitati di pilotaggio",
+          "tags": [
+            "Comitato di pilotaggio",
+            "RACI",
+            "Decisioni"
+          ]
+        },
+        {
+          "title": "Portafoglio di progetti",
+          "tags": [
+            "Priorità",
+            "Capacità",
+            "Arbitraggi"
+          ]
+        },
+        {
+          "title": "Tempi, budget e rischi",
+          "tags": [
+            "Pianificazione",
+            "Budget",
+            "Registro dei rischi"
+          ]
+        },
+        {
+          "title": "Programmi di trasformazione",
+          "tags": [
+            "PMO",
+            "Tappe",
+            "Gestione del cambiamento"
+          ]
+        },
+        {
+          "title": "Collaudo, adozione e recupero",
+          "tags": [
+            "Test",
+            "Consegna",
+            "Recupero del progetto"
           ]
         }
       ],
@@ -5236,6 +5368,14 @@
             "Sinergie",
             "Governance",
             "Cultura"
+          ]
+        },
+        {
+          "title": "Ristrutturazione e trasmissione",
+          "tags": [
+            "Piano di risanamento",
+            "Successione",
+            "Subentro"
           ]
         }
       ],
@@ -5337,6 +5477,14 @@
             "Canali",
             "Lancio",
             "Partner"
+          ]
+        },
+        {
+          "title": "Legale, proprietà intellettuale e regolamentare",
+          "tags": [
+            "Deposito del marchio",
+            "Contratti",
+            "Omologazioni"
           ]
         }
       ]
@@ -6842,7 +6990,7 @@
   "faq": {
     "meta": {
       "title": "FAQ, Domande frequenti | Aegryn",
-      "desc": "Risposte alle domande frequenti sulla certificazione CIFSO 5000, la valutazione e l'accompagnamento del ciclo di vita."
+      "desc": "Risposte alle domande frequenti su Aegryn: le otto discipline, La Boutique, l'accordo di riservatezza, la certificazione CIFSO 5000 e l'accompagnamento del ciclo di vita."
     },
     "label": "Domande frequenti",
     "filterAll": "Tutti",
