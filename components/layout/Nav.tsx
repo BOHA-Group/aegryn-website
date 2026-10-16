@@ -5,7 +5,7 @@ import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight, ArrowRight, HelpCircle } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight, HelpCircle } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
@@ -305,10 +305,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <Link href={'/industries' as LinkHref} onClick={closeMobile}
-                    className="mt-3 pt-3 border-t border-ag-border inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors">
-                    {t('whoIndustries')} <ArrowRight size={11} />
-                  </Link>
                 </div>
               )}
             </div>

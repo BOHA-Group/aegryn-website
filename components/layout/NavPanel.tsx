@@ -50,9 +50,6 @@ export function NavPanel({ menu, t, onClose }: { menu: DropdownKey; t: T; onClos
           </Col>
           <Col title={t('craftTransact')} desc={t('craftTransactDesc')}>
             <Links items={CRAFT_TRANSACT_CYCLES} t={t} onClose={onClose} />
-            <Link href={'/industries' as LinkHref} onClick={onClose} className={`${LINK} mt-6 inline-flex items-center gap-1.5`}>
-              {t('whoIndustries')} <ArrowRight size={12} />
-            </Link>
           </Col>
         </>
       )}
