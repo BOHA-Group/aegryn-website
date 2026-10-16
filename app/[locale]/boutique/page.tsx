@@ -12,7 +12,7 @@ import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { TypedTitle } from '@/components/boutique/TypedTitle'
-import { ProjectCard } from '@/components/sections/assets/ProjectCard'
+import { ProjectsScroller } from '@/components/boutique/ProjectsScroller'
 import Image from 'next/image'
 import { ArticleCard } from '@/components/sections/ArticleCard'
 import { ArticleStrip } from '@/components/sections/ArticleStrip'
@@ -136,20 +136,8 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Projets emblématiques : image et titre, clic direct vers la page du projet */}
-      <section id="projets" className="scroll-mt-24 bg-white py-28 md:py-36">
-        <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.projectsLabel[lang]}</h2>
-          <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {projects.map(p => <ProjectCard key={p.id} asset={p} showDetails={false} />)}
-          </div>
-          <div className="mt-14">
-            <Link href={'/boutique/projets' as never} className="font-sans text-[15px] font-semibold text-ag-navy underline decoration-ag-apex decoration-2 underline-offset-4 hover:text-ag-apex-ink">
-              {BOUTIQUE.projectsAll[lang]} →
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Projets signature : défilement horizontal épinglé, image et titre, clic vers la page du projet */}
+      <ProjectsScroller title={BOUTIQUE.projectsLabel[lang]} allLabel={BOUTIQUE.projectsAll[lang]} projects={projects} />
 
       {/* Les lieux de rencontre, bientôt */}
       <section className="bg-ag-navy py-28 text-white md:py-36">

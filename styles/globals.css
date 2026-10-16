@@ -393,3 +393,9 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
   .mw-section { overflow-x: auto; }
   .mw-grid { left: 0; }
 }
+
+/* La Boutique : en-tête de la section Projets signature (défilement horizontal, mêmes traits .mw-*) */
+.mw-head { position: absolute; inset: 0 0 auto 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: clamp(5rem, 12vh, 8rem) clamp(24px, 5vw, 64px) 0; }
+.mw-head-title { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; font-size: clamp(34px, 5vw, 72px); color: var(--mw-ink); text-wrap: balance; }
+.mw-head-link { flex-shrink: 0; padding-bottom: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mw-ink); text-decoration: none; transition: color .25s; }
+.mw-head-link:hover { color: var(--mw-red); }
