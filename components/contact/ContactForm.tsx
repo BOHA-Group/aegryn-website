@@ -23,6 +23,7 @@ const COUNTRY_OPTIONS = [
   { code: 'DE', label: 'Allemagne',   dial: '+49',  maxLen: 11 },
   { code: 'BE', label: 'Belgique',    dial: '+32',  maxLen: 9  },
   { code: 'LU', label: 'Luxembourg',  dial: '+352', maxLen: 9  },
+  { code: 'MC', label: 'Monaco',      dial: '+377', maxLen: 9  },
   { code: 'ES', label: 'Espagne',     dial: '+34',  maxLen: 9  },
   { code: 'IT', label: 'Italie',      dial: '+39',  maxLen: 10 },
   { code: 'NL', label: 'Pays-Bas',    dial: '+31',  maxLen: 9  },

@@ -77,7 +77,7 @@ export function MissionVideoSection() {
 
           <div className="mv-reveal flex flex-col items-start gap-2 py-4 md:flex-row md:items-center md:justify-between">
             <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tM('label')}</p>
-            <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">{tM('sub')}</p>
+            <p className="font-sans text-[12px] font-semibold uppercase tracking-[0.18em] text-white/70">{tM('sub')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
@@ -86,10 +86,10 @@ export function MissionVideoSection() {
                 <p className="mb-[clamp(6px,2.6vh,32px)] font-sans text-[10px] font-semibold tracking-[0.2em] text-ag-apex">{String(i + 1).padStart(2, '0')}</p>
                 <h3
                   className="mb-[clamp(6px,1.8vh,20px)] pb-[0.15em] font-sans font-bold leading-[1.2] tracking-[-0.02em] text-white"
-                  style={{ fontSize: 'clamp(13px,1.1vw,16px)' }}
+                  style={{ fontSize: 'clamp(15px,1.2vw,18px)' }}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="font-sans font-normal text-white/90" style={{ fontSize: 'clamp(12.5px,min(1.05vw,2.3vh),15px)', lineHeight: 1.65 }}>{item.desc}</p>
+                <p className="font-sans font-normal text-white/90" style={{ fontSize: 'clamp(15px,min(1.05vw,2.3vh),15px)', lineHeight: 1.65 }}>{item.desc}</p>
               </div>
             ))}
           </div>

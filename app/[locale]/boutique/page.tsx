@@ -215,7 +215,7 @@ export default async function BoutiquePage({ params }: Props) {
                   title={a.title[lang] ?? a.title.en}
                   category={ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en}
                   date={new Date(a.date).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })}
-                  readTime={`${a.readMin} ${tBlog('readMin')}`}
+                  readTime={`${a.readMin} ${tBlog('readMinShort')}`}
                   excerpt={a.excerpt[lang] ?? a.excerpt.en}
                   image={img}
                   imagePosition={getBlogImagePosition(img)}

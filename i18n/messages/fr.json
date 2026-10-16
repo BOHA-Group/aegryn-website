@@ -1613,7 +1613,7 @@
         "profile": "Sélectionner un profil",
         "transition": "Mission de transition",
         "join": "Rejoindre ou soutenir un projet",
-        "certification": "Certification CIFSO 5000",
+        "certification": "Certification CIFSO",
         "partnership": "Partenariat",
         "press": "Presse et médias",
         "career": "Candidature",
@@ -1959,7 +1959,8 @@
     "filterSecurity": "Sécurité & IA",
     "filterTalent": "Organisation & Talent",
     "filterFinancing": "Financement & Investisseurs",
-    "filterCompliance": "Conformité"
+    "filterCompliance": "Conformité",
+    "readMinShort": "min"
   },
   "grade": {
     "meta": {

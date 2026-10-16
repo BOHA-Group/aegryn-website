@@ -110,8 +110,4 @@ export const SF_UI = {
     'Un mismo cimiento, de la idea a la transmisión. Cada proyecto moviliza una parte, según su ciclo y sus retos.',
     'Un’unica base, dall’idea alla trasmissione. Ogni progetto ne mobilita una parte, secondo il suo ciclo e le sue sfide.',
     'Eén basis, van idee tot overdracht. Elk project put uit een deel ervan, naargelang cyclus en uitdagingen.'),
-  byCycle:  L('Par cycle', 'By cycle', 'Nach Zyklus', 'Por ciclo', 'Per ciclo', 'Per cyclus'),
-  byTheme:  L('Par thème', 'By theme', 'Nach Thema', 'Por tema', 'Per tema', 'Per thema'),
-  allCycles: L('Tous les cycles', 'All cycles', 'Alle Zyklen', 'Todos los ciclos', 'Tutti i cicli', 'Alle cycli'),
-  allThemes: L('Tous les thèmes', 'All themes', 'Alle Themen', 'Todos los temas', 'Tutti i temi', 'Alle thema’s'),
 }

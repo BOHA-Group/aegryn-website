@@ -156,7 +156,7 @@ export function MetiersScroller() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="cadrer" className="mw-section">
+    <section ref={sectionRef} id="cadrer" className="js-xscroll mw-section">
       <div ref={bgRef} className="mw-bg" aria-hidden="true">
         <video
           ref={videoRef}

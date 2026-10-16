@@ -820,7 +820,7 @@
       {
         "id": "web3",
         "label": "Digitale kunst & Web3",
-        "desc": "Digitale creatieve activa, smart contracts met hoge IP-waarde, filantropische fondsen met digitale roeping. Omvat missiegedreven structuren, technologiestichtingen en creatieve impactactiva. Uitbreiding van de CIFSO 5000-certificering naar Web3-activa in onderzoek."
+        "desc": "Digitale creatieve activa, smart contracts met hoge IP-waarde, filantropische fondsen met digitale roeping. Omvat missiegedreven structuren, technologiestichtingen en creatieve impactactiva. Uitbreiding van de CIFSO-certificering naar Web3-activa in onderzoek."
       }
     ],
     "cta": "Een certificering aanvragen"
@@ -2320,7 +2320,8 @@
     "filterSecurity": "Veiligheid & AI",
     "filterTalent": "Organisatie & Talent",
     "filterFinancing": "Financiering & Investeerders",
-    "filterCompliance": "Compliance"
+    "filterCompliance": "Compliance",
+    "readMinShort": "min"
   },
   "grade": {
     "meta": {

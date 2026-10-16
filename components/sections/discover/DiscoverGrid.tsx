@@ -300,7 +300,7 @@ export function DiscoverGrid({ locale }: Props) {
                     title={article.title[lang] ?? article.title.en}
                     category={ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
                     date={formatDate(article.date)}
-                    readTime={`${article.readMin} ${t('readMin')}`}
+                    readTime={`${article.readMin} ${t('readMinShort')}`}
                     excerpt={article.excerpt[lang] ?? article.excerpt.en}
                     image={getImage(article.slug)}
                     imagePosition={getBlogImagePosition(getImage(article.slug))}

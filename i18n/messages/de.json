@@ -1528,7 +1528,7 @@
     },
     "ctaLabel": "FÜR UNABHÄNGIGE PRÜFER",
     "ctaTitle": "Sind Sie Anwaltskanzlei, Treuhänder, Cybersicherheitsspezialist oder Organisationsexperte?",
-    "ctaDesc": "Bewerben Sie sich für das Netzwerk unabhängiger Auditoren der CIFSO-5000-Zertifizierung: Sichtbarkeit als Partner des Aegryn-Netzwerks; Mandate werden nach den obigen Unabhängigkeitsregeln vergeben.",
+    "ctaDesc": "Bewerben Sie sich für das Netzwerk unabhängiger Auditoren der CIFSO-Zertifizierung: Sichtbarkeit als Partner des Aegryn-Netzwerks; Mandate werden nach den obigen Unabhängigkeitsregeln vergeben.",
     "ctaBtn": "Für das Prüfernetzwerk bewerben",
     "benefitsLabel": "WAS SIE ERHALTEN",
     "benefits": [
@@ -2320,7 +2320,8 @@
     "filterSecurity": "Sicherheit & KI",
     "filterTalent": "Organisation & Talent",
     "filterFinancing": "Finanzierung & Investoren",
-    "filterCompliance": "Compliance"
+    "filterCompliance": "Compliance",
+    "readMinShort": "Min."
   },
   "grade": {
     "meta": {

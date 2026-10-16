@@ -1494,7 +1494,7 @@
     "ownedBy": "Un asset Aegryn"
   },
   "gradePartners": {
-    "back": "← Certificazione CIFSO 5000",
+    "back": "← Certificazione CIFSO",
     "eyebrow": "Certificazione CIFSO 5000",
     "title": "Una rete di revisori indipendenti, non un obbligo.",
     "intro1": "La certificazione CIFSO 5000 è indipendente: Aegryn valuta e classifica la qualità delle organizzazioni senza dipendere da revisori imposti. Professionisti indipendenti possono essere incaricati di approfondire alcune delle cinque dimensioni.",
@@ -2320,7 +2320,8 @@
     "filterSecurity": "Sicurezza & IA",
     "filterTalent": "Organizzazione & Talento",
     "filterFinancing": "Finanziamento & Investitori",
-    "filterCompliance": "Conformità"
+    "filterCompliance": "Conformità",
+    "readMinShort": "min"
   },
   "grade": {
     "meta": {

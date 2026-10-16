@@ -30,6 +30,8 @@ export const useBoutiqueClock = () => useContext(Ctx)
 
 export function BoutiqueAudioProvider({ locale, children }: { locale: string; children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement>(null)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const userCut = useRef(false)
   const t0 = useRef(0)
   const fade = useRef<ReturnType<typeof setInterval> | null>(null)
   const [playing, setPlaying] = useState(false)
@@ -64,7 +66,10 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
   useEffect(() => {
     t0.current = performance.now()
     let armed = true
-    const onGesture = async () => { if (armed && await start()) cleanup() }
+    const onGesture = async (e: Event) => {
+      if (btnRef.current?.contains(e.target as Node)) return
+      if (armed && !userCut.current && await start()) cleanup()
+    }
     const cleanup = () => { armed = false; ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.removeEventListener(e, onGesture)) }
     start().then(ok => { if (!ok) ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.addEventListener(e, onGesture, { passive: true })) })
     return () => { cleanup(); if (fade.current) clearInterval(fade.current); audioRef.current?.pause() }
@@ -81,12 +86,16 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
       <audio ref={audioRef} src={BOUTIQUE_TEMPO.track} loop preload="auto" />
       {children}
       <button
+        ref={btnRef}
         type="button"
-        onClick={() => (playing ? stop() : start())}
+        onClick={() => {
+          const a = audioRef.current; if (!a) return
+          if (a.paused) { userCut.current = false; void start() } else { userCut.current = true; stop() }
+        }}
         aria-pressed={playing}
         aria-label={playing ? txt.off : txt.on}
         title="Beyond the Clicks"
-        className="fixed bottom-8 right-20 z-40 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
+        className="fixed bottom-14 right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
       >
         <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
           {[0.9, 0.5, 1, 0.65].map((h, i) => (

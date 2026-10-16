@@ -464,11 +464,9 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   {t('clientSpace')}
                 </NextLink>
               )}
-            </div>
-
-            {/* Language */}
-            <div className="mt-6 pt-6 border-t border-ag-border">
-              <LanguageSwitcher variant="text" />
+              <div className="flex justify-center pt-2">
+                <LanguageSwitcher variant="text" />
+              </div>
             </div>
           </div>
         </div>

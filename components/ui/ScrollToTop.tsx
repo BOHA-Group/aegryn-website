@@ -25,7 +25,7 @@ export function ScrollToTop() {
       onClick={scrollUp}
       aria-label={t('label')}
       className={[
-        'fixed bottom-8 right-8 z-50',
+        'fixed bottom-14 right-8 z-50 sm:bottom-8',
         'w-11 h-11 flex items-center justify-center',
         'bg-ag-navy border border-white/20 text-white',
         'hover:bg-ag-apex hover:border-ag-apex hover:text-ag-navy',

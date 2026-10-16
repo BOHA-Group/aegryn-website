@@ -46,11 +46,11 @@ export function ArticleStrip({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative">
-      <div ref={ref} className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-pl-6 pb-4 -mx-6 px-6 md:mx-0 md:scroll-pl-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
+      <div ref={ref} className="js-xscroll flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-px-6 pb-4 -mx-6 px-[calc(50vw-118px)] md:mx-0 md:scroll-px-0 md:px-0" style={{ scrollbarWidth: 'thin' }}>
         {children}
       </div>
-      <div aria-hidden="true" className={`pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-ag-white to-transparent transition-opacity duration-300 ${canLeft ? 'opacity-100' : 'opacity-0'}`} />
-      <div aria-hidden="true" className={`pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-ag-white to-transparent transition-opacity duration-300 ${canRight ? 'opacity-100' : 'opacity-0'}`} />
+      <div aria-hidden="true" className={`pointer-events-none absolute inset-y-0 left-0 hidden w-12 bg-gradient-to-r from-ag-white to-transparent transition-opacity duration-300 md:block ${canLeft ? 'opacity-100' : 'opacity-0'}`} />
+      <div aria-hidden="true" className={`pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-ag-white to-transparent transition-opacity duration-300 md:block ${canRight ? 'opacity-100' : 'opacity-0'}`} />
       {canLeft && <button type="button" onClick={() => scrollBy(-1)} aria-label={txt.prev} className={`${btn} -left-5`}><ChevronLeft size={18} /></button>}
       {canRight && <button type="button" onClick={() => scrollBy(1)} aria-label={txt.next} className={`${btn} -right-5`}><ChevronRight size={18} /></button>}
     </div>

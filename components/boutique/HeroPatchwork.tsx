@@ -10,6 +10,10 @@ import { useEffect, useRef, useState } from 'react'
 import { BEAT_SECONDS, BOUTIQUE_TEMPO, HERO_CLIPS, TOTAL_BEATS, clipSrc } from '@/content/boutique/clips'
 import { useBoutiqueClock } from './BoutiqueAudio'
 
+/* Recadrage par clip en `object-cover` : la statue de la Liberte est dans le tiers
+   gauche du plan ; en portrait, le centrage par defaut la sort du cadre. */
+const CLIP_POSITION: Record<string, string> = { '09-statue-of-liberty': '22% 50%' }
+
 export function HeroPatchwork() {
   const { getTime } = useBoutiqueClock()
   const videos = useRef<(HTMLVideoElement | null)[]>([])
@@ -77,7 +81,7 @@ export function HeroPatchwork() {
           key={name}
           ref={el => { videos.current[i] = el }}
           className="absolute inset-0 h-full w-full object-cover will-change-transform"
-          style={{ opacity: 0 }}
+          style={{ opacity: 0, objectPosition: CLIP_POSITION[name] }}
           src={clipSrc(name, small)}
           muted
           playsInline

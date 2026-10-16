@@ -820,7 +820,7 @@
       {
         "id": "web3",
         "label": "Digital Art & Web3",
-        "desc": "Digital creative assets, high-IP-value smart contracts, digitally focused philanthropic funds. Includes mission-driven structures, technology foundations and impact creative assets. Extension of CIFSO 5000 certification to Web3 assets under study."
+        "desc": "Digital creative assets, high-IP-value smart contracts, digitally focused philanthropic funds. Includes mission-driven structures, technology foundations and impact creative assets. Extension of CIFSO certification to Web3 assets under study."
       }
     ],
     "cta": "Request a certification"
@@ -1999,7 +1999,8 @@
     "filterSecurity": "Security & AI",
     "filterTalent": "Organisation & Talent",
     "filterFinancing": "Financing & Investors",
-    "filterCompliance": "Compliance"
+    "filterCompliance": "Compliance",
+    "readMinShort": "min"
   },
   "grade": {
     "meta": {
