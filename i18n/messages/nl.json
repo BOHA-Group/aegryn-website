@@ -9664,53 +9664,6 @@
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
       "p3ImageAlt": "Gouden zonsondergang boven het mistige Lausanne"
-    },
-    "workWith": {
-      "label": "WERKEN MET AEGRYN",
-      "title": "Vijf vakgebieden.\nEén relatie.",
-      "sub": "Kaderen, realiseren, begeleiden, selecteren, informeren: dezelfde gesprekspartner, dezelfde standaarden.",
-      "items": [
-        {
-          "key": "accompagner",
-          "num": "01",
-          "title": "KADEREN",
-          "desc": "Beslissen voor het uitvoeren: strategie, businessplan, merk en positionering, juridisch en regelgevend kader, overname en overdracht. Het kader maakt van een intentie een uitvoerbaar project.",
-          "cta": "Ontdek Kaderen",
-          "href": "/advisory"
-        },
-        {
-          "key": "construire",
-          "num": "02",
-          "title": "REALISEREN",
-          "desc": "Bouwen tot de oplevering: merk, product, platform, marktintroductie. Wij realiseren zelf en activeren de juiste experts wanneer het project het vereist.",
-          "cta": "Ontdek Realiseren",
-          "href": "/advisory"
-        },
-        {
-          "key": "transmettre",
-          "num": "03",
-          "title": "BEGELEIDEN",
-          "desc": "Duren, van de ene cyclus naar de andere: lancering, groei, herstructurering, overname, overdracht. Een benoemde gesprekspartner die het geheugen van het project bewaart.",
-          "cta": "Ontdek Begeleiden",
-          "href": "/#accompagner"
-        },
-        {
-          "key": "recruter",
-          "num": "04",
-          "title": "SELECTEREN",
-          "desc": "De juiste mensen op het juiste moment samenbrengen: leiders, experts, projectteams en partners, één voor één gekozen voor wat het project vereist.",
-          "cta": "Een mandaat indienen",
-          "href": "/talent"
-        },
-        {
-          "key": "informer",
-          "num": "05",
-          "title": "INFORMEREN",
-          "desc": "De markt lezen vóór de anderen: trends, innovatieve projecten, portretten van wie bouwt. Het magazine documenteert wat wij waarnemen en wat wij beleven.",
-          "cta": "Lees het Magazine",
-          "href": "/magazine"
-        }
-      ]
     }
   },
   "partner": {

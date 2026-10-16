@@ -9664,53 +9664,6 @@
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. A deux kilomètres de l'EPFL, l'une des universités technologiques les plus actives au monde en matière de spin-offs et de transfert technologique. A proximité de la Fondation pour l'Innovation et la Technologie (FIT), qui soutient chaque année des centaines de projets d'innovation suisses. Dans un canton qui concentre SwissTech, des dizaines de fonds de capital-risque européens, et une densité rare de dirigeants et d'acquéreurs institutionnels. Ce n'est pas un hasard de localisation. C'est un choix de réseau. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance, et l'accès direct à un écosystème d'innovation qui compte parmi les plus actifs d'Europe.",
       "p3ImageAlt": "Coucher de soleil doré sur Lausanne dans la brume"
-    },
-    "workWith": {
-      "label": "TRAVAILLER AVEC AEGRYN",
-      "title": "Cinq métiers.\nUne seule relation.",
-      "sub": "Cadrer, réaliser, accompagner, sélectionner, s’informer : un même interlocuteur, les mêmes standards.",
-      "items": [
-        {
-          "key": "accompagner",
-          "num": "01",
-          "title": "CADRER",
-          "desc": "Décider avant d'exécuter : stratégie, business plan, marque et positionnement, cadre légal et réglementaire, reprise et cession. Le cadrage transforme une intention en projet exécutable.",
-          "cta": "Découvrir Cadrer",
-          "href": "/advisory"
-        },
-        {
-          "key": "construire",
-          "num": "02",
-          "title": "RÉALISER",
-          "desc": "Construire jusqu’à la réception : marque, produit, plateforme, mise en marché. Nous réalisons nous-mêmes et activons les bons experts quand le projet l’exige.",
-          "cta": "Découvrir Réaliser",
-          "href": "/advisory"
-        },
-        {
-          "key": "transmettre",
-          "num": "03",
-          "title": "ACCOMPAGNER",
-          "desc": "Durer, d'un cycle à l'autre : lancement, croissance, restructuration, acquisition, transmission. Un interlocuteur nommé qui garde la mémoire du projet.",
-          "cta": "Découvrir Accompagner",
-          "href": "/#accompagner"
-        },
-        {
-          "key": "recruter",
-          "num": "04",
-          "title": "SÉLECTIONNER",
-          "desc": "Réunir les bonnes personnes au bon moment : dirigeants, experts, équipes de projet et partenaires, choisis un par un pour ce que le projet exige.",
-          "cta": "Soumettre un mandat",
-          "href": "/talent"
-        },
-        {
-          "key": "informer",
-          "num": "05",
-          "title": "S'INFORMER",
-          "desc": "Lire le marché avant les autres : tendances, projets innovants, portraits de ceux qui bâtissent. Le magazine documente ce que nous observons et ce que nous vivons.",
-          "cta": "Lire le Magazine",
-          "href": "/magazine"
-        }
-      ]
     }
   },
   "partner": {

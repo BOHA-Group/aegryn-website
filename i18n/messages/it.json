@@ -9664,53 +9664,6 @@
       "p3Label": "ANCORATO IN SVIZZERA",
       "p3": "Saint-Sulpice, Vaud. A due chilometri dall'EPFL, una delle università tecnologiche più attive al mondo in materia di spin-off e trasferimento tecnologico. A fianco della Fondazione per l'Innovazione e la Tecnologia (FIT), che sostiene ogni anno centinaia di progetti d'innovazione svizzeri. In un cantone che concentra SwissTech, decine di fondi di venture capital europei e una densità rara di dirigenti e acquirenti istituzionali. Non è un caso di localizzazione. È una scelta di rete. Il rigore di una piazza finanziaria di riferimento, la neutralità di un territorio di fiducia e l'accesso diretto a uno degli ecosistemi di innovazione più attivi d'Europa.",
       "p3ImageAlt": "Tramonto dorato su Losanna nella nebbia"
-    },
-    "workWith": {
-      "label": "LAVORARE CON AEGRYN",
-      "title": "Cinque mestieri.\nUna sola relazione.",
-      "sub": "Inquadrare, realizzare, accompagnare, selezionare, informarsi: uno stesso interlocutore, gli stessi standard.",
-      "items": [
-        {
-          "key": "accompagner",
-          "num": "01",
-          "title": "INQUADRARE",
-          "desc": "Decidere prima di eseguire: strategia, business plan, marchio e posizionamento, quadro legale e regolamentare, acquisizione e cessione. L'inquadramento trasforma un'intenzione in un progetto eseguibile.",
-          "cta": "Scoprire Inquadrare",
-          "href": "/advisory"
-        },
-        {
-          "key": "construire",
-          "num": "02",
-          "title": "REALIZZARE",
-          "desc": "Costruire fino alla consegna: marchio, prodotto, piattaforma, lancio sul mercato. Realizziamo noi stessi e attiviamo gli esperti giusti quando il progetto lo richiede.",
-          "cta": "Scoprire Realizzare",
-          "href": "/advisory"
-        },
-        {
-          "key": "transmettre",
-          "num": "03",
-          "title": "ACCOMPAGNARE",
-          "desc": "Durare, da un ciclo all'altro: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Un interlocutore nominato che custodisce la memoria del progetto.",
-          "cta": "Scoprire Accompagnare",
-          "href": "/#accompagner"
-        },
-        {
-          "key": "recruter",
-          "num": "04",
-          "title": "SELEZIONARE",
-          "desc": "Riunire le persone giuste al momento giusto: dirigenti, esperti, team di progetto e partner, scelti uno a uno per ciò che il progetto richiede.",
-          "cta": "Inviare un mandato",
-          "href": "/talent"
-        },
-        {
-          "key": "informer",
-          "num": "05",
-          "title": "INFORMARE",
-          "desc": "Leggere il mercato prima degli altri: tendenze, progetti innovativi, ritratti di chi costruisce. Il magazine documenta ciò che osserviamo e ciò che viviamo.",
-          "cta": "Leggere il Magazine",
-          "href": "/magazine"
-        }
-      ]
     }
   },
   "partner": {

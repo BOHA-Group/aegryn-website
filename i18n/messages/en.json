@@ -9664,53 +9664,6 @@
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",
       "p3ImageAlt": "Golden sunset over Lausanne's foggy landscape"
-    },
-    "workWith": {
-      "label": "WORKING WITH AEGRYN",
-      "title": "Five disciplines.\nOne relationship.",
-      "sub": "Frame, deliver, accompany, select, stay informed: one counterpart, the same standards.",
-      "items": [
-        {
-          "key": "accompagner",
-          "num": "01",
-          "title": "FRAME",
-          "desc": "Decide before executing: strategy, business plan, brand and positioning, legal and regulatory framework, acquisition and disposal. Framing turns an intention into an executable project.",
-          "cta": "Discover Frame",
-          "href": "/advisory"
-        },
-        {
-          "key": "construire",
-          "num": "02",
-          "title": "DELIVER",
-          "desc": "Build through to delivery: brand, product, platform, go-to-market. We deliver ourselves and activate the right experts when the project requires it.",
-          "cta": "Discover Deliver",
-          "href": "/advisory"
-        },
-        {
-          "key": "transmettre",
-          "num": "03",
-          "title": "ACCOMPANY",
-          "desc": "Endure, from one cycle to the next: launch, growth, restructuring, acquisition, transfer. A named counterpart who keeps the memory of the project.",
-          "cta": "Discover Accompany",
-          "href": "/#accompagner"
-        },
-        {
-          "key": "recruter",
-          "num": "04",
-          "title": "SELECT",
-          "desc": "Bring the right people together at the right time: leaders, experts, project teams and partners, chosen one by one for what the project demands.",
-          "cta": "Submit a mandate",
-          "href": "/talent"
-        },
-        {
-          "key": "informer",
-          "num": "05",
-          "title": "INFORM",
-          "desc": "Read the market before others do: trends, innovative projects, portraits of those who build. The magazine documents what we observe and what we live.",
-          "cta": "Read the Magazine",
-          "href": "/magazine"
-        }
-      ]
     }
   },
   "partner": {

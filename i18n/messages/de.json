@@ -9794,53 +9794,6 @@
       "p3Label": "VERANKERT IN DER SCHWEIZ",
       "p3": "Saint-Sulpice, Waadt. Zwei Kilometer von der EPFL entfernt, einer der aktivsten Technologieuniversitäten der Welt im Bereich Spin-offs und Technologietransfer. In der Nähe der Stiftung für Innovation und Technologie (FIT), die jährlich Hunderte von Schweizer Innovationsprojekten unterstützt. In einem Kanton, der SwissTech, Dutzende von europäischen Risikokapitalfonds und eine seltene Dichte an Führungskräften und institutionellen Erwerber konzentriert. Dies ist kein Zufall des Standorts. Es ist eine bewusste Netzwerkentscheidung. Die Strenge eines führenden Finanzplatzes, die Neutralität eines vertrauenswürdigen Standorts und der direkte Zugang zu einem der aktivsten Innovationsökosysteme Europas.",
       "p3ImageAlt": "Goldener Sonnenuntergang über dem nebligen Lausanne"
-    },
-    "workWith": {
-      "label": "MIT AEGRYN ZUSAMMENARBEITEN",
-      "title": "Fünf Disziplinen.\nEine Beziehung.",
-      "sub": "Rahmen setzen, umsetzen, begleiten, auswählen, informieren: ein Ansprechpartner, dieselben Standards.",
-      "items": [
-        {
-          "key": "accompagner",
-          "num": "01",
-          "title": "RAHMEN SETZEN",
-          "desc": "Entscheiden, bevor man umsetzt: Strategie, Businessplan, Marke und Positionierung, rechtlicher und regulatorischer Rahmen, Übernahme und Veräusserung. Der Rahmen macht aus einer Absicht ein umsetzbares Projekt.",
-          "cta": "Rahmen setzen entdecken",
-          "href": "/advisory"
-        },
-        {
-          "key": "construire",
-          "num": "02",
-          "title": "UMSETZEN",
-          "desc": "Bauen bis zur Abnahme: Marke, Produkt, Plattform, Markteinführung. Wir setzen selbst um und aktivieren die richtigen Experten, wenn das Projekt es verlangt.",
-          "cta": "Umsetzen entdecken",
-          "href": "/advisory"
-        },
-        {
-          "key": "transmettre",
-          "num": "03",
-          "title": "BEGLEITEN",
-          "desc": "Bestehen, von einem Zyklus zum nächsten: Start, Wachstum, Restrukturierung, Übernahme, Übergabe. Ein benannter Ansprechpartner, der das Gedächtnis des Projekts bewahrt.",
-          "cta": "Begleiten entdecken",
-          "href": "/#accompagner"
-        },
-        {
-          "key": "recruter",
-          "num": "04",
-          "title": "AUSWÄHLEN",
-          "desc": "Die richtigen Menschen zur richtigen Zeit zusammenbringen: Führungskräfte, Experten, Projektteams und Partner, einzeln ausgewählt für das, was das Projekt verlangt.",
-          "cta": "Mandat einreichen",
-          "href": "/talent"
-        },
-        {
-          "key": "informer",
-          "num": "05",
-          "title": "INFORMIEREN",
-          "desc": "Den Markt vor anderen lesen: Trends, innovative Projekte, Porträts derer, die bauen. Das Magazin dokumentiert, was wir beobachten und was wir leben.",
-          "cta": "Magazin lesen",
-          "href": "/magazine"
-        }
-      ]
     }
   },
   "transactHow": {
