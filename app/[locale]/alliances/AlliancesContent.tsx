@@ -126,7 +126,7 @@ export default function AlliancesContent() {
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
           <aside className="hidden lg:block shrink-0 w-64 lg:-ml-12 sticky top-20 self-start">
-            <nav data-lenis-prevent className="flex max-h-[75vh] flex-col gap-0 overflow-y-auto px-3 py-3 bg-ag-off-white border border-ag-border rounded-2xl">
+            <nav data-lenis-prevent className="flex max-h-[calc(100vh-4.75rem)] flex-col gap-0 overflow-y-auto px-3 py-3 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
                   {gi > 0 && <div className="mx-5 my-2" />}

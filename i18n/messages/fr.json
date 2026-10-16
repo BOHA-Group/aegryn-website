@@ -6509,7 +6509,9 @@
     "security": "Sécurité",
     "faq": "FAQ",
     "sitemap": "Plan du site",
-    "aiUsage": "Politique IA"
+    "aiUsage": "Politique IA",
+    "eyebrowLegal": "Aegryn · Juridique",
+    "eyebrowHelp": "Aegryn · Aide"
   },
   "aiUsage": {
     "meta": {
@@ -6536,26 +6538,29 @@
       "desc": "Conditions générales d utilisation du site aegryn.com : accès, responsabilités, propriété intellectuelle et droit applicable."
     },
     "label": "Conditions Générales d'Utilisation",
-    "version": "Version : juillet 2026",
+    "version": "Version : octobre 2026",
     "intro": "Les présentes Conditions Générales d'Utilisation (ci-après « CGU ») régissent l'accès et l'utilisation du site internet Aegryn accessible à l'adresse aegryn.com et de tout autre site associé (ci-après « le Site »). En accédant au Site, vous acceptez sans réserve les présentes CGU. Aegryn se réserve le droit de les modifier à tout moment. Consultez cette page régulièrement.",
     "s1Title": "Contenu du Site",
-    "s1": "Le Site et l'ensemble de ses contenus (textes, graphiques, images, données, code, scripts, méthodologies, systèmes de notation) sont protégés par les droits de propriété intellectuelle applicables en Suisse et dans l'Union Européenne. Ces contenus sont la propriété exclusive d'Aegryn ou de ses partenaires. Toute reproduction, modification, distribution ou utilisation commerciale sans autorisation écrite préalable est strictement interdite.\n\nLa méthodologie Aegryn Grade, le protocole d'évaluation C/I/F/S, les rapports de grade, et tout contenu éditorial publié sur le Site constituent des œuvres protégées. L'utilisation de robots, scrapers, scripts automatisés ou tout autre moyen d'extraction de données est interdite.",
+    "s1": "Le Site et l'ensemble de ses contenus (textes, graphiques, images, données, code, scripts, méthodologies, systèmes de notation) sont protégés par les droits de propriété intellectuelle applicables en Suisse et dans l'Union Européenne. Ces contenus sont la propriété exclusive d'Aegryn ou de ses partenaires. Toute reproduction, modification, distribution ou utilisation commerciale sans autorisation écrite préalable est strictement interdite.\n\nLa méthodologie Aegryn Grade, le protocole d'évaluation CIFSO 5000, les rapports de grade, et tout contenu éditorial publié sur le Site constituent des œuvres protégées. L'utilisation de robots, scrapers, scripts automatisés ou tout autre moyen d'extraction de données est interdite.",
     "s2Title": "Utilisation autorisée",
     "s2": "Vous pouvez consulter le Site à des fins personnelles et professionnelles légitimes. Toute utilisation à des fins frauduleuses, contraires à l'ordre public ou aux bonnes mœurs est prohibée. Aegryn se réserve le droit de suspendre ou supprimer l'accès de tout utilisateur en violation des présentes CGU.",
     "s3Title": "Inscription et comptes utilisateurs",
     "s3": "L'accès à l'espace client Aegryn (suivi de certification, documents, mandats) est réservé aux clients préalablement autorisés par Aegryn. Vous vous engagez à fournir des informations exactes et à les maintenir à jour. Vous êtes responsable de la confidentialité de vos identifiants et de toute activité effectuée sous votre compte.",
     "s4Title": "Exactitude des informations",
-    "s4": "Les informations publiées sur le Site le sont à titre indicatif. En cas de divergence entre le contenu du Site et les documents contractuels signés entre les parties (mandat de certification, conditions de transaction), ces derniers prévalent.",
+    "s4": "Les informations publiées sur le Site le sont à titre indicatif. En cas de divergence entre le contenu du Site et les documents contractuels signés entre les parties (proposition, mandat, accord de confidentialité), ces derniers prévalent.",
     "s5Title": "Limitation de responsabilité",
     "s5": "Aegryn ne garantit pas que le Site sera accessible sans interruption, ni qu'il sera exempt d'erreurs. Le Site est fourni « en l'état ». Aegryn décline toute responsabilité pour les dommages directs ou indirects résultant de l'utilisation ou de l'impossibilité d'utilisation du Site.",
     "s6Title": "Liens externes",
     "s6": "Le Site peut contenir des liens vers des sites tiers. Aegryn n'est pas responsable du contenu de ces sites et ne les approuve pas implicitement.",
     "s7Title": "Propriété intellectuelle",
-    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole C/I/F/S, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn. Toute utilisation non autorisée sera poursuivie.",
+    "s7": "Le label Aegryn Grade, la marque Aegryn, le monogramme AE, le protocole CIFSO 5000, ainsi que toutes les méthodologies et rapports produits par Aegryn sont la propriété exclusive d'Aegryn. Toute utilisation non autorisée sera poursuivie.",
     "s8Title": "Droit applicable et juridiction",
     "s8": "Les présentes CGU sont soumises au droit suisse. Tout litige relevant des présentes sera soumis à la compétence exclusive des tribunaux du canton de domicile d'Aegryn. Si une clause est invalide, les autres restent applicables.",
     "ctaCgv": "Consulter les CGV",
-    "ctaPrivacy": "Politique de confidentialité"
+    "ctaPrivacy": "Politique de confidentialité",
+    "articleLabel": "Article",
+    "s9Title": "Accès confidentiel",
+    "s9": "Certaines sections du Site (certification, data room, dossiers de projet) ne sont accessibles qu'après la signature d'un accord de confidentialité mutuel et leur activation manuelle par Aegryn. L'accord est entièrement numérique et se signe par un lien personnel, sans compte utilisateur. Les contenus consultés sont confidentiels : ils ne peuvent être ni copiés ni diffusés, et chaque consultation est journalisée."
   },
   "privacy": {
     "meta": {
@@ -6563,7 +6568,7 @@
       "desc": "Comment Aegryn collecte, traite et protège vos données personnelles. Conformité LPD et RGPD."
     },
     "label": "Politique de Confidentialité",
-    "updated": "Dernière mise à jour : juillet 2026",
+    "updated": "Dernière mise à jour : octobre 2026",
     "langSelector": "Disponible en",
     "intro": "Comme la plupart des entreprises opérant dans le secteur financier et des transactions, Aegryn collecte et traite des données relatives à ses clients, partenaires et autres personnes susceptibles d'être intéressées par ses services. La présente politique explique le type de données que nous traitons, pourquoi nous les traitons et comment ce traitement peut vous affecter.",
     "s1Title": "Qui sommes-nous ?",
@@ -6685,9 +6690,9 @@
         "items": [
           "Communiquer avec vous, notamment pour répondre à vos demandes et exercer vos droits.",
           "Vous informer sur nos services et offres.",
-          "Gérer votre compte et vos accès (inscription, facturation, parrainage).",
-          "Traiter les demandes d'accès NDA aux dossiers d'actifs et conserver les traces de signature.",
-          "Conduire les missions de certification CIFSO 5000 (collecte et évaluation des dossiers vendeur).",
+          "Gérer votre compte et vos accès (inscription, facturation).",
+          "Faire signer l'accord de confidentialité mutuel (NDA) en ligne et conserver les traces de signature (signataires, horodatage, empreinte du document).",
+          "Conduire les missions de certification CIFSO 5000 (collecte et évaluation des dossiers des organisations).",
           "Générer des statistiques de trafic utiles à l'amélioration de notre site web.",
           "Nous conformer aux lois, directives et recommandations des autorités."
         ],
@@ -6731,7 +6736,7 @@
           ],
           [
             "Stripe",
-            "Traitement des paiements et gestion des accès aux services Expert.",
+            "Traitement des paiements (certification CIFSO 5000).",
             "EEE/USA"
           ],
           [
@@ -6806,7 +6811,8 @@
     "s5Title": "Signaler une activité suspecte",
     "s5Step1": "Ne cliquez sur aucun lien et ne fournissez aucune information",
     "s5Step2": "Signalez immédiatement à contact@boha-group.com",
-    "s5Step3": "Signalez la plateforme concernée (réseau social, registrar) directement"
+    "s5Step3": "Signalez la plateforme concernée (réseau social, registrar) directement",
+    "s4Normal3": "Signature d'un accord de confidentialité (NDA) par un lien personnel envoyé par Aegryn depuis @boha-group.com, vers aegryn.com"
   },
   "faq": {
     "meta": {
@@ -6825,7 +6831,7 @@
           "lifecycle"
         ],
         "q": "Qui est Aegryn et que faites-vous ?",
-        "a": "Aegryn est un cabinet intégré suisse qui accompagne les organisations à chaque étape de leur cycle de vie : cadrage en stratégie, risques, technologie, talent et M&A, réalisation d'actifs numériques propriétaires, accompagnement des cycles de vie, sélection de talents et information de marché. Notre protocole de certification indépendant CIFSO 5000 évalue et documente la valeur réelle d'une organisation."
+        "a": "Aegryn est un cabinet d'entrepreneurs suisse, ancré en Suisse et ouvert à l'international. Il cadre les décisions et les projets des dirigeants de PME et d'ETI (stratégie, risques, finance, technologie, opérations, talent, pilotage de projets, M&A), les réalise avec eux, accompagne chaque cycle de vie de l'entreprise, sélectionne les profils clés et informe sur le marché. La Boutique conduit un nombre limité de projets signature. Notre protocole CIFSO 5000 certifie et documente la valeur d'une organisation."
       },
       {
         "id": "what-differentiates",
@@ -6833,7 +6839,7 @@
           "certification"
         ],
         "q": "Qu'est-ce qui vous différencie ?",
-        "a": "Contrairement aux cabinets de conseil ou agences, nous construisons et opérons nos propres écosystèmes numériques. Chaque conseil, chaque protocole, chaque approche que nous proposons est issu d'une exécution réelle. Nous ne revendons pas des modèles génériques. Nous partageons ce qui fonctionne parce que nous l'utilisons nous-mêmes."
+        "a": "Un interlocuteur nommé qui répond du résultat, un nombre limité de mandats à la fois, une réponse sous deux jours ouvrés et des experts indépendants coordonnés quand le sujet l'exige. Nous parlons en entrepreneurs : un livrable court qui aide à décider ou à agir, jusqu'à la réception. Rare par sélection, discret par principe."
       },
       {
         "id": "cert-options",
@@ -6858,7 +6864,7 @@
           "lifecycle"
         ],
         "q": "Quels types d'organisations pouvez-vous accompagner ?",
-        "a": "Aegryn certifie et accompagne des organisations tech : éditeurs SaaS B2B, applications mobiles, plateformes et marketplaces, protocoles IA, actifs de propriété intellectuelle numérique."
+        "a": "Aegryn accompagne des dirigeants et des organisations de toute taille, principalement des PME et des ETI, ainsi que des investisseurs, des institutions, des industriels et des marques. La certification CIFSO 5000 s'adresse aux organisations tech : éditeurs SaaS B2B, applications mobiles, plateformes, protocoles IA, actifs de propriété intellectuelle numérique."
       },
       {
         "id": "data-confidentiality",
@@ -6867,7 +6873,7 @@
           "lifecycle"
         ],
         "q": "Qui accède aux données de mon dossier de certification ?",
-        "a": "Vos données restent strictement confidentielles. Seule l'équipe Aegryn et les auditeurs mandatés, tous soumis à un accord de confidentialité, accèdent aux informations de votre dossier dans le cadre de l'évaluation et des vérifications KYC."
+        "a": "Vos données restent strictement confidentielles. Un accord de confidentialité mutuel, entièrement numérique, précède tout échange détaillé. Seule l'équipe Aegryn et les auditeurs mandatés, tous soumis à cet accord, accèdent à votre dossier, et l'accès aux sections de certification et de data room n'est ouvert qu'après signature et activation manuelle par Aegryn."
       },
       {
         "id": "become-buyer",
@@ -6915,7 +6921,7 @@
           "account"
         ],
         "q": "Quels services d'advisory proposez-vous ?",
-        "a": "Aegryn Advisory intervient sur 5 métiers : Stratégie & Innovation (trajectoire, business model, expansion), Gestion des Risques & Conformité (NIS2, DORA, RGPD, AI Act), Technologie & Souveraineté (architecture, cloud, cybersécurité, indépendance tech), Talent & Organisation (succession, gouvernance, dépendance fondateur), M&A & PMI (due diligence, intégration post-acquisition, carve-out). Nous opérons dans 22 industries en Europe. Consultez /advisory pour plus de détails."
+        "a": "Aegryn Advisory intervient dans huit métiers : Stratégie d'entreprise et Innovation, Gestion des Risques et Conformité, Finance et Performance, Technologie et Souveraineté, Opérations et Excellence opérationnelle, Talent et Organisation, Pilotage de projets et de programmes, M&A, Transactions et PMI. Nous intervenons dans plus de 23 industries en Suisse et en Europe. Consultez /advisory pour plus de détails."
       },
       {
         "id": "build-service",
@@ -6923,7 +6929,7 @@
           "account"
         ],
         "q": "Construisez-vous des actifs sur mesure ?",
-        "a": "Oui, Aegryn conçoit des solutions logicielles sur mesure pour PME et groupes. Nous cadrons le besoin, choisissons avec vous entre acheter, intégrer ou construire, puis pilotons la réalisation jusqu'à la mise en service. Code custom uniquement (pas de no-code), IP transférée intégralement au client, hébergement en Suisse ou dans l'UE. Détails sur /services/build."
+        "a": "Oui, pour les solutions logicielles sur mesure, que nous pilotons de bout en bout avec des experts : nous cadrons le besoin, choisissons avec vous entre acheter, intégrer ou construire, puis conduisons la réalisation jusqu'à la réception. Code spécifique uniquement (pas de no-code), propriété intellectuelle transférée intégralement au client, hébergement en Suisse ou dans l'UE. Nous ne réalisons pas nous-mêmes de production industrielle ni de fabrication physique. Détails sur /advisory/technology."
       },
       {
         "id": "magazine",
@@ -6939,7 +6945,7 @@
           "account"
         ],
         "q": "Comment rejoindre le réseau d'experts Aegryn ?",
-        "a": "Le réseau Aegryn rassemble trois cercles : experts métiers (cinq métiers conseil), investisseurs & institutionnels, auditeurs indépendants CIFSO. Les professionnels indépendants peuvent candidater via la page Devenir partenaire (/alliances), section Candidature. Aegryn étudie chaque candidature et répond sous 10 jours ouvrés."
+        "a": "Le réseau Aegryn rassemble trois cercles : experts des huit métiers, investisseurs et institutionnels, auditeurs indépendants CIFSO. Les professionnels indépendants peuvent candidater via la page Devenir partenaire (/alliances), section Candidature. Aegryn étudie chaque candidature et répond sous 10 jours ouvrés."
       },
       {
         "id": "valuation",
@@ -6948,6 +6954,31 @@
         ],
         "q": "Proposez-vous des valorisations d'organisations ?",
         "a": "Oui, via /valuation. Soumettez votre organisation pour obtenir une estimation indicative gratuite. Pour une valorisation opposable avec rapport détaillé, la certification CIFSO 5000 (forfaits Express, Standard, Premium) atteste la valeur sur cinq dimensions."
+      },
+      {
+        "id": "marketplace",
+        "cat": [
+          "lifecycle"
+        ],
+        "q": "Aegryn est-il une place de marché ou une plateforme de transaction ?",
+        "a": "Non. Aegryn est un cabinet d'entrepreneurs : nous conseillons et réalisons. Nous n'exploitons ni catalogue, ni enchères, ni espace acheteur ou vendeur. L'exécution financière d'une opération est confiée à des partenaires agréés."
+      },
+      {
+        "id": "boutique",
+        "cat": [
+          "lifecycle"
+        ],
+        "q": "Qu'est-ce que La Boutique ?",
+        "a": "La Boutique est la boutique entrepreneuriale d'Aegryn : nous cadrons, réalisons et accompagnons de bout en bout un nombre limité de projets signature, pour des entrepreneurs, des investisseurs et family offices, des institutions, des industriels et des marques. Découvrez-la sur /boutique. Pour nous confier un projet, écrivez-nous : un accord de confidentialité précède tout échange détaillé et la réponse est personnelle, sous deux jours ouvrés."
+      },
+      {
+        "id": "nda",
+        "cat": [
+          "certification",
+          "lifecycle"
+        ],
+        "q": "Comment fonctionne l'accord de confidentialité (NDA) ?",
+        "a": "L'accord est mutuel, entièrement numérique et ne demande aucun compte. Aegryn vous l'envoie manuellement par un lien personnel ; vous le signez en ligne et Aegryn contresigne automatiquement (signataire nommé, horodatage, empreinte du document). D'autres signataires peuvent être ajoutés. L'accès aux sections de certification et de data room exige ensuite un NDA signé et une activation manuelle par Aegryn."
       }
     ],
     "filterLifecycle": "Cycle de vie"

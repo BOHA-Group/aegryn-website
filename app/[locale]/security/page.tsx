@@ -28,7 +28,7 @@ export default async function SecurityPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Legal</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">{tN('eyebrowLegal')}</p>
           <div className="flex items-start gap-4 mb-4">
             <ShieldCheck size={32} className="text-ag-apex shrink-0 mt-1" />
             <div>
@@ -122,7 +122,7 @@ export default async function SecurityPage({ params }: Props) {
             <div className="border border-ag-apex/30 bg-ag-apex/5 p-5">
               <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-apex-ink mb-4">{t('s4NormalTitle')}</p>
               <ul className="space-y-3">
-                {[t('s4Normal1'), t('s4Normal2')].map((item, i) => (
+                {[t('s4Normal1'), t('s4Normal2'), t('s4Normal3')].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 size={14} className="text-ag-apex-ink shrink-0 mt-0.5" />
                     <span className="font-sans text-[15px] text-ag-gray leading-relaxed">{item}</span>

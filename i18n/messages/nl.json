@@ -6549,7 +6549,9 @@
     "aiUsage": "AI-beleid",
     "security": "Beveiliging",
     "faq": "FAQ",
-    "sitemap": "Sitemap"
+    "sitemap": "Sitemap",
+    "eyebrowLegal": "Aegryn · Juridisch",
+    "eyebrowHelp": "Aegryn · Help"
   },
   "aiUsage": {
     "meta": {
@@ -6576,26 +6578,29 @@
       "desc": "Gebruiksvoorwaarden voor aegryn.com: toegangsvoorwaarden, verantwoordelijkheden, intellectuele-eigendomsrechten en toepasselijk recht."
     },
     "label": "Gebruiksvoorwaarden",
-    "version": "Versie: juli 2026",
+    "version": "Versie: oktober 2026",
     "intro": "Deze Gebruiksvoorwaarden (\"Voorwaarden\") regelen de toegang tot en het gebruik van de Aegryn-website op aegryn.com en alle geassocieerde sites (de \"Site\"). Door toegang te krijgen tot de Site aanvaardt u deze Voorwaarden zonder voorbehoud. Aegryn behoudt zich het recht voor ze te allen tijde te wijzigen. Raadpleeg deze pagina regelmatig.",
     "s1Title": "Inhoud van de Site",
-    "s1": "De Site en al haar inhoud (teksten, graphics, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele-eigendomsrechten die gelden in Zwitserland en de Europese Unie. Deze inhoud is het exclusieve eigendom van Aegryn of haar partners. Elke reproductie, wijziging, distributie of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden.\n\nDe Aegryn Grade-methodologie, het C/I/F/S-evaluatieprotocol, graderapporten en alle redactionele content gepubliceerd op de Site zijn beschermde werken. Het gebruik van robots, scrapers, geautomatiseerde scripts of elke andere methode van gegevensextractie is verboden.",
+    "s1": "De Site en al haar inhoud (teksten, graphics, afbeeldingen, gegevens, code, scripts, methodologieën, beoordelingssystemen) zijn beschermd door intellectuele-eigendomsrechten die gelden in Zwitserland en de Europese Unie. Deze inhoud is het exclusieve eigendom van Aegryn of haar partners. Elke reproductie, wijziging, distributie of commercieel gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden.\n\nDe Aegryn Grade-methodologie, het CIFSO 5000-evaluatieprotocol, graderapporten en alle redactionele content gepubliceerd op de Site zijn beschermde werken. Het gebruik van robots, scrapers, geautomatiseerde scripts of elke andere methode van gegevensextractie is verboden.",
     "s2Title": "Toegestaan gebruik",
     "s2": "U mag de Site raadplegen voor legitieme persoonlijke en professionele doeleinden. Elk gebruik voor frauduleuze doeleinden, in strijd met de openbare orde of goede zeden is verboden. Aegryn behoudt zich het recht voor de toegang op te schorten of te verwijderen voor elke gebruiker die deze Voorwaarden schendt.",
     "s3Title": "Registratie en gebruikersaccounts",
     "s3": "Toegang tot de Aegryn-klantenruimte (certificeringsopvolging, documenten, opdrachten) is voorbehouden aan klanten die vooraf door Aegryn zijn geautoriseerd. U verbindt zich ertoe accurate informatie te verstrekken en deze up-to-date te houden. U bent verantwoordelijk voor de vertrouwelijkheid van uw inloggegevens en voor alle activiteit onder uw account.",
     "s4Title": "Nauwkeurigheid van de informatie",
-    "s4": "De op de Site gepubliceerde informatie wordt ter indicatie verstrekt. In geval van discrepantie tussen de inhoud van de Site en ondertekende contractuele documenten (certificeringsmandaat, transactievoorwaarden) prevaleren de laatstgenoemden.",
+    "s4": "De op de Site gepubliceerde informatie wordt ter indicatie verstrekt. In geval van discrepantie tussen de inhoud van de Site en ondertekende contractuele documenten (voorstel, mandaat, geheimhoudingsovereenkomst) prevaleren de laatstgenoemden.",
     "s5Title": "Beperking van aansprakelijkheid",
     "s5": "Aegryn garandeert niet dat de Site ononderbroken of foutloos toegankelijk zal zijn. De Site wordt geleverd \"as is\". Aegryn wijst alle aansprakelijkheid af voor directe of indirecte schade voortvloeiend uit het gebruik of het onvermogen om de Site te gebruiken.",
     "s6Title": "Externe links",
     "s6": "De Site kan links naar sites van derden bevatten. Aegryn is niet verantwoordelijk voor de inhoud van deze sites en onderschrijft ze niet impliciet.",
     "s7Title": "Intellectueel eigendom",
-    "s7": "Het Aegryn Grade-label, het Aegryn-merk, het AE-monogram, het C/I/F/S-protocol en alle door Aegryn geproduceerde methodologieën en rapporten zijn het exclusieve eigendom van Aegryn. Elk ongeoorloofd gebruik wordt vervolgd.",
+    "s7": "Het Aegryn Grade-label, het Aegryn-merk, het AE-monogram, het CIFSO 5000-protocol en alle door Aegryn geproduceerde methodologieën en rapporten zijn het exclusieve eigendom van Aegryn. Elk ongeoorloofd gebruik wordt vervolgd.",
     "s8Title": "Toepasselijk recht en jurisdictie",
     "s8": "Deze Voorwaarden worden beheerst door Zwitsers recht. Elk geschil voortvloeiend uit deze Voorwaarden wordt voorgelegd aan de exclusieve jurisdictie van de rechtbanken van het kanton waar Aegryn statutair is gevestigd. Indien een clausule ongeldig is, blijven de overige clausules van toepassing.",
     "ctaCgv": "Algemene Voorwaarden bekijken",
-    "ctaPrivacy": "Privacybeleid"
+    "ctaPrivacy": "Privacybeleid",
+    "articleLabel": "Artikel",
+    "s9Title": "Vertrouwelijke toegang",
+    "s9": "Bepaalde secties van de Site (certificering, dataroom, projectdossiers) zijn pas toegankelijk na ondertekening van een wederzijdse geheimhoudingsovereenkomst en de handmatige activering ervan door Aegryn. De overeenkomst is volledig digitaal en wordt ondertekend via een persoonlijke link, zonder gebruikersaccount. De geraadpleegde inhoud is vertrouwelijk: ze mag niet worden gekopieerd of verspreid en elke raadpleging wordt gelogd."
   },
   "privacy": {
     "meta": {
@@ -6603,7 +6608,7 @@
       "desc": "Hoe Aegryn uw persoonsgegevens verzamelt, verwerkt en beschermt. Conform Zwitserse LPD en AVG."
     },
     "label": "Privacybeleid",
-    "updated": "Laatst bijgewerkt: juli 2026",
+    "updated": "Laatst bijgewerkt: oktober 2026",
     "langSelector": "Beschikbaar in",
     "intro": "Zoals de meeste ondernemingen in de financiële en transactiesector verzamelt en verwerkt Aegryn gegevens over haar klanten, partners en andere personen die mogelijk geïnteresseerd zijn in haar diensten. Deze kennisgeving legt uit welk type gegevens wij verwerken, waarom wij ze verwerken en hoe dit u kan raken.",
     "s1Title": "Wie wij zijn",
@@ -6725,9 +6730,9 @@
         "items": [
           "Met u te communiceren, in het bijzonder om uw verzoeken te beantwoorden en uw rechten uit te oefenen.",
           "U te informeren over onze diensten en aanbiedingen.",
-          "Beheer uw account en uw toegangen (registratie, facturering, verwijzingen).",
-          "NDA-toegangsverzoeken voor assetdossiers te verwerken en ondertekeningsregistraties te bewaren.",
-          "CIFSO 5000-certificeringsopdrachten uit te voeren (verzameling en evaluatie van verkopersdossiers).",
+          "Uw account en uw toegangen beheren (registratie, facturering).",
+          "De wederzijdse geheimhoudingsovereenkomst (NDA) online laten ondertekenen en ondertekeningsregistraties (ondertekenaars, tijdstempel, vingerafdruk van het document) bewaren.",
+          "CIFSO 5000-certificeringsopdrachten uitvoeren (verzameling en evaluatie van de dossiers van de organisaties).",
           "Verkeersstatistieken te genereren die nuttig zijn voor het verbeteren van onze website.",
           "Wetten, richtlijnen en aanbevelingen van autoriteiten na te leven."
         ],
@@ -6771,7 +6776,7 @@
           ],
           [
             "Stripe",
-            "Betalingsverwerking en beheer van toegang tot Expert-services.",
+            "Betalingsverwerking (CIFSO 5000-certificering).",
             "EER/VS"
           ],
           [
@@ -6846,7 +6851,8 @@
     "s5Title": "Verdachte activiteit melden",
     "s5Step1": "Klik op geen enkele link en verstrek geen informatie",
     "s5Step2": "Meld het onmiddellijk aan contact@boha-group.com",
-    "s5Step3": "Meld het platform rechtstreeks (sociaal netwerk, registrar)"
+    "s5Step3": "Meld het platform rechtstreeks (sociaal netwerk, registrar)",
+    "s4Normal3": "Ondertekening van een geheimhoudingsovereenkomst (NDA) via een persoonlijke link die Aegryn vanaf @boha-group.com verstuurt en die naar aegryn.com verwijst"
   },
   "faq": {
     "meta": {
@@ -6865,7 +6871,7 @@
           "lifecycle"
         ],
         "q": "Wie is Aegryn en wat doen jullie?",
-        "a": "Aegryn is een Zwitsers geïntegreerd bureau dat organisaties begeleidt in elke fase van hun levenscyclus: kadering over strategie, risico's, technologie, talent en M&A, realisatie van eigen digitale assets, begeleiding van levenscycli, talentselectie en marktinformatie. Ons onafhankelijke certificeringsprotocol CIFSO 5000 beoordeelt en documenteert de reële waarde van een organisatie."
+        "a": "Aegryn is een Zwitserse ondernemersfirma, verankerd in Zwitserland en open voor de wereld. Zij kadert de beslissingen en projecten van leidinggevenden van kmo's en middelgrote bedrijven (strategie, risico's, financiën, technologie, operations, talent, projectsturing, M&A), realiseert ze samen met u, begeleidt elke levenscyclus van de onderneming, selecteert sleutelprofielen en informeert over de markt. La Boutique voert een beperkt aantal signatuurprojecten. Ons protocol CIFSO 5000 certificeert en documenteert de waarde van een organisatie."
       },
       {
         "id": "what-differentiates",
@@ -6873,7 +6879,7 @@
           "certification"
         ],
         "q": "Wat onderscheidt jullie?",
-        "a": "In tegenstelling tot adviesbureaus of agencies bouwen en exploiteren wij onze eigen digitale ecosystemen. Elk advies, elk protocol, elke aanpak die wij aanbieden komt uit echte uitvoering. Wij verkopen geen generieke modellen door. Wij delen wat werkt omdat wij het zelf gebruiken."
+        "a": "Een benoemd aanspreekpunt dat instaat voor het resultaat, een beperkt aantal opdrachten tegelijk, een antwoord binnen twee werkdagen en onafhankelijke experts die worden gecoördineerd wanneer het onderwerp dat vraagt. Wij spreken als ondernemers: een kort resultaat dat helpt beslissen of handelen, tot en met de oplevering. Zeldzaam door selectie, discreet uit principe."
       },
       {
         "id": "cert-options",
@@ -6898,7 +6904,7 @@
           "lifecycle"
         ],
         "q": "Welke soorten organisaties kunnen jullie begeleiden?",
-        "a": "Aegryn certificeert en begeleidt tech-organisaties: B2B SaaS-uitgevers, mobiele applicaties, platforms en marketplaces, AI-protocollen, digitale intellectuele-eigendomsactiva."
+        "a": "Aegryn begeleidt leidinggevenden en organisaties van elke omvang, vooral kmo's en middelgrote bedrijven, evenals investeerders, instellingen, industriëlen en merken. De CIFSO 5000-certificering richt zich op techorganisaties: B2B-SaaS-uitgevers, mobiele applicaties, platforms, AI-protocollen, digitale activa van intellectueel eigendom."
       },
       {
         "id": "data-confidentiality",
@@ -6907,7 +6913,7 @@
           "lifecycle"
         ],
         "q": "Wie heeft toegang tot de gegevens van mijn certificeringsdossier?",
-        "a": "Uw gegevens blijven strikt vertrouwelijk. Alleen het Aegryn-team en de gemandateerde auditors, allen gebonden aan geheimhoudingsovereenkomsten, krijgen toegang tot uw dossierinformatie in het kader van de beoordeling en de KYC-controles."
+        "a": "Uw gegevens blijven strikt vertrouwelijk. Een wederzijdse, volledig digitale geheimhoudingsovereenkomst gaat elke gedetailleerde uitwisseling vooraf. Alleen het Aegryn-team en de gemandateerde auditors, allen gebonden aan die overeenkomst, hebben toegang tot uw dossier; toegang tot certificerings- en dataroom-secties wordt pas geopend na ondertekening en handmatige activering door Aegryn."
       },
       {
         "id": "become-buyer",
@@ -6955,7 +6961,7 @@
           "account"
         ],
         "q": "Welke advisorydiensten bieden jullie aan?",
-        "a": "Aegryn Advisory werkt in 5 domeinen: Strategie & Innovatie (traject, businessmodel, expansie), Risicobeheer & Compliance (NIS2, DORA, GDPR, AI Act), Technologie & Soevereiniteit (architectuur, cloud, cybersecurity, technologische onafhankelijkheid), Talent & Organisatie (opvolging, governance, oprichtersafhankelijkheid), M&A & PMI (due diligence, post-acquisitie-integratie, carve-outs). Wij zijn actief in 22 industrieën in Europa. Zie /advisory voor details."
+        "a": "Aegryn Advisory omvat acht vakgebieden: Bedrijfsstrategie en Innovatie, Risicobeheer en Compliance, Financiën en Prestaties, Technologie en Soevereiniteit, Operations en Operationele excellentie, Talent en Organisatie, Project- en programmamanagement, M&A, Transacties en PMI. Wij zijn actief in meer dan 23 sectoren in Zwitserland en Europa. Zie /advisory voor meer details."
       },
       {
         "id": "build-service",
@@ -6963,7 +6969,7 @@
           "account"
         ],
         "q": "Bouwen jullie maatwerk-assets?",
-        "a": "Ja, Aegryn bouwt maatwerk softwareoplossingen voor het mkb en groepen. We stellen het kader vast, kiezen samen tussen kopen, integreren of bouwen, en sturen de realisatie tot de ingebruikname. Uitsluitend custom code (geen no-code), IP volledig overgedragen aan de klant, hosting in Zwitserland of de EU. Details op /services/build."
+        "a": "Ja, voor softwareoplossingen op maat die wij samen met experts van begin tot eind sturen: we bakenen de behoefte af, beslissen met u tussen kopen, integreren of bouwen en leiden de realisatie tot en met de oplevering. Alleen maatwerkcode (geen no-code), intellectueel eigendom volledig overgedragen aan de klant, hosting in Zwitserland of de EU. Wij voeren zelf geen industriële productie of fysieke vervaardiging uit. Details op /advisory/technology."
       },
       {
         "id": "magazine",
@@ -6979,7 +6985,7 @@
           "account"
         ],
         "q": "Hoe word je lid van het Aegryn-expertnetwerk?",
-        "a": "Het Aegryn-netwerk omvat drie kringen: domeinexperts (vijf adviesdomeinen), investeerders & institutionelen, en onafhankelijke CIFSO-auditors. Zelfstandige professionals kunnen solliciteren via de pagina Partner worden (/alliances), sectie Kandidatuur. Aegryn beoordeelt elke kandidatuur en antwoordt binnen 10 werkdagen."
+        "a": "Het Aegryn-netwerk brengt drie kringen samen: experts van de acht vakgebieden, investeerders en instellingen, en onafhankelijke CIFSO-auditors. Onafhankelijke professionals kunnen zich kandidaat stellen via de pagina Partner worden (/alliances), sectie Kandidatuur. Aegryn onderzoekt elke kandidatuur en antwoordt binnen 10 werkdagen."
       },
       {
         "id": "valuation",
@@ -6988,6 +6994,31 @@
         ],
         "q": "Bieden jullie organisatiewaarderingen aan?",
         "a": "Ja, via /valuation. Dien uw organisatie in voor een gratis indicatieve schatting. Voor een tegenwerpbare waardering met gedetailleerd rapport attesteert de CIFSO 5000-certificering (pakketten Express, Standard, Premium) de waarde op vijf dimensies."
+      },
+      {
+        "id": "marketplace",
+        "cat": [
+          "lifecycle"
+        ],
+        "q": "Is Aegryn een marktplaats of een transactieplatform?",
+        "a": "Nee. Aegryn is een ondernemersfirma: wij adviseren en realiseren. Wij exploiteren geen catalogus, geen veilingen en geen ruimte voor kopers of verkopers. De financiële uitvoering van een operatie wordt toevertrouwd aan erkende partners."
+      },
+      {
+        "id": "boutique",
+        "cat": [
+          "lifecycle"
+        ],
+        "q": "Wat is La Boutique?",
+        "a": "La Boutique is de ondernemende boutique van Aegryn: wij kaderen, realiseren en begeleiden van begin tot eind een beperkt aantal signatuurprojecten, voor ondernemers, investeerders en family offices, instellingen, industriëlen en merken. Ontdek het op /boutique. Om ons een project toe te vertrouwen, schrijft u ons: een geheimhoudingsovereenkomst gaat elke gedetailleerde uitwisseling vooraf en het antwoord is persoonlijk, binnen twee werkdagen."
+      },
+      {
+        "id": "nda",
+        "cat": [
+          "certification",
+          "lifecycle"
+        ],
+        "q": "Hoe werkt de geheimhoudingsovereenkomst (NDA)?",
+        "a": "De overeenkomst is wederzijds, volledig digitaal en vereist geen account. Aegryn stuurt ze u handmatig via een persoonlijke link; u ondertekent online en Aegryn tekent automatisch mee (benoemde ondertekenaar, tijdstempel, vingerafdruk van het document). Er kunnen extra ondertekenaars worden toegevoegd. Toegang tot certificerings- en dataroom-secties vereist daarna een ondertekende NDA en handmatige activering door Aegryn."
       }
     ],
     "filterLifecycle": "Levenscyclus"

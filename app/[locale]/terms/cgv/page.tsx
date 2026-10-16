@@ -27,7 +27,7 @@ export default async function TermsCgvPage({ params }: Props) {
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">
-            Aegryn — Legal
+            {tN('eyebrowLegal')}
           </p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
@@ -63,7 +63,7 @@ export default async function TermsCgvPage({ params }: Props) {
         {cgv.sections.map((section, i) => (
           <section key={i} className="border-t border-ag-border pt-8">
             <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-6">
-              {roman(i)} — {section.title}
+              {roman(i)}. {section.title}
             </h2>
             {section.defs && (
               <dl className="space-y-4">

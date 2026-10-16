@@ -25,7 +25,7 @@ export default async function PrivacyPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Legal</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">{tN('eyebrowLegal')}</p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}

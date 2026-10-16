@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SECTIONS = [
-  's1','s2','s3','s4','s5','s6','s7','s8',
+  's1','s2','s3','s4','s5','s6','s7','s9','s8',
 ] as const
 
 export default async function TermsUsePage({ params }: Props) {
@@ -29,7 +29,7 @@ export default async function TermsUsePage({ params }: Props) {
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">
-            Aegryn — Legal
+            {tN('eyebrowLegal')}
           </p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
@@ -70,7 +70,7 @@ export default async function TermsUsePage({ params }: Props) {
           {SECTIONS.map((s, i) => (
             <section key={s} className="border-t border-ag-border pt-8">
               <h2 className="font-sans font-semibold text-[13px] uppercase tracking-[0.18em] text-ag-black mb-4">
-                Article {i + 1} — {t(`${s}Title`)}
+                {t('articleLabel')} {i + 1}. {t(`${s}Title`)}
               </h2>
               <div className="font-sans text-[15px] text-ag-gray leading-relaxed whitespace-pre-line">
                 {t(s)}

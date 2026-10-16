@@ -25,7 +25,7 @@ export default async function AiUsagePage({ params }: Props) {
       {/* Hero */}
       <section className="bg-ag-navy pt-24 pb-14 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">Aegryn — Legal</p>
+          <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-5">{tL('eyebrowLegal')}</p>
           <WaveReveal delay={0.1}><h1
             className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] mb-4"
             style={{ fontSize: 'clamp(28px,3.5vw,52px)' }}
@@ -56,7 +56,7 @@ export default async function AiUsagePage({ params }: Props) {
         <ScrollReveal className="max-w-4xl mx-auto space-y-12">
 
           <div className="rounded-lg border border-ag-apex/20 bg-ag-apex/5 px-6 py-4">
-            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-1">EU AI Act — Article 50</p>
+            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex mb-1">EU AI Act · Art. 50</p>
             <p className="font-sans text-[13px] text-ag-gray leading-relaxed">{t('version')}</p>
           </div>
 
