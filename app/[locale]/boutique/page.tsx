@@ -112,7 +112,7 @@ export default async function BoutiquePage({ params }: Props) {
         </div>
       </section>
 
-      <ScrollZoomVideo src="/videos/boutique/statue-of-liberty-full.mp4" srcMobile="/videos/boutique/statue-of-liberty-full-m.mp4" caption={br(BOUTIQUE.bandCaption[lang])} />
+      <ScrollZoomVideo src="/videos/boutique/statue-of-liberty-full.mp4" srcMobile="/videos/boutique/statue-of-liberty-full-m.mp4" objectPosition="38% 50%" caption={br(BOUTIQUE.bandCaption[lang])} />
 
       {/* La méthode */}
       <section className="bg-white py-28 md:py-36">

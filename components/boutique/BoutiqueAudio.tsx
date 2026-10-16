@@ -40,6 +40,13 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
   const rampTo = useCallback((target: number, done?: () => void) => {
     const a = audioRef.current; if (!a) return
     if (fade.current) clearInterval(fade.current)
+    /* iOS fige a.volume (volume systeme) : le fondu n'atteindrait jamais sa cible,
+       done() ne serait jamais appele et la musique ne s'arreterait pas. */
+    const probe = a.volume
+    a.volume = probe > 0.5 ? 0.4 : 0.6
+    const canFade = a.volume !== probe
+    a.volume = probe
+    if (!canFade) { done?.(); return }
     fade.current = setInterval(() => {
       const step = target > a.volume ? 0.03 : -0.05
       const next = Math.min(1, Math.max(0, a.volume + step))
@@ -71,8 +78,26 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
       if (armed && !userCut.current && await start()) cleanup()
     }
     const cleanup = () => { armed = false; ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.removeEventListener(e, onGesture)) }
+    /* Quitter l'ecran (changement d'app, onglet ferme, navigateur quitte) coupe la musique ;
+       un nouveau clic sur le lecteur la relance. Pas de fondu : la page masquee gele les timers. */
+    const cut = () => {
+      if (!audioRef.current || audioRef.current.paused) return
+      userCut.current = true
+      if (fade.current) clearInterval(fade.current)
+      audioRef.current.pause()
+      setPlaying(false)
+    }
+    const onVis = () => { if (document.hidden) cut() }
+    document.addEventListener('visibilitychange', onVis)
+    window.addEventListener('pagehide', cut)
     start().then(ok => { if (!ok) ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.addEventListener(e, onGesture, { passive: true })) })
-    return () => { cleanup(); if (fade.current) clearInterval(fade.current); audioRef.current?.pause() }
+    return () => {
+      cleanup()
+      document.removeEventListener('visibilitychange', onVis)
+      window.removeEventListener('pagehide', cut)
+      if (fade.current) clearInterval(fade.current)
+      audioRef.current?.pause()
+    }
   }, [start])
 
   const getTime = useCallback(() => {
@@ -95,7 +120,7 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
         aria-pressed={playing}
         aria-label={playing ? txt.off : txt.on}
         title="Beyond the Clicks"
-        className="fixed bottom-14 right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
+        className="fixed bottom-[60px] right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
       >
         <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
           {[0.9, 0.5, 1, 0.65].map((h, i) => (

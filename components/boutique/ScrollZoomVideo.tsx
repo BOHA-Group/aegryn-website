@@ -8,7 +8,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from '@/lib/gsap'
 
-export function ScrollZoomVideo({ src, srcMobile, caption, className = '' }: { src: string; srcMobile?: string; caption?: string; className?: string }) {
+export function ScrollZoomVideo({ src, srcMobile, caption, className = '', objectPosition }: { src: string; srcMobile?: string; caption?: string; className?: string; objectPosition?: string }) {
   const box = useRef<HTMLDivElement>(null)
   const media = useRef<HTMLDivElement>(null)
   const video = useRef<HTMLVideoElement>(null)
@@ -37,7 +37,7 @@ export function ScrollZoomVideo({ src, srcMobile, caption, className = '' }: { s
   return (
     <div ref={box} className={`relative h-[70vh] min-h-[420px] overflow-hidden bg-ag-navy ${className}`}>
       <div ref={media} className="absolute inset-0 will-change-transform">
-        {source && <video ref={video} className="h-full w-full object-cover" src={source} muted loop playsInline preload="auto" aria-hidden="true" />}
+        {source && <video ref={video} className="h-full w-full object-cover" style={{ objectPosition }} src={source} muted loop playsInline preload="auto" aria-hidden="true" />}
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-ag-navy/70 via-transparent to-ag-navy/20" />
       {caption && (

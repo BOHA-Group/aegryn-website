@@ -10,9 +10,14 @@ import { useEffect, useRef, useState } from 'react'
 import { BEAT_SECONDS, BOUTIQUE_TEMPO, HERO_CLIPS, TOTAL_BEATS, clipSrc } from '@/content/boutique/clips'
 import { useBoutiqueClock } from './BoutiqueAudio'
 
-/* Recadrage par clip en `object-cover` : la statue de la Liberte est dans le tiers
-   gauche du plan ; en portrait, le centrage par defaut la sort du cadre. */
-const CLIP_POSITION: Record<string, string> = { '09-statue-of-liberty': '22% 50%' }
+/* Recadrage par clip en `object-cover` : en portrait, le centrage par defaut sort les
+   sujets du cadre (statue dans le tiers gauche, voitures et sportive a droite). */
+const CLIP_POSITION: Record<string, string> = {
+  '09-statue-of-liberty': '33% 50%',
+  '16-gt-race':           '62% 50%',
+  '20-stretching':        '55% 50%',
+  '21-leg-exercises':     '57% 50%',
+}
 
 export function HeroPatchwork() {
   const { getTime } = useBoutiqueClock()
