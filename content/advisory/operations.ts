@@ -11,7 +11,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Opératrice devant une chaîne de production, pilotage du flux industriel',
+    imageAlt: 'Convoyeur aérien à galets dans une usine, mécanique du flux',
     meta: {
       title: 'Opérations et Excellence opérationnelle : coûts, délais, qualité, approvisionnement | Aegryn',
       description: 'Coûts, délais, qualité, capacité et fournisseurs : Aegryn cartographie votre flux de la commande à l’encaissement, tranche où agir en premier, puis conduit la mise en œuvre avec vos équipes. Suisse et Europe.',
@@ -95,7 +95,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Operator in front of a production line, industrial flow steering',
+    imageAlt: 'Overhead roller conveyor in a factory, flow mechanics',
     meta: {
       title: 'Operations and Operational Excellence: costs, lead times, quality, supply | Aegryn',
       description: 'Costs, lead times, quality, capacity and suppliers: Aegryn maps your flow from order to cash, decides where to act first, then leads implementation with your teams. Switzerland and Europe.',
@@ -179,7 +179,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Operatorin vor einer Produktionslinie, Steuerung des industriellen Flusses',
+    imageAlt: 'Hängeförderer mit Rollen in einer Fabrik, Flussmechanik',
     meta: {
       title: 'Operations und operative Exzellenz: Kosten, Fristen, Qualität, Beschaffung | Aegryn',
       description: 'Kosten, Lieferfristen, Qualität, Kapazität und Lieferanten: Aegryn kartiert Ihren Fluss vom Auftrag bis zur Zahlung, entscheidet, wo zuerst zu handeln ist, und führt die Umsetzung mit Ihren Teams. Schweiz und Europa.',
@@ -263,7 +263,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Operaria ante una cadena de producción, control del flujo industrial',
+    imageAlt: 'Transportador aéreo de rodillos en una fábrica, mecánica del flujo',
     meta: {
       title: 'Operaciones y Excelencia operativa: costes, plazos, calidad, suministro | Aegryn',
       description: 'Costes, plazos, calidad, capacidad y proveedores: Aegryn cartografía su flujo del pedido al cobro, decide dónde actuar primero y dirige la puesta en práctica con sus equipos. Suiza y Europa.',
@@ -347,7 +347,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Operatrice davanti a una linea di produzione, gestione del flusso industriale',
+    imageAlt: 'Trasportatore aereo a rulli in una fabbrica, meccanica del flusso',
     meta: {
       title: 'Operazioni ed Eccellenza operativa: costi, tempi, qualità, approvvigionamento | Aegryn',
       description: 'Costi, tempi di consegna, qualità, capacità e fornitori: Aegryn mappa il vostro flusso dall’ordine all’incasso, decide dove agire prima e guida l’attuazione con i vostri team. Svizzera ed Europa.',
@@ -431,7 +431,7 @@ export const ADVISORY_OPERATIONS: Record<string, AdvisoryPageContent> = {
     key: 'operationsExcellence',
     path: '/advisory/operations-excellence',
     image: '/images/advisory/operations.webp',
-    imageAlt: 'Operator voor een productielijn, sturing van de industriële stroom',
+    imageAlt: 'Hangende rollenbaan in een fabriek, stroommechanica',
     meta: {
       title: 'Operations en Operationele excellentie: kosten, doorlooptijden, kwaliteit, inkoop | Aegryn',
       description: 'Kosten, doorlooptijden, kwaliteit, capaciteit en leveranciers: Aegryn brengt uw stroom van bestelling tot betaling in kaart, beslist waar eerst te handelen en leidt de uitvoering met uw teams. Zwitserland en Europa.',

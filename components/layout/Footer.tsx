@@ -240,6 +240,11 @@ export default function Footer() {
                   {t('col2Subblink')}
                 </a>
               </li>
+              <li>
+                <Link href="/assets" className="text-sm text-white/70 hover:text-white transition-colors">
+                  {tNav('craftBuildAssets')}
+                </Link>
+              </li>
             </ul>
           </div>
 
