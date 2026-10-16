@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Partner werden | Aegryn",
-      "desc": "Werden Sie Teil des Aegryn-Netzwerks: Experten der acht Disziplinen der Firma, Umsetzungspartner für die Signature-Projekte von La Boutique, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
+      "desc": "Werden Sie Teil des Aegryn-Netzwerks: Experten der acht Disziplinen der Firma, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
     "hero": {
       "label": "Partner werden",
       "title": "Unser Netzwerk.\nUnsere Stärke.",
-      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: die acht Disziplinen der Firma, die Umsetzungspartner der Signature-Projekte von La Boutique, einen Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
+      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: die acht Disziplinen der Firma, einen Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
       "imageAlt": "Weißer Leuchtturm am Meer, Luftaufnahme"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Fachexperten",
-          "desc": "Die acht Disziplinen der Firma und die Umsetzungsaktivitäten von La Boutique, jeweils getragen von Experten des Netzwerks.",
+          "desc": "Die acht Disziplinen der Firma, jeweils getragen von Experten des Netzwerks.",
           "cta": "Disziplinen entdecken"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "FACHEXPERTEN",
-      "title": "Acht Beratungsdisziplinen und La Boutique.",
+      "title": "Acht Beratungsdisziplinen.",
       "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
       "profilesLabel": "Gesuchte Profile",
       "items": {
@@ -4718,20 +4718,6 @@
             "Gesellschafterverträge und Governance nach der Transaktion"
           ],
           "note": "Aegryn berät und bereitet vor. Die Ausführung der Transaktionen wird den Investmentbanken, M&A-Boutiquen und zugelassenen Anwälten des Netzwerks anvertraut."
-        },
-        "boutique": {
-          "title": "Signature-Projekte (La Boutique)",
-          "profiles": "Designer, Produktingenieure, Industrie- und Fertigungspartner, Vertriebsverantwortliche, Juristen für geistiges Eigentum, Markenexperten.",
-          "expertises": [
-            "Marken- und Erlebnisdesign",
-            "Industrie- und Produktdesign",
-            "Ingenieurwesen, F&E und Labore",
-            "Fertigung und Industrialisierung",
-            "Einkauf, Logistik und Supply Chain",
-            "Vertrieb und Markteinführung",
-            "Geistiges Eigentum und Produktregulierung",
-            "Kommunikation, Inhalte und Events"
-          ]
         },
         "finance": {
           "title": "Finanzen und Performance",

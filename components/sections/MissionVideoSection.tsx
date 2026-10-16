@@ -73,7 +73,7 @@ export function MissionVideoSection() {
 
       {/* Couche 2 : contenu en superposition */}
       <div ref={contentRef} className="relative z-10 lg:absolute lg:inset-0">
-        <div className="mx-auto flex max-w-[1480px] flex-col justify-center px-6 py-16 md:px-10 lg:h-full lg:pb-4 lg:pt-20">
+        <div className="mx-auto flex max-w-7xl flex-col justify-center px-6 py-16 md:px-12 lg:h-full lg:justify-start lg:pb-4 lg:pt-[26vh]">
 
           <div className="mv-reveal flex flex-col items-start gap-2 py-4 md:flex-row md:items-center md:justify-between">
             <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tM('label')}</p>
@@ -82,7 +82,7 @@ export function MissionVideoSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
             {missionItems.map((item, i) => (
-              <div key={item.title} className="mv-reveal py-[clamp(14px,4.5vh,48px)] first:pl-0 last:pr-0 md:px-4 xl:px-5" style={{ textShadow: '0 1px 14px rgba(5,15,35,0.45)' }}>
+              <div key={item.title} className="mv-reveal py-[clamp(14px,4.5vh,48px)] first:pl-0 last:pr-0 md:px-4 xl:px-4" style={{ textShadow: '0 1px 14px rgba(5,15,35,0.45)' }}>
                 <p className="mb-[clamp(6px,2.6vh,32px)] font-sans text-[10px] font-semibold tracking-[0.2em] text-ag-apex">{String(i + 1).padStart(2, '0')}</p>
                 <h3
                   className="mb-[clamp(6px,1.8vh,20px)] pb-[0.15em] font-sans font-bold leading-[1.2] tracking-[-0.02em] text-white"

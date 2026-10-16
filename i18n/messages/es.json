@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Hacerse socio | Aegryn",
-      "desc": "Únase a la red Aegryn: expertos de los ocho oficios de la firma, socios de realización de los proyectos insignia de La Boutique, inversores e instituciones, auditores independientes de la certificación CIFSO 5000."
+      "desc": "Únase a la red Aegryn: expertos de los ocho oficios de la firma, inversores e instituciones, auditores independientes de la certificación CIFSO 5000."
     },
     "hero": {
       "label": "Hacerse socio",
       "title": "Nuestra red.\nNuestra fuerza.",
-      "desc": "Aegryn moviliza una red de expertos seleccionados uno a uno: los ocho oficios de la firma, los socios de realización de los proyectos insignia de La Boutique, un círculo de inversores e institucionales y auditores independientes de la certificación CIFSO 5000.",
+      "desc": "Aegryn moviliza una red de expertos seleccionados uno a uno: los ocho oficios de la firma, un círculo de inversores e institucionales y auditores independientes de la certificación CIFSO 5000.",
       "imageAlt": "Faro blanco junto al mar, vista aérea"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Expertos de oficio",
-          "desc": "Ocho oficios de la firma y las actividades de realización de La Boutique, cada uno respaldado por expertos de la red.",
+          "desc": "Los ocho oficios de la firma, cada uno respaldado por expertos de la red.",
           "cta": "Explorar las profesiones"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "EXPERTOS DE OFICIO",
-      "title": "Ocho oficios de asesoramiento, y La Boutique.",
+      "title": "Ocho oficios de asesoramiento.",
       "desc": "Cada profesión está impulsada por expertos de la red, movilizados según la necesidad de la misión.",
       "profilesLabel": "Perfiles buscados",
       "items": {
@@ -4718,20 +4718,6 @@
             "Pactos de socios y gobernanza post-operación"
           ],
           "note": "Aegryn asesora y prepara. La ejecución de las operaciones se confía a bancos de negocios, boutiques de M&A y abogados acreditados de la red."
-        },
-        "boutique": {
-          "title": "Proyectos insignia (La Boutique)",
-          "profiles": "Diseñadores, ingenieros de producto, industriales y fabricantes, responsables de distribución, juristas de propiedad intelectual, expertos de marca.",
-          "expertises": [
-            "Diseño de marca y de experiencia",
-            "Diseño industrial y de producto",
-            "Ingeniería, I+D y laboratorios",
-            "Fabricación e industrialización",
-            "Compras, logística y cadena de suministro",
-            "Distribución y salida al mercado",
-            "Propiedad intelectual y regulación de producto",
-            "Comunicación, contenidos y eventos"
-          ]
         },
         "finance": {
           "title": "Finanzas y Rendimiento",

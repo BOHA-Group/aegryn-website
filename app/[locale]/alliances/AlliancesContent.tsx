@@ -9,7 +9,7 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 
-const METIER_KEYS = ['strategie', 'risques', 'finance', 'technologie', 'operations', 'talent', 'program', 'ma', 'boutique'] as const
+const METIER_KEYS = ['strategie', 'risques', 'finance', 'technologie', 'operations', 'talent', 'program', 'ma'] as const
 type MetierKey = typeof METIER_KEYS[number]
 
 const DIMENSION_KEYS = ['C', 'I', 'F', 'S', 'O'] as const
@@ -126,34 +126,34 @@ export default function AlliancesContent() {
 
           {/* ── Sidebar flottante : entièrement visible, suit le scroll de la page ── */}
           <aside className="hidden lg:block shrink-0 w-64 lg:-ml-12 sticky top-20 self-start">
-            <nav data-lenis-prevent className="flex max-h-[calc(100vh-6rem)] flex-col gap-0 overflow-y-auto px-3 py-6 bg-ag-off-white border border-ag-border rounded-2xl">
+            <nav data-lenis-prevent className="flex max-h-[calc(100vh-6rem)] flex-col gap-0 overflow-y-auto px-3 py-3 bg-ag-off-white border border-ag-border rounded-2xl">
               {sideGroups.map((g, gi) => (
                 <div key={g.id}>
-                  {gi > 0 && <div className="mx-5 my-4" />}
+                  {gi > 0 && <div className="mx-5 my-2" />}
                   <button
                     onClick={() => scrollToId(g.id)}
-                    className="w-full text-left px-5 pt-2 pb-1.5 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-black hover:text-ag-apex-ink transition-colors"
+                    className="w-full text-left px-5 pt-1 pb-0.5 font-sans font-semibold text-[11px] uppercase tracking-[0.12em] leading-tight text-ag-black hover:text-ag-apex-ink transition-colors"
                   >
                     {g.title}
                   </button>
-                  <p className="px-5 pb-2 font-sans text-[12px] text-ag-gray-light leading-snug">
+                  <p className="px-5 pb-1 font-sans text-[11px] text-ag-gray-light leading-tight">
                     {g.desc}
                   </p>
                   {g.subs?.map(key => (
                     <button
                       key={key}
                       onClick={() => scrollToId(key)}
-                      className="w-full text-left pl-8 pr-5 py-1.5 font-sans text-[13px] text-ag-gray-light hover:text-ag-black transition-colors"
+                      className="w-full text-left pl-8 pr-4 py-[3px] font-sans text-[12px] leading-tight text-ag-gray-light hover:text-ag-black transition-colors"
                     >
                       {t(`metiers.items.${key}.title`)}
                     </button>
                   ))}
                 </div>
               ))}
-              <div className="mx-5 mt-4" />
+              <div className="mx-5 mt-2" />
               <button
                 onClick={() => scrollToId('candidature')}
-                className="w-full text-left px-5 pt-3 font-sans font-semibold text-[12px] uppercase tracking-[0.14em] text-ag-apex-ink hover:text-ag-black transition-colors"
+                className="w-full text-left px-5 pt-1 pb-1 font-sans font-semibold text-[11px] uppercase tracking-[0.12em] text-ag-apex-ink hover:text-ag-black transition-colors"
               >
                 {t('side.apply')}
               </button>
@@ -254,7 +254,7 @@ export default function AlliancesContent() {
               <div className="flex flex-col gap-16">
                 {METIER_KEYS.map((key) => (
                   <div key={key} id={key} className="scroll-mt-24">
-                    <h3 className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.01em] leading-tight mb-3">
+                    <h3 className="font-sans font-normal text-ag-black text-[20px] tracking-[-0.01em] leading-tight mb-3">
                       {t(`metiers.items.${key}.title`)}
                     </h3>
                     <p className="font-sans text-[15px] text-ag-gray leading-relaxed mb-8 max-w-xl">

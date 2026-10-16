@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Partner worden | Aegryn",
-      "desc": "Sluit u aan bij het Aegryn-netwerk: experts uit de acht vakgebieden van het bureau, uitvoeringspartners voor de signatuurprojecten van La Boutique, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
+      "desc": "Sluit u aan bij het Aegryn-netwerk: experts uit de acht vakgebieden van het bureau, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
     },
     "hero": {
       "label": "Partner worden",
       "title": "Ons netwerk.\nOnze kracht.",
-      "desc": "Aegryn schakelt een netwerk van één voor één geselecteerde experts in: de acht vakgebieden van het bureau, de uitvoeringspartners van de signatuurprojecten van La Boutique, een kring van investeerders en instellingen en onafhankelijke auditors van de CIFSO 5000-certificering.",
+      "desc": "Aegryn schakelt een netwerk van één voor één geselecteerde experts in: de acht vakgebieden van het bureau, een kring van investeerders en instellingen en onafhankelijke auditors van de CIFSO 5000-certificering.",
       "imageAlt": "Witte vuurtoren aan zee, luchtfoto"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Vakexperts",
-          "desc": "De acht vakgebieden van het bureau en de uitvoeringsactiviteiten van La Boutique, elk gedragen door experts uit het netwerk.",
+          "desc": "De acht vakgebieden van het bureau, elk gedragen door experts uit het netwerk.",
           "cta": "De domeinen verkennen"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "VAKEXPERTS",
-      "title": "Acht adviesvakgebieden, en La Boutique.",
+      "title": "Acht adviesvakgebieden.",
       "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
       "profilesLabel": "Gezochte profielen",
       "items": {
@@ -4718,20 +4718,6 @@
             "Aandeelhoudersakkoorden en governance na de transactie"
           ],
           "note": "Aegryn adviseert en bereidt voor. De uitvoering van transacties wordt toevertrouwd aan zakenbanken, M&A-boutiques en beëdigde advocaten van het netwerk."
-        },
-        "boutique": {
-          "title": "Signatuurprojecten (La Boutique)",
-          "profiles": "Ontwerpers, productingenieurs, industriëlen en producenten, verantwoordelijken voor distributie, juristen intellectueel eigendom, merkexperts.",
-          "expertises": [
-            "Merk- en ervaringsontwerp",
-            "Industrieel en productontwerp",
-            "Engineering, R&D en laboratoria",
-            "Productie en industrialisatie",
-            "Inkoop, logistiek en supply chain",
-            "Distributie en marktintroductie",
-            "Intellectueel eigendom en productregelgeving",
-            "Communicatie, content en evenementen"
-          ]
         },
         "finance": {
           "title": "Financiën en Prestaties",

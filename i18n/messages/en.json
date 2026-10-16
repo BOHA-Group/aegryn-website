@@ -4618,12 +4618,12 @@
   "alliances": {
     "meta": {
       "title": "Become a partner | Aegryn",
-      "desc": "Join the Aegryn network: experts across the firm's eight disciplines, delivery partners for La Boutique's signature projects, investors and institutions, independent auditors of CIFSO 5000 certification."
+      "desc": "Join the Aegryn network: experts across the firm's eight disciplines, investors and institutions, independent auditors of CIFSO 5000 certification."
     },
     "hero": {
       "label": "Become a partner",
       "title": "Our network.\nOur strength.",
-      "desc": "Aegryn calls on a network of experts selected one by one: the firm's eight disciplines, the delivery partners of La Boutique's signature projects, a circle of investors and institutions, and independent auditors of CIFSO 5000 certification.",
+      "desc": "Aegryn calls on a network of experts selected one by one: the firm's eight disciplines, a circle of investors and institutions, and independent auditors of CIFSO 5000 certification.",
       "imageAlt": "White lighthouse by the sea, aerial view"
     },
     "side": {
@@ -4642,7 +4642,7 @@
       "cards": [
         {
           "title": "Domain experts",
-          "desc": "The firm's eight disciplines and La Boutique's delivery activities, each backed by network experts.",
+          "desc": "The firm's eight disciplines, each backed by network experts.",
           "cta": "Explore the professions"
         },
         {
@@ -4659,7 +4659,7 @@
     },
     "metiers": {
       "label": "DOMAIN EXPERTS",
-      "title": "Eight advisory disciplines, and La Boutique.",
+      "title": "Eight advisory disciplines.",
       "desc": "Each profession is carried by experts of the network, deployed according to the needs of each engagement.",
       "profilesLabel": "Profiles sought",
       "items": {
@@ -4733,20 +4733,6 @@
             "Shareholder agreements and post-deal governance"
           ],
           "note": "Aegryn advises and prepares. Deal execution is entrusted to investment banks, M&A boutiques and accredited lawyers in the network."
-        },
-        "boutique": {
-          "title": "Signature projects (La Boutique)",
-          "profiles": "Designers, product engineers, manufacturers and industrial partners, distribution leads, intellectual property lawyers, brand experts.",
-          "expertises": [
-            "Brand and experience design",
-            "Industrial and product design",
-            "Engineering, R&D and laboratories",
-            "Manufacturing and industrialisation",
-            "Procurement, logistics and supply chain",
-            "Distribution and go-to-market",
-            "Intellectual property and product regulation",
-            "Communication, content and events"
-          ]
         },
         "finance": {
           "title": "Finance and Performance",
