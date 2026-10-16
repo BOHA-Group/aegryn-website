@@ -16,7 +16,7 @@ type Project = { id: string; slug: string; image?: string }
  * traits rouges se dessinent en escalier d'un projet au suivant. Chaque fiche mène à la page du projet.
  * Mouvement réduit : grille à défilement horizontal natif.
  */
-export function ProjectsScroller({ title, allLabel, projects }: { title: string; allLabel: string; projects: Project[] }) {
+export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title: React.ReactNode; titleSr?: string; allLabel: string; projects: Project[] }) {
   const tItems = useTranslations('assets.items')
   const sectionRef = useRef<HTMLElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
@@ -98,9 +98,8 @@ export function ProjectsScroller({ title, allLabel, projects }: { title: string;
         }
         tl.eventCallback('onUpdate', drawAll)
 
-        /* Au repos : premier projet centré sous le titre. Au scroll : le titre s'efface, la grille défile. */
+        /* Au repos : premier projet centré sous le titre. Au scroll : la grille défile, le titre reste. */
         tl.set(track, { x: shift }, 0)
-        tl.to(head, { autoAlpha: 0, y: -24, duration: 0.5, ease: 'none' }, 0)
         tl.to(track, { x: () => -dist(), duration: 5, ease: 'none' }, 0.5)
         drawAll()
       })
@@ -114,7 +113,7 @@ export function ProjectsScroller({ title, allLabel, projects }: { title: string;
   return (
     <section ref={sectionRef} id="projets" className="mw-section mw-section--titled">
       <div ref={headRef} className="mw-head">
-        <h2 className="mw-head-title">{title}</h2>
+        <h2 className="mw-head-title" aria-label={titleSr}>{title}</h2>
         <Link href={'/boutique/projets' as never} className="mw-head-link">{allLabel} →</Link>
       </div>
 

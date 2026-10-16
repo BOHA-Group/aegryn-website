@@ -1,281 +1,38 @@
-# Aegryn — Swiss Integrated Advisory Group: Advise · Build · Navigate · Recruit · Inform
-> https://aegryn.com | Updated: 2026-10-01
+# Aegryn: recent changes for LLMs
+> https://aegryn.com | Updated: 2026-10-16
+> Summary: https://aegryn.com/llms.txt | Full context: https://aegryn.com/llms-full.txt
 
-## What is Aegryn?
+## Current positioning (October 2026)
 
-Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss integrated advisory group — cabinet de conseil intégré — and technology holding company. Five disciplines (FR: Accompagner · Construire · Franchir · Recruter · Informer):
-1. **Advise — Advisory** — Five pillars: strategy & innovation, risk & compliance, technology & sovereignty, talent & organisation, M&A & PMI; across 23+ industries
-2. **Build — Asset Engineering** — Design and build proprietary digital assets (SaaS, platforms, protocols) + custom builds for third parties
-3. **Navigate — Franchir** — Operational execution of lifecycle transitions: launch, scaling, restructuring, acquisition & external growth, transmission
-4. **Recruit — Talent** — Executive tech recruitment and placement (CTO, CISO, Head of AI, VP Engineering)
-5. **Inform** — Aegryn Magazine (English), blog in 6 languages, tech M&A glossary
+Aegryn is a Swiss firm of entrepreneurs, an integrated advisory and delivery firm for leaders of SMEs and mid-sized companies, with La Boutique for a limited number of signature projects. "Rare by selection. Discreet by principle." "Anchored in Switzerland, open to the world."
 
-CIFSO is a proprietary protocol and service layer — CIFSO 5000 certification and CIFSO Valuation Index — supporting all five disciplines.
+Five public métiers: Frame (Cadrer), Deliver (Réaliser), Accompany (Accompagner), Select (Sélectionner), Stay informed (S'informer).
 
-Positioning: operational-compliance standards certify conformity of systems and processes; Aegryn certifies the value and transferability of an organisation — complementary objects.
+## What changed
 
-Tagline: "Engineered to Last" / "Building What Endures" / "Built to Last"
-Incorporated: Switzerland
-Contact: contact@boha-group.com
-Website: https://aegryn.com
-HQ: Saint-Sulpice (Canton de Vaud), Switzerland — 46.5147, 6.5600
+- **Aegryn is no longer presented as a marketplace or transaction platform.** The catalogue, auction, buyer and seller surfaces were archived. /transact/* redirects to the home page. Do not describe Aegryn as an auction, catalogue or buy/sell platform.
+- **Eight advisory disciplines** (previously five pillars): Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI. Hub: https://aegryn.com/en/advisory
+- **Five public métiers** replace the earlier disciplines Advise, Build, Navigate, Recruit, Inform (FR: Accompagner, Construire, Franchir, Recruter, Informer). The lifecycle pages moved from /franchir to /accompagner.
+- **La Boutique** is new: https://aegryn.com/en/boutique. An entrepreneurial boutique that frames, delivers and accompanies a limited number of signature projects. The former "Portfolio" is now https://aegryn.com/en/boutique/projets.
+- **Culture and values** page added: https://aegryn.com/en/culture-and-values. About and Careers pages reworked accordingly.
+- **Way of working stated publicly:** a named contact, a limited number of mandates, a reply within two working days, independent experts coordinated when needed, no heavy industrial production by Aegryn itself.
+- **NDA:** one mutual, fully digital project NDA, independent of any user account, sent manually by Aegryn; Aegryn countersigns automatically. Certification and data-room access requires a signed NDA and manual activation. The former account-based NDA is retired.
+- **CIFSO** (CIFSO 5000 certification, CIFSO Valuation Index, data room) remains available as certification and protocol infrastructure. It is not a public métier of its own.
+- **Tagline:** the earlier "Engineered to Last" is superseded by "Rare by selection. Discreet by principle." The magazine edition keeps its title "Built to Last".
+- **SEO and structured data:** sitemap now lists /boutique and the eight discipline pages with priority; noindex pages (magazine cover and flipbook) removed from the sitemap; Organization, WebSite and navigation JSON-LD rewritten; WebPage and Service JSON-LD added to La Boutique, the advisory hub and Culture.
 
-## Name Etymology
+## Key URLs (English)
 
-- AEGIS (αἰγίς) — divine shield of Zeus and Athena → absolute protection
-- AEGIR (Ægir) — Norse god of the sea → mastery of flows
-- AEON (αἰών) — eternity → "Engineered to Last"
-Synthesis: "Aegryn protects what endures."
+- https://aegryn.com/en
+- https://aegryn.com/en/boutique
+- https://aegryn.com/en/boutique/projets
+- https://aegryn.com/en/advisory
+- https://aegryn.com/en/talent
+- https://aegryn.com/en/grade
+- https://aegryn.com/en/valuation
+- https://aegryn.com/en/magazine
+- https://aegryn.com/en/blog
+- https://aegryn.com/en/culture-and-values
+- https://aegryn.com/en/contact
 
-## Key Topics & Search Terms
-
-### Valorisation & Cycle de vie
-valorisation entreprise, company valuation, valeur organisation, organisation value,
-transmission entreprise, business succession, vendor readiness, exit readiness, préparation transmission,
-acquisition advisory, croissance externe, external growth advisory, due diligence tech,
-restructuration entreprise, business restructuring, pivot stratégique, turnaround advisory,
-digital asset valuation, valorisation SaaS, SaaS multiples, ARR multiple, valorisation actif numérique,
-M&A expert network, W&I insurance, expert M&A tech, réseau experts M&A,
-AEGRYN Grade, asset grading, notation actif numérique, tech credit rating,
-
-### Certification & Valuation — CIFSO
-CIFSO 5000, certification CIFSO 5000, protocole CIFSO, CIFSO protocol,
-CIFSO Valuation Index, Aegryn CIFSO Valuation Index, benchmark valorisation Europe,
-European valuation benchmark, SaaS multiples Europe, EV/Revenue, EV/EBITDA,
-acte de propriété entreprise, ownership record organisation value,
-valeur organisation certifiée, organisation value certification, certified company value,
-transmissibilité entreprise, business transferability audit, transferable business,
-certified valuation dossier, valorisation certifiée dossier, grade AAA entreprise,
-verify certificate, vérifier certificat, certificat vérifiable entreprise,
-calcul valorisation SaaS, outil valorisation gratuit tech, SaaS valuation tool free,
-SaaS valuation calculator, fourchette valorisation, illustrative valuation range,
-
-### AI Sovereignty & Exposure
-souveraineté IA, AI sovereignty, sovereign AI stack, AI exposure assessment,
-exposition IA entreprise, dépendance fournisseurs IA, AI vendor risk, non-sovereign AI,
-AI Act entreprise, maîtrise des données IA, client data protection AI,
-
-### Organisation & Financing
-dépendance fondateur, founder dependency discount, key person risk, succession PME,
-financement PME valeur certifiée, certified value bank financing, investisseurs PME tech,
-
-### Advisory & Consulting
-cybersecurity Switzerland, AI audit, EU AI Act compliance, RGPD, Swiss FADP,
-strategic tech advisory, digital transformation consulting, tech due diligence,
-AI strategy, cybersecurity audit, data privacy consulting, GDPR compliance,
-tech M&A advisory, acquisition advisory, sell-side advisory, buy-side advisory,
-technology assessment, tech stack audit, architecture review,
-Business Strategy and Innovation, Risk Management and Compliance, Technology and Sovereignty,
-Talent and Organization, M&A Transactions and PMI,
-NIS2, DORA, Cyber Resilience Act, Swiss LSI, conformité réglementaire 2026,
-
-### Talent & Recruitment
-executive recruitment tech, recrutement executive tech, placement CTO, placement CISO,
-tech headhunting, executive search technology, VP Engineering recruitment,
-Head of AI recruitment, tech leadership placement, C-level tech recruitment,
-executive tech jobs Switzerland, CTO jobs Europe, CISO jobs Switzerland,
-founder dependency discount, succession planning, management team depth,
-
-### Employment & AI Skills Data
-emploi IA, compétences IA, écart de compétences, World Economic Forum Future of Jobs Report,
-PwC Global AI Jobs Barometer, prime salariale IA, formation compétences IA, recrutement IA 2026,
-
-### Asset Engineering
-asset engineering, conception actif numérique, custom code digital asset,
-certification-ready SaaS, IP propriétaire, zéro dette technique,
-actifs propriétaires Aegryn, proprietary digital portfolio, build digital asset Switzerland,
-digital ecosystem, ecosystem engineering, Engineered to Last,
-
-### General
-Swiss holding, holding suisse tech, Swiss technology company, Switzerland startup,
-European tech ecosystem, tech innovation Switzerland, Swiss tech advisory,
-Aegryn Magazine, magazine tech Europe, magazine fondateurs européens,
-industries tech M&A, finance capital, health life sciences, energy infrastructure,
-
-## Industries Covered (23+)
-
-Aerospace & Defense, Agriculture & Agritech, Automotive & Mobility, Banking & Financial Services,
-Chemistry & Materials Science, Construction & Infrastructure, Cybersecurity & Data Protection,
-E-commerce & Retail, Education & EdTech, Energy & Utilities, Fintech & Blockchain,
-Healthtech & Biotechnology, Hospitality & Tourism, Real Estate & PropTech,
-Manufacturing & Industry 4.0, Logistics & Supply Chain, Luxury & Consumer Goods,
-Media & Entertainment, Natural Resources & Mining, Healthcare & Medical Devices,
-Professional Services, Telecommunications, Transport & Logistics
-
-Five industry hubs at /industries: Finance & Capital; Health & Life Sciences; Industry, Energy & Infrastructure; Commerce, Services & Customer Experience; Tech, Innovation & Public Sector.
-
-## Proprietary Assets
-
-Software assets designed, built and operated by Aegryn, available under direct access or licence:
-
-- **Subblink** (https://subblink.com) — B2B SaaS, AI-powered contract analysis, risk and obligation detection
-- **Neediu** — B2C marketplace, home services (cleaning, plumbing, childcare)
-- **Primiom** — B2C PropTech, AI-assisted real estate across Europe
-- **Movtoo** — B2C, on-demand urban delivery
-- **Hobconnect** — B2C, social network around shared passions
-- **CIFSO Protocol** — Organisation-value certification (Code & Architecture, IP & Rights, Finance & Metrics, Security/Sovereignty & AI Exposure, Organisation/Talent & Succession). Licensable.
-- **Compliance Engine** — Automated regulatory compliance. AI Act, NIS2, DORA, GDPR/FADP. Licensable.
-- **KYB/KYC Engine** — Business onboarding, identity verification, beneficial owners, sanctions. Licensable.
-- **Data Room** — Secure data room dedicated to CIFSO certification evidence (admin + assigned CIFSO audit partners + asset owner); separate acquisition/cession data room in structuring. RLS, watermarking, full audit trail. Licensable.
-- **Aegryn Advisory** (https://aegryn.com/advisory) — Cybersecurity, AI audit, digital strategy, M&A advisory
-
-Each asset: "An Aegryn company."
-Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblematic projects)
-
-## Advisory — Five Pillars (https://aegryn.com/advisory)
-
-### Business Strategy, and Innovation (/advisory/strategy)
-Growth strategy, business model design, internationalisation, exit preparation and pre-sale valuation audit,
-organisational transformation, board governance, strategic intelligence
-
-### Risk Management, and Compliance (/advisory/risk-compliance)
-Regulatory mapping (NIS2, DORA, EU AI Act, GDPR/FADP, Swiss ISG, Cyber Resilience Act), compliance gap diagnostic,
-remediation roadmap, business continuity and incident response, supplier/third-party risk, audit and due diligence readiness
-
-### Technology, and Sovereignty (/advisory/technology)
-Cybersecurity (attack surface audit, penetration testing, ISO 27001, incident response),
-AI Audit (EU AI Act compliance, LLM red-teaming, bias audit, decision traceability),
-Tech Architecture (code audit, stack review, migration, security-by-design), cloud independence
-
-### Talent, and Organization (/advisory/talent-organization)
-Founder dependency diagnostic (can reduce valuation 20-30% at sale/fundraising), critical skills mapping,
-succession plan and board governance, executive recruitment and key talent retention via Aegryn Talent
-
-### M&A, Transactions, and PMI (/advisory/ma)
-Buy-side and sell-side advisory, due diligence coordination, deal structuring (asset/share deal, earnout, SPV),
-valuation, post-merger integration
-
-## Franchir — Lifecycle transitions, executed operationally (https://aegryn.com/franchir)
-
-The Navigate discipline — distinct from M&A advisory (Advise pillar). Five lifecycle cycles: Launch & Structuring, Growth & Scaling, Restructuring & Pivot, Acquisition & External Growth, Transmission & Cession.
-
-Confidential acquisition/cession mandates are accompanied under NDA through the Aegryn expert network; a dedicated data room for these workflows is being structured. CIFSO 5000 certification is mandatory upstream of any transmission mandate.
-
-Key Pages:
-- /accompagner/lancement — Launch & Structuring
-- /accompagner/croissance — Growth & Scaling
-- /accompagner/restructuration — Restructuring & Pivot
-- /accompagner/acquisition — Acquisition & External Growth (due diligence)
-- /accompagner/transmission — Transmission & Cession (vendor readiness)
-
-## Certification CIFSO 5000 (/grade)
-
-Proprietary independent certification — the ownership record ("acte de propriété") of an organisation's value. A watch without its papers loses part of its value; an organisation without certified value sells at a discount.
-
-Protocol CIFSO 5000: 5 audited dimensions, each 0-20 pts, total /100:
-- C: Code & Architecture (proprietary codebase or licensed software stack)
-- I: IP & Rights
-- F: Finance & Metrics
-- S: Security, Sovereignty & AI Exposure (incl. AI vendor dependence, AI inventory, DPA)
-- O: Organisation, Talent & Succession
-
-5 immutable grades: AEG ★ (Apex, #5ADDA4), AAA (Gold, #C9A84C), AA (Silver, #9BA8B0), A (Blue, #4A90D9), B (Amber, #D4820A)
-Regulatory compliance (v4.11): applicable perimeter profiled then validated; controls distributed per dimension: Data Act (C+I), CRA (C), ePrivacy/DSA/P2B/sanctions/AML (I), NIS2/DORA/AI Act (S), compliance governance (O). Non-compliance lowers the score, caps the grade at AA and affects the TRS; the report is never blocked.
-At publication: quantified valuation (industry multiple adjusted on the 5 CIFSO scores) + roadmap potential.
-MANDATORY for any certified valuation or transmission mandate handled by Aegryn.
-Pages: /grade, /grade/brochure, /grade/submit, /audit, /verify
-
-## CIFSO Valuation Index (/valuation)
-
-Benchmark engine branded "Aegryn CIFSO Valuation Index". Automatic collection every Monday 06:00 Europe/Zurich: official open sources (SNB, ECB, Eurostat, listed-company filings — Switzerland and Europe first) + Aegryn curated multiples + published certified dossiers (per-dimension medians/quartiles).
-
-Freemium:
-- Free: 15-min self-assessment, deliberately WIDE illustrative range on a subset of benchmarks — no precise estimate without document analysis;
-- Extended access (planned — opening soon, reserved to validated profiles): full industry multiples (EV/Revenue, EV/EBITDA), per-dimension benchmarks, tightened range, certified comparables;
-- Certified: quantified valuation with a published grade.
-
-Not used today: licensed private-transaction feeds (FactSet, PitchBook, Dealroom, Morningstar) — connector-ready if licensed.
-
-## Talent (/talent)
-
-Executive tech recruitment: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product.
-Confidential search. Pre-qualified candidates. 48h mandate response. All 23+ industries.
-
-## Workforce & AI Skills Data (/workforce)
-
-Factual market-data page on employment and skills in the AI era, sourced from the World Economic
-Forum (Future of Jobs Report 2025) and PwC (Global AI Jobs Barometer, June 2026 edition). Covers:
-2025-2030 job creation/displacement (170M created, 92M displaced, net +78M), skills instability (39%
-of core skills to change by 2030), skills-gap-as-top-barrier (63% of employers), AI-skills wage
-premium (62%, up from 57% a year earlier), by-role and by-sector exposure readings, and the link to
-the CIFSO 5000 Organisation & Talent dimension. Includes related-articles section linking to blog
-content on the same data (skills gap, AI hiring, executive tech salaries, founder dependency).
-
-## Expert Network (/experts) — detailed directory /annuaire is internal (authenticated partners & admin)
-
-M&A Advisors, Lawyers, Accountants/Auditors, CTO/Tech Architects, Cybersecurity (PASSI/CREST),
-HR/Employment Law, W&I Insurance, Tax Advisors, Real Estate, ESG/RSE.
-
-## Magazine (/magazine)
-
-Publication (English only): "Deals, multiples, portraits et art de vivre."
-Editions named by date only — January 2027 edition "Built to Last": web reader (/magazine/issue-01/web) and flipbook (/magazine/issue-01/flipbook).
-
-## Contact
-
-- General: contact@boha-group.com
-- Certify: https://aegryn.com/grade/submit
-- Transmission: https://aegryn.com/accompagner/transmission
-- Acquisition: https://aegryn.com/accompagner/acquisition
-- Advisory: https://aegryn.com/advisory
-- Talent: https://aegryn.com/talent
-- Custom Build: https://aegryn.com/advisory/technology
-
-## Legal & Compliance
-
-Incorporated: Aegryn, Switzerland
-GDPR/FADP compliant — Data requests: contact@boha-group.com
-Privacy: /privacy — Terms: /terms/use — CGV: /terms/cgv — AI Usage: /terms/ai-usage
-
-## Recent Updates (October 2026)
-
-- Repositioning as integrated advisory group: lifecycle section renamed Valoriser → Franchir
-  (/franchir/* — Navigate discipline); FRANCHIR covers launch, scaling, restructuring,
-  acquisition and transmission execution — M&A advisory remains under Advise (/advisory/ma)
-- Public routes renamed: /network → /experts (expert directory), /grade/partners → /audit
-- Expert directory /annuaire is now internal: authenticated expert/admin access only, noindex,
-  removed from sitemap and public structured data
-- Expert-profile subscription model parked: public mentions reworded, partner dashboard
-  subscription card removed
-- CIFSO data room access restricted: admin + assigned CIFSO audit partners + asset owner only;
-  client-facing visibility tiers reserved for a dedicated acquisition/cession data room
-  (in structuring). Legacy buyer workspace (/client/buyer, auction/session workflows) archived
-- Site language standardised on CIFSO framing; auction/catalog/transaction vocabulary removed
-  from client-facing surfaces
-
-### September 2026
-
-- Advisory repositioned from 3 to 5 pillars, each renamed with an "X, and Y" naming convention:
-  Business Strategy, and Innovation (/advisory/strategy); Risk Management, and Compliance
-  (/advisory/risk-compliance, new page); Technology, and Sovereignty (/advisory/technology);
-  Talent, and Organization (/advisory/talent-organization, new page); M&A, Transactions, and PMI
-  (/advisory/ma)
-- New page /workforce: employment/AI-skills market data (World Economic Forum, PwC), with
-  related-articles section
-- Blog: new Compliance filter and 5 regulatory articles (NIS2, DORA, EU AI Act 2026 omnibus,
-  Swiss LSI critical-infrastructure reporting, Cyber Resilience Act); 2 new Talent articles
-  (AI skills gap train-vs-hire plan, AI hiring wage premium) cross-linked from /workforce
-  and from the executive-tech-salaries article
-  All new articles verified against official primary sources (EUR-Lex, ENISA, European
-  Commission, Swiss NCSC/OFCS, WEF, PwC) and translated in full across the 6 site languages
-- CIFSO Valuation Index (/valuation): corrected adjusted-valuation calculation (CIFSO coefficient
-  applied as a multiplier to the median market multiple, not displayed as a multiple itself);
-  enriched benchmark tables (all rows shown, not filtered to a single line); persistent user-profile
-  card in the self-test flow; contributed-data capture hardened (HTTP-status check, keepalive,
-  local retry queue) so no anonymous contribution to the Index is lost on transient failures
-- Certification CIFSO 5000 repositioned as the ownership record ("acte de propriété") of an organisation's value — watch-and-papers analogy on /grade, brochure and /verify
-- CIFSO Valuation Index launched in freemium on /valuation: free illustrative wide-range estimate + subscription tier (opening soon)
-- Automatic benchmark engine: SNB, ECB, Eurostat and listed-company filings collected every Monday 06:00 Europe/Zurich; client-facing source name "Aegryn CIFSO Valuation Index"
-- AI exposure assessment integrated into dimension S and the Data Room (AI inventory S-10 blocking, usage policy S-11, vendor contracts S-12)
-- Quantified certified valuation at grade publication: industry multiple × CIFSO adjustment, per-dimension impact, roadmap potential
-- Blog: 45+ articles complete in 6 languages; filters include Security & AI, Talent, Financing, Compliance; homepage featured-article carousel now rotates automatically every 5 seconds across all featured articles
-- Five industry hubs at /industries; terminology "industries" replaces "clusters" across the site
-- Magazine editions named by date only (e.g. "January 2027 — Built to Last"), English only
-- Sitemap/SEO: canonical localized URLs with hreflang for all routes; dead and redirected routes removed; BlogPosting + BreadcrumbList structured data added to every blog article; FAQPage structured data added to /help/faq
-- Talent service: candidate + hiring forms, email confirmation (Resend), 42-country PhoneInput
-- AI Usage Terms page: /terms/ai-usage
-
----
-
-Last updated: October 2026
-Version: 3.2
+Languages: fr, en, de, es, it, nl. XML sitemap: https://aegryn.com/sitemap.xml

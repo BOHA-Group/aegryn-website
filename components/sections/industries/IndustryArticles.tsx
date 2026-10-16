@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
-import Image from 'next/image'
-import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { ARTICLE_CATEGORIES, type Article, type ArticleCategory } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import { FilterPills } from '@/components/ui/FilterPills'
+import { ArticleCard } from '@/components/sections/ArticleCard'
 
 interface Props {
   articles: Article[]
@@ -77,50 +77,19 @@ export function IndustryArticles({ articles, locale }: Props) {
         )}
 
         {/* Cards grille */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
           {filtered.map(article => (
-            <Link
+            <ArticleCard
               key={article.slug}
-              href={`/blog/${article.slug}` as never}
-              className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-            >
-              {/* Image compacte */}
-              <div className="relative h-40 w-full overflow-hidden">
-                <Image
-                  src={BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK}
-                  style={{ objectPosition: getBlogImagePosition(BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK) }}
-                  alt={getText(article.title as unknown as Record<string, string | undefined>, lang)}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
-              </div>
-
-              {/* Contenu */}
-              <div className="p-5 flex flex-col flex-1">
-                <p className="font-mono text-[9px] tracking-[0.16em] uppercase text-ag-apex-ink mb-2">
-                  {getText(ARTICLE_CATEGORIES[article.category] as unknown as Record<string, string | undefined>, lang)}
-                </p>
-                <h3 className="font-sans font-semibold text-ag-black text-[13px] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
-                  {getText(article.title as unknown as Record<string, string | undefined>, lang)}
-                </h3>
-                <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-4 line-clamp-2">
-                  {getText(article.excerpt as unknown as Record<string, string | undefined>, lang)}
-                </p>
-                <div className="flex items-center justify-between pt-3">
-                  <div className="flex items-center gap-3 text-ag-gray-light">
-                    <span className="flex items-center gap-1 font-mono text-[10px]">
-                      <Calendar size={10} /> {formatDate(article.date, locale)}
-                    </span>
-                    <span className="flex items-center gap-1 font-mono text-[10px]">
-                      <Clock size={10} /> {article.readMin} min
-                    </span>
-                  </div>
-                  <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
-                </div>
-              </div>
-            </Link>
+              slug={article.slug}
+              title={getText(article.title as unknown as Record<string, string | undefined>, lang)}
+              category={getText(ARTICLE_CATEGORIES[article.category] as unknown as Record<string, string | undefined>, lang)}
+              date={formatDate(article.date, locale)}
+              excerpt={getText(article.excerpt as unknown as Record<string, string | undefined>, lang)}
+              image={BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK}
+              imagePosition={getBlogImagePosition(BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK)}
+              fluid
+            />
           ))}
         </div>
 

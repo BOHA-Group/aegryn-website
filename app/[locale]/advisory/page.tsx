@@ -2,7 +2,7 @@ import { Link }                  from '@/i18n/navigation'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { getTranslations }       from 'next-intl/server'
 import type { Metadata }         from 'next'
-import { generateAegrynMetadata } from '@/lib/seo'
+import { generateAegrynMetadata, generateWebPageSchema, generateServiceSchema, pageUrl } from '@/lib/seo'
 import { ScrollReveal }          from '@/components/animations/ScrollReveal'
 import { WaveReveal }            from '@/components/animations/WaveReveal'
 import { ADVISORY_HUB }          from '@/content/advisory/hub'
@@ -37,8 +37,21 @@ export default async function AdvisoryPage({ params }: Props) {
   const pillars = Object.values(t.raw('pillars') as Record<string, Pillar>)
   const echange = getAction(locale, 'program', 'echange30')
 
+  const url = pageUrl('/advisory', locale)
+  const jsonLd = [
+    generateWebPageSchema({
+      name: c.metaTitle, description: c.metaDesc, url,
+      breadcrumbs: [{ name: 'Aegryn', url: pageUrl('/', locale) }, { name: c.metaTitle, url }],
+    }),
+    generateServiceSchema({
+      name: c.metaTitle, description: c.metaDesc, url,
+      serviceType: 'Integrated advisory, eight disciplines', areaServed: 'Switzerland and Europe',
+    }),
+  ]
+
   return (
     <main className="bg-ag-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* ── Hero ── */}
       <section className="bg-ag-navy overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 py-32 md:px-12">

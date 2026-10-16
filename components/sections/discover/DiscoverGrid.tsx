@@ -4,10 +4,11 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { ArrowUpRight, Calendar, Clock, Search, X } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import { gsap } from '@/lib/gsap'
 import { ARTICLES, ARTICLE_CATEGORIES, type ArticleCategory } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
+import { ArticleCard } from '@/components/sections/ArticleCard'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { FilterPills } from '@/components/ui/FilterPills'
 
@@ -291,50 +292,23 @@ export function DiscoverGrid({ locale }: Props) {
             {filtered.length === 0 ? (
               <p className="font-sans text-[15px] text-ag-gray py-12 text-center">{t('noArticles')}</p>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
                 {shown.map((article) => (
-                  <Link
+                  <ArticleCard
                     key={article.slug}
-                    href={`/blog/${article.slug}` as never}
-                    className="discover-card group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    {/* Image compacte */}
-                    <div className="relative h-40 w-full overflow-hidden">
-                      <Image
-                        src={getImage(article.slug)}
-                        style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
-                        alt={article.title[lang] ?? article.title.en}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-5 flex flex-col flex-1">
-                      <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink mb-2">
-                        {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
-                      </p>
-                      <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
-                        {article.title[lang] ?? article.title.en}
-                      </h3>
-                      <p className="font-sans text-[12px] text-ag-gray leading-relaxed mb-4 line-clamp-2">
-                        {article.excerpt[lang] ?? article.excerpt.en}
-                      </p>
-                      <div className="flex items-center justify-between pt-3">
-                        <div className="flex items-center gap-3 text-ag-gray-light">
-                          <span className="flex items-center gap-1 font-mono text-[10px]">
-                            <Calendar size={10} /> {formatDate(article.date)}
-                          </span>
-                          <span className="flex items-center gap-1 font-mono text-[10px]">
-                            <Clock size={10} /> {article.readMin} {t('readMin')}
-                          </span>
-                        </div>
-                        <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
-                      </div>
-                    </div>
-                  </Link>
+                    slug={article.slug}
+                    title={article.title[lang] ?? article.title.en}
+                    category={ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
+                    date={formatDate(article.date)}
+                    readTime={`${article.readMin} ${t('readMin')}`}
+                    excerpt={article.excerpt[lang] ?? article.excerpt.en}
+                    image={getImage(article.slug)}
+                    imagePosition={getBlogImagePosition(getImage(article.slug))}
+                    fluid
+                    titleLines={4}
+                    excerptLines={4}
+                    className="discover-card"
+                  />
                 ))}
               </div>
             )}

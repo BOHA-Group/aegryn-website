@@ -12,7 +12,14 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  const privateAreas = ['/api/', '/admin/', '/client/', '/nda/', '/*/annuaire']
+  const privateAreas = ['/api/', '/admin/', '/client/', '/*/client/', '/nda/', '/*/nda/', '/*/annuaire']
+  const aiCrawlers = [
+    'GPTBot', 'ChatGPT-User', 'OAI-SearchBot',
+    'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai',
+    'PerplexityBot', 'Perplexity-User',
+    'Google-Extended', 'Applebot', 'Applebot-Extended',
+    'Googlebot', 'Bingbot', 'DuckDuckBot', 'YouBot', 'MistralAI-User', 'cohere-ai',
+  ]
 
   return {
     rules: [
@@ -21,10 +28,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: ['/', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
         disallow: privateAreas,
       },
-      /* Explicit allow for major AI crawlers — mêmes zones privées exclues */
+      /* Explicit allow for major search and AI crawlers, mêmes zones privées exclues */
       {
-        userAgent: ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Applebot', 'Googlebot', 'Bingbot', 'OAI-SearchBot'],
-        allow: '/',
+        userAgent: aiCrawlers,
+        allow: ['/', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
         disallow: privateAreas,
       },
     ],

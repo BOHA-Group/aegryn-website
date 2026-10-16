@@ -101,6 +101,8 @@ export const ITEMS: Item[] = [
 
 export const SF_UI = {
   title:    L('Savoir-faire', 'Know-how', 'Know-how', 'Savoir-faire', 'Know-how', 'Expertise'),
+  titleLead: L('Savoir', 'Know', 'Know', 'Savoir', 'Know', 'Expertise'),
+  titleAccent: L('-faire', '-how', '-how', '-faire', '-how', ''),
   intro:    L(
     'Un même socle, de l’idée à la transmission. Chaque projet en mobilise une partie, selon son cycle et ses enjeux.',
     'One foundation, from idea to handover. Each project draws on part of it, depending on its cycle and its stakes.',

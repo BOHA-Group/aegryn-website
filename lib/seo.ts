@@ -18,6 +18,8 @@ function localizedPath(path: string, locale: string): string {
   return entry && typeof entry === 'object' ? (entry[locale] ?? path) : path
 }
 
+export const pageUrl = (path: string, locale: string) => `${BASE_URL}/${locale}${localizedPath(path, locale)}`
+
 /* OG locale codes per language */
 const OG_LOCALE: Record<string, string> = {
   fr: 'fr_FR', en: 'en_GB', de: 'de_DE',
@@ -25,106 +27,40 @@ const OG_LOCALE: Record<string, string> = {
 }
 
 const BASE_KEYWORDS = [
-  // Brand
-  'Aegryn', 'aegryn.com', 'Engineered to Last', 'Swiss Tech',
-  // Core business — cabinet de conseil intégré, valeur & cycle de vie
-  'cabinet de conseil intégré', 'integrated advisory group', 'integrated advisory firm',
-  'cabinet conseil tech suisse', 'cabinet conseil valorisation', 'Swiss advisory group',
-  'digital assets', 'actifs numériques', 'valorisation entreprise', 'organisation value',
-  'valeur entreprise tech', 'cycle de vie entreprise', 'organisation lifecycle',
-  'Aegryn Franchir', 'valoriser son entreprise', 'certification valeur entreprise',
-  'lancement structuration entreprise', 'croissance mise à l\'échelle', 'restructuration pivot',
-  'croissance externe', 'transmission entreprise', 'préparer transmission entreprise',
-  'accompagnement dirigeant', 'entreprise transmissible', 'business transferability',
-  // Certification & process
-  'certification CIFSO', 'audit code indépendant', 'CIFSO tech audit',
-  'closing tech sécurisé', 'NDA confidentialité entreprise', 'data room certifiée',
-  'KYC certification', 'confidentialité dossier entreprise',
-  // M&A advisory
-  'M&A tech', 'mergers acquisitions technology', 'conseil M&A tech',
-  'acquisition entreprise digitale', 'due diligence acquisition',
-  'deal structuring', 'club deal acquisition', 'share deal', 'asset deal',
-  'earnout', 'SPV co-investment', 'heads of terms tech',
-  'buy-side advisory', 'sell-side advisory', 'post-merger integration', 'PMI tech',
-  'vendor due diligence', 'vendor readiness', 'préparation cession entreprise',
-  'acquisition SaaS', 'SaaS acquisition', 'acquisition entreprise tech',
-  'family office tech acquisition', 'fund tech acquisition', 'croissance externe entreprise',
-  // Valuation
-  'SaaS valuation', 'valorisation SaaS', 'digital asset valuation',
-  'valorisation actif numérique', 'ARR multiple', 'SaaS multiples Europe',
-  'calcul valorisation SaaS', 'outil valorisation gratuit tech',
-  'SaaS valuation tool free', 'SaaS valuation calculator',
-  'valorisation entreprise Europe', 'company valuation Switzerland',
-  'estimation valeur startup', 'multiples valorisation sectoriels',
-  // Experts & network
-  'M&A experts', 'expert network', 'réseau experts M&A', 'expert M&A tech',
-  'due diligence tech', 'réseau experts certifiés',
-  'cybersecurity expert', 'AI audit', 'expert technique M&A',
-  'expert conformité', 'expert valorisation', 'auditeur indépendant tech',
-  // Advisory
-  'cybersecurity', 'advisory', 'AI advisory', 'EU AI Act',
-  'RGPD compliance', 'Swiss FADP', 'digital strategy',
-  'board advisory', 'strategy advisory', 'conseil stratégique', 'conseil tech',
-  'CTO as a service', 'DevSecOps', 'audit sécurité', 'security audit',
-  'advisory M&A', 'conseil M&A', 'réseau experts', 'expert network alliance',
-  'alliance partenaires', 'alliance partners tech', 'apporteur affaires tech',
-  'Aegryn Advisory', 'Aegryn Alliance', 'partenariat Aegryn',
-  'financement croissance tech',
-  'recrutement dirigeant', 'executive recruitment tech', 'talent tech suisse',
-  // Compliance & governance
-  'conformité NIS2', 'conformité DORA', 'gouvernance données', 'audit interne tech',
-  'due diligence réglementaire', 'gestion risques entreprise', 'risques cyber entreprise',
-  // Talent & organisation
-  'talent organisation', 'dépendance fondateur', 'succession dirigeant',
-  'rétention talents clés', 'transfert connaissance entreprise', 'structuration équipe dirigeante',
-  'executive search tech', 'recrutement executive Europe', 'interim management tech',
-  // Geography
-  'Switzerland startup', 'Swiss holding', 'holding suisse tech',
-  'Europe tech market', 'marché tech européen',
-  'advisory M&A suisse', 'Swiss M&A advisory', 'certification tech Suisse',
-  'groupe suisse tech', 'Swiss tech certification group',
-  // Build — proprietary assets
-  'subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect',
-  'actifs propriétaires Aegryn', 'proprietary digital assets', 'digital ecosystem',
-  'ecosystem engineering', 'portefeuille actifs numériques',
-  // Build — asset engineering (tiers)
-  'conception actif numérique', 'asset engineering', 'custom code digital asset',
-  'développement actif sur mesure', 'forfait fixe développement', 'fixed price digital build',
-  'certification-ready SaaS', 'IP propriétaire développement', 'zéro dette technique',
-  'build digital asset Switzerland', 'construire SaaS forfait fixe',
-  // Grade & CIFSO
-  'Aegryn Grade', 'asset grading', 'notation actif numérique',
-  'grade SaaS', 'certification actif numérique', 'tech credit rating',
-  'protocole CIFSO', 'CIFSO protocol', 'certification CIFSO obligatoire',
-  'certification independante SaaS', 'audit certifié actif numérique', 'grade officiel SaaS',
-  'valorisation illustrative SaaS', 'outil valorisation public', 'SaaS valuation light tool',
-  // CIFSO 5000 & Valuation Index
-  'CIFSO 5000', 'certification CIFSO 5000', 'CIFSO Valuation Index',
-  'acte de propriété entreprise', 'ownership record organisation value',
-  'valeur organisation certifiée', 'organisation value certification',
-  'transmissibilité entreprise', 'business transferability audit',
-  'benchmark valorisation Europe', 'European valuation benchmark',
-  // AI sovereignty
-  'souveraineté IA', 'AI sovereignty', 'exposition IA entreprise',
-  'AI exposure assessment', 'dépendance fournisseurs IA', 'AI vendor risk',
+  // Marque et positionnement
+  'Aegryn', 'aegryn.com', 'cabinet d\'entrepreneurs', 'firm of entrepreneurs', 'boutique entrepreneuriale',
+  'architecte de projets emblématiques', 'cabinet de conseil intégré', 'integrated advisory firm',
+  'Swiss advisory firm', 'cabinet conseil Suisse', 'conseil PME ETI Suisse',
+  'Rare par sélection', 'Discret par principe', 'Rare by selection', 'Discreet by principle',
+  // Méthode et cinq métiers
+  'cadrer réaliser accompagner', 'frame deliver accompany', 'sélectionner les talents', 'Aegryn Magazine',
+  // La Boutique
+  'La Boutique Aegryn', 'projets signature', 'signature projects', 'projets emblématiques',
+  // Huit métiers
+  'stratégie d\'entreprise et innovation', 'gestion des risques et conformité', 'finance et performance',
+  'technologie et souveraineté', 'opérations et excellence opérationnelle', 'talent et organisation',
+  'pilotage de projets et de programmes', 'M&A transactions et PMI',
+  'corporate strategy and innovation', 'risk management and compliance', 'finance and performance',
+  'technology and sovereignty', 'operations and operational excellence', 'talent and organisation',
+  'project and programme management', 'M&A and post-merger integration',
+  // Cycle de vie
+  'cycle de vie entreprise', 'organisation lifecycle', 'lancement et structuration', 'croissance et mise à l\'échelle',
+  'restructuration et pivot', 'acquisition et croissance externe', 'transmission d\'entreprise',
+  'préparation transmission entreprise', 'dirigeant PME', 'dirigeant ETI',
+  // Certification, valorisation, confidentialité
+  'certification CIFSO 5000', 'CIFSO Valuation Index', 'protocole CIFSO', 'CIFSO protocol',
+  'valorisation entreprise', 'valorisation SaaS', 'transmissibilité entreprise', 'data room certifiée',
+  'NDA mutuel numérique', 'confidentialité dossier entreprise', 'due diligence tech',
+  // Réglementaire et souveraineté
+  'NIS2', 'DORA', 'EU AI Act', 'RGPD', 'Swiss FADP', 'souveraineté IA', 'AI sovereignty', 'conformité réglementaire',
+  // Talent et réseau
+  'executive search tech', 'sélection de profils dirigeants', 'réseau d\'experts', 'expert network', 'alliances partenaires',
+  // Actifs propriétaires
+  'actifs propriétaires', 'proprietary digital assets', 'subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect',
   // Magazine
-  'Aegryn Magazine', 'magazine tech fondateurs', 'magazine tech Europe', 'magazine startup',
-  'magazine entrepreneurs tech', 'publication tech M&A', 'revue tech business',
-  'Tech Money Deals People Life', 'magazine trimestriel tech', 'quarterly tech magazine',
-  'magazine deals entrepreneurs', 'magazine acquisitions tech', 'magazine fondateurs européens',
-  // Press — neediu
-  'neediu Gala', 'paru dans Gala', 'Gala magazine neediu', 'neediu presse',
-  'neediu app services domicile', 'neediu service à domicile', 'application services maison',
-  'marketplace services domicile France', 'booking prestataire domicile',
-  'aide ménagère app', 'jardinage domicile app', 'bricolage app', 'service à la personne digital',
-  // Advisory pillars (renamed 2026)
-  'Business Strategy and Innovation', 'Risk Management and Compliance', 'Technology and Sovereignty',
-  'Talent and Organization', 'M&A Transactions and PMI',
-  'conseil risque conformité', 'conseil talent organisation', 'NIS2 DORA AI Act conseil',
-  'dépendance fondateur décote', 'plan de succession entreprise',
-  // Workforce & AI jobs data
-  'emploi IA', 'compétences IA 2026', 'écart de compétences', 'World Economic Forum Future of Jobs',
-  'PwC Global AI Jobs Barometer', 'prime salariale IA', 'recrutement IA', 'formation compétences IA',
+  'Tech Money Deals People Life', 'magazine entrepreneurs', 'magazine tech Europe',
+  // Géographie
+  'Switzerland', 'St-Sulpice Vaud', 'Suisse romande', 'Europe',
 ]
 
 export function generateAegrynMetadata({
@@ -154,7 +90,7 @@ export function generateAegrynMetadata({
     authors: [{ name: 'Aegryn', url: 'https://aegryn.com' }],
     creator: 'Aegryn',
     publisher: 'Aegryn',
-    category: 'technology',
+    category: 'business',
     metadataBase: new URL(BASE_URL),
     alternates: {
       canonical: url,
@@ -229,9 +165,28 @@ export function generateAegrynMetadata({
 
 /* ── JSON-LD schemas ────────────────────────────────────────────── */
 
+const en = (path: string) => `${BASE_URL}/en${localizedPath(path, 'en')}`
+const fr = (path: string) => `${BASE_URL}/fr${localizedPath(path, 'fr')}`
+
+const offer = (name: string, description: string, url: string) => ({
+  '@type': 'Offer',
+  itemOffered: { '@type': 'Service', name, description, url, provider: { '@id': `${BASE_URL}/#organization` } },
+})
+
+const ADVISORY_DISCIPLINES: Array<[string, string, string]> = [
+  ['Business Strategy and Innovation', 'Growth strategy, innovation, board advisory and decision frameworks for SME and mid-cap leaders.', '/advisory/strategy'],
+  ['Risk Management and Compliance', 'Regulatory exposure, NIS2, DORA, EU AI Act, GDPR and Swiss FADP, incident readiness and audit preparation.', '/advisory/risk-compliance'],
+  ['Finance and Performance', 'Financial steering, performance, financing readiness and value creation.', '/advisory/finance-performance'],
+  ['Technology and Sovereignty', 'Cybersecurity, AI audit, cloud independence, architecture and reversibility of technology choices.', '/advisory/technology'],
+  ['Operations and Operational Excellence', 'Operating model, process performance, supply chain and operational excellence.', '/advisory/operations-excellence'],
+  ['Talent and Organization', 'Organisation design, founder dependency, succession planning and selection of key profiles.', '/advisory/talent-organization'],
+  ['Project and Programme Management', 'Steering of projects and programmes from governance to acceptance, coordinating specialist experts.', '/advisory/project-program-management'],
+  ['M&A, Transactions and PMI', 'Acquisition and transfer preparation, due diligence reading and post-merger integration. Financial execution of transactions is entrusted to accredited partners.', '/advisory/ma'],
+]
+
 export const aegrynOrganizationSchema = {
   '@context':    'https://schema.org',
-  '@type':       'Organization',
+  '@type':       ['Organization', 'ProfessionalService'],
   '@id':         `${BASE_URL}/#organization`,
   name:          'Aegryn',
   legalName:     'Aegryn',
@@ -243,8 +198,8 @@ export const aegrynOrganizationSchema = {
     height:      50,
   },
   image:         `${BASE_URL}/og/default.jpg`,
-  description:   'Aegryn is a Swiss integrated firm that frames, delivers and accompanies the decisions of leaders of SMEs and mid-sized companies, with La Boutique for a limited number of signature projects. Five disciplines: frame, deliver, accompany, select, stay informed. CIFSO 5000 certification and the CIFSO Valuation Index are available as standalone tools. Anchored in Switzerland, open to the world.',
-  slogan:        'Engineered to Last',
+  description:   'Aegryn is a Swiss firm of entrepreneurs: an integrated advisory and delivery firm for leaders of SMEs and mid-sized companies, and La Boutique, an entrepreneurial boutique for a limited number of signature projects. Eight disciplines and five public métiers: frame, deliver, accompany, select, stay informed. A named contact, a limited number of engagements, a reply within two working days. Specialist experts are coordinated when a subject requires it. Rare by selection. Discreet by principle. Anchored in Switzerland, open to the world.',
+  slogan:        'Rare by selection. Discreet by principle.',
   foundingDate:  '2023',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
   address: {
@@ -278,35 +233,28 @@ export const aegrynOrganizationSchema = {
     'https://www.youtube.com/@aegrynhq',
   ],
   knowsAbout: [
-    'Digital Ecosystem Engineering',
+    'Business Strategy and Innovation',
+    'Risk Management and Compliance',
+    'Finance and Performance',
+    'Technology and Sovereignty',
+    'Operations and Operational Excellence',
+    'Talent and Organization',
+    'Project and Programme Management',
+    'M&A, Transactions and Post-Merger Integration',
+    'Organisation Lifecycle Support',
+    'Signature Projects',
     'Cybersecurity',
-    'Artificial Intelligence',
-    'SaaS',
-    'Swiss Technology',
-    'M&A Advisory',
+    'Artificial Intelligence Sovereignty',
+    'EU AI Act, NIS2, DORA and GDPR Compliance',
     'CIFSO 5000 Certification Protocol',
     'Aegryn CIFSO Valuation Index',
-    'AI Exposure & Sovereignty Assessment',
-    'Organisation Value & Transferability',
+    'Organisation Value and Transferability',
     'Digital Asset Valuation',
-    'Illustrative SaaS Valuation Tool',
-    'Organisation Lifecycle Support',
-    'Vendor Readiness & Transfer Preparation',
-    'Confidential Mandate Structuring',
-    'Due Diligence',
-    'EU AI Act Compliance',
-    'GDPR Compliance',
-    'SaaS Acquisition',
+    'Vendor Readiness and Transfer Preparation',
+    'Executive Profile Selection',
     'Expert Network',
-    'Asset Grading',
-    'Asset Engineering',
-    'Custom Digital Asset Development',
-    'Certification-Ready Digital Assets',
-    'Proprietary Asset Portfolio',
+    'Proprietary Digital Assets',
     'Tech Magazine Publishing',
-    'Home Services Marketplace',
-    'Digital Publishing',
-    'Press Relations',
   ],
   mentions: [
     {
@@ -314,12 +262,12 @@ export const aegrynOrganizationSchema = {
       name:          'Aegryn Magazine',
       url:           `${BASE_URL}/fr/magazine`,
       description:   'Quarterly magazine for European tech founders and acquirers. Tech. Money. Deals. People. Life.',
-      inLanguage:    'fr',
+      inLanguage:    'en',
       publisher:     { '@type': 'Organization', name: 'Aegryn', url: BASE_URL },
     },
     {
       '@type':       'NewsArticle',
-      name:          'neediu — Paru dans Gala, 27 novembre 2025',
+      name:          'neediu, paru dans Gala, 27 novembre 2025',
       url:           `${BASE_URL}/fr/boutique/projets/neediu`,
       datePublished: '2025-11-27',
       isPartOf:      { '@type': 'Periodical', name: 'Gala', issn: '1163-5053' },
@@ -331,126 +279,75 @@ export const aegrynOrganizationSchema = {
     name: 'Aegryn Services',
     itemListElement: [
       {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Accompagner',
-          description: 'Accompaniment across the organisation lifecycle: launch, growth, restructuring, acquisition, transfer. Europe and Switzerland.',
-          url: `${BASE_URL}/en#accompagner`,
-        },
+        '@type': 'OfferCatalog',
+        name: 'Aegryn Advisory, eight disciplines',
+        url: en('/advisory'),
+        itemListElement: ADVISORY_DISCIPLINES.map(([name, description, path]) => offer(name, description, en(path))),
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Valuation — CIFSO Valuation Index',
-          description: 'Public valuation entry point for digital assets, powered by the Aegryn CIFSO Valuation Index: market multiples per industry adjusted on the 5 audited CIFSO 5000 dimensions. Free access returns an illustrative wide range; full benchmarks (multiples, per-dimension data) via subscription. Not a substitute for official Aegryn certification.',
-          url: `${BASE_URL}/en/valuation`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Grade — Certification CIFSO 5000',
-          description: 'Independent certification of organisations and digital assets under the CIFSO 5000 protocol (5 audited dimensions: Code & Architecture, IP & Rights, Finance & Metrics, Security-Sovereignty & AI Exposure, Organisation-Talent & Succession). The certificate acts as an evidence-backed ownership and value record — like the papers of a watch. 5 immutable grades: AEG★, AAA, AA, A, B.',
-          url: `${BASE_URL}/en/grade`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Expert Network',
-          description: 'Curated network of experts and partners, from advisory, legal and finance to engineering, design, technology, manufacturing and distribution, supporting organisations and signature projects at every lifecycle stage.',
-          url: `${BASE_URL}/en/experts`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Advisory',
-          description: 'Integrated advisory for SMEs and mid-sized companies across eight disciplines: Strategy, Risk & Compliance, Finance & Performance, Technology & Sovereignty, Operations & Operational Excellence, Talent & Organization (succession, profile selection), Project & Programme Management, and M&A. From decision to implementation. Switzerland & Europe.',
-          url: `${BASE_URL}/en/advisory`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Build — Proprietary Assets',
-          description: 'Aegryn designs and operates its own portfolio of digital assets: B2B SaaS, marketplaces, AI tools. Each asset is documented and operated under real conditions.',
-          url: `${BASE_URL}/en/assets`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Asset Engineering',
-          description: 'Custom digital solutions for entrepreneurs, companies and institutions. Fixed price, custom code, full IP ownership, delivered in 10 to 16 weeks. Zero technical debt.',
-          url: `${BASE_URL}/en/advisory/technology#mettre-en-oeuvre`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Aegryn Talent',
-          description: 'Executive tech recruitment and transition profiles: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search, pre-qualified candidates, 2-business-day mandate response, all 23+ industries.',
-          url: `${BASE_URL}/en/talent`,
-        },
-      },
+      offer('Frame: Cadrer', 'Frame decisions and projects on documented grounds: strategy, risks, finance, technology, operations, talent and M&A for leaders of SMEs and mid-sized companies.', en('/advisory')),
+      offer('Deliver: Réaliser', 'Steer projects and programmes from governance to acceptance, coordinating specialist experts. Aegryn does not itself perform heavy industrial production.', en('/advisory/project-program-management')),
+      offer('Accompany: Accompagner', 'Accompaniment across the organisation lifecycle: launch, growth, restructuring, acquisition and transfer. Switzerland and Europe.', `${BASE_URL}/en#accompagner`),
+      offer('Select: Sélectionner', 'Selection of executive and transition profiles: CTO, CISO, Head of AI, VP Engineering, Head of Data, Head of Product. Confidential search, pre-qualified candidates.', en('/talent')),
+      offer('Stay informed: S\u2019informer', 'Aegryn Magazine, articles and workforce market data, published for leaders and entrepreneurs.', en('/magazine')),
+      offer('La Boutique', 'An entrepreneurial boutique that frames, delivers and accompanies a limited number of signature projects for entrepreneurs, investors and family offices, institutions and large groups, industrials and brands.', en('/boutique')),
+      offer('Aegryn Grade: CIFSO 5000 certification', 'Independent certification of organisations and digital assets under the CIFSO 5000 protocol (5 audited dimensions: Code and Architecture, IP and Rights, Finance and Metrics, Security, Sovereignty and AI Exposure, Organisation, Talent and Succession). 5 immutable grades: AEG, AAA, AA, A, B.', en('/grade')),
+      offer('Aegryn CIFSO Valuation Index', 'Public valuation entry point powered by the Aegryn CIFSO Valuation Index: market multiples per industry adjusted on the 5 audited CIFSO 5000 dimensions. The free estimate is illustrative and does not replace official certification.', en('/valuation')),
+      offer('Aegryn Expert Network', 'Curated network of experts and partners, from advisory, legal and finance to engineering, design, technology, manufacturing and distribution.', en('/experts')),
+      offer('Proprietary assets', 'Digital assets designed and operated by Aegryn: Subblink, neediu, Primiom, Movtoo, Hobconnect.', en('/assets')),
     ],
   },
 }
+
+const NAVIGATION: Array<[string, string]> = [
+  ['Accueil', `${BASE_URL}/fr`],
+  ['La Boutique', fr('/boutique')],
+  ['Projets signature', fr('/boutique/projets')],
+  ['Nos huit métiers', fr('/advisory')],
+  ['Stratégie d\u2019entreprise et Innovation', fr('/advisory/strategy')],
+  ['Gestion des Risques et Conformité', fr('/advisory/risk-compliance')],
+  ['Finance et Performance', fr('/advisory/finance-performance')],
+  ['Technologie et Souveraineté', fr('/advisory/technology')],
+  ['Opérations et Excellence opérationnelle', fr('/advisory/operations-excellence')],
+  ['Talent et Organisation', fr('/advisory/talent-organization')],
+  ['Pilotage de projets et de programmes', fr('/advisory/project-program-management')],
+  ['M&A, Transactions et PMI', fr('/advisory/ma')],
+  ['Accompagner chaque cycle', `${BASE_URL}/fr#accompagner`],
+  ['Lancement & Structuration', fr('/accompagner/lancement')],
+  ['Croissance & Mise à l\u2019échelle', fr('/accompagner/croissance')],
+  ['Restructuration & Pivot', fr('/accompagner/restructuration')],
+  ['Acquisition & Croissance externe', fr('/accompagner/acquisition')],
+  ['Transmission & Cession', fr('/accompagner/transmission')],
+  ['Sélectionner un profil', fr('/talent')],
+  ['Talent, Entreprises', fr('/talent/entreprises')],
+  ['Talent, Candidats', fr('/talent/candidats')],
+  ['Industries', fr('/industries')],
+  ['Réseau d\u2019experts', fr('/experts')],
+  ['Alliances', fr('/alliances')],
+  ['Actifs propriétaires', fr('/assets')],
+  ['CIFSO Valuation Index', fr('/valuation')],
+  ['Certification CIFSO 5000', fr('/grade')],
+  ['Brochure CIFSO 5000', fr('/grade/brochure')],
+  ['Soumettre une organisation', fr('/grade/submit')],
+  ['Auditeurs indépendants', fr('/audit')],
+  ['Vérifier un certificat', fr('/verify')],
+  ['Magazine', fr('/magazine')],
+  ['Magazine, édition de janvier 2027', fr('/magazine/issue-01')],
+  ['Blog', fr('/blog')],
+  ['Emploi & Compétences', fr('/workforce')],
+  ['Culture et valeurs', fr('/culture')],
+  ['À propos', fr('/about')],
+  ['Investisseurs', fr('/investisseurs')],
+  ['Carrière', fr('/career')],
+  ['Contact', fr('/contact')],
+  ['FAQ', fr('/help/faq')],
+  ['Feuille de route', fr('/roadmap')],
+]
 
 export const aegrynSiteNavigationSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Aegryn Site Navigation',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1,  name: 'Accueil',                       url: `${BASE_URL}/fr` },
-    { '@type': 'ListItem', position: 2,  name: 'Accompagner',                   url: `${BASE_URL}/fr#accompagner` },
-    { '@type': 'ListItem', position: 3,  name: 'Lancement & Structuration',     url: `${BASE_URL}/fr/accompagner/lancement` },
-    { '@type': 'ListItem', position: 4,  name: 'Croissance & Mise à l\'échelle', url: `${BASE_URL}/fr/accompagner/croissance` },
-    { '@type': 'ListItem', position: 5,  name: 'Restructuration & Pivot',       url: `${BASE_URL}/fr/accompagner/restructuration` },
-    { '@type': 'ListItem', position: 6,  name: 'Acquisition & Croissance externe', url: `${BASE_URL}/fr/accompagner/acquisition` },
-    { '@type': 'ListItem', position: 7,  name: 'Transmission & Cession',        url: `${BASE_URL}/fr/accompagner/transmission` },
-    { '@type': 'ListItem', position: 8,  name: 'Réseau d\'experts',             url: `${BASE_URL}/fr/experts` },
-    { '@type': 'ListItem', position: 9,  name: 'Portfolio',                     url: `${BASE_URL}/fr/boutique/projets` },
-    { '@type': 'ListItem', position: 10, name: 'CIFSO Valuation Index',         url: `${BASE_URL}/fr/valuation` },
-    { '@type': 'ListItem', position: 11, name: 'Certification CIFSO 5000',      url: `${BASE_URL}/fr/grade` },
-    { '@type': 'ListItem', position: 12, name: 'Brochure CIFSO 5000',           url: `${BASE_URL}/fr/grade/brochure` },
-    { '@type': 'ListItem', position: 13, name: 'Soumettre une organisation',    url: `${BASE_URL}/fr/grade/submit` },
-    { '@type': 'ListItem', position: 14, name: 'Auditeurs indépendants',        url: `${BASE_URL}/fr/audit` },
-    { '@type': 'ListItem', position: 15, name: 'Vérifier un certificat',        url: `${BASE_URL}/fr/verify` },
-    { '@type': 'ListItem', position: 16, name: 'Industries',                    url: `${BASE_URL}/fr/industries` },
-    { '@type': 'ListItem', position: 17, name: 'Advisory',                      url: `${BASE_URL}/fr/advisory` },
-    { '@type': 'ListItem', position: 18, name: 'Advisory — Stratégie & Innovation', url: `${BASE_URL}/fr/advisory/strategy` },
-    { '@type': 'ListItem', position: 19, name: 'Advisory — Risque & Conformité', url: `${BASE_URL}/fr/advisory/risk-compliance` },
-    { '@type': 'ListItem', position: 20, name: 'Advisory — Technologie & Souveraineté', url: `${BASE_URL}/fr/advisory/technology` },
-    { '@type': 'ListItem', position: 21, name: 'Advisory — Talent & Organisation', url: `${BASE_URL}/fr/advisory/talent-organization` },
-    { '@type': 'ListItem', position: 22, name: 'Advisory — M&A, Transactions & PMI', url: `${BASE_URL}/fr/advisory/ma` },
-    { '@type': 'ListItem', position: 23, name: 'Alliances',                     url: `${BASE_URL}/fr/alliances` },
-    { '@type': 'ListItem', position: 24, name: 'Talent',                        url: `${BASE_URL}/fr/talent` },
-    { '@type': 'ListItem', position: 25, name: 'Talent — Entreprises',          url: `${BASE_URL}/fr/talent/entreprises` },
-    { '@type': 'ListItem', position: 26, name: 'Talent — Candidats',            url: `${BASE_URL}/fr/talent/candidats` },
-    { '@type': 'ListItem', position: 27, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
-    { '@type': 'ListItem', position: 28, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
-    { '@type': 'ListItem', position: 30, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
-    { '@type': 'ListItem', position: 31, name: 'Magazine — January 2027',       url: `${BASE_URL}/fr/magazine/issue-01` },
-    { '@type': 'ListItem', position: 32, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },
-    { '@type': 'ListItem', position: 33, name: 'Emploi & Compétences',          url: `${BASE_URL}/fr/workforce` },
-    { '@type': 'ListItem', position: 34, name: 'Investisseurs',                 url: `${BASE_URL}/fr/investisseurs` },
-    { '@type': 'ListItem', position: 35, name: 'Carrière',                      url: `${BASE_URL}/fr/career` },
-    { '@type': 'ListItem', position: 36, name: 'À propos',                      url: `${BASE_URL}/fr/a-propos` },
-    { '@type': 'ListItem', position: 37, name: 'Contact',                       url: `${BASE_URL}/fr/contact` },
-    { '@type': 'ListItem', position: 38, name: 'FAQ',                           url: `${BASE_URL}/fr/help/faq` },
-    { '@type': 'ListItem', position: 39, name: 'Feuille de route',              url: `${BASE_URL}/fr/roadmap` },
-    { '@type': 'ListItem', position: 40, name: 'La Boutique',                   url: `${BASE_URL}/fr/boutique` },
-  ],
+  itemListElement: NAVIGATION.map(([name, url], i) => ({ '@type': 'ListItem', position: i + 1, name, url })),
 }
 
 export const aegrynWebSiteSchema = {
@@ -459,8 +356,8 @@ export const aegrynWebSiteSchema = {
   '@id':        `${BASE_URL}/#website`,
   url:          BASE_URL,
   name:         'Aegryn',
-  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'Aegryn Valoriser', 'Aegryn Magazine', 'Aegryn Grade', 'Aegryn Valuation', 'Aegryn Talent', 'Aegryn Alliances', 'CIFSO 5000', 'CIFSO Valuation Index'],
-  description:  'Aegryn, Swiss integrated firm: frame, deliver, accompany, select, stay informed. La Boutique for signature projects. CIFSO 5000 certification and CIFSO Valuation Index as standalone tools.',
+  alternateName: ['Aegryn', 'Aegryn Swiss', 'Aegryn Advisory', 'La Boutique Aegryn', 'Aegryn Magazine', 'Aegryn Grade', 'Aegryn Talent', 'Aegryn Alliances', 'CIFSO 5000', 'CIFSO Valuation Index'],
+  description:  'Aegryn, Swiss firm of entrepreneurs: frame, deliver, accompany, select, stay informed. Eight disciplines for leaders of SMEs and mid-sized companies, and La Boutique for a limited number of signature projects. Rare by selection. Discreet by principle.',
   publisher:    { '@id': `${BASE_URL}/#organization` },
   inLanguage:   ['fr', 'en', 'de', 'it', 'es', 'nl'],
 }

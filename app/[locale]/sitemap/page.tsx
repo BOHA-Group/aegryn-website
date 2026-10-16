@@ -79,6 +79,7 @@ const GROUPS: SitemapGroup[] = [
     links: [
       { labelKey: 'about',        href: '/about' },
       { labelKey: 'culture',      href: '/culture' },
+      { labelKey: 'boutique',     href: '/boutique' },
       { labelKey: 'portfolio',    href: '/boutique/projets' },
       { labelKey: 'roadmap',      href: '/roadmap' },
       { labelKey: 'career',       href: '/career' },

@@ -394,9 +394,20 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
   .mw-grid { left: 0; }
 }
 
+/* La Boutique : accent manuscrit gris dans les titres (Covered By Your Grace, OFL) */
+@font-face {
+  font-family: 'Covered By Your Grace';
+  src: url('/fonts/CoveredByYourGrace/CoveredByYourGrace-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.font-script { font-family: 'Covered By Your Grace', 'Segoe Script', cursive; font-weight: 400; font-size: 1.12em; letter-spacing: 0; color: #adadad; }
+
 /* La Boutique : en-tête de la section Projets signature (défilement horizontal, mêmes traits .mw-*) */
 .mw-section--titled { align-items: flex-end; padding-bottom: clamp(2rem, 8vh, 5rem); }
-.mw-head { position: absolute; inset: 0 0 auto 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: clamp(5rem, 12vh, 8rem) clamp(24px, 5vw, 64px) 0; }
-.mw-head-title { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; font-size: clamp(34px, 5vw, 72px); color: var(--mw-ink); text-wrap: balance; }
+.mw-head { position: absolute; inset: 0 0 auto 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: clamp(5rem, 12vh, 8rem) max(1.5rem, calc((100% - 1280px) / 2 + 1.5rem)) 0; }
+@media (min-width: 768px) { .mw-head { padding-inline: max(3rem, calc((100% - 1280px) / 2 + 3rem)); } }
+.mw-head-title { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; font-size: clamp(26px, 3vw, 44px); color: var(--mw-ink); text-wrap: balance; }
 .mw-head-link { flex-shrink: 0; padding-bottom: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mw-ink); text-decoration: none; transition: color .25s; }
 .mw-head-link:hover { color: var(--mw-red); }

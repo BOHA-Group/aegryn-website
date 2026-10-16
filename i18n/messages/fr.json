@@ -178,7 +178,8 @@
   },
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
-    "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer.",
+    "metaTitle": "Aegryn, cabinet d’entrepreneurs en Suisse | Conseil et projets signature",
+    "metaDescription": "Cabinet d’entrepreneurs ancré en Suisse : huit métiers pour dirigeants de PME et d’ETI, et La Boutique pour des projets signature. Rare par sélection.",
     "sub": "Nous accompagnons les dirigeants de PME et d’entreprises de taille intermédiaire qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Stratégie, finance, technologie, opérations, talents, pilotage de projets : huit métiers réunis dans un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Cadrer\nvos projets.",
@@ -2410,7 +2411,7 @@
   },
   "grade": {
     "meta": {
-      "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
+      "title": "Certification CIFSO 5000, Aegryn | Label qualité indépendant",
       "desc": "Certification CIFSO 5000 par Aegryn : label qualité indépendant pour les organisations qui veulent documenter, prouver et réaliser leur valeur. Cinq dimensions : Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent."
     },
     "index": {
@@ -2898,7 +2899,7 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Certification CIFSO 5000 — Aegryn | Label qualité indépendant",
+      "title": "Certification CIFSO 5000, Aegryn | Label qualité indépendant",
       "desc": "Le protocole Aegryn Grade CIFSO 5000 : cinq dimensions (Code & Architecture, IP & Droits, Finances & Métriques, Sécurité & Souveraineté, Organisation & Talent), définitions des grades AEG ★ à AEG B, sous-codes, formule de scoring, processus d'analyse et principes d'indépendance."
     },
     "label": "Certification CIFSO 5000 — Méthodologie",
@@ -4550,7 +4551,7 @@
     "magDesc": "Pour les fondateurs, dirigeants, investisseurs et familles actionnaires qui bâtissent, financent, acquièrent ou transmettent une organisation : Aegryn Magazine documente chaque trimestre ce que cela signifie vraiment de créer et de réaliser de la valeur, toutes industries, toutes tailles, en Suisse et en Europe.\n\nStratégies décryptées, portraits de décideurs, données de marché et vie de ceux qui construisent quelque chose qui compte.",
     "magFooter": "Quatre éditions par an.",
     "magCta": "Découvrir le magazine",
-    "label": "Nos analyses du marché suisse et européen, des scale-ups aux entreprises de taille intermédiaire en forte croissance.",
+    "label": "Nos analyses du marché suisse et européen, des scale-ups aux entreprises de taille intermédiaire.",
     "title": "Le marché, par ceux qui l’opèrent.",
     "article1Title": "Les 5 points critiques pour préparer une organisation à une levée ou une cession",
     "article1Cat": "Stratégie & Transmission",
@@ -5517,7 +5518,7 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Demande de Certification CIFSO 5000 — Aegryn",
+      "title": "Demande de Certification CIFSO 5000, Aegryn",
       "desc": "Soumettez votre demande de certification CIFSO 5000. Formulaire confidentiel. Réponse sous 5 jours ouvrés."
     },
     "hero": {
@@ -6327,7 +6328,7 @@
     "indexTest": {
       "meta": {
         "title": "Testez votre positionnement dans le CIFSO Valuation Index | Aegryn",
-        "desc": "Répondez au questionnaire CIFSO en cinq dimensions, puis testez votre positionnement dans le CIFSO Valuation Index — filtres réels, données partiellement floutées, aperçu avant abonnement."
+        "desc": "Répondez au questionnaire CIFSO en cinq dimensions, puis testez votre positionnement dans le CIFSO Valuation Index: filtres réels, données partiellement floutées, aperçu avant abonnement."
       },
       "hero": {
         "label": "CIFSO VALUATION INDEX · TEST",
@@ -7287,6 +7288,7 @@
     "talentTransition": "Profils de transition",
     "talentCandidats": "Rejoindre le vivier",
     "workforce": "Données marché du travail",
+    "boutique": "La Boutique",
     "portfolio": "Portfolio",
     "metierStrategy": "Stratégie d'entreprise et Innovation",
     "metierRisk": "Gestion des Risques et Conformité",
@@ -9311,7 +9313,7 @@
     ],
     "page": {
       "meta": {
-        "title": "Nos industries — Aegryn",
+        "title": "Nos industries, Aegryn",
         "desc": "Aegryn accompagne les organisations dans 5 clusters sectoriels : Finance & Capital, Santé & Sciences, Industrie, Commerce & Services, Tech & Secteur public. Conseil stratégique, technologique, M&A, logiciels sur mesure et Certification CIFSO 5000."
       },
       "label": "Nos industries",

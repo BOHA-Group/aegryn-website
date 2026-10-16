@@ -47,6 +47,7 @@ interface Props {
 
 export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, articlesLabel, articlesCta }: Props) {
   const t      = useTranslations('discoverStrip')
+  const tBlog  = useTranslations('discover')
   const locale = useLocale()
   const ref    = useRef<HTMLElement>(null)
   const magRef = useRef<HTMLDivElement>(null)
@@ -197,9 +198,10 @@ export function DiscoverStrip({ magLabel, magTitle, magDesc, magFooter, magCta, 
               title={article.title[lang] ?? article.title.en}
               category={ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
               date={formatDate(article.date)}
+              readTime={`${article.readMin} ${tBlog('readMin')}`}
+              excerpt={article.excerpt[lang] ?? article.excerpt.en}
               image={getImage(article.slug)}
               imagePosition={getBlogImagePosition(getImage(article.slug))}
-              readMore={t('readMore')}
               className="discover-strip-card"
               style={{ opacity: 0 }}
             />

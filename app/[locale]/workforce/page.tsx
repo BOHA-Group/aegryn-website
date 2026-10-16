@@ -1,8 +1,8 @@
 import { Link } from '@/i18n/navigation'
-import Image from 'next/image'
-import { ArrowUpRight, Calendar, Clock } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { generateAegrynMetadata } from '@/lib/seo'
+import { ArticleCard } from '@/components/sections/ArticleCard'
 import { ARTICLES, ARTICLE_CATEGORIES } from '@/data/articles'
 import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK, getBlogImagePosition } from '@/data/blogImages'
 import type { Metadata } from 'next'
@@ -364,43 +364,19 @@ export default async function WorkforcePage({ params }: Props) {
           >
             {t('articles.title')}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
             {relatedArticles.map((article) => (
-              <Link
+              <ArticleCard
                 key={article.slug}
-                href={`/blog/${article.slug}` as never}
-                className="group flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="relative h-40 w-full overflow-hidden">
-                  <Image
-                    src={getImage(article.slug)}
-                    style={{ objectPosition: getBlogImagePosition(getImage(article.slug)) }}
-                    alt={article.title[lang] ?? article.title.en}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink mb-2">
-                    {ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
-                  </p>
-                  <h3 className="font-sans font-semibold text-ag-black text-[14px] tracking-[-0.01em] leading-snug mb-2 group-hover:text-ag-navy transition-colors flex-1">
-                    {article.title[lang] ?? article.title.en}
-                  </h3>
-                  <div className="flex items-center justify-between pt-3">
-                    <div className="flex items-center gap-3 text-ag-gray-light">
-                      <span className="flex items-center gap-1 font-mono text-[10px]">
-                        <Calendar size={10} /> {formatDate(article.date)}
-                      </span>
-                      <span className="flex items-center gap-1 font-mono text-[10px]">
-                        <Clock size={10} /> {article.readMin}
-                      </span>
-                    </div>
-                    <ArrowUpRight size={13} className="text-ag-gray-light group-hover:text-ag-apex-ink transition-colors shrink-0" />
-                  </div>
-                </div>
-              </Link>
+                slug={article.slug}
+                title={article.title[lang] ?? article.title.en}
+                category={ARTICLE_CATEGORIES[article.category][lang] ?? ARTICLE_CATEGORIES[article.category].en}
+                date={formatDate(article.date)}
+                excerpt={article.excerpt[lang] ?? article.excerpt.en}
+                image={getImage(article.slug)}
+                imagePosition={getBlogImagePosition(getImage(article.slug))}
+                fluid
+              />
             ))}
           </div>
         </ScrollReveal>

@@ -7,7 +7,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { generateAegrynMetadata } from '@/lib/seo'
+import { generateAegrynMetadata, generateWebPageSchema, generateServiceSchema, pageUrl } from '@/lib/seo'
 import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
@@ -40,29 +40,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SEGMENT_IMAGES: Record<string, string> = {
-  startup:    '/images/boutique/entrepreneurs-concept.jpg',
+  startup:    '/images/boutique/entrepreneurs-team.jpg',
   funds:      '/images/blog/family-business.jpg',
   enterprise: '/images/blog/office-building.jpg',
-  pme:        '/images/blog/factory-industry.jpg',
+  pme:        '/images/boutique/industrial-bottling.jpg',
 }
 const ARTICLES = [TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE]
 const h2 = { fontSize: 'clamp(26px,3vw,44px)' }
-const eyebrow = 'flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink'
 
 export default async function BoutiquePage({ params }: Props) {
   const { locale } = await params
   const lang = toLang(locale)
-  const [tv, ts, tDiscover] = await Promise.all([
+  const [tv, ts, tBlog] = await Promise.all([
     getTranslations({ locale, namespace: 'about.values' }),
     getTranslations({ locale, namespace: 'homeSegments' }),
-    getTranslations({ locale, namespace: 'discoverStrip' }),
+    getTranslations({ locale, namespace: 'discover' }),
   ])
   const valueKeys = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
   const segments = ts.raw('cards') as { key: string; title: string; desc: string }[]
   const projects = Aegryn_ASSETS.filter(a => a.id !== 'subblink' && !a.internalOnly)
 
+  const url = pageUrl('/boutique', locale)
+  const jsonLd = [
+    generateWebPageSchema({
+      name: BOUTIQUE.metaTitle[lang], description: BOUTIQUE.metaDesc[lang], url,
+      breadcrumbs: [{ name: 'Aegryn', url: pageUrl('/', locale) }, { name: BOUTIQUE.label[lang], url }],
+    }),
+    generateServiceSchema({
+      name: 'La Boutique', description: BOUTIQUE.metaDesc[lang], url,
+      serviceType: 'Signature project framing, delivery and accompaniment', areaServed: 'Europe',
+    }),
+  ]
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero : patchwork vidéo sur le tempo de la musique, sous la barre de navigation transparente */}
       <section data-nav-hero className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden bg-ag-navy" aria-labelledby="boutique-title">
         <HeroPatchwork />
@@ -92,7 +104,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Le concept */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 grid max-w-7xl gap-10 md:grid-cols-12">
-          <h2 className="whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black md:col-span-5" style={h2}>{br(BOUTIQUE.conceptTitle[lang])}</h2>
+          <h2 className="whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black md:col-span-5" style={h2}>{BOUTIQUE.conceptTitleLead[lang]}<span className="font-script block">{BOUTIQUE.conceptTitleAccent[lang]}</span></h2>
           <div className="space-y-6 md:col-span-6 md:col-start-7">
             <p className="text-[18px] leading-relaxed text-ag-black/80">{BOUTIQUE.conceptText[lang]}</p>
             <p className="text-[15px] leading-relaxed text-ag-gray">{BOUTIQUE.participation[lang]}</p>
@@ -105,7 +117,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* La méthode */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <h2 className="max-w-3xl font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.methodTitle[lang]}</h2>
+          <h2 className="max-w-3xl font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.methodTitleLead[lang]} <span className="font-script">{BOUTIQUE.methodTitleAccent[lang]}</span></h2>
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-16">
             {BOUTIQUE.steps.map((s, i) => (
               <div key={i}>
@@ -123,7 +135,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Les valeurs */}
       <section className="bg-ag-off-white py-28 md:py-32">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.valuesTitle[lang]}</h2>
+          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.valuesTitleLead[lang]}<span className="font-script">{BOUTIQUE.valuesTitleAccent[lang]}</span></h2>
           <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {valueKeys.map(k => (
               <div key={k}>
@@ -137,7 +149,12 @@ export default async function BoutiquePage({ params }: Props) {
       </section>
 
       {/* Projets signature : défilement horizontal épinglé, image et titre, clic vers la page du projet */}
-      <ProjectsScroller title={BOUTIQUE.projectsLabel[lang]} allLabel={BOUTIQUE.projectsAll[lang]} projects={projects} />
+      <ProjectsScroller
+        title={<>{BOUTIQUE.projectsTitlePre[lang]}<span className="font-script">{BOUTIQUE.projectsTitleAccent[lang]}</span>{BOUTIQUE.projectsTitlePost[lang]}</>}
+        titleSr={BOUTIQUE.projectsLabel[lang]}
+        allLabel={BOUTIQUE.projectsAll[lang]}
+        projects={projects}
+      />
 
       {/* Les lieux de rencontre, bientôt */}
       <section className="bg-ag-navy py-28 text-white md:py-36">
@@ -151,7 +168,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Pour qui */}
       <section id="pour-qui" className="scroll-mt-24 bg-white py-28 md:py-36">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.forWhoTitle[lang]}</h2>
+          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{BOUTIQUE.forWhoTitlePre[lang]}<span className="font-script">{BOUTIQUE.forWhoTitleAccent[lang]}</span>{BOUTIQUE.forWhoTitlePost[lang]}</h2>
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {segments.map((c, i) => (
               <div key={c.key} className="group relative flex flex-col justify-end overflow-hidden rounded-xl" style={{ minHeight: 'clamp(300px, 28vw, 380px)' }}>
@@ -171,8 +188,7 @@ export default async function BoutiquePage({ params }: Props) {
       {/* Savoir-faire */}
       <section id="savoir-faire" className="scroll-mt-24 bg-white pb-20 md:pb-24">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
-          <p className={eyebrow}><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.label[lang]}</p>
-          <h2 className="mt-4 font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{SF_UI.title[lang]}</h2>
+          <h2 className="font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black" style={h2}>{SF_UI.titleLead[lang]}<span className="font-script">{SF_UI.titleAccent[lang]}</span></h2>
           <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-ag-gray">{SF_UI.intro[lang]}</p>
           <div className="mt-8"><SavoirFaire locale={locale} /></div>
         </div>
@@ -199,9 +215,10 @@ export default async function BoutiquePage({ params }: Props) {
                   title={a.title[lang] ?? a.title.en}
                   category={ARTICLE_CATEGORIES[a.category][lang] ?? ARTICLE_CATEGORIES[a.category].en}
                   date={new Date(a.date).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' })}
+                  readTime={`${a.readMin} ${tBlog('readMin')}`}
+                  excerpt={a.excerpt[lang] ?? a.excerpt.en}
                   image={img}
                   imagePosition={getBlogImagePosition(img)}
-                  readMore={tDiscover('readMore')}
                 />
               )
             })}

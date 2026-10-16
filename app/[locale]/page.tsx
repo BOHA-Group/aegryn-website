@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'hero' })
   return generateAegrynMetadata({
-    title: t('tagline'),
+    title: t('metaTitle'),
     description: t('metaDescription'),
     locale,
   })

@@ -178,7 +178,8 @@
   },
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
-    "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven.",
+    "metaTitle": "Aegryn, ondernemersfirma in Zwitserland | Advies en signatuurprojecten",
+    "metaDescription": "Ondernemersfirma in Zwitserland: acht adviesdisciplines voor leidinggevenden van kmo’s en middelgrote bedrijven, en La Boutique voor signatuurprojecten. Zeldzaam door selectie.",
     "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Strategie, financiën, technologie, operaties, talent, projectleiding: acht vakgebieden in één geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Uw projecten\nkaderen.",
@@ -2149,7 +2150,7 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Certificering CIFSO 5000 — Aegryn | Onafhankelijk Methodologie & Protocol",
+      "title": "Certificering CIFSO 5000, Aegryn | Onafhankelijk Methodologie & Protocol",
       "desc": "Het Aegryn Grade-protocol: CIFSO 5000-kader, definities van AEG ★ tot B, subcodes, analyseproces en onafhankelijkheidsprincipes."
     },
     "label": "Certificering CIFSO 5000 — Methodologie",
@@ -3292,7 +3293,7 @@
   },
   "grade": {
     "meta": {
-      "title": "Certificering CIFSO 5000 — Aegryn | Onafhankelijk kwaliteitslabel",
+      "title": "Certificering CIFSO 5000, Aegryn | Onafhankelijk kwaliteitslabel",
       "desc": "Certificering CIFSO 5000 van Aegryn: onafhankelijk kwaliteitslabel voor organisaties die hun waarde willen documenteren, aantonen en realiseren."
     },
     "index": {
@@ -4525,7 +4526,7 @@
     "magDesc": "Voor oprichters, bestuurders, investeerders en aandeelhoudersfamilies die een organisatie bouwen, financieren, verwerven of overdragen: Aegryn Magazine documenteert elk kwartaal wat het werkelijk betekent om waarde te creëren en te realiseren, in alle sectoren en van elke omvang, in Zwitserland en Europa.\n\nOntcijferde strategieën, portretten van beslissers, marktdata en het leven van wie iets bouwt dat ertoe doet.",
     "magFooter": "Vier edities per jaar.",
     "magCta": "Ontdek het magazine",
-    "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot middelgrote ondernemingen met sterke groei.",
+    "label": "Onze analyses van de Zwitserse en Europese markt, van scale-ups tot middelgrote ondernemingen.",
     "title": "De markt, door degenen die hem bedienen.",
     "article1Title": "De 5 kritieke punten om een organisatie voor te bereiden op een financieringsronde of verkoop",
     "article1Cat": "Strategie & Overdracht",
@@ -5557,7 +5558,7 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Aanvraag Certificering CIFSO 5000 — Aegryn",
+      "title": "Aanvraag Certificering CIFSO 5000, Aegryn",
       "desc": "Dien uw aanvraag voor CIFSO 5000-certificering in. Vertrouwelijk formulier. Reactie binnen 5 werkdagen."
     },
     "hero": {
@@ -6367,7 +6368,7 @@
     "indexTest": {
       "meta": {
         "title": "Test uw positie in de CIFSO Valuation Index | Aegryn",
-        "desc": "Beantwoord de vijfdimensionale CIFSO-vragenlijst en test vervolgens uw positie in de CIFSO Valuation Index — echte filters, deels vervaagde data, preview vóór abonnement."
+        "desc": "Beantwoord de vijfdimensionale CIFSO-vragenlijst en test vervolgens uw positie in de CIFSO Valuation Index: echte filters, deels vervaagde data, preview vóór abonnement."
       },
       "hero": {
         "label": "CIFSO VALUATION INDEX · TEST",
@@ -7327,6 +7328,7 @@
     "talentTransition": "Overgangsprofielen",
     "talentCandidats": "Deelnemen aan de pool",
     "workforce": "Arbeidsmarktdata",
+    "boutique": "La Boutique",
     "portfolio": "Portfolio",
     "metierStrategy": "Bedrijfsstrategie en Innovatie",
     "metierRisk": "Risicobeheer en Compliance",
@@ -9351,7 +9353,7 @@
     ],
     "page": {
       "meta": {
-        "title": "Onze sectoren — Aegryn",
+        "title": "Onze sectoren, Aegryn",
         "desc": "Aegryn begeleidt organisaties in 5 sectoriale clusters: Financiën, Gezondheidszorg, Industrie, Handel & Diensten, Technologie. Strategisch, technologisch, M&A-advies, maatwerksoftware en CIFSO 5000-certificering."
       },
       "label": "Onze sectoren",

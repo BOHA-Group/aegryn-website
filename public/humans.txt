@@ -7,7 +7,7 @@ Location: Switzerland
 Built with Next.js, Tailwind CSS, GSAP and next-intl.
 
 /* SITE */
-Last update: 2026/09
+Last update: 2026/10
 Language: FR / EN / DE / IT / ES / NL
 Doctype: HTML5
 IDE: Windsurf

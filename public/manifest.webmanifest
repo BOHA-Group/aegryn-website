@@ -1,7 +1,7 @@
 {
-  "name": "Aegryn — Swiss Advisory Firm",
+  "name": "Aegryn, Swiss firm of entrepreneurs",
   "short_name": "Aegryn",
-  "description": "Aegryn is a Swiss integrated advisory group helping founders, boards and investors create, document and realise the value of their organisation. CIFSO 5000 certification, CIFSO Valuation Index, advisory, talent, expert network and Aegryn Magazine. Switzerland & Europe.",
+  "description": "Aegryn is a Swiss firm of entrepreneurs: eight advisory disciplines for leaders of SMEs and mid-sized companies, and La Boutique for a limited number of signature projects. Frame, deliver, accompany, select, stay informed. Rare by selection. Discreet by principle.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F8FAFC",
@@ -11,9 +11,9 @@
   "scope": "/",
   "categories": ["business", "technology", "finance"],
   "shortcuts": [
-    { "name": "Valorisation", "url": "/fr/valuation", "description": "Outil de valorisation illustratif gratuit" },
-    { "name": "Advisory", "url": "/fr/advisory", "description": "Cinq piliers de conseil intégré" },
-    { "name": "Aegryn Grade", "url": "/fr/grade", "description": "Certification CIFSO v4.0" },
+    { "name": "La Boutique", "url": "/fr/boutique", "description": "Projets signature" },
+    { "name": "Nos huit métiers", "url": "/fr/advisory", "description": "Conseil intégré pour dirigeants de PME et d'ETI" },
+    { "name": "Valorisation", "url": "/fr/valuation", "description": "CIFSO Valuation Index et estimation illustrative" },
     { "name": "Contact", "url": "/fr/contact", "description": "Nous contacter" }
   ],
   "icons": [

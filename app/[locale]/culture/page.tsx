@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Check, X } from 'lucide-react'
-import { generateAegrynMetadata } from '@/lib/seo'
+import { generateAegrynMetadata, generateWebPageSchema, pageUrl } from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal } from '@/components/animations/WaveReveal'
 
@@ -27,8 +27,15 @@ export default async function CulturePage({ params }: Props) {
   const doItems = t.raw('result.do') as string[]
   const avoidItems = t.raw('result.avoid') as string[]
 
+  const url = pageUrl('/culture', locale)
+  const jsonLd = generateWebPageSchema({
+    name: t('metaTitle'), description: t('metaDesc'), url,
+    breadcrumbs: [{ name: 'Aegryn', url: pageUrl('/', locale) }, { name: t('metaTitle'), url }],
+  })
+
   return (
     <main className="bg-ag-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="pb-20 pt-24">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <p className={LABEL}><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('label')}</p>

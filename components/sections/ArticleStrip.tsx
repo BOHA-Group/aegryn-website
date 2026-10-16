@@ -41,8 +41,8 @@ export function ArticleStrip({ children }: { children: React.ReactNode }) {
     return () => { el?.removeEventListener('scroll', update); window.removeEventListener('resize', update); ro?.disconnect() }
   }, [update])
 
-  const scrollBy = (dir: 1 | -1) => ref.current?.scrollBy({ left: dir * 340, behavior: 'smooth' })
-  const btn = 'absolute top-[88px] z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ag-border bg-ag-white text-ag-black shadow-md transition-all hover:bg-ag-black hover:text-white md:flex'
+  const scrollBy = (dir: 1 | -1) => ref.current?.scrollBy({ left: dir * 440, behavior: 'smooth' })
+  const btn = 'absolute top-[105px] z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ag-border bg-ag-white text-ag-black shadow-md transition-all hover:bg-ag-black hover:text-white md:flex'
 
   return (
     <div className="relative">

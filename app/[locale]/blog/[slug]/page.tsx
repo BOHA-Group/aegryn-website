@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
-import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
+import { Calendar, Clock } from 'lucide-react'
 import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
 import { generateArticleSchema } from '@/lib/seo'
@@ -36,8 +36,8 @@ const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
 }
 
 const BASE_ARTICLE_KEYWORDS = [
-  'Aegryn', 'actifs tech certifiés', 'Suisse', 'cession SaaS', 'transaction privée',
-  'Engineered to Last', 'certification indépendante', 'grade actif numérique',
+  'Aegryn', 'Aegryn Magazine', 'cabinet d\'entrepreneurs', 'Suisse', 'Europe',
+  'certification indépendante', 'grade actif numérique',
 ]
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -267,7 +267,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="max-w-3xl mx-auto">
           <Link
             href="/blog"
-            className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-gray-light hover:text-ag-black transition-colors inline-block"
+            className="inline-flex items-center gap-2 rounded-full border border-ag-border px-5 py-2.5 font-mono text-[11px] tracking-[0.18em] uppercase text-ag-black hover:bg-ag-black hover:text-white transition-colors"
           >
             {t('backToDiscover')}
           </Link>
@@ -275,36 +275,25 @@ export default async function ArticlePage({ params }: Props) {
       </section>
 
       {/* CTA Newsletter — inscription sans compte */}
-      <section className="py-12 px-6 border-t border-ag-border bg-ag-navy">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div>
-            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex mb-1">
-              Insights Aegryn
-            </p>
-            <p className="font-sans font-semibold text-white text-[16px] leading-snug max-w-sm">
-              Recevez chaque semaine les analyses Aegryn — M&amp;A, valorisation, tech, CIFSO.
-            </p>
+      <section className="py-12 px-6 border-t border-ag-border">
+        <div className="max-w-3xl mx-auto">
+          <div className="rounded-2xl border border-ag-border bg-white p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ag-apex-ink mb-2">
+                {t('newsletterLabel')}
+              </p>
+              <p className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em] mb-1">
+                {t('newsletterTitle')}
+              </p>
+              <p className="font-sans text-[15px] text-ag-gray">
+                {t('newsletterDesc')}
+              </p>
+            </div>
+            <NewsletterSubscribeForm locale={locale} />
           </div>
-          <NewsletterSubscribeForm locale={locale} />
         </div>
       </section>
 
-      {/* Related CTA */}
-      <section className="py-16 px-6 border-t border-ag-border bg-ag-off-white">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <p className="font-sans font-semibold text-ag-black text-[17px] max-w-md">
-            {t('ctaTeaser')}
-          </p>
-          <div className="flex gap-3 shrink-0">
-            <Link href="/grade" className="rounded-lg inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:bg-ag-navy-mid transition-colors">
-              {t('ctaGrade')} <ArrowUpRight size={12} />
-            </Link>
-            <Link href={{ pathname: '/', hash: 'accompagner' }} className="rounded-lg inline-flex items-center gap-2 border border-ag-border text-ag-gray font-mono text-[11px] tracking-[0.14em] uppercase px-5 py-3 hover:border-ag-black hover:text-ag-black transition-all">
-              {t('ctaTransaction')}
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   )
 }

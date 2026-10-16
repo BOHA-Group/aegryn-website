@@ -93,3 +93,11 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 ## Culture et valeurs
 
 - `/culture` (fr `/culture-et-valeurs`) : page blanche sans hero navy, dans « Qui sommes-nous » après « À propos ». Elle complète `/about` (identité, ADN) et `/career` (qui renvoie vers elle) : cabinet d'entrepreneurs, résultat plutôt que documents d'archive, qualité des relations, vision partagée, travail flexible. Pas de promesse d'avantages (rémunération, programmes internes) : les textes LinkedIn restent indicatifs.
+
+## SEO, GEO et LLM
+
+- Sitemap : `app/sitemap.ts` (routes statiques × 6 locales, `CONTENT_UPDATED` à mettre à jour après une refonte de contenu). Ne jamais y mettre une page `noindex` (magazine cover/flipbook, success, verify/[code]).
+- `app/robots.ts` : zones privées (`/api`, `/admin`, `/client`, `/nda`, `/annuaire`) exclues, crawlers IA autorisés ; `next-sitemap.config.js` n'est plus utilisé.
+- JSON-LD : Organization/WebSite/navigation dans `lib/seo.ts` (injectés par `app/[locale]/layout.tsx`) ; pages Boutique, Conseil et Culture ajoutent WebPage/Service via `generateWebPageSchema`/`generateServiceSchema`/`pageUrl`.
+- LLM : `public/llms.txt` (index court), `llms-full.txt` (contexte complet), `llms-updated.txt` (changements récents). À réviser à chaque changement de positionnement, de métiers ou d'URL. Même règles de style (pas de tiret cadratin, pas de vocabulaire de transaction financière).
+- Titre/description de l'accueil : clés `hero.metaTitle` et `hero.metaDescription` (6 locales).

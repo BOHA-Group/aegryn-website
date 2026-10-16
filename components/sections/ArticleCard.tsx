@@ -1,36 +1,35 @@
 import Image from 'next/image'
 import type { CSSProperties } from 'react'
 import { Link } from '@/i18n/navigation'
-import { ArrowUpRight } from 'lucide-react'
+
+const clamp = (n: number): CSSProperties => ({ display: '-webkit-box', WebkitLineClamp: n, WebkitBoxOrient: 'vertical', overflow: 'hidden' })
 
 /**
- * Affiche d'article du bas de page : gabarit unique partagé par l'accueil du cabinet
- * (DiscoverStrip) et par l'accueil de La Boutique, pour garder les mêmes dimensions.
- * Largeur fixe 280 px (320 px dès sm) : les affiches s'alignent en bande, sans étirement.
+ * Fiche d'article : image arrondie, méta (catégorie en pastille, date, durée de lecture),
+ * titre et extrait sous l'image, sans cadre. Gabarit unique pour tous les emplacements
+ * d'articles : bandes défilantes (accueil cabinet, accueil La Boutique, largeur fixe
+ * ~196 px soit six fiches en vue) et grilles de pages (`fluid`, largeur de la colonne).
+ * `titleLines`/`excerptLines` bornent le texte pour uniformiser la hauteur des fiches.
  */
-export function ArticleCard({ slug, title, category, date, image, imagePosition = 'center', readMore, className = '', style }: {
-  slug: string; title: string; category: string; date: string; image: string; imagePosition?: string; readMore: string; className?: string; style?: CSSProperties
+export function ArticleCard({ slug, title, category, date, readTime, excerpt, image, imagePosition = 'center', fluid = false, titleLines = 3, excerptLines = 3, className = '', style }: {
+  slug: string; title: string; category: string; date: string; readTime?: string; excerpt?: string; image: string; imagePosition?: string; fluid?: boolean; titleLines?: number; excerptLines?: number; className?: string; style?: CSSProperties
 }) {
   return (
     <Link
       href={`/blog/${slug}` as never}
-      className={`${className} group snap-start shrink-0 w-[280px] sm:w-[320px] flex flex-col rounded-2xl overflow-hidden border border-ag-border bg-ag-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300`}
+      className={`${className} group ${fluid ? 'w-full' : 'snap-start shrink-0 w-[200px] md:w-[196px]'} flex flex-col`}
       style={style}
     >
-      <div className="relative h-44 w-full overflow-hidden shrink-0">
-        <Image src={image} style={{ objectPosition: imagePosition }} alt={title} fill sizes="320px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: '46 / 49' }}>
+        <Image src={image} style={{ objectPosition: imagePosition }} alt={title} fill sizes={fluid ? '(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw' : '200px'} className="object-cover transition-transform duration-500 group-hover:scale-105" />
       </div>
-      <div className="p-6 flex flex-col gap-3 flex-1">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ag-apex-ink">{category}</span>
-          <span className="text-ag-gray-light text-[10px]">·</span>
-          <span className="font-sans text-[10px] text-ag-gray-light">{date}</span>
-        </div>
-        <p className="font-sans font-semibold text-ag-black leading-[1.4] group-hover:text-ag-navy transition-colors flex-1" style={{ fontSize: 'clamp(14px,1.2vw,16px)' }}>{title}</p>
-        <span className="mt-auto inline-flex items-center gap-1.5 font-sans font-semibold text-[11px] tracking-[0.12em] uppercase text-ag-gray group-hover:text-ag-black transition-colors">
-          {readMore} <ArrowUpRight size={11} />
-        </span>
+      <div className="mt-4 flex items-center gap-x-2 gap-y-1.5 flex-wrap">
+        <span className="rounded-full bg-ag-light-gray px-2.5 py-1 font-sans text-[10px] font-semibold text-ag-black">{category}</span>
+        <span className="font-sans text-[10px] text-ag-gray-light">{date}</span>
+        {readTime && <span className="font-sans text-[10px] text-ag-gray-light">· {readTime}</span>}
       </div>
+      <p className="mt-2 font-sans font-bold text-ag-black leading-[1.3] transition-colors group-hover:text-ag-navy" style={{ fontSize: 'clamp(13px,1.05vw,15px)', ...clamp(titleLines) }}>{title}</p>
+      {excerpt && <p className="mt-1.5 font-sans text-[12px] leading-relaxed text-ag-gray" style={clamp(excerptLines)}>{excerpt}</p>}
     </Link>
   )
 }

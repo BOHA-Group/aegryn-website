@@ -6,6 +6,7 @@ import { routing }     from '@/i18n/routing'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
 const LOCALES = routing.locales
+const CONTENT_UPDATED = new Date('2026-10-16')
 
 /* Chemin interne → chemin public localisé (pathnames next-intl) */
 const PATHNAMES = routing.pathnames as Record<string, string | Record<string, string>>
@@ -17,8 +18,9 @@ function lp(path: string, locale: string): string {
 const STATIC_ROUTES = [
   // ── Core ─────────────────────────────────────────────────────────────────────
   { path: '',                                    priority: 1.0,  changeFrequency: 'weekly'  as const },
+  { path: '/boutique',                           priority: 1.0,  changeFrequency: 'monthly' as const },
   { path: '/about',                              priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/culture',                            priority: 0.6,  changeFrequency: 'monthly' as const },
+  { path: '/culture',                            priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/contact',                            priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/blog',                               priority: 0.8,  changeFrequency: 'weekly'  as const },
   { path: '/workforce',                          priority: 0.8,  changeFrequency: 'monthly' as const },
@@ -31,7 +33,7 @@ const STATIC_ROUTES = [
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },
-  // ── Franchir — cycles de vie (intro en section accueil #accompagner) ────────────
+  // ── Accompagner — cycles de vie (intro en section accueil #accompagner) ─────────
   { path: '/accompagner/lancement',                priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/accompagner/croissance',               priority: 0.9,  changeFrequency: 'monthly' as const },
   { path: '/accompagner/restructuration',          priority: 0.9,  changeFrequency: 'monthly' as const },
@@ -46,16 +48,17 @@ const STATIC_ROUTES = [
   { path: '/grade/submit',                       priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Valuation / CIFSO Valuation Index ────────────────────────────────────────
   { path: '/valuation',                          priority: 1.0,  changeFrequency: 'weekly'  as const },
+  { path: '/valuation/index',                    priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Advisory ─────────────────────────────────────────────────────────────────
   { path: '/advisory',                           priority: 0.9,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/technology',                priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/strategy',                  priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/operations-excellence',   priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/finance-performance',    priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/project-program-management', priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/risk-compliance',           priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/talent-organization',       priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/advisory/ma',                        priority: 0.8,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/technology',                priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/strategy',                  priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/operations-excellence',   priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/finance-performance',    priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/project-program-management', priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/risk-compliance',           priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/talent-organization',       priority: 0.9,  changeFrequency: 'monthly' as const },
+  { path: '/advisory/ma',                        priority: 0.9,  changeFrequency: 'monthly' as const },
   // ── Talent ───────────────────────────────────────────────────────────────────
   { path: '/talent',                             priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/talent/entreprises',                 priority: 0.7,  changeFrequency: 'monthly' as const },
@@ -64,15 +67,13 @@ const STATIC_ROUTES = [
   // ── Network ──────────────────────────────────────────────────────────────────
   // ── Assets & Portfolio ───────────────────────────────────────────────────────
   { path: '/assets',                             priority: 0.8,  changeFrequency: 'weekly'  as const },
-  { path: '/boutique/projets',                          priority: 0.7,  changeFrequency: 'monthly' as const },
+  { path: '/boutique/projets',                   priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Services ─────────────────────────────────────────────────────────────────
   { path: '/services/acquisition-support',       priority: 0.8,  changeFrequency: 'monthly' as const },
   // ── Magazine ─────────────────────────────────────────────────────────────────
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/issue-01/cover',            priority: 0.7,  changeFrequency: 'monthly' as const },
   { path: '/magazine/issue-01/web',              priority: 0.7,  changeFrequency: 'monthly' as const },
-  { path: '/magazine/issue-01/flipbook',         priority: 0.6,  changeFrequency: 'monthly' as const },
   // ── Help / FAQ ───────────────────────────────────────────────────────────────
   { path: '/help/faq',                           priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Legal ────────────────────────────────────────────────────────────────────
@@ -84,13 +85,13 @@ const STATIC_ROUTES = [
   { path: '/data-protection-notice-neediu',      priority: 0.2,  changeFrequency: 'yearly'  as const },
 ]
 
-/* Exclus volontairement : /client/* (privé), /grade/submit/success (confirmation),
+/* Exclus volontairement : /client/* (privé), /nda/* (liens personnels), /annuaire (interne),
+   /grade/submit/success (confirmation), /magazine/issue-01/cover et /flipbook (noindex),
    /verify/[code] (une URL par certificat),
    /magazine/report* (301 → /magazine/issue-01), /platform, /advisory/ai,
    /valuation/guide (routes inexistantes → 404).
    /magazine/issue-01/web est conservé : c'est l'édition web du magazine (lecture
-   article par article), qui redirige vers son fichier HTML statique une fois
-   l'accès public actif (canAccessIssue) — même logique que /cover et /flipbook. */
+   article par article). */
 
 function pushLocalized(
   entries: MetadataRoute.Sitemap,
@@ -116,7 +117,7 @@ function pushLocalized(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
-  const now = new Date()
+  const now = CONTENT_UPDATED
 
   // Routes statiques × 6 locales (slugs localisés via routing.pathnames)
   for (const route of STATIC_ROUTES) {

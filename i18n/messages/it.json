@@ -178,7 +178,8 @@
   },
   "hero": {
     "tagline": "Società integrata, radicata in Svizzera.",
-    "metaDescription": "Aegryn, società integrata radicata in Svizzera: inquadrare, realizzare, accompagnare ogni ciclo, selezionare talenti, informarsi.",
+    "metaTitle": "Aegryn, studio di imprenditori in Svizzera | Consulenza e progetti signature",
+    "metaDescription": "Studio di imprenditori radicato in Svizzera: otto discipline per dirigenti di PMI e medie imprese, e La Boutique per progetti signature. Raro per selezione.",
     "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Strategia, finanza, tecnologia, operazioni, talenti, guida dei progetti: otto mestieri riuniti in una società integrata, radicata in Svizzera.",
     "phrases": [
       "Inquadrare\ni vostri progetti.",
@@ -2149,7 +2150,7 @@
   },
   "gradingSystem": {
     "meta": {
-      "title": "Certificazione CIFSO 5000 — Aegryn | Marchio di qualità indipendente",
+      "title": "Certificazione CIFSO 5000, Aegryn | Marchio di qualità indipendente",
       "desc": "Il protocollo Aegryn Grade: framework CIFSO 5000, definizioni dei gradi AEG ★ - B, sotto-codici, processo di analisi e principi di indipendenza."
     },
     "label": "Certificazione CIFSO 5000 — Metodologia",
@@ -3292,7 +3293,7 @@
   },
   "grade": {
     "meta": {
-      "title": "Certificazione CIFSO 5000 — Aegryn | Marchio di qualità indipendente",
+      "title": "Certificazione CIFSO 5000, Aegryn | Marchio di qualità indipendente",
       "desc": "Certificazione CIFSO 5000 di Aegryn: marchio di qualità indipendente per le organizzazioni che vogliono documentare, dimostrare e realizzare il proprio valore."
     },
     "index": {
@@ -4525,7 +4526,7 @@
     "magDesc": "Per fondatori, dirigenti, investitori e famiglie azioniste che costruiscono, finanziano, acquisiscono o trasmettono un'organizzazione: Aegryn Magazine documenta ogni trimestre cosa significa davvero creare e realizzare valore, in tutti i settori e dimensioni, in Svizzera e in Europa.\n\nStrategie decifrate, ritratti di decisori, dati di mercato e la vita di chi costruisce qualcosa che conta.",
     "magFooter": "Quattro edizioni all'anno.",
     "magCta": "Scopri la rivista",
-    "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up alle imprese di medie dimensioni in forte crescita.",
+    "label": "Le nostre analisi del mercato svizzero ed europeo, dalle scale-up alle imprese di medie dimensioni.",
     "title": "Il mercato, da chi lo opera.",
     "article1Title": "I 5 punti critici per preparare un'organizzazione a una raccolta fondi o una cessione",
     "article1Cat": "Strategia & Trasmissione",
@@ -5542,7 +5543,7 @@
   },
   "gradeSubmit": {
     "meta": {
-      "title": "Richiesta di Certificazione CIFSO 5000 — Aegryn",
+      "title": "Richiesta di Certificazione CIFSO 5000, Aegryn",
       "desc": "Invia la tua richiesta di certificazione CIFSO 5000. Modulo riservato. Risposta entro 5 giorni lavorativi."
     },
     "hero": {
@@ -6352,7 +6353,7 @@
     "indexTest": {
       "meta": {
         "title": "Testate il vostro posizionamento nel CIFSO Valuation Index | Aegryn",
-        "desc": "Rispondete al questionario CIFSO in cinque dimensioni, poi testate il vostro posizionamento nel CIFSO Valuation Index — filtri reali, dati parzialmente sfocati, anteprima prima dell'abbonamento."
+        "desc": "Rispondete al questionario CIFSO in cinque dimensioni, poi testate il vostro posizionamento nel CIFSO Valuation Index: filtri reali, dati parzialmente sfocati, anteprima prima dell'abbonamento."
       },
       "hero": {
         "label": "CIFSO VALUATION INDEX · TEST",
@@ -7312,6 +7313,7 @@
     "talentTransition": "Profili di transizione",
     "talentCandidats": "Entrare nel pool",
     "workforce": "Dati mercato del lavoro",
+    "boutique": "La Boutique",
     "portfolio": "Portfolio",
     "metierStrategy": "Strategia Aziendale e Innovazione",
     "metierRisk": "Gestione del Rischio e Conformità",
@@ -9351,7 +9353,7 @@
     ],
     "page": {
       "meta": {
-        "title": "I nostri settori — Aegryn",
+        "title": "I nostri settori, Aegryn",
         "desc": "Aegryn accompagna le organizzazioni in 5 cluster settoriali: Finanza, Sanità, Industria, Commercio & Servizi, Tecnologia. Consulenza strategica, tecnologica, M&A, software su misura e Certificazione CIFSO 5000."
       },
       "label": "I nostri settori",

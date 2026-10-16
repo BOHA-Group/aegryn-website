@@ -33,7 +33,8 @@ export const BOUTIQUE = {
     'Wij kaderen, realiseren en begeleiden een beperkt aantal signatuurprojecten. Zeldzaam door selectie. Discreet uit principe.'),
   scroll: L('Défiler', 'Scroll', 'Scrollen', 'Desplazar', 'Scorri', 'Scrollen'),
 
-  conceptTitle: L('Peu de projets. Tout de bout en bout.', 'Few projects. End to end.', 'Wenige Projekte. Von Anfang bis Ende.', 'Pocos proyectos. De principio a fin.', 'Pochi progetti. Dall’inizio alla fine.', 'Weinig projecten. Van begin tot eind.'),
+  conceptTitleLead: L('Peu de projets.', 'Few projects.', 'Wenige Projekte.', 'Pocos proyectos.', 'Pochi progetti.', 'Weinig projecten.'),
+  conceptTitleAccent: L('Tout de bout en bout.', 'End to end.', 'Von Anfang bis Ende.', 'De principio a fin.', 'Dall’inizio alla fine.', 'Van begin tot eind.'),
   conceptText: L(
     'Autour de chaque projet signature, un interlocuteur nommé et les meilleurs experts, du concept à la réception, puis dans la durée. Nous traitons un nombre limité de mandats à la fois ; rien n’est dévoilé sans votre accord.',
     'Around each signature project, a named contact and the best experts, from concept to delivery, then over time. We handle a limited number of mandates at a time; nothing is disclosed without your agreement.',
@@ -56,7 +57,8 @@ export const BOUTIQUE = {
     'Ogni progetto emblematico ha la sua storia. Aiutiamo a scriverla.',
     'Elk emblematisch project heeft zijn eigen verhaal. Wij helpen het te schrijven.'),
 
-  methodTitle: L('Cadrer. Réaliser. Accompagner.', 'Frame. Deliver. Accompany.', 'Rahmen setzen. Umsetzen. Begleiten.', 'Encuadrar. Realizar. Acompañar.', 'Inquadrare. Realizzare. Accompagnare.', 'Kaderen. Realiseren. Begeleiden.'),
+  methodTitleLead: L('Cadrer. Réaliser.', 'Frame. Deliver.', 'Rahmen setzen. Umsetzen.', 'Encuadrar. Realizar.', 'Inquadrare. Realizzare.', 'Kaderen. Realiseren.'),
+  methodTitleAccent: L('Accompagner.', 'Accompany.', 'Begleiten.', 'Acompañar.', 'Accompagnare.', 'Begeleiden.'),
   steps: [
     { title: L('Cadrer', 'Frame', 'Rahmen setzen', 'Encuadrar', 'Inquadrare', 'Kaderen'),
       desc: L('Du concept au projet exécutable : faisabilité, marché, business plan, marque, cadre légal.', 'From concept to executable project: feasibility, market, business plan, brand, legal framework.', 'Vom Konzept zum umsetzbaren Projekt: Machbarkeit, Markt, Businessplan, Marke, rechtlicher Rahmen.', 'Del concepto al proyecto ejecutable: viabilidad, mercado, plan de negocio, marca, marco legal.', 'Dal concept al progetto eseguibile: fattibilità, mercato, business plan, marchio, quadro legale.', 'Van concept naar uitvoerbaar project: haalbaarheid, markt, businessplan, merk, juridisch kader.') },
@@ -66,8 +68,12 @@ export const BOUTIQUE = {
       desc: L('Dans la durée : lancement, croissance, repositionnement, reprise, transmission.', 'Over time: launch, growth, repositioning, takeover, handover.', 'Dauerhaft: Start, Wachstum, Neupositionierung, Übernahme, Übergabe.', 'En el tiempo: lanzamiento, crecimiento, reposicionamiento, adquisición, transmisión.', 'Nel tempo: lancio, crescita, riposizionamento, subentro, trasmissione.', 'In de tijd: lancering, groei, herpositionering, overname, overdracht.') },
   ],
 
-  valuesTitle: L('Nos valeurs', 'Our values', 'Unsere Werte', 'Nuestros valores', 'I nostri valori', 'Onze waarden'),
+  valuesTitleLead: L('Nos ', 'Our ', 'Unsere ', 'Nuestros ', 'I nostri ', 'Onze '),
+  valuesTitleAccent: L('valeurs', 'values', 'Werte', 'valores', 'valori', 'waarden'),
   projectsLabel: L('Projets signature', 'Signature projects', 'Signature-Projekte', 'Proyectos insignia', 'Progetti signature', 'Signatuurprojecten'),
+  projectsTitlePre: L('Projets ', '', '', 'Proyectos ', 'Progetti ', ''),
+  projectsTitleAccent: L('signature', 'Signature', 'Signature-Projekte', 'insignia', 'signature', 'Signatuurprojecten'),
+  projectsTitlePost: L('', ' projects', '', '', '', ''),
   projectsAll: L('Voir le portfolio', 'See the portfolio', 'Portfolio ansehen', 'Ver el portfolio', 'Vedere il portfolio', 'Portfolio bekijken'),
   portraitCaption: L(
     'Du premier rendez-vous à la remise des clés, chaque détail compte.',
@@ -79,8 +85,10 @@ export const BOUTIQUE = {
   placesLabel: L('Les lieux de rencontre', 'Meeting places', 'Begegnungsorte', 'Los lugares de encuentro', 'I luoghi d’incontro', 'Ontmoetingsplekken'),
   placesTitle: L('Des lieux d’exception, pour se retrouver autrement.', 'Exceptional places, to meet differently.', 'Außergewöhnliche Orte, um sich anders zu begegnen.', 'Lugares excepcionales, para reunirse de otra manera.', 'Luoghi eccezionali, per ritrovarsi in modo diverso.', 'Uitzonderlijke plekken om elkaar anders te ontmoeten.'),
   soon: L('Bientôt', 'Coming soon', 'Demnächst', 'Próximamente', 'Prossimamente', 'Binnenkort'),
-  forWhoTitle: L('Pour qui', 'Who it is for', 'Für wen', 'Para quién', 'Per chi', 'Voor wie'),
-  magazineLabel: L('Magazine · La Boutique', 'Magazine · La Boutique', 'Magazin · La Boutique', 'Magazine · La Boutique', 'Magazine · La Boutique', 'Magazine · La Boutique'),
+  forWhoTitlePre: L('Pour ', '', 'Für ', 'Para ', 'Per ', 'Voor '),
+  forWhoTitleAccent: L('qui', 'Who', 'wen', 'quién', 'chi', 'wie'),
+  forWhoTitlePost: L('', ' it is for', '', '', '', ''),
+  magazineLabel: L('Articles de La Boutique', 'Articles from La Boutique', 'Artikel von La Boutique', 'Artículos de La Boutique', 'Articoli de La Boutique', 'Artikelen van La Boutique'),
   magazineTitle: L('Tendances, projets, bâtisseurs.', 'Trends, projects, builders.', 'Trends, Projekte, Macher.', 'Tendencias, proyectos, constructores.', 'Tendenze, progetti, costruttori.', 'Trends, projecten, bouwers.'),
   magazineLink: L('Voir tous les articles', 'See all articles', 'Alle Artikel ansehen', 'Ver todos los artículos', 'Vedere tutti gli articoli', 'Alle artikelen bekijken'),
   submitTitle: L('Un projet à confier ? Échangeons en toute confidentialité.', 'A project to entrust? Let’s talk in full confidence.', 'Ein Projekt anzuvertrauen? Sprechen wir vertraulich.', '¿Un proyecto que confiarnos? Hablemos con total confidencialidad.', 'Un progetto da affidarci? Parliamone in piena riservatezza.', 'Een project toe te vertrouwen? Laten we vertrouwelijk praten.'),
