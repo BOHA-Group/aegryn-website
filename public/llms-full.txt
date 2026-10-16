@@ -58,7 +58,7 @@ Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblemat
 - Certification-ready: complete documentation from day one
 - Timeline: 10-16 weeks
 - Range: CHF 15,000-150,000+
-- Pages: /services/build, /ce-que-nous-construisons (fr), /what-we-build (en), /was-wir-bauen (de), /lo-que-construimos (es), /cosa-costruiamo (it), /wat-we-bouwen (nl)
+- Pages: /advisory/technology, /ce-que-nous-construisons (fr), /what-we-build (en), /was-wir-bauen (de), /lo-que-construimos (es), /cosa-costruiamo (it), /wat-we-bouwen (nl)
 
 ---
 
@@ -296,7 +296,7 @@ Incorporated: Aegryn, Switzerland
 | Assets | /fr/assets | Proprietary ecosystem |
 | Asset detail | /fr/boutique/projets/[slug] | Per-project page |
 | Portfolio | /fr/boutique/projets | Group participations |
-| Build Services | /fr/services/build | Custom build |
+| Build Services | /fr/advisory/technology | Custom build |
 | Acquisition Support | /fr/services/acquisition-support | Post-deal services |
 | Magazine | /fr/magazine | Magazine hub (English) |
 | Magazine Jan 2027 | /fr/magazine/issue-01 | Edition — cover, web reader, flipbook |

@@ -149,6 +149,9 @@ const nextConfig: NextConfig = {
       { source: '/:locale(fr|en|de|es|it|nl)/assets/:slug(neediu|movtoo|primiom|hobconnect|heritix|chrosium|insertdry)', destination: '/:locale/boutique/projets/:slug', permanent: true },
       { source: '/boutique/projets/subblink',            destination: '/assets/subblink',                permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/boutique/projets/subblink', destination: '/:locale/assets/subblink',       permanent: true },
+      /* Solutions sur mesure : page fusionnée dans Technologie et Souveraineté (bloc Mettre en œuvre) */
+      { source: '/services/build',                       destination: '/advisory/technology#mettre-en-oeuvre',            permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)/services/build', destination: '/:locale/advisory/technology#mettre-en-oeuvre', permanent: true },
       /* Catalogue, transactions et enchères archivés (_archive/legacy-transact) : tout /transact/* renvoie à l'accueil.
          Les redirections spécifiques ci-dessus (how-to-sell, how-to-buy, bid-models) passent en premier. */
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },

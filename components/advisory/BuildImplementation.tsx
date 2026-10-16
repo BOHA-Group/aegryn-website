@@ -1,51 +1,19 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
+/**
+ * Mise en œuvre de la page Technologie et Souveraineté : reprend, hors hero, l'ancienne page
+ * « Solutions sur mesure » (/services/build), désormais fusionnée ici (contenu, animations, images).
+ */
 import { getTranslations } from 'next-intl/server'
-import { generateAegrynMetadata } from '@/lib/seo'
 import { Link } from '@/i18n/navigation'
-import type { ComponentProps } from 'react'
-
-type LinkHref = ComponentProps<typeof Link>['href']
 import { Check, X } from 'lucide-react'
 import { VideoScrollGrow } from '@/components/sections/VideoScrollGrow'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
-import { WaveReveal }   from '@/components/animations/WaveReveal'
+import { IMPLEMENT_UI, type Lang } from '@/content/advisory/implement'
 
-const BASE = 'https://aegryn.com'
 
-type Props = { params: Promise<{ locale: string }> }
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params
+export async function BuildImplementation({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'build_service' })
-  const base = generateAegrynMetadata({
-    title:       t('meta.title'),
-    description: t('meta.desc'),
-    path:        '/services/build',
-    locale,
-    keywords:    ['solutions logicielles sur mesure', 'bespoke software', 'maîtrise d\u2019œuvre numérique', 'souveraineté numérique', 'build to operate'],
-  })
-  return {
-    ...base,
-    alternates: {
-      canonical: `${BASE}/${locale}/services/build`,
-      languages: {
-        fr:          `${BASE}/fr/services/build`,
-        en:          `${BASE}/en/services/build`,
-        de:          `${BASE}/de/services/build`,
-        es:          `${BASE}/es/services/build`,
-        it:          `${BASE}/it/services/build`,
-        nl:          `${BASE}/nl/services/build`,
-        'x-default': `${BASE}/en/services/build`,
-      },
-    },
-  }
-}
-
-export default async function BuildServicePage({ params }: Props) {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'build_service' })
+  const lang = (['fr', 'en', 'de', 'es', 'it', 'nl'].includes(locale) ? locale : 'en') as Lang
 
   const marketComparisonAgency  = t.raw('marketComparison.agencyItems') as string[]
   const marketComparisonAegryn  = t.raw('marketComparison.aegrynItems') as string[]
@@ -56,45 +24,12 @@ export default async function BuildServicePage({ params }: Props) {
   const sovereigntyPillars      = t.raw('sovereigntySection.pillars')   as { key: string; title: string; desc: string }[]
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
 
-
   return (
-    <main>
-
-      {/* ── Section 1 : Hero ─────────────────────────────────────────── */}
-      <section
-        className="relative overflow-hidden border-b border-ag-border bg-ag-navy flex items-center"
-        style={{ minHeight: 'clamp(460px,50vw,620px)' }}
-      >
-        <Image
-          src="/images/services/build-hero.jpg"
-          alt={t('heroAlt')}
-          fill
-          priority
-          fetchPriority="high"
-          unoptimized
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/70 via-ag-navy/60 to-ag-navy/95" />
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 w-full">
-          <p className="font-sans font-semibold text-[11px] uppercase tracking-[0.28em] text-ag-apex/70 mb-6">
-            {t('label')}
-          </p>
-          <WaveReveal delay={0.1}><h1
-            className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] max-w-3xl mb-6 whitespace-pre-line"
-            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
-          >
-            {t('title')}
-          </h1></WaveReveal>
-<ScrollReveal delay={0.25}>          <p className="text-[16px] text-white/70 leading-relaxed max-w-2xl">
-            {t('desc')}
-          </p>
-          <Link
-            href={'/advisory/technology' as LinkHref}
-            className="mt-5 inline-block font-mono text-[11px] tracking-[0.18em] uppercase text-ag-apex/80 hover:text-ag-apex transition-colors"
-          >
-            {t('advisoryLink')} →
-          </Link></ScrollReveal>
+    <div id="mettre-en-oeuvre" className="scroll-mt-24">
+      <section className="bg-ag-white pb-4 pt-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-12">
+          <p className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{IMPLEMENT_UI.label[lang]}</p>
+          <h2 className="max-w-3xl font-sans font-bold leading-[1.15] tracking-[-0.03em] text-ag-black" style={{ fontSize: 'clamp(26px,3vw,44px)' }}>{IMPLEMENT_UI.lead[lang]}</h2>
         </div>
       </section>
 
@@ -361,6 +296,6 @@ export default async function BuildServicePage({ params }: Props) {
         </ScrollReveal>
       </section>
 
-    </main>
+    </div>
   )
 }

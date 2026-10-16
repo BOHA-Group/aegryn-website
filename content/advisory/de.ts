@@ -265,7 +265,6 @@ export const ADVISORY_DE: Record<AdvisoryKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Gesetzliche Pflichten: Risiken & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Prüfung eines Zielunternehmens: M&A', href: '/advisory/ma' },
-      { label: 'Massgeschneiderte Entwicklung: Build', href: '/services/build' },
     ],
     observation: {
       title: 'Was wir beobachten',

@@ -3,6 +3,7 @@ import { notFound }             from 'next/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { getAdvisoryPage }       from '@/content/advisory'
 import { AdvisoryPillarPage }    from '@/components/advisory/AdvisoryPillarPage'
+import { BuildImplementation }   from '@/components/advisory/BuildImplementation'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -17,5 +18,5 @@ export default async function TechnologyAdvisoryPage({ params }: Props) {
   const { locale } = await params
   const c = getAdvisoryPage(locale, 'technology')
   if (!c) notFound()
-  return <AdvisoryPillarPage content={c} locale={locale} />
+  return <AdvisoryPillarPage content={c} locale={locale} implement={<BuildImplementation locale={locale} />} />
 }

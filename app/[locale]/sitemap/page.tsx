@@ -31,7 +31,6 @@ const GROUPS: SitemapGroup[] = [
     labelKey: 'groupConstruire',
     links: [
       { labelKey: 'whatWeBuild',   href: '/what-we-build' },
-      { labelKey: 'servicesBuild', href: '/services/build' },
       { labelKey: 'assets',        href: '/assets' },
       { labelKey: 'grade',         href: '/grade' },
       { labelKey: 'gradeMethod',   href: '/grade/brochure' },

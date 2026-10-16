@@ -106,7 +106,7 @@
     "solutionsDomain9": "Identité, KYC/KYB & vérification numérique",
     "solutionsDomain10": "Actifs d'entreprise & intelligence des processus",
     "solutionsViewAll": "Voir toutes les solutions",
-    "solutionsViewAllLink": "/services/build",
+    "solutionsViewAllLink": "/advisory",
     "solutionsSubblink": "subblink (Contrats IA)",
     "solutionsKryv": "kryv (Code IA)",
     "solutionsNeediu": "neediu",
@@ -168,7 +168,12 @@
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Les lieux de rencontre",
     "boutiqueSoon": "Bientôt",
-    "boutiqueSubmit": "Échanger en toute confidentialité"
+    "boutiqueSubmit": "Échanger en toute confidentialité",
+    "craftFrameDeliver": "Cadrer et réaliser",
+    "craftFrameDeliverDesc": "Huit métiers, de la décision à la mise en œuvre.",
+    "craftFinance": "Finance et Performance",
+    "craftOperations": "Opérations et Excellence opérationnelle",
+    "craftProgram": "Pilotage de projets et de programmes"
   },
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
@@ -372,7 +377,7 @@
     "strip": "Aegryn Conseil | Conseil intégré pour organisations tech européennes",
     "cta": "Prendre contact",
     "hero": {
-      "title": "Cadrer les décisions qui comptent.",
+      "title": "Huit métiers, de la décision à la mise en œuvre.",
       "desc": "Nous intervenons aux moments où les décisions définissent la trajectoire d’une organisation. Un seul interlocuteur, du diagnostic à l’exécution."
     },
     "pillars": {
@@ -507,6 +512,11 @@
           }
         ]
       },
+      "finance": {
+        "title": "Finance et Performance",
+        "desc": "Piloter la performance financière, de la décision à sa mise en œuvre.",
+        "dimensions": []
+      },
       "technology": {
         "title": "Technologie et Souveraineté",
         "desc": "Nous intervenons sur la couche technologique de l’organisation, de l’architecture à la conformité.",
@@ -558,6 +568,11 @@
             "desc": ""
           }
         ]
+      },
+      "operations": {
+        "title": "Opérations et Excellence opérationnelle",
+        "desc": "Rendre les opérations plus fiables et plus performantes, de la décision à sa mise en œuvre.",
+        "dimensions": []
       },
       "talentOrganization": {
         "title": "Talent et Organisation",
@@ -614,6 +629,11 @@
             "desc": ""
           }
         ]
+      },
+      "program": {
+        "title": "Pilotage de projets et de programmes",
+        "desc": "Piloter projets et programmes jusqu’à la réception.",
+        "dimensions": []
       },
       "ma": {
         "title": "M&A, Transactions et PMI",
@@ -715,7 +735,7 @@
       ],
       "conclusion": "Aegryn Conseil intervient à l'intersection de ces trois dimensions. Nous aidons les dirigeants tech à définir une stratégie de croissance cohérente, à construire les capacités technologiques pour l'exécuter, et à identifier les acquisitions qui accélèrent le plan sans créer de dette technique. Une approche intégrée pour un marché qui ne pardonne plus les silos."
     },
-    "label": "Cadrer",
+    "label": "Cadrer et réaliser",
     "contactCta": "Prendre contact",
     "ctaDesc": "Chaque mission démarre par un diagnostic exhaustif avant toute recommandation. Nous documentons, nous mesurons, nous livrons.",
     "ctaTitleMa": "Discutons de votre opération M&A",
@@ -9839,7 +9859,7 @@
           "title": "RÉALISER",
           "desc": "Construire jusqu’à la réception : marque, produit, plateforme, mise en marché. Nous réalisons nous-mêmes et activons les bons experts quand le projet l’exige.",
           "cta": "Découvrir Réaliser",
-          "href": "/services/build"
+          "href": "/advisory"
         },
         {
           "key": "transmettre",

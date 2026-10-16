@@ -14,20 +14,17 @@ import { gsap }          from '@/lib/gsap'
 type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
 type LinkHref = ComponentProps<typeof Link>['href']
 
-// Nos métiers - Réaliser : solutions sur mesure, actifs propriétaires, savoir-faire de La Boutique
+// Nos métiers - Cadrer et réaliser : huit métiers sous un seul titre, en deux colonnes (ordre de lecture ligne par ligne)
 // (les outils CIFSO ne figurent plus dans les menus : pied de page et page des actifs uniquement)
-const CRAFT_BUILD_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftBuildEngineering', href: '/services/build' },
-  { labelKey: 'craftBuildAssets',      href: '/assets' },
-]
-
-// Nos métiers - Support section
-const CRAFT_SUPPORT_LINKS: { labelKey: string; href: LinkHref }[] = [
+const CRAFT_METIERS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportStrategy',        href: '/advisory/strategy' as LinkHref },
   { labelKey: 'craftSupportRiskCompliance',  href: '/advisory/risk-compliance' as LinkHref },
+  { labelKey: 'craftFinance',                href: '/advisory/finance' as LinkHref },
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
+  { labelKey: 'craftOperations',             href: '/advisory/operations' as LinkHref },
   { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
-  { labelKey: 'craftSupportMA',            href: '/advisory/ma' as LinkHref },
+  { labelKey: 'craftProgram',                href: '/advisory/project-management' as LinkHref },
+  { labelKey: 'craftSupportMA',              href: '/advisory/ma' as LinkHref },
 ]
 
 // Nos métiers - Franchir : cycles de vie (l'intro vit désormais en section accueil #accompagner)
@@ -88,38 +85,16 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
       className="absolute top-full left-0 mt-2 w-[980px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
     >
       <div className="grid grid-cols-[1.25fr_1fr_1.2fr_1fr] gap-px bg-ag-border rounded-2xl overflow-hidden">
-        {/* Support — CADRER en 1er */}
-        <div className="bg-ag-white p-4">
+        {/* Cadrer et réaliser : un seul titre sur deux colonnes, sans séparateur entre elles */}
+        <div className="bg-ag-white p-4 col-span-2">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftSupport')}
+            {t('craftFrameDeliver')}
           </p>
           <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('craftSupportDesc')}
+            {t('craftFrameDeliverDesc')}
           </div>
-          <div className="flex flex-col gap-1">
-            {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Build — RÉALISER en 2ème */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftBuild')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('craftBuildDesc')}
-          </div>
-          <div className="flex flex-col gap-1">
-            {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+            {CRAFT_METIERS.map(({ labelKey, href }) => (
               <Link
                 key={labelKey}
                 href={href}
@@ -456,7 +431,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
   
   const isCraftActive =
-    isActive('/assets') || isActive('/services/build') ||
+    isActive('/assets') ||
     isActive('/advisory') || isActive('/services/acquisition-support') ||
     isActive('/grade') || isActive('/accompagner') ||
     isActive('/valuation') || isActive('/verify')
@@ -783,21 +758,12 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'craft' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('craftSupport')}</p>
-                  {CRAFT_SUPPORT_LINKS.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('craftFrameDeliver')}</p>
+                  {CRAFT_METIERS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
                       {t(labelKey)}
                     </Link>
-                  ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('craftBuild')}</p>
-                  {CRAFT_BUILD_LINKS.map(({ labelKey, href }) => (
-                    <div key={labelKey} className="flex flex-col">
-                      <Link href={href} onClick={closeMobile}
-                        className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
-                        {t(labelKey)}
-                      </Link>
-                    </div>
                   ))}
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('craftTransact')}</p>
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (

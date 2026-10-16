@@ -390,7 +390,7 @@ export const aegrynOrganizationSchema = {
           '@type': 'Service',
           name: 'Aegryn Asset Engineering',
           description: 'Custom digital solutions for entrepreneurs, companies and institutions. Fixed price, custom code, full IP ownership, delivered in 10 to 16 weeks. Zero technical debt.',
-          url: `${BASE_URL}/en/services/build`,
+          url: `${BASE_URL}/en/advisory/technology#mettre-en-oeuvre`,
         },
       },
       {
@@ -439,7 +439,6 @@ export const aegrynSiteNavigationSchema = {
     { '@type': 'ListItem', position: 26, name: 'Talent — Candidats',            url: `${BASE_URL}/fr/talent/candidats` },
     { '@type': 'ListItem', position: 27, name: 'Actifs propriétaires',          url: `${BASE_URL}/fr/assets` },
     { '@type': 'ListItem', position: 28, name: 'Ce que nous construisons',      url: `${BASE_URL}/fr/ce-que-nous-construisons` },
-    { '@type': 'ListItem', position: 29, name: 'Solutions sur mesure',          url: `${BASE_URL}/fr/services/build` },
     { '@type': 'ListItem', position: 30, name: 'Magazine',                      url: `${BASE_URL}/fr/magazine` },
     { '@type': 'ListItem', position: 31, name: 'Magazine — January 2027',       url: `${BASE_URL}/fr/magazine/issue-01` },
     { '@type': 'ListItem', position: 32, name: 'Blog',                          url: `${BASE_URL}/fr/blog` },

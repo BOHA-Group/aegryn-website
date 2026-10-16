@@ -168,7 +168,12 @@
     "boutiqueKnowHow": "Savoir-faire",
     "boutiquePlaces": "Los lugares de encuentro",
     "boutiqueSoon": "Próximamente",
-    "boutiqueSubmit": "Hablar con total confidencialidad"
+    "boutiqueSubmit": "Hablar con total confidencialidad",
+    "craftFrameDeliver": "Encuadrar y realizar",
+    "craftFrameDeliverDesc": "Ocho oficios, de la decisión a la puesta en práctica.",
+    "craftFinance": "Finanzas y Rendimiento",
+    "craftOperations": "Operaciones y Excelencia operativa",
+    "craftProgram": "Gestión de proyectos y programas"
   },
   "hero": {
     "tagline": "Firma integrada, con raíces en Suiza.",
@@ -372,7 +377,7 @@
     "strip": "Aegryn Advisory | Asesoría integrada para organizaciones tech europeas",
     "cta": "Ponerse en contacto",
     "hero": {
-      "title": "Encuadrar las decisiones que cuentan.",
+      "title": "Ocho oficios, de la decisión a la puesta en práctica.",
       "desc": "Intervenimos en los momentos en que las decisiones definen la trayectoria de una organización. Un solo interlocutor, del diagnóstico a la ejecución."
     },
     "pillars": {
@@ -507,6 +512,11 @@
           }
         ]
       },
+      "finance": {
+        "title": "Finanzas y Rendimiento",
+        "desc": "Dirigir el rendimiento financiero, de la decisión a su puesta en práctica.",
+        "dimensions": []
+      },
       "technology": {
         "title": "Tecnología y Soberanía",
         "desc": "Intervenimos en la capa tecnológica de la organización, desde la arquitectura hasta la conformidad.",
@@ -558,6 +568,11 @@
             "desc": ""
           }
         ]
+      },
+      "operations": {
+        "title": "Operaciones y Excelencia operativa",
+        "desc": "Hacer las operaciones más fiables y eficientes, de la decisión a su puesta en práctica.",
+        "dimensions": []
       },
       "talentOrganization": {
         "title": "Talento y Organización",
@@ -614,6 +629,11 @@
             "desc": ""
           }
         ]
+      },
+      "program": {
+        "title": "Gestión de proyectos y programas",
+        "desc": "Dirigir proyectos y programas hasta la entrega.",
+        "dimensions": []
       },
       "ma": {
         "title": "M&A, Transacciones y PMI",
@@ -715,7 +735,7 @@
       ],
       "conclusion": "Aegryn Advisory interviene en la intersección de estas tres dimensiones. Ayudamos a los líderes tech a definir una estrategia de crecimiento coherente, construir las capacidades tecnológicas para ejecutarla e identificar las adquisiciones que aceleran el plan sin crear deuda técnica. Un enfoque integrado para un mercado que ya no perdona los silos."
     },
-    "label": "Encuadrar",
+    "label": "Encuadrar y realizar",
     "contactCta": "Ponerse en contacto",
     "ctaDesc": "Cada encargo comienza con un diagnóstico exhaustivo antes de cualquier recomendación. Documentamos, medimos y entregamos.",
     "ctaTitleMa": "Hablemos de su operación M&A",
@@ -9839,7 +9859,7 @@
           "title": "REALIZAR",
           "desc": "Construir hasta la entrega: marca, producto, plataforma, salida al mercado. Realizamos nosotros mismos y activamos a los expertos adecuados cuando el proyecto lo exige.",
           "cta": "Descubrir Realizar",
-          "href": "/services/build"
+          "href": "/advisory"
         },
         {
           "key": "transmettre",

@@ -219,7 +219,7 @@ Editions named by date only — January 2027 edition "Built to Last": web reader
 - Acquisition: https://aegryn.com/accompagner/acquisition
 - Advisory: https://aegryn.com/advisory
 - Talent: https://aegryn.com/talent
-- Custom Build: https://aegryn.com/services/build
+- Custom Build: https://aegryn.com/advisory/technology
 
 ## Legal & Compliance
 

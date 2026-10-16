@@ -132,7 +132,7 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
 /* Les cinq disciplines, dans l'ordre du bandeau d'accueil */
 const accompagnementLinks: { footerKey: string; href: LinkHref }[] = [
   { footerKey: 'footerCraftSupport',  href: '/advisory' },
-  { footerKey: 'footerCraftBuild',    href: '/services/build' },
+  { footerKey: 'footerCraftBuild',    href: '/advisory' },
   { footerKey: 'footerCraftTransact', href: '/accompagner/lancement' as LinkHref },
   { footerKey: 'footerWhoTalent',     href: '/talent' as never },
   { footerKey: 'footerInform',        href: '/blog' },

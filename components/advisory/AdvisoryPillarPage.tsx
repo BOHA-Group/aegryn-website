@@ -30,7 +30,7 @@ const BTN_SEC = 'rounded-lg inline-flex items-center gap-2 border border-white/6
  * services et cadre nommé · lectures par taille et secteur · scénario et
  * limites de l'IA · auto-diagnostic · perspectives · contact et newsletter.
  */
-export function AdvisoryPillarPage({ content: c, locale }: Props) {
+export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { implement?: React.ReactNode }) {
   const cycleLabels = LIFECYCLE_LABELS[locale] ?? LIFECYCLE_LABELS.fr
   const ui = ADVISORY_UI[locale] ?? ADVISORY_UI.fr
   const L = (href: string) => `/${locale}${href}`
@@ -333,6 +333,9 @@ export function AdvisoryPillarPage({ content: c, locale }: Props) {
           panel
         />
       </SideDrawerLauncher>
+
+      {/* ── Mettre en œuvre (cadrer et réaliser) ── */}
+      {implement}
 
       {/* ── Perspectives + périmètre ── */}
       <section className="py-20 px-6 md:px-12 border-t border-ag-border">

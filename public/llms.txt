@@ -93,7 +93,7 @@ Pages: /assets (proprietary ecosystem), /boutique/projets (La Boutique, emblemat
 
 ### 1. Asset Engineering — Proprietary & Custom Build
 Aegryn designs, funds and operates its own portfolio of digital assets. Also builds custom digital assets for third parties: price agreed at discovery, custom code only, full IP transfer, certification-ready, 10-16 weeks delivery.
-Pages: /assets, /services/build, /ce-que-nous-construisons (fr) / /what-we-build (en)
+Pages: /assets, /advisory/technology, /ce-que-nous-construisons (fr) / /what-we-build (en)
 
 ### 2. Advisory — Five Pillars
 Business Strategy & Innovation (growth strategy, board advisory, digital transformation), Risk Management & Compliance (NIS2, DORA, EU AI Act, GDPR/FADP, incident readiness, audit preparation), Technology & Sovereignty (cybersecurity, AI audit, cloud independence, tech architecture), Talent & Organization (founder dependency, succession planning, management team depth, executive recruitment via Aegryn Talent), M&A, Transactions & PMI (buy-side, sell-side, deal structuring, post-merger integration).
@@ -244,7 +244,7 @@ Note: several routes are localised per language — /about → /fr/a-propos, /de
 ### Build & Assets
 - [Assets](https://aegryn.com/fr/assets) — Proprietary digital ecosystem
 - [Portfolio](https://aegryn.com/fr/boutique/projets) — Group participations (Subblink, Neediu, Primiom, Movtoo, Hobconnect)
-- [Asset Engineering](https://aegryn.com/fr/services/build) — Custom build for third parties
+- [Asset Engineering](https://aegryn.com/fr/advisory/technology) — Custom build for third parties
 - [Acquisition Support](https://aegryn.com/fr/services/acquisition-support) — Post-deal services
 
 ### Magazine

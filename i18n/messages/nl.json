@@ -168,7 +168,12 @@
     "boutiqueKnowHow": "Expertise",
     "boutiquePlaces": "Ontmoetingsplekken",
     "boutiqueSoon": "Binnenkort",
-    "boutiqueSubmit": "Vertrouwelijk spreken"
+    "boutiqueSubmit": "Vertrouwelijk spreken",
+    "craftFrameDeliver": "Kaderen en realiseren",
+    "craftFrameDeliverDesc": "Acht vakgebieden, van beslissing tot uitvoering.",
+    "craftFinance": "Financiën en Prestaties",
+    "craftOperations": "Operations en Operationele excellentie",
+    "craftProgram": "Project- en programmamanagement"
   },
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
@@ -372,7 +377,7 @@
     "strip": "Aegryn Advisory | Geïntegreerd advies voor Europese tech-organisaties",
     "cta": "Contact opnemen",
     "hero": {
-      "title": "De beslissingen kaderen die tellen.",
+      "title": "Acht vakgebieden, van beslissing tot uitvoering.",
       "desc": "We interveniëren op de momenten waarop beslissingen de koers van een organisatie bepalen. Één gesprekspartner, van diagnose tot uitvoering."
     },
     "pillars": {
@@ -507,6 +512,11 @@
           }
         ]
       },
+      "finance": {
+        "title": "Financiën en Prestaties",
+        "desc": "De financiële prestaties sturen, van beslissing tot uitvoering.",
+        "dimensions": []
+      },
       "technology": {
         "title": "Technologie en Soevereiniteit",
         "desc": "Wij grijpen in op de technologielaag van de organisatie, van architectuur tot compliance.",
@@ -558,6 +568,11 @@
             "desc": ""
           }
         ]
+      },
+      "operations": {
+        "title": "Operations en Operationele excellentie",
+        "desc": "Operaties betrouwbaarder en efficiënter maken, van beslissing tot uitvoering.",
+        "dimensions": []
       },
       "talentOrganization": {
         "title": "Talent en Organisatie",
@@ -614,6 +629,11 @@
             "desc": ""
           }
         ]
+      },
+      "program": {
+        "title": "Project- en programmamanagement",
+        "desc": "Projecten en programma’s leiden tot en met de oplevering.",
+        "dimensions": []
       },
       "ma": {
         "title": "M&A, Transacties en PMI",
@@ -715,7 +735,7 @@
       ],
       "conclusion": "Aegryn Advisory interveniëert op het snijpunt van deze drie dimensies. Wij helpen tech-leiders een coherente groeistrategie te definiëren, de technologische capaciteiten te bouwen om die uit te voeren, en de overnames te identificeren die het plan versnellen zonder technische schuld te creëren. Een geïntegreerde aanpak voor een markt die silo's niet meer vergeeft."
     },
-    "label": "Kaderen",
+    "label": "Kaderen en realiseren",
     "contactCta": "Contact opnemen",
     "ctaDesc": "Elk mandaat begint met een uitgebreide diagnose vóór enige aanbeveling. Wij documenteren, meten en leveren.",
     "ctaTitleMa": "Laten we het hebben over uw M&A-deal",
@@ -9839,7 +9859,7 @@
           "title": "REALISEREN",
           "desc": "Bouwen tot de oplevering: merk, product, platform, marktintroductie. Wij realiseren zelf en activeren de juiste experts wanneer het project het vereist.",
           "cta": "Ontdek Realiseren",
-          "href": "/services/build"
+          "href": "/advisory"
         },
         {
           "key": "transmettre",

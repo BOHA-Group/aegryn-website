@@ -63,7 +63,6 @@ const STATIC_ROUTES = [
   { path: '/boutique/projets',                          priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Services ─────────────────────────────────────────────────────────────────
   { path: '/services/acquisition-support',       priority: 0.8,  changeFrequency: 'monthly' as const },
-  { path: '/services/build',                     priority: 0.7,  changeFrequency: 'monthly' as const },
   // ── Magazine ─────────────────────────────────────────────────────────────────
   { path: '/magazine',                           priority: 0.9,  changeFrequency: 'weekly'  as const },
   { path: '/magazine/issue-01',                  priority: 0.8,  changeFrequency: 'monthly' as const },

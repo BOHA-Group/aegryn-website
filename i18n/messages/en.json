@@ -168,7 +168,12 @@
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "Meeting places",
     "boutiqueSoon": "Coming soon",
-    "boutiqueSubmit": "Talk in full confidence"
+    "boutiqueSubmit": "Talk in full confidence",
+    "craftFrameDeliver": "Frame and deliver",
+    "craftFrameDeliverDesc": "Eight disciplines, from decision to implementation.",
+    "craftFinance": "Finance and Performance",
+    "craftOperations": "Operations and Operational Excellence",
+    "craftProgram": "Project and Programme Management"
   },
   "hero": {
     "tagline": "Integrated firm, anchored in Switzerland.",
@@ -372,7 +377,7 @@
     "strip": "Aegryn Advisory | Integrated advisory for European tech organisations",
     "cta": "Get in touch",
     "hero": {
-      "title": "Frame the decisions that matter.",
+      "title": "Eight disciplines, from decision to implementation.",
       "desc": "We intervene at the moments when decisions define the trajectory of an organisation. One firm, from diagnosis to execution."
     },
     "pillars": {
@@ -507,6 +512,11 @@
           }
         ]
       },
+      "finance": {
+        "title": "Finance and Performance",
+        "desc": "Steering financial performance, from decision to implementation.",
+        "dimensions": []
+      },
       "technology": {
         "title": "Technology and Sovereignty",
         "desc": "We intervene on the technology layer of the organisation, from architecture to compliance.",
@@ -558,6 +568,11 @@
             "desc": ""
           }
         ]
+      },
+      "operations": {
+        "title": "Operations and Operational Excellence",
+        "desc": "Making operations more reliable and efficient, from decision to implementation.",
+        "dimensions": []
       },
       "talentOrganization": {
         "title": "Talent and Organization",
@@ -614,6 +629,11 @@
             "desc": ""
           }
         ]
+      },
+      "program": {
+        "title": "Project and Programme Management",
+        "desc": "Leading projects and programmes through to acceptance.",
+        "dimensions": []
       },
       "ma": {
         "title": "M&A, Transactions and PMI",
@@ -715,7 +735,7 @@
       ],
       "conclusion": "Aegryn Advisory operates at the intersection of these three dimensions. We help tech leaders define a coherent growth strategy, build the technological capabilities to execute it, and identify acquisitions that accelerate the plan without creating technical debt. An integrated approach for a market that no longer forgives silos."
     },
-    "label": "Frame",
+    "label": "Frame and deliver",
     "contactCta": "Get in touch",
     "ctaDesc": "Every engagement starts with an exhaustive diagnostic before any recommendation. We document, we measure, we deliver.",
     "ctaTitleMa": "Let's discuss your M&A deal",
@@ -9839,7 +9859,7 @@
           "title": "DELIVER",
           "desc": "Build through to delivery: brand, product, platform, go-to-market. We deliver ourselves and activate the right experts when the project requires it.",
           "cta": "Discover Deliver",
-          "href": "/services/build"
+          "href": "/advisory"
         },
         {
           "key": "transmettre",

@@ -265,7 +265,6 @@ export const ADVISORY_NL: Record<AdvisoryKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Wettelijke verplichtingen: Risico’s & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Audit van een doelwit: M&A', href: '/advisory/ma' },
-      { label: 'Ontwikkeling op maat: Build', href: '/services/build' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

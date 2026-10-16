@@ -168,7 +168,12 @@
     "boutiqueKnowHow": "Know-how",
     "boutiquePlaces": "Begegnungsorte",
     "boutiqueSoon": "Demnächst",
-    "boutiqueSubmit": "Vertraulich sprechen"
+    "boutiqueSubmit": "Vertraulich sprechen",
+    "craftFrameDeliver": "Rahmen setzen und umsetzen",
+    "craftFrameDeliverDesc": "Acht Fachgebiete, von der Entscheidung bis zur Umsetzung.",
+    "craftFinance": "Finanzen und Performance",
+    "craftOperations": "Operations und operative Exzellenz",
+    "craftProgram": "Projekt- und Programmsteuerung"
   },
   "hero": {
     "tagline": "Integrierte Firma, in der Schweiz verankert.",
@@ -372,7 +377,7 @@
     "strip": "Aegryn Advisory | Integrierte Beratung für europäische Tech-Organisationen",
     "cta": "Kontakt aufnehmen",
     "hero": {
-      "title": "Die Entscheidungen rahmen, die zählen.",
+      "title": "Acht Fachgebiete, von der Entscheidung bis zur Umsetzung.",
       "desc": "Wir intervenieren in den Momenten, in denen Entscheidungen die Bahn einer Organisation definieren. Ein Ansprechpartner, von der Diagnose bis zur Ausführung."
     },
     "pillars": {
@@ -507,6 +512,11 @@
           }
         ]
       },
+      "finance": {
+        "title": "Finanzen und Performance",
+        "desc": "Die finanzielle Performance steuern, von der Entscheidung bis zur Umsetzung.",
+        "dimensions": []
+      },
       "technology": {
         "title": "Technologie und Souveränität",
         "desc": "Wir greifen in die Technologieschicht der Organisation ein, von der Architektur bis zur Konformität.",
@@ -558,6 +568,11 @@
             "desc": ""
           }
         ]
+      },
+      "operations": {
+        "title": "Operations und operative Exzellenz",
+        "desc": "Abläufe zuverlässiger und leistungsfähiger machen, von der Entscheidung bis zur Umsetzung.",
+        "dimensions": []
       },
       "talentOrganization": {
         "title": "Talent und Organisation",
@@ -614,6 +629,11 @@
             "desc": ""
           }
         ]
+      },
+      "program": {
+        "title": "Projekt- und Programmsteuerung",
+        "desc": "Projekte und Programme bis zur Abnahme steuern.",
+        "dimensions": []
       },
       "ma": {
         "title": "M&A, Transaktionen und PMI",
@@ -715,7 +735,7 @@
       ],
       "conclusion": "Aegryn Advisory agiert an der Schnittstelle dieser drei Dimensionen. Wir helfen Tech-Leadern, eine kohärente Wachstumsstrategie zu definieren, die technologischen Fähigkeiten aufzubauen, um sie umzusetzen, und Akquisitionen zu identifizieren, die den Plan beschleunigen, ohne technische Schulden zu schaffen. Ein integrierter Ansatz für einen Markt, der Silos nicht mehr verzeiht."
     },
-    "label": "Rahmen setzen",
+    "label": "Rahmen setzen und umsetzen",
     "contactCta": "Kontakt aufnehmen",
     "ctaDesc": "Jedes Engagement beginnt mit einer umfassenden Diagnose vor jeder Empfehlung. Wir dokumentieren, messen und liefern.",
     "ctaTitleMa": "Sprechen wir über Ihre M&A-Transaktion",
@@ -9969,7 +9989,7 @@
           "title": "UMSETZEN",
           "desc": "Bauen bis zur Abnahme: Marke, Produkt, Plattform, Markteinführung. Wir setzen selbst um und aktivieren die richtigen Experten, wenn das Projekt es verlangt.",
           "cta": "Umsetzen entdecken",
-          "href": "/services/build"
+          "href": "/advisory"
         },
         {
           "key": "transmettre",

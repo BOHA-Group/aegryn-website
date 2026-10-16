@@ -265,7 +265,6 @@ export const ADVISORY_EN: Record<AdvisoryKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Legal obligations: Risk & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Audit of a target: M&A', href: '/advisory/ma' },
-      { label: 'Custom development: Build', href: '/services/build' },
     ],
     observation: {
       title: 'What we observe',

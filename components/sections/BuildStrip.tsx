@@ -68,7 +68,7 @@ export function BuildStrip() {
             {t('engineeringDesc')}
           </p>
           <Link
-            href="/services/build"
+            href="/advisory"
             className="rounded-lg inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase bg-ag-apex text-ag-navy font-semibold px-5 py-2.5 hover:bg-ag-apex/90 transition-colors self-start"
           >
             {t('engineeringCta')} <ArrowUpRight size={11} />
