@@ -21,7 +21,6 @@ Même licence Unsplash, 1200 px, qualité 75. Chaque vignette illustre une situa
 |---|---|
 | office-corridor.jpg | https://unsplash.com/photos/1497366216548-37526070297c |
 | server-room-walk.jpg | https://unsplash.com/photos/1573164713988-8665fc963095 |
-| dashboard-laptop.jpg | https://unsplash.com/photos/1460925895917-afdab827c52f |
 | plan-writing.jpg | https://unsplash.com/photos/1434030216411-0b793f4b4173 |
 | discussion-hands.jpg | https://unsplash.com/photos/1517245386807-bb43f82c33c4 |
 | handshake.jpg | https://unsplash.com/photos/1521791136064-7986c2920216 |
@@ -48,7 +47,7 @@ Téléchargées en 1200 px. Une image n'apparaît qu'une fois sur tout le site.
 | fin-revenue-report.jpg | https://www.pexels.com/photo/7947700/ |
 | fin-budget-flatlay.jpg | https://www.pexels.com/photo/16600134/ |
 | fin-archive-files.jpg | https://www.pexels.com/photo/17846111/ |
-| ops-assembly-line.jpg | https://www.pexels.com/photo/34221993/ |
+| ops-machine-operator.jpg | https://www.pexels.com/photo/32407077/ |
 | ops-steel-measure.jpg | https://www.pexels.com/photo/36003961/ |
 | ops-warehouse-forklift.jpg | https://www.pexels.com/photo/36398150/ |
 | ops-food-production.jpg | https://www.pexels.com/photo/36823725/ |
@@ -59,7 +58,7 @@ Téléchargées en 1200 px. Une image n'apparaît qu'une fois sur tout le site.
 | pm-sticky-discussion.jpg | https://www.pexels.com/photo/4623474/ |
 | pm-transformation-workshop.jpg | https://www.pexels.com/photo/9034280/ |
 | pm-site-walkway.jpg | https://www.pexels.com/photo/8961153/ |
-| pm-launch-presentation.jpg | https://www.pexels.com/photo/15141496/ |
+| pm-launch-screen.jpg | https://www.pexels.com/photo/6150524/ |
 | tal-overloaded-folders.jpg | https://www.pexels.com/photo/6538616/ |
 | tal-colleagues-office.jpg | https://www.pexels.com/photo/8297442/ |
 | tal-serious-talk.jpg | https://www.pexels.com/photo/9869647/ |
@@ -73,7 +72,20 @@ Téléchargées en 1200 px. Une image n'apparaît qu'une fois sur tout le site.
 | ma-tech-audit.jpg | https://www.pexels.com/photo/442151/ |
 | risk-doc-review.jpg | https://www.pexels.com/photo/7735699/ |
 | risk-audit-docs.jpg | https://www.pexels.com/photo/8970297/ |
-| risk-port-containers.jpg | https://www.pexels.com/photo/9211513/ |
+| risk-port-aerial.jpg | https://www.pexels.com/photo/1427107/ |
 | tech-solo-coder.jpg | https://www.pexels.com/photo/16018144/ |
-| tech-code-screen.jpg | https://www.pexels.com/photo/36571389/ |
+| tech-code-dark.jpg | https://www.pexels.com/photo/546819/ |
 | tech-server-rack.jpg | https://www.pexels.com/photo/37730211/ |
+| dashboard-graph.jpg | https://www.pexels.com/photo/38782891/ |
+
+## Vignettes retirées (marques visibles, octobre 2026)
+
+Conservées dans le dossier mais hors usage (`situationImages.ts` ne les référence plus) :
+
+| Fichier | Motif |
+|---|---|
+| dashboard-laptop.jpg | nom du template « Gentelella » lisible à l'écran |
+| risk-port-containers.jpg | logos Maersk et Hamburg Süd sur les conteneurs |
+| tech-code-screen.jpg | interface VS Code identifiable (menu « Code ») |
+| ops-assembly-line.jpg | marque HOMAG sur le boîtier machine |
+| pm-launch-presentation.jpg | logo Apple sur le portable, écran « Dawid » |

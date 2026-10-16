@@ -11,7 +11,7 @@ import type { AdvisoryKey } from './types'
 const S = '/images/advisory/situations'
 export const SITUATION_IMAGES: Record<AdvisoryKey, string[]> = {
   strategy: [
-    `${S}/dashboard-laptop.jpg`,   // modèle qui s'érode
+    `${S}/dashboard-graph.jpg`,   // modèle qui s'érode
     `${S}/developer-desk.jpg`,     // l'IA change le métier
     `${S}/discussion-hands.jpg`,   // concurrent à vendre, alliance
     `${S}/office-corridor.jpg`,    // nouveau marché
@@ -24,13 +24,13 @@ export const SITUATION_IMAGES: Record<AdvisoryKey, string[]> = {
     `${S}/laptop-phone.jpg`,        // IA sans règle
     `${S}/network-cables.jpg`,      // incident
     `${S}/risk-audit-docs.jpg`,     // audit investisseur ou acquéreur
-    `${S}/risk-port-containers.jpg`,// vente UE / Suisse
+    `${S}/risk-port-aerial.jpg`,// vente UE / Suisse
   ],
   technology: [
     `${S}/server-room-walk.jpg`,   // plateforme qui ralentit
     `${S}/tech-solo-coder.jpg`,    // une seule personne comprend
     `${S}/loft-office.jpg`,        // construire, acheter, s'allier
-    `${S}/tech-code-screen.jpg`,   // IA sans cadre
+    `${S}/tech-code-dark.jpg`,   // IA sans cadre
     `${S}/open-office.jpg`,        // plus de directeur technique
     `${S}/tech-server-rack.jpg`,   // où sont nos données
   ],
@@ -59,7 +59,7 @@ export const SITUATION_IMAGES: Record<AdvisoryKey, string[]> = {
     `${S}/fin-archive-files.jpg`,      // qualité des résultats, data room
   ],
   operationsExcellence: [
-    `${S}/ops-assembly-line.jpg`,        // coûts qui montent plus vite que les prix
+    `${S}/ops-machine-operator.jpg`,        // coûts qui montent plus vite que les prix
     `${S}/ops-steel-measure.jpg`,        // délais et qualité variables
     `${S}/ops-warehouse-forklift.jpg`,   // fournisseur critique
     `${S}/ops-food-production.jpg`,      // capacités sous-utilisées ou saturées
@@ -72,6 +72,6 @@ export const SITUATION_IMAGES: Record<AdvisoryKey, string[]> = {
     `${S}/pm-sticky-discussion.jpg`,       // projet qui dérape
     `${S}/pm-transformation-workshop.jpg`, // transformation multi-équipes
     `${S}/pm-site-walkway.jpg`,            // fournisseur ou intégrateur défaillant
-    `${S}/pm-launch-presentation.jpg`,     // livré mais pas adopté
+    `${S}/pm-launch-screen.jpg`,     // livré mais pas adopté
   ],
 }
