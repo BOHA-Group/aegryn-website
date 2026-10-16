@@ -88,7 +88,7 @@ export function MetiersScroller() {
         </Link>
       </div>
 
-      <div ref={viewportRef} className="overflow-x-auto overscroll-x-contain snap-x snap-mandatory md:snap-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div ref={viewportRef} className="overflow-x-auto overscroll-x-contain scroll-pl-6 snap-x snap-mandatory md:snap-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div ref={trackRef} className="flex w-max gap-5 px-6 pb-4 md:gap-8 md:px-12 will-change-transform">
           {keys.map((key, i) => {
             const p = pillars[key]
