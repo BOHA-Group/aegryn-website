@@ -4775,7 +4775,7 @@
     },
     "hero": {
       "label": "Réseau Aegryn",
-      "title": "Le bon expert.\nsur la bonne mission.",
+      "title": "Le bon expert,\nsur la bonne mission.",
       "desc": "Des spécialistes seniors, indépendants et vérifiés, choisis un par un. Aegryn les mobilise au cas par cas, selon le besoin exact de chaque mission : ni équipe permanente, ni vivier anonyme.",
       "stat1": "Partenaires qualifiés",
       "stat2": "Experts mobilisables",
@@ -5314,10 +5314,6 @@
     "builtToLast": {
       "label": "NOTRE CONVICTION",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "Dans un monde où la technologie s'obsolète en quelques mois, "
         },

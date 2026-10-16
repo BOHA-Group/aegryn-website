@@ -4800,7 +4800,7 @@
     },
     "hero": {
       "label": "Red Aegryn",
-      "title": "El experto adecuado.\nEn la misión adecuada.",
+      "title": "El experto adecuado,\nen la misión adecuada.",
       "desc": "Especialistas senior, independientes y verificados, elegidos uno a uno. Aegryn los moviliza caso por caso, según la necesidad exacta de cada misión: ni equipo permanente, ni bolsa anónima.",
       "stat1": "Socios cualificados",
       "stat2": "Expertos movilizables",
@@ -5339,10 +5339,6 @@
     "builtToLast": {
       "label": "NUESTRA CONVICCIÓN",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "En un mundo donde la tecnología queda obsoleta en meses, "
         },

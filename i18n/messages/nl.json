@@ -4800,7 +4800,7 @@
     },
     "hero": {
       "label": "Aegryn Netwerk",
-      "title": "De juiste expert.\nOp de juiste missie.",
+      "title": "De juiste expert,\nop de juiste missie.",
       "desc": "Senior, onafhankelijke en geverifieerde specialisten, één voor één gekozen. Aegryn zet ze per geval in, naar de exacte behoefte van elke missie: geen vast team, geen anonieme pool.",
       "stat1": "Gekwalificeerde partners",
       "stat2": "Mobiliseerbare experts",
@@ -5354,10 +5354,6 @@
     "builtToLast": {
       "label": "ONZE OVERTUIGING",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "In een wereld waar technologie in maanden veroudert, "
         },

@@ -4800,7 +4800,7 @@
     },
     "hero": {
       "label": "Rete Aegryn",
-      "title": "L'esperto giusto.\nSulla missione giusta.",
+      "title": "L'esperto giusto,\nsulla missione giusta.",
       "desc": "Specialisti senior, indipendenti e verificati, scelti uno a uno. Aegryn li mobilita caso per caso, secondo il bisogno esatto di ogni incarico: né squadra permanente, né pool anonimo.",
       "stat1": "Partner qualificati",
       "stat2": "Esperti mobilizzabili",
@@ -5339,10 +5339,6 @@
     "builtToLast": {
       "label": "LA NOSTRA CONVINZIONE",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "In un mondo in cui la tecnologia diventa obsoleta in mesi, "
         },

@@ -4800,7 +4800,7 @@
     },
     "hero": {
       "label": "Aegryn Netzwerk",
-      "title": "Der richtige Experte.\nFür den richtigen Auftrag.",
+      "title": "Der richtige Experte,\nfür den richtigen Auftrag.",
       "desc": "Unabhängige, geprüfte Senior-Spezialisten, einzeln ausgewählt. Aegryn setzt sie fallweise ein, je nach exaktem Bedarf des Mandats: kein festes Team, kein anonymer Pool.",
       "stat1": "Qualifizierte Partner",
       "stat2": "Mobilisierbare Experten",
@@ -5339,10 +5339,6 @@
     "builtToLast": {
       "label": "UNSERE ÜBERZEUGUNG",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "In einer Welt, in der Technologie in Monaten veraltet, "
         },

@@ -23,18 +23,26 @@ export async function SelectBlock({ locale }: { locale: string }) {
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <div className="rounded-2xl border border-ag-border bg-ag-white p-8">
             <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">{t('craftRecruitForCompanies')}</p>
-            <ul className="flex flex-col gap-5">
-              <li className="text-[15px] leading-relaxed text-ag-gray">
-                <Link href="/talent/entreprises" className="font-semibold text-ag-black underline-offset-4 hover:underline">{t('craftRecruitHire')}</Link> : {c.hire}
+            <ul className="flex flex-col gap-6">
+              <li>
+                <Link href="/talent/entreprises" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex px-6 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ag-navy transition-colors hover:bg-ag-apex/90">
+                  {t('craftRecruitHire')} <ArrowUpRight size={12} />
+                </Link>
+                <p className="mt-3 text-[15px] leading-relaxed text-ag-gray">{c.hire}</p>
               </li>
-              <li className="text-[15px] leading-relaxed text-ag-gray">
-                <Link href="/talent/transition" className="font-semibold text-ag-black underline-offset-4 hover:underline">{t('craftRecruitTransition')}</Link> : {c.trans}
+              <li>
+                <Link href="/talent/transition" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex px-6 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ag-navy transition-colors hover:bg-ag-apex/90">
+                  {t('craftRecruitTransition')} <ArrowUpRight size={12} />
+                </Link>
+                <p className="mt-3 text-[15px] leading-relaxed text-ag-gray">{c.trans}</p>
               </li>
             </ul>
           </div>
           <div className="rounded-2xl border border-ag-border bg-ag-white p-8">
             <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">{t('craftRecruitForCandidates')}</p>
-            <Link href="/talent/candidats" className="font-sans text-[15px] font-semibold text-ag-black underline-offset-4 hover:underline">{t('craftRecruitPool')}</Link>
+            <Link href="/talent/candidats" className="rounded-lg inline-flex items-center gap-2 bg-ag-apex px-6 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ag-navy transition-colors hover:bg-ag-apex/90">
+              {t('craftRecruitPool')} <ArrowUpRight size={12} />
+            </Link>
           </div>
         </div>
 

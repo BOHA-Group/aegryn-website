@@ -4815,7 +4815,7 @@
     },
     "hero": {
       "label": "Aegryn Network",
-      "title": "The right expert.\nOn the right mission.",
+      "title": "The right expert,\non the right mission.",
       "desc": "Senior, independent, vetted specialists, chosen one by one. Aegryn deploys them case by case, according to each mission's exact need: no permanent bench, no anonymous pool.",
       "stat1": "Qualified partners",
       "stat2": "Mobilisable experts",
@@ -5354,10 +5354,6 @@
     "builtToLast": {
       "label": "OUR CONVICTION",
       "segments": [
-        {
-          "t": "Built to Last.\n\n",
-          "bold": true
-        },
         {
           "t": "In a world where technology becomes obsolete in months, "
         },
