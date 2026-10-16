@@ -146,7 +146,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Ich muss einen zweiten Markt oder eine zweite Tochtergesellschaft eröffnen.', decision: 'Welches Tempo, welche Prioritäten, welcher Verzicht?', metiers: ['strategie'], deliverable: 'Vier-Tests-Raster auf die Optionen angewendet' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [
@@ -223,7 +223,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Ich brauche eine Interim-Geschäftsleitung.', decision: 'Profil, Mandat, Dauer', metiers: ['recruter'], deliverable: 'Mandatsprofil und vorausgewählte Kandidaten' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [
@@ -301,7 +301,7 @@ export const FRANCHIR_DE: CycleContent[] = [
         { quote: 'Erfüllt das Zielunternehmen die Regeln, die morgen für uns gelten?', decision: 'Welche Pflichten übernehmen wir?', metiers: ['conformite'], deliverable: 'Expositionskarte des Zielunternehmens' },
       ],
     },
-    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'recruter'] },
+    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'finance', 'operations', 'recruter'] },
     bySize: {
       title: 'Nach Unternehmensgrösse',
       items: [

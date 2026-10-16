@@ -360,7 +360,7 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
                   <Link key={i} href={L(p.href)} className={`${CARD} group px-6 py-5 flex items-center justify-between gap-6 hover:border-ag-navy/40 transition-colors`}>
                     <span className="font-sans font-semibold text-[15px] text-ag-black group-hover:text-ag-navy transition-colors">{p.title}</span>
                     <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-ag-gray-light shrink-0 flex items-center gap-2">
-                      {p.kind === 'magazine' ? ui.magazine : ui.article} <ArrowUpRight size={11} />
+                      {p.kind === 'magazine' ? ui.magazine : p.kind === 'industrie' ? ui.industry : ui.article} <ArrowUpRight size={11} />
                     </span>
                   </Link>
                 ))}

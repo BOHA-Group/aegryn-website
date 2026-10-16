@@ -21,7 +21,7 @@ const CRAFT_METIERS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftSupportRiskCompliance',  href: '/advisory/risk-compliance' as LinkHref },
   { labelKey: 'craftFinance',                href: '/advisory/finance-performance' as LinkHref },
   { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
-  { labelKey: 'craftOperations',             href: '/advisory/operations' as LinkHref },
+  { labelKey: 'craftOperations',             href: '/advisory/operations-excellence' as LinkHref },
   { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
   { labelKey: 'craftProgram',                href: '/advisory/project-management' as LinkHref },
   { labelKey: 'craftSupportMA',              href: '/advisory/ma' as LinkHref },

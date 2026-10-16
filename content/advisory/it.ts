@@ -148,6 +148,7 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Architettura e hosting: Tecnologia', href: '/advisory/technology' },
       { label: 'Conformità di un target: M&A', href: '/advisory/ma' },
+          { label: 'Le leve operative (acquisti, scorte, tempi): Operazioni', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Che cosa osserviamo',
@@ -505,6 +506,7 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Profondità di audit: Rischi & Conformità', href: '/advisory/risk-compliance' },
       { label: 'Profondità di audit: Tecnologia', href: '/advisory/technology' },
       { label: 'Squadre: Talento & Organizzazione', href: '/advisory/talent-organization' },
+          { label: 'L’integrazione operativa (siti, acquisti, sistemi): Operazioni', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Che cosa osserviamo',

@@ -148,6 +148,7 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Arquitectura y alojamiento: Tecnología', href: '/advisory/technology' },
       { label: 'Cumplimiento de un objetivo: M&A', href: '/advisory/ma' },
+          { label: 'Las palancas operativas (compras, inventarios, plazos): Operaciones', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Lo que observamos',
@@ -505,6 +506,7 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Profundidad de auditoría: Riesgos y Cumplimiento', href: '/advisory/risk-compliance' },
       { label: 'Profundidad de auditoría: Tecnología', href: '/advisory/technology' },
       { label: 'Equipos: Talento y Organización', href: '/advisory/talent-organization' },
+          { label: 'La integración operativa (sitios, compras, sistemas): Operaciones', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Lo que observamos',

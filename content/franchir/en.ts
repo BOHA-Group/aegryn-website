@@ -145,7 +145,7 @@ export const FRANCHIR_EN: CycleContent[] = [
         { quote: 'I need to open a second market or subsidiary.', decision: 'What pace, which priorities, what renunciation?', metiers: ['strategie'], deliverable: 'Four-test grid applied to the options' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'By size',
       items: [
@@ -222,7 +222,7 @@ export const FRANCHIR_EN: CycleContent[] = [
         { quote: 'I need an interim leader.', decision: 'Profile, mandate, duration', metiers: ['recruter'], deliverable: 'Mission brief and pre-selected profiles' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'By size',
       items: [
@@ -300,7 +300,7 @@ export const FRANCHIR_EN: CycleContent[] = [
         { quote: 'Is the target compliant with the rules we will face tomorrow?', decision: 'Which obligations are we taking on?', metiers: ['conformite'], deliverable: 'Target exposure map' },
       ],
     },
-    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'recruter'] },
+    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'finance', 'operations', 'recruter'] },
     bySize: {
       title: 'By size',
       items: [

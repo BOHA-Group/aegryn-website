@@ -148,6 +148,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Architektur und Hosting: Technologie', href: '/advisory/technology' },
       { label: 'Compliance eines Zielunternehmens: M&A', href: '/advisory/ma' },
+          { label: 'Die operativen Hebel (Einkauf, Lager, Fristen): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Was wir beobachten',
@@ -505,6 +506,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Prüftiefe: Risiken & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Prüftiefe: Technologie', href: '/advisory/technology' },
       { label: 'Teams: Talent & Organisation', href: '/advisory/talent-organization' },
+          { label: 'Die operative Integration (Standorte, Einkauf, Systeme): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Was wir beobachten',

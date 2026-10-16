@@ -6,7 +6,7 @@
  * stables (non traduits) ; seuls label/question/options sont localisés.
  */
 
-export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance'
+export type Metier = 'strategie' | 'conformite' | 'technologie' | 'talent' | 'ma' | 'finance' | 'operations'
 export type ActionSlug =
   | 'echange' | 'arbitrage'
   | 'cartographie'
@@ -14,6 +14,7 @@ export type ActionSlug =
   | 'indice' | 'succession'
   | 'revue-cible'
   | 'tresorerie' | 'rentabilite' | 'echange30'
+  | 'flux' | 'goulots'
 
 export interface ActionDef {
   /** Libellé du bouton, aussi utilisé comme titre du formulaire */
@@ -34,6 +35,7 @@ export const PAGE_ACTIONS: Record<Metier, { echange: ActionSlug; action: ActionS
   talent:       { echange: 'indice',  action: 'succession' },
   ma:           { echange: 'echange', action: 'revue-cible' },
   finance:      { echange: 'echange30', action: 'tresorerie', action2: 'rentabilite' },
+  operations:   { echange: 'echange30', action: 'flux', action2: 'goulots' },
 }
 
 export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> = {
@@ -51,6 +53,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: 'Échanger 30 minutes', question: "Votre contexte, en deux lignes ?", questionType: 'text' },
     'finance:tresorerie': { label: 'Diagnostiquer votre trésorerie', question: "Quel est votre principal point de tension de trésorerie ?", questionType: 'text' },
     'finance:rentabilite': { label: 'Évaluer votre rentabilité', question: "Quelles activités ou clients souhaitez-vous analyser ?", questionType: 'text' },
+    'operations:flux': { label: 'Cartographier votre flux', question: "Quel flux souhaitez-vous cartographier en premier ?", questionType: 'text' },
+    'operations:goulots': { label: 'Évaluer vos goulots', question: "Quel point limite aujourd’hui votre production ou votre service ?", questionType: 'text' },
+    'operations:echange30': { label: 'Échanger 30 minutes', question: "Votre contexte, en deux lignes ?", questionType: 'text' },
   },
   en: {
     'strategie:echange':    { label: 'Frame your decision', question: 'Which decision, and by when?', questionType: 'text' },
@@ -66,6 +71,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: 'Book 30 minutes', question: "Your context, in two lines?", questionType: 'text' },
     'finance:tresorerie': { label: 'Review your cash flow', question: "What is your main cash-flow pinch point?", questionType: 'text' },
     'finance:rentabilite': { label: 'Assess your profitability', question: "Which activities or customers would you like to analyse?", questionType: 'text' },
+    'operations:flux': { label: 'Map your flow', question: "Which flow would you like to map first?", questionType: 'text' },
+    'operations:goulots': { label: 'Assess your bottlenecks', question: "Which point currently limits your production or service?", questionType: 'text' },
+    'operations:echange30': { label: 'Book 30 minutes', question: "Your context, in two lines?", questionType: 'text' },
   },
   de: {
     'strategie:echange':    { label: 'Ihre Entscheidung rahmen', question: 'Welche Entscheidung, und bis wann?', questionType: 'text' },
@@ -81,6 +89,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: '30 Minuten austauschen', question: "Ihr Kontext, in zwei Zeilen?", questionType: 'text' },
     'finance:tresorerie': { label: 'Ihre Liquidität prüfen', question: "Was ist Ihr wichtigster Liquiditätsengpass?", questionType: 'text' },
     'finance:rentabilite': { label: 'Ihre Rentabilität bewerten', question: "Welche Tätigkeiten oder Kunden möchten Sie analysieren?", questionType: 'text' },
+    'operations:flux': { label: 'Ihren Fluss kartieren', question: "Welchen Fluss möchten Sie zuerst kartieren?", questionType: 'text' },
+    'operations:goulots': { label: 'Ihre Engpässe bewerten', question: "Welcher Punkt begrenzt derzeit Ihre Produktion oder Ihren Service?", questionType: 'text' },
+    'operations:echange30': { label: '30 Minuten austauschen', question: "Ihr Kontext, in zwei Zeilen?", questionType: 'text' },
   },
   it: {
     'strategie:echange':    { label: 'Porre la vostra decisione', question: 'Quale decisione, ed entro quando?', questionType: 'text' },
@@ -96,6 +107,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: 'Scambiare 30 minuti', question: "Il vostro contesto, in due righe?", questionType: 'text' },
     'finance:tresorerie': { label: 'Diagnosticare la vostra tesoreria', question: "Qual è il vostro principale punto di tensione di tesoreria?", questionType: 'text' },
     'finance:rentabilite': { label: 'Valutare la vostra redditività', question: "Quali attività o clienti volete analizzare?", questionType: 'text' },
+    'operations:flux': { label: 'Mappare il vostro flusso', question: "Quale flusso volete mappare per primo?", questionType: 'text' },
+    'operations:goulots': { label: 'Valutare i vostri colli di bottiglia', question: "Quale punto limita oggi la vostra produzione o il vostro servizio?", questionType: 'text' },
+    'operations:echange30': { label: 'Scambiare 30 minuti', question: "Il vostro contesto, in due righe?", questionType: 'text' },
   },
   es: {
     'strategie:echange':    { label: 'Plantear su decisión', question: '¿Qué decisión, y para cuándo?', questionType: 'text' },
@@ -111,6 +125,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: 'Intercambiar 30 minutos', question: "Su contexto, en dos líneas ?", questionType: 'text' },
     'finance:tresorerie': { label: 'Diagnosticar su tesorería', question: "¿Cuál es su principal punto de tensión de tesorería?", questionType: 'text' },
     'finance:rentabilite': { label: 'Evaluar su rentabilidad', question: "¿Qué actividades o clientes desea analizar?", questionType: 'text' },
+    'operations:flux': { label: 'Cartografiar su flujo', question: "¿Qué flujo desea cartografiar en primer lugar?", questionType: 'text' },
+    'operations:goulots': { label: 'Evaluar sus cuellos de botella', question: "¿Qué punto limita hoy su producción o su servicio?", questionType: 'text' },
+    'operations:echange30': { label: 'Intercambiar 30 minutos', question: "Su contexto, en dos líneas ?", questionType: 'text' },
   },
   nl: {
     'strategie:echange':    { label: 'Uw beslissing kaderen', question: 'Welke beslissing, en tegen wanneer?', questionType: 'text' },
@@ -126,6 +143,9 @@ export const ADVISORY_ACTIONS: Record<string, Partial<Record<Key, ActionDef>>> =
     'finance:echange30': { label: '30 minuten spreken', question: "Uw context, in twee regels?", questionType: 'text' },
     'finance:tresorerie': { label: 'Uw liquiditeit diagnosticeren', question: "Wat is uw belangrijkste liquiditeitsknelpunt?", questionType: 'text' },
     'finance:rentabilite': { label: 'Uw rendabiliteit beoordelen', question: "Welke activiteiten of klanten wilt u analyseren?", questionType: 'text' },
+    'operations:flux': { label: 'Uw stroom in kaart brengen', question: "Welke stroom wilt u eerst in kaart brengen?", questionType: 'text' },
+    'operations:goulots': { label: 'Uw knelpunten beoordelen', question: "Welk punt beperkt nu uw productie of dienst?", questionType: 'text' },
+    'operations:echange30': { label: '30 minuten spreken', question: "Uw context, in twee regels?", questionType: 'text' },
   },
 }
 

@@ -44,6 +44,14 @@ export const IMPLEMENT_ITEMS: Record<string, L6List> = {
     it: ['Mettere in piedi l’organizzazione obiettivo: ruoli, governance e comitati.', 'Attuare il piano di successione e di retention dei profili chiave.', 'Accompagnare le nomine e l’insediamento dei dirigenti.', 'Instaurare i rituali di pilotaggio che reggono l’organizzazione senza di noi.'],
     nl: ['De doelorganisatie inrichten: rollen, governance en comités.', 'Het opvolgings- en retentieplan voor sleutelfiguren uitrollen.', 'Benoemingen en indiensttredingen van leidinggevenden begeleiden.', 'Stuurroutines installeren waarmee de organisatie zonder ons standhoudt.'],
   },
+  operationsExcellence: {
+    fr: ['Conduire le programme d’amélioration : standardisation des processus, indicateurs, rituels de pilotage.', 'Mettre en œuvre le plan achats : renégociation, seconde source, suivi des gains.', 'Déployer les tableaux de bord opérationnels (outils sur mesure si nécessaire, voir Technologie et Souveraineté).', 'Conduire le plan de réduction de coûts avec la direction, avec la conduite du changement de Talent et Organisation.'],
+    en: ['Lead the improvement programme: process standardisation, indicators, steering routines.', 'Implement the purchasing plan: renegotiation, second source, tracking of gains.', 'Roll out the operational dashboards (custom tools where needed, see Technology and Sovereignty).', 'Lead the cost-reduction plan with management, with change management from Talent and Organisation.'],
+    de: ['Das Verbesserungsprogramm führen: Prozessstandardisierung, Indikatoren, Steuerungsroutinen.', 'Den Einkaufsplan umsetzen: Neuverhandlung, Zweitquelle, Gewinnverfolgung.', 'Die operativen Dashboards einführen (bei Bedarf massgeschneiderte Werkzeuge, siehe Technologie und Souveränität).', 'Den Kostensenkungsplan mit der Geschäftsleitung umsetzen, mit dem Change Management von Talent und Organisation.'],
+    es: ['Dirigir el programa de mejora: estandarización de procesos, indicadores, rutinas de seguimiento.', 'Poner en práctica el plan de compras: renegociación, segunda fuente, seguimiento de las ganancias.', 'Desplegar los cuadros de mando operativos (herramientas a medida si hace falta, ver Tecnología y Soberanía).', 'Dirigir el plan de reducción de costes con la dirección, con la conducción del cambio de Talento y Organización.'],
+    it: ['Guidare il programma di miglioramento: standardizzazione dei processi, indicatori, rituali di pilotaggio.', 'Attuare il piano acquisti: rinegoziazione, seconda fonte, monitoraggio dei guadagni.', 'Distribuire i cruscotti operativi (strumenti su misura se necessario, vedi Tecnologia e Sovranità).', 'Guidare il piano di riduzione dei costi con la direzione, con la gestione del cambiamento di Talento e Organizzazione.'],
+    nl: ['Het verbeteringsprogramma leiden: processtandaardisatie, indicatoren, stuurroutines.', 'Het inkoopplan uitvoeren: heronderhandeling, tweede bron, winstbewaking.', 'De operationele dashboards uitrollen (maatwerktools waar nodig, zie Technologie en Soevereiniteit).', 'Het kostenverlagingsplan met de directie uitvoeren, met verandermanagement van Talent en Organisatie.'],
+  },
   financePerformance: {
     fr: ['Installer le pilotage hebdomadaire de la trésorerie.', 'Mettre en place le budget, le reporting et le tableau de bord mensuel.', 'Conduire le programme de réduction du besoin en fonds de roulement (clients, stocks, fournisseurs).', 'Conduire le plan de redressement avec la direction, y compris le dialogue avec les créanciers, avec l’appui d’avocats partenaires.'],
     en: ['Set up weekly cash-flow steering.', 'Install the budget, reporting and monthly dashboard.', 'Lead the working-capital reduction programme (receivables, inventory, suppliers).', 'Lead the turnaround plan with management, including dialogue with creditors, supported by partner lawyers.'],
@@ -64,11 +72,6 @@ export const IMPLEMENT_ITEMS: Record<string, L6List> = {
 
 /** Les trois métiers ajoutés : pages en préparation (contenu à fournir), noindex. */
 export const NEW_PILLARS: Record<string, { slug: string; name: L6; desc: L6 }> = {
-  operations: {
-    slug: '/advisory/operations',
-    name: L('Opérations et Excellence opérationnelle', 'Operations and Operational Excellence', 'Operations und operative Exzellenz', 'Operaciones y Excelencia operativa', 'Operazioni ed Eccellenza operativa', 'Operations en Operationele excellentie'),
-    desc: L('Rendre les opérations plus fiables et plus performantes, de la décision à sa mise en œuvre.', 'Making operations more reliable and efficient, from decision to implementation.', 'Abläufe zuverlässiger und leistungsfähiger machen, von der Entscheidung bis zur Umsetzung.', 'Hacer las operaciones más fiables y eficientes, de la decisión a su puesta en práctica.', 'Rendere le operazioni più affidabili ed efficienti, dalla decisione alla sua attuazione.', 'Operaties betrouwbaarder en efficiënter maken, van beslissing tot uitvoering.'),
-  },
   'project-management': {
     slug: '/advisory/project-management',
     name: L('Pilotage de projets et de programmes', 'Project and Programme Management', 'Projekt- und Programmsteuerung', 'Gestión de proyectos y programas', 'Gestione di progetti e programmi', 'Project- en programmamanagement'),
@@ -91,6 +94,14 @@ export const COMING_UI = {
 
 /** Lignes d'accompagnement sous le bloc, par métier (ex. Finance : Sélectionner + régimes d'intervention). */
 export const IMPLEMENT_NOTES: Record<string, L6List> = {
+  operationsExcellence: {
+    fr: ['Un directeur des opérations ou un responsable d’opérations à temps partiel peut renforcer l’équipe : cette mission passe par Sélectionner (profils de transition).', 'Régimes d’intervention : nous réalisons, nous réalisons avec des experts, ou nous coordonnons des experts que vous avez choisis.'],
+    en: ['An operations director or part-time operations lead can reinforce the team: this assignment runs through Talent (interim profiles).', 'Engagement modes: we deliver, we deliver with experts, or we coordinate experts of your choosing.'],
+    de: ['Ein Operations-Direktor oder ein Teilzeit-Operationsleiter kann das Team verstärken: Dieser Auftrag läuft über die Auswahl (Interim-Profile).', 'Einsatzformen: Wir setzen um, wir setzen mit Experten um, oder wir koordinieren von Ihnen gewählte Experten.'],
+    es: ['Un director de operaciones o un responsable de operaciones a tiempo parcial puede reforzar el equipo: esta misión pasa por Selección (perfiles interinos).', 'Modalidades de intervención: ejecutamos, ejecutamos con expertos, o coordinamos expertos elegidos por usted.'],
+    it: ['Un direttore delle operazioni o un responsabile delle operazioni a tempo parziale può rafforzare il team: questo mandato passa per Selezione (profili ad interim).', 'Modalità d’intervento: attuiamo, attuiamo con degli esperti, o coordiniamo esperti scelti da voi.'],
+    nl: ['Een operations director of een deeltijdse operations manager kan het team versterken: deze opdracht loopt via Selectie (interimprofielen).', 'Inzetvormen: wij voeren uit, wij voeren uit met experts, of wij coördineren experts die u heeft gekozen.'],
+  },
   financePerformance: {
     fr: ['Un directeur financier de transition peut renforcer l’équipe : cette mission passe par Sélectionner (profils de transition).', 'Régimes d’intervention : nous réalisons, nous réalisons avec des experts, ou nous coordonnons des experts que vous avez choisis.'],
     en: ['An interim CFO can reinforce the team: this assignment runs through Talent (interim profiles).', 'Engagement modes: we deliver, we deliver with experts, or we coordinate experts of your choosing.'],

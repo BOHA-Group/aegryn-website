@@ -24,6 +24,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'Le plan et ses hypothèses : Stratégie', href: '/advisory/strategy' },
       { label: 'Un directeur financier de transition : Sélectionner', href: '/talent' },
       { label: 'La cession ou l’acquisition : M&A', href: '/advisory/ma' },
+      { label: 'Les leviers opérationnels (stocks, délais, achats) : Opérations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Ce que nous constatons',
@@ -101,6 +102,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'The plan and its assumptions: Strategy', href: '/advisory/strategy' },
       { label: 'An interim CFO: Talent', href: '/talent' },
       { label: 'Sale or acquisition: M&A', href: '/advisory/ma' },
+      { label: 'The operational levers (inventory, lead times, purchasing): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'What we observe',
@@ -178,6 +180,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'Der Plan und seine Annahmen: Strategie', href: '/advisory/strategy' },
       { label: 'Ein Interim-CFO: Auswahl', href: '/talent' },
       { label: 'Verkauf oder Akquisition: M&A', href: '/advisory/ma' },
+      { label: 'Die operativen Hebel (Lager, Fristen, Einkauf): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Was wir feststellen',
@@ -255,6 +258,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'El plan y sus hipótesis: Estrategia', href: '/advisory/strategy' },
       { label: 'Un director financiero interino: Selección', href: '/talent' },
       { label: 'Venta o adquisición: M&A', href: '/advisory/ma' },
+      { label: 'Las palancas operativas (inventarios, plazos, compras): Operaciones', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Lo que constatamos',
@@ -332,6 +336,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'Il piano e le sue ipotesi: Strategia', href: '/advisory/strategy' },
       { label: 'Un direttore finanziario ad interim: Selezione', href: '/talent' },
       { label: 'Vendita o acquisizione: M&A', href: '/advisory/ma' },
+      { label: 'Le leve operative (scorte, tempi, acquisti): Operazioni', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Cosa constatiamo',
@@ -409,6 +414,7 @@ export const ADVISORY_FINANCE: Record<string, AdvisoryPageContent> = {
       { label: 'Het plan en zijn veronderstellingen: Strategie', href: '/advisory/strategy' },
       { label: 'Een interim-CFO: Selectie', href: '/talent' },
       { label: 'Verkoop of overname: M&A', href: '/advisory/ma' },
+      { label: 'De operationele hefbomen (voorraad, doorlooptijden, inkoop): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

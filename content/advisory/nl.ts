@@ -148,6 +148,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     scope: [
       { label: 'Architectuur en hosting: Technologie', href: '/advisory/technology' },
       { label: 'Compliance van een doelwit: M&A', href: '/advisory/ma' },
+          { label: 'De operationele hefbomen (inkoop, voorraad, doorlooptijden): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Wat wij vaststellen',
@@ -505,6 +506,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       { label: 'Auditdiepte: Risico’s & Compliance', href: '/advisory/risk-compliance' },
       { label: 'Auditdiepte: Technologie', href: '/advisory/technology' },
       { label: 'Teams: Talent & Organisatie', href: '/advisory/talent-organization' },
+          { label: 'De operationele integratie (vestigingen, inkoop, systemen): Operations', href: '/advisory/operations-excellence' },
     ],
     observation: {
       title: 'Wat wij vaststellen',

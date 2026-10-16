@@ -21,6 +21,7 @@ export interface AdvisoryUi {
   newsletterLabel: string
   newsletterBody:  string
   article:         string
+    industry:        string
   magazine:        string
 }
 
@@ -36,7 +37,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Trente minutes avec un expert du réseau, nommé et responsable de son périmètre. Pas d’engagement à ce stade ; les conditions sont transmises après cadrage.',
     newsletterLabel: 'Newsletter · Built to Last',
     newsletterBody: 'Analyses de marché, cycles de vie des organisations, retours d’expérience. Une lettre, pas de prospection.',
-    article: 'Article', magazine: 'Magazine',
+    article: 'Article', magazine: 'Magazine', industry: 'Industrie',
   },
   en: {
     autoDiag: 'Self-assessment', decision: 'Decision', deliverable: 'Deliverable', yes: 'Yes', no: 'No',
@@ -49,7 +50,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Thirty minutes with a named expert from our network, accountable for their scope. No commitment at this stage; terms follow the scoping call.',
     newsletterLabel: 'Newsletter · Built to Last',
     newsletterBody: 'Market analysis, company lifecycles, lessons from the field. One letter, no prospecting.',
-    article: 'Article', magazine: 'Magazine',
+    article: 'Article', magazine: 'Magazine', industry: 'Industry',
   },
   de: {
     autoDiag: 'Selbsteinschätzung', decision: 'Entscheidung', deliverable: 'Ergebnis', yes: 'Ja', no: 'Nein',
@@ -62,7 +63,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Dreissig Minuten mit einem namentlich benannten Experten aus unserem Netzwerk, verantwortlich für seinen Bereich. Keine Verpflichtung in dieser Phase; die Konditionen folgen nach dem Erstgespräch.',
     newsletterLabel: 'Newsletter · Built to Last',
     newsletterBody: 'Marktanalysen, Lebenszyklen von Unternehmen, Erfahrungen aus der Praxis. Ein Brief, keine Akquise.',
-    article: 'Artikel', magazine: 'Magazin',
+    article: 'Artikel', magazine: 'Magazin', industry: 'Branche',
   },
   it: {
     autoDiag: 'Autodiagnosi', decision: 'Decisione', deliverable: 'Risultato', yes: 'Sì', no: 'No',
@@ -75,7 +76,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Trenta minuti con un esperto della rete, nominato e responsabile del proprio perimetro. Nessun impegno in questa fase; le condizioni seguono l’inquadramento.',
     newsletterLabel: 'Newsletter · Built to Last',
     newsletterBody: 'Analisi di mercato, cicli di vita delle organizzazioni, esperienze sul campo. Una lettera, nessuna prospezione.',
-    article: 'Articolo', magazine: 'Magazine',
+    article: 'Articolo', magazine: 'Magazine', industry: 'Industria',
   },
   es: {
     autoDiag: 'Autodiagnóstico', decision: 'Decisión', deliverable: 'Entregable', yes: 'Sí', no: 'No',
@@ -88,7 +89,7 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Treinta minutos con un experto de la red, con nombre y responsable de su perímetro. Sin compromiso en esta fase; las condiciones se comunican tras el encuadre.',
     newsletterLabel: 'Newsletter · Built to Last',
     newsletterBody: 'Análisis de mercado, ciclos de vida de las organizaciones, experiencias de terreno. Una carta, sin prospección.',
-    article: 'Artículo', magazine: 'Revista',
+    article: 'Artículo', magazine: 'Revista', industry: 'Industria',
   },
   nl: {
     autoDiag: 'Zelfdiagnose', decision: 'Beslissing', deliverable: 'Resultaat', yes: 'Ja', no: 'Nee',
@@ -101,6 +102,6 @@ export const ADVISORY_UI: Record<string, AdvisoryUi> = {
     ctaBody: 'Dertig minuten met een met naam genoemde expert uit ons netwerk, verantwoordelijk voor zijn domein. Geen verplichting in dit stadium; de voorwaarden volgen na het gesprek.',
     newsletterLabel: 'Nieuwsbrief · Built to Last',
     newsletterBody: 'Marktanalyses, levenscycli van organisaties, ervaringen uit de praktijk. Eén brief, geen prospectie.',
-    article: 'Artikel', magazine: 'Magazine',
+    article: 'Artikel', magazine: 'Magazine', industry: 'Industrie',
   },
 }

@@ -147,7 +147,7 @@ export const FRANCHIR_FR: CycleContent[] = [
         { quote: 'Je dois ouvrir un deuxième marché ou une deuxième filiale.', decision: 'Quel rythme, quelles priorités, quel renoncement ?', metiers: ['strategie'], deliverable: 'Grille des quatre tests appliquée aux options' },
       ],
     },
-    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'recruter'], available: ['strategie', 'ma', 'construire'] },
+    metiers: { mobilized: ['conformite', 'technologie', 'talent', 'finance', 'operations', 'recruter'], available: ['strategie', 'ma', 'construire'] },
     bySize: {
       title: 'Selon la taille',
       items: [
@@ -224,7 +224,7 @@ export const FRANCHIR_FR: CycleContent[] = [
         { quote: 'Il me faut un dirigeant de transition.', decision: 'Profil, mandat, durée', metiers: ['recruter'], deliverable: 'Fiche de mission et profils présélectionnés' },
       ],
     },
-    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
+    metiers: { mobilized: ['strategie', 'conformite', 'finance', 'operations', 'recruter'], available: ['technologie', 'talent', 'ma', 'construire'] },
     bySize: {
       title: 'Selon la taille',
       items: [
@@ -302,7 +302,7 @@ export const FRANCHIR_FR: CycleContent[] = [
         { quote: 'La cible est-elle conforme aux règles qui nous engageront demain ?', decision: 'Quelles obligations reprenons-nous ?', metiers: ['conformite'], deliverable: 'Carte d’exposition de la cible' },
       ],
     },
-    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'recruter'] },
+    metiers: { mobilized: ['ma', 'technologie', 'strategie'], available: ['conformite', 'talent', 'finance', 'operations', 'recruter'] },
     bySize: {
       title: 'Selon la taille',
       items: [
