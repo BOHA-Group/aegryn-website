@@ -18,9 +18,11 @@ const LINK_MUTED = 'font-sans text-[13px] font-medium leading-snug text-ag-gray-
 function Col({ title, desc, children }: { title: string; desc?: string; children: ReactNode }) {
   return (
     <div className="min-w-[170px]">
-      <p className="font-sans text-[12px] text-ag-gray-light">{title}</p>
-      {desc && <p className="mt-1 max-w-[230px] font-sans text-[11px] leading-relaxed text-ag-gray-light/80">{desc}</p>}
-      <div className="mt-5">{children}</div>
+      <div className="min-h-[5.75rem]">
+        <p className="font-sans text-[12px] text-ag-gray-light">{title}</p>
+        {desc && <p className="mt-1 max-w-[230px] font-sans text-[11px] leading-relaxed text-ag-gray-light/80">{desc}</p>}
+      </div>
+      <div>{children}</div>
     </div>
   )
 }

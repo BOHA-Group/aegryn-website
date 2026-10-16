@@ -4,7 +4,6 @@ import { useEffect, useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import { ArrowUpRight } from 'lucide-react'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 
 type Pillar = { title: string; desc: string; href?: string }
@@ -126,7 +125,7 @@ export function MetiersScroller() {
           },
         })
         const drawAll = () => {
-          const gate = gsap.utils.clamp(0, 1, (tl.time() - 2.3) / 0.9)
+          const gate = gsap.utils.clamp(0, 1, (tl.time() - 1.9) / 0.3)
           const vw = window.innerWidth
           draws.forEach(o => {
             const left = o.item.getBoundingClientRect().left
@@ -205,9 +204,6 @@ export function MetiersScroller() {
             </Link>
           )
         })}
-        <Link href="/advisory" className="mw-link">
-          {t('all')} <ArrowUpRight size={16} />
-        </Link>
       </div>
     </section>
   )

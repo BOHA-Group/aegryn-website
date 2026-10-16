@@ -34,7 +34,7 @@ export function FranchirHomeSection({ locale }: { locale: string }) {
       />
 
       {/* ── Cinq cartes de cycle ── */}
-      <div id="cinq-cycles" className="py-20 px-6 bg-ag-white">
+      <div id="cinq-cycles" className="scroll-mt-20 py-20 px-6 bg-ag-white">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-gray-light mb-10">
             {ui.introCyclesTag}

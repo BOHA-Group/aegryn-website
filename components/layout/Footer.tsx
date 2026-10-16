@@ -129,11 +129,10 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoContact',   href: '/contact' },
 ]
 
-/* Colonne Le cabinet : les entrées du menu Nos métiers, Sélectionner (page Talent) et les réseaux */
+/* Colonne Le cabinet : sections de l'accueil (huit métiers, situations), industries et réseaux */
 const metiersLinks: { navNs: 'footer' | 'nav'; key: string; href: LinkHref }[] = [
-  { navNs: 'footer', key: 'footerCraftFrameDeliver', href: '/advisory' },
+  { navNs: 'footer', key: 'footerCraftFrameDeliver', href: { pathname: '/', hash: 'cadrer' } as LinkHref },
   { navNs: 'footer', key: 'footerCraftTransact',     href: { pathname: '/', hash: 'cinq-cycles' } as LinkHref },
-  { navNs: 'footer', key: 'footerWhoTalent',         href: '/talent' as never },
   { navNs: 'nav',    key: 'whoIndustries',           href: '/industries' as LinkHref },
   { navNs: 'nav',    key: 'craftSupportExperts',     href: '/experts' as LinkHref },
   { navNs: 'nav',    key: 'craftSupportInvestors',   href: '/investisseurs' as LinkHref },
