@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Integrated firm, anchored in Switzerland.",
     "metaDescription": "Aegryn, integrated firm anchored in Switzerland: frame, deliver, accompany every cycle, select talent, stay informed.",
-    "sub": "We support the leaders of SMEs and mid-sized companies who launch, grow, reorient, acquire or hand over an organisation. Framing, assets, talent, project leadership: an integrated firm, anchored in Switzerland.",
+    "sub": "We support the leaders of SMEs and mid-sized companies who launch, grow, reorient, acquire or hand over an organisation. Strategy, finance, technology, operations, talent, project leadership: eight disciplines in one integrated firm, anchored in Switzerland.",
     "phrases": [
       "Frame\nyour projects.",
       "Deliver\nwith you, for you.",
@@ -905,7 +905,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Integrated disciplines",
+        "label": "Situations covered",
         "sub": "Frame · Deliver · Accompany · Select · Stay informed"
       },
       {
@@ -941,7 +941,7 @@
       },
       {
         "title": "ACCOMPANY",
-        "desc": "Five key situations in the life of a company: launch, growth, restructuring, acquisition, succession. A diagnostic, a plan, then support suited to your situation, through to results."
+        "desc": "The five life cycles of a company: launch, growth, restructuring, acquisition, succession. A diagnostic, a plan, then support suited to your situation, through to results."
       },
       {
         "title": "SELECT",
@@ -4618,12 +4618,12 @@
   "alliances": {
     "meta": {
       "title": "Become a partner | Aegryn",
-      "desc": "Join the Aegryn network: experts across the firm's five disciplines, delivery partners for La Boutique's signature projects, investors and institutions, independent auditors of CIFSO 5000 certification."
+      "desc": "Join the Aegryn network: experts across the firm's eight disciplines, delivery partners for La Boutique's signature projects, investors and institutions, independent auditors of CIFSO 5000 certification."
     },
     "hero": {
       "label": "Become a partner",
       "title": "Our network.\nOur strength.",
-      "desc": "Aegryn calls on a network of experts selected one by one: the firm's five disciplines, the delivery partners of La Boutique's signature projects, a circle of investors and institutions, and independent auditors of CIFSO 5000 certification.",
+      "desc": "Aegryn calls on a network of experts selected one by one: the firm's eight disciplines, the delivery partners of La Boutique's signature projects, a circle of investors and institutions, and independent auditors of CIFSO 5000 certification.",
       "imageAlt": "White lighthouse by the sea, aerial view"
     },
     "side": {
@@ -4642,7 +4642,7 @@
       "cards": [
         {
           "title": "Domain experts",
-          "desc": "The firm's five disciplines and La Boutique's delivery activities, each backed by network experts.",
+          "desc": "The firm's eight disciplines and La Boutique's delivery activities, each backed by network experts.",
           "cta": "Explore the professions"
         },
         {
@@ -4659,7 +4659,7 @@
     },
     "metiers": {
       "label": "DOMAIN EXPERTS",
-      "title": "Five advisory disciplines, and La Boutique.",
+      "title": "Eight advisory disciplines, and La Boutique.",
       "desc": "Each profession is carried by experts of the network, deployed according to the needs of each engagement.",
       "profilesLabel": "Profiles sought",
       "items": {
@@ -4746,6 +4746,48 @@
             "Distribution and go-to-market",
             "Intellectual property and product regulation",
             "Communication, content and events"
+          ]
+        },
+        "finance": {
+          "title": "Finance and Performance",
+          "profiles": "CFOs, interim CFOs, treasury and turnaround specialists, financial controllers.",
+          "expertises": [
+            "Thirteen-week cash flow",
+            "Profitability by activity and by client",
+            "Recovery plan",
+            "Preparing a bank or investor file",
+            "Budget and performance management",
+            "Working capital and payment terms",
+            "Quality of earnings",
+            "Interim finance leadership"
+          ]
+        },
+        "operations": {
+          "title": "Operations and Operational Excellence",
+          "profiles": "Operations directors, industrial engineers, supply chain, quality and production specialists.",
+          "expertises": [
+            "Mapping flows and bottlenecks",
+            "Unit costs and margins",
+            "Lead times and quality",
+            "Steering critical suppliers",
+            "Procurement and logistics",
+            "Capacity and workload planning",
+            "Cutting costs without losing quality",
+            "Taking over and integrating an activity"
+          ]
+        },
+        "program": {
+          "title": "Project and Programme Management",
+          "profiles": "Project and programme directors, PMO leads, transformation leaders, site management specialists.",
+          "expertises": [
+            "Project scoping and launch",
+            "Governance and steering committees",
+            "Project portfolio management",
+            "Control of schedules, budgets and risks",
+            "Transformation programme leadership",
+            "Steering suppliers and integrators",
+            "Testing, acceptance and adoption",
+            "Rescuing a project in difficulty"
           ]
         }
       }
@@ -8014,7 +8056,7 @@
   "buildStrip": {
     "label": "Deliver",
     "assetsTitle": "Our proprietary\nassets.",
-    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. Each asset is documented and operated under real conditions. Software built for the group’s operations, available to the market.",
+    "assetsDesc": "Aegryn designs and operates its own digital assets: B2B SaaS, marketplaces, AI tools. We also take stakes in third-party assets. Each asset is documented and operated under real conditions. Software built for the group’s operations, available to the market.",
     "assetsCta": "Discover our assets",
     "engineeringTitle": "Custom software\nfor your operations.",
     "engineeringDesc": "Enterprises, investment funds, institutions: Aegryn designs, deploys and maintains your business software. Full client IP ownership. An asset that works for you and your investors.",

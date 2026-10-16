@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Società integrata, radicata in Svizzera.",
     "metaDescription": "Aegryn, società integrata radicata in Svizzera: inquadrare, realizzare, accompagnare ogni ciclo, selezionare talenti, informarsi.",
-    "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Inquadramento, asset, talenti, guida dei progetti: una società integrata, radicata in Svizzera.",
+    "sub": "Accompagniamo i dirigenti di PMI e imprese di medie dimensioni che avviano, sviluppano, riorientano, rilevano o trasmettono un’organizzazione. Strategia, finanza, tecnologia, operazioni, talenti, guida dei progetti: otto mestieri riuniti in una società integrata, radicata in Svizzera.",
     "phrases": [
       "Inquadrare\ni vostri progetti.",
       "Realizzare\ncon voi, per voi.",
@@ -905,7 +905,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Discipline integrate",
+        "label": "Situazioni coperte",
         "sub": "Inquadrare · Realizzare · Accompagnare · Selezionare · Informarsi"
       },
       {
@@ -941,7 +941,7 @@
       },
       {
         "title": "ACCOMPAGNARE",
-        "desc": "Cinque situazioni chiave nella vita dell’azienda: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Una diagnosi, un piano, poi un accompagnamento adatto alla vostra situazione, fino ai risultati."
+        "desc": "I cinque cicli di vita dell’azienda: lancio, crescita, ristrutturazione, acquisizione, trasmissione. Una diagnosi, un piano, poi un accompagnamento adatto alla vostra situazione, fino ai risultati."
       },
       {
         "title": "SELEZIONARE",
@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Diventare partner | Aegryn",
-      "desc": "Unitevi alla rete Aegryn: esperti dei cinque mestieri della società, partner di realizzazione dei progetti signature di La Boutique, investitori e istituzioni, revisori indipendenti della certificazione CIFSO 5000."
+      "desc": "Unitevi alla rete Aegryn: esperti dei otto mestieri della società, partner di realizzazione dei progetti signature di La Boutique, investitori e istituzioni, revisori indipendenti della certificazione CIFSO 5000."
     },
     "hero": {
       "label": "Diventare partner",
       "title": "La nostra rete.\nLa nostra forza.",
-      "desc": "Aegryn mobilita una rete di esperti selezionati uno a uno: i cinque mestieri della società, i partner di realizzazione dei progetti signature di La Boutique, una cerchia di investitori e istituzionali e revisori indipendenti della certificazione CIFSO 5000.",
+      "desc": "Aegryn mobilita una rete di esperti selezionati uno a uno: i otto mestieri della società, i partner di realizzazione dei progetti signature di La Boutique, una cerchia di investitori e istituzionali e revisori indipendenti della certificazione CIFSO 5000.",
       "imageAlt": "Faro bianco vicino al mare, vista aerea"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Esperti di mestiere",
-          "desc": "Cinque mestieri della società e le attività di realizzazione di La Boutique, ciascuno sostenuto da esperti della rete.",
+          "desc": "Otto mestieri della società e le attività di realizzazione di La Boutique, ciascuno sostenuto da esperti della rete.",
           "cta": "Esplorare le professioni"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "ESPERTI DI MESTIERE",
-      "title": "Cinque mestieri di consulenza, e La Boutique.",
+      "title": "Otto mestieri di consulenza, e La Boutique.",
       "desc": "Ogni professione è portata dagli esperti della rete, mobilitati secondo il bisogno dell'incarico.",
       "profilesLabel": "Profili ricercati",
       "items": {
@@ -4731,6 +4731,48 @@
             "Distribuzione e go-to-market",
             "Proprietà intellettuale e regolamentazione di prodotto",
             "Comunicazione, contenuti ed eventi"
+          ]
+        },
+        "finance": {
+          "title": "Finanza e Performance",
+          "profiles": "Direttori finanziari, direttori finanziari ad interim, specialisti di tesoreria e risanamento, controller.",
+          "expertises": [
+            "Tesoreria a tredici settimane",
+            "Redditività per attività e per cliente",
+            "Piano di risanamento",
+            "Preparazione di un dossier bancario o per investitori",
+            "Budget e gestione della performance",
+            "Capitale circolante e tempi di pagamento",
+            "Qualità dei risultati",
+            "Direzione finanziaria ad interim"
+          ]
+        },
+        "operations": {
+          "title": "Operazioni ed Eccellenza operativa",
+          "profiles": "Direttori operativi, ingegneri industriali, specialisti di supply chain, qualità e produzione.",
+          "expertises": [
+            "Mappatura dei flussi e dei colli di bottiglia",
+            "Costi di produzione e margini",
+            "Tempi e qualità",
+            "Gestione dei fornitori critici",
+            "Acquisti e logistica",
+            "Capacità e piano di carico",
+            "Riduzione dei costi senza perdita di qualità",
+            "Rilevamento e integrazione di un’attività"
+          ]
+        },
+        "program": {
+          "title": "Gestione di progetti e programmi",
+          "profiles": "Direttori di progetto e di programma, responsabili PMO, responsabili di trasformazione, specialisti di direzione lavori.",
+          "expertises": [
+            "Definizione e avvio dei progetti",
+            "Governance e comitati di pilotaggio",
+            "Gestione di un portafoglio di progetti",
+            "Controllo di tempi, budget e rischi",
+            "Direzione di programmi di trasformazione",
+            "Gestione di fornitori e integratori",
+            "Collaudo, consegna e adozione",
+            "Recupero di un progetto in difficoltà"
           ]
         }
       }
@@ -7999,7 +8041,7 @@
   "buildStrip": {
     "label": "Realizzare",
     "assetsTitle": "I nostri asset\nproprietari.",
-    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Ogni asset è documentato e gestito in condizioni reali. Software progettato per le operazioni del gruppo e aperto al mercato.",
+    "assetsDesc": "Aegryn progetta e gestisce i propri asset digitali: SaaS B2B, marketplace, strumenti IA. Prendiamo anche partecipazioni in asset di terzi. Ogni asset è documentato e gestito in condizioni reali. Software progettato per le operazioni del gruppo e aperto al mercato.",
     "assetsCta": "Scoprire i nostri asset",
     "engineeringTitle": "Software su misura\nper le vostre operazioni.",
     "engineeringDesc": "Imprese, fondi di investimento, istituzioni: Aegryn progetta, distribuisce e mantiene il vostro software aziendale. Piena proprietà IP del cliente. Un asset che lavora per voi e i vostri investitori.",

@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Cabinet intégré, ancré en Suisse.",
     "metaDescription": "Aegryn, cabinet intégré ancré en Suisse : cadrer, réaliser, accompagner chaque cycle, sélectionner les talents, s’informer.",
-    "sub": "Nous accompagnons les dirigeants de PME et d’entreprises de taille intermédiaire qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Cadrage, actifs, talents, pilotage de projet : un cabinet intégré, ancré en Suisse.",
+    "sub": "Nous accompagnons les dirigeants de PME et d’entreprises de taille intermédiaire qui lancent, développent, réorientent, reprennent ou transmettent une organisation. Stratégie, finance, technologie, opérations, talents, pilotage de projets : huit métiers réunis dans un cabinet intégré, ancré en Suisse.",
     "phrases": [
       "Cadrer\nvos projets.",
       "Réaliser\navec vous, pour vous.",
@@ -868,7 +868,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Métiers intégrés",
+        "label": "Situations couvertes",
         "sub": "Cadrer · Réaliser · Accompagner · Sélectionner · S’informer"
       },
       {
@@ -904,7 +904,7 @@
       },
       {
         "title": "ACCOMPAGNER",
-        "desc": "Cinq situations clés de la vie de l’entreprise : lancement, croissance, restructuration, acquisition, transmission. Un diagnostic, un plan, puis un accompagnement adapté à votre situation, jusqu’aux résultats."
+        "desc": "Les cinq cycles de vie de l’entreprise : lancement, croissance, restructuration, acquisition, transmission. Un diagnostic, un plan, puis un accompagnement adapté à votre situation, jusqu’aux résultats."
       },
       {
         "title": "SÉLECTIONNER",
@@ -4578,12 +4578,12 @@
   "alliances": {
     "meta": {
       "title": "Devenir partenaire | Aegryn",
-      "desc": "Rejoignez le réseau Aegryn : experts des cinq métiers du cabinet, partenaires de réalisation des projets signature de La Boutique, investisseurs et institutionnels, auditeurs indépendants de la certification CIFSO 5000."
+      "desc": "Rejoignez le réseau Aegryn : experts des huit métiers du cabinet, partenaires de réalisation des projets signature de La Boutique, investisseurs et institutionnels, auditeurs indépendants de la certification CIFSO 5000."
     },
     "hero": {
       "label": "Devenir partenaire",
       "title": "Notre réseau.\nNotre force.",
-      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : les cinq métiers du cabinet, les partenaires de réalisation des projets signature de La Boutique, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000.",
+      "desc": "Aegryn mobilise un réseau d'experts sélectionnés un par un : les huit métiers du cabinet, les partenaires de réalisation des projets signature de La Boutique, un cercle d'investisseurs et d'institutionnels, et des auditeurs indépendants de la certification CIFSO 5000.",
       "imageAlt": "Phare blanc au bord de la mer, vue aérienne"
     },
     "side": {
@@ -4602,7 +4602,7 @@
       "cards": [
         {
           "title": "Experts métier",
-          "desc": "Cinq métiers du cabinet et les activités de réalisation de La Boutique, chacun porté par des experts du réseau.",
+          "desc": "Huit métiers du cabinet et les activités de réalisation de La Boutique, chacun porté par des experts du réseau.",
           "cta": "Explorer les métiers"
         },
         {
@@ -4619,7 +4619,7 @@
     },
     "metiers": {
       "label": "EXPERTS MÉTIER",
-      "title": "Cinq métiers de conseil, et La Boutique.",
+      "title": "Huit métiers de conseil, et La Boutique.",
       "desc": "Chaque métier est porté par des experts du réseau, mobilisés selon le besoin de la mission.",
       "profilesLabel": "Profils recherchés",
       "items": {
@@ -4706,6 +4706,48 @@
             "Distribution et mise en marché",
             "Propriété intellectuelle et réglementation produit",
             "Communication, contenus et événements"
+          ]
+        },
+        "finance": {
+          "title": "Finance et Performance",
+          "profiles": "Directeurs financiers, directeurs financiers de transition, spécialistes de la trésorerie et du redressement, contrôleurs de gestion.",
+          "expertises": [
+            "Trésorerie à treize semaines",
+            "Rentabilité par activité et par client",
+            "Plan de redressement",
+            "Préparation d'un dossier bancaire ou investisseur",
+            "Budget et pilotage de la performance",
+            "Fonds de roulement et délais de paiement",
+            "Qualité des résultats",
+            "Direction financière de transition"
+          ]
+        },
+        "operations": {
+          "title": "Opérations et Excellence opérationnelle",
+          "profiles": "Directeurs des opérations, ingénieurs industriels, spécialistes de la chaîne d'approvisionnement, de la qualité et de la production.",
+          "expertises": [
+            "Cartographie des flux et des goulots",
+            "Coûts de revient et marges",
+            "Délais et qualité",
+            "Pilotage des fournisseurs critiques",
+            "Achats et logistique",
+            "Capacités et plan de charge",
+            "Réduction des coûts sans perte de qualité",
+            "Reprise et intégration d'une activité"
+          ]
+        },
+        "program": {
+          "title": "Pilotage de projets et de programmes",
+          "profiles": "Directeurs de projet et de programme, responsables de PMO, responsables de transformation, spécialistes du pilotage de chantier.",
+          "expertises": [
+            "Cadrage et lancement de projet",
+            "Gouvernance et comités de pilotage",
+            "Pilotage d'un portefeuille de projets",
+            "Maîtrise des délais, des budgets et des risques",
+            "Direction de programme de transformation",
+            "Pilotage des fournisseurs et intégrateurs",
+            "Recette, réception et adoption",
+            "Redressement d'un projet en difficulté"
           ]
         }
       }
@@ -7974,7 +8016,7 @@
   "buildStrip": {
     "label": "Réaliser",
     "assetsTitle": "Nos actifs\npropriétaires.",
-    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Chaque actif est documenté et opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
+    "assetsDesc": "Aegryn conçoit et opère ses propres actifs numériques : SaaS B2B, marketplaces, outils IA. Nous prenons aussi des participations dans des actifs de tiers. Chaque actif est documenté et opéré en conditions réelles. Logiciels conçus pour les opérations du groupe et ouverts au marché.",
     "assetsCta": "Découvrir nos actifs",
     "engineeringTitle": "Solutions sur mesure\npour vos opérations.",
     "engineeringDesc": "Entreprises, fonds d’investissement, institutions : Aegryn conçoit, déploie et maintient vos logiciels métier. Propriété IP totale client. Un actif qui travaille pour vous et vos investisseurs.",

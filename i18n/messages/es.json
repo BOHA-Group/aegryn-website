@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Firma integrada, con raíces en Suiza.",
     "metaDescription": "Aegryn, firma integrada con raíces en Suiza: encuadrar, realizar, acompañar cada ciclo, seleccionar talento, informarse.",
-    "sub": "Acompañamos a los directivos de pymes y empresas medianas que lanzan, desarrollan, reorientan, adquieren o transmiten una organización. Encuadre, activos, talento, dirección de proyectos: una firma integrada, con raíces en Suiza.",
+    "sub": "Acompañamos a los directivos de pymes y empresas medianas que lanzan, desarrollan, reorientan, adquieren o transmiten una organización. Estrategia, finanzas, tecnología, operaciones, talento, dirección de proyectos: ocho oficios reunidos en una firma integrada, con raíces en Suiza.",
     "phrases": [
       "Encuadrar\nsus proyectos.",
       "Realizar\ncon usted, para usted.",
@@ -905,7 +905,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Disciplinas integradas",
+        "label": "Situaciones cubiertas",
         "sub": "Encuadrar · Realizar · Acompañar · Seleccionar · Informarse"
       },
       {
@@ -941,7 +941,7 @@
       },
       {
         "title": "ACOMPAÑAR",
-        "desc": "Cinco situaciones clave en la vida de la empresa: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Un diagnóstico, un plan y un acompañamiento adaptado a su situación, hasta los resultados."
+        "desc": "Los cinco ciclos de vida de la empresa: lanzamiento, crecimiento, reestructuración, adquisición, transmisión. Un diagnóstico, un plan y un acompañamiento adaptado a su situación, hasta los resultados."
       },
       {
         "title": "SELECCIONAR",
@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Hacerse socio | Aegryn",
-      "desc": "Únase a la red Aegryn: expertos de los cinco oficios de la firma, socios de realización de los proyectos insignia de La Boutique, inversores e instituciones, auditores independientes de la certificación CIFSO 5000."
+      "desc": "Únase a la red Aegryn: expertos de los ocho oficios de la firma, socios de realización de los proyectos insignia de La Boutique, inversores e instituciones, auditores independientes de la certificación CIFSO 5000."
     },
     "hero": {
       "label": "Hacerse socio",
       "title": "Nuestra red.\nNuestra fuerza.",
-      "desc": "Aegryn moviliza una red de expertos seleccionados uno a uno: los cinco oficios de la firma, los socios de realización de los proyectos insignia de La Boutique, un círculo de inversores e institucionales y auditores independientes de la certificación CIFSO 5000.",
+      "desc": "Aegryn moviliza una red de expertos seleccionados uno a uno: los ocho oficios de la firma, los socios de realización de los proyectos insignia de La Boutique, un círculo de inversores e institucionales y auditores independientes de la certificación CIFSO 5000.",
       "imageAlt": "Faro blanco junto al mar, vista aérea"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Expertos de oficio",
-          "desc": "Cinco oficios de la firma y las actividades de realización de La Boutique, cada uno respaldado por expertos de la red.",
+          "desc": "Ocho oficios de la firma y las actividades de realización de La Boutique, cada uno respaldado por expertos de la red.",
           "cta": "Explorar las profesiones"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "EXPERTOS DE OFICIO",
-      "title": "Cinco oficios de asesoramiento, y La Boutique.",
+      "title": "Ocho oficios de asesoramiento, y La Boutique.",
       "desc": "Cada profesión está impulsada por expertos de la red, movilizados según la necesidad de la misión.",
       "profilesLabel": "Perfiles buscados",
       "items": {
@@ -4731,6 +4731,48 @@
             "Distribución y salida al mercado",
             "Propiedad intelectual y regulación de producto",
             "Comunicación, contenidos y eventos"
+          ]
+        },
+        "finance": {
+          "title": "Finanzas y Rendimiento",
+          "profiles": "Directores financieros, directores financieros interinos, especialistas en tesorería y reestructuración, controllers.",
+          "expertises": [
+            "Tesorería a trece semanas",
+            "Rentabilidad por actividad y por cliente",
+            "Plan de recuperación",
+            "Preparación de un expediente bancario o de inversor",
+            "Presupuesto y gestión del rendimiento",
+            "Capital circulante y plazos de pago",
+            "Calidad de los resultados",
+            "Dirección financiera interina"
+          ]
+        },
+        "operations": {
+          "title": "Operaciones y Excelencia operativa",
+          "profiles": "Directores de operaciones, ingenieros industriales, especialistas en cadena de suministro, calidad y producción.",
+          "expertises": [
+            "Mapa de flujos y cuellos de botella",
+            "Costes de producción y márgenes",
+            "Plazos y calidad",
+            "Gestión de proveedores críticos",
+            "Compras y logística",
+            "Capacidades y plan de carga",
+            "Reducción de costes sin perder calidad",
+            "Adquisición e integración de una actividad"
+          ]
+        },
+        "program": {
+          "title": "Gestión de proyectos y programas",
+          "profiles": "Directores de proyecto y de programa, responsables de PMO, responsables de transformación, especialistas en dirección de obra.",
+          "expertises": [
+            "Definición y lanzamiento de proyectos",
+            "Gobernanza y comités de dirección",
+            "Gestión de una cartera de proyectos",
+            "Control de plazos, presupuestos y riesgos",
+            "Dirección de programas de transformación",
+            "Gestión de proveedores e integradores",
+            "Pruebas, recepción y adopción",
+            "Recuperación de un proyecto en dificultad"
           ]
         }
       }
@@ -7999,7 +8041,7 @@
   "buildStrip": {
     "label": "Realizar",
     "assetsTitle": "Nuestros activos\npropietarios.",
-    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. Cada activo está documentado y operado en condiciones reales. Software concebido para las operaciones del grupo y abierto al mercado.",
+    "assetsDesc": "Aegryn diseña y opera sus propios activos digitales: SaaS B2B, marketplaces, herramientas IA. También tomamos participaciones en activos de terceros. Cada activo está documentado y operado en condiciones reales. Software concebido para las operaciones del grupo y abierto al mercado.",
     "assetsCta": "Descubrir nuestros activos",
     "engineeringTitle": "Software a medida\npara sus operaciones.",
     "engineeringDesc": "Empresas, fondos de inversión, instituciones: Aegryn diseña, despliega y mantiene su software empresarial. Plena propiedad IP del cliente. Un activo que trabaja para usted y sus inversores.",

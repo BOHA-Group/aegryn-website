@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Integrierte Firma, in der Schweiz verankert.",
     "metaDescription": "Aegryn, integrierte Firma in der Schweiz: Rahmen setzen, umsetzen, jeden Zyklus begleiten, Talente auswählen, informieren.",
-    "sub": "Wir begleiten Führungskräfte von KMU und mittelständischen Unternehmen, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Konzeption, Assets, Talente, Projektsteuerung: eine integrierte Firma, verankert in der Schweiz.",
+    "sub": "Wir begleiten Führungskräfte von KMU und mittelständischen Unternehmen, die eine Organisation gründen, entwickeln, neu ausrichten, übernehmen oder übergeben. Strategie, Finanzen, Technologie, Operations, Talente, Projektsteuerung: acht Fachgebiete in einer integrierten Firma, verankert in der Schweiz.",
     "phrases": [
       "Ihre Projekte\nrahmen.",
       "Mit Ihnen, für Sie\numsetzen.",
@@ -905,7 +905,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Integrierte Disziplinen",
+        "label": "Abgedeckte Situationen",
         "sub": "Rahmen setzen · Umsetzen · Begleiten · Auswählen · Informieren"
       },
       {
@@ -941,7 +941,7 @@
       },
       {
         "title": "BEGLEITEN",
-        "desc": "Fünf Schlüsselsituationen im Leben eines Unternehmens: Gründung, Wachstum, Restrukturierung, Akquisition, Übergabe. Eine Diagnose, ein Plan, dann eine zu Ihrer Situation passende Begleitung bis zu den Ergebnissen."
+        "desc": "Die fünf Lebenszyklen eines Unternehmens: Gründung, Wachstum, Restrukturierung, Akquisition, Übergabe. Eine Diagnose, ein Plan, dann eine zu Ihrer Situation passende Begleitung bis zu den Ergebnissen."
       },
       {
         "title": "AUSWÄHLEN",
@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Partner werden | Aegryn",
-      "desc": "Werden Sie Teil des Aegryn-Netzwerks: Experten der fünf Disziplinen der Firma, Umsetzungspartner für die Signature-Projekte von La Boutique, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
+      "desc": "Werden Sie Teil des Aegryn-Netzwerks: Experten der acht Disziplinen der Firma, Umsetzungspartner für die Signature-Projekte von La Boutique, Investoren und Institutionen, unabhängige Auditoren der CIFSO-5000-Zertifizierung."
     },
     "hero": {
       "label": "Partner werden",
       "title": "Unser Netzwerk.\nUnsere Stärke.",
-      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: die fünf Disziplinen der Firma, die Umsetzungspartner der Signature-Projekte von La Boutique, einen Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
+      "desc": "Aegryn mobilisiert ein Netzwerk einzeln ausgewählter Experten: die acht Disziplinen der Firma, die Umsetzungspartner der Signature-Projekte von La Boutique, einen Kreis von Investoren und Institutionen sowie unabhängige Auditoren der CIFSO-5000-Zertifizierung.",
       "imageAlt": "Weißer Leuchtturm am Meer, Luftaufnahme"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Fachexperten",
-          "desc": "Die fünf Disziplinen der Firma und die Umsetzungsaktivitäten von La Boutique, jeweils getragen von Experten des Netzwerks.",
+          "desc": "Die acht Disziplinen der Firma und die Umsetzungsaktivitäten von La Boutique, jeweils getragen von Experten des Netzwerks.",
           "cta": "Disziplinen entdecken"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "FACHEXPERTEN",
-      "title": "Fünf Beratungsdisziplinen und La Boutique.",
+      "title": "Acht Beratungsdisziplinen und La Boutique.",
       "desc": "Jede Disziplin wird von Experten des Netzwerks getragen, je nach Bedarf des Mandats mobilisiert.",
       "profilesLabel": "Gesuchte Profile",
       "items": {
@@ -4731,6 +4731,48 @@
             "Vertrieb und Markteinführung",
             "Geistiges Eigentum und Produktregulierung",
             "Kommunikation, Inhalte und Events"
+          ]
+        },
+        "finance": {
+          "title": "Finanzen und Performance",
+          "profiles": "Finanzchefs, Finanzchefs auf Zeit, Spezialisten für Liquidität und Sanierung, Controller.",
+          "expertises": [
+            "Liquiditätsplanung über dreizehn Wochen",
+            "Rentabilität nach Geschäftsfeld und Kunde",
+            "Sanierungsplan",
+            "Vorbereitung eines Bank- oder Investorendossiers",
+            "Budget und Performance-Steuerung",
+            "Working Capital und Zahlungsfristen",
+            "Qualität der Ergebnisse",
+            "Finanzleitung auf Zeit"
+          ]
+        },
+        "operations": {
+          "title": "Operations und operative Exzellenz",
+          "profiles": "Operationsleiter, Industrieingenieure, Spezialisten für Lieferkette, Qualität und Produktion.",
+          "expertises": [
+            "Abbildung von Flüssen und Engpässen",
+            "Herstellkosten und Margen",
+            "Durchlaufzeiten und Qualität",
+            "Steuerung kritischer Lieferanten",
+            "Einkauf und Logistik",
+            "Kapazitäten und Auslastungsplanung",
+            "Kostensenkung ohne Qualitätsverlust",
+            "Übernahme und Integration einer Aktivität"
+          ]
+        },
+        "program": {
+          "title": "Projekt- und Programmsteuerung",
+          "profiles": "Projekt- und Programmleiter, PMO-Verantwortliche, Transformationsleiter, Spezialisten für die Baustellensteuerung.",
+          "expertises": [
+            "Projektdefinition und Projektstart",
+            "Governance und Steuerungsausschüsse",
+            "Steuerung eines Projektportfolios",
+            "Beherrschung von Terminen, Budgets und Risiken",
+            "Leitung eines Transformationsprogramms",
+            "Steuerung von Lieferanten und Integratoren",
+            "Test, Abnahme und Einführung",
+            "Sanierung eines gefährdeten Projekts"
           ]
         }
       }
@@ -7999,7 +8041,7 @@
   "buildStrip": {
     "label": "Umsetzen",
     "assetsTitle": "Unsere eigenen\nAssets.",
-    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Jedes Asset ist dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
+    "assetsDesc": "Aegryn entwirft und betreibt eigene digitale Assets: B2B SaaS, Marktplätze, KI-Tools. Wir beteiligen uns auch an Assets Dritter. Jedes Asset ist dokumentiert und unter realen Bedingungen betrieben. Software für die Gruppenoperationen, verfügbar für den Markt.",
     "assetsCta": "Unsere Assets entdecken",
     "engineeringTitle": "Maßgeschneiderte Software\nfür Ihre Operationen.",
     "engineeringDesc": "Unternehmen, Investmentfonds, Institutionen: Aegryn entwickelt, deployt und pflegt Ihre Geschäftssoftware. Vollständiges Kunden-IP-Eigentum. Ein Asset, das für Sie und Ihre Investoren arbeitet.",

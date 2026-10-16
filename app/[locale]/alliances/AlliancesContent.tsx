@@ -9,7 +9,7 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
 
-const METIER_KEYS = ['strategie', 'risques', 'technologie', 'talent', 'ma', 'boutique'] as const
+const METIER_KEYS = ['strategie', 'risques', 'finance', 'technologie', 'operations', 'talent', 'program', 'ma', 'boutique'] as const
 type MetierKey = typeof METIER_KEYS[number]
 
 const DIMENSION_KEYS = ['C', 'I', 'F', 'S', 'O'] as const

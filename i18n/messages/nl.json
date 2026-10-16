@@ -178,7 +178,7 @@
   "hero": {
     "tagline": "Geïntegreerd bureau, verankerd in Zwitserland.",
     "metaDescription": "Aegryn, geïntegreerd bureau verankerd in Zwitserland: kaderen, realiseren, elke cyclus begeleiden, talent selecteren, geïnformeerd blijven.",
-    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Kadering, assets, talent, projectleiding: een geïntegreerd bureau, verankerd in Zwitserland.",
+    "sub": "Wij begeleiden leidinggevenden van kmo’s en middelgrote ondernemingen die een organisatie lanceren, ontwikkelen, herorienteren, overnemen of overdragen. Strategie, financiën, technologie, operaties, talent, projectleiding: acht vakgebieden in één geïntegreerd bureau, verankerd in Zwitserland.",
     "phrases": [
       "Uw projecten\nkaderen.",
       "Realiseren\nmet u, voor u.",
@@ -905,7 +905,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Geïntegreerde disciplines",
+        "label": "Gedekte situaties",
         "sub": "Kaderen · Realiseren · Begeleiden · Selecteren · Informeren"
       },
       {
@@ -941,7 +941,7 @@
       },
       {
         "title": "BEGELEIDEN",
-        "desc": "Vijf sleutelsituaties in het leven van een onderneming: lancering, groei, herstructurering, acquisitie, overdracht. Een diagnose, een plan, dan begeleiding die bij uw situatie past, tot aan de resultaten."
+        "desc": "De vijf levenscycli van een onderneming: lancering, groei, herstructurering, acquisitie, overdracht. Een diagnose, een plan, dan begeleiding die bij uw situatie past, tot aan de resultaten."
       },
       {
         "title": "SELECTEREN",
@@ -4603,12 +4603,12 @@
   "alliances": {
     "meta": {
       "title": "Partner worden | Aegryn",
-      "desc": "Sluit u aan bij het Aegryn-netwerk: experts uit de vijf vakgebieden van het bureau, uitvoeringspartners voor de signatuurprojecten van La Boutique, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
+      "desc": "Sluit u aan bij het Aegryn-netwerk: experts uit de acht vakgebieden van het bureau, uitvoeringspartners voor de signatuurprojecten van La Boutique, investeerders en instellingen, onafhankelijke auditors van de CIFSO 5000-certificering."
     },
     "hero": {
       "label": "Partner worden",
       "title": "Ons netwerk.\nOnze kracht.",
-      "desc": "Aegryn schakelt een netwerk van één voor één geselecteerde experts in: de vijf vakgebieden van het bureau, de uitvoeringspartners van de signatuurprojecten van La Boutique, een kring van investeerders en instellingen en onafhankelijke auditors van de CIFSO 5000-certificering.",
+      "desc": "Aegryn schakelt een netwerk van één voor één geselecteerde experts in: de acht vakgebieden van het bureau, de uitvoeringspartners van de signatuurprojecten van La Boutique, een kring van investeerders en instellingen en onafhankelijke auditors van de CIFSO 5000-certificering.",
       "imageAlt": "Witte vuurtoren aan zee, luchtfoto"
     },
     "side": {
@@ -4627,7 +4627,7 @@
       "cards": [
         {
           "title": "Vakexperts",
-          "desc": "De vijf vakgebieden van het bureau en de uitvoeringsactiviteiten van La Boutique, elk gedragen door experts uit het netwerk.",
+          "desc": "De acht vakgebieden van het bureau en de uitvoeringsactiviteiten van La Boutique, elk gedragen door experts uit het netwerk.",
           "cta": "De domeinen verkennen"
         },
         {
@@ -4644,7 +4644,7 @@
     },
     "metiers": {
       "label": "VAKEXPERTS",
-      "title": "Vijf adviesvakgebieden, en La Boutique.",
+      "title": "Acht adviesvakgebieden, en La Boutique.",
       "desc": "Elk domein wordt gedragen door experts van het netwerk, ingezet naar gelang de opdracht.",
       "profilesLabel": "Gezochte profielen",
       "items": {
@@ -4731,6 +4731,48 @@
             "Distributie en marktintroductie",
             "Intellectueel eigendom en productregelgeving",
             "Communicatie, content en evenementen"
+          ]
+        },
+        "finance": {
+          "title": "Financiën en Prestaties",
+          "profiles": "Financieel directeuren, interim-financieel directeuren, specialisten in liquiditeit en herstel, controllers.",
+          "expertises": [
+            "Liquiditeitsplanning over dertien weken",
+            "Rendabiliteit per activiteit en per klant",
+            "Herstelplan",
+            "Voorbereiding van een bank- of investeerdersdossier",
+            "Budget en prestatiesturing",
+            "Werkkapitaal en betaaltermijnen",
+            "Kwaliteit van de resultaten",
+            "Interim financiële leiding"
+          ]
+        },
+        "operations": {
+          "title": "Operations en Operationele excellentie",
+          "profiles": "Operationeel directeuren, industrieel ingenieurs, specialisten in toeleveringsketen, kwaliteit en productie.",
+          "expertises": [
+            "In kaart brengen van stromen en knelpunten",
+            "Kostprijs en marges",
+            "Doorlooptijden en kwaliteit",
+            "Sturing van kritieke leveranciers",
+            "Inkoop en logistiek",
+            "Capaciteit en belastingsplanning",
+            "Kosten verlagen zonder kwaliteitsverlies",
+            "Overname en integratie van een activiteit"
+          ]
+        },
+        "program": {
+          "title": "Project- en programmamanagement",
+          "profiles": "Project- en programmadirecteurs, PMO-verantwoordelijken, transformatieleiders, specialisten in bouwplaatssturing.",
+          "expertises": [
+            "Afbakening en start van projecten",
+            "Governance en stuurcomités",
+            "Sturing van een projectportefeuille",
+            "Beheersing van termijnen, budgetten en risico’s",
+            "Leiding van een transformatieprogramma",
+            "Sturing van leveranciers en integratoren",
+            "Testen, oplevering en adoptie",
+            "Herstel van een project in moeilijkheden"
           ]
         }
       }
@@ -8014,7 +8056,7 @@
   "buildStrip": {
     "label": "Realiseren",
     "assetsTitle": "Onze eigen\nactiva.",
-    "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, marketplaces, AI-tools. Elk actief is gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
+    "assetsDesc": "Aegryn ontwerpt en exploiteert zijn eigen digitale activa: B2B SaaS, marketplaces, AI-tools. Wij nemen ook deelnemingen in activa van derden. Elk actief is gedocumenteerd en onder reële omstandigheden geëxploiteerd. Software gebouwd voor de activiteiten van de groep, beschikbaar voor de markt.",
     "assetsCta": "Onze activa ontdekken",
     "engineeringTitle": "Maatwerksoftware\nvoor uw operaties.",
     "engineeringDesc": "Ondernemingen, investeringsfondsen, instellingen: Aegryn ontwerpt, implementeert en onderhoudt uw bedrijfssoftware. Volledige IP-eigendom klant. Een asset dat werkt voor u en uw investeerders.",
