@@ -159,8 +159,8 @@ export default async function BoutiquePage({ params }: Props) {
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
                 <span className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.22em] text-white/70">{String(i + 1).padStart(2, '0')}</span>
                 <div className="relative z-10 p-5">
-                  <h3 className="font-sans font-bold leading-[1.15] tracking-[-0.02em] text-white" style={{ fontSize: 'clamp(18px,1.8vw,22px)' }}>{c.title}</h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-white/80">{c.desc}</p>
+                  <h3 className="font-sans text-[18px] font-bold leading-[1.15] tracking-[-0.01em] text-white">{c.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-white/80">{c.desc}</p>
                 </div>
               </div>
             ))}
