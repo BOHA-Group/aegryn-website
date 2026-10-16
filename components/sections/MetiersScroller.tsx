@@ -193,7 +193,7 @@ export function MetiersScroller() {
                   alt=""
                   fill
                   loading="eager"
-                  sizes="(max-width: 767px) 80vw, 40svh"
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95}
                 />
               </div>
               <div className="mw-text">

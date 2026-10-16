@@ -112,7 +112,7 @@ export function ProjectsScroller({ title, allLabel, projects }: { title: string;
   }, [])
 
   return (
-    <section ref={sectionRef} id="projets" className="mw-section">
+    <section ref={sectionRef} id="projets" className="mw-section mw-section--titled">
       <div ref={headRef} className="mw-head">
         <h2 className="mw-head-title">{title}</h2>
         <Link href={'/boutique/projets' as never} className="mw-head-link">{allLabel} →</Link>
@@ -125,7 +125,7 @@ export function ProjectsScroller({ title, allLabel, projects }: { title: string;
             {i > 0 && <div className={`mw-riser ${i % 2 ? 'is-down' : 'is-up'}`} />}
             {p.image && (
               <div className="mw-image">
-                <Image src={p.image} alt={tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 767px) 80vw, 40svh" />
+                <Image src={p.image} alt={tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95} />
               </div>
             )}
             <div className="mw-text">
