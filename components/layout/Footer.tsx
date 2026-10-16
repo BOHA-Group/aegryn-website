@@ -129,12 +129,14 @@ const aegrynLinks: { navKey: string; href: LinkHref }[] = [
   { navKey: 'whoContact',   href: '/contact' },
 ]
 
-/* Colonne Nos métiers : les entrées du menu, plus Sélectionner (page Talent) */
+/* Colonne Le cabinet : les entrées du menu Nos métiers, Sélectionner (page Talent) et les réseaux */
 const metiersLinks: { navNs: 'footer' | 'nav'; key: string; href: LinkHref }[] = [
   { navNs: 'footer', key: 'footerCraftFrameDeliver', href: '/advisory' },
   { navNs: 'footer', key: 'footerCraftTransact',     href: { pathname: '/', hash: 'cinq-cycles' } as LinkHref },
   { navNs: 'footer', key: 'footerWhoTalent',         href: '/talent' as never },
   { navNs: 'nav',    key: 'whoIndustries',           href: '/industries' as LinkHref },
+  { navNs: 'nav',    key: 'craftSupportExperts',     href: '/experts' as LinkHref },
+  { navNs: 'nav',    key: 'craftSupportInvestors',   href: '/investisseurs' as LinkHref },
 ]
 
 export default function Footer() {
@@ -186,7 +188,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2 — Nos métiers */}
+          {/* Col 2 — Le cabinet */}
           <div>
             <p className="font-sans font-semibold text-[10px] tracking-[0.2em] text-white/70 uppercase mb-4">
               {t('footerCol2Title')}

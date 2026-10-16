@@ -3,373 +3,21 @@
 import { Link, usePathname } from '@/i18n/navigation'
 import NextLink          from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useState, useRef, useEffect, useCallback, type ComponentProps } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, User, UserCircle, ArrowUpRight, ArrowRight, HelpCircle } from 'lucide-react'
 import LanguageSwitcher   from '@/components/layout/LanguageSwitcher'
 import NotificationBell   from '@/components/client/NotificationBell'
 import Image             from 'next/image'
 import { gsap }          from '@/lib/gsap'
+import { NavPanel }      from '@/components/layout/NavPanel'
+import {
+  CRAFT_METIERS, CRAFT_TRANSACT_CYCLES, THINKING_MAGAZINE_LINKS, THINKING_MARKET_LINKS, NEWSLETTER_HREF,
+  WHO_GROUP_LINKS, WHO_JOIN_LINKS, INDUSTRY_CLUSTERS, BOUTIQUE_DISCOVER_LINKS, BOUTIQUE_SUBMIT_HREF,
+  type DropdownKey, type LinkHref,
+} from '@/components/layout/navData'
 
-type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
-type LinkHref = ComponentProps<typeof Link>['href']
-
-// Nos métiers - Cadrer et réaliser : huit métiers sous un seul titre, en deux colonnes (ordre de lecture ligne par ligne)
-// (les outils CIFSO ne figurent plus dans les menus : pied de page et page des actifs uniquement)
-const CRAFT_METIERS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftSupportStrategy',        href: '/advisory/strategy' as LinkHref },
-  { labelKey: 'craftSupportRiskCompliance',  href: '/advisory/risk-compliance' as LinkHref },
-  { labelKey: 'craftFinance',                href: '/advisory/finance-performance' as LinkHref },
-  { labelKey: 'craftSupportTechnology',      href: '/advisory/technology' as LinkHref },
-  { labelKey: 'craftOperations',             href: '/advisory/operations-excellence' as LinkHref },
-  { labelKey: 'craftSupportTalentOrg',       href: '/advisory/talent-organization' as LinkHref },
-  { labelKey: 'craftProgram',                href: '/advisory/project-program-management' as LinkHref },
-  { labelKey: 'craftSupportMA',              href: '/advisory/ma' as LinkHref },
-]
-
-// Nos métiers - Franchir : cycles de vie (l'intro vit désormais en section accueil #accompagner)
-const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftTransactLancement',       href: '/accompagner/lancement' as LinkHref },
-  { labelKey: 'craftTransactCroissance',      href: '/accompagner/croissance' as LinkHref },
-  { labelKey: 'craftTransactRestructuration', href: '/accompagner/restructuration' as LinkHref },
-  { labelKey: 'craftTransactBuy',             href: '/accompagner/acquisition' as LinkHref },
-  { labelKey: 'craftTransactSell',            href: '/accompagner/transmission' as LinkHref },
-]
-// Nos convictions - Magazine (les éditions à venir sont grisées mais restent cliquables)
-const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref; muted?: boolean }[] = [
-  { labelKey: 'thinkingMagazineIssues',   href: '/magazine' },
-  { labelKey: 'thinkingMagazineIssue02',  href: '/magazine', muted: true },
-  { labelKey: 'thinkingMagazineIssue03',  href: '/magazine', muted: true },
-  { labelKey: 'thinkingMagazineIssue04',  href: '/magazine', muted: true },
-]
-
-// Nos convictions - Notre regard sur le marché
-const THINKING_MARKET_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'thinkingMarketArticles',   href: '/blog' },
-  { labelKey: 'thinkingMarketWorkforce',  href: '/workforce' as LinkHref },
-  { labelKey: 'thinkingMarketFAQ',        href: '/help/faq' as LinkHref },
-]
-
-// Qui sommes-nous - Le groupe (hors fondateur qui a un hash natif)
-const WHO_GROUP_LINKS_BASE: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'whoAbout',     href: '/about' },
-  { labelKey: 'whoContact',   href: '/contact' },
-]
-
-// Qui sommes-nous - Nous rejoindre
-const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'whoCareers',   href: '/career' },
-  { labelKey: 'whoAlliances', href: '/alliances' },
-  { labelKey: 'craftSupportNetworkNew', href: '/experts' as LinkHref },
-  { labelKey: 'craftSupportInvestors',  href: '/investisseurs' as LinkHref },
-  { labelKey: 'craftTransactAuditors',  href: '/audit' as LinkHref },
-]
-
-// Mega-menu Nos métiers (2 sections : Cadrer et réaliser sur deux colonnes, Accompagner)
-function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -6 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 mt-2 w-[760px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
-    >
-      <div className="grid grid-cols-[2.25fr_1fr] gap-px bg-ag-border rounded-2xl overflow-hidden">
-        {/* Cadrer et réaliser : un seul titre sur deux colonnes, sans séparateur entre elles */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftFrameDeliver')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('craftFrameDeliverDesc')}
-          </div>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-1">
-            {CRAFT_METIERS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Franchir */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftTransact')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('craftTransactDesc')}
-          </div>
-          <div className="flex flex-col gap-1">
-            {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1 whitespace-nowrap"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-between bg-ag-off-white border-t border-ag-border px-4 py-3">
-        <p className="font-sans text-[11px] text-ag-gray-light">{t('whoIndustriesDesc')}</p>
-        <Link
-          href={'/industries' as LinkHref}
-          onClick={onClose}
-          className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
-        >
-          {t('whoIndustries')} <ArrowRight size={11} />
-        </Link>
-      </div>
-    </motion.div>
-  )
-}
-
-// La Boutique : découvrir / passer à l'action
-const BOUTIQUE_DISCOVER_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'boutiqueConcept',  href: '/boutique' },
-  { labelKey: 'boutiqueProjects', href: '/boutique/projets' as LinkHref },
-  { labelKey: 'boutiqueForWho',   href: { pathname: '/boutique', hash: 'pour-qui' } as LinkHref },
-  { labelKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },
-]
-const BOUTIQUE_SUBMIT_HREF = { pathname: '/contact', query: { subject: 'project' } } as LinkHref
-
-// Mega-menu La Boutique (2 colonnes : découvrir | passer à l'action)
-function BoutiqueMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -6 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full right-0 mt-2 w-max bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
-    >
-      <div className="grid grid-cols-[auto_auto] gap-px bg-ag-border rounded-2xl overflow-hidden">
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueDiscover')}</p>
-          <div className="h-9 line-clamp-2 max-w-[210px] font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueDiscoverDesc')}</div>
-          <div className="flex flex-col gap-1">
-            {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
-              <Link key={labelKey} href={href} onClick={onClose} className={`font-sans text-[13px] whitespace-nowrap transition-colors py-1 ${labelKey === 'boutiqueConcept' ? 'font-semibold text-ag-black' : 'text-ag-gray hover:text-ag-black'}`}>
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">{t('boutiqueAct')}</p>
-          <div className="h-9 line-clamp-2 max-w-[210px] font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">{t('boutiqueActDesc')}</div>
-          <div className="flex flex-col gap-1">
-            <span className="flex items-center gap-2 whitespace-nowrap font-sans text-[13px] text-ag-gray-light/70 py-1 cursor-default" aria-disabled="true">
-              {t('boutiquePlaces')}
-              <span className="rounded-full bg-ag-off-white px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ag-gray">{t('boutiqueSoon')}</span>
-            </span>
-            <Link href={BOUTIQUE_SUBMIT_HREF} onClick={onClose} className="font-sans text-[13px] whitespace-nowrap text-ag-gray hover:text-ag-black transition-colors py-1">
-              {t('boutiqueSubmit')}
-            </Link>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-// Mega-menu Nos convictions (2 colonnes Magazine + Notre regard)
-function ThinkingMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -6 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 mt-2 w-[640px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
-    >
-      <div className="grid grid-cols-2 gap-px bg-ag-border rounded-2xl overflow-hidden">
-        {/* The Aegryn Magazine */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('thinkingMagazine')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('thinkingMagazineDesc')}
-          </div>
-          <div className="flex flex-col gap-1">
-            {THINKING_MAGAZINE_LINKS.map(({ labelKey, href, muted }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className={`font-sans text-[13px] transition-colors py-1 whitespace-nowrap ${
-                  muted ? 'text-ag-gray-light/70 hover:text-ag-gray' : 'text-ag-gray hover:text-ag-black'
-                }`}
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Notre regard sur le marché */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('thinkingMarket')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('thinkingMarketDesc')}
-          </div>
-          <div className="flex flex-col gap-1">
-            <a
-              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-            >
-              {t('thinkingMarketNewsletter')}
-            </a>
-            {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-// Mega-menu Qui sommes-nous (3 colonnes: Groupe | Industries | Rejoindre)
-const INDUSTRY_CLUSTERS: { id: string; slug: string; labelKey: string }[] = [
-  { id: 'finance',   slug: 'finance-capital',                    labelKey: 'clusterFinance'   },
-  { id: 'sante',     slug: 'sante-sciences-de-la-vie',           labelKey: 'clusterSante'     },
-  { id: 'industrie', slug: 'industrie-energie-infrastructure',   labelKey: 'clusterIndustrie' },
-  { id: 'commerce',  slug: 'commerce-services-experience-client',labelKey: 'clusterCommerce'  },
-  { id: 'tech',      slug: 'tech-innovation-secteur-public',     labelKey: 'clusterTech'      },
-]
-
-function WhoMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
-  // Utilise le path i18n '/about' — le Link next-intl traduit en /a-propos, /about, /chi-siamo… selon la locale
-  // Le cast est nécessaire car LinkHref ne liste pas les variantes avec #hash
-  const founderHref = { pathname: '/about', hash: 'fondateur' } as LinkHref
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -6 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 -ml-[205px] mt-2 w-[820px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
-    >
-      <div className="grid gap-px bg-ag-border rounded-2xl overflow-hidden" style={{ gridTemplateColumns: '1fr 1.4fr 1fr' }}>
-        {/* Le groupe */}
-        <div className="bg-ag-white p-3">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('whoGroup')}
-          </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('whoGroupDesc')}
-          </p>
-          <div className="flex flex-col gap-1">
-            {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-            <Link
-              href={founderHref}
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-            >
-              {t('whoFounder')}
-            </Link>
-          </div>
-          {/* Nos bureaux */}
-          <div className="mt-4 pt-4 border-t border-ag-border">
-            <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-ag-gray-light mb-2">
-              {t('whoOffices')}
-            </p>
-            <p className="font-sans text-[11px] text-ag-gray leading-relaxed">
-              Switzerland<br />
-              Rue du Centre 142<br />
-              1025 St-Sulpice
-            </p>
-          </div>
-        </div>
-
-        {/* Nos industries — liste statique des clusters */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-1">
-            {t('whoIndustries')}
-          </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('whoIndustriesDesc')}
-          </p>
-          <div className="flex flex-col divide-y divide-ag-border border-t border-ag-border">
-            {INDUSTRY_CLUSTERS.map(({ slug, labelKey }) => (
-              <Link
-                key={slug}
-                href={`/industries/${slug}` as LinkHref}
-                onClick={onClose}
-                className="flex items-center justify-between py-2 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors group"
-              >
-                <span>{t(labelKey as Parameters<typeof t>[0])}</span>
-                <ArrowUpRight size={11} className="text-ag-gray-light group-hover:text-ag-black transition-colors shrink-0" />
-              </Link>
-            ))}
-          </div>
-          <Link
-            href={'/industries' as LinkHref}
-            onClick={onClose}
-            className="inline-flex items-center gap-1 mt-3 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors"
-          >
-            {t('whoIndustriesLink')} <ArrowUpRight size={10} />
-          </Link>
-        </div>
-
-        {/* Nous rejoindre */}
-        <div className="bg-ag-white p-3">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('whoJoin')}
-          </p>
-          <p className="font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed">
-            {t('whoJoinDesc')}
-          </p>
-          <div className="flex flex-col gap-1">
-            {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
-              <Link
-                key={labelKey}
-                href={href}
-                onClick={onClose}
-                className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-              >
-                {t(labelKey)}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
+const ICON_BTN = 'flex h-9 w-9 items-center justify-center rounded-full text-ag-gray transition-colors hover:bg-ag-off-white hover:text-ag-black'
 
 export interface NavUser {
   name: string
@@ -485,7 +133,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
   /* Fond : transparent sur le hero, blanc dès que le menu est ouvert ou qu'on a défilé */
   const barAlpha = !heroPage || activeDropdown !== null || mobileOpen ? 1 : scrollP
+  const menuOpen = activeDropdown !== null
   const onHero   = heroPage && overHero && activeDropdown === null && !mobileOpen
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setActiveDropdown(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [menuOpen])
 
   const toggleMobileAccordion = (key: DropdownKey) =>
     setMobileAccordion(prev => (prev === key ? null : key))
@@ -505,7 +161,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 bg-ag-navy/30 backdrop-blur-[2px]"
+            className="fixed inset-0 z-40 bg-ag-black/25 backdrop-blur-md"
             onClick={() => setActiveDropdown(null)}
           />
         )}
@@ -513,8 +169,10 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
     <header
       ref={navRef}
       data-onhero={onHero ? 'true' : 'false'}
-      className={`fixed top-0 left-0 right-0 z-50 border-b ${heroPage ? '' : 'bg-ag-white border-ag-border'}`}
-      style={heroPage ? { backgroundColor: `rgba(255,255,255,${barAlpha})`, borderColor: `rgba(226,232,240,${barAlpha})`, transition: 'background-color 0.25s, border-color 0.25s' } : undefined}
+      onMouseEnter={cancelClose}
+      onMouseLeave={closeMenu}
+      className={`fixed top-0 left-0 right-0 z-50 border-b ${heroPage ? '' : `bg-ag-white ${menuOpen ? 'border-transparent' : 'border-ag-border'}`}`}
+      style={heroPage ? { backgroundColor: `rgba(255,255,255,${barAlpha})`, borderColor: menuOpen ? 'transparent' : `rgba(226,232,240,${barAlpha})`, transition: 'background-color 0.25s, border-color 0.25s' } : undefined}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
 
@@ -543,138 +201,45 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
           )}
         </Link>
 
-        {/* Desktop nav */}
-        <nav ref={linksRef} className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
-
-          {/* Nos métiers */}
-          <div
-            className="nav-link-item relative"
-            onMouseEnter={() => openMenu('craft')}
-            onMouseLeave={closeMenu}
-          >
-            <button
-              onFocus={() => openMenu('craft')}
-              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isCraftActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'craft'}
-              aria-current={isCraftActive ? 'page' : undefined}
-            >
-              {t('ourCraft')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'craft' ? 'rotate-180' : ''}`} />
-              {isCraftActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            <AnimatePresence>
-              {activeDropdown === 'craft' && (
-                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
-                  <CraftMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
-                </div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Nos convictions */}
-          <div
-            className="nav-link-item relative"
-            onMouseEnter={() => openMenu('thinking')}
-            onMouseLeave={closeMenu}
-          >
-            <button
-              onFocus={() => openMenu('thinking')}
-              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isThinkingActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'thinking'}
-              aria-current={isThinkingActive ? 'page' : undefined}
-            >
-              {t('ourThinking')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'thinking' ? 'rotate-180' : ''}`} />
-              {isThinkingActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            <AnimatePresence>
-              {activeDropdown === 'thinking' && (
-                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
-                  <ThinkingMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
-                </div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Qui sommes-nous */}
-          <div
-            className="nav-link-item relative"
-            onMouseEnter={() => openMenu('who')}
-            onMouseLeave={closeMenu}
-          >
-            <button
-              onFocus={() => openMenu('who')}
-              className={`relative flex items-center gap-1 font-mono text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isWhoActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'who'}
-              aria-current={isWhoActive ? 'page' : undefined}
-            >
-              {t('whoWeAre')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'who' ? 'rotate-180' : ''}`} />
-              {isWhoActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            <AnimatePresence>
-              {activeDropdown === 'who' && (
-                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
-                  <WhoMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
-                </div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* La Boutique */}
-          <div
-            className="nav-link-item relative"
-            onMouseEnter={() => openMenu('boutique')}
-            onMouseLeave={closeMenu}
-          >
-            <button
-              onFocus={() => openMenu('boutique')}
-              className={`relative flex items-center gap-1 font-mono font-semibold text-[12px] tracking-[0.12em] uppercase transition-colors duration-200 pb-1 ${
-                isPortfolioActive ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
-              }`}
-              aria-expanded={activeDropdown === 'boutique'}
-              aria-current={isPortfolioActive ? 'page' : undefined}
-            >
-              {t('navPortfolio')}
-              <ChevronDown size={11} className={`transition-transform duration-200 ${activeDropdown === 'boutique' ? 'rotate-180' : ''}`} />
-              {isPortfolioActive && <span className="absolute left-0 -bottom-0 w-full h-[2px] bg-ag-apex" />}
-            </button>
-            <AnimatePresence>
-              {activeDropdown === 'boutique' && (
-                <div onMouseEnter={cancelClose} onMouseLeave={closeMenu}>
-                  <BoutiqueMegaMenu t={t} onClose={() => setActiveDropdown(null)} />
-                </div>
-              )}
-            </AnimatePresence>
-          </div>
+        {/* Desktop nav : libellés seuls, le bandeau blanc s'ouvre sous la barre */}
+        <nav ref={linksRef} className="hidden lg:flex items-center gap-1" aria-label="Navigation principale">
+          {([
+            { key: 'craft',    label: t('ourCraft'),     active: isCraftActive },
+            { key: 'thinking', label: t('ourThinking'),  active: isThinkingActive },
+            { key: 'who',      label: t('whoWeAre'),     active: isWhoActive },
+            { key: 'boutique', label: t('navPortfolio'), active: isPortfolioActive, bold: true },
+          ] as { key: Exclude<DropdownKey, null>; label: string; active: boolean; bold?: boolean }[]).map(({ key, label, active, bold }) => (
+            <div key={key} className="nav-link-item relative" onMouseEnter={() => openMenu(key)}>
+              <button
+                type="button"
+                onClick={() => openMenu(key)}
+                className={`relative rounded-md px-3.5 py-2 font-sans text-[12px] uppercase tracking-[0.08em] ${bold ? 'font-semibold' : 'font-medium'} transition-colors duration-200 ${
+                  activeDropdown === key ? 'bg-ag-off-white text-ag-black' : active ? 'text-ag-black' : 'text-ag-gray hover:text-ag-black'
+                }`}
+                aria-expanded={activeDropdown === key}
+                aria-current={active ? 'page' : undefined}
+              >
+                {label}
+                {active && <span className="absolute inset-x-3.5 -bottom-0.5 h-[2px] bg-ag-apex" />}
+              </button>
+            </div>
+          ))}
         </nav>
 
-        {/* Right side: locale + client + CTA */}
-        <div ref={rightRef} data-nav-right className="hidden lg:flex items-center gap-5">
+        {/* Côté droit : FAQ, langue, espace compte (icônes) */}
+        <div ref={rightRef} data-nav-right className="hidden lg:flex items-center gap-1">
           {user && <NotificationBell />}
+          <Link href="/help/faq" aria-label="FAQ" title="FAQ" className={ICON_BTN}>
+            <HelpCircle size={18} strokeWidth={1.75} />
+          </Link>
           <LanguageSwitcher dark={onHero} />
-
           {user ? (
-            <NextLink href="/client/account" className="flex items-center gap-2 pl-1 group" aria-label="Mon compte">
-              <UserCircle size={16} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
-              <div className="leading-tight">
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray-light">{user.label}</p>
-                <p className="font-sans text-[12px] font-semibold text-ag-black truncate max-w-[150px] group-hover:text-ag-apex-ink transition-colors">{user.name}</p>
-              </div>
+            <NextLink href="/client/account" aria-label={`${user.label} : ${user.name}`} title={`${user.label} : ${user.name}`} className={ICON_BTN}>
+              <UserCircle size={18} strokeWidth={1.75} aria-hidden="true" />
             </NextLink>
           ) : (
-            <NextLink
-              href="/client/login"
-              className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-ag-gray hover:text-ag-black transition-colors duration-200"
-            >
-              <User size={13} />
-              {t('clientSpace')}
+            <NextLink href="/client/login" aria-label={t('clientSpace')} title={t('clientSpace')} className={ICON_BTN}>
+              <User size={18} strokeWidth={1.75} aria-hidden="true" />
             </NextLink>
           )}
         </div>
@@ -691,9 +256,25 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
         </button>
       </div>
 
+      {/* Bandeau blanc des menus (bureau) : même fond que la barre, sans bordure */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            key="nav-panel"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block bg-ag-white"
+          >
+            <NavPanel menu={activeDropdown} t={t} onClose={() => setActiveDropdown(null)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div ref={drawerRef} data-lenis-prevent className="lg:hidden fixed inset-0 top-16 z-40 bg-ag-navy overflow-y-auto">
+        <div ref={drawerRef} data-lenis-prevent className="lg:hidden fixed inset-0 top-16 z-40 bg-ag-white overflow-y-auto">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col gap-1">
 
             {/* Nos métiers accordion */}
@@ -702,7 +283,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('craft')}
                 aria-current={isCraftActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isCraftActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isCraftActive ? 'text-ag-black border-ag-apex' : 'text-ag-gray hover:text-ag-black border-ag-border'
                 }`}
               >
                 {t('ourCraft')}
@@ -710,22 +291,22 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'craft' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('craftFrameDeliver')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-2">{t('craftFrameDeliver')}</p>
                   {CRAFT_METIERS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('craftTransact')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-3">{t('craftTransact')}</p>
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
                   <Link href={'/industries' as LinkHref} onClick={closeMobile}
-                    className="mt-3 pt-3 border-t border-white/10 inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex hover:text-white transition-colors">
+                    className="mt-3 pt-3 border-t border-ag-border inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors">
                     {t('whoIndustries')} <ArrowRight size={11} />
                   </Link>
                 </div>
@@ -738,7 +319,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('thinking')}
                 aria-current={isThinkingActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isThinkingActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isThinkingActive ? 'text-ag-black border-ag-apex' : 'text-ag-gray hover:text-ag-black border-ag-border'
                 }`}
               >
                 {t('ourThinking')}
@@ -746,25 +327,25 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'thinking' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('thinkingMagazine')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-2">{t('thinkingMagazine')}</p>
                   {THINKING_MAGAZINE_LINKS.map(({ labelKey, href, muted }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className={`py-1.5 font-sans text-[14px] transition-colors ${muted ? 'text-white/50 hover:text-white/70' : 'text-white/70 hover:text-white'}`}>
+                      className={`py-1.5 font-sans text-[14px] transition-colors ${muted ? 'text-ag-gray-light hover:text-ag-gray' : 'text-ag-gray hover:text-ag-black'}`}>
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('thinkingMarket')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-3">{t('thinkingMarket')}</p>
                   <a
-                    href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7449391102052257793"
+                    href={NEWSLETTER_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors"
+                    className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors"
                   >
                     {t('thinkingMarketNewsletter')}
                   </a>
                   {THINKING_MARKET_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -778,7 +359,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('who')}
                 aria-current={isWhoActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isWhoActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isWhoActive ? 'text-ag-black border-ag-apex' : 'text-ag-gray hover:text-ag-black border-ag-border'
                 }`}
               >
                 {t('whoWeAre')}
@@ -788,52 +369,45 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 <div className="py-2 pl-4 flex flex-col gap-2">
 
                   {/* Le groupe */}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('whoGroup')}</p>
-                  {WHO_GROUP_LINKS_BASE.map(({ labelKey, href }) => (
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-2">{t('whoGroup')}</p>
+                  {WHO_GROUP_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <Link
-                    href={{ pathname: '/about', hash: 'fondateur' } as LinkHref}
-                    onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors"
-                  >
-                    {t('whoFounder')}
-                  </Link>
 
                   {/* Nos bureaux */}
-                  <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mb-1.5">{t('whoOffices')}</p>
-                    <p className="font-sans text-[12px] text-white/70 leading-relaxed">
+                  <div className="mt-2 pt-2 border-t border-ag-border">
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mb-1.5">{t('whoOffices')}</p>
+                    <p className="font-sans text-[12px] text-ag-gray leading-relaxed">
                       Switzerland, Rue du Centre 142, 1025 St-Sulpice
                     </p>
                   </div>
 
                   {/* Nos industries — liste statique mobile */}
-                  <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mb-2">{t('whoIndustries')}</p>
+                  <div className="mt-2 pt-2 border-t border-ag-border">
+                    <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mb-2">{t('whoIndustries')}</p>
                     <div className="flex flex-col">
                       {INDUSTRY_CLUSTERS.map(({ slug, labelKey }) => (
                         <Link key={slug} href={`/industries/${slug}` as LinkHref} onClick={closeMobile}
-                          className="py-1.5 font-sans text-[13px] text-white/70 hover:text-white transition-colors flex items-center justify-between group">
+                          className="py-1.5 font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors flex items-center justify-between group">
                           <span>{t(labelKey as Parameters<typeof t>[0])}</span>
-                          <ArrowUpRight size={11} className="text-white/70 group-hover:text-white transition-colors shrink-0" />
+                          <ArrowUpRight size={11} className="text-ag-gray group-hover:text-ag-black transition-colors shrink-0" />
                         </Link>
                       ))}
                     </div>
                     <Link href={'/industries' as LinkHref} onClick={closeMobile}
-                      className="inline-flex items-center gap-1 mt-2 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex hover:text-white transition-colors">
+                      className="inline-flex items-center gap-1 mt-2 font-mono text-[9px] tracking-[0.18em] uppercase text-ag-apex-ink hover:text-ag-black transition-colors">
                       {t('whoIndustriesLink')} <ArrowUpRight size={10} />
                     </Link>
                   </div>
 
                   {/* Nous rejoindre */}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('whoJoin')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-3">{t('whoJoin')}</p>
                   {WHO_JOIN_LINKS.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                      className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
@@ -847,7 +421,7 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                 onClick={() => toggleMobileAccordion('boutique')}
                 aria-current={isPortfolioActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between py-4 font-mono text-[13px] tracking-[0.18em] uppercase transition-colors border-b ${
-                  isPortfolioActive ? 'text-white border-ag-apex' : 'text-white/70 hover:text-white border-white/10'
+                  isPortfolioActive ? 'text-ag-black border-ag-apex' : 'text-ag-gray hover:text-ag-black border-ag-border'
                 }`}
               >
                 {t('navPortfolio')}
@@ -855,15 +429,15 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               </button>
               {mobileAccordion === 'boutique' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-2">{t('boutiqueDiscover')}</p>
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-2">{t('boutiqueDiscover')}</p>
                   {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile} className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
+                    <Link key={labelKey} href={href} onClick={closeMobile} className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
                       {t(labelKey)}
                     </Link>
                   ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('boutiqueAct')}</p>
-                  <span className="py-1.5 font-sans text-[14px] text-white/40">{t('boutiquePlaces')} · {t('boutiqueSoon')}</span>
-                  <Link href={BOUTIQUE_SUBMIT_HREF} onClick={closeMobile} className="py-1.5 font-sans text-[14px] font-semibold text-ag-apex hover:text-white transition-colors">
+                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-3">{t('boutiqueAct')}</p>
+                  <span className="py-1.5 font-sans text-[14px] text-ag-gray-light">{t('boutiquePlaces')} · {t('boutiqueSoon')}</span>
+                  <Link href={BOUTIQUE_SUBMIT_HREF} onClick={closeMobile} className="py-1.5 font-sans text-[14px] font-semibold text-ag-apex-ink hover:text-ag-black transition-colors">
                     {t('boutiqueSubmit')}
                   </Link>
                 </div>
@@ -872,19 +446,23 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
 
             {/* Bottom CTAs */}
             <div className="mt-8 flex flex-col gap-3">
+              <Link href="/help/faq" onClick={closeMobile} className="rounded-lg flex items-center justify-center gap-2 border border-ag-border px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-navy hover:text-ag-black transition-all">
+                <HelpCircle size={13} />
+                FAQ
+              </Link>
               {user ? (
-                <div className="rounded-lg flex items-center gap-2.5 border border-white/15 px-4 py-3">
-                  <UserCircle size={18} className="text-ag-apex shrink-0" aria-hidden="true" />
+                <div className="rounded-lg flex items-center gap-2.5 border border-ag-border px-4 py-3">
+                  <UserCircle size={18} className="text-ag-apex-ink shrink-0" aria-hidden="true" />
                   <div className="leading-tight">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/70">{user.label}</p>
-                    <p className="font-sans text-[14px] font-semibold text-white truncate max-w-[200px]">{user.name}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ag-gray">{user.label}</p>
+                    <p className="font-sans text-[14px] font-semibold text-ag-black truncate max-w-[200px]">{user.name}</p>
                   </div>
                 </div>
               ) : (
                 <NextLink
                   href="/client/login"
                   onClick={closeMobile}
-                  className="rounded-lg flex items-center justify-center gap-2 border border-white/20 px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-white/70 hover:border-white/50 hover:text-white transition-all"
+                  className="rounded-lg flex items-center justify-center gap-2 border border-ag-border px-4 py-3 font-mono text-[12px] tracking-[0.14em] uppercase text-ag-gray hover:border-ag-navy hover:text-ag-black transition-all"
                 >
                   <User size={13} />
                   {t('clientSpace')}
@@ -893,8 +471,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
             </div>
 
             {/* Language */}
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <LanguageSwitcher dark />
+            <div className="mt-6 pt-6 border-t border-ag-border">
+              <LanguageSwitcher variant="text" />
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const locales = [
 
 const KNOWN_LOCALES = locales.map(l => l.code)
 
-export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
+export default function LanguageSwitcher({ dark = false, variant = 'icon' }: { dark?: boolean; variant?: 'icon' | 'text' }) {
   const locale       = useLocale()
   const t            = useTranslations('languageSwitcher')
   const nextPathname = useNextPathname()
@@ -67,6 +67,44 @@ export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
        propre sans popup "Recharger la page ?" et sans NEXT_REDIRECT crash. */
     const path = await setLocaleCookie(newLocale, targetPath)
     window.location.assign(path)
+  }
+
+  const currentLabel = locales.find(l => l.code === locale)?.label ?? locale.toUpperCase()
+
+  if (variant === 'icon') {
+    return (
+      <div ref={wrapRef} className="relative" onMouseEnter={openMenu} onMouseLeave={closeMenu}>
+        <button
+          type="button"
+          onClick={() => setOpen(o => !o)}
+          disabled={pending}
+          aria-label={`${t('select')} (${currentLabel})`}
+          title={currentLabel}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors focus:outline-none disabled:opacity-50 ${
+            dark ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-ag-gray hover:bg-ag-off-white hover:text-ag-black'
+          }`}
+        >
+          <Globe size={18} strokeWidth={1.75} className={pending ? 'animate-spin' : ''} aria-hidden="true" />
+        </button>
+        {open && (
+          <ul role="listbox" aria-label={t('select')} className="absolute right-0 top-full z-50 mt-2 min-w-[150px] rounded-xl bg-white py-2 shadow-xl">
+            {locales.map(({ code, label }) => (
+              <li key={code} role="option" aria-selected={code === locale}>
+                <button
+                  type="button"
+                  onClick={() => handleSelect(code)}
+                  className={`w-full px-4 py-1.5 text-left font-sans text-[13px] !font-medium transition-colors ${code === locale ? 'text-ag-apex-ink' : 'text-ag-gray hover:text-ag-black'}`}
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    )
   }
 
   const wrapCls   = dark ? 'text-white/70' : 'text-ag-gray'

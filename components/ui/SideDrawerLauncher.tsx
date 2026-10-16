@@ -68,7 +68,7 @@ export function SideDrawerLauncher({ label, title, targetId, mode, locale, child
       </button>
 
       <div
-        className={`fixed inset-0 z-[60] bg-ag-navy/40 backdrop-blur-[2px] transition-opacity duration-300 ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+        className={`fixed inset-0 z-[60] bg-ag-black/25 backdrop-blur-md transition-opacity duration-300 ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
         onClick={() => setOpen(false)}
         aria-hidden="true"
       />
@@ -77,11 +77,11 @@ export function SideDrawerLauncher({ label, title, targetId, mode, locale, child
         role="dialog"
         aria-modal="true"
         aria-label={heading}
-        className={`fixed right-0 top-0 z-[61] flex h-[100dvh] w-[min(540px,100vw)] flex-col bg-ag-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed right-0 top-0 z-[61] flex h-[100dvh] w-[min(540px,100vw)] flex-col bg-ag-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex items-center justify-between gap-4 px-6 pb-2 pt-[clamp(14px,3vh,24px)] md:px-8">
           <h2 className="font-sans font-bold tracking-[-0.02em] text-ag-black" style={{ fontSize: 'clamp(20px,3.8vh,26px)' }}>{heading}</h2>
-          <button type="button" onClick={() => setOpen(false)} aria-label={CLOSE[locale] ?? 'Close'} className="flex h-9 w-9 items-center justify-center rounded-full border border-ag-border text-ag-gray transition-colors hover:border-ag-navy hover:text-ag-navy">
+          <button type="button" onClick={() => setOpen(false)} aria-label={CLOSE[locale] ?? 'Close'} className="flex h-9 w-9 items-center justify-center rounded-full bg-ag-off-white text-ag-gray transition-colors hover:bg-ag-border hover:text-ag-black">
             <X size={16} />
           </button>
         </div>

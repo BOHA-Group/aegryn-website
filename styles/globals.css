@@ -351,4 +351,5 @@ header[data-onhero='true'] .nav-link-item > button:hover,
 header[data-onhero='true'] .nav-link-item > a:hover,
 header[data-onhero='true'] [data-nav-right] > a:hover {
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.14);
 }
