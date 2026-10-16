@@ -787,7 +787,8 @@
     "ctaTitleStrategy": "Hablemos de su estrategia",
     "ctaTitleRiskCompliance": "Hablemos de su exposición regulatoria",
     "ctaTitleTalentOrganization": "Hablemos de la profundidad de su organización",
-    "pillarLink": "Descubrir el oficio"
+    "pillarLink": "Descubrir el oficio",
+    "all": "Ver los ocho oficios"
   },
   "build": {
     "hero": {

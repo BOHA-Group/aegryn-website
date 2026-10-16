@@ -787,7 +787,8 @@
     "ctaTitleStrategy": "Laten we het hebben over uw strategie",
     "ctaTitleRiskCompliance": "Laten we uw regelgevende blootstelling bespreken",
     "ctaTitleTalentOrganization": "Laten we de diepgang van uw organisatie bespreken",
-    "pillarLink": "Het vakgebied bekijken"
+    "pillarLink": "Het vakgebied bekijken",
+    "all": "Alle acht vakgebieden bekijken"
   },
   "build": {
     "hero": {

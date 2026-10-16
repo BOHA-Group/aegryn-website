@@ -7,7 +7,7 @@ import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { SegmentsSection }   from '@/components/sections/SegmentsSection'
 import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
-import { AdvisoryTechStrip } from '@/components/sections/AdvisoryTechStrip'
+import { MetiersScroller } from '@/components/sections/MetiersScroller'
 import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
 import { MarketStatStrip }   from '@/components/sections/MarketStatStrip'
 import { WhyUseApps }        from '@/components/sections/WhyUseApps'
@@ -48,7 +48,7 @@ export default async function HomePage({ params }: Props) {
       <SegmentsSection />
 
       {/* ── 06. Conseil ────────────────────────────────────── */}
-      <AdvisoryTechStrip />
+      <MetiersScroller />
 
       {/* ── 07. Conception ─────────────────────────────────── */}
       <BuildStrip />

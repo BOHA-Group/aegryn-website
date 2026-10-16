@@ -787,7 +787,8 @@
     "ctaTitleStrategy": "Sprechen wir über Ihre Strategie",
     "ctaTitleRiskCompliance": "Sprechen wir über Ihre regulatorische Risikoexposition",
     "ctaTitleTalentOrganization": "Sprechen wir über die Tiefe Ihrer Organisation",
-    "pillarLink": "Fachgebiet ansehen"
+    "pillarLink": "Fachgebiet ansehen",
+    "all": "Alle acht Fachgebiete ansehen"
   },
   "build": {
     "hero": {
