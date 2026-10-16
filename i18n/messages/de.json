@@ -933,7 +933,7 @@
     "items": [
       {
         "title": "RAHMEN SETZEN",
-        "desc": "Strategie, Risiken, Finanzen, Technologie, Operations, Talente, M&A: Wir helfen Geschäftsleitungen und Verwaltungsräten, auf quantifizierter, dokumentierter Grundlage zu entscheiden, mit einem einzigen Ansprechpartner."
+        "desc": "Strategie, Risiken, Finanzen, Technologie, Operations, Talente, M&A: Wir helfen Führungskräften und Entscheidern, auf quantifizierter, dokumentierter Grundlage Weichen zu stellen, mit einem einzigen Ansprechpartner."
       },
       {
         "title": "UMSETZEN",
@@ -2036,7 +2036,7 @@
       "items": [
         {
           "title": "Fonds und Family Offices",
-          "desc": "Sie haben einen Asset im Katalog identifiziert, aber der Deal erfordert ein SPV, ein LP-Co-Investment oder einen IC-Zeitplan. Aegryn strukturiert die Hülle um Ihr Angebot."
+          "desc": "Sie haben ein Zielunternehmen identifiziert, aber der Deal erfordert ein SPV, ein LP-Co-Investment oder einen IC-Zeitplan. Aegryn strukturiert die Hülle um Ihr Angebot."
         },
         {
           "title": "Strategische Käufer",
@@ -4701,7 +4701,7 @@
             "Bindung und Vergütung von Schlüsselprofilen",
             "Interimsmanagement",
             "Arbeitsrecht und Reorganisation",
-            "Rekrutierung von Führungskräften (siehe Seite Rekrutieren)"
+            "Auswahl von Führungskräften (siehe Seite Auswählen)"
           ]
         },
         "ma": {
@@ -7257,7 +7257,7 @@
     "groupDiscover": "Entdecken",
     "groupCompany": "Unternehmen",
     "groupLegal": "Rechtliches",
-    "assets": "Asset-Katalog",
+    "assets": "Proprietäre Assets",
     "servicesBuild": "Asset-Ingenieurwesen",
     "advisory": "Unsere acht Fachgebiete",
     "acquisition": "Akquisitionsunterstützung",

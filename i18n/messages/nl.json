@@ -933,7 +933,7 @@
     "items": [
       {
         "title": "KADEREN",
-        "desc": "Strategie, risico’s, financiën, technologie, operaties, talent, M&A: wij helpen leidinggevenden en raden te beslissen op gekwantificeerde, gedocumenteerde grond, met één aanspreekpunt."
+        "desc": "Strategie, risico’s, financiën, technologie, operaties, talent, M&A: wij helpen leidinggevenden en beslissers te kiezen op gekwantificeerde, gedocumenteerde grond, met één aanspreekpunt."
       },
       {
         "title": "REALISEREN",
@@ -2036,7 +2036,7 @@
       "items": [
         {
           "title": "Fondsen en family offices",
-          "desc": "U heeft een asset in de catalogus geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. Aegryn structureert de enveloppe rond uw bod."
+          "desc": "U heeft een doelonderneming geïdentificeerd maar de deal vereist een SPV, LP-co-investering of IC-tijdlijn. Aegryn structureert de enveloppe rond uw bod."
         },
         {
           "title": "Strategische kopers",
@@ -4701,7 +4701,7 @@
             "Retentie en beloning van sleutelprofielen",
             "Interimmanagement",
             "Arbeidsrecht en reorganisatie",
-            "Werving van leidinggevenden (zie pagina Rekruteren)"
+            "Selectie van leidinggevenden (zie pagina Selecteren)"
           ]
         },
         "ma": {
@@ -7272,7 +7272,7 @@
     "groupDiscover": "Ontdekken",
     "groupCompany": "Bedrijf",
     "groupLegal": "Juridisch",
-    "assets": "Assetcatalogus",
+    "assets": "Propriëtaire assets",
     "servicesBuild": "Asset Engineering",
     "advisory": "Onze acht vakgebieden",
     "acquisition": "Acquisitieondersteuning",

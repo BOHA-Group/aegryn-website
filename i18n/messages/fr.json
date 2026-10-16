@@ -896,7 +896,7 @@
     "items": [
       {
         "title": "CADRER",
-        "desc": "Stratégie, risques, finance, technologie, opérations, talents, M&A : nous aidons dirigeants et conseils à décider sur des bases chiffrées et documentées, avec un seul interlocuteur."
+        "desc": "Stratégie, risques, finance, technologie, opérations, talents, M&A : nous aidons dirigeants et décideurs à trancher sur des bases chiffrées et documentées, avec un seul interlocuteur."
       },
       {
         "title": "RÉALISER",
@@ -2061,7 +2061,7 @@
       "items": [
         {
           "title": "Fonds et family offices",
-          "desc": "Vous avez identifié un actif dans le catalogue mais le deal nécessite un SPV, un co-investissement LP ou un délai IC. Aegryn structure l'enveloppe autour de votre offre."
+          "desc": "Vous avez identifié une cible mais l'opération nécessite un SPV, un co-investissement LP ou un délai IC. Aegryn structure l'enveloppe autour de votre offre."
         },
         {
           "title": "Acheteurs stratégiques",
@@ -4676,7 +4676,7 @@
             "Rétention et rémunération des profils clés",
             "Management de transition",
             "Droit du travail et réorganisation",
-            "Recrutement de dirigeants (voir la page Recruter)"
+            "Sélection de dirigeants (voir la page Sélectionner)"
           ]
         },
         "ma": {
@@ -7232,7 +7232,7 @@
     "groupDiscover": "Découvrir",
     "groupCompany": "Entreprise",
     "groupLegal": "Légal",
-    "assets": "Catalogue des actifs",
+    "assets": "Actifs propriétaires",
     "servicesBuild": "Conception d'actifs",
     "advisory": "Nos huit métiers",
     "acquisition": "Soutien à l'acquisition",

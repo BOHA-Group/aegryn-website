@@ -933,7 +933,7 @@
     "items": [
       {
         "title": "FRAME",
-        "desc": "Strategy, risk, finance, technology, operations, talent, M&A: we help executives and boards decide on quantified, documented grounds, with a single point of contact."
+        "desc": "Strategy, risk, finance, technology, operations, talent, M&A: we help executives and decision-makers choose on quantified, documented grounds, with a single point of contact."
       },
       {
         "title": "DELIVER",
@@ -2101,7 +2101,7 @@
       "items": [
         {
           "title": "Funds and family offices",
-          "desc": "You have identified an asset in the catalogue but the deal requires a SPV, LP co-investment or IC timeline. Aegryn structures the envelope around your offer."
+          "desc": "You have identified a target but the deal requires a SPV, LP co-investment or IC timeline. Aegryn structures the envelope around your offer."
         },
         {
           "title": "Strategic buyers",
@@ -4716,7 +4716,7 @@
             "Retention and compensation of key profiles",
             "Interim management",
             "Employment law and reorganisation",
-            "Executive recruitment (see the Recruit page)"
+            "Executive selection (see the Select page)"
           ]
         },
         "ma": {
@@ -7272,7 +7272,7 @@
     "groupDiscover": "Discover",
     "groupCompany": "Company",
     "groupLegal": "Legal",
-    "assets": "Asset catalogue",
+    "assets": "Proprietary assets",
     "servicesBuild": "Asset Engineering",
     "advisory": "Our eight disciplines",
     "acquisition": "Acquisition Support",

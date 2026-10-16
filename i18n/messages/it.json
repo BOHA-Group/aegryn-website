@@ -933,7 +933,7 @@
     "items": [
       {
         "title": "INQUADRARE",
-        "desc": "Strategia, rischi, finanza, tecnologia, operations, talenti, M&A: aiutiamo dirigenti e consigli a decidere su basi quantificate e documentate, con un unico interlocutore."
+        "desc": "Strategia, rischi, finanza, tecnologia, operations, talenti, M&A: aiutiamo dirigenti e decisori a scegliere su basi quantificate e documentate, con un unico interlocutore."
       },
       {
         "title": "REALIZZARE",
@@ -2036,7 +2036,7 @@
       "items": [
         {
           "title": "Fondi e family office",
-          "desc": "Avete identificato un asset nel catalogo ma il deal richiede una SPV, co-investimento LP o tempistiche IC. Aegryn struttura l'involucro attorno alla vostra offerta."
+          "desc": "Avete identificato un'azienda target ma il deal richiede una SPV, co-investimento LP o tempistiche IC. Aegryn struttura l'involucro attorno alla vostra offerta."
         },
         {
           "title": "Acquirenti strategici",
@@ -4701,7 +4701,7 @@
             "Fidelizzazione e remunerazione dei profili chiave",
             "Management ad interim",
             "Diritto del lavoro e riorganizzazione",
-            "Reclutamento di dirigenti (vedi pagina Recrutare)"
+            "Selezione di dirigenti (vedi pagina Selezionare)"
           ]
         },
         "ma": {
@@ -7257,7 +7257,7 @@
     "groupDiscover": "Scoprire",
     "groupCompany": "Azienda",
     "groupLegal": "Legale",
-    "assets": "Catalogo asset",
+    "assets": "Asset proprietari",
     "servicesBuild": "Progettazione di asset",
     "advisory": "I nostri otto mestieri",
     "acquisition": "Supporto all'acquisizione",

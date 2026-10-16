@@ -933,7 +933,7 @@
     "items": [
       {
         "title": "ENCUADRAR",
-        "desc": "Estrategia, riesgos, finanzas, tecnología, operaciones, talento, M&A: ayudamos a directivos y consejos a decidir sobre bases cuantificadas y documentadas, con un único interlocutor."
+        "desc": "Estrategia, riesgos, finanzas, tecnología, operaciones, talento, M&A: ayudamos a directivos y decisores a optar con bases cuantificadas y documentadas, con un único interlocutor."
       },
       {
         "title": "REALIZAR",
@@ -2036,7 +2036,7 @@
       "items": [
         {
           "title": "Fondos y family offices",
-          "desc": "Ha identificado un activo en el catálogo pero el deal requiere un SPV, co-inversión LP o plazo IC. Aegryn estructura el envoltorio alrededor de su oferta."
+          "desc": "Ha identificado una empresa objetivo pero el deal requiere un SPV, co-inversión LP o plazo IC. Aegryn estructura el envoltorio alrededor de su oferta."
         },
         {
           "title": "Compradores estratégicos",
@@ -4701,7 +4701,7 @@
             "Retención y remuneración de perfiles clave",
             "Management interino",
             "Derecho laboral y reorganización",
-            "Reclutamiento de directivos (véase la página Reclutar)"
+            "Selección de directivos (véase la página Seleccionar)"
           ]
         },
         "ma": {
@@ -7257,7 +7257,7 @@
     "groupDiscover": "Descubrir",
     "groupCompany": "Empresa",
     "groupLegal": "Legal",
-    "assets": "Catálogo de activos",
+    "assets": "Activos propios",
     "servicesBuild": "Concepción de activos",
     "advisory": "Nuestros ocho oficios",
     "acquisition": "Apoyo a la adquisición",

@@ -80,7 +80,7 @@ export function MissionVideoSection() {
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">{tM('sub')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.05fr_1.1fr_1.5fr_0.85fr_0.85fr]">
             {missionItems.map((item, i) => (
               <div key={item.title} className="mv-reveal py-[clamp(14px,4.5vh,48px)] first:pl-0 last:pr-0 md:px-6 xl:px-10" style={{ textShadow: '0 1px 14px rgba(5,15,35,0.45)' }}>
                 <p className="mb-[clamp(6px,2.6vh,32px)] font-sans text-[10px] font-semibold tracking-[0.2em] text-ag-apex">{String(i + 1).padStart(2, '0')}</p>
