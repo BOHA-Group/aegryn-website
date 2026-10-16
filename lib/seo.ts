@@ -32,7 +32,7 @@ const BASE_KEYWORDS = [
   'architecte de projets emblématiques', 'cabinet de conseil intégré', 'integrated advisory firm',
   'Swiss advisory firm', 'cabinet conseil Suisse', 'conseil PME ETI Suisse',
   'Rare par sélection', 'Discret par principe', 'Rare by selection', 'Discreet by principle',
-  // Méthode et cinq métiers
+  // Méthode et cinq façons d'agir
   'cadrer réaliser accompagner', 'frame deliver accompany', 'sélectionner les talents', 'Aegryn Magazine',
   // La Boutique
   'La Boutique Aegryn', 'projets signature', 'signature projects', 'projets emblématiques',

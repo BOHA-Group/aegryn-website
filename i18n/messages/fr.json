@@ -859,8 +859,8 @@
   },
   "aboutSection": {
     "label": "À propos d'Aegryn",
-    "title": "Cinq métiers.\nUn seul cabinet.",
-    "desc": "Nous ne sommes ni un cabinet classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit les cinq métiers nécessaires à la valeur durable d’une entreprise : cadrage, réalisation, accompagnement des cycles de vie, sélection de talents et information de marché.",
+    "title": "Cinq façons d'agir.\nUn seul cabinet.",
+    "desc": "Nous ne sommes ni un cabinet classique, ni une agence tech, ni une boutique M&A. Nous sommes un cabinet intégré, ancré en Suisse, qui réunit cinq façons d’agir au service de la valeur durable d’une organisation : cadrer, réaliser, accompagner chaque cycle de vie, sélectionner des talents et informer sur le marché.",
     "tagline": "CABINET INTÉGRÉ, ANCRÉ EN SUISSE.",
     "cta": "Nos métiers →",
     "ctaHref": "/advisory",
@@ -870,7 +870,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Situations couvertes",
+        "label": "Façons d'agir",
         "sub": "Cadrer · Réaliser · Accompagner · Sélectionner · S’informer"
       },
       {
@@ -893,8 +893,8 @@
   },
   "missionSection": {
     "label": "Le Modèle Aegryn",
-    "title": "Cinq métiers intégrés. Un seul standard.",
-    "sub": "Cinq métiers qui se renforcent mutuellement. C’est ce que peu d’acteurs peuvent réellement proposer.",
+    "title": "Cinq façons d'agir intégrées. Un seul standard.",
+    "sub": "Cinq façons d'agir qui se renforcent mutuellement. C’est ce que peu d’acteurs peuvent réellement proposer.",
     "items": [
       {
         "title": "CADRER",
@@ -1151,14 +1151,14 @@
     },
     "meta": {
       "title": "À propos | Boutique entrepreneuriale | Aegryn",
-      "desc": "Aegryn est une boutique entrepreneuriale de projets signature, ancrée en Suisse et ouverte à l'international. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
+      "desc": "Aegryn est une boutique entrepreneuriale de projets signature, ancrée en Suisse et ouverte à l'international. Cinq façons d'agir : cadrer, réaliser, accompagner, sélectionner, s'informer."
     }
   },
   "career": {
     "hero": {
       "label": "Travailler chez Aegryn",
       "title": "Bâtir des projets qui durent.",
-      "desc": "Aegryn est un cabinet intégré, avec La Boutique pour les projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer. Nous grandissons par cooptation et par candidature spontanée, avec des profils seniors qui aiment mener un projet jusqu'au bout.",
+      "desc": "Aegryn est un cabinet intégré, avec La Boutique pour les projets signature. Cinq façons d'agir : cadrer, réaliser, accompagner, sélectionner, s'informer. Nous grandissons par cooptation et par candidature spontanée, avec des profils seniors qui aiment mener un projet jusqu'au bout.",
       "imageAlt": "Sommet ensoleillé se reflétant dans un lac de montagne"
     },
     "about": {
@@ -1232,7 +1232,7 @@
     },
     "meta": {
       "title": "Carrière | Aegryn",
-      "desc": "Rejoignez Aegryn, cabinet intégré, et La Boutique pour les projets signature. Cinq métiers : cadrer, réaliser, accompagner, sélectionner, s'informer."
+      "desc": "Rejoignez Aegryn, cabinet intégré, et La Boutique pour les projets signature. Cinq façons d'agir : cadrer, réaliser, accompagner, sélectionner, s'informer."
     }
   },
   "assetStatus": {
@@ -1732,7 +1732,7 @@
       "items": [
         {
           "q": "Qui sommes-nous et que faisons-nous ?",
-          "a": "Aegryn est un cabinet intégré, ancré en Suisse, qui accompagne les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation et de leurs actifs. Cinq métiers complémentaires : cadrage en stratégie, tech et M&A, réalisation d'actifs numériques propriétaires, accompagnement des transitions à chaque cycle de vie, sélection de talents et information de marché. De la stratégie à la transmission. Nous travaillons avec des fondateurs, des dirigeants, des fonds d'investissement et des family offices à chaque stade de développement d'une organisation, du lancement à la transmission."
+          "a": "Aegryn est un cabinet intégré, ancré en Suisse, qui accompagne les dirigeants d'entreprise à créer, documenter et réaliser la valeur de leur organisation et de leurs actifs. Cinq façons d'agir complémentaires : cadrer, réaliser, accompagner chaque cycle de vie, sélectionner des talents et informer sur le marché. De la stratégie à la transmission. Nous travaillons avec des fondateurs, des dirigeants, des fonds d'investissement et des family offices à chaque stade de développement d'une organisation, du lancement à la transmission."
         },
         {
           "q": "Qu'est-ce qui nous différencie ?",
@@ -7069,7 +7069,7 @@
           "account"
         ],
         "q": "Quels services d'advisory proposez-vous ?",
-        "a": "Aegryn Advisory intervient dans huit métiers : Stratégie d'entreprise et Innovation, Gestion des Risques et Conformité, Finance et Performance, Technologie et Souveraineté, Opérations et Excellence opérationnelle, Talent et Organisation, Pilotage de projets et de programmes, M&A, Transactions et PMI. Nous intervenons dans plus de 23 industries en Suisse et en Europe. Consultez /advisory pour plus de détails."
+        "a": "Aegryn Advisory intervient dans huit métiers : Stratégie d'entreprise et Innovation, Gestion des Risques et Conformité, Finance et Performance, Technologie et Souveraineté, Opérations et Excellence opérationnelle, Talent et Organisation, Pilotage de projets et de programmes, M&A, Transactions et PMI. Nous intervenons dans plus de 22 industries en Suisse et en Europe. Consultez /advisory pour plus de détails."
       },
       {
         "id": "build-service",

@@ -896,8 +896,8 @@
   },
   "aboutSection": {
     "label": "Chi è Aegryn",
-    "title": "Cinque discipline.\nUna sola azienda.",
-    "desc": "Non siamo né una classica società, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'organizzazione: inquadramento, costruzione di asset, transizioni a ogni ciclo di vita, talento e intelligence di mercato.",
+    "title": "Cinque modi di agire.\nUna sola azienda.",
+    "desc": "Non siamo né una classica società, né un'agenzia tech, né una boutique M&A. Siamo una firma integrata, radicata in Svizzera, che riunisce cinque modi di agire al servizio del valore duraturo di un'organizzazione: inquadrare, realizzare, accompagnare ogni ciclo di vita, selezionare talenti e informare sul mercato.",
     "tagline": "SOCIETÀ INTEGRATA, RADICATA IN SVIZZERA.",
     "cta": "Le nostre discipline →",
     "ctaHref": "/advisory",
@@ -907,7 +907,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Situazioni coperte",
+        "label": "Modi di agire",
         "sub": "Inquadrare · Realizzare · Accompagnare · Selezionare · Informarsi"
       },
       {
@@ -930,8 +930,8 @@
   },
   "missionSection": {
     "label": "Il Modello Aegryn",
-    "title": "Cinque discipline integrate. Un solo standard.",
-    "sub": "Cinque discipline che si rafforzano a vicenda. Questo è ciò che pochissimi attori possono davvero offrire.",
+    "title": "Cinque modi di agire integrati. Un solo standard.",
+    "sub": "Cinque modi di agire che si rafforzano a vicenda. Questo è ciò che pochissimi attori possono davvero offrire.",
     "items": [
       {
         "title": "INQUADRARE",
@@ -1772,7 +1772,7 @@
       "items": [
         {
           "q": "Chi siamo e cosa facciamo?",
-          "a": "Aegryn è una società integrata, radicata in Svizzera, che accompagna i dirigenti d'impresa nella creazione, documentazione e realizzazione del valore della loro organizzazione e dei loro asset. Cinque discipline complementari: inquadramento in strategia, tech e M&A, realizzazione di asset digitali proprietari, accompagnamento delle transizioni a ogni ciclo di vita, selezione di talenti e informazione di mercato. Dalla strategia alla trasmissione. Lavoriamo con fondatori, dirigenti, fondi d'investimento e family office in ogni fase di sviluppo di un'organizzazione, dal lancio alla successione."
+          "a": "Aegryn è una società integrata, radicata in Svizzera, che accompagna i dirigenti d'impresa nella creazione, documentazione e realizzazione del valore della loro organizzazione e dei loro asset. Cinque modi di agire complementari: inquadrare, realizzare, accompagnare ogni ciclo di vita, selezionare talenti e informare sul mercato. Dalla strategia alla trasmissione. Lavoriamo con fondatori, dirigenti, fondi d'investimento e family office in ogni fase di sviluppo di un'organizzazione, dal lancio alla successione."
         },
         {
           "q": "Cosa ci differenzia?",
@@ -7094,7 +7094,7 @@
           "account"
         ],
         "q": "Quali servizi di advisory offrite?",
-        "a": "Aegryn Advisory copre otto discipline: Strategia Aziendale e Innovazione, Gestione del Rischio e Conformità, Finanza e Performance, Tecnologia e Sovranità, Operazioni ed Eccellenza operativa, Talento e Organizzazione, Gestione di progetti e programmi, M&A, Transazioni e PMI. Operiamo in oltre 23 settori in Svizzera e in Europa. Consultate /advisory per maggiori dettagli."
+        "a": "Aegryn Advisory copre otto discipline: Strategia Aziendale e Innovazione, Gestione del Rischio e Conformità, Finanza e Performance, Tecnologia e Sovranità, Operazioni ed Eccellenza operativa, Talento e Organizzazione, Gestione di progetti e programmi, M&A, Transazioni e PMI. Operiamo in oltre 22 settori in Svizzera e in Europa. Consultate /advisory per maggiori dettagli."
       },
       {
         "id": "build-service",
@@ -9827,7 +9827,7 @@
     "vision": {
       "label": "LA NOSTRA VISIONE",
       "title": "Un gruppo ibrido.\nAncorato in Svizzera.",
-      "text": "La nostra visione è quella di un gruppo di consulenza europeo che accompagna le aziende da un capo all'altro, dalla strategia al capitale, dalla trasformazione alla valorizzazione.\n\nSiamo operatori: costruiamo e gestiamo i nostri asset tech. Ciò che consigliamo, lo viviamo. Questa coerenza è la nostra prima credibilità.\n\nAegryn non è né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. È un gruppo ibrido, ancorato in Svizzera, che riunisce le cinque discipline necessarie al valore duraturo di un'azienda."
+      "text": "La nostra visione è quella di un gruppo di consulenza europeo che accompagna le aziende da un capo all'altro, dalla strategia al capitale, dalla trasformazione alla valorizzazione.\n\nSiamo operatori: costruiamo e gestiamo i nostri asset tech. Ciò che consigliamo, lo viviamo. Questa coerenza è la nostra prima credibilità.\n\nAegryn non è né una classica società di consulenza, né un'agenzia tech, né una boutique M&A. È un gruppo ibrido, ancorato in Svizzera, che riunisce i cinque modi di agire necessari al valore duraturo di un'azienda."
     },
     "founder": {
       "label": "IL FONDATORE",

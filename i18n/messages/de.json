@@ -896,8 +896,8 @@
   },
   "aboutSection": {
     "label": "Über Aegryn",
-    "title": "Fünf Disziplinen.\nEin Unternehmen.",
-    "desc": "Wir sind weder eine klassische Firma, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Firma, verankert in der Schweiz, die die fünf Disziplinen vereint, die für dauerhaften Unternehmenswert notwendig sind: Konzeption, Aufbau von Assets, Transitionen in jedem Lebenszyklus, Talent und Marktintelligenz.",
+    "title": "Fünf Arten zu handeln.\nEin Unternehmen.",
+    "desc": "Wir sind weder eine klassische Firma, noch eine Tech-Agentur, noch eine M&A-Boutique. Wir sind eine integrierte Firma, verankert in der Schweiz, die fünf Arten zu handeln im Dienst des dauerhaften Unternehmenswerts vereint: Rahmen setzen, umsetzen, jeden Lebenszyklus begleiten, Talente auswählen und über den Markt informieren.",
     "tagline": "INTEGRIERTE FIRMA, VERANKERT IN DER SCHWEIZ.",
     "cta": "Unsere Disziplinen →",
     "ctaHref": "/advisory",
@@ -907,7 +907,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Abgedeckte Situationen",
+        "label": "Arten zu handeln",
         "sub": "Rahmen setzen · Umsetzen · Begleiten · Auswählen · Informieren"
       },
       {
@@ -930,8 +930,8 @@
   },
   "missionSection": {
     "label": "Das Aegryn-Modell",
-    "title": "Fünf integrierte Disziplinen. Ein Standard.",
-    "sub": "Fünf Disziplinen, die sich gegenseitig stärken. Das können nur sehr wenige Akteure wirklich anbieten.",
+    "title": "Fünf integrierte Arten zu handeln. Ein Standard.",
+    "sub": "Fünf Arten zu handeln, die sich gegenseitig stärken. Das können nur sehr wenige Akteure wirklich anbieten.",
     "items": [
       {
         "title": "RAHMEN SETZEN",
@@ -1191,14 +1191,14 @@
     },
     "meta": {
       "title": "Über uns | Unternehmerische Boutique | Aegryn",
-      "desc": "Aegryn ist eine unternehmerische Boutique für Signature-Projekte, in der Schweiz verankert und international offen. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
+      "desc": "Aegryn ist eine unternehmerische Boutique für Signature-Projekte, in der Schweiz verankert und international offen. Fünf Arten zu handeln: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
     }
   },
   "career": {
     "hero": {
       "label": "Bei Aegryn arbeiten",
       "title": "Projekte bauen, die Bestand haben.",
-      "desc": "Aegryn ist eine integrierte Firma, mit La Boutique für Signature-Projekte. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren. Wir wachsen durch Kooptation und Initiativbewerbungen, mit erfahrenen Profilen, die ein Projekt gern bis zum Ende führen.",
+      "desc": "Aegryn ist eine integrierte Firma, mit La Boutique für Signature-Projekte. Fünf Arten zu handeln: Rahmen setzen, umsetzen, begleiten, auswählen, informieren. Wir wachsen durch Kooptation und Initiativbewerbungen, mit erfahrenen Profilen, die ein Projekt gern bis zum Ende führen.",
       "imageAlt": "Sonnenbeschienener Berggipfel, der sich in einem Bergsee spiegelt"
     },
     "positions": {
@@ -1272,7 +1272,7 @@
     },
     "meta": {
       "title": "Karriere | Aegryn",
-      "desc": "Werden Sie Teil von Aegryn, einer integrierten Firma, und von La Boutique für Signature-Projekte. Fünf Disziplinen: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
+      "desc": "Werden Sie Teil von Aegryn, einer integrierten Firma, und von La Boutique für Signature-Projekte. Fünf Arten zu handeln: Rahmen setzen, umsetzen, begleiten, auswählen, informieren."
     }
   },
   "assetStatus": {
@@ -1772,7 +1772,7 @@
       "items": [
         {
           "q": "Wer sind wir und was tun wir?",
-          "a": "Aegryn ist eine integrierte Firma mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf komplementäre Disziplinen: Konzeption zu Strategie, Tech und M&A, Umsetzung proprietärer digitaler Assets, Begleitung der Lebenszyklen, Talentauswahl und Marktinformation. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
+          "a": "Aegryn ist eine integrierte Firma mit Sitz in der Schweiz, die Unternehmensführer dabei begleitet, den Wert ihrer Organisation und ihrer Vermögenswerte zu schaffen, zu dokumentieren und zu realisieren. Fünf sich ergänzende Arten zu handeln: Rahmen setzen, umsetzen, jeden Lebenszyklus begleiten, Talente auswählen und über den Markt informieren. Von der Strategie bis zur Übergabe. Wir arbeiten mit Gründern, Führungskräften, Investmentfonds und Family Offices in jeder Entwicklungsphase einer Organisation zusammen, vom Start bis zur Nachfolge."
         },
         {
           "q": "Was unterscheidet uns?",
@@ -7094,7 +7094,7 @@
           "account"
         ],
         "q": "Welche Advisory-Dienste bieten Sie an?",
-        "a": "Aegryn Advisory deckt acht Fachgebiete ab: Unternehmensstrategie und Innovation, Risikomanagement und Compliance, Finanzen und Performance, Technologie und Souveränität, Operations und operative Exzellenz, Talent und Organisation, Projekt- und Programmsteuerung, M&A, Transaktionen und PMI. Wir sind in mehr als 23 Branchen in der Schweiz und in Europa tätig. Details unter /advisory."
+        "a": "Aegryn Advisory deckt acht Fachgebiete ab: Unternehmensstrategie und Innovation, Risikomanagement und Compliance, Finanzen und Performance, Technologie und Souveränität, Operations und operative Exzellenz, Talent und Organisation, Projekt- und Programmsteuerung, M&A, Transaktionen und PMI. Wir sind in mehr als 22 Branchen in der Schweiz und in Europa tätig. Details unter /advisory."
       },
       {
         "id": "build-service",
@@ -9957,7 +9957,7 @@
     "vision": {
       "label": "UNSERE VISION",
       "title": "Eine hybride Gruppe.\nVerankert in der Schweiz.",
-      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Operatoren: Wir bauen und betreiben unsere eigenen Tech-Assets. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Disziplinen vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
+      "text": "Unsere Vision ist die einer europäischen Beratungsgruppe, die Unternehmen von Ende zu Ende begleitet, von der Strategie zum Kapital, von der Transformation zur Bewertung.\n\nWir sind Operatoren: Wir bauen und betreiben unsere eigenen Tech-Assets. Was wir beraten, leben wir. Diese Kohärenz ist unsere erste Glaubwürdigkeit.\n\nAegryn ist weder eine klassische Unternehmensberatung, noch eine Tech-Agentur, noch eine M&A-Boutique. Es ist eine hybride Gruppe, verankert in der Schweiz, die die fünf Arten zu handeln vereint, die für den dauerhaften Wert eines Unternehmens notwendig sind."
     },
     "founder": {
       "label": "DER GRÜNDER",

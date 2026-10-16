@@ -37,7 +37,7 @@ Who Aegryn works for: business leaders, decision-makers (board members, chief ex
 
 ---
 
-## Five public métiers
+## Five public ways of working
 
 Frame (Cadrer), Deliver (Réaliser), Accompany (Accompagner), Select (Sélectionner), Stay informed (S'informer).
 
@@ -47,7 +47,7 @@ Frame (Cadrer), Deliver (Réaliser), Accompany (Accompagner), Select (Sélection
 4. **Select**: key and transition profiles (Aegryn Talent, /talent).
 5. **Stay informed**: Aegryn Magazine, blog, workforce and market data.
 
-CIFSO (certification, valuation index, data room, protocol) is infrastructure that supports the firm. It is not a public métier of its own.
+CIFSO (certification, valuation index, data room, protocol) is infrastructure that supports the firm. It is not a public offer of its own.
 
 ---
 
@@ -64,7 +64,7 @@ Each discipline page presents a sourced market observation, client situations ti
 7. **Project and Programme Management** (/advisory/project-program-management): project scoping and launch, governance and steering committees, project portfolio management, control of schedules, budgets and risks, transformation programme leadership, steering suppliers and integrators, testing, acceptance and adoption, rescuing a project in difficulty.
 8. **M&A, Transactions and PMI** (/advisory/ma): acquisition thesis and target criteria, target review (financial, legal, tax, technical), seller preparation and data room, framing negotiation points, 100-day integration, buy-and-build programmes, shareholder agreements and post-deal governance. Framework: the Four Blind Spots Review (code and chain of rights, contracts and change of control, compliance and security, people and dependencies). Aegryn advises; financial execution of transactions is entrusted to accredited partners.
 
-Industries (/industries and /industries/[slug]): five hubs (Finance and Capital; Health and Life Sciences; Industry, Energy and Infrastructure; Commerce, Services and Customer Experience; Tech, Innovation and Public Sector) covering 23+ sectors, among them aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom and transport.
+Industries (/industries and /industries/[slug]): five hubs (Finance and Capital; Health and Life Sciences; Industry, Energy and Infrastructure; Commerce, Services and Customer Experience; Tech, Innovation and Public Sector) covering 22+ sectors, among them aerospace, agriculture, automotive, banking, chemistry, construction, cybersecurity, e-commerce, education, energy, fintech, healthtech, hospitality, real estate, manufacturing, logistics, luxury, media, natural resources, healthcare, professional services, telecom and transport.
 
 ---
 

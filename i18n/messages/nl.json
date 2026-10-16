@@ -896,8 +896,8 @@
   },
   "aboutSection": {
     "label": "Over Aegryn",
-    "title": "Vijf disciplines.\nÉén bedrijf.",
-    "desc": "We zijn noch een klassiek bureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde firma, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor duurzame organisatiewaarde: kadering, opbouw van assets, transities in elke levenscyclus, talent en marktintelligentie.",
+    "title": "Vijf manieren van handelen.\nÉén bedrijf.",
+    "desc": "We zijn noch een klassiek bureau, noch een tech-bureau, noch een M&A-boutique. We zijn een geïntegreerde firma, verankerd in Zwitserland, die vijf manieren van handelen samenbrengt ten dienste van duurzame organisatiewaarde: kaderen, realiseren, elke levenscyclus begeleiden, talent selecteren en informeren over de markt.",
     "tagline": "GEÏNTEGREERDE FIRMA, VERANKERD IN ZWITSERLAND.",
     "cta": "Onze disciplines →",
     "ctaHref": "/advisory",
@@ -907,7 +907,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Gedekte situaties",
+        "label": "Manieren van handelen",
         "sub": "Kaderen · Realiseren · Begeleiden · Selecteren · Informeren"
       },
       {
@@ -930,8 +930,8 @@
   },
   "missionSection": {
     "label": "Het Aegryn Model",
-    "title": "Vijf geïntegreerde disciplines. Één standaard.",
-    "sub": "Vijf disciplines die elkaar versterken. Dat is wat slechts weinig spelers echt kunnen aanbieden.",
+    "title": "Vijf geïntegreerde manieren van handelen. Één standaard.",
+    "sub": "Vijf manieren van handelen die elkaar versterken. Dat is wat slechts weinig spelers echt kunnen aanbieden.",
     "items": [
       {
         "title": "KADEREN",
@@ -1772,7 +1772,7 @@
       "items": [
         {
           "q": "Wie zijn wij en wat doen we?",
-          "a": "Aegryn is een geïntegreerd bureau, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire disciplines: kadering van strategie, tech en M&A, realisatie van propriëtaire digitale activa, begeleiding van transities in elke levenscyclus, talentselectie en marktinformatie. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
+          "a": "Aegryn is een geïntegreerd bureau, verankerd in Zwitserland, dat bedrijfsleiders begeleidt bij het creëren, documenteren en realiseren van de waarde van hun organisatie en activa. Vijf complementaire manieren van handelen: kaderen, realiseren, elke levenscyclus begeleiden, talent selecteren en informeren over de markt. Van strategie tot overdracht. Wij werken met oprichters, directeuren, investeringsfondsen en family offices in elke ontwikkelingsfase van een organisatie, van lancering tot overdracht."
         },
         {
           "q": "Wat onderscheidt ons?",
@@ -7109,7 +7109,7 @@
           "account"
         ],
         "q": "Welke advisorydiensten bieden jullie aan?",
-        "a": "Aegryn Advisory omvat acht vakgebieden: Bedrijfsstrategie en Innovatie, Risicobeheer en Compliance, Financiën en Prestaties, Technologie en Soevereiniteit, Operations en Operationele excellentie, Talent en Organisatie, Project- en programmamanagement, M&A, Transacties en PMI. Wij zijn actief in meer dan 23 sectoren in Zwitserland en Europa. Zie /advisory voor meer details."
+        "a": "Aegryn Advisory omvat acht vakgebieden: Bedrijfsstrategie en Innovatie, Risicobeheer en Compliance, Financiën en Prestaties, Technologie en Soevereiniteit, Operations en Operationele excellentie, Talent en Organisatie, Project- en programmamanagement, M&A, Transacties en PMI. Wij zijn actief in meer dan 22 sectoren in Zwitserland en Europa. Zie /advisory voor meer details."
       },
       {
         "id": "build-service",
@@ -9827,7 +9827,7 @@
     "vision": {
       "label": "ONZE VISIE",
       "title": "Een hybride groep.\nVerankerd in Zwitserland.",
-      "text": "Onze visie is die van een Europese adviesgroep die bedrijven van begin tot eind begeleidt, van strategie naar kapitaal, van transformatie naar waardering.\n\nWij zijn operators: wij bouwen en beheren onze eigen tech-assets. Wat wij adviseren, leven wij. Deze coherentie is onze eerste geloofwaardigheid.\n\nAegryn is noch een klassiek adviesbureau, noch een tech-agency, noch een M&A-boutique. Het is een hybride groep, verankerd in Zwitserland, die de vijf disciplines samenbrengt die nodig zijn voor de duurzame waarde van een bedrijf."
+      "text": "Onze visie is die van een Europese adviesgroep die bedrijven van begin tot eind begeleidt, van strategie naar kapitaal, van transformatie naar waardering.\n\nWij zijn operators: wij bouwen en beheren onze eigen tech-assets. Wat wij adviseren, leven wij. Deze coherentie is onze eerste geloofwaardigheid.\n\nAegryn is noch een klassiek adviesbureau, noch een tech-agency, noch een M&A-boutique. Het is een hybride groep, verankerd in Zwitserland, die de vijf manieren van handelen samenbrengt die nodig zijn voor de duurzame waarde van een bedrijf."
     },
     "founder": {
       "label": "DE OPRICHTER",

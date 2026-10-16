@@ -896,8 +896,8 @@
   },
   "aboutSection": {
     "label": "About Aegryn",
-    "title": "Five disciplines.\nOne firm.",
-    "desc": "We are neither a classic firm, nor a tech agency, nor an M&A boutique. We are an integrated firm, rooted in Switzerland, bringing together the five disciplines essential to lasting organisational value: framing, asset building, transitions at every lifecycle stage, talent and market intelligence.",
+    "title": "Five ways of working.\nOne firm.",
+    "desc": "We are neither a classic firm, nor a tech agency, nor an M&A boutique. We are an integrated firm, rooted in Switzerland, bringing together five ways of working in service of lasting organisational value: framing, delivering, accompanying every life cycle, selecting talent and keeping you informed on the market.",
     "tagline": "INTEGRATED FIRM, ANCHORED IN SWITZERLAND.",
     "cta": "Our disciplines →",
     "ctaHref": "/advisory",
@@ -907,7 +907,7 @@
     "stats": [
       {
         "val": "5",
-        "label": "Situations covered",
+        "label": "Ways of working",
         "sub": "Frame · Deliver · Accompany · Select · Stay informed"
       },
       {
@@ -930,8 +930,8 @@
   },
   "missionSection": {
     "label": "The Aegryn Model",
-    "title": "Five integrated disciplines. One standard.",
-    "sub": "Five disciplines that reinforce one another. That is what very few players can genuinely offer.",
+    "title": "Five integrated ways of working. One standard.",
+    "sub": "Five ways of working that reinforce one another. That is what very few players can genuinely offer.",
     "items": [
       {
         "title": "FRAME",
@@ -1191,14 +1191,14 @@
     },
     "meta": {
       "title": "About | Entrepreneurial Boutique | Aegryn",
-      "desc": "Aegryn is an entrepreneurial boutique for signature projects, anchored in Switzerland and open to the world. Five disciplines: frame, deliver, accompany, select, stay informed."
+      "desc": "Aegryn is an entrepreneurial boutique for signature projects, anchored in Switzerland and open to the world. Five ways of working: frame, deliver, accompany, select, stay informed."
     }
   },
   "career": {
     "hero": {
       "label": "Work at Aegryn",
       "title": "Building projects that last.",
-      "desc": "Aegryn is an integrated firm, with La Boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed. We grow by co-optation and unsolicited applications, with senior profiles who like to take a project all the way through.",
+      "desc": "Aegryn is an integrated firm, with La Boutique for signature projects. Five ways of working: frame, deliver, accompany, select, stay informed. We grow by co-optation and unsolicited applications, with senior profiles who like to take a project all the way through.",
       "imageAlt": "Sunlit mountain peak reflected in an alpine lake"
     },
     "positions": {
@@ -1272,7 +1272,7 @@
     },
     "meta": {
       "title": "Careers | Aegryn",
-      "desc": "Join Aegryn, an integrated firm, and La Boutique for signature projects. Five disciplines: frame, deliver, accompany, select, stay informed."
+      "desc": "Join Aegryn, an integrated firm, and La Boutique for signature projects. Five ways of working: frame, deliver, accompany, select, stay informed."
     }
   },
   "assetStatus": {
@@ -1772,7 +1772,7 @@
       "items": [
         {
           "q": "Who are we and what do we do?",
-          "a": "Aegryn is an integrated firm, rooted in Switzerland, that helps business leaders create, document and realise the value of their organisation and assets. Five complementary disciplines: strategy, tech and M&A framing, proprietary digital asset delivery, accompaniment at every lifecycle stage, talent selection and market information. From strategy to transfer. We work with founders, executives, investment funds and family offices at every stage of an organisation's development, from launch to succession."
+          "a": "Aegryn is an integrated firm, rooted in Switzerland, that helps business leaders create, document and realise the value of their organisation and assets. Five complementary ways of working: framing, delivering, accompanying every life cycle, selecting talent and keeping you informed on the market. From strategy to transfer. We work with founders, executives, investment funds and family offices at every stage of an organisation's development, from launch to succession."
         },
         {
           "q": "What sets us apart?",
@@ -7109,7 +7109,7 @@
           "account"
         ],
         "q": "What advisory services do you offer?",
-        "a": "Aegryn Advisory covers eight disciplines: Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI. We work across more than 23 industries in Switzerland and Europe. See /advisory for details."
+        "a": "Aegryn Advisory covers eight disciplines: Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI. We work across more than 22 industries in Switzerland and Europe. See /advisory for details."
       },
       {
         "id": "build-service",
@@ -9827,7 +9827,7 @@
     "vision": {
       "label": "OUR VISION",
       "title": "A hybrid group.\nAnchored in Switzerland.",
-      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are operators: we build and operate our own tech assets. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five disciplines necessary for the lasting value of a company."
+      "text": "Our vision is that of a European advisory group that accompanies companies end-to-end, from strategy to capital, from transformation to valuation.\n\nWe are operators: we build and operate our own tech assets. What we advise, we live. This consistency is our first credibility.\n\nAegryn is neither a traditional consulting firm, nor a tech agency, nor an M&A boutique. It is a hybrid group, anchored in Switzerland, that brings together the five ways of working necessary for the lasting value of a company."
     },
     "founder": {
       "label": "THE FOUNDER",

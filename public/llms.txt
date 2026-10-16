@@ -17,7 +17,7 @@ Aegryn is NOT a marketplace, auction house, catalogue, buyer or seller platform,
 - Contact: contact@boha-group.com, +41 24 539 18 81 (Swiss office), https://aegryn.com/en/contact
 - Languages: French, English, German, Spanish, Italian, Dutch (/fr, /en, /de, /es, /it, /nl)
 
-## Five public métiers
+## Five public ways of working
 
 1. Frame (FR: Cadrer): decide on documented grounds. Strategy, risk, finance, technology, operations, talent, M&A.
 2. Deliver (FR: Réaliser): steer projects and programmes from governance to acceptance, with you and for you.
@@ -25,7 +25,7 @@ Aegryn is NOT a marketplace, auction house, catalogue, buyer or seller platform,
 4. Select (FR: Sélectionner): key and transition profiles, executives and experts.
 5. Stay informed (FR: S'informer): Aegryn Magazine, articles and market data.
 
-CIFSO is the certification, protocol and tooling infrastructure behind the firm. It is not a public métier of its own.
+CIFSO is the certification, protocol and tooling infrastructure behind the firm. It is not a public offer of its own.
 
 ## Eight advisory disciplines
 - [Our eight disciplines](https://aegryn.com/en/advisory): hub page
@@ -49,7 +49,7 @@ CIFSO is the certification, protocol and tooling infrastructure behind the firm.
 - [Restructuring and Pivot](https://aegryn.com/en/accompagner/restructuration)
 - [Acquisition and External Growth](https://aegryn.com/en/accompagner/acquisition)
 - [Transfer and Cession](https://aegryn.com/en/accompagner/transmission)
-- [Industries](https://aegryn.com/en/industries): five industry hubs covering 23+ sectors
+- [Industries](https://aegryn.com/en/industries): five industry hubs covering 22+ sectors
 - [Acquisition Support](https://aegryn.com/en/services/acquisition-support)
 
 ## Select, network and partners
