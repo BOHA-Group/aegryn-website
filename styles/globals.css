@@ -366,7 +366,7 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
 .mw-grid { position: relative; z-index: 1; display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 0; width: max-content; padding-right: 70vw; left: calc(50vw + 16rem); will-change: transform; }
 .mw-item { position: relative; display: flex; flex-shrink: 0; align-items: flex-end; column-gap: 1.5rem; padding: 1.5rem 1rem 0 clamp(1.75rem, 4vw, 2.5rem); color: var(--mw-ink); text-decoration: none; }
 .mw-item.is-down { margin-top: clamp(3.5rem, 8vw, 6rem); }
-.mw-image { position: relative; display: block; flex-shrink: 0; height: 50svh; aspect-ratio: 4 / 5; overflow: hidden; }
+.mw-image { position: relative; display: block; flex-shrink: 0; height: 50svh; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 16px; }
 .mw-image img { object-fit: cover; transition: transform .7s cubic-bezier(.22,1,.36,1); }
 .mw-item:hover .mw-image img { transform: scale(1.05); }
 .mw-text { flex-shrink: 0; width: 16rem; }
