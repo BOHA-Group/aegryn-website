@@ -158,6 +158,10 @@ const nextConfig: NextConfig = {
       { source: '/transact/:path*',                     destination: '/',                                permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/transact/:path*',             destination: '/:locale',                         permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/client/auction',              destination: '/:locale',                         permanent: true },
+      /* Ancien lien « /account?tab=talent » des mails Talent (corrigé vers /admin/talent le 15.10.2026) ;
+         /account n'a jamais existé : les anciens mails redirigent vers l'admin, le reste vers le compte client. */
+      { source: '/:locale(fr|en|de|es|it|nl)?/account', has: [{ type: 'query', key: 'tab', value: 'talent' }], destination: '/admin/talent', permanent: true },
+      { source: '/:locale(fr|en|de|es|it|nl)?/account', destination: '/client/account',                  permanent: true },
       /* Espaces et pages d'admin archivés */
       { source: '/client/buyer/:path*',                 destination: '/client/account',                  permanent: false },
       { source: '/admin/:section(offers|transactions|transaction|introductions|catalog|commissions|sessions|light-bids|data-room-requests)/:path*', destination: '/admin', permanent: false },
