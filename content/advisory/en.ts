@@ -379,15 +379,15 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image: '/images/advisory/talent.webp',
     imageAlt: 'Empty boardroom, ready for the next session',
     meta: {
-      title: 'Succession, governance, leadership team | Aegryn',
-      description: 'Measure dependency on the CEO, structure the management committee, build a succession plan, retain key people. SMEs and mid-caps. Switzerland and Europe.',
-      keywords: ['SME succession plan', 'founder dependency', 'management committee governance', 'key people retention', 'family business transfer', 'mid-cap organisation'],
+      title: 'Talent and Organisation: succession, governance, profile selection | Aegryn',
+      description: 'Succession, governance, retention, key profiles and interim profiles: decide, implement, select. Recruitment of executives and managers in Switzerland.',
+      keywords: ['SME succession plan', 'founder dependency', 'management committee governance', 'key people retention', 'interim executives', 'executive recruitment Switzerland'],
     },
     eyebrow: 'Talent & Organisation',
     h1: 'The value of an organisation is measured by what it can do without its leader.',
-    subtitle: 'Succession, governance, retention, structuring the leadership: organisational decisions weigh the most over time and are the most often postponed.',
+    subtitle: 'Succession, governance, retention, leadership organisation: organisational decisions weigh the most over time and are the most often postponed. When the right profile is missing, we select it with you.',
+    needProfile: { label: 'Need a profile?', links: [{ label: 'Select a profile', href: '#selectionner' }, { label: 'Transition profiles', href: '/talent/transition' }] },
     scope: [
-      { label: 'Search and placement: Recruit', href: '/talent' },
       { label: 'Direction: Strategy', href: '/advisory/strategy' },
       { label: 'Team of a target: M&A', href: '/advisory/ma' },
       { label: 'Programme governance: Project Management', href: '/advisory/project-program-management' },
@@ -395,15 +395,16 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'What we observe',
       cards: [
-        { value: '40%', label: 'of French micro, small and mid-sized business leaders intend to transfer within five years, i.e. 370,000 companies', source: 'Bpifrance Le Lab, 27 Nov 2025' },
-        { value: '130,000', label: 'effective transfers expected at the current pace', source: 'Bpifrance Le Lab, 27 Nov 2025' },
-        { value: '47%', label: 'of family business leaders aged 60 to 69 have not formalised a succession plan', source: 'Bpifrance Le Lab, family businesses' },
+        { value: '168,000', label: 'Swiss SMEs concerned by a succession by the end of 2030 (extrapolation)', source: 'UBS / University of St. Gallen, 2026 study (survey of September 2025)' },
+        { value: '76%', label: 'of owners planning to transfer acknowledge that success depends heavily on the current owner or manager', source: 'UBS / University of St. Gallen, 2026 study' },
+        { value: '21%', label: 'of owners aged 66 to 90 did not yet have a transfer timetable', source: 'UBS / University of St. Gallen, 2026 study' },
       ],
       paragraphs: [
-        'In France, 40% of micro, small and mid-sized business leaders intend to transfer their company within five years, a potential of 370,000 companies. At the current pace, 130,000 would actually change hands. Among leaders of family SMEs and mid-caps aged 60 to 69, 47% have not formalised a succession plan.',
+        'According to the UBS and University of St. Gallen study (2026), 168,000 Swiss SMEs would be concerned by a succession by the end of 2030. For three owners in four who are preparing a transfer, success rests on one person. And one owner in five aged 66 and over has not yet set a timetable.',
+        'The more detailed French market figures point the same way: 47% of family business leaders aged 60 to 69 have not formalised a succession plan (Bpifrance Le Lab).',
       ],
       change: 'The gap between intention and action has less to do with the market than with preparation. An organisation that depends on one person transfers badly, finances badly and steers badly.',
-      sources: 'Sources: Bpifrance Le Lab, Business transfer and takeover study (27 November 2025) · Bpifrance Le Lab, family businesses.',
+      sources: 'Sources: UBS / University of St. Gallen, study on Swiss SME succession (2026, survey of September 2025) · Bpifrance Le Lab (27 November 2025), for the French reference.',
     },
     outcomes: {
       title: 'What you get',
@@ -418,21 +419,21 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Everything goes through me.', decision: 'What to delegate first, to whom.', deliverable: 'Dependency Index and twelve-month delegation plan.', format: 'A few weeks', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
         { quote: 'My leadership team is not yet a team.', decision: 'Roles, decision rhythms, delegations.', deliverable: 'Governance charter for the management committee.', format: 'A few weeks', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'A key person wants to leave.', decision: 'Retain, replace or back up.', deliverable: 'Retention plan, identified backup, documented knowledge transfer.', format: 'Short engagement', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'I need to hire an executive (technical, financial, operations, country).', decision: 'The right profile, in the right governance.', deliverable: 'Role definition and integration criteria, then handover to Recruit.', format: 'Short engagement', cycles: ['croissance'], image: `${S}handshake.jpg` },
+        { quote: 'A key person wants to leave.', decision: 'Retain, replace or back up.', deliverable: 'Retention plan, identified backup (internal, or interim profile if needed), documented knowledge transfer.', format: 'Short engagement', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
+        { quote: 'I need to hire an executive (technical, financial, operations, country).', decision: 'The right profile, in the right governance.', deliverable: 'Role definition and integration criteria, then, if you wish, Select a profile.', format: 'Short engagement', cycles: ['croissance'], image: `${S}handshake.jpg` },
         { quote: 'I am thinking of transferring in two to five years.', decision: 'Family, internal or external buyer.', deliverable: 'Succession plan and transition governance.', format: 'One to two months', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
         { quote: 'An acquisition is coming, two cultures are about to meet.', decision: 'Who stays, who leads, how to organise.', deliverable: 'Assessment of the target team, target organisation, retention plan.', format: 'A few weeks', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
       ],
     },
     services: {
-      title: 'Our services',
+      title: 'What we do: deciding (Frame)',
       items: [
-        'Measure dependency on the leader and on key people',
-        'Structure the management committee and its delegations',
-        'Build the succession plan',
-        'Secure the retention of critical people',
-        'Document critical know-how',
-        'Prepare the hiring of an executive',
+        'Measure dependency on the leader and on key people.',
+        'Define the management committee and its delegations.',
+        'Formalise the succession plan.',
+        'Decide on the retention of critical people.',
+        'Map critical know-how.',
+        'Define the role and criteria of an executive to hire.',
       ],
     },
     framework: {
@@ -449,8 +450,8 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'By size',
       items: [
-        { label: 'SME · 10 to 50 M€', desc: 'The CEO is often the first salesperson and the first product decision-maker. Priority: delegate key customer relationships and document the ten critical processes.' },
-        { label: 'Mid-cap · from 50 M€', desc: 'Family governance or shareholders. Priority: succession plan for the managing director and direct reports, nomination committee, role of the family.' },
+        { label: 'SME · CHF 10 to 50M', desc: 'The CEO is often the first salesperson and the first product decision-maker. Priority: delegate key customer relationships and document the ten critical processes.' },
+        { label: 'Large mid-sized company · from CHF 50M', desc: 'Family governance or shareholders. Priority: succession plan for the managing director and direct reports, nomination committee, role of the family.' },
       ],
     },
     bySector: {
@@ -465,7 +466,7 @@ export const ADVISORY_EN: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag: 'Typical scenario · illustrative',
-      text: 'Family mid-cap of 140 M€, CEO aged 63, two children, neither wishing to lead. Within four weeks: Dependency Index (seven critical people), three succession scenarios compared, twenty-four-month transition calendar the family council can decide on.',
+      text: 'Family company of CHF 140M, CEO aged 63, two children, neither wishing to lead. Within four weeks: Dependency Index (seven critical people), three succession scenarios compared, twenty-four-month transition calendar the family council can decide on.',
     },
     ai: {
       title: 'What an AI tool will not do for you',

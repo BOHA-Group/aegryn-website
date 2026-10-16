@@ -379,15 +379,15 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image: '/images/advisory/talent.webp',
     imageAlt: 'Leerer Sitzungssaal, bereit für die nächste Sitzung',
     meta: {
-      title: 'Nachfolge, Governance, Führungsteam | Aegryn',
-      description: 'Die Abhängigkeit von der Geschäftsleitung messen, die Geschäftsleitung strukturieren, einen Nachfolgeplan aufbauen, Schlüsselpersonen halten. KMU und Mid-Caps. Schweiz und Europa.',
-      keywords: ['Nachfolgeplan KMU', 'Abhängigkeit vom Gründer', 'Governance Geschäftsleitung', 'Bindung von Schlüsselpersonen', 'Übergabe Familienunternehmen', 'Organisation Mid-Cap'],
+      title: 'Talent und Organisation: Nachfolge, Governance, Profilauswahl | Aegryn',
+      description: 'Nachfolge, Governance, Bindung, Schlüssel- und Übergangsprofile: entscheiden, umsetzen, auswählen. Rekrutierung von Führungskräften und Kadern in der Schweiz.',
+      keywords: ['Nachfolgeplan KMU', 'Abhängigkeit vom Gründer', 'Governance Geschäftsleitung', 'Bindung von Schlüsselpersonen', 'Übergangsprofile', 'Führungskräfte rekrutieren Schweiz'],
     },
     eyebrow: 'Talent & Organisation',
     h1: 'Der Wert einer Organisation bemisst sich daran, was sie ohne ihre Führung leisten kann.',
-    subtitle: 'Nachfolge, Governance, Bindung, Strukturierung der Führung: Organisationsentscheidungen wiegen auf Dauer am schwersten und werden am häufigsten aufgeschoben.',
+    subtitle: 'Nachfolge, Governance, Bindung, Organisation der Führung: Organisationsentscheidungen wiegen auf Dauer am schwersten und werden am häufigsten aufgeschoben. Fehlt das richtige Profil, wählen wir es gemeinsam mit Ihnen aus.',
+    needProfile: { label: 'Ein Profil gesucht?', links: [{ label: 'Profil auswählen', href: '#selectionner' }, { label: 'Übergangsprofile', href: '/talent/transition' }] },
     scope: [
-      { label: 'Suche und Vermittlung: Rekrutieren', href: '/talent' },
       { label: 'Kurswahl: Strategie', href: '/advisory/strategy' },
       { label: 'Team eines Zielunternehmens: M&A', href: '/advisory/ma' },
       { label: 'Die Programm-Governance: Projektsteuerung', href: '/advisory/project-program-management' },
@@ -395,15 +395,16 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'Was wir beobachten',
       cards: [
-        { value: '40 %', label: 'der französischen Kleinst-, KMU- und Mid-Cap-Führungskräfte wollen innerhalb von fünf Jahren übergeben, das sind 370 000 Unternehmen', source: 'Bpifrance Le Lab, 27. Nov. 2025' },
-        { value: '130 000', label: 'tatsächliche Übergaben, die beim aktuellen Tempo erwartet werden', source: 'Bpifrance Le Lab, 27. Nov. 2025' },
-        { value: '47 %', label: 'der 60- bis 69-jährigen Führungskräfte von Familienunternehmen haben keinen formalisierten Nachfolgeplan', source: 'Bpifrance Le Lab, Familienunternehmen' },
+        { value: '168 000', label: 'Schweizer KMU, die bis Ende 2030 von einer Nachfolge betroffen sind (Hochrechnung)', source: 'UBS / Universität St. Gallen, Studie 2026 (Umfrage vom September 2025)' },
+        { value: '76 %', label: 'der übergabewilligen Eigentümer räumen ein, dass der Erfolg stark vom amtierenden Eigentümer oder Geschäftsführer abhängt', source: 'UBS / Universität St. Gallen, Studie 2026' },
+        { value: '21 %', label: 'der 66- bis 90-jährigen Eigentümer hatten noch keinen Übergabezeitplan', source: 'UBS / Universität St. Gallen, Studie 2026' },
       ],
       paragraphs: [
-        'In Frankreich wollen 40 % der Führungskräfte von Kleinst-, kleinen und mittleren Unternehmen sowie Mid-Caps ihr Unternehmen innerhalb von fünf Jahren übergeben, ein Potenzial von 370 000 Unternehmen. Beim aktuellen Tempo würden tatsächlich 130 000 den Besitzer wechseln. Unter den 60- bis 69-jährigen Führungskräften von Familien-KMU und -Mid-Caps haben 47 % keinen formalisierten Nachfolgeplan.',
+        'Laut der Studie von UBS und Universität St. Gallen (2026) wären bis Ende 2030 168 000 Schweizer KMU von einer Nachfolge betroffen. Für drei von vier Eigentümern, die eine Übergabe vorbereiten, hängt der Erfolg an einer einzigen Person. Und jeder fünfte Eigentümer ab 66 Jahren hat noch keinen Zeitplan festgelegt.',
+        'Die detaillierteren Zahlen des französischen Marktes gehen in dieselbe Richtung: 47 % der 60- bis 69-jährigen Führungskräfte von Familienunternehmen haben keinen formalisierten Nachfolgeplan (Bpifrance Le Lab).',
       ],
       change: 'Die Lücke zwischen Absicht und Tat liegt weniger am Markt als an der Vorbereitung. Eine Organisation, die von einer Person abhängt, lässt sich schlecht übergeben, schlecht finanzieren und schlecht steuern.',
-      sources: 'Quellen: Bpifrance Le Lab, Studie Unternehmensübergabe und -übernahme (27. November 2025) · Bpifrance Le Lab, Familienunternehmen.',
+      sources: 'Quellen: UBS / Universität St. Gallen, Studie zur Nachfolge in Schweizer KMU (2026, Umfrage vom September 2025) · Bpifrance Le Lab (27. November 2025), für den französischen Vergleich.',
     },
     outcomes: {
       title: 'Was Sie erhalten',
@@ -418,21 +419,21 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Alles läuft über mich.', decision: 'Was zuerst delegieren, an wen.', deliverable: 'Abhängigkeitsindex und Delegationsplan über zwölf Monate.', format: 'Einige Wochen', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
         { quote: 'Mein Führungsteam ist noch kein Team.', decision: 'Rollen, Entscheidungsrhythmen, Delegationen.', deliverable: 'Governance-Charta der Geschäftsleitung.', format: 'Einige Wochen', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Eine Schlüsselperson will gehen.', decision: 'Halten, ersetzen oder doppelt besetzen.', deliverable: 'Bindungsplan, identifizierte Stellvertretung, dokumentierter Wissenstransfer.', format: 'Kurzmandat', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Ich muss eine Führungskraft rekrutieren (Technik, Finanzen, Betrieb, Land).', decision: 'Das richtige Profil, in der richtigen Governance.', deliverable: 'Stellendefinition und Integrationskriterien, danach Übergabe an Rekrutieren.', format: 'Kurzmandat', cycles: ['croissance'], image: `${S}handshake.jpg` },
+        { quote: 'Eine Schlüsselperson will gehen.', decision: 'Halten, ersetzen oder doppelt besetzen.', deliverable: 'Bindungsplan, identifizierte Stellvertretung (intern oder bei Bedarf Übergangsprofil), dokumentierter Wissenstransfer.', format: 'Kurzmandat', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
+        { quote: 'Ich muss eine Führungskraft rekrutieren (Technik, Finanzen, Betrieb, Land).', decision: 'Das richtige Profil, in der richtigen Governance.', deliverable: 'Stellendefinition und Integrationskriterien, danach, falls gewünscht, ein Profil auswählen.', format: 'Kurzmandat', cycles: ['croissance'], image: `${S}handshake.jpg` },
         { quote: 'Ich denke daran, in zwei bis fünf Jahren zu übergeben.', decision: 'Familie, intern oder externer Übernehmer.', deliverable: 'Nachfolgeplan und Übergangs-Governance.', format: 'Ein bis zwei Monate', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
         { quote: 'Eine Akquisition steht an, zwei Kulturen werden aufeinandertreffen.', decision: 'Wer bleibt, wer führt, wie organisieren.', deliverable: 'Bewertung des Zielteams, Zielorganisation, Bindungsplan.', format: 'Einige Wochen', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
       ],
     },
     services: {
-      title: 'Unsere Leistungen',
+      title: 'Unsere Leistungen: entscheiden (Rahmen setzen)',
       items: [
-        'Die Abhängigkeit von der Führung und von Schlüsselpersonen messen',
-        'Die Geschäftsleitung und ihre Delegationen strukturieren',
-        'Den Nachfolgeplan aufbauen',
-        'Die Bindung kritischer Personen sichern',
-        'Kritisches Know-how dokumentieren',
-        'Die Rekrutierung einer Führungskraft vorbereiten',
+        'Die Abhängigkeit von der Führung und von Schlüsselpersonen messen.',
+        'Die Geschäftsleitung und ihre Delegationen festlegen.',
+        'Den Nachfolgeplan formalisieren.',
+        'Über die Bindung kritischer Personen entscheiden.',
+        'Kritisches Know-how kartieren.',
+        'Stelle und Kriterien einer einzustellenden Führungskraft festlegen.',
       ],
     },
     framework: {
@@ -449,8 +450,8 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'Nach Grösse',
       items: [
-        { label: 'KMU · 10 bis 50 Mio. €', desc: 'Die Geschäftsleitung ist oft erster Verkäufer und erster Produktentscheider. Priorität: Schlüsselkundenbeziehungen delegieren und die zehn kritischen Prozesse dokumentieren.' },
-        { label: 'Mid-Cap · ab 50 Mio. €', desc: 'Familien-Governance oder Aktionäre. Priorität: Nachfolgeplan für den CEO und die direkt Unterstellten, Nominationsausschuss, Rolle der Familie.' },
+        { label: 'KMU · 10 bis 50 Mio. CHF', desc: 'Die Geschäftsleitung ist oft erster Verkäufer und erster Produktentscheider. Priorität: Schlüsselkundenbeziehungen delegieren und die zehn kritischen Prozesse dokumentieren.' },
+        { label: 'Grosses mittelständisches Unternehmen · ab 50 Mio. CHF', desc: 'Familien-Governance oder Aktionäre. Priorität: Nachfolgeplan für den CEO und die direkt Unterstellten, Nominationsausschuss, Rolle der Familie.' },
       ],
     },
     bySector: {
@@ -465,7 +466,7 @@ export const ADVISORY_DE: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag: 'Typisches Szenario · illustrativ',
-      text: 'Familien-Mid-Cap mit 140 Mio. €, Geschäftsführer 63 Jahre alt, zwei Kinder, von denen keines führen möchte. Innerhalb von vier Wochen: Abhängigkeitsindex (sieben kritische Personen), drei Nachfolgeszenarien verglichen, Übergangskalender über vierundzwanzig Monate, über den der Familienrat entscheiden kann.',
+      text: 'Familienunternehmen mit 140 Mio. CHF, Geschäftsführer 63 Jahre alt, zwei Kinder, von denen keines führen möchte. Innerhalb von vier Wochen: Abhängigkeitsindex (sieben kritische Personen), drei Nachfolgeszenarien verglichen, Übergangskalender über vierundzwanzig Monate, über den der Familienrat entscheiden kann.',
     },
     ai: {
       title: 'Was ein KI-Werkzeug nicht für Sie tun wird',

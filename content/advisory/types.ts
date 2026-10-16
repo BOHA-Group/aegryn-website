@@ -87,6 +87,8 @@ export interface AdvisoryPageContent {
   eyebrow:      string
   h1:           string
   subtitle:     string
+  /** Ligne sous les boutons du hero : « Besoin d'un profil ? » + liens (ancre « # » ou chemin du site) */
+  needProfile?: { label: string; links: { label: string; href: string }[] }
   /** Renvois de périmètre vers les autres métiers / offres */
   scope:        { label: string; href: string }[]
   observation:  {

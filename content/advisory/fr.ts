@@ -390,15 +390,15 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image:    '/images/advisory/talent.webp',
     imageAlt: 'Salle de conseil vide, prête pour la prochaine séance',
     meta: {
-      title:       'Succession, gouvernance, équipe de direction | Aegryn',
-      description: 'Mesurer la dépendance au dirigeant, structurer le comité de direction, bâtir un plan de succession, retenir les profils clés. PME et ETI. Suisse et Europe.',
-      keywords:    ['plan de succession PME', 'dépendance au dirigeant', 'gouvernance comité de direction', 'rétention profils clés', 'transmission entreprise familiale', 'organisation ETI'],
+      title: 'Talent et Organisation : succession, gouvernance, sélection de profils | Aegryn',
+      description: 'Succession, gouvernance, rétention, profils clés et profils de transition : décider, mettre en œuvre, sélectionner. Recrutement de dirigeants et de cadres en Suisse.',
+      keywords: ['plan de succession PME', 'dépendance au dirigeant', 'gouvernance comité de direction', 'rétention profils clés', 'profils de transition', 'recrutement de dirigeants Suisse'],
     },
     eyebrow:  'Talent & Organisation',
     h1:       "La valeur d'une organisation se mesure à ce qu'elle sait faire sans son dirigeant.",
-    subtitle: "Succession, gouvernance, rétention, structuration de la direction : les décisions d'organisation pèsent le plus dans la durée et sont les plus souvent reportées.",
+    subtitle: 'Succession, gouvernance, rétention, organisation de la direction : les décisions d’organisation pèsent le plus dans la durée et sont les plus souvent reportées. Quand le bon profil manque, nous le sélectionnons avec vous.',
+    needProfile: { label: 'Besoin d’un profil ?', links: [{ label: 'Sélectionner un profil', href: '#selectionner' }, { label: 'Profils de transition', href: '/talent/transition' }] },
     scope: [
-      { label: 'Recherche et placement : Recruter', href: '/talent' },
       { label: 'Choix de cap : Stratégie', href: '/advisory/strategy' },
       { label: "Équipe d'une cible : M&A", href: '/advisory/ma' },
       { label: 'La gouvernance de programme : Pilotage', href: '/advisory/project-program-management' },
@@ -406,15 +406,16 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'Ce que nous constatons',
       cards: [
-        { value: '40 %',    label: 'des dirigeants de TPE, PME et ETI français comptent transmettre d’ici cinq ans, soit 370 000 entreprises', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '130 000', label: 'transmissions effectives attendues au rythme actuel', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '47 %',    label: "des dirigeants d'entreprises familiales de 60 à 69 ans n'ont pas formalisé de plan de succession", source: 'Bpifrance Le Lab, entreprises familiales' },
+        { value: '168 000', label: 'PME suisses concernées par une succession d’ici fin 2030 (extrapolation)', source: 'UBS / Université de Saint-Gall, étude 2026 (enquête de septembre 2025)' },
+        { value: '76 %', label: 'des propriétaires qui prévoient de transmettre reconnaissent que la réussite dépend fortement du propriétaire ou du dirigeant en place', source: 'UBS / Université de Saint-Gall, étude 2026' },
+        { value: '21 %', label: 'des propriétaires de 66 à 90 ans n’avaient pas encore de calendrier de transmission', source: 'UBS / Université de Saint-Gall, étude 2026' },
       ],
       paragraphs: [
-        "En France, 40 % des dirigeants de TPE, PME et ETI comptent transmettre leur entreprise d'ici cinq ans, soit un potentiel de 370 000 entreprises. Au rythme actuel, 130 000 changeraient réellement de mains. Parmi les dirigeants de PME et d'ETI familiales de 60 à 69 ans, 47 % n'ont pas formalisé de plan de succession.",
+        'Selon l’étude UBS et Université de Saint-Gall (2026), 168 000 PME suisses seraient concernées par une succession d’ici fin 2030. Pour trois propriétaires sur quatre qui préparent une transmission, la réussite repose sur une personne. Et un propriétaire sur cinq, parmi les 66 ans et plus, n’a pas encore fixé de calendrier.',
+        'Les chiffres du marché français, plus détaillés, vont dans le même sens : 47 % des dirigeants d’entreprises familiales de 60 à 69 ans n’ont pas formalisé de plan de succession (Bpifrance Le Lab).',
       ],
-      change:  "L'écart entre l'intention et l'acte tient moins au marché qu'à la préparation. Une organisation qui dépend d'une personne se transmet mal, se finance mal et se pilote mal.",
-      sources: "Sources : Bpifrance Le Lab, étude Transmission et reprise d'entreprise (27 novembre 2025) · Bpifrance Le Lab, entreprises familiales.",
+      change: "L'écart entre l'intention et l'acte tient moins au marché qu'à la préparation. Une organisation qui dépend d'une personne se transmet mal, se finance mal et se pilote mal.",
+      sources: 'Sources : UBS / Université de Saint-Gall, étude sur la succession des PME suisses (2026, enquête de septembre 2025) · Bpifrance Le Lab (27 novembre 2025), pour le rappel français.',
     },
     outcomes: {
       title: 'Ce que vous obtenez',
@@ -429,21 +430,21 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Tout passe par moi.', decision: 'Quoi déléguer en premier, à qui.', deliverable: 'Indice de dépendance et plan de délégation sur douze mois.', format: 'Quelques semaines', cycles: ['croissance', 'transmission'], image: '/images/advisory/situations/meeting-room.jpg' },
         { quote: "Mon équipe de direction n'est pas encore une équipe.", decision: 'Rôles, rythmes de décision, délégations.', deliverable: 'Charte de gouvernance du comité de direction.', format: 'Quelques semaines', cycles: ['croissance'], image: '/images/advisory/situations/discussion-hands.jpg' },
-        { quote: 'Un profil clé veut partir.', decision: 'Retenir, remplacer ou doubler.', deliverable: 'Plan de rétention, doublure identifiée, transfert de savoir documenté.', format: 'Mission courte', cycles: ['restructuration'], image: '/images/advisory/situations/laptop-hands.jpg' },
-        { quote: 'Je dois recruter un dirigeant (technique, financier, opérationnel, pays).', decision: 'Le bon profil, dans la bonne gouvernance.', deliverable: "Définition du poste et critères d'intégration, puis relais vers Recruter.", format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/handshake.jpg' },
+        { quote: 'Un profil clé veut partir.', decision: 'Retenir, remplacer ou doubler.', deliverable: 'Plan de rétention, doublure identifiée (interne, ou profil de transition si besoin), transfert de savoir documenté.', format: 'Mission courte', cycles: ['restructuration'], image: '/images/advisory/situations/laptop-hands.jpg' },
+        { quote: 'Je dois recruter un dirigeant (technique, financier, opérationnel, pays).', decision: 'Le bon profil, dans la bonne gouvernance.', deliverable: 'Définition du poste et critères d’intégration, puis, si vous le souhaitez, Sélectionner un profil.', format: 'Mission courte', cycles: ['croissance'], image: '/images/advisory/situations/handshake.jpg' },
         { quote: 'Je pense transmettre dans deux à cinq ans.', decision: 'Famille, interne ou repreneur externe.', deliverable: 'Plan de succession et gouvernance de transition.', format: 'Un à deux mois', cycles: ['transmission'], image: '/images/advisory/situations/plan-writing.jpg' },
         { quote: 'Une acquisition arrive, deux cultures vont se rencontrer.', decision: "Qui reste, qui pilote, comment s'organiser.", deliverable: "Évaluation de l'équipe cible, organisation cible, plan de rétention.", format: 'Quelques semaines', cycles: ['acquisition'], image: '/images/advisory/situations/office-corridor.jpg' },
       ],
     },
     services: {
-      title: 'Nos services',
+      title: 'Nos services : décider (Cadrer)',
       items: [
-        'Mesurer la dépendance au dirigeant et aux profils clés',
-        'Structurer le comité de direction et ses délégations',
-        'Bâtir le plan de succession',
-        'Sécuriser la rétention des profils critiques',
-        'Documenter les savoir-faire critiques',
-        "Préparer le recrutement d'un dirigeant",
+        'Mesurer la dépendance au dirigeant et aux profils clés.',
+        'Définir le comité de direction et ses délégations.',
+        'Formaliser le plan de succession.',
+        'Arbitrer la rétention des profils critiques.',
+        'Cartographier les savoir-faire critiques.',
+        'Définir le poste et les critères d’un dirigeant à recruter.',
       ],
     },
     framework: {
@@ -460,8 +461,8 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'Selon votre taille',
       items: [
-        { label: 'PME · 10 à 50 M€',  desc: 'Le dirigeant est souvent premier commercial et premier décideur produit. Priorité : déléguer les relations clients clés et documenter les dix processus critiques.' },
-        { label: 'ETI · à partir de 50 M€', desc: 'Gouvernance familiale ou actionnaires. Priorité : plan de succession du directeur général et de ses N-1, comité de nomination, rôle de la famille.' },
+        { label: 'PME · 10 à 50 M CHF',  desc: 'Le dirigeant est souvent premier commercial et premier décideur produit. Priorité : déléguer les relations clients clés et documenter les dix processus critiques.' },
+        { label: 'Grande entreprise de taille intermédiaire · à partir de 50 M CHF', desc: 'Gouvernance familiale ou actionnaires. Priorité : plan de succession du directeur général et de ses N-1, comité de nomination, rôle de la famille.' },
       ],
     },
     bySector: {
@@ -476,7 +477,7 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag:  'Scénario type · illustratif',
-      text: 'ETI familiale de 140 M€, dirigeant de 63 ans, deux enfants dont aucun ne souhaite diriger. En quatre semaines : Indice de dépendance (sept personnes critiques), trois scénarios de succession comparés, calendrier de transition sur vingt-quatre mois que le conseil de famille peut trancher.',
+      text: 'Entreprise familiale de 140 M CHF, dirigeant de 63 ans, deux enfants dont aucun ne souhaite diriger. En quatre semaines : Indice de dépendance (sept personnes critiques), trois scénarios de succession comparés, calendrier de transition sur vingt-quatre mois que le conseil de famille peut trancher.',
     },
     ai: {
       title: "Ce qu'un outil d'IA ne fera pas à votre place",
@@ -504,6 +505,7 @@ export const ADVISORY_FR: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
   },
 
   /* ───────────────────────── 5. M&A, TRANSACTIONS & PMI ───────────────────────── */
+
   ma: {
     key:      'ma',
     path:     '/advisory/ma',

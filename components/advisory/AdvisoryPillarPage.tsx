@@ -117,6 +117,19 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
               {actionDef && <Link href={hrefFor(pageActions.action)} className={action2Def ? BTN_PRI : BTN_SEC}>{actionDef.label} {action2Def ? <ArrowUpRight size={12} /> : null}</Link>}
               {action2Def && <Link href={hrefFor(pageActions.action2 as string)} className={BTN_SEC}>{action2Def.label}</Link>}
             </div>
+            {c.needProfile && (
+              <p className="mt-6 font-sans text-[14px] text-white/70">
+                {c.needProfile.label}{' '}
+                {c.needProfile.links.map((l, i) => (
+                  <span key={l.href}>
+                    {i > 0 && <span className="mx-2 text-white/40">·</span>}
+                    {l.href.startsWith('#')
+                      ? <a href={l.href} className="font-semibold text-white underline underline-offset-4 hover:text-ag-apex">{l.label}</a>
+                      : <Link href={L(l.href)} className="font-semibold text-white underline underline-offset-4 hover:text-ag-apex">{l.label}</Link>}
+                  </span>
+                ))}
+              </p>
+            )}
           </ScrollReveal>
         </div>
       </section>

@@ -35,15 +35,6 @@ const CRAFT_TRANSACT_CYCLES: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactBuy',             href: '/accompagner/acquisition' as LinkHref },
   { labelKey: 'craftTransactSell',            href: '/accompagner/transmission' as LinkHref },
 ]
-// Nos métiers - Recruter : deux portes (entreprises / candidats) + intro + marché
-const CRAFT_RECRUIT_COMPANY_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftRecruitHire',      href: '/talent/entreprises' },
-  { labelKey: 'craftRecruitTransition', href: '/talent/transition' },
-]
-const CRAFT_RECRUIT_CANDIDATE_LINKS: { labelKey: string; href: LinkHref }[] = [
-  { labelKey: 'craftRecruitPool',      href: '/talent/candidats' },
-]
-
 // Nos convictions - Magazine (les éditions à venir sont grisées mais restent cliquables)
 const THINKING_MAGAZINE_LINKS: { labelKey: string; href: LinkHref; muted?: boolean }[] = [
   { labelKey: 'thinkingMagazineIssues',   href: '/magazine' },
@@ -74,7 +65,7 @@ const WHO_JOIN_LINKS: { labelKey: string; href: LinkHref }[] = [
   { labelKey: 'craftTransactAuditors',  href: '/audit' as LinkHref },
 ]
 
-// Mega-menu Nos métiers (4 sections)
+// Mega-menu Nos métiers (2 sections : Cadrer et réaliser sur deux colonnes, Accompagner)
 function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; onClose: () => void }) {
   return (
     <motion.div
@@ -82,11 +73,11 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-full left-0 mt-2 w-[980px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
+      className="absolute top-full left-0 mt-2 w-[760px] bg-ag-white border border-ag-border shadow-xl rounded-2xl overflow-hidden z-50"
     >
-      <div className="grid grid-cols-[1.25fr_1fr_1.2fr_1fr] gap-px bg-ag-border rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-[2.25fr_1fr] gap-px bg-ag-border rounded-2xl overflow-hidden">
         {/* Cadrer et réaliser : un seul titre sur deux colonnes, sans séparateur entre elles */}
-        <div className="bg-ag-white p-4 col-span-2">
+        <div className="bg-ag-white p-4">
           <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
             {t('craftFrameDeliver')}
           </p>
@@ -126,55 +117,6 @@ function CraftMegaMenu({ t, onClose }: { t: ReturnType<typeof useTranslations>; 
                 {t(labelKey)}
               </Link>
             ))}
-          </div>
-        </div>
-
-        {/* Recruter */}
-        <div className="bg-ag-white p-4">
-          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray-light mb-3">
-            {t('craftRecruit')}
-          </p>
-          <div className="h-9 line-clamp-2 font-sans text-[10px] text-ag-gray-light mb-3 leading-relaxed overflow-hidden">
-            {t('craftRecruitDesc')}
-          </div>
-          <div className="flex flex-col gap-1">
-            <Link
-              href="/talent"
-              onClick={onClose}
-              className="font-sans text-[13px] text-ag-gray hover:text-ag-black transition-colors py-1"
-            >
-              {t('craftRecruitIntro')}
-            </Link>
-            <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mt-2 mb-0.5">
-              {t('craftRecruitForCompanies')}
-            </p>
-            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1">
-              {CRAFT_RECRUIT_COMPANY_LINKS.map(({ labelKey, href }) => (
-                <Link
-                  key={labelKey}
-                  href={href}
-                  onClick={onClose}
-                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
-                >
-                  {t(labelKey)}
-                </Link>
-              ))}
-            </div>
-            <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-ag-gray-light mt-2 mb-0.5">
-              {t('craftRecruitForCandidates')}
-            </p>
-            <div className="flex flex-col gap-2 pl-3 border-l border-ag-border ml-1">
-              {CRAFT_RECRUIT_CANDIDATE_LINKS.map(({ labelKey, href }) => (
-                <Link
-                  key={labelKey}
-                  href={href}
-                  onClick={onClose}
-                  className="font-sans text-[12px] text-ag-gray-light hover:text-ag-black transition-colors py-0.5 leading-tight"
-                >
-                  {t(labelKey)}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </div>
@@ -769,25 +711,6 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
                   {CRAFT_TRANSACT_CYCLES.map(({ labelKey, href }) => (
                     <Link key={labelKey} href={href} onClick={closeMobile}
                       className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-white/70 mt-3">{t('craftRecruit')}</p>
-                  <Link href="/talent" onClick={closeMobile}
-                    className="py-1.5 font-sans text-[14px] text-white/70 hover:text-white transition-colors">
-                    {t('craftRecruitIntro')}
-                  </Link>
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/70 mt-2">{t('craftRecruitForCompanies')}</p>
-                  {CRAFT_RECRUIT_COMPANY_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/70 hover:text-white transition-colors border-l border-white/20 ml-1">
-                      {t(labelKey)}
-                    </Link>
-                  ))}
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/70 mt-2">{t('craftRecruitForCandidates')}</p>
-                  {CRAFT_RECRUIT_CANDIDATE_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile}
-                      className="py-1 pl-3 font-sans text-[13px] text-white/70 hover:text-white transition-colors border-l border-white/20 ml-1">
                       {t(labelKey)}
                     </Link>
                   ))}

@@ -379,15 +379,15 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image: '/images/advisory/talent.webp',
     imageAlt: 'Sala del consiglio vuota, pronta per la prossima seduta',
     meta: {
-      title: 'Successione, governance, squadra di direzione | Aegryn',
-      description: 'Misurare la dipendenza dal dirigente, strutturare il comitato di direzione, costruire un piano di successione, trattenere i profili chiave. PMI e mid-cap. Svizzera ed Europa.',
-      keywords: ['piano di successione PMI', 'dipendenza dal fondatore', 'governance comitato di direzione', 'retention profili chiave', 'trasmissione impresa familiare', 'organizzazione mid-cap'],
+      title: 'Talento e Organizzazione: successione, governance, selezione di profili | Aegryn',
+      description: 'Successione, governance, retention, profili chiave e profili di transizione: decidere, attuare, selezionare. Reclutamento di dirigenti e quadri in Svizzera.',
+      keywords: ['piano di successione PMI', 'dipendenza dal titolare', 'governance comitato di direzione', 'retention dei profili chiave', 'profili di transizione', 'reclutamento dirigenti Svizzera'],
     },
     eyebrow: 'Talento & Organizzazione',
     h1: 'Il valore di un’organizzazione si misura da ciò che sa fare senza il suo dirigente.',
-    subtitle: 'Successione, governance, retention, strutturazione della direzione: le decisioni organizzative pesano di più nel tempo e sono le più spesso rinviate.',
+    subtitle: 'Successione, governance, retention, organizzazione della direzione: le decisioni organizzative pesano di più nel tempo e sono quelle rinviate più spesso. Quando manca il profilo giusto, lo selezioniamo con voi.',
+    needProfile: { label: 'Serve un profilo?', links: [{ label: 'Selezionare un profilo', href: '#selectionner' }, { label: 'Profili di transizione', href: '/talent/transition' }] },
     scope: [
-      { label: 'Ricerca e collocamento: Recrutare', href: '/talent' },
       { label: 'Scelta della rotta: Strategia', href: '/advisory/strategy' },
       { label: 'Squadra di un target: M&A', href: '/advisory/ma' },
       { label: 'La governance di programma: Gestione progetti', href: '/advisory/project-program-management' },
@@ -395,15 +395,16 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'Che cosa osserviamo',
       cards: [
-        { value: '40 %', label: 'dei dirigenti francesi di microimprese, PMI e mid-cap contano di trasmettere entro cinque anni, ossia 370 000 imprese', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '130 000', label: 'trasmissioni effettive attese al ritmo attuale', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '47 %', label: 'dei dirigenti di imprese familiari tra 60 e 69 anni non hanno formalizzato un piano di successione', source: 'Bpifrance Le Lab, imprese familiari' },
+        { value: '168 000', label: 'PMI svizzere interessate da una successione entro fine 2030 (estrapolazione)', source: 'UBS / Università di San Gallo, studio 2026 (indagine di settembre 2025)' },
+        { value: '76 %', label: 'dei titolari che prevedono di trasmettere riconosce che il successo dipende fortemente dal titolare o dal dirigente in carica', source: 'UBS / Università di San Gallo, studio 2026' },
+        { value: '21 %', label: 'dei titolari tra 66 e 90 anni non aveva ancora un calendario di trasmissione', source: 'UBS / Università di San Gallo, studio 2026' },
       ],
       paragraphs: [
-        'In Francia, il 40 % dei dirigenti di microimprese, PMI e mid-cap conta di trasmettere la propria impresa entro cinque anni, un potenziale di 370 000 imprese. Al ritmo attuale, 130 000 cambierebbero realmente mano. Tra i dirigenti di PMI e mid-cap familiari tra 60 e 69 anni, il 47 % non ha formalizzato un piano di successione.',
+        'Secondo lo studio di UBS e Università di San Gallo (2026), 168 000 PMI svizzere sarebbero interessate da una successione entro fine 2030. Per tre titolari su quattro che preparano una trasmissione, il successo poggia su una sola persona. E un titolare su cinque tra i 66 anni e oltre non ha ancora fissato un calendario.',
+        'Le cifre del mercato francese, più dettagliate, vanno nella stessa direzione: il 47 % dei dirigenti di imprese familiari tra 60 e 69 anni non ha formalizzato un piano di successione (Bpifrance Le Lab).',
       ],
       change: 'Lo scarto tra l’intenzione e l’atto dipende meno dal mercato che dalla preparazione. Un’organizzazione che dipende da una persona si trasmette male, si finanzia male e si pilota male.',
-      sources: 'Fonti: Bpifrance Le Lab, studio Trasmissione e ripresa d’impresa (27 novembre 2025) · Bpifrance Le Lab, imprese familiari.',
+      sources: 'Fonti: UBS / Università di San Gallo, studio sulla successione nelle PMI svizzere (2026, indagine di settembre 2025) · Bpifrance Le Lab (27 novembre 2025), per il riferimento francese.',
     },
     outcomes: {
       title: 'Che cosa ottenete',
@@ -418,21 +419,21 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Tutto passa da me.', decision: 'Che cosa delegare per primo, a chi.', deliverable: 'Indice di dipendenza e piano di delega su dodici mesi.', format: 'Qualche settimana', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
         { quote: 'La mia squadra di direzione non è ancora una squadra.', decision: 'Ruoli, ritmi decisionali, deleghe.', deliverable: 'Carta di governance del comitato di direzione.', format: 'Qualche settimana', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Un profilo chiave vuole andarsene.', decision: 'Trattenere, sostituire o raddoppiare.', deliverable: 'Piano di retention, sostituto identificato, trasferimento di conoscenze documentato.', format: 'Missione breve', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Devo assumere un dirigente (tecnico, finanziario, operativo, paese).', decision: 'Il profilo giusto, nella governance giusta.', deliverable: 'Definizione della posizione e criteri di integrazione, poi passaggio a Recrutare.', format: 'Missione breve', cycles: ['croissance'], image: `${S}handshake.jpg` },
+        { quote: 'Un profilo chiave vuole andarsene.', decision: 'Trattenere, sostituire o raddoppiare.', deliverable: 'Piano di retention, sostituto identificato (interno, o profilo di transizione se necessario), trasferimento di conoscenze documentato.', format: 'Missione breve', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
+        { quote: 'Devo assumere un dirigente (tecnico, finanziario, operativo, paese).', decision: 'Il profilo giusto, nella governance giusta.', deliverable: 'Definizione del ruolo e criteri di integrazione, poi, se lo desiderate, selezionare un profilo.', format: 'Missione breve', cycles: ['croissance'], image: `${S}handshake.jpg` },
         { quote: 'Penso di trasmettere tra due e cinque anni.', decision: 'Famiglia, interno o acquirente esterno.', deliverable: 'Piano di successione e governance di transizione.', format: 'Da uno a due mesi', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
         { quote: 'Arriva un’acquisizione, due culture stanno per incontrarsi.', decision: 'Chi resta, chi guida, come organizzarsi.', deliverable: 'Valutazione della squadra target, organizzazione target, piano di retention.', format: 'Qualche settimana', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
       ],
     },
     services: {
-      title: 'I nostri servizi',
+      title: 'I nostri servizi: decidere (Inquadrare)',
       items: [
-        'Misurare la dipendenza dal dirigente e dai profili chiave',
-        'Strutturare il comitato di direzione e le sue deleghe',
-        'Costruire il piano di successione',
-        'Assicurare la retention dei profili critici',
-        'Documentare il know-how critico',
-        'Preparare l’assunzione di un dirigente',
+        'Misurare la dipendenza dal titolare e dai profili chiave.',
+        'Definire il comitato di direzione e le sue deleghe.',
+        'Formalizzare il piano di successione.',
+        'Decidere la retention dei profili critici.',
+        'Mappare le competenze critiche.',
+        'Definire il ruolo e i criteri di un dirigente da assumere.',
       ],
     },
     framework: {
@@ -449,8 +450,8 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'Secondo la vostra dimensione',
       items: [
-        { label: 'PMI · da 10 a 50 M€', desc: 'Il dirigente è spesso primo commerciale e primo decisore prodotto. Priorità: delegare le relazioni con i clienti chiave e documentare i dieci processi critici.' },
-        { label: 'Mid-cap · da 50 M€', desc: 'Governance familiare o azionisti. Priorità: piano di successione del direttore generale e dei suoi N-1, comitato di nomina, ruolo della famiglia.' },
+        { label: 'PMI · da 10 a 50 M CHF', desc: 'Il dirigente è spesso primo commerciale e primo decisore prodotto. Priorità: delegare le relazioni con i clienti chiave e documentare i dieci processi critici.' },
+        { label: 'Grande media impresa · da 50 M CHF', desc: 'Governance familiare o azionisti. Priorità: piano di successione del direttore generale e dei suoi N-1, comitato di nomina, ruolo della famiglia.' },
       ],
     },
     bySector: {
@@ -465,7 +466,7 @@ export const ADVISORY_IT: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag: 'Scenario tipo · illustrativo',
-      text: 'Mid-cap familiare da 140 M€, dirigente di 63 anni, due figli di cui nessuno desidera dirigere. In quattro settimane: Indice di dipendenza (sette persone critiche), tre scenari di successione confrontati, calendario di transizione su ventiquattro mesi che il consiglio di famiglia può decidere.',
+      text: 'Impresa familiare da 140 M CHF, titolare di 63 anni, due figli dei quali nessuno desidera dirigere. In quattro settimane: Indice di dipendenza (sette persone critiche), tre scenari di successione confrontati, calendario di transizione su ventiquattro mesi che il consiglio di famiglia può decidere.',
     },
     ai: {
       title: 'Che cosa uno strumento di IA non farà al posto vostro',

@@ -379,15 +379,15 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image: '/images/advisory/talent.webp',
     imageAlt: 'Lege bestuurskamer, klaar voor de volgende vergadering',
     meta: {
-      title: 'Opvolging, governance, directieteam | Aegryn',
-      description: 'De afhankelijkheid van de leider meten, het directiecomité structureren, een opvolgingsplan opbouwen, sleutelprofielen behouden. Kmo’s en middelgrote bedrijven. Zwitserland en Europa.',
-      keywords: ['opvolgingsplan kmo', 'afhankelijkheid van de oprichter', 'governance directiecomité', 'retentie sleutelprofielen', 'overdracht familiebedrijf', 'organisatie middelgroot bedrijf'],
+      title: 'Talent en Organisatie: opvolging, governance, profielselectie | Aegryn',
+      description: 'Opvolging, governance, retentie, sleutelprofielen en overgangsprofielen: beslissen, uitvoeren, selecteren. Werving van leidinggevenden en kaderleden in Zwitserland.',
+      keywords: ['opvolgingsplan mkb', 'afhankelijkheid van de ondernemer', 'governance directiecomité', 'retentie sleutelprofielen', 'overgangsprofielen', 'werving leidinggevenden Zwitserland'],
     },
     eyebrow: 'Talent & Organisatie',
     h1: 'De waarde van een organisatie wordt gemeten aan wat ze kan zonder haar leider.',
-    subtitle: 'Opvolging, governance, retentie, structurering van de directie: organisatiebeslissingen wegen op termijn het zwaarst en worden het vaakst uitgesteld.',
+    subtitle: 'Opvolging, governance, retentie, organisatie van de directie: organisatiebeslissingen wegen op termijn het zwaarst en worden het vaakst uitgesteld. Ontbreekt het juiste profiel, dan selecteren wij het samen met u.',
+    needProfile: { label: 'Een profiel nodig?', links: [{ label: 'Profiel selecteren', href: '#selectionner' }, { label: 'Overgangsprofielen', href: '/talent/transition' }] },
     scope: [
-      { label: 'Zoeken en plaatsen: Rekruteren', href: '/talent' },
       { label: 'Koerskeuze: Strategie', href: '/advisory/strategy' },
       { label: 'Team van een doelwit: M&A', href: '/advisory/ma' },
       { label: 'De programmagovernance: Projectmanagement', href: '/advisory/project-program-management' },
@@ -395,15 +395,16 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'Wat wij vaststellen',
       cards: [
-        { value: '40 %', label: 'van de Franse leiders van micro-, kleine, middelgrote en intermediaire bedrijven willen binnen vijf jaar overdragen, goed voor 370 000 bedrijven', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '130 000', label: 'effectieve overdrachten verwacht aan het huidige tempo', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '47 %', label: 'van de leiders van familiebedrijven van 60 tot 69 jaar hebben geen geformaliseerd opvolgingsplan', source: 'Bpifrance Le Lab, familiebedrijven' },
+        { value: '168 000', label: 'Zwitserse kmo’s die tegen eind 2030 met een opvolging te maken krijgen (extrapolatie)', source: 'UBS / Universiteit van Sankt Gallen, studie 2026 (enquête van september 2025)' },
+        { value: '76 %', label: 'van de eigenaars die van plan zijn over te dragen erkent dat het succes sterk afhangt van de zittende eigenaar of directeur', source: 'UBS / Universiteit van Sankt Gallen, studie 2026' },
+        { value: '21 %', label: 'van de eigenaars van 66 tot 90 jaar had nog geen overdrachtskalender', source: 'UBS / Universiteit van Sankt Gallen, studie 2026' },
       ],
       paragraphs: [
-        'In Frankrijk wil 40 % van de leiders van micro-, kleine, middelgrote en intermediaire bedrijven hun bedrijf binnen vijf jaar overdragen, een potentieel van 370 000 bedrijven. Aan het huidige tempo zouden er 130 000 werkelijk van eigenaar veranderen. Onder de leiders van familiale kmo’s en middelgrote bedrijven van 60 tot 69 jaar heeft 47 % geen geformaliseerd opvolgingsplan.',
+        'Volgens de studie van UBS en de Universiteit van Sankt Gallen (2026) krijgen 168 000 Zwitserse kmo’s tegen eind 2030 met een opvolging te maken. Voor drie op de vier eigenaars die een overdracht voorbereiden, rust het succes op één persoon. En één op de vijf eigenaars van 66 jaar en ouder heeft nog geen kalender vastgelegd.',
+        'De meer gedetailleerde cijfers van de Franse markt wijzen in dezelfde richting: 47 % van de leiders van familiebedrijven van 60 tot 69 jaar heeft geen opvolgingsplan geformaliseerd (Bpifrance Le Lab).',
       ],
       change: 'De kloof tussen intentie en daad heeft minder met de markt te maken dan met voorbereiding. Een organisatie die van één persoon afhangt, draagt slecht over, financiert slecht en stuurt slecht.',
-      sources: 'Bronnen: Bpifrance Le Lab, studie Overdracht en overname van bedrijven (27 november 2025) · Bpifrance Le Lab, familiebedrijven.',
+      sources: 'Bronnen: UBS / Universiteit van Sankt Gallen, studie over opvolging in Zwitserse kmo’s (2026, enquête van september 2025) · Bpifrance Le Lab (27 november 2025), voor de Franse referentie.',
     },
     outcomes: {
       title: 'Wat u krijgt',
@@ -418,21 +419,21 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Alles loopt via mij.', decision: 'Wat eerst delegeren, aan wie.', deliverable: 'Afhankelijkheidsindex en delegatieplan over twaalf maanden.', format: 'Enkele weken', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
         { quote: 'Mijn directieteam is nog geen team.', decision: 'Rollen, beslissingsritmes, delegaties.', deliverable: 'Governancehandvest van het directiecomité.', format: 'Enkele weken', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Een sleutelprofiel wil vertrekken.', decision: 'Behouden, vervangen of dubbel bezetten.', deliverable: 'Retentieplan, geïdentificeerde back-up, gedocumenteerde kennisoverdracht.', format: 'Korte opdracht', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Ik moet een leidinggevende aanwerven (technisch, financieel, operationeel, land).', decision: 'Het juiste profiel, in de juiste governance.', deliverable: 'Functieomschrijving en integratiecriteria, daarna overdracht aan Rekruteren.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}handshake.jpg` },
+        { quote: 'Een sleutelprofiel wil vertrekken.', decision: 'Behouden, vervangen of dubbel bezetten.', deliverable: 'Retentieplan, geïdentificeerde back-up (intern, of overgangsprofiel indien nodig), gedocumenteerde kennisoverdracht.', format: 'Korte opdracht', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
+        { quote: 'Ik moet een leidinggevende aanwerven (technisch, financieel, operationeel, land).', decision: 'Het juiste profiel, in de juiste governance.', deliverable: 'Functiedefinitie en integratiecriteria, daarna, als u dat wenst, een profiel selecteren.', format: 'Korte opdracht', cycles: ['croissance'], image: `${S}handshake.jpg` },
         { quote: 'Ik overweeg over te dragen binnen twee tot vijf jaar.', decision: 'Familie, intern of externe overnemer.', deliverable: 'Opvolgingsplan en transitiegovernance.', format: 'Eén tot twee maanden', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
         { quote: 'Er komt een overname aan, twee culturen gaan elkaar ontmoeten.', decision: 'Wie blijft, wie leidt, hoe organiseren.', deliverable: 'Beoordeling van het doelteam, doelorganisatie, retentieplan.', format: 'Enkele weken', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
       ],
     },
     services: {
-      title: 'Onze diensten',
+      title: 'Onze diensten: beslissen (Kaderen)',
       items: [
-        'De afhankelijkheid van de leider en van sleutelprofielen meten',
-        'Het directiecomité en zijn delegaties structureren',
-        'Het opvolgingsplan opbouwen',
-        'De retentie van kritieke profielen verzekeren',
-        'Kritieke knowhow documenteren',
-        'De aanwerving van een leidinggevende voorbereiden',
+        'De afhankelijkheid van de leider en van sleutelprofielen meten.',
+        'Het directiecomité en zijn delegaties definiëren.',
+        'Het opvolgingsplan formaliseren.',
+        'Beslissen over de retentie van kritieke profielen.',
+        'De kritieke vakkennis in kaart brengen.',
+        'De functie en de criteria van een aan te werven leidinggevende definiëren.',
       ],
     },
     framework: {
@@ -449,8 +450,8 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'Naar omvang',
       items: [
-        { label: 'Kmo · 10 tot 50 M€', desc: 'De leider is vaak eerste verkoper en eerste productbeslisser. Prioriteit: de relaties met sleutelklanten delegeren en de tien kritieke processen documenteren.' },
-        { label: 'Middelgroot bedrijf · vanaf 50 M€', desc: 'Familiale governance of aandeelhouders. Prioriteit: opvolgingsplan voor de algemeen directeur en zijn N-1, benoemingscomité, rol van de familie.' },
+        { label: 'Mkb · 10 tot 50 mln CHF', desc: 'De leider is vaak eerste verkoper en eerste productbeslisser. Prioriteit: de relaties met sleutelklanten delegeren en de tien kritieke processen documenteren.' },
+        { label: 'Grote middelgrote onderneming · vanaf 50 mln CHF', desc: 'Familiale governance of aandeelhouders. Prioriteit: opvolgingsplan voor de algemeen directeur en zijn N-1, benoemingscomité, rol van de familie.' },
       ],
     },
     bySector: {
@@ -465,7 +466,7 @@ export const ADVISORY_NL: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag: 'Typisch scenario · illustratief',
-      text: 'Familiaal middelgroot bedrijf van 140 M€, leider van 63 jaar, twee kinderen van wie geen van beiden wil leiden. Binnen vier weken: Afhankelijkheidsindex (zeven kritieke personen), drie opvolgingsscenario’s vergeleken, transitiekalender over vierentwintig maanden waarover de familieraad kan beslissen.',
+      text: 'Familiebedrijf van 140 mln CHF, directeur van 63 jaar, twee kinderen van wie er geen wil leiden. In vier weken: Afhankelijkheidsindex (zeven kritieke personen), drie opvolgingsscenario’s vergeleken, overgangskalender over vierentwintig maanden waarover de familieraad kan beslissen.',
     },
     ai: {
       title: 'Wat een AI-tool niet voor u doet',

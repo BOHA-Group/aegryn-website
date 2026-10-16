@@ -379,15 +379,15 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     image: '/images/advisory/talent.webp',
     imageAlt: 'Sala de consejo vacía, lista para la próxima sesión',
     meta: {
-      title: 'Sucesión, gobernanza, equipo directivo | Aegryn',
-      description: 'Medir la dependencia del directivo, estructurar el comité de dirección, construir un plan de sucesión, retener los perfiles clave. Pymes y empresas medianas. Suiza y Europa.',
-      keywords: ['plan de sucesión pyme', 'dependencia del fundador', 'gobernanza comité de dirección', 'retención perfiles clave', 'transmisión empresa familiar', 'organización empresa mediana'],
+      title: 'Talento y Organización: sucesión, gobernanza, selección de perfiles | Aegryn',
+      description: 'Sucesión, gobernanza, retención, perfiles clave y perfiles de transición: decidir, ejecutar, seleccionar. Contratación de directivos y mandos en Suiza.',
+      keywords: ['plan de sucesión pyme', 'dependencia del directivo', 'gobernanza comité de dirección', 'retención de perfiles clave', 'perfiles de transición', 'contratación de directivos Suiza'],
     },
     eyebrow: 'Talento y Organización',
     h1: 'El valor de una organización se mide por lo que sabe hacer sin su directivo.',
-    subtitle: 'Sucesión, gobernanza, retención, estructuración de la dirección: las decisiones de organización son las que más pesan con el tiempo y las que más a menudo se aplazan.',
+    subtitle: 'Sucesión, gobernanza, retención, organización de la dirección: las decisiones de organización pesan más a largo plazo y son las que más se aplazan. Cuando falta el perfil adecuado, lo seleccionamos con usted.',
+    needProfile: { label: '¿Necesita un perfil?', links: [{ label: 'Seleccionar un perfil', href: '#selectionner' }, { label: 'Perfiles de transición', href: '/talent/transition' }] },
     scope: [
-      { label: 'Búsqueda y colocación: Reclutar', href: '/talent' },
       { label: 'Elección del rumbo: Estrategia', href: '/advisory/strategy' },
       { label: 'Equipo de un objetivo: M&A', href: '/advisory/ma' },
       { label: 'El gobierno de programas: Gestión de proyectos', href: '/advisory/project-program-management' },
@@ -395,15 +395,16 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     observation: {
       title: 'Lo que observamos',
       cards: [
-        { value: '40 %', label: 'de los directivos franceses de micro, pequeñas, medianas e intermedias empresas cuentan con transmitir en cinco años, es decir, 370 000 empresas', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '130 000', label: 'transmisiones efectivas previstas al ritmo actual', source: 'Bpifrance Le Lab, 27 nov. 2025' },
-        { value: '47 %', label: 'de los directivos de empresas familiares de 60 a 69 años no han formalizado un plan de sucesión', source: 'Bpifrance Le Lab, empresas familiares' },
+        { value: '168 000', label: 'pymes suizas afectadas por una sucesión de aquí a finales de 2030 (extrapolación)', source: 'UBS / Universidad de San Galo, estudio 2026 (encuesta de septiembre de 2025)' },
+        { value: '76 %', label: 'de los propietarios que prevén transmitir reconocen que el éxito depende en gran medida del propietario o del directivo en funciones', source: 'UBS / Universidad de San Galo, estudio 2026' },
+        { value: '21 %', label: 'de los propietarios de 66 a 90 años aún no tenía un calendario de transmisión', source: 'UBS / Universidad de San Galo, estudio 2026' },
       ],
       paragraphs: [
-        'En Francia, el 40 % de los directivos de micro, pequeñas, medianas e intermedias empresas cuenta con transmitir su empresa en cinco años, un potencial de 370 000 empresas. Al ritmo actual, 130 000 cambiarían realmente de manos. Entre los directivos de pymes y empresas medianas familiares de 60 a 69 años, el 47 % no ha formalizado un plan de sucesión.',
+        'Según el estudio de UBS y la Universidad de San Galo (2026), 168 000 pymes suizas se verían afectadas por una sucesión de aquí a finales de 2030. Para tres de cada cuatro propietarios que preparan una transmisión, el éxito descansa en una sola persona. Y uno de cada cinco propietarios de 66 años o más no ha fijado aún un calendario.',
+        'Las cifras del mercado francés, más detalladas, apuntan en el mismo sentido: el 47 % de los directivos de empresas familiares de 60 a 69 años no ha formalizado un plan de sucesión (Bpifrance Le Lab).',
       ],
       change: 'La brecha entre la intención y el acto tiene menos que ver con el mercado que con la preparación. Una organización que depende de una persona se transmite mal, se financia mal y se pilota mal.',
-      sources: 'Fuentes: Bpifrance Le Lab, estudio Transmisión y recuperación de empresas (27 de noviembre de 2025) · Bpifrance Le Lab, empresas familiares.',
+      sources: 'Fuentes: UBS / Universidad de San Galo, estudio sobre la sucesión en las pymes suizas (2026, encuesta de septiembre de 2025) · Bpifrance Le Lab (27 de noviembre de 2025), para la referencia francesa.',
     },
     outcomes: {
       title: 'Lo que obtiene',
@@ -418,21 +419,21 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
       items: [
         { quote: 'Todo pasa por mí.', decision: 'Qué delegar primero, a quién.', deliverable: 'Índice de dependencia y plan de delegación a doce meses.', format: 'Unas semanas', cycles: ['croissance', 'transmission'], image: `${S}meeting-room.jpg` },
         { quote: 'Mi equipo directivo todavía no es un equipo.', decision: 'Roles, ritmos de decisión, delegaciones.', deliverable: 'Carta de gobernanza del comité de dirección.', format: 'Unas semanas', cycles: ['croissance'], image: `${S}discussion-hands.jpg` },
-        { quote: 'Un perfil clave quiere irse.', decision: 'Retener, sustituir o duplicar.', deliverable: 'Plan de retención, suplente identificado, transferencia de conocimiento documentada.', format: 'Misión corta', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
-        { quote: 'Debo contratar a un directivo (técnico, financiero, operativo, país).', decision: 'El perfil correcto, en la gobernanza correcta.', deliverable: 'Definición del puesto y criterios de integración, luego relevo hacia Reclutar.', format: 'Misión corta', cycles: ['croissance'], image: `${S}handshake.jpg` },
+        { quote: 'Un perfil clave quiere irse.', decision: 'Retener, sustituir o duplicar.', deliverable: 'Plan de retención, suplente identificado (interno, o perfil de transición si hace falta), traspaso de conocimiento documentado.', format: 'Misión corta', cycles: ['restructuration'], image: `${S}laptop-hands.jpg` },
+        { quote: 'Debo contratar a un directivo (técnico, financiero, operativo, país).', decision: 'El perfil correcto, en la gobernanza correcta.', deliverable: 'Definición del puesto y criterios de integración y, si lo desea, seleccionar un perfil.', format: 'Misión corta', cycles: ['croissance'], image: `${S}handshake.jpg` },
         { quote: 'Pienso transmitir en dos a cinco años.', decision: 'Familia, interno o comprador externo.', deliverable: 'Plan de sucesión y gobernanza de transición.', format: 'De uno a dos meses', cycles: ['transmission'], image: `${S}plan-writing.jpg` },
         { quote: 'Llega una adquisición, dos culturas van a encontrarse.', decision: 'Quién se queda, quién dirige, cómo organizarse.', deliverable: 'Evaluación del equipo objetivo, organización objetivo, plan de retención.', format: 'Unas semanas', cycles: ['acquisition'], image: `${S}office-corridor.jpg` },
       ],
     },
     services: {
-      title: 'Nuestros servicios',
+      title: 'Nuestros servicios: decidir (Encuadrar)',
       items: [
-        'Medir la dependencia del directivo y de los perfiles clave',
-        'Estructurar el comité de dirección y sus delegaciones',
-        'Construir el plan de sucesión',
-        'Asegurar la retención de los perfiles críticos',
-        'Documentar el saber hacer crítico',
-        'Preparar la contratación de un directivo',
+        'Medir la dependencia del directivo y de los perfiles clave.',
+        'Definir el comité de dirección y sus delegaciones.',
+        'Formalizar el plan de sucesión.',
+        'Arbitrar la retención de los perfiles críticos.',
+        'Cartografiar los saberes críticos.',
+        'Definir el puesto y los criterios de un directivo a contratar.',
       ],
     },
     framework: {
@@ -449,8 +450,8 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     bySize: {
       title: 'Según su tamaño',
       items: [
-        { label: 'Pyme · de 10 a 50 M€', desc: 'El directivo es a menudo primer comercial y primer decisor de producto. Prioridad: delegar las relaciones con los clientes clave y documentar los diez procesos críticos.' },
-        { label: 'Empresa mediana · desde 50 M€', desc: 'Gobernanza familiar o accionistas. Prioridad: plan de sucesión del director general y de sus N-1, comité de nombramientos, papel de la familia.' },
+        { label: 'Pyme · 10 a 50 M CHF', desc: 'El directivo es a menudo primer comercial y primer decisor de producto. Prioridad: delegar las relaciones con los clientes clave y documentar los diez procesos críticos.' },
+        { label: 'Gran empresa mediana · a partir de 50 M CHF', desc: 'Gobernanza familiar o accionistas. Prioridad: plan de sucesión del director general y de sus N-1, comité de nombramientos, papel de la familia.' },
       ],
     },
     bySector: {
@@ -465,7 +466,7 @@ export const ADVISORY_ES: Record<AdvisoryClassicKey, AdvisoryPageContent> = {
     },
     scenario: {
       tag: 'Escenario tipo · ilustrativo',
-      text: 'Empresa mediana familiar de 140 M€, directivo de 63 años, dos hijos de los cuales ninguno desea dirigir. En cuatro semanas: Índice de dependencia (siete personas críticas), tres escenarios de sucesión comparados, calendario de transición a veinticuatro meses que el consejo de familia puede decidir.',
+      text: 'Empresa familiar de 140 M CHF, directivo de 63 años, dos hijos de los cuales ninguno desea dirigir. En cuatro semanas: Índice de dependencia (siete personas críticas), tres escenarios de sucesión comparados, calendario de transición a veinticuatro meses que el consejo de familia puede decidir.',
     },
     ai: {
       title: 'Lo que una herramienta de IA no hará por usted',
