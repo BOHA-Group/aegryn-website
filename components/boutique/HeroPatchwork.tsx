@@ -16,7 +16,8 @@ const CLIP_POSITION: Record<string, string> = {
   '09-statue-of-liberty': '33% 50%',
   '16-gt-race':           '62% 50%',
   '20-stretching':        '55% 50%',
-  '21-leg-exercises':     '57% 50%',
+  'speedboat':            '35% 50%',
+  'wine-cellar':          '60% 50%',
 }
 
 export function HeroPatchwork() {

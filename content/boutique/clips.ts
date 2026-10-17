@@ -1,7 +1,7 @@
 /**
  * Hero de La Boutique : une seule vidéo plein cadre, qui change sur le tempo du
  * morceau « Beyond the Clicks » (analyse : 105,76 BPM, premier temps à 0,107 s, sans
- * dérive sur toute la piste, soit un temps = 0,57 s ; chaque clip dure 2 temps, soit 1,13 s). Les 20 clips horizontaux
+ * dérive sur toute la piste, soit un temps = 0,57 s ; chaque clip dure 2 temps, soit 1,13 s). Les 26 clips horizontaux
  * suivent une journée type, du lac au soir, puis la séquence reboucle. Les clips
  * verticaux ne passent pas en hero : ils sont affichés dans le corps de la page.
  */
@@ -15,12 +15,23 @@ export const BOUTIQUE_TEMPO = {
 
 export const BEAT_SECONDS = 60 / BOUTIQUE_TEMPO.bpm
 
-/** Journée type : lac, voyage, destinations, déjeuner, détente, soirée, route, travail, sport, rencontre */
+/** Journée type : aube sur Genève, sport et café du matin, savoir-faire et travail,
+    déplacements et loisirs l'après-midi, dîner le soir, événementiel et ville la nuit. */
 export const HERO_CLIPS = [
-  '01-geneva-fountain', '02-private-jet', '03-burj-al-arab', '04-galeries-lafayette', '05-chef',
-  '06-resort-pool', '07-beach', '08-seine-sunset', '09-statue-of-liberty', '10-concert', '11-rave',
-  '14-back-seat', '15-phone-call', '16-gt-race',
-  '17-taking-notes', '18-espresso', '19-team-work', '20-stretching', '21-leg-exercises', '22-conference',
+  /* Matin */
+  '01-geneva-fountain', '20-stretching', '18-espresso',
+  /* Matinée : conception, ateliers, affaires */
+  'architect-palette', 'watchmaker', 'jeweler', 'metal-grinding',
+  'phone-scroll', '17-taking-notes', '22-conference',
+  /* Après-midi : déplacements et loisirs */
+  'jet-tarmac', '14-back-seat', 'resort-aerial', '16-gt-race', 'speedboat',
+  '08-seine-sunset',
+  /* Soir : gastronomie et boissons */
+  'wine-cellar', '05-chef', 'dish-plating', 'restaurant-night', 'cocktail-bar',
+  /* Nuit : production, événementiel, ville */
+  'film-camera', '11-concert-flames', 'city-night-timelapse', 'bridge-dusk',
+  /* Clôture emblématique */
+  '09-statue-of-liberty',
 ] as const
 
 /** Clips verticaux, affichés dans le corps de la page avec léger agrandissement au scroll */

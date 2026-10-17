@@ -12,6 +12,7 @@ import { HeroPatchwork } from '@/components/boutique/HeroPatchwork'
 import { ScrollZoomVideo } from '@/components/boutique/ScrollZoomVideo'
 import { PortraitScroll } from '@/components/boutique/PortraitScroll'
 import { TypedTitle } from '@/components/boutique/TypedTitle'
+import { RevealOnScroll } from '@/components/ui/RevealOnScroll'
 import { ProjectsScroller } from '@/components/boutique/ProjectsScroller'
 import Image from 'next/image'
 import { ArticleCard } from '@/components/sections/ArticleCard'
@@ -88,15 +89,17 @@ export default async function BoutiquePage({ params }: Props) {
               className="mb-8 max-w-4xl font-sans font-bold leading-[1.15] tracking-[-0.03em] text-white"
               style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
             />
-            <p className="max-w-2xl text-[16px] leading-relaxed text-white" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.45)' }}><span className="font-semibold text-ag-apex">{BOUTIQUE.signature[lang]}</span> {BOUTIQUE.sub[lang]}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href={{ pathname: '/contact', query: { subject: 'project' } }} className="rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white">
-                {BOUTIQUE.cta1[lang]}
-              </Link>
-              <a href="#projets" className="rounded-full bg-white/10 px-7 py-3.5 font-sans text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20">
-                {BOUTIQUE.cta2[lang]}
-              </a>
-            </div>
+            <RevealOnScroll>
+              <p className="max-w-2xl text-[16px] leading-relaxed text-white" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.45)' }}><span className="font-semibold text-ag-apex">{BOUTIQUE.signature[lang]}</span> {BOUTIQUE.sub[lang]}</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href={{ pathname: '/contact', query: { subject: 'project' } }} className="rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white">
+                  {BOUTIQUE.cta1[lang]}
+                </Link>
+                <a href="#projets" className="rounded-full bg-white/10 px-7 py-3.5 font-sans text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20">
+                  {BOUTIQUE.cta2[lang]}
+                </a>
+              </div>
+            </RevealOnScroll>
           </div>
         </div>
       </section>

@@ -66,9 +66,12 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
   }, [rampTo])
 
   const stop = useCallback(() => {
-    rampTo(0, () => audioRef.current?.pause())
+    /* Coupure directe : sur iOS le fondu via a.volume n'est pas fiable
+       (propriete figee ou liee au volume systeme selon les versions). */
+    if (fade.current) clearInterval(fade.current)
+    audioRef.current?.pause()
     setPlaying(false)
-  }, [rampTo])
+  }, [])
 
   useEffect(() => {
     t0.current = performance.now()
@@ -120,7 +123,7 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
         aria-pressed={playing}
         aria-label={playing ? txt.off : txt.on}
         title="Beyond the Clicks"
-        className="fixed bottom-[60px] right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
+        className="fixed bottom-3 right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
       >
         <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
           {[0.9, 0.5, 1, 0.65].map((h, i) => (

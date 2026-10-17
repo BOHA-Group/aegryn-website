@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 import { Link } from '@/i18n/navigation'
+import { RevealOnScroll } from '@/components/ui/RevealOnScroll'
 
 const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
 const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
@@ -162,15 +163,17 @@ export function HeroMountain() {
             </span>
           </h1>
 
-          <p className="max-w-2xl text-[16px] leading-relaxed text-white/85">{t('sub')}</p>
-          <div className="mt-8">
-            <Link
-              href={{ pathname: '/contact', query: { action: 'echange' } }}
-              className="inline-block rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white"
-            >
-              {t('cta')}
-            </Link>
-          </div>
+          <RevealOnScroll>
+            <p className="max-w-2xl text-[16px] leading-relaxed text-white/85">{t('sub')}</p>
+            <div className="mt-8">
+              <Link
+                href={{ pathname: '/contact', query: { action: 'echange' } }}
+                className="inline-block rounded-full bg-ag-apex px-7 py-3.5 font-sans text-sm font-bold text-ag-navy transition-colors hover:bg-white"
+              >
+                {t('cta')}
+              </Link>
+            </div>
+          </RevealOnScroll>
         </div>
       </div>
 
