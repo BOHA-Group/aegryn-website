@@ -133,7 +133,7 @@ export default async function CulturePage({ params }: Props) {
             <Link href="/about" className="inline-flex items-center gap-2 rounded-lg border border-ag-border px-7 py-4 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-ag-black transition-colors hover:border-ag-black">
               {t('cta.about')} <ArrowUpRight size={13} />
             </Link>
-            <ShareMenu url={pageUrl('/culture', locale)} title={t('metaTitle')} />
+            <ShareMenu />
           </div>
         </ScrollReveal>
       </section>

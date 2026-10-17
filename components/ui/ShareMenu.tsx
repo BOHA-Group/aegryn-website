@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Check, Link2, Mail, MessageSquareText } from 'lucide-react'
 import { WhatsAppIcon } from './socialIcons'
 
@@ -20,13 +20,14 @@ function ShareGlyph({ size = 18 }: { size?: number }) {
 type Channel = { label: string; icon: ReactNode; href: string; external: boolean }
 
 type Props = {
-  url?: string      // URL partagée, défaut : page courante
+  url?: string      // URL partagée, défaut : page d'accueil La Boutique
   title?: string    // texte partagé, défaut : "Aegryn"
   variant?: 'light' | 'icon'
 }
 
 export function ShareMenu({ url, title, variant = 'light' }: Props) {
   const t = useTranslations('share')
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -47,7 +48,7 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
     }
   }, [open])
 
-  const pageUrl = () => url ?? window.location.href.split(/[?#]/)[0]
+  const pageUrl = () => url ?? `${window.location.origin}/${locale}/boutique`
   const shareText = () => title ?? 'Aegryn'
 
   const channels = (): Channel[] => {
@@ -56,7 +57,7 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
     return [
       { label: t('email'),  icon: <Mail size={16} />,          external: false, href: `mailto:?subject=${encodeURIComponent(shareText())}&body=${u}` },
       { label: 'SMS',       icon: <MessageSquareText size={16} />, external: false, href: `sms:?&body=${txt}` },
-      { label: 'WhatsApp',  icon: <WhatsAppIcon size={16} />,  external: true,  href: `https://wa.me/?text=${txt}` },
+      { label: 'WhatsApp',  icon: <WhatsAppIcon size={16} />,  external: true,  href: `https://api.whatsapp.com/send?text=${txt}` },
     ]
   }
 
