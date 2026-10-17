@@ -2,14 +2,8 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { useTranslations } from 'next-intl'
-import { Check, Link2, Mail, MessageSquareText, Share2 } from 'lucide-react'
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TikTokIcon,
-  WhatsAppIcon,
-} from './socialIcons'
+import { Check, Link2, Mail, MessageSquareText } from 'lucide-react'
+import { WhatsAppIcon } from './socialIcons'
 
 /* Glyph de partage aux couleurs Aegryn : nœuds noirs, pointe vert apex. */
 function ShareGlyph({ size = 18 }: { size?: number }) {
@@ -60,20 +54,10 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
     const u = encodeURIComponent(pageUrl())
     const txt = encodeURIComponent(`${shareText()} ${pageUrl()}`)
     return [
-      { label: 'LinkedIn',  icon: <LinkedInIcon size={16} />,  external: true,  href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
-      { label: 'Instagram', icon: <InstagramIcon size={16} />, external: true,  href: 'https://www.instagram.com/aegrynhq/' },
-      { label: 'TikTok',    icon: <TikTokIcon size={16} />,    external: true,  href: 'https://www.tiktok.com/@aegrynhq' },
-      { label: 'Facebook',  icon: <FacebookIcon size={16} />,  external: true,  href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
       { label: t('email'),  icon: <Mail size={16} />,          external: false, href: `mailto:?subject=${encodeURIComponent(shareText())}&body=${u}` },
       { label: 'SMS',       icon: <MessageSquareText size={16} />, external: false, href: `sms:?&body=${txt}` },
       { label: 'WhatsApp',  icon: <WhatsAppIcon size={16} />,  external: true,  href: `https://wa.me/?text=${txt}` },
     ]
-  }
-
-  const nativeShare = () => {
-    const data = { title: shareText(), url: pageUrl() }
-    if (navigator.share) navigator.share(data).catch(() => {})
-    setOpen(false)
   }
 
   const copyLink = async () => {
@@ -86,17 +70,15 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
     }
   }
 
-  const hasNative = typeof navigator !== 'undefined' && !!navigator.share
-
   return (
-    <div ref={ref} className="relative inline-block">
+    <div ref={ref} className={variant === 'icon' ? 'relative inline-flex items-center' : 'relative inline-block'}>
       {variant === 'icon' ? (
         <button
           type="button"
           onClick={() => setOpen(o => !o)}
           aria-label={t('label')}
           aria-expanded={open}
-          className="text-white/70 hover:text-ag-apex transition-colors duration-200"
+          className="inline-flex items-center text-white/70 hover:text-ag-apex transition-colors duration-200"
         >
           <ShareGlyph size={18} />
         </button>
@@ -118,16 +100,6 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
 
       {open && (
         <div className={`absolute bottom-full z-50 mb-3 w-52 rounded-2xl border border-ag-border bg-white p-1.5 shadow-xl ${variant === 'icon' ? 'left-0' : 'right-0'}`}>
-          {hasNative && (
-            <button
-              type="button"
-              onClick={nativeShare}
-              className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[13px] font-medium text-ag-black transition-colors hover:bg-ag-off-white"
-            >
-              <Share2 size={16} className="shrink-0 text-ag-apex-ink" />
-              {t('via')}
-            </button>
-          )}
           {channels().map(c => (
             <a
               key={c.label}

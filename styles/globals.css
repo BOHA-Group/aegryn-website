@@ -405,7 +405,7 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
 .font-script { font-family: 'Covered By Your Grace', 'Segoe Script', cursive; font-weight: 400; font-size: 1.12em; letter-spacing: 0; color: #adadad; }
 
 /* La Boutique : en-tête de la section Projets signature (défilement horizontal, mêmes traits .mw-*) */
-.mw-section--titled { align-items: flex-end; padding-bottom: clamp(2rem, 8vh, 5rem); }
+.mw-section--titled { --mw-red: #4ADDA5; align-items: flex-end; padding-bottom: clamp(2rem, 8vh, 5rem); }
 .mw-head { position: absolute; inset: 0 0 auto 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: clamp(5rem, 12vh, 8rem) max(1.5rem, calc((100% - 1280px) / 2 + 1.5rem)) 0; }
 @media (min-width: 768px) { .mw-head { padding-inline: max(3rem, calc((100% - 1280px) / 2 + 3rem)); } }
 .mw-head-title { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; font-size: clamp(26px, 3vw, 44px); color: var(--mw-ink); text-wrap: balance; }

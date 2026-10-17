@@ -7851,7 +7851,6 @@
   },
   "share": {
     "label": "Share",
-    "via": "Share via…",
     "copy": "Copy link",
     "copied": "Link copied",
     "email": "Email"
