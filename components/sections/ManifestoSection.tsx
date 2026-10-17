@@ -141,7 +141,7 @@ export function ManifestoSection() {
           <div className="grid md:grid-cols-[1fr_1fr]">
 
             {/* Left col */}
-            <div className="py-24 md:pr-16">
+            <div className="pt-24 pb-4 md:py-24 md:pr-16">
               <div className="flex items-center justify-between mb-10">
                 <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tA('label')}</p>
                 <span className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-gray-light">
@@ -180,7 +180,7 @@ export function ManifestoSection() {
             </div>
 
             {/* Right col — 4 stats en grand avec compteur animé */}
-            <div className="py-24 md:pl-16 flex flex-col justify-center">
+            <div className="pt-6 pb-24 md:py-24 md:pl-16 flex flex-col justify-center">
               {/*
                 Grille 2×2 avec subgrid sur les rangées :
                 chaque paire de cellules (chiffre | label) partage la même hauteur
@@ -212,7 +212,7 @@ export function ManifestoSection() {
                     >
                       {/* Cellule chiffre */}
                       <p
-                        className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none pt-10 pb-4"
+                        className="font-sans font-bold text-ag-black tracking-[-0.04em] leading-none pt-6 pb-4 md:pt-10"
                         style={{
                           fontSize: 'clamp(38px,4.5vw,60px)',
                           gridRow: numRow,

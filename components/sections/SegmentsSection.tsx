@@ -75,12 +75,12 @@ export function SegmentsSection() {
                 {/* Contenu ancré en bas */}
                 <div className="absolute inset-0 flex flex-col justify-end p-7">
                   <h3
-                    className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-3"
+                    className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-3 max-lg:whitespace-nowrap"
                     style={{ fontSize: 'clamp(15px,1.2vw,18px)' }}
                   >
                     {card.title}
                   </h3>
-                  <p className="font-sans font-normal text-[12px] text-white/70 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                  <p className="font-sans font-normal text-[13.5px] text-white/70 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
                     {card.desc}
                   </p>
                 </div>
