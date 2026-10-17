@@ -73,14 +73,11 @@ export function SegmentsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10 transition-all duration-500 group-hover:from-black/90 group-hover:via-black/45" />
 
                 {/* Contenu ancré en bas */}
-                <div className="absolute inset-0 flex flex-col justify-end p-7">
-                  <h3
-                    className="font-sans font-bold text-white tracking-[-0.02em] leading-tight mb-3 max-lg:whitespace-nowrap"
-                    style={{ fontSize: 'clamp(15px,1.2vw,18px)' }}
-                  >
+                <div className="absolute inset-0 flex flex-col justify-end p-5">
+                  <h3 className="font-sans font-bold text-white tracking-[-0.01em] leading-[1.15] mb-3 max-lg:whitespace-nowrap text-[15px] sm:text-[18px]">
                     {card.title}
                   </h3>
-                  <p className="font-sans font-normal text-[13.5px] text-white/70 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                  <p className="font-sans font-normal text-[15px] text-white/80 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
                     {card.desc}
                   </p>
                 </div>

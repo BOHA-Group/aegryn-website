@@ -7848,5 +7848,12 @@
       "careers": "Work at Aegryn",
       "about": "About Aegryn"
     }
+  },
+  "share": {
+    "label": "Share",
+    "via": "Share via…",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "email": "Email"
   }
 }

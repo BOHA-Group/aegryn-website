@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { ArrowUpRight, Check, X } from 'lucide-react'
 import { generateAegrynMetadata, generateWebPageSchema, pageUrl } from '@/lib/seo'
+import { ShareMenu } from '@/components/ui/ShareMenu'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal } from '@/components/animations/WaveReveal'
 
@@ -125,13 +126,14 @@ export default async function CulturePage({ params }: Props) {
         <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12">
           <h2 className="mb-5 max-w-2xl font-sans font-bold leading-[1.1] tracking-[-0.03em] text-ag-black" style={H2}>{t('cta.title')}</h2>
           <p className="mb-10 max-w-xl text-[16px] leading-relaxed text-ag-gray">{t('cta.desc')}</p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <Link href="/career" className="inline-flex items-center gap-2 rounded-lg bg-ag-black px-7 py-4 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-ag-navy">
               {t('cta.careers')} <ArrowUpRight size={13} />
             </Link>
             <Link href="/about" className="inline-flex items-center gap-2 rounded-lg border border-ag-border px-7 py-4 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-ag-black transition-colors hover:border-ag-black">
               {t('cta.about')} <ArrowUpRight size={13} />
             </Link>
+            <ShareMenu url={pageUrl('/culture', locale)} title={t('metaTitle')} />
           </div>
         </ScrollReveal>
       </section>
