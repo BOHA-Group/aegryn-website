@@ -123,7 +123,7 @@ export default function Footer() {
             <p className="mt-1 font-sans font-semibold text-[11px] text-white/70">
               {t('swissTagline')}
             </p>
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-5 flex flex-wrap items-center gap-3">
               {socialLinks.map(({ label, href, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                   aria-label={label}
