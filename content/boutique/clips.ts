@@ -38,10 +38,25 @@ export const HERO_CLIPS = [
   '09-statue-of-liberty',
 ] as const
 
+/** Temps par clip : la majorité coupe sur deux temps, quelques plans plus lents en
+    tiennent trois. Le dernier clip est élastique : il tient jusqu'à la fin du cycle
+    complet des titres dactylographiés, puis titres et vidéos rebouclent ensemble.
+    Sa valeur ci-dessous sert d'estimation pour le zoom, pas de durée fixe. */
+export const CLIP_BEATS: Record<string, number> = {
+  '01-geneva-fountain': 3,
+  'singing-bowl': 3,
+  'wine-cellar': 3,
+  'bridge-dusk': 3,
+  '09-statue-of-liberty': 4,
+}
+export const clipBeats = (name: string) => CLIP_BEATS[name] ?? BOUTIQUE_TEMPO.beatsPerClip
+/** Temps de début de chaque clip dans le cycle ; le début du dernier marque la fin de la partie fixe. */
+export const CLIP_START_BEATS = (() => { let a = 0; return HERO_CLIPS.map(n => { const s = a; a += clipBeats(n); return s }) })()
+
 /** Clips verticaux, affichés dans le corps de la page avec léger agrandissement au scroll */
 export const PORTRAIT_CLIPS = ['portrait-rolls-royce', 'portrait-driver'] as const
 
-export const TOTAL_BEATS = HERO_CLIPS.length * BOUTIQUE_TEMPO.beatsPerClip
+export const TOTAL_BEATS = HERO_CLIPS.reduce((s, n) => s + clipBeats(n), 0)
 
 /** Version allégée pour les petits écrans */
 export const clipSrc = (name: string, small: boolean) => `/videos/boutique/${name}${small ? '-m' : ''}.mp4`

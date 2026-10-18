@@ -6,7 +6,7 @@
  * chaque clip repart du début et s'agrandit légèrement pendant son temps.
  */
 import { useEffect, useRef, useState } from 'react'
-import { BEAT_SECONDS, BOUTIQUE_TEMPO, HERO_CLIPS, TOTAL_BEATS, clipSrc } from '@/content/boutique/clips'
+import { BEAT_SECONDS, BOUTIQUE_TEMPO, CLIP_START_BEATS, HERO_CLIPS, TOTAL_BEATS, clipBeats, clipSrc } from '@/content/boutique/clips'
 import { useBoutiqueClock } from './BoutiqueAudio'
 
 /* Recadrage par clip en `object-cover` : en portrait, le centrage par defaut sort les
@@ -47,7 +47,9 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
 }
 
 export function HeroPatchwork() {
-  const { getTime, ready } = useBoutiqueClock()
+  const { getTime, ready, titleCycle } = useBoutiqueClock()
+  const latestCycle = useRef(titleCycle)
+  latestCycle.current = titleCycle
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const container = useRef<HTMLDivElement>(null)
   const current = useRef(-1)
@@ -69,6 +71,8 @@ export function HeroPatchwork() {
     let disposed = false
     let raf = 0
     let lastIdx = -1
+    let cycleSeen = latestCycle.current
+    let cycleStart = 0
     const timeouts = new Set<ReturnType<typeof setTimeout>>()
     const active = () => ready && visible && !document.hidden && !reduced.matches && !disposed
 
@@ -92,13 +96,14 @@ export function HeroPatchwork() {
       v.style.opacity = '1'
       v.style.transition = 'none'
       v.style.transform = 'scale(1)'
-      const duration = BEAT_SECONDS * BOUTIQUE_TEMPO.beatsPerClip
-      const offset = ((getTime() - BOUTIQUE_TEMPO.firstBeat) % duration + duration) % duration
-      try { v.currentTime = offset } catch { /* Métadonnées pas encore chargées. */ }
+      const duration = clipBeats(HERO_CLIPS[i]) * BEAT_SECONDS
+      const pos = (getTime() - BOUTIQUE_TEMPO.firstBeat) / BEAT_SECONDS - cycleStart
+      const offset = Math.max(0, (pos - CLIP_START_BEATS[i]) * BEAT_SECONDS)
+      try { v.currentTime = Number.isFinite(v.duration) ? Math.min(offset, Math.max(0, v.duration - .1)) : offset } catch { /* Métadonnées pas encore chargées. */ }
       v.play().then(() => {
         if (!active() || current.current !== i) { v.pause(); return }
         if (active()) {
-          v.style.transition = `transform ${BEAT_SECONDS * BOUTIQUE_TEMPO.beatsPerClip}s linear`
+          v.style.transition = `transform ${duration}s linear`
           v.style.transform = 'scale(1.07)'
         }
       }).catch(() => {})
@@ -118,10 +123,15 @@ export function HeroPatchwork() {
       warm(i + 1, 4)
     }
 
+    /* Les clips coupent sur leurs temps ; le dernier tient jusqu'à ce que le cycle
+       complet des titres se termine (signal `titleCycle`), puis tout reboucle au début. */
     const loop = () => {
       if (!active()) { update(); return }
-      const beat = Math.floor((getTime() - BOUTIQUE_TEMPO.firstBeat) / BEAT_SECONDS)
-      const idx = ((Math.floor(beat / BOUTIQUE_TEMPO.beatsPerClip) % n) + n) % n
+      const beatNow = (getTime() - BOUTIQUE_TEMPO.firstBeat) / BEAT_SECONDS
+      if (cycleSeen !== latestCycle.current) { cycleSeen = latestCycle.current; cycleStart = beatNow; lastIdx = -1 }
+      const b = Math.max(0, beatNow - cycleStart)
+      let idx = n - 1
+      while (idx > 0 && b < CLIP_START_BEATS[idx]) idx--
       if (idx !== lastIdx) { lastIdx = idx; show(idx) }
       raf = requestAnimationFrame(loop)
     }

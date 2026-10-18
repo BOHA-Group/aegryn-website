@@ -9,8 +9,8 @@ import { useTypedPhrases } from '@/hooks/useTypedPhrases'
 import { useBoutiqueClock } from './BoutiqueAudio'
 
 export function TypedTitle({ id, phrases, className, style }: { id?: string; phrases: string[]; className?: string; style?: React.CSSProperties }) {
-  const { ready } = useBoutiqueClock()
-  const { text: typed } = useTypedPhrases(phrases, { loop: true, enabled: ready })
+  const { ready, noteTitleCycle } = useBoutiqueClock()
+  const { text: typed } = useTypedPhrases(phrases, { loop: true, enabled: ready, onLoopEnd: noteTitleCycle })
 
   const render = (text: string, caret: boolean) => {
     const lines = text.split('\n')

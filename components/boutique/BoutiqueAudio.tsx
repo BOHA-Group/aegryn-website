@@ -14,8 +14,8 @@ const L: Record<string, { on: string; off: string; label: string }> = {
   nl: { on: 'Muziek aanzetten', off: 'Muziek uitzetten', label: 'Geluid' },
 }
 
-interface ClockCtx { getTime: () => number; playing: boolean; ready: boolean }
-const Ctx = createContext<ClockCtx>({ getTime: () => 0, playing: false, ready: true })
+interface ClockCtx { getTime: () => number; playing: boolean; ready: boolean; titleCycle: number; noteTitleCycle: () => void }
+const Ctx = createContext<ClockCtx>({ getTime: () => 0, playing: false, ready: true, titleCycle: 0, noteTitleCycle: () => {} })
 export const useBoutiqueClock = () => useContext(Ctx)
 
 /** Public-layout player: audio starts within the concept-link's trusted click.
@@ -37,18 +37,28 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
   const frozen = useRef(false)
   const epoch = useRef(0)
   const baseElapsed = useRef(0)
+  /* Horloge monotone : la piste boucle, `currentTime` saute alors en arrière ;
+     on additionne la durée de chaque boucle pour que la position ne recule jamais. */
+  const lastT = useRef(0)
+  const loopOffset = useRef(0)
+  const trackDur = useRef(0)
   const [intro, setIntro] = useState(isConcept)
   const [entry, setEntry] = useState(0)
   const [playing, setPlaying] = useState(false)
+  const [titleCycle, setTitleCycle] = useState(0)
+  const noteTitleCycle = useCallback(() => setTitleCycle(c => c + 1), [])
   const txt = L[locale] ?? L.en
 
   const getElapsed = useCallback(() => {
     if (loading.current) return 0
     if (frozen.current) return baseElapsed.current
     const a = audioRef.current
-    return a && !a.paused && a.currentTime > 0
-      ? a.currentTime - BOUTIQUE_AUDIO_START
-      : baseElapsed.current + (performance.now() - epoch.current) / 1000
+    if (a && !a.paused && a.currentTime > 0) {
+      if (trackDur.current && lastT.current - a.currentTime > 2) loopOffset.current += trackDur.current
+      lastT.current = a.currentTime
+      return a.currentTime - BOUTIQUE_AUDIO_START + loopOffset.current
+    }
+    return baseElapsed.current + (performance.now() - epoch.current) / 1000
   }, [])
 
   const stop = useCallback(() => {
@@ -66,9 +76,12 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
     baseElapsed.current = elapsed
     epoch.current = performance.now()
     loading.current = from === 0
-    const seek = Math.max(0, BOUTIQUE_AUDIO_START + elapsed)
+    const target = Math.max(0, BOUTIQUE_AUDIO_START + elapsed)
+    const seek = Number.isFinite(a.duration) ? target % a.duration : target
+    loopOffset.current = Number.isFinite(a.duration) ? target - seek : 0
+    lastT.current = seek
     try {
-      a.currentTime = Number.isFinite(a.duration) ? seek % a.duration : seek
+      a.currentTime = seek
     } catch {
       a.addEventListener('loadedmetadata', () => { if (!disposed.current) a.currentTime = seek }, { once: true })
     }
@@ -173,11 +186,24 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
   useEffect(() => {
     disposed.current = false
     const audio = audioRef.current
-    return () => { disposed.current = true; audio?.pause() }
+    const onMeta = () => { if (audio) trackDur.current = audio.duration }
+    const onTime = () => {
+      if (!audio || !trackDur.current) return
+      if (lastT.current - audio.currentTime > 2) loopOffset.current += trackDur.current
+      lastT.current = audio.currentTime
+    }
+    audio?.addEventListener('loadedmetadata', onMeta)
+    audio?.addEventListener('timeupdate', onTime)
+    return () => {
+      disposed.current = true
+      audio?.removeEventListener('loadedmetadata', onMeta)
+      audio?.removeEventListener('timeupdate', onTime)
+      audio?.pause()
+    }
   }, [])
 
   const getTime = useCallback(() => getElapsed() - BOUTIQUE_INTRO_SECONDS + BOUTIQUE_TEMPO.firstBeat, [getElapsed])
-  const value = useMemo(() => ({ getTime, playing, ready: !intro }), [getTime, playing, intro])
+  const value = useMemo(() => ({ getTime, playing, ready: !intro, titleCycle, noteTitleCycle }), [getTime, playing, intro, titleCycle, noteTitleCycle])
 
   return (
     <Ctx.Provider value={value}>

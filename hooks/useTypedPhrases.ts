@@ -9,10 +9,12 @@ type Options = {
   loop?: boolean
   pauseMs?: number
   enabled?: boolean
+  /** Boutique hero: fired once when the last phrase wraps back to the first. */
+  onLoopEnd?: () => void
 }
 
 /** Shared home/Boutique typewriter: type, read, erase, then advance. */
-export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = false, pauseMs = 3500, enabled = true }: Options = {}) {
+export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = false, pauseMs = 3500, enabled = true, onLoopEnd }: Options = {}) {
   const [text, setText] = useState('')
   const [cycle, setCycle] = useState(0)
 
@@ -48,6 +50,7 @@ export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = fa
           setText(current.slice(0, char))
           if (char === 0) {
             deleting = false
+            if (phrase === phrases.length - 1) onLoopEnd?.()
             phrase = (phrase + 1) % phrases.length
             timer = setTimeout(tick, GAP)
             return
@@ -63,7 +66,7 @@ export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = fa
       clearTimeout(timer)
       reduced.removeEventListener('change', start)
     }
-  }, [phrases, cycle, videoMs, loop, pauseMs, enabled])
+  }, [phrases, cycle, videoMs, loop, pauseMs, enabled, onLoopEnd])
 
   return { text, restart: () => setCycle(c => c + 1) }
 }
