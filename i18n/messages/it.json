@@ -1031,8 +1031,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Il nostro DNA",
+    "sign": {
+      "label": "Il nostro segno",
+      "title": "Una A con la punta tagliata.",
+      "paragraph1": "La nostra iniziale è una A senza traversa: due tratti che si sostengono a vicenda, come le due falde di una capriata. Inquadrare e realizzare si reggono solo insieme.",
+      "paragraph2": "La punta è tagliata e il suo ultimo pezzo, verde, si posa separato, al colmo. In un cantiere, è il collaudo.",
+      "paragraph3": "Questo taglio diagonale è anche la barra obliqua che chiude ciò che è stato aperto, come in <code></code>. Aegryn ha iniziato con le soluzioni digitali e ne ha mantenuto il rigore. Nei loro strumenti, il verde significa: validato.",
+      "mobile": "Due tratti si sostengono come le falde di una capriata. L'ultimo pezzo, verde, si posa separato, al colmo: è il collaudo. Il taglio è anche la barra obliqua che chiude ciò che è stato aperto (<code></code>).",
+      "closing": "Ciò che si apre si chiude.",
+      "signature": "Built to last.",
+      "step1": "Due tratti che si sostengono. Inquadrare e realizzare si reggono insieme.",
+      "step2": "Ciò che apriamo, lo chiudiamo.",
+      "step3": "L'ultimo pezzo. Il collaudo. Validato.",
+      "imageAlt": "La A di Aegryn, senza traversa: la punta è tagliata in diagonale e sormontata da un frammento verde.",
       "cultureCta": "La nostra cultura e i valori di lavoro"
     },
     "values": {

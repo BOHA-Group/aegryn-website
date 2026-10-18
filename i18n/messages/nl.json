@@ -1031,8 +1031,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Ons DNA",
+    "sign": {
+      "label": "Ons teken",
+      "title": "Een A waarvan de punt is afgesneden.",
+      "paragraph1": "Onze beginletter is een A zonder dwarsbalk: twee lijnen die op elkaar steunen, zoals de twee zijden van een dakspant. Kaderen en realiseren blijven alleen samen overeind.",
+      "paragraph2": "De punt is afgesneden en het laatste stuk, in groen, staat los bovenaan, op de nok. Op een bouwplaats is dat de oplevering.",
+      "paragraph3": "Deze diagonale snede is ook de schuine streep die afsluit wat geopend is, zoals in <code></code>. Aegryn begon met digitale oplossingen en heeft die nauwkeurigheid behouden. In die tools betekent groen: gevalideerd.",
+      "mobile": "Twee lijnen steunen op elkaar als de zijden van een dakspant. Het laatste stuk, in groen, staat los bovenaan, op de nok: de oplevering. De snede is ook de schuine streep die afsluit wat geopend is (<code></code>).",
+      "closing": "Wat opengaat, wordt gesloten.",
+      "signature": "Built to last.",
+      "step1": "Twee lijnen die op elkaar steunen. Kaderen en realiseren staan samen.",
+      "step2": "Wat we openen, sluiten we af.",
+      "step3": "Het laatste stuk. De oplevering. Gevalideerd.",
+      "imageAlt": "De A van Aegryn, zonder dwarsbalk: de punt is diagonaal afgesneden en bekroond met een groen fragment.",
       "cultureCta": "Onze cultuur en werkwaarden"
     },
     "values": {

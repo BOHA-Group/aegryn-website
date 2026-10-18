@@ -57,7 +57,7 @@ export function VisionTypewriter({
       const vh = window.innerHeight
       const sy = window.scrollY
       // La frappe demarre quand le haut du bloc entre en bas d'ecran et se
-      // termine quand la section suivante (ex. « Notre ADN ») atteint le bas
+      // termine quand la section suivante (ex. « Notre signe ») atteint le bas
       // du viewport (ou plus bas si endVhFraction < 1) : le texte est
       // complet avant, ou a mesure, que la suite devient visible.
       const next = el.closest('section')?.nextElementSibling

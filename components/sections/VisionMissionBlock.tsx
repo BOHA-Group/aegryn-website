@@ -1,17 +1,17 @@
 'use client'
 
 /**
- * Bloc Vision + ADN.
+ * Bloc Vision + Notre signe.
  * Sections empilées en flux normal, sans pinning ni scroll-jacking.
  */
 export function VisionMissionBlock({
   visionLabel,
   visionText,
-  dnaContent,
+  signContent,
 }: {
   visionLabel:    React.ReactNode
   visionText:     React.ReactNode
-  dnaContent:     React.ReactNode
+  signContent:    React.ReactNode
 }) {
   return (
     <div>
@@ -29,10 +29,7 @@ export function VisionMissionBlock({
         </div>
       </section>
 
-      {/* ADN */}
-      <div className="bg-ag-white/80 backdrop-blur-sm">
-        {dnaContent}
-      </div>
+      {signContent}
     </div>
   )
 }

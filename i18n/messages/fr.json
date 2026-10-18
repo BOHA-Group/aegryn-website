@@ -991,8 +991,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Notre ADN",
+    "sign": {
+      "label": "Notre signe",
+      "title": "Un A dont la pointe est coupée.",
+      "paragraph1": "Notre initiale est un A sans barre : deux traits qui s'appuient l'un sur l'autre, comme les deux versants d'une charpente. Cadrer et réaliser ne tiennent debout qu'ensemble.",
+      "paragraph2": "La pointe est tranchée, et sa dernière pièce, en vert, se pose à part, au faîte. Sur un chantier, c'est la réception.",
+      "paragraph3": "Cette coupe en diagonale est aussi la barre oblique qui ferme ce qu'on a ouvert, comme dans <code></code>. Aegryn a commencé dans les solutions numériques et en a gardé l'exigence. Le vert, dans leurs outils, veut dire : validé.",
+      "mobile": "Deux traits qui s'appuient comme les versants d'une charpente. La dernière pièce, verte, se pose à part au faîte : c'est la réception. La coupe est aussi la barre oblique qui ferme ce qu'on a ouvert (<code></code>).",
+      "closing": "Ce qui s'ouvre se ferme.",
+      "signature": "Built to last.",
+      "step1": "Deux traits qui s'appuient. Cadrer et réaliser tiennent ensemble.",
+      "step2": "Ce qu'on ouvre, on le ferme.",
+      "step3": "La dernière pièce. La réception. Validé.",
+      "imageAlt": "Le A d'Aegryn, sans barre : la pointe est tranchée en diagonale et surmontée d'un éclat vert.",
       "cultureCta": "Notre culture et nos valeurs de travail"
     },
     "values": {

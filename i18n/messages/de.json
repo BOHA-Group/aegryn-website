@@ -1031,8 +1031,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Unsere DNA",
+    "sign": {
+      "label": "Unser Zeichen",
+      "title": "Ein A mit abgeschnittener Spitze.",
+      "paragraph1": "Unser Anfangsbuchstabe ist ein A ohne Querbalken: zwei Striche, die sich gegenseitig stützen, wie die beiden Seiten eines Dachstuhls. Rahmen setzen und Umsetzen tragen nur gemeinsam.",
+      "paragraph2": "Die Spitze ist abgeschnitten. Das letzte Stück, in Grün, sitzt abgesetzt am First. Auf einer Baustelle ist das die Abnahme.",
+      "paragraph3": "Dieser diagonale Schnitt ist zugleich der Schrägstrich, der schliesst, was geöffnet wurde, wie in <code></code>. Aegryn hat mit digitalen Lösungen begonnen und deren Anspruch beibehalten. In diesen Werkzeugen bedeutet Grün: validiert.",
+      "mobile": "Zwei Striche stützen sich wie die Seiten eines Dachstuhls. Das letzte Stück, in Grün, sitzt abgesetzt am First: die Abnahme. Der Schnitt ist auch der Schrägstrich, der schliesst, was geöffnet wurde (<code></code>).",
+      "closing": "Was sich öffnet, wird geschlossen.",
+      "signature": "Built to last.",
+      "step1": "Zwei Striche, die sich stützen. Rahmen setzen und Umsetzen tragen gemeinsam.",
+      "step2": "Was wir öffnen, schliessen wir.",
+      "step3": "Das letzte Stück. Die Abnahme. Validiert.",
+      "imageAlt": "Das A von Aegryn ohne Querbalken: Die Spitze ist diagonal abgeschnitten und von einem grünen Fragment gekrönt.",
       "cultureCta": "Unsere Kultur und Arbeitswerte"
     },
     "values": {

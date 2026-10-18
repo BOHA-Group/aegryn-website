@@ -1,5 +1,5 @@
 # Aegryn: Full LLM Context File
-> https://aegryn.com | Updated: 2026-10-16
+> https://aegryn.com | Updated: 2026-10-18
 > Summary version: https://aegryn.com/llms.txt
 
 ---
@@ -15,6 +15,8 @@
 **HQ:** St-Sulpice, canton of Vaud, Switzerland (46.5147, 6.5600)
 **Contact:** contact@boha-group.com, +41 24 539 18 81, https://aegryn.com/en/contact
 **Languages:** French, English, German, Spanish, Italian, Dutch
+
+**Our mark:** the About page tells the story of Aegryn's original A without a crossbar. Its two strokes support each other, like a roof frame, linking framing and delivery. A diagonal cut separates the green tip, the final piece associated with acceptance of completed work. The slash also recalls closing what was opened in digital tools, where green means validated. This reflects Aegryn's origins in digital solutions. "What opens is closed. Built to last." The six values (exceptional, exclusivity, confidentiality, trust, experience, elegance) belong to La Boutique and are no longer repeated on About.
 
 **What Aegryn is not:** a marketplace, an auction house, a catalogue, a buyer or seller platform, or a transaction platform. The former catalogue, auction and transaction surfaces (/transact/*) are archived and redirect to the home page. Aegryn advises and delivers; financial execution of transactions is entrusted to accredited partners.
 

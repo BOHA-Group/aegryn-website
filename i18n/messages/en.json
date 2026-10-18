@@ -1010,8 +1010,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Our DNA",
+    "sign": {
+      "label": "Our mark",
+      "title": "An A with its tip cut away.",
+      "paragraph1": "Our initial is an A without a crossbar: two strokes leaning on each other, like the two slopes of a roof frame. Framing and delivery only stand when they stand together.",
+      "paragraph2": "The tip is cut away, and its final piece, in green, sits separately at the apex. On a building site, this is the acceptance of the completed work.",
+      "paragraph3": "This diagonal cut is also the slash that closes what has been opened, as in <code></code>. Aegryn began in digital solutions and has kept their exacting standards. In those tools, green means: validated.",
+      "mobile": "Two strokes leaning on each other like the slopes of a roof frame. The final piece, in green, sits separately at the apex: the completed work is accepted. The cut is also the slash that closes what has been opened (<code></code>).",
+      "closing": "What opens is closed.",
+      "signature": "Built to last.",
+      "step1": "Two strokes supporting each other. Framing and delivery stand together.",
+      "step2": "What we open, we close.",
+      "step3": "The final piece. Acceptance. Validated.",
+      "imageAlt": "Aegryn's A, without a crossbar: its tip is cut diagonally and topped by a green fragment.",
       "cultureCta": "Our culture and working values"
     },
     "values": {

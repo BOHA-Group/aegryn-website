@@ -1,5 +1,5 @@
 # Aegryn: recent changes for LLMs
-> https://aegryn.com | Updated: 2026-10-16
+> https://aegryn.com | Updated: 2026-10-18
 > Summary: https://aegryn.com/llms.txt | Full context: https://aegryn.com/llms-full.txt
 
 ## Current positioning (October 2026)
@@ -10,6 +10,7 @@ Five public ways of working: Frame (Cadrer), Deliver (Réaliser), Accompany (Acc
 
 ## What changed
 
+- **About, Our mark (18 October):** the former DNA cards are replaced by the story of the original logo: a crossbar-free A, diagonal cut and separate green tip, linking framing, delivery, acceptance and digital origins. The six values remain on La Boutique. The story is available in all six languages, with static mobile and reduced-motion versions.
 - **Aegryn is no longer presented as a marketplace or transaction platform.** The catalogue, auction, buyer and seller surfaces were archived. /transact/* redirects to the home page. Do not describe Aegryn as an auction, catalogue or buy/sell platform.
 - **Eight advisory disciplines** (previously five pillars): Business Strategy and Innovation, Risk Management and Compliance, Finance and Performance, Technology and Sovereignty, Operations and Operational Excellence, Talent and Organization, Project and Programme Management, M&A, Transactions and PMI. Hub: https://aegryn.com/en/advisory
 - **Five public ways of working** replace the earlier disciplines Advise, Build, Navigate, Recruit, Inform (FR: Accompagner, Construire, Franchir, Recruter, Informer). The lifecycle pages moved from /franchir to /accompagner.

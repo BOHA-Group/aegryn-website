@@ -1,5 +1,5 @@
 # Aegryn: Swiss firm of entrepreneurs, advisory and signature projects
-> https://aegryn.com | Updated: 2026-10-16
+> https://aegryn.com | Updated: 2026-10-18
 
 Aegryn (pronounced AY-grin /ˈeɪ.grɪn/) is a Swiss firm of entrepreneurs ("cabinet d'entrepreneurs", "architecte de projets emblématiques"). It frames, delivers and accompanies the decisions and projects of leaders of SMEs and mid-sized companies, and runs La Boutique, an entrepreneurial boutique for a limited number of signature projects.
 
@@ -11,6 +11,7 @@ Aegryn is NOT a marketplace, auction house, catalogue, buyer or seller platform,
 
 - Type: integrated advisory and delivery firm, incorporated in Switzerland, HQ St-Sulpice (canton of Vaud), 46.5147, 6.5600
 - Two voices: the integrated firm (eight advisory disciplines, menu "Nos métiers") and La Boutique (/boutique, signature projects)
+- Our mark (/en/about): a crossbar-free A, a diagonal cut and a separate green tip. The mark tells the story of framing and delivery, acceptance of completed work and Aegryn's digital origins. "Built to last."
 - Clients: leaders and decision-makers of SMEs and mid-sized companies; investors and family offices; entrepreneurs; institutions and large groups; industrials and brands
 - Way of working: one named contact, a limited number of mandates at a time, a reply within two working days, independent network experts coordinated when a subject requires it, a confidentiality agreement before any detailed exchange
 - Aegryn does not itself carry out heavy industrial production or physical manufacturing; it steers specialist partners who do

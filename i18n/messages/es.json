@@ -1031,8 +1031,19 @@
         }
       ]
     },
-    "dna": {
-      "label": "Nuestro ADN",
+    "sign": {
+      "label": "Nuestro símbolo",
+      "title": "Una A con la punta cortada.",
+      "paragraph1": "Nuestra inicial es una A sin travesaño: dos trazos que se apoyan entre sí, como las dos vertientes de la estructura de un tejado. Encuadrar y realizar solo se sostienen juntos.",
+      "paragraph2": "La punta está cortada y su última pieza, verde, se coloca aparte, en la cumbrera. En una obra, es la recepción.",
+      "paragraph3": "Este corte diagonal es también la barra oblicua que cierra lo que se ha abierto, como en <code></code>. Aegryn comenzó con soluciones digitales y ha conservado su exigencia. En esas herramientas, el verde significa: validado.",
+      "mobile": "Dos trazos se apoyan como las vertientes de la estructura de un tejado. La última pieza, verde, se coloca aparte, en la cumbrera: es la recepción. El corte es también la barra oblicua que cierra lo que se ha abierto (<code></code>).",
+      "closing": "Lo que se abre se cierra.",
+      "signature": "Built to last.",
+      "step1": "Dos trazos que se apoyan. Encuadrar y realizar se sostienen juntos.",
+      "step2": "Lo que abrimos, lo cerramos.",
+      "step3": "La última pieza. La recepción. Validado.",
+      "imageAlt": "La A de Aegryn, sin travesaño: la punta está cortada en diagonal y coronada por un fragmento verde.",
       "cultureCta": "Nuestra cultura y valores de trabajo"
     },
     "values": {

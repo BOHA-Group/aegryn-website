@@ -7,6 +7,7 @@ import { generateAegrynMetadata } from '@/lib/seo'
 import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
+import { AboutSign } from '@/components/sections/AboutSign'
 import { HomeBoutiqueSection }  from '@/components/sections/HomeBoutiqueSection'
 import type { Metadata } from 'next'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -50,7 +51,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-const values = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
 const ctaProfiles = ['seller', 'buyer', 'partner'] as const
 
 export default function AboutPage() {
@@ -105,34 +105,7 @@ export default function AboutPage() {
             segments={t.raw('vision.segments') as { t: string; bold?: boolean }[]}
           />
         }
-        dnaContent={
-          <section className="border-b border-ag-border bg-ag-white">
-            <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-20">
-              <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-12"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('dna.label')}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
-                {values.map((v) => (
-                  <div key={v} className="bg-ag-off-white p-8 hover:bg-ag-white transition-colors">
-                    <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">
-                      {t(`values.${v}.label`)}
-                    </p>
-                    <p className="font-sans font-bold text-ag-black text-[18px] tracking-[-0.02em] leading-none mb-3">
-                      {t(`values.${v}.title`)}
-                    </p>
-                    <p className="text-[15px] text-ag-gray leading-relaxed">
-                      {t(`values.${v}.desc`)}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <Link
-                href="/culture"
-                className="mt-10 inline-flex items-center gap-2 font-sans text-[13px] font-semibold text-ag-black underline decoration-ag-border decoration-2 underline-offset-4 transition-colors hover:text-ag-apex-ink"
-              >
-                {t('dna.cultureCta')} <ArrowUpRight size={14} />
-              </Link>
-            </ScrollReveal>
-          </section>
-        }
+        signContent={<AboutSign />}
       />
 
       {/* Contribution */}
