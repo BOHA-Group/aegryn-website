@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "POR QUÉ AEGRYN",
       "title": "¿Por qué Aegryn?",
-      "p1": "La mayoría de las consultoras aconsejan sin construir. La mayoría de las empresas tech construyen sin estrategia.\n\nAegryn reúne ambas cosas. Un núcleo de consultoría corporativa, la firma integrada, que encuadra, realiza y acompaña las decisiones de los directivos. Y un vertical emprendedor, La Boutique, que conduce de principio a fin un número limitado de proyectos insignia. Lo que recomienda a sus clientes, Aegryn se lo aplica.",
-      "p2": "Encuadrar sin realizar es entregar un mapa sin el territorio. Realizar sin encuadrar es ejecutar sin rumbo. Acompañar sin haber construido es aconsejar desde fuera. Seleccionar sin proyecto es reclutar en el vacío.\n\nEn Aegryn, cada forma de actuar refuerza a la siguiente. Ese encadenamiento es lo que hace que un proyecto se sostenga, para nuestros clientes como para nosotros.",
+      "opening": [
+        "La mayoría de las consultoras aconsejan sin construir.",
+        "La mayoría de las empresas tech construyen sin estrategia."
+      ],
+      "responseLead": "Aegryn reúne ambas cosas.",
+      "response": "Un núcleo de consultoría corporativa, <strong>la firma integrada</strong>, que encuadra, realiza y acompaña las decisiones de los directivos. Y un vertical emprendedor, <strong>La Boutique</strong>, que conduce de principio a fin un número limitado de proyectos insignia. Lo que recomienda a sus clientes, Aegryn se lo aplica.",
+      "reasoning": [
+        { "lead": "Encuadrar sin realizar", "consequence": "es entregar un mapa sin el territorio." },
+        { "lead": "Realizar sin encuadrar", "consequence": "es ejecutar sin rumbo." },
+        { "lead": "Acompañar sin haber construido", "consequence": "es aconsejar desde fuera." },
+        { "lead": "Seleccionar sin proyecto", "consequence": "es reclutar en el vacío." }
+      ],
+      "closingLead": "En Aegryn, cada forma de actuar refuerza a la siguiente.",
+      "closing": "Ese encadenamiento es lo que hace que un proyecto se sostenga, para nuestros clientes como para nosotros.",
       "p3Label": "ANCLADO EN SUIZA",
       "p3": "Saint-Sulpice, Vaud. A dos kilómetros de la EPFL, una de las universidades tecnológicas más activas del mundo en spin-offs y transferencia de tecnología. Junto a la Fundación para la Innovación y la Tecnología (FIT), que apoya cada año cientos de proyectos de innovación suizos. En un cantón que concentra SwissTech, decenas de fondos de capital riesgo europeos y una densidad excepcional de directivos y adquirentes institucionales. No es una casualidad de ubicación. Es una elección de red. El rigor de una plaza financiera de referencia, la neutralidad de un territorio de confianza y el acceso directo a uno de los ecosistemas de innovación más activos de Europa.",
       "p3ImageAlt": "Atardecer dorado sobre Lausana entre la niebla"

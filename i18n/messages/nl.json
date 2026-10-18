@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "WAAROM AEGRYN",
       "title": "Waarom Aegryn?",
-      "p1": "De meeste kantoren adviseren zonder te bouwen. De meeste techbedrijven bouwen zonder strategie.\n\nAegryn brengt beide samen. Een fundament van corporate advies, het geïntegreerde bureau, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, La Boutique, die een beperkt aantal signatuurprojecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
-      "p2": "Kaderen zonder realiseren is een kaart leveren zonder het terrein. Realiseren zonder kaderen is uitvoeren zonder koers. Begeleiden zonder gebouwd te hebben is adviseren van buitenaf. Selecteren zonder project is rekruteren in het luchtledige.\n\nBij Aegryn versterkt elke manier van handelen de volgende. Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
+      "opening": [
+        "De meeste kantoren adviseren zonder te bouwen.",
+        "De meeste techbedrijven bouwen zonder strategie."
+      ],
+      "responseLead": "Aegryn brengt beide samen.",
+      "response": "Een fundament van corporate advies, <strong>het geïntegreerde bureau</strong>, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, <strong>La Boutique</strong>, die een beperkt aantal signatuurprojecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
+      "reasoning": [
+        { "lead": "Kaderen zonder realiseren", "consequence": "is een kaart leveren zonder het terrein." },
+        { "lead": "Realiseren zonder kaderen", "consequence": "is uitvoeren zonder koers." },
+        { "lead": "Begeleiden zonder gebouwd te hebben", "consequence": "is adviseren van buitenaf." },
+        { "lead": "Selecteren zonder project", "consequence": "is rekruteren in het luchtledige." }
+      ],
+      "closingLead": "Bij Aegryn versterkt elke manier van handelen de volgende.",
+      "closing": "Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
       "p3Label": "VERANKERD IN ZWITSERLAND",
       "p3": "Saint-Sulpice, Vaud. Twee kilometer van de EPFL, een van de meest actieve technologische universiteiten ter wereld op het gebied van spin-offs en technologieoverdracht. Naast de Stichting voor Innovatie en Technologie (FIT), die jaarlijks honderden Zwitserse innovatieprojecten ondersteunt. In een kanton dat SwissTech, tientallen Europese durfkapitaalfondsen en een zeldzame dichtheid van leidinggevenden en institutionele kopers concentreert. Dit is geen toeval van locatie. Het is een bewuste netwerkkeuze. De strengheid van een toonaangevend financieel centrum, de neutraliteit van een betrouwbare jurisdictie en directe toegang tot een van de meest actieve innovatie-ecosystemen van Europa.",
       "p3ImageAlt": "Gouden zonsondergang boven het mistige Lausanne"

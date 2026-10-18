@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "PERCHÉ AEGRYN",
       "title": "Perché Aegryn?",
-      "p1": "La maggior parte degli studi consiglia senza costruire. La maggior parte delle aziende tech costruisce senza strategia.\n\nAegryn riunisce le due cose. Una base di consulenza corporate, la società integrata, che inquadra, realizza e accompagna le decisioni dei dirigenti. E un verticale imprenditoriale, La Boutique, che guida dall’inizio alla fine un numero limitato di progetti signature. Ciò che raccomanda ai suoi clienti, Aegryn lo applica a sé stessa.",
-      "p2": "Inquadrare senza realizzare è consegnare una mappa senza il territorio. Realizzare senza inquadrare è eseguire senza rotta. Accompagnare senza aver costruito è consigliare dall’esterno. Selezionare senza progetto è reclutare nel vuoto.\n\nIn Aegryn, ogni modo di agire rafforza il successivo. È questa catena che fa reggere un progetto, per i nostri clienti come per noi.",
+      "opening": [
+        "La maggior parte degli studi consiglia senza costruire.",
+        "La maggior parte delle aziende tech costruisce senza strategia."
+      ],
+      "responseLead": "Aegryn riunisce le due cose.",
+      "response": "Una base di consulenza corporate, <strong>la società integrata</strong>, che inquadra, realizza e accompagna le decisioni dei dirigenti. E un verticale imprenditoriale, <strong>La Boutique</strong>, che guida dall’inizio alla fine un numero limitato di progetti signature. Ciò che raccomanda ai suoi clienti, Aegryn lo applica a sé stessa.",
+      "reasoning": [
+        { "lead": "Inquadrare senza realizzare", "consequence": "è consegnare una mappa senza il territorio." },
+        { "lead": "Realizzare senza inquadrare", "consequence": "è eseguire senza rotta." },
+        { "lead": "Accompagnare senza aver costruito", "consequence": "è consigliare dall’esterno." },
+        { "lead": "Selezionare senza progetto", "consequence": "è reclutare nel vuoto." }
+      ],
+      "closingLead": "In Aegryn, ogni modo di agire rafforza il successivo.",
+      "closing": "È questa catena che fa reggere un progetto, per i nostri clienti come per noi.",
       "p3Label": "ANCORATO IN SVIZZERA",
       "p3": "Saint-Sulpice, Vaud. A due chilometri dall'EPFL, una delle università tecnologiche più attive al mondo in materia di spin-off e trasferimento tecnologico. A fianco della Fondazione per l'Innovazione e la Tecnologia (FIT), che sostiene ogni anno centinaia di progetti d'innovazione svizzeri. In un cantone che concentra SwissTech, decine di fondi di venture capital europei e una densità rara di dirigenti e acquirenti istituzionali. Non è un caso di localizzazione. È una scelta di rete. Il rigore di una piazza finanziaria di riferimento, la neutralità di un territorio di fiducia e l'accesso diretto a uno degli ecosistemi di innovazione più attivi d'Europa.",
       "p3ImageAlt": "Tramonto dorato su Losanna nella nebbia"

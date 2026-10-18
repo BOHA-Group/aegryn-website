@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "POURQUOI AEGRYN",
       "title": "Pourquoi Aegryn ?",
-      "p1": "La plupart des cabinets conseillent sans construire. La plupart des sociétés tech construisent sans stratégie.\n\nAegryn réunit les deux. Un socle de conseil corporate, le cabinet intégré, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, La Boutique, qui conduit de bout en bout un nombre limité de projets signature. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
-      "p2": "Cadrer sans réaliser, c’est livrer une carte sans le territoire. Réaliser sans cadrer, c’est exécuter sans cap. Accompagner sans avoir bâti, c’est conseiller de l’extérieur. Sélectionner sans projet, c’est recruter dans le vide.\n\nChez Aegryn, chaque façon d’agir renforce la suivante. C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
+      "opening": [
+        "La plupart des cabinets conseillent sans construire.",
+        "La plupart des sociétés tech construisent sans stratégie."
+      ],
+      "responseLead": "Aegryn réunit les deux.",
+      "response": "Un socle de conseil corporate, <strong>le cabinet intégré</strong>, qui cadre, réalise et accompagne les décisions des dirigeants. Et un vertical entrepreneurial, <strong>La Boutique</strong>, qui conduit de bout en bout un nombre limité de projets signature. Ce qu’il recommande à ses clients, Aegryn se l’applique.",
+      "reasoning": [
+        { "lead": "Cadrer sans réaliser,", "consequence": "c’est livrer une carte sans le territoire." },
+        { "lead": "Réaliser sans cadrer,", "consequence": "c’est exécuter sans cap." },
+        { "lead": "Accompagner sans avoir bâti,", "consequence": "c’est conseiller de l’extérieur." },
+        { "lead": "Sélectionner sans projet,", "consequence": "c’est recruter dans le vide." }
+      ],
+      "closingLead": "Chez Aegryn, chaque façon d’agir renforce la suivante.",
+      "closing": "C’est ce chaînage qui fait qu’un projet tient, pour nos clients comme pour nous.",
       "p3Label": "ANCRÉ EN SUISSE",
       "p3": "Saint-Sulpice, Vaud. A deux kilomètres de l'EPFL, l'une des universités technologiques les plus actives au monde en matière de spin-offs et de transfert technologique. A proximité de la Fondation pour l'Innovation et la Technologie (FIT), qui soutient chaque année des centaines de projets d'innovation suisses. Dans un canton qui concentre SwissTech, des dizaines de fonds de capital-risque européens, et une densité rare de dirigeants et d'acquéreurs institutionnels. Ce n'est pas un hasard de localisation. C'est un choix de réseau. La rigueur d'une place financière de référence, la neutralité d'un territoire de confiance, et l'accès direct à un écosystème d'innovation qui compte parmi les plus actifs d'Europe.",
       "p3ImageAlt": "Coucher de soleil doré sur Lausanne dans la brume"

@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "WARUM AEGRYN",
       "title": "Warum Aegryn?",
-      "p1": "Die meisten Beratungen beraten, ohne zu bauen. Die meisten Tech-Firmen bauen ohne Strategie.\n\nAegryn vereint beides. Ein Fundament für Unternehmensberatung, die integrierte Firma, die die Entscheidungen von Führungskräften rahmt, umsetzt und begleitet. Und ein unternehmerisches Vertikal, La Boutique, das eine begrenzte Zahl Signature-Projekte von Anfang bis Ende führt. Was es seinen Kunden empfiehlt, wendet Aegryn auf sich selbst an.",
-      "p2": "Rahmen ohne Umsetzen heisst, eine Karte ohne Gelände zu liefern. Umsetzen ohne Rahmen heisst, ohne Kurs auszuführen. Begleiten, ohne gebaut zu haben, heisst, von aussen zu beraten. Auswählen ohne Projekt heisst, ins Leere zu rekrutieren.\n\nBei Aegryn stärkt jede Art zu handeln die nächste. Diese Kette ist es, die ein Projekt tragfähig macht, für unsere Kunden wie für uns.",
+      "opening": [
+        "Die meisten Beratungen beraten, ohne zu bauen.",
+        "Die meisten Tech-Firmen bauen ohne Strategie."
+      ],
+      "responseLead": "Aegryn vereint beides.",
+      "response": "Ein Fundament für Unternehmensberatung, <strong>die integrierte Firma</strong>, die die Entscheidungen von Führungskräften rahmt, umsetzt und begleitet. Und ein unternehmerisches Vertikal, <strong>La Boutique</strong>, das eine begrenzte Zahl Signature-Projekte von Anfang bis Ende führt. Was es seinen Kunden empfiehlt, wendet Aegryn auf sich selbst an.",
+      "reasoning": [
+        { "lead": "Rahmen ohne Umsetzen", "consequence": "heisst, eine Karte ohne Gelände zu liefern." },
+        { "lead": "Umsetzen ohne Rahmen", "consequence": "heisst, ohne Kurs auszuführen." },
+        { "lead": "Begleiten, ohne gebaut zu haben,", "consequence": "heisst, von aussen zu beraten." },
+        { "lead": "Auswählen ohne Projekt", "consequence": "heisst, ins Leere zu rekrutieren." }
+      ],
+      "closingLead": "Bei Aegryn stärkt jede Art zu handeln die nächste.",
+      "closing": "Diese Kette ist es, die ein Projekt tragfähig macht, für unsere Kunden wie für uns.",
       "p3Label": "VERANKERT IN DER SCHWEIZ",
       "p3": "Saint-Sulpice, Waadt. Zwei Kilometer von der EPFL entfernt, einer der aktivsten Technologieuniversitäten der Welt im Bereich Spin-offs und Technologietransfer. In der Nähe der Stiftung für Innovation und Technologie (FIT), die jährlich Hunderte von Schweizer Innovationsprojekten unterstützt. In einem Kanton, der SwissTech, Dutzende von europäischen Risikokapitalfonds und eine seltene Dichte an Führungskräften und institutionellen Erwerber konzentriert. Dies ist kein Zufall des Standorts. Es ist eine bewusste Netzwerkentscheidung. Die Strenge eines führenden Finanzplatzes, die Neutralität eines vertrauenswürdigen Standorts und der direkte Zugang zu einem der aktivsten Innovationsökosysteme Europas.",
       "p3ImageAlt": "Goldener Sonnenuntergang über dem nebligen Lausanne"

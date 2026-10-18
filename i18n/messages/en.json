@@ -7172,8 +7172,20 @@
     "whyAegryn": {
       "label": "WHY AEGRYN",
       "title": "Why Aegryn?",
-      "p1": "Most firms advise without building. Most tech companies build without strategy.\n\nAegryn brings the two together. A corporate advisory foundation, the integrated firm, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, La Boutique, which leads a limited number of signature projects end to end. What it recommends to its clients, Aegryn applies to itself.",
-      "p2": "Framing without delivering is handing over a map without the territory. Delivering without framing is executing without a heading. Accompanying without having built is advising from the outside. Selecting without a project is recruiting into a void.\n\nAt Aegryn, each way of working reinforces the next. That chain is what makes a project hold, for our clients as for ourselves.",
+      "opening": [
+        "Most firms advise without building.",
+        "Most tech companies build without strategy."
+      ],
+      "responseLead": "Aegryn brings the two together.",
+      "response": "A corporate advisory foundation, <strong>the integrated firm</strong>, which frames, delivers and accompanies the decisions of business leaders. And an entrepreneurial vertical, <strong>La Boutique</strong>, which leads a limited number of signature projects end to end. What it recommends to its clients, Aegryn applies to itself.",
+      "reasoning": [
+        { "lead": "Framing without delivering", "consequence": "is handing over a map without the territory." },
+        { "lead": "Delivering without framing", "consequence": "is executing without a heading." },
+        { "lead": "Accompanying without having built", "consequence": "is advising from the outside." },
+        { "lead": "Selecting without a project", "consequence": "is recruiting into a void." }
+      ],
+      "closingLead": "At Aegryn, each way of working reinforces the next.",
+      "closing": "That chain is what makes a project hold, for our clients as for ourselves.",
       "p3Label": "ANCHORED IN SWITZERLAND",
       "p3": "Saint-Sulpice, Vaud. Two kilometres from EPFL, one of the world's most active universities in technology spin-offs and tech transfer. Adjacent to the Swiss Foundation for Innovation and Technology (FIT), which supports hundreds of Swiss innovation projects each year. In a canton that concentrates SwissTech, dozens of European venture capital funds, and a rare density of senior executives and institutional acquirers. This is not a coincidence of location. It is a deliberate choice of network. The rigour of a leading financial centre, the neutrality of a trusted jurisdiction, and direct access to one of Europe's most active innovation ecosystems.",
       "p3ImageAlt": "Golden sunset over Lausanne's foggy landscape"

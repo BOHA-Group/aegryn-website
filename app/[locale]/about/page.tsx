@@ -8,6 +8,7 @@ import { VisionMissionBlock } from '@/components/sections/VisionMissionBlock'
 import { VisionTypewriter } from '@/components/sections/VisionTypewriter'
 import { AboutHeroScroll }    from '@/components/sections/AboutHeroScroll'
 import { AboutSign } from '@/components/sections/AboutSign'
+import { AboutWhyNarrative } from '@/components/sections/AboutWhyNarrative'
 import { HomeBoutiqueSection }  from '@/components/sections/HomeBoutiqueSection'
 import type { Metadata } from 'next'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -142,29 +143,10 @@ export default function AboutPage() {
       </section>
 
       {/* Pourquoi Aegryn */}
-      <section className="border-b border-ag-border bg-ag-white">
-        <ScrollReveal className="mx-auto max-w-7xl px-6 md:px-12 py-24">
-          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-10"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('whyAegryn.label')}</p>
-          <h2
-            className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] max-w-2xl mb-12"
-            style={{ fontSize: 'clamp(26px,3vw,44px)' }}
-          >
-            {ta('whyAegryn.title')}
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:">
-            {[ta('whyAegryn.p1'), ta('whyAegryn.p2')].map((block, i) => {
-              const [constat, reponse] = block.split('\n\n')
-              return (
-                <div key={i} className={`space-y-5 ${i === 1 ? 'lg:pl-16' : ''}`}>
-                  <p className="text-[15px] text-ag-gray leading-relaxed">{constat}</p>
-                  <p className="text-[15px] text-ag-black font-semibold leading-relaxed">
-                    {reponse}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-          <div className="mt-12 pt-10">
+      <section id="pourquoi-aegryn" aria-labelledby="why-aegryn-title" className="scroll-mt-24 border-b border-ag-border bg-ag-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-12">
+          <AboutWhyNarrative />
+          <ScrollReveal className="mt-20 border-t border-ag-border pt-16 lg:mt-24 lg:pt-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{ta('whyAegryn.p3Label')}</p>
@@ -182,8 +164,8 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
       </section>
 
       {/* Founder */}
