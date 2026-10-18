@@ -136,7 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Actifs propriétaires × 6 locales
-  for (const asset of Aegryn_ASSETS.filter(a => a.id !== 'kryv')) {
+  for (const asset of Aegryn_ASSETS.filter(a => a.id !== 'kryv' && !a.confidential)) {
     pushLocalized(entries, assetPath(asset.slug), {
       lastModified:    now,
       changeFrequency: 'monthly',

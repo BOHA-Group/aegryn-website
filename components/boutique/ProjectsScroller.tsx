@@ -6,8 +6,9 @@ import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 import { assetPath } from '@/data/assets'
+import { ConfidentialStamp } from '@/components/ui/ConfidentialStamp'
 
-type Project = { id: string; slug: string; image?: string }
+type Project = { id: string; slug: string; image?: string; confidential?: boolean }
 
 /**
  * La Boutique, section « Projets signature » : même chorégraphie que la section « Cadrer et réaliser »
@@ -18,6 +19,7 @@ type Project = { id: string; slug: string; image?: string }
  */
 export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title: React.ReactNode; titleSr?: string; allLabel: string; projects: Project[] }) {
   const tItems = useTranslations('assets.items')
+  const t = useTranslations('assets.page')
   const sectionRef = useRef<HTMLElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const headRef = useRef<HTMLDivElement>(null)
@@ -118,21 +120,27 @@ export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title
       </div>
 
       <div ref={trackRef} className="mw-grid">
-        {projects.map((p, i) => (
-          <Link key={p.id} href={assetPath(p.slug) as never} className={`mw-item ${i % 2 ? 'is-down' : ''}`}>
-            <div className="mw-line" />
-            {i > 0 && <div className={`mw-riser ${i % 2 ? 'is-down' : 'is-up'}`} />}
-            {p.image && (
-              <div className="mw-image">
-                <Image src={p.image} alt={tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95} />
+        {projects.map((p, i) => {
+          const item = (
+            <>
+              <div className="mw-line" />
+              {i > 0 && <div className={`mw-riser ${i % 2 ? 'is-down' : 'is-up'}`} />}
+              {p.image && (
+                <div className="mw-image">
+                  <Image src={p.image} alt={p.confidential ? '' : tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95} />
+                  {p.confidential && <ConfidentialStamp label={t('confidential')} className="scale-75" />}
+                </div>
+              )}
+              <div className="mw-text">
+                <h3 className="mw-title">{tItems(`${p.id}.capability`)}</h3>
+                <p className="mw-meta">{String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</p>
               </div>
-            )}
-            <div className="mw-text">
-              <h3 className="mw-title">{tItems(`${p.id}.capability`)}</h3>
-              <p className="mw-meta">{String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</p>
-            </div>
-          </Link>
-        ))}
+            </>
+          )
+          return p.confidential
+            ? <div key={p.id} className={`mw-item ${i % 2 ? 'is-down' : ''}`}>{item}</div>
+            : <Link key={p.id} href={assetPath(p.slug) as never} className={`mw-item ${i % 2 ? 'is-down' : ''}`}>{item}</Link>
+        })}
       </div>
     </section>
   )

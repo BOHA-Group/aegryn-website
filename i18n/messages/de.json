@@ -204,6 +204,7 @@
       "viewDetails": "Details ansehen",
       "internalOnly": "Interner Gebrauch",
       "confidential": "Vertraulich",
+      "confidentialNote": "Vertrauliches Projekt. Präsentation und Unterlagen werden nur unter Geheimhaltungsvereinbarung geteilt.",
       "heroLabel": "Aegryn | Eigene Assets",
       "heroTitle": "Unsere operativen\nAssets.",
       "heroSub": "Assets der Aegryn-Gruppe | nicht von Dritten eingereicht. Für unsere Operationen und die unserer Kunden, auf Anfrage.",
@@ -306,7 +307,7 @@
       },
       "chrosium": {
         "badge": "B2C · D2C-Kosmetik",
-        "capability": "Das Unsichtbare einer Schutzgeste sichtbar machen",
+        "capability": "Eine schützende Geste, ein Detail, das alles verändert",
         "tagline": "Sonnenschutz-Indikator, Schutz in Echtzeit sichtbar",
         "description": "Verbindet eine SPF-50+-Clean-Label-Formel mit einem firmeneigenen Anwendungsindikator: Eltern und Kinder sehen, wo der Schutz aufgetragen wurde, bevor er nach gesicherter Abdeckung verblasst.",
         "keywords": "Anwendungsindikator · SPF 50+ Clean Label · UVA/UVB-Formel · UV-reaktive Verpackung · D2C-Marke"

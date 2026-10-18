@@ -8,6 +8,7 @@ import { INDUSTRIES, getLocaleText, type Industry, type IndustrySector } from '@
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
 import { ProjectStage } from '@/components/ui/ProjectStage'
+import { ConfidentialStamp } from '@/components/ui/ConfidentialStamp'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -25,6 +26,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) return {}
   const tItemsMeta = await getTranslations({ locale, namespace: 'assets.items' })
+  const tPageMeta = await getTranslations({ locale, namespace: 'assets.page' })
+  if (asset.confidential) {
+    const meta = generateAegrynMetadata({
+      title: tPageMeta('confidential'),
+      description: tPageMeta('confidentialNote'),
+      path: assetPath(slug),
+      locale,
+    })
+    return { ...meta, robots: { index: false, follow: false } }
+  }
   const isNeediu = asset.id === 'neediu'
   const neediuKeywords = isNeediu ? [
     'neediu', 'neediu app', 'services à domicile', 'marketplace services maison',
@@ -52,6 +63,52 @@ export default async function AssetPage({ params }: Props) {
   const tItems   = await getTranslations({ locale, namespace: 'assets.items' })
   const asset = Aegryn_ASSETS.find((a) => a.slug === slug && a.id !== 'kryv')
   if (!asset) notFound()
+
+  /* Fiche verrouillée : la page n'expose que le tampon, la note et la prise de contact. */
+  if (asset.confidential) {
+    return (
+      <main>
+        <section className="relative overflow-hidden bg-ag-navy pt-36 pb-24 px-6 md:px-12" style={{ minHeight: 'clamp(460px,50vw,620px)' }}>
+          {asset.image && (
+            <Image
+              src={asset.image}
+              alt=""
+              fill
+              priority
+              fetchPriority="high"
+              unoptimized
+              sizes="100vw"
+              className="object-cover object-center grayscale opacity-40"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-b from-ag-navy/80 via-ag-navy/70 to-ag-navy/95" />
+          <ConfidentialStamp label={tAssets('confidential')} className="scale-125" />
+          <div className="relative max-w-7xl mx-auto">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-ag-apex mb-6 flex items-center gap-3">
+              <span className="w-6 h-px bg-ag-apex/50 inline-block" />
+              {tItems(`${asset.id}.badge`)}
+            </p>
+            <h1 className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-4xl text-balance" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
+              {tItems(`${asset.id}.capability`)}
+            </h1>
+          </div>
+        </section>
+        <section className="bg-white py-24 md:py-32">
+          <div className="max-w-2xl mx-auto px-6 text-center">
+            <p className="font-sans text-[16px] leading-relaxed text-ag-gray">{tAssets('confidentialNote')}</p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link href="/boutique/projets" className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-ag-navy border border-ag-border px-6 py-3 hover:border-ag-navy transition-all">
+                {t('cta.allAssets')}
+              </Link>
+              <Link href={{ pathname: '/contact', query: { subject: 'project', projet: asset.id } }} className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors">
+                {tAssets('ctaDiscuss')} <ArrowUpRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    )
+  }
 
   const assetId = asset.id as 'subblink' | 'neediu' | 'primiom' | 'movtoo' | 'hobconnect' | 'heritix' | 'chrosium' | 'insertdry'
   const hasAssetI18n = ['subblink', 'neediu', 'primiom', 'movtoo', 'hobconnect', 'heritix', 'chrosium', 'insertdry'].includes(assetId)

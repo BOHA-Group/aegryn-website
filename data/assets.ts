@@ -68,6 +68,8 @@ export interface AegrynAsset {
   showOnHomepage?:   boolean
   internalOnly?:     boolean
   namePublic?:       boolean
+  /** Fiche verrouillée : tampon « Confidentiel », pas de dépliage ni de page détail publique. */
+  confidential?:     boolean
 }
 
 export type AssetGrade    = 'star' | 'aaa' | 'aa' | 'a' | 'b' | 'pending' | 'refused'
@@ -250,6 +252,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tier:             1 as const,
     ownership:        'portfolio' as const,
     transactionEligible:  false,
+    confidential:     true,
   },
   {
     id:               'insertdry',

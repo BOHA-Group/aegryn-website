@@ -204,6 +204,7 @@
       "viewDetails": "Details bekijken",
       "internalOnly": "Intern gebruik",
       "confidential": "Vertrouwelijk",
+      "confidentialNote": "Vertrouwelijk project. Presentatie en documentatie worden alleen onder een geheimhoudingsovereenkomst gedeeld.",
       "heroLabel": "Aegryn | Eigen activa",
       "heroTitle": "Onze operationele\nactiva.",
       "heroSub": "Activa van de Aegryn-groep | niet ingediend door derden. Gebruikt voor onze operaties en die van onze klanten, op aanvraag.",
@@ -306,7 +307,7 @@
       },
       "chrosium": {
         "badge": "B2C · D2C-Cosmetica",
-        "capability": "Het onzichtbare van een beschermingsgebaar zichtbaar maken",
+        "capability": "Een beschermend gebaar, een detail dat alles verandert",
         "tagline": "Zonbescherming-indicator, bescherming in realtime zichtbaar",
         "description": "Combineert een SPF 50+ clean-label formule met een eigen toepassingsindicator: ouders en kinderen zien waar bescherming is aangebracht, voordat deze vervaagt zodra de zone beveiligd is.",
         "keywords": "toepassingsindicator · SPF 50+ clean label · UVA/UVB-formule · UV-reactieve verpakking · D2C-merk"
