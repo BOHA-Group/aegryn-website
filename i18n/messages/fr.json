@@ -7882,6 +7882,10 @@
     "email": "E-mail"
   },
   "boutiqueConcept": {
+    "heroTitles": [
+      "Créativité et innovation.\nLa passion des idées uniques.",
+      "Donner vie aux idées.\nBâtir les entreprises qui les portent."
+    ],
     "passion": "La créativité et l’innovation nous passionnent. Nous donnons vie aux idées uniques en bâtissant les projets et les entreprises qui les portent."
   },
   "harmony": {

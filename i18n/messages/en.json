@@ -7882,6 +7882,10 @@
     "email": "Email"
   },
   "boutiqueConcept": {
+    "heroTitles": [
+      "Creativity and innovation.\nA passion for unique ideas.",
+      "Bring ideas to life.\nBuild the businesses behind them."
+    ],
     "passion": "We are passionate about creativity and innovation. We bring unique ideas to life by building the projects and the businesses that carry them forward."
   },
   "harmony": {

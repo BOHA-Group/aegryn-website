@@ -26,8 +26,8 @@ export const HERO_CLIPS = [
   /* Après-midi : déplacements et loisirs */
   'jet-tarmac', '14-back-seat', 'resort-aerial', '16-gt-race', 'speedboat',
   '08-seine-sunset',
-  /* Soir : gastronomie et boissons */
-  'wine-cellar', '05-chef', 'dish-plating', 'restaurant-night', 'cocktail-bar',
+  /* Soir : détente, gastronomie et boissons */
+  'wine-cellar', 'singing-bowl', 'dish-plating', 'restaurant-night', 'cocktail-bar',
   /* Nuit : production, événementiel, ville */
   'film-camera', '11-concert-flames', 'city-night-timelapse', 'bridge-dusk',
   /* Clôture emblématique */

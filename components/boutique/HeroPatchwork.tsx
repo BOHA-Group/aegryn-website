@@ -38,7 +38,7 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
   'speedboat': '28% 50%',
   '08-seine-sunset': '16% 50%',
   'wine-cellar': '48% 50%',
-  '05-chef': '64% 50%',
+  'singing-bowl': '48% 50%',
   'dish-plating': '44% 50%',
   'restaurant-night': '64% 50%',
   '11-concert-flames': '33% 50%',

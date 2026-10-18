@@ -85,8 +85,7 @@ export default async function BoutiquePage({ params }: Props) {
           <div className="mx-auto px-6 md:px-12 max-w-7xl px-6 pb-16 md:px-12 md:pb-20">
             <TypedTitle
               id="boutique-title"
-              line1={H1_LINES[lang][0]}
-              line2={H1_LINES[lang][1]}
+              phrases={[H1_LINES[lang].join('\n'), ...(tConcept.raw('heroTitles') as string[])]}
               className="mb-8 max-w-4xl font-sans font-bold leading-[1.15] tracking-[-0.03em] text-white"
               style={{ fontSize: 'clamp(30px,4.2vw,58px)', textShadow: '0 1px 10px rgba(0,0,0,0.35)' }}
             />
