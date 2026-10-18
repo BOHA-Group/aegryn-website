@@ -31,9 +31,9 @@ export default function PartnersSection({ label, badge, title, desc, note, logos
         <p className="text-[15px] text-ag-gray leading-relaxed max-w-xl mb-6">
           {desc}
         </p>
-        <p className="font-sans text-[11px] text-ag-gray-light italic">
+        {!!logos?.length && <p className="font-sans text-[11px] text-ag-gray-light italic">
           {note}
-        </p>
+        </p>}
         {logos && logos.length > 0 && (
           <div className="mt-10">
             <PartnersCarousel logos={logos} />

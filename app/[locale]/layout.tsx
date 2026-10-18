@@ -12,7 +12,7 @@ import LenisProvider from '@/components/providers/LenisProvider'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import MetaPixel from '@/components/analytics/MetaPixel'
-import { aegrynOrganizationSchema, aegrynWebSiteSchema, aegrynSiteNavigationSchema } from '@/lib/seo'
+import { aegrynOrganizationSchema, aegrynWebSiteSchema, aegrynSiteNavigationSchema, socialImageUrl } from '@/lib/seo'
 import '@/styles/globals.css'
 
 export function generateMetadata(): Metadata {
@@ -52,7 +52,7 @@ return {
     description: 'Eight advisory disciplines and La Boutique for signature projects. Frame, deliver, accompany, select, stay informed. Rare by selection. Discreet by principle.',
     url:         'https://aegryn.com',
     siteName:    'Aegryn',
-    images:      [{ url: '/og/default.jpg', width: 1200, height: 630, alt: 'Aegryn, Swiss firm of entrepreneurs' }],
+    images:      [{ url: socialImageUrl('Aegryn, Swiss firm of entrepreneurs'), width: 1200, height: 630, alt: 'Aegryn, Swiss firm of entrepreneurs' }],
     locale:      'fr_FR',
     type:        'website',
   },
@@ -62,7 +62,7 @@ return {
     creator: '@aegrynhq',
     title:   'Aegryn, Swiss firm of entrepreneurs',
     description: 'Eight advisory disciplines and La Boutique for signature projects. Rare by selection. Discreet by principle.',
-    images:  ['/og/default.jpg'],
+    images:  [socialImageUrl('Aegryn, Swiss firm of entrepreneurs')],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',

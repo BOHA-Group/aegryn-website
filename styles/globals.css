@@ -355,7 +355,7 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
 }
 
 /* ── Accueil : section Cadrer et réaliser (défilement horizontal, d'après scene-studio.webflow.io) ── */
-.mw-section { --mw-red: #c9271e; --mw-muted: #77736b; --mw-ink: #0a0a09; position: relative; z-index: 1; display: flex; align-items: center; width: 100%; min-height: 100svh; overflow: clip; background: #fff; }
+.mw-section { --mw-accent: #4ADDA5; --mw-muted: #77736b; --mw-ink: #0a0a09; position: relative; z-index: 1; display: flex; align-items: center; width: 100%; min-height: 100svh; overflow: clip; background: #fff; }
 .mw-bg { position: absolute; inset: 0; z-index: 0; background: #050505; clip-path: inset(32% 30% 32% 30% round 16px); }
 .mw-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,.7), rgba(5,5,5,.15) 60%); }
 .mw-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -371,11 +371,11 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
 .mw-item:hover .mw-image img { transform: scale(1.05); }
 .mw-text { flex-shrink: 0; width: 16rem; }
 .mw-title { margin: 1rem 0 0; font-size: 1.55rem; font-weight: 600; line-height: 1.1; letter-spacing: -.02em; color: var(--mw-ink); transition: color .25s; }
-.mw-item:hover .mw-title { color: var(--mw-red); }
+.mw-item:hover .mw-title, .mw-item:focus-visible .mw-title { color: var(--ag-apex-ink); }
 .mw-sub { margin: .75rem 0 1rem; font-size: 1rem; font-weight: 500; line-height: 1.4; color: var(--mw-ink); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .mw-meta { margin: .25rem 0 0; font-size: .8rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--mw-muted); }
-.mw-line { position: absolute; top: 0; right: 1rem; left: clamp(1.75rem, 4vw, 2.5rem); height: 0; border-top: 2px solid var(--mw-red); }
-.mw-riser { position: absolute; left: 0; width: 0; height: clamp(3.5rem, 8vw, 6rem); border-left: 2px solid var(--mw-red); }
+.mw-line { position: absolute; top: 0; right: 1rem; left: clamp(1.75rem, 4vw, 2.5rem); height: 0; border-top: 2px solid var(--mw-accent); }
+.mw-riser { position: absolute; left: 0; width: 0; height: clamp(3.5rem, 8vw, 6rem); border-left: 2px solid var(--mw-accent); }
 .mw-riser.is-down { bottom: 100%; }
 .mw-riser.is-up { top: 0; }
 @media screen and (max-width: 767px) {
@@ -405,9 +405,18 @@ header[data-onhero='true'] [data-nav-right] > a:hover {
 .font-script { font-family: 'Covered By Your Grace', 'Segoe Script', cursive; font-weight: 400; font-size: 1.12em; letter-spacing: 0; color: #adadad; }
 
 /* La Boutique : en-tête de la section Projets signature (défilement horizontal, mêmes traits .mw-*) */
-.mw-section--titled { --mw-red: #4ADDA5; align-items: flex-end; padding-bottom: clamp(2rem, 8vh, 5rem); }
+.mw-section--titled { align-items: flex-end; padding-bottom: clamp(2rem, 8vh, 5rem); }
 .mw-head { position: absolute; inset: 0 0 auto 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: clamp(5rem, 12vh, 8rem) max(1.5rem, calc((100% - 1280px) / 2 + 1.5rem)) 0; }
 @media (min-width: 768px) { .mw-head { padding-inline: max(3rem, calc((100% - 1280px) / 2 + 3rem)); } }
 .mw-head-title { margin: 0; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; font-size: clamp(26px, 3vw, 44px); color: var(--mw-ink); text-wrap: balance; }
 .mw-head-link { flex-shrink: 0; padding-bottom: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mw-ink); text-decoration: none; transition: color .25s; }
-.mw-head-link:hover { color: var(--mw-red); }
+.mw-head-link:hover { color: var(--ag-apex-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

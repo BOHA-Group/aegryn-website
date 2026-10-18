@@ -78,7 +78,7 @@ const finance: Industry = {
     it: 'Finanza & Capitale',
     nl: 'Financiën & Kapitaal',
   },
-  img: '/images/industries/theme_fintech.webp',
+  img: '/images/industries/finance-institutional.jpg',
   imgAlt: {
     fr: 'Finance & Capital | Aegryn',
     en: 'Finance & Capital | Aegryn',

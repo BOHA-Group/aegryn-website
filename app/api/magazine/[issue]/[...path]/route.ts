@@ -2,6 +2,7 @@ import { readFile }        from 'fs/promises'
 import path                from 'path'
 import { NextRequest, NextResponse } from 'next/server'
 import { canAccessIssue }  from '@/lib/magazineAccess'
+import { prepareMagazineHtml } from '@/lib/magazine/identity'
 
 /**
  * GET /api/magazine/[issue]/[...path]
@@ -55,7 +56,9 @@ export async function GET(
     return NOT_FOUND
   }
 
-  return new NextResponse(new Uint8Array(data), {
+  const body = issue === 'issue-01' && path.extname(filePath).toLowerCase() === '.html'
+    ? prepareMagazineHtml(data.toString('utf8')) : new Uint8Array(data)
+  return new NextResponse(body, {
     headers: {
       'Content-Type':           MIME[path.extname(filePath).toLowerCase()] ?? 'application/octet-stream',
       /* private : jamais de cache partagé CDN — navigateur seulement */

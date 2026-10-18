@@ -58,7 +58,7 @@ export interface AegrynAsset {
   transposeSectors?: { industry: string; sectorIndex: number }[]
   /** Phase SKILL_PHASES de chaque entrée `skills` i18n, même ordre */
   skillPhases?:    number[]
-  status:          'live' | 'beta' | 'dev' | 'not_started'
+  status:          'live' | 'beta' | 'pilot' | 'dev' | 'not_started'
   featured:        boolean
   grade:           AssetGrade
   gradeCode:       string | undefined
@@ -113,7 +113,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
       { industry: 'tech-innovation-secteur-public', sectorIndex: 2 },
     ],
     skillPhases:      [0, 0, 0, 0, 1, 1, 1, 2, 3],
-    status:           'dev' as const,
+    status:           'pilot' as const,
     featured:         true,
     grade:            'pending' as const,
     gradeCode:        undefined,
@@ -139,7 +139,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
       { industry: 'tech-innovation-secteur-public', sectorIndex: 2 },
     ],
     skillPhases:      [0, 0],
-    status:           'not_started' as const,
+    status:           'pilot' as const,
     featured:         false,
     grade:            'pending' as const,
     gradeCode:        undefined,
@@ -166,7 +166,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
       { industry: 'finance-capital', sectorIndex: 3 },
     ],
     skillPhases:      [0, 0],
-    status:           'not_started' as const,
+    status:           'dev' as const,
     featured:         false,
     grade:            'pending' as const,
     gradeCode:        undefined,
@@ -269,7 +269,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
       { industry: 'commerce-services-experience-client', sectorIndex: 1 },
     ],
     skillPhases:      [0, 0, 0, 1, 1, 1, 2, 2, 3],
-    status:           'dev' as const,
+    status:           'not_started' as const,
     featured:         true,
     grade:            'pending' as const,
     gradeCode:        undefined,

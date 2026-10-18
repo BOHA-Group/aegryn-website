@@ -42,6 +42,7 @@ CIFSO is the certification, protocol and tooling infrastructure behind the firm.
 ## La Boutique (signature projects)
 - [La Boutique](https://aegryn.com/en/boutique): the entrepreneurial boutique. Method: Frame, Deliver, Accompany. Six values: exceptional, exclusivity, confidentiality, trust, experience, elegance. Four audiences: entrepreneurs; investors and family offices; institutions and organisations; industrials and brands.
 - [Signature projects](https://aegryn.com/en/boutique/projets): portfolio (neediu, Movtoo, Primiom, Hobconnect, Heritix, Chrosium, Insertdry)
+- Project stages: neediu and Movtoo are in pilot; Primiom, Heritix and Chrosium are in development; Hobconnect and Insertdry are concepts. Planned functionality is distinguished from available functionality.
 - [Contact for a project](https://aegryn.com/en/contact?subject=project): a confidentiality agreement precedes any detailed exchange, personal reply within two working days
 
 ## Accompany every life cycle

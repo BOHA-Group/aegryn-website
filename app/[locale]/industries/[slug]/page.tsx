@@ -30,13 +30,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${getLocaleText(ind.name, locale)} | Aegryn`,
     description: getLocaleText(ind.vision, locale).slice(0, 160).replace(/\n/g, ' '),
     path: `/industries/${slug}`,
+    image: ind.img,
     locale,
   })
 }
 
 /* ── Helpers ────────────────────────────────────────────────── */
 const CLUSTER_IMAGES: Record<string, string> = {
-  finance:   '/images/industries/theme_fintech.jpg',
+  finance:   '/images/industries/finance-institutional.jpg',
   sante:     '/images/industries/cluster-sante.jpg',
   industrie: '/images/industries/cluster-industrie.jpg',
   commerce:  '/images/industries/theme_marketplace.jpg',

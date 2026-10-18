@@ -160,10 +160,10 @@ export default async function BoutiquePage({ params }: Props) {
       />
 
       {/* Les lieux de rencontre, bientôt */}
-      <section className="bg-ag-navy py-28 text-white md:py-36">
+      <section className="bg-ag-navy py-14 text-white md:py-16">
         <div className="mx-auto px-6 md:px-12 max-w-7xl">
           <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex"><span className="inline-block h-px w-5 bg-ag-apex/50" />{BOUTIQUE.placesLabel[lang]}</p>
-          <h2 className="mt-5 max-w-3xl whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em]" style={h2}>{br(BOUTIQUE.placesTitle[lang])}</h2>
+          <h2 className="mt-4 max-w-3xl font-sans font-bold leading-[1.2] tracking-[-0.025em]" style={h2}>{BOUTIQUE.placesTitle[lang].replace(/\n/g, ' ')}</h2>
           <p className="mt-8 inline-block rounded-full bg-white/10 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">{BOUTIQUE.soon[lang]}</p>
         </div>
       </section>

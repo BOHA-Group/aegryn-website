@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { routing } from '@/i18n/routing'
 
 const BASE_URL = 'https://aegryn.com'
+export function socialImageUrl(title: string, image = '/og/default.jpg') {
+  const query = new URLSearchParams({ title: title.replace(/\s*\|\s*Aegryn$/, ''), image })
+  return `${BASE_URL}/api/og?${query}`
+}
 
 /* Chemin interne → chemin public localisé (pathnames next-intl).
    Accepte aussi un chemin déjà localisé (résolu via la table inverse). */
@@ -82,6 +86,7 @@ export function generateAegrynMetadata({
 }): Metadata {
   const url  = `${BASE_URL}/${locale}${localizedPath(path, locale)}`
   const fullTitle = title.includes('Aegryn') ? title : `${title} | Aegryn`
+  const socialImage = socialImageUrl(title, image)
 
   return {
     title: { absolute: fullTitle },
@@ -112,11 +117,11 @@ export function generateAegrynMetadata({
       locale: OG_LOCALE[locale] ?? 'en_GB',
       type: 'website',
       images: [{
-        url:    `${BASE_URL}${image}`,
+        url:    socialImage,
         width:  1200,
         height: 630,
         alt:    fullTitle,
-        type:   'image/jpeg',
+        type:   'image/png',
       }],
     },
     twitter: {
@@ -125,7 +130,7 @@ export function generateAegrynMetadata({
       creator:     '@aegrynhq',
       title:       fullTitle,
       description,
-      images:      [`${BASE_URL}${image}`],
+      images:      [socialImage],
     },
     robots: {
       index:  process.env.VERCEL_ENV === 'production',

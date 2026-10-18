@@ -59,6 +59,14 @@ export function AboutHeroScroll() {
   useEffect(() => {
     if (!wrapRef.current || !mediaRef.current || !imgRef.current || !textRef.current) return
 
+    const motion = gsap.matchMedia()
+    motion.add('(prefers-reduced-motion: reduce)', () => {
+      gsap.set(wrapRef.current, { height: 'auto' })
+      gsap.set(wrapRef.current!.firstElementChild, { position: 'relative', height: 'auto' })
+      gsap.set(textRef.current, { height: 'auto', paddingBottom: 48 })
+      gsap.set(mediaRef.current, { position: 'relative', height: '50vh', clipPath: 'none' })
+    })
+    motion.add('(prefers-reduced-motion: no-preference)', () => {
     const ctx = gsap.context(() => {
       const st = {
         trigger: wrapRef.current,
@@ -111,6 +119,8 @@ export function AboutHeroScroll() {
     }, wrapRef)
 
     return () => ctx.revert()
+    })
+    return () => motion.revert()
   }, [])
 
   return (

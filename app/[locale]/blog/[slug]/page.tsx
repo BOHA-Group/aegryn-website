@@ -3,9 +3,10 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { Calendar, Clock } from 'lucide-react'
-import { ARTICLES, ARTICLE_CATEGORIES, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
+import { ARTICLES, ARTICLE_CATEGORIES, HISTORICAL_ARTICLE_SLUGS, getLocaleText, type ContentBlock, type ArticleCategory } from '@/data/articles'
 import { NewsletterSubscribeForm } from '@/components/newsletter/NewsletterSubscribeForm'
-import { generateArticleSchema } from '@/lib/seo'
+import { generateArticleSchema, socialImageUrl } from '@/lib/seo'
+import { BLOG_IMAGES, BLOG_IMAGE_FALLBACK } from '@/data/blogImages'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -14,14 +15,13 @@ export async function generateStaticParams() {
 }
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
-const OG_FALLBACK = `${BASE}/og/blog-default.png`
 
 const CATEGORY_KEYWORDS: Record<ArticleCategory, string[]> = {
   market:        ['M&A tech Europe', 'transaction actifs numériques', 'multiple valorisation SaaS', 'marché cession tech', 'deal flow Europe'],
   seller:        ['vendre son SaaS', 'cession startup tech', 'exit fondateur', 'valorisation SaaS', 'due diligence vendeur'],
   buyer:         ['acheter un SaaS', 'acquisition tech Europe', 'search fund', 'family office tech', 'private equity SaaS'],
   certification: ['certification actif tech', 'grade Aegryn', 'audit SaaS', 'CIFSO Protocol', 'due diligence indépendante'],
-  strategy:      ['stratégie cession tech', 'M&A stratégie', 'place de marché actifs tech', 'Aegryn Transaction', 'Swiss tech hub'],
+  strategy:      ['stratégie d’entreprise', 'innovation', 'création de valeur', 'exécution', 'cabinet intégré'],
   case_study:    ['étude de cas SaaS', 'exit SaaS Europe', 'transaction certifiée', 'M&A case study tech', 'Aegryn Grade'],
   legal:         ['share deal asset deal', 'RGPD cession données', 'fiscalité exit fondateur', 'earnout SaaS', 'structuration juridique cession'],
   vertical:      ['LegalTech valorisation', 'FinTech M&A', 'AI SaaS multiples', 'vertical software Europe', 'actif tech certifié'],
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {}
   const title       = getLocaleText(article.title, locale)
   const description = getLocaleText(article.excerpt, locale)
-  const ogImage     = article.ogImage ?? OG_FALLBACK
+  const ogImage     = socialImageUrl(title, BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK)
   const canonical   = `${BASE}/${locale}/blog/${slug}`
   const keywords    = [
     ...BASE_ARTICLE_KEYWORDS,
@@ -108,6 +108,7 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound()
 
   const t           = await getTranslations({ locale, namespace: 'discover' })
+  const th = await getTranslations({ locale, namespace: 'harmony' })
   const catLabel = getLocaleText(ARTICLE_CATEGORIES[article.category], locale)
   const dateStr  = new Date(article.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 
@@ -117,7 +118,7 @@ export default async function ArticlePage({ params }: Props) {
     description:    getLocaleText(article.excerpt, locale),
     url:            canonical,
     datePublished:  article.date,
-    image:          article.ogImage,
+    image:          socialImageUrl(getLocaleText(article.title, locale), BLOG_IMAGES[article.slug] ?? BLOG_IMAGE_FALLBACK),
     locale,
     articleSection: catLabel,
     keywords:       [...(CATEGORY_KEYWORDS[article.category] ?? []), ...(article.keywords ?? [])],
@@ -155,8 +156,8 @@ export default async function ArticlePage({ params }: Props) {
             {catLabel}
           </p>
           <h1
-            className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-6"
-            style={{ fontSize: 'clamp(48px,6vw,86px)' }}
+            className="font-sans font-bold text-white leading-[1.18] tracking-[-0.03em] mb-6 [overflow-wrap:anywhere]"
+            style={{ fontSize: 'clamp(32px,4.5vw,64px)' }}
           >
             {getLocaleText(article.title, locale)}
           </h1>
@@ -177,12 +178,21 @@ export default async function ArticlePage({ params }: Props) {
       {/* Article body */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
+          {HISTORICAL_ARTICLE_SLUGS.includes(slug) && (
+            <aside className="mb-12 rounded-2xl border border-ag-border bg-ag-off-white p-6 md:p-8">
+              <p className="mb-3 font-semibold text-ag-black">{th('historicalTitle')}</p>
+              <p className="text-[15px] leading-relaxed text-ag-gray">{th('historicalNote')}</p>
+              <Link href="/about" className="mt-4 inline-block text-[15px] font-semibold text-ag-apex-ink underline underline-offset-4">{th('currentModel')}</Link>
+            </aside>
+          )}
           {article.body ? (
             <div className="space-y-8">
               {article.body.map((block: ContentBlock, i: number) => {
                 if (block.type === 'p') return (
-                  <p key={i} className="font-sans text-[16px] text-ag-gray leading-[1.85]">
-                    {getLocaleText(block.text, locale)}
+                  <p key={i} className="font-sans text-[16px] text-ag-gray leading-[1.85] whitespace-pre-line">
+                    {getLocaleText(block.text, locale).split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
+                      part.startsWith('**') && part.endsWith('**') ? <strong key={j}>{part.slice(2, -2)}</strong> : part
+                    )}
                   </p>
                 )
                 if (block.type === 'h2') return (

@@ -10,6 +10,7 @@ import { SideDrawerLauncher } from '@/components/ui/SideDrawerLauncher'
 import { LIFECYCLE_LABELS, ADVISORY_UI } from '@/content/advisory'
 import { PAGE_ACTIONS, getAction } from '@/content/advisory/actions'
 import { routing } from '@/i18n/routing'
+import { TechnologyContents } from './TechnologyContents'
 import type { AdvisoryPageContent } from '@/content/advisory/types'
 
 interface Props {
@@ -136,6 +137,7 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
       </section>
 
       {/* ── Constat ── */}
+      {c.path === '/advisory/technology' && <TechnologyContents />}
       <section className="py-24 px-6 md:px-12 border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
           <p className={`${LABEL} mb-8`}>{c.observation.title}</p>
@@ -182,7 +184,7 @@ export function AdvisoryPillarPage({ content: c, locale, implement }: Props & { 
       </section>
 
       {/* ── Situations ── */}
-      <section id="situations" className="py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
+      <section id="situations" className="scroll-mt-32 py-24 px-6 md:px-12 bg-ag-off-white border-t border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto">
           <div className="mb-14 max-w-2xl">
             <p className={`${LABEL} mb-4`}>{ui.sixSituations}</p>

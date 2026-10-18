@@ -22,8 +22,11 @@ const ARTICLE_COUNT = TOC_01.reduce((n, s) => n + s.articles.length, 0)
 const PAGE_COUNT    = Math.max(...TOC_01.flatMap(s => s.articles.map(a => a.page))) + 1
 
 export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
-  const [tab, setTab] = useState<'flipbook' | 'web'>('flipbook')
+  const [tab, setTab] = useState<'flipbook' | 'web' | null>(null)
   const [anchor, setAnchor] = useState<string | null>(null)
+  useEffect(() => {
+    setTab(current => current ?? (window.matchMedia('(max-width: 767px)').matches ? 'web' : 'flipbook'))
+  }, [])
 
   /* La barre laterale (MagazineNav) demande une section de la web edition */
   useEffect(() => {
@@ -69,7 +72,7 @@ export function IssueViewerTabs({ flipbookSrc, webSrc, issueLabel }: Props) {
       </div>
 
       {/* Viewer */}
-      {tab === 'flipbook'
+      {tab === null ? <div className="min-h-[700px]" aria-busy="true" /> : tab === 'flipbook'
         ? <FlipbookViewer htmlSrc={flipbookSrc} title="Aegryn Magazine 01 | Flipbook" />
         : <WebViewer      htmlSrc={webSrc}      anchor={anchor} title="Aegryn Magazine 01 | Web Edition" />
       }

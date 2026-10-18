@@ -25,13 +25,13 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
+        allow: ['/', '/api/og', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
         disallow: privateAreas,
       },
       /* Explicit allow for major search and AI crawlers, mêmes zones privées exclues */
       {
         userAgent: aiCrawlers,
-        allow: ['/', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
+        allow: ['/', '/api/og', '/llms.txt', '/llms-full.txt', '/llms-updated.txt'],
         disallow: privateAreas,
       },
     ],

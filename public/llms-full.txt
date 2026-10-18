@@ -98,6 +98,8 @@ Confidential acquisition or transfer mandates are accompanied under NDA through 
 **Signature projects (/boutique/projets, /boutique/projets/[slug]):** neediu (home services, intelligent matching; featured in Gala magazine, 27 November 2025), Movtoo (on-demand transport in dense urban areas), Primiom (real estate), Hobconnect (social network around shared passions), Heritix (digital succession vault), Chrosium (sun-application indicator), Insertdry (tropical dry-food storage unit). Subblink (AI contract analysis, https://subblink.com) is presented at /assets/subblink.
 **Meeting places:** exceptional venues for meetings, announced progressively.
 **Articles from La Boutique:** trends, projects, builders.
+
+**Project stages (18 October 2026):** neediu and Movtoo are in pilot. Primiom, Heritix and Chrosium are in development. Hobconnect and Insertdry are concepts. Described features are scoped to the project's stage, not a claim that all functions are operational. The earlier /what-we-build page and its localised paths redirect permanently to /boutique/projets. /assets remains the home of the firm's operational tools.
 **Submit a project:** /contact?subject=project. A confidentiality agreement precedes any detailed exchange; personal reply within two working days.
 
 ---
@@ -243,7 +245,7 @@ Swiss rigour shows in simplicity: clear decisions, careful work, no excess.
 | Legal | /fr/privacy, /fr/terms/use, /fr/terms/cgv, /fr/terms/ai-usage, /fr/security, /fr/data-protection-notice-neediu |
 | Sitemap | /fr/sitemap |
 
-Note: /about, /culture, /contact, /experts and /what-we-build are localised per language (for example /de/ueber-uns, /de/kultur-und-werte, /it/contatto, /es/expertos, /nl/over-ons). Every canonical URL with hreflang alternates is listed in https://aegryn.com/sitemap.xml
+Note: /about, /culture, /contact and /experts are localised per language (for example /de/ueber-uns, /de/kultur-und-werte, /it/contatto, /es/expertos, /nl/over-ons). Every canonical URL with hreflang alternates is listed in https://aegryn.com/sitemap.xml
 
 ---
 

@@ -7,7 +7,7 @@ export interface TocSection { id: string; label: string; pillar: Pillar; pageRan
 
 export const TOC_01: TocSection[] = [
   { id: 's-opening', label: "Opening", pillar: 'build', pageRange: 'p.04–13', articles: [
-    { anchor: 'the-aegryn-model-five-disciplines-one-st', title: "Five disciplines. One standard.", page: 4 },
+    { anchor: 'the-aegryn-model-five-disciplines-one-st', title: "Five ways of working. One standard.", page: 4 },
     { anchor: 'sommaire-contents', title: "Contents", page: 5 },
     { anchor: 'masthead-aegryn', title: "Aegryn", page: 7 },
     { anchor: 'editorial-a-letter', title: "A Letter", page: 8 },

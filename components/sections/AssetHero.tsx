@@ -23,6 +23,10 @@ export function AssetHero({ label, title, sub }: AssetHeroProps = {}) {
     const wrap = wrapRef.current
     const heading = headingRef.current
     if (!wrap || !heading) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.set([labelRef.current, subRef.current], { opacity: 1 })
+      return
+    }
     const split = new SplitText(heading, { type: 'lines', linesClass: 'ahb-line' })
     ;(split.lines as HTMLElement[]).forEach(line => { line.style.paddingBottom = '0.18em'; line.style.marginBottom = '-0.18em' })
     const ctx = gsap.context(() => {

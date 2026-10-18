@@ -57,16 +57,19 @@ export function DiscoverGrid({ locale }: Props) {
   const sideList = featured.filter((_, i) => i !== mainIndex).slice(0, 7)
 
   useEffect(() => {
-    if (!showFeatured || featured.length <= 1) return
+    if (!showFeatured || featured.length <= 1 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const id = setInterval(() => {
-      setMainIndex(i => (i + 1) % featured.length)
+      const rect = mainFeaturedRef.current?.getBoundingClientRect()
+      if (!document.hidden && rect && rect.bottom > 0 && rect.top < window.innerHeight) {
+        setMainIndex(i => (i + 1) % featured.length)
+      }
     }, 5000)
     return () => clearInterval(id)
   }, [showFeatured, featured.length])
 
   /* Fondu à chaque changement d'article principal à la une */
   useEffect(() => {
-    if (!mainFeaturedRef.current) return
+    if (!mainFeaturedRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     gsap.fromTo(mainFeaturedRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 0.5, ease: 'expo.out' }
@@ -115,6 +118,7 @@ export function DiscoverGrid({ locale }: Props) {
     { key: 'talent',        label: t('filterTalent')        },
     { key: 'financing',     label: t('filterFinancing')     },
     { key: 'compliance',    label: t('filterCompliance')    },
+    ...(['trends', 'projects', 'builders'] as const).map(key => ({ key, label: ARTICLE_CATEGORIES[key][lang] ?? ARTICLE_CATEGORIES[key].en })),
   ]
 
   const filters = allFilters.filter(f =>

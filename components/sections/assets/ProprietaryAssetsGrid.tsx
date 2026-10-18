@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { ArrowUpRight, ExternalLink, Info, Lock } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
+import NextLink from 'next/link'
 import { gsap } from '@/lib/gsap'
 import { FilterPills } from '@/components/ui/FilterPills'
 
@@ -115,7 +116,9 @@ const STATUS_COLOR: Record<string, string> = {
 }
 
 export function ProprietaryAssetsGrid() {
+  const locale = useLocale()
   const t      = useTranslations('assets.page')
+  const th = useTranslations('harmony')
   const tFooter = useTranslations('footer')
   const tItems = useTranslations('assets.items')
   const [active, setActive] = useState<PropCategory>('all')
@@ -166,7 +169,7 @@ export function ProprietaryAssetsGrid() {
         <div className="flex items-center flex-wrap gap-3 mb-12 pb-6">
           <FilterPills options={filters} active={active} onChange={setActive} />
           <span className="ml-auto font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-            {filtered.length} actif{filtered.length > 1 ? 's' : ''}
+            {th('toolCount', { count: filtered.length })}
           </span>
         </div>
 
@@ -178,21 +181,21 @@ export function ProprietaryAssetsGrid() {
               className="prop-asset-card bg-ag-white rounded-2xl border border-ag-border p-8 flex flex-col gap-5 group hover:bg-ag-off-white transition-colors"
             >
               {/* Top row */}
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex-1">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div className="min-w-0 basis-40 flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-ag-gray-light">
                       {tItems(asset.badgeKey)}
                     </p>
                   </div>
-                  <h2 className="font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
+                  <h2 lang={locale} className="break-words hyphens-auto font-sans font-bold text-ag-black text-[20px] tracking-[-0.02em]">
                     {tItems(asset.nameKey)}
                   </h2>
                 </div>
                 {/* Publisher badge */}
                 {asset.publisherReady && (
                   <span className="rounded-lg font-mono text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 border border-ag-apex/30 bg-ag-apex/5 text-ag-apex-ink shrink-0">
-                    LICENCIABLE
+                    {th('licensable')}
                   </span>
                 )}
               </div>
@@ -211,7 +214,7 @@ export function ProprietaryAssetsGrid() {
               </div>
 
               {/* Tagline — nom public avec symbole marque collé */}
-              <p className="font-sans font-semibold text-ag-black text-[14px] leading-snug whitespace-nowrap">
+              <p className="min-h-[2.5em] font-sans font-semibold text-ag-black text-[14px] leading-snug">
                 {tItems(asset.taglineKey)}{asset.id === 'subblink' ? <sup className="text-[9px] font-normal">®</sup> : asset.id === 'kryv' ? <sup className="text-[9px] font-normal">™</sup> : null}
               </p>
 
@@ -236,6 +239,10 @@ export function ProprietaryAssetsGrid() {
                   >
                     {t('viewDetails')} <ArrowUpRight size={11} />
                   </Link>
+                ) : asset.visitPageHref?.startsWith('/client/') ? (
+                  <NextLink href={asset.visitPageHref} className="font-mono text-[10px] tracking-[0.14em] uppercase text-ag-black hover:text-ag-apex-ink transition-colors flex items-center gap-1">
+                    {t('visitPage')} <ArrowUpRight size={11} />
+                  </NextLink>
                 ) : asset.visitPageHref ? (
                   <Link
                     href={asset.visitPageHref as never}

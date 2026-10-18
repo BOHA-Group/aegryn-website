@@ -3,6 +3,7 @@
 import { useEffect, useRef }   from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { X }                    from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 /**
  * /[locale]/magazine/issue-01/flipbook
@@ -12,6 +13,7 @@ import { X }                    from 'lucide-react'
  * - Aucun flash de contenu sous-jacent
  */
 export default function FlipbookContent() {
+  const t = useTranslations('harmony')
   const router = useRouter()
   const params = useParams()
   const locale = typeof params.locale === 'string' ? params.locale : 'fr'
@@ -37,7 +39,7 @@ export default function FlipbookContent() {
       {/* Quit button */}
       <button
         onClick={handleQuit}
-        aria-label="Quitter le flipbook"
+        aria-label={t('quit')}
         style={{
           position:    'absolute',
           top:         16,
@@ -61,7 +63,7 @@ export default function FlipbookContent() {
         onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
       >
         <X size={12} />
-        Quitter
+        {t('quit')}
       </button>
 
       {/* Flipbook iframe */}

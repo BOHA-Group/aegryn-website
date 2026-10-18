@@ -7,6 +7,7 @@ import { Aegryn_ASSETS, assetPath } from '@/data/assets'
 import { INDUSTRIES, getLocaleText, type Industry, type IndustrySector } from '@/data/industries'
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
+import { ProjectStage } from '@/components/ui/ProjectStage'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -38,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'neediu, application de mise en relation avec des prestataires à domicile. Paru dans Gala, 27 novembre 2025. Un actif propriétaire Aegryn.'
       : tItemsMeta(`${asset.id}.tagline`),
     path: assetPath(slug),
+    image: asset.image,
     locale,
     keywords: neediuKeywords,
   })
@@ -61,6 +63,7 @@ export default async function AssetPage({ params }: Props) {
   const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
   const isLive   = !!asset.url
+  const scopeKey = asset.status === 'pilot' ? 'pilot' : asset.status === 'not_started' ? 'concept' : 'development'
 
   /* Secteur de rattachement (eyebrow hero) */
   const sectorRef = asset.industrySector
@@ -107,6 +110,7 @@ export default async function AssetPage({ params }: Props) {
           >
             {tItems(`${asset.id}.capability`)}
           </h1>
+          <div className="mb-6"><ProjectStage status={asset.status} onDark /></div>
 
           {isLive && (
             <a
@@ -166,8 +170,9 @@ export default async function AssetPage({ params }: Props) {
             <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-10">
               <div>
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 mb-6">
-                  {t('rubricSetup')}
+                  {isLive ? t('rubricSetup') : t(`scope.${scopeKey}.title`)}
                 </p>
+                {!isLive && <p className="mb-6 text-[15px] leading-relaxed text-white/70">{t(`scope.${scopeKey}.desc`)}</p>}
                 <p className="text-[15px] text-white leading-[1.8] mb-6">
                   {longDesc}
                 </p>
@@ -434,14 +439,14 @@ export default async function AssetPage({ params }: Props) {
           </div>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:shrink-0">
             <Link
-              href="/what-we-build"
+              href="/boutique/projets"
               className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase text-white border border-white/30 px-6 py-3 hover:border-ag-apex hover:bg-ag-apex hover:text-ag-navy transition-all"
             >
               {t('cta.allAssets')}
               <ArrowUpRight size={14} />
             </Link>
             <Link
-              href={`/contact?subject=general&projet=${asset.id}` as never}
+              href={{ pathname: '/contact', query: { subject: 'project', projet: asset.id } }}
               className="rounded-lg inline-flex items-center gap-3 font-sans font-semibold text-[11px] tracking-[0.16em] uppercase bg-ag-apex text-ag-navy px-6 py-3 hover:bg-ag-apex/90 transition-colors"
             >
               {tAssets('compareCta')}

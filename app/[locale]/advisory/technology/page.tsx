@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const c = getAdvisoryPage(locale, 'technology')
   if (!c) return {}
-  return generateAegrynMetadata({ title: c.meta.title, description: c.meta.description, path: c.path, locale, keywords: c.meta.keywords })
+  return generateAegrynMetadata({ title: c.meta.title, description: c.meta.description, path: c.path, locale, keywords: c.meta.keywords, image: c.image })
 }
 
 export default async function TechnologyAdvisoryPage({ params }: Props) {

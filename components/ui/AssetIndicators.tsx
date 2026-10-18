@@ -1,4 +1,5 @@
 import type { AssetStatus } from '@/data/assets'
+import { ProjectStage } from './ProjectStage'
 
 /* ── Voyants lumineux ─────────────────────────────────────────────── */
 
@@ -60,9 +61,7 @@ export function NotStartedIndicator() {
 
 export function StatusIndicator({ status, isRestricted }: { status: AssetStatus; isRestricted?: boolean }) {
   if (isRestricted) return <RestrictedIndicator />
-  if (status === 'live') return <LiveIndicator />
-  if (status === 'not_started') return <NotStartedIndicator />
-  return <DevIndicator />
+  return <ProjectStage status={status} />
 }
 
 /* ── Badge catégorie pill ─────────────────────────────────────────── */

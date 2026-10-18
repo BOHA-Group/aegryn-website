@@ -55,6 +55,11 @@ import { SKILLS_GAP_ARTICLE, AI_HIRING_ARTICLE } from './articles-workforce'
 import { TRENDS_SIGNALS_ARTICLE, BUILDER_DAY_ARTICLE, LAUNCH_ANATOMY_ARTICLE } from './articles-home-2026'
 
 const REMOVED_SLUGS = ['glossaire-ma-tech-europe']
+export const HISTORICAL_ARTICLE_SLUGS = [
+  'marche-ma-tech-europeen-besoin-christies',
+  'search-fund-acquisition-saas-europe',
+  'etude-de-cas-certification-saas-b2b-exit-4x',
+]
 
 export const ARTICLES: Article[] = ([
   TRENDS_SIGNALS_ARTICLE,
@@ -3498,5 +3503,15 @@ export const ARTICLE_CATEGORIES: Record<ArticleCategory, LocaleText> = {
 
 export function getLocaleText(text: LocaleText, locale: string): string {
   const key = locale as keyof LocaleText
-  return text[key] ?? text.en
+  // Older editorial imports contain escaped paragraphs and the former C-dimension name.
+  const dimensionNames: Record<string, [string, string]> = {
+    fr: ['dimension Intégrité', 'dimension Code & Architecture'],
+    en: ['Integrity dimension', 'Code & Architecture dimension'],
+    de: ['Dimension Integrität', 'Dimension Code & Architektur'],
+    es: ['dimensión Integridad', 'dimensión Código y Arquitectura'],
+    it: ['dimensione Integrità', 'dimensione Codice e Architettura'],
+    nl: ['dimensie Integriteit', 'dimensie Code & Architectuur'],
+  }
+  const [oldName, currentName] = dimensionNames[text[key] ? locale : 'en'] ?? dimensionNames.en
+  return (text[key] ?? text.en).replace(/\\n/g, '\n').replace(oldName, currentName)
 }

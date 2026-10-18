@@ -5,9 +5,9 @@
 export const BLOG_IMAGES: Record<string, string> = {
   'projets-emblematiques-cinq-signaux-a-suivre-2026':            '/images/blog/startup-team.jpg',
   'une-journee-avec-un-fondateur-rituels-lieux-outils':         '/images/blog/team-laptops.jpg',
-  'du-concept-au-marche-anatomie-d-un-lancement':               '/images/blog/executive-suit.jpg',
-  'recruter-ia-2026-salaires-competences-verifiees': '/images/blog/hiring-interview-handshake.jpg',
-  'penurie-competences-ia-2026-former-ou-recruter': '/images/blog/training-workshop-office.jpg',
+  'du-concept-au-marche-anatomie-d-un-lancement':               '/images/blog/product-formulation.jpg',
+  'recruter-ia-2026-salaires-competences-verifiees': '/images/blog/hiring-interview-handshake-cropped.jpg',
+  'penurie-competences-ia-2026-former-ou-recruter': '/images/blog/training-workshop-office-cropped.jpg',
   'cyber-resilience-act-2026-obligations-signalement-produits-numeriques': '/images/blog/chip-hardware-security.jpg',
   'nis2-2026-france-retard-transposition-exposition-cybersecurite': '/images/blog/notebook-desk.jpg',
   'dora-2026-resilience-operationnelle-numerique-secteur-financier-europe': '/images/blog/agile-standup.jpg',

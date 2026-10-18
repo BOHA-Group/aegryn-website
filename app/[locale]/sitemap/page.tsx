@@ -3,11 +3,12 @@ import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import type { Metadata } from 'next'
 import { ChevronRight } from 'lucide-react'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'sitemap' })
-  return { title: t('metaTitle'), description: t('metaDesc') }
+  return generateAegrynMetadata({ title: t('metaTitle'), description: t('metaDesc'), path: '/sitemap', locale })
 }
 
 type SitemapGroup = {
@@ -31,13 +32,11 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'valuation',    href: '/valuation' },
       { labelKey: 'experts',      href: '/experts' },
       { labelKey: 'alliances',    href: '/alliances' },
-      { labelKey: 'annuaire',     href: '/annuaire' },
     ],
   },
   {
     labelKey: 'groupConstruire',
     links: [
-      { labelKey: 'whatWeBuild',   href: '/what-we-build' },
       { labelKey: 'assets',        href: '/assets' },
       { labelKey: 'grade',         href: '/grade' },
       { labelKey: 'gradeMethod',   href: '/grade/brochure' },

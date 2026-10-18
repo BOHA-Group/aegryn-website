@@ -42,6 +42,9 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    '/api/og': ['./node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-600-normal.woff'],
+  },
   devIndicators: false,
   allowedDevOrigins: ['127.0.0.1', 'localhost'],
   turbopack: {
@@ -150,6 +153,10 @@ const nextConfig: NextConfig = {
       { source: '/blog/glossaire-ma-tech-europe',       destination: '/blog',                            permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/blog/glossaire-ma-tech-europe', destination: '/:locale/blog',                  permanent: true },
       /* Projets : /portfolio et /assets/<projet> migrent vers La Boutique (subblink reste un actif du cabinet) */
+      ...['what-we-build', 'ce-que-nous-construisons', 'was-wir-bauen', 'lo-que-construimos', 'cosa-costruiamo', 'wat-we-bouwen'].flatMap(slug => [
+        { source: `/:locale(fr|en|de|es|it|nl)/${slug}`, destination: '/:locale/boutique/projets', permanent: true },
+        { source: `/${slug}`, destination: '/boutique/projets', permanent: true },
+      ]),
       { source: '/portfolio',                           destination: '/boutique/projets',               permanent: true },
       { source: '/:locale(fr|en|de|es|it|nl)/portfolio',               destination: '/:locale/boutique/projets',       permanent: true },
       { source: '/assets/:slug(neediu|movtoo|primiom|hobconnect|heritix|chrosium|insertdry)',  destination: '/boutique/projets/:slug',         permanent: true },

@@ -22,6 +22,7 @@ function sectorOf(asset: AegrynAsset) {
 
 export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) {
   const t = useTranslations('assets.page')
+  const th = useTranslations('harmony')
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
@@ -65,7 +66,7 @@ export function AssetsGrid({ excludeIds = [] }: { excludeIds?: string[] } = {}) 
         <div className="flex items-center flex-wrap gap-3 mb-12 pb-6">
           <FilterPills options={filters} active={active} onChange={setActive} />
           <span className="ml-auto font-mono text-[10px] tracking-[0.14em] uppercase text-ag-gray-light">
-            {filtered.length} actif{filtered.length > 1 ? 's' : ''}
+            {th('projectCount', { count: filtered.length })}
           </span>
         </div>
 

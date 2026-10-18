@@ -16,8 +16,11 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, TikTokIcon, YouTubeIcon } fr
 function FooterMedallion({ medallionText, contactLabel }: { medallionText: string; contactLabel: string }) {
   const ringRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    const r = gsap.to(ringRef.current, { rotation: 360, duration: 26, ease: 'none', repeat: -1 })
-    return () => { r.kill() }
+    const mm = gsap.matchMedia()
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.to(ringRef.current, { rotation: 360, duration: 26, ease: 'none', repeat: -1 })
+    })
+    return () => mm.revert()
   }, [])
   const SIZE = 110
   const CX   = 55

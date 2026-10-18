@@ -5,7 +5,6 @@ import { ManifestoSection }  from '@/components/sections/ManifestoSection'
 import { BuildStrip }        from '@/components/sections/BuildStrip'
 import { MissionVideoSection } from '@/components/sections/MissionVideoSection'
 import { SegmentsSection }   from '@/components/sections/SegmentsSection'
-import { HybridBlock }       from '@/components/sections/HybridBlock'
 import { HomeTalentStrip }   from '@/components/sections/HomeTalentStrip'
 import { MetiersScroller } from '@/components/sections/MetiersScroller'
 import { FranchirHomeSection } from '@/components/sections/FranchirHomeSection'
@@ -42,7 +41,6 @@ export default async function HomePage({ params }: Props) {
       <MissionVideoSection />
 
       {/* ── 04. Notre ADN hybride ──────────────────────────── */}
-      <HybridBlock />
 
       {/* ── 05. Nos clients : de la startup à l'ETI ───────── */}
       <SegmentsSection />

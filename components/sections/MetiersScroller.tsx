@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
+import { useDecorativeVideo } from '@/hooks/useDecorativeVideo'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
@@ -38,23 +39,7 @@ export function MetiersScroller() {
   const pillars = (t.raw('pillars') as Record<string, Pillar>) || {}
   const keys = Object.keys(pillars)
 
-  /* Vidéo chargée seulement quand la section approche du viewport */
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-    const load = () => {
-      if (video.dataset.loaded) return
-      video.dataset.loaded = '1'
-      const small = window.matchMedia('(max-width: 1023px)').matches
-      video.src = (small ? video.dataset.srcMobile : video.dataset.srcDesktop) ?? ''
-      video.load()
-      video.play().catch(() => {})
-    }
-    if (!('IntersectionObserver' in window)) { load(); return }
-    const io = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) { load(); io.disconnect() } }, { rootMargin: '800px 0px' })
-    io.observe(video)
-    return () => io.disconnect()
-  }, [])
+  useDecorativeVideo(videoRef, '/videos/sailboat-rope-web.mp4', '/videos/sailboat-rope-mobile.mp4')
 
   useLayoutEffect(() => {
     const section = sectionRef.current, track = trackRef.current, bg = bgRef.current, intro = introRef.current
@@ -125,6 +110,12 @@ export function MetiersScroller() {
           },
         })
         const drawAll = () => {
+          const video = videoRef.current
+          if (video) {
+            const rect = video.getBoundingClientRect()
+            if (tl.time() >= 2.4 || rect.bottom <= 0 || rect.top >= window.innerHeight || document.hidden) video.pause()
+            else if (video.paused && video.getAttribute('src')) video.play().catch(() => {})
+          }
           const gate = gsap.utils.clamp(0, 1, (tl.time() - 1.9) / 0.3)
           const vw = window.innerWidth
           draws.forEach(o => {
@@ -161,12 +152,11 @@ export function MetiersScroller() {
         <video
           ref={videoRef}
           className="mw-video"
-          autoPlay
           muted
           loop
           playsInline
           poster="/images/services/sailboat-rope-poster.jpg"
-          preload="metadata"
+          preload="none"
           data-src-desktop="/videos/sailboat-rope-web.mp4"
           data-src-mobile="/videos/sailboat-rope-mobile.mp4"
         >

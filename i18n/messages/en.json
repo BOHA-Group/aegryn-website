@@ -149,8 +149,8 @@
     "sub": "Aegryn proprietary assets, available for direct access or under licence.",
     "portfolio": {
       "meta": {
-        "title": "Aegryn Group | Holdings and portfolio",
-        "desc": "Strategic holdings of the Aegryn group: Subblink, Neediu, Primiom, Movtoo, Hobconnect. Proprietary assets, not for sale."
+        "title": "La Boutique, signature projects | Aegryn",
+        "desc": "Discover La Boutique's projects, the know-how they draw on and their stage of development, from concept to pilot."
       },
       "label": "Our portfolio",
       "title": "What we build\nwith those who think big.",
@@ -188,8 +188,8 @@
       "title": "Six proprietary assets.\nOne shared vision.",
       "desc": "Every Aegryn asset is designed, built and operated in-house. Full ownership, guaranteed independence, durability built into the code.",
       "meta": {
-        "title": "Aegryn Assets, Proprietary ecosystem",
-        "desc": "Discover Aegryn's proprietary assets: subblink, neediu, primiom, movtoo, hobconnect, engineered to last, certifiable and transferable."
+        "title": "Operational tools | Aegryn",
+        "desc": "Aegryn's proprietary tools to analyse, document and steer organisations: contracts, valuation, certification and data."
       },
       "filterAll": "All",
       "filterTransactions": "Markets & Communities",
@@ -1193,6 +1193,8 @@
     }
   },
   "assetStatus": {
+    "pilot": "Pilot",
+    "concept": "Concept",
     "live": "Live",
     "beta": "Beta",
     "dev": "In development",
@@ -1200,15 +1202,20 @@
     "refused": "Refused"
   },
   "assetPage": {
+    "scope": {
+      "pilot": { "title": "Pilot scope", "desc": "Project in pilot. The features presented are part of the scope being tested, with validation ongoing." },
+      "development": { "title": "What we are developing", "desc": "Project in development. The features described define the intended scope and are not all available at this stage." },
+      "concept": { "title": "What the concept aims to achieve", "desc": "Project at concept stage. The features described are design objectives, still to be developed and validated." }
+    },
     "back": "← Back to assets",
     "audience": "Target audience",
     "features": "Key features",
     "visit": "Visit",
     "comingSoon": "Coming soon",
     "cta": {
-      "label": "Interested in this asset?",
-      "title": "Let's discuss your acquisition",
-      "allAssets": "View all assets"
+      "label": "Know-how for your project",
+      "title": "A similar project? Let's discuss how to deliver it.",
+      "allAssets": "View all projects"
     },
     "assets": {
       "subblink": {
@@ -1973,12 +1980,12 @@
   },
   "discover": {
     "meta": {
-      "title": "Discover | Aegryn Market Intelligence",
-      "desc": "Market reports, transfer and acquisition guides, certification analyses: the intelligence of the European tech market by Aegryn."
+      "title": "Analysis and entrepreneurial perspectives | Aegryn",
+      "desc": "Strategy, finance, technology, organisation and signature projects: analysis, guides and stories to inform business leaders' decisions."
     },
     "label": "Aegryn Blog",
     "title": "Market intelligence.\nOpen to all.",
-    "desc": "Reports, guides and analyses to understand the European tech asset market, written by the Aegryn teams.",
+    "desc": "Analysis, guides and stories about leadership decisions, organisational transformation and projects taking shape.",
     "filterAll": "All",
     "filterMarket": "Market report",
     "filterSeller": "Transfer guide",
@@ -7877,5 +7884,21 @@
     "copy": "Copy link",
     "copied": "Link copied",
     "email": "Email"
+  },
+  "harmony": {
+    "toolCount": "{count, plural, one {# tool} other {# tools}}",
+    "licensable": "Licensable",
+    "illustration": "Illustrative image",
+    "projectCount": "{count, plural, one {# project} other {# projects}}",
+    "historicalTitle": "Historical perspective",
+    "historicalNote": "This article describes an earlier stage of Aegryn's positioning. Passages about access to assets or their transactions no longer describe an active offer. Aegryn now operates as an integrated advisory firm and an entrepreneurial boutique for signature projects.",
+    "currentModel": "Discover Aegryn today",
+    "contents": "On this page",
+    "expertise": "Advisory and assessment",
+    "delivery": "Implementation",
+    "formats": "Engagement formats",
+    "sovereignty": "Sovereignty",
+    "method": "Method",
+    "quit": "Exit"
   }
 }

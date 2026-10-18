@@ -62,10 +62,14 @@ export default function LenisProvider({ children }: Props) {
   }
 
   useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
+    let disposed = false
+    let destroy = () => {}
     const initLenis = async () => {
       const { default: Lenis } = await import('lenis')
       const { ScrollTrigger } = await import('gsap/ScrollTrigger')
       const { gsap } = await import('gsap')
+      if (disposed || reduced.matches || lenisRef.current) return
 
       gsap.registerPlugin(ScrollTrigger)
 
@@ -81,17 +85,22 @@ export default function LenisProvider({ children }: Props) {
 
       lenisRef.current = lenis
       rafFnRef.current = rafFn
+      destroy = () => {
+        gsap.ticker.remove(rafFn)
+        lenis.destroy()
+        lenisRef.current = null
+        rafFnRef.current = null
+      }
     }
 
-    if (typeof window !== 'undefined') {
-      initLenis()
-    }
+    const update = () => { if (reduced.matches) destroy(); else void initLenis() }
+    update()
+    reduced.addEventListener('change', update)
 
     return () => {
-      if (rafFnRef.current) {
-        import('gsap').then(({ gsap }) => gsap.ticker.remove(rafFnRef.current!))
-      }
-      lenisRef.current?.destroy()
+      disposed = true
+      reduced.removeEventListener('change', update)
+      destroy()
     }
   }, [])
 

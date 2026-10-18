@@ -23,6 +23,7 @@ export function SegmentsSection() {
   const cards = t.raw('cards') as { key: string; title: string; desc: string }[]
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const ctx = gsap.context(() => {
       gsap.fromTo('.seg-card',
         { opacity: 0, y: 24 },
@@ -56,7 +57,7 @@ export function SegmentsSection() {
               <div
                 key={card.key}
                 className="seg-card group relative overflow-hidden rounded-2xl"
-                style={{ opacity: 0, minHeight: '380px' }}
+                style={{ minHeight: '380px' }}
               >
                 {/* Image background plein-cadre */}
                 {img && (

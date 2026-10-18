@@ -9,7 +9,7 @@ import { gsap }         from '@/lib/gsap'
 
 /* ── Slugs et photos par cluster ───────────────────────────── */
 const CLUSTER_META: Record<string, { slug: string; img: string }> = {
-  finance:   { slug: 'finance-capital',                      img: '/images/industries/theme_fintech.jpg' },
+  finance:   { slug: 'finance-capital',                      img: '/images/industries/finance-institutional.jpg' },
   sante:     { slug: 'sante-sciences-de-la-vie',             img: '/images/industries/cluster-sante.jpg' },
   industrie: { slug: 'industrie-energie-infrastructure',     img: '/images/industries/cluster-industrie.jpg' },
   commerce:  { slug: 'commerce-services-experience-client',  img: '/images/industries/theme_marketplace.jpg' },
@@ -26,6 +26,7 @@ export default function IndustriesPage() {
 
   /* Entrance GSAP */
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const ctx = gsap.context(() => {
       gsap.fromTo('.ind-card',
         { opacity: 0, y: 22 },
@@ -53,13 +54,13 @@ export default function IndustriesPage() {
             {t('desc')}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/grade"
-              className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
-              {t('certifCta')} <ArrowUpRight size={12} />
-            </Link>
             <Link href="/contact"
               className="rounded-lg inline-flex items-center gap-2 bg-ag-apex text-ag-navy font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-ag-apex/90 transition-colors">
-              {t('contactCta')}
+              {t('contactCta')} <ArrowUpRight size={12} />
+            </Link>
+            <Link href="/grade"
+              className="rounded-lg inline-flex items-center gap-2 border border-white/30 text-white font-mono text-[10px] tracking-[0.18em] uppercase px-7 py-3 font-semibold hover:bg-white/10 transition-colors">
+              {t('certifCta')}
             </Link>
           </div>
         </div>
@@ -89,7 +90,6 @@ export default function IndustriesPage() {
                   className="ind-card group relative overflow-hidden rounded-xl shrink-0 sm:w-[240px] lg:w-auto flex flex-col justify-end focus:outline-none"
                   style={{
                     height: 'clamp(180px, 22vw, 260px)',
-                    opacity: 0,
                     scrollSnapAlign: 'start',
                   }}
                 >
@@ -146,7 +146,7 @@ export default function IndustriesPage() {
               {t('cta1Text')}
             </p>
             <Link
-              href="/grade/brochure"
+              href="/valuation"
               className="rounded-lg shrink-0 inline-flex items-center gap-2 bg-ag-navy text-white font-mono text-[9px] tracking-[0.18em] uppercase px-5 py-2.5 font-semibold hover:bg-ag-black transition-colors whitespace-nowrap"
             >
               {t('cta1Button')} <ArrowUpRight size={10} />

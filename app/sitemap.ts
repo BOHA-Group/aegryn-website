@@ -6,7 +6,7 @@ import { routing }     from '@/i18n/routing'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
 const LOCALES = routing.locales
-const CONTENT_UPDATED = new Date('2026-10-16')
+const CONTENT_UPDATED = new Date('2026-10-18')
 
 /* Chemin interne → chemin public localisé (pathnames next-intl) */
 const PATHNAMES = routing.pathnames as Record<string, string | Record<string, string>>
@@ -29,7 +29,6 @@ const STATIC_ROUTES = [
   { path: '/investisseurs',                      priority: 0.6,  changeFrequency: 'monthly' as const },
   { path: '/sitemap',                            priority: 0.4,  changeFrequency: 'monthly' as const },
   { path: '/roadmap',                            priority: 0.5,  changeFrequency: 'monthly' as const },
-  { path: '/what-we-build',                      priority: 0.8,  changeFrequency: 'monthly' as const },
   { path: '/experts',                            priority: 0.8,  changeFrequency: 'weekly'  as const },
   // ── Industries ───────────────────────────────────────────────────────────────
   { path: '/industries',                         priority: 0.8,  changeFrequency: 'monthly' as const },

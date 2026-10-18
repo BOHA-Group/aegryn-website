@@ -11,7 +11,7 @@ export function GradeHero() {
   const descRef    = useRef<HTMLParagraphElement>(null)
   const labelRef   = useRef<HTMLParagraphElement>(null)
   useEffect(() => {
-    if (!headingRef.current) return
+    if (!headingRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const split = new SplitText(headingRef.current, { type: 'chars,words' })
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })

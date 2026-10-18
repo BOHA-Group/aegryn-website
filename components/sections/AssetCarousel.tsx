@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl'
 const STATUS_DOT_CONFIG = {
   live:        { dot: 'bg-ag-live',       pulse: true  },
   beta:        { dot: 'bg-ag-beta',       pulse: true  },
+  pilot:       { dot: 'bg-ag-apex',       pulse: false },
   dev:         { dot: 'bg-ag-dev',        pulse: false },
   not_started: { dot: 'bg-ag-gray-light', pulse: false },
 } as const
@@ -101,8 +102,9 @@ export function AssetCarousel() {
           const statusDot = STATUS_DOT_CONFIG[statusKey] ?? STATUS_DOT_CONFIG.not_started
           const statusLabel = statusKey === 'live' ? tStatus('live')
             : statusKey === 'beta' ? tStatus('beta')
+            : statusKey === 'pilot' ? tStatus('pilot')
             : statusKey === 'dev'  ? tStatus('dev')
-            : tStatus('notStarted')
+            : tStatus('concept')
           const isKryv = asset.id === 'kryv'
 
           if (isKryv) {

@@ -5,9 +5,10 @@ import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
-import { assetPath } from '@/data/assets'
+import { assetPath, type AssetStatus } from '@/data/assets'
+import { ProjectStage } from '@/components/ui/ProjectStage'
 
-type Project = { id: string; slug: string; image?: string }
+type Project = { id: string; slug: string; image?: string; status: AssetStatus }
 
 /**
  * La Boutique, section « Projets signature » : même chorégraphie que la section « Cadrer et réaliser »
@@ -55,7 +56,7 @@ export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title
         const draws = items.map(item => {
           const line = item.querySelector<HTMLElement>('.mw-line')
           const riser = item.querySelector<HTMLElement>('.mw-riser')
-          const copy = gsap.utils.toArray<HTMLElement>(item.querySelectorAll('.mw-title, .mw-meta'))
+          const copy = gsap.utils.toArray<HTMLElement>(item.querySelectorAll('.mw-title, .mw-meta, .mw-stage'))
           const d = gsap.timeline({ paused: true })
           if (line && riser) {
             const lr = line.getBoundingClientRect(), rr = riser.getBoundingClientRect()
@@ -130,6 +131,7 @@ export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title
             <div className="mw-text">
               <h3 className="mw-title">{tItems(`${p.id}.capability`)}</h3>
               <p className="mw-meta">{String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</p>
+              <div className="mw-stage mt-3"><ProjectStage status={p.status} /></div>
             </div>
           </Link>
         ))}

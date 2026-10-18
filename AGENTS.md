@@ -42,7 +42,7 @@
 - Vocabulaire : **huit métiers** de conseil (EN « disciplines », DE « Fachgebiete », ES « oficios », IT « mestieri », NL « vakgebieden ») et **cinq façons d'agir** (EN « ways of working », DE « Arten zu handeln », ES « formas de actuar », IT « modi di agire », NL « manieren van handelen »). Ne jamais appeler les cinq « métiers » ni « disciplines ». Industries : 22 clusters (« 22+ »).
 - Menu **Nos métiers** : **Cadrer et réaliser** (huit métiers, sur deux colonnes : Stratégie, Risques et Conformité, Finance et Performance, Technologie et Souveraineté, Opérations et Excellence opérationnelle, Talent et Organisation, Pilotage de projets et de programmes, M&A) · **Par situation** (cinq cycles de vie, `/accompagner/*`) · lien « Nos industries » en pied de panneau. Sélectionner n'a plus de colonne : c'est un bloc de la page Talent et Organisation (`#selectionner`, `components/advisory/SelectBlock.tsx`) et les pages `/talent/*`.
 - `/advisory` est la page hub des huit métiers (`content/advisory/hub.ts`). Les noms, descriptions et dimensions des huit métiers viennent de `advisory.pillars.*` (même source que la section d'accueil).
-- Accueil, section Cadrer et réaliser (`components/sections/MetiersScroller.tsx`, styles `.mw-*` dans `styles/globals.css`) : transcription de la section « Selected work » de scene-studio.webflow.io. Vidéo `sailboat-rope` qui s'ouvre en plein écran, puis grille des huit métiers (photo du hero de chaque page) en défilement horizontal épinglé avec traits rouges en escalier. La vidéo n'est plus sur la page Technologie.
+- Accueil, section Cadrer et réaliser (`components/sections/MetiersScroller.tsx`, styles `.mw-*` dans `styles/globals.css`) : transcription de la section « Selected work » de scene-studio.webflow.io. Vidéo `sailboat-rope` qui s'ouvre en plein écran, puis grille des huit métiers (photo du hero de chaque page) en défilement horizontal épinglé avec traits verts en escalier. La vidéo n'est plus sur la page Technologie.
 - Pages métier : `AdvisoryPillarPage` + `content/advisory/*.ts` (fr, en, de, es, it, nl pour les cinq historiques ; `finance.ts`, `operations.ts`, `program.ts` pour les trois autres). Pas de vignette par situation (cartes texte), pas de ligne « Sources » répétant les cartes, un seul bouton dans le bandeau final.
 - `/transact/*` et le statut `escrow_paid` : archivés/désactivés (noindex, redirects, lecture seule) — ne pas réintroduire en UI active.
 
@@ -97,6 +97,16 @@ Toute nouvelle page avec image en header doit réutiliser ce minHeight.
 
 - `/culture` (fr `/culture-et-valeurs`) : page blanche sans hero navy, dans « Qui sommes-nous » après « À propos ». Elle complète `/about` (identité, signe) et `/career` (qui renvoie vers elle) : cabinet d'entrepreneurs, résultat plutôt que documents d'archive, qualité des relations, vision partagée, travail flexible. Pas de promesse d'avantages (rémunération, programmes internes) : les textes LinkedIn restent indicatifs.
 - `/about`, section « Notre signe » : récit du logo original (`public/images/brand/logo.svg`), composant `AboutSign`, textes `about.sign` dans les six locales. Au défilement desktop : A noir, coupe diagonale, éclat vert `#5ADDA5`, puis texte intégral. Mobile : texte condensé et logo statique. Mouvement réduit : rendu statique. Les six cartes `about.values` sont réservées à La Boutique.
+
+## Harmonisation du site public (18 octobre 2026)
+
+- Portfolio : neediu et Movtoo en pilote, Primiom/Heritix/Chrosium en développement, Hobconnect/Insertdry au stade du concept. `ProjectStage` affiche les phases sur les cartes, le scroller et les fiches ; les fonctionnalités sont présentées selon la phase du projet.
+- `/what-we-build` et ses chemins traduits redirigent vers `/boutique/projets`, hors sitemap. Le code historique est conservé. `/assets` présente les outils opérationnels.
+- Les deux scrollers `.mw-*` utilisent des traits vert clair et du texte de survol `ag-apex-ink` sur blanc. Le bloc hybride redondant est retiré de l'accueil.
+- Vidéos décoratives : pause hors écran et onglet masqué, poster en mouvement réduit. Hero Boutique : reprise sur l'horloge musicale, toujours deux temps par clip. L'accueil dispose d'une variante vidéo mobile.
+- Magazine : édition web par défaut sur mobile, flipbook sur desktop. Le HTML de l'édition 01 est harmonisé à la lecture par `prepareMagazineHtml`, après le contrôle d'accès existant ; ancres et pagination conservées.
+- Partage : `/api/og` produit des visuels avec logo original, nom, titre localisé et photographie ; les métadonnées des articles utilisent la même photographie que leur carte.
+- Les articles historiques identifiés dans `HISTORICAL_ARTICLE_SLUGS` sont contextualisés ; ils ne décrivent pas une offre active de transactions ou d'accès prioritaire à des actifs.
 
 ## SEO, GEO et LLM
 

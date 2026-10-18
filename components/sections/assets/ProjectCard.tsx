@@ -4,24 +4,12 @@ import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { assetPath, type AegrynAsset } from '@/data/assets'
+import { ProjectStage } from '@/components/ui/ProjectStage'
 
 /** Fiche projet du portfolio : image, badge, titre (capacité démontrée), statut ; détails dépliés au survol (optionnels). */
 export function ProjectCard({ asset, showDetails = true }: { asset: AegrynAsset; showDetails?: boolean }) {
   const t = useTranslations('assets.page')
-  const tStatus = useTranslations('assetStatus')
   const tItems = useTranslations('assets.items')
-
-  const statusLabel = (status: string) => {
-    if (status === 'live')        return tStatus('live')
-    if (status === 'beta')        return tStatus('beta')
-    if (status === 'refused')     return tStatus('refused')
-    return null
-  }
-  const statusColor = (status: string) => {
-    if (status === 'live')  return 'text-ag-live'
-    if (status === 'beta')  return 'text-ag-beta'
-    return 'text-ag-gray'
-  }
 
   return (
         <div
@@ -49,20 +37,14 @@ export function ProjectCard({ asset, showDetails = true }: { asset: AegrynAsset;
               </h2>
 
               {/* Badges statut */}
-              {(statusLabel(asset.status) || asset.internalOnly) && (
                 <div className="flex items-center gap-3 flex-wrap">
-                  {statusLabel(asset.status) && (
-                    <span className={`font-mono text-[10px] tracking-[0.12em] uppercase ${statusColor(asset.status)}`}>
-                      {statusLabel(asset.status)}
-                    </span>
-                  )}
+                  <ProjectStage status={asset.status} />
                   {asset.internalOnly && (
                     <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
                       {t('internalOnly')}
                     </span>
                   )}
                 </div>
-              )}
 
               {/* Détails pliés — dépliés au survol (absents de l'aperçu en accueil de La Boutique) */}
               {showDetails && <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">

@@ -48,7 +48,7 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
     }
   }, [open])
 
-  const pageUrl = () => url ?? `${window.location.origin}/${locale}/boutique`
+  const pageUrl = () => url ?? `https://aegryn.com/${locale}/boutique`
   const shareText = () => title ?? 'Aegryn'
 
   const channels = (): Channel[] => {

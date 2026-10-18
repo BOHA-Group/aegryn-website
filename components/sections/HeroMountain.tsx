@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { gsap } from '@/lib/gsap'
 import { Link } from '@/i18n/navigation'
 import { RevealOnScroll } from '@/components/ui/RevealOnScroll'
+import { useDecorativeVideo } from '@/hooks/useDecorativeVideo'
 
 const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
 const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
@@ -76,9 +77,13 @@ export function HeroMountain() {
   const sectionRef  = useRef<HTMLElement>(null)
   const mediaRef    = useRef<HTMLDivElement>(null)
   const headingRef  = useRef<HTMLHeadingElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  useDecorativeVideo(videoRef, HERO_VIDEO, '/images/home/hero-homepage-mobile.mp4')
 
   useEffect(() => {
     if (!sectionRef.current) return
+    const motion = gsap.matchMedia()
+    motion.add('(prefers-reduced-motion: no-preference)', () => {
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'expo.out' } })
@@ -98,6 +103,8 @@ export function HeroMountain() {
     }, sectionRef)
 
     return () => ctx.revert()
+    })
+    return () => motion.revert()
   }, [])
 
   return (
@@ -110,10 +117,10 @@ export function HeroMountain() {
       {/* Vidéo plein format — parallax */}
       <div ref={mediaRef} className="absolute inset-0 scale-[1.12] will-change-transform">
         <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover object-center"
-          src={HERO_VIDEO}
           poster={HERO_POSTER}
-          autoPlay
+          preload="none"
           muted
           loop
           playsInline

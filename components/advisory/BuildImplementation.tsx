@@ -24,7 +24,7 @@ export async function BuildImplementation({ locale }: { locale: string }) {
   const formatCards             = t.raw('formatsSection.cards')         as { key: string; badge: string; subtitle: string; title: string; desc: string }[]
 
   return (
-    <div id="mettre-en-oeuvre" className="scroll-mt-24">
+    <div id="mettre-en-oeuvre" className="scroll-mt-32">
       <section className="bg-ag-white pb-4 pt-24">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <p className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{IMPLEMENT_UI.label[lang]}</p>
@@ -50,7 +50,7 @@ export async function BuildImplementation({ locale }: { locale: string }) {
       </section>
 
       {/* ── Section 1c : 3 formats de mission ──────────────────────────── */}
-      <section className="border-b border-ag-border">
+      <section id="formats-mission" className="scroll-mt-32 border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('formatsSection.label')}</p>
           <h2
@@ -128,7 +128,7 @@ export async function BuildImplementation({ locale }: { locale: string }) {
       </section>
 
       {/* ── Section 1d : Sovereignty by Architecture ──────────────────── */}
-      <section className="border-b border-ag-border">
+      <section id="souverainete" className="scroll-mt-32 border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('sovereigntySection.label')}</p>
           <h2
@@ -214,7 +214,7 @@ export async function BuildImplementation({ locale }: { locale: string }) {
       </section>
 
       {/* ── Section 6 : Process ──────────────────────────────────────── */}
-      <section className="border-b border-ag-border">
+      <section id="methode-projet" className="scroll-mt-32 border-b border-ag-border">
         <ScrollReveal className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-4"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('process.label')}</p>
           <h2

@@ -5,16 +5,14 @@ import { getTranslations } from 'next-intl/server'
 import PartnersSection from '@/components/sections/PartnersSection'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { WaveReveal }   from '@/components/animations/WaveReveal'
+import { generateAegrynMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'gradePartners' })
-  return {
-    title: t('meta.title'),
-    description: t('meta.desc'),
-  }
+  return generateAegrynMetadata({ title: t('meta.title'), description: t('meta.desc'), path: '/audit', locale })
 }
 
 const PARTNER_ICONS = [Code2, Scale, Calculator, ShieldCheck, Users] as const
@@ -72,7 +70,7 @@ export default async function GradePartnersPage() {
           {PARTNER_TYPES.map((p) => {
             const Icon = p.icon
             return (
-              <div key={p.label} className="border border-ag-border border-dashed p-8 flex flex-col gap-6">
+              <div key={p.label} className="rounded-2xl border border-ag-border p-8 flex flex-col gap-6">
                 <div className="w-12 h-12 border border-ag-border flex items-center justify-center">
                   <Icon size={18} className="text-ag-gray-light" />
                 </div>
