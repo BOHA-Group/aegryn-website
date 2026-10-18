@@ -8,15 +8,16 @@ type Options = {
   /** Boutique hero: loop the titles independently of the two-beat video cuts. */
   loop?: boolean
   pauseMs?: number
+  enabled?: boolean
 }
 
 /** Shared home/Boutique typewriter: type, read, erase, then advance. */
-export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = false, pauseMs = 3500 }: Options = {}) {
+export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = false, pauseMs = 3500, enabled = true }: Options = {}) {
   const [text, setText] = useState('')
   const [cycle, setCycle] = useState(0)
 
   useEffect(() => {
-    if (!phrases.length) { setText(''); return }
+    if (!enabled || !phrases.length) { setText(''); return }
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
     let timer: ReturnType<typeof setTimeout> | undefined
     const start = () => {
@@ -62,7 +63,7 @@ export function useTypedPhrases(phrases: readonly string[], { videoMs, loop = fa
       clearTimeout(timer)
       reduced.removeEventListener('change', start)
     }
-  }, [phrases, cycle, videoMs, loop, pauseMs])
+  }, [phrases, cycle, videoMs, loop, pauseMs, enabled])
 
   return { text, restart: () => setCycle(c => c + 1) }
 }

@@ -996,8 +996,8 @@
       "title": "Un A dont la pointe est coupée.",
       "paragraph1": "Notre initiale est un A sans barre : deux traits qui s'appuient l'un sur l'autre, comme les deux versants d'une charpente. Cadrer et réaliser ne tiennent debout qu'ensemble.",
       "paragraph2": "La pointe est tranchée, et sa dernière pièce, en vert, se pose à part, au faîte. Sur un chantier, c'est la réception.",
-      "paragraph3": "Cette coupe en diagonale est aussi la barre oblique qui ferme ce qu'on a ouvert, comme dans <code></code>. Aegryn a commencé dans les solutions numériques et en a gardé l'exigence. Le vert, dans leurs outils, veut dire : validé.",
-      "mobile": "Deux traits qui s'appuient comme les versants d'une charpente. La dernière pièce, verte, se pose à part au faîte : c'est la réception. La coupe est aussi la barre oblique qui ferme ce qu'on a ouvert (<code></code>).",
+      "paragraph3": "Cette coupe en diagonale est aussi la barre oblique qui ferme ce qu'on a ouvert, comme dans le symbole <code></code>. Aegryn a commencé dans les solutions numériques et en a gardé l'exigence. Le vert, dans leurs outils, veut dire : validé.",
+      "mobile": "Deux traits qui s'appuient comme les versants d'une charpente. La dernière pièce, verte, se pose à part au faîte : c'est la réception. La coupe est aussi la barre oblique qui ferme ce qu'on a ouvert (le symbole <code></code>).",
       "closing": "Ce qui s'ouvre se ferme.",
       "signature": "Built to last.",
       "step1": "Deux traits qui s'appuient. Cadrer et réaliser tiennent ensemble.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "LE FONDATEUR",
       "title": "Un fondateur issu du terrain.",
-      "desc": "Le fondateur d’Aegryn est un dirigeant et opérateur avec plus de vingt ans d’expérience internationale, cross-industries en Europe, aux États-Unis et en Asie.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux et institutions à travers leurs transformations les plus complexes, de la stratégie aux opérations, de la finance aux ressources humaines, du conseil M&A à l’intégration post-acquisition.\n\nIl est ensuite devenu entrepreneur et investisseur dans ce qui l’inspire : créer des expériences client mémorables à l’ère de l’intelligence artificielle. Il a mené seul ce qu’il conseillait à d’autres : la stratégie produit, la conception technique, le marketing, le juridique et la propriété intellectuelle, le recrutement et les partenariats. Il a réussi sur certains projets. Il a appris sur d’autres. Et capitalisé sur ce qu’aucune mission de conseil ne peut enseigner.\n\nCe double parcours est l’origine d’Aegryn.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le cadrage du projet, son exécution, son accompagnement dans la durée et la sélection des talents.\n\nSa conviction : une décision n’a de valeur que menée jusqu’à son résultat.",
+      "desc": "Le fondateur d’Aegryn est un dirigeant et opérateur avec plus de vingt ans d’expérience internationale, cross-industries en Europe et aux États-Unis.\n\nAncien directeur exécutif dans un cabinet de conseil de rang mondial, il a accompagné des organisations publiques et privées, groupes internationaux et institutions à travers leurs transformations les plus complexes, de la stratégie aux opérations, de la finance aux ressources humaines, du conseil M&A à l’intégration post-acquisition.\n\nIl est ensuite devenu entrepreneur et investisseur dans ce qui l’inspire : créer des expériences client mémorables à l’ère de l’intelligence artificielle. Il a mené seul ce qu’il conseillait à d’autres : la stratégie produit, la conception technique, le marketing, le juridique et la propriété intellectuelle, le recrutement et les partenariats. Il a réussi sur certains projets. Il a appris sur d’autres. Et capitalisé sur ce qu’aucune mission de conseil ne peut enseigner.\n\nCe double parcours est l’origine d’Aegryn.\n\nIl a choisi de créer Aegryn pour réunir dans une même structure ce que le marché offre en silos : le cadrage du projet, son exécution, son accompagnement dans la durée et la sélection des talents.\n\nSa conviction : une décision n’a de valeur que menée jusqu’à son résultat.",
       "disciplinesCta": "Nos métiers",
       "cta": "Prendre contact"
     },
@@ -7887,6 +7887,11 @@
       "Donner vie aux idées.\nBâtir les entreprises qui les portent."
     ],
     "passion": "La créativité et l’innovation nous passionnent. Nous donnons vie aux idées uniques en bâtissant les projets et les entreprises qui les portent."
+  },
+  "adminMemberDelete": {
+    "failed": "La suppression n’a pas abouti",
+    "unauthorized": "Votre session administrateur a expiré. Reconnectez-vous puis réessayez.",
+    "network": "Connexion interrompue. Réessayez dans quelques instants."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# outil} other {# outils}}",

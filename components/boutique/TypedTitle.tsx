@@ -6,22 +6,24 @@
  * La hauteur des trois titres est réservée pour éviter tout déplacement à la transition.
  */
 import { useTypedPhrases } from '@/hooks/useTypedPhrases'
+import { useBoutiqueClock } from './BoutiqueAudio'
 
 export function TypedTitle({ id, phrases, className, style }: { id?: string; phrases: string[]; className?: string; style?: React.CSSProperties }) {
-  const { text: typed } = useTypedPhrases(phrases, { loop: true })
+  const { ready } = useBoutiqueClock()
+  const { text: typed } = useTypedPhrases(phrases, { loop: true, enabled: ready })
 
   const render = (text: string, caret: boolean) => {
     const lines = text.split('\n')
     return lines.map((line, j) => (
       <span key={j} className={j === 0 ? 'block' : 'block font-normal'}>
-        {line}
+        <span>{line}</span>
         {caret && j === lines.length - 1 && <span className="typed-caret" />}
       </span>
     ))
   }
 
   return (
-    <h1 id={id} aria-label={phrases.map(p => p.replace(/\n/g, ' ')).join(' ')} className={className} style={style}>
+    <h1 translate="no" id={id} aria-label={phrases.map(p => p.replace(/\n/g, ' ')).join(' ')} className={className} style={style}>
       <span className="inline-grid">
         {phrases.map(phrase => (
           <span key={phrase} className="invisible col-start-1 row-start-1" aria-hidden="true">{render(phrase, false)}</span>

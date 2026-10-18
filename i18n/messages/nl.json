@@ -1036,8 +1036,8 @@
       "title": "Een A waarvan de punt is afgesneden.",
       "paragraph1": "Onze beginletter is een A zonder dwarsbalk: twee lijnen die op elkaar steunen, zoals de twee zijden van een dakspant. Kaderen en realiseren blijven alleen samen overeind.",
       "paragraph2": "De punt is afgesneden en het laatste stuk, in groen, staat los bovenaan, op de nok. Op een bouwplaats is dat de oplevering.",
-      "paragraph3": "Deze diagonale snede is ook de schuine streep die afsluit wat geopend is, zoals in <code></code>. Aegryn begon met digitale oplossingen en heeft die nauwkeurigheid behouden. In die tools betekent groen: gevalideerd.",
-      "mobile": "Twee lijnen steunen op elkaar als de zijden van een dakspant. Het laatste stuk, in groen, staat los bovenaan, op de nok: de oplevering. De snede is ook de schuine streep die afsluit wat geopend is (<code></code>).",
+      "paragraph3": "Deze diagonale snede is ook de schuine streep die afsluit wat geopend is, zoals in het symbool <code></code>. Aegryn begon met digitale oplossingen en heeft die nauwkeurigheid behouden. In die tools betekent groen: gevalideerd.",
+      "mobile": "Twee lijnen steunen op elkaar als de zijden van een dakspant. Het laatste stuk, in groen, staat los bovenaan, op de nok: de oplevering. De snede is ook de schuine streep die afsluit wat geopend is (het symbool <code></code>).",
       "closing": "Wat opengaat, wordt gesloten.",
       "signature": "Built to last.",
       "step1": "Twee lijnen die op elkaar steunen. Kaderen en realiseren staan samen.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "DE OPRICHTER",
       "title": "Een oprichter uit de praktijk.",
-      "desc": "De oprichter van Aegryn is een bestuurder en operator met meer dan twintig jaar internationale, sectoroverschrijdende ervaring in Europa, de Verenigde Staten en Azië.\n\nAls voormalig executive director bij een adviesbureau van wereldniveau begeleidde hij publieke en private organisaties, internationale groepen en instellingen door hun meest complexe transformaties, van strategie tot operaties, van financiën tot human resources, van M&A-advies tot integratie na overname.\n\nDaarna werd hij ondernemer en investeerder in wat hem inspireert: gedenkwaardige klantervaringen creëren in het tijdperk van artificiële intelligentie. Hij droeg alleen wat hij anderen adviseerde: productstrategie, technisch ontwerp, marketing, juridische zaken en intellectuele eigendom, rekrutering en partnerschappen. Hij slaagde in sommige projecten. Hij leerde uit andere. En bouwde voort op wat geen enkele adviesopdracht kan leren.\n\nDit dubbele parcours is de oorsprong van Aegryn.\n\nHij koos ervoor Aegryn op te richten om in één structuur te verenigen wat de markt in silo’s aanbiedt: de kadering van het project, de uitvoering ervan, de begeleiding door de tijd en de selectie van talent.\n\nZijn overtuiging: een beslissing heeft alleen waarde als ze tot haar resultaat wordt doorgevoerd.",
+      "desc": "De oprichter van Aegryn is een bestuurder en operator met meer dan twintig jaar internationale, sectoroverschrijdende ervaring in Europa en de Verenigde Staten.\n\nAls voormalig executive director bij een adviesbureau van wereldniveau begeleidde hij publieke en private organisaties, internationale groepen en instellingen door hun meest complexe transformaties, van strategie tot operaties, van financiën tot human resources, van M&A-advies tot integratie na overname.\n\nDaarna werd hij ondernemer en investeerder in wat hem inspireert: gedenkwaardige klantervaringen creëren in het tijdperk van artificiële intelligentie. Hij droeg alleen wat hij anderen adviseerde: productstrategie, technisch ontwerp, marketing, juridische zaken en intellectuele eigendom, rekrutering en partnerschappen. Hij slaagde in sommige projecten. Hij leerde uit andere. En bouwde voort op wat geen enkele adviesopdracht kan leren.\n\nDit dubbele parcours is de oorsprong van Aegryn.\n\nHij koos ervoor Aegryn op te richten om in één structuur te verenigen wat de markt in silo’s aanbiedt: de kadering van het project, de uitvoering ervan, de begeleiding door de tijd en de selectie van talent.\n\nZijn overtuiging: een beslissing heeft alleen waarde als ze tot haar resultaat wordt doorgevoerd.",
       "cta": "Neem contact op",
       "disciplinesCta": "Onze vakgebieden"
     },
@@ -7887,6 +7887,11 @@
       "Ideeën tot leven brengen.\nDe ondernemingen erachter bouwen."
     ],
     "passion": "Creativiteit en innovatie zijn onze passie. We brengen unieke ideeën tot leven door de projecten en ondernemingen te bouwen die ze dragen."
+  },
+  "adminMemberDelete": {
+    "failed": "Verwijderen kon niet worden voltooid",
+    "unauthorized": "Uw beheerderssessie is verlopen. Meld u opnieuw aan en probeer het nogmaals.",
+    "network": "Verbinding onderbroken. Probeer het zo opnieuw."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# tool} other {# tools}}",

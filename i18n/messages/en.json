@@ -1015,8 +1015,8 @@
       "title": "An A with its tip cut away.",
       "paragraph1": "Our initial is an A without a crossbar: two strokes leaning on each other, like the two slopes of a roof frame. Framing and delivery only stand when they stand together.",
       "paragraph2": "The tip is cut away, and its final piece, in green, sits separately at the apex. On a building site, this is the acceptance of the completed work.",
-      "paragraph3": "This diagonal cut is also the slash that closes what has been opened, as in <code></code>. Aegryn began in digital solutions and has kept their exacting standards. In those tools, green means: validated.",
-      "mobile": "Two strokes leaning on each other like the slopes of a roof frame. The final piece, in green, sits separately at the apex: the completed work is accepted. The cut is also the slash that closes what has been opened (<code></code>).",
+      "paragraph3": "This diagonal cut is also the slash that closes what has been opened, as in the symbol <code></code>. Aegryn began in digital solutions and has kept their exacting standards. In those tools, green means: validated.",
+      "mobile": "Two strokes leaning on each other like the slopes of a roof frame. The final piece, in green, sits separately at the apex: the completed work is accepted. The cut is also the slash that closes what has been opened (the symbol <code></code>).",
       "closing": "What opens is closed.",
       "signature": "Built to last.",
       "step1": "Two strokes supporting each other. Framing and delivery stand together.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "THE FOUNDER",
       "title": "A founder from the field.",
-      "desc": "Aegryn’s founder is an executive and operator with more than twenty years of international, cross-industry experience in Europe, the United States and Asia.\n\nA former executive director at a global consulting firm, he accompanied public and private organisations, international groups and institutions through their most complex transformations, from strategy to operations, from finance to human resources, from M&A advisory to post-acquisition integration.\n\nHe then became an entrepreneur and investor in what inspires him: creating memorable customer experiences in the age of artificial intelligence. He carried alone what he used to advise others on: product strategy, technical design, marketing, legal and intellectual property, recruitment and partnerships. He succeeded on some projects. He learned on others. And built on what no consulting assignment can teach.\n\nThis dual path is the origin of Aegryn.\n\nHe chose to create Aegryn to bring together in one structure what the market offers in silos: the framing of the project, its execution, its accompaniment over time and the selection of talent.\n\nHis conviction: a decision is only worth something when carried through to its result.",
+      "desc": "Aegryn’s founder is an executive and operator with more than twenty years of international, cross-industry experience in Europe and the United States.\n\nA former executive director at a global consulting firm, he accompanied public and private organisations, international groups and institutions through their most complex transformations, from strategy to operations, from finance to human resources, from M&A advisory to post-acquisition integration.\n\nHe then became an entrepreneur and investor in what inspires him: creating memorable customer experiences in the age of artificial intelligence. He carried alone what he used to advise others on: product strategy, technical design, marketing, legal and intellectual property, recruitment and partnerships. He succeeded on some projects. He learned on others. And built on what no consulting assignment can teach.\n\nThis dual path is the origin of Aegryn.\n\nHe chose to create Aegryn to bring together in one structure what the market offers in silos: the framing of the project, its execution, its accompaniment over time and the selection of talent.\n\nHis conviction: a decision is only worth something when carried through to its result.",
       "cta": "Get in touch",
       "disciplinesCta": "Our disciplines"
     },
@@ -7887,6 +7887,11 @@
       "Bring ideas to life.\nBuild the businesses behind them."
     ],
     "passion": "We are passionate about creativity and innovation. We bring unique ideas to life by building the projects and the businesses that carry them forward."
+  },
+  "adminMemberDelete": {
+    "failed": "Deletion could not be completed",
+    "unauthorized": "Your administrator session has expired. Sign in again and retry.",
+    "network": "Connection interrupted. Please try again shortly."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# tool} other {# tools}}",

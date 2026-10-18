@@ -59,7 +59,7 @@ export function WaveReveal({ children, className, delay = 0 }: Props) {
   }, [delay])
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} translate="no">
       {children}
     </div>
   )

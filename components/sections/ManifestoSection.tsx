@@ -150,6 +150,7 @@ export function ManifestoSection() {
               </div>
               <h2
                 ref={aboutH2Ref}
+                translate="no"
                 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] pb-[0.15em] mb-12 overflow-hidden"
                 style={{ fontSize: 'clamp(26px,3vw,44px)' }}
                 dangerouslySetInnerHTML={{ __html: tA('title').replace(/\n/g, '<br>') }}

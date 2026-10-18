@@ -72,7 +72,7 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
   }
 
   return (
-    <div ref={ref} className={variant === 'icon' ? 'relative inline-flex items-center' : 'relative inline-block'}>
+    <div ref={ref} className="relative inline-flex items-center">
       {variant === 'icon' ? (
         <button
           type="button"
@@ -87,15 +87,11 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
         <button
           type="button"
           onClick={() => setOpen(o => !o)}
+          aria-label={t('label')}
           aria-expanded={open}
-          className="flex flex-col items-center gap-2.5 group"
+          className="inline-flex h-12 w-12 items-center justify-center text-ag-black transition-colors hover:text-ag-apex-ink"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full border border-ag-border text-ag-black transition-colors duration-200 group-hover:border-ag-black">
-            <ShareGlyph size={20} />
-          </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ag-apex-ink">
-            {t('label')}
-          </span>
+          <ShareGlyph size={28} />
         </button>
       )}
 
@@ -119,7 +115,7 @@ export function ShareMenu({ url, title, variant = 'light' }: Props) {
             className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[13px] font-medium text-ag-black transition-colors hover:bg-ag-off-white"
           >
             {copied ? <Check size={16} className="shrink-0 text-ag-apex-ink" /> : <Link2 size={16} className="shrink-0" />}
-            {copied ? t('copied') : t('copy')}
+            <span>{copied ? t('copied') : t('copy')}</span>
           </button>
         </div>
       )}

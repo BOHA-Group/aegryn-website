@@ -3,6 +3,7 @@
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 type Profile = {
   id: string
@@ -65,15 +66,23 @@ function buyerTypeLabel(t: string | null) {
 
 /* ── Delete confirmation inline ── */
 function DeleteButton({ id, name: _name }: { id: string; name: string }) {
+  const t = useTranslations('adminMemberDelete')
   const [confirm, setConfirm] = useState(false)
+  const [error, setError] = useState('')
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
 
   function handleDelete() {
+    setError('')
     startTransition(async () => {
-      const res = await fetch(`/api/admin/members/${id}`, { method: 'DELETE' })
-      if (res.ok) router.refresh()
-      else alert('Erreur lors de la suppression')
+      try {
+        const res = await fetch(`/api/admin/members/${id}`, { method: 'DELETE' })
+        if (res.ok) { router.refresh(); return }
+        const data = await res.json().catch(() => ({}))
+        setError(res.status === 401 ? t('unauthorized') : `${t('failed')} (${typeof data.error === 'string' ? data.error : res.status})`)
+      } catch {
+        setError(t('network'))
+      }
     })
   }
 
@@ -99,11 +108,13 @@ function DeleteButton({ id, name: _name }: { id: string; name: string }) {
         {isPending ? '…' : 'Oui, supprimer'}
       </button>
       <button
-        onClick={() => setConfirm(false)}
+        onClick={() => { setConfirm(false); setError('') }}
+        disabled={isPending}
         className="rounded-lg font-mono text-[9px] text-gray-500 border border-gray-200 px-2 py-1 hover:bg-gray-50 transition-colors"
       >
         Annuler
       </button>
+      {error && <p role="alert" className="w-full text-[11px] leading-relaxed text-red-700">{error}</p>}
     </div>
   )
 }

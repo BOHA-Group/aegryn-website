@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html.boutique-intro-open, html.boutique-intro-open body {
+  overflow: hidden !important;
+}
+
 /* ── Aegryn Brand Tokens ─────────────────────────────── */
 /* Primary   #5ADDA4 — Emerald Mint                       */
 /* Secondary #050505 — Near Black                         */

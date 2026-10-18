@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { createServiceClient } from '@/lib/supabase'
-import { getAdminUser }        from '@/lib/adminAuth'
+import { getAdminUser, hasAdminTokenCookie } from '@/lib/adminAuth'
 
 const ALLOWED_ROLES = ['buyer', 'seller', 'partner', 'admin', 'super_admin'] as const
 
@@ -29,6 +29,7 @@ const schema = z.object({
 async function checkAuth(token: string): Promise<boolean> {
   const adminToken = process.env.ADMIN_LEADS_TOKEN
   if (adminToken && token === adminToken) return true
+  if (await hasAdminTokenCookie()) return true
   /* Fallback session admin */
   const adminUser = await getAdminUser()
   return !!adminUser
@@ -121,9 +122,11 @@ export async function DELETE(
   const { searchParams } = req.nextUrl
   const token = searchParams.get('token') ?? ''
 
-  const adminToken = process.env.ADMIN_LEADS_TOKEN
-  if (adminToken && token !== adminToken) {
+  if (!(await checkAuth(token))) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  }
+  if (!z.string().uuid().safeParse(id).success) {
+    return NextResponse.json({ error: 'invalid_member_id' }, { status: 400 })
   }
 
   const supa = createServiceClient()

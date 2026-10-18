@@ -31,6 +31,7 @@ export function GradeHero() {
         </p>
         <h1
           ref={headingRef}
+          translate="no"
           className="font-sans font-bold text-white leading-[1.05] tracking-[-0.03em] max-w-3xl mb-6"
           style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           dangerouslySetInnerHTML={{ __html: t('title').replace(/\n/g, '<br>') }}

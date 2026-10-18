@@ -97,6 +97,7 @@ export function VisionTypewriter({
   return (
     <p
       ref={ref}
+      translate="no"
       className="relative font-sans font-normal text-ag-black tracking-[-0.02em] leading-[1.15] whitespace-pre-line"
       style={{ fontSize: 'clamp(19px,2vw,26px)' }}
     >

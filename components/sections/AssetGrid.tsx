@@ -146,6 +146,7 @@ export function AssetGrid() {
         <p ref={labelRef} className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink mb-6"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('sectionLabel')}</p>
         <h2
           ref={h2Ref}
+          translate="no"
           className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.2] overflow-hidden"
           style={{ fontSize: 'clamp(26px,3vw,44px)' }}
           dangerouslySetInnerHTML={{ __html: t('sectionTitle').replace(/\n/g, '<br>') }}

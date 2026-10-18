@@ -14,6 +14,7 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import MetaPixel from '@/components/analytics/MetaPixel'
 import { aegrynOrganizationSchema, aegrynWebSiteSchema, aegrynSiteNavigationSchema, socialImageUrl } from '@/lib/seo'
 import '@/styles/globals.css'
+import { BoutiqueAudioProvider } from '@/components/boutique/BoutiqueAudio'
 
 export function generateMetadata(): Metadata {
 const isProd = process.env.VERCEL_ENV === 'production'
@@ -171,6 +172,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aegrynSiteNavigationSchema) }}
       />
       <NextIntlClientProvider messages={messages}>
+        <BoutiqueAudioProvider locale={locale}>
         <LenisProvider>
           <a
             href="#main"
@@ -196,6 +198,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             />
           )}
         </LenisProvider>
+        </BoutiqueAudioProvider>
       </NextIntlClientProvider>
     </>
   )

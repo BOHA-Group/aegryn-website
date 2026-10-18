@@ -1036,8 +1036,8 @@
       "title": "Ein A mit abgeschnittener Spitze.",
       "paragraph1": "Unser Anfangsbuchstabe ist ein A ohne Querbalken: zwei Striche, die sich gegenseitig stützen, wie die beiden Seiten eines Dachstuhls. Rahmen setzen und Umsetzen tragen nur gemeinsam.",
       "paragraph2": "Die Spitze ist abgeschnitten. Das letzte Stück, in Grün, sitzt abgesetzt am First. Auf einer Baustelle ist das die Abnahme.",
-      "paragraph3": "Dieser diagonale Schnitt ist zugleich der Schrägstrich, der schliesst, was geöffnet wurde, wie in <code></code>. Aegryn hat mit digitalen Lösungen begonnen und deren Anspruch beibehalten. In diesen Werkzeugen bedeutet Grün: validiert.",
-      "mobile": "Zwei Striche stützen sich wie die Seiten eines Dachstuhls. Das letzte Stück, in Grün, sitzt abgesetzt am First: die Abnahme. Der Schnitt ist auch der Schrägstrich, der schliesst, was geöffnet wurde (<code></code>).",
+      "paragraph3": "Dieser diagonale Schnitt ist zugleich der Schrägstrich, der schliesst, was geöffnet wurde, wie im Symbol <code></code>. Aegryn hat mit digitalen Lösungen begonnen und deren Anspruch beibehalten. In diesen Werkzeugen bedeutet Grün: validiert.",
+      "mobile": "Zwei Striche stützen sich wie die Seiten eines Dachstuhls. Das letzte Stück, in Grün, sitzt abgesetzt am First: die Abnahme. Der Schnitt ist auch der Schrägstrich, der schliesst, was geöffnet wurde (das Symbol <code></code>).",
       "closing": "Was sich öffnet, wird geschlossen.",
       "signature": "Built to last.",
       "step1": "Zwei Striche, die sich stützen. Rahmen setzen und Umsetzen tragen gemeinsam.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "DER GRÜNDER",
       "title": "Ein Gründer aus der Praxis.",
-      "desc": "Der Gründer von Aegryn ist Führungskraft und Operator mit über zwanzig Jahren internationaler, branchenübergreifender Erfahrung in Europa, den USA und Asien.\n\nAls ehemaliger Executive Director einer weltweit führenden Beratung begleitete er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen, von der Strategie bis zum Betrieb, von Finanzen bis Personal, von M&A-Beratung bis zur Post-Merger-Integration.\n\nDanach wurde er Unternehmer und Investor in dem, was ihn inspiriert: unvergessliche Kundenerlebnisse im Zeitalter der künstlichen Intelligenz zu schaffen. Er trug allein, was er anderen riet: Produktstrategie, technisches Design, Marketing, Recht und geistiges Eigentum, Rekrutierung und Partnerschaften. Bei manchen Projekten hatte er Erfolg. Bei anderen hat er gelernt. Und auf das gebaut, was kein Beratungsmandat lehren kann.\n\nDieser doppelte Weg ist der Ursprung von Aegryn.\n\nEr gründete Aegryn, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: den Rahmen des Projekts, seine Umsetzung, seine Begleitung über die Zeit und die Auswahl der Talente.\n\nSeine Überzeugung: eine Entscheidung ist nur dann etwas wert, wenn sie bis zum Ergebnis geführt wird.",
+      "desc": "Der Gründer von Aegryn ist Führungskraft und Operator mit über zwanzig Jahren internationaler, branchenübergreifender Erfahrung in Europa und den USA.\n\nAls ehemaliger Executive Director einer weltweit führenden Beratung begleitete er öffentliche und private Organisationen, internationale Konzerne und Institutionen durch ihre komplexesten Transformationen, von der Strategie bis zum Betrieb, von Finanzen bis Personal, von M&A-Beratung bis zur Post-Merger-Integration.\n\nDanach wurde er Unternehmer und Investor in dem, was ihn inspiriert: unvergessliche Kundenerlebnisse im Zeitalter der künstlichen Intelligenz zu schaffen. Er trug allein, was er anderen riet: Produktstrategie, technisches Design, Marketing, Recht und geistiges Eigentum, Rekrutierung und Partnerschaften. Bei manchen Projekten hatte er Erfolg. Bei anderen hat er gelernt. Und auf das gebaut, was kein Beratungsmandat lehren kann.\n\nDieser doppelte Weg ist der Ursprung von Aegryn.\n\nEr gründete Aegryn, um in einer Struktur zu vereinen, was der Markt in Silos anbietet: den Rahmen des Projekts, seine Umsetzung, seine Begleitung über die Zeit und die Auswahl der Talente.\n\nSeine Überzeugung: eine Entscheidung ist nur dann etwas wert, wenn sie bis zum Ergebnis geführt wird.",
       "cta": "Kontakt aufnehmen",
       "disciplinesCta": "Unsere Disziplinen"
     },
@@ -7887,6 +7887,11 @@
       "Ideen zum Leben erwecken.\nDie Unternehmen dahinter aufbauen."
     ],
     "passion": "Kreativität und Innovation begeistern uns. Wir geben einzigartigen Ideen Gestalt und bauen die Projekte und Unternehmen auf, die sie tragen."
+  },
+  "adminMemberDelete": {
+    "failed": "Die Löschung konnte nicht abgeschlossen werden",
+    "unauthorized": "Ihre Administratorsitzung ist abgelaufen. Melden Sie sich erneut an und versuchen Sie es noch einmal.",
+    "network": "Verbindung unterbrochen. Bitte versuchen Sie es in Kürze erneut."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# Werkzeug} other {# Werkzeuge}}",

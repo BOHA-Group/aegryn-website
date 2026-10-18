@@ -94,6 +94,7 @@ export function AssetHeroBanner() {
 
           <h2
             ref={headingRef}
+            translate="no"
             className="font-sans font-bold text-white tracking-[-0.03em] leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(26px,3vw,44px)' }}
             dangerouslySetInnerHTML={{ __html: 'Ce que nous<br>construisons.' }}

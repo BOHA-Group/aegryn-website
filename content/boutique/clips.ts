@@ -14,6 +14,10 @@ export const BOUTIQUE_TEMPO = {
 } as const
 
 export const BEAT_SECONDS = 60 / BOUTIQUE_TEMPO.bpm
+export const BOUTIQUE_INTRO_SECONDS = 4
+/** First full bass hit, after the track's 16-beat instrumental opening. */
+export const BOUTIQUE_FIRST_BASS = BOUTIQUE_TEMPO.firstBeat + 16 * BEAT_SECONDS
+export const BOUTIQUE_AUDIO_START = BOUTIQUE_FIRST_BASS - BOUTIQUE_INTRO_SECONDS
 
 /** Journée type : aube sur Genève, sport et café du matin, savoir-faire et travail,
     déplacements et loisirs l'après-midi, dîner le soir, événementiel et ville la nuit. */

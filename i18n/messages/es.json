@@ -1036,8 +1036,8 @@
       "title": "Una A con la punta cortada.",
       "paragraph1": "Nuestra inicial es una A sin travesaño: dos trazos que se apoyan entre sí, como las dos vertientes de la estructura de un tejado. Encuadrar y realizar solo se sostienen juntos.",
       "paragraph2": "La punta está cortada y su última pieza, verde, se coloca aparte, en la cumbrera. En una obra, es la recepción.",
-      "paragraph3": "Este corte diagonal es también la barra oblicua que cierra lo que se ha abierto, como en <code></code>. Aegryn comenzó con soluciones digitales y ha conservado su exigencia. En esas herramientas, el verde significa: validado.",
-      "mobile": "Dos trazos se apoyan como las vertientes de la estructura de un tejado. La última pieza, verde, se coloca aparte, en la cumbrera: es la recepción. El corte es también la barra oblicua que cierra lo que se ha abierto (<code></code>).",
+      "paragraph3": "Este corte diagonal es también la barra oblicua que cierra lo que se ha abierto, como en el símbolo <code></code>. Aegryn comenzó con soluciones digitales y ha conservado su exigencia. En esas herramientas, el verde significa: validado.",
+      "mobile": "Dos trazos se apoyan como las vertientes de la estructura de un tejado. La última pieza, verde, se coloca aparte, en la cumbrera: es la recepción. El corte es también la barra oblicua que cierra lo que se ha abierto (el símbolo <code></code>).",
       "closing": "Lo que se abre se cierra.",
       "signature": "Built to last.",
       "step1": "Dos trazos que se apoyan. Encuadrar y realizar se sostienen juntos.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "EL FUNDADOR",
       "title": "Un fundador venido del terreno.",
-      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional, multisectorial, en Europa, Estados Unidos y Asia.\n\nAntiguo director ejecutivo en una consultora de rango mundial, acompañó a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas, de la estrategia a las operaciones, de las finanzas a los recursos humanos, del asesoramiento en M&A a la integración posterior a la adquisición.\n\nDespués se convirtió en emprendedor e inversor en lo que le inspira: crear experiencias de cliente memorables en la era de la inteligencia artificial. Llevó solo lo que aconsejaba a otros: la estrategia de producto, el diseño técnico, el marketing, lo jurídico y la propiedad intelectual, la contratación y las alianzas. Tuvo éxito en algunos proyectos. Aprendió en otros. Y capitalizó lo que ninguna misión de consultoría puede enseñar.\n\nEste doble recorrido es el origen de Aegryn.\n\nEligió crear Aegryn para reunir en una misma estructura lo que el mercado ofrece en silos: el encuadre del proyecto, su ejecución, su acompañamiento en el tiempo y la selección del talento.\n\nSu convicción: una decisión solo tiene valor si se lleva hasta su resultado.",
+      "desc": "El fundador de Aegryn es un directivo y operador con más de veinte años de experiencia internacional, multisectorial, en Europa y Estados Unidos.\n\nAntiguo director ejecutivo en una consultora de rango mundial, acompañó a organizaciones públicas y privadas, grupos internacionales e instituciones en sus transformaciones más complejas, de la estrategia a las operaciones, de las finanzas a los recursos humanos, del asesoramiento en M&A a la integración posterior a la adquisición.\n\nDespués se convirtió en emprendedor e inversor en lo que le inspira: crear experiencias de cliente memorables en la era de la inteligencia artificial. Llevó solo lo que aconsejaba a otros: la estrategia de producto, el diseño técnico, el marketing, lo jurídico y la propiedad intelectual, la contratación y las alianzas. Tuvo éxito en algunos proyectos. Aprendió en otros. Y capitalizó lo que ninguna misión de consultoría puede enseñar.\n\nEste doble recorrido es el origen de Aegryn.\n\nEligió crear Aegryn para reunir en una misma estructura lo que el mercado ofrece en silos: el encuadre del proyecto, su ejecución, su acompañamiento en el tiempo y la selección del talento.\n\nSu convicción: una decisión solo tiene valor si se lleva hasta su resultado.",
       "cta": "Contactar",
       "disciplinesCta": "Nuestros oficios"
     },
@@ -7887,6 +7887,11 @@
       "Dar vida a las ideas.\nCrear las empresas que las sostienen."
     ],
     "passion": "Nos apasionan la creatividad y la innovación. Damos vida a ideas únicas construyendo los proyectos y las empresas que las hacen realidad."
+  },
+  "adminMemberDelete": {
+    "failed": "No se pudo completar la eliminación",
+    "unauthorized": "Su sesión de administrador ha caducado. Vuelva a iniciar sesión e inténtelo de nuevo.",
+    "network": "Conexión interrumpida. Inténtelo de nuevo en unos instantes."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# herramienta} other {# herramientas}}",

@@ -1036,8 +1036,8 @@
       "title": "Una A con la punta tagliata.",
       "paragraph1": "La nostra iniziale è una A senza traversa: due tratti che si sostengono a vicenda, come le due falde di una capriata. Inquadrare e realizzare si reggono solo insieme.",
       "paragraph2": "La punta è tagliata e il suo ultimo pezzo, verde, si posa separato, al colmo. In un cantiere, è il collaudo.",
-      "paragraph3": "Questo taglio diagonale è anche la barra obliqua che chiude ciò che è stato aperto, come in <code></code>. Aegryn ha iniziato con le soluzioni digitali e ne ha mantenuto il rigore. Nei loro strumenti, il verde significa: validato.",
-      "mobile": "Due tratti si sostengono come le falde di una capriata. L'ultimo pezzo, verde, si posa separato, al colmo: è il collaudo. Il taglio è anche la barra obliqua che chiude ciò che è stato aperto (<code></code>).",
+      "paragraph3": "Questo taglio diagonale è anche la barra obliqua che chiude ciò che è stato aperto, come nel simbolo <code></code>. Aegryn ha iniziato con le soluzioni digitali e ne ha mantenuto il rigore. Nei loro strumenti, il verde significa: validato.",
+      "mobile": "Due tratti si sostengono come le falde di una capriata. L'ultimo pezzo, verde, si posa separato, al colmo: è il collaudo. Il taglio è anche la barra obliqua che chiude ciò che è stato aperto (il simbolo <code></code>).",
       "closing": "Ciò che si apre si chiude.",
       "signature": "Built to last.",
       "step1": "Due tratti che si sostengono. Inquadrare e realizzare si reggono insieme.",
@@ -7168,7 +7168,7 @@
     "founder": {
       "label": "IL FONDATORE",
       "title": "Un fondatore venuto dal campo.",
-      "desc": "Il fondatore di Aegryn è un dirigente e operatore con oltre vent’anni di esperienza internazionale, cross-industry, in Europa, Stati Uniti e Asia.\n\nGià direttore esecutivo in una società di consulenza di rango mondiale, ha accompagnato organizzazioni pubbliche e private, gruppi internazionali e istituzioni nelle loro trasformazioni più complesse, dalla strategia alle operazioni, dalla finanza alle risorse umane, dalla consulenza M&A all’integrazione post-acquisizione.\n\nÈ poi diventato imprenditore e investitore in ciò che lo ispira: creare esperienze cliente memorabili nell’era dell’intelligenza artificiale. Ha portato da solo ciò che consigliava ad altri: la strategia di prodotto, la progettazione tecnica, il marketing, il legale e la proprietà intellettuale, il reclutamento e le partnership. Ha avuto successo su alcuni progetti. Ha imparato su altri. E ha capitalizzato ciò che nessuna missione di consulenza può insegnare.\n\nQuesto doppio percorso è l’origine di Aegryn.\n\nHa scelto di creare Aegryn per riunire in una stessa struttura ciò che il mercato offre a compartimenti stagni: l’inquadramento del progetto, la sua esecuzione, il suo accompagnamento nel tempo e la selezione dei talenti.\n\nLa sua convinzione: una decisione ha valore solo se portata fino al suo risultato.",
+      "desc": "Il fondatore di Aegryn è un dirigente e operatore con oltre vent’anni di esperienza internazionale, cross-industry, in Europa e negli Stati Uniti.\n\nGià direttore esecutivo in una società di consulenza di rango mondiale, ha accompagnato organizzazioni pubbliche e private, gruppi internazionali e istituzioni nelle loro trasformazioni più complesse, dalla strategia alle operazioni, dalla finanza alle risorse umane, dalla consulenza M&A all’integrazione post-acquisizione.\n\nÈ poi diventato imprenditore e investitore in ciò che lo ispira: creare esperienze cliente memorabili nell’era dell’intelligenza artificiale. Ha portato da solo ciò che consigliava ad altri: la strategia di prodotto, la progettazione tecnica, il marketing, il legale e la proprietà intellettuale, il reclutamento e le partnership. Ha avuto successo su alcuni progetti. Ha imparato su altri. E ha capitalizzato ciò che nessuna missione di consulenza può insegnare.\n\nQuesto doppio percorso è l’origine di Aegryn.\n\nHa scelto di creare Aegryn per riunire in una stessa struttura ciò che il mercato offre a compartimenti stagni: l’inquadramento del progetto, la sua esecuzione, il suo accompagnamento nel tempo e la selezione dei talenti.\n\nLa sua convinzione: una decisione ha valore solo se portata fino al suo risultato.",
       "cta": "Contattaci",
       "disciplinesCta": "I nostri mestieri"
     },
@@ -7887,6 +7887,11 @@
       "Dare vita alle idee.\nCostruire le imprese che le sostengono."
     ],
     "passion": "La creatività e l’innovazione ci appassionano. Diamo vita a idee uniche costruendo i progetti e le imprese che le sostengono."
+  },
+  "adminMemberDelete": {
+    "failed": "Impossibile completare l’eliminazione",
+    "unauthorized": "La sessione amministratore è scaduta. Accedete nuovamente e riprovate.",
+    "network": "Connessione interrotta. Riprovate tra qualche istante."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# strumento} other {# strumenti}}",

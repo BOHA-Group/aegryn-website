@@ -21,6 +21,7 @@ export function WhyUseApps() {
         const descEl  = col.querySelector<HTMLElement>('.why-desc')
 
         if (titleEl) {
+          titleEl.setAttribute('translate', 'no')
           const split = new SplitText(titleEl, { type: 'lines', linesClass: 'why-line' })
           splits.push(split)
           ;(split.lines as HTMLElement[]).forEach(line => {

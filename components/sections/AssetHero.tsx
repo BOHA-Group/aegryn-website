@@ -67,6 +67,7 @@ export function AssetHero({ label, title, sub }: AssetHeroProps = {}) {
         </p>
         <h1
           ref={headingRef}
+          translate="no"
           className="mb-6 max-w-4xl font-sans font-bold leading-[1.05] tracking-[-0.03em] text-white [&_.ahb-line]:overflow-hidden"
           style={{ fontSize: 'clamp(36px,5vw,72px)' }}
           dangerouslySetInnerHTML={{ __html: (title ?? 'Ce que nous\nconstruisons.').replace(/\n/g, '<br>') }}

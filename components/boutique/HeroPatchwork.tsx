@@ -47,7 +47,7 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
 }
 
 export function HeroPatchwork() {
-  const { getTime } = useBoutiqueClock()
+  const { getTime, ready } = useBoutiqueClock()
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const container = useRef<HTMLDivElement>(null)
   const current = useRef(-1)
@@ -70,7 +70,7 @@ export function HeroPatchwork() {
     let raf = 0
     let lastIdx = -1
     const timeouts = new Set<ReturnType<typeof setTimeout>>()
-    const active = () => visible && !document.hidden && !reduced.matches && !disposed
+    const active = () => ready && visible && !document.hidden && !reduced.matches && !disposed
 
     const warm = (from: number, count: number) => {
       for (let k = 0; k < count; k++) {
@@ -141,6 +141,7 @@ export function HeroPatchwork() {
         raf = requestAnimationFrame(loop)
       }
     }
+    if (!ready && !reduced.matches) warm(0, 5)
     const io = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; update() })
     io.observe(container.current)
     document.addEventListener('visibilitychange', update)
@@ -157,7 +158,7 @@ export function HeroPatchwork() {
       reduced.removeEventListener('change', update)
       current.current = -1
     }
-  }, [getTime, small])
+  }, [getTime, small, ready])
 
   return (
     <div ref={container} className="absolute inset-0 isolate overflow-hidden bg-ag-navy bg-cover bg-center" style={{ backgroundImage: "url('/images/boutique/hero-poster.jpg')", backgroundPosition: small ? MOBILE_CLIP_POSITION['01-geneva-fountain'] : undefined }} aria-hidden="true" data-beats={TOTAL_BEATS}>

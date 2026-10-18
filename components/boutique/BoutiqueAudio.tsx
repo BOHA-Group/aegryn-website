@@ -1,20 +1,10 @@
 'use client'
 
-/**
- * Lecteur de musique discret de La Boutique.
- * - Démarre automatiquement à l'ouverture de l'espace (si le navigateur l'autorise),
- *   sinon au premier clic, toucher ou touche du visiteur.
- * - Se poursuit pendant la navigation entre les pages de La Boutique (le fournisseur
- *   vit dans le layout /boutique) et s'arrête dès qu'on quitte cet espace.
- * - Le bouton reste visible sur toutes les pages de La Boutique. Le choix « coupé » vaut
- *   pour la navigation en cours : un rafraîchissement du navigateur relance la musique.
- * - Expose une horloge (`getTime`) : temps de lecture de la piste, ou un minuteur de
- *   secours tant que le son n'est pas lancé, pour caler les visuels sur le tempo.
- */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { BOUTIQUE_TEMPO } from '@/content/boutique/clips'
+import { usePathname } from 'next/navigation'
+import { BOUTIQUE_AUDIO_START, BOUTIQUE_INTRO_SECONDS, BOUTIQUE_TEMPO } from '@/content/boutique/clips'
+import { BoutiqueIntro } from './BoutiqueIntro'
 
-const VOLUME = 0.4
 const L: Record<string, { on: string; off: string; label: string }> = {
   fr: { on: 'Activer la musique', off: 'Couper la musique', label: 'Son' },
   en: { on: 'Turn the music on', off: 'Turn the music off', label: 'Sound' },
@@ -24,118 +14,184 @@ const L: Record<string, { on: string; off: string; label: string }> = {
   nl: { on: 'Muziek aanzetten', off: 'Muziek uitzetten', label: 'Geluid' },
 }
 
-interface ClockCtx { getTime: () => number; playing: boolean }
-const Ctx = createContext<ClockCtx>({ getTime: () => 0, playing: false })
+interface ClockCtx { getTime: () => number; playing: boolean; ready: boolean }
+const Ctx = createContext<ClockCtx>({ getTime: () => 0, playing: false, ready: true })
 export const useBoutiqueClock = () => useContext(Ctx)
 
+/** Public-layout player: audio starts within the concept-link's trusted click.
+ * Playback remains limited to Boutique routes; the intro uses the audio clock. */
 export function BoutiqueAudioProvider({ locale, children }: { locale: string; children: React.ReactNode }) {
+  const pathname = usePathname()
+  const conceptPath = `/${locale}/boutique`
+  const inside = pathname === conceptPath || pathname.startsWith(`${conceptPath}/`)
+  const isConcept = pathname === conceptPath
   const audioRef = useRef<HTMLAudioElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
   const userCut = useRef(false)
-  const t0 = useRef(0)
-  const fade = useRef<ReturnType<typeof setInterval> | null>(null)
+  const insideRef = useRef(inside)
+  const pendingEntry = useRef(false)
+  const previousPath = useRef<string | null>(null)
+  const disposed = useRef(false)
+  const loading = useRef(isConcept)
+  const frozen = useRef(false)
+  const epoch = useRef(0)
+  const baseElapsed = useRef(0)
+  const [intro, setIntro] = useState(isConcept)
+  const [entry, setEntry] = useState(0)
   const [playing, setPlaying] = useState(false)
   const txt = L[locale] ?? L.en
 
-  const rampTo = useCallback((target: number, done?: () => void) => {
-    const a = audioRef.current; if (!a) return
-    if (fade.current) clearInterval(fade.current)
-    /* iOS fige a.volume (volume systeme) : le fondu n'atteindrait jamais sa cible,
-       done() ne serait jamais appele et la musique ne s'arreterait pas. */
-    const probe = a.volume
-    a.volume = probe > 0.5 ? 0.4 : 0.6
-    const canFade = a.volume !== probe
-    a.volume = probe
-    if (!canFade) { done?.(); return }
-    fade.current = setInterval(() => {
-      const step = target > a.volume ? 0.03 : -0.05
-      const next = Math.min(1, Math.max(0, a.volume + step))
-      a.volume = next
-      if (Math.abs(next - target) < 0.03) { a.volume = target; if (fade.current) clearInterval(fade.current); done?.() }
-    }, 50)
+  const getElapsed = useCallback(() => {
+    if (loading.current) return 0
+    if (frozen.current) return baseElapsed.current
+    const a = audioRef.current
+    return a && !a.paused && a.currentTime > 0
+      ? a.currentTime - BOUTIQUE_AUDIO_START
+      : baseElapsed.current + (performance.now() - epoch.current) / 1000
   }, [])
-
-  const start = useCallback(async () => {
-    const a = audioRef.current; if (!a) return false
-    try {
-      a.volume = 0
-      await a.play()
-      setPlaying(true); rampTo(VOLUME)
-      return true
-    } catch { return false }
-  }, [rampTo])
 
   const stop = useCallback(() => {
-    /* Coupure directe : sur iOS le fondu via a.volume n'est pas fiable
-       (propriete figee ou liee au volume systeme selon les versions). */
-    if (fade.current) clearInterval(fade.current)
+    baseElapsed.current = getElapsed()
+    epoch.current = performance.now()
     audioRef.current?.pause()
     setPlaying(false)
-  }, [])
+  }, [getElapsed])
+
+  const startMusic = useCallback(async (from?: number) => {
+    const a = audioRef.current
+    if (!a || userCut.current) return false
+    if (!a.paused && from === undefined) return true
+    const elapsed = from ?? getElapsed()
+    baseElapsed.current = elapsed
+    epoch.current = performance.now()
+    loading.current = from === 0
+    const seek = Math.max(0, BOUTIQUE_AUDIO_START + elapsed)
+    try {
+      a.currentTime = Number.isFinite(a.duration) ? seek % a.duration : seek
+    } catch {
+      a.addEventListener('loadedmetadata', () => { if (!disposed.current) a.currentTime = seek }, { once: true })
+    }
+    try {
+      a.volume = .4
+      await a.play()
+      loading.current = false
+      if (disposed.current || userCut.current || frozen.current || document.hidden || (!insideRef.current && !pendingEntry.current)) { a.pause(); return false }
+      setPlaying(true)
+      return true
+    } catch {
+      loading.current = false
+      epoch.current = performance.now()
+      return false
+    }
+  }, [getElapsed])
+
+  const beginEntry = useCallback(() => {
+    baseElapsed.current = 0
+    epoch.current = performance.now()
+    frozen.current = false
+    loading.current = !userCut.current
+    setEntry(n => n + 1)
+    setIntro(true)
+    window.scrollTo({ top: 0, behavior: 'instant' })
+    if (!userCut.current) void startMusic(0)
+  }, [startMusic])
 
   useEffect(() => {
-    t0.current = performance.now()
-    let armed = true
-    const onGesture = async (e: Event) => {
-      if (btnRef.current?.contains(e.target as Node)) return
-      if (armed && !userCut.current && await start()) cleanup()
+    insideRef.current = inside
+    const previous = previousPath.current
+    previousPath.current = pathname
+    if (!inside) {
+      if (!pendingEntry.current) { stop(); setIntro(false); userCut.current = false; loading.current = false }
+    } else if (isConcept) {
+      if (pendingEntry.current) pendingEntry.current = false
+      else if (previous !== pathname) beginEntry()
+    } else {
+      setIntro(false)
+      if (!previous?.startsWith(`${conceptPath}/`) && previous !== conceptPath) void startMusic(0)
     }
-    const cleanup = () => { armed = false; ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.removeEventListener(e, onGesture)) }
-    /* Quitter l'ecran (changement d'app, onglet ferme, navigateur quitte) coupe la musique ;
-       un nouveau clic sur le lecteur la relance. Pas de fondu : la page masquee gele les timers. */
-    const cut = () => {
-      if (!audioRef.current || audioRef.current.paused) return
-      userCut.current = true
-      if (fade.current) clearInterval(fade.current)
-      audioRef.current.pause()
-      setPlaying(false)
-    }
-    const onVis = () => { if (document.hidden) cut() }
-    document.addEventListener('visibilitychange', onVis)
-    window.addEventListener('pagehide', cut)
-    start().then(ok => { if (!ok) ['pointerdown', 'keydown', 'touchstart'].forEach(e => window.addEventListener(e, onGesture, { passive: true })) })
-    return () => {
-      cleanup()
-      document.removeEventListener('visibilitychange', onVis)
-      window.removeEventListener('pagehide', cut)
-      if (fade.current) clearInterval(fade.current)
-      audioRef.current?.pause()
-    }
-  }, [start])
+  }, [pathname, inside, isConcept, conceptPath, beginEntry, startMusic, stop])
 
-  const getTime = useCallback(() => {
-    const a = audioRef.current
-    return a && !a.paused && a.currentTime > 0 ? a.currentTime : (performance.now() - t0.current) / 1000
+  useEffect(() => {
+    const click = (e: MouseEvent) => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+      const link = e.target instanceof Element ? e.target.closest<HTMLAnchorElement>('a[href]') : null
+      if (!link || link.target === '_blank' || link.hasAttribute('download')) return
+      const url = new URL(link.href, location.href)
+      if (url.origin !== location.origin || url.pathname.replace(/\/$/, '') !== conceptPath || url.hash) return
+      pendingEntry.current = pathname !== conceptPath
+      beginEntry()
+    }
+    const gesture = (e: Event) => {
+      if (!insideRef.current || userCut.current || btnRef.current?.contains(e.target as Node)) return
+      if (audioRef.current?.paused) void startMusic()
+    }
+    const hide = () => {
+      if (!insideRef.current && !pendingEntry.current) return
+      stop()
+      frozen.current = true
+      userCut.current = true
+    }
+    const visibility = () => {
+      if (document.hidden) hide()
+      else { epoch.current = performance.now(); frozen.current = false }
+    }
+    document.addEventListener('click', click, true)
+    window.addEventListener('pointerdown', gesture, { passive: true })
+    window.addEventListener('keydown', gesture)
+    document.addEventListener('visibilitychange', visibility)
+    window.addEventListener('pagehide', hide)
+    return () => {
+      document.removeEventListener('click', click, true)
+      window.removeEventListener('pointerdown', gesture)
+      window.removeEventListener('keydown', gesture)
+      document.removeEventListener('visibilitychange', visibility)
+      window.removeEventListener('pagehide', hide)
+    }
+  }, [pathname, conceptPath, beginEntry, startMusic, stop])
+
+  useEffect(() => {
+    if (!intro) return
+    let raf = 0
+    const tick = () => {
+      if (getElapsed() >= BOUTIQUE_INTRO_SECONDS) setIntro(false)
+      else raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [intro, entry, getElapsed])
+
+  useEffect(() => {
+    disposed.current = false
+    const audio = audioRef.current
+    return () => { disposed.current = true; audio?.pause() }
   }, [])
-  const value = useMemo(() => ({ getTime, playing }), [getTime, playing])
+
+  const getTime = useCallback(() => getElapsed() - BOUTIQUE_INTRO_SECONDS + BOUTIQUE_TEMPO.firstBeat, [getElapsed])
+  const value = useMemo(() => ({ getTime, playing, ready: !intro }), [getTime, playing, intro])
 
   return (
     <Ctx.Provider value={value}>
-      <audio ref={audioRef} src={BOUTIQUE_TEMPO.track} loop preload="auto" />
-      {children}
-      <button
-        ref={btnRef}
-        type="button"
-        onClick={() => {
-          const a = audioRef.current; if (!a) return
-          if (a.paused) { userCut.current = false; void start() } else { userCut.current = true; stop() }
-        }}
-        aria-pressed={playing}
-        aria-label={playing ? txt.off : txt.on}
-        title="Beyond the Clicks"
-        className="fixed bottom-3 right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
-      >
-        <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
-          {[0.9, 0.5, 1, 0.65].map((h, i) => (
-            <span
-              key={i}
-              className="w-[3px] origin-bottom rounded-full bg-ag-apex"
-              style={{ height: '100%', transform: `scaleY(${playing ? h : 0.25})`, animation: playing ? `boutique-eq ${0.57 * (i % 2 ? 1 : 2)}s ease-in-out ${i * 0.14}s infinite alternate` : undefined }}
-            />
-          ))}
-        </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em]">{txt.label}</span>
-      </button>
+      <audio ref={audioRef} src={BOUTIQUE_TEMPO.track} loop preload="none" />
+      <div inert={intro || undefined} aria-hidden={intro || undefined}>{children}</div>
+      {intro && <BoutiqueIntro key={entry} getElapsed={getElapsed} />}
+      {inside && !intro && (
+        <button ref={btnRef} type="button" translate="no"
+          onClick={() => {
+            if (audioRef.current?.paused) { userCut.current = false; frozen.current = false; void startMusic() }
+            else { userCut.current = true; stop() }
+          }}
+          aria-pressed={playing} aria-label={playing ? txt.off : txt.on} title="Beyond the Clicks"
+          className="fixed bottom-3 right-20 z-40 sm:bottom-8 sm:right-24 flex items-center gap-2.5 rounded-full bg-ag-navy/55 px-3.5 py-2 text-white/80 backdrop-blur-md transition-colors hover:bg-ag-navy/80 hover:text-white"
+        >
+          <span className="flex h-3.5 items-end gap-[3px]" aria-hidden="true">
+            {[.9, .5, 1, .65].map((h, i) => (
+              <span key={i} className="w-[3px] origin-bottom rounded-full bg-ag-apex"
+                style={{ height: '100%', transform: `scaleY(${playing ? h : .25})`, animation: playing ? `boutique-eq ${.57 * (i % 2 ? 1 : 2)}s ease-in-out ${i * .14}s infinite alternate` : undefined }} />
+            ))}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em]">{txt.label}</span>
+        </button>
+      )}
     </Ctx.Provider>
   )
 }

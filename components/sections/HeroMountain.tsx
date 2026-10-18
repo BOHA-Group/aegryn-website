@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation'
 import { RevealOnScroll } from '@/components/ui/RevealOnScroll'
 import { useDecorativeVideo } from '@/hooks/useDecorativeVideo'
 import { useTypedPhrases } from '@/hooks/useTypedPhrases'
+import Image from 'next/image'
 
 const HERO_VIDEO   = '/images/home/hero-homepage.mp4'
 const HERO_POSTER  = '/images/home/hero-homepage-poster.jpg'
@@ -15,6 +16,7 @@ export function HeroMountain() {
   const t = useTranslations('hero')
   const phrases = t.raw('phrases') as string[]
   const [videoMs, setVideoMs] = useState(23700)
+  const [videoReady, setVideoReady] = useState(false)
   const { text: typed, restart } = useTypedPhrases(phrases, { videoMs })
   const lastVideoTime = useRef(0)
 
@@ -55,20 +57,23 @@ export function HeroMountain() {
     <section
       ref={sectionRef}
       data-nav-hero
-      className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden pt-20"
+      className="relative -mt-16 h-[calc(96vh+4rem)] min-h-[704px] overflow-hidden bg-ag-navy pt-20"
       aria-labelledby="hero-title"
     >
       {/* Vidéo plein format — parallax */}
       <div ref={mediaRef} className="absolute inset-0 scale-[1.12] will-change-transform">
+        <Image src={HERO_POSTER} alt="" fill priority sizes="100vw" className="object-cover" />
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className={`absolute inset-0 w-full h-full object-cover object-center ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           poster={HERO_POSTER}
           preload="none"
           muted
           loop
           playsInline
           aria-hidden="true"
+          onPlaying={() => setVideoReady(true)}
+          onEmptied={() => setVideoReady(false)}
           onLoadedMetadata={(e) => setVideoMs(e.currentTarget.duration * 1000)}
           onTimeUpdate={(e) => {
             const ct = e.currentTarget.currentTime
@@ -89,6 +94,7 @@ export function HeroMountain() {
               Verbe en ligne 1, complément en ligne 2 ; toutes les phrases
               invisibles dans la même cellule de grille réservent la hauteur max. */}
           <h1
+            translate="no"
             ref={headingRef}
             id="hero-title"
             aria-label={phrases.map((p) => p.replace('\n', ' ')).join(' ')}
@@ -106,7 +112,7 @@ export function HeroMountain() {
               <span data-typed-text className="col-start-1 row-start-1" aria-hidden="true">
                 {typed.split('\n').map((line, j) => (
                   <span key={j} className={j === 0 ? 'block' : 'block font-normal'}>
-                    {line}
+                    <span>{line}</span>
                     {j === typed.split('\n').length - 1 && <span className="typed-caret" />}
                   </span>
                 ))}

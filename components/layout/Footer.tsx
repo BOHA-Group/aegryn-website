@@ -117,11 +117,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Image
-              src="/images/brand/logo-aegryn.png"
+              src="/images/brand/logo-aegryn-navbar-white.png"
               alt="Aegryn"
-              width={100}
-              height={44}
-              className="h-8 w-auto object-contain mb-4 brightness-0 invert"
+              width={1024}
+              height={751}
+              className="h-8 w-auto object-contain mb-4"
             />
             <p className="mt-1 font-sans font-semibold text-[11px] text-white/70">
               {t('swissTagline')}
