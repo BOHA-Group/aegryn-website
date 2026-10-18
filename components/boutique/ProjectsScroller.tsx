@@ -127,7 +127,7 @@ export function ProjectsScroller({ title, titleSr, allLabel, projects }: { title
               {i > 0 && <div className={`mw-riser ${i % 2 ? 'is-down' : 'is-up'}`} />}
               {p.image && (
                 <div className="mw-image">
-                  <Image src={p.image} alt={p.confidential ? '' : tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95} />
+                  <Image src={p.image} alt={p.confidential ? '' : tItems(`${p.id}.tagline`)} fill loading="eager" sizes="(max-width: 479px) 80vw, (max-width: 767px) 60vw, 1200px" quality={95} className={p.confidential ? 'grayscale' : undefined} />
                   {p.confidential && <ConfidentialStamp label={t('confidential')} className="scale-75" />}
                 </div>
               )}
