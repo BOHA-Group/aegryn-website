@@ -4,9 +4,8 @@ import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { assetPath, type AegrynAsset } from '@/data/assets'
-import { ProjectStage } from '@/components/ui/ProjectStage'
 
-/** Fiche projet du portfolio : image, badge, titre (capacité démontrée), statut ; détails dépliés au survol (optionnels). */
+/** Fiche projet du portfolio : image, secteur et savoir-faire ; détails dépliés au survol (optionnels). */
 export function ProjectCard({ asset, showDetails = true }: { asset: AegrynAsset; showDetails?: boolean }) {
   const t = useTranslations('assets.page')
   const tItems = useTranslations('assets.items')
@@ -36,15 +35,11 @@ export function ProjectCard({ asset, showDetails = true }: { asset: AegrynAsset;
                 {tItems(`${asset.id}.capability`)}
               </h2>
 
-              {/* Badges statut */}
-                <div className="flex items-center gap-3 flex-wrap">
-                  <ProjectStage status={asset.status} />
-                  {asset.internalOnly && (
+              {asset.internalOnly && (
                     <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-ag-gray-light border border-ag-border px-2 py-0.5 rounded-md">
                       {t('internalOnly')}
                     </span>
-                  )}
-                </div>
+              )}
 
               {/* Détails pliés — dépliés au survol (absents de l'aperçu en accueil de La Boutique) */}
               {showDetails && <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">

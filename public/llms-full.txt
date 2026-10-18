@@ -99,7 +99,7 @@ Confidential acquisition or transfer mandates are accompanied under NDA through 
 **Meeting places:** exceptional venues for meetings, announced progressively.
 **Articles from La Boutique:** trends, projects, builders.
 
-**Project stages (18 October 2026):** neediu and Movtoo are in pilot. Primiom, Heritix and Chrosium are in development. Hobconnect and Insertdry are concepts. Described features are scoped to the project's stage, not a claim that all functions are operational. The earlier /what-we-build page and its localised paths redirect permanently to /boutique/projets. /assets remains the home of the firm's operational tools.
+**Project presentation:** the portfolio presents each project's scope and the know-how it draws on, without public stage labels. La Boutique is driven by creativity, innovation and unique ideas, and builds the projects and businesses that bring them to life. The earlier /what-we-build page and its localised paths redirect permanently to /boutique/projets. /assets remains the home of the firm's operational tools.
 **Submit a project:** /contact?subject=project. A confidentiality agreement precedes any detailed exchange; personal reply within two working days.
 
 ---

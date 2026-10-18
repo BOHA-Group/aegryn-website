@@ -52,10 +52,11 @@ const h2 = { fontSize: 'clamp(26px,3vw,44px)' }
 export default async function BoutiquePage({ params }: Props) {
   const { locale } = await params
   const lang = toLang(locale)
-  const [tv, ts, tBlog] = await Promise.all([
+  const [tv, ts, tBlog, tConcept] = await Promise.all([
     getTranslations({ locale, namespace: 'about.values' }),
     getTranslations({ locale, namespace: 'homeSegments' }),
     getTranslations({ locale, namespace: 'discover' }),
+    getTranslations({ locale, namespace: 'boutiqueConcept' }),
   ])
   const valueKeys = ['exceptional', 'exclusive', 'confidential', 'trust', 'experience', 'elegance'] as const
   const segments = ts.raw('cards') as { key: string; title: string; desc: string }[]
@@ -109,7 +110,8 @@ export default async function BoutiquePage({ params }: Props) {
         <div className="mx-auto px-6 md:px-12 grid max-w-7xl gap-10 md:grid-cols-12">
           <h2 className="whitespace-pre-line font-sans font-bold leading-[1.1] tracking-[-0.025em] text-ag-black md:col-span-5" style={h2}>{BOUTIQUE.conceptTitleLead[lang]}<span className="font-script block">{BOUTIQUE.conceptTitleAccent[lang]}</span></h2>
           <div className="space-y-6 md:col-span-6 md:col-start-7">
-            <p className="text-[18px] leading-relaxed text-ag-black/80">{BOUTIQUE.conceptText[lang]}</p>
+            <p className="text-[18px] leading-relaxed text-ag-black">{tConcept('passion')}</p>
+            <p className="text-[15px] leading-relaxed text-ag-black/80">{BOUTIQUE.conceptText[lang]}</p>
             <p className="text-[15px] leading-relaxed text-ag-gray">{BOUTIQUE.participation[lang]}</p>
           </div>
         </div>

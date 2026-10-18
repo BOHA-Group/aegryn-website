@@ -155,7 +155,7 @@
     "portfolio": {
       "meta": {
         "title": "La Boutique, signatuurprojecten | Aegryn",
-        "desc": "Ontdek de projecten van La Boutique, de ingezette expertise en hun ontwikkelingsfase, van concept tot pilot."
+        "desc": "Ontdek de signatuurprojecten van La Boutique en de expertise die ze tot leven brengt."
       },
       "label": "Ons portfolio",
       "title": "Wat wij bouwen\nmet wie groot denkt.",
@@ -1202,11 +1202,7 @@
     "refused": "Geweigerd"
   },
   "assetPage": {
-    "scope": {
-      "pilot": { "title": "Omvang van de pilot", "desc": "Project in de pilotfase. De getoonde functies vallen binnen de testomvang; de validatie loopt nog." },
-      "development": { "title": "Wat we ontwikkelen", "desc": "Project in ontwikkeling. De beschreven functies vormen de beoogde omvang en zijn nog niet allemaal beschikbaar." },
-      "concept": { "title": "Wat het concept beoogt", "desc": "Project in de conceptfase. De beschreven functies zijn ontwerpdoelen die nog moeten worden ontwikkeld en gevalideerd." }
-    },
+    "projectScope": "Projectomvang",
     "back": "← Terug naar activa",
     "audience": "Doelgroep",
     "features": "Kernfuncties",
@@ -7884,6 +7880,9 @@
     "copy": "Link kopiëren",
     "copied": "Link gekopieerd",
     "email": "E-mail"
+  },
+  "boutiqueConcept": {
+    "passion": "Creativiteit en innovatie zijn onze passie. We brengen unieke ideeën tot leven door de projecten en ondernemingen te bouwen die ze dragen."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# tool} other {# tools}}",

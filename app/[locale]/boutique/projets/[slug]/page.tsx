@@ -63,7 +63,6 @@ export default async function AssetPage({ params }: Props) {
   const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
   const isLive   = !!asset.url
-  const scopeKey = asset.status === 'pilot' ? 'pilot' : asset.status === 'not_started' ? 'concept' : 'development'
 
   /* Secteur de rattachement (eyebrow hero) */
   const sectorRef = asset.industrySector
@@ -110,7 +109,7 @@ export default async function AssetPage({ params }: Props) {
           >
             {tItems(`${asset.id}.capability`)}
           </h1>
-          <div className="mb-6"><ProjectStage status={asset.status} onDark /></div>
+          {asset.id === 'subblink' && <div className="mb-6"><ProjectStage status={asset.status} onDark /></div>}
 
           {isLive && (
             <a
@@ -170,9 +169,8 @@ export default async function AssetPage({ params }: Props) {
             <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-10">
               <div>
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 mb-6">
-                  {isLive ? t('rubricSetup') : t(`scope.${scopeKey}.title`)}
+                  {asset.id === 'subblink' ? t('rubricSetup') : t('projectScope')}
                 </p>
-                {!isLive && <p className="mb-6 text-[15px] leading-relaxed text-white/70">{t(`scope.${scopeKey}.desc`)}</p>}
                 <p className="text-[15px] text-white leading-[1.8] mb-6">
                   {longDesc}
                 </p>

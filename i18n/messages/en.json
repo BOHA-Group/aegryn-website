@@ -150,7 +150,7 @@
     "portfolio": {
       "meta": {
         "title": "La Boutique, signature projects | Aegryn",
-        "desc": "Discover La Boutique's projects, the know-how they draw on and their stage of development, from concept to pilot."
+        "desc": "Discover La Boutique's signature projects and the know-how that brings them to life."
       },
       "label": "Our portfolio",
       "title": "What we build\nwith those who think big.",
@@ -1202,11 +1202,7 @@
     "refused": "Refused"
   },
   "assetPage": {
-    "scope": {
-      "pilot": { "title": "Pilot scope", "desc": "Project in pilot. The features presented are part of the scope being tested, with validation ongoing." },
-      "development": { "title": "What we are developing", "desc": "Project in development. The features described define the intended scope and are not all available at this stage." },
-      "concept": { "title": "What the concept aims to achieve", "desc": "Project at concept stage. The features described are design objectives, still to be developed and validated." }
-    },
+    "projectScope": "Project scope",
     "back": "← Back to assets",
     "audience": "Target audience",
     "features": "Key features",
@@ -7884,6 +7880,9 @@
     "copy": "Copy link",
     "copied": "Link copied",
     "email": "Email"
+  },
+  "boutiqueConcept": {
+    "passion": "We are passionate about creativity and innovation. We bring unique ideas to life by building the projects and the businesses that carry them forward."
   },
   "harmony": {
     "toolCount": "{count, plural, one {# tool} other {# tools}}",

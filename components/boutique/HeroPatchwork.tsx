@@ -19,6 +19,33 @@ const CLIP_POSITION: Record<string, string> = {
   'wine-cellar':          '60% 50%',
 }
 
+/* Focal points checked at the start, middle and end of the clips in a portrait hero.
+   These percentages position the cropped image, not the subject within the source. */
+const MOBILE_CLIP_POSITION: Record<string, string> = {
+  '01-geneva-fountain': '84% 50%',
+  '20-stretching': '44% 50%',
+  '18-espresso': '79% 50%',
+  'architect-palette': '52% 50%',
+  'watchmaker': '66% 50%',
+  'jeweler': '64% 50%',
+  'metal-grinding': '77% 50%',
+  'phone-scroll': '57% 50%',
+  '17-taking-notes': '85% 50%',
+  'jet-tarmac': '18% 50%',
+  '14-back-seat': '43% 50%',
+  'resort-aerial': '34% 50%',
+  '16-gt-race': '20% 50%',
+  'speedboat': '28% 50%',
+  '08-seine-sunset': '16% 50%',
+  'wine-cellar': '48% 50%',
+  '05-chef': '64% 50%',
+  'dish-plating': '44% 50%',
+  'restaurant-night': '64% 50%',
+  '11-concert-flames': '33% 50%',
+  'bridge-dusk': '57% 50%',
+  '09-statue-of-liberty': '24% 50%',
+}
+
 export function HeroPatchwork() {
   const { getTime } = useBoutiqueClock()
   const videos = useRef<(HTMLVideoElement | null)[]>([])
@@ -133,13 +160,13 @@ export function HeroPatchwork() {
   }, [getTime, small])
 
   return (
-    <div ref={container} className="absolute inset-0 overflow-hidden bg-ag-navy bg-cover bg-center" style={{ backgroundImage: "url('/images/boutique/hero-poster.jpg')" }} aria-hidden="true" data-beats={TOTAL_BEATS}>
+    <div ref={container} className="absolute inset-0 isolate overflow-hidden bg-ag-navy bg-cover bg-center" style={{ backgroundImage: "url('/images/boutique/hero-poster.jpg')", backgroundPosition: small ? MOBILE_CLIP_POSITION['01-geneva-fountain'] : undefined }} aria-hidden="true" data-beats={TOTAL_BEATS}>
       {small !== null && HERO_CLIPS.map((name, i) => (
         <video
           key={name}
           ref={el => { videos.current[i] = el }}
           className="absolute inset-0 h-full w-full object-cover will-change-transform"
-          style={{ opacity: 0, objectPosition: CLIP_POSITION[name] }}
+          style={{ opacity: 0, objectPosition: small ? (MOBILE_CLIP_POSITION[name] ?? '50% 50%') : CLIP_POSITION[name] }}
           data-src={clipSrc(name, small)}
           muted
           playsInline
