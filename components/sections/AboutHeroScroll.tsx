@@ -95,13 +95,15 @@ export function AboutHeroScroll() {
             { scaleX: 1, scaleY: 1, ease: 'none', scrollTrigger: st },
           )
         } else {
+          /* Mobile : calques composites (force3D) — une transformation 2D rasterise
+             l'image plein cadre à chaque frame et saccade le défilement. */
           gsap.fromTo(mediaRef.current,
-            { clipPath: 'inset(88% 5% 1% 5% round 16px)' },
-            { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: st },
+            { clipPath: 'inset(88% 5% 1% 5% round 16px)', force3D: true },
+            { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', force3D: true, scrollTrigger: st },
           )
           gsap.fromTo(imgRef.current,
-            { scale: 1.18 },
-            { scale: 1, ease: 'none', scrollTrigger: st },
+            { scale: 1.18, force3D: true },
+            { scale: 1, ease: 'none', force3D: true, scrollTrigger: st },
           )
         }
       })
@@ -149,14 +151,13 @@ export function AboutHeroScroll() {
         </div>
 
         {/* Photo — clip-path expansible, recouvre le texte au scroll */}
-        <div ref={mediaRef} className="absolute inset-0 z-20 will-change-[clip-path]">
-          <div ref={imgRef} className="absolute inset-0 will-change-transform">
+        <div ref={mediaRef} className="absolute inset-0 z-20 will-change-[clip-path] [transform:translateZ(0)]">
+          <div ref={imgRef} className="absolute inset-0 will-change-transform [backface-visibility:hidden]">
             <Image
               src="/images/about/about_regatta.webp"
               alt={t('hero.imageAlt')}
               fill
               priority
-              unoptimized
               sizes="100vw"
               placeholder="blur"
               blurDataURL={BLUR}
