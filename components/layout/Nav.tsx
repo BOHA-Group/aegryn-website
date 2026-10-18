@@ -426,8 +426,8 @@ export default function Nav({ user }: { user?: NavUser | null } = {}) {
               {mobileAccordion === 'boutique' && (
                 <div className="py-2 pl-4 flex flex-col gap-2">
                   <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-ag-gray mt-2">{t('boutiqueDiscover')}</p>
-                  {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href }) => (
-                    <Link key={labelKey} href={href} onClick={closeMobile} className="py-1.5 font-sans text-[14px] text-ag-gray hover:text-ag-black transition-colors">
+                  {BOUTIQUE_DISCOVER_LINKS.map(({ labelKey, href, strong }) => (
+                    <Link key={labelKey} href={href} onClick={closeMobile} className={`py-1.5 font-sans text-[14px] ${strong ? 'font-bold text-ag-black' : 'text-ag-gray'} hover:text-ag-black transition-colors`}>
                       {t(labelKey)}
                     </Link>
                   ))}

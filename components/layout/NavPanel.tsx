@@ -13,6 +13,7 @@ import {
 type T = ReturnType<typeof useTranslations>
 
 const LINK = 'font-sans text-[13px] font-medium leading-snug text-ag-black transition-colors hover:text-ag-apex-ink'
+const LINK_BOLD = 'font-sans text-[13px] font-bold leading-snug text-ag-black transition-colors hover:text-ag-apex-ink'
 const LINK_MUTED = 'font-sans text-[13px] font-medium leading-snug text-ag-gray-light transition-colors hover:text-ag-gray'
 
 function Col({ title, desc, children }: { title: string; desc?: string; children: ReactNode }) {
@@ -30,9 +31,9 @@ function Col({ title, desc, children }: { title: string; desc?: string; children
 function Links({ items, t, onClose, cols = 1 }: { items: NavLink[]; t: T; onClose: () => void; cols?: 1 | 2 }) {
   return (
     <ul className={cols === 2 ? 'grid grid-cols-2 gap-x-12 gap-y-3' : 'flex flex-col gap-3'}>
-      {items.map(({ labelKey, href, muted }) => (
+      {items.map(({ labelKey, href, muted, strong }) => (
         <li key={labelKey}>
-          <Link href={href} onClick={onClose} className={muted ? LINK_MUTED : LINK}>{t(labelKey)}</Link>
+          <Link href={href} onClick={onClose} className={strong ? LINK_BOLD : muted ? LINK_MUTED : LINK}>{t(labelKey)}</Link>
         </li>
       ))}
     </ul>

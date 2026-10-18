@@ -3,7 +3,7 @@ import type { Link } from '@/i18n/navigation'
 
 export type LinkHref = ComponentProps<typeof Link>['href']
 export type DropdownKey = 'craft' | 'solutions' | 'thinking' | 'who' | 'boutique' | null
-export type NavLink = { labelKey: string; href: LinkHref; muted?: boolean }
+export type NavLink = { labelKey: string; href: LinkHref; muted?: boolean; strong?: boolean }
 
 /* Nos métiers : Cadrer et réaliser, huit métiers sous un seul titre (deux colonnes, ordre de lecture ligne par ligne) */
 export const CRAFT_METIERS: NavLink[] = [
@@ -66,7 +66,7 @@ export const INDUSTRY_CLUSTERS: { slug: string; labelKey: string }[] = [
 
 /* La Boutique : découvrir / passer à l'action */
 export const BOUTIQUE_DISCOVER_LINKS: NavLink[] = [
-  { labelKey: 'boutiqueConcept',  href: '/boutique' },
+  { labelKey: 'boutiqueConcept',  href: '/boutique', strong: true },
   { labelKey: 'boutiqueProjects', href: '/boutique/projets' as LinkHref },
   { labelKey: 'boutiqueForWho',   href: { pathname: '/boutique', hash: 'pour-qui' } as LinkHref },
   { labelKey: 'boutiqueKnowHow',  href: { pathname: '/boutique', hash: 'savoir-faire' } as LinkHref },

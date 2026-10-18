@@ -23,6 +23,7 @@ export const useBoutiqueClock = () => useContext(Ctx)
 export function BoutiqueAudioProvider({ locale, children }: { locale: string; children: React.ReactNode }) {
   const pathname = usePathname()
   const conceptPath = `/${locale}/boutique`
+  const projectsPath = `${conceptPath}/projets`
   const inside = pathname === conceptPath || pathname.startsWith(`${conceptPath}/`)
   const isConcept = pathname === conceptPath
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -85,15 +86,21 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
     }
   }, [getElapsed])
 
-  const beginEntry = useCallback(() => {
+  /* Entrée Boutique : intro noire rejouée. La musique ne démarre que via le lien
+   * « Le concept » (ou si elle joue déjà) ; Portfolio et les autres entrées sont muettes,
+   * le bouton « Son » reste disponible. */
+  const beginEntry = useCallback((withMusic: boolean) => {
+    const audible = withMusic || Boolean(audioRef.current && !audioRef.current.paused)
+    audioRef.current?.pause()
     baseElapsed.current = 0
     epoch.current = performance.now()
     frozen.current = false
-    loading.current = !userCut.current
+    userCut.current = !audible
+    loading.current = audible
     setEntry(n => n + 1)
     setIntro(true)
     window.scrollTo({ top: 0, behavior: 'instant' })
-    if (!userCut.current) void startMusic(0)
+    if (audible) void startMusic(0)
   }, [startMusic])
 
   useEffect(() => {
@@ -102,14 +109,14 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
     previousPath.current = pathname
     if (!inside) {
       if (!pendingEntry.current) { stop(); setIntro(false); userCut.current = false; loading.current = false }
+    } else if (pendingEntry.current) {
+      pendingEntry.current = false
     } else if (isConcept) {
-      if (pendingEntry.current) pendingEntry.current = false
-      else if (previous !== pathname) beginEntry()
+      if (previous !== pathname) beginEntry(false)
     } else {
       setIntro(false)
-      if (!previous?.startsWith(`${conceptPath}/`) && previous !== conceptPath) void startMusic(0)
     }
-  }, [pathname, inside, isConcept, conceptPath, beginEntry, startMusic, stop])
+  }, [pathname, inside, isConcept, conceptPath, beginEntry, stop])
 
   useEffect(() => {
     const click = (e: MouseEvent) => {
@@ -117,9 +124,12 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
       const link = e.target instanceof Element ? e.target.closest<HTMLAnchorElement>('a[href]') : null
       if (!link || link.target === '_blank' || link.hasAttribute('download')) return
       const url = new URL(link.href, location.href)
-      if (url.origin !== location.origin || url.pathname.replace(/\/$/, '') !== conceptPath || url.hash) return
-      pendingEntry.current = pathname !== conceptPath
-      beginEntry()
+      const target = url.pathname.replace(/\/$/, '')
+      if (url.origin !== location.origin || url.hash) return
+      const isConceptLink = target === conceptPath
+      if (!isConceptLink && target !== projectsPath) return
+      pendingEntry.current = pathname !== target
+      beginEntry(isConceptLink)
     }
     const gesture = (e: Event) => {
       if (!insideRef.current || userCut.current || btnRef.current?.contains(e.target as Node)) return
@@ -147,7 +157,7 @@ export function BoutiqueAudioProvider({ locale, children }: { locale: string; ch
       document.removeEventListener('visibilitychange', visibility)
       window.removeEventListener('pagehide', hide)
     }
-  }, [pathname, conceptPath, beginEntry, startMusic, stop])
+  }, [pathname, conceptPath, projectsPath, beginEntry, startMusic, stop])
 
   useEffect(() => {
     if (!intro) return
