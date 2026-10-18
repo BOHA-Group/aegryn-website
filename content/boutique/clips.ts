@@ -58,5 +58,6 @@ export const PORTRAIT_CLIPS = ['portrait-rolls-royce', 'portrait-driver'] as con
 
 export const TOTAL_BEATS = HERO_CLIPS.reduce((s, n) => s + clipBeats(n), 0)
 
-/** Version allégée pour les petits écrans */
-export const clipSrc = (name: string, small: boolean) => `/videos/boutique/${name}${small ? '-m' : ''}.mp4`
+/** Version allégée pour les petits écrans ; `-hq` = 720p, servie si le débit mesuré le permet */
+export const clipSrc = (name: string, small: boolean, hq = false) =>
+  `/videos/boutique/${name}${small ? (hq ? '-hq' : '-m') : ''}.mp4`

@@ -53,6 +53,7 @@ export function HeroPatchwork() {
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const container = useRef<HTMLDivElement>(null)
   const current = useRef(-1)
+  const hq = useRef(false)
   const [small, setSmall] = useState<boolean | null>(null)
 
   useEffect(() => {
@@ -71,6 +72,7 @@ export function HeroPatchwork() {
     let disposed = false
     let raf = 0
     let lastIdx = -1
+    let lateStreak = 0
     let cycleSeen = latestCycle.current
     let cycleStart = 0
     const timeouts = new Set<ReturnType<typeof setTimeout>>()
@@ -78,9 +80,15 @@ export function HeroPatchwork() {
 
     const warm = (from: number, count: number) => {
       for (let k = 0; k < count; k++) {
-        const v = videos.current[(from + k) % n]
-        if (v && v.getAttribute('src') !== v.dataset.src) {
-          v.src = v.dataset.src ?? ''
+        const idx = (from + k) % n
+        const v = videos.current[idx]
+        if (!v) continue
+        const want = clipSrc(HERO_CLIPS[idx], small, hq.current)
+        const cur = v.getAttribute('src')
+        /* Recharge si la variante voulue diffère : clip jamais chargé, pas encore
+           décodé, ou inactif (jamais le clip en cours ni le suivant). */
+        if (cur !== want && (!cur || v.readyState < 2 || (idx !== current.current && idx !== (current.current + 1) % n))) {
+          v.src = want
           v.preload = 'auto'
           v.load()
         }
@@ -126,6 +134,9 @@ export function HeroPatchwork() {
         }
       }
       current.current = i
+      /* Débit retombé : plusieurs révélations en retard -> retour à la variante -m. */
+      lateStreak = pos - CLIP_START_BEATS[i] > clipBeats(HERO_CLIPS[i]) + 0.5 ? lateStreak + 1 : 0
+      if (hq.current && lateStreak >= 3) hq.current = false
       warm(i + 1, 6)
     }
 
@@ -160,7 +171,23 @@ export function HeroPatchwork() {
         raf = requestAnimationFrame(loop)
       }
     }
-    if (!ready && !reduced.matches) warm(0, 5)
+    if (!reduced.matches) warm(0, 5)
+    /* Montée en qualité mesurée : si les premiers clips sont tous décodés vite
+       (réseau confortable), les suivants passent en 720p ; saveData reste en -m. */
+    let probe = 0 as unknown as ReturnType<typeof setInterval>
+    if (small && !reduced.matches) {
+      const t0 = performance.now()
+      probe = setInterval(() => {
+        const first = videos.current.slice(0, 5).filter(Boolean)
+        if (first.length === 5 && first.every(v => v && v.readyState >= 4)) {
+          clearInterval(probe); probe = 0 as unknown as ReturnType<typeof setInterval>
+          const sd = (navigator as { connection?: { saveData?: boolean } }).connection?.saveData
+          if (!sd && performance.now() - t0 < 2500) hq.current = true
+        } else if (performance.now() - t0 > 10000) {
+          clearInterval(probe); probe = 0 as unknown as ReturnType<typeof setInterval>
+        }
+      }, 200)
+    }
     const io = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; update() })
     io.observe(container.current)
     document.addEventListener('visibilitychange', update)
@@ -168,6 +195,7 @@ export function HeroPatchwork() {
     reduced.addEventListener('change', update)
     return () => {
       disposed = true
+      if (probe) clearInterval(probe)
       pause()
       videos.current.forEach(v => { if (v) v.style.opacity = '0' })
       timeouts.forEach(clearTimeout)
@@ -187,7 +215,6 @@ export function HeroPatchwork() {
           ref={el => { videos.current[i] = el }}
           className="absolute inset-0 h-full w-full object-cover will-change-transform"
           style={{ opacity: 0, objectPosition: small ? (MOBILE_CLIP_POSITION[name] ?? '50% 50%') : CLIP_POSITION[name] }}
-          data-src={clipSrc(name, small)}
           muted
           playsInline
           loop
