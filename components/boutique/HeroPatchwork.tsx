@@ -91,6 +91,12 @@ export function HeroPatchwork() {
       const v = videos.current[i]
       if (!v) return
       warm(i, 1)
+      if (v.readyState < 2) {
+        /* Données pas encore arrivées : lancer le téléchargement en lecture masquée ;
+           l'ancien clip reste affiché et boucle jusqu'à la révélation. */
+        v.play().catch(() => {})
+        return
+      }
       const prev = current.current
       v.style.zIndex = '2'
       v.style.opacity = '1'
@@ -120,7 +126,7 @@ export function HeroPatchwork() {
         }
       }
       current.current = i
-      warm(i + 1, 4)
+      warm(i + 1, 6)
     }
 
     /* Les clips coupent sur leurs temps ; le dernier tient jusqu'à ce que le cycle
@@ -132,7 +138,10 @@ export function HeroPatchwork() {
       const b = Math.max(0, beatNow - cycleStart)
       let idx = n - 1
       while (idx > 0 && b < CLIP_START_BEATS[idx]) idx--
-      if (idx !== lastIdx) { lastIdx = idx; show(idx) }
+      if (idx !== lastIdx) { lastIdx = idx; warm(idx + 1, 6) }
+      /* Réessaye à chaque frame : un clip en retard de téléchargement est révélé
+         dès qu'il a des données, sans laisser un trou noir entre les plans. */
+      if (idx !== current.current) show(idx)
       raf = requestAnimationFrame(loop)
     }
     const pause = () => {
@@ -181,6 +190,7 @@ export function HeroPatchwork() {
           data-src={clipSrc(name, small)}
           muted
           playsInline
+          loop
           preload="none"
           disablePictureInPicture
           tabIndex={-1}
