@@ -30,7 +30,6 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
   'jeweler': '64% 50%',
   'metal-grinding': '77% 50%',
   'phone-scroll': '57% 50%',
-  '17-taking-notes': '85% 50%',
   'jet-tarmac': '18% 50%',
   '14-back-seat': '43% 50%',
   'resort-aerial': '34% 50%',
@@ -46,12 +45,22 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
   'statue-of-liberty-loop': '24% 50%',
 }
 
+/* Plans à plusieurs sujets qu'un cadrage portrait plein cadre ne peut pas contenir (trois
+   personnes = 64 % de la largeur, l'écran n'en montre que 26 %) : sur mobile, le plan occupe
+   une fenêtre pleine largeur (haut et hauteur en % de l'écran, position horizontale du
+   cadrage) sur un fond flouté du même plan, sans zoom d'animation qui rognerait les sujets. */
+const MOBILE_FIT: Record<string, { top: string; height: string; pos: string }> = {
+  '17-taking-notes': { top: '15%', height: '40%', pos: '74% 50%' },
+}
+const FIT_MASK = 'linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)'
+
 export function HeroPatchwork() {
   const { getTime, ready, titleCycle } = useBoutiqueClock()
   const latestCycle = useRef(titleCycle)
   latestCycle.current = titleCycle
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const container = useRef<HTMLDivElement>(null)
+  const fitBg = useRef<HTMLDivElement>(null)
   const current = useRef(-1)
   /* Palier de qualité (0 = -s, 1 = -m, 2 = haut) : décidé une fois, abaissé si le réseau décroche. */
   const qual = useRef<number | null>(null)
@@ -119,6 +128,11 @@ export function HeroPatchwork() {
         return
       }
       const prev = current.current
+      const fit = small && MOBILE_FIT[HERO_CLIPS[i]] ? HERO_CLIPS[i] : null
+      if (fitBg.current) {
+        fitBg.current.style.backgroundImage = fit ? `url(/images/boutique/fit/${fit}.jpg)` : ''
+        fitBg.current.style.opacity = fit ? '1' : '0'
+      }
       v.style.zIndex = '2'
       v.style.opacity = '1'
       v.style.willChange = 'transform'
@@ -132,7 +146,7 @@ export function HeroPatchwork() {
       if (Math.abs(v.currentTime - target) > .04) { try { v.currentTime = target } catch { /* Métadonnées pas encore chargées. */ } }
       v.play().then(() => {
         if (!active() || current.current !== i) { v.pause(); return }
-        if (active()) {
+        if (active() && !fit) {
           v.style.transition = `transform ${duration}s linear`
           v.style.transform = 'scale(1.07)'
         }
@@ -238,12 +252,15 @@ export function HeroPatchwork() {
 
   return (
     <div ref={container} className="absolute inset-0 isolate overflow-hidden bg-ag-navy bg-cover bg-center" style={{ backgroundImage: "url('/images/boutique/hero-poster.jpg')", backgroundPosition: small ? MOBILE_CLIP_POSITION['01-geneva-fountain'] : undefined }} aria-hidden="true" data-beats={TOTAL_BEATS}>
+      <div ref={fitBg} className="absolute inset-0 scale-125 bg-cover bg-center opacity-0 [filter:blur(28px)_brightness(.65)]" />
       {small !== null && HERO_CLIPS.map((name, i) => (
         <video
           key={name}
           ref={el => { videos.current[i] = el }}
           className="absolute inset-0 h-full w-full object-cover"
-          style={{ opacity: 0, objectPosition: small ? (MOBILE_CLIP_POSITION[name] ?? '50% 50%') : CLIP_POSITION[name] }}
+          style={small && MOBILE_FIT[name]
+            ? { opacity: 0, bottom: 'auto', top: MOBILE_FIT[name].top, height: MOBILE_FIT[name].height, objectPosition: MOBILE_FIT[name].pos, maskImage: FIT_MASK, WebkitMaskImage: FIT_MASK }
+            : { opacity: 0, objectPosition: small ? (MOBILE_CLIP_POSITION[name] ?? '50% 50%') : CLIP_POSITION[name] }}
           muted
           playsInline
           loop
