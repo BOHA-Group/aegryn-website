@@ -146,7 +146,7 @@ export function HeroPatchwork() {
       if (Math.abs(v.currentTime - target) > .04) { try { v.currentTime = target } catch { /* Métadonnées pas encore chargées. */ } }
       v.play().then(() => {
         if (!active() || current.current !== i) { v.pause(); return }
-        if (active() && !fit) {
+        if (active() && !small) {
           v.style.transition = `transform ${duration}s linear`
           v.style.transform = 'scale(1.07)'
         }
