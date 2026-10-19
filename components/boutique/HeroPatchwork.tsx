@@ -12,7 +12,7 @@ import { useBoutiqueClock } from './BoutiqueAudio'
 /* Recadrage par clip en `object-cover` : en portrait, le centrage par defaut sort les
    sujets du cadre (statue dans le tiers gauche, voitures et sportive a droite). */
 const CLIP_POSITION: Record<string, string> = {
-  '09-statue-of-liberty': '33% 50%',
+  'statue-of-liberty-loop': '33% 50%',
   '16-gt-race':           '62% 50%',
   '20-stretching':        '55% 50%',
   'speedboat':            '35% 50%',
@@ -40,10 +40,10 @@ const MOBILE_CLIP_POSITION: Record<string, string> = {
   'wine-cellar': '48% 50%',
   'singing-bowl': '48% 50%',
   'dish-plating': '44% 50%',
-  'restaurant-night': '64% 50%',
+  'restaurant-night': '97% 50%',
   '11-concert-flames': '33% 50%',
   'bridge-dusk': '57% 50%',
-  '09-statue-of-liberty': '24% 50%',
+  'statue-of-liberty-loop': '24% 50%',
 }
 
 export function HeroPatchwork() {
@@ -53,7 +53,10 @@ export function HeroPatchwork() {
   const videos = useRef<(HTMLVideoElement | null)[]>([])
   const container = useRef<HTMLDivElement>(null)
   const current = useRef(-1)
-  const hq = useRef(false)
+  /* Palier de qualité (0 = -s, 1 = -m, 2 = haut) : décidé une fois, abaissé si le réseau décroche. */
+  const qual = useRef<number | null>(null)
+  const probeT0 = useRef(0)
+  const pumpRef = useRef<() => void>(() => {})
   const [small, setSmall] = useState<boolean | null>(null)
 
   useEffect(() => {
@@ -78,22 +81,32 @@ export function HeroPatchwork() {
     const timeouts = new Set<ReturnType<typeof setTimeout>>()
     const active = () => ready && visible && !document.hidden && !reduced.matches && !disposed
 
+    if (qual.current === null) {
+      const c = (navigator as { connection?: { saveData?: boolean; downlink?: number; effectiveType?: string } }).connection
+      const slow = c?.saveData || /^(slow-2g|2g|3g)$/.test(c?.effectiveType ?? '') || (c?.downlink != null && c.downlink < 1.5)
+      qual.current = slow ? 0 : small ? 1 : 2
+    }
+
+    /* Téléchargements un par un, dans l'ordre de lecture : en parallèle, les clips se partagent
+       le débit et aucun n'arrive à temps. Le suivant démarre dès que celui-ci peut être lu
+       (`canplay`), ou après 2,5 s pour ne jamais bloquer la file. */
     const warm = (from: number, count: number) => {
       for (let k = 0; k < count; k++) {
         const idx = (from + k) % n
         const v = videos.current[idx]
         if (!v) continue
-        const want = clipSrc(HERO_CLIPS[idx], small, hq.current)
+        const want = clipSrc(HERO_CLIPS[idx], small, qual.current ?? 1)
         const cur = v.getAttribute('src')
-        /* Recharge si la variante voulue diffère : clip jamais chargé, pas encore
-           décodé, ou inactif (jamais le clip en cours ni le suivant). */
-        if (cur !== want && (!cur || v.readyState < 2 || (idx !== current.current && idx !== (current.current + 1) % n))) {
+        if (!cur || (cur !== want && v.readyState < 2)) {
           v.src = want
           v.preload = 'auto'
+          v.dataset.t = String(performance.now())
           v.load()
         }
+        if (!v.error && v.readyState < 3 && performance.now() - Number(v.dataset.t || 0) < 2500) break
       }
     }
+    pumpRef.current = () => { if (!disposed) warm(current.current + 1, 6) }
 
     const show = (i: number) => {
       const v = videos.current[i]
@@ -108,12 +121,15 @@ export function HeroPatchwork() {
       const prev = current.current
       v.style.zIndex = '2'
       v.style.opacity = '1'
+      v.style.willChange = 'transform'
       v.style.transition = 'none'
       v.style.transform = 'scale(1)'
       const duration = clipBeats(HERO_CLIPS[i]) * BEAT_SECONDS
       const pos = (getTime() - BOUTIQUE_TEMPO.firstBeat) / BEAT_SECONDS - cycleStart
       const offset = Math.max(0, (pos - CLIP_START_BEATS[i]) * BEAT_SECONDS)
-      try { v.currentTime = Number.isFinite(v.duration) ? Math.min(offset, Math.max(0, v.duration - .1)) : offset } catch { /* Métadonnées pas encore chargées. */ }
+      const target = Math.min(offset, Math.max(0, (Number.isFinite(v.duration) ? v.duration : duration) - .1))
+      /* Un seek inutile fige la lecture le temps du décodage : seulement si l'écart compte. */
+      if (Math.abs(v.currentTime - target) > .04) { try { v.currentTime = target } catch { /* Métadonnées pas encore chargées. */ } }
       v.play().then(() => {
         if (!active() || current.current !== i) { v.pause(); return }
         if (active()) {
@@ -128,16 +144,27 @@ export function HeroPatchwork() {
           old.style.zIndex = '1'
           const timer = setTimeout(() => {
             timeouts.delete(timer)
-            if (current.current !== prev) { old.style.opacity = '0'; old.pause() }
+            if (current.current !== prev) { old.style.opacity = '0'; old.style.willChange = ''; old.pause() }
           }, 120)
           timeouts.add(timer)
         }
       }
       current.current = i
-      /* Débit retombé : plusieurs révélations en retard -> retour à la variante -m. */
+      /* Débit retombé : plusieurs révélations en retard -> palier de qualité inférieur. */
       lateStreak = pos - CLIP_START_BEATS[i] > clipBeats(HERO_CLIPS[i]) + 0.5 ? lateStreak + 1 : 0
-      if (hq.current && lateStreak >= 3) hq.current = false
+      if (lateStreak >= 3) { qual.current = Math.max(0, (qual.current ?? 1) - 1); lateStreak = 0 }
       warm(i + 1, 6)
+      /* Libère les décodeurs et tampons des clips déjà passés (ils sont rechargés depuis le
+         cache HTTP quand le préchargement y revient) : 26 éléments vidéo actifs saturent les mobiles. */
+      for (let j = 0; j < n; j++) {
+        const behind = (i - j + n) % n
+        const vj = videos.current[j]
+        if (vj && behind >= 3 && behind <= n - 7 && vj.getAttribute('src')) {
+          vj.pause()
+          vj.removeAttribute('src')
+          vj.load()
+        }
+      }
     }
 
     /* Les clips coupent sur leurs temps ; le dernier tient jusqu'à ce que le cycle
@@ -172,19 +199,21 @@ export function HeroPatchwork() {
       }
     }
     if (!reduced.matches) warm(0, 5)
-    /* Montée en qualité mesurée : si les premiers clips sont tous décodés vite
-       (réseau confortable), les suivants passent en 720p ; saveData reste en -m. */
+    /* Palier mesuré pendant le préchargement : les 5 premiers clips lisibles en moins de 2,5 s
+       (réseau confortable) = montée en 720p sur mobile ; toujours pas lisibles après 8 s =
+       descente d'un palier. Une seule décision, `saveData` et réseau lent démarrent en -s. */
     let probe = 0 as unknown as ReturnType<typeof setInterval>
-    if (small && !reduced.matches) {
-      const t0 = performance.now()
+    const stopProbe = () => { clearInterval(probe); probe = 0 as unknown as ReturnType<typeof setInterval> }
+    if (!reduced.matches && probeT0.current >= 0) {
+      if (!probeT0.current) probeT0.current = performance.now()
       probe = setInterval(() => {
-        const first = videos.current.slice(0, 5).filter(Boolean)
-        if (first.length === 5 && first.every(v => v && v.readyState >= 4)) {
-          clearInterval(probe); probe = 0 as unknown as ReturnType<typeof setInterval>
-          const sd = (navigator as { connection?: { saveData?: boolean } }).connection?.saveData
-          if (!sd && performance.now() - t0 < 2500) hq.current = true
-        } else if (performance.now() - t0 > 10000) {
-          clearInterval(probe); probe = 0 as unknown as ReturnType<typeof setInterval>
+        const dt = performance.now() - probeT0.current
+        if (videos.current.slice(0, 5).every(v => v && v.readyState >= 3)) {
+          stopProbe(); probeT0.current = -1
+          if (small && dt < 2500 && qual.current === 1) qual.current = 2
+        } else if (dt > 8000) {
+          stopProbe(); probeT0.current = -1
+          qual.current = Math.max(0, (qual.current ?? 1) - 1)
         }
       }, 200)
     }
@@ -213,12 +242,14 @@ export function HeroPatchwork() {
         <video
           key={name}
           ref={el => { videos.current[i] = el }}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
+          className="absolute inset-0 h-full w-full object-cover"
           style={{ opacity: 0, objectPosition: small ? (MOBILE_CLIP_POSITION[name] ?? '50% 50%') : CLIP_POSITION[name] }}
           muted
           playsInline
           loop
           preload="none"
+          onCanPlay={() => pumpRef.current()}
+          onError={() => pumpRef.current()}
           disablePictureInPicture
           tabIndex={-1}
         />

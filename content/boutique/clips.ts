@@ -31,23 +31,20 @@ export const HERO_CLIPS = [
   'jet-tarmac', '14-back-seat', 'resort-aerial', '16-gt-race', 'speedboat',
   '08-seine-sunset',
   /* Soir : détente, gastronomie et boissons */
-  'wine-cellar', 'singing-bowl', 'dish-plating', 'restaurant-night', 'cocktail-bar',
+  'wine-cellar', 'singing-bowl', 'restaurant-night', 'dish-plating', 'cocktail-bar',
   /* Nuit : production, événementiel, ville */
   'film-camera', '11-concert-flames', 'city-night-timelapse', 'bridge-dusk',
-  /* Clôture emblématique */
-  '09-statue-of-liberty',
+  /* Clôture emblématique : source de 10 s (5 s puis retour arrière) pour couvrir tout
+     le créneau élastique, 5 à 7 s selon la langue, sans ralenti ni raccord visible */
+  'statue-of-liberty-loop',
 ] as const
 
-/** Temps par clip : la majorité coupe sur deux temps, quelques plans plus lents en
-    tiennent trois. Le dernier clip est élastique : il tient jusqu'à la fin du cycle
+/** Temps par clip : tous coupent sur deux temps (1,13 s, lus à vitesse normale dans des
+    sources de 1,4 s). Le dernier clip est élastique : il tient jusqu'à la fin du cycle
     complet des titres dactylographiés, puis titres et vidéos rebouclent ensemble.
     Sa valeur ci-dessous sert d'estimation pour le zoom, pas de durée fixe. */
 export const CLIP_BEATS: Record<string, number> = {
-  '01-geneva-fountain': 3,
-  'singing-bowl': 3,
-  'wine-cellar': 3,
-  'bridge-dusk': 3,
-  '09-statue-of-liberty': 4,
+  'statue-of-liberty-loop': 10,
 }
 export const clipBeats = (name: string) => CLIP_BEATS[name] ?? BOUTIQUE_TEMPO.beatsPerClip
 /** Temps de début de chaque clip dans le cycle ; le début du dernier marque la fin de la partie fixe. */
@@ -58,6 +55,7 @@ export const PORTRAIT_CLIPS = ['portrait-rolls-royce', 'portrait-driver'] as con
 
 export const TOTAL_BEATS = HERO_CLIPS.reduce((s, n) => s + clipBeats(n), 0)
 
-/** Version allégée pour les petits écrans ; `-hq` = 720p, servie si le débit mesuré le permet */
-export const clipSrc = (name: string, small: boolean, hq = false) =>
-  `/videos/boutique/${name}${small ? (hq ? '-hq' : '-m') : ''}.mp4`
+/** Paliers de qualité : 0 = `-s` 360p (~0,5 Mbps, réseau faible), 1 = `-m` 540p (~1 Mbps),
+    2 = `-hq` 720p sur mobile, 1080p d'origine sur bureau. Par défaut : `-m` mobile, 1080p bureau. */
+export const clipSrc = (name: string, small: boolean, quality = small ? 1 : 2) =>
+  `/videos/boutique/${name}${(small ? ['-s', '-m', '-hq'] : ['-s', '-m', ''])[quality]}.mp4`
