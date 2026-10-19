@@ -239,6 +239,27 @@ body {
   h1   { letter-spacing: -0.02em; }
 }
 
+/* ── À propos : agrandissement du hero sur mobile, piloté par le scroll en CSS ──
+   Le défilement tactile est natif (thread compositeur) ; un clip-path animé depuis JS
+   arrive une ou deux images en retard et saccade. Ici le navigateur synchronise lui-même
+   l'animation sur le scroll. Sans animation-timeline, AboutHeroScroll garde le repli GSAP. */
+@keyframes about-hero-reveal {
+  from { clip-path: inset(88% 5% 1% 5% round 16px); }
+  to   { clip-path: inset(0% 0% 0% 0% round 0px); }
+}
+@keyframes about-hero-zoom {
+  from { transform: scale(1.18); }
+  to   { transform: scale(1); }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .about-hero { view-timeline: --about-hero block; }
+    .about-hero-media, .about-hero-img { animation-timing-function: linear; animation-fill-mode: both; animation-duration: 1ms; animation-timeline: --about-hero; animation-range: contain 0% contain 100%; }
+    .about-hero-media { animation-name: about-hero-reveal; }
+    .about-hero-img { animation-name: about-hero-zoom; }
+  }
+}
+
 /* ── Mobile-safe overflow ─────────────────────────────── */
 /* overflow-x: clip (et non hidden) : clip ne crée pas de contexte de scroll,
    ce qui préserve position: sticky dans la page (sidebar /alliances, etc.) */
