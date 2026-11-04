@@ -4991,7 +4991,6 @@
     },
     "label": "Sécurité en ligne",
     "subtitle": "Comment vous protéger contre la fraude",
-    "contactEmail": "contact@boha-group.com",
     "intro": "Lorsque vous utilisez nos services, nous pouvons vous demander des informations relatives à votre identité, vos coordonnées bancaires et vos documents d'entité. Nous utilisons des technologies avancées pour protéger vos données, mais nous vous recommandons également d'adopter des pratiques de sécurité élémentaires.",
     "s1Title": "Usurpation d'identité de marque",
     "s1": "Des fraudeurs peuvent créer de faux sites, profils sur les réseaux sociaux ou emails semblant provenir d'Aegryn dans le but de vous inciter à effectuer des paiements frauduleux.",
@@ -5020,7 +5019,7 @@
     "s4Fraud3": "Toute demande de « frais d'assurance » ou de « frais d'activation » non mentionnés dans votre mandat",
     "s5Title": "Signaler une activité suspecte",
     "s5Step1": "Ne cliquez sur aucun lien et ne fournissez aucune information",
-    "s5Step2": "Signalez immédiatement à contact@boha-group.com",
+    "s5Step2": "Signalez immédiatement via le formulaire de contact",
     "s5Step3": "Signalez la plateforme concernée (réseau social, registrar) directement",
     "s4Normal3": "Signature d'un accord de confidentialité (NDA) par un lien personnel envoyé par Aegryn depuis @boha-group.com, vers aegryn.com"
   },
@@ -5515,7 +5514,7 @@
     "dpn": {
       "intro": {
         "h": "Introduction",
-        "p1": "neediu est une plateforme qui permet aux utilisateurs d'identifier et de se connecter rapidement avec des professionnels ou des particuliers de confiance offrant des services de proximité dans leur région. Comme nous attachons une grande importance à la protection de vos données et à votre vie privée, nous avons élaboré cette notice de protection des données pour vous expliquer ce que nous faisons de vos données lorsque vous utilisez notre plateforme.",
+        "p1": "neediu est une plateforme qui permet aux utilisateurs d'identifier et de se connecter rapidement avec des professionnels de confiance offrant des services de proximité dans leur ville. Comme nous attachons une grande importance à la protection de vos données et à votre vie privée, nous avons élaboré cette notice de protection des données pour vous expliquer ce que nous faisons de vos données lorsque vous utilisez notre plateforme.",
         "p2": "Cette notice de protection des données couvre uniquement le traitement des données lié à notre plateforme. Notre objectif est d'assurer une protection adéquate des données personnelles conformément à toutes les lois sur la protection des données applicables, y compris, mais sans s'y limiter, la Loi fédérale suisse sur la protection des données (FADP) et le Règlement général sur la protection des données (RGPD).",
         "p3": "En Suisse, la protection de vos données repose notamment sur la Loi fédérale du 25 septembre 2020 sur la protection des données (LPD), ainsi que sur l'Ordonnance fédérale du 31 août sur la protection des données (OPDo). Notre notice de protection des données, ainsi que nos pratiques, sont alignées sur les dispositions légales contenues dans cette législation.",
         "p4": "Bien que nous fassions tout notre possible pour simplifier notre notice de protection des données, la difficulté de compréhension provient du langage propre au cadre juridique. C'est pourquoi nous avons pris l'initiative de regrouper les principales définitions afin de rendre notre notice plus compréhensible, celles-ci étant tirées de la LPD.",

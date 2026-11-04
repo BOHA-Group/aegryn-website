@@ -41,11 +41,6 @@ export default async function SecurityPage({ params }: Props) {
               <ScrollReveal delay={0.25}><p className="font-sans text-[16px] text-white/70">{t('subtitle')}</p></ScrollReveal>
             </div>
           </div>
-          <ScrollReveal delay={0.35}>
-            <p className="font-sans text-[13px] text-ag-apex/80 mt-4">
-              Contact : <a href={`mailto:${t('contactEmail')}`} className="underline underline-offset-2">{t('contactEmail')}</a>
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -157,14 +152,6 @@ export default async function SecurityPage({ params }: Props) {
               </li>
             ))}
           </ol>
-          <div className="mt-8 pt-6">
-            <a
-              href={`mailto:${t('contactEmail')}`}
-              className="rounded-lg inline-flex items-center gap-2 font-sans font-semibold text-[11px] uppercase tracking-[0.16em] text-ag-navy border border-ag-navy px-5 py-3 hover:bg-ag-navy hover:text-white transition-colors"
-            >
-              {t('contactEmail')}
-            </a>
-          </div>
         </section>
       </article>
     </main>

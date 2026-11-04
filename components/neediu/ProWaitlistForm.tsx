@@ -6,7 +6,10 @@ import { ChevronDown } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import { countryName, sortAlpha } from '@/lib/countries'
 import { NEEDIU_CITIES } from '@/lib/neediuPro'
-import { PHONE_COUNTRIES, phoneExample } from '@/content/neediu/phoneCountries'
+import { PHONE_COUNTRIES as ALL_PHONE_COUNTRIES, phoneExample } from '@/content/neediu/phoneCountries'
+
+/** Indicatifs limités aux pays des villes proposées (France, Belgique, Suisse). */
+const PHONE_COUNTRIES = ALL_PHONE_COUNTRIES.filter(c => NEEDIU_CITIES.some(v => v.country === c.code))
 import { NEEDIU_SERVICES, NEEDIU_THEMES, NEEDIU_THEME_LABELS, type NeediuLocale } from '@/content/neediu/services'
 
 const inputCls = 'w-full rounded-lg border border-ag-border bg-ag-white px-4 py-3 font-sans text-[14px] text-ag-black placeholder:text-ag-gray-light transition-colors focus:border-ag-black focus:outline-none read-only:bg-ag-off-white read-only:text-ag-gray'

@@ -5024,7 +5024,6 @@
     },
     "label": "Seguridad en línea",
     "subtitle": "Cómo protegerse contra el fraude",
-    "contactEmail": "contact@boha-group.com",
     "intro": "Cuando utiliza nuestros servicios, podemos solicitarle información relativa a su identidad, datos bancarios y documentos de entidad. Utilizamos tecnologías avanzadas para proteger sus datos, y le recomendamos que adopte prácticas básicas de seguridad.",
     "s1Title": "Suplantación de identidad de marca",
     "s1": "Los estafadores pueden crear sitios web falsos, perfiles en redes sociales o correos electrónicos que parezcan provenir de Aegryn con el fin de inducirle a realizar pagos fraudulentos.",
@@ -5035,7 +5034,7 @@
     "s1Never3": "Sus credenciales de acceso por correo electrónico o teléfono",
     "s2Title": "Identificar comunicaciones fraudulentas",
     "s2": "Verifique que: la dirección de correo del remitente sea exactamente @boha-group.com (no @boha-group.net ni ninguna variante), los enlaces en los correos apunten a aegryn.com, y las solicitudes de pago correspondan a lo previsto en su mandato o contrato firmado.",
-    "s2Doubt": "En caso de duda, contáctenos directamente en contact@boha-group.com, no responda al correo sospechoso.",
+    "s2Doubt": "En caso de duda, contáctenos directamente a través del formulario de contacto, no responda al correo sospechoso.",
     "s3Title": "Proteger su cuenta Aegryn",
     "s3Items": [
       "Use una contraseña segura y única para su cuenta Aegryn",
@@ -5053,7 +5052,7 @@
     "s4Fraud3": "Cualquier cuota de seguro o cuota de activación no mencionada en su mandato",
     "s5Title": "Notificar actividad sospechosa",
     "s5Step1": "No haga clic en ningún enlace ni proporcione información alguna",
-    "s5Step2": "Notifique inmediatamente a contact@boha-group.com",
+    "s5Step2": "Notifique inmediatamente a través del formulario de contacto",
     "s5Step3": "Denuncie la plataforma afectada directamente (red social, registrar)",
     "s4Normal3": "Firma de un acuerdo de confidencialidad (NDA) mediante un enlace personal enviado por Aegryn desde @boha-group.com, que apunta a aegryn.com"
   },
@@ -5548,7 +5547,7 @@
     "dpn": {
       "intro": {
         "h": "Introducción",
-        "p1": "neediu es una plataforma que permite a los usuarios identificar y conectarse rápidamente con profesionales o particulares de confianza que ofrecen servicios de proximidad en su región. Como concedemos gran importancia a la protección de sus datos y a su privacidad, hemos elaborado este aviso de protección de datos para explicarle qué hacemos con sus datos cuando utiliza nuestra plataforma.",
+        "p1": "neediu es una plataforma que permite a los usuarios identificar y conectarse rápidamente con profesionales de confianza que ofrecen servicios de proximidad en su ciudad. Como concedemos gran importancia a la protección de sus datos y a su privacidad, hemos elaborado este aviso de protección de datos para explicarle qué hacemos con sus datos cuando utiliza nuestra plataforma.",
         "p2": "Este aviso de protección de datos cubre únicamente el tratamiento de datos relacionado con nuestra plataforma. Nuestro objetivo es garantizar una protección adecuada de los datos personales de conformidad con todas las leyes de protección de datos aplicables, incluidas la Ley Federal Suiza de Protección de Datos (FADP) y el Reglamento General de Protección de Datos (RGPD).",
         "p3": "En Suiza, la protección de sus datos se basa en particular en la Ley Federal del 25 de septiembre de 2020 sobre Protección de Datos (LPD), así como en la Ordenanza Federal del 31 de agosto sobre Protección de Datos (OPD). Nuestro aviso de protección de datos y nuestras prácticas están alineados con las disposiciones legales contenidas en dicha legislación.",
         "p4": "Aunque hacemos todo lo posible para simplificar nuestro aviso de protección de datos, la dificultad de comprensión proviene del lenguaje propio del marco jurídico. Por ello, hemos tomado la iniciativa de agrupar las principales definiciones para facilitar la comprensión del aviso, tomadas de la LPD.",

@@ -5024,7 +5024,6 @@
     },
     "label": "Sicurezza online",
     "subtitle": "Come proteggersi dalle frodi",
-    "contactEmail": "contact@boha-group.com",
     "intro": "Quando utilizza i nostri servizi, potremmo chiederle informazioni relative alla sua identità, coordinate bancarie e documenti aziendali. Utilizziamo tecnologie avanzate per proteggere i suoi dati e le raccomandiamo di adottare pratiche di sicurezza di base.",
     "s1Title": "Usurpazione di identità del marchio",
     "s1": "I truffatori possono creare siti web falsi, profili sui social media o email che sembrano provenire da Aegryn per indurla ad effettuare pagamenti fraudolenti.",
@@ -5035,7 +5034,7 @@
     "s1Never3": "Le sue credenziali di accesso via email o telefono",
     "s2Title": "Identificare le comunicazioni fraudolente",
     "s2": "Verifichi che: l'indirizzo email del mittente sia esattamente @boha-group.com (non @boha-group.net o varianti), i link nelle email puntino ad aegryn.com, e le richieste di pagamento corrispondano a quanto previsto nel suo mandato o contratto firmato.",
-    "s2Doubt": "In caso di dubbio, ci contatti direttamente all'indirizzo contact@boha-group.com, non risponda all'email sospetta.",
+    "s2Doubt": "In caso di dubbio, ci contatti direttamente tramite il modulo di contatto, non risponda all'email sospetta.",
     "s3Title": "Proteggere il suo account Aegryn",
     "s3Items": [
       "Utilizzi una password sicura e unica per il suo account Aegryn",
@@ -5053,7 +5052,7 @@
     "s4Fraud3": "Qualsiasi commissione assicurativa o commissione di attivazione non menzionata nel suo mandato",
     "s5Title": "Segnalare attività sospette",
     "s5Step1": "Non clicchi su nessun link e non fornisca alcuna informazione",
-    "s5Step2": "Segnali immediatamente a contact@boha-group.com",
+    "s5Step2": "Segnali immediatamente tramite il modulo di contatto",
     "s5Step3": "Segnali direttamente la piattaforma interessata (social network, registrar)",
     "s4Normal3": "Firma di un accordo di riservatezza (NDA) tramite un link personale inviato da Aegryn da @boha-group.com, che rimanda a aegryn.com"
   },
@@ -5548,7 +5547,7 @@
     "dpn": {
       "intro": {
         "h": "Introduzione",
-        "p1": "neediu è una piattaforma che consente agli utenti di identificarsi e connettersi rapidamente con professionisti o privati di fiducia che offrono servizi di prossimità nella loro area. Poiché attribuiamo grande importanza alla protezione dei vostri dati e alla vostra privacy, abbiamo redatto questa informativa per spiegare cosa facciamo con i vostri dati quando utilizzate la nostra piattaforma.",
+        "p1": "neediu è una piattaforma che consente agli utenti di identificarsi e connettersi rapidamente con professionisti di fiducia che offrono servizi di prossimità nella loro città. Poiché attribuiamo grande importanza alla protezione dei vostri dati e alla vostra privacy, abbiamo redatto questa informativa per spiegare cosa facciamo con i vostri dati quando utilizzate la nostra piattaforma.",
         "p2": "La presente informativa copre esclusivamente il trattamento dei dati relativo alla nostra piattaforma. Il nostro obiettivo è garantire un'adeguata protezione dei dati personali in conformità a tutte le leggi sulla protezione dei dati applicabili, incluse la Legge federale svizzera sulla protezione dei dati (LPD) e il Regolamento generale sulla protezione dei dati (GDPR).",
         "p3": "In Svizzera, la protezione dei vostri dati si basa in particolare sulla Legge federale del 25 settembre 2020 sulla protezione dei dati (LPD) e sull'Ordinanza federale del 31 agosto sulla protezione dei dati (OPD). La nostra informativa sulla protezione dei dati e le nostre pratiche sono allineate con le disposizioni legislative contenute in tale legislazione.",
         "p4": "Sebbene facciamo del nostro meglio per semplificare la nostra informativa, la difficoltà di comprensione deriva dal linguaggio specifico del quadro giuridico. Per questo motivo, abbiamo raggruppato le principali definizioni per facilitare la comprensione dell'informativa, tratte dalla LPD.",

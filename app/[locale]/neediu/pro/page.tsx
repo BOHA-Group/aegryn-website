@@ -30,18 +30,20 @@ export default async function NeediuProPage({ params, searchParams }: Props) {
   return (
     <main>
       <section className="relative overflow-hidden bg-ag-navy px-6 pb-20 pt-36 md:px-12">
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 md:gap-12">
-          <div className="min-w-0">
+        <div className="relative mx-auto flex max-w-7xl items-center">
+          <div className="min-w-0 md:w-fit md:max-w-[44rem] md:shrink-0">
           <p className="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex">
             <span className="inline-block h-px w-6 bg-ag-apex/50" />{t('eyebrow')}
           </p>
-          <h1 className="mb-6 max-w-4xl text-balance font-sans font-bold leading-[1.05] tracking-[-0.03em] text-white" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
+          <h1 className="mb-6 text-balance md:w-0 md:min-w-full font-sans font-bold leading-[1.05] tracking-[-0.03em] text-white" style={{ fontSize: 'clamp(36px,5vw,72px)' }}>
             {t('title')}
           </h1>
-          <p className="max-w-3xl whitespace-pre-line font-sans text-[16px] leading-relaxed text-white/80">{t('intro')}</p>
+          <p className="whitespace-pre-line font-sans text-[16px] leading-relaxed text-white/80">{t('intro')}</p>
           <span className="mt-8 inline-block rounded-full bg-ag-apex px-4 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-ag-navy">{t('soon')}</span>
           </div>
-          <Image src="/images/neediu/neediu-app-icon.png" alt="neediu" width={512} height={512} priority className="h-20 w-20 shrink-0 rounded-[22%] shadow-2xl ring-1 ring-white/10 sm:h-28 sm:w-28 md:h-44 md:w-44" />
+          <div className="flex flex-1 items-center justify-center">
+            <Image src="/images/neediu/neediu-app-icon.png" alt="neediu" width={512} height={512} priority className="h-20 w-20 shrink-0 rounded-[22%] shadow-2xl ring-1 ring-white/10 sm:h-28 sm:w-28 md:h-44 md:w-44" />
+          </div>
         </div>
       </section>
 

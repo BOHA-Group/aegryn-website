@@ -1,6 +1,5 @@
 import { getTranslations }    from 'next-intl/server'
 import type { Metadata }        from 'next'
-import Link                     from 'next/link'
 import { Link as LocalizedLink } from '@/i18n/navigation'
 import { generateAegrynMetadata } from '@/lib/seo'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
@@ -33,22 +32,7 @@ export default async function PrivacyPage({ params }: Props) {
             {tP('label')}
           </h1></WaveReveal>
 <ScrollReveal delay={0.25}>          <p className="font-sans text-[16px] text-white/70">{tP('updated')}</p>
-          {/* Sélecteur de langue */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            {(['fr','en','de','es','it','nl'] as const).map(lang => (
-              <Link
-                key={lang}
-                href={`/${lang}/privacy`}
-                className={`font-mono text-[10px] tracking-[0.14em] uppercase px-3 py-1 border transition-colors ${
-                  lang === locale
-                    ? 'border-ag-apex text-ag-apex'
-                    : 'border-white/20 text-white/70 hover:border-white/50 hover:text-white'
-                }`}
-              >
-                {lang.toUpperCase()}
-              </Link>
-            ))}
-          </div></ScrollReveal>
+</ScrollReveal>
         </div>
       </section>
 

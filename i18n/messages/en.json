@@ -5031,7 +5031,6 @@
     },
     "label": "Staying secure online",
     "subtitle": "How to protect yourself against fraud",
-    "contactEmail": "contact@boha-group.com",
     "intro": "When using our services, we may ask you for identity, banking and entity documents. We use advanced technology to protect your data, and we recommend you also adopt basic security practices.",
     "s1Title": "Brand impersonation",
     "s1": "Fraudsters may create fake websites, social media profiles or emails appearing to come from Aegryn to induce you to make fraudulent payments.",
@@ -5060,7 +5059,7 @@
     "s4Fraud3": "Any \"insurance fees\" or \"activation fees\" not mentioned in your mandate",
     "s5Title": "Reporting suspicious activity",
     "s5Step1": "Do not click any links or provide any information",
-    "s5Step2": "Report immediately to contact@boha-group.com",
+    "s5Step2": "Report immediately via the contact form",
     "s5Step3": "Report the platform directly (social network, registrar)",
     "s4Normal3": "Signing a non-disclosure agreement (NDA) through a personal link sent by Aegryn from @boha-group.com, pointing to aegryn.com"
   },
@@ -5555,7 +5554,7 @@
     "dpn": {
       "intro": {
         "h": "Introduction",
-        "p1": "neediu is a platform that enables users to quickly identify and connect with trusted professionals or individuals offering local services in their area. As we place great importance on protecting your data and privacy, we have prepared this data protection notice to explain what we do with your data when you use our platform.",
+        "p1": "neediu is a platform that enables users to quickly identify and connect with trusted professionals offering local services in their city. As we place great importance on protecting your data and privacy, we have prepared this data protection notice to explain what we do with your data when you use our platform.",
         "p2": "This data protection notice covers only data processing related to our platform. Our goal is to ensure adequate protection of personal data in accordance with all applicable data protection laws, including but not limited to the Swiss Federal Act on Data Protection (FADP) and the General Data Protection Regulation (GDPR).",
         "p3": "In Switzerland, the protection of your data is based in particular on the Federal Act of the 25th of September 2020 on Data Protection (FADP), as well as on the Federal Ordinance of the 31st of August on Data Protection (DPO). Our data protection notice, as well as our practices, is aligned with the legal provisions contained within the legislation mentioned.",
         "p4": "Although we make every effort to simplify our data protection notice, the difficulty of understanding it stems from the language specific to the legal framework. This is why we have taken the initiative of grouping together the main definitions to make our data protection notice easier to understand, as these are taken from the FADP.",

@@ -5024,7 +5024,6 @@
     },
     "label": "Online-Sicherheit",
     "subtitle": "So schützen Sie sich vor Betrug",
-    "contactEmail": "contact@boha-group.com",
     "intro": "Bei der Nutzung unserer Dienste können wir Sie nach Ihren Identitäts-, Bank- und Unternehmensdokumenten fragen. Wir setzen fortschrittliche Technologien zum Schutz Ihrer Daten ein und empfehlen Ihnen, grundlegende Sicherheitspraktiken zu befolgen.",
     "s1Title": "Markenidentitätsmissbrauch",
     "s1": "Betrüger können gefälschte Websites, Social-Media-Profile oder E-Mails erstellen, die scheinbar von Aegryn stammen, um Sie zu betrügerischen Zahlungen zu verleiten.",
@@ -5035,7 +5034,7 @@
     "s1Never3": "Ihre Zugangsdaten per E-Mail oder Telefon",
     "s2Title": "Betrügerische Kommunikation erkennen",
     "s2": "Prüfen Sie: die Absender-E-Mail ist genau @boha-group.com (nicht @boha-group.net oder eine Variante), Links in E-Mails verweisen auf aegryn.com, und Zahlungsaufforderungen entsprechen dem, was in Ihrem unterzeichneten Mandat vorgesehen ist.",
-    "s2Doubt": "Im Zweifelsfall kontaktieren Sie uns direkt unter contact@boha-group.com, antworten Sie nicht auf die verdächtige E-Mail.",
+    "s2Doubt": "Im Zweifelsfall kontaktieren Sie uns direkt über das Kontaktformular, antworten Sie nicht auf die verdächtige E-Mail.",
     "s3Title": "Ihr Aegryn-Konto sichern",
     "s3Items": [
       "Verwenden Sie ein starkes, einzigartiges Passwort für Ihr Aegryn-Konto",
@@ -5053,7 +5052,7 @@
     "s4Fraud3": "Jede Versicherungsgebühr oder Aktivierungsgebühr, die in Ihrem Mandat nicht erwähnt wird",
     "s5Title": "Verdächtige Aktivitäten melden",
     "s5Step1": "Klicken Sie auf keinen Link und geben Sie keine Informationen weiter",
-    "s5Step2": "Melden Sie sofort an contact@boha-group.com",
+    "s5Step2": "Melden Sie sofort über das Kontaktformular",
     "s5Step3": "Melden Sie die betreffende Plattform direkt (soziales Netzwerk, Registrar)",
     "s4Normal3": "Unterzeichnung einer Vertraulichkeitsvereinbarung (NDA) über einen persönlichen Link, den Aegryn von @boha-group.com sendet und der auf aegryn.com verweist"
   },
@@ -5548,7 +5547,7 @@
     "dpn": {
       "intro": {
         "h": "Einleitung",
-        "p1": "neediu ist eine Plattform, die es Nutzern ermöglicht, schnell vertrauenswürdige Fachleute oder Privatpersonen zu finden, die in ihrer Region lokale Dienstleistungen anbieten. Da uns der Schutz Ihrer Daten und Ihrer Privatsphäre sehr wichtig ist, haben wir diesen Datenschutzhinweis erstellt, um zu erläutern, was wir mit Ihren Daten tun, wenn Sie unsere Plattform nutzen.",
+        "p1": "neediu ist eine Plattform, die es Nutzern ermöglicht, schnell vertrauenswürdige Fachleute zu finden, die in ihrer Stadt lokale Dienstleistungen anbieten. Da uns der Schutz Ihrer Daten und Ihrer Privatsphäre sehr wichtig ist, haben wir diesen Datenschutzhinweis erstellt, um zu erläutern, was wir mit Ihren Daten tun, wenn Sie unsere Plattform nutzen.",
         "p2": "Dieser Datenschutzhinweis betrifft ausschließlich die mit unserer Plattform verbundene Datenverarbeitung. Unser Ziel ist ein angemessener Schutz personenbezogener Daten gemäß allen anwendbaren Datenschutzgesetzen, einschließlich des Schweizer Datenschutzgesetzes (DSG) und der Datenschutz-Grundverordnung (DSGVO).",
         "p3": "In der Schweiz beruht der Schutz Ihrer Daten insbesondere auf dem Bundesgesetz vom 25. September 2020 über den Datenschutz (DSG) sowie auf der Bundesverordnung vom 31. August über den Datenschutz (DSV). Unser Datenschutzhinweis und unsere Praktiken sind auf die in dieser Gesetzgebung enthaltenen Rechtsvorschriften abgestimmt.",
         "p4": "Obwohl wir uns bemühen, unseren Datenschutzhinweis zu vereinfachen, liegt die Verständnisschwierigkeit in der spezifischen Sprache des rechtlichen Rahmens. Deshalb haben wir die wichtigsten Definitionen zusammengefasst, um den Hinweis leichter verständlich zu machen; diese Definitionen entstammen dem DSG.",
